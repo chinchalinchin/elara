@@ -3,3 +3,4 @@
 **/.terraform
 **/.terrraform/** 
 **/*.terraform.lock.hcl
+src/build/**

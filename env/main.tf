@@ -19,7 +19,7 @@ module "bucket" {
     }
     
     s3                          = {
-        purpose                 = "Hosting of static web content for Elara's website"
+        purpose                 = "Hosting of static web content for the Elara website"
         suffix                  = "elara"
         kms_key                 = {
             aws_managed         = true
