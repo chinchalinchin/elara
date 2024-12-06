@@ -1,0 +1,7 @@
+sphinx
+sphinx-toolbox
+sphinx-book-theme
+matplotlib
+numpy
+scipy
+tk

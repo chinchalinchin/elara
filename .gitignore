@@ -4,8 +4,5 @@
 **/.terrraform/** 
 **/*.terraform.lock.hcl
 src/build/**
-src/bin
-src/lib
-src/lib64
-src/include
+venv/**
 **/pyvenv.cfg

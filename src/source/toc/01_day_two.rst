@@ -1,4 +1,4 @@
-.. _day_one:
+.. _day_two:
 
 =========================
 Day 2: December 7th, 2024
