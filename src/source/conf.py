@@ -21,11 +21,9 @@ extensions = [
     'matplotlib.sphinxext.plot_directive'
 ]
 
-templates_path = [
-    '_templates'
-]
+templates_path = [ ]
 
-exclude_patterns = []
+exclude_patterns = [ ]
 
 plot_html_show_source_link = True
 
@@ -35,9 +33,7 @@ plot_html_show_source_link = True
 
 html_theme = 'sphinx_book_theme'
 
-html_static_path = [
-
-]
+html_static_path = [ '_static' ]
 
 imgmath_latex_preamble = r'''
     
