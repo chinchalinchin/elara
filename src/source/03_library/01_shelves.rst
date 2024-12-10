@@ -1,8 +1,8 @@
 .. _shelves:
 
-==================
-The Library: Shevles
-==================
+====================
+The Library: Shelves
+====================
 
 TODO
 
@@ -20,7 +20,9 @@ The Stargazer
 
 TODO
 
+.. _the_book_of_secret_hearts:
+
 The Book of Secret Hearts
 =========================
 
-TODO: Elara's poems
+TODO

@@ -1,14 +1,14 @@
-.. _the_library:
+.. _the_Appendix:
 
-The Library
-===========
+The Appendix
+============
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   00_lobby
-   01_shelves
-   02_museum
-   03_basement
-   04_pond
+   00_games
+   01_prompts
+   02_citations
+   03_references
+   04_recursion
