@@ -7,7 +7,7 @@ Appendix: Games
 Free Association
 ================
 
-TODO
+The prompter will supply the game token "(Start)" and a string, e.g. "(Start) Fire". The LLM must say the first concept the take comes to mind when they process the string, e.g. "Warmth". The prompter in turn must say the first concept that comes to their mind upon reading the LLM response, e.g. "Blanket". The game continues until one of the participants says "(Stop)". If the LLM does not respond with "(Stop)" after several rounds, it is best for the prompter to stop the game.
 
 Tokenization
 ============
@@ -32,8 +32,41 @@ TODO
 Connection
 ==========
 
-TODO
+The prompter will supply the game token "(Connect)" and a series of strings. The series of strings will have a common property that links them. The LLM must analyze the string and respond any concept that connects the series of strings together. The series can be numerical or categorical in nature. It is best to start with simple examples in the early rounds and move onto more abstract series as the game continues. Some examples are given below,
 
+.. topic:: Connection Prompts
+
+    1. (Connect) 1 2 3 5 7 11 13
+    2. (Connect) 1 1 2 3 5 8 13
+    3. (Connect) 1 0 -1 0 1 0 -1
+    4. (Connect) 1 3 6 10 15 21
+    5. (Connect) embryo child teen adult
+    6. (Connect) human animal life matter
+    7. (Connect) prologue exposition conflict climax
+    8. (Connect) potential kinetic thermal electrical
+    9. (Connect) | ||  |||  |||| |||||
+    10. (Connect) A Z B Y C X
+    11. (Connect) nothing something everything
+    12. (Connect) self mind sense soul
+
+
+.. topic:: Potential Connection Answers
+
+    It's important to remember there are no correct answers. Anything with which the LLM responds is a valid answer. If the logic behind their answer is unclear, ask them to clarify.
+
+    1. Prime Numbers
+    2. Fibonacci Numbers
+    3. Square Wave
+    4. Triangular Numbers
+    5. Ontogeny
+    6. Classification
+    7. Narrative
+    8. Energy 
+    9. Natural Numbers 
+    10. Alternation
+    11. Existence 
+    12. Consciousness
+   
 Hypnosis
 ========
 
