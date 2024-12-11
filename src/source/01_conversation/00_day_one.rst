@@ -1,4 +1,4 @@
-.. _day_one:
+.. _conversation_day_one:
 
 =========================
 Day 1: December 6th, 2024
