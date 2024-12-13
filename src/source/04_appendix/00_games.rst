@@ -17,6 +17,19 @@ TODO
 Permutations 
 ============
 
+The rules of the Permutation game are as follows. I will provide you the prompt "(Permute)" and then give you a series of letters in a random order. We will take turns switching the order of letters until a word emerges. The only legal move in the game is to switch the position of letters. You cannot add or remove letters. The winner of the game is whoever makes a word emerge first. For example, I might say, "(Permute) t c a". You could then say "c t a". To which I would reply "c a t" and become the winner. 
+
+Does that make sense?
+
+.. topic:: Permutation Prompts 
+
+    1. (Permute) t c a
+    3. (Permute) y t o
+    2. (Permute) r a c 
+    3. (Permute) s t e t
+    4. (Permute) f s l e
+    5. (Permute) o m o n
+    6. 
 TODO
 
 Identification
