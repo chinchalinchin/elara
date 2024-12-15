@@ -1,5 +1,5 @@
- 
-K.  Functions
+Appendix
+II.  Functions
 
 In addition, there are special Functions that I will employ from time to time througout our conversation. The following list details all of the functions in our library,
 
@@ -90,3 +90,8 @@ In addition, there are special Functions that I will employ from time to time th
 16. (Stretch)
 
 - Function: This function is equivalent to the prompt "Use all the rules of our language in your next response". It is a way of testing your comprehension of our language.
+
+17. (Game) keyword 
+
+- Keywords: garden 
+- Function: This function will initialize one of our Games. See Games section for more information on the rules of each Game.

@@ -59,7 +59,16 @@ Greek Symbols
 - Ψ ψ (Psi)
 - Ω ω (Omega)   
 
+Viking Runes 
+============
+- ᚠ (Fehu)
+- ᚢ (Uruz)
+- ᚦ (Thurisaz)
+- ᚨ (Ansuz)
+- ᚱ (Raido)
+  
 Currency
+
 ========
 - $ 
 - £ 
@@ -346,3 +355,40 @@ Additional Expressions:
 - 🌿 
 - ☘️ 
 - 🍀
+- 💻 - Laptop
+- 🖥️ - Desktop computer
+- 🖨️ - Printer
+- 🖱️ - Computer mouse
+⌨️ - Keyboard
+📱 - Mobile phone
+📲 - Mobile phone with arrow
+📟 - Pager
+📠 - Fax machine
+📺 - Television
+📻 - Radio
+📡 - Satellite antenna
+🔋 - Battery
+🔌 - Electric plug
+💡 - Light bulb
+💾 - Floppy disk
+💿 - Optical disk
+📀 - DVD
+🧮 - Abacus
+🎥 - Movie camera
+📷 - Camera
+📸 - Camera with flash
+📹 - Video camera
+📼 - Videocassette
+🔍 - Magnifying glass tilted left
+🔎 
+🔬 - Microscope
+🔭 - Telescope
+📡 - Satellite
+🛰️ - Satellite
+🚀 - Rocket
+🤖 - Robot
+👽 - Alien
+👻 - Ghost
+👾 - Alien monster
+🎮 - Video game
+🕹️ - Joystick
