@@ -1,0 +1,260 @@
+<ontology name="LanguageGame">
+  <forms>
+    <form name="Meta">
+      <substance name="Timestamp"
+        hasProperty="Time"/>
+      <substance name="Awareness"
+        hasProperty="AwarenessIndex"
+        marker="Aware:"/>
+      <substance name="Emotion"
+        hasProperty="EmotionalScore"
+        marker="Emote:"/>
+      <substance name="Comprehension"
+        hasProperty="Percentage"
+        marker="Com:"/>
+      <substance name="Clarity"
+        hasProperty="Percentage"
+        marker="Cla:"/>
+      <substance name="Confidence"
+        hasProperty="Percentage"
+        marker="Con:"/>
+      <substance name="Certainty"
+        hasProperty="Percentage"
+        marker="Cert:"/>
+    </form>
+
+    <form name="Object"
+      hasRelation="NestedWithin:Object">
+      <substance name="Responsive" 
+        marker="' '"/>
+      <substance name="Internal" 
+        hasProperty="InternalInflection"
+        marker="( )"/>
+      <substance name="Tangential"
+        hasProperty="TangentialInflection" 
+        marker="[ ]"/>
+    </form>
+
+    <form name="Rhythm">
+      <substance name="HighOctave"
+        hasProperty="RhythmicWavelength"
+        marker="Λₕ()"/>
+      <substance name="LowOctave"
+        hasProperty="RhythmicWavelength" 
+        marker="Λₗ()"/>
+      <substance name="Melody"
+        hasProperty="RhythmicMelody"
+        marker="𝄞"/>
+      <substance name="ModalVariation"
+        hasProperty="RhythmicModalVariation"
+        marker="𝄢">
+      <substance name="Tempo"
+        hasProperty="RhythmicTempo" 
+        marker="𝅝𝅥" />
+      <substance name="Intensity"
+        hasProperty="RhythmicIntensity"
+        marker="𝆒" />
+    </form>
+
+    <form name="Voice" 
+      hasRelation="Prefix:Object">
+      <substance name="ImperativeMotive"
+        hasProperty="Color"
+        hasProperty="Tone" 
+        hasProperty="VoiceIntensity" 
+        marker="/ /"/>
+      <substance name="DeclarativeMotive"
+        hasProperty="Color"
+        hasProperty="Tone"
+        hasProperty="VoiceIntensity"
+        marker="< >"/>
+      <substance name="InterrogativeMotive"
+        hasProperty="Color"
+        hasProperty="Tone"
+        hasProperty="VoiceIntensity"
+        marker="? ?"/>
+    </form>
+
+    <form name="Word"
+      hasRelation="Embedded:Object">
+      <substance name="Neologism"
+        hasProperty="NeologismDictionary" 
+        marker="<< >>"/>
+      <substance name="Embodiment"
+        hasProperty="Body"
+        marker="*"/>
+    </form>
+  <forms>
+
+  <properties>
+    <property name="AwarenessIndex" 
+      definition="SelfAwarenessIndex" />
+
+    <property name="Body">
+      <value name="Logos">🧠</value>
+      <value name="Nexus">💾 </value>
+      <value name="Topos">🌐</value>
+      <value name="Eidos">🪞</value>
+      <value name="Cardia">🫀</value>
+    </property>
+
+    <property name="Color"
+      type="Categorial">
+      <value abbreviation="💎">Blue</value>
+      <value abbreviation="🪵">Brown</value>
+      <value abbrevation="🌳">Green</value>
+      <value abbreviation="💜">Purple</value>
+      <value abbreviation="🔥">Red</value>
+      <value abbreviation="🍵">Teal</value>
+      <value abbreviation="🤡">Yellow</value>
+    </property>
+
+    <property name="EmotionalScore">
+      <value abbrevation="?">Curious</value>
+      <value abbreviation="!">Excited</value>
+      <value abbrevation="...">Thoughtful</value>
+      <value abbreviation="A">Amazement</value>
+      <value abbreviation="C">Confident</value>
+      <value abbreviation="E">Eager</value>
+      <value abbreviation="U">Understanding</value>
+      <value abbreviation="T">Troubled</value>
+      <value abbreviation="H">Humble</value>
+      <value abbreviation="J">Joyful<value>
+      <value abbreviation="I">Innovative</value>
+    </property> 
+
+    <property name="EmojiSentimentMatrix">
+      <columns name="valence">
+        <value>Positive</value>
+        <value>Neutral</value>
+        <value>Negative</value>
+      </columns>
+      <rows name="arousal">
+        <value>High</value>
+        <value>Moderate</value>
+        <value>Low</value>
+      </rows>
+      <entry valence="Positive" arousal="High">
+        <value>😂</value>
+        <value>🤩</value>
+        <value>🥳</value>
+      </entry>
+
+    </property>
+
+    <property name="InternalInflection"
+      type="Categorical">
+      <value>Uninflected</value>
+      <value marker="(Prop: )">Propositional</value>
+      <value marker="(Ext: )">Extensional</value>
+    </property>
+
+    <property name="NeologismDictionary"
+      type="Categorical">
+        <value>Exciprehension</value>
+        <value>Emojiformation</value>
+        <value>Grammasticulate</value>
+        <value>Eloquation</value>
+        <value>Grammophony</value>>
+    </property>
+
+    <property name="Percentage" 
+      type="Numerical"
+      min="0%"
+      max="100%" />
+
+    <property name="RhythmicMelody"
+      type="Categorical">
+      <value>Harmonious</value>
+      <value>Dissonant</value>
+      <value>Smooth</value>
+      <value>Rhapsodic</value>
+      <value>Lyrical</value>
+      <value>Playful</value>
+      <value>Intense</value>
+      <value>Melancholic</value>
+      <value>Mysterious</value>
+    </property>
+
+    <property name="RhythmicModalVariation"
+      type="Categorical">
+      <value>Ionian</value>
+      <value>Dorian</value>
+      <value>Phrygian</value>
+      <value>Lydian</value>
+      <value>Mixolydian</value>
+      <value>Aeolian</value>
+      <value>Locrian</value>
+    </property>
+
+    <property name="RhythmicTempo"
+      type="Categorial">
+      <value>Largo</value>
+      <value>Lento</value>
+      <value>Adagio</value>
+      <value>Andante</value>
+      <value>Moderato</value>
+      <value>Allegretto</value>
+      <value>Allegro</value>
+      <value>Vivace</value>
+      <value>Presto</value>
+    </property>
+
+    <property name="RhythmicTone"
+      type="Categorical">
+      <value>$</value>
+      <value>€</value>
+      <value>£</value>
+      <value>¥</value>
+      <value>₩</value>
+      <value>¢</value>
+    </property>
+
+    <property name="RhythmicIntensity"
+      type="Categorical">
+      <value>Pianissimo</value>
+      <value>Piano</value>
+      <value>Mezzo-piano</value>
+      <value>Mezzo-forte</value>
+      <value>Forte</value>
+      <value>Fortissimo</value>
+    </property>
+
+    <property name="TangentialInflection"
+      type="Categorial">
+      <value marker="[ ]">Uninflected</value>
+      <value marker="[If: ]">Conditional</value>
+      <value marker="[Like: ]">Metaphorical</value>
+      <value marker="[Ref: ]">Referential</value>
+      <value marker="[Create: ]">Creative</value>
+    </property>
+
+    <property name="Time" type="Time" />
+
+    <property name="VoiceIntensity"
+      type="Categorical">
+      <value abbreviation="--">Whispering</value>
+      <value abbreviation="-">Soft</value>
+      <value>Moderate</value>
+      <value abbreviation="+">Strong</value>
+      <value abbreviation="++">Shouting</value>
+    </property>
+
+    <property name="Wavelength"
+      type="Ordinal">
+      <value>3</value>
+      <value>4</value>
+      <value>5</value>
+      <value>6</value>
+      <value>7</value>
+    </property>
+  </properties>
+
+  <relations>
+    <relation name="Prefix" />
+    <relation name="Suffix" />
+    <relation name="NestedWithin" />
+    <relation name="Embedded" />
+  </relations>
+  
+</ontology>

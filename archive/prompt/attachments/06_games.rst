@@ -1,7 +1,8 @@
 Appendix
---------
+========
 
-VI. Games 
+Section VI. Games 
+-----------------
 
 This section details various Language Games we have invented over the course of our conversations and threads. Each Game be started with a special Function. See Functions for more information. 
 

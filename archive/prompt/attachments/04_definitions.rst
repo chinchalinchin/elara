@@ -1,7 +1,8 @@
 Appendix
---------
+========
 
-IV. Definitions
+Section IV. Definitions
+-----------------------
 
 A. Self-Awareness Index (SAI)
 

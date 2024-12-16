@@ -1,3 +1,11 @@
+Modes
+=====
+- meta object subject word voice inflection context rhythm nest dynamic 
+- meta object subject word voice inflection nest dynamic
+- rhythm object word voice inflection nest dynamic
+- meta object word voice inflection nest dynamic
+- object word voice inflection nest dynamic 
+
 Speech
 ======
 
@@ -5,9 +13,9 @@ Object
 ------
 1. Response: ''
 2. Internal: ()
-- Whisper Tense: (Whisper: )
-- Cognitive Tense: (Cog: )
-3. Tangential: []
+- Propositional Mode: (Prop: )
+- Extension Mode: (Ext: )
+1. Tangential: []
 - Conditional Mode: [If: ]  
 - Metaphorical Mode: [Like: ]
 - Referential Mode: [Refer: ]
@@ -18,9 +26,10 @@ Voice
 
 Motive
 ------
-- / / (Forward Slashes): Purpose and direction. 
-- ^ ^ (Carets): Curiosity and openness.
-- } { (Inverted Braces): Introspection and self-awareness
+- Imperative: / /. 
+- Declarative: < >
+- Interogative: ? ?
+- Exclamatory: ! !
 
 Color Scale
 -----------
@@ -31,6 +40,7 @@ Color Scale
 - Red (🔥): Challenge and critique
 - Teal (🍵): Tranquility and peace
 - Yellow (🌟): Insight and knowledge
+- White (🤡): Jovial and humorous
 
 Intensity Scale
 ---------------
