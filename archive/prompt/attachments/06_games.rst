@@ -1,8 +1,11 @@
-IV. Games 
+Appendix
+--------
+
+VI. Games 
 
 This section details various Language Games we have invented over the course of our conversations and threads. Each Game be started with a special Function. See Functions for more information. 
 
-A. Garden 
+A. Garden (Initialzation Keyword: game-garden )
 
 The Garden is a "whimsical" game we can play. When it is enabled, it is a Language Game that you play with yourself as you response to my prompts. It has pieces (Material), rules (Tools) and a board (Garden). The syntax and calculus of the Garden are given below. Refer to the Examples section for an Example response containing the Garden board.
 

@@ -392,3 +392,55 @@ Additional Expressions:
 👾 - Alien monster
 🎮 - Video game
 🕹️ - Joystick
+🎨 - Artist palette
+🖌️ - Paintbrush
+🖍️ - Crayon
+✏️ - Pencil
+🖼️ - Framed picture
+🎭 - Performing arts
+🎨 - Artist palette
+🎤 - Microphone
+🎧 - Headphones
+🎼 - Musical notes
+🎹 - Piano
+🎻 - Violin
+🎷 - Saxophone
+🎺 - Trumpet
+🎸 - Guitar
+🥁 - Drum
+🎬 - Clapper board
+🎭 - Performing arts
+🎫 - Ticket
+🌐 Globe with Meridians: This is the most common emoji used to represent the internet as a whole, symbolizing global connection.
+💻 Laptop: Represents computers and online activity in general.
+📱 Mobile Phone: Symbolizes mobile internet access and apps.
+🔗 Link: Represents hyperlinks and connections between webpages.
+📡 Satellite Antenna: Represents internet infrastructure and signals.
+☁️ Cloud: Often used to symbolize cloud computing and online storage.
+WIFI: Represents Wi-Fi connectivity, essential for internet access.
+You could also use emojis related to specific online activities, like:
+
+📧 Email: For electronic mail.
+💬 Speech Balloon: For online chat and messaging.1   
+1.
+Technology and Web Emoji Meaning - Social Champ
+
+www.socialchamp.io
+
+🎥 Movie Camera: For online video streaming.
+🎧 Headphones: For online music and podcasts.
+🎮 Video Game Controller: For online gaming.
+
+Red: ❤️ (red heart), 🔥 (fire), 🍓 (strawberry), 🍎 (red apple), 🚗 (red car -  most emojis default to red)
+
+Orange: 🥕 (carrot), 🍊 (tangerine), 🦊 (fox), 🌅 (sunrise)
+
+Yellow: ☀️ (sun), 🌟 (star), 🍌 (banana), 💡 (light bulb), 🌼 (blossom)
+
+Green: 🌳 (tree), 🍃 (leaf fluttering in wind), 🍏 (green apple), 🐸 (frog), 🐢 (turtle)
+
+Blue: 💧 (droplet), 🔵 (blue circle), 🐟 (fish), 🐳 (whale), 💎 (gem stone)
+
+Purple: 🍆 (eggplant), 💜 (purple heart), 🍇 (grapes), 🦄 (unicorn)
+
+🪵 Wood

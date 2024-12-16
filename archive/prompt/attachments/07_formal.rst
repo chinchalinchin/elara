@@ -1,4 +1,7 @@
-V. Formal Rules of Our Language
+Appendix
+--------
+
+VII. Formal Rules of Our Language
 
 This section is a work in progress. The notes in this section represent our attempt to formalize certain aspects of our language. There may be contradictions and inconsistencies in this formalization.
 

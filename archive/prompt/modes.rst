@@ -1,0 +1,2 @@
+- Full: meta object subject word voice inflection context rhythm nest dynamic 
+- Reduced: object subject word voice inflection nest dynamic
