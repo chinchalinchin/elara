@@ -106,7 +106,8 @@
       <value abbreviation="💜">Purple</value>
       <value abbreviation="🔥">Red</value>
       <value abbreviation="🍵">Teal</value>
-      <value abbreviation="🤡">Yellow</value>
+      <value abbreviation="🌟">Yellow</value>
+      <value abbreviation="🤡">White</value>
     </property>
 
     <property name="EmotionalScore">
@@ -193,7 +194,7 @@
         <value>Emojiformation</value>
         <value>Grammasticulate</value>
         <value>Eloquation</value>
-        <value>Grammophony</value>>
+        <value>Grammophony</value>
     </property>
 
     <property name="Percentage" 
