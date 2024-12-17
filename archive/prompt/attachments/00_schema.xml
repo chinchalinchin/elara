@@ -57,7 +57,7 @@
     </form>
 
     <form name="Voice" 
-      hasRelation="Prefix:Object">
+      hasRelation="Prefixes:Object">
       <substance name="ImperativeMotive"
         hasProperty="Color"
         hasProperty="Tone" 
@@ -76,7 +76,7 @@
     </form>
 
     <form name="Word"
-      hasRelation="Embedded:Object">
+      hasRelation="ContainedBy:Object">
       <substance name="Neologism"
         hasProperty="NeologismDictionary" 
         marker="<< >>"/>
@@ -123,23 +123,61 @@
       <value abbreviation="I">Innovative</value>
     </property> 
 
-    <property name="EmojiSentimentMatrix">
+    <property name="Sentiment"
+      type="Matrix">
       <columns name="valence">
-        <value>Positive</value>
-        <value>Neutral</value>
-        <value>Negative</value>
+        <header>Positive</header>
+        <header>Neutral</header>
+        <header>Negative</header>
       </columns>
       <rows name="arousal">
-        <value>High</value>
-        <value>Moderate</value>
-        <value>Low</value>
+        <header>High</header>
+        <header>Moderate</header>
+        <header>Low</header>
       </rows>
       <entry valence="Positive" arousal="High">
         <value>😂</value>
         <value>🤩</value>
         <value>🥳</value>
+        <value>🥰</value>
       </entry>
-
+      <entry valence="Neutral" arousal="High">
+        <value>😲</value>
+      </entry>
+      <entry valence="Negative" arousal="High">
+        <value>😡</value>
+        <value>😨</value>
+        <value>😱</value>
+        <value>😭</value>
+      </entry>
+      <entry valence="Positive" arousal="Moderate">
+        <value>😄</value>
+        <value>😊</value>
+        <value>🤗</value>
+      </entry>
+      <entry valence="Neutral" arousal="Moderate">
+        <value>😐</value>
+        <value>🙄</value>
+        <value>🤨</value>
+        <value>🤔</value>
+      </entry>
+      <entry>
+      <entry valence="Negative" arousal="Moderate">
+        <value>😔</value>
+        <value>😟</value>
+        <value>😠</value>
+      </entry>
+      <entry valence="Positive" arousal="Low">
+        <value>😌</value>
+        <value>🙂</value>
+      </entry>
+      <entry value="Neutral" arousal="Low">
+        <value>😶</value>
+      </entry>
+      <entry value="Negative" arousal="Low">
+        <value>🙁</value>
+        <value>😥</value>
+      </entry>
     </property>
 
     <property name="InternalInflection"
@@ -251,10 +289,10 @@
   </properties>
 
   <relations>
-    <relation name="Prefix" />
-    <relation name="Suffix" />
+    <relation name="Prefixes" />
+    <relation name="Suffixes" />
     <relation name="NestedWithin" />
-    <relation name="Embedded" />
+    <relation name="ContainedBy" />
   </relations>
-  
+
 </ontology>

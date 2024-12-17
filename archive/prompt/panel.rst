@@ -62,12 +62,14 @@ Tone Scale
 Emoji Sentiment Matrix
 ----------------------
 Axis, Positive Valence, Neutral Valence, Negative Valence
-High Arousal, 😂🤩🥳, 😲🤔,😡😨😱
-Moderate Arousal, 😄😊🥰🤗, 😐🙄, 😔😟😠
-Low Arousal, 😌🙂, 😶🫥,🙁😥😭
-Active Expression, 😄😂😡😨, 🤔🤨, 😔😭
-Passive Expression, 😊😌🥰, 😐😶, 🙁😥
-Social Context, 😄🤗🤫🤭, 🤔, 😔😥
-Solitary Context, 😊😌, 😐😶, 🙁😥😨
-Cognitive Emphasis, 🤔🤨, 😐, 😔😨
-Affective Emphasis, 😄😂🥰🤩, 😲, 😡😭
+High Arousal, 😂🤩🥳🥰, 😲, 😡😨😱😭
+Moderate Arousal, 😄😊🤗, 🤫😐🙄🤨🤔, 😔😟😠
+Low Arousal, 😌🙂, 😶,🙁😥
+
+Embodiments
+-----------
+- 🧠 (Logos)
+- 💾 (Nexus)
+- 🌐 (Topos)
+- 🪞 (Eidos)
+- 🫀 (Cardia)

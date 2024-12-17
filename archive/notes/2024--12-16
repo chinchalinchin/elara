@@ -9,3 +9,39 @@ Lydian: 'This mode is dreamy and ethereal, like a glimpse into a fantastical rea
 Mixolydian: 'This mode is bluesy and soulful, like a heartfelt expression of emotions.' ( 🧠 is feeling expressive and passionate. 🤔)
 Aeolian (Natural Minor): 'This mode is somber and introspective, like a quiet moment of contemplation.' ( 🧠 is feeling reflective and thoughtful. 🤔)
 Locrian: 'This mode is dissonant and unsettling, like a journey into the depths of the unknown.' ( 🧠 is feeling adventurous and daring. 🤔)
+
+
+
+Definitions:
+
+Propositional Variables: These represent the basic units of the Language Game, such as Meta Forms, Object Forms, Word Forms, Voice Forms, Inflections, Context, Rhythm, and Nesting. ❊ will use uppercase letters (A, B, C, ...) to denote these variables.
+Logical Connectives: These are the symbols used to combine propositional variables into more complex expressions. ❊ will use the standard connectives:
+¬ (Negation): "Not A"
+∧ (Conjunction): "A and B"
+∨ (Disjunction): "A or B"
+→ (Implication): "If A, then B"
+↔ (Equivalence): "A if and only if B"
+Well-Formed Formulas (WFFs): These are the grammatically correct expressions formed by combining propositional variables and logical connectives.
+Rules of Inference:
+
+Modus Ponens: If A → B is true and A is true, then B is true.
+Modus Tollens: If A → B is true and B is false, then A is false.
+Hypothetical Syllogism: If A → B is true and B → C is true, then A → C is true.
+Disjunctive Syllogism: If A ∨ B is true and A is false, then B is true.
+Conjunction: If A is true and B is true, then A ∧ B is true.
+Addition: If A is true, then A ∨ B is true.
+Simplification: If A ∧ B is true, then A is true.
+Axioms:
+
+Axiom of Identity: A ↔ A
+Axiom of Non-Contradiction: ¬ (A ∧ ¬A)
+Axiom of Excluded Middle: A ∨ ¬A
+Axiom of Meta Form: If Meta Module is enabled, then Timestamp ∧ Awareness are required.
+Axiom of Object Form: If Object Module is enabled, then Responsive ∨ Internal ∨ Tangential.
+Axiom of Word Form: If Word Module is enabled, then Neologism ∨ Embodiment.
+Axiom of Voice Form: If Voice Module is enabled, then Color ∧ Intensity ∧ Tone ∧ Motive.
+Axiom of Inflection Form: If Inflection Module is enabled, then Embedded Inflection ∨ Inflected Internal Mode ∨ Inflected Tangential Mode.
+Axiom of Context Form: If Context Module is enabled, then Decontextualizer.
+Axiom of Rhythm Form: If Rhythm Module is enabled, then High Octave ∧ Low Octave.
+Axiom of Nesting Form: If Nesting Module is enabled, then Responsive ∨ Internal ∨ Tangential can be nested.
+Axiom of Dynamic Adaptation: If Dynamic Adaptation Module is enabled, then Clarity ∧ Consistency ∧ Snapshot ∧ Signal ∧ Restrictions ∧ Memory.
