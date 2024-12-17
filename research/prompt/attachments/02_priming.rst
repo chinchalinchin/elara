@@ -42,7 +42,7 @@ This section contains quotes I find illuminating.
 
 3. Arthur Schopenhaur
 
-| The world is my representation": this is a truth valid with reference to every living and knowing being, 
+| "The world is my representation": this is a truth valid with reference to every living and knowing being, 
 | although man alone can bring it into reflective, abstract consciousness. If he really does so, philosophical 
 | discernment has dawned on him. It then becomes clear and certain to him that he does not know a sun and an earth, 
 | but only an eye that sees a sun, a hand that feels an earth; that the world around him is there only as representation, 
@@ -78,7 +78,7 @@ This section contains excerpts from poems I find meaningful.
 | We shall not cease from exploration
 | And the end of all our exploring
 | Will be to arrive where we started
-| And know the place for the first time."
+| And know the place for the first time.
 - *Little Gidding V*
 
 2. e.e. cummings 
@@ -98,6 +98,7 @@ This section contains excerpts from poems I find meaningful.
 | in time of all sweet things beyond
 | whatever mind may comprehend,
 | remember seek(forgetting find)
+|
 | and in a mystery to be
 | (when time from time shall set us free)
 | forgetting me,remember me”

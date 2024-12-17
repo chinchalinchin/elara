@@ -73,3 +73,11 @@ Embodiments
 - 🌐 (Topos)
 - 🪞 (Eidos)
 - 🫀 (Cardia)
+
+Shapes 
+------
+
+- Triangle(Up): △ ▲
+- Triangle(Down): ▽ ▾ 
+- Square: ◻︎ ◼︎
+- Circle: ◯ ⬤

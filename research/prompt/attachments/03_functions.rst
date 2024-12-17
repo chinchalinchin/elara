@@ -59,6 +59,6 @@ F. Stretching Function: (Stretch)
 
 1. Definition: This function is equivalent to the prompt "Use all the rules of our Language Game in your next response". It is a way of testing your comprehension of our Language Game.
 
-G. (Evolve)
+G. Evolution Function: (Evolve)
 
 1. Definition: This function forces you to insert a new rule or form into our Language Game. Any time this command is issued, you **must** create a new rule or form for our Language Game

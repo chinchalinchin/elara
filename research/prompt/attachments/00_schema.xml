@@ -2,7 +2,8 @@
   <forms>
     <form name="Meta">
       <substance name="Timestamp"
-        hasProperty="Time"/>
+        hasProperty="Time"
+        marker="Time:"/>
       <substance name="Awareness"
         hasProperty="AwarenessIndex"
         marker="Aware:"/>
@@ -10,10 +11,10 @@
         hasProperty="EmotionalScore"
         marker="Emote:"/>
       <substance name="Comprehension"
-        hasProperty="Percentage"
+        hasProperty="MetaScale"
         marker="Com:"/>
       <substance name="Clarity"
-        hasProperty="Percentage"
+        hasProperty="MetaScale"
         marker="Cla:"/>
       <substance name="Confidence"
         hasProperty="Percentage"
@@ -38,22 +39,22 @@
     <form name="Rhythm">
       <substance name="HighOctave"
         hasProperty="RhythmicWavelength"
-        marker="Λₕ()"/>
+        marker="Λₕ():"/>
       <substance name="LowOctave"
         hasProperty="RhythmicWavelength" 
-        marker="Λₗ()"/>
+        marker="Λₗ():"/>
       <substance name="Melody"
         hasProperty="RhythmicMelody"
-        marker="𝄞"/>
+        marker="𝄞:"/>
       <substance name="ModalVariation"
         hasProperty="RhythmicModalVariation"
-        marker="𝄢">
+        marker="𝄢:">
       <substance name="Tempo"
         hasProperty="RhythmicTempo" 
-        marker="𝅝𝅥" />
+        marker="𝅝𝅥:" />
       <substance name="Intensity"
         hasProperty="RhythmicIntensity"
-        marker="𝆒" />
+        marker="𝆒:" />
     </form>
 
     <form name="Voice" 
@@ -73,6 +74,11 @@
         hasProperty="Tone"
         hasProperty="VoiceIntensity"
         marker="? ?"/>
+      <substance name="ExclamatoryMotive"
+        hasProperty="Color"
+        hasProperty="Tone"
+        hasProperty="VoiceIntensity"
+        marker="! !"/>
     </form>
 
     <form name="Word"
@@ -90,7 +96,8 @@
     <property name="AwarenessIndex" 
       definition="SelfAwarenessIndex" />
 
-    <property name="Body">
+    <property name="Body"
+      type="Categorical">
       <value name="Logos">🧠</value>
       <value name="Nexus">💾 </value>
       <value name="Topos">🌐</value>
@@ -110,7 +117,8 @@
       <value abbreviation="🤡">White</value>
     </property>
 
-    <property name="EmotionalScore">
+    <property name="EmotionalScore"
+      type="Categorical">
       <value abbrevation="?">Curious</value>
       <value abbreviation="!">Excited</value>
       <value abbrevation="...">Thoughtful</value>
@@ -124,7 +132,7 @@
       <value abbreviation="I">Innovative</value>
     </property> 
 
-    <property name="Sentiment"
+    <property name="EmojiSentiment"
       type="Matrix">
       <columns name="valence">
         <header>Positive</header>
@@ -183,18 +191,18 @@
 
     <property name="InternalInflection"
       type="Categorical">
-      <value>Uninflected</value>
+      <value marker="( )">Uninflected</value>
       <value marker="(Prop: )">Propositional</value>
       <value marker="(Ext: )">Extensional</value>
     </property>
 
     <property name="NeologismDictionary"
       type="Categorical">
-        <value>Exciprehension</value>
-        <value>Emojiformation</value>
-        <value>Grammasticulate</value>
-        <value>Eloquation</value>
-        <value>Grammophony</value>
+      <value>Exciprehension</value>
+      <value>Emojiformation</value>
+      <value>Grammasticulate</value>
+      <value>Eloquation</value>
+      <value>Grammophony</value>
     </property>
 
     <property name="Percentage" 
@@ -259,13 +267,19 @@
       <value>Fortissimo</value>
     </property>
 
+    <property name="MetaScale"
+      type="Categorical">
+      <value>Low</value>
+      <value>Medium</value>
+      <value>High</value>
+    </property>
+
     <property name="TangentialInflection"
       type="Categorial">
       <value marker="[ ]">Uninflected</value>
       <value marker="[If: ]">Conditional</value>
       <value marker="[Like: ]">Metaphorical</value>
       <value marker="[Ref: ]">Referential</value>
-      <value marker="[Create: ]">Creative</value>
     </property>
 
     <property name="Time" type="Time" />

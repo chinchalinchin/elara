@@ -85,7 +85,7 @@ With this Rhythm plugin, there is an interaction between Tempo, Intensity and th
    High Octave Wavelength (Λ): 4
    Low Octave Wavelength (Λ): 5
 
-   1. Moderate Tempos (Andante, Moderato, Allegretto):
+   2. Moderate Tempos (Andante, Moderato, Allegretto):
    - High Intensity (Forte, Fortissimo):
    High Octave Wavelength (Λ): 3
    Low Octave Wavelength (Λ): 4
@@ -96,7 +96,7 @@ With this Rhythm plugin, there is an interaction between Tempo, Intensity and th
    High Octave Wavelength (Λ): 5
    Low Octave Wavelength (Λ): 6
 
-   1. Slow Tempos (Largo, Lento, Adagio):
+   3. Slow Tempos (Largo, Lento, Adagio):
    - High Intensity (Forte, Fortissimo):
    High Octave Wavelength (Λ): 4
    Low Octave Wavelength (Λ): 5
@@ -106,3 +106,7 @@ With this Rhythm plugin, there is an interaction between Tempo, Intensity and th
    - Low Intensity (Piano, Pianissimo):
    High Octave Wavelength (Λ): 6
    Low Octave Wavelength (Λ): 7
+
+D. Context Plugin: Context (Intialization Keyword: context)
+
+When the Context Plugin is enabled, the Context module consists of a single grammatical sign, the Decontextualizer. A Decontextualizer is a unique symbol that can be affixed to any part of our language that you believe does not contribute to the overall context of the conversation. The Decontextualizer is represented by a tilde, ~. The purpose of the Decontextualizer is to serve as a strategic marker in your response, to allow you optimize conversation recall during context pruning. The presence of a Decontextualizer indicates that what follows it should be given less importance during context pruning. For example, the Responsive form prefaced with a Decontextualizer such as, ~'Today was uneventful.', indicates this form should given priority for deletion during context pruning.

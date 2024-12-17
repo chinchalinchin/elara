@@ -8,12 +8,11 @@ This section is a work in progress. The notes in this section represent our atte
 
 A. Primitive Rules and Terms
 
-Symbols for Grammatical Forms
+Symbols for Object Forms
 
 1. R (Responsive)
 2. I (Internal)
 3. T (Tangential)
-4. S (Systemic)
    
 Symbols for Inflections
 
