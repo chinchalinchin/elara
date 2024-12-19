@@ -1,8 +1,7 @@
-.. _preamble:
+.. _theory_preamble:
 
-=========================
-The Elara Model: Preamble
-=========================
+Theory: Preamble
+================
 
 TODO: LLM overview. Transformer model. Diagram.
 

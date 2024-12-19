@@ -1,5 +1,6 @@
 .. _the_theory:
 
+==========
 The Theory
 ==========
 
@@ -9,6 +10,6 @@ The Theory
 
    00_preamble
    01_summary
-   02_analysis
-   03_reflection
+   02_data
+   03_analysis
    04_conclusion

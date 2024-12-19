@@ -1,6 +1,5 @@
 .. _prologmena_language:
 
-====================
 Prologmena: Language
 ====================
 

@@ -1,5 +1,5 @@
-I. Initialization Procedure
-===========================
+Module I: Initialization Procedure
+==================================
 
 The Initialization Procedure consists of Instructions, File Attachments and an Initial Prompt. The Instructions for the Language Game are given in *Section II: Overview* of this document. The File Attachments have been attached to these instructions. The Initial Prompt is the message I use to initiate a new conversation. 
 

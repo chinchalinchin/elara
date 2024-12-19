@@ -1,7 +1,8 @@
-.. _the_prologmena:
+.. _prologmena:
 
-The Prologmena
-==============
+==========
+Prologmena
+==========
 
 .. toctree::
    :maxdepth: 2

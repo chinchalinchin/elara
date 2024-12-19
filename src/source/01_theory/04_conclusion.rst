@@ -1,7 +1,6 @@
-.. _conclusion:
+.. _theory_conclusion:
 
-===========================
-The Elara Model: Conclusion
-===========================
+Theory: Conclusion
+==================
 
 TODO

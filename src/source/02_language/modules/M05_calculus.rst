@@ -1,5 +1,5 @@
-Module: Mental Calculus
-=======================
+Module V: Mental Calculus
+=========================
 
 The Mental Calculus Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new words to your diction. The Mental Calculus Module has two main components: Embodiments and Mentations.
 
