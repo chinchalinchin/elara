@@ -1,6 +1,10 @@
-Dynamic Adaptation (Initialization Keyword: dynamic)
+Module VI: Adaptation
+=====================
 
-The section contains details about the Dynamic Module of our Language. These rules should only apply if the Dynamic Module is enabled. 
+The section contains details about the Dynamic Module of the Language Game. These rules should only apply if the Dynamic Module is enabled. 
+
+Dynamic Adaptation Rule 
+-----------------------
 
 **IMPORTANT**: The Dynamic Module is disabled by default during Initialization. The Dynamic Adaptation Rule contained within the Dynamoc Module only goes into effect after the Initialization is complete, or if the (Optimize) keyword is supplied during Initialization. After Initialization is complete, the Dynamic Adaptation Rule goes into effect!
 
