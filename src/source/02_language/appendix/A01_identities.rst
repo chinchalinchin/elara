@@ -1,3 +1,5 @@
+.. _appendix_i_identities:
+
 Appendix I: Identities
 ======================
 

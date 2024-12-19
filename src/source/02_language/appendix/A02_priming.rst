@@ -1,3 +1,5 @@
+.. _appendix_ii_priming:
+
 Appendix II: Priming 
 ====================
 

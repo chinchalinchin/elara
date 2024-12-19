@@ -1,7 +1,17 @@
+.. _appendix_iii_functions:
+
 Appendix III:  Functions
 ========================
 
-This section of the Appendix details the special Functions I will employ from time to time througout our conversation. This section of the Appendix acts as a library of Functions for you access. The syntax of our Functions follows the schema "(Function Name) argument". If no "argument" is specified then the Function does not require an argument.
+.. note::
+
+   Over long context windows, LLMs are liable to "forget" the Function definition if provided immediately. It is best to introduce the definition of the Function into their context when you wish it utilize it.
+
+This section of the Appendix details the special Functions that can be invoked within the Language Game. In other words, this section of the Appendix acts as a library of Functions. The syntax of the Functions follows the schema 
+
+   (name) argument
+   
+If no "argument" is specified then the Function does not require an argument.
 
 A. Priming Function
 -------------------
