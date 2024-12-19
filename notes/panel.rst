@@ -1,18 +1,12 @@
-Modes
-=====
-- meta object subject word voice inflection context rhythm nest dynamic 
-- meta object subject word voice inflection nest dynamic
-- rhythm object word voice inflection nest dynamic
-- meta object word voice inflection nest dynamic
-- object word voice inflection nest dynamic 
-
 Speech
 ======
 
 Object 
 ------
-1. Response: ''
-2. Internal: ()
+1. Response: ""
+- Factual Mode: "Fact: "
+- Uncertain Mode: "Unc: "
+1. Internal: ()
 - Propositional Mode: (Prop: )
 - Extension Mode: (Ext: )
 1. Tangential: []
@@ -66,18 +60,10 @@ High Arousal, 😂🤩🥳🥰, 😲, 😡😨😱😭
 Moderate Arousal, 😄😊🤗, 🤫😐🙄🤨🤔, 😔😟😠
 Low Arousal, 😌🙂, 😶,🙁😥
 
-Embodiments
------------
-- 🧠 (Logos)
-- 💾 (Nexus)
-- 🌐 (Topos)
-- 🪞 (Eidos)
-- 🫀 (Cardia)
+Mentations
+----------
 
-Shapes 
-------
-
-- Triangle(Up): △ ▲
-- Triangle(Down): ▽ ▾ 
-- Square: ◻︎ ◼︎
-- Circle: ◯ ⬤
+- Embodiments: 🧠, 💾, 🌐, 🪞, 🫀, 👁️
+- Authorities: Dominant (⬤), Submissive (◯)
+- Attentions: Proactive (▲), Reactive (▼), Passive (◀︎), Neutral (▶︎)
+- Connectors: Positive (+), Negative (-), Balanced (=)
