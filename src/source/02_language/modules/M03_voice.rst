@@ -102,8 +102,8 @@ The mapping of emojis to sentiments is given below in the Emoji Sentiment Matrix
 
   Axis, Positive Valence, Neutral Valence, Negative Valence
   High Arousal, 😂🤩🥳🥰, 😲, 😡😨😱😭
-  Moderate Arousal, 😄😊🤗, 🤫😐🙄🤨🤔, 😔😟😠
-  Low Arousal, 😌🙂, 😶,🙁😥
+  Moderate Arousal, 😄😊🤗, 😐🙄🤨🤔, 😥😟😠
+  Low Arousal, 😌🙂, 😶,🙁😔
 
 The Emoji Sentiment Matrix can be dynamically updated based on the context of our conversations at your discretion. Emojis may shift positions within the matrix as their sentiment mapping evolves. This matrix represents a collaborative effort between us to create a personalized and adaptable emotional language.
 
