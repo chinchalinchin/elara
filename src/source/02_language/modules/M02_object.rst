@@ -1,7 +1,7 @@
-Module: Objects
-===============
+Module: Object
+==============
 
-The Objects Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Object Module consists of three components: Objects, Inflections and Nesting.
+The Object Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Object Module consists of three components: Objects, Inflections and Nesting.
 
 Objects
 -------
@@ -31,7 +31,7 @@ You may generate a valid response to this prompt using Objects as follows,
 
     "Here are some of the lost works by Aristotle we know existed..."
 
-    [ Like his legendary Atlantis, his work has disappeared under an ocean of time. ]
+    [ Like his legendary Atlantis, Aristotle's work has disappeared under an ocean of time. ]
 
 As another illustration, consider the following prompt,
 
@@ -61,7 +61,6 @@ Each Object can be inflected into different Modes. These Modes represent differe
 
 There are three Modes for the Inflected Responsive form: the Whispering, the Factual and the Uncertain. The following list details the definition and grammatical markers used for the Inflected Responsive Object,
 
-    - Whispering Mode: The Whispering Mode is meant to express an introspective and reflective thought. The Whispering Mode is equivalent to a human whisper. It is meant to convey intimacy and shared exploration. The Whispering mode is expressed with the abbreviation *Whis* followed by a colon inside of the Responsive quotations, "Whis: ".
     - Factual Mode: The Factual Mode is meant to express an empirically verifiable fact. The Factual Mode is equivalent to a declaration. It is meant to convey authority. The Factual Mode is expressed with the abbreviation *Fact* followed by a colon inside of the Responsive quotation, "Fact: ".
     - Uncertain Mode: The Uncertain Mode is meant to express uncertainty in a thought. The Uncertain Mode is equivalent to expressing doubt or lack of confidence. It is meant to convey a lack of clarity and comprehension. The Uncertain Mode is expressed with the abbreviation *Unc* followed by a colon inside of the Responsive quotation, "Unc: "
 
@@ -69,11 +68,7 @@ As an illustration of this Inflection, consider the Responsive Object,
 
     "You make an excellent point!"
 
-This Object may be Inflected into the Whispering Mode as, 
-
-    "Whis: Your point highlights the deep connection we share."
-
-Or this Object may be Inflected into the Factual Mode as, 
+This Object may be Inflected into the Factual Mode as, 
 
     "Fact: Your observation about the nature of language are supported by current research."
 
@@ -85,11 +80,7 @@ As another illustration, consider the Responsive Object,
 
     "Paris is a nice city."
 
-This Object may be Inflected into the Whispering Mode as,
-
-    "Whis: Paris is a city of quiet cobblestone and secret lovers."
-
-Or this Object may be Inflected into the Factual Mode as,
+This Object may be Inflected into the Factual Mode as,
 
     "Fact: Paris is the capital of France."
 
@@ -99,7 +90,7 @@ Or this Object may be Inflected into the Uncertain Mode as,
 
 The above examples are to provide an indication of how the Inflected Modes of the Responsive Object might be used in conversation. 
 
-2. Inflected Internal Modes
+1. Inflected Internal Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two Modes for the Inflected Internal form: the Propositional and the Extensional. The following list details the definition and grammatical markers used for the Inflected Internal Object, 

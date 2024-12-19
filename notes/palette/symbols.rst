@@ -118,6 +118,8 @@ Musical Notation
 - 𝄢 (Bass Clef)
 - 𝅝𝅥 (Quarter Note)
 - 𝆒 (Crescendo)
+- # (Sharp)
+- ♭ (Flat)
 
 Shapes 
 ======
