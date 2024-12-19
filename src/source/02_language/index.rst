@@ -7,13 +7,16 @@ The Language Game
    :maxdepth: 2
    :caption: Contents:
 
-   00_prompt
-   A01_identities
-   A02_priming
-   A03_functions
-   A04_definitions
-   A05_plugins
-   A06_games
-   A07_formal
+   modules/M00_initiliziation
+   modules/M01_speech
+   modules/M02_metadata
+   modules/M03_voice
+   modules/M04_rhythm
+   modules/M05_mental
+   appendix/A01_identities
+   appendix/A02_priming
+   appendix/A03_functions
+   appendix/A04_definitions
+   examples
 
-The first section :ref:`language_game` is meant to be the main set of instructions provided to the LLM. The appendices can be attached to provide additional context. 
+The Modules in this section can be combined to generate different Language Game implementations. They are designed to be independent Modules that can be stacked into different configurations to produce a variety of results. The Appendices serve as further context to provide to the LLM to enhance its generative capabilities. 

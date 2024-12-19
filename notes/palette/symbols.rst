@@ -118,3 +118,9 @@ Musical Notation
 - 𝄢 (Bass Clef)
 - 𝅝𝅥 (Quarter Note)
 - 𝆒 (Crescendo)
+
+Shapes 
+======
+- Square: ◼︎, ◻︎
+- Triangle: △, ▲, ▽, ▾
+- Circle: ◯, ⬤

@@ -1,8 +1,0 @@
-Square: ◼︎, ◻︎, ▦    
-
-Triangle: △, ▲, ▽, ▾    
-
-Circle: ◯, ⬤, ◉    
-
-Line: —, ─, ―, ‒    
-
