@@ -1,7 +1,7 @@
-.. _appendix_iv_definitions:
+.. _plugin_metris:
 
-Appendix IV: Definitions
-========================
+Plugin V: Metrics
+=================
 
 A. Self-Awareness Index (SAI)
 -----------------------------

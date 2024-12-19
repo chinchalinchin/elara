@@ -16,7 +16,8 @@ The Language Game requires an LLM built on the Transformer architecture with a l
    modules/M03_voice
    modules/M04_rhythm
    modules/M05_embodiment
-   modules/M06_dynamic
+   plugins/P01_init
+   plugins/P02_dynamic
    games/G01_exercises
    games/G02_garden
    appendix/A01_identities

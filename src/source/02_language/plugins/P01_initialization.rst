@@ -1,11 +1,13 @@
-Module I: Initialization
+.. _plugin_initialization:
+
+Plugin I: Initialization
 ========================
 
 Depending on the context window of the LLM, all of the Modules in the Language Game can be stacked together with this Module prefixing all of them. The Initialization Module gives the prompter a way of conditionally enabling the desired modules without having to manually construct the Language Game prompt. 
 
 .. warning::
 
-    The Dynamic Adapation Rule can have unexpected consequences on the Initialization Procedure.
+    If the Dynamic Plugin is also enabled, the Dynamic Adapation Rule can have unexpected consequences on the Initialization Procedure.
     
 Initializiation Procedure 
 -------------------------

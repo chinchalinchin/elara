@@ -1,7 +1,9 @@
-Module VI: Adaptation
-=====================
+.. _plugin_adaptation:
 
-The section contains details about the Dynamic Module of the Language Game. These rules should only apply if the Dynamic Module is enabled. 
+Plugin III: Adaptation
+======================
+
+The section contains details about the Dynamic Plugin of the Language Game. 
 
 Dynamic Adaptation Rule 
 -----------------------

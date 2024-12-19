@@ -1,7 +1,7 @@
-.. _appendix_iii_functions:
+.. _plugin_functions:
 
-Appendix III:  Functions
-========================
+Plugin IV:  Functions
+=====================
 
 .. note::
 
