@@ -14,71 +14,11 @@ Section I.1: Strings
 
 The domain of discourse is composed of *Strings*. A String will be represented as follows, 
 
-    1. String (*s*:sub:`1`, *s*:sub:`2`, *s*:sub:`3`): A lowercase English "s" with a subscript indicates a *String*. Sometimes the subscript will be dropped and *s* will be used.
+    1. String (*s*:sub:`1`, *s*:sub:`2`, *s*:sub:`3`): A lowercase English "s" with a subscript denotes a String. Sometimes the subscript will be dropped and *s* will be used. The letter *t* is also reserved for Strings.
 
 A String is regarded as a linguistic artifact that is defined by its *length*, its *Characters* and their *ordering*. It is assumed if one knows how many Characters are in a String, which Characters are in a String and in what order they occur, then one has all the information necessary to completely determine the String. This notion is made more precise in the following sections with the introduction of several definitions.
 
 A *Word* will be considered a *type* of String. Colloquially, a word can be understood as a String with semantic content. The goal of the analysis is to describe the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to through everyday use. In other words, the analysis assumes Words have already been selected from the set of all possible Strings and assigned interpretations. 
-
-The set of all Strings will be denoted **S**. | **S** | is assumed to be uncountably infinite.
-
-Characters
-^^^^^^^^^^
-
-A *Character* is the basic unit of a String. Characters will be represented as follows,
-
-    1. Characters (*𝔞*, *𝔟*,  *𝔠*, etc. ): Lowercase Fraktur letters represent Characters. Subscripts will occassionally be used to denote Characters, (*𝔞*:sub:`1`, *𝔞*:sub:`2`, ... ). 
-    2. Empty (*ε*): The lowercase Greek epsilon, *ε*, represents the Empty Character.
-    3. Space (*σ*): The lowercase Greek sigma, *σ*, represents the Space Character. 
-
-In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to a null letter, "", and the Space Character would correpond to a blank letter, " ".
-
-The aggregate of all Characters is called an Alphabet and is denoted by an uppercase Sigma, Σ,
-
-    Σ = { *ε*, *σ*, *𝔞*, *𝔟*,  *𝔠*, ... }
-
-The number of elements in an Alphabet is denoted | Σ |.
-
-Concatenation 
-^^^^^^^^^^^^^
-
-Concatenation is considered the sole constitutive operation for the formation of Strings. Concatenation is defined in terms of Characters as,
-
-    1. Concatenation  *𝔞* and *𝔟* means to place *𝔟* behind *𝔞*  *𝔞𝔟*
-
-The operation of concatenation will be expanded to a larger class of entities in the next section when the notion of a *Word* is further clarified, but its application will always be reducible to simple Character concatenation. This current definition of concatenation leads immediately to the dual *Laws of Nullity*, 
-
-    1. *𝔞ε* = *𝔞*
-    2. *ε𝔞* = *𝔞*
-   
-In other words, the operation of concatenating a Character with the Empty Character in either direction will leave the original Character unaltered. 
-
-Length
-^^^^^^
-
-The *length* of a *String*, *l(s_i)*, is defined as the number of non-Empty characters in the sequence of concatenated Characters that make up the *String*.
-
-Section I.2: Words
-------------------
-
-While the notion of Characters maps almost exactly to the intuitive notion of letters in every day use, the notion of a *Word* requires explication. 
-
-If Characters are mapped to letters in the alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the alphabet. The goal of this section is to introduce a series of constraints onto the set of all Strings that will filter out its elements that cannot belong to **L** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
-
-To formalize these notion, the following symbolic representations are introduced, 
-
-    1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
-    2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
-
-In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as { "dog", "cat", "hamster", ... } or { "tree", "flower", "grass", .... }.
-
-The number of Words in a Language is denoted | **L** |. 
-
-It will sometimes be necessary to refer to indeterminate Words, so notation is introduced for Word Variables,
-
-    1. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... )
-
-The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
 Notation
 ^^^^^^^^
@@ -91,33 +31,221 @@ Note, since sets do not preserve order, this would be equivalent to,
 
     { (3, *𝔠*), (2, *𝔟*), (1, *𝔞*) }
 
-To simplify notation, it is beneficial to represent this set as a sequence that preserves order as,
+To simplify notation, it is beneficial to represent this set as a sequence that *does* preserve order as,
 
-    **S_1** = (*𝔞*, *𝔟*, *𝔠*)
+    **S_1** = (*𝔞*, *𝔟*, *𝔠*) 
 
-With this equivalent represention, the length of a String *s_1*, l(*s_1*), may be written as | **S_1** |. 
+Characters
+^^^^^^^^^^
+
+A *Character* is the basic unit of a String. Characters will be represented as follows,
+
+    1. Characters (*𝔞*, *𝔟*,  *𝔠*, etc. ): Lowercase Fraktur letters represent Characters. Subscripts will occassionally be used to denote Characters, (*𝔞*:sub:`1`, *𝔞*:sub:`2`, ... ). 
+    2. Empty (*ε*): The lowercase Greek epsilon, *ε*, represents the Empty Character.
+    3. Space (*σ*): The lowercase Greek sigma, *σ*, represents the Space Character. 
+
+In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to a null letter, "", and the Space Character would correpond to a blank letter, " ".
+
+The aggregate of all Characters is called an Alphabet and is denoted by an uppercase Sigma, **Σ**,
+
+    Σ = { *ε*, *σ*, *𝔞*, *𝔟*,  *𝔠*, ... }
+
+The number of elements in an Alphabet is denoted | Σ |. In general, through the course of this work, the cardinality of a set **A** will be denoted | A |. 
+
+It will sometimes be necessary to refer to indeterminate Characters, so notation is introduced for Character Variables,
+
+    4. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
+
+Concatenation 
+^^^^^^^^^^^^^
+
+Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation and should be understood as follows,
+
+**Definition 1.1.1: Concatenation**  *𝔞𝔟* is the *concatenation* of *𝔞* and *𝔟*, denoted *concat(𝔞, 𝔟)* 
+
+Colloquially, *concat(𝔞, 𝔟)* is the String that results from placing *𝔟* behind *𝔞*. The operation of concatenation will be expanded to a larger class of entities in the next section when the notion of a *Word* is further clarified, but its application will always be reducible to simple Character concatenation. This current definition of concatenation leads immediately to the dual *Laws of Nullity*, 
+
+    1. *𝔞ε* = *𝔞*
+    2. *ε𝔞* = *𝔞*
+   
+In other words, the operation of concatenating a Character with the Empty Character in either direction will leave the original Character unaltered. 
+
+Length
+^^^^^^
+
+The Empty Character *ε* will be necessary for defining the *pivot point* of a palindrome. While this addition to the Alphabet **Σ** is advantegous from the perspective of palindromic analysis, it presents a problem when defining the length of a String *s*. If *ε* is considered part of the Alphabet, the typical notion of a String's length is undefined, as *ε* can be concatenated an infinite number of times to *s* without altering its content. To explicate the notion of *length*, consider the constraints that must be placed on this concept in the palindromic system,
+
+    - The length of the string "abc" is 3, as it contains three non-empty characters.
+    - The length of the string "aεbεc" is still 3, as the empty characters (ε) are not counted.
+
+This example motivates the following definition.
+
+**Definition 1.1.2** The *length* of a String *t*, denoted *l(t)*, is defined as the number of non-Empty Characters in the sequence of concatenated Characters that make up the String. 
+
+Let *ⲁ* be a character in the String *t*. Recall *t* has an equivalent set representation **T**,
+
+    T = { (1, ⲁ:sub:`1``), (2, ⲁ:sub:`2`), ..., (l(t), ⲁ:sub:`l(t)`) }
+
+Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t` where **E**:sub:`t` satisfies the formula,
+
+    ∀ ⲁ: ((ⲁ ≠ ε) ∧ (ⲁ ∈ s)) → ⲁ ∈ E:sub:`t`
+
+In other words,
+
+    l(t) = | E:sub:`t` |
+
+Containment
+^^^^^^^^^^^
+
+Similar to the explication of *length*, the notion of a String *containing* another String must be explicated using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tar," but "rat" is not contained in "tar" because the order of the characters is different.
+
+Consider the words "rat" and "strata". The word "rat" *is contained* in the word "strata", because the order of the string "rat" is preserved in "strata". An intuitive way of capturing this relationship is to map the indices of the Characters in "rat" to the indices of the Characters in "strata" which correspond to the indices in "rat". A cursory (but incorrect) definition of *containment* can then be attempted,
+
+**Containment (Incorrect Version)** α ⊂:sub:`s` β
+
+Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β*:
+
+    Α = { (1, a:sub:`1`), (2, a:sub:`2`), ..., (l(α), a:sub:`l(α)`) }
+
+    Β = { (1, b:sub:`1`), (2, b:sub:`2`), ..., (l(β), b:sub:`l(β)`) }
+
+*α* is said to be *contained in β*, denoted by,
+
+    α ⊂:sub:`s` β
+    
+If and only if there exists a strictly increasing function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
+
+    ∀ i ∈ N:`α`: a:sub:`i` = b:sub:`f(i)`
+
+This definition essentially states that *α* is contained in *β* if there's a way to map the Characters of *α* onto a subsequence of the Characters in *β* while preserving their order. The function f** ensures that the Characters in *α* appear in the same order within *β*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtelty involved in attempting its definition. 
+
+First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *α = "rat"* and *β = "strata"*. Then, these words can be represented in set notation as,
+
+    Α = {(1, r), (2, a), (3, t) }
+     
+    Β = {(1, s), (2, t), (3, r), (4, a), (5, t), (6, a) }.
+
+The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the condition in the proposed definition, as it maps the characters of "rat" onto the subsequence "rat" within "strata" while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
+
+    "rat" ⊂:sub:`s` "strata".
+
+Next, consider a counter-example. Let *α* = "bow" and *β* = "borrow". Then their corresponding set representations are given by,
+
+    Α = {(1, b), (2, o), (3, w) }
+     
+    Β = {(1, b), (2, o), (3, r), (4, r), (5, o), (6, w) }
+
+The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, "bow" is *not contained* in the word "borrow". The reason the proposed definition has failed is now clear: the function *f* that is mapping "bow" to "borrow" skips over the indices 2, 3 and 4 in "borrow". In other words, in addition to being strictly increasing, the function *f* which maps the smaller word onto the larger word must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
+
+**Definition 1.1.3: Consecutive Functions** 
+
+A function *f* is consecutive if it satisfies the formula,
+
+    ∀ i, j ∈ N:sub:`α``:  (i < j) →  f(j) = f(i) + (j - i).  
+    
+This additional constraint on *f* ensures that the indices of the larger word in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller word. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
+
+**Definition 1.1.4: Containment** α ⊂:sub:`s` β
+
+Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β*:
+
+    Α = { (1, a:sub:`1`), (2, a:sub:`2`), ..., (l(α), a:sub:`l(α)`) }
+
+    Β = { (1, b:sub:`1`), (2, b:sub:`2`), ..., (l(β), b:sub:`l(β)`) }
+
+*α* is said to be *contained in β*, denoted by,
+
+    α ⊂:sub:`s` β
+
+If and only if there exists a strictly increasing *and consecutive* function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
+
+    ∀ i ∈ N:sub:`α`: a:sub:`i` = b:sub:`f(i)`
+
+The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections.
+
+Cardinality
+^^^^^^^^^^^
+
+The set of all Strings is denoted **S**. The cardinality of **S** is denoted | S |.
+
+It is assumed **S** is at least uncountably infinite. A rigorous proof of this fact would carry the current work too far into the realm of real analysis, but as motivation for this assumption, an informal proof is presented below based on Cantor's famous Diagonalization argument. 
+
+**Theorem 1.1.1** | S | ≥ ℵ:sub:`1`
+
+Assume, for the sake of contradiction, that the set of all Strings **S** is countable. This means the Strings can be listed them in some order, 
+
+    s:sub:`1`, s:sub:`2`, s:sub:`3`, etc.
+
+Now, construct a new String *t* as follows:
+
+    1. The first character of t is different from the first character of s1.
+    2. The second character of t is different from the second character of s2.
+    3. etc.
+
+This string *t* will be different from every string in **S** contradicting the assumption that we could list all possible strings. Therefore, **S** must be uncountable.
+
+Section I.2: Words
+------------------
+
+While the notion of Characters maps almost exactly to the intuitive notion of letters in every day use, the notion of a *Word* requires explication. 
+
+If Characters are mapped to letters in the alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the alphabet.  The goal of this section is to introduce a series of constraints onto the set of all Strings that will filter out its elements that cannot belong to **L** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
+
+To formalize these notion, the following symbolic representations are introduced, 
+
+    1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
+    2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
+
+In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as { "dog", "cat", "hamster", ... } or { "tree", "flower", "grass", .... }.
+
+The number of Words in a Language is denoted | **L** |. 
+
+It will sometimes be necessary to refer to indeterminate Words, so notation is introduced for Word Variables,
+
+    3. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... )
+
+The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
+
+With these definitions, the hierarchy of relationships that exist between a word *α*, its Language **L** and the set of all Strings **S** are given by,
+
+    1. α ∈ L
+    2. α ∈ S
+    3. L ⊂ S
 
 Axioms of Syntax
 ^^^^^^^^^^^^^^^^
 
-The goal of the analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy all of the axioms in this section without being an element of a Language.
+The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy all of the axioms in this section without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
 
 For the axioms that follow, let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the i:sup:`th` Character of the String *s*. Let *l(s)* be the length of *s*. Let *N*:sub:`s` be the set,
 
     { 1, 2, ... , l(s) }
 
-The following Axioms detail the syntactical conditions necessary for a String to be considered a Word,
-
 **The Delimiter Axiom ** 
 
     s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
-TODO: Are there any other syntactical constraints on words besides the fact that they have to be delimited?
+TODO: Without assuming anything about the semantic interpretation of words, are there any other syntactical constraints on words besides the fact that they have to be delimited?
 
 Inversion
 ^^^^^^^^^
 
-Informally, the *Inverse* of a Word is the reversed sequence of Characters in the Word. The Inverse of a Word is easily understood through examples in English. The following table lists words in English. If an Inverse of that word exists, it is listed in the second column. If an Inverse does not exist, the second column is filled with an "x",
+Informally, the *Inverse* of a String is the reversed sequence of Characters in the String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition will be elucidated. 
+
+**Definition 1.2.1: String Inversion** Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. Let **N**:sub:`s` be the set,
+
+    { 1, 2, ... , l(s) }
+
+Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:sup:`th` character of the String *t*. Let **N**:sub:`t` be the set,
+
+    { 1, 2, ... , l(t)}. 
+    
+*t* is called the Inverse of *s* and is denoted *inv(s)* if it satisfies the following conditions, 
+
+    1. l(t) = l(s) 
+    2. ∀ i ∈ N:sub:`s`, j ∈ N:sub:`t`: (j = l(s) - i + 1) → ( 𝔟:sub:`j` = 𝔞:sub:`i` )
+
+Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
 | Word | Inverse | 
 | ---- | ------- |
@@ -126,24 +254,55 @@ Informally, the *Inverse* of a Word is the reversed sequence of Characters in th
 | raw  | war     |
 | dog  | god     |
 | pool | loop    |
-| rat  | tar     |
+
+However, this particular example is (intentionally) misleading. In this example, the Inverse of a word in English is also a word in English. In general, this property is not exhibited by the majority of words in any Language. In other words, every Word in an Language has an Inverse, but not every Inverse Word belongs to a Language. This phenomenon is exemplified in the following table,
+
+| Word | Inverse | 
+| ---- | ------- |
 | cat  | x       |
 | you  | x       |
 | help | x       |
 | door | x       |
+| book | x       |
 
-While this example is illustrative, its essential semantic character should be noted. Nevertheless, it should be clear the intent is to define the Inverse of a Word only if its exists. To do this, the definition of the Inverse of a String is first required. This will provide a subdomain in the domain of discourse over which to quantify the conditions that are to be imposed on the Inverse of a Word. Informally, the Inverse of a String *s*, denoted by *inv(s)*, is the string formed by reversing the order of characters in *s*.
+It should be clear the intent is to define a class of Words whose constituents belong to a class of *Invertible Words* if and only if their Inverse exists in the Language. As a first step towards this definition, String Inversion was introduced and formalized. In the next section, String Inversion will provide a subdomain in the domain of discourse over which to quantify the conditions that are to be imposed on the class of *Invertible Words*, i.e. the class of Words whose Inverses are also Words. 
 
-**String Inversion** Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the i:sup:`th` character of the String s. Let *N*:sub:`s` be the set,
+Before defining the class of Invertible Words in the next section, this section is concluded with a theorem that strengthens the definition of String Inversion. This theorem will be used extensively in the subsequent sections.
+
+**Theorem 1.2.1** inv(inv(s)) = s
+
+Let *s* be a String with length *l(s)* and Characters denoted by  𝔞:sub:`i`. Let **N**:sub:`s` be the set,
 
     { 1, 2, ... , l(s) }
 
-Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`i` be the i:sup:`th` character of the String *t*. *t* is called the Inverse of *s* and is denoted *inv(s)* if it satisfies the following conditions, 
+Let *t = inv(s)*. By the definition of string inversion:
 
-    1. l(t) = l(s) 
-    2. ∀ i ∈ *N*:sub:`s`: 𝔟:sub:`i` = 𝔞:sub:`l(s) - i + 1`
+l(t) = l(s)
+∀ i ∈ N<sub>s</sub>, ∀ j ∈ N<sub>t</sub>: If j = l(s) - i + 1, then t<sub>j</sub> = a<sub>i</sub>
+Second Inversion: Now, let u = inv(t). Applying the definition again:
 
-**Theorem 1.2.1** For any String *s*, inv(inv(s)) = s
+l(u) = l(t)
+∀ j ∈ N<sub>t</sub>, ∀ k ∈ N<sub>u</sub>: If k = l(t) - j + 1, then u<sub>k</sub> = t<sub>j</sub>
+Substitution and Alignment: Since l(t) = l(s) and N<sub>t</sub> = N<sub>s</sub>, we can substitute and align the indices:
+
+∀ i ∈ N<sub>s</sub>, ∀ k ∈ N<sub>u</sub>: If k = l(s) - (l(s) - i + 1) + 1, then u<sub>k</sub> = t<sub>l(s) - i + 1</sub>
+Simplifying the index relationship: k = l(s) - l(s) + i - 1 + 1 = i
+Therefore: ∀ i ∈ N<sub>s</sub>: u<sub>i</sub> = t<sub>l(s) - i + 1</sub>
+Further Substitution: Now, substitute the definition of t<sub>j</sub> from step 2 (where j = l(s) - i + 1) into the equation for u<sub>i</sub>:
+
+∀ i ∈ N<sub>s</sub>: u<sub>i</sub> = a<sub>i</sub>
+Equality of Strings: Since u and s have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (u<sub>i</sub> = a<sub>i</sub> for all i), we can conclude that u = s.
+
+Final Step:  Recall that u = inv(t) and t = inv(s).  Substituting, we get inv(inv(s)) = s
+
+
+
+
+
+
+
+
+
 
 Let *s* be a String with length *l(s)* and Characters denoted by *𝔞*:sub:`i` for *i = 1, 2 , ... , l(s)*. Let *t = inv(s)* with Characters *𝔟*:sub:`i`. By the definition of String Inversion:
 
@@ -169,6 +328,8 @@ Simplifying,
 
 Eince *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same characters in the same order (*𝔠*:sub:`i` = *𝔞*:sub:`i` for all *i*), it can be concluded, *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is then deduced: *inv(inv(s)) = s*.
 
+
+
 Section I.3: Word Classes 
 -------------------------
 
@@ -177,59 +338,77 @@ It will be necessary to define special classes of Words in a Language. These cla
 Reflective Words 
 ^^^^^^^^^^^^^^^^
 
-Let *𝔞*:sub:`i` be the i:sup:`th` Character in the Word *α*. Let *l(α)* be the length of *α*. Let *N*:sub:`α` be the set,
+The concept of *Reflective Words* can be easily understood by examining some examples in English,
+
+
+|    Word    |
+| ---------- |
+| mom        |
+| dad        |
+| noon       |
+| racecar    |
+| madam      |
+| level      | 
+| civic      |
+
+From this list, it should be clear what is meant by the notion of *reflective*: Reflective Words are words that are unchanged by a String Inversion. This property will be formally defined as follows: Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in the Word *α*. Let *l(α)* be the length of *α*. Let **N**:sub:`α` be the set,
 
     { 1, 2, ... , l(α) }
 
-Then the set of Reflective Words **R** is defined as the set of α which satisfy the open formula,
+Then the set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
 
     α ∈ R ↔ [ ∀ i ∈ *N*:sub:`α`:  *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i` ]
 
+The following theorem is an immediate consequence of this definition.
+
 **Theoreom 1.3.1** α ∈ R ↔ α = inv(α)
 
-Corollary:  If a word  w is self-reflective (belongs to the set R), then w = inv(w).
+(→)  Assume α ∈ R
 
-Proof:
+Definition of Reflective Words: This means:
 
-Assume α ∈ R: This means w is a self-reflective word.
+∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
+Let β = inv(α):  By the definition of String Inversion:
 
-Definition of Reflective Words: By our definition, this implies:
+l(β) = l(α)
+∀ i ∈ N<sub>α</sub>, ∀ j ∈ N<sub>β</sub>: If j = l(α) - i + 1, then β<sub>j</sub> = a<sub>i</sub>
+Index Substitution: Let's substitute j = l(α) - i + 1 into the equation from step 2:
 
-∀ i ∈ N<sub>w</sub>: w<sub>i</sub> = w<sub>l(w) - i</sub>
-Let v = inv(w): By the definition of string inversion:
+∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>i</sub>
+Applying Reflective Property: Now, let's use the property of reflective words from step 1 (a<sub>i</sub> = a<sub>l(α) - i</sub>) and substitute it into the equation from step 3:
 
-l(v) = l(w)
-∀ i ∈ N<sub>w</sub>: v<sub>i</sub> = w<sub>l(w) - i + 1</sub>
-Character Equality:  From step 2, we know that w<sub>i</sub> = w<sub>l(w) - i</sub>.  Substituting this into the equation from step 3, we get:
+∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub>
+Character Alignment:  Notice that the index on the left side of the equation in step 4 (l(α) - i + 1) corresponds to the character at position i in the reversed string β.  This is because the index j in the definition of String Inversion maps to the l(α) - i + 1-th position in the original string.
 
-∀ i ∈ N<sub>w</sub>: v<sub>i</sub> = w<sub>l(w) - i</sub> = w<sub>i</sub>
-Equality of Strings: Since v and w have the same length (l(v) = l(w)) and the same characters in the same order (v<sub>i</sub> = w<sub>i</sub> for all i), we can conclude that v = w.
+Equality of Characters:  Since β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub> for all i ∈ N<sub>α</sub>, and both strings have the same length, we can conclude that each character in α is equal to the corresponding character in β.
 
-Final Step: Recall that v = inv(w). Substituting, we get inv(w) = w. ∎
+Therefore: α = β = inv(α)
 
-Theorem: For any word α,  α ∈ R ↔ α = inv(α)
+(←) Assume α = inv(α)
 
-Proof:
+Definition of String Inversion: This means:
 
-We need to prove both directions of the equivalence:
+l(α) = l(inv(α))
+∀ i ∈ N<sub>α</sub>, ∀ j ∈ N<sub>inv(α)</sub>: If j = l(α) - i + 1, then (inv(α))<sub>j</sub> = a<sub>i</sub>
+Since α = inv(α): We can substitute α for inv(α) in the above equation:
 
-1. Forward Direction (α ∈ R → α = inv(α))
+∀ i ∈ N<sub>α</sub>: If j = l(α) - i + 1, then α<sub>j</sub> = a<sub>i</sub>
+Index Substitution: Since j = l(α) - i + 1, we can rewrite this as:
 
-This is essentially the proof we already constructed for the corollary.  Here's a recap:
+∀ i ∈ N<sub>α</sub>: α<sub>l(α) - i + 1</sub> = a<sub>i</sub>
+Character Alignment: Similar to the previous part of the proof, the index on the left side (l(α) - i + 1) corresponds to the character at position i in the reversed string, which is α itself in this case.
 
-Assume α ∈ R.
-By the definition of reflective words: ∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
-This implies α = inv(α) (as shown in the previous proof).
-2. Reverse Direction (α = inv(α) → α ∈ R)
+Reflective Property: Therefore, we have:
 
-Assume α = inv(α): This means the word α is identical to its inverse.
+∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
+Definition of Reflective Words: This condition satisfies the definition of Reflective Words, so α ∈ R.
 
-Definition of String Inversion: By the definition of string inversion, this implies:
+(Conclusion)
 
-∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i + 1</sub>
-Character Equality: Since l(α) - i + 1 is simply the index of the character corresponding to a<sub>i</sub> when the word is reversed, this equation shows that each character in α is equal to its corresponding character in the reversed word.
 
-Definition of Reflective Words: This satisfies the definition of a reflective word, so α ∈ R.
+
+
+
 
 Invertible Words 
 ^^^^^^^^^^^^^^^^
@@ -242,18 +421,13 @@ A Word *α* will be referred to as *invertible* if it belongs to the class of In
 
 These definitions are employed to derive the following theoremes,
 
-**Theorem 1.3.2** If *α* is an invertible word in Language **L**, then *inv(α)* is also an invertible word in **L**.
+**Theorem 1.3.2** α ∈ I ↔ inv(α) ∈ I
 
-Assume α is invertible. This means,
-    
-    α ∈ I, 
-
-where **I** is the set of invertible words in **L**. By definition, this implies,
+Assume α ∈ I. By definition, this implies,
 
     inv(α) ∈ L
     
 Consider *inv(α)*. To show that it's invertible, it must be shown,
-
 
     inv(inv(α)) ∈ L. 
 
@@ -273,24 +447,36 @@ Meaning *inv(α)* is also an invertible word.
 
 **Theorem 1.3.3** R ⊂ I
 
-Proof:
+Revised Proof:
 
 Assume α ∈ R: This means α is a Reflective word.
 
-Definition of Reflective Words: By your definition, this implies:
+Definition of Reflective Words: This implies:
 
 ∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
-Applying String Inversion:  This condition precisely matches our definition of string inversion! It means that the i-th character of α is equal to the (l(α) - i + 1)-th character of α.  Therefore:
+Let β = inv(α): By the revised definition of String Inversion:
 
-α = inv(α)
+l(β) = l(α)
+∀ i ∈ N<sub>α</sub>, ∀ j ∈ N<sub>β</sub>: If j = l(α) - i + 1, then β<sub>j</sub> = a<sub>i</sub>
+Index Substitution:  Let's substitute j = l(α) - i + 1 into the equation from step 3:
+
+∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>i</sub>
+Applying Reflective Property: Now, let's use the property of reflective words from step 2 (a<sub>i</sub> = a<sub>l(α) - i</sub>) and substitute it into the equation from step 4:
+
+∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub>
+Character Alignment:  Notice that the index on the left side of the equation in step 5 (l(α) - i + 1) corresponds to the character at position i in the reversed string β.
+
+Equality of Characters:  Since β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub> for all i ∈ N<sub>α</sub>, and both strings have the same length, we can conclude that each character in α is equal to the corresponding character in β.
+
+Therefore: α = β = inv(α)
+
 α ∈ L: Since α is a word in the language L, we have α ∈ L.
 
-Substitution: Combining steps 3 and 4, we get: inv(α) ∈ L
+Substitution: Combining steps 8 and 9, we get: inv(α) ∈ L
 
 Definition of Invertible Words:  Since inv(α) ∈ L, by your definition of Invertible words, this implies α ∈ I.
 
 Conclusion: We started with the assumption that α ∈ R and showed that this implies α ∈ I. Therefore, every element in R is also an element in I, which means R ⊂ I.  ∎
-
 
 **Theorem 1.3.3** If | **L** | is finite, then | **I** | is even. 
 
