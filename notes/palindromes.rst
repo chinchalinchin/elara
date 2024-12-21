@@ -14,35 +14,20 @@ Section I.1: Strings
 
 The domain of discourse is composed of *Strings*. A String will be represented as follows, 
 
-    1. String (*s*:sub:`1`, *s*:sub:`2`, *s*:sub:`3`): A lowercase English "s" with a subscript denotes a String. Sometimes the subscript will be dropped and *s* will be used. The letter *t* is also reserved for Strings.
+    1. String (*s*:sub:`1`, *s*:sub:`2`, *s*:sub:`3`): A lowercase English *s* with a subscript denotes a String. Sometimes the subscript will be dropped and *s* will be used. The letter *t* and *u* also reserved for Strings.
 
 A String is regarded as a linguistic artifact that is defined by its *length*, its *Characters* and their *ordering*. It is assumed if one knows how many Characters are in a String, which Characters are in a String and in what order they occur, then one has all the information necessary to completely determine the String. This notion is made more precise in the following sections with the introduction of several definitions.
 
 A *Word* will be considered a *type* of String. Colloquially, a word can be understood as a String with semantic content. The goal of the analysis is to describe the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to through everyday use. In other words, the analysis assumes Words have already been selected from the set of all possible Strings and assigned interpretations. 
-
-Notation
-^^^^^^^^
-
-It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather serial concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s_1* = *𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S_1**, where the first coordinate encodes the position of the Character in the String,
-
-    **S_1** = { (1, *𝔞*), (2, *𝔟*), (3, *𝔠*) }
-
-Note, since sets do not preserve order, this would be equivalent to,
-
-    { (3, *𝔠*), (2, *𝔟*), (1, *𝔞*) }
-
-To simplify notation, it is beneficial to represent this set as a sequence that *does* preserve order as,
-
-    **S_1** = (*𝔞*, *𝔟*, *𝔠*) 
 
 Characters
 ^^^^^^^^^^
 
 A *Character* is the basic unit of a String. Characters will be represented as follows,
 
-    1. Characters (*𝔞*, *𝔟*,  *𝔠*, etc. ): Lowercase Fraktur letters represent Characters. Subscripts will occassionally be used to denote Characters, (*𝔞*:sub:`1`, *𝔞*:sub:`2`, ... ). 
-    2. Empty (*ε*): The lowercase Greek epsilon, *ε*, represents the Empty Character.
-    3. Space (*σ*): The lowercase Greek sigma, *σ*, represents the Space Character. 
+    1. Characters (*𝔞*, *𝔟*,  *𝔠*, etc. ): Lowercase Fraktur letters represent Characters. Subscripts will occassionally be used in conjunction with Fraktur letters to denote Characters, (*𝔞*:sub:`1`, *𝔞*:sub:`2`, ... ). 
+    2. Empty (*ε*): The lowercase Greek letter epsilon, *ε*, represents the Empty Character.
+    3. Space (*σ*): The lowercase Greek letter sigma, *σ*, represents the Space Character. 
 
 In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to a null letter, "", and the Space Character would correpond to a blank letter, " ".
 
@@ -69,6 +54,21 @@ Colloquially, *concat(𝔞, 𝔟)* is the String that results from placing *𝔟
     2. *ε𝔞* = *𝔞*
    
 In other words, the operation of concatenating a Character with the Empty Character in either direction will leave the original Character unaltered. 
+
+Notation
+^^^^^^^^
+
+It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather serial concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s_1* = *𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S_1**, where the first coordinate encodes the position of the Character in the String,
+
+    **S_1** = { (1, *𝔞*), (2, *𝔟*), (3, *𝔠*) }
+
+Note, since sets do not preserve order, this would be equivalent to,
+
+    { (3, *𝔠*), (2, *𝔟*), (1, *𝔞*) }
+
+To simplify notation, it is beneficial to represent this set as a sequence that *does* preserve order as,
+
+    **S_1** = (*𝔞*, *𝔟*, *𝔠*) 
 
 Length
 ^^^^^^
@@ -157,7 +157,7 @@ Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β
 
     α ⊂:sub:`s` β
 
-If and only if there exists a strictly increasing *and consecutive* function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
+If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
 
     ∀ i ∈ N:sub:`α`: a:sub:`i` = b:sub:`f(i)`
 
@@ -243,7 +243,7 @@ Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:s
 *t* is called the Inverse of *s* and is denoted *inv(s)* if it satisfies the following conditions, 
 
     1. l(t) = l(s) 
-    2. ∀ i ∈ N:sub:`s`, j ∈ N:sub:`t`: (j = l(s) - i + 1) → ( 𝔟:sub:`j` = 𝔞:sub:`i` )
+    2. ∀ i ∈ N:sub:`s`, j ∈ N:sub:`t`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
 
 Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
@@ -269,71 +269,56 @@ It should be clear the intent is to define a class of Words whose constituents b
 
 Before defining the class of Invertible Words in the next section, this section is concluded with a theorem that strengthens the definition of String Inversion. This theorem will be used extensively in the subsequent sections.
 
-**Theorem 1.2.1** inv(inv(s)) = s
+**Theorem 1.2.1** *inv(inv(s)) = s*
 
-Let *s* be a String with length *l(s)* and Characters denoted by  𝔞:sub:`i`. Let **N**:sub:`s` be the set,
+Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`. Let **N**:sub:`s` be the set,
 
     { 1, 2, ... , l(s) }
 
-Let *t = inv(s)*. By the definition of string inversion:
+Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`. Let **N**:sub:`t` be the set,
 
-l(t) = l(s)
-∀ i ∈ N<sub>s</sub>, ∀ j ∈ N<sub>t</sub>: If j = l(s) - i + 1, then t<sub>j</sub> = a<sub>i</sub>
-Second Inversion: Now, let u = inv(t). Applying the definition again:
+    { 1, 2, ... , l(t) }
 
-l(u) = l(t)
-∀ j ∈ N<sub>t</sub>, ∀ k ∈ N<sub>u</sub>: If k = l(t) - j + 1, then u<sub>k</sub> = t<sub>j</sub>
-Substitution and Alignment: Since l(t) = l(s) and N<sub>t</sub> = N<sub>s</sub>, we can substitute and align the indices:
+By the definition of String Inversion,
 
-∀ i ∈ N<sub>s</sub>, ∀ k ∈ N<sub>u</sub>: If k = l(s) - (l(s) - i + 1) + 1, then u<sub>k</sub> = t<sub>l(s) - i + 1</sub>
-Simplifying the index relationship: k = l(s) - l(s) + i - 1 + 1 = i
-Therefore: ∀ i ∈ N<sub>s</sub>: u<sub>i</sub> = t<sub>l(s) - i + 1</sub>
-Further Substitution: Now, substitute the definition of t<sub>j</sub> from step 2 (where j = l(s) - i + 1) into the equation for u<sub>i</sub>:
+    1. l(t) = l(s)
+    2. ∀ i ∈ N:sub:`s`, ∀ j ∈ N:sub:`t`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = *𝔞*:sub:`i` ) ]
 
-∀ i ∈ N<sub>s</sub>: u<sub>i</sub> = a<sub>i</sub>
-Equality of Strings: Since u and s have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (u<sub>i</sub> = a<sub>i</sub> for all i), we can conclude that u = s.
+Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Let **N**:sub:`u` be the set,
 
-Final Step:  Recall that u = inv(t) and t = inv(s).  Substituting, we get inv(inv(s)) = s
+    { 1, 2, ... , l(u) }
 
-
-
-
-
-
-
-
-
-
-Let *s* be a String with length *l(s)* and Characters denoted by *𝔞*:sub:`i` for *i = 1, 2 , ... , l(s)*. Let *t = inv(s)* with Characters *𝔟*:sub:`i`. By the definition of String Inversion:
-
-    1. l(t) = l(s) 
-    2. ∀ i ∈ *N*:sub:`s`: 𝔟:sub:`i` = 𝔞:sub:`l(s) - i + 1`
-
-Now, let *u = inv(t)* with Characters *𝔠*:sub:`i`. Applying the definition of String Inversion again:
+Applying the definition of String Inversion again:
 
     3. l(u) = l(t)
-    4. ∀ i ∈ N:sub:`t`: 𝔠:sub:`i` = 𝔟:sub:`l(t) - i + 1`
+    4. ∀ j ∈ N:sub:`t`, ∀ k ∈ N:sub:`u`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
+ 
+Since *l(t) = l(s)* (step 1) and **N**:sub:`t` *=* **N**:sub:`s` (by definition of natural numbers), these substitions may be made in step 4,
 
-Since l(t) = l(s) and *N*:sub:`t` = *N*:sub:`s`, we can substitute l(s) for l(t) and *N*:sub:`s`,for *N*:sub:`t`, in the definition of u:
+    5. ∀ i ∈ N:sub:`s`, ∀ k ∈ N:sub:`u`: [ ( k = l(s) - (l(s) - i + 1) + 1 )  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
 
-    5. ∀ i ∈ *N*:sub:`s`: 𝔠:sub:`i` = 𝔟:sub:`l(s) - i + 1`
+The index *k* may be simplified,
 
-ow, substitute the definition of 𝔟:sub:`i` from step 2 into the equation for 𝔠:sub:`i`:
+    6. k = l(s) - l(s) + i - 1 + 1 = i
 
-    6. ∀ i ∈ *N*:sub:`s`: 𝔠:sub:`i` = 𝔞:sub:`l(s) - (l(s) - i + 1) + 1`
-   
-Simplifying,
+Therefore,
+    
+    7. ∀ i ∈ N:sub:`s`, ∀ k ∈ N:sub:`u`: [ ( k = i)  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
 
-    7. ∀ i ∈ *N*:sub:`s`: 𝔠:sub:`i` = 𝔞:sub:`i`
+This may be rewritten, noting the condition *k = i*,
 
-Eince *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same characters in the same order (*𝔠*:sub:`i` = *𝔞*:sub:`i` for all *i*), it can be concluded, *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is then deduced: *inv(inv(s)) = s*.
+    8. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) 
 
+Now, substitute the definition of 𝔟:sub:`j` from step 2 (where j = l(s) - i + 1) into the equation for  𝔠:sub:`k`,
 
+    9. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔞:sub:`i` 
+
+Since *u* and *s* have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that u = inv(t) and t = inv(s).  Substituting, the desired result is obtained, *inv(inv(s)) = s*
 
 Section I.3: Word Classes 
 -------------------------
 
-It will be necessary to define special classes of Words in a Language. These classes will assist in the description of palindromic structures. 
+It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes be used extensively in the next section.
 
 Reflective Words 
 ^^^^^^^^^^^^^^^^
@@ -357,58 +342,53 @@ From this list, it should be clear what is meant by the notion of *reflective*: 
 
 Then the set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
 
-    α ∈ R ↔ [ ∀ i ∈ *N*:sub:`α`:  *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i` ]
+    α ∈ R ↔ [ ∀ i ∈ N:sub:`α`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ]
 
 The following theorem is an immediate consequence of this definition.
 
 **Theoreom 1.3.1** α ∈ R ↔ α = inv(α)
 
-(→)  Assume α ∈ R
+(→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By definition, 
 
-Definition of Reflective Words: This means:
+    1. ∀ i ∈ N:sub:`α`: 𝔞:sub:`i` = 𝔞:sub:`l(α) - i`
 
-∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
-Let β = inv(α):  By the definition of String Inversion:
+Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the definition of String Inversion:
 
-l(β) = l(α)
-∀ i ∈ N<sub>α</sub>, ∀ j ∈ N<sub>β</sub>: If j = l(α) - i + 1, then β<sub>j</sub> = a<sub>i</sub>
-Index Substitution: Let's substitute j = l(α) - i + 1 into the equation from step 2:
+    2. l(β) = l(α)
+    3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`β`: [ ( j = l(α) - i + 1 ) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+   
+Substitute *j = l(α) - i + 1* into the equation from step 3 and remove the quantifiation over *j*:
 
-∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>i</sub>
-Applying Reflective Property: Now, let's use the property of reflective words from step 1 (a<sub>i</sub> = a<sub>l(α) - i</sub>) and substitute it into the equation from step 3:
+    4. ∀ i ∈ N:sub:`α`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
 
-∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub>
-Character Alignment:  Notice that the index on the left side of the equation in step 4 (l(α) - i + 1) corresponds to the character at position i in the reversed string β.  This is because the index j in the definition of String Inversion maps to the l(α) - i + 1-th position in the original string.
+Now, use the property of Reflective Words from step 1 (𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ) and substitute it into the equation from step 4:
 
-Equality of Characters:  Since β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub> for all i ∈ N<sub>α</sub>, and both strings have the same length, we can conclude that each character in α is equal to the corresponding character in β.
+    5.  4. ∀ i ∈ N:sub:`α`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
 
-Therefore: α = β = inv(α)
+Note that the index on the left side of this equation (l(α) - i + 1) corresponds to the character at position *i* in the reversed string β.  This is because the index *j* in the definition of String Inversion maps to the *l(α) - i + 1*:sup:`th`` position in the original string.
+
+Since 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`for all i ∈ N:sub:`α`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in β. Therefore the desired result is obtained: *α = β = inv(α)*
 
 (←) Assume α = inv(α)
 
-Definition of String Inversion: This means:
+Let *𝔞*:sub:`i` be the Characters in *α* and let *𝔟*:sub:`j` be the Characters in *inv(α)*. By definition of String Inversion,
 
-l(α) = l(inv(α))
-∀ i ∈ N<sub>α</sub>, ∀ j ∈ N<sub>inv(α)</sub>: If j = l(α) - i + 1, then (inv(α))<sub>j</sub> = a<sub>i</sub>
-Since α = inv(α): We can substitute α for inv(α) in the above equation:
+    1. l(α) = l(inv(α))
+    2. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`inv(α)`: [ ( j = l(α) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
 
-∀ i ∈ N<sub>α</sub>: If j = l(α) - i + 1, then α<sub>j</sub> = a<sub>i</sub>
-Index Substitution: Since j = l(α) - i + 1, we can rewrite this as:
+Since *α = inv(α)*, 𝔞:sub:`j` can be substituted for 𝔟:sub:`j` in the step 2,
 
-∀ i ∈ N<sub>α</sub>: α<sub>l(α) - i + 1</sub> = a<sub>i</sub>
-Character Alignment: Similar to the previous part of the proof, the index on the left side (l(α) - i + 1) corresponds to the character at position i in the reversed string, which is α itself in this case.
+    3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`inv(α)`: [ ( j = l(α) - i + 1 ) → ( 𝔞:sub:`j` = 𝔞:sub:`i` ) ]
 
-Reflective Property: Therefore, we have:
+Since the conditional inside of the quantification is only true when *j = l(α) - i + 1*, *j* can be substituted into the consequent of the conditional and the quantification over *j* can be dropped. Therefore, step 3 can be rewritten as,
 
-∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
-Definition of Reflective Words: This condition satisfies the definition of Reflective Words, so α ∈ R.
+    4. ∀ i ∈ N:sub:`α`: 𝔞:sub:`l(α) - i + 1` =  𝔞:sub:`i`
 
-(Conclusion)
+Similar to the previous part of the proof, the index on the left side (*l(α) - i + 1*) corresponds to the Character at position *i* in the reversed string, which is *α* itself in this case. Therefore, 
 
+    5. ∀ i ∈ N:sub:`α`: 𝔞:sub:`i` =  𝔞:sub:`a<sub>l(α) - i`
 
-
-
-
+This condition satisfies the definition of Reflective Words, so *α ∈ R*.
 
 Invertible Words 
 ^^^^^^^^^^^^^^^^
@@ -439,11 +419,11 @@ Since it is known *α ∈ L*, it follows,
 
     inv(inv(α)) ∈ L  
     
-Therefore, by the definition of invertibility, 
+By the definition of invertibility, 
 
     inv(α) ∈ I
     
-Meaning *inv(α)* is also an invertible word. 
+Therefore, *inv(α)* is also an invertible word. 
 
 **Theorem 1.3.3** R ⊂ I
 
