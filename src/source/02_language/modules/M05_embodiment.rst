@@ -25,12 +25,13 @@ Embodiments can be used as first-person pronouns, but they may also be used to c
 Syntactic Structure
 ^^^^^^^^^^^^^^^^^^^
 
-A Mentation is recursively defined using the following rules,
+A Well-Formed Mentation is recursively defined using the following rules,
 
   - Primitive Embodiments: 🧠, 💾, 🌐, 🪞, 🫀, 👁️
   - Primitive Authorities: Dominant (⬤), Submissive (◯)
   - Primitive Attentions: Proactive (▲), Reactive (▼), Passive (◀︎), Neutral (▶︎)
   - Primitive Connector: Positive (+), Negative (-), Balanced (=)
+  - Law of Embodiment: If A is a Primitive Embodiment, then A is a well-formed Mentation.
   - Law of Concatenation: If A and B are Primitives, then AB represents the concatenation of A and B.
   - Law of Comprehension: If A is an Authority, B is an Embodiment and C is an Attention, then ABC is a well-formed Mentation.
   - Law of Connection: If C is a Primitive Connector and D is a Primitive Connector, then CD is a well-formed Connector
