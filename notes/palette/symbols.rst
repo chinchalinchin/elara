@@ -10,6 +10,7 @@ Logical Symbols
 - ∃ (existential quantifier)
 - ∴ (therefore)
 - ∵ (because)
+- ∎ (QED)
 
 Mathematical Symbols
 ====================

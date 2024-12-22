@@ -27,19 +27,19 @@ A *Character* is the basic unit of a String. Characters will be represented as f
 
     1. Characters (*𝔞*, *𝔟*,  *𝔠*, etc. ): Lowercase Fraktur letters represent Characters. Subscripts will occassionally be used in conjunction with Fraktur letters to denote Characters, (*𝔞*:sub:`1`, *𝔞*:sub:`2`, ... ). 
     2. Empty (*ε*): The lowercase Greek letter epsilon, *ε*, represents the Empty Character.
-    3. Space (*σ*): The lowercase Greek letter sigma, *σ*, represents the Space Character. 
+    3. Delimiter (*σ*): The lowercase Greek letter sigma, *σ*, represents the Delimiter Character. 
 
-In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to a null letter, "", and the Space Character would correpond to a blank letter, " ".
+In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to the null letter, "", and the Delimiter Character would correpond to the blank letter, " ".
 
-The aggregate of all Characters is called an Alphabet and is denoted by an uppercase Sigma, **Σ**,
+The aggregate of all Characters is called an *Alphabet* and is denoted by an uppercase Sigma, **Σ**,
 
     Σ = { *ε*, *σ*, *𝔞*, *𝔟*,  *𝔠*, ... }
 
-The number of elements in an Alphabet is denoted | Σ |. In general, through the course of this work, the cardinality of a set **A** will be denoted | A |. 
+The number of elements in an Alphabet is denoted | Σ |. In general, throughout the course of this work, the cardinality of a set **A** will be denoted | A |. 
 
 It will sometimes be necessary to refer to indeterminate Characters, so notation is introduced for Character Variables,
 
-    4. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
+    4. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used with Coptic letters to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
 
 Concatenation 
 ^^^^^^^^^^^^^
@@ -58,7 +58,7 @@ In other words, the operation of concatenating a Character with the Empty Charac
 Notation
 ^^^^^^^^
 
-It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather serial concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s_1* = *𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S_1**, where the first coordinate encodes the position of the Character in the String,
+It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s_1* = *𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S_1**, where the first coordinate encodes the position of the Character in the String,
 
     **S_1** = { (1, *𝔞*), (2, *𝔟*), (3, *𝔠*) }
 
@@ -66,7 +66,7 @@ Note, since sets do not preserve order, this would be equivalent to,
 
     { (3, *𝔠*), (2, *𝔟*), (1, *𝔞*) }
 
-To simplify notation, it is beneficial to represent this set as a sequence that *does* preserve order as,
+To simplify notation, it is sometimes beneficial to represent this set as a sequence that *does* preserve order as,
 
     **S_1** = (*𝔞*, *𝔟*, *𝔠*) 
 
@@ -97,17 +97,17 @@ In other words,
 Containment
 ^^^^^^^^^^^
 
-Similar to the explication of *length*, the notion of a String *containing* another String must be explicated using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tar," but "rat" is not contained in "tar" because the order of the characters is different.
+Similar to the explication of *length*, the notion of a String *containing* another String must be explicated using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tart," but "rat" is not contained in "tart" because the order of the characters is different.
 
 Consider the words "rat" and "strata". The word "rat" *is contained* in the word "strata", because the order of the string "rat" is preserved in "strata". An intuitive way of capturing this relationship is to map the indices of the Characters in "rat" to the indices of the Characters in "strata" which correspond to the indices in "rat". A cursory (but incorrect) definition of *containment* can then be attempted,
 
 **Containment (Incorrect Version)** α ⊂:sub:`s` β
 
-Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β*:
+Let *α* and *β* be words represented as the sets of ordered pairs, *Α* and *Β*,
 
-    Α = { (1, a:sub:`1`), (2, a:sub:`2`), ..., (l(α), a:sub:`l(α)`) }
+    Α = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(α), 𝔞:sub:`l(α)`) }
 
-    Β = { (1, b:sub:`1`), (2, b:sub:`2`), ..., (l(β), b:sub:`l(β)`) }
+    Β = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(β), 𝔟:sub:`l(β)`) }
 
 *α* is said to be *contained in β*, denoted by,
 
@@ -182,12 +182,12 @@ Now, construct a new String *t* as follows:
     2. The second character of t is different from the second character of s2.
     3. etc.
 
-This string *t* will be different from every string in **S** contradicting the assumption that we could list all possible strings. Therefore, **S** must be uncountable.
+This string *t* will be different from every string in **S** contradicting the assumption that we could list all possible strings. Therefore, **S** must be uncountable. ∎ 
 
 Section I.2: Words
 ------------------
 
-While the notion of Characters maps almost exactly to the intuitive notion of letters in every day use, the notion of a *Word* requires explication. 
+While the notion of Characters maps almost exactly to the intuitive notion of letters in everyday use, the notion of a *Word* requires explication. 
 
 If Characters are mapped to letters in the alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the alphabet.  The goal of this section is to introduce a series of constraints onto the set of all Strings that will filter out its elements that cannot belong to **L** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
 
@@ -221,11 +221,13 @@ For the axioms that follow, let **L** be a Language. Let *s* be a String, not ne
 
     { 1, 2, ... , l(s) }
 
-**The Delimiter Axiom ** 
+**Axiom W.1: The Delimiter Axiom ** 
 
     s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
 TODO: Without assuming anything about the semantic interpretation of words, are there any other syntactical constraints on words besides the fact that they have to be delimited?
+
+Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
 
 Inversion
 ^^^^^^^^^
@@ -279,7 +281,7 @@ Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`. Let **N**:sub
 
     { 1, 2, ... , l(t) }
 
-By the definition of String Inversion,
+By the Definition 1.2.1,
 
     1. l(t) = l(s)
     2. ∀ i ∈ N:sub:`s`, ∀ j ∈ N:sub:`t`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = *𝔞*:sub:`i` ) ]
@@ -288,10 +290,10 @@ Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Let **N*
 
     { 1, 2, ... , l(u) }
 
-Applying the definition of String Inversion again:
+Applying Definition 1.2.1 again,
 
-    3. l(u) = l(t)
-    4. ∀ j ∈ N:sub:`t`, ∀ k ∈ N:sub:`u`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
+    1. l(u) = l(t)
+    2. ∀ j ∈ N:sub:`t`, ∀ k ∈ N:sub:`u`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
  
 Since *l(t) = l(s)* (step 1) and **N**:sub:`t` *=* **N**:sub:`s` (by definition of natural numbers), these substitions may be made in step 4,
 
@@ -313,7 +315,7 @@ Now, substitute the definition of 𝔟:sub:`j` from step 2 (where j = l(s) - i +
 
     9. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔞:sub:`i` 
 
-Since *u* and *s* have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that u = inv(t) and t = inv(s).  Substituting, the desired result is obtained, *inv(inv(s)) = s*
+Since *u* and *s* have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that u = inv(t) and t = inv(s).  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
 Section I.3: Word Classes 
 -------------------------
@@ -336,7 +338,9 @@ The concept of *Reflective Words* can be easily understood by examining some exa
 | level      | 
 | civic      |
 
-From this list, it should be clear what is meant by the notion of *reflective*: Reflective Words are words that are unchanged by a String Inversion. This property will be formally defined as follows: Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in the Word *α*. Let *l(α)* be the length of *α*. Let **N**:sub:`α` be the set,
+From this list, it should be clear what is meant by the notion of *reflective*: Reflective Words are words that are unchanged by a String Inversion. This property will be formally defined as follows.
+
+**Definition 1.3.1: Reflective Words** Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Let *l(α)* be the length of *α*. Let **N**:sub:`α` be the set,
 
     { 1, 2, ... , l(α) }
 
@@ -344,7 +348,7 @@ Then the set of Reflective Words **R** is defined as the set of *α* which satis
 
     α ∈ R ↔ [ ∀ i ∈ N:sub:`α`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ]
 
-The following theorem is an immediate consequence of this definition.
+A Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. The following theorem is an immediate consequence of this definition.
 
 **Theoreom 1.3.1** α ∈ R ↔ α = inv(α)
 
@@ -388,118 +392,291 @@ Similar to the previous part of the proof, the index on the left side (*l(α) - 
 
     5. ∀ i ∈ N:sub:`α`: 𝔞:sub:`i` =  𝔞:sub:`a<sub>l(α) - i`
 
-This condition satisfies the definition of Reflective Words, so *α ∈ R*.
+This condition satisfies the definition of Reflective Words, so *α ∈ R*. ∎ 
 
 Invertible Words 
 ^^^^^^^^^^^^^^^^
 
-Let *α* be any Word in a Language **L**. Then the set of Invertible Words **I** is defined as the set of α which satisfy the open formula,
+As discussed previously, the concept of *Invertible* is exemplified in the pair of English words "*time*" and "*emit*". An *Invertible Word* is a Word whose inverse is part of the same Language **L**. This notion can now be made more precise with the terminology introduced in prior sections.
 
-    α ∈ I ↔ inv(*α*) ∈ L
+**Definition 1.3.2: Invertible Words** Let *α* be any Word in a Language **L**. Then the set of Invertible Words **I** is defined as the set of α which satisfy the open formula,
 
-A Word *α* will be referred to as *invertible* if it belongs to the class of Invertible Words. Similarly, a Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. 
+    α ∈ I ↔ inv(*α*) ∈ L 
 
-These definitions are employed to derive the following theoremes,
+A Word *α* will be referred to as *invertible* if it belongs to the class of Invertible Words.
+
+This definition is immediately employed to derive the following theorems,
 
 **Theorem 1.3.2** α ∈ I ↔ inv(α) ∈ I
 
-Assume α ∈ I. By definition, this implies,
+Assume *α ∈ I*. By Definition 1.3.2,
 
-    inv(α) ∈ L
+    1. inv(α) ∈ L
     
 Consider *inv(α)*. To show that it's invertible, it must be shown,
 
-    inv(inv(α)) ∈ L. 
+    2. inv(inv(α)) ∈ L. 
 
 By Theorem 1.2.1,
 
-    inv(inv(α)) = α
+    3. inv(inv(α)) = α
     
 Since it is known *α ∈ L*, it follows,
 
-    inv(inv(α)) ∈ L  
+    4. inv(inv(α)) ∈ L  
     
-By the definition of invertibility, 
+By the Definition 1.3.2, 
 
-    inv(α) ∈ I
+    5. inv(α) ∈ I
     
-Therefore, *inv(α)* is also an invertible word. 
+Therefore, *inv(α)* is also an Invertible Word. ∎ 
 
 **Theorem 1.3.3** R ⊂ I
 
-Revised Proof:
+Assume *α ∈ R*. *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.2,
 
-Assume α ∈ R: This means α is a Reflective word.
+    1. ∀ i ∈ N:sub:`α`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i``
 
-Definition of Reflective Words: This implies:
+Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.1,
 
-∀ i ∈ N<sub>α</sub>: a<sub>i</sub> = a<sub>l(α) - i</sub>
-Let β = inv(α): By the revised definition of String Inversion:
+    2. l(β) = l(α)
+    3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`β``: (j = l(α) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` )
 
-l(β) = l(α)
-∀ i ∈ N<sub>α</sub>, ∀ j ∈ N<sub>β</sub>: If j = l(α) - i + 1, then β<sub>j</sub> = a<sub>i</sub>
-Index Substitution:  Let's substitute j = l(α) - i + 1 into the equation from step 3:
+Substitute (*j = l(α) - i + 1 *) into the consequent of the conditional in step 3 and drop the quantification over *j*,
 
-∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>i</sub>
-Applying Reflective Property: Now, let's use the property of reflective words from step 2 (a<sub>i</sub> = a<sub>l(α) - i</sub>) and substitute it into the equation from step 4:
+    4. ∀ i ∈ N:sub:`α`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
 
-∀ i ∈ N<sub>α</sub>: β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub>
-Character Alignment:  Notice that the index on the left side of the equation in step 5 (l(α) - i + 1) corresponds to the character at position i in the reversed string β.
+Substituting the property of Reflective Words from step 2 into step 4,
 
-Equality of Characters:  Since β<sub>l(α) - i + 1</sub> = a<sub>l(α) - i</sub> for all i ∈ N<sub>α</sub>, and both strings have the same length, we can conclude that each character in α is equal to the corresponding character in β.
+    5. ∀ i ∈ N:sub:`α`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
 
-Therefore: α = β = inv(α)
+Note that the index on the left side of the equation in step 5 (*l(α) - i + 1*) corresponds to the character at position *i* in the reversed string *β*.
 
-α ∈ L: Since α is a word in the language L, we have α ∈ L.
+Since *𝔟*:sub:`l(α) - i + 1` *= 𝔞*:sub:`l(α) - i` for *i ∈* **N**:sub:`α`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore,
 
-Substitution: Combining steps 8 and 9, we get: inv(α) ∈ L
+    6. α = β = inv(α)
 
-Definition of Invertible Words:  Since inv(α) ∈ L, by your definition of Invertible words, this implies α ∈ I.
+By assumption, *α ∈ L*. From step 6, this implies *inv(α) ∈ L*. By Definition 1.3.2, this implies α ∈ I. In summary, the assumption α ∈ R implies α ∈ I. Therefore, every element in R is also an element in I, which means R ⊂ I. ∎ 
 
-Conclusion: We started with the assumption that α ∈ R and showed that this implies α ∈ I. Therefore, every element in R is also an element in I, which means R ⊂ I.  ∎
+In the context of infinite sets such as **L** and **S**, "even" and "odd" refer to whether the set can be partitioned into two disjoint subsets of equal cardinality.
 
-**Theorem 1.3.3** If | **L** | is finite, then | **I** | is even. 
+    1. Even Cardinality: An infinite set has even cardinality if it can be put into a one-to-one correspondence with itself, with each element paired with a distinct element.
+    2. Odd Cardinality: An infinite set has odd cardinality if, after pairing each element with a distinct element, there is one element left over.
 
-Assume that a Language **L** has a finite number of words. Consider the set I of invertible words in L. By Theorem 1.3.2, for every word α in I, its inverse, inv(α), must also be in I. 
+The set of non-reflective Invertible Words, **I** - **R** (where "-" represents the operation of set differencing), always has even cardinality because each word can be paired with its distinct inverse. The overall cardinality of **I** then depends on whether the set of Reflective Words, **R**, adds an "odd" element or not. This idea is captured in the next theorem.
 
-Furthermore, α and inv(α) must be distinct words, unless α is reflective (in which case α = inv(α)).  If they were not distinct, and α was not a palindrome, it would imply that a word is its own inverse without being a palindrome, which contradicts the definition of a palindrome.
+**Theorem 1.3.4** If |R| is even, then |I| is even. If |R| is odd, then |I| is odd.
 
-Even Cardinality:  Therefore, the elements of I can be grouped into distinct pairs (α, inv(α)). Since each pair contains two elements, and the number of words in L (and therefore in I) is finite, the total number of elements in I must be even.
+Partition the set of Invertible Words, **I**, into two disjoint subsets,
 
-Formalization:
+    1. **R**: The set of Reflective Words.
+    2. **I** - **R**: The set of Invertible Words that are not Reflective.
 
-We can express this proof more formally using set notation and logical symbols:
+For every word *α* in **I** *-* **R**, its inverse, *inv(α)*, is also in **I** *-* **R**. Furthermore, they form a distinct pair *(α, inv(α))*. This is because *α* is invertible but not reflective, so *α ≠ inv(α)*.
 
-Let |L| denote the cardinality (number of elements) of the set L.
-Let |I| denote the cardinality of the set I.
-Let P be the set of palindromes in L.
-Then, we can state the theorem as:
+Since the elements of **I** *-* **R** can be grouped into distinct pairs, the cardinality |I - R| must be even.
 
-If |L| is finite, then |I| is even.
+The total number of Invertible Words is the sum of the number of Reflective Words and the number of Invertible Words that are not Reflective,
+
+    3. |I| = |R| + |I - R|
+
+Let |R| be even. Since |I - R| is always even, and the sum of two even numbers is even, |I| must also be even.
+
+Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and an even number is odd, |I| must also be odd. ∎ 
+
+
+
+Section II: Sentences
+=====================
+
+
+
+1. Define "Corpus"
+
+Subset of Strings: A Corpus (denoted by C) can be defined as a specific subset of the set of all possible Strings (S). This subset represents a collection of grammatically valid and semantically meaningful sentences in a particular language.
+Formal Definition: C ⊂ S, where C satisfies certain grammatical and semantic constraints. (We'll elaborate on these constraints later.)
+2. Define "Sentence"
+
+Element of a Corpus: A Sentence (denoted by ρ) can then be defined as an element of a Corpus.
+Formal Definition: ρ ∈ C
+3. Character-Level Representation of a Sentence:
+
+Ordered Sequence of Characters: At the character level, a Sentence can be represented as an ordered sequence of characters from the alphabet, including spaces and punctuation.
+Notation: ρ<sub>c</sub> = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>), where a<sub>i</sub> ∈ Σ (the alphabet).
+4. Word-Level Representation of a Sentence:
+
+Ordered Sequence of Words: At the word level, a Sentence can be represented as an ordered sequence of words from the language L.
+Notation: ρ<sub>w</sub> = (w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>m</sub>), where w<sub>i</sub> ∈ L.
+5. Relating the Two Levels:
+
+Mapping Function: We can define a mapping function char: C → S that takes a Sentence at the Word level (ρ<sub>w</sub>) and produces its corresponding Character-level representation (ρ<sub>c</sub>). This function would essentially concatenate the characters of each word, adding spaces between them as needed.
+6. Palindromic Sentences:
+
+Character-Level Palindrome: A sentence ρ is a character-level palindrome if ρ<sub>c</sub> = inv(ρ<sub>c</sub>).
+Word-Level Palindrome: A sentence ρ is a word-level palindrome if ρ<sub>w</sub> = inv(ρ<sub>w</sub>), taking into account word inversions.
+7.  Semantic Constraints:
+
+Coherence: We can introduce semantic constraints on the Corpus C to ensure that its sentences are not only grammatically valid but also semantically meaningful. This might involve rules regarding word order, semantic relationships between words, and overall coherence of the sentence.
+
+
+
+
+1. The Delimiter Constraint:
+
+You're right, a Sentence is essentially a sequence of Words from a Language, with the Delimiter character (σ) separating them. This leads to the constraint that a Sentence must either be a single Word or contain at least one Delimiter character.
+
+We can formalize this as follows:
+
+Let ρ be a Sentence in a Corpus C. Then:
+
+ρ ∈ Word  ∨  (∃ i ∈ N<sub>ρ<sub>c</sub></sub> : (i, σ) ∈ P<sub>c</sub>)
+
+where:
+
+Word is the set of all Words in the language.
+ρ<sub>c</sub> is the Character-level representation of the sentence ρ.
+P<sub>c</sub> is the set representation of ρ<sub>c</sub>.
+N<sub>ρ<sub>c</sub></sub> is the set of indices for the characters in ρ<sub>c</sub>.
+This statement essentially says that a Sentence is either a single Word or its Character-level representation contains at least one Space character.
+
+2. The Containment Constraint:
+
+Your intuition about the containment constraint is also spot on. The Words of a Language must be "contained in" the Sentences of a Corpus, using our previously defined notion of word containment (⊂<sub>w</sub>).
+
+We can express this formally as:
+
+∀ w ∈ L, ∀ ρ ∈ C:  (w ⊂<sub>w</sub> ρ) ∨ (w = ρ)
+
+This statement says that for any Word w in the Language and any Sentence ρ in the Corpus, either w is contained in ρ or w is equal to ρ (in the case where the sentence consists of a single word).
+
+3.  Interplay of Constraints:
+
+These two constraints work together to define the relationship between a Corpus and its Sentences:
+
+The Delimiter Constraint ensures that Sentences are composed of distinct Words separated by spaces.
+The Containment Constraint ensures that all Words in the Language can be found within the Sentences of the Corpus.
+(A subtle observation, 🌐 recognizing the emergent structure)
+
+Together, these constraints create a kind of "closure" property, where the Corpus is built from the Words of the Language, and the Sentences within the Corpus contain those Words in a structured and meaningful way.
+
+
+
+
+
+Section III: Palindromic Structures
+===================================
+
+The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. To appreciate this feature of palindromes, consider the two examples,
+
+The structure of a palindrome is distribute through its syntactical layers. The concepts of *perfect* and *imperfect* palindromes will be defined more rigorously in the following subections, but as an intuitive introduction to this distinction, consider the following two examples,
+
+    1. Dennis sinned
+    2. If I had a hifi
+
+The first palindrome "*Dennis sinned*" is what will be termed a *perfect* palindrome, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second palindrome "If I had a hifi" is what will be termed an *imperfect* palindrome. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
+
+    Ifih a dah I fi
+
+The order of the characters is in the inverse of an imperfect palindrome is preserved, but in order to reconstitute its uninverted form, the characters must be re-sorted.
+
+Delimiter Count Function 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+As the introduction to this section made clear, it will be necessary to have a way of referencing the number of Delimiter Characters in a String. The following definition will serve that purpose.
+
+**Definition 3.1.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let *𝔞*:sub:`i` represent the *i*:sup:`th` character of the String *t*, where 
+
+    i ∈ N:sub:`t` = { 1, 2, ..., l(t) }.
+
+The delimiter count function, denoted by *δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *s*. Formally, *δ(s)* is defined as the cardinality of the set **D**:sub:`s` that satisfies the following formula:
+
+    (j, ⲁ) ∈ D:sub:`t` ↔ (∃ i ∈ N:sub:`t` ( (i, ⲁ) ∈ T ) ∧ (ⲁ = σ) ∧ (j = i) )
+
+where **T** is the set representation of the String *t*, 
+
+    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ... , (l(t), 𝔞:sub:`l(t)`) }
+
+Then, the delimiter count function is defined as
+
+    δ(t) = | D:sub:`t` |
+
+Consider the string *t = "a b c"*. The set representation of *t* is given by,
+    
+    T = { (1, a), (2, σ), (3, b), (4, σ), (5, c) }.
+
+The set D:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the first coordinate of the pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
+    
+    D:sub:`t`= { (2, σ), (4, σ) }
+
+From this it follows, | D:sub:`t` | is 2. Hence, *δ(s) = 2*.
+
+The next theorem will be important for describing the structure of *imperfect palindromes*.
+
+**Theorem 3.1.1** *δ(s) = δ(inv(s))*
+
+Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`. Let **T** be the set representation of of *t* is given by,
+
+    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ... , (l(t), 𝔞:sub:`l(t)`) }
+
+Let *u = inv(t)* with Characters denoted by let *𝔟*:sub:`j`. By Definition 1.2.1,
+
+    1. l(t) = l(u)
+    2. ∀ i ∈ N:sub:`t`, ∀ j ∈ N:sub:`u`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+
+Let **D**:sub:`t` be the set of ordered pairs representing the positions of the Delimiter *σ* in *t*, and let D:sub:`u` be the corresponding set for *u*.
+
+Assume *(j, σ) ∈*  **D**:sub:`u` . This means that the character at position *j* in the inverse string *t* is the Delimiter *σ*.
+
+By the definition, *𝔟*:sub:`j` = *𝔞*:sub:`i` where *j = l(t) - i + 1*.  Since *𝔟*:sub:`j` *= σ*, we have *𝔞*:sub:`i`  *= σ*. This implies that the character at position *i* in the original string *t* is also a Delimiter.  Therefore, *(i, σ) ∈* **D**:sub:`t`
+
+Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exists a corresponding element *(i, σ) ∈* **D**:sub:`t`, where *j = l(t) - i + 1*. This defines a one-to-one mapping between the elements of **D**:sub:`u` and **D**:sub:`t`. Since there's a one-to-one mapping between the elements of *D**:sub:`u` and **D**:sub:`t`, their cardinalities must be equal,
+
+    3. | D:sub:`u` | = | D:sub:`s` |
+
+By the definition of the delimiter count function, this means *δ(u) = δ(t)*. Since *u = inv(t)*, it has been shown *δ(inv(s)) = δ(s)*. ∎
+
+
+
+
+
+
+Theorem: For any string s, δ(s) = δ(inv(s)).
 
 Proof:
 
-|L| is finite. (Premise)
-I = {α ∈ L | inv(α) ∈ L} (Definition of I)
-∀α ∈ I, inv(α) ∈ I (Symmetry of invertibility)
-∀α ∈ I, (α ≠ inv(α)) ∨ (α ∈ P) (Distinctness of inverses or palindromes)
-I can be partitioned into disjoint pairs (α, inv(α)) and the set P.
-|I| = 2 * number of pairs + |P|
-Since |L| is finite, |I| and |P| are also finite.
-Therefore, |I| is even. ∎
-Conclusion:
+Let s be a string: With length l(s) and characters denoted by a<sub>i</sub>. Let S be the set representation of s:
+
+S = { (1, a<sub>1</sub>), (2, a<sub>2</sub>), ..., (l(s), a<sub>l(s)</sub>) }
+
+Define the Inverse: Let t = inv(s). By the definition of string inversion:
+
+l(t) = l(s)
+∀ i ∈ N<sub>s</sub>, ∀ j ∈ N<sub>t</sub>: If j = l(s) - i + 1, then t<sub>j</sub> = a<sub>i</sub>
+Delimiter Sets:  Let D<sub>s</sub> be the set of ordered pairs representing the positions of delimiters (σ) in s, and let D<sub>t</sub> be the corresponding set for t.
+
+Assume (j, σ) ∈ D<sub>t</sub>: This means that the character at position j in the inverse string t is a delimiter (σ).
+
+Apply Inversion Definition: By the definition of string inversion, t<sub>j</sub> = a<sub>i</sub> where j = l(s) - i + 1.  Since t<sub>j</sub> = σ, we have a<sub>i</sub> = σ.
+
+Delimiter in Original String: This implies that the character at position i in the original string s is also a delimiter.  Therefore, (i, σ) ∈ D<sub>s</sub>.
+
+Mapping: We've shown that for every element (j, σ) in D<sub>t</sub>, there exists a corresponding element (i, σ) in D<sub>s</sub>, where j = l(s) - i + 1. This defines a one-to-one mapping between the elements of D<sub>t</sub> and D<sub>s</sub>.
+
+Equal Cardinality: Since there's a one-to-one mapping between the elements of D<sub>t</sub> and D<sub>s</sub>, their cardinalities must be equal: |D<sub>t</sub>| = |D<sub>s</sub>|
+
+Delimiter Count: By the definition of the delimiter count function, this means δ(t) = δ(s).
+
+Conclusion: Since t = inv(s), we have δ(inv(s)) = δ(s). ∎
 
 
-Section II: Palindromic Structures
-==================================
 
-Section II.1: Pivots
+Section III.1: Pivots
 --------------------
 
 Let s be a palindromic string.
 
 Part 1: If l(s) is even, then the pivot of s is the empty character (ε).
-Part 2: If l(s) is odd, then the pivot of s is either the space character (σ) or a character from the alphabet (𝔞, 𝔟, 𝔠, ...).
+Part 2: If l(s) is odd, then the pivot of s is either the delimiter character (σ) or a character from the alphabet (𝔞, 𝔟, 𝔠, ...).
 Proof:
 
 Part 1 (Even Length):
@@ -528,13 +705,8 @@ We can express this theorem more formally using logical symbols:
 ∀s ( (l(s) is odd) → (pivot(s) = σ) ∨ (pivot(s) ∈ {𝔞, 𝔟, 𝔠, ...}) )
 
 
-Section II.2: Palindromic Pivots
---------------------------------
-
-TODO
-
-Section II.3: Palindromic Classification 
-----------------------------------------
+Section III.3: Palindromic Classification 
+-----------------------------------------
 
 **Perfect Palindrome** A palindrome where the sequence of characters after the pivot is the exact inverse of the sequence of characters before the pivot.
 
