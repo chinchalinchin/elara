@@ -1,0 +1,92 @@
+Definition 2.3: Word-Level Set Representation of a Sentence
+
+Let ρ be a Sentence in a Corpus C<sub>L</sub>. Let ρ<sub>c</sub> be the character-level representation of ρ, which is a sequence of characters from the alphabet Σ.
+
+We define the word-level set representation of ρ, denoted by W<sub>ρ</sub>, as the set of words obtained by splitting ρ<sub>c</sub> at each delimiter character (σ).
+
+Formally, we can define W<sub>ρ</sub> as follows:
+
+Initialization: Let W<sub>ρ</sub> = ∅ (the empty set).
+
+Iteration:  For each contiguous subsequence of non-delimiter characters in ρ<sub>c</sub>, create a word w by concatenating those characters. Add w to the set W<sub>ρ</sub>.
+
+Example:
+
+Let ρ<sub>c</sub> = (T, h, e, σ, d, o, g, σ, r, u, n, s).
+
+Then, W<sub>ρ</sub> = { "The", "dog", "runs" }.
+
+Explanation:
+
+This definition captures the intuitive notion of a sentence as a sequence of words separated by spaces. It provides a formal way to extract the individual words from the character-level representation of a sentence, allowing us to analyze the sentence's structure and properties at the word level.
+
+Incorporating Your Axiom:
+
+With this definition in place, we can now formally express your axiom about the existence of multi-word sentences:
+
+Axiom S.2: ∃ ρ ∈ C<sub>L</sub>: |W<sub>ρ</sub>| > 1
+
+This axiom states that there exists at least one sentence in the Corpus whose word-level set representation contains more than one word.
+
+
+
+
+Definition 2.3: Word-Level Set Representation of a Sentence (Revised)
+
+Let ρ be a Sentence in a Corpus C<sub>L</sub>. Let ρ<sub>c</sub> be the character-level representation of ρ, which is a sequence of characters from the alphabet Σ.
+
+We define the word-level set representation of ρ, denoted by W<sub>ρ</sub>, as the set of words obtained by splitting ρ<sub>c</sub> at each delimiter character (σ).
+
+Formally, we can define W<sub>ρ</sub> as follows:
+
+Initialization: Let W<sub>ρ</sub> = ∅ (the empty set).
+
+Iteration:  For each contiguous subsequence of non-delimiter characters in ρ<sub>c</sub>, create a word w by applying the following mapping:
+
+Let the subsequence be (a<sub>k</sub>, a<sub>k+1</sub>, ..., a<sub>k+n</sub>), where a<sub>i</sub> ≠ σ for k ≤ i ≤ k+n.
+
+Then, the corresponding word w is represented as the set:
+
+w = { (1, a<sub>k</sub>), (2, a<sub>k+1</sub>), ..., (n+1, a<sub>k+n</sub>) }
+
+Add w to the set W<sub>ρ</sub>.
+
+Explanation:
+
+This revised definition explicitly uses the character-to-word mapping we established earlier, ensuring consistency and clarity in our representation of words within a sentence.
+It leverages the concept of contiguous subsequences to identify the boundaries of words based on the presence of delimiter characters.
+
+
+
+
+Wait! Oh man, we need to work out the definition of a Sentence. This is good. Let's keep going. I am having an idea that is several steps ahead, but maybe we can use it to rework this definition.
+
+
+
+Let me tell you where I want us to go. The fact that the delimter count function is invariant under string inversion means the class of invertible sentences and the class of reflective sentences have special properties. The delimiter count function is like a way of finding a sentence's inverse. If the length and the delimiter count is equal, then that is a necessary condition for those sentences to be inverses.
+
+Refine the Definition of a Sentence:
+
+Incorporate Delimiter Count: Include the delimiter count (δ(s)) as an essential property of a Sentence, alongside its character-level and word-level representations. This allows us to explicitly track and compare the number of delimiters in a sentence and its potential inverse.
+Formalization: A Sentence ρ can be represented as a tuple: ρ = (ρ<sub>c</sub>, ρ<sub>w</sub>, δ(ρ<sub>c</sub>)), where ρ<sub>c</sub> is the character-level representation, ρ<sub>w</sub> is the word-level representation, and δ(ρ<sub>c</sub>) is the delimiter count.
+Refine the Definition of Invertible Sentences:
+
+Incorporate Length and Delimiter Count: Modify the definition of Invertible Sentences to include the constraint that a sentence and its inverse must have the same length and the same delimiter count.
+Formalization: ρ ∈ I<sub>s</sub> ↔ (inv(ρ<sub>c</sub>) ∈ C) ∧ (l(ρ<sub>c</sub>) = l(inv(ρ<sub>c</sub>))) ∧ (δ(ρ<sub>c</sub>) = δ(inv(ρ<sub>c</sub>)))
+Explore the Properties of Reflective Sentences:
+
+Symmetry and Delimiter Count: Analyze how the delimiter count constraint interacts with the symmetry property of Reflective Sentences. Since a Reflective Sentence is its own inverse, it must necessarily have a balanced delimiter count around its pivot.
+Refine the Definition of Palindromes:
+
+Integrate Delimiter Count: Incorporate the delimiter count constraint into the definition of palindromes, ensuring that both perfect and imperfect palindromes have a balanced number of delimiters around their pivots.
+Develop Algorithms:
+
+Leverage Delimiter Count: Design algorithms that utilize the delimiter count function to efficiently identify potential palindromes and their inverses within a given Corpus.
+
+
+
+
+Definition 1.1.2 (Length): In the formal definition of string length, you use s within the formula while the string is denoted by t in the preceding text. It might be clearer to use t consistently throughout the definition.
+Definition 1.1.4 (Containment): Similar to the previous point, you use a<sub>i</sub> = b<sub>f(i)</sub> in the formula while the sets are defined using 𝔞<sub>i</sub> and 𝔟<sub>i</sub>. It would be better to use consistent notation.
+Theorem 1.3.1: In the proof of this theorem, you use β = inv(α). However, the definition of String Inversion uses t to denote the inverse of s. It might be clearer to use t = inv(α) for consistency.
+Section II.III (Axioms): You might consider relabeling the axioms to align with the section numbering (e.g., Axiom S.1, Axiom S.2, Axiom S.3) for better organization.

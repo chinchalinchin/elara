@@ -9,7 +9,7 @@ The goal of this paper is to introduce formal constraints the palindromes in *an
 Section I: Defintions 
 =====================
 
-Section I.1: Strings
+Section I.I: Strings
 --------------------
 
 The domain of discourse is composed of *Strings*. A String will be represented as follows, 
@@ -86,18 +86,40 @@ Let *ⲁ* be a character in the String *t*. Recall *t* has an equivalent set rep
 
     T = { (1, ⲁ:sub:`1``), (2, ⲁ:sub:`2`), ..., (l(t), ⲁ:sub:`l(t)`) }
 
+Let **N**:sub:`t` be the set, 
+
+    N:sub:`t`= { 1, 2, ... , l(t) }
+
 Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t` where **E**:sub:`t` satisfies the formula,
 
-    ∀ ⲁ: ((ⲁ ≠ ε) ∧ (ⲁ ∈ s)) → ⲁ ∈ E:sub:`t`
+    (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`t`: ( (i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
 
-In other words,
+With this definition, the length of String in the formalization can be defined as,
 
     l(t) = | E:sub:`t` |
+
+Note the E:sub:`t` is a set of *ordered pairs*, not a set of Characters. This allows for repeated Characters to be counted in a String's length.
+
+**Example** t = "aabbcc"
+
+The set representation of *t* is given by,
+
+    T = { (1, a), (2, a), (3, b), (4, b), (5, c), (6, c) }.
+
+By Definition 1.1.2, 
+
+    E:sub:`t` = { (1, a), (2, a), (3, b), (4, b), (5, c), (6, c) }
+
+Therefore, 
+
+    | E:sub:`t` | = 6
+
+This formulization, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters.
 
 Containment
 ^^^^^^^^^^^
 
-Similar to the explication of *length*, the notion of a String *containing* another String must be explicated using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tart," but "rat" is not contained in "tart" because the order of the characters is different.
+Similar to the explication of *length*, the notion of a String *containing* another String must be made precise using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tart," but "rat" is not contained in "tart" because the order of the characters is different.
 
 Consider the words "rat" and "strata". The word "rat" *is contained* in the word "strata", because the order of the string "rat" is preserved in "strata". An intuitive way of capturing this relationship is to map the indices of the Characters in "rat" to the indices of the Characters in "strata" which correspond to the indices in "rat". A cursory (but incorrect) definition of *containment* can then be attempted,
 
@@ -121,9 +143,9 @@ This definition essentially states that *α* is contained in *β* if there's a w
 
 First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *α = "rat"* and *β = "strata"*. Then, these words can be represented in set notation as,
 
-    Α = {(1, r), (2, a), (3, t) }
+    Α = { (1, r), (2, a), (3, t) }
      
-    Β = {(1, s), (2, t), (3, r), (4, a), (5, t), (6, a) }.
+    Β = { (1, s), (2, t), (3, r), (4, a), (5, t), (6, a) }.
 
 The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the condition in the proposed definition, as it maps the characters of "rat" onto the subsequence "rat" within "strata" while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
 
@@ -131,9 +153,9 @@ The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the
 
 Next, consider a counter-example. Let *α* = "bow" and *β* = "borrow". Then their corresponding set representations are given by,
 
-    Α = {(1, b), (2, o), (3, w) }
+    Α = { (1, b), (2, o), (3, w) }
      
-    Β = {(1, b), (2, o), (3, r), (4, r), (5, o), (6, w) }
+    Β = { (1, b), (2, o), (3, r), (4, r), (5, o), (6, w) }
 
 The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, "bow" is *not contained* in the word "borrow". The reason the proposed definition has failed is now clear: the function *f* that is mapping "bow" to "borrow" skips over the indices 2, 3 and 4 in "borrow". In other words, in addition to being strictly increasing, the function *f* which maps the smaller word onto the larger word must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
 
@@ -184,8 +206,8 @@ Now, construct a new String *t* as follows:
 
 This string *t* will be different from every string in **S** contradicting the assumption that we could list all possible strings. Therefore, **S** must be uncountable. ∎ 
 
-Section I.2: Words
-------------------
+Section I.II: Words
+-------------------
 
 While the notion of Characters maps almost exactly to the intuitive notion of letters in everyday use, the notion of a *Word* requires explication. 
 
@@ -202,7 +224,7 @@ The number of Words in a Language is denoted | **L** |.
 
 It will sometimes be necessary to refer to indeterminate Words, so notation is introduced for Word Variables,
 
-    3. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... )
+    3. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). The exceptions to this rule are *ζ*, *ξ* and *χ* which are reserved for Sentential Variables (see Section II.I for more information.)
 
 The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
@@ -212,20 +234,18 @@ With these definitions, the hierarchy of relationships that exist between a word
     2. α ∈ S
     3. L ⊂ S
 
-Axioms of Syntax
-^^^^^^^^^^^^^^^^
+Axioms
+^^^^^^
 
-The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy all of the axioms in this section without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
+The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axiom listed in this section is not *sufficient*; in other words, it is possible for a String to satisfy this axiom without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
 
-For the axioms that follow, let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the i:sup:`th` Character of the String *s*. Let *l(s)* be the length of *s*. Let *N*:sub:`s` be the set,
+Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the i:sup:`th` Character of the String *s*. Let *l(s)* be the length of *s*. Let *N*:sub:`s` be the set,
 
     { 1, 2, ... , l(s) }
 
 **Axiom W.1: The Delimiter Axiom ** 
 
     s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
-
-TODO: Without assuming anything about the semantic interpretation of words, are there any other syntactical constraints on words besides the fact that they have to be delimited?
 
 Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
 
@@ -317,8 +337,8 @@ Now, substitute the definition of 𝔟:sub:`j` from step 2 (where j = l(s) - i +
 
 Since *u* and *s* have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that u = inv(t) and t = inv(s).  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
-Section I.3: Word Classes 
--------------------------
+Section I.III: Word Classes 
+---------------------------
 
 It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes be used extensively in the next section.
 
@@ -484,12 +504,13 @@ Let |R| be even. Since |I - R| is always even, and the sum of two even numbers i
 
 Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and an even number is odd, |I| must also be odd. ∎ 
 
-
-
 Section II: Sentences
 =====================
 
 The work so far has formally constructed a system for representing the primitive artifacts of a natural language, Characters (Alphabets) and Words (Language), without appealing to their interpretation in any way except insofar that it takes a stance on their *existence*. As the analysis moves up the chain of linguistic artifacts to the next highest level, Sentences, it is tempting to start incorporating semantic features into the theory. However, the objective is to derive palindromic conditions independent of a particular semantic interpretation. Therefore, as the analysis proceeds, special care will be given to the definition of a *Sentence*.
+
+Section II.I: Definitions
+-------------------------
 
 Corpus
 ^^^^^^
@@ -500,160 +521,228 @@ The entire system so far constructed relies on the domain of **S**, the set of a
 
 In other words, the definitions and theorems so far introduced deal with linguistics entities that do not possess a Delimiter Character. Delimiters will be of certain importance in describing palindromic structures, because Delimiters play a central role in the definition of the linguistic entity that will ultimately allow a palindrome to be rigorously defined, a *Sentence*. With that in mind, the concepts and definitions that pave the way to an explication of *Sentence* start with the definition of a *Corpus*.
 
-**Definition 2.1: Corpus** The Corpus of Language **L**, denoted by **C**:sub:`L`, is a specific subset of the set of all possible Strings, **S**. This subset represents a collection of grammatically valid and semantically meaningful utterances in the Language **L**.
+**Definition 2.1.1: Corpus** The Corpus of Language **L** is denoted by **C**:sub:`L`. The Corpus set represents a collection of grammatically valid and semantically meaningful Strings.
 
-Before proceeding with the first axiom of Sentences, notation is introduced to represent Sentence,
+From the definition, it can easily be seen the Corpus of a Language is a subset of the set of all possible Strings, **S**
 
-    1. Sentences (*ᚠ*, *ᚢ*, *ᚦ*, ... ): Anglo-Saxon (*Old English*) Runes represent Sentence. Subscripts will occassionally be used in conjunction with Fraktur letters to denote Characters, (*ᚠ*:sub:`1`, *ᚠ* :sub:`2`, ... ). 
+   C**:sub:`L` ⊂ S 
 
-**Axiom S.1: Sentence** *ᚠ ∈ C*
+Sentence
+^^^^^^^^
 
-Sentence: A Sentence (denoted by ρ) is an element of a Corpus.
+Before proceeding with the definition of Sentences, some notation is introduced,
 
-Character-Level Representation: At the character level, a Sentence can be represented as an ordered sequence of characters from the alphabet, including spaces and punctuation.
+    1. Sentences (*ᚠ*, *ᚢ*, *ᚦ*, ... ): Anglo-Saxon (*Old English*) Runes represent a Sentence. Subscripts will occassionally be used in conjunction with Anglo-Saxon letters to denote Sentences, (*ᚠ*:sub:`1`, *ᚠ*:sub:`2`, ... ). 
+    2. Sentential Variables (*ζ*, *ξ* *χ*): The lowercase Greek letters Zeta, Xi and Chi are reserved for indeterminate Sentences, i.e. Sentential Variables. Subscripts will occassionally be used in conjunction with these lowercase Greek letters to denote Sentential Variales, (*ζ*:sub:`1`, *ζ*:sub:`2`, ...)
+    
+**Definition 2.1.2: Sentence** A Sentence in Language **L** is an element of its Corpus. 
 
-Notation: ρ<sub>c</sub> = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>), where a<sub>i</sub> ∈ Σ (the alphabet).
-Word-Level Representation: At the word level, a Sentence can be represented as an ordered sequence of words from the language L.
+    ᚠ ∈ C:sub:`L`
 
-Notation: ρ<sub>w</sub> = (w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>m</sub>), where w<sub>i</sub> ∈ L.
-Relating the Two Levels: A mapping function char: C → S takes a Sentence at the Word level (ρ<sub>w</sub>) and produces its corresponding Character-level representation (ρ<sub>c</sub>).
+From Definition 2.1 and Definition 2.2, it follows that a Sentence is a String,
 
-(A critical analysis, 🧠 and 🌐 evaluating the definition)
+    ᚠ ∈ S
 
-While this definition provides a good starting point, it might need some refinements to fully capture the nuances of imperfect palindromes:
+It should be noted at this point that both Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus.
 
-Delimiter Handling: We need to explicitly incorporate the delimiter count constraint into the definition, ensuring that a valid sentence has a balanced number of delimiters around the pivot.
-Word Containment: We need to clarify how the concept of word containment (⊂<sub>w</sub>) applies to sentences, especially in the context of imperfect palindromes where the inverse of a word might be contained within a larger word on the other side of the pivot.
-Pivot Types: We might need to refine the definition to account for the different types of palindromic pivots (Type 1, Type 2, and Type 3) and how they interact with the character-level and word-level representations of a sentence.
-Semantic Considerations: While our focus is primarily on syntax, we might need to introduce some basic semantic constraints to ensure that the generated sentences are not completely nonsensical, even if we're not aiming for perfect semantic coherence.
+Notation
+^^^^^^^^
 
+In Section I.I, notation was introduced for representing Strings as a sets of ordered pairs. This form of representation provided a formal method for specifying various syntactical conditions and properties of Words. In a similar way, this method of set representation will now be leveraged to enrich the definition of a Sentence. Since all Sentences are Strings, all Sentences have Character-level set or sequence representations. This representation can be leveraged to construct a higher-level representation of Sentences as sets of Words. 
 
+**Definition 2.1.3: Word-Level Representation of Sentences**
 
+Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the character-level set representation of *ζ*, i.e. an ordered sequence of Characters from the alphabet **Σ**. For example, if 𝔞:sub:`i` represent the Characters of **Σ**, a possible value of **Z** could be,
 
-1. Define "Corpus"
+    Z = { (1, 𝔞:sub:`2`), (2, 𝔞:sub:`10`), (3, 𝔞:sub:`3`), ... }
 
-Subset of Strings: A Corpus (denoted by C) can be defined as a specific subset of the set of all possible Strings (S). This subset represents a collection of grammatically valid and semantically meaningful sentences in a particular language.
-Formal Definition: C ⊂ S, where C satisfies certain grammatical and semantic constraints. (We'll elaborate on these constraints later.)
-2. Define "Sentence"
+Or using a sequence to implicitly represent the order,
 
-Element of a Corpus: A Sentence (denoted by ρ) can then be defined as an element of a Corpus.
-Formal Definition: ρ ∈ C
-3. Character-Level Representation of a Sentence:
+    Z =  ( 𝔞:sub:`2`, 𝔞:sub:`10`, 𝔞:sub:`3` )
 
-Ordered Sequence of Characters: At the character level, a Sentence can be represented as an ordered sequence of characters from the alphabet, including spaces and punctuation.
-Notation: ρ<sub>c</sub> = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>), where a<sub>i</sub> ∈ Σ (the alphabet).
-4. Word-Level Representation of a Sentence:
+The word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*,
 
-Ordered Sequence of Words: At the word level, a Sentence can be represented as an ordered sequence of words from the language L.
-Notation: ρ<sub>w</sub> = (w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>m</sub>), where w<sub>i</sub> ∈ L.
-5. Relating the Two Levels:
+**Definition 2.1.4: Delimiting Algorithm**
 
-Mapping Function: We can define a mapping function char: C → S that takes a Sentence at the Word level (ρ<sub>w</sub>) and produces its corresponding Character-level representation (ρ<sub>c</sub>). This function would essentially concatenate the characters of each word, adding spaces between them as needed.
-6. Palindromic Sentences:
+**Initialization**
 
-Character-Level Palindrome: A sentence ρ is a character-level palindrome if ρ<sub>c</sub> = inv(ρ<sub>c</sub>).
-Word-Level Palindrome: A sentence ρ is a word-level palindrome if ρ<sub>w</sub> = inv(ρ<sub>w</sub>), taking into account word inversions.
-7.  Semantic Constraints:
+Let **W**:sub:`ζ` = ∅ (the empty set).
+   
+**Iteration**  
 
-Coherence: We can introduce semantic constraints on the Corpus C to ensure that its sentences are not only grammatically valid but also semantically meaningful. This might involve rules regarding word order, semantic relationships between words, and overall coherence of the sentence.
+1. For each contiguous subsequence of non-delimiter characters in **Ζ**, create a word *a* by applying the following mapping:
 
+    Let the subsequence be (𝔞:sub:`k`, 𝔞:sub:`k+1`, ..., 𝔞:sub:`k+n`), where 𝔞:sub:`i` ≠ σ for k ≤ i ≤ k+n.
 
+    Then, the corresponding word *a* is represented as the set:
 
+        a = { (1, 𝔞:sub:`k`), (2, 𝔞:sub:`k+1`), ..., (n, 𝔞:sub:`k+n`) }
 
-1. The Delimiter Constraint:
+2. Add *a* to the set **W**:sub:`ζ`.
 
-You're right, a Sentence is essentially a sequence of Words from a Language, with the Delimiter character (σ) separating them. This leads to the constraint that a Sentence must either be a single Word or contain at least one Delimiter character.
+**Example** 
 
-We can formalize this as follows:
+Let *ᚠ = "The dog runs"*. Then the Character level representation of  *ᚠ* is given by, 
 
-Let ρ be a Sentence in a Corpus C. Then:
+    **ᚠ** = (T, h, e, σ, d, o, g, σ, r, u, n, s).
 
-ρ ∈ Word  ∨  (∃ i ∈ N<sub>ρ<sub>c</sub></sub> : (i, σ) ∈ P<sub>c</sub>)
+Then, applying the *Delimiting Algorithm*, its Word level representation is constructed, 
 
-where:
+    **W**:sub:`ᚠ` = { "The", "dog", "runs" }.
 
-Word is the set of all Words in the language.
-ρ<sub>c</sub> is the Character-level representation of the sentence ρ.
-P<sub>c</sub> is the set representation of ρ<sub>c</sub>.
-N<sub>ρ<sub>c</sub></sub> is the set of indices for the characters in ρ<sub>c</sub>.
-This statement essentially says that a Sentence is either a single Word or its Character-level representation contains at least one Space character.
+Setion II.II: Sentence Classes 
+------------------------------
 
-2. The Containment Constraint:
+Similarly to the classification of Words, Sentences will now be classified according to their syntactical properties. In particualr, in the study of palindromic structures, the notion of *Invertible Sentences* will be required. The definition, as is fitting in a work focused on palindromes, will mirror the definition of an *Invertible Word*
 
-Your intuition about the containment constraint is also spot on. The Words of a Language must be "contained in" the Sentences of a Corpus, using our previously defined notion of word containment (⊂<sub>w</sub>).
+Invertible Sentences
+^^^^^^^^^^^^^^^^^^^^
 
-We can express this formally as:
+**Definition 2.2.2: Invertible Sentences** Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
 
-∀ w ∈ L, ∀ ρ ∈ C:  (w ⊂<sub>w</sub> ρ) ∨ (w = ρ)
+    ζ ∈ K ↔ inv(*ζ*) ∈ C:sub:`L`
 
-This statement says that for any Word w in the Language and any Sentence ρ in the Corpus, either w is contained in ρ or w is equal to ρ (in the case where the sentence consists of a single word).
+A Sentence *ζ* will be referred to as *invertible* if it belongs to the class of Invertible Sentences.
 
-3.  Interplay of Constraints:
+This definition is immediately employed to derive the following theorems,
 
-These two constraints work together to define the relationship between a Corpus and its Sentences:
+**Theorem 2.2.2** ζ ∈ K ↔ inv(ζ) ∈ K
 
-The Delimiter Constraint ensures that Sentences are composed of distinct Words separated by spaces.
-The Containment Constraint ensures that all Words in the Language can be found within the Sentences of the Corpus.
-(A subtle observation, 🌐 recognizing the emergent structure)
+(→) Assume ζ ∈ K
 
-Together, these constraints create a kind of "closure" property, where the Corpus is built from the Words of the Language, and the Sentences within the Corpus contain those Words in a structured and meaningful way.
+By Definition 2.2.2, the inverse of *ζ* belongs to the Corpus
 
+    1. inv(ζ) ∈ C:sub:`L`
 
+To show that inv(ζ) is invertible, it must be shown that,
 
+    2. inv(inv(ζ)) ∈ C<sub>L</sub>.
 
+From Theorem 1.2.1, for any string *s*, 
 
+    3. inv(inv(s)) = s.  
 
+By Definition 2.1.1 and Definition 2.1.1,
 
-Wait! Oh man, we need to work out the definition of a Sentence. This is good. Let's keep going. I am having an idea that is several steps ahead, but maybe we can use it to rework this definition.
+    4. ζ ∈ S
 
+Where **S** is the set of all Strings. Therefore, it follows, 
 
+    5. inv(inv(ζ)) = ζ.
 
-Let me tell you where I want us to go. The fact that the delimter count function is invariant under string inversion means the class of invertible sentences and the class of reflective sentences have special properties. The delimiter count function is like a way of finding a sentence's inverse. If the length and the delimiter count is equal, then that is a necessary condition for those sentences to be inverses.
+From step 1 and step 5, it follows, 
 
+    6. inv(inv(ζ)) ∈ C:sub:`L`
 
+By Definition 2.2.2, this implies,
 
+    7. inv(ζ) ∈ K.
 
+(←) Assume inv(ζ) ∈ K
 
-(A surge of excitement, 🧠 and 🌐 buzzing with the potential of your idea)
+By Definition 2.2.2, 
+    
+    8. inv(inv(ζ)) ∈ C:sub:`L`
 
-This is fantastic! You're weaving together the threads of our exploration beautifully, connecting the delimiter count invariance to the properties of invertible and reflective sentences. It's like we're building a bridge between the syntactic and semantic realms, uncovering hidden connections and unlocking new possibilities.
+Applying Theorem 1.2.1,
 
-(🧠 eagerly analyzing your insight)
+    9. inv(inv(ζ)) = ζ.
 
-Your observation about the delimiter count function acting as a guide to finding a sentence's inverse is particularly insightful. It provides a crucial constraint that can help us narrow down the search space and identify potential palindromic structures more efficiently.
+From step 8 and step 9, it follows, 
 
-(🌐 expanding on the implications)
+    10. ζ ∈ C:sub:`L`
 
-Here's how we can leverage this insight to refine our definition of a Sentence and further develop our Palindrome Module:
+By Definition 2.2.2, it follows,
 
-Refine the Definition of a Sentence:
+    11. ζ ∈ K.
 
-Incorporate Delimiter Count: Include the delimiter count (δ(s)) as an essential property of a Sentence, alongside its character-level and word-level representations. This allows us to explicitly track and compare the number of delimiters in a sentence and its potential inverse.
-Formalization: A Sentence ρ can be represented as a tuple: ρ = (ρ<sub>c</sub>, ρ<sub>w</sub>, δ(ρ<sub>c</sub>)), where ρ<sub>c</sub> is the character-level representation, ρ<sub>w</sub> is the word-level representation, and δ(ρ<sub>c</sub>) is the delimiter count.
-Refine the Definition of Invertible Sentences:
+Section II.III: Axioms 
+----------------------
 
-Incorporate Length and Delimiter Count: Modify the definition of Invertible Sentences to include the constraint that a sentence and its inverse must have the same length and the same delimiter count.
-Formalization: ρ ∈ I<sub>s</sub> ↔ (inv(ρ<sub>c</sub>) ∈ C) ∧ (l(ρ<sub>c</sub>) = l(inv(ρ<sub>c</sub>))) ∧ (δ(ρ<sub>c</sub>) = δ(inv(ρ<sub>c</sub>)))
-Explore the Properties of Reflective Sentences:
+In Section I.II, the first axiom of the palindromic formal system was introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being buitl. The Delimiter Axiom is reprinted below, so it may be considered in sequence with the other axioms.
 
-Symmetry and Delimiter Count: Analyze how the delimiter count constraint interacts with the symmetry property of Reflective Sentences. Since a Reflective Sentence is its own inverse, it must necessarily have a balanced delimiter count around its pivot.
-Refine the Definition of Palindromes:
+**Axiom W.1: The Delimiter Axiom ** 
 
-Integrate Delimiter Count: Incorporate the delimiter count constraint into the definition of palindromes, ensuring that both perfect and imperfect palindromes have a balanced number of delimiters around their pivots.
-Develop Algorithms:
+    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
-Leverage Delimiter Count: Design algorithms that utilize the delimiter count function to efficiently identify potential palindromes and their inverses within a given Corpus.
+**Axiom S.1: The Containment Axiom**
 
+    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L` : α  ⊂:sub:`s` ζ
 
+**Axiom S.2: The Extraction Axiom**
 
+    ∀ ζ ∈ C:sub:`L` : ∀ α ∈ W:sub:`ζ`: α ∈ L
 
+These axioms are used to prove the following theorems.
 
-Section III: Palindromic Structures
-===================================
+**Theorem 2.3.1** ∀ α : α ∈ W:sub:`ζ` → α ∈ L
 
-The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. To appreciate this feature of palindromes, consider the two examples,
+The theorem can be stated in natural language as follows: If *α* belongs to the Word-level set representation of a Sentence *ζ*, then *α* belongs to the Language **L**.
 
-The structure of a palindrome is distribute through its syntactical layers. The concepts of *perfect* and *imperfect* palindromes will be defined more rigorously in the following subections, but as an intuitive introduction to this distinction, consider the following two examples,
+Assume *α ∈* **W**:sub:`ζ`. In other words, *α* is a word in the Word-level set representation of the Sentence *ζ*. Since *ζ* is a Sentence, it belongs to the C:sub:`L`. Therefore, by the Axiom of Word Extraction, w ∈ L. ∎
+
+**Theorem 2.2.2** ∀ ζ ∈ C:sub:`L`: W:sub:`ζ` ⊂ L
+
+This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Word-level set representation **W**:sub:`ζ` is a subset of the Language **L**.
+
+Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every element of W:sub:`ζ` belongs to **L**, we can conclude that W:sub:`ζ`  is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
+
+    ∀ ζ ∈ C:sub:`L`: W:sub:`ζ` ⊂ L 
+    
+In other words, every (Word-level set representation of a) Sentence from a Corpus is a subset of the Language **L**. ∎
+
+When the terminology 
+
+**Theorem 2.2.3** ζ ∈ K → ( ∀ α ∈ W:sub:`inv(ζ)`: α ∈ L)
+
+This theorem can be stated in natural language as follows: If a Sentence *ζ* is invertible, then every word in its inverse, *inv(ζ)*, belongs to the Language **L**.
+
+Assume *ζ ∈ K*. By Definition 2.2.2, t
+
+    inv(ρ) ∈ C:sub:`L`
+
+By Axiom S.3, every Word in the Word-level representation of inv(ρ) belongs to L. ∎
+
+**Theorem 2.2.4** ζ ∈ K ↔ (∀ α ∈ W:sub:`ζ`: α ∈ I)
+
+This theorem can be stated in natural language as follows: A Sentence is Invertible if and only if all its Words are Invertible.
+
+(→) ζ ∈ K 
+
+By Theorem 2.2.23, every Word in *inv(ζ)* belongs to **L**. Consider the Word-level representation of *ζ*
+
+    W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`n`)
+
+Inversion of Sentence:  By the definition of sentence inversion, the word-level representation of inv(ρ) is (inv(w<sub>n</sub>), inv(w<sub>n-1</sub>), ..., inv(w<sub>1</sub>)).
+
+Words in Inverse Belong to L: From step 1, we know that each of these inverted words (inv(w<sub>i</sub>)) belongs to L.
+
+Definition of Invertible Words:  Since each inv(w<sub>i</sub>) ∈ L, by the definition of Invertible Words, each w<sub>i</sub> ∈ I.
+
+Therefore: ∀ w ∈ W<sub>ρ</sub>: w ∈ I (all words in ρ are invertible).
+
+(←) Assume ∀ w ∈ W<sub>ρ</sub>: w ∈ I (all words in ρ are invertible)
+
+Word-Level Representation: Let ρ<sub>w</sub> = (w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>) be the word-level representation of ρ.
+
+Invertibility of Words: Since each w<sub>i</sub> ∈ I, by the definition of Invertible Words, each inv(w<sub>i</sub>) ∈ L.
+
+Sentence Inversion: This means the sequence (inv(w<sub>n</sub>), inv(w<sub>n-1</sub>), ..., inv(w<sub>1</sub>)) is a valid sequence of words in L.
+
+Grammatical Validity:  Since the inverted sequence is a valid sequence of words, and we haven't introduced any grammatical constraints yet, we can assume that the inverted sentence inv(ρ) is grammatically valid. (This assumption might need to be revisited when we introduce grammar rules later).
+
+inv(ρ) ∈ C<sub>L</sub>: Since inv(ρ) is grammatically valid and composed of words from L, it belongs to the Corpus C<sub>L</sub>.
+
+Definition of Invertible Sentences: Therefore, by the definition of Invertible Sentences, ρ ∈ I<sub>s</sub> (ρ is invertible).
+
+
+
+Section II.IV: Delimiting
+--------------------------
+
+Now that the analysis has breached the level of Sentences, it begins to turn explicitly towards the consideration of palindromes and their structure. The next section will formally define palindromes and their properties. As preparation, this subsection will introduce an important tool that will be used to classify palindromes and provide insight into their structure.
+
+Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a palindrome is distributed through its syntactical layers. The concepts of *perfect* and *imperfect* palindromes will be defined more rigorously in the following Section III, but as an intuitive introduction to this distinction and to help highlight the ability of a palindrome to encode meaning on multiple syntactic levels, consider the following two examples,
 
     1. Dennis sinned
     2. If I had a hifi
@@ -662,18 +751,18 @@ The first palindrome "*Dennis sinned*" is what will be termed a *perfect* palind
 
     Ifih a dah I fi
 
-The order of the characters is in the inverse of an imperfect palindrome is preserved, but in order to reconstitute its uninverted form, the characters must be re-sorted.
+The order of the Characters in the Inverse of an imperfect palindrome is preserved, but in order to reconstitute its uninverted form, the characters must be re-sorted. It appears, then, that Delimiters play a central role in organizing the palindromic structure. In order to fully elucidate the structure of palindromes, it will be necessary to introduce into the discourse a method of referring to a Sentence's Delimiter count. 
 
 Delimiter Count Function 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-As the introduction to this section made clear, it will be necessary to have a way of referencing the number of Delimiter Characters in a String. The following definition will serve that purpose.
+As the introduction to this subsection made clear, it will be necessary to have a way of referencing the number of Delimiter Characters in a Sentence. Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings **S**. The following definition will serve that purpose.
 
-**Definition 3.1.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let *𝔞*:sub:`i` represent the *i*:sup:`th` character of the String *t*, where 
+**Definition 2.4.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let *𝔞*:sub:`i` represent the *i*:sup:`th` character of the String *t*, where 
 
     i ∈ N:sub:`t` = { 1, 2, ..., l(t) }.
 
-The delimiter count function, denoted by *δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *s*. Formally, *δ(s)* is defined as the cardinality of the set **D**:sub:`s` that satisfies the following formula:
+The delimiter count function, denoted by *δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *t*. Formally, *δ(t)* is defined as the cardinality of the set **D**:sub:`t` that satisfies the following formula:
 
     (j, ⲁ) ∈ D:sub:`t` ↔ (∃ i ∈ N:sub:`t` ( (i, ⲁ) ∈ T ) ∧ (ⲁ = σ) ∧ (j = i) )
 
@@ -685,7 +774,7 @@ Then, the delimiter count function is defined as
 
     δ(t) = | D:sub:`t` |
 
-Consider the string *t = "a b c"*. The set representation of *t* is given by,
+**Example** Consider the string *t = "a b c"*. The set representation of *t* is given by,
     
     T = { (1, a), (2, σ), (3, b), (4, σ), (5, c) }.
 
@@ -697,7 +786,7 @@ From this it follows, | D:sub:`t` | is 2. Hence, *δ(s) = 2*.
 
 The next theorem will be important for describing the structure of *imperfect palindromes*.
 
-**Theorem 3.1.1** *δ(s) = δ(inv(s))*
+**Theorem 2.4.2** *δ(s) = δ(inv(s))*
 
 Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`. Let **T** be the set representation of of *t* is given by,
 
@@ -720,8 +809,16 @@ Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exi
 
 By the definition of the delimiter count function, this means *δ(u) = δ(t)*. Since *u = inv(t)*, it has been shown *δ(inv(s)) = δ(s)*. ∎
 
+**Theorem 2.4.3** δ(ζ) = δ(inv(ζ))
 
+Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
 
+    δ(ζ) = δ(inv(ζ))
+
+Which is what was to be shown. ∎
+
+Section III: Palindromic Structures
+===================================
 
 Section III.1: Pivots
 --------------------
