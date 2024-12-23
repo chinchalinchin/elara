@@ -707,6 +707,50 @@ Substitution: Substituting step 5 into step 4, we get:
 l(ρ) = δ(ρ<sub>c</sub>) + 1
 Therefore, ∀ ρ ∈ C<sub>L</sub>:  l(ρ) = δ(ρ<sub>c</sub>) + 1 ∎
 
+
+
+
+
+Theorem:
+
+For any sentence ρ in a Corpus C<sub>L</sub>, the sum of the lengths of the words in ρ is always greater than the length of the sentence ρ.
+
+Formalization:
+
+∀ ρ ∈ C<sub>L</sub>:  ∑<sub>w∈W<sub>ρ</sub></sub> l(w) > l(ρ)
+
+where:
+
+W<sub>ρ</sub> is the word-level set representation of ρ.
+l(w) is the length of word w (number of non-empty characters).
+l(ρ) is the length of sentence ρ (cardinality of W<sub>ρ</sub>).
+Proof:
+
+Assume ρ ∈ C<sub>L</sub>: This means ρ is a sentence in the Corpus.
+
+Word-Level Representation: Let W<sub>ρ</sub> = {w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>} be the word-level set representation of ρ.
+
+Sentence Length: By Definition 2.2.1, the length of the sentence ρ is:
+
+l(ρ) = |W<sub>ρ</sub>| = n (the number of words in the sentence)
+Word Length:  For each word w<sub>i</sub> ∈ W<sub>ρ</sub>, its length l(w<sub>i</sub>) is the number of non-empty characters in the word.
+
+Delimiter Characters:  Since words are separated by delimiter characters (spaces) in the sentence, each word (except potentially the last one) contributes at least one character to the overall length of the sentence.
+
+Sum of Word Lengths: Therefore, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence:
+
+∑<sub>w∈W<sub>ρ</sub></sub> l(w) ≥ n
+Strict Inequality:  Since each word must contain at least one non-empty character, the sum of the word lengths is strictly greater than the number of words:
+
+∑<sub>w∈W<sub>ρ</sub></sub> l(w) > n
+Substitution:  Substituting l(ρ) = n from step 3, we get:
+
+∑<sub>w∈W<sub>ρ</sub></sub> l(w) > l(ρ)
+Therefore, ∀ ρ ∈ C<sub>L</sub>:  ∑<sub>w∈W<sub>ρ</sub></sub> l(w) > l(ρ) ∎
+
+
+
+
 Setion II.II: Sentence Classes 
 ------------------------------
 
