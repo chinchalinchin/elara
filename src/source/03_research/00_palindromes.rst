@@ -46,14 +46,32 @@ Concatenation
 
 Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation and should be understood as follows,
 
-**Definition 1.1.1: Concatenation**  *𝔞𝔟* is the *concatenation* of *𝔞* and *𝔟*, denoted *concat(𝔞, 𝔟)* 
+**Definition 1.1.1: Character Concatenation**  The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parentheis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*.
 
-Colloquially, *concat(𝔞, 𝔟)* is the String that results from placing *𝔟* behind *𝔞*. The operation of concatenation will be expanded to a larger class of entities in the next section when the notion of a *Word* is further clarified, but its application will always be reducible to simple Character concatenation. This current definition of concatenation leads immediately to the dual *Laws of Nullity*, 
+Colloquially, *ⲁ* is the String that results from placing *ⲃ* behind *ⲁ*. More formally, Character concatenation is defined inductively through the following schema,
 
-    1. *𝔞ε* = *𝔞*
-    2. *ε𝔞* = *𝔞*
-   
-In other words, the operation of concatenating a Character with the Empty Character in either direction will leave the original Character unaltered. 
+    1. Basis Clause: ∀ ⲁ ∈ Σ: ⲁε = ⲁ
+    2. Inductive Clause: ∀ ⲁ, ⲃ, ⲅ ∈ Σ: ⲁ(ⲃⲅ) = (ⲁⲃ)ⲅ
+    3. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ))
+    4. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
+
+In essence, the first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. 
+
+The second clause is the inductive step which allows the concatenation of Characters into Strings of arbitrary length through recursion.
+
+The Uniqueness Clause states that if the concatenation of two characters *ⲁ* and *ⲃ* is equal to the concatenation of two other characters *ⲅ* and *ⲇ*, then it must be the case that *ⲁ* is equal to *ⲅ* and *ⲃ* is equal to *ⲇ*. In other words, there's only one set of Characters that can form a given String through concatenation.
+
+AIt is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is captured in the Comprehension Clause of Definition 1.1.1. This clause ensures two things. First, in conjunction with the Basis Clause, it follows all singleton Characters are Strings. Second, by itself, it ensures that all results of concatenation are Strings. 
+
+**Example** Let *s = 𝔞𝔟𝔠* and *t = 𝔡𝔢𝔣*. The concatenation of these two Strings *st* is written,
+
+    st = (𝔞𝔟𝔠)(𝔡𝔢𝔣) 
+    
+Using the inductive clause, this concatenation can be grouped into simpler concatenations as follows,    
+    
+    𝔞(𝔟(𝔠(𝔡(𝔢𝔣)))) = (((((𝔞𝔟)𝔠)𝔡)𝔢)𝔣) = 𝔞𝔟𝔠𝔡𝔢𝔣
+
+Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣*
 
 Notation
 ^^^^^^^^
@@ -340,21 +358,19 @@ Since *u* and *s* have the same length (l(u) = l(t) = l(s)) and the same charact
 Concatenation
 ^^^^^^^^^^^^^
 
-Definition: Word Concatenation
+Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
 
-Let α and β be two words with the following set representations:
+Let *α* and *β* be two words with the following set representations:
 
-α = {(1, a<sub>1</sub>), (2, a<sub>2</sub>), ..., (l(α), a<sub>l(α)</sub>)}
-β = {(1, b<sub>1</sub>), (2, b<sub>2</sub>), ..., (l(β), b<sub>l(β)</sub>)}
-The concatenation of α and β, denoted by αβ, is the word γ formed by appending the characters of β to the end of α.
+    Α = { (1,  𝔞:sub:`1`), (2,  𝔞:sub:`2`), ... , (n,  𝔞:sub:`n`) }
 
-Formally, the set representation of γ is:
+    Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (m, 𝔟:sub:`m`)}
 
-γ = {(1, a<sub>1</sub>), (2, a<sub>2</sub>), ..., (l(α), a<sub>l(α)</sub>), (l(α) + 1, b<sub>1</sub>), (l(α) + 2, b<sub>2</sub>), ..., (l(α) + l(β), b<sub>l(β)</sub>)}
+Note *n* and *m* are the *cardinalities* of the set representations of **Α** and **Β**, | Α | and | Β | respectively. In other words, *n* and *m* are not the String lengths, *l(α)* and *l(β)*. Definition 1.1.2 where length was formalized in the current system excluded the Empty character from its calculation in order to ensure the infinite concatenation of an empty Character does not alter the content of Word. This slight deviation from the notion of length requires special care when formulating the definition of Word concatenation. 
 
-(A subtle self-check, 🧠 verifying the accuracy)
+By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the word *γ* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of γ is given by,
 
-This definition accurately captures the process of combining two words by appending their character sequences, while also maintaining the set-based representation that we've adopted for words.
+    γ = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`i`), ..., (n,  𝔞:sub:`n`), (n + 1, 𝔟:sub:`1`), (n + 2, 𝔟:sub:`2`), ..., (n + m, 𝔟:sub:`m`)}
 
 Section I.III: Word Classes 
 ---------------------------
@@ -526,44 +542,33 @@ Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and a
 Compound Words 
 ^^^^^^^^^^^^^^
 
-Definition: Compound Word
+**Definition 1.3.3: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 
-A word w in a language L is a compound word if and only if it can be formed by concatenating two or more other words from L.
+This formalization can be translated into natural language as follows: A Word *η* in a Language **L** is a Compound Word if and only if,
 
-Formalization:
+    1. Base Case (*∃ α, β ∈ L: η = αβ*) ∧ (η ∈ L):  *η* can be formed by concatenating two words from **L**, and *η* belongs to **L**.
+    2. Recursive Step [ (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ) ∧ (η ∈ L) ]: *η* can be formed by concatenating a word from **L** with a Compound Word from **L**, and *η* belongs to **L**.
 
-w ∈ CW<sub>L</sub> ↔ (∃ α, β ∈ L: w = αβ) ∨ (∃ α, β, γ ∈ L: w = αβγ) ∨ ...
 
-where CW<sub>L</sub> represents the set of compound words in L.
+The constraint *w ∈* **L** ensures that the concatenated String *η* is not just a String, but also a valid Word within the Language **L**.
 
-Example:
+**Example** English
 
-"racecar" is a compound word because it can be formed by concatenating "race" and "car."
+"teapot" is a compound word because it can be formed by concatenating "tea" and "pot", and "racecar" is itself a word in English.
+
 "nevertheless" is a compound word formed from "never," "the," and "less."
-Compound Invertible Words:
 
-As you suggested, we can then define compound invertible words as the intersection of compound words and invertible words:
+"formrat" is not a compound word, even though it can be formed by concatenating "form" and "rat, both valid words, " because "formrat" is not a valid word in English.
 
-Definition: Compound Invertible Word
+**Definition 1.3.4: Compound Invertible Words** η ∈ CIW:sub:`L`  ↔ [ (w ∈ CW:sub:`L`)  ∧ (w ∈ I) ]
 
-A word w in a language L is a compound invertible word if and only if it is both a compound word and an invertible word.
+In natural language: A word w in a language L is a compound invertible word if and only if it is both a compound word and an invertible word. Using notation for set intersections, this definition can be revised to read,
 
-Formalization:
+    CIW:sub:`L` = CW:sub:`L` ∩ I
 
-w ∈ CIW<sub>L</sub> ↔ (w ∈ CW<sub>L</sub>) ∧ (w ∈ I)
-
-where CIW<sub>L</sub> represents the set of compound invertible words in L.
-
-Example:
+**Example**
 
 "racecar" is a compound invertible word because it's both a compound word and its own inverse.
-"deified" is a compound invertible word formed from "deify" and its inverse "fied" (ignoring capitalization).
-Implications and Further Exploration:
-
-Palindrome Construction: Compound invertible words play a crucial role in constructing complex palindromes, as they provide larger symmetrical units that can be combined with other words and phrases.
-Linguistic Analysis: Analyzing the prevalence and structure of compound invertible words in a language could provide insights into its morphological and semantic properties.
-Computational Applications: Identifying and utilizing compound invertible words could be valuable in natural language processing tasks, such as text generation, machine translation, and information retrieval.
-
 
 Section II: Sentences
 =====================

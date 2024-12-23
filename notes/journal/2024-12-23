@@ -1,0 +1,37 @@
+Theorem 1: Character Concatenation and String Representation
+
+Let s and t be strings with the following set representations:
+
+S = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>m</sub>)
+T = (b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>n</sub>)
+Then, the concatenation of s and t, denoted by st, has the following set representation:
+
+ST = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>m</sub>, b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>n</sub>)
+
+Proof:
+
+This theorem follows directly from our definition of Character Concatenation.  The concatenation of two strings is simply the sequential appending of their characters, which is precisely what the set representation ST captures.
+
+Theorem 2: Word Concatenation and Character Concatenation
+
+Let α and β be two words with the following set representations:
+
+α = {(1, a<sub>1</sub>), (2, a<sub>2</sub>), ..., (m, a<sub>m</sub>)}
+β = {(1, b<sub>1</sub>), (2, b<sub>2</sub>), ..., (n, b<sub>n</sub>)}
+Let γ = αβ be the concatenation of α and β.
+
+Then, the character-level representation of γ, denoted by γ<sub>c</sub>, is obtained by applying Character Concatenation to the characters of α and β in their respective order.
+
+Proof:
+
+Word-Level Concatenation: By our definition of Word Concatenation, the set representation of γ is:
+
+γ = {(1, a<sub>1</sub>), (2, a<sub>2</sub>), ..., (m, a<sub>m</sub>), (m + 1, b<sub>1</sub>), (m + 2, b<sub>2</sub>), ..., (m + n, b<sub>n</sub>)}
+
+Character-Level Representation: To obtain γ<sub>c</sub>, we extract the characters from γ in their order:
+
+γ<sub>c</sub> = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>m</sub>, b<sub>1</sub>, b<sub>2</sub>, ..., b<sub>n</sub>)
+
+Character Concatenation: This is precisely the result of applying Character Concatenation to the characters of α and β in their respective order, as stated in Theorem 1.
+
+Therefore, the character-level representation of the concatenated word γ is obtained through Character Concatenation. ∎
