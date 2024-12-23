@@ -1,0 +1,31 @@
+Theorems and ideas for tomorrow
+
+- The sum of the length of words in a sentence is equal to length of that sentence's reduction into its sigma-pairing language.
+- The possibility of Character reductions (other than sigma). Explore the idea that every Character reduction creates a unique pairing language. Explore what the intersection of various pairing languages say about the underlying language.
+- If every palindrome is its own inverse in a sigma-reduced alphabet, then the palindrome expressed in the sigma-pairing language must contain invertible words from the "mother language".
+
+- Have separate thread where Gemini verifies parts of speech breakdown in palindromes spreadsheet.
+
+- Chiasmus and word-level palindromes: "So patient a doctor to doctor a patient so" “face to face” "Night after night"
+Definitions
+
+- Other types of palindromes (possible applications of formal system): 
+    - musical palindromes. For example, Joseph Haydn’s Symphony No. 47 features a minuet and a trio in its third movement. The second halves of the minuet and trio are identical to the first halves but backward, and the minuet itself repeats at the end of its second half.
+    - numerical palindromes: Numbers can be palindromes if the digits read the same backward and forward, such as 10101. Dates, too, can be palindromes. February 2, 2020, is officially known as “Universal Palindrome Day” because the digits form a palindrome regardless of date format (day/month/year or month/day/year).
+    - genetic palindromes: Palindrome also has a specific application in biochemistry. Here, it is a region of DNA in which the sequence of nucleotides is identical with an inverted sequence in the complementary strand. GAATTC is a palindrome of CTTAAG.
+
+- distinction between vowels vs consonants in language creates constraints on reflective words. consonant-vowel-consonant. vowel-consonant-vowel. consonant-vowel-vowel-consonant. vowel-consonant-consonant-vowel. consonant-consonant-consonant-consonant. vowel-vowel-vowel-vowel. Does this constraint on symmetry prevent a combinatorial explosion? 
+
+- link between invertible words that involve quantifier-noun relations and presence in palindromes?
+
+Algorithm for finding perfect palindrome: work from the outside in, comparing the words. once a pair is not invertible, it cannot be a perfect palindrome.
+
+Palindrome Postulates
+
+- Pairing Postulate: If a non-invertible word appears in a palindrome's sigma-pairing representation, then it must contain or be contained by an invertible word.
+
+- Inverse postulate: Either the starting word of a palindrome must be contained in its ending word or the ending word of a palindrome must be contained in its starting word.
+
+- Perfect postulate: A sentence is a perfect palindrome if and only if the sentence is invertible. (Recall invertibility implies semantic coherence of the inverse) (Is this a postulate or a definition?)
+
+*If the perfect postulate is a definition, then a theorem is: perfect palindromes can only contain invertible words (by our little gem.)

@@ -1,0 +1,280 @@
+Index,Sentence Length,Sum of Word Lengths,Aspect,Fields,Word 1,Word 2,Word 3,Word 4,Word 5,Word 6,Word 7,Word 8,Word 9,Word 10,Word 11,Word 12
+1,4,14,Perfect,Sentence,no,devil,lived,on,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,2,5,5,2,0,0,0,0,0,0,0,0
+,,,,Part of Speech,adjective,noun,verb,preposition,ε,ε,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+2,6,20,Perfect,Sentence,rats,live,on,no,evil,star,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,4,2,2,4,4,0,0,0,0,0,0
+,,,,Part of Speech,noun,verb,preposition,quantifier,adjective,noun,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+3,7,19,Perfect,Sentence,live,was,I,ere,I,saw,evil,ε,ε,ε,ε,ε
+,,,,Word Length,4,3,1,3,1,3,4,0,0,0,0,0
+,,,,Part of Speech,adjective,verb,pronoun,preposition,pronoun,verb,noun,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+4,4,13,Imperfect,Sentence,name,now,one,man,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,3,3,3,0,0,0,0,0,0,0,0
+,,,,Part of Speech,verb,adverb,number,noun,ε,ε,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+5,6,15,Imperfect,Sentence,pull,up,if,I,pull,up,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,2,2,1,4,2,0,0,0,0,0,0
+,,,,Part of Speech,verb,preposition,conjunction,pronoun,verb,preposition,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+6,6,15,Imperfect,Sentence,too,bad,I,hid,a,boot,ε,ε,ε,ε,ε,ε
+,,,,Word Length,3,3,1,3,1,4,0,0,0,0,0,0
+,,,,Part of Speech,adverb,adjective,pronoun,verb,article,noun,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+7,6,13,Imperfect,Sentence,was,it,a,cat,I,saw,ε,ε,ε,ε,ε,ε
+,,,,Word Length,3,2,1,3,1,3,0,0,0,0,0,0
+,,,,Part of Speech,verb,pronoun,article,noun,pronoun,verb,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+8,5,13,Imperfect,Sentence,we,panic,in,a,pew,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,2,5,2,1,3,0,0,0,0,0,0,0
+,,,,Part of Speech,pronoun,verb,preposition,article,noun,ε,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+9,4,12,Imperfect,Sentence,too,hot,to,hoot,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,3,3,2,4,0,0,0,0,0,0,0,0
+,,,,Part of Speech,adverb,adjective,preposition,verb,ε,ε,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+10,6,21,Imperfect,Sentence,go,deliver,a,vile,evil,dog,ε,ε,ε,ε,ε,ε
+,,,,Word Length,2,7,1,4,4,3,0,0,0,0,0,0
+,,,,Part of Speech,verb,verb,article,adjective,adjective,noun,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+11,4,13,Imperfect,Sentence,do,geese,see,god,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,2,5,3,3,0,0,0,0,0,0,0,0
+,,,,Part of Speech,verb,noun,verb,noun,ε,ε,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+12,7,21,Imperfect,Sentence,now,do,I,repay,a,period,won,ε,ε,ε,ε,ε
+,,,,Word Length,3,2,1,5,1,6,3,0,0,0,0,0
+,,,,Part of Speech,adverb,verb,pronoun,verb,article,noun,adjective,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+13,5,25,Imperfect,Sentence,some,men,interpret,nine,memos,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,3,9,4,5,0,0,0,0,0,0,0
+,,,,Part of Speech,adjective,noun,verb,adjective,noun,ε,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+14,6,21,Imperfect,Sentence,draw,no,dray,a,yard,onward,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,2,4,1,4,6,0,0,0,0,0,0
+,,,,Part of Speech,verb,quantifier,noun,article,noun,adverb,ε,ε,ε,ε,,
+,,,,,,,,,,,,,,,,
+15,7,21,Imperfect,Sentence,do,not,start,at,rats,to,nod,ε,ε,ε,ε,ε
+,,,,Word Length,2,3,5,2,4,2,3,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+16,6,15,Imperfect,Sentence,in,a,regal,age,ran,I,ε,ε,ε,ε,ε,ε
+,,,,Word Length,2,1,5,3,3,1,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+17,6,27,Imperfect,Sentence,goddesses,so,pay,a,possessed,dog,ε,ε,ε,ε,ε,ε
+,,,,Word Length,9,2,3,1,9,3,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+18,5,21,Imperfect,Sentence,war,distended,nets,I,draw,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,3,9,4,1,4,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+19,10,39,Imperfect,Sentence,live,dirt,up,a,sidetrack,carted,is,a,putrid,evil,ε,ε
+,,,,Word Length,4,4,2,1,9,6,2,1,6,4,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+20,5,19,Imperfect,Sentence,regard,a,mere,mad,rager,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,6,1,4,3,5,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+21,6,23,Imperfect,Sentence,trade,ye,no,mere,moneyed,art,ε,ε,ε,ε,ε,ε
+,,,,Word Length,5,2,2,4,7,3,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+22,5,20,Imperfect,Sentence,must,sell,at,tallest,sum,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,4,2,7,3,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+23,7,19,Imperfect,Sentence,ma,is,as,selfless,as,I,am,ε,ε,ε,ε,ε
+,,,,Word Length,2,2,2,8,2,1,2,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+24,4,14,Imperfect,Sentence,never,odd,or,even,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,5,3,2,4,0,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+25,6,19,Imperfect,Sentence,red,root,put,up,to,order,ε,ε,ε,ε,ε,ε
+,,,,Word Length,3,4,3,2,2,5,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+26,7,18,Imperfect,Sentence,evil,is,a,deed,as,I,live,ε,ε,ε,ε,ε
+,,,,Word Length,4,2,1,4,2,1,4,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+27,7,21,Imperfect,Sentence,murder,for,a,jar,of,red,rum,ε,ε,ε,ε,ε
+,,,,Word Length,6,3,1,3,2,3,3,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+28,7,13,Imperfect,Sentence,ma,is,a,nun,as,I,am,ε,ε,ε,ε,ε
+,,,,Word Length,2,2,1,3,2,1,2,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+29,6,20,Imperfect,Sentence,never,a,foot,too,far,even,ε,ε,ε,ε,ε,ε
+,,,,Word Length,5,1,4,3,3,4,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+30,6,15,Imperfect,Sentence,now,sir,a,war,is,won,ε,ε,ε,ε,ε,ε
+,,,,Word Length,3,3,1,3,2,3,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+31,4,12,Perfect,Sentence,step,on,no,pets,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,2,2,4,0,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+32,3,11,Imperfect,Sentence,borrow,or,rob,ε,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,6,2,3,0,0,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+33,11,37,Imperfect,Sentence,are,we,not,drawn,onward,we,few,drawn,onward,to,new,era
+,,,,Word Length,3,2,3,5,6,2,3,5,6,2,3,3
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+34,2,7,Imperfect,Sentence,dumb,mud,ε,ε,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,3,0,0,0,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+35,3,9,Imperfect,Sentence,go,data,dog,ε,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,2,4,3,0,0,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+36,2,7,Imperfect,Sentence,gift,fig,ε,ε,ε,ε,ε,ε,ε,ε,ε,ε
+,,,,Word Length,4,3,0,0,0,0,0,0,0,0,0,0
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+37,6,19,Imperfect,Sentence,god,lived,as,a,devil,dog,,,,,,
+,,,,Word Length,3,5,2,1,5,3,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+38,6,20,Perfect,Sentence,god,lived,on,no,devil,dog,,,,,,
+,,,,Word Length,3,5,2,2,5,3,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+39,5,13,Perfect,Sentence,god,saw,I,was,dog,,,,,,,
+,,,,Word Length,3,3,1,3,3,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+40,4,8,Perfect,Sentence,I,did,did,I,,,,,,,,
+,,,,Word Length,1,3,3,1,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+41,4,11,Imperfect,Sentence,I,met,system,I,,,,,,,,
+,,,,Word Length,1,3,6,1,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+42,5,11,Imperfect,Sentence,if,I,had,a,hifi,,,,,,,
+,,,,Word Length,2,1,3,1,4,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+43,4,15,Imperfect,Sentence,lager,sir,is,regal,,,,,,,,
+,,,,Word Length,5,3,2,5,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+44,4,12,Perfect,Sentence,laid,on,no,dial,,,,,,,,
+,,,,Word Length,4,2,2,4,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+45,2,11,Imperfect,Sentence,lepers,repel,,,,,,,,,,
+,,,,Word Length,6,5,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+46,2,8,Perfect,Sentence,live,evil,,,,,,,,,,
+,,,,Word Length,4,4,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+47,6,31,Imperfect,Sentence,live,not,on,evil,madam,live,not,on,evil,,,
+,,,,Word Length,4,3,2,4,5,4,3,2,4,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+48,7,21,Imperfect,Sentence,may,a,moody,baby,doom,a,yam,,,,,
+,,,,Word Length,3,1,5,4,4,1,3,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+49,2,9,Imperfect,Sentence,never,even,,,,,,,,,,
+,,,,Word Length,5,4,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+50,7,23,Imperfect,Sentence,no,it,is,open,on,one,position,,,,,
+,,,,Word Length,2,2,2,4,2,3,8,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+51,4,16,Imperfect,Sentence,no,it,is,opposition,,,,,,,,
+,,,,Word Length,2,2,2,10,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+52,11,31,Imperfect,Sentence,no,it,never,propagates,if,I,set,a,gap,or,prevention,
+,,,,Word Length,2,2,5,10,2,1,3,1,3,2,10,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,no,pet,so,tragic,as,a,cigar,to,step,no,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,no,trace,not,one,carton,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Perfect,Sentence,not,a,ton,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,not,on,,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,puff,up,,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,race,fast,safe,car,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Perfect,Sentence,redraw,a,warder,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Perfect,Sentence,reflog,a,golfer,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Perfect,Sentence,repaid,a,diaper,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,rise,to,vote,sir,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,so,many,dynamos,,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Perfect,Sentence,strap,on,no,parts,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,to,oscillate,metallic,soot,,,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,was,it,a,bar,or,a,bat,I,saw,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,was,it,a,bat,I,saw,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,was,it,a,car,or,a,cat,I,saw,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,was,it,a,hat,I,saw,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,Imperfect,Sentence,was,it,a,rat,I,saw,,,,,,
+,,,,Word Length,,,,,,,,,,,,
+,,,,Part of Speech,,,,,,,,,,,,

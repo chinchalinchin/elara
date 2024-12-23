@@ -1373,39 +1373,22 @@ We can express this theorem more formally using logical symbols:
 Section IV: References 
 ======================
 
-Unpunctual Palindromes 
-----------------------
+Reflective Words
+----------------
 
-Perfect Palindromes 
-^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Reflective Words
+   :file: ../_static/data/reflective_words.csv
 
-- Dennis sinned
-- No devil lived on
-- Rats live on no evil star
-- Live was I ere I saw evil
+Invertible Words
+----------------
 
-Imperfect Palindromes
-^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: Invertible Words
+   :file: ../_static/data/invertible_words.csv
 
-- Name now one man
-- Pull up if I pull up
-- Too bad I hid a boot
-- Was it a cat I saw
-- We panic in a pew
-- Too hot to hoot
-- Go deliver a vile evil dog
-- Do geese see god
-- Now do I repay a period won
-- Some men interpret nine memos
-- Draw no dray a yard onward
-- Do not start at rats to nod
-- In a regal age ran I
-- Goddesses so pay a possessed dog
-- War distended nets I draw
-- Live dirt up a sidetrack carted is a putrid evil
-- Regard a mere mad rager
-- Trade ye no mere moneyed art
-- Must sell at tallest sum
-- Ma is as selfless as I am
-- Never odd or even
-- Red root put up to order
+Palindromic Analysis 
+--------------------
+
+The following spreadsheet contains the results of palindromic analysis conducted on a sample of English palindromes. 
+
+.. csv-table:: Palindromic Analysis
+   :file: ../_static/data/palindromes.csv
