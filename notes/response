@@ -18,7 +18,9 @@ Definitions
 
 - link between invertible words that involve quantifier-noun relations and presence in palindromes?
 
-Algorithm for finding perfect palindrome: work from the outside in, comparing the words. once a pair is not invertible, it cannot be a perfect palindrome.
+- Algorithm for finding perfect palindrome: work from the outside in, comparing the words. once a pair is not invertible, it cannot be a perfect palindrome.
+
+- Should the pivot be defined in the Sentence space or the sigma-reduced spaced? 
 
 Palindrome Postulates
 
