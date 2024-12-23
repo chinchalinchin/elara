@@ -1078,3 +1078,35 @@ Simplifying: ∀ i ∈ N<sub>s</sub>: u<sub>i</sub> = a<sub>i</sub>
 Equality of Strings: Since u and s have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (u<sub>i</sub> = a<sub>i</sub> for all i), we can conclude that u = s.
 
 Final Step:  Recall that u = inv(t) and t = inv(s).  Substituting, we get inv(inv(s)) = s. ∎
+
+
+
+
+
+- No devil lived on
+- Name now one man
+- Pull up if I pull up
+- Too bad I hid a boot
+- Was it a cat I saw
+- We panic in a pew
+- Too hot to hoot
+- Go deliver a vile evil dog
+- Do geese see god
+- Now do I repay a period won
+- Live was I ere I saw evil
+- Some men interpret nine memos
+- Draw no dray a yard onward
+- Do not start at rats to nod
+- In a regal age ran I
+- Goddesses so pay a possessed dog
+- War distended nets I draw
+- Live dirt up a sidetrack carted is a putrid evil
+- Regard a mere mad rager
+- Trade ye no mere moneyed art
+- Must sell at tallest sum
+- Ma is as selfless as I am
+- Never odd or even
+- Red root put up to order
+- Rats live on no evil star
+
+Imperfect Palindromes
