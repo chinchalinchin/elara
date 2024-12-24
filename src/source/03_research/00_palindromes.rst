@@ -171,7 +171,7 @@ If and only if there exists a strictly increasing function *f*: **N**:sub:`α` *
 
     ∀ i ∈ N:`α`: a:sub:`i` = b:sub:`f(i)`
 
-This definition essentially states that *α* is contained in *β* if there's a way to map the Characters of *α* onto a subsequence of the Characters in *β* while preserving their order. The function f** ensures that the Characters in *α* appear in the same order within *β*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtelty involved in attempting its definition. 
+This definition essentially states that *α* is contained in *β* if there's a way to map the Characters of *α* onto a subsequence of the Characters in *β* while preserving their order. The function f** ensures that the Characters in *α* appear in the same order within *β*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
 
 First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *α = "rat"* and *β = "strata"*. Then, these words can be represented in set notation as,
 
@@ -226,37 +226,37 @@ It is assumed **S** is at least uncountably infinite. A rigorous proof of this f
 
 **Theorem 1.1.1** | S | ≥ ℵ:sub:`1`
 
-Assume, for the sake of contradiction, that the set of all Strings **S** is countable. This means the Strings can be listed them in some order, 
+Assume, for the sake of contradiction, that the set of all Strings **S** is countable. This means the Strings can be listed in some order, 
 
     s:sub:`1`, s:sub:`2`, s:sub:`3`, etc.
 
 Now, construct a new String *t* as follows:
 
-    1. The first character of t is different from the first character of s1.
-    2. The second character of t is different from the second character of s2.
+    1. The first character of *t* is different from the first character of *s*:sub:`1`.
+    2. The second character of *t* is different from the second character of *s*:sub:`2`.
     3. etc.
 
-This string *t* will be different from every string in **S** contradicting the assumption that we could list all possible strings. Therefore, **S** must be uncountable. ∎ 
+This string *t* will be different from every string in **S** contradicting the assumption that it was possible to list all strings. Therefore, **S** must be uncountable. ∎ 
 
 Section I.II: Words
 -------------------
 
 While the notion of Characters maps almost exactly to the intuitive notion of letters in everyday use, the notion of a *Word* requires explication. 
 
-If Characters are mapped to letters in the alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the alphabet.  The goal of this section is to introduce a series of constraints onto the set of all Strings that will filter out its elements that cannot belong to **L** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
+If Characters are mapped to letters in the Alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet.  The goal of this section is to introduce a series of constraints onto the set of all Strings that will filter out its elements that cannot belong to **L** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
 
 To formalize these notion, the following symbolic representations are introduced, 
 
     1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
     2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
 
-In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as { "dog", "cat", "hamster", ... } or { "tree", "flower", "grass", .... }.
+In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as *{ "dog", "cat", "hamster", ... }* or *{ "tree", "flower", "grass", .... }*.
 
-The number of Words in a Language is denoted | **L** |. 
+The number of Words in a Language is denoted | L |. 
 
 It will sometimes be necessary to refer to indeterminate Words, so notation is introduced for Word Variables,
 
-    3. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). The exceptions to this rule are *ζ*, *ξ* and *χ* which are reserved for Sentential Variables (see Section II.I for more information.)
+    1. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). The exceptions to this rule are *ζ* and *ξ*which are reserved for Sentential Variables (see Section II.I for more information.), *σ* which is used for the Delimiter Character (see Section I.I for more information), and δ which is used for the Delimiter count function (see Section II.IV for more information)
 
 The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
@@ -269,9 +269,9 @@ With these definitions, the hierarchy of relationships that exist between a word
 Axioms
 ^^^^^^
 
-The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axiom listed in this section is not *sufficient*; in other words, it is possible for a String to satisfy this axiom without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
+The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy these axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
 
-Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the i:sup:`th` Character of the String *s*. Let *l(s)* be the length of *s*. Let *N*:sub:`s` be the set,
+Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character of the String *s*. Let *l(s)* be the length of *s*. Let *N*:sub:`s` be the set,
 
     { 1, 2, ... , l(s) }
 
@@ -288,7 +288,7 @@ In essence, these Axioms capture the common-sense notion that a Word from a Lang
 Inversion
 ^^^^^^^^^
 
-Informally, the *Inverse* of a String is the reversed sequence of Characters in the String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition will be elucidated. 
+Informally, the *Inverse* of a String is the reversed sequence of Characters in a String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition will be elucidated. 
 
 **Definition 1.2.1: String Inversion** Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. Let **N**:sub:`s` be the set,
 
@@ -348,8 +348,8 @@ Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Let **N*
 
 Applying Definition 1.2.1 again,
 
-    1. l(u) = l(t)
-    2. ∀ j ∈ N:sub:`t`, ∀ k ∈ N:sub:`u`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
+    3. l(u) = l(t)
+    4. ∀ j ∈ N:sub:`t`, ∀ k ∈ N:sub:`u`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
  
 Since *l(t) = l(s)* (step 1) and **N**:sub:`t` *=* **N**:sub:`s` (by definition of natural numbers), these substitions may be made in step 4,
 
@@ -367,11 +367,11 @@ This may be rewritten, noting the condition *k = i*,
 
     8. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) 
 
-Now, substitute the definition of 𝔟:sub:`j` from step 2 (where j = l(s) - i + 1) into the equation for  𝔠:sub:`k`,
+Now, substitute the definition of *𝔟*:sub:`j` from step 2 (where *j = l(s) - i + 1*) into the equation for  *𝔠*:sub:`k`,
 
     9. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔞:sub:`i` 
 
-Since *u* and *s* have the same length (l(u) = l(t) = l(s)) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that u = inv(t) and t = inv(s).  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
+Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
 Concatenation
 ^^^^^^^^^^^^^
@@ -384,7 +384,7 @@ Let *α* and *β* be two words with the following set representations:
 
     Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (m, 𝔟:sub:`m`)}
 
-Note *n* and *m* are the *cardinalities* of the set representations of **Α** and **Β**, | Α | and | Β | respectively. In other words, *n* and *m* are not the String lengths, *l(α)* and *l(β)*. Definition 1.1.2 where length was formalized in the current system excluded the Empty character from its calculation in order to ensure the infinite concatenation of an empty Character does not alter the content of Word. This slight deviation from the notion of length requires special care when formulating the definition of Word concatenation. 
+Here *n* and *m* are the *cardinalities* of the set representations of **Α** and **Β**, | Α | and | Β | respectively. In other words, *n* and *m* are not the String lengths, *l(α)* and *l(β)*. Definition 1.1.2, where length was formalized in the current system, excluded the Empty character from its calculation in order to ensure the infinite concatenation of an Empty Character does not alter the content of Word. This slight deviation from the notion of length requires special care when formulating the definition of Word concatenation. 
 
 By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the word *γ* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of γ is given by,
 
@@ -393,13 +393,12 @@ By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is t
 Section I.III: Word Classes 
 ---------------------------
 
-It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes be used extensively in the next section.
+It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes, especially the class of Invertible Words, will be used extensively in the next sections.
 
 Reflective Words 
 ^^^^^^^^^^^^^^^^
 
 The concept of *Reflective Words* can be easily understood by examining some examples in English,
-
 
 |    Word    |
 | ---------- |
@@ -411,9 +410,11 @@ The concept of *Reflective Words* can be easily understood by examining some exa
 | level      | 
 | civic      |
 
-From this list, it should be clear what is meant by the notion of *reflective*: Reflective Words are words that are unchanged by a String Inversion. This property will be formally defined as follows.
+From this list, it should be clear what is meant by the notion of *reflective*: Reflective Words are Words that are unchanged by a String Inversion. This property will be formally defined as follows.
 
-**Definition 1.3.1: Reflective Words** Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Let *l(α)* be the length of *α*. Let **N**:sub:`α` be the set,
+**Definition 1.3.1: Reflective Words** 
+
+Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Let *l(α)* be the length of *α*. Let **N**:sub:`α` be the set,
 
     { 1, 2, ... , l(α) }
 
@@ -421,9 +422,13 @@ Then the set of Reflective Words **R** is defined as the set of *α* which satis
 
     α ∈ R ↔ [ ∀ i ∈ N:sub:`α`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ]
 
-A Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. The following theorem is an immediate consequence of this definition.
+A Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. 
+
+The following theorem is an immediate consequence of this definition.
 
 **Theorem 1.3.1** α ∈ R ↔ α = inv(α)
+
+In natural language, this theorem can be stated as: A Word is Reflective if and only if it is its own Inverse.
 
 (→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.1, 
 
@@ -809,7 +814,11 @@ By Definition 2.2.2, it follows,
 Section II.III: Axioms 
 ----------------------
 
-In Section I.II, the first two axioms of the palindromic formal system was introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being buitl. The Delimiter Axiom is reprinted below, so it may be considered in sequence with the other axioms.
+In Section I, the first three axioms of the palindromic formal system was introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being buitl. The Delimiter Axiom is reprinted below, so it may be considered in sequence with the other axioms.
+
+**Axiom C.1: The Character Axiom**
+
+    ∀ ⲁ: ⲁ ∈ S
 
 **Axiom W.1: The Delimiter Axiom ** 
 
@@ -827,7 +836,13 @@ In Section I.II, the first two axioms of the palindromic formal system was intro
 
     ∀ ζ ∈ C:sub:`L` : ∀ α ∈ W:sub:`ζ`: α ∈ L
 
-TODO: describe Axiom S.1
+It is worth taking the time to analyze the structure, however minimal, these axioms imply. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to the inherent linguistic structures. 
+
+To briefly summarize the axioms so far introduced: The system "initializes" with the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Delimiter Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. The Empty Axiom ensures Words in a Language do not possess null content in the form of Empty Characters.
+
+With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
+
+The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories. Axiom S.1 asserts that for every Word in a Language there is at least one Sentence in a Corpus that contains it. In other words, a Word cannot exist in a Language without being included in a Sentence. This Axiom captures an inextricable link between the metamathematical concepts of Sentence and Word: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation.
 
 Axiom S.2 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
 
