@@ -641,6 +641,8 @@ Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and a
 Compound Words 
 ^^^^^^^^^^^^^^
 
+(TODO: This section is not necessary to prove the main results. Consider removing this definition. I am keeping it, just in case it is required in a proof down the line.)
+
 **Definition 1.3.3: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 
 This formalization can be translated into natural language as follows: A Word *η* in a Language **L** is a Compound Word if and only if,
@@ -651,7 +653,7 @@ This formalization can be translated into natural language as follows: A Word *�
 
 The constraint *w ∈* **L** ensures that the concatenated String *η* is not just a String, but also a valid Word within the Language **L**.
 
-**Example** English
+**Examples**
 
 "teapot" is a compound word because it can be formed by concatenating "tea" and "pot", and "racecar" is itself a word in English.
 
@@ -1188,53 +1190,65 @@ Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" 
 
 The notation for sigma reduction is meant to evoke the idea of a vector dot project. The analogy to a vector projection is indeed apt. While not a strict mathematical equivalence, it captures the idea of transforming the string from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
 
-The *σ*-reduced alphabet (*Σ'*) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (*s ⋅ Σ'*) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
+The *σ*-reduced alphabet (**Σ**:sub:`σ`) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (**S ⋅ Σ**:sub:`σ`) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
 
-**Theorem 3.1.1** ζ ∈ K → [ inv(ζ ⋅ Σ') = inv(inv(ζ ⋅ Σ')) ]
+Note that a *σ-reduction* is not a one-to-one operation. It is possible for the *σ-reduction* of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
+
+As an example, consider the (partial, ignoring punctuality) Palindromes *ᚠ = "madam im adam"* and *ᚢ = "mad am i madam"*. The *σ-reduction* of both of these Sentences would map to the *σ-reduced* value of *madamiadam".
+
+Both the Palindrome and the alternative Sentence have the same *σ-reduction*, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original word boundaries and sentence structure are lost.
+
+During a *σ-reduction*, information in lost with respect to the following semantic categories,
+
+  - Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
+  - Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
+  - Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.
+
+However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ-reduction* of a Sentence.
+
+**Theorem 3.1.1** ∀ ζ ∈ C:sub`L`, ∃ α ∈ L: α ⊂:sub:`s` ( Ζ ⋅ Σ:sub:`σ` )
+
+This theorem can be stated in natural language as follows: Given the *σ-reduction* of a Sentence, there exists a Word in its Language that is contained in the *σ-reduced* string.
+
+Assume *ζ ∈ C*:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*.
+
+By the Axiom of Word Extraction (S.3),
+
+    1. ∀ ζ ∈ C*:sub:`L`, ∀ α ∈ W:sub:`ζ`: α ∈ L.
+
+Since *ζ* is a sentence, it must contain at least one word. Therefore, W:sub:`ζ` is not empty. Let *α* be any word in **W**:sub:`ζ`:.
+
+By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  Therefore, *α* is contained in **Ζ ⋅ Σ**:sub:`σ`, which is what was to be shown. ∎
+
+
+**Theorem 3.1.2** ζ ∈ K → [ inv(ζ ⋅ Σ') = inv(inv(ζ ⋅ Σ')) ]
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under sigma reductions. 
 
-Outline:
+(TODO: Need to prove this! This theorem is critical!)
 
-1. If a sentence is invertible, then 
-(TODO: this is crucial. Need to prove this. Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( δ(ζ) = δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.)
+Outline of Potential Proof:
 
+  1. Theorem 2.3.5: If a Sentence is invertible, then all of its Word are invertible.
+  2. Delimiter Axiom W.1: no Words contain Delimiter. 
+  3. Therefore, each segment of a sigma-reduce Sentence is invertible.
+  4. TODO: may need a corollary that says if ζ=st, where st is the concatenation of s and t, then inv(ζ)=inv(t)inv(s), where inv(t)int(s) is the concatenation of the inverses of s and t.
+  5. Need to show because each segment is invertible, a double inversion perserves the order of the words.
 
-Palindromes
-^^^^^^^^^^^
+(TODO: Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( δ(ζ) = δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.)
 
-**Definition 3.1.2: Syntactical Palindromes**
+Aspect
+^^^^^^
+
+(TODO: introduction)
+
+**Definition 3.1.2: Palindromes**
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
     ζ ∈ P ↔ ζ ⋅ Σ' = inv(ζ ⋅ Σ')
 
 (TODO: explain) 
-
-**Definition 3.1.3: Perfect Palindromes**
-
-Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the following formula,
-
-    ζ ∈ PP ↔ ζ = inv(ζ)
-
-**Theorem 3.1.2** PP ⊂ K
-
-In natural language, this theorem can be stated as follows: Perfect Palindromes are a subset of the Invertible Sentences in a Corpus. 
-
-(TODO: Need to prove this with the definition of invertible sentences)
-
-**Theorem 3.1.2**  PP ⊂ P
-
-(TODO: Need prove this. Need to prove that invertible sentences maintain their invertibility under sigma reductions in Theorem 3.1.1 first)
-
-**Definition 3.1.4: Imperfect Palindromes**
-
-Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy the following formula,
-
-    ζ ∈ P - PP 
-
-
-TODO: trim
 
 Focus on Essence: It distills the core property of palindromes – their symmetrical nature – by focusing on the sequence of characters without the distraction of spaces.
 Handles Perfect and Imperfect Palindromes:
@@ -1249,9 +1263,88 @@ This definition also resonates with broader mathematical concepts:
 Invariance: It highlights the concept of invariance under transformation. A palindrome remains a palindrome even when projected onto the σ-reduced space, demonstrating a kind of structural integrity that's independent of the specific representation.
 Symmetry as an Equivalence Relation: The condition ζ ⋅ Σ' = inv(ζ ⋅ Σ') can be seen as defining an equivalence relation on the set of sentences, where two sentences are equivalent if they are palindromes of each other in the σ-reduced space.
 
-TODO: trim
+(TODO: trim)
 
+**Definition 3.1.3: Perfect Palindromes**
 
+Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the following formula,
+
+    ζ ∈ PP ↔ ζ = inv(ζ)
+
+Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this poitn in the analysis, one must not be careful to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.1.3 also satisfy 3.1.2. 
+
+Before verifying the class of Sentences which satisfy Definition 3.1.3 are indeed palindromes, the motivation for Definition 3.1.3 will briefly be explained.
+
+(TODO: trim)
+
+Character-Level Symmetry: This definition implicitly captures the character-level symmetry that's characteristic of perfect palindromes. If a sentence is its own inverse, it means that the sequence of characters reads the same backward as forward.
+Word-Level Symmetry: It also implicitly captures the word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence.
+Delimiter Placement: Since the inversion operation preserves the delimiter count (as we proved earlier), this definition also ensures that a perfect palindrome has a balanced number of delimiters around its pivot.
+Examples:
+
+"Madam, I'm Adam" is a perfect palindrome because it reads the same backward as forward, and each word is either its own inverse or part of an inverse pair.
+"Racecar" is also a perfect palindrome, as it's a single word that is its own inverse.
+Potential Limitations:
+
+(TODO: explain)
+
+The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.1.3 
+
+**Theorem 3.1.3** PP ⊂ K
+
+In natural language, this theorem can be stated as follows: Perfect Palindromes are a subset of the Invertible Sentences in a Corpus. 
+
+(TODO: Need to prove this with the definition of invertible sentences, since perfect palindromes are defined as the class of sentences which are their own inverses.)
+
+**Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+
+In natural language, this theorem can be states as Follows: If a Sentence is Perfect Palindrome, then all of its Words are invertible. 
+
+Recall the definition of a subset,
+
+    1. A ⊂ B ↔ (∀ x: x ∈ A → x ∈ B)
+
+Applying this definition to Theorem 3.1.3, 
+    
+    2. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → ζ ∈ K
+
+From Theorem 2.3.5, it is known the consequent of this conditional implies the following,
+
+    3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+
+Recall the tautology of *Hypothetical Syllogisms*, for any propositions *p*, *q* and *r*,
+
+    4. ( p → q ∧ q → r ) → (q → r)
+
+Applying this tautological law to step 2 and step 3,
+
+    5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+
+Which is what was to be shown. ∎ 
+
+**Theorem 3.1.5**  PP ⊂ P
+
+(TODO: Need prove this. Need to prove that invertible sentences maintain their invertibility under sigma reductions in Theorem 3.1.2 first.)
+
+**Definition 3.1.4: Imperfect Palindromes**
+
+Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy the following formula,
+
+    ζ ∈ P - PP 
+
+(TODO: explain)
+
+**Theorem 3.1.6** PP ∪ IP = P
+
+Follows immediately from Theorem 3.1.3 and Definition 3.1.4. ∎
+
+Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes, these two sets form a partition of the class of Palindromic Sentences. The following definition is introduced to help describe this partitioning.
+
+**Definition 3.1.5: Aspect**
+
+A Palindrome P is said to be *perfect* if and only if *P ∈ PP*. A Palindrome is said to be *imperfect* if and only if *P ∈ IP*.
+
+(TODO: explain)
 
 Palindromic Pairs
 ^^^^^^^^^^^^^^^^^
@@ -1262,9 +1355,7 @@ The σ-Pairing Language L:sub:`σ` of a Corpus C:sub:`L` is defined as the set o
 
     α ∈ L:sub:`σ` ↔ ∀ ζ ∈ C : ζ ⋅ Σ' 
 
-
-
-TODO: trim
+(TODO: trim)
 
 Definition 3.1.3: Pairing Language (Revised)
 
@@ -1347,67 +1438,8 @@ Therefore: x belongs to the set of Reflective Words that are also semantically c
 
 
 
-
-Ambiguity in Sigma-Reduction:
-
-To answer your question directly: Yes, it is possible for the sigma-reduction of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
-
-Here's an example:
-
-Palindrome: "Madam, I'm Adam."
-Sigma-Reduction: "MadamImAdam"
-Alternative Sentence: "Mad am I, madam?"
-Both the palindrome and the alternative sentence have the same sigma-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original word boundaries and sentence structure are lost.
-
-Semantic Information Loss and Preservation:
-
-During sigma-reduction, we lose information about:
-
-Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
-Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
-Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.
-However, some semantic information is preserved:
-
-Word Content: The individual words themselves, or at least their character sequences, remain present in the sigma-reduced string.
-Potential Inversions: If the original sentence contains invertible words, their inverses might still be identifiable within the sigma-reduced string, providing clues about potential palindromic structures.
-Theorem: Word Containment in Sigma-Reduced Sentences
-
-Now, let's formalize and prove your insightful observation about word containment in sigma-reduced sentences:
-
-Theorem: Given a sigma-reduction of a sentence, there exists a word in its language that is contained in the sigma-reduced string.
-
-Formalization: ∀ ρ ∈ C<sub>L</sub>, ∃ w ∈ L: w ⊂<sub>s</sub> sigma_reduce(ρ<sub>c</sub>)
-
-(where sigma_reduce(ρ<sub>c</sub>) represents the sigma-reduction of the character-level representation of ρ)
-
-Proof:
-
-Assume ρ ∈ C<sub>L</sub>: This means ρ is a sentence in the Corpus.
-
-Word-Level Representation: Let W<sub>ρ</sub> be the word-level set representation of ρ.
-
-Axiom of Word Extraction (S.3): This axiom states: ∀ ρ ∈ C<sub>L</sub>, ∀ w ∈ W<sub>ρ</sub>: w ∈ L.
-
-Non-Empty Word-Level Set: Since ρ is a sentence, it must contain at least one word. Therefore, W<sub>ρ</sub> is not empty.
-
-Choose a Word: Let w be any word in W<sub>ρ</sub>.
-
-Containment: By the definition of the word-level set representation, w is a contiguous subsequence of non-delimiter characters in ρ<sub>c</sub>.  Therefore, w is contained in the sigma-reduction of ρ<sub>c</sub>:  w ⊂<sub>s</sub> sigma_reduce(ρ<sub>c</sub>).
-
-Conclusion: We have shown that for any sentence ρ, there exists a word w in the language L such that w is contained in the sigma-reduction of ρ<sub>c</sub>. ∎
-
-
-
-
-
-
-
 Section III.II: Parity
 ---------------------
-
-define parity. odd palindromes have odd string lengths. even palindromes have even string lengths. 
-
-need to define a partial sentence ζ:sub:`n` as all of the Characters up and including Character index n.
 
 **Definition 3.2.1: Partial Sentence**
 
@@ -1415,7 +1447,7 @@ A Partial Sentence of Length *n* is denoted *ζ*:sub:`n`. Given a sentence *ζ* 
 
     ζ:sub:`n` ≠ ε  ↔  [ ∃ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`l(ζ)`: (i ≤ n) → (∀ ⲁ:sub:`i` ∈ Ζ:sub:`n`) ]
 
-While this definition may appear opaque at first glance, a careful consideration of its clauses will reveal its meaning. This definition states that the claim, "a Partial Sentence of Length *n* is not equal to the Empty Character" is equivalent to the claim, "a Sentence exists in the Corpus such that all of the Character located at indices less than or equal to *n* belong to the Partial Sentence".
+While this definition may appear opaque at first glance, a careful consideration of its clauses will reveal its meaning. This definition states that the claim, "a Partial Sentence of Length *n* is not equal to the Empty Set" is equivalent to the claim, "a Sentence exists in the Corpus such that all of the Character located at indices less than or equal to *n* belong to the Partial Sentence".
 
 Take careful note, the definition of ζ:sub:`n` on the left-hand side is expressed on the right hand side using the Character-level set representation **Ζ**.
 
@@ -1433,9 +1465,39 @@ Theorem 3.2.2 ensures the existence of a Character that can be reliably called a
 
 **Definition 3.2.2: Palindromic Pivots** 
 
-The Palindromic Pivot, denoted *ω*
+The Pivot of a Palindromic Sentence *ζ ∈ P*, denoted *ω*:sub:`ζ`, is defined as the Character in a Palindrome such that the following formula is tue,
+
+   ( l(ζ:sub:`ω_ζ`) = 2 * l(ζ) ) ∨ (ω:sub:`ζ` = ε)
+
+Given a Palindromic Sentence *ζ ∈ P*, Theorem 3.2.2 ensures the existence of this Pivot Character.
+
+TODO 
+
+**Definition 3.2.3: Even Palindromes**
+
+TODO: even palindromes have an even String length
+
+**Definition 3.2.4: Odd Palindromes**
+
+TODO: odd palindromes have an odd String length
+
+**Definition 3.2.4: Parity** 
+
+TODO 
+
+**Theorem 3.2.3** ζ ∈ P:sup:`+` ↔ l(ζ) = 2 * l(ζ:sub:`ω_ζ`) 
+
+TODO 
+
+**Theorem 3.2.4** ζ ∈ P:sup:`-` ↔ l(ζ) = 2 * l(ζ:sub:`ω_ζ`) + 1
+
+(TODO: Prove these two theorems using the definition of Even and Odd Parity. Note, the definition of length excludes the Empty Character. So, if the pivot is the Empty character, the length of the Partial Sentence up to the pivot will still be equal to half of ( sentence length - 1) )
+
+
+(TODO: there is a probably a relationship between pivots in unreduced space versus pivots in reduced space that can be proved in a theorem. Observation: pivots that are empty in reduced space map to pivots that empty or delimters in unreduced space)
+
 Let ζ be a sentence with Character-level representation,
-    
+
     **ζ** = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>).
 
 A palindromic pivot of ρ is an index p ∈ N<sub>ρ<sub>c</sub></sub> (where N<sub>ρ<sub>c</sub></sub> = {1, 2, ..., n}) that satisfies the following conditions:
@@ -1462,25 +1524,6 @@ Type 1 (Self-Reflective Word): The pivot occurs at the center of a self-reflecti
 Type 2 (Invertible Words): The pivot occurs within a word or on the space between two words, where one wo
 Type 3 (Non-Central): The pivot occurs within a word, off-center, whether the word is self-reflective or not.
 
-
-
-
-**Perfect Palindrome** A palindrome where the sequence of characters after the pivot is the exact inverse of the sequence of characters before the pivot.
-
-Definition: A perfect palindrome is a sentence that is its own inverse.
-
-Formalization:  ρ is a perfect palindrome if and only if ρ = inv(ρ)
-
-Analysis:
-
-Character-Level Symmetry: This definition implicitly captures the character-level symmetry that's characteristic of perfect palindromes. If a sentence is its own inverse, it means that the sequence of characters reads the same backward as forward.
-Word-Level Symmetry: It also implicitly captures the word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence.
-Delimiter Placement: Since the inversion operation preserves the delimiter count (as we proved earlier), this definition also ensures that a perfect palindrome has a balanced number of delimiters around its pivot.
-Examples:
-
-"Madam, I'm Adam" is a perfect palindrome because it reads the same backward as forward, and each word is either its own inverse or part of an inverse pair.
-"Racecar" is also a perfect palindrome, as it's a single word that is its own inverse.
-Potential Limitations:
 
 
 **Imperfect Palindrome** A palindrome where the inverse of the sequence of characters on one side of the pivot is contained within the sequence of characters on the other side of the pivot.
@@ -1546,7 +1589,10 @@ The following theorems serve as the main result of the current formal system tha
 
 (TODO: need to define what is meant by starting and ending word. starting word is word at index = 1 in word level set representation of sentence. ending word is the word at index = Λ(ζ).)
 
-**Theorem 3.3.1: The Inverse Postulate**
+The Inverse Postulates
+^^^^^^^^^^^^^^^^^^^^^^
+
+**Theorem 3.3.1: The Boundary Postulate**
 
 (TODO: either the starting word of a palindrome contains the ending word or the ending word contains the starting word)
 
@@ -1565,10 +1611,11 @@ The following theorems serve as the main result of the current formal system tha
 Section III.IV: Future considerations
 -------------------------------------
 
-This work focused on using the operation of sigma reduction to describe palindromic structure. To account for the dimension of punctuality, a possible avenue of exploration is extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a Pairing Language where its symmetry under inversion can be recovered.
+This work focused on using the operation of sigma reduction to describe palindromic structure in terms of its *aspect* and its *parity*. As mentioned at several points, there are two other dimensions of palindromes this work has not sought to incorporate into formal system. While the considerations in the introduction seem to preclude the possibility of a purely syntactical account of palindromes, the author does not believe this means the structure of palindromes cannot be formalized by taking into account certain universal semantic assumptions. 
 
-(TODO: considerations about case. the link between uppercase and lowercase induces a symmetry in the Alphabet that may be exploitable for describing palindromic symmetry)
+To account for the dimension of *punctuality*, a possible avenue of exploration could be extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a Pairing Language where its symmetry under inversion can be recovered.
 
+To account for the dimension of *case*, the link between uppercase and lowercase letters in natural languages may be viewed as inducing a symmetry in the Alphabet that in turn may be exploitable for describing palindromic symmetry. In such a formalization, a possible method of attack would be introduce a many-to-one relationship between in a sigma-reduction where uppercase and lowercase letters are mapped to their "primitive" Character in an appropriate Pairing Language.
 
 Section IV: References 
 ======================
