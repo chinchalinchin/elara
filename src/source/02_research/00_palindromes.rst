@@ -97,17 +97,15 @@ Colloquially, *ⲁ* is the String that results from placing *ⲃ* behind *ⲁ*. 
     3. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
     4. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ))
 
-The first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. 
+The first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. The second clause is the inductive step which allows the concatenation of Characters into Strings of arbitrary length through recursion.
 
-The second clause is the inductive step which allows the concatenation of Characters into Strings of arbitrary length through recursion.
-
-It is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is captured in the Comprehension Clause of Definition 1.1.1. This clause ensures two things. First, in conjunction with the Basis Clause, it follows all singleton Characters are Strings. Second, by itself, it ensures that all results of concatenation are Strings. 
+It is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is captured in the Comprehension Clause of Definition 1.1.1. This clause ensures ensures that all results of concatenation are Strings. 
 
 The Uniqueness Clause states that if the concatenation of two characters *ⲁ* and *ⲃ* is equal to the concatenation of two other characters *ⲅ* and *ⲇ*, then it must be the case that *ⲁ* is equal to *ⲅ* and *ⲃ* is equal to *ⲇ*. In other words, there's only one set of Characters that can form a given String through concatenation.
 
-Concatenation as it is normally found in the fields of automata theory and regular expressions is treated as a primitive operation performed between two Strings operands. Concatenation of multiple Strings is then defined inductively.  The current formulation differs in that concatenation in this system is not conceived as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings.
+Concatenation as it is normally found in the fields of automata theory and regular expressions is treated as a primitive operation performed between two Strings operands. Concatenation of multiple Strings is then defined inductively. The current formulation differs in that concatenation in this system is not conceived as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings, i.e. it is a *hetergeneous* operation.
 
-To make this distinction plain, it should be noted that given an Alphabet Σ and Definition 1.1.1, one still cannot say the result of a concatenation is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the concatenation of single Characters is itself a String. 
+To make this distinction plain, it should be noted that given an Alphabet Σ and Definition 1.1.1, one still cannot say the result of a concatenation is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating single Characters is itself a String. 
 
 In order to rectify this, the first Axiom is introduced,
 
@@ -130,9 +128,9 @@ Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣*
 Notation
 ^^^^^^^^
 
-It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s_1* = *𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S_1**, where the first coordinate encodes the position of the Character in the String,
+It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s*:sub:`1` *= 𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S**:sub:`1`, where the first coordinate encodes the position of the Character in the String,
 
-    **S_1** = { (1, *𝔞*), (2, *𝔟*), (3, *𝔠*) }
+    S:sub:`1` = { (1, *𝔞*), (2, *𝔟*), (3, *𝔠*) }
 
 Note, since sets do not preserve order, this would be equivalent to,
 
@@ -140,7 +138,7 @@ Note, since sets do not preserve order, this would be equivalent to,
 
 To simplify notation, it is sometimes beneficial to represent this set as a sequence that *does* preserve order as,
 
-    **S_1** = (*𝔞*, *𝔟*, *𝔠*) 
+    S:sub:`1` = (*𝔞*, *𝔟*, *𝔠*) 
 
 This notation will be employed extensively in the subsequent proofs.
 
