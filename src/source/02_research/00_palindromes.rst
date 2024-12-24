@@ -193,67 +193,67 @@ Containment
 
 Similar to the explication of *length*, the notion of a String *containing* another String must be made precise using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tart," but "rat" is not contained in "tart" because the order of the characters is different.
 
-Consider the words "rat" and "strata". The word "rat" *is contained* in the word "strata", because the order of the string "rat" is preserved in "strata". An intuitive way of capturing this relationship is to map the indices of the Characters in "rat" to the indices of the Characters in "strata" which correspond to the indices in "rat". A cursory (but incorrect) definition of *containment* can then be attempted,
+Consider the strings "rat" and "strata". The string "rat" *is contained* in the string strata", because the order of the string "rat" is preserved in "strata". An intuitive way of capturing this relationship is to map the indices of the characters in "rat" to the indices of the characters in "strata" which correspond to the indices in "rat". A cursory (but incorrect) definition of *containment* can then be attempted, using this insight as a guide.
 
-**Containment (Incorrect Version)** α ⊂:sub:`s` β
+**Containment (Incorrect Version)** t ⊂:sub:`s` u
 
-Let *α* and *β* be words represented as the sets of ordered pairs, *Α* and *Β*,
+Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and **U**,
 
-    Α = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(α), 𝔞:sub:`l(α)`) }
+    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(t), 𝔞:sub:`l(t)`) }
 
-    Β = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(β), 𝔟:sub:`l(β)`) }
+    U = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(u), 𝔟:sub:`l(u)`) }
 
-*α* is said to be *contained in β*, denoted by,
+*t* is said to be *contained in u*, denoted by,
 
-    α ⊂:sub:`s` β
+    t ⊂:sub:`s` u
     
-If and only if there exists a strictly increasing function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
+If and only if there exists a strictly increasing function *f*: **N**:sub:`u` *→* **N**:sub:`t` such that:
 
-    ∀ i ∈ N:`α`: a:sub:`i` = b:sub:`f(i)`
+    ∀ i ∈ N:sub:`u`: a:sub:`i` = b:sub:`f(i)`
 
-This definition essentially states that *α* is contained in *β* if there's a way to map the Characters of *α* onto a subsequence of the Characters in *β* while preserving their order. The function f** ensures that the Characters in *α* appear in the same order within *β*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
+This definition essentially states that *t* is contained in *u* if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
 
-First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *α = "rat"* and *β = "strata"*. Then, these words can be represented in set notation as,
+First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *t = "rat"* and *u = "strata"*. Then, these Strings can be represented in set notation as,
 
-    Α = { (1, r), (2, a), (3, t) }
+    T = { (1, "r"), (2, "a"), (3, "t") }
      
-    Β = { (1, s), (2, t), (3, r), (4, a), (5, t), (6, a) }.
+    U = { (1, "s'), (2, "t"), (3, "r"), (4, "a"), (5, "t"), (6, "a") }.
 
 The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the condition in the proposed definition, as it maps the characters of "rat" onto the subsequence "rat" within "strata" while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
 
     "rat" ⊂:sub:`s` "strata".
 
-Next, consider a counter-example. Let *α* = "bow" and *β* = "borrow". Then their corresponding set representations are given by,
+Next, consider a counter-example. Let *t* = "bow" and *u* = "borrow". Then their corresponding set representations are given by,
 
-    Α = { (1, b), (2, o), (3, w) }
+    T = { (1, "b"), (2, "o"), (3, "w") }
      
-    Β = { (1, b), (2, o), (3, r), (4, r), (5, o), (6, w) }
+    U = { (1, "b'), (2, "o"), (3, "r"), (4, "r"), (5, "o"), (6, "w") }
 
 The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, "bow" is *not contained* in the word "borrow". The reason the proposed definition has failed is now clear: the function *f* that is mapping "bow" to "borrow" skips over the indices 2, 3 and 4 in "borrow". In other words, in addition to being strictly increasing, the function *f* which maps the smaller word onto the larger word must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
 
 **Definition 1.1.3: Consecutive Functions** 
 
-A function *f* is consecutive if it satisfies the formula,
+A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
 
-    ∀ i, j ∈ N:sub:`α``:  (i < j) →  f(j) = f(i) + (j - i).  
+    ∀ i, j ∈ N:sub:`s`:  (i < j) →  f(j) = f(i) + (j - i).  
     
 This additional constraint on *f* ensures that the indices of the larger word in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller word. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
 
-**Definition 1.1.4: Containment** α ⊂:sub:`s` β
+**Definition 1.1.4: Containment** t ⊂:sub:`s` u
 
-Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β*:
+Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and **U**,
 
-    Α = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(α), 𝔞:sub:`l(α)`) }
+    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(t), 𝔞:sub:`l(t)`) }
 
-    Β = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(β), 𝔟:sub:`l(β)`) }
+    U = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(u), 𝔟:sub:`l(u)`) }
 
-*α* is said to be *contained in β*, denoted by,
+*t* is said to be *contained in u*, denoted by,
 
-    α ⊂:sub:`s` β
+    t ⊂:sub:`s` u
 
-If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
+If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`t` *→* **N**:sub:`u` such that:
 
-    ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
+    ∀ i ∈ N:sub:`t`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
 
 The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections.
 
@@ -1220,21 +1220,19 @@ Since *ζ* is a sentence, it must contain at least one word. Therefore, W:sub:`�
 
 By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  Therefore, *α* is contained in **Ζ ⋅ Σ**:sub:`σ`, which is what was to be shown. ∎
 
-**Theorem 3.1.2** ζ ∈ K → [ inv(ζ ⋅ Σ:sub:`σ`) = inv(inv(ζ ⋅ Σ:sub:`σ`)) ]
+**Theorem 3.1.2** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)) ]
 
-In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under sigma reductions. 
+In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ-reduction*.
 
-(TODO: Need to prove this! This theorem is critical!)
+(TODO: Need to prove this! This theorem is critical! Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( δ(ζ) = δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.
 
 Outline of Potential Proof:
 
   1. Theorem 2.3.5: If a Sentence is invertible, then all of its Word are invertible.
   2. Delimiter Axiom W.1: no Words contain Delimiter. 
-  3. Therefore, each segment of a sigma-reduce Sentence is invertible.
-  4. TODO: may need a corollary that says if ζ=st, where st is the concatenation of s and t, then inv(ζ)=inv(t)inv(s), where inv(t)int(s) is the concatenation of the inverses of s and t.
-  5. Need to show because each segment is invertible, a double inversion perserves the order of the words.
-
-(TODO: Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( δ(ζ) = δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.)
+  3. Therefore, each segment of a σ-reduced Sentence is invertible.
+  4. NOTE: may need a corollary that says if ζ=st, where st is the concatenation of s and t, then inv(ζ)=inv(t)inv(s), where inv(t)int(s) is the concatenation of the inverses of t and s.
+  5. Need to show that because each segment is invertible, a double inversion perserves the order of the words.)
 
 The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space. The domain of this space, what will be termed the σ-Pairing Language in the next section, reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduce* spaced, and then filtered by those whose Palindromic Pair in the Pairing Language whose inverse does not equal itself. 
 
@@ -1247,27 +1245,27 @@ The current analysis now turns towards its apex, using the notions that have bee
 
 Consider a perfect palindromes like *ᚠ = "strap on no parts"*,
 
-    ᚠ ⋅ Σ:sub:`σ`= "straponnoparts"
+    **ᚠ** ⋅ Σ:sub:`σ`= "straponnoparts"
 
-    inv( ᚠ ⋅ Σ:sub:`σ` ) = "straponnoparts"
+    inv( **ᚠ** ⋅ Σ:sub:`σ` ) = "straponnoparts"
 
 In other words, the *σ-reduction* and the inversion of its *σ-reduction* space result in the same String.
 
 Consider an imperfect palindrome like *ᚢ = "borrow or rob"*,
 
-    ᚢ ⋅ Σ:sub:`σ`= "borroworrob"
+    **ᚢ** ⋅ Σ:sub:`σ`= "borroworrob"
 
-    inv( ᚢ ⋅ Σ:sub:`σ` ) = "borroworrob"
+    inv( **ᚢ** ⋅ Σ:sub:`σ` ) = "borroworrob"
 
 Again, the *σ-reduction* eliminates the Delimiters, and the inversion of the *σ-reduction* captures the mirrored relationship between the words, even if the exact Character sequence isn't identical.
 
-These examples lead directly to the next definition.
+These examples lead directly to the next, important definition.
 
 **Definition 3.1.2: Palindromes**
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
-    ζ ∈ P ↔ [ (ζ ⋅ Σ:sub:`σ`) = inv(ζ ⋅ Σ:sub:`σ`) ]
+    ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
 
 This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition.
 
@@ -1341,7 +1339,7 @@ Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy th
 
 Follows immediately from Theorem 3.1.3 and Definition 3.1.4. ∎
 
-Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes by Theorem 3.1.6, these two sets form a partition of the class of Palindromic Sentences. The following definition and terminology is introduced to help describe this partitioning.
+Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes by Theorem 3.1.6, these two sets form a partition of the class of Palindromes. The following definition and terminology is introduced to help describe this partitioning.
 
 **Definition 3.1.5: Aspect**
 
@@ -1350,95 +1348,78 @@ A Palindrome P is said to have a *perfect aspect* if and only if *P ∈ PP*. A P
 Palindromic Pairs
 ^^^^^^^^^^^^^^^^^
 
+The only constraint on a Language is that it must consist of Words. This is guaranteed by the Extraction Axiom S.2. The only constraint on Words is that they must not contain the Delimiter. This is guaranteed by the Delimiter Axiom W.1. 
+
+Since *σ-reduction* removes the Delimiter Character when it projects a Sentence onto the *σ-reduced* Alphabet, this process can viewed as the construction of another formal Language. In other words, given a Language and Corpus, the operation of *σ-reduction* implies the existence of a second Language which encodes the original Sentences. This second Language loses much of its semantic coherence with respect to its "*mother*" Corpus, but it nevertheless contains semantic information. 
+
+This idea motives the definition of a *σ-Pairing Language*.
+
+**Definition 3.1.3: σ-Pairing Language**
+
+The σ-Pairing Language L:sub:`σ` of a Corpus C:sub:`L` is defined as the set of Words *α* that satisfy the following formula, 
+
+    α ∈ L:sub:`σ` ↔ ∀ ζ ∈ C:sub:`L`, ∃ s ∈ S: ( s = Ζ ⋅ Σ:sub:`σ` )
+
 (TODO: explain)
 
-**Definition 3.1.3: σ-Pairing**
+**Theorem 3.1.7** α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: (α = (Ζ ⋅ Σ:sub:`σ)`) ∧ (∃ β ∈ W:sub:`ζ`: β ⊂:sub:`s` α) ]
 
-The σ-Pairing Language L:sub:`σ` of a Corpus C:sub:`L` is defined as the set of Words α that satisfy the following formula, 
+This theorem can be stated in natural language as follows: The *σ*-Pairing Language contains words if and only if there exists at least one Word *α* that belongs to Sentence *ζ* such that *α* is contained in *Ζ ⋅ Σ*:sub:`σ`.
 
-    α ∈ L:sub:`σ` ↔ ∀ ζ ∈ C : ζ ⋅ Σ' 
+(TODO: Need to prove this!)
 
-(TODO: trim)
+**Definition 3.1.4: Palindromic Pairing Language**
 
-Definition 3.1.3: Pairing Language (Revised)
+Definition 3.1.3 is altered in the following definition to quantify over the set of Palindromes in a Corpus. The Pairing Language that results is denoted L:sub:`P`. The set of Words *α* which satisfy this definition are referred to as the Palindromic Pairing Language of Language **L**, 
 
-The Pairing Language L<sub>P</sub> of a Corpus C<sub>L</sub> is defined as the set of Words ζ<sub>P</sub> that satisfy the following conditions:
+    α ∈ L:sub:`P` ↔  ∀ ζ ∈ P, ∃ s ∈ S : (s = Ζ ⋅ Σ:sub:`σ`)
 
-Sigma-Reduction:  ζ<sub>P</sub> is obtained by removing all delimiter characters (σ) from the character-level representation of a sentence ζ in C<sub>L</sub>.
+In particuar, if *α ∈ L*:sub:`P`, *α* is called the *Palindromic Image* of the Sentences *ζ* which generate it.
 
-Non-Empty Word:  ζ<sub>P</sub> must not be the empty word (ε).
+This definition is used to prove the following theorems.
 
-Containment: There must exist at least one word w in the word-level representation of ζ such that w is contained in ζ<sub>P</sub>.
+**Theorem 3.1.8** L:sub:`P` ⊂ L:sub:`σ`
 
-Formalization:
+(TODO: Need to prove this)
 
-ζ ∈ L<sub>P</sub> ↔ (∃ ζ ∈ C<sub>L</sub>: ζ<sub>P</sub> = sigma_reduce(ζ<sub>c</sub>)) ∧ (ζ<sub>P</sub> ≠ ε) ∧ (∃ w ∈ W<sub>ζ</sub>: w ⊂<sub>s</sub> ζ<sub>P</sub>)
+**Theorem 3.1.9**: ∀ α ∈ L:sub:`P`: α = inv(α)
 
-where:
+This theorem can be stated in natural language as follows: All Words in a Palindromic Pairing Language are their own Inverses. 
 
-sigma_reduce(ζ<sub>c</sub>) represents the string obtained by removing all delimiter characters from the character-level representation of ζ.
-Explanation of Changes and Additions:
+(TODO: Need to prove this! Should follow from the definition of Palindromic Pairs, the definition of Palindromes, the definition of sigam reduction and Theorem 1.2.2, (inv(inv(s)) = s) )
 
-Explicit Sigma-Reduction: The definition now explicitly states that ζ<sub>P</sub> is obtained by removing spaces from a sentence in the Corpus.
-Non-Empty Word Constraint: The condition ζ<sub>P</sub> ≠ ε prevents the inclusion of empty words in the Pairing Language, ensuring that each element in L<sub>P</sub> corresponds to a meaningful linguistic unit.
-Containment Constraint: The condition ∃ w ∈ **W<sub>ζ</sub>**: w ⊂<sub>s</sub> ζ<sub>P</sub> ensures that at least one word from the original sentence is preserved in the sigma-reduced form. This helps maintain a connection between the Pairing Language and the original language, preventing the inclusion of arbitrary strings that don't relate to the sentences in the Corpus.
+**Theorem 3.1.10** L ∩ L:sub:`P` ⊆ R
 
-TODO: trim
+This theorem can be stated in natural language as follows: The intersection of a Language **L** and its Palindromic Pair **L**:sub:`P` is a subset of the Language's Reflective Words **R**.
 
+(TODO: Outline of proof given below,
 
+    1. Assume α ∈ L ∩ L:sub:`P`
+    2. Word: Since α ∈ L, α is a word in the language.
+    3. Inverse Exists: Since α ∈ L:sub:`P`, it must equal its own inverse.
+    4. Since x is a palindromic pair and a single word, it must be a reflective word.
 
+That should prove it!)
 
+Before moving onto the last theorem of this section, some terminology is introduced. **R** was introduced in Section () to refer to the class of Reflective Words in a Language **L**. To be more explicit in the dependence of **R** on **L**, the notation **R**:sub:`L` will be used to make explicit the Language to which the class of Reflective Words refers.
 
+**Theorem 3.1.11** L:sub:`P` ⊂ R:sub:`L_σ`
 
-1. The Language of Palindromic Strings:
+This theorem can be state in natural language as follows: Given a Language L, all words in its Palindromic Pairing Language are also Reflective Words. 
 
-Sigma-Reduced Space: You're essentially proposing that by applying our palindromic constraints and transformations (like inversion and the containment relation), we're creating a new language, a subset of the original language that consists only of palindromic strings.
-Mapping: This creates a mapping between the original language (L) and the Language of Palindromic Strings (let's denote it as L<sub>P</sub>). This mapping preserves some aspects of the semantic content, but it also introduces new structural constraints and relationships.
-Formalization: We could formally define this mapping as a function P: L → L<sub>P</sub> that takes a sentence in L and produces its corresponding palindromic representation in L<sub>P</sub> (if it exists).
+In other show this theorem, it must be shown,
 
-2.  Relationship between Lengths and Delimiter Count:
+    1. ∀ α ∈ L: α ∈ L:sub:`P` → α ∈ R:sub:`L_σ`
 
-Interconnected Properties: You're suggesting a connection between the length of a sentence (l(ρ)), the lengths of its individual words (l(w<sub>i</sub>)), and the delimiter count (δ(ρ<sub>c</sub>)). This aligns with our intuition that these properties are intertwined and contribute to the overall structure of the sentence.
-Formalizing the Relationship: We could explore this relationship further by attempting to derive formulas or constraints that connect these properties. For example, we might be able to express the length of a sentence as a function of the lengths of its words and the delimiter count.
-3.  "Syntactical Space"
+Since by Definition 1.3.1, 
 
-Basis Vectors: Your idea of a "syntactical space" with sentence length, word lengths, and delimiter count as basis vectors is fascinating. This suggests that we can represent sentences as points in a multi-dimensional space, where each dimension captures a different aspect of its syntactic structure.
-Geometric Interpretation: This geometric interpretation could provide new insights into the relationships between sentences, allowing us to analyze their similarity, complexity, and even their "distance" from each other in this syntactical space.
+    2. α ∈ R:sub:`L_σ` ↔ inv(α) = α
 
+If it can be shown,
 
+    3. α ∈ L:sub:`P` → inv(α) = α
 
-
-FIRST PASS 
-
-
-
-Definition:
-
-Language (L): A subset of the set of all Strings (S) that represents a collection of grammatically valid and semantically meaningful expressions in a particular language.
-Corpus (C<sub>L</sub>): A subset of the Language (L) that contains the sentences of the language.
-Palindromic Pair (L<sub>P</sub>): A subset of the set of all Strings (S) that represents the collection of palindromes formed from the words in the Language (L).
-Theorem:
-
-The intersection of a Language (L) and its Palindromic Pair (L<sub>P</sub>) is a subset of the Reflective Words (R) that are also semantically coherent sentences.
-
-Formalization:  L ∩ L<sub>P</sub> ⊆ { ρ ∈ R | ρ is a semantically coherent sentence }
-
-Proof:
-
-Assume x ∈ L ∩ L<sub>P</sub>: This means that x belongs to both the Language (L) and its Palindromic Pair (L<sub>P</sub>).
-
-x is a Palindrome: Since x ∈ L<sub>P</sub>, x is a palindrome.
-
-x is a Word: Since x ∈ L, x is a word in the language.
-
-x is a Sentence:  Since x is a palindrome and a word, it must be a single-word sentence.
-
-x is Reflective:  Since x is a palindrome and a single-word sentence, it must be a reflective word (by our definition of Type 1 pivot).
-
-x is Semantically Coherent: Since x ∈ L, it must be a semantically coherent sentence.
-
-Therefore: x belongs to the set of Reflective Words that are also semantically coherent sentences.
-
+Then the theorem will follow tautologically from the laws of deduction. But step 3 is exactly Theorem 3.1.9. Therefore, the proof is complete. ∎
 
 Section III.II: Parity
 ---------------------
@@ -1455,15 +1436,13 @@ Take careful note, the definition of ζ:sub:`n` on the left-hand side is express
 
 Moreover, the quantification of the Sentence over the Corpus ensures l(ζ) is an accurate measure of the Sentence Length by Theorem 2.3.3, which states, no Sentences in a Corpus contain Empty Characters, i.e. null content.
 
-TODO: prove the existence of pivots for any palindrome in P
-
 **Theorem 3.2.2** ζ ∈ P → [ ∃ ⲁ ∈ Σ: ( l(ζ:sub:`ⲁ`) = 2 * l(ζ) ) ∨ (ⲁ = ε)]
 
 This theorem can be stated in natural language as follows: If a Sentence is a Palindrome, there is a Character in the Sentence that perfectly the divides of String length of the Palindrome in half, or there is no Character in the Sentence which divides it in half.
 
 (TODO: once this theorem is proved, formally define Palindromic Pivots as the Character which satisfies this formula.)
 
-Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. If a Sentence in a Corpus is a Palindrome, it must have a pivot. This conditional existence theorem motivates the following definition.
+Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. With this theorem, if a Sentence in a Corpus is a Palindrome, it must have a Pivot. This conditional existence theorem motivates the following definition.
 
 **Definition 3.2.2: Palindromic Pivots** 
 
