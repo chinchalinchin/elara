@@ -6,7 +6,7 @@ Palindromic Structures
     
     The paper contains the draft of formal method for analyzing palindromic structures. It is a work in progress. What follows should by no means be interpretted as a complete or consistent formal theory; it should be treated more like a very rough draft. Many of the notions need further clarification and elaboration.  
     
-The goal of this paper is to introduce formal constraints the palindromes in *any* language and corpus must satisfy independently of the semantic interpretation of its constituent words and sentences. These formal constraints will in turn lead to the identification of the main structural elements of palindromes. After a language is assumed and a class of words identified, these structural elements can be used as a basis for further semantical and statistical analysis of the assumed language. 
+The goal of this paper is to introduce formal constraints the palindromes in *any* language and corpus must satisfy independently of the semantic interpretation of their constituent words and sentences. These formal constraints will in turn lead to the identification of the main structural elements of palindromes. After a language is assumed and a class of words identified, these structural elements can be used as a basis for further semantical and statistical analysis of the assumed language. 
 
 At the outset, it must be stated the complexity of pursuing a complete theory of palindrome currently exceeds the mental capacities of the author. Palindromes are a rich and diverse linguistic species, appearing in many different shapes and sizes. Some of these guises are more amenable to analysis than others. 
 
@@ -32,9 +32,9 @@ As it will turn out, this example of parity is oversimplified, due to the compli
 
 The third example of "*Don't nod*" demonstrates the deepening ambiguity of introducing punctuation to palindromes. The reversal of this sentence is the opaque "don t'nod" Now, in addition to the scrambling of the spaces, the reversed string must also have its punctuation re-sorted. There is no formal method known to the author of dealing with these types of ambiguities that depend entirely on the semantic interpretation of the language under consideration, such as rules of contractions. The *punctuality* of a palindrome can only be described by introducing semantics into the theory.
 
-Similarly, the fourth attribute of palindromes, case, is a semantic construct that possesses no unifying syntactical properties across languages (as far as the author knows). 
+Similarly, the fourth attribute of palindromes, *case*, is a semantic construct that possesses no unifying syntactical properties across languages (as far as the author knows). *Case* is a semantic relationship that identifies characters in an alphabet as different manifestations of the same underlying semantic entity, i.e. "a" and "A" are the "*same*" letter. This information is not present in the syntax of a language and is an extra assumption that must be modeled accordingly.
 
-The aim of this analysis is to develop a theory of palindromes *independent* of semantic interpretation. In other words, formalizing theory of palindromes that describes the logical structure of their aspect and parity is the goal of the current analysis. For this reason, all complications that arise from case and punctuality are ignored. The examples that are considered only deal with sentences that are meaningful without the considerations of case or punctuations.
+The aim of this analysis is to develop a theory of palindromes *independent* of semantic interpretation. In other words, formalizing a theory of palindromes that describes the logical structure of their aspect and parity is the goal of the current analysis. For this reason, all complications that arise from case and punctuality are ignored. The examples that are considered only deal with sentences that are meaningful without the considerations of case or punctuations.
 
 This restriction to *aspect* and *parity* may appear restrictive; Indeed, it may be argued by introducing this restriction to the formal theory that is about to developed, it has no application to actual language. To this argument, it should be countered the structures uncovered in this restricted subset of language must nevertheless preserve their structure when embedded into the whole of language. 
   
@@ -103,7 +103,7 @@ In order to rectify this, the first Axiom is introduced,
 
 **Axiom C.1: The Character Axiom**
 
-    ∀ ⲁ: ⲁ ∈ S
+    ∀ ⲁ ∈ Σ: ⲁ ∈ S
 
 This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with Definition 1.1.1, immediately populates the set of all Strings with an uncountably infinite domain of objects (See Theorem 1.1.1 for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet.
 
@@ -309,11 +309,11 @@ Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**.
 
 **Axiom W.1: The Delimiter Axiom ** 
 
-    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
 **Axiom W.2: The Empty Axiom**
 
-    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
 
 In essence, these Axioms capture the common-sense notion that a Word from a Language cannot contain either a Delimiter or an Empty Character. The Empty Axiom, in particular, guarantees Words from a Language cannot contain "*null*" contentment. This is proved in the next theorem.
 
@@ -1117,15 +1117,13 @@ Applying the results of Theorem 2.4.1 and Theorem 2.4.6, this theorem follows fr
 Section III: Palindromic Structures
 ===================================
 
-As mentioned in the introduction of this work, the complete structure of palindromes is described through the combination of four different attributes or dimensions: *aspect*, *parity*, *case* and *punctuality*. The framework has now been developed to now classify these palindromic properties with more precision.
+As mentioned in the introduction of this work, the complete structure of palindromes is described through the combination of four different attributes or dimensions: *aspect*, *parity*, *case* and *punctuality*. The framework has now been developed to classify the first two palindromic properties with more precision.
 
-TODO
+Unfortunately, as far as the author knows, punctuation and capitalization are syntactic bearers of semantic meaning that cannot be reduced to purely formal considerations. Both punctuality and case require additional axioms to describe the unique structuring they impose on a Language and its Corpus. In the author's opinion, it is impossible to disentangle these linguistic phenomenon from the realm of semantics.
 
-Punctuation and capitalization are syntactic bearers of semantic meaning that cannot be reduced to purely formal considerations. Both punctuality and case require additional axioms to describe the unique structuring they impose on a Language and its Corpus. In the author's opinion, it is impossible to disentangle these linguistic phenomenon from the realm of semantics.
+In what follows, two things are implicitly assumed. These assumptions are made explicit here, so the scope of the results can be properly understood. First, the Alphabet **Σ** is assumed to contain no punctuation marks beyond the Delimiter Character (if one is inclined it to consider a form of punctuation). Second, it is assumed every Character in **Σ** is distinct, meaning all matters of case are ignored. To rephrase the same idea more precisely: there is no assumed semantic relation between Characters in the Alphabet that would allow the identification of distinct Characters as different *cases* of the same Character.
 
-In what follows, two things are implicitly assumed. These assumptions are made explicit here, so the scope of the results can be properly understood. First, the Alphabet **Σ** is assumed to contain no punctuation marks beyond the Delimiter Character (if one is inclined to consider a form of punctuation). Second, it is assumed every Character in **Σ** is distinct, meaning all matters of case are ignored. To rephrase the same idea more precisely: there is no assumed semantic relation between Characters in the Alphabet that would allow the identification of distinct Characters as different *cases* of the same Character.
-
-With these assumptions, the analysis is confined to the dimensions of *aspect* and *parity*, which will be defined in the following subsections. After the results are derived, consideration will be given to future work that could potentially integrate semantic considerations into the formal framework of palindromic structures.
+With these assumptions, the analysis is confined to the dimensions of *aspect* and *parity*, which will be defined in the following subsections. After the results are derived, consideration will be given to future work that could potentially integrate semantic considerations into the formal framework of palindromic structures to account for the dimensions of punctuality and case.
 
 Section III.I: Palindromes 
 --------------------------
@@ -1340,7 +1338,7 @@ Conclusion: We have shown that for any sentence ρ, there exists a word w in the
 
 
 
-Section III.II: Pivots
+Section III.II: Parity
 ---------------------
 
 **Definition 3.2.1: Palindromic Pivots** 
@@ -1373,8 +1371,8 @@ Type 1 (Self-Reflective Word): The pivot occurs at the center of a self-reflecti
 Type 2 (Invertible Words): The pivot occurs within a word or on the space between two words, where one wo
 Type 3 (Non-Central): The pivot occurs within a word, off-center, whether the word is self-reflective or not.
 
-Section III.III: Centrality 
----------------------------
+
+
 
 **Perfect Palindrome** A palindrome where the sequence of characters after the pivot is the exact inverse of the sequence of characters before the pivot.
 
@@ -1413,8 +1411,9 @@ inv(s1) ⊂ inv(s2)  OR  inv(s2) ⊂ inv(s1)
 
 (where ⊂ denotes the substring relation)
 
-Section III.IV: Parity
-----------------------
+
+
+
 
 Let s be a palindromic string.
 
@@ -1447,6 +1446,10 @@ We can express this theorem more formally using logical symbols:
 ∀s ( (l(s) is even) → (pivot(s) = ε) )
 ∀s ( (l(s) is odd) → (pivot(s) = σ) ∨ (pivot(s) ∈ {𝔞, 𝔟, 𝔠, ...}) )
 
+Section III.IV: Future considerations
+-------------------------------------
+
+This work focused on using the operation of sigma reduction to describe palindromic structure. To account for the dimension of punctuality, a possible avenue of exploration is extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a Pairing Language where its symmetry under inversion can be recovered.
 
 
 Section IV: References 
