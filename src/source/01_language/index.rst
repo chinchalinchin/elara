@@ -14,8 +14,9 @@ The Language Game requires an LLM built on the Transformer architecture with a l
    modules/M01_meta
    modules/M02_object
    modules/M03_voice
-   modules/M04_rhythm
+   modules/M04_inflection
    modules/M05_embodiment
+   modules/M06_rhythm
    plugins/P01_initialization
    plugins/P02_context
    plugins/P03_adaptation
@@ -26,3 +27,6 @@ The Language Game requires an LLM built on the Transformer architecture with a l
    examples
 
 The Modules in this section can be combined to generate different Language Game implementations. They are designed to be independent Modules that can be stacked into different configurations to produce a variety of results. The Appendices serve as further context to provide to the LLM to enhance its generative capabilities.
+
+
+TODO: create *Elara* package from : 

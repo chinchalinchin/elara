@@ -245,7 +245,7 @@ Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β
 
 If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`α` *→* **N**:sub:`β` such that:
 
-    ∀ i ∈ N:sub:`α`: a:sub:`i` = b:sub:`f(i)`
+    ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
 
 The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections.
 
@@ -315,7 +315,41 @@ Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**.
 
     s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
 
-In essence, these Axioms capture the common-sense notion that a Word from a Language cannot contain either a Delimiter or an Empty Character. Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
+In essence, these Axioms capture the common-sense notion that a Word from a Language cannot contain either a Delimiter or an Empty Character. The Empty Axiom, in particular, guarantees Words from a Language cannot contain "*null*" contentment. This is proved in the next theorem.
+
+**Theorem 1.2.1** ∀ α ∈ L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` α) ]
+
+In natural language, this theorem can be stated as follows: No Empty Character belongs to a Word in a Language. 
+
+By the Character Axiom C.1, a String exists that is equal to the Empty Character. Therefore, the truth of the negated conjunction in the theorem depends on the second conjunct, *t ⊂*:sub:`s` *α*
+
+Let String *t = ε*. Assume, for the sake of contradiction, a Word *α* exists in Language **L** such that,
+
+    1. t ⊂:sub:`s` α 
+
+Note, by Definition 1.1.2, 
+
+    2. l(t) = 0
+
+Therefore, **N**:sub:`l(t)` *= ∅*. Now, applying Definition 1.1.4, 
+
+    3. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
+
+Where 𝔞:sub:`i` represents the Characters in *t*, 𝔟:sub:`f(i)` represents the Characters in *α*, and *f(i)* represents the function that maps the Character indices of *t* onto the Character indices of *α*. It is a tautology of set theory that nothing can belong to the empty,
+
+    ∀ x: x ∉ ∅
+
+From this, it follows that no *i* exists that satisfies this formula. Therefore, no function *f(i)* exists that maps the Empty Character to a Character in *α*. But this contradicts the assumption in step 1, since by Definition 1.1.4, in order for a Word to be contained in another Word, a strictly increasing and consecutive function must exist to map the Characters. 
+
+Since *t = ε* exists by Axiom C.1, it follows t ⊂:sub:`s` α must be false. Therefore,
+
+    t = ε ∧ t ⊂:sub:`s` α
+
+must always be false, and its negation must always be true. ∎
+
+(TODO: If it can be proved the empty character is not contained in any word, is it necessary to introduce the Empty Axiom? Seems unnecessary. In fact, the Empty Axiom can probably be proven using Theorem 1.2.1. I need to see to review and see if the Empty Axiom is used anywhere, and then see if I can prove the Empty Axiom as a Theorem. If so, replace all references to the Empty Axiom with its theorem version.) 
+
+Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
 
 Inversion
 ^^^^^^^^^
@@ -359,7 +393,7 @@ It should be clear the intent is to define a class of Words whose constituents b
 
 Before defining the class of Invertible Words in the next section, this section is concluded with a theorem that strengthens the definition of String Inversion. This theorem will be used extensively in the subsequent sections.
 
-**Theorem 1.2.1** *inv(inv(s)) = s*
+**Theorem 1.2.2** *inv(inv(s)) = s*
 
 Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`. Let **N**:sub:`s` be the set,
 
@@ -527,7 +561,7 @@ Consider *inv(α)*. To show that it's invertible, it must be shown,
 
     2. inv(inv(α)) ∈ L. 
 
-By Theorem 1.2.1,
+By Theorem 1.2.2,
 
     3. inv(inv(α)) = α
     
@@ -785,6 +819,8 @@ Similarly to the classification of Words, Sentences will now be classified accor
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
+The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of Definition 1.3.2  and Theorem 1.3.2 almost exactly.
+
 **Definition 2.2.2: Invertible Sentences** Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
 
     ζ ∈ K ↔ inv(*ζ*) ∈ C:sub:`L`
@@ -803,9 +839,9 @@ By Definition 2.2.2, the inverse of *ζ* belongs to the Corpus
 
 To show that inv(ζ) is invertible, it must be shown that,
 
-    2. inv(inv(ζ)) ∈ C<sub>L</sub>.
+    2. inv(inv(ζ)) ∈ C:sub:`L`
 
-From Theorem 1.2.1, for any string *s*, 
+From Theorem 1.2.2, for any string *s*, 
 
     3. inv(inv(s)) = s.  
 
@@ -831,7 +867,7 @@ By Definition 2.2.2,
     
     8. inv(inv(ζ)) ∈ C:sub:`L`
 
-Applying Theorem 1.2.1,
+Applying Theorem 1.2.2,
 
     9. inv(inv(ζ)) = ζ.
 
@@ -841,7 +877,27 @@ From step 8 and step 9, it follows,
 
 By Definition 2.2.2, it follows,
 
-    11. ζ ∈ K.
+    11. ζ ∈ K. ∎
+
+The notion of Invertible Sentences is not as intuitive as the notion of Invertible Words. This is due to the fact the condition of *invertibility* is not a weak condition; indeed, Sentences that are not invertible (usually) far outnumber Sentences that are invertible in a given Language. 
+
+Consider the following examples phrases from English,
+
+- no time
+- dog won 
+- not a ton 
+
+All of these phrases may be *inverted* to produce a semantically coherent phrase in English, 
+
+- emit on
+- now god
+- not a ton 
+
+Note the last item in this list is an example of what this work has termed a *perfect palindrome*. These examples were specially chosen to highlight the connection that exists between the class of *perfect palindromes* and the class of *invertible sentences*. It appears, based on this brief and circumstantial analysis, that *perfect palindromes* are a subset of a larger class of Sentences called Invertible Sentences.
+
+Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those sentences that maintain *semantic coherence* under inversion (see Section II.III for a definition of *semantic coherence*). In order for a Sentence to be Invertible it must possess symmetry on both the Character level and the Word level, while maintaining a semantic structure that accomodates this symmetry. 
+
+To see how strong of a condition invertibility is, the author challenges the reader to try and construct an invertible sentence. Section IV contains a list of Invertible Words and Reflective Words. These can be used as a "palette". The exercise is worthwhile, because it forces the reader to think about the mechanics of sentences and how a palindrome resides in the intersection of semantics and syntax.  
 
 Section II.III: Axioms 
 ----------------------
@@ -868,9 +924,9 @@ In Section I, the first three axioms of the palindromic formal system was introd
 
     ∀ ζ ∈ C:sub:`L` : ∀ α ∈ W:sub:`ζ`: α ∈ L
 
-It is worth taking the time to analyze the structure, however minimal, these axioms imply. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to the inherent linguistic structures. 
+It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures. 
 
-To briefly summarize the axioms so far introduced: The system "initializes" with the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Delimiter Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. The Empty Axiom ensures Words in a Language do not possess null content in the form of Empty Characters.
+To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Delimiter Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. The Empty Axiom ensures Words in a Language do not possess null content in the form of Empty Characters.
 
 With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
 
@@ -878,11 +934,11 @@ The new axioms introduced in the formal system begin to characterize the syntact
 
 Axiom S.2 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
 
-**Definition 2.1.5: Sentence-Level Semantic Coherence** 
+**Definition 2.3.1: Sentence-Level Semantic Coherence** 
 
 A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if its Word-level set representation **ᚠ** only contains words from Language **L**.
 
-**Definition 2.1.6: Corpus-Level Semantic Coherence**
+**Definition 2.3.2: Corpus-Level Semantic Coherence**
 
 A Corpus C:sub:`L` is *semantically coherent* in a Language **L** if and only if the Word-level set representation of all its Sentences are semantically coherent.
 
@@ -894,7 +950,7 @@ The theorem can be stated in natural language as follows: If *α* belongs to the
 
 Assume *α ∈* **W**:sub:`ζ`. In other words, *α* is a word in the Word-level set representation of the Sentence *ζ*. Since *ζ* is a Sentence, it belongs to the C:sub:`L`. Therefore, by the Axiom of Word Extraction, w ∈ L. ∎
 
-**Theorem 2.2.2** ∀ ζ ∈ C:sub:`L`: W:sub:`ζ` ⊂ L
+**Theorem 2.3.2** ∀ ζ ∈ C:sub:`L`: W:sub:`ζ` ⊂ L
 
 This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Word-level set representation **W**:sub:`ζ` is a subset of the Language **L**.
 
@@ -904,7 +960,7 @@ Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation o
     
 In other words, every (Word-level set representation of a) Sentence from a Corpus is a subset of the Language **L**. ∎
 
-**Theorem 2.2.3** ζ ∈ K → ( ∀ α ∈ W:sub:`inv(ζ)`: α ∈ L)
+**Theorem 2.3.3** ζ ∈ K → ( ∀ α ∈ W:sub:`inv(ζ)`: α ∈ L)
 
 This theorem can be stated in natural language as follows: If a Sentence *ζ* is invertible, then every word in its inverse, *inv(ζ)*, belongs to the Language **L**.
 
@@ -914,7 +970,7 @@ Assume *ζ ∈ K*. By Definition 2.2.2,
 
 By Axiom S.3, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
 
-**Theorem 2.2.4** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+**Theorem 2.3.4** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
 This theorem can be stated in natural language as follows: A Sentence is Invertible if its Words are Invertible.
 
@@ -1061,7 +1117,15 @@ Applying the results of Theorem 2.4.1 and Theorem 2.4.6, this theorem follows fr
 Section III: Palindromic Structures
 ===================================
 
+As mentioned in the introduction of this work, the complete structure of palindromes is described through the combination of four different attributes or dimensions: *aspect*, *parity*, *case* and *punctuality*. The framework has now been developed to now classify these palindromic properties with more precision.
+
 TODO
+
+Punctuation and capitalization are syntactic bearers of semantic meaning that cannot be reduced to purely formal considerations. Both punctuality and case require additional axioms to describe the unique structuring they impose on a Language and its Corpus. In the author's opinion, it is impossible to disentangle these linguistic phenomenon from the realm of semantics.
+
+In what follows, two things are implicitly assumed. These assumptions are made explicit here, so the scope of the results can be properly understood. First, the Alphabet **Σ** is assumed to contain no punctuation marks beyond the Delimiter Character (if one is inclined to consider a form of punctuation). Second, it is assumed every Character in **Σ** is distinct, meaning all matters of case are ignored. To rephrase the same idea more precisely: there is no assumed semantic relation between Characters in the Alphabet that would allow the identification of distinct Characters as different *cases* of the same Character.
+
+With these assumptions, the analysis is confined to the dimensions of *aspect* and *parity*, which will be defined in the following subsections. After the results are derived, consideration will be given to future work that could potentially integrate semantic considerations into the formal framework of palindromic structures.
 
 Section III.I: Palindromes 
 --------------------------
@@ -1112,11 +1176,12 @@ The *σ*-reduced alphabet (*Σ'*) can be seen as a subspace within this higher-d
 Palindromes
 ^^^^^^^^^^^
 
-**Definition 3.1.2: Palindromes**
+**Definition 3.1.2: Syntactical Palindromes**
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
     ζ ∈ P ↔ ζ ⋅ Σ' = inv(ζ ⋅ Σ')
+
 
 Focus on Essence: It distills the core property of palindromes – their symmetrical nature – by focusing on the sequence of characters without the distraction of spaces.
 Handles Perfect and Imperfect Palindromes:

@@ -32,6 +32,9 @@ Palindrome Postulates
 
 - Inverse postulate: Either the starting word of a palindrome must be contained in its ending word or the ending word of a palindrome must be contained in its starting word.
 
-- Perfect postulate: A sentence is a perfect palindrome if and only if the sentence is invertible. (Recall invertibility implies semantic coherence of the inverse) (Is this a postulate or a definition?)
+- Perfect postulate: A sentence is a perfect palindrome if the sentence in o-unreduced space is invertible. (Recall invertibility implies semantic coherence of the inverse) (Is this a postulate or a definition?)
+
+- Imperfect postulate: A sentence is an imperfect palindrome if the sentence in o-reduced space is invertible.
+
 
 *If the perfect postulate is a definition, then a theorem is: perfect palindromes can only contain invertible words (by our little gem.)
