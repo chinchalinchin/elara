@@ -887,15 +887,15 @@ Consider the following examples phrases from English,
 - dog won 
 - not a ton 
 
-All of these phrases may be *inverted* to produce a semantically coherent phrase in English, 
+All of these phrases may be *inverted* to produce a semantically coherent phrases in English, 
 
 - emit on
 - now god
 - not a ton 
 
-Note the last item in this list is an example of what this work has termed a *perfect palindrome*. These examples were specially chosen to highlight the connection that exists between the class of *perfect palindromes* and the class of *invertible sentences*. It appears, based on this brief and circumstantial analysis, that *perfect palindromes* are a subset of a larger class of Sentences called Invertible Sentences.
+Note the last item in this list is an example of what this work has termed a *perfect palindrome*. These examples were specially chosen to highlight the connection that exists between the class of *perfect palindromes* and the class of *invertible sentences*. It appears, based on this brief and circumstantial analysis, that *perfect palindromes* are a subset of a larger class of Sentences, Invertible Sentences.
 
-Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those sentences that maintain *semantic coherence* under inversion (see Section II.III for a definition of *semantic coherence*). In order for a Sentence to be Invertible it must possess symmetry on both the Character level and the Word level, while maintaining a semantic structure that accomodates this symmetry. 
+Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* under inversion (see Section II.III for a definition of *semantic coherence*). In order for a Sentence to be invertible it must possess symmetry on both the Character level and the Word level, while maintaining a semantic structure that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven in Theorem 2.3.4 of the next section.
 
 To see how strong of a condition invertibility is, the author challenges the reader to try and construct an invertible sentence. Section IV contains a list of Invertible Words and Reflective Words. These can be used as a "palette". The exercise is worthwhile, because it forces the reader to think about the mechanics of sentences and how a palindrome resides in the intersection of semantics and syntax.  
 
@@ -906,15 +906,15 @@ In Section I, the first three axioms of the palindromic formal system was introd
 
 **Axiom C.1: The Character Axiom**
 
-    ∀ ⲁ: ⲁ ∈ S
+    ∀ ⲁ ∈ Σ: ⲁ ∈ S
 
 **Axiom W.1: The Delimiter Axiom ** 
 
-    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
 **Axiom W.1: The Empty Axiom ** 
 
-    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
 
 **Axiom S.1: The Containment Axiom**
 
