@@ -1220,7 +1220,6 @@ Since *ζ* is a sentence, it must contain at least one word. Therefore, W:sub:`�
 
 By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  Therefore, *α* is contained in **Ζ ⋅ Σ**:sub:`σ`, which is what was to be shown. ∎
 
-
 **Theorem 3.1.2** ζ ∈ K → [ inv(ζ ⋅ Σ') = inv(inv(ζ ⋅ Σ')) ]
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under sigma reductions. 
