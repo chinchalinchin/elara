@@ -1,5 +1,9 @@
 Theorems and ideas for tomorrow
 
+Prove for any String t, | T | >= l(t)
+
+TODO: parity (even and odd Sentence length) vs centrality (pivot type) vs punctuality (presence of punctuation)
+
 - The sum of the length of words in a sentence is equal to length of that sentence's reduction into its sigma-pairing language.
 - The possibility of Character reductions (other than sigma). Explore the idea that every Character reduction creates a unique pairing language. Explore what the intersection of various pairing languages say about the underlying language.
 - If every palindrome is its own inverse in a sigma-reduced alphabet, then the palindrome expressed in the sigma-pairing language must contain invertible words from the "mother language".

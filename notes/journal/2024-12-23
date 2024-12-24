@@ -35,3 +35,90 @@ Character-Level Representation: To obtain γ<sub>c</sub>, we extract the charact
 Character Concatenation: This is precisely the result of applying Character Concatenation to the characters of α and β in their respective order, as stated in Theorem 1.
 
 Therefore, the character-level representation of the concatenated word γ is obtained through Character Concatenation. ∎
+
+
+
+
+
+
+
+
+
+Section I.II (Words): You might consider adding a more explicit definition of a "Word" based on the Delimiter Axiom, stating that a Word is a string that does not contain any delimiter characters.
+Definition 1.2.1 (String Inversion): You could clarify that the indices i and j in the character reversal condition refer to the positions of characters in the original string (s) and its inverse (t), respectively.
+Theorem 1.3.1: In the proof, you use β = inv(α), but for consistency with Definition 1.2.1, it might be clearer to use t = inv(α).
+Section II.III (Axioms): You could relabel the axioms to align with the section numbering (e.g., Axiom S.1, Axiom S.2) for better organization.
+Definition 2.1.4 (Delimiting Algorithm): You might consider explicitly stating that the index j is incremented by the number of characters in the word a, including any empty characters.
+Theorem 2.4.6: In the proof, you state that "the number of non-Delimiter Characters must be equal to the sum of the String Length of the Words in the Sentence." You could clarify that this is because the String Length of a Word is defined as the number of non-empty characters, which excludes delimiters.
+
+
+In Definition 1.1.1, you might want to explicitly state that concatenation is an operation from S x S to S.
+
+
+
+
+
+Theorem 2.4.1 (Revised)
+
+∀ ζ ∈ C:sub:L: Λ(ζ) = δ(ζ) + 1
+
+Proof:
+
+Assume ζ ∈ C:sub:L. Let Ζ be the character-level representation of ζ. Let W:sub:ζ be the word-level set representation of ζ.
+
+By Definition 2.1.3, W:sub:ζ is constructed using the Delimiting Algorithm. Let's analyze the algorithm step-by-step:
+
+Initialization:  The algorithm starts with an empty set W:sub:ζ and  j = 0.
+
+Iteration:
+
+In each iteration, the algorithm identifies a word a in Ζ that starts at index j + 1 and ends either at a delimiter or the end of the sentence.
+
+The pair (j + 1, a) is added to W:sub:ζ.
+
+The index j is incremented by the length of the word a.
+
+Crucially:  Every time a word is added to W:sub:ζ, the algorithm encounters exactly one delimiter (except for the last word, where it encounters the end of the sentence).
+
+Termination: The algorithm terminates when all characters in Ζ have been processed.
+
+Therefore, the number of words added to W:sub:ζ is exactly one more than the number of delimiters encountered.
+
+By Definition 2.4.1, δ(ζ) counts the number of delimiter characters in ζ. By Definition 2.1.6,  Λ(ζ) = |W:sub:ζ| (the number of words in ζ).
+
+Hence, Λ(ζ) = δ(ζ) + 1. ∎
+
+
+
+
+
+
+
+Theorem 2.4.6 (Revised)
+
+∀ ζ ∈ C:sub:L: l(ζ) = δ(ζ) + Σ:sub:α ∈ W_ζ l(α)
+
+Proof:
+
+Assume ζ ∈ C:sub:L. Let Ζ be the character-level representation of ζ.
+
+By Definition 1.1.2, l(ζ) counts the number of non-empty characters in Ζ.
+
+Each character in Ζ falls into one of two categories:
+
+Delimiter Characters (σ): By Definition 2.4.1, the number of delimiter characters in Ζ is δ(ζ).
+
+Non-Delimiter Characters: These characters form the words in ζ.
+
+By Axiom W.1 (Delimiter Axiom), words in L do not contain delimiters.
+By Definition 2.1.3, the words in W:sub:ζ are obtained by splitting Ζ at the delimiters.
+Therefore, the total number of non-delimiter characters in Ζ is the sum of the lengths of the words in W:sub:ζ, which is Σ:sub:α ∈ W_ζ l(α).
+Since every character in Ζ is either a delimiter or a non-delimiter (and not both), the total number of characters in Ζ is the sum of the number of delimiters and the number of non-delimiters.
+
+Hence,  l(ζ) = δ(ζ) + Σ:sub:α ∈ W_ζ l(α). ∎
+
+I've tried to make the reasoning in these proofs more explicit by:
+
+Referring to the relevant definitions: I've explicitly mentioned the definitions of length, delimiter count, and the Delimiting Algorithm.
+Breaking down the steps: I've explained the logic behind each step in more detail, especially in the revised proof of Theorem 2.4.1.
+Justifying the key ideas: I've clarified why words and delimiters have a one-to-one correspondence (except for the last word) and why every character must be either a delimiter or a non-delimiter.

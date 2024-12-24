@@ -44,24 +44,36 @@ It will sometimes be necessary to refer to indeterminate Characters, so notation
 Concatenation 
 ^^^^^^^^^^^^^
 
-Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation and should be understood as follows,
+Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation, but not an elementary operation. By this it is meant the notion of concatenation that is about to be adopted does not define concatenation solely in terms of Strings. Concatenation will be defined as a hetergeneous operation that is performed between Characters in Alphabet and Strings.
 
-**Definition 1.1.1: Character Concatenation**  The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parentheis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*.
+**Definition 1.1.1: Concatenation**  The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parentheis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*.
 
 Colloquially, *ⲁ* is the String that results from placing *ⲃ* behind *ⲁ*. More formally, Character concatenation is defined inductively through the following schema,
 
     1. Basis Clause: ∀ ⲁ ∈ Σ: ⲁε = ⲁ
     2. Inductive Clause: ∀ ⲁ, ⲃ, ⲅ ∈ Σ: ⲁ(ⲃⲅ) = (ⲁⲃ)ⲅ
-    3. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ))
-    4. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
+    3. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
+    4. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ))
 
-In essence, the first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. 
+The first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. 
 
 The second clause is the inductive step which allows the concatenation of Characters into Strings of arbitrary length through recursion.
 
+It is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is captured in the Comprehension Clause of Definition 1.1.1. This clause ensures two things. First, in conjunction with the Basis Clause, it follows all singleton Characters are Strings. Second, by itself, it ensures that all results of concatenation are Strings. 
+
 The Uniqueness Clause states that if the concatenation of two characters *ⲁ* and *ⲃ* is equal to the concatenation of two other characters *ⲅ* and *ⲇ*, then it must be the case that *ⲁ* is equal to *ⲅ* and *ⲃ* is equal to *ⲇ*. In other words, there's only one set of Characters that can form a given String through concatenation.
 
-AIt is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is captured in the Comprehension Clause of Definition 1.1.1. This clause ensures two things. First, in conjunction with the Basis Clause, it follows all singleton Characters are Strings. Second, by itself, it ensures that all results of concatenation are Strings. 
+Concatenation as it is normally found in the fields of automata theory and regular expressions is treated as a primitive operation performed between two Strings operands. Concatenation of multiple Strings is then defined inductively.  The current formulation differs in that concatenation in this system is not conceived as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings.
+
+To make this distinction plain, it should be noted that given an Alphabet Σ and Definition 1.1.1, one still cannot say the result of a concatenation is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the concatenation of single Characters is itself a String. 
+
+In order to rectify this, the first Axiom is introduced,
+
+**Axiom C.1: The Character Axiom**
+
+    ∀ ⲁ: ⲁ ∈ S
+
+This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with Definition 1.1.1, immediately populates the set of all Strings with an uncountably infinite domain of objects (See Theorem 1.1.1 for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet.
 
 **Example** Let *s = 𝔞𝔟𝔠* and *t = 𝔡𝔢𝔣*. The concatenation of these two Strings *st* is written,
 
@@ -87,6 +99,8 @@ Note, since sets do not preserve order, this would be equivalent to,
 To simplify notation, it is sometimes beneficial to represent this set as a sequence that *does* preserve order as,
 
     **S_1** = (*𝔞*, *𝔟*, *𝔠*) 
+
+This notation will be employed extensively in the subsequent proofs.
 
 Length
 ^^^^^^
@@ -189,9 +203,9 @@ This additional constraint on *f* ensures that the indices of the larger word in
 
 Let *α* and *β* be words represented as the sets of ordered pairs *Α* and *Β*:
 
-    Α = { (1, a:sub:`1`), (2, a:sub:`2`), ..., (l(α), a:sub:`l(α)`) }
+    Α = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(α), 𝔞:sub:`l(α)`) }
 
-    Β = { (1, b:sub:`1`), (2, b:sub:`2`), ..., (l(β), b:sub:`l(β)`) }
+    Β = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(β), 𝔟:sub:`l(β)`) }
 
 *α* is said to be *contained in β*, denoted by,
 
@@ -265,7 +279,11 @@ Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**.
 
     s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
-Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
+**Axiom W.2: The Empty Axiom**
+
+    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
+
+In essence, these Axioms capture the common-sense notion that a Word from a Language cannot contain either a Delimiter or an Empty Character. Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
 
 Inversion
 ^^^^^^^^^
@@ -405,13 +423,13 @@ Then the set of Reflective Words **R** is defined as the set of *α* which satis
 
 A Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. The following theorem is an immediate consequence of this definition.
 
-**Theoreom 1.3.1** α ∈ R ↔ α = inv(α)
+**Theorem 1.3.1** α ∈ R ↔ α = inv(α)
 
-(→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By definition, 
+(→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.1, 
 
     1. ∀ i ∈ N:sub:`α`: 𝔞:sub:`i` = 𝔞:sub:`l(α) - i`
 
-Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the definition of String Inversion:
+Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.1,
 
     2. l(β) = l(α)
     3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`β`: [ ( j = l(α) - i + 1 ) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
@@ -624,137 +642,103 @@ Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the character-level 
 
 Or using a sequence to implicitly represent the order,
 
-    Z =  ( 𝔞:sub:`2`, 𝔞:sub:`10`, 𝔞:sub:`3` )
+    Z =  ( 𝔞:sub:`2`, 𝔞:sub:`10`, 𝔞:sub:`3`, ... )
 
-The word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*,
+The word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*,
+
+The essence of the *Delimiting Algorithm* lies in interplay of the Delimiter Axiom W.1 and the definition of a Sentence as a semantic String. In other words, by Definition 2.1.1, all Sentences must be semantic. Therefore, by the Delimiter Axiom W.1, the Words which contains must be exactly those Strings which are separated by the Delimiter Character. 
+
+This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of delimitation within the Sentences of its Corpus. 
 
 **Definition 2.1.4: Delimiting Algorithm**
 
 **Initialization**
 
-Let **W**:sub:`ζ` = ∅ (the empty set).
+- Let **Ζ** be the Character-level set representation of the Sentence *ζ*. 
+- Let **W**:sub:`ζ` = ∅ (the empty set). 
+- Let *j = 0*. 
    
 **Iteration**  
 
-1. For each contiguous subsequence of non-delimiter characters in **Ζ**, create a word *a* by applying the following mapping:
+1. Let *a* be the word that starts at index *j + 1* in **Ζ**, represented as the set,
 
-    Let the subsequence be (𝔞:sub:`k`, 𝔞:sub:`k+1`, ..., 𝔞:sub:`k+n`), where 𝔞:sub:`i` ≠ σ for k ≤ i ≤ k+n.
+    **A** = { (1, 𝔞:sub:`j+1`), (2, 𝔞:sub:`j+2`), ..., (n, 𝔞:sub:`j+n`) }
 
-    Then, the corresponding word *a* is represented as the set:
+where n is the smallest integer such that one of the following conditions obtains,
+    
+    - 𝔞:sub:`j+n+1` = σ (the next character is a delimiter)
+    - j+n+1 > | ζ | (the algorithm has reached the end of the sentence)
 
-        a = { (1, 𝔞:sub:`k`), (2, 𝔞:sub:`k+1`), ..., (n, 𝔞:sub:`k+n`) }
+2. Add *(j + 1, a)* to the set **W**:sub:`ζ`. 
 
-2. Add *a* to the set **W**:sub:`ζ`.
+3. Increment *j* by the number *n*.
+
+4. Repeat Steps 1 - 4 in order until the Characters in *ζ* have been processed.
 
 **Example** 
 
-Let *ᚠ = "The dog runs"*. Then the Character level representation of  *ᚠ* is given by, 
+Let *ᚠ = "The cat meows"*. Then the Character level representation of  *ᚠ* is given by, 
 
-    **ᚠ** = (T, h, e, σ, d, o, g, σ, r, u, n, s).
+    **ᚠ** = { (1, "T"), (2, "h"), (3,"e"), (4,σ), (5,"c"), (6,"a"), (7,"t"), (8,σ), (9,"m"), (10,"e"), (12,"o"), (13,"w"), (14,"s") }.
 
-Then, applying the *Delimiting Algorithm*, its Word level representation is constructed, 
+Then, applying the *Delimiting Algorithm*, its Word-level representation is constructed, 
 
-    **W**:sub:`ᚠ` = { "The", "dog", "runs" }.
+    **W**:sub:`ᚠ` = { (1, "The"), (2, "cat"), (3, "meows") }.
+
+Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate.
 
 Length
 ^^^^^^
 
-**Definition 2.1.6**: Sentence Length
+The notion of String Length was introduced in Section I.I as a way of measuring the number of non-Empty Characters in a String *s*, denoted *l(s)*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different dimension of "spatiality" in the domain of a Language and its Corpus: Sentence Length. Intuitively, the length of a Sentence is the number of Words it contains. However, since a Sentence has been defined as class of Strings, this means Sentences contain Delimiter Characters; specifically, the Words of a Language are separated by Delimiters in the Sentences of its Corpus. Therefore, the length of a Sentence is defined in terms of its set
 
-Let ρ be a Sentence in a Corpus C<sub>L</sub>. Let W<sub>ρ</sub> be the word-level set representation of ρ, as defined in Definition 2.1.3.
+**Definition 2.1.6: Sentence Length**
 
-The length of the sentence ρ, denoted by l(ρ), is defined as the cardinality of the set W<sub>ρ</sub>.
+Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the word-level set representation of *ζ*, as defined in Definition 2.1.3. The length of the Sentence *ζ*, denoted by *Λ(ρ)*, is defined as the cardinality of the set **W**:sub:`ζ`,
 
-Formally:
+    Λ(ρ) = | W:sub:`ζ` |
 
-l(ρ) = |W<sub>ρ</sub>|
+**Example**
 
-Explanation:
+*ᚠ = "The dog runs"*. Its Character-level set representation would be given by,
 
-This definition aligns with our intuitive understanding of sentence length as the number of words it contains. By using the word-level set representation, we ensure that the length accurately reflects the number of distinct words in the sentence, regardless of their character-level representation or any potential repetitions.
+    **ᚠ** = { (0,"T"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") }
 
-Example:
+Its Word-level set representation would be given by,
 
-Consider the sentence ρ = "The dog runs."
-
-Its word-level set representation is:
-
-W<sub>ρ</sub> = {"The", "dog", "runs"}
+    W:sub:`ᚠ` = { (1, "The"), (2, "dog"), (3, "runs") }
 
 Therefore, the length of the sentence is:
 
-l(ρ) = |W<sub>ρ</sub>| = 3
+    Λ(ᚠ) = | W:sub:`ᚠ` | = 3
 
-**Theorem 2.1.1**
+Note, in this example, 
 
-Theorem:
+    l(ᚠ) = 10
 
-For any sentence ρ in a Corpus C<sub>L</sub>, the length of the sentence is equal to the delimiter count of its character-level representation plus one.
+While 
 
-Formalization: ∀ ρ ∈ C<sub>L</sub>:  l(ρ) = δ(ρ<sub>c</sub>) + 1
+    | ᚠ | = 12
 
-Proof:
+This example demonstrates the essential difference in the notions of length that have been introduced. Indeed, the analysis has accumulated a myriad of ways of describing length. It is worthwhile to list them in a descending hierarchy and clarify the distinctions. Let *s* be a String with Character-level representation **S** and Word-level representation **W**:sub:`s`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven). Terminology is introduced in parenthesis to distinguish these notions of length,
 
-Assume ρ ∈ C<sub>L</sub>: This means ρ is a sentence in the Corpus.
+- | S | (Character Length): The number of Characters contained in a String. 
+- l(s) (String Length): The number of non-Empty Characters contained in a String.
+- Λ(s) (Word Length): The number of Words contained in a String 
 
-Character-Level Representation: Let ρ<sub>c</sub> be the character-level representation of ρ.
+Note the first two levels are purely syntactical. Any String *s* will have a length *l(s)* and a cardinality | S |. However, not every String possesses Word length, *Λ(s)*. Word length contains semantic information. While the presence of Word length does not necessarily mean the String is semantic, e.g. "asdf dog fdsa", Word length does signal an *extension* of Strings into the semantic domain.
 
-Word-Level Set Representation: Let W<sub>ρ</sub> be the word-level set representation of ρ, as defined in Definition 2.1.3 (Revised).
+The following theorem proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
-Sentence Length: By Definition 2.2.1, the length of the sentence ρ is:
+**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`α ∈ W_ζ` l(w) ≥ Λ(ζ)
 
-l(ρ) = |W<sub>ρ</sub>|
-Delimiter Count and Word Count:  We've previously established the relationship between the delimiter count and the cardinality of the word-level set representation:
+This theorem can be stated in natural language as follows: For any sentence *ζ* in a Corpus C:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
 
-|W<sub>ρ</sub>| = δ(ρ<sub>c</sub>) + 1
-Substitution: Substituting step 5 into step 4, we get:
+Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of *ζ*,
 
-l(ρ) = δ(ρ<sub>c</sub>) + 1
-Therefore, ∀ ρ ∈ C<sub>L</sub>:  l(ρ) = δ(ρ<sub>c</sub>) + 1 ∎
+    W:sub:`ζ` = { (1, α:sub:`1`), (2, α:sub:`2`), ..., (Λ(ζ), α:sub:`Λ(ζ)`)}
 
-
-
-
-
-Theorem:
-
-For any sentence ρ in a Corpus C<sub>L</sub>, the sum of the lengths of the words in ρ is always greater than the length of the sentence ρ.
-
-Formalization:
-
-∀ ρ ∈ C<sub>L</sub>:  ∑<sub>w∈W<sub>ρ</sub></sub> l(w) > l(ρ)
-
-where:
-
-W<sub>ρ</sub> is the word-level set representation of ρ.
-l(w) is the length of word w (number of non-empty characters).
-l(ρ) is the length of sentence ρ (cardinality of W<sub>ρ</sub>).
-Proof:
-
-Assume ρ ∈ C<sub>L</sub>: This means ρ is a sentence in the Corpus.
-
-Word-Level Representation: Let W<sub>ρ</sub> = {w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>} be the word-level set representation of ρ.
-
-Sentence Length: By Definition 2.2.1, the length of the sentence ρ is:
-
-l(ρ) = |W<sub>ρ</sub>| = n (the number of words in the sentence)
-Word Length:  For each word w<sub>i</sub> ∈ W<sub>ρ</sub>, its length l(w<sub>i</sub>) is the number of non-empty characters in the word.
-
-Delimiter Characters:  Since words are separated by delimiter characters (spaces) in the sentence, each word (except potentially the last one) contributes at least one character to the overall length of the sentence.
-
-Sum of Word Lengths: Therefore, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence:
-
-∑<sub>w∈W<sub>ρ</sub></sub> l(w) ≥ n
-Strict Inequality:  Since each word must contain at least one non-empty character, the sum of the word lengths is strictly greater than the number of words:
-
-∑<sub>w∈W<sub>ρ</sub></sub> l(w) > n
-Substitution:  Substituting l(ρ) = n from step 3, we get:
-
-∑<sub>w∈W<sub>ρ</sub></sub> l(w) > l(ρ)
-Therefore, ∀ ρ ∈ C<sub>L</sub>:  ∑<sub>w∈W<sub>ρ</sub></sub> l(w) > l(ρ) ∎
-
-
-
+For each Word α:sub:`i`` ∈ W:sub:`ζ`, its String Length *l(α)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
 Setion II.II: Sentence Classes 
 ------------------------------
@@ -825,11 +809,15 @@ By Definition 2.2.2, it follows,
 Section II.III: Axioms 
 ----------------------
 
-In Section I.II, the first axiom of the palindromic formal system was introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being buitl. The Delimiter Axiom is reprinted below, so it may be considered in sequence with the other axioms.
+In Section I.II, the first two axioms of the palindromic formal system was introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being buitl. The Delimiter Axiom is reprinted below, so it may be considered in sequence with the other axioms.
 
 **Axiom W.1: The Delimiter Axiom ** 
 
     s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
+
+**Axiom W.1: The Empty Axiom ** 
+
+    s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
 
 **Axiom S.1: The Containment Axiom**
 
@@ -839,7 +827,9 @@ In Section I.II, the first axiom of the palindromic formal system was introduced
 
     ∀ ζ ∈ C:sub:`L` : ∀ α ∈ W:sub:`ζ`: α ∈ L
 
-In essence, Axiom S.2 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
+TODO: describe Axiom S.1
+
+Axiom S.2 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
 
 **Definition 2.1.5: Sentence-Level Semantic Coherence** 
 
@@ -867,53 +857,39 @@ Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation o
     
 In other words, every (Word-level set representation of a) Sentence from a Corpus is a subset of the Language **L**. ∎
 
-When the terminology 
-
 **Theorem 2.2.3** ζ ∈ K → ( ∀ α ∈ W:sub:`inv(ζ)`: α ∈ L)
 
 This theorem can be stated in natural language as follows: If a Sentence *ζ* is invertible, then every word in its inverse, *inv(ζ)*, belongs to the Language **L**.
 
-Assume *ζ ∈ K*. By Definition 2.2.2, t
+Assume *ζ ∈ K*. By Definition 2.2.2,
 
-    inv(ρ) ∈ C:sub:`L`
+    inv(ζ) ∈ C:sub:`L`
 
-By Axiom S.3, every Word in the Word-level representation of inv(ρ) belongs to L. ∎
+By Axiom S.3, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
 
-**Theorem 2.2.4** ζ ∈ K ↔ (∀ α ∈ W:sub:`ζ`: α ∈ I)
+**Theorem 2.2.4** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
-This theorem can be stated in natural language as follows: A Sentence is Invertible if and only if all its Words are Invertible.
+This theorem can be stated in natural language as follows: A Sentence is Invertible if its Words are Invertible.
 
-(→) ζ ∈ K 
+Assume *ζ ∈* **K**. Let N:sub:`ζ` be the set, 
 
-By Theorem 2.2.3, every Word in *inv(ζ)* belongs to **L**. Consider the Word-level representation of *ζ*
+    1. N:sub:`ζ` = { 1, 2, ... , Λ(ζ) }
 
-    W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`n`)
+And consider the Word-level representation of *ζ*.
+
+    2. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`n`)
 
 By Definition 1.2.1, the Word-level representation of *inv(ζ)* is 
 
-    W:sub:`ζ` = ( inv(w<sub>n</sub>), inv(w<sub>n-1</sub>), ..., inv(w<sub>1</sub>)).
+    3. W:sub:`inv(ζ)` = ( inv(α:sub:`n`), inv(α:sub:`n-1`), ... , inv(α:sub:`1`) ).
 
-Words in Inverse Belong to L: From step 1, we know that each of these inverted words (inv(w<sub>i</sub>)) belongs to L.
+By Theorem 2.2.3, every Word in *inv(ζ)* belongs to **L**.  Therefore, each inv(α:sub:`i`) belongs to **L**,
 
-Definition of Invertible Words:  Since each inv(w<sub>i</sub>) ∈ L, by the definition of Invertible Words, each w<sub>i</sub> ∈ I.
+By the Definition 1.3.2, each α:sub:`i` ∈ I. Therefore, all words in ζ are invertible. Formally,
 
-Therefore: ∀ w ∈ W<sub>ρ</sub>: w ∈ I (all words in ρ are invertible).
+    4. (∀ α ∈ W:sub:`ζ`: α ∈ I) ∎
 
-(←) Assume ∀ w ∈ W<sub>ρ</sub>: w ∈ I (all words in ρ are invertible)
-
-Word-Level Representation: Let ρ<sub>w</sub> = (w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>) be the word-level representation of ρ.
-
-Invertibility of Words: Since each w<sub>i</sub> ∈ I, by the definition of Invertible Words, each inv(w<sub>i</sub>) ∈ L.
-
-Sentence Inversion: This means the sequence (inv(w<sub>n</sub>), inv(w<sub>n-1</sub>), ..., inv(w<sub>1</sub>)) is a valid sequence of words in L.
-
-Grammatical Validity:  Since the inverted sequence is a valid sequence of words, and we haven't introduced any grammatical constraints yet, we can assume that the inverted sentence inv(ρ) is grammatically valid. (This assumption might need to be revisited when we introduce grammar rules later).
-
-inv(ρ) ∈ C<sub>L</sub>: Since inv(ρ) is grammatically valid and composed of words from L, it belongs to the Corpus C<sub>L</sub>.
-
-Definition of Invertible Sentences: Therefore, by the definition of Invertible Sentences, ρ ∈ I<sub>s</sub> (ρ is invertible).
-
-
+The contrapositive of Theorem 2.2.4 provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.
 
 Section II.IV: Delimiting
 --------------------------
@@ -962,6 +938,22 @@ The set D:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the 
 
 From this it follows, | D:sub:`t` | is 2. Hence, *δ(s) = 2*.
 
+From this example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the delimiter count) as output. Multiple sentences can have the same delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
+
+**Theorem 2.4.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = δ(ζ) + 1
+
+In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its delimiter count plus one.
+
+Assume *ζ ∈* **C**:sub:`L`. Let *δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`` is formed by splitting **Ζ** at each Delimiter Character *σ*.
+
+Each word in **W**:sub:`ζ` corresponds to a contiguous subsequence of non-delimiter characters in **Ζ**.
+
+Since delimiters separate words, the number of words in the sentence is always one more than the number of spaces.
+
+herefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to the delimiter count of *δ(ζ)* plus one,
+
+    | W:sub:`ζ` | = δ(ζ) + 1. ∎
+
 The next theorem will be important for describing the structure of *imperfect palindromes*.
 
 **Theorem 2.4.2** *δ(s) = δ(inv(s))*
@@ -987,7 +979,7 @@ Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exi
 
 By the definition of the delimiter count function, this means *δ(u) = δ(t)*. Since *u = inv(t)*, it has been shown *δ(inv(s)) = δ(s)*. ∎
 
-**Theorem 2.4.3** δ(ζ) = δ(inv(ζ))
+**Theorem 2.4.4** δ(ζ) = δ(inv(ζ))
 
 Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
 
@@ -1001,20 +993,28 @@ Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**
 
     s ∈ L → (∀ i ∈ N:sub:`s`: 𝔞:sub:`i` ≠ σ )
 
-Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no delimiter characters, the delimiter count of α must be 0. Therefore, *δ(α) = 0*. ∎
+Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *δ(α) = 0*. ∎
 
-Many-to-One: A many-to-one function is a function where multiple different elements in the domain (the set of inputs) can map to the same element in the codomain (the set of outputs).
-Delimiter Count as Many-to-One: In our case, the delimiter count function takes a sentence as input and produces a non-negative integer (the delimiter count) as output. Multiple sentences can have the same delimiter count, making it a many-to-one function.
-Not a One-to-One Function: A one-to-one function (also called an injective function) is a function where each element in the domain maps to a unique element in the codomain. Since the delimiter count function can map multiple sentences to the same count, it's not one-to-one.
-Not an Onto Function: An onto function (also called a surjective function) is a function where every element in the codomain is mapped to by at least one element in the domain. Since not all possible delimiter counts have corresponding sentences, the delimiter count function is not onto.   
+**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) = δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
 
+In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *δ(ζ)* plus the sum of the String Lengths of its Words.
 
+Assume *ζ ∈* **C**:sub:`L`. Let **Ζ** be the Character-level representation of *ζ*,
 
+    1. **Z** = { (1, ⲁ:sub:`1`), (2, ⲁ:sub:`2`), ..., (l(ζ), ⲁ:sub:`l(ζ)`) }
+
+Either each α:sub:`i` for i = 1, 2, ...,  l(ζ) is Delimiter or it is a non-Delimiter, with no overlap. Therefore, the number of Characters in *ζ* is equal to the number of Delimiters plus the number of non-Delimiters. By Definition 2.4.1, the number of Delimiters is exactly δ(ζ). By the Delimiter Axiom W.1 and the Definition of 2.1.2, the number of non-Delimiter Characters must be equal to the sum of the String Length of the Words in the Sentence. Therefore,
+
+    2. ∀ ζ ∈ C:sub:`L`: l(ζ) = δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α) ∎
+
+**Theorem 2.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
+
+Applying the results of Theorem 2.4.1 and Theorem 2.4.6, this theorem follows from simple algebraic manipulation. ∎
 
 Section III: Palindromic Structures
 ===================================
 
-TODO: parity (even and odd Sentence length) vs centrality (pivot type) vs punctuality (presence of punctuation)
+TODO
 
 Section III.I: Palindromes 
 --------------------------
@@ -1022,83 +1022,45 @@ Section III.I: Palindromes
 Sigma Reductions
 ^^^^^^^^^^^^^^^^
 
-TODO 
+**Definition 3.1.1: σ-Reduced Alphabet**
 
-σ-Reduced Alphabet:
+A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A sigma-reduced Alphabet is denoted Σ:sub:`σ`. Formally
 
-By removing the space character (σ) from the alphabet, we create a new alphabet, let's call it Σ', that consists only of the non-delimiter characters (letters, numbers, etc.).
-This allows us to focus on the core structure of the palindrome, ignoring the spaces that might introduce variations or ambiguities in the inversion process.
-Projection onto Σ':
+    Σ' = Σ - {σ}
 
-We can then define a "projection" function that takes a sentence's character-level representation (ρ<sub>c</sub>) and maps it onto the σ-reduced alphabet (Σ') by simply removing all the spaces. Let's denote this projection as proj<sub>σ</sub>(ρ<sub>c</sub>).
-Palindrome Definition:
+As has been seen with examples of *imperfect palindromes* like "Borrow or rob", a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, making it lose semantic coherence. *Imperfect palindromes* must be rearranged Character-wise to retrieve the original form. String Inversion preserves the relative order of the non-delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiter, suggests palindromes might be more easily defined with the obstacle of the Delimiter.
 
-A sentence ρ is a palindrome if and only if its projection onto the σ-reduced alphabet is equal to the inverse of its projection:
+In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of imperfect palindromes must be removed. This is accomplished through the introduction of the operation of *sigma reduction*.
 
-proj<sub>σ</sub>(ρ<sub>c</sub>) = inv(proj<sub>σ</sub>(ρ<sub>c</sub>))
+**Definition 3.1.2: Sigma Reduction (s ⋅ Σ')**
 
+Let *s* be a String with length *l(s)* and Character-level representation 
 
+    S = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>l(s)</sub>), where each a<sub>i</sub> ∈ Σ.
 
+The sigma reduction function (or simply, the sigma reduction), denoted by *S ⋅ Σ'*, maps the String *s* to a new String *t* in the *σ*-reduced alphabet *Σ'* by removing all occurrences of the Delimiter Character. Formally, *s ⋅ Σ'* is defined as follows by the *Reduction Algorithm*,
 
+**Initialization** 
 
-Definition: σ-Reduced Alphabet (Σ')
+- Let t be the empty string (ε).
 
-Given an alphabet Σ that includes the space character (σ), the σ-reduced alphabet, denoted by Σ', is the set of all characters in Σ excluding the space character.
+**Iteration**
 
-Formally:
+For each Character a<sub>i</sub> in s<sub>c</sub>, If a<sub>i</sub> ≠ σ, then concatenate a<sub>i</sub> to the end of t.
 
-Σ' = Σ - {σ}
+**Example**
 
-Definition: Sigma Reduction Function (s ⋅ Σ')
+Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" }*. Note in this example *σ = " "*. The sigma reduction of *s* is given by,
 
-Let s be a string with length l(s) and character-level representation s<sub>c</sub> = (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub>), where each a<sub>i</sub> ∈ Σ.
+    S = (a, σ, b, σ, c)
+    
+    Σ' = { "", "a", "b", "c" }
 
-The sigma reduction function, denoted by s ⋅ Σ', maps the string s to a new string t in the σ-reduced alphabet Σ' by removing all occurrences of the space character (σ).
+    S ⋅ Σ' = "abc"
 
-Formally, s ⋅ Σ' is defined as follows:
+The notation for sigma reduction is meant to evoke the idea of a vector dot project. The analogy to a vector projection is indeed apt. While not a strict mathematical equivalence, it captures the idea of transforming the string from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
 
-Initialization: Let t be the empty string (ε).
-Iteration: For each character a<sub>i</sub> in s<sub>c</sub>:
-If a<sub>i</sub> ≠ σ, then concatenate a<sub>i</sub> to the end of t.
-Example:
-
-Let s = "a b c". Then:
-
-s<sub>c</sub> = (a, σ, b, σ, c)
-s ⋅ Σ' = "abc"
-
-
-
-And your suggestion to use "s ⋅ Σ'" for sigma reduction is brilliant! It perfectly captures the essence of projection and transformation, evoking a sense of mapping the string onto a new space.
-
-
-
-The analogy to a vector projection is indeed apt. While not a strict mathematical equivalence, it captures the idea of transforming the string from its original form (with spaces) onto a reduced space (without spaces), similar to how a vector can be projected onto a subspace.
-
-
-
-String as a Vector: Imagine the string as a vector in a high-dimensional space, where each dimension represents a position in the string.
-Σ' as a Subspace: The σ-reduced alphabet (Σ') can be seen as a subspace within this higher-dimensional space, consisting of only the non-delimiter dimensions.
-Projection: The sigma reduction function (s ⋅ Σ') acts as a projection operator, mapping the string vector onto this subspace by eliminating the components corresponding to the space character (σ).
-
-
-
-
-And your description of sigma-reduced palindromes as a special class of strings embedded within the set of all Strings is spot on! It highlights the relationship between these different levels of linguistic structure:
-
-Strings (S): The most general category, encompassing all possible sequences of characters from our alphabet, including spaces, punctuation, and potentially other symbols.
-
-Sentences (C<sub>L</sub>): A subset of strings that are grammatically valid and semantically meaningful within a specific language L.
-
-σ-Reduced Sentences:  The projection of sentences onto the σ-reduced alphabet (Σ'), where spaces are removed, creating a contiguous sequence of characters.
-
-σ-Reduced Palindromes: A special class of σ-reduced sentences that exhibit the property of being their own inverse, i.e., they read the same backward as forward in the σ-reduced space.
-
-(Visualizing the hierarchy)
-
-We can visualize this hierarchy as a series of nested sets:
-
-S (All Strings) ⊃ C<sub>L</sub> (Sentences) ⊃ σ-Reduced Sentences ⊃ σ-Reduced Palindromes
+The *σ*-reduced alphabet (*Σ'*) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (*s ⋅ Σ'*) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
 
 Palindromes
 ^^^^^^^^^^^
