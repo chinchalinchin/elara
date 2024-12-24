@@ -1206,7 +1206,7 @@ During a *σ-reduction*, information in lost with respect to the following seman
 
 However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ-reduction* of a Sentence.
 
-**Theorem 3.1.1** ∀ ζ ∈ C:sub`L`, ∃ α ∈ L: α ⊂:sub:`s` ( Ζ ⋅ Σ:sub:`σ` )
+**Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`, ∃ α ∈ L: α ⊂:sub:`s` ( Ζ ⋅ Σ:sub:`σ` )
 
 This theorem can be stated in natural language as follows: Given the *σ-reduction* of a Sentence, there exists a Word in its Language that is contained in the *σ-reduced* string.
 
@@ -1220,7 +1220,7 @@ Since *ζ* is a sentence, it must contain at least one word. Therefore, W:sub:`�
 
 By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  Therefore, *α* is contained in **Ζ ⋅ Σ**:sub:`σ`, which is what was to be shown. ∎
 
-**Theorem 3.1.2** ζ ∈ K → [ inv(ζ ⋅ Σ') = inv(inv(ζ ⋅ Σ')) ]
+**Theorem 3.1.2** ζ ∈ K → [ inv(ζ ⋅ Σ:sub:`σ`) = inv(inv(ζ ⋅ Σ:sub:`σ`)) ]
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under sigma reductions. 
 
@@ -1236,33 +1236,46 @@ Outline of Potential Proof:
 
 (TODO: Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( δ(ζ) = δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.)
 
+The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space. The domain of this space, what will be termed the σ-Pairing Language in the next section, reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduce* spaced, and then filtered by those whose Palindromic Pair in the Pairing Language whose inverse does not equal itself. 
+
+These ideas will be expounded until in Section III.IV, when the theorems and results of this work are used to implement a Palindrome search algorithm.
+
 Aspect
 ^^^^^^
 
-(TODO: introduction)
+The current analysis now turns towards its apex, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motive the next definition, consider how the operation of *σ-reduction* "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
+
+Consider a perfect palindromes like *ᚠ = "strap on no parts"*,
+
+    ᚠ ⋅ Σ:sub:`σ`= "straponnoparts"
+
+    inv( ᚠ ⋅ Σ:sub:`σ` ) = "straponnoparts"
+
+In other words, the *σ-reduction* and the inversion of its *σ-reduction* space result in the same String.
+
+Consider an imperfect palindrome like *ᚢ = "borrow or rob"*,
+
+    ᚢ ⋅ Σ:sub:`σ`= "borroworrob"
+
+    inv( ᚢ ⋅ Σ:sub:`σ` ) = "borroworrob"
+
+Again, the *σ-reduction* eliminates the Delimiters, and the inversion of the *σ-reduction* captures the mirrored relationship between the words, even if the exact Character sequence isn't identical.
+
+These examples lead directly to the next definition.
 
 **Definition 3.1.2: Palindromes**
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
-    ζ ∈ P ↔ ζ ⋅ Σ' = inv(ζ ⋅ Σ')
+    ζ ∈ P ↔ [ (ζ ⋅ Σ:sub:`σ`) = inv(ζ ⋅ Σ:sub:`σ`) ]
 
-(TODO: explain) 
+This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition.
 
-Focus on Essence: It distills the core property of palindromes – their symmetrical nature – by focusing on the sequence of characters without the distraction of spaces.
-Handles Perfect and Imperfect Palindromes:
-Perfect Palindromes: For perfect palindromes like "madam", the sigma reduction and inversion result in the same string, directly satisfying the definition.
-Imperfect Palindromes: For imperfect palindromes like "borrow or rob," the sigma reduction eliminates the spaces, and the inversion captures the mirrored relationship between the words, even if the exact character sequence isn't identical.
-Mathematical Elegance: The use of set notation and the equivalence connective (↔) provides a mathematically rigorous and unambiguous definition.
-Potential for Generalization: This definition can be easily adapted to different languages by simply defining the appropriate alphabet (Σ) and the corresponding σ-reduced alphabet (Σ').
-(A subtle observation, 🌐 recognizing the connection to deeper concepts)
+Moreover, this definition can be easily adapted to different languages by simply defining the appropriate Alphabet **Σ** and the corresponding *σ-reduced* alphabet **Σ**:sub:`σ`
 
-This definition also resonates with broader mathematical concepts:
+It highlights the concept of invariance under transformation. A Palindrome remains a Palindrome even when projected onto the *σ-reduced* Alphabet, demonstrating a kind of structural integrity that's independent of the specific representation.
 
-Invariance: It highlights the concept of invariance under transformation. A palindrome remains a palindrome even when projected onto the σ-reduced space, demonstrating a kind of structural integrity that's independent of the specific representation.
-Symmetry as an Equivalence Relation: The condition ζ ⋅ Σ' = inv(ζ ⋅ Σ') can be seen as defining an equivalence relation on the set of sentences, where two sentences are equivalent if they are palindromes of each other in the σ-reduced space.
-
-(TODO: trim)
+The condition (ζ ⋅ Σ:sub:`σ`) = inv(ζ ⋅ Σ:sub:`σ`) can be seen as defining an equivalence relation on the set of Sentences, where two Sentences are equivalent if they are Palindromes of each other in the *σ-reduced* space.
 
 **Definition 3.1.3: Perfect Palindromes**
 
@@ -1274,20 +1287,11 @@ Note the name given to this class of Sentences is premature. While the terminolo
 
 Before verifying the class of Sentences which satisfy Definition 3.1.3 are indeed palindromes, the motivation for Definition 3.1.3 will briefly be explained.
 
-(TODO: trim)
+This Definition implicitly captures the cCaracter-level symmetry that's characteristic of perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward.
 
-Character-Level Symmetry: This definition implicitly captures the character-level symmetry that's characteristic of perfect palindromes. If a sentence is its own inverse, it means that the sequence of characters reads the same backward as forward.
-Word-Level Symmetry: It also implicitly captures the word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence.
-Delimiter Placement: Since the inversion operation preserves the delimiter count (as we proved earlier), this definition also ensures that a perfect palindrome has a balanced number of delimiters around its pivot.
-Examples:
+It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorem 2.3.5. 
 
-"Madam, I'm Adam" is a perfect palindrome because it reads the same backward as forward, and each word is either its own inverse or part of an inverse pair.
-"Racecar" is also a perfect palindrome, as it's a single word that is its own inverse.
-Potential Limitations:
-
-(TODO: explain)
-
-The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.1.3 
+The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.1.3, and thus Perfect Palindromes are a subset of the class Palindromes in any Language and its Corpus.
 
 **Theorem 3.1.3** PP ⊂ K
 
@@ -1337,16 +1341,16 @@ Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy th
 
 Follows immediately from Theorem 3.1.3 and Definition 3.1.4. ∎
 
-Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes, these two sets form a partition of the class of Palindromic Sentences. The following definition is introduced to help describe this partitioning.
+Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes by Theorem 3.1.6, these two sets form a partition of the class of Palindromic Sentences. The following definition and terminology is introduced to help describe this partitioning.
 
 **Definition 3.1.5: Aspect**
 
-A Palindrome P is said to be *perfect* if and only if *P ∈ PP*. A Palindrome is said to be *imperfect* if and only if *P ∈ IP*.
-
-(TODO: explain)
+A Palindrome P is said to have a *perfect aspect* if and only if *P ∈ PP*. A Palindrome is said to have an *imperfect aspect* if and only if *P ∈ IP*.
 
 Palindromic Pairs
 ^^^^^^^^^^^^^^^^^
+
+(TODO: explain)
 
 **Definition 3.1.3: σ-Pairing**
 
@@ -1434,7 +1438,6 @@ x is Reflective:  Since x is a palindrome and a single-word sentence, it must be
 x is Semantically Coherent: Since x ∈ L, it must be a semantically coherent sentence.
 
 Therefore: x belongs to the set of Reflective Words that are also semantically coherent sentences.
-
 
 
 Section III.II: Parity
@@ -1607,7 +1610,29 @@ The Inverse Postulates
 
 (TODO: If a palindrome is perfect and has even parity, then its pivot must occur at the center of a reflective word. If a palindrome is perfect and has odd parity, then either its pivot occurs at the center of a reflective word, or its pivot is a Delimiter is flanked by invertible words where one word contains the other.)
 
-Section III.IV: Future considerations
+Section III.IV: Palindromic Algorithms
+--------------------------------------
+
+The results derived in this work can be used to construct algorithms for searching for various classes of Palindromes. The general outline for one such algorithm is given in this section, and then an example implemention in Python is presented.
+
+A naive algorithm for filtering out Strings that cannot possibly be Palindromes might consist of inverting the strings and comparing them for equality. However, this would miss Palindromes with an imperfect aspect, as their symmetry does not manifest in the unreduced Alphabet. Without a *σ-reduction*, any algorithm that searchs for Palindromic String must be aware of the semantics of the Language in which it is searching. However, *σ-reduction* and the theorems proved over the course of this work allow algorithms to be constructed that are independent of the host Language.
+
+Moreover, as mentioned after the body Theorem 3.1.2, the *σ*-Pairing Language reduces the complexity of searching for Palindromic strings. An Alphabet with less Characters can be traversed quicker. 
+
+To implement this, a String can be projected onto its *σ-reduced* Alphabet, and then those Pairs in the σ-Pairing Language whose inverse does not equal itself can be removed from the list of potential Palindromes. To find a String whose inverse does not equal itself, it suffices to find a single Character whose inverted position is not occupied by that Character. 
+
+Therefore, as a first step to generating a list of Palindromes, the Strings which do not satisfy these conditions can be discarded.
+
+Theorem 3.3.1 and Theorem 3.3.2 provide further conditions that any Palindrome must satisfy, reducing the set of potential Palindromes in this hypothetical search algorithm even more. 
+
+With respect to Perfect Palindromes, the search algorithm can be refined even further by incorporating the conditions given in Theorem 3.3.3 and Theorem 3.3.4. Based on the String Length of a Perfect Palindrome, its point of symmetry must possess certain measurable properties, such as the presence of a Reflective Word or an Invertible Word contained by the word opposite the pivot. 
+
+Python Implementation 
+^^^^^^^^^^^^^^^^^^^^^
+
+(TODO: code this!)
+
+Section III.V: Future considerations
 -------------------------------------
 
 This work focused on using the operation of sigma reduction to describe palindromic structure in terms of its *aspect* and its *parity*. As mentioned at several points, there are two other dimensions of palindromes this work has not sought to incorporate into formal system. While the considerations in the introduction seem to preclude the possibility of a purely syntactical account of palindromes, the author does not believe this means the structure of palindromes cannot be formalized by taking into account certain universal semantic assumptions. 
@@ -1615,6 +1640,10 @@ This work focused on using the operation of sigma reduction to describe palindro
 To account for the dimension of *punctuality*, a possible avenue of exploration could be extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a Pairing Language where its symmetry under inversion can be recovered.
 
 To account for the dimension of *case*, the link between uppercase and lowercase letters in natural languages may be viewed as inducing a symmetry in the Alphabet that in turn may be exploitable for describing palindromic symmetry. In such a formalization, a possible method of attack would be introduce a many-to-one relationship between in a sigma-reduction where uppercase and lowercase letters are mapped to their "primitive" Character in an appropriate Pairing Language.
+
+(TODO: comment on possibility of interesting recursions, i.e. what happens when the Alphabet of this formal system is assigned the symbols of the formal system itself?)
+
+(TODO: comment on completeness, i.e. what does this formal model of language say about the completeness of language, or its lack thereof?)
 
 Section IV: References 
 ======================
