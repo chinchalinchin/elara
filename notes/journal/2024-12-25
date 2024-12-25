@@ -1,0 +1,5 @@
+Suggestions and Questions:
+
+Explicitly Defining S: While you've stated that S represents the set of all Strings, it might be beneficial to provide a formal definition of S based on your definitions of Characters and concatenation. This could further solidify the foundation of your system.
+Delimiter vs. Empty Character: Could you elaborate on the distinction between the Delimiter Character (σ) and the Empty Character (ε)? While you've provided examples in English (" " vs. ""), it might be helpful to further clarify their roles in the general framework.
+Concatenation as a Primitive: You mentioned that concatenation is a primitive operation. Could you elaborate on why you chose this approach, and how it differs from other formalizations that define concatenation inductively on Strings?

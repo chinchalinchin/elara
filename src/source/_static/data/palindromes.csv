@@ -1,31 +1,5 @@
 Index,Sentence Length,Sum of Word Lengths,Aspect,Fields,Word 1,Word 2,Word 3,Word 4,Word 5,Word 6,Word 7,Word 8,Word 9,Word 10,Word 11,Word 12
-16,6,15,Imperfect,Sentence,in,a,regal,age,ran,I,ε,ε,ε,ε,ε,ε
-,,,,Word Length,2,1,5,3,3,1,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
-17,6,27,Imperfect,Sentence,goddesses,so,pay,a,possessed,dog,ε,ε,ε,ε,ε,ε
-,,,,Word Length,9,2,3,1,9,3,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-18,5,21,Imperfect,Sentence,war,distended,nets,I,draw,ε,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,9,4,1,4,0,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-19,10,39,Imperfect,Sentence,live,dirt,up,a,sidetrack,carted,is,a,putrid,evil,ε,ε
-,,,,Word Length,4,4,2,1,9,6,2,1,6,4,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-20,5,19,Imperfect,Sentence,regard,a,mere,mad,rager,ε,ε,ε,ε,ε,ε,ε
-,,,,Word Length,6,1,4,3,5,0,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-21,6,23,Imperfect,Sentence,trade,ye,no,mere,moneyed,art,ε,ε,ε,ε,ε,ε
-,,,,Word Length,5,2,2,4,7,3,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-22,5,20,Imperfect,Sentence,must,sell,at,tallest,sum,ε,ε,ε,ε,ε,ε,ε
-,,,,Word Length,4,4,2,7,3,0,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
 23,7,19,Imperfect,Sentence,ma,is,as,selfless,as,I,am,ε,ε,ε,ε,ε
 ,,,,Word Length,2,2,2,8,2,1,2,0,0,0,0,0
@@ -51,10 +25,6 @@ Index,Sentence Length,Sum of Word Lengths,Aspect,Fields,Word 1,Word 2,Word 3,Wor
 ,,,,Word Length,2,2,1,3,2,1,2,0,0,0,0,0
 ,,,,Part of Speech,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
-29,6,20,Imperfect,Sentence,never,a,foot,too,far,even,ε,ε,ε,ε,ε,ε
-,,,,Word Length,5,1,4,3,3,4,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
 30,6,15,Imperfect,Sentence,now,sir,a,war,is,won,ε,ε,ε,ε,ε,ε
 ,,,,Word Length,3,3,1,3,2,3,0,0,0,0,0,0
 ,,,,Part of Speech,,,,,,,,,,,,
@@ -67,9 +37,6 @@ Index,Sentence Length,Sum of Word Lengths,Aspect,Fields,Word 1,Word 2,Word 3,Wor
 ,,,,Word Length,6,2,3,0,0,0,0,0,0,0,0,0
 ,,,,Part of Speech,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
-33,11,37,Imperfect,Sentence,are,we,not,drawn,onward,we,few,drawn,onward,to,new,era
-,,,,Word Length,3,2,3,5,6,2,3,5,6,2,3,3
-,,,,Part of Speech,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
 34,2,7,Imperfect,Sentence,dumb,mud,ε,ε,ε,ε,ε,ε,ε,ε,ε,ε
 ,,,,Word Length,4,3,0,0,0,0,0,0,0,0,0,0
@@ -81,18 +48,6 @@ Index,Sentence Length,Sum of Word Lengths,Aspect,Fields,Word 1,Word 2,Word 3,Wor
 ,,,,,,,,,,,,,,,,
 36,2,7,Imperfect,Sentence,gift,fig,ε,ε,ε,ε,ε,ε,ε,ε,ε,ε
 ,,,,Word Length,4,3,0,0,0,0,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-37,6,19,Imperfect,Sentence,god,lived,as,a,devil,dog,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,5,2,1,5,3,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-38,6,20,Perfect,Sentence,god,lived,on,no,devil,dog,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,5,2,2,5,3,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-39,5,13,Perfect,Sentence,god,saw,I,was,dog,ε,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,3,1,3,3,0,0,0,0,0,0,0
 ,,,,Part of Speech,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,,
 40,4,8,Perfect,Sentence,I,did,did,I,ε,ε,ε,ε,ε,ε,ε,ε
@@ -197,24 +152,4 @@ Index,Sentence Length,Sum of Word Lengths,Aspect,Fields,Word 1,Word 2,Word 3,Wor
 ,,,,,,,,,,,,,,,,
 65,4,23,Imperfect,Sentence,to,oscillate,metallic,soot,ε,ε,ε,ε,ε,ε,ε,ε
 ,,,,Word Length,2,9,8,4,0,0,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-66,9,19,Imperfect,Sentence,was,it,a,bar,or,a,bat,I,saw,ε,ε,ε
-,,,,Word Length,3,2,1,3,2,1,3,1,3,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-67,6,13,Imperfect,Sentence,was,it,a,bat,I,saw,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,2,1,3,1,3,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-68,9,19,Imperfect,Sentence,was,it,a,car,or,a,cat,I,saw,ε,ε,ε
-,,,,Word Length,3,2,1,3,2,1,3,1,3,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-69,6,13,Imperfect,Sentence,was,it,a,hat,I,saw,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,2,1,3,1,3,0,0,0,0,0,0
-,,,,Part of Speech,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,
-70,6,13,Imperfect,Sentence,was,it,a,rat,I,saw,ε,ε,ε,ε,ε,ε
-,,,,Word Length,3,2,1,3,1,3,0,0,0,0,0,0
 ,,,,Part of Speech,,,,,,,,,,,,

@@ -53,9 +53,13 @@ Section I: Defintions
 
 Some general notation adopted throughout the course of this work is given below.
 
-1. Let **N**:sub:`n` be the set of natural numbers starting at 1 and ending at *n*, 
+1. **N**:sub:`n` will represent the set of natural numbers starting at 1 and ending at *n*, 
 
     N:sub:`n`= { 1, 2, ... , n }
+
+2. The cardinality of a set **A** will be denoted | A |
+
+3. The ∎ symbol will be used to denote the ending of all Definitions, Examples and Proofs. 
 
 Section I.I: Strings
 --------------------
@@ -83,11 +87,9 @@ The aggregate of all Characters is called an *Alphabet* and is denoted by an upp
 
     Σ = { *ε*, *σ*, *𝔞*, *𝔟*,  *𝔠*, ... }
 
-The number of elements in an Alphabet is denoted | Σ |. In general, throughout the course of this work, the cardinality of a set **A** will be denoted | A |. 
-
 It will sometimes be necessary to refer to indeterminate Characters, so notation is introduced for Character Variables,
 
-    4. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used with Coptic letters to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
+    1. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used with Coptic letters to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
 
 Concatenation 
 ^^^^^^^^^^^^^
@@ -101,7 +103,7 @@ Colloquially, *ⲁ* is the String that results from placing *ⲃ* behind *ⲁ*. 
     1. Basis Clause: ∀ ⲁ ∈ Σ: ⲁε = ⲁ
     2. Inductive Clause: ∀ ⲁ, ⲃ, ⲅ ∈ Σ: ⲁ(ⲃⲅ) = (ⲁⲃ)ⲅ
     3. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
-    4. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ))
+    4. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ)) ∎
 
 The first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. The second clause is the inductive step which allows the concatenation of Characters into Strings of arbitrary length through recursion.
 
@@ -119,7 +121,7 @@ In order to rectify this, the first Axiom is introduced,
 
     ∀ ⲁ ∈ Σ: ⲁ ∈ S
 
-This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with Definition 1.1.1, immediately populates the set of all Strings with an uncountably infinite domain of objects (See Theorem 1.1.1 for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet.
+This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with Definition 1.1.1, immediately populates the set of all Strings **S** with an uncountably infinite domain of objects (See Theorem 1.1.1 for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet. In other words, Axiom C.1 in conjunction with Definition 1.1.1 ensure the domain is non-Empty. 
 
 **Example** Let *s = 𝔞𝔟𝔠* and *t = 𝔡𝔢𝔣*. The concatenation of these two Strings *st* is written,
 
@@ -129,7 +131,7 @@ Using the inductive clause, this concatenation can be grouped into simpler conca
     
     𝔞(𝔟(𝔠(𝔡(𝔢𝔣)))) = (((((𝔞𝔟)𝔠)𝔡)𝔢)𝔣) = 𝔞𝔟𝔠𝔡𝔢𝔣
 
-Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣*
+Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣* ∎
 
 Notation
 ^^^^^^^^
@@ -168,9 +170,9 @@ Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t`
 
     (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`l(t)`: ((i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
 
-With this definition, the length of String in the formalization can be defined as,
+The length of String in the formalization can be written,
 
-    l(t) = | E:sub:`t` |
+    l(t) = | E:sub:`t` | ∎
 
 Note the E:sub:`t` is a set of *ordered pairs*, not a set of Characters. This allows for repeated Characters to be counted in a String's length.
 
@@ -186,7 +188,7 @@ By Definition 1.1.2,
 
 Therefore, 
 
-    | E:sub:`t` | = 6
+    | E:sub:`t` | = 6 ∎
 
 This formulization, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-Empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters.
 
@@ -211,7 +213,7 @@ Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and *
     
 If and only if there exists a strictly increasing function *f*: **N**:sub:`u` *→* **N**:sub:`t` such that:
 
-    ∀ i ∈ N:sub:`u`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
+    ∀ i ∈ N:sub:`u`: 𝔞:sub:`i` = 𝔟:sub:`f(i)` ∎
 
 This definition essentially states that *t* is contained in *u* if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
 
@@ -237,7 +239,7 @@ The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies th
 
 A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
 
-    ∀ i, j ∈ N:sub:`s`:  (i < j) →  f(j) = f(i) + (j - i).  
+    ∀ i, j ∈ N:sub:`s`:  (i < j) →  f(j) = f(i) + (j - i) ∎
     
 This additional constraint on *f* ensures that the indices of the larger word in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller word. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
 
@@ -255,7 +257,7 @@ Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and *
 
 If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`t` *→* **N**:sub:`u` such that:
 
-    ∀ i ∈ N:sub:`t`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
+    ∀ i ∈ N:sub:`t`: 𝔞:sub:`i` = 𝔟:sub:`f(i)` ∎
 
 The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections.
 
@@ -393,6 +395,10 @@ The only way for step 1 to be consistent with step 4 is if the first conjunct of
 
 But *i* was assumed to be an arbitrary Character index in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
 
+Theorem 1.2.2 and 1.2.3 are the necessary logical pre-conditions for Words to arise from Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measure String length must be introduced. This definition prevents Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content.
+
+Language is materially different from its un-structured domain, but this is not guaranteed by Theorem 1.2.1 - Theorem 1.2.3. Rather, Theorem 1.2.1 - Theorem 1.2.3 provide the foundation. To build on this foundation, an additional Axiom governing Word discovery is introduced in the next section.
+
 Axioms
 ^^^^^^
 
@@ -402,27 +408,25 @@ Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**.
 
 **Axiom W.1: The Delimiter Axiom ** 
 
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ ) ∎
 
-In essence, this Axiom capture the common-sense notion that a Word from a Language cannot contain a Delimiter.
+While the definition of String length precludes the inclusion of the Empty Character in a Word, there is no such restriction on the Delimiter. In essence, this Axiom capture the common-sense notion that a Word from a Language cannot contain a Delimiter; Instead, Delimiters are what separate Words from one another in a String. 
 
 Inversion
 ^^^^^^^^^
 
 Informally, the *Inverse* of a String is the reversed sequence of Characters in a String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition will be elucidated. 
 
-**Definition 1.2.1: String Inversion** Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. Let **N**:sub:`s` be the set,
+**Definition 1.2.1: String Inversion** 
 
-    { 1, 2, ... , l(s) }
+Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. 
 
-Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:sup:`th` character of the String *t*. Let **N**:sub:`t` be the set,
-
-    { 1, 2, ... , l(t)}. 
+Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:sup:`th` character of the String *t*. 
     
 *t* is called the Inverse of *s* and is denoted *inv(s)* if it satisfies the following conditions, 
 
     1. l(t) = l(s) 
-    2. ∀ i ∈ N:sub:`s`, j ∈ N:sub:`t`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+    2. ∀ i ∈ N:sub:`l(s)`, j ∈ N:sub:`l(t)`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ] ∎
 
 Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
@@ -444,37 +448,29 @@ However, this particular example is (intentionally) misleading. In this example,
 | door | x       |
 | book | x       |
 
-It should be clear the intent is to define a class of Words whose constituents belong to a class of *Invertible Words* if and only if their Inverse exists in the Language. As a first step towards this definition, String Inversion was introduced and formalized. In the next section, String Inversion will provide a subdomain in the domain of discourse over which to quantify the conditions that are to be imposed on the class of *Invertible Words*, i.e. the class of Words whose Inverses are also Words. 
+The intent is to define a class of Words whose elements belong to it if and only if their Inverse exists in the Language. As a first step towards this definition, String Inversion was introduced and formalized. In the next section, String Inversion will provide a subdomain in the domain of discourse over which to quantify the conditions that are to be imposed on the class of *Invertible Words*, i.e. the class of Words whose Inverses are also Words. 
 
 Before defining the class of Invertible Words in the next section, this section is concluded with a theorem that strengthens the definition of String Inversion. This theorem will be used extensively in the subsequent sections.
 
-**Theorem 1.2.2** *inv(inv(s)) = s*
+**Theorem 1.2.4** *inv(inv(s)) = s*
 
-Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`. Let **N**:sub:`s` be the set,
+Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`. 
 
-    { 1, 2, ... , l(s) }
-
-Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`. Let **N**:sub:`t` be the set,
-
-    { 1, 2, ... , l(t) }
+Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`.
 
 By the Definition 1.2.1,
 
     1. l(t) = l(s)
-    2. ∀ i ∈ N:sub:`s`, ∀ j ∈ N:sub:`t`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = *𝔞*:sub:`i` ) ]
+    2. ∀ i ∈ N:sub:`l(s)`, ∀ j ∈ N:sub:`l(t)`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = *𝔞*:sub:`i` ) ]
 
-Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Let **N**:sub:`u` be the set,
+Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.1 again,
 
-    { 1, 2, ... , l(u) }
-
-Applying Definition 1.2.1 again,
-
-    3. l(u) = l(t)
-    4. ∀ j ∈ N:sub:`t`, ∀ k ∈ N:sub:`u`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
+    1. l(u) = l(t)
+    2. ∀ j ∈ N:sub:`l(t)`, ∀ k ∈ N:sub:`l(u)`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
  
-Since *l(t) = l(s)* (step 1) and **N**:sub:`t` *=* **N**:sub:`s` (by definition of natural numbers), these substitions may be made in step 4,
+Since *l(t) = l(s)* (step 1) and **N**:sub:`l(t)` *=* **N**:sub:`l(s)` (by definition of natural numbers), these substitions may be made in step 4,
 
-    5. ∀ i ∈ N:sub:`s`, ∀ k ∈ N:sub:`u`: [ ( k = l(s) - (l(s) - i + 1) + 1 )  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
+    5. ∀ i ∈ N:sub:`l(s)`, ∀ k ∈ N:sub:`l(u)`: [ ( k = l(s) - (l(s) - i + 1) + 1 )  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
 
 The index *k* may be simplified,
 
@@ -482,34 +478,34 @@ The index *k* may be simplified,
 
 Therefore,
     
-    7. ∀ i ∈ N:sub:`s`, ∀ k ∈ N:sub:`u`: [ ( k = i)  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
+    7. ∀ i ∈ N:sub:`l(s)`, ∀ k ∈ N:sub:`l(u)`: [ ( k = i)  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
 
 This may be rewritten, noting the condition *k = i*,
 
-    8. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) 
+    8. ∀ i ∈ N:sub:`l(s)``: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) 
 
 Now, substitute the definition of *𝔟*:sub:`j` from step 2 (where *j = l(s) - i + 1*) into the equation for  *𝔠*:sub:`k`,
 
-    9. ∀ i ∈ N:sub:`s``: 𝔠:sub:`k` = 𝔞:sub:`i` 
+    9. ∀ i ∈ N:sub:`l(s)``: 𝔠:sub:`i` = 𝔞:sub:`i` 
 
-Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same characters in the same order (𝔠:sub:`k` = 𝔞:sub:`i`  for all i), it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
+Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (𝔠:sub:`i` = 𝔞:sub:`i`  for all *i*), it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
 Concatenation
 ^^^^^^^^^^^^^
 
-Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
+Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every Word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
 
-Let *α* and *β* be two words with the following set representations:
+Let *α* and *β* be two words with the following Character level set representations:
 
-    Α = { (1,  𝔞:sub:`1`), (2,  𝔞:sub:`2`), ... , (n,  𝔞:sub:`n`) }
+    Α = { (1,  𝔞:sub:`1`), (2,  𝔞:sub:`2`), ... , (l(α),  𝔞:sub:`l(α)`) }
 
-    Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (m, 𝔟:sub:`m`)}
+    Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (l(β), 𝔟:sub:`l(β)`)}
 
-Here *n* and *m* are the *cardinalities* of the set representations of **Α** and **Β**, | Α | and | Β | respectively. In other words, *n* and *m* are not the String lengths, *l(α)* and *l(β)*. Definition 1.1.2, where length was formalized in the current system, excluded the Empty character from its calculation in order to ensure the infinite concatenation of an Empty Character does not alter the content of Word. This slight deviation from the notion of length requires special care when formulating the definition of Word concatenation. 
+By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the String *t* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of *t* is given by,
 
-By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the word *γ* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of γ is given by,
+    T = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`2`), ..., (l(α),  𝔞:sub:`l(α)`), (l(α) + 1, 𝔟:sub:`1`), (l(α) + 2, 𝔟:sub:`2`), ..., (l(α) + l(β), 𝔟:sub:`l(β)`)}
 
-    γ = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`i`), ..., (n,  𝔞:sub:`n`), (n + 1, 𝔟:sub:`1`), (n + 2, 𝔟:sub:`2`), ..., (n + m, 𝔟:sub:`m`)}
+Note *t* is not necessarily a Word in the Language. 
 
 Section I.III: Word Classes 
 ---------------------------
@@ -531,17 +527,15 @@ The concept of *Reflective Words* can be easily understood by examining some exa
 | level      | 
 | civic      |
 
-From this list, it should be clear what is meant by the notion of *reflective*: Reflective Words are Words that are unchanged by a String Inversion. This property will be formally defined as follows.
+From this list, it should be clear what is meant by the notion of *reflective*. Reflective Words are those Words whose meaning is unchanged by a String Inversion. However, the semantic content that is preserved under inversion is not the primitive property that primarily explains this invariance. The invariance of the semantic content under inversion is the result of Character level symmetries. 
+
+Rather than attempt to define Reflective Words as the class of Words that are their own Inverses, a different approach will be taken that highlights the Character level symmetries that exist in these class of Words. It will then be proven the class of Words which satisfy this definition are exactly those Words that are their own Inverses.
 
 **Definition 1.3.1: Reflective Words** 
 
-Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Let *l(α)* be the length of *α*. Let **N**:sub:`α` be the set,
+Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Then the set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
 
-    { 1, 2, ... , l(α) }
-
-Then the set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
-
-    α ∈ R ↔ [ ∀ i ∈ N:sub:`α`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ]
+    α ∈ R ↔ [ ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ] ∎
 
 A Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. 
 
@@ -553,20 +547,20 @@ In natural language, this theorem can be stated as: A Word is Reflective if and 
 
 (→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.1, 
 
-    1. ∀ i ∈ N:sub:`α`: 𝔞:sub:`i` = 𝔞:sub:`l(α) - i`
+    1. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔞:sub:`l(α) - i`
 
 Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.1,
 
     2. l(β) = l(α)
-    3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`β`: [ ( j = l(α) - i + 1 ) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+    3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`β`: [ ( j = l(α) - i + 1 ) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
    
 Substitute *j = l(α) - i + 1* into the equation from step 3 and remove the quantifiation over *j*:
 
-    4. ∀ i ∈ N:sub:`α`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
+    4. ∀ i ∈ N:sub:`l(α)`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
 
 Now, use the property of Reflective Words from step 1 (𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ) and substitute it into the equation from step 4:
 
-    5.  4. ∀ i ∈ N:sub:`α`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
+    5.  4. ∀ i ∈ N:sub:`l(α)`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
 
 Note that the index on the left side of this equation (l(α) - i + 1) corresponds to the character at position *i* in the reversed string β.  This is because the index *j* in the definition of String Inversion maps to the *l(α) - i + 1*:sup:`th`` position in the original string.
 
@@ -577,19 +571,19 @@ Since 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`for all i ∈ N:sub:`α`, a
 Let *𝔞*:sub:`i` be the Characters in *α* and let *𝔟*:sub:`j` be the Characters in *inv(α)*. By definition of String Inversion,
 
     1. l(α) = l(inv(α))
-    2. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`inv(α)`: [ ( j = l(α) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+    2. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(inv(α))`: [ ( j = l(α) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
 
 Since *α = inv(α)*, 𝔞:sub:`j` can be substituted for 𝔟:sub:`j` in the step 2,
 
-    3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`inv(α)`: [ ( j = l(α) - i + 1 ) → ( 𝔞:sub:`j` = 𝔞:sub:`i` ) ]
+    3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(inv(α))`: [ ( j = l(α) - i + 1 ) → ( 𝔞:sub:`j` = 𝔞:sub:`i` ) ]
 
 Since the conditional inside of the quantification is only true when *j = l(α) - i + 1*, *j* can be substituted into the consequent of the conditional and the quantification over *j* can be dropped. Therefore, step 3 can be rewritten as,
 
-    4. ∀ i ∈ N:sub:`α`: 𝔞:sub:`l(α) - i + 1` =  𝔞:sub:`i`
+    4. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`l(α) - i + 1` =  𝔞:sub:`i`
 
 Similar to the previous part of the proof, the index on the left side (*l(α) - i + 1*) corresponds to the Character at position *i* in the reversed string, which is *α* itself in this case. Therefore, 
 
-    5. ∀ i ∈ N:sub:`α`: 𝔞:sub:`i` =  𝔞:sub:`a<sub>l(α) - i`
+    5. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` =  𝔞:sub:`l(α) - i`
 
 This condition satisfies the definition of Reflective Words, so *α ∈ R*. ∎ 
 
@@ -598,9 +592,11 @@ Invertible Words
 
 As discussed previously, the concept of *Invertible* is exemplified in the pair of English words "*time*" and "*emit*". An *Invertible Word* is a Word whose inverse is part of the same Language **L**. This notion can now be made more precise with the terminology introduced in prior sections.
 
-**Definition 1.3.2: Invertible Words** Let *α* be any Word in a Language **L**. Then the set of Invertible Words **I** is defined as the set of α which satisfy the open formula,
+**Definition 1.3.2: Invertible Words** 
 
-    α ∈ I ↔ inv(*α*) ∈ L 
+Let *α* be any Word in a Language **L**. Then the set of Invertible Words **I** is defined as the set of α which satisfy the open formula,
+
+    α ∈ I ↔ inv(α) ∈ L ∎
 
 A Word *α* will be referred to as *invertible* if it belongs to the class of Invertible Words.
 
@@ -616,7 +612,7 @@ Consider *inv(α)*. To show that it's invertible, it must be shown,
 
     2. inv(inv(α)) ∈ L. 
 
-By Theorem 1.2.2,
+By Theorem 1.2.4,
 
     3. inv(inv(α)) = α
     
@@ -634,30 +630,30 @@ Therefore, *inv(α)* is also an Invertible Word. ∎
 
 Assume *α ∈ R*. *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.2,
 
-    1. ∀ i ∈ N:sub:`α`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i``
+    1. ∀ i ∈ N:sub:`l(α)`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i``
 
 Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.1,
 
     2. l(β) = l(α)
-    3. ∀ i ∈ N:sub:`α`, ∀ j ∈ N:sub:`β``: (j = l(α) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` )
+    3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(β)``: (j = l(α) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` )
 
 Substitute (*j = l(α) - i + 1 *) into the consequent of the conditional in step 3 and drop the quantification over *j*,
 
-    4. ∀ i ∈ N:sub:`α`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
+    4. ∀ i ∈ N:sub:`l(α)`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
 
 Substituting the property of Reflective Words from step 2 into step 4,
 
-    5. ∀ i ∈ N:sub:`α`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
+    5. ∀ i ∈ N:sub:`l(α)`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
 
 Note that the index on the left side of the equation in step 5 (*l(α) - i + 1*) corresponds to the character at position *i* in the reversed string *β*.
 
-Since *𝔟*:sub:`l(α) - i + 1` *= 𝔞*:sub:`l(α) - i` for *i ∈* **N**:sub:`α`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore,
+Since *𝔟*:sub:`l(α) - i + 1` *= 𝔞*:sub:`l(α) - i` for *i ∈* **N**:sub:`l(α)`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore,
 
     6. α = β = inv(α)
 
 By assumption, *α ∈ L*. From step 6, this implies *inv(α) ∈ L*. By Definition 1.3.2, this implies α ∈ I. In summary, the assumption α ∈ R implies α ∈ I. Therefore, every element in R is also an element in I, which means R ⊂ I. ∎ 
 
-In the context of infinite sets such as **L** and **S**, "even" and "odd" refer to whether the set can be partitioned into two disjoint subsets of equal cardinality.
+In the context of (potentially) infinite sets such as **L** and **S**, "even" and "odd" refer to whether the set can be partitioned into two disjoint subsets of equal cardinality.
 
     1. Even Cardinality: An infinite set has even cardinality if it can be put into a one-to-one correspondence with itself, with each element paired with a distinct element.
     2. Odd Cardinality: An infinite set has odd cardinality if, after pairing each element with a distinct element, there is one element left over.
@@ -685,8 +681,6 @@ Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and a
 
 Compound Words 
 ^^^^^^^^^^^^^^
-
-(TODO: This section is not necessary to prove the main results. Consider removing this definition. I am keeping it, just in case it is required in a proof down the line.)
 
 **Definition 1.3.3: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 
@@ -719,10 +713,12 @@ In natural language: A word w in a language L is a compound invertible word if a
 Section II: Sentences
 =====================
 
-The work so far has formally constructed a system for representing the primitive artifacts of a natural language, Characters (Alphabets) and Words (Language), without appealing to their interpretation in any way except insofar that it takes a stance on their *existence*. As the analysis moves up the chain of linguistic artifacts to the next highest level, Sentences, it is tempting to start incorporating semantic features into the theory. However, the objective is to derive palindromic conditions independent of a particular semantic interpretation. Therefore, as the analysis proceeds, special care will be given to the definition of a *Sentence*.
+The work so far has formally constructed a system for representing the first two levels of artifacts from a natural language, Characters (Alphabets) and Words (Language), without appealing to their interpretation in any way except insofar that it takes a stance on their *existence*. As the analysis moves up the chain of linguistic artifacts to the next highest level, Sentences (Corpuses), it is tempting to start incorporating semantic features into the theory. However, the objective is to derive palindromic conditions independent of a particular semantic interpretation. Therefore, as the analysis proceeds, special care will be given to the definition of a *Sentence* and its *Corpus*.
 
 Section II.I: Definitions
 -------------------------
+
+In this section, the final level of the semantic hierarchy will be defined. 
 
 Corpus
 ^^^^^^
@@ -820,7 +816,7 @@ Length
 
 The notion of String Length was introduced in Section I.I as a way of measuring the number of non-Empty Characters in a String *s*, denoted *l(s)*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different dimension of "spatiality" in the domain of a Language and its Corpus: Sentence Length. Intuitively, the length of a Sentence is the number of Words it contains. However, since a Sentence has been defined as class of Strings, this means Sentences contain Delimiter Characters; specifically, the Words of a Language are separated by Delimiters in the Sentences of its Corpus. Therefore, the length of a Sentence is defined in terms of its set
 
-**Definition 2.1.6: Sentence Length**
+**Definition 2.1.5: Sentence Length**
 
 Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the word-level set representation of *ζ*, as defined in Definition 2.1.3. The length of the Sentence *ζ*, denoted by *Λ(ρ)*, is defined as the cardinality of the set **W**:sub:`ζ`,
 
@@ -848,17 +844,17 @@ While
 
     | ᚠ | = 12
 
-This example demonstrates the essential difference in the notions of length that have been introduced. Indeed, the analysis has accumulated a myriad of ways of describing length. It is worthwhile to list them in a descending hierarchy and clarify the distinctions. Let *s* be a String with Character-level representation **S** and Word-level representation **W**:sub:`s`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven). Terminology is introduced in parenthesis to distinguish these notions of length,
+This example demonstrates the essential difference in the notions of length that have been introduced. Indeed, the analysis has accumulated a myriad of ways of describing length. It is worthwhile to list them in a descending hierarchy and clarify the distinctions. Let *s* be a String with Character-level representation **S** and Word-level representation **W**:sub:`s`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven in Theorem 2.1.2). Terminology is introduced in parenthesis to distinguish these notions of length,
 
-- | S | (Character Length): The number of Characters contained in a String. 
-- l(s) (String Length): The number of non-Empty Characters contained in a String.
-- Λ(s) (Word Length): The number of Words contained in a String 
+   - | S | (Character Length): The number of Characters contained in a String. 
+   - l(s) (String Length): The number of non-Empty Characters contained in a String.
+   - Λ(s) (Word Length): The number of Words contained in a String 
 
 Note the first two levels are purely syntactical. Any String *s* will have a length *l(s)* and a cardinality | S |. However, not every String possesses Word length, *Λ(s)*. Word length contains semantic information. While the presence of Word length does not necessarily mean the String is semantic, e.g. "asdf dog fdsa", Word length does signal an *extension* of Strings into the semantic domain.
 
 The following theorem proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
-**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`α ∈ W_ζ` l(α) ≥ Λ(ζ)
+**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
 
 This theorem can be stated in natural language as follows: For any sentence *ζ* in a Corpus C:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
 
@@ -868,15 +864,36 @@ Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of 
 
 For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(*α*:sub:`i`)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
+**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L`: | Z | ≥ l(ζ) ≥ Λ(ζ)
+
+(TODO: trim)
+
+Let ζ be an arbitrary Sentence in C:sub:`L`
+
+To show * | Z | ≥ l(ζ)*, note the following: | Z | represents the total number of Characters in the Sentence, including Delimiters and Empty Characters (if any). l(ζ) represents the number of non-Empty Characters in the Sentence. Since | Z | counts all Characters, while l(ζ) only counts a subset of those Characters, it follows that |Z| ≥ l(ζ).
+l(ζ) ≥ Λ(ζ):
+
+Let W:sub:ζ be the Word-level representation of ζ.
+By Definition 2.1.6, Λ(ζ) = |W:sub:ζ|, which is the number of Words in ζ.
+Each Word in W:sub:ζ consists of one or more non-Empty Characters (by Theorem 1.2.3).
+Therefore, the total number of non-Empty Characters in ζ (l(ζ)) must be greater than or equal to the number of Words in ζ (Λ(ζ)).
+This can be more formally expressed using Theorem 2.1.1: ∑:sub:(i, α) ∈ W_ζ l(α) ≥ Λ(ζ)
+Since ∑:sub:(i, α) ∈ W_ζ l(α) represents the sum of the lengths of all Words in ζ, which is equivalent to l(ζ), we have l(ζ) ≥ Λ(ζ).
+Combining (1) and (2), we get: |Z| ≥ l(ζ) ≥ Λ(ζ).
+
+Therefore, for any Sentence ζ ∈ C:sub:L, the Character Length is greater than or equal to the String Length, which is greater than or equal to the Word Length. ∎
+
+(TODO: trim)
+
 Setion II.II: Sentence Classes 
 ------------------------------
 
-Similarly to the classification of Words, Sentences will now be classified according to their syntactical properties. In particualr, in the study of palindromic structures, the notion of *Invertible Sentences* will be required. The definition, as is fitting in a work focused on palindromes, will mirror the definition of an *Invertible Word*
+Similarly to the classification of Words, Sentences will now be classified according to their syntactical properties. In particular, in the study of palindromic structures, the notion of *Invertible Sentences* will be required. The definition, as is fitting in a work focused on palindromes, will mirror the definition of an *Invertible Word*
 
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
-The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of Definition 1.3.2  and Theorem 1.3.2 almost exactly.
+The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of Definition 1.3.2 and Theorem 1.3.2 almost exactly.
 
 **Definition 2.2.2: Invertible Sentences** Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
 
@@ -898,7 +915,7 @@ To show that inv(ζ) is invertible, it must be shown that,
 
     2. inv(inv(ζ)) ∈ C:sub:`L`
 
-From Theorem 1.2.2, for any string *s*, 
+From Theorem 1.2.4, for any string *s*, 
 
     3. inv(inv(s)) = s.  
 
@@ -924,7 +941,7 @@ By Definition 2.2.2,
     
     8. inv(inv(ζ)) ∈ C:sub:`L`
 
-Applying Theorem 1.2.2,
+Applying Theorem 1.2.4,
 
     9. inv(inv(ζ)) = ζ.
 
@@ -967,23 +984,21 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom W.1: The Delimiter Axiom ** 
 
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
-
-**Axiom W.1: The Empty Axiom ** 
-
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ ε )
+    ∀ α ∈ L: ∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ 
 
 **Axiom S.1: The Containment Axiom**
 
-    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L` : α  ⊂:sub:`s` ζ
+    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L`: α  ⊂:sub:`s` ζ
 
 **Axiom S.2: The Extraction Axiom**
 
     ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: (i, α:sub:`i`) ∈ W:sub:`ζ` → α:sub:`i` ∈ L
 
+Note the Delimiter Axiom has been revised to quantify over a Language, rather than quantifying over **S** while making the quantified expression conditional on the String belonging to a Language. 
+
 It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures. 
 
-To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Delimiter Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. The Empty Axiom ensures Words in a Language do not possess null content in the form of Empty Characters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
+To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Delimiter Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
 
 The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories. Axiom S.1 asserts that for every Word in a Language there is at least one Sentence in a Corpus that contains it. In other words, a Word cannot exist in a Language without being included in a Sentence. This Axiom captures an inextricable link between the metamathematical concepts of Sentence and Word: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation.
 
@@ -1009,23 +1024,37 @@ These axioms are used to prove the following theorems.
 
 This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Sentence Language is a subset of the Language **L**.
 
-Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every element of W:sub:`ζ` belongs to **L**, we can conclude that W:sub:`ζ`  is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
+Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ`  is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
 
-    ∀ ζ ∈ C:sub:`L`: W:sub:`ζ` ⊂ L 
+    ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L 
     
 In other words, every (Word-level set representation of a) Sentence from a Corpus is a subset of the Language **L**. ∎
 
-
-
 **Theorem 2.3.2** ∀ ζ ∈ C:sub:`L`, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ]
 
-(TODO: This should be able to be proven this using Theorem 1.2.1.
-1. From Theorem 1.2.1, it use known the Empty Character is contained in no Word from a Language.
+Proof:
 
-)
+Let ζ be an arbitrary Sentence in C:sub:L and let t be an arbitrary String in S.
 
-∀ α ∈ L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` α) ]
+Assume, for the sake of contradiction, that (t = ε) ∧ (t ⊂:sub:s ζ).
 
+Since t ⊂:sub:s ζ, by Definition 1.1.4 of Containment, there exists a strictly increasing and consecutive function f: N:sub:l(t) → N:sub:l(ζ) such that ∀ i ∈ N:sub:l(t): 𝔞:sub:i = 𝔟:sub:f(i), where 𝔞:sub:i represents the Characters in t and 𝔟:sub:f(i) represents the Characters in ζ.
+
+However, since t = ε, by Definition 1.1.2 of String Length, l(t) = 0. This implies that N:sub:l(t) = ∅ (the empty set).
+
+Since N:sub:l(t) = ∅, the function f in step 2 cannot exist, as there are no elements in the domain to map to the codomain.
+
+This contradicts our assumption in step 2 that such a function f exists.
+
+Therefore, our initial assumption in step 1 that (t = ε) ∧ (t ⊂:sub:s ζ) must be false.
+
+Hence, ¬[ (t = ε) ∧ (t ⊂:sub:s ζ) ] is true.
+
+Since ζ and t were arbitrary, we can generalize this result:
+
+∀ ζ ∈ C:sub:L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:s ζ) ] ∎
+
+(TODO: trim)
 
 
 
@@ -1043,27 +1072,84 @@ By Axiom S.3, every Word in the Word-level representation of inv(ζ) belongs to 
 
 
 
+Example:
+
+Consider the Sentence ζ = "This is a test."
+
+Its Character-level representation is:
+
+Z = (T, h, i, s, σ, i, s, σ, a, σ, t, e, s, t, .)
+
+Now, let's reverse Z to get the Character-level representation of inv(ζ):
+
+Reverse(Z) = (., t, s, e, t, σ, a, σ, s, i, σ, s, i, h, T)
+
+Notice that the Delimiters (σ) still appear at the same indices in both Z and Reverse(Z), just in reversed order.
+
+In Z, the Delimiters are at indices 4, 7, and 9.
+In Reverse(Z), the Delimiters are at indices 9, 7, and 4 (counting from the beginning of the reversed string).
+Why this happens:
+
+When we reverse a String at the Character level, we're essentially flipping the order of all Characters. This includes the Delimiters.  So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same.
+
+Implications for the Delimiting Algorithm:
+
+Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means that when we apply the algorithm to the reversed Character-level representation, we'll still get the same Words, but in reversed order and inverted.
+
+This is why the Word-level representation of inv(ζ) in Corollary 2.3.4.1 is the reordered inverses of the Words in ζ.
+
+In our example:
+
+Applying the Delimiting Algorithm to Z gives us:
+
+W:sub:ζ = ("This", "is", "a", "test")
+
+Applying the Delimiting Algorithm to Reverse(Z) gives us:
+
+W:sub:inv(ζ) = ("tset", "a", "si", "siht")
+
+
+
+
+Corollary 2.3.4.1:
+
+Let ζ be a Sentence in C:sub:L with Word-level representation:
+
+W:sub:ζ = (α:sub:1, α:sub:2, ..., α:sub:Λ(ζ))
+
+Then, the Word-level representation of inv(ζ) is:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+
+Proof:
+
+Character-level representation: Let Z be the Character-level representation of ζ. By Definition 1.2.1 (String Inversion), the Character-level representation of inv(ζ) is the reverse of Z.
+
+Delimiter positions: The Delimiters in Z and the reverse of Z appear at the same indices, just in reversed order.
+
+Word boundaries:  Since the Delimiting Algorithm (Definition 2.1.4) identifies Words based on Delimiter positions, the Words in inv(ζ) will be the inverses of the Words in ζ, but in reversed order.
+
+Word-level representation: This implies that the Word-level representation of inv(ζ) is indeed the reordered inverses of the Words in ζ, as stated in the corollary. ∎
+
+
+
 **Theorem 2.3.4** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
 This theorem can be stated in natural language as follows: A Sentence is Invertible if its Words are Invertible.
 
-Assume *ζ ∈* **K**. Let N:sub:`Λ(ζ)` be the set, 
+Assume *ζ ∈* **K**. Consider the Word-level representation of *ζ*.
 
-    1. N:sub:`Λ(ζ)` = { 1, 2, ... , Λ(ζ) }
+    1. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
 
-And consider the Word-level representation of *ζ*.
+By Definition 1.2.1 AND THE THEOREM PROVED ABOVE, the Word-level representation of *inv(ζ)* is 
 
-    2. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`n`)
-
-By Definition 1.2.1, the Word-level representation of *inv(ζ)* is 
-
-    3. W:sub:`inv(ζ)` = ( inv(α:sub:`n`), inv(α:sub:`n-1`), ... , inv(α:sub:`1`) ).
+    3. W:sub:`inv(ζ)` = ( inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ... , inv(α:sub:`1`) )
 
 By Theorem 2.2.3, every Word in *inv(ζ)* belongs to **L**.  Therefore, each inv(α:sub:`i`) belongs to **L**,
 
 By the Definition 1.3.2, each α:sub:`i` ∈ I. Therefore, all words in ζ are invertible. Formally,
 
-    4. (∀ α ∈ W:sub:`ζ`: α ∈ I) ∎
+    4. (∀ α ∈ L:sub:`ζ`: α ∈ I) ∎
 
 The contrapositive of Theorem 2.2.4 provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.
 
@@ -1120,7 +1206,7 @@ From this example, it can be seen the Delimiter Count function takes a Sentence 
 
 In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its delimiter count plus one.
 
-Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`` is formed by splitting **Ζ** at each Delimiter Character *σ*.
+Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`ζ` is formed by splitting **Ζ** at each Delimiter Character *σ*.
 
 Each word in **W**:sub:`ζ` corresponds to a contiguous subsequence of non-delimiter characters in **Ζ**.
 
@@ -1129,6 +1215,30 @@ Since delimiters separate words, the number of words in the sentence is always o
 herefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to the delimiter count of *Δ(ζ)* plus one,
 
     | W:sub:`ζ` | = Δ(ζ) + 1. ∎
+
+A more explicit version of Theorem 2.4.1 is given below using the Delimit Algorithm.
+
+**Theorem 2.4.1 (Explicit Version)** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+
+Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. By Definition 2.1.3, **W**:sub:`ζ` is constructed using the Delimiting Algorithm. 
+
+The algorithm starts with an empty set **W**:sub:`ζ` and  *j = 0*.
+
+In each iteration, the algorithm identifies a Word *a* in **Ζ** that starts at index j + 1 and ends either at a Delimiter or the end of the Sentence.
+
+The pair (j + 1, *a*) is added to **W**:sub:`ζ`
+
+The index *j* is incremented by the length of the Word *a*, *l(a)*.
+
+Every time a Word is added to **W**:sub:`ζ`, the algorithm encounters exactly one delimiter (except for the last word, where it encounters the end of the sentence).
+
+The algorithm terminates when all characters in Ζ have been processed.
+
+Therefore, the number of words added to **W**:sub:`ζ` is exactly one more than the number of delimiters encountered.
+
+By Definition 2.4.1, Δ(ζ) counts the number of delimiter characters in *ζ*. By Definition 2.1.6,  Λ(ζ) = | W:sub:`ζ` | (the number of words in *ζ*).
+
+Hence, Λ(ζ) = Δ(ζ) + 1. ∎
 
 The next theorem will be important for describing the structure of *imperfect palindromes*.
 
@@ -1171,7 +1281,7 @@ Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**
 
 Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
 
-**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
+**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α)
 
 In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *Δ(ζ)* plus the sum of the String Lengths of its Words.
 
@@ -1179,9 +1289,15 @@ Assume *ζ ∈* **C**:sub:`L`. Let **Ζ** be the Character-level representation 
 
     1. **Z** = { (1, ⲁ:sub:`1`), (2, ⲁ:sub:`2`), ..., (l(ζ), ⲁ:sub:`l(ζ)`) }
 
-Either each α:sub:`i` for i = 1, 2, ...,  l(ζ) is Delimiter or it is a non-Delimiter, with no overlap. Therefore, the number of Characters in *ζ* is equal to the number of Delimiters plus the number of non-Delimiters. By Definition 2.4.1, the number of Delimiters is exactly Δ(ζ). By the Delimiter Axiom W.1 and the Definition of 2.1.2, the number of non-Delimiter Characters must be equal to the sum of the String Length of the Words in the Sentence. Therefore,
+Either each α:sub:`i` for i = 1, 2, ...,  l(ζ) is Delimiter or it is a non-Delimiter, with no overlap.
 
-    2. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α) ∎
+By Definition 2.4.1, the number of Delimiter Characters in *ζ* is Δ(*ζ*). 
+
+By Axiom W.1 (Delimiter Axiom), words in **L** do not contain Delimiters. By Definition 2.1.3, the words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the lengths of the words in *W**:sub:`ζ`, which is *Σ*:sub:`(i, α) ∈ W_ζ` l(α).
+
+Since every Character in *ζ* is either a Delimiter or a non-Delimiter (and not both), the total number of Characters in *ζ*is the sum of the number of delimiters and the number of non-delimiters. Therefore, the number of Characters in *ζ* is equal to the number of Delimiters plus the sum of the lengths of the words in *W**:sub:`ζ`.  
+
+    1. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α) ∎
 
 **Theorem 2.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
 
@@ -1283,7 +1399,7 @@ By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous s
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ-reduction*.
 
-(TODO: Need to prove this! This theorem is critical! Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( Δ(ζ) = Δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.
+(TODO: Need to prove this! This theorem is critical! Will probably need Theorem 1.2.4 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( Δ(ζ) = Δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.
 
 Outline of Potential Proof:
 
@@ -1445,7 +1561,7 @@ This definition is used to prove the following theorems.
 
 This theorem can be stated in natural language as follows: All Words in a Palindromic Pairing Language are their own Inverses. 
 
-(TODO: Need to prove this! Should follow from the definition of Palindromic Pairs, the definition of Palindromes, the definition of sigam reduction and Theorem 1.2.2, (inv(inv(s)) = s) )
+(TODO: Need to prove this! Should follow from the definition of Palindromic Pairs, the definition of Palindromes, the definition of sigam reduction and Theorem 1.2.4, (inv(inv(s)) = s) )
 
 **Theorem 3.1.10** L ∩ L:sub:`P` ⊆ R
 
