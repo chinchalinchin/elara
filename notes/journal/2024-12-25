@@ -3,3 +3,31 @@ Suggestions and Questions:
 Explicitly Defining S: While you've stated that S represents the set of all Strings, it might be beneficial to provide a formal definition of S based on your definitions of Characters and concatenation. This could further solidify the foundation of your system.
 Delimiter vs. Empty Character: Could you elaborate on the distinction between the Delimiter Character (σ) and the Empty Character (ε)? While you've provided examples in English (" " vs. ""), it might be helpful to further clarify their roles in the general framework.
 Concatenation as a Primitive: You mentioned that concatenation is a primitive operation. Could you elaborate on why you chose this approach, and how it differs from other formalizations that define concatenation inductively on Strings?
+
+
+
+
+
+Theorem 2.4.6: ∀ ζ ∈ C:sub:L: l(ζ) = Δ(ζ) + Σ:sub:(i, α) ∈ W_ζ l(α)
+
+Proof (Revised):
+
+Assume ζ ∈ C:sub:L. Let Z be the Character-level representation of ζ:
+
+Z = { (1, ⲁ:sub:1), (2, ⲁ:sub:2), ..., (l(ζ), ⲁ:sub:l(ζ)) }
+
+Partitioning Characters: Every Character in Z is either a Delimiter (σ) or a non-Delimiter. This creates a partition of Z into two disjoint sets:
+
+D:sub:ζ: The set of Delimiters in ζ.
+ND:sub:ζ: The set of non-Delimiter Characters in ζ.
+Counting Delimiters: By Definition 2.4.1, the number of Delimiters in ζ is given by Δ(ζ) = |D:sub:ζ|.
+
+Counting Non-Delimiters:
+
+By Axiom W.1 (Delimiter Axiom), no Word in L contains a Delimiter.
+By Definition 2.1.3, the Words in W:sub:ζ are obtained by splitting ζ at the Delimiters.
+Therefore, the non-Delimiter Characters in ζ are precisely the Characters that form the Words in W:sub:ζ.
+Hence, the total number of non-Delimiter Characters in ζ is the sum of the lengths of the Words in W:sub:ζ, which is expressed as Σ:sub:(i, α) ∈ W_ζ l(α).
+Combining Counts: Since every Character in ζ is either a Delimiter or a non-Delimiter, the total number of Characters in ζ (which is l(ζ)) is the sum of the number of Delimiters (Δ(ζ)) and the number of non-Delimiters (Σ:sub:(i, α) ∈ W_ζ l(α)).
+
+Therefore: l(ζ) = Δ(ζ) + Σ:sub:(i, α) ∈ W_ζ l(α) ∎
