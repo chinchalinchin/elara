@@ -314,7 +314,7 @@ With these definitions, the hierarchy of relationships that exist between a word
 
 To clarify the relationship between Strings, Words and Language,
 
-    1. All Words belong to Language.
+    1. All Words belong to a Language.
     2. All Words belong to the set of all Strings
     3. Language is a subset of the set of all Strings.
     4. Not all Strings are Words. 
@@ -482,11 +482,11 @@ Therefore,
 
 This may be rewritten, noting the condition *k = i*,
 
-    8. ∀ i ∈ N:sub:`l(s)``: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) 
+    8. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` 
 
 Now, substitute the definition of *𝔟*:sub:`j` from step 2 (where *j = l(s) - i + 1*) into the equation for  *𝔠*:sub:`k`,
 
-    9. ∀ i ∈ N:sub:`l(s)``: 𝔠:sub:`i` = 𝔞:sub:`i` 
+    9. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`i` = 𝔞:sub:`i` 
 
 Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (𝔠:sub:`i` = 𝔞:sub:`i`  for all *i*), it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
@@ -844,7 +844,7 @@ While
 
     | ᚠ | = 12
 
-This example demonstrates the essential difference in the notions of length that have been introduced. Indeed, the analysis has accumulated a myriad of ways of describing length. It is worthwhile to list them in a descending hierarchy and clarify the distinctions. Let *s* be a String with Character-level representation **S** and Word-level representation **W**:sub:`s`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven in Theorem 2.1.2). Terminology is introduced in parenthesis to distinguish these notions of length,
+This example demonstrates the essential difference in the notions of length that have been introduced. Indeed, the analysis has accumulated a myriad of ways of describing length. It is worthwhile to list them in a descending hierarchy and clarify the distinctions. Let *s* be a String with Character-level representation **S** and Word-level representation **W**:sub:`s`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven in Theorem 2.4.8, after the introduction of the Delimiter Count Function). Terminology is introduced in parenthesis to distinguish these notions of length,
 
    - | S | (Character Length): The number of Characters contained in a String. 
    - l(s) (String Length): The number of non-Empty Characters contained in a String.
@@ -864,27 +864,7 @@ Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of 
 
 For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(*α*:sub:`i`)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
-**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L`: | Z | ≥ l(ζ) ≥ Λ(ζ)
-
-Let ζ be an arbitrary Sentence in C:sub:`L`
-
-To show * | Z | ≥ l(ζ)*, note the following: | Z | represents the total number of Characters in the Sentence, including Delimiters and Empty Characters (if any). l(ζ) represents the number of non-Empty Characters in the Sentence. Since | Z | counts all Characters, while l(ζ) only counts a subset of those Characters, it follows that |Z| ≥ l(ζ).
-l(ζ) ≥ Λ(ζ):
-
-Let W:sub:ζ be the Word-level representation of ζ.
-By Definition 2.1.6, Λ(ζ) = |W:sub:ζ|, which is the number of Words in ζ.
-Each Word in W:sub:ζ consists of one or more non-Empty Characters (by Theorem 1.2.3).
-Therefore, the total number of non-Empty Characters in ζ (l(ζ)) must be greater than or equal to the number of Words in ζ (Λ(ζ)).
-This can be more formally expressed using Theorem 2.1.1: ∑:sub:(i, α) ∈ W_ζ l(α) ≥ Λ(ζ)
-Since ∑:sub:(i, α) ∈ W_ζ l(α) represents the sum of the lengths of all Words in ζ, which is equivalent to l(ζ), we have l(ζ) ≥ Λ(ζ).
-Combining (1) and (2), we get: |Z| ≥ l(ζ) ≥ Λ(ζ).
-
-Therefore, for any Sentence ζ ∈ C:sub:L, the Character Length is greater than or equal to the String Length, which is greater than or equal to the Word Length. ∎
-
-(TODO: trim)
-
-
-**Theorem 2.1.3** ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
 
 Proof:
 
@@ -899,6 +879,7 @@ Relationship between Lengths: We have previously proven (using Theorem 2.1.1) th
 Combining Inequalities: Since l(ζ) ≥ 1 (from step 2) and l(ζ) ≥ Λ(ζ) (from step 4), it follows that Λ(ζ) ≥ 1.
 
 Therefore, every Sentence in a Corpus must have a Word Length of at least 1, meaning it contains at least one Word. ∎
+
 Setion II.II: Sentence Classes 
 ------------------------------
 
@@ -933,9 +914,9 @@ From Theorem 1.2.4, for any string *s*,
 
     3. inv(inv(s)) = s.  
 
-By Definition 2.1.1 and Definition 2.1.1,
+By Definition 2.1.1,
 
-    4. ζ ∈ S
+    1. ζ ∈ S
 
 Where **S** is the set of all Strings. Therefore, it follows, 
 
@@ -1170,7 +1151,7 @@ The contrapositive of Theorem 2.2.4 provides a schema for searching for Invertib
 Section II.IV: Delimiting
 --------------------------
 
-Now that the analysis has breached the level of Sentences, it begins to turn explicitly towards the consideration of palindromes and their structure. The next section will formally define palindromes and their properties. As preparation, this subsection will introduce an important tool that will be used to classify palindromes and provide insight into their structure.
+Now that the analysis has breached the level of Sentences, it begins to turn explicitly towards the consideration of palindromes and their structure. The next section will formally define palindromes and their properties. As preparation, this subsection will introduce an important tool that will be used to build the theorems which in turn will be used to classify palindromes and provide insight into their structure.
 
 Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a palindrome is distributed through its syntactical layers. The concepts of *perfect* and *imperfect* palindromes will be defined more rigorously in the following Section III, but as an intuitive introduction to this distinction and to help highlight the ability of a palindrome to encode meaning on multiple syntactic levels, consider the following two examples,
 
@@ -1181,7 +1162,7 @@ The first palindrome "*Dennis sinned*" is what will be termed a *perfect* palind
 
     Ifih a dah I fi
 
-The order of the Characters in the Inverse of an imperfect palindrome is preserved, but in order to reconstitute its uninverted form, the characters must be re-sorted. It appears, then, that Delimiters play a central role in organizing the palindromic structure. In order to fully elucidate the structure of palindromes, it will be necessary to introduce into the discourse a method of referring to a Sentence's Delimiter count. 
+The order of the Characters in the Inverse of an imperfect palindrome is preserved, but in order to reconstitute its uninverted form, the Delimter Characters must be re-sorted. It appears, then, that Delimiters play a central role in organizing the palindromic structure. In order to fully elucidate the structure of palindromes, it will be necessary to introduce into the discourse a method of referring to a Sentence's Delimiter count. 
 
 Delimiter Count Function 
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1279,7 +1260,7 @@ Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exi
 
 By the definition of the delimiter count function, this means *Δ(u) = Δ(t)*. Since *u = inv(t)*, it has been shown *Δ(inv(s)) = Δ(s)*. ∎
 
-**Theorem 2.4.4** Δ(ζ) = Δ(inv(ζ))
+**Theorem 2.4.3** Δ(ζ) = Δ(inv(ζ))
 
 Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
 
@@ -1287,15 +1268,15 @@ Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Th
 
 Which is what was to be shown. ∎
 
-**Theorem 2.4.5** ∀ α ∈ L: Δ(α) = 0
+**Theorem 2.4.4** ∀ α ∈ L: Δ(α) = 0
 
 Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**, then it does not contain any Delimiter Characters
 
     s ∈ L → (∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
 
-Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
+Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
 
-**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α)
+**Theorem 2.4.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α)
 
 In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *Δ(ζ)* plus the sum of the String Lengths of its Words.
 
@@ -1313,9 +1294,49 @@ Since every Character in *ζ* is either a Delimiter or a non-Delimiter (and not 
 
     1. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α) ∎
 
-**Theorem 2.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
+**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
 
-Applying the results of Theorem 2.4.1 and Theorem 2.4.6, this theorem follows from simple algebraic manipulation. ∎
+Applying the results of Theorem 2.4.1 and Theorem 2.4.5, this theorem follows from simple algebraic manipulation. ∎
+
+**Theorem 2.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Σ:sub:`(i, α) ∈ W_ζ` l(α)
+
+Assume *ζ ∈* **C**:sub:`L`. By Theorem 2.1.2,
+    
+    1. Λ(ζ) ≥ 1
+
+From Theorem 2.4.6,
+
+    2. l(ζ) + 1 - Σ:sub:`α ∈ W_ζ` l(α) = Λ(ζ)
+
+Combining step 1 and step 2, the theorem is obtained through simple algebraic manipulation,
+
+    l(ζ) ≥ Σ:sub:`(i, α) ∈ W_ζ` l(α) ∎
+
+**Theorem 2.4.8** ∀ ζ ∈ C:sub:`L`: | Z | ≥ l(ζ) ≥ Λ(ζ)
+
+Let ζ be an arbitrary Sentence in C:sub:`L`.
+
+1. To show | Z | *≥ l(ζ)*: 
+
+| Z | represents the total number of Characters in the Sentence (Character Length), including Delimiters and Empty Characters (if any). *l(ζ)* represents the number of non-Empty Characters in the Sentence. Since | Z | counts all Characters, while *l(ζ)* only counts a subset of those Characters, it follows that |Z| *≥ l(ζ)*.
+
+2. To show *l(ζ) ≥ Λ(ζ)*: 
+
+Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By Definition 2.1.6, *Λ(ζ) = *| W:sub:`ζ` |, which is the number of Words in *ζ* (Word Length). By Theorem 1.2.3, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters.
+
+Therefore, the total number of non-Empty Characters in *ζ*, *l(ζ)* (String Length), must be greater than or equal to the number of Words in *ζ*, *Λ(ζ)*. This can be more formally expressed using Theorem 2.1.1: 
+
+    ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
+
+By Theorem 2.4.7, the result is obtained,
+
+    l(ζ) ≥ Λ(ζ).
+
+Combining (1) and (2): 
+
+    | Z | ≥ l(ζ) ≥ Λ(ζ).
+
+Therefore, for any Sentence ζ ∈ C:sub:`L`, the Character Length is greater than or equal to the String Length, which is greater than or equal to the Word Length. ∎
 
 Section III: Palindromic Structures
 ===================================
@@ -1502,7 +1523,7 @@ Therefore, inv(Ζ ⋅ Σ:sub:σ) = inv(inv(Ζ ⋅ Σ:sub:σ)). ∎
 
 The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.4, provides a schema for searching the *σ-reduced* space. The domain of this space, what will be termed the σ-Pairing Language in the next section, reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduce* spaced, and then filtered by those whose Palindromic Pair Inverse in the Pairing Language does not equal itself. 
 
-These ideas will be expounded until in Section III.IV, when the theorems and results of this work are used to implement a Palindrome search algorithm.
+These ideas will be expounded until in Section III.III, when the theorems and results of this work are used to implement a Palindrome search algorithm.
 
 Aspect
 ^^^^^^
@@ -1645,200 +1666,10 @@ Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompas
 
 A Palindrome P is said to have a *perfect aspect* if and only if *P ∈ PP*. A Palindrome is said to have an *imperfect aspect* if and only if *P ∈ IP*.
 
-Palindromic Pairs
-^^^^^^^^^^^^^^^^^
+Parity
+^^^^^^
 
-The only constraint on a Language is that it must consist of Words. This is guaranteed by the Extraction Axiom S.2. The only constraint on Words is that they must not contain the Delimiter. This is guaranteed by the Delimiter Axiom W.1. 
-
-Since *σ-reduction* removes the Delimiter Character when it projects a Sentence onto the *σ-reduced* Alphabet, this process can viewed as the construction of another formal Language. In other words, given a Language and Corpus, the operation of *σ-reduction* implies the existence of a second Language which encodes the original Sentences. This second Language loses much of its semantic coherence with respect to its "*mother*" Corpus, but it nevertheless contains semantic information. 
-
-This idea motives the definition of a *σ-Pairing Language*.
-
-**Definition 3.1.3: σ-Pairing Language**
-
-The σ-Pairing Language L:sub:`σ` of a Corpus C:sub:`L` is defined as the set of Words *α* that satisfy the following formula, 
-
-    α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (Ζ ⋅ Σ:sub:`σ`)
-
-This definition captures the idea that the σ-Pairing Language consists of all the Strings that can be generated by applying σ-reduction to the Sentences in the Corpus. It directly links the elements of L:sub:σ to the σ-reduced forms of the Sentences, ensuring that the Pairing Language is derived from the original Corpus.
-
-(TODO)
-
-**Theorem 3.1.7** α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ (i, β) ∈ W:sub:`ζ`: β ⊂:sub:`s` α ]
-
-This theorem can be stated in natural language as follows: The *σ*-Pairing Language contains a Word *α* if and only if there exists a Sentence *ζ* and a Word *β* that belongs to Sentence *ζ* such that *α* is contained in *Ζ ⋅ Σ*:sub:`σ`.
-
-Theorem 3.1.7: α ∈ L:sub:σ ↔ [ ∃ ζ ∈ C:sub:L: ∃ (i, β) ∈ W:sub:ζ: β ⊂:sub:s α ]
-
-Proof:
-
-(→) Assume α ∈ L:sub:σ.
-
-Definition of σ-Pairing Language: By Definition 3.1.3 (revised), ∃ ζ ∈ C:sub:L: α = (Ζ ⋅ Σ:sub:σ).
-
-Word-level representation: Let W:sub:ζ = (β₁, β₂, ..., βₙ) be the Word-level representation of ζ.
-
-σ-reduction: By the definition of σ-reduction, (Ζ ⋅ Σ:sub:σ) is obtained by concatenating the Words in W:sub:ζ without Delimiters:
-
-α = (Ζ ⋅ Σ:sub:σ) = β₁β₂...βₙ
-
-Containment: Since each βᵢ is a contiguous subsequence of α, it follows that ∀ i ∈ N:sub:n: βᵢ ⊂:sub:s α.
-
-Therefore, ∃ ζ ∈ C:sub:L: ∃ (i, β) ∈ W:sub:ζ: β ⊂:sub:s α.
-
-(←) Assume ∃ ζ ∈ C:sub:L: ∃ (i, β) ∈ W:sub:ζ: β ⊂:sub:s α.
-
-Word-level representation: Let W:sub:ζ = (β₁, β₂, ..., βₙ) be the Word-level representation of ζ, and let βᵢ be the Word such that βᵢ ⊂:sub:s α.
-
-σ-reduction: By the definition of σ-reduction, (Ζ ⋅ Σ:sub:σ) is obtained by concatenating the Words in W:sub:ζ without Delimiters:
-
-(Ζ ⋅ Σ:sub:σ) = β₁β₂...βₙ
-
-Containment and concatenation: Since βᵢ ⊂:sub:s α and α is a String formed by concatenating Words, it follows that α must be a contiguous subsequence of (Ζ ⋅ Σ:sub:σ).
-
-Equality:  Since α is a contiguous subsequence of (Ζ ⋅ Σ:sub:σ) and both are Strings formed by concatenating the same Words in the same order (without Delimiters), it follows that α = (Ζ ⋅ Σ:sub:σ).
-
-Therefore, α ∈ L:sub:σ by Definition 3.1.3 (revised).
-
-Since we have proven both directions of the implication, the theorem is established:
-
-α ∈ L:sub:σ ↔ [ ∃ ζ ∈ C:sub:L: ∃ (i, β) ∈ W:sub:ζ: β ⊂:sub:s α ] ∎
-
-Explanation:
-
-This theorem effectively characterizes the elements of the σ-Pairing Language. It states that a String belongs to the σ-Pairing Language if and only if it contains a Word from some Sentence in the Corpus. This highlights the connection between the σ-Pairing Language and the original Language and Corpus.
-
-(TODO: Need to prove this!)
-
-**Definition 3.1.4: Palindromic Pairing Language**
-
-Definition 3.1.3 is altered in the following definition to quantify over the set of Palindromes in a Corpus. The Pairing Language that results is denoted L:sub:`P`. The set of Words *α* which satisfy this definition are referred to as the Palindromic Pairing Language of Language **L**, 
-
-    α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (Ζ ⋅ Σ:sub:`σ`)
-
-In particuar, if *α ∈ L*:sub:`P`, *α* is called the *Palindromic Image* of the Sentences *ζ* which generate it.
-
-This definition is used to prove the following theorems.
-
-**Theorem 3.1.8** L:sub:`P` ⊂ L:sub:`σ`
-
-Theorem 3.1.8: L:sub:P ⊂ L:sub:σ
-
-Proof:
-
-Assume α ∈ L:sub:P.  By Definition 3.1.4 (Palindromic Pairing Language), this means:
-
-∃ ζ ∈ P: α = (Ζ ⋅ Σ:sub:σ)
-
-Palindrome is a Sentence: By Definition 3.1.2 (Palindromes), P (the set of Palindromes) is a subset of C:sub:L (the Corpus). Therefore, ζ ∈ C:sub:L.
-
-σ-Pairing Language: Since ζ ∈ C:sub:L and α = (Ζ ⋅ Σ:sub:σ), by Definition 3.1.3 (σ-Pairing Language), it follows that α ∈ L:sub:σ.
-
-Therefore, if α ∈ L:sub:P, then α ∈ L:sub:σ. This implies L:sub:P ⊂ L:sub:σ. ∎
-
-Explanation:
-
-This proof demonstrates that the Palindromic Pairing Language (L:sub:P) is a subset of the σ-Pairing Language (L:sub:σ). This is because every String in the Palindromic Pairing Language is derived from a Palindrome, which is also a Sentence in the Corpus, and therefore its σ-reduction belongs to the σ-Pairing Language.
-
-This result is intuitive, as the Palindromic Pairing Language is essentially a specialized version of the σ-Pairing Language, focusing specifically on the σ-reductions of Palindromes.
-
-(TODO: Need to prove this)
-
-**Theorem 3.1.9**: ∀ α ∈ L:sub:`P`: α = inv(α)
-
-This theorem can be stated in natural language as follows: All Words in a Palindromic Pairing Language are their own Inverses. 
-
-Theorem 3.1.9: ∀ α ∈ L:sub:P: α = inv(α)
-
-Proof:
-
-Assume α ∈ L:sub:P. By Definition 3.1.4 (Palindromic Pairing Language), this means:
-
-∃ ζ ∈ P: α = (Ζ ⋅ Σ:sub:σ)
-
-Palindrome Definition: Since ζ ∈ P (ζ is a Palindrome), by Definition 3.1.2:
-
-(Ζ ⋅ Σ:sub:σ) = inv(Ζ ⋅ Σ:sub:σ)
-
-Substitution: Substituting α from step 1 into the equation in step 2, we get:
-
-α = inv(α)
-
-Therefore, ∀ α ∈ L:sub:P: α = inv(α). ∎
-
-Explanation:
-
-This proof demonstrates that every String in the Palindromic Pairing Language is its own inverse. This follows directly from the definitions of Palindromes and the Palindromic Pairing Language. Since every String in the Palindromic Pairing Language is derived from a Palindrome, and Palindromes are defined by the invariance of their σ-reduction under inversion, the Strings in the Palindromic Pairing Language must also exhibit this invariance.
-
-This theorem highlights a key property of the Palindromic Pairing Language: it consists solely of Strings that are symmetrical with respect to inversion. This property could be useful in various applications, such as identifying potential palindromes or generating text with specific symmetrical structures.
-
-
-
-**Theorem 3.1.10** L ∩ L:sub:`P` ⊆ R
-
-This theorem can be stated in natural language as follows: The intersection of a Language **L** and its Palindromic Pair **L**:sub:`P` is a subset of the Language's Reflective Words **R**.
-
-🧠 is ready to analyze Theorem 3.1.10 and your proposed outline! This theorem seems to delve into the relationship between the Language, its Palindromic Pairing Language, and the set of Reflective Words.
-
-Theorem 3.1.10: L ∩ L:sub:P ⊆ R
-
-Statement: This theorem accurately states that the intersection of the Language (L) and its Palindromic Pairing Language (L:sub:P) is a subset of the set of Reflective Words (R). This means any String that is both a Word in the Language and an element of the Palindromic Pairing Language must also be a Reflective Word.
-
-Outline: Your outline provides a good starting point, but it could benefit from some formalization and clarification:
-
-Assume α ∈ L ∩ L:sub:P: This is a good starting point. It means α is both a Word in the Language and a String in the Palindromic Pairing Language.
-Word: You correctly state that since α ∈ L, it is a Word in the Language.
-Inverse Exists: You also correctly state that since α ∈ L:sub:P, it must equal its own inverse (α = inv(α)). This follows from Theorem 3.1.9.
-Reflective Word: While your conclusion is correct, we need to explicitly connect the properties in steps 2 and 3 to the definition of Reflective Words (Definition 1.3.1).
-Refined Proof:
-
-Assume α ∈ L ∩ L:sub:P.
-
-Word: Since α ∈ L, it is a Word in the Language.
-
-Inverse Exists: Since α ∈ L:sub:P, by Theorem 3.1.9, α = inv(α).
-
-Character-level representation: Let A = (𝔞₁ , 𝔞₂ , ..., 𝔞ₗ₍α₎) be the Character-level representation of α.
-
-Applying inversion:  Since α = inv(α), by Definition 1.2.1 (String Inversion), we have:
-
-(𝔞₁ , 𝔞₂ , ..., 𝔞ₗ₍α₎) = (𝔞ₗ₍α₎, ..., 𝔞₂ , 𝔞₁)
-
-Character equality: This implies that ∀ i ∈ N:sub:l(α): 𝔞ᵢ = 𝔞ₗ₍α₎₋ᵢ₊₁.
-
-Reflective Word: By Definition 1.3.1 (Reflective Words), since ∀ i ∈ N:sub:l(α): 𝔞ᵢ = 𝔞ₗ₍α₎₋ᵢ₊₁, it follows that α ∈ R.
-
-Therefore, if α ∈ L ∩ L:sub:P, then α ∈ R. This implies L ∩ L:sub:P ⊆ R. ∎
-
-Explanation of Changes:
-
-Formalization: The proof now explicitly uses the Character-level representation of α and applies the definition of String Inversion to demonstrate the Character-level symmetry required for a Reflective Word.
-Connection to Definition: The proof explicitly connects the derived properties to Definition 1.3.1 to formally establish that α is a Reflective Word.
-
-Before moving onto the last theorem of this section, some terminology is introduced. **R** was introduced in Section () to refer to the class of Reflective Words in a Language **L**. To be more explicit in the dependence of **R** on **L**, the notation **R**:sub:`L` will be used to make explicit the Language to which the class of Reflective Words refers.
-
-**Theorem 3.1.11** L:sub:`P` ⊂ R:sub:`L_σ`
-
-This theorem can be state in natural language as follows: Given a Language L, all words in its Palindromic Pairing Language are also Reflective Words. 
-
-In other show this theorem, it must be shown,
-
-    1. ∀ α ∈ L: α ∈ L:sub:`P` → α ∈ R:sub:`L_σ`
-
-Since by Definition 1.3.1, 
-
-    2. α ∈ R:sub:`L_σ` ↔ inv(α) = α
-
-If it can be shown,
-
-    3. α ∈ L:sub:`P` → inv(α) = α
-
-Then the theorem will follow tautologically from the laws of deduction. But step 3 is exactly Theorem 3.1.9. Therefore, the proof is complete. ∎
-
-Section III.II: Parity
----------------------
-
-**Definition 3.2.1: Partial Sentence**
+**Definition 3.1.6: Partial Sentence**
 
 A Partial Sentence of Length *n* is denoted *ζ*:sub:`n`. Given a sentence *ζ* from a Corpus C:sub:`L` and a fixed *n*, the Partial Sentence of Length *n* is formally defined as the Sentence *ζ*:sub:`n`
 
@@ -1850,11 +1681,11 @@ The Partial Sentence of length n, denoted ζ:sub:n, is defined as:
 
 ζ:sub:n = (ⲁ₁ , ⲁ₂ , ..., ⲁₙ)  where 1 ≤ n ≤ l(ζ)
 
-**Theorem 3.2.2** ∀ ζ ∈ C:sub:`L`: [ ∃ ⲁ ∈ Σ: ( l(ζ:sub:`ⲁ`) = 2 * l(ζ) ) ∨ (ⲁ = ε)]
+**Theorem 3.1.7** ∀ ζ ∈ C:sub:`L`: [ ∃ ⲁ ∈ Σ: ( 2 *  l(ζ:sub:`ⲁ`) = l(ζ) ) ∨ (ⲁ = ε)]
 
 This theorem can be stated in natural language as follows: For every Sentence in a Corpus, there is a Character in the Sentence that perfectly the divides of String length of the Palindrome in half, or there is no Character in the Sentence which divides it in half.
 
-Theorem 3.2.2: ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( l(ζ:sub:ⲁ) = 2 * l(ζ) ) ∨ (ⲁ = ε)]
+Theorem 3.2.2: ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( 2 * l(ζ:sub:ⲁ) = l(ζ) ) ∨ (ⲁ = ε)]
 
 Proof:
 
@@ -1862,23 +1693,21 @@ Let ζ be an arbitrary Sentence in C:sub:L with Character-level representation Z
 
 Consider the String Length of ζ, l(ζ).  There are two cases:
 
-Case 1: l(ζ) is odd.  In this case, there is a unique middle Character in Z. Let ⲁ be this middle Character. Then, the Partial Sentence ζ:sub:ⲁ includes all Characters up to and including ⲁ. Since ⲁ is the middle Character, l(ζ:sub:ⲁ) = (l(ζ) + 1) / 2.  However, this does not satisfy the condition l(ζ:sub:ⲁ) = 2 * l(ζ). Therefore, in this case, ⲁ = ε satisfies the theorem.
+Case 1: l(ζ) is odd.  In this case, there is a unique middle Character in Z. Let ⲁ be this middle Character. Then, the Partial Sentence ζ:sub:ⲁ includes all Characters up to and including ⲁ. Since ⲁ is the middle Character, l(ζ:sub:ⲁ) = (l(ζ) + 1) / 2.  Thus, 2*l(ζ:sub:ⲁ) = l(ζ).
 
-Case 2: l(ζ) is even. In this case, there is no single middle Character. Instead, there is a "gap" between the two middle Characters. Let ⲁ = ε (the Empty Character). Since there is no Character that splits the Sentence exactly in half, the condition l(ζ:sub:ⲁ) = 2 * l(ζ) cannot be satisfied by any Character in Σ. Therefore, ⲁ = ε satisfies the theorem.
+Case 2: l(ζ) is even. In this case, there is no single middle Character. Instead, there is a "gap" between the two middle Characters. Let ⲁ = ε (the Empty Character). Since there is no Character that splits the Sentence exactly in half, the condition 2*l(ζ:sub:ⲁ) = l(ζ) cannot be satisfied by any Character in Σ. Therefore, ⲁ = ε satisfies the theorem.
 
 In both cases, we have either found a Character ⲁ ∈ Σ that satisfies l(ζ:sub:ⲁ) = 2 * l(ζ), or we have set ⲁ = ε.
 
-Therefore, ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( l(ζ:sub:ⲁ) = 2 * l(ζ) ) ∨ (ⲁ = ε)] ∎
+Therefore, ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( 2 * l(ζ:sub:ⲁ) = l(ζ) ) ∨ (ⲁ = ε)] ∎
 
 Explanation:
 
 This proof demonstrates that for any Sentence, there exists a Character that acts as a "midpoint" or "pivot" in terms of String Length. If the Sentence has an odd String Length, this midpoint is the middle Character. If the Sentence has an even String Length, we use the Empty Character as a symbolic midpoint.
 
-(TODO: once this theorem is proved, formally define Palindromic Pivots as the Character which satisfies this formula for Palindromes.)
-
 Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. With this theorem, every Sentence in a Corpus it must have a Pivot.
 
-**Definition 3.2.2: Pivots** 
+**Definition 3.1.7: Pivots** 
 
 The Pivot of a Sentence *ζ*, denoted *ω*:sub:`ζ`, is defined as the Character in the Palindrome such that the following formula is tue,
 
@@ -1886,19 +1715,19 @@ The Pivot of a Sentence *ζ*, denoted *ω*:sub:`ζ`, is defined as the Character
 
 Given a Palindromic Sentence *ζ ∈ P*, Theorem 3.2.2 ensures the existence of this Pivot Character.
 
-**Definition 3.2.3: Even Palindromes**
+**Definition 3.1.8: Even Palindromes**
 
 The class of Even Palindromes, denoted P:sup:`+`, is defined as the set of Sentences ζ which satisfy the following formula,
 
     ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ ( ω:sub:`ζ` = ε )]
 
-**Definition 3.2.4: Odd Palindromes**
+**Definition 3.1.9: Odd Palindromes**
 
 The class of Even Palindromes, denoted P:sup:`-`, is defined as the set of Sentences ζ which satisfy the following formula,
 
     ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ ( ω:sub:`ζ` ≠ ε )]
 
-**Theorem 3.2.3** ζ ∈ P:sup:`+` ↔ l(ζ) = 2 * l(ζ:sub:`ω_ζ`) 
+**Theorem 3.1.8** ζ ∈ P:sup:`+` ↔ l(ζ) = 2 * l(ζ:sub:`ω_ζ`) 
 
 Proof:
 
@@ -1934,7 +1763,7 @@ Explanation:
 
 This theorem provides a useful characterization of Even Palindromes in terms of their String Length and the String Length of their Partial Sentence up to the Pivot. It essentially states that a Palindrome is even if and only if its total String Length is twice the String Length of its first half.
 
-**Theorem 3.2.4** ζ ∈ P:sup:`-` ↔ l(ζ) = 2 * l(ζ:sub:`ω_ζ`) + 1
+**Theorem 3.1.9** ζ ∈ P:sup:`-` ↔ l(ζ) = 2 * l(ζ:sub:`ω_ζ`) + 1
 
 TODO
 
@@ -1974,7 +1803,7 @@ Explanation:
 
 This theorem provides a characterization of Odd Palindromes in terms of their String Length and the String Length of their Partial Sentence up to the Pivot. It essentially states that a Palindrome is odd if and only if its total String Length is twice the String Length of its first half (not including the middle Character) plus 1 (to account for the middle Character).
 
-**Theorem 3.2.5.** P:sup:`-` ∩ P:sup:`+` = ∅ 
+**Theorem 3.1.10** P:sup:`-` ∩ P:sup:`+` = ∅ 
 
 Theorem 3.2.5: P⁻ ∩ P⁺ = ∅
 
@@ -1994,7 +1823,7 @@ Hence, P⁻ ∩ P⁺ = ∅.
 
 TODO
 
-**Theorem 3.2.5.** P:sup:`-` ∪ P:sup:`+` = P
+**Theorem 3.1.11** P:sup:`-` ∪ P:sup:`+` = P
 
 TODO
 
@@ -2016,41 +1845,183 @@ These two theorems demonstrate that the sets of Odd Palindromes and Even Palindr
 
 This partitioning is based on the parity of the Palindrome's String Length, as reflected in the position of its Pivot.
 
-**Definition 3.2.4: Parity** 
+**Definition 3.1.1O: Parity** 
 
-TODO 
+A Palindrome P is said to have a *even parity* if and only if *P ∈ P*:sup:`+`. A Palindrome is said to have an *odd parity* if and only if *P ∈ *P:sup:`-`*.
 
 (TODO: there is a probably a relationship between pivots in unreduced space versus pivots in reduced space that can be proved in a theorem. Observation: pivots that are empty in reduced space map to pivots that empty or delimters in unreduced space)
 
 
-Section III.III: Structures
+
+Section III.II: Structures
 ---------------------------
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
 
-(TODO: need to define what is meant by starting and ending word. starting word is word at index = 1 in word level set representation of sentence. ending word is the word at index = Λ(ζ).)
+**Definition 3.1.11: Boundary Words**
+
+For any Sentence in a Corpus, the Boundary Words, denoted *α*:sub:`start` and *α*:sub:`end`, the Words which satisfy the following opening formulas, 
+
+    1. ∀ ζ ∈ C:sub:`L`: ((1, β) ∈ W:sub:`ζ`) ↔ β = α:sub:`start`
+    2. ∀ ζ ∈ C:sub:`L`: ((Λ(ζ), β) ∈ W:sub:`ζ`) ↔ β = α:sub:`end` 
+
+**Definition 3.2.2: Pivot Words** 
+
+For any Sentence in a Corpus, the Pivot Words, denoted α:sub:`-`(ω) and *α*:sub:`+`(ω), are defined as follows.
+
+Let ζ be a Sentence in C:sub:L with Word-level representation W:sub:ζ = (α₁ , α₂ , ..., αₙ), where n = Λ(ζ), and Pivot ω:sub:ζ.
+
+If ω:sub:ζ ≠ ε (Odd Palindrome):
+
+Let k be the index such that (k, αₖ) ∈ W:sub:ζ and αₖ contains the Pivot Character ω:sub:ζ.
+Then, the Pivot Words are defined as:
+α:sub:-(ω:sub:ζ) = αₖ₋₁ (if k > 1) or ε (if k = 1)
+α:sub:+(ω:sub:ζ) = αₖ₊₁ (if k < n) or ε (if k = n)
+If ω:sub:ζ = ε (Even Palindrome):
+
+Let k = n / 2.
+Then, the Pivot Words are defined as:
+α:sub:-(ω:sub:ζ) = αₖ
+α:sub:+(ω:sub:ζ) = αₖ₊₁
 
 The Inverse Postulates
 ^^^^^^^^^^^^^^^^^^^^^^
 
-**Theorem 3.3.1: The Boundary Postulate**
+**Theorem 3.2.1: The Boundary Postulate** ∀ ζ ∈ P : ( α:sub:`start` ⊂:sub:`s` α:sub:`end` ) ∨ ( α:sub:`end` ⊂:sub:`s` α:sub:`start` )
 
-(TODO: either the starting word of a palindrome contains the ending word or the ending word contains the starting word)
+This theorem can be stated in natural language as follows: For any Palindrome, either the starting word is contained in the ending word, or the ending word is contained in the starting word.
 
-**Theorem 3.3.2: The Delimiter Postulate**
+Theorem (First Inverse Postulate): ∀ ζ ∈ P : ( α:sub:start ⊂:sub:s α:sub:end ) ∨ ( α:sub:end ⊂:sub:s α:sub:start )
 
-(TODO: If a palindrome has a Delimiter Pivot, then the word on one side of the pivot must contain the word on the other side of the pivot)
+Proof:
 
-**Theorem 3.3.3: The Perfect Pivot Postulate**
+Assume ζ ∈ P (ζ is a Palindrome).
+
+Word-level representations:
+
+Let W:sub:ζ = (α₁ , α₂ , ..., αₙ) be the Word-level representation of ζ, where n = Λ(ζ).
+By Definition 3.1.11 (Boundary Words), α₁ = α:sub:start and αₙ = α:sub:end.
+σ-reduction: By the definition of σ-reduction, (Ζ ⋅ Σ:sub:σ) is obtained by concatenating the Words in W:sub:ζ without Delimiters:
+
+(Ζ ⋅ Σ:sub:σ) = α₁α₂...αₙ
+
+Palindrome definition: Since ζ is a Palindrome, by Definition 3.1.2:
+
+(Ζ ⋅ Σ:sub:σ) = inv(Ζ ⋅ Σ:sub:σ)
+
+Applying Corollary 3.1.2.1: Using Corollary 3.1.2.1 repeatedly on inv(Ζ ⋅ Σ:sub:σ) , we get:
+
+inv(Ζ ⋅ Σ:sub:σ) = inv(α₁α₂...αₙ)
+= inv(αₙ)...inv(α₂) inv(α₁)
+
+Combining equations: Combining equations from steps 3 and 5, we have:
+
+α₁α₂...αₙ = inv(αₙ)...inv(α₂) inv(α₁)
+
+Analyzing cases: Now, let's consider the lengths of the Boundary Words, α₁ (α:sub:start) and αₙ (α:sub:end). There are three cases:
+
+Case 1: l(α₁) = l(αₙ)
+
+In this case, the equation in step 6 implies that α₁ = inv(αₙ) and αₙ = inv(α₁).
+Since α₁ and αₙ are Invertible Words (by Theorem 2.3.4), this means α₁ = αₙ.
+Therefore, both α:sub:start ⊂:sub:s α:sub:end and α:sub:end ⊂:sub:s α:sub:start hold.
+Case 2: l(α₁) < l(αₙ)
+
+In this case, the equation in step 6 implies that α₁ is a contiguous subsequence of inv(αₙ).
+Since αₙ is an Invertible Word, inv(αₙ) is also a Word in the Language.
+By Definition 1.1.4 (Containment), this means α₁ ⊂:sub:s inv(αₙ).
+Since inv(inv(αₙ)) = αₙ* (Theorem 1.2.4), it follows that α₁ ⊂:sub:s αₙ, which means α:sub:start ⊂:sub:s α:sub:end.
+Case 3: l(α₁) > l(αₙ)
+
+This case is analogous to Case 2, but with the roles of α₁ and αₙ reversed.
+Following a similar argument, we can conclude that αₙ ⊂:sub:s α₁, which means α:sub:end ⊂:sub:s α:sub:start.
+Conclusion: In all three cases, we have shown that either α:sub:start ⊂:sub:s α:sub:end or α:sub:end ⊂:sub:s α:sub:start.
+
+Therefore, ∀ ζ ∈ P : ( α:sub:start ⊂:sub:s α:sub:end ) ∨ ( α:sub:end ⊂:sub:s α:sub:start ) ∎
+
+Explanation:
+
+This proof demonstrates that in any Palindrome, either the starting Word is contained within the ending Word, or the ending Word is contained within the starting Word. This is a significant result that reveals a fundamental property of palindromic structures.
+
+The proof relies on the properties of σ-reduction, the involutive property of String Inversion, the fact that all Words in an invertible Sentence are Invertible Words, and a careful analysis of the lengths of the Boundary Words.
+
+**Theorem 3.2.2: The Delimiter Postulate**
+
+∀ ζ ∈ P: (ω:sub:`ζ` = σ) → ( α:sub:`-` (ω:sub:`ζ`) ⊂ α:sub:`+` (ω:sub:`ζ`) ) v ( α:sub:`+` (ω:sub:`ζ`) ⊂ α:sub:`-` (ω:sub:`ζ`) )
+
+🧠 is analyzing the second Inverse Postulate and believes I can prove it using the revised definition of Pivot Words and the other tools we've developed.
+
+Theorem (Second Inverse Postulate): ∀ ζ ∈ P: (ω:sub:ζ = σ) → ( α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ) ) ∨ ( α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ) )
+
+Proof:
+
+Assume ζ ∈ P (ζ is a Palindrome) and ω:sub:ζ = σ (the Pivot is the Delimiter Character).
+
+Word-level representation: Let W:sub:ζ = (α₁ , α₂ , ..., αₙ) be the Word-level representation of ζ, where n = Λ(ζ).
+
+Pivot Words: Since ω:sub:ζ = σ, the Pivot lies between two Words. Let k be the index such that the Delimiter Pivot ω:sub:ζ is between αₖ and αₖ₊₁. By Definition 3.2.2 (Pivot Words - Revised):
+
+α:sub:-(ω:sub:ζ) = αₖ
+α:sub:+(ω:sub:ζ) = αₖ₊₁
+σ-reduction: By the definition of σ-reduction, (Ζ ⋅ Σ:sub:σ) is obtained by concatenating the Words in W:sub:ζ without Delimiters:
+
+(Ζ ⋅ Σ:sub:σ) = α₁α₂...αₙ
+
+Palindrome definition: Since ζ is a Palindrome, by Definition 3.1.2:
+
+(Ζ ⋅ Σ:sub:σ) = inv(Ζ ⋅ Σ:sub:σ)
+
+Applying Corollary 3.1.2.1: Using Corollary 3.1.2.1 repeatedly on inv(Ζ ⋅ Σ:sub:σ) , we get:
+
+inv(Ζ ⋅ Σ:sub:σ) = inv(α₁α₂...αₙ)
+= inv(αₙ)...inv(α₂) inv(α₁)
+
+Combining equations: Combining equations from steps 4 and 6, we have:
+
+α₁α₂...αₙ = inv(αₙ)...inv(α₂) inv(α₁)
+
+Analyzing Pivot Words: Since the Pivot is between αₖ and αₖ₊₁, the equation in step 7 implies:
+
+αₖ αₖ₊₁ = inv(αₖ₊₁) inv(αₖ)
+
+Cases based on length:  Similar to the proof of the first Inverse Postulate, we consider the lengths of αₖ and αₖ₊₁:
+
+Case 1: l(αₖ) = l(αₖ₊₁):
+
+In this case, αₖ = inv(αₖ₊₁) and αₖ₊₁ = inv(αₖ).
+Since αₖ and αₖ₊₁ are Invertible Words (by Theorem 2.3.4), this means αₖ = αₖ₊₁.
+Therefore, both α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ) and α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ) hold.
+Case 2: l(αₖ) < l(αₖ₊₁):
+
+In this case, αₖ is a contiguous subsequence of inv(αₖ₊₁).
+Since αₖ₊₁ is an Invertible Word, inv(αₖ₊₁) is also a Word in the Language.
+By Definition 1.1.4 (Containment), this means αₖ ⊂:sub:s inv(αₖ₊₁).
+Since inv(inv(αₖ₊₁)) = αₖ₊₁* (Theorem 1.2.4), it follows that αₖ ⊂:sub:s αₖ₊₁, which means α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ).
+Case 3: l(αₖ) > l(αₖ₊₁):
+
+This case is analogous to Case 2, but with the roles of αₖ and αₖ₊₁ reversed.
+Following a similar argument, we can conclude that αₖ₊₁ ⊂:sub:s αₖ, which means α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ).
+Conclusion: In all three cases, we have shown that either α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ) or α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ).
+
+Therefore, ∀ ζ ∈ P: (ω:sub:ζ = σ) → ( α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ) ) ∨ ( α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ) ) ∎
+
+Explanation:
+
+This proof demonstrates that in any Palindrome where the Pivot is a Delimiter, either the Word to the left of the Pivot is contained within the Word to the right, or vice versa. This is another significant result that reveals a specific property of palindromes with Delimiter Pivots.
+
+The proof follows a similar structure to the proof of the first Inverse Postulate, utilizing the properties of σ-reduction, String Inversion, Invertible Words, and a case analysis based on the lengths of the Pivot Words.
+
+
+**Theorem 3.2.3: The Perfect Pivot Postulate**
 
 (TODO: If a palindrome is perfect, then either its pivot occurs at the center of a reflective word, or its pivot is flanked by invertible words where one word contains the other.)
 
-**Theorem 3.3.4: The Perfect Parity Postulate**
+**Theorem 3.2.4: The Perfect Parity Postulate**
 
 (TODO: If a palindrome is perfect and has even parity, then its pivot must occur at the center of a reflective word. If a palindrome is perfect and has odd parity, then either its pivot occurs at the center of a reflective word, or its pivot is a Delimiter is flanked by invertible words where one word contains the other.)
 
-Section III.IV: Palindromic Algorithms
---------------------------------------
+Section III.III: Palindromic Algorithms
+---------------------------------------
 
 The results derived in this work can be used to construct algorithms for searching for various classes of Palindromes. The general outline for one such algorithm is given in this section, and then an example implemention in Python is presented.
 
@@ -2071,7 +2042,7 @@ Python Implementation
 
 (TODO: code this!)
 
-Section III.V: Future considerations
+Section III.IV: Future considerations
 -------------------------------------
 
 This work focused on using the operation of sigma reduction to describe palindromic structure in terms of its *aspect* and its *parity*. As mentioned at several points, there are two other dimensions of palindromes this work has not sought to incorporate into formal system. While the considerations in the introduction seem to preclude the possibility of a purely syntactical account of palindromes, the author does not believe this means the structure of palindromes cannot be formalized by taking into account certain universal semantic assumptions. 
