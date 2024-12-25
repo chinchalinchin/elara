@@ -164,9 +164,9 @@ Let *ⲁ* be a character in the String *t*. Recall *t* has an equivalent set rep
 
     T = { (1, ⲁ:sub:`1``), (2, ⲁ:sub:`2`), ..., (l(t), ⲁ:sub:`l(t)`) }
 
-Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t` where **E**:sub:`t` satisfies the formula,
+Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t` that satisfies the open formula,
 
-    (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`l(t)`: ( (i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
+    (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`l(t)`: ((i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
 
 With this definition, the length of String in the formalization can be defined as,
 
@@ -178,17 +178,17 @@ Note the E:sub:`t` is a set of *ordered pairs*, not a set of Characters. This al
 
 The set representation of *t* is given by,
 
-    T = { (1, a), (2, a), (3, b), (4, b), (5, c), (6, c) }.
+    T = { (1, "a"), (2, "a"), (3, "b"), (4, "b"), (5, "c"), (6, "c") }.
 
 By Definition 1.1.2, 
 
-    E:sub:`t` = { (1, a), (2, a), (3, b), (4, b), (5, c), (6, c) }
+    E:sub:`t` = { (1, "a"), (2, "a"), (3, "b"), (4, "b"), (5, "c"), (6, "c") }
 
 Therefore, 
 
     | E:sub:`t` | = 6
 
-This formulization, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters.
+This formulization, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-Empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters.
 
 Containment
 ^^^^^^^^^^^
@@ -285,9 +285,9 @@ Section I.II: Words
 
 While the notion of Characters maps almost exactly to the intuitive notion of letters in everyday use, the notion of a *Word* requires explication. 
 
-If Characters are mapped to letters in the Alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet.  The goal of this section is to introduce a series of constraints onto the set of all Strings that will filter out its elements that cannot belong to **L** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
+If Characters are mapped to letters in the Alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet. The goal of this section is to define the syntactical properties of Words in **L** that differentiates them from Strings in **S** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
 
-To formalize these notion, the following symbolic representations are introduced, 
+To formalize these notion, the following symbolic notation is introduced, 
 
     1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
     2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
@@ -300,7 +300,7 @@ It will sometimes be necessary to refer to indeterminate Words, so notation is i
 
     1. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). 
 
-The exceptions to this rule for Lowercase Greek letters are *ζ* which is reserved for Sentential Variables (see Section II.I for more information.), *σ* and *ε* which are reserved for the Delimiter and Empty Character (see Section I.I for more information), *δ* which is used for the Delimiter count function (see Section II.IV for more information), and *ω* which is reserved for the Palindromic Pivot (see Section III.II for more information).
+The exceptions to this rule for Lowercase Greek letters are *ζ* which is reserved for Sentential Variables (see Section II.I for more information.), *σ* and *ε* which are reserved for the Delimiter and Empty Character (see Section I.I for more information), and *ω* which is reserved for the Palindromic Pivot (see Section III.II for more information).
 
 The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
@@ -310,11 +310,18 @@ With these definitions, the hierarchy of relationships that exist between a word
     2. α ∈ S
     3. L ⊂ S
 
-The next theorems establish some basic results about Words in a Language. 
+To clarify the relationship between Strings, Words and Language,
+
+    1. All Words belong to Language.
+    2. All Words belong to the set of all Strings
+    3. Language is a subset of the set of all Strings.
+    4. Not all Strings are Words. 
+
+The next theorems establish some basic results about Words in a Language within this formalization. All of these theorems should conform to the common sense notion of Words. The first theorem provides a rigorous formalization of the inituitive notion that every Character in a Word is contained in the Word. 
 
 **Theorem 1.2.1** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: ( (i, ⲁ:sub:`i`) ∈  Α ) → ( ⲁ:sub:`i` ⊂ α)
 
-Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in the Character level representation **Α** Consider the String *s* with a single Character *𝔟*:sub:`1` = *ⲁ*:sub:`i`.
+Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**. Consider the String *s* with a single Character *𝔟*:sub:`1` = *ⲁ*:sub:`i`.
 
     s = ⲁ:sub:`i`.
 
@@ -326,11 +333,13 @@ For any value of *i*. Therefore, by Definition 1.1.4,
 
     ⲁ:sub:`i` ⊂ α ∎
 
-**Theorem 1.2.2** ∀ α ∈ L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` α) ]
+Theorem 1.2.2 and Theorem 1.2.3 are the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.4 will show that it depends on a precise notion of length. In other words, in the current formal system, containment is a derivative concept of length. 
 
-This theorem can be stated in natural language as follows: No Empty Character belongs to a Word in a Language. 
+**Theorem 1.2.2** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: [ (i, ⲁ:sub:`i`) ∈  Α ] → ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
 
-By the Character Axiom C.1, a String exists that is equal to the Empty Character. Therefore, the truth of the negated conjunction in the theorem depends on the second conjunct, *t ⊂*:sub:`s` *α*
+This theorem can be stated in natural language as follows: The Empty Character does not belong to a Word in a Language. 
+
+Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**.
 
 Let String *t = ε*. Assume, for the sake of contradiction, a Word *α* exists in Language **L** such that,
 
@@ -344,25 +353,45 @@ Therefore, **N**:sub:`l(t)` *= ∅*. Now, applying Definition 1.1.4,
 
     3. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
 
-Where 𝔞:sub:`i` represents the Characters in *t*, 𝔟:sub:`f(i)` represents the Characters in *α*, and *f(i)* represents the function that maps the Character indices of *t* onto the Character indices of *α*. It is a tautology of set theory that nothing can belong to the empty,
+Where 𝔞:sub:`i` represents the Characters in *t*, 𝔟:sub:`f(i)` represents the Characters in *α*, and *f(i)* represents the function that maps the Character indices of *t* onto the Character indices of *α*. It is a tautology of set theory that nothing can belong to the empty set,
 
     4. ∀ x: x ∉ ∅
 
-From this, it follows that no *i* exists that satisfies this formula. Therefore, no function *f(i)* exists that maps the Empty Character to a Character in *α*. But this contradicts the assumption in step 1, since by Definition 1.1.4, in order for a Word to be contained in another Word, a strictly increasing and consecutive function must exist to map the Characters. 
+From this, it follows that no *i* exists that satisfies this formula. Therefore, no function *f(i)* exists that maps the Empty Character to a Character in *α*. But this contradicts the assumption in step 1, since by Definition 1.1.4, in order for a String to be contained in another String, a strictly increasing and consecutive function must exist to map the Characters. 
 
-Since *t = ε* exists by Axiom C.1, it follows t ⊂:sub:`s` α must be false. Therefore,
+Since *t = ε* exists by Axiom C.1, it follows,
 
-    5. t = ε ∧ t ⊂:sub:`s` α
+    1. t = ε ∧ t ⊂:sub:`s` α
 
 must always be false, and its negation must always be true. ∎
 
-**Theorem 1.2.3**  α ∈ L → (∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` ≠ ε )
+**Theorem 1.2.3**  ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` ≠ ε 
 
 This theorem can be stated in natural language as follows: If a Word belongs to a Language, then none of its Characters are empty.
 
-Assume *α ∈* **L**. Let *t* be any Character contained in *α*. By 
+Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**.
 
-Assume, for the sake of contradiction. 
+From Theorem 1.2.1, it follows, 
+
+    1. ( ⲁ:sub:`i` ⊂ α)
+
+From Theorem 1.2.2, it follows, 
+
+    2. ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
+
+Recall for any propositions *p* and *q*,
+
+    3. ¬ ( p ∧ q ) = ¬ p ∨ ¬ q
+
+Applying step 3 to step 2,
+
+    4. (ⲁ:sub:`i` ≠ ε) ∨  ¬(ⲁ:sub:`i` ⊂:sub:`s` α) 
+
+The only way for step 1 to be consistent with step 4 is if the first conjunct of the expression obtains, 
+
+    ⲁ:sub:`i` ≠ ε 
+
+But *i* was assumed to be an arbitrary Character index in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
 
 Axioms
 ^^^^^^
@@ -1063,7 +1092,7 @@ As the introduction to this subsection made clear, it will be necessary to have 
 
     i ∈ N:sub:`l(t)` = { 1, 2, ..., l(t) }.
 
-The delimiter count function, denoted by *δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *t*. Formally, *δ(t)* is defined as the cardinality of the set **D**:sub:`t` that satisfies the following formula:
+The delimiter count function, denoted by *Δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *t*. Formally, *Δ(t)* is defined as the cardinality of the set **D**:sub:`t` that satisfies the following formula:
 
     (j, ⲁ) ∈ D:sub:`t` ↔ (∃ i ∈ N:sub:`l(t)` ( (i, ⲁ) ∈ T ) ∧ (ⲁ = σ) ∧ (j = i) )
 
@@ -1073,7 +1102,7 @@ where **T** is the set representation of the String *t*,
 
 Then, the delimiter count function is defined as
 
-    δ(t) = | D:sub:`t` |
+    Δ(t) = | D:sub:`t` |
 
 **Example** Consider the string *t = "a b c"*. The set representation of *t* is given by,
     
@@ -1083,27 +1112,27 @@ The set D:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the 
     
     D:sub:`t`= { (2, σ), (4, σ) }
 
-From this it follows, | D:sub:`t` | is 2. Hence, *δ(s) = 2*.
+From this it follows, | D:sub:`t` | is 2. Hence, *Δ(s) = 2*.
 
 From this example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the delimiter count) as output. Multiple sentences can have the same delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
 
-**Theorem 2.4.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = δ(ζ) + 1
+**Theorem 2.4.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
 In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its delimiter count plus one.
 
-Assume *ζ ∈* **C**:sub:`L`. Let *δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`` is formed by splitting **Ζ** at each Delimiter Character *σ*.
+Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`` is formed by splitting **Ζ** at each Delimiter Character *σ*.
 
 Each word in **W**:sub:`ζ` corresponds to a contiguous subsequence of non-delimiter characters in **Ζ**.
 
 Since delimiters separate words, the number of words in the sentence is always one more than the number of spaces.
 
-herefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to the delimiter count of *δ(ζ)* plus one,
+herefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to the delimiter count of *Δ(ζ)* plus one,
 
-    | W:sub:`ζ` | = δ(ζ) + 1. ∎
+    | W:sub:`ζ` | = Δ(ζ) + 1. ∎
 
 The next theorem will be important for describing the structure of *imperfect palindromes*.
 
-**Theorem 2.4.2** *δ(s) = δ(inv(s))*
+**Theorem 2.4.2** *Δ(s) = Δ(inv(s))*
 
 Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`. Let **T** be the set representation of of *t* is given by,
 
@@ -1124,35 +1153,35 @@ Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exi
 
     3. | D:sub:`u` | = | D:sub:`s` |
 
-By the definition of the delimiter count function, this means *δ(u) = δ(t)*. Since *u = inv(t)*, it has been shown *δ(inv(s)) = δ(s)*. ∎
+By the definition of the delimiter count function, this means *Δ(u) = Δ(t)*. Since *u = inv(t)*, it has been shown *Δ(inv(s)) = Δ(s)*. ∎
 
-**Theorem 2.4.4** δ(ζ) = δ(inv(ζ))
+**Theorem 2.4.4** Δ(ζ) = Δ(inv(ζ))
 
 Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
 
-    δ(ζ) = δ(inv(ζ))
+    Δ(ζ) = Δ(inv(ζ))
 
 Which is what was to be shown. ∎
 
-**Theorem 2.4.5** ∀ α ∈ L: δ(α) = 0
+**Theorem 2.4.5** ∀ α ∈ L: Δ(α) = 0
 
 Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**, then it does not contain any Delimiter Characters
 
     s ∈ L → (∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
 
-Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *δ(α) = 0*. ∎
+Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
 
-**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) = δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
+**Theorem 2.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
 
-In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *δ(ζ)* plus the sum of the String Lengths of its Words.
+In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *Δ(ζ)* plus the sum of the String Lengths of its Words.
 
 Assume *ζ ∈* **C**:sub:`L`. Let **Ζ** be the Character-level representation of *ζ*,
 
     1. **Z** = { (1, ⲁ:sub:`1`), (2, ⲁ:sub:`2`), ..., (l(ζ), ⲁ:sub:`l(ζ)`) }
 
-Either each α:sub:`i` for i = 1, 2, ...,  l(ζ) is Delimiter or it is a non-Delimiter, with no overlap. Therefore, the number of Characters in *ζ* is equal to the number of Delimiters plus the number of non-Delimiters. By Definition 2.4.1, the number of Delimiters is exactly δ(ζ). By the Delimiter Axiom W.1 and the Definition of 2.1.2, the number of non-Delimiter Characters must be equal to the sum of the String Length of the Words in the Sentence. Therefore,
+Either each α:sub:`i` for i = 1, 2, ...,  l(ζ) is Delimiter or it is a non-Delimiter, with no overlap. Therefore, the number of Characters in *ζ* is equal to the number of Delimiters plus the number of non-Delimiters. By Definition 2.4.1, the number of Delimiters is exactly Δ(ζ). By the Delimiter Axiom W.1 and the Definition of 2.1.2, the number of non-Delimiter Characters must be equal to the sum of the String Length of the Words in the Sentence. Therefore,
 
-    2. ∀ ζ ∈ C:sub:`L`: l(ζ) = δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α) ∎
+    2. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`α ∈ W_ζ` l(α) ∎
 
 **Theorem 2.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`α ∈ W_ζ` l(α)
 
@@ -1254,7 +1283,7 @@ By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous s
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ-reduction*.
 
-(TODO: Need to prove this! This theorem is critical! Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( δ(ζ) = δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.
+(TODO: Need to prove this! This theorem is critical! Will probably need Theorem 1.2.2 ( inv(inv(s)) = s ) and Theorem 2.4.4 ( Δ(ζ) = Δ(inv(ζ)) ). Once this is proved, it will follow that the definition of perfect palindromes satisfies Definition 3.1.2, and then imperfect palindromes can be defined as the set difference of Palindromes and Perfect Palindromes.
 
 Outline of Potential Proof:
 
