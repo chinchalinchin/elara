@@ -2,8 +2,6 @@ Theorems and ideas for tomorrow
 
 Prove for any String t, | T | >= l(t)
 
-TODO: parity (even and odd Sentence length) vs centrality (pivot type) vs punctuality (presence of punctuation)
-
 - The sum of the length of words in a sentence is equal to length of that sentence's reduction into its sigma-pairing language.
 - The possibility of Character reductions (other than sigma). Explore the idea that every Character reduction creates a unique pairing language. Explore what the intersection of various pairing languages say about the underlying language.
 - If every palindrome is its own inverse in a sigma-reduced alphabet, then the palindrome expressed in the sigma-pairing language must contain invertible words from the "mother language".
@@ -22,19 +20,7 @@ Definitions
 
 - link between invertible words that involve quantifier-noun relations and presence in palindromes?
 
-- Algorithm for finding perfect palindrome: work from the outside in, comparing the words. once a pair is not invertible, it cannot be a perfect palindrome.
-
-- Should the pivot be defined in the Sentence space or the sigma-reduced spaced? 
-
 Palindrome Postulates
 
 - Pairing Postulate: If a non-invertible word appears in a palindrome's sigma-pairing representation, then it must contain or be contained by an invertible word.
 
-- Inverse postulate: Either the starting word of a palindrome must be contained in its ending word or the ending word of a palindrome must be contained in its starting word.
-
-- Perfect postulate: A sentence is a perfect palindrome if the sentence in o-unreduced space is invertible. (Recall invertibility implies semantic coherence of the inverse) (Is this a postulate or a definition?)
-
-- Imperfect postulate: A sentence is an imperfect palindrome if the sentence in o-reduced space is invertible.
-
-
-*If the perfect postulate is a definition, then a theorem is: perfect palindromes can only contain invertible words (by our little gem.)

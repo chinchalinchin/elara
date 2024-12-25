@@ -42,7 +42,7 @@ A note on the terminology introduced in this work is in order. When a semantic t
 
 The main results of this work are given in the following list,
 
-- Theorem 2.3.5: This theorem states if a Sentence is invertible, then its Words are invertible.  
+- Theorem 2.3.4: This theorem states if a Sentence is invertible, then its Words are invertible.  
 - Theorem 3.3.1: This theorem states either the ending word of a Palindrome must be contained in its starting word, or the starting word of a Palindrome must be contained in its ending word.
 - Theorem 3.3.2: This theorem states if a Palindrome has a Delimiter Pivot, then the Word on one side of the Pivot must contain the Word on the other side of the pivot
 - Theorem 3.3.3: This theorem states if a Palindrome is perfect, then either its Pivot occurs at the center of a Reflective Word, or its Pivot is flanked by Invertible Words where one Word must contain the other Word.
@@ -50,6 +50,12 @@ The main results of this work are given in the following list,
 
 Section I: Defintions 
 =====================
+
+Some general notation adopted throughout the course of this work is given below.
+
+1. Let **N**:sub:`n` be the set of natural numbers starting at 1 and ending at *n*, 
+
+    N:sub:`n`= { 1, 2, ... , n }
 
 Section I.I: Strings
 --------------------
@@ -158,13 +164,9 @@ Let *ⲁ* be a character in the String *t*. Recall *t* has an equivalent set rep
 
     T = { (1, ⲁ:sub:`1``), (2, ⲁ:sub:`2`), ..., (l(t), ⲁ:sub:`l(t)`) }
 
-Let **N**:sub:`t` be the set, 
-
-    N:sub:`t`= { 1, 2, ... , l(t) }
-
 Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t` where **E**:sub:`t` satisfies the formula,
 
-    (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`t`: ( (i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
+    (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`l(t)`: ( (i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
 
 With this definition, the length of String in the formalization can be defined as,
 
@@ -209,7 +211,7 @@ Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and *
     
 If and only if there exists a strictly increasing function *f*: **N**:sub:`u` *→* **N**:sub:`t` such that:
 
-    ∀ i ∈ N:sub:`u`: a:sub:`i` = b:sub:`f(i)`
+    ∀ i ∈ N:sub:`u`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
 
 This definition essentially states that *t* is contained in *u* if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
 
@@ -308,28 +310,25 @@ With these definitions, the hierarchy of relationships that exist between a word
     2. α ∈ S
     3. L ⊂ S
 
-Axioms
-^^^^^^
+The next theorems establish some basic results about Words in a Language. 
 
-The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy these axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
+**Theorem 1.2.1** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: ( (i, ⲁ:sub:`i`) ∈  Α ) → ( ⲁ:sub:`i` ⊂ α)
 
-Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character of the String *s*. Let *l(s)* be the length of *s*. Let *N*:sub:`s` be the set,
+Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in the Character level representation **Α** Consider the String *s* with a single Character *𝔟*:sub:`1` = *ⲁ*:sub:`i`.
 
-    { 1, 2, ... , l(s) }
+    s = ⲁ:sub:`i`.
 
-**Axiom W.1: The Delimiter Axiom ** 
+Clearly, l(s) = 1. To show that *s* is contained in *α*, a strictly increasing and consecutive function that maps the Characters in *s* to the Characters in *α* must be found. Since *l(s) = 1*, this can be defined simply as,
 
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
+    f(1) = i
 
-**Axiom W.2: The Empty Axiom**
+For any value of *i*. Therefore, by Definition 1.1.4,
 
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
+    ⲁ:sub:`i` ⊂ α ∎
 
-In essence, these Axioms capture the common-sense notion that a Word from a Language cannot contain either a Delimiter or an Empty Character. The Empty Axiom, in particular, guarantees Words from a Language cannot contain "*null*" contentment. This is proved in the next theorem.
+**Theorem 1.2.2** ∀ α ∈ L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` α) ]
 
-**Theorem 1.2.1** ∀ α ∈ L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` α) ]
-
-In natural language, this theorem can be stated as follows: No Empty Character belongs to a Word in a Language. 
+This theorem can be stated in natural language as follows: No Empty Character belongs to a Word in a Language. 
 
 By the Character Axiom C.1, a String exists that is equal to the Empty Character. Therefore, the truth of the negated conjunction in the theorem depends on the second conjunct, *t ⊂*:sub:`s` *α*
 
@@ -357,9 +356,26 @@ Since *t = ε* exists by Axiom C.1, it follows t ⊂:sub:`s` α must be false. T
 
 must always be false, and its negation must always be true. ∎
 
-(TODO: If it can be proved the empty character is not contained in any word, is it necessary to introduce the Empty Axiom? Seems unnecessary. In fact, the Empty Axiom can probably be proven using Theorem 1.2.1. I need to see to review and see if the Empty Axiom is used anywhere, and then see if I can prove the Empty Axiom as a Theorem. If so, replace all references to the Empty Axiom with its theorem version.) 
+**Theorem 1.2.3**  α ∈ L → (∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` ≠ ε )
 
-Additional axioms will be introduced in the natural progression of this work as the hierarchy of palindromic structure is codified. 
+This theorem can be stated in natural language as follows: If a Word belongs to a Language, then none of its Characters are empty.
+
+Assume *α ∈* **L**. Let *t* be any Character contained in *α*. By 
+
+Assume, for the sake of contradiction. 
+
+Axioms
+^^^^^^
+
+The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy these axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
+
+Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character of the String *s*.
+
+**Axiom W.1: The Delimiter Axiom ** 
+
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
+
+In essence, this Axiom capture the common-sense notion that a Word from a Language cannot contain a Delimiter.
 
 Inversion
 ^^^^^^^^^
@@ -813,7 +829,7 @@ Note the first two levels are purely syntactical. Any String *s* will have a len
 
 The following theorem proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
-**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`α ∈ W_ζ` l(w) ≥ Λ(ζ)
+**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`α ∈ W_ζ` l(α) ≥ Λ(ζ)
 
 This theorem can be stated in natural language as follows: For any sentence *ζ* in a Corpus C:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
 
@@ -821,7 +837,7 @@ Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of 
 
     W:sub:`ζ` = { (1, α:sub:`1`), (2, α:sub:`2`), ..., (Λ(ζ), α:sub:`Λ(ζ)`)}
 
-For each Word α:sub:`i`` ∈ W:sub:`ζ`, its String Length *l(α)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
+For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(*α*:sub:`i`)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
 Setion II.II: Sentence Classes 
 ------------------------------
@@ -922,11 +938,11 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom W.1: The Delimiter Axiom ** 
 
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ σ )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
 
 **Axiom W.1: The Empty Axiom ** 
 
-    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`s`: 𝔞:sub:`i` ≠ ε )
+    ∀ s ∈ S: s ∈ L → (∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ ε )
 
 **Axiom S.1: The Containment Axiom**
 
@@ -934,7 +950,7 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom S.2: The Extraction Axiom**
 
-    ∀ ζ ∈ C:sub:`L` : ∀ α ∈ W:sub:`ζ`: α ∈ L
+    ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: (i, α:sub:`i`) ∈ W:sub:`ζ` → α:sub:`i` ∈ L
 
 It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures. 
 
@@ -952,17 +968,17 @@ A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if i
 
 A Corpus C:sub:`L` is *semantically coherent* in a Language **L** if and only if the Word-level set representation of all its Sentences are semantically coherent.
 
+**Definition 2.3.3: Sentence Language**
+
+A Sentence Language is defined as the set of unique Words which are contained in a Sentence *ζ*. **L**:sub:`ζ` denotes a Sentence Language.  
+
+   α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: (i, α) ∈ W:sub:`ζ`
+
 These axioms are used to prove the following theorems.
 
-**Theorem 2.3.1** ∀ α : α ∈ W:sub:`ζ` → α ∈ L
+**Theorem 2.3.1** ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 
-The theorem can be stated in natural language as follows: If *α* belongs to the Word-level set representation of a Sentence *ζ*, then *α* belongs to the Language **L**.
-
-Assume *α ∈* **W**:sub:`ζ`. In other words, *α* is a word in the Word-level set representation of the Sentence *ζ*. Since *ζ* is a Sentence, it belongs to the C:sub:`L`. Therefore, by the Axiom of Word Extraction, w ∈ L. ∎
-
-**Theorem 2.3.2** ∀ ζ ∈ C:sub:`L`: W:sub:`ζ` ⊂ L
-
-This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Word-level set representation **W**:sub:`ζ` is a subset of the Language **L**.
+This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Sentence Language is a subset of the Language **L**.
 
 Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every element of W:sub:`ζ` belongs to **L**, we can conclude that W:sub:`ζ`  is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
 
@@ -970,11 +986,22 @@ Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation o
     
 In other words, every (Word-level set representation of a) Sentence from a Corpus is a subset of the Language **L**. ∎
 
-**Theorem 2.3.3** ∀ ζ ∈ C:sub:`L`, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ]
 
-(TODO: This should be able to be proven this using Theorem 1.2.1.)
 
-**Theorem 2.3.4** ζ ∈ K → ( ∀ α ∈ W:sub:`inv(ζ)`: α ∈ L)
+**Theorem 2.3.2** ∀ ζ ∈ C:sub:`L`, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ]
+
+(TODO: This should be able to be proven this using Theorem 1.2.1.
+1. From Theorem 1.2.1, it use known the Empty Character is contained in no Word from a Language.
+
+)
+
+∀ α ∈ L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` α) ]
+
+
+
+
+
+**Theorem 2.3.3** ζ ∈ K → ( ∀ α ∈ W:sub:`inv(ζ)`: α ∈ L)
 
 This theorem can be stated in natural language as follows: If a Sentence *ζ* is invertible, then every word in its inverse, *inv(ζ)*, belongs to the Language **L**.
 
@@ -984,13 +1011,16 @@ Assume *ζ ∈ K*. By Definition 2.2.2,
 
 By Axiom S.3, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
 
-**Theorem 2.3.5** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+
+
+
+**Theorem 2.3.4** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
 This theorem can be stated in natural language as follows: A Sentence is Invertible if its Words are Invertible.
 
-Assume *ζ ∈* **K**. Let N:sub:`ζ` be the set, 
+Assume *ζ ∈* **K**. Let N:sub:`Λ(ζ)` be the set, 
 
-    1. N:sub:`ζ` = { 1, 2, ... , Λ(ζ) }
+    1. N:sub:`Λ(ζ)` = { 1, 2, ... , Λ(ζ) }
 
 And consider the Word-level representation of *ζ*.
 
@@ -1031,11 +1061,11 @@ As the introduction to this subsection made clear, it will be necessary to have 
 
 **Definition 2.4.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let *𝔞*:sub:`i` represent the *i*:sup:`th` character of the String *t*, where 
 
-    i ∈ N:sub:`t` = { 1, 2, ..., l(t) }.
+    i ∈ N:sub:`l(t)` = { 1, 2, ..., l(t) }.
 
 The delimiter count function, denoted by *δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *t*. Formally, *δ(t)* is defined as the cardinality of the set **D**:sub:`t` that satisfies the following formula:
 
-    (j, ⲁ) ∈ D:sub:`t` ↔ (∃ i ∈ N:sub:`t` ( (i, ⲁ) ∈ T ) ∧ (ⲁ = σ) ∧ (j = i) )
+    (j, ⲁ) ∈ D:sub:`t` ↔ (∃ i ∈ N:sub:`l(t)` ( (i, ⲁ) ∈ T ) ∧ (ⲁ = σ) ∧ (j = i) )
 
 where **T** is the set representation of the String *t*, 
 
@@ -1082,7 +1112,7 @@ Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`.
 Let *u = inv(t)* with Characters denoted by let *𝔟*:sub:`j`. By Definition 1.2.1,
 
     1. l(t) = l(u)
-    2. ∀ i ∈ N:sub:`t`, ∀ j ∈ N:sub:`u`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+    2. ∀ i ∈ N:sub:`l(t)`, ∀ j ∈ N:sub:`l(u)`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
 
 Let **D**:sub:`t` be the set of ordered pairs representing the positions of the Delimiter *σ* in *t*, and let D:sub:`u` be the corresponding set for *u*.
 
@@ -1108,7 +1138,7 @@ Which is what was to be shown. ∎
 
 Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**, then it does not contain any Delimiter Characters
 
-    s ∈ L → (∀ i ∈ N:sub:`s`: 𝔞:sub:`i` ≠ σ )
+    s ∈ L → (∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
 
 Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *δ(s)* counts the number of Delimiter Characters (σ) in a string *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *δ(α) = 0*. ∎
 
@@ -1228,13 +1258,13 @@ In natural language, this theorem can be stated in natural language as follows: 
 
 Outline of Potential Proof:
 
-  1. Theorem 2.3.5: If a Sentence is invertible, then all of its Word are invertible.
+  1. Theorem 2.3.4: If a Sentence is invertible, then all of its Word are invertible.
   2. Delimiter Axiom W.1: no Words contain Delimiter. 
   3. Therefore, each segment of a σ-reduced Sentence is invertible.
   4. NOTE: may need a corollary that says if ζ=st, where st is the concatenation of s and t, then inv(ζ)=inv(t)inv(s), where inv(t)int(s) is the concatenation of the inverses of t and s.
   5. Need to show that because each segment is invertible, a double inversion perserves the order of the words.)
 
-The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space. The domain of this space, what will be termed the σ-Pairing Language in the next section, reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduce* spaced, and then filtered by those whose Palindromic Pair in the Pairing Language whose inverse does not equal itself. 
+The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.4, provides a schema for searching the *σ-reduced* space. The domain of this space, what will be termed the σ-Pairing Language in the next section, reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduce* spaced, and then filtered by those whose Palindromic Pair in the Pairing Language whose inverse does not equal itself. 
 
 These ideas will be expounded until in Section III.IV, when the theorems and results of this work are used to implement a Palindrome search algorithm.
 
@@ -1287,7 +1317,7 @@ Before verifying the class of Sentences which satisfy Definition 3.1.3 are indee
 
 This Definition implicitly captures the cCaracter-level symmetry that's characteristic of perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward.
 
-It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorem 2.3.5. 
+It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorem 2.3.4. 
 
 The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.1.3, and thus Perfect Palindromes are a subset of the class Palindromes in any Language and its Corpus.
 
@@ -1309,7 +1339,7 @@ Applying this definition to Theorem 3.1.3,
     
     2. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → ζ ∈ K
 
-From Theorem 2.3.5, it is known the consequent of this conditional implies the following,
+From Theorem 2.3.4, it is known the consequent of this conditional implies the following,
 
     3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
@@ -1434,19 +1464,24 @@ While this definition may appear opaque at first glance, a careful consideration
 
 Take careful note, the definition of ζ:sub:`n` on the left-hand side is expressed on the right hand side using the Character-level set representation **Ζ**.
 
-Moreover, the quantification of the Sentence over the Corpus ensures l(ζ) is an accurate measure of the Sentence Length by Theorem 2.3.3, which states, no Sentences in a Corpus contain Empty Characters, i.e. null content.
+Moreover, the quantification of the Sentence over the Corpus ensures l(ζ) is an accurate measure of the Sentence Length by Theorem 2.3.2, which states, no Sentences in a Corpus contain Empty Characters, i.e. null content.
 
-**Theorem 3.2.2** ζ ∈ P → [ ∃ ⲁ ∈ Σ: ( l(ζ:sub:`ⲁ`) = 2 * l(ζ) ) ∨ (ⲁ = ε)]
+**Theorem 3.2.2** ∀ ζ ∈ C:sub:`L`: [ ∃ ⲁ ∈ Σ: ( l(ζ:sub:`ⲁ`) = 2 * l(ζ) ) ∨ (ⲁ = ε)]
 
-This theorem can be stated in natural language as follows: If a Sentence is a Palindrome, there is a Character in the Sentence that perfectly the divides of String length of the Palindrome in half, or there is no Character in the Sentence which divides it in half.
+This theorem can be stated in natural language as follows: For every Sentence in a Corpus, there is a Character in the Sentence that perfectly the divides of String length of the Palindrome in half, or there is no Character in the Sentence which divides it in half.
 
-(TODO: once this theorem is proved, formally define Palindromic Pivots as the Character which satisfies this formula.)
+Assume *ζ ∈* **C**:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of *ζ*. By Axiom S.2,
 
-Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. With this theorem, if a Sentence in a Corpus is a Palindrome, it must have a Pivot. This conditional existence theorem motivates the following definition.
+    1. ∀ α ∈ W:sub:`ζ`: α ∈ L
+
+By the Definition of Word-level set representations (Definition Whatever), W:sub:`ζ` cannot contain 
+(TODO: once this theorem is proved, formally define Palindromic Pivots as the Character which satisfies this formula for Palindromes.)
+
+Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. With this theorem, if a Sentence in a Corpus is a Palindrome, it must have a Pivot. This observation of a Pivot's conditional existence motivates the following definition.
 
 **Definition 3.2.2: Palindromic Pivots** 
 
-The Pivot of a Palindromic Sentence *ζ ∈ P*, denoted *ω*:sub:`ζ`, is defined as the Character in a Palindrome such that the following formula is tue,
+The Pivot of a Palindromic Sentence *ζ ∈ P*, denoted *ω*:sub:`ζ`, is defined as the Character in the Palindrome such that the following formula is tue,
 
    ( l(ζ:sub:`ω_ζ`) = 2 * l(ζ) ) ∨ (ω:sub:`ζ` = ε)
 
