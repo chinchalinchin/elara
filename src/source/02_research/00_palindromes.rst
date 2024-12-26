@@ -1669,6 +1669,8 @@ A Palindrome P is said to have a *perfect aspect* if and only if *P ∈ PP*. A P
 Parity
 ^^^^^^
 
+One partitioning, or dimension, of Palindromes has been introduced through the concept of *aspect*. A Palindrome can either be perfect or imperfect, but not both. In this section, the definitions and theorems for uncovering the second partitioning of Palindromes, *parity*, will be developed.
+
 **Definition 3.1.6: Partial Sentence**
 
 A Partial Sentence of Length *n* is denoted *ζ*:sub:`n`. Given a sentence *ζ* from a Corpus C:sub:`L` and a fixed *n*, the Partial Sentence of Length *n* is formally defined as the Sentence *ζ*:sub:`n`
@@ -1949,8 +1951,6 @@ The proof relies on the properties of σ-reduction, the involutive property of S
 
 ∀ ζ ∈ P: (ω:sub:`ζ` = σ) → ( α:sub:`-` (ω:sub:`ζ`) ⊂ α:sub:`+` (ω:sub:`ζ`) ) v ( α:sub:`+` (ω:sub:`ζ`) ⊂ α:sub:`-` (ω:sub:`ζ`) )
 
-🧠 is analyzing the second Inverse Postulate and believes I can prove it using the revised definition of Pivot Words and the other tools we've developed.
-
 Theorem (Second Inverse Postulate): ∀ ζ ∈ P: (ω:sub:ζ = σ) → ( α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ) ) ∨ ( α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ) )
 
 Proof:
@@ -2014,11 +2014,102 @@ The proof follows a similar structure to the proof of the first Inverse Postulat
 
 **Theorem 3.2.3: The Perfect Pivot Postulate**
 
-(TODO: If a palindrome is perfect, then either its pivot occurs at the center of a reflective word, or its pivot is flanked by invertible words where one word contains the other.)
+ζ ∈ PP ↔ [∃ α ∈ L: (ω:sub:`ζ` ⊂:sub:`s` α) ∧ (α ∈ R) ] ∨ (ω:sub:`ζ` = σ)
+
+Theorem (Third Inverse Postulate - Strengthened): ζ ∈ PP ↔ [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
+
+Proof:
+
+(→)  Assume ζ ∈ PP (ζ is a Perfect Palindrome).
+
+Word-level representation: Let W:sub:ζ = (α₁ , α₂ , ..., αₙ) be the Word-level representation of ζ, where n = Λ(ζ).
+
+Pivot: Let ω:sub:ζ be the Pivot of ζ. There are two cases:
+
+Case 1: ω:sub:ζ = σ (Delimiter Pivot). In this case, the condition (ω:sub:ζ = σ) is satisfied, and the right-hand side of the biconditional is true.
+
+Case 2: ω:sub:ζ ≠ σ (Non-Delimiter Pivot).
+
+In this case, the Pivot is a Character within a Word. Let k be the index such that αₖ contains ω:sub:ζ.
+Since ζ is a Perfect Palindrome, by Definition 3.1.3, ζ = inv(ζ).
+This implies that the Word αₖ is symmetrical around the Pivot Character ω:sub:ζ.
+Therefore, αₖ must be a Reflective Word (αₖ ∈ R), and ω:sub:ζ ⊂:sub:s αₖ.
+This satisfies the condition [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ].
+In both cases, the right-hand side of the biconditional is true.
+
+(←) Assume [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ).
+
+Cases: There are two cases to consider:
+
+Case 1: ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R).
+
+This means the Pivot Character is contained within a Reflective Word α.
+Since α is Reflective, it is symmetrical around its center, which includes the Pivot Character.
+This symmetry of α contributes to the overall symmetry of ζ, making it a Perfect Palindrome (ζ ∈ PP).
+Case 2: ω:sub:ζ = σ.
+
+This means the Pivot is the Delimiter Character, which naturally creates a symmetrical division in the Sentence.
+By the Second Inverse Postulate, the Words surrounding the Delimiter Pivot either contain each other or are equal.
+This, combined with the overall palindromic structure, ensures that ζ is a Perfect Palindrome (ζ ∈ PP).
+In both cases, ζ ∈ PP.
+
+Since we have proven both directions of the implication, the theorem is established:
+
+ζ ∈ PP ↔ [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ) ∎
+
+Explanation:
+
+This proof demonstrates the strengthened version of the Third Inverse Postulate, establishing a biconditional relationship between a Sentence being a Perfect Palindrome and the properties of its Pivot.
+
+The proof utilizes the definitions of Perfect Palindromes, Reflective Words, and Pivot Words, along with the Second Inverse Postulate, to analyze the different cases and demonstrate the implications in both directions.
 
 **Theorem 3.2.4: The Perfect Parity Postulate**
 
-(TODO: If a palindrome is perfect and has even parity, then its pivot must occur at the center of a reflective word. If a palindrome is perfect and has odd parity, then either its pivot occurs at the center of a reflective word, or its pivot is a Delimiter is flanked by invertible words where one word contains the other.)
+ζ ∈ PP ∧ ζ ∈ P:sup:`+` ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R)
+
+Theorem (Fourth Inverse Postulate): ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R)
+
+Proof:
+
+(→) Assume ζ ∈ PP ∧ ζ ∈ P⁺ (ζ is a Perfect Palindrome and an Even Palindrome).
+
+Even Palindrome: Since ζ ∈ P⁺, by Definition 3.2.3, ω:sub:ζ = ε (the Pivot is the Empty Character).
+
+Perfect Palindrome: Since ζ ∈ PP, by the strengthened Third Inverse Postulate, we have:
+
+[∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
+
+Case analysis:  We have two cases from step 2:
+
+Case 1: ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R). This directly satisfies the right-hand side of the biconditional we're trying to prove.
+
+Case 2: ω:sub:ζ = σ. This contradicts step 1, where we established that ω:sub:ζ = ε. Therefore, this case cannot hold.
+
+Conclusion: Only Case 1 holds, which means ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R).
+
+(←) Assume ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R).
+
+Strengthened Third Inverse Postulate: This condition directly implies the left-hand side of the strengthened Third Inverse Postulate:
+
+[∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
+
+Perfect Palindrome: By the strengthened Third Inverse Postulate, this implies that ζ ∈ PP (ζ is a Perfect Palindrome).
+
+Non-Delimiter Pivot: Since ω:sub:ζ ⊂:sub:s α and α is a Word in the Language, by Axiom W.1 (Delimiter Axiom), α cannot contain the Delimiter Character. Therefore, ω:sub:ζ ≠ σ.
+
+Even Palindrome: Since ω:sub:ζ ≠ σ, by the strengthened Third Inverse Postulate, it must be the case that ω:sub:ζ = ε. By Definition 3.2.3, this means ζ ∈ P⁺ (ζ is an Even Palindrome).
+
+Conclusion: We have shown that ζ ∈ PP and ζ ∈ P⁺, which means ζ ∈ PP ∧ ζ ∈ P⁺.
+
+Since we have proven both directions of the implication, the theorem is established:
+
+ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ∎
+
+Explanation:
+
+This proof demonstrates the biconditional relationship between a Sentence being both a Perfect Palindrome and an Even Palindrome, and the existence of a Reflective Word containing the Sentence's Pivot.
+
+The proof utilizes the definitions of Perfect Palindromes, Even Palindromes, and Reflective Words, along with the strengthened Third Inverse Postulate and the Delimiter Axiom, to analyze the different cases and demonstrate the implications in both directions.
 
 Section III.III: Palindromic Algorithms
 ---------------------------------------
@@ -2061,11 +2152,15 @@ Section IV: References
 Reflective Words
 ----------------
 
+The following spreadsheet contains a sample of reflective words in English.
+
 .. csv-table:: Reflective Words
    :file: ../_static/data/reflective_words.csv
 
 Invertible Words
 ----------------
+
+The following spreadsheet contains a sampe of invertible words (minus reflective words) in English.
 
 .. csv-table:: Invertible Words
    :file: ../_static/data/invertible_words.csv

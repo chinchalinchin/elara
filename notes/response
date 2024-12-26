@@ -1,13 +1,3 @@
-Theorems and ideas for tomorrow
-
-Prove for any String t, | T | >= l(t)
-
-- The sum of the length of words in a sentence is equal to length of that sentence's reduction into its sigma-pairing language.
-- The possibility of Character reductions (other than sigma). Explore the idea that every Character reduction creates a unique pairing language. Explore what the intersection of various pairing languages say about the underlying language.
-- If every palindrome is its own inverse in a sigma-reduced alphabet, then the palindrome expressed in the sigma-pairing language must contain invertible words from the "mother language".
-
-- Have separate thread where Gemini verifies parts of speech breakdown in palindromes spreadsheet.
-
 - Chiasmus and word-level palindromes: "So patient a doctor to doctor a patient so" “face to face” "Night after night"
 Definitions
 
@@ -20,7 +10,4 @@ Definitions
 
 - link between invertible words that involve quantifier-noun relations and presence in palindromes?
 
-Palindrome Postulates
-
-- Pairing Postulate: If a non-invertible word appears in a palindrome's sigma-pairing representation, then it must contain or be contained by an invertible word.
 
