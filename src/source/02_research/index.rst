@@ -8,10 +8,7 @@ Research
    :maxdepth: 2
    :caption: Contents:
 
-   00_palindromes
-
-These are works that I have composed with generative AIs using their deductive and symbolic logic capabilities. The table below lists the model which was used to assist in the validation and proving of theorems.
-
-
-| Name                   | Model                   |
-| Palindromic Structures | Gemini Advanced 1.5     |  
+   00_palindromes/00_palindromes
+   00_palindromes/01_data
+   00_palindromes/02_appendix
+   01_context

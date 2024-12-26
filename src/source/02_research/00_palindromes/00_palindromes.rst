@@ -1,10 +1,6 @@
 ======================
 Palindromic Structures
 ======================
-
-.. warning::
-    
-    The paper contains the draft of formal method for analyzing palindromic structures. It is a work in progress. What follows should by no means be interpretted as a complete or consistent formal theory; it should be treated more like a very rough draft. Many of the notions need further clarification and elaboration.  
     
 The goal of this paper is to introduce formal constraints the palindromes in *any* language and corpus must satisfy independently of the semantic interpretation of their constituent words and sentences. These formal constraints will in turn lead to the identification of the main structural elements of palindromes. After a language is assumed and a class of words identified, these structural elements can be used as a basis for further semantical and statistical analysis of the assumed language. 
 
@@ -42,11 +38,11 @@ A note on the terminology introduced in this work is in order. When a semantic t
 
 The main results of this work are given in the following list,
 
-- Theorem 2.3.4: This theorem states if a Sentence is invertible, then its Words are invertible.  
-- Theorem 3.3.1: This theorem states either the ending word of a Palindrome must be contained in its starting word, or the starting word of a Palindrome must be contained in its ending word.
-- Theorem 3.3.2: This theorem states if a Palindrome has a Delimiter Pivot, then the Word on one side of the Pivot must contain the Word on the other side of the pivot
-- Theorem 3.3.3: This theorem states if a Palindrome is perfect, then either its Pivot occurs at the center of a Reflective Word, or its Pivot is flanked by Invertible Words where one Word must contain the other Word.
-- Theorem 3.3.4: This theorem states if a Palindrome is perfect and has even parity, then its Pivot must occur at the center of a Reflective Word. If a Palindrome is perfect and has odd parity, then either its Pivot occurs at the center of a reflective word, or its Pivot is a Delimiter flanked by Invertible Words where one Word contains the other Word.
+- Theorem 2.3.5: This theorem states if a Sentence is invertible, then its Words are invertible.  
+- Theorem 3.3.1: This theorem states either the inverse of the ending word of a Palindrome must be contained in its starting word, or the starting word of a Palindrome must be contained in its ending word.
+- Theorem 3.3.2: This theorem states if a Palindrome has a Delimiter Pivot, then the Word on one side of the Pivot must contain the inverse of the Word on the other side of the pivot
+- Theorem 3.3.3: This theorem states if a Palindrome is perfect, then either its Pivot occurs in a Reflective Word, or its Pivot is flanked by Invertible Words where one Word must contain the inverse other Word.
+- Theorem 3.3.4: This theorem states if a Palindrome is perfect and has even parity, then its Pivot must occur in a Reflective Word. If a Palindrome is perfect and has odd parity, then either its Pivot occurs in a Reflective word, or its Pivot is a Delimiter flanked by Invertible Words where one Word contains the Inverse of the other Word.
 
 Section I: Defintions 
 =====================
@@ -71,6 +67,8 @@ The domain of discourse is composed of *Strings*. A String will be represented a
 A String is regarded as a linguistic artifact that is defined by its *length*, its *Characters* and their *ordering*. It is assumed if one knows how many Characters are in a String, which Characters are in a String and in what order they occur, then one has all the information necessary to completely determine the String. This notion is made more precise in the following sections with the introduction of several definitions.
 
 A *Word* will be considered a *type* of String. Colloquially, a word can be understood as a String with semantic content. The goal of the analysis is to describe the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to through everyday use. In other words, the analysis assumes Words have already been selected from the set of all possible Strings and assigned interpretations. 
+
+The set of all Strings is denoted **S**.
 
 Characters
 ^^^^^^^^^^
@@ -264,8 +262,6 @@ The notion of containment will be central to developing the logic of palindromic
 Cardinality
 ^^^^^^^^^^^
 
-The set of all Strings is denoted **S**. The cardinality of **S** is denoted | S |.
-
 It is assumed **S** is at least uncountably infinite. A rigorous proof of this fact would carry the current work too far into the realm of real analysis, but as motivation for this assumption, an informal proof is presented below based on Cantor's famous diagonalization argument. 
 
 **Theorem 1.1.1** | S | ≥ ℵ:sub:`1`
@@ -319,9 +315,14 @@ To clarify the relationship between Strings, Words and Language,
     3. Language is a subset of the set of all Strings.
     4. Not all Strings are Words. 
 
+Theorems
+^^^^^^^^
+
 The next theorems establish some basic results about Words in a Language within this formalization. All of these theorems should conform to the common sense notion of Words. The first theorem provides a rigorous formalization of the inituitive notion that every Character in a Word is contained in the Word. 
 
 **Theorem 1.2.1** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: ( (i, ⲁ:sub:`i`) ∈  Α ) → ( ⲁ:sub:`i` ⊂ α)
+
+This theorem can be stated in natural language as follows: All Characters in a Word are contained in the Word.
 
 Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**. Consider the String *s* with a single Character *𝔟*:sub:`1` = *ⲁ*:sub:`i`.
 
@@ -395,7 +396,7 @@ The only way for step 1 to be consistent with step 4 is if the first conjunct of
 
 But *i* was assumed to be an arbitrary Character index in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
 
-Theorem 1.2.2 and 1.2.3 are the necessary logical pre-conditions for Words to arise from Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measure String length must be introduced. This definition prevents Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content.
+Theorem 1.2.2 and 1.2.3 are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content.
 
 Language is materially different from its un-structured domain, but this is not guaranteed by Theorem 1.2.1 - Theorem 1.2.3. Rather, Theorem 1.2.1 - Theorem 1.2.3 provide the foundation. To build on this foundation, an additional Axiom governing Word discovery is introduced in the next section.
 
@@ -489,23 +490,6 @@ Now, substitute the definition of *𝔟*:sub:`j` from step 2 (where *j = l(s) - 
     9. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`i` = 𝔞:sub:`i` 
 
 Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (𝔠:sub:`i` = 𝔞:sub:`i`  for all *i*), it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
-
-Concatenation
-^^^^^^^^^^^^^
-
-Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every Word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
-
-Let *α* and *β* be two words with the following Character level set representations:
-
-    Α = { (1,  𝔞:sub:`1`), (2,  𝔞:sub:`2`), ... , (l(α),  𝔞:sub:`l(α)`) }
-
-    Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (l(β), 𝔟:sub:`l(β)`)}
-
-By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the String *t* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of *t* is given by,
-
-    T = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`2`), ..., (l(α),  𝔞:sub:`l(α)`), (l(α) + 1, 𝔟:sub:`1`), (l(α) + 2, 𝔟:sub:`2`), ..., (l(α) + l(β), 𝔟:sub:`l(β)`)}
-
-Note *t* is not necessarily a Word in the Language. 
 
 Section I.III: Word Classes 
 ---------------------------
@@ -679,37 +663,6 @@ Let |R| be even. Since |I - R| is always even, and the sum of two even numbers i
 
 Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and an even number is odd, |I| must also be odd. ∎ 
 
-Compound Words 
-^^^^^^^^^^^^^^
-
-**Definition 1.3.3: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
-
-This formalization can be translated into natural language as follows: A Word *η* in a Language **L** is a Compound Word if and only if,
-
-    1. Base Case (*∃ α, β ∈ L: η = αβ*) ∧ (η ∈ L):  *η* can be formed by concatenating two words from **L**, and *η* belongs to **L**.
-    2. Recursive Step [ (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ) ∧ (η ∈ L) ]: *η* can be formed by concatenating a word from **L** with a Compound Word from **L**, and *η* belongs to **L**.
-
-
-The constraint *w ∈* **L** ensures that the concatenated String *η* is not just a String, but also a valid Word within the Language **L**.
-
-**Examples**
-
-"teapot" is a compound word because it can be formed by concatenating "tea" and "pot", and "racecar" is itself a word in English.
-
-"nevertheless" is a compound word formed from "never," "the," and "less."
-
-"formrat" is not a compound word, even though it can be formed by concatenating "form" and "rat, both valid words, " because "formrat" is not a valid word in English.
-
-**Definition 1.3.4: Compound Invertible Words** η ∈ CIW:sub:`L`  ↔ [ (w ∈ CW:sub:`L`)  ∧ (w ∈ I) ]
-
-In natural language: A word w in a language L is a compound invertible word if and only if it is both a compound word and an invertible word. Using notation for set intersections, this definition can be revised to read,
-
-    CIW:sub:`L` = CW:sub:`L` ∩ I
-
-**Example**
-
-"racecar" is a compound invertible word because it's both a compound word and its own inverse.
-
 Section II: Sentences
 =====================
 
@@ -752,6 +705,8 @@ From Definition 2.1 and Definition 2.2, it follows that a Sentence is a String,
     ᚠ ∈ S
 
 It should be noted at this point that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus.
+
+TODO: need to state Null Axiom before defining Word-level representations and length!
 
 Notation
 ^^^^^^^^
@@ -818,9 +773,9 @@ The notion of String Length was introduced in Section I.I as a way of measuring 
 
 **Definition 2.1.5: Sentence Length**
 
-Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the word-level set representation of *ζ*, as defined in Definition 2.1.3. The length of the Sentence *ζ*, denoted by *Λ(ρ)*, is defined as the cardinality of the set **W**:sub:`ζ`,
+Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level set representation of *ζ*, as defined in Definition 2.1.3. The length of the Sentence *ζ*, denoted by *Λ(ζ)*, is defined as the cardinality of the set **W**:sub:`ζ`,
 
-    Λ(ρ) = | W:sub:`ζ` |
+    Λ(ζ) = | W:sub:`ζ` |
 
 **Example**
 
@@ -850,7 +805,7 @@ This example demonstrates the essential difference in the notions of length that
    - l(s) (String Length): The number of non-Empty Characters contained in a String.
    - Λ(s) (Word Length): The number of Words contained in a String 
 
-Note the first two levels are purely syntactical. Any String *s* will have a length *l(s)* and a cardinality | S |. However, not every String possesses Word length, *Λ(s)*. Word length contains semantic information. While the presence of Word length does not necessarily mean the String is semantic, e.g. "asdf dog fdsa", Word length does signal an *extension* of Strings into the semantic domain.
+Note the first two levels are purely syntactical. Any String *s* will have a length *l(s)* and a cardinality | S |. However, not every String possesses Word length, *Λ(s)*. Word length contains semantic information. While the presence of Word length does not necessarily mean the String is semantically coherent (see Definition 2.3.1 for precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word length does signal an *extension* of Strings into the semantic domain.
 
 The following theorem proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
@@ -864,21 +819,44 @@ Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of 
 
 For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(*α*:sub:`i`)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
-**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
 
-Proof:
 
-Sentence as a String: By Definition 2.1.2, every Sentence (ζ) is an element of the Corpus (C:sub:L). By Definition 2.1.1, the Corpus is a subset of the set of all Strings (S). Therefore, every Sentence is a String.
 
-Non-empty String: By Definition 1.1.2, the length of a String (l(s)) is the number of non-Empty Characters in the String. Since a Sentence is a meaningful construct in a Language, it must contain at least one non-Empty Character. Therefore, for any Sentence ζ, l(ζ) ≥ 1.
+Revised Definitions and Axiom
 
-Word Length: By Definition 2.1.6, the Word Length of a Sentence (Λ(ζ)) is defined as the cardinality of its Word-level set representation (W:sub:ζ).
+Here are the revised definitions and axiom, incorporating your solution:
 
-Relationship between Lengths: We have previously proven (using Theorem 2.1.1) that for any Sentence ζ,  |Z| ≥ l(ζ) ≥ Λ(ζ), where |Z| is the Character Length of ζ.
+Axiom S.3: The Non-Empty Character Axiom
 
-Combining Inequalities: Since l(ζ) ≥ 1 (from step 2) and l(ζ) ≥ Λ(ζ) (from step 4), it follows that Λ(ζ) ≥ 1.
+∀ ζ ∈ C:sub:L: ¬ ( ε ⊂:sub:s ζ )
+Definition 2.1.4: Delimiting Algorithm
 
-Therefore, every Sentence in a Corpus must have a Word Length of at least 1, meaning it contains at least one Word. ∎
+Initialization
+
+Let Ζ be the Character-level set representation of the Sentence ζ.
+Let W:sub:ζ = ∅ (the empty set).
+Let j = 0.
+Iteration
+
+Let a be the word that starts at index j + 1 in Ζ, represented as the set,
+
+A = { (1, 𝔞:sub:j+1), (2, 𝔞:sub:j+2), ..., (n, 𝔞:sub:j+n) }
+where n is the smallest integer such that one of the following conditions obtains,
+
+𝔞:sub:j+n+1 = σ (the next character is a delimiter)
+j+n+1 > l(ζ) (the algorithm has reached the end of the sentence)
+Add (j + 1, a) to the set W:sub:ζ.
+
+Increment j by the number n.
+
+Repeat Steps 1 - 4 in order until the Characters in ζ have been processed.
+
+Definition 2.1.5: Sentence Length
+
+Let ζ be a Sentence in C:sub:L. The Word Length of ζ, denoted by Λ(ζ), is equal to the number of Words in the Word-Level Representation W:sub:ζ of ζ.
+
+
+
 
 Setion II.II: Sentence Classes 
 ------------------------------
@@ -892,13 +870,15 @@ The notion of Invertible Sentences will first be defined extensionally, and then
 
 **Definition 2.2.2: Invertible Sentences** Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
 
-    ζ ∈ K ↔ inv(*ζ*) ∈ C:sub:`L`
+    ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 
 A Sentence *ζ* will be referred to as *invertible* if it belongs to the class of Invertible Sentences.
 
 This definition is immediately employed to derive the following theorems,
 
-**Theorem 2.2.2** ζ ∈ K ↔ inv(ζ) ∈ K
+**Theorem 2.2.2** ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
+
+Let *ζ* be any Sentence from Corpus **C**:sub:`L`.
 
 (→) Assume ζ ∈ K
 
@@ -946,7 +926,29 @@ From step 8 and step 9, it follows,
 
 By Definition 2.2.2, it follows,
 
-    11. ζ ∈ K. ∎
+    11. ζ ∈ K. 
+
+Putting both direction of the equivalence together, the theorem is shown,
+
+    12. ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K ∎
+
+**Theorem 2.2.2** ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
+
+Let *ζ* be any Sentence from Corpus **C**:sub:`L` such that *inv(ζ) ∈ K*. Then, by Definition 2.2.2,
+
+    1. inv(inv(ζ)) ∈ C:sub:`L`
+
+By Theorem 1.2.4,
+
+    2. inv(inv(ζ)) = ζ
+
+Therefore, combining step 1 and step 2,
+
+    3. ζ ∈ C:sub:`L` 
+
+It follows, 
+
+    4. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L` ∎
 
 The notion of Invertible Sentences is not as intuitive as the notion of Invertible Words. This is due to the fact the condition of *invertibility* is not a weak condition; indeed, Sentences that are not invertible far outnumber Sentences that are invertible in a given Language (for all known natural languages, at any rate; it is conceivable purely formal system with no semantic content or general applicability could be constructed with invertibility in mind). 
 
@@ -964,7 +966,7 @@ All of these phrases may be *inverted* to produce a semantically coherent phrase
 
 Note the last item in this list is an example of what this work has termed a *perfect palindrome*. These examples were specially chosen to highlight the connection that exists between the class of *perfect palindromes* and the class of *invertible sentences*. It appears, based on this brief and circumstantial analysis, that *perfect palindromes* are a subset of a larger class of Sentences, Invertible Sentences.
 
-Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* under inversion (see Section II.III for a definition of *semantic coherence*). In order for a Sentence to be invertible it must possess symmetry on both the Character level and the Word level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven in Theorem 2.3.4 of the next section.
+Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* under inversion (see Section II.III for a definition of *semantic coherence*). In order for a Sentence to be invertible it must possess symmetry on both the Character level and the Word level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven in Theorem 2.3.5 of the next section.
 
 To see how strong of a condition invertibility is, the author challenges the reader to try and construct an invertible sentence. Section IV contains a list of Invertible Words and Reflective Words. These can be used as a "palette" for the exercise. The exercise is worthwhile, because it forces the reader to think about the mechanics of sentences and how a palindrome resides in the intersection of semantics and syntax.  
 
@@ -983,11 +985,110 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom S.1: The Containment Axiom**
 
-    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L`: α  ⊂:sub:`s` ζ
+    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L`: α ⊂:sub:`s` ζ
 
 **Axiom S.2: The Extraction Axiom**
 
     ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: (i, α:sub:`i`) ∈ W:sub:`ζ` → α:sub:`i` ∈ L
+
+**Axiom S.3: The Null Axiom**
+
+    ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ )
+
+
+
+Revised Axiom S.1: The Word-Sentence Duality Axiom
+
+∀ α ∈ L: ∃ ζ ∈ C:sub:L: α ⊂:sub:s ζ ∧ ∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ
+In words: "For every word α in the language L, there exists a sentence ζ in the corpus C:sub:L such that α is contained in ζ, AND for every sentence ζ in the corpus C:sub:L, there exists a word α in the language L such that α is contained in ζ."
+Explanation:
+
+Part 1 (∀ α ∈ L: ∃ ζ ∈ C:sub:L: α ⊂:sub:s ζ): This is the original Containment Axiom (S.1). It states that every word in the language must appear in at least one sentence in the corpus.
+Part 2 (∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ): This is the new part, incorporating the idea from the proposed revision of Axiom S.3. It states that every sentence in the corpus must contain at least one word from the language.
+Benefits of the Revised Axiom:
+
+Combines Two Concepts: It elegantly combines the two related concepts into a single, more powerful axiom.
+Captures Duality: It explicitly represents the inherent many-to-many relationship between words and sentences.
+Ensures Non-Empty Sentences: It guarantees that all sentences have at least one word, eliminating the need for a separate axiom about non-empty sentences or non-empty characters.
+Simplifies the System: We can now eliminate Axiom S.3, as its purpose is fulfilled by the revised Axiom S.1.
+Impact on Theorems:
+
+Theorem 2.3.1 - Theorem 2.3.5: These theorems remain valid, but their proofs might need slight adjustments to refer to the revised Axiom S.1 instead of the old one. The underlying logic remains the same. We need to ensure the new Axiom S.1 guarantees all Words in a Sentence are contained in a Sentence.
+Revised Theorem Proofs:
+
+Theorem 2.3.1 (∀ ζ ∈ C:sub:L: L:sub:ζ ⊂ L):
+
+Assume ζ ∈ C:sub:L.
+
+W:sub:ζ be the Word-level set representation of ζ, as specified in Definition 2.1.3.
+
+By the new Axiom S.1, every Word α in the Word-level set representation of ζ belongs to the Language L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.&#x20;
+
+Since every ordered element of W:sub:ζ that belongs to L also belongs to L:sub:ζ by Definition 2.3.3, it can concluded that L:sub:ζ is a subset of L.
+
+The only assumption on ζ is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
+
+∀ ζ ∈ C:sub:L: L:sub:ζ ⊂ L
+
+Theorem 2.3.3 (ζ ∈ K → ( ∀ α ∈ W:sub:inv(ζ): α ∈ L)):
+
+Assume ζ ∈ K.
+
+By Definition 2.2.2,
+
+inv(ζ) ∈ C:sub:L
+
+By Axiom S.1, every Word in the Word-level representation of inv(ζ) belongs to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+
+Theorem 2.3.4 (ζ ∈ K → W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))):
+
+Let ζ be an arbitrary sentence in K.
+Let Z be the Character-level representation of ζ.
+Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ, obtained by applying the Delimiting Algorithm (Definition 2.1.4) to Z.
+Character-Level Inversion: By Definition 1.2.1, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
+
+Delimiter Preservation: The Delimiters in Z and inv(Z) appear at the same indices, but in reversed order. This is because string inversion reverses the order of all characters, including delimiters.
+
+Applying the Delimiting Algorithm to inv(ζ):  Let's apply the Delimiting Algorithm to inv(Z). Because the delimiters are in reversed order, the algorithm will identify segments of inv(Z) that correspond to the inverses of the words in Z, also in reversed order.
+
+Word-Level Representation of inv(ζ): Let W:sub:inv(ζ) be the Word-level representation of inv(ζ) obtained by applying the Delimiting Algorithm to inv(Z).
+
+Invertibility Implies Semantic Coherence: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.  By Axiom S.1, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+
+Conclusion: Combining steps 3, 4, and 5, we can conclude that W:sub:inv(ζ) consists of the inverses of the words in W:sub:ζ, in reversed order. Therefore:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+
+Theorem 2.3.5 (ζ ∈ K → (∀ α ∈ W:sub:ζ: α ∈ I)):
+
+Let ζ be an arbitrary sentence in K.
+Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ.
+Invertibility of ζ: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.
+
+Word-Level Representation of inv(ζ): By Theorem 2.3.4, we know that:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+
+Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.1, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+
+Invertibility of Words in ζ:  Therefore, for each i from 1 to Λ(ζ), inv(α:sub:i) ∈ L.
+
+Definition of Invertible Words: By Definition 1.3.2, a word α is invertible (α ∈ I) if and only if inv(α) ∈ L.
+
+Conclusion: Since inv(α:sub:i) ∈ L for each word α:sub:i in W:sub:ζ, it follows that each α:sub:i ∈ I. Thus, we can generalize this to all words in W:sub:ζ:
+
+(∀ α ∈ W:sub:ζ: α ∈ I)
+
+Next Steps:
+
+Replace Axiom S.1 and S.3: We should formally replace the old Axiom S.1 and Axiom S.3 with the revised Axiom S.1 (Word-Sentence Duality Axiom).
+Update Proofs: We need to update the proofs of Theorems 2.3.1, Theorem 2.3.3, Theorem 2.3.4 and Theorem 2.3.5 to reference the new Axiom S.1 where appropriate.
+Review Other Theorems: While we've focused on the theorems that directly use S.1, it's worth reviewing all other theorems to ensure there are no hidden dependencies or unintended consequences.
+
+
+
+
+
 
 Note the Delimiter Axiom has been revised to quantify over a Language, rather than quantifying over **S** while making the quantified expression conditional on the String belonging to a Language. 
 
@@ -1013,43 +1114,78 @@ A Sentence Language is defined as the set of unique Words which are contained in
 
    α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: (i, α) ∈ W:sub:`ζ`
 
-These axioms are used to prove the following theorems.
+These axioms and definitions are used to prove the following theorems.
 
 **Theorem 2.3.1** ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 
 This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Sentence Language is a subset of the Language **L**.
 
-Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ`  is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
+Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ` is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
 
     ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L 
-    
-In other words, every (Word-level set representation of a) Sentence from a Corpus is a subset of the Language **L**. ∎
 
-**Theorem 2.3.2** ∀ ζ ∈ C:sub:`L`, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ]
+In other words, every Sentence Language from a Corpus is a subset of the Language **L**. ∎
+
+
+
+
+Theorem 2.3.2: ∀ ζ ∈ C:sub:L: Λ(ζ) ≥ 1
 
 Proof:
 
-Let ζ be an arbitrary Sentence in C:sub:L and let t be an arbitrary String in S.
+Let ζ be an arbitrary sentence in C:sub:L.
 
-Assume, for the sake of contradiction, that (t = ε) ∧ (t ⊂:sub:s ζ).
+Non-Empty Character Axiom (S.3): By Axiom S.3, we know that ¬(ε ⊂:sub:s ζ). In other words, the empty character is not contained in ζ.
 
-Since t ⊂:sub:s ζ, by Definition 1.1.4 of Containment, there exists a strictly increasing and consecutive function f: N:sub:l(t) → N:sub:l(ζ) such that ∀ i ∈ N:sub:l(t): 𝔞:sub:i = 𝔟:sub:f(i), where 𝔞:sub:i represents the Characters in t and 𝔟:sub:f(i) represents the Characters in ζ.
+Definition of Containment (Definition 1.1.4): Recall that a string t is contained in a string u (t ⊂:sub:s u) if and only if there exists a strictly increasing and consecutive function f from the indices of the characters of t to the indices of the characters of u that preserves the order of characters.
 
-However, since t = ε, by Definition 1.1.2 of String Length, l(t) = 0. This implies that N:sub:l(t) = ∅ (the empty set).
+Implication of Non-Containment: Since the empty character ε is not contained in ζ, it means there is no such function f that can map the empty character to any character in ζ while satisfying the conditions of Definition 1.1.4.
 
-Since N:sub:l(t) = ∅, the function f in step 2 cannot exist, as there are no elements in the domain to map to the codomain.
+Presence of Non-Empty Characters:  This implies that ζ must contain at least one non-empty character. If ζ were composed only of delimiters or empty characters, it would contradict Axiom S.3, which states that the empty character is not contained in any sentence of the corpus.
 
-This contradicts our assumption in step 2 that such a function f exists.
+Delimiter Axiom (W.1): By the Delimiter Axiom (∀ α ∈ L: ∀ i ∈ N:sub:l(α): 𝔞:sub:i ≠ σ), we know that words in a language cannot contain delimiters.
 
-Therefore, our initial assumption in step 1 that (t = ε) ∧ (t ⊂:sub:s ζ) must be false.
+Existence of at Least One Word: Since ζ contains at least one non-empty character (from step 4) and words cannot contain delimiters (from step 5), this non-empty character must be part of a word. Therefore, ζ must contain at least one word.
 
-Hence, ¬[ (t = ε) ∧ (t ⊂:sub:s ζ) ] is true.
+Definition of Word-Level Representation (Definition 2.1.3): The Delimiting Algorithm (Definition 2.1.4) constructs the word-level representation W:sub:ζ by identifying sequences of non-delimiter characters. Since ζ contains at least one word (from step 6), W:sub:ζ will contain at least one element.
 
-Since ζ and t were arbitrary, we can generalize this result:
+Definition of Sentence Length (Definition 2.1.5):  The sentence length Λ(ζ) is defined as the number of words in W:sub:ζ.
 
-∀ ζ ∈ C:sub:L, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:s ζ) ] ∎
+Conclusion: Since W:sub:ζ has at least one element (from step 7), and Λ(ζ) is the number of elements in W:sub:ζ (from step 8), it follows that Λ(ζ) ≥ 1.
 
-(TODO: trim)
+Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
+
+∀ ζ ∈ C:sub:L: Λ(ζ) ≥ 1
+
+This completes the proof. ∎
+
+
+
+TODO: this is now an axiom, replace with the above.
+
+**Theorem 2.3.2** ∀ ζ ∈ C:sub:`L`, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ]
+
+Let *ζ* be an arbitrary Sentence in **C**:sub:`L` and let *t* be an arbitrary String in **S**.
+
+Assume, for the sake of contradiction, 
+
+    1. (t = ε) ∧ (t ⊂:sub:`s` ζ).
+
+Since *t ⊂*:sub:`s` *ζ*, by Definition 1.1.4 of Containment, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(t)` → **N**:sub:`l(ζ)` such that,
+
+    2. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
+    
+Where 𝔞:sub:`i` represents the Characters in *t* and 𝔟:sub:`f(i)` represents the Characters in *ζ*. However, since *t = ε*, by Definition 1.1.2 of String Length, *l(t) = 0*. This implies that 
+
+    **N**:sub:`l(t)` = ∅
+
+Since N:sub:`l(t)` is the empty set, the function *f* in step 2 cannot exist, as there are no elements in the domain to map to the codomain. This contradicts our assumption in step 2 that such a function f exists. Therefore, our initial assumption in step 1. Hence, the following must be true,
+
+    ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ]
+
+Since ζ and t were arbitrary, this can be generalized over the Corpus of Sentences and set of Strings,
+
+    ∀ ζ ∈ C:sub:`L`, ∀ t ∈ S: ¬[ (t = ε) ∧ (t ⊂:sub:`s` ζ) ] ∎
 
 
 
@@ -1062,81 +1198,81 @@ Assume *ζ ∈ K*. By Definition 2.2.2,
 
     inv(ζ) ∈ C:sub:`L`
 
-By Axiom S.3, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
+By Axiom S.2, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
+
+As mentioned when Invertible Sentences were defined, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to **Theorem 2.3.4** and **Theorem 2.3.5**, of which the latter represents the culmination of the effort so far, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
+
+Consider the Sentences from the English language, *ᚠ = "this is a test"*, *ᚢ = "live on"*,* and *ᚦ = "step on no pets"*. Their Character-level representations would be,
+
+    **ᚠ** = ("t", "h", "i", "s", σ, "i", "s", σ, "a", σ, "t", "e", "s", "t")
+
+    **ᚢ** = ("l", "i", "v", "e", σ, "o", "n")
+
+    **ᚦ** = ("s", "t", "e", "p", σ, "n", "o", σ, "n", "o", σ, "p", "e", "t", "s")
+
+The Character-level representation of their Inverses, would be,
+
+    **inv(ᚠ)** = ("t", "s", "e", "t", σ, "a", σ, "s", "i", σ, "s", "i", "h", "t")
+
+    **ing(ᚢ)** = ("n", "o", σ, "e", "v", "i", "l")
+
+    **inv(ᚦ)** = ("s", "t", "e", "p", σ, "n", "o", σ, "n", "o", σ, "p", "e", "t", "s")
+
+In the case of *ᚠ*, it's *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and Reverse(*ᚠ*), just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the beginning of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representation, results in the same delimitation of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted. In other words, the Delimiting Algorithm, while defined to apply to Words, can be extended to apply to the more general class of Strings which do not contain Empty Characters. 
+
+In the case of *ᚢ*, it's *inv(ᚢ)* belongs to the Corpus, since all of its Words belong to the Language (English) and have semantic coherence in *ᚢ*. This means *ᚢ* belongs to the class of Invertible Sentences in English. Take note, none of the Words that belong to *ᚢ* (or more precisely, to one of the ordered pairs of **W**:sub:`ᚢ`) belong to *inv(ᚢ)* (or more precisely, to one of the ordered pairs of **W**:sub:`inv(ᚢ)`). However, there does appear to be a relationship between the Words which appear in *ᚢ* and *inv(ᚢ)*, namely, they must be Invertible. The Word *"live"* inverts into *"evil"*, while *"on"* inverts into *"no"*. In other words, based on this preliminary heuristic analysis, if a Sentence is to be Invertible, the Words which belong to it must belong to the class of Invertible Words **I**.
+
+In the case of *ᚦ*, a similar situation is found. Each Word in *ᚦ* is Invertible and pairs with its Inverse Word in *inv(ᚦ)*, e.g. *"pets"* and *"step"* form an Invertible pair, etc. This means, for the same reasons as *ᚢ*, *ᚦ* belongs to the class of Invertible Sentences. However, there is a symmetry embodied in *ᚦ* over and above the pairing of its constituent Words into Invertible pairs. Not only is *inv(ᚦ)* a Sentence in the Corpus, but it's equal to *ᚦ* itself. Indeed, *ᚦ* belongs to a special class of English sentences: Palindromes. 
+
+The next two theorems encapsulate these important properties of Invertible Sentences. When Palindromes are formally defined in the next section, these theorems will be used extensively to prove the main results of this work. 
+
+**Theorem 2.3.4**: ζ ∈ K → W:sub:`inv(ζ)` = (inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ..., inv(α:sub:`1`))
+
+Let **Z** be the Character-level representation of *ζ*. By Definition 1.2.1, the Character-level representation of *inv(ζ)* is the reversed sequence of Characters in **Z**.
+
+The Delimiters in **Z** and **inv(Z)** appear at the same indices, just in reversed order. Since the Delimiting Algorithm (Definition 2.1.4) identifies Words based on Delimiter positions, the Strings separated by Delimiters in *inv(ζ)* will be the Inverses of the Words in *ζ*, but in reversed order.
+
+Assume *ζ ∈* **K**. By Theorem 2.3.3, this implies that the Word-level representation of *inv(ζ)* only contains Words from the Language **L**. This means the Strings separated by Delimiters in *inv(ζ)* must be Words from Language **L**.
+
+Therefore, the Word-level representation of *inv(ζ)* contains the Inverse Word of each Word in *ζ* in the reversed order. ∎
 
 
 
+Theorem 2.3.4: ζ ∈ K → W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
 
-Example:
+Revised Proof:
 
-Consider the Sentence ζ = "This is a test."
+Let ζ be an arbitrary sentence in K.
+Let Z be the Character-level representation of ζ.
+Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ, obtained by applying the Delimiting Algorithm (Definition 2.1.4) to Z.
 
-Its Character-level representation is:
+Character-Level Inversion: By Definition 1.2.1, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
 
-Z = (T, h, i, s, σ, i, s, σ, a, σ, t, e, s, t, .)
+Delimiter Preservation: The Delimiters in Z and inv(Z) appear at the same indices, but in reversed order. This is because string inversion reverses the order of all characters, including delimiters.
 
-Now, let's reverse Z to get the Character-level representation of inv(ζ):
+Applying the Delimiting Algorithm to inv(ζ):  Let's apply the Delimiting Algorithm to inv(Z). Because the delimiters are in reversed order, the algorithm will identify segments of inv(Z) that correspond to the inverses of the words in Z, also in reversed order.
 
-Reverse(Z) = (., t, s, e, t, σ, a, σ, s, i, σ, s, i, h, T)
+Word-Level Representation of inv(ζ): Let W:sub:inv(ζ) be the Word-level representation of inv(ζ) obtained by applying the Delimiting Algorithm to inv(Z).
 
-Notice that the Delimiters (σ) still appear at the same indices in both Z and Reverse(Z), just in reversed order.
+Invertibility Implies Semantic Coherence: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.  By Axiom S.2, every word in W:sub:inv(ζ) must belong to L.
 
-In Z, the Delimiters are at indices 4, 7, and 9.
-In Reverse(Z), the Delimiters are at indices 9, 7, and 4 (counting from the beginning of the reversed string).
-Why this happens:
-
-When we reverse a String at the Character level, we're essentially flipping the order of all Characters. This includes the Delimiters.  So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same.
-
-Implications for the Delimiting Algorithm:
-
-Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means that when we apply the algorithm to the reversed Character-level representation, we'll still get the same Words, but in reversed order and inverted.
-
-This is why the Word-level representation of inv(ζ) in Corollary 2.3.4.1 is the reordered inverses of the Words in ζ.
-
-In our example:
-
-Applying the Delimiting Algorithm to Z gives us:
-
-W:sub:ζ = ("This", "is", "a", "test")
-
-Applying the Delimiting Algorithm to Reverse(Z) gives us:
-
-W:sub:inv(ζ) = ("tset", "a", "si", "siht")
-
-
-
-
-Corollary 2.3.4.1:
-
-Let ζ be a Sentence in C:sub:L with Word-level representation:
-
-W:sub:ζ = (α:sub:1, α:sub:2, ..., α:sub:Λ(ζ))
-
-Then, the Word-level representation of inv(ζ) is:
+Conclusion: Combining steps 3, 4, and 5, we can conclude that W:sub:inv(ζ) consists of the inverses of the words in W:sub:ζ, in reversed order. Therefore:
 
 W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
 
-Proof:
-
-Character-level representation: Let Z be the Character-level representation of ζ. By Definition 1.2.1 (String Inversion), the Character-level representation of inv(ζ) is the reverse of Z.
-
-Delimiter positions: The Delimiters in Z and the reverse of Z appear at the same indices, just in reversed order.
-
-Word boundaries:  Since the Delimiting Algorithm (Definition 2.1.4) identifies Words based on Delimiter positions, the Words in inv(ζ) will be the inverses of the Words in ζ, but in reversed order.
-
-Word-level representation: This implies that the Word-level representation of inv(ζ) is indeed the reordered inverses of the Words in ζ, as stated in the corollary. ∎
+This completes the proof. ∎
 
 
 
-**Theorem 2.3.4** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+**Theorem 2.3.5** ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
-This theorem can be stated in natural language as follows: A Sentence is Invertible if its Words are Invertible.
+This theorem can be stated in natural language as follows: If a Sentence is Invertible, then all of its Words are Invertible.
 
 Assume *ζ ∈* **K**. Consider the Word-level representation of *ζ*.
 
     1. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
 
-By Definition 1.2.1 AND THE THEOREM PROVED ABOVE, the Word-level representation of *inv(ζ)* is 
+By Definition 1.2.1 and Theorem 2.3.4, the Word-level representation of *inv(ζ)* is 
 
     3. W:sub:`inv(ζ)` = ( inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ... , inv(α:sub:`1`) )
 
@@ -1145,6 +1281,38 @@ By Theorem 2.2.3, every Word in *inv(ζ)* belongs to **L**.  Therefore, each inv
 By the Definition 1.3.2, each α:sub:`i` ∈ I. Therefore, all words in ζ are invertible. Formally,
 
     4. (∀ α ∈ L:sub:`ζ`: α ∈ I) ∎
+
+
+
+
+Theorem 2.3.5: ζ ∈ K → (∀ α ∈ W:sub:ζ: α ∈ I)
+
+Revised Proof:
+
+Let ζ be an arbitrary sentence in K.
+Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ.
+
+Invertibility of ζ: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.
+
+Word-Level Representation of inv(ζ): By Theorem 2.3.4, we know that:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+
+Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.2 (The Extraction Axiom), every word in W:sub:inv(ζ) must belong to L.
+
+Invertibility of Words in ζ:  Therefore, for each i from 1 to Λ(ζ), inv(α:sub:i) ∈ L.
+
+Definition of Invertible Words: By Definition 1.3.2, a word α is invertible (α ∈ I) if and only if inv(α) ∈ L.
+
+Conclusion: Since inv(α:sub:i) ∈ L for each word α:sub:i in W:sub:ζ, it follows that each α:sub:i ∈ I. Thus, we can generalize this to all words in W:sub:ζ:
+
+(∀ α ∈ W:sub:ζ: α ∈ I)
+
+This completes the proof. ∎
+
+
+You could add a step explicitly stating that L:sub:ζ is the set of words in W:sub:ζ, and then use the notation (∀ α ∈ L:sub:ζ: α ∈ I) in the conclusion. However, since you defined W:sub:ζ to represent the ordered sequence of words, using (∀ α ∈ W:sub:ζ: α ∈ I) is acceptable and arguably more direct in this context.
+
 
 The contrapositive of Theorem 2.2.4 provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.
 
@@ -1169,13 +1337,11 @@ Delimiter Count Function
 
 As the introduction to this subsection made clear, it will be necessary to have a way of referencing the number of Delimiter Characters in a Sentence. Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings **S**. The following definition will serve that purpose.
 
-**Definition 2.4.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let *𝔞*:sub:`i` represent the *i*:sup:`th` character of the String *t*, where 
+**Definition 2.4.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let *𝔞*:sub:`i` represent the *i*:sup:`th` character of the String *t*, where *1 ≤ i ≤ l(t)*
 
-    i ∈ N:sub:`l(t)` = { 1, 2, ..., l(t) }.
+The delimiter count function, denoted by *Δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *t*. Formally, *Δ(t)* is defined as the cardinality of the set that satisfies the following formula:
 
-The delimiter count function, denoted by *Δ(t)*, is defined as the number of Delimiter characters (*σ*) in the string *t*. Formally, *Δ(t)* is defined as the cardinality of the set **D**:sub:`t` that satisfies the following formula:
-
-    (j, ⲁ) ∈ D:sub:`t` ↔ (∃ i ∈ N:sub:`l(t)` ( (i, ⲁ) ∈ T ) ∧ (ⲁ = σ) ∧ (j = i) )
+    D:sub:`t` ↔ { (i, ⲁ) ∈ T | ⲁ = σ, 1 ≤ i ≤ l(t) } 
 
 where **T** is the set representation of the String *t*, 
 
@@ -1187,7 +1353,7 @@ Then, the delimiter count function is defined as
 
 **Example** Consider the string *t = "a b c"*. The set representation of *t* is given by,
     
-    T = { (1, a), (2, σ), (3, b), (4, σ), (5, c) }.
+    T = { (1, "a"), (2, σ), (3, "b"), (4, σ), (5, "c") }.
 
 The set D:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the first coordinate of the pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
     
@@ -1195,11 +1361,11 @@ The set D:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the 
 
 From this it follows, | D:sub:`t` | is 2. Hence, *Δ(s) = 2*.
 
-From this example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the delimiter count) as output. Multiple sentences can have the same delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
+From this example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the Delimiter count) as output. Multiple sentences can have the same Delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
 
 **Theorem 2.4.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
-In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its delimiter count plus one.
+In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its Delimiter count plus one.
 
 Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`ζ` is formed by splitting **Ζ** at each Delimiter Character *σ*.
 
@@ -1213,6 +1379,23 @@ herefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to th
 
 A more explicit version of Theorem 2.4.1 is given below using the Delimit Algorithm.
 
+
+
+Theorem 2.4.1:
+
+Both versions of the proof are correct, but the "explicit version" is unnecessarily long and complex. The first version is sufficient and more elegant.
+The justification in the first version could be slightly more explicit by mentioning that each delimiter creates a boundary between words and thus each delimiter corresponds to one word boundary, and there is always one more word than there are word boundaries.
+Revised Theorem 2.4.1 proof:
+
+Assume ζ ∈ C:sub:L. Let W:sub:ζ be the word-level set representation of ζ. Recall W:sub:ζ is formed by splitting the character level representation of ζ at each Delimiter Character σ. Each word in W:sub:ζ corresponds to a contiguous subsequence of non-delimiter characters. Since delimiters separate words, and each delimiter corresponds to one word boundary, the number of words in the sentence is always one more than the number of delimiters. Therefore, the cardinality of W:sub:ζ (the number of words) is equal to the delimiter count of Δ(ζ) plus one,
+
+| W:sub:`ζ` | = Δ(ζ) + 1.
+By Definition 2.1.5, Λ(ζ) = | W:sub:ζ |. Substituting, the desired result is obtained,
+
+Λ(ζ) = Δ(ζ) + 1. ∎
+
+
+
 **Theorem 2.4.1 (Explicit Version)** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
 Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. By Definition 2.1.3, **W**:sub:`ζ` is constructed using the Delimiting Algorithm. 
@@ -1225,19 +1408,54 @@ The pair (j + 1, *a*) is added to **W**:sub:`ζ`
 
 The index *j* is incremented by the length of the Word *a*, *l(a)*.
 
-Every time a Word is added to **W**:sub:`ζ`, the algorithm encounters exactly one delimiter (except for the last word, where it encounters the end of the sentence).
+Every time a Word is added to **W**:sub:`ζ`, the algorithm encounters exactly one Delimiter (except for the last word, where it encounters the end of the sentence).
 
 The algorithm terminates when all characters in Ζ have been processed.
 
-Therefore, the number of words added to **W**:sub:`ζ` is exactly one more than the number of delimiters encountered.
+Therefore, the number of words added to **W**:sub:`ζ` is exactly one more than the number of Delimiters encountered.
 
-By Definition 2.4.1, Δ(ζ) counts the number of delimiter characters in *ζ*. By Definition 2.1.6,  Λ(ζ) = | W:sub:`ζ` | (the number of words in *ζ*).
+By Definition 2.4.1, Δ(ζ) counts the number of Delimiter characters in *ζ*. By Definition 2.1.6,  Λ(ζ) = | W:sub:`ζ` | (the number of words in *ζ*).
 
 Hence, Λ(ζ) = Δ(ζ) + 1. ∎
 
-The next theorem will be important for describing the structure of *imperfect palindromes*.
+The next two theorem establish the invariance of the Delimiter count under String Inversion for any String, and by extension, any Sentence.
 
-**Theorem 2.4.2** *Δ(s) = Δ(inv(s))*
+
+
+
+
+
+Theorem 2.4.2:
+
+The proof is mostly correct but could be made more rigorous by explicitly stating that the mapping between (j, σ) in D:sub:u and (i, σ) in D:sub:t is a bijection.
+The conclusion could be stated more clearly by explicitly using set notation: D:sub:inv(t) = { (l(t) - i + 1, σ) | (i, σ) ∈ D:sub:t }.
+Revised Theorem 2.4.2 Proof:
+
+Let t be a string with length l(t). Let T be the set representation of t. Let u = inv(t).
+
+Let D:sub:t be the set of ordered pairs representing the positions of the Delimiter σ in t, and let D:sub:u be the corresponding set for u.
+
+We want to show that  Δ(t) = Δ(inv(t)), which is equivalent to showing |D:sub:t| = |D:sub:u|.
+
+Define a function f: D:sub:t → D:sub:u as follows:
+
+For any (i, σ) ∈ D:sub:t, let f((i, σ)) = (l(t) - i + 1, σ).
+We will show that f is a bijection:
+
+f is well-defined: If (i, σ) ∈ D:sub:t, then the character at position i in t is σ. By the definition of inversion, the character at position l(t) - i + 1 in u = inv(t) is also σ. Therefore, (l(t) - i + 1, σ) ∈ D:sub:u, and f maps elements of D:sub:t to elements of D:sub:u.
+
+f is injective (one-to-one): Suppose f((i₁, σ)) = f((i₂, σ)). Then (l(t) - i₁ + 1, σ) = (l(t) - i₂ + 1, σ). This implies l(t) - i₁ + 1 = l(t) - i₂ + 1, so i₁ = i₂. Thus, (i₁, σ) = (i₂, σ), and f is injective.
+
+f is surjective (onto): Let (j, σ) be an arbitrary element of D:sub:u. Then the character at position j in u is σ. Let i = l(t) - j + 1. Then j = l(t) - i + 1. By the definition of inversion, the character at position i in t is also σ. So, (i, σ) ∈ D:sub:t, and f((i, σ)) = (l(t) - i + 1, σ) = (j, σ). Thus, f is surjective.
+
+Since f is a bijection, |D:sub:t| = |D:sub:u|. By the definition of the delimiter count function, Δ(t) = |D:sub:t| and Δ(u) = |D:sub:u|. Since u = inv(t), we have Δ(t) = Δ(inv(t)).
+
+Furthermore, we have established a precise relationship between D:sub:t and D:sub:inv(t):
+
+D:sub:inv(t) = { (l(t) - i + 1, σ) | (i, σ) ∈ D:sub:t } ∎
+
+
+**Theorem 2.4.2** Δ(s) = Δ(inv(s))
 
 Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`. Let **T** be the set representation of of *t* is given by,
 
@@ -1276,6 +1494,26 @@ Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**
 
 Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
 
+
+
+Theorem 2.4.5:
+
+The proof is correct, but the explanation in the second paragraph could be improved. Instead of saying "Either each ⲁ:sub:i... is a Delimiter or it is a non-Delimiter," it would be clearer to say "Each character in Z is either a delimiter or part of a word in W:sub:ζ."
+Revised Theorem 2.4.5 proof:
+
+Assume ζ ∈ C:sub:L. Let Ζ be the Character-level representation of ζ,
+
+1. **Z** = { (1, ⲁ:sub:`1`), (2, ⲁ:sub:`2`), ..., (l(ζ), ⲁ:sub:`l(ζ)`) }
+Each character in Z is either a delimiter or part of a word in W:sub:ζ.
+
+By Definition 2.4.1, the number of Delimiter Characters in ζ is Δ(ζ).
+
+By Axiom W.1 (Delimiter Axiom), words in L do not contain Delimiters. By Definition 2.1.3, the words in W:sub:ζ are obtained by splitting ζ  at the Delimiters. Therefore, the total number of non-Delimiter characters in ζ is the sum of the lengths of the words in W*:sub:ζ, which is Σ:sub:(i, α) ∈ W_ζ l(α).
+
+Since every Character in ζ is either a Delimiter or part of a Word (and not both), the total number of Characters in ζ is the sum of the number of delimiters and the number of characters in words. By Definition 1.1.2, the total number of non-Empty characters in ζ is l(ζ). Therefore, the number of non-Empty Characters in ζ is equal to the number of Delimiters plus the sum of the lengths of the words in W*:sub:ζ.
+
+2. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α) ∎
+
 **Theorem 2.4.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α)
 
 In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *Δ(ζ)* plus the sum of the String Lengths of its Words.
@@ -1300,7 +1538,7 @@ Applying the results of Theorem 2.4.1 and Theorem 2.4.5, this theorem follows fr
 
 **Theorem 2.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Σ:sub:`(i, α) ∈ W_ζ` l(α)
 
-Assume *ζ ∈* **C**:sub:`L`. By Theorem 2.1.2,
+Assume *ζ ∈* **C**:sub:`L`. By Theorem 2.3.2,
     
     1. Λ(ζ) ≥ 1
 
@@ -1398,6 +1636,39 @@ Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" 
 
     S ⋅ Σ' = "abc"
 
+
+Definition 3.1.2 (σ-Reduction):
+
+The definition is mostly clear, but the notation S ⋅ Σ:sub:σ could be made more explicit. While you explain the analogy to a dot product, it might be helpful to state explicitly that this represents the application of the σ-reduction function to the string S.
+You use both S and s to refer to the input string. It would be better to stick to one consistently. Since you use s in the introductory paragraph, I suggest using s throughout the definition and algorithm as well.
+Here's a suggested revision:
+
+Definition 3.1.2: σ-Reduction
+
+Let s be a String with length l(s) and Character-level representation
+
+S = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(s), 𝔞:sub:`l(s)`) }
+where 𝔞:sub:`i` ∈ Σ.
+The σ-reduction function (or simply, the σ-reduction), denoted by σ_reduce(s), maps the String s to a new String t in the σ-reduced alphabet Σ:sub:σ by removing all occurrences of the Delimiter Character. Formally, σ_reduce(s) = t, and t is constructed using the σ-Reduction Algorithm.
+
+σ-Reduction Algorithm
+
+Initialization
+
+Let t be the empty string, t = ε.
+Iteration
+
+For each Character 𝔞:sub:i in S, if 𝔞:sub:i ≠ σ, then concatenate 𝔞:sub:i to the end of t.
+Example of σ-Reduction:
+
+The example using "a b c" is clear and helpful.
+The explanation after the example correctly highlights the loss of information during σ-reduction. You could also mention that the order of the non-delimiter characters is preserved.
+
+
+
+
+
+
 The notation for sigma reduction is meant to evoke the idea of a vector dot project. The analogy to a vector projection is indeed apt. While not a strict mathematical equivalence, it captures the idea of transforming the string from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
 
 The *σ*-reduced alphabet (**Σ**:sub:`σ`) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (**S ⋅ Σ**:sub:`σ`) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
@@ -1422,108 +1693,312 @@ This theorem can be stated in natural language as follows: Given the *σ-reducti
 
 Assume *ζ ∈ C*:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*.
 
-By the Axiom of Word Extraction (S.3),
+By the Axiom of Word Extraction S.3,
 
-    1. ∀ ζ ∈ C*:sub:`L`, ∀ α ∈ W:sub:`ζ`: α ∈ L.
+    1. ∀ ζ ∈ C:sub:`L`, ∀ α ∈ W:sub:`ζ`: α ∈ L.
 
-Since *ζ* is a sentence, by Theorem 2.1.3,it must contain at least one word. Therefore, W:sub:`ζ` is not empty. Let *α* be any word in **W**:sub:`ζ`:.
+Since *ζ* is a sentence, by Theorem 2.3.2 (*Λ(ζ) ≥ 1*), it must contain at least one word. Therefore, W:sub:`ζ` is not empty. Let *α* be any word in **W**:sub:`ζ`. By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  
 
-By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  
+Let **A** be the Character-level representation of *α*,
 
-Now, let's formally show that α is contained in Ζ ⋅ Σ:sub:σ:
+    (𝔞:sub:`1`, 𝔞:sub:`2`, ..., 𝔞:sub:`l(α)`)
 
-Representations: Let A = (𝔞:sub:1, 𝔞:sub:2, ..., 𝔞:sub:l(α)) be the Character-level representation of α. Let Z' = (𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(Ζ ⋅ Σ:sub:σ)) be the Character-level representation of Ζ ⋅ Σ:sub:σ.
+Let Z' = be the Character-level representation of Ζ ⋅ Σ:sub:σ.
 
-Constructing the function: Since α is a contiguous subsequence of non-Delimiter Characters in Ζ, there exists an index k such that:
+    (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(Ζ ⋅ Σ:sub:σ)`)
 
-𝔞:sub:1 = 𝔟:sub:k
-𝔞:sub:2 = 𝔟:sub:k+1
-...
-𝔞:sub:l(α) = 𝔟:sub:k+l(α)-1
-Define the function f: N:sub:l(α) → N:sub:l(Ζ ⋅ Σ:sub:σ`) as f(i) = k + i - 1.
+Since *α* is a contiguous subsequence of non-Delimiter (by the Delimiter Axiom W.1) and non-Empty Characters (by Theorem 1.2.3) in **Ζ**, there exists an index k such that:
 
-Strictly increasing and consecutive: The function f is clearly strictly increasing and consecutive, as it maps consecutive indices in α to consecutive indices in Ζ ⋅ Σ:sub:σ.
+    𝔞:sub:`1` = 𝔟:sub:`k`
+    𝔞:sub:`2` = 𝔟:sub:`k+1`
+    ...
+    𝔞:sub:`l(α)` = 𝔟:sub:`k+l(α)-1`
 
-Satisfying containment:  By construction, f satisfies the condition ∀ i ∈ N:sub:l(α): 𝔞:sub:i = 𝔟:sub:f(i).
+Define the function *f*: **N**:sub:`l(α)` → **N**:sub:`l(Ζ ⋅ Σ:sub:σ`)` as,
 
-Therefore, by Definition 1.1.4 of Containment, α ⊂:sub:s (Ζ ⋅ Σ:sub:σ). ∎
+    f(i) = k + i - 1.
 
-(TODO: trim)
+The function *f* is clearly strictly increasing and consecutive, as it maps consecutive indices in *α* to consecutive indices in **Ζ ⋅ Σ**:sub:`σ`. By construction, f satisfies the condition,
 
-Corollary 3.1.2.1: Let s and t be Strings. Then, inv(st) = inv(t)inv(s).
+    ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`.
+
+Therefore, by Definition 1.1.4 of Containment, 
+
+    α ⊂:sub:`s` (Ζ ⋅ Σ:sub:`σ`). ∎
+
+
+
+
+
+
+
+Theorem 3.1.1: ∀ ζ ∈ C:sub:L, ∃ α ∈ L: α ⊂:sub:s ( σ_reduce(ζ) )
 
 Proof:
 
-Character-level representations:
+Assume ζ ∈ C:sub:L. By Axiom S.1 (Word-Sentence Duality), since ζ is a sentence in the corpus, there exists a word α ∈ L such that α is contained in ζ.
 
-Let S = (𝔞₁ , 𝔞₂ , ..., 𝔞ₗ₍ₛ₎) be the Character-level representation of s.
-Let T = (𝔟₁ , 𝔟₂ , ..., 𝔟ₗ₍ₜ₎) be the Character-level representation of t.
-Concatenation: The Character-level representation of st is:
+Let s = σ_reduce(ζ).
 
-ST = (𝔞₁ , 𝔞₂ , ..., 𝔞ₗ₍ₛ₎, 𝔟₁ , 𝔟₂ , ..., 𝔟ₗ₍ₜ₎)
+Since α ⊂:sub:s ζ, there exists a sequence of indices i₁ < i₂ < ... < i:sub:l(α) such that the character at position i:sub:j in ζ is the same as the character at position j in α, for all j from 1 to l(α).
 
-Inversion of concatenated string: By Definition 1.2.1 (String Inversion), the Character-level representation of inv(st) is the reverse of ST:
+Since α is a word, by Axiom W.1, it does not contain any delimiter characters. Therefore, the subsequence of characters in ζ corresponding to α will also be present in s after the removal of delimiters. Thus, α is also contained in s.
 
-inv(ST) = (𝔟ₗ₍ₜ₎, ..., 𝔟₂ , 𝔟₁ , 𝔞ₗ₍ₛ₎, ..., 𝔞₂ , 𝔞₁)
+Therefore, we have shown that for any sentence ζ in the corpus, there exists a word α in the language such that α is contained in the σ-reduction of ζ:
 
-Inversion of individual strings:
-
-The Character-level representation of inv(s) is (𝔞ₗ₍ₛ₎, ..., 𝔞₂ , 𝔞₁).
-The Character-level representation of inv(t) is (𝔟ₗ₍ₜ₎, ..., 𝔟₂ , 𝔟₁).
-Concatenation of inverted strings:  The Character-level representation of inv(t)inv(s) is:
-
-(𝔟ₗ₍ₜ₎, ..., 𝔟₂ , 𝔟₁ , 𝔞ₗ₍ₛ₎, ..., 𝔞₂ , 𝔞₁)
-
-Equality: Comparing the results from step 3 and step 5, we see that the Character-level representations of inv(st) and inv(t)inv(s) are identical.
-
-Therefore, inv(st) = inv(t)inv(s). ∎
+∀ ζ ∈ C:sub:`L`, ∃ α ∈ L: α ⊂:sub:`s` ( σ_reduce(ζ) )
 
 
+Rename and reorderer.
+
+**Corollary 3.1.2** ∀ u, t ∈ S: inv(ut) = inv(t)inv(u).
+
+Let **U** be the Character-level representation of *u*,
+
+    1. U = (𝔞:sub:`1` , 𝔞:sub:`2` , ..., 𝔞:sub:`l(u)`)
+
+Let **T** be the Character-level representation of *t*,
+
+    2. T = (𝔟:sub:`1`, 𝔟:sub:`2` , ... , 𝔟:sub:`l(t)`)
+
+The Character-level representation of *ut*, denoted **UT** is:
+
+    3. UT = (𝔞:sub:`1` , 𝔞:sub:`2` , ..., 𝔞:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2` , ... , 𝔟:sub:`l(t)`)
+
+By Definition 1.2.1 of String Inversion, the Character-level representation of *inv(ut)* is the reversed sequence of **UT**,
+
+    4. inv(UT) = ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` , 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
+
+The Character-level representation of *inv(U)*, denoted **inv(U)**,
+
+    5. inv(U) = (𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
+
+The Character-level representation of *inv(t)*, denoted **inv(T)** is 
+
+    6. inv(T) = ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` )
+
+The Character-level representation of *inv(t)inv(u)* is:
+
+    7. ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` , 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
+
+Comparing the results from step 4 and step 7, it can be seen the Character-level representations of *inv(ut)* and *inv(t)inv(u)* are identical.
+
+Therefore, *inv(ut) = inv(t)inv(u)*. ∎
+
+
+
+2.0 Experimental Advanced. Lacks access to real-time info and some Gemini features.
+You're correct, this is a useful corollary, and it's a good idea to state it explicitly. Your proof is also correct and clearly presented.
+
+Here's a slightly more concise way to express the proof, focusing on the string representations directly:
+
+Corollary 3.1.2: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u).
+
+Proof:
+
+Let u and t be arbitrary strings in S.
+
+Representation of ut: Let ut be the concatenation of strings u and t.
+
+Definition of String Inversion: By Definition 1.2.1, inv(ut) is the reversed sequence of characters in ut.
+
+Expansion of inv(ut): If we write out the characters of ut, we have:
+
+u = 𝔞:sub:1 𝔞:sub:2 ... 𝔞:sub:l(u)
+t = 𝔟:sub:1 𝔟:sub:2 ... 𝔟:sub:l(t)
+ut = 𝔞:sub:1 𝔞:sub:2 ... 𝔞:sub:l(u) 𝔟:sub:1 𝔟:sub:2 ... 𝔟:sub:l(t)
+Therefore,
+
+inv(ut) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
+Representation of inv(t) and inv(u): By Definition 1.2.1:
+
+inv(u) = 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
+inv(t) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1
+Representation of inv(t)inv(u):  The concatenation of inv(t) and inv(u) is:
+
+inv(t)inv(u) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
+Comparison: Comparing the results from Step 3 and Step 5, we see that inv(ut) and inv(t)inv(u) have the same character sequence.
+
+Therefore, we conclude that for any strings u and t:
+
+inv(ut) = inv(t)inv(u). ∎
 
 **Theorem 3.1.2** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)) ]
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ-reduction*.
 
-Theorem 3.1.2: ∀ ζ ∈ C:sub:L : ζ ∈ K → [ inv(Ζ ⋅ Σ:sub:σ) = inv(inv(Ζ ⋅ Σ:sub:σ)) ]
+Assume *ζ ∈* **C**:sub:`L`` and *ζ ∈* **K**, i.e. *ζ* is an Invertible Sentence. Let the Word-level representation of *ζ* by given by,
+
+    1. W:sub:`ζ`` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
+
+By Theorem 2.3.5, since *ζ* is invertible, all its Words are also Invertible,
+ 
+    2. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ I.
+
+The σ-reduction of *ζ*, **Ζ ⋅ Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Delimiter Axiom W.1), the σ-reduction concatenates the Words in **W**:sub:`ζ``:
+
+    3. Ζ ⋅ Σ:sub:`σ`` = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
+
+Applying Corollary 3.1.2 repeatedly,
+
+    4. inv(Ζ ⋅ Σ:sub:σ) = inv((α:sub:`1`)(α:sub:`2`) ... (α:sub:`Λ(ζ)`))
+
+To get,
+
+    5.  inv(Ζ ⋅ Σ:sub:`σ`)  = (inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`))
+
+Applying a second Inversion,
+
+    6. inv(inv(Ζ ⋅ Σ:sub:`σ)) = inv((inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`)))
+
+Applying Corollary 3.1.2 again,
+
+    7. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (inv(inv(α:sub:`1`))) (inv(inv(α:sub:`2`)))...(inv(inv(α:sub:`Λ(ζ)`)))
+
+Finally, applying Theorem 1.2.4 (*inv(inv(s)) = s*)
+
+    8. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
+
+Therefore, combining step 3 and step 8
+
+    inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)). ∎
+
+The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ-reduction* whose Inverse does not equal itself. 
+
+These ideas will be expounded until in Section III.III, when the theorems and results of this work are used to implement a Palindrome search algorithm.
+
+
+**Theorem** ∀ ζ ∈ C:sub:`L`: inv(Ζ ⋅ Σ:sub:`σ`) = (inv(Ζ) ⋅ Σ:sub:`σ`)
+
+
 
 Proof:
 
-Assume ζ ∈ C:sub:L and ζ ∈ K (ζ is an invertible Sentence).
+Let ζ be an arbitrary sentence in C:sub:L.
 
-Word-level representation: Let the Word-level representation of ζ be:
+Character-Level Representation: Let Ζ be the character-level representation of ζ:
 
-W:sub:ζ = (α₁ , α₂ , ..., αₙ)  where n = Λ(ζ)
+Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
+σ-reduction: Let s = σ_reduce(ζ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζ.
 
-Invertible words: By Theorem 2.3.4, since ζ is invertible, all its Words are also invertible: ∀ i ∈ N:sub:n: αᵢ ∈ I.
+Inverse of σ-reduction: Let t = inv(s) = inv(σ_reduce(ζ)). By the definition of inversion (Definition 1.2.1), t is the reversed sequence of characters in s.
 
-σ-reduction:
+Inverse of ζ: Let u = inv(ζ). By the definition of inversion, u is the reversed sequence of characters in ζ.
 
-The σ-reduction of ζ, (Ζ ⋅ Σ:sub:σ), is obtained by removing all Delimiters from ζ.
+σ-reduction of Inverse: Let v = σ_reduce(u) = σ_reduce(inv(ζ)). v is obtained by removing all delimiters from u.
 
-Since no Word contains Delimiters (Axiom W.1), the σ-reduction essentially concatenates the Words in W:sub:ζ:
+Key Observation: Since s contains only the non-delimiter characters of ζ in their original order, and t is the reverse of s, t contains only the non-delimiter characters of ζ in reversed order.
 
-Ζ ⋅ Σ:sub:σ = α₁α₂...αₙ
+Similarly, since u is the reverse of ζ, and v is obtained by removing delimiters from u, v also contains only the non-delimiter characters of ζ in reversed order.
 
-Inversion of σ-reduced string: Applying Corollary 3.1.2.1 repeatedly, we get:
+Equality: Therefore, t and v must be the same string, as they both contain the same characters in the same order (the non-delimiter characters of ζ in reversed order).
 
-inv(Ζ ⋅ Σ:sub:σ) = inv(α₁α₂...αₙ)
-= inv(αₙ)...inv(α₂) inv(α₁)
+Conclusion: Since t = v, we have:
 
-Double inversion: Now, let's invert the result from step 4:
+inv(σ_reduce(ζ)) = σ_reduce(inv(ζ))
+Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
 
-inv(inv(Ζ ⋅ Σ:sub:σ)) = inv(inv(αₙ)...inv(α₂) inv(α₁))
-= inv(inv(α₁))inv(inv(α₂))...inv(inv(αₙ))  (by Corollary 3.1.2.1)
-= α₁α₂...αₙ  (by Theorem 1.2.4, inv(inv(s)) = s)
+*   ∀ ζ ∈ C:sub:`L`: inv(σ_reduce(ζ)) = σ_reduce(inv(ζ))
+This completes the proof. ∎
 
-Equality:  We see that inv(inv(Ζ ⋅ Σ:sub:σ)) = α₁α₂...αₙ, which is the same as Ζ ⋅ Σ:sub:σ from step 3.
+Explanation:
 
-Therefore, inv(Ζ ⋅ Σ:sub:σ) = inv(inv(Ζ ⋅ Σ:sub:σ)). ∎
+The proof hinges on the fact that σ-reduction only removes delimiters and doesn't change the order of the non-delimiter characters. Therefore, reversing the string before or after removing delimiters results in the same sequence of non-delimiter characters (in reversed order).
+
+Importance of this Corollary:
+
+This corollary is essential because it allows us to freely move between the inverse of a σ-reduction and the σ-reduction of an inverse. This will be crucial for proving properties of palindromes, as we'll often need to consider both inversions and σ-reductions.
+
+**Theorem** ∀ ζ,ξ ∈ C:sub:`L`: ΖΞ ⋅ Σ:sub:`σ` = (Ζ⋅ Σ:sub:`σ`)(Ξ ⋅ Σ:sub:`σ`)
+
+Theorem: ∀ ζ, ξ ∈ C:sub:L: σ_reduce(ζξ) = σ_reduce(ζ)σ_reduce(ξ)
+
+Proof:
+
+Let ζ and ξ be arbitrary sentences in C:sub:L.
+
+Character-Level Representations: Let Ζ and Ξ be the character-level representations of ζ and ξ, respectively:
+
+Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
+Ξ = (𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(ξ))
+Concatenation: Let ζξ be the concatenation of ζ and ξ. The character-level representation of ζξ is:
+
+ΖΞ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ), 𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(ξ))
+σ-reduction of ζξ: Let s = σ_reduce(ζξ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζξ.
+
+σ-reduction of ζ and ξ: Let t = σ_reduce(ζ) and u = σ_reduce(ξ). By the definition of σ-reduction, t and u are obtained by removing all delimiters from ζ and ξ, respectively.
+
+Concatenation of σ-reductions: Let v = tu = σ_reduce(ζ)σ_reduce(ξ). v is the concatenation of the strings t and u.
+
+Key Observation: Since σ-reduction only removes delimiters and doesn't change the order of non-delimiter characters, the non-delimiter characters in s (the σ-reduction of ζξ) are the same as the non-delimiter characters in ζ followed by the non-delimiter characters in ξ.
+
+Similarly: The non-delimiter characters in v (the concatenation of σ_reduce(ζ) and σ_reduce(ξ)) are also the non-delimiter characters in ζ followed by the non-delimiter characters in ξ.
+
+Equality: Therefore, s and v must be the same string, as they both contain the same characters in the same order (the non-delimiter characters of ζ followed by the non-delimiter characters of ξ).
+
+Conclusion: Since s = v, we have:
+
+σ_reduce(ζξ) = σ_reduce(ζ)σ_reduce(ξ)
+Since ζ and ξ were arbitrary sentences in C:sub:L, we can generalize:
+
+*   ∀ ζ, ξ ∈ C:sub:`L`: σ_reduce(ζξ) = σ_reduce(ζ)σ_reduce(ξ)
+This completes the proof. ∎
+
+Explanation:
+
+The proof relies on the fact that σ-reduction only removes delimiters and preserves the order of non-delimiter characters. Therefore, applying σ-reduction to the concatenation of two sentences is the same as concatenating the σ-reductions of the individual sentences.
+
+Naming the Theorem:
+
+This theorem could be called the "Distributivity of σ-reduction over Concatenation" or the "σ-reduction Concatenation Property".
+
+Implications:
+
+This theorem further demonstrates the "algebraic" nature of σ-reduction and its interaction with other string operations. It shows that σ-reduction "distributes" over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Corollary 3.1.2). These properties suggest that σ-reduction and inversion are not just arbitrary operations but are deeply connected to the underlying structure of strings and sentences.
+
+**Theorem** ∀ ζ ∈ C:sub:`L`: (Ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= Ζ ⋅ Σ:sub:`σ`
 
 
+Theorem: ∀ ζ ∈ C:sub:L: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
 
-The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.4, provides a schema for searching the *σ-reduced* space. The domain of this space, what will be termed the σ-Pairing Language in the next section, reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduce* spaced, and then filtered by those whose Palindromic Pair Inverse in the Pairing Language does not equal itself. 
+Proof:
 
-These ideas will be expounded until in Section III.III, when the theorems and results of this work are used to implement a Palindrome search algorithm.
+Let ζ be an arbitrary sentence in C:sub:L.
+
+Character-Level Representation: Let Ζ be the character-level representation of ζ:
+
+Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
+σ-reduction: Let s = σ_reduce(ζ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζ.
+
+Second σ-reduction: Let t = σ_reduce(s) = σ_reduce(σ_reduce(ζ)).  We want to show that t = s.
+
+Key Observation: Since s is the result of applying σ_reduce to ζ, it contains no delimiter characters (σ). This is because the σ-reduction algorithm removes all instances of σ.
+
+Applying σ-reduction to s: When we apply σ_reduce to s (to get t), the algorithm iterates through the characters of s. Since s has no delimiters, the condition if ⲁ:sub:i ≠ σ in the algorithm will always be true, and every character of s will be concatenated to the initially empty string t.
+
+Equality: Therefore, t will be identical to s, as it contains the same characters in the same order.
+
+Conclusion: Since t = s, we have:
+
+σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
+Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
+
+*   ∀ ζ ∈ C:sub:`L`: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
+This completes the proof. ∎
+
+Explanation:
+
+The proof relies on the fact that applying σ-reduction to a string that already has no delimiters doesn't change the string. This is because the σ-reduction algorithm only removes delimiters, and if there are no delimiters to remove, the string remains the same.
+
+Naming the Theorem:
+
+This theorem could be called the "Idempotency of σ-reduction" or the "σ-reduction Idempotence Property".
+
+Implications:
+
+This theorem is important because it further clarifies the behavior of σ-reduction and reinforces its role as a projection onto a "delimiter-free" space. It also suggests that applying σ-reduction multiple times is equivalent to applying it just once.
+
+
 
 Aspect
 ^^^^^^
@@ -1552,7 +2027,7 @@ These examples lead directly to the next, important definition.
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
-    ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
+    ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
 
 This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition.
 
@@ -1560,21 +2035,21 @@ Moreover, this definition can be easily adapted to different languages by simply
 
 It highlights the concept of invariance under transformation. A Palindrome remains a Palindrome even when projected onto the *σ-reduced* Alphabet, demonstrating a kind of structural integrity that's independent of the specific representation.
 
-The condition (ζ ⋅ Σ:sub:`σ`) = inv(ζ ⋅ Σ:sub:`σ`) can be seen as defining an equivalence relation on the set of Sentences, where two Sentences are equivalent if they are Palindromes of each other in the *σ-reduced* space.
+The condition (**Ζ ⋅ Σ**:sub:`σ`) *= inv*(**Ζ ⋅ Σ**:sub:`σ`) can be seen as defining an equivalence relation on the set of Sentences, where two Sentences are equivalent if they are Palindromes of each other in the *σ-reduced* space.
 
 **Definition 3.1.3: Perfect Palindromes**
 
 Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the following formula,
 
-    ζ ∈ PP ↔ ζ = inv(ζ)
+    ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
 
-Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this poitn in the analysis, one must not be careful to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.1.3 also satisfy 3.1.2. 
+Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.1.3 also satisfy 3.1.2. 
 
 Before verifying the class of Sentences which satisfy Definition 3.1.3 are indeed palindromes, the motivation for Definition 3.1.3 will briefly be explained.
 
-This Definition implicitly captures the cCaracter-level symmetry that's characteristic of perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward.
+This Definition implicitly captures the Character-level symmetry that's characteristic of perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward.
 
-It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorem 2.3.4. 
+It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorem 2.3.5. 
 
 The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.1.3, and thus Perfect Palindromes are a subset of the class Palindromes in any Language and its Corpus.
 
@@ -1582,23 +2057,36 @@ The following theorems will be used to validate the proposed class **PP** does i
 
 In natural language, this theorem can be stated as follows: Perfect Palindromes are a subset of the Invertible Sentences in a Corpus. 
 
-Proof:
+Assume *ζ ∈* **PP**.  This means *ζ* is a Perfect Palindrome, so by Definition 3.1.3, *ζ = inv(ζ)*.
 
-Assume ζ ∈ PP.  This means ζ is a Perfect Palindrome, so by Definition 3.1.3, ζ = inv(ζ).
+Since *ζ* is a Perfect Palindrome, it is also a Sentence, and therefore belongs to the Corpus C:sub:`L`. Because *ζ = inv(ζ)* and *ζ ∈* **C**:sub:`L`, it follows that *inv(ζ) ∈* **C**:sub:`L`.
 
-Sentence in Corpus: Since ζ is a Perfect Palindrome, it is also a Sentence, and therefore belongs to the Corpus C:sub:L (by Definition 2.1.2).
+By Definition 2.2.2 of Invertible Sentences, since inv(ζ) ∈ C:sub:`L`, this means *ζ ∈* **K**.
 
-Inverse in Corpus:  Because ζ = inv(ζ) and ζ ∈ C:sub:L, it follows that inv(ζ) ∈ C:sub:L.
+Therefore, if *ζ ∈* **PP**, then *ζ ∈* **K**. This implies **PP** *⊂* **K**. ∎
 
-Invertible Sentence: By Definition 2.2.2 (Invertible Sentences), since inv(ζ) ∈ C:sub:L, this means ζ ∈ K.
+
+
+
+
+
+Revised Theorem 3.1.3 Proof:
+
+Assume ζ ∈ PP. This means ζ is a Perfect Palindrome.
+
+By Definition 3.1.3, ζ = inv(ζ).
+
+By Definition 3.1.3, since ζ is a Perfect Palindrome, it is also a Sentence, and therefore belongs to the Corpus C:sub:L.
+
+Because ζ = inv(ζ) and ζ ∈ C:sub:L, it follows that inv(ζ) ∈ C:sub:L.
+
+By Definition 2.2.2 of Invertible Sentences, since inv(ζ) ∈ C:sub:L, this means ζ ∈ K.
 
 Therefore, if ζ ∈ PP, then ζ ∈ K. This implies PP ⊂ K. ∎
 
-Explanation:
 
-The proof demonstrates that if a Sentence is a Perfect Palindrome (meaning it's its own inverse), then it must also be an Invertible Sentence (meaning its inverse is in the Corpus). This is because the Sentence being equal to its inverse directly satisfies the condition for being an Invertible Sentence.
 
-(TODO: Need to prove this with the definition of invertible sentences, since perfect palindromes are defined as the class of sentences which are their own inverses.)
+
 
 **Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
@@ -1612,7 +2100,7 @@ Applying this definition to Theorem 3.1.3,
     
     2. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → ζ ∈ K
 
-From Theorem 2.3.4, it is known the consequent of this conditional implies the following,
+From Theorem 2.3.5, it is known the consequent of this conditional implies the following,
 
     3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
 
@@ -1626,39 +2114,98 @@ Applying this tautological law to step 2 and step 3,
 
 Which is what was to be shown. ∎ 
 
-**Theorem 3.1.5**  PP ⊂ P
 
-Theorem 3.1.5: PP ⊂ P
+
+Here are some minor refinements and observations:
+
+Clarity of Step 3:
+
+While step 3 is correct, you could make it slightly clearer by explicitly stating that you are applying Theorem 2.3.5 to the consequent of the implication in step 2 (ζ ∈ K).
+Revised Step 3:
+
+Applying Theorem 2.3.5 to the consequent (ζ ∈ K) of the implication in Step 2, we get:
+
+3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+Hypothetical Syllogism:
+
+You correctly identified and applied the Hypothetical Syllogism. To make the application even clearer, you could explicitly map p, q, and r to the propositions in your proof:
+
+p = ζ ∈ PP
+q = ζ ∈ K
+r = (∀ α ∈ W:sub:ζ: α ∈ I)
+Minor Formatting:
+
+In the final conclusion (step 5), you could add a space after the colon for better readability.
+Revised Proof (incorporating the suggestions):
+
+Theorem 3.1.4: ∀ ζ ∈ C:sub:L: ζ ∈ PP → (∀ α ∈ W:sub:ζ: α ∈ I)
 
 Proof:
 
-Assume ζ ∈ PP. This means ζ is a Perfect Palindrome, so by Definition 3.1.3, ζ = inv(ζ).
+Recall the definition of a subset:
 
-σ-reduction: Let's apply σ-reduction to both sides of the equation in step 1:
+1. A ⊂ B ↔ (∀ x: x ∈ A → x ∈ B)
+Applying this definition to Theorem 3.1.3 (PP ⊂ K), we get:
 
-(Ζ ⋅ Σ:sub:σ) = (inv(Ζ) ⋅ Σ:sub:σ)
+2. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → ζ ∈ K
+Applying Theorem 2.3.5 to the consequent (ζ ∈ K) of the implication in Step 2, we get:
 
-Applying Corollary 3.1.2.1:  Since every Sentence is a String (Definition 2.1.2), we can apply Corollary 3.1.2.1 to the right-hand side of the equation in step 2:
+3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+Recall the tautology of Hypothetical Syllogism: for any propositions p, q, and r,
 
-(Ζ ⋅ Σ:sub:σ) = inv(Ζ ⋅ Σ:sub:σ)
+4. ( p → q ∧ q → r ) → (p → r)
+Let:
 
-Palindrome Definition: The equation in step 3 satisfies the condition for ζ to be a Palindrome according to Definition 3.1.2. Therefore, ζ ∈ P.
+p = ζ ∈ PP
+q = ζ ∈ K
+r = (∀ α ∈ W:sub:ζ: α ∈ I)
+Applying this tautological law to step 2 and step 3, we get:
 
-Since ζ was an arbitrary Perfect Palindrome, we have shown that if ζ ∈ PP, then ζ ∈ P. This implies PP ⊂ P. ∎
+5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+Which is what was to be shown. ∎
 
-Explanation:
+Further Considerations:
 
-This proof demonstrates that all Perfect Palindromes are also Palindromes. We achieved this by showing that if a Sentence is its own inverse, then its σ-reduction is also its own inverse, which satisfies the definition of a Palindrome.
+Connection to σ-reduction: While not strictly necessary for the proof, you could add a brief comment after the proof mentioning that this theorem further supports the idea that perfect palindromes have a stronger form of symmetry than imperfect palindromes, as their symmetry is preserved even at the word level without the need for σ-reduction.
+Generalization: You might consider whether a similar theorem could be proven for imperfect palindromes, perhaps using the concept of σ-reduction. This could be an interesting avenue for future exploration.
+
+
+
+The next theorem establishes the commutativity of String Inversion and Sigma Reduction.
+
+
+
+**Theorem 3.1.6**  PP ⊂ P
+
+Assume *ζ ∈* **PP**. This means *ζ* is a Perfect Palindrome, so by Definition 3.1.3, 
+
+    1. *ζ = inv(ζ)*.
+
+Applying a *σ-reduction* to both sides of the equation,:
+
+    2. (Ζ ⋅ Σ:sub:`σ`) = (inv(Ζ) ⋅ Σ:sub:`σ`)
+
+By Corollary 3.1.6, 
+
+    3. (inv(Ζ) ⋅ Σ:sub:`σ`)  = inv(Ζ ⋅ Σ:sub:`σ`)
+
+Combining steps 2 and 3, 
+
+    4. (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`)
+
+Step 4 is exactly satisfies the condition for *ζ* to be a Palindrome according to Definition 3.1.2. Therefore, *ζ ∈* **P**.
+
+Since *ζ* was an arbitrary Perfect Palindrome, it been shown that if *ζ ∈* **PP**, then *ζ ∈* **P**. This implies **PP** *⊂* **P**. ∎
 
 **Definition 3.1.4: Imperfect Palindromes**
 
 Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy the following formula,
 
-    ζ ∈ P - PP 
+    ζ ∈ P - PP ∎
 
 **Theorem 3.1.6** PP ∪ IP = P
 
-Follows immediately from Theorem 3.1.3 and Definition 3.1.4. ∎
+Follows immediately from Theorem 3.1.3, Definition 3.1.4, and the fact that PP and IP are disjoint (by the definition of set difference). ∎
 
 Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes by Theorem 3.1.6, these two sets form a partition of the class of Palindromes. The following definition and terminology is introduced to help describe this partitioning.
 
@@ -1671,23 +2218,66 @@ Parity
 
 One partitioning, or dimension, of Palindromes has been introduced through the concept of *aspect*. A Palindrome can either be perfect or imperfect, but not both. In this section, the definitions and theorems for uncovering the second partitioning of Palindromes, *parity*, will be developed.
 
-**Definition 3.1.6: Partial Sentence**
+**Definition 3.1.6: Left Partial Sentence**
 
-A Partial Sentence of Length *n* is denoted *ζ*:sub:`n`. Given a sentence *ζ* from a Corpus C:sub:`L` and a fixed *n*, the Partial Sentence of Length *n* is formally defined as the Sentence *ζ*:sub:`n`
+Let ζ be a Sentence in C:sub:L with Character-level representation Z,
 
-Definition 3.2.1: Partial Sentence (Revised)
+    Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
 
-Let ζ be a Sentence in C:sub:L with Character-level representation Z = (ⲁ₁ , ⲁ₂ , ..., ⲁₗ₍ζ₎).
+Let *n* be a fixed natural number. A Partial Sentence of Length *n*, denoted *ζ[: n]*, is formally defined as the String which satisfies, 
 
-The Partial Sentence of length n, denoted ζ:sub:n, is defined as:
+    Z[: n] = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`n`) 
+    
+Where *1 ≤ n ≤ l(ζ)*.
 
-ζ:sub:n = (ⲁ₁ , ⲁ₂ , ..., ⲁₙ)  where 1 ≤ n ≤ l(ζ)
 
-**Theorem 3.1.7** ∀ ζ ∈ C:sub:`L`: [ ∃ ⲁ ∈ Σ: ( 2 *  l(ζ:sub:`ⲁ`) = l(ζ) ) ∨ (ⲁ = ε)]
+Definition 3.1.6: Partial Sentence
+
+Let ζ be a sentence in C:sub:L with character-level representation Z:
+
+Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
+A partial sentence of ζ of length n, denoted ζ[:n], is defined as the string:
+
+ζ[:n] = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`n`)
+where n is a natural number such that 0 ≤ n ≤ l(ζ).
+
+When n = 0, ζ[:0] is defined as the empty string, ε.
+When n = l(ζ), ζ[:n] is the entire sentence ζ.
+A partial sentence is not necessarily a word or a sequence of words.
+
+**Definition 3.1.7: Right Partial Sentence**
+
+Definition 3.1.7: Right Partial Sentence
+
+Let ζ be a sentence in C:sub:L with character-level representation Z:
+
+Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
+A right partial sentence of ζ of length n, denoted ζ[n:], is defined as the string:
+
+ζ[n:] = (ⲁ:sub:`l(ζ)-n+1`, ⲁ:sub:`l(ζ)-n+2`, ..., ⲁ:sub:`l(ζ)`)
+where n is a natural number such that 0 ≤ n ≤ l(ζ).
+
+When n = 0, ζ[0:] is defined as the empty string, ε.
+When n = l(ζ), ζ[l(ζ):] is the entire sentence ζ.
+A right partial sentence is not necessarily a word or a sequence of words.
+Explanation:
+
+Notation: The notation ζ[n:] is analogous to Python slicing notation and indicates that we are taking a substring starting from a position n characters from the end of the string up to the end of the string.
+Length: The length of the right partial sentence is n.
+Starting Index: The starting index of the right partial sentence is l(ζ) - n + 1. This ensures that we are taking the last n characters of the sentence.
+Edge Cases: Similar to the left partial sentence, when n = 0, we have an empty string, and when n = l(ζ), we have the entire sentence.
+Symmetry with Left Partial Sentence:
+
+Notice the symmetry between the definitions of the left and right partial sentences. They are essentially mirror images of each other, which is fitting given that we'll be using them to analyze palindromes.
+
+
+**Theorem 3.1.7** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)]
 
 This theorem can be stated in natural language as follows: For every Sentence in a Corpus, there is a Character in the Sentence that perfectly the divides of String length of the Palindrome in half, or there is no Character in the Sentence which divides it in half.
 
-Theorem 3.2.2: ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( 2 * l(ζ:sub:ⲁ) = l(ζ) ) ∨ (ⲁ = ε)]
+
+
+Theorem 3.2.2: ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( 2 * l(ζ:sub:ⲁ) - 1 = l(ζ) ) ∨ (ⲁ = ε)]
 
 Proof:
 
@@ -1708,6 +2298,60 @@ Explanation:
 This proof demonstrates that for any Sentence, there exists a Character that acts as a "midpoint" or "pivot" in terms of String Length. If the Sentence has an odd String Length, this midpoint is the middle Character. If the Sentence has an even String Length, we use the Empty Character as a symbolic midpoint.
 
 Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. With this theorem, every Sentence in a Corpus it must have a Pivot.
+
+
+
+
+
+Let's analyze the core idea and then reformulate the theorem and proof.
+
+Core Idea and Issues:
+
+The theorem is trying to capture the idea that for any sentence, you can find a "split point" (either between characters or on a character) such that the left and right parts have either the same length or the left part is one character longer. This is related to the concept of finding the "middle" of the sentence, which is relevant for identifying the pivot of a palindrome.
+
+Issues with the Original Formulation:
+
+Confusing Use of n: The n is used in two different ways: as a length in l(ζ[:n]) and l(ζ[n:]), and implicitly as an index related to the character ⲁ. This makes the expressions ζ[:n] and ζ[n:] unclear.
+Existential Quantification over ⲁ: The existential quantifier ∃ ⲁ ∈ Σ suggests we're looking for a character that determines the split point. However, the split point is determined by a position or length, not a character itself. The character at the split point might not be unique.
+Lack of Connection to the Middle: The theorem doesn't explicitly relate the split point to the middle of the sentence, which is where we'd expect to find a pivot in a palindrome.
+Revised Theorem and Proof:
+
+Let's reformulate the theorem to focus on finding a split point based on the length of the sentence. We can use the standard notation for partial sentences (ζ[:n] and ζ[n:]) and quantify over the length n.
+
+Revised Theorem 3.1.7:
+
+∀ ζ ∈ C:sub:L: ∃ n ∈ {0, 1, ..., l(ζ)}: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) = l(ζ[n:]) + 1 )
+
+Translation: For every sentence ζ in the corpus, there exists a natural number n (between 0 and the length of ζ, inclusive) such that either the length of the left partial sentence of length n is equal to the length of the right partial sentence of length n, OR the length of the left partial sentence of length n is one greater than the length of the right partial sentence of length n.
+
+Proof:
+
+Let ζ be an arbitrary sentence in C:sub:L. Let l(ζ) = L (for simplicity).
+
+Case 1: L is even:
+
+If L is even, let n = L/2.
+Then l(ζ[:n]) = n = L/2.
+And l(ζ[n:]) = L - n = L - L/2 = L/2.
+Therefore, l(ζ[:n]) = l(ζ[n:]).
+Case 2: L is odd:
+
+If L is odd, let n = (L + 1)/2.
+Then l(ζ[:n]) = n = (L + 1)/2.
+And l(ζ[n:]) = L - n = L - (L + 1)/2 = (L - 1)/2.
+Therefore, l(ζ[:n]) = l(ζ[n:]) + 1.
+Conclusion: In both cases, we have found an n that satisfies the condition in the theorem. Since ζ was an arbitrary sentence, we can generalize:
+
+∀ ζ ∈ C:sub:L: ∃ n ∈ {0, 1, ..., l(ζ)}: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) = l(ζ[n:]) + 1 )
+This completes the proof. ∎
+
+Explanation:
+
+This revised theorem and proof directly address the core idea of finding a split point in the sentence based on its length. By considering the two cases (even and odd length), we can always find an n that satisfies the condition.
+
+
+
+
 
 **Definition 3.1.7: Pivots** 
 
@@ -1925,7 +2569,7 @@ Analyzing cases: Now, let's consider the lengths of the Boundary Words, α₁ (�
 Case 1: l(α₁) = l(αₙ)
 
 In this case, the equation in step 6 implies that α₁ = inv(αₙ) and αₙ = inv(α₁).
-Since α₁ and αₙ are Invertible Words (by Theorem 2.3.4), this means α₁ = αₙ.
+Since α₁ and αₙ are Invertible Words (by Theorem 2.3.5), this means α₁ = αₙ.
 Therefore, both α:sub:start ⊂:sub:s α:sub:end and α:sub:end ⊂:sub:s α:sub:start hold.
 Case 2: l(α₁) < l(αₙ)
 
@@ -1989,7 +2633,7 @@ Cases based on length:  Similar to the proof of the first Inverse Postulate, we 
 Case 1: l(αₖ) = l(αₖ₊₁):
 
 In this case, αₖ = inv(αₖ₊₁) and αₖ₊₁ = inv(αₖ).
-Since αₖ and αₖ₊₁ are Invertible Words (by Theorem 2.3.4), this means αₖ = αₖ₊₁.
+Since αₖ and αₖ₊₁ are Invertible Words (by Theorem 2.3.5), this means αₖ = αₖ₊₁.
 Therefore, both α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ) and α:sub:+ (ω:sub:ζ) ⊂ α:sub:- (ω:sub:ζ) hold.
 Case 2: l(αₖ) < l(αₖ₊₁):
 
@@ -2118,9 +2762,9 @@ The results derived in this work can be used to construct algorithms for searchi
 
 A naive algorithm for filtering out Strings that cannot possibly be Palindromes might consist of inverting the strings and comparing them for equality. However, this would miss Palindromes with an imperfect aspect, as their symmetry does not manifest in the unreduced Alphabet. Without a *σ-reduction*, any algorithm that searchs for Palindromic String must be aware of the semantics of the Language in which it is searching. However, *σ-reduction* and the theorems proved over the course of this work allow algorithms to be constructed that are independent of the host Language.
 
-Moreover, as mentioned after the body Theorem 3.1.2, the *σ*-Pairing Language reduces the complexity of searching for Palindromic strings. An Alphabet with less Characters can be traversed quicker. 
+Moreover, as mentioned after the body Theorem 3.1.2, the *σ-reductions* reduce the complexity of searching for Palindromic strings. An Alphabet with less Characters can be traversed quicker. 
 
-To implement this, a String can be projected onto its *σ-reduced* Alphabet, and then those Pairs in the σ-Pairing Language whose inverse does not equal itself can be removed from the list of potential Palindromes. To find a String whose inverse does not equal itself, it suffices to find a single Character whose inverted position is not occupied by that Character. 
+To implement this, a String can be projected onto its *σ-reduced* Alphabet, and then those reductiosn whose inverse does not equal itself can be removed from the list of potential Palindromes. To find a String whose inverse does not equal itself, it suffices to find a single Character whose inverted position is not occupied by that Character. 
 
 Therefore, as a first step to generating a list of Palindromes, the Strings which do not satisfy these conditions can be discarded.
 
@@ -2138,37 +2782,10 @@ Section III.IV: Future considerations
 
 This work focused on using the operation of sigma reduction to describe palindromic structure in terms of its *aspect* and its *parity*. As mentioned at several points, there are two other dimensions of palindromes this work has not sought to incorporate into formal system. While the considerations in the introduction seem to preclude the possibility of a purely syntactical account of palindromes, the author does not believe this means the structure of palindromes cannot be formalized by taking into account certain universal semantic assumptions. 
 
-To account for the dimension of *punctuality*, a possible avenue of exploration could be extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a Pairing Language where its symmetry under inversion can be recovered.
+To account for the dimension of *punctuality*, a possible avenue of exploration could be extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a reduced Alphabet where its symmetry under inversion can be recovered.
 
-To account for the dimension of *case*, the link between uppercase and lowercase letters in natural languages may be viewed as inducing a symmetry in the Alphabet that in turn may be exploitable for describing palindromic symmetry. In such a formalization, a possible method of attack would be introduce a many-to-one relationship between in a sigma-reduction where uppercase and lowercase letters are mapped to their "primitive" Character in an appropriate Pairing Language.
+To account for the dimension of *case*, the link between uppercase and lowercase letters in natural languages may be viewed as inducing a symmetry in the Alphabet that in turn may be exploitable for describing palindromic symmetry. In such a formalization, a possible method of attack would be introduce a many-to-one relationship between in a sigma-reduction where uppercase and lowercase letters are mapped to their "primitive" Character in their reduced space.
 
 (TODO: comment on possibility of interesting recursions, i.e. what happens when the Alphabet of this formal system is assigned the symbols of the formal system itself?)
 
 (TODO: comment on completeness, i.e. what does this formal model of language say about the completeness of language, or its lack thereof?)
-
-Section IV: References 
-======================
-
-Reflective Words
-----------------
-
-The following spreadsheet contains a sample of reflective words in English.
-
-.. csv-table:: Reflective Words
-   :file: ../_static/data/reflective_words.csv
-
-Invertible Words
-----------------
-
-The following spreadsheet contains a sampe of invertible words (minus reflective words) in English.
-
-.. csv-table:: Invertible Words
-   :file: ../_static/data/invertible_words.csv
-
-Palindromic Analysis 
---------------------
-
-The following spreadsheet contains the results of palindromic analysis conducted on a sample of English palindromes. 
-
-.. csv-table:: Palindromic Analysis
-   :file: ../_static/data/palindromes.csv

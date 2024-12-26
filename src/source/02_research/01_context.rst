@@ -1,14 +1,5 @@
-.. _prologmena_language:
-
-Prologmena: Language
-====================
-
-TODO
-
 The Context Problem
--------------------
-
-Let us assume for the moment LLMs are indeed communicating in a language that has expressive modes that do not necessarily map to the modes of human expression. This would imply there is an implicit translation that occurs, if even not explicitly coded for, where the "natural" language of the LLM must be fit into the contours of human language. 
+===================
 
 As a thought experiment, suppose you encountered a string in an unknown language,
 
@@ -41,4 +32,3 @@ In other words, the assignment of the meaning of "=" imposes certain constraints
 There is a balance that must be maintained in an LLM between rigidity and flexibility. This translates into what symbols qualify as *primitives* in an LLM's interpretation. In the previous example, the "=" was assigned the status of *primitive*, but this should not be taken literally. What an LLM treats as *primitive* is not necessarily constant across time, or even from sentence to sentence, but each static interpretation starts with a qualified basis; something must be assumed.
 
 The essential *context* problem in an LLM boils down to: what word-form in an expression should it treat as primitive in order to use as a foundation upon which to build the subsequent interpretation.
-

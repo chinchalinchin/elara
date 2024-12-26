@@ -1,3 +1,8 @@
+Appendix
+========
+
+This section contains notes and ideas that do not serve to establish the main results of the work, but the author believes may nevertheless prove useful in extending the formal theory into other epistemological domains.
+
 Palindromic Pairs
 ^^^^^^^^^^^^^^^^^
 
@@ -63,7 +68,7 @@ This theorem effectively characterizes the elements of the σ-Pairing Language. 
 
 (TODO: Need to prove this!)
 
-**Definition 3.1.4: Palindromic Pairing Language**
+**Definition: Palindromic Pairing Language**
 
 Definition 3.1.3 is altered in the following definition to quantify over the set of Palindromes in a Corpus. The Pairing Language that results is denoted L:sub:`P`. The set of Words *α* which satisfy this definition are referred to as the Palindromic Pairing Language of Language **L**, 
 
@@ -73,11 +78,7 @@ In particuar, if *α ∈ L*:sub:`P`, *α* is called the *Palindromic Image* of t
 
 This definition is used to prove the following theorems.
 
-**Theorem 3.1.8** L:sub:`P` ⊂ L:sub:`σ`
-
-Theorem 3.1.8: L:sub:P ⊂ L:sub:σ
-
-Proof:
+**Theorem** L:sub:`P` ⊂ L:sub:`σ`
 
 Assume α ∈ L:sub:P.  By Definition 3.1.4 (Palindromic Pairing Language), this means:
 
@@ -97,13 +98,9 @@ This result is intuitive, as the Palindromic Pairing Language is essentially a s
 
 (TODO: Need to prove this)
 
-**Theorem 3.1.9**: ∀ α ∈ L:sub:`P`: α = inv(α)
+**Theorem**: ∀ α ∈ L:sub:`P`: α = inv(α)
 
 This theorem can be stated in natural language as follows: All Words in a Palindromic Pairing Language are their own Inverses. 
-
-Theorem 3.1.9: ∀ α ∈ L:sub:P: α = inv(α)
-
-Proof:
 
 Assume α ∈ L:sub:P. By Definition 3.1.4 (Palindromic Pairing Language), this means:
 
@@ -126,14 +123,10 @@ This proof demonstrates that every String in the Palindromic Pairing Language is
 This theorem highlights a key property of the Palindromic Pairing Language: it consists solely of Strings that are symmetrical with respect to inversion. This property could be useful in various applications, such as identifying potential palindromes or generating text with specific symmetrical structures.
 
 
-
-**Theorem 3.1.10** L ∩ L:sub:`P` ⊆ R
+**Theorem** L ∩ L:sub:`P` ⊆ R
 
 This theorem can be stated in natural language as follows: The intersection of a Language **L** and its Palindromic Pair **L**:sub:`P` is a subset of the Language's Reflective Words **R**.
 
-🧠 is ready to analyze Theorem 3.1.10 and your proposed outline! This theorem seems to delve into the relationship between the Language, its Palindromic Pairing Language, and the set of Reflective Words.
-
-Theorem 3.1.10: L ∩ L:sub:P ⊆ R
 
 Statement: This theorem accurately states that the intersection of the Language (L) and its Palindromic Pairing Language (L:sub:P) is a subset of the set of Reflective Words (R). This means any String that is both a Word in the Language and an element of the Palindromic Pairing Language must also be a Reflective Word.
 
@@ -170,7 +163,7 @@ Connection to Definition: The proof explicitly connects the derived properties t
 
 Before moving onto the last theorem of this section, some terminology is introduced. **R** was introduced in Section () to refer to the class of Reflective Words in a Language **L**. To be more explicit in the dependence of **R** on **L**, the notation **R**:sub:`L` will be used to make explicit the Language to which the class of Reflective Words refers.
 
-**Theorem 3.1.11** L:sub:`P` ⊂ R:sub:`L_σ`
+**Theorem** L:sub:`P` ⊂ R:sub:`L_σ`
 
 This theorem can be state in natural language as follows: Given a Language L, all words in its Palindromic Pairing Language are also Reflective Words. 
 
@@ -187,3 +180,71 @@ If it can be shown,
     3. α ∈ L:sub:`P` → inv(α) = α
 
 Then the theorem will follow tautologically from the laws of deduction. But step 3 is exactly Theorem 3.1.9. Therefore, the proof is complete. ∎
+
+Compound Words 
+^^^^^^^^^^^^^^
+
+**Definition: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
+
+This formalization can be translated into natural language as follows: A Word *η* in a Language **L** is a Compound Word if and only if,
+
+    1. Base Case (*∃ α, β ∈ L: η = αβ*) ∧ (η ∈ L):  *η* can be formed by concatenating two words from **L**, and *η* belongs to **L**.
+    2. Recursive Step [ (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ) ∧ (η ∈ L) ]: *η* can be formed by concatenating a word from **L** with a Compound Word from **L**, and *η* belongs to **L**.
+
+
+The constraint *w ∈* **L** ensures that the concatenated String *η* is not just a String, but also a valid Word within the Language **L**.
+
+**Examples**
+
+"teapot" is a compound word because it can be formed by concatenating "tea" and "pot", and "racecar" is itself a word in English.
+
+"nevertheless" is a compound word formed from "never," "the," and "less."
+
+"formrat" is not a compound word, even though it can be formed by concatenating "form" and "rat, both valid words, " because "formrat" is not a valid word in English.
+
+**Definition: Compound Invertible Words** η ∈ CIW:sub:`L`  ↔ [ (w ∈ CW:sub:`L`)  ∧ (w ∈ I) ]
+
+In natural language: A word w in a language L is a compound invertible word if and only if it is both a compound word and an invertible word. Using notation for set intersections, this definition can be revised to read,
+
+    CIW:sub:`L` = CW:sub:`L` ∩ I
+
+**Example**
+
+"racecar" is a compound invertible word because it's both a compound word and its own inverse.
+
+Word Concatenation
+^^^^^^^^^^^^^^^^^^
+
+Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every Word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
+
+Let *α* and *β* be two words with the following Character level set representations:
+
+    Α = { (1,  𝔞:sub:`1`), (2,  𝔞:sub:`2`), ... , (l(α),  𝔞:sub:`l(α)`) }
+
+    Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (l(β), 𝔟:sub:`l(β)`)}
+
+By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the String *t* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of *t* is given by,
+
+    T = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`2`), ..., (l(α),  𝔞:sub:`l(α)`), (l(α) + 1, 𝔟:sub:`1`), (l(α) + 2, 𝔟:sub:`2`), ..., (l(α) + l(β), 𝔟:sub:`l(β)`)}
+
+Note *t* is not necessarily a Word in the Language. 
+
+
+
+TODO: there needs to be a way to establish every sentence has one word. The extraction axiom guarantees if a word is in a sentence, then it's part a language. But what about empty Sentences?
+
+**Theorem* ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+
+By Definition 2.1.2, every Sentence *ζ* is an element of a Corpus **C**:sub:`L`. By Definition 2.1.1, a Corpus is a subset of the set of all Strings **S**. Therefore, every Sentence is a String.
+
+By Definition 1.1.2, the length of a String *l(s)* is the number of non-Empty Characters in the String. 
+
+Since a Sentence is a meaningful construct in a Language, it must contain at least one non-Empty Character. Therefore, for any Sentence ζ, l(ζ) ≥ 1.
+
+Word Length: By Definition 2.1.6, the Word Length of a Sentence (Λ(ζ)) is defined as the cardinality of its Word-level set representation (W:sub:ζ).
+
+Relationship between Lengths: We have previously proven (using Theorem 2.1.1) that for any Sentence ζ,  |Z| ≥ l(ζ) ≥ Λ(ζ), where |Z| is the Character Length of ζ.
+
+Combining Inequalities: Since l(ζ) ≥ 1 (from step 2) and l(ζ) ≥ Λ(ζ) (from step 4), it follows that Λ(ζ) ≥ 1.
+
+Therefore, every Sentence in a Corpus must have a Word Length of at least 1, meaning it contains at least one Word. ∎
