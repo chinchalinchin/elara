@@ -304,9 +304,13 @@ While the notion of Characters maps almost exactly to the intuitive notion of le
 
 If Characters are mapped to letters in the Alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet. The goal of this section is to define the syntactical properties of Words in **L** that differentiates them from Strings in **S** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
 
-**Definition 1.2.1: Word** A Word is a String with semantic content. 
+**Definition 1.2.1: Word** 
 
-**Definition 1.2.2: Language** A Language **L** is a set of Words. 
+A Word is a String with semantic content. ∎
+
+**Definition 1.2.2: Language** 
+
+A Language **L** is a set of Words. ∎
 
 The following symbolic notation is introduced for these terms, 
 
@@ -452,8 +456,7 @@ Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:s
 *t* is called the Inverse of *s* and is denoted *inv(s)* if it satisfies the following conditions, 
 
     1. l(t) = l(s) 
-    2. ∀ i ∈ N:sub:`l(s)`, j ∈ N:sub:`l(t)`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ] ∎
-    3. REVISION: ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1 ` = 𝔞:sub:`i` ) ∎
+    2. ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1 ` = 𝔞:sub:`i` ) ∎
 
 Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
@@ -488,59 +491,50 @@ Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`.
 By the Definition 1.2.3,
 
     1. l(t) = l(s)
-    2. ∀ i ∈ N:sub:`l(s)`, ∀ j ∈ N:sub:`l(t)`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
-    2. REVISION: ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1` = 𝔞:sub:`i` ) 
+    2. ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1` = 𝔞:sub:`i` ) 
 
-Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.3 again,
+From this, the Character Index *l(s) - i + 1* in *t* corresponds to the Character Index *i* in *s* for all *i*. Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.3 again,
 
     3. l(u) = l(t)
-    4. ∀ j ∈ N:sub:`l(t)`, ∀ k ∈ N:sub:`l(u)`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ]
-    4. REVISION: ∀ j ∈ N:sub:`l(t)`: ( 𝔠:sub:`l(t) - j + 1` = 𝔟:sub:`j` )
+    4. ∀ j ∈ N:sub:`l(t)`: ( 𝔠:sub:`l(t) - j + 1` = 𝔟:sub:`j` )
 
-Since *l(t) = l(s)* (step 1) and **N**:sub:`l(t)` *=* **N**:sub:`l(s)` (by definition of natural numbers), these substitions may be made in step 4,
+From this, the Character Index *l(t) - j + 1* in *u* corresponds to the Character Index *j* in *t* for all *j*. Furthermore, since *l(t) = l(s)* and **N**:sub:`l(t)` *=* **N**:sub:`l(s)` (from step 1 and by definition of natural numbers), these substitions may be made in step 4,
 
-    5. ∀ i ∈ N:sub:`l(s)`, ∀ k ∈ N:sub:`l(u)`: [ ( k = l(s) - (l(s) - i + 1) + 1 )  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
+    5. ∀ i ∈ N:sub:`l(s)`: ( 𝔠:sub:`l(s) - (l(s) - i + 1) + 1` = 𝔟:sub:`l(s) - i + 1` )
 
-The index *k* may be simplified,
+The index on *𝔠*:sub:`k` may be simplified,
 
     6. k = l(s) - l(s) + i - 1 + 1 = i
 
 Therefore,
     
-    7. ∀ i ∈ N:sub:`l(s)`, ∀ k ∈ N:sub:`l(u)`: [ ( k = i)  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
-
-This may be rewritten, noting the condition *k = i*,
-
-    8. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` 
+    1. ∀ i ∈ N:sub:`l(s)`: ( 𝔠:sub:`i` = 𝔟:sub:`l(s) - i + 1` )
 
 Now, substitute the definition of *𝔟*:sub:`j` from step 2 (where *j = l(s) - i + 1*) into the equation for  *𝔠*:sub:`k`,
 
-    9. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`i` = 𝔞:sub:`i` 
+    1. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`i` = 𝔞:sub:`i` 
 
 Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (𝔠:sub:`i` = 𝔞:sub:`i`  for all *i*), it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*.  Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
-
-Rename and reorderer.
-
 **Theorem 1.2.5** ∀ u, t ∈ S: inv(ut) = inv(t)inv(u).
 
-Let **U** be the Character-level representation of *u*,
+Let **U** be the Character level representation of *u*,
 
     1. U = (𝔞:sub:`1` , 𝔞:sub:`2` , ..., 𝔞:sub:`l(u)`)
 
-Let **T** be the Character-level representation of *t*,
+Let **T** be the Character level representation of *t*,
 
     2. T = (𝔟:sub:`1`, 𝔟:sub:`2` , ... , 𝔟:sub:`l(t)`)
 
-The Character-level representation of *ut*, denoted **UT** is:
+The Character level representation of *ut*, denoted **UT** is:
 
     3. UT = (𝔞:sub:`1` , 𝔞:sub:`2` , ..., 𝔞:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2` , ... , 𝔟:sub:`l(t)`)
 
-By Definition 1.2.3 of String Inversion, the Character-level representation of *inv(ut)* is the reversed sequence of **UT**,
+By Definition 1.2.3 of String Inversion, the Character level representation of *inv(ut)* is the reversed sequence of **UT**,
 
     4. inv(UT) = ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` , 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
 
-The Character-level representation of *inv(U)*, denoted **inv(U)**,
+The Character level representation of *inv(U)*, denoted **inv(U)**,
 
     5. inv(U) = (𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
 
@@ -550,45 +544,11 @@ The Character-level representation of *inv(t)*, denoted **inv(T)** is
 
 The Character-level representation of *inv(t)inv(u)* is:
 
-    7. ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` , 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
+    7. ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1`, 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
 
 Comparing the results from step 4 and step 7, it can be seen the Character-level representations of *inv(ut)* and *inv(t)inv(u)* are identical.
 
 Therefore, *inv(ut) = inv(t)inv(u)*. ∎
-
-
-Here's a slightly more concise way to express the proof, focusing on the string representations directly:
-
-∀ u, t ∈ S: inv(ut) = inv(t)inv(u).
-
-Proof:
-
-Let u and t be arbitrary strings in S.
-
-Representation of ut: Let ut be the concatenation of strings u and t.
-
-Definition of String Inversion: By Definition 1.2.3, inv(ut) is the reversed sequence of characters in ut.
-
-Expansion of inv(ut): If we write out the characters of ut, we have:
-
-u = 𝔞:sub:1 𝔞:sub:2 ... 𝔞:sub:l(u)
-t = 𝔟:sub:1 𝔟:sub:2 ... 𝔟:sub:l(t)
-ut = 𝔞:sub:1 𝔞:sub:2 ... 𝔞:sub:l(u) 𝔟:sub:1 𝔟:sub:2 ... 𝔟:sub:l(t)
-Therefore,
-
-inv(ut) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
-Representation of inv(t) and inv(u): By Definition 1.2.3:
-
-inv(u) = 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
-inv(t) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1
-Representation of inv(t)inv(u):  The concatenation of inv(t) and inv(u) is:
-
-inv(t)inv(u) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
-Comparison: Comparing the results from Step 3 and Step 5, we see that inv(ut) and inv(t)inv(u) have the same character sequence.
-
-Therefore, we conclude that for any strings u and t:
-
-inv(ut) = inv(t)inv(u). ∎
 
 Section I.III: Word Classes 
 ---------------------------
@@ -618,57 +578,45 @@ Rather than attempt to define Reflective Words as the class of Words that are th
 
 Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Then the set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
 
-    α ∈ R ↔ [ ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ] ∎
+    α ∈ R ↔ [ ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` ] ∎
 
-A Word *α* will be referred to *reflective* if it belongs to the class of Reflective Words. 
+A Word *α* will be referred to as *reflective* if it belongs to the class of Reflective Words. 
 
-The following theorem is an immediate consequence of this definition.
+The following theorem is an immediate consequence of this definition and Definition .
 
-**Theorem 1.3.1** α ∈ R ↔ α = inv(α)
+**Theorem 1.3.1** ∀ α ∈ L: α ∈ R ↔ α = inv(α)
 
-In natural language, this theorem can be stated as: A Word is Reflective if and only if it is its own Inverse.
+In natural language, this theorem can be stated as: A Word in a Language is Reflective if and only if it is its own Inverse.
 
 (→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.1, 
 
-    1. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔞:sub:`l(α) - i`
+    1. ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` 
 
 Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.3,
 
     2. l(β) = l(α)
-    3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`β`: [ ( j = l(α) - i + 1 ) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
-   
-Substitute *j = l(α) - i + 1* into the equation from step 3 and remove the quantifiation over *j*:
+    3. ∀ i ∈ N:sub:`l(α)`: ( 𝔟:sub:`l(α) - i + 1 ` = 𝔞:sub:`i` )
 
-    4. ∀ i ∈ N:sub:`l(α)`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
+Now, use the property of Reflective Words from step 1 (𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` ) and substitute it into the equation from step 3:
 
-Now, use the property of Reflective Words from step 1 (𝔞:sub:`i` = 𝔞:sub:`l(α) - i` ) and substitute it into the equation from step 4:
-
-    5.  4. ∀ i ∈ N:sub:`l(α)`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
+    1.  4. ∀ i ∈ N:sub:`l(α)`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i + 1`
 
 Note that the index on the left side of this equation (l(α) - i + 1) corresponds to the character at position *i* in the reversed string β.  This is because the index *j* in the definition of String Inversion maps to the *l(α) - i + 1*:sup:`th`` position in the original string.
 
-Since 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`for all i ∈ N:sub:`α`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in β. Therefore the desired result is obtained: *α = β = inv(α)*
+Since 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i +1`for all i ∈ N:sub:`α`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore the desired result is obtained: *α = β = inv(α)*
 
-(←) Assume α = inv(α)
-
-Let *𝔞*:sub:`i` be the Characters in *α* and let *𝔟*:sub:`j` be the Characters in *inv(α)*. By definition of String Inversion,
+(←) Assume *α = inv(α)*. Let *𝔞*:sub:`i` be the Characters in *α* and let *𝔟*:sub:`j` be the Characters in *inv(α)*. By definition of String Inversion,
 
     1. l(α) = l(inv(α))
-    2. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(inv(α))`: [ ( j = l(α) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+    2. ∀ i ∈ N:sub:`l(α)`: ( 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i` )
 
 Since *α = inv(α)*, 𝔞:sub:`j` can be substituted for 𝔟:sub:`j` in the step 2,
 
-    3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(inv(α))`: [ ( j = l(α) - i + 1 ) → ( 𝔞:sub:`j` = 𝔞:sub:`i` ) ]
+    3. ∀ i ∈ N:sub:`l(α)`: ( 𝔞:sub:`l(α) - i + 1 ` = 𝔞:sub:`i` ) 
 
-Since the conditional inside of the quantification is only true when *j = l(α) - i + 1*, *j* can be substituted into the consequent of the conditional and the quantification over *j* can be dropped. Therefore, step 3 can be rewritten as,
+Similar to the previous part of the proof, the index on the left side (*l(α) - i + 1*) corresponds to the Character at position *i* in the reversed string, which is *α* itself in this case. But this is exactly Definition 1.3.1. Therefore, 
 
-    4. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`l(α) - i + 1` =  𝔞:sub:`i`
-
-Similar to the previous part of the proof, the index on the left side (*l(α) - i + 1*) corresponds to the Character at position *i* in the reversed string, which is *α* itself in this case. Therefore, 
-
-    5. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` =  𝔞:sub:`l(α) - i`
-
-This condition satisfies the definition of Reflective Words, so *α ∈ R*. ∎ 
+    4. α ∈ R ∎ 
 
 Invertible Words 
 ^^^^^^^^^^^^^^^^
@@ -685,9 +633,9 @@ A Word *α* will be referred to as *invertible* if it belongs to the class of In
 
 This definition is immediately employed to derive the following theorems,
 
-**Theorem 1.3.2** α ∈ I ↔ inv(α) ∈ I
+**Theorem 1.3.2** ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
 
-Assume *α ∈ I*. By Definition 1.3.2,
+(→) Let *α* be a Word in Language L and assume *α ∈* **I**. By Definition 1.3.2,
 
     1. inv(α) ∈ L
     
@@ -707,34 +655,38 @@ By the Definition 1.3.2,
 
     5. inv(α) ∈ I
     
-Therefore, *inv(α)* is also an Invertible Word. ∎ 
+Therefore, *inv(α)* is also an Invertible Word. 
 
-**Theorem 1.3.3** R ⊂ I
+(←) Let *inv(α)* be some Word in Language **L**. Assume *inv(α) ∈* **I**. To show *α ∈* **I**, it must be shown *inv(α)* belongs to **L**, but this is exactly what has been assumed, so it follows immediately. 
 
-Assume *α ∈ R*. *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.2,
+Therefore, 
 
-    1. ∀ i ∈ N:sub:`l(α)`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i``
+    ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I ∎ 
+
+**Theorem 1.3.3** R ⊆ I
+
+Assume *α ∈* **R**. *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.2,
+
+    1. ∀ i ∈ N:sub:`l(α)`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i + 1``
 
 Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.3,
 
     2. l(β) = l(α)
-    3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(β)``: (j = l(α) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` )
+    3. ∀ i ∈ N:sub:`l(α)`:  ( 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i` )
 
-Substitute (*j = l(α) - i + 1 *) into the consequent of the conditional in step 3 and drop the quantification over *j*,
+Substituting the property of Reflective Words from step 2 into step 3,
 
-    4. ∀ i ∈ N:sub:`l(α)`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i`
+    4. ∀ i ∈ N:sub:`l(α)`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i + 1`
 
-Substituting the property of Reflective Words from step 2 into step 4,
+Since *𝔟*:sub:`l(α) - i + 1` *= 𝔞*:sub:`l(α) - i + 1` for *i ∈* **N**:sub:`l(α)`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore,
 
-    5. ∀ i ∈ N:sub:`l(α)`:  𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i`
+    5. α = β = inv(α)
 
-Note that the index on the left side of the equation in step 5 (*l(α) - i + 1*) corresponds to the character at position *i* in the reversed string *β*.
+By assumption, *α ∈* **L**. From step 5, this implies *inv(α) ∈* **L**. By Definition 1.3.2, this implies *α ∈* **I**. 
 
-Since *𝔟*:sub:`l(α) - i + 1` *= 𝔞*:sub:`l(α) - i` for *i ∈* **N**:sub:`l(α)`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore,
+In summary, the assumption *α ∈* **R** implies *α ∈* **I**. Therefore, every element in **R** is also an element in **I**, 
 
-    6. α = β = inv(α)
-
-By assumption, *α ∈ L*. From step 6, this implies *inv(α) ∈ L*. By Definition 1.3.2, this implies α ∈ I. In summary, the assumption α ∈ R implies α ∈ I. Therefore, every element in R is also an element in I, which means R ⊂ I. ∎ 
+    R ⊆ I ∎ 
 
 In the context of (potentially) infinite sets such as **L** and **S**, "even" and "odd" refer to whether the set can be partitioned into two disjoint subsets of equal cardinality.
 
