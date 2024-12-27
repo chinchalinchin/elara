@@ -65,9 +65,11 @@ The domain of discourse is composed of *Strings*. A String will be represented a
 
 A String is regarded as a linguistic artifact that is defined by its *length*, its *Characters* and their *ordering*. It is assumed if one knows how many Characters are in a String, which Characters are in a String and in what order they occur, then one has all the information necessary to completely determine the String. This notion is made more precise in the following sections with the introduction of several definitions.
 
-A *Word* will be considered a *type* of String. Colloquially, a word can be understood as a String with semantic content. The goal of the analysis is to describe the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to through everyday use. In other words, the analysis assumes Words have already been selected from the set of all possible Strings and assigned interpretations. 
+The set of all Strings is denoted **S**. At this point, nothing definitive can be asserted about the contents or cardinality of **S**. Once Characters are introduced and concatenation is defined, it will be possible to make claims regarding **S**.
 
-The set of all Strings is denoted **S**.
+The goal is to define all linguistics entities over the set of all Strings: Characters, Words, Language, Sentences and Corpuses. As each of these entities is introduced and defined, a new level of relations will reveal itself. Palindromic symmetries will manifest on each level, in slightly different but related forms. Each type of symmetry will involve, in some form or another, to the concept of *String Inversion*, to be defined shortly. The essence of a palindrome is to bind together these symmetrices at every linguistic layer. Indeed, it will be seen the symmetrical structure required by Palindromes requires these linguistic layers to have specific synactical properties, regardless of their semantic interpretation.
+
+A *Word* will be considered a *type* of String. Colloquially, a Word can be understood as a String with semantic content. The goal of this section is to describe the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to it through everyday use. In other words, the analysis assumes Words have already been selected from the set of all possible Strings and assigned interpretations. 
 
 Characters
 ^^^^^^^^^^
@@ -78,7 +80,11 @@ A *Character* is the basic unit of a String. Characters will be represented as f
     2. Empty (*ε*): The lowercase Greek letter epsilon, *ε*, represents the Empty Character.
     3. Delimiter (*σ*): The lowercase Greek letter sigma, *σ*, represents the Delimiter Character. 
 
-In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to the null letter, "", and the Delimiter Character would correpond to the blank letter, " ".
+In the case of English, Characters would correspond to letters such as "a", "b", "c", etc., the Empty Character would correspond to the null letter, "", and the Delimiter Character would correpond to the blank letter, " ". 
+
+The Empty Character deserves special mention, since it represents a *null* character. The Empty Character is to be understood as a Character with no semantic content. It can be added or subtracted from a String without altering it in any way. The domain of all Strings **S**, as will be shown in the first (albeit informal) theorem, Theorem 1.1.1, is uncountably infinite. Beyond this, the Empty Character introduces further ambiguity when defining the concepts of Word and Language, since multiple Strings with the Empty Character, i.e. *𝔞ε*, *𝔞εε*, *𝔞εεε*, etc., can represent the same semantic content. In order to formally define these linguistic entities, care must be taken to exclude Empty Characters from the domain of Words and Language. 
+
+Take careful note, it is has not yet been shown that Strings are Characters; the preceding statements should be taken heuristically. This will be rectified in the next section with the formal definition of concatenation and the introduction of Character Axiom C.1. 
 
 The aggregate of all Characters is called an *Alphabet* and is denoted by an uppercase Sigma, **Σ**,
 
@@ -91,9 +97,9 @@ It will sometimes be necessary to refer to indeterminate Characters, so notation
 Concatenation 
 ^^^^^^^^^^^^^
 
-Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation, but not an elementary operation. By this it is meant the notion of concatenation that is about to be adopted does not define concatenation solely in terms of Strings. Concatenation will be defined as a hetergeneous operation that is performed between Characters in Alphabet and Strings.
+Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation, but not an elementary operation. By this it is meant the notion of concatenation that is about to be adopted does not define concatenation solely in terms of Strings. Concatenation will be defined as a hetergeneous operation that is performed between Characters in a Alphabet and Strings.
 
-**Definition 1.1.1: Concatenation**  The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parentheis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*.
+**Definition 1.1.1: Concatenation**  The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parenthesis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*.
 
 Colloquially, *ⲁ* is the String that results from placing *ⲃ* behind *ⲁ*. More formally, Character concatenation is defined inductively through the following schema,
 
@@ -110,7 +116,7 @@ The Uniqueness Clause states that if the concatenation of two characters *ⲁ* a
 
 Concatenation as it is normally found in the fields of automata theory and regular expressions is treated as a primitive operation performed between two Strings operands. Concatenation of multiple Strings is then defined inductively. The current formulation differs in that concatenation in this system is not conceived as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings, i.e. it is a *hetergeneous* operation.
 
-To make this distinction plain, it should be noted that given an Alphabet Σ and Definition 1.1.1, one still cannot say the result of a concatenation is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating single Characters is itself a String. 
+To make this distinction plain, it should be noted that given an Alphabet Σ and Definition 1.1.1, one still cannot say the result of a concatenation of two Characters is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating two or more Characters is itself a String. 
 
 In order to rectify this, the first Axiom is introduced,
 
@@ -145,19 +151,19 @@ To simplify notation, it is sometimes beneficial to represent this set as a sequ
 
     S:sub:`1` = (*𝔞*, *𝔟*, *𝔠*) 
 
-This notation will be employed extensively in the subsequent proofs.
+This notation will be employed extensively in the subsequent proofs. The notation will be made more precise after the next section, when *String Length* is defined. 
 
 Length
 ^^^^^^
 
-The Empty Character *ε* will be necessary for defining the *pivot point* of a palindrome. While this addition to the Alphabet **Σ** is advantegous from the perspective of palindromic analysis, it presents a problem when defining the length of a String *s*. If *ε* is considered part of the Alphabet, the typical notion of a String's length is undefined, as *ε* can be concatenated an infinite number of times to *s* without altering its content. To explicate the notion of *length*, consider the constraints that must be placed on this concept in the palindromic system,
+The Empty Character *ε* will be necessary for defining the *pivot point* of a Palindrome, the point around which a Palindrome reflects. While this addition to the Alphabet **Σ** is advantegous from the perspective of palindromic analysis, it presents a problem when defining the length of a String *s*. If *ε* is considered part of the Alphabet, the typical notion of a String's length is undefined, as *ε* can be concatenated an infinite number of times to *s* without altering its content. To explicate the notion of *length*, consider the constraints that must be placed on this concept in the palindromic system,
 
-    - The length of the string "abc" is 3, as it contains three non-empty characters.
-    - The length of the string "aεbεc" is still 3, as the empty characters (ε) are not counted.
+    - The length of the string "abc" is 3, as it contains three non-Empty Characters.
+    - The length of the string "aεbεc" is still 3, as the Empty Characters (*ε*) are not counted.
 
 This example motivates the following definition.
 
-**Definition 1.1.2** The *length* of a String *t*, denoted *l(t)*, is defined as the number of non-Empty Characters in the sequence of concatenated Characters that make up the String. 
+**Definition 1.1.2: String Length** The *String Length* of a String *t*, denoted *l(t)*, is defined as the number of non-Empty Characters in the sequence of concatenated Characters that make up the String. 
 
 Let *ⲁ* be a character in the String *t*. Recall *t* has an equivalent set representation **T**,
 
@@ -166,6 +172,10 @@ Let *ⲁ* be a character in the String *t*. Recall *t* has an equivalent set rep
 Formally, we define the length of *t* to be cardinality of the set **E**:sub:`t` that satisfies the open formula,
 
     (j, ⲁ) ∈ E:sub:`t` ↔ (∃i ∈ N:sub:`l(t)`: ((i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) ∧ (j = i) )
+
+Or, using set builder notation,
+
+    E:sub:`t` = { (i, ⲁ) | ((i, ⲁ) ∈ T) ∧ (ⲁ ≠ ε) }
 
 The length of String in the formalization can be written,
 
@@ -187,14 +197,24 @@ Therefore,
 
     | E:sub:`t` | = 6 ∎
 
-This formulization, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-Empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters.
+This formulization, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-Empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters. 
+
+For reasons that will become clear in Section II, *l(s)* will be called the *String Length* of a String s. 
+
+With the notion of String defined, the definition of a Character level set representation of *s* can be refined using set builder notation.
+
+**Definition 1.1.3: Character Level Set Representation**
+
+Let *t* be any String with Characters *𝔞*:sub:`i`. The Character level set represenation of the String *t*, denoted **T**, is the set which satisfies the following formula,
+
+    T = { (i, *𝔞*:sub:`i`) | 1 ≤ i ≤ l(t) } ∎
 
 Containment
 ^^^^^^^^^^^
 
-Similar to the explication of *length*, the notion of a String *containing* another String must be made precise using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in "rat" is a subset of the set of characters in "tart," but "rat" is not contained in "tart" because the order of the characters is different.
+Similar to the explication of *length*, the notion of a String *containing* another String must be made precise using the definitions introduced so far. It's important to note that in the current system the relation of *containment* is materially different from the standard subset relation between sets. For example, the set of characters in *"rat"* is a subset of the set of characters in *"tart"*, but *"rat"* is not contained in *"tart"* because the order of the characters is different.
 
-Consider the strings "rat" and "strata". The string "rat" *is contained* in the string strata", because the order of the string "rat" is preserved in "strata". An intuitive way of capturing this relationship is to map the indices of the characters in "rat" to the indices of the characters in "strata" which correspond to the indices in "rat". A cursory (but incorrect) definition of *containment* can then be attempted, using this insight as a guide.
+Consider the strings *"rat"* and *"strata"*. The string *"rat"* *is contained* in the string strata", because the order of the string *"rat"* is preserved in *"strata"*. An intuitive way of capturing this relationship is to map the indices of the characters in *"rat"* to the indices of the characters in *"strata"* which correspond to the indices in *"rat"*. A cursory (but incorrect) definition of *containment* can then be attempted, using this insight as a guide.
 
 **Containment (Incorrect Version)** t ⊂:sub:`s` u
 
@@ -212,7 +232,7 @@ If and only if there exists a strictly increasing function *f*: **N**:sub:`u` *�
 
     ∀ i ∈ N:sub:`u`: 𝔞:sub:`i` = 𝔟:sub:`f(i)` ∎
 
-This definition essentially states that *t* is contained in *u* if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
+This definition essentially states that *t* is contained in *u* if and only if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
 
 First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *t = "rat"* and *u = "strata"*. Then, these Strings can be represented in set notation as,
 
@@ -220,19 +240,19 @@ First, consider an example where this definition correlates with the intuitive n
      
     U = { (1, "s'), (2, "t"), (3, "r"), (4, "a"), (5, "t"), (6, "a") }.
 
-The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the condition in the proposed definition, as it maps the characters of "rat" onto the subsequence "rat" within "strata" while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
+The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the condition in the proposed definition, as it maps the characters of *"rat"* onto the subsequence *"rat"* within *"strata"* while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
 
     "rat" ⊂:sub:`s` "strata".
 
-Next, consider a counter-example. Let *t* = "bow" and *u* = "borrow". Then their corresponding set representations are given by,
+Next, consider a counter-example. Let *t = "bow"* and *u = "borrow"*. Then their corresponding set representations are given by,
 
     T = { (1, "b"), (2, "o"), (3, "w") }
      
     U = { (1, "b'), (2, "o"), (3, "r"), (4, "r"), (5, "o"), (6, "w") }
 
-The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, "bow" is *not contained* in the word "borrow". The reason the proposed definition has failed is now clear: the function *f* that is mapping "bow" to "borrow" skips over the indices 2, 3 and 4 in "borrow". In other words, in addition to being strictly increasing, the function *f* which maps the smaller word onto the larger word must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
+The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, *"bow"* is *not contained* in the word *"borrow"*. The reason the proposed definition has failed is now clear: the function *f* that is mapping *"bow"* to *"borrow"* skips over the indices 2, 3 and 4 in *"borrow"*. In other words, in addition to being strictly increasing, the function *f* which maps the smaller word onto the larger word must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
 
-**Definition 1.1.3: Consecutive Functions** 
+**Definition 1.1.4: Consecutive Functions** 
 
 A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
 
@@ -240,7 +260,7 @@ A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
     
 This additional constraint on *f* ensures that the indices of the larger word in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller word. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
 
-**Definition 1.1.4: Containment** t ⊂:sub:`s` u
+**Definition 1.1.5: Containment** t ⊂:sub:`s` u
 
 Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and **U**,
 
@@ -284,7 +304,11 @@ While the notion of Characters maps almost exactly to the intuitive notion of le
 
 If Characters are mapped to letters in the Alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet. The goal of this section is to define the syntactical properties of Words in **L** that differentiates them from Strings in **S** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
 
-To formalize these notion, the following symbolic notation is introduced, 
+**Definition 1.2.1: Word** A Word is a String with semantic content. 
+
+**Definition 1.2.2: Language** A Language **L** is a set of Words. 
+
+The following symbolic notation is introduced for these terms, 
 
     1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
     2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
@@ -301,7 +325,7 @@ The exceptions to this rule for Lowercase Greek letters are *ζ* which is reserv
 
 The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
-With these definitions, the hierarchy of relationships that exist between a word *α*, its Language **L** and the set of all Strings **S** are given by,
+With these definitions, the hierarchy of relationships that exist between a Word *α*, its Language **L** and the set of all Strings **S** are given by,
 
     1. α ∈ L
     2. α ∈ S
@@ -313,6 +337,8 @@ To clarify the relationship between Strings, Words and Language,
     2. All Words belong to the set of all Strings
     3. Language is a subset of the set of all Strings.
     4. Not all Strings are Words. 
+
+As mentioned several times, all linguistic entities in the formal system being built are defined on the domain of Strings. Words and Characters are different types of Strings, while a Language is a subset of Strings. 
 
 Theorems
 ^^^^^^^^
@@ -331,15 +357,15 @@ Clearly, l(s) = 1. To show that *s* is contained in *α*, a strictly increasing 
 
     f(1) = i
 
-For any value of *i*. Therefore, by Definition 1.1.4,
+For any value of *i*. Therefore, by Definition 1.1.5,
 
     ⲁ:sub:`i` ⊂ α ∎
 
-Theorem 1.2.2 and Theorem 1.2.3 are the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.4 will show that it depends on a precise notion of length. In other words, in the current formal system, containment is a derivative concept of length. 
+Theorem 1.2.2 and Theorem 1.2.3 are the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.5 will show that it depends on a precise notion of length. In other words, in the current formal system, containment is derivative of length. 
 
 **Theorem 1.2.2** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: [ (i, ⲁ:sub:`i`) ∈  Α ] → ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
 
-This theorem can be stated in natural language as follows: The Empty Character does not belong to a Word in a Language. 
+This theorem can be stated in natural language as follows: The Empty Character is not contained in a Word of a Language. 
 
 Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**.
 
@@ -351,7 +377,7 @@ Note, by Definition 1.1.2,
 
     2. l(t) = 0
 
-Therefore, **N**:sub:`l(t)` *= ∅*. Now, applying Definition 1.1.4, 
+Therefore, **N**:sub:`l(t)` *= ∅*. Now, applying Definition 1.1.5, 
 
     3. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
 
@@ -359,7 +385,7 @@ Where 𝔞:sub:`i` represents the Characters in *t*, 𝔟:sub:`f(i)` represents 
 
     4. ∀ x: x ∉ ∅
 
-From this, it follows that no *i* exists that satisfies this formula. Therefore, no function *f(i)* exists that maps the Empty Character to a Character in *α*. But this contradicts the assumption in step 1, since by Definition 1.1.4, in order for a String to be contained in another String, a strictly increasing and consecutive function must exist to map the Characters. 
+From this, it follows that no *i* exists that satisfies this formula. Therefore, no function *f(i)* exists that maps the Empty Character to a Character in *α*. But this contradicts the assumption in step 1, since by Definition 1.1.5, in order for a String to be contained in another String, a strictly increasing and consecutive function must exist to map the Characters. 
 
 Since *t = ε* exists by Axiom C.1, it follows,
 
@@ -391,7 +417,7 @@ Applying step 3 to step 2,
 
 The only way for step 1 to be consistent with step 4 is if the first conjunct of the expression obtains, 
 
-    ⲁ:sub:`i` ≠ ε 
+    5. ⲁ:sub:`i` ≠ ε 
 
 But *i* was assumed to be an arbitrary Character index in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
 
@@ -402,7 +428,7 @@ Language is materially different from its un-structured domain, but this is not 
 Axioms
 ^^^^^^
 
-The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axioms listed in this section are not *sufficient*; in other words, it is possible for a String to satisfy these axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axioms.
+The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axiom listed in this section is not *sufficient*; in other words, it is possible for a String to satisfy this axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axiom.
 
 Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character of the String *s*.
 
@@ -415,9 +441,9 @@ While the definition of String length precludes the inclusion of the Empty Chara
 Inversion
 ^^^^^^^^^
 
-Informally, the *Inverse* of a String is the reversed sequence of Characters in a String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition will be elucidated. 
+Before developing the palindromic structure and symmetries in Words and Language, an additional operation must be defined. Informally, the *Inverse* of a String is the reversed sequence of Characters in a String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition as it pertains to Words will be elucidated. 
 
-**Definition 1.2.1: String Inversion** 
+**Definition 1.2.3: String Inversion** 
 
 Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. 
 
@@ -458,12 +484,12 @@ Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`.
 
 Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`.
 
-By the Definition 1.2.1,
+By the Definition 1.2.3,
 
     1. l(t) = l(s)
     2. ∀ i ∈ N:sub:`l(s)`, ∀ j ∈ N:sub:`l(t)`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = *𝔞*:sub:`i` ) ]
 
-Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.1 again,
+Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.3 again,
 
     1. l(u) = l(t)
     2. ∀ j ∈ N:sub:`l(t)`, ∀ k ∈ N:sub:`l(u)`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
@@ -507,7 +533,7 @@ The Character-level representation of *ut*, denoted **UT** is:
 
     3. UT = (𝔞:sub:`1` , 𝔞:sub:`2` , ..., 𝔞:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2` , ... , 𝔟:sub:`l(t)`)
 
-By Definition 1.2.1 of String Inversion, the Character-level representation of *inv(ut)* is the reversed sequence of **UT**,
+By Definition 1.2.3 of String Inversion, the Character-level representation of *inv(ut)* is the reversed sequence of **UT**,
 
     4. inv(UT) = ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` , 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
 
@@ -538,7 +564,7 @@ Let u and t be arbitrary strings in S.
 
 Representation of ut: Let ut be the concatenation of strings u and t.
 
-Definition of String Inversion: By Definition 1.2.1, inv(ut) is the reversed sequence of characters in ut.
+Definition of String Inversion: By Definition 1.2.3, inv(ut) is the reversed sequence of characters in ut.
 
 Expansion of inv(ut): If we write out the characters of ut, we have:
 
@@ -548,7 +574,7 @@ ut = 𝔞:sub:1 𝔞:sub:2 ... 𝔞:sub:l(u) 𝔟:sub:1 𝔟:sub:2 ... 𝔟:sub:
 Therefore,
 
 inv(ut) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
-Representation of inv(t) and inv(u): By Definition 1.2.1:
+Representation of inv(t) and inv(u): By Definition 1.2.3:
 
 inv(u) = 𝔞:sub:l(u) ... 𝔞:sub:2 𝔞:sub:1
 inv(t) = 𝔟:sub:l(t) ... 𝔟:sub:2 𝔟:sub:1
@@ -603,7 +629,7 @@ In natural language, this theorem can be stated as: A Word is Reflective if and 
 
     1. ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔞:sub:`l(α) - i`
 
-Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.1,
+Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.3,
 
     2. l(β) = l(α)
     3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`β`: [ ( j = l(α) - i + 1 ) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
@@ -686,7 +712,7 @@ Assume *α ∈ R*. *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.2
 
     1. ∀ i ∈ N:sub:`l(α)`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i``
 
-Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.1,
+Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.3,
 
     2. l(β) = l(α)
     3. ∀ i ∈ N:sub:`l(α)`, ∀ j ∈ N:sub:`l(β)``: (j = l(α) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` )
@@ -1115,7 +1141,7 @@ Theorem 2.3.4 (ζ ∈ K → W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(�
 Let ζ be an arbitrary sentence in K.
 Let Z be the Character-level representation of ζ.
 Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ, obtained by applying the Delimiting Algorithm (Definition 2.1.4) to Z.
-Character-Level Inversion: By Definition 1.2.1, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
+Character-Level Inversion: By Definition 1.2.3, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
 
 Delimiter Preservation: The Delimiters in Z and inv(Z) appear at the same indices, but in reversed order. This is because string inversion reverses the order of all characters, including delimiters.
 
@@ -1207,9 +1233,9 @@ Let ζ be an arbitrary sentence in C:sub:L.
 
 Non-Empty Character Axiom (S.3): By Axiom S.3, we know that ¬(ε ⊂:sub:s ζ). In other words, the empty character is not contained in ζ.
 
-Definition of Containment (Definition 1.1.4): Recall that a string t is contained in a string u (t ⊂:sub:s u) if and only if there exists a strictly increasing and consecutive function f from the indices of the characters of t to the indices of the characters of u that preserves the order of characters.
+Definition of Containment (Definition 1.1.5): Recall that a string t is contained in a string u (t ⊂:sub:s u) if and only if there exists a strictly increasing and consecutive function f from the indices of the characters of t to the indices of the characters of u that preserves the order of characters.
 
-Implication of Non-Containment: Since the empty character ε is not contained in ζ, it means there is no such function f that can map the empty character to any character in ζ while satisfying the conditions of Definition 1.1.4.
+Implication of Non-Containment: Since the empty character ε is not contained in ζ, it means there is no such function f that can map the empty character to any character in ζ while satisfying the conditions of Definition 1.1.5.
 
 Presence of Non-Empty Characters:  This implies that ζ must contain at least one non-empty character. If ζ were composed only of delimiters or empty characters, it would contradict Axiom S.3, which states that the empty character is not contained in any sentence of the corpus.
 
@@ -1241,7 +1267,7 @@ Assume, for the sake of contradiction,
 
     1. (t = ε) ∧ (t ⊂:sub:`s` ζ).
 
-Since *t ⊂*:sub:`s` *ζ*, by Definition 1.1.4 of Containment, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(t)` → **N**:sub:`l(ζ)` such that,
+Since *t ⊂*:sub:`s` *ζ*, by Definition 1.1.5 of Containment, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(t)` → **N**:sub:`l(ζ)` such that,
 
     2. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
     
@@ -1298,7 +1324,7 @@ The next two theorems encapsulate these important properties of Invertible Sente
 
 **Theorem 2.3.4**: ζ ∈ K → W:sub:`inv(ζ)` = (inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ..., inv(α:sub:`1`))
 
-Let **Z** be the Character-level representation of *ζ*. By Definition 1.2.1, the Character-level representation of *inv(ζ)* is the reversed sequence of Characters in **Z**.
+Let **Z** be the Character-level representation of *ζ*. By Definition 1.2.3, the Character-level representation of *inv(ζ)* is the reversed sequence of Characters in **Z**.
 
 The Delimiters in **Z** and **inv(Z)** appear at the same indices, just in reversed order. Since the Delimiting Algorithm (Definition 2.1.4) identifies Words based on Delimiter positions, the Strings separated by Delimiters in *inv(ζ)* will be the Inverses of the Words in *ζ*, but in reversed order.
 
@@ -1316,7 +1342,7 @@ Let ζ be an arbitrary sentence in K.
 Let Z be the Character-level representation of ζ.
 Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ, obtained by applying the Delimiting Algorithm (Definition 2.1.4) to Z.
 
-Character-Level Inversion: By Definition 1.2.1, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
+Character-Level Inversion: By Definition 1.2.3, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
 
 Delimiter Preservation: The Delimiters in Z and inv(Z) appear at the same indices, but in reversed order. This is because string inversion reverses the order of all characters, including delimiters.
 
@@ -1342,7 +1368,7 @@ Assume *ζ ∈* **K**. Consider the Word-level representation of *ζ*.
 
     1. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
 
-By Definition 1.2.1 and Theorem 2.3.4, the Word-level representation of *inv(ζ)* is 
+By Definition 1.2.3 and Theorem 2.3.4, the Word-level representation of *inv(ζ)* is 
 
     3. W:sub:`inv(ζ)` = ( inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ... , inv(α:sub:`1`) )
 
@@ -1531,7 +1557,7 @@ Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`.
 
     T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ... , (l(t), 𝔞:sub:`l(t)`) }
 
-Let *u = inv(t)* with Characters denoted by let *𝔟*:sub:`j`. By Definition 1.2.1,
+Let *u = inv(t)* with Characters denoted by let *𝔟*:sub:`j`. By Definition 1.2.3,
 
     1. l(t) = l(u)
     2. ∀ i ∈ N:sub:`l(t)`, ∀ j ∈ N:sub:`l(u)`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
@@ -1878,7 +1904,7 @@ The function *f* is clearly strictly increasing and consecutive, as it maps cons
 
     ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`.
 
-Therefore, by Definition 1.1.4 of Containment, 
+Therefore, by Definition 1.1.5 of Containment, 
 
     α ⊂:sub:`s` (Ζ ⋅ Σ:sub:`σ`). ∎
 
@@ -1966,7 +1992,7 @@ Character-Level Representation: Let Ζ be the character-level representation of 
 Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
 σ-reduction: Let s = σ_reduce(ζ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζ.
 
-Inverse of σ-reduction: Let t = inv(s) = inv(σ_reduce(ζ)). By the definition of inversion (Definition 1.2.1), t is the reversed sequence of characters in s.
+Inverse of σ-reduction: Let t = inv(s) = inv(σ_reduce(ζ)). By the definition of inversion (Definition 1.2.3), t is the reversed sequence of characters in s.
 
 Inverse of ζ: Let u = inv(ζ). By the definition of inversion, u is the reversed sequence of characters in ζ.
 
@@ -3562,7 +3588,7 @@ Case 2: l(α₁) < l(αₙ)
 
 In this case, the equation in step 6 implies that α₁ is a contiguous subsequence of inv(αₙ).
 Since αₙ is an Invertible Word, inv(αₙ) is also a Word in the Language.
-By Definition 1.1.4 (Containment), this means α₁ ⊂:sub:s inv(αₙ).
+By Definition 1.1.5 (Containment), this means α₁ ⊂:sub:s inv(αₙ).
 Since inv(inv(αₙ)) = αₙ* (Theorem 1.2.4), it follows that α₁ ⊂:sub:s αₙ, which means α:sub:start ⊂:sub:s α:sub:end.
 Case 3: l(α₁) > l(αₙ)
 
@@ -3744,7 +3770,7 @@ Case 2: l(αₖ) < l(αₖ₊₁):
 
 In this case, αₖ is a contiguous subsequence of inv(αₖ₊₁).
 Since αₖ₊₁ is an Invertible Word, inv(αₖ₊₁) is also a Word in the Language.
-By Definition 1.1.4 (Containment), this means αₖ ⊂:sub:s inv(αₖ₊₁).
+By Definition 1.1.5 (Containment), this means αₖ ⊂:sub:s inv(αₖ₊₁).
 Since inv(inv(αₖ₊₁)) = αₖ₊₁* (Theorem 1.2.4), it follows that αₖ ⊂:sub:s αₖ₊₁, which means α:sub:- (ω:sub:ζ) ⊂ α:sub:+ (ω:sub:ζ).
 Case 3: l(αₖ) > l(αₖ₊₁):
 
