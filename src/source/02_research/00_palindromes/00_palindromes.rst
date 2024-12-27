@@ -94,31 +94,47 @@ It will sometimes be necessary to refer to indeterminate Characters, so notation
 
     1. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used with Coptic letters to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
 
+The range of a Character Variable is understood to be the Alphabet **Σ** from which it is being drawn.
+
+At this early stage, the formal system needs to introduce a notion of *equality* to make any significant headway. There will be a several types of equality defined within the system, but each new layer of equality will be built on top of the primitive notion of *Character Equalty* now introduced in the first preliminary Axiom to the formal system.
+
+**Axiom C.0: The Equality Axiom**
+
+For any Characters *ⲁ, ⲃ ∈* **Σ**, the notion of equality, denoted by *ⲁ = ⲃ*, is a primitive concept and assumed to be understood. It is further assumed that character equality is an equivalence relation, satisfying reflexivity, symmetry and transitivity,
+
+    1. ∀ ⲁ ∈ Σ: ⲁ = ⲁ
+    2. ∀ ⲁ, ⲃ ∈ Σ: ⲁ = ⲃ ↔ ⲃ = ⲁ
+    3. ∀ ⲁ, ⲃ, ⲅ ∈ Σ: (ⲁ = ⲃ ∧ ⲃ = ⲅ) → (ⲁ = ⲅ) ∎ 
+
 Concatenation 
 ^^^^^^^^^^^^^
 
 Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation, but not an elementary operation. By this it is meant the notion of concatenation that is about to be adopted does not define concatenation solely in terms of Strings. Concatenation will be defined as a hetergeneous operation that is performed between Characters in a Alphabet and Strings.
 
-**Definition 1.1.1: Concatenation**  The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parenthesis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*.
+**Definition 1.1.1: Concatenation**  
 
-Colloquially, *ⲁ* is the String that results from placing *ⲃ* behind *ⲁ*. More formally, Character concatenation is defined inductively through the following schema,
+The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parenthesis will sometimes be used to separate the Characters being concatenated, *ⲁ(ⲃ) = (ⲁ)ⲃ = ⲁⲃ*. Character concatenation is defined inductively through the following schema,
 
     1. Basis Clause: ∀ ⲁ ∈ Σ: ⲁε = ⲁ
     2. Inductive Clause: ∀ ⲁ, ⲃ, ⲅ ∈ Σ: ⲁ(ⲃⲅ) = (ⲁⲃ)ⲅ
-    3. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
-    4. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ)) ∎
+    3. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ)) ∎
+    4. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S
 
-The first clause is the basis step of induction which states any Character appended to the Empty Character is the Character itself. The second clause is the inductive step which allows the concatenation of Characters into Strings of arbitrary length through recursion.
+Colloquially, *ⲁⲃ* is the String that results from placing *ⲃ* behind *ⲁ*.
 
-It is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is captured in the Comprehension Clause of Definition 1.1.1. This clause ensures ensures that all results of concatenation are Strings. 
+The first clause in Definition 1.1.1 is the basis step of induction which states any Character appended to the Empty Character is the Character itself. The second clause is the inductive step which allows the concatenation of Characters of arbitrary length through recursion.
 
 The Uniqueness Clause states that if the concatenation of two characters *ⲁ* and *ⲃ* is equal to the concatenation of two other characters *ⲅ* and *ⲇ*, then it must be the case that *ⲁ* is equal to *ⲅ* and *ⲃ* is equal to *ⲇ*. In other words, there's only one set of Characters that can form a given String through concatenation.
 
-Concatenation as it is normally found in the fields of automata theory and regular expressions is treated as a primitive operation performed between two Strings operands. Concatenation of multiple Strings is then defined inductively. The current formulation differs in that concatenation in this system is not conceived as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings, i.e. it is a *hetergeneous* operation.
+It is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is partly captured in the Comprehension Clause of Definition 1.1.1. This clause ensures that the result of concatenating any Character with a String is a String. However, this clause is not what ensures the closure of **S** with respect to concatenation. In order to close **S**, an additional assumption must be introduced. Before introducing this assumption in the form of an axiom, a brief explanation is required for this departure from convention.
 
-To make this distinction plain, it should be noted that given an Alphabet Σ and Definition 1.1.1, one still cannot say the result of a concatenation of two Characters is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating two or more Characters is itself a String. 
+Concatenation as it is normally found in the fields of automata theory or regular expressions is treated as a primitive operation performed between two strings operands. Concatenation of multiple strings is then defined inductively, similary to Definition 1.1.1 but differing in the essential quality that it treats of only strings. The current formulation differs in that concatenation in this system is not conceived as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings, i.e. it is a *hetergeneous* operation.
 
-In order to rectify this, the first Axiom is introduced,
+The reason for this distinction will become clear as the formal theory begins to detail palindromic structures that display symmetry across linguistic levels. It should only be noted at this point that Definition 1.1.1 is a conscious decision to depart from convention.
+
+To make this distinction plain, it should be noted that given an Alphabet **Σ** and Definition 1.1.1, one still cannot say the result of a concatenation of two Characters is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating two or more Characters is itself a String. 
+
+In order to rectify this, the first Axiom is now introduced.
 
 **Axiom C.1: The Character Axiom**
 
@@ -141,22 +157,22 @@ Notation
 
 It will sometimes be convenient to represent Words and Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s*:sub:`1` *= 𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S**:sub:`1`, where the first coordinate encodes the position of the Character in the String,
 
-    S:sub:`1` = { (1, *𝔞*), (2, *𝔟*), (3, *𝔠*) }
+    S:sub:`1` = { (1, 𝔞), (2, 𝔟), (3, 𝔠) }
 
 Note, since sets do not preserve order, this would be equivalent to,
 
-    { (3, *𝔠*), (2, *𝔟*), (1, *𝔞*) }
+    { (3, 𝔠), (2, 𝔟), (1, 𝔞) }
 
 To simplify notation, it is sometimes beneficial to represent this set as a sequence that *does* preserve order as,
 
-    S:sub:`1` = (*𝔞*, *𝔟*, *𝔠*) 
+    S:sub:`1` = (𝔞, 𝔟, 𝔠) 
 
-This notation will be employed extensively in the subsequent proofs. The notation will be made more precise after the next section, when *String Length* is defined. 
+This notation will be employed extensively in the subsequent proofs. It will be made more convenient with set builder notation in the next section, when *String Length* is defined. However, in order to define String Length, a method of referring to a String as a set of ordered Characters is required. This formalization will serve that purpose.  
 
 Length
 ^^^^^^
 
-The Empty Character *ε* will be necessary for defining the *pivot point* of a Palindrome, the point around which a Palindrome reflects. While this addition to the Alphabet **Σ** is advantegous from the perspective of palindromic analysis, it presents a problem when defining the length of a String *s*. If *ε* is considered part of the Alphabet, the typical notion of a String's length is undefined, as *ε* can be concatenated an infinite number of times to *s* without altering its content. To explicate the notion of *length*, consider the constraints that must be placed on this concept in the palindromic system,
+The Empty Character *ε* will be necessary for defining the *pivot point* of a Palindrome, the point around which a certain classes of Palindrome reflect. While this addition to the Alphabet **Σ** is advantegous from the perspective of palindromic analysis, it presents a problem when defining the length of a String *s*. If *ε* is considered part of the Alphabet, the typical notion of a String's length is undefined, as *ε* can be concatenated an infinite number of times to *s* without altering its content. To explicate the notion of *length*, consider the constraints that must be placed on this concept in the palindromic system,
 
     - The length of the string "abc" is 3, as it contains three non-Empty Characters.
     - The length of the string "aεbεc" is still 3, as the Empty Characters (*ε*) are not counted.
@@ -209,6 +225,15 @@ Let *t* be any String with Characters *𝔞*:sub:`i`. The Character level set re
 
     T = { (i, *𝔞*:sub:`i`) | 1 ≤ i ≤ l(t) } ∎
 
+With the concept of String Length now defined, it is a simple matter to define String equality in terms of Character Equality using the Equality Axiom C.0.
+
+**Definition 1.1.4: String Equality**
+
+Let *t* be any String with Characters *𝔞*:sub:`i`. Let *u* be any String with Characters *𝔟*:sub:`j`. The string *t* is said to be *equal* to String *u* if the following condition obtains,
+
+    1. l(t) = l(u) (The lengths of t and u are equal)
+    2. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`i` (The characters at each corresponding index are equal) ∎
+
 Containment
 ^^^^^^^^^^^
 
@@ -252,7 +277,7 @@ Next, consider a counter-example. Let *t = "bow"* and *u = "borrow"*. Then their
 
 The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, *"bow"* is *not contained* in the word *"borrow"*. The reason the proposed definition has failed is now clear: the function *f* that is mapping *"bow"* to *"borrow"* skips over the indices 2, 3 and 4 in *"borrow"*. In other words, in addition to being strictly increasing, the function *f* which maps the smaller word onto the larger word must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
 
-**Definition 1.1.4: Consecutive Functions** 
+**Definition 1.1.5: Consecutive Functions** 
 
 A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
 
@@ -260,7 +285,7 @@ A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
     
 This additional constraint on *f* ensures that the indices of the larger word in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller word. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
 
-**Definition 1.1.5: Containment** t ⊂:sub:`s` u
+**Definition 1.1.6: Containment** t ⊂:sub:`s` u
 
 Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and **U**,
 
@@ -304,13 +329,13 @@ While the notion of Characters maps almost exactly to the intuitive notion of le
 
 If Characters are mapped to letters in the Alphabet of a *Language* **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet. The goal of this section is to define the syntactical properties of Words in **L** that differentiates them from Strings in **S** based solely on their internal structure. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language.
 
-**Definition 1.2.1: Word** 
+**Definition 1.2.1: Language** 
 
-A Word is a String with semantic content. ∎
+A Language **L** is a set of Strings with semantic content. ∎
 
-**Definition 1.2.2: Language** 
+**Definition 1.2.2: Word** 
 
-A Language **L** is a set of Words. ∎
+A Word is an element of a Language **L**. ∎
 
 The following symbolic notation is introduced for these terms, 
 
@@ -325,7 +350,7 @@ It will sometimes be necessary to refer to indeterminate Words, so notation is i
 
     1. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). 
 
-The exceptions to this rule for Lowercase Greek letters are *ζ* which is reserved for Sentential Variables (see Section II.I for more information.), *σ* and *ε* which are reserved for the Delimiter and Empty Character (see Section I.I for more information), and *ω* which is reserved for the Palindromic Pivot (see Section III.II for more information).
+The exceptions to this rule for Lowercase Greek letters are Zeta and Xi, *ζ* and *ξ*, which are reserved for Sentential Variables (see Section II.I for more information.), Sigma and Epsilon, *σ* and *ε*, which are reserved for the Delimiter and Empty Character (see Section I.I for more information), and Omega, *ω*, which is reserved for the Palindromic Pivot (see Section III.II for more information).
 
 The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
@@ -342,32 +367,72 @@ To clarify the relationship between Strings, Words and Language,
     3. Language is a subset of the set of all Strings.
     4. Not all Strings are Words. 
 
-As mentioned several times, all linguistic entities in the formal system being built are defined on the domain of Strings. Words and Characters are different types of Strings, while a Language is a subset of Strings. 
+As mentioned several times, all linguistic entities in the formal system being built are defined on the domain of Strings. Words and Characters are different types of Strings, while a Language is a subset of Strings. Because Words are Strings, defining their equality is a simple matter as referring back to the definition of String Equality.
+
+**Definition 1.2.3: Word Equality**
+
+Let α and β be words in L. Then α = β if and only if α and β are equal as Strings (according to Definition 1.1.5). ∎
+
+
+The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axiom listed in this section is not *sufficient*; in other words, it is possible for a String to satisfy this axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axiom.
+
+Let **L** be a Language. Let *α* be a Word from Language **L**. Let **Α** be the Character leve representation of *α*. Let *ⲁ*:sub:`i` be the *i*:sup:`th` Character of the Word.
+
+**Axiom W.1: The Discovery Axiom** 
+
+    ∀ α ∈ L: ∀ (i, ⲁ) ∈ Α: (l(α) ≠ 0) ∧ (ⲁ:sub:`i` ≠ σ) ∎
+
+There are two conjuncts in the Discovery Axiom and each of them captures a noteworthy assumption that are made about Words in a Language. The first conjunct, (l(α) ≠ 0), will be used to prove some fundamental properties of Words in the next section. In essence, the condition that a Word's String Length not be zero is serving a dual purpose. First, by Definition 1.1.2, it is ensuring the Empty Character cannot be a Character in a Word (this fact will be more rigorously proven in Theorem 1.2.4 below), preventing vacuous semantic content. 
+
+In order for a Word to be distinguished as the same Word, there must be dimensions of comparision. One must have some criteria for saying *this* linguistic entity is equal to that *that* linguistic entity. String Length serves as one of the two dimensions for a Word to a manifest. In other words, the concept of String Length is foundational to the discovery of Words from the set of all Strings **S**. One must be able to discard those Strings possessing null content before one can engage in Language. 
+
+
+While the definition of String Length precludes the inclusion of the Empty Character in a Word, there is no such restriction on the Delimiter. In essence, this Axiom capture the common-sense notion that a Word from a Language cannot contain a Delimiter; Instead, Delimiters are what separate Words from one another in a String. 
 
 Theorems
 ^^^^^^^^
 
 The next theorems establish some basic results about Words in a Language within this formalization. All of these theorems should conform to the common sense notion of Words. The first theorem provides a rigorous formalization of the inituitive notion that every Character in a Word is contained in the Word. 
 
-**Theorem 1.2.1** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: ( (i, ⲁ:sub:`i`) ∈  Α ) → ( ⲁ:sub:`i` ⊂ α)
+**Theorem** ∀ α ∈ L:  αε = εα = α
+
+This theorem can be stated in natural language as follows: For every Word in a Language, concatenating the Word with the empty string ε on either side results in the Word itself.
+
+Let *α* be an arbitrary word in **L**. By Definition, *α* is a string of characters, and *l(α)* is the number of non-Empty Characters in *α*.
+
+By definition, ε is the empty string, and *l(ε) = 0*. By the definition of concatenation, the concatenation of any String *s* with *ε* results in a new string with the same Characters as *s* in the same order.
+
+Therefore, *αε* and *εα* are both Strings with the same Characters as *α* in the same order. Since *α* is a Word in **L** and concatenation with *ε* does not change its length or order of Characters, by Theorem 3.2.6, *αε = εα = α*.
+
+Since *α* was arbitrary, this can be generalized: 
+
+    ∀ α ∈ L: αε = εα = α ∎
+
+**Theorem 1.2.1** ∀ α ∈ L : ∀ i ∈ (i, ⲁ) ∈  Α: ( ⲁ ⊂:sub:`s` α)
 
 This theorem can be stated in natural language as follows: All Characters in a Word are contained in the Word.
 
-Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**. Consider the String *s* with a single Character *𝔟*:sub:`1` = *ⲁ*:sub:`i`.
+Assume *α ∈* **L**. Let (*i*, *ⲁ*) be the *i*:sup:`th` ordered pair in its Character level representation **Α**. By the Axiom W.1, since *α ∈* **L**, *l(α) ≠ 0* and thus it must have at least one non-Empty Character *ⲁ*.
 
-    s = ⲁ:sub:`i`.
+Consider the String *s* with a single Character *𝔟*:sub:`1` = *ⲁ*.
 
-Clearly, l(s) = 1. To show that *s* is contained in *α*, a strictly increasing and consecutive function that maps the Characters in *s* to the Characters in *α* must be found. Since *l(s) = 1*, this can be defined simply as,
+    s = ⲁ
+
+Clearly, by Definition 1.1.2, l(s) = 1. To show that *s* is contained in *α*, a strictly increasing and consecutive function that maps the Characters in *s* to the Characters in *α* must be found. Since *l(s) = 1*, this can be defined simply as,
 
     f(1) = i
 
 For any value of *i*. Therefore, by Definition 1.1.5,
 
-    ⲁ:sub:`i` ⊂ α ∎
+    ⲁ ⊂ α 
+    
+Since *α* and *ⲁ* are arbitary, this can be generalized, 
 
-Theorem 1.2.2 and Theorem 1.2.3 are the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.5 will show that it depends on a precise notion of length. In other words, in the current formal system, containment is derivative of length. 
+    ∀ α ∈ L : ∀ i ∈ (i, ⲁ) ∈  Α: (ⲁ ⊂:sub:`s` α) ∎
 
-**Theorem 1.2.2** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: [ (i, ⲁ:sub:`i`) ∈  Α ] → ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
+Theorem 1.2.3 and Theorem 1.2.4 are the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.5 will show that it depends on a precise notion of length. In other words, in the current formal system, containment is derivative of length. 
+
+**Theorem 1.2.3** ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: [ (i, ⲁ:sub:`i`) ∈  Α ] → ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
 
 This theorem can be stated in natural language as follows: The Empty Character is not contained in a Word of a Language. 
 
@@ -397,7 +462,7 @@ Since *t = ε* exists by Axiom C.1, it follows,
 
 must always be false, and its negation must always be true. ∎
 
-**Theorem 1.2.3**  ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` ≠ ε 
+**Theorem 1.2.4**  ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: [ (i, ⲁ:sub:`i`) ∈  Α ] → 𝔞:sub:`i` ≠ ε 
 
 This theorem can be stated in natural language as follows: If a Word belongs to a Language, then none of its Characters are empty.
 
@@ -407,7 +472,7 @@ From Theorem 1.2.1, it follows,
 
     1. ( ⲁ:sub:`i` ⊂ α)
 
-From Theorem 1.2.2, it follows, 
+From Theorem 1.2.3, it follows, 
 
     2. ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
 
@@ -425,29 +490,16 @@ The only way for step 1 to be consistent with step 4 is if the first conjunct of
 
 But *i* was assumed to be an arbitrary Character index in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
 
-Theorem 1.2.2 and 1.2.3 are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content.
+Theorem 1.2.3 and 1.2.4 are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content.
 
-Language is materially different from its un-structured domain, but this is not guaranteed by Theorem 1.2.1 - Theorem 1.2.3. Rather, Theorem 1.2.1 - Theorem 1.2.3 provide the foundation. To build on this foundation, an additional Axiom governing Word discovery is introduced in the next section.
-
-Axioms
-^^^^^^
-
-The goal of the current analysis is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages. This section details the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axiom listed in this section is not *sufficient*; in other words, it is possible for a String to satisfy this axioms without being an element of a Language, but any Word that belongs to a Language must satisfy the axiom.
-
-Let **L** be a Language. Let *s* be a String, not necessarily a member of **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character of the String *s*.
-
-**Axiom W.1: The Delimiter Axiom ** 
-
-    ∀ α ∈ L: ∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ  ∎
-
-While the definition of String length precludes the inclusion of the Empty Character in a Word, there is no such restriction on the Delimiter. In essence, this Axiom capture the common-sense notion that a Word from a Language cannot contain a Delimiter; Instead, Delimiters are what separate Words from one another in a String. 
+Language is materially different from its un-structured domain, but this is not guaranteed by Theorem 1.2.1 - Theorem 1.2.4. Rather, Theorem 1.2.1 - Theorem 1.2.4 provide the foundation. To build on this foundation, an additional Axiom governing Word discovery is introduced in the next section.
 
 Inversion
 ^^^^^^^^^
 
 Before developing the palindromic structure and symmetries in Words and Language, an additional operation must be defined. Informally, the *Inverse* of a String is the reversed sequence of Characters in a String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition as it pertains to Words will be elucidated. 
 
-**Definition 1.2.3: String Inversion** 
+**Definition 1.2.4: String Inversion** 
 
 Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. 
 
@@ -488,12 +540,12 @@ Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`.
 
 Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`.
 
-By the Definition 1.2.3,
+By the Definition 1.2.4,
 
     1. l(t) = l(s)
     2. ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1` = 𝔞:sub:`i` ) 
 
-From this, the Character Index *l(s) - i + 1* in *t* corresponds to the Character Index *i* in *s* for all *i*. Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.3 again,
+From this, the Character Index *l(s) - i + 1* in *t* corresponds to the Character Index *i* in *s* for all *i*. Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.4 again,
 
     3. l(u) = l(t)
     4. ∀ j ∈ N:sub:`l(t)`: ( 𝔠:sub:`l(t) - j + 1` = 𝔟:sub:`j` )
@@ -530,7 +582,7 @@ The Character level representation of *ut*, denoted **UT** is:
 
     3. UT = (𝔞:sub:`1` , 𝔞:sub:`2` , ..., 𝔞:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2` , ... , 𝔟:sub:`l(t)`)
 
-By Definition 1.2.3 of String Inversion, the Character level representation of *inv(ut)* is the reversed sequence of **UT**,
+By Definition 1.2.4 of String Inversion, the Character level representation of *inv(ut)* is the reversed sequence of **UT**,
 
     4. inv(UT) = ( 𝔟:sub:`l(t)`, ..., 𝔟:sub:`2` , 𝔟:sub:`1` , 𝔞:sub:`l(u)`, ..., 𝔞:sub:`2` , 𝔞:sub:`1`)
 
@@ -592,7 +644,7 @@ In natural language, this theorem can be stated as: A Word in a Language is Refl
 
     1. ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` 
 
-Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.3,
+Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.4,
 
     2. l(β) = l(α)
     3. ∀ i ∈ N:sub:`l(α)`: ( 𝔟:sub:`l(α) - i + 1 ` = 𝔞:sub:`i` )
@@ -669,7 +721,7 @@ Assume *α ∈* **R**. *𝔞*:sub:`i` be the Characters in *α*. By Definition 1
 
     1. ∀ i ∈ N:sub:`l(α)`: *𝔞*:sub:`i` = *𝔞*:sub:`l(α) - i + 1``
 
-Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.3,
+Let *β = inv(α)* and let *𝔟*:sub:`j` be the Characters in *β*. By Definition 1.2.4,
 
     2. l(β) = l(α)
     3. ∀ i ∈ N:sub:`l(α)`:  ( 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i` )
@@ -717,17 +769,17 @@ Let | R | be odd. Since | I - R | is always even, and the sum of an odd number a
 Section II: Sentences
 =====================
 
-The work so far has formally constructed a system for representing the first two levels of artifacts from a natural language, Characters (Alphabets) and Words (Language), without appealing to their interpretation in any way except insofar that it takes a stance on their *existence*. As the analysis moves up the chain of linguistic artifacts to the next highest level, Sentences (Corpuses), it is tempting to start incorporating semantic features into the theory. However, the objective is to derive palindromic conditions independent of a particular semantic interpretation. Therefore, as the analysis proceeds, special care will be given to the definition of a *Sentence* and its *Corpus*.
+The work so far has formally constructed a system for representing the first two levels of artifacts from a natural language, Characters (Alphabets) and Words (Language), without appealing to their interpretation in any way except insofar that it takes a stance on the *existence* of an interpretation. As the analysis moves up the chain of linguistic artifacts to the next highest level, Sentences (Corpuses), it is tempting to start incorporating semantic features into the theory. However, the objective is to derive palindromic conditions independent of a particular semantic interpretation. Therefore, as the analysis proceeds, special care will be given to the definition of a *Sentence* and its *Corpus*.
 
 Section II.I: Definitions
 -------------------------
 
-In this section, the final level of the semantic hierarchy will be defined. 
+The next level of the semantic hierarchy will now be defined. 
 
 Corpus
 ^^^^^^
 
-The entire system so far constructed relies on the domain of **S**, the set of all Strings that can be formed from an Alphabet of Characters **Σ**. Attention has been confined to those entities that satisfy the Delimiter Axiom (*Axiom W.1*),
+The entire system so far constructed relies on the domain of **S**, the set of all Strings that can be formed from an Alphabet of Characters **Σ**. Attention has been confined to those entities that satisfy the Discovery Axiom (*Axiom W.1*),
 
     ∀ α ∈ L: ∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ 
 
@@ -737,7 +789,9 @@ In other words, the definitions and theorems so far introduced deal with linguis
 
 From the definition, it can easily be seen the Corpus of a Language is a subset of the set of all possible Strings, **S**
 
-   C**:sub:`L` ⊂ S 
+   C:sub:`L` ⊂ S 
+
+This aligns with the idea that the domain of entities in this formal system is defined either as a type of *element* of **S** or a type of *subset* of **S**.
 
 Sentence
 ^^^^^^^^
@@ -755,9 +809,122 @@ From Definition 2.1 and Definition 2.2, it follows that a Sentence is a String,
 
     ᚠ ∈ S
 
-It should be noted at this point that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus.
+It should be stressed, as had been made clear in previous comments, that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus. To reiterate this hierarchy and precisely state how all the entites in this formal system are related,
 
-TODO: need to state Null Axiom before defining Word-level representations and length!
+    1. Strings: ⲁ, α, ζ
+    2. Sets: Σ, L, C:sub:`L`
+    3. Character Membership: ⲁ ∈ Σ
+    4. Word Membership: α ∈ L
+    5. Sentence Membership: ζ ∈ C:sub:`L`
+
+To clarify the relationship between Strings, Characters, Alphabets, Words, Languages, Sentences and Corpus in plain language,
+
+    1. All Characters, Words and Sentences are Strings.
+    2. All Alphabets, Languages and Corpuses are sets of Strings.
+    3. All Characters belong to an Alphabet.
+    4. All Words belong to a Language.
+    5. All Sentences belong to a Corpus.
+
+This introduction concludes with some analogous theorems for Sentences to the Theorems 1.2.1 - 1.2.3 for Words. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings.
+
+**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ )
+
+Let *ζ* be an arbitrary sentence in C:sub:`L`. For the sake of contradiction, assume that 
+
+    1. ε ⊂:sub:`s` ζ.
+
+Note, by Definition 1.1.2, 
+
+    2. l(ε) = 0
+
+By Definition 1.1.5, if *ε* ⊂:sub:`s` *ζ*, there must exist a strictly increasing and consecutive function *f* from the indices of *ε* to the indices of *ζ*.
+
+By step 2, the domain of *f* is empty, *∅*. Therefore *f* does not exist and no mapping can be made between the Character *ε* the indices of *ζ*. This contradicts the assumption in step 1. Thus, 
+
+    ¬ ( ε ⊂:sub:`s` ζ ).
+
+Since ζ was an arbitrary sentence in C:sub:`L`, this can be generalized,
+
+    ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ ) ∎
+
+**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`: ( (i, ⲁ:sub:`i`) ∈  Ζ ) → ( ⲁ:sub:`i` ⊂:sub:`s` ζ)
+
+Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*. Let **Z** be the character-level representation of *ζ*:
+
+    Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
+
+Assume (*i*, *ⲁ*:sub:`i`) *∈* **Z**, i.e. *ⲁ*:sub:`i` is the Character at position *i* in **Z**. Consider the string *s* consisting of the single character *ⲁ*:sub:`i`. Clearly, 
+
+    l(s) = 1
+
+Define a function: Define a function f: {1} → {i} such that f(1) = i. This function is strictly increasing and consecutive.
+
+Definition of Containment: By Definition 1.1.6, since there exists a strictly increasing and consecutive function f from the indices of s to the indices of ζ, and since the character at position 1 in s is the same as the character at position i in ζ (both are ⲁ:sub:i), we can conclude that s is contained in ζ.
+
+Conclusion: Therefore, ⲁ:sub:i ⊂:sub:s ζ.
+
+Since ζ and i were arbitrary, we can generalize:
+
+∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`: ( (i, ⲁ:sub:`i`) ∈  Ζ ) → ( ⲁ:sub:`i` ⊂:sub:`s` ζ)
+This completes the proof. ∎
+
+Explanation:
+
+This proof directly mirrors the logic used to prove the analogous theorem for words. It shows that if a character is present at a specific position in a sentence, then that character (as a single-character string) is contained within the sentence according to our definition of containment.
+
+
+
+**Theorem 2.1.3** ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`: ( (i, ⲁ:sub:`i`) ∈  Ζ ) → ⲁ:sub:`i`` ≠ ε
+
+Proof:
+
+Let ζ be an arbitrary sentence in C:sub:L, and let i be a natural number such that 1 ≤ i ≤ l(ζ).
+
+Theorem 3.1.17: By Theorem 3.1.17, we know that if (i, ⲁ:sub:i) ∈ Z, then ⲁ:sub:i ⊂:sub:s ζ.
+
+Theorem on Empty String: We proved earlier (by demoting the Null Axiom) that ∀ ζ ∈ C:sub:L: ¬ ( ε ⊂:sub:s ζ ). In other words, the empty string is not contained in any sentence.
+
+Contradiction: Assume, for the sake of contradiction, that ⲁ:sub:i = ε.
+
+Substitution: If ⲁ:sub:i = ε, then by substituting into the result from Step 1, we would have ε ⊂:sub:s ζ.
+
+Violation of Theorem: But this contradicts Step 2, which states that the empty string cannot be contained in any sentence.
+
+Conclusion: Therefore, our assumption that ⲁ:sub:i = ε must be false. Hence, ⲁ:sub:i ≠ ε.
+
+Since ζ and i were arbitrary, we can generalize:
+
+∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`: ⲁ:sub:`i` ≠ ε
+This completes the proof. ∎
+
+
+
+Proof (Revised with Conditional):
+
+The proof remains largely the same, but we need to explicitly acknowledge the conditional:
+
+Let ζ be an arbitrary sentence in C:sub:L, and let i be a natural number such that 1 ≤ i ≤ l(ζ).
+
+Theorem 3.1.17: By Theorem 3.1.17, we know that if (i, ⲁ:sub:i) ∈ Z, then ⲁ:sub:i ⊂:sub:s ζ.
+
+Theorem on Empty String: We proved earlier (by demoting the Null Axiom) that ∀ ζ ∈ C:sub:L: ¬ ( ε ⊂:sub:s ζ ). In other words, the empty string is not contained in any sentence.
+
+Assumption: Assume that (i, ⲁ:sub:i) ∈ Z.
+
+Contradiction: Assume, for the sake of contradiction, that ⲁ:sub:i = ε.
+
+Substitution: If ⲁ:sub:i = ε, then by substituting into the result from Step 1, we would have ε ⊂:sub:s ζ.
+
+Violation of Theorem: But this contradicts Step 2, which states that the empty string cannot be contained in any sentence.
+
+Conclusion: Therefore, our assumption that ⲁ:sub:i = ε must be false. Hence, if (i, ⲁ:sub:i) ∈ Z, then ⲁ:sub:i ≠ ε.
+
+Since ζ and i were arbitrary, we can generalize:
+
+∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`: ( (i, ⲁ:sub:`i`) ∈  Ζ ) → ⲁ:sub:`i` ≠ ε
+This completes the proof. ∎
+
+
 
 Notation
 ^^^^^^^^
@@ -776,9 +943,40 @@ Or using a sequence to implicitly represent the order,
 
 The word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*,
 
-The essence of the *Delimiting Algorithm* lies in interplay of the Delimiter Axiom W.1 and the definition of a Sentence as a semantic String. In other words, by Definition 2.1.1, all Sentences must be semantic. Therefore, by the Delimiter Axiom W.1, the Words which contains must be exactly those Strings which are separated by the Delimiter Character. 
+The essence of the *Delimiting Algorithm* lies in interplay of the Discovery Axiom W.1 and the definition of a Sentence as a semantic String. In other words, by Definition 2.1.1 and by Definition 1.2.2, all Sentences and Words must be semantic. Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
 
 This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of delimitation within the Sentences of its Corpus. 
+
+
+
+
+Definition 2.1.4: Delimiting Algorithm
+
+Initialization
+
+Let Ζ be the Character-level set representation of the Sentence ζ.
+Let W:sub:ζ = ∅ (the empty set).
+Let j = 0.
+Iteration
+
+Let a be the word that starts at index j + 1 in Ζ, represented as the set,
+
+A = { (1, 𝔞:sub:j+1), (2, 𝔞:sub:j+2), ..., (n, 𝔞:sub:j+n) }
+where n is the smallest integer such that one of the following conditions obtains,
+
+𝔞:sub:j+n+1 = σ (the next character is a delimiter)
+j+n+1 > l(ζ) (the algorithm has reached the end of the sentence)
+Add (j + 1, a) to the set W:sub:ζ.
+
+Increment j by the number n.
+
+Repeat Steps 1 - 4 in order until the Characters in ζ have been processed.
+
+Definition 2.1.5: Sentence Length
+
+Let ζ be a Sentence in C:sub:L. The Word Length of ζ, denoted by Λ(ζ), is equal to the number of Words in the Word-Level Representation W:sub:ζ of ζ.
+
+
 
 **Definition 2.1.4: Delimiting Algorithm**
 
@@ -792,12 +990,12 @@ This formulation has the advantage of not taking a stance on the semantics of a 
 
 1. Let *a* be the word that starts at index *j + 1* in **Ζ**, represented as the set,
 
-    **A** = { (1, 𝔞:sub:`j+1`), (2, 𝔞:sub:`j+2`), ..., (n, 𝔞:sub:`j+n`) }
+    **A** = { (1, 𝔞:sub:`j+1`), (2, 𝔞:sub:`j+2`), ..., (l(a), 𝔞:sub:`l(a)`) }
 
 where n is the smallest integer such that one of the following conditions obtains,
     
-    - 𝔞:sub:`j+n+1` = σ (the next character is a delimiter)
-    - j+n+1 > | ζ | (the algorithm has reached the end of the sentence)
+    - 𝔞:sub:`j + l(a) + 1` = σ (the next character is a delimiter)
+    - j + l(a) + 1 > l(ζ) (the algorithm has reached the end of the sentence)
 
 2. Add *(j + 1, a)* to the set **W**:sub:`ζ`. 
 
@@ -860,7 +1058,7 @@ Note the first two levels are purely syntactical. Any String *s* will have a len
 
 The following theorem proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
-**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
+**Theorem 2.1.4** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
 
 This theorem can be stated in natural language as follows: For any sentence *ζ* in a Corpus C:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
 
@@ -869,45 +1067,6 @@ Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of 
     W:sub:`ζ` = { (1, α:sub:`1`), (2, α:sub:`2`), ..., (Λ(ζ), α:sub:`Λ(ζ)`)}
 
 For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(*α*:sub:`i`)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
-
-
-
-
-Revised Definitions and Axiom
-
-Here are the revised definitions and axiom, incorporating your solution:
-
-Axiom S.3: The Non-Empty Character Axiom
-
-∀ ζ ∈ C:sub:L: ¬ ( ε ⊂:sub:s ζ )
-Definition 2.1.4: Delimiting Algorithm
-
-Initialization
-
-Let Ζ be the Character-level set representation of the Sentence ζ.
-Let W:sub:ζ = ∅ (the empty set).
-Let j = 0.
-Iteration
-
-Let a be the word that starts at index j + 1 in Ζ, represented as the set,
-
-A = { (1, 𝔞:sub:j+1), (2, 𝔞:sub:j+2), ..., (n, 𝔞:sub:j+n) }
-where n is the smallest integer such that one of the following conditions obtains,
-
-𝔞:sub:j+n+1 = σ (the next character is a delimiter)
-j+n+1 > l(ζ) (the algorithm has reached the end of the sentence)
-Add (j + 1, a) to the set W:sub:ζ.
-
-Increment j by the number n.
-
-Repeat Steps 1 - 4 in order until the Characters in ζ have been processed.
-
-Definition 2.1.5: Sentence Length
-
-Let ζ be a Sentence in C:sub:L. The Word Length of ζ, denoted by Λ(ζ), is equal to the number of Words in the Word-Level Representation W:sub:ζ of ζ.
-
-
-
 
 Setion II.II: Sentence Classes 
 ------------------------------
@@ -1026,45 +1185,51 @@ Section II.III: Axioms
 
 In Section I, the first three axioms of the palindromic formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being built. The Character, Delimiter and Empty Axiom are reprinted below, so they may be considered in sequence with the other axioms.
 
+**Axiom C.0: The Equality Axiom**
+
+    1. ∀ ⲁ ∈ Σ: ⲁ = ⲁ
+    2. ∀ ⲁ, ⲃ ∈ Σ: ⲁ = ⲃ ↔ ⲃ = ⲁ
+    3. ∀ ⲁ, ⲃ ∈ Σ: (ⲁ = ⲃ ∧ ⲃ = ⲅ) → (ⲁ = ⲅ)
+   
 **Axiom C.1: The Character Axiom**
 
     ∀ ⲁ ∈ Σ: ⲁ ∈ S
 
-**Axiom W.1: The Delimiter Axiom ** 
+**Axiom W.1: The Discovery Axiom ** 
 
-    ∀ α ∈ L: ∀ i ∈ *N*:sub:`l(s)`: 𝔞:sub:`i` ≠ σ 
+    ∀ α ∈ L: ∀ (i, ⲁ) ∈ Α: ⲁ:sub:`i` ≠ σ 
 
-**Axiom S.1: The Containment Axiom**
-
-    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L`: α ⊂:sub:`s` ζ
-
-**Axiom S.2: The Extraction Axiom**
-
-    ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: (i, α:sub:`i`) ∈ W:sub:`ζ` → α:sub:`i` ∈ L
-
-**Axiom S.3: The Null Axiom**
+**Axiom S.1: The Null Axiom**
 
     ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ )
 
+**Axiom S.2: The Containment Axiom**
+
+    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L`: α ⊂:sub:`s` ζ
+
+**Axiom S.3: The Extraction Axiom**
+
+    ∀ ζ ∈ C:sub:`L` : ∀ (i, α) ∈ W:sub:`ζ`:  α ∈ L
 
 
-Revised Axiom S.1: The Word-Sentence Duality Axiom
+
+Revised Axiom S.2: The Word-Sentence Duality Axiom
 
 ∀ α ∈ L: ∃ ζ ∈ C:sub:L: α ⊂:sub:s ζ ∧ ∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ
 In words: "For every word α in the language L, there exists a sentence ζ in the corpus C:sub:L such that α is contained in ζ, AND for every sentence ζ in the corpus C:sub:L, there exists a word α in the language L such that α is contained in ζ."
 Explanation:
 
 Part 1 (∀ α ∈ L: ∃ ζ ∈ C:sub:L: α ⊂:sub:s ζ): This is the original Containment Axiom (S.1). It states that every word in the language must appear in at least one sentence in the corpus.
-Part 2 (∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ): This is the new part, incorporating the idea from the proposed revision of Axiom S.3. It states that every sentence in the corpus must contain at least one word from the language.
+Part 2 (∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ): This is the new part, incorporating the idea from the proposed revision of Axiom S.4. It states that every sentence in the corpus must contain at least one word from the language.
 Benefits of the Revised Axiom:
 
 Combines Two Concepts: It elegantly combines the two related concepts into a single, more powerful axiom.
 Captures Duality: It explicitly represents the inherent many-to-many relationship between words and sentences.
 Ensures Non-Empty Sentences: It guarantees that all sentences have at least one word, eliminating the need for a separate axiom about non-empty sentences or non-empty characters.
-Simplifies the System: We can now eliminate Axiom S.3, as its purpose is fulfilled by the revised Axiom S.1.
+Simplifies the System: We can now eliminate Axiom S.4, as its purpose is fulfilled by the revised Axiom S.2.
 Impact on Theorems:
 
-Theorem 2.3.1 - Theorem 2.3.5: These theorems remain valid, but their proofs might need slight adjustments to refer to the revised Axiom S.1 instead of the old one. The underlying logic remains the same. We need to ensure the new Axiom S.1 guarantees all Words in a Sentence are contained in a Sentence.
+Theorem 2.3.1 - Theorem 2.3.5: These theorems remain valid, but their proofs might need slight adjustments to refer to the revised Axiom S.2 instead of the old one. The underlying logic remains the same. We need to ensure the new Axiom S.2 guarantees all Words in a Sentence are contained in a Sentence.
 Revised Theorem Proofs:
 
 Theorem 2.3.1 (∀ ζ ∈ C:sub:L: L:sub:ζ ⊂ L):
@@ -1073,7 +1238,7 @@ Assume ζ ∈ C:sub:L.
 
 W:sub:ζ be the Word-level set representation of ζ, as specified in Definition 2.1.3.
 
-By the new Axiom S.1, every Word α in the Word-level set representation of ζ belongs to the Language L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.&#x20;
+By the new Axiom S.2, every Word α in the Word-level set representation of ζ belongs to the Language L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.&#x20;
 
 Since every ordered element of W:sub:ζ that belongs to L also belongs to L:sub:ζ by Definition 2.3.3, it can concluded that L:sub:ζ is a subset of L.
 
@@ -1089,14 +1254,14 @@ By Definition 2.2.2,
 
 inv(ζ) ∈ C:sub:L
 
-By Axiom S.1, every Word in the Word-level representation of inv(ζ) belongs to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+By Axiom S.2, every Word in the Word-level representation of inv(ζ) belongs to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
 
 Theorem 2.3.4 (ζ ∈ K → W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))):
 
 Let ζ be an arbitrary sentence in K.
 Let Z be the Character-level representation of ζ.
 Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ, obtained by applying the Delimiting Algorithm (Definition 2.1.4) to Z.
-Character-Level Inversion: By Definition 1.2.3, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
+Character-Level Inversion: By Definition 1.2.4, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
 
 Delimiter Preservation: The Delimiters in Z and inv(Z) appear at the same indices, but in reversed order. This is because string inversion reverses the order of all characters, including delimiters.
 
@@ -1104,7 +1269,7 @@ Applying the Delimiting Algorithm to inv(ζ):  Let's apply the Delimiting Algori
 
 Word-Level Representation of inv(ζ): Let W:sub:inv(ζ) be the Word-level representation of inv(ζ) obtained by applying the Delimiting Algorithm to inv(Z).
 
-Invertibility Implies Semantic Coherence: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.  By Axiom S.1, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+Invertibility Implies Semantic Coherence: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.  By Axiom S.2, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
 
 Conclusion: Combining steps 3, 4, and 5, we can conclude that W:sub:inv(ζ) consists of the inverses of the words in W:sub:ζ, in reversed order. Therefore:
 
@@ -1120,7 +1285,7 @@ Word-Level Representation of inv(ζ): By Theorem 2.3.4, we know that:
 
 W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
 
-Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.1, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.2, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
 
 Invertibility of Words in ζ:  Therefore, for each i from 1 to Λ(ζ), inv(α:sub:i) ∈ L.
 
@@ -1132,8 +1297,8 @@ Conclusion: Since inv(α:sub:i) ∈ L for each word α:sub:i in W:sub:ζ, it fol
 
 Next Steps:
 
-Replace Axiom S.1 and S.3: We should formally replace the old Axiom S.1 and Axiom S.3 with the revised Axiom S.1 (Word-Sentence Duality Axiom).
-Update Proofs: We need to update the proofs of Theorems 2.3.1, Theorem 2.3.3, Theorem 2.3.4 and Theorem 2.3.5 to reference the new Axiom S.1 where appropriate.
+Replace Axiom S.2 and S.3: We should formally replace the old Axiom S.2 and Axiom S.4 with the revised Axiom S.2 (Word-Sentence Duality Axiom).
+Update Proofs: We need to update the proofs of Theorems 2.3.1, Theorem 2.3.3, Theorem 2.3.4 and Theorem 2.3.5 to reference the new Axiom S.2 where appropriate.
 Review Other Theorems: While we've focused on the theorems that directly use S.1, it's worth reviewing all other theorems to ensure there are no hidden dependencies or unintended consequences.
 
 
@@ -1141,15 +1306,15 @@ Review Other Theorems: While we've focused on the theorems that directly use S.1
 
 
 
-Note the Delimiter Axiom has been revised to quantify over a Language, rather than quantifying over **S** while making the quantified expression conditional on the String belonging to a Language. 
+Note the Discovery Axiom has been revised to quantify over a Language, rather than quantifying over **S** while making the quantified expression conditional on the String belonging to a Language. 
 
 It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures. 
 
-To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Delimiter Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
+To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
 
-The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories. Axiom S.1 asserts that for every Word in a Language there is at least one Sentence in a Corpus that contains it. In other words, a Word cannot exist in a Language without being included in a Sentence. This Axiom captures an inextricable link between the metamathematical concepts of Sentence and Word: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation.
+The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories. Axiom S.2 asserts that for every Word in a Language there is at least one Sentence in a Corpus that contains it. In other words, a Word cannot exist in a Language without being included in a Sentence. This Axiom captures an inextricable link between the metamathematical concepts of Sentence and Word: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation.
 
-Axiom S.2 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
+Axiom S.3 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
 
 **Definition 2.3.1: Sentence-Level Semantic Coherence** 
 
@@ -1171,7 +1336,7 @@ These axioms and definitions are used to prove the following theorems.
 
 This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Sentence Language is a subset of the Language **L**.
 
-Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.2, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ` is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
+Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.3, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ` is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
 
     ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L 
 
@@ -1186,15 +1351,15 @@ Proof:
 
 Let ζ be an arbitrary sentence in C:sub:L.
 
-Non-Empty Character Axiom (S.3): By Axiom S.3, we know that ¬(ε ⊂:sub:s ζ). In other words, the empty character is not contained in ζ.
+Non-Empty Character Axiom (S.3): By Axiom S.4, we know that ¬(ε ⊂:sub:s ζ). In other words, the empty character is not contained in ζ.
 
 Definition of Containment (Definition 1.1.5): Recall that a string t is contained in a string u (t ⊂:sub:s u) if and only if there exists a strictly increasing and consecutive function f from the indices of the characters of t to the indices of the characters of u that preserves the order of characters.
 
 Implication of Non-Containment: Since the empty character ε is not contained in ζ, it means there is no such function f that can map the empty character to any character in ζ while satisfying the conditions of Definition 1.1.5.
 
-Presence of Non-Empty Characters:  This implies that ζ must contain at least one non-empty character. If ζ were composed only of delimiters or empty characters, it would contradict Axiom S.3, which states that the empty character is not contained in any sentence of the corpus.
+Presence of Non-Empty Characters:  This implies that ζ must contain at least one non-empty character. If ζ were composed only of delimiters or empty characters, it would contradict Axiom S.4, which states that the empty character is not contained in any sentence of the corpus.
 
-Delimiter Axiom (W.1): By the Delimiter Axiom (∀ α ∈ L: ∀ i ∈ N:sub:l(α): 𝔞:sub:i ≠ σ), we know that words in a language cannot contain delimiters.
+Discovery Axiom (W.1): By the Discovery Axiom (∀ α ∈ L: ∀ i ∈ N:sub:l(α): 𝔞:sub:i ≠ σ), we know that words in a language cannot contain delimiters.
 
 Existence of at Least One Word: Since ζ contains at least one non-empty character (from step 4) and words cannot contain delimiters (from step 5), this non-empty character must be part of a word. Therefore, ζ must contain at least one word.
 
@@ -1249,7 +1414,7 @@ Assume *ζ ∈ K*. By Definition 2.2.2,
 
     inv(ζ) ∈ C:sub:`L`
 
-By Axiom S.2, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
+By Axiom S.3, every Word in the Word-level representation of inv(ζ) belongs to L. ∎
 
 As mentioned when Invertible Sentences were defined, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to **Theorem 2.3.4** and **Theorem 2.3.5**, of which the latter represents the culmination of the effort so far, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
 
@@ -1279,7 +1444,7 @@ The next two theorems encapsulate these important properties of Invertible Sente
 
 **Theorem 2.3.4**: ζ ∈ K → W:sub:`inv(ζ)` = (inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ..., inv(α:sub:`1`))
 
-Let **Z** be the Character-level representation of *ζ*. By Definition 1.2.3, the Character-level representation of *inv(ζ)* is the reversed sequence of Characters in **Z**.
+Let **Z** be the Character-level representation of *ζ*. By Definition 1.2.4, the Character-level representation of *inv(ζ)* is the reversed sequence of Characters in **Z**.
 
 The Delimiters in **Z** and **inv(Z)** appear at the same indices, just in reversed order. Since the Delimiting Algorithm (Definition 2.1.4) identifies Words based on Delimiter positions, the Strings separated by Delimiters in *inv(ζ)* will be the Inverses of the Words in *ζ*, but in reversed order.
 
@@ -1297,7 +1462,7 @@ Let ζ be an arbitrary sentence in K.
 Let Z be the Character-level representation of ζ.
 Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ, obtained by applying the Delimiting Algorithm (Definition 2.1.4) to Z.
 
-Character-Level Inversion: By Definition 1.2.3, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
+Character-Level Inversion: By Definition 1.2.4, the Character-level representation of inv(ζ), denoted as inv(Z), is the reversed sequence of Characters in Z.
 
 Delimiter Preservation: The Delimiters in Z and inv(Z) appear at the same indices, but in reversed order. This is because string inversion reverses the order of all characters, including delimiters.
 
@@ -1305,7 +1470,7 @@ Applying the Delimiting Algorithm to inv(ζ):  Let's apply the Delimiting Algori
 
 Word-Level Representation of inv(ζ): Let W:sub:inv(ζ) be the Word-level representation of inv(ζ) obtained by applying the Delimiting Algorithm to inv(Z).
 
-Invertibility Implies Semantic Coherence: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.  By Axiom S.2, every word in W:sub:inv(ζ) must belong to L.
+Invertibility Implies Semantic Coherence: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.  By Axiom S.3, every word in W:sub:inv(ζ) must belong to L.
 
 Conclusion: Combining steps 3, 4, and 5, we can conclude that W:sub:inv(ζ) consists of the inverses of the words in W:sub:ζ, in reversed order. Therefore:
 
@@ -1323,7 +1488,7 @@ Assume *ζ ∈* **K**. Consider the Word-level representation of *ζ*.
 
     1. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
 
-By Definition 1.2.3 and Theorem 2.3.4, the Word-level representation of *inv(ζ)* is 
+By Definition 1.2.4 and Theorem 2.3.4, the Word-level representation of *inv(ζ)* is 
 
     3. W:sub:`inv(ζ)` = ( inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ... , inv(α:sub:`1`) )
 
@@ -1349,7 +1514,7 @@ Word-Level Representation of inv(ζ): By Theorem 2.3.4, we know that:
 
 W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
 
-Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.2 (The Extraction Axiom), every word in W:sub:inv(ζ) must belong to L.
+Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.3 (The Extraction Axiom), every word in W:sub:inv(ζ) must belong to L.
 
 Invertibility of Words in ζ:  Therefore, for each i from 1 to Λ(ζ), inv(α:sub:i) ∈ L.
 
@@ -1512,7 +1677,7 @@ Let *t* be a string with length *l(t)* and Characters denoted by *𝔞*:sub:`i`.
 
     T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ... , (l(t), 𝔞:sub:`l(t)`) }
 
-Let *u = inv(t)* with Characters denoted by let *𝔟*:sub:`j`. By Definition 1.2.3,
+Let *u = inv(t)* with Characters denoted by let *𝔟*:sub:`j`. By Definition 1.2.4,
 
     1. l(t) = l(u)
     2. ∀ i ∈ N:sub:`l(t)`, ∀ j ∈ N:sub:`l(u)`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
@@ -1559,7 +1724,7 @@ Each character in Z is either a delimiter or part of a word in W:sub:ζ.
 
 By Definition 2.4.1, the number of Delimiter Characters in ζ is Δ(ζ).
 
-By Axiom W.1 (Delimiter Axiom), words in L do not contain Delimiters. By Definition 2.1.3, the words in W:sub:ζ are obtained by splitting ζ  at the Delimiters. Therefore, the total number of non-Delimiter characters in ζ is the sum of the lengths of the words in W*:sub:ζ, which is Σ:sub:(i, α) ∈ W_ζ l(α).
+By Axiom W.1 (Discovery Axiom), words in L do not contain Delimiters. By Definition 2.1.3, the words in W:sub:ζ are obtained by splitting ζ  at the Delimiters. Therefore, the total number of non-Delimiter characters in ζ is the sum of the lengths of the words in W*:sub:ζ, which is Σ:sub:(i, α) ∈ W_ζ l(α).
 
 Since every Character in ζ is either a Delimiter or part of a Word (and not both), the total number of Characters in ζ is the sum of the number of delimiters and the number of characters in words. By Definition 1.1.2, the total number of non-Empty characters in ζ is l(ζ). Therefore, the number of non-Empty Characters in ζ is equal to the number of Delimiters plus the sum of the lengths of the words in W*:sub:ζ.
 
@@ -1577,7 +1742,7 @@ Either each α:sub:`i` for i = 1, 2, ...,  l(ζ) is Delimiter or it is a non-Del
 
 By Definition 2.4.1, the number of Delimiter Characters in *ζ* is Δ(*ζ*). 
 
-By Axiom W.1 (Delimiter Axiom), words in **L** do not contain Delimiters. By Definition 2.1.3, the words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the lengths of the words in *W**:sub:`ζ`, which is *Σ*:sub:`(i, α) ∈ W_ζ` l(α).
+By Axiom W.1 (Discovery Axiom), words in **L** do not contain Delimiters. By Definition 2.1.3, the words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the lengths of the words in *W**:sub:`ζ`, which is *Σ*:sub:`(i, α) ∈ W_ζ` l(α).
 
 Since every Character in *ζ* is either a Delimiter or a non-Delimiter (and not both), the total number of Characters in *ζ*is the sum of the number of delimiters and the number of non-delimiters. Therefore, the number of Characters in *ζ* is equal to the number of Delimiters plus the sum of the lengths of the words in *W**:sub:`ζ`.  
 
@@ -1611,9 +1776,9 @@ Let ζ be an arbitrary Sentence in C:sub:`L`.
 
 2. To show *l(ζ) ≥ Λ(ζ)*: 
 
-Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By Definition 2.1.6, *Λ(ζ) = *| W:sub:`ζ` |, which is the number of Words in *ζ* (Word Length). By Theorem 1.2.3, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters.
+Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By Definition 2.1.6, *Λ(ζ) = *| W:sub:`ζ` |, which is the number of Words in *ζ* (Word Length). By Theorem 1.2.4, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters.
 
-Therefore, the total number of non-Empty Characters in *ζ*, *l(ζ)* (String Length), must be greater than or equal to the number of Words in *ζ*, *Λ(ζ)*. This can be more formally expressed using Theorem 2.1.1: 
+Therefore, the total number of non-Empty Characters in *ζ*, *l(ζ)* (String Length), must be greater than or equal to the number of Words in *ζ*, *Λ(ζ)*. This can be more formally expressed using Theorem 2.1.4: 
 
     ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
 
@@ -1844,7 +2009,7 @@ Let Z' = be the Character-level representation of Ζ ⋅ Σ:sub:σ.
 
     (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(Ζ ⋅ Σ:sub:σ)`)
 
-Since *α* is a contiguous subsequence of non-Delimiter (by the Delimiter Axiom W.1) and non-Empty Characters (by Theorem 1.2.3) in **Ζ**, there exists an index k such that:
+Since *α* is a contiguous subsequence of non-Delimiter (by the Discovery Axiom W.1) and non-Empty Characters (by Theorem 1.2.4) in **Ζ**, there exists an index k such that:
 
     𝔞:sub:`1` = 𝔟:sub:`k`
     𝔞:sub:`2` = 𝔟:sub:`k+1`
@@ -1873,7 +2038,7 @@ Theorem 3.1.1: ∀ ζ ∈ C:sub:L, ∃ α ∈ L: α ⊂:sub:s ( σ_reduce(ζ) )
 
 Proof:
 
-Assume ζ ∈ C:sub:L. By Axiom S.1 (Word-Sentence Duality), since ζ is a sentence in the corpus, there exists a word α ∈ L such that α is contained in ζ.
+Assume ζ ∈ C:sub:L. By Axiom S.2 (Word-Sentence Duality), since ζ is a sentence in the corpus, there exists a word α ∈ L such that α is contained in ζ.
 
 Let s = σ_reduce(ζ).
 
@@ -1901,7 +2066,7 @@ By Theorem 2.3.5, since *ζ* is invertible, all its Words are also Invertible,
  
     2. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ I.
 
-The σ-reduction of *ζ*, **Ζ ⋅ Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Delimiter Axiom W.1), the σ-reduction concatenates the Words in **W**:sub:`ζ``:
+The σ-reduction of *ζ*, **Ζ ⋅ Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the σ-reduction concatenates the Words in **W**:sub:`ζ``:
 
     3. Ζ ⋅ Σ:sub:`σ`` = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
 
@@ -1947,7 +2112,7 @@ Character-Level Representation: Let Ζ be the character-level representation of 
 Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
 σ-reduction: Let s = σ_reduce(ζ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζ.
 
-Inverse of σ-reduction: Let t = inv(s) = inv(σ_reduce(ζ)). By the definition of inversion (Definition 1.2.3), t is the reversed sequence of characters in s.
+Inverse of σ-reduction: Let t = inv(s) = inv(σ_reduce(ζ)). By the definition of inversion (Definition 1.2.4), t is the reversed sequence of characters in s.
 
 Inverse of ζ: Let u = inv(ζ). By the definition of inversion, u is the reversed sequence of characters in ζ.
 
@@ -3349,11 +3514,11 @@ For any Sentence in a Corpus, its Boundary Words, denoted *α*:sub:`start` and *
 
 Well-Defined: The definition correctly uses the word-level representation W:sub:ζ and the sentence length Λ(ζ) to identify the first and last words.
 Consistent with Previous Definitions: The definition is consistent with all previous definitions and axioms in your formal system.
-Non-Empty Sentences: This definition implicitly assumes that all sentences have at least one word (Λ(ζ) ≥ 1), which is guaranteed by your revised Axiom S.1 (or the alternative formulations we discussed).
+Non-Empty Sentences: This definition implicitly assumes that all sentences have at least one word (Λ(ζ) ≥ 1), which is guaranteed by your revised Axiom S.2 (or the alternative formulations we discussed).
 3. Further Considerations:
 
 Empty Sentence (Edge Case): If you had allowed for an empty sentence (which you don't currently), you would need to specify what the boundary words are in that case (e.g., both could be the empty word or undefined).
-Theorem: You could prove a theorem stating that for any sentence ζ, α:sub:ζ:sup:start and α:sub:ζ:sup:end are unique and always exist. This would follow directly from your Axiom S.1 and the definition of the word-level representation.
+Theorem: You could prove a theorem stating that for any sentence ζ, α:sub:ζ:sup:start and α:sub:ζ:sup:end are unique and always exist. This would follow directly from your Axiom S.2 and the definition of the word-level representation.
 Example:
 
 Let ζ = "This is a sentence".
@@ -3471,9 +3636,9 @@ Invertibility of Words:
 
 Since ζ is a palindrome, it is also a sentence in the Corpus.
 By the definition of boundary words (Definition 3.1.11), α:sub:ζ:sup:start and α:sub:ζ:sup:end are words in the word-level representation of ζ.
-By Axiom S.2 (Extraction Axiom), all words in the word-level representation of a sentence in the Corpus belong to the Language L.
+By Axiom S.3 (Extraction Axiom), all words in the word-level representation of a sentence in the Corpus belong to the Language L.
 Therefore, α:sub:ζ:sup:start and α:sub:ζ:sup:end are words in L.
-Words in a language cannot be empty by Theorem 1.2.3.
+Words in a language cannot be empty by Theorem 1.2.4.
 Implication of Step 4 and Step 5:
 
 From Step 4 and Step 5, we know σ_reduce(α:sub:ζ:sup:start) and σ_reduce(α:sub:ζ:sup:end) are non-empty strings since they are composed of words in L.
@@ -3614,18 +3779,18 @@ You're absolutely right! That's excellent reasoning. We can definitively say tha
 
 1.  ζ[ω(ζ)] = σ: The theorem's premise explicitly states that the character at the pivot index ω(ζ) is a delimiter (σ).
 
-2. Delimiter Axiom (W.1): This axiom states that words in a language (and therefore in a sentence) cannot contain delimiters.
+2. Discovery Axiom (W.1): This axiom states that words in a language (and therefore in a sentence) cannot contain delimiters.
 
-3.  Revised Axiom S.1 (Word-Sentence Duality): This axiom states that every sentence must contain at least one word.
+3.  Revised Axiom S.2 (Word-Sentence Duality): This axiom states that every sentence must contain at least one word.
 
 4.  Definition of Pivot Words: The pivot words α:sub:ζ:sup:-ω and α:sub:ζ:sup:+ω are defined as the words at positions ω(ζ) and ω(ζ) + 1, respectively, in the word-level representation W:sub:ζ.
 
 Logical Deduction:
 
 Since ζ[ω(ζ)] is a delimiter (premise), and words cannot contain delimiters (Axiom W.1), the pivot index ω(ζ) cannot fall within a word.
-Since every sentence must contain at least one word (Axiom S.1), and the pivot index does not fall within a word, it must fall between two words (or at the very beginning or end of the sentence, but those cases are ruled out by the premise that the pivot character is a delimiter).
+Since every sentence must contain at least one word (Axiom S.2), and the pivot index does not fall within a word, it must fall between two words (or at the very beginning or end of the sentence, but those cases are ruled out by the premise that the pivot character is a delimiter).
 Therefore, there must be a word immediately to the left of the pivot (α:sub:ζ:sup:-ω) and a word immediately to the right of the pivot (α:sub:ζ:sup:+ω).
-Since words in a language cannot be empty (Theorem 1.2.3), neither α:sub:ζ:sup:-ω nor α:sub:ζ:sup:+ω can be empty.
+Since words in a language cannot be empty (Theorem 1.2.4), neither α:sub:ζ:sup:-ω nor α:sub:ζ:sup:+ω can be empty.
 Conclusion:
 
 Your reasoning is entirely correct. The pivot words cannot be empty in the context of the Second Inverse Postulate. This is a crucial observation and simplifies the proof, as we don't need to handle those edge cases.
@@ -3823,7 +3988,7 @@ Case 1: ζ[ω(ζ)] = σ:
 If the character at the pivot is a delimiter, then by the Second Inverse Postulate (Theorem 3.2.2), we know that ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ).
 Case 2: ζ[ω(ζ)] ≠ σ:
 If the character at the pivot is not a delimiter, then it must belong to a word.
-By Axiom S.1, we know there's at least one word α in ζ.
+By Axiom S.2, we know there's at least one word α in ζ.
 Since ζ is a perfect palindrome, and the pivot character is not a delimiter, the pivot must lie within a word.
 Let α be the word such that (x, α) ∈ W:sub:ζ, and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
 Since ζ is a perfect palindrome, α must be a reflective word (α ∈ R), because any word that spans across the pivot in a perfect palindrome must be its own inverse.
@@ -3894,7 +4059,7 @@ Strengthened Third Inverse Postulate: This condition directly implies the left-h
 
 Perfect Palindrome: By the strengthened Third Inverse Postulate, this implies that ζ ∈ PP (ζ is a Perfect Palindrome).
 
-Non-Delimiter Pivot: Since ω:sub:ζ ⊂:sub:s α and α is a Word in the Language, by Axiom W.1 (Delimiter Axiom), α cannot contain the Delimiter Character. Therefore, ω:sub:ζ ≠ σ.
+Non-Delimiter Pivot: Since ω:sub:ζ ⊂:sub:s α and α is a Word in the Language, by Axiom W.1 (Discovery Axiom), α cannot contain the Delimiter Character. Therefore, ω:sub:ζ ≠ σ.
 
 Even Palindrome: Since ω:sub:ζ ≠ σ, by the strengthened Third Inverse Postulate, it must be the case that ω:sub:ζ = ε. By Definition 3.2.3, this means ζ ∈ P⁺ (ζ is an Even Palindrome).
 
@@ -3908,7 +4073,7 @@ Explanation:
 
 This proof demonstrates the biconditional relationship between a Sentence being both a Perfect Palindrome and an Even Palindrome, and the existence of a Reflective Word containing the Sentence's Pivot.
 
-The proof utilizes the definitions of Perfect Palindromes, Even Palindromes, and Reflective Words, along with the strengthened Third Inverse Postulate and the Delimiter Axiom, to analyze the different cases and demonstrate the implications in both directions.
+The proof utilizes the definitions of Perfect Palindromes, Even Palindromes, and Reflective Words, along with the strengthened Third Inverse Postulate and the Discovery Axiom, to analyze the different cases and demonstrate the implications in both directions.
 
 Section III.III: Palindromic Algorithms
 ---------------------------------------
