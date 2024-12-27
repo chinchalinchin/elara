@@ -695,7 +695,7 @@ In the context of (potentially) infinite sets such as **L** and **S**, "even" an
 
 The set of non-reflective Invertible Words, **I** - **R** (where "-" represents the operation of set differencing), always has even cardinality because each word can be paired with its distinct inverse. The overall cardinality of **I** then depends on whether the set of Reflective Words, **R**, adds an "odd" element or not. This idea is captured in the next theorem.
 
-**Theorem 1.3.4** If |R| is even, then |I| is even. If |R| is odd, then |I| is odd.
+**Theorem 1.3.4** If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
 
 Partition the set of Invertible Words, **I**, into two disjoint subsets,
 
@@ -704,15 +704,15 @@ Partition the set of Invertible Words, **I**, into two disjoint subsets,
 
 For every word *α* in **I** *-* **R**, its inverse, *inv(α)*, is also in **I** *-* **R**. Furthermore, they form a distinct pair *(α, inv(α))*. This is because *α* is invertible but not reflective, so *α ≠ inv(α)*.
 
-Since the elements of **I** *-* **R** can be grouped into distinct pairs, the cardinality |I - R| must be even.
+Since the elements of **I** *-* **R** can be grouped into distinct pairs, the cardinality | I - R | must be even.
 
 The total number of Invertible Words is the sum of the number of Reflective Words and the number of Invertible Words that are not Reflective,
 
-    3. |I| = |R| + |I - R|
+    3. | I | = | R | + | I - R |
 
-Let |R| be even. Since |I - R| is always even, and the sum of two even numbers is even, |I| must also be even.
+Let | R | be even. Since | I - R | is always even, and the sum of two even numbers is even, | I | must also be even.
 
-Let |R| be odd. Since |I - R| is always even, and the sum of an odd number and an even number is odd, |I| must also be odd. ∎ 
+Let | R | be odd. Since | I - R | is always even, and the sum of an odd number and an even number is odd, | I | must also be odd. ∎ 
 
 Section II: Sentences
 =====================
