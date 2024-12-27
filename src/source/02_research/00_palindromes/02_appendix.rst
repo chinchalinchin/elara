@@ -233,7 +233,7 @@ Note *t* is not necessarily a Word in the Language.
 
 TODO: there needs to be a way to establish every sentence has one word. The extraction axiom guarantees if a word is in a sentence, then it's part a language. But what about empty Sentences?
 
-**Theorem* ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+**Theorem** ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
 
 By Definition 2.1.2, every Sentence *ζ* is an element of a Corpus **C**:sub:`L`. By Definition 2.1.1, a Corpus is a subset of the set of all Strings **S**. Therefore, every Sentence is a String.
 
