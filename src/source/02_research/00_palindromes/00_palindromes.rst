@@ -453,6 +453,7 @@ Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:s
 
     1. l(t) = l(s) 
     2. ∀ i ∈ N:sub:`l(s)`, j ∈ N:sub:`l(t)`: [ ( j = l(s) - i + 1 ) → ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ] ∎
+    3. REVISION: ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1 ` = 𝔞:sub:`i` ) ∎
 
 Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
@@ -464,7 +465,7 @@ Since every Word is a String, the Inverse of Word is similarly defined, with the
 | dog  | god     |
 | pool | loop    |
 
-However, this particular example is (intentionally) misleading. In this example, the Inverse of a word in English is also a word in English. In general, this property is not exhibited by the majority of words in any Language. In other words, every Word in an Language has an Inverse, but not every Inverse Word belongs to a Language. This phenomenon is exemplified in the following table,
+However, this particular example is (intentionally) misleading. In this example, the Inverse of a word in English is also a word in English. In general, this property is not exhibited by the majority of Words in any Language. In other words, every Word in an Language has an Inverse but not every Inverse Word belongs to a Language. This phenomenon is exemplified in the following table,
 
 | Word | Inverse | 
 | ---- | ------- |
@@ -476,9 +477,9 @@ However, this particular example is (intentionally) misleading. In this example,
 
 The intent is to define a class of Words whose elements belong to it if and only if their Inverse exists in the Language. As a first step towards this definition, String Inversion was introduced and formalized. In the next section, String Inversion will provide a subdomain in the domain of discourse over which to quantify the conditions that are to be imposed on the class of *Invertible Words*, i.e. the class of Words whose Inverses are also Words. 
 
-Before defining the class of Invertible Words in the next section, this section is concluded with a theorem that strengthens the definition of String Inversion. This theorem will be used extensively in the subsequent sections.
+Before defining the class of Invertible Words in the next section, this section is concluded with theorems that strengthen the definition of String Inversion. These theorems will be used extensively in the subsequent sections.
 
-**Theorem 1.2.4** *inv(inv(s)) = s*
+**Theorem 1.2.4** ∀ s ∈ S: inv(inv(s)) = s
 
 Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`. 
 
@@ -487,13 +488,15 @@ Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`.
 By the Definition 1.2.3,
 
     1. l(t) = l(s)
-    2. ∀ i ∈ N:sub:`l(s)`, ∀ j ∈ N:sub:`l(t)`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = *𝔞*:sub:`i` ) ]
+    2. ∀ i ∈ N:sub:`l(s)`, ∀ j ∈ N:sub:`l(t)`: [ (j = l(s) - i + 1) →  ( 𝔟:sub:`j` = 𝔞:sub:`i` ) ]
+    2. REVISION: ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1` = 𝔞:sub:`i` ) 
 
 Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.3 again,
 
-    1. l(u) = l(t)
-    2. ∀ j ∈ N:sub:`l(t)`, ∀ k ∈ N:sub:`l(u)`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ] 
- 
+    3. l(u) = l(t)
+    4. ∀ j ∈ N:sub:`l(t)`, ∀ k ∈ N:sub:`l(u)`: [ (k = l(t) - j + 1) → ( 𝔠:sub:`k` = 𝔟:sub:`j` ) ]
+    4. REVISION: ∀ j ∈ N:sub:`l(t)`: ( 𝔠:sub:`l(t) - j + 1` = 𝔟:sub:`j` )
+
 Since *l(t) = l(s)* (step 1) and **N**:sub:`l(t)` *=* **N**:sub:`l(s)` (by definition of natural numbers), these substitions may be made in step 4,
 
     5. ∀ i ∈ N:sub:`l(s)`, ∀ k ∈ N:sub:`l(u)`: [ ( k = l(s) - (l(s) - i + 1) + 1 )  → ( 𝔠:sub:`k` = 𝔟:sub:`l(s) - i + 1` ) ]
