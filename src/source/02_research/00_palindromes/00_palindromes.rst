@@ -269,20 +269,14 @@ Consider the strings *"rat"* and *"strata"*. The string *"rat"* *is contained* i
 
 **Containment (Incorrect Version)** t ⊂:sub:`s` u
 
-Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and **U**,
-
-    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(t), 𝔞:sub:`l(t)`) }
-
-    U = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(u), 𝔟:sub:`l(u)`) }
-
-*t* is said to be *contained in u*, denoted by,
+Let *t* and *u* be Strings. *t* is said to be *contained in u*, denoted by,
 
     t ⊂:sub:`s` u
+
+If and only if there exists a strictly increasing function *f*: **N**:sub:`t` *→* **N**:sub:`u` such that:
+
+    ∀ i ∈ N:sub:`l(t)`: t[i] = u[f(i)] ∎
     
-If and only if there exists a strictly increasing function *f*: **N**:sub:`u` *→* **N**:sub:`t` such that:
-
-    ∀ i ∈ N:sub:`u`: 𝔞:sub:`i` = 𝔟:sub:`f(i)` ∎
-
 This definition essentially states that *t* is contained in *u* if and only if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing better understanding of the subtlety involved in attempting its definition. 
 
 First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *t = "rat"* and *u = "strata"*. Then, these Strings can be represented in set notation as,
@@ -313,23 +307,13 @@ This additional constraint on *f* ensures that the indices of the larger word in
 
 **Definition 1.1.7: Containment** t ⊂:sub:`s` u
 
-Let *t* and *u* be Strings represented as the sets of ordered pairs, **T** and **U**,
-
-    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ..., (l(t), 𝔞:sub:`l(t)`) }
-
-    U = { (1, 𝔟:sub:`1`), (2, 𝔟:sub:`2`), ..., (l(u), 𝔟:sub:`l(u)`) }
-
-*t* is said to be *contained in u*, denoted by,
+Let *t* and *u* be Strings. *t* is said to be *contained in u*, denoted by,
 
     t ⊂:sub:`s` u
 
 If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`t` *→* **N**:sub:`u` such that:
 
-    ∀ i ∈ N:sub:`t`: 𝔞:sub:`i` = 𝔟:sub:`f(i)` 
-    
-This can also be written with Character Index notation using Definition 1.1.5,
-
-    ∀ i ∈ N:sub:`t`: t[i] = u[f(i)] ∎
+    ∀ i ∈ N:sub:`l(t)`: t[i] = u[f(i)] ∎
 
 The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections.
 
@@ -460,51 +444,21 @@ Since *α* and *ⲁ* are arbitary, this can be generalized,
 
     ∀ α ∈ L : ∀ i ∈ (i, ⲁ) ∈  Α: (ⲁ ⊂:sub:`s` α) ∎
 
-The next theorems, Theorem 1.2.3 and Theorem 1.2.4, are the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.7 will show that it depends on a precise notion of String Length. In other words, in the current formal system, containment is derivative of length. The order of definitions and axioms in any formal system of Language cannot be of an arbitary character. There is an inherent hierarchical structure in linguistics that must be captured and formalized in the correct order.
+The next theorem,Theorem 1.2.4, is the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of Definition 1.1.7 will show that it depends on a precise notion of String Length. In other words, in the current formal system, containment is derivative of length. The order of definitions and axioms in any formal system of Language cannot be of an arbitary character. There is an inherent hierarchical structure in linguistics that must be captured and formalized in the correct order.
 
-**Theorem 1.2.3** ∀ α ∈ L : ∀ (i, ⲁ) ∈  Α : ¬[ (ⲁ = ε) ∧ (ⲁ ⊂:sub:`s` α) ]
-
-This theorem can be stated in natural language as follows: The Empty Character is not contained in a Word of a Language. 
-
-Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**.
-
-Let String *t = ε*. Assume, for the sake of contradiction, a Word *α* exists in Language **L** such that,
-
-    1. t ⊂:sub:`s` α 
-
-Note, by Definition 1.1.2, 
-
-    2. l(t) = 0
-
-Therefore, **N**:sub:`l(t)` *= ∅*. Now, applying Definition 1.1.7, 
-
-    3. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`
-
-Where 𝔞:sub:`i` represents the Characters in *t*, 𝔟:sub:`f(i)` represents the Characters in *α*, and *f(i)* represents the function that maps the Character indices of *t* onto the Character indices of *α*. It is a tautology of set theory that nothing can belong to the empty set,
-
-    4. ∀ x: x ∉ ∅
-
-From this, it follows that no *i* exists that satisfies this formula. Therefore, no function *f(i)* exists that maps the Empty Character to a Character in *α*. But this contradicts the assumption in step 1, since by Definition 1.1.7, in order for a String to be contained in another String, a strictly increasing and consecutive function must exist to map the Characters. 
-
-Since *t = ε* exists by Axiom C.1, it follows,
-
-    1. t = ε ∧ t ⊂:sub:`s` α
-
-must always be false, and its negation must always be true. ∎
-
-**Theorem 1.2.4**  ∀ α ∈ L : ∀ (i, ⲁ) ∈  Α: 𝔞 ≠ ε 
+**Theorem 1.2.3**  ∀ α ∈ L : ∀ (i, ⲁ) ∈  Α: ⲁ ≠ ε 
 
 This theorem can be stated in natural language as follows: If a Word belongs to a Language, then none of its Characters are empty.
 
-Assume *α ∈* **L**. Let (*i*, *ⲁ*:sub:`i`) be the *i*:sup:`th` ordered pair in its Character level representation **Α**.
+Assume *α ∈* **L**. Let (*i*, *ⲁ*) be the *i*:sup:`th` ordered pair in its Character level representation **Α**.
 
 From Theorem 1.2.2, it follows, 
 
-    1. ( ⲁ:sub:`i` ⊂ α)
+    1. ( ⲁ ⊂ α)
 
 From Theorem 1.2.3, it follows, 
 
-    2. ¬[ (ⲁ:sub:`i` = ε) ∧ (ⲁ:sub:`i` ⊂:sub:`s` α) ]
+    2. ¬[ (ⲁ = ε) ∧ (ⲁ ⊂:sub:`s` α) ]
 
 Recall for any propositions *p* and *q*, by the laws of logic,
 
@@ -512,17 +466,17 @@ Recall for any propositions *p* and *q*, by the laws of logic,
 
 Applying step 3 to step 2,
 
-    4. (ⲁ:sub:`i` ≠ ε) ∨  ¬(ⲁ:sub:`i` ⊂:sub:`s` α) 
+    1. (ⲁ ≠ ε) ∨  ¬(ⲁ ⊂:sub:`s` α) 
 
 The only way for step 1 to be consistent with step 4 is if the first conjunct of the expression obtains, 
 
-    5. ⲁ:sub:`i` ≠ ε 
+    1. ⲁ ≠ ε 
 
-But *i* was assumed to be an arbitrary Character index in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
+But *ⲁ* was assumed to be an arbitrary Character at index *i* in the set representation of *α*. Therefore, generalizing, none of the Characters in a Word can be empty. ∎
 
-Theorem 1.2.3 and 1.2.4 are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content. Then it must be assumed for semantic content to be assigned to a series of concatenated Character the length of that String must be non-zero.
+Theorem 1.2.1 - 1.2.3 are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content. Then it must be assumed for semantic content to be assigned to a series of concatenated Characters the length of that String must be non-zero. This is the meaning of the first conjunct in the Discovery Axiom W.1.
 
-Language is materially different from its un-structured domain of Strings for this reason. Language does not possess null content. Language is measureable. Words in Language have length. Moreover, Words are delimited. In other words, Words are separable, distinct linguistic entities. These facts are guaranteed by the Discovery Axiom W.1 and Theorem 1.2.1 - Theorem 1.2.4. These results provide the canvas upon which the rest of the theory will be drawn.
+Language is materially different from its un-structured domain of Strings for this reason. Language does not possess null content. Language is measureable. Words in Language have String Length. Moreover, Words are delimited. In other words, Words are separable, distinct linguistic entities. These facts are guaranteed by the Discovery Axiom W.1 and Theorem 1.2.1 - Theorem 1.2.3. These results provide the canvas upon which the rest of the theory will be drawn.
 
 Inversion
 ^^^^^^^^^
@@ -531,16 +485,26 @@ Before developing the palindromic structure and symmetries in Words and Language
 
 **Definition 1.2.4: String Inversion** 
 
-Let *s* be a string with length *l(s)*. Let *𝔞*:sub:`i` be the *i*:sup:`th` character of the String *s*. 
-
-Then, let *t* be a String with length *l(t)* and let *𝔟*:sub:`j` be the *j*:sup:`th` character of the String *t*. 
+Let *s* be a string with length *l(s)*. Then, let *t* be a String with length *l(t)*.
     
 *t* is called the Inverse of *s* and is denoted *inv(s)* if it satisfies the following conditions, 
 
     1. l(t) = l(s) 
-    2. ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1 ` = 𝔞:sub:`i` ) ∎
+    2. ∀ i ∈ N:sub:`l(s)`: t[i] = s[l(s) - i + 1]  ∎
 
-Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**, i.e. add a third bullet to Definition 1.2.4 *s ∈* **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
+Note the advantage of Character Index notation in stating this definition. The quantification in the second clause of Definition 1.2.4 can be made directly over the natural numbers, rather than the intermediary of the Character level set representation of *t* and *s*.
+
+**Example**
+
+Let *s = "abcde"* (*l(s) = 5*). Then *inv(s) = t = "edcba"*
+
+    t[1] = s[5 - 1 + 1] = s[5] = "e"
+    t[2] = s[5 - 2 + 1] = s[4] = "d"
+    t[3] = s[5 - 3 + 1] = s[3] = "c"
+    t[4] = s[5 - 4 + 1] = s[2] = "b"
+    t[5] = s[5 - 5 + 1] = s[1] = "a" ∎
+
+Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**, i.e. by adding a third bullet to Definition 1.2.4 with *s ∈* **L**. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
 | Word | Inverse | 
 | ---- | ------- |
@@ -573,32 +537,24 @@ Let *t = inv(s)* with length *l(t)* and Characters *𝔟*:sub:`j`.
 By the Definition 1.2.4,
 
     1. l(t) = l(s)
-    2. ∀ i ∈ N:sub:`l(s)`: ( 𝔟:sub:`l(s) - i + 1` = 𝔞:sub:`i` ) 
+    2. ∀ i ∈ N:sub:`l(s)`: t[i] = s[l(s) - i + 1]
 
-From this, the Character Index *l(s) - i + 1* in *t* corresponds to the Character Index *i* in *s* for all *i*. Now, let *u = inv(t)* with length *l(u)* and Characters *𝔠*:sub:`k`. Applying Definition 1.2.4 again,
+Now, let *u = inv(t)* with length *l(u)*. Applying Definition 1.2.4 again,
 
     3. l(u) = l(t)
-    4. ∀ j ∈ N:sub:`l(t)`: ( 𝔠:sub:`l(t) - j + 1` = 𝔟:sub:`j` )
+    4. ∀ j ∈ N:sub:`l(t)`: u[j] = t[l(t) - j + 1]
 
-From this, the Character Index *l(t) - j + 1* in *u* corresponds to the Character Index *j* in *t* for all *j*. Furthermore, since *l(t) = l(s)* and **N**:sub:`l(t)` *=* **N**:sub:`l(s)` (from step 1 and by definition of natural numbers), these substitions may be made in step 4,
+Since *l(t) = l(s) = l(u)* and **N**:sub:`l(t)` *=* **N**:sub:`l(s)` = **N**:sub:`l(u)`(from step 1, step 3 and by definition of natural numbers), these substitions may be made in step 4,
 
-    5. ∀ i ∈ N:sub:`l(s)`: ( 𝔠:sub:`l(s) - (l(s) - i + 1) + 1` = 𝔟:sub:`l(s) - i + 1` )
+    5. ∀ j ∈ N:sub:`l(s)`: u[j] = s[l(s) - (l(t) - j + 1) + 1]
 
-The index on *𝔠*:sub:`k` may be simplified,
+Simplifying the index on the right hand side,
 
-    6. k = l(s) - l(s) + i - 1 + 1 = i
+    6. ∀ j ∈ N:sub:`l(s)`: u[j] = s[j]
 
-Therefore,
-    
-    1. ∀ i ∈ N:sub:`l(s)`: ( 𝔠:sub:`i` = 𝔟:sub:`l(s) - i + 1` )
+Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (*u[j] = s[j]* for all *i*), by Definition 1.1.4 of String Equality, it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*. Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
-Now, substitute the definition of *𝔟*:sub:`j` from step 2 (where *j = l(s) - i + 1*) into the equation for  *𝔠*:sub:`k`,
-
-    1. ∀ i ∈ N:sub:`l(s)`: 𝔠:sub:`i` = 𝔞:sub:`i` 
-
-Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (𝔠:sub:`i` = 𝔞:sub:`i`  for all *i*), by Definition 1.1.4, it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*. Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
-
-**Theorem 1.2.5** ∀ u, t ∈ S: inv(ut) = inv(t)inv(u).
+**Theorem 1.2.5** ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
 
 Let **U** be the Character level representation of *u*,
 
@@ -631,6 +587,54 @@ The Character-level representation of *inv(t)inv(u)* is:
 Comparing the results from step 4 and step 7, it can be seen the Character-level representations of *inv(ut)* and *inv(t)inv(u)* are identical.
 
 Therefore, *inv(ut) = inv(t)inv(u)*. ∎
+
+
+Theorem 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
+
+Proof:
+
+Let u and t be arbitrary strings in S.
+
+Lengths: Let l(u) = m and l(t) = n. Then, l(ut) = m + n.
+
+Character-Level Representation:
+
+Let s = ut.
+Let v = inv(s) = inv(ut).
+Let w = inv(t)inv(u).
+Goal: We want to show that v = w, which means we need to show that l(v) = l(w) and that v[i] = w[i] for all i in N:sub:l(v).
+
+Length of v: By Definition 1.2.4 (String Inversion), l(v) = l(s) = l(ut) = m + n.
+
+Length of w: By Definition 1.2.4, l(inv(t)) = l(t) = n and l(inv(u)) = l(u) = m. Therefore, l(w) = l(inv(t)inv(u)) = l(inv(t)) + l(inv(u)) = n + m = m + n.
+
+Equality of Lengths: From steps 4 and 5, we have l(v) = l(w) = m + n.
+
+Character Equality: Now we need to show that v[i] = w[i] for all i in N:sub:l(v). Let i be an arbitrary index such that 1 ≤ i ≤ m + n.
+
+Case 1: 1 ≤ i ≤ n:
+
+v[i] = s[l(s) - i + 1] (by Definition 1.2.4)
+v[i] = s[m + n - i + 1] (since l(s) = m + n)
+v[i] = t[n - i + 1] (since m + n - i + 1 corresponds to an index in t)
+v[i] = inv(t)[i] (by Definition 1.2.4)
+v[i] = w[i] (since w = inv(t)inv(u))
+Case 2: n + 1 ≤ i ≤ m + n:
+
+v[i] = s[l(s) - i + 1] (by Definition 1.2.4)
+v[i] = s[m + n - i + 1] (since l(s) = m + n)
+v[i] = u[m - (i - n) + 1] (since m + n - i + 1 corresponds to an index in u)
+v[i] = u[m + n - i + 1]
+v[i] = inv(u)[i - n] (by Definition 1.2.4)
+v[i] = w[i] (since w = inv(t)inv(u))
+Conclusion: In both cases, we have shown that v[i] = w[i] for all i in N:sub:l(v). Since l(v) = l(w), by Definition 1.1.5 (String Equality), we can conclude that v = w.
+
+Therefore, inv(ut) = inv(t)inv(u).
+
+Since u and t were arbitrary strings, we can generalize:
+
+∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
+This completes the proof. ∎
 
 Section I.III: Word Classes 
 ---------------------------
@@ -857,27 +861,7 @@ To clarify the relationship between Strings, Characters, Alphabets, Words, Langu
 
 This introduction concludes with some analogous theorems for Sentences to the Theorems 1.2.1 - 1.2.3 for Words. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings.
 
-**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ )
-
-Let *ζ* be an arbitrary sentence in C:sub:`L`. For the sake of contradiction, assume that 
-
-    1. ε ⊂:sub:`s` ζ.
-
-Note, by Definition 1.1.2, 
-
-    2. l(ε) = 0
-
-By Definition 1.1.7, if *ε* ⊂:sub:`s` *ζ*, there must exist a strictly increasing and consecutive function *f* from the indices of *ε* to the indices of *ζ*.
-
-By step 2, the domain of *f* is empty, *∅*. Therefore *f* does not exist and no mapping can be made between the Character *ε* the indices of *ζ*. This contradicts the assumption in step 1. Thus, 
-
-    ¬ ( ε ⊂:sub:`s` ζ ).
-
-Since ζ was an arbitrary sentence in C:sub:`L`, this can be generalized,
-
-    ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ ) ∎
-
-**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`: ( (i, ⲁ:sub:`i`) ∈  Ζ ) → ( ⲁ:sub:`i` ⊂:sub:`s` ζ)
+**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L` : ∀ (i, ⲁ) ∈  Ζ : ⲁ ⊂:sub:`s` ζ
 
 Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*. Let **Z** be the character-level representation of *ζ*:
 
@@ -1227,11 +1211,7 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom W.1: The Discovery Axiom ** 
 
-    ∀ α ∈ L: ∀ (i, ⲁ) ∈ Α: ⲁ:sub:`i` ≠ σ 
-
-**Axiom S.1: The Null Axiom**
-
-    ∀ ζ ∈ C:sub:`L`: ¬ ( ε ⊂:sub:`s` ζ )
+    ∀ α ∈ L: ∀ (i, ⲁ) ∈ Α: (l(α) ≠ 0) ∧ (ⲁ ≠ σ) 
 
 **Axiom S.2: The Containment Axiom**
 
@@ -1239,9 +1219,7 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom S.3: The Extraction Axiom**
 
-    ∀ ζ ∈ C:sub:`L` : ∀ (i, α) ∈ W:sub:`ζ`:  α ∈ L
-
-
+    ∀ ζ ∈ C:sub:`L` : ∀ (i, α) ∈ W:sub:`ζ`: α ∈ L
 
 Revised Axiom S.2: The Word-Sentence Duality Axiom
 
