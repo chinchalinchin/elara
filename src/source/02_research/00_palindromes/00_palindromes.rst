@@ -896,82 +896,51 @@ To clarify the relationship between Strings, Characters, Alphabets, Words, Langu
     4. All Words belong to a Language.
     5. All Sentences belong to a Corpus.
 
+This web of categorical relations represents the hierarchy of linguistic entities within the formal system. 
+
 Notation
 ^^^^^^^^
 
-In Section I.I, notation was introduced for representing Strings as a sets of ordered pairs. This form of representation provided a formal method for specifying various syntactical conditions and properties of Words. In a similar way, this method of set representation will now be leveraged to enrich the definition of a Sentence. Since all Sentences are Strings, all Sentences have Character-level set or sequence representations. This representation can be leveraged to construct a higher-level representation of Sentences as sets of Words. 
+In Section I.I, notation was introduced for representing Strings a a sets of ordered Characters. This form of representation provided a formal method for specifying various syntactical conditions and properties of Strings and Words. In particular, this method allowed a formal definition of String Length.  
 
-**Definition 2.1.3: Word-Level Representation of Sentences**
+In a similar way, a method of set representation for Sentences will now be constructed to enrich the symbolic form of a Sentence in the formal system. Since all Sentences are Strings, all Sentences have Character-level set or sequence representations. The Discovery Axiom W.1 allows the definition of an algorithm to parse the Words of a Sentence based purely on the presence of Delimiters. 
 
-Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the character-level set representation of *ζ*, i.e. an ordered sequence of Characters from the alphabet **Σ**. For example, if 𝔞:sub:`i` represent the Characters of **Σ**, a possible value of **Z** could be,
+**Definition 2.1.3: Word-Level Set Representation of Sentences**
 
-    Z = { (1, 𝔞:sub:`2`), (2, 𝔞:sub:`10`), (3, 𝔞:sub:`3`), ... }
+Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*, i.e. an ordered sequence of Characters from the alphabet **Σ**. 
 
-Or using a sequence to implicitly represent the order,
+The Word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm* provided in Definition 2.1.4. ∎
 
-    Z =  ( 𝔞:sub:`2`, 𝔞:sub:`10`, 𝔞:sub:`3`, ... )
-
-The word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*,
-
-The essence of the *Delimiting Algorithm* lies in interplay of the Discovery Axiom W.1 and the definition of a Sentence as a semantic String. In other words, by Definition 2.1.1 and by Definition 1.2.2, all Sentences and Words must be semantic. Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
+Definition 2.1.3 is incomplete without Definition 2.1.4, which specifies the steps of the Delimiting Algorithm. The essence of the Delimiting Algorithm lies in the interplay of the Discovery Axiom W.1 and Definition 2.1.2 of a Sentence as a semantic String. In other words, by Definition 2.1.1 and by Definition 1.2.2, all Sentences and Words must be semantic. Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
 
 This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of delimitation within the Sentences of its Corpus. 
 
-
-
-
-Definition 2.1.4: Delimiting Algorithm
-
-Initialization
-
-Let Ζ be the Character-level set representation of the Sentence ζ.
-Let W:sub:ζ = ∅ (the empty set).
-Let j = 0.
-Iteration
-
-Let a be the word that starts at index j + 1 in Ζ, represented as the set,
-
-A = { (1, 𝔞:sub:j+1), (2, 𝔞:sub:j+2), ..., (n, 𝔞:sub:j+n) }
-where n is the smallest integer such that one of the following conditions obtains,
-
-𝔞:sub:j+n+1 = σ (the next character is a delimiter)
-j+n+1 > l(ζ) (the algorithm has reached the end of the sentence)
-Add (j + 1, a) to the set W:sub:ζ.
-
-Increment j by the number n.
-
-Repeat Steps 1 - 4 in order until the Characters in ζ have been processed.
-
-Definition 2.1.5: Sentence Length
-
-Let ζ be a Sentence in C:sub:L. The Word Length of ζ, denoted by Λ(ζ), is equal to the number of Words in the Word-Level Representation W:sub:ζ of ζ.
-
-
-
 **Definition 2.1.4: Delimiting Algorithm**
+
+Consider a particular Sentence in the Corpus, *ᚠ*. The Delimiting Algorithm consists of initializing the values of several local variables and then iterating over the Character level set representation of a Sentence *ᚠ* until the Characters have been exhausted. The exact details are given below.
 
 **Initialization**
 
-- Let **Ζ** be the Character-level set representation of the Sentence *ζ*. 
-- Let **W**:sub:`ζ` = ∅ (the empty set). 
-- Let *j = 0*. 
-   
-**Iteration**  
+1. Let **ᚠ** be the Character-level set representation of the Sentence *ᚠ*.
+2. Let W:sub:`ᚠ` = ∅ (the empty set).
+3. Let j = 0.
 
-1. Let *a* be the word that starts at index *j + 1* in **Ζ**, represented as the set,
+**Iteration**
 
-    **A** = { (1, 𝔞:sub:`j+1`), (2, 𝔞:sub:`j+2`), ..., (l(a), 𝔞:sub:`l(a)`) }
+1. Let *a* be the word that starts at index *j + 1* in *ᚠ*, represented as the set,
 
-where n is the smallest integer such that one of the following conditions obtains,
-    
-    - 𝔞:sub:`j + l(a) + 1` = σ (the next character is a delimiter)
-    - j + l(a) + 1 > l(ζ) (the algorithm has reached the end of the sentence)
+    A = { (1, 𝔞:sub:`j+1`), (2, 𝔞:sub:`j+2`), ..., (n, 𝔞:sub:`j+n`) }
 
-2. Add *(j + 1, a)* to the set **W**:sub:`ζ`. 
+where *n* is the smallest integer such that one of the following conditions obtains,
+
+    - 𝔞:sub:`j + n + 1` = σ (the next character is a delimiter)
+    - j + n + 1 > l(ζ) (the algorithm has reached the end of the sentence)
+
+2. Add (*j + 1*, *a*) to the set W:sub:`ᚠ`.
 
 3. Increment *j* by the number *n*.
 
-4. Repeat Steps 1 - 4 in order until the Characters in *ζ* have been processed.
+4. Repeat Steps 1 - 4 in order until the Characters in **ᚠ** have been processed.  ∎
 
 **Example** 
 
@@ -983,22 +952,26 @@ Then, applying the *Delimiting Algorithm*, its Word-level representation is cons
 
     **W**:sub:`ᚠ` = { (1, "The"), (2, "cat"), (3, "meows") }.
 
-Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate.
+Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in Definition 1.1.5 will be use this method of Sentence representation to simplify many of the upcoming proofs.
 
 Length
 ^^^^^^
 
-The notion of String Length was introduced in Section I.I as a way of measuring the number of non-Empty Characters in a String *s*, denoted *l(s)*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different dimension of "spatiality" in the domain of a Language and its Corpus: Sentence Length. Intuitively, the length of a Sentence is the number of Words it contains. However, since a Sentence has been defined as class of Strings, this means Sentences contain Delimiter Characters; specifically, the Words of a Language are separated by Delimiters in the Sentences of its Corpus. Therefore, the length of a Sentence is defined in terms of its set
+The notion of String Length *l(s)* was introduced in Section I.I as a way of measuring the number of non-Empty Characters in a String *s*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different *"spatial"* dimension in the domain of a Language and its Corpus: *Word Length*.
+
+Intuitively, the length of a Sentence is the number of Words it contains. Since there is no analogue of Discovery Axiom W.1 for Sentences (nor should there be), this means Sentences may contain Delimiter Characters. The Words of a Language are separated by Delimiters in the Sentences of its Corpus. 
+
+Definition 2.1.3 provide way of dispensing with the Delimiter Character in Sentences, while still retaining the information it provides about the demarcation of Words through the first coordinate of a Sentence's Word-level representation. With the Word-level set representation of Sentence in hand, it is a simple matter to define the notion of Word Length in the formal system.
 
 **Definition 2.1.5: Sentence Length**
 
 Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level set representation of *ζ*, as defined in Definition 2.1.3. The length of the Sentence *ζ*, denoted by *Λ(ζ)*, is defined as the cardinality of the set **W**:sub:`ζ`,
 
-    Λ(ζ) = | W:sub:`ζ` |
+    Λ(ζ) = | W:sub:`ζ` | ∎
 
 **Example**
 
-*ᚠ = "The dog runs"*. Its Character-level set representation would be given by,
+Consider the Sentence *ᚠ = "The dog runs"*. Its Character-level set representation would be given by,
 
     **ᚠ** = { (0,"T"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") }
 
@@ -1012,66 +985,99 @@ Therefore, the length of the sentence is:
 
 Note, in this example, 
 
-    l(ᚠ) = 10
-
-While 
-
-    | ᚠ | = 12
+    l(ᚠ) = 12
 
 This example demonstrates the essential difference in the notions of length that have been introduced. Indeed, the analysis has accumulated a myriad of ways of describing length. It is worthwhile to list them in a descending hierarchy and clarify the distinctions. Let *s* be a String with Character-level representation **S** and Word-level representation **W**:sub:`s`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven in Theorem 2.4.8, after the introduction of the Delimiter Count Function). Terminology is introduced in parenthesis to distinguish these notions of length,
 
-   - | S | (Character Length): The number of Characters contained in a String. 
-   - l(s) (String Length): The number of non-Empty Characters contained in a String.
-   - Λ(s) (Word Length): The number of Words contained in a String 
+   - | T | (Character Length): The number of Characters contained in a String. 
+   - l(t) (String Length): The number of non-Empty Characters contained in a String.
+   - Λ(t) (Word Length): The number of Words contained in a String 
 
-Note the first two levels are purely syntactical. Any String *s* will have a length *l(s)* and a cardinality | S |. However, not every String possesses Word length, *Λ(s)*. Word length contains semantic information. While the presence of Word length does not necessarily mean the String is semantically coherent (see Definition 2.3.1 for precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word length does signal an *extension* of Strings into the semantic domain.
+Note the first two levels are purely syntactical. Any non-Empty String *t* will have a length *l(t)* and a cardinality | T |. However, not every non-Empty String possesses Word length, *Λ(s)*. Word length contains semantic information. While the presence of Word length does not necessarily mean the String is semantically coherent (see Definition 2.3.1 for precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
 
 The following theorem proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
-**Theorem 2.1.4** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
+**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`(i, α) ∈ W_ζ` l(α) ≥ Λ(ζ)
 
-This theorem can be stated in natural language as follows: For any sentence *ζ* in a Corpus C:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
+This theorem can be stated in natural language as follows: For any sentence *ζ* in Corpus **C**:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
 
 Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of *ζ*,
 
     W:sub:`ζ` = { (1, α:sub:`1`), (2, α:sub:`2`), ..., (Λ(ζ), α:sub:`Λ(ζ)`)}
 
-For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(*α*:sub:`i`)* must be greater 0 by the Empty Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
+For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(α:sub:`i`)* must be greater 0 by the Discovery Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
 
-**Theorem** ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+With Word Length defined and some of its core properties established, this notion can be used to simplify notation. Similar to the Character Index Notation, a way of referring to Words in Sentences in propositions without excessive quantification is now introduced through Word Index notation.
 
-Revised Theorem 3.1.19: ∀ ζ, ξ ∈ C:sub:L: Λ(ζξ) = Λ(ζ) + Λ(ξ) - δ
+**Definition: Word Index Notation**
 
-Where δ = 1 if the last character of ζ is not a delimiter AND the first character of ξ is not a delimiter AND the concatenation of the last word of ζ and the first word of ξ is a word in L. Otherwise, δ = 0.
+Let *ζ* be a Sentence with Word level set representation, **W**:sub:`ζ`,
 
-Proof:
+    W:sub:`ζ` =( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
 
-Let ζ and ξ be arbitrary sentences in C:sub:L.
+Then for any *i* such that *1 ≤ j ≤ Λ(ζ)*, *ζ{j}* is defined as  α:sub:`j` where (j, α:sub:`j`) *∈* **W**:sub:`ζ`.
 
-Word-Level Representations: Let W:sub:ζ and W:sub:ξ be the word-level representations of ζ and ξ, respectively.
 
-Definition of Sentence Length: By Definition 2.1.5, Λ(ζ) = |W:sub:ζ| and Λ(ξ) = |W:sub:ξ|.
+Word Length and Word Index Notation can be used to define the notion of *Boundary Words*, which will be utilized in the main results about Palindromes. 
 
-Concatenation: Let ζξ be the concatenation of ζ and ξ.
+**Definition 2.1.6: Boundary Words**
 
-Delimiter between Sentences: When we concatenate ζ and ξ, we will take the delimiters of ζ and concatenate it with the delimiters of ξ. If the last character of ζ is not a delimiter and the first character of ξ is not a delimiter, we will subtract one from the total count of words.
+For any Sentence in a Corpus, its Boundary Words, denoted *α*:sub:`start` and *α*:sub:`end`, are the Words which satisfy the following opening formulas, 
 
-Possible Cases:
+    1. ∀ ζ ∈ C:sub:`L`: ((1, β) ∈ W:sub:`ζ`) ↔ β = α:sub:`start`
+    2. ∀ ζ ∈ C:sub:`L`: ((Λ(ζ), β) ∈ W:sub:`ζ`) ↔ β = α:sub:`end` ∎
 
-Case 1: The last character of ζ is a delimiter or the first character of ξ is a delimiter. In this case, no new word is formed during concatenation, and the words in ζξ are simply the words of ζ followed by the words of ξ. Therefore, Λ(ζξ) = Λ(ζ) + Λ(ξ).
-Case 2: The last character of ζ is not a delimiter, and the first character of ξ is not a delimiter. In this case, a new word may be formed during concatenation, but only if the last word of ζ concatenated with the first word of ξ forms a valid word in L. Let α:sub:ζ:sup:end be the last word of ζ and let α:sub:ξ:sup:start be the first word of ξ.
+Well-Defined: The definition correctly uses the word-level representation W:sub:ζ and the sentence length Λ(ζ) to identify the first and last words.
+Consistent with Previous Definitions: The definition is consistent with all previous definitions and axioms in your formal system.
+Non-Empty Sentences: This definition implicitly assumes that all sentences have at least one word (Λ(ζ) ≥ 1), which is guaranteed by your revised Axiom S.2 (or the alternative formulations we discussed).
+1. Further Considerations:
+
+Empty Sentence (Edge Case): If you had allowed for an empty sentence (which you don't currently), you would need to specify what the boundary words are in that case (e.g., both could be the empty word or undefined).
+Theorem: You could prove a theorem stating that for any sentence ζ, α:sub:ζ:sup:start and α:sub:ζ:sup:end are unique and always exist. This would follow directly from your Axiom S.2 and the definition of the word-level representation.
+Example:
+
+Let ζ = "This is a sentence".
+
+W:sub:ζ = {(1, "This"), (2, "is"), (3, "a"), (4, "sentence")}
+Λ(ζ) = 4
+α:sub:ζ:sup:start = "This"
+α:sub:ζ:sup:end = "sentence"
+
+
+To illustrate the use of the simplification effected by the definition of Boundary Words in proofs, consider Theorem 2.1.2. 
+
+**Theorem 2.1.2** ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+
+Let *ζ* and *ξ* be arbitrary Sentences in **C**:sub:`L`. Let **W**:sub:`ζ` and **W**:sub:`ξ` be the Word-level representations of *ζ* and *ξ*, respectively. By Definition 2.1.5, 
+
+    1. Λ(ζ) = | W:sub:`ζ` |
+    2. Λ(ξ) = | W:sub:`ξ` |.
+
+Let *ζξ* be the concatenation of *ζ* and *ξ*. When *ζ* is concatenated to *ξ*, there are several possible cases to consider. 
+
+   - ζ[l(ζ)] = σ, ξ[1] = σ
+   - ζ[l(ζ)] = σ, ξ[1] ≠ σ
+   - ζ[l(ζ)] ≠ σ, ξ[1] = σ
+   - ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ
+
+Case 1 - 3: In each of theses cases, the Words of *ζ* and the Words of *ξ* are still separated by at least one Delimiter. In other words, no new Word is formed during concatenation, and the words in *ζξ* are simply the words of *ζ* followed by the words of *ξ*. Therefore, Λ(ζξ) = Λ(ζ) + Λ(ξ).
+
+Case 4: The last character of ζ is not a delimiter, and the first character of ξ is not a delimiter. In this case, a new word may be formed during concatenation, but only if the last word of ζ concatenated with the first word of ξ forms a valid word in L. Let α:sub:ζ:sup:end be the last word of ζ and let α:sub:ξ:sup:start be the first word of ξ.
+
 If α:sub:ζ:sup:endα:sub:ξ:sup:start ∈ L, then Λ(ζξ) = Λ(ζ) + Λ(ξ) - 1.
+
 If α:sub:ζ:sup:endα:sub:ξ:sup:start ∉ L, then Λ(ζξ) = Λ(ζ) + Λ(ξ).
-Combining Cases with δ: We can express the result of both cases using δ, where δ = 1 if the last character of ζ is not a delimiter AND the first character of ξ is not a delimiter AND α:sub:ζ:sup:endα:sub:ξ:sup:start ∈ L, and δ = 0 otherwise.
 
-Conclusion: Therefore:
+In all cases, 
 
-Λ(ζξ) = Λ(ζ) + Λ(ξ) - δ
+    Λ(ζξ) ≤ Λ(ζ) + Λ(ξ).
+
 Since ζ and ξ were arbitrary sentences, we can generalize:
 
-*   ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) = Λ(ζ) + Λ(ξ) - δ
-This completes the proof. ∎
+    ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ) ∎
+
+Word Length is fundamentally different to String Length with respect to the operation of concatenation. In Theorem 1.1.1, it was shown String Length distributes over concatenation. Theorem 2.1.2 demonstrates this is not necessarily true for Word Length.
 
 Section II.II: Axioms 
 ----------------------
@@ -3697,32 +3703,6 @@ Section III.II: Structures
 ---------------------------
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
-
-**Definition 3.1.11: Boundary Words**
-
-For any Sentence in a Corpus, its Boundary Words, denoted *α*:sub:`start` and *α*:sub:`end`, are the Words which satisfy the following opening formulas, 
-
-    1. ∀ ζ ∈ C:sub:`L`: ((1, β) ∈ W:sub:`ζ`) ↔ β = α:sub:`start`
-    2. ∀ ζ ∈ C:sub:`L`: ((Λ(ζ), β) ∈ W:sub:`ζ`) ↔ β = α:sub:`end` 
-
-
-. Observations:
-
-Well-Defined: The definition correctly uses the word-level representation W:sub:ζ and the sentence length Λ(ζ) to identify the first and last words.
-Consistent with Previous Definitions: The definition is consistent with all previous definitions and axioms in your formal system.
-Non-Empty Sentences: This definition implicitly assumes that all sentences have at least one word (Λ(ζ) ≥ 1), which is guaranteed by your revised Axiom S.2 (or the alternative formulations we discussed).
-3. Further Considerations:
-
-Empty Sentence (Edge Case): If you had allowed for an empty sentence (which you don't currently), you would need to specify what the boundary words are in that case (e.g., both could be the empty word or undefined).
-Theorem: You could prove a theorem stating that for any sentence ζ, α:sub:ζ:sup:start and α:sub:ζ:sup:end are unique and always exist. This would follow directly from your Axiom S.2 and the definition of the word-level representation.
-Example:
-
-Let ζ = "This is a sentence".
-
-W:sub:ζ = {(1, "This"), (2, "is"), (3, "a"), (4, "sentence")}
-Λ(ζ) = 4
-α:sub:ζ:sup:start = "This"
-α:sub:ζ:sup:end = "sentence"
 
 **Definition 3.2.2: Pivot Words** 
 

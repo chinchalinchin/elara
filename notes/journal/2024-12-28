@@ -1,0 +1,58 @@
+That's an excellent question! We need to carefully consider whether ζ{j}[i] is always well-defined for non-zero j and i.
+
+Analysis:
+
+ζ{j}: By Definition 2.1.9, ζ{j} refers to the word at index j in the word-level representation of sentence ζ, where 1 ≤ j ≤ Λ(ζ). As long as j is within this valid range, ζ{j} will always be a well-defined word in the language L.
+
+α[i]:  If α is a word in L, then α[i] refers to the character at index i within that word, where 1 ≤ i ≤ l(α). This is well-defined as long as i is within the valid range.
+
+Combining ζ{j} and α[i]: When we write ζ{j}[i], we're essentially saying:
+
+Let α = ζ{j} (i.e., α is the word at index j in sentence ζ).
+Then, ζ{j}[i] is equivalent to α[i] (i.e., the character at index i within word α).
+Potential Issues:
+
+The only potential issue arises if i is not a valid index within the word α that ζ{j} refers to. In other words, if i > l(α), then α[i] (and therefore ζ{j}[i]) would be undefined.
+
+Ensuring ζ{j}[i] is Well-Defined:
+
+To ensure that ζ{j}[i] is always well-defined for non-zero j and i, we need to add the following condition:
+
+1 ≤ i ≤ l(ζ{j})
+This condition states that the character index i must be within the valid range of indices for the word ζ{j}.
+
+Revised Statement:
+
+We can incorporate this condition into a formal statement:
+
+Theorem 3.1.21:
+
+∀ ζ ∈ C:sub:L, ∀ j ∈ N:sub:Λ(ζ), ∀ i ∈ N:sub:l(ζ{j}): ζ{j}[i] is well-defined.
+
+Proof:
+
+Let ζ be an arbitrary sentence in C:sub:L. Let j be a natural number such that 1 ≤ j ≤ Λ(ζ). Let i be a natural number such that 1 ≤ i ≤ l(ζ{j}).
+
+Definition of Word Index Notation: By Definition 2.1.9, ζ{j} is the word at index j in the word-level representation of ζ.
+Axiom S.2 (Extraction Axiom): By Axiom S.2, since ζ{j} is a word in the word-level representation of a sentence in C:sub:L, ζ{j} ∈ L.
+Definition of s[i] Notation: Since ζ{j} is a word in L, and 1 ≤ i ≤ l(ζ{j}), by the definition of the character index notation, ζ{j}[i] refers to the character at index i in the word ζ{j}.
+Well-Defined: Therefore, ζ{j}[i] is a well-defined character in the alphabet Σ.
+Since ζ, j, and i were arbitrary, we can generalize:
+
+∀ ζ ∈ C:sub:L, ∀ j ∈ N:sub:Λ(ζ), ∀ i ∈ N:sub:l(ζ{j}): ζ{j}[i] is well-defined.
+
+This completes the proof. ∎
+
+Explanation:
+
+The theorem now explicitly states the conditions under which ζ{j}[i] is well-defined.
+The proof relies on the definitions of word index notation, the Extraction Axiom, and the character index notation.
+Implications:
+
+Rigor: This theorem adds rigor to our formal system by ensuring that we can always refer to ζ{j}[i] without ambiguity, as long as the indices j and i are within their valid ranges.
+Foundation for Proofs: This theorem will be useful in proofs that involve manipulating characters within words within sentences.
+Conclusion:
+
+You were absolutely right to question whether ζ{j}[i] is always well-defined. By adding the condition 1 ≤ i ≤ l(ζ{j}) and proving Theorem 3.1.21, we've ensured that this notation is always valid and unambiguous within our formal system. This is a crucial step in maintaining the rigor and consistency of our framework.
+
+What shall we work on next? Are you ready to revisit the Inverse Postulates with this new notation and clarification, or is there another area you'd like to explore or refine?
