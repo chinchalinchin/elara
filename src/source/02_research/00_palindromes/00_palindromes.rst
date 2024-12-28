@@ -56,6 +56,9 @@ Some general notation adopted throughout the course of this work is given below.
 
 3. The ∎ symbol will be used to denote the ending of all Definitions, Examples and Proofs. 
 
+4. The terms *"set"* and *"class"* are used interchangeably. 
+   
+
 Section I.I: Strings
 --------------------
 
@@ -665,7 +668,7 @@ Since u and t were arbitrary strings, we can generalize:
 Section I.III: Word Classes 
 ---------------------------
 
-It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes, especially the class of Invertible Words, will be used extensively in the next sections.
+It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes, especially the class of Invertible Words, will be used extensively in the next sections. Reflective Words, however, will play a crucial role in this work's climatic theorem. 
 
 Reflective Words 
 ^^^^^^^^^^^^^^^^
@@ -688,47 +691,39 @@ Rather than attempt to define Reflective Words as the class of Words that are th
 
 **Definition 1.3.1: Reflective Words** 
 
-Let *α* be any word from Language **L**. Let *𝔞*:sub:`i` be the *i*:sup:`th` Character in *α*. Then the set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
+The set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
 
-    α ∈ R ↔ [ ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` ] ∎
+    α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] ∎
 
 A Word *α* will be referred to as *reflective* if it belongs to the class of Reflective Words. 
 
-The following theorem is an immediate consequence of this definition and Definition .
+The following theorem is an immediate consequence of Definition 1.3.1 and Definition 1.2.4.
 
 **Theorem 1.3.1** ∀ α ∈ L: α ∈ R ↔ α = inv(α)
 
 In natural language, this theorem can be stated as: A Word in a Language is Reflective if and only if it is its own Inverse.
 
-(→)  Assume *α ∈ R*. Let *𝔞*:sub:`i` be the Characters in *α*. By Definition 1.3.1, 
+(→)  Assume *α ∈ R*. By Definition 1.3.1, 
 
-    1. ∀ i ∈ N:sub:`l(α)`:  𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` 
+    1. ∀ i ∈ N:sub:`l(α)`:  α[i] = α[l(α) - i + 1] 
 
-Let *β = inv(α)*. Let 𝔟:sub:`j` be the Characters in *β*. By the Definition 1.2.4,
+Let *β = inv(α)*. By the Definition 1.2.4,
 
     2. l(β) = l(α)
-    3. ∀ i ∈ N:sub:`l(α)`: ( 𝔟:sub:`l(α) - i + 1 ` = 𝔞:sub:`i` )
+    3. ∀ i ∈ N:sub:`l(α)`: ( β[i] = α[l(α) - i + 1] )
 
-Now, use the property of Reflective Words from step 1 (𝔞:sub:`i` = 𝔞:sub:`l(α) - i + 1` ) and substitute it into the equation from step 3:
+Substituting the property of Reflective Words from step 1 into step 3,
 
-    1.  4. ∀ i ∈ N:sub:`l(α)`: 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i + 1`
+    4.  4. ∀ i ∈ N:sub:`l(α)`: β[i] = α[i]
 
-Note that the index on the left side of this equation (l(α) - i + 1) corresponds to the character at position *i* in the reversed string β.  This is because the index *j* in the definition of String Inversion maps to the *l(α) - i + 1*:sup:`th`` position in the original string.
+Since *β[i] = α[i]* for all *i ∈* **N**:sub:`l(α)`, and both strings have the same length, by Definition 1.1.4, it can be concluded that *α = β*. Therefore the desired result is obtained, *α = β = inv(α)*.
 
-Since 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`l(α) - i +1`for all i ∈ N:sub:`α`, and both strings have the same length, we can conclude that each character in *α* is equal to the corresponding character in *β*. Therefore the desired result is obtained: *α = β = inv(α)*
-
-(←) Assume *α = inv(α)*. Let *𝔞*:sub:`i` be the Characters in *α* and let *𝔟*:sub:`j` be the Characters in *inv(α)*. By definition of String Inversion,
+(←) Assume *α = inv(α)*.  By Definition 1.2.4 of String Inversion,
 
     1. l(α) = l(inv(α))
-    2. ∀ i ∈ N:sub:`l(α)`: ( 𝔟:sub:`l(α) - i + 1` = 𝔞:sub:`i` )
+    2. ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1]
 
-Since *α = inv(α)*, 𝔞:sub:`j` can be substituted for 𝔟:sub:`j` in the step 2,
-
-    3. ∀ i ∈ N:sub:`l(α)`: ( 𝔞:sub:`l(α) - i + 1 ` = 𝔞:sub:`i` ) 
-
-Similar to the previous part of the proof, the index on the left side (*l(α) - i + 1*) corresponds to the Character at position *i* in the reversed string, which is *α* itself in this case. But this is exactly Definition 1.3.1. Therefore, 
-
-    4. α ∈ R ∎ 
+But step 2 is exactly the definition of Reflective Words, so by Definition 1.3.1, *α ∈* **R** ∎ 
 
 Invertible Words 
 ^^^^^^^^^^^^^^^^
