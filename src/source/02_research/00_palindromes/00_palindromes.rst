@@ -426,9 +426,7 @@ The next axiom represents the minimal *necessary* assumptions that are placed on
 
 **Axiom W.1: The Discovery Axiom** 
 
-    ∀ α ∈ L: ∀ (i, ⲁ) ∈ Α: (l(α) ≠ 0) ∧ (ⲁ ≠ σ) ∎
-
-    POSSIBLE REVISION: ∀ α ∈ L: ∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ ∎
+    ∀ α ∈ L: (l(α) ≠ 0) ∧ (∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ) ∎
 
 There are two conjuncts in the Discovery Axiom and each of them captures a noteworthy assumption that is being made about Words in a Language. The first conjunct, (*l(α) ≠ 0*), will be used to prove some fundamental properties of Words in the next section. This condition that a Word's String Length cannot be equal to zero serves a dual purpose. First, by Definition 1.1.2, it ensures the Empty Character cannot be a Character in a Word (this fact will be more rigorously proven in Theorem 1.2.4 below), preventing vacuous semantic content. 
 
@@ -1005,10 +1003,9 @@ Assume ζ ∈ C:sub:`L`. Let W:sub:`ζ` be the Word-level set representation of 
 
     W:sub:`ζ` = { (1, α:sub:`1`), (2, α:sub:`2`), ..., (Λ(ζ), α:sub:`Λ(ζ)`)}
 
-For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(α:sub:`i`)* must be greater 0 by the Discovery Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
+For each ordered Word (*i*, *α*:sub:`i`) ∈ W:sub:`ζ`, its String Length *l(α*:sub:`i`*)* must be greater 0 by the Discovery Axiom W.2 and Definition 1.1.2. Therefore, since each Word contributes at least a String Length of 1, the sum of the lengths of the words in the sentence is greater than or equal to the number of words in the sentence. ∎
 
-
-With Word Length defined and some of its core properties established, this notion can be used to simplify notation. Similar to the Character Index Notation, a way of referring to Words in Sentences in propositions without excessive quantification is now introduced through Word Index notation.
+With Word Length defined and some of its core properties established, this notion can be used to simplify notation. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.
 
 **Definition: Word Index Notation**
 
@@ -1016,36 +1013,36 @@ Let *ζ* be a Sentence with Word level set representation, **W**:sub:`ζ`,
 
     W:sub:`ζ` =( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
 
-Then for any *i* such that *1 ≤ j ≤ Λ(ζ)*, *ζ{j}* is defined as  α:sub:`j` where (j, α:sub:`j`) *∈* **W**:sub:`ζ`.
+Then for any *i* such that *1 ≤ j ≤ Λ(ζ)*, 
 
+    ∀ (j, α:sub:`j`) ∈ W:sub:`ζ`: ζ{j} = α:sub:`j` . ∎
 
 Word Length and Word Index Notation can be used to define the notion of *Boundary Words*, which will be utilized in the main results about Palindromes. 
 
 **Definition 2.1.6: Boundary Words**
 
-For any Sentence in a Corpus, its Boundary Words, denoted *α*:sub:`start` and *α*:sub:`end`, are the Words which satisfy the following opening formulas, 
+For any Sentence in a Corpus, its Boundary Words, denoted *α*:sup:`ζ`:sub:`1` and *α*:sup:`ζ`:sub:`Λ`, are the Words which satisfy the following opening formulas, 
 
-    1. ∀ ζ ∈ C:sub:`L`: ((1, β) ∈ W:sub:`ζ`) ↔ β = α:sub:`start`
-    2. ∀ ζ ∈ C:sub:`L`: ((Λ(ζ), β) ∈ W:sub:`ζ`) ↔ β = α:sub:`end` ∎
+    1. ∀ ζ ∈ C:sub:`L`: ((1, β) ∈ W:sub:`ζ`) ↔ β = α:sup:`ζ`:sub:`1`
+    2. ∀ ζ ∈ C:sub:`L`: ((Λ(ζ), β) ∈ W:sub:`ζ`) ↔ β = α:sup:`ζ`:sub:`Λ`
 
-Well-Defined: The definition correctly uses the word-level representation W:sub:ζ and the sentence length Λ(ζ) to identify the first and last words.
-Consistent with Previous Definitions: The definition is consistent with all previous definitions and axioms in your formal system.
-Non-Empty Sentences: This definition implicitly assumes that all sentences have at least one word (Λ(ζ) ≥ 1), which is guaranteed by your revised Axiom S.2 (or the alternative formulations we discussed).
-1. Further Considerations:
+*α*:sup:`ζ`:sub:`1` and *α*:sup:`ζ`:sub:`Λ` are referred to as the *Starting Word* and the *Ending Word*, respectively ∎
 
-Empty Sentence (Edge Case): If you had allowed for an empty sentence (which you don't currently), you would need to specify what the boundary words are in that case (e.g., both could be the empty word or undefined).
-Theorem: You could prove a theorem stating that for any sentence ζ, α:sub:ζ:sup:start and α:sub:ζ:sup:end are unique and always exist. This would follow directly from your Axiom S.2 and the definition of the word-level representation.
-Example:
+Definition 2.1.6 establishes the concept of Boundary Words within the formal system, but without additional assumptions, the existence of Boundary Words cannot be proven. The Duality Axiom introduced in the next section will provide a means for asserting every Sentence has a *α*:sup:`ζ`:sub:`1` and *α*:sup:`ζ`:sub:`Λ` (although these Words may be the same Word).
 
-Let ζ = "This is a sentence".
+**Example**
 
-W:sub:ζ = {(1, "This"), (2, "is"), (3, "a"), (4, "sentence")}
-Λ(ζ) = 4
-α:sub:ζ:sup:start = "This"
-α:sub:ζ:sup:end = "sentence"
+Let ᚠ = "This is a sentence". Then, 
 
+    W:sub:`ᚠ` = {(1, "This"), (2, "is"), (3, "a"), (4, "sentence")}
 
-To illustrate the use of the simplification effected by the definition of Boundary Words in proofs, consider Theorem 2.1.2. 
+    Λ(ᚠ) = 4
+
+    α:sub:`ᚠ`:sub:`1` = "This"
+
+    α:sub:`ᚠ`:sub:`Λ` = "sentence" ∎
+
+To illustrate the simplification effected by the definition of Boundary Words in proofs, consider Theorem 2.1.2. 
 
 **Theorem 2.1.2** ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
 
@@ -1061,19 +1058,24 @@ Let *ζξ* be the concatenation of *ζ* and *ξ*. When *ζ* is concatenated to *
    - ζ[l(ζ)] ≠ σ, ξ[1] = σ
    - ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ
 
-Case 1 - 3: In each of theses cases, the Words of *ζ* and the Words of *ξ* are still separated by at least one Delimiter. In other words, no new Word is formed during concatenation, and the words in *ζξ* are simply the words of *ζ* followed by the words of *ξ*. Therefore, Λ(ζξ) = Λ(ζ) + Λ(ξ).
+Case 1 - 3: In each of theses cases, the Words of *ζ* and the Words of *ξ* are still separated by at least one Delimiter. In other words, no new Word is formed during concatenation, and the words in *ζξ* are simply the words of *ζ* followed by the words of *ξ*. Therefore, 
 
-Case 4: The last character of ζ is not a delimiter, and the first character of ξ is not a delimiter. In this case, a new word may be formed during concatenation, but only if the last word of ζ concatenated with the first word of ξ forms a valid word in L. Let α:sub:ζ:sup:end be the last word of ζ and let α:sub:ξ:sup:start be the first word of ξ.
+    3. Λ(ζξ) = Λ(ζ) + Λ(ξ).
 
-If α:sub:ζ:sup:endα:sub:ξ:sup:start ∈ L, then Λ(ζξ) = Λ(ζ) + Λ(ξ) - 1.
+Case 4: The last Character of *ζ* is not a Delimiter, and the first Character of *ξ* is not a Delimiter. In this case, a new Word may be formed during concatenation, but only if *α*:sup:`ζ`:sub:`Λ` concatenated with *α*:sup:`ξ`:sub:`1` belongs to L (i.e., if it is a compound Word). Let *t* be the String such,
 
-If α:sub:ζ:sup:endα:sub:ξ:sup:start ∉ L, then Λ(ζξ) = Λ(ζ) + Λ(ξ).
+    4. t = (α:sup:`ζ`:sub:`Λ`)(α:sup:`ξ`:sub:`1`)
+
+This result can be expressed,
+
+    5. t ∈ L → Λ(ζξ) = Λ(ζ) + Λ(ξ) - 1.
+    6. t ∉ L → Λ(ζξ) = Λ(ζ) + Λ(ξ).
 
 In all cases, 
 
     Λ(ζξ) ≤ Λ(ζ) + Λ(ξ).
 
-Since ζ and ξ were arbitrary sentences, we can generalize:
+Since *ζ* and *ξ* were arbitrary sentences, this can be generalized,
 
     ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ) ∎
 
@@ -1082,7 +1084,7 @@ Word Length is fundamentally different to String Length with respect to the oper
 Section II.II: Axioms 
 ----------------------
 
-In Section I, the first three axioms of the palindromic formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the formal system being built. The Character, Delimiter and Empty Axiom are reprinted below, so they may be considered in sequence with the other axioms.
+In Section I, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.
 
 **Axiom C.0: The Equality Axiom**
 
@@ -1096,30 +1098,18 @@ In Section I, the first three axioms of the palindromic formal system were intro
 
 **Axiom W.1: The Discovery Axiom ** 
 
-    ∀ α ∈ L: ∀ (i, ⲁ) ∈ Α: (l(α) ≠ 0) ∧ (ⲁ ≠ σ) 
+    ∀ α ∈ L: [ (l(α) ≠ 0) ∧ (∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ) ]
 
-**Axiom S.2: The Containment Axiom**
+**Axiom S.1: The Duality Axiom**
 
-    ∀ α ∈ L : ∃ ζ ∈ C:sub:`L`: α ⊂:sub:`s` ζ
+    ( ∀ α ∈ L: ∃ ζ ∈ C:sub:`L``: α ⊂:sub:`s` ζ ) ∧ ( ∀ ζ ∈ C:sub:`L`: ∃ α ∈ L: α ⊂:sub:`s` ζ )
 
-**Axiom S.3: The Extraction Axiom**
+**Axiom S.2: The Extraction Axiom**
 
-    ∀ ζ ∈ C:sub:`L` : ∀ (i, α) ∈ W:sub:`ζ`: α ∈ L
+    ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L
 
-
-
-
-Revised Axiom S.2: The Word-Sentence Duality Axiom
-
-∀ α ∈ L: ∃ ζ ∈ C:sub:L: α ⊂:sub:s ζ ∧ ∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ
 In words: "For every word α in the language L, there exists a sentence ζ in the corpus C:sub:L such that α is contained in ζ, AND for every sentence ζ in the corpus C:sub:L, there exists a word α in the language L such that α is contained in ζ."
-Explanation:
 
-Part 1 (∀ α ∈ L: ∃ ζ ∈ C:sub:L: α ⊂:sub:s ζ): This is the original Containment Axiom (S.1). It states that every word in the language must appear in at least one sentence in the corpus.
-
-
-
-Part 2 (∀ ζ ∈ C:sub:L: ∃ α ∈ L: α ⊂:sub:s ζ): This is the new part, incorporating the idea from the proposed revision of Axiom S.4. It states that every sentence in the corpus must contain at least one word from the language.
 Benefits of the Revised Axiom:
 
 Combines Two Concepts: It elegantly combines the two related concepts into a single, more powerful axiom.
@@ -1133,13 +1123,45 @@ Revised Theorem Proofs:
 
 
 
-This introduction concludes with an analogous theorem for Sentences to the Theorems 1.2.1 - 1.2.2 for Words. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings. However, in order to demonstrate the Sentence analogue of Theorem 1.2.3, an axiom must be that relates Words to Sentences must be introduced.
 
-**Theorem 2.1.2** ∀ ζ ∈ C:sub:`L` : ∀ (i, ⲁ) ∈  Ζ : ⲁ ⊂:sub:`s` ζ
 
-REVISION: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 
-Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*. Consider the string *s* consisting of the single character *ζ[i]*. Clearly, 
+
+
+Note the Discovery Axiom has been revised to quantify over a Language, rather than quantifying over **S** while making the quantified expression conditional on the String belonging to a Language. 
+
+It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures. 
+
+To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
+
+The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories. Axiom S.2 asserts that for every Word in a Language there is at least one Sentence in a Corpus that contains it. In other words, a Word cannot exist in a Language without being included in a Sentence. This Axiom captures an inextricable link between the metamathematical concepts of Sentence and Word: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation.
+
+Axiom S.3 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
+
+**Definition 2.2.1: Sentence-Level Semantic Coherence** 
+
+A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if its Word-level set representation **ᚠ** only contains words from Language **L**.
+
+**Definition 2.2.2: Corpus-Level Semantic Coherence**
+
+A Corpus C:sub:`L` is *semantically coherent* in a Language **L** if and only if the Word-level set representation of all its Sentences are semantically coherent.
+
+**Definition 2.2.3: Sentence Language**
+
+A Sentence Language is defined as the set of unique Words which are contained in a Sentence *ζ*. **L**:sub:`ζ` denotes a Sentence Language.  
+
+   α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: (i, α) ∈ W:sub:`ζ`
+
+
+The first theorems proved using these new axioms are analogous versions Theorems 1.2.1 - 1.2.2 for Sentences. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings. 
+
+**Theorem 2.2.1** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
+
+Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*. 
+
+By the second conjunct of the Duality Axiom S.2
+
+Consider the string *s* consisting of the single character *ζ[i]*. Clearly, 
 
     l(s) = 1
 
@@ -1237,37 +1259,6 @@ Since ζ and i were arbitrary, we can generalize:
 This completes the proof. ∎
 
 
-
-
-
-
-
-
-Note the Discovery Axiom has been revised to quantify over a Language, rather than quantifying over **S** while making the quantified expression conditional on the String belonging to a Language. 
-
-It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures. 
-
-To briefly summarize the axioms so far introduced: The system "*initializes*" with the selection of the Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
-
-The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories. Axiom S.2 asserts that for every Word in a Language there is at least one Sentence in a Corpus that contains it. In other words, a Word cannot exist in a Language without being included in a Sentence. This Axiom captures an inextricable link between the metamathematical concepts of Sentence and Word: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation.
-
-Axiom S.3 states that a Corpus of a Language only consists of those Sentences whose constituent Words are members of the Language. Special terminology to describe the concept captured in this axiom is given in the following definition. This term will be used to describe both Sentences and Corpuses.
-
-**Definition 2.3.1: Sentence-Level Semantic Coherence** 
-
-A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if its Word-level set representation **ᚠ** only contains words from Language **L**.
-
-**Definition 2.3.2: Corpus-Level Semantic Coherence**
-
-A Corpus C:sub:`L` is *semantically coherent* in a Language **L** if and only if the Word-level set representation of all its Sentences are semantically coherent.
-
-**Definition 2.3.3: Sentence Language**
-
-A Sentence Language is defined as the set of unique Words which are contained in a Sentence *ζ*. **L**:sub:`ζ` denotes a Sentence Language.  
-
-   α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: (i, α) ∈ W:sub:`ζ`
-
-These axioms and definitions are used to prove the following theorems.
 
 **Theorem 2.3.1** ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 
