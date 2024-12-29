@@ -1523,9 +1523,18 @@ However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as it ap
 
 Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(n). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(n), if it satisfies the following open formula
 
-    t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
+    t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`) ∎
 
-TODO 
+**Theorem 2.3.1** A(n) ⊆ C:sub:`L`
+
+Let *t* be an arbitrary String such that *t* *∈* **A**(n). By Definition 2.3.1, this implies, *t* *∈* **C**:sub:`L`. Therefore,
+
+    1. t ∈ A(n) → t ∈ C:sub:`L`
+
+This is exactly the set theoretic definition of a subset. Thus,
+
+    2. A(n) ⊆ C:sub:`L` ∎
+
 
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^

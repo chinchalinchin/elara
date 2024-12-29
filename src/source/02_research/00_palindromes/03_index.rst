@@ -4,7 +4,11 @@ Glossary
 Notation 
 --------
 
+- Punctuation: ∎
+- Logical Operations: ∀, ∃, ↔, →, ∧, ∨
+- Arithmetical Relations: ≠, =, ≥, ≤, +, -
 - Sets: ∅, ℕ, N:sub:`i`
+- Set Relations: ∈, ∉, ⊆
 - Strings: s, t, u
 - Domain: S
 - Alphabet: Σ
@@ -52,7 +56,7 @@ Definitions
 - D 2.1.4: Word Length: Λ(ζ)
 - D 2.1.5: Word Index Notation: ζ{i}
 - D 2.2.1: Semantic Coherence
-- D 2.3.1: Admissible Sentences: 
+- D 2.3.1: Admissible Sentences: A(n) ⊆ C:sub:`L`
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 
 Algorithms
