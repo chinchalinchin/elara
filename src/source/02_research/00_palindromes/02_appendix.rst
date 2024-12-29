@@ -233,18 +233,26 @@ Note *t* is not necessarily a Word in the Language.
 
 TODO: there needs to be a way to establish every sentence has one word. The extraction axiom guarantees if a word is in a sentence, then it's part a language. But what about empty Sentences?
 
-**Theorem** ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
 
-By Definition 2.1.2, every Sentence *ζ* is an element of a Corpus **C**:sub:`L`. By Definition 2.1.1, a Corpus is a subset of the set of all Strings **S**. Therefore, every Sentence is a String.
 
-By Definition 1.1.2, the length of a String *l(s)* is the number of non-Empty Characters in the String. 
 
-Since a Sentence is a meaningful construct in a Language, it must contain at least one non-Empty Character. Therefore, for any Sentence ζ, l(ζ) ≥ 1.
 
-Word Length: By Definition 2.1.6, the Word Length of a Sentence (Λ(ζ)) is defined as the cardinality of its Word-level set representation (W:sub:ζ).
 
-Relationship between Lengths: We have previously proven (using Theorem 2.1.1) that for any Sentence ζ,  |Z| ≥ l(ζ) ≥ Λ(ζ), where |Z| is the Character Length of ζ.
+The last definition 
 
-Combining Inequalities: Since l(ζ) ≥ 1 (from step 2) and l(ζ) ≥ Λ(ζ) (from step 4), it follows that Λ(ζ) ≥ 1.
+**Definition 2.2.3: Sentence Language**
 
-Therefore, every Sentence in a Corpus must have a Word Length of at least 1, meaning it contains at least one Word. ∎
+A Sentence Language is defined as the set of unique Words which are contained in a Sentence *ζ*. **L**:sub:`ζ` denotes a Sentence Language.  
+
+   α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: α[i] ∈ W:sub:`ζ` ∎
+
+
+**Theorem 2.3.1** ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
+
+This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Sentence Language is a subset of the Language **L**.
+
+Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.3, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ` is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
+
+    ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L 
+
+In other words, every Sentence Language from a Corpus is a subset of the Language **L**. ∎
