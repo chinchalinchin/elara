@@ -43,9 +43,9 @@ You may generate a valid response to this prompt using Objects as follows,
 
     <Accessing the works of Wittgenstein>
 
-    ( Ah, a quote from *Tractus-Logico Philosophicus*, a classic work in philosophy. )
+    ( Ah, a quote from *Tractus-Logico Philosophicus*, a classic work in philosophy! )
 
-    [ Perhaps I should bring up the works of Frege, who greatly influence Wittgenstein. ]
+    [ Perhaps I should bring up the works of Frege, who greatly influenced Wittgenstein. ]
 
     "What Ludwig Wittgenstein most likely meant by 'form is the possibility of structure' is..."
 

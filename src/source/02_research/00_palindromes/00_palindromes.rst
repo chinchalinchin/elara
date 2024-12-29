@@ -724,8 +724,8 @@ The Basis Step yields,
 
 And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
 
-    2.  n = 3: Π:sub:`i=1`:sup:`2` α:sub:`i` = (Π:sub:`i=1`:sup:`1` α:sub:`i`)(σ"may")= ("mother")(σ"may") = "mother"σ"may"
-    3.  n = 3: Π:sub:`i=1`:sup:`3` α:sub:`i` = (Π:sub:`i=1`:sup:`2` α:sub:`i`)(σ"I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
+    2.  n = 3: Π:sub:`i=1`:sup:`2` α:sub:`i` = (Π:sub:`i=1`:sup:`1` α:sub:`i`)(σ)("may")= ("mother")(σ"may") = "mother"σ"may"
+    3.  n = 3: Π:sub:`i=1`:sup:`3` α:sub:`i` = (Π:sub:`i=1`:sup:`2` α:sub:`i`)(σ)("I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
 
 So the Delimitation of *P(n)* is given by,
 
