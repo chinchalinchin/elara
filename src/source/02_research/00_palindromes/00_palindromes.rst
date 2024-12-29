@@ -801,7 +801,7 @@ where each *α*:sub:`i` *∈* **L**. If *i* is *1 ≤ i ≤ n*, P:sub:`n`(i) den
 
 When *n = 0*, **P**:sub:`0` is defined as the empty sequence (). ∎
 
-In order to establish some properties of Phrases and Limitations, a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is defined next.
+In order to establish some properties of Phrases and Limitations, a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is now defined.
 
 **Definition 1.2.6: Lexicon**
 
@@ -811,7 +811,7 @@ Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, 
 
 Some of the later theorems in this work will require quantifying over Phrases in a Language's *n*:sub:`th` Lexicon, so notation is introduced for Phrase Variables,
 
-    1. Phrase Variables (*p*, *q*, *r*): The lowercase English letters *p*, *q*, *r* are reserved for representing indeterminate Phrases of Language's *n*:sup:`th` Lexicon.
+    1. Phrase Variables (*p*, *q*, *r*): The lowercase English letters *p*, *q*, *r* are reserved for representing indeterminate Phrases of a Language's *n*:sup:`th` Lexicon.
    
 Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for *1 ≤ i ≤ n*.
 
@@ -1500,16 +1500,16 @@ Generalizing this over the Corpus,
 Section II.III: Sentence Classes 
 ------------------------------
 
-As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in Language is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will be analogous to a *"recursion of inversions"*.
+As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in linguistics is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will seen to be a *"recursion of inversions"*.
 
-Theorem 2.3.4 of this section marks the first notable result obtained from the current formal system. This theorem will show the Character-level symmetries required by Palindromes propagate up through the Word-level of linguistics and manifest in conditions that must be imposed Word-level structure of a Sentence.
+Theorem 2.3.4 of this subsection marks the first notable result obtained from the current formal system. Its empirical truth in natural language represents confirmation of the formal system's construction. This theorem will show the Character-level symmetries required by Palindromes propagate up through the Word-level of linguistics and manifest in conditions that must be imposed the Word-level structure of an Invertible Sentence.
 
 Admissible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
 The notion of an *Admissible Sentence* is required to prevent a certain class of Sentence inversions from invalidating the symmetry conditions of Palindromes derived in Section III. 
 
-To see what is meant by this, consider the English sentence,
+To see what is meant by this concept of *admissibility*, consider the English sentence,
 
     ᚠ = "strap on a ton".
 
@@ -1517,13 +1517,13 @@ The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition
 
     inv(ᚠ) = "not a no parts"
 
-However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus. *Semantic coherence* is a  necessary condition, but not sufficient condition for the Inverse of a sentence to remain in the Corpus. A
+However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as it apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Limitation introduced in Definition 1.2.8 must be leveraged. 
 
 **Definition 2.3.1: Admissible Sentences**
 
 Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(n). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(n), if it satisfies the following open formula
 
-    (∀ p ∈ **X**:sub:`L`(n): (t ∈ A(n)) ∧ (t = Π:sub:`i=1`:sup:`n` p(i))) ↔ t ∈ C:sub:`L` ∎
+    t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 
 TODO 
 
