@@ -1,7 +1,108 @@
 ======================
 Palindromic Structures
 ======================
-    
+
+Glossary
+========
+
+Notation 
+--------
+
+- Sets: ∅, ℕ, N:sub:`i`
+- Strings: s, t, u
+- Domain: S
+- Alphabet: Σ
+- Characters: 𝔞, 𝔟, 𝔠, ... , σ, ε
+- Character Variables: ⲁ, ⲃ, ⲅ
+- Language: L
+- Words: a, b, c
+- Word Variables: α, β, γ
+- Character Index Notation: t[i]
+- Word Classes: R, I
+- Phrases of Word Length n: P:sub:`n`
+- Lexicons: X:sub:`L`(n)
+- Phrases Variables: p, q, r
+- Sentences: ᚠ, ᚢ, ᚦ
+- Sentence Variables: ζ, ξ
+- Word Index Notation: ζ{i}
+- Partial Sentence: ζ[:i], ζ[i:]
+- Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
+- Relations: ⊂:sub:`s`, =
+- Functions: l(t), Λ(t), Δ(t)
+- Operations: inv(s), σ_reduce(t), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+
+Definitions 
+-----------
+
+- D 1.1.1: Concatenation: ut
+- D 1.1.2: Character-Level Set Representation: **T**
+- D 1.1.3: String Length: l(t)
+- D 1.1.4: String Equality: u = t
+- D 1.1.5: Character Index Notation: t[i]
+- D 1.1.6: Consecutive Functions: f(i)
+- D 1.1.7: Containment: u ⊂:sub:`s`
+- D 1.2.1: Language: L
+- D 1.2.2: Word: α
+- D 1.2.3: Word Equality: α = β
+- D 1.2.4: String Inversion: inv(s)
+- D 1.2.5: Phrase: P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) = (P:sub:`n`(1), )
+- D 1.2.6: Lexicon: Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } 
+- D 1.2.8: Limitation: Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- D 1.3.1: Reflective Words: α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] 
+- D 1.3.2: Invertible Words: α ∈ I ↔ inv(α) ∈ L
+- D 2.1.1: Corpus: C:sub:`L`
+- D 2.1.2: Sentence: ᚠ
+- D 2.1.3: Word-Level Set Representation: W:sub:`ᚠ`
+- D 2.1.4: Word Length: Λ(ζ)
+- D 2.1.5: Word Index Notation: ζ{i}
+- D 2.2.1: Semantic Coherence
+- D 2.3.1: Admissible Sentences: 
+- D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
+
+Algorithms
+----------
+
+- A.1: Emptying Algorithm
+- A.2: Delimiting Algorithm 
+
+Axioms 
+------
+
+- C.1: ∀ ⲁ ∈ Σ: ⲁ ∈ S
+- W.1: ∀ α ∈ L: [ (l(α) ≠ 0) ∧ (∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ) ]
+- S.1: ( ∀ α ∈ L: ∃ ζ ∈ C:sub:`L``: α ⊂:sub:`s` ζ ) ∧ ( ∀ ζ ∈ C:sub:`L`: ∃ α ∈ L: α ⊂:sub:`s` ζ )
+- S.2: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L
+
+Theorems
+--------
+
+- T 1.1.1: ∀ u, t ∈ S: l(ut) = l(u) + l(t)
+- T 1.1.2: | S | ≥ ℵ:sub:`1`
+- T 1.1.3: ∀ s ∈ S: ε ⊂:sub:`s` s
+- T 1.2.1: ∀ α ∈ L:  αε = εα = α
+- T 1.2.2: ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: α[i] ⊂:sub:`s` α
+- T 1.2.3: ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: α[i] ≠ ε
+- T 1.2.4: ∀ s ∈ S: inv(inv(s)) = s
+- T 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
+- T 1.2.6: ∀ n ∈ ℕ, ∀ P:sub:`n` ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- T 1.3.1: ∀ α ∈ L: α ∈ R ↔ α = inv(α)
+- T 1.3.2: ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
+- T 1.3.3: R ⊆ I
+- T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
+- T 2.1.1: ∀ ζ ∈ C:sub:`L`:  ∑:sub:`j=1`:sup:`Λ(ζ)` l(ζ{j}) ≥ Λ(ζ)
+- T 2.1.2: ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+- T 2.2.1: ∀ ζ ∈ C:sub:`L`: l(ζ) ≠ 0
+- T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
+- T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
+- T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+- T 2.3.1: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
+- T 2.3.2: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
+- T 2.3.3: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
+- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+
+Introduction
+============
+
 The goal of this paper is to introduce formal constraints the palindromes in *any* language and corpus must satisfy independently of the semantic interpretation of their constituent words and sentences. These formal constraints will in turn lead to the identification of the main structural elements of palindromes. After a language is assumed and a class of words identified, these structural elements can be used as a basis for further semantical and statistical analysis of the assumed language. 
 
 At the outset, it must be stated the complexity of pursuing a complete theory of palindrome currently exceeds the mental capacities of the author. Palindromes are a rich and diverse linguistic species, appearing in many different shapes and sizes. Some of these guises are more amenable to analysis than others. 
@@ -35,13 +136,6 @@ The aim of this analysis is to develop a theory of palindromes *independent* of 
 This restriction to *aspect* and *parity* may appear restrictive; Indeed, it may be argued by introducing this restriction to the formal theory that is about to developed, it has no application to actual language. To this argument, it should be countered the structures uncovered in this restricted subset of language must nevertheless preserve their structure when embedded into the whole of language.
 
 A note on the terminology introduced in this work is in order. When a semantic term is capitalized, e.g. Word or Sentence, this will mean it is referred to in its capacity as a formal entity. While the formal system was designed to model the actual syntax of Characters, Words and Sentences, this should not be taken to mean the formal entities that emerge from this system are necessarily representative of actual linguistic entities. While the formal entities in this system may not map *one-to-one* with their empirical counterparts, it will be seen these formal characteristics nevertheless provide insight into the nature of their empirical counterparts.
-
-The main results of this work are given in the following list,
-
-- Theorem 2.3.5: This theorem states if a Sentence is invertible, then its Words are invertible.  
-- Theorem 3.3.1: This theorem states either the inverse of the ending word of a Palindrome must be contained in its starting word, or the starting word of a Palindrome must be contained in its ending word.
-- Theorem 3.3.2: This theorem states if a Palindrome has a Delimiter Pivot, then the Word on one side of the Pivot must contain the inverse of the Word on the other side of the pivot
-- Theorem 3.3.3: This theorem states if a Palindrome is perfect, then either its Pivot occurs in a Reflective Word, or its Pivot is flanked by Invertible Words where one Word must contain the inverse other Word.
 
 Section I: Defintions 
 =====================
@@ -693,26 +787,49 @@ Delimitation
 
 While the analyis has not yet introduced the notion of Sentences into the formal system (see Section II), an operation will now be introduced that allows Words to be ordered into Phrases and then concatenated into Strings. This new operation will be important when String Inversion is applied to the sentential level of the formal system, allowing the conditions for a Sentence Inversion to be precisely specified.
 
+The placement of Definition 1.2.5 and Definition 1.2.6 is somewhat arbitary. There are valid arguments to be made for placing these definitions after the concepts of Sentence and Word Index notation have been introduced in Section II. However, since the operation of *Limitation* to be expounded immediately is essentially an operation defined on the domain of Strings which yields as a result another String, i.e. Limitation is closed with respect to Strings, the definitions are made here, to highlight the derivative notions (Inversion and Limitation) which can be built on top of the primitive notion of concatenation.
+
 **Definition 1.2.5: Phrase**
 
-Let *n* be a fixed, non-zero natural number, *i ≥ 1*. A Phrase of Word Length *n* of Language **L**, denoted P(n), is defined as an ordered sequence of *n* words:
+Let *n* be a fixed, non-zero natural number, *i ≥ 1*. A Phrase of Word Length *n* from Language **L**, denoted **P**:sub:`n`, is defined as an ordered sequence of *n* (not necessarily distinct) Words,
 
-    P:sub:`L`(n) = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
-where each *α*:sub:`i` *∈* **L**. ∎
+where each *α*:sub:`i` *∈* **L**. If *i* is *1 ≤ i ≤ n*, P:sub:`n`(i) denotes the Word α:sub:`i` at index *i*, so that **P**:sub:`n` may be rewritten, 
 
-The operation of *Delimitation* is defined over Phrases of fixed length *n* in the next definition.
+    P:sub:`n` = (P:sub:`n`(1), P:sub:`n`(2), ... , P:sub:`n`(n))
 
-**Definition 1.2.6: Delimitation
+When *n = 0*, **P**:sub:`0` is defined as the empty sequence (). ∎
 
-Let *P(n)* be a Phrase of Word Length *n*, 
+In order to establish some properties of Phrases and Limitations, a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is defined next.
 
-    P(n) = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) 
+**Definition 1.2.6: Lexicon**
 
-The delimitation of P(n), denoted *Π*:sub:`i=1`:sup:`n` *α*:sub:`i`, is defined recursively as:
+Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, denoted **X**:sub:`L`*(n)*, as the set of all Phrases of length N formed from Words in **L**,
 
-    1. Basis Clause (n = 1): Π:sub:`i=1`:sup:`1` α:sub:`i` = α:sub:`1`
-    2. Recursive Clause (n > 1): Π:sub:`i=1`:sup:`n` α:sub:`i` = (Π:sub:`i=1`:sup:`n-1` α:sub:`i`)(σ)(α:sub:`n`) ∎
+    Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } ∎
+
+Some of the later theorems in this work will require quantifying over Phrases in a Language's *n*:sub:`th` Lexicon, so notation is introduced for Phrase Variables,
+
+    1. Phrase Variables (*p*, *q*, *r*): The lowercase English letters *p*, *q*, *r* are reserved for representing indeterminate Phrases of Language's *n*:sup:`th` Lexicon.
+   
+Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for *1 ≤ i ≤ n*.
+
+Using these pair of definitions for Phrases and Lexicons and associated terminology, the operation of *Limitation* is defined over Phrases of fixed length *n* in Definition 1.2.7.
+
+**Definition 1.2.8: Limitation**
+
+Let **P**:sub:`n` be a Phrase of Word Length *n* from Language **L**,
+
+    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+
+The *Delimitation* of **P**:sub:`n`, denoted *Π*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
+
+    1. Empty Clause: Π:sub:`i=1`:sup:`0` P:sub:`n`(i) = ε
+    2. Basis Clause (n = 1): Π:sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
+    3. Recursive Clause (n > 1): Π:sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π:sub:`i=1`:sup:`n-1` P:sub:`n`(i))(σ)(α:sub:`n`) ∎
+
+Before proving the basic properties of Delimitation, an example of how a Delimitation is constructed recursively is given below.
 
 **Example**
 
@@ -722,14 +839,93 @@ The Basis Step yields,
 
     1. n = 1: Π:sub:`i=1`:sup:`1` α:sub:`i` = "mother" 
 
-And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
+And then the Limitation can be built up recursively using the Recursive Step repeatedly,
 
     2.  n = 3: Π:sub:`i=1`:sup:`2` α:sub:`i` = (Π:sub:`i=1`:sup:`1` α:sub:`i`)(σ)("may")= ("mother")(σ"may") = "mother"σ"may"
     3.  n = 3: Π:sub:`i=1`:sup:`3` α:sub:`i` = (Π:sub:`i=1`:sup:`2` α:sub:`i`)(σ)("I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
 
-So the Delimitation of *P(n)* is given by,
+So the Limitation of *P(n)* is given by,
 
     Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" ∎
+
+From the previous example, it should be clear what the meaning of the Limitation operation is within the formal system. Limitation is a method of constructing a Sentence-like (see Section II.I for the formal difference between a Delimitation and Sentence) String from a sequence of words. 
+
+Note the previous example may be misleading in one important respect. A Limitation is not necessarily "grammatical" or "meaningful". It may be a String of semantic Words without an accompanying interpretation on the Sentence level of the linguistic hierarchy. 
+
+However, as the next theorem shows, the result of a Limitation is unique.
+
+**Theorem 1.2.6** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
+
+This theorem can be stated in natural language as follows: For every natural number n, and for every Phrase **P**:sub:`n` in the *n*:sup:`th` Lexicon of **L**, there exists a unique string *s* in **S** such that *s* is the delimitation of **P**:sub:`n`.
+
+Let *n* be an arbitrary natural number, and let **P**:sub:`n` be a Phrase of Word Length *n* in Language **L** from the Language's *n*:sup:`th` Lexicon, **X**:sub:`L`*(n)*,
+
+    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+
+The theorem will be proved using induction.
+
+**Base Case (n = 1)**
+
+By Definition 1.2.8,
+    
+    1. Π:sub:`i=1`:sup:`1` P:sub:`n(i)` = α:sub:`1`
+
+Since *α*:sub:`1` is a word in **L** (by Definition 1.2.6 of Lexicon), it is also a String in S (by Definition 1.2.2). Thus, there exists a String *s = α*:sub:`1` such that 
+
+    s = Π:sub:`i=1``:sup:`1` P:sub:`n(i)`.
+
+Since the base case of Limitation is defined as simple equality, the string s must be unique.
+
+**Inductive Hypothesis**
+
+Assume that for some *k ≥ 1*, there exists a unique string *s*:sub:`k` such that 
+
+    s:sub:`k` = Π:sub:`i=1`:sup:`k` P:sub:`n(i)`
+
+To complete the induction, it must be shown that there exists a unique string *s*:sub:`k+1` such that,
+ 
+    s:sub:`k+1` = Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)`
+
+By Definition 1.2.8, 
+
+    Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (Π:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
+
+By inductive hypothesis,
+    
+    Π:sub:`i=1`:sup:`k` P:sub:`n(i)` = s:sub:`k`
+    
+Thus, *s*:sub:`k` is unique. Since *α*:sub:`k+1` is a Word in **L** (by the definition of **Χ**:sub:`L`*(n+1)*), it is also a unique String in S.
+
+The concatenation of *s*:sub:`k`, *σ*, and *α*:sub:`k+1` is a unique string (by the Definition 1.1.1 of Concatenation and Definition 1.1.4 of String Equality).
+
+Therefore, *s*:sub:`k+1` = (*s*:sub:`k`)(σ)(*α*:sub:`k+1`) is a unique string.
+
+By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in **Χ**:sub:`L(n)`, there exists a unique string *s* in **S** such that *s = Π*:sub:`i=1`:sup:`n` P:sub:`n(i)`. ∎
+
+**Theorem 1.2.7** 
+
+∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i)))
+
+
+Theorem D.1.2 (Associativity of Delimitation):
+
+∀ p ∈ Χ:sub:L(n), ∀ q ∈ Χ:sub:L(m), ∀ r ∈ Χ:sub:L(k):
+( ( Π:sub:i=1:sup:n p(i) ) ( Π:sub:i=1:sup:m q(i) ) ) ( Π:sub:i=1:sup:k r(i) ) = ( Π:sub:i=1:sup:n p(i) ) ( ( Π:sub:i=1:sup:m q(i) ) ( Π:sub:i=1:sup:k r(i) ) )
+
+Proof:
+
+Let p ∈ Χ:sub:L(n), q ∈ Χ:sub:L(m), and r ∈ Χ:sub:L(k) be arbitrary phrases.
+
+Delimitations are Strings: By Definition 2.2.4, the delimitation of a phrase is a string.
+
+Associativity of String Concatenation: String concatenation is associative, meaning for any strings s, t, and u, we have (st)u = s(tu).
+
+Applying Associativity: Since Π:sub:i=1:sup:n p(i), Π:sub:i=1:sup:m q(i), and Π:sub:i=1:sup:k r(i) are all strings (by step 1), we can apply the associativity of string concatenation:
+
+((Π:sub:i=1:sup:n p(i))(Π:sub:i=1:sup:m q(i)))(Π:sub:i=1:sup:k r(i)) = (Π:sub:i=1:sup:n p(i))((Π:sub:i=1:sup:m q(i))(Π:sub:i=1:sup:k r(i)))
+Conclusion: Since p, q, and r were arbitrary phrases, we can generalize:
+
+∀ p ∈ Χ:sub:L(n), ∀ q ∈ Χ:sub:L(m), ∀ r ∈ Χ:sub:L(k): ((Π:sub:i=1:sup:n p(i))(Π:sub:i=1:sup:m q(i)))(Π:sub:i=1:sup:k r(i)) = (Π:sub:i=1:sup:n p(i))((Π:sub:i=1:sup:m q(i))(Π:sub:i=1:sup:k r(i)))
 
 Section I.III: Word Classes 
 ---------------------------
@@ -1092,7 +1288,7 @@ Let *t* be a String with Character-level representation **T** and Word-level rep
    - l(t) (String Length): The number of non-Empty Characters contained in a String.
    - Λ(t) (Word Length): The number of Words contained in a String 
 
-Note the first level is purely syntactical. Any non-Empty String *t* will have a String Length *l(t)*. However, not every non-Empty String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.3.1 for precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
+Note the first level is purely syntactical. Any non-Empty String *t* will have a String Length *l(t)*. However, not every non-Empty String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.3.2 for precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
 
 With Word Length defined, this notion can be used to simplify notation. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.
 
@@ -1301,17 +1497,46 @@ Generalizing this over the Corpus,
 
     7. ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1 ∎
 
-Setion II.III: Sentence Classes 
+Section II.III: Sentence Classes 
 ------------------------------
 
-Similarly to the classification of Words, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of *Invertible Sentences* is essential. The definition, as is fitting in a work focused on palindromes, will mirror Definition 1.3.2 of an *Invertible Word*.
+As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in Language is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will be analogous to a *"recursion of inversions"*.
+
+Theorem 2.3.4 of this section marks the first notable result obtained from the current formal system. This theorem will show the Character-level symmetries required by Palindromes propagate up through the Word-level of linguistics and manifest in conditions that must be imposed Word-level structure of a Sentence.
+
+Admissible Sentences
+^^^^^^^^^^^^^^^^^^^^
+
+The notion of an *Admissible Sentence* is required to prevent a certain class of Sentence inversions from invalidating the symmetry conditions of Palindromes derived in Section III. 
+
+To see what is meant by this, consider the English sentence,
+
+    ᚠ = "strap on a ton".
+
+The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition 2.2.1). By this it is meant every word in its inversion is part of the English language,
+
+    inv(ᚠ) = "not a no parts"
+
+However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus. *Semantic coherence* is a  necessary condition, but not sufficient condition for the Inverse of a sentence to remain in the Corpus. A
+
+**Definition 2.3.1: Admissible Sentences**
+
+Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(n). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(n), if it satisfies the following open formula
+
+    (∀ p ∈ **X**:sub:`L`(n): (t ∈ A(n)) ∧ (t = Π:sub:`i=1`:sup:`n` p(i))) ↔ t ∈ C:sub:`L` ∎
+
+TODO 
 
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
+Similarly to the classification of Words, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of *Invertible Sentences* is essential. The definition, as is fitting in a work focused on palindromes, will mirror Definition 1.3.2 of an *Invertible Word*.
+
 The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of Definition 1.3.2 and Theorem 1.3.2 almost exactly.
 
-**Definition 2.3.1: Invertible Sentences** Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
+**Definition 2.3.2: Invertible Sentences** 
+
+Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
 
     ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 
@@ -1325,7 +1550,7 @@ Let *ζ* be any Sentence from Corpus **C**:sub:`L`.
 
 (→) Assume ζ ∈ K
 
-By Definition 2.3.1, the inverse of *ζ* belongs to the Corpus
+By Definition 2.3.2, the inverse of *ζ* belongs to the Corpus
 
     1. inv(ζ) ∈ C:sub:`L`
 
@@ -1349,13 +1574,13 @@ From step 1 and step 5, it follows,
 
     6. inv(inv(ζ)) ∈ C:sub:`L`
 
-By Definition 2.3.1, this implies,
+By Definition 2.3.2, this implies,
 
     7. inv(ζ) ∈ K.
 
 (←) Assume inv(ζ) ∈ K
 
-By Definition 2.3.1, 
+By Definition 2.3.2, 
     
     8. inv(inv(ζ)) ∈ C:sub:`L`
 
@@ -1367,7 +1592,7 @@ From step 8 and step 9, it follows,
 
     10. ζ ∈ C:sub:`L`
 
-By Definition 2.3.1, it follows,
+By Definition 2.3.2, it follows,
 
     11. ζ ∈ K. 
 
@@ -1415,7 +1640,7 @@ Due to the definition of Sentences as semantic constructs and the definition of 
 
 **Theorem 2.3.3** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
 
-Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume *ζ* *∈* **K** . By Definition 2.3.1,
+Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume *ζ* *∈* **K** . By Definition 2.3.2,
 
     1. inv(ζ) ∈ C:sub:`L`
 
