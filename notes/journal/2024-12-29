@@ -430,3 +430,82 @@ Further Considerations:
 
 Empty Phrases: We might need to consider how delimitation handles empty phrases (phrases with length 0).
 Other Properties: There might be other interesting properties of delimitation that we can uncover by exploring its interaction with inversion, containment, and other operations in our system.
+
+
+
+
+
+
+
+This theorem can be stated in natural language as follows: If a Sentence is Invertible, then all of its Words are Invertible.
+
+Assume *ζ ∈* **K**. Consider the Word-level representation of *ζ*.
+
+    1. W:sub:`ζ` = ( α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
+
+By Definition 1.2.4 and Theorem 2.3.4, the Word-level representation of *inv(ζ)* is 
+
+    3. W:sub:`inv(ζ)` = ( inv(α:sub:`Λ(ζ)`), inv(α:sub:`Λ(ζ)-1`), ... , inv(α:sub:`1`) )
+
+By Theorem 2.2.3, every Word in *inv(ζ)* belongs to **L**.  Therefore, each inv(α:sub:`i`) belongs to **L**,
+
+By the Definition 1.3.2, each α:sub:`i` ∈ I. Therefore, all words in ζ are invertible. Formally,
+
+    4. (∀ α ∈ L:sub:`ζ`: α ∈ I) ∎
+
+
+
+
+Theorem 2.3.5: ζ ∈ K → (∀ α ∈ W:sub:ζ: α ∈ I)
+
+Revised Proof:
+
+Let ζ be an arbitrary sentence in K.
+Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ.
+
+Invertibility of ζ: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.
+
+Word-Level Representation of inv(ζ): By Theorem 2.3.4, we know that:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+
+Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.3 (The Extraction Axiom), every word in W:sub:inv(ζ) must belong to L.
+
+Invertibility of Words in ζ:  Therefore, for each i from 1 to Λ(ζ), inv(α:sub:i) ∈ L.
+
+Definition of Invertible Words: By Definition 1.3.2, a word α is invertible (α ∈ I) if and only if inv(α) ∈ L.
+
+Conclusion: Since inv(α:sub:i) ∈ L for each word α:sub:i in W:sub:ζ, it follows that each α:sub:i ∈ I. Thus, we can generalize this to all words in W:sub:ζ:
+
+(∀ α ∈ W:sub:ζ: α ∈ I)
+
+This completes the proof. ∎
+
+
+
+
+Theorem 2.3.5 (ζ ∈ K → (∀ α ∈ W:sub:ζ: α ∈ I)):
+
+Let ζ be an arbitrary sentence in K.
+Let W:sub:ζ = ( α:sub:1, α:sub:2, ... , α:sub:Λ(ζ)) be the Word-level representation of ζ.
+Invertibility of ζ: Since ζ ∈ K, by Definition 2.2.2, inv(ζ) ∈ C:sub:L.
+
+Word-Level Representation of inv(ζ): By Theorem 2.3.4, we know that:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+
+Semantic Coherence of inv(ζ): Since inv(ζ) ∈ C:sub:L, by Axiom S.2, every word in W:sub:inv(ζ) must belong to L since for every Sentence in the Corpus, at least one Word in the Sentence belongs to the Language.
+
+Invertibility of Words in ζ:  Therefore, for each i from 1 to Λ(ζ), inv(α:sub:i) ∈ L.
+
+Definition of Invertible Words: By Definition 1.3.2, a word α is invertible (α ∈ I) if and only if inv(α) ∈ L.
+
+Conclusion: Since inv(α:sub:i) ∈ L for each word α:sub:i in W:sub:ζ, it follows that each α:sub:i ∈ I. Thus, we can generalize this to all words in W:sub:ζ:
+
+(∀ α ∈ W:sub:ζ: α ∈ I)
+
+Next Steps:
+
+Replace Axiom S.2 and S.3: We should formally replace the old Axiom S.2 and Axiom S.4 with the revised Axiom S.2 (Word-Sentence Duality Axiom).
+Update Proofs: We need to update the proofs of Theorems 2.3.1, Theorem 2.3.3, Theorem 2.3.4 and Theorem 2.3.5 to reference the new Axiom S.2 where appropriate.
+Review Other Theorems: While we've focused on the theorems that directly use S.1, it's worth reviewing all other theorems to ensure there are no hidden dependencies or unintended consequences.
