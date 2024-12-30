@@ -137,6 +137,8 @@ This restriction to *aspect* and *parity* may appear restrictive; Indeed, it may
 
 A note on the terminology introduced in this work is in order. When a semantic term is capitalized, e.g. Word or Sentence, this will mean it is referred to in its capacity as a formal entity. While the formal system was designed to model the actual syntax of Characters, Words and Sentences, this should not be taken to mean the formal entities that emerge from this system are necessarily representative of actual linguistic entities. While the formal entities in this system may not map *one-to-one* with their empirical counterparts, it will be seen these formal characteristics nevertheless provide insight into the nature of their empirical counterparts.
 
+As the thrust of the main results in Section III is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I is in part an effort to assure the applicability of the results in Section II.III and Section III. The core theorems of Section III could be proved in a degenerate form in a system with less notational complexity, but the depth of their insight would be lost in the vagueness of definitions.
+
 Section I: Defintions 
 =====================
 
@@ -1535,6 +1537,96 @@ This is exactly the set theoretic definition of a subset. Thus,
 
     2. A(n) ⊆ C:sub:`L` ∎
 
+Theorem 2.3.1 is the formal justification for quantifying with Sentence Variables (i.e. all Admissable Sentences are in the Corpus) over the set of Admissible Sentences, as in the following theorem.
+
+**Theorem 2.3.2** ∀ ζ ∈ A(n): Λ(ζ) = n
+
+Let *ζ* be an arbitrary sentence in **A**(n). Definition 2.3.1, if *ζ* *∈* **A**(n), then there exists a Phrase *p* *∈* **Χ**:sub:`L(n)` such that 
+
+    1. ζ ∈ C:sub:`L` ∧ ζ = Π:sub:`i=1`:sup:`n` p(i)
+
+By Definition 1.2.5 and 1.2.6, a phrase *p* in **Χ**:sub:`L(n)` is an ordered sequence of *n* words such that *α*:sub:`i` *∈* **L**,
+
+    p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+
+By Definition 1.2.8, the Limitation of *p* is given by,
+
+    Π:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
+
+In other words, the Limitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* words separated by Delimiters.
+
+By Definition 2.1.4, the word length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Limitation process doesn't add or remove Words, the Word length of *ζ* must be *n*. Therefore, 
+
+    Λ(ζ) = n.
+
+Since *ζ* was an arbitrary sentence in **A**(n), this can generalize as,
+
+    ∀ ζ ∈ A(n): Λ(ζ) = n ∎
+
+**Theorem 2.3.3** ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
+
+Let ζ be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
+
+    1. W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`) 
+    
+Where each *α*:sub:`i` *∈* **L**. By Definition 1.2.5, the sequence (*α*:sub:`1`, *α*:sub:`2`, ... , *α*:sub:`Λ(ζ)`) forms a phrase **P**:sub:`Λ(ζ)` of length *Λ(ζ)* where P:sub:`Λ(ζ)`(i) = *α*:sub:`i` for all *i*, *1 ≤ i ≤ Λ(ζ)*.
+
+By Definition 1.2,6, since **P**:sub:`Λ(ζ)` is a phrase of length *Λ(ζ)* and all its Words belong to L (by semantic coherence), then,
+
+    2. P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))`.
+
+By Definition 1.2.8, the Limitation of P:sub:`Λ(ζ)` is:
+
+    3. Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+
+The Limitation *Π*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(*i*) reconstructs the original sentence *ζ*, including the Delimiters between Words. Therefore,
+
+    4. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+
+By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (*t* *∈* **A**(*n*)) if and only if there exists a phrase *p* *∈* **Χ**:sub:`L(n)` such that,
+
+    5. t = Π:sub:`i=1`:sup:`n` p(i)
+    6. t ∈ C:sub:`L`
+
+By Definition 2.3.1, since the conjunction of the three facts is true,
+
+    7. ζ ∈ C:sub:L
+    8. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+    9. P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))` 
+    
+It follows from step 7 - step 9, *ζ* *∈* **A**(*Λ(ζ)*). Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
+
+    ∀ ζ ∈ C:sub:L: ζ ∈ A(Λ(ζ)) ∎
+
+**Theorem** ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i)
+
+Let *ζ* be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
+
+    W:sub:`ζ`` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`Λ(ζ)`) 
+    
+Where each *α*:sub:`i` *∈* **L**.
+
+By Definition 1.2.5, the sequence (*α*:sub:`1`, *α*:sub:`2`, ... , *α*:sub:`Λ(ζ)`) forms a Phrase **P**:sub:`Λ(ζ)` of Word Length *Λ(ζ)* where **P**:sub:`Λ(ζ)`(i) = *α*:sub:`i`` for all *i*, *1 ≤ i ≤ Λ(ζ)*.
+
+By Definition 1.2.6, since **P**:sub:`Λ(ζ)` is a Phrase of Word Length *Λ(ζ)* and all its words belong to **L**, then,
+
+    P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))`
+
+By Definition 1.2.8, the Limitation of **P**:sub:`Λ(ζ)` is,
+
+    Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+
+The Limitation *Π*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(i) reconstructs the original Sentence ζ, including the Delimiters between Words. Therefore:
+
+    ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+
+It has been shown that for an arbitrary sentence *ζ* *∈* **C**:sub:`L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in **Χ**:sub:`L`(Λ(ζ)) such that,
+ 
+    ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i). 
+    
+Therefore,
+
+    ∀ ζ ∈ C:sub:`L`: ∃ p ∈ Χ:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i) ∎
 
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
@@ -1665,6 +1757,44 @@ Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
     4. ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L ∎
 
+The next theorem shows how the inversion "distributes" over the Words of a Delimited Sentence.
+
+**Theorem 2.3.4** ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let *n = Λ(ζ)*. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the delimitation of *ζ* as follows:
+
+    1. s = Π:sub:`i=1`:sup:`n` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{n})
+
+By Theorem 1.2.5, for any two Strings *u* and *t*, *inv(ut) = inv(t)inv(u)*. Apply this property repeatedly to construct *inv(s)*,
+
+    2. inv(s) = inv((ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{n}))
+
+Which reduces to,
+
+    3. inv(s) = (inv(ζ{n}))(inv(σ))(inv(ζ{n-1}))(inv(σ)) ... (inv(ζ{2}))(inv(σ))(inv(ζ{1}))
+
+Since σ is a single character, inv(σ) = σ,
+
+    4. inv(s) = (inv(ζ{n}))(σ)(inv(ζ{n-1}))(σ) ... (σ)(inv(ζ{2}))(σ)(inv(ζ{1}))
+
+Note that the right-hand side now has the form of a Limitation, but with the order of Words reversed and each Word inverted.
+
+Re-index the terms on the right-hand side to match the form of the Limitation definition, Definition 1.2.8. Let *j = n - i + 1*. Then, as *i* goes from 1 to *n*, *j* goes from *n* to 1,
+
+    5. inv(s) = (inv(ζ{j:sub:`n`}))(σ)(inv(ζ{j:sub:`n-1`}))(σ) ... (σ)(inv(ζ{j:sub:`2`}))(σ)(inv(ζ{j:sub:`1`}))
+
+Where j:sub:`i` is obtained by simply substituting *n-i+1* for j. Using the Definition of Delimitation, the right-hand side becomes,
+
+    inv(s) = Π:sub:`j=1`:sup:`n` inv(ζ{n - j + 1})
+
+Recall that *s = Π*:sub:`i=1`:sup:`n` *ζ{i}*. Substitute this back into the equation and re-index the right-hand side for consistency to get,
+
+    inv(Π:sub:`i=1`:sup:`n` ζ{i}) = Π:sub:`i=1`:sup:`n` inv(ζ{n - i + 1})
+
+Since *ζ* was an arbitrary sentence, this can be generalized,
+
+    ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1}) ∎
+
 As mentioned when Invertible Sentences were defined, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to **Theorem 2.3.4** and **Theorem 2.3.5**, of which the latter represents the culmination of the effort so far, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
 
 Consider the Sentences from the English language, *ᚠ = "this is a test"*, *ᚢ = "live on"*,* and *ᚦ = "step on no pets"*. Their Character-level representations would be,
@@ -1693,9 +1823,9 @@ Note, in order for the Sentence to invert, i.e. the case *ᚢ* and *ᚦ*, the or
 
 These next two theorems encapsulate these important properties of Invertible Sentences. When Palindromes are formally defined in the next section, these theorems will be used extensively to prove the main results of this work. 
 
-**Theorem 2.3.4** ∀ ζ ∈ C:sub:`L`: ζ ∈ K  ↔ ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+**Theorem 2.3.5** ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
-(→) Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that *1 ≤ i ≤ Λ(ζ)*. By Definition 2.2.2, 
+Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that *1 ≤ i ≤ Λ(ζ)*. By Definition 2.2.2, 
 
     1. inv(ζ) ∈ C:sub:`L`.
 
@@ -1721,53 +1851,103 @@ By Definition 2.1.9,
 
 Generalization: Since ζ and i were arbitrary, this can be generalized,
 
-    7. ∀ ζ ∈ C:sub:L: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+    7. ∀ ζ ∈ C:sub:L: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1}) ∎
 
-(←) Assume that for an arbitrary sentence *ζ* *∈* **C**:sub:`L`, the following holds,
+A brief interjection is necessary to discuss the significance of Theorem 2.3.4. The result shown in Theorem 2.3.4 is a direct result of the *"propagation of inversion"* mentioned in the introduction to this subsection.
 
-    1. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+As Theorem 1.3.1 showed, Definition 1.3.1 of Reflective Words is equivalent to a definition that simply requires *α* satisfy the String equality relation, 
 
-Using Definition 2.1.5, this can be rewritten,
+    α = inv(α)
 
-    2. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{i})
-   
-It must be shown that *ζ* *∈* **K**. By Theorem 2.3.1, this is equivalent to showing,
+Another way of stating this is through logical equivalence, as Theorem 1.3.2 shows,
 
-    3. inv(ζ) ∈ C:sub:`L`.
+    α ∈ L ↔ inv(α) ∈ L
+    
+In turn, Definition 1.2.4 of String Inversion states in order for this to be the case, it must also be the case,
 
-Let 
+    α[i] = α[l(α) - i + 1] 
 
-    4. W:sub:`ζ` = (ζ{1}, ζ{2}, ..., ζ{Λ(ζ)})
+In other words, a Word is its own inverse if and only if its Characters are inverted orders. 
 
-By the Extraction Axiom S.2,
+In a similar fashion, as Theorems 2.3.3 and 2.3.4 demonstrate by way of syllogism, a Sentence in a Corpus is invertible if its Inverse belongs to the Corpus.
 
-    5. ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L
+    ζ ∈ C:sub:`L` ↔ inv(ζ) ∈ C:sub:`L`
 
-From Definition 1.2.4, Theorem 1.2.5 and Definition 2.1.3, W:sub:`inv(ζ)` will be formed by inverting and reversing the order of the Words in *ζ* and then splitting on *σ*,
+Theorem 2.3.4 "propagates" the Character-level symmetries up through the Words in the Sentence, by stating the Words in an invertible Sentence must be inverted Words of the Sentence in reversed order,
 
-    6. W:sub:`inv(ζ)` = (inv(ζ{Λ(ζ)}), inv(ζ{Λ(ζ)-1}), ..., inv(ζ{1}))
+    inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
-By assumption (step 2), it known that for each Word in *inv(ζ)*, its inverse is also a Word in *ζ*, and therefore in **L** by step 5. This means all the words in *inv(ζ)* are invertible. By Theorem 1.2.4,
+An imporant note to make is the *direction* of the implication in Theorem 2.3.4. A bidirectional equivalence would one to infer from the above equation that a Sentence is invertible. However, the direction of Theorem 2.3.4 cannot be strengthened, as the following Theorem 2.3.5 makes clear.
 
-    7. inv(inv(ζ{i})) = ζ{i} (by Theorem 1.2.4)
+Theorem 2.3.7 also makes clear why Definition 2.3.1 of Admissible Sentence of Word Length *n* is essential to understanding invertibility. 
 
-It follow from step 5 and 7 and Definition 1.2.4, then each inv(α:sub:i) is also in L by the definition of invertibility.
+**Theorem 2.3.7** ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 
-    8. inv(ζ{i}) ∈ L
+This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus C:sub:`L`, *ζ* is invertible if and only if:
 
-Now, *inv(ζ)* can be constructed by taking the Words in W:sub:`inv(ζ)` in step 6. Since each of these is in L (by step 8), and the only difference between *inv(ζ)* and W:sub:`inv(ζ)` is the possible reordering of Delimiters, it is known *inv(ζ)* has a valid Word-level representation, where all its Words belong to L,
+    1. The i:sup:`th` Word of inv(ζ) is the inverse of the (Λ(ζ) - i + 1):sup:`th` Word of ζ
+    2. inv(ζ) is an admissible sentence of word length Λ(ζ).
 
-    9. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} ∈ L
+(→) Let ζ be an arbitrary invertible sentence in C:sub:`L`.
 
-Semantic Coherence: The words in inv(ζ) are simply the inverses of the words in ζ, arranged in reverse order. Since ζ is a semantically coherent sentence (because ζ ∈ C:sub:L), and each word in inv(ζ) is the inverse of a word in ζ, then inv(ζ) must also be a semantically coherent sentence.
+Since ζ ∈ K, by Definition 2.3.2, inv(ζ) ∈ C:sub:`L`.
 
-Conclusion: Therefore, inv(ζ) is a semantically coherent sentence formed by words from L, and thus inv(ζ) ∈ C:sub:L. By Definition 2.2.2, this means ζ ∈ K.
+By Theorem 2.3.5,
+
+    ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+
+The inverse of *ζ*, *inv(ζ)*, can be expressed as the Delimitation of the inverses of the Words of *ζ* in reverse order,
+
+    inv(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+
+
+
+inv(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+
+inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+
+
+
+This is equivalent to: 
+
+    inv(ζ) = Π:sub:i=1:sup:Λ(ζ) inv(ζ){i}
+inv(ζ) ∈ A(Λ(ζ)): Since inv(ζ) ∈ C:sub:L (from Step 1) and inv(ζ) has the same word length as ζ which is Λ(ζ), and inv(ζ) is a delimitation of words from L, by Definition 2.2.5 it follows that inv(ζ) ∈ A(Λ(ζ)).
+
+Conclusion: Therefore, both conditions hold:
+
+∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+inv(ζ) ∈ A(Λ(ζ))
+(←) Direction (If the two conditions hold, then ζ is invertible):
+
+Assume that for an arbitrary sentence ζ ∈ C:sub:L, the following holds:
+
+∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+inv(ζ) ∈ A(Λ(ζ))
+We need to show that ζ ∈ K, which means we need to show that inv(ζ) ∈ C:sub:L.
+
+Word-Level Representation: Let W:sub:ζ = (α:sub:1, α:sub:2, ..., α:sub:Λ(ζ)) be the word-level representation of ζ.
+
+Assumption 1 Rewritten: Using the definition of word index notation, we can rewrite our first assumption as:
+
+∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(α:sub:i)
+Words in inv(ζ): From the definition of String Inversion, we know that the word-level representation of inv(ζ) will be formed by inverting and reversing the order of the words in ζ:
+
+W:sub:inv(ζ) = (inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1))
+Axiom S.2: By Axiom S.2 (Extraction Axiom), since ζ ∈ C:sub:L, all words α:sub:i in W:sub:ζ belong to L.
+
+Invertibility: From our assumption (Step 4), we know that for each word in inv(ζ), its inverse is also a word in ζ, and therefore in L by step 6. This means all the words in inv(ζ) are invertible. Since inv(inv(α:sub:i)) = α:sub:i (by Theorem 1.2.4), and each α:sub:i is in L, then each inv(α:sub:i) is also in L by the definition of invertibility.
+
+Construction of inv(ζ): We can construct inv(ζ) by taking the words in W:sub:inv(ζ), which are inv(α:sub:Λ(ζ)), inv(α:sub:Λ(ζ)-1), ..., inv(α:sub:1). Since each of these is in L (by step 7), we know that inv(ζ) has a valid word-level representation.
+
+Admissibility: By our assumption in step 2, inv(ζ) is an admissible sentence, inv(ζ) ∈ A(Λ(ζ)). By Definition 2.2.5 this means inv(ζ) is a valid sentence in the corpus, so inv(ζ) ∈ C:sub:L
+
+Conclusion: Therefore, inv(ζ) ∈ C:sub:L. By Definition 2.2.2, this means ζ ∈ K.
 
 Final Proof of the Bidirectional Theorem:
 
 Theorem 3.1.21 (Revised as Bidirectional):
 
-∀ ζ ∈ C:sub:L: ζ ∈ K ↔ ∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+∀ ζ ∈ C:sub:L: ζ ∈ K ↔ (∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 
 Proof:
 

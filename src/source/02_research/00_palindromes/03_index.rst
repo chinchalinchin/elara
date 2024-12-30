@@ -56,7 +56,7 @@ Definitions
 - D 2.1.4: Word Length: Λ(ζ)
 - D 2.1.5: Word Index Notation: ζ{i}
 - D 2.2.1: Semantic Coherence
-- D 2.3.1: Admissible Sentences: A(n) ⊆ C:sub:`L`
+- D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 
 Algorithms
@@ -95,7 +95,9 @@ Theorems
 - T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 - T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
 - T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
-- T 2.3.1: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
-- T 2.3.2: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
-- T 2.3.3: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
-- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.1: A(n) ⊆ C:sub:`L`
+- T 2.3.2: ∀ ζ ∈ A(n): Λ(ζ) = n
+- T 2.3.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
+- T 2.3.4: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
+- T 2.3.5: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.6: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
