@@ -8,7 +8,8 @@ Research
    :maxdepth: 2
    :caption: Contents:
 
-   00_palindromes/00_palindromes
-   00_palindromes/01_data
-   00_palindromes/02_appendix
+   00_palindromes/00_index
+   00_palindromes/01_palindromes
+   00_palindromes/02_data
+   00_palindromes/03_appendix
    01_context
