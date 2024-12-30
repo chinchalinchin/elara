@@ -9,7 +9,7 @@ Notation
 --------
 
 - Punctuation: ∎
-- Logical Operations: ∀, ∃, ↔, →, ∧, ∨
+- Logical Operations: ∀, ∃, ↔, →, ←. ∧, ∨
 - Arithmetical Relations: ≠, =, ≥, ≤, +, -
 - Sets: ∅, ℕ, N:sub:`i`
 - Set Relations: ∈, ∉, ⊆
@@ -62,6 +62,13 @@ Definitions
 - D 2.2.1: Semantic Coherence
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
+- D A.1.1: Word Concatenation
+- D A.2.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
+- D A.2.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
+- D A.3.1: Sentene Language: α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: α[i] ∈ W:sub:`ζ`
+- D A.4.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
+- D A.5.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
+- D A.5.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
 
 Algorithms
 ----------
@@ -111,6 +118,22 @@ Theorems
 - T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
+- T A.3.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
+- T A.4.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+- T A.4.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
+- T A.4.3: ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
+- T A.4.4: ∀ α ∈ L: Δ(α) = 0
+- T A.4.5: ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+- T A.4.6: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+- T A.4.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α)
+- T A.4.8: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
+- T A.4.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+- T A.4.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+- T A.5.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
+- T A.5.2: L:sub:`P` ⊂ L:sub:`σ`
+- T A.5.3: ∀ α ∈ L:sub:`P`: α = inv(α)
+- T A.5.4: L ∩ L:sub:`P` ⊆ R
+- T A.5.5: L:sub:`P` ⊂ R:sub:`L_σ`
 
 Introduction
 ============
@@ -1957,22 +1980,6 @@ By Definition 1.3.2 of Invertible Words, this means that *ζ{i}* is an Invertibl
     ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I ∎
 
 The contrapositive of Theorem 2.3.10 provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.
-
-Section II.IV: Delimiting
---------------------------
-
-Now that the analysis has breached the level of Sentences, it begins to turn explicitly towards the consideration of palindromes and their structure. The next section will formally define palindromes and their properties. As preparation, this subsection will introduce an important tool that will be used to build the theorems which in turn will be used to classify palindromes and provide insight into their structure.
-
-Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a palindrome is distributed through its syntactical layers. The concepts of *perfect* and *imperfect* palindromes will be defined more rigorously in the following Section III, but as an intuitive introduction to this distinction and to help highlight the ability of a palindrome to encode meaning on multiple syntactic levels, consider the following two examples,
-
-    1. Dennis sinned
-    2. If I had a hifi
-
-The first palindrome "*Dennis sinned*" is what will be termed a *perfect* palindrome, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second palindrome "If I had a hifi" is what will be termed an *imperfect* palindrome. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
-
-    Ifih a dah I fi
-
-The order of the Characters in the Inverse of an imperfect palindrome is preserved, but in order to reconstitute its uninverted form, the Delimter Characters must be re-sorted. It appears, then, that Delimiters play a central role in organizing the palindromic structure. In order to fully elucidate the structure of palindromes, it will be necessary to introduce into the discourse a method of referring to a Sentence's Delimiter count. 
 
 Section III: Palindromic Structures
 ===================================

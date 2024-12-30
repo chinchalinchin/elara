@@ -16,9 +16,11 @@ Section A.I: Word Concatenation
 
 .. note::
 
-    Word concatenation is effectively dealt with in the formal system by Defintion 1.2.7 of the Limitation operation. This definition is retained in Appendix I in case it is required to refer to the concatenation of the Character-level representation of Words, i.e. after the effects of the Emptying Algorithm (Definition 1.1.2) have been applied to remove null semantic content, but before the introduction of the Limitation operation.
+    Word concatenation is effectively dealt with in the formal system by Defintion 1.2.7 of the Limitation operation. This definition is retained in Appendix I in case it is required, before the introduction of the Limitation operation, to refer to the concatenation of the Character-level representation of Words, i.e. after the effects of the Emptying Algorithm (Definition 1.1.2) have been applied to remove null semantic content.
 
 Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every Word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
+
+**Definition A.1.1: Word Concatenation**
 
 Let *α* and *β* be two words with the following Character level set representations:
 
@@ -28,7 +30,7 @@ Let *α* and *β* be two words with the following Character level set representa
 
 By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the String *t* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of *t* is given by,
 
-    T = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`2`), ..., (l(α),  𝔞:sub:`l(α)`), (l(α) + 1, 𝔟:sub:`1`), (l(α) + 2, 𝔟:sub:`2`), ..., (l(α) + l(β), 𝔟:sub:`l(β)`)}
+    T = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`2`), ..., (l(α),  𝔞:sub:`l(α)`), (l(α) + 1, 𝔟:sub:`1`), (l(α) + 2, 𝔟:sub:`2`), ..., (l(α) + l(β), 𝔟:sub:`l(β)`)} ∎
 
 Note *t* is not necessarily a Word in the Language. 
 
@@ -37,7 +39,7 @@ Section A.II: Compound Words
 
 .. note::
 
-    Part of the ambiguity in imperfect palindromes is that multiple different palindromes can map to the same σ-reduced form. When Delimiters are removed from a Sentence, a certain class of Words can remain in the Language, because their semantic content *"transmutes"*. In the author's opinion, the class of Compound Words bears some relation to palindromic structures, but the exact relation has yet to be uncovered.
+    Part of the ambiguity in imperfect palindromes is that multiple different palindromes can map to the same *σ-reduced* form. When Delimiters are removed from a Sentence, a certain class of Words can remain in the Language, because their semantic content *"transmutes"*. In the author's opinion, the class of Compound Words bears some relation to palindromic structures, but the exact relation has yet to be uncovered.
 
 **Definition A.2.1: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 
@@ -85,7 +87,6 @@ Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation o
 
 In other words, every Sentence Language from a Corpus is a subset of the Language **L**. ∎
 
-
 Section IV: Delimiter Count Function 
 ====================================
 
@@ -93,7 +94,18 @@ Section IV: Delimiter Count Function
 
     It is the author's opinion there is a type of *algebraic structure* embedded in Language through the constraints of syntax. This section highlights one of the functions defined within this structure. While the function is not required to prove the main results of this work about palindromes, it is an interesting function in its own right.
 
-The study of Delimiter Characters in a Sentence bears study beyond its application to palindromic structures. The following section of the Appendix introduces a function for quantifying the number of Delimiters in a sentence. Various properties about this function are then proved, in particular how the function interacts with other linguistic operations and functions that have been defined in the main body of the work. 
+Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a palindrome is distributed through its syntactical layers. The concepts of *Perfect* and *Imperfect* palindromes are be defined more rigorously in  Section III, but as an intuitive introduction to the ability of a palindrome to encode meaning on multiple syntactic levels and as a justification for the introduction of the Delimiter Count Function, consider the following two examples,
+
+    1. dennis sinned
+    2. if i had a hifi
+
+The first palindrome "*dennis sinned*" is what will be termed a *Perfect* Palindrome, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second Palindrome *"if i had a hifi"* is what is termed an *Imperfect* Palindrome. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
+
+    ifih a dah i fi
+
+The order of the Characters in the Inverse of an Imperfect Palindrome is preserved, but in order to reconstitute its uninverted form, the Delimter Characters must be re-sorted. It appears, then, that Delimiters play a central role in organizing the palindromic structure. 
+
+The study of Delimiter Characters in a Sentence bears study beyond its application to palindromic structures, though. The following section of the Appendix introduces this function for quantifying the number of Delimiters in a sentence. Various properties about this function are then proved, in particular how the function interacts with other linguistic operations and functions that have been defined in the main body of the work. 
 
 Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings **S**. The following definition will serve that purpose.
 
@@ -123,9 +135,10 @@ From the previous example, it can be seen the Delimiter Count function takes a S
 
 **Theorem A.4.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
-(TODO: I think this needs revised to be Λ(ζ) ≥ Δ(ζ) + 1 to account for edges where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
-
-This might be resolvable by introducing an assumption about the structure of a Sentence. Perhaps all Delimiters between two consecutive Words should be treated as a single Delimiter?)
+## TODO 
+# I think this needs revised to be Λ(ζ) ≥ Δ(ζ) + 1 to account for edges where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
+# This might be resolvable by introducing an assumption about the structure of a Sentence. Perhaps all Delimiters between two consecutive Words should be treated as a single Delimiter?
+## TODO
 
 In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its Delimiter count plus one.
 
@@ -158,70 +171,70 @@ Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exi
 
 To make the mapping more explicit, define a function *f*: **D**:sub:`t` *→* **D**:sub:`u` as follows. For any (*i*, *σ*) ∈ **D**:sub:`t`, let 
 
-    f((i, σ)) = (l(t) - i + 1, σ)
+    5. f((i, σ)) = (l(t) - i + 1, σ)
     
 It will be shown that *f* is a bijection.
 
 **Well Defined** If (*i*, *σ*) ∈ **D**:sub:`t`, then the Character at position *i* in *t* is *σ*. By step 2, the Character at position *l(t) - i + 1* in *u = inv(t)* is also *σ*. Therefore, 
 
-    (l(t) - i + 1, σ) ∈ D:sub:`u`
+    6. (l(t) - i + 1, σ) ∈ D:sub:`u`
     
 In other words, *f* maps elements of **D**:sub:`t` to elements of **D**:sub:`u`. Thus, *f* is well defined.
  
 **Injective** Suppose 
 
-    f((i:sub:`1`, σ)) = f((i:sub:`2`, σ)). 
+    7. f((i:sub:`1`, σ)) = f((i:sub:`2`, σ)). 
     
 Then, it follows,
 
-    (l(t) - i:sub:`1` + 1, σ) = (l(t) - i:sub:`2` + 1, σ). 
+    8. (l(t) - i:sub:`1` + 1, σ) = (l(t) - i:sub:`2` + 1, σ). 
     
 This in turn implies, 
 
-    l(t) - i:sub:`1` + 1 = l(t) - i:sub:`2` + 1, 
+    9. l(t) - i:sub:`1` + 1 = l(t) - i:sub:`2` + 1, 
     
 So 
-    i:sub:`1` = i:sub:`2`
+    10. i:sub:`1` = i:sub:`2`
     
 Thus, 
 
-    (i:sub:`1`, σ) = (i:sub:`2`, σ)
+    11. (i:sub:`1`, σ) = (i:sub:`2`, σ)
     
 In other words, *f* is injective. 
 
-**Surjective** Let *(j, σ)* be an arbitrary element of D:sub:`u`. Then the Character at position *j* in *u* is *σ*. Let 
+**Surjective** Let *(j, σ)* be an arbitrary element of **D**:sub:`u`. Then the Character at position *j* in *u* is *σ*. Let 
 
-    i = l(t) - j + 1. 
+    12. i = l(t) - j + 1. 
     
 Then 
 
-    j = l(t) - i + 1. 
+    13. j = l(t) - i + 1. 
     
 By step 3, the Character at position *i* in *t* is also *σ*. So, 
 
-    (i, σ) ∈ D:sub:t
+    14. (i, σ) ∈ D:sub:t
     
 And,
 
-    f((i, σ)) = (l(t) - i + 1, σ) = (j, σ). 
+    15. f((i, σ)) = (l(t) - i + 1, σ) = (j, σ). 
     
 Thus, *f* is surjective. 
 
 This defines a bijective mapping between the elements of **D**:sub:`u` and **D**:sub:`t`. Since there's a one-to-one mapping between the elements of *D**:sub:`u` and **D**:sub:`t`, their cardinalities must be equal,
 
-    1. | D:sub:`u` | = | D:sub:`s` |
+    16. | D:sub:`u` | = | D:sub:`s` |
 
 By the definition of the delimiter count function, this means *Δ(u) = Δ(t)*. Since *u = inv(t)*, it has been shown *Δ(inv(s)) = Δ(s)*. 
 
 Furthmore, an exact relationship has been estalished between the coordinates of Delimiters in Strings and their Inverses, 
 
-    D:sub:`inv(t)` = { (l(t) - i + 1, σ) | (i, σ) ∈ D:sub:`t` } ∎
+    17. D:sub:`inv(t)` = { (l(t) - i + 1, σ) | (i, σ) ∈ D:sub:`t` } ∎
 
 **Theorem A.4.3** ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
 
 Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
 
-    Δ(ζ) = Δ(inv(ζ))
+    18. Δ(ζ) = Δ(inv(ζ))
 
 Which is what was to be shown. ∎
 
@@ -232,24 +245,6 @@ Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**
     s ∈ L → (∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
 
 Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
-
-Theorem 2.4.5:
-
-The proof is correct, but the explanation in the second paragraph could be improved. Instead of saying "Either each ⲁ:sub:i... is a Delimiter or it is a non-Delimiter," it would be clearer to say "Each character in Z is either a delimiter or part of a word in W:sub:ζ."
-Revised Theorem 2.4.5 proof:
-
-Assume ζ ∈ C:sub:L. Let Ζ be the Character-level representation of ζ,
-
-1. **Z** = { (1, ⲁ:sub:`1`), (2, ⲁ:sub:`2`), ..., (l(ζ), ⲁ:sub:`l(ζ)`) }
-Each character in Z is either a delimiter or part of a word in W:sub:ζ.
-
-By Definition 2.4.1, the number of Delimiter Characters in ζ is Δ(ζ).
-
-By Axiom W.1 (Discovery Axiom), words in L do not contain Delimiters. By Definition 2.1.3, the words in W:sub:ζ are obtained by splitting ζ  at the Delimiters. Therefore, the total number of non-Delimiter characters in ζ is the sum of the lengths of the words in W*:sub:ζ, which is Σ:sub:(i, α) ∈ W_ζ l(α).
-
-Since every Character in ζ is either a Delimiter or part of a Word (and not both), the total number of Characters in ζ is the sum of the number of delimiters and the number of characters in words. By Definition 1.1.3, the total number of non-Empty characters in ζ is l(ζ). Therefore, the number of non-Empty Characters in ζ is equal to the number of Delimiters plus the sum of the lengths of the words in W*:sub:ζ.
-
-2. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`(i, α) ∈ W_ζ` l(α) ∎
 
 **Theorem A.4.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
 
@@ -303,92 +298,65 @@ By Theorem A.4.7, the result is obtained,
 
 Therefore, for any Sentence ζ ∈ C:sub:`L`, its String Length is always greater than or equal to its Word Length. ∎
 
-**Theorem 2.4.9** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+**Theorem A.4.9 (Informal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 
-Theorem 2.4.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+Let *u* and *t* be arbitrary strings in S. Let **U** and **T** be the Character-level representations of *u* and *t*, respectively:
 
-Proof:
+    U = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`)
 
-Let u and t be arbitrary strings in S.
+    T = (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)`)
 
-Character-Level Representations: Let U and T be the character-level representations of u and t, respectively:
+The Character-level representation of *ut* is:
 
-U = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(u))
-T = (𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(t))
-Concatenation: The character-level representation of ut is:
+    UT = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)``)
 
-UT = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(u), 𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(t))
-Delimiter Count: By Definition 2.4.1, Δ(u) is the number of delimiters in u, Δ(t) is the number of delimiters in t, and Δ(ut) is the number of delimiters in ut.
+By Definition A.4.1, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the number of Delimiters in *t*, and *Δ(ut)* is the number of Delimiters in *ut*.
 
-Key Observation: Since concatenation simply joins the two strings, the number of delimiters in ut is the sum of the number of delimiters in u and the number of delimiters in t.
+Since concatenation simply joins two Strings without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the number of Delimiters in *ut* is the sum of the number of Delimiters in *u* and the number of Delimiters in *t*. ∎
 
-Formal Argument:
+**Theorem A.4.9 (Formal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 
-Let D:sub:u be the set of indices of delimiters in u.
-Let D:sub:t be the set of indices of delimiters in t.
-Let D:sub:ut be the set of indices of delimiters in ut.
-We can express these sets as:
+Let **D**:sub:`u` be the set of indices of Delimiters in *u*. Let **D**:sub:`t` be the set of indices of Delimiters in *t*. Let **D**:sub:`ut` be the set of indices of delimiters in *ut*,
 
-D:sub:u = { i | 1 ≤ i ≤ l(u) and ⲁ:sub:i = σ }
-D:sub:t = { j | 1 ≤ j ≤ l(t) and 𝔟:sub:j = σ }
-D:sub:ut = { k | 1 ≤ k ≤ l(u) + l(t) and (k ≤ l(u) and UT[k] = σ) or (k > l(u) and UT[k] = σ) }
-It's clear that D:sub:ut is the union of two disjoint sets:
+    1. D:sub:`u` = { i | 1 ≤ i ≤ l(u) and u[i] = σ }
+    2. D:sub:`t` = { j | 1 ≤ j ≤ l(t) and t[j] = σ }
+    3. D:sub:`ut` = { k | (1 ≤ k ≤ l(u) + l(t)) ∧ ((k ≤ l(u) ∧ UT[k] = σ) ∨ (k > l(u) ∧ UT[k] = σ)) }
+   
+It is clear that D:sub:`ut` is the union of two disjoint sets, since the indices of the Delimiters in *t* have been shifted by *l(u)*. Therefore,
 
-The set of indices of delimiters in u (which is D:sub:u)
-The set of indices of delimiters in t, shifted by l(u) (which corresponds to D:sub:t)
-Therefore, |D:sub:ut| = |D:sub:u| + |D:sub:t|.
+    | D:sub:`ut` | = | D:sub:`u` | + | D:sub:`t` |.
 
-By the definition of the delimiter count function, Δ(u) = |D:sub:u|, Δ(t) = |D:sub:t|, and Δ(ut) = |D:sub:ut|.
+By Definition A.4.1, this is equivalent to,
 
-Conclusion: Substituting these into the equation from Step 5, we get:
+    Δ(ut) = Δ(u) + Δ(t)
 
-Δ(ut) = Δ(u) + Δ(t)
-Since u and t were arbitrary strings, we can generalize:
+Since u and t were arbitrary strings, this can be generalized,
 
-*   ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
-This completes the proof. ∎
+*   ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t) ∎
 
-Explanation:
+**Theorem A.4.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
 
-The proof relies on the fact that concatenation simply joins two strings without altering the number of delimiters in either string. Therefore, the total number of delimiters in the concatenated string is the sum of the delimiters in the individual strings.
+Let *u* and *t* be arbitrary strings in S.
 
-Implications:
+By Theorem A.4.2,
 
-Additivity: This theorem demonstrates that the delimiter count function is additive with respect to concatenation. This is a significant property that further characterizes its behavior.
+    1. Δ(s) = Δ(inv(s)).
 
+Therefore, 
 
-**Theorem 2.4.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+    2. Δ(ut) = Δ(inv(ut)).
 
-Theorem 2.4.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+By Theorem 2.4.9,
+ 
+    3. Δ(ut) = Δ(u) + Δ(t).
 
-Proof:
+Combining steps 2 and 3, it follows, 
 
-Let u and t be arbitrary strings in S.
+    Δ(inv(ut)) = Δ(ut) = Δ(u) + Δ(t)
 
-Theorem 2.4.2 (Invariance under Inversion): We know from Theorem 2.4.2 that Δ(s) = Δ(inv(s)) for any string s.
+Since u and t were arbitrary strings, this can be generalized,
 
-Applying Invariance to ut: Therefore, Δ(ut) = Δ(inv(ut)).
-
-Theorem 2.4.9 (Additivity over Concatenation): We also know from Theorem 2.4.9 that Δ(ut) = Δ(u) + Δ(t).
-
-Substitution: Substituting the result from Step 3 into Step 2, we get:
-
-Δ(inv(ut)) = Δ(ut) = Δ(u) + Δ(t)
-Conclusion: Therefore, we have shown that:
-
-Δ(inv(ut)) = Δ(u) + Δ(t)
-Since u and t were arbitrary strings, we can generalize:
-
-*   ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
-This completes the proof. ∎
-
-Explanation:
-
-The proof simply combines the two previously established properties:
-
-The delimiter count of a string is the same as the delimiter count of its inverse.
-The delimiter count of a concatenation is the sum of the delimiter counts of the individual strings.
-
+    ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t) ∎
 
 Section A.V: Palindromic Pairs
 ------------------------------
