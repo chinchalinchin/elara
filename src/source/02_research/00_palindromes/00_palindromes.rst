@@ -89,6 +89,7 @@ Theorems
 - T 1.2.4: ∀ s ∈ S: inv(inv(s)) = s
 - T 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
 - T 1.2.6: ∀ n ∈ ℕ, ∀ P:sub:`n` ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- T 1.2.7: ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i)))
 - T 1.3.1: ∀ α ∈ L: α ∈ R ↔ α = inv(α)
 - T 1.3.2: ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
 - T 1.3.3: R ⊆ I
@@ -1288,7 +1289,7 @@ Let *t* be a String with Character-level representation **T** and Word-level rep
    - l(t) (String Length): The number of non-Empty Characters contained in a String.
    - Λ(t) (Word Length): The number of Words contained in a String 
 
-Note the first level is purely syntactical. Any non-Empty String *t* will have a String Length *l(t)*. However, not every non-Empty String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.3.2 for precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
+Note the first level is purely syntactical. Any non-Empty String *t* will have a String Length *l(t)*. However, not every non-Empty String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.3.2 for a precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
 
 With Word Length defined, this notion can be used to simplify notation. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.
 
@@ -1384,7 +1385,7 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 
     ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L ∎
 
-Two new axioms, the Duality Axiom S.1 and the Extraction Axiom S.2, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of natural language). 
+Two new axioms, the Duality Axiom S.1 and the Extraction Axiom S.2, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language). 
 
 To briefly summarize the axioms previously introduced: The system "*initializes*" with the assumption of an equality relation and the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
 
@@ -1398,7 +1399,7 @@ Meaning, every element in the co-domain is mapped to at least one element in the
 
 In a sense, the Duality Axiom S.1 asserts a type of *"double-surjectivity"* exists between the domain of Words and the co-domain of Sentences.  In plain language, the Duality Axiom asserts for every Word *α* in the Language **L**, there exists a sentence *ζ* in the Corpus **C**:sub:`L` such that *α* is contained in *ζ*, and for every Sentence *ζ* in the corpus **C**:sub:`L`, there exists a word *α* in the language **L** such that *α* is contained in *ζ*. 
 
-However, there is a key difference between the notion of *surjection* in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By Definition 1.1.6 and Definition 1.1.7, containment reduces to the existence of a mapping between Characters in different Strings. Due to the Discovery Axiom W.2, with the exception of Sentences consisting of a Single, a Word is contained in a Sentence but a Sentence is not contained in a Word. 
+However, there is a key difference between the notion of *surjection* in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By Definition 1.1.6 and Definition 1.1.7, containment reduces to the existence of a mapping between Characters in different Strings. Due to the Discovery Axiom W.2, with the exception of Sentences consisting of a Single Word, a Word is contained in a Sentence but a Sentence is not contained in a Word. 
 
 More plainly, the Duality Axiom S.1 states a Word cannot exist in a Language without being included in a Sentence of the Corpus, and a Sentence cannot exist in a Corpus without including a Word from the Language. This Axiom captures an inextricable duality between the metamathematical concepts of Sentence and Word, and the concepts of Language and Corpus: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation. A Language and its Corpus require one another. 
 
@@ -1502,7 +1503,7 @@ Section II.III: Sentence Classes
 
 As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in linguistics is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will seen to be a *"recursion of inversions"*.
 
-Theorems 2.3.9 - 2.3.11 of this subsection mark the first notable results obtained from the current formal system. Their empirical truth in natural language represents confirmation of the formal system's construction. These theorems demonstrate the Character-level symmetries required by invertibility that propagate up through the Word-level of linguistics and manifest in conditions that must be imposed the Word-level structure of an Invertible Sentence.
+Theorems 2.3.9 - 2.3.11 of this subsection mark the first notable results obtained from the current formal system. Their empirical truth in natural language represents confirmation of the formal system's construction. These theorems demonstrate the Character-level symmetries required by invertibility propagate up through the Word-level of linguistics and manifest in conditions that must be imposed on the Word-level structure of an Invertible Sentence.
 
 Admissible Sentences
 ^^^^^^^^^^^^^^^^^^^^
@@ -1517,17 +1518,17 @@ The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition
 
     inv(ᚠ) = "not a no parts"
 
-However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as it apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Limitation introduced in Definition 1.2.7 must be leveraged. 
+However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Limitation introduced in Definition 1.2.7 must be leveraged. 
 
 **Definition 2.3.1: Admissible Sentences**
 
-Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(n). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(n), if it satisfies the following open formula
+Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(*n*). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(*n*), if it satisfies the following open formula
 
     t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`) ∎
 
 **Theorem 2.3.1** A(n) ⊆ C:sub:`L`
 
-Let *t* be an arbitrary String such that *t* *∈* **A**(n). By Definition 2.3.1, this implies, *t* *∈* **C**:sub:`L`. Therefore,
+Let *t* be an arbitrary String such that *t* *∈* **A**(*n*). By Definition 2.3.1, this implies, *t* *∈* **C**:sub:`L`. Therefore,
 
     1. t ∈ A(n) → t ∈ C:sub:`L`
 
@@ -1535,11 +1536,11 @@ This is exactly the set theoretic definition of a subset. Thus,
 
     2. A(n) ⊆ C:sub:`L` ∎
 
-Theorem 2.3.1 is the formal justification for quantifying with Sentence Variables (i.e. all Admissable Sentences are in the Corpus) over the set of Admissible Sentences, as in the following theorem.
+Theorem 2.3.1 is the formal justification for quantifying Sentence Variables over the set of Admissible Sentences (i.e. all Admissable Sentences are in the Corpus), as in the following theorem.
 
 **Theorem 2.3.2** ∀ ζ ∈ A(n): Λ(ζ) = n
 
-Let *ζ* be an arbitrary sentence in **A**(n). Definition 2.3.1, if *ζ* *∈* **A**(n), then there exists a Phrase *p* *∈* **Χ**:sub:`L(n)` such that 
+Let *ζ* be an arbitrary sentence in **A**(*n*). By Definition 2.3.1, if *ζ* *∈* **A**(*n*), then there exists a Phrase *p* *∈* **Χ**:sub:`L`(*n*) such that 
 
     1. ζ ∈ C:sub:`L` ∧ ζ = Π:sub:`i=1`:sup:`n` p(i)
 
@@ -1551,13 +1552,13 @@ By Definition 1.2.7, the Limitation of *p* is given by,
 
     Π:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
 
-In other words, the Limitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* words separated by Delimiters.
+In other words, the Limitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* Words separated by Delimiters.
 
-By Definition 2.1.4, the word length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Limitation process doesn't add or remove Words, the Word length of *ζ* must be *n*. Therefore, 
+By Definition 2.1.4, the Word Length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Limitation process doesn't add or remove Words, the Word Length of *ζ* must be *n*. Therefore, 
 
     Λ(ζ) = n.
 
-Since *ζ* was an arbitrary sentence in **A**(n), this can generalize as,
+Since *ζ* was an arbitrary sentence in **A**(*n*), this can generalize as,
 
     ∀ ζ ∈ A(n): Λ(ζ) = n ∎
 
@@ -1571,7 +1572,7 @@ Where each *α*:sub:`i` *∈* **L**. By Definition 1.2.5, the sequence (*α*:sub
 
 By Definition 1.2,6, since **P**:sub:`Λ(ζ)` is a phrase of length *Λ(ζ)* and all its Words belong to L (by semantic coherence), then,
 
-    2. P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))`.
+    2. P:sub:`Λ(ζ)` ∈ Χ:sub:`L`(Λ(ζ)).
 
 By Definition 1.2.7, the Limitation of P:sub:`Λ(ζ)` is:
 
@@ -1581,7 +1582,7 @@ The Limitation *Π*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(*i*) reconstructs 
 
     4. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
 
-By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (*t* *∈* **A**(*n*)) if and only if there exists a phrase *p* *∈* **Χ**:sub:`L(n)` such that,
+By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (*t* *∈* **A**(*n*)) if and only if there exists a phrase *p* *∈* **Χ**:sub:`L`(*n*) such that,
 
     5. t = Π:sub:`i=1`:sup:`n` p(i)
     6. t ∈ C:sub:`L`
@@ -1590,7 +1591,7 @@ By Definition 2.3.1, since the conjunction of the three facts is true,
 
     7. ζ ∈ C:sub:L
     8. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
-    9. P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))` 
+    9. P:sub:`Λ(ζ)` ∈ Χ:sub:`L`(Λ(ζ)) 
     
 It follows from step 7 - step 9, *ζ* *∈* **A**(*Λ(ζ)*). Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
 
@@ -1629,7 +1630,7 @@ Therefore,
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
-Similarly to the classification of Words, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of *Invertible Sentences* is essential. The definition, as is fitting in a work focused on palindromes, will mirror Definition 1.3.2 of an *Invertible Word*.
+Similarly to the progression of Words and their related concepts in the previous section, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of *Invertible Sentences* is essential. The definition, as is fitting in a work focused on palindromes, will mirror Definition 1.3.2 of an *Invertible Word*.
 
 The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of Definition 1.3.2 and Theorem 1.3.2 almost exactly.
 
@@ -1639,7 +1640,7 @@ Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Inverti
 
     ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 
-A Sentence *ζ* will be referred to as *invertible* if it belongs to the class of Invertible Sentences.
+A Sentence *ζ* will be referred to as *invertible* if it belongs to the class of Invertible Sentences. ∎
 
 This definition is immediately employed to derive the following theorems,
 
@@ -1793,7 +1794,7 @@ Since *ζ* was an arbitrary sentence, this can be generalized,
 
     8. ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1}) ∎
 
-As mentioned when Invertible Sentences were defined, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to the last batch of theorems in this section, of which the latter half represents the culmination of the effort so far, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
+As noted in previous aside, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to the last batch of theorems in this section, of which the latter half represents the culmination of the effort so far, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
 
 Consider the Sentences from the English language, *ᚠ = "this is a test"*, *ᚢ = "live on"*,* and *ᚦ = "step on no pets"*. Their Character-level representations would be,
 
@@ -1811,13 +1812,13 @@ The Character-level representation of their Inverses, would be,
 
     **inv(ᚦ)** = ("s", "t", "e", "p", σ, "o", "n", σ, "n", "o", σ, "p", "e", "t", "s")
 
-In the case of *ᚠ*, it's *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and Reverse(*ᚠ*), just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the beginning of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representation, results in the same delimitation of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted. In other words, the Delimiting Algorithm, while defined to apply to Words, can be extended to apply to the more general class of Strings which do not contain Empty Characters. 
+In the case of *ᚠ*, it's *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and *inv(ᚠ)*, just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the beginning of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representation, results in the same limitation of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted. In other words, the Delimiting Algorithm, while defined to apply to Words, can be extended to apply to the more general class of Strings which do not contain Empty Characters. 
 
 In the case of *ᚢ*, it's *inv(ᚢ)* belongs to the Corpus, since all of its Words belong to the Language (English) and have semantic coherence in *ᚢ*. This means *ᚢ* belongs to the class of Invertible Sentences in English. Take note, none of the Words that belong to *ᚢ* (or more precisely, to one of the ordered pairs of **W**:sub:`ᚢ`) belong to *inv(ᚢ)* (or more precisely, to one of the ordered pairs of **W**:sub:`inv(ᚢ)`). However, there does appear to be a relationship between the Words which appear in *ᚢ* and *inv(ᚢ)*, namely, they must be Invertible. The Word *"live"* inverts into *"evil"*, while *"on"* inverts into *"no"*. In other words, based on this preliminary heuristic analysis, if a Sentence is to be Invertible, the Words which belong to it must belong to the class of Invertible Words **I**.
 
 In the case of *ᚦ*, a similar situation is found. Each Word in *ᚦ* is Invertible and pairs with its Inverse Word in *inv(ᚦ)*, e.g. *"pets"* and *"step"* form an Invertible pair, etc. This means, for the same reasons as *ᚢ*, *ᚦ* belongs to the class of Invertible Sentences. However, there is a symmetry embodied in *ᚦ* over and above the pairing of its constituent Words into Invertible pairs. Not only is *inv(ᚦ)* a Sentence in the Corpus, but it's equal to *ᚦ* itself. Indeed, *ᚦ* belongs to a special class of English sentences: Palindromes. 
 
-Note, in order for the Sentence to invert, i.e. the case *ᚢ* and *ᚦ*, the order of the Words in the inverted Sentences must be the reversed order of the inverted Words in the uninverted Sentence. In other words, the inversion defined on the String *"propagates"* up through the levels of the semantic hierarchy and manifests at each level in the form of a semantic inversion. This will be discussed in greater detail after the next theorems are established.
+Note, in order for the Sentence to invert, i.e. the case of *ᚢ* and *ᚦ*, the order of the Words in the inverted Sentences must be the reversed order of the inverted Words in the uninverted Sentence. In other words, the inversion defined on the String *"propagates"* up through the levels of the semantic hierarchy and manifests at each level in the form of a semantic inversion. This will be discussed in greater detail after the next theorems are established.
 
 These last theorems encapsulate these important properties of Invertible Sentences. When Palindromes are formally defined in the next section, these theorems will be used extensively to prove the main results of this work. 
 
@@ -1865,13 +1866,13 @@ In turn, Definition 1.2.4 of String Inversion states in order for this to be the
 
     α[i] = α[l(α) - i + 1] 
 
-In other words, a Word is its own inverse if and only if its Characters are inverted orders. 
+In other words, a Word is its own Inverse exactly when its Characters are in inverted orders. 
 
-In a similar fashion, as Theorems 2.3.3 and 2.3.4 demonstrate by way of syllogism, a Sentence in a Corpus is invertible if its Inverse belongs to the Corpus.
+In a similar fashion, as Theorems 2.3.3 and 2.3.4 demonstrate by way of syllogism, a Sentence in a Corpus is invertible if its Inverse belongs to the Corpus,
 
     ζ ∈ C:sub:`L` ↔ inv(ζ) ∈ C:sub:`L`
 
-Theorem 2.3.8 "propagates" the Character-level symmetries up through the Words in the Sentence, by stating the Words in an invertible Sentence must be inverted Words of the Sentence in reversed order,
+Theorem 2.3.8 *"propagates"* the Character-level symmetries up through the Words in the Sentence, by stating the Words in an invertible Sentence must be inverted Words of the Sentence in reversed order,
 
     inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
@@ -1929,7 +1930,7 @@ By Definition 2.3.2, it follows,
 
 Therefore, the bidirectional theorem holds. ∎
 
-The concept of *admissibility* deserves mention. Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. Theorem 2.3.9 takes no stance on what constitutes an Admissible Sentence, what sort grammatical forms and structures might define this notion, except to say it must be the result of a Limitation of Words that belongs to the Corpus. 
+The concept of *admissibility* deserves mention. Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. Theorem 2.3.9 takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Limitation of Words that belongs to the Corpus. 
 
 The significance of Theorem 2.3.9 is the additional syntactical constraint that is imposed over and above *admissibility* into a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess *admissibility*, the pre-cursor to *grammaticality*, but it must also display Word-level symmetry. This is definitively confirmed by Theorem 2.3.10.
 
