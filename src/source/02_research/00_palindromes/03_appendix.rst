@@ -5,34 +5,10 @@ This section contains notes and ideas that do not serve to establish the main re
 
 Table of Contents
 ^^^^^^^^^^^^^^^^^
-- Section A.I: Word Concatenation 
-- Section A.II: Compound Words
-- Section A.III: Sentence Language
-- Section A.IV: Delimiter Count Function
-- Section A.V: Palindromic Pairs
-
-Section A.I: Word Concatenation
--------------------------------
-
-.. note::
-
-    Word concatenation is effectively dealt with in the formal system by Defintion 1.2.7 of the Limitation operation. This definition is retained in Appendix I in case it is required, before the introduction of the Limitation operation, to refer to the concatenation of the Character-level representation of Words, i.e. after the effects of the Emptying Algorithm (Definition 1.1.2) have been applied to remove null semantic content.
-
-Concatenation was defined in Definition 1.1.1 in terms of Characters and Strings. Every Word is a String and every String has a Character-level set representation, so the operation of concatenation will not be materially altered to accomodate Words. However, as the analysis builds toward soldifying a theory of palindromes, the result of this essential operation will be given a slightly different formal representation. This representation will not change the operation in any way, but will instead enable a more descriptive theory to emerge when the concept of a Pairing Language is introduced.
-
-**Definition A.1.1: Word Concatenation**
-
-Let *α* and *β* be two words with the following Character level set representations:
-
-    Α = { (1,  𝔞:sub:`1`), (2,  𝔞:sub:`2`), ... , (l(α),  𝔞:sub:`l(α)`) }
-
-    Β = { (1, 𝔟:sub:`1``), (2, 𝔟:sub:`2`), ... , (l(β), 𝔟:sub:`l(β)`)}
-
-By Definition 1.1.1, the concatenation of *α* and *β*, denoted by *αβ*, is the String *t* formed by appending the characters of *β* to the end of *α*. Formally, the set representation of *t* is given by,
-
-    T = { (1, 𝔞:sub:`i`), (2,  𝔞:sub:`2`), ..., (l(α),  𝔞:sub:`l(α)`), (l(α) + 1, 𝔟:sub:`1`), (l(α) + 2, 𝔟:sub:`2`), ..., (l(α) + l(β), 𝔟:sub:`l(β)`)} ∎
-
-Note *t* is not necessarily a Word in the Language. 
+- Section A.I: Compound Words
+- Section A.II: Delimiter Count Function
+- Section A.III: Palindromic Pairs
+- Section A.IV: Categories
 
 Section A.II: Compound Words 
 ----------------------------
@@ -41,7 +17,7 @@ Section A.II: Compound Words
 
     Part of the ambiguity in imperfect palindromes is that multiple different palindromes can map to the same *σ-reduced* form. When Delimiters are removed from a Sentence, a certain class of Words can remain in the Language, because their semantic content *"transmutes"*. In the author's opinion, the class of Compound Words bears some relation to palindromic structures, but the exact relation has yet to be uncovered.
 
-**Definition A.2.1: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
+**Definition A.1.1: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 
 This formalization can be translated into natural language as follows: A Word *η* in a Language **L** is a Compound Word if and only if,
 
@@ -58,7 +34,7 @@ The constraint *w ∈* **L** ensures that the concatenated String *η* is not ju
 
 *"formrat"* is not a Compound Word, even though it can be formed by concatenating Words from the Language, i.e. *"form"* and *"rat"* are both valid words, the concatenation *"formrat"* is not a valid Word in English.
 
-**Definition A.2.2: Compound Invertible Words** η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
+**Definition A.1.2: Compound Invertible Words** η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 
 In natural language: A word η in a language **L** is a Compound Invertible Word if and only if it is both a Compound Word and an Invertible Word. Using notation for set intersections, this definition can be revised to read,
 
@@ -68,26 +44,7 @@ In natural language: A word η in a language **L** is a Compound Invertible Word
 
 "racecar" is a compound invertible word because it's both a compound word and its own inverse.
 
-Section A.III: Sentence Language
---------------------------------
-
-**Definition A.3.1: Sentence Language**
-
-A Sentence Language is defined as the set of unique Words which are contained in a Sentence *ζ*. **L**:sub:`ζ` denotes a Sentence Language.  
-
-   α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: α[i] ∈ W:sub:`ζ` ∎
-
-**Theorem A.3.1** ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
-
-This theorem can be stated in natural language as follows: For any Sentence *ζ* in a Corpus **C**:sub:`L`, its Sentence Language is a subset of the Language **L**.
-
-Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation of *ζ*, as specified in Definition 2.1.3. By Axiom S.3, every Word *α* in the Word-level set representation of *ζ* belongs to the Language **L**. Since every ordered element of W:sub:`ζ` that belongs to **L** also belongs to L:sub:`ζ` by Definition 2.3.3, it can concluded that L:sub:`ζ` is a subset of **L**. The only assumption on *ζ* is that is belongs to the Corpus, therefore this conclusion can be generalized to all Sentences in a Corpus,
-
-    ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L 
-
-In other words, every Sentence Language from a Corpus is a subset of the Language **L**. ∎
-
-Section IV: Delimiter Count Function 
+Section II: Delimiter Count Function 
 ====================================
 
 .. note::
@@ -109,7 +66,7 @@ The study of Delimiter Characters in a Sentence bears study beyond its applicati
 
 Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings **S**. The following definition will serve that purpose.
 
-**Definition A.4.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let **T** be the Character-level representation of *t* with the Characters *𝔞*:sub:`i` denoting the *i*:sup:`th` character of the String *t*, where *1 ≤ i ≤ l(t)*,
+**Definition A.2.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let **T** be the Character-level representation of *t* with the Characters *𝔞*:sub:`i` denoting the *i*:sup:`th` character of the String *t*, where *1 ≤ i ≤ l(t)*,
 
     T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ... , (l(t), 𝔞:sub:`l(t)`) }
 
@@ -133,7 +90,7 @@ From this it follows, | D:sub:`t` | is 2. Hence, *Δ(s) = 2*. ∎
 
 From the previous example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the Delimiter count) as output. Multiple sentences can have the same Delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
 
-**Theorem A.4.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+**Theorem A.2.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
 ## TODO 
 # I think this needs revised to be Λ(ζ) ≥ Δ(ζ) + 1 to account for edges where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
@@ -152,7 +109,7 @@ Since Delimiters separate Words, and each Delimiter corresponds to one Word boun
 
 The next two theorems establish the invariance of the Delimiter count under String Inversion for any String, and by extension, any Sentence.
 
-**Theorem A.4.2** ∀ s ∈ S: Δ(s) = Δ(inv(s))
+**Theorem A.3.2** ∀ s ∈ S: Δ(s) = Δ(inv(s))
 
 Let *t* be a string with length *l(t)*. Let *u = inv(t)*. By Definition 1.2.4,
 
@@ -230,7 +187,7 @@ Furthmore, an exact relationship has been estalished between the coordinates of 
 
     17. D:sub:`inv(t)` = { (l(t) - i + 1, σ) | (i, σ) ∈ D:sub:`t` } ∎
 
-**Theorem A.4.3** ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
+**Theorem A.2.3** ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
 
 Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
 
@@ -238,7 +195,7 @@ Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Th
 
 Which is what was to be shown. ∎
 
-**Theorem A.4.4** ∀ α ∈ L: Δ(α) = 0
+**Theorem A.2.4** ∀ α ∈ L: Δ(α) = 0
 
 Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**, then it does not contain any Delimiter Characters
 
@@ -246,7 +203,7 @@ Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**
 
 Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
 
-**Theorem A.4.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+**Theorem A.2.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
 
 In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *Δ(ζ)* plus the sum of the String Lengths of its Words.
 
@@ -264,11 +221,11 @@ Since every Character in *ζ* is either a Delimiter or part of a Word (and not b
 
     3. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I}) ∎
 
-**Theorem A.4.6** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+**Theorem A.2.6** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
 
 Applying the results of Theorem A.4.1 and Theorem A.4.5, this theorem follows from simple algebraic manipulation. ∎
 
-**Theorem A.4.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α)
+**Theorem A.2.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α)
 
 Assume *ζ ∈* **C**:sub:`L`. By Theorem 2.2.4,
     
@@ -282,7 +239,7 @@ Combining step 1 and step 2, the theorem is obtained through simple algebraic ma
 
     l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α) ∎
 
-**Theorem A.4.8** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
+**Theorem A.2.8** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
 
 Let ζ be an arbitrary Sentence in C:sub:`L`.
 
@@ -298,7 +255,7 @@ By Theorem A.4.7, the result is obtained,
 
 Therefore, for any Sentence ζ ∈ C:sub:`L`, its String Length is always greater than or equal to its Word Length. ∎
 
-**Theorem A.4.9 (Informal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+**Theorem A.2.9 (Informal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 
 Let *u* and *t* be arbitrary strings in S. Let **U** and **T** be the Character-level representations of *u* and *t*, respectively:
 
@@ -314,7 +271,7 @@ By Definition A.4.1, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the 
 
 Since concatenation simply joins two Strings without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the number of Delimiters in *ut* is the sum of the number of Delimiters in *u* and the number of Delimiters in *t*. ∎
 
-**Theorem A.4.9 (Formal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+**Theorem A.2.9 (Formal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 
 Let **D**:sub:`u` be the set of indices of Delimiters in *u*. Let **D**:sub:`t` be the set of indices of Delimiters in *t*. Let **D**:sub:`ut` be the set of indices of delimiters in *ut*,
 
@@ -334,7 +291,7 @@ Since u and t were arbitrary strings, this can be generalized,
 
 *   ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t) ∎
 
-**Theorem A.4.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+**Theorem A.2.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
 
 Let *u* and *t* be arbitrary strings in S.
 
@@ -358,8 +315,8 @@ Since u and t were arbitrary strings, this can be generalized,
 
     ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t) ∎
 
-Section A.V: Palindromic Pairs
-------------------------------
+Section A.III: Palindromic Pairs
+--------------------------------
 
 The only constraint on a Language is that it must consist of Words. This is guaranteed by the Extraction Axiom S.2. The only constraint on Words is that they must not contain the Delimiter. This is guaranteed by the Delimiter Axiom W.1. 
 
@@ -367,7 +324,7 @@ Since *σ-reduction* removes the Delimiter Character when it projects a Sentence
 
 This idea motives the definition of a *σ-Pairing Language*.
 
-**Definition A.5.1: σ-Pairing Language**
+**Definition A.3.1: σ-Pairing Language**
 
 The σ-Pairing Language L:sub:`σ` of a Corpus C:sub:`L` is defined as the set of Words *α* that satisfy the following formula, 
 
@@ -375,7 +332,7 @@ The σ-Pairing Language L:sub:`σ` of a Corpus C:sub:`L` is defined as the set o
 
 This definition captures the idea that the σ-Pairing Language consists of all the Strings that can be generated by applying σ-reduction to the Sentences in the Corpus. It directly links the elements of L:sub:σ to the σ-reduced forms of the Sentences, ensuring that the Pairing Language is derived from the original Corpus.
 
-**Theorem A.5.1** ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
+**Theorem A.3.1** ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
 
 This theorem can be stated in natural language as follows: The *σ*-Pairing Language contains a Word *α* if and only if there exists a Sentence *ζ* and a Word *β* that belongs to Sentence *ζ* such that *α* is contained in *Ζ ⋅ Σ*:sub:`σ`.
 
@@ -427,7 +384,7 @@ Since both directions of the implication has been proven, the theorem is establi
 
 This theorem effectively characterizes the elements of the σ-Pairing Language. It states that a String belongs to the σ-Pairing Language if and only if it contains a Word from some Sentence in the Corpus. This highlights the connection between the σ-Pairing Language and the original Language and Corpus.
 
-**Definition A.5.2: Palindromic Pairing Language**
+**Definition A.3.2: Palindromic Pairing Language**
 
 Definition A.1.4 is altered in the following definition to quantify over the set of Palindromes in a Corpus. The Pairing Language that results is denoted L:sub:`P`. The set of Words *α* which satisfy this definition are referred to as the Palindromic Pairing Language of Language **L**, 
 
@@ -437,7 +394,7 @@ In particuar, if *α ∈ L*:sub:`P`, *α* is called the *Palindromic Image* of t
 
 This definition is used to prove the following theorems.
 
-**Theorem A.5.2** L:sub:`P` ⊂ L:sub:`σ`
+**Theorem A.3.2** L:sub:`P` ⊂ L:sub:`σ`
 
 Assume 
     
@@ -463,7 +420,7 @@ This is exactly the definitio of a subset,
 
     L:sub:`P` ⊂ L:sub:`σ`. ∎
 
-**Theorem A.5.3**: ∀ α ∈ L:sub:`P`: α = inv(α)
+**Theorem A.3.3**: ∀ α ∈ L:sub:`P`: α = inv(α)
 
 This theorem can be stated in natural language as follows: All Words in a Palindromic Pairing Language are their own Inverses. 
 
@@ -491,15 +448,9 @@ This proof demonstrates that every String in the Palindromic Pairing Language is
 
 This theorem highlights a key property of the Palindromic Pairing Language: it consists solely of Strings that are symmetrical with respect to inversion. This property could be useful in various applications, such as identifying potential palindromes or generating text with specific symmetrical structures.
 
-**Theorem A.5.4** L ∩ L:sub:`P` ⊆ R
+**Theorem A.3.4** L ∩ L:sub:`P` ⊆ R
 
 This theorem can be stated in natural language as follows: The intersection of a Language **L** and its Palindromic Pair **L**:sub:`P` is a subset of the Language's Reflective Words **R**.
-
-Assume α ∈ L ∩ L:sub:P: This is a good starting point. It means α is both a Word in the Language and a String in the Palindromic Pairing Language.
-Word: You correctly state that since α ∈ L, it is a Word in the Language.
-Inverse Exists: You also correctly state that since α ∈ L:sub:P, it must equal its own inverse (α = inv(α)). This follows from Theorem 3.1.9.
-Reflective Word: While your conclusion is correct, we need to explicitly connect the properties in steps 2 and 3 to the definition of Reflective Words (Definition 1.3.1).
-Refined Proof:
 
 Assume 
 
@@ -529,7 +480,7 @@ Before moving onto the last theorem of this section, some terminology is introdu
 
 With this notation adopted, the following theorem can be proven.
 
-**Theorem A.5.5** L:sub:`P` ⊂ R:sub:`L_σ`
+**Theorem A.3.5** L:sub:`P` ⊂ R:sub:`L_σ`
 
 This theorem can be state in natural language as follows: Given a Language L, all words in its Palindromic Pairing Language are also Reflective Words in the σ-Pairing Language. 
 
@@ -546,3 +497,7 @@ If it can be shown,
     3. α ∈ L:sub:`P` → inv(α) = α
 
 Then the theorem will follow tautologically from the laws of deduction. But step 3 is exactly Theorem 3.1.9. Therefore, the proof is complete. ∎
+
+
+Section A.VI: Categories
+-------------------------
