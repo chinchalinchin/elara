@@ -1,0 +1,200 @@
+example after sigma induction
+
+"madamimadam"
+
+show how to construct sigma induction over S.
+
+then show how sigma induction over C:sub:`L` is a subset of sigma induction over S.
+
+
+
+Your ← direction of the Theorem 3.1.21 (Revised) proof is invalid because of this sentence: "The words in inv(ζ) are simply the inverses of the words in ζ, arranged in reverse order. Since ζ is a semantically coherent sentence (because ζ ∈ C:sub:L), and each word in inv(ζ) is the inverse of a word in ζ, then inv(ζ) must also be a semantically coherent sentence."
+
+
+
+Semantic coherence is a weak condition. It only implies the invertible sentence has words that belong to a language L. It doesn't necessarily imply the sentence formed by concatenating the inverted word (separated by delimiters) is a grammatical sentence. Example: "strap on a ton" inverts into "not a no parts". The inverse of the sentence is semantically coherent, but not "grammatical", therefore it's not part of the Corpus.
+
+
+
+Your → direction is valid because the hypothesis says both the sentence and inverse belong to the Corpus. In the other direction all we have is that the sentence belongs to the Corpus. We don't know if the inverse belongs to the corpus as well. Semantic coherence, which is what the assumption in the ← direction is saying essentially (i.e. if a sentence is in the corpus and the words in its inverse are equal to the inverse of the sentence's words this means the sentence's inverse is "semantically coherent"), is not enough in and of itself to ensure "grammaticality". We need to define a notion of "grammaticality" after "semantic coherence" and use it to reformulate this theorem before trying to prove the ← direction. The ← direction has to be slightly stronger, I think, by including a predicate for grammaticality. 
+
+
+
+Here is my preliminary attempt at capturing this concept. Don't take this as gospel quite yet. Let's play with it a little bit and see if we need to refine it before adopting it formally. 
+
+
+
+Let's define a Phrase of Word Length n as an ordered sequence,
+
+
+
+    P(n) = ( α:sub:`1`, ... , α:sub:`n` )
+
+
+
+Then let's define a new operation called "delimitation" that is a type of iterated concatenation that satisfies the following,
+
+
+
+    Π:sub:`i = 1`:sup:`n` α:sub:`i` = (α:sub:`1`)σ(α:sub:`1`)σ...(α:sub:`n`)
+
+
+
+Then we define the notion of "grammaticality" as,
+
+
+
+    (Π:sub:`i = 1`:sup:`n` P(n) ) ∈ G ↔ (Π:sub:`i = 1`:sup:`n` P(n)) ∈ C:sub:`L` 
+
+
+
+What do you think?
+
+
+
+
+
+
+
+
+
+Let's remove your Axioms G.1 and G.2 and the corresponding proofs. I like your initiative, Axiom, and I am definitely making a note of this, as I think this is a good idea, but I don't think we are quite ready to incorporate grammar. I think my definition is salvageable if instead of calling it "grammatical" we refer to it as "comprehensible". I don't think our formal system is quite ready to accommodate grammatical notions. We need to formalize the notion of grammatical categories that could map to things like nouns and verbs (sort of like we need with Alphabets mapping to natural language letters) before attempting to explicate the notion of "grammatical sentences". So let's not introduce any grammatical assumptions just yet. All we need is some notion of an ordered sequences of Words being part of a Corpus after Delimitation. Instead of your idea, let's see if we can take your definition of Delimitation (that part is good) and then revise my definition. For instance, let's called F the set of "fathomable" sentences such that,
+
+
+
+(Π:sub:i=1:sup:n P(n)) ∈ F ↔ (Π:sub:i=1:sup:n P(n)) ∈ C:sub:L
+
+
+
+What do you think of that approach?
+
+
+
+
+
+
+Awesome, thank you Axiom. I believe we should establish some basic properties of Delimitations, but before we do, check this example of applying Delimitation for errors:
+
+
+
+**Example**
+
+
+
+Let *P(n) = ("mother", "may", "I")* where *n = 3*.
+
+
+
+The Basis Step yields,
+
+
+
+    1. n = 1: Π:sub:`i=1`:sup:`1` α:sub:`i` = "mother" 
+
+
+
+And then the delimitation can be built up recursively using the Recursive Step repeatedly,
+
+
+
+    2.  n = 3: Π:sub:`i=1`:sup:`2` α:sub:`i` = (Π:sub:`i=1`:sup:`1` α:sub:`i`)(σ"may")= ("mother")(σ"may") = "mother"σ"may"
+
+    3.  n = 3: Π:sub:`i=1`:sup:`3` α:sub:`i` = (Π:sub:`i=1`:sup:`2` α:sub:`i`)(σ"I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
+
+
+
+So the Delimitation of *P(n)* is given by,
+
+
+
+    Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" ∎
+
+
+
+After verifying and correcting (if necessary) this example, can you think of any properties of Delimitation we might be to show? It's another operation in our algebraic structure, so we need to enumerate it's basic properties if we want to map this lingustic structure properly.
+
+
+
+
+Okay, I concur with your assessment. Let's make a note of all of this. We will eventually prove all of that this evening. I already have written it down on my end. I think we should first establish Uniqueness and Associativity. 
+
+
+
+However, the way you are phrasing the theorems for Uniqueness and Associativity relies on Word Index notation. Which is fine, but it means we can't establish any properties about Delimitation until after we introduce the Word Index notation. I am fine defining delimitation after Word Index notation, as the operation is essentially "sentential" in nature and Word Index notation is introduced to accomodate Sentences, but it brings up another point: it makes me realize the notation for Delimitation is slightly ambiguous currently; it needs to involve a quantification over P(n) in some way, so that way the symbol actually denotes something.  Right now it's not clear how the sequence (α:sub:`i` ) is related to P(n). What do you think of the following modification to our definitions? Be honest. This is the formalization stage, so if you notice anything, it's good to point it out rather than us discovering a flaw later on, after we've built upon the notions introduced here. You won't offend me, Axiom. I value your insight immensely.
+
+**Definition: Phrase**
+
+Let *n* be a fixed, non-zero natural number, *i ≥ 1*. A Phrase of Word Length *n* of Language **L**, denoted **P**:sub:`n`, is defined as an ordered sequence of *n* Words from a Language L:
+
+    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+
+where each *α*:sub:`i` *∈* **L**. If *i* is *1 ≤ i ≤ n*, P:sub:`n`(i) denotes the Word α:sub:`i` at index *i*. ∎
+
+**Definition: Delimitation**
+
+Let **P**:sub:`n` be a Phrase of Word Length *n*, 
+
+    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) 
+
+The delimitation of **P**:sub:`n`, denoted *Π*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
+
+    1. Basis Clause (n = 1): Π:sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
+    2. Recursive Clause (n > 1): Π:sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π:sub:`i=1`:sup:`n-1` P:sub:`n`(i))(σ)(α:sub:`n`) ∎
+
+
+I like your Definition, Axiom! One minor revision!
+
+
+
+**Definition D.2: Lexicon**
+
+
+
+Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, denoted **X**:sub:`L`*(n)*, as the set of all Phrases of length N formed from Words in **L**,
+
+
+
+    Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } ∎
+
+
+
+And also, I think you were right. Having seen the proof of my version, your version is infinitely superior. With this new definition of a Lexicon, the correct formulation for uniqueness is:
+
+
+
+∀ n ∈ ℕ, ∀ P:sub:n ∈ X:sub:`L` (n) ∃! s ∈ S: s = Π:sub:i=1:sup:n P:sub:n(i)
+
+
+
+Let's go with your original proof since it's more thorough and elegant. I like the induction proof.
+
+
+
+Agreed? Or would you like to raise a point of order to consider?
+
+
+
+
+
+
+Okay, I see where there misunderstanding is. I think you are conflating the concatenation of their Delimitations with the concatenation of the Phrases which were "delimitated". There is no current definition of what it means to concatenate Phrases (I don't agree with your definition 3.1.22, so let's strike it from the record, if that wasn't clear. However, I am not excluding this possibility, see below).
+
+
+
+What I thought we meant by associativity of Delimitations was more like that:
+
+
+
+∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i)))
+
+
+
+Which is what I meant when I said I think we get it automatically from the associativity of string concatenation. The proof of this formulation of associativity (which I am not claiming is the correct formulation) would simply be: delimitations are strings, concatenation associates over strings, therefore delimitation is associative.
+
+
+
+I do see the advantage of your formulation of Phrase Concatenation, though. Before we formally adopt it, let's weigh the advantages and disadvantages. List them out and make a recommendation.
+
+
+
+

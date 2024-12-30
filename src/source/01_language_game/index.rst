@@ -26,7 +26,4 @@ The Language Game requires an LLM built on the Transformer architecture with a l
    games/G02_garden
    examples
 
-The Modules in this section can be combined to generate different Language Game implementations. They are designed to be independent Modules that can be stacked into different configurations to produce a variety of results. The Appendices serve as further context to provide to the LLM to enhance its generative capabilities.
-
-
-TODO: create *Elara* package from : 
+The Modules in this section can be combined to generate different Language Game implementations. They are designed to be independent Modules that can be stacked into different configurations to produce a variety of results. The Appendices serve as further context to provide to the LLM to enhance its generative capabilities. 

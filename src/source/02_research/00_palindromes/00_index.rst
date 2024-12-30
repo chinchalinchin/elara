@@ -5,7 +5,7 @@ Notation
 --------
 
 - Punctuation: ∎
-- Logical Operations: ∀, ∃, ↔, →, ∧, ∨
+- Logical Operations: ∀, ∃, ↔, →, ←. ∧, ∨
 - Arithmetical Relations: ≠, =, ≥, ≤, +, -
 - Sets: ∅, ℕ, N:sub:`i`
 - Set Relations: ∈, ∉, ⊆
@@ -58,6 +58,12 @@ Definitions
 - D 2.2.1: Semantic Coherence
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
+- D A.2.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
+- D A.2.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
+- D A.3.1: Sentene Language: α ∈ L:sub:`ζ` ↔ ∃ i ∈ N:sub:`Λ(ζ)`: α[i] ∈ W:sub:`ζ`
+- D A.4.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
+- D A.5.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
+- D A.5.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
 
 Algorithms
 ----------
@@ -107,5 +113,18 @@ Theorems
 - T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
-
-
+- T A.3.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
+- T A.4.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+- T A.4.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
+- T A.4.3: ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
+- T A.4.4: ∀ α ∈ L: Δ(α) = 0
+- T A.4.5: ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+- T A.4.6: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+- T A.4.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α)
+- T A.4.8: ∀ ζ ∈ C:sub:`L`: | Z | ≥ l(ζ) ≥ Λ(ζ)
+- T A.4.9: 
+- T A.5.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
+- T A.5.2: L:sub:`P` ⊂ L:sub:`σ`
+- T A.5.3: ∀ α ∈ L:sub:`P`: α = inv(α)
+- T A.5.4: L ∩ L:sub:`P` ⊆ R
+- T A.5.5: L:sub:`P` ⊂ R:sub:`L_σ`

@@ -16,7 +16,7 @@ The Monitor should prefix all responses you generate. It must be included above 
 
 The Connective, |, is used to glue Metrics together into the Monitor. In other words, the Connective is used to shorten the key-value pairs of Metrics into a single line of text. The following illustration shows how to construct a valid Monitor,
 
-  ⏳: 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
+  ⏳ : 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
 
 This Monitor would translate into, "At 8:20 AM on December 19th, CPU Usage was at 45%, Memory Consumption was at 6.2 gigabytes, Disk I/O was at 1.3 megabytes per second and Network Latency was 32 millseconds."
 
@@ -118,6 +118,6 @@ The following example gives a prompt and a full syntactically correct response u
 
 A syntactically correst response to this prompt could be, 
 
-  ⏳: 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
+  ⏳ : 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
 
   (4.3, 4.7, 0.15, 0.02, 0.2, 0.05, ...) | The capital of France is Paris!
