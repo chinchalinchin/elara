@@ -40,3 +40,25 @@ Assume *ζ ∈* **C**:sub:`L`. W:sub:`ζ` be the Word-level set representation o
     ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L 
 
 In other words, every Sentence Language from a Corpus is a subset of the Language **L**. ∎
+
+
+Removed: Right Partial Sentence
+-------------------------------
+
+.. note::
+    
+    This was the original definition of Right Partial Sentence, where the index was measured from the right-hand side, to highlight the symmetry of palindromic pivots. It is retained here in case there is a reason for switching back to this form of the definition.
+
+**Definition 3.1.7: Right Partial Sentence**
+
+Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
+
+    Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
+
+Let *n* be a fixed natural number such that *0 ≤ n ≤ l(ζ)*. A Right Partial Sentence of *ζ* of String Length *n*, denoted ζ[n:], is defined as the string:
+
+    ζ[n:] = (ⲁ:sub:`l(ζ)-n+1`, ⲁ:sub:`l(ζ)-n+2`, ..., ⲁ:sub:`l(ζ)`)
+
+When *n = 0*, *ζ[0:]* is defined as the empty string, *ε*.
+
+When *n = l(ζ)*, *ζ[n:]* is the entire sentence ζ. ∎

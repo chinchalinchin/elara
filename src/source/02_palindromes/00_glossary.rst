@@ -62,9 +62,9 @@ Definitions
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 - D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
-- D 3.1.2: σ-Reduction: s ⋅ Σ:sub:`σ`
-- D 3.1.3: Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
-- D 3.1.4: Perfect Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
+- D 3.1.2: σ-Reduction: ς(ζ)
+- D 3.1.3: Palindromes: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) 
+- D 3.1.4: Perfect Palindromes: ζ ∈ PP ↔ ζ = inv(ζ)
 - D 3.1.5: Imperfect Palindromes: ζ ∈ P - PP
 - D 3.1.6: Aspect
 - D 3.1.7: Left Partial Sentence: Z[:n]
@@ -129,17 +129,20 @@ Theorems
 - T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
-- T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
-- T 3.1.2: ∀ ζ,ξ ∈ C:sub:`L`: ΖΞ ⋅ Σ:sub:`σ` = (Ζ⋅ Σ:sub:`σ`)(Ξ ⋅ Σ:sub:`σ`)
-- T 3.1.3: ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
-- T 3.1.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1
-- T 3.1.5: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`)
-- T 3.1.6: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ζ  ⋅ Σ:sub:`σ`) = inv(inv(ζ  ⋅ Σ:sub:`σ`)) ]
+- T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
+- T 3.1.2: ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
+- T 3.1.3: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
+- T 3.1.4: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
+- T 3.1.5: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
+- T 3.1.6: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
 - T 3.1.7: PP ⊂ K
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 - T 3.1.9: PP ⊂ P
 - T 3.1.10: PP ∪ IP = P
-- T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+- T 3.1.11: ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i + 1) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])))
+- T 3.1.12: ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:])))
+- T 3.1.13: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+- 
 - T 3.1.12: ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] )) ↔ (∃ i ∈ ℕ : l(ζ) = 2i + 1)
 - T 3.1.13: ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l(ζ[ω(ζ):]) + 1) ↔ (∃ i ∈ ℕ : l(ζ) = 2i)
 - T 3.1.14: ∀ ζ ∈ P:sup:`-`: ( inv(ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(ζ[:ω(ζ)]⋅ Σ:sub:`σ`) )
@@ -148,7 +151,15 @@ Theorems
 - T 3.1.17: P:sup:`-` ∪ P:sup:`+` = P
 - T 3.1.18: ∀ ζ ∈ PP ∩ P:sub:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1 ] = σ 
 - T 3.1.19: ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
+- 
+- 
+- 
+- 
 - T 3.2.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- 
+- 
+- 
+- 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
