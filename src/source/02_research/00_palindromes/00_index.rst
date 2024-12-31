@@ -19,7 +19,7 @@ Notation
 - Words: a, b, c
 - Word Variables: α, β, γ
 - Character Index Notation: t[i]
-- Word ClassΛ(ζ)es: R, I
+- Word Classes: R, I
 - Phrases of Word Length n: P:sub:`n`
 - Lexicons: X:sub:`L`(n)
 - Phrases Variables: p, q, r
@@ -70,6 +70,9 @@ Definitions
 - D 3.1.7: Left Partial Sentence: Z[:n]
 - D 3.1.8: Right Partial Sentence: Z[n:]
 - D 3.1.9: Pivots: ω(ζ)
+- D 3.1.10: Even Palindromes: ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] 
+- D 3.1.11: Odd Palindromes: ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ]
+- D 3.1.12: Parity
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
@@ -137,6 +140,13 @@ Theorems
 - T 3.1.9: PP ⊂ P
 - T 3.1.10: PP ∪ IP = P
 - T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+- T 3.1.12: ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] )) ↔ (∃ i ∈ ℕ : l(ζ) = 2i + 1)
+- T 3.1.13: ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l(ζ[ω(ζ):]) + 1) ↔ (∃ i ∈ ℕ : l(ζ) = 2i)
+- T 3.1.14: ∀ ζ ∈ P:sup:`-`: ( inv(ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(ζ[:ω(ζ)]⋅ Σ:sub:`σ`) )
+- T 3.1.15: ∀ ζ ∈ P:sup:`+`: ( inv(Ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(Ζ[:ω(ζ)+1]⋅ Σ:sub:`σ`) )
+- T 3.1.16: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.1.17: P:sup:`-` ∪ P:sup:`+` = P
+- T 3.1.18:  ∀ ζ ∈ PP ∩ P:sub:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1 ] = σ 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))

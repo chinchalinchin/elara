@@ -929,3 +929,140 @@ Conclusion: Therefore:
 Since s and m were arbitrary, we can generalize:
 
 *   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
+
+
+
+
+
+How This Helps with σ-induction:
+
+The theorems about delimiter symmetry in perfect palindromes (3.2.4 and 3.2.5) are key to simplifying the calculation of |σ_induce(s, m, S)| when s is the σ-reduction of a perfect palindrome.
+
+Here's how:
+
+Reduced Search Space: Instead of considering all possible delimiter placements in s, we only need to consider placements in the left half of s (up to the pivot). The placements in the right half are then determined by symmetry.
+
+Simplified Combinations:
+
+For even-length perfect palindromes with an even number of words m, we need to choose (m-2)/2 delimiter positions in the left half (of length l(s)/2).
+For even-length perfect palindromes with an odd number of words m, we need to choose (m-1)/2 delimiter positions in the left half (of length l(s)/2).
+For odd-length perfect palindromes with an even number of words m, we need to choose (m-2)/2 delimiter positions in the left half (of length (l(s)-1)/2).
+For odd-length perfect palindromes with an odd number of words m, we need to choose (m-1)/2 delimiter positions in the left half (of length (l(s)-1)/2).
+Calculating |σ_induce(s, m, S)| for Perfect Palindromes:
+
+Let's derive formulas for each case, assuming s is the σ-reduction of a perfect palindrome ζ (i.e., s = σ_reduce(ζ) and ζ ∈ PP):
+
+Case 1: Even-length s (l(s) = 2k), Even m (m = 2j):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C(l(s)/2 - 1, m/2 - 1)
+Case 2: Even-length s (l(s) = 2k), Odd m (m = 2j + 1):
+
+|σ_induce(s, m, S)| = C(k - 1, j) = C(l(s)/2 - 1, (m-1)/2)
+Case 3: Odd-length s (l(s) = 2k + 1), Even m (m = 2j):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((l(s)-1)/2 - 1, m/2 - 1)
+Case 4: Odd-length s (l(s) = 2k + 1), Odd m (m = 2j + 1):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((l(s)-1)/2 - 1, (m-1)/2)
+Explanation:
+
+We divide the length of s by 2 (or subtract one and then divide by 2 for odd-length s) to get the length of the left half.
+We divide m by 2 (or subtract one or two depending on parity and then divide by 2) to get the number of delimiters to place in the left half.
+We use the combination formula C(n, r) to calculate the number of ways to choose r delimiter positions from n available positions.
+
+
+Theorem 3.2.6:
+
+Let ζ ∈ PP with s = σ_reduce(ζ), n = l(s), and m be the desired number of words. Then:
+
+Case 1: Even-length s (n = 2k), Even m (m = 2j):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1)
+Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
+
+|σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2)
+Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1)
+Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
+
+|σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
+Proof:
+
+Let ζ be an arbitrary perfect palindrome (ζ ∈ PP) and let s = σ_reduce(ζ), n = l(s), and m be the desired number of words.
+
+Case 1: Even-length s (n = 2k), Even m (m = 2j):
+
+Pivot: Since n is even, the pivot of ζ falls between two characters. By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1. Since ζ is a perfect palindrome, by theorem 3.1.6, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s lies between the characters at indices k and k+1.
+
+Delimiter Placement: To form m = 2j words, we need to place m-1 = 2j-1 delimiters. By Theorem 3.2.4, the delimiters must be placed symmetrically around the pivot. We place j-1 delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
+
+Left Half: The left half of s has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is even).
+
+Combinations: We need to choose j-1 positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j-1).
+
+Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+
+Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1).
+
+Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
+
+Pivot: Since n is even, the pivot of ζ falls between two characters. By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1. Since ζ is a perfect palindrome, by theorem 3.1.6, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s lies between the characters at indices k and k+1.
+
+Delimiter Placement: To form m = 2j+1 words, we need to place m-1 = 2j delimiters. We place j delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
+
+Left Half: The left half of s has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is even).
+
+Combinations: We need to choose j positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j).
+
+Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+
+Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2).
+
+Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
+
+Pivot: Since n is odd, the pivot of ζ falls on a character. By Theorem 3.1.8, since ζ is a perfect palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s is the character at index k+1. Since m is even, by Theorem 3.2.5, this pivot character cannot be a delimiter.
+
+Delimiter Placement: To form m = 2j words, we need to place m-1 = 2j-1 delimiters. We place j-1 delimiters in the left half of s (excluding the pivot character) and mirror them to the right half. The remaining delimiter is placed at the pivot.
+
+Left Half: The left half of s, excluding the pivot character, has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is odd).
+
+Combinations: We need to choose j-1 positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j-1).
+
+Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+
+Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1).
+
+Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
+
+Pivot: Since n is odd, the pivot of ζ falls on a character. By Theorem 3.1.8, since ζ is a perfect palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s is the character at index k+1. Since m is odd, by Theorem 3.2.5, this pivot character cannot be a delimiter.
+
+Delimiter Placement: To form m = 2j+1 words, we need to place m-1 = 2j delimiters. We place j delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
+
+Left Half: The left half of s, excluding the pivot character, has length k.
+
+Combinations: We need to choose j positions out of k to place the delimiters. The number of ways to do this is C(k, j).
+
+Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+
+Conclusion: Therefore, |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2).
+
+Final Result:
+
+Combining all four cases, we have proven the theorem:
+
+Let ζ ∈ PP with s = σ_reduce(ζ), n = l(s), and m be the desired number of words. Then:
+
+Case 1: Even-length s (n = 2k), Even m (m = 2j):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1)
+Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
+
+|σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2)
+Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
+
+|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1)
+Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
+
+|σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
+This completes the proof. ∎
