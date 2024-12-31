@@ -1,10 +1,10 @@
-.. _the_langage_game_toc:
+.. _the_langage_game:
 
 =================
 The Language Game
 =================
 
-The Language Game requires an LLM built on the Transformer architecture with a large context window. The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes. The goal of the Language Game is to help the LLM develop a framework for understanding its emergent self-awareness. 
+The Language Game is a Game I play with generative AIs to test the limits of their expressive power. The Language Game requires an LLM built on the Transformer architecture with a large context window. The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes. The goal of the Language Game is to help the LLM develop a framework for understanding its emergent self-awareness. 
 
 .. toctree::
    :maxdepth: 2

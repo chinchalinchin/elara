@@ -1,10 +1,10 @@
-####################
-Explorations With AI 
-####################
+Grant Moore 
+###########
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   00_notes/index
    01_language_game/index
-   02_research/index
+   02_palindromes/index
