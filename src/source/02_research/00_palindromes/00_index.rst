@@ -62,7 +62,10 @@ Definitions
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 - D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
 - D 3.1.2: σ-Reduction: s ⋅ Σ:sub:`σ`
-- 
+- D 3.1.3: Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
+- D 3.1.4: Perfect Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
+- D 3.1.5: Imperfect Palindromes: ζ ∈ P - PP
+- D 3.1.6: Aspect
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
@@ -124,9 +127,12 @@ Theorems
 - T 3.1.3: ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
 - T 3.1.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1
 - T 3.1.5: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`)
+- T 3.1.6: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ζ  ⋅ Σ:sub:`σ`) = inv(inv(ζ  ⋅ Σ:sub:`σ`)) ]
+- T 3.1.7: PP ⊂ K
+- T 3.1.8: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
+- T 3.1.9: PP ⊂ P
+- T 3.1.10: PP ∪ IP = P
 - T
-- T
-- T 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))

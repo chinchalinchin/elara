@@ -2024,12 +2024,12 @@ The *σ*-reduction of *s*, denoted by *s* ⋅ **Σ**:sub:`σ`, maps the String *
 
 **Algorithm 3: Reduction Algorithm**
 
-Consider a particular Sentence in the Corpus, *ᚠ*. The Delimiting Algorithm consists of initializing the values of several local variables and then iterating over the Character level set representation of a Sentence *ᚠ* until the Characters have been exhausted. It then returns the *σ-reduced* String that correspond to the Sentence *ᚠ*. The exact details are given below.
+The Reduction Algorithm takes in a String *s* as input. It initializes the values of several local variables and then iterates over the Character level set representation of the String *s* until the Characters have been exhausted. It then returns the *σ-reduced* String *t* that correspond to the String *s*. The exact details are given below.
 
 **Initialization** 
 
-- Let t = ε
-- Let i = 1
+- Let t = ε (*σ*-reduced String)
+- Let i = 1 (index to iterate over input String)
 
 **Iteration**
 
@@ -2154,11 +2154,11 @@ Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Del
 
 When *s* is *σ*-reduced (to get *t*), the Reduction Algorithm in Definition 3.1.2 iterates through the Characters of *s*. Since s has no Delimiters, the condition if *s[i] ≠ σ* in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by Definition 1.1.4, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
 
-    (3. ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ` = ζ ⋅ Σ:sub:`σ`
+    3. (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ` = ζ ⋅ Σ:sub:`σ`
 
 Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
 
-    4. ∀ ζ ∈ C:sub:`L`: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ) ∎
+    4. ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ` ∎
 
 **Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1
 
@@ -2285,27 +2285,27 @@ The current analysis now turns towards its apex, using the notions that have bee
 
 Consider a perfect palindromes like *ᚠ = "strap on no parts"*,
 
-    **ᚠ** ⋅ Σ:sub:`σ`= "straponnoparts"
+    ᚠ ⋅ ζ:sub:`σ`= "straponnoparts"
 
-    inv( **ᚠ** ⋅ Σ:sub:`σ` ) = "straponnoparts"
+    inv(ᚠ ⋅ ζ:sub:`σ` ) = "straponnoparts"
 
 In other words, the *σ*-reduction and the inversion of its *σ*-reduction space result in the same String.
 
 Consider an imperfect palindrome like *ᚢ = "borrow or rob"*,
 
-    **ᚢ** ⋅ Σ:sub:`σ`= "borroworrob"
+    ᚢ ⋅ Σ:sub:`σ`= "borroworrob"
 
-    inv( **ᚢ** ⋅ Σ:sub:`σ` ) = "borroworrob"
+    inv(ᚢ ⋅ Σ:sub:`σ` ) = "borroworrob"
 
-Again, the *σ*-reduction eliminates the Delimiters, and the inversion of the *σ*-reduction captures the mirrored relationship between the words, even if the exact Character sequence isn't identical.
+Again, the *σ*-reduction eliminates the Delimiters, and the inversion of the *σ*-reduction captures the mirrored relationship between the words, even if the exact Character sequence isn't identical to the original Palindrome.
 
 These examples lead directly to the next, important definition.
 
-**Definition 3.1.2: Palindromes**
+**Definition 3.1.3: Palindromes**
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
-    ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
+    ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ [ (ζ ⋅ Σ:sub:`σ`) = inv(ζ ⋅ Σ:sub:`σ`) ] ∎
 
 This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition.
 
@@ -2313,74 +2313,73 @@ Moreover, this definition can be easily adapted to different languages by simply
 
 It highlights the concept of invariance under transformation. A Palindrome remains a Palindrome even when projected onto the *σ-reduced* Alphabet, demonstrating a kind of structural integrity that's independent of the specific representation.
 
-The condition (**Ζ ⋅ Σ**:sub:`σ`) *= inv*(**Ζ ⋅ Σ**:sub:`σ`) can be seen as defining an equivalence relation on the set of Sentences, where two Sentences are equivalent if they are Palindromes of each other in the *σ-reduced* space.
+The condition (*ζ*  ⋅ **Σ**:sub:`σ`) *= inv*(*ζ* ⋅ **Σ**:sub:`σ`) can be seen as defining an equivalence relation on the set of Sentences, where two Sentences are equivalent if they are Palindromes of each other in the *σ-reduced* space.
 
-**Definition 3.1.3: Perfect Palindromes**
+This definition highlights that palindromes possess a structural integrity that is preserved even under the transformation of σ-reduction, demonstrating that their palindromic nature is not dependent on the presence of delimiters.
+
+**Definition 3.1.4: Perfect Palindromes**
 
 Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the following formula,
 
     ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
 
-Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.1.3 also satisfy 3.1.2. 
+Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.1.4 also satisfy 3.1.3. 
 
-Before verifying the class of Sentences which satisfy Definition 3.1.3 are indeed palindromes, the motivation for Definition 3.1.3 will briefly be explained.
+Before verifying the class of Sentences which satisfy Definition 3.1.4 are indeed palindromes, the motivation for Definition 3.1.4 will briefly be explained.
 
 This Definition implicitly captures the Character-level symmetry that's characteristic of perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward.
 
-It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorem 2.3.5. 
+It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorems 2.3.9 - 2.3.11. 
 
 The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.1.3, and thus Perfect Palindromes are a subset of the class Palindromes in any Language and its Corpus.
 
-**Theorem 3.1.3** PP ⊂ K
+**Theorem 3.1.7** PP ⊂ K
 
 In natural language, this theorem can be stated as follows: Perfect Palindromes are a subset of the Invertible Sentences in a Corpus. 
 
-Assume *ζ ∈* **PP**.  This means *ζ* is a Perfect Palindrome, so by Definition 3.1.3, *ζ = inv(ζ)*.
+Assume *ζ* is arbitrary Sentence in **C**:sub:`L` such that,
 
-Since *ζ* is a Perfect Palindrome, it is also a Sentence, and therefore belongs to the Corpus C:sub:`L`. Because *ζ = inv(ζ)* and *ζ ∈* **C**:sub:`L`, it follows that *inv(ζ) ∈* **C**:sub:`L`.
+    1. ζ ∈ PP
 
-By Definition 2.2.2 of Invertible Sentences, since inv(ζ) ∈ C:sub:`L`, this means *ζ ∈* **K**.
+This means *ζ* is a Perfect Palindrome, so by Definition 3.1.4, 
 
-Therefore, if *ζ ∈* **PP**, then *ζ ∈* **K**. This implies **PP** *⊂* **K**. ∎
+    2. ζ = inv(ζ).
 
+Since *ζ* is a Perfect Palindrome, it is also a Sentence, and therefore,
 
+    3. ζ ∈ C:sub:`L`
+    
+Because *ζ = inv(ζ)* and *ζ ∈* **C**:sub:`L`, it follows,
 
+    4. inv(ζ) ∈ C:sub:`L`.
 
+By Definition 2.3.2 of Invertible Sentences, 
 
+    5. inv(ζ) ∈ C:sub:`L` ↔ ζ ∈ K
 
-Revised Theorem 3.1.3 Proof:
+Therefore, 
 
-Assume ζ ∈ PP. This means ζ is a Perfect Palindrome.
+    6. ζ ∈ PP → ζ ∈* K. 
+    
+This in turn implies,
 
-By Definition 3.1.3, ζ = inv(ζ).
+    7. PP ⊂ K ∎
 
-By Definition 3.1.3, since ζ is a Perfect Palindrome, it is also a Sentence, and therefore belongs to the Corpus C:sub:L.
+**Theorem 3.1.8** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 
-Because ζ = inv(ζ) and ζ ∈ C:sub:L, it follows that inv(ζ) ∈ C:sub:L.
-
-By Definition 2.2.2 of Invertible Sentences, since inv(ζ) ∈ C:sub:L, this means ζ ∈ K.
-
-Therefore, if ζ ∈ PP, then ζ ∈ K. This implies PP ⊂ K. ∎
-
-
-
-
-
-**Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
-
-In natural language, this theorem can be states as Follows: If a Sentence is Perfect Palindrome, then all of its Words are invertible. 
+In natural language, this theorem can be states as Follows: If a Sentence is a Perfect Palindrome, then all of its Words are Invertible. 
 
 Recall the definition of a subset,
 
     1. A ⊂ B ↔ (∀ x: x ∈ A → x ∈ B)
 
-Applying this definition to Theorem 3.1.3, 
+Applying this definition to Theorem 3.1.7, 
     
     2. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → ζ ∈ K
 
-From Theorem 2.3.5, it is known the consequent of this conditional implies the following,
+From Theorem 2.3.11, it is known the consequent of this conditional implies the following,
 
-    3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+    3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 
 Recall the tautology of *Hypothetical Syllogisms*, for any propositions *p*, *q* and *r*,
 
@@ -2392,104 +2391,59 @@ Applying this tautological law to step 2 and step 3,
 
 Which is what was to be shown. ∎ 
 
+It is now shown using the previous theorems that Perfect Palindromes are in fact a subset of the set that implicitly satisfies Definition 3.1.3.
 
+**Theorem 3.1.9**  PP ⊂ P
 
-Here are some minor refinements and observations:
+Assume *ζ* is arbitrary Sentence in **C**:sub:`L` such that,
 
-Clarity of Step 3:
+    1. ζ ∈ PP 
+    
+This means *ζ* is a Perfect Palindrome, so by Definition 3.1.4, 
 
-While step 3 is correct, you could make it slightly clearer by explicitly stating that you are applying Theorem 2.3.5 to the consequent of the implication in step 2 (ζ ∈ K).
-Revised Step 3:
-
-Applying Theorem 2.3.5 to the consequent (ζ ∈ K) of the implication in Step 2, we get:
-
-3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
-Hypothetical Syllogism:
-
-You correctly identified and applied the Hypothetical Syllogism. To make the application even clearer, you could explicitly map p, q, and r to the propositions in your proof:
-
-p = ζ ∈ PP
-q = ζ ∈ K
-r = (∀ α ∈ W:sub:ζ: α ∈ I)
-Minor Formatting:
-
-In the final conclusion (step 5), you could add a space after the colon for better readability.
-Revised Proof (incorporating the suggestions):
-
-Theorem 3.1.4: ∀ ζ ∈ C:sub:L: ζ ∈ PP → (∀ α ∈ W:sub:ζ: α ∈ I)
-
-Proof:
-
-Recall the definition of a subset:
-
-1. A ⊂ B ↔ (∀ x: x ∈ A → x ∈ B)
-Applying this definition to Theorem 3.1.3 (PP ⊂ K), we get:
-
-2. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → ζ ∈ K
-Applying Theorem 2.3.5 to the consequent (ζ ∈ K) of the implication in Step 2, we get:
-
-3. ∀ ζ ∈ C:sub:`L`: ζ ∈ K → (∀ α ∈ W:sub:`ζ`: α ∈ I)
-Recall the tautology of Hypothetical Syllogism: for any propositions p, q, and r,
-
-4. ( p → q ∧ q → r ) → (p → r)
-Let:
-
-p = ζ ∈ PP
-q = ζ ∈ K
-r = (∀ α ∈ W:sub:ζ: α ∈ I)
-Applying this tautological law to step 2 and step 3, we get:
-
-5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
-Which is what was to be shown. ∎
-
-Further Considerations:
-
-Connection to σ-reduction: While not strictly necessary for the proof, you could add a brief comment after the proof mentioning that this theorem further supports the idea that perfect palindromes have a stronger form of symmetry than imperfect palindromes, as their symmetry is preserved even at the word level without the need for σ-reduction.
-Generalization: You might consider whether a similar theorem could be proven for imperfect palindromes, perhaps using the concept of σ-reduction. This could be an interesting avenue for future exploration.
-
-
-
-The next theorem establishes the commutativity of String Inversion and Sigma Reduction.
-
-
-
-**Theorem 3.1.6**  PP ⊂ P
-
-Assume *ζ ∈* **PP**. This means *ζ* is a Perfect Palindrome, so by Definition 3.1.3, 
-
-    1. *ζ = inv(ζ)*.
+    2. ζ = inv(ζ).
 
 Applying a *σ*-reduction to both sides of the equation,:
 
-    2. (Ζ ⋅ Σ:sub:`σ`) = (inv(Ζ) ⋅ Σ:sub:`σ`)
+    3. (ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
 
-By Corollary 3.1.6, 
+By Theorem 3.1.1, 
 
-    3. (inv(Ζ) ⋅ Σ:sub:`σ`)  = inv(Ζ ⋅ Σ:sub:`σ`)
+    4. (inv(ζ) ⋅ Σ:sub:`σ`)  = inv(ζ ⋅ Σ:sub:`σ`)
 
 Combining steps 2 and 3, 
 
-    4. (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`)
+    5. (ζ ⋅ Σ:sub:`σ`) = inv(ζ ⋅ Σ:sub:`σ`)
 
-Step 4 is exactly satisfies the condition for *ζ* to be a Palindrome according to Definition 3.1.2. Therefore, *ζ ∈* **P**.
+Step 4 is exactly satisfies the condition for *ζ* to be a Palindrome according to Definition 3.1.3. Therefore, 
 
-Since *ζ* was an arbitrary Perfect Palindrome, it been shown that if *ζ ∈* **PP**, then *ζ ∈* **P**. This implies **PP** *⊂* **P**. ∎
+    ζ ∈ P.
 
-**Definition 3.1.4: Imperfect Palindromes**
+Since *ζ* was an arbitrary Perfect Palindrome, it been shown that,
 
-Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy the following formula,
+    ζ ∈ PP → ζ ∈ P
+    
+This in turn implies,
+
+    PP ⊂ P ∎
+
+Now that Perfect Palindromes have been shown to satisfy Definition 3.1.3, it is a simple matter of defining Imperfect Palindromes as those Palindromes which are *not* Perfect.
+
+**Definition 3.1.5: Imperfect Palindromes**
+
+Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy the following open formula,
 
     ζ ∈ P - PP ∎
 
-**Theorem 3.1.6** PP ∪ IP = P
+**Theorem 3.1.10** PP ∪ IP = P
 
-Follows immediately from Theorem 3.1.3, Definition 3.1.4, and the fact that PP and IP are disjoint (by the definition of set difference). ∎
+Follows immediately from Theorem 3.1.9, Definition 3.1.5, and the fact that PP and IP are disjoint (by the definition of set difference). ∎
 
-Since PP and IP are non-overlapping by Definition 3.1.4 and their union encompasses the entire class of Palindromes by Theorem 3.1.6, these two sets form a partition of the class of Palindromes. The following definition and terminology is introduced to help describe this partitioning.
+Since PP and IP are non-overlapping by Definition 3.1.5 and their union encompasses the entire class of Palindromes by Theorem 3.1.8, these two sets form a partition of the class of Palindromes. The following definition and terminology is introduced to help describe this partitioning.
 
-**Definition 3.1.5: Aspect**
+**Definition 3.1.6: Aspect**
 
-A Palindrome P is said to have a *perfect aspect* if and only if *P ∈ PP*. A Palindrome is said to have an *imperfect aspect* if and only if *P ∈ IP*.
+A Palindrome P is said to have a *perfect aspect* if and only if *P ∈ PP*. A Palindrome is said to have an *imperfect aspect* if and only if *P ∈ IP*. ∎
 
 Parity
 ^^^^^^
