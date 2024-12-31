@@ -173,8 +173,8 @@ A note on the terminology introduced in this work is in order. When a semantic t
 
 As the thrust of the main results in Section III is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I is in part an effort to ensure the applicability of the results in Section II.III and Section III. The core theorems of Section III could be proved in a degenerate form in a system with less notational complexity, but the depth of their insight would be lost in the vagueness of definitions.
 
-Section I: Defintions 
-=====================
+Section I: Definitions 
+======================
 
 Some general notation adopted throughout the course of this work is given below.
 
@@ -1994,22 +1994,22 @@ With these assumptions, the analysis is confined to the dimensions of *aspect* a
 Section III.I: Palindromes 
 --------------------------
 
-The study of palindromes will revolve around a novel linguistic operation, termed a *σ-reduction*. This operation will allow the semantic content of a palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise definition of a palindrome within purely formal language.
+The study of palindromes will revolve around a novel linguistic operation, termed a *σ*-reduction. This operation will allow the semantic content of a palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise definition of a palindrome within a purely formal language.
 
 σ-Reductions
 ^^^^^^^^^^^^
 
-Before defining a *σ-reduction*, the preliminary concept of a *σ-reduced Alphabet* must be introduced. The following definition serves as the basis for constructing the operation of *σ-reduction*.
+Before defining a *σ*-reduction, the preliminary concept of a *σ-reduced Alphabet* must be introduced. The following definition serves as the basis for constructing the operation of *σ*-reduction.
 
-As has been seen with examples of *imperfect palindromes* like "Borrow or rob", a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, making it lose semantic coherence. *Imperfect palindromes* must be rearranged Delimter-wise to retrieve the original form. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiter, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
+As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, making it lose semantic coherence. Imperfect Palindromes* must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiter, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
 
 **Definition 3.1.1: σ-Reduced Alphabet**
 
-A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A sigma-reduced Alphabet is denoted Σ:sub:`σ`. Formally
+A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A sigma-reduced Alphabet is denoted Σ:sub:`σ`. Formally,
 
-    Σ:sub:`σ` = Σ - {σ}
+    Σ:sub:`σ` = Σ - { σ }
 
-In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of imperfect palindromes must be removed. This is accomplished through the introduction of the operation of *sigma reduction*.
+In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of *sigma reduction*.
 
 **Definition 3.1.2: σ-Reduction**
 
@@ -2018,313 +2018,127 @@ Let *s* be a String with length *l(s)* and Character-level representation
     1. S = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(s), 𝔞:sub:`l(s)`) } 
     2. 𝔞:sub:`i` ∈ Σ.
 
-The *σ-reduction* function (or simply, the *σ-reduction*), denoted by *S ⋅ Σ*:sub:`σ`, maps the String *s* to a new String *t* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *S ⋅ Σ*:sub:`σ` is defined and constructed using the *σ-Reduction Algorithm*,
+The *σ*-reduction of *s*, denoted by *s* ⋅ **Σ**:sub:`σ`, maps the String *s* to a new String *t* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *s* ⋅ **Σ**:sub:`σ` is defined and constructed using the *Reduction Algorithm*,
 
-**σ-Reduction Algorithm**
+**Reduction Algorithm**
+
+**Algorithm 3: Reduction Algorithm**
+
+Consider a particular Sentence in the Corpus, *ᚠ*. The Delimiting Algorithm consists of initializing the values of several local variables and then iterating over the Character level set representation of a Sentence *ᚠ* until the Characters have been exhausted. It then returns the *σ-reduced* String that correspond to the Sentence *ᚠ*. The exact details are given below.
 
 **Initialization** 
 
-- Let t be the empty string, *t = ε*.
+- Let t = ε
+- Let i = 1
 
 **Iteration**
 
-- For each Character *𝔞*:sub:`i` in **S**, if *𝔞*:sub:`i` ≠ σ, then concatenate *𝔞*:sub:`i` to the end of *t*.
+- If s[i] ≠ σ:
+    - Let u = (s[i])t
+    - Let t = u
+- If i = l(s):
+    - Apply Basis Clause of Definition 1.1.1
+    - Return t
+- Let j = i + 1
+- Let i = j ∎
+
+The following example shows how to apply the Reduction Algorithm to construct the σ-reduction of a String.
 
 **Example**
 
-Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" }*. Note in this example *σ = " "*. The sigma reduction of *s* is given by,
+Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" }*. Note in this example *σ = " "* and *l(s) = 5*. The value of the variables in the Reduction Algorithm after each iteration are given below,
 
-    S = (a, σ, b, σ, c)
-    
-    Σ' = { "", "a", "b", "c" }
+    1. i = 2, t = "a"ε
+    2. i = 3, t = "a"ε
+    3. i = 4, t = "a"ε"b"
+    4. i = 5, t = "a"ε"b"
+    5. i = 5, t = "abc"
+        
+The result of the σ-reduction of *s* is thus given by,
 
-    S ⋅ Σ' = "abc"
-
-
-Definition 3.1.2 (σ-Reduction):
-
-The definition is mostly clear, but the notation S ⋅ Σ:sub:σ could be made more explicit. While you explain the analogy to a dot product, it might be helpful to state explicitly that this represents the application of the σ-reduction function to the string S.
-You use both S and s to refer to the input string. It would be better to stick to one consistently. Since you use s in the introductory paragraph, I suggest using s throughout the definition and algorithm as well.
-Here's a suggested revision:
-
-Definition 3.1.2: σ-Reduction
-
-Let s be a String with length l(s) and Character-level representation
-
-S = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(s), 𝔞:sub:`l(s)`) }
-where 𝔞:sub:`i` ∈ Σ.
-The σ-reduction function (or simply, the σ-reduction), denoted by σ_reduce(s), maps the String s to a new String t in the σ-reduced alphabet Σ:sub:σ by removing all occurrences of the Delimiter Character. Formally, σ_reduce(s) = t, and t is constructed using the σ-Reduction Algorithm.
-
-σ-Reduction Algorithm
-
-Initialization
-
-Let t be the empty string, t = ε.
-Iteration
-
-For each Character 𝔞:sub:i in S, if 𝔞:sub:i ≠ σ, then concatenate 𝔞:sub:i to the end of t.
-Example of σ-Reduction:
-
-The example using "a b c" is clear and helpful.
-The explanation after the example correctly highlights the loss of information during σ-reduction. You could also mention that the order of the non-delimiter characters is preserved.
-
-
-
-
-
+    s ⋅ Σ' = "abc" ∎
 
 The notation for sigma reduction is meant to evoke the idea of a vector dot project. The analogy to a vector projection is indeed apt. While not a strict mathematical equivalence, it captures the idea of transforming the string from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
 
-The *σ*-reduced alphabet (**Σ**:sub:`σ`) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (**S ⋅ Σ**:sub:`σ`) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
+The *σ*-reduced Alphabet (**Σ**:sub:`σ`) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (*s* ⋅ **Σ**:sub:`σ`) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
 
-Note that a *σ-reduction* is not a one-to-one operation. It is possible for the *σ-reduction* of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
+Note that a *σ*-reduction is not a one-to-one operation. It is possible for the *σ*-reduction of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
 
-As an example, consider the (partial, ignoring punctuality) Palindromes *ᚠ = "madam im adam"* and *ᚢ = "mad am i madam"*. The *σ-reduction* of both of these Sentences would map to the *σ-reduced* value of *madamiadam".
+As an example, consider the (partial, ignoring punctuality) Palindromes *ᚠ = "madam im adam"* and *ᚢ = "mad am i madam"*. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
 
-Both the Palindrome and the alternative Sentence have the same *σ-reduction*, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original word boundaries and sentence structure are lost.
+Both the Palindrome and the alternative Sentence have the same *σ*-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original word boundaries and sentence structure are lost.
 
-During a *σ-reduction*, information in lost with respect to the following semantic categories,
+The following theorems establish the basic properties of *σ*-reductions. 
 
-  - Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
-  - Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
-  - Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.
+**Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`: inv(ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
 
-However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ-reduction* of a Sentence.
+Let *ζ* be an arbitrary sentence in C:sub:L. Let *s* be the *σ*-reduction of *ζ*,
 
-**Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`, ∃ α ∈ L: α ⊂:sub:`s` ( Ζ ⋅ Σ:sub:`σ` )
+    1. s = ζ ⋅ Σ:sub:`σ`
 
-REVISION: ∀ ζ ∈ C:sub:`L`, ∀ (i, α) ∈ W:sub:`ζ`: α ⊂:sub:`s` σ_reduce(ζ)
+Let *t* be the Inverse of *s*,
 
-Revised Theorem 3.1.1: ∀ ζ ∈ C:sub:L, ∀ α ∈ W:sub:ζ: α ⊂:sub:s σ_reduce(ζ)
+    2. t = inv(s).
 
-Translation: For every sentence ζ in the corpus C:sub:L, and for every word α in the word-level representation of ζ, α is contained in the σ-reduction of ζ.
+Let *u* be the Inverse of *ζ*,
 
-Proof:
+    3. u = inv(ζ). 
+    
+Let *v* be the *σ*-reduction of *u*,
 
-Let ζ be an arbitrary sentence in C:sub:L, and let α be an arbitrary word in W:sub:ζ.
+    4. v = u ⋅ Σ:sub:`σ` = inv(ζ) ⋅ Σ:sub:`σ`. 
 
-Word-Level Representation: By Definition 2.1.3, W:sub:ζ is the word-level representation of ζ, obtained by splitting ζ at each delimiter.
+Since *s* contains only the non-Delimiter characters of *ζ* in their original order, and *t* is the reversed sequence of Characters in *s*, *t* contains only the non-Delimiter characters of *ζ* in reversed order.
 
-Definition of α: Since α ∈ W:sub:ζ, α is one of the words in the sequence of words that form ζ.
+Similarly, since *u* is the reverse sequence of Characters in *ζ*, and *v* is obtained by removing Delimiters from *u*, *v* also contains only the non-Delimiter characters of *ζ* in the reversed order.
 
-Structure of ζ: This means that ζ can be written as a concatenation of the form:
+Therefore, by Definition 1.1.4, *t* and *v* must be the same String, as they both contain the same Characters in the same order. Since *t = v*, 
 
-ζ = s:sub:1 σ α σ s:sub:2
-where s:sub:1 and s:sub:2 are (possibly empty) strings, and σ represents the delimiter character.
+    5. inv(ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
 
-σ-reduction: By the definition of σ-reduction (Definition 3.1.2), σ_reduce(ζ) is obtained by removing all delimiters from ζ. Therefore:
+Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
 
-σ_reduce(ζ) = σ_reduce(s:sub:1) σ_reduce(α) σ_reduce(s:sub:2)
-Axiom W.1: By Axiom W.1, words in L do not contain delimiters. Since α ∈ L (by Axiom S.2), σ_reduce(α) = α.
+    6. ∀ ζ ∈ C:sub:`L`: inv(ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`) ∎
 
-Substitution: Substituting α for σ_reduce(α) in the expression for σ_reduce(ζ), we get:
+This corollary is essential because it allows free movement between the Inverse of a *σ*-reduction and the *σ*-reduction of an Inverse. In other words, it establishes the commutativity of inversion and reduction. 
 
-σ_reduce(ζ) = σ_reduce(s:sub:1) α σ_reduce(s:sub:2)
-Containment: From this, we can see that α is a substring of σ_reduce(ζ). Therefore, by the definition of containment (Definition 1.1.4):
+**Theorem 3.1.2** ∀ ζ,ξ ∈ C:sub:`L`: ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`)
 
-α ⊂:sub:s σ_reduce(ζ)
-Conclusion: Since ζ and α were arbitrary, we can generalize:
+Let *ζ* and *ξ* be arbitrary sentences in **C**:sub:`L`. Let **Ζ** and **Ξ** be the character-level representations of *ζ* and *ξ*, respectively,
 
-∀ ζ ∈ C:sub:L, ∀ α ∈ W:sub:ζ: α ⊂:sub:s σ_reduce(ζ)
-This completes the proof. ∎
+    1. Ζ = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
 
-This theorem can be stated in natural language as follows: Given the *σ-reduction* of a Sentence, there exists a Word in its Language that is contained in the *σ-reduced* string.
+    2. Ξ = (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(ξ))`
 
-Assume *ζ ∈ C*:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*.
+Let *ζξ* be the concatenation of *ζ* and *ξ*. The character-level representation of *ζξ* is,
 
-By the Axiom of Word Extraction S.3,
+    3. ΖΞ = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(ξ)`)
 
-    1. ∀ ζ ∈ C:sub:`L`, ∀ α ∈ W:sub:`ζ`: α ∈ L.
+Let *s* be the σ-reduction of *ζξ*. Let *t* be the *σ*-reduction of *ζ*. Let *u* be the *σ*-reduction of *ζξ*,
 
-Since *ζ* is a sentence, by Theorem 2.3.2 (*Λ(ζ) ≥ 1*), it must contain at least one word. Therefore, W:sub:`ζ` is not empty. Let *α* be any word in **W**:sub:`ζ`. By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  
+    4. s = ζξ ⋅ Σ:sub:`σ`
+    5. t = ζ ⋅ Σ:sub:`σ`
+    6. u = ξ ⋅ Σ:sub:`σ`
 
-Let **A** be the Character-level representation of *α*,
+Let *v* be the concatenation of the Strings *t* and *u*,
 
-    (𝔞:sub:`1`, 𝔞:sub:`2`, ..., 𝔞:sub:`l(α)`)
+    7. v = tu = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`)
 
-Let Z' = be the Character-level representation of Ζ ⋅ Σ:sub:σ.
+Since *σ*-reduction only removes Delimiters and doesn't change the order of non-Delimiter Characters, the non-Delimiter characters in *s* (the *σ*-reduction of *ζξ*) are the same as the non-Delimiter Characters in *ζ* followed by the non-Delimiter Characters in ξ.
 
-    (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(Ζ ⋅ Σ:sub:σ)`)
+The non-Delimiter characters in *v* (the concatenation of (*ζ* ⋅ **Σ**:sub:`σ`) and (*ξ* ⋅ **Σ**:sub:`σ`) are also the non-Delimiter characters in *ζ* followed by the non-delimiter characters in *ξ*.
 
-Since *α* is a contiguous subsequence of non-Delimiter (by the Discovery Axiom W.1) and non-Empty Characters (by Theorem 1.2.4) in **Ζ**, there exists an index k such that:
+Therefore, by Definition 1.1.4, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since *s = v*, 
 
-    𝔞:sub:`1` = 𝔟:sub:`k`
-    𝔞:sub:`2` = 𝔟:sub:`k+1`
-    ...
-    𝔞:sub:`l(α)` = 𝔟:sub:`k+l(α)-1`
+    ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`)
 
-Define the function *f*: **N**:sub:`l(α)` → **N**:sub:`l(Ζ ⋅ Σ:sub:σ`)` as,
+Since ζ and ξ were arbitrary sentences in C:sub:L, this can be generalized,
 
-    f(i) = k + i - 1.
+    ∀ ζ, ξ ∈ C:sub:`L`: ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`) ∎
 
-The function *f* is clearly strictly increasing and consecutive, as it maps consecutive indices in *α* to consecutive indices in **Ζ ⋅ Σ**:sub:`σ`. By construction, f satisfies the condition,
+Theorem 3.1.1 establishes a type of commutativity. Theorem 3.1.2 further demonstrates the "algebraic" nature of *σ*-reduction and its interaction with other String operations. It shows that *σ*-reduction "distributes" over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that *σ*-reduction and inversion are not just arbitrary operations but are deeply connected to the underlying structure of Strings and Sentences.
 
-    ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`.
-
-Therefore, by Definition 1.1.7 of Containment, 
-
-    α ⊂:sub:`s` (Ζ ⋅ Σ:sub:`σ`). ∎
-
-
-
-
-
-
-
-Theorem 3.1.1: ∀ ζ ∈ C:sub:L, ∃ α ∈ L: α ⊂:sub:s ( σ_reduce(ζ) )
-
-Proof:
-
-Assume ζ ∈ C:sub:L. By Axiom S.2 (Word-Sentence Duality), since ζ is a sentence in the corpus, there exists a word α ∈ L such that α is contained in ζ.
-
-Let s = σ_reduce(ζ).
-
-Since α ⊂:sub:s ζ, there exists a sequence of indices i₁ < i₂ < ... < i:sub:l(α) such that the character at position i:sub:j in ζ is the same as the character at position j in α, for all j from 1 to l(α).
-
-Since α is a word, by Axiom W.1, it does not contain any delimiter characters. Therefore, the subsequence of characters in ζ corresponding to α will also be present in s after the removal of delimiters. Thus, α is also contained in s.
-
-Therefore, we have shown that for any sentence ζ in the corpus, there exists a word α in the language such that α is contained in the σ-reduction of ζ:
-
-∀ ζ ∈ C:sub:`L`, ∃ α ∈ L: α ⊂:sub:`s` ( σ_reduce(ζ) )
-
-
-
-
-
-**Theorem 3.1.2** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)) ]
-
-In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ-reduction*.
-
-Assume *ζ ∈* **C**:sub:`L`` and *ζ ∈* **K**, i.e. *ζ* is an Invertible Sentence. Let the Word-level representation of *ζ* by given by,
-
-    1. W:sub:`ζ`` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
-
-By Theorem 2.3.5, since *ζ* is invertible, all its Words are also Invertible,
- 
-    2. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ I.
-
-The σ-reduction of *ζ*, **Ζ ⋅ Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the σ-reduction concatenates the Words in **W**:sub:`ζ``:
-
-    3. Ζ ⋅ Σ:sub:`σ`` = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
-
-Applying Theorem 1.2.5 repeatedly,
-
-    4. inv(Ζ ⋅ Σ:sub:σ) = inv((α:sub:`1`)(α:sub:`2`) ... (α:sub:`Λ(ζ)`))
-
-To get,
-
-    5.  inv(Ζ ⋅ Σ:sub:`σ`)  = (inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`))
-
-Applying a second Inversion,
-
-    6. inv(inv(Ζ ⋅ Σ:sub:`σ)) = inv((inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`)))
-
-Applying Theorem 1.2.5 again,
-
-    7. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (inv(inv(α:sub:`1`))) (inv(inv(α:sub:`2`)))...(inv(inv(α:sub:`Λ(ζ)`)))
-
-Finally, applying Theorem 1.2.4 (*inv(inv(s)) = s*)
-
-    8. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
-
-Therefore, combining step 3 and step 8
-
-    inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)). ∎
-
-The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ-reduction* whose Inverse does not equal itself. 
-
-These ideas will be expounded until in Section III.III, when the theorems and results of this work are used to implement a Palindrome search algorithm.
-
-
-**Theorem** ∀ ζ ∈ C:sub:`L`: inv(Ζ ⋅ Σ:sub:`σ`) = (inv(Ζ) ⋅ Σ:sub:`σ`)
-
-
-
-Proof:
-
-Let ζ be an arbitrary sentence in C:sub:L.
-
-Character-Level Representation: Let Ζ be the character-level representation of ζ:
-
-Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
-σ-reduction: Let s = σ_reduce(ζ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζ.
-
-Inverse of σ-reduction: Let t = inv(s) = inv(σ_reduce(ζ)). By the definition of inversion (Definition 1.2.4), t is the reversed sequence of characters in s.
-
-Inverse of ζ: Let u = inv(ζ). By the definition of inversion, u is the reversed sequence of characters in ζ.
-
-σ-reduction of Inverse: Let v = σ_reduce(u) = σ_reduce(inv(ζ)). v is obtained by removing all delimiters from u.
-
-Key Observation: Since s contains only the non-delimiter characters of ζ in their original order, and t is the reverse of s, t contains only the non-delimiter characters of ζ in reversed order.
-
-Similarly, since u is the reverse of ζ, and v is obtained by removing delimiters from u, v also contains only the non-delimiter characters of ζ in reversed order.
-
-Equality: Therefore, t and v must be the same string, as they both contain the same characters in the same order (the non-delimiter characters of ζ in reversed order).
-
-Conclusion: Since t = v, we have:
-
-inv(σ_reduce(ζ)) = σ_reduce(inv(ζ))
-Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
-
-*   ∀ ζ ∈ C:sub:`L`: inv(σ_reduce(ζ)) = σ_reduce(inv(ζ))
-This completes the proof. ∎
-
-Explanation:
-
-The proof hinges on the fact that σ-reduction only removes delimiters and doesn't change the order of the non-delimiter characters. Therefore, reversing the string before or after removing delimiters results in the same sequence of non-delimiter characters (in reversed order).
-
-Importance of this Corollary:
-
-This corollary is essential because it allows us to freely move between the inverse of a σ-reduction and the σ-reduction of an inverse. This will be crucial for proving properties of palindromes, as we'll often need to consider both inversions and σ-reductions.
-
-**Theorem** ∀ ζ,ξ ∈ C:sub:`L`: ΖΞ ⋅ Σ:sub:`σ` = (Ζ⋅ Σ:sub:`σ`)(Ξ ⋅ Σ:sub:`σ`)
-
-Theorem: ∀ ζ, ξ ∈ C:sub:L: σ_reduce(ζξ) = σ_reduce(ζ)σ_reduce(ξ)
-
-Proof:
-
-Let ζ and ξ be arbitrary sentences in C:sub:L.
-
-Character-Level Representations: Let Ζ and Ξ be the character-level representations of ζ and ξ, respectively:
-
-Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
-Ξ = (𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(ξ))
-Concatenation: Let ζξ be the concatenation of ζ and ξ. The character-level representation of ζξ is:
-
-ΖΞ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ), 𝔟:sub:1, 𝔟:sub:2, ..., 𝔟:sub:l(ξ))
-σ-reduction of ζξ: Let s = σ_reduce(ζξ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζξ.
-
-σ-reduction of ζ and ξ: Let t = σ_reduce(ζ) and u = σ_reduce(ξ). By the definition of σ-reduction, t and u are obtained by removing all delimiters from ζ and ξ, respectively.
-
-Concatenation of σ-reductions: Let v = tu = σ_reduce(ζ)σ_reduce(ξ). v is the concatenation of the strings t and u.
-
-Key Observation: Since σ-reduction only removes delimiters and doesn't change the order of non-delimiter characters, the non-delimiter characters in s (the σ-reduction of ζξ) are the same as the non-delimiter characters in ζ followed by the non-delimiter characters in ξ.
-
-Similarly: The non-delimiter characters in v (the concatenation of σ_reduce(ζ) and σ_reduce(ξ)) are also the non-delimiter characters in ζ followed by the non-delimiter characters in ξ.
-
-Equality: Therefore, s and v must be the same string, as they both contain the same characters in the same order (the non-delimiter characters of ζ followed by the non-delimiter characters of ξ).
-
-Conclusion: Since s = v, we have:
-
-σ_reduce(ζξ) = σ_reduce(ζ)σ_reduce(ξ)
-Since ζ and ξ were arbitrary sentences in C:sub:L, we can generalize:
-
-*   ∀ ζ, ξ ∈ C:sub:`L`: σ_reduce(ζξ) = σ_reduce(ζ)σ_reduce(ξ)
-This completes the proof. ∎
-
-Explanation:
-
-The proof relies on the fact that σ-reduction only removes delimiters and preserves the order of non-delimiter characters. Therefore, applying σ-reduction to the concatenation of two sentences is the same as concatenating the σ-reductions of the individual sentences.
-
-Naming the Theorem:
-
-This theorem could be called the "Distributivity of σ-reduction over Concatenation" or the "σ-reduction Concatenation Property".
-
-Implications:
-
-This theorem further demonstrates the "algebraic" nature of σ-reduction and its interaction with other string operations. It shows that σ-reduction "distributes" over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that σ-reduction and inversion are not just arbitrary operations but are deeply connected to the underlying structure of strings and sentences.
-
-**Theorem** ∀ ζ ∈ C:sub:`L`: (Ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= Ζ ⋅ Σ:sub:`σ`
+**Theorem 3.1.3** ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
 
 
 Theorem: ∀ ζ ∈ C:sub:L: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
@@ -2522,222 +2336,136 @@ This corrected theorem establishes a precise relationship between the length of 
 
 
 
+During a *σ*-reduction, information in lost with respect to the following semantic categories,
 
+  - Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
+  - Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
+  - Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.
 
+However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ*-reduction of a Sentence.
 
+**Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`)
 
-You're right that knowing l(σ_reduce(ζ)) (the length of the σ-reduced sentence) and Λ(ζ) (the number of words in the sentence) significantly constrains the possibilities for reconstructing the original sentence from its σ-reduced form. This has implications for the potential reversibility of σ-reduction and for understanding the structure of sentences.
+This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus **C**:sub:`L`, and for every Word *ζ{i}* in the Word-level representation of *ζ*, *ζ{i}* is contained in (*ζ* ⋅ **Σ**:sub:`σ`).
 
-Here's a more detailed breakdown of your observation and its implications:
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By Theorem 2.2.4, it is known at least one Word must exist in *ζ*. Let *ζ{i}* be one of the Words in the sequence of Words that form *ζ*. 
 
-Constraints on "Un-reducing" a Sentence:
+This means that *ζ* can be written as either, in the case of *Λ(ζ) > 1*, 
 
-Fixed Length of Non-Delimiter Characters: l(σ_reduce(ζ)) tells us the total length of the non-delimiter characters in the original sentence ζ.
+    1. Case (Λ(ζ) > 1): ζ = s:sub:`1`)(σ)(ζ{i})(σ)(s:sub:`2`)
+    
+where *s*:sub:`1` and *s*:sub:`2` are (possibly Empty) Strings. 
 
-Fixed Number of Words: Λ(ζ) tells us the number of words in the original sentence ζ.
+In the case that Λ(ζ) = 1, then, this means *ζ* can be written simply as, 
 
-Relationship between Delimiters and Words: We know from Theorem 2.4.1 that Λ(ζ) = Δ(ζ) + 1. This means the number of delimiters is always one less than the number of words.
+    2. Case (Λ(ζ) = 1): ζ = s:sub:`1`)(σ)(ζ{i})(σ)(s:sub:`2`)
 
-Placement of Delimiters: The delimiters must be placed between the words in a way that creates valid words in the language L. This is where the constraint comes in. Not all arrangements of delimiters will result in valid words.
+By the Definition 3.1.2, *ζ* ⋅ **Σ**:sub:`σ` is obtained by removing all Delimiters from ζ. Therefore:
 
-Analogy to Integer Partitioning:
+    3. 
+σ_reduce(ζ) = σ_reduce(s:sub:1) σ_reduce(α) σ_reduce(s:sub:2)
+Axiom W.1: By Axiom W.1, words in L do not contain delimiters. Since α ∈ L (by Axiom S.2), σ_reduce(α) = α.
 
-The problem of reconstructing the original sentence from its σ-reduced form and the number of words is analogous to the problem of integer partitioning in number theory.
+Substitution: Substituting α for σ_reduce(α) in the expression for σ_reduce(ζ), we get:
 
-Integer Partitioning: Integer partitioning is the problem of finding all possible ways to write an integer as a sum of positive integers. For example, the integer 4 can be partitioned in the following ways:
+σ_reduce(ζ) = σ_reduce(s:sub:1) α σ_reduce(s:sub:2)
+Containment: From this, we can see that α is a substring of σ_reduce(ζ). Therefore, by the definition of containment (Definition 1.1.4):
 
-4
-3 + 1
-2 + 2
-2 + 1 + 1
-1 + 1 + 1 + 1
-Analogy: In our case:
+α ⊂:sub:s σ_reduce(ζ)
+Conclusion: Since ζ and α were arbitrary, we can generalize:
 
-l(σ_reduce(ζ)) is analogous to the integer being partitioned.
-Λ(ζ) is analogous to the number of parts in the partition.
-The lengths of the individual words in the sentence are analogous to the summands in the partition.
-Implications:
-
-Limited Reversibility: While σ-reduction is not strictly reversible (as we discussed before), knowing l(σ_reduce(ζ)) and Λ(ζ) significantly reduces the number of possible sentences that could have produced the given σ-reduced form.
-Potential for Reconstruction: In some cases, if the language L has strong constraints on word formation and if l(σ_reduce(ζ)) and Λ(ζ) are sufficiently restrictive, it might be possible to uniquely reconstruct the original sentence, or at least narrow it down to a small set of possibilities.
-
-
-
-Definition 3.1.15: σ-induction
-
-Let s be a string in Σ:sub:σ (a σ-reduced string), let m be a natural number representing the desired number of "word-forms" (intended to correspond to words or potentially other linguistic units) in the resulting strings, and let X be a set of strings (either S, the set of all strings, or C:sub:L, the set of sentences in language L).
-
-The σ-induction of s with m word-forms over the set X, denoted σ_induce(s, m, X), is the set of all possible strings that can be formed by inserting m-1 delimiters into s such that:
-
-Delimiter Placement: Delimiters are inserted only between characters of s or at the beginning or end of s.
-Word-Form Validity: Each of the m resulting substrings (separated by delimiters) is a valid string in the set X.
-Number of Word-Forms: The resulting string has exactly m word-forms.
-Order Preservation: The relative order of the characters in s is preserved in the resulting string.
-Formally:
-
-σ_induce(s, m, X) = { x ∈ X | σ_reduce(x) = s and Λ(x) = m }
-
-Explanation:
-
-Input: The function takes a σ-reduced string s, the desired number of word-forms m, and a set of strings X as input.
-Output: It returns a set of strings, where each string is a possible "re-delimitation" of s that satisfies the given conditions, and Crucially, each "re-delimitation" belongs to the set X..
-Conditions:
-Delimiter Placement: Ensures that delimiters are placed in valid positions.
-Word-Form Validity: Ensures that all the resulting substrings are valid members of the set X. If X = S, then no check is made beyond ensuring the substrings are valid strings. If X = C:sub:L, then each substring is verified as a valid word in the Language L.
-Number of Word-Forms: Ensures that each string has exactly m word-forms.
-Order Preservation: Ensures that the non-delimiter characters in the resulting strings maintain the same order as in the input string s.
-Examples:
-
-Let s = "nowart" and L = { "no", "now", "wart", "art", "a", "on" }.
-
-σ_induce(s, 2, S) = { "no wart", "now art", "noσwart", "nowσart", ...}
-σ_induce(s, 2, C:sub:L) = { "no wart", "now art" }
-σ_induce(s, 3, S) = { "noσwart", "nowσart", ...}
-σ_induce(s, 3, C:sub:L) = { } (no valid sentences with 3 words)
-Observations:
-
-Flexibility: This definition allows us to perform σ-induction over different sets of strings, providing flexibility in our analysis.
-Relationship to Previous Definitions:
-σ_induce(s, m, C:sub:L) is equivalent to our previous definition where the resulting strings had to be valid sentences in the language L.
-σ_induce(s, m, S) is equivalent to the original idea where we considered all possible strings, regardless of whether they were valid sentences.
-Further Considerations:
-
-Computational Complexity: Generating σ_induce(s, m, S) is computationally simpler than generating σ_induce(s, m, C:sub:L), as it doesn't require checking for word validity in L.
-Linguistic Relevance: σ_induce(s, m, C:sub:L) is more linguistically relevant, as it focuses on valid sentences.
-Empty String: It might be worth explicitly stating what happens when s is the empty string or when m is less than 1.
-This revised definition of σ-induction is a significant improvement. It's more general, flexible, and addresses the distinction between inducing over all strings and inducing over sentences in a specific language. It also clarifies the concept of "word-forms" which might not always be actual words, but could represent other linguistic units in the future.
-
-
-**Theorem** 
-
-Here's the corrected theorem statement and a revised proof:
-
-Corrected Theorem 3.1.16:
-
-∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
-
-Translation: For any string s and any natural number m (representing the number of words), the cardinality of the set of sentences in C:sub:L obtained by σ-induction of s with m words is less than or equal to the number of combinations of choosing m-1 delimiter positions from l(σ_reduce(s)) possible positions.
-
-Proof:
-
-Let s be an arbitrary string in S, and let m be a natural number.
-
-Length of σ_reduce(s): Let n = l(σ_reduce(s)). Since s is a σ-reduced string, it has no delimiters.
-
-Delimiter Positions: In order to form a sentence with m words from σ_reduce(s), we need to insert m-1 delimiters.
-
-Possible Positions: There are n-1 possible positions where we can insert delimiters between the characters of σ_reduce(s).
-
-Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1), which is calculated as:
-
-C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
-Upper Bound: The set σ_induce(s, m, C:sub:L) contains sentences formed by inserting m-1 delimiters into s such that the resulting substrings are valid words in L. Since there are at most C(n-1, m-1) ways to insert the delimiters, the number of valid sentences in σ_induce(s, m, C:sub:L) cannot be greater than this number.
-
-Conclusion: Therefore:
-
-|σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
-Since s and m were arbitrary, we can generalize:
-
-*   ∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:`L`)| ≤ C(l(σ_reduce(s)), m - 1)
+∀ ζ ∈ C:sub:L, ∀ α ∈ W:sub:ζ: α ⊂:sub:s σ_reduce(ζ)
 This completes the proof. ∎
 
-Explanation:
+This theorem can be stated in natural language as follows: Given the *σ*-reduction of a Sentence, there exists a Word in its Language that is contained in the *σ-reduced* string.
 
-The proof now correctly operates on the string s in S.
-The binomial coefficient C(n-1, m-1) gives us the maximum number of ways to insert delimiters, but the actual number of valid sentences might be less due to the constraint that the resulting substrings must be valid words in L.
+Assume *ζ ∈ C*:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*.
 
-Implications:
+By the Axiom of Word Extraction S.3,
 
-Upper Bound: This theorem provides an upper bound on the number of possible sentences that can be generated by σ-induction.
-Combinatorial Nature: It highlights the combinatorial nature of the problem of reconstructing sentences from their σ-reduced forms.
-Language Constraints: The actual number of valid sentences will be less than or equal to C(l(σ_reduce(s)) - 1, m - 1) and will depend on the specific constraints imposed by the language L.
+    1. ∀ ζ ∈ C:sub:`L`, ∀ α ∈ W:sub:`ζ`: α ∈ L.
 
+Since *ζ* is a sentence, by Theorem 2.3.2 (*Λ(ζ) ≥ 1*), it must contain at least one word. Therefore, W:sub:`ζ` is not empty. Let *α* be any word in **W**:sub:`ζ`. By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  
 
-Simplified Problem:
+Let **A** be the Character-level representation of *α*,
 
-We now have:
+    (𝔞:sub:`1`, 𝔞:sub:`2`, ..., 𝔞:sub:`l(α)`)
 
-s: A σ-reduced string (with no delimiters).
-m: The desired number of "words" (or substrings separated by delimiters).
-σ_induce(s, m, S): The set of all strings formed by inserting m-1 delimiters into s, with the only constraint being that delimiters can be placed at the beginning or end of s or between any two characters of s.
-Calculation:
+Let Z' = be the Character-level representation of Ζ ⋅ Σ:sub:σ.
 
-Length of s: Let n = l(s).
+    (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(Ζ ⋅ Σ:sub:σ)`)
 
-Possible Delimiter Positions: There are n-1 positions between the characters of s, plus the position before the first character and the position after the last character. So, there are a total of n+1 potential positions for delimiters. However, we know no delimiters can be in a word, so there are n-1 positions where m-1 delimiters can be placed.
+Since *α* is a contiguous subsequence of non-Delimiter (by the Discovery Axiom W.1) and non-Empty Characters (by Theorem 1.2.4) in **Ζ**, there exists an index k such that:
 
-Choosing Delimiter Positions: We need to choose m-1 positions out of these n-1 valid positions. Since the order of placing delimiters doesn't matter, this is a combination problem.
+    𝔞:sub:`1` = 𝔟:sub:`k`
+    𝔞:sub:`2` = 𝔟:sub:`k+1`
+    ...
+    𝔞:sub:`l(α)` = 𝔟:sub:`k+l(α)-1`
 
-Combinations: The number of ways to choose m-1 positions from n-1 is given by the binomial coefficient:
+Define the function *f*: **N**:sub:`l(α)` → **N**:sub:`l(Ζ ⋅ Σ:sub:σ`)` as,
 
-C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
-Theorem 3.1.17:
+    f(i) = k + i - 1.
 
-∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+The function *f* is clearly strictly increasing and consecutive, as it maps consecutive indices in *α* to consecutive indices in **Ζ ⋅ Σ**:sub:`σ`. By construction, f satisfies the condition,
 
-Proof:
+    ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`.
 
-Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
+Therefore, by Definition 1.1.7 of Containment, 
 
-Length of s: Let n = l(s).
-
-Delimiter Positions:  To form a string with m words from s, we need to insert m-1 delimiters.
-
-Possible Positions: In a σ-reduced string of length n, there are n-1 positions between the characters where delimiters can be inserted.
-
-Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1):
-
-C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
-σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations.
-
-Conclusion: Therefore:
-
-|σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
-Since s and m were arbitrary, we can generalize:
-
-*   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
-This completes the proof. ∎
+    α ⊂:sub:`s` (Ζ ⋅ Σ:sub:`σ`). ∎
 
 
-Let's prove this formula using a combinatorial argument known as "stars and bars":
 
-Theorem 3.1.17: ∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
 
-Proof:
+**Theorem 3.1.2** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)) ]
 
-Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
+In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ*-reduction.
 
-Length of s: Let n = l(s).
+Assume *ζ ∈* **C**:sub:`L`` and *ζ ∈* **K**, i.e. *ζ* is an Invertible Sentence. Let the Word-level representation of *ζ* by given by,
 
-Delimiter Positions: To form a string with m "words" (substrings separated by delimiters) from s, we need to insert m-1 delimiters.
+    1. W:sub:`ζ`` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
 
-Possible Positions: In a string of length n, there are n-1 positions between the characters where we can potentially place delimiters. Additionally, we can place delimiters at the beginning or the end of the string. However, we must exclude the possibility of placing two delimiters consecutively, or placing a delimiter next to an already existing delimiter.
+By Theorem 2.3.5, since *ζ* is invertible, all its Words are also Invertible,
+ 
+    2. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ I.
 
-Stars and Bars: We can represent the characters of s as "stars" (*) and the delimiters as "bars" (|). For example, if s = "abc" and we want to insert 2 delimiters (m=3), one possible arrangement is:
+The σ-reduction of *ζ*, **Ζ ⋅ Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the σ-reduction concatenates the Words in **W**:sub:`ζ``:
 
-"a|b|c" (represented as ||*)
-Another arrangement could be:
+    3. Ζ ⋅ Σ:sub:`σ`` = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
 
-"|abc|" (represented as |***|)
-Notice that we have n "stars" and m-1 "bars".
+Applying Theorem 1.2.5 repeatedly,
 
-Combinatorial Problem: The problem of placing m-1 delimiters in a string of length n is equivalent to arranging n "stars" and m-1 "bars" in a sequence. However, we must make the restriction that no two bars can be adjacent to each other. This is not possible if we are inducing over the set of all strings S, since we are explicitly allowing for any possible combination of delimiters and characters, so long as no two delimiters are adjacent.
+    4. inv(Ζ ⋅ Σ:sub:σ) = inv((α:sub:`1`)(α:sub:`2`) ... (α:sub:`Λ(ζ)`))
 
-Number of Arrangements: The number of ways to arrange n stars and m-1 bars is given by the binomial coefficient C(n + m - 1, m - 1) or equivalently C(n + m - 1, n). However, since we do not allow for two delimiters to be adjacent in our definition of the delimiter count function, we must subtract one from each star to get the correct value. Since n = l(s), there are C(l(s) + m - 2, m - 1) possible ways to arrange the delimiters.
+To get,
 
-σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations, C(l(s) + m - 2, m - 1).
+    5.  inv(Ζ ⋅ Σ:sub:`σ`)  = (inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`))
 
-Conclusion: Therefore:
+Applying a second Inversion,
 
-|σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1)
-Since s and m were arbitrary, we can generalize:
+    6. inv(inv(Ζ ⋅ Σ:sub:`σ)) = inv((inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`)))
 
-*   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
+Applying Theorem 1.2.5 again,
+
+    7. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (inv(inv(α:sub:`1`))) (inv(inv(α:sub:`2`)))...(inv(inv(α:sub:`Λ(ζ)`)))
+
+Finally, applying Theorem 1.2.4 (*inv(inv(s)) = s*)
+
+    8. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
+
+Therefore, combining step 3 and step 8
+
+    inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)). ∎
+
+The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
+
+These ideas will be expounded until in Section III.III, when the theorems and results of this work are used to implement a Palindrome search algorithm.
+
 
 Aspect
 ^^^^^^
 
-The current analysis now turns towards its apex, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motive the next definition, consider how the operation of *σ-reduction* "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
+The current analysis now turns towards its apex, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motive the next definition, consider how the operation of *σ*-reduction "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
 
 Consider a perfect palindromes like *ᚠ = "strap on no parts"*,
 
@@ -2745,7 +2473,7 @@ Consider a perfect palindromes like *ᚠ = "strap on no parts"*,
 
     inv( **ᚠ** ⋅ Σ:sub:`σ` ) = "straponnoparts"
 
-In other words, the *σ-reduction* and the inversion of its *σ-reduction* space result in the same String.
+In other words, the *σ*-reduction and the inversion of its *σ*-reduction space result in the same String.
 
 Consider an imperfect palindrome like *ᚢ = "borrow or rob"*,
 
@@ -2753,7 +2481,7 @@ Consider an imperfect palindrome like *ᚢ = "borrow or rob"*,
 
     inv( **ᚢ** ⋅ Σ:sub:`σ` ) = "borroworrob"
 
-Again, the *σ-reduction* eliminates the Delimiters, and the inversion of the *σ-reduction* captures the mirrored relationship between the words, even if the exact Character sequence isn't identical.
+Again, the *σ*-reduction eliminates the Delimiters, and the inversion of the *σ*-reduction captures the mirrored relationship between the words, even if the exact Character sequence isn't identical.
 
 These examples lead directly to the next, important definition.
 
@@ -2915,7 +2643,7 @@ Assume *ζ ∈* **PP**. This means *ζ* is a Perfect Palindrome, so by Definitio
 
     1. *ζ = inv(ζ)*.
 
-Applying a *σ-reduction* to both sides of the equation,:
+Applying a *σ*-reduction to both sides of the equation,:
 
     2. (Ζ ⋅ Σ:sub:`σ`) = (inv(Ζ) ⋅ Σ:sub:`σ`)
 
@@ -4233,7 +3961,7 @@ Section III.III: Palindromic Algorithms
 
 The results derived in this work can be used to construct algorithms for searching for various classes of Palindromes. The general outline for one such algorithm is given in this section, and then an example implemention in Python is presented.
 
-A naive algorithm for filtering out Strings that cannot possibly be Palindromes might consist of inverting the strings and comparing them for equality. However, this would miss Palindromes with an imperfect aspect, as their symmetry does not manifest in the unreduced Alphabet. Without a *σ-reduction*, any algorithm that searchs for Palindromic String must be aware of the semantics of the Language in which it is searching. However, *σ-reduction* and the theorems proved over the course of this work allow algorithms to be constructed that are independent of the host Language.
+A naive algorithm for filtering out Strings that cannot possibly be Palindromes might consist of inverting the strings and comparing them for equality. However, this would miss Palindromes with an imperfect aspect, as their symmetry does not manifest in the unreduced Alphabet. Without a *σ*-reduction, any algorithm that searchs for Palindromic String must be aware of the semantics of the Language in which it is searching. However, *σ*-reduction and the theorems proved over the course of this work allow algorithms to be constructed that are independent of the host Language.
 
 Moreover, as mentioned after the body Theorem 3.1.2, the *σ-reductions* reduce the complexity of searching for Palindromic strings. An Alphabet with less Characters can be traversed quicker. 
 

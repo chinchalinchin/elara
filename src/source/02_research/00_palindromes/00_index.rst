@@ -8,6 +8,7 @@ Notation
 - Logical Operations: ∀, ∃, ↔, →, ←. ∧, ∨
 - Arithmetical Relations: ≠, =, ≥, ≤, +, -
 - Sets: ∅, ℕ, N:sub:`i`
+- Set Operations: ∪, ∩
 - Set Relations: ∈, ∉, ⊆
 - Strings: s, t, u
 - Domain: S
@@ -18,7 +19,7 @@ Notation
 - Words: a, b, c
 - Word Variables: α, β, γ
 - Character Index Notation: t[i]
-- Word Classes: R, I
+- Word ClassΛ(ζ)es: R, I
 - Phrases of Word Length n: P:sub:`n`
 - Lexicons: X:sub:`L`(n)
 - Phrases Variables: p, q, r
@@ -27,6 +28,7 @@ Notation
 - Word Index Notation: ζ{i}
 - Partial Sentence: ζ[:i], ζ[i:]
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
+- Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
 - Functions: l(t), Λ(t), Δ(t)
 - Operations: inv(s), σ_reduce(t), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
@@ -58,18 +60,22 @@ Definitions
 - D 2.2.1: Semantic Coherence
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
+- D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
+- D 3.1.2: σ-Reduction: s ⋅ Σ:sub:`σ`
+- 
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
 - D A.3.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
 - D A.3.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
-- D A.4.1: Category: 
+- D A.4.1: Category: C:sub:`L`(m)
 
 Algorithms
 ----------
 
 - A.1: Emptying Algorithm
 - A.2: Delimiting Algorithm 
+- A.3: Reduction Algorithm
 
 Axioms 
 ------
@@ -113,6 +119,14 @@ Theorems
 - T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
+- T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
+- T 3.1.2: ∀ ζ,ξ ∈ C:sub:`L`: ΖΞ ⋅ Σ:sub:`σ` = (Ζ⋅ Σ:sub:`σ`)(Ξ ⋅ Σ:sub:`σ`)
+- T 3.1.3: ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
+- T
+- T
+- T
+- T
+- T 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
@@ -129,3 +143,4 @@ Theorems
 - T A.3.3: ∀ α ∈ L:sub:`P`: α = inv(α)
 - T A.3.4: L ∩ L:sub:`P` ⊆ R
 - T A.3.5: L:sub:`P` ⊂ R:sub:`L_σ`
+- T A.4.1: 

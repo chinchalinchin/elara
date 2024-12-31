@@ -1,4 +1,4 @@
-s,inv(s)
+word,inv(word)
 time,emit
 live,evil
 rats,star

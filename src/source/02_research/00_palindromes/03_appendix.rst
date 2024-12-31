@@ -499,5 +499,325 @@ If it can be shown,
 Then the theorem will follow tautologically from the laws of deduction. But step 3 is exactly Theorem 3.1.9. Therefore, the proof is complete. ∎
 
 
-Section A.VI: Categories
+Section A.IV: Categories
 -------------------------
+
+Before introducing the notion of Categories, it must be kept in mind a Language **L** and a Corpous **C**:sub:`L` are treated as fixed sets known a priori to the construction of the current formal system. In a sense, Language and its Corpus are taken as primitive terms. It assumed a semantic assignment has occured outside of the confines of the formal system and the Words of a Language and Sentences of a Corpus have already been given determinate meanings. 
+
+The notion of a *Category* is meant to explicate the linguistic entities which are colloquially referred to as a *"parts of speech"*, e.g nouns, verbs, adjectives, etc. However, it not the intention of this formal system to treat the semantic meaning of these grammatical categories in so far that certain schema of Categories provide a method of constructing semantic Sentences. The formal system takes no opinion on what constitutes its Categories, or how these Categories are used to construct a grammatical and meaningful Sentence; rather, the formal system assumes these Categories are used in exactly that capacity in order to derive the syntactical constraints they must abide in order to be considered categorical. 
+
+This does not preclude the idea that a Category could map to the everyday notion of *noun* or *verb*, but the formal construction of grammatical categories cannot assume anything about the categorical structure of Sentences (e.g. noun-verb-noun is a valid Sentence form) without tying it to a specific semantic interpretation of what qualifies a Word to function in its categorical capacity. 
+
+**Definition A.4.1: Category**
+
+A semantic Category in a language **L**, denoted C:sub:`L`(m), is a set of Words in **L**, where *m* is a natural number representing the Category's index. ∎
+
+Axioms 
+^^^^^^
+
+The fundamental assumptions regarding linguistic Categories in this formal system are now introduced. Each axiom will be justified by appeal to self-evidence. To see the motivation behind the first formal assumption about Categories adopted, 
+
+TODO:
+
+**Axiom G.1: The Completeness Axiom**
+
+    ∃ m ∈ ℕ: L = ∪:sub:`1`:sup:`m` C:sub:`L`(i) ∎
+
+TODO: 
+
+**Definition A.4.4: Categorical Size**
+
+The *m* such that,
+
+    L = ∪:sub:`1`:sup:`m` C:sub:`L`(i)
+
+is denoted with the lowercase Greek kappa, *κ*. *κ* is called the Categorical Size of a Language. ∎
+
+TODO:
+
+The choice of axioms for governing the logical calculus of Categories in the formal system is critical. Since the notion of a "grammatical categories" is inherently tied to the semantic interpretation of a Language and Corpus, the assumptions introduced about their nature must not violate the empirical reality of natural languages. 
+
+To see what is meant by this, consider the proposed axiom, the Uniqueness Axiom.
+
+**Proposed Axiom: The Uniqueness Axiom**
+
+    ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: (∃! m ∈ N:sub:`κ`: ζ{i} ∈ C:sub:`L`(m)) ∧ ( (i, C:sub:`L`(m)) ∈ C:sub:`ζ` ) ∎
+
+In natural language, the Uniqueness Axiom states: For every sentence *ζ* in the Corpus and for every Word index *i* in *ζ*, there exists a unique Category index *m* such that the *i*:sup:`th` Word of *ζ* belongs to Category **C**:sub:`L`(*m*), and this Category is recorded in the Categorical-level representation **C**:sub:`ζ` at index *i*.
+
+This axiom captures a common-sense (though subtly flawed) notion that each Word in a Sentence maps to a single Category. However, this picture of *"grammaticality"* is tacitly assuming a *single* available semantic interpretation. To see a concrete example of why this axiom should not be adopted in a formal system that is meant to model *any* language, it suffices to look at a single example in a known language which contradicts it.
+
+Consider the sentence *ᚠ = "visting friends can be annoying"*. In this case,there are two valid Categorical-level representations of this Sentence in English,
+
+
+    C:sub:`ζ`:sub:`1` = { (1, Verb), (2, Noun), (3, Verb), (4, Verb), (5, Adjective) }
+    
+    C:sub:`ζ`:sup:`2` = { (1, Adjective), (2, Noun), (3, Verb), (4, Verb), (5, Adjective) }
+
+Therefore, if the formal system wishes to account for the subtle ambiguities of natural language, the Uniqueness Axiom can not be adopted as an assumption.
+
+Theorems
+^^^^^^^^
+
+**Theorem A.4.1**: ∀ α ∈ L: ∃ i ∈ N:sub:`M`: α ∈ C:sub:`L`(i)
+
+By Axiom G.1, 
+
+     L = ∪:sub:`1`:sup:`m` C:sub:`L`(i)
+
+Therefore, any word α in L must belong to at least one of these Categories. ∎
+
+Length
+^^^^^^
+
+Consider the English sentences, *ᚠ = "the man ran over the bridge* and *ᚢ = "the novel novel about a rose rose to the top"*
+
+In *ᚠ*, both *"man"* and *"bridge"* map to the same Category, namely *nouns*. In other words, the Sentence can have multiple Words that belong to the same Category.  
+
+In *ᚢ*, both occurrences of *"novel"* map to different Categories, namely *adjectives* and *nouns*. Further confounding the matter, another example of the ability of a single Word to map to multiple Categories is given through the simultaneous *noun*-*verb* mapping of *"rose"*
+
+Since multiple Words can belong to the same Category, and conversely, the same Word can belong to multiple Categories, a notion of measuring the *Categorical Length* of a Sentence is now introduced. This notion will only measure the *unique* Categories found in a Sentence. For example, *"man"* and *"bridge"* would both be occurrences of the *noun* Category and would thus contribute a length of 1 to *Categorical Length*.
+
+Similar to the construction of the Character-level and Word-level representation of a String, a method for constructing the Category-level representation of a Sentence is given below in the next definition. 
+
+TODO: talk more about ambiguous sentences
+
+**Definition A.4.2: Categorical-level Representation**
+
+Let *ζ* be an arbitrary sentence from Corpus C:sub:`L`. The Categorical-level representation of a *ζ*, denoted **C**:sub:`ζ`, is defined as the set of sets *x* which satisfy the following open formula,
+
+
+    x ∈ C:sub:`ζ` ↔ x = { (i, C:sub:`L`(m)) | ∀ i ∈ N:sub:`Λ(ζ)`: (ζ{i} ∈ C:sub:`L`(m)) } ∎
+
+**Definition A.4.3: Categorical Interpretation**
+
+Let *ζ* be an arbitrary sentence from Corpus C:sub:`L`. The *i*:sub:`th` Categorical Interpretation of *ζ*, denoted C:sub:`ζ`(i), is defined as,
+
+
+    C:sub:`ζ`(i) ∈ C:sub:`ζ` ∎
+
+**Definition A.4.4: Interpretation Length**
+
+Let *ζ* be an arbitrary sentence from Corpus C:sub:`L`.  The *Interpretation Length* of a Sentence *ζ*, denoted by *ι(ζ)*, is defined as the number such that,
+
+    ι(ζ) = | C:sub:`ζ` | ∎
+
+**Definition A.4.5: Categorical Length**
+
+Let *ζ* be an arbitrary sentence from Corpus C:sub:`L`. The *Categorical Length* of the *i*:sup:`th` Categorical Interpretation of *ζ*, denoted *λ(ζ, i)*, is defined as,
+
+    λ(ζ, i) = | C:sub:`ζ`(i) | ∎
+
+
+Section A.V: Sigma Inductions
+-----------------------------
+
+
+
+You're right that knowing l(σ_reduce(ζ)) (the length of the σ-reduced sentence) and Λ(ζ) (the number of words in the sentence) significantly constrains the possibilities for reconstructing the original sentence from its σ-reduced form. This has implications for the potential reversibility of σ-reduction and for understanding the structure of sentences.
+
+Here's a more detailed breakdown of your observation and its implications:
+
+Constraints on "Un-reducing" a Sentence:
+
+Fixed Length of Non-Delimiter Characters: l(σ_reduce(ζ)) tells us the total length of the non-delimiter characters in the original sentence ζ.
+
+Fixed Number of Words: Λ(ζ) tells us the number of words in the original sentence ζ.
+
+Relationship between Delimiters and Words: We know from Theorem 2.4.1 that Λ(ζ) = Δ(ζ) + 1. This means the number of delimiters is always one less than the number of words.
+
+Placement of Delimiters: The delimiters must be placed between the words in a way that creates valid words in the language L. This is where the constraint comes in. Not all arrangements of delimiters will result in valid words.
+
+Analogy to Integer Partitioning:
+
+The problem of reconstructing the original sentence from its σ-reduced form and the number of words is analogous to the problem of integer partitioning in number theory.
+
+Integer Partitioning: Integer partitioning is the problem of finding all possible ways to write an integer as a sum of positive integers. For example, the integer 4 can be partitioned in the following ways:
+
+4
+3 + 1
+2 + 2
+2 + 1 + 1
+1 + 1 + 1 + 1
+Analogy: In our case:
+
+l(σ_reduce(ζ)) is analogous to the integer being partitioned.
+Λ(ζ) is analogous to the number of parts in the partition.
+The lengths of the individual words in the sentence are analogous to the summands in the partition.
+Implications:
+
+Limited Reversibility: While σ-reduction is not strictly reversible (as we discussed before), knowing l(σ_reduce(ζ)) and Λ(ζ) significantly reduces the number of possible sentences that could have produced the given σ-reduced form.
+Potential for Reconstruction: In some cases, if the language L has strong constraints on word formation and if l(σ_reduce(ζ)) and Λ(ζ) are sufficiently restrictive, it might be possible to uniquely reconstruct the original sentence, or at least narrow it down to a small set of possibilities.
+
+
+
+Definition 3.1.15: σ-induction
+
+Let s be a string in Σ:sub:σ (a σ-reduced string), let m be a natural number representing the desired number of "word-forms" (intended to correspond to words or potentially other linguistic units) in the resulting strings, and let X be a set of strings (either S, the set of all strings, or C:sub:L, the set of sentences in language L).
+
+The σ-induction of s with m word-forms over the set X, denoted σ_induce(s, m, X), is the set of all possible strings that can be formed by inserting m-1 delimiters into s such that:
+
+Delimiter Placement: Delimiters are inserted only between characters of s or at the beginning or end of s.
+Word-Form Validity: Each of the m resulting substrings (separated by delimiters) is a valid string in the set X.
+Number of Word-Forms: The resulting string has exactly m word-forms.
+Order Preservation: The relative order of the characters in s is preserved in the resulting string.
+Formally:
+
+σ_induce(s, m, X) = { x ∈ X | σ_reduce(x) = s and Λ(x) = m }
+
+Explanation:
+
+Input: The function takes a σ-reduced string s, the desired number of word-forms m, and a set of strings X as input.
+Output: It returns a set of strings, where each string is a possible "re-delimitation" of s that satisfies the given conditions, and Crucially, each "re-delimitation" belongs to the set X..
+Conditions:
+Delimiter Placement: Ensures that delimiters are placed in valid positions.
+Word-Form Validity: Ensures that all the resulting substrings are valid members of the set X. If X = S, then no check is made beyond ensuring the substrings are valid strings. If X = C:sub:L, then each substring is verified as a valid word in the Language L.
+Number of Word-Forms: Ensures that each string has exactly m word-forms.
+Order Preservation: Ensures that the non-delimiter characters in the resulting strings maintain the same order as in the input string s.
+Examples:
+
+Let s = "nowart" and L = { "no", "now", "wart", "art", "a", "on" }.
+
+σ_induce(s, 2, S) = { "no wart", "now art", "noσwart", "nowσart", ...}
+σ_induce(s, 2, C:sub:L) = { "no wart", "now art" }
+σ_induce(s, 3, S) = { "noσwart", "nowσart", ...}
+σ_induce(s, 3, C:sub:L) = { } (no valid sentences with 3 words)
+Observations:
+
+Flexibility: This definition allows us to perform σ-induction over different sets of strings, providing flexibility in our analysis.
+Relationship to Previous Definitions:
+σ_induce(s, m, C:sub:L) is equivalent to our previous definition where the resulting strings had to be valid sentences in the language L.
+σ_induce(s, m, S) is equivalent to the original idea where we considered all possible strings, regardless of whether they were valid sentences.
+Further Considerations:
+
+Computational Complexity: Generating σ_induce(s, m, S) is computationally simpler than generating σ_induce(s, m, C:sub:L), as it doesn't require checking for word validity in L.
+Linguistic Relevance: σ_induce(s, m, C:sub:L) is more linguistically relevant, as it focuses on valid sentences.
+Empty String: It might be worth explicitly stating what happens when s is the empty string or when m is less than 1.
+This revised definition of σ-induction is a significant improvement. It's more general, flexible, and addresses the distinction between inducing over all strings and inducing over sentences in a specific language. It also clarifies the concept of "word-forms" which might not always be actual words, but could represent other linguistic units in the future.
+
+
+**Theorem** 
+
+Here's the corrected theorem statement and a revised proof:
+
+Corrected Theorem 3.1.16:
+
+∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
+
+Translation: For any string s and any natural number m (representing the number of words), the cardinality of the set of sentences in C:sub:L obtained by σ-induction of s with m words is less than or equal to the number of combinations of choosing m-1 delimiter positions from l(σ_reduce(s)) possible positions.
+
+Proof:
+
+Let s be an arbitrary string in S, and let m be a natural number.
+
+Length of σ_reduce(s): Let n = l(σ_reduce(s)). Since s is a σ-reduced string, it has no delimiters.
+
+Delimiter Positions: In order to form a sentence with m words from σ_reduce(s), we need to insert m-1 delimiters.
+
+Possible Positions: There are n-1 possible positions where we can insert delimiters between the characters of σ_reduce(s).
+
+Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1), which is calculated as:
+
+C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
+Upper Bound: The set σ_induce(s, m, C:sub:L) contains sentences formed by inserting m-1 delimiters into s such that the resulting substrings are valid words in L. Since there are at most C(n-1, m-1) ways to insert the delimiters, the number of valid sentences in σ_induce(s, m, C:sub:L) cannot be greater than this number.
+
+Conclusion: Therefore:
+
+|σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
+Since s and m were arbitrary, we can generalize:
+
+*   ∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:`L`)| ≤ C(l(σ_reduce(s)), m - 1)
+This completes the proof. ∎
+
+Explanation:
+
+The proof now correctly operates on the string s in S.
+The binomial coefficient C(n-1, m-1) gives us the maximum number of ways to insert delimiters, but the actual number of valid sentences might be less due to the constraint that the resulting substrings must be valid words in L.
+
+Implications:
+
+Upper Bound: This theorem provides an upper bound on the number of possible sentences that can be generated by σ-induction.
+Combinatorial Nature: It highlights the combinatorial nature of the problem of reconstructing sentences from their σ-reduced forms.
+Language Constraints: The actual number of valid sentences will be less than or equal to C(l(σ_reduce(s)) - 1, m - 1) and will depend on the specific constraints imposed by the language L.
+
+
+Simplified Problem:
+
+We now have:
+
+s: A σ-reduced string (with no delimiters).
+m: The desired number of "words" (or substrings separated by delimiters).
+σ_induce(s, m, S): The set of all strings formed by inserting m-1 delimiters into s, with the only constraint being that delimiters can be placed at the beginning or end of s or between any two characters of s.
+Calculation:
+
+Length of s: Let n = l(s).
+
+Possible Delimiter Positions: There are n-1 positions between the characters of s, plus the position before the first character and the position after the last character. So, there are a total of n+1 potential positions for delimiters. However, we know no delimiters can be in a word, so there are n-1 positions where m-1 delimiters can be placed.
+
+Choosing Delimiter Positions: We need to choose m-1 positions out of these n-1 valid positions. Since the order of placing delimiters doesn't matter, this is a combination problem.
+
+Combinations: The number of ways to choose m-1 positions from n-1 is given by the binomial coefficient:
+
+C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
+Theorem 3.1.17:
+
+∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+
+Proof:
+
+Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
+
+Length of s: Let n = l(s).
+
+Delimiter Positions:  To form a string with m words from s, we need to insert m-1 delimiters.
+
+Possible Positions: In a σ-reduced string of length n, there are n-1 positions between the characters where delimiters can be inserted.
+
+Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1):
+
+C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
+σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations.
+
+Conclusion: Therefore:
+
+|σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+Since s and m were arbitrary, we can generalize:
+
+*   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+This completes the proof. ∎
+
+
+Let's prove this formula using a combinatorial argument known as "stars and bars":
+
+Theorem 3.1.17: ∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
+
+Proof:
+
+Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
+
+Length of s: Let n = l(s).
+
+Delimiter Positions: To form a string with m "words" (substrings separated by delimiters) from s, we need to insert m-1 delimiters.
+
+Possible Positions: In a string of length n, there are n-1 positions between the characters where we can potentially place delimiters. Additionally, we can place delimiters at the beginning or the end of the string. However, we must exclude the possibility of placing two delimiters consecutively, or placing a delimiter next to an already existing delimiter.
+
+Stars and Bars: We can represent the characters of s as "stars" (*) and the delimiters as "bars" (|). For example, if s = "abc" and we want to insert 2 delimiters (m=3), one possible arrangement is:
+
+"a|b|c" (represented as ||*)
+Another arrangement could be:
+
+"|abc|" (represented as |***|)
+Notice that we have n "stars" and m-1 "bars".
+
+Combinatorial Problem: The problem of placing m-1 delimiters in a string of length n is equivalent to arranging n "stars" and m-1 "bars" in a sequence. However, we must make the restriction that no two bars can be adjacent to each other. This is not possible if we are inducing over the set of all strings S, since we are explicitly allowing for any possible combination of delimiters and characters, so long as no two delimiters are adjacent.
+
+Number of Arrangements: The number of ways to arrange n stars and m-1 bars is given by the binomial coefficient C(n + m - 1, m - 1) or equivalently C(n + m - 1, n). However, since we do not allow for two delimiters to be adjacent in our definition of the delimiter count function, we must subtract one from each star to get the correct value. Since n = l(s), there are C(l(s) + m - 2, m - 1) possible ways to arrange the delimiters.
+
+σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations, C(l(s) + m - 2, m - 1).
+
+Conclusion: Therefore:
+
+|σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1)
+Since s and m were arbitrary, we can generalize:
+
+*   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
