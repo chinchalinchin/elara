@@ -388,7 +388,7 @@ The result returned by the Emptying Algorithm would then be,
 
 This method of abstraction and notation will be employed extensively in the subsequent proofs. It will be made more convenient with Character Index notation in the next section, after the preliminary notion of *String Length* is defined. However, in order to define String Length, a method of referring to a String as a set of ordered non-Empty Characters is required. The construction afforded by the Emptying Algorithm operating on any input String *t* will serve that purpose.  
 
-As a brief aside, it may seem the formal system would be better developed by excluding the Empty Character altogether from its Alphabet. The Empty Character's presence in the lexicon complicates matter extensively, requiring intricate and subtle definitions. 
+As a brief aside, it may seem the formal system would be better developed by excluding the Empty Character altogether from its Alphabet. The Empty Character's presence in the Alphabet complicates matter extensively, requiring intricate and subtle definitions. 
 
 The reasons for this are two-fold. First: the Empty Character *ε* will be necessary for defining the *Pivot* of a Palindrome, the point around which a certain class of Palindrome reflect. Second: Strings consisting of only the Empty Character are not a mere novelty of abstraction; They play a crucial role in computer science and database management. Any rigorous formal system that excludes the notion of an Empty Character will fail to describe the exact domain from which Language arises, and thus it may fail to account for pre-Language syntactical conditions that necessarily affect the formation of Language.
 
@@ -1270,7 +1270,7 @@ The Strings *t* and *u*, the integer *k* and the set **K** are local to the algo
     5. If i > l(ᚠ):
         a. Return W:sub:`ᚠ` ∎
 
-The essence of the Delimiting Algorithm lies in the interplay of the Discovery Axiom W.1 and Definition 2.1.2 of a Sentence as a semantic String. In other words, by Definition 2.1.1 and by Definition 1.2.2, all Sentences and Words must be semantic. Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
+The essence of the Delimiting Algorithm lies in the interplay of the Discovery Axiom W.1 and Definition 2.1.2 of a Sentence as a semantic String. In other words, by Definition 2.1.2 and by Definition 1.2.2, all Sentences and Words must be semantic. The only feature that differentiates them in their *"semanticality"* is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
 
 This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of delimitation within the Sentences of its Corpus. 
 
@@ -1312,15 +1312,17 @@ Then, applying the *Delimiting Algorithm*, its Word-level representation is cons
 
 Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in Definition 1.1.5 will be use this method of Sentence representation to simplify many of the upcoming proofs.
 
-There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Characters that deserves special mention, as this perhaps reasonable assumption necessarily requires a reorganization of how and where the semantic information of a Sentence lies. To see what is meant by this, consider the three sentences from Latin,
+There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Characters that deserves special mention, as this perhaps reasonable assumption necessarily requires a reorganization of how the semantic information of a Sentence maps to its ordering in the medium Words and where precisely this semantic information resides. To see what is meant by this, consider the three sentences from Latin,
 
 - Puella canem videt. (Girl dog sees)
 - Canem puella videt. (Dog girl sees)
 - Videt puella canem. (Sees girl dog)
 
-In some respect, all three of these sentences could be considered the *same* sentence, as the order of the words is not the primary bearer of semantic information. While the order of words lends itself to the *voice* and *tone* of the sentence, the meaning of the sentence does not primarily emerge through word order. Similar cases exist in any natural language that uses declensions to modify the syntactic function of words. 
+In some respect, all three of these sentences could be considered the *same* sentence, as the order of the words is not the primary bearer of semantic information. While the order of words lends itself to the *voice* and *tone* of the sentence, the meaning of the sentence does not primarily emerge through tis word order. Similar cases exist in any natural language that uses declensions to modify the syntactic function of words, such as Greek. 
 
-The current formal system treats this sentences in Latin as distinct Sentences. 
+The current formal system treats these sentences in Latin as distinct Sentences. If the Latin sentences in this example are to be identified as representatives of the same semantic *"token"*, this cannot occur on the Sentence level of this formal system's linguistic hierarchy. This example suggests Sentences are not the final level of the hierarchy, and that to find the source of meaning in a Sentence, another level must be constructed on top of it capable of identifying these different manifestations as the same *"token"*.
+
+This example does not invalidate the analysis, but it does introduce subtlety that must be appreciated. These concerns must be kept in mind while the formal notion of a Sentence is developed.
 
 Length
 ^^^^^^
@@ -1339,13 +1341,13 @@ Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level 
 
 **Example**
 
-Consider the Sentence *ᚠ = "The dog runs"*. Its Character-level set representation would be given by,
+Consider the Sentence *ᚠ = "the dog runs"*. Its Character-level set representation would be given by,
 
-    **ᚠ** = { (0,"T"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") }
+    **ᚠ** = { (0,"t"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") }
 
 Its Word-level set representation would be given by,
 
-    W:sub:`ᚠ` = { (1, "The"), (2, "dog"), (3, "runs") }
+    W:sub:`ᚠ` = { (1, "the"), (2, "dog"), (3, "runs") }
 
 Therefore, the length of the sentence is:
 
@@ -1353,18 +1355,18 @@ Therefore, the length of the sentence is:
 
 Note, in this example, 
 
-    l(ᚠ) = 12
+    l(ᚠ) = 12 ∎
 
-This example demonstrates the essential difference in the notions of length that have been introduced.  It is worthwhile to clarify the distinction between these two conceptions. 
+This example demonstrates the essential difference in the notions of length that have been introduced. It is worthwhile to clarify the distinction between these two conceptions. 
 
-Let *t* be a String with Character-level representation **T** and Word-level representation **W**:sub:`t`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact will be proven in Theorem 2.4.8, after the introduction of the Delimiter Count Function). Terminology is introduced in parenthesis to distinguish these notions of length,
+Let *t* be a String with Character-level representation **T** and Word-level representation **W**:sub:`t`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact is proven in Section II of the Appendix with Theorem A.4.8). Terminology is introduced in parenthesis to distinguish these notions of length,
 
    - l(t) (String Length): The number of non-Empty Characters contained in a String.
    - Λ(t) (Word Length): The number of Words contained in a String 
 
-Note the first level is purely syntactical. Any non-Empty String *t* will have a String Length *l(t)*. However, not every non-Empty String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.3.2 for a precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
+Note the first level is purely syntactical. Any String *t* will have a String Length *l(t)*. However, not every String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.2.1 for a precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
 
-With Word Length defined, this notion can be used to simplify notation. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.
+Word Length can be used to simplify some of the complex notation the formal system has accumulated. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.
 
 **Definition 2.1.5: Word Index Notation**
 
@@ -1460,7 +1462,7 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 
 Two new axioms, the Duality Axiom S.1 and the Extraction Axiom S.2, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language). 
 
-To briefly summarize the axioms previously introduced: The system "*initializes*" with the assumption of an equality relation and the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. 
+To briefly summarize the axioms previously introduced: The system *"initializes"* with the assumption of an equality relation and the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. To re-iterate, a Language and Corpus are fixed on top of the domain of all Strings outside of the system. 
 
 The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories.
 
@@ -1480,7 +1482,7 @@ The Extraction Axiom S.2 further strengthens the relationship that exists betwee
  
 **Definition 2.2.1: Semantic Coherence** 
 
-A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if **W**:sub`ᚠ` only contains words from Language **L**. 
+A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if **W**:sub:`ᚠ` only contains words from Language **L**. 
 
 A Corpus C:sub:`L` is *semantically coherent* in a Language **L** if and only if the Word-level set representation of all its Sentences are semantically coherent. ∎
 
@@ -1576,7 +1578,7 @@ Section II.III: Sentence Classes
 
 As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in linguistics is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will seen to be a *"recursion of inversions"*.
 
-Theorems 2.3.9 - 2.3.11 of this subsection mark the first notable results obtained from the current formal system. Their empirical truth in natural language represents confirmation of the formal system's construction. These theorems demonstrate the Character-level symmetries required by invertibility propagate up through the Word-level of linguistics and manifest in conditions that must be imposed on the Word-level structure of an Invertible Sentence.
+Theorems 2.3.9 - 2.3.11 of this subsection mark the first notable results obtained from the formal system. Their empirical truth in natural language represents confirmation of the formal system's construction. These theorems demonstrate the Character-level symmetries required by invertibility propagate up through the Word-level of linguistics and manifest in conditions that must be imposed on the Word-level structure of an Invertible Sentence.
 
 Admissible Sentences
 ^^^^^^^^^^^^^^^^^^^^
@@ -1591,13 +1593,15 @@ The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition
 
     inv(ᚠ) = "not a no parts"
 
-However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Limitation introduced in Definition 1.2.7 must be leveraged. 
+However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Limitation introduced in Definition 1.2.7 must now be leveraged. 
 
 **Definition 2.3.1: Admissible Sentences**
 
 Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(*n*). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(*n*), if it satisfies the following open formula
 
     t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`) ∎
+
+The notion of *admissibility* is a faint echo of *"grammaticality"*. As inversion is studied in the sentential level of the linguistic hierarchy, it is no longer permitted to ignore semantics in its entirety. Instead, semantics ingresses into the system as implicit properties the extensionally identified Sentences must obey. Before discussing this at greater length, several theorems are proved about classes of Admissible Sentences.
 
 **Theorem 2.3.1** A(n) ⊆ C:sub:`L`
 
@@ -1699,6 +1703,10 @@ It has been shown that for an arbitrary sentence *ζ* *∈* **C**:sub:`L`, there
 Therefore,
 
     ∀ ζ ∈ C:sub:`L`: ∃ p ∈ Χ:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i) ∎
+
+The condition of *admissibility*, as will be seen in Theorem 2.3.11, prevents the *"inversion propagation"* from being a purely syntactical operation. The Inverse of a Sentences must also be Admissible in the Corpus in order to be considered an Invertible Sentence (Definition 2.3.2 in the next section). This represents a rupture or division from the realm of syntax not seen at the Word level of the linguistic hierarcy when considering the operation of inversion. In order to fully specify the conditions for Sentence invertibility, one must be able to elaborate on what it means to call a Sentence *"admissible"*; in other words, there must be grammatical rules that identify an inverted Sentence as belonging to the Corpus over and above the syntactical conditions that are imposed by invertibility.
+
+However, this does not mean *"grammaticality"* is equivalent to *"admissibility"*. As the final section of the work will make clear, there are possible avenues available to formal analysis for parsing the concept of *"admissibility"* into finer partitions such as *"syntactical admissibility"* and *"semantic admissiblity"*. In this way, the origin of meaning in a Sentence can be narrowed down by filtering out the syntactical considerations.
 
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
@@ -1807,9 +1815,9 @@ All of these phrases may be *inverted* to produce semantically coherent phrases 
 - now god
 - not a ton 
 
-Note the last item in this list is an example of what this work has termed a *Perfect Palindrome*. These examples were specially chosen to highlight the connection that exists between the class of *Perfect Palindromes* and the class of *Invertible Sentences*. It appears, based on this brief and circumstantial analysis, that *Perfect Palindromes* are a subset of a larger class of Sentences, namely, Invertible Sentences.
+Note the last item in this list is an example of what this work has termed a Perfect Palindrome. These examples were specially chosen to highlight the connection that exists between the class of Perfect Palindromes and the class of Invertible Sentences. It appears, based on this brief and circumstantial analysis, that *Perfect Palindromes* are a subset of a larger class of Sentences, namely, Invertible Sentences.
 
-Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* (Definition 2.2.1) under inversion. In order for a Sentence to be invertible it must possess symmetry on both the Character-level and the Word-level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven by the end of this subsection.
+Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* (Definition 2.2.1) and *admissibility* (Definition 2.3.1) under inversion. In order for a Sentence to be invertible it must possess symmetry on both the Character-level and the Word-level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven by the end of this subsection.
 
 **Theorem 2.3.7** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
 
@@ -3525,6 +3533,46 @@ Characterization of Perfect Palindromes: This theorem provides a powerful way to
 
 
 
+Theorem 3.2.3:
+
+∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α:sub:ζ:sup:-ω ∈ I))
+
+Translation: For every perfect palindrome ζ, either:
+
+There exists a word α in the language L such that the character at the pivot index ω(ζ) is contained in α, and α is a reflective word (α ∈ R), OR
+The character at the pivot index ω(ζ) is a delimiter (σ), and the left pivot word is invertible (α:sub:ζ:sup:-ω ∈ I).
+Proof:
+
+Let ζ be an arbitrary perfect palindrome in PP.
+
+Definition of Perfect Palindrome: By Definition 3.1.3, ζ = inv(ζ).
+
+Cases based on Parity: We have two cases to consider:
+
+Case 1: ζ has odd length (ζ ∈ P:sup:-)
+By Theorem 3.1.8, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). This means the pivot falls on a character, ζ[ω(ζ)].
+Subcase 1: ζ[ω(ζ)] ≠ σ
+Since ζ[ω(ζ)] is not a delimiter, it must belong to a word. By Axiom S.1, there exists a word α in L such that α is contained in ζ. Since the pivot character is not a delimiter, it must be part of a word in ζ. Let α be the word such that (x, α) ∈ W:sub:ζ and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
+Since ζ is a perfect palindrome, and ω(ζ) is the pivot, this word α must be reflective (α ∈ R). Otherwise, the characters in ζ would not be symmetrical around the pivot, and ζ wouldn't be a perfect palindrome.
+Therefore, ∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R).
+Subcase 2: ζ[ω(ζ)] = σ
+Since the pivot character is a delimiter, by Theorem 3.2.2, we know that inv(α:sub:ζ:sup:-ω) ⊂ α:sub:ζ:sup:+ω or inv(α:sub:ζ:sup:+ω) ⊂ α:sub:ζ:sup:-ω.
+Since ζ is a perfect palindrome, we have ζ = inv(ζ). This means the words to the left and right of the pivot must be inverses of each other.
+Therefore, α:sub:ζ:sup:-ω = inv(α:sub:ζ:sup:+ω).
+Since α:sub:ζ:sup:+ω is in L, and α:sub:ζ:sup:-ω is its inverse, by definition of invertible words, α:sub:ζ:sup:-ω ∈ I.
+Case 2: ζ has even length (ζ ∈ P:sup:+)
+By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ) + 1:]) + 1. This means the pivot falls between two characters.
+Since ζ is a perfect palindrome, the two characters adjacent to the pivot must be identical (because ζ = inv(ζ)).
+By Axiom W.1, these characters cannot be delimiters. Thus, they must belong to a word α that spans across the pivot.
+Similar to Case 1, this word α must be reflective (α ∈ R) for ζ to be a perfect palindrome.
+Since the two characters adjacent to the pivot are identical and belong to α, we can say that ζ[ω(ζ)] is "contained" in α in the sense that α spans across the pivot.
+Therefore, ∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R).
+The case where the pivot is a delimiter is covered by our definition of an even-length perfect palindrome.
+Conclusion: In all cases, at least one of the two conditions holds. Since ζ was an arbitrary perfect palindrome, we can generalize:
+
+∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α:sub:ζ:sup:-ω ∈ I))
+This completes the proof. ∎
+
 
 
 **Theorem 3.2.4: The Perfect Parity Postulate**
@@ -3574,6 +3622,61 @@ Explanation:
 This proof demonstrates the biconditional relationship between a Sentence being both a Perfect Palindrome and an Even Palindrome, and the existence of a Reflective Word containing the Sentence's Pivot.
 
 The proof utilizes the definitions of Perfect Palindromes, Even Palindromes, and Reflective Words, along with the strengthened Third Inverse Postulate and the Discovery Axiom, to analyze the different cases and demonstrate the implications in both directions.
+
+
+
+
+
+
+Analysis:
+
+Even Parity: An even-parity palindrome has an even number of words (Λ(ζ) is even).
+Imperfect Palindrome: An imperfect palindrome is a palindrome but not a perfect palindrome. This means it cannot be its own inverse (ζ ≠ inv(ζ)), but its σ-reduction is a palindrome (σ_reduce(ζ) = inv(σ_reduce(ζ))).
+Delimiter Count: By Theorem 2.4.1, the number of delimiters in a sentence ζ is one less than the number of words: Δ(ζ) = Λ(ζ) - 1. Since Λ(ζ) is even for an even-parity palindrome, Δ(ζ) must be odd.
+σ-reduction: σ-reduction removes all delimiters.
+Length of σ-reduced Form: The length of the σ-reduced form, l(σ_reduce(ζ)), is the original length of the sentence minus the number of delimiters: l(σ_reduce(ζ)) = l(ζ) - Δ(ζ).
+Theorem
+∀ ζ ∈ IP ∩ P:sup:+: (l(σ_reduce(ζ)) is odd)
+
+Proof
+Let ζ be an imperfect palindrome with even parity, ζ ∈ IP ∩ P:sup:+.
+Let n = Λ(ζ) be the number of words in ζ. Since ζ has even parity, n must be even.
+By Theorem 2.4.1, Δ(ζ) = n - 1. Since n is even, n - 1 must be odd.
+Since ζ is an imperfect palindrome, by the definition of the imperfection, we know:
+ζ ≠ inv(ζ)
+σ_reduce(ζ) = inv(σ_reduce(ζ))
+Since σ_reduce(ζ) = inv(σ_reduce(ζ)), and by Theorem 3.1.8 we know parity is preserved if the length of the left partial at the pivot point is exactly one longer than the right partial, we know the sentence pivot must either fall on a character or a delimiter.
+If the pivot falls on a delimiter, then n must be odd by the Second Inverse Postulate. Since n is even, this is impossible.
+If the pivot falls on a character, then that character must be a non-delimiter, non-empty character by our definition of a pivot. Since ζ is an imperfect palindrome, this pivot character cannot be part of a reflective word by Theorem 3.2.3. This means it must be part of an invertible word pair by Theorem 3.2.1. The inverse of the pivot character must appear in the inverse word, since it cannot be a reflective word.
+By our definition of σ-reduction, σ_reduce(ζ) removes all delimiters, and by Theorem 1.2.4, inversion inverts words. So, for a palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)) preserves the order of non-delimiter characters under inversion.
+Therefore, l(σ_reduce(ζ)) must be odd, as it preserves the non-delimiter pivot character under inversion, and there are an even number of non-delimiter characters around it, (Δ(ζ)).
+
+Conclusion:
+
+Yes, we can conclude that an imperfect palindrome with even parity must have a σ-reduced form with an odd length.
+
+Reasoning:
+
+An even-parity imperfect palindrome has an even number of words.
+This implies an odd number of delimiters.
+The σ-reduced form has a length equal to the original length minus the number of delimiters: l(σ_reduce(ζ)) = l(ζ) - Δ(ζ).
+Since l(ζ) is even (because the number of delimiters is odd, the number of characters must be odd to be a palindrome) and Δ(ζ) is odd, their difference l(σ_reduce(ζ)) must be odd.
+Implications:
+
+Constraints on σ-reduced Forms: This result further constrains the possible σ-reduced forms of imperfect palindromes.
+Relationship between Parity and Length: It establishes a direct link between the parity of a palindrome (at the word level) and the length of its σ-reduced form (at the character level).
+Potential for Simplification: This might help simplify some of our formulas or proofs related to σ-induction, as we now know that even-parity imperfect palindromes will always have odd-length σ-reduced forms.
+Further Considerations:
+
+Odd-Parity Imperfect Palindromes: We could investigate the corresponding relationship for odd-parity imperfect palindromes.
+Perfect Palindromes: It's worth noting that perfect palindromes don't have this same constraint. A perfect palindrome with even parity can have an even or odd length σ-reduced form.
+
+
+
+
+
+
+
 
 Section III.III: Palindromic Algorithms
 ---------------------------------------

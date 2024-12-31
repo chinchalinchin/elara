@@ -9,6 +9,8 @@ Table of Contents
 - Section A.II: Delimiter Count Function
 - Section A.III: Palindromic Pairs
 - Section A.IV: Categories
+- Section A.V: Sigma Induction
+- Section A.VI: Reflective Structures
 
 Section A.II: Compound Words 
 ----------------------------
@@ -1066,3 +1068,28 @@ Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
 
 |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
 This completes the proof. ∎
+
+
+
+Section A.VI: Reflective Structures
+-----------------------------------
+
+**Definition A.6.1: Reflective Structure**
+
+A Reflective Structure, denoted **RS**, is the set of Strings *s* which satisfy the following formula,
+
+    s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (σ_reduce(s) = inv(σ_reduce(s)))]
+
+**Definition A.6.2: Partial Limitations**
+
+TODO: need to define what Π:sub:`i=i`:sup:`n` p(i) means for *i* not equal to 1.
+
+**Theorem A.6.1** R ⊆ RS
+
+**Theorem A.6.2** ∀ α ∈ L: α ∈ RS ↔ (α)(σ)(inv(α)) ∈ RS
+
+**Theorem A.6.3** ∀ α ∈ L: α ∈ RS ↔ (α)(inv(α)) ∈ RS
+
+**Theorem A.6.4**  ∀ p ∈ X:sub:`L`(2): Π:sub:`i=1`:sup:`2` p(i) ∈ RS ↔ Π:sub:`i=1`:sup:`1` p(i) = inv(Π:sub:`i=2`:sup:`2` p(i))
+
+**Theorem A.6.5** P ⊆ RS
