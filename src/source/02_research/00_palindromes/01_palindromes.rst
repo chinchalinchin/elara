@@ -1844,7 +1844,7 @@ Note, in order for the Sentence to invert, i.e. the case of *ᚢ* and *ᚦ*, the
 
 These last theorems encapsulate these important properties of Invertible Sentences. When Palindromes are formally defined in the next section, these theorems will be used extensively to prove the main results of this work. 
 
-**Theorem 2.3.8** ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+**Theorem 2.3.9** ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
 Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that *1 ≤ i ≤ Λ(ζ)*. By Definition 2.2.2, 
 
@@ -1898,11 +1898,11 @@ Theorem 2.3.8 *"propagates"* the Character-level symmetries up through the Words
 
     inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
-An imporant note to make is the *direction* of the implication in Theorem 2.3.8. A bidirectional equivalence would allow one to infer from the above equation that a Sentence is invertible. However, the direction of Theorem 2.3.8 cannot be strengthened, as the following Theorem 2.3.9 makes clear.
+An imporant note to make is the *direction* of the implication in Theorem 2.3.9. A bidirectional equivalence would allow one to infer from the above equation that a Sentence is invertible. However, the direction of Theorem 2.3.9 cannot be strengthened, as the following Theorem 2.3.10 makes clear.
 
-Theorem 2.3.9 also makes clear why Definition 2.3.1 of Admissible Sentence of Word Length *n* is essential to understanding invertibility. 
+Theorem 2.3.10 also makes clear why Definition 2.3.1 of Admissible Sentence of Word Length *n* is essential to understanding invertibility. 
 
-**Theorem 2.3.9** ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
+**Theorem 2.3.10** ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus C:sub:`L`, *ζ* is invertible if and only if,
 
@@ -1954,9 +1954,9 @@ Therefore, the bidirectional theorem holds. ∎
 
 The concept of *admissibility* deserves mention. Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. Theorem 2.3.9 takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Limitation of Words that belongs to the Corpus. 
 
-The significance of Theorem 2.3.9 is the additional syntactical constraint that is imposed over and above *admissibility* into a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess *admissibility*, the pre-cursor to *grammaticality*, but it must also display Word-level symmetry. This is definitively confirmed by Theorem 2.3.10.
+The significance of Theorem 2.3.10 is the additional syntactical constraint that is imposed over and above *admissibility* into a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess *admissibility*, the pre-cursor to *grammaticality*, but it must also display Word-level symmetry. This is definitively confirmed by Theorem 2.3.11.
 
-**Theorem 2.3.10** ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
+**Theorem 2.3.11** ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 
 This theorem can be stated in natural language as follows: For every Invertible Sentence *ζ* in the Corpus **C**:sub:`L`, every Word in *ζ* is an Invertible Word.
 
@@ -2130,11 +2130,11 @@ The non-Delimiter characters in *v* (the concatenation of (*ζ* ⋅ **Σ**:sub:`
 
 Therefore, by Definition 1.1.4, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since *s = v*, 
 
-    ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`)
+    8. ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`)
 
 Since ζ and ξ were arbitrary sentences in C:sub:L, this can be generalized,
 
-    ∀ ζ, ξ ∈ C:sub:`L`: ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`) ∎
+    9. ∀ ζ, ξ ∈ C:sub:`L`: ζξ ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`)(ξ ⋅ Σ:sub:`σ`) ∎
 
 Theorem 3.1.1 establishes a type of commutativity. Theorem 3.1.2 further demonstrates the "algebraic" nature of *σ*-reduction and its interaction with other String operations. It shows that *σ*-reduction "distributes" over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that *σ*-reduction and inversion are not just arbitrary operations but are deeply connected to the underlying structure of Strings and Sentences.
 
@@ -2142,163 +2142,55 @@ As another example of this "linguistic algebraic structure", the following theor
 
 **Theorem 3.1.3** ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
 
-Let ζ be an arbitrary sentence in C:sub:L.
+Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. Let s be the *σ*-reduction of *ζ*,
 
-Character-Level Representation: Let Ζ be the character-level representation of ζ:
-
-Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
-
-Let s be the *σ*-reduction of *ζ*,
-
-    s = ζ ⋅ Σ:sub:`σ`
+    1. s = ζ ⋅ Σ:sub:`σ`
 
 Let *t* be the *σ*-reduction of *s*,
 
-    t = s ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`
+    2. t = s ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`
 
 Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Delimiter Characters (σ).
 
-When *s* is *σ*-reduced (to get t), the Reduction Algorithm in Definition 3.1.2 iterates through the Characters of *s*. Since s has no Delimiters, the condition if *s[i] ≠ σ* in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by Definition 1.1.4, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
+When *s* is *σ*-reduced (to get *t*), the Reduction Algorithm in Definition 3.1.2 iterates through the Characters of *s*. Since s has no Delimiters, the condition if *s[i] ≠ σ* in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by Definition 1.1.4, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
 
-    (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ` = ζ ⋅ Σ:sub:`σ`
+    (3. ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ` = ζ ⋅ Σ:sub:`σ`
 
 Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
 
-    ∀ ζ ∈ C:sub:`L`: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ) ∎
+    4. ∀ ζ ∈ C:sub:`L`: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ) ∎
 
-Theorem 3.1.3 might be termed the *"Idempotency of σ-reduction"* or the *"σ-reduction Idempotence Property"*.
+**Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1
 
+Let *ζ* be an arbitrary sentence in C:sub:L. By the Duality Axiom S.1, every Sentence in C:sub:`L` must contain at least one word from L. 
 
-**Theorem** ∀ ζ ∈ C:sub:`L`: Λ(σ_reduce(ζ)) ≤ 1
+By Definition 3.1.2, *ζ* ⋅ **Σ**:sub:`σ`removes all Delimiters from *ζ*. Therefore, *ζ* ⋅ **Σ**:sub:`σ` consists of the Characters of the words in *ζ* concatenated together without any delimiters.
 
-Here's the corrected theorem and a more accurate proof:
+By the Discovery Axiom W.1., Words in **L** cannot contain Delimiters.
 
-Corrected Theorem 3.1.20: ∀ ζ ∈ C:sub:L: Λ(σ_reduce(ζ)) ≤ 1
+By Definition 2.1.4, the Word Length *Λ(s)* of a String *s* counts the number of Words in *s*, where Words are separated by Delimiters.
 
-Proof:
+If *ζ* contains only one Word, then *ζ* ⋅ **Σ**:sub:`σ` will be that Word,
 
-Let ζ be an arbitrary sentence in C:sub:L.
+    1. Λ(ζ ⋅ Σ:sub:`σ`) = 1
 
-Axiom S.1 (Word-Sentence Duality): By Axiom S.1, every sentence in C:sub:L must contain at least one word from L.
+If *ζ* contains multiple Words, then *ζ* ⋅ **Σ**:sub:`σ` will be a concatenation of those words without Delimiters. This concatenated String may or may not be a valid Word in **L**.
 
-Definition of σ-reduction: σ_reduce(ζ) removes all delimiters from ζ (Definition 3.1.2).
+If the concatenated String is a valid Word in **L**, then,
 
-Axiom W.1 (Delimiter Axiom): Words in L cannot contain delimiters (Axiom W.1).
+    2. Λ(ζ ⋅ Σ:sub:`σ`) = 1
 
-Structure of σ_reduce(ζ): Therefore, σ_reduce(ζ) consists of the characters of the words in ζ concatenated together without any delimiters.
+If the concatenated String is not a valid Word in **L**, then,
 
-Definition of Word Length: By definition, the word length Λ(s) of a string s counts the number of words in s, where words are separated by delimiters.
+    3. Λ(ζ ⋅ Σ:sub:`σ`) = 0
 
-Possible Cases:
+Therefore, in all possible cases,
 
-Case 1: If ζ contains only one word, then σ_reduce(ζ) will be that word, and Λ(σ_reduce(ζ)) = 1.
-Case 2: If ζ contains multiple words, then σ_reduce(ζ) will be a concatenation of those words without delimiters. This concatenated string may or may not be a valid word in L.
-If the concatenated string is a valid word in L, then Λ(σ_reduce(ζ)) = 1.
-If the concatenated string is not a valid word in L, then Λ(σ_reduce(ζ)) = 0, because the string is not a valid sentence, and therefore contains no valid words.
-Conclusion: Therefore, Λ(σ_reduce(ζ)) can be either 0 or 1, meaning Λ(σ_reduce(ζ)) ≤ 1.
+    Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1.
 
-Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
+Since *ζ* was an arbitrary sentence in **C**:sub:`L`, this can be generalized, 
 
-∀ ζ ∈ C:sub:`L`: Λ(σ_reduce(ζ)) ≤ 1
-This completes the proof. ∎
-
-**Theorem** ∀ s ∈ S: l(σ_reduce(s)) + Δ(s) = l(s)
-
-Theorem 3.1.16: ∀ s ∈ S: l(s) = l(σ_reduce(s)) + Δ(s)
-
-Translation: For any string s, the length of s is equal to the length of its σ-reduction plus the number of delimiters in s.
-
-Proof:
-
-Let s be an arbitrary string in S.
-
-Definition of σ-reduction: By Definition 3.1.2, σ_reduce(s) is obtained by removing all delimiter characters (σ) from s.
-
-Definition of Delimiter Count: By Definition 2.4.1, Δ(s) is the number of delimiter characters in s.
-
-Length of s: The length of s, denoted l(s), is the total number of characters in s, including delimiters.
-
-Length of σ_reduce(s): The length of σ_reduce(s), denoted l(σ_reduce(s)), is the number of non-delimiter characters in s.
-
-Key Observation: Every character in s is either a delimiter or a non-delimiter character. Therefore, the total number of characters in s is the sum of the number of non-delimiter characters and the number of delimiter characters.
-
-Conclusion: From steps 3, 4, and 5, we can conclude:
-
-l(s) = l(σ_reduce(s)) + Δ(s)
-Since s was an arbitrary string, we can generalize:
-
-*   ∀ s ∈ S: l(s) = l(σ_reduce(s)) + Δ(s)
-This completes the proof. ∎
-
-Explanation:
-
-This theorem expresses a fundamental relationship between the length of a string, the length of its σ-reduction, and its delimiter count. It essentially states that the original length of a string can be decomposed into the length of the string without delimiters (the σ-reduction) and the number of delimiters that were removed.
-
-
-Example:
-
-Let s = "a σ b σ σ c".
-
-l(s) = 7
-σ_reduce(s) = "abc"
-l(σ_reduce(s)) = 3
-Δ(s) = 3
-And indeed, l(s) = l(σ_reduce(s)) + Δ(s)  =>  7 = 3 + 4.
-
-
-Good catch!
-
-It should follow from your corrected theorem and
-
-∀ ζ ∈ C:sub:L: Λ(ζ) = Δ(ζ) + 1
-
-**Theorem** ∀ ζ ∈ C:sub:L: l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
-
-Corrected Theorem 3.1.17: ∀ ζ ∈ C:sub:L: l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
-
-Proof:
-
-Let ζ be an arbitrary sentence in C:sub:L.
-
-Theorem 3.1.16: We know from Theorem 3.1.16 that for any string s:
-
-l(s) = l(σ_reduce(s)) + Δ(s)
-Applying Theorem 3.1.16 to ζ:  Applying this to our sentence ζ, we get:
-
-l(ζ) = l(σ_reduce(ζ)) + Δ(ζ)
-Theorem 2.4.1: We also know from Theorem 2.4.1 that for any sentence ζ in the corpus:
-
-Λ(ζ) = Δ(ζ) + 1
-Rearranging Theorem 2.4.1: We can rearrange this to get:
-
-Δ(ζ) = Λ(ζ) - 1
-Substitution: Substituting the expression for Δ(ζ) from Step 4 into the equation from Step 2, we get:
-
-l(ζ) = l(σ_reduce(ζ)) + (Λ(ζ) - 1)
-Rearranging: Rearranging the terms, we get:
-
-l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
-Conclusion: Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
-
-∀ ζ ∈ C:sub:L: l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
-This completes the proof. ∎
-
-Explanation:
-
-The proof combines the relationship between the length of a string and its σ-reduction (Theorem 3.1.16) with the relationship between the number of words in a sentence and its delimiter count (Theorem 2.4.1). By substituting and rearranging, we arrive at the correct equation.
-
-Why the original equation was slightly incorrect:
-
-The original equation, l(ζ): l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1, was incorrect because it added l(ζ) to both sides without proper justification. The correct derivation involves substituting for Δ(ζ) and then rearranging.
-
-Implications:
-
-This corrected theorem establishes a precise relationship between the length of a sentence, the length of its σ-reduction, and the number of words in the sentence. This is another useful tool for analyzing the structure of sentences and, in particular, palindromes.
-
-
-
-
-
+    ∀ ζ ∈ C:sub:`L`: Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1. ∎
 
 During a *σ*-reduction, information in lost with respect to the following semantic categories,
 
@@ -2308,7 +2200,7 @@ During a *σ*-reduction, information in lost with respect to the following seman
 
 However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ*-reduction of a Sentence.
 
-**Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`)
+**Theorem 3.1.5** ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`)
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus **C**:sub:`L`, and for every Word *ζ{i}* in the Word-level representation of *ζ*, *ζ{i}* is contained in (*ζ* ⋅ **Σ**:sub:`σ`).
 
@@ -2316,106 +2208,67 @@ Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By Theorem 2.2.4, it is know
 
 This means that *ζ* can be written as either, in the case of *Λ(ζ) > 1*, 
 
-    1. Case (Λ(ζ) > 1): ζ = s:sub:`1`)(σ)(ζ{i})(σ)(s:sub:`2`)
+    1. Case (Λ(ζ) > 1): ζ = (s:sub:`1`)(σ)(ζ{i})(σ)(s:sub:`2`)
     
 where *s*:sub:`1` and *s*:sub:`2` are (possibly Empty) Strings. 
 
 In the case that Λ(ζ) = 1, then, this means *ζ* can be written simply as, 
 
-    2. Case (Λ(ζ) = 1): ζ = s:sub:`1`)(σ)(ζ{i})(σ)(s:sub:`2`)
+    1. Case (Λ(ζ) = 1): ζ = ζ{1}
 
-By the Definition 3.1.2, *ζ* ⋅ **Σ**:sub:`σ` is obtained by removing all Delimiters from ζ. Therefore:
+By the Definition 3.1.2, *ζ* ⋅ **Σ**:sub:`σ` is obtained by removing all Delimiters from ζ. Furthermore, by Theorem 3.1.2, *σ*-reduction distributes over concatenation. Thus,
 
-    3. 
-σ_reduce(ζ) = σ_reduce(s:sub:1) σ_reduce(α) σ_reduce(s:sub:2)
-Axiom W.1: By Axiom W.1, words in L do not contain delimiters. Since α ∈ L (by Axiom S.2), σ_reduce(α) = α.
+    1. Case (Λ(ζ) > 1): ζ ⋅ Σ:sub:`σ` = (s:sub:`1`⋅ Σ:sub:`σ`)(ζ{i} ⋅ Σ:sub:`σ`)(s:sub:`1`⋅ Σ:sub:`σ`)
+    2. Case (Λ(ζ) = 1): ζ{1} ⋅ Σ:sub:`σ` 
 
-Substitution: Substituting α for σ_reduce(α) in the expression for σ_reduce(ζ), we get:
+By the Discovery Axiom W.1, Words in **L** do not contain Delimiters.
 
-σ_reduce(ζ) = σ_reduce(s:sub:1) α σ_reduce(s:sub:2)
-Containment: From this, we can see that α is a substring of σ_reduce(ζ). Therefore, by the definition of containment (Definition 1.1.4):
+    1. Case (Λ(ζ) > 1): ζ ⋅ Σ:sub:`σ` = (s:sub:`1`⋅ Σ:sub:`σ`)(ζ{i})(s:sub:`1`⋅ Σ:sub:`σ`)
+    2. Case (Λ(ζ) = 1): ζ{1} ⋅ Σ:sub:`σ` = ζ{1}
 
-α ⊂:sub:s σ_reduce(ζ)
-Conclusion: Since ζ and α were arbitrary, we can generalize:
+Therefore, by the definition of Containment (Definition 1.1.4):
 
-∀ ζ ∈ C:sub:L, ∀ α ∈ W:sub:ζ: α ⊂:sub:s σ_reduce(ζ)
-This completes the proof. ∎
+    1. Case (Λ(ζ) > 1): ζ{i} ⊂:sub:`s` ζ ⋅ Σ:sub:`σ` 
+    2. Case (Λ(ζ) = 1): ζ{1} ⊂:sub:`s` ζ ⋅ Σ:sub:`σ` 
 
-This theorem can be stated in natural language as follows: Given the *σ*-reduction of a Sentence, there exists a Word in its Language that is contained in the *σ-reduced* string.
+In both cases, there is a Word in *ζ* that is contained in the *σ*-reduction of *ζ*. Since *ζ* was arbitrary, this can generalize as,
 
-Assume *ζ ∈ C*:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*.
+∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`) ∎
 
-By the Axiom of Word Extraction S.3,
+As the last precursor to a formal explication of palindromic structures, this subsection is concluded by showing how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
 
-    1. ∀ ζ ∈ C:sub:`L`, ∀ α ∈ W:sub:`ζ`: α ∈ L.
-
-Since *ζ* is a sentence, by Theorem 2.3.2 (*Λ(ζ) ≥ 1*), it must contain at least one word. Therefore, W:sub:`ζ` is not empty. Let *α* be any word in **W**:sub:`ζ`. By Definition 2.1.3 of the Word-level set representation, *α* is a contiguous subsequence of non-Delimiter Characters in **Ζ**.  
-
-Let **A** be the Character-level representation of *α*,
-
-    (𝔞:sub:`1`, 𝔞:sub:`2`, ..., 𝔞:sub:`l(α)`)
-
-Let Z' = be the Character-level representation of Ζ ⋅ Σ:sub:σ.
-
-    (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(Ζ ⋅ Σ:sub:σ)`)
-
-Since *α* is a contiguous subsequence of non-Delimiter (by the Discovery Axiom W.1) and non-Empty Characters (by Theorem 1.2.4) in **Ζ**, there exists an index k such that:
-
-    𝔞:sub:`1` = 𝔟:sub:`k`
-    𝔞:sub:`2` = 𝔟:sub:`k+1`
-    ...
-    𝔞:sub:`l(α)` = 𝔟:sub:`k+l(α)-1`
-
-Define the function *f*: **N**:sub:`l(α)` → **N**:sub:`l(Ζ ⋅ Σ:sub:σ`)` as,
-
-    f(i) = k + i - 1.
-
-The function *f* is clearly strictly increasing and consecutive, as it maps consecutive indices in *α* to consecutive indices in **Ζ ⋅ Σ**:sub:`σ`. By construction, f satisfies the condition,
-
-    ∀ i ∈ N:sub:`l(α)`: 𝔞:sub:`i` = 𝔟:sub:`f(i)`.
-
-Therefore, by Definition 1.1.7 of Containment, 
-
-    α ⊂:sub:`s` (Ζ ⋅ Σ:sub:`σ`). ∎
-
-
-
-
-**Theorem 3.1.2** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(Ζ ⋅ Σ:sub:`σ`) = inv(inv(Ζ ⋅ Σ:sub:`σ`)) ]
+**Theorem 3.1.6** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ζ  ⋅ Σ:sub:`σ`) = inv(inv(ζ  ⋅ Σ:sub:`σ`)) ]
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ*-reduction.
 
-Assume *ζ ∈* **C**:sub:`L`` and *ζ ∈* **K**, i.e. *ζ* is an Invertible Sentence. Let the Word-level representation of *ζ* by given by,
-
-    1. W:sub:`ζ`` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
-
-By Theorem 2.3.5, since *ζ* is invertible, all its Words are also Invertible,
+Assume *ζ ∈* **C**:sub:`L`` and *ζ ∈* **K**, i.e. *ζ* is an Invertible Sentence. By Theorem 2.3.7, since *ζ* is invertible, all its Words are also Invertible,
  
-    2. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ I.
+    1. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → inv(ζ){i} ∈ L
 
-The σ-reduction of *ζ*, **Ζ ⋅ Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the σ-reduction concatenates the Words in **W**:sub:`ζ``:
+ζ ⋅ Σ:sub:`σ`
+The σ-reduction of *ζ*, *ζ* ⋅ **Σ**:sub:`σ`, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the *σ*-reduction concatenates the Words of ζ,
 
-    3. Ζ ⋅ Σ:sub:`σ`` = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
+    3. Ζ ⋅ Σ:sub:`σ`` = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
 
 Applying Theorem 1.2.5 repeatedly,
 
-    4. inv(Ζ ⋅ Σ:sub:σ) = inv((α:sub:`1`)(α:sub:`2`) ... (α:sub:`Λ(ζ)`))
+    4. inv(Ζ ⋅ Σ:sub:σ) = inv((ζ{1})(ζ{2})...(ζ{Λ(ζ)}))
 
 To get,
 
-    5.  inv(Ζ ⋅ Σ:sub:`σ`)  = (inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`))
+    5.  inv(Ζ ⋅ Σ:sub:`σ`)  = (inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1})))
 
 Applying a second Inversion,
 
-    6. inv(inv(Ζ ⋅ Σ:sub:`σ)) = inv((inv(α:sub:`Λ(ζ)`)) ... (inv(α:sub:`2`))(inv(α:sub:`1`)))
+    6. inv(inv(Ζ ⋅ Σ:sub:`σ)) = inv((inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1}))))
 
 Applying Theorem 1.2.5 again,
 
-    7. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (inv(inv(α:sub:`1`))) (inv(inv(α:sub:`2`)))...(inv(inv(α:sub:`Λ(ζ)`)))
+    7. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (inv(inv((ζ{1})))) (inv(inv((ζ{2}))))...(inv(inv(inv((ζ{Λ(ζ)}))))
 
 Finally, applying Theorem 1.2.4 (*inv(inv(s)) = s*)
 
-    8. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (α:sub:`1`)(α:sub:`2`)...(α:sub:`Λ(ζ)`)
+    8. inv(inv(Ζ ⋅ Σ:sub:`σ)) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
 
 Therefore, combining step 3 and step 8
 
@@ -2424,7 +2277,6 @@ Therefore, combining step 3 and step 8
 The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
 
 These ideas will be expounded until in Section III.III, when the theorems and results of this work are used to implement a Palindrome search algorithm.
-
 
 Aspect
 ^^^^^^

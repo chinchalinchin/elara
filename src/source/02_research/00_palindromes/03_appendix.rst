@@ -338,6 +338,91 @@ Since s was an arbitrary string in S, we can generalize:
 This completes the proof. ∎
 
 
+**Theorem A.2.12** ∀ s ∈ S: l(ζ ⋅ Σ:sub:`σ`) + Δ(s) = l(s)
+
+Theorem 3.1.16: ∀ s ∈ S: l(s) = l(σ_reduce(s)) + Δ(s)
+
+Translation: For any string s, the length of s is equal to the length of its σ-reduction plus the number of delimiters in s.
+
+Proof:
+
+Let s be an arbitrary string in S.
+
+Definition of σ-reduction: By Definition 3.1.2, σ_reduce(s) is obtained by removing all delimiter characters (σ) from s.
+
+Definition of Delimiter Count: By Definition 2.4.1, Δ(s) is the number of delimiter characters in s.
+
+Length of s: The length of s, denoted l(s), is the total number of characters in s, including delimiters.
+
+Length of σ_reduce(s): The length of σ_reduce(s), denoted l(σ_reduce(s)), is the number of non-delimiter characters in s.
+
+Key Observation: Every character in s is either a delimiter or a non-delimiter character. Therefore, the total number of characters in s is the sum of the number of non-delimiter characters and the number of delimiter characters.
+
+Conclusion: From steps 3, 4, and 5, we can conclude:
+
+l(s) = l(σ_reduce(s)) + Δ(s)
+Since s was an arbitrary string, we can generalize:
+
+*   ∀ s ∈ S: l(s) = l(σ_reduce(s)) + Δ(s)
+This completes the proof. ∎
+
+Explanation:
+
+This theorem expresses a fundamental relationship between the length of a string, the length of its σ-reduction, and its delimiter count. It essentially states that the original length of a string can be decomposed into the length of the string without delimiters (the σ-reduction) and the number of delimiters that were removed.
+
+
+Example:
+
+Let s = "a σ b σ σ c".
+
+l(s) = 7
+σ_reduce(s) = "abc"
+l(σ_reduce(s)) = 3
+Δ(s) = 3
+And indeed, l(s) = l(σ_reduce(s)) + Δ(s)  =>  7 = 3 + 4.
+
+
+**Theorem A 2.13** ∀ ζ ∈ C:sub:`L`: l(ζ ⋅ Σ:sub:`σ`) + Λ(ζ) = l(ζ) + 1
+
+Let ζ be an arbitrary sentence in C:sub:L.
+
+Theorem 3.1.16: We know from Theorem 3.1.16 that for any string s:
+
+l(s) = l(σ_reduce(s)) + Δ(s)
+Applying Theorem 3.1.16 to ζ:  Applying this to our sentence ζ, we get:
+
+l(ζ) = l(σ_reduce(ζ)) + Δ(ζ)
+Theorem 2.4.1: We also know from Theorem 2.4.1 that for any sentence ζ in the corpus:
+
+Λ(ζ) = Δ(ζ) + 1
+Rearranging Theorem 2.4.1: We can rearrange this to get:
+
+Δ(ζ) = Λ(ζ) - 1
+Substitution: Substituting the expression for Δ(ζ) from Step 4 into the equation from Step 2, we get:
+
+l(ζ) = l(σ_reduce(ζ)) + (Λ(ζ) - 1)
+Rearranging: Rearranging the terms, we get:
+
+l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
+Conclusion: Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
+
+∀ ζ ∈ C:sub:L: l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
+This completes the proof. ∎
+
+Explanation:
+
+The proof combines the relationship between the length of a string and its σ-reduction (Theorem 3.1.16) with the relationship between the number of words in a sentence and its delimiter count (Theorem 2.4.1). By substituting and rearranging, we arrive at the correct equation.
+
+Why the original equation was slightly incorrect:
+
+The original equation, l(ζ): l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1, was incorrect because it added l(ζ) to both sides without proper justification. The correct derivation involves substituting for Δ(ζ) and then rearranging.
+
+Implications:
+
+This corrected theorem establishes a precise relationship between the length of a sentence, the length of its σ-reduction, and the number of words in the sentence. This is another useful tool for analyzing the structure of sentences and, in particular, palindromes.
+
+
+
 Section A.III: Palindromic Pairs
 --------------------------------
 
