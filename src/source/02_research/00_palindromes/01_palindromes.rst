@@ -2138,71 +2138,35 @@ Since ζ and ξ were arbitrary sentences in C:sub:L, this can be generalized,
 
 Theorem 3.1.1 establishes a type of commutativity. Theorem 3.1.2 further demonstrates the "algebraic" nature of *σ*-reduction and its interaction with other String operations. It shows that *σ*-reduction "distributes" over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that *σ*-reduction and inversion are not just arbitrary operations but are deeply connected to the underlying structure of Strings and Sentences.
 
+As another example of this "linguistic algebraic structure", the following theorem might be termed the *"Idempotency of σ-reduction"* or the *"σ-reduction Idempotence Property"*.
+
 **Theorem 3.1.3** ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
-
-
-Theorem: ∀ ζ ∈ C:sub:L: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
-
-Proof:
 
 Let ζ be an arbitrary sentence in C:sub:L.
 
 Character-Level Representation: Let Ζ be the character-level representation of ζ:
 
 Ζ = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:l(ζ))
-σ-reduction: Let s = σ_reduce(ζ). By the definition of σ-reduction (Definition 3.1.2), s is obtained by removing all delimiters from ζ.
 
-Second σ-reduction: Let t = σ_reduce(s) = σ_reduce(σ_reduce(ζ)).  We want to show that t = s.
+Let s be the *σ*-reduction of *ζ*,
 
-Key Observation: Since s is the result of applying σ_reduce to ζ, it contains no delimiter characters (σ). This is because the σ-reduction algorithm removes all instances of σ.
+    s = ζ ⋅ Σ:sub:`σ`
 
-Applying σ-reduction to s: When we apply σ_reduce to s (to get t), the algorithm iterates through the characters of s. Since s has no delimiters, the condition if ⲁ:sub:i ≠ σ in the algorithm will always be true, and every character of s will be concatenated to the initially empty string t.
+Let *t* be the *σ*-reduction of *s*,
 
-Equality: Therefore, t will be identical to s, as it contains the same characters in the same order.
+    t = s ⋅ Σ:sub:`σ` = (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`
 
-Conclusion: Since t = s, we have:
+Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Delimiter Characters (σ).
 
-σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
-Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
+When *s* is *σ*-reduced (to get t), the Reduction Algorithm in Definition 3.1.2 iterates through the Characters of *s*. Since s has no Delimiters, the condition if *s[i] ≠ σ* in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by Definition 1.1.4, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
 
-*   ∀ ζ ∈ C:sub:`L`: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ)
-This completes the proof. ∎
+    (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ` = ζ ⋅ Σ:sub:`σ`
 
-Explanation:
+Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
 
-The proof relies on the fact that applying σ-reduction to a string that already has no delimiters doesn't change the string. This is because the σ-reduction algorithm only removes delimiters, and if there are no delimiters to remove, the string remains the same.
+    ∀ ζ ∈ C:sub:`L`: σ_reduce(σ_reduce(ζ)) = σ_reduce(ζ) ∎
 
-Naming the Theorem:
-
-This theorem could be called the "Idempotency of σ-reduction" or the "σ-reduction Idempotence Property".
-
-Implications:
-
-This theorem is important because it further clarifies the behavior of σ-reduction and reinforces its role as a projection onto a "delimiter-free" space. It also suggests that applying σ-reduction multiple times is equivalent to applying it just once.
-
-
-**Theorem** ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
-
-Theorem 3.1.15: ∀ s ∈ S: Δ(σ_reduce(s)) = 0
-
-Proof:
-
-Let s be an arbitrary string in S.
-
-Definition of σ-reduction: By Definition 3.1.2, σ_reduce(s) is the string obtained by removing all occurrences of the delimiter character σ from s.
-
-Definition of Delimiter Count: By Definition 2.4.1, Δ(t) is the number of delimiter characters σ in a string t.
-
-Absence of Delimiters: Since σ_reduce(s) has all its delimiters removed, it contains no occurrences of the character σ.
-
-Conclusion: Therefore, the number of delimiters in σ_reduce(s) is 0.
-
-Δ(σ_reduce(s)) = 0
-Since s was an arbitrary string in S, we can generalize:
-
-*   ∀ s ∈ S: Δ(σ_reduce(s)) = 0
-This completes the proof. ∎
-
+Theorem 3.1.3 might be termed the *"Idempotency of σ-reduction"* or the *"σ-reduction Idempotence Property"*.
 
 
 **Theorem** ∀ ζ ∈ C:sub:`L`: Λ(σ_reduce(ζ)) ≤ 1

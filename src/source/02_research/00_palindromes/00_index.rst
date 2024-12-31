@@ -138,6 +138,7 @@ Theorems
 - T A.2.8: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
 - T A.2.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 - T A.2.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+- T A.2.11: ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
 - T A.3.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
 - T A.3.2: L:sub:`P` ⊂ L:sub:`σ`
 - T A.3.3: ∀ α ∈ L:sub:`P`: α = inv(α)

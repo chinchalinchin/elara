@@ -315,6 +315,29 @@ Since u and t were arbitrary strings, this can be generalized,
 
     ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t) ∎
 
+**Theorem A.2.11** ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
+
+Theorem 3.1.15: ∀ s ∈ S: Δ(σ_reduce(s)) = 0
+
+Proof:
+
+Let s be an arbitrary string in S.
+
+Definition of σ-reduction: By Definition 3.1.2, σ_reduce(s) is the string obtained by removing all occurrences of the delimiter character σ from s.
+
+Definition of Delimiter Count: By Definition 2.4.1, Δ(t) is the number of delimiter characters σ in a string t.
+
+Absence of Delimiters: Since σ_reduce(s) has all its delimiters removed, it contains no occurrences of the character σ.
+
+Conclusion: Therefore, the number of delimiters in σ_reduce(s) is 0.
+
+Δ(σ_reduce(s)) = 0
+Since s was an arbitrary string in S, we can generalize:
+
+*   ∀ s ∈ S: Δ(σ_reduce(s)) = 0
+This completes the proof. ∎
+
+
 Section A.III: Palindromic Pairs
 --------------------------------
 
