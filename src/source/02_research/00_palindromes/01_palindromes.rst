@@ -3024,6 +3024,8 @@ The Inverse Postulates
 
 Theorem 3.2.1 (First Inverse Postulate):  ∀ ζ ∈ PP : ( inv(α:sub:ζ:sup:start) ⊂:sub:s α:sub:ζ:sup:end) ∨ ( inv(α:sub:ζ:sup:end) ⊂:sub:s α:sub:ζ:sup:start )
 
+∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+
 Proof:
 
 Let ζ be an arbitrary sentence in PP.
