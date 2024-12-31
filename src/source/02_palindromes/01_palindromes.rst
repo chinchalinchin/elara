@@ -2438,7 +2438,7 @@ Recall the tautology of *Hypothetical Syllogisms*, for any propositions *p*, *q*
 
 Applying this tautological law to step 2 and step 3,
 
-    5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ α ∈ W:sub:`ζ`: α ∈ I)
+    5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: α ∈ I)
 
 Which is what was to be shown. ∎ 
 
