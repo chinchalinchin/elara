@@ -587,9 +587,11 @@ The following symbolic notation is introduced for these terms,
     1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
     2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
 
-In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as *{ "dog", "cat", "hamster", ... }* or *{ "tree", "flower", "grass", .... }*.
+In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as *{ "dog", "cat", "hamster", ... }* or *{ "tree", "flower", "grass", .... }*. The number of Words in a Language is denoted | L |.
 
-The number of Words in a Language is denoted | L |.
+Again, at the risk of unwarranted repetition, Language is assumed to be a *fixed set* known a priori to the construction of the current formal system. It not the goal of the formal system to describe the semantic conditions for a Word's eligibility in Language or how a Language is constructed from elementary Characters and Strings into a class of Words through systems like grammar or pragmatics, but rather, given a Language of Words, the formal system seeks to elaborate the syntactical conditions that are imposed on Language by its nature as a set of Strings with ordered Characters. 
+
+Note, Definition 1.2.1 and Definition 1.2.2 relies on the idea that Words are Strings and their meaning is conveyed through the ordered sequence of its concatenated Characters. This necessarily precludes from the formal system any languages which do *not* use the ordering of Characters as the primary medium for representing Words. While edge cases like sign language exist, nevertheless, the sole constitutive feature of any natural is the *ordering* of some type of Character. In the case of sign language, a Character in the formal system might be identified with *"a configuration of fingers"* and a String might be identified with *"configurations over time"*.
 
 It will sometimes be necessary to refer to indeterminate Words, so notation is introduced for Word Variables,
 
@@ -1309,6 +1311,16 @@ Then, applying the *Delimiting Algorithm*, its Word-level representation is cons
     **W**:sub:`ᚠ` = { (1, "The"), (2, "cat"), (3, "meows") }. ∎
 
 Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in Definition 1.1.5 will be use this method of Sentence representation to simplify many of the upcoming proofs.
+
+There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Characters that deserves special mention, as this perhaps reasonable assumption necessarily requires a reorganization of how and where the semantic information of a Sentence lies. To see what is meant by this, consider the three sentences from Latin,
+
+- Puella canem videt. (Girl dog sees)
+- Canem puella videt. (Dog girl sees)
+- Videt puella canem. (Sees girl dog)
+
+In some respect, all three of these sentences could be considered the *same* sentence, as the order of the words is not the primary bearer of semantic information. While the order of words lends itself to the *voice* and *tone* of the sentence, the meaning of the sentence does not primarily emerge through word order. Similar cases exist in any natural language that uses declensions to modify the syntactic function of words. 
+
+The current formal system treats this sentences in Latin as distinct Sentences. 
 
 Length
 ^^^^^^
