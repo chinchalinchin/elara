@@ -27,6 +27,7 @@ Notation
 - Sentence Variables: ζ, ξ
 - Word Index Notation: ζ{i}
 - Partial Sentence: ζ[:i], ζ[i:]
+- Pivots: ω(ζ)
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
 - Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
@@ -66,6 +67,9 @@ Definitions
 - D 3.1.4: Perfect Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
 - D 3.1.5: Imperfect Palindromes: ζ ∈ P - PP
 - D 3.1.6: Aspect
+- D 3.1.7: Left Partial Sentence: Z[:n]
+- D 3.1.8: Right Partial Sentence: Z[n:]
+- D 3.1.9: Pivots: ω(ζ)
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
@@ -132,7 +136,7 @@ Theorems
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 - T 3.1.9: PP ⊂ P
 - T 3.1.10: PP ∪ IP = P
-- T
+- T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))

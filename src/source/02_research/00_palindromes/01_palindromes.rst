@@ -2403,7 +2403,7 @@ This means *ζ* is a Perfect Palindrome, so by Definition 3.1.4,
 
     2. ζ = inv(ζ).
 
-Applying a *σ*-reduction to both sides of the equation,:
+Applying a *σ*-reduction to both sides of the equation,
 
     3. (ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
 
@@ -2417,15 +2417,15 @@ Combining steps 2 and 3,
 
 Step 4 is exactly satisfies the condition for *ζ* to be a Palindrome according to Definition 3.1.3. Therefore, 
 
-    ζ ∈ P.
+    6. ζ ∈ P.
 
 Since *ζ* was an arbitrary Perfect Palindrome, it been shown that,
 
-    ζ ∈ PP → ζ ∈ P
+    7. ζ ∈ PP → ζ ∈ P
     
 This in turn implies,
 
-    PP ⊂ P ∎
+    8. PP ⊂ P ∎
 
 Now that Perfect Palindromes have been shown to satisfy Definition 3.1.3, it is a simple matter of defining Imperfect Palindromes as those Palindromes which are *not* Perfect.
 
@@ -2452,109 +2452,51 @@ One partitioning, or dimension, of Palindromes has been introduced through the c
 
 **Definition 3.1.6: Left Partial Sentence**
 
-Let ζ be a Sentence in C:sub:L with Character-level representation Z,
+Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
     Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
 
-Let *n* be a fixed natural number. A Partial Sentence of Length *n*, denoted *ζ[: n]*, is formally defined as the String which satisfies, 
+Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Left Partial Sentence of String Length *n*, denoted *ζ[: n]*, is formally defined as the String which satisfies, 
 
-    Z[: n] = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`n`) 
-    
-Where *1 ≤ n ≤ l(ζ)*.
+    Z[:n] = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`n`)  
 
+When *n = 0*, *ζ[:0]* is defined as the empty string, *ε*.
 
-Definition 3.1.6: Partial Sentence
-
-Let ζ be a sentence in C:sub:L with character-level representation Z:
-
-Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
-A partial sentence of ζ of length n, denoted ζ[:n], is defined as the string:
-
-ζ[:n] = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`n`)
-where n is a natural number such that 0 ≤ n ≤ l(ζ).
-
-When n = 0, ζ[:0] is defined as the empty string, ε.
-When n = l(ζ), ζ[:n] is the entire sentence ζ.
-A partial sentence is not necessarily a word or a sequence of words.
+When *n = l(ζ)*, *ζ[:n]* is the entire sentence *ζ*. ∎
 
 **Definition 3.1.7: Right Partial Sentence**
 
-Definition 3.1.7: Right Partial Sentence
+Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
-Let ζ be a sentence in C:sub:L with character-level representation Z:
+    Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
 
-Z = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
-A right partial sentence of ζ of length n, denoted ζ[n:], is defined as the string:
+Let *n* be a fixed natural number such that *0 ≤ n ≤ l(ζ)*. A Right Partial Sentence of *ζ* of String Length *n*, denoted ζ[n:], is defined as the string:
 
-ζ[n:] = (ⲁ:sub:`l(ζ)-n+1`, ⲁ:sub:`l(ζ)-n+2`, ..., ⲁ:sub:`l(ζ)`)
-where n is a natural number such that 0 ≤ n ≤ l(ζ).
+    ζ[n:] = (ⲁ:sub:`l(ζ)-n+1`, ⲁ:sub:`l(ζ)-n+2`, ..., ⲁ:sub:`l(ζ)`)
 
-When n = 0, ζ[0:] is defined as the empty string, ε.
-When n = l(ζ), ζ[l(ζ):] is the entire sentence ζ.
-A right partial sentence is not necessarily a word or a sequence of words.
-Explanation:
+When *n = 0*, *ζ[0:]* is defined as the empty string, *ε*.
 
-Notation: The notation ζ[n:] is analogous to Python slicing notation and indicates that we are taking a substring starting from a position n characters from the end of the string up to the end of the string.
-Length: The length of the right partial sentence is n.
-Starting Index: The starting index of the right partial sentence is l(ζ) - n + 1. This ensures that we are taking the last n characters of the sentence.
-Edge Cases: Similar to the left partial sentence, when n = 0, we have an empty string, and when n = l(ζ), we have the entire sentence.
-Symmetry with Left Partial Sentence:
+When *n = l(ζ)*, *ζ[n:]* is the entire sentence ζ. ∎
 
-Notice the symmetry between the definitions of the left and right partial sentences. They are essentially mirror images of each other, which is fitting given that we'll be using them to analyze palindromes.
+Take note, Partial Sentences are not necessarily a Word or a sequence of Words.
 
+The notation *ζ[n:]* and *Z[:n]* is analogous to array slicing notation found in many programming languages. It indicates a substring is being taken starting from a position *n* Characters from the end of the String up to the end of the String.
 
-**Theorem 3.1.7** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+Note when *n* is even,
 
-This theorem can be stated in natural language as follows: For every Sentence in a Corpus, there is a Character in the Sentence that perfectly the divides of String length of the Palindrome in half, or there is no Character in the Sentence which divides it in half.
+    l(ζ[:n]) = l(ζ[n:]) = n
 
+But when *n* is odd,
 
+    l(ζ[:n]) = n
 
-Theorem 3.2.2: ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( 2 * l(ζ:sub:ⲁ) - 1 = l(ζ) ) ∨ (ⲁ = ε)]
+    l(ζ[n:]) = n + 1
 
-Proof:
+The next theorem leverages this insight and establishes the fundamental relationship between Left and Right Partial Sentences, and the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot*.
 
-Let ζ be an arbitrary Sentence in C:sub:L with Character-level representation Z = (ⲁ₁ , ⲁ₂ , ..., ⲁₗ₍ζ₎).
+**Theorem 3.1.11** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
 
-Consider the String Length of ζ, l(ζ).  There are two cases:
-
-Case 1: l(ζ) is odd.  In this case, there is a unique middle Character in Z. Let ⲁ be this middle Character. Then, the Partial Sentence ζ:sub:ⲁ includes all Characters up to and including ⲁ. Since ⲁ is the middle Character, l(ζ:sub:ⲁ) = (l(ζ) + 1) / 2.  Thus, 2*l(ζ:sub:ⲁ) = l(ζ).
-
-Case 2: l(ζ) is even. In this case, there is no single middle Character. Instead, there is a "gap" between the two middle Characters. Let ⲁ = ε (the Empty Character). Since there is no Character that splits the Sentence exactly in half, the condition 2*l(ζ:sub:ⲁ) = l(ζ) cannot be satisfied by any Character in Σ. Therefore, ⲁ = ε satisfies the theorem.
-
-In both cases, we have either found a Character ⲁ ∈ Σ that satisfies l(ζ:sub:ⲁ) = 2 * l(ζ), or we have set ⲁ = ε.
-
-Therefore, ∀ ζ ∈ C:sub:L: [ ∃ ⲁ ∈ Σ: ( 2 * l(ζ:sub:ⲁ) = l(ζ) ) ∨ (ⲁ = ε)] ∎
-
-Explanation:
-
-This proof demonstrates that for any Sentence, there exists a Character that acts as a "midpoint" or "pivot" in terms of String Length. If the Sentence has an odd String Length, this midpoint is the middle Character. If the Sentence has an even String Length, we use the Empty Character as a symbolic midpoint.
-
-Theorem 3.2.2 ensures the existence of a Character that can be reliably called a Palindromic Pivot. With this theorem, every Sentence in a Corpus it must have a Pivot.
-
-
-
-
-
-Let's analyze the core idea and then reformulate the theorem and proof.
-
-Core Idea and Issues:
-
-The theorem is trying to capture the idea that for any sentence, you can find a "split point" (either between characters or on a character) such that the left and right parts have either the same length or the left part is one character longer. This is related to the concept of finding the "middle" of the sentence, which is relevant for identifying the pivot of a palindrome.
-
-Issues with the Original Formulation:
-
-Confusing Use of n: The n is used in two different ways: as a length in l(ζ[:n]) and l(ζ[n:]), and implicitly as an index related to the character ⲁ. This makes the expressions ζ[:n] and ζ[n:] unclear.
-Existential Quantification over ⲁ: The existential quantifier ∃ ⲁ ∈ Σ suggests we're looking for a character that determines the split point. However, the split point is determined by a position or length, not a character itself. The character at the split point might not be unique.
-Lack of Connection to the Middle: The theorem doesn't explicitly relate the split point to the middle of the sentence, which is where we'd expect to find a pivot in a palindrome.
-Revised Theorem and Proof:
-
-Let's reformulate the theorem to focus on finding a split point based on the length of the sentence. We can use the standard notation for partial sentences (ζ[:n] and ζ[n:]) and quantify over the length n.
-
-Revised Theorem 3.1.7:
-
-∀ ζ ∈ C:sub:L: ∃ n ∈ {0, 1, ..., l(ζ)}: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) = l(ζ[n:]) + 1 )
-
-Translation: For every sentence ζ in the corpus, there exists a natural number n (between 0 and the length of ζ, inclusive) such that either the length of the left partial sentence of length n is equal to the length of the right partial sentence of length n, OR the length of the left partial sentence of length n is one greater than the length of the right partial sentence of length n.
+This theorem can be stated in natural language as follows: For every sentence ζ in the corpus, there exists a natural number n (between 0 and the length of ζ, inclusive) such that either the length of the left partial sentence of length n is equal to the length of the right partial sentence of length n, OR the length of the left partial sentence of length n is one greater than the length of the right partial sentence of length n.
 
 Proof:
 
@@ -2577,26 +2519,21 @@ Conclusion: In both cases, we have found an n that satisfies the condition in th
 ∀ ζ ∈ C:sub:L: ∃ n ∈ {0, 1, ..., l(ζ)}: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) = l(ζ[n:]) + 1 )
 This completes the proof. ∎
 
-Explanation:
 
-This revised theorem and proof directly address the core idea of finding a split point in the sentence based on its length. By considering the two cases (even and odd length), we can always find an n that satisfies the condition.
-
-
-
-The previous Theorem establishes the existence of a natural numebr that can reliably be called the *Pivot* for any Sentence in a Corpus. This leads to the following definition. 
+The previous Theorem establishes the existence of a natural number that can reliably be called the *Pivot* for any Sentence in a Corpus. This leads to the following definition. 
 
 **Definition 3.1.7: Pivots** 
 
 The Pivot of a Sentence *ζ*, denoted *ω(ζ)*, is defined as the natural number such that the following formula is true,
 
-   ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1)
+   ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1) ∎
 
 
-Example:
+**Example**
 
-Let's consider a few examples to illustrate the definition:
+Consider these simple examples from a hypothetical Language **L**.
 
-ζ = "abcba": l(ζ) = 5, ω(ζ) = 3, ζ[:3] = "abc", ζ[3:] = "cba" (odd length, left side is one longer).
+1. ζ = "abcba": l(ζ) = 5, ω(ζ) = 3, ζ[:3] = "abc", ζ[3:] = "cba" (odd length, left side is one longer).
 
 ζ = "abccba": l(ζ) = 6, ω(ζ) = 3, ζ[:3] = "abc", ζ[3:] = "cba" (even length, both sides are equal).
 
