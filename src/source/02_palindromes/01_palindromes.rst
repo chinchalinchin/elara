@@ -2840,8 +2840,29 @@ This completes the proof. ∎
 
 **Theorem 3.1.15** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 
-TODO 
+roof:
 
+Let ζ be an arbitrary even-length palindrome in P:sup:+.
+
+Definition of Even Palindrome: Since ζ ∈ P:sup:+, by Definition 3.1.8, l(ζ) is even. Therefore, there exists a natural number i such that l(ζ) = 2i.
+
+Theorem 3.1.7: By Theorem 3.1.7, there exists an n ∈ N:sub:l(ζ) such that either l(ζ[:n]) = l(ζ[n:]) or l(ζ[:n]) + 1 = l(ζ[n:]).
+
+Case 1: l(ζ[:n]) = l(ζ[n:])
+
+From the proof of Theorem 3.1.7 (Case 1: k is odd), we know this case leads to a contradiction when l(ζ) is even.
+Case 2: l(ζ[:n]) + 1 = l(ζ[n:])
+
+From the proof of Theorem 3.1.7 (Case 2, k is even), we know that if l(ζ) = 2i, then n = i satisfies l(ζ[:n]) + 1 = l(ζ[n:]).
+Therefore, n = i = l(ζ)/2.
+Uniqueness of Pivot: By Definition 3.1.7, the pivot ω(ζ) is the smallest natural number satisfying the condition. Since n = l(ζ)/2 satisfies the condition and is the only solution when l(ζ) is even, it must be the smallest.
+
+Conclusion: Therefore, ω(ζ) = l(ζ)/2.
+
+Since ζ was an arbitrary even-length palindrome, we can generalize:
+
+∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+This completes the proof. ∎
 
 
 
