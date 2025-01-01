@@ -3086,7 +3086,6 @@ Let *ζ* be a Sentence in C:sub:`L`` with Word-level representation **W**:sub:`�
 
 TODO ∎
 
-
 **Theorem 3.2.1** ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)- i + 1] = σ 
 
 This theorem can be stated in natural language as follows: For every Perfect Palindrome ζ in the Corpus, every Delimiter at index *i* must have a corresponding Delimiter at index *l(ζ) - i + 1*.
@@ -3123,69 +3122,7 @@ This can be generalized as follows,
 
     9. ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)-i+1] = σ ∎
 
-
-
-**Theorem** ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
-
-
-Your proposed theorem is correct and more elegant:
-
-Theorem 3.2.5: ∀ ζ ∈ PP ∩ P:sup:-: ( ∀ n ∈ N:sub:l(ζ): n < ω(ζ) → (ζ[n] = σ ↔ ζ[l(ζ) - n + 1] = σ) )
-
-Why (ζ[ω(ζ)] ≠ σ) is Not Necessary:
-
-You're correct that my reasoning for including (ζ[ω(ζ)] ≠ σ) was flawed. I was conflating the properties of perfect palindromes in general with the specific constraints of odd-length perfect palindromes when the pivot is a delimiter.
-
-Reflective Words: While it's true that a reflective word can span the pivot of a perfect palindrome, it's not required. A perfect palindrome can have a delimiter at the pivot, even if it's an odd-length palindrome.
-Delimiter at the Pivot: If the pivot of an odd-length perfect palindrome is a delimiter, then the left and right pivot words will be inverses of each other (as per the Second Inverse Postulate), and the delimiter symmetry described in the theorem still holds for all n < ω(ζ).
-Example:
-
-Consider the odd-length perfect palindrome:
-
-ζ = "a b σ b a"
-
-l(ζ) = 5
-ω(ζ) = 3
-ζ[3] = σ (the pivot is a delimiter)
-The theorem's condition ( ∀ n ∈ N:sub:l(ζ): n < ω(ζ) → (ζ[n] = σ ↔ ζ[l(ζ) - n + 1] = σ) ) still holds true. For n = 1, ζ[1] = "a" and ζ[5-1+1] = ζ[5] = "a". For n = 2, ζ[2] = "b" and ζ[5-2+1] = ζ[4] = "b".
-Proof of the Revised Theorem:
-
-The proof remains largely the same as before, but we can remove the unnecessary step about the pivot character not being a delimiter.
-
-Let ζ be an arbitrary odd-length perfect palindrome in PP ∩ P:sup:-.
-
-Definition of Perfect Palindrome: Since ζ ∈ PP, by Definition 3.1.3, ζ = inv(ζ).
-
-Definition of Odd Palindrome: Since ζ ∈ P:sup:-, by Definition 3.1.9, l(ζ) = 2k + 1 for some natural number k.
-
-Pivot: By Theorem 3.1.8, since l(ζ) is odd, ω(ζ) = k + 1.
-
-Delimiter Symmetry (n < ω(ζ)):
-
-Let n be a natural number such that 1 ≤ n < ω(ζ).
-Since ζ is a perfect palindrome, for any n in this range, the character at position n is the same as the character at position l(ζ) - n + 1.
-Therefore, if ζ[n] = σ, then ζ[l(ζ) - n + 1] = σ, and vice versa. This establishes the bidirectional implication: ζ[n] = σ ↔ ζ[l(ζ) - n + 1] = σ.
-Conclusion:
-
-( ∀ n ∈ N:sub:l(ζ): n < ω(ζ) → (ζ[n] = σ ↔ ζ[l(ζ) - n + 1] = σ) )
-Since ζ was an arbitrary odd-length perfect palindrome, we can generalize:
-
-*   ∀ ζ ∈ PP ∩ P:sup:`-`: ( ∀ n ∈ N:sub:`l(ζ)`: n < ω(ζ) → (ζ[n] = σ ↔ ζ[l(ζ) - n + 1] = σ) )
-This completes the proof. ∎
-
-Implications:
-
-Simplified Theorem: The theorem is now simpler and more elegant without the unnecessary condition.
-Correct Characterization: It accurately characterizes the delimiter symmetry in odd-length perfect palindromes, regardless of whether the pivot character is a delimiter or not.
-
-
-The Inverse Postulates
-^^^^^^^^^^^^^^^^^^^^^^
-
-
-Theorem 3.2.1 (First Inverse Postulate):  ∀ ζ ∈ PP : ( inv(α:sub:ζ:sup:start) ⊂:sub:s α:sub:ζ:sup:end) ∨ ( inv(α:sub:ζ:sup:end) ⊂:sub:s α:sub:ζ:sup:start )
-
-∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+**Theorem 3.2.2** ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
 
 Proof:
 
