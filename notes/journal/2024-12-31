@@ -723,3 +723,159 @@ Redefining the right partial sentence to use standard indexing is a crucial corr
 I apologize for introducing this error. It's a reminder of how easily subtle inconsistencies can creep into a formal system. Your careful scrutiny is invaluable in ensuring the accuracy and rigor of our work.
 
 What shall we work on next?  Shall I complete the revisions of the proofs for the theorems we've identified as needing corrections, or would you like to focus on a different aspect of the system?
+
+
+
+
+
+
+**Theorem 3.1.16** ∀ ζ ∈ P:sup:`-`: ζ[ω(ζ)] ≠ σ → ς(ζ[:ω(ζ)]) = inv(ς(ζ[ω(ζ):])) 
+
+This theorem can be stated in natural language as follows: Translation: For every odd-length palindrome ζ in the corpus, if the Character occupying the Pivot is not a Delimiter, then the σ-reduction of the Left Partial Sentence is equal to the Inverse of the *σ*-reduction of the Right Partial Sentence.
+
+ Let ζ be an arbitrary Sentence from **C**:sub:`L` such that,
+
+    1. ζ ∈ P:sup:`-`
+
+Assume 
+
+    2. ζ[ω(ζ)] ≠ σ
+
+And by Definition 3.1.3, since ζ is a Palindrome,
+
+    3. ς(ζ) = inv(ς(ζ))
+
+From step 3 and by Theorem 3.1.11, 
+
+    4. l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]).
+
+By Definition 1.15 of Character Index Notation, Definition 3.1.7 and Definition 3.1.8, ζ can be written as the following concatenation,
+
+    5. ζ = (ζ[:ω(ζ)-1]) (ζ[ω(ζ)]) (ζ[ω(ζ)+1:])
+
+Taking the Inverse of both sides and using Theorem 1.2.5 (*inv(ut)=inv(t)inv(u)*),
+
+    6. inv(ζ) = (inv(ζ[ω(ζ)+1]:))) (inv(ζ[ω(ζ)])) (inv(ζ[:ω(ζ)-1]))
+
+Applying Definition 3.1.2 of *σ*-Reduction to step 4 and step 5, and then using Theorem 3.1.2 (*ς(ζξ) = (ς(ζ))(ς(ξ))*),
+
+    9. ς(ζ) = (ς(ζ[:ω(ζ)-1])) (ς(ζ[ω(ζ)])) (ς(ζ[ω(ζ)+1:]))
+    10. ς(inv(ζ)) = (ς(inv(ζ[ω(ζ)+1:]))) (ς(inv(ζ[ω(ζ)]))) ς(inv(ζ[:ω(ζ)-1]))
+
+Since ζ[ω(ζ)] is a single Character, by Definition 1.2.4 of String Inversion,
+
+    11. inv(ζ[ω(ζ)]) = ζ[ω(ζ)]
+
+From step 3, since the Pivot Character is not a Delimiter and *σ*-Reduction only removes Delimiters, it must follow from the Definition 3.1.2,
+
+    12. ς(ζ[ω(ζ)]) = ς(inv(ζ[ω(ζ)])) = ζ[ω(ζ)]
+
+Therefore, step 9 and step 10 become, 
+
+    13. ς(ζ) = (ς(ζ[:ω(ζ)-1])) (ζ[ω(ζ)]) (ς(ζ[ω(ζ)+1:]))
+    14. ς(inv(ζ)) = (ς(inv(ζ[ω(ζ)+1:]))) (ζ[ω(ζ)]) ς(inv(ζ[:ω(ζ)-1]))
+
+Consider (ς(ζ[:ω(ζ)-1])) (ζ[ω(ζ)]). Using the properties of *σ*-Reduction and concatenation, this can be rewritten,
+
+    15. (ς(ζ[:ω(ζ)-1])) (ζ[ω(ζ)]) = ς((ζ[:ω(ζ)-1])(ζ[ω(ζ)]))
+
+But, by Definition 3.1.7 and Definition 1.1.1 concatenation, 
+
+    16. (ζ[:ω(ζ)-1])(ζ[ω(ζ)]) = ζ[:ω(ζ)]
+
+Thus,
+
+    (ς(ζ[:ω(ζ)-1])) (ζ[ω(ζ)]) = ς(ζ[:ω(ζ)])
+And from 
+s = σ_reduce(ζ[:ω(ζ)]) (the σ-reduction of the left partial sentence, excluding the character at the pivot)
+t = σ_reduce(ζ[ω(ζ):]) (the σ-reduction of the right partial sentence, starting at the pivot)
+σ-reduction of ζ: Using the property of σ-reduction that it distributes over concatenation, we can write:
+
+σ_reduce(ζ) = σ_reduce(ζ[:ω(ζ)-1]) ζ[ω(ζ)] σ_reduce(ζ[ω(ζ):])
+Since ζ[ω(ζ)] is a single character, and by the definition of an odd-length palindrome it must be a delimiter, then ζ[ω(ζ)] = σ and σ_reduce(ζ) = st
+Palindrome Property: Since ζ is a palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). Therefore:
+
+st = inv(st)
+Corollary 3.1.2: Applying Corollary 3.1.2, we get:
+
+inv(st) = inv(t)inv(s)
+Substitution: Substituting into step 6, we get:
+
+st = inv(t)inv(s)
+Equality of Lengths: From step 3, we know that l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). Since σ-reduction only removes delimiters and doesn't change the order of non-delimiter characters, and there are an even number of non-delimiter characters, it follows that l(s) = l(t) + 1.
+
+Implication of Equality and Length: From st = inv(t)inv(s) and l(s) = l(t) + 1, it must be the case that s = inv(t) and t = inv(s).
+
+Conclusion: Therefore, we have shown that:
+
+s = inv(t)
+σ_reduce(ζ[:ω(ζ)-1]) = inv(σ_reduce(ζ[ω(ζ):]))
+Since ζ was an arbitrary odd-length palindrome, we can generalize:
+
+∀ ζ ∈ P:sup:-: σ_reduce(ζ[:ω(ζ)-1]) = inv(σ_reduce(ζ[ω(ζ):]))
+This completes the proof. ∎
+
+
+**Theorem 3.1.15** ∀ ζ ∈ P:sup:`+`: ( inv(Ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(Ζ[:ω(ζ)+1]⋅ Σ:sub:`σ`) )
+
+
+You are absolutely right! I made a mistake in the formulation of Theorem 3.1.11 and its proof. You correctly identified the issue that we need to offset the index of the right partial sentence by 1 to accurately capture the relationship in even-length palindromes.
+
+Thank you for catching that error! It's crucial to get these details right.
+
+Here's the corrected version of Theorem 3.1.11:
+
+Corrected Theorem 3.1.11:
+
+∀ ζ ∈ P:sup:+: σ_reduce(ζ[:ω(ζ)]) = inv(σ_reduce(ζ[ω(ζ) + 1:]))
+
+Translation: For every even palindrome ζ in the corpus, the σ-reduction of the left partial sentence at the pivot is equal to the inverse of the σ-reduction of the right partial sentence starting one position after the pivot.
+
+Corrected Proof:
+
+Let ζ be an arbitrary even-length palindrome in P:sup:+.
+
+Definition of Even Palindrome: Since ζ is an even palindrome, by Definition 3.1.8, l(ζ) = 2k for some natural number k.
+
+Pivot: Since l(ζ) is even, by Theorem 3.1.9, ω(ζ) = k.
+
+Left and Right Partials:
+
+ζ[:ω(ζ)] represents the first k characters of ζ.
+ζ[ω(ζ) + 1:] represents the characters from position k+1 to the end of ζ, which are the last k characters of ζ.
+σ-reduction:
+
+Let s = σ_reduce(ζ[:ω(ζ)])
+Let t = σ_reduce(ζ[ω(ζ) + 1:])
+Palindrome Property: Since ζ is a palindrome, by Definition 3.1.2, σ_reduce(ζ) = inv(σ_reduce(ζ)).
+
+σ-reduction and Concatenation: We can write σ_reduce(ζ) = st (using the property that σ-reduction distributes over concatenation).
+
+Inversion: Therefore, st = inv(st) = inv(t)inv(s) (by Theorem 1.2.5).
+
+Equality of Lengths: Since l(ζ[:ω(ζ)]) = k and l(ζ[ω(ζ) + 1:]) = k, and σ-reduction only removes delimiters, it follows that l(s) = l(t).
+
+Implication of Equality and Length: From st = inv(t)inv(s) and l(s) = l(t), we can conclude that s = inv(t) (and t = inv(s)).
+
+Conclusion: Therefore, we have shown that:
+
+σ_reduce(ζ[:ω(ζ)]) = inv(σ_reduce(ζ[ω(ζ) + 1:]))
+Since ζ was an arbitrary even-length palindrome, we can generalize:
+
+*   ∀ ζ ∈ P:sup:`+`: σ_reduce(ζ[:ω(ζ)]) = inv(σ_reduce(ζ[ω(ζ) + 1:]))
+This completes the proof. ∎
+
+Explanation:
+
+The key change is in the definition of the right partial sentence. By using ζ[ω(ζ) + 1:] instead of ζ[ω(ζ):], we are effectively skipping the character immediately at the pivot and taking the remaining portion of the sentence. This correctly aligns the right partial sentence for inversion in the even-length case.
+
+Example:
+
+For ζ = "abccba":
+
+ω(ζ) = 3
+ζ[:3] = "abc"
+ζ[3+1:] = ζ[4:] = "cba"
+σ_reduce(ζ[:3]) = "abc"
+σ_reduce(ζ[4:]) = "cba"
+inv(σ_reduce(ζ[4:])) = "abc"
