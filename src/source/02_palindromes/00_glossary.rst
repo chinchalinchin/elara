@@ -106,8 +106,9 @@ Theorems
 - T 1.2.3: ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: α[i] ≠ ε
 - T 1.2.4: ∀ s ∈ S: inv(inv(s)) = s
 - T 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
-- T 1.2.6: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
-- T 1.2.7: ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i)))
+- T 1.2.6: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ inv(t) ⊂:sub:`s` inv(u) 
+- T 1.2.7: ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) 
+- T 1.2.8: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
 - T 1.3.1: ∀ α ∈ L: α ∈ R ↔ α = inv(α)
 - T 1.3.2: ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
 - T 1.3.3: R ⊆ I

@@ -10,7 +10,7 @@ Notation
 
 - Punctuation: ∎
 - Logical Operations: ∀, ∃, ↔, →, ←. ∧, ∨
-- Arithmetical Relations: ≠, =, ≥, ≤, +, -
+- Arithmetical Relations: ≠, =, >, ≥, ≤, <, +, -
 - Sets: ∅, ℕ, N:sub:`i`
 - Set Operations: ∪, ∩
 - Set Relations: ∈, ∉, ⊆
@@ -153,6 +153,8 @@ Theorems
 - T 3.1.18: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
 - T 3.1.19: P:sup:`-` ∩ P:sup:`+` = ∅
 - T 3.1.20: P:sup:`-` ∪ P:sup:`+` = P 
+- T 3.2.1: ∀ ζ ∈ PP ∩ P:sub:`+`: ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)- n + 1] = σ 
+- T 3.2.2: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
@@ -869,6 +871,223 @@ Since u and t were arbitrary strings, we can generalize:
 
     ∀ u, t ∈ S: inv(ut) = inv(t)inv(u) ∎
 
+**Theorem 1.2.6** ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) 
+
+This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the Inverse of *t* is contained in the Inverse of *u*.
+
+Let *u* and *t* be arbitrary Strings in **S**.
+
+(→) Assume,
+
+    1. u ⊂:sub:`s` t 
+
+By Definition 1.1.7, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(u)` → **N**:sub:`l(t)` such that:
+
+    2. ∀ i ∈ N:sub:l(u): u[i] = t[f(i)]
+    
+Let,
+
+    3. v = inv(t) 
+    4. w = inv(u).
+
+By Definition 1.2.4, 
+
+    5. ∀ i ∈ N:sub:l(u): w[i] = inv(u)[i] = u[l(u) - i + 1]
+    6. ∀ i ∈ N:sub:l(t): v[i] = inv(t)[i] = t[l(t) - i + 1]
+
+Define a function *g*: **N**:sub:`l(w)` → **N**:sub:`l(y)` as follows,
+
+    7. g(i) = l(t) - f(l(u) - i + 1) + 1
+
+This function maps the Character indices of *w* (the inverse of *u*) to the indices of *v* (the inverse of *t*).
+
+**Increasing** To show *g* is strictly increasing, let 
+
+    8. i, j ∈ N:sub:`l(y)` 
+    
+Such that *i < j*. Since *l(w) = l(u)*, 
+
+    9. i, j ∈ N:sub:`l(u)`. 
+    
+Because f is strictly increasing, and 
+
+    10. l(u) - j + 1 < l(u) - i + 1, 
+    
+It follows,
+
+    11. f(l(u) - j + 1) < f(l(u) - i + 1). 
+    
+Therefore, 
+
+    12. l(t) - f(l(u) - i + 1) + 1 < l(t) - f(l(u) - j + 1) + 1, 
+    
+which means 
+    
+    13. g(i) < g(j). 
+        
+Thus, g is strictly increasing. 
+
+**Consecutive** To show *g* is consecutive, let 
+
+    14. i ∈ N:sub:`l(w)` 
+    
+Such that *i < l(w)*. Then,
+
+    15. g(i+1) = l(t) - f(l(u) - (i + 1) + 1) + 1
+    16. g(i+1) = l(t) - f(l(u) - i - 1 + 1) + 1
+
+Since f is consecutive, we have:
+
+    17. f(l(u) - i - 1 + 1) = f(l(u) - i) + 1
+
+Then, 
+
+    18. g(i+1) = l(t) - (f(l(u) - i) + 1) + 1
+    19. g(i+1) = l(t) - f(l(u) - i)
+    20. g(i+1) = l(t) - f(l(u) - i + 1) + 1 + 1 - 1
+    21. g(i+1) = l(t) - f(l(u) - i + 1) + 1
+    22. g(i+1) = g(i) + 1
+
+By Definition 1.2.4,
+
+    23. w[i] = u[l(u) - i + 1] 
+    24. w[i] = t[f(l(u) - i + 1)] (by Step 2)
+
+By definition of *g*,
+
+    25. v[g(i)] = v[l(t) - f(l(u) - i + 1) + 1]
+
+By Definition 1.2.4,
+
+    26. v[g(i)] = t[l(t) - (l(t) - f(l(u) - i + 1) + 1) + 1] 
+    27. v[g(i)] = t[f(l(u) - i + 1)]
+
+Therefore, 
+
+    28. ∀ i ∈ N:sub:`l(w)`: w[i] = v[g(i)]
+
+By Definition 1.1.7, we have 
+
+    29. w ⊂:sub:`s` v
+
+Therefore, 
+
+    30. inv(u) ⊂:sub:`s` inv(t).
+
+(←) Assume 
+
+    1. inv(t) ⊂:sub:`s` inv(u).
+
+By Theorem 1.2.4, 
+
+    2. inv(inv(u)) = u
+    3. inv(inv(t)) = t
+
+Therefore, using the result just proved in the (→) direction, it can be said since 
+
+    4. inv(t) ⊂:sub:`s` inv(u)
+    
+This implies,
+
+    5. inv(inv(u)) ⊂:sub:`s` inv(inv(t)).
+
+Substituting in steps 3 and 3,
+
+    6. u ⊂:sub:`s` t
+
+Since both directions of the implication hold, it follows,
+
+    ∀ u, t ∈ S: u ⊂:sub:`s` t ↔ inv(t) ⊂:sub:`s` inv(u) ∎
+
+The next theorem establishes the *transivity* of containment over Strings. 
+
+**Theorem 1.2.7** ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) 
+
+This theorem can be stated in natural language as follows: For any Strings *t*, *u*, and *v* in **S**, if *t* is contained in *u* and *u* is contained in *v*, then *t* is contained in *v*.
+
+Let *t*, *u*, and *v* be arbitrary Strings in **S** such that both of the following expressions are true,
+
+    1. t ⊂:sub:`s` u
+    2. u ⊂:sub:`s` v
+
+By Definition 1.1.7 and step 1, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(t)` → **N**:sub:`l(u)` such that,
+
+    3. ∀ i ∈ N:sub:`l(t)`: t[i] = u[f(i)]
+
+Similarly, by Definition 1.1.7 and step 2, there exists a strictly increasing and consecutive function *g*: **N**:sub:`l(u)` → N:sub:`l(v)` such that:
+
+    4. ∀ j ∈ N:sub:`l(u)`: u[j] = v[g(j)]
+
+Define a new function *h*: N:sub:`l(t)` → N:sub:`l(v)` as the composition of *f* and *g*,
+
+    5. ∀ j ∈ N:sub:`l(t)`: h(i) = g(f(i))
+
+**Increasing** Let 
+
+    6. i, j ∈ N:sub:`l(t)` 
+    
+Such that *i < j*. Since f is strictly increasing, 
+
+    7. f(i) < f(j) 
+
+Since *g* is strictly increasing, 
+
+    8. g(f(i)) < g(f(j))
+    
+Therefore, 
+
+    9. h(i) < h(j)
+    
+And h is strictly increasing.
+
+**Consecutive** Let 
+
+    10. i ∈ N:sub:`l(t)` 
+    
+Such that *i < l(t)*. Since *f* is consecutive, 
+
+    11. f(i+1) = f(i) + 1 
+    
+Since g is consecutive, following from step 11,
+
+    12. g(f(i+1)) = g(f(i) + 1) = g(f(i)) + 1
+    
+Therefore, 
+
+    13. h(i+1) = h(i) + 1, and h is consecutive.
+
+**Containment** Let 
+
+    14. i ∈ N:sub:`l(t)` 
+    
+Then, by step 3
+
+    15. t[i] = u[f(i)]
+
+Since f: N:sub:`l(t)` → N:sub:`l(u)`, it follows that for all 
+
+    16. ∀ i ∈ N:sub:`l(t)`: f(i) ∈ N:sub:`l(u)`
+
+By step 16 and step 4,
+
+    17. u[f(i)] = v[g(f(i))]
+
+By definition of *h*,
+
+    18. v[g(f(i))] = v[h(i)]
+
+Therefore, 
+
+    19. ∀ i ∈ N:sub:`l(t)`: t[i] = v[h(i)]
+
+Since h is a strictly increasing and consecutive function from **N**:sub:`l(t)` to **N**:sub:`l(v)`, and *t[i] = v[h(i)]* for all *1≤ i ≤ l(t)*, by Definition 1.1.7,
+
+    20. t ⊂:sub:`s` v.
+
+Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized as,
+
+    21. ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) ∎
+
 Limitation
 ^^^^^^^^^^
 
@@ -941,7 +1160,7 @@ Note the previous example may be misleading in one important respect. A Limitati
 
 However, as the next theorem shows, the result of a Limitation is unique.
 
-**Theorem 1.2.6** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
+**Theorem 1.2.8** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
 
 This theorem can be stated in natural language as follows: For every natural number n, and for every Phrase **P**:sub:`n` in the *n*:sup:`th` Lexicon of **L**, there exists a unique string *s* in **S** such that *s* is the delimitation of **P**:sub:`n`.
 
@@ -988,18 +1207,6 @@ The concatenation of *s*:sub:`k`, *σ*, and *α*:sub:`k+1` is a unique string (b
 Therefore, *s*:sub:`k+1` = (*s*:sub:`k`)(σ)(*α*:sub:`k+1`) is a unique string.
 
 By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in **Χ**:sub:`L(n)`, there exists a unique string *s* in **S** such that *s = Π*:sub:`i=1`:sup:`n` P:sub:`n(i)`. ∎
-
-**Theorem 1.2.7** ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i)))
-
-Let *p* *∈* **Χ**:sub:`L(n)`, *q* *∈* **Χ**:sub:`L(m)`, and r ∈ **Χ**:sub:`L(k)` be arbitrary Phrases.
-
-By Definition 2.2.4, the Limitation of a Phrase is a String. String concatenation is associative by Definition 1.1.1 and the Character Axiom C.1, meaning for any strings *s*, *t*, and *u*, 
-
-    (st)u = s(tu)
-
-Since *Π*:sub:`i=1`:sup:`n` *p(i)*, *Π*:sub:`i=1`:sup:`m` *q(i)*, and *Π*:sub:`i=1`:sup:`k` *r(i)* are all strings, the associativity of String Concatenation can by applied to conclude,
-
-    ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i))) ∎
 
 Section I.III: Word Classes 
 ---------------------------
@@ -3122,59 +3329,48 @@ This can be generalized as follows,
 
     9. ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)-i+1] = σ ∎
 
-**Theorem 3.2.2** ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+It now shown for every Perfect Palindrome, the inverse of Each word is mirrored by the inverse of the corresponding Word at the opposite end of the Sentence. This property is a direct consequence of the fact that Perfect Palindromes are a subset of Invertible Sentences.
 
-Proof:
+**Theorem 3.2.2** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
-Let ζ be an arbitrary sentence in PP.
+Let ζ be an arbitrary Sentence in the Corpus such that
 
-Definition of Perfect Palindrome: By Definition 3.1.3, since ζ is a Perfect Palindrome, ζ = inv(ζ).
+    1. ζ ∈ PP
 
-Boundary Words: By Definition 3.1.11, α:sub:ζ:sup:start is the first word of ζ, and α:sub:ζ:sup:end is the last word of ζ.
+By Theorem 3.1.7 
 
-Inversion: Since ζ = inv(ζ), the first word of ζ must be the inverse of the last word of ζ, and the last word of ζ must be the inverse of the first word of ζ. Therefore, α:sub:ζ:sup:start = inv(α:sub:ζ:sup:end) and α:sub:ζ:sup:end = inv(α:sub:ζ:sup:start).
+    1. PP ⊂ K
 
-Reflexivity of Containment Because containment is reflexive, any word is contained in itself, i.e., x ⊂:sub:s x
+By Theorem 2.3.9,
 
-Substitution: Substituting the result from Step 3 into Step 4, we have,
-
-inv(α:sub:ζ:sup:start) ⊂:sub:s α:sub:ζ:sup:end
-
-inv(α:sub:ζ:sup:end) ⊂:sub:s α:sub:ζ:sup:start
-
-Disjunction: Therefore,
-
-( inv(α:sub:ζ:sup:start) ⊂:sub:s α:sub:ζ:sup:end) ∨ ( inv(α:sub:ζ:sup:end) ⊂:sub:s α:sub:ζ:sup:start )
-
-Conclusion: Since ζ was an arbitrary sentence in PP, we can generalize:
-
-∀ ζ ∈ PP : ( inv(α:sub:ζ:sup:start) ⊂:sub:s α:sub:ζ:sup:end) ∨ ( inv(α:sub:ζ:sup:end) ⊂:sub:s α:sub:ζ:sup:start )
-
-This completes the proof.
+    ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})  ∎
 
 
 
-You are absolutely right! My apologies, I made a mistake in my counterexample and in my reasoning about imperfect palindromes. "a b c a" is not an imperfect palindrome, and "a" is indeed contained in "ab" according to our definition of containment.
+**Theorem 3.2.3** ∀ ζ ∈ IP: (ζ{1} ⊂:sub:`s` inv(ζ{Λ(ζ))) V (ζ{Λ(ζ)} ⊂:sub:`s` inv(ζ{i})) 
 
-You're correct that the First Inverse Postulate, as originally stated, does hold true for imperfect palindromes as well, and therefore for all palindromes. I was mistaken in claiming it needed revision.
+Let *ζ* be an arbitrary Sentence in the Corpus such that, 
 
-Let's prove the original theorem:
+    1. ζ ∈ IP
 
-Theorem 3.2.1 (First Inverse Postulate): ∀ ζ ∈ P : ( inv(α:sub:ζ:sup:start) ⊂:sub:s α:sub:ζ:sup:end) ∨ ( inv(α:sub:ζ:sup:end) ⊂:sub:s α:sub:ζ:sup:start )
+By Definition 3.1.3, 
 
-Proof:
+    2. ς(ζ) = inv(ς(ζ))
 
-Let ζ be an arbitrary palindrome in P.
+By Theorem 3.1.5,
 
-Definition of Palindrome: Since ζ is a palindrome, by Definition 3.1.2, we have:
+    3. ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
 
-σ_reduce(ζ) = inv(σ_reduce(ζ))
-Boundary Words: Let α:sub:ζ:sup:start and α:sub:ζ:sup:end be the starting and ending words of ζ, respectively (by Definition 3.1.11).
+Therefore, the following is also true, 
 
-σ-reduction and Boundary Words:
+    4. ζ{1} ⊂:sub:`s` ς(ζ)
+    5. ζ{Λ(ζ)} ⊂:sub:`s` ς(ζ)
 
-The first word of σ_reduce(ζ) is σ_reduce(α:sub:ζ:sup:start).
-The last word of σ_reduce(ζ) is σ_reduce(α:sub:ζ:sup:end).
+Combinig step 2 with steps 4 and 5,
+
+    6. ζ{1} ⊂:sub:`s` inv(ς(ζ))
+    7. ζ{Λ(ζ)} ⊂:sub:`s` inv(ς(ζ))
+
 Inversion and σ-reduction: Since σ_reduce(ζ) = inv(σ_reduce(ζ)), the first word of σ_reduce(ζ) must be the inverse of the last word of σ_reduce(ζ), and vice-versa. Therefore:
 
 σ_reduce(α:sub:ζ:sup:start) = inv(σ_reduce(α:sub:ζ:sup:end))

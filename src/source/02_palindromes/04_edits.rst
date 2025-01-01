@@ -62,3 +62,19 @@ Let *n* be a fixed natural number such that *0 ≤ n ≤ l(ζ)*. A Right Partial
 When *n = 0*, *ζ[0:]* is defined as the empty string, *ε*.
 
 When *n = l(ζ)*, *ζ[n:]* is the entire sentence ζ. ∎
+
+
+Removed: Associativity of Limitations
+-------------------------------------
+
+**Theorem 1.2.9** ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i)))
+
+Let *p* *∈* **Χ**:sub:`L(n)`, *q* *∈* **Χ**:sub:`L(m)`, and r ∈ **Χ**:sub:`L(k)` be arbitrary Phrases.
+
+By Definition 2.2.4, the Limitation of a Phrase is a String. String concatenation is associative by Definition 1.1.1 and the Character Axiom C.1, meaning for any strings *s*, *t*, and *u*,
+
+    (st)u = s(tu)
+
+Since *Π*:sub:`i=1`:sup:`n` *p(i)*, *Π*:sub:`i=1`:sup:`m` *q(i)*, and *Π*:sub:`i=1`:sup:`k` *r(i)* are all Strings, the associativity of String Concatenation can by applied to conclude,
+
+    ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i))) ∎
