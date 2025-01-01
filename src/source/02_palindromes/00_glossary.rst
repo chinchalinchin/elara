@@ -32,7 +32,7 @@ Notation
 - Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
 - Functions: l(t), Λ(t), Δ(t)
-- Operations: inv(s), σ_reduce(t), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- Operations: inv(s), ς(ζ), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
 
 Definitions 
 -----------
@@ -141,10 +141,11 @@ Theorems
 - T 3.1.10: PP ∪ IP = P
 - T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
 - T 3.1.12: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
-- T 3.1.13: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+- T 3.1.13: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+- T 3.1.14: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
 - T 3.1.15: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
-- T 3.1.16: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
-- 
+- T 3.1.16: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
+- T 3.1.17: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 - 
 - 
 - T 3.1.17: P:sup:`-` ∩ P:sup:`+` = ∅
@@ -152,8 +153,6 @@ Theorems
 - T 3.1.19: ∀ ζ ∈ PP ∩ P:sub:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1] = σ 
 - T 3.1.20: ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
 - T 3.2.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
-- 
-- 
 - 
 - 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L

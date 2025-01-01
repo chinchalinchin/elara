@@ -36,7 +36,7 @@ Notation
 - Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
 - Functions: l(t), Λ(t), Δ(t)
-- Operations: inv(s), σ_reduce(t), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- Operations: inv(s), ς(ζ), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
 
 Definitions 
 -----------
@@ -66,9 +66,9 @@ Definitions
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 - D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
-- D 3.1.2: σ-Reduction: s ⋅ Σ:sub:`σ`
-- D 3.1.3: Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ [ (Ζ ⋅ Σ:sub:`σ`) = inv(Ζ ⋅ Σ:sub:`σ`) ]
-- D 3.1.4: Perfect Palindromes: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
+- D 3.1.2: σ-Reduction: ς(ζ)
+- D 3.1.3: Palindromes: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) 
+- D 3.1.4: Perfect Palindromes: ζ ∈ PP ↔ ζ = inv(ζ)
 - D 3.1.5: Imperfect Palindromes: ζ ∈ P - PP
 - D 3.1.6: Aspect
 - D 3.1.7: Left Partial Sentence: Z[:n]
@@ -133,26 +133,30 @@ Theorems
 - T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
-- T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ζ ⋅ Σ:sub:`σ`) = (inv(ζ) ⋅ Σ:sub:`σ`)
-- T 3.1.2: ∀ ζ,ξ ∈ C:sub:`L`: ΖΞ ⋅ Σ:sub:`σ` = (Ζ⋅ Σ:sub:`σ`)(Ξ ⋅ Σ:sub:`σ`)
-- T 3.1.3: ∀ ζ ∈ C:sub:`L`: (ζ ⋅ Σ:sub:`σ`) ⋅ Σ:sub:`σ`= ζ ⋅ Σ:sub:`σ`
-- T 3.1.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ ⋅ Σ:sub:`σ`) ≤ 1
-- T 3.1.5: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` (ζ ⋅ Σ:sub:`σ`)
-- T 3.1.6: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ζ  ⋅ Σ:sub:`σ`) = inv(inv(ζ  ⋅ Σ:sub:`σ`)) ]
+- T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
+- T 3.1.2: ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
+- T 3.1.3: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
+- T 3.1.4: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
+- T 3.1.5: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
+- T 3.1.6: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
 - T 3.1.7: PP ⊂ K
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 - T 3.1.9: PP ⊂ P
 - T 3.1.10: PP ∪ IP = P
-- T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
-- T 3.1.12: ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] )) ↔ (∃ i ∈ ℕ : l(ζ) = 2i + 1)
-- T 3.1.13: ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l(ζ[ω(ζ):]) + 1) ↔ (∃ i ∈ ℕ : l(ζ) = 2i)
-- T 3.1.14: ∀ ζ ∈ P:sup:`-`: ( inv(ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(ζ[:ω(ζ)]⋅ Σ:sub:`σ`) )
-- T 3.1.15: ∀ ζ ∈ P:sup:`+`: ( inv(Ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(Ζ[:ω(ζ)+1]⋅ Σ:sub:`σ`) )
-- T 3.1.16: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.1.17: P:sup:`-` ∪ P:sup:`+` = P
-- T 3.1.18: ∀ ζ ∈ PP ∩ P:sub:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1 ] = σ 
-- T 3.1.19: ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
+- T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+- T 3.1.12: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+- T 3.1.13: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+- T 3.1.15: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+- T 3.1.16: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+- 
+- 
+- T 3.1.17: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.1.18: P:sup:`-` ∪ P:sup:`+` = P
+- T 3.1.19: ∀ ζ ∈ PP ∩ P:sub:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1] = σ 
+- T 3.1.20: ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
 - T 3.2.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- 
+- 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
@@ -2559,7 +2563,7 @@ Consider the Sentence *ᚠ = "form is the possibility of structure"*. Note, *l(�
 
 The notation *ζ[n:]* and *Z[:n]* is analogous to array slicing notation found in many programming languages. It indicates a substring is being taken starting from a position *n* Characters from the end of the String up to the end of the String.
 
-Take note, Partial Sentences are not necessarily a Word or a sequence of Words. A Left Partial Sentence will only be semantically coherent if the Character at *n* is a Delimiter, if is the last Character of a Word or Sentence, or if the Partial Sentence "slices" a compound word at exactly the correct position in Word. Simarily, a Right Partial Sentence 
+Take note, Partial Sentences are not necessarily a Word or a sequence of Words. A Left Partial Sentence will only be semantically coherent if the Character at *n* is a Delimiter, if the Character at *n* is the last Character of a Word or Sentence, or if the Partial Sentence "slices" a compound Word at exactly the correct position in Word. Simarily, a Right Partial Sentence will only be semantically coherent if *n* is the first Character in a Word or Sentence, or if the index slices a compound Word. 
 
 Note, regardless of the value of *n*,
 
@@ -2567,9 +2571,15 @@ Note, regardless of the value of *n*,
 
     l(ζ[n:]) = l(ζ) - n + 1
 
-The next two theorem leverages this insight and establishes the fundamental relationship between Left and Right Partial Sentences, and the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot*.
+This relation bears a similarity to Definition 1.2.4 of String Inversion and Definition 1.3.1 of Reflective Words, both of which require Character-level inversions,
 
-TODO: this are really theorems about strings, not sentences.
+    α[i] = α[l(α) - 1 + 1]
+
+A Palindrome is a type of inversion. In a Palindrome, the requirement that individual Characters that must maintain their symmetry across its String Length is extended up to the Sentence level through the requirement that, based on the parity of the Palindrome, the Partial Sentences on either side of the Sentence's center must maintain be mirror images of one another. 
+
+Note that Definition 3.1.7 and Definition 3.1.8 are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial notation from being applied to Strings that have been stripped of their Empty Characters via the Emptying Algorithm for the construction of their Character-level representation (Definition 1.1.2). In other words, Definition 3.1.7 and Definition 3.1.8 operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has processed through the Emptying and Delimiting Algorithm.
+
+The next two theorem leverages this insight and establishes the fundamental relationship between Left and Right Partial Sentences, and proves the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
 
 **Theorem 3.1.11** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
 
@@ -2751,13 +2761,13 @@ In both cases, an *n* has been found that satisfies the condition in the theorem
     10. ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) + 1 = l(ζ[n:]) ) ∎
 
 
-Theorems 3.1.11 - 3.13 conjunctively establish the existence of a natural number that can reliably be called the *Pivot* for any Sentence in a Corpus. This leads to the following definition. 
+Theorems 3.1.11 - 3.13 conjunctively establish the existence of a natural number that can reliably be called the center, or *Pivot*, of any Sentence in a Corpus. This leads to the following definition. 
 
 **Definition 3.1.9: Pivots** 
 
 The Pivot of a Sentence *ζ*, denoted *ω(ζ)*, is defined as the natural number such that the following formula is true,
 
-   ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) + 1 = l(ζ[ω(ζ):])) 
+   (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) + 1 = l(ζ[ω(ζ):])) 
    
 Using Theorem 3.1.11 and Theorem 3.1.12, the explicit formula for a Sentence Pivot are given below,
 
@@ -2786,7 +2796,7 @@ Consider these simple examples from a hypothetical Language **L** with Alphabet 
 | "a ba"        | 4    | 2    | "a "       | 2           | " ba"       | 3           |
 | "ab cb"       | 5    | 3    | "ab "      | 3           | " cb"       | 3           |
 | "a bca"       | 5    | 3    | "a b"      | 3           | "bca"       | 3           |
-| "a bbca"      | 6    | 3    | "a b"      | 3           | "bbca"      | 4           | ∎
+| "a bbc  a"    | 8    | 4    | "a bb"     | 3           | "bc  a"     | 5           | ∎
 
 In the previous example, take note when the Sentence String Length is odd, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.1.13. Similarly, when the Sentence String Length is even, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.1.12. 
 
@@ -2806,52 +2816,83 @@ The class of Even Palindromes, denoted P:sup:`-`, is defined as the set of Sente
 
 The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior can be described through the operations of String Inversiona and σ-Reduction, as the next theorems show. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence. In other words, when a Palindrome is Odd, the inverse of the σ-Reduction for a Right Partial Sentence offset by one Character from the Pivot is equal to the σ-Reduction of the Left Partial Sentence.
 
-**Theorem 3.1.14** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+**Theorem 3.1.14** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
 
-Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
+( → ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
-    ζ ∈ P:sup:`-`
-
-By Definition 3.1.11 of Odd Palindromes,
-
-    ∃ k ∈ ℕ : l(ζ) = 2k + 1
+    1. ∃ k ∈ ℕ : l(ζ) = 2k + 1
 
 From Theorem 3.1.11, it follows,
 
-    ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:]))
+    2. ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:]))
 
 By Theorem 3.1.13, 
 
-    ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+    3. ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
 
-From the proof of Theorem 3.1.7 (Case 1: k is odd), we know that if l(ζ) = 2i + 1, then n = i + 1 satisfies l(ζ[:n]) = l(ζ[n:]).
-Therefore, n = i + 1 = (2i + 1 + 1)/2 = (l(ζ) + 1)/2.
-Case 2: l(ζ[:n]) + 1 = l(ζ[n:])
+From Theorem 3.1.11 and step 1, it follows 
 
-From the proof of Theorem 3.1.7 (Case 2, k is even), we know this case leads to a contradiction when l(ζ) is odd.
-Uniqueness of Pivot: By Definition 3.1.7, the pivot ω(ζ) is the smallest natural number satisfying the condition. Since n = (l(ζ) + 1)/2 satisfies the condition and is the only solution when l(ζ) is odd, it must be the smallest.
+    4. n = i + 1 
+    
+Where *n* satisfies,
 
-Conclusion: Therefore, ω(ζ) = (l(ζ) + 1)/2.
+    5. l(ζ[:n]) = l(ζ[n:]).
 
-Since ζ was an arbitrary odd-length palindrome, we can generalize:
+Therefore, 
 
-∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
-This completes the proof. ∎
+    6. n = i + 1 = (2i + 1 + 1)/2 = (l(ζ) + 1)/2.
 
-**Theorem 3.1.15** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+By Definition 3.1.9, the pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *n* satisfies the condition and is the only solution, it must be the smallest. Therefore, 
 
-roof:
+    7. ω(ζ) = (l(ζ) + 1)/2.
 
-Let ζ be an arbitrary even-length palindrome in P:sup:+.
+( ← ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
-Definition of Even Palindrome: Since ζ ∈ P:sup:+, by Definition 3.1.8, l(ζ) is even. Therefore, there exists a natural number i such that l(ζ) = 2i.
+    1. ω(ζ) = (l(ζ) + 1)/2.
 
-Theorem 3.1.7: By Theorem 3.1.7, there exists an n ∈ N:sub:l(ζ) such that either l(ζ[:n]) = l(ζ[n:]) or l(ζ[:n]) + 1 = l(ζ[n:]).
+This can be re-arranged to yield,
 
-Case 1: l(ζ[:n]) = l(ζ[n:])
+    2. l(ζ)  = 2 * ω(ζ) - 1
 
-From the proof of Theorem 3.1.7 (Case 1: k is odd), we know this case leads to a contradiction when l(ζ) is even.
-Case 2: l(ζ[:n]) + 1 = l(ζ[n:])
+Since *ω(ζ)* is defined to be a natural number, let *k* be,
+
+    3. k = ω(ζ) + 1
+
+Then, 
+
+    4. l(ζ)  = 2k + 1
+
+Therefore,
+
+    5. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+
+Since both direction of the equivalence are shown, the theorem is proved, 
+
+    6. ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2 ∎
+
+**Theorem 3.1.15** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+
+Assume 
+
+    1. ζ ∈ P:sup:`-`
+
+From Definition 3.1.11, it follows, 
+
+    2. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+
+From Theorem 3.1.14, it follows, 
+
+    3. ω(ζ) = (l(ζ) + 1)/2 ∎
+
+**Theorem 3.1.16** ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ : l(ζ) = 2i) ↔ ω(ζ) = l(ζ)/2
+
+( → ) Let ζ be an arbitrary in **C**:sub:`L` such that,
+
+    ∃ i ∈ ℕ : l(ζ) = 2i
+
+By Theorem, 
+
+    l(ζ[:i]) + 1 = l(ζ[i:])
 
 From the proof of Theorem 3.1.7 (Case 2, k is even), we know that if l(ζ) = 2i, then n = i satisfies l(ζ[:n]) + 1 = l(ζ[n:]).
 Therefore, n = i = l(ζ)/2.
@@ -2864,6 +2905,13 @@ Since ζ was an arbitrary even-length palindrome, we can generalize:
 ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 This completes the proof. ∎
 
+**Theorem 3.1.17** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+
+**Theorem 3.1.16** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1= l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+
+Assume 
+
+    ζ ∈ C:sub:`L`
 
 
 
