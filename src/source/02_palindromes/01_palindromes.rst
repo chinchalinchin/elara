@@ -871,66 +871,67 @@ Since u and t were arbitrary strings, we can generalize:
 
     ∀ u, t ∈ S: inv(ut) = inv(t)inv(u) ∎
 
+The next theorem establishes a brand of *"distributivity"* of String inversion over containment. 
+
 **Theorem 1.2.6** ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) 
 
-This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the Inverse of *t* is contained in the Inverse of *u*.
+This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the Inverse of *u* is contained in the Inverse of *t*.
 
 Let *u* and *t* be arbitrary Strings in **S**.
 
 (→) Assume,
 
-    1. u ⊂:sub:`s` t 
+    1. u ⊂:sub:`s` t
 
-By Definition 1.1.7, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(u)` → **N**:sub:`l(t)` such that:
+By Definition 1.1.7, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(u)` *→* **N**:sub:`l(t)` such that,
 
-    2. ∀ i ∈ N:sub:l(u): u[i] = t[f(i)]
-    
+    2. ∀ i ∈ N:sub:`l(u)`: u[i] = t[f(i)]
+
 Let,
 
-    3. v = inv(t) 
+    3. v = inv(t)
     4. w = inv(u).
 
-By Definition 1.2.4, 
+By Definition 1.2.4,
 
-    5. ∀ i ∈ N:sub:l(u): w[i] = inv(u)[i] = u[l(u) - i + 1]
-    6. ∀ i ∈ N:sub:l(t): v[i] = inv(t)[i] = t[l(t) - i + 1]
+    5. ∀ i ∈ N:sub:`l(u)`: w[i] = inv(u)[i] = u[l(u) - i + 1]
+    6. ∀ i ∈ N:sub:`l(t)`: v[i] = inv(t)[i] = t[l(t) - i + 1]
 
-Define a function *g*: **N**:sub:`l(w)` → **N**:sub:`l(y)` as follows,
+Define a function *g*: **N**:sub:`l(w)` → **N**:sub:`l(v)` as follows,
 
     7. g(i) = l(t) - f(l(u) - i + 1) + 1
 
 This function maps the Character indices of *w* (the inverse of *u*) to the indices of *v* (the inverse of *t*).
 
-**Increasing** To show *g* is strictly increasing, let 
+**Increasing** To show *g* is strictly increasing, let
 
-    8. i, j ∈ N:sub:`l(y)` 
-    
-Such that *i < j*. Since *l(w) = l(u)*, 
+    8. i, j ∈ N:sub:`l(w)`
 
-    9. i, j ∈ N:sub:`l(u)`. 
-    
-Because f is strictly increasing, and 
+Such that *i < j*. Since *l(w) = l(u)*,
 
-    10. l(u) - j + 1 < l(u) - i + 1, 
-    
+    9. i, j ∈ N:sub:`l(u)`
+
+Because *f* is strictly increasing, and
+
+    10. l(u) - j + 1 < l(u) - i + 1,
+
 It follows,
 
-    11. f(l(u) - j + 1) < f(l(u) - i + 1). 
-    
-Therefore, 
+    11. f(l(u) - j + 1) < f(l(u) - i + 1).
+Therefore,
 
-    12. l(t) - f(l(u) - i + 1) + 1 < l(t) - f(l(u) - j + 1) + 1, 
-    
-which means 
-    
-    13. g(i) < g(j). 
-        
-Thus, g is strictly increasing. 
+    12. l(t) - f(l(u) - i + 1) + 1 < l(t) - f(l(u) - j + 1) + 1
 
-**Consecutive** To show *g* is consecutive, let 
+which means
 
-    14. i ∈ N:sub:`l(w)` 
-    
+    13. g(i) < g(j).
+
+Thus, g is strictly increasing.
+
+**Consecutive** To show *g* is consecutive, let
+
+    14. i ∈ N:sub:`l(w)`
+
 Such that *i < l(w)*. Then,
 
     15. g(i+1) = l(t) - f(l(u) - (i + 1) + 1) + 1
@@ -940,7 +941,7 @@ Since f is consecutive, we have:
 
     17. f(l(u) - i - 1 + 1) = f(l(u) - i) + 1
 
-Then, 
+Then,
 
     18. g(i+1) = l(t) - (f(l(u) - i) + 1) + 1
     19. g(i+1) = l(t) - f(l(u) - i)
@@ -948,56 +949,72 @@ Then,
     21. g(i+1) = l(t) - f(l(u) - i + 1) + 1
     22. g(i+1) = g(i) + 1
 
+Thus *g* is consecutive.
+
+**Containment** Now, it must shown be that, 
+
+    23.  ∀ i ∈ N:sub:`l(w)`: w[i] = v[g(i)]
+
 By Definition 1.2.4,
 
-    23. w[i] = u[l(u) - i + 1] 
-    24. w[i] = t[f(l(u) - i + 1)] (by Step 2)
+    24. w[i] = u[l(u) - i + 1]
+
+From step 2, it follows,
+
+    25. w[i] = t[f(l(u) - i + 1)]
 
 By definition of *g*,
 
-    25. v[g(i)] = v[l(t) - f(l(u) - i + 1) + 1]
+    26. g(i) = l(t) - f(l(u) - i + 1) + 1
 
-By Definition 1.2.4,
+Rearranging,
 
-    26. v[g(i)] = t[l(t) - (l(t) - f(l(u) - i + 1) + 1) + 1] 
-    27. v[g(i)] = t[f(l(u) - i + 1)]
+    27. f(l(u) - i + 1) = l(t) - g(i) + 1
 
-Therefore, 
+Substituting into step 25,
 
-    28. ∀ i ∈ N:sub:`l(w)`: w[i] = v[g(i)]
+    28. w[i] = t[l(t) - g(i) + 1]
 
-By Definition 1.1.7, we have 
+By Definition 1.2.4 and the definition of v,
 
-    29. w ⊂:sub:`s` v
+    29. v[g(i)] = t[l(t) - g(i) + 1]
 
-Therefore, 
+Therefore,
 
-    30. inv(u) ⊂:sub:`s` inv(t).
+    30. w[i] = v[g(i)]
 
-(←) Assume 
+Since this holds for all *i* *∈* **N**:sub:`l(w)`, and g is a strictly increasing and consecutive function, by Definition 1.1.7, it follows,
 
-    1. inv(t) ⊂:sub:`s` inv(u).
+    31. w ⊂:sub:`s` v
 
-By Theorem 1.2.4, 
+Therefore,
+
+    32. inv(u) ⊂:sub:`s` inv(t)
+
+(←) Assume
+
+    1. inv(u) ⊂:sub:`s` inv(t).
+
+By Theorem 1.2.4,
 
     2. inv(inv(u)) = u
     3. inv(inv(t)) = t
 
-Therefore, using the result just proved in the (→) direction, it can be said since 
+Therefore, using the result just proved in the (→) direction, it can be said since
 
-    4. inv(t) ⊂:sub:`s` inv(u)
-    
+    4. inv(u) ⊂:sub:`s` inv(t)
+
 This implies,
 
-    5. inv(inv(u)) ⊂:sub:`s` inv(inv(t)).
+    5. inv(inv(t)) ⊂:sub:`s` inv(inv(u)).
 
-Substituting in steps 3 and 3,
+Substituting in steps 2 and 3,
 
-    6. u ⊂:sub:`s` t
+    6. t ⊂:sub:`s` u
 
 Since both directions of the implication hold, it follows,
 
-    ∀ u, t ∈ S: u ⊂:sub:`s` t ↔ inv(t) ⊂:sub:`s` inv(u) ∎
+    7. ∀ u, t ∈ S: u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) ∎
 
 The next theorem establishes the *transivity* of containment over Strings. 
 
@@ -1152,7 +1169,7 @@ And then the Limitation can be built up recursively using the Recursive Step rep
 
 So the Limitation of *P(n)* is given by,
 
-    Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" ∎
+    4. Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" ∎
 
 From the previous example, it should be clear what the meaning of the Limitation operation is within the formal system. Limitation is a method of constructing a Sentence-like (see Section II.III for the formal difference between a Limitation and Sentence) String from a sequence of words. 
 
@@ -1166,7 +1183,7 @@ This theorem can be stated in natural language as follows: For every natural num
 
 Let *n* be an arbitrary natural number, and let **P**:sub:`n` be a Phrase of Word Length *n* in Language **L** from the Language's *n*:sup:`th` Lexicon, **X**:sub:`L`*(n)*,
 
-    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+    q. P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
 The theorem will be proved using induction.
 
@@ -1174,11 +1191,11 @@ The theorem will be proved using induction.
 
 By Definition 1.2.7,
     
-    1. Π:sub:`i=1`:sup:`1` P:sub:`n(i)` = α:sub:`1`
+    2. Π:sub:`i=1`:sup:`1` P:sub:`n(i)` = α:sub:`1`
 
 Since *α*:sub:`1` is a word in **L** (by Definition 1.2.6 of Lexicon), it is also a String in S (by Definition 1.2.2). Thus, there exists a String *s = α*:sub:`1` such that 
 
-    s = Π:sub:`i=1``:sup:`1` P:sub:`n(i)`.
+    3. s = Π:sub:`i=1``:sup:`1` P:sub:`n(i)`.
 
 Since the base case of Limitation is defined as simple equality, the string s must be unique.
 
@@ -1186,19 +1203,19 @@ Since the base case of Limitation is defined as simple equality, the string s mu
 
 Assume that for some *k ≥ 1*, there exists a unique string *s*:sub:`k` such that 
 
-    s:sub:`k` = Π:sub:`i=1`:sup:`k` P:sub:`n(i)`
+    4. s:sub:`k` = Π:sub:`i=1`:sup:`k` P:sub:`n(i)`
 
 To complete the induction, it must be shown that there exists a unique string *s*:sub:`k+1` such that,
  
-    s:sub:`k+1` = Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)`
+    5. s:sub:`k+1` = Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)`
 
 By Definition 1.2.7, 
 
-    Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (Π:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
+    6. Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (Π:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
 
 By inductive hypothesis,
     
-    Π:sub:`i=1`:sup:`k` P:sub:`n(i)` = s:sub:`k`
+    7. Π:sub:`i=1`:sup:`k` P:sub:`n(i)` = s:sub:`k`
     
 Thus, *s*:sub:`k` is unique. Since *α*:sub:`k+1` is a Word in **L** (by the definition of **Χ**:sub:`L`*(n+1)*), it is also a unique String in S.
 
@@ -3370,6 +3387,10 @@ Combinig step 2 with steps 4 and 5,
 
     6. ζ{1} ⊂:sub:`s` inv(ς(ζ))
     7. ζ{Λ(ζ)} ⊂:sub:`s` inv(ς(ζ))
+
+By Theorem 1.2.6, step 7 can be rewritten,
+
+    9. inv(inv(ς(ζ))) ⊂:sub:`s` inv(ζ{Λ(ζ)})
 
 Inversion and σ-reduction: Since σ_reduce(ζ) = inv(σ_reduce(ζ)), the first word of σ_reduce(ζ) must be the inverse of the last word of σ_reduce(ζ), and vice-versa. Therefore:
 
