@@ -1,0 +1,32 @@
+Definition 3.1.12: Pivot Words
+
+Let ζ be a sentence in C:sub:L with length Λ(ζ) and pivot ω(ζ). The left pivot word, denoted α:sub:ζ:sup:-ω, and the right pivot word, denoted α:sub:ζ:sup:+ω, are defined as follows:
+
+Case 1: Λ(ζ) = 1
+
+α:sub:ζ:sup:-ω = α:sub:ζ:sup:+ω = the only word in ζ (which is also α:sub:ζ:sup:start and α:sub:ζ:sup:end)
+Case 2: Λ(ζ) > 1
+
+α:sub:ζ:sup:-ω = the word β such that (ω(ζ), β) ∈ W:sub:ζ
+α:sub:ζ:sup:+ω = the word β such that (ω(ζ) + 1, β) ∈ W:sub:ζ
+Explanation:
+
+Case 1 (Single-Word Sentences): If the sentence has only one word, then that word is both the left and right pivot word. This ensures consistency and handles the edge case gracefully.
+Case 2 (Multi-Word Sentences):
+The left pivot word is the word at position ω(ζ) in the word-level representation.
+The right pivot word is the word at position ω(ζ) + 1 in the word-level representation.
+Uniqueness: The pivot words are uniquely defined because the word-level representation W:sub:ζ is a function, and each position corresponds to a unique word.
+Notation: Using α:sub:ζ:sup:-ω and α:sub:ζ:sup:+ω explicitly indicates the dependence of the pivot words on the sentence ζ and their relationship to the pivot ω(ζ).
+Further Considerations:
+
+Odd vs. Even Length:
+In odd-length sentences, ω(ζ) will correspond to the index of the middle word, which will be α:sub:ζ:sup:-ω. The right pivot word, α:sub:ζ:sup:+ω, will be the word immediately to the right of the middle word.
+In even-length sentences, ω(ζ) will fall between two words. α:sub:ζ:sup:-ω will be the word immediately to the left of the "middle", and α:sub:ζ:sup:+ω will be the word immediately to the right of the "middle".
+
+Relationship to Partial Sentences: The pivot words are closely related to the partial sentences at the pivot. In a sense, α:sub:ζ:sup:-ω is the "last" word of the left partial sentence ζ[:ω(ζ)], and α:sub:ζ:sup:+ω is the "first" word of the right partial sentence ζ[ω(ζ) + 1:] (for even-length sentences) or ζ[ω(ζ):] (for odd-length sentences).
+Theorems: You'll likely want to prove theorems about the properties of pivot words, such as their relationship to the boundary words in palindromes and their behavior under inversion and σ-reduction.
+Example:
+
+ζ = "a b c" (odd length): Λ(ζ) = 3, ω(ζ) = 2, α:sub:ζ:sup:-ω = "b", α:sub:ζ:sup:+ω = "c"
+ζ = "a b c d" (even length): Λ(ζ) = 4, ω(ζ) = 2, α:sub:ζ:sup:-ω = "b", α:sub:ζ:sup:+ω = "c"
+ζ = "x"

@@ -145,18 +145,14 @@ Theorems
 - T 3.1.10: PP ∪ IP = P
 - T 3.1.11: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
 - T 3.1.12: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
-- T 3.1.13: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+- T 3.1.13: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+- T 3.1.14: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
 - T 3.1.15: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
-- T 3.1.16: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
-- 
-- 
-- T 3.1.17: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.1.18: P:sup:`-` ∪ P:sup:`+` = P
-- T 3.1.19: ∀ ζ ∈ PP ∩ P:sub:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1] = σ 
-- T 3.1.20: ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
-- T 3.2.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
-- 
-- 
+- T 3.1.16: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
+- T 3.1.17: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+- T 3.1.18: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+- T 3.1.19: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.1.20: P:sup:`-` ∪ P:sup:`+` = P 
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
@@ -363,16 +359,26 @@ The Emptying Algorithm takes a string *t* as input, which can be thought of as a
 
 **Initialization**
 
-   1. Let **T** *=* *∅* (empty set)
-   2. Let *j = 1* (index for non-Empty Characters in **T**)
-   3. Let *i = 1* (index for iterating through original string *t*)
+   1. Let T = ∅ (empty set to hold Character-level representation)
+   2. Let j = 1 (index for non-Empty Characters in T)
+   3. Let i = 1 (index for iterating through original String t)
 
 **Iteration**
 
-   1. If *𝔞*:sub:`i` does not exist, halt the algorithm and return the current value of **T**.
-   2. If *𝔞*:sub:`i` *≠* *ε*, add the ordered pair (*j*, *𝔞*:sub:`i`) to **T** and increment *j* by 1.
-   3. Increment *i* by 1.
-   4. Return to step 1. ∎
+   1. If 𝔞:sub:`i` does not exist:
+        a. Return the current value of T.
+   2. If 𝔞:sub:`i` *≠* *ε*:
+        a. Let X = { (*j*, *𝔞*:sub:`i`) } ∪ T
+        b. Let T = X 
+        c. Let k = j + 1
+        d. Let j = k
+   3. Let k = i + 1
+   4. Let i = k
+   5. Return to step 1. ∎
+
+Step 1 in the Emptying Algorithm is essentially equivalent to a *try-catch* block in modern programming languages. Step 1 is materially different than comparing a Character in a String to the Empty Character. Step 1 relies on the idea that attempting to select a Character outside of the String is an undefined operation and will thus result in an error (i.e. a stack overflow). As the Characters in a String are iterated through, as long as the String is not infinite, the iteration will eventually reach the last Character, and once it tries to select the next Character, it will throw an error. 
+
+This point is important because the Emptying Algorithm must remain *"unaware"* of String Length. The essence of the Emptying Algorithm is that it implicitly defines the length of the String as its number of non-Empty Characters, without explicitly stating that is what *String Length* is. This is crucial to the formalization of Strings as ordered sequences of Characters, because it allows String Length to be defined without any circularity. In other words, this formalization avoids the vicous circle of defining the Character-level representation in terms of String Length and then defining String Length as the cardinality of the Character-level representation.
 
 The following example illustrates a simple application of the Emptying Algorithm.
 
@@ -478,9 +484,7 @@ Then for any *i* such that *1 ≤ i ≤ l(t)*, *t[i]* is defined as *𝔞*:sub:`
 
 Character Index notation will simplify many of the subsequent proofs, so it is worth taking a moment to become familiar with its usage. Indexing starts at 1, consistent with the definition of **N**:sub:`n` made in the preamble. So, *t[1]* is the first character of *t*, *t[2]* is the second, and so on.
 
-In terms of the Character level set representation, *t[i]* refers to the Character at position *i* in the set **T**.
-
-This notation can effectively replace the use of lowercase Fraktur letters with subscripts (e.g., *𝔞*:sub:`i`) when referring to specific Characters within Strings.
+In terms of the Character-level set representation, *t[i]* refers to the Character at position *i* in the set **T**. In other words, the notation *t[i]* implicitly assumes the String *t* has already been stripped of its Empty Characters through the Emptying Algorithm in Definition 1.1.2. This notation can effectively replace the use of lowercase Fraktur letters with subscripts (e.g., *𝔞*:sub:`i`) when referring to specific Characters within Strings.
 
 **Example**
 
@@ -776,6 +780,8 @@ Simplifying the index on the right hand side,
     6. ∀ j ∈ N:sub:`l(s)`: u[j] = s[j]
 
 Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (*u[j] = s[j]* for all *i*), by Definition 1.1.4 of String Equality, it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*. Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
+
+Two versions of Theorem 1.2.5 are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that require recourse to the Character-level representation.
 
 **Theorem 1.2.5 (Character-level Representation)** ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
 
@@ -1256,7 +1262,7 @@ The Strings *t* and *u*, the integer *k* and the set **K** are local to the algo
 
     1. Let t = ε
     2. While i ≤ l(ᚠ) and ᚠ[i] ≠ σ:
-        a. Let u = (ᚠ[i])(t)
+        a. Let u = (t)(ᚠ[i])
         b. Let t = u
         c. Increment i:
             i. Let k = i + 1
@@ -1273,6 +1279,8 @@ The Strings *t* and *u*, the integer *k* and the set **K** are local to the algo
         b. Let i = k
     5. If i > l(ᚠ):
         a. Return W:sub:`ᚠ` ∎
+
+Note the String which is initialized to hold the Sentence Characters in step 1 is set to an initial value of the Empty Character. The application of the Basis Clause in step 3a ensures this Empty Character is removed after the entire Sentence has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of Theorem 1.2.3.
 
 The essence of the Delimiting Algorithm lies in the interplay of the Discovery Axiom W.1 and Definition 2.1.2 of a Sentence as a semantic String. In other words, by Definition 2.1.2 and by Definition 1.2.2, all Sentences and Words must be semantic. The only feature that differentiates them in their *"semanticality"* is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
 
@@ -2064,30 +2072,30 @@ The mathematical study of palindromes will revolve around a novel linguistic ope
 
 Before defining a *σ*-reduction, the preliminary concept of a *σ-reduced Alphabet* must be introduced. The following definition serves as the basis for constructing the operation of *σ*-reduction.
 
-As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, making it lose semantic coherence. Imperfect Palindromes* must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiter, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
+As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. *"bor ro worrob"*, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiter, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
 
 **Definition 3.1.1: σ-Reduced Alphabet**
 
 A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A sigma-reduced Alphabet is denoted Σ:sub:`σ`. Formally,
 
-    Σ:sub:`σ` = Σ - { σ }
+    Σ:sub:`σ` = Σ - { σ } ∎
 
 In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of *sigma reduction*.
 
 **Definition 3.1.2: σ-Reduction**
 
-Let *s* be a String with length *l(s)* and Character-level representation 
+Let *t* be a String with length *l(t)* and Character-level representation 
 
-    1. S = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(s), 𝔞:sub:`l(s)`) } 
+    1. t = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(s), 𝔞:sub:`l(s)`) } 
     2. 𝔞:sub:`i` ∈ Σ.
 
-The *σ*-reduction of *s*, denoted by the lowercase Greek final Sigma, *ς(s)*, maps the String *s* to a new String *t* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(s)* is defined and constructed using the *Reduction Algorithm*,
+The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, maps the String *t* to a new String *u* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(t)* is defined and constructed using the *Reduction Algorithm*,
 
 **Reduction Algorithm**
 
 **Algorithm 3: Reduction Algorithm**
 
-The Reduction Algorithm takes in a String *s* as input. It initializes the values of several local variables and then iterates over the Character level set representation of the String *s* until the Characters have been exhausted. It then returns the *σ-reduced* String *t* that correspond to the String *s*. The exact details are given below.
+The Reduction Algorithm takes in a String *s* as input. It initializes the values of several local variables and then iterates over the Character-level set representation of the String *s* until the Characters have been exhausted. It then returns the *σ-reduced* String *t* that correspond to the String *s*. The exact details are given below.
 
 **Initialization** 
 
@@ -2096,14 +2104,16 @@ The Reduction Algorithm takes in a String *s* as input. It initializes the value
 
 **Iteration**
 
-- If s[i] ≠ σ:
-    - Let u = (s[i])t
-    - Let t = u
-- If i = l(s):
-    - Apply Basis Clause of Definition 1.1.1
-    - Return t
-- Let j = i + 1
-- Let i = j ∎
+1. If s[i] ≠ σ:
+    a. Let u = (t)(s[i])
+    b. Let t = u
+2. If i > l(s):
+    a. Apply Basis Clause of Definition 1.1.1 to t.
+    b. Return t
+3. Let j = i + 1
+4. Let i = j ∎
+
+Note the String *t* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The application of the Basis Clause of Concatenation in step 2a ensures this Character is removed from the output of the Reduction Algorithm .
 
 The following example shows how to apply the Reduction Algorithm to construct the σ-reduction of a String.
 
@@ -2111,10 +2121,10 @@ The following example shows how to apply the Reduction Algorithm to construct th
 
 Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" }*. Note in this example *σ = " "* and *l(s) = 5*. The value of the variables in the Reduction Algorithm after each iteration are given below,
 
-    1. i = 2, t = "a"ε
-    2. i = 3, t = "a"ε
-    3. i = 4, t = "a"ε"b"
-    4. i = 5, t = "a"ε"b"
+    1. i = 2, t = ε"a"
+    2. i = 3, t = ε"a"
+    3. i = 4, t = ε"ab"
+    4. i = 5, t = ε"ab"
     5. i = 5, t = "abc"
         
 The result of the σ-reduction of *s* is thus given by,
@@ -2343,23 +2353,23 @@ These ideas will be expounded until in Section III.III, when the theorems and re
 Aspect
 ^^^^^^
 
-The current analysis now turns towards its apex, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motive the next definition, consider how the operation of *σ*-reduction "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
+The current analysis now turns towards its apex, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motivate the next definition, consider how the operation of *σ*-reduction "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
 
-Consider a perfect palindromes like *ᚠ = "strap on no parts"*,
+Consider a Perfect Palindrome like *ᚠ = "strap on no parts"*,
 
     ς(ᚠ)= "straponnoparts"
 
     inv(ς(ᚠ)) = "straponnoparts"
 
-In other words, the *σ*-reduction and the inversion of its *σ*-reduction space result in the same String.
+In other words, the *σ*-reduction and the inversion of its *σ*-reduction projection result in the same String.
 
-Consider an imperfect palindrome like *ᚢ = "borrow or rob"*,
+Consider an Imperfect Palindrome like *ᚢ = "borrow or rob"*,
 
     ς(ᚢ) = "borroworrob"
 
     inv(ς(ᚢ)) = "borroworrob"
 
-Again, the *σ*-reduction eliminates the Delimiters, and the inversion of the *σ*-reduction captures the mirrored relationship between the words, even if the exact Character sequence isn't identical to the original Palindrome.
+Again, the *σ*-reduction eliminates the Delimiters, and the inversion of the *σ*-reduction captures the mirrored relationship between the words, even if the exact Character sequence isn't identical to the original Palindrome. Nevertheless, the *order* of the Characters is preserved. 
 
 These examples lead directly to the next, important definition.
 
@@ -2369,15 +2379,13 @@ Palindromes are defined as the set of Sentences **P** that satisfy the following
 
     ∀ ζ ∈ C:sub:`L`: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) ∎
 
-This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition.
-
-Moreover, this definition can be easily adapted to different languages by simply defining the appropriate Alphabet **Σ** and the corresponding *σ-reduced* alphabet **Σ**:sub:`σ`
+This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition. Moreover, this definition can be easily adapted to different languages by simply defining the appropriate Alphabet **Σ** and the corresponding *σ-reduced* alphabet **Σ**:sub:`σ`
 
 Definition 3.1.3 highlights the core feature of Palindromes: invariance under transformation. A Palindrome remains a Palindrome even when projected onto the *σ-reduced* Alphabet, demonstrating a structural integrity that's independent of the specific Alphabet that is used to represent it.
 
 The condition *ς(ζ) = inv(ς(ζ)) = ς(inv(ζ))*, where the last equality follows from Theorem 3.1.1, can be seen as defining an equivalence relation on the set of Sentences, where Sentences are equivalent if inversion and *σ*-reduction *commute* over them.
 
-This definition highlights that palindromes possess a structures that is preserved even under the transformation of *σ*-reduction, demonstrating that their palindromic nature is not dependent on the presence of Delimiters. Moreover, it suggests Palindromes are an artifact of a *"hidden"* algebraic structure embedded into linguistics.
+This definition highlights that Palindromes possess a structure that is preserved even under the transformation of *σ*-reduction, demonstrating that their palindromic nature is not dependent on the presence of Delimiters. Moreover, it suggests Palindromes are an artifact of a *"hidden"* algebraic structure embedded into linguistics.
 
 The first classification of Palindromes is now introduced.
 
@@ -2385,7 +2393,7 @@ The first classification of Palindromes is now introduced.
 
 Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the following formula,
 
-    ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ)
+    ∀ ζ ∈ C:sub:`L`: ζ ∈ PP ↔ ζ = inv(ζ) ∎
 
 Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.1.4 also satisfy 3.1.3. Before moving onto this verification, the motivation for Definition 3.1.4 will briefly be explained.
 
@@ -2425,7 +2433,7 @@ This in turn implies,
 
     7. PP ⊂ K ∎
 
-The connection between Invertible Sentences and Palindromes is thus establishes with Theorem 3.1.7. All Perfect Palindromes are Invertible Sentences, but not all Invertible Sentences are Perfect Palindromes.
+The connection between Invertible Sentences and Palindromes is thus established with Theorem 3.1.7. All Perfect Palindromes are Invertible Sentences, but not all Invertible Sentences are Perfect Palindromes.
 
 **Theorem 3.1.8** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 
@@ -2505,13 +2513,13 @@ Since PP and IP are non-overlapping by Definition 3.1.5 and their union encompas
 
 **Definition 3.1.6: Aspect**
 
-A Palindrome P is said to have a *perfect aspect* or *be perfect* if and only if,
+A Palindrome ζ is said to have a *perfect aspect* or *be perfect* if and only if,
 
-    P ∈ PP 
+    ζ ∈ PP 
 
-A Palindrome is said to have an *imperfect aspect* or *be imperfect* if and only if,
+A Palindrome ζ is said to have an *imperfect aspect* or *be imperfect* if and only if,
 
-    P ∈ IP ∎
+    ζ ∈ IP ∎
 
 Thus, the first partitioning of the class of Palindromes has been discovered. The next section will detail the second partitioning of Palindromes: *parity*.
 
@@ -2528,7 +2536,7 @@ Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
     Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
 
-Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Left Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[: n]*, is formally defined as the sequence of Characters which satisfies, 
+Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Left Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[:n]*, is formally defined as the sequence of Characters which satisfies, 
 
     Z[:n] = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`n`)  
 
@@ -2559,9 +2567,9 @@ Consider the Sentence *ᚠ = "form is the possibility of structure"*. Note, *l(�
     1. ᚠ[:2] = "fo"
     2. ᚠ[2:] = "orm is the possibility of structure"
     3. ᚠ[:4] = "form"
-    4. ᚠ[10:] = "he possibility of structure"
+    4. ᚠ[10:] = "he possibility of structure" ∎
 
-The notation *ζ[n:]* and *Z[:n]* is analogous to array slicing notation found in many programming languages. It indicates a substring is being taken starting from a position *n* Characters from the end of the String up to the end of the String.
+The notation *ζ[n:]* and *Z[:n]* is analogous to array slicing notation found in many programming languages. It indicates a substring is being taken starting from a position *n* Characters from the one end of the String up to the other end of the String, the direction depending on whether the Partial Sentence is Left or Right.
 
 Take note, Partial Sentences are not necessarily a Word or a sequence of Words. A Left Partial Sentence will only be semantically coherent if the Character at *n* is a Delimiter, if the Character at *n* is the last Character of a Word or Sentence, or if the Partial Sentence "slices" a compound Word at exactly the correct position in Word. Simarily, a Right Partial Sentence will only be semantically coherent if *n* is the first Character in a Word or Sentence, or if the index slices a compound Word. 
 
@@ -2575,13 +2583,13 @@ This relation bears a similarity to Definition 1.2.4 of String Inversion and Def
 
     α[i] = α[l(α) - 1 + 1]
 
-A Palindrome is a type of inversion. In a Palindrome, the requirement that individual Characters that must maintain their symmetry across its String Length is extended up to the Sentence level through the requirement that, based on the parity of the Palindrome, the Partial Sentences on either side of the Sentence's center must maintain be mirror images of one another. 
+A Palindrome is a type of inversion. In a Palindrome, the requirement that individual Characters must maintain their symmetry across its String Length is extended up to the Sentence level through the requirement that, based on the parity of the Palindrome, the Partial Sentences on either side of the Sentence's center must be mirror images of one another. 
 
-Note that Definition 3.1.7 and Definition 3.1.8 are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial notation from being applied to Strings that have been stripped of their Empty Characters via the Emptying Algorithm for the construction of their Character-level representation (Definition 1.1.2). In other words, Definition 3.1.7 and Definition 3.1.8 operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has processed through the Emptying and Delimiting Algorithm.
+Note that Definition 3.1.7 and Definition 3.1.8 are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial Notation from being applied to Strings that have been stripped of their Empty Characters via the Emptying Algorithm for the construction of their Character-level representation (Definition 1.1.2). In other words, Definition 3.1.7 and Definition 3.1.8 operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has been processed through the Emptying and Delimiting Algorithm.
 
-The next two theorem leverages this insight and establishes the fundamental relationship between Left and Right Partial Sentences, and proves the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
+The next two theorems leverage this insight and establish the fundamental relationship between Left and Right Partial Sentences. In addition, they prove the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
 
-**Theorem 3.1.11** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+**Theorem 3.1.11** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
 
 This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is odd if and only if the String Length of the Left Partial Sentence of Length *i+1* is equal to the String Length of the Right Partial Sentence starting at index *i+1*.
 
@@ -2716,7 +2724,7 @@ Thus, l(ζ) is even. Since both directions of the implication hold, it can be co
 
     ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))) ∎
 
-**Theorem 3.1.13** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+**Theorem 3.1.13** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus, there exists a natural number *n* (between *1* and the length of *ζ*, inclusive) such that either the String Length of its Left Partial Sentence is equal to the String Length of its Right Partial Sentence, or the String Length of the Left Partial Sentence is one more than the String Length of the Right Partial Sentence.
 
@@ -2760,7 +2768,6 @@ In both cases, an *n* has been found that satisfies the condition in the theorem
 
     10. ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) + 1 = l(ζ[n:]) ) ∎
 
-
 Theorems 3.1.11 - 3.13 conjunctively establish the existence of a natural number that can reliably be called the center, or *Pivot*, of any Sentence in a Corpus. This leads to the following definition. 
 
 **Definition 3.1.9: Pivots** 
@@ -2778,7 +2785,7 @@ The following example shows the relationship between Partial Sentences and Pivot
 
 **Example**
 
-Consider these simple examples from a hypothetical Language **L** with Alphabet *Σ = { "a", "b", "c", "d" " ", "" }*,
+Consider these simple examples from a hypothetical Language **L** with Alphabet *Σ = { "a", "b", "c", " ", "" }*,
 
 |    ζ          | l(ζ) | ω(ζ) | ζ[:ω(ζ)]   | l(ζ[:ω(ζ)]) | ζ[ω(ζ):]    | l(ζ[ω(ζ):]) |
 | ------------- | ---- | ---- | ---------- | ----------- | ----------- | ----------- |
@@ -2798,23 +2805,23 @@ Consider these simple examples from a hypothetical Language **L** with Alphabet 
 | "a bca"       | 5    | 3    | "a b"      | 3           | "bca"       | 3           |
 | "a bbc  a"    | 8    | 4    | "a bb"     | 3           | "bc  a"     | 5           | ∎
 
-In the previous example, take note when the Sentence String Length is odd, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.1.13. Similarly, when the Sentence String Length is even, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.1.12. 
+In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.1.13. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.1.12. 
 
 With the notion of a Palindromic Pivot established, the class of Even and Odd Palindromes is now defined. 
 
 **Definition 3.1.10: Even Palindromes**
 
-The class of Even Palindromes, denoted P:sup:`+`, is defined as the set of Sentences ζ which satisfy the following open formula,
+The class of Even Palindromes, denoted **P**:sup:`+`, is defined as the set of Sentences ζ which satisfy the following open formula,
 
     ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] ∎
 
 **Definition 3.1.11: Odd Palindromes**
 
-The class of Even Palindromes, denoted P:sup:`-`, is defined as the set of Sentences ζ which satisfy the following open formula,
+The class of Even Palindromes, denoted **P**:sup:`-`, is defined as the set of Sentences ζ which satisfy the following open formula,
 
     ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ] ∎
 
-The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior can be described through the operations of String Inversiona and σ-Reduction, as the next theorems show. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence. In other words, when a Palindrome is Odd, the inverse of the σ-Reduction for a Right Partial Sentence offset by one Character from the Pivot is equal to the σ-Reduction of the Left Partial Sentence.
+The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior around the Pivot will be important for establishing the various cases of the theorems proved in the next section. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence, while the Left and Right Partial are of equal String Length when the String Length of the Sentence is even.
 
 **Theorem 3.1.14** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
 
@@ -2955,7 +2962,9 @@ Since *ζ* was arbitrary, this can generalize,
 
     5. ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) ∎
 
-**Theorem 3.1.18** P:sup:`+` ∩ P:sup:`-` = ∅
+These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in Theorems 3.1.29 - 3.1.20.
+
+**Theorem 3.1.19** P:sup:`+` ∩ P:sup:`-` = ∅
 
 This theorem can be stated in natural language as follows: A Palindrome cannot be both even and odd.
 
@@ -2980,84 +2989,140 @@ This leads to the contradiction,
 
     6. 0 = 1
 
-Therefore, the assumption that ζ is both an Even and Odd Palindrome must be false. Therefore, 
+Therefore, the assumption that ζ is both an Even and Odd Palindrome must be false. From this it follows,
 
     7. P:sup:`-` ∩ P:sup:`+` = ∅ ∎
 
+**Theorem 3.1.20** P:sup:`-` ∪ P:sup:`+` = P
 
-Theorem 3.1.13: P:sup:- ∪ P:sup:+ = P
+This theorem can be translated into natural language as follows: All Palindromes are either Even Palindromes or Odd Palindromes. 
 
-Proof:
+(⊆) Let *ζ* be an arbitrary Sentence of the Corpus such that, 
 
-(⊆) Direction:
+    1. ζ ∈ P:sup:`-` ∪ P:sup:`+`
 
-Let ζ be an arbitrary element of P:sup:- ∪ P:sup:+.
-By the definition of the union of sets, this means ζ ∈ P:sup:- or ζ ∈ P:sup:+.
-By Definition 3.1.9, if ζ ∈ P:sup:-, then ζ ∈ P.
-By Definition 3.1.8, if ζ ∈ P:sup:+, then ζ ∈ P.
-Therefore, in either case, ζ ∈ P.
-Since ζ was arbitrary, we have shown that ∀ ζ ∈ (P:sup:- ∪ P:sup:+) → ζ ∈ P.
-This implies P:sup:- ∪ P:sup:+ ⊆ P.
-(⊇) Direction:
+Which means either of this two cases must obtain, 
 
-Let ζ be an arbitrary element of P.
-By the definition of Palindromes (Definition 3.1.2), ζ is a sentence in C:sub:L.
-By the properties of natural numbers, l(ζ) is either even or odd.
-If l(ζ) is even, then by Definition 3.1.8, ζ ∈ P:sup:+.
-If l(ζ) is odd, then by Definition 3.1.9, ζ ∈ P:sup:-.
-Therefore, in either case, ζ ∈ P:sup:+ ∪ P:sup:-.
-Since ζ was arbitrary, we have shown that ∀ ζ ∈ P → ζ ∈ (P:sup:+ ∪ P:sup:-).
-This implies P ⊆ P:sup:- ∪ P:sup:+.
-Conclusion: Since we have shown that P:sup:- ∪ P:sup:+ ⊆ P and P ⊆ P:sup:- ∪ P:sup:+, we can conclude that:
+    2. ζ ∈ P:sup:`-`
+    3. ζ ∈ P:sup:`+`
 
-P:sup:- ∪ P:sup:+ = P ∎
-Translation: The union of the set of odd palindromes and the set of even palindromes is equal to the set of all palindromes.
+By Definition 3.1.10, if step 2 obtains, then 
+
+    4. ζ ∈ P
+
+By Definition 3.1.11, if step 3 obtains, then 
+
+    5. ζ ∈ P
+   
+Therefore, in either case, 
+
+    6. ζ ∈ P
+
+Since ζ was arbitrary, this can generalize as,
+
+    1. ∀ ζ ∈ (P:sup:`-` ∪ P:sup:`+`) → ζ ∈ P
+   
+This in turn implies,
+
+    8. P:sup:`-` ∪ P:sup:`+` ⊆ P
+
+(⊇) Let ζ be an arbitrary Sentence of the Corpus such that, 
+
+    1. ζ ∈ P 
+
+By the properties of natural numbers, it must be the case that one of the following obtains,
+
+    1. ∃ k ∈ ℕ : l(ζ) = 2k
+    2. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+   
+If step 1 obtains, then by Definition 3.1.10, 
+    
+    3. ζ ∈ P:sup:`+`
+
+If l(ζ) is odd, then by Definition 3.1.11, 
+
+    4. ζ ∈ P:sup:`-`
+
+Therefore, in either case, 
+
+    5. ζ ∈ P:sup:`+` ∪ P:sup:`-`
+   
+Since ζ was arbitrary, this generalizes as,
+
+    6. ∀ ζ ∈ P → ζ ∈ (P:sup:`+` ∪ P:sup:`-`)
+
+This implies,
+
+    7. P ⊆ P:sup:`-` ∪ P:sup:`+`
+   
+Step 8 from the (⊆) direction and taken with step 7 from the (⊇) together imply,
+
+    P:sup:`-` ∪ P:sup:`+` = P ∎
+
+With the partitioning of the class **P** of Sentences in a Corpus, i.e. Palindromes, the notion of *parity* can now be stated precisely in the following definition.
+
+**Definition 3.1.12: Parity** 
+
+A Palindrome ζ is said to have a *even parity* or *be even* if and only if,
+
+    P ∈ P:sup:`+` 
+    
+A Palindrome ζ is said to have an *odd parity* or *be odd* if and only if,
+
+    P ∈ P:sup:`-` ∎
+
+Section III.II: Structures
+---------------------------
+
+The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
+
+**Definition 3.2.1: Pivot Words** 
+
+For any Sentence in a Corpus, the Pivot Words, denoted α:sub:ζ:sup:-ω and α:sub:ζ:sup:+ω, are defined as follows.
+
+Let *ζ* be a Sentence in C:sub:`L`` with Word-level representation **W**:sub:`ζ`,
+
+    **W**:sub:`ζ` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
+
+TODO ∎
 
 
+**Theorem 3.2.1** ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)- i + 1] = σ 
 
-**Definition 3.1.1O: Parity** 
+This theorem can be stated in natural language as follows: For every Perfect Palindrome ζ in the Corpus, every Delimiter at index *i* must have a corresponding Delimiter at index *l(ζ) - i + 1*.
 
-A Palindrome P is said to have a *even parity* if and only if *P ∈ P*:sup:`+`. A Palindrome is said to have an *odd parity* if and only if *P ∈ *P:sup:`-`*.
+Let *ζ* be an arbitrary Sentence in the Corpus such that,
 
-(TODO: there is a probably a relationship between pivots in unreduced space versus pivots in reduced space that can be proved in a theorem. Observation: pivots that are empty in reduced space map to pivots that empty or delimters in unreduced space)
+    1. ζ ∈ PP 
+   
+From step 1 and Definition 3.1.4,
 
+    2. ζ = inv(ζ).
 
+From step 2 and the Definition 1.2.4, it is follows,
 
-**Theorem** ∀ ζ ∈ PP ∩ P:sub:`+`: ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n +1] = σ 
+    3. ζ[i] = ζ[l(ζ) - i + 1]
 
-Translation: For every perfect, even palindrome ζ in the corpus, there exists a natural number n between 1 and the length of ζ, inclusive, such that the character at position n is a delimiter (σ) if and only if the character at position l(ζ) - n + 1 is also a delimiter.
+Assume there exists an *i* (1 ≤ i ≤ l(ζ)) such that,
 
-Proof:
+    5. ζ[i] = σ
 
-Let ζ be an arbitrary perfect, even palindrome in PP ∩ P:sup:+.
+From step 3 and step 4, it immediately follows, 
 
-Definition of Perfect Palindrome: Since ζ ∈ PP, by Definition 3.1.3, ζ = inv(ζ).
+    6. ζ[l(ζ) - i + 1] = σ
 
-Definition of Even Palindrome: Since ζ ∈ P:sup:+, by Definition 3.1.8, l(ζ) = 2k for some natural number k.
+Conversely, if 
 
-Character-Level Representation: Let Z be the character-level representation of ζ:
+    7. ζ[l(ζ) - i + 1] = σ
 
-Z = (ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:2k)
-Inverse: Since ζ = inv(ζ), we have:
+Then by step 3, it immediately follows,
 
-(ⲁ:sub:1, ⲁ:sub:2, ..., ⲁ:sub:2k) = (ⲁ:sub:2k, ..., ⲁ:sub:2, ⲁ:sub:1)
-Delimiter Position: Assume there exists an n (1 ≤ n ≤ 2k) such that ζ[n] = σ. This means the character at position n in ζ is a delimiter.
+    8. ζ[i] = σ.
 
-Symmetry: Because of the perfect palindrome property (ζ = inv(ζ)), the character at position l(ζ) - n + 1 (which is 2k - n + 1) must be the same as the character at position n.
+This can be generalized as follows,
 
-Conclusion: Therefore, if ζ[n] = σ, then ζ[l(ζ) - n + 1] = σ. Conversely, if ζ[l(ζ) - n + 1] = σ, then ζ[n] = σ.
+    9. ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)-i+1] = σ ∎
 
-This establishes the bidirectional implication:
-
-ζ[n] = σ ↔ ζ[l(ζ) - n + 1] = σ
-Since ζ was an arbitrary perfect, even palindrome, we can generalize:
-
-*   ∀ ζ ∈ PP ∩ P:sup:`+`, ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ
-This completes the proof. ∎
-
-Explanation:
-
-The proof relies on the fact that in a perfect palindrome, the character at any position n must be the same as the character at the mirrored position l(ζ) - n + 1. Therefore, if a delimiter is present at position n, it must also be present at the mirrored position.
 
 
 **Theorem** ∀ ζ ∈ PP ∩ P:sup:`-` : ∃ n ∈ N:sub:`l(ζ)`: (ζ[n] = σ ↔ ζ[l(ζ)-n+1] = σ) ∨ (n = ω(ζ))
@@ -3112,55 +3177,6 @@ Implications:
 
 Simplified Theorem: The theorem is now simpler and more elegant without the unnecessary condition.
 Correct Characterization: It accurately characterizes the delimiter symmetry in odd-length perfect palindromes, regardless of whether the pivot character is a delimiter or not.
-
-
-
-Section III.II: Structures
----------------------------
-
-The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
-
-**Definition 3.2.2: Pivot Words** 
-
-For any Sentence in a Corpus, the Pivot Words, denoted α:sub:ζ:sup:-ω and α:sub:ζ:sup:+ω, are defined as follows.
-
-Let *ζ* be a Sentence in C:sub:`L`` with Word-level representation **W**:sub:`ζ`,
-
-    **W**:sub:`ζ` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
-
-Definition 3.1.12: Pivot Words
-
-Let ζ be a sentence in C:sub:L with length Λ(ζ) and pivot ω(ζ). The left pivot word, denoted α:sub:ζ:sup:-ω, and the right pivot word, denoted α:sub:ζ:sup:+ω, are defined as follows:
-
-Case 1: Λ(ζ) = 1
-
-α:sub:ζ:sup:-ω = α:sub:ζ:sup:+ω = the only word in ζ (which is also α:sub:ζ:sup:start and α:sub:ζ:sup:end)
-Case 2: Λ(ζ) > 1
-
-α:sub:ζ:sup:-ω = the word β such that (ω(ζ), β) ∈ W:sub:ζ
-α:sub:ζ:sup:+ω = the word β such that (ω(ζ) + 1, β) ∈ W:sub:ζ
-Explanation:
-
-Case 1 (Single-Word Sentences): If the sentence has only one word, then that word is both the left and right pivot word. This ensures consistency and handles the edge case gracefully.
-Case 2 (Multi-Word Sentences):
-The left pivot word is the word at position ω(ζ) in the word-level representation.
-The right pivot word is the word at position ω(ζ) + 1 in the word-level representation.
-Uniqueness: The pivot words are uniquely defined because the word-level representation W:sub:ζ is a function, and each position corresponds to a unique word.
-Notation: Using α:sub:ζ:sup:-ω and α:sub:ζ:sup:+ω explicitly indicates the dependence of the pivot words on the sentence ζ and their relationship to the pivot ω(ζ).
-Further Considerations:
-
-Odd vs. Even Length:
-In odd-length sentences, ω(ζ) will correspond to the index of the middle word, which will be α:sub:ζ:sup:-ω. The right pivot word, α:sub:ζ:sup:+ω, will be the word immediately to the right of the middle word.
-In even-length sentences, ω(ζ) will fall between two words. α:sub:ζ:sup:-ω will be the word immediately to the left of the "middle", and α:sub:ζ:sup:+ω will be the word immediately to the right of the "middle".
-
-Relationship to Partial Sentences: The pivot words are closely related to the partial sentences at the pivot. In a sense, α:sub:ζ:sup:-ω is the "last" word of the left partial sentence ζ[:ω(ζ)], and α:sub:ζ:sup:+ω is the "first" word of the right partial sentence ζ[ω(ζ) + 1:] (for even-length sentences) or ζ[ω(ζ):] (for odd-length sentences).
-Theorems: You'll likely want to prove theorems about the properties of pivot words, such as their relationship to the boundary words in palindromes and their behavior under inversion and σ-reduction.
-Example:
-
-ζ = "a b c" (odd length): Λ(ζ) = 3, ω(ζ) = 2, α:sub:ζ:sup:-ω = "b", α:sub:ζ:sup:+ω = "c"
-ζ = "a b c d" (even length): Λ(ζ) = 4, ω(ζ) = 2, α:sub:ζ:sup:-ω = "b", α:sub:ζ:sup:+ω = "c"
-ζ = "x"
-
 
 
 The Inverse Postulates
