@@ -2524,7 +2524,7 @@ Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
     Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
 
-Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Left Partial Sentence of String Length *n*, denoted *ζ[: n]*, is formally defined as the sequence of Characters which satisfies, 
+Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Left Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[: n]*, is formally defined as the sequence of Characters which satisfies, 
 
     Z[:n] = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`n`)  
 
@@ -2538,7 +2538,7 @@ Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
     Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
 
-Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Right Partial Sentence of String Length *n*, denoted *ζ[n:]*, is formally defined as the String which satisfies, 
+Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Right Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[n:]*, is formally defined as the String which satisfies, 
 
     ζ[n:] = (ⲁ:sub:`n`, ⲁ:sub:`n+1`, ..., ⲁ:sub:`l(ζ)`)
 
@@ -2549,8 +2549,6 @@ When n = 1, ζ[1:] is the entire sentence ζ.
 When n = l(ζ) + 1, ζ[n:] is defined as the empty string, ε. ∎
 
 **Example**
-
-NOTE: either the pivot is character ᚠ[pivot] or empty. 
 
 Consider the Sentence *ᚠ = "form is the possibility of structure"*. Note, *l(ᚠ) = 36* and *Λ(ᚠ) = 6*. Then, 
 
@@ -2643,9 +2641,7 @@ Then,
 
     7. l(ζ) = 2(i+1) - 1 = 2i + 1. 
 
-Therefore l(ζ) is odd. 
-
-Putting both direction of the proof together and generalizing over all Sentences in the Corpus,
+Therefore l(ζ) is odd. Putting both directions of the proof together and generalizing over all Sentences in the Corpus,
 
     8. ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i + 1) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:]))) ∎
 
@@ -2653,233 +2649,140 @@ Putting both direction of the proof together and generalizing over all Sentences
 
 This theorem can be stated in natural language as follows: For any Sentence in the corpus, the length of the Sentence is even if and only if there exists a natural number n such that the length of its Left Partial Sentence increase by one is equal to the length of its Right Partial sentence starting at the same index.
 
-(→) Direction (If l(ζ) is even, then such an n exists):
+(→) Let *ζ* be an arbitrary sentence in **C**:sub:`L` such that there exists a natural number *i* with the following condition,
+ 
+    1. l(ζ) = 2i.
 
-Let ζ be an arbitrary sentence in C:sub:L with even length.
+Then let,
 
-Even Length: Since l(ζ) is even, there exists a natural number i such that l(ζ) = 2i.
+    2. n = i. 
 
-Define n: Let n = i. Since i is a natural number, and l(ζ) = 2i, we know that 1 ≤ n ≤ l(ζ), so n ∈ N:sub:l(ζ).
+Since *i* is a natural number, it follows from step 2 that,
 
-Left Partial Sentence: The left partial sentence of length n is ζ[:n] = ζ[:i]. By the definition of left partial sentences, l(ζ[:i]) = i.
+    3. 1 ≤ n ≤ l(ζ)
 
-Right Partial Sentence: The right partial sentence starting at index n is ζ[n:] = ζ[i:]. By the definition of right partial sentences, l(ζ[i:]) = l(ζ) - i + 1 = 2i - i + 1 = i + 1.
+From which it follows, 
 
-Difference in Lengths: Therefore, l(ζ[:n]) + 1 = l(ζ[n:]) = i + 1.
+    4. n ∈ N:sub:`l(ζ)`
 
-Conclusion: We have found an n (specifically, n = i) such that l(ζ[:n]) + 1 = l(ζ[n:]). Therefore, ∃ n ∈ N:sub:l(ζ): (l(ζ[:n]) + 1 = l(ζ[n:])).
+The Left Partial Sentence of String Length *n* is then given by,
 
-(←) Direction (If such an n exists, then l(ζ) is even):
+    5. ζ[:n] = ζ[:i]
 
-Let ζ be an arbitrary sentence in C:sub:L. Assume there exists an n ∈ N:sub:l(ζ) such that l(ζ[:n]) + 1 = l(ζ[n:]).
+By Definition 3.1.7, 
 
-Definition of Partial Sentences: By the definitions of left and right partial sentences:
+    6. l(ζ[:i]) = i
 
-l(ζ[:n]) = n
-l(ζ[n:]) = l(ζ) - n + 1
-Assumption: We are given that l(ζ[:n]) + 1 = l(ζ[n:]).
+The Right Partial Sentence is given by,
 
-Substitution: Substituting from step 1, we get: n + 1 = l(ζ) - n + 1.
+    7. ζ[n:] = ζ[i:].
 
-Solving for l(ζ): Rearranging the equation, we get: l(ζ) = 2n.
+By Definition 3.1.8, 
 
-Even Length: Since n is a natural number, let i = n. Then l(ζ) = 2i. Thus, l(ζ) is even.
+    8. l(ζ[i:]) = l(ζ) - i + 1 = 2i - i + 1 = i + 1
 
-Conclusion: We have shown that if there exists an n such that l(ζ[:n]) + 1 = l(ζ[n:]), then l(ζ) is even.
+Therefore, 
 
-Final Proof (Combining Both Directions):
+    9. l(ζ[:n]) + 1 = l(ζ[n:]) = i + 1
 
-Since both directions of the implication hold, we can conclude:
+This shows found an *n* (specifically, *n = i*) exists such that 
 
-∀ ζ ∈ C:sub:L: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:l(ζ): (l(ζ[:n]) + 1 = l(ζ[n:])))
+    10. l(ζ[:n]) + 1 = l(ζ[n:])
 
-This completes the proof. ∎
+Therefore, 
 
+    11. ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))
 
-**Theorem 3.1.13** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
+(←) Let *ζ* be an arbitrary sentence in C:sub:L such that, 
 
+    1. ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))
 
+By Definition 3.1.7 and Definition 3.1.8,
 
+    2. l(ζ[:n]) = n
+    3. l(ζ[n:]) = l(ζ) - n + 1
+
+Combining step 1, step 2 and step 3, 
+
+    4. n + 1 = l(ζ) - n + 1
+
+Solving for l(ζ),
+
+    5. l(ζ) = 2n
+
+Thus, l(ζ) is even. Since both directions of the implication hold, it can be concluded,
+
+    ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))) ∎
 
 **Theorem 3.1.11** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
 
-This theorem can be stated in natural language as follows: For every sentence ζ in the corpus, there exists a natural number n (between 0 and the length of ζ, inclusive) such that either the length of the left partial sentence of length n is equal to the length of the right partial sentence of length n, OR the length of the left partial sentence of length n is one greater than the length of the right partial sentence of length n.
+This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus, there exists a natural number *n* (between *1* and the length of *ζ*, inclusive) such that either the String Length of its Left Partial Sentence is equal to the String Length of its Right Partial Sentence, or the String Length of the Left Partial Sentence is one less than the String Length of the Right Partial Sentence.
 
-Proof:
+Let ζ be an arbitrary sentence in C:sub:`L`. Let,
 
-Let ζ be an arbitrary sentence in C:sub:L. Let l(ζ) = L (for simplicity).
+    1. l(ζ) = k
 
-Case 1: L is even:
+If k is even, let 
 
-If L is even, let n = L/2.
-Then l(ζ[:n]) = n = L/2.
-And l(ζ[n:]) = L - n = L - L/2 = L/2.
-Therefore, l(ζ[:n]) = l(ζ[n:]).
-Case 2: L is odd:
+    2. n = k/2
 
-If L is odd, let n = (L + 1)/2.
-Then l(ζ[:n]) = n = (L + 1)/2.
-And l(ζ[n:]) = L - n = L - (L + 1)/2 = (L - 1)/2.
-Therefore, l(ζ[:n]) = l(ζ[n:]) + 1.
-Conclusion: In both cases, we have found an n that satisfies the condition in the theorem. Since ζ was an arbitrary sentence, we can generalize:
+Then 
 
-∀ ζ ∈ C:sub:L: ∃ n ∈ {0, 1, ..., l(ζ)}: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) = l(ζ[n:]) + 1 )
-This completes the proof. ∎
+    3. l(ζ[:n]) = n = k/2
+
+And 
+
+    4. l(ζ[n:]) = k - n = k - k/2 = k/2
+
+Therefore, 
+
+    5. l(ζ[:n]) = l(ζ[n:])
+
+If k is odd, let 
+
+    6. n = (k + 1)/2.
+
+Then 
+
+    7. l(ζ[:n]) = n = (k + 1)/2
+
+And 
+
+    8. l(ζ[n:]) = k - n = k - (k + 1)/2 = (k - 1)/2
+
+Therefore, 
+
+    9. l(ζ[:n]) = l(ζ[n:]) + 1.
+
+In both cases, an *n* has been found that satisfies the condition in the theorem. Since *ζ* was an arbitrary Sentence, this can generalize over the Corpus,
+
+    10. ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) = l(ζ[n:]) + 1 ) ∎
 
 
-The previous Theorem establishes the existence of a natural number that can reliably be called the *Pivot* for any Sentence in a Corpus. This leads to the following definition. 
+Theorems 3.1.11 - 3.13 conjunctively establish the existence of a natural number that can reliably be called the *Pivot* for any Sentence in a Corpus. This leads to the following definition. 
 
-**Definition 3.1.7: Pivots** 
+**Definition 3.1.9: Pivots** 
 
 The Pivot of a Sentence *ζ*, denoted *ω(ζ)*, is defined as the natural number such that the following formula is true,
 
    ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1) ∎
 
+The following example shows the relationship between Partial Sentences and Pivots.
 
 **Example**
 
-Consider these simple examples from a hypothetical Language **L**.
+Consider these simple examples from a hypothetical Language **L** with Alphabet *Σ = { "a", "b", "c", " ", "" }*,
 
-1. ζ = "abcba": l(ζ) = 5, ω(ζ) = 3, ζ[:3] = "abc", ζ[3:] = "cba" (odd length, left side is one longer).
+  1. ζ = "abcba": l(ζ) = 5, ω(ζ) = 3, ζ[:3] = "abc", l(ζ[:3]) = 3, ζ[3:] = "cba", l(ζ[3:]) = 3
+  2. ζ = "abbcbba": l(ζ) = 7, ω(ζ) = 4, ζ[:4] = "abbc", l(ζ[:4]) = 4, ζ[4:] = "cbba", l(ζ[:4]) = 4,
+  3. ζ = "abbbcbbba": l(ζ) = 9, ω(ζ) = 5, ζ[:5] = "abbbc", l(ζ[:5]) = 5, ζ[5:] = "cbbba", l(ζ[:5]) = 5,
+  4. ζ = "abccba": l(ζ) = 6, ω(ζ) = 3, ζ[:3] = "abc", l(ζ[:3]) = 3, ζ[3:] = "ccba", l(ζ[:3]) = 4
+  5. ζ = "abbccbba": l(ζ) = 8, ω(ζ) = 4, ζ[:4] = "abbc", l(ζ[:4]) = 4, ζ[4:] = "ccbba", l(ζ[:4]) = 5,
+  6. ζ = "abbbccbbba": l(ζ) = 10, ω(ζ) = 5, ζ[:5] = "abbbc", l(ζ[:5]) = 5, ζ[5:] = "ccbbba", l(ζ[:5]) = 6 ∎
 
-2. ζ = "abccba": l(ζ) = 6, ω(ζ) = 3, ζ[:3] = "abc", ζ[3:] = "cba" (even length, both sides are equal).
+In the previous example, take note when the Sentence String Length is odd, the Right Partial Sentence accumulates an extra Character in comparison to the Left Partial Sentence, in accordance with Theorem 3.1.13. Similarly, when the Sentence String Length is even, the Left Partial Sentence String Length is equal to the Right Partial String Length, in accordance with Theorem 3.1.12. 
 
-3. ζ = "a b c b a": l(ζ) = 9, ω(ζ) = 5, ζ[:5] = "a b c", ζ[5:] = "c b a" (odd length, left side is one longer).
-
-4. ζ = "a b a": l(ζ) = 7, ω(ζ) = 4, ζ[:4] = "a b", ζ[4:] = "b a" (odd length, left side is one longer). Note that ω(ζ) = 3 would give us 3 on the left and 2 on the right, and ω(ζ) = 5 would give us 4 on the left and 1 on the right.
-
-
-**Theoreom 3.1.12** ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] )) ↔ (∃ i ∈ ℕ : l(ζ) = 2i + 1)
-
-Translation: For any sentence ζ in the corpus, the length of the left partial sentence at the pivot is equal to the length of the right partial sentence at the pivot if and only if the length of ζ is odd (i.e., can be expressed as 2i + 1 for some natural number i).
-
-Corrected Proof:
-
-Let ζ be an arbitrary sentence in C:sub:L, and let ω(ζ) be its pivot. Let L = l(ζ) for simplicity.
-
-(→) Direction:
-
-Assume l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] ).
-
-Definition of Partial Sentences: By the definitions of left and right partial sentences (3.1.6 and 3.1.7), we know:
-
-l(ζ[:ω(ζ)]) = ω(ζ)
-l(ζ[ω(ζ):]) = L - ω(ζ)
-Substitution: Substituting these into our assumption, we get:
-
-ω(ζ) = L - ω(ζ)
-Solving for L: Rearranging the equation, we get:
-
-2ω(ζ) = L
-Odd Length: Since ω(ζ) is a natural number, and the pivot is the smallest natural number satisfying the condition, let i = ω(ζ) - 1. Then L = 2ω(ζ) = 2(i + 1) = 2i + 2. Thus, L is even.
-
-Definition of Pivot: By Definition 3.1.7, the pivot ω(ζ) is the smallest natural number such that:
-
-( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1 )
-Case 1: l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1
-
-If l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1 then:
-ω(ζ) = L - ω(ζ) + 1
-2ω(ζ) = L + 1
-L = 2ω(ζ) -1
-This would mean L is odd, contradicting our assumption. Therefore, this case is false.
-Case 2: l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
-
-Since Case 1 is false, and by the definition of the pivot one of the cases must be true, we know:
-l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
-ω(ζ) = L - ω(ζ)
-2ω(ζ) = L
-Conclusion:
-
-Since L is even (from step 4) and Case 2 is true, we know there exists an i such that:
-l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
-(←) Direction:
-
-Assume ∃ i ∈ ℕ : l(ζ) = 2i + 1. This means the length of ζ is odd.
-
-Definition of Pivot: By Definition 3.1.7, the pivot ω(ζ) is the smallest natural number such that:
-
-( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1 )
-Case 1: l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1
-
-If l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1 then:
-ω(ζ) = L - ω(ζ) + 1
-2ω(ζ) = L + 1
-L = 2ω(ζ) - 1
-Since ω(ζ) is a natural number, let i = ω(ζ) - 1. Then L = 2(i + 1) - 1 = 2i + 2 - 1 = 2i + 1.
-Case 2: l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
-
-If l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) then:
-ω(ζ) = L - ω(ζ)
-2ω(ζ) = L
-L = 2ω(ζ)
-This would mean L is even, contradicting our assumption. Therefore, this case is false.
-Conclusion:
-
-Since L is odd (by assumption) and Case 1 is true, we know there exists an i such that:
-l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
-Therefore, we have shown that for any sentence ζ ∈ C:sub:L, l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] ) if and only if l(ζ) is odd. ∎
-
-
-**Theoreom 3.1.13** ∀ ζ ∈ C:sub:`L`: (l( ζ[:ω(ζ)] ) = l(ζ[ω(ζ):]) + 1) ↔ (∃ i ∈ ℕ : l(ζ) = 2i)
-
-
-Corrected Theorem 3.1.9:
-
-∀ ζ ∈ C:sub:L: (l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] ) + 1) ↔ (∃ i ∈ ℕ : l(ζ) = 2i)
-
-Translation: For any sentence ζ in the corpus, the length of the left partial sentence at the pivot is one greater than the length of the right partial sentence at the pivot if and only if the length of ζ is even (i.e., can be expressed as 2i for some natural number i).
-
-Corrected Proof:
-
-Let ζ be an arbitrary sentence in C:sub:L, and let ω(ζ) be its pivot. Let L = l(ζ) for simplicity.
-
-(→) Direction:
-
-Assume l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] ) + 1.
-
-Definition of Partial Sentences: By the definitions of left and right partial sentences (3.1.6 and 3.1.7), we know:
-
-l(ζ[:ω(ζ)]) = ω(ζ)
-l(ζ[ω(ζ):]) = L - ω(ζ)
-Substitution: Substituting these into our assumption, we get:
-
-ω(ζ) = L - ω(ζ) + 1
-Solving for L: Rearranging the equation, we get:
-
-2ω(ζ) = L + 1
-L = 2ω(ζ) - 1
-Even Length: Since ω(ζ) is a natural number, let i = ω(ζ). Then L = 2i - 1. Thus, L is odd.
-
-(←) Direction:
-
-Assume ∃ i ∈ ℕ : l(ζ) = 2i. This means the length of ζ is even.
-
-Definition of Pivot: By Definition 3.1.7, the pivot ω(ζ) is the smallest natural number such that:
-
-( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ ( l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1 )
-Case 1: l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
-
-If l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) then:
-ω(ζ) = L - ω(ζ)
-2ω(ζ) = L
-L = 2ω(ζ)
-Since ω(ζ) is a natural number, let i = ω(ζ). Then L = 2i.
-Case 2: l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1
-
-If l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1 then:
-ω(ζ) = L - ω(ζ) + 1
-2ω(ζ) = L + 1
-L = 2ω(ζ) - 1
-This would mean L is odd, contradicting our assumption. Therefore, this case is false.
-Conclusion:
-
-Since L is even (by assumption) and Case 1 is true, we know there exists an i such that:
-l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1
-Therefore, we have shown that for any sentence ζ ∈ C:sub:L, l( ζ[:ω(ζ)] ) = l( ζ[ω(ζ):] ) + 1 if and only if l(ζ) is even. ∎
-
-
-
+With the notion of a Palindromic Pivot established, the class of Even and Odd Palindromes is now defined. 
 
 **Definition 3.1.10: Even Palindromes**
 
@@ -2893,59 +2796,57 @@ The class of Even Palindromes, denoted P:sup:`-`, is defined as the set of Sente
 
     ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ] ∎
 
+The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior can be described through the operations of String Inversiona and σ-Reduction, as the next theorems show. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence. In other words, when a Palindrome is Odd, the inverse of the σ-Reduction for a Right Partial Sentence offset by one Character from the Pivot is equal to the σ-Reduction of the Left Partial Sentence.
 
 
-**Theorem 3.1.14** ∀ ζ ∈ P:sup:`-`: ( inv(Ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(Ζ[:ω(ζ)]⋅ Σ:sub:`σ`) )
 
 
-Revised Theorem Statement:
 
-Theorem 3.1.10: ∀ ζ ∈ P: (l(ζ) is odd) → ( inv(σ_reduce(ζ[ω(ζ):])) = σ_reduce(ζ[:ω(ζ)]) )
+TODO!!!!!
 
-Translation: For every palindrome ζ in the corpus, if the length of ζ is odd, then the inverse of the σ-reduction of the right partial sentence at the pivot is equal to the σ-reduction of the left partial sentence at the pivot.
+**Theorem 3.1.14** ∀ ζ ∈ P:sup:`-`: ς(ζ[:ω(ζ)]) = inv(ς(ζ[ω(ζ)+1:])) 
 
-Proof:
+This theorem can be stated in natural language as follows: Translation: For every odd-length palindrome ζ in the corpus, the σ-reduction of the left partial sentence up to, but not including, the pivot character is equal to the inverse of the σ-reduction of the right partial sentence starting at the pivot.
 
-Let ζ be an arbitrary palindrome in P such that l(ζ) is odd.
+Corrected Proof:
 
-Definition of Palindrome: Since ζ is a palindrome, by Definition 3.1.2, we have:
+Let ζ be an arbitrary odd-length palindrome in P:sup:-.
 
-σ_reduce(ζ) = inv(σ_reduce(ζ))
-Odd Length: Since l(ζ) is odd, by Theorem 3.1.8, we know that:
+Definition of Odd-Length Palindrome: Since ζ ∈ P:sup:-, by Definition 3.1.9, l(ζ) is odd, and by Definition 3.1.2, σ_reduce(ζ) = inv(σ_reduce(ζ)).
 
-l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):])
+Definition of Pivot: Since l(ζ) is odd, by the definition of the pivot (Revised Definition 3.1.7), ω(ζ) = (l(ζ) + 1)/2.
+
+Theorem 3.1.8: Since l(ζ) is odd, by Theorem 3.1.8, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]).
+
 Let:
 
-s = σ_reduce(ζ[:ω(ζ)]) (the σ-reduction of the left partial sentence)
-t = σ_reduce(ζ[ω(ζ):]) (the σ-reduction of the right partial sentence)
-σ-reduction of ζ: Using the property of σ-reduction that it distributes over concatenation (proven earlier), we can write:
+s = σ_reduce(ζ[:ω(ζ)-1]) (the σ-reduction of the left partial sentence, excluding the character at the pivot)
+t = σ_reduce(ζ[ω(ζ):]) (the σ-reduction of the right partial sentence, starting at the pivot)
+σ-reduction of ζ: Using the property of σ-reduction that it distributes over concatenation, we can write:
 
-σ_reduce(ζ) = σ_reduce(ζ[:ω(ζ)])σ_reduce(ζ[ω(ζ):]) = st
-Inverse of σ-reduction: Since σ_reduce(ζ) = inv(σ_reduce(ζ)) (from step 1), we have:
+σ_reduce(ζ) = σ_reduce(ζ[:ω(ζ)-1]) ζ[ω(ζ)] σ_reduce(ζ[ω(ζ):])
+Since ζ[ω(ζ)] is a single character, and by the definition of an odd-length palindrome it must be a delimiter, then ζ[ω(ζ)] = σ and σ_reduce(ζ) = st
+Palindrome Property: Since ζ is a palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). Therefore:
 
 st = inv(st)
-Theorem 1.2.5: Applying Theorem 1.2.5, we get:
+Corollary 3.1.2: Applying Corollary 3.1.2, we get:
 
 inv(st) = inv(t)inv(s)
-Substitution: Substituting into step 5, we get:
+Substitution: Substituting into step 6, we get:
 
 st = inv(t)inv(s)
-Equality of Lengths: From step 2, we know that l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). Since σ-reduction only removes delimiters and doesn't change the order of non-delimiter characters, it follows that l(s) = l(t).
+Equality of Lengths: From step 3, we know that l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). Since σ-reduction only removes delimiters and doesn't change the order of non-delimiter characters, and there are an even number of non-delimiter characters, it follows that l(s) = l(t) + 1.
 
-Implication of Equality and Length: If st = inv(t)inv(s) and l(s) = l(t), it must be the case that s = inv(t) and t = inv(s). (This is because the characters must align perfectly in reverse order).
+Implication of Equality and Length: From st = inv(t)inv(s) and l(s) = l(t) + 1, it must be the case that s = inv(t) and t = inv(s).
 
 Conclusion: Therefore, we have shown that:
 
 s = inv(t)
-σ_reduce(ζ[:ω(ζ)]) = inv(σ_reduce(ζ[ω(ζ):]))
-Taking the inverse of both sides of s = inv(t)
-
-inv(σ_reduce(ζ[:ω(ζ)])) = σ_reduce(ζ[ω(ζ):])
+σ_reduce(ζ[:ω(ζ)-1]) = inv(σ_reduce(ζ[ω(ζ):]))
 Since ζ was an arbitrary odd-length palindrome, we can generalize:
 
-*   ∀ ζ ∈ P: (l(ζ) is odd) → ( inv(σ_reduce(ζ[ω(ζ):])) = σ_reduce(ζ[:ω(ζ)]) )
+∀ ζ ∈ P:sup:-: σ_reduce(ζ[:ω(ζ)-1]) = inv(σ_reduce(ζ[ω(ζ):]))
 This completes the proof. ∎
-
 
 
 **Theorem 3.1.15** ∀ ζ ∈ P:sup:`+`: ( inv(Ζ[ω(ζ):] ⋅ Σ:sub:`σ` ) = inv(Ζ[:ω(ζ)+1]⋅ Σ:sub:`σ`) )
