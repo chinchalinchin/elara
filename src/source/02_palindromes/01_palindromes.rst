@@ -2822,29 +2822,21 @@ The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes
 
     1. ∃ k ∈ ℕ : l(ζ) = 2k + 1
 
-From Theorem 3.1.11, it follows,
-
-    2. ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:]))
-
-By Theorem 3.1.13, 
-
-    3. ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) = l(ζ[n:]) + 1)
-
 From Theorem 3.1.11 and step 1, it follows 
 
-    4. n = i + 1 
+    2. n = i + 1 
     
 Where *n* satisfies,
 
-    5. l(ζ[:n]) = l(ζ[n:]).
+    3. l(ζ[:n]) = l(ζ[n:]).
 
 Therefore, 
 
-    6. n = i + 1 = (2i + 1 + 1)/2 = (l(ζ) + 1)/2.
+    4. n = i + 1 = (2i + 1 + 1)/2 = (l(ζ) + 1)/2.
 
 By Definition 3.1.9, the pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *n* satisfies the condition and is the only solution, it must be the smallest. Therefore, 
 
-    7. ω(ζ) = (l(ζ) + 1)/2.
+    5. ω(ζ) = (l(ζ) + 1)/2.
 
 ( ← ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
@@ -2888,53 +2880,109 @@ From Theorem 3.1.14, it follows,
 
 ( → ) Let ζ be an arbitrary in **C**:sub:`L` such that,
 
+    1. ∃ i ∈ ℕ : l(ζ) = 2i
+
+By Theorem 3.1.12, 
+
+    2. l(ζ[:i]) + 1 = l(ζ[i:])
+
+From Definition 3.1.7 and Definition 3.1.8, this is equivalent to,
+
+
+    3. i + 1 = l(ζ) - i + 1
+
+Therefore, 
+
+    4. i = l(ζ)/2.
+
+By Definition 3.1.9, the Pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *i* satisfies the condition and is the only solution when *l(ζ)* is even, it must be the smallest. Therefore, 
+
+    5. ω(ζ) = l(ζ)/2.
+
+( ← ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
+
+    1. ω(ζ) = l(ζ)/2 
+
+Since by Definition 3.1.9, a Pivot is a natural number, let *i* be a natural number such that,
+
+    i = ω(ζ)
+
+It follows immediately,
+
+    l(ζ) = 2i
+
+Therefore *ζ* is even,
+
     ∃ i ∈ ℕ : l(ζ) = 2i
 
-By Theorem, 
+Since both directions of the equivalence have been shown, it follows,
 
-    l(ζ[:i]) + 1 = l(ζ[i:])
-
-From the proof of Theorem 3.1.7 (Case 2, k is even), we know that if l(ζ) = 2i, then n = i satisfies l(ζ[:n]) + 1 = l(ζ[n:]).
-Therefore, n = i = l(ζ)/2.
-Uniqueness of Pivot: By Definition 3.1.7, the pivot ω(ζ) is the smallest natural number satisfying the condition. Since n = l(ζ)/2 satisfies the condition and is the only solution when l(ζ) is even, it must be the smallest.
-
-Conclusion: Therefore, ω(ζ) = l(ζ)/2.
-
-Since ζ was an arbitrary even-length palindrome, we can generalize:
-
-∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
-This completes the proof. ∎
+    ∀ ζ ∈ C:sub:`L`: ω(ζ) = l(ζ)/2 ∎
 
 **Theorem 3.1.17** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 
-**Theorem 3.1.16** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1= l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
-
 Assume 
 
-    ζ ∈ C:sub:`L`
+    1. ζ ∈ P:sup:`+`
 
+From Definition 3.1.10, it follows, 
 
+    2. ∃ k ∈ ℕ : l(ζ) = 2k
 
+From Theorem 3.1.16, it follows, 
 
-Theorem 3.1.12: P:sup:- ∩ P:sup:+ = ∅
+    3. ω(ζ) = l(ζ)/2 ∎
 
-Proof:
+**Theorem 3.1.18** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
 
-Assume for contradiction: Assume there exists a sentence ζ such that ζ ∈ P:sup:- ∩ P:sup:+.
+Assume *ζ* is an arbtirary Sentence from the Corpus,
 
-Definition of Intersection: This means ζ ∈ P:sup:- and ζ ∈ P:sup:+.
+    1. ζ ∈ C:sub:`L`
 
-Definition of P:sup:- and P:sup:+: By Definition 3.1.9, if ζ ∈ P:sup:-, then l(ζ) is odd. By Definition 3.1.8, if ζ ∈ P:sup:+, then l(ζ) is even.
+Let *ω(ζ)* be the Pivot of ζ. From Definition 3.1.7 of Left Partial Sentence,
 
-Contradiction: It is impossible for a number to be both even and odd. Therefore, our assumption that such a ζ exists must be false.
+    2. l(ζ[:ω(ζ)]) = ω(ζ)
 
-Conclusion: Therefore, P:sup:- ∩ P:sup:+ = ∅. ∎
+From Definition 3.1.8 of Right Partial Sentence, 
 
-Translation: The intersection of the set of odd palindromes and the set of even palindromes is the empty set. They are disjoint.
+    3. l(ζ[ω(ζ):]) =  l(ζ) - ω(ζ) + 1
 
+Therefore, 
 
+    4. l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) = l(ζ) + 1 
+    
+Since *ζ* was arbitrary, this can generalize,
 
+    5. ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) ∎
 
+**Theorem 3.1.18** P:sup:`+` ∩ P:sup:`-` = ∅
+
+This theorem can be stated in natural language as follows: A Palindrome cannot be both even and odd.
+
+For the sake of contradiction, assume there exists a sentence *ζ* such that 
+
+    1. ζ ∈ P:sup:`+` ∩ P:sup:`-`
+
+This means each of the indivudal expressions is true,
+
+    2. ζ ∈ P:sup:`+``
+    3. ζ ∈ P:sup:`-`
+
+By Definition 3.1.10, it follows from step 2,
+
+    4. ∃ k ∈ ℕ : l(ζ) = 2k
+
+By Definition 3.1.11, it follows from step 3,
+
+    5. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+
+This leads to the contradiction, 
+
+    6. 0 = 1
+
+Therefore, the assumption that ζ is both an Even and Odd Palindrome must be false. Therefore, 
+
+    7. P:sup:`-` ∩ P:sup:`+` = ∅ ∎
 
 
 Theorem 3.1.13: P:sup:- ∪ P:sup:+ = P
@@ -2965,15 +3013,6 @@ Conclusion: Since we have shown that P:sup:- ∪ P:sup:+ ⊆ P and P ⊆ P:sup:-
 P:sup:- ∪ P:sup:+ = P ∎
 Translation: The union of the set of odd palindromes and the set of even palindromes is equal to the set of all palindromes.
 
-Explanation:
-
-Theorem 3.1.12 proves that no palindrome can be both even and odd, establishing that the sets of even and odd palindromes are disjoint.
-Theorem 3.1.13 proves that every palindrome must be either even or odd, establishing that the union of these two sets covers all palindromes.
-Together, these theorems demonstrate that P:sup:- and P:sup:+ form a partition of P, meaning they are non-overlapping and exhaustive subsets of the set of palindromes.
-
-Further Considerations:
-
-You could combine these two theorems into a single theorem stating that P:sup:- and P:sup:+ form a partition of P, and then prove the two parts (disjointness and covering) as separate lemmas or parts of the proof.
 
 
 **Definition 3.1.1O: Parity** 
