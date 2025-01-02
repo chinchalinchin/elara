@@ -1699,6 +1699,16 @@ Since *ζ* and *ξ* were arbitrary sentences, this can be generalized,
 
 Word Length is fundamentally different to String Length with respect to the operation of concatenation. In Theorem 1.1.1, it was shown String Length sums over concatenation. Theorem 2.1.2 demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.
 
+Intervention
+^^^^^^^^^^^^
+
+**Definition 2.1.6: Intervention**
+
+Let ζ be a Sentence from Corpus C:sub:`L`. Let *k* be a Character index such that *1 ≤ k ≤ l(ζ)* (i.e. *ⲁ*:sub:`k` is a Character in *ζ*). The Character *ζ[k]* is said to *intervene* *ζ{i}* and *ζ{j}* in *ζ*, denoted as *ζ{i}<ⲁ*:sub:`k`*>ζ{j}*, if the following conditions hold:
+
+    ζ{i}<ⲁ:sub:`k`>ζ{j} ↔ ∃ i, j ∈ N:sub:`Λ(ζ)`: (i < j) ∧ (∀ p ∈ N:sub:`l(α)`: k > p +  Σ:sub:`x=1`:sup:`i-1` l(ζ{x}) + (i-1)) ∧ (∀ q ∈ N:sub:`l(β)`: k < q + Σ:sub:`x=1`:sup:`j-1` l(ζ{x}) + j)
+
+
 Section II.II: Axioms 
 ----------------------
 
@@ -2854,7 +2864,7 @@ Since n and p were arbitrary, this can be generalized,
 Section III.II: Palindromes 
 ---------------------------
 
-The current analysis now turns towards its apex, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motivate the next definition, consider how the operation of *σ*-reduction "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
+The current analysis now turns towards its culmination, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motivate the next definition, consider how the operation of *σ*-reduction "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
 
 Consider a Perfect Palindrome like *ᚠ = "strap on no parts"*,
 
@@ -2901,9 +2911,9 @@ Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the 
 
 Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy Definition 3.2.2 also satisfy 3.1.3. Before moving onto this verification, the motivation for Definition 3.2.2 will briefly be explained.
 
-Definition 3.2.2 implicitly captures the Character-level symmetry that's characteristic of Perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward. It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of words within the sentence, by Theorems 2.3.9 - 2.3.11. A Perfect Palindrome is a confluence of symmetries, a *"singularity"* of reflected inversion at every level of the linguistic hierarchy.
+Definition 3.2.2 implicitly captures the Character-level symmetry that's characteristic of Perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward. It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of Words within the Sentence, by Theorems 2.3.9 - 2.3.11. A Perfect Palindrome is a confluence of symmetries, a *"singularity"* of reflected inversion at every level of the linguistic hierarchy.
 
-The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.2.1, and thus Perfect Palindromes are a subset of the class Palindromes in any Language and its Corpus.
+The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.2.1, and thus Perfect Palindromes are a subset of the class of Palindromes in any Language and its Corpus.
 
 **Theorem 3.2.1** PP ⊂ K
 
@@ -2941,7 +2951,9 @@ The connection between Invertible Sentences and Palindromes is thus established 
 
 **Theorem 3.2.2** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
-Let ζ be an arbitrary Sentence in the Corpus such that
+This theorem can be stated in natural language as follows: If a Sentence is a Perfect Palindrome, then the *i*:sup:`th` Word of its Inverse is the Inverse of the Sentence's *Λ(ζ) - i + 1*:sup:`th` Word. 
+
+Let ζ be an arbitrary Sentence in the Corpus such that it is a Perfect Palindrome,
 
     1. ζ ∈ PP
 
@@ -2955,7 +2967,7 @@ By Theorem 2.3.9,
 
 **Theorem 3.2.3** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 
-In natural language, this theorem can be states as Follows: If a Sentence is a Perfect Palindrome, then all of its Words are Invertible. 
+This theorem can be stated in natural language as follows: If a Sentence is a Perfect Palindrome, then all of its Words are Invertible. 
 
 Recall the definition of a subset,
 
@@ -3655,25 +3667,26 @@ Section III.III: Structures
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
 
-TODO
+**Theorem 3.3.1: The Inverse Postulate** [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
 
-**Theorem 3.3.1** ∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
-
-Assume 
+Assume *ζ* is an arbitrary Sentence in the Corpus **C**:sub:`L` such that it is a Palindrome,
 
     1. ζ ∈ P
     
 By Definition 3.2.1,
 
     2. ς(ζ) = inv(ς(ζ))
+
+By Definition 1.1.4,
+
     3. l(ς(ζ)) = l(inv(ς(ζ)))
 
-Let 
+Let,
     
     4. α = ζ{1}
     5. β = ζ{Λ(ζ)} 
 
-By Discovery Axiom W.1, Words do not contain Delimiters, so *σ*-Reduction of ζ, *ς(ζ)* can be represented as a concatenation of the σ-reduced words of ζ:
+By Discovery Axiom W.1, Words do not contain Delimiters, so the *σ*-Reduction of *ζ*, *ς(ζ)*, can be represented as a concatenation of the *σ*-reduced words of *ζ*, with Theorem 3.1.8 and Definition 1.2.8 of Limitations,
 
     6. ς(ζ) = (ς(α)) (ς(ζ{2})) ... (ς(ζ{Λ(ζ)-1})) (ς(β))
 
@@ -3690,7 +3703,7 @@ By the Definition of *σ*-reduction, and because *α* and *β* are Words, it fol
     9. ς(α) = α
     10. ς(β) = β
 
-Substituting into step 6,
+Substituting step 9 and step 10 into step 6,
 
     11. ς(ζ) = (α) (ς(ζ{2})) ... (ς(ζ{Λ(ζ)-1})) (β)
 
@@ -3698,33 +3711,33 @@ Substituting step 9 and step 10 into step 8,
 
     12. inv(ς(ζ)) = (inv(β)) (inv(ς(ζ{Λ(ζ)-1}))) ... (inv(ς(ζ{2}))) (inv(α))
    
-By step 2, step 11 and step 12 are equal. Now, it is either the case, by the trichotomy principle,
+By step 2, step 11 and step 12 are equal (by definition of Palindromes). Now, since String Length is a natural number, it is either the case, by the trichotomy principle,
 
     13. l(α) = l(β)
     14. l(α) > l(β)
     15. l(α) < l(β)
 
-If l(α) = l(β), then 
+If l(α) = l(β), then because inversion preserves String Length,
 
     16. l(α) = l(inv(β))
 
-And by Definition of Containment, since *α* and *inv(β)* are the first Words that appear in step 10 and step 11, it follows, 
+And by Definition 1.1.7 of Containment, since *α* and *inv(β)* are the first Words that appear in step 11 and step 12, it follows, 
 
-    17.  (α ⊂:sub:`s` inv(β)) ∧ (inv(β) ⊂:sub:`s` α)
+    17. (α ⊂:sub:`s` inv(β)) ∧ (inv(β) ⊂:sub:`s` α)
 
-And by Definition of Containment, since *inv(α)* and *β* are the last Words that appear in step 10 and step 11, it follows, 
+And by Definition 1.1.7 of Containment, since *inv(α)* and *β* are the last Words that appear in step 11 and step 12, it follows, 
 
-    18. (inv(α) ⊂:sub:`s` β) ∧  (β ⊂:sub:`s` inv(α))
+    18. (inv(α) ⊂:sub:`s` β) ∧ (β ⊂:sub:`s` inv(α))
    
 If l(α) > l(β), then 
 
     19.  l(inv(α)) = l(α) > l(inv(β)) = l(β)
 
-And by Definition of Containment, since *α* and *inv(β)* are the first Words that appear in step 10 and step 11, it follows, 
+And by Definition 1.1.7 of Containment, since *α* and *inv(β)* are the first Words that appear in step 11 and step 12, it follows, 
 
     20.   inv(β) ⊂:sub:`s` α
 
-And by Definition of Containment, since *inv(α)* and *β* are the last Words that appear in step 10 and step 11, it follows,
+And by Definition 1.1.7 of Containment, since *inv(α)* and *β* are the last Words that appear in step 11 and step 12, it follows,
 
     21.  β ⊂:sub:`s` inv(α) 
 
@@ -3732,69 +3745,126 @@ If l(α) < l(β), then
 
     22.  l(inv(α)) = l(α) < l(inv(β)) = l(β)
 
-And by Definition of Containment, since *α* and *inv(β)* are the first Words that appear in step 10 and step 11, it follows, 
+And by Definition 1.1.7 of Containment, since *α* and *inv(β)* are the first Words that appear in step 11 and step 12, it follows, 
 
     23.  α ⊂:sub:`s` inv(β)
 
-And by Definition of Containment, since *inv(α)* and *β* are the last Words that appear in step 10 and step 11, it follows,
+And by Definition 1.1.7 of Containment, since *inv(α)* and *β* are the last Words that appear in step 11 and step 12, it follows,
 
-    24.   inv(α)  ⊂:sub:`s` β
+    24. inv(α)  ⊂:sub:`s` β
    
 In all cases, the follow propositions obtain,
 
     25. (inv(α)  ⊂:sub:`s` β) ∨ (inv(β) ⊂:sub:`s` α)
     26. (α  ⊂:sub:`s` inv(β)) ∨ (β ⊂:sub:`s` inv(α))
 
-Since ζ was an arbitrary palindrome, this can be generalized using the definitions of *α* and *β* from step 4 and step 5.
+Since *ζ* was an arbitrary Palindrome, this can be generalized using the definitions of *α* and *β* from step 4 and step 5.
 
-    27.  ∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ∎
+    27. ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ] ∎
+
+**Theorem 3.2.2: The Pivot Postulate** ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
+
+This theorem can be stated in natural language as follows: For every Palindrome, if the Character at the Pivot is a Delimiter, then either the inverse of the left Pivot Word contained in the Right Pivot Word, or the inverse of the Right Pivot Word is contained in the left Pivot Word.
+
+Let ζ be an arbitrary Sentence in the Corpus such that the followign is true,
+
+    1. ζ ∈ P
+    2. ζ[ω(ζ)] = σ
+
+By Definitino 3.2.1,
+
+    3. ς(ζ) = inv(ς(ζ))
+   
+Let 
+
+    4. α = ζ{ω-}
+    5. β = ζ{ω+} 
+
+By Theorem 2.2.4 (Λ(ζ) ≥ 1), step 2 and by Definition 3.2.11, there are two possible cases to consider,
+
+**Case 1**: Λ(ζ) = 1
+
+    6. ζ{ω-} = ζ{ω+} = ζ{1} = ζ{Λ(ζ)}
+
+Note,
+
+    7. l(ζ{1}) = l(ζ{Λ(ζ)})
+
+In this case, using the Discovery Axiom W.1,
+
+    8. ς(ζ{1}) = ζ{1}
+
+And 
+
+    9. ς(ζ{Λ(ζ)}) = ζ{Λ(ζ)}
+
+Take the Inverse of step 8,
+
+    10. inv(ς(ζ{1})) = inv(ζ{1})
+
+By step 3, step 10 is equal to step 8, so it follows, 
+
+    11. ζ{1} = inv(ζ{1})
+
+From step 6, it follows, 
+
+    12. ζ{Λ(ζ)} = inv(ζ{Λ(ζ)})
+
+By Definition 1.1.7 of Containment, a String is contained in itself (i.e. let *f(i) = i* in Definition 1.1.7), so it follows, plugging in step 6,
+
+    13. (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∧ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-})
+
+**Case 2**: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
+
+Using Definition 3.2.11, Let 
+
+    14. ζ{ω-} = α:sub:`j`
+    
+Such that 
+
+    15. (j, α:sub:`j`) ∈ W:sub:`ζ` 
+    
+and α:sub:`j` is immediately to the left of the Delimiter at ω(ζ).
+
+Let 
+    
+    16. ζ{ω+} = α:sub:`k`
+    
+Such that 
+
+    17. (k, α:sub:`k``) ∈ W:sub:`ζ` 
+    
+and k = j + 1, where
+
+    18.  W:sub:`ζ` = (α:sub:`1` , ..., ζ{ω-}, ζ{ω+}, ..., α:sub:`n`)
+
+    (Note: it may be the case α:sub:`1` = ζ{ω-} and ζ{ω+} = α:sub:`n` )
+
+Note, by the Reduction Algorithm in Definition 3.1.2
+
+    19. ς(σ) = ε
+
+And by the Discovery Axiom W1 and Definition 3.1.3
+
+    20. ς(ζ{ω+}) = ζ{ω+}
+    21. ς(ζ{ω-}) = ζ{ω-}
+   
+And furthermore, since *ζ[ω(ζ)] = σ*, the Delimiter at the pivot will be removed during σ-reduction. This means that in ς(ζ), the words *ζ{ω-}* and *ζ{ω+}* will be adjacent,
+
+By Theorem 3.1.8,
+
+    22. ς(ζ) = (ς(α:sub:`1`)) ... (ζ{ω-})(ζ{ω+}) ... (ς(α:sub:`n`))
+
+Take the inverse of both sides of step 22 and apply Theorem 1.2.5 repeatedly, 
+
+    23. inv(ς(ζ)) = (ς(α:sub:`n`)) ... (ζ{ω+})(ζ{ω-}) ... (ς(α:sub:`1`))
 
 
-**Theorem 3.2.3**
 
 
-Theorem 3.2.3 (Second Inverse Postulate): ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 
-Translation: For every palindrome ζ in the corpus, if the character at the pivot index ω(ζ) is a delimiter (σ), then either the inverse of the left pivot word is a substring of the right pivot word, or the inverse of the right pivot word is a substring of the left pivot word.
 
-Explanation:
 
-Condition on Pivot Character: The theorem now explicitly states the condition ζ[ω(ζ)] = σ, meaning the postulate only applies when the pivot character is a delimiter.
-Implication: When the pivot is a delimiter, the original relationship involving containment of inverses between the left and right pivot words still holds.
-Odd/Even Length: This condition implicitly applies to both even and odd-length palindromes because if the length is odd and the palindrome is perfect the pivot cannot be a delimiter by Theorem 3.2.6.
-Proof:
-
-We need to adjust the proof we had for the earlier version of the Second Inverse Postulate to account for the added condition:
-
-Let ζ be an arbitrary palindrome in P such that ζ[ω(ζ)] = σ.
-
-Definition of Palindrome: Since ζ ∈ P, by Definition 3.1.2, σ_reduce(ζ) = inv(σ_reduce(ζ)).
-
-Pivot Character: By the premise, ζ[ω(ζ)] = σ, meaning the character at the pivot index is a delimiter.
-
-Pivot Words: Let α = ζ{ω-} and β = ζ{ω+} be the left and right pivot words of ζ, respectively (by Definition 3.1.12).
-
-Non-Empty Pivot Words: By the definition of a pivot, and since the pivot character is a delimiter, we know the left and right pivot words cannot be empty.
-
-σ-reduction and Pivot: Since ζ[ω(ζ)] = σ, the delimiter at the pivot will be removed during σ-reduction. This means that in σ_reduce(ζ), the words σ_reduce(α) and σ_reduce(β) will be adjacent.
-
-Word-Level Representation: Let W:sub:ζ be the word-level representation of ζ. Because of the delimiter at the pivot, we know that the words α and β are consecutive in the word-level representation:
-
-W:sub:ζ = (..., α, β, ...)
-σ-reduction of ζ: We can express σ_reduce(ζ) as:
-
-σ_reduce(ζ) = ...σ_reduce(α)σ_reduce(β)...
-Inversion of σ-reduction: Since σ_reduce(ζ) = inv(σ_reduce(ζ)), we have:
-
-...σ_reduce(α)σ_reduce(β)... = inv(...σ_reduce(α)σ_reduce(β)...)
-Corollary 3.1.2: Applying Corollary 3.1.2 repeatedly to the right side of the equation:
-
-...σ_reduce(α)σ_reduce(β)... = ...inv(σ_reduce(β))inv(σ_reduce(α))...
-Equality and Inversion: From the equality in Step 9, we can deduce that:
-
-σ_reduce(α) = inv(σ_reduce(β))
-σ_reduce(β) = inv(σ_reduce(α))
-Implication of Equality: Since neither pivot word is empty and they are inverses of each other after σ-reduction, this implies one is contained within the other before σ-reduction. Therefore:
 
 (inv(α) ⊂:sub:s β) ∨ (inv(β) ⊂:sub:s α)
 Substituting Back: Substituting α = ζ{ω-} and β = ζ{ω+}, we get:
