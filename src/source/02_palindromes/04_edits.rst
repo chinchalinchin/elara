@@ -120,3 +120,9 @@ This can be generalized as follows,
 
 It now shown for every Perfect Palindrome, the inverse of Each word is mirrored by the inverse of the corresponding Word at the opposite end of the Sentence. This property is a direct consequence of the fact that Perfect Palindromes are a subset of Invertible Sentences.
 
+Removed: String Variables
+-------------------------
+
+It will also be necessary to refer to indeterminate Strings, so notation is also introduced for String Variables,
+
+    2. String Variable ( *x*, *y*, *z*): The lowercase English letters *x*, *y* and *z* denote an indeterminte String. 

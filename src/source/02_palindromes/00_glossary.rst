@@ -28,11 +28,12 @@ Notation
 - Word Index Notation: ζ{i}
 - Partial Sentence: ζ[:i], ζ[i:]
 - Pivots: ω(ζ)
+- Pivot Words: ζ{ω-}, ζ{ω+}
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
 - Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
-- Functions: l(t), Λ(t), Δ(t)
-- Operations: inv(s), ς(ζ), o_induce(t, m, S), Π(σ):sub:`i=1`:sup:`n` P:sub:`n`(i)
+- Functions: l(t), Λ(t)
+- Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
 
 Definitions 
 -----------
@@ -74,6 +75,7 @@ Definitions
 - D 3.2.8: Even Palindromes: ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] 
 - D 3.2.9: Odd Palindromes: ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ]
 - D 3.2.10: Parity
+- D 3.2.11: Pivot Words
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
@@ -129,8 +131,8 @@ Theorems
 - T 2.3.5: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
 - T 2.3.6: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
 - T 2.3.7: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
-- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(Π(σ):sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π(σ):sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
-- T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.9: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 - T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
@@ -139,25 +141,26 @@ Theorems
 - T 3.1.4: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
 - T 3.1.5: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
 - T 3.1.6: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
-- T 3.1.7: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
+- T 3.1.7: ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+- T 3.1.9: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
 - T 3.2.1: PP ⊂ K
-- T TODO: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
-- T 3.2.2: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
-- T 3.2.3: PP ⊂ P
-- T 3.2.4: PP ∪ IP = P
-- T 3.2.5: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
-- T 3.2.6: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
-- T 3.2.7: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
-- T 3.2.8: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
-- T 3.2.9: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
-- T 3.2.10: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
-- T 3.2.11: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
-- T 3.2.12: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
-- T 3.2.13: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.2.14: P:sup:`-` ∪ P:sup:`+` = P 
-- T 3.3.1: ∀ ζ ∈ PP ∩ P:sub:`+`: ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)- n + 1] = σ 
-- T 3.3.2: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- T 3.2.2: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 3.2.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
+- T 3.2.4: PP ⊂ P
+- T 3.2.5: PP ∪ IP = P
+- T 3.2.6: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+- T 3.2.7: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+- T 3.2.8: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+- T 3.2.9: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
+- T 3.2.10: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+- T 3.2.11: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
+- T 3.2.12: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+- T 3.2.13: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+- T 3.2.14: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.2.15: P:sup:`-` ∪ P:sup:`+` = P 
+- T 3.3.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))

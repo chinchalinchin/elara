@@ -32,11 +32,12 @@ Notation
 - Word Index Notation: ζ{i}
 - Partial Sentence: ζ[:i], ζ[i:]
 - Pivots: ω(ζ)
+- Pivot Words: ζ{ω-}, ζ{ω+}
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
 - Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
-- Functions: l(t), Λ(t), Δ(t)
-- Operations: inv(s), ς(ζ), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- Functions: l(t), Λ(t)
+- Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
 
 Definitions 
 -----------
@@ -54,7 +55,8 @@ Definitions
 - D 1.2.4: String Inversion: inv(s)
 - D 1.2.5: Phrase: P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) = (P:sub:`n`(1), )
 - D 1.2.6: Lexicon: Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } 
-- D 1.2.7: Delimitation: Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- D 1.2.7: Delimitation: DΠ:sub:`i=1`:sup:`n` p(i)
+- D 1.2.8: Limitation: LΠ:sub:`i=1`:sup:`n` p(i)
 - D 1.3.1: Reflective Words: α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] 
 - D 1.3.2: Invertible Words: α ∈ I ↔ inv(α) ∈ L
 - D 2.1.1: Corpus: C:sub:`L`
@@ -77,6 +79,7 @@ Definitions
 - D 3.2.8: Even Palindromes: ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] 
 - D 3.2.9: Odd Palindromes: ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ]
 - D 3.2.10: Parity
+- D 3.2.11: Pivot Words
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
@@ -112,7 +115,8 @@ Theorems
 - T 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
 - T 1.2.6: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) 
 - T 1.2.7: ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) 
-- T 1.2.8: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
+- T 1.2.8: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = DΠ:sub:`i=1`:sup:`n` p(i)
+- T 1.2.9: ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = LΠ:sub:`i=1`:sup:`n` p(i)
 - T 1.3.1: ∀ α ∈ L: α ∈ R ↔ α = inv(α)
 - T 1.3.2: ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
 - T 1.3.3: R ⊆ I
@@ -123,15 +127,16 @@ Theorems
 - T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 - T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
 - T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DN:sub:`i=1`:sup:`n` ζ{i}
 - T 2.3.1: A(n) ⊆ C:sub:`L`
 - T 2.3.2: ∀ ζ ∈ A(n): Λ(ζ) = n
 - T 2.3.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
-- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`n` p(i)
+- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`n` p(i)
 - T 2.3.5: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
 - T 2.3.6: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
 - T 2.3.7: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
-- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
-- T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.9: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 - T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
@@ -139,24 +144,27 @@ Theorems
 - T 3.1.3: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
 - T 3.1.4: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
 - T 3.1.5: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
-- T 3.1.6: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
+- T 3.1.6: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
 - T 3.1.7: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
+- T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+- T 3.1.9: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
 - T 3.2.1: PP ⊂ K
-- T 3.2.2: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
-- T 3.2.3: PP ⊂ P
-- T 3.2.4: PP ∪ IP = P
-- T 3.2.5: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
-- T 3.2.6: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
-- T 3.2.7: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
-- T 3.2.8: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
-- T 3.2.9: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
-- T 3.2.10: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
-- T 3.2.11: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
-- T 3.2.12: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
-- T 3.2.13: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.2.14: P:sup:`-` ∪ P:sup:`+` = P 
-- T 3.3.1: ∀ ζ ∈ PP ∩ P:sub:`+`: ∃ n ∈ N:sub:`l(ζ)`: ζ[n] = σ ↔ ζ[l(ζ)- n + 1] = σ 
-- T 3.3.2: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- T 3.2.2: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 3.2.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
+- T 3.2.4: PP ⊂ P
+- T 3.2.5: PP ∪ IP = P
+- T 3.2.6: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+- T 3.2.7: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+- T 3.2.8: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+- T 3.2.9: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
+- T 3.2.10: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+- T 3.2.11: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
+- T 3.2.12: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+- T 3.2.13: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+- T 3.2.14: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.2.15: P:sup:`-` ∪ P:sup:`+` = P 
+- T 3.3.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 - T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
@@ -212,9 +220,9 @@ The aim of this analysis is to develop a theory of palindromes *independent* of 
 
 This restriction to *aspect* and *parity* may appear restrictive; Indeed, it may be argued by introducing this restriction to the formal theory that is about to developed, it has no application to actual language. To this argument, it should be countered the structures uncovered in this restricted subset of language must nevertheless preserve their structure when embedded into the whole of language.
 
-A note on the terminology introduced in this work is in order. When a semantic term is capitalized, e.g. Word or Sentence, this will mean it is referred to in its capacity as a formal entity. While the formal system was designed to model the actual syntax of Characters, Words and Sentences, this should not be taken to mean the formal entities that emerge from this system are necessarily representative of actual linguistic entities. While the formal entities in this system may not map *one-to-one* with their empirical counterparts, it will be seen these formal characteristics nevertheless provide insight into the nature of their empirical counterparts.
+A note on the terminology introduced in this work is in order. When a semantic term is capitalized, e.g. Word or Sentence, this will mean it is referred to in its capacity as a formal entity. While the formal system was designed to model the actual syntax of Characters, Words and Sentences, this should not be taken to mean the formal entities that emerge from this system are necessarily representative of actual linguistic entities. While the formal entities in this system may not map *one-to-one* with their empirical counterparts, it will be seen their characteristics nevertheless provide insight into the nature of their empirical counterparts.
 
-As the thrust of the main results in Section III is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I is in part an effort to ensure the applicability of the results in Section II.III and Section III. The core theorems of Section III could be proved in a degenerate form in a system with less notational complexity, but the depth of their insight would be lost in the vagueness of definitions.
+As the thrust of the main results in Section III is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I and parts of Section II is in part an effort to ensure the applicability across natural languages regarding the results shown in Section II.III and Section III. The core theorems of Section III could be proved in a degenerate form in a system with less notational complexity by assuming a specific language, but the depth of insight would be lost in the vagueness of definitions.
 
 Section I: Definitions 
 ======================
@@ -238,10 +246,6 @@ Section I.I: Strings
 The domain of discourse is composed of *Strings*. A String will be represented as follows, 
 
     1. String (*s*:sub:`1`, *s*:sub:`2`, *s*:sub:`3`): A lowercase English *s* with a subscript denotes a String. Often the subscript will be dropped and *s* will be used. The letter *t*, *u*, *v* and *w* are also reserved for Strings.
-
-It will also be necessary to refer to indeterminate Strings, so notation is also introduced for String Variables,
-
-    2. String Variable ( *x*, *y*, *z*): The lowercase English letters *x*, *y* and *z* denote an indeterminte String. 
 
 A String is regarded as a linguistic artifact that is defined by its *length*, its *Characters* and their *ordering*. It is assumed if one knows how many Characters are in a String, which Characters are in a String and in what order they occur, then one has all the information necessary to completely determine the String. This notion is made more precise below with the introduction of several core definitions.
 
@@ -369,20 +373,19 @@ The Emptying Algorithm takes a string *t* as input, which can be thought of as a
 
 **Iteration**
 
-   1. If 𝔞:sub:`i` does not exist:
-        a. Return the current value of T.
-   2. If 𝔞:sub:`i` *≠* *ε*:
-        a. Let X = { (*j*, *𝔞*:sub:`i`) } ∪ T
-        b. Let T = X 
-        c. Let k = j + 1
-        d. Let j = k
-   3. Let k = i + 1
-   4. Let i = k
-   5. Return to step 1. ∎
+   1. While 𝔞:sub:`i` exists:
+        a. If 𝔞:sub:`i` ≠ ε:
+            i. Let X = { (j, 𝔞:sub:`i`) } ∪ T
+            ii. Let T = X 
+            iii. Let k = j + 1
+            iv. Let j = k
+        b. Let k = i + 1
+        c. Let i = k 
+    2. Return T ∎
 
 Step 1 in the Emptying Algorithm is essentially equivalent to a *try-catch* block in modern programming languages. Step 1 is materially different than comparing a Character in a String to the Empty Character. Step 1 relies on the idea that attempting to select a Character outside of the String is an undefined operation and will thus result in an error (i.e. a stack overflow). As the Characters in a String are iterated through, as long as the String is not infinite, the iteration will eventually reach the last Character, and once it tries to select the next Character, it will throw an error. 
 
-This point is important because the Emptying Algorithm must remain *"unaware"* of String Length. The essence of the Emptying Algorithm is that it implicitly defines the length of the String as its number of non-Empty Characters, without explicitly stating that is what *String Length* is. This is crucial to the formalization of Strings as ordered sequences of Characters, because it allows String Length to be defined without any circularity. In other words, this formalization avoids the vicous circle of defining the Character-level representation in terms of String Length and then defining String Length as the cardinality of the Character-level representation.
+This point is important because the Emptying Algorithm must remain *"unaware"* of String Length. The essence of the Emptying Algorithm is that it implicitly defines the length of the String as its number of non-Empty Characters, without explicitly stating that is what *String Length* is or how it is calculated. This is crucial to the formalization of Strings as ordered sequences of Characters, because it allows String Length to be defined without any circularity. In other words, this formalization avoids the vicous circle of defining the Character-level representation in terms of String Length and then defining String Length as the cardinality of the Character-level representation.
 
 The following example illustrates a simple application of the Emptying Algorithm.
 
@@ -787,7 +790,7 @@ Simplifying the index on the right hand side,
 
 Since *u* and *s* have the same length (*l(u) = l(t) = l(s)*) and the same Characters in the same order (*u[j] = s[j]* for all *i*), by Definition 1.1.4 of String Equality, it can be concluded that *u = s*. Recall that *u = inv(t)* and *t = inv(s)*. Substituting, the desired result is obtained, *inv(inv(s)) = s*. ∎ 
 
-Two versions of Theorem 1.2.5 are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that require recourse to the Character-level representation.
+Two versions of Theorem 1.2.5 are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that are better served by the Character-level representation.
 
 **Theorem 1.2.5 (Character-level Representation)** ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
 
@@ -850,7 +853,7 @@ From steps 4 and 5, it follows,
 
 Now it is to be shown that *v[i] = w[i]* for all *i* in N:sub:`l(v)`. Let *i* be an arbitrary index such that *1 ≤ i ≤ m + n*.
 
-Case 1: 1 ≤ i ≤ n
+**Case 1**: *1 ≤ i ≤ n*
 
     a. v[i] = s[l(s) - i + 1] (by Definition 1.2.4)
     b. v[i] = s[m + n - i + 1] (since l(s) = m + n)
@@ -858,7 +861,7 @@ Case 1: 1 ≤ i ≤ n
     d. v[i] = inv(t)[i] (by Definition 1.2.4)
     e. v[i] = w[i] (since w = inv(t)inv(u))
 
-Case 2: n + 1 ≤ i ≤ m + n:
+**Case 2**: *n + 1 ≤ i ≤ m + n*:
 
     a. v[i] = s[l(s) - i + 1] (by Definition 1.2.4)
     b. v[i] = s[m + n - i + 1] (since l(s) = m + n)
@@ -867,13 +870,13 @@ Case 2: n + 1 ≤ i ≤ m + n:
     e. v[i] = inv(u)[i - n] (by Definition 1.2.4)
     f. v[i] = w[i] (since w = inv(t)inv(u))
 
-In both cases, *v[i] = w[i]* for all *i* in N:sub:`l(v)`. Since *l(v) = l(w)*, by Definition 1.1.4 it follows *v = w*.
+In both cases, *v[i] = w[i]* for all *i* in N:sub:`l(v)`. Since *l(v) = l(w)*, by Definition 1.1.4 it follows *v = w*. Therefore, 
 
-Therefore, inv(ut) = inv(t)inv(u).
+    7. inv(ut) = inv(t)inv(u).
 
 Since u and t were arbitrary strings, we can generalize:
 
-    ∀ u, t ∈ S: inv(ut) = inv(t)inv(u) ∎
+    8. ∀ u, t ∈ S: inv(ut) = inv(t)inv(u) ∎
 
 The next theorem establishes a brand of *"distributivity"* of String inversion over containment. 
 
@@ -1109,8 +1112,8 @@ Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized as,
 
     21. ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) ∎
 
-Delimitation
-^^^^^^^^^^
+Phrases
+^^^^^^^
 
 While the analyis has not yet introduced the notion of Sentences into the formal system (see Section II), an operation will now be introduced that allows Words to be ordered into Phrases and then concatenated into Strings. This new operation will be important when String Inversion is applied to the sentential level of the formal system, allowing the conditions for a Sentence Inversion to be precisely specified.
 
@@ -1146,27 +1149,27 @@ Using these pair of definitions for Phrases and Lexicons and their associated te
 
 **Definition 1.2.7: Delimitation**
 
-Let **P**:sub:`n` be a Phrase of Word Length *n* from Language **L**,
+Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
 
-    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+    p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
-The *Delimitation* of **P**:sub:`n`, denoted *Π(σ):*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
+The *Delimitation* of *p*, denoted *DΠ*:sub:`i=1`:sup:`n` *p(i)*, is defined recursively as:
 
-    1. Empty Clause: Π(σ):sub:`i=1`:sup:`0` P:sub:`n`(i) = ε
-    2. Basis Clause (n = 1): Π(σ):sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
-    3. Recursive Clause (n > 1): Π(σ):sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π:sub:`i=1`:sup:`n-1` P:sub:`n`(i))(σ)(α:sub:`n`) ∎
+    1. Empty Clause: DΠ:sub:`i=1`:sup:`0` p(i) = ε
+    2. Basis Clause (n = 1): DΠ:sub:`i=1`:sup:`1` p(i) = α:sub:`1`
+    3. Recursive Clause (n > 1): DΠ:sub:`i=1`:sup:`n` p(i) = (DΠ:sub:`i=1`:sup:`n-1` p(i))(σ)(α:sub:`n`) ∎
 
 **Definition 1.2.8: Limitation**
 
-Let **P**:sub:`n` be a Phrase of Word Length *n* from Language **L**,
+Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
 
-    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+    p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
-The *Limitation* of **P**:sub:`n`, denoted *Π(ε)*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
+The *Limitation* of *p*, denoted *LΠ*:sub:`i=1`:sup:`n` *p(i)*, is defined recursively as:
 
-    1. Empty Clause: Π(ε):sub:`i=1`:sup:`0` P:sub:`n`(i) = ε
-    2. Basis Clause (n = 1): Π(ε):sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
-    3. Recursive Clause (n > 1): Π(ε):sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π(ε):sub:`i=1`:sup:`n-1` P:sub:`n`(i))(α:sub:`n`) ∎
+    1. Empty Clause: LΠ:sub:`i=1`:sup:`0` p(i) = ε
+    2. Basis Clause (n = 1): LΠ:sub:`i=1`:sup:`1` p(i) = α:sub:`1`
+    3. Recursive Clause (n > 1): LΠ:sub:`i=1`:sup:`n` p(i) = (LΠ:sub:`i=1`:sup:`n-1` p(i))(α:sub:`n`) ∎
 
 The key difference between Definition 1.2.7 and Definition 1.2.8 is the presence of the Delimiter in the Recursive Clause. In other words, a Delimitation inserts a Delimiter between the Words it is concatenating, while a Limitation is simply a shorthand simply for concatenating a sequence of Words.
 
@@ -1174,28 +1177,29 @@ Before proving the existence of Delimitations and Limitations, an example of how
 
 **Example**
 
-Let *P(n) = ("mother", "may", "I")* where *n = 3*.
+Let 
 
-The Basis Step yields,
+    P:sub:`3` = ("mother", "may", "I")
 
-    1. n = 1: Π:sub:`i=1`:sup:`1` α:sub:`i` = "mother" 
+Apply Definition 1.2.7 to construct the Delimitation of **P**:sub:`3`. The Basis Step yields,
+
+    1. n = 1: DΠ:sub:`i=1`:sup:`1` α:sub:`i` = "mother" 
 
 And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
 
     2.  n = 2: DΠ:sub:`i=1`:sup:`2` α:sub:`i` = (DΠ:sub:`i=1`:sup:`1` α:sub:`i`)(σ)("may")= ("mother")(σ"may") = "mother"σ"may"
     3.  n = 3: DΠ:sub:`i=1`:sup:`3` α:sub:`i` = (DΠ:sub:`i=1`:sup:`2` α:sub:`i`)(σ)("I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
 
-So the Delimitation of *P(n)* is given by,
+So the Delimitation of the Phrase is given by,
 
     4. Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" 
 
-Similarly, the Limitation can be constructed recursive from the same Basis Step,
+Similarly, the Limitation can be constructed recursive from the same Basis Step using Definition 1.2.8,
 
    5. n = 2: LΠ:sub:`i=1`:sup:`2` α:sub:`i` = (LΠ:sub:`i=1`:sup:`1` α:sub:`i`)("may")= ("mother")("may") = "mothermay"
-   6. n = 3: LN:sub:`i=1`:sup:`3` α:sub:`i` = (LΠ:sub:`i=1`:sup:`2` α:sub:`i`)("I") = ("mothermay")("I") = "mothermayI"
-∎
+   6. n = 3: LΠ:sub:`i=1`:sup:`3` α:sub:`i` = (LΠ:sub:`i=1`:sup:`2` α:sub:`i`)("I") = ("mothermay")("I") = "mothermayI" ∎
 
-From the previous example, it should be clear what the Delimitation and Limitation operations represent within the formal system. Delimitation is a method of constructing a Sentence-like (see Section II.III for the formal difference between a Delimitation and Sentence) String from a sequence of words, while a Limitation is shorthand for iterated concatenation over a sequence of Words.
+From this example, it should be clear what the Delimitation and Limitation operations represent within the formal system. Delimitation is a method of constructing a Sentence-like (see Section II.III for the formal difference between a Delimitation and Sentence) String from a sequence of words, while a Limitation is shorthand for iterated concatenation over a sequence of Words.
 
 Note the previous example may be misleading in one important respect. A Delimitation is not necessarily "grammatical" or "meaningful". It may be a String of semantic Words without an accompanying interpretation on the Sentence level of the linguistic hierarchy. 
 
@@ -1235,7 +1239,7 @@ To complete the induction, it must be shown that there exists a unique string *s
 
 By Definition 1.2.7, 
 
-    6. Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
+    6. DΠ:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
 
 By inductive hypothesis,
     
@@ -1773,7 +1777,7 @@ Therefore, combining steps 3 and 4,
 
     5. ∀ i ∈ N:sub:`l(α)`: ζ[f(i)] ≠ ε
 
-Since, by step 2, *l(α) ≠ 0*, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying Definition 1.1.3,
+Since, by step 2, *l(α) ≠ 0*, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying Definition 1.1.3 and Theorem 2.2.1,
 
     6. l(ζ) ≠ 0 ∎
 
@@ -1837,7 +1841,7 @@ Generalizing this over the Corpus,
 
     7. ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1 ∎
 
-**Theorem 2.2.5** ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DN:sub:`i=1`:sup:`n` ζ{i}
+**Theorem 2.2.5** ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
 
 This theorem can be stated in natural language as follows: Every Sentence in the Corpus is the Delimitation of its own Words.
 
@@ -1875,7 +1879,7 @@ Therefore,
 
 Since ζ was an arbitrary Sentence in the Corpus, this can be generalized,
 
-    ∀ ζ ∈ C:sub:`L`: ζ = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
+    ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
 
 Section II.III: Sentence Classes 
 ------------------------------
@@ -1903,7 +1907,7 @@ However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is ap
 
 Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(*n*). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(*n*), if it satisfies the following open formula
 
-    t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`) ∎
+    t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = DΠ:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`) ∎
 
 The notion of *admissibility* is a faint echo of *"grammaticality"*. As inversion is studied in the sentential level of the linguistic hierarchy, it is no longer permitted to ignore semantics in its entirety. Instead, semantics ingresses into the system as implicit properties the extensionally identified Sentences must obey. Before discussing this at greater length, several theorems are proved about classes of Admissible Sentences.
 
@@ -2143,11 +2147,11 @@ Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
 The next theorem shows how the inversion "distributes" over the Words of a Delimited Sentence.
 
-**Theorem 2.3.8** ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+**Theorem 2.3.8** ∀ ζ ∈ C:sub:`L`: inv(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
 
 Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let *n = Λ(ζ)*. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the deDelimitation of *ζ* as follows:
 
-    1. s = Π:sub:`i=1`:sup:`n` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{n})
+    1. s = DΠ:sub:`i=1`:sup:`n` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{n})
 
 By Theorem 1.2.5, for any two Strings *u* and *t*, *inv(ut) = inv(t)inv(u)*. Apply this property repeatedly to construct *inv(s)*,
 
@@ -2169,15 +2173,15 @@ Re-index the terms on the right-hand side to match the form of the Delimitation 
 
 Where j:sub:`i` is obtained by simply substituting *n-i+1* for j. Using the Definition of DeDelimitation, the right-hand side becomes,
 
-    6. inv(s) = Π:sub:`j=1`:sup:`n` inv(ζ{n - j + 1})
+    6. inv(s) = DΠ:sub:`j=1`:sup:`n` inv(ζ{n - j + 1})
 
-Recall that *s = Π*:sub:`i=1`:sup:`n` *ζ{i}*. Substitute this back into the equation and re-index the right-hand side for consistency to get,
+Recall that *s = DΠ*:sub:`i=1`:sup:`n` *ζ{i}*. Substitute this back into the equation and re-index the right-hand side for consistency to get,
 
-    7. inv(Π:sub:`i=1`:sup:`n` ζ{i}) = Π:sub:`i=1`:sup:`n` inv(ζ{n - i + 1})
+    7. inv(DΠ:sub:`i=1`:sup:`n` ζ{i}) = DΠ:sub:`i=1`:sup:`n` inv(ζ{n - i + 1})
 
 Since *ζ* was an arbitrary sentence, this can be generalized,
 
-    8. ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1}) ∎
+    8. ∀ ζ ∈ C:sub:`L`: inv(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1}) ∎
 
 As noted in previous aside, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to the last batch of theorems in this section, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
 
@@ -2207,7 +2211,7 @@ Note, in order for the Sentence to invert, i.e. the case of *ᚢ* and *ᚦ*, the
 
 These last theorems encapsulate these important properties of Invertible Sentences. When Palindromes are formally defined in the next section, these theorems will be used extensively to prove the main results of this work. 
 
-**Theorem 2.3.9** ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+**Theorem 2.3.9** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
 Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that *1 ≤ i ≤ Λ(ζ)*. By Definition 2.2.2, 
 
@@ -2284,11 +2288,11 @@ By Theorem 2.3.5, the Words in the *inv(ζ)* must be in the reversed order of th
 
 By Theorem 2.3.4, the inverse of *ζ*, *inv(ζ)*, can be expressed as the DeDelimitation of the inverses of the Words of *ζ* in reverse order,
 
-    5. inv(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+    5. inv(ζ) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
 
 This is equivalent to,
 
-    6. inv(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ){i}
+    6. inv(ζ) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ){i}
 
 Since *inv(ζ)* *∈* **C**:sub:`L` by assumption (step 1) and *inv(ζ)* has the same Word Length as *ζ* which is *Λ(ζ)*, and *inv(ζ)* is a Delimitation of Words from **L**, by Definition 2.3.1, it follows that,
 
@@ -2296,12 +2300,12 @@ Since *inv(ζ)* *∈* **C**:sub:`L` by assumption (step 1) and *inv(ζ)* has the
 
 Therefore, both conditions hold, 
 
-    8. ∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+    8. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
     9. inv(ζ) ∈ A(Λ(ζ))
 
 (←) Assume that for an arbitrary sentence *ζ* *∈* **C**:sub:`L`, the following holds,
 
-    1. ∀ i ∈ N:sub:Λ(ζ): inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+    1. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
     2. inv(ζ) ∈ A(Λ(ζ))
 
 
@@ -2378,7 +2382,7 @@ In order to define palindromes in all of their varieties, perfect or imperfect, 
 
 Let *t* be a String with length *l(t)* and Character-level representation 
 
-    1. t = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(s), 𝔞:sub:`l(s)`) } 
+    1. t = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(t), 𝔞:sub:`l(t)`) } 
     2. 𝔞:sub:`i` ∈ Σ.
 
 The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, maps the String *t* to a new String *u* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(t)* is defined and constructed using the *Reduction Algorithm*,
@@ -2479,11 +2483,15 @@ Therefore, by Definition 1.1.4, *t* and *v* must be the same String, as they bot
 
     1. inv(ς(ζ)) = ς(inv(ζ))
 
-Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
+Since ζ was an arbitrary sentence in C:sub:`L`, this can be generalized,
 
     1. ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ)) ∎
 
-This corollary is essential because it allows free movement between the Inverse of a *σ*-reduction and the *σ*-reduction of an Inverse. In other words, it establishes the commutativity of inversion and reduction. 
+This corollary is essential because it allows free movement between the Inverse of a *σ*-reduction and the *σ*-reduction of an Inverse. In other words, Theorem 3.1.1 establishes the commutativity of *σ*-reduction over inversion and visa versa. 
+
+As the theorems in this section will make clear, there exists a unique type of algebraic structure that links the operations of *σ*-reduction, inversion and concatenation. The properties of this algebraic structure will be necessary for establishes the results in the next subsection.
+
+pThe next theorem demonstrates how *σ*-reduction interacts with concatenation.
 
 **Theorem 3.1.2** ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
 
@@ -2499,9 +2507,9 @@ Let *ζξ* be the concatenation of *ζ* and *ξ*. The character-level representa
 
 Let *s* be the σ-reduction of *ζξ*. Let *t* be the *σ*-reduction of *ζ*. Let *u* be the *σ*-reduction of *ζξ*,
 
-    1. s = ς(ζξ)
-    2. t = ς(ζ)
-    3. u = ς(ξ)
+    4. s = ς(ζξ)
+    5. t = ς(ζ)
+    6. u = ς(ξ)
 
 Let *v* be the concatenation of the Strings *t* and *u*,
 
@@ -2513,15 +2521,15 @@ The non-Delimiter characters in *v*, the concatenation of *ς(ζ)* and *ς(ξ)*,
 
 Therefore, by Definition 1.1.4, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since *s = v*, 
 
-    1. ς(ζξ) = (ς(ζ))(ς(ξ))
+    8. ς(ζξ) = (ς(ζ))(ς(ξ))
 
 Since ζ and ξ were arbitrary sentences in C:sub:L, this can be generalized,
 
-    1. ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ)) ∎
+    9. ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ)) ∎
 
-Theorem 3.1.1 establishes a type of commutativity. Theorem 3.1.2 further demonstrates the "algebraic" nature of *σ*-reduction and its interaction with other String operations. It shows that *σ*-reduction "distributes" over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that *σ*-reduction and inversion are not just arbitrary operations but are deeply connected to the underlying structure of Strings and Sentences.
+Theorem 3.1.2 further demonstrates the *algebraic* nature of *σ*-reduction and the other String operations. It shows that *σ*-reduction *distributes* over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that *σ*-reduction, inversion and concatenation are not just arbitrary operations but instead are deeply connected to the underlying structure of Strings and Sentences.
 
-As another example of this "linguistic algebraic structure", the following theorem might be termed the *"Idempotency of σ-reduction"* or the *"σ-reduction Idempotence Property"*.
+As another example of this *"linguistic algebraic structure"*, the following theorem might be termed the *"Idempotency of σ-reduction"* or the *"σ-reduction Idempotence Property"*.
 
 **Theorem 3.1.3** ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
 
@@ -2575,13 +2583,6 @@ Since *ζ* was an arbitrary sentence in **C**:sub:`L`, this can be generalized,
 
     ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1. ∎
 
-During a *σ*-reduction, information in lost with respect to the following semantic categories,
-
-  - Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
-  - Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
-  - Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.
-
-However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ*-reduction of a Sentence.
 
 **Theorem 3.1.5** ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
 
@@ -2664,7 +2665,15 @@ Since both directions of the implication hold, it can be concluded,
 
     6. ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) ∎
 
-**Theorem 3.1.6** ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
+During a *σ*-reduction, Theorem 3.1.4 demonstrates information is lost with respect to the following semantic categories,
+
+  - Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
+  - Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
+  - Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.
+
+However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ*-reduction of a Sentence.
+
+**Theorem 3.1.6** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus **C**:sub:`L`, and for every Word *ζ{i}* in the Word-level representation of *ζ*, *ζ{i}* is contained in *ς(ζ)*.
 
@@ -2697,47 +2706,51 @@ Therefore, by the definition of Containment (Definition 1.1.4):
 
 In both cases, there is a Word in *ζ* that is contained in the *σ*-reduction of *ζ*. Since *ζ* was arbitrary, this can generalize as,
 
-∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ) ∎
+    ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ) ∎
 
-As the last precursor to a formal explication of palindromic structures, this subsection is concluded by showing how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
+As one of the final precursors to a formal explication of palindromic structures, this next shows how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
 
-**Theorem 3.1.7** ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ ς(ζ) = inv(inv(ς(ζ))) ]
+**Theorem 3.1.7** ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ*-reduction.
 
-Let *ζ* be an arbitrary Sentence from the Corpus **C**:sub:`L`` such that *ζ ∈* **K**, i.e. *ζ* is an Invertible Sentence. By Theorem 2.3.7, since *ζ* is invertible, all its Words are also Invertible,
+Assume 
+
+    1. ζ ∈ K
+
+In other words, assuem that *ζ* is an Invertible Sentence. By Theorem 2.3.7, since *ζ* is invertible, all its Words are also Invertible,
  
-    1. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → inv(ζ){i} ∈ L
+    2. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → inv(ζ){i} ∈ L
 
 The σ-reduction of *ζ*, *ς(ζ)*, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the *σ*-reduction concatenates the Words of *ζ*,
 
-    2. ς(ζ)= (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+    3. ς(ζ)= (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
 
 Applying Theorem 1.2.5 repeatedly,
 
-    3. inv(ς(ζ)) = inv((ζ{1})(ζ{2})...(ζ{Λ(ζ)}))
+    4. inv(ς(ζ)) = inv((ζ{1})(ζ{2})...(ζ{Λ(ζ)}))
 
 To get,
 
-    4.  inv(ς(ζ))  = (inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1})))
+    5.  inv(ς(ζ))  = (inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1})))
 
 Applying a second Inversion,
 
-    5. inv(inv(ς(ζ))) = inv((inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1}))))
+    6. inv(inv(ς(ζ))) = inv((inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1}))))
 
 Applying Theorem 1.2.5 again,
 
-    6. inv(inv(ς(ζ))) = (inv(inv((ζ{1})))) (inv(inv((ζ{2}))))...(inv(inv(inv((ζ{Λ(ζ)}))))
+    7. inv(inv(ς(ζ))) = (inv(inv((ζ{1})))) (inv(inv((ζ{2}))))...(inv(inv((ζ{Λ(ζ)}))))
 
 Finally, applying Theorem 1.2.4 (*inv(inv(s)) = s*)
 
-    7. inv(inv(ς(ζ))) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+    8. inv(inv(ς(ζ))) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
 
 Therefore, combining step 3 and step 8
 
-    ς(ζ) = inv(inv(ς(ζ))). ∎
+    9. ς(ζ) = inv(inv(ς(ζ))). ∎
 
-The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
+The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.6, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
 
 The final theorems in this section, Theorems 3.1.8 - 3.1.9, provide a method for constructing the *σ*-reduction of a Sentence through iterated concatenation. These theorem leverage the operations of Delimitation and Limitation introduced in Definitions 1.2.7 - 1.2.8.
 
@@ -2757,80 +2770,86 @@ Where,
 
     3. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ L.
 
-By Theorem 2.3.4, ζ can be expressed as the delimitation of its words:
+By Theorem 2.3.4, ζ can be expressed as the Delimitation of its words:
 
-    4. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)})
+    4. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)})
 
 By Definition 3.1.2, *ς(ζ)* removes all Delimiters from *ζ*. Applying *σ*-reduction to the expression step 4,
 
-    ς(ζ) = ς((ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)}))
+    5. ς(ζ) = ς((ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)}))
 
 By repeated application of Theorem 3.1.2, i.e. by distributing the *σ*-reduction,
 
-    ς(ζ) = (ς(ζ{1}))(ς(σ))(ς(ζ{2}))(ς(σ)) ... (ς(σ))(ς(ζ{Λ(ζ)}))
+    6. ς(ζ) = (ς(ζ{1}))(ς(σ))(ς(ζ{2}))(ς(σ)) ... (ς(σ))(ς(ζ{Λ(ζ)}))
 
 Since 
 
-    ς(σ) = ε
+    7. ς(σ) = ε
 
 This can be rewritten with the Basis Clause of Concatenation,
 
-    ς(ζ) = (ς(ζ{1}))(ς(ζ{2}))...(ς(ζ{Λ(ζ)}))
+    8. ς(ζ) = (ς(ζ{1}))(ς(ζ{2}))...(ς(ζ{Λ(ζ)}))
 
 By Definition 3.1.2 and the Discovery Axiom W.1.,
 
-    ∀ i ∈ N:sub:`Λ(ζ)`: ς(ζ{i}) = ζ{i}
+    9. ∀ i ∈ N:sub:`Λ(ζ)`: ς(ζ{i}) = ζ{i}
 
 Therefore,
    
-    ς(ζ) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+    10. ς(ζ) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
 
 By Definition 1.2.8, the right-hand side is the Limitation of the words in **W**:sub:`ζ`,
 
-    ς(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+    11. ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 
 Since *ζ* was an arbitrary Sentence in this Corpus, this can be generalized,
 
-    ∀ ζ ∈ C:sub:`L`: ς(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
+    12. ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
 
 Theorem 3.1.8 establishes an important formula for the construction of *σ*-reductions. The Reduction Algorithm targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without Theorem 3.1.8, it would be required to reconstruct the String which corresponds to the sequence and process it through the Reduction Algorithm. Rather than applying the Reduction Algorithm everytime a *σ*-reduction is required, Theorem 3.1.8 provides a schema for the construction of *σ*-reductions through the process of Limitation.
 
 Compare Theorem 3.1.8 to Theorem 2.2.5, reprinted below for reference,
 
-    ζ = DN:sub:`i=1`:sup:`n` ζ{i}
+    ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
 
 In other words, taking the *σ*-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from the Definitions of Limitation and Delimitation. The next theorem proves this relationship for the more general case of *any* ordered sequence of Words, not necessarily a semantic Sentence.
 
-**Theorem** ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
+**Theorem 3.1.9** ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
 
 This theorem can be stated in natural language as follows: the *σ*-reduction of a Delimitation of a Phrase is equal to a Limitation of the same Phrase.
 
+Let *n* be an arbitrary natural number, and let *p* be an arbitrary Phrase from a Language's *n*:sup:`th` Lexicon, 
 
-Proof:
+    1. p ∈ Χ:sub:L(n)
+    2. p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`).
 
-Let n be an arbitrary natural number, and let p ∈ Χ:sub:L(n) be an arbitrary phrase of length n from the lexicon, where p = (α:sub:1, α:sub:2, ..., α:sub:n).
+By Definition 1.2.7, 
 
-Definition of Delimitation: By Definition 2.2.4, the delimitation of p is:
+    3. DΠ:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
 
-DΠ:sub:i=1:sup:n p(i) = α:sub:1 σ α:sub:2 σ ... σ α:sub:n (with delimiters inserted between the words).
-Definition of σ-reduction: By Definition 3.1.2, σ-reduction removes all delimiters from a string.
+Applying Definition 3.1.2 of *σ*-reduction to the Delimitation and applying the Basis Clause of Definition 1.1.1,
 
-Applying σ-reduction to Delimitation: Applying σ-reduction to the delimitation from Step 1, we get:
+    4. ς(DΠ:sub:`i=1`:sup:`n` p(i)) = (α:sub:`1`)(α:sub:`2`)... (α:sub:`n`)
 
-ς(DΠ:sub:i=1:sup:n p(i)) = ς(α:sub:1 σ α:sub:2 σ ... σ α:sub:n) = α:sub:1 α:sub:2 ... α:sub:n
-(because σ-reduction removes all the σ's).
+By Definition 1.2.8,
 
-Definition of Limitation: By Definition 2.2.5, the limitation of p is:
+    5. LΠ:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(α:sub:`2`) ... (α:sub:`n`)
 
-LΠ:sub:i=1:sup:n p(i) = α:sub:1 α:sub:2 ... α:sub:n
-Equality: Comparing the results from Step 3 and Step 4, we see that:
+By repeated application of Theorem 1.1.1 to step 4,
 
-ς(DΠ:sub:i=1:sup:n p(i)) = LΠ:sub:i=1:sup:n p(i)
-Conclusion: Since n and p were arbitrary, we can generalize:
+    6. ς(DΠ:sub:`i=1`:sup:`n` p(i)) = Σ:sub:`i=1`:sup:`n` α:sub:`i`
 
-∀ n ∈ ℕ, ∀ p ∈ Χ:sub:L(n): ς(DΠ:sub:i=1:sup:n p(i)) = LΠ:sub:i=1:sup:n p(i)
-This completes the proof. ∎
+By repeated application of Theorem 1.1.1 to step 5,
 
+    7. l((α:sub:`1`)(α:sub:`2`)... (α:sub:`n`)) = Σ:sub:`i=1`:sup:`n` α:sub:`i`
+
+Comparing step 6 to step 7 and noting the *α*:sub:`i` is in the same position the same for all *1 ≤ i ≤ n*, it follows by Definition 1.1.4 of String Equality, 
+
+    8. ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
+
+Since n and p were arbitrary, this can be generalized,
+
+    9. ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i) ∎
 
 Section III.II: Palindromes 
 ---------------------------
@@ -2918,7 +2937,9 @@ This in turn implies,
 
     7. PP ⊂ K ∎
 
-**Theorem TODO** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+The connection between Invertible Sentences and Palindromes is thus established with Theorem 3.2.1. All Perfect Palindromes are Invertible Sentences, but not all Invertible Sentences are Perfect Palindromes. This in turn leads to the next two theorems which demonstrate the connection between Palindromes and Invertible Words. 
+
+**Theorem 3.2.2** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
 Let ζ be an arbitrary Sentence in the Corpus such that
 
@@ -2932,9 +2953,7 @@ By Theorem 2.3.9,
 
     ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})  ∎
 
-The connection between Invertible Sentences and Palindromes is thus established with Theorem 3.2.1. All Perfect Palindromes are Invertible Sentences, but not all Invertible Sentences are Perfect Palindromes.
-
-**Theorem 3.2.2** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
+**Theorem 3.2.3** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 
 In natural language, this theorem can be states as Follows: If a Sentence is a Perfect Palindrome, then all of its Words are Invertible. 
 
@@ -2956,13 +2975,17 @@ Recall the tautology of *Hypothetical Syllogisms*, for any propositions *p*, *q*
 
 Applying this tautological law to step 2 and step 3,
 
-    5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: α ∈ I)
+    5. ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
+
+This can be rewritten using the rules of quantifiers,
+
+    6. ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 
 Which is what was to be shown. ∎ 
 
 It is now shown using the previous theorems that Perfect Palindromes are in fact a subset of the set that implicitly satisfies Definition 3.2.1.
 
-**Theorem 3.2.3**  PP ⊂ P
+**Theorem 3.2.4**  PP ⊂ P
 
 Assume *ζ* is arbitrary Sentence in **C**:sub:`L` such that,
 
@@ -3008,11 +3031,11 @@ Definition 3.2.3 is not an explicit definition. It does not say how the class of
 
 This gives a way of identifying Sentences such as *ᚠ = "to oscillate metallic soot"* and *ᚢ = "rats live on no evil star"* as representatives of the same class, namely Palindromes, but with different *aspects*. *ᚢ* is Perfect, while *ᚠ* requires a *σ*-reduction. 
 
-**Theorem 3.2.4** PP ∪ IP = P
+**Theorem 3.2.5** PP ∪ IP = P
 
-Follows immediately from Theorem 3.2.3, Definition 3.2.3, and the fact that PP and IP are disjoint (by the definition of set difference). ∎
+Follows immediately from Theorem 3.2.4, Definition 3.2.3, and the fact that PP and IP are disjoint (by the definition of set difference). ∎
 
-Since PP and IP are non-overlapping by Definition 3.2.3 and their union encompasses the entire class of Palindromes by Theorem 3.2.2, these two sets form a partition of the class of Palindromes. The following definition and terminology is introduced to help describe this partitioning.
+Since PP and IP are non-overlapping by Definition 3.2.3 and their union encompasses the entire class of Palindromes by Theorem 3.2.3, these two sets form a partition of the class of Palindromes. The following definition and terminology is introduced to help describe this partitioning.
 
 **Definition 3.2.4: Aspect**
 
@@ -3092,7 +3115,7 @@ Note that Definition 3.2.5 and Definition 3.2.6 are given in terms of Sentences 
 
 The next two theorems leverage this insight and establish the fundamental relationship between Left and Right Partial Sentences. In addition, they prove the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
 
-**Theorem 3.2.5** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+**Theorem 3.2.6** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
 
 This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is odd if and only if the String Length of the Left Partial Sentence of Length *i+1* is equal to the String Length of the Right Partial Sentence starting at index *i+1*.
 
@@ -3158,7 +3181,7 @@ Therefore l(ζ) is odd. Putting both directions of the proof together and genera
 
     6. ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))  ∎
 
-**Theorem 3.2.6** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+**Theorem 3.2.7** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
 
 This theorem can be stated in natural language as follows: For any Sentence in the corpus, its String Length is even if and only if the String Length of the Left Partial Sentence of Length *i* plus 1 is equal to the String Length of the Right Partial Sentence starting at index *i*.
 
@@ -3227,7 +3250,7 @@ Thus, l(ζ) is even. Since both directions of the implication hold, it can be co
 
     ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))) ∎
 
-**Theorem 3.2.7** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+**Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus, there exists a natural number *n* (between *1* and the length of *ζ*, inclusive) such that either the String Length of its Left Partial Sentence is equal to the String Length of its Right Partial Sentence, or the String Length of the Left Partial Sentence is one more than the String Length of the Right Partial Sentence.
 
@@ -3279,7 +3302,7 @@ The Pivot of a Sentence *ζ*, denoted *ω(ζ)*, is defined as the natural number
 
    (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) + 1 = l(ζ[ω(ζ):])) 
    
-Using Theorem 3.2.5 and Theorem 3.2.6, the explicit formula for a Sentence Pivot are given below,
+Using Theorem 3.2.6 and Theorem 3.2.7, the explicit formula for a Sentence Pivot are given below,
 
     - If l(ζ) is odd, then ω(ζ) = i + 1, where i is the natural number satisfying l(ζ) = 2i + 1.
     - If l(ζ) is even, then ω(ζ) = i, where i is the natural number satisfying l(ζ) = 2i. ∎
@@ -3308,7 +3331,7 @@ Consider these simple examples from a hypothetical Language **L** with Alphabet 
 | "a bca"       | 5    | 3    | "a b"      | 3           | "bca"       | 3           |
 | "a bbc  a"    | 8    | 4    | "a bb"     | 3           | "bc  a"     | 5           | ∎
 
-In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.2.7. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.2.6. 
+In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.2.8. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.2.7. 
 
 With the notion of a Palindromic Pivot established, the class of Even and Odd Palindromes is now defined. 
 
@@ -3326,13 +3349,13 @@ The class of Even Palindromes, denoted **P**:sup:`-`, is defined as the set of S
 
 The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior around the Pivot will be important for establishing the various cases of the theorems proved in the next section. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence, while the Left and Right Partial are of equal String Length when the String Length of the Sentence is even.
 
-**Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
+**Theorem 3.2.9** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
 
 ( → ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
     1. ∃ k ∈ ℕ : l(ζ) = 2k + 1
 
-From Theorem 3.2.5 and step 1, it follows 
+From Theorem 3.2.6 and step 1, it follows 
 
     2. n = i + 1 
     
@@ -3372,7 +3395,7 @@ Since both direction of the equivalence are shown, the theorem is proved,
 
     6. ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2 ∎
 
-**Theorem 3.2.9** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+**Theorem 3.2.10** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
 
 Assume 
 
@@ -3382,17 +3405,17 @@ From Definition 3.2.9, it follows,
 
     2. ∃ k ∈ ℕ : l(ζ) = 2k + 1
 
-From Theorem 3.2.8, it follows, 
+From Theorem 3.2.9, it follows, 
 
     3. ω(ζ) = (l(ζ) + 1)/2 ∎
 
-**Theorem 3.2.10** ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ : l(ζ) = 2i) ↔ ω(ζ) = l(ζ)/2
+**Theorem 3.2.11** ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ : l(ζ) = 2i) ↔ ω(ζ) = l(ζ)/2
 
 ( → ) Let ζ be an arbitrary in **C**:sub:`L` such that,
 
     1. ∃ i ∈ ℕ : l(ζ) = 2i
 
-By Theorem 3.2.6, 
+By Theorem 3.2.7, 
 
     2. l(ζ[:i]) + 1 = l(ζ[i:])
 
@@ -3429,7 +3452,7 @@ Since both directions of the equivalence have been shown, it follows,
 
     ∀ ζ ∈ C:sub:`L`: ω(ζ) = l(ζ)/2 ∎
 
-**Theorem 3.2.11** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+**Theorem 3.2.12** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 
 Assume 
 
@@ -3439,11 +3462,11 @@ From Definition 3.2.8, it follows,
 
     2. ∃ k ∈ ℕ : l(ζ) = 2k
 
-From Theorem 3.2.10, it follows, 
+From Theorem 3.2.11, it follows, 
 
     3. ω(ζ) = l(ζ)/2 ∎
 
-**Theorem 3.2.12** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+**Theorem 3.2.13** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
 
 Assume *ζ* is an arbtirary Sentence from the Corpus,
 
@@ -3465,9 +3488,9 @@ Since *ζ* was arbitrary, this can generalize,
 
     5. ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) ∎
 
-These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in Theorems 3.1.29 - 3.1.20.
+These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in Theorems 3.1.14 - 3.1.15.
 
-**Theorem 3.2.13** P:sup:`+` ∩ P:sup:`-` = ∅
+**Theorem 3.2.14** P:sup:`+` ∩ P:sup:`-` = ∅
 
 This theorem can be stated in natural language as follows: A Palindrome cannot be both even and odd.
 
@@ -3496,7 +3519,7 @@ Therefore, the assumption that ζ is both an Even and Odd Palindrome must be fal
 
     7. P:sup:`-` ∩ P:sup:`+` = ∅ ∎
 
-**Theorem 3.2.14** P:sup:`-` ∪ P:sup:`+` = P
+**Theorem 3.2.15** P:sup:`-` ∪ P:sup:`+` = P
 
 This theorem can be translated into natural language as follows: All Palindromes are either Even Palindromes or Odd Palindromes. 
 
@@ -3574,47 +3597,58 @@ A Palindrome ζ is said to have an *odd parity* or *be odd* if and only if,
 
     P ∈ P:sup:`-` ∎
 
+Now that the two partitioning of Palindromes, aspect and parity, have been precisely defined, the final section of this work requires one more definition to correctly formulate its main results. This definition will allow the structure around a Palindrome's Pivot to be described with precise notation.
 
 **Definition 3.2.11: Pivot Words**
 
-Let ζ be a sentence in C:sub:L with length Λ(ζ), word-level representation W:sub:ζ, and pivot ω(ζ). The left pivot word, denoted ζ{ω-}, and the right pivot word, denoted ζ{ω+}, are defined as follows:
+Let *ζ* be a sentence in C:sub:`L` with length *Λ(ζ)*, word-level representation W:sub:`ζ`, and pivot *ω(ζ)*. The left Pivot Word, denoted *ζ{ω-}*, and the right Pivot Word, denoted *ζ{ω+}*, are defined as follows:
 
-Case 1: Λ(ζ) = 1
+**Case 1**: Λ(ζ) = 1
 
-ζ{ω-} = ζ{ω+} = the only word in ζ (which is also ζ{1} and ζ{Λ(ζ)})
-Case 2: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
+    - ζ{ω-} = ζ{ω+} = ζ{1} = ζ{Λ(ζ)}
 
-ζ{ω-} = the word α:sub:j such that (j, α:sub:j) ∈ W:sub:ζ and α:sub:j is immediately to the left of the delimiter at ω(ζ).
-ζ{ω+} = the word α:sub:k such that (k, α:sub:k) ∈ W:sub:ζ and k = j + 1.
-Case 3: Λ(ζ) > 1 and ζ[ω(ζ)] ≠ σ
+**Case 2**: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
 
-ζ{ω-} = ζ{ω+} = the word α:sub:j such that (j, α:sub:j) ∈ W:sub:ζ and α:sub:j contains the character at position ω(ζ).
+    - ζ{ω-} = α:sub:`j`, such that (j, α:sub:`j`) ∈ W:sub:`ζ` and α:sub:`j` is immediately to the left of the Delimiter at ω(ζ).
+    - ζ{ω+} = α:sub:`k`, such that (k, α:sub:`k``) ∈ W:sub:`ζ` and k = j + 1.
 
+**Case 3**: Λ(ζ) > 1 and ζ[ω(ζ)] ≠ σ
 
+    - ζ{ω-} = ζ{ω+} = α:sub:`j` such that (j, α:sub:`j`) ∈ W:sub:`ζ` and α:sub:`j` contains the character at position ω(ζ). ∎
 
+The meaning of Pivot Words can be clarified with a few examples. 
 
+**Example**
 
-ζ = "a b c" (odd length, delimiter pivot):
-l(ζ) = 5, ω(ζ) = 3, ζ[3] = σ
-W:sub:ζ = {(1, "a"), (2, "b"), (3, "c")}
-α:sub:ζ:sup:-ω = "b"
-α:sub:ζ:sup:+ω = "c"
-ζ = "abc def" (even length, delimiter pivot):
-l(ζ) = 7, ω(ζ) = 4, ζ[4] = σ
-W:sub:ζ = {(1, "abc"), (2, "def")}
-α:sub:ζ:sup:-ω = "abc"
-α:sub:ζ:sup:+ω = "def"
-ζ = "a b a" (odd length, non-delimiter pivot):
-l(ζ) = 5, ω(ζ) = 3, ζ[3] = "b"
-W:sub:ζ = {(1, "a"), (2, "b"), (3, "a")}
-α:sub:ζ:sup:-ω = "b"
-α:sub:ζ:sup:+ω = "b"
-ζ = "xyz" (single word):
-l(ζ) = 3, ω(ζ) = 2
-W:sub:ζ = {(1, "xyz")}
-α:sub:ζ:sup:-ω = "xyz"
-α:sub:ζ:sup:+ω = "xyz"
+1. Let *ᚠ = "a b c"*
+   
+    - l(ᚠ) = 5, ω(ᚠ) = 3, ᚠ[3] = b
+    - W:sub:`ᚠ` = {(1, "a"), (2, "b"), (3, "c")}
+    - ᚠ{ω-} = "b"
+    - ᚠ{ω+} = "B"
 
+2. Let *ᚠ = "abc def"*
+
+    - l(ζ) = 7, ω(ζ) = 4, ζ[4] = σ
+    - W:sub:`ζ` = {(1, "abc"), (2, "def")}
+    - ζ{ω-} = "abc"
+    - ζ{ω+} = "def"
+
+3. Let *ᚠ = "a bc de fg h"*
+
+    - l(ζ) = 12, ω(ζ) = 6, ζ[6] = d
+    - W:sub:ζ = {(1, "a"), (2, "bc"), (3, "de"), (4,"fg"), (5, "h")}
+    - ζ{ω-} = "de"
+    - ζ{ω+} = "de" 
+
+3. Let *ᚠ = "ab cde fg hij"*
+
+    - l(ζ) = 13, ω(ζ) = 7, ζ[6] = σ
+    - W:sub:ζ = {(1, "ab"), (2, "cde"), (3, "fg"), (4,"hij")}
+    - ζ{ω-} = "dce"
+    - ζ{ω+} = "fg"∎
+
+From these simplified examples, it should be clear that a Pivot Word is either the Word which contains the Pivot Character, or it is the pair of Words which surround the Pivot Character (i.e. exactly when the Pivot Character is a Delimiter).
 
 Section III.III: Structures
 ---------------------------
@@ -3716,14 +3750,10 @@ Since ζ was an arbitrary palindrome, this can be generalized using the definiti
     27.  ∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ∎
 
 
-**Theorem 3.2.2: The Delimiter Postulate**
+**Theorem 3.2.3**
 
 
-Theorem 3.2.2 (Second Inverse Postulate): ∀ ζ ∈ P: (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{+ω}) ⊂:sub:`s` ζ{ω-})
-
-
-
-∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:s ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:s ζ{ω-}) )
+Theorem 3.2.3 (Second Inverse Postulate): ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 
 Translation: For every palindrome ζ in the corpus, if the character at the pivot index ω(ζ) is a delimiter (σ), then either the inverse of the left pivot word is a substring of the right pivot word, or the inverse of the right pivot word is a substring of the left pivot word.
 
@@ -3731,7 +3761,7 @@ Explanation:
 
 Condition on Pivot Character: The theorem now explicitly states the condition ζ[ω(ζ)] = σ, meaning the postulate only applies when the pivot character is a delimiter.
 Implication: When the pivot is a delimiter, the original relationship involving containment of inverses between the left and right pivot words still holds.
-Odd/Even Length: This condition implicitly applies to both even and odd-length palindromes because if the length is odd and the palindrome is perfect the pivot cannot be a delimiter by Theorem 3.2.5.
+Odd/Even Length: This condition implicitly applies to both even and odd-length palindromes because if the length is odd and the palindrome is perfect the pivot cannot be a delimiter by Theorem 3.2.6.
 Proof:
 
 We need to adjust the proof we had for the earlier version of the Second Inverse Postulate to account for the added condition:
@@ -3787,7 +3817,7 @@ This completes the proof. ∎
 
 
 
-**Theorem 3.2.3: The Perfect Pivot Postulate**
+**Theorem: The Perfect Pivot Postulate**
 
 ζ ∈ PP ↔ [∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:`s` α) ∧ (α ∈ R) ] ∨ (ζ[ω(ζ)] = σ)
 
@@ -3845,7 +3875,7 @@ Reformulation of the Theorem:
 
 Let's first slightly reformulate the theorem to make it even clearer and more precise:
 
-Theorem 3.2.3:
+Theorem 3.2.4:
 
 ζ ∈ PP ↔ [ (∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:s α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ (inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω)) ]
 
@@ -3865,7 +3895,7 @@ Assume ζ ∈ PP.
 
 Definition of Perfect Palindrome: By Definition 3.2.1, ζ = inv(ζ).
 Case 1: ζ[ω(ζ)] = σ:
-If the character at the pivot is a delimiter, then by the Second Inverse Postulate (Theorem 3.2.2), we know that ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ).
+If the character at the pivot is a delimiter, then by the Second Inverse Postulate , we know that ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ).
 Case 2: ζ[ω(ζ)] ≠ σ:
 If the character at the pivot is not a delimiter, then it must belong to a word.
 By Axiom S.2, we know there's at least one word α in ζ.
@@ -3905,7 +3935,7 @@ Characterization of Perfect Palindromes: This theorem provides a powerful way to
 
 
 
-Theorem 3.2.3:
+Theorem 3.2.4:
 
 ∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α:sub:ζ:sup:-ω ∈ I))
 
@@ -3922,18 +3952,18 @@ Definition of Perfect Palindrome: By Definition 3.2.1, ζ = inv(ζ).
 Cases based on Parity: We have two cases to consider:
 
 Case 1: ζ has odd length (ζ ∈ P:sup:-)
-By Theorem 3.2.2, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). This means the pivot falls on a character, ζ[ω(ζ)].
+By Theorem 3.2.3, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). This means the pivot falls on a character, ζ[ω(ζ)].
 Subcase 1: ζ[ω(ζ)] ≠ σ
 Since ζ[ω(ζ)] is not a delimiter, it must belong to a word. By Axiom S.1, there exists a word α in L such that α is contained in ζ. Since the pivot character is not a delimiter, it must be part of a word in ζ. Let α be the word such that (x, α) ∈ W:sub:ζ and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
 Since ζ is a perfect palindrome, and ω(ζ) is the pivot, this word α must be reflective (α ∈ R). Otherwise, the characters in ζ would not be symmetrical around the pivot, and ζ wouldn't be a perfect palindrome.
 Therefore, ∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R).
 Subcase 2: ζ[ω(ζ)] = σ
-Since the pivot character is a delimiter, by Theorem 3.2.2, we know that inv(α:sub:ζ:sup:-ω) ⊂ α:sub:ζ:sup:+ω or inv(α:sub:ζ:sup:+ω) ⊂ α:sub:ζ:sup:-ω.
+Since the pivot character is a delimiter, by Theorem 3.2.3, we know that inv(α:sub:ζ:sup:-ω) ⊂ α:sub:ζ:sup:+ω or inv(α:sub:ζ:sup:+ω) ⊂ α:sub:ζ:sup:-ω.
 Since ζ is a perfect palindrome, we have ζ = inv(ζ). This means the words to the left and right of the pivot must be inverses of each other.
 Therefore, α:sub:ζ:sup:-ω = inv(α:sub:ζ:sup:+ω).
 Since α:sub:ζ:sup:+ω is in L, and α:sub:ζ:sup:-ω is its inverse, by definition of invertible words, α:sub:ζ:sup:-ω ∈ I.
 Case 2: ζ has even length (ζ ∈ P:sup:+)
-By Theorem 3.2.3, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ) + 1:]) + 1. This means the pivot falls between two characters.
+By Theorem 3.2.4, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ) + 1:]) + 1. This means the pivot falls between two characters.
 Since ζ is a perfect palindrome, the two characters adjacent to the pivot must be identical (because ζ = inv(ζ)).
 By Axiom W.1, these characters cannot be delimiters. Thus, they must belong to a word α that spans across the pivot.
 Similar to Case 1, this word α must be reflective (α ∈ R) for ζ to be a perfect palindrome.
@@ -3947,7 +3977,7 @@ This completes the proof. ∎
 
 
 
-**Theorem 3.2.4: The Perfect Parity Postulate**
+**Theorem 3.2.5: The Perfect Parity Postulate**
 
 ζ ∈ PP ∧ ζ ∈ P:sup:`+` ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R)
 
@@ -4017,9 +4047,9 @@ By Theorem 2.4.1, Δ(ζ) = n - 1. Since n is even, n - 1 must be odd.
 Since ζ is an imperfect palindrome, by the definition of the imperfection, we know:
 ζ ≠ inv(ζ)
 σ_reduce(ζ) = inv(σ_reduce(ζ))
-Since σ_reduce(ζ) = inv(σ_reduce(ζ)), and by Theorem 3.2.2 we know parity is preserved if the length of the left partial at the pivot point is exactly one longer than the right partial, we know the sentence pivot must either fall on a character or a delimiter.
+Since σ_reduce(ζ) = inv(σ_reduce(ζ)), and by Theorem 3.2.3 we know parity is preserved if the length of the left partial at the pivot point is exactly one longer than the right partial, we know the sentence pivot must either fall on a character or a delimiter.
 If the pivot falls on a delimiter, then n must be odd by the Second Inverse Postulate. Since n is even, this is impossible.
-If the pivot falls on a character, then that character must be a non-delimiter, non-empty character by our definition of a pivot. Since ζ is an imperfect palindrome, this pivot character cannot be part of a reflective word by Theorem 3.2.3. This means it must be part of an invertible word pair by Theorem 3.2.1. The inverse of the pivot character must appear in the inverse word, since it cannot be a reflective word.
+If the pivot falls on a character, then that character must be a non-delimiter, non-empty character by our definition of a pivot. Since ζ is an imperfect palindrome, this pivot character cannot be part of a reflective word by Theorem 3.2.4. This means it must be part of an invertible word pair by Theorem 3.2.1. The inverse of the pivot character must appear in the inverse word, since it cannot be a reflective word.
 By our definition of σ-reduction, σ_reduce(ζ) removes all delimiters, and by Theorem 1.2.4, inversion inverts words. So, for a palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)) preserves the order of non-delimiter characters under inversion.
 Therefore, l(σ_reduce(ζ)) must be odd, as it preserves the non-delimiter pivot character under inversion, and there are an even number of non-delimiter characters around it, (Δ(ζ)).
 
