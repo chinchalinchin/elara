@@ -320,3 +320,77 @@ Explanation:
 The proof hinges on the fact that when the pivot character is a delimiter, σ-reduction removes it, making the pivot words adjacent in the σ-reduced palindrome. Due to the palindrome property, these adjacent words must be inverses of each other after σ-reduction. This implies the containment relationship stated in the theorem.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+Theorem 3.2.1 (First Inverse Postulate):
+
+∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1})
+
+Proof:
+
+Let ζ be an arbitrary palindrome in P.
+
+Definition of Palindrome: Since ζ ∈ P, by Definition 3.1.2, ς(ζ) = inv(ς(ζ)).
+
+First and Last Words: Let α = ζ{1} and β = ζ{Λ(ζ)} be the first and last words of ζ, respectively.
+
+σ-reduction: By Axiom W.1, σ_reduce(α) = α and σ_reduce(β) = β.
+
+σ-reduction of ζ: Since words do not contain delimiters, σ-reduction distributes over concatenation, allowing us to express σ_reduce(ζ) as:
+
+ς(ζ) = α(ς(ζ{2}))...(ς(ζ{Λ(ζ)-1}))β
+Inversion of σ-reduction: Taking the inverse of both sides and using the fact that ς(ζ) is a palindrome:
+
+inv(ς(ζ)) = ς(ζ) = inv(α(ς(ζ{2}))...(ς(ζ{Λ(ζ)-1}))β)
+Applying Theorem 1.2.5: Applying Theorem 1.2.5 repeatedly to distribute the inversion:
+
+ς(ζ) = inv(β)inv(ς(ζ{Λ(ζ)-1}))...inv(ς(ζ{2}))inv(α)
+Comparing Start and End: Now, we compare the start of ς(ζ) in step 4 with the end of inv(ς(ζ)) in step 6, and the end of ς(ζ) in step 4 with the start of inv(ς(ζ)) in step 6:
+
+ς(ζ) starts with α and inv(ς(ζ)) ends with inv(α).
+ς(ζ) ends with β and inv(ς(ζ)) starts with inv(β).
+Trichotomy: By the trichotomy principle, one of the following must be true:
+
+Case 1: l(α) = l(β):
+
+This implies α = inv(β) and β = inv(α).
+Since a word is always a substring of itself, we have α ⊂:sub:s inv(β) and inv(α) ⊂:sub:s β.
+Case 2: l(α) > l(β):
+
+This implies l(inv(α)) > l(β).
+Since inv(β) is at the beginning of inv(ς(ζ)) and α is at the beginning of ς(ζ), and these are equal, inv(β) must be a substring of α.
+Similarly, since α is at the end of inv(ς(ζ)) and β is at the end of ς(ζ), β must be a substring of inv(α).
+Therefore, inv(β) ⊂:sub:s α and β ⊂:sub:s inv(α).
+Case 3: l(α) < l(β):
+
+This implies l(inv(α)) < l(β)
+Similar to Case 2, we can conclude that α ⊂:sub:s inv(β) and inv(α) ⊂:sub:s β.
+Conclusion: In all cases, we have either (inv(α) ⊂:sub:s β) or (inv(β) ⊂:sub:s α). Substituting back α = ζ{1} and β = ζ{Λ(ζ)}, we get:
+
+(inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1})
+Since ζ was an arbitrary palindrome, we can generalize:
+
+∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})

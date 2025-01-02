@@ -138,6 +138,7 @@ Theorems
 - T 3.1.6: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
 - T 3.1.7: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
 - T 3.2.1: PP ⊂ K
+- T TODO: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 3.2.2: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
 - T 3.2.3: PP ⊂ P
 - T 3.2.4: PP ∪ IP = P

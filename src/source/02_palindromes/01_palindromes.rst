@@ -2746,6 +2746,20 @@ This in turn implies,
 
     7. PP ⊂ K ∎
 
+**Theorem TODO** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+
+Let ζ be an arbitrary Sentence in the Corpus such that
+
+    1. ζ ∈ PP
+
+By Theorem 3.2.1 
+
+    1. PP ⊂ K
+
+By Theorem 2.3.9,
+
+    ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})  ∎
+
 The connection between Invertible Sentences and Palindromes is thus established with Theorem 3.2.1. All Perfect Palindromes are Invertible Sentences, but not all Invertible Sentences are Perfect Palindromes.
 
 **Theorem 3.2.2** ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
@@ -3388,113 +3402,152 @@ A Palindrome ζ is said to have an *odd parity* or *be odd* if and only if,
 
     P ∈ P:sup:`-` ∎
 
+
+**Definition 3.2.11: Pivot Words**
+
+Let ζ be a sentence in C:sub:L with length Λ(ζ), word-level representation W:sub:ζ, and pivot ω(ζ). The left pivot word, denoted ζ{ω-}, and the right pivot word, denoted ζ{ω+}, are defined as follows:
+
+Case 1: Λ(ζ) = 1
+
+ζ{ω-} = ζ{ω+} = the only word in ζ (which is also ζ{1} and ζ{Λ(ζ)})
+Case 2: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
+
+ζ{ω-} = the word α:sub:j such that (j, α:sub:j) ∈ W:sub:ζ and α:sub:j is immediately to the left of the delimiter at ω(ζ).
+ζ{ω+} = the word α:sub:k such that (k, α:sub:k) ∈ W:sub:ζ and k = j + 1.
+Case 3: Λ(ζ) > 1 and ζ[ω(ζ)] ≠ σ
+
+ζ{ω-} = ζ{ω+} = the word α:sub:j such that (j, α:sub:j) ∈ W:sub:ζ and α:sub:j contains the character at position ω(ζ).
+
+
+
+
+
+ζ = "a b c" (odd length, delimiter pivot):
+l(ζ) = 5, ω(ζ) = 3, ζ[3] = σ
+W:sub:ζ = {(1, "a"), (2, "b"), (3, "c")}
+α:sub:ζ:sup:-ω = "b"
+α:sub:ζ:sup:+ω = "c"
+ζ = "abc def" (even length, delimiter pivot):
+l(ζ) = 7, ω(ζ) = 4, ζ[4] = σ
+W:sub:ζ = {(1, "abc"), (2, "def")}
+α:sub:ζ:sup:-ω = "abc"
+α:sub:ζ:sup:+ω = "def"
+ζ = "a b a" (odd length, non-delimiter pivot):
+l(ζ) = 5, ω(ζ) = 3, ζ[3] = "b"
+W:sub:ζ = {(1, "a"), (2, "b"), (3, "a")}
+α:sub:ζ:sup:-ω = "b"
+α:sub:ζ:sup:+ω = "b"
+ζ = "xyz" (single word):
+l(ζ) = 3, ω(ζ) = 2
+W:sub:ζ = {(1, "xyz")}
+α:sub:ζ:sup:-ω = "xyz"
+α:sub:ζ:sup:+ω = "xyz"
+
+
 Section III.III: Structures
 ---------------------------
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
 
-**Definition 3.3.1: Pivot Words** 
+TODO
 
-For any Sentence in a Corpus, the Pivot Words, denoted α:sub:ζ:sup:-ω and α:sub:ζ:sup:+ω, are defined as follows.
+**Theorem 3.3.1** ∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
 
-Let *ζ* be a Sentence in C:sub:`L`` with Word-level representation **W**:sub:`ζ`,
+Assume 
 
-    **W**:sub:`ζ` = (α:sub:`1` , α:sub:`2` , ..., α:sub:`Λ(ζ)`)
-
-TODO ∎
-
-**Theorem 3.3.1** ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)- i + 1] = σ 
-
-This theorem can be stated in natural language as follows: For every Perfect Palindrome ζ in the Corpus, every Delimiter at index *i* must have a corresponding Delimiter at index *l(ζ) - i + 1*.
-
-Let *ζ* be an arbitrary Sentence in the Corpus such that,
-
-    1. ζ ∈ PP 
-   
-From step 1 and Definition 3.2.2,
-
-    2. ζ = inv(ζ).
-
-From step 2 and the Definition 1.2.4, it is follows,
-
-    3. ζ[i] = ζ[l(ζ) - i + 1]
-
-Assume there exists an *i* (1 ≤ i ≤ l(ζ)) such that,
-
-    5. ζ[i] = σ
-
-From step 3 and step 4, it immediately follows, 
-
-    6. ζ[l(ζ) - i + 1] = σ
-
-Conversely, if 
-
-    7. ζ[l(ζ) - i + 1] = σ
-
-Then by step 3, it immediately follows,
-
-    8. ζ[i] = σ.
-
-This can be generalized as follows,
-
-    9. ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)-i+1] = σ ∎
-
-It now shown for every Perfect Palindrome, the inverse of Each word is mirrored by the inverse of the corresponding Word at the opposite end of the Sentence. This property is a direct consequence of the fact that Perfect Palindromes are a subset of Invertible Sentences.
-
-**Theorem 3.3.2** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
-
-Let ζ be an arbitrary Sentence in the Corpus such that
-
-    1. ζ ∈ PP
-
-By Theorem 3.2.1 
-
-    1. PP ⊂ K
-
-By Theorem 2.3.9,
-
-    ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})  ∎
-
-**Theorem 3.3.3** ∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
-
-This theorem can be stated in natural language as follows: For every Palindrome ζ in the Corpus, either the Inverse of the first Word is contained in last Word, or the inverse of the Last Word is contained in the first word.
-
-Let ζ be an arbitrary Sentence in the Coprus such taht,
-
-    ζ ∈ P
+    1. ζ ∈ P
     
-By Definition 3.1.2, 
+By Definition 3.2.1,
 
-    ς(ζ) = inv(ς(ζ))
+    2. ς(ζ) = inv(ς(ζ))
+    3. l(ς(ζ)) = l(inv(ς(ζ)))
 
 Let 
+    
+    4. α = ζ{1}
+    5. β = ζ{Λ(ζ)} 
 
-    α = ζ{1} 
-    β = ζ{Λ(ζ)}
+By Discovery Axiom W.1, Words do not contain Delimiters, so *σ*-Reduction of ζ, *ς(ζ)* can be represented as a concatenation of the σ-reduced words of ζ:
 
-By the definition of σ-reduction, *ς(α)* is a prefix of *ς(ζ)* and *ς(β)* is a suffix of *ς(ζ)*. Since *ζ* is a Palindrome, inv(ς(α)) must be a substring of ς(ζ).
+    6. ς(ζ) = (ς(α)) (ς(ζ{2})) ... (ς(ζ{Λ(ζ)-1})) (ς(β))
 
-Since *ς(α)*  is a prefix of *ς(ζ)*, *inv(ς(α))* must be a suffix of *inv(ς(ζ))*.
+Taking the Inverse of both sides,
 
-Because *ς(ζ)* is a palindrome, its first word is the inverse of its last word. Thus, σ_reduce(α) = inv(σ_reduce(β)) and σ_reduce(β) = inv(σ_reduce(α)).
+    7. inv(ς(ζ)) = inv((ς(α)) (ς(ζ{2})) ... (ς(ζ{Λ(ζ)-1})) (ς(β)))
 
-Containment and Inverses: From the above, we can conclude that either:
+Applying Theorem 1.2.5 repeatedly,
 
-inv(α) = σ_reduce(inv(α)) ⊂:sub:s σ_reduce(β) = β = ζ{Λ(ζ)}, or
-inv(β) = σ_reduce(inv(β)) ⊂:sub:s σ_reduce(α) = α = ζ{1}.
-Conclusion: Therefore, either inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)} or inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}.
+    8. inv(ς(ζ)) = (inv(ς(β))) (inv(ς(ζ{Λ(ζ)-1}))) ... (inv(ς(ζ{2}))) (inv(ς(α)))
 
-Since ζ was an arbitrary palindrome, we can generalize:
+By the Definition of *σ*-reduction, and because *α* and *β* are Words, it follows from the Discovery Axiom W.1,
 
-∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
-This completes the proof. ∎
+    9. ς(α) = α
+    10. ς(β) = β
+
+Substituting into step 6,
+
+    11. ς(ζ) = (α) (ς(ζ{2})) ... (ς(ζ{Λ(ζ)-1})) (β)
+
+Substituting step 9 and step 10 into step 8,
+
+    12. inv(ς(ζ)) = (inv(β)) (inv(ς(ζ{Λ(ζ)-1}))) ... (inv(ς(ζ{2}))) (inv(α))
+   
+By step 2, step 11 and step 12 are equal. Now, it is either the case, by the trichotomy principle,
+
+    13. l(α) = l(β)
+    14. l(α) > l(β)
+    15. l(α) < l(β)
+
+If l(α) = l(β), then 
+
+    16. l(α) = l(inv(β))
+
+And by Definition of Containment, since *α* and *inv(β)* are the first Words that appear in step 10 and step 11, it follows, 
+
+    17.  (α ⊂:sub:`s` inv(β)) ∧ (inv(β) ⊂:sub:`s` α)
+
+And by Definition of Containment, since *inv(α)* and *β* are the last Words that appear in step 10 and step 11, it follows, 
+
+    18. (inv(α) ⊂:sub:`s` β) ∧  (β ⊂:sub:`s` inv(α))
+   
+If l(α) > l(β), then 
+
+    19.  l(inv(α)) = l(α) > l(inv(β)) = l(β)
+
+And by Definition of Containment, since *α* and *inv(β)* are the first Words that appear in step 10 and step 11, it follows, 
+
+    20.   inv(β) ⊂:sub:`s` α
+
+And by Definition of Containment, since *inv(α)* and *β* are the last Words that appear in step 10 and step 11, it follows,
+
+    21.  β ⊂:sub:`s` inv(α) 
+
+If l(α) < l(β), then 
+
+    22.  l(inv(α)) = l(α) < l(inv(β)) = l(β)
+
+And by Definition of Containment, since *α* and *inv(β)* are the first Words that appear in step 10 and step 11, it follows, 
+
+    23.  α ⊂:sub:`s` inv(β)
+
+And by Definition of Containment, since *inv(α)* and *β* are the last Words that appear in step 10 and step 11, it follows,
+
+    24.   inv(α)  ⊂:sub:`s` β
+   
+In all cases, the follow propositions obtain,
+
+    25. (inv(α)  ⊂:sub:`s` β) ∨ (inv(β) ⊂:sub:`s` α)
+    26. (α  ⊂:sub:`s` inv(β)) ∨ (β ⊂:sub:`s` inv(α))
+
+Since ζ was an arbitrary palindrome, this can be generalized using the definitions of *α* and *β* from step 4 and step 5.
+
+    27.  ∀ ζ ∈ P: (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ∎
 
 
 **Theorem 3.2.2: The Delimiter Postulate**
 
 
-
-Theorem 3.2.2 (Second Inverse Postulate): ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω )
+Theorem 3.2.2 (Second Inverse Postulate): ∀ ζ ∈ P: ( inv(α:sub:`ζ`:sup:`-ω`) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω )
 
 
 

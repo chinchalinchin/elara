@@ -78,3 +78,45 @@ By Definition 2.2.4, the Limitation of a Phrase is a String. String concatenatio
 Since *Π*:sub:`i=1`:sup:`n` *p(i)*, *Π*:sub:`i=1`:sup:`m` *q(i)*, and *Π*:sub:`i=1`:sup:`k` *r(i)* are all Strings, the associativity of String Concatenation can by applied to conclude,
 
     ∀ p ∈ Χ:sub:`L`(n), ∀ q ∈ Χ:sub:`L`(m), ∀ r ∈ Χ:sub:`L`(k): ((Π:sub:`i=1`:sup:`n` p(i))(Π:sub:`i=1`:sup:`m` q(i)))(Π:sub:`i=1`:sup:`k` r(i)) = ((Π:sub:`i=1`:sup:`n` p(i)))((Π:sub:`i=1`:sup:`m` q(i))(Π:sub:`i=1`:sup:`k` r(i))) ∎
+
+Removed: Symmetry of Delimiters
+-------------------------------
+
+**Theorem 3.3.1** ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)- i + 1] = σ 
+
+This theorem can be stated in natural language as follows: For every Perfect Palindrome ζ in the Corpus, every Delimiter at index *i* must have a corresponding Delimiter at index *l(ζ) - i + 1*.
+
+Let *ζ* be an arbitrary Sentence in the Corpus such that,
+
+    1. ζ ∈ PP 
+   
+From step 1 and Definition 3.2.2,
+
+    2. ζ = inv(ζ).
+
+From step 2 and the Definition 1.2.4, it is follows,
+
+    3. ζ[i] = ζ[l(ζ) - i + 1]
+
+Assume there exists an *i* (1 ≤ i ≤ l(ζ)) such that,
+
+    5. ζ[i] = σ
+
+From step 3 and step 4, it immediately follows, 
+
+    6. ζ[l(ζ) - i + 1] = σ
+
+Conversely, if 
+
+    7. ζ[l(ζ) - i + 1] = σ
+
+Then by step 3, it immediately follows,
+
+    8. ζ[i] = σ.
+
+This can be generalized as follows,
+
+    9. ∀ ζ ∈ PP: ∃ i ∈ N:sub:`l(ζ)`: ζ[i] = σ ↔ ζ[l(ζ)-i+1] = σ ∎
+
+It now shown for every Perfect Palindrome, the inverse of Each word is mirrored by the inverse of the corresponding Word at the opposite end of the Sentence. This property is a direct consequence of the fact that Perfect Palindromes are a subset of Invertible Sentences.
+
