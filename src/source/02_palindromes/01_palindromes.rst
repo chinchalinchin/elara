@@ -54,7 +54,7 @@ Definitions
 - D 1.2.4: String Inversion: inv(s)
 - D 1.2.5: Phrase: P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) = (P:sub:`n`(1), )
 - D 1.2.6: Lexicon: Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } 
-- D 1.2.7: Limitation: Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- D 1.2.7: Delimitation: Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
 - D 1.3.1: Reflective Words: α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] 
 - D 1.3.2: Invertible Words: α ∈ I ↔ inv(α) ∈ L
 - D 2.1.1: Corpus: C:sub:`L`
@@ -1109,12 +1109,12 @@ Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized as,
 
     21. ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) ∎
 
-Limitation
+Delimitation
 ^^^^^^^^^^
 
 While the analyis has not yet introduced the notion of Sentences into the formal system (see Section II), an operation will now be introduced that allows Words to be ordered into Phrases and then concatenated into Strings. This new operation will be important when String Inversion is applied to the sentential level of the formal system, allowing the conditions for a Sentence Inversion to be precisely specified.
 
-The placement of Definition 1.2.5 and Definition 1.2.6 is somewhat arbitary. There are valid arguments to be made for placing these definitions after the concepts of Sentence and Word Index notation have been introduced in Section II. However, since the operation of *Limitation* to be expounded immediately is essentially an operation defined on the domain of Strings which yields as a result another String, i.e. Limitation is closed with respect to Strings, the definitions are made here, to highlight the derivative notions (Inversion and Limitation) which can be built on top of the primitive notion of concatenation.
+The placement of Definition 1.2.5 and Definition 1.2.6 is somewhat arbitary. There are valid arguments to be made for placing these definitions after the concepts of Sentence and Word Index notation have been introduced in Section II. However, since the operation of *Delimitation* and *Limitations* to be expounded immediately are essentially an operation defined on the domain of Strings which yields as a result another String, i.e. Delimitation and Limitation are closed with respect to Strings, the definitions are made here, to highlight the derivative notions (Inversion, Delimitation and Limitations) which can be built on top of the primitive notion of concatenation.
 
 **Definition 1.2.5: Phrase**
 
@@ -1128,7 +1128,7 @@ where each *α*:sub:`i` *∈* **L**. If *i* is *1 ≤ i ≤ n*, P:sub:`n`(i) den
 
 When *n = 0*, **P**:sub:`0` is defined as the empty sequence (). ∎
 
-In order to establish some properties of Phrases and Limitations, a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is now defined.
+In order to establish some properties of Phrases, Delimitations and Limitations , a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is now defined.
 
 **Definition 1.2.6: Lexicon**
 
@@ -1142,21 +1142,35 @@ Some of the later theorems in this work will require quantifying over Phrases in
    
 Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for *1 ≤ i ≤ n*.
 
-Using these pair of definitions for Phrases and Lexicons and their associated terminology, the operation of *Limitation* is now defined over Phrases of fixed Word Length *n* in Definition 1.2.7.
+Using these pair of definitions for Phrases and Lexicons and their associated terminology, the operation of *Delimitation* is now defined over Phrases of fixed Word Length *n* in Definition 1.2.7.
 
-**Definition 1.2.7: Limitation**
+**Definition 1.2.7: Delimitation**
 
 Let **P**:sub:`n` be a Phrase of Word Length *n* from Language **L**,
 
     P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
-The *Limitation* of **P**:sub:`n`, denoted *Π*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
+The *Delimitation* of **P**:sub:`n`, denoted *Π(σ):*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
 
-    1. Empty Clause: Π:sub:`i=1`:sup:`0` P:sub:`n`(i) = ε
-    2. Basis Clause (n = 1): Π:sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
-    3. Recursive Clause (n > 1): Π:sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π:sub:`i=1`:sup:`n-1` P:sub:`n`(i))(σ)(α:sub:`n`) ∎
+    1. Empty Clause: Π(σ):sub:`i=1`:sup:`0` P:sub:`n`(i) = ε
+    2. Basis Clause (n = 1): Π(σ):sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
+    3. Recursive Clause (n > 1): Π(σ):sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π:sub:`i=1`:sup:`n-1` P:sub:`n`(i))(σ)(α:sub:`n`) ∎
 
-Before proving the basic properties of Limitation, an example of how a Limitation is constructed recursively is given below.
+**Definition 1.2.8: Limitation**
+
+Let **P**:sub:`n` be a Phrase of Word Length *n* from Language **L**,
+
+    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+
+The *Limitation* of **P**:sub:`n`, denoted *Π(ε)*:sub:`i=1`:sup:`n` **P**:sub:`n`*(i)*, is defined recursively as:
+
+    1. Empty Clause: Π(ε):sub:`i=1`:sup:`0` P:sub:`n`(i) = ε
+    2. Basis Clause (n = 1): Π(ε):sub:`i=1`:sup:`1` P:sub:`n`(i) = α:sub:`1`
+    3. Recursive Clause (n > 1): Π(ε):sub:`i=1`:sup:`n` P:sub:`n`(i) = (Π(ε):sub:`i=1`:sup:`n-1` P:sub:`n`(i))(α:sub:`n`) ∎
+
+The key difference between Definition 1.2.7 and Definition 1.2.8 is the presence of the Delimiter in the Recursive Clause. In other words, a Delimitation inserts a Delimiter between the Words it is concatenating, while a Limitation is simply a shorthand simply for concatenating a sequence of Words.
+
+Before proving the existence of Delimitations and Limitations, an example of how they are constructed recursively is given below.
 
 **Example**
 
@@ -1166,24 +1180,30 @@ The Basis Step yields,
 
     1. n = 1: Π:sub:`i=1`:sup:`1` α:sub:`i` = "mother" 
 
-And then the Limitation can be built up recursively using the Recursive Step repeatedly,
+And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
 
-    2.  n = 3: Π:sub:`i=1`:sup:`2` α:sub:`i` = (Π:sub:`i=1`:sup:`1` α:sub:`i`)(σ)("may")= ("mother")(σ"may") = "mother"σ"may"
-    3.  n = 3: Π:sub:`i=1`:sup:`3` α:sub:`i` = (Π:sub:`i=1`:sup:`2` α:sub:`i`)(σ)("I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
+    2.  n = 2: DΠ:sub:`i=1`:sup:`2` α:sub:`i` = (DΠ:sub:`i=1`:sup:`1` α:sub:`i`)(σ)("may")= ("mother")(σ"may") = "mother"σ"may"
+    3.  n = 3: DΠ:sub:`i=1`:sup:`3` α:sub:`i` = (DΠ:sub:`i=1`:sup:`2` α:sub:`i`)(σ)("I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
 
-So the Limitation of *P(n)* is given by,
+So the Delimitation of *P(n)* is given by,
 
-    4. Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" ∎
+    4. Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" 
 
-From the previous example, it should be clear what the meaning of the Limitation operation is within the formal system. Limitation is a method of constructing a Sentence-like (see Section II.III for the formal difference between a Limitation and Sentence) String from a sequence of words. 
+Similarly, the Limitation can be constructed recursive from the same Basis Step,
 
-Note the previous example may be misleading in one important respect. A Limitation is not necessarily "grammatical" or "meaningful". It may be a String of semantic Words without an accompanying interpretation on the Sentence level of the linguistic hierarchy. 
+   5. n = 2: LΠ:sub:`i=1`:sup:`2` α:sub:`i` = (LΠ:sub:`i=1`:sup:`1` α:sub:`i`)("may")= ("mother")("may") = "mothermay"
+   6. n = 3: LN:sub:`i=1`:sup:`3` α:sub:`i` = (LΠ:sub:`i=1`:sup:`2` α:sub:`i`)("I") = ("mothermay")("I") = "mothermayI"
+∎
 
-However, as the next theorem shows, the result of a Limitation is unique.
+From the previous example, it should be clear what the Delimitation and Limitation operations represent within the formal system. Delimitation is a method of constructing a Sentence-like (see Section II.III for the formal difference between a Delimitation and Sentence) String from a sequence of words, while a Limitation is shorthand for iterated concatenation over a sequence of Words.
 
-**Theorem 1.2.8** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
+Note the previous example may be misleading in one important respect. A Delimitation is not necessarily "grammatical" or "meaningful". It may be a String of semantic Words without an accompanying interpretation on the Sentence level of the linguistic hierarchy. 
 
-This theorem can be stated in natural language as follows: For every natural number n, and for every Phrase **P**:sub:`n` in the *n*:sup:`th` Lexicon of **L**, there exists a unique string *s* in **S** such that *s* is the delimitation of **P**:sub:`n`.
+However, as the next theorems shows, the result of a Delimitation or Limitation is unique.
+
+**Theorem 1.2.8** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = DΠ:sub:`i=1`:sup:`n` p(i)
+
+This theorem can be stated in natural language as follows: For every natural number n, and for every Phrase **P**:sub:`n` in the *n*:sup:`th` Lexicon of **L**, there exists a unique string *s* in **S** such that *s* is the Delimitation of **P**:sub:`n`.
 
 Let *n* be an arbitrary natural number, and let **P**:sub:`n` be a Phrase of Word Length *n* in Language **L** from the Language's *n*:sup:`th` Lexicon, **X**:sub:`L`*(n)*,
 
@@ -1195,31 +1215,31 @@ The theorem will be proved using induction.
 
 By Definition 1.2.7,
     
-    2. Π:sub:`i=1`:sup:`1` P:sub:`n(i)` = α:sub:`1`
+    1. DΠ:sub:`i=1`:sup:`1` P:sub:`n(i)` = α:sub:`1`
 
 Since *α*:sub:`1` is a word in **L** (by Definition 1.2.6 of Lexicon), it is also a String in S (by Definition 1.2.2). Thus, there exists a String *s = α*:sub:`1` such that 
 
-    3. s = Π:sub:`i=1``:sup:`1` P:sub:`n(i)`.
+    3. s = DΠ:sub:`i=1``:sup:`1` P:sub:`n(i)`.
 
-Since the base case of Limitation is defined as simple equality, the string s must be unique.
+Since the base case of Delimitation is defined as simple equality, the string s must be unique.
 
 **Inductive Hypothesis**
 
 Assume that for some *k ≥ 1*, there exists a unique string *s*:sub:`k` such that 
 
-    4. s:sub:`k` = Π:sub:`i=1`:sup:`k` P:sub:`n(i)`
+    4. s:sub:`k` = DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)`
 
 To complete the induction, it must be shown that there exists a unique string *s*:sub:`k+1` such that,
  
-    5. s:sub:`k+1` = Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)`
+    5. s:sub:`k+1` = DΠ:sub:`i=1`:sup:`k+1` P:sub:`n(i)`
 
 By Definition 1.2.7, 
 
-    6. Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (Π:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
+    6. Π:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
 
 By inductive hypothesis,
     
-    7. Π:sub:`i=1`:sup:`k` P:sub:`n(i)` = s:sub:`k`
+    7. DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)` = s:sub:`k`
     
 Thus, *s*:sub:`k` is unique. Since *α*:sub:`k+1` is a Word in **L** (by the definition of **Χ**:sub:`L`*(n+1)*), it is also a unique String in S.
 
@@ -1227,7 +1247,11 @@ The concatenation of *s*:sub:`k`, *σ*, and *α*:sub:`k+1` is a unique string (b
 
 Therefore, *s*:sub:`k+1` = (*s*:sub:`k`)(σ)(*α*:sub:`k+1`) is a unique string.
 
-By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in **Χ**:sub:`L(n)`, there exists a unique string *s* in **S** such that *s = Π*:sub:`i=1`:sup:`n` P:sub:`n(i)`. ∎
+By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in **Χ**:sub:`L(n)`, there exists a unique string *s* in **S** such that *s = DΠ*:sub:`i=1`:sup:`n` P:sub:`n(i)`. ∎
+
+**Theorem 1.2.9** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = LΠ:sub:`i=1`:sup:`n` p(i)
+
+The proof of this theorem is almost exactly identical to Theorem 1.2.8, with the exception there is no Delimiter in step 6. ∎
 
 Section I.III: Word Classes 
 ---------------------------
@@ -1512,7 +1536,7 @@ Note the String which is initialized to hold the Sentence Characters in step 1 i
 
 The essence of the Delimiting Algorithm lies in the interplay of the Discovery Axiom W.1 and Definition 2.1.2 of a Sentence as a semantic String. In other words, by Definition 2.1.2 and by Definition 1.2.2, all Sentences and Words must be semantic. The only feature that differentiates them in their *"semanticality"* is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
 
-This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of delimitation within the Sentences of its Corpus. 
+This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of deDelimitation within the Sentences of its Corpus. 
 
 The following examples show how to apply the Delimiting Algorithm to construct the Word-level representation of a Sentence. 
 
@@ -1813,6 +1837,46 @@ Generalizing this over the Corpus,
 
     7. ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1 ∎
 
+**Theorem 2.2.5** ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DN:sub:`i=1`:sup:`n` ζ{i}
+
+This theorem can be stated in natural language as follows: Every Sentence in the Corpus is the Delimitation of its own Words.
+
+Assume 
+
+    ζ ∈ C:sub:`L`
+
+By Definition 2.1.3,
+
+    W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`Λ(ζ)`) 
+    
+where
+
+    α:sub:`i` ∈ L.
+
+By Definition 1.2.5, the sequence **W**:sub:`ζ` forms a phrase P:`sub:Λ(ζ)` of length *Λ(ζ)* where 
+
+   ∀ i ∈ N:sub:`Λ(ζ)`: P:sub:`Λ(ζ)`(i) = α:sub:`i` 
+    
+By Definition 1.27, the Delimitation of P:sub:`Λ(ζ)` is,
+
+    DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+
+The delimitation reconstructs the original sentence ζ by including the delimiters between words. Therefore:
+
+    ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+
+By Definition 2.1.5, 
+
+    ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} = α:sub:`i`
+
+Therefore,
+
+    ζ = DΠ:sub:i=1:sup:`Λ(ζ)` ζ{i}
+
+Since ζ was an arbitrary Sentence in the Corpus, this can be generalized,
+
+    ∀ ζ ∈ C:sub:`L`: ζ = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
+
 Section II.III: Sentence Classes 
 ------------------------------
 
@@ -1833,7 +1897,7 @@ The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition
 
     inv(ᚠ) = "not a no parts"
 
-However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Limitation introduced in Definition 1.2.7 must now be leveraged. 
+However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Delimitation introduced in Definition 1.2.7 must now be leveraged. 
 
 **Definition 2.3.1: Admissible Sentences**
 
@@ -1859,19 +1923,19 @@ Theorem 2.3.1 is the formal justification for quantifying Sentence Variables ove
 
 Let *ζ* be an arbitrary sentence in **A**(*n*). By Definition 2.3.1, if *ζ* *∈* **A**(*n*), then there exists a Phrase *p* *∈* **Χ**:sub:`L`(*n*) such that 
 
-    1. ζ ∈ C:sub:`L` ∧ ζ = Π:sub:`i=1`:sup:`n` p(i)
+    1. ζ ∈ C:sub:`L` ∧ ζ = DΠ:sub:`i=1`:sup:`n` p(i)
 
 By Definition 1.2.5 and 1.2.6, a phrase *p* in **Χ**:sub:`L(n)` is an ordered sequence of *n* words such that *α*:sub:`i` *∈* **L**,
 
     p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
-By Definition 1.2.7, the Limitation of *p* is given by,
+By Definition 1.2.7, the Delimitation of *p* is given by,
 
-    Π:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
+    DΠ:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
 
-In other words, the Limitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* Words separated by Delimiters.
+In other words, the Delimitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* Words separated by Delimiters.
 
-By Definition 2.1.4, the Word Length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Limitation process doesn't add or remove Words, the Word Length of *ζ* must be *n*. Therefore, 
+By Definition 2.1.4, the Word Length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Delimitation process doesn't add or remove Words, the Word Length of *ζ* must be *n*. Therefore, 
 
     Λ(ζ) = n.
 
@@ -1891,30 +1955,30 @@ By Definition 1.2,6, since **P**:sub:`Λ(ζ)` is a phrase of length *Λ(ζ)* and
 
     2. P:sub:`Λ(ζ)` ∈ Χ:sub:`L`(Λ(ζ)).
 
-By Definition 1.2.7, the Limitation of P:sub:`Λ(ζ)` is:
+By Definition 1.2.7, the Delimitation of P:sub:`Λ(ζ)` is:
 
-    3. Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+    3. DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
 
-The Limitation *Π*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(*i*) reconstructs the original sentence *ζ*, including the Delimiters between Words. Therefore,
+The Delimitation *DΠ*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(*i*) reconstructs the original sentence *ζ*, including the Delimiters between Words. Therefore,
 
-    4. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+    4. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
 
 By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (*t* *∈* **A**(*n*)) if and only if there exists a phrase *p* *∈* **Χ**:sub:`L`(*n*) such that,
 
-    5. t = Π:sub:`i=1`:sup:`n` p(i)
+    5. t = DΠ:sub:`i=1`:sup:`n` p(i)
     6. t ∈ C:sub:`L`
 
 By Definition 2.3.1, since the conjunction of the three facts is true,
 
     7. ζ ∈ C:sub:L
-    8. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+    8. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
     9. P:sub:`Λ(ζ)` ∈ Χ:sub:`L`(Λ(ζ)) 
     
 It follows from step 7 - step 9, *ζ* *∈* **A**(*Λ(ζ)*). Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
 
     ∀ ζ ∈ C:sub:L: ζ ∈ A(Λ(ζ)) ∎
 
-**Theorem 2.3.4** ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i)
+**Theorem 2.3.4** ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` p(i)
 
 Let *ζ* be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
 
@@ -1928,21 +1992,21 @@ By Definition 1.2.6, since **P**:sub:`Λ(ζ)` is a Phrase of Word Length *Λ(ζ)
 
     P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))`
 
-By Definition 1.2.7, the Limitation of **P**:sub:`Λ(ζ)` is,
+By Definition 1.2.7, the Delimitation of **P**:sub:`Λ(ζ)` is,
 
-    Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+    DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
 
-The Limitation *Π*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(i) reconstructs the original Sentence ζ, including the Delimiters between Words. Therefore:
+The Delimitation *DΠ*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(i) reconstructs the original Sentence ζ, including the Delimiters between Words. Therefore:
 
-    ζ = Π:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+    ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
 
 It has been shown that for an arbitrary sentence *ζ* *∈* **C**:sub:`L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in **Χ**:sub:`L`(Λ(ζ)) such that,
  
-    ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i). 
+    ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` p(i). 
     
 Therefore,
 
-    ∀ ζ ∈ C:sub:`L`: ∃ p ∈ Χ:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`Λ(ζ)` p(i) ∎
+    ∀ ζ ∈ C:sub:`L`: ∃ p ∈ Χ:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` p(i) ∎
 
 The condition of *admissibility*, as will be seen in Theorem 2.3.11, prevents the *"inversion propagation"* from being a purely syntactical operation. The Inverse of a Sentences must also be Admissible in the Corpus in order to be considered an Invertible Sentence (Definition 2.3.2 in the next section). This represents a rupture or division from the realm of syntax not seen at the Word level of the linguistic hierarcy when considering the operation of inversion. In order to fully specify the conditions for Sentence invertibility, one must be able to elaborate on what it means to call a Sentence *"admissible"*; in other words, there must be grammatical rules that identify an inverted Sentence as belonging to the Corpus over and above the syntactical conditions that are imposed by invertibility.
 
@@ -2081,7 +2145,7 @@ The next theorem shows how the inversion "distributes" over the Words of a Delim
 
 **Theorem 2.3.8** ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let *n = Λ(ζ)*. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the delimitation of *ζ* as follows:
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let *n = Λ(ζ)*. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the deDelimitation of *ζ* as follows:
 
     1. s = Π:sub:`i=1`:sup:`n` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{n})
 
@@ -2097,13 +2161,13 @@ Since σ is a single character, inv(σ) = σ,
 
     4. inv(s) = (inv(ζ{n}))(σ)(inv(ζ{n-1}))(σ) ... (σ)(inv(ζ{2}))(σ)(inv(ζ{1}))
 
-Note that the right-hand side now has the form of a Limitation, but with the order of Words reversed and each Word inverted.
+Note that the right-hand side now has the form of a Delimitation, but with the order of Words reversed and each Word inverted.
 
-Re-index the terms on the right-hand side to match the form of the Limitation definition, Definition 1.2.7. Let *j = n - i + 1*. Then, as *i* goes from 1 to *n*, *j* goes from *n* to 1,
+Re-index the terms on the right-hand side to match the form of the Delimitation definition, Definition 1.2.7. Let *j = n - i + 1*. Then, as *i* goes from 1 to *n*, *j* goes from *n* to 1,
 
     5. inv(s) = (inv(ζ{j:sub:`n`}))(σ)(inv(ζ{j:sub:`n-1`}))(σ) ... (σ)(inv(ζ{j:sub:`2`}))(σ)(inv(ζ{j:sub:`1`}))
 
-Where j:sub:`i` is obtained by simply substituting *n-i+1* for j. Using the Definition of Delimitation, the right-hand side becomes,
+Where j:sub:`i` is obtained by simply substituting *n-i+1* for j. Using the Definition of DeDelimitation, the right-hand side becomes,
 
     6. inv(s) = Π:sub:`j=1`:sup:`n` inv(ζ{n - j + 1})
 
@@ -2218,7 +2282,7 @@ By Theorem 2.3.5, the Words in the *inv(ζ)* must be in the reversed order of th
 
     4. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 
-By Theorem 2.3.4, the inverse of *ζ*, *inv(ζ)*, can be expressed as the Delimitation of the inverses of the Words of *ζ* in reverse order,
+By Theorem 2.3.4, the inverse of *ζ*, *inv(ζ)*, can be expressed as the DeDelimitation of the inverses of the Words of *ζ* in reverse order,
 
     5. inv(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
 
@@ -2226,7 +2290,7 @@ This is equivalent to,
 
     6. inv(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ){i}
 
-Since *inv(ζ)* *∈* **C**:sub:`L` by assumption (step 1) and *inv(ζ)* has the same Word Length as *ζ* which is *Λ(ζ)*, and *inv(ζ)* is a Limitation of Words from **L**, by Definition 2.3.1, it follows that,
+Since *inv(ζ)* *∈* **C**:sub:`L` by assumption (step 1) and *inv(ζ)* has the same Word Length as *ζ* which is *Λ(ζ)*, and *inv(ζ)* is a Delimitation of Words from **L**, by Definition 2.3.1, it follows that,
 
     7. inv(ζ) ∈ A(Λ(ζ)).
 
@@ -2251,7 +2315,7 @@ By Definition 2.3.2, it follows,
 
 Therefore, the bidirectional theorem holds. ∎
 
-Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. Theorem 2.3.10 takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Limitation of Words that belongs to the Corpus. 
+Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. Theorem 2.3.10 takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Delimitation of Words that belongs to the Corpus. 
 
 The significance of Theorem 2.3.10 is the additional syntactical constraint that is imposed over and above *admissibility* into a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess *admissibility*, the pre-cursor to *grammaticality*, but it must also display Word-level symmetry. This is definitively confirmed by Theorem 2.3.11.
 
@@ -2336,14 +2400,29 @@ The Reduction Algorithm takes in a String *s* as input. It initializes the value
     a. Let u = (t)(s[i])
     b. Let t = u
 2. If i > l(s):
-    a. Apply Basis Clause of Definition 1.1.1 to t.
+    a. if l(t) > 0:
+        - Apply Basis Clause of Definition 1.1.1 to t.
     b. Return t
 3. Let j = i + 1
 4. Let i = j ∎
 
-Note the String *t* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The application of the Basis Clause of Concatenation in step 2a ensures this Character is removed from the output of the Reduction Algorithm .
+Note the String *t* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 2a ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,
 
-The following example shows how to apply the Reduction Algorithm to construct the σ-reduction of a String.
+    ε = ς(σ) = ς(σσ) = ς(σσσ) = ... 
+
+Moreover, since by Discovery Axiom W.1., Words do not contain Delimiters, for any Word *α* in Language **L**,
+
+    ς(α) = α
+
+From which, it follows, by Definition 1.1.3 of String Length, the String Length of a reduced Delimiter is simply zero,
+
+    l(ς(σ)) = 0
+
+And the String Length of a reduced Word is simply the String Length of the Word,
+
+    l(ς(α)) = l(α)
+
+The more complicated properties of *σ*-reduction are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the Reduction Algorithm to construct the *σ*-reduction of a String.
 
 **Example**
 
@@ -2659,6 +2738,99 @@ Therefore, combining step 3 and step 8
     ς(ζ) = inv(inv(ς(ζ))). ∎
 
 The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.5, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
+
+The final theorems in this section, Theorems 3.1.8 - 3.1.9, provide a method for constructing the *σ*-reduction of a Sentence through iterated concatenation. These theorem leverage the operations of Delimitation and Limitation introduced in Definitions 1.2.7 - 1.2.8.
+
+**Theorem 3.1.8** ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+
+This theorem can be stated in natural language as follows: The *σ*-reduction of a Sentence is the Limitation of its Words.
+
+Assume,
+
+    1. ζ ∈ C:sub:`L`
+
+By Definition 2.1.3, 
+
+    2. W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`Λ(ζ)`)
+
+Where,
+
+    3. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ L.
+
+By Theorem 2.3.4, ζ can be expressed as the delimitation of its words:
+
+    4. ζ = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)})
+
+By Definition 3.1.2, *ς(ζ)* removes all Delimiters from *ζ*. Applying *σ*-reduction to the expression step 4,
+
+    ς(ζ) = ς((ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)}))
+
+By repeated application of Theorem 3.1.2, i.e. by distributing the *σ*-reduction,
+
+    ς(ζ) = (ς(ζ{1}))(ς(σ))(ς(ζ{2}))(ς(σ)) ... (ς(σ))(ς(ζ{Λ(ζ)}))
+
+Since 
+
+    ς(σ) = ε
+
+This can be rewritten with the Basis Clause of Concatenation,
+
+    ς(ζ) = (ς(ζ{1}))(ς(ζ{2}))...(ς(ζ{Λ(ζ)}))
+
+By Definition 3.1.2 and the Discovery Axiom W.1.,
+
+    ∀ i ∈ N:sub:`Λ(ζ)`: ς(ζ{i}) = ζ{i}
+
+Therefore,
+   
+    ς(ζ) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+
+By Definition 1.2.8, the right-hand side is the Limitation of the words in **W**:sub:`ζ`,
+
+    ς(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+
+Since *ζ* was an arbitrary Sentence in this Corpus, this can be generalized,
+
+    ∀ ζ ∈ C:sub:`L`: ς(ζ) = Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
+
+Theorem 3.1.8 establishes an important formula for the construction of *σ*-reductions. The Reduction Algorithm targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without Theorem 3.1.8, it would be required to reconstruct the String which corresponds to the sequence and process it through the Reduction Algorithm. Rather than applying the Reduction Algorithm everytime a *σ*-reduction is required, Theorem 3.1.8 provides a schema for the construction of *σ*-reductions through the process of Limitation.
+
+Compare Theorem 3.1.8 to Theorem 2.2.5, reprinted below for reference,
+
+    ζ = DN:sub:`i=1`:sup:`n` ζ{i}
+
+In other words, taking the *σ*-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from the Definitions of Limitation and Delimitation. The next theorem proves this relationship for the more general case of *any* ordered sequence of Words, not necessarily a semantic Sentence.
+
+**Theorem** ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
+
+This theorem can be stated in natural language as follows: the *σ*-reduction of a Delimitation of a Phrase is equal to a Limitation of the same Phrase.
+
+
+Proof:
+
+Let n be an arbitrary natural number, and let p ∈ Χ:sub:L(n) be an arbitrary phrase of length n from the lexicon, where p = (α:sub:1, α:sub:2, ..., α:sub:n).
+
+Definition of Delimitation: By Definition 2.2.4, the delimitation of p is:
+
+DΠ:sub:i=1:sup:n p(i) = α:sub:1 σ α:sub:2 σ ... σ α:sub:n (with delimiters inserted between the words).
+Definition of σ-reduction: By Definition 3.1.2, σ-reduction removes all delimiters from a string.
+
+Applying σ-reduction to Delimitation: Applying σ-reduction to the delimitation from Step 1, we get:
+
+ς(DΠ:sub:i=1:sup:n p(i)) = ς(α:sub:1 σ α:sub:2 σ ... σ α:sub:n) = α:sub:1 α:sub:2 ... α:sub:n
+(because σ-reduction removes all the σ's).
+
+Definition of Limitation: By Definition 2.2.5, the limitation of p is:
+
+LΠ:sub:i=1:sup:n p(i) = α:sub:1 α:sub:2 ... α:sub:n
+Equality: Comparing the results from Step 3 and Step 4, we see that:
+
+ς(DΠ:sub:i=1:sup:n p(i)) = LΠ:sub:i=1:sup:n p(i)
+Conclusion: Since n and p were arbitrary, we can generalize:
+
+∀ n ∈ ℕ, ∀ p ∈ Χ:sub:L(n): ς(DΠ:sub:i=1:sup:n p(i)) = LΠ:sub:i=1:sup:n p(i)
+This completes the proof. ∎
+
 
 Section III.II: Palindromes 
 ---------------------------
@@ -3547,7 +3719,69 @@ Since ζ was an arbitrary palindrome, this can be generalized using the definiti
 **Theorem 3.2.2: The Delimiter Postulate**
 
 
-Theorem 3.2.2 (Second Inverse Postulate): ∀ ζ ∈ P: ( inv(α:sub:`ζ`:sup:`-ω`) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω )
+Theorem 3.2.2 (Second Inverse Postulate): ∀ ζ ∈ P: (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{+ω}) ⊂:sub:`s` ζ{ω-})
+
+
+
+∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:s ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:s ζ{ω-}) )
+
+Translation: For every palindrome ζ in the corpus, if the character at the pivot index ω(ζ) is a delimiter (σ), then either the inverse of the left pivot word is a substring of the right pivot word, or the inverse of the right pivot word is a substring of the left pivot word.
+
+Explanation:
+
+Condition on Pivot Character: The theorem now explicitly states the condition ζ[ω(ζ)] = σ, meaning the postulate only applies when the pivot character is a delimiter.
+Implication: When the pivot is a delimiter, the original relationship involving containment of inverses between the left and right pivot words still holds.
+Odd/Even Length: This condition implicitly applies to both even and odd-length palindromes because if the length is odd and the palindrome is perfect the pivot cannot be a delimiter by Theorem 3.2.5.
+Proof:
+
+We need to adjust the proof we had for the earlier version of the Second Inverse Postulate to account for the added condition:
+
+Let ζ be an arbitrary palindrome in P such that ζ[ω(ζ)] = σ.
+
+Definition of Palindrome: Since ζ ∈ P, by Definition 3.1.2, σ_reduce(ζ) = inv(σ_reduce(ζ)).
+
+Pivot Character: By the premise, ζ[ω(ζ)] = σ, meaning the character at the pivot index is a delimiter.
+
+Pivot Words: Let α = ζ{ω-} and β = ζ{ω+} be the left and right pivot words of ζ, respectively (by Definition 3.1.12).
+
+Non-Empty Pivot Words: By the definition of a pivot, and since the pivot character is a delimiter, we know the left and right pivot words cannot be empty.
+
+σ-reduction and Pivot: Since ζ[ω(ζ)] = σ, the delimiter at the pivot will be removed during σ-reduction. This means that in σ_reduce(ζ), the words σ_reduce(α) and σ_reduce(β) will be adjacent.
+
+Word-Level Representation: Let W:sub:ζ be the word-level representation of ζ. Because of the delimiter at the pivot, we know that the words α and β are consecutive in the word-level representation:
+
+W:sub:ζ = (..., α, β, ...)
+σ-reduction of ζ: We can express σ_reduce(ζ) as:
+
+σ_reduce(ζ) = ...σ_reduce(α)σ_reduce(β)...
+Inversion of σ-reduction: Since σ_reduce(ζ) = inv(σ_reduce(ζ)), we have:
+
+...σ_reduce(α)σ_reduce(β)... = inv(...σ_reduce(α)σ_reduce(β)...)
+Corollary 3.1.2: Applying Corollary 3.1.2 repeatedly to the right side of the equation:
+
+...σ_reduce(α)σ_reduce(β)... = ...inv(σ_reduce(β))inv(σ_reduce(α))...
+Equality and Inversion: From the equality in Step 9, we can deduce that:
+
+σ_reduce(α) = inv(σ_reduce(β))
+σ_reduce(β) = inv(σ_reduce(α))
+Implication of Equality: Since neither pivot word is empty and they are inverses of each other after σ-reduction, this implies one is contained within the other before σ-reduction. Therefore:
+
+(inv(α) ⊂:sub:s β) ∨ (inv(β) ⊂:sub:s α)
+Substituting Back: Substituting α = ζ{ω-} and β = ζ{ω+}, we get:
+
+(inv(ζ{ω-}) ⊂:sub:s ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:s ζ{ω-})
+Conclusion: Since ζ was an arbitrary palindrome satisfying the premise, we can generalize:
+
+∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:s ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:s ζ{ω-}) )
+This completes the proof. ∎
+
+
+
+
+
+
+
+
 
 
 

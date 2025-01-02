@@ -32,7 +32,7 @@ Notation
 - Categories: C:sub:`L`(m)
 - Relations: ⊂:sub:`s`, =
 - Functions: l(t), Λ(t), Δ(t)
-- Operations: inv(s), ς(ζ), o_induce(t, m, S), Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- Operations: inv(s), ς(ζ), o_induce(t, m, S), Π(σ):sub:`i=1`:sup:`n` P:sub:`n`(i)
 
 Definitions 
 -----------
@@ -50,7 +50,8 @@ Definitions
 - D 1.2.4: String Inversion: inv(s)
 - D 1.2.5: Phrase: P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) = (P:sub:`n`(1), )
 - D 1.2.6: Lexicon: Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } 
-- D 1.2.7: Limitation: Π:sub:`i=1`:sup:`n` P:sub:`n`(i)
+- D 1.2.7: Delimitation: DΠ:sub:`i=1`:sup:`n` p(i)
+- D 1.2.8: Limitation: LΠ:sub:`i=1`:sup:`n` p(i)
 - D 1.3.1: Reflective Words: α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] 
 - D 1.3.2: Invertible Words: α ∈ I ↔ inv(α) ∈ L
 - D 2.1.1: Corpus: C:sub:`L`
@@ -108,7 +109,8 @@ Theorems
 - T 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
 - T 1.2.6: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) 
 - T 1.2.7: ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) 
-- T 1.2.8: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = Π:sub:`i=1`:sup:`n` p(i)
+- T 1.2.8: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = DΠ:sub:`i=1`:sup:`n` p(i)
+- T 1.2.9: ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = LΠ:sub:`i=1`:sup:`n` p(i)
 - T 1.3.1: ∀ α ∈ L: α ∈ R ↔ α = inv(α)
 - T 1.3.2: ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
 - T 1.3.3: R ⊆ I
@@ -119,14 +121,15 @@ Theorems
 - T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 - T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
 - T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DN:sub:`i=1`:sup:`n` ζ{i}
 - T 2.3.1: A(n) ⊆ C:sub:`L`
 - T 2.3.2: ∀ ζ ∈ A(n): Λ(ζ) = n
 - T 2.3.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
-- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = Π:sub:`i=1`:sup:`n` p(i)
+- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`n` p(i)
 - T 2.3.5: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
 - T 2.3.6: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
 - T 2.3.7: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
-- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(Π:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(Π(σ):sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = Π(σ):sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.9: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
 - T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
@@ -135,8 +138,9 @@ Theorems
 - T 3.1.3: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
 - T 3.1.4: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
 - T 3.1.5: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
-- T 3.1.6: ∀ ζ ∈ C:sub:`L`, ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
+- T 3.1.6: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
 - T 3.1.7: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
+- T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 - T 3.2.1: PP ⊂ K
 - T TODO: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 3.2.2: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
