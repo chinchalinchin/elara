@@ -35,8 +35,8 @@ Notation
 - Pivot Words: ζ{ω-}, ζ{ω+}
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
 - Categories: C:sub:`L`(m)
-- Relations: ⊂:sub:`s`, =
-- Functions: l(t), Λ(t)
+- Relations: ⊂:sub:`s`, (i/n/j):sub:`ζ`
+- Functions: l(t), Λ(t), Δ(t)
 - Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
 
 Definitions 
@@ -64,6 +64,7 @@ Definitions
 - D 2.1.3: Word-Level Set Representation: W:sub:`ᚠ`
 - D 2.1.4: Word Length: Λ(ζ)
 - D 2.1.5: Word Index Notation: ζ{i}
+- D 2.1.6: Intervention: (i/n/j):sub:`ζ`
 - D 2.2.1: Semantic Coherence
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
@@ -123,11 +124,12 @@ Theorems
 - T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
 - T 2.1.1: ∀ ζ ∈ C:sub:`L`:  ∑:sub:`j=1`:sup:`Λ(ζ)` l(ζ{j}) ≥ Λ(ζ)
 - T 2.1.2: ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+- T 2.1.3: ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ k → ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
 - T 2.2.1: ∀ ζ ∈ C:sub:`L`: l(ζ) ≠ 0
 - T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 - T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
 - T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
-- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DN:sub:`i=1`:sup:`n` ζ{i}
+- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 - T 2.3.1: A(n) ⊆ C:sub:`L`
 - T 2.3.2: ∀ ζ ∈ A(n): Λ(ζ) = n
 - T 2.3.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
@@ -145,12 +147,13 @@ Theorems
 - T 3.1.4: ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
 - T 3.1.5: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
 - T 3.1.6: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
-- T 3.1.7: ∀ ζ ∈ C:sub:`L` : ζ ∈ K → [ inv(ς(ζ)) = inv(inv(ς(ζ))) ]
+- T 3.1.7: ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 - T 3.1.9: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
+- T 3.1.10: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ))
 - T 3.2.1: PP ⊂ K
 - T 3.2.2: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
-- T 3.2.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ PP → (∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I)
+- T 3.2.3:∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 - T 3.2.4: PP ⊂ P
 - T 3.2.5: PP ∪ IP = P
 - T 3.2.6: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
@@ -161,9 +164,10 @@ Theorems
 - T 3.2.11: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
 - T 3.2.12: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 - T 3.2.13: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
-- T 3.2.14: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.2.15: P:sup:`-` ∪ P:sup:`+` = P 
-- T 3.3.1: ∀ ζ ∈ PP : (inv(ζ{1}) ⊂:sub:`s` ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:`s` ζ{1})
+- T 3.2.14: 
+- T 3.2.15: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.2.16: P:sup:`-` ∪ P:sup:`+` = P 
+- T 3.3.1: ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
 - T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
 - T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
@@ -172,19 +176,19 @@ Theorems
 - T A.2.4: ∀ α ∈ L: Δ(α) = 0
 - T A.2.5: ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
 - T A.2.6: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T A.2.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α)
+- T A.2.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
 - T A.2.8: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
 - T A.2.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 - T A.2.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
 - T A.2.11: ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
-- T A.2.12: ∀ s ∈ S: l(ζ ⋅ Σ:sub:`σ`) + Δ(s) = l(s)
-- T A.2.13: ∀ ζ ∈ C:sub:`L`: l(ζ ⋅ Σ:sub:`σ`) + Λ(ζ) = l(ζ) + 1
+- T A.2.12: ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
+- T A.2.13: ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
 - T A.3.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
 - T A.3.2: L:sub:`P` ⊂ L:sub:`σ`
 - T A.3.3: ∀ α ∈ L:sub:`P`: α = inv(α)
 - T A.3.4: L ∩ L:sub:`P` ⊆ R
 - T A.3.5: L:sub:`P` ⊂ R:sub:`L_σ`
-
+- 
 Introduction
 ============
 
@@ -3593,7 +3597,7 @@ Since *ζ* was arbitrary, this can generalize,
 
 **Theorem 3.2.14** ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) 
 
-Let ζ be an arbitrary Sentence in the Corpus. By Theorem 3.1.10,
+Let *ζ* be an arbitrary Sentence in the Corpus. By Theorem 3.1.10,
 
     1. l(ζ) ≥ l(ς(ζ))
 
@@ -3619,17 +3623,35 @@ Similarly, it must be the case, one of the following is true,
     7. ω(ς(ζ)) = (l(c(ζ)) + 1)/2
     8. ω(ς(ζ)) = l(ς(ζ))/2
 
-If *ω(ζ) = (l(ζ) + 1)/2*, then it follows from step 2 and step 4, that no matter the value of *ω(ς(ζ))*,
+If *ω(ζ) = (l(ζ) + 1)/2*, then *l(ζ)* is odd by Theorem 3.2.10. It follows from step 2 and step 4, that no matter the value of *ω(ς(ζ))*,
 
     9. ω(ς(ζ)) ≤ ω(ζ)  
 
-If ω(ζ) = l(ζ)/2, then from step 3, if *ω(ς(ζ)) = l(ς(ζ))/2*, it follows, 
+If ω(ζ) = l(ζ)/2, then *l(ζ)* is even by Theorem 3.2.12. From step 3, if *ω(ς(ζ)) = l(ς(ζ))/2*, it follows, 
 
     10.  ω(ς(ζ)) ≤ ω(ζ) 
 
-If ω(ς(ζ)) = (l(c(ζ)) + 1)/2, 
+If *ω(ς(ζ)) = (l(c(ζ)) + 1)/2*, then *l(ς(ζ))* is odd by Theorem 3.2.10. 
 
-TODO
+Since *l(ς(ζ))* is odd and *l(ζ)* is even, atleast one Delimiter was removed from *ζ* during *σ*-reduction, 
+
+    11. l(ς(ζ)) + 1 ≤ l(ζ).
+
+Therefore, 
+    
+    12. (l(ς(ζ)) + 1)/2 ≤ l(ζ)/2.
+
+It follows,
+
+    13. ω(ς(ζ)) = (l(ς(ζ)) + 1)/2 ≤ l(ζ)/2 = ω(ζ)
+
+Thus, in all possible cases,
+
+    14. ω(ς(ζ)) ≤ ω(ζ)
+
+Since *ζ* was arbitrary, this can be generalized over the Corpus as,
+
+    15. ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) ∎
 
 These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in Theorems 3.1.14 - 3.1.15.
 
@@ -3641,7 +3663,7 @@ For the sake of contradiction, assume there exists a sentence *ζ* such that
 
     1. ζ ∈ P:sup:`+` ∩ P:sup:`-`
 
-This means each of the indivudal expressions is true,
+This means each of the individual expressions is true,
 
     2. ζ ∈ P:sup:`+``
     3. ζ ∈ P:sup:`-`

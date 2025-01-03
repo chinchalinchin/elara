@@ -1354,3 +1354,95 @@ With both directions of the equivalence proven, since *ζ*, *i*, and *j* were ar
 **Theorem 2.1.4** ∀ ζ ∈ C:sub:`L`: ∀ i, j, k ∈ N:sub:`Λ(ζ)`: ∃ n, m ∈ N:sub:`l(ζ)`: (((i/n/j):sub:`ζ`) ∧ ((j/m/k):sub:`ζ`)) → (n < m)
 
 TODO
+
+
+Section A.VIII: Integration
+--------------
+
+**Definition TENATIVE: Sentence Integral**
+
+The *Left-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`-`*(ζ,k)*, is defined as,
+
+    Ω:sub:`-`(ζ,k) =  Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ))
+    
+The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defined as,
+
+    Ω:sub:`+`(ζ,k) =  Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[k:])/l(ζ)) ∎
+
+To develop an understanding of what is meant by the concept of a *Sentence Integral*, recall the String Length of the Left and Right Partial Sentences depends on the index of the Partial,
+
+    l(ζ[:k]) = k
+
+    l(ζ[k:]) = l(ζ) - k + 1
+
+The following examples calculate the Left-Hand and Right-Hand Sentence Integrals for various illustrative Palindromes.
+
+**Example** 
+
+1. Let *ᚠ = "live evil"*. Then *l(ᚠ) = 9*. Note *ᚠ* is a Perfect Palindrome.
+
+|  k    |  ᚠ[k] |  l(ᚠ[:k]) | l(ᚠ[k:]) |  Δ(ᚠ[k]) | Ω:sub:`-`(ᚠ ,k) | Ω:sub:`+`(ᚠ ,k) |
+| ----- | ----- | --------- | -------- | -------- | --------------- | --------------- |
+|  1    |  "l"  |  1        |  9       |  0       |  0              | 0               |
+|  2    |  "i"  |  2        |  8       |  0       |  0              | 0               |
+|  3    |  "v"  |  3        |  7       |  0       |  0              | 0               |
+|  4    |  "e"  |  4        |  6       |  0       |  0              | 0               |
+|  5    |  " "  |  5        |  5       |  1       |  (5/9)          | (5/9)           |
+|  6    |  "e"  |  6        |  4       |  0       |  (5/9)          | (5/9)           |
+|  7    |  "v"  |  7        |  3       |  0       |  (5/9)          | (5/9)           |
+|  8    |  "i"  |  8        |  2       |  0       |  (5/9)          | (5/9)           |
+|  9    |  "l"  |  9        |  1       |  0       |  (5/9)          | (5/9)           |
+
+
+1. Let *ᚠ = "we panic in a pew"*. Then *l(ᚠ) = 17*. Note *ᚠ* is an Imperfect Palindrome with more Non-Delimiter Characters in the first half in comparison to the second half. In other words, most of the Delimiters in *ᚠ* occur in the second half of the Sentence.
+   
+|  k    |  ᚠ[k] |  l(ᚠ[:k]) | l(ᚠ[k:]) |  Δ(ᚠ[k]) | Ω:sub:`-`(ᚠ ,k) | Ω:sub:`+`(ᚠ ,k) |
+| ----- | ----- | --------- | -------- | -------- | --------------- | --------------- |
+|  1    |  "w"  |  1        |  17      |  0       |  0              |  0              |
+|  2    |  "e"  |  2        |  16      |  0       |  0              |  0              |
+|  3    |  " "  |  3        |  15      |  1       |  (3/17)         |  (15/17)        |
+|  4    |  "p"  |  4        |  14      |  0       |  (3/17)         |  (15/17)        |
+|  5    |  "a"  |  5        |  13      |  0       |  (3/17)         |  (15/17)        |
+|  6    |  "n"  |  6        |  12      |  0       |  (3/17)         |  (15/17)        |
+|  7    |  "i"  |  7        |  11      |  0       |  (3/17)         |  (15/17)        |
+|  8    |  "c"  |  8        |  10      |  0       |  (3/17)         |  (15/17)        |
+|  9    |  " "  |  9        |  9       |  1       |  (12/17)        |  (24/17)        |
+|  10   |  "i"  |  19       |  8       |  0       |  (12/17)        |  (24/17)        |
+|  11   |  "n"  |  11       |  7       |  0       |  (12/17)        |  (24/17)        |
+|  12   |  " "  |  12       |  6       |  1       |  (24/17)        |  (30/17)        |
+|  13   |  "a"  |  13       |  5       |  0       |  (24/17)        |  (30/17)        |
+|  14   |  " "  |  14       |  4       |  1       |  (38/17)        |  (34/17)        |
+|  15   |  "p"  |  15       |  3       |  0       |  (38/17)        |  (34/17)        |
+|  16   |  "e"  |  16       |  2       |  0       |  (38/17)        |  (34/17)        |
+|  17   |  "w"  |  17       |  1       |  0       |  (38/17)        |  (34/17)        |
+
+1. Let *ᚠ = "draw no dray a yard onward"*. Then *l(ᚠ) = 26*. Note *ᚠ* is an Imperfect Palindrome with a similar (but not identical) distribution of Delimiters around the Pivot.
+
+|  k    |  ᚠ[k] |  l(ᚠ[:k]) | l(ᚠ[k:]) |  Δ(ᚠ[k]) | Ω:sub:`-`(ᚠ ,k) | Ω:sub:`+`(ᚠ ,k) |
+| ----- | ----- | --------- | -------- | -------- | --------------- | --------------- |
+|  1    |  "d"  |  1        |  26      |  0       |  0              |  0              |
+|  2    |  "r"  |  2        |  25      |  0       |  0              |  0              |
+|  3    |  "a"  |  3        |  24      |  0       |  0              |  0              |
+|  4    |  "w"  |  4        |  23      |  0       |  0              |  0              |
+|  5    |  " "  |  5        |  22      |  1       |  (5/26)         |  (22/26)        |
+|  6    |  "n"  |  6        |  21      |  0       |  (5/26)         |  (22/26)        |
+|  7    |  "o"  |  7        |  20      |  0       |  (5/26)         |  (22/26)        |
+|  8    |  " "  |  8        |  19      |  1       |  (13/26)        |  (41/26)        |
+|  9    |  "d"  |  9        |  18      |  0       |  (13/26)        |  (41/26)        |
+|  10   |  "r"  |  19       |  17      |  0       |  (13/26)        |  (41/26)        |
+|  11   |  "a"  |  11       |  16      |  0       |  (13/26)        |  (41/26)        |
+|  12   |  "y"  |  12       |  15      |  0       |  (13/26)        |  (41/26)        |
+|  13   |  " "  |  13       |  14      |  1       |  (26/26)        |  (55/26)        |
+|  14   |  "a"  |  14       |  13      |  0       |  (26/26)        |  (55/26)        |
+|  15   |  " "  |  15       |  12      |  1       |  (41/26)        |  (67/26)        |
+|  16   |  "y"  |  16       |  11      |  0       |  (41/26)        |  (67/26)        |
+|  17   |  "a"  |  17       |  10      |  0       |  (41/26)        |  (67/26)        |
+|  18   |  "r"  |  18       |  9       |  0       |  (41/26)        |  (67/26)        |
+|  19   |  "d"  |  19       |  8       |  0       |  (41/26)        |  (67/26)        |
+|  20   |  " "  |  20       |  7       |  1       |  (61/26)        |  (74/26)        |
+|  21   |  "o"  |  21       |  6       |  0       |  (61/26)        |  (74/26)        |
+|  22   |  "n"  |  22       |  5       |  0       |  (61/26)        |  (74/26)        |
+|  23   |  "w"  |  23       |  4       |  0       |  (61/26)        |  (74/26)        |
+|  24   |  "a"  |  24       |  3       |  0       |  (61/26)        |  (74/26)        |
+|  25   |  "r"  |  25       |  2       |  0       |  (61/26)        |  (74/26)        |
+|  26   |  "d"  |  26       |  1       |  0       |  (61/26)        |  (74/26)        |

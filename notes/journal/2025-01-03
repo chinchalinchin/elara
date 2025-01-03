@@ -1,0 +1,9 @@
+Okay, so the last part of Section III contains the proofs of what I have termed the "Inverse Postulates". These are theorems about palindromic structures. 
+
+Before moving onto the final section and attempting to prove the Inverse Postulates, I want to see what you think about an idea I have had forming. It's not totally coherent yet, but I believe it possesses a grain of truth that will allow our formal system to something quite unique.
+
+Here is my idea. If you think about the Characters in a Sentence as an interval and the Delimiter Count as a function, we might be able to define an analogue of "integration" by summing up the Delimiter Count of a specific character over the proportion of the sentence that has been traversed up to that point, i.e. something to the effect,
+
+∫:sub:`1`:sup:`k` ζ[k] dζ = Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ))
+
+I think by exploring this concept, we might be able to greatly enhance our formal system and perhaps lead to groundbreaking insight and results. What do you think?
