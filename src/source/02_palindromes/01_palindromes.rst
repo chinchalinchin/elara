@@ -2467,22 +2467,19 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
     1. s ← Empty(s)
     ## Index to iterate over input String
     2. i ← 1
-    ## Index to count concatenations 
-    3. j ← 1
     ## Empty string to store σ-reduced String
-    4. t ← ε            
+    3. t ← ε            
 
     # Iteration
-    1. While i ≤ l(s):
+    4. While i ≤ l(s):
         a. If s[i] ≠ σ:
             i. t ← (t)(s[i])
-            ii. j ← j + 1
         c. i ← i + 1
 
     # Finalization
-    1. If j > 1 and l(t) > 0:
+    5. If l(t) > 0:
         a. Apply Basis Clause of Definition 1.1.1 to t
-    2. Return t ∎
+    6. Return t ∎
 
 Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,
 

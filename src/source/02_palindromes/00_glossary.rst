@@ -31,7 +31,7 @@ Notation
 - Pivot Words: ζ{ω-}, ζ{ω+}
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
 - Categories: C:sub:`L`(m)
-- Relations: ⊂:sub:`s`, = α < k > β
+- Relations: ⊂:sub:`s`, (i/n/j):sub:`ζ`
 - Functions: l(t), Λ(t)
 - Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
 
@@ -60,6 +60,7 @@ Definitions
 - D 2.1.3: Word-Level Set Representation: W:sub:`ᚠ`
 - D 2.1.4: Word Length: Λ(ζ)
 - D 2.1.5: Word Index Notation: ζ{i}
+- D 2.1.6: Intervention: (i/n/j):sub:`ζ`
 - D 2.2.1: Semantic Coherence
 - D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
@@ -120,7 +121,6 @@ Theorems
 - T 2.1.1: ∀ ζ ∈ C:sub:`L`:  ∑:sub:`j=1`:sup:`Λ(ζ)` l(ζ{j}) ≥ Λ(ζ)
 - T 2.1.2: ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
 - T 2.1.3: ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ k → ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
-- T 2.1.4: ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`:
 - T 2.2.1: ∀ ζ ∈ C:sub:`L`: l(ζ) ≠ 0
 - T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 - T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
