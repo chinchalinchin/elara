@@ -47,14 +47,14 @@ In natural language: A word η in a language **L** is a Compound Invertible Word
 
 "racecar" is a compound invertible word because it's both a compound word and its own inverse.
 
-Section II: Delimiter Count Function 
-====================================
+Section A.II: Delimiter Count Function 
+--------------------------------------
 
 .. note::
 
-    It is the author's opinion there is a type of *algebraic structure* embedded in Language through the constraints of syntax. This section highlights one of the functions defined within this structure. While the function is not required to prove the main results of this work about palindromes, it is an interesting function in its own right.
+    It is the author's opinion there is a type of *algebraic structure* embedded in Language through the constraints of syntax. This section highlights one of the functions defined within this structure. While the function is not required to prove the main results of this work about Palindromes, it is an interesting function in its own right.
 
-Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a palindrome is distributed through its syntactical layers. The concepts of *Perfect* and *Imperfect* palindromes are be defined more rigorously in  Section III, but as an intuitive introduction to the ability of a palindrome to encode meaning on multiple syntactic levels and as a justification for the introduction of the Delimiter Count Function, consider the following two examples,
+Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a Palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a Palindrome is distributed through its syntactical layers. The concepts of *Perfect* and *Imperfect* Palindromes are be defined more rigorously in Section III, but as an intuitive introduction to the ability of a Palindrome to encode meaning on multiple syntactic levels and as a justification for the introduction of the Delimiter Count Function, consider the following two examples,
 
     1. dennis sinned
     2. if i had a hifi
@@ -81,24 +81,33 @@ Then, the delimiter count function is defined as
 
     Δ(t) = | D:sub:`t` | ∎
 
-**Example** Consider the string *t = "a b c"*. The Character-level set representation of *t* is given by,
+**Example** 
+
+Consider the string *t = "a b c"*. The Character-level set representation of *t* is given by,
     
     T = { (1, "a"), (2, σ), (3, "b"), (4, σ), (5, "c") }.
 
-The set D:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
+By Definition A.2.1, The set **D**:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
     
     D:sub:`t`= { (2, σ), (4, σ) }
 
-From this it follows, | D:sub:`t` | is 2. Hence, *Δ(s) = 2*. ∎
+From this it follows, 
+
+    | D:sub:`t` | = 2 
+    
+Hence, 
+    
+    Δ(t) = 2 ∎
 
 From the previous example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the Delimiter count) as output. Multiple sentences can have the same Delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
 
 **Theorem A.2.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
-## TODO 
-# I think this needs revised to be Λ(ζ) ≥ Δ(ζ) + 1 to account for edges where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
-# This might be resolvable by introducing an assumption about the structure of a Sentence. Perhaps all Delimiters between two consecutive Words should be treated as a single Delimiter?
-## TODO
+.. note::
+
+    I think this needs revised to be *Λ(ζ) ≥ Δ(ζ) + 1* to account for edge cases where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
+    
+    Alternatively, this inconsistency might be resolvable by introducing an assumption about the structure of a Sentence. Perhaps all Delimiters between two consecutive Words should be treated as a single Delimiter? Or an Axiom to constrain the placement of Delimiters in Sentences?
 
 In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its Delimiter count plus one.
 
@@ -112,7 +121,7 @@ Since Delimiters separate Words, and each Delimiter corresponds to one Word boun
 
 The next two theorems establish the invariance of the Delimiter count under String Inversion for any String, and by extension, any Sentence.
 
-**Theorem A.3.2** ∀ s ∈ S: Δ(s) = Δ(inv(s))
+**Theorem A.2.2** ∀ s ∈ S: Δ(s) = Δ(inv(s))
 
 Let *t* be a string with length *l(t)*. Let *u = inv(t)*. By Definition 1.2.4,
 
@@ -192,29 +201,41 @@ Furthmore, an exact relationship has been estalished between the coordinates of 
 
 **Theorem A.2.3** ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
 
-Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem 2.4.2, 
+Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L`,
 
-    18. Δ(ζ) = Δ(inv(ζ))
+    1. ζ ∈ C:sub:`L`
+
+By Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem A.3.2, 
+
+    1. Δ(ζ) = Δ(inv(ζ))
 
 Which is what was to be shown. ∎
 
 **Theorem A.2.4** ∀ α ∈ L: Δ(α) = 0
 
-Assume α ∈ L. By the Axiom W.1, if a string *s* belongs to the Language **L**, then it does not contain any Delimiter Characters
+This theorem can be stated in natural language as follows: The Delimtier Count of any Word in a Language is zero.
 
-    s ∈ L → (∀ i ∈ N:sub:`l(s)`: 𝔞:sub:`i` ≠ σ )
+Assume *α* is a Word in Language **L**,
 
-Therefore, *α* does not contain any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* contains no Delimiter Characters, the delimiter count of *α* must be 0. Therefore, *Δ(α) = 0*. ∎
+    1. α ∈ L
+    
+By the Discovery Axiom W.1, all Words in Language do not have Delimiters,
+
+    2. ∀ i ∈ N:sub:`l(s)`: α[i] ≠ σ
+
+Therefore, *α* does not have any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* hasno Delimiter Characters, the Delimiter Count of *α* must be 0. Therefore,
+
+    3. Δ(α) = 0 ∎
 
 **Theorem A.2.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
 
-In natural language, this theorem can be stated as follows: For every Sentence *ζ* in a Corpus C:sub:`L`, the String Length of the Sentence *l(ζ)* is equal to the delimiter count of the sentence *Δ(ζ)* plus the sum of the String Lengths of its Words.
+In natural language, this theorem can be stated as follows: For every Sentence in a Corpus, the String Length of the Sentence is equal to the Delimiter Count of the sentence plus the sum of the String Lengths of its Words.
 
 Assume 
 
     1. ζ ∈ C:sub:`L`. 
 
-Either each *ζ{i}* for *1 ≤ i ≤ l(ζ)* is Delimiter or it is a non-Delimiter, with no overlap. By Definition 2.4.1, the number of Delimiter Characters in *ζ* is Δ(*ζ*). 
+Either each *ζ{i}* for *1 ≤ i ≤ l(ζ)* is Delimiter or it is a non-Delimiter, with no overlap. By Definition A.2.1, the number of Delimiter Characters in *ζ* is *Δ(ζ)*. 
 
 By the Discovery Axiom W.1, words in **L** do not contain Delimiters. By Definition 2.1.3, the Words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the Word Lengths l(ζ{i}) which is 
 
@@ -226,51 +247,89 @@ Since every Character in *ζ* is either a Delimiter or part of a Word (and not b
 
 **Theorem A.2.6** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
 
-Applying the results of Theorem A.4.1 and Theorem A.4.5, this theorem follows from simple algebraic manipulation. ∎
+Applying the results of Theorem A.2.1 and Theorem A.2.5, this theorem follows from simple algebraic manipulation. ∎
 
-**Theorem A.2.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α)
+**Theorem A.2.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
 
-Assume *ζ ∈* **C**:sub:`L`. By Theorem 2.2.4,
+This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is greater than or equal to the sum of the String Length of its Words. 
+
+Assume *ζ ∈* **C**:sub:`L`. By Theorem A.2.4,
     
     1. Λ(ζ) ≥ 1
 
-From Theorem A.4.6,
+From Theorem A.2.6,
 
-    2. l(ζ) + 1 - Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α) = Λ(ζ)
+    2. l(ζ) + 1 - Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i}) = Λ(ζ)
 
-Combining step 1 and step 2, the theorem is obtained through simple algebraic manipulation,
+Combining step 1 and step 2, the theorem is obtained through algebraic manipulation,
 
     l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α) ∎
 
 **Theorem A.2.8** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
 
-Let ζ be an arbitrary Sentence in C:sub:`L`.
+This theorem can be stated in natural language as follows: For any Sentence in a Corpus, its String Length is always greater than or equal to its Word Length.
 
-Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By Definition 2.1.4, *Λ(ζ) = *| W:sub:`ζ` |, which is the number of Words in *ζ* (Word Length). By Theorem 1.2.3 and the Discovery Axiom W.1, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters.
+Let *ζ* be an arbitrary Sentence in C:sub:`L`. Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By Definition 2.1.4, 
 
-Therefore, the total number of non-Empty Characters in *ζ*, *l(ζ)* (String Length), must be greater than or equal to the number of Words in *ζ*, *Λ(ζ)* (Word Length). This can be more formally expressed using Theorem 2.1.1: 
+    1. Λ(ζ) = | W:sub:`ζ` |
 
-     Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i}) ≥ Λ(ζ)
+By Theorem 1.2.3, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters. By Theorem 2.2.5, every Sentence is a Delimitation of its Words,
 
-By Theorem A.4.7, the result is obtained,
+    2. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 
-    l(ζ) ≥ Λ(ζ).
+Where the operation of Delimitation inserts Delimiters between the Words of *ζ*. On the other hand, let *t* be the the Limitation of *ζ*,
 
-Therefore, for any Sentence ζ ∈ C:sub:`L`, its String Length is always greater than or equal to its Word Length. ∎
+    3. t = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+
+By Definition 1.2.7, Definition 1.2.8 and Definition 1.1.3 of String Length,
+
+    4. l(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = l(ζ) ≥ l(t) = l(LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i})
+
+By Definition 1.28,
+
+    5. LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} = (ζ{1})(ζ{2}) .... (ζ{Λ(ζ)-1})(ζ{Λ(ζ)})
+
+By Theorem 1.1.1, 
+
+    6. l((ζ{1})(ζ{2}) .... (ζ{Λ(ζ)-1})(ζ{Λ(ζ)})) = Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+
+Therefore, combining steps 4 and 6
+
+    7. l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+
+Consider the summation,
+
+    8. Σ:sub:`i = 1`:sup:`Λ(ζ)` 1
+
+Clearly, since *l(ζ{i}) ≥ 1* for all *i*, it follows, 
+
+    9. Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I}) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` 1
+
+By the definition of summations, step 8 can be rewritten as,
+
+    10. Σ:sub:`i = 1`:sup:`Λ(ζ)` 1 = 1 + 1 + 1 + .... + 1 = Λ(ζ)
+
+Combining step 7, step 9 and  step 10,
+
+    11. l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I}) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` 1 = Λ(ζ)
+
+Since ζ was arbitrary, this can be generalized as,
+
+    12. ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ) ∎
 
 **Theorem A.2.9 (Informal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
 
 Let *u* and *t* be arbitrary strings in S. Let **U** and **T** be the Character-level representations of *u* and *t*, respectively:
 
-    U = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`)
+    1. U = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`)
 
-    T = (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)`)
+    2. T = (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)`)
 
 The Character-level representation of *ut* is:
 
-    UT = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)``)
+    3. UT = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)``)
 
-By Definition A.4.1, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the number of Delimiters in *t*, and *Δ(ut)* is the number of Delimiters in *ut*.
+By Definition A.2.1, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the number of Delimiters in *t*, and *Δ(ut)* is the number of Delimiters in *ut*.
 
 Since concatenation simply joins two Strings without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the number of Delimiters in *ut* is the sum of the number of Delimiters in *u* and the number of Delimiters in *t*. ∎
 
@@ -292,7 +351,7 @@ By Definition A.4.1, this is equivalent to,
 
 Since u and t were arbitrary strings, this can be generalized,
 
-*   ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t) ∎
+    ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t) ∎
 
 **Theorem A.2.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
 
@@ -306,125 +365,107 @@ Therefore,
 
     2. Δ(ut) = Δ(inv(ut)).
 
-By Theorem 2.4.9,
+By Theorem A.2.9,
  
     3. Δ(ut) = Δ(u) + Δ(t).
 
 Combining steps 2 and 3, it follows, 
 
-    Δ(inv(ut)) = Δ(ut) = Δ(u) + Δ(t)
+    4. Δ(inv(ut)) = Δ(ut) = Δ(u) + Δ(t)
 
-Since u and t were arbitrary strings, this can be generalized,
+Since *u* and *t* were arbitrary strings, this can be generalized,
 
-    ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t) ∎
+    5. ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t) ∎
 
-**Theorem A.2.11** ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
+**Theorem A.2.11** ∀ t ∈ S: Δ(ς(t)) = 0
 
-Theorem 3.1.15: ∀ s ∈ S: Δ(σ_reduce(s)) = 0
+This theorem can be stated in natural language as follows: For any String, the Delimiter Count of its *σ*-Reduction is 0.
 
-Proof:
+Let t be an arbitrary string in **S**,
 
-Let s be an arbitrary string in S.
+    1. t ∈ S
 
-Definition of σ-reduction: By Definition 3.1.2, σ_reduce(s) is the string obtained by removing all occurrences of the delimiter character σ from s.
+By Definition 3.1.2, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*. By Definition A.2.1, Δ(t) is the number of Delimiter Characters *σ* in a String *t*. Since *ς(t)* has all its Delimiters removed, it contains no occurrences of the Character *σ*. Therefore, 
 
-Definition of Delimiter Count: By Definition 2.4.1, Δ(t) is the number of delimiter characters σ in a string t.
+    2. Δ(ς(t)) = 0
 
-Absence of Delimiters: Since σ_reduce(s) has all its delimiters removed, it contains no occurrences of the character σ.
+Since *t* was an arbitrary string in **S**, this can be generalized over **S**,
 
-Conclusion: Therefore, the number of delimiters in σ_reduce(s) is 0.
+    3. ∀ t ∈ S: Δ(ς(t)) = 0 ∎
 
-Δ(σ_reduce(s)) = 0
-Since s was an arbitrary string in S, we can generalize:
+**Theorem A.2.12** ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
 
-*   ∀ s ∈ S: Δ(σ_reduce(s)) = 0
-This completes the proof. ∎
+Translation: For any String, its String Length is equal to the String Length of its σ-reduction plus its Delimiter Count.
 
+Let *t* be an arbitrary String in **S**,
 
-**Theorem A.2.12** ∀ s ∈ S: l(ζ ⋅ Σ:sub:`σ`) + Δ(s) = l(s)
+   1. t ∈ S
 
-Theorem 3.1.16: ∀ s ∈ S: l(s) = l(σ_reduce(s)) + Δ(s)
+By Definition 3.1.2, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*.
 
-Translation: For any string s, the length of s is equal to the length of its σ-reduction plus the number of delimiters in s.
+By Definition A.2.1, *Δ(t)* is the number of Delimiter characters in *t*.
 
-Proof:
+By Definition 1.1.3, *l(t)* is the total number of non-Empty Characters in *t*, including Delimiters.
 
-Let s be an arbitrary string in S.
+Similarly, *l(ς(t))* is the number of non-DelimiterCcharacters in *t*.
 
-Definition of σ-reduction: By Definition 3.1.2, σ_reduce(s) is obtained by removing all delimiter characters (σ) from s.
+Every Character in *t* is either a Delimiter or a non-Delimiter character. Therefore, the total number of characters in *t* is the sum of the number of non-delimiter characters and the number of delimiter characters.
 
-Definition of Delimiter Count: By Definition 2.4.1, Δ(s) is the number of delimiter characters in s.
+Therefore,
 
-Length of s: The length of s, denoted l(s), is the total number of characters in s, including delimiters.
+    2. ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
 
-Length of σ_reduce(s): The length of σ_reduce(s), denoted l(σ_reduce(s)), is the number of non-delimiter characters in s.
+Since *t* was an arbitrary String, this can be generalized over **S**,
 
-Key Observation: Every character in s is either a delimiter or a non-delimiter character. Therefore, the total number of characters in s is the sum of the number of non-delimiter characters and the number of delimiter characters.
+    1. ∀ s ∈ S: l(s) = l(ς(t)) + Δ(s)  ∎
 
-Conclusion: From steps 3, 4, and 5, we can conclude:
+Theorem A.2.12 expresses a fundamental relationship between the String Length of a String, the String Length of its σ-reduction, and its Delimiter Count. It essentially states that the original String Length can be decomposed into the String Length of the String without Delimiters (the *σ*-reduction) and the number of Delimiters that were removed (the Delimiter Count).
 
-l(s) = l(σ_reduce(s)) + Δ(s)
-Since s was an arbitrary string, we can generalize:
+**Example**
 
-*   ∀ s ∈ S: l(s) = l(σ_reduce(s)) + Δ(s)
-This completes the proof. ∎
+Let *t = (𝔞)(σ)(𝔟)(σ)(𝔠)*. Then, by Definition 3.1.2,
 
-Explanation:
+    ς(t) = 𝔞𝔟𝔠
 
-This theorem expresses a fundamental relationship between the length of a string, the length of its σ-reduction, and its delimiter count. It essentially states that the original length of a string can be decomposed into the length of the string without delimiters (the σ-reduction) and the number of delimiters that were removed.
+The following quantities can then be calculated,
 
+    l(t) = 5    
+    Δ(t) = 2
+    l(ς(t))= 3
 
-Example:
+And indeed, 
 
-Let s = "a σ b σ σ c".
+    l(t) = l(ς(t)) + Δ(t) ∎
 
-l(s) = 7
-σ_reduce(s) = "abc"
-l(σ_reduce(s)) = 3
-Δ(s) = 3
-And indeed, l(s) = l(σ_reduce(s)) + Δ(s)  =>  7 = 3 + 4.
+**Theorem A.2.13** ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
 
+Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L`,
 
-**Theorem A 2.13** ∀ ζ ∈ C:sub:`L`: l(ζ ⋅ Σ:sub:`σ`) + Λ(ζ) = l(ζ) + 1
+    1. ζ ∈ C:sub:`L`
 
-Let ζ be an arbitrary sentence in C:sub:L.
+By Definition 2.1.2, every Sentence is a String. Therefore, Theorem A.2.12 may be applied to *ζ*
 
-Theorem 3.1.16: We know from Theorem 3.1.16 that for any string s:
+    2. l(ζ) = l(ς(ζ)) + Δ(ζ)
 
-l(s) = l(σ_reduce(s)) + Δ(s)
-Applying Theorem 3.1.16 to ζ:  Applying this to our sentence ζ, we get:
+By Theorem A.2.1,
 
-l(ζ) = l(σ_reduce(ζ)) + Δ(ζ)
-Theorem 2.4.1: We also know from Theorem 2.4.1 that for any sentence ζ in the corpus:
+    3. Λ(ζ) = Δ(ζ) + 1
 
-Λ(ζ) = Δ(ζ) + 1
-Rearranging Theorem 2.4.1: We can rearrange this to get:
+Rearranging,
 
-Δ(ζ) = Λ(ζ) - 1
-Substitution: Substituting the expression for Δ(ζ) from Step 4 into the equation from Step 2, we get:
+    4. Δ(ζ) = Λ(ζ) - 1
 
-l(ζ) = l(σ_reduce(ζ)) + (Λ(ζ) - 1)
-Rearranging: Rearranging the terms, we get:
+Substituting the expression for *Δ(ζ)* from step 4 into the equation from step 2,
 
-l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
-Conclusion: Since ζ was an arbitrary sentence in C:sub:L, we can generalize:
+    5. l(ζ) = l(ς(ζ)) + (Λ(ζ) - 1)
 
-∀ ζ ∈ C:sub:L: l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1
-This completes the proof. ∎
+Rearranging the terms, 
 
-Explanation:
+    6. l(ς(ζ)) + Λ(ζ) = l(ζ) + 1
 
-The proof combines the relationship between the length of a string and its σ-reduction (Theorem 3.1.16) with the relationship between the number of words in a sentence and its delimiter count (Theorem 2.4.1). By substituting and rearranging, we arrive at the correct equation.
+Since ζ** was an arbitrary Sentence in **C**:sub:`L`, this can be generalized over the Corpus as,
 
-Why the original equation was slightly incorrect:
-
-The original equation, l(ζ): l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1, was incorrect because it added l(ζ) to both sides without proper justification. The correct derivation involves substituting for Δ(ζ) and then rearranging.
-
-Implications:
-
-This corrected theorem establishes a precise relationship between the length of a sentence, the length of its σ-reduction, and the number of words in the sentence. This is another useful tool for analyzing the structure of sentences and, in particular, palindromes.
-
-
+    7. ∀ ζ ∈ C:sub:`L`: l(σ_reduce(ζ)) + Λ(ζ) = l(ζ) + 1 ∎
 
 Section A.III: Palindromic Pairs
 --------------------------------

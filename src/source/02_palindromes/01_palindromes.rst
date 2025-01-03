@@ -1905,7 +1905,7 @@ Generalizing this over the Corpus,
 
     7. ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1 ∎
 
-**Theorem 2.2.5** ∀ ζ ∈ C:sub:`L`: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
+**Theorem 2.2.5** ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
 
 This theorem can be stated in natural language as follows: Every Sentence in the Corpus is the Delimitation of its own Words.
 
