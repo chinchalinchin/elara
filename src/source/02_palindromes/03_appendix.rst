@@ -11,6 +11,7 @@ Table of Contents
 - Section A.IV: Categories
 - Section A.V: Sigma Induction
 - Section A.VI: Reflective Structures
+- Section A.VII: Intervention
 
 Section A.II: Compound Words 
 ----------------------------
@@ -1093,3 +1094,89 @@ TODO: need to define what Π:sub:`i=i`:sup:`n` p(i) means for *i* not equal to 1
 **Theorem A.6.4**  ∀ p ∈ X:sub:`L`(2): Π:sub:`i=1`:sup:`2` p(i) ∈ RS ↔ Π:sub:`i=1`:sup:`1` p(i) = inv(Π:sub:`i=2`:sup:`2` p(i))
 
 **Theorem A.6.5** P ⊆ RS
+
+
+Section A.VII: Intervention
+---------------------------
+
+TODO 
+
+**Definition 2.1.6: Intervention**
+
+Let *ζ* be a Sentence in C:sub:`L`. The Character *ζ[k]* is said to *intervene* the Words *ζ{i}* and *ζ{j}*, denoted as *(i/k/j)*:sub:`ζ`, if the following condition holdS
+
+   l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < k < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1 ∎
+
+The meaning of Definition 2.1.6 is not immediately intuitive, so a thorough example is now present to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.
+
+**Example** 
+
+Let *ᚠ = "repaid a regal leper"*. Note the lengths,
+   
+    l(ᚠ) = 20
+    
+    Λ(ζ) = 4
+    
+The Word-level representation of this Sentence is given by,
+
+    W:sub:`ᚠ` = { (1, "repaid"), (2, "a"), (3, "regal"), (4, "leper") }
+
+Note *inv(ᚠ) = "repel lager a diaper"*. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see Definition 2.2.1 in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see Definition 2.3.1 for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
+
+    W:sub:`inv(ᚠ)` = { (1, "repel"), (2, "lager"), (3, "a"), (4, "diaper) }
+    
+To see how Definition 2.1.6 can be used to assert a Character falls between two Words in a sentence, calculate the following Limitations and String Lengths, consider the words *"a"* and *"leper"*. *"a"* corresponds to the Word Index 2,
+
+    ᚠ{2} = "a"
+
+Calculating the left-hand side of the inequality in Definition 2.1.6,
+
+    DΠ:sub:`x=1`:sup:`2` ᚠ(x) = "repaid a"
+    l(DΠ:sub:`x=1`:sup:`2` ᚠ(x)) = 8
+
+The String Length of this Limitation is exactly equal to the Sentence Length *up to and including the Word at Index 2*. Now note *"leper"* occupies the Word Index 4, 
+
+    ᚠ{4} = "leper"
+
+This corresponds to a *j = 4* in Definition 2.1.6. The upperhand limit in the Limitation on the right-hand side of the inequality in Definition 2.1.6 is given by,
+
+    Λ(ζ) - j + 1 = 4 -  4 + 1 = 1
+
+Therefore, the corresponding Limitation of the Inverse Sentence for Definition 2.1.6 is given by,
+
+    DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x) = "repel"
+    l(DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x)) = 5
+
+Working from the back of the Sentence, the String Length of this Limitation is exactly equal to the Sentence Length *up to and including the Word at Index 4*. Calculating the right-hand side of the inequality in Definition 2.1.6, 
+
+    l(ᚠ) - l(DΠ:sub:`x=1`:sup:`j` inv(ᚠ)(x)) + 1 = 20 - 5 + 1 = 16
+
+By Definition 2.1.6, the Characters ᚠ[k] between the indices of 8 and 16 (exclusive), namely, 
+
+    - ᚠ[9] = " "
+    - ᚠ[10] = "r"
+    - ᚠ[11] = "e"
+    - ᚠ[12] = "g"
+    - ᚠ[13] = "a"
+    - ᚠ[14] = "l"
+    - ᚠ[15] = " "
+
+Therefore,
+
+    - (2/9/4):sub:`ζ` (the 9:sup:`th` Character is between the second and fourth Word)
+    - (2/10/4):sub:`ζ` (the 10:sup:`th` Character is between the second and forth Word)
+    - etc. ∎
+  
+
+**Theorem 2.1.3** ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ j ↔ ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+
+Outline 
+- if i doesn't equal j, then Λ(ζ) > 1.
+- if a sentence has two distinct words, it must contain a delimiter between those words. 
+- therefore, there exists an *n* that intervenes i and j.
+
+TODO
+
+**Theorem 2.1.4** ∀ ζ ∈ C:sub:`L`: ∀ i, j, k ∈ N:sub:`Λ(ζ)`: ∃ n, m ∈ N:sub:`l(ζ)`: (((i/n/j):sub:`ζ`) ∧ ((j/m/k):sub:`ζ`)) → (n < m)
+
+TODO

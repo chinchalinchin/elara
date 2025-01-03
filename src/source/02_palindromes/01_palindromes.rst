@@ -341,7 +341,7 @@ Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣* ∎
 Length
 ^^^^^^
 
-It will sometimes be convenient to represent Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenated series *s*:sub:`1` *= 𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S**:sub:`1`, where the first coordinate encodes the position of the Character in the String,
+It will sometimes be convenient to represent Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenation *s*:sub:`1` *= 𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S**:sub:`1`, where the first coordinate encodes the position of the Character in the String,
 
     S:sub:`1` = { (1, 𝔞), (2, 𝔟), (3, 𝔠) }
 
@@ -355,7 +355,64 @@ To simplify notation, it is sometimes beneficial to represent this set as a sequ
 
 However, before adopting this notation formally, a problem exists. It is the intention of this analysis to treat Empty Characters as vacuous, i.e. Characters without semantic content. However, this does not mean the Empty Character will not be treated as a legitimate entity within the confines of the formal system. Instead, the goal is to construct a formal system that excludes the Empty Character from the domain of semantics, but not the domain of syntax. 
 
-Due to the nature of the Empty Character and its ability to be concatenated ad infinitum, and the desire to construct a theory of Words and Language that emerges from the transcendental domain of Strings, the construction of the Character-level set represention of a String requires a special algorithm to filter out any Empty Characters while preserving the relative order of the non-Empty Characters concatenated into the String. 
+Due to the nature of the Empty Character and its ability to be concatenated ad infinitum, and the desire to construct a theory of Words and Language that emerges from the transcendental domain of Strings, the construction of the Character-level set representation of a String requires a special algorithm to filter out any Empty Characters while preserving the relative order of the non-Empty Characters concatenated into the String. 
+
+Before presenting the *Emptying Algorithm* that will allow the construction of the Character-level representation of an arbitrary String, motivation for the particular form of the Emptying Algorithm is given by way of analogy to assembly language in computer science. 
+
+At the most primitive level, iteration in assembly or machine language is essentially achieved through a combination of two components,
+
+    1. Memory Addresses: Data, including Strings (which are just sequences of Characters), is stored in memory at specific addresses.
+   
+    2. Registers: The CPU has special memory locations called registers. Registers are used to hold, 
+
+        - Data: Values being currently processed.
+        - Pointers: Memory addresses of data being accessed.
+        - Counters: Values used to keep track of the iteration's progress.
+        - Instructions: The CPU executes a sequence of instructions.
+
+The Instruction set consists of operations for,
+
+   - Load data: Move data from memory to registers.
+   - Store data: Move data from registers to memory.
+   - Arithmetic operations: Perform calculations (like adding 1).
+   - Conditional jumps: Change the flow of execution based on certain conditions (e.g., checking if a counter has reached a certain value).
+
+At the assembly level, a typical algorithm for iterating through a String is given below (the semi-colon ";" denotes a code comment),
+
+.. code-block::
+
+    ; Assume:
+    ;   - String "abc" is stored at memory address STRING_START
+    ;   - STRING_START: 'a', 'b', 'c', 0  (0 is a null terminator indicating the end)
+    ;   - Register R1 will be used as a pointer (initially holds STRING_START)
+    ;   - Register R2 will be used as a counter (initially holds 0)
+
+    LOOP_START:
+        LOAD R3, (R1)     ; Load the character at the address in R1 into R3
+        CMP R3, 0        ; Compare R3 with the null terminator (0)
+        JE LOOP_END      ; If R3 is 0 (equal), jump to LOOP_END
+        ADD R1, 1        ; Increment R1 (move the pointer to the next character's address)
+        ADD R2, 1        ; Increment the counter R2
+        JMP LOOP_START   ; Jump back to LOOP_START
+    LOOP_END:
+
+A step-by-step breakdown of this algorithm is instructive for understanding how iterationg through String is implemented at the most basic level in the theory of computation. Each command in this assembly-like language is broken down as follows,
+
+    1. R1 (pointer) is set to STRING_START.
+    2. R2 (counter) is set to 0.
+    3. LOOP_START: This is a label marking the beginning of the loop.
+    4. LOAD R3, (R1): The Character at the memory address stored in R1 is loaded into register R3.
+    5. CMP R3, 0: The character in R3 is compared to the null terminator (0).
+    6. JE LOOP_END: If the comparison is equal (meaning we've reached the end of the string), the program jumps to the LOOP_END label.
+    7. ADD R1, 1: This is the crucial step where the pointer is incremented. 1 is added to R1 because each Character occupies one memory location (in this simplified example). This moves the pointer to the next Character's address.
+    8. ADD R2, 1: The counter is incremented.
+    9. JMP LOOP_START: The program jumps back to the beginning of the loop.
+
+The key idea is this algorithm is *"unaware"* of how *long* the String is that is stored in the *R1* register. The algorithm naively iterates over the data and then checks whether or not the data has been processed with the command *CMP R3, 0*, i.e. the algorithm checks whether or not the next Character in the String *exists*. 
+
+By treating Strings as Characters stored sequentially in a data register, this algorithm is able to construct a representation of the String on a higher level, allowing for the definition of derivative concepts, like String Length. 
+
+This insight leads directly to the definition of the Character-level set representation of a String and its construction via the Emptying Algorithm.
 
 **Definition 1.1.2: Character-level Set Representations**
 
@@ -365,22 +422,22 @@ Let *t* be a String with Characters *𝔞*:sub:`i`. The Character-level set repr
 
 The Emptying Algorithm takes a string *t* as input, which can be thought of as a sequence of Characters *𝔞*:sub:`1`, *𝔞*:sub:`2`, *𝔞*:sub:`3`, ... , where some characters might be *ε*. It then initializes a set to hold **X** and an index for the Characters it will add to **X**. The algorithm iterates the index and constructs the Character-level representation by ignoring *ε*. The Emptying Algorithm is formally defined below.
 
-**Initialization**
+.. topic:: Algorithm Empty(t: String)
 
-   1. Let T = ∅ (empty set to hold Character-level representation)
-   2. Let j = 1 (index for non-Empty Characters in T)
-   3. Let i = 1 (index for iterating through original String t)
+    # Input: A string t
+    # Output: An ordered set T representing the character-level set representation of t
 
-**Iteration**
+    # Initialization:
+    T ← ∅ // empty set to hold Character-level representation
+    j ← 1 // index for non-Empty Characters in T)
+    i ← 1 (index for iterating through original String t)
 
-   1. While 𝔞:sub:`i` exists:
+    # Iteration
+    1. While 𝔞:sub:`i` exists:
         a. If 𝔞:sub:`i` ≠ ε:
-            i. Let X = { (j, 𝔞:sub:`i`) } ∪ T
-            ii. Let T = X 
-            iii. Let k = j + 1
-            iv. Let j = k
-        b. Let k = i + 1
-        c. Let i = k 
+            i. T ← { (j, 𝔞:sub:`i`) } ∪ T
+            ii. j ← j + 1
+        b. i ← i + 1
     2. Return T ∎
 
 Step 1 in the Emptying Algorithm is essentially equivalent to a *try-catch* block in modern programming languages. Step 1 is materially different than comparing a Character in a String to the Empty Character. Step 1 relies on the idea that attempting to select a Character outside of the String is an undefined operation and will thus result in an error (i.e. a stack overflow). As the Characters in a String are iterated through, as long as the String is not infinite, the iteration will eventually reach the last Character, and once it tries to select the next Character, it will throw an error. 
@@ -1505,36 +1562,34 @@ Consider a particular Sentence in the Corpus, *ᚠ*. The Delimiting Algorithm co
 
 The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and applies the Emptying Algorithm to it to generate a sequence of non-Empty Characters. It then initializes a set **W**:sub:`ᚠ` and index for the Words it will add to **W**:sub:`ᚠ` . The algorithm iterates the index and constructs the Word-level representation by removing the Delimiter character. The Delimiting Algorithm is formally defined below.
 
-**Initialization**
+.. topic:: Algorithm Delimit(t: String)
+    
+    # Input: A string t
+    # Output: An ordered set W representing the Word-level set representation of t
 
-    1. Let **ᚠ** be the Character-level set representation of the Sentence *ᚠ*
-    2. Let W:sub:`ᚠ` = ∅ (the empty set).
-    3. Let j = 1 (index for Word-level set representation)
-    4. Let i = 1 (index for Characters in String)
+    # Initialization
+    ## Character-level representation of ᚠ
+    ᚠ ← Empty(ᚠ) 
+    ## Empty set to hold Word-level representation
+    W ← ∅
+    ## Index for Word-level set representation
+    j ← 1
+    ## index for Characters in String
+    i ← 1
 
-**Iteration**
-
-The Strings *t* and *u*, the integer *k* and the set **K** are local to the algorithm and used to store intermediate calculations.
-
-    1. Let t = ε
-    2. While i ≤ l(ᚠ) and ᚠ[i] ≠ σ:
-        a. Let u = (t)(ᚠ[i])
-        b. Let t = u
-        c. Increment i:
-            i. Let k = i + 1
-            ii. Let i = k
-    3. If l(t) > 0:
-        a. Apply Basis Clause of Definition 1.1.1 to t
-        b. Let K = set W:sub:`ᚠ` ∪ { (j, t) }
-        c. Let W:sub:`ᚠ` = K
-        d. Increment j:
-            i. Let k = j + 1
-            ii. Let j = k
-    4. Increment i:
-        a. Let k = i + 1 
-        b. Let i = k
-    5. If i > l(ᚠ):
-        a. Return W:sub:`ᚠ` ∎
+    ## Iteration
+    1. While True: 
+       a. t ← ε
+       b. While i ≤ l(ᚠ) and ᚠ[i] ≠ σ:
+            i. t ← (t)(ᚠ[i])
+            ii. i ← i + 1
+       c. If l(t) > 0:
+            i. Apply Basis Clause of Definition 1.1.1 to t
+            ii. W ← W ∪ { (j, t) }
+            iii. j ← j + 1
+       d. i ← i + 1:
+       e. If i > l(ᚠ):
+           a. Return W ∎
 
 Note the String which is initialized to hold the Sentence Characters in step 1 is set to an initial value of the Empty Character. The application of the Basis Clause in step 3a ensures this Empty Character is removed after the entire Sentence has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of Theorem 1.2.3.
 
@@ -1580,7 +1635,7 @@ Then, applying the *Delimiting Algorithm*, its Word-level representation is cons
 
 Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in Definition 1.1.5 will be use this method of Sentence representation to simplify many of the upcoming proofs.
 
-There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Characters that deserves special mention, as this perhaps reasonable assumption necessarily requires a reorganization of how the semantic information of a Sentence maps to its ordering in the medium Words and where precisely this semantic information resides. To see what is meant by this, consider the three sentences from Latin,
+There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Characters that deserves special mention, as this perhaps reasonable assumption implicitly elides a question of much greater complexity regarding where precisely the semantic information of a Sentence resides. To see what is meant by this, consider the three sentences from Latin,
 
 - Puella canem videt. (Girl dog sees)
 - Canem puella videt. (Dog girl sees)
@@ -1698,16 +1753,6 @@ Since *ζ* and *ξ* were arbitrary sentences, this can be generalized,
     ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ) ∎
 
 Word Length is fundamentally different to String Length with respect to the operation of concatenation. In Theorem 1.1.1, it was shown String Length sums over concatenation. Theorem 2.1.2 demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.
-
-Intervention
-^^^^^^^^^^^^
-
-**Definition 2.1.6: Intervention**
-
-Let ζ be a Sentence from Corpus C:sub:`L`. Let *k* be a Character index such that *1 ≤ k ≤ l(ζ)* (i.e. *ⲁ*:sub:`k` is a Character in *ζ*). The Character *ζ[k]* is said to *intervene* *ζ{i}* and *ζ{j}* in *ζ*, denoted as *ζ{i}<ⲁ*:sub:`k`*>ζ{j}*, if the following conditions hold:
-
-    ζ{i}<ⲁ:sub:`k`>ζ{j} ↔ ∃ i, j ∈ N:sub:`Λ(ζ)`: (i < j) ∧ (∀ p ∈ N:sub:`l(α)`: k > p +  Σ:sub:`x=1`:sup:`i-1` l(ζ{x}) + (i-1)) ∧ (∀ q ∈ N:sub:`l(β)`: k < q + Σ:sub:`x=1`:sup:`j-1` l(ζ{x}) + j)
-
 
 Section II.II: Axioms 
 ----------------------
@@ -2861,6 +2906,30 @@ Since n and p were arbitrary, this can be generalized,
 
     9. ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i) ∎
 
+The relationship between σ-reductions, Limitations and Delimitations provides an easy method for establishing the relationship between the String Length of a Sentence and the String Length of its σ-reduced form. 
+
+**Theorem 3.1.10** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ))
+
+Let ζ be an arbitrary Sentence in the Corpus. By Theorem 3.1.8,
+
+    1. ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+
+By Theorem 2.2.5,
+
+    2. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+
+Since the only different between Definition 1.2.7 and 1.2.8 is that Delimitations insert a Delimiter while Limitations simply concatenate, it must follow,
+
+    3. l(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) ≥ LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+
+From this, step 1 and step 2, it follows, 
+
+    4. l(ζ) ≥ l(ς(ζ))
+
+Since ζ was arbitary, this can be generalized, 
+
+    5. ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ)) ∎
+
 Section III.II: Palindromes 
 ---------------------------
 
@@ -3500,9 +3569,49 @@ Since *ζ* was arbitrary, this can generalize,
 
     5. ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) ∎
 
+**Theorem 3.2.14** ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) 
+
+Let ζ be an arbitrary Sentence in the Corpus. By Theorem 3.1.10,
+
+    1. l(ζ) ≥ l(ς(ζ))
+
+Through algebraic manipulation, this is equivalent to the following,
+
+    2. (l(ζ) + 1)/2 ≥ (l(ς(ζ)) + 1)/2
+
+It is also equivalent to,
+
+    3. l(ζ)/2 ≥ l(ς(ζ))/2
+
+Moreover,
+
+    4. (l(ς(ζ)) + 1)/2 ≥ l(ς(ζ))/2
+
+By Theorems 3.2.10 and 3.2.12, one of the following must be true,
+
+    5. ω(ζ) = (l(ζ) + 1)/2
+    6. ω(ζ) = l(ζ)/2
+
+Similarly, it must be the case, one of the following is true,
+
+    7. ω(ς(ζ)) = (l(c(ζ)) + 1)/2
+    8. ω(ς(ζ)) = l(ς(ζ))/2
+
+If *ω(ζ) = (l(ζ) + 1)/2*, then it follows from step 2 and step 4, that no matter the value of *ω(ς(ζ))*,
+
+    9. ω(ς(ζ)) ≤ ω(ζ)  
+
+If ω(ζ) = l(ζ)/2, then from step 3, if *ω(ς(ζ)) = l(ς(ζ))/2*, it follows, 
+
+    10.  ω(ς(ζ)) ≤ ω(ζ) 
+
+If ω(ς(ζ)) = (l(c(ζ)) + 1)/2, 
+
+TODO
+
 These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in Theorems 3.1.14 - 3.1.15.
 
-**Theorem 3.2.14** P:sup:`+` ∩ P:sup:`-` = ∅
+**Theorem 3.2.15** P:sup:`+` ∩ P:sup:`-` = ∅
 
 This theorem can be stated in natural language as follows: A Palindrome cannot be both even and odd.
 
@@ -3531,7 +3640,7 @@ Therefore, the assumption that ζ is both an Even and Odd Palindrome must be fal
 
     7. P:sup:`-` ∩ P:sup:`+` = ∅ ∎
 
-**Theorem 3.2.15** P:sup:`-` ∪ P:sup:`+` = P
+**Theorem 3.2.16** P:sup:`-` ∪ P:sup:`+` = P
 
 This theorem can be translated into natural language as follows: All Palindromes are either Even Palindromes or Odd Palindromes. 
 

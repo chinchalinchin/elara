@@ -31,7 +31,7 @@ Notation
 - Pivot Words: ζ{ω-}, ζ{ω+}
 - Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
 - Categories: C:sub:`L`(m)
-- Relations: ⊂:sub:`s`, =
+- Relations: ⊂:sub:`s`, = α < k > β
 - Functions: l(t), Λ(t)
 - Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
 
@@ -119,11 +119,13 @@ Theorems
 - T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
 - T 2.1.1: ∀ ζ ∈ C:sub:`L`:  ∑:sub:`j=1`:sup:`Λ(ζ)` l(ζ{j}) ≥ Λ(ζ)
 - T 2.1.2: ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+- T 2.1.3: ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ k → ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+- T 2.1.4: ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`:
 - T 2.2.1: ∀ ζ ∈ C:sub:`L`: l(ζ) ≠ 0
 - T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
 - T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
 - T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
-- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DN:sub:`i=1`:sup:`n` ζ{i}
+- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 - T 2.3.1: A(n) ⊆ C:sub:`L`
 - T 2.3.2: ∀ ζ ∈ A(n): Λ(ζ) = n
 - T 2.3.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
@@ -144,6 +146,7 @@ Theorems
 - T 3.1.7: ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 - T 3.1.9: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
+- T 3.1.10: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ))
 - T 3.2.1: PP ⊂ K
 - T 3.2.2: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 3.2.3:∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
@@ -157,8 +160,9 @@ Theorems
 - T 3.2.11: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
 - T 3.2.12: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 - T 3.2.13: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
-- T 3.2.14: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.2.15: P:sup:`-` ∪ P:sup:`+` = P 
+- T 3.2.14: 
+- T 3.2.15: P:sup:`-` ∩ P:sup:`+` = ∅
+- T 3.2.16: P:sup:`-` ∪ P:sup:`+` = P 
 - T 3.3.1: ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
 - T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
