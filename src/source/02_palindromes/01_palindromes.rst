@@ -427,10 +427,13 @@ The Emptying Algorithm takes a string *t* as input, which can be thought of as a
     # Input: A string t
     # Output: An ordered set T representing the character-level set representation of t
 
-    # Initialization:
-    T ← ∅ // empty set to hold Character-level representation
-    j ← 1 // index for non-Empty Characters in T)
-    i ← 1 (index for iterating through original String t)
+    # Initialization
+    ## empty set to hold Character-level representation
+    T ← ∅
+    ## index for non-Empty Characters in T
+    j ← 1 
+    ## index for iterating through original String t
+    i ← 1 
 
     # Iteration
     1. While 𝔞:sub:`i` exists:
@@ -1569,33 +1572,39 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
 
     # Initialization
     ## Character-level representation of ᚠ
-    ᚠ ← Empty(ᚠ) 
-    ## Empty set to hold Word-level representation
-    W ← ∅
-    ## Index for Word-level set representation
-    j ← 1
-    ## index for Characters in String
-    i ← 1
+    1. ᚠ ← Empty(ᚠ)
+    ## Initialize empty set to hold Word-level representation of ᚠ
+    2. W ← ∅
+    ## Initialize a counter j for Words
+    3. j ← 1
+    ## Initialize a counter i for characters
+    4. i ← 1
+    ## Initialize an empty string 
+    5. t ← ε            
 
-    ## Iteration
-    1. While True: 
-       a. t ← ε
-       b. While i ≤ l(ᚠ) and ᚠ[i] ≠ σ:
+    # Iteration
+    1. While i ≤ l(ᚠ):
+        a. If ᚠ[i] ≠ σ:
             i. t ← (t)(ᚠ[i])
-            ii. i ← i + 1
-       c. If l(t) > 0:
-            i. Apply Basis Clause of Definition 1.1.1 to t
-            ii. W ← W ∪ { (j, t) }
-            iii. j ← j + 1
-       d. i ← i + 1:
-       e. If i > l(ᚠ):
-           a. Return W ∎
+        b. Else:
+            i. If l(t) > 0:
+                1. Apply Basis Clause of Definition 1.1.1 to t.
+                2. W ← W ∪ { (j, t) }
+                3. j ← j + 1
+            ii. t ← ε
+        c. i ← i + 1
 
-Note the String which is initialized to hold the Sentence Characters in step 1 is set to an initial value of the Empty Character. The application of the Basis Clause in step 3a ensures this Empty Character is removed after the entire Sentence has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of Theorem 1.2.3.
+    # Finalization
+    1. If l(t) > 0:
+        a. W ← W ∪ { (j, t) }
+        b. j ← j+1
+    2. Return W ∎
+
+Note the String which is initialized to hold the Sentence Characters in step *5* is set to an initial value of the Empty Character in the Initialization Block. Also note, the application of the Basis Clause in step *1.b.i.1* ensures this Empty Character is removed after each Word has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of Theorem 1.2.3.
 
 The essence of the Delimiting Algorithm lies in the interplay of the Discovery Axiom W.1 and Definition 2.1.2 of a Sentence as a semantic String. In other words, by Definition 2.1.2 and by Definition 1.2.2, all Sentences and Words must be semantic. The only feature that differentiates them in their *"semanticality"* is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the Discovery Axiom W.1, the Words which a Sentence contains must be exactly those Strings which are separated by the Delimiter Character. 
 
-This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of deDelimitation within the Sentences of its Corpus. 
+This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of Delimiters within the Sentences of its Corpus. 
 
 The following examples show how to apply the Delimiting Algorithm to construct the Word-level representation of a Sentence. 
 
@@ -2446,42 +2455,58 @@ The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, 
 
 **Algorithm 3: Reduction Algorithm**
 
-The Reduction Algorithm takes in a String *s* as input. It initializes the values of several local variables and then iterates over the Character-level set representation of the String *s* until the Characters have been exhausted. It then returns the *σ-reduced* String *t* that correspond to the String *s*. The exact details are given below.
+The Reduction Algorithm takes in a String *t* as input. It initializes the values of several local variables and then iterates over the Character-level set representation of the String *t* until the Characters have been exhausted. It then returns the *σ-reduced* String *s* that corresponds to the String *t*. The exact details are given below.
 
-**Initialization** 
+.. topic:: Algorithm Reduce(t: String)
 
-- Let t = ε (*σ*-reduced String)
-- Let i = 1 (index to iterate over input String)
+    # Input: A String t
+    # Output: A String s that represents the σ-reduction of t
 
-**Iteration**
+    # Initialization
+    ## Character-level representation of s
+    1. s ← Empty(s)
+    ## Index to iterate over input String
+    2. i ← 1
+    ## Index to count concatenations 
+    3. j ← 1
+    ## Empty string to store σ-reduced String
+    4. t ← ε            
 
-1. If s[i] ≠ σ:
-    a. Let u = (t)(s[i])
-    b. Let t = u
-2. If i > l(s):
-    a. if l(t) > 0:
-        - Apply Basis Clause of Definition 1.1.1 to t.
-    b. Return t
-3. Let j = i + 1
-4. Let i = j ∎
+    # Iteration
+    1. While i ≤ l(s):
+        a. If s[i] ≠ σ:
+            i. t ← (t)(s[i])
+            ii. j ← j + 1
+        c. i ← i + 1
 
-Note the String *t* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 2a ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,
+    # Finalization
+    1. If j > 1 and l(t) > 0:
+        a. Apply Basis Clause of Definition 1.1.1 to t
+    2. Return t ∎
+
+Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,
 
     ε = ς(σ) = ς(σσ) = ς(σσσ) = ... 
-
-Moreover, since by Discovery Axiom W.1., Words do not contain Delimiters, for any Word *α* in Language **L**,
-
-    ς(α) = α
 
 From which, it follows, by Definition 1.1.3 of String Length, the String Length of a reduced Delimiter is simply zero,
 
     l(ς(σ)) = 0
 
-And the String Length of a reduced Word is simply the String Length of the Word,
+Moreover, since by Discovery Axiom W.1., Words do not contain Delimiters, for any Word *α* in Language **L**,
+
+    ς(α) = α
+
+Again, from Definition 1.1.3, the String Length of a reduced Word is simply the String Length of the Word,
 
     l(ς(α)) = l(α)
 
-The more complicated properties of *σ*-reduction are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the Reduction Algorithm to construct the *σ*-reduction of a String.
+A subtlety of the Reduction Algorithm should be noted. While *ς(σ) = ε* and *ς(α) = α*, it does not follow the *σ*-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
+
+    ς(ασ) ≠ αε
+
+This is because of the condition *(j > 1)* in the Finalization Block of the Reduction ensures Empty Characters are stripped from *t* when the input String contains atleast one non-Empty Character that has been concatenated into the *σ*-reduction String. 
+
+The more complicated properties of *σ*-reductions are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the Reduction Algorithm to construct the *σ*-reduction of a String.
 
 **Example**
 
@@ -2497,7 +2522,7 @@ The result of the σ-reduction of *s* is thus given by,
 
     ς(s) = "abc" ∎
 
-A *σ*-reduction can be thought of as a linguistic operation analogous to vector projection. While not a strict mathematical equivalence, this conception of *σ*-reduction captures the idea of transforming the string from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
+A *σ*-reduction can be thought of as a linguistic operation analogous to vector projection. While not a strict mathematical equivalence, this conception of *σ*-reduction captures the idea of transforming a String from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
 
 The *σ*-reduced Alphabet (**Σ**:sub:`σ`) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (*ς(s)*) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (*σ*).
 
@@ -2505,7 +2530,7 @@ Note that a *σ*-reduction is not a one-to-one operation. It is possible for the
 
 As an example, consider the (partial, ignoring punctuality) Palindromes *ᚠ = "madam im adam"* and *ᚢ = "mad am i madam"*. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
 
-Both the Palindrome and the alternative Sentence have the same *σ*-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original word boundaries and sentence structure are lost.
+Both the Palindrome and the alternative Sentence (which also happens to be a Palindrome) have the same *σ*-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original Word boundaries and Sentence structure are lost.
 
 Theorems 
 ^^^^^^^^
@@ -2514,7 +2539,7 @@ The following theorems establish the basic properties of *σ*-reductions.
 
 **Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
 
-Let *ζ* be an arbitrary sentence in C:sub:L. Let *s* be the *σ*-reduction of *ζ*,
+Let *ζ* be an arbitrary sentence in C:sub:`L`. Let *s* be the *σ*-reduction of *ζ*,
 
     1. s = ς(ζ)
 
@@ -2544,9 +2569,9 @@ Since ζ was an arbitrary sentence in C:sub:`L`, this can be generalized,
 
 This corollary is essential because it allows free movement between the Inverse of a *σ*-reduction and the *σ*-reduction of an Inverse. In other words, Theorem 3.1.1 establishes the commutativity of *σ*-reduction over inversion and visa versa. 
 
-As the theorems in this section will make clear, there exists a unique type of algebraic structure that links the operations of *σ*-reduction, inversion and concatenation. The properties of this algebraic structure will be necessary for establishes the results in the next subsection.
+As the theorems in this section will make clear, there exists a unique type of algebraic structure that links the operations of *σ*-reduction, inversion and concatenation. The properties of this algebraic structure will be necessary for establishing the results in the next subsection.
 
-pThe next theorem demonstrates how *σ*-reduction interacts with concatenation.
+The next theorem demonstrates how *σ*-reduction interacts with concatenation.
 
 **Theorem 3.1.2** ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
 
@@ -2608,7 +2633,7 @@ Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
 
 **Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
 
-Let *ζ* be an arbitrary sentence in C:sub:L. By the Duality Axiom S.1, every Sentence in C:sub:`L` must contain at least one word from L. 
+Let *ζ* be an arbitrary sentence in C:sub:`L`. By the Duality Axiom S.1, every Sentence in C:sub:`L` must contain at least one word from L. 
 
 By Definition 3.1.2, *ς(ζ)* removes all Delimiters from *ζ*. Therefore, *ς(ζ)* consists of the Characters of the words in *ζ* concatenated together without any delimiters.
 
@@ -2643,7 +2668,7 @@ Since *ζ* was an arbitrary sentence in **C**:sub:`L`, this can be generalized,
 
 This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the *σ*-reduction of *u* is contained in the *σ*-reduction of *t*.
 
-Let u and t be arbitrary strings in S.
+Let *u* and *t* be arbitrary strings in **S**.
 
 (→) Assume 
 
@@ -2763,7 +2788,7 @@ In both cases, there is a Word in *ζ* that is contained in the *σ*-reduction o
 
     ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ) ∎
 
-As one of the final precursors to a formal explication of palindromic structures, this next shows how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
+As one of the final precursors to a formal explication of palindromic structures, this next theorem shows how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
 
 **Theorem 3.1.7** ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
 
@@ -2773,7 +2798,7 @@ Assume
 
     1. ζ ∈ K
 
-In other words, assuem that *ζ* is an Invertible Sentence. By Theorem 2.3.7, since *ζ* is invertible, all its Words are also Invertible,
+In other words, assume that *ζ* is an Invertible Sentence. By Theorem 2.3.7, since *ζ* is invertible, all its Words are also Invertible,
  
     2. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → inv(ζ){i} ∈ L
 
@@ -2867,7 +2892,7 @@ Compare Theorem 3.1.8 to Theorem 2.2.5, reprinted below for reference,
 
     ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
 
-In other words, taking the *σ*-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from the Definitions of Limitation and Delimitation. The next theorem proves this relationship for the more general case of *any* ordered sequence of Words, not necessarily a semantic Sentence.
+In other words, taking the *σ*-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from the Definitions of Limitation and Delimitation. The next theorem proves this relationship for the more general case of *any* ordered sequence of Words, not necessarily a semantically coherent and admissible Sentence.
 
 **Theorem 3.1.9** ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
 
