@@ -82,6 +82,7 @@ Definitions
 - D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
 - D A.3.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
 - D A.3.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
+- D A.5.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
 - D A.4.1: Category: C:sub:`L`(m)
 - D A.8.1: Sentence Integral: Ω:sub:`-`(ζ,k). Ω:sub:`+`(ζ,k)
 - A A.8.2: Delimiter Mass: μ:sub:`-`(ζ, i), μ:sub:`+`(ζ, i)

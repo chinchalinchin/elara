@@ -556,7 +556,7 @@ By Definition A.1.2,
 
     ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
 
-By Definition (TODO) of Palindromes, the set of Palindromes **P** is a subset of C:sub:`L`. Therefore, 
+By Definition 3.2.1 of Palindromes, the set of Palindromes **P** is a subset of C:sub:`L`. Therefore, 
 
     ζ ∈ C:sub:`L`
 
@@ -650,7 +650,6 @@ If it can be shown,
 
 Then the theorem will follow tautologically from the laws of deduction. But step 3 is exactly Theorem 3.1.9. Therefore, the proof is complete. ∎
 
-
 Section A.IV: Categories
 -------------------------
 
@@ -667,15 +666,13 @@ A semantic Category in a language **L**, denoted C:sub:`L`(m), is a set of Words
 Axioms 
 ^^^^^^
 
-The fundamental assumptions regarding linguistic Categories in this formal system are now introduced. Each axiom will be justified by appeal to self-evidence. To see the motivation behind the first formal assumption about Categories adopted, 
+The fundamental assumptions regarding linguistic Categories in this formal system are now introduced. Each axiom will be justified by appeal to self-evidence. To see the motivation behind the first formal assumption about Categories adopted, note that every Word in a Language plays the role of a "part of speech". Grammar requires that any Word that is employed must belong to *at least* one grammatical categories, e.g. *noun*, *verb*, etc.
 
-TODO:
-
-**Axiom G.1: The Completeness Axiom**
+**Axiom G.1: The Aggregation Axiom**
 
     ∃ m ∈ ℕ: L = ∪:sub:`1`:sup:`m` C:sub:`L`(i) ∎
 
-TODO: 
+This leads to the Definition of a Languages's *Categorical Size*. By this, it is meant the total number of grammatical Categories that span the Language set through their union. In other words, Language can be conceived as the aggregation of all its grammatical Categories.
 
 **Definition A.4.4: Categorical Size**
 
@@ -685,9 +682,9 @@ The *m* such that,
 
 is denoted with the lowercase Greek kappa, *κ*. *κ* is called the Categorical Size of a Language. ∎
 
-TODO:
+It is important to note, the formal system takes no opinion on the nature of its Categories, i.e. what role a particular Category serves in the formation of a grammatical Sentence. Instead, the Aggregation Axiom G.2 simply states, no matter the semantic function assigned to a Category, it must obtain syntactically that these assignments must span the entire set of Language. 
 
-The choice of axioms for governing the logical calculus of Categories in the formal system is critical. Since the notion of a "grammatical categories" is inherently tied to the semantic interpretation of a Language and Corpus, the assumptions introduced about their nature must not violate the empirical reality of natural languages. 
+The choice of axioms for governing the logical calculus of Categories in the formal system is critical. Since the notion of a *"grammatical categories"* is inherently tied to the semantic interpretation of a Language and Corpus, the assumptions introduced about their nature must not violate the empirical reality of natural languages. 
 
 To see what is meant by this, consider the proposed axiom, the Uniqueness Axiom.
 
@@ -717,7 +714,7 @@ By Axiom G.1,
 
      L = ∪:sub:`1`:sup:`m` C:sub:`L`(i)
 
-Therefore, any word α in L must belong to at least one of these Categories. ∎
+Therefore, any word *α* in **L** must belong to at least one of these Categories. ∎
 
 Length
 ^^^^^^
@@ -731,8 +728,6 @@ In *ᚢ*, both occurrences of *"novel"* map to different Categories, namely *adj
 Since multiple Words can belong to the same Category, and conversely, the same Word can belong to multiple Categories, a notion of measuring the *Categorical Length* of a Sentence is now introduced. This notion will only measure the *unique* Categories found in a Sentence. For example, *"man"* and *"bridge"* would both be occurrences of the *noun* Category and would thus contribute a length of 1 to *Categorical Length*.
 
 Similar to the construction of the Character-level and Word-level representation of a String, a method for constructing the Category-level representation of a Sentence is given below in the next definition. 
-
-TODO: talk more about ambiguous sentences
 
 **Definition A.4.2: Categorical-level Representation**
 
@@ -760,50 +755,42 @@ Let *ζ* be an arbitrary sentence from Corpus C:sub:`L`. The *Categorical Length
 
     λ(ζ, i) = | C:sub:`ζ`(i) | ∎
 
-
 Section A.V: Sigma Inductions
 -----------------------------
 
+The operation of *σ*-reduction possesses unique characteristics that distinguish it from typical arithemtical or geometrical operations studied in abstract algebra. If linguistics is said to have an algebraic structure and *σ*-reduction is to be identified as it one of its essential components, then this presents a problem with respect to the operation which is to be understood as the *inverse* of *σ*-reduction. Strictly speaking, *σ*-reduction does not possess an inverse operation. Once a Sentence has been projected onto the *σ*-reduced Alphabet, necessary and sufficient information for the construction of its semantic interpretation has been lost. However, analogous to the case of a square root, this does not imply an a *σ*-induction cannot be defined, if the range of its inversion is suitably restricted. 
 
+The analysis of this problem will carry the work heavily into combinatorics. This section of the Appendix is a preliminary analysis of the challenges and problems any formulation of *σ*-induction must overcome in order to claim validity as a linguistic operation.
 
-You're right that knowing l(σ_reduce(ζ)) (the length of the σ-reduced sentence) and Λ(ζ) (the number of words in the sentence) significantly constrains the possibilities for reconstructing the original sentence from its σ-reduced form. This has implications for the potential reversibility of σ-reduction and for understanding the structure of sentences.
+To start, note that knowing the length of a *σ*-reduced Sentence, *l(ς(ζ))*, and the number of Words in the original Sentence, *Λ(ζ)*, significantly constrains the possibilities for reconstructing the original Sentence from its σ-reduced form. This has implications for the potential reversibility of σ-reduction and for understanding the structure of Sentences.
 
-Here's a more detailed breakdown of your observation and its implications:
+*l(ς(ζ))* contains information about the non-Delimiter Characters in the original Sentence *ζ*, and their relative ordering, as demonstrated by Theorem 3.1.6. In other words, although the Word are no longer delimited, the *σ*-reduction of a Sentence still contains every Word in the original Sentence, 
 
-Constraints on "Un-reducing" a Sentence:
+    ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
 
-Fixed Length of Non-Delimiter Characters: l(σ_reduce(ζ)) tells us the total length of the non-delimiter characters in the original sentence ζ.
+If the additional piece of information Λ(ζ) is at hand, then from Theorem 2.4.1,
 
-Fixed Number of Words: Λ(ζ) tells us the number of words in the original sentence ζ.
+    Λ(ζ) = Δ(ζ) + 1. 
+    
+In other words, the number of Delimiters is always one less than the number of Words. This provides a constraint on the number of possible combinations that need considered when inducing in the *σ*-reduced space. The delimiters must be placed between the Words in a way that creates valid Words in the Language **L** and not all arrangements of Delimiters will result in valid wWrds.
 
-Relationship between Delimiters and Words: We know from Theorem 2.4.1 that Λ(ζ) = Δ(ζ) + 1. This means the number of delimiters is always one less than the number of words.
+The problem of reconstructing the original Sentence from its *σ*-reduced form and the number of Words is analogous to the problem of integer partitioning in number theory. Integer partitioning is the problem of finding all possible ways to write an integer as a sum of positive integers. For example, the integer 4 can be partitioned in the following ways,
 
-Placement of Delimiters: The delimiters must be placed between the words in a way that creates valid words in the language L. This is where the constraint comes in. Not all arrangements of delimiters will result in valid words.
+    4
+    3 + 1
+    2 + 2
+    2 + 1 + 1
+    1 + 1 + 1 + 1
 
-Analogy to Integer Partitioning:
+In the case of *σ*-reductions, the String Length of the reduction, *l(ς(ζ))*, is analogous to the integer being partitioned, while *Λ(ζ)* is analogous to the number of parts in the partition. The String Lengths of the individual words in the sentence are analogous to the summands in the partition.
 
-The problem of reconstructing the original sentence from its σ-reduced form and the number of words is analogous to the problem of integer partitioning in number theory.
+While σ-reduction is not strictly reversible, knowing *l(ς(ζ))* and *Λ(ζ)* significantly reduces the number of possible Sentences that could have produced the given *σ*-reduced form. 
 
-Integer Partitioning: Integer partitioning is the problem of finding all possible ways to write an integer as a sum of positive integers. For example, the integer 4 can be partitioned in the following ways:
+In some cases, if the Language **L** has strong constraints on Word formation and if *l(ς(ζ))* and *Λ(ζ)*, are sufficiently restrictive, it is conceivable to uniquely reconstruct the original Sentence, or at least narrow it down to a small set of possibilities. 
 
-4
-3 + 1
-2 + 2
-2 + 1 + 1
-1 + 1 + 1 + 1
-Analogy: In our case:
+These insights lead to a formal definition of a *σ*-induction.
 
-l(σ_reduce(ζ)) is analogous to the integer being partitioned.
-Λ(ζ) is analogous to the number of parts in the partition.
-The lengths of the individual words in the sentence are analogous to the summands in the partition.
-Implications:
-
-Limited Reversibility: While σ-reduction is not strictly reversible (as we discussed before), knowing l(σ_reduce(ζ)) and Λ(ζ) significantly reduces the number of possible sentences that could have produced the given σ-reduced form.
-Potential for Reconstruction: In some cases, if the language L has strong constraints on word formation and if l(σ_reduce(ζ)) and Λ(ζ) are sufficiently restrictive, it might be possible to uniquely reconstruct the original sentence, or at least narrow it down to a small set of possibilities.
-
-
-
-Definition 3.1.15: σ-induction
+**Definition A.5.1: σ-induction**
 
 Let s be a string in Σ:sub:σ (a σ-reduced string), let m be a natural number representing the desired number of "word-forms" (intended to correspond to words or potentially other linguistic units) in the resulting strings, and let X be a set of strings (either S, the set of all strings, or C:sub:L, the set of sentences in language L).
 
@@ -1120,21 +1107,27 @@ Section A.VI: Reflective Structures
 
 A Reflective Structure, denoted **RS**, is the set of Strings *s* which satisfy the following formula,
 
-    s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (σ_reduce(s) = inv(σ_reduce(s)))]
-
-**Definition A.6.2: Partial Limitations**
-
-TODO: need to define what Π:sub:`i=i`:sup:`n` p(i) means for *i* not equal to 1.
+    s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
 
 **Theorem A.6.1** R ⊆ RS
 
+TODO 
+
 **Theorem A.6.2** ∀ α ∈ L: α ∈ RS ↔ (α)(σ)(inv(α)) ∈ RS
+
+TODO 
 
 **Theorem A.6.3** ∀ α ∈ L: α ∈ RS ↔ (α)(inv(α)) ∈ RS
 
+TODO 
+
 **Theorem A.6.4**  ∀ p ∈ X:sub:`L`(2): Π:sub:`i=1`:sup:`2` p(i) ∈ RS ↔ Π:sub:`i=1`:sup:`1` p(i) = inv(Π:sub:`i=2`:sup:`2` p(i))
 
+TODO 
+
 **Theorem A.6.5** P ⊆ RS
+
+TODO 
 
 
 Section A.VII: Intervention
@@ -1758,15 +1751,15 @@ Expanding the Sentence Integrals using Definition A.8.1,
 
    6. Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ)) = Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
 
-This simplifies to:
+This simplifies to,
 
    7. Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * i = Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (l(ζ) - i + 1)
 
-Rearranging the terms, we get:
+Rearranging the terms,
 
    8. Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
    
-Let m = ω(ζ) and split the summation into two parts,
+Let *m = ω(ζ)* and then split the summation into two parts,
 
    9. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (2i - l(ζ) - 1) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
 
@@ -1782,15 +1775,19 @@ So, through algebraic manipulation, this can be rearranged,
 
     11. 2i - l(ζ) - 1 = 2i - 2m
 
-For i ≤ m, 
+For i < m, 
 
-    12. 2i - l(ζ) - 1 ≤ 0
+    12. 2i - l(ζ) - 1 < 0
     
+For i = m,
+
+    13.  2i - l(ζ) - 1 = 0.
+
 And for i > m, 
 
-    13. 2i - l(ζ) - 1 > 0
+    14. 2i - l(ζ) - 1 > 0
 
-Thus, the first summation in equation 9 is non-positive, and the second summation is strictly positive.
+Thus,in this case, the first summation in step 9 is strictly negative, and the second summation in step 9 is strictly positive.
 
 **Case 2**: l(ζ) is even
 
