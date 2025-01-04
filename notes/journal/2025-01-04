@@ -1,0 +1,209 @@
+
+Before proceeding with the introduction of the concept of *Sentence Mass*, the following theorem will be proven as justification.
+
+**Theorem A.8.7** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: [Δ(ζ[:k]) > Δ(inv(ζ)[:k])] ↔ [ (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k)) ]
+
+Let ζ be an arbitrary Sentence in the Corpus **C**:sub:`L`,
+
+    1. ζ ∈ C:sub:`L`
+
+Let k be a natural number such that,
+
+    2. k ∈ N:sub:`l(ζ)`
+
+(→) Assume there are more Delimiters in the first *k* Characters of *ζ* than in the first *k* Characters of *inv(ζ)*.
+
+    1. Δ(ζ[:k]) > Δ(inv(ζ)[:k])
+
+By Theorem A.2.2, 
+
+    TODO: prove this relation!
+
+    2. Δ(inv(ζ)[:k]) = Δ(ζ[l(ζ) - k + 1:]). 
+    
+Substituting this into step 1,
+
+    3. Δ(ζ[:k]) > Δ(ζ[l(ζ) - k + 1:])
+
+Now, consider the Left-Hand and Right-Hand Sentence Integrals, using the formulas from Theorem A.8.1 and Theorem A.8.2,
+
+    4. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ))
+    5. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))
+    6. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[:i]) * (i/l(ζ))
+    7. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i:]) * ((l(ζ) - i + 1)/l(ζ))
+
+It must be shown that either 
+
+    Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k) ∨ Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k).
+
+For each *i* between 1 and k, the meaning of the terms is enumerated in the following list for clarity,
+
+    - Δ(ζ[:i]): The delimiter count of the Left Partial Sentence of ζ up to index i.
+    - Δ(ζ[i:]): The delimiter count of the Right Partial Sentence of ζ starting at index i.
+    - Δ(inv(ζ)[:i]): The delimiter count of the Left Partial Sentence of inv(ζ) up to index i. This is equivalent to Δ(ζ[l(ζ) - i + 1:]) by Theorem A.2.2 and Definition 1.1.4 of inversion.
+    - Δ(inv(ζ)[i:]): The delimiter count of the Right Partial Sentence of inv(ζ) starting at index i. This is equivalent to Δ(ζ[:l(ζ) - i + 1]) by Theorem A.2.2 and Definition 1.1.4 of inversion.
+
+By the assumption in step 1 and the equivalence in step 2,
+
+   8. For all *i*, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(ζ[l(ζ) - i + 1:])
+   
+Now, consider the weights in the Sentence Integrals:
+
+    - (i/l(ζ)) in the Left-Hand Integral: This weight increases as i increases.
+    - ((l(ζ) - i + 1)/l(ζ)) in the Right-Hand Integral: This weight decreases as i increases.
+
+Since *l(ζ) - i + 1 > i* for *i ≤ k ≤ l(ζ)/2*, the weights in the Right-Hand Integral are generally greater than the corresponding weights in the Left-Hand Integral when i is in the first half of the sentence.
+
+Combining the fact that Δ(ζ[:i]) > Δ(ζ[l(ζ) - i + 1:]) for all i up to k and that the weights in the Right-Hand Integral are generally larger in the first half of the sentence, we can conclude that the terms in the Right-Hand Integral will tend to be larger than the corresponding terms in the Left-Hand Integral.
+
+Therefore, if the Right-Hand Integral of ζ is greater than the Right-Hand Integral of inv(ζ), then it must also be true the Left-Hand Integral of ζ is greater than the Left-Hand Integral of inv(ζ),
+
+1. Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k) → Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k)
+Thus,
+
+1. (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k))
+(←) Direction:
+
+Assume:
+
+1. (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k))
+This means that either the Right-Hand Integral of ζ up to k is greater than the Right-Hand Integral of inv(ζ) up to k, or the Left-Hand Integral of ζ up to k is greater than the Left-Hand Integral of inv(ζ) up to k.
+
+Without loss of generality, assume the first case is true:
+
+2. Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)
+Expanding the integrals, we have:
+
+3. Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i:]) * ((l(ζ) - i + 1)/l(ζ))
+Using the fact that Δ(inv(ζ)[i:]) = Δ(ζ[:l(ζ) - i + 1]), we can rewrite the inequality as:
+
+4. Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`k` Δ(ζ[:l(ζ) - i + 1]) * ((l(ζ) - i + 1)/l(ζ))
+Since the weights (l(ζ) - i + 1)/l(ζ) are generally larger for smaller values of i (i.e., earlier in the sentence), for the left-hand side of the inequality to be greater, there must be at least one i for which the delimiter count of the Right Partial Sentence Δ(ζ[i:]) is greater than the delimiter count of the corresponding Left Partial Sentence in the inverse Δ(ζ[:l(ζ) - i + 1]).
+
+In other words, there must exist at least one i, 1 ≤ i ≤ k, such that:
+
+5. Δ(ζ[i:]) > Δ(ζ[:l(ζ) - i + 1])
+Using Theorem A.2.2, we can rewrite this as:
+
+6. Δ(ζ[i:]) > Δ(inv(ζ)[:i])
+Since the Left-Hand Integral is a weighted sum of Δ(ζ[:i]), and we know there exists an i such that Δ(ζ[:i]) > Δ(inv(ζ)[:i]), it follows that a sufficient condition for the inequality in step 4 to hold is that the Delimiter count is greater for at least one Left-Partial Sentence than its inverse counterpart,
+
+7. ∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]).
+However, by the same logic, it also follows that if the Left-Hand Integral of ζ is greater than the Left-Hand Integral of inv(ζ), then,
+
+8. ∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]).
+Therefore, since by assumption either the Left-Hand Integral is greater, or the Right-Hand Integral is greater, then there must exist an i such that,
+
+9. ∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]).
+Conclusion:
+
+We have shown both directions of the equivalence:
+
+(∀ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i])) → ((Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k)))
+((Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k))) → (∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]))
+Therefore, the complete theorem holds:
+
+∀ ζ ∈ C:sub:L: ∀ k ∈ N:sub:l(ζ): [Δ(ζ[:k]) > Δ(inv(ζ)[:k])] ↔ [ (Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k)) ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Theorem A.8.7: ∀ ζ ∈ C:sub:L: ∀ k ∈ N:sub:l(ζ): [Δ(ζ[:k]) > Δ(inv(ζ)[:k])] ↔ [ (Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k)) ]
+
+Proof:
+
+Let ζ be an arbitrary Sentence in the Corpus C:sub:L, and let k be a natural number such that 1 ≤ k ≤ l(ζ).
+
+(→) Direction:
+
+Assume:
+
+1. Δ(ζ[:k]) > Δ(inv(ζ)[:k])
+This means there are more delimiters in the first k characters of ζ than in the first k characters of inv(ζ).
+
+By Theorem A.2.2, we know that Δ(inv(ζ)[:k]) = Δ(ζ[l(ζ) - k + 1:]). Substituting this into our assumption, we get:
+
+2. Δ(ζ[:k]) > Δ(ζ[l(ζ) - k + 1:])
+Now, let's consider the Left-Hand and Right-Hand Integrals:
+
+3. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+4. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+5. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+6. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+We want to show that either Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k) or Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k).
+
+From our assumption in step 1 and the fact that Δ(inv(ζ)[i]) = Δ(ζ[l(ζ) - i + 1]) (by Theorem A.2.2), we know that:
+
+7. For *i = k*: Δ(ζ[:k]) > Δ(inv(ζ)[:k]) = Δ(ζ[l(ζ) - k + 1:])
+Now, let's analyze the terms in the summations. For each i between 1 and k:
+
+Δ(ζ[i]): The delimiter count at the i:sup:th character of ζ.
+Δ(inv(ζ)[i]): The delimiter count at the i:sup:th character of inv(ζ), which is equivalent to Δ(ζ[l(ζ) - i + 1]).
+From our assumption, we know that for i = k, the delimiter count in the Left Partial Sentence of ζ is greater than the delimiter count in the corresponding Right Partial Sentence.
+
+Since the weights (l(ζ) - i + 1)/l(ζ) in the Right-Hand Integral are generally greater than the corresponding weights i/l(ζ) in the Left-Hand Integral for i in the first half of the sentence, if each term's delimiter count in the Right-Hand Integral's summation is at least as large as the corresponding term in the Left-Hand Integral's summation, and at least one term is strictly greater, then the overall sum of the Right-Hand Integral will be larger. The same logic applies to Left-Hand Integrals. In other words,
+
+8. Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k) → Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k)
+Thus,
+
+9. (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k))
+(←) Direction:
+
+Assume:
+
+1. (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k))
+This means that either the Right-Hand Integral of ζ up to k is greater than the Right-Hand Integral of inv(ζ) up to k, or the Left-Hand Integral of ζ up to k is greater than the Left-Hand Integral of inv(ζ) up to k.
+
+Without loss of generality, assume the first case is true:
+
+2. Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)
+Expanding the integrals, we have:
+
+3. Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+Using the fact that Δ(inv(ζ)[i]) = Δ(ζ[l(ζ) - i + 1]), we can rewrite the inequality as:
+
+4. Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`k` Δ(ζ[l(ζ) - i + 1]) * ((l(ζ) - i + 1)/l(ζ))
+Since the weights (l(ζ) - i + 1)/l(ζ) are generally larger for smaller values of i (i.e., earlier in the sentence), for the left-hand side of the inequality to be greater, there must be at least one i for which the delimiter count Δ(ζ[i]) is greater than the corresponding delimiter count Δ(ζ[l(ζ) - i + 1]).
+
+In other words, there must exist at least one i, 1 ≤ i ≤ k, such that:
+
+5. Δ(ζ[i]) > Δ(ζ[l(ζ) - i + 1])
+Since Δ(ζ[l(ζ) - i + 1]) = Δ(inv(ζ)[i]), we have:
+
+6. Δ(ζ[i]) > Δ(inv(ζ)[i])
+From step 4 and step 6, we know that if the Right-Hand integral of ζ is greater than the Right-Hand Integral of inv(ζ) up to index k, then there must be some index i less than or equal to k such that the number of Delimiters at position i in ζ is greater than the number of Delimiters at position i in inv(ζ).
+
+Now, assume for the sake of contradiction that for all i, 1 ≤ i ≤ k,
+
+7. Δ(ζ[:i]) ≤ Δ(inv(ζ)[:i])
+From this assumption and the fact that Δ(inv(ζ)[i]) = Δ(ζ[l(ζ) - i + 1]), we know that for all i in N:sub:k,
+
+8. Δ(ζ[:i]) ≤ Δ(ζ[l(ζ) - i + 1:])
+Then by the contrapositive of the argument in the (→) direction, it must follow that,
+
+9. (Ω:sub:`+`(ζ,k) ≤ Ω:sub:`+`(inv(ζ),k)) ∧ (Ω:sub:`-`(ζ,k) ≤ Ω:sub:`-`(inv(ζ),k))
+This contradicts the assumption in step 1. Therefore, if the condition in step 1 is true, then there must exist an i for which 1 ≤ i ≤ k such that,
+
+10. Δ(ζ[:i]) > Δ(inv(ζ)[:i])
+Conclusion:
+
+We have shown both directions of the equivalence:
+
+(∀ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i])) → ((Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k)))
+((Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k))) → (∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]))

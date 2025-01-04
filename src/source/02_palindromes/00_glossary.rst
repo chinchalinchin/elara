@@ -83,7 +83,8 @@ Definitions
 - D A.3.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
 - D A.3.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
 - D A.4.1: Category: C:sub:`L`(m)
-- D A.8.1: Sentence Integral: Ω:sub:`-`(ς(ζ),k). Ω:sub:`+`(ς(ζ),k)
+- D A.8.1: Sentence Integral: Ω:sub:`-`(ζ,k). Ω:sub:`+`(ζ,k)
+- A A.8.2: Delimiter Mass: μ:sub:`-`(ζ, i), μ:sub:`+`(ζ, i)
 
 Algorithms
 ----------
@@ -186,7 +187,12 @@ Theorems
 - T A.3.3: ∀ α ∈ L:sub:`P`: α = inv(α)
 - T A.3.4: L ∩ L:sub:`P` ⊆ R
 - T A.3.5: L:sub:`P` ⊂ R:sub:`L_σ`
-- T A.8.1: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ)) = Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (k/l(ζ))
-- T A.8.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ)) = Σ:sub:`1`:sup:`k` Δ(ζ[k]) * ((l(ζ) - k + 1)/l(ζ))
-- T A.8.3: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
-- T A.8.4: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+- T A.8.1: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+- T A.8.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+- T A.8.3: ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+- T A.8.4: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+- T A.8.5: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+- T A.8.6: ∀ ζ ∈ IP: Ω:sub:`-`(ζ,l(ζ)) ≠ Ω:sub:`+`(ζ,l(ζ))
+- T A.8.7: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+- T A.8.8: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+- 
