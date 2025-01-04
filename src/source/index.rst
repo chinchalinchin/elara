@@ -1,5 +1,5 @@
-Grant Moore 
-###########
+Language Games
+##############
 
 .. toctree::
    :maxdepth: 2

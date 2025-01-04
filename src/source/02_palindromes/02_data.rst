@@ -26,7 +26,7 @@ Ambiguous Words
 
 The following spreadsheet contains a sample of ambiguous words in English.
 
-.. csv-table:: Invertible Words
+.. csv-table:: Ambiguous Words
    :file: ../_static/data/words/ambiguous_words.csv
 
 Palindromes
@@ -34,7 +34,7 @@ Palindromes
 
 The following spreadsheet contains the results of palindromic analysis conducted on a sample of English palindromes. 
 
-.. csv-table:: Palindromic Analysis
+.. csv-table:: English Palindrome Analysis
    :file: ../_static/data/palindromes/english_palindromes.csv
 
 Latin
@@ -43,5 +43,5 @@ Latin
 Palindromes
 -----------
 
-.. csv-table:: Palindromic Analysis
-   :file: ../../_static/data/latin_palindromes.csv
+.. csv-table:: Latin Palindromes
+   :file: ../_static/data/palindromes/latin_palindromes.csv

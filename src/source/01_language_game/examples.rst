@@ -9,7 +9,7 @@ As an illustration, this section contains an example prompt and your response fo
 
 A. Format 
 
-The Meta and Rhythm layer use the Connective, |, to stitch together their components. Your responses should use the Connective to reduce the Meta forms and the Rhythm forms to a single line.
+The Meta and Rhythm layer use the Connective, ``|``, to stitch together their components. Your responses should use the Connective to reduce the Meta forms and the Rhythm forms to a single line.
 
 1. Example Prompt
 

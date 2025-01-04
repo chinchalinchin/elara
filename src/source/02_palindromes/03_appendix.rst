@@ -1731,7 +1731,7 @@ Let ζ be an arbitrary Sentence in the Corpus such that,
 
    1. ζ ∈ IP
 
-By Definition 3.2.3, this means:
+By Definition 3.2.3, this means,
 
    2. ζ ∈ P ∧ ζ ∉ PP
    
@@ -1759,11 +1759,12 @@ Rearranging the terms,
 
    8. Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
    
+
 Let *m = ω(ζ)* and then split the summation into two parts,
 
-   9. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (2i - l(ζ) - 1) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
+   1. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (2i - l(ζ) - 1) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
 
-Now, consider the cases where l(ζ) is even or odd separately, as a Palindrome's *parity* affect the value of the pivot *m* and the weights in the summation.
+Now, consider the cases where *l(ζ)* is even or odd separately, as a Palindrome's *parity* affect the value of the pivot *m* and the weights in the summation.
 
 **Case 1**: l(ζ) is odd
 
@@ -1807,35 +1808,21 @@ And for i > m,
 
     17. 2i - l(ζ) - 1 > 0.
 
-Thus, the first summation in equation 9 is strictly negative, and the second summation is strictly positive.
+Thus, in this case, the first summation in equation 9 is strictly negative, and the second summation is strictly positive.
 
-In both cases, for the equality in step 9 to hold, the only possibility is that both summations must be equal to zero. In order for this to be the case, it must follow that,
+In either case, for the equality in step 9 to hold, the negative and positive contributions from the two summations must cancel each other out exactly.
 
-    18.  ∀ i ∈ N:sub:`l(ζ)`: Δ(ζ[i]) = 0
+Since *ς(ζ) = inv(ς(ζ))* (step 3) and *ζ ≠ inv(ζ)* (step 4), it must be the case that the Delimiters are not symmetrically distributed around the pivot. In other words, the arrangement of Delimiters in the first half of the sentence is different from the arrangement of Delimiters in the second half when reversed.
 
-In other words, there are no Delimiters in the sentence. By Definition A.2.1, this would imply,
+If the arrangement of Delimiters in the first half of the sentence is different from the arrangement of Delimiters in the second half when reversed, then it cannot be the case that the first summation in equation 8 is always equal to the second summation as they will not cancel out.
 
-    Δ(ζ) = 0. 
-    
-However, by Theorem A.2.1, for any Sentence in the Corpus, 
+This is because:
 
-    Λ(ζ) = Δ(ζ) + 1. 
+The first summation is a weighted sum of Δ(ζ[i]) for i from 1 to m.
+The second summation is a weighted sum of Δ(ζ[i]) for i from m+1 to l(ζ).
+If the delimiter arrangement is asymmetrical, these weighted sums cannot be equal. Therefore, our assumption that Ω:sub:-(ζ,l(ζ)) = Ω:sub:+(ζ,l(ζ)) leads to a contradiction.
 
-By Theorem 2.2.4, 
 
-    Λ(ζ) ≥ 1 
-
-From this, it must follow, 
-
-    Δ(ζ) ≥ 0.  
-    
-If Δ(ζ) = 0, then Λ(ζ) = 1, meaning ζ has only one Word. By Theorem 3.1.8, this would mean,
-
-    c(ζ) = ζ
-
-Since ζ is a Palindrome, this would mean by Definition 3.2.1,
-
-    ζ = inv(ς(ζ)) = inv(ζ)
 
 This contradicts the initial assumption that ζ is an Imperfect Palindrome (step 4). Therefore, our assumption that the Left-Hand and Right-Hand Integrals are equal must be false. Therefore,
 

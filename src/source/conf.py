@@ -41,6 +41,4 @@ imgmath_latex_preamble = r'''
 
 # -- Theme configuration -----------------------------------------------------
 
-html_theme_options = {
-    "max_navbar_depth": 5
-}
+html_theme_options = { }

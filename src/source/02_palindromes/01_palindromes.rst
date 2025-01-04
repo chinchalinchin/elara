@@ -441,11 +441,15 @@ The Emptying Algorithm takes a string *t* as input, which can be thought of as a
 
     # Iteration
     1. While 𝔞:sub:`i` exists:
+
         a. If 𝔞:sub:`i` ≠ ε:
+
             i. T ← { (j, 𝔞:sub:`i`) } ∪ T
             ii. j ← j + 1
+
         b. i ← i + 1
-    2. Return T ∎
+
+    1. Return T ∎
 
 Step 1 in the Emptying Algorithm is essentially equivalent to a *try-catch* block in modern programming languages. Step 1 is materially different than comparing a Character in a String to the Empty Character. Step 1 relies on the idea that attempting to select a Character outside of the String is an undefined operation and will thus result in an error (i.e. a stack overflow). As the Characters in a String are iterated through, as long as the String is not infinite, the iteration will eventually reach the last Character, and once it tries to select the next Character, it will throw an error. 
 
@@ -1583,26 +1587,33 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
     3. j ← 1
     ## Initialize a counter i for characters
     4. i ← 1
-    ## Initialize an empty string 
-    5. t ← ε            
+    ## Initialize an empty string
+    5. t ← ε
 
     # Iteration
     1. While i ≤ l(ᚠ):
+   
         a. If ᚠ[i] ≠ σ:
+
             i. t ← (t)(ᚠ[i])
+
         b. Else:
+
             i. If l(t) > 0:
+
                 1. Apply Basis Clause of Definition 1.1.1 to t.
                 2. W ← W ∪ { (j, t) }
                 3. j ← j + 1
+   
             ii. t ← ε
+
         c. i ← i + 1
 
     # Finalization
-    1. If l(t) > 0:
+    2. If l(t) > 0:
         a. W ← W ∪ { (j, t) }
         b. j ← j+1
-    2. Return W ∎
+    3. Return W ∎
 
 Note the String which is initialized to hold the Sentence Characters in step *5* is set to an initial value of the Empty Character in the Initialization Block. Also note, the application of the Basis Clause in step *1.b.i.1* ensures this Empty Character is removed after each Word has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of Theorem 1.2.3.
 
@@ -1950,7 +1961,7 @@ Since ζ was an arbitrary Sentence in the Corpus, this can be generalized,
     ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
 
 Section II.III: Sentence Classes 
-------------------------------
+--------------------------------
 
 As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in linguistics is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will seen to be a *"recursion of inversions"*.
 
@@ -2476,13 +2487,18 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
 
     # Iteration
     4. While i ≤ l(s):
+        
         a. If s[i] ≠ σ:
+            
             i. t ← (t)(s[i])
+        
         c. i ← i + 1
 
     # Finalization
     5. If l(t) > 0:
+        
         a. Apply Basis Clause of Definition 1.1.1 to t
+    
     6. Return t ∎
 
 Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,

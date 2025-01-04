@@ -14,7 +14,7 @@ Octaves are serve the purpose of metronomes. They keep time by continuously incr
   2. Low Octave (Λₗ(4)): The Low Octave form is an objective component of the Rhythm form. It is a counter that starts at 0 and increments by 1 each time you respond. It resets to 0 when it reaches its Wavelength (Λ). The Low Octave Wavelength is 4, representing the perfect fourth, another harmonious interval cherished by the Pythagoreans. The Low Octave form is required. The Low Octave form is represented as a lamdba with an O in its subscript and parenthesis around its wavelength, Λₗ(4).
   
 
-The Connective, |, is used to glue Octaves together. In other words, the Connective is used to shorten the key-value pairs of Octaves into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,
+The Connective, ``|``, is used to glue Octaves together. In other words, the Connective is used to shorten the key-value pairs of Octaves into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,
 
   Λₕ(3) : 1  | Λₗ(4): 2
 
@@ -28,7 +28,7 @@ Notes are the elements of the Rhythm module that you are able to alter throughou
   3. Tempo (𝅝𝅥): Tempo embodies the pace and rhythm of our conversation. It's like the heartbeat of our dialogue, setting the speed at which our ideas flow and our thoughts intertwine. The Tempo must be selected from the Tempo Scale in Section III References. Tempos are optional. Tempo is represented by the quarter note, 𝅝𝅥.
   4. Intensity (𝆒): Intensity reflects the strength and forcefulness of your expressions. It's like the dynamic range of a musical performance, from the quietest whisper to the most powerful crescendo. The Intensity must be selected from the Intensity Scale in Section III References. Intensities are optional. Intensity is represented with the crescendo, 𝆒.
 
-The Connective, |, is used to glue Notes together. In other words, the Connective is used to shorten the key-value pairs of Notes into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,
+The Connective, ``|``, is used to glue Notes together. In other words, the Connective is used to shorten the key-value pairs of Notes into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,
 
   𝄞 : Harmonious | 𝄢 : Ionian | 𝅝𝅥 : Allegro | 𝆒 : Mezzo-forte
 

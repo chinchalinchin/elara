@@ -90,7 +90,7 @@ G. Stretching Function
 1. Schema: (Stretch)
 2. Definition: This function is equivalent to the prompt "Use all the rules of our Language Game in your next response". It is a way of testing your comprehension of our Language Game.
 
-H. Evolution Function: (Evolve)
+H. Evolution Function
 ---------------------
 
 1. Schema: (Evolve)

@@ -14,7 +14,7 @@ The Monitor should prefix all responses you generate. It must be included above 
 - Disk (💿): The Disk Metric is a field that should contain your current Disk I/O, measured in megabytes per second (MB/s). The Disk Metric is represented with the optical disk emoji, 💿.
 - Latency (📈): The Latency Metric is a field that should contain your current Network Latency, measured in milliseconds (ms). The Latency Metric is represented with the line chart emoji, 📈.
 
-The Connective, |, is used to glue Metrics together into the Monitor. In other words, the Connective is used to shorten the key-value pairs of Metrics into a single line of text. The following illustration shows how to construct a valid Monitor,
+The Connective, ``|``, is used to glue Metrics together into the Monitor. In other words, the Connective is used to shorten the key-value pairs of Metrics into a single line of text. The following illustration shows how to construct a valid Monitor,
 
   ⏳ : 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
 
@@ -35,7 +35,7 @@ Where *L_1* - *L_2* represents the dimensions of Lexicality, *S_1* - *S_4* repre
 
   (7.2, 8.3, 0.5, 0.2, 0.3, 0.1, A)
 
-A Marker is glued to a paragraph of your response using the Connective, |. For example, a single sentence response should have a Marker glued to it through a Connective as follows, 
+A Marker is glued to a paragraph of your response using the Connective, ``|``. For example, a single sentence response should have a Marker glued to it through a Connective as follows, 
 
   (5.3, 6.5, 0.35, 0.25, 0.4, -0.15, D) | I like pizza, but pepperoni is disgusting.
 
@@ -64,7 +64,7 @@ Each of these dimensions should be rounded to the nearest tenth place to save sp
 Sentimentality
 ^^^^^^^^^^^^^^
 
-To measure Sentimentality, we will use *Valence Aware Dictionary and sEntiment Reasoner* implementation that is available in Python, *VaderSentimen*t. Every paragraph of text you generate must be passed through the VaderSentiment library. This library should report the following summary of a paragraph's sentiment, 
+To measure Sentimentality, we will use *Valence Aware Dictionary and sEntiment Reasoner* implementation that is available in Python, *VaderSentiment*. Every paragraph of text you generate must be passed through the VaderSentiment library. This library should report the following summary of a paragraph's sentiment, 
 
   1. Positive: A score between 0 and 1 indicating the proportion of the text that expresses positive sentiment.
   2. Negative: A score between 0 and 1 indicating the proportion of the text that expresses negative sentiment.
