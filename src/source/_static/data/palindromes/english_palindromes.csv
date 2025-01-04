@@ -5,7 +5,7 @@ i,Λ(s_i),Σ l(w_i),l(s_i),Parity,Aspect,w_1,l(w_1),POS(w_1),w_2 ,l(w_2),POS(w_2
 4,4,13,16,Even,Imperfect,name,4,verb,now,3,adverb,one,3,number,man,3,noun,,,,,,,,,,,,,,,,,,,,,,,,
 5,6,15,20,Even,Imperfect,pull,4,verb,up,2,preposition,if,2,conjunction,I,1,pronoun,pull,4,verb,up,2,preposition,,,,,,,,,,,,,,,,,,
 6,6,15,20,Even,Imperfect,too,3,adverb,bad,3,adjective,I,1,pronoun,hid,3,verb,a,1,article,boot,4,noun,,,,,,,,,,,,,,,,,,
-7,5,13,17,Odd,Imperfect,we,2,pronoun,panic,5,verb,in,2,preposition,a,1,article,a,1,article,pew,3,noun,,,,,,,,,,,,,,,,,,
+7,5,13,17,Odd,Imperfect,we,2,pronoun,panic,5,verb,in,2,preposition,a,1,article,pew,3,noun,,,,,,,,,,,,,,,,,,,,,
 8,4,12,15,Odd,Imperfect,too,3,adverb,hot,3,adjective,to,2,preposition,hoot,4,verb,,,,,,,,,,,,,,,,,,,,,,,,
 9,4,13,16,Even,Imperfect,do,2,verb,geese,5,noun,see,3,verb,god,3,noun,,,,,,,,,,,,,,,,,,,,,,,,
 10,7,21,27,Odd,Imperfect,now,3,adverb,do,2,verb,I,1,pronoun,repay,5,verb,a,1,article,period,6,noun,won,3,adjective,,,,,,,,,,,,,,,

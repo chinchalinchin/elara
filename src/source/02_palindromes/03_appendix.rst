@@ -1357,17 +1357,19 @@ TODO
 
 
 Section A.VIII: Integration
---------------
+---------------------------
 
-**Definition TENATIVE: Sentence Integral**
+TODO
 
-The *Left-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`-`*(ζ,k)*, is defined as,
+**Definition A.8.1: Sentence Integral**
 
-    Ω:sub:`-`(ζ,k) =  Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ))
+Let ζ be an arbitary Sentence from Corpus **C**:sub:`L` and let *k* be a natural number such that *1 ≤ k ≤ Λ(ζ)*. The *Left-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`-`*(ζ,k)*, is defined as,
+
+    Ω:sub:`-`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ))
     
 The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defined as,
 
-    Ω:sub:`+`(ζ,k) =  Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[k:])/l(ζ)) ∎
+    Ω:sub:`+`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) ∎
 
 To develop an understanding of what is meant by the concept of a *Sentence Integral*, recall the String Length of the Left and Right Partial Sentences depends on the index of the Partial,
 
@@ -1446,3 +1448,345 @@ The following examples calculate the Left-Hand and Right-Hand Sentence Integrals
 |  24   |  "a"  |  24       |  3       |  0       |  (61/26)        |  (74/26)        |
 |  25   |  "r"  |  25       |  2       |  0       |  (61/26)        |  (74/26)        |
 |  26   |  "d"  |  26       |  1       |  0       |  (61/26)        |  (74/26)        |
+
+
+**Theorem A.8.1** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ)) = Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (k/l(ζ))
+
+Let ζ be an arbitrary Sentence in the Corpus C:sub:L, and let k be a natural number such that 1 ≤ k ≤ Λ(ζ).
+
+By Definition 3.2.5 of Left Partial Sentences, for any i where 1 ≤ i ≤ l(ζ), we have:
+
+1. `l(ζ[:i]) = i`
+Now, consider the Left-Hand Integral up to index k:
+
+2. `Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ))`
+Substituting l(ζ[:i]) = i into the expression, we get:
+
+3. `Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ))`
+Since ζ and k were arbitrary, we can generalize:
+
+4. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ))
+
+
+**Theorem A.8.2** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: Σ:sub:`1`:sup:`k` Δ(ζ[k]) * (l(ζ[:k])/l(ζ)) = Σ:sub:`1`:sup:`k` Δ(ζ[k]) * ((l(ζ) - k + 1)/l(ζ))
+
+Proof:
+
+Let ζ be an arbitrary Sentence in the Corpus C:sub:L, and let k be a natural number such that 1 ≤ k ≤ Λ(ζ).
+
+By Definition 3.2.6 of Right Partial Sentences, for any i where 1 ≤ i ≤ l(ζ), we have:
+
+1. `l(ζ[i:]) = l(ζ) - i + 1`
+Now, consider the Right-Hand Integral up to index k:
+
+2. `Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))`
+Substituting l(ζ[i:]) = l(ζ) - i + 1 into the expression, we get:
+
+3. `Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))`
+Since ζ and k were arbitrary, we can generalize:
+
+4. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))
+This completes the proof of Theorem A.8.2.
+
+**Theorem A.8.3.** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+
+Let *ζ* be an arbitrary Sentence in the Corpus **C**:sub:`L`, and let *k* be a natural number such that *1 ≤ k ≤ Λ(ζ)*.
+
+By Definition 3.1.2, the σ-reduction of ζ, denoted ς(ζ), is a string obtained by removing all delimiter characters (σ) from ζ.
+
+By Theorem A.2.11, the delimiter count of any σ-reduced string is 0. Therefore, for any string t:
+
+1. Δ(ς(t)) = 0
+Now, consider the Left-Hand Integral of ς(ζ) up to index k:
+
+1. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[:i]) * (l(ς(ζ)[:i])/l(ς(ζ)))
+By the definition of Left Partial Sentence (3.2.5) and σ-reduction (3.1.2), ς(ζ)[:i] is a substring of ς(ζ) from the beginning up to the i-th character. Since ς(ζ) contains no delimiters, ς(ζ)[:i] will also contain no delimiters.
+
+Therefore, by Theorem A.2.11,
+
+3. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[:i]) = 0
+Substituting this into the expression for the Left-Hand Integral, we get:
+
+4. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[:i])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
+Now, consider the Right-Hand Integral of ς(ζ) up to index k:
+
+5. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[i:]) * (l(ς(ζ)[i:])/l(ς(ζ)))
+By the definition of Right Partial Sentence (3.2.6) and σ-reduction (3.1.2), ς(ζ)[i:] is a substring of ς(ζ) from the i-th character to the end. Since ς(ζ) contains no delimiters, ς(ζ)[i:] will also contain no delimiters.
+
+Therefore, by Theorem A.2.11,
+
+6. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[i:]) = 0
+Substituting this into the expression for the Right-Hand Integral, we get:
+
+7. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[i:])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
+Thus, we have shown that for any k between 1 and Λ(ζ), both the Left-Hand and Right-Hand Integrals of ς(ζ) are equal to 0:
+
+8. Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+Since ζ and k were arbitrary, we can generalize:
+
+9. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+This completes the proof.
+
+**Theorem A.8.4** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+
+Let *ζ* be an arbitrary Perfect Palindrome in the Corpus C:sub:`L`,
+
+    1. ζ ∈ PP
+
+and let *k* be a natural number such that *1 ≤ k ≤ Λ(ζ)*. By Definition 3.2.2, since *ζ* is a Perfect Palindrome,
+
+   2. ζ = inv(ζ)
+   
+This means that the Sentence reads the same forwards as backwards. By Definition A.8.1, the Left-Hand Integral of *ζ* up to index *k* is:
+
+   3. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ))
+
+And the Right-Hand Integral of ζ up to index k is:
+
+   4. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))
+   
+It must be shown that,
+
+   5. Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k).
+
+Since *ζ = inv(ζ)*, by Definition 1.2.4 of String Inversion
+
+   6. ∀ i ∈ N:sub:`l(ζ)` ζ[i] = inv(ζ)[l(ζ) - i + 1]
+
+Now consider the Delimiter Count Function *Δ(ζ[:i])*. By Definition A.2.1, this function counts the number of Delimiters in the Left Partial Sentence up to index *i*. By Theorem A.2.2, the Delimiter Count is invariant under inversion. 
+
+Furthermore, since *ζ* is a Perfect Palindrome, the Left Partial Sentence up to index i is the inverse of the Right Partial Sentence starting at index l(ζ) - i + 1. In other words:
+
+   7. ζ[:i] = inv(ζ[l(ζ) - i + 1:])
+   
+Therefore,
+
+   8. Δ(ζ[:i]) = Δ(inv(ζ[l(ζ) - i + 1:])) =  Δ(ζ[l(ζ) - i + 1:])
+   
+Now consider the Right-Hand Integral,
+
+   9. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))
+
+Make the following change of variables in the summation. Let *j = l(ζ) - i + 1*. Then, as *i* goes from 1 to *k*, *j* goes from *l(ζ)* to *l(ζ) - k + 1*,
+
+   10. Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[l(ζ) - j + 1:]) * (l(ζ[l(ζ) - j + 1:])/l(ζ))
+   
+Substituting in step 8,
+
+   11. Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ[l(ζ) - j + 1:])/l(ζ))
+   
+By Theorem 3.2.13, 
+
+   12. l(ζ[l(ζ) - j + 1:]) = l(ζ) - l(ζ[:j]) + 1. 
+
+Substituting this into step 11,
+
+   13.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - l(ζ[:j]) + 1)/l(ζ)
+   14.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - j + 1)/l(ζ)
+
+Since *ζ* is a Perfect Palindrome,
+
+   15.  Δ(ζ[:j]) = Δ(ζ[l(ζ) - j + 1:])
+
+Furthermore, from Definition 3.2.5 of Left Partial Sentences, 
+
+   16.  l(ζ[:j]) = j
+   
+Substituting step 15 in step 10,
+
+   17.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - l(ζ[:j]) + 1)/l(ζ)
+
+And then substituting step 16 into step 17,
+    
+   18.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - j + 1)/l(ζ)
+
+This expression is almost the same as the Left-Hand Integral, except for the summation limits. However, since the summation is over a Perfect Palindrome, by step 6, the terms from *j = k + 1* to *l(ζ)* in the Right-Hand Integral will correspond to the terms from *i = 1* to *l(ζ) - k* in the Left-Hand Integral.
+
+In other words, the terms "missing" in the Right-Hand Integral by summing from *l(ζ) - k + 1 to l(ζ)* are exactly the terms that are "extra" in the Left-Hand Integral by summing from *1* to *k*. Because of the symmetry of the Palindrome and the invariance of the Delimiter Count under inversion, these extra terms will cancel each other out. Formally, 
+
+    19. Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - j + 1)/l(ζ)
+
+Therefore,
+
+   20.  Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k)
+
+Since *ζ* and *k* were arbitrary, this can generalize over the class of Perfect Palindromes,
+
+   21.  ∀ ζ ∈ PP: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k) ∎
+
+Theorem A.8.4, along with the examples given in the introduction of this section, suggests a Sentence Integral can be regarded as a measure of the Delimiter symmetry in a Sentence. A Sentence Integral is the sum of the Delimiter Count of each Character, where each contribution is weighted by its distance from the starting point of the Sentence or the ending point of the Sentence, depending on if the Left- or Right-hand Sentence Integrals are taken. 
+
+In other words, Sentence Integrals yield a measure of Delimiter *"mass"*, and the difference between the Left- and Right-hand Sentence Integrals is a measure of the Delimiter symmetry within the Sentence.
+
+As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be regarded as part of the class of Sentence *invariant* of Sentence Integrals,
+
+    Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = 0
+
+In other words, Perfect Palindromes are a subset of the class of sentences that *"balance"* out Delimiter-wise. 
+
+
+
+
+
+
+|  k  |  ᚠ[k] |  inv(ᚠ)[k] | l(ᚠ[:k])  | l(ᚠ[k:]) |  Δ(ᚠ[k]) | Δ(inv(ᚠ)[k]) | Ω:sub:`-`(ᚠ ,k) | Ω:sub:`+`(ᚠ ,k) | Δ(ᚠ[:k]) | Δ(inv(ᚠ)[:k]) | Ω:sub:`-`(inv(ᚠ) , k) | Ω:sub:`+`(inv(ᚠ) , k) |
+| --- | ----- | ---------  | --------- | -------- | -------- | ------------ | --------------- | --------------- | -------- | ------------- | --------------------- | --------------------- |
+|  1  |  "d"  |    "d"     |  1        |  26      |  0       |  0           |  0              |  0              | 0        | 0             |  0                    |  0                    |
+|  2  |  "r"  |    "r"     |  2        |  25      |  0       |  0           |  0              |  0              | 0        | 0             |  0                    |  0                    |
+|  3  |  "a"  |    "a"     |  3        |  24      |  0       |  0           |  0              |  0              | 0        | 0             |  0                    |  0                    |
+|  4  |  "w"  |    "w"     |  4        |  23      |  0       |  0           |  0              |  0              | 0        | 0             |  0                    |  0                    | 
+|  5  |  " "  |    "n"     |  5        |  22      |  1       |  0           |  (5/26)         |  (22/26)        | 1        | 0             |  0                    |  0                    | 
+|  6  |  "n"  |    "o"     |  6        |  21      |  0       |  0           |  (5/26)         |  (22/26)        | 1        | 0             |  0                    |  0                    |
+|  7  |  "o"  |    " "     |  7        |  20      |  0       |  1           |  (5/26)         |  (22/26)        | 1        | 1             |  (7/26)               |  (20/26)              |
+|  8  |  " "  |    "d"     |  8        |  19      |  1       |  0           |  (13/26)        |  (41/26)        | 2        | 1             |  (7/26)               |  (20/26)              |
+|  9  |  "d"  |    "r"     |  9        |  18      |  0       |  0           |  (13/26)        |  (41/26)        | 2        | 1             |  (7/26)               |  (20/26)              |
+|  10 |  "r"  |    "a"     |  10       |  17      |  0       |  0           |  (13/26)        |  (41/26)        | 2        | 1             |  (7/26)               |  (20/26)              |
+|  11 |  "a"  |    "y"     |  11       |  16      |  0       |  0           |  (13/26)        |  (41/26)        | 2        | 1             |  (7/26)               |  (20/26)              |
+|  12 |  "y"  |    " "     |  12       |  15      |  0       |  1           |  (13/26)        |  (41/26)        | 2        | 2             |  (19/26)              |  (32/26)              |
+|  13 |  " "  |    "a"     |  13       |  14      |  1       |  0           |  (26/26)        |  (55/26)        | 3        | 2             |  (19/26)              |  (32/26)              |
+|  14 |  "a"  |    " "     |  14       |  13      |  0       |  1           |  (26/26)        |  (55/26)        | 3        | 3             |  (33/26)              |  (46/26)              |
+|  15 |  " "  |    "y"     |  15       |  12      |  1       |  0           |  (41/26)        |  (67/26)        | 4        | 3             |  (33/26)              |  (46/26)              |
+|  16 |  "y"  |    "a"     |  16       |  11      |  0       |  0           |  (41/26)        |  (67/26)        | 4        | 3             |  (33/26)              |  (46/26)              |
+|  17 |  "a"  |    "r"     |  17       |  10      |  0       |  0           |  (41/26)        |  (67/26)        | 4        | 3             |  (33/26)              |  (46/26)              | 
+|  18 |  "r"  |    "d"     |  18       |  9       |  0       |  0           |  (41/26)        |  (67/26)        | 4        | 3             |  (33/26)              |  (46/26)              | 
+|  19 |  "d"  |    " "     |  19       |  8       |  0       |  1           |  (41/26)        |  (67/26)        | 4        | 4             |  (52/26)              |  (54/26)              |
+|  20 |  " "  |    "o"     |  20       |  7       |  1       |  0           |  (61/26)        |  (74/26)        | 5        | 4             |  (52/26)              |  (54/26)              |
+|  21 |  "o"  |    "n"     |  21       |  6       |  0       |  0           |  (61/26)        |  (74/26)        | 5        | 4             |  (52/26)              |  (54/26)              |
+|  22 |  "n"  |    " "     |  22       |  5       |  0       |  1           |  (61/26)        |  (74/26)        | 5        | 5             |  (74/26)              |  (59/26)              |
+|  23 |  "w"  |    "w"     |  23       |  4       |  0       |  0           |  (61/26)        |  (74/26)        | 5        | 5             |  (74/26)              |  (59/26)              |
+|  24 |  "a"  |    "a"     |  24       |  3       |  0       |  0           |  (61/26)        |  (74/26)        | 5        | 5             |  (74/26)              |  (59/26)              |
+|  25 |  "r"  |    "r"     |  25       |  2       |  0       |  0           |  (61/26)        |  (74/26)        | 5        | 5             |  (74/26)              |  (59/26)              |
+|  26 |  "d"  |    "d"     | 26        |  1       |  0       |  0           |  (61/26)        |  (74/26)        | 5        | 5             |  (74/26)              |  (59/26)              |
+
+Consider k = 6. It's corresponding inverted Character position would be l(ᚠ) - k + 1 = 26 - 6 + 1 = 21. 
+
+    Δ(ᚠ[:6]) = 1
+    Δ(ᚠ[6:]) = 4
+    Δ(ᚠ[:21]) = 5
+    Δ(ᚠ[21:]) = 0
+
+    Ω:sub:`-`(ᚠ, 6) =  (5/26) 
+    Ω:sub:`+`(ᚠ, 6) =  (22/26) 
+    Ω:sub:`-`(ᚠ, 21) = (61/26) 
+    Ω:sub:`+`(ᚠ, 21) = (74/26)  
+
+    Δ(inv(ᚠ)[:21]) = 4
+    Δ(inv(ᚠ)[21:]) = 1
+    Δ(inv(ᚠ)[:6]) = 0
+    Δ(inv(ᚠ)[6:]) = 5
+
+    Ω:sub:`-`(inv(ᚠ), 6) = 0
+    Ω:sub:`+`(inv(ᚠ), 6) = 0
+    Ω:sub:`-`(inv(ᚠ), 21) = (52/26)               
+    Ω:sub:`+`(inv(ᚠ), 21) = (54/26)
+
+The total number of Delimiters starting at Character Index 1 up to Character Index 6 in the original Sentence is 1. This corresponds to Δ(ᚠ)[:6] and to Δ(inv(ᚠ)[21:]). 
+
+The total number of Delimiters starting at Character Index 26 and working backwards toward Character Index 21 is 0. This corresponds to Δ(ᚠ)[21:] and to Δ(inv(ᚠ)[:6]).
+
+
+Before proceeding with the introduction of the concept of *Sentence Mass*, the following theorem will be proven as justification.
+
+**Theorem A.8.5** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: [Δ(ζ[:k]) > Δ(inv(ζ)[:k])] ↔ [ (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k)) ]
+
+Let ζ be an arbitrary Sentence in the Corpus **C**:sub:`L`,
+
+    1. ζ ∈ C:sub:`L`
+
+Let k be a natural number such that,
+
+    2. k ∈ N:sub:`l(ζ)`
+
+(→) Assume there are more Delimiters in the first *k* Characters of *ζ* than in the first *k* Characters of *inv(ζ)*.
+
+    1. Δ(ζ[:k]) > Δ(inv(ζ)[:k])
+
+By Theorem A.2.2, 
+
+    TODO: prove this relation!
+
+    2. Δ(inv(ζ)[:k]) = Δ(ζ[l(ζ) - k + 1:]). 
+    
+Substituting this into step 1,
+
+    3. Δ(ζ[:k]) > Δ(ζ[l(ζ) - k + 1:])
+
+Now, consider the Left-Hand and Right-Hand Sentence Integrals, using the formulas from Theorem A.8.1 and Theorem A.8.2,
+
+    4. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ))
+    5. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))
+    6. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[:i]) * (i/l(ζ))
+    7. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i:]) * ((l(ζ) - i + 1)/l(ζ))
+
+It must be shown that either 
+
+    Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k) ∨ Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k).
+
+For each *i* between 1 and k, the meaning of the terms is enumerated in the following list for clarity,
+
+    - Δ(ζ[:i]): The delimiter count of the Left Partial Sentence of ζ up to index i.
+    - Δ(ζ[i:]): The delimiter count of the Right Partial Sentence of ζ starting at index i.
+    - Δ(inv(ζ)[:i]): The delimiter count of the Left Partial Sentence of inv(ζ) up to index i. This is equivalent to Δ(ζ[l(ζ) - i + 1:]) by Theorem A.2.2 and Definition 1.1.4 of inversion.
+    - Δ(inv(ζ)[i:]): The delimiter count of the Right Partial Sentence of inv(ζ) starting at index i. This is equivalent to Δ(ζ[:l(ζ) - i + 1]) by Theorem A.2.2 and Definition 1.1.4 of inversion.
+
+By the assumption in step 1 and the equivalence in step 2,
+
+   8. For all *i*, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(ζ[l(ζ) - i + 1:])
+   
+Now, consider the weights in the Sentence Integrals:
+
+    - (i/l(ζ)) in the Left-Hand Integral: This weight increases as i increases.
+    - ((l(ζ) - i + 1)/l(ζ)) in the Right-Hand Integral: This weight decreases as i increases.
+
+Since *l(ζ) - i + 1 > i* for *i ≤ k ≤ l(ζ)/2*, the weights in the Right-Hand Integral are generally greater than the corresponding weights in the Left-Hand Integral when i is in the first half of the sentence.
+
+Combining the fact that Δ(ζ[:i]) > Δ(ζ[l(ζ) - i + 1:]) for all i up to k and that the weights in the Right-Hand Integral are generally larger in the first half of the sentence, we can conclude that the terms in the Right-Hand Integral will tend to be larger than the corresponding terms in the Left-Hand Integral.
+
+Therefore, if the Right-Hand Integral of ζ is greater than the Right-Hand Integral of inv(ζ), then it must also be true the Left-Hand Integral of ζ is greater than the Left-Hand Integral of inv(ζ),
+
+1. Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k) → Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k)
+Thus,
+
+1. (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k))
+(←) Direction:
+
+Assume:
+
+1. (Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)) ∨ (Ω:sub:`-`(ζ,k) > Ω:sub:`-`(inv(ζ),k))
+This means that either the Right-Hand Integral of ζ up to k is greater than the Right-Hand Integral of inv(ζ) up to k, or the Left-Hand Integral of ζ up to k is greater than the Left-Hand Integral of inv(ζ) up to k.
+
+Without loss of generality, assume the first case is true:
+
+2. Ω:sub:`+`(ζ,k) > Ω:sub:`+`(inv(ζ),k)
+Expanding the integrals, we have:
+
+3. Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i:]) * ((l(ζ) - i + 1)/l(ζ))
+Using the fact that Δ(inv(ζ)[i:]) = Δ(ζ[:l(ζ) - i + 1]), we can rewrite the inequality as:
+
+4. Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`k` Δ(ζ[:l(ζ) - i + 1]) * ((l(ζ) - i + 1)/l(ζ))
+Since the weights (l(ζ) - i + 1)/l(ζ) are generally larger for smaller values of i (i.e., earlier in the sentence), for the left-hand side of the inequality to be greater, there must be at least one i for which the delimiter count of the Right Partial Sentence Δ(ζ[i:]) is greater than the delimiter count of the corresponding Left Partial Sentence in the inverse Δ(ζ[:l(ζ) - i + 1]).
+
+In other words, there must exist at least one i, 1 ≤ i ≤ k, such that:
+
+5. Δ(ζ[i:]) > Δ(ζ[:l(ζ) - i + 1])
+Using Theorem A.2.2, we can rewrite this as:
+
+6. Δ(ζ[i:]) > Δ(inv(ζ)[:i])
+Since the Left-Hand Integral is a weighted sum of Δ(ζ[:i]), and we know there exists an i such that Δ(ζ[:i]) > Δ(inv(ζ)[:i]), it follows that a sufficient condition for the inequality in step 4 to hold is that the Delimiter count is greater for at least one Left-Partial Sentence than its inverse counterpart,
+
+7. ∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]).
+However, by the same logic, it also follows that if the Left-Hand Integral of ζ is greater than the Left-Hand Integral of inv(ζ), then,
+
+8. ∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]).
+Therefore, since by assumption either the Left-Hand Integral is greater, or the Right-Hand Integral is greater, then there must exist an i such that,
+
+9. ∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]).
+Conclusion:
+
+We have shown both directions of the equivalence:
+
+(∀ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i])) → ((Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k)))
+((Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k))) → (∃ i, 1 ≤ i ≤ k: Δ(ζ[:i]) > Δ(inv(ζ)[:i]))
+Therefore, the complete theorem holds:
+
+∀ ζ ∈ C:sub:L: ∀ k ∈ N:sub:l(ζ): [Δ(ζ[:k]) > Δ(inv(ζ)[:k])] ↔ [ (Ω:sub:+(ζ,k) > Ω:sub:+(inv(ζ),k)) ∨ (Ω:sub:-(ζ,k) > Ω:sub:-(inv(ζ),k)) ]

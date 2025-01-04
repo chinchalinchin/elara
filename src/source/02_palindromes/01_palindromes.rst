@@ -3222,7 +3222,52 @@ Note that Definition 3.2.5 and Definition 3.2.6 are given in terms of Sentences 
 
 The next two theorems leverage this insight and establish the fundamental relationship between Left and Right Partial Sentences. In addition, they prove the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
 
-**Theorem 3.2.6** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+**Theorem 3.2.6** ∀ ζ ∈ C:sub:`L`:  ∀ i ∈ N:sub:`l(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
+
+Let *ζ* be an arbitrary Sentence in the Corpus,
+
+    1. ζ ∈ C:sub:`L`
+
+Let *i* be a natural number such that,
+
+    2. i ∈ N:sub:`l(ζ)`
+
+By Definition 1.2.4 of String Inversion, the Inverse of *ζ*, denoted *inv(ζ)*, is formed by reversing the order of the Characters in *ζ*.
+
+By Definition 3.2.5, the Left Partial Sentence of *inv(ζ)* up to index i, denoted *inv(ζ)[:i]*, consists of the first *i* characters of *inv(ζ),
+
+    3. inv(ζ)[:i] = (inv(ζ)[1], inv(ζ)[2], ..., inv(ζ)[i])
+
+By Definition 1.2.4, for any Character index j in inv(ζ):
+
+    4. inv(ζ)[j] = ζ[l(ζ) - j + 1]
+
+Applying this to each Character in inv(ζ)[:i], we get:
+
+    5. inv(ζ)[:i] = (ζ[l(ζ)], ζ[l(ζ) - 1], ..., ζ[l(ζ) - i + 1])
+
+Now, consider the Right Partial Sentence of *ζ* starting at index *l(ζ) - i + 1*, denoted *ζ[l(ζ) - i + 1:]*. By Definition 3.2.6, this consists of the characters from index *l(ζ) - i + 1* to the end of *ζ*,
+
+    6. ζ[l(ζ) - i + 1:] = (ζ[l(ζ) - i + 1], ζ[l(ζ) - i + 2], ..., ζ[l(ζ)])
+
+Notice that the sequence of Characters in *inv(ζ)[:i]* (from step 4) is the reverse of the sequence of Characters in *ζ[l(ζ) - i + 1:]* (from step 5).
+
+Since *inv(ζ)* is the Inverse of *ζ*, the Characters in these two sequences are identical, just in reverse order.
+
+Therefore, *inv(ζ)[:i]* and *ζ[l(ζ) - i + 1:]* have the same Characters in the same order. Furthermore, 
+
+    7. l(inv(ζ)[:i]) = i
+    8. l(ζ[l(ζ) - i + 1:]) = l(ζ) - (l(ζ) - i + 1) + 1 = i
+
+Therefore, by definition 1.1.4 means they are equivalent as Strings,
+
+    9. inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
+
+Since ζ and i were arbitrary, this can generalize over the Corpus, 
+
+    10.  ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:] ∎
+
+**Theorem 3.2.7** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
 
 This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is odd if and only if the String Length of the Left Partial Sentence of Length *i+1* is equal to the String Length of the Right Partial Sentence starting at index *i+1*.
 
@@ -3288,7 +3333,7 @@ Therefore l(ζ) is odd. Putting both directions of the proof together and genera
 
     6. ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))  ∎
 
-**Theorem 3.2.7** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+**Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
 
 This theorem can be stated in natural language as follows: For any Sentence in the corpus, its String Length is even if and only if the String Length of the Left Partial Sentence of Length *i* plus 1 is equal to the String Length of the Right Partial Sentence starting at index *i*.
 
@@ -3357,7 +3402,7 @@ Thus, l(ζ) is even. Since both directions of the implication hold, it can be co
 
     ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))) ∎
 
-**Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+**Theorem 3.2.9** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus, there exists a natural number *n* (between *1* and the length of *ζ*, inclusive) such that either the String Length of its Left Partial Sentence is equal to the String Length of its Right Partial Sentence, or the String Length of the Left Partial Sentence is one more than the String Length of the Right Partial Sentence.
 
@@ -3401,7 +3446,7 @@ In both cases, an *n* has been found that satisfies the condition in the theorem
 
     10. ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) + 1 = l(ζ[n:]) ) ∎
 
-Theorems 3.1.11 - 3.13 conjunctively establish the existence of a natural number that can reliably be called the center, or *Pivot*, of any Sentence in a Corpus. This leads to the following definition. 
+Theorems 3.2.7 - 3.2.9 conjunctively establish the existence of a natural number that can reliably be called the center, or *Pivot*, of any Sentence in a Corpus. This leads to the following definition. 
 
 **Definition 3.2.7: Pivots** 
 
@@ -3409,7 +3454,7 @@ The Pivot of a Sentence *ζ*, denoted *ω(ζ)*, is defined as the natural number
 
    (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) + 1 = l(ζ[ω(ζ):])) 
    
-Using Theorem 3.2.6 and Theorem 3.2.7, the explicit formula for a Sentence Pivot are given below,
+Using Theorem 3.2.7 and Theorem 3.2.8, the explicit formula for a Sentence Pivot are given below,
 
     - If l(ζ) is odd, then ω(ζ) = i + 1, where i is the natural number satisfying l(ζ) = 2i + 1.
     - If l(ζ) is even, then ω(ζ) = i, where i is the natural number satisfying l(ζ) = 2i. ∎
@@ -3438,7 +3483,7 @@ Consider these simple examples from a hypothetical Language **L** with Alphabet 
 | "a bca"       | 5    | 3    | "a b"      | 3           | "bca"       | 3           |
 | "a bbc  a"    | 8    | 4    | "a bb"     | 3           | "bc  a"     | 5           | ∎
 
-In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.2.8. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.2.7. 
+In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.2.9. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.2.8. 
 
 With the notion of a Palindromic Pivot established, the class of Even and Odd Palindromes is now defined. 
 
@@ -3456,13 +3501,13 @@ The class of Even Palindromes, denoted **P**:sup:`-`, is defined as the set of S
 
 The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior around the Pivot will be important for establishing the various cases of the theorems proved in the next section. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence, while the Left and Right Partial are of equal String Length when the String Length of the Sentence is even.
 
-**Theorem 3.2.9** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
+**Theorem 3.2.10** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
 
 ( → ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
     1. ∃ k ∈ ℕ : l(ζ) = 2k + 1
 
-From Theorem 3.2.6 and step 1, it follows 
+From Theorem 3.2.7 and step 1, it follows 
 
     2. n = i + 1 
     
@@ -3502,7 +3547,7 @@ Since both direction of the equivalence are shown, the theorem is proved,
 
     6. ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2 ∎
 
-**Theorem 3.2.10** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+**Theorem 3.2.11** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
 
 Assume 
 
@@ -3512,17 +3557,17 @@ From Definition 3.2.9, it follows,
 
     2. ∃ k ∈ ℕ : l(ζ) = 2k + 1
 
-From Theorem 3.2.9, it follows, 
+From Theorem 3.2.10, it follows, 
 
     3. ω(ζ) = (l(ζ) + 1)/2 ∎
 
-**Theorem 3.2.11** ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ : l(ζ) = 2i) ↔ ω(ζ) = l(ζ)/2
+**Theorem 3.2.12** ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ : l(ζ) = 2i) ↔ ω(ζ) = l(ζ)/2
 
 ( → ) Let ζ be an arbitrary in **C**:sub:`L` such that,
 
     1. ∃ i ∈ ℕ : l(ζ) = 2i
 
-By Theorem 3.2.7, 
+By Theorem 3.2.8, 
 
     2. l(ζ[:i]) + 1 = l(ζ[i:])
 
@@ -3559,7 +3604,7 @@ Since both directions of the equivalence have been shown, it follows,
 
     ∀ ζ ∈ C:sub:`L`: ω(ζ) = l(ζ)/2 ∎
 
-**Theorem 3.2.12** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+**Theorem 3.2.13** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
 
 Assume 
 
@@ -3569,11 +3614,11 @@ From Definition 3.2.8, it follows,
 
     2. ∃ k ∈ ℕ : l(ζ) = 2k
 
-From Theorem 3.2.11, it follows, 
+From Theorem 3.2.12, it follows, 
 
     3. ω(ζ) = l(ζ)/2 ∎
 
-**Theorem 3.2.13** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+**Theorem 3.2.14** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
 
 Assume *ζ* is an arbtirary Sentence from the Corpus,
 
@@ -3595,9 +3640,9 @@ Since *ζ* was arbitrary, this can generalize,
 
     5. ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) ∎
 
-**Theorem 3.2.14** ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) 
+**Theorem 3.2.15** ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) 
 
-Let *ζ* be an arbitrary Sentence in the Corpus. By Theorem 3.1.10,
+Let *ζ* be an arbitrary Sentence in the Corpus. By Theorem 3.1.11,
 
     1. l(ζ) ≥ l(ς(ζ))
 
@@ -3613,7 +3658,7 @@ Moreover,
 
     4. (l(ς(ζ)) + 1)/2 ≥ l(ς(ζ))/2
 
-By Theorems 3.2.10 and 3.2.12, one of the following must be true,
+By Theorems 3.2.11 and 3.2.13, one of the following must be true,
 
     5. ω(ζ) = (l(ζ) + 1)/2
     6. ω(ζ) = l(ζ)/2
@@ -3806,7 +3851,7 @@ The meaning of Pivot Words can be clarified with a few examples.
     - ζ{ω-} = "de"
     - ζ{ω+} = "de" 
 
-3. Let *ᚠ = "ab cde fg hij"*
+4. Let *ᚠ = "ab cde fg hij"*
 
     - l(ζ) = 13, ω(ζ) = 7, ζ[6] = σ
     - W:sub:ζ = {(1, "ab"), (2, "cde"), (3, "fg"), (4,"hij")}
