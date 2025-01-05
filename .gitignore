@@ -5,4 +5,5 @@
 **/*.terraform.lock.hcl
 src/build/**
 venv/**
+!/venv/.gitkeep
 **/pyvenv.cfg
