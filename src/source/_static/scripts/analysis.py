@@ -1,14 +1,62 @@
+import multiprocessing
 import nltk
 import string
-from nltk.corpus import brown
-from nltk.tokenize import sent_tokenize
-import multiprocessing
 import matplotlib.pyplot as plt
+from nltk.corpus import brown, cess_esp
+from nltk.tokenize import sent_tokenize
 import statistics
 import scipy.stats
+import json
 
+# Download necessary NLTK data if you haven't already
 nltk.download('brown')
-nltk.download('punkt')  # Download the sentence tokenizer (if you haven't already)
+nltk.download('cess_esp')
+nltk.download('punkt')
+
+def get_corpus_sentences(language, min_length, max_length):
+    """
+    Loads and preprocesses sentences from a specified corpus.
+
+    Args:
+        language: Either "english" or "spanish".
+        min_length: The minimum sentence length (in characters).
+        max_length: The maximum sentence length (in characters).
+
+    Returns:
+        A list of cleaned sentences (strings) from the specified corpus.
+    """
+
+    if language == "english":
+        corpus = brown
+        all_sentences = corpus.sents()
+        flattened_sentences = [" ".join(sentence) for sentence in all_sentences]
+        tokenized_sentences = []
+        for text in flattened_sentences:
+            tokenized_sentences.extend(sent_tokenize(text))
+
+        cleaned_sentences = []
+        for sentence in tokenized_sentences:
+            cleaned_sentence = "".join(
+                c for c in sentence if c not in string.punctuation or c == ' '
+            )
+            cleaned_sentence = " ".join(cleaned_sentence.split()).lower()
+            if min_length <= len(cleaned_sentence) <= max_length:
+                cleaned_sentences.append(cleaned_sentence)
+        return cleaned_sentences
+
+
+    elif language == "spanish":
+        corpus = cess_esp.sents()
+        cleaned_sentences = []
+        for sentence in corpus:
+            cleaned_sentence = " ".join(word for word in sentence if word not in string.punctuation and word not in "¡¿")
+            cleaned_sentence = " ".join(cleaned_sentence.split()).lower()
+            if min_length <= len(cleaned_sentence) <= max_length:
+                cleaned_sentences.append(cleaned_sentence)
+        return cleaned_sentences
+
+    else:
+        raise ValueError("Invalid language specified. Choose 'english' or 'spanish'.")
 
 def calculate_coefficients(sentence):
     """
@@ -23,7 +71,7 @@ def calculate_coefficients(sentence):
     l = len(sentence)
     coefficients = []
     for i in range(1, l + 1):
-        if sentence[i-1] == ' ':  # Assuming space as the delimiter
+        if sentence[i - 1] == ' ':  # Assuming space as the delimiter
             coefficients.append(2 * i - l - 1)
     return coefficients
 
@@ -43,80 +91,8 @@ def process_sentences(corpus, sentence_length):
     for sentence in corpus:
         if len(sentence) == sentence_length:
             coefficients = calculate_coefficients(sentence)
-        all_coefficients.append(coefficients)
+            all_coefficients.append(coefficients)
     return all_coefficients
-
-def clean_and_filter_sentences(corpus, min_length, max_length):
-    """
-    Cleans and filters sentences from a corpus based on length and punctuation.
-
-    Args:
-        corpus: The NLTK corpus object (e.g., brown).
-        min_length: The minimum sentence length (in characters).
-        max_length: The maximum sentence length (in characters).
-
-    Returns:
-        A list of cleaned sentences (strings).
-    """
-    # Get all sentences from the corpus
-    all_sentences = corpus.sents()
-
-    # Flatten the list of lists into a single list of sentences
-    flattened_sentences = [" ".join(sentence) for sentence in all_sentences]
-
-    # Tokenize the flattened sentences into individual sentences
-    tokenized_sentences = []
-    for text in flattened_sentences:
-        tokenized_sentences.extend(sent_tokenize(text))
-
-    cleaned_sentences = []
-    for sentence in tokenized_sentences:
-        # Remove punctuation (except spaces, which we'll treat as delimiters)
-        cleaned_sentence = "".join(
-            c for c in sentence if c not in string.punctuation or c == ' '
-        )
-
-        # Remove extra spaces and convert to lowercase.
-        cleaned_sentence = " ".join(cleaned_sentence.split()).lower()
-
-        if min_length <= len(cleaned_sentence) <= max_length:
-            cleaned_sentences.append(cleaned_sentence)
-
-    return cleaned_sentences
-
-def is_palindrome(sentence):
-    """
-    Checks if a sentence is a palindrome based on our formal definition.
-
-    Args:
-        sentence: The input sentence (string).
-
-    Returns:
-        True if the sentence is a palindrome, False otherwise.
-    """
-    processed_sentence = "".join(c for c in sentence if c not in string.punctuation or c == ' ')
-    processed_sentence = " ".join(processed_sentence.split()).lower()
-    
-    
-    sigma_reduced_sentence = "".join(c for c in processed_sentence if c != ' ')
-
-    return sigma_reduced_sentence == sigma_reduced_sentence[::-1]
-
-def filter_palindromes(sentences):
-    """
-    Filters a list of sentences to find palindromes.
-
-    Args:
-        sentences: A list of sentences (strings).
-
-    Returns:
-        A list of palindromes (strings).
-    """
-    
-    with multiprocessing.Pool() as pool:
-        palindromes = pool.map(is_palindrome, sentences)
-
-    return [s for s, is_p in zip(sentences, palindromes) if is_p]
 
 def delimiter_count(char):
     """
@@ -164,48 +140,43 @@ def calculate_right_integral(sentence, k):
         total += delimiter_count(sentence[i - 1]) * ((l - i + 1) / l)
     return total
 
-def analyze_sentence_integrals(corpus, sentence_length):
+def is_palindrome(sentence):
     """
-    Analyzes the Left and Right-Hand Sentence Integrals of sentences in a corpus.
+    Checks if a sentence is a palindrome based on our formal definition.
 
     Args:
-        corpus: The NLTK corpus object (e.g., brown).
-        sentence_length: The desired sentence length.
+        sentence: The input sentence (string).
 
     Returns:
-        A tuple containing two lists:
-        - left_integrals: A list of Left-Hand Sentence Integrals.
-        - right_integrals: A list of Right-Hand Sentence Integrals.
+        True if the sentence is a palindrome, False otherwise.
     """
-    sentences = clean_and_filter_sentences(corpus, sentence_length, sentence_length)
-    left_integrals = []
-    right_integrals = []
+    # Remove punctuation (except spaces) and convert to lowercase
+    processed_sentence = "".join(
+        c for c in sentence if c not in string.punctuation or c == " "
+    )
+    processed_sentence = " ".join(processed_sentence.split()).lower()
 
-    for sentence in sentences:
-        left_integrals.append(calculate_left_integral(sentence, sentence_length))
-        right_integrals.append(calculate_right_integral(sentence, sentence_length))
+    # Calculate the sigma-reduction (remove spaces)
+    sigma_reduced_sentence = "".join(c for c in processed_sentence if c != " ")
 
-    return left_integrals, right_integrals
+    # Check if the sigma-reduced sentence is its own inverse
+    return sigma_reduced_sentence == sigma_reduced_sentence[::-1]
 
-def calculate_delimiter_density(mean_integral_value, sentence_length):
+def filter_palindromes(sentences):
     """
-    Calculates the delimiter density (d) based on the mean Sentence Integral value and sentence length.
+    Filters a list of sentences to find palindromes.
 
     Args:
-        mean_integral_value: The mean value of the Sentence Integral (either Left or Right).
-        sentence_length: The length of the sentences.
+        sentences: A list of sentences (strings).
 
     Returns:
-        The estimated delimiter density (d).
+        A list of palindromes (strings).
     """
-    if sentence_length < 1:
-        return None
-    
-    #From our approximation before: E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * (l(ζ) + 1)/2
-    # We also know that E[Ω:sub:`-`(ζ,l(ζ))] ≈ mean_integral_value
-    
-    d = (2 * mean_integral_value) / (sentence_length + 1)
-    return d
+
+    with multiprocessing.Pool() as pool:
+        palindrome_flags = pool.map(is_palindrome, sentences)
+
+    return [s for s, is_p in zip(sentences, palindrome_flags) if is_p]
 
 def calculate_statistics(data):
     """
@@ -219,7 +190,7 @@ def calculate_statistics(data):
     """
     if not data:
         return {
-            "number of samples": None,
+            "number of samples": 0,
             "mean": None,
             "median": None,
             "stdev": None,
@@ -238,20 +209,26 @@ def calculate_statistics(data):
         "number of samples": len(data),
         "mean": statistics.mean(data),
         "median": statistics.median(data),
-        "stdev": statistics.stdev(data),
-        "skewness": scipy.stats.skew(data, bias=False),  # Using Pearson's moment coefficient of skewness
         "min": min(data),
         "max": max(data),
         "mode": mode,
     }
+
+    if len(data) > 1:
+        stats["stdev"] = statistics.stdev(data)
+        stats["skewness"] = scipy.stats.skew(data, bias=False)  # Using Pearson's moment coefficient of skewness
+    else:
+        stats["stdev"] = None
+        stats["skewness"] = None
+
     return stats
 
-def analyze_integrals_by_length(corpus, min_length, max_length):
+def analyze_integrals_by_length(sentences, min_length, max_length):
     """
     Iterates over sentence lengths, analyzes Sentence Integrals, and calculates delimiter densities.
 
     Args:
-        corpus: The NLTK corpus object (e.g., brown).
+        sentences: The list of sentences.
         min_length: The minimum sentence length to analyze.
         max_length: The maximum sentence length to analyze.
 
@@ -262,7 +239,7 @@ def analyze_integrals_by_length(corpus, min_length, max_length):
     delimiter_densities = []
 
     for length in range(min_length, max_length + 1):
-        left_integrals, right_integrals = analyze_sentence_integrals(corpus, length)
+        left_integrals, right_integrals = analyze_sentence_integrals(sentences, length)
 
         if not left_integrals:
             continue
@@ -278,13 +255,13 @@ def analyze_integrals_by_length(corpus, min_length, max_length):
         # Calculate delimiter densities based on mean integral values
         d_left = calculate_delimiter_density(left_stats["mean"], length)
         d_right = calculate_delimiter_density(right_stats["mean"], length)
-        
+
         delimiter_densities.append((length, d_left, d_right))
 
     # Calculate statistics for delimiter densities
-    
+
     delimiter_density_stats = {
-        "mean" : statistics.mean([d_pair[1] for d_pair in delimiter_densities])
+        "mean": statistics.mean([d_pair[1] for d_pair in delimiter_densities])
     }
     if len(delimiter_densities) > 1:
         delimiter_density_stats["stdev"] = statistics.stdev([d_pair[1] for d_pair in delimiter_densities])
@@ -292,6 +269,49 @@ def analyze_integrals_by_length(corpus, min_length, max_length):
         delimiter_density_stats["stdev"] = 0
 
     return all_stats, delimiter_densities, delimiter_density_stats
+
+def analyze_sentence_integrals(sentences, sentence_length):
+    """
+    Analyzes the Left and Right-Hand Sentence Integrals of sentences in a corpus.
+
+    Args:
+        sentences: The list of sentences.
+        sentence_length: The desired sentence length.
+
+    Returns:
+        A tuple containing two lists:
+        - left_integrals: A list of Left-Hand Sentence Integrals.
+        - right_integrals: A list of Right-Hand Sentence Integrals.
+    """
+    left_integrals = []
+    right_integrals = []
+
+    for sentence in sentences:
+        if len(sentence) == sentence_length:
+            left_integrals.append(calculate_left_integral(sentence, sentence_length))
+            right_integrals.append(calculate_right_integral(sentence, sentence_length))
+
+    return left_integrals, right_integrals
+
+def calculate_delimiter_density(mean_integral_value, sentence_length):
+    """
+    Calculates the delimiter density (d) based on the mean Sentence Integral value and sentence length.
+
+    Args:
+        mean_integral_value: The mean value of the Sentence Integral (either Left or Right).
+        sentence_length: The length of the sentences.
+
+    Returns:
+        The estimated delimiter density (d).
+    """
+    if sentence_length < 1:
+        return None
+
+    # From our approximation before: E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * (l(ζ) + 1)/2
+    # We also know that E[Ω:sub:`-`(ζ,l(ζ))] ≈ mean_integral_value
+
+    d = (2 * mean_integral_value) / (sentence_length + 1)
+    return d
 
 def generate_integral_histograms(left_integrals, right_integrals, sentence_length, num_bins=20):
     """
@@ -307,13 +327,13 @@ def generate_integral_histograms(left_integrals, right_integrals, sentence_lengt
     plt.figure(figsize=(12, 5))
 
     plt.subplot(1, 2, 1)
-    plt.hist(left_integrals, bins=num_bins, range=(22, 30))
+    plt.hist(left_integrals, bins=num_bins, range=(0, 10))
     plt.title(f"Left-Hand Integrals (Length = {sentence_length})")
     plt.xlabel("Integral Value")
     plt.ylabel("Frequency")
 
     plt.subplot(1, 2, 2)
-    plt.hist(right_integrals, bins=num_bins, range=(22, 30))
+    plt.hist(right_integrals, bins=num_bins, range=(0, 10))
     plt.title(f"Right-Hand Integrals (Length = {sentence_length})")
     plt.xlabel("Integral Value")
     plt.ylabel("Frequency")
@@ -337,24 +357,37 @@ def generate_coefficient_histogram(all_coefficients, sentence_length):
     plt.xlabel("Coefficient (2i - l(ζ) - 1)")
     plt.ylabel("Frequency")
     plt.show()
+    
+# Example Usage:
+min_length = 2
+max_length = 200
 
-min_length = 10
-max_length = 100
+test_palindrome = "no devil lived on"
+result = is_palindrome(test_palindrome)
+print(f"'{test_palindrome}' is a palindrome: {result}")
 
-all_stats, delimiter_densities, delimiter_density_stats = analyze_integrals_by_length(
-    brown, min_length, max_length
-)
+# # Load sentences of the appropriate language
+# cleaned_sentences = get_corpus_sentences("english", min_length, max_length)
 
-import json 
+# # Filter for palindromes
+# palindrome_sentences = filter_palindromes(cleaned_sentences)
 
-with open("all_stats.json", "w") as outfile: 
-    json.dump(all_stats, outfile)
+# print(palindrome_sentences)
 
-with open("delimiter_densities.json", "w") as outfile: 
-    json.dump(delimiter_densities, outfile)
+# # Now you can use the cleaned_sentences list with your analysis functions:
+# all_stats, delimiter_densities, delimiter_density_stats = analyze_integrals_by_length(
+#     palindrome_sentences, min_length, max_length
+# )
 
-with open("delimiter_density_stats.json", "w") as outfile: 
-    json.dump(delimiter_density_stats, outfile)
+# # Save results to JSON files (Optional)
+# with open("palindrome_all_stats.json", "w") as outfile:
+#     json.dump(all_stats, outfile)
+
+# with open("palindrome_delimiter_densities.json", "w") as outfile:
+#     json.dump(delimiter_densities, outfile)
+
+# with open("palindrome_delimiter_density_stats.json", "w") as outfile:
+#     json.dump(delimiter_density_stats, outfile)
 
 # # Print the statistics for each sentence length
 # for length, stats in all_stats.items():
