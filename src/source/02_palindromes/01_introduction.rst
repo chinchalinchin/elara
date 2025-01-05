@@ -1,6 +1,10 @@
+.. _palindromic_structures:
+
 ======================
 Palindromic Structures
 ======================
+
+.. _table_of_contents:
 
 Table of Contents
 =================
@@ -20,8 +24,15 @@ Table of Contents
         - Word Length
         - Intervention
 
-    b. 
-    
+    b. II.II: Axioms
+
+        - Theorems
+
+    c. II.III: Sentence Classes
+
+        - Admissible Sentences
+        - Invertible Sentences
+  
 3. Section III: Structures
 
     - ASDF
@@ -46,6 +57,15 @@ Table of Contents
 
        - Delimiter Probability Density
 
+6. Appendix
+   
+TODO 
+
+7. Data
+
+TODO
+
+.. _introduction:
 
 Introduction
 ============

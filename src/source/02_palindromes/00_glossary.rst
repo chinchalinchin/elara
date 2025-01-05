@@ -1,5 +1,9 @@
+.. _glossary:
+
 Glossary
 ========
+
+.. _notation:
 
 Notation 
 --------
@@ -34,6 +38,8 @@ Notation
 - Relations: ⊂:sub:`s`, (i/n/j):sub:`ζ`
 - Functions: l(t), Λ(t), Δ(t)
 - Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
+
+.. _definitions:
 
 Definitions 
 -----------
@@ -92,12 +98,16 @@ Definitions
 - D A.4.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
 - D A.5.1: Reflective Structure:  s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
 
+.. _algorithms:
+
 Algorithms
 ----------
 
 - A.1: Emptying Algorithm
 - A.2: Delimiting Algorithm 
 - A.3: Reduction Algorithm
+
+.. _axioms:
 
 Axioms 
 ------
@@ -106,6 +116,8 @@ Axioms
 - W.1: ∀ α ∈ L: [ (l(α) ≠ 0) ∧ (∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ) ]
 - S.1: ( ∀ α ∈ L: ∃ ζ ∈ C:sub:`L``: α ⊂:sub:`s` ζ ) ∧ ( ∀ ζ ∈ C:sub:`L`: ∃ α ∈ L: α ⊂:sub:`s` ζ )
 - S.2: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L
+
+.. _theorems:
 
 Theorems
 --------
