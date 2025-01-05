@@ -66,20 +66,22 @@ Definitions
 - D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
 - D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
 - D 3.1.2: σ-Reduction: ς(ζ)
-- D 3.2.1: Palindromes: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) 
-- D 3.2.2: Perfect Palindromes: ζ ∈ PP ↔ ζ = inv(ζ)
-- D 3.2.3: Imperfect Palindromes: ζ ∈ P - PP
-- D 3.2.4: Aspect
-- D 3.2.5: Left Partial Sentence: Z[:n]
-- D 3.2.6: Right Partial Sentence: Z[n:]
-- D 3.2.7: Pivots: ω(ζ)
-- D 3.2.8: Even Palindromes: ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] 
-- D 3.2.9: Odd Palindromes: ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ]
-- D 3.2.10: Parity
-- D 3.2.11: Pivot Words
+- D 3.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` | 
+- 
+- 
+- D 4.1.1: Palindromes: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) 
+- D 4.1.2: Perfect Palindromes: ζ ∈ PP ↔ ζ = inv(ζ)
+- D 4.1.3: Imperfect Palindromes: ζ ∈ P - PP
+- D 4.1.4: Aspect
+- D 4.1.5: Left Partial Sentence: Z[:n]
+- D 4.1.6: Right Partial Sentence: Z[n:]
+- D 4.1.7: Pivots: ω(ζ)
+- D 4.1.8: Even Palindromes: ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] 
+- D 4.1.9: Odd Palindromes: ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ]
+- D 4.1.10: Parity
+- D 4.1.11: Pivot Words
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
-- D A.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` |
 - D A.3.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
 - D A.3.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
 - D A.5.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
@@ -150,6 +152,22 @@ Theorems
 - T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
 - T 3.1.9: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
 - T 3.1.10: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ))
+- T 3.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+- T 3.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
+- T 3.2.3: ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
+- T 3.2.4: ∀ α ∈ L: Δ(α) = 0
+- T 3.2.5: ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+- T 3.2.6: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+- T 3.2.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+- T 3.2.8: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
+- T 3.2.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+- T 3.2.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+- T 3.2.11: ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
+- T 3.2.12: ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
+- T 3.2.13: ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
+- 
+- 
+- 
 - T 3.2.1: PP ⊂ K
 - T 3.2.2: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
 - T 3.2.3:∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
@@ -170,19 +188,6 @@ Theorems
 - T 3.3.1: ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
 - T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 - T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
-- T A.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
-- T A.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
-- T A.2.3: ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
-- T A.2.4: ∀ α ∈ L: Δ(α) = 0
-- T A.2.5: ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T A.2.6: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T A.2.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T A.2.8: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
-- T A.2.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
-- T A.2.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
-- T A.2.11: ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
-- T A.2.12: ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
-- T A.2.13: ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
 - T A.3.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
 - T A.3.2: L:sub:`P` ⊂ L:sub:`σ`
 - T A.3.3: ∀ α ∈ L:sub:`P`: α = inv(α)
