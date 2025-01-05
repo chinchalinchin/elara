@@ -94,7 +94,7 @@ def analyze_languages(min_length, max_length):
     all_corpora_delimiter_data = {}
 
     for language in languages:
-        sentences = parse.corpus(language, min_length, max_length)
+        sentences = parse.corpus(min_length, max_length, language, )
         all_corpora_delimiter_data[language] = analyze_delimiter_densities(sentences, 
                                                                            min_length, 
                                                                            max_length)
@@ -171,7 +171,7 @@ def analyze_sentence_lengths(min_length, max_length):
     results = {}
 
     for corpus in corpora:
-        sentences = parse.corpus(corpus, min_length, max_length)
+        sentences = parse.corpus(min_length, max_length, corpus)
         length_freq = estimators.length_frequencies(sentences)
         mean_length = estimators.sample_mean_freq(length_freq)
         graphs.length_histogram(length_freq, mean_length)
@@ -183,11 +183,10 @@ def analyze_sentence_lengths(min_length, max_length):
     return results
 
 if __name__ == "__main__":
-
-    parse.init()
+    # parse.init()
 
     min_length = 50
-    max_length = 150
+    max_length = 200
 
     length_analysis_results = analyze_sentence_lengths(min_length, max_length)
-    print(length_analysis_results)
+    write(length_analysis_results, "sentence_length_distributions.json")
