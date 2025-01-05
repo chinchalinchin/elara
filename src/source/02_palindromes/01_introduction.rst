@@ -5,6 +5,47 @@ Palindromic Structures
 Table of Contents
 =================
 
+1. Section I: Language
+
+    a. ASDF
+    -  
+
+2. Section II: Corpora
+   
+    a. II.I: Definitions
+
+        - Corpus
+        - Sentence
+        - Notation
+        - Word Length
+        - Intervention
+
+    b. 
+    
+3. Section III: Structures
+
+    - ASDF
+    - 
+
+4. Section IV: Palindromes
+   
+    a. IV.I: Definitions
+
+        - Aspect
+        - Parity
+  
+    b. IV.II: Strutures
+
+        - Boundary Postulate
+
+5. Section V: Delimiters
+
+    a. V.I: Definitions
+    b. V.II: Theorems
+    c. V.III: Statistical Analysis 
+
+       - Delimiter Probability Density
+
 
 Introduction
 ============

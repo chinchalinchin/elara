@@ -67,7 +67,10 @@ Definitions
 - D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
 - D 3.1.2: σ-Reduction: ς(ζ)
 - D 3.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` | 
-- 
+- D 3.3.1: Lefthand Sentence Integrals: Ω:sub:`-`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ))
+- D 3.3.2: Righthand Sentence Integrals: Ω:sub:`+`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ))
+- D 3.3.3: Delimiter Mass: μ:sub:`-`(ζ, i), μ:sub:`+`(ζ, i)
+-
 - 
 - D 4.1.1: Palindromes: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) 
 - D 4.1.2: Perfect Palindromes: ζ ∈ PP ↔ ζ = inv(ζ)
@@ -88,8 +91,6 @@ Definitions
 - D A.3.2: Categorical Size: κ
 - D A.4.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
 - D A.5.1: Reflective Structure:  s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
-- D A.8.1: Sentence Integral: Ω:sub:`-`(ζ,k). Ω:sub:`+`(ζ,k)
-- A A.8.2: Delimiter Mass: μ:sub:`-`(ζ, i), μ:sub:`+`(ζ, i)
 
 Algorithms
 ----------
