@@ -5,18 +5,24 @@ Section V: Delimters
 
 TODO: explain
 
+.. _section_v_i:
+
 Section V.I: Definitions
 ------------------------
 
 TODO: explain 
 
-**Definition 3.3.1: Lefthand Sentence Integrals**
+.. _definition_5_1_1:
+
+**Definition 5.1.1: Lefthand Sentence Integrals**
 
 Let ζ be an arbitary Sentence from Corpus **C**:sub:`L` and let *k* be a natural number such that *1 ≤ k ≤ Λ(ζ)*. The *Lefthand Integral* of Sentence ζ, denoted *Ω*:sub:`-`*(ζ,k)*, is defined as,
 
     Ω:sub:`-`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) ∎
     
-**Definition 3.3.2: Lefthand Sentence Integrals**
+.. _definition_5_1_2:
+
+**Definition 5.1.2: Lefthand Sentence Integrals**
 
 The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defined as,
 
@@ -104,10 +110,16 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
 
 TODO: explain
 
+.. _section_v_ii:
+
 Section V.II: Theorems 
 ----------------------
 
-**Theorem 3.3.1** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+TODO: explain
+
+.. _theorem_5_2_1:
+
+**Theorem 5.2.1** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -135,7 +147,9 @@ Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
 TODO: explain 
 
-**Theorem 3.3.2** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+.. _theorem_5_2_2:
+
+**Theorem 5.2.2** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
 
 PLet *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -163,7 +177,9 @@ Since ζ and k were arbitrary, this can generalize over the Corpus,
 
 The terms *(l(ζ) - i + 1)* and *i* that appear in the Sentence Integral summation may be thought of as the *"weight"* of a Character Index. Since the Delimiter Count is either 0 or 1 for a single Character, the weight of Delimiters in a Sentence are the only contributions to the summation in a Sentence Integral. This analogy to the mathematical concepts of density and mass is codified in the following definition.
 
-**Definition 3.3.3: Delimiter Mass**
+.. _definition_5_2_1:
+
+**Definition 5.2.1: Delimiter Mass**
 
 Let *ζ* be an arbitrary Sentence in the Corpus **C**:sub:`L`, and let *I* be a natural number such that *1 ≤ i ≤ l(ζ)*. T
 
@@ -177,7 +193,9 @@ The Lefthand Delimiter Mass at Character Index *i*, denoted μ:sub:`-`(ζ, i) is
 
 TODO: explain
 
-**Theorem 3.3.3** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+.. _theorem_5_2_3:
+
+**Theorem 5.2.3** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
 
 (→) Let *m = ω(ζ)*. Assume 
 
@@ -242,7 +260,9 @@ Since both directions of the equivalence hold and *ζ* was arbitrary, this can g
  
     ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ)) ∎
 
-**Theorem 3.3.4** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+.. _theorem_5_2_5:
+
+**Theorem 5.2.4** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
 
 Let *ζ* be an arbitrary Sentence in the Corpus and let *k* be a natural number such that,
 
@@ -287,7 +307,9 @@ Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
 TODO: explain
 
-**Theorem 3.3.5** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+.. _theorem_5_2_5:
+
+**Theorem 5.2.5** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
 
 Let *ζ* be an arbitrary Perfect Palindrome in the Corpus C:sub:`L`,
 
@@ -958,7 +980,9 @@ The total number of Delimiters starting at Character Index 26 and working backwa
 
 TODO: explain
 
-**Theorem A.8.7**  ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+.. _theorem_5_4_1:
+
+**Theorem 5.4.1**  ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
 
 Let ζ be an arbitrary Sentence and let k be a natural number suchm
 
@@ -991,7 +1015,9 @@ Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
     ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
 
-**Theorem A.8.7** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+.. _theorem_5_4_2:
+
+**Theorem 5.4.2** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
 
 Let ζ be an arbitrary Sentence and let k be a natural number suchm
 
