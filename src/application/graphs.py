@@ -45,3 +45,22 @@ def generate_coefficient_histogram(all_coefficients, sentence_length):
     plt.ylabel("Frequency")
     plt.show()
     
+def generate_length_histogram(length_freq_dict, mean_length):
+    """
+    Generates a histogram of sentence lengths for a given corpus.
+
+    Args:
+        length_freq_dict: A dictionary where keys are sentence lengths and values are their frequencies.
+        mean_length: The sample mean of the sentence lengths.
+    """
+    lengths = list(length_freq_dict.keys())
+    frequencies = list(length_freq_dict.values())
+
+    plt.figure(figsize=(10, 5))
+    plt.bar(lengths, frequencies, width=0.85)
+    plt.axvline(mean_length, color='red', linestyle='dashed', linewidth=1, label=f"Mean: {mean_length:.2f}")
+    plt.title("Sentence Length Distribution")
+    plt.xlabel("Sentence Length (Characters)")
+    plt.ylabel("Frequency")
+    plt.legend()
+    plt.show()
