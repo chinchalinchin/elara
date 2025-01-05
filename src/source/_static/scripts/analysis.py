@@ -1,25 +1,96 @@
 import json
 import multiprocessing
-import matplotlib.pyplot as plt
-import nltk
-from nltk.corpus import brown, cess_esp
-from nltk.tokenize import sent_tokenize
+import math
 import scipy.stats
 import statistics
 import string
+from parse import init, \
+        clean_and_filter_english, \
+        clean_and_filter_hindi_bengali, \
+        clean_and_filter_spanish
 
-
-def init():
-    # Download necessary NLTK data if you haven't already
-    nltk.download('brown')
-    nltk.download('cess_esp')
-    nltk.download('punkt')
-
-def write_to_file(data, file_name):
+def write(data, file_name):
     with open(file_name, "w") as outfile:
         json.dump(data, outfile)
 
-def get_corpus_sentences(language, min_length, max_length):
+def summarize(data):
+    """
+    Calculates descriptive statistics for a given dataset.
+
+    Args:
+        data: A list of numerical data.
+
+    Returns:
+        A dictionary containing the statistics.
+    """
+    if not data:
+        return {
+            "number of samples": 0,
+            "mean": None,
+            "median": None,
+            "stdev": None,
+            "skewness": None,
+            "min": None,
+            "max": None,
+            "mode": None
+        }
+
+    try:
+        mode = statistics.mode(data)
+    except statistics.StatisticsError:
+        mode = None  # Handle cases with no unique mode
+
+    stats = {
+        "number of samples": len(data),
+        "mean": statistics.mean(data),
+        "median": statistics.median(data),
+        "min": min(data),
+        "max": max(data),
+        "mode": mode,
+    }
+
+    if len(data) > 1:
+        stats["stdev"] = statistics.stdev(data)
+        stats["skewness"] = scipy.stats.skew(data, bias=False)  # Using Pearson's moment coefficient of skewness
+    else:
+        stats["stdev"] = None
+        stats["skewness"] = None
+
+    return stats
+
+def difference_of_means_test(mean_1, stdev_1, n1, mean_2, stdev_2, n2):
+    """
+    Performs a two-sample t-test (difference of means test) assuming unequal variances.
+
+    Args:
+        mean_1: Mean of the first sample.
+        stdev_1: Standard deviation of the first sample.
+        n1: Number of observations in the first sample.
+        mean_2: Mean of the second sample.
+        stdev_2: Standard deviation of the second sample.
+        n2: Number of observations in the second sample.
+
+    Returns:
+        A tuple containing the t-statistic and the p-value.
+    """
+    print("performing tests")
+    if stdev_1 is None or stdev_2 is None or n1 < 2 or n2 < 2:
+        return None, None
+
+    # Calculate the t-statistic
+    t_statistic = (mean_1 - mean_2) / math.sqrt((stdev_1**2 / n1) + (stdev_2**2 / n2))
+
+    # Calculate the degrees of freedom using the Welch-Satterthwaite equation
+    df = ((stdev_1**2 / n1) + (stdev_2**2 / n2))**2 / (
+        (stdev_1**4) / (n1**2 * (n1 - 1)) + (stdev_2**4) / (n2**2 * (n2 - 1))
+    )
+
+    # Calculate the p-value (two-tailed test)
+    p_value = 2 * (1 - scipy.stats.t.cdf(abs(t_statistic), df))
+
+    return t_statistic, p_value
+
+def corpus(language, min_length, max_length):
     """
     Loads and preprocesses sentences from a specified corpus.
 
@@ -33,72 +104,15 @@ def get_corpus_sentences(language, min_length, max_length):
     """
 
     if language == "english":
-        corpus = brown
-        all_sentences = corpus.sents()
-        flattened_sentences = [" ".join(sentence) for sentence in all_sentences]
-        tokenized_sentences = []
-        for text in flattened_sentences:
-            tokenized_sentences.extend(sent_tokenize(text))
-
-        cleaned_sentences = []
-        for sentence in tokenized_sentences:
-            cleaned_sentence = "".join(
-                c for c in sentence if c not in string.punctuation or c == ' '
-            )
-            cleaned_sentence = " ".join(cleaned_sentence.split()).lower()
-            if min_length <= len(cleaned_sentence) <= max_length:
-                cleaned_sentences.append(cleaned_sentence)
-        return cleaned_sentences
-
+        return clean_and_filter_english(min_length, max_length)
 
     elif language == "spanish":
-        corpus = cess_esp.sents()
-        cleaned_sentences = []
-        for sentence in corpus:
-            cleaned_sentence = " ".join(word for word in sentence if word not in string.punctuation and word not in "¡¿")
-            cleaned_sentence = " ".join(cleaned_sentence.split()).lower()
-            if min_length <= len(cleaned_sentence) <= max_length:
-                cleaned_sentences.append(cleaned_sentence)
-        return cleaned_sentences
+        return clean_and_filter_spanish(min_length, max_length)
 
-    else:
-        raise ValueError("Invalid language specified. Choose 'english' or 'spanish'.")
+    elif language == "hindi" or language == "bengali":
+        return clean_and_filter_hindi_bengali(min_length, max_length, language)
 
-def calculate_coefficients(sentence):
-    """
-    Calculates the coefficients (2i - l(ζ) - 1) for each delimiter in a sentence.
-
-    Args:
-        sentence: The input sentence (string).
-
-    Returns:
-        A list of coefficients, one for each delimiter in the sentence.
-    """
-    l = len(sentence)
-    coefficients = []
-    for i in range(1, l + 1):
-        if sentence[i - 1] == ' ':  # Assuming space as the delimiter
-            coefficients.append(2 * i - l - 1)
-    return coefficients
-
-def process_sentences(corpus, sentence_length):
-    """
-    Processes a corpus of sentences, filters for sentences of a specific length,
-    and calculates the coefficients for each sentence.
-
-    Args:
-        corpus: A list of sentences (strings).
-        sentence_length: The desired sentence length.
-
-    Returns:
-        A list of lists, where each inner list contains the coefficients for a single sentence.
-    """
-    all_coefficients = []
-    for sentence in corpus:
-        if len(sentence) == sentence_length:
-            coefficients = calculate_coefficients(sentence)
-            all_coefficients.append(coefficients)
-    return all_coefficients
+    raise ValueError("Invalid language specified. Choose 'english', 'spanish', 'hindi', or 'bengali'.")
 
 def invert(sentence):
     return sentence[::-1]
@@ -126,6 +140,62 @@ def delimiter_count(char):
     """
     return 1 if char == ' ' else 0
 
+def integral_coefficients(sentence):
+    """
+    Calculates the coefficients (2i - l(ζ) - 1) for each delimiter in a sentence.
+
+    Args:
+        sentence: The input sentence (string).
+
+    Returns:
+        A list of coefficients, one for each delimiter in the sentence.
+    """
+    l = len(sentence)
+    coefficients = []
+    for i in range(1, l + 1):
+        if sentence[i - 1] == ' ':  # Assuming space as the delimiter
+            coefficients.append(2 * i - l - 1)
+    return coefficients
+
+def delimiter_density(mean_integral_value, sentence_length):
+    """
+    Calculates the delimiter density (d) based on the mean Sentence Integral value and sentence length.
+
+    Args:
+        mean_integral_value: The mean value of the Sentence Integral (either Left or Right).
+        sentence_length: The length of the sentences.
+
+    Returns:
+        The estimated delimiter density (d).
+    """
+    if sentence_length < 1:
+        return None
+
+    # From our approximation before: E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * (l(ζ) + 1)/2
+    # We also know that E[Ω:sub:`-`(ζ,l(ζ))] ≈ mean_integral_value
+
+    d = (2 * mean_integral_value) / (sentence_length + 1)
+    return d
+
+def integral_distribution(corpus, sentence_length):
+    """
+    Processes a corpus of sentences, filters for sentences of a specific length,
+    and calculates the coefficients for each sentence.
+
+    Args:
+        corpus: A list of sentences (strings).
+        sentence_length: The desired sentence length.
+
+    Returns:
+        A list of lists, where each inner list contains the coefficients for a single sentence.
+    """
+    all_coefficients = []
+    for sentence in corpus:
+        if len(sentence) == sentence_length:
+            coefficients = integral_coefficients(sentence)
+            all_coefficients.append(coefficients)
+    return all_coefficients
+
 def lefthand_integral(sentence, k):
     """
     Calculates the Left-Hand Sentence Integral of a sentence up to index k.
@@ -143,7 +213,7 @@ def lefthand_integral(sentence, k):
         total += delimiter_count(sentence[i - 1]) * (i / l)
     return total
 
-def right_integral(sentence, k):
+def righthand_integral(sentence, k):
     """
     Calculates the Right-Hand Sentence Integral of a sentence up to index k.
 
@@ -191,99 +261,7 @@ def filter_palindromes(sentences):
 
     return [s for s, is_p in zip(sentences, palindrome_flags) if is_p]
 
-def calculate_statistics(data):
-    """
-    Calculates descriptive statistics for a given dataset.
-
-    Args:
-        data: A list of numerical data.
-
-    Returns:
-        A dictionary containing the statistics.
-    """
-    if not data:
-        return {
-            "number of samples": 0,
-            "mean": None,
-            "median": None,
-            "stdev": None,
-            "skewness": None,
-            "min": None,
-            "max": None,
-            "mode": None
-        }
-
-    try:
-        mode = statistics.mode(data)
-    except statistics.StatisticsError:
-        mode = None  # Handle cases with no unique mode
-
-    stats = {
-        "number of samples": len(data),
-        "mean": statistics.mean(data),
-        "median": statistics.median(data),
-        "min": min(data),
-        "max": max(data),
-        "mode": mode,
-    }
-
-    if len(data) > 1:
-        stats["stdev"] = statistics.stdev(data)
-        stats["skewness"] = scipy.stats.skew(data, bias=False)  # Using Pearson's moment coefficient of skewness
-    else:
-        stats["stdev"] = None
-        stats["skewness"] = None
-
-    return stats
-
-def analyze_integrals_by_length(sentences, min_length, max_length):
-    """
-    Iterates over sentence lengths, analyzes Sentence Integrals, and calculates delimiter densities.
-
-    Args:
-        sentences: The list of sentences.
-        min_length: The minimum sentence length to analyze.
-        max_length: The maximum sentence length to analyze.
-
-    Returns:
-        A dictionary containing the statistics for each sentence length and a list of delimiter densities.
-    """
-    all_stats = {}
-    delimiter_densities = []
-
-    for length in range(min_length, max_length + 1):
-        left_integrals, right_integrals = analyze_sentence_integrals(sentences, length)
-
-        if not left_integrals:
-            continue
-
-        left_stats = calculate_statistics(left_integrals)
-        right_stats = calculate_statistics(right_integrals)
-
-        all_stats[f"n={length}"] = {
-            "left": left_stats,
-            "right": right_stats,
-        }
-
-        # Calculate delimiter densities based on mean integral values
-        d_left = calculate_delimiter_density(left_stats["mean"], length)
-        d_right = calculate_delimiter_density(right_stats["mean"], length)
-
-        delimiter_densities.append((length, d_left, d_right))
-
-    # Calculate statistics for delimiter densities
-
-    delimiter_density_stats = {
-        "mean": statistics.mean([d_pair[1] for d_pair in delimiter_densities])
-    }
-    if len(delimiter_densities) > 1:
-        delimiter_density_stats["stdev"] = statistics.stdev([d_pair[1] for d_pair in delimiter_densities])
-    else:
-        delimiter_density_stats["stdev"] = 0
-
-    return all_stats, delimiter_densities, delimiter_density_stats
-
-def analyze_sentence_integrals(sentences, sentence_length):
+def sentence_integrals(sentences, sentence_length):
     """
     Analyzes the Left and Right-Hand Sentence Integrals of sentences in a corpus.
 
@@ -306,107 +284,132 @@ def analyze_sentence_integrals(sentences, sentence_length):
 
     return left_integrals, right_integrals
 
-def calculate_delimiter_density(mean_integral_value, sentence_length):
+def analyze_delimiter_densities(sentences, min_length, max_length):
     """
-    Calculates the delimiter density (d) based on the mean Sentence Integral value and sentence length.
+    Iterates over sentence lengths, analyzes Sentence Integrals, and calculates delimiter densities.
 
     Args:
-        mean_integral_value: The mean value of the Sentence Integral (either Left or Right).
-        sentence_length: The length of the sentences.
+        sentences: The list of sentences.
+        min_length: The minimum sentence length to analyze.
+        max_length: The maximum sentence length to analyze.
 
     Returns:
-        The estimated delimiter density (d).
+        A dictionary containing the statistics for each sentence length and a list of delimiter densities.
     """
-    if sentence_length < 1:
-        return None
+    delimiter_densities = []
 
-    # From our approximation before: E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * (l(ζ) + 1)/2
-    # We also know that E[Ω:sub:`-`(ζ,l(ζ))] ≈ mean_integral_value
+    for length in range(min_length, max_length + 1):
+        left_integrals, right_integrals = sentence_integrals(sentences, length)
 
-    d = (2 * mean_integral_value) / (sentence_length + 1)
-    return d
+        if not left_integrals or not right_integrals:
+            continue
 
-def generate_integral_histograms(left_integrals, right_integrals, sentence_length, num_bins=20):
+        left_stats = summarize(left_integrals)
+        right_stats = summarize(right_integrals)
+
+        # Calculate delimiter densities based on mean integral values
+        d_left = delimiter_density(left_stats["mean"], length)
+        d_right = delimiter_density(right_stats["mean"], length)
+
+        delimiter_densities.append({
+            "sentence_length": length,
+            "n": left_stats["number of samples"],  # Assuming n is the same for both left and right
+            "left": left_stats["mean"],
+            "right": right_stats["mean"],
+            "stdev(left)": left_stats["stdev"],
+            "stdev(right)": right_stats["stdev"],
+            "d_left": d_left,
+            "d_right": d_right,
+            "stdev(d_left)": None,  # Placeholder for now
+            "stdev(d_right)": None,  # Placeholder for now
+        })
+
+    return delimiter_densities
+
+def analyze_languages(min_length, max_length):
     """
-    Generates histograms for the Left and Right-Hand Sentence Integrals.
+    Analyzes delimiter densities for English, Spanish, and Hindi corpora.
 
     Args:
-        left_integrals: A list of Left-Hand Sentence Integrals.
-        right_integrals: A list of Right-Hand Sentence Integrals.
-        sentence_length: The length of the sentences analyzed.
-        num_bins: The number of bins for the histograms.
+        min_length: The minimum sentence length to analyze.
+        max_length: The maximum sentence length to analyze.
+
+    Returns:
+        A list of dictionaries, where each dictionary contains the results of the difference of means tests for a specific sentence length.
     """
+    languages = ["english", "spanish", "hindi"]
+    all_corpora_delimiter_data = {}
 
-    plt.figure(figsize=(12, 5))
+    for language in languages:
+        sentences = corpus(language, min_length, max_length)
+        all_corpora_delimiter_data[language] = analyze_delimiter_densities(sentences, 
+                                                                           min_length, 
+                                                                           max_length)
 
-    plt.subplot(1, 2, 1)
-    plt.hist(left_integrals, bins=num_bins, range=(0, 10))
-    plt.title(f"Left-Hand Integrals (Length = {sentence_length})")
-    plt.xlabel("Integral Value")
-    plt.ylabel("Frequency")
+        print(sentences[:3])
 
-    plt.subplot(1, 2, 2)
-    plt.hist(right_integrals, bins=num_bins, range=(0, 10))
-    plt.title(f"Right-Hand Integrals (Length = {sentence_length})")
-    plt.xlabel("Integral Value")
-    plt.ylabel("Frequency")
+    comparison_results = []
+    for length in range(min_length, max_length + 1):
+        
+        # Check if data exists for all languages at this length
+        if not all(any(d["sentence_length"] == length for d in all_corpora_delimiter_data[lang]) for lang in languages):
+            continue
 
-    plt.tight_layout()
-    plt.show()
+        english_data = all_corpora_delimiter_data["english"]
+        spanish_data = all_corpora_delimiter_data["spanish"]
+        hindi_data = all_corpora_delimiter_data["hindi"]
 
-def generate_coefficient_histogram(all_coefficients, sentence_length):
-    """
-    Generates a histogram of the delimiter coefficients.
+        # Find the data for the current length in each language
+        english_stats = next((d for d in english_data if d["sentence_length"] == length), None)
+        spanish_stats = next((d for d in spanish_data if d["sentence_length"] == length), None)
+        hindi_stats = next((d for d in hindi_data if d["sentence_length"] == length), None)
 
-    Args:
-        all_coefficients: A list of lists, where each inner list contains the coefficients for a sentence.
-        sentence_length: The length of the sentences analyzed.
-    """
-    # Flatten the list of lists into a single list
-    flat_coefficients = [item for sublist in all_coefficients for item in sublist]
+        if not english_stats or not spanish_stats or not hindi_stats:
+            continue
+        
+        result = {
+            "sentence_length": length,
+            "n": english_stats["n"], # Assuming n is the same across languages for a given length
+            "comparisons": {}
+        }
 
-    plt.hist(flat_coefficients, bins=range(-sentence_length + 1, sentence_length, 2)) # Bins for odd/even coefficients
-    plt.title(f"Delimiter Coefficient Distribution (Sentence Length = {sentence_length})")
-    plt.xlabel("Coefficient (2i - l(ζ) - 1)")
-    plt.ylabel("Frequency")
-    plt.show()
-    
+        # Perform comparisons and store results
+        comparisons = [("spanish", "english"), ("spanish", "hindi"), ("hindi", "english")]
+        for lang1, lang2 in comparisons:
+            data1 = english_stats if lang1 == "english" else spanish_stats if lang1 == "spanish" else hindi_stats
+            data2 = english_stats if lang2 == "english" else spanish_stats if lang2 == "spanish" else hindi_stats
 
+            t_left, p_left = difference_of_means_test(data1["left"], 
+                                                        data1["stdev(left)"], 
+                                                        data1["n"], 
+                                                        data2["left"], 
+                                                        data2["stdev(left)"], 
+                                                        data2["n"])
+            t_right, p_right = difference_of_means_test(data1["right"], 
+                                                        data1["stdev(right)"], 
+                                                        data1["n"], 
+                                                        data2["right"], 
+                                                        data2["stdev(right)"], 
+                                                        data2["n"])
+
+            result["comparisons"][f"{lang1}-{lang2}"] = {
+                "t_left": t_left,
+                "p_left": p_left,
+                "t_right": t_right,
+                "p_right": p_right,
+            }
+
+        comparison_results.append(result)
+
+    return comparison_results
 
 if __name__ == "__main__":
 
-    # Example Usage:
-    min_length = 2
-    max_length = 200
+    init()
 
-    test_palindrome = "no devil lived on"
-    result = is_palindrome(test_palindrome)
-    print(f"'{test_palindrome}' is a palindrome: {result}")
+    min_length = 50
+    max_length = 150
 
-    # # Load sentences of the appropriate language
-    # cleaned_sentences = get_corpus_sentences("english", min_length, max_length)
-
-    # # Filter for palindromes
-    # palindrome_sentences = filter_palindromes(cleaned_sentences)
-
-    # print(palindrome_sentences)
-
-    # # Now you can use the cleaned_sentences list with your analysis functions:
-    # all_stats, delimiter_densities, delimiter_density_stats = analyze_integrals_by_length(
-    #     palindrome_sentences, min_length, max_length
-    # )
-    # # Print the statistics for each sentence length
-    # for length, stats in all_stats.items():
-    #     print(f"Sentence Length: {length}")
-    #     print("  Left-Hand Integral Stats:", stats["left"])
-    #     print("  Right-Hand Integral Stats:", stats["right"])
-    #     print("-" * 20)
-
-    # # Print the delimiter densities
-    # print("\nDelimiter Densities:")
-    # for length, d_left, d_right in delimiter_densities:
-    #     print(f"Length: {length}, Left d: {d_left:.4f}, Right d: {d_right:.4f}")
-
-    # # Print overall delimiter density statistics
-    # print("\nDelimiter Density Statistics:")
-    # print(delimiter_density_stats)
+    delimiter_densities= analyze_languages(min_length, max_length)
+    
+    write(delimiter_densities, 'language_delimiter_comparison.json')

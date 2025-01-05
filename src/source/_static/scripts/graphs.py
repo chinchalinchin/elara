@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+
+def generate_integral_histograms(left_integrals, right_integrals, sentence_length, num_bins=20):
+    """
+    Generates histograms for the Left and Right-Hand Sentence Integrals.
+
+    Args:
+        left_integrals: A list of Left-Hand Sentence Integrals.
+        right_integrals: A list of Right-Hand Sentence Integrals.
+        sentence_length: The length of the sentences analyzed.
+        num_bins: The number of bins for the histograms.
+    """
+
+    plt.figure(figsize=(12, 5))
+
+    plt.subplot(1, 2, 1)
+    plt.hist(left_integrals, bins=num_bins, range=(0, 10))
+    plt.title(f"Left-Hand Integrals (Length = {sentence_length})")
+    plt.xlabel("Integral Value")
+    plt.ylabel("Frequency")
+
+    plt.subplot(1, 2, 2)
+    plt.hist(right_integrals, bins=num_bins, range=(0, 10))
+    plt.title(f"Right-Hand Integrals (Length = {sentence_length})")
+    plt.xlabel("Integral Value")
+    plt.ylabel("Frequency")
+
+    plt.tight_layout()
+    plt.show()
+
+def generate_coefficient_histogram(all_coefficients, sentence_length):
+    """
+    Generates a histogram of the delimiter coefficients.
+
+    Args:
+        all_coefficients: A list of lists, where each inner list contains the coefficients for a sentence.
+        sentence_length: The length of the sentences analyzed.
+    """
+    # Flatten the list of lists into a single list
+    flat_coefficients = [item for sublist in all_coefficients for item in sublist]
+
+    plt.hist(flat_coefficients, bins=range(-sentence_length + 1, sentence_length, 2)) # Bins for odd/even coefficients
+    plt.title(f"Delimiter Coefficient Distribution (Sentence Length = {sentence_length})")
+    plt.xlabel("Coefficient (2i - l(ζ) - 1)")
+    plt.ylabel("Frequency")
+    plt.show()
+    

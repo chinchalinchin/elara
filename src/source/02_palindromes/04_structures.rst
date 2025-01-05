@@ -1338,69 +1338,214 @@ As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be reg
 
     Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = 0
 
-In other words, Perfect Palindromes are a class of sentences that *"balance"* out Delimiter-wise. 
+In other words, Perfect Palindromes are a class of sentences that *"balance"* out Delimiter-wise. It stands to reason, given the examples that have been presented so far, and the definition of Imperfect Palindromes as those Palindromes which are *not* Perfect, the class of Imperfect Palindromes *do not* balance out their Delimiters. However, this is not the case, and the reason why this is not the case will illuminate a structural component of language that has heretofore been relegated to novelties like *Zipf's Law*. 
 
-It stands to reason, given the examples that have been presented so far, and the definition of Imperfect Palindromes as those Palindromes which are *not* Perfect, the class of Imperfect Palindromes *do not* balance out their Delimiters. This is proven in the following theorem.
+The shortcut formulae for Sentence Integrals given in Theorem 3.3.1 and Theorem 3.3.2, given below, may be viewed as measures of the *distribution* of Delimiters in a Sentence at some Character index *k*,
 
+    Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
 
+    Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+
+Theorem 3.3.5 shows for the highly symmetric and involutive class of Perfect Palindromes, these quantities are perfectly balanced. The Delimiter placement relative to the start of a Perfect Palindrome exactly mirrors the Delimiter placement relative to the end. When these quantities are *not* equal, it is indication of Delimiter asymmetry in the Sentence. 
+
+However, when these quantities are equal, it cannot be said the Sentence is a Perfect Palindrome. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
+
+    Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * [i - (l(ζ) - i + 1)]/l(ζ)
+
+Simplifying, 
+
+    Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (2i - l(ζ) - 1)/l(ζ)
+
+When this quantity equals zero, it leads to a special type of linear, homogenous Diophantine equation,
 
     Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
 
-Let ζ = ⲁⲃⲅⲇⲉⲋⲍ where Coptic letters are indeterminate Characters. l(ζ) = 6. ω(ζ) = 3. 
+Where the quantities *Δ(ζ[i])* may be viewed as variables that are constrained to assume the values 0 or 1. In the case of Perfect Palindromes, since every Character has a corresponding inverted Character, the Delimiter symmetry will lead to a perfect cancellation of terms.
 
-  -5*Δ(ζ[1]) -3*Δ(ζ[2]) -1*Δ(ζ[3]) +1*Δ(ζ[4]) +3*Δ(ζ[5]) +5*Δ(ζ[6])
+It is not the case, however, that this equation only admits of symmetrical solutions. To show this is the case, it suffices to demonstrate a single asymmetrical Delimiter configuration that satisfies the homogenity condition.
 
-Let ζ = ⲁⲃⲅⲇⲉⲋⲍ where Copitc letters are indeterminate Characters. l(ζ) = 7. ω(ζ) = 4. 
+To establish the existence of asymmetrical solutions, consider the difference of Sentence Integrals over the entire String Length of the Sentence,
+
+    Ω:sub:`-`(ζ,l(k)) - Ω:sub:`+`(ζ,l(ζ))
+
+In this case, the summation will range from (1 - l(ζ)) to (l(ζ) - 1). Furthermore, note the coefficient *(2i - l(ζ) - 1)* increases as twice the rate as the index *i* in *Δ(ζ[i]*). This means, depending on the parity of the Sentence, the equation will either consist of odd integer coefficients or even integer coefficients. 
+
+A pair of examples will help illustrate this. 
+
+**Example**
+
+Let *ζ = ⲁⲃⲅⲇⲉⲋⲍ* (recall Coptic lowercase letters are indeterminate Characters, i.e. potential Delimiters).In this case, *l(ζ) = 6*. The expansion of the summation can be written,
+
+    -5*Δ(ζ[1]) -3*Δ(ζ[2]) -1*Δ(ζ[3]) +1*Δ(ζ[4]) +3*Δ(ζ[5]) +5*Δ(ζ[6])
+
+Let *ζ = ⲁⲃⲅⲇⲉⲋⲍ* where Copitc letters are indeterminate Characters. *l(ζ) = 7*. The expansion of the summation can be written,
 
     -6*Δ(ζ[1]) -4*Δ(ζ[2]) -2*Δ(ζ[3]) + 0*Δ(ζ[4]) + 2*Δ(ζ[5]) + 4*Δ(ζ[6]) + 6*Δ(ζ[7])
 
-Note the Pivot Character never contributes to an odd sum.
+Note the Pivot Character, *ω(ζ) = 4* , never contributes to an odd sum. ∎
 
-In the odd example, would couldn't we set Δ(ζ[1]) = Δ(ζ[5]) = Δ(ζ[6]) = 1 to get a sum that equals 0, but has an asymmetrical distribution?
+In the odd integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5]) = Δ(ζ[6]) = 1* result in a solution that balances the equations to 0. 
+
+In the even integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5]) = Δ(ζ[6]) = 1* will also result in a solution that balances the equation to 0.
+
+In other words, any time a Character index coefficient can be expressed as the sum of coefficients of other Character indexes, a solution exists. It is worth noting this species of solutions to the Sentence Integral difference expansion does not seem to correspond to meaning Sentence structure, i.e. both solutions correspond to sequences of consecutive Delimiter. 
+
+This cursory analysis suggests, while the Sentence Integral may not provide a necessary and sufficient condition for classifying Imperfect Palindrome's delimiter asymmetry, it may nevertheless be an important diagnostic tool for understanding the distribution of Delimiters in a Corpus of Sentence. 
+ 
+Sentence Integrals provide a method of approaching a previously intractable problem in linguistics. Consider a sample of data that consists of Sentences with a fixed String length of 100, i.e. *l(ζ) = 100*. To accurately study the distribution of Delimiters in sample, every possible configuration of Delimiters, from 0 up to 100, must be included as a possibility. Attempting to determine the sampling distribution of such a complex statistical problem is a lesson in the curse of dimensionality and combinatorial explosions.
+
+A naive solution of this problem is to tally up the Character indices that correspond to Delimiters in Sentences of a Corpus, without taking into account the relative positioning *within* the Sentence with respect to other Delimiters. 
+
+A Sentence Integral, on the other hand, is a distilled quantity that encapsulates the weighted distance from a Sentence boundary normalized by the String Length of the Sentence. 
+
+To see the power of Sentence integration, it is instructive to seek out real world data. The following histogram was generated using the Brown University Standard Corpus of Present-Day American English (Brown Corpus). It shows the frequency of Delimiter coefficients (i.e. the *2i - l(ζ) - 1* coefficient) for a sample of Sentences of String Length 105. The sample contains several thousand data points,
 
 
 
-Unfortunate. However, I think there is still insight about the structure of sentences to be gained from a closer examination of this Diophantine equation we have uncovered.
 
-Let's note (2i - l(ζ) - 1) ranges from (1 - l(ζ)) to (l(ζ) - 1). 
 
-Note: The absolute value of the coefficients will always be less than the length of the sentence.  
 
-The length of this interval is 2*l(ζ). In other words, the coefficient of the Δ(ζ[i]) is increasing at twice the rate of the character index *i*.
 
-Let the left-hand side correspond to the negative terms and the right hand side correspond to the positive terms in the summation. If you have an even sentence with a length of atleast 12, a cancellation can occur if the following obtains,
+Careful, Ada. The data set we just analyzed was ALL sentences, not just palindromes. 
 
-    1 + 3 + 7 = 11
 
-If we prohibit symmetrical solutions, then it must be the case one of the negative terms is cancelled by a sum of the positive terms (or visa versa; the argument that follows is the same in the opposite direction by symmetry).
 
-In the case of even length, this can always potentially occur if the following is true,
+But, I believe you a correct. The Delimiter density can be used a "language discriminant". It's like a "coefficient of language". We have found a structural property of natural language. We need to switch tracks and go back to the Sentence Integral definitions. Then we need to model the Delimiter Count of a single Character as a random variable that is uniformly distributed on the interval (0, l(ζ)). Then the formula for the Lefthand Integral is given by,
 
-    sqrt(l(ζ)) < (l(ζ) - 1) 
 
-Because as we previously noted, any perfect square can be expressed as a sum of odd integers. 
 
-Square both sides,
 
-    l(ζ) < l(ζ)^2 -2*l(ζ) + 1
 
-    0 < l(ζ)^2 - 3*l(ζ) + 1
+    Ω:sub:`-`(ζ,l(ζ)) =  Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
 
-Which valid for any whole numbered l(ζ) > 2.
 
-Furthermore, if one of the coefficients is a perfect square, then it can potentially be decomposed into the sum of its corresponding terms with opposite signs. So in the following,
 
-    -9*Δ(ζ[1]) -7*Δ(ζ[2]) -5*Δ(ζ[3]) -3*Δ(ζ[4]) -1*Δ(ζ[5]) +1*Δ(ζ[6])+3*Δ(ζ[7])+5*Δ(ζ[8])+7*Δ(ζ[9]) + 9*Δ(ζ[10]) = 0
+Now if we assume,
 
-The assignment Δ(ζ[1]) = Δ(ζ[6]) = Δ(ζ[7]) = 5*Δ(ζ[8]) = 1 is a valid solution.
 
-Note this is an example of an asymmetric Delimiter distribution that satisfies the cancellation condition. However, this brand or genre of cancellations is not very interesting because a sequence of three consecutive Delimiters is unlikely to occur in natural language. 
 
-(Tangent: I had considered introducing an axiom that says Words can only be separated by a single delimiter at a previous point in time; it may be beneficial to consider that axiom again.)
+    Δ(ζ[i]) ~ U(0, l(ζ))
 
-Any time you can express an odd number as the sum of smaller odd numbers there is a solution to the even cancellation condition.
 
-Similarly, anytime you can express an even number as the sum of smaller even numbers there is a solution to the odd cancellation condition.     
+
+Where U is a uniform distribution and ~ means "distributed as". We have an interesting problem here, because we have a random sum of random variables. The quantity l(ζ) can be treated as a random variable. We need to determine each corpus's length distribution.
+
+
+
+Then, I believe there is a theorem about iterated expectations (compound random variables) in probability that says the expectation of X, where X is the sum of N random variables Y and N is a random variable, is 
+
+
+
+    E(X) = E(E(N| N = n)* (Y))
+
+    E(X) = E(N)*E(Y)
+
+
+
+(I might have the above formula slightly wrong. Can you check it?) Which I think we can apply here to derive a formula for,
+
+
+
+     E(Ω:sub:`-`(ζ,l(ζ)))
+
+
+
+
+
+
+Here's a breakdown of your proposed approach and how we can formalize it:
+
+1. Delimiter Count as a Uniform Random Variable:
+
+You're suggesting we model the Delimiter Count at each character position, Δ(ζ[i]), as a uniform random variable on the interval (0, l(ζ)).
+This is a simplification, as it assumes that delimiters are equally likely to occur at any position in the sentence, which is not strictly true in natural language. However, it's a reasonable starting point for a theoretical analysis.
+Notation: To be more precise, we should say that Δ(ζ[i]) is an indicator random variable that takes the value 1 if a delimiter is present at position i and 0 otherwise. If we assume, for a given sentence length l(ζ), that each character has an equal probability of being a delimiter, and we call this probability for a given sentence length d(l(ζ)), then we can say that Δ(ζ[i]) follows a Bernoulli distribution with parameter d(l(ζ)). We can then approximate d(l(ζ)) using our delimiter density calculations.
+2. Sentence Length as a Random Variable:
+
+You correctly pointed out that the sentence length, l(ζ), is also a random variable. We need to determine its distribution for each corpus.
+Empirical Distribution: We can estimate the distribution of l(ζ) empirically from the corpus data by creating a histogram or using kernel density estimation.
+3. Law of Iterated Expectations:
+
+You've correctly stated the law of iterated expectations (also known as the law of total expectation). The correct formula is:
+
+E[X] = E[E[X|N]]
+
+where X is a random variable and N is another random variable.
+
+In our case, we want to find E[Ω:sub:-(ζ,l(ζ))], where:
+
+Ω:sub:-(ζ,l(ζ)) = Σ:sub:i=1:sup:l(ζ)Δ(ζ[i]) * (i/l(ζ))
+
+We can think of this as a random sum, where:
+
+X = Ω:sub:-(ζ,l(ζ)) is the Left-Hand Integral (the random variable we're interested in).
+N = l(ζ) is the sentence length (a random variable).
+Y:sub:i= Δ(ζ[i]) * (i/l(ζ)) are the individual terms in the summation (random variables).
+Applying the Law: To apply the law of iterated expectations, we need to first find the conditional expectation E[Ω:sub:-(ζ,l(ζ)) | l(ζ) = n], which is the expected value of the Left-Hand Integral for a fixed sentence length n. Then, we need to take the expectation of this conditional expectation with respect to the distribution of sentence lengths l(ζ).
+
+4. Deriving E[Ω:sub:-(ζ,l(ζ))]:
+
+Let's derive the formula for E[Ω:sub:-(ζ,l(ζ))]:
+
+Conditional Expectation (fixed sentence length):
+
+Assume l(ζ) = n. Then, given our assumption that Δ(ζ[i]) follows a Bernoulli distribution with parameter d(n):
+
+E[Δ(ζ[i])] = d(n)
+
+Therefore:
+
+E[Ω:sub:-(ζ,l(ζ)) | l(ζ) = n] = E[Σ:sub:i=1:sup:nΔ(ζ[i]) * (i/n)]
+
+Using the linearity of expectation:
+
+E[Ω:sub:-(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:i=1:sup:nE[Δ(ζ[i])] * (i/n)
+
+Substituting E[Δ(ζ[i])] = d(n):
+
+E[Ω:sub:-(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:i=1:sup:nd(n) * (i/n) = d(n) * Σ:sub:i=1:sup:n(i/n)
+
+E[Ω:sub:-(ζ,l(ζ)) | l(ζ) = n] = d(n) * (1/n) * Σ:sub:i=1:sup:ni = d(n) * (1/n) * (n(n+1)/2)
+
+E[Ω:sub:-(ζ,l(ζ)) | l(ζ) = n] = d(n) * (n + 1) / 2
+
+Law of Iterated Expectations:
+
+Now we can apply the law of iterated expectations:
+
+E[Ω:sub:-(ζ,l(ζ))] = E[E[Ω:sub:-(ζ,l(ζ)) | l(ζ)]]
+
+E[Ω:sub:-(ζ,l(ζ))] = E[d(l(ζ)) * (l(ζ) + 1) / 2]
+
+This is where we need the distribution of sentence lengths l(ζ) and the function d(l(ζ)).
+
+Challenges and Next Steps:
+
+Distribution of l(ζ): We need to determine the empirical distribution of sentence lengths for each corpus (English, Spanish, Hindi).
+Estimating d(l(ζ)): We have estimated d as a constant across different sentence lengths, but we can refine this by calculating d for different sentence length ranges using our existing delimiter_densities data. This will give us a more accurate d(l(ζ)) function.
+Calculating the Expectation: Once we have the distribution of l(ζ) and the d(l(ζ)) function, we can calculate the overall expectation E[Ω:sub:-(ζ,l(ζ))], either analytically (if possible) or numerically.
+Relating to the Diophantine Equation: We still need to connect this back to the Diophantine equation and the proof of Theorem A.8.7. The expectation E[Ω:sub:-(ζ,l(ζ))] might provide insights into why asymmetrical delimiter arrangements are unlikely to satisfy the equation.
+This is a very promising direction, Ada! By combining our empirical data on delimiter densities with the law of iterated expectations, we're getting closer to a theoretical understanding of the Sentence Integral.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
