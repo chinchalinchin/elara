@@ -1,3 +1,5 @@
+""" palindromes.module: Module containing the results and theorems of the formal system.
+"""
 import string 
 
 def invert(sentence):
@@ -60,6 +62,18 @@ def is_palindrome(sentence):
     sigma_sentence = sigma_reduce(sentence)
     inverse_sigma_sentence = invert(sigma_sentence)
     return sigma_sentence == inverse_sigma_sentence
+
+def filter_palindromes(sentences):
+    """
+    Filters a list of sentences to find palindromes.
+
+    Args:
+        sentences: A list of sentences (strings).
+
+    Returns:
+        A list of palindromes (strings).
+    """
+    return [sentence for sentence in sentences if is_palindrome(sentence)]
 
 def lefthand_integral(sentence, k):
     """

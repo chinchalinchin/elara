@@ -1,6 +1,7 @@
+""" palindromes.main: Main module.
+"""
 import json
-import multiprocessing
-
+# application modules
 import estimators
 import parse
 import graphs
@@ -10,21 +11,31 @@ def write(data, file_name):
     with open(file_name, "w") as outfile:
         json.dump(data, outfile)
 
-def filter_palindromes(sentences):
+def analyze_sentence_integrals(sentences, sentence_length):
     """
-    Filters a list of sentences to find palindromes.
+    Analyzes the Left and Right-Hand Sentence Integrals of sentences in a corpus.
 
     Args:
-        sentences: A list of sentences (strings).
+        sentences: The list of sentences.
+        sentence_length: The desired sentence length.
 
     Returns:
-        A list of palindromes (strings).
+        A tuple containing two lists:
+        - left_integrals: A list of Left-Hand Sentence Integrals.
+        - right_integrals: A list of Right-Hand Sentence Integrals.
     """
+    left_integrals = []
+    right_integrals = []
 
-    with multiprocessing.Pool() as pool:
-        palindrome_flags = pool.map(model.is_palindrome, sentences)
+    if not sentences:
+        return left_integrals, right_integrals
 
-    return [s for s, is_p in zip(sentences, palindrome_flags) if is_p]
+    for sentence in sentences:
+        if len(sentence) == sentence_length:
+            left_integrals.append(model.lefthand_integral(sentence, sentence_length))
+            right_integrals.append(model.righthand_integral(sentence, sentence_length))
+
+    return left_integrals, right_integrals
 
 def analyze_delimiter_densities(sentences, min_length, max_length):
     """
@@ -43,7 +54,7 @@ def analyze_delimiter_densities(sentences, min_length, max_length):
     for length in range(min_length, max_length + 1):
         left_integrals, right_integrals = model.sentence_integrals(sentences, length)
 
-        if not left_integrals or not right_integrals:
+        if not left_integrals and not right_integrals:
             continue
 
         left_stats = estimators.summarize(left_integrals)
@@ -160,10 +171,10 @@ def analyze_sentence_lengths(min_length, max_length):
     results = {}
 
     for corpus in corpora:
-        sentences = parse.get_corpus_sentences(corpus, min_length, max_length)
-        length_freq = parse.length_frequencies(sentences)
-        mean_length = parse.sample_mean_freq(length_freq)
-        graphs.generate_length_histogram(length_freq, mean_length)
+        sentences = parse.corpus(corpus, min_length, max_length)
+        length_freq = estimators.length_frequencies(sentences)
+        mean_length = estimators.sample_mean_freq(length_freq)
+        graphs.length_histogram(length_freq, mean_length)
         results[corpus.value] = {
             "length_frequencies": length_freq,
             "mean_length": mean_length,

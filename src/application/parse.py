@@ -1,3 +1,5 @@
+""" palindromes.parse: Module for parsing external data sources
+"""
 import enum
 import nltk
 from nltk.corpus import brown, cess_esp, indian
@@ -16,7 +18,7 @@ def init():
     nltk.download('punkt')
     nltk.download('indian')
 
-def corpus(language, min_length, max_length):
+def _clean_corpus(language, min_length, max_length):
     # Updated to use the CORPORA enum
 
     if language == CORPORA.ENGLISH:
@@ -73,14 +75,21 @@ def corpus(language, min_length, max_length):
     else:
         raise ValueError("Invalid language specified. Choose from 'english', 'spanish', or 'hindi'.")
 
-def clean_and_filter_english(min_length, max_length):
+def _english_corpus(min_length, max_length):
     # Updated to use the new corpus function
-    return get_corpus_sentences(CORPORA.ENGLISH, min_length, max_length)
+    return _clean_corpus(CORPORA.ENGLISH, min_length, max_length)
 
-def clean_and_filter_spanish(min_length, max_length):
+def _spanish_corpus(min_length, max_length):
     # Updated to use the new corpus function
-    return get_corpus_sentences(CORPORA.SPANISH, min_length, max_length)
+    return _clean_corpus(CORPORA.SPANISH, min_length, max_length)
 
-def clean_and_filter_hindi(min_length, max_length):
+def _hindi_corpus(min_length, max_length):
     # Updated to use the new corpus function
-    return get_corpus_sentences(CORPORA.HINDI, min_length, max_length)
+    return _clean_corpus(CORPORA.HINDI, min_length, max_length)
+
+def corpus(min_length = 100, max_length = 200, language = CORPORA.ENGLISH):
+    if language == CORPORA.HINDI:
+        return _hindi_corpus(min_length, max_length)
+    if language == CORPORA.SPANISH:
+        return _spanish_corpus(min_length, max_length)
+    return _english_corpus(min_length, max_length)

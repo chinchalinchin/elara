@@ -1,6 +1,8 @@
+""" palindromes.graphs: Module for visualizing palindromic structures.
+"""
 import matplotlib.pyplot as plt
 
-def generate_integral_histograms(left_integrals, right_integrals, sentence_length, num_bins=20):
+def integral_histograms(left_integrals, right_integrals, sentence_length, num_bins=20):
     """
     Generates histograms for the Left and Right-Hand Sentence Integrals.
 
@@ -28,7 +30,7 @@ def generate_integral_histograms(left_integrals, right_integrals, sentence_lengt
     plt.tight_layout()
     plt.show()
 
-def generate_coefficient_histogram(all_coefficients, sentence_length):
+def coefficient_histogram(all_coefficients, sentence_length):
     """
     Generates a histogram of the delimiter coefficients.
 
@@ -45,7 +47,7 @@ def generate_coefficient_histogram(all_coefficients, sentence_length):
     plt.ylabel("Frequency")
     plt.show()
     
-def generate_length_histogram(length_freq_dict, mean_length):
+def length_histogram(length_freq_dict, mean_length):
     """
     Generates a histogram of sentence lengths for a given corpus.
 

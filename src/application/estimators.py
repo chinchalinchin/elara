@@ -1,3 +1,5 @@
+""" palindrome.estimators: Module for statistical analysis.
+"""
 import math
 import scipy.stats
 import statistics

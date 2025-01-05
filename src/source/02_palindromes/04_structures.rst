@@ -1346,9 +1346,9 @@ The shortcut formulae for Sentence Integrals given in Theorem 3.3.1 and Theorem 
 
     Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
 
-Theorem 3.3.5 shows for the highly symmetric and involutive class of Perfect Palindromes, these quantities are perfectly balanced. The Delimiter placement relative to the start of a Perfect Palindrome exactly mirrors the Delimiter placement relative to the end. When these quantities are *not* equal, it is indication of Delimiter asymmetry in the Sentence. 
+Theorem 3.3.5 shows for the highly symmetric and involutive class of Perfect Palindromes, these quantities are perfectly balanced. The Delimiter placement relative to the start of a Perfect Palindrome exactly mirrors the Delimiter placement relative to the end. When these quantities are *not* equal, it is an indication of Delimiter asymmetry in the Sentence. 
 
-However, when these quantities are equal, it cannot be said the Sentence is a Perfect Palindrome. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
+However, when these quantities are equal, it cannot be said the Sentence is definitively a Perfect Palindrome. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
 
     Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * [i - (l(ζ) - i + 1)]/l(ζ)
 
@@ -1366,7 +1366,7 @@ It is not the case, however, that this equation only admits of symmetrical solut
 
 To establish the existence of asymmetrical solutions, consider the difference of Sentence Integrals over the entire String Length of the Sentence,
 
-    Ω:sub:`-`(ζ,l(k)) - Ω:sub:`+`(ζ,l(ζ))
+    Ω:sub:`-`(ζ,l(ζ)) - Ω:sub:`+`(ζ,l(ζ))
 
 In this case, the summation will range from (1 - l(ζ)) to (l(ζ) - 1). Furthermore, note the coefficient *(2i - l(ζ) - 1)* increases as twice the rate as the index *i* in *Δ(ζ[i]*). This means, depending on the parity of the Sentence, the equation will either consist of odd integer coefficients or even integer coefficients. 
 
