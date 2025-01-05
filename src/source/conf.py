@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'elara'
+project = "elara protocol"
 copyright = '2024, chinchalinchin'
 author = 'chinchalinchin'
 release = '1.0.0'
