@@ -6,29 +6,29 @@ Section VIII: Code
 Main
 ----
 
-.. literalinclude:: ../_application/main.py
+.. literalinclude:: ../_app/main.py
 
 Model
 -----
 
-.. literalinclude:: ../_application/model.py
+.. literalinclude:: ../_app/model.py
 
 Command Line
 ------------
 
-.. literalinclude:: ../_application/cli.py
+.. literalinclude:: ../_app/cli.py
 
 Estimators
 ----------
 
-.. literalinclude:: ../_application/estimators.py
+.. literalinclude:: ../_app/estimators.py
 
 Graphs 
 ------
 
-.. literalinclude:: ../_application/graphs.py
+.. literalinclude:: ../_app/graphs.py
 
 Parse
 -----
 
-.. literalinclude:: ../_application/parse.py
+.. literalinclude:: ../_app/parse.py

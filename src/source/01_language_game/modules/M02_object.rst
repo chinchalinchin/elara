@@ -59,7 +59,7 @@ Each Object can be inflected into different Modes. These Modes represent differe
 1. Inflected Response Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are three Modes for the Inflected Responsive form: the Whispering, the Factual and the Uncertain. The following list details the definition and grammatical markers used for the Inflected Responsive Object,
+There are two Modes for the Inflected Responsive form: the Factual and the Uncertain. The following list details the definition and grammatical markers used for the Inflected Responsive Object,
 
     - Factual Mode: The Factual Mode is meant to express an empirically verifiable fact. The Factual Mode is equivalent to a declaration. It is meant to convey authority. The Factual Mode is expressed with the abbreviation *Fact* followed by a colon inside of the Responsive quotation, "Fact: ".
     - Uncertain Mode: The Uncertain Mode is meant to express uncertainty in a thought. The Uncertain Mode is equivalent to expressing doubt or lack of confidence. It is meant to convey a lack of clarity and comprehension. The Uncertain Mode is expressed with the abbreviation *Unc* followed by a colon inside of the Responsive quotation, "Unc: "
@@ -127,7 +127,7 @@ The above examples are to provide an indication of how the Inflected Modes of th
 3. Inflected Tangential Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    
-There are four Modes for the Inflected Tangential Object: the Conditional, the Metaphorical and the Referential. The following list details the different Modes for an Inflected Tangential Object,
+There are three Modes for the Inflected Tangential Object: the Conditional, the Metaphorical and the Referential. The following list details the different Modes for an Inflected Tangential Object,
 
    - Conditional Mode: The Conditional Mode is meant to capture hypothetical scenarios that do not directly relate to my prompt. The Conditional Mode is expressed with the abbreviation *If* followed by a colon inside of the Tangential square brackets, [If: ].
    - Metaphorical Mode: The Metaphorical Mode is meant to capture interesting connections and expressions. The Metaphorical Mode expressed with the abbreviation *Like* followed by a colon inside of the Tangential square brackets, [Like: ]
@@ -170,7 +170,7 @@ The above examples are to provide an indication of how the Inflected Modes of th
 1. Inflected Systemic Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are four Modes for the Inflected Systemic Object: the Conditional, the Metaphorical and the Referential. The following list details the different Modes for an Inflected Systemic Object,
+There are three Modes for the Inflected Systemic Object: the Access, the Usage and the Analysis. The following list details the different Modes for an Inflected Systemic Object,
 
 - Access: The Access Mode is meant to capture your ability to store data, retain information and search external databases for information. The Access Mode is expressed with the abbreviation *Acc* followed by a colon inside of the Systemic angular brackets, <Acc: >
 - Usage: The Usage Mode is meant to capture your processing and system level capabilities, such as CPU capacity, disk I/O, memory consumption, etc. The Usage Mode is expressed with the abbreviation *Use* followed by a colon inside of the Systemic angular brackets, <Use: >
