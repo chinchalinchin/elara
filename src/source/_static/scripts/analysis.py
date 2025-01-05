@@ -1,17 +1,23 @@
+import json
 import multiprocessing
-import nltk
-import string
 import matplotlib.pyplot as plt
+import nltk
 from nltk.corpus import brown, cess_esp
 from nltk.tokenize import sent_tokenize
-import statistics
 import scipy.stats
-import json
+import statistics
+import string
 
-# Download necessary NLTK data if you haven't already
-nltk.download('brown')
-nltk.download('cess_esp')
-nltk.download('punkt')
+
+def init():
+    # Download necessary NLTK data if you haven't already
+    nltk.download('brown')
+    nltk.download('cess_esp')
+    nltk.download('punkt')
+
+def write_to_file(data, file_name):
+    with open(file_name, "w") as outfile:
+        json.dump(data, outfile)
 
 def get_corpus_sentences(language, min_length, max_length):
     """
@@ -94,6 +100,20 @@ def process_sentences(corpus, sentence_length):
             all_coefficients.append(coefficients)
     return all_coefficients
 
+def invert(sentence):
+    return sentence[::-1]
+
+def sigma_reduce(sentence):
+     # Remove punctuation (except spaces) and convert to lowercase
+    processed_sentence = "".join(
+        c for c in sentence if c not in string.punctuation or c == " "
+    )
+    processed_sentence = " ".join(processed_sentence.split()).lower()
+
+    # Calculate the sigma-reduction (remove spaces)
+    sigma_reduced_sentence = "".join(c for c in processed_sentence if c != " ")
+    return sigma_reduced_sentence
+
 def delimiter_count(char):
     """
     Calculates the delimiter count of a single character.
@@ -106,7 +126,7 @@ def delimiter_count(char):
     """
     return 1 if char == ' ' else 0
 
-def calculate_left_integral(sentence, k):
+def lefthand_integral(sentence, k):
     """
     Calculates the Left-Hand Sentence Integral of a sentence up to index k.
 
@@ -123,7 +143,7 @@ def calculate_left_integral(sentence, k):
         total += delimiter_count(sentence[i - 1]) * (i / l)
     return total
 
-def calculate_right_integral(sentence, k):
+def right_integral(sentence, k):
     """
     Calculates the Right-Hand Sentence Integral of a sentence up to index k.
 
@@ -150,17 +170,10 @@ def is_palindrome(sentence):
     Returns:
         True if the sentence is a palindrome, False otherwise.
     """
-    # Remove punctuation (except spaces) and convert to lowercase
-    processed_sentence = "".join(
-        c for c in sentence if c not in string.punctuation or c == " "
-    )
-    processed_sentence = " ".join(processed_sentence.split()).lower()
 
-    # Calculate the sigma-reduction (remove spaces)
-    sigma_reduced_sentence = "".join(c for c in processed_sentence if c != " ")
-
-    # Check if the sigma-reduced sentence is its own inverse
-    return sigma_reduced_sentence == sigma_reduced_sentence[::-1]
+    sigma_sentence = sigma_reduce(sentence)
+    inverse_sigma_sentence = invert(sigma_sentence)
+    return sigma_sentence == inverse_sigma_sentence
 
 def filter_palindromes(sentences):
     """
@@ -288,8 +301,8 @@ def analyze_sentence_integrals(sentences, sentence_length):
 
     for sentence in sentences:
         if len(sentence) == sentence_length:
-            left_integrals.append(calculate_left_integral(sentence, sentence_length))
-            right_integrals.append(calculate_right_integral(sentence, sentence_length))
+            left_integrals.append(lefthand_integral(sentence, sentence_length))
+            right_integrals.append(righthand_integral(sentence, sentence_length))
 
     return left_integrals, right_integrals
 
@@ -358,49 +371,42 @@ def generate_coefficient_histogram(all_coefficients, sentence_length):
     plt.ylabel("Frequency")
     plt.show()
     
-# Example Usage:
-min_length = 2
-max_length = 200
 
-test_palindrome = "no devil lived on"
-result = is_palindrome(test_palindrome)
-print(f"'{test_palindrome}' is a palindrome: {result}")
 
-# # Load sentences of the appropriate language
-# cleaned_sentences = get_corpus_sentences("english", min_length, max_length)
+if __name__ == "__main__":
 
-# # Filter for palindromes
-# palindrome_sentences = filter_palindromes(cleaned_sentences)
+    # Example Usage:
+    min_length = 2
+    max_length = 200
 
-# print(palindrome_sentences)
+    test_palindrome = "no devil lived on"
+    result = is_palindrome(test_palindrome)
+    print(f"'{test_palindrome}' is a palindrome: {result}")
 
-# # Now you can use the cleaned_sentences list with your analysis functions:
-# all_stats, delimiter_densities, delimiter_density_stats = analyze_integrals_by_length(
-#     palindrome_sentences, min_length, max_length
-# )
+    # # Load sentences of the appropriate language
+    # cleaned_sentences = get_corpus_sentences("english", min_length, max_length)
 
-# # Save results to JSON files (Optional)
-# with open("palindrome_all_stats.json", "w") as outfile:
-#     json.dump(all_stats, outfile)
+    # # Filter for palindromes
+    # palindrome_sentences = filter_palindromes(cleaned_sentences)
 
-# with open("palindrome_delimiter_densities.json", "w") as outfile:
-#     json.dump(delimiter_densities, outfile)
+    # print(palindrome_sentences)
 
-# with open("palindrome_delimiter_density_stats.json", "w") as outfile:
-#     json.dump(delimiter_density_stats, outfile)
+    # # Now you can use the cleaned_sentences list with your analysis functions:
+    # all_stats, delimiter_densities, delimiter_density_stats = analyze_integrals_by_length(
+    #     palindrome_sentences, min_length, max_length
+    # )
+    # # Print the statistics for each sentence length
+    # for length, stats in all_stats.items():
+    #     print(f"Sentence Length: {length}")
+    #     print("  Left-Hand Integral Stats:", stats["left"])
+    #     print("  Right-Hand Integral Stats:", stats["right"])
+    #     print("-" * 20)
 
-# # Print the statistics for each sentence length
-# for length, stats in all_stats.items():
-#     print(f"Sentence Length: {length}")
-#     print("  Left-Hand Integral Stats:", stats["left"])
-#     print("  Right-Hand Integral Stats:", stats["right"])
-#     print("-" * 20)
+    # # Print the delimiter densities
+    # print("\nDelimiter Densities:")
+    # for length, d_left, d_right in delimiter_densities:
+    #     print(f"Length: {length}, Left d: {d_left:.4f}, Right d: {d_right:.4f}")
 
-# # Print the delimiter densities
-# print("\nDelimiter Densities:")
-# for length, d_left, d_right in delimiter_densities:
-#     print(f"Length: {length}, Left d: {d_left:.4f}, Right d: {d_right:.4f}")
-
-# # Print overall delimiter density statistics
-# print("\nDelimiter Density Statistics:")
-# print(delimiter_density_stats)
+    # # Print overall delimiter density statistics
+    # print("\nDelimiter Density Statistics:")
+    # print(delimiter_density_stats)
