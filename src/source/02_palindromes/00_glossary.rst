@@ -82,10 +82,12 @@ Definitions
 - D 4.1.11: Pivot Words
 - D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 - D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
-- D A.3.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
-- D A.3.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
-- D A.5.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
-- D A.4.1: Category: C:sub:`L`(m)
+- D A.2.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
+- D A.2.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
+- D A.3.1: Category: C:sub:`L`(m)
+- D A.3.2: Categorical Size: κ
+- D A.4.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
+- D A.5.1: Reflective Structure:  s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
 - D A.8.1: Sentence Integral: Ω:sub:`-`(ζ,k). Ω:sub:`+`(ζ,k)
 - A A.8.2: Delimiter Mass: μ:sub:`-`(ζ, i), μ:sub:`+`(ζ, i)
 
@@ -165,7 +167,13 @@ Theorems
 - T 3.2.11: ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
 - T 3.2.12: ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
 - T 3.2.13: ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
-- 
+- T 3.3.1: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+- T 3.3.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+- T 3.3.3: ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+- T 3.3.4: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+- T 3.3.5: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+- T 3.3.6: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+- T 3.3.7: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
 - 
 - 
 - T 3.2.1: PP ⊂ K
@@ -187,18 +195,12 @@ Theorems
 - T 3.2.17: P:sup:`-` ∪ P:sup:`+` = P
 - T 3.3.1: ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
 - T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
-- T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
-- T A.3.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
-- T A.3.2: L:sub:`P` ⊂ L:sub:`σ`
-- T A.3.3: ∀ α ∈ L:sub:`P`: α = inv(α)
-- T A.3.4: L ∩ L:sub:`P` ⊆ R
-- T A.3.5: L:sub:`P` ⊂ R:sub:`L_σ`
-- T A.8.1: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
-- T A.8.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
-- T A.8.3: ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
-- T A.8.4: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
-- T A.8.5: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
-- T A.8.6: ∀ ζ ∈ IP: Ω:sub:`-`(ζ,l(ζ)) ≠ Ω:sub:`+`(ζ,l(ζ))
-- T A.8.7: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
-- T A.8.8: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
 - 
+- 
+- T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
+- T A.2.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
+- T A.2.2: L:sub:`P` ⊂ L:sub:`σ`
+- T A.2.3: ∀ α ∈ L:sub:`P`: α = inv(α)
+- T A.2.4: L ∩ L:sub:`P` ⊆ R
+- T A.2.5: L:sub:`P` ⊂ R:sub:`L_σ`
+- T A.3.1: ∀ α ∈ L: ∃ i ∈ N:sub:`κ`: α ∈ C:sub:`L`(i) 

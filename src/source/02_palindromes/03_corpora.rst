@@ -282,6 +282,233 @@ Since *ζ* and *ξ* were arbitrary sentences, this can be generalized,
 
 Word Length is fundamentally different to String Length with respect to the operation of concatenation. In Theorem 1.1.1, it was shown String Length sums over concatenation. Theorem 2.1.2 demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.
 
+Section A.VII: Intervention
+---------------------------
+
+Colloquially, in the Sentence, *"never a dull day"*, the ordered Characters *"a"*,*"d"*,*"u"*,*"l"*, *"l"* are between the Words *"never"* and *"day"*. The concept of *Intervention* is introduced into the formal system to explicate this everyday notion of *"betweenness"*. A precise definition of what it means for a Character to *intervene* two Words in a Sentence is given using the operation of Delimitation introduced in Definition 1.2.7.
+
+**Definition 2.1.6: Intervention**
+
+Let *ζ* be a Sentence in C:sub:`L`. The Character *ζ[k]* is said to *intervene* the Words *ζ{i}* and *ζ{j}*, denoted as *(i/k/j)*:sub:`ζ`, if the following condition holdS
+
+   l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < k < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1 ∎
+
+The meaning of Definition 2.1.6 is not immediately intuitive, so a an explanation and thorough example are now presented to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.
+
+Analyzing each component of the inequality in Definition 2.1.6: 
+
+- l(DΠ:sub:`x=1`:sup:`i` ζ(x)): This represents the length of the Delimitation of the first i words of the sentence ζ. In simpler terms, it's the length of the string up to and including the i-th word, including the delimiters.
+
+- k: This is the index of the character in question, ζ[k].
+  
+- l(ζ) - l(DΠ:sub:x=1:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1: This is the most complex component for the formula, so it deserves a finer analysis,
+    
+    1. Λ(ζ) - j + 1: This calculates the index of the word in the reversed sentence that corresponds to the j:sup:`th` word in the original sentence.
+   
+    2. DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x): This is the Delimitation of the first (Λ(ζ) - j + 1) Words of the Inverse of the Sentence *ζ*. This will correspond to the beginning portion of the reversed Sentence up to the Word that corresponds to the j:sup:`th` Word in the original Sentence.
+   
+    3. l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)): This is the length of that initial portion of the reversed Sentence.
+   
+    4. l(ζ) - l(DΠ:sub:x=1:sup:Λ(ζ) - j + 1 inv(ζ)(x)): This subtracts the length of the initial portion of the reversed sentence from the total length of the original sentence. This gives us the length of the remaining portion of the original sentence, starting from the character after the word corresponding to j in the original sentence.
+   
+    5. l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1: Finally, add 1 to get the index of the first Character after the word corresponding to j in the original sentence.
+
+To aid in the comprehension of the concept being captured with Definition 2.1.6, the following example shows how to calculate an Intervention.
+
+**Example** 
+
+Let *ᚠ = "repaid a regal leper"*. Note the String and Word Lengths are given by,
+   
+    l(ᚠ) = 20
+    
+    Λ(ᚠ) = 4
+    
+The Word-level representation of this Sentence is given by,
+
+    W:sub:`ᚠ` = { (1, "repaid"), (2, "a"), (3, "regal"), (4, "leper") }
+
+Note *inv(ᚠ) = "repel lager a diaper"*. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see Definition 2.2.1 in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see Definition 2.3.1 for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
+
+    W:sub:`inv(ᚠ)` = { (1, "repel"), (2, "lager"), (3, "a"), (4, "diaper) }
+    
+To see how Definition 2.1.6 can be used to assert a Character falls between two Words in a sentence, calculate the following Delimitations and String Lengths.
+
+Consider the words *"a"* and *"leper"*. *"a"* corresponds to the Word Index 2,
+
+    ᚠ{2} = "a"
+
+Calculating the left-hand side of the inequality in Definition 2.1.6,
+
+    DΠ:sub:`x=1`:sup:`2` ᚠ(x) = "repaid a"
+    l(DΠ:sub:`x=1`:sup:`2` ᚠ(x)) = 8
+
+The String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 2*. Now note *"leper"* occupies the Word Index 4, 
+
+    ᚠ{4} = "leper"
+
+This corresponds to a *j = 4* in Definition 2.1.6. The upperhand limit in the Delimitation on the right-hand side of the inequality in Definition 2.1.6 is given by,
+
+    Λ(ᚠ) - j + 1 = 4 -  4 + 1 = 1
+
+Therefore, the corresponding Delimitation of the Inverse Sentence for Definition 2.1.6 is given by,
+
+    DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x) = "repel"
+    l(DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x)) = 5
+
+Working from the back of the Sentence, the String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 4*. Calculating the right-hand side of the inequality in Definition 2.1.6, 
+
+    l(ᚠ) - l(DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x)) + 1 = 20 - 5 + 1 = 16
+
+By Definition 2.1.6, the Characters *ᚠ[k]* between the indices of 8 and 16 (exclusive) *intervene* *ᚠ{2}* and *ᚠ{4}*, namely, 
+
+    - ᚠ[9] = " "
+    - ᚠ[10] = "r"
+    - ᚠ[11] = "e"
+    - ᚠ[12] = "g"
+    - ᚠ[13] = "a"
+    - ᚠ[14] = "l"
+    - ᚠ[15] = " "
+
+Therefore,
+
+    - (2/9/4):sub:`ᚠ` (the 9:sup:`th` Character is between the second and fourth Word)
+    - (2/10/4):sub:`ᚠ` (the 10:sup:`th` Character is between the second and fourth Word)
+    - etc. ∎
+
+As motivation for the first theorem on Interventions and a further clarification to show how Intervention and Delimitation are closely related, consider the following example.
+
+**Example**
+
+Let *ᚠ = "the world divides into facts"*. Then 
+
+    Λ(ζ) = 5
+    l(ζ) = 28
+
+Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that *i = j* in the Definition 2.1.6. Let i = j = 2, i.e. consider the second Word in the Sentence, *"world"*. The relation of Intervention that obtains between *"world"* and itself should evaluate to false. In other words, no Characters intervene between a Word and itself. 
+
+The Delimitation of the Sentence up to the Second Word is given by,
+
+    DΠ:sub:`x=1``:sup:`2` ζ(x) = "the world"
+
+The Delimitation of the Inverse Sentence up to the correspond index of the Second Word (e.g., 5 - 2 + 1 = 4) is given by (Note the Inverse Sentence is not a Sentence in a Corpus, nor does it possess semantic coherence),
+
+    DΠ:sub:`x=1``:sup:`5 - 2 + 1` inv(ζ(x)) = DΠ:sub:`x=1``:sup:`4` inv(ζ(x)) = "stcaf otni sedivid dlrow"
+
+Therefore,
+
+    l(DΠ:sub:`x=1``:sup:`2` ζ(x)) = 9
+    l(DΠ:sub:`x=1``:sup:`4` inv(ζ(x))) = 24
+
+The sum of these String Lengths is given by,
+
+    l(DΠ:sub:`x=1``:sup:`2` ζ(x)) + l(DΠ:sub:`x=1``:sup:`4` inv(ζ(x))) = 9 + 24 = 33
+
+Since the total String Length of both Delimitation exceeds the String Length of the entire Sentence, there does not exist a Character Index *k* such that *k* can be said to intervene the Word at index *i = j = 2*. ∎
+
+This example provides justification for the next theorem.
+
+**Theorem 2.1.3** ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ j ↔ ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+
+This theorem can be stated in natural language as follows: For any Sentence in a Corpus, there exists a Character that intervenes two Words in the Sentence if and only the Words occupy different positions. Note this doesn't exclude possibility the Words at different positions are the same Word.
+
+Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L` and let *i* and *j* be natural numbers such that,
+
+    1. ζ ∈ C:sub:`L`
+    2. i, j ∈ N:sub:`Λ(ζ)`
+   
+(→) Assume 
+
+    3. i ≠ j
+
+Without loss of generality (since the case i > j is symmetrical), assume 
+
+    4. i < j
+
+By Theorem 2.3.4, 
+
+    5. ζ = DΠ:sub:`x=1`:sup:`Λ(ζ)` p(x)
+
+Where 
+
+    6. p ∈ in X:sub:`L(Λ(ζ))`
+
+By Definition 1.2.7 of Delimitation, this means 
+
+    7. ζ = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)}) 
+
+By step 5, *ζ{i}* comes before *ζ{j}* in the Sentence *ζ*. By the Discovery Axiom W.1, there must be at least one delimiter character between *ζ{i}* and *ζ{j}* because they are distinct Words in a valid Sentence. 
+
+Let *σ* be a delimiter Character between *ζ{i}* and *ζ{j}*. Let *k be the index of this σ in the character-level representation of ζ (i.e., *ζ[k] = σ*).
+
+By the Definition 1.2.7 of Delimitation, 
+
+    8. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) 
+    
+Will give the index of the last character of ζ{i}. Since σ comes after ζ{i}, it follows,
+
+    9. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < k
+
+Similarly, 
+
+    10. l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1 
+    
+Gives the index of the first Character after the Word corresponding to *ζ{j}* in the original sentence. Since σ comes before this character, it follows,
+
+    11. k < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1
+
+Therefore, by Definition 2.1.6, 
+
+    12. (i/k/j):sub:`ζ`
+
+Thus,
+
+    13. ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+
+(←) Assume a Character exists at index *n* in *ζ* such that it that intervenes *ζ{i}* and *ζ{j}*,
+
+    1. ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+
+By Definition 2.1.6,
+
+    2. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < n < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1
+
+Assume, for the sake of contradiction, that i = j.
+
+    3. `l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < n < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x)) + 1
+
+Now, consider the term *l(DΠ*:sub:`x=1``:sup:`i`*ζ(x))*. This represents the String Length of the Delimitation of the first *i* words of *ζ*. By the Definition 1.2.7 of Delimitation, this includes the lengths of the first *i* words and the lengths of the *(i - 1)* delimiters between them.
+
+Similarly, consider the term *l(DΠ*:sub:`x=1`:sup:`Λ(ζ) - i + 1` *inv(ζ)(x))*. This represents the String Length of the Delimitation of the first *Λ(ζ) - i + 1* words of *inv(ζ)*.  Since *inv(ζ)* has the same words as *ζ* but inverted and in reverse order, this is equivalent to the String Length of the uninverted Sentence up to the *i*:sup:`th` word of *ζ*, measured from the last Character in the String.
+
+The sum of the String Lengths of these two portions of the Sentence *ζ* is always greater than the String Length of the Sentence, 
+
+    4. l(DΠ:sub:`x=1``:sup:`i` ζ(x)) + l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x)) >  l(ζ) 
+
+This follows from the fact that these two portions of ζ are overlapping since both  include terms for *ζ{i}* (*inv(ζ){Λ(ζ) - i + 1}* would be the corresponding Word in the Delimitation of the Inverse). From step 4, it then follows,
+
+    5. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) > l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x))  
+    
+Adding 1 to both sides maintains the inequality in step 5,
+
+    6. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) + 1 > l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x)) + 1
+
+Combining this with the left-hand side of the inequality in step 5, we get:
+
+    7. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < n < l(DΠ:sub:`x=1`:sup:`i` ζ(x)) + 1
+   
+But String Lengths are integers, and by the laws of arithmeti, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that *i = j* must be false.
+
+    8. i ≠ j.
+
+With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized as, 
+
+    ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ j ↔ ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ` ∎
+
+
+**Theorem 2.1.4** ∀ ζ ∈ C:sub:`L`: ∀ i, j, k ∈ N:sub:`Λ(ζ)`: ∃ n, m ∈ N:sub:`l(ζ)`: (((i/n/j):sub:`ζ`) ∧ ((j/m/k):sub:`ζ`)) → (n < m)
+
+TODO
+
 Section II.II: Axioms 
 ----------------------
 
@@ -929,6 +1156,12 @@ By Definition 1.3.2 of Invertible Words, this means that *ζ{i}* is an Invertibl
     ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I ∎
 
 The contrapositive of Theorem 2.3.10 provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.
+
+
+
+
+
+
 
 Section III: Delimiters
 =======================
