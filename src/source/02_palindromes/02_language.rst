@@ -1,3 +1,5 @@
+.. _section_i:
+
 Section I: Language
 ===================
 
@@ -16,6 +18,8 @@ Some general notation adopted throughout the course of this work is given below.
 4. The terms *"set"* and *"class"* are used interchangeably. 
    
 
+.. _section_i_i:
+
 Section I.I: Strings
 --------------------
 
@@ -30,6 +34,8 @@ The set of all Strings is denoted **S**. At this point, nothing definitive can b
 The goal is to define all linguistics entities over the set of all Strings: Characters, Alphabets, Words, Languages, Sentences and Corpuses. As each of these entities is introduced and defined, a new level of relations will reveal itself. Palindromic symmetries will manifest on each level, in slightly different but related forms. Each type of symmetry will involve, in some form or another, the concept of *String Inversion*, to be defined shortly. The essence of a Palindrome lies in binding together the syntactical symmetries at every linguistic layer into a semantic whole. Indeed, it will be seen the symmetrical structure required by Palindromes in turn requires these linguistic layers to have specific synactical properties, regardless of their semantic interpretation.
 
 A *Word* will be considered a *type* of String. Colloquially, a Word can be understood as a String with semantic content. The goal of this section is to describe the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to it through everyday use. In other words, the analysis assumes Words have already been selected from the set of all possible Strings and assigned interpretations. 
+
+.. _characters:
 
 Characters
 ^^^^^^^^^^
@@ -62,6 +68,8 @@ Once again, it should be noted when Character Variables are used with subscripts
 
 At this early stage, the formal system needs to introduce a notion of *equality* to make any significant headway. There will be a several types of equality defined within the system, but each new layer of equality will be built on top of the primitive notion of *Character Equalty* now introduced in the first preliminary Axiom to the formal system.
 
+.. _axiom_c0:
+
 **Axiom C.0: The Equality Axiom**
 
 For any Characters :math:`ⲁ, ⲃ \in \Sigma`, the notion of equality, denoted by :math:`ⲁ = ⲃ`, is a primitive concept and assumed to be understood. It is further assumed that Character Equality is an equivalence relation, satisfying reflexivity, symmetry and transitivity,
@@ -73,10 +81,14 @@ For any Characters :math:`ⲁ, ⲃ \in \Sigma`, the notion of equality, denoted 
 
 Character Equality will be used to define *String Equality* in Definition 1.14 and Word Equality in 1.2.3.
 
+.. _concatenation:
+
 Concatenation 
 ^^^^^^^^^^^^^
 
 Concatenation is considered the sole constitutive operation for the formation of Strings. It is taken as a primitive operation, but not an elementary operation. By this it is meant the notion of concatenation that is about to be adopted does not define concatenation solely in terms of Strings. Concatenation will be defined as a hetergeneous operation that is performed between Characters in a Alphabet and Strings.
+
+.. _definition_1_1_1:
 
 **Definition 1.1.1: Concatenation**  
 
@@ -103,6 +115,8 @@ To make this distinction plain, consider that given an Alphabet :math:`\Sigma` a
 
 In order to rectify this, the first (official) Axiom is now introduced.
 
+.. _axiom_c1:
+
 **Axiom C.1: The Character Axiom**
 
 .. math::
@@ -125,8 +139,10 @@ Using the inductive clause, this concatenation can be grouped into simpler conca
 
 Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣* ∎
 
-Length
-^^^^^^
+.. _string_length:
+
+String Length
+^^^^^^^^^^^^^
 
 It will sometimes be convenient to represent Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenation *s*:sub:`1` *= 𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S**:sub:`1`, where the first coordinate encodes the position of the Character in the String,
 
@@ -207,9 +223,13 @@ By treating Strings as Characters stored sequentially in a data register, this a
 
 This insight leads directly to the definition of the Character-level set representation of a String and its construction via the Emptying Algorithm.
 
+.. _definition_1_1_2:
+
 **Definition 1.1.2: Character-level Set Representations**
 
 Let *t* be a String with Characters *𝔞*:sub:`i`. The Character-level set representation of *t*, denoted by bold uppercase letters **T**, is defined as the ordered set of Characters obtained by removing each Empty Character, *ε*. Formally, **T** is constructed using the *Emptying Algorithm* 
+
+.. _algorithm_1:
 
 **Algorithm 1: The Emptying Algorithm**
 
@@ -277,6 +297,8 @@ This approach is not without its challenges. As Definition 1.1.3 below will make
 
 This example motivates the following definition.
 
+.. _definition_1_1_3:
+
 **Definition 1.1.3: String Length** 
 
 Let *t* be a String. Let **T** be the Character-level set representation of *t* constructed through the Emptying Algorithm in Definition 1.1.2. The String Length of *t*, denoted *l(t)*, is the number which satisfies the following formula,
@@ -308,6 +330,8 @@ Therefore,
 This formalization of String Length, with the Emptying Algorithm, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-Empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters. For reasons that will become clear in Section II, *l(s)* will be called the *String Length* of a String s. 
 
 To confirm Definitions 1.1.2 and 1.1.3 correspond to reality, a theorem confirming its expected behavior is now derived. Definition 1.1.3 ensures the String Length of concatenated Strings is equal to the sum of their individual String Lengths, as demonstrated by Theorem 1.1.1.
+
+.. _theorem_1_1_1:
 
 **Theorem 1.1.1** :math:`\forall u, t \in S : l(ut) = l(u) + l(t)`
 
@@ -347,6 +371,8 @@ Since *u* and *t* were arbitrary strings, this can be generalized over the set o
 
 With the concept of String Length now defined, it is also a simple matter to define String Equality in terms of Character Equality using the Equality Axiom C.0.
 
+.. _definition_1_1_4:
+
 **Definition 1.1.4: String Equality**
 
 Let *t* be a String. Let **T** be the Character-level set representation of *t* constructed through Definition 1.1.2,
@@ -367,6 +393,8 @@ The string *t* is said to be *equal* to String *u* if the Strings have equal len
     2. :math:`\forall i \in N_{l(t)}: \mathfrak{a}_{i} = \mathfrak{b}_{i}` (The Characters at each corresponding index are equal) ∎
 
 Finally, String Length provides the means for a quality-of-life enhancement to the formal system in the form of Character Index notation.
+
+.. _definition_1_1_5:
 
 **Definition 1.1.5: Character Index Notation**
 
@@ -390,6 +418,8 @@ With the notion of String Length established for each element in the domain and 
   
 It is assumed **S** is at least uncountably infinite. A rigorous proof of this fact would carry the current work too far into the realm of real analysis, but as motivation for this assumption, an informal proof is presented below based on Cantor's famous diagonalization argument. 
 
+.. _theorem_1_1_2:
+
 **Theorem 1.1.2** :math:`| S | \geq \aleph_{1}`
 
 Assume, for the sake of contradiction, that the set of all Strings **S** is countable. This means the Strings can be listed in some order, 
@@ -405,6 +435,8 @@ Now, construct a new String *t* as follows:
     3. etc.
 
 This string *t* will be different from every string in **S** contradicting the assumption that it was possible to list all strings. Therefore, **S** must be uncountable. ∎ 
+
+.. _containment:
 
 Containment
 ^^^^^^^^^^^
@@ -459,6 +491,8 @@ Next, consider a counter-example. Let *t = "bow"* and *u = "borrow"*. Then their
 
 The function defined through :math:`f(1) = 1`, :math:`f(2) = 5` and  :math:`f(3) = 6` satisfies the conditions of the proposed definition. However, intuitively, *"bow"* is *not contained* in the word *"borrow"*. The reason the proposed definition has failed is now clear: the function *f* that is mapping *"bow"* to *"borrow"* skips over the Character indices 2, 3 and 4 in *"borrow"*. In other words, in addition to being strictly increasing, the function *f* which maps the smaller String onto the larger String must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
 
+.. _definition_1_1_6:
+
 **Definition 1.1.6: Consecutive Functions** 
 
 A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
@@ -470,6 +504,8 @@ A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
 ∎
     
 This additional constraint on *f* ensures that the indices of the larger String in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller String. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
+
+.. _definition_1_1_7:
 
 **Definition 1.1.7: Containment** :math:`t \subset_{s} u` 
 
@@ -488,6 +524,8 @@ If and only if there exists a strictly *increasing and consecutive* function :ma
 ∎
 
 The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections. The next theorem establishes a fundamental property regarding containment.
+
+.. _theorem_1_1_3:
 
 **Theorem 1.1.3** :math:`\forall s \in S: \varepsilon \subset_{s} s`
 
@@ -511,6 +549,8 @@ Since *s* was arbitrary, this can be generalized over the set of all Strings,
     
 ∎
 
+.. _section_i_ii:
+
 Section I.II: Words
 -------------------
 
@@ -518,9 +558,13 @@ While the notion of Characters maps almost exactly to the intuitive notion of le
 
 If Characters are mapped to letters in the Alphabet of a Language **L**, the set of all Strings would have as a subset the Language that is constructed through the Alphabet. The goal of this section is to define the syntactical properties of Words in **L** that differentiates them from Strings in **S** based solely on their internal cohesion as a linguistic unit. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations. In other words, this analysis will proceed without assuming anything about the interpretation of the Words in the Language beyond the fact that they *are* Words of the Language. The goal is to leave the semantic interpretation of Words in a Language as ambiguous as possible. This ambiguity, it is hoped, will leave the results of the analysis applicable to palindromic structures in a variety of languages, and perhaps make the formal system applicable to areas outside the realm of Palindromes.
 
+.. _definition_1_2_1:
+
 **Definition 1.2.1: Language** 
 
 A Language **L** is a set of Strings constructed through concatenation on an Alphabet **Σ** that are assigned semantic content. ∎
+
+.. _definition_1_2_2:
 
 **Definition 1.2.2: Word** 
 
@@ -560,11 +604,15 @@ To clarify the relationship between Strings, Words and Language in plain languag
 
 As mentioned several times, all objects in this formal system are defined on the domain of Strings through either the set relation of "belonging" or the set relation of "subset". Words and Characters are different types of Strings, while a Language is a subset of Strings. Because Words are Strings, defining their equality is a simple matter of referring back to the definition of String Equality.
 
+.. _definition_1_2_3:
+
 **Definition 1.2.3: Word Equality**
 
 Let *a* and *b* be words in **L**. Then *a = b* if and only if *a* and *b* are equal as Strings (according to Definition 1.1.4). ∎ 
 
 The next axiom represents the minimal *necessary* assumptions that are placed on any String to be considered an element of a Language **L**, i.e. a Word. The axiom listed in this section is not *sufficient*; in other words, it is possible for a String to satisfy this axiom without being an element of a Language, but any Word that belongs to a Language must satisfy the axiom.
+
+.. _axiom_w1:
 
 **Axiom W.1: The Discovery Axiom** 
 
@@ -581,6 +629,8 @@ Second, in order for two Words to be distinguished as the same Word, there must 
 While the definition of String Length and the first conjunct preclude the inclusion of the Empty Character in a Word, there is no such restriction on the Delimiter, hence the second conjunct of the Discovery Axiom. This conjunct captures the common-sense notion that a Word from a Language cannot contain a Delimiter; Instead, Delimiters are what separate Words from one another in a String. 
 
 It is these two purely syntactical properties that allow a user of Language to separate Words from the arbitrary chaos of Strings, preparing them for the assignment of semantic content. 
+
+.. _word_theorems:
 
 Theorems
 ^^^^^^^^
@@ -671,10 +721,14 @@ The containment relation :math:`\varepsilon \subset_{s} s` refers to the Empty C
 
 Theorem 1.2.3, on the other hand, refers to individual Characters at specific positions within a Word. It is a claim about the elements of the Character-level representation (e.g., the *ⲁ* in :math:`(i, ⲁ) \in \Alpha`).
 
-Inversion
-^^^^^^^^^
+.. _string_inversion:
+
+String Inversion
+^^^^^^^^^^^^^^^^
 
 Before developing the palindromic structure and symmetries in Words and Language, an operation capable of describing this symmetry much be introduced. Informally, the *Inverse* of a String is the reversed sequence of Characters in a String. The goal of this section is to define this notion precisely. In the process, the motivation for this definition as it pertains to Words will be elucidated. 
+
+.. _definition_1_2_4:
 
 **Definition 1.2.4: String Inversion** 
 
@@ -746,6 +800,8 @@ Note, Invertible Words are often termed *semordnilaps* in linguistics. The termi
 
 Before defining the class of Invertible Words in the sequel, this section is concluded with theorems that strengthen the definition of String Inversion. These theorems will be used extensively in all that follows.
 
+.. _theorem_1_2_4:
+
 **Theorem 1.2.4** :math:`\forall s \in S: \text{inv}(\text{inv}(s)) = s`
 
 Let *s* be a String with length *l(s)* and Characters *𝔞*:sub:`i`. 
@@ -787,6 +843,8 @@ Simplifying the index on the right hand side,
 Since *u* and *s* have the same length (:math:`l(u) = l(t) = l(s)`) and the same Characters in the same order (:math:`u[j] = s[j]` for all *i*), by Definition 1.1.4 of String Equality, it can be concluded that :math:`u = s`. Recall that :math:`u = inv(t)` and :math:`t = inv(s)`. Substituting, the desired result is obtained, :math:`inv(inv(s)) = s`. ∎ 
 
 Two versions of Theorem 1.2.5 are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that are better served by the Character-level representation.
+
+.. _theorem_1_2_5_a:
 
 **Theorem 1.2.5 (Character-level Representation)** :math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
 
@@ -833,6 +891,8 @@ The Character-level representation of *inv(t)inv(u)* is:
 Comparing the results from step 4 and step 7, it can be seen the Character-level representations of *inv(ut)* and *inv(t)inv(u)* are identical.
 
 Therefore, :math:`\text{inv}(ut) = \text{inv}(t)\text{inv}(u)`. ∎
+
+.. _theorem_1_2_5_b:
 
 **Theorem 1.2.5 (Character Index Notation)**: :math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
 
@@ -951,6 +1011,8 @@ Since *u* and *t* were arbitrary Strings, this can generalize over the set of al
     8. \forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u) ∎
 
 The next theorem establishes the *"distributivity"* of String inversion over the relation of containment. 
+
+.. _theorem_1_2_6:
 
 **Theorem 1.2.6** :math:`\forall u, t \in S : u \subset_{s} t \leftrightarrow \text{inv}(u) \subset_{s} \text{inv}(t)`
 
@@ -1184,6 +1246,8 @@ Since both directions of the implication hold, it follows,
 
 The next theorem establishes the *transitivity* of containment over Strings. 
 
+.. _theorem_1_2_7:
+
 **Theorem 1.2.7** :math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \rightarrow (t \subset_{s} v)`
 
 This theorem can be stated in natural language as follows: For any Strings *t*, *u*, and *v* in **S**, if *t* is contained in *u* and *u* is contained in *v*, then *t* is contained in *v*.
@@ -1314,12 +1378,16 @@ Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized over the
 
     21. \forall t, u, v \in S : (t \subset_s u) \land (u ⊂:sub:`s` v) \rightarrow (t subset_s v) ∎
 
+.. _phrases:
+
 Phrases
 ^^^^^^^
 
 While the analyis has not yet introduced the notion of Sentences into the formal system (see Section II), an operation will now be introduced that allows Words to be ordered into Phrases and then concatenated into Strings. This new operation will be important when String Inversion is applied to the sentential level of the formal system, allowing the conditions for a Sentence Inversion to be precisely specified.
 
 The placement of Definition 1.2.5 and Definition 1.2.6 is somewhat arbitary. There are valid arguments to be made for placing these definitions after the concepts of Sentence and Word Index notation have been introduced in Section II. However, since the operation of *Delimitation* and *Limitations* to be expounded immediately are essentially an operation defined on the domain of Strings which yields as a result another String, i.e. Delimitation and Limitation are closed with respect to Strings, the definitions are made here, to highlight the derivative notions (Inversion, Delimitation and Limitations) which can be built on top of the primitive notion of concatenation.
+
+.. _definition_1_2_5:
 
 **Definition 1.2.5: Phrase**
 
@@ -1339,6 +1407,8 @@ When :math:`n = 0`, **P**:sub:`0` is defined as the empty sequence (). ∎
 
 In order to establish some properties of Phrases, Delimitations and Limitations , a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is now defined.
 
+.. _definition_1_2_6:
+
 **Definition 1.2.6: Lexicon**
 
 Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, denoted **X**:sub:`L`(*n*), as the set of all Phrases of length *n* formed from Words in **L**,
@@ -1357,6 +1427,8 @@ Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will 
 
 Using these pair of definitions for Phrases and Lexicons and their associated terminology, the operation of *Delimitation* is now defined over Phrases of fixed Word Length *n* in Definition 1.2.7.
 
+.. _definition_1_2_7:
+
 **Definition 1.2.7: Delimitation**
 
 Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
@@ -1369,9 +1441,9 @@ The *Delimitation* of *p*, denoted :math:`D\Pi_{i=1}^{n} p(i)`, is defined recur
 
     1. Empty Clause: :math:`D\Pi_{i=1}^{0} p(i) = \varepsilon`
     2. Basis Clause (:math:`n = 1`): :math:`D\Pi_{i=1}^{1} p(i) = \alpha_1`
-    3. Recursive Clause (:math:`n > 1`): :math:`D\Pi_{i=1}^{n} p(i) = (D\Pi_{i=1}^{n-1} p(i))(\sigma)(\alpha_n)`
+    3. Recursive Clause (:math:`n > 1`): :math:`D\Pi_{i=1}^{n} p(i) = (D\Pi_{i=1}^{n-1} p(i))(\sigma)(\alpha_n)` ∎
 
- ∎
+.. _definition_1_2_8:
 
 **Definition 1.2.8: Limitation**
 
@@ -1437,6 +1509,8 @@ Note the previous example may be misleading in one important respect. A Delimita
 
 However, as the next theorems shows, the result of a Delimitation or Limitation is unique.
 
+.. _theorem_1_2_8:
+
 **Theorem 1.2.8** :math:`\forall n \in \mathbb{N}: \forall p \in \Chi_{L(n)}: \exists! s \in S: s = D\Pi_{i=1}^{n} p(i)`
 
 This theorem can be stated in natural language as follows: For every natural number n, and for every Phrase **P**:sub:`n` in the *n*:sup:`th` Lexicon of **L**, there exists a unique string *s* in **S** such that *s* is the Delimitation of **P**:sub:`n`.
@@ -1499,18 +1573,26 @@ Therefore, :math:`s_{k+1} = (s-k)(\sigma)(\alpha_{k+1}) is a unique string.
 
 By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in :math:`\Chi_L (n)`, there exists a unique string *s* in **S** such that
 
+.. math::
+
     s = D\Pi_{i=1}^{n} P_n (i) 
-    
+   
 ∎
+
+.. _theorem_1_2_9:
 
 **Theorem 1.2.9** :math:`\forall n \in \mathbb{N}, \forall p \in \Chi_{L(n)} \exists! s \in S: s = L\Pi_{i=1}^{n} p(i)`
 
 The proof of this theorem is almost exactly identical to Theorem 1.2.8, with the exception there is no Delimiter in step 6. ∎
 
+.. _section_i_iii:
+
 Section I.III: Word Classes 
 ---------------------------
 
 It will be necessary to define special classes of Words in a Language to properly describe the Language's palindromic structure. These classes, especially the class of Invertible Words, will be used extensively in the next sections. Reflective Words, however, will play a crucial role in this work's climatic theorem. 
+
+.. _reflective_words:
 
 Reflective Words 
 ^^^^^^^^^^^^^^^^
@@ -1531,6 +1613,8 @@ From this list, it should be clear what is meant by the notion of *reflective*. 
 
 Rather than attempt to define Reflective Words as the class of Words that are their own Inverses, a different approach will be taken that highlights the Character level symmetries that exist in these class of Words. It will then be proven the class of Words which satisfy this definition are exactly those Words that are their own Inverses.
 
+.. _definition_1_3_1:
+
 **Definition 1.3.1: Reflective Words** 
 
 The set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
@@ -1544,6 +1628,8 @@ The set of Reflective Words **R** is defined as the set of *α* which satisfy th
 A Word *α* will be referred to as *reflective* if it belongs to the class of Reflective Words. 
 
 The following theorem is an immediate consequence of Definition 1.3.1 and Definition 1.2.4.
+
+.. _theorem_1_3_1:
 
 **Theorem 1.3.1** :math:`\forall \alpha \in L: \alpha \in R \leftrightarrow \alpha = \text{inv}(\alpha)`
 
@@ -1585,10 +1671,14 @@ Since :math:`β[i] = α[i]` for all :math:`i \in N_{l(α)}`, and both strings ha
 
 But step 2 is exactly the definition of Reflective Words, so by Definition 1.3.1, :math:`\alpha \in R` ∎ 
 
+.. _invertible_words:
+
 Invertible Words 
 ^^^^^^^^^^^^^^^^
 
 As discussed previously, the concept of *invertible* is exemplified in pairs of English words, such as *"parts"* and *"strap"*, or *"repaid"* and *"diaper"*. If a Word can be inverted, this is not simply a syntactic operation, but a semantic one as well. An *Invertible Word* is a Word whose inverse is part of the same Language **L** as the original Word. This notion can now be made more precise with the terminology introduced in prior sections.
+
+.. _definition_1_3_2:
 
 **Definition 1.3.2: Invertible Words** 
 
@@ -1660,6 +1750,8 @@ Therefore, putting both directions of the equivalence together and generalizing 
     
 ∎ 
 
+.. _theorem_1_3_3:
+
 **Theorem 1.3.3** :math:`R \subseteq I`
 
 Assume :math:`α \in R`. By Definition 1.3.2,
@@ -1716,6 +1808,8 @@ In the context of (potentially) infinite sets such as **L** and **S**, *"even"* 
     2. Odd Cardinality: An infinite set has odd cardinality if, after pairing each element with a distinct element, there is one element left over.
 
 The set of non-reflective Invertible Words, **I** - **R** (where "-" represents the operation of set differencing), always has even cardinality because each word can be paired with its distinct inverse. The overall cardinality of **I** then depends on whether the set of Reflective Words, **R**, adds an "odd" element or not. This idea is captured in the next theorem.
+
+.. _theorem_1_3_4:
 
 **Theorem 1.3.4** If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
 

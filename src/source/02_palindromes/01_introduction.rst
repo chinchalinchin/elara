@@ -11,9 +11,24 @@ Table of Contents
 
 1. Section I: Language
 
-    a. ASDF
-    -  
+    a. I.I: Strings
 
+        - Characters
+        - Concatenation
+        - String Length
+        - Containment
+
+    b. I.II: Words
+
+        - Theorems
+        - String Inversion
+        - Phrases
+
+    c. I.III: Word Classes 
+
+        - Reflective Words
+        - Invertible Words
+  
 2. Section II: Corpora
    
     a. II.I: Definitions

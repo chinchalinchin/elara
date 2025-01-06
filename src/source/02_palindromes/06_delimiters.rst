@@ -1,7 +1,7 @@
 .. _section_v:
 
-Section V: Delimters
-====================
+Section V: Integration
+======================
 
 TODO: explain
 

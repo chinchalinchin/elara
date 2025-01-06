@@ -17,7 +17,7 @@ The next level of the semantic hierarchy will now be constructed. Many of the de
 Corpus
 ^^^^^^
 
-The entire system so far constructed relies on the domain of **S**, the set of all Strings that can be formed from an Alphabet of Characters **Σ**. Attention has been confined to those entities that satisfy the Discovery Axiom W.1.
+The entire system so far constructed relies on the domain of **S**, the set of all Strings that can be formed from an Alphabet of Characters :math:`\Sigma`. Attention has been confined to those entities that satisfy the Discovery Axiom W.1.
 
 In other words, the definitions and theorems so far introduced deal with linguistics entities that do not possess a Delimiter Character. Delimiters will be of central importance in describing palindromic structures, because Delimiters play a central role in the definition of the linguistic entity that will ultimately allow a palindrome to be rigorously defined, a *Sentence*. With that in mind, the concepts and definitions that pave the way to an explication of *Sentence* start with the definition of a *Corpus*.
 
@@ -27,7 +27,9 @@ In other words, the definitions and theorems so far introduced deal with linguis
 
 From the definition, it can easily be seen the Corpus of a Language is a subset of the set of all possible Strings, **S**
 
-   C:sub:`L` ⊂ S 
+.. math::
+
+   C_L \subset S 
 
 This aligns with the idea that the domain of entities in this formal system is defined either as a type of *element* of **S** or a type of *subset* of **S**.
 
@@ -45,19 +47,23 @@ Before proceeding with the definition of Sentences, some notation is introduced,
 
 **Definition 2.1.2: Sentence** A Sentence in Language **L** is an element of its Corpus. ∎
 
-    ᚠ ∈ C:sub:`L`
+.. math::
+
+    \rune{f} ∈ C_L
 
 From Definition 2.1 and Definition 2.2, it follows that a Sentence is a String,
 
-    ᚠ ∈ S
+.. math::
+
+    \rune{f} ∈ S
 
 It should be stressed, as had been made clear in previous comments, that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus. To reiterate this hierarchy and precisely state how all the entities in this formal system are related,
 
     1. Strings: ⲁ, α, ζ
     2. Sets: Σ, L, C:sub:`L`
-    3. Character Membership: ⲁ ∈ Σ
-    4. Word Membership: α ∈ L
-    5. Sentence Membership: ζ ∈ C:sub:`L`
+    3. Character Membership: :math:`ⲁ \in \Sigma`
+    4. Word Membership: :math:`\alpha \in L`
+    5. Sentence Membership: :math:`\zeta \in C_L`
 
 To clarify the relationship between Strings, Characters, Alphabets, Words, Languages, Sentences and Corpus in plain language,
 

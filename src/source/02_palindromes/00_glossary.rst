@@ -9,23 +9,23 @@ Notation
 --------
 
 - Punctuation: ∎
-- Logical Operations: ∀, ∃, ↔, →, ←. ∧, ∨
-- Arithmetical Relations: ≠, =, ≥, ≤, +, -
-- Sets: ∅, ℕ, N:sub:`i`
-- Set Operations: ∪, ∩
-- Set Relations: ∈, ∉, ⊆
+- Logical Operations: :math:`\forall`, :math:`\exists`, :math:`\leftrightarrow`, :math:`\rightarrow`, :math:`\leftarrow`, :math:`\land`, :math:`\lor`
+- Arithmetical Relations: :math:`\neq`, :math:`=`, :math:`\geq`, :math:`\leq`, +, -
+- Sets: :math:`\emptyset`, :math:`\mathbb{N}`, :math:`N_i`
+- Set Operations: :math:`\cup`, :math:`\cap`
+- Set Relations: :math:`\in`, :math:`\notin`, :math:`\subset`, :math:`\subseteq`
 - Strings: s, t, u
 - Domain: S
-- Alphabet: Σ
-- Characters: 𝔞, 𝔟, 𝔠, ... , σ, ε
+- Alphabet: :math:`\Sigma`
+- Characters: :math:`\mathfrak{a}`, :math:`\mathfrak{b}`, :math:`\mathfrak{c}`, ... , :math:`\sigma`, :math:`\varepsilon`
 - Character Variables: ⲁ, ⲃ, ⲅ
 - Language: L
 - Words: a, b, c
-- Word Variables: α, β, γ
+- Word Variables: :math:`\alpha`, :math:`\beta`, :math:`\gamma`
 - Character Index Notation: t[i]
 - Word Classes: R, I
-- Phrases of Word Length n: P:sub:`n`
-- Lexicons: X:sub:`L`(n)
+- Phrases of Word Length n: :math:`P_n`
+- Lexicons: :math:`\Chi_L (n)`
 - Phrases Variables: p, q, r
 - Sentences: ᚠ, ᚢ, ᚦ
 - Sentence Variables: ζ, ξ
