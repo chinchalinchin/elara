@@ -987,216 +987,332 @@ By Definition 1.2.4
     5. \forall i \in N_{l(u)}: w[i] = \text{inv}(u)[i] = u[l(u) - i + 1]
 
 .. math::
-    
+
     6. \forall i \in N_{l(t)}: v[i] = \text{inv}(t)[i] = t[l(t) - i + 1]
    
 Define a function :math:`g: N_{l(w)} \rightarrow N_{l(v)}`  as follows,
 
-    1. g(i) = l(t) - f(l(u) - i + 1) + 1
+.. math::
+
+    7. g(i) = l(t) - f(l(u) - i + 1) + 1
 
 This function maps the Character indices of *w* (the inverse of *u*) to the indices of *v* (the inverse of *t*).
 
 **Increasing** To show *g* is strictly increasing, let
 
-    8. i, j ∈ N:sub:`l(w)`
+.. math::
 
-Such that *i < j*. Since *l(w) = l(u)*,
+    8. i, j \in N_{l(w)}
 
-    9. i, j ∈ N:sub:`l(u)`
+Such that :math:`i < j`. Since :math:`l(w) = l(u)`,
+
+.. math::
+
+    9. i, j \in N_{l(u)}
 
 Because *f* is strictly increasing, and
+
+.. math::
 
     10. l(u) - j + 1 < l(u) - i + 1,
 
 It follows,
 
+.. math::
+
     11. f(l(u) - j + 1) < f(l(u) - i + 1)
+
 Therefore,
+
+.. math::
 
     12. l(t) - f(l(u) - i + 1) + 1 < l(t) - f(l(u) - j + 1) + 1
 
 which means
 
+.. math::
+
     13. g(i) < g(j).
 
-Thus, g is strictly increasing.
+Thus, *g* is strictly increasing.
 
 **Consecutive** To show *g* is consecutive, let
 
-    14. i ∈ N:sub:`l(w)`
+.. math::
 
-Such that *i < l(w)*. Then,
+    14. i \in N_{l(w)}
+
+Such that :math:`i < l(w)`. Then,
+
+.. math::
 
     15. g(i+1) = l(t) - f(l(u) - (i + 1) + 1) + 1
+    
+.. math::
+
     16. g(i+1) = l(t) - f(l(u) - i - 1 + 1) + 1
 
-Since f is consecutive, we have:
+Since *f* is consecutive, we have:
+
+.. math::
 
     17. f(l(u) - i - 1 + 1) = f(l(u) - i) + 1
 
 Then,
 
+.. math::
+
     18. g(i+1) = l(t) - (f(l(u) - i) + 1) + 1
+    
+.. math::
+
     19. g(i+1) = l(t) - f(l(u) - i)
+    
+.. math::
+
     20. g(i+1) = l(t) - f(l(u) - i + 1) + 1 + 1 - 1
+    
+.. math::
+
     21. g(i+1) = l(t) - f(l(u) - i + 1) + 1
+    
+.. math::
+
     22. g(i+1) = g(i) + 1
 
 Thus *g* is consecutive.
 
 **Containment** Now, it must shown be that, 
 
-    23.  ∀ i ∈ N:sub:`l(w)`: w[i] = v[g(i)]
+.. math::
+
+    23. \forall i \in N_{l(w)}: w[i] = v[g(i)]
 
 By Definition 1.2.4,
+
+.. math::
 
     24. w[i] = u[l(u) - i + 1]
 
 From step 2, it follows,
 
+.. math::
+
     25. w[i] = t[f(l(u) - i + 1)]
 
 By definition of *g*,
+
+.. math::
 
     26. g(i) = l(t) - f(l(u) - i + 1) + 1
 
 Rearranging,
 
+.. math::
+
     27. f(l(u) - i + 1) = l(t) - g(i) + 1
 
 Substituting into step 25,
+
+.. math::
 
     28. w[i] = t[l(t) - g(i) + 1]
 
 By Definition 1.2.4 and the definition of v,
 
+.. math::
+
     29. v[g(i)] = t[l(t) - g(i) + 1]
 
 Therefore,
 
+.. math::
+
     30. w[i] = v[g(i)]
 
-Since this holds for all *i* *∈* **N**:sub:`l(w)`, and g is a strictly increasing and consecutive function, by Definition 1.1.7, it follows,
+Since this holds for all :math:`i \in N_{l(w)}`, and *g* is a strictly increasing and consecutive function, by Definition 1.1.7, it follows,
 
-    31. w ⊂:sub:`s` v
+.. math::
+
+    31. w \subset_s v
 
 Therefore,
 
-    32. inv(u) ⊂:sub:`s` inv(t)
+.. math::
+
+    32. \text{inv}(u) \subset_s \text{inv}(t)
 
 (←) Assume
 
-    1. inv(u) ⊂:sub:`s` inv(t)
+.. math::
+
+    1. \text{inv}(u) \subset_s \text{inv}(t)
 
 By Theorem 1.2.4,
 
-    2. inv(inv(u)) = u
-    3. inv(inv(t)) = t
+.. math::
+
+    2. \text{inv}(\text{inv}(u)) = u
+
+.. math::
+
+    3. \text{inv}(\text{inv}(t)) = t
 
 Therefore, using the result just proved in the (→) direction, it can be said since
 
-    4. inv(u) ⊂:sub:`s` inv(t)
+.. math::
+
+    4. \text{inv}(u) \subset_s \text{inv}(t)
 
 This implies,
 
-    5. inv(inv(t)) ⊂:sub:`s` inv(inv(u))
+.. math::
+
+    5. \text{inv}(\text{inv}(t)) \subset_s \text{inv}(\text{inv}(u))
 
 Substituting in steps 2 and 3,
 
-    6. t ⊂:sub:`s` u
+.. math::
+
+    6. t \subset_s u
 
 Since both directions of the implication hold, it follows,
 
-    7. ∀ u, t ∈ S: u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) ∎
+.. math::
 
-The next theorem establishes the *transivity* of containment over Strings. 
+    1. \forall u, t \in S: u \subset_s t \leftrightarrow \text{inv}(u) \subset_s \text{inv}(t) ∎
 
-**Theorem 1.2.7** ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) 
+The next theorem establishes the *transitivity* of containment over Strings. 
+
+**Theorem 1.2.7** :math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \rightarrow (t \subset_{s} v)`
 
 This theorem can be stated in natural language as follows: For any Strings *t*, *u*, and *v* in **S**, if *t* is contained in *u* and *u* is contained in *v*, then *t* is contained in *v*.
 
 Let *t*, *u*, and *v* be arbitrary Strings in **S** such that both of the following expressions are true,
 
-    1. t ⊂:sub:`s` u
-    2. u ⊂:sub:`s` v
+.. math::
 
-By Definition 1.1.7 and step 1, there exists a strictly increasing and consecutive function *f*: **N**:sub:`l(t)` → **N**:sub:`l(u)` such that,
+    1. t \subset_s u
 
-    3. ∀ i ∈ N:sub:`l(t)`: t[i] = u[f(i)]
+.. math::
 
-Similarly, by Definition 1.1.7 and step 2, there exists a strictly increasing and consecutive function *g*: **N**:sub:`l(u)` → N:sub:`l(v)` such that:
+    2. u \subset_s v
 
-    4. ∀ j ∈ N:sub:`l(u)`: u[j] = v[g(j)]
+By Definition 1.1.7 and step 1, there exists a strictly increasing and consecutive function :math:`f: N_{l(t)} \rightarrow N_{l(u)}` such that,
 
-Define a new function *h*: **N**:sub:`l(t)` *→* **N**:sub:`l(v)` as the composition of *f* and *g*,
+.. math::
 
-    5. ∀ j ∈ N:sub:`l(t)`: h(i) = g(f(i))
+    3. \forall i \in N_{l(t)}: t[i] = u[f(i)]
+
+Similarly, by Definition 1.1.7 and step 2, there exists a strictly increasing and consecutive function :math:`g: N_{l(u)} \rightarrow N_{l(v)}` such that:
+
+.. math::
+
+    4. \forall j \in N_{l(u)}: u[j] = v[g(j)]
+
+Define a new function :math:`h: N_{l(t)} \rightarrow N_{l(v)}` as the composition of *f* and *g*,
+
+.. math::
+
+    5. \forall j \in N_{l(t)}: h(i) = g(f(i))
 
 **Increasing** Let 
 
-    6. i, j ∈ N:sub:`l(t)` 
+.. math::
+
+    6. i, j \in N_{l(t)} 
     
-Such that *i < j*. Since *f* is strictly increasing, 
+Such that :math:`i < j`. Since *f* is strictly increasing, 
+
+.. math::
 
     7. f(i) < f(j) 
 
 Since *g* is strictly increasing, 
 
+.. math::
+
     8. g(f(i)) < g(f(j))
     
 Therefore, 
 
+.. math::
+
     9. h(i) < h(j)
     
-And *h* is strictly increasing.
+Thus, *h* is strictly increasing.
 
 **Consecutive** Let 
 
-    10. i ∈ N:sub:`l(t)` 
+.. math::
+
+    10. i \in N_{l(t)} 
     
-Such that *i < l(t)*. Since *f* is consecutive, 
+Such that :math:`i < l(t)`. Since *f* is consecutive, 
+
+.. math::
 
     11. f(i+1) = f(i) + 1 
     
 Since *g* is consecutive, following from step 11,
 
+.. math::
+
     12. g(f(i+1)) = g(f(i) + 1) = g(f(i)) + 1
     
 Therefore, 
 
-    13. h(i+1) = h(i) + 1, and h is consecutive.
+.. math::
+
+    13. h(i+1) = h(i) + 1
+
+Thus, *h* is consecutive.
 
 **Containment** Let 
 
-    14. i ∈ N:sub:`l(t)` 
+.. math::
+
+    14.  i \in N_{l(t)} 
     
 Then, by step 3
 
     15. t[i] = u[f(i)]
 
-Since *f*: **N**:sub:`l(t)` *→* **N**:sub:`l(u)`, it follows that for all 
+Since :math:`f: N_{l(t)} \rightarrow N_{l(u)}`, it follows that for all 
 
-    16. ∀ i ∈ N:sub:`l(t)`: f(i) ∈ N:sub:`l(u)`
+.. math::
+
+    16. \forall i \in N_{l(t)}: f(i) \in N_{l(u)}`
 
 By step 16 and step 4,
+
+.. math::
 
     17. u[f(i)] = v[g(f(i))]
 
 By definition of *h*,
 
+.. math::
+
     18. v[g(f(i))] = v[h(i)]
 
 Therefore, 
 
-    19. ∀ i ∈ N:sub:`l(t)`: t[i] = v[h(i)]
+.. math::
 
-Since *h* is a strictly increasing and consecutive function from **N**:sub:`l(t)` to **N**:sub:`l(v)`, and *t[i] = v[h(i)]* for all *1≤ i ≤ l(t)*, by Definition 1.1.7,
+    19. \forall i \in N_l(t): t[i] = v[h(i)]
 
-    20. t ⊂:sub:`s` v.
+Since *h* is a strictly increasing and consecutive function over :math:`N:sub:`l(t) \rightarrow N_{l(v)}`, and :math:`t[i] = v[h(i)]` for all :math:`1 \leq i \leq l(t)`, by Definition 1.1.7,
 
-Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized as,
+.. math::
 
-    21. ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) ∎
+    20. t \subset_s v.
+
+Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized over the set of all Strings,
+
+.. math::
+
+    21. \forall t, u, v \in S : (t \subset_s u) \land (u ⊂:sub:`s` v) \rightarrow (t subset_s v) ∎
 
 Phrases
 ^^^^^^^
@@ -1207,15 +1323,19 @@ The placement of Definition 1.2.5 and Definition 1.2.6 is somewhat arbitary. The
 
 **Definition 1.2.5: Phrase**
 
-Let *n* be a fixed, non-zero natural number, *n ≥ 1*. A Phrase of Word Length *n* from Language **L**, denoted **P**:sub:`n`, is defined as an ordered sequence of *n* (not necessarily distinct) Words,
+Let *n* be a fixed, non-zero natural number, :math:`n \geq 1`. A Phrase of Word Length *n* from Language **L**, denoted **P**:sub:`n`, is defined as an ordered sequence of *n* (not necessarily distinct) Words,
 
-    P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+.. math::
 
-where each *α*:sub:`i` *∈* **L**. If *i* is *1 ≤ i ≤ n*, P:sub:`n`(i) denotes the Word *α*:sub:`i` at index *i*, so that **P**:sub:`n` may be rewritten, 
+    P_n = (\alpha_1, \alpha_2, ... , \alpha_n)
 
-    P:sub:`n` = (P:sub:`n`(1), P:sub:`n`(2), ... , P:sub:`n`(n))
+where each :math:`\alpha_i \in L`. If *i* is :math:`1 \leq i \leq n`, :math:`P_n(i)` denotes the Word *α*:sub:`i` at index *i*, so that **P**:sub:`n` may be rewritten, 
 
-When *n = 0*, **P**:sub:`0` is defined as the empty sequence (). ∎
+.. math::
+
+    P_n = (P_n(1), P_n(2), ... , P_n(n))
+
+When :math:`n = 0`, **P**:sub:`0` is defined as the empty sequence (). ∎
 
 In order to establish some properties of Phrases, Delimitations and Limitations , a symbol for representing the range of a Phrase **P**:sub:`n` over a Language **L** is now defined.
 
@@ -1223,13 +1343,17 @@ In order to establish some properties of Phrases, Delimitations and Limitations 
 
 Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, denoted **X**:sub:`L`(*n*), as the set of all Phrases of length *n* formed from Words in **L**,
 
-    Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } ∎
+.. math::
+
+    \Chi_{L}(n) = \{ P_n | P_n = (\alpha_1, \alpha_2, ..., \alpha_n) \land \forall i \in N_n: \alpha_i` \in L \} 
+    
+∎
 
 Some of the later theorems in this work will require quantifying over Phrases in a Language's *n*:sub:`th` Lexicon, so notation is introduced for Phrase Variables,
 
     1. Phrase Variables (*p*, *q*, *r*): The lowercase English letters *p*, *q*, *r* are reserved for representing indeterminate Phrases of a Language's *n*:sup:`th` Lexicon.
    
-Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for *1 ≤ i ≤ n*.
+Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for :math:`1 \leq i leq n`.
 
 Using these pair of definitions for Phrases and Lexicons and their associated terminology, the operation of *Delimitation* is now defined over Phrases of fixed Word Length *n* in Definition 1.2.7.
 
@@ -1237,13 +1361,17 @@ Using these pair of definitions for Phrases and Lexicons and their associated te
 
 Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
 
-    p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+.. math::
 
-The *Delimitation* of *p*, denoted *DΠ*:sub:`i=1`:sup:`n` *p(i)*, is defined recursively as:
+    p = (\alpha_1, \alpha_2`, ... , \alpha_n)
 
-    1. Empty Clause: DΠ:sub:`i=1`:sup:`0` p(i) = ε
-    2. Basis Clause (n = 1): DΠ:sub:`i=1`:sup:`1` p(i) = α:sub:`1`
-    3. Recursive Clause (n > 1): DΠ:sub:`i=1`:sup:`n` p(i) = (DΠ:sub:`i=1`:sup:`n-1` p(i))(σ)(α:sub:`n`) ∎
+The *Delimitation* of *p*, denoted :math:`D\Pi_{i=1}^{n} p(i)`, is defined recursively as:
+
+    1. Empty Clause: :math:`D\Pi_{i=1}^{0} p(i) = \varepsilon`
+    2. Basis Clause (:math:`n = 1`): :math:`D\Pi_{i=1}^{1} p(i) = \alpha_1`
+    3. Recursive Clause (:math:`n > 1`): :math:`D\Pi_{i=1}^{n} p(i) = (D\Pi_{i=1}^{n-1} p(i))(\sigma)(\alpha_n)`
+
+ ∎
 
 **Definition 1.2.8: Limitation**
 
@@ -1251,11 +1379,11 @@ Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
 
     p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
 
-The *Limitation* of *p*, denoted *LΠ*:sub:`i=1`:sup:`n` *p(i)*, is defined recursively as:
+The *Limitation* of *p*, denoted :math:`L\Pi_{i=1}^{n} p(i)`, is defined recursively as:
 
-    1. Empty Clause: LΠ:sub:`i=1`:sup:`0` p(i) = ε
-    2. Basis Clause (n = 1): LΠ:sub:`i=1`:sup:`1` p(i) = α:sub:`1`
-    3. Recursive Clause (n > 1): LΠ:sub:`i=1`:sup:`n` p(i) = (LΠ:sub:`i=1`:sup:`n-1` p(i))(α:sub:`n`) ∎
+    1. Empty Clause: :math:`L\Pi_{i=1}^{0} p(i) = \varepsilon`
+    2. Basis Clause (:math:`n = 1`): :math:`L\Pi_{i=1}^{1} p(i) = \alpha_1`
+    3. Recursive Clause (:math:`n > 1`): :math:`L\Pi_{i=1}^{n} p(i) = (L\Pi_{i=1}^{n-1} p(i)(\alpha_n)` ∎
 
 The key difference between Definition 1.2.7 and Definition 1.2.8 is the presence of the Delimiter in the Recursive Clause. In other words, a Delimitation inserts a Delimiter between the Words it is concatenating, while a Limitation is simply a shorthand simply for concatenating a sequence of Words.
 
@@ -1265,25 +1393,43 @@ Before proving the existence of Delimitations and Limitations, an example of how
 
 Let 
 
-    P:sub:`3` = ("mother", "may", "I")
+.. math::
+
+    P_3 = (\text{"mother"}, \text{"may"}, \text{"I"})
 
 Apply Definition 1.2.7 to construct the Delimitation of **P**:sub:`3`. The Basis Step yields,
 
-    1. n = 1: DΠ:sub:`i=1`:sup:`1` α:sub:`i` = "mother" 
+.. math::
+
+    1. n = 1: D\Pi_{i=1}^{1} \alpha_i = \text{"mother"} 
 
 And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
 
-    2.  n = 2: DΠ:sub:`i=1`:sup:`2` α:sub:`i` = (DΠ:sub:`i=1`:sup:`1` α:sub:`i`)(σ)("may")= ("mother")(σ"may") = "mother"σ"may"
-    3.  n = 3: DΠ:sub:`i=1`:sup:`3` α:sub:`i` = (DΠ:sub:`i=1`:sup:`2` α:sub:`i`)(σ)("I") = ("mother"σ"may")(σ"I") = "mother"σ"may"σ"I"
+.. math::
+
+    2.  n = 2: D\Pi_{i=1}^{2} \alpha_i = (D\Pi_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
+    
+.. math::
+
+    3.  n = 3: D\Pi_{i=1}^}{3} \alpha_i = (D\Pi_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}σ\text{"may"})(σ\text{"I"}) = \text{"mother"}σ\text{"may"}σ\text{"I"}
 
 So the Delimitation of the Phrase is given by,
 
-    4. Π:sub:`i=1`:sup:`3` α:sub:`i` = "mother may I" 
+.. math::
+
+    4. D\Pi_{i=1}^{3} \alpha_i = \text{"mother may I"} 
 
 Similarly, the Limitation can be constructed recursive from the same Basis Step using Definition 1.2.8,
 
-   5. n = 2: LΠ:sub:`i=1`:sup:`2` α:sub:`i` = (LΠ:sub:`i=1`:sup:`1` α:sub:`i`)("may")= ("mother")("may") = "mothermay"
-   6. n = 3: LΠ:sub:`i=1`:sup:`3` α:sub:`i` = (LΠ:sub:`i=1`:sup:`2` α:sub:`i`)("I") = ("mothermay")("I") = "mothermayI" ∎
+.. math::
+
+   5. n = 2: L\Pi_{i=1}^{2} \alpha_i = (L\Pi_{i=1}^{1} \alpha_i)(\text{"may"})= (\text{"mother"})(\text{"may"}) = \text{"mothermay"}
+   
+.. math::
+
+   6. n = 3: L\Pi_{i=1}^{3} \alpha_i = (L\Pi_{i=1}^{2} \alpha_i)(\text{"I"}) = (\text{"mothermay"})(\text{"I"}) = \text{"mothermayI"} 
+
+∎
 
 From this example, it should be clear what the Delimitation and Limitation operations represent within the formal system. Delimitation is a method of constructing a Sentence-like (see Section II.III for the formal difference between a Delimitation and Sentence) String from a sequence of words, while a Limitation is shorthand for iterated concatenation over a sequence of Words.
 
@@ -1291,25 +1437,31 @@ Note the previous example may be misleading in one important respect. A Delimita
 
 However, as the next theorems shows, the result of a Delimitation or Limitation is unique.
 
-**Theorem 1.2.8** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = DΠ:sub:`i=1`:sup:`n` p(i)
+**Theorem 1.2.8** :math:`\forall n \in \mathbb{N}: \forall p \in \Chi_{L(n)}: \exists! s \in S: s = D\Pi_{i=1}^{n} p(i)`
 
 This theorem can be stated in natural language as follows: For every natural number n, and for every Phrase **P**:sub:`n` in the *n*:sup:`th` Lexicon of **L**, there exists a unique string *s* in **S** such that *s* is the Delimitation of **P**:sub:`n`.
 
-Let *n* be an arbitrary natural number, and let **P**:sub:`n` be a Phrase of Word Length *n* in Language **L** from the Language's *n*:sup:`th` Lexicon, **X**:sub:`L`*(n)*,
+Let *n* be an arbitrary natural number, and let **P**:sub:`n` be a Phrase of Word Length *n* in Language **L** from the Language's *n*:sup:`th` Lexicon, :math:`\Chi_L(n)`,
 
-    q. P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+.. math::
+
+    1. P_n = (\alpha_1, \alpha_2, ..., \alpha_n)
 
 The theorem will be proved using induction.
 
-**Base Case (n = 1)**
+**Base Case** :math:`n = 1`
 
 By Definition 1.2.7,
     
-    1. DΠ:sub:`i=1`:sup:`1` P:sub:`n(i)` = α:sub:`1`
+.. math::
 
-Since *α*:sub:`1` is a word in **L** (by Definition 1.2.6 of Lexicon), it is also a String in S (by Definition 1.2.2). Thus, there exists a String *s = α*:sub:`1` such that 
+    2. D\Pi_{i=1}^{1} P_{n}(i) = \alpha_1
 
-    3. s = DΠ:sub:`i=1``:sup:`1` P:sub:`n(i)`.
+Since *α*:sub:`1` is a word in **L** (by Definition 1.2.6 of Lexicon), it is also a String in S (by Definition 1.2.2). Thus, there exists a String :math:`s = \alpha_1` such that 
+
+.. math::
+    
+    3. s = D\Pi_{i=1}^{1} P_{n(i)}
 
 Since the base case of Delimitation is defined as simple equality, the string s must be unique.
 
@@ -1317,29 +1469,41 @@ Since the base case of Delimitation is defined as simple equality, the string s 
 
 Assume that for some *k ≥ 1*, there exists a unique string *s*:sub:`k` such that 
 
-    4. s:sub:`k` = DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)`
+.. math::
+
+    4. s_k = D\Pi_{i=1}^{k} P_n(i)
 
 To complete the induction, it must be shown that there exists a unique string *s*:sub:`k+1` such that,
  
-    5. s:sub:`k+1` = DΠ:sub:`i=1`:sup:`k+1` P:sub:`n(i)`
+.. math::
+
+    5. s_{k+1} = D\Pi_{i=1}^{k+1} P_n (i)
 
 By Definition 1.2.7, 
 
-    6. DΠ:sub:`i=1`:sup:`k+1` P:sub:`n(i)` = (DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)`)(σ)(α:sub:`k+1`)
+.. math::
+
+    6. D\Pi_{i=1}^{k+1} P_n(i) = (D\Pi_{i=1}^{k} P_n(i))(\sigma)(\alpha_{k+1})
 
 By inductive hypothesis,
+
+.. math::
+
+    7. D\Pi_{i=1}^{k} P_n(i) = s_k
     
-    7. DΠ:sub:`i=1`:sup:`k` P:sub:`n(i)` = s:sub:`k`
-    
-Thus, *s*:sub:`k` is unique. Since *α*:sub:`k+1` is a Word in **L** (by the definition of **Χ**:sub:`L`*(n+1)*), it is also a unique String in S.
+Thus, *s*:sub:`k` is unique. Since *α*:sub:`k+1` is a Word in **L** (by the definition of :math:`\Chi_L (n+1)`), it is also a unique String in **S**.
 
 The concatenation of *s*:sub:`k`, *σ*, and *α*:sub:`k+1` is a unique string (by the Definition 1.1.1 of Concatenation and Definition 1.1.4 of String Equality).
 
-Therefore, *s*:sub:`k+1` = (*s*:sub:`k`)(σ)(*α*:sub:`k+1`) is a unique string.
+Therefore, :math:`s_{k+1} = (s-k)(\sigma)(\alpha_{k+1}) is a unique string.
 
-By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in **Χ**:sub:`L(n)`, there exists a unique string *s* in **S** such that *s = DΠ*:sub:`i=1`:sup:`n` P:sub:`n(i)`. ∎
+By induction, for every natural number *n*, and for every phrase **P**:sub:`n` in :math:`\Chi_L (n)`, there exists a unique string *s* in **S** such that
 
-**Theorem 1.2.9** ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = LΠ:sub:`i=1`:sup:`n` p(i)
+    s = D\Pi_{i=1}^{n} P_n (i) 
+    
+∎
+
+**Theorem 1.2.9** :math:`\forall n \in \mathbb{N}, \forall p \in \Chi_{L(n)} \exists! s \in S: s = L\Pi_{i=1}^{n} p(i)`
 
 The proof of this theorem is almost exactly identical to Theorem 1.2.8, with the exception there is no Delimiter in step 6. ∎
 
@@ -1371,37 +1535,55 @@ Rather than attempt to define Reflective Words as the class of Words that are th
 
 The set of Reflective Words **R** is defined as the set of *α* which satisfy the open formula,
 
-    α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] ∎
+.. math::
+
+    \alpha \in R \leftrightarrow \forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
+
+∎
 
 A Word *α* will be referred to as *reflective* if it belongs to the class of Reflective Words. 
 
 The following theorem is an immediate consequence of Definition 1.3.1 and Definition 1.2.4.
 
-**Theorem 1.3.1** ∀ α ∈ L: α ∈ R ↔ α = inv(α)
+**Theorem 1.3.1** :math:`\forall \alpha \in L: \alpha \in R \leftrightarrow \alpha = \text{inv}(\alpha)`
 
 In natural language, this theorem can be stated as: A Word in a Language is Reflective if and only if it is its own Inverse.
 
-(→)  Assume *α ∈ R*. By Definition 1.3.1, 
+(→)  Assume :math:`\alpha \in R`. By Definition 1.3.1, 
 
-    1. ∀ i ∈ N:sub:`l(α)`:  α[i] = α[l(α) - i + 1] 
+.. math::
 
-Let *β = inv(α)*. By the Definition 1.2.4,
+    1. \forall i \in N_{l(\alpha)}:  \alpha[i] = \alpha[l(\alpha) - i + 1] 
 
-    2. l(β) = l(α)
-    3. ∀ i ∈ N:sub:`l(α)`: ( β[i] = α[l(α) - i + 1] )
+Let :math:`\beta = \text{inv}(\alpha)`. By the Definition 1.2.4,
+
+.. math::
+
+    2. l(\beta) = l(\alpha)
+    
+.. math::
+
+    3. \forall i \in N_{l(α)}: ( \beta[i] = \alpha[l(\alpha) - i + 1] )
 
 Substituting the property of Reflective Words from step 1 into step 3,
 
-    4.  4. ∀ i ∈ N:sub:`l(α)`: β[i] = α[i]
+.. math::
 
-Since *β[i] = α[i]* for all *i ∈* **N**:sub:`l(α)`, and both strings have the same length, by Definition 1.1.4, it can be concluded that *α = β*. Therefore the desired result is obtained, *α = β = inv(α)*.
+    4. \forall i \in N_{l(\alpha)}: \beta[i] = \alpha[i]
 
-(←) Assume *α = inv(α)*.  By Definition 1.2.4 of String Inversion,
+Since :math:`β[i] = α[i]` for all :math:`i \in N_{l(α)}`, and both strings have the same length, by Definition 1.1.4, it can be concluded that :math:`α = β`. Therefore the desired result is obtained, :math:`α = β = inv(α)`.
 
-    1. l(α) = l(inv(α))
-    2. ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1]
+(←) Assume :math:`\alpha = \text{inv}(\alpha)`.  By Definition 1.2.4 of String Inversion,
 
-But step 2 is exactly the definition of Reflective Words, so by Definition 1.3.1, *α ∈* **R** ∎ 
+.. math::
+
+    1. l(\alpha) = l(\text{inv}(\alpha))
+    
+.. math::
+
+    2. \forall i \in N_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
+
+But step 2 is exactly the definition of Reflective Words, so by Definition 1.3.1, :math:`\alpha \in R` ∎ 
 
 Invertible Words 
 ^^^^^^^^^^^^^^^^
@@ -1412,80 +1594,121 @@ As discussed previously, the concept of *invertible* is exemplified in pairs of 
 
 Let *α* be any Word in a Language **L**. Then the set of Invertible Words **I** is defined as the set of *α* which satisfy the open formula,
 
-    α ∈ I ↔ inv(α) ∈ L ∎
+.. math::
+    
+    \alpha \in I \leftrightarrow \text{inv}(\alpha) \in L
+    
+∎
 
 A Word *α* will be referred to as *invertible* if it belongs to the class of Invertible Words.
 
 Definition 1.3.2 is immediately employed to derive the following theorems.
 
-**Theorem 1.3.2** ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
+**Theorem 1.3.2** :math:`\forall \alpha \in L: \alpha \in I \leftrightarrow \text{inv}(\alpha) \in I`
 
-(→) Assume *α ∈* **I**. By Definition 1.3.2,
+(→) Assume :math:`\alpha \in I`. By Definition 1.3.2,
 
-    1. inv(α) ∈ L
+.. math::
+
+    1. \text{inv}(α) \in L
     
 Consider *inv(α)*. To show that it's invertible, it must be shown,
 
-    2. inv(inv(α)) ∈ L. 
+.. math::
+
+    2. \text{inv}(\text{inv}(\alpha)) \in L. 
 
 By Theorem 1.2.4,
 
-    3. inv(inv(α)) = α
-    
-Since it is known *α ∈ L*, it follows,
+.. math::
 
-    4. inv(inv(α)) ∈ L  
+    3. \text{inv}(\text{inv}(\alpha)) = \alpha
+    
+Since it is known :math:`\alpha \in L`, it follows,
+
+.. math::
+
+    4. \text{inv}(\text{inv}(\alpha)) \in L  
     
 By the Definition 1.3.2, 
 
-    5. inv(α) ∈ I
+.. math::
+
+    5. inv(\alpha) \in I
     
 Therefore, *inv(α)* is also an Invertible Word. 
 
-(←) Assume *inv(α)* is a Word in Language L and *inv(α) ∈* **I**. Then by Definition 1.3.2,
+(←) Assume *inv(α)* is a Word in Language L and :math:`inv(\alpha) \in I`. Then by Definition 1.3.2,
 
-    1. inv(inv(α)) ∈ L
+.. math::
+
+    1. \text{inv}(\text{inv}(\alpha)) \in L
 
 By Theorem 1.2.4,
 
-    2. α ∈ L
+.. math::
 
-To show *α* is invertible, it must be shown *inv(α) ∈* **L**, but this is exactly what has been assumed, so it follows immediately. 
+    2. \alpha \in L
+
+To show *α* is invertible, it must be shown :math:`inv(\alpha) \in L`, but this is exactly what has been assumed, so it follows immediately. 
 
 Therefore, putting both directions of the equivalence together and generalizing over all Words in a Language, 
 
-    ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I ∎ 
+.. math::
 
-**Theorem 1.3.3** R ⊆ I
+    \forall \alpha \in L: \alpha \in I ↔ \text{inv}(\alpha) \in I 
+    
+∎ 
 
-Assume *α ∈* **R**. By Definition 1.3.2,
+**Theorem 1.3.3** :math:`R \subseteq I`
 
-    1. ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1]
+Assume :math:`α \in R`. By Definition 1.3.2,
 
-Let *β = inv(α)*. By Definition 1.2.4,
+.. math::
 
-    2. l(β) = l(α)
-    3. ∀ j ∈ N:sub:`l(α)`: β[j] = α[l(α) - j + 1]
+    1. \forall i \in N_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
+
+Let :math:`\beta = inv(\alpha)`. By Definition 1.2.4,
+
+.. math::
+
+    2. l(\beta) = l(\alpha)
+    
+.. math::
+
+    3. \forall j in N_{l(\alpha)}: \beta[j] = \alpha[l(\alpha) - j + 1]
 
 Substituting step 1 into step 3,
 
-    4. ∀ i ∈ N:sub:`l(α)`:  β[j] = α[j]
+.. math::
+
+    4. \forall i \in N_{l(\alpha)}:  \beta[j] = \alpha[j]
 
 Since both strings have the same length and the same Characters in the same order, by Definition 1.1.4, 
 
-    5. α = β = inv(α)
+.. math::
+
+    5. \alpha = \beta = \text{inv}(\alpha)
 
 By assumption, *α* is a Word from Language **L** that belongs to **R**. From step 5, this implies *inv(α)* is also part of the Language **L**. By Definition 1.3.2, this implies,
 
-    6. α ∈ I 
+.. math::
+
+    6. \alpha \in I 
 
 In other words, 
 
-    ∀ α ∈ L : α ∈ R → α ∈ I 
+.. math::
+
+    \forall \alpha \in L: \alpha \in R \rightarrow \alpha \in I 
 
 But this is exactly the definition of the subset relation in set theory. Therefore,
 
-    R ⊆ I ∎ 
+.. math::
+
+    R \subseteq I 
+    
+∎ 
 
 In the context of (potentially) infinite sets such as **L** and **S**, *"even"* and *"odd"* refer to whether the set can be partitioned into two disjoint subsets of equal cardinality.
 
