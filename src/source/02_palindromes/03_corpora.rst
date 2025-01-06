@@ -49,13 +49,13 @@ Before proceeding with the definition of Sentences, some notation is introduced,
 
 .. math::
 
-    \rune{f} ∈ C_L
+    \rune{f} \in C_L
 
 From Definition 2.1 and Definition 2.2, it follows that a Sentence is a String,
 
 .. math::
 
-    \rune{f} ∈ S
+    \rune{f} \in S
 
 It should be stressed, as had been made clear in previous comments, that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus. To reiterate this hierarchy and precisely state how all the entities in this formal system are related,
 
@@ -88,9 +88,9 @@ In a similar way, a method of representing Sentences as sets will now be constru
 
 **Definition 2.1.3: Word-Level Set Representation**
 
-Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*, i.e. an ordered sequence of Characters from the alphabet **Σ**. 
+Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*, i.e. an ordered sequence of Characters from the Alphabet **Σ**. 
 
-The Word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ** at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*.
+The Word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ**  at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*.
 
 .. _delimiting_algorithm:
 
@@ -118,7 +118,7 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
     5. t ← ε
 
     # Iteration
-    1. While i ≤ l(ᚠ):
+    6. While i ≤ l(ᚠ):
    
         a. If ᚠ[i] ≠ σ:
 
@@ -137,10 +137,10 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
         c. i ← i + 1
 
     # Finalization
-    2. If l(t) > 0:
+    7. If l(t) > 0:
         a. W ← W ∪ { (j, t) }
         b. j ← j+1
-    3. Return W ∎
+    8. Return W ∎
 
 Note the String which is initialized to hold the Sentence Characters in step *5* is set to an initial value of the Empty Character in the Initialization Block. Also note, the application of the Basis Clause in step *1.b.i.1* ensures this Empty Character is removed after each Word has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of Theorem 1.2.3.
 
@@ -158,31 +158,55 @@ Let *ᚠ = (𝔞𝔟)(σ)(ε)(σ)(𝔟𝔞)*. Note *l(ᚠ) = 6*.
 
 During initialization, the Character-level set representation of *ᚠ* is constructed with Definition 1.1.2 using the Emptying Algorithm.
 
-   1. **ᚠ** = (𝔞,𝔟,σ,σ,𝔟,𝔞)
-   2. W:sub:`ᚠ` = ∅
+.. math::
+
+   1. \large\rune{f} = (\mathfrak{a},\mathfrak{b},\sigma,\sigma,\mathfrak{b},\mathfrak{a})
+   
+.. math::
+
+   2. W_{\rune{f}} = \emptyset
+   
+.. math::
+
    3. j = 1
 
 **Iteration**
 
 The following list shows the result of the algorithm after each iteration,
 
-   1. j = 2, i = 4, t = 𝔞𝔟, W:sub:`ᚠ` = { (1, 𝔞𝔟) }
-   2. j = 2, i = 5, t = σ, W:sub:`ᚠ` = { (1, 𝔞𝔟) }
-   3. j = 3, i = 7, t = 𝔟𝔞, W:sub:`ᚠ` = { (1, 𝔞𝔟), (2, 𝔟𝔞) }
+.. math::
 
-At which point *i > l(ᚠ)*, so the algorithm halts and returns,
+   1. j = 2, i = 4, t = \mathfrak{ab}, W_{\rune{f}} = \{ (1, \mathfrak{ab}) \}
 
-    W:sub:`ᚠ` = { (1, 𝔞𝔟), (2, 𝔟𝔞) } ∎
+.. math::
+
+   2. j = 2, i = 5, t = \sigma, W_{\rune{f}} = \{ (1, \mathfrak{ab}) \}
+   
+.. math::
+
+   3. j = 3, i = 7, t = \mathfrak{ba}, W_{\rune{f}} = \{ (1, \mathfrak{ab}), (2, \mathfrak{ba}) }
+
+At which point :math:`i > l(\rune{f})`, so the algorithm halts and returns,
+
+.. math::
+
+    W_{\rune{f}} = { (1, \mathfrak{ab}), (2, \mathfrak{ba}) } ∎
 
 **Example** 
 
-Let *ᚠ = "The cat meows"*. Then the Character level representation of *ᚠ* is given by, 
+Let *ᚠ = "the cat meows"*. Then the Character level representation of *ᚠ* is given by, 
 
-    **ᚠ** = { (1, "T"), (2, "h"), (3,"e"), (4,σ), (5,"c"), (6,"a"), (7,"t"), (8,σ), (9,"m"), (10,"e"), (12,"o"), (13,"w"), (14,"s") }.
+.. math::
+
+    ᚠ = { (1, \text{"t"}), (2, \text{"h"}), (3,\text{"e"}), (4,\sigma), (5,\text{"c"}), (6,\text{"a"}), (7,\text{"t"}), (8,\sigma), (9,\text{"m"}), (10,\text{"e"}), (12,\text{"o"}), (13,\text{"w"}), (14,\text{"s"}) }.
 
 Then, applying the *Delimiting Algorithm*, its Word-level representation is constructed, 
 
-    **W**:sub:`ᚠ` = { (1, "The"), (2, "cat"), (3, "meows") }. ∎
+.. math::
+
+    W_{\rune{f}} = \{ (1, \text{"the"}), (2, \text{"cat"}), (3, \text{"meows"}) \} 
+    
+∎
 
 Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in Definition 1.1.5 will be use this method of Sentence representation to simplify many of the upcoming proofs.
 
@@ -213,27 +237,41 @@ Definition 2.1.3 provide way of dispensing with the Delimiter Character in Sente
 
 **Definition 2.1.4: Word Length**
 
-Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level set representation of *ζ*, as defined in Definition 2.1.3. The Word Length of the Sentence *ζ*, denoted by *Λ(ζ)*, is defined as the cardinality of the set **W**:sub:`ζ`,
+Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level set representation of *ζ*, as defined in Definition 2.1.3. The Word Length of the Sentence *ζ*, denoted by :math:`\Lambda(\zeta)`, is defined as the cardinality of the set **W**:sub:`ζ`,
 
-    Λ(ζ) = | W:sub:`ζ` | ∎
+.. math::
+
+    \Lambda(ζ) = | W_{\zeta} | 
+    
+∎
 
 **Example**
-
+Notation
 Consider the Sentence *ᚠ = "the dog runs"*. Its Character-level set representation would be given by,
 
-    **ᚠ** = { (0,"t"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") }
+.. math::
+
+    \large\rune{f} = \{ (0,"t"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") \}
 
 Its Word-level set representation would be given by,
 
-    W:sub:`ᚠ` = { (1, "the"), (2, "dog"), (3, "runs") }
+.. math::
+
+    W_{\rune{f}} = \{ (1, \text{"the"}), (2, \text{"dog"}), (3, \text{"runs"}) }
 
 Therefore, the length of the sentence is:
 
-    Λ(ᚠ) = | W:sub:`ᚠ` | = 3
+.. math::
+
+    \Lambda(\rune{f}) = | W_{\rune{f}} | = 3
 
 Note, in this example, 
 
-    l(ᚠ) = 12 ∎
+.. math::
+
+    l(\rune{f}) = 12 
+    
+∎
 
 This example demonstrates the essential difference in the notions of length that have been introduced. It is worthwhile to clarify the distinction between these two conceptions. 
 
@@ -252,11 +290,17 @@ Word Length can be used to simplify some of the complex notation the formal syst
 
 Let *ζ* be a Sentence with Word level set representation, **W**:sub:`ζ`,
 
-    W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`)
+.. math::
 
-Then for any *j* such that *1 ≤ j ≤ Λ(ζ)*, the Word at index *j*, denoted ζ{j}, is defined as the Word which satisfies the following formula,
+    W_{\zeta} = (\alpha_1, \alpha_r, ... , \alpha_{\Lambda(\zeta))
 
-    ∀ (j, α:sub:`j`) ∈ W:sub:`ζ`: ζ{j} = α:sub:`j` . ∎
+Then for any *j* such that :math:`1 \leq j \leq \Lambda(\zeta)`, the Word at index *j*, denoted *ζ{j}*, is defined as the Word which satisfies the following formula,
+
+.. math::
+
+    \forall (j, \alpha_j) \in W_{\zeta}: \zeta\{j\} = \alpha_j
+    
+∎
 
 The following theorem uses this notation to proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters). 
 
