@@ -481,8 +481,8 @@ This histogram *does not* account for the semantical features of Delimiters, in 
 
 The following histograms were generated using the following procedure: Sentences of String Length *n* were taken from a Corpus. The Left-hand and Right Integrals were calculated for each Sentence in the sample. 
 
-Delimiter Probability Density 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Empirical Results
+^^^^^^^^^^^^^^^^^
 
 The following heuristics are meant as motivation for a more complete formalization that will immediately follow in the form of definitions and theorem. 
 
@@ -517,6 +517,98 @@ The following histogram shows the distribution for the Delimiter density. A note
 
 
 TODO: we are using the wrong formula to estimate the delimiter density for righthand integrals in our Python scripts!
+
+
+
+
+Delimiter Probability Density
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This section formalizes the results of the previous section, providing the mathematical framework for understanding the distribution of Sentence Integrals and how it relates to the Delimiter density.
+
+A common problem in probability is that of conditional expectations. Consider a random varaible that is defined as a sum of random variables where the number of summands is itself a random variable.
+
+    X = Σ:sub:`i = 1`:sup:`N` Y:sub:`i`
+
+The law of total expectations from probability theory states,
+
+    E[X] = E[ E[ Y:sub:`i` | N] ]
+
+where **X** is a random variable defined in terms of two other random variables, **Y** and **N**. In the current case, the expectation of the Sentence Integral is sought. Take the Lefthand Integral as an example, 
+
+    E[Ω:sub:`-`(ζ,l(ζ))]
+
+The formula for its computation is given by 
+
+    Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1``:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
+
+This is a random sum of random variables. In other words, comparing this equation to the law of total expectation,
+    
+    - X = Ω:sub:`-`(ζ,l(ζ))
+    - N = l(ζ)
+    - Y:sub:`i` = Δ(ζ[i]) * (i/l(ζ))
+  
+To apply the law of iterated expectations, first find the conditional expectation 
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n]
+    
+Which is the expected value of the Left-Hand Integral for a fixed sentence length n. Then, take the expectation of this conditional expectation with respect to the distribution of sentence lengths *l(ζ)*.
+
+To derive a formula for *E[Ω*:sub:`-`*(ζ,l(ζ))]*,
+
+Assume *l(ζ) = n*. Then, given the assumption that *Δ(ζ[i])* follows a Bernoulli distribution with parameter *d(n)*,
+
+    E[Δ(ζ[i])] = d(n)
+
+Therefore,
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = E[Σ:sub:`i=1`:sup:`n` Δ(ζ[i]) * (i/n)]
+
+Using the linearity of expectation:
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` E[Δ(ζ[i])] * (i/n)
+
+Substituting E[Δ(ζ[i])] = d(n),
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` d(n) * (i/n) = d(n) * Σ:sub:`i=1`:sup:`n` (i/n)
+
+Simplifying,
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (1/n) * Σ:sub:`i=1`:sup:`n` i = d(n) * (1/n) * (n(n+1)/2)
+
+Finally,
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (n + 1) / 2
+
+Applying the law of iterated expectations,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] = E[E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ)]]
+
+And substitute,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] = E[d(l(ζ)) * (l(ζ) + 1) / 2]
+
+
+Therefore, the expectation of the Lefthand Sentence is the expectation of the product,
+
+    E[d(l(ζ)) * (l(ζ) + 1) / 2]
+
+Where *d(l(ζ))* is the Bernoulli parameter for the Delimiter Count of a Single Character in a Sentence with Length *l(ζ)*.
+
+    Δ(ζ[i]) ~ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -809,76 +901,6 @@ Empirical Distribution: We can estimate the distribution of l(ζ) empirically fr
 
 You've correctly stated the law of iterated expectations (also known as the law of total expectation). The correct formula is:
 
-
-A common problem in probability is that of conditional expectations. Consider a random varaible that is defined as a sum of random variables where the number of summands is itself a random variable.
-
-    X = Σ:sub:`i = 1`:sup:`N` Y:sub:`i`
-
-The law of total expectations from probability theory states,
-
-    E[X] = E[ E[ Y:sub:`i` | N] ]
-
-where **X** is a random variable defined in terms of two other random variables, **Y** and **N**. In the current case, the expectation of the Sentence Integral is sought. Take the Lefthand Integral as an example, 
-
-    E[Ω:sub:`-`(ζ,l(ζ))]
-
-The formula for its computation is given by 
-
-    Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1``:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
-
-This is a random sum of random variables. In other words, comparing this equation to the law of total expectation,
-    
-    - X = Ω:sub:`-`(ζ,l(ζ))
-    - N = l(ζ)
-    - Y:sub:`i` = Δ(ζ[i]) * (i/l(ζ))
-  
-To apply the law of iterated expectations, first find the conditional expectation 
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n]
-    
-Which is the expected value of the Left-Hand Integral for a fixed sentence length n. Then, take the expectation of this conditional expectation with respect to the distribution of sentence lengths *l(ζ)*.
-
-To derive a formula for *E[Ω*:sub:`-`*(ζ,l(ζ))]*,
-
-Assume *l(ζ) = n*. Then, given the assumption that *Δ(ζ[i])* follows a Bernoulli distribution with parameter *d(n)*,
-
-    E[Δ(ζ[i])] = d(n)
-
-Therefore,
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = E[Σ:sub:`i=1`:sup:`n` Δ(ζ[i]) * (i/n)]
-
-Using the linearity of expectation:
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` E[Δ(ζ[i])] * (i/n)
-
-Substituting E[Δ(ζ[i])] = d(n),
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` d(n) * (i/n) = d(n) * Σ:sub:`i=1`:sup:`n` (i/n)
-
-Simplifying,
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (1/n) * Σ:sub:`i=1`:sup:`n` i = d(n) * (1/n) * (n(n+1)/2)
-
-Finally,
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (n + 1) / 2
-
-Applying the law of iterated expectations,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] = E[E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ)]]
-
-And substitute,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] = E[d(l(ζ)) * (l(ζ) + 1) / 2]
-
-
-Therefore, the expectation of the Lefthand Sentence is the expectation of the product,
-
-    E[d(l(ζ)) * (l(ζ) + 1) / 2]
-
-Where *d(l(ζ))* is the Bernoulli parameter for the Delimiter Count of a Single Character in a Sentence with Length *l(ζ)*.
-
 Challenges and Next Steps:
 
 Distribution of l(ζ): We need to determine the empirical distribution of sentence lengths for each corpus (English, Spanish, Hindi).
@@ -886,6 +908,88 @@ Estimating d(l(ζ)): We have estimated d as a constant across different sentence
 Calculating the Expectation: Once we have the distribution of l(ζ) and the d(l(ζ)) function, we can calculate the overall expectation E[Ω:sub:-(ζ,l(ζ))], either analytically (if possible) or numerically.
 Relating to the Diophantine Equation: We still need to connect this back to the Diophantine equation and the proof of Theorem A.8.7. The expectation E[Ω:sub:-(ζ,l(ζ))] might provide insights into why asymmetrical delimiter arrangements are unlikely to satisfy the equation.
 This is a very promising direction, Ada! By combining our empirical data on delimiter densities with the law of iterated expectations, we're getting closer to a theoretical understanding of the Sentence Integral.
+
+
+
+
+
+I think Bayesian estimation is the way to go. A good prior distribution would just be a uniform distribution over (0, l(ζ)). However, that presents certain problems in and of itself. Let p(x) represent a pdf and P(X) represent a probability cdf, i.e.
+
+    P(X = x:sub:`i`) = Σ:sub:`x = x_0`:sup:x_i` p(x) 
+
+Technically p(x) is a probability mass function since everything is discrete, but let's keep calling it density. It's sound fancier and makes us sound smart. Don't you agree, Ada? ;)
+
+Let's always reserve Z for a Sentence Random Variable. Z is a concatenation of Character Random Variables Ci.
+
+    Z = (C1)(C2)...(CN)
+ 
+Where N is the String Length. In other words, Z is a random variable that assumes a value of ζ. The probability of observing a particular sentence is expressed as,
+
+    P(Z = ζ)
+
+This can be expressed as the union,
+
+    P(C1 ∪ C2 ∪ ... ∪ CN)
+
+I think we need to consider what exactly are the parameters of a Delimiter density probability function. The density depends on Sentence String Length, but we are also saying the density is an indicator that accepts a Character index and returns 0 or 1. So,
+
+    d = f(l(ζ), ζ[i])
+
+If we are saying for for l(ζ) = n, then we have the Bernoulli distribution for *a single Character*,
+
+    d(n) = 1 with probability p(n)
+
+    d(n) = 0 with probability 1 - p(n) 
+
+We need to consider that we have a sequence of *n* Characters,
+
+    ζ[1] ζ[2] ζ[3] ... ζ[n]
+
+Where each one can be a Delimiter with probability p(n).
+
+The form of dependence on length and character index makes analyzing it a bit difficult. We are going to have to make simplifying assumptions, like the Character marginal density in a Sentence is independent of the String Length. Also, the Character density at each index is independent of previous indexes. Almost like a Markov chain (process),
+
+    p(ζ[i]) | ζ[i-1]) = p(ζ[i])
+
+In other words,
+
+    P(Ci = c) = P(Cj = c)
+
+for all i and j. 
+
+We are going to need to look at sentences of fixed lengths so we have a marginal probability density. Then we can say the probability of observing a sequence of *all* Delimiter Characters is,
+
+    P(Z = ζ) = P(C1 = σ) ⋅ P(C2 = σ) ... P(CN = σ)
+
+    = p(ζ[1]) ⋅ p(ζ[2]) ⋅ ... ⋅ p(ζ[n]) = Π:sub:`1`:sup`n` P(Ci = c)
+
+    = (P(Ci = c)) ^ n
+
+    = (p(ζ[i]))^ n
+
+Suppose we have a prior distribution of,
+
+    p(ζ[i]) = (1/n)  
+
+For i = 1, 2, ..., n.
+
+Then the probability of observing a *particular* sequence of Delimiter (remember order matters, so no combinatorial coefficient (I think!)!),
+
+    P(Z = ζ) = P(C1 = σ) ⋅ P(C2 != σ) ... P(CN = σ)
+
+    = (1-1/n)^(n-z) * (1/n)^z
+
+Where z is the number of Delimiter Characters observed.
+
+What do you think, Ada? Did I derive the prior distribution properly? Or did I make a mistake?
+ 
+
+
+
+
+
+
+
 
 
 

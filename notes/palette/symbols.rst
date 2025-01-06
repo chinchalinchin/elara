@@ -3,6 +3,7 @@ Mathematical Symbols
 - Logic: ¬ ∧ ∨ → ↔ ∀ ∃
 - Relations: ∈ ∉ ⊂ ⊆ ⊃ ∪ ∩ 
 - Relations: ∝ ≈ ≠ ≤ ≥
+- Arithemtic: ⋅
 - Operations: ∫ Σ √ 
 - Sets: ∅ ℕ ℤ ℚ ℝ ℂ
 - Other: ∞ ∎

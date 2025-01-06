@@ -115,3 +115,4 @@ def difference_of_means_test(mean_1, stdev_1, n1, mean_2, stdev_2, n2):
     p_value = 2 * (1 - scipy.stats.t.cdf(abs(t_statistic), df))
 
     return t_statistic, p_value
+

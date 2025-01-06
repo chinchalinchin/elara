@@ -11,6 +11,48 @@ def write(data, file_name):
     with open(file_name, "w") as outfile:
         json.dump(data, outfile)
 
+def update_posterior(prior, sentence):
+    """
+    Updates the prior distribution based on the observed sentence.
+
+    Args:
+        prior: A dictionary representing the prior distribution of delimiter probabilities.
+               Keys are sentence lengths, values are lists of probabilities for each character position.
+        sentence: The observed sentence (string).
+
+    Returns:
+        A new dictionary representing the updated posterior distribution.
+    """
+    n = len(sentence)
+    z = model.delimiter_count(sentence)  # Assuming delimiter_count is defined elsewhere and counts spaces
+
+    likelihood = (1 - (1 / n)) ** (n - z) * (1 / n) ** z
+
+    if n not in prior:
+        # Initialize a uniform prior if this is the first sentence of this length
+        prior[n] = [1/n] * n 
+
+    posterior = prior.copy()
+    # Update the prior based on the likelihood 
+    # (This is a simplified Bayesian update for illustration)
+    
+    # For simplicity, we will treat the likelihood as a weight for the prior.
+    
+    for i in range(n):
+        if sentence[i] == ' ':
+            posterior[n][i] = prior[n][i] * likelihood # P(Delimiter)
+        else:
+            posterior[n][i] = prior[n][i] * (1-likelihood) # P(Not Delimiter)
+
+    # Normalize the posterior so that probabilities sum to 1
+    posterior_sum = sum(posterior[n])
+    if posterior_sum > 0:
+        posterior[n] = [p / posterior_sum for p in posterior[n]]
+    else:
+      posterior[n] = [1/n] * n # Re-instate a uniform distribution if we hit a divide by zero
+      
+    return posterior
+
 def analyze_sentence_integrals(sentences, sentence_length):
     """
     Analyzes the Left and Right-Hand Sentence Integrals of sentences in a corpus.
@@ -185,8 +227,23 @@ def analyze_sentence_lengths(min_length, max_length):
 if __name__ == "__main__":
     # parse.init()
 
-    min_length = 50
+    # Example Usage:
+    min_length = 10
     max_length = 200
 
-    length_analysis_results = analyze_sentence_lengths(min_length, max_length)
-    write(length_analysis_results, "sentence_length_distributions.json")
+    # Initialize a uniform prior (this is a very naive prior)
+    prior = {}
+
+    # Get the cleaned sentences
+    cleaned_sentences = parse.corpus(parse.CORPORA.ENGLISH, min_length, max_length)
+
+    # Iterate through the sentences and update the posterior
+    posterior = prior.copy()
+    for sentence in cleaned_sentences:
+        posterior = update_posterior(posterior, sentence)
+
+    # Analyze the posterior distribution (e.g., print the probabilities for each position in a sentence of a given length)
+    # You'll need to adapt this part based on how you choose to represent and store the posterior
+    # for length in sorted(posterior.keys()):
+    #     print(f"Sentence Length: {length}")
+    #     print(posterior[length])
