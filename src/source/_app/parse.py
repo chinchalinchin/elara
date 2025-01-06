@@ -75,21 +75,5 @@ def _clean_corpus(language, min_length, max_length):
     else:
         raise ValueError("Invalid language specified. Choose from 'english', 'spanish', or 'hindi'.")
 
-def _english_corpus(min_length, max_length):
-    # Updated to use the new corpus function
-    return _clean_corpus(CORPORA.ENGLISH, min_length, max_length)
-
-def _spanish_corpus(min_length, max_length):
-    # Updated to use the new corpus function
-    return _clean_corpus(CORPORA.SPANISH, min_length, max_length)
-
-def _hindi_corpus(min_length, max_length):
-    # Updated to use the new corpus function
-    return _clean_corpus(CORPORA.HINDI, min_length, max_length)
-
 def corpus(min_length = 100, max_length = 200, language = CORPORA.ENGLISH):
-    if language == CORPORA.HINDI:
-        return _hindi_corpus(min_length, max_length)
-    if language == CORPORA.SPANISH:
-        return _spanish_corpus(min_length, max_length)
-    return _english_corpus(min_length, max_length)
+    return _clean_corpus(language, min_length, max_length)

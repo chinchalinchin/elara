@@ -1,8 +1,10 @@
 """ palindrome.estimators: Module for statistical analysis.
 """
 import math
-import scipy.stats
 import statistics
+import numpy as np
+import scipy.stats
+from scipy.special import comb
 
 def summarize(data):
     """
@@ -116,3 +118,50 @@ def difference_of_means_test(mean_1, stdev_1, n1, mean_2, stdev_2, n2):
 
     return t_statistic, p_value
 
+def uniform_prior(num_points=1000):
+    """
+    Creates a uniform prior distribution for the delimiter probability p.
+
+    Args:
+        num_points: The number of points to use for discretization.
+
+    Returns:
+        A tuple of two arrays:
+        - x: The values of p (from 0 to 1).
+        - prior: The corresponding prior probabilities for each value of p.
+    """
+    x = np.linspace(0, 1, num_points)
+    prior = np.ones_like(x) / num_points  # Uniform distribution
+    return x, prior
+
+def beta_prior(alpha, beta, num_points=1000):
+    """
+    Creates a Beta distribution prior for the delimiter probability p.
+
+    Args:
+        alpha: The alpha parameter of the Beta distribution.
+        beta: The beta parameter of the Beta distribution.
+        num_points: The number of points to use for discretization.
+
+    Returns:
+        A tuple of two arrays:
+        - x: The values of p (from 0 to 1).
+        - prior: The corresponding prior probabilities for each value of p.
+    """
+    x = np.linspace(0, 1, num_points)
+    prior = scipy.stats.beta.pdf(x, alpha, beta)
+    return x, prior
+
+def binomial_likelihood(n, z, p):
+    """
+    Calculates the binomial likelihood of observing z delimiters in a sentence of length n.
+
+    Args:
+        n: The length of the sentence (integer).
+        z: The number of delimiters in the sentence (integer).
+        p: The prior probability of a character being a delimiter.
+
+    Returns:
+        The likelihood of observing z delimiters in a sentence of length n.
+    """
+    return comb(n, z) * (p ** z) * ((1 - p) ** (n - z))

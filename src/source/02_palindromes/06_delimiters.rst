@@ -996,6 +996,95 @@ What do you think, Ada? Did I derive the prior distribution properly? Or did I m
 
 
 
+Here's a corrected analysis and a revised likelihood function:
+
+Understanding the Problem:
+
+We have a sentence of length n.
+Each character can either be a delimiter (with probability p:sub:i, which we want to estimate) or not a delimiter (with probability 1 - p:sub:i).
+The order of delimiters matters. The sequence "a σ a σ a" is different from "a a σ σ a" in our model, even though they have the same number of delimiters.
+Corrected Likelihood Function:
+
+Let's define:
+
+ζ: A sentence of length n.
+I: The set of indices where delimiters are present in ζ. For example, if ζ = "a σ a σ a", then I = {2, 4}.
+p:sub:i`: The probability that the character at position i is a delimiter. This is what our posterior distribution represents.
+The likelihood of observing a specific sentence ζ given the probabilities p:sub:i` is:
+
+L(ζ | p:sub:`1`, ..., p:sub:`n`) = Π:sub:`i=1`:sup:`n` (p:sub:`i` if ζ[i] = σ else (1 - p:sub:`i`))
+This can also be expressed as
+
+L(ζ | p:sub:`1`, ..., p:sub:`n`) = Π:sub:`i∈I` p:sub:`i` * Π:sub:`i∉I` (1 - p:sub:`i`)
+where:
+
+The first product is over all indices i where ζ[i] is a delimiter (i.e., i ∈ I).
+The second product is over all indices i where ζ[i] is not a delimiter (i.e., i ∉ I).
+Explanation:
+
+For each position i in the sentence, we multiply by the probability p:sub:iif it's a delimiter and by(1 - p:sub:i)` if it's not.
+This correctly accounts for the order of delimiters and treats each possible sentence as a unique observation.
+Bayesian Update:
+
+Now we can use this likelihood function to update our prior.  However, directly using the likelihood function will likely lead to underflow issues, so let's use a different approach that will accomplish the same thing.
+
+Let's say we have a prior distribution P(p:sub:i) for each i. We'll initialize it to a uniform distribution, as you suggested. After observing a sentence ζ, the posterior distribution for each *p:sub:i is given by:
+
+P(p:sub:`i` | ζ) =  P(ζ | p:sub:`i`) * P(p:sub:`i`) / P(ζ)
+Where:
+
+P(p:sub:i | ζ): The posterior probability that character i is a delimiter after observing sentence ζ.
+P(ζ | p:sub:i): The likelihood of observing sentence ζ given the probability p:sub:i. This is simply p:sub:i if ζ[i] is a delimiter and (1 - p:sub:i) if it is not.
+P(p:sub:i): The prior probability that character i is a delimiter.
+P(ζ): The probability of observing sentence ζ, which acts as a normalizing constant.
+Simplification:
+
+Since we're using a uniform prior, P(p:sub:i) is constant for all i. Also, P(ζ) is constant for a given sentence. Therefore, the posterior is proportional to the likelihood:
+
+P(p:sub:`i` | ζ) ∝ P(ζ | p:sub:`i`)
+
+
+
+
+
+
+
+
+
+Bayes' Theorem in Our Context:
+
+We want to find P(p | ζ), the posterior probability of the delimiter density p given the observed sentence ζ. Using Bayes' theorem:
+
+P(p | ζ) = [P(ζ | p) * P(p)] / P(ζ)
+Where:
+
+P(p | ζ): Posterior probability of the delimiter density p given the sentence ζ.
+P(ζ | p): Likelihood of observing the sentence ζ given the delimiter density p. This is what our binomial_likelihood function calculates.
+P(p): Prior probability of the delimiter density p.
+P(ζ): Probability of observing the sentence ζ (the evidence or normalizing constant).
+Calculating the Normalizing Constant P(ζ):
+
+You correctly pointed out that P(ζ) should be calculated using the law of total probability. Since we're considering a range of possible p values (our prior), we need to sum the probabilities of observing the sentence ζ over all possible values of p:
+
+P(ζ) = Σ:sub:`p` [P(ζ | p) * P(p)]
+where the summation is over all possible values of p in our prior distribution.
+
+Discrete Approximation:
+
+Since we're dealing with a discrete set of sentence lengths (and thus a discrete set of p values in our prior), we can approximate this summation:
+
+P(ζ) ≈ Σ:sub:`n` [P(ζ | p:sub:`n`) * P(p:sub:`n`)]
+where:
+
+p:sub:nis the prior delimiter density for sentences of lengthn`.
+P(ζ | p:sub:n) is the likelihood of observing sentenceζgivenp:sub:n (calculated using binomial_likelihood).
+P(p:sub:n) is the prior probability associated with sentence lengthn`.
+
+
+
+
+
+
 
 
 

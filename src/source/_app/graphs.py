@@ -66,3 +66,19 @@ def length_histogram(length_freq_dict, mean_length):
     plt.ylabel("Frequency")
     plt.legend()
     plt.show()
+
+def posterior_delimiter_histogram(p_values, posterior_probs, num_bins=20):
+    """
+    Generates a histogram of the posterior delimiter probabilities.
+
+    Args:
+        p_values: The values of p for which the prior is defined.
+        posterior_probs: The posterior probabilities for each p_value.
+        num_bins: The number of bins for the histogram.
+    """
+    plt.figure(figsize=(10, 5))
+    plt.hist(p_values, weights=posterior_probs, bins=num_bins)
+    plt.title(f"Posterior Delimiter Probability Distribution")
+    plt.xlabel("p")
+    plt.ylabel("Probability Density")
+    plt.show()

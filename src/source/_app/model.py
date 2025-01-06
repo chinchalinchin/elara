@@ -48,6 +48,22 @@ def delimiter_density(mean_integral_value, sentence_length):
     d = (2 * mean_integral_value) / (sentence_length + 1)
     return d
 
+def delimit(sentence):
+    """
+    Returns a list of delimiter indices in a sentence.
+
+    Args:
+        sentence: The input sentence (string).
+
+    Returns:
+        A list of integers, where each integer is the index of a delimiter in the sentence.
+    """
+    delimiter_indices = []
+    for i, char in enumerate(sentence):
+        if delimiter_count(char):
+            delimiter_indices.append(i + 1)  # Add 1 to match our 1-based indexing
+    return delimiter_indices
+
 def is_palindrome(sentence):
     """
     Checks if a sentence is a palindrome based on our formal definition.
