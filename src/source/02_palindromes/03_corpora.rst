@@ -306,13 +306,13 @@ The following theorem uses this notation to proves an intuitive concept: the tot
 
 .. _theorem_2_1_1:
 
-**Theorem 2.1.1** ∀ ζ ∈ C:sub:`L`:  ∑:sub:`j=1`:sup:`Λ(ζ)` l(ζ{j}) ≥ Λ(ζ)
+**Theorem 2.1.1** :math:`\forall \zeta \in C_{L}:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)`
 
 This theorem can be stated in natural language as follows: For any sentence *ζ* in Corpus **C**:sub:`L`, the sum of the String Lengths of the Words in *ζ* is always greater than the Word Length of *ζ*.
 
-Assume ζ ∈ C:sub:`L`. Let *j* be a natural number such that *1 ≤ j ≤ Λ(ζ)*
+Assume :math:`\zeta \in C_L`. Let *j* be a natural number such that :math:`1 ≤ j ≤ \Lambda(\zeta)`
 
-For each ordered Word ζ{j} in ζ, its String Length *l(ζ{j})* must be greater 0 by the Discovery Axiom W.2 and Definition 1.1.3. Therefore, since each Word contributes at least a String Length of 1, the sum of the String Lengths *l(ζ{j})* must be greater than or equal to *Λ(ζ)*. ∎
+For each ordered Word *ζ{j}* in *ζ*, its String Length *l(ζ{j})* must be greater 0 by the Discovery Axiom W.2 and Definition 1.1.3. Therefore, since each Word contributes at least a String Length of 1, the sum of the String Lengths *l(ζ{j})* must be greater than or equal to *Λ(ζ)*. ∎
 
 Word Length and Word Index Notation can be used to define the notion of *Boundary Words*, which will be utilized in the main results about Palindromes. 
 
@@ -320,12 +320,17 @@ To illustrate another simplification effected by Index notation in formal proofs
 
 .. _theorem_2_1_2:
 
-**Theorem 2.1.2** ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+**Theorem 2.1.2** :math:`\forall \zeta, \xi \in C_{L}: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
 
 Let *ζ* and *ξ* be arbitrary Sentences in **C**:sub:`L`. Let **W**:sub:`ζ` and **W**:sub:`ξ` be the Word-level representations of *ζ* and *ξ*, respectively. By Definition 2.1.4, 
 
-    1. Λ(ζ) = | W:sub:`ζ` |
-    2. Λ(ξ) = | W:sub:`ξ` |.
+.. math::
+
+    1. \Lambda(\zeta) = | W_{\zeta} |
+
+.. math::
+
+    2. \Lambda(\zeta) = | W_{\xi} |
 
 Let *ζξ* be the concatenation of *ζ* and *ξ*. When *ζ* is concatenated to *ξ*, there are several possible cases to consider. 
 
@@ -334,28 +339,43 @@ Let *ζξ* be the concatenation of *ζ* and *ξ*. When *ζ* is concatenated to *
    - ζ[l(ζ)] ≠ σ, ξ[1] = σ
    - ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ
 
-Case 1 - 3: In each of theses cases, the Words of *ζ* and the Words of *ξ* are still separated by at least one Delimiter. Therefore, no new Word is formed during concatenation, and the words in *ζξ* are simply the words of *ζ* followed by the words of *ξ*. Therefore, 
+**Case 1 - 3**: In each of theses cases, the Words of *ζ* and the Words of *ξ* are still separated by at least one Delimiter. Therefore, no new Word is formed during concatenation, and the words in *ζξ* are simply the words of *ζ* followed by the words of *ξ*. Therefore, 
 
-    3. Λ(ζξ) = Λ(ζ) + Λ(ξ).
+.. math::
 
-Case 4: ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ. 
+    3. \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).
+
+**Case 4**: ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ. 
 
 In this case, a new Word may be formed during concatenation, but only if *ζ{Λ(ζ)}* concatenated with *ξ{1}* belongs to L (i.e., *(ζ{Λ(ζ)})(ξ{1})* if it is a compound Word). Let *t* be the String such,
 
-    4. t = (ζ{Λ(ζ)})(ξ{1})
+.. math::
+
+    4. t = (\zeta\{\Lambda(\zeta)})(\xi\{1\})
 
 This result can be expressed,
 
-    5. t ∈ L → Λ(ζξ) = Λ(ζ) + Λ(ξ) - 1.
-    6. t ∉ L → Λ(ζξ) = Λ(ζ) + Λ(ξ).
+.. math::
+
+    5. t \in L \rightarrow \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi) - 1.
+    
+.. math::
+
+    6. t \notin L \rightarrow \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).
 
 In all cases, 
 
-    Λ(ζξ) ≤ Λ(ζ) + Λ(ξ).
+.. math::
 
-Since *ζ* and *ξ* were arbitrary sentences, this can be generalized,
+    \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi).
 
-    ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ) ∎
+Since *ζ* and *ξ* were arbitrary sentences, this can be generalized over the Corpus,
+
+.. math::
+
+    \forall \zeta, \xi \in C_L: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi) 
+    
+∎
 
 Word Length is fundamentally different to String Length with respect to the operation of concatenation. In Theorem 1.1.1, it was shown String Length sums over concatenation. Theorem 2.1.2 demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.
 
@@ -372,73 +392,99 @@ Colloquially, in the Sentence, *"never a dull day"*, the ordered Characters *"a"
 
 Let *ζ* be a Sentence in C:sub:`L`. The Character *ζ[k]* is said to *intervene* the Words *ζ{i}* and *ζ{j}*, denoted as *(i/k/j)*:sub:`ζ`, if the following condition holdS
 
-   l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < k < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1 ∎
+.. math::
+
+   l(D\Pi_{x=1}^{i} \zeta(x)) < k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 ∎
 
 The meaning of Definition 2.1.6 is not immediately intuitive, so a an explanation and thorough example are now presented to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.
 
 Analyzing each component of the inequality in Definition 2.1.6: 
 
-- l(DΠ:sub:`x=1`:sup:`i` ζ(x)): This represents the length of the Delimitation of the first i words of the sentence ζ. In simpler terms, it's the length of the string up to and including the i-th word, including the delimiters.
+- :math:`l(D\Pi_{x=1}^{i} \zeta(x))`: This represents the length of the Delimitation of the first i words of the sentence ζ. In simpler terms, it's the length of the string up to and including the i-th word, including the delimiters.
 
 - k: This is the index of the character in question, ζ[k].
   
-- l(ζ) - l(DΠ:sub:x=1:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1: This is the most complex component for the formula, so it deserves a finer analysis,
+- :math:`l(\zeta) - l(D\Pi_{x=1}^{Λ(ζ) - j + 1} inv(ζ)(x)) + 1`: This is the most complex component for the formula, so it deserves a finer analysis,
     
-    1. Λ(ζ) - j + 1: This calculates the index of the word in the reversed sentence that corresponds to the j:sup:`th` word in the original sentence.
+    1. :math:`\Lambda(\zeta) - j + 1`: This calculates the index of the word in the reversed sentence that corresponds to the j:sup:`th` word in the original sentence.
    
-    2. DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x): This is the Delimitation of the first (Λ(ζ) - j + 1) Words of the Inverse of the Sentence *ζ*. This will correspond to the beginning portion of the reversed Sentence up to the Word that corresponds to the j:sup:`th` Word in the original Sentence.
+    2. :math:`D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)`: This is the Delimitation of the first :math:`(\Lambda(\zeta) - j + 1)` Words of the Inverse of the Sentence *ζ*. This will correspond to the beginning portion of the reversed Sentence up to the Word that corresponds to the j:sup:`th` Word in the original Sentence.
    
-    3. l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)): This is the length of that initial portion of the reversed Sentence.
+    3. :math:`l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x))`: This is the length of the initial portion of the reversed Sentence.
    
-    4. l(ζ) - l(DΠ:sub:x=1:sup:Λ(ζ) - j + 1 inv(ζ)(x)): This subtracts the length of the initial portion of the reversed sentence from the total length of the original sentence. This gives us the length of the remaining portion of the original sentence, starting from the character after the word corresponding to j in the original sentence.
+    4. :math:`l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1 \text{inv}(\zeta)(x))`: This subtracts the length of the initial portion of the reversed sentence from the total length of the original sentence. This gives us the length of the remaining portion of the original sentence, starting from the character after the word corresponding to j in the original sentence.
    
-    5. l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1: Finally, add 1 to get the index of the first Character after the word corresponding to j in the original sentence.
+    5. :math:`l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta)} - j + 1 \text{inv}(\zeta)(x)) + 1`: Finally, add 1 to get the index of the first Character after the word corresponding to j in the original sentence.
 
 To aid in the comprehension of the concept being captured with Definition 2.1.6, the following example shows how to calculate an Intervention.
 
 **Example** 
 
 Let *ᚠ = "repaid a regal leper"*. Note the String and Word Lengths are given by,
-   
-    l(ᚠ) = 20
+
+.. math::
+
+    l(\rune{f}) = 20
     
-    Λ(ᚠ) = 4
+.. math::
+
+    \Lambda(\rune{f}) = 4
     
 The Word-level representation of this Sentence is given by,
 
-    W:sub:`ᚠ` = { (1, "repaid"), (2, "a"), (3, "regal"), (4, "leper") }
+.. math::
+
+    W_{\rune{f}} = \{ (1, \text{"repaid"}), (2, \text{"a"}), (3, \text{"regal"}), (4, \text{"leper"}) \}
 
 Note *inv(ᚠ) = "repel lager a diaper"*. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see Definition 2.2.1 in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see Definition 2.3.1 for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
 
-    W:sub:`inv(ᚠ)` = { (1, "repel"), (2, "lager"), (3, "a"), (4, "diaper) }
+    W_{inv(\rune{f})} = \{ (1, \text{"repel"}), (2, \text{"lager"}), (3, \text{"a"}), (4, \text{"diaper}) }
     
 To see how Definition 2.1.6 can be used to assert a Character falls between two Words in a sentence, calculate the following Delimitations and String Lengths.
 
 Consider the words *"a"* and *"leper"*. *"a"* corresponds to the Word Index 2,
 
-    ᚠ{2} = "a"
+.. math::
+
+    \rune{f}\{2\} = \text{"a"}
 
 Calculating the left-hand side of the inequality in Definition 2.1.6,
 
-    DΠ:sub:`x=1`:sup:`2` ᚠ(x) = "repaid a"
-    l(DΠ:sub:`x=1`:sup:`2` ᚠ(x)) = 8
+.. math::
+
+    D\Pi_{x=1}^{2} \rune{f}(x) = \text{"repaid a"}
+
+.. math::
+    
+    l(D\Pi_{x=1}^{2} \rune{f}(x)) = 8
 
 The String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 2*. Now note *"leper"* occupies the Word Index 4, 
 
-    ᚠ{4} = "leper"
+.. math::
+
+    \rune{f}\{4\} = \text{"leper"}
 
 This corresponds to a *j = 4* in Definition 2.1.6. The upperhand limit in the Delimitation on the right-hand side of the inequality in Definition 2.1.6 is given by,
 
-    Λ(ᚠ) - j + 1 = 4 -  4 + 1 = 1
+.. math::
+
+    \Lambda(\rune{f}) - j + 1 = 4 -  4 + 1 = 1
 
 Therefore, the corresponding Delimitation of the Inverse Sentence for Definition 2.1.6 is given by,
 
-    DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x) = "repel"
-    l(DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x)) = 5
+.. math::
+
+    D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x) = \text{"repel"}
+
+.. math::
+
+    l(D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x)) = 5
 
 Working from the back of the Sentence, the String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 4*. Calculating the right-hand side of the inequality in Definition 2.1.6, 
 
-    l(ᚠ) - l(DΠ:sub:`x=1`:sup:`1` inv(ᚠ)(x)) + 1 = 20 - 5 + 1 = 16
+.. math::
+
+    l(\rune{f}) - l(D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x)) + 1 = 20 - 5 + 1 = 16
 
 By Definition 2.1.6, the Characters *ᚠ[k]* between the indices of 8 and 16 (exclusive) *intervene* *ᚠ{2}* and *ᚠ{4}*, namely, 
 

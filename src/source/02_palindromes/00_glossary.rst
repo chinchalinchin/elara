@@ -138,7 +138,7 @@ Theorems
 - T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
 - T 2.1.1: :math:`\forall \zeta \in C_{L}:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)`
 - T 2.1.2: :math:`\forall \zeta, \xi \in C_{L}: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
-- T 2.1.3: :math:`\forall \zeta \in C_{L}: \forall i, j \in \mathbb{N}_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in \mathbb{N}_{l(\zeta)}: (i/n/j)_{\zeta}`
+- T 2.1.3: :math:`\forall \zeta \in C_{L}: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
 - T 2.2.1: :math:`\forall \zeta \in C_{L}: l(\zeta) \neq 0`
 - T 2.2.2: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
 - T 2.2.3: :math:`\forall \zeta \in C_{L} : \forall i \in \mathbb{N}_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
