@@ -112,9 +112,9 @@ Axioms
 ------
 
 - Character Axiom C.1: :math:`\forall ⲁ \in \Sigma: ⲁ \in S`
-- Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
+- Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
 - Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
-- Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta\{i\} \in L`
+- Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L`
 .. _theorems:
 
 Theorems
@@ -124,8 +124,8 @@ Theorems
 - T 1.1.2: :math:`| S | \geq \aleph_{1}`
 - T 1.1.3: :math:`\forall s \in S: \varepsilon \subset_{s} s`
 - T 1.2.1: :math:`\forall \alpha \in L:  \alpha \varepsilon = \varepsilon \alpha = \alpha`
-- T 1.2.2: :math:`\forall \alpha \in L : \forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] \subset_{s} \alpha`
-- T 1.2.3: :math:`\forall \alpha \in L : \forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] \neq \varepsilon`
+- T 1.2.2: :math:`\forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_{s} \alpha`
+- T 1.2.3: :math:`\forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon`
 - T 1.2.4: :math:`\forall s \in S: \text{inv}(\text{inv}(s)) = s`
 - T 1.2.5: :math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
 - T 1.2.6: :math:`\forall u, t \in S : u \subset_{s} t \leftrightarrow \text{inv}(u) \subset_{s} \text{inv}(t)`
