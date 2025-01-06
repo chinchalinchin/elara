@@ -5,7 +5,9 @@ Some general notation adopted throughout the course of this work is given below.
 
 1. **N**:sub:`n` will represent the set of natural numbers starting at 1 and ending at *n*, 
 
-    N:sub:`n`= { 1, 2, ... , n }
+.. math::
+
+    N_n = \{ 1, 2, ... , n \}
 
 2. The cardinality of a set **A** will be denoted | A |
 
@@ -46,25 +48,30 @@ The Empty Character also deserves special mention, since it represents a *null* 
 
 Take note, at this point it is has not yet been shown that Characters are Strings; the preceding statements should be taken heuristically. This will be rectified in the next section with the formal definition of concatenation and the introduction of Character Axiom C.1. 
 
-The aggregate of all Characters is called an *Alphabet* and is denoted by an uppercase Sigma, **Σ**,
+The aggregate of all Characters is called an *Alphabet* and is denoted by an uppercase Sigma, :math:`\Sigma`,
 
-    Σ = { *ε*, *σ*, *𝔞*, *𝔟*,  *𝔠*, ... }
+.. math::
+
+    \Sigma = { \varepsilon, \sigma, \mathfrak{a}, \mathfrak{b}, \mathfrak{c}, ... }
 
 It will sometimes be necessary to refer to indeterminate Characters, so notation is introduced for Character Variables,
 
     1. Character Variables (*ⲁ*, *ⲃ*, *ⲅ*, etc. ): Lowercase Coptic letters will represent Character Variables, i.e. indeterminate Characters. Subscripts will occassionally be used with Coptic letters to denote Word Variables, (*ⲁ*:sub:`1`, *ⲁ*:sub:`2`, ... )
 
-Once again, it should be noted when Character Variables are used with subscripts, it is meant to refer to the capacity of a Character Variable to be indeterminate at a *determinate position* within a String. Moreover, the range of a Character Variable is understood to be the Alphabet **Σ** from which it is being drawn.
+Once again, it should be noted when Character Variables are used with subscripts, it is meant to refer to the capacity of a Character Variable to be indeterminate at a *determinate position* within a String. Moreover, the range of a Character Variable is understood to be the Alphabet :math:`\Sigma` from which it is being drawn.
 
 At this early stage, the formal system needs to introduce a notion of *equality* to make any significant headway. There will be a several types of equality defined within the system, but each new layer of equality will be built on top of the primitive notion of *Character Equalty* now introduced in the first preliminary Axiom to the formal system.
 
 **Axiom C.0: The Equality Axiom**
 
-For any Characters *ⲁ, ⲃ ∈* **Σ**, the notion of equality, denoted by *ⲁ = ⲃ*, is a primitive concept and assumed to be understood. It is further assumed that Character Equality is an equivalence relation, satisfying reflexivity, symmetry and transitivity,
+For any Characters :math:`ⲁ, ⲃ \in \Sigma`, the notion of equality, denoted by :math:`ⲁ = ⲃ`, is a primitive concept and assumed to be understood. It is further assumed that Character Equality is an equivalence relation, satisfying reflexivity, symmetry and transitivity,
 
-    1. ∀ ⲁ ∈ Σ: ⲁ = ⲁ
-    2. ∀ ⲁ, ⲃ ∈ Σ: ⲁ = ⲃ ↔ ⲃ = ⲁ
-    3. ∀ ⲁ, ⲃ, ⲅ ∈ Σ: (ⲁ = ⲃ ∧ ⲃ = ⲅ) → (ⲁ = ⲅ) ∎ 
+    1. :math:`\forall ⲁ \in \Sigma: ⲁ = ⲁ`
+    2. :math:`\forall ⲁ, ⲃ \in \Sigma: ⲁ = ⲃ \leftrightarrow ⲃ = ⲁ`
+    3. :math:`\forall ⲁ, ⲃ, ⲅ \in \Sigma: (ⲁ = ⲃ \land ⲃ = ⲅ) \rightarrow (ⲁ = ⲅ)`
+∎ 
+
+Character Equality will be used to define *String Equality* in Definition 1.14 and Word Equality in 1.2.3.
 
 Concatenation 
 ^^^^^^^^^^^^^
@@ -75,16 +82,16 @@ Concatenation is considered the sole constitutive operation for the formation of
 
 The result of *concatenating* any two Characters *ⲁ* and *ⲃ** is denoted *ⲁⲃ*. To make the operands of concatenation clear, parenthesis will sometimes be used to separate the Characters being concatenated, e.g. *ⲁ(ⲃ) = (ⲁ)ⲃ = (ⲁ)(ⲃ) = ⲁⲃ*. Character concatenation is defined inductively through the following schema,
 
-    1. Basis Clause: ∀ ⲁ ∈ Σ: ⲁε = ⲁ
-    2. Inductive Clause: ∀ ⲁ, ⲃ ∈ Σ, ∀ s ∈ S: ⲁ(ⲃs) = (ⲁⲃ)s
-    3. Uniqueness Clause: ∀ ⲁ, ⲃ, ⲅ, ⲇ ∈ Σ: (ⲁⲃ = ⲅⲇ) → ((ⲁ = ⲅ) ∧ (ⲃ = ⲇ)) 
-    4. Comprehension Clause: ∀ ⲁ ∈ Σ, ∀ s ∈ S: ⲁs ∈ S ∎
+    1. Basic Clause: :math:`\forall ⲁ \in \Sigma: ⲁ \varepsilon = ⲁ`
+    2. Inductive Clause: :math:`\forall ⲁ, ⲃ \in \Sigma, \forall s \in S: ⲁ(ⲃs) = (ⲁⲃ) s`
+    3. Uniqueness Clause: :math:`\forall ⲁ, ⲃ, ⲅ, ⲇ \in \Sigma: (ⲁⲃ = ⲅⲇ) \rightarrow ((ⲁ = ⲅ) \land (ⲃ = ⲇ))` 
+    4. Comprehension Clause: :math:`\forall ⲁ \in \Sigma, \forall s \in S: (ⲁs) \in S` ∎
 
-Colloquially, *ⲁⲃ* is the String that results from placing *ⲃ* behind *ⲁ*.
+Colloquially, :math:`ⲁⲃ` is the String that results from placing :math:`ⲃ` behind :math:`ⲁ`.
 
 The first clause in Definition 1.1.1 is the basis step of induction which states any Character appended to the Empty Character is the Character itself. The second clause is the inductive step which allows the concatenation of Characters of arbitrary length into Strings through recursion.
 
-The Uniqueness Clause states that if the concatenation of two characters *ⲁ* and *ⲃ* is equal to the concatenation of two other characters *ⲅ* and *ⲇ*, then it must be the case that *ⲁ* is equal to *ⲅ* and *ⲃ* is equal to *ⲇ*. In other words, there's only one set of Characters that can form a given String through concatenation.
+The Uniqueness Clause states that if the concatenation of two characters :math:`ⲁ` and :math:`ⲃ`` is equal to the concatenation of two other characters *ⲅ* and :math:`ⲇ`, then it must be the case that :math:`ⲁ` is equal to :math:`ⲅ` and :math:`ⲃ` is equal to :math:`ⲇ`. In other words, there's only one set of Characters that can form a given String through concatenation.
 
 It is assumed that the operation of concatenation is closed with respect to the set of all Strings **S**. In other words, concatenation will always yield a String. This assumption is partly captured in the Comprehension Clause of Definition 1.1.1. This clause ensures that the result of concatenating any Character with a String is a String. However, this clause in and of itself does not ensure the closure of **S** with respect to concatenation. In order to close **S** over concatenation, an additional assumption must be introduced. Before introducing this assumption in the form of an axiom, a brief explanation is required for this departure from convention.
 
@@ -92,23 +99,29 @@ Concatenation as it is normally found in the fields of automata theory or regula
 
 The reason for this distinction will become clear as the formal theory begins to detail palindromic structures that display symmetry across linguistic levels. It should only be noted at this point that Definition 1.1.1 is a conscious decision to depart from convention.
 
-To make this distinction plain, consider that given an Alphabet **Σ** and Definition 1.1.1, one still cannot say the result of a concatenation of two Characters is a String, nor make any claim about the contents of **S**, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating two or more Characters is itself a String. 
+To make this distinction plain, consider that given an Alphabet :math:`\Sigma` and Definition 1.1.1, one still cannot say the result of a concatenation of two Characters is a String, nor make any claim about the contents of :math:`S`, the set of all Strings. The Comprehension Clause of Definition 1.1.1 only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating two or more Characters is itself a String. 
 
 In order to rectify this, the first (official) Axiom is now introduced.
 
 **Axiom C.1: The Character Axiom**
 
-    ∀ ⲁ ∈ Σ: ⲁ ∈ S
+.. math::
+
+    \forall ⲁ \in \Sigma: ⲁ \in S
 
 This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with Definition 1.1.1, immediately populates the set of all Strings **S** with an uncountably infinite domain of objects (See Theorem 1.1.2 for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet, in every possible order. In other words, Axiom C.1 in conjunction with Definition 1.1.1 ensure the domain is non-Empty. 
 
 **Example** Let *s = 𝔞𝔟𝔠* and *t = 𝔡𝔢𝔣*. The concatenation of these two Strings *st* is written,
 
-    st = (𝔞𝔟𝔠)(𝔡𝔢𝔣) 
+.. math::
+
+    st = (\mathfrak{abc})(\mathfrak{def}) 
     
 Using the inductive clause, this concatenation can be grouped into simpler concatenations as follows,    
     
-    𝔞(𝔟(𝔠(𝔡(𝔢𝔣)))) = (((((𝔞𝔟)𝔠)𝔡)𝔢)𝔣) = 𝔞𝔟𝔠𝔡𝔢𝔣
+.. math::
+
+    \mathfrak{a}(\mathfrak{b}(\mathfrak{c}(\mathfrak{d}(\mathfrak{ef})))) = (((((\mathfrak{ab})\mathfrak{c})\mathfrak{d})\mathfrak{e})\mathfrak{f}) = \mathfrak{abcdef}
 
 Therefore, *st = 𝔞𝔟𝔠𝔡𝔢𝔣* ∎
 
@@ -117,15 +130,21 @@ Length
 
 It will sometimes be convenient to represent Strings as ordered sets of Characters, rather than serialized concatenations of Characters. The two formulations are equivalent, but the set representation has advantages when it comes to quantification and symbolic logic. When a String or Word representation is intended to be interpretted as a set, it will be written in bold uppercase letters. For example, the String represented as the concatenation *s*:sub:`1` *= 𝔞𝔟𝔠* would be represented in this formulation as a set of ordered pairs **S**:sub:`1`, where the first coordinate encodes the position of the Character in the String,
 
-    S:sub:`1` = { (1, 𝔞), (2, 𝔟), (3, 𝔠) }
+.. math::
+
+    S_1 = \{ (1, \mathfrak{a}), (2, \mathfrak{b}), (3, \mathfrak{c}) \}
 
 Note, since sets do not preserve order, this would be equivalent to,
 
-    { (3, 𝔠), (2, 𝔟), (1, 𝔞) }
+.. math::
+
+    { (3, \mathfrak{a}), (2, \mathfrak{b}), (1, \mathfrak{c}) }
 
 To simplify notation, it is sometimes beneficial to represent this set as a sequence that *does* preserve order as,
 
-    S:sub:`1` = (𝔞, 𝔟, 𝔠) 
+.. math::
+
+    S_1 = (\mathfrak{a}, \mathfrak{b}, \mathfrak{c}) 
 
 However, before adopting this notation formally, a problem exists. It is the intention of this analysis to treat Empty Characters as vacuous, i.e. Characters without semantic content. However, this does not mean the Empty Character will not be treated as a legitimate entity within the confines of the formal system. Instead, the goal is to construct a formal system that excludes the Empty Character from the domain of semantics, but not the domain of syntax. 
 
@@ -239,7 +258,11 @@ Let *t = ("ab")(ε)("c")*.
 
 The result returned by the Emptying Algorithm would then be,
 
-    T = {(1, "a"), (2, "b"), (3, "c")} ∎
+.. math::
+
+    T = \{ (1, \text{"a"}), (2, \text{"b"}), (3, \text{"c"}) \} 
+
+Note the Emptying Algorithm results in consecutive indices while also removing the Empty Character. ∎
 
 This method of abstraction and notation will be employed extensively in the subsequent proofs. It will be made more convenient with Character Index notation in the next section, after the preliminary notion of *String Length* is defined. However, in order to define String Length, a method of referring to a String as a set of ordered non-Empty Characters is required. The construction afforded by the Emptying Algorithm operating on any input String *t* will serve that purpose.  
 
@@ -258,7 +281,11 @@ This example motivates the following definition.
 
 Let *t* be a String. Let **T** be the Character-level set representation of *t* constructed through the Emptying Algorithm in Definition 1.1.2. The String Length of *t*, denoted *l(t)*, is the number which satisfies the following formula,
 
-    l(t) = | T | ∎
+.. math::
+
+    l(t) = | T | 
+    
+∎
 
 **Example** 
 
@@ -266,39 +293,57 @@ Consider the String *t = ("aa")(ε)("b")(ε)("bcc")*
 
 By Definition 1.1.3, 
 
-    T = { (1, "a"), (2, "a"), (3, "b"), (4, "b"), (5, "c"), (6, "c") }
+.. math::
+
+    T = \{ (1, \text{"a"}), (2, \text{"a"}), (3, \text{"b"}), (4, \text{"b"}), (5, \text{"c"}), (6, \text{"c"}) \}
 
 Therefore, 
 
-    | T | = 6 ∎
+.. math::
+
+    | T | = 6 
+    
+∎
 
 This formalization of String Length, with the Emptying Algorithm, while perhaps prosaic, maps to the intuitive notion of a String's length, i.e. the number of non-Empty Characters, while still allowing for a calculus of concatenation that involves Empty Characters. For reasons that will become clear in Section II, *l(s)* will be called the *String Length* of a String s. 
 
 To confirm Definitions 1.1.2 and 1.1.3 correspond to reality, a theorem confirming its expected behavior is now derived. Definition 1.1.3 ensures the String Length of concatenated Strings is equal to the sum of their individual String Lengths, as demonstrated by Theorem 1.1.1.
 
-**Theorem 1.1.1** ∀ u, t ∈ S: l(ut) = l(u) + l(t)
+**Theorem 1.1.1** :math:`\forall u, t \in S : l(ut) = l(u) + l(t)`
 
 Let *u* and *t* be arbitrary strings in **S**. Let **U** and **T** be the character-level representations of *u* and *t*, respectively,
 
-    U = ( 𝔞:sub:`1`, 𝔞:sub:`2`, ... , 𝔞:sub:`l(s)`)
+.. math::
 
-    T = ( 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)``)
+    U = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(s)} )
+
+.. math::
+
+    T = ( \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)} )
 
 Let *ut* be the concatenation of *u* and *t*. By Definition 1.1.1, the Character-level representation of *ut* is,
 
-    UT = ( 𝔞:sub:`1`, 𝔞:sub:`2`, ..., 𝔞:sub:`l(s)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)`)
+.. math::
 
-By Definition 1.1.3, the String Length of a String is the number of indexed non-Empty Characters it contains. Thus, *l(u)* is the number of non-Empty Characters in *u*, *l(t)* is the number of non-Empty Characters in *t*, and *l(ut)* is the number of non-Empty Characters in *ut*.
+    UT = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(s)}, \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)})
+
+By Definition 1.1.3, the String Length of a String is the number of indexed non-Empty Characters it contains. Thus, :math:`l(u)` is the number of non-Empty Characters in *u*, :math:`l(t)` is the number of non-Empty Characters in *t*, and :math:`l(ut)` is the number of non-Empty Characters in *ut*.
 
 Since concatenation simply joins Characters without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the non-Empty Characters in *ut* are precisely the non-Empty Characters from *u* followed by the non-Empty Characters from *t*.
 
 Therefore, the total number of non-Empty Characters in *ut* is the sum of the number of non-Empty characters in *u* and the number of non-Empty Characters in *t*,
 
+.. math::
+
     l(ut) = l(u) + l(t)
 
-Since *u* and *t* were arbitrary strings, this can be generalized,
+Since *u* and *t* were arbitrary strings, this can be generalized over the set of all Strings,
 
-*   ∀ u, t ∈ S: l(ut) = l(u) + l(t) ∎
+.. math::
+
+    \forall u, t \in S : l(ut) = l(u) + l(t)`
+
+∎
 
 With the concept of String Length now defined, it is also a simple matter to define String Equality in terms of Character Equality using the Equality Axiom C.0.
 
@@ -306,16 +351,20 @@ With the concept of String Length now defined, it is also a simple matter to def
 
 Let *t* be a String. Let **T** be the Character-level set representation of *t* constructed through Definition 1.1.2,
 
-    T = { (i, 𝔞:sub:`i`) | 1 ≤ i ≤ l(t) }
+.. math::
+
+    T = \{ (i, \mathfrak{a}_i) | 1 \leq i \leq l(t) \}
      
 Let *u* be a String. Let **U** be the Character-level set representation of *u* constructed through Definition 1.1.2,
 
-    U = { (i, 𝔟:sub:`j`) | 1 ≤ j ≤ l(u) }
+.. math::
+
+    U = \{ (i, \mathfrak{b}_j) | 1 \leq j \leq l(u) \}
 
 The string *t* is said to be *equal* to String *u* if the Strings have equal length and the Characters at each corresponding index are equal. Formally, *t = u* if and only if,
 
-    1. l(t) = l(u) (The String Lengths of t and u are equal)
-    2. ∀ i ∈ N:sub:`l(t)`: 𝔞:sub:`i` = 𝔟:sub:`i` (The Characters at each corresponding index are equal) ∎
+    1. :math:`l(t) = l(u)` (The String Lengths of t and u are equal)
+    2. :math:`\forall i \in N_{l(t)}: \mathfrak{a}_{i} = \mathfrak{b}_{i}` (The Characters at each corresponding index are equal) ∎
 
 Finally, String Length provides the means for a quality-of-life enhancement to the formal system in the form of Character Index notation.
 
@@ -323,9 +372,11 @@ Finally, String Length provides the means for a quality-of-life enhancement to t
 
 Let *t* be a string with Character-level representation **T**,
  
-    T = (𝔞:sub:`1`, 𝔞:sub:`2`, ..., 𝔞:sub:`l(t)`). 
+ .. math::
+
+    T = (\mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(t)}). 
     
-Then for any *i* such that *1 ≤ i ≤ l(t)*, *t[i]* is defined as *𝔞*:sub:`i`, where (*i*, *𝔞*:sub:`i`) *∈* **T**. ∎
+Then for any *i* such that :math:`1 \leq i \leq l(t)`, :math:`t[i]` is defined as *𝔞*:sub:`i`, where :math:`(i, \mathfrak{a}_i) \in T`. ∎
 
 Character Index notation will simplify many of the subsequent proofs, so it is worth taking a moment to become familiar with its usage. Indexing starts at 1, consistent with the definition of **N**:sub:`n` made in the preamble. So, *t[1]* is the first character of *t*, *t[2]* is the second, and so on.
 
@@ -333,17 +384,19 @@ In terms of the Character-level set representation, *t[i]* refers to the Charact
 
 **Example**
 
-If s = "abc", then s[1] = "a", s[2] = "b", and s[3] = "c". ∎
+If *s = "abc"*, then *s[1] = "a"*, *s[2] = "b"*, and *s[3] = "c"*. ∎
 
 With the notion of String Length established for each element in the domain and some of its basic properties established, the size of the domain itself, **S**, will now be elaborated in greater detail.
   
 It is assumed **S** is at least uncountably infinite. A rigorous proof of this fact would carry the current work too far into the realm of real analysis, but as motivation for this assumption, an informal proof is presented below based on Cantor's famous diagonalization argument. 
 
-**Theorem 1.1.2** | S | ≥ ℵ:sub:`1`
+**Theorem 1.1.2** :math:`| S | \geq \aleph_{1}`
 
 Assume, for the sake of contradiction, that the set of all Strings **S** is countable. This means the Strings can be listed in some order, 
 
-    s:sub:`1`, s:sub:`2`, s:sub:`3`, etc.
+.. math::
+    
+    s_1, s_2, s_3, ...
 
 Now, construct a new String *t* as follows:
 
@@ -360,35 +413,51 @@ Similar to the explication of *length*, the notion of a String *containing* anot
 
 Consider the Strings *"rat"* and *"strata"*. The string *"rat"* *is contained* in the String strata", because the order of the String *"rat"* is preserved in *"strata"*. An intuitive way of capturing this relationship is to map the indices of the Characters in *"rat"* to the indices of the Characters in *"strata"* which correspond to the indices in *"rat"*. A cursory (but incorrect) definition of *containment* can then be attempted, using this insight as a guide.
 
-**Containment (Incorrect Version)** t ⊂:sub:`s` u
+**Containment (Incorrect Version)** :math:`t \subset_{s} u` 
 
 Let *t* and *u* be Strings. *t* is said to be *contained in u*, denoted by,
 
-    t ⊂:sub:`s` u
+.. math::
 
-If and only if there exists a strictly increasing function *f*: **N**:sub:`t` *→* **N**:sub:`u` such that:
+    t \subset_{s} u
 
-    ∀ i ∈ N:sub:`l(t)`: t[i] = u[f(i)] ∎
+If and only if there exists a strictly increasing function :math:`f: N_{l(t)} \rightarrow N_{l(u)}` such that:
+
+.. math::
+
+    \forall i \in N_{l(t)}: t[i] = u[f(i)]
+    
+∎
     
 This definition essentially states that *t* is contained in *u* if and only if there's a way to map the Characters of *t* onto a subsequence of the Characters in *u* while preserving their order. The function *f* ensures that the Characters in *t* appear in the same order within *u*. While this definition is incorrect, the reason why this version of *containment* fails is instructive in developing a better understanding of the subtlety involved in attempting its definition. 
 
 First, consider an example where this definition correlates with the intuitive notion of *containment*. Let *t = "rat"* and *u = "strata"*. Then, these Strings can be represented in set notation as,
 
-    T = { (1, "r"), (2, "a"), (3, "t") }
+.. math::
+
+    T = \{ (1, \text{"r"}), (2, \text{"a"}), (3, \text{"t"}) \}
      
-    U = { (1, "s'), (2, "t"), (3, "r"), (4, "a"), (5, "t"), (6, "a") }.
+.. math::
 
-The function *f* defined as *f(1) = 3*, *f(2) = 4*, and *f(3) = 5* satisfies the condition in the proposed definition, as it maps the characters of *"rat"* onto the subsequence *"rat"* within *"strata"* while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
+    U = \{ (1, \text{"s"}), (2, \text{"t"}), (3, \text{"r"}), (4, \text{"a"}), (5, \text{"t"}), (6, \text{"a"}) \}.
 
-    "rat" ⊂:sub:`s` "strata".
+The function *f* defined as :math:`f(1) = 3`, :math:`f(2) = 4`, and :math:`f(3) = 5`` satisfies the condition in the proposed definition, as it maps the characters of *"rat"* onto the subsequence *"rat"* within *"strata"* while preserving their order. In addition, *f* is a strictly increasing function. Therefore, 
+
+.. math::
+
+    \text{"rat"} \subset_{s} \text{"strata"}
 
 Next, consider a counter-example. Let *t = "bow"* and *u = "borrow"*. Then their corresponding set representations are given by,
 
-    T = { (1, "b"), (2, "o"), (3, "w") }
-     
-    U = { (1, "b'), (2, "o"), (3, "r"), (4, "r"), (5, "o"), (6, "w") }
+.. math::
 
-The function defined through *f(1) = 1*, *f(2) = 5* and  *f(3) = 6* satisfies the conditions of the proposed definition. However, intuitively, *"bow"* is *not contained* in the word *"borrow"*. The reason the proposed definition has failed is now clear: the function *f* that is mapping *"bow"* to *"borrow"* skips over the Character indices 2, 3 and 4 in *"borrow"*. In other words, in addition to being strictly increasing, the function *f* which maps the smaller String onto the larger String must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
+    T = \{ (1, \text{"b"}), (2, \text{"o"}), (3, \text{"w"}) }
+     
+.. math::
+
+    U = \{ (1, \text{"b"}), (2, \text{"o"}), (3, \text{"r"}), (4, \text{"r"}), (5, \text{"o"}), (6, \text{"w"}) }
+
+The function defined through :math:`f(1) = 1`, :math:`f(2) = 5` and  :math:`f(3) = 6` satisfies the conditions of the proposed definition. However, intuitively, *"bow"* is *not contained* in the word *"borrow"*. The reason the proposed definition has failed is now clear: the function *f* that is mapping *"bow"* to *"borrow"* skips over the Character indices 2, 3 and 4 in *"borrow"*. In other words, in addition to being strictly increasing, the function *f* which maps the smaller String onto the larger String must also be *consecutive*. This insight can be incorporated into the definition of *containment* by first defining the notion of *consecutive*,
 
 **Definition 1.1.6: Consecutive Functions** 
 
@@ -398,27 +467,45 @@ A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
     
 This additional constraint on *f* ensures that the indices of the larger String in the containment relation are mapped in a sequential, unbroken order to the indices of the smaller String. This definition of *Consecutive Functions* can be immediately utilized to refine the notion of *containment*.
 
-**Definition 1.1.7: Containment** t ⊂:sub:`s` u
+**Definition 1.1.7: Containment** :math:`t \subset_{s} u` 
 
 Let *t* and *u* be Strings. *t* is said to be *contained in u*, denoted by,
 
-    t ⊂:sub:`s` u
+.. math::
 
-If and only if there exists a strictly *increasing and consecutive* function *f*: **N**:sub:`t` *→* **N**:sub:`u` such that:
+    t \subset_{s} u
 
-    ∀ i ∈ N:sub:`l(t)`: t[i] = u[f(i)] ∎
+If and only if there exists a strictly *increasing and consecutive* function :math:`f: N_{l(t)} \rightarrow N_{l(u)}` such that:
+
+.. math::
+
+    \forall i \in N_{l(t)}: t[i] = u[f(i)] 
+    
+∎
 
 The notion of containment will be central to developing the logic of palindromic structures in the subsequent sections. The next theorem establishes a fundamental property regarding containment.
 
-**Theorem 1.1.3** ∀ s ∈ S: ε ⊂:sub:`s` s
+**Theorem 1.1.3** :math:`\forall s \in S: \varepsilon \subset_{s} s`
 
-Let *s* be an arbitrary string in **S**. By Definition 1.1.3, *l(ε) = 0*. Thus, **N**:sub:`l(ε)` *= ∅*.
+Let *s* be an arbitrary string in **S**. By Definition 1.1.3, *l(ε) = 0*. Thus,
 
-The empty function *f: ∅ →* **N**:sub:`l(s)` vacuously satisfies the condition for containment (Definition 1.1.7), as there are no elements in the domain to violate the condition. Therefore, *ε ⊂*:sub:`s` *s*.
+.. math::
 
-Since *s* was arbitrary, this can be generalized,
+   1. N_{l(ε)} = \emptyset
+
+The empty function :math:`f: \emptyset \rightarrow N_{l(s)}` vacuously satisfies the condition for containment (Definition 1.1.7), as there are no elements in the domain to violate the condition. Therefore, 
+
+.. math::
+
+    2. \varepsilon \subset_{s} s
+
+Since *s* was arbitrary, this can be generalized over the set of all Strings,
  
-    ∀ s ∈ S: ε ⊂:sub:`s` s ∎
+.. math::
+
+    \forall s \in S: \varepsilon \subset_{s} s
+    
+∎
 
 Section I.II: Words
 -------------------

@@ -36,7 +36,13 @@ html_theme = 'sphinx_book_theme'
 html_static_path = [ '_static' ]
 
 imgmath_latex_preamble = r'''
-    
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{babel}
+\babelprovide[import, main]{coptic}
+\usepackage{fontspec} 
+\setmainfont{FreeSerif} 
+
 '''
 
 # -- Theme configuration -----------------------------------------------------

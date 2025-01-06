@@ -50,7 +50,7 @@ Definitions
 - D 1.1.4: String Equality: u = t
 - D 1.1.5: Character Index Notation: t[i]
 - D 1.1.6: Consecutive Functions: f(i)
-- D 1.1.7: Containment: :math:`t \subset_{s} u`
+- D 1.1.7: Containment: u ⊂:sub:`s`
 - D 1.2.1: Language: L
 - D 1.2.2: Word: α
 - D 1.2.3: Word Equality: α = β
@@ -111,55 +111,67 @@ Algorithms
 Axioms 
 ------
 
-- Character Axiom C.1: :math:`\forall ⲁ \in \Sigma: ⲁ \in S`
-- Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
-- Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
-- Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta\{i\} \in L`
+- C.1: ∀ ⲁ ∈ Σ: ⲁ ∈ S
+- W.1: ∀ α ∈ L: [ (l(α) ≠ 0) ∧ (∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ) ]
+- S.1: ( ∀ α ∈ L: ∃ ζ ∈ C:sub:`L``: α ⊂:sub:`s` ζ ) ∧ ( ∀ ζ ∈ C:sub:`L`: ∃ α ∈ L: α ⊂:sub:`s` ζ )
+- S.2: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L
+
 .. _theorems:
 
 Theorems
 --------
 
-- T 1.1.1: :math:`\forall u, t \in S : l(ut) = l(u) + l(t)`
+- T 1.1.1: :math:`\for all`
 - T 1.1.2: :math:`| S | \geq \aleph_{1}`
 - T 1.1.3: :math:`\forall s \in S: \varepsilon \subset_{s} s`
 - T 1.2.1: :math:`\forall \alpha \in L:  \alpha \varepsilon = \varepsilon \alpha = \alpha`
 - T 1.2.2: :math:`\forall \alpha \in L : \forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] \subset_{s} \alpha`
 - T 1.2.3: :math:`\forall \alpha \in L : \forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] \neq \varepsilon`
-- T 1.2.4: :math:`\forall s \in S: \text{inv}(\text{inv}(s)) = s`
-- T 1.2.5: :math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
-- T 1.2.6: :math:`\forall u, t \in S : u \subset_{s} t \leftrightarrow \text{inv}(u) \subset_{s} \text{inv}(t)`
-- T 1.2.7: :math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \rightarrow (t \subset_{s} v)`
-- T 1.2.8: :math:`\forall n \in \mathbb{N}: \forall p \in \Chi_{L(n)}: \exists! s \in S: s = D\Pi_{i=1}^{n} p(i)`
-- T 1.2.9: :math:`\forall n \in \mathbb{N}, \forall p \in \Chi_{L(n)} \exists! s \in S: s = L\Pi_{i=1}^{n} p(i)`
-- T 1.3.1: :math:`\forall \alpha \in L: \alpha \in R \leftrightarrow \alpha = \text{inv}(\alpha)`
-- T 1.3.2: :math:`\forall \alpha \in L: \alpha \in I \leftrightarrow \text{inv}(\alpha) \in I`
-- T 1.3.3 :math:`R \subseteq I`
+:math:`\forall s \in S: \text{inv}(\text{inv}(s)) = s`
+:math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
+:math:`\forall u, t \in S : u \subset_{s} t \leftrightarrow \text{inv}(u) \subset_{s} \text{inv}(t)`
+:math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \rightarrow (t \subset_{s} v)`
+:math:`\forall n \in \mathbb{N}: \forall p \in \Chi_{L(n)}: \exists! s \in S: s = D\Pi_{i=1}^{n} p(i)`
+:math:`\forall n \in \mathbb{N}, \forall p \in \Chi_{L(n)} \exists! s \in S: s = L\Pi_{i=1}^{n} p(i)`
+:math:`\forall \alpha \in L: \alpha \in R \leftrightarrow \alpha = \text{inv}(\alpha)`
+:math:`\forall \alpha \in L: \alpha \in I \leftrightarrow \text{inv}(\alpha) \in I`
+:math:`R \subseteq I`
+
+- T 1.1.1: :math:`\forall u, t \in S : l(ut) = l(u) + l(t) `
+- T 1.1.2: | S | ≥ ℵ:sub:`1`
+- T 1.1.3: ∀ s ∈ S: ε ⊂:sub:`s` s
+- T 1.2.1: ∀ α ∈ L:  αε = εα = α
+- T 1.2.2: ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: α[i] ⊂:sub:`s` α
+- T 1.2.3: ∀ α ∈ L : ∀ i ∈ N:sub:`l(α)`: α[i] ≠ ε
+- T 1.2.4: ∀ s ∈ S: inv(inv(s)) = s
+- T 1.2.5: ∀ u, t ∈ S: inv(ut) = inv(t)inv(u)
+- T 1.2.6: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ inv(u) ⊂:sub:`s` inv(t) 
+- T 1.2.7: ∀ t, u, v ∈ S : (t ⊂:sub:`s` u) ∧ (u ⊂:sub:`s` v) → (t ⊂:sub:`s` v) 
+- T 1.2.8: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ∃! s ∈ S: s = DΠ:sub:`i=1`:sup:`n` p(i)
+- T 1.2.9: ∀ n ∈ ℕ, ∀ p ∈ Χ:sub:`L(n)` ∃! s ∈ S: s = LΠ:sub:`i=1`:sup:`n` p(i)
+- T 1.3.1: ∀ α ∈ L: α ∈ R ↔ α = inv(α)
+- T 1.3.2: ∀ α ∈ L: α ∈ I ↔ inv(α) ∈ I
+- T 1.3.3: R ⊆ I
 - T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
-- T 2.1.1: :math:`\forall \zeta \in C_{L}:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)`
-- T 2.1.2: :math:`\forall \zeta, \xi \in C_{L}: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
-- T 2.1.3: :math:`\forall \zeta \in C_{L}: \forall i, j \in \mathbb{N}_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in \mathbb{N}_{l(\zeta)}: (i/n/j)_{\zeta}`
-- T 2.2.1: :math:`\forall \zeta \in C_{L}: l(\zeta) \neq 0`
-- T 2.2.2: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
-- T 2.2.3: :math:`\forall \zeta \in C_{L} : \forall i \in \mathbb{N}_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
-- T 2.2.4: :math:`\forall \zeta \in C_{L}: \Lambda(\zeta) \geq 1`
-- T 2.2.5: :math:`\forall \zeta \in C_{L}: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
-- T 2.3.1: :math:`A(n) \subseteq C_{L}`
-- T 2.3.2: :math:`\forall \zeta \in A(n): \Lambda(\zeta) = n`
-- T 2.3.3: :math:`\forall \zeta \in C_{L}: \zeta \in A(\Lambda(\zeta))`
-- T 2.3.4: :math:`\forall \zeta \in C_{L}: \exists p \in X_{L}(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{n} p(i)`
-- T 2.3.5: :math:`\forall \zeta \in C_{L}: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K`
-- T 2.3.6: :math:`\forall \zeta \in C_{L}: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_{L}`
-- T 2.3.7: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
-- T 2.3.8: :math:`\forall \zeta \in C_{L}: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.9: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.10: :math:`\forall \zeta \in C_{L}: \zeta \in K \leftrightarrow (\forall i \in \mathbb{N}_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
-- T 2.3.11: :math:`\forall \zeta \in C_{L}: \zeta \in K \rightarrow \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta\{i\} \in I`
-
-
-
-
-
+- T 2.1.1: ∀ ζ ∈ C:sub:`L`:  ∑:sub:`j=1`:sup:`Λ(ζ)` l(ζ{j}) ≥ Λ(ζ)
+- T 2.1.2: ∀ ζ, ξ ∈ C:sub:`L`: Λ(ζξ) ≤ Λ(ζ) + Λ(ξ)
+- T 2.1.3: ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ k → ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+- T 2.2.1: ∀ ζ ∈ C:sub:`L`: l(ζ) ≠ 0
+- T 2.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
+- T 2.2.3: ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
+- T 2.2.4: ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+- T 2.2.5: ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+- T 2.3.1: A(n) ⊆ C:sub:`L`
+- T 2.3.2: ∀ ζ ∈ A(n): Λ(ζ) = n
+- T 2.3.3: ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
+- T 2.3.4: ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`n` p(i)
+- T 2.3.5: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
+- T 2.3.6: ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
+- T 2.3.7: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
+- T 2.3.8: ∀ ζ ∈ C:sub:`L`: inv(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.9: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
+- T 2.3.10: ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ (∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})) ∧ (inv(ζ) ∈ A(Λ(ζ)))
+- T 2.3.11: ∀ ζ ∈ C:sub:`L`: ζ ∈ K → ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
 - T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
 - T 3.1.2: ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
 - T 3.1.3: ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
