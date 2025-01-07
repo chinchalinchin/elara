@@ -136,25 +136,25 @@ Theorems
 - T 1.3.2: :math:`\forall \alpha \in L: \alpha \in I \leftrightarrow \text{inv}(\alpha) \in I`
 - T 1.3.3 :math:`R \subseteq I`
 - T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
-- T 2.1.1: :math:`\forall \zeta \in C_{L}:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)`
-- T 2.1.2: :math:`\forall \zeta, \xi \in C_{L}: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
-- T 2.1.3: :math:`\forall \zeta \in C_{L}: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
-- T 2.2.1: :math:`\forall \zeta \in C_{L}: l(\zeta) \neq 0`
-- T 2.2.2: :math:`\forall \zeta \in C_{L}: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
-- T 2.2.3: :math:`\forall \zeta \in C_{L} : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
-- T 2.2.4: :math:`\forall \zeta \in C_{L}: \Lambda(\zeta) \geq 1`
-- T 2.2.5: :math:`\forall \zeta \in C_{L}: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
+- T 2.1.1: :math:`\forall \zeta \in C_L:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)`
+- T 2.1.2: :math:`\forall \zeta, \xi \in C_L: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
+- T 2.1.3: :math:`\forall \zeta \in C_L: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
+- T 2.2.1: :math:`\forall \zeta \in C_L: l(\zeta) \neq 0`
+- T 2.2.2: :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta`
+- T 2.2.3: :math:`\forall \zeta \in C_L : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
+- T 2.2.4: :math:`\forall \zeta \in C_L: \Lambda(\zeta) \geq 1`
+- T 2.2.5: :math:`\forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
 - T 2.3.1: :math:`A(n) \subseteq C_{L}`
 - T 2.3.2: :math:`\forall \zeta \in A(n): \Lambda(\zeta) = n`
-- T 2.3.3: :math:`\forall \zeta \in C_{L}: \zeta \in A(\Lambda(\zeta))`
-- T 2.3.4: :math:`\forall \zeta \in C_{L}: \exists p \in X_{L}(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{n} p(i)`
-- T 2.3.5: :math:`\forall \zeta \in C_{L}: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K`
-- T 2.3.6: :math:`\forall \zeta \in C_{L}: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_{L}`
-- T 2.3.7: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
-- T 2.3.8: :math:`\forall \zeta \in C_{L}: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.9: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.10: :math:`\forall \zeta \in C_{L}: \zeta \in K \leftrightarrow (\forall i \in \mathbb{N}_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
-- T 2.3.11: :math:`\forall \zeta \in C_{L}: \zeta \in K \rightarrow \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta\{i\} \in I`
+- T 2.3.3: :math:`\forall \zeta \in C_L: \zeta \in A(\Lambda(\zeta))`
+- T 2.3.4: :math:`\forall \zeta \in C_L: \exists p \in \Chi_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)`
+- T 2.3.5: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K`
+- T 2.3.6: :math:`\forall \zeta \in C_L: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_L`
+- T 2.3.7: :math:`\forall \zeta \in C_L: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
+- T 2.3.8: :math:`\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
+- T 2.3.9: :math:`\forall \zeta \in C_L: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
+- T 2.3.10: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
+- T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \rightarrow \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
 
 
 

@@ -1154,41 +1154,59 @@ By Definition 2.3.1, since the conjunction of the following three facts is true,
 
     9.  P_{\Lambda(\zeta)} \in \Chi_L(\Lambda(\zeta)) 
     
-It follows from step 7 - step 9, *ζ* *∈* **A**(*Λ(ζ)*). Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
+It follows from step 7 - step 9, :math:`\zeta \in A(\Lambda(\zeta))`. Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
 
-    ∀ ζ ∈ C:sub:L: ζ ∈ A(Λ(ζ)) ∎
+.. math::
+
+    10. \forall \zeta \in C_L: \zeta \in A(\Lambda(\zeta)) 
+
+∎
 
 .. _theorem_2_3_4:
 
-**Theorem 2.3.4** ∀ ζ ∈ C:sub:`L`: ∃ p ∈ X:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` p(i)
+**Theorem 2.3.4** :math:`\forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)`
 
 Let *ζ* be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
 
-    W:sub:`ζ`` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`Λ(ζ)`) 
-    
-Where each *α*:sub:`i` *∈* **L**.
+.. math::
 
-By Definition 1.2.5, the sequence (*α*:sub:`1`, *α*:sub:`2`, ... , *α*:sub:`Λ(ζ)`) forms a Phrase **P**:sub:`Λ(ζ)` of Word Length *Λ(ζ)* where **P**:sub:`Λ(ζ)`(i) = *α*:sub:`i`` for all *i*, *1 ≤ i ≤ Λ(ζ)*.
+    1. W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)}) 
+    
+Where each :math:`\alpha_i \in L`.
+
+By Definition 1.2.5, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a Phrase **P**:sub:`Λ(ζ)` of Word Length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)}(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
 
 By Definition 1.2.6, since **P**:sub:`Λ(ζ)` is a Phrase of Word Length *Λ(ζ)* and all its words belong to **L**, then,
 
-    P:sub:`Λ(ζ)` ∈ Χ:sub:`L(Λ(ζ))`
+.. math::
+
+    2. P_{\Lambda(\zeta)} \in \Chi_L(\Lambda(\zeta))
 
 By Definition 1.2.7, the Delimitation of **P**:sub:`Λ(ζ)` is,
 
-    DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+.. math::
 
-The Delimitation *DΠ*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(i) reconstructs the original Sentence ζ, including the Delimiters between Words. Therefore:
+    3. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
-    ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+The Delimitation :math:`D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)` reconstructs the original Sentence *ζ*, including the Delimiters between Words. Therefore:
 
-It has been shown that for an arbitrary sentence *ζ* *∈* **C**:sub:`L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in **Χ**:sub:`L`(Λ(ζ)) such that,
+.. math::
+
+    4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
+
+It has been shown that for an arbitrary sentence :math:`ζ \in C_L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in :math:`\Chi_L(\Lambda(\zeta))` such that,
  
-    ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` p(i). 
+.. math::
+
+    5. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i). 
     
 Therefore,
 
-    ∀ ζ ∈ C:sub:`L`: ∃ p ∈ Χ:sub:`L`(Λ(ζ)): ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` p(i) ∎
+.. math::
+
+    \forall \zeta \in C_L: \exists p \in \Chi_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta) p(i) 
+    
+∎
 
 The condition of *admissibility*, as will be seen in Theorem 2.3.11, prevents the *"inversion propagation"* from being a purely syntactical operation. The Inverse of a Sentences must also be Admissible in the Corpus in order to be considered an Invertible Sentence (Definition 2.3.2 in the next section). This represents a rupture or division from the realm of syntax not seen at the Word level of the linguistic hierarcy when considering the operation of inversion. In order to fully specify the conditions for Sentence invertibility, one must be able to elaborate on what it means to call a Sentence *"admissible"*; in other words, there must be grammatical rules that identify an inverted Sentence as belonging to the Corpus over and above the syntactical conditions that are imposed by invertibility.
 
@@ -1209,7 +1227,9 @@ The notion of Invertible Sentences will first be defined extensionally, and then
 
 Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Invertible Sentences **K** is defined as the set of *ζ* which satisfy the open formula,
 
-    ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
+.. math::
+
+    \zeta \in K \leftrightarrow \text{inv}(\zeta) \in C_L
 
 A Sentence *ζ* will be referred to as *invertible* if it belongs to the class of Invertible Sentences. ∎
 
@@ -1217,81 +1237,117 @@ This definition is immediately employed to derive the following theorems,
 
 .. _theorem_2_3_5:
 
-**Theorem 2.3.5** ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K
+**Theorem 2.3.5** :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K`
 
 Let *ζ* be any Sentence from Corpus **C**:sub:`L`.
 
-(→) Assume ζ ∈ K
+(→) Assume :math:`\zeta \in K`
 
 By Definition 2.3.2, the inverse of *ζ* belongs to the Corpus
 
-    1. inv(ζ) ∈ C:sub:`L`
+.. math::
 
-To show that inv(ζ) is invertible, it must be shown that,
+    1. \text{inv}(\zeta) \in C_L
 
-    2. inv(inv(ζ)) ∈ C:sub:`L`
+To show that *inv(ζ)* is invertible, it must be shown that,
+
+.. math::
+
+    2. \text{inv}(\text{inv}(\zeta)) \in C_L
 
 From Theorem 1.2.4, for any string *s*, 
 
-    3. inv(inv(s)) = s.  
+.. math::
+
+    3. \text{inv}(\text{inv}(s)) = s.  
 
 By Definition 2.1.1,
 
-    1. ζ ∈ S
+.. math::
+
+    4. \zeta \in S
 
 Where **S** is the set of all Strings. Therefore, it follows, 
 
-    5. inv(inv(ζ)) = ζ.
+.. math::
+
+    5. \text{inv}(\text{inv}(\zeta)) = \zeta
 
 From step 1 and step 5, it follows, 
 
-    6. inv(inv(ζ)) ∈ C:sub:`L`
+.. math::
+
+    6. \text{inv}(\text{inv}(\zeta)) \in C_L
 
 By Definition 2.3.2, this implies,
 
-    7. inv(ζ) ∈ K.
+.. math::
 
-(←) Assume inv(ζ) ∈ K
+    7. \text{inv}(\zeta) \in K.
+
+(←) Assume :math:`\text{inv}(\zeta) \in K`
 
 By Definition 2.3.2, 
     
-    8. inv(inv(ζ)) ∈ C:sub:`L`
+.. math::
+
+    8. \text{inv}(\text{inv}(\zeta)) \in C_L
 
 Applying Theorem 1.2.4,
 
-    9. inv(inv(ζ)) = ζ.
+.. math::
+
+    9. \text{inv}(\text{inv}(\zeta)) = \zeta.
 
 From step 8 and step 9, it follows, 
 
-    10. ζ ∈ C:sub:`L`
+.. math::
+
+    10. \zeta \in C_L
 
 By Definition 2.3.2, it follows,
 
-    11. ζ ∈ K. 
+.. math::
+
+    11. \zeta \in K. 
 
 Putting both direction of the equivalence together, the theorem is shown,
 
-    12. ∀ ζ ∈ C:sub:`L`: ζ ∈ K ↔ inv(ζ) ∈ K ∎
+.. math::
+
+    12. \forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K 
+
+∎
 
 .. _theorem_2_3_6:
 
-**Theorem 2.3.6** ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L`
+**Theorem 2.3.6** :math:`\forall \zeta \in C_L: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_L`
 
-Let *ζ* be any Sentence from Corpus **C**:sub:`L` such that *inv(ζ) ∈ K*. Then, by Definition 2.3.2,
+Let *ζ* be any Sentence from Corpus **C**:sub:`L` such that :math:`\text{inv}(\zeta) \in K`. Then, by Definition 2.3.2,
 
-    1. inv(inv(ζ)) ∈ C:sub:`L`
+.. math::
+
+    1. \text{inv}(\text{inv}(\zeta)) \in C_L
 
 By Theorem 1.2.4,
 
-    2. inv(inv(ζ)) = ζ
+.. math::
+
+    2. \text{inv}(\text{inv}(\zeta)) = \zeta
 
 Therefore, combining step 1 and step 2,
 
-    3. ζ ∈ C:sub:`L` 
+.. math::
+
+    3. \zeta \in C_L 
 
 It follows, 
 
-    4. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → ζ ∈ C:sub:`L` ∎
+.. math::
+
+    4. \forall \zeta \in C_L: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_L 
+
+∎
 
 The notion of Invertible Sentences is not as intuitive as the notion of Invertible Words. This is due to the fact the condition of *invertibility* is not a weak condition; indeed, Sentences that are not invertible far outnumber Sentences that are invertible in a given Language (for all known natural languages, at any rate; it is conceivable a purely formal system with no semantic content or general applicability could be constructed with invertibility in mind). 
 
@@ -1315,31 +1371,41 @@ Due to the definition of Sentences as semantic constructs and the definition of 
 
 .. _theorem_2_3_7:
 
-**Theorem 2.3.7** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L
+**Theorem 2.3.7** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
 
-Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume *ζ* *∈* **K** . By Definition 2.3.2,
+Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume :math:`ζ \in K` . By Definition 2.3.2,
 
-    1. inv(ζ) ∈ C:sub:`L`
+.. math::
+
+    1. \text{inv}(\zeta) \in C_L
 
 By the Extraction Axiom S.2,
 
-    2. ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} ∈ L 
+.. math::
+
+    2. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} \in L 
  
 Therefore, 
 
-    3. ζ ∈ K → inv(ζ){i} ∈ L 
+.. math::
+
+    3. \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L 
 
 Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
-    4. ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ ∈ K → inv(ζ){i} ∈ L ∎
+.. math::
+
+    4. \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L 
+
+∎
 
 The next theorem shows how the inversion "distributes" over the Words of a Delimited Sentence.
 
 .. _theorem_2_3_8:
 
-**Theorem 2.3.8** ∀ ζ ∈ C:sub:`L`: inv(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = DΠ:sub:`i=1`:sup:`Λ(ζ)` inv(ζ{Λ(ζ) - i + 1})
+**Theorem 2.3.8** :math:`\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let *n = Λ(ζ)*. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the deDelimitation of *ζ* as follows:
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let :math:`n = \Lambda(\zeta)`. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the deDelimitation of *ζ* as follows:
 
     1. s = DΠ:sub:`i=1`:sup:`n` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{n})
 
