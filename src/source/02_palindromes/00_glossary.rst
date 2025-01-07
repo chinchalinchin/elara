@@ -150,9 +150,9 @@ Theorems
 - T 2.3.4: :math:`\forall \zeta \in C_L: \exists p \in \Chi_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)`
 - T 2.3.5: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K`
 - T 2.3.6: :math:`\forall \zeta \in C_L: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_L`
-- T 2.3.7: :math:`\forall \zeta \in C_L: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
+- T 2.3.7: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
 - T 2.3.8: :math:`\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.9: :math:`\forall \zeta \in C_L: \forall i \in \mathbb{N}_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
+- T 2.3.9: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 - T 2.3.10: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
 - T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \rightarrow \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
 
