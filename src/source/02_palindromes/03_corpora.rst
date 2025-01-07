@@ -508,62 +508,93 @@ As motivation for the first theorem on Interventions and a further clarification
 
 Let *ᚠ = "the world divides into facts"*. Then 
 
-    Λ(ζ) = 5
-    l(ζ) = 28
+.. math::
 
-Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that *i = j* in the Definition 2.1.6. Let i = j = 2, i.e. consider the second Word in the Sentence, *"world"*. The relation of Intervention that obtains between *"world"* and itself should evaluate to false. In other words, no Characters intervene between a Word and itself. 
+    \Lambda(\rune{f}) = 5
+
+.. math::
+
+    l(\rune{f}) = 28
+
+Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that :math:`i = j` in the Definition 2.1.6. Let :math:`i = j = 2`, i.e. consider the second Word in the Sentence, *"world"*. The relation of Intervention that obtains between *"world"* and itself should evaluate to false. In other words, no Characters intervene between a Word and itself. 
 
 The Delimitation of the Sentence up to the Second Word is given by,
 
-    DΠ:sub:`x=1``:sup:`2` ζ(x) = "the world"
+.. math::
 
-The Delimitation of the Inverse Sentence up to the correspond index of the Second Word (e.g., 5 - 2 + 1 = 4) is given by (Note the Inverse Sentence is not a Sentence in a Corpus, nor does it possess semantic coherence),
+    D\Pi_{x=1}^{2} \rune{f}(x) = \text{"the world"}
 
-    DΠ:sub:`x=1``:sup:`5 - 2 + 1` inv(ζ(x)) = DΠ:sub:`x=1``:sup:`4` inv(ζ(x)) = "stcaf otni sedivid dlrow"
+The Delimitation of the Inverse Sentence up to the correspond index of the Second Word (e.g., :math:`5 - 2 + 1 = 4`) is given by (Note the Inverse Sentence is not a Sentence in a Corpus, nor does it possess semantic coherence),
+
+.. math::
+
+    D\Pi_{x=1}^{5 - 2 + 1} \text{inv}(\rune{f}(x)) = D\Pi_{x=1}^{4} \text{inv}(\rune{f}(x)) = \text{"stcaf otni sedivid dlrow"}
 
 Therefore,
 
-    l(DΠ:sub:`x=1``:sup:`2` ζ(x)) = 9
-    l(DΠ:sub:`x=1``:sup:`4` inv(ζ(x))) = 24
+.. math::
+
+    l(D\Pi_{x=1}^{2} \rune{f}(x)) = 9
+
+.. math::
+
+    l(D\Pi_{x=1}^{4} \text{inv}(\rune{f}(x))) = 24
 
 The sum of these String Lengths is given by,
 
-    l(DΠ:sub:`x=1``:sup:`2` ζ(x)) + l(DΠ:sub:`x=1``:sup:`4` inv(ζ(x))) = 9 + 24 = 33
+.. math::
 
-Since the total String Length of both Delimitation exceeds the String Length of the entire Sentence, there does not exist a Character Index *k* such that *k* can be said to intervene the Word at index *i = j = 2*. ∎
+    l(D\Pi_{x=1}^{2} \rune{f}(x)) + l(D\Pi_{x=1}^{4} \text{inv}(\rune{f}(x))) = 9 + 24 = 33
+
+Since the total String Length of both Delimitation exceeds the String Length of the entire Sentence, there does not exist a Character Index *k* such that *k* can be said to intervene the Word at index :math:`i = j = 2`. ∎
 
 This example provides justification for the next theorem.
 
 .. _theorem_2_1_3:
 
-**Theorem 2.1.3** ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ j ↔ ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+**Theorem 2.1.3** :math:`\forall \zeta \in C_{L}: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
 
 This theorem can be stated in natural language as follows: For any Sentence in a Corpus, there exists a Character that intervenes two Words in the Sentence if and only the Words occupy different positions. Note this doesn't exclude possibility the Words at different positions are the same Word.
 
 Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L` and let *i* and *j* be natural numbers such that,
 
-    1. ζ ∈ C:sub:`L`
-    2. i, j ∈ N:sub:`Λ(ζ)`
+.. math::
+
+    1. \zeta \in C_L
+    
+.. math::
+
+    2. i, j \in N_{\Lambda(\zeta)}
    
 (→) Assume 
 
-    3. i ≠ j
+.. math::
 
-Without loss of generality (since the case i > j is symmetrical), assume 
+    3. i \neq j
+
+Without loss of generality (since the case :math:`i > j` is symmetrical), assume 
+
+.. math::
 
     4. i < j
 
 By Theorem 2.3.4, 
 
-    5. ζ = DΠ:sub:`x=1`:sup:`Λ(ζ)` p(x)
+.. math::
+
+    5. \zeta = D\Pi_{x=1}^{\Lambda(\zeta)} p(x)
 
 Where 
 
-    6. p ∈ in X:sub:`L(Λ(ζ))`
+.. math::
+    
+    6. p \in \Chi_L(\Lambda(\zeta))`
 
 By Definition 1.2.7 of Delimitation, this means 
 
-    7. ζ = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)}) 
+.. math::
+
+    7. \zeta = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda\(ζ)\}) 
 
 By step 5, *ζ{i}* comes before *ζ{j}* in the Sentence *ζ*. By the Discovery Axiom W.1, there must be at least one delimiter character between *ζ{i}* and *ζ{j}* because they are distinct Words in a valid Sentence. 
 
@@ -571,73 +602,99 @@ Let *σ* be a delimiter Character between *ζ{i}* and *ζ{j}*. Let *k be the ind
 
 By the Definition 1.2.7 of Delimitation, 
 
-    8. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) 
+.. math::
+
+    8. l(D\Pi_{x=1}^{i} \zeta(x)) 
     
 Will give the index of the last character of ζ{i}. Since σ comes after ζ{i}, it follows,
 
-    9. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < k
+.. math::
+
+    9. l(D\Pi_{x=1}^{i} \zeta(x)) < k
 
 Similarly, 
 
-    10. l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1 
+.. math::
+
+    10. l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 
     
 Gives the index of the first Character after the Word corresponding to *ζ{j}* in the original sentence. Since σ comes before this character, it follows,
 
-    11. k < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1
+.. math::
+
+    11. k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
 
 Therefore, by Definition 2.1.6, 
 
-    12. (i/k/j):sub:`ζ`
+.. math::
+
+    12. (i/k/j)_{\zeta}
 
 Thus,
 
-    13. ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+.. math::
+
+    13. \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
 
 (←) Assume a Character exists at index *n* in *ζ* such that it that intervenes *ζ{i}* and *ζ{j}*,
 
-    1. ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ`
+.. math::
+
+    1. \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
 
 By Definition 2.1.6,
 
-    2. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < n < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - j + 1` inv(ζ)(x)) + 1
+.. math::
 
-Assume, for the sake of contradiction, that i = j.
+    2. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
 
-    3. `l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < n < l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x)) + 1
+Assume, for the sake of contradiction, that :math:`i = j`.
 
-Now, consider the term *l(DΠ*:sub:`x=1``:sup:`i`*ζ(x))*. This represents the String Length of the Delimitation of the first *i* words of *ζ*. By the Definition 1.2.7 of Delimitation, this includes the lengths of the first *i* words and the lengths of the *(i - 1)* delimiters between them.
+.. math::
 
-Similarly, consider the term *l(DΠ*:sub:`x=1`:sup:`Λ(ζ) - i + 1` *inv(ζ)(x))*. This represents the String Length of the Delimitation of the first *Λ(ζ) - i + 1* words of *inv(ζ)*.  Since *inv(ζ)* has the same words as *ζ* but inverted and in reverse order, this is equivalent to the String Length of the uninverted Sentence up to the *i*:sup:`th` word of *ζ*, measured from the last Character in the String.
+    3. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
+
+Now, consider the term :math:`l(D\Pi_{x=1}^{i} \zeta(x))`. This represents the String Length of the Delimitation of the first *i* words of *ζ*. By the Definition 1.2.7 of Delimitation, this includes the lengths of the first *i* words and the lengths of the :math:`(i - 1)` delimiters between them.
+
+Similarly, consider the term :math:`l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))`. This represents the String Length of the Delimitation of the first *Λ(ζ) - i + 1* words of *inv(ζ)*.  Since *inv(ζ)* has the same words as *ζ* but inverted and in reverse order, this is equivalent to the String Length of the uninverted Sentence up to the *i*:sup:`th` word of *ζ*, measured from the last Character in the String.
 
 The sum of the String Lengths of these two portions of the Sentence *ζ* is always greater than the String Length of the Sentence, 
 
-    4. l(DΠ:sub:`x=1``:sup:`i` ζ(x)) + l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x)) >  l(ζ) 
+.. math::
 
-This follows from the fact that these two portions of ζ are overlapping since both  include terms for *ζ{i}* (*inv(ζ){Λ(ζ) - i + 1}* would be the corresponding Word in the Delimitation of the Inverse). From step 4, it then follows,
+    4. l(D\Pi_{x=1}^{i} \zeta(x)) + l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) >  l(\zeta) 
 
-    5. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) > l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x))  
+This follows from the fact that these two portions of ζ are overlapping since both  include terms for *ζ{i}* (:math:`\text{inv}(\zeta)\{\Lambda(\zeta) - i + 1}` would be the corresponding Word in the Delimitation of the Inverse). From step 4, it then follows,
+
+.. math::
+
+    5. l(D\Pi_{x=1}^{i} \zeta(x)) > l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))  
     
 Adding 1 to both sides maintains the inequality in step 5,
 
-    6. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) + 1 > l(ζ) - l(DΠ:sub:`x=1`:sup:`Λ(ζ) - i + 1` inv(ζ)(x)) + 1
+.. math::
+
+    6. l(D\Pi_{x=1}^{i} \zeta(x)) + 1 > l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
 
 Combining this with the left-hand side of the inequality in step 5, we get:
 
-    7. l(DΠ:sub:`x=1`:sup:`i` ζ(x)) < n < l(DΠ:sub:`x=1`:sup:`i` ζ(x)) + 1
-   
-But String Lengths are integers, and by the laws of arithmeti, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that *i = j* must be false.
+.. math::
 
-    8. i ≠ j.
+    7. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(D\Pi_{x=1}^{i} \zeta(x)) + 1
+   
+But String Lengths are integers, and by the laws of arithmetic, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that *i = j* must be false.
+
+.. math::
+
+    8. i \neq j.
 
 With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized as, 
 
-    ∀ ζ ∈ C:sub:`L`: ∀ i, j ∈ N:sub:`Λ(ζ)`: i ≠ j ↔ ∃ n ∈ N:sub:`l(ζ)`: (i/n/j):sub:`ζ` ∎
+.. math::
 
-.. _theorem_2_1_4:
-
-**Theorem 2.1.4** ∀ ζ ∈ C:sub:`L`: ∀ i, j, k ∈ N:sub:`Λ(ζ)`: ∃ n, m ∈ N:sub:`l(ζ)`: (((i/n/j):sub:`ζ`) ∧ ((j/m/k):sub:`ζ`)) → (n < m)
-
-TODO
+    \forall \zeta \in C_L: \forall i, j \in N_{\Lambda(zeta)}: i \neq j ↔ \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta} 
+    
+∎
 
 .. _section_ii_ii:
 
@@ -648,37 +705,63 @@ In Section I, the first three axioms of the formal system were introduced. Now t
 
 Note the Discovery Axiom has been revised to employ Character Index notation. 
 
-.. _axiom_c0:
+.. _axiom_c0_2:
 
 **Axiom C.0: The Equality Axiom**
 
-    1. ∀ ⲁ ∈ Σ: ⲁ = ⲁ
-    2. ∀ ⲁ, ⲃ ∈ Σ: ⲁ = ⲃ ↔ ⲃ = ⲁ
-    3. ∀ ⲁ, ⲃ ∈ Σ: (ⲁ = ⲃ ∧ ⲃ = ⲅ) → (ⲁ = ⲅ) ∎
+.. math::
 
-.. _axiom_c1:
+    1. \forall ⲁ \in \Sigma: ⲁ = ⲁ
+
+.. math::
+
+    2. \forall ⲁ, ⲃ \in \Sigma: ⲁ = ⲃ ↔ ⲃ = ⲁ
+    
+.. math::
+
+    3. \forall ⲁ, ⲃ \in Σ: (ⲁ = ⲃ \land ⲃ = ⲅ) \rightarrow (ⲁ = ⲅ) 
+
+∎
+
+.. _axiom_c1_2:
 
 **Axiom C.1: The Character Axiom**
 
-    ∀ ⲁ ∈ Σ: ⲁ ∈ S ∎
+.. math::
 
-.. _axiom_w1:
+    \forall ⲁ \in \Sigma: ⲁ \in S 
+    
+∎
+
+.. _axiom_w1_2:
 
 **Axiom W.1: The Discovery Axiom ** 
 
-    ∀ α ∈ L: [ (l(α) ≠ 0) ∧ (∀ i ∈ N:sub:`l(α)`: α[i] ≠ σ) ] ∎
+.. math::
+
+    \forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ] 
+    
+∎
 
 .. _axiom_s2:
 
 **Axiom S.1: The Duality Axiom**
 
-    ( ∀ α ∈ L: ∃ ζ ∈ C:sub:`L``: α ⊂:sub:`s` ζ ) ∧ ( ∀ ζ ∈ C:sub:`L`: ∃ α ∈ L: α ⊂:sub:`s` ζ ) ∎
+.. math::
+
+    ( \forall \alpha \in L: \exists \zeta \in C_L: \alpha \subset_s \zeta ) ∧ ( \forall \zeta \in C_L: \exists \alpha \in L: \alpha \subset_s \zeta ) 
+    
+∎
 
 .. _axiom_s2:
 
 **Axiom S.2: The Extraction Axiom**
 
-    ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ L ∎
+.. math::
+
+    \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L 
+    
+∎
 
 Two new axioms, the Duality Axiom S.1 and the Extraction Axiom S.2, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language). 
 
@@ -686,9 +769,11 @@ To briefly summarize the axioms previously introduced: The system *"initializes"
 
 The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories.
 
-The Duality Axiom S.1 bares a striking resemblance to the idea of *surjection* in real analysis. Recall, a function *f*: *X* → *Y* is called *surjective* if,
+The Duality Axiom S.1 bares a striking resemblance to the idea of *surjection* in real analysis. Recall, a function :math:`f: X \rightarrow Y` is called *surjective* if,
 
-    ∀ y ∈ Y : ∃ x ∈ X : f(x) = y
+.. math::
+
+    \forall y \in Y: \exists x \in X : f(x) = y
 
 Meaning, every element in the co-domain is mapped to at least one element in the domain. 
 
@@ -717,138 +802,203 @@ The first theorems proven using these new axioms are analogous versions of the W
 
 .. _theorem_2_2_1:
 
-**Theorem 2.2.1** ∀ ζ ∈ C:sub:`L`: l(ζ) ≠ 0
+**Theorem 2.2.1** :math:`\forall \zeta \in C_{L}: l(\zeta) \neq 0`
 
-Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*.
+Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`.
 
 By the first conjunct of the Discovery Axiom W.1 and the second conjunct of the Duality Axiom S.2,
 
-    1. ∃ α ∈ L: α ⊂:sub:`s` ζ 
-    2. ∀ α ∈ L: l(α) ≠ 0
+.. math::
+
+    1. \exists \alpha \in L: \alpha \subset_s \zeta 
+    
+.. math::
+
+    2. \forall \alpha \in L: l(\alpha) \neq 0
 
 Therefore, by Definition 1.1.7, there exists a strictly increasing and consecutive function *f* such that,
 
-    3. ∀ i ∈ N:sub:`l(α)`: α[i] = ζ[f(i)] 
+.. math::
+
+    3. \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)] 
     
 By Theorem 1.2.3, 
 
-    4. ∀ i ∈ N:sub:`l(α)`: α[i] ≠ ε
+.. math::
+
+    4. \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsiolin
 
 Therefore, combining steps 3 and 4,
 
-    5. ∀ i ∈ N:sub:`l(α)`: ζ[f(i)] ≠ ε
+.. math::
 
-Since, by step 2, *l(α) ≠ 0*, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying Definition 1.1.3 and Theorem 2.2.1,
+    5. \forall i \in N_{\alpha}: \zeta[f(i)] \neq ε
 
-    6. l(ζ) ≠ 0 ∎
+Since, by step 2, :math:`l(\alpha) \neq 0`, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying Definition 1.1.3 and Theorem 2.2.1,
+
+.. math::
+
+    6. l(\zeta) \neq 0 
+
+∎
 
 .. _theorem_2_2_2:
 
-**Theorem 2.2.2** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
+**Theorem 2.2.2** :math:`\forall \zeta \in C_{L}: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
 
-Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*. By Theorem 2.2.1 and Definition 1.1.3, there must be at least one non-Empty Character in *ζ*. Let *ζ[i]* be a non-Empty Character in *ζ*. Consider the string *s* consisting of the single character *ζ[i]*, *s = ζ[i]*. Clearly, by Definition 1.1.3, 
+Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. By Theorem 2.2.1 and Definition 1.1.3, there must be at least one non-Empty Character in *ζ*. Let *ζ[i]* be a non-Empty Character in *ζ*. Consider the string *s* consisting of the single character *ζ[i]*, :math:`s = \zeta[i]`. Clearly, by Definition 1.1.3, 
+
+.. math::
 
     1. l(s) = 1
 
-Define a function *f: {1} → {i}* such that *f(1) = i*. This function is strictly increasing and consecutive. By Definition 1.1.6 and Definition 1.1.7, since there exists a strictly increasing and consecutive function *f* from the indices of *s* to the indices of *ζ*, and since the Character at position 1 in *s* is the same as the Character at position i in *ζ* (both are *ζ[i]*), we can conclude that *s* is contained in *ζ*. Therefore, 
+Define a function :math:`f: \{1\} \rightarrow \{i\}` such that :math:`f(1) = i`. This function is strictly increasing and consecutive. By Definition 1.1.6 and Definition 1.1.7, since there exists a strictly increasing and consecutive function *f* from the indices of *s* to the indices of *ζ*, and since the Character at position 1 in *s* is the same as the Character at position i in *ζ* (both are *ζ[i]*), we can conclude that *s* is contained in *ζ*. Therefore, 
 
-    2. ζ[i] ⊂:sub:`s` ζ
+.. math::
+
+    2. \zeta[i] \subset_s \zeta
 
 Since *ζ* and *i* were arbitrary, this can be generalized, 
 
-    3. ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ ∎
+.. math::
+
+    3. \forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta 
+
+∎
 
 .. _theorem_2_2_3:
 
-**Theorem 2.2.3** ∀ ζ ∈ C:sub:`L` : ∀ i ∈ N:sub:`l(ζ)`:  ζ[i] ≠ ε
+**Theorem 2.2.3** :math:`\forall \zeta \in C_{L} : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`, and let *i* be a natural number such that *1 ≤ i ≤ l(ζ)*. By Theorem 2.2.2, 
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. By Theorem 2.2.2, 
 
-    1. ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ⊂:sub:`s` ζ
+.. math::
+    
+    1. \forall i \in N_{l(\zeta)}: \zeta[i] subset_s \zeta
 
-By Definition 1.1.3, String Length is the number of non-Empty Characters in a String's Character-level set representation. Since *l(ζ) > 0*, *ζ* must have at least one non-Empty character.
+By Definition 1.1.3, String Length is the number of non-Empty Characters in a String's Character-level set representation. Since :math:`l(\zeta) > 0`, *ζ* must have at least one non-Empty character.
 
-Since *1 ≤ i ≤ l(ζ)*, the Character at position *i* in *α*, denoted *ζ[i]*, exists and is non-Empty by Definition 1.1.2. Therefore, 
+Since :math:`1 \leq i \leq l(\zeta)`, the Character at position *i* in *α*, denoted *ζ[i]*, exists and is non-Empty by Definition 1.1.2. Therefore, 
 
-    2. *ζ[i] ≠ ε*. 
+.. math::
+
+    2. \zeta[i] \neq \varepsilon 
 
 Since *ζ* and *i* are arbitrary, this can generalized,
 
-    ∀ α ∈ L : ∀ i ∈ N:sub:`l(ζ)`: ζ[i] ≠ ε ∎
+.. math::
+
+    3. \forall \alpha \in L: \forall i \in N_{l(\zeta)}: \zeta[i] \neq \varepsilon 
+
+∎
 
 .. _theorem_2_2_4:
 
-**Theorem 2.2.4** ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1
+**Theorem 2.2.4** :math:`\forall \zeta \in C_{L}: \Lambda(\zeta) \geq 1`
 
 Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By the second conjunct of the Duality Axiom S.1,
 
-    1. ∃ α ∈ L: α ⊂:sub:`s` ζ
+.. math::
+
+    1. \exists \alpha \in L: \alpha \subset_s \zeta
 
 By the first conjunct of the Discovery Axiom W.1,
 
-    2. l(α) ≠ 0
+.. math::
+
+    2. l(\alpha) \neq 0
 
 Therefore, by Definition 1.1.7, there exists an *f* such that, 
 
-    3. ∀ i ∈ N:sub:`l(α)`: α[i] = ζ[f(i)]
+.. math::
+
+    3. \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)]
 
 By Theorem 1.2.3, 
 
-    4. ∀ i ∈ N:sub:`l(α)`: α[i] ≠ ε
+.. math::
+
+    4. \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
 
 Therefore, combining step 3 and 4,
 
-    5. ∀ i ∈ N:sub:`l(α)`: ζ[f(i)] ≠ ε
+.. math::
 
-Since *l(α) ≠ 0*, there is at least one non-Empty Character in *ζ* and therefore, by Definition 1.1.3,
+    5. \forall i \in N_{l(\alpha)}: \zeta[f(i)] \neq \varepsilon
 
-    6. Λ(ζ) ≥ 1
+Since :math:`l(\alpha) \neq 0`, there is at least one non-Empty Character in *ζ* and therefore, by Definition 1.1.3,
+
+.. math::
+
+    6. \Lambda(\zeta) \geq 1
 
 Generalizing this over the Corpus,
 
-    7. ∀ ζ ∈ C:sub:`L`: Λ(ζ) ≥ 1 ∎
+.. math::
+    
+    7. \forall \zeta \in C_L: \Lambda(\zeta) \geq 1 ∎
 
 .. _theorem_2_2_5:
 
-**Theorem 2.2.5** ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
+**Theorem 2.2.5** :math:`\forall \zeta \in C_{L}: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
 
 This theorem can be stated in natural language as follows: Every Sentence in the Corpus is the Delimitation of its own Words.
 
 Assume 
 
-    ζ ∈ C:sub:`L`
+.. math::
+
+    1. ζ \in C_L
 
 By Definition 2.1.3,
 
-    W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`Λ(ζ)`) 
+.. math::
+
+    2. W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)}) 
     
 where
 
-    α:sub:`i` ∈ L.
+.. math::
 
-By Definition 1.2.5, the sequence **W**:sub:`ζ` forms a phrase P:`sub:Λ(ζ)` of length *Λ(ζ)* where 
+    3. \alpha_i \in L.
 
-   ∀ i ∈ N:sub:`Λ(ζ)`: P:sub:`Λ(ζ)`(i) = α:sub:`i` 
+By Definition 1.2.5, the sequence **W**:sub:`ζ` forms a phrase P:sub:`Λ(ζ)` of length *Λ(ζ)* where,
+
+.. math::
+
+   4. \forall i \in N_{\Lambda(\zeta)}: P_{\Lambda(\zeta)}(i) = \alpha_i 
     
 By Definition 1.27, the Delimitation of P:sub:`Λ(ζ)` is,
 
-    DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+.. math::
+
+    4. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
 The delimitation reconstructs the original sentence ζ by including the delimiters between words. Therefore:
 
-    ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+.. math::
+
+    5. \zeta = D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)
 
 By Definition 2.1.5, 
 
-    ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} = α:sub:`i`
+.. math::
+
+    6. \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} = \alpha_i
 
 Therefore,
 
-    ζ = DΠ:sub:i=1:sup:`Λ(ζ)` ζ{i}
+.. math::
+    
+    7. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
-Since ζ was an arbitrary Sentence in the Corpus, this can be generalized,
+Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
-    ∀ ζ ∈ C:sub:`L`: ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
+.. math::
+
+    8. \forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} 
+
+∎
 
 .. _section_ii_iii:
 
@@ -868,11 +1018,15 @@ The notion of an *Admissible Sentence* is required to prevent a certain class of
 
 To see what is meant by this concept of *admissibility*, consider the English sentence,
 
-    ᚠ = "strap on a ton".
+.. math::
+
+    \rune{f} = \text{"strap on a ton"}
 
 The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition 2.2.1). By this it is meant every word in its inversion is part of the English language,
 
-    inv(ᚠ) = "not a no parts"
+.. math::
+
+    \text{inv}(\rune{f}) = \text{"not a no parts"}
 
 However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Delimitation introduced in Definition 1.2.7 must now be leveraged. 
 
@@ -882,82 +1036,123 @@ However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is ap
 
 Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(*n*). A String *t* is said to belong to the class of *Admissible Sentences of Word Length n* in Language **L**, denoted **A**(*n*), if it satisfies the following open formula
 
-    t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = DΠ:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`) ∎
+.. math::
+
+    t \in A(n) \leftrightarrow (\exists p \in \Chi_L(n): t = D\Pi_{i=1}^{n} p(i)) \land (t \in C_L)
+
+∎
 
 The notion of *admissibility* is a faint echo of *"grammaticality"*. As inversion is studied in the sentential level of the linguistic hierarchy, it is no longer permitted to ignore semantics in its entirety. Instead, semantics ingresses into the system as implicit properties the extensionally identified Sentences must obey. Before discussing this at greater length, several theorems are proved about classes of Admissible Sentences.
 
 .. _theorem_2_3_1:
 
-**Theorem 2.3.1** A(n) ⊆ C:sub:`L`
+**Theorem 2.3.1** :math:`A(n) \subseteq C_{L}`
 
-Let *t* be an arbitrary String such that *t* *∈* **A**(*n*). By Definition 2.3.1, this implies, *t* *∈* **C**:sub:`L`. Therefore,
+Let *t* be an arbitrary String such that :math:`t \in A(n)`. By Definition 2.3.1, this implies, :math:`t \in C_L`. Therefore,
 
-    1. t ∈ A(n) → t ∈ C:sub:`L`
+.. math::
+
+    1. t \in A(n) \rightarrow t \in C_L
 
 This is exactly the set theoretic definition of a subset. Thus,
 
-    2. A(n) ⊆ C:sub:`L` ∎
+.. math::
+
+    2. A(n) \subseteq C_L 
+
+∎
 
 Theorem 2.3.1 is the formal justification for quantifying Sentence Variables over the set of Admissible Sentences (i.e. all Admissable Sentences are in the Corpus), as in the following theorem.
 
 .. _theorem_2_3_2:
 
-**Theorem 2.3.2** ∀ ζ ∈ A(n): Λ(ζ) = n
+**Theorem 2.3.2** :math:`\forall \zeta \in A(n): \Lambda(\zeta) = n`
 
-Let *ζ* be an arbitrary sentence in **A**(*n*). By Definition 2.3.1, if *ζ* *∈* **A**(*n*), then there exists a Phrase *p* *∈* **Χ**:sub:`L`(*n*) such that 
+Let *ζ* be an arbitrary sentence in **A**(*n*). By Definition 2.3.1, if *ζ* *∈* **A**(*n*), then there exists a Phrase :math:`p \in \Chi_L(n)` such that 
 
-    1. ζ ∈ C:sub:`L` ∧ ζ = DΠ:sub:`i=1`:sup:`n` p(i)
+.. math::
 
-By Definition 1.2.5 and 1.2.6, a phrase *p* in **Χ**:sub:`L(n)` is an ordered sequence of *n* words such that *α*:sub:`i` *∈* **L**,
+    1. (\zeta \in C_L) \land (\zeta = D\Pi_{i=1}^{n} p(i))
 
-    p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+By Definition 1.2.5 and 1.2.6, a phrase *p* in :math:`\Chi_L(n)` is an ordered sequence of *n* words such that :math:`\alpha_i \in L`,
+
+.. math::
+
+    2. p = (\alpha_1, \alpha_2, ..., \alpha_n)
 
 By Definition 1.2.7, the Delimitation of *p* is given by,
 
-    DΠ:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
+.. math::
+
+    3. D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
 
 In other words, the Delimitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* Words separated by Delimiters.
 
 By Definition 2.1.4, the Word Length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Delimitation process doesn't add or remove Words, the Word Length of *ζ* must be *n*. Therefore, 
 
-    Λ(ζ) = n.
+.. math::
+
+    4. \Lambda(\zeta) = n.
 
 Since *ζ* was an arbitrary sentence in **A**(*n*), this can generalize as,
 
-    ∀ ζ ∈ A(n): Λ(ζ) = n ∎
+.. math::
+
+    5. \forall \zeta \in A(n): \Lambda(\zeta) = n ∎
 
 .. _theorem_2_3_3:
 
-**Theorem 2.3.3** ∀ ζ ∈ C:sub:`L`: ζ ∈ A(Λ(ζ))
+**Theorem 2.3.3** :math:`\forall \zeta \in C_{L}: \zeta \in A(\Lambda(\zeta))`
 
 Let ζ be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
 
-    1. W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ... , α:sub:`Λ(ζ)`) 
+.. math::
+
+    1. W_{\zeta} = (\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)}) 
     
-Where each *α*:sub:`i` *∈* **L**. By Definition 1.2.5, the sequence (*α*:sub:`1`, *α*:sub:`2`, ... , *α*:sub:`Λ(ζ)`) forms a phrase **P**:sub:`Λ(ζ)` of length *Λ(ζ)* where P:sub:`Λ(ζ)`(i) = *α*:sub:`i` for all *i*, *1 ≤ i ≤ Λ(ζ)*.
+Where each :math:`\alpha_i \in L`. By Definition 1.2.5, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a phrase **P**:sub:`Λ(ζ)` of length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
 
 By Definition 1.2,6, since **P**:sub:`Λ(ζ)` is a phrase of length *Λ(ζ)* and all its Words belong to L (by semantic coherence), then,
 
-    2. P:sub:`Λ(ζ)` ∈ Χ:sub:`L`(Λ(ζ)).
+.. math::
+
+    2. P_{\Lambda(\zeta)} \in \Chi_L(\Lambda(\zeta)).
 
 By Definition 1.2.7, the Delimitation of P:sub:`Λ(ζ)` is:
 
-    3. DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`Λ(ζ)`)
+.. math::
 
-The Delimitation *DΠ*:sub:`i=1`:sup:`Λ(ζ)` **P**:sub:`Λ(ζ)`(*i*) reconstructs the original sentence *ζ*, including the Delimiters between Words. Therefore,
+    3. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
-    4. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
+The Delimitation :math:`D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)` reconstructs the original sentence *ζ*, including the Delimiters between Words. Therefore,
 
-By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (*t* *∈* **A**(*n*)) if and only if there exists a phrase *p* *∈* **Χ**:sub:`L`(*n*) such that,
+.. math::
 
-    5. t = DΠ:sub:`i=1`:sup:`n` p(i)
-    6. t ∈ C:sub:`L`
+    4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
 
-By Definition 2.3.1, since the conjunction of the three facts is true,
+By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (:math:`t \in A(n)`) if and only if there exists a phrase :math:`p \in \Chi_L(n)` such that,
 
-    7. ζ ∈ C:sub:L
-    8. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` P:sub:`Λ(ζ)`(i)
-    9. P:sub:`Λ(ζ)` ∈ Χ:sub:`L`(Λ(ζ)) 
+.. math::
+
+    5. t = D\Pi_{i=1}^{n} p(i)
+    
+.. math::
+
+    6. t \in C_L
+
+By Definition 2.3.1, since the conjunction of the following three facts is true,
+
+.. math::
+
+    7. \zeta \in C_L
+    
+.. math::
+    
+    8. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i)
+   
+.. math::
+
+    9.  P_{\Lambda(\zeta)} \in \Chi_L(\Lambda(\zeta)) 
     
 It follows from step 7 - step 9, *ζ* *∈* **A**(*Λ(ζ)*). Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
 

@@ -140,8 +140,8 @@ Theorems
 - T 2.1.2: :math:`\forall \zeta, \xi \in C_{L}: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
 - T 2.1.3: :math:`\forall \zeta \in C_{L}: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
 - T 2.2.1: :math:`\forall \zeta \in C_{L}: l(\zeta) \neq 0`
-- T 2.2.2: :math:`\forall \zeta \in C_{L}: \forall i \in \mathbb{N}_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
-- T 2.2.3: :math:`\forall \zeta \in C_{L} : \forall i \in \mathbb{N}_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
+- T 2.2.2: :math:`\forall \zeta \in C_{L}: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
+- T 2.2.3: :math:`\forall \zeta \in C_{L} : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
 - T 2.2.4: :math:`\forall \zeta \in C_{L}: \Lambda(\zeta) \geq 1`
 - T 2.2.5: :math:`\forall \zeta \in C_{L}: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
 - T 2.3.1: :math:`A(n) \subseteq C_{L}`
