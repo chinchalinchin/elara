@@ -768,6 +768,8 @@ Combining step 1 and step 2, the theorem is obtained through algebraic manipulat
 
     l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α) ∎
 
+.. _theorem_3-2-8:
+
 **Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
 
 This theorem can be stated in natural language as follows: For any Sentence in a Corpus, its String Length is always greater than or equal to its Word Length.

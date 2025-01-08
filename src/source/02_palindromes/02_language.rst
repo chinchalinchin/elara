@@ -75,8 +75,9 @@ At this early stage, the formal system needs to introduce a notion of *equality*
 For any Characters :math:`\iota, \nu \in \Sigma`, the notion of equality, denoted by :math:`\iota = \nu`, is a primitive concept and assumed to be understood. It is further assumed that Character Equality is an equivalence relation, satisfying reflexivity, symmetry and transitivity,
 
     1. :math:`\forall \iota \in \Sigma : \iota = \iota`
-    2. :math:`\forall \iota \nu \in \Sigma : \iota = \nu \leftrightarrow \nu = \iota`
-    3. :math:`\forall \iota \nu \omicron \in \Sigma : (\iota = \nu \land \nu = \omicron) \to (\iota = \omicron)`
+    2. :math:`\forall \iota, \nu \in \Sigma : \iota = \nu \leftrightarrow \nu = \iota`
+    3. :math:`\forall \iota, \nu, \omicron \in \Sigma : (\iota = \nu \land \nu = \omicron) \to (\iota = \omicron)`
+
 ∎ 
 
 Character Equality will be used to define *String Equality* in :ref:`Definition 1.1.4 <definition-1-1-4>` and Word Equality in :ref:`Definition 1.2.3 <definition-1-2-3>`.
@@ -95,8 +96,8 @@ Concatenation is considered the sole constitutive operation for the formation of
 The result of *concatenating* any two Characters *ι* and *ν** is denoted *ιν*. To make the operands of concatenation clear, parenthesis will sometimes be used to separate the Characters being concatenated, e.g. *ι(ν) = (ι)ν = (ι)(ν) = ιν*. Character concatenation is defined inductively through the following schema,
 
     1. Basic Clause: :math:`\forall \iota \in \Sigma : \iota \varepsilon = \iota`
-    2. Inductive Clause: :math:`\forall iota \nu \in \Sigma : \forall s \in S: \iota(\nu s) = (\iota \nu)s`
-    3. Uniqueness Clause: :math:`\forall \iota \nu \omicron \rho \in \Sigma : (\iota \nu = \omicron \rho) \to ((\iota = \omicron) \land (\nu = \rho))` 
+    2. Inductive Clause: :math:`\forall iota, \nu \in \Sigma : \forall s \in S: \iota(\nu s) = (\iota \nu)s`
+    3. Uniqueness Clause: :math:`\forall \iota, \nu, \omicron, \rho \in \Sigma : (\iota \nu = \omicron \rho) \to ((\iota = \omicron) \land (\nu = \rho))` 
     4. Comprehension Clause: :math:`\forall \iota \in \Sigma : \forall s \in S: \iota \in S` 
 
 ∎

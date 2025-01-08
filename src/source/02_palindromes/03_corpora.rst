@@ -208,56 +208,56 @@ Then, applying the *Delimiting Algorithm*, its Word-level representation is cons
     
 ∎
 
-Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in Definition 1.1.5 will be use this method of Sentence representation to simplify many of the upcoming proofs.
+Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in :ref:`Definition 1.1.5 <definition-1-1-5>` will use this method of Sentence representation to simplify many of the upcoming proofs.
 
-There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Characters that deserves special mention, as this perhaps reasonable assumption implicitly elides a question of much greater complexity regarding where precisely the semantic information of a Sentence resides. To see what is meant by this, consider the three sentences from Latin,
+There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Words that deserves special mention, as this perhaps reasonable assumption implicitly elides a question of much greater complexity regarding where precisely the semantic information of a Sentence resides. To see what is meant by this, consider the three sentences from Latin,
 
 - Puella canem videt. (Girl dog sees)
 - Canem puella videt. (Dog girl sees)
 - Videt puella canem. (Sees girl dog)
 
-In some respect, all three of these sentences could be considered the *same* sentence, as the order of the words is not the primary bearer of semantic information. While the order of words lends itself to the *voice* and *tone* of the sentence, the meaning of the sentence does not primarily emerge through tis word order. Similar cases exist in any natural language that uses declensions to modify the syntactic function of words, such as Greek. 
+Latin, like many other natural languages, uses declensions to imbue words with syntactic functions. In some respect, all three of these sentences could be considered the *same* sentence, as the order of the words is not the primary bearer of semantic information; the suffixes do all of the work. While the order of words lends itself to the *voice* and *tone* of the sentence, the meaning of the sentence does not primarily emerge through its Word order. Similar cases exist in any natural language that uses declensions to modify the syntactic function of words, such as Greek. 
 
 The current formal system treats these sentences in Latin as distinct Sentences. If the Latin sentences in this example are to be identified as representatives of the same semantic *"token"*, this cannot occur on the Sentence level of this formal system's linguistic hierarchy. This example suggests Sentences are not the final level of the hierarchy, and that to find the source of meaning in a Sentence, another level must be constructed on top of it capable of identifying these different manifestations as the same *"token"*.
 
 This example does not invalidate the analysis, but it does introduce subtlety that must be appreciated. These concerns must be kept in mind while the formal notion of a Sentence is developed.
 
-.. _word_length:
+.. _word-length:
 
 Word Length
 ^^^^^^^^^^^
 
-The notion of String Length *l(s)* was introduced in Section I.I as a way of measuring the number of non-Empty Characters in a String *s*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different *"spatial"* dimension in the domain of a Language and its Corpus: *Word Length*.
+The notion of String Length *l(s)* was introduced in :ref:`Section I.I <section-i-i>` as a way of measuring the number of non-Empty Characters in a String *s*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different *"spatial"* dimension in the domain of a Language and its Corpus: *Word Length*.
 
-Intuitively, the length of a Sentence is the number of Words it contains. Since there is no analogue of Discovery Axiom W.1 for Sentences (nor should there be), this means Sentences may contain Delimiter Characters. The Words of a Language are separated by Delimiters in the Sentences of its Corpus. 
+Intuitively, the length of a Sentence is the number of Words it contains. Since there is no analogue of :ref:`Discovery Axiom W.1 <axiom-w1>` for Sentences (nor should there be), this means Sentences may contain Delimiter Characters. The Words of a Language are separated by Delimiters in the Sentences of its Corpus. 
 
-Definition 2.1.3 provide way of dispensing with the Delimiter Character in Sentences, while still retaining the information it provides about the demarcation of Words through the first coordinate of a Sentence's Word-level representation. With the Word-level set representation of Sentence in hand, it is a simple matter to define the notion of Word Length in the formal system.
+:ref:`Definition 2.1.3 <definition-2-1-3>` provides a way of dispensing with the Delimiter Character in Sentences, while still retaining the information they provides about the demarcation of Words through the first coordinate of a Sentence's Word-level representation. With the Word-level set representation of Sentence in hand, it is a simple matter to define the notion of Word Length in the formal system.
 
 .. _definition-2-1-4:
 
 **Definition 2.1.4: Word Length**
 
-Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level set representation of *ζ*, as defined in Definition 2.1.3. The Word Length of the Sentence *ζ*, denoted by :math:`\Lambda(\zeta)`, is defined as the cardinality of the set **W**:sub:`ζ`,
+Let *ζ* be a Sentence in a **C**:sub:`L`. Let **W**:sub:`ζ` be the Word-level set representation of *ζ*, as defined in :ref:`Definition 2.1.3 <definition-2-1-3>`. The Word Length of the Sentence *ζ*, denoted by :math:`\Lambda(\zeta)`, is defined as the cardinality of the set **W**:sub:`ζ`,
 
 .. math::
 
-    \Lambda(ζ) = | W_{\zeta} | 
+    \Lambda(\zeta) = | W_{\zeta} | 
     
 ∎
 
 **Example**
-Notation
+
 Consider the Sentence *ᚠ = "the dog runs"*. Its Character-level set representation would be given by,
 
 .. math::
 
-    \large\rune{f} = \{ (0,"t"), (1,"h"), (2,"e"), (4,σ), (5, "d"), (6, "o"), (7, "g"), (8, σ), (9, "r"), (10, "u"), (11,"n"), (12,"s") \}
+    \large\rune{f} = \{ (0,\text{"t"}), (1,\text{"h"}), (2,\text{"e"}), (4,\sigma), (5, \text{"d"}), (6, \text{"o"}), (7, \text{"g"}), (8, \sigma), (9, \text{"r"}), (10, \text{"u"}), (11,\text{"n"}), (12,\text{"s"}) \}
 
 Its Word-level set representation would be given by,
 
 .. math::
 
-    W_{\rune{f}} = \{ (1, \text{"the"}), (2, \text{"dog"}), (3, \text{"runs"}) }
+    W_{\rune{f}} = \{ (1, \text{"the"}), (2, \text{"dog"}), (3, \text{"runs"}) \}
 
 Therefore, the length of the sentence is:
 
@@ -275,12 +275,12 @@ Note, in this example,
 
 This example demonstrates the essential difference in the notions of length that have been introduced. It is worthwhile to clarify the distinction between these two conceptions. 
 
-Let *t* be a String with Character-level representation **T** and Word-level representation **W**:sub:`t`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact is proven in Section II of the Appendix with Theorem A.4.8). Terminology is introduced in parenthesis to distinguish these notions of length,
+Let *t* be a String with Character-level representation **T** and Word-level representation **W**:sub:`t`. The hierarchy of its "spatial" dimensions is given below, in order of greatest to least (this fact is proven in :ref:`Section III.II <section-iii-ii>` with :ref:`Theorem 3.2.8 <theorem-3-2-8>`). Terminology is introduced in parenthesis to distinguish these notions of length,
 
    - l(t) (String Length): The number of non-Empty Characters contained in a String.
    - Λ(t) (Word Length): The number of Words contained in a String 
 
-Note the first level is purely syntactical. Any String *t* will have a String Length *l(t)*. However, not every String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see Definition 2.2.1 for a precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
+Note the first level is purely syntactical. Any String *t* will have a String Length *l(t)*. However, not every String possesses Word Length, *Λ(s)*. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see :ref:`Definition 2.2.1 <definition-2-2-1>` for a precise definition of *semantic coherence*), e.g. "asdf dog fdsa", Word Length does signal an *extension* of Strings into the semantic domain.
 
 Word Length can be used to simplify some of the complex notation the formal system has accumulated. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.
 
@@ -312,11 +312,11 @@ This theorem can be stated in natural language as follows: For any sentence *ζ*
 
 Assume :math:`\zeta \in C_L`. Let *j* be a natural number such that :math:`1 ≤ j ≤ \Lambda(\zeta)`
 
-For each ordered Word *ζ{j}* in *ζ*, its String Length *l(ζ{j})* must be greater 0 by the Discovery Axiom W.2 and Definition 1.1.3. Therefore, since each Word contributes at least a String Length of 1, the sum of the String Lengths *l(ζ{j})* must be greater than or equal to *Λ(ζ)*. ∎
+For each ordered Word *ζ{j}* in *ζ*, its String Length *l(ζ{j})* must be greater 0 by the :ref:`Discovery Axiom W.1 <axiom-w1>` and :ref:`Definition 1.1.3 <definition-1-1-3>`. Therefore, since each Word contributes at least a String Length of 1, the sum of the String Lengths *l(ζ{j})* must be greater than or equal to *Λ(ζ)*. ∎
 
 Word Length and Word Index Notation can be used to define the notion of *Boundary Words*, which will be utilized in the main results about Palindromes. 
 
-To illustrate another simplification effected by Index notation in formal proofs about Language, consider how laborious the proof of the following Theorem 2.1.2 would be without the ability to refer to Characters embedded in Strings and Words embedded in Sentences through Index notation. 
+To illustrate another simplification effected by Index notation in formal proofs about Language, consider how laborious the proof of the following :ref:`Theorem 2.1.2 <theorem-2-1-1>` would be without the ability to refer to Characters embedded in Strings and Words embedded in Sentences through Index notation. 
 
 .. _theorem-2-1-2:
 
@@ -377,14 +377,14 @@ Since *ζ* and *ξ* were arbitrary sentences, this can be generalized over the C
     
 ∎
 
-Word Length is fundamentally different to String Length with respect to the operation of concatenation. In Theorem 1.1.1, it was shown String Length sums over concatenation. Theorem 2.1.2 demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.
+Word Length is fundamentally different to String Length with respect to the operation of concatenation. In :ref:`Theorem 1.1.1 <theorem-1-1-1>`, it was shown String Length sums over concatenation. :ref:`Theorem 2.1.2 <theorem-2-1-2>` demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.
 
 .. _intervention:
 
 Intervention
 ^^^^^^^^^^^^
 
-Colloquially, in the Sentence, *"never a dull day"*, the ordered Characters *"a"*,*"d"*,*"u"*,*"l"*, *"l"* are between the Words *"never"* and *"day"*. The concept of *Intervention* is introduced into the formal system to explicate this everyday notion of *"betweenness"*. A precise definition of what it means for a Character to *intervene* two Words in a Sentence is given using the operation of Delimitation introduced in Definition 1.2.7.
+Colloquially, in the Sentence, *"never a dull day"*, the ordered Characters *"a"*,*"d"*,*"u"*,*"l"*, *"l"* are between the Words *"never"* and *"day"*. The concept of *Intervention* is introduced into the formal system to explicate this everyday notion of *"betweenness"*. A precise definition of what it means for a Character to *intervene* two Words in a Sentence is given using the operation of Delimitation introduced in :ref:`Definition 1.2.7 <definition-1-2-7>`.
 
 .. _definition-2-1-6:
 
@@ -396,9 +396,9 @@ Let *ζ* be a Sentence in C:sub:`L`. The Character *ζ[k]* is said to *intervene
 
    l(D\Pi_{x=1}^{i} \zeta(x)) < k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 ∎
 
-The meaning of Definition 2.1.6 is not immediately intuitive, so a an explanation and thorough example are now presented to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.
+The meaning of :ref:`Definition 2.1.6 <definition-2-1-6>` is not immediately intuitive, so a an explanation and thorough example are now presented to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.
 
-Analyzing each component of the inequality in Definition 2.1.6: 
+Analyzing each component of the inequality in :ref:`Definition 2.1.6 <definition-2-1-6>`: 
 
 - :math:`l(D\Pi_{x=1}^{i} \zeta(x))`: This represents the length of the Delimitation of the first i words of the sentence ζ. In simpler terms, it's the length of the string up to and including the i-th word, including the delimiters.
 
@@ -436,9 +436,9 @@ The Word-level representation of this Sentence is given by,
 
     W_{\rune{f}} = \{ (1, \text{"repaid"}), (2, \text{"a"}), (3, \text{"regal"}), (4, \text{"leper"}) \}
 
-Note *inv(ᚠ) = "repel lager a diaper"*. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see Definition 2.2.1 in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see Definition 2.3.1 for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
+Note :math:`\text{inv}(\rune{f}) = \text{"repel lager a diaper"}`. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see :ref:`Definition 2.2.1 <definition-2-2-1>` in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see :ref:`Definition 2.3.1 <definition-2-3-1>` for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
 
-    W_{inv(\rune{f})} = \{ (1, \text{"repel"}), (2, \text{"lager"}), (3, \text{"a"}), (4, \text{"diaper}) }
+    W_{inv(\rune{f})} = \{ (1, \text{"repel"}), (2, \text{"lager"}), (3, \text{"a"}), (4, \text{"diaper}) \}
     
 To see how Definition 2.1.6 can be used to assert a Character falls between two Words in a sentence, calculate the following Delimitations and String Lengths.
 
@@ -464,13 +464,13 @@ The String Length of this Delimitation is exactly equal to the Sentence Length *
 
     \rune{f}\{4\} = \text{"leper"}
 
-This corresponds to a *j = 4* in Definition 2.1.6. The upperhand limit in the Delimitation on the right-hand side of the inequality in Definition 2.1.6 is given by,
+This corresponds to a :math:`j = 4` in :ref:`Definition 2.1.6 <definition-2-1-6>`. The upperhand limit in the Delimitation on the right-hand side of the inequality in :ref:`Definition 2.1.6 <definition-2-1-6>` is given by,
 
 .. math::
 
     \Lambda(\rune{f}) - j + 1 = 4 -  4 + 1 = 1
 
-Therefore, the corresponding Delimitation of the Inverse Sentence for Definition 2.1.6 is given by,
+Therefore, the corresponding Delimitation of the Inverse Sentence for :ref:`Definition 2.1.6 <definition-2-1-6>` is given by,
 
 .. math::
 
@@ -480,13 +480,13 @@ Therefore, the corresponding Delimitation of the Inverse Sentence for Definition
 
     l(D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x)) = 5
 
-Working from the back of the Sentence, the String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 4*. Calculating the right-hand side of the inequality in Definition 2.1.6, 
+Working from the back of the Sentence, the String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 4*. Calculating the right-hand side of the inequality in :ref:`Definition 2.1.6 <definition-2-1-6>`, 
 
 .. math::
 
     l(\rune{f}) - l(D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x)) + 1 = 20 - 5 + 1 = 16
 
-By Definition 2.1.6, the Characters *ᚠ[k]* between the indices of 8 and 16 (exclusive) *intervene* *ᚠ{2}* and *ᚠ{4}*, namely, 
+By :ref:`Definition 2.1.6 <definition-2-1-6>`, the Characters *ᚠ[k]* between the indices of 8 and 16 (exclusive) *intervene* *ᚠ{2}* and *ᚠ{4}*, namely, 
 
     - ᚠ[9] = " "
     - ᚠ[10] = "r"
@@ -516,7 +516,7 @@ Let *ᚠ = "the world divides into facts"*. Then
 
     l(\rune{f}) = 28
 
-Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that :math:`i = j` in the Definition 2.1.6. Let :math:`i = j = 2`, i.e. consider the second Word in the Sentence, *"world"*. The relation of Intervention that obtains between *"world"* and itself should evaluate to false. In other words, no Characters intervene between a Word and itself. 
+Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that :math:`i = j` in the :ref:`Definition 2.1.6 <definition-2-1-6>`. Let :math:`i = j = 2`, i.e. consider the second Word in the Sentence, *"world"*. The relation of Intervention that obtains between *"world"* and itself should evaluate to false. In other words, no Characters intervene between a Word and itself. 
 
 The Delimitation of the Sentence up to the Second Word is given by,
 
@@ -578,7 +578,7 @@ Without loss of generality (since the case :math:`i > j` is symmetrical), assume
 
     4. i < j
 
-By Theorem 2.3.4, 
+By :ref:`Theorem 2.3.4 <theorem-2-3-4>`, 
 
 .. math::
 
@@ -590,17 +590,17 @@ Where
     
     6. p \in X_L(\Lambda(\zeta))`
 
-By Definition 1.2.7 of Delimitation, this means 
+By :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitation, this means 
 
 .. math::
 
     7. \zeta = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda\(ζ)\}) 
 
-By step 5, *ζ{i}* comes before *ζ{j}* in the Sentence *ζ*. By the Discovery Axiom W.1, there must be at least one delimiter character between *ζ{i}* and *ζ{j}* because they are distinct Words in a valid Sentence. 
+By step 5, *ζ{i}* comes before *ζ{j}* in the Sentence *ζ*. By the :ref:`Discovery Axiom W.1 <axiom-w1>`, there must be at least one delimiter character between *ζ{i}* and *ζ{j}* because they are distinct Words in a valid Sentence. 
 
 Let *σ* be a delimiter Character between *ζ{i}* and *ζ{j}*. Let *k be the index of this σ in the character-level representation of ζ (i.e., *ζ[k] = σ*).
 
-By the Definition 1.2.7 of Delimitation, 
+By the :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitations, 
 
 .. math::
 
@@ -624,7 +624,7 @@ Gives the index of the first Character after the Word corresponding to *ζ{j}* i
 
     11. k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
 
-Therefore, by Definition 2.1.6, 
+Therefore, by :ref:`Definition 2.1.6 <definition-2-1-6>`, 
 
 .. math::
 
@@ -642,7 +642,7 @@ Thus,
 
     1. \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
 
-By Definition 2.1.6,
+By :ref:`Definition 2.1.6 <definition-2-1-6>`,
 
 .. math::
 
@@ -654,7 +654,7 @@ Assume, for the sake of contradiction, that :math:`i = j`.
 
     3. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
 
-Now, consider the term :math:`l(D\Pi_{x=1}^{i} \zeta(x))`. This represents the String Length of the Delimitation of the first *i* words of *ζ*. By the Definition 1.2.7 of Delimitation, this includes the lengths of the first *i* words and the lengths of the :math:`(i - 1)` delimiters between them.
+Now, consider the term :math:`l(D\Pi_{x=1}^{i} \zeta(x))`. This represents the String Length of the Delimitation of the first *i* words of *ζ*. By the :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitations, this includes the lengths of the first *i* words and the lengths of the :math:`(i - 1)` delimiters between them.
 
 Similarly, consider the term :math:`l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))`. This represents the String Length of the Delimitation of the first *Λ(ζ) - i + 1* words of *inv(ζ)*.  Since *inv(ζ)* has the same words as *ζ* but inverted and in reverse order, this is equivalent to the String Length of the uninverted Sentence up to the *i*:sup:`th` word of *ζ*, measured from the last Character in the String.
 
@@ -682,13 +682,13 @@ Combining this with the left-hand side of the inequality in step 5, we get:
 
     7. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(D\Pi_{x=1}^{i} \zeta(x)) + 1
    
-But String Lengths are integers, and by the laws of arithmetic, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that *i = j* must be false.
+But String Lengths are integers, and by the laws of arithmetic, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that :math:`i = j` must be false.
 
 .. math::
 
     8. i \neq j.
 
-With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized as, 
+With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized over the Corpus, 
 
 .. math::
 
@@ -696,16 +696,16 @@ With both directions of the equivalence proven, since *ζ*, *i*, and *j* were ar
     
 ∎
 
-.. _section_ii_ii:
+.. _section-ii-ii:
 
 Section II.II: Axioms 
 ----------------------
 
-In Section I, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.
+In :ref:`Section I <section-i>`, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.
 
 Note the Discovery Axiom has been revised to employ Character Index notation. 
 
-.. _axiom_c0_2:
+.. _axiom-c0-2:
 
 **Axiom C.0: The Equality Axiom**
 
@@ -719,11 +719,11 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
     
 .. math::
 
-    3. \forall \iota, \nu, \omicron \in Σ: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicorn) 
+    3. \forall \iota, \nu, \omicron \in \Sigma: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicorn) 
 
 ∎
 
-.. _axiom_c1_2:
+.. _axiom-c1-2:
 
 **Axiom C.1: The Character Axiom**
 
@@ -733,7 +733,7 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
     
 ∎
 
-.. _axiom_w1_2:
+.. _axiom-w1-2:
 
 **Axiom W.1: The Discovery Axiom ** 
 
@@ -743,7 +743,7 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
     
 ∎
 
-.. _axiom_s2:
+.. _axiom-s1:
 
 **Axiom S.1: The Duality Axiom**
 
@@ -753,7 +753,7 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
     
 ∎
 
-.. _axiom_s2:
+.. _axiom-s2:
 
 **Axiom S.2: The Extraction Axiom**
 
@@ -763,13 +763,13 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
     
 ∎
 
-Two new axioms, the Duality Axiom S.1 and the Extraction Axiom S.2, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language). 
+Two new axioms, the :ref:`Duality Axiom S.1 <axiom-s1>` and the :ref:`Extraction Axiom S.2 <axiom-s2>`, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language). 
 
 To briefly summarize the axioms previously introduced: The system *"initializes"* with the assumption of an equality relation and the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. To re-iterate, a Language and Corpus are fixed on top of the domain of all Strings outside of the system. 
 
 The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories.
 
-The Duality Axiom S.1 bares a striking resemblance to the idea of *surjection* in real analysis. Recall, a function :math:`f: X \to Y` is called *surjective* if,
+The :ref:`Duality Axiom S.1 <axiom-s1>` bares a striking resemblance to the idea of *surjection* in real analysis. Recall, a function :math:`f: X \to Y` is called *surjective* if,
 
 .. math::
 
@@ -777,13 +777,13 @@ The Duality Axiom S.1 bares a striking resemblance to the idea of *surjection* i
 
 Meaning, every element in the co-domain is mapped to at least one element in the domain. 
 
-In a sense, the Duality Axiom S.1 asserts a type of *"double-surjectivity"* exists between the domain of Words and the co-domain of Sentences.  In plain language, the Duality Axiom asserts for every Word *α* in the Language **L**, there exists a sentence *ζ* in the Corpus **C**:sub:`L` such that *α* is contained in *ζ*, and for every Sentence *ζ* in the corpus **C**:sub:`L`, there exists a word *α* in the language **L** such that *α* is contained in *ζ*. 
+In a sense, the :ref:`Duality Axiom S.1 <axiom-s1>` asserts a type of *"double-surjectivity"* exists between the domain of Words and the co-domain of Sentences.  In plain language, the :ref:`Duality Axiom <axiom-s1>` asserts for every Word *α* in the Language **L**, there exists a sentence *ζ* in the Corpus **C**:sub:`L` such that *α* is contained in *ζ*, and for every Sentence *ζ* in the corpus **C**:sub:`L`, there exists a word *α* in the language **L** such that *α* is contained in *ζ*. 
 
-However, there is a key difference between the notion of *surjection* in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By Definition 1.1.6 and Definition 1.1.7, containment reduces to the existence of a mapping between Characters in different Strings. Due to the Discovery Axiom W.2, with the exception of Sentences consisting of a Single Word, a Word is contained in a Sentence but a Sentence is not contained in a Word. 
+However, there is a key difference between the notion of *surjection* in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By :ref:`Definition 1.1.6 <definition-1-1-6>` and :ref:`Definition 1.1.7 <definition-1-1-7>`, containment reduces to the existence of a mapping between Characters in different Strings. Due to the :ref:`Discovery Axiom W.2 <axiom-w2>`, with the exception of Sentences consisting of a Single Word, a Word is contained in a Sentence but a Sentence is not contained in a Word. 
 
-More plainly, the Duality Axiom S.1 states a Word cannot exist in a Language without being included in a Sentence of the Corpus, and a Sentence cannot exist in a Corpus without including a Word from the Language. This Axiom captures an inextricable duality between the metamathematical concepts of Sentence and Word, and the concepts of Language and Corpus: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation. A Language and its Corpus require one another. 
+More plainly, the :ref:`Duality Axiom S.1 <axiom-s1>` states a Word cannot exist in a Language without being included in a Sentence of the Corpus, and a Sentence cannot exist in a Corpus without including a Word from the Language. This Axiom captures an inextricable duality between the metamathematical concepts of Sentence and Word, and the concepts of Language and Corpus: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation. A Language and its Corpus require one another. 
 
-The Extraction Axiom S.2 further strengthens the relationship that exists between a Corpus and Language. It states every Word in the Sentence of a Corpus must be included in a Language. This idea of being able *extract* the Words of a Language from a Sentence is captured in the terminology introduced in Definition 2.2.1 directly below. 
+The :ref:`Extraction Axiom S.2 <axiom-s2>` further strengthens the relationship that exists between a Corpus and Language. It states every Word in the Sentence of a Corpus must be included in a Language. This idea of being able *extract* the Words of a Language from a Sentence is captured in the terminology introduced in :ref:`Definition 2.2.1 <definition-2-2-1>` directly below. 
  
 .. _definition-2-2-1:
 
@@ -798,7 +798,7 @@ A Corpus C:sub:`L` is *semantically coherent* in a Language **L** if and only if
 Theorems
 ^^^^^^^^
 
-The first theorems proven using these new axioms are analogous versions of the Word theorems Theorems 1.2.1 - 1.2.3 for Sentences. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings. 
+The first theorems proven using these new axioms are analogous versions of the Word theorems :ref:`Theorems 1.2.1 <theorem-1-2-1>` - :ref:`1.2.3 <theorem-1-2-3>` for Sentences. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings. 
 
 .. _theorem-2-2-1:
 
@@ -806,7 +806,7 @@ The first theorems proven using these new axioms are analogous versions of the W
 
 Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`.
 
-By the first conjunct of the Discovery Axiom W.1 and the second conjunct of the Duality Axiom S.2,
+By the first conjunct of the :ref:`Discovery Axiom W.1 <axiom-w1>` and the second conjunct of the :ref:`Duality Axiom S.2 <axiom-s2>`,
 
 .. math::
 
