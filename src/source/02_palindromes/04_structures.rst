@@ -529,130 +529,207 @@ In the case that Λ(ζ) = 1, then, this means *ζ* can be written simply as,
 
 By the :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* is obtained by removing all Delimiters from *ζ*. Furthermore, by :ref:`Theorem 3.1.2 <theorem-3-1-2>`, *σ*-reduction distributes over concatenation. Thus,
 
-    1. Case (Λ(ζ) > 1): ς(ζ) = (ς(s:sub:`1`))(ς(ζ{i}))(ς(s:sub:`1`))
-    2. Case (Λ(ζ) = 1): ς(ζ{1})
+.. math::
 
-By the Discovery Axiom W.1, Words in **L** do not contain Delimiters.
+    3. \text{Case} (\Lambda(\zeta) > 1): \varsigma(\zeta) = (\varsigma(s_1))(\varsigma(\zeta\{i\}))(\varsigma(s_2))
 
-    1. Case (Λ(ζ) > 1): ς(ζ) = (ς(s:sub:`1`))(ζ{i})(ς(s:sub:`1`))
-    2. Case (Λ(ζ) = 1): ς(ζ{1}) = ζ{1}
+.. math::
 
-Therefore, by the definition of Containment (Definition 1.1.4):
+    4. \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\})
 
-    1. Case (Λ(ζ) > 1): ζ{i} ⊂:sub:`s` ς(ζ)
-    2. Case (Λ(ζ) = 1): ζ{1} ⊂:sub:`s` ς(ζ) 
+By the :ref:`Discovery Axiom W.1 <axiom-w1>`, Words in **L** do not contain Delimiters.
 
-In both cases, there is a Word in *ζ* that is contained in the *σ*-reduction of *ζ*. Since *ζ* was arbitrary, this can generalize as,
+.. math::
 
-    ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ) ∎
+    5. \text{Case} (\Lambda(\zeta) > 1): \varsigma(\zeta) = (\varsigma(s_1))(\zeta\{i\})(\varsigma(s_2))
+    
+.. math::
 
-As one of the final precursors to a formal explication of palindromic structures, this next theorem shows how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
+    6. \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\}) = \zeta\{1\}
+
+Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>` of Containment,
+
+.. math::
+
+    7. \text{Case} (\Lambda(\zeta) > 1): \zeta\{i\} \subset_s \varsigma(\zeta)
+    
+.. math::
+
+    8. \text{Case} (\Lambda(\zeta) = 1): \zeta\{1\} \subset_s \varsigma(\zeta) 
+
+In both cases, there is a Word in *ζ* that is contained in the *σ*-reduction of *ζ*. Since *ζ* was arbitrary, this can generalize over the Corpus,
+
+.. math::
+
+    9. \forall ζ \in C_L: \forall i \in N_{\Lambda(\zeta)}`: \zeta\{i\} \subset_s \varsigma(\zeta) 
+
+∎
+
+This next theorem shows how *σ*-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.
+
+.. _theorem-3-1-7:
 
 **Theorem 3.1.7** ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
 
-In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is invertible, then its invertibility is invariant under *σ*-reduction.
+In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is Invertible, then its invertibility is invariant under *σ*-reduction.
 
 Assume 
 
-    1. ζ ∈ K
+.. math::
 
-In other words, assume that *ζ* is an Invertible Sentence. By Theorem 2.3.7, since *ζ* is invertible, all its Words are also Invertible,
+    1. ζ \in K
+
+In other words, assume that *ζ* is an Invertible Sentence. By :ref:`Theorem 2.3.11 <definition-2-3-11>`, since *ζ* is invertible, all its Words are also Invertible,
  
-    2. ∀ ζ ∈ C:sub:`L`: inv(ζ) ∈ K → inv(ζ){i} ∈ L
+ .. math::
 
-The σ-reduction of *ζ*, *ς(ζ)*, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by Discovery Axiom W.1), the *σ*-reduction concatenates the Words of *ζ*,
+    1. \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I
 
-    3. ς(ζ)= (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+The σ-reduction of *ζ*, *ς(ζ)*, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by :ref:`Discovery Axiom W.1 <axiom-w1>`), the *σ*-reduction concatenates the Words of *ζ*,
 
-Applying Theorem 1.2.5 repeatedly,
+.. math::
 
-    4. inv(ς(ζ)) = inv((ζ{1})(ζ{2})...(ζ{Λ(ζ)}))
+    2. \varsigma(\zeta)= (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
+
+Applying :ref:`Theorem 1.2.5 <theorem-1-2-5>` repeatedly,
+
+.. math::
+
+    3. \text{inv}(\varsigma(\zeta)) = \text{inv}((\zeta\{1\})(\zeta\{2\})...(\zeta{\Lambda(\zeta)\}))
 
 To get,
 
-    5.  inv(ς(ζ))  = (inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1})))
+.. math::
+
+    5.  \text{inv}(\varsigma(\zeta))  = (\text{inv}(\zeta\{\Lambda(ζ)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\ζ\{1\})))
 
 Applying a second Inversion,
 
-    6. inv(inv(ς(ζ))) = inv((inv(ζ{Λ(ζ)})) ... (inv(ζ{2}))(inv((ζ{1}))))
+.. math::
 
-Applying Theorem 1.2.5 again,
+    6. \text{inv}(\text{inv}(\varsigma(\zeta))) = \text{inv}((\text{inv}(\zeta\{\Lambda(\zeta)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\zeta\{1\}))))
 
-    7. inv(inv(ς(ζ))) = (inv(inv((ζ{1})))) (inv(inv((ζ{2}))))...(inv(inv((ζ{Λ(ζ)}))))
+Applying :ref:`Theorem 1.2.5 <theorem-1-2-5>` again,
 
-Finally, applying Theorem 1.2.4 (*inv(inv(s)) = s*)
+    7. \text{inv}(\text{inv}(\varsigma(\zeta))) = (\text{inv}(\text{inv}((\zeta\{1\})))) (\text{inv}(\text{inv}((\zeta\{2\}))))...(\text{inv}(\text{inv}((\zeta\{\Lambda(\zeta)\}))))
 
-    8. inv(inv(ς(ζ))) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+Finally, applying :ref:`Theorem 1.2.4 <theorem-1-2-4>` (:math:`\text{inv}(\text{inv}(s)) = s`)
+
+.. math::
+
+    8. \text{inv}(\text{inv}(\varsigma(\zeta))) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
 
 Therefore, combining step 3 and step 8
 
-    9. ς(ζ) = inv(inv(ς(ζ))). ∎
+.. math::
+    
+    9. \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))
 
-The contrapositive of this theorem, much like the contrapositive of Theorem 2.3.6, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
+Since *ζ* was an arbitrary Sentence in **K**, this can be generalized over Invertible Sentences,
 
-The final theorems in this section, Theorems 3.1.8 - 3.1.9, provide a method for constructing the *σ*-reduction of a Sentence through iterated concatenation. These theorem leverage the operations of Delimitation and Limitation introduced in Definitions 1.2.7 - 1.2.8.
+    10. \forall \zeta \in K: \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))
 
-**Theorem 3.1.8** ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+∎
+
+The contrapositive of this theorem, much like the contrapositive of :ref:`Theorem 3.1.7 <theorem-3-1-7>`, provides a schema for searching the *σ-reduced* space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the *σ-reduced* spaced, and then filtered by those whose *σ*-reduction whose Inverse does not equal itself. 
+
+The final theorems in this section, :ref:`Theorems 3.1.8 <theorem-3-1-8>` - :ref:`3.1.9 <theorem-3-1-9>`, provide a method for constructing the *σ*-reduction of a Sentence through iterated concatenation. These theorems leverage the operations of Delimitation and Limitation introduced in :ref:`Definitions 1.2.7 <definition-1-2-7>` - :ref:`1.2.8 <definition-1-2-8>`.
+
+.. _theorem-3-1-8:
+
+**Theorem 3.1.8** :math:`\forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
 
 This theorem can be stated in natural language as follows: The *σ*-reduction of a Sentence is the Limitation of its Words.
 
 Assume,
 
-    1. ζ ∈ C:sub:`L`
+.. math::
 
-By Definition 2.1.3, 
+    1. ζ \in C_L
 
-    2. W:sub:`ζ` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`Λ(ζ)`)
+By :ref:`Definition 2.1.3 <definition-2-1-3>`, 
+
+.. math::
+
+    2. W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)})
 
 Where,
 
-    3. ∀ i ∈ N:sub:`Λ(ζ)`: α:sub:`i` ∈ L.
+.. math::
 
-By Theorem 2.3.4, ζ can be expressed as the Delimitation of its words:
+    3. \forall i \in N_{\Lambda(\zeta)}: \alpha_i \in L
 
-    4. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} = (ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)})
+By :ref:`Theorem 2.3.4 <theorem-2-3-4>`, *ζ* can be expressed as the Delimitation of its Words:
 
-By Definition 3.1.2, *ς(ζ)* removes all Delimiters from *ζ*. Applying *σ*-reduction to the expression step 4,
+.. math::
 
-    5. ς(ζ) = ς((ζ{1})(σ)(ζ{2})(σ) ... (σ)(ζ{Λ(ζ)}))
+    4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\})
 
-By repeated application of Theorem 3.1.2, i.e. by distributing the *σ*-reduction,
+By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* removes all Delimiters from *ζ*. Applying *σ*-reduction to the expression step 4,
 
-    6. ς(ζ) = (ς(ζ{1}))(ς(σ))(ς(ζ{2}))(ς(σ)) ... (ς(σ))(ς(ζ{Λ(ζ)}))
+.. math::
+
+    5. \varsigma(\zeta) = \varsigma((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\}))
+
+By repeated application of :ref:`Theorem 3.1.2 <theorem-3-13>`, i.e. by distributing the *σ*-reduction over concatenation,
+
+.. math::
+
+    6. \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\sigma))(\varsigma(\zeta\{2\}))(\varsigma(\sigma)) ... (\varsigma(\sigma))(\varsigma(\zeta\{\Lambda(\zeta)\}))
 
 Since 
 
-    7. ς(σ) = ε
+.. math::
 
-This can be rewritten with the Basis Clause of Concatenation,
+    7. \varsigma(\sigma) = \varepsilon
 
-    8. ς(ζ) = (ς(ζ{1}))(ς(ζ{2}))...(ς(ζ{Λ(ζ)}))
+This can be rewritten with the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>`,
 
-By Definition 3.1.2 and the Discovery Axiom W.1.,
+.. math::
 
-    9. ∀ i ∈ N:sub:`Λ(ζ)`: ς(ζ{i}) = ζ{i}
+    8. \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\zeta\{2\}))...(\varsigma(\zeta\{\Lambda(\zeta)\}))
+
+By :ref:`Definition 3.1.2 <definition-3-1-2>` and the :ref:`Discovery Axiom W.1 <axiom-w1>`,
+
+.. math::
+
+    9. \forall i \in N_{\Lambda(\zeta)}: \varsigma(\zeta\{i\}) = \zeta\{i\}
 
 Therefore,
    
-    10. ς(ζ) = (ζ{1})(ζ{2})...(ζ{Λ(ζ)})
+.. math::
 
-By Definition 1.2.8, the right-hand side is the Limitation of the words in **W**:sub:`ζ`,
+    10. \varsigma(\zeta) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
 
-    11. ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+By :ref:`Definition 1.2.8 <definition-1-2-8>`, the right-hand side is the Limitation of the words in **W**:sub:`ζ`,
 
-Since *ζ* was an arbitrary Sentence in this Corpus, this can be generalized,
+.. math::
 
-    12. ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} ∎
+    11. \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
-Theorem 3.1.8 establishes an important formula for the construction of *σ*-reductions. The Reduction Algorithm targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without Theorem 3.1.8, it would be required to reconstruct the String which corresponds to the sequence and process it through the Reduction Algorithm. Rather than applying the Reduction Algorithm everytime a *σ*-reduction is required, Theorem 3.1.8 provides a schema for the construction of *σ*-reductions through the process of Limitation.
+Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
-Compare Theorem 3.1.8 to Theorem 2.2.5, reprinted below for reference,
+.. math::
 
-    ζ = DΠ:sub:`i=1`:sup:`n` ζ{i}
+    12.  \forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} 
 
-In other words, taking the *σ*-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from the Definitions of Limitation and Delimitation. The next theorem proves this relationship for the more general case of *any* ordered sequence of Words, not necessarily a semantically coherent and admissible Sentence.
+∎
 
-**Theorem 3.1.9** ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
+:ref:`Theorem 3.1.8 <theorem-3-1-8>` establishes an important formula for the construction of *σ*-reductions. The Reduction Algorithm targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without :ref:`Theorem 3.1.8 <theorem-3-1-8>`, it would be required to reconstruct the String which corresponds to the sequence and process it through the Reduction Algorithm. Rather than applying the Reduction Algorithm everytime a *σ*-reduction is required, :ref:`Theorem 3.1.8 <theorem-3-1-8>` provides a schema for the construction of *σ*-reductions through the process of Limitation.
+
+Compare :ref:`Theorem 3.1.8 <theorem-3-1-8>` to :ref:`Theorem 2.2.5 <theorem-2-2-5>`, reprinted below for reference,
+
+.. math::
+
+    \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+
+In other words, taking the *σ*-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from :ref:`Definitions 1.2.7 <definition-1-2-7>` and :ref:`1.2.8 <definition-1-2-8>` of Limitation and Delimitation. The next theorem proves this relationship for the more general case of *any* ordered sequence of Words, not necessarily a semantically coherent and admissible Sentence.
+
+.. _theorem-3-1-9:
+
+**Theorem 3.1.9** 
+
+∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
 
 This theorem can be stated in natural language as follows: the *σ*-reduction of a Delimitation of a Phrase is equal to a Limitation of the same Phrase.
 
