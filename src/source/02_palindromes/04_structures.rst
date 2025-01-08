@@ -3,46 +3,59 @@
 Section III: Structures
 =======================
 
-The foundation of the formal system has now been laid. Mathematical machinery capable of describing linguistic hierarchies has been constructed. The purpose of this formal system is to analyze the structures embedded in Palindromes. While the formal system possesses flexibility and applicability (as demonstrated by its ability to generate theorems like Theorem 2.3.9 which are empirically verifiable), it does not yet have the necessary tools for describing palindromic structures. 
+The foundation of the formal system has now been laid. Mathematical machinery capable of describing linguistic hierarchies has been constructed. The purpose of this formal system is to analyze the structures embedded in Palindromes. While the formal system possesses flexibility and applicability (as demonstrated by its ability to generate theorems like :ref:`Theorem 2.3.9 <theorem-2-3-9>` which are empirically verifiable), it does not yet have the necessary tools for describing palindromic structures. 
 
-Inversion, while a key component of the apparatus necessary for understanding the dynamics of Palindromes, is not the only linguistic operation involved in the formation of Palindromes. The pure involutive property of Palindromes (e.g., :math:`\zeta = \text{inv}(\zeta)) only manifests in a rare class of Sentences known as Perfect Palindrome (:ref:`Definition 4.1.2 <definition-4-1-2>`).
+Inversion, while a key component of the apparatus necessary for understanding the dynamics of Palindromes, is not the only linguistic operation involved in the formation of Palindromes. The pure involutive property of Palindromes (e.g., :math:`\zeta = \text{inv}(\zeta))` only manifests in a rare class of Sentences known as Perfect Palindrome (:ref:`Definition 4.1.2 <definition-4-1-2>`).
 
 However, the vast majority of Palindromes in any language are not pure involutions. Instead, the operation of inversion usually degrades the semantic content of a Sentence by re-ordering the Delimiters, as seen in the following, 
 
-    ζ = "now sir a war is won"
+.. math::
 
-    inv(ζ) = "now si raw a ris won"
+    \zeta = \text{"now sir a war is won"}
 
-In order to properly understand the nature of a Palindrome, the formal system under construction must have a method of quantifying the distribution of Delimiters in a Sentence and making claims about the nature of that Distribution. Furthermore, the system requires a method of removing the *"impurities"* in semantic content that introduced through *inversion*.
+.. math::
+
+    \text{inv}(\zeta) = \text{"now si raw a ris won"}
+
+In order to properly understand the nature of a Palindrome, the formal system under construction must have a method of quantifying the distribution of Delimiters in a Sentence and making claims about the nature of that Distribution. Furthermore, the system requires a method of removing the *"impurities"* in semantic content that are introduced through inversion.
 
 This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of *σ-reduction* and the *Delimiter Count* function.
 
 Section III.I: σ-Reductions 
 ---------------------------
 
-The mathematical definition of Palindromes (Definition 4.1.1 in the next section) will revolve around a novel linguistic operation, termed a *σ*-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.
+The mathematical definition of Palindromes (:ref:`Definition 4.1.1 <definition-4-1-1>` in the next section) will revolve around a novel linguistic operation, termed a *σ*-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.
 
 Definitions
 ^^^^^^^^^^^
 
 Before defining a *σ*-reduction, the preliminary concept of a *σ-reduced Alphabet* must be introduced. The following definition serves as the basis for constructing the operation of *σ*-reduction.
 
-As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. *"bor ro worrob"*, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiter, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
+As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. *"bor ro worrob"*, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiters, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
 
 **Definition 3.1.1: σ-Reduced Alphabet**
 
-A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A sigma-reduced Alphabet is denoted Σ:sub:`σ`. Formally,
+A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A *σ*-reduced Alphabet is denoted Σ:sub:`σ`. Formally,
 
-    Σ:sub:`σ` = Σ - { σ } ∎
+.. math::
 
-In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of *sigma reduction*.
+    \Sigma_\sigma = \Sigma - \{ \sigma \} 
+    
+∎
+
+In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of *σ-reduction*.
 
 **Definition 3.1.2: σ-Reduction**
 
 Let *t* be a String with length *l(t)* and Character-level representation 
 
-    1. t = { (1,𝔞:sub:`1`) , (2, 𝔞:sub:`2`) , ... , (l(t), 𝔞:sub:`l(t)`) } 
-    2. 𝔞:sub:`i` ∈ Σ.
+.. math::
+
+    1. T = \{ (1,\mathfrak{a}_1) , (2, \mathfrak{a}_2) , ... , (l(t), \mathfrak{a}_{l(t)}) \} 
+    
+.. math::
+
+    2. \mathfrak{a}_i \in \Sigma.
 
 The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, maps the String *t* to a new String *u* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(t)* is defined and constructed using the *Reduction Algorithm*,
 
@@ -77,29 +90,41 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
     # Finalization
     5. If l(t) > 0:
         
-        a. Apply Basis Clause of Definition 1.1.1 to t
+        a. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to t
     
     6. Return t ∎
 
 Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,
 
-    ε = ς(σ) = ς(σσ) = ς(σσσ) = ... 
+.. math::
 
-From which, it follows, by Definition 1.1.3 of String Length, the String Length of a reduced Delimiter is simply zero,
+    \varepsilon = \varsigma(\sigma) = \varsigma(\sigma\sigma) = \varsigma(\sigma\sigma\sigma) = ... 
 
-    l(ς(σ)) = 0
+From which, it follows, by :ref:`Definition 1.1.3 <definition-1-1-3>` of String Length, the String Length of a reduced Delimiter is simply zero,
 
-Moreover, since by Discovery Axiom W.1., Words do not contain Delimiters, for any Word *α* in Language **L**,
+.. math::
 
-    ς(α) = α
+    l(\varsigma(\sigma)) = 0
 
-Again, from Definition 1.1.3, the String Length of a reduced Word is simply the String Length of the Word,
+Moreover, since by :ref:`Discovery Axiom W.1 <axiom-w1>`, Words do not contain Delimiters, for any Word *α* in Language **L**,
 
-    l(ς(α)) = l(α)
+.. math::
 
-A subtlety of the Reduction Algorithm should be noted. While *ς(σ) = ε* and *ς(α) = α*, it does not follow the *σ*-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
+    \varsigma(\alpha) = \alpha
 
-    ς(ασ) ≠ αε
+Again, from :ref:`Definition 1.1.3 <definition-1-1-3>`, the String Length of a reduced Word is simply the String Length of the Word,
+
+.. math::
+
+    l(\varsigma(\alpha)) = l(\alpha)
+
+A subtlety of the Reduction Algorithm should be noted. While :ref:`\varsigma(\sigma) = \varepsilon` and `\varsigma(\alpha) = \alpha`, it does not follow the *σ*-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
+
+.. math::
+
+    \varsigma(\alpha\sigma) ≠ \alpha\varepsilon
+
+Except insofar that the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` defines the concatenation of *αε* to equal *α*.
 
 This is because of the condition *(j > 1)* in the Finalization Block of the Reduction ensures Empty Characters are stripped from *t* when the input String contains atleast one non-Empty Character that has been concatenated into the *σ*-reduction String. 
 
@@ -107,17 +132,39 @@ The more complicated properties of *σ*-reductions are proved in the theorems th
 
 **Example**
 
-Let *s = "a b c"* be a String from the Alphabet *Σ = { "", " " , "a", "b", "c" }*. Note in this example *σ = " "* and *l(s) = 5*. The value of the variables in the Reduction Algorithm after each iteration are given below,
+Let *s = "a b c"* be a String from the Alphabet 
 
-    1. i = 2, t = ε"a"
-    2. i = 3, t = ε"a"
-    3. i = 4, t = ε"ab"
-    4. i = 5, t = ε"ab"
-    5. i = 5, t = "abc"
+    \Sigma = \{ \text{""}, \text{" "} , \text{"a"}, \text{"b"}, \text{"c"} \} 
+    
+Note in this example :math:`\sigma = \text{" "}` and :math:`l(s) = 5`. The value of the variables in the Reduction Algorithm after each iteration are given below,
+
+.. math::
+
+    1. i = 2, t = \varepsilon\text{"a"}
+
+.. math::
+
+    2. i = 3, t = \varepsilon\text{"a"}
+
+.. math::
+
+    3. i = 4, t = \varepsilon\text{"ab"}
+    
+.. math::
+
+    4. i = 5, t = \varepsilon\text{"ab"}
+    
+.. math::
+
+    5. i = 5, t = \text{"abc"}
         
 The result of the σ-reduction of *s* is thus given by,
 
-    ς(s) = "abc" ∎
+.. math::
+
+    \varsigma(s) = \text{"abc"} 
+    
+∎
 
 A *σ*-reduction can be thought of as a linguistic operation analogous to vector projection. While not a strict mathematical equivalence, this conception of *σ*-reduction captures the idea of transforming a String from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.
 
@@ -125,143 +172,216 @@ The *σ*-reduced Alphabet (**Σ**:sub:`σ`) can be seen as a subspace within thi
 
 Note that a *σ*-reduction is not a one-to-one operation. It is possible for the *σ*-reduction of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
 
-As an example, consider the (partial, ignoring punctuality) Palindromes *ᚠ = "madam im adam"* and *ᚢ = "mad am i madam"*. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
+As an example, consider the (partial, ignoring punctuality) Palindromes :math:`\rune{f} = \text{"madam im adam"}` and :math:`\rune{u} = \text{"mad am i madam"}`. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
 
 Both the Palindrome and the alternative Sentence (which also happens to be a Palindrome) have the same *σ*-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original Word boundaries and Sentence structure are lost.
+
+.. _reduction-theorems:
 
 Theorems 
 ^^^^^^^^
 
 The following theorems establish the basic properties of *σ*-reductions. 
 
-**Theorem 3.1.1** ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
+.. _theorem-3-1-1:
+
+**Theorem 3.1.1** :math:`\forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))`
 
 Let *ζ* be an arbitrary sentence in C:sub:`L`. Let *s* be the *σ*-reduction of *ζ*,
 
-    1. s = ς(ζ)
+.. math::
+
+    1. s = \varsigma(\zeta)
 
 Let *t* be the Inverse of *s*,
 
-    2. t = inv(s).
+.. math::
+
+    2. t = \text{inv}(s).
 
 Let *u* be the Inverse of *ζ*,
 
-    3. u = inv(ζ). 
+.. math::
+
+    3. u = \text{inv}(ζ). 
     
 Let *v* be the *σ*-reduction of *u*,
 
-    4. v = ς(u) = ς(inv(ζ)) 
+.. math::
+
+    4. v = \varsigma(u) = \varsigma(\text{inv}(ζ)) 
 
 Since *s* contains only the non-Delimiter characters of *ζ* in their original order, and *t* is the reversed sequence of Characters in *s*, *t* contains only the non-Delimiter characters of *ζ* in reversed order.
 
 Similarly, since *u* is the reverse sequence of Characters in *ζ*, and *v* is obtained by removing Delimiters from *u*, *v* also contains only the non-Delimiter characters of *ζ* in the reversed order.
 
-Therefore, by Definition 1.1.4, *t* and *v* must be the same String, as they both contain the same Characters in the same order. Since *t = v*, 
+Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* and *v* must be the same String, as they both contain the same Characters in the same order. Since :math:`t = v`, 
 
-    1. inv(ς(ζ)) = ς(inv(ζ))
+.. math::
 
-Since ζ was an arbitrary sentence in C:sub:`L`, this can be generalized,
+    5. \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))
 
-    1. ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ)) ∎
+Since ζ was an arbitrary Sentence, this can be generalized over the Corpus
 
-This corollary is essential because it allows free movement between the Inverse of a *σ*-reduction and the *σ*-reduction of an Inverse. In other words, Theorem 3.1.1 establishes the commutativity of *σ*-reduction over inversion and visa versa. 
+.. math::
 
-As the theorems in this section will make clear, there exists a unique type of algebraic structure that links the operations of *σ*-reduction, inversion and concatenation. The properties of this algebraic structure will be necessary for establishing the results in the next subsection.
+    6. \forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta)) 
+
+∎
+
+:ref:`Theorem 3.1.1 <theorem-3-1-1>` is essential because it allows free movement between the Inverse of a *σ*-reduction and the *σ*-reduction of an Inverse. In other words, :ref:`Theorem 3.1.1 <theorem-3-1-1>` establishes the commutativity of *σ*-reduction over inversion and visa versa. 
+
+As the theorems in this section will make clear, there exists a unique type of algebraic structure that links the operations of *σ*-reduction, inversion and concatenation. The properties of this algebraic structure will be necessary for establishing many of the results regarding palindromes.
 
 The next theorem demonstrates how *σ*-reduction interacts with concatenation.
 
-**Theorem 3.1.2** ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
+.. _theorem-3-1-2:
+
+**Theorem 3.1.2** :math:`\forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta)\varsigma(\xi))`
 
 Let *ζ* and *ξ* be arbitrary sentences in **C**:sub:`L`. Let **Ζ** and **Ξ** be the character-level representations of *ζ* and *ξ*, respectively,
 
-    1. Ζ = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`)
+.. math::
 
-    2. Ξ = (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(ξ))`
+    1. \Zeta = (\iota_1, \iota_2, ..., \iota_{l(\zeta)})
 
-Let *ζξ* be the concatenation of *ζ* and *ξ*. The character-level representation of *ζξ* is,
+.. math::
 
-    3. ΖΞ = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(ζ)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(ξ)`)
+    2. \Xi = (\nu_1, \nu_2, ..., \nu_{l(\xi)})
+
+Let *ζξ* be the concatenation of *ζ* and *ξ*. The character-level representation of *ζξ* is given by,
+
+.. math::
+
+    3. \Zeta\Xi = (\iota_1, \iota_2, ..., \iota_{l(\zeta)}, \nu_1, \nu_2, ..., \nu_{l(\xi)})
 
 Let *s* be the σ-reduction of *ζξ*. Let *t* be the *σ*-reduction of *ζ*. Let *u* be the *σ*-reduction of *ζξ*,
 
-    4. s = ς(ζξ)
-    5. t = ς(ζ)
-    6. u = ς(ξ)
+.. math::
+
+    4. s = \varsigma(\zeta\xi)
+    
+.. math::
+
+    5. t = \varsigma(\zeta)
+    
+.. math::
+
+    6. u = \varsigma(\xi)
 
 Let *v* be the concatenation of the Strings *t* and *u*,
 
-    7. v = tu = (ς(ζ))(ς(ξ))
+.. math::
+
+    7. v = tu = (\varsigma(\zeta))(\varsigma(\xi))
 
 Since *σ*-reduction only removes Delimiters and doesn't change the order of non-Delimiter Characters, the non-Delimiter characters in *s* (the *σ*-reduction of *ζξ*) are the same as the non-Delimiter Characters in *ζ* followed by the non-Delimiter Characters in ξ.
 
 The non-Delimiter characters in *v*, the concatenation of *ς(ζ)* and *ς(ξ)*, are also the non-Delimiter characters in *ζ* followed by the non-delimiter characters in *ξ*.
 
-Therefore, by Definition 1.1.4, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since *s = v*, 
+Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since :math:`s = v`, 
 
-    8. ς(ζξ) = (ς(ζ))(ς(ξ))
+.. math::
 
-Since ζ and ξ were arbitrary sentences in C:sub:L, this can be generalized,
+    8. \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi))
 
-    9. ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ)) ∎
+Since ζ and ξ were arbitrary Sentence, this can be generalized over the Corpus,
 
-Theorem 3.1.2 further demonstrates the *algebraic* nature of *σ*-reduction and the other String operations. It shows that *σ*-reduction *distributes* over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (Theorem 1.2.5). These properties suggest that *σ*-reduction, inversion and concatenation are not just arbitrary operations but instead are deeply connected to the underlying structure of Strings and Sentences.
+.. math::
+
+    9. \forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi)) 
+
+∎
+
+:ref:`Theorem 3.1.2 <theorem-3-1-2>` further demonstrates the *algebraic* nature of *σ*-reduction and the other String operations. It shows that *σ*-reduction *distributes* over concatenation, just as inversion "distributes" (in a reversed way) over concatenation (:ref:`Theorem 1.2.5 <theorem-1-2-5>`). These properties suggest that *σ*-reduction, inversion and concatenation are not just arbitrary operations but instead are deeply connected to the underlying structure of Strings and Sentences.
 
 As another example of this *"linguistic algebraic structure"*, the following theorem might be termed the *"Idempotency of σ-reduction"* or the *"σ-reduction Idempotence Property"*.
 
-**Theorem 3.1.3** ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
+.. _theorem-3-1-3:
+
+**Theorem 3.1.3** :math:`\forall \zeta \in C_L: \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)`
 
 Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. Let s be the *σ*-reduction of *ζ*,
 
-    1. s = ς(ζ)
+.. math::
+
+    1. s = \varsigma(\zeta)
 
 Let *t* be the *σ*-reduction of *s*,
 
-    2. t = ς(s) = ς(ς(ζ))
+.. math::
 
-Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Delimiter Characters (σ).
+    2. t = \varsigma(s) = \varsigma(\varsigma(\zeta))
 
-When *s* is *σ*-reduced (to get *t*), the Reduction Algorithm in Definition 3.1.2 iterates through the Characters of *s*. Since s has no Delimiters, the condition if *s[i] ≠ σ* in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by Definition 1.1.4, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
+Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Delimiter Characters (*σ*).
 
-    1. ς(ς(ζ)) = ς(ζ)
+When *s* is *σ*-reduced (to get *t*), the Reduction Algorithm in :ref:`Definition 3.1.2 <definition-3-1-2>` iterates through the Characters of *s*. Since s has no Delimiters, the condition if :math:`s[i] \neq \sigma` in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
 
-Since ζ was an arbitrary sentence in C:sub:L, this can be generalized,
+.. math::
 
-    4. ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ) ∎
+    3. \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)
 
-**Theorem 3.1.4** ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
+Since ζ was an arbitrary Sentence, this can be generalized over the Corpus,
 
-Let *ζ* be an arbitrary sentence in C:sub:`L`. By the Duality Axiom S.1, every Sentence in C:sub:`L` must contain at least one word from L. 
+.. math::
 
-By Definition 3.1.2, *ς(ζ)* removes all Delimiters from *ζ*. Therefore, *ς(ζ)* consists of the Characters of the words in *ζ* concatenated together without any delimiters.
+    4. \forall \zeta \in C_L: \varsigma(\varsigma(zeta)) = \varsigma(\zeta) 
 
-By the Discovery Axiom W.1., Words in **L** cannot contain Delimiters.
+∎
 
-By Definition 2.1.4, the Word Length *Λ(s)* of a String *s* counts the number of Words in *s*, where Words are separated by Delimiters.
+.. _theorem-3-1-4:
+
+**Theorem 3.1.4** :math:`\forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1`
+
+Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. By the :ref:`Duality Axiom S.1 <axiom-s1>`, every Sentence in **C**:sub:`L` must contain at least one word from **L**. 
+
+.. math::
+
+    1. \exists \alpha \in L: \alpha subset_s \zeta
+
+By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* removes all Delimiters from *ζ*. Therefore, *ς(ζ)* consists of the Characters of the words in *ζ* concatenated together without any delimiters.
+
+By the :ref:`Discovery Axiom W.1 <axiom-w1>`, Words in **L** cannot contain Delimiters.
+
+By :ref:`Definition 2.1.4 <definition-2-1-4>`, the Word Length *Λ(s)* of a String *s* counts the number of Words in *s*, where Words are separated by Delimiters.
 
 If *ζ* contains only one Word, then *ς(ζ)* will be that Word,
 
-    1. Λ(ς(ζ)) = 1
+.. math::
+
+    2. \Lambda(\varsigma(\zeta)) = 1
 
 If *ζ* contains multiple Words, then *ς(ζ)* will be a concatenation of those words without Delimiters. This concatenated String may or may not be a valid Word in **L**.
 
 If the concatenated String is a valid Word in **L**, then,
 
-    2. Λ(ς(ζ)) = 1
+.. math::
+
+    3. \Lambda(\varsigma(\zeta)) = 1
 
 If the concatenated String is not a valid Word in **L**, then,
 
-    3. Λ(ς(ζ)) = 0
+.. math::
+
+    4. \Lambda(\varsigma(\zeta)) = 0
 
 Therefore, in all possible cases,
 
-    Λ(ς(ζ)) ≤ 1.
+.. math::
 
-Since *ζ* was an arbitrary sentence in **C**:sub:`L`, this can be generalized, 
+    5. \Lambda(\varsigma(\zeta)) \leq 1
 
-    ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1. ∎
+Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
+.. math::
 
-**Theorem 3.1.5** ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
+    6. \forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1 
+
+∎
+
+.. _theorem-3-1-5:
+
+**Theorem 3.1.5** :math:`\forall u, t \in S: u \subset_s t \leftrightarrow \varsigma(u) \subset_s \varsigma(t)`
 
 This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the *σ*-reduction of *u* is contained in the *σ*-reduction of *t*.
 
@@ -269,58 +389,83 @@ Let *u* and *t* be arbitrary strings in **S**.
 
 (→) Assume 
 
-    1. u ⊂:sub:`s` t.
+.. math::
 
-By Definition 1.1.7, there exists a strictly increasing and consecutive function *f*: N:sub:`l(u)` → N:sub:`l(t)` such that,
+    1. u \subset_s t
 
-    2. ∀ i ∈ N:sub:`l(u)`: u[i] = t[f(i)]
+By Definition 1.1.7, there exists a strictly increasing and consecutive function :math:`f: N_{l(u)} \to N_{l(t)}` such that,
+
+.. math::
+
+    2. \forall i \in N_{l(u)}: u[i] = t[f(i)]
 
 Let 
 
-    3. s = ς(u) 
-    4. v = ς(t).
+.. math::
 
-By the Definition 3.1.2 of *σ*-reduction, *s* is obtained by removing all Delimiters from *u*, and *v* is obtained by removing all Delimiters from *t*.
+    3. s = \varsigma(u) 
+    
+.. math::
+
+    4. v = \varsigma(t).
+
+By the :ref:`Definition 3.1.2 <definition-3-1-2>` of *σ*-reduction, *s* is obtained by removing all Delimiters from *u*, and *v* is obtained by removing all Delimiters from *t*.
 
 Since *u* is contained in *t*, the non-Delimiter Characters of *u* appear in *t* in the same order. The function *f* maps the indices of these Characters.
 
-Define a function *g*: **N**:sub:`l(s)` → **N**:sub:`l(v)` that maps the indices of *s* to the indices of *v*. In other words, if *i* is an index in *s*, then *g(i)* is the index in *v* that corresponds to the same non-Delimiter character.
+Define a function :math:`g: N_{l(s)} \to N_{l(v)}` that maps the indices of *s* to the indices of *v*. In other words, if *i* is an index in *s*, then *g(i)* is the index in *v* that corresponds to the same non-Delimiter character.
 
 Since *f* is strictly increasing and consecutive, and *σ*-reduction only removes Delimiters, *g* will also be strictly increasing and consecutive. (*g* essentially compresses the mapping of *f* by skipping over the Delimiter indices and offseting).
 
 For any index *i* in *s*, 
 
+.. math::
+
     5. s[i] = u[j] 
     
-for some j. Moreover, 
+for some *j*. Moreover, 
+
+.. math::
 
     6. u[j] = t[f(j)]. 
     
 Since *s* and *v* are *σ*-reduced, *s[i]* and *v[g(i)]* correspond to the same non-Delimiter Character, and g(i) is constructed such that 
 
+.. math::
+
     7. v[g(i)] = t[f(j)]. 
     
 Therefore, 
 
+.. math::
+
     8. s[i] = v[g(i)].
 
-Since g is a strictly increasing and consecutive function and s[i] = v[g(i)], by Definition 1.1.7, 
+Since *g* is a strictly increasing and consecutive function and :math:`s[i] = v[g(i)]`, by :ref:`Definition 1.1.7 <definition-1-1-7>`, 
 
-    9. s ⊂:sub:`s` v
+.. math::
+
+    9. s \subset_s v
     
 From which it follows,
 
-    10. ς(u) ⊂:sub:`s` ς(t).
+.. math::
+
+    10. \varsigma(u) \subset_s \varsigma(t).
 
 (←) Assume 
 
-    1. ς(u) ⊂:sub:`s` ς(t).
+.. math::
 
-By Definition 1.1.7, there exists a strictly increasing and consecutive function *g*: **N**:sub:`l(ς(u))` → **N**:sub:`l(ς(t))` such that:
+    1. \varsigma(u) \subset_s \varsigma(t).
 
-    2. ∀ i ∈ N:sub:`l(ς(u))`: ς(u)[i] = ς(t)[g(i)]
+By :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists a strictly increasing and consecutive function :math:`g: N_{l(\varsigma(u))} \to N_{l(\varsigma(t))}` such that:
 
-Define a function *f*: N:sub:`l(u)` → N:sub:`l(t)` that maps the indices of *u* to the indices of *t* by essentially "re-inserting" the delimiters. For each non-Delimiter character in *u* (and corresponding index in *ς(u)*), *f* will map to the corresponding index in *t*. For Delimiter characters in *u*, *f* will map to an index in *t* that preserves the order and consecutiveness.
+.. math::
+
+    2. \forall i \in N_{l(\varsigma(u))}: \varsigma(u)[i] = \varsigma(t)[g(i)]
+
+Define a function :math:`f: N_{l(u)} \to N_{l(t)}` that maps the indices of *u* to the indices of *t* by essentially "re-inserting" the delimiters. For each non-Delimiter character in *u* (and corresponding index in *ς(u)*), *f* will map to the corresponding index in *t*. For Delimiter characters in *u*, *f* will map to an index in *t* that preserves the order and consecutiveness.
 
 Since *g* is strictly increasing and consecutive, and the Delimiters are only removed, not reordered, the function *f* will also be strictly increasing and consecutive.
 
@@ -328,21 +473,31 @@ For each index *i* in *u*, *u[i]* will either be a non-Delimiter or a Delimiter 
 
 If *u[i]* is a non-Delimiter character, it corresponds to a Character in *ς(u)*, and by the properties of *g* and *f*, the following holds for some *j*,
 
-    3. u[i] = ς(u)[j] = ς(t)[g(j)] = t[f(i)] 
+.. math::
+
+    3. u[i] = \varsigma(u)[j] = \varsigma(t)[g(j)] = t[f(i)] 
 
 If *u[i]* is a Delimiter, then by the construction of *f*, it will be mapped to a corresponding Delimiter in *t*, so 
 
+.. math::
+
     4. u[i] = t[f(i)]
 
-Since *f* is a strictly increasing and consecutive function and *u[i] = t[f(i)]* for all *i* *∈* **N**:sub:`l(u)`, by Definition 1.1.7,
+Since *f* is a strictly increasing and consecutive function and :math:`u[i] = t[f(i)]` for all :math:`i \in N_{l(u)}`, by :ref:`Definition 1.1.7 <definition-1-1-7>`,
 
-    5. u ⊂:sub:`s` t.
+.. math::
+
+    5. u \subset_s t
 
 Since both directions of the implication hold, it can be concluded,
 
-    6. ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) ∎
+.. math::
 
-During a *σ*-reduction, Theorem 3.1.4 demonstrates information is lost with respect to the following semantic categories,
+    6. \forall u, t \in S : u \subset_S t \leftrightarrow varsigma(u) \subset_s \varsigma(t) 
+
+∎
+
+During a *σ*-reduction, :ref:`Theorem 3.1.4 <theorem-3-1-4>` demonstrates information is lost with respect to the following semantic categories,
 
   - Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.
   - Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.
@@ -350,23 +505,29 @@ During a *σ*-reduction, Theorem 3.1.4 demonstrates information is lost with res
 
 However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the *σ-reduced* string. The next theorem proves semantic content is retained during the *σ*-reduction of a Sentence.
 
-**Theorem 3.1.6** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
+.. _theorem-3-1-6:
+
+**Theorem 3.1.6** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\Zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta)`
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus **C**:sub:`L`, and for every Word *ζ{i}* in the Word-level representation of *ζ*, *ζ{i}* is contained in *ς(ζ)*.
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By Theorem 2.2.4, it is known at least one Word must exist in *ζ*. Let *ζ{i}* be one of the Words in the sequence of Words that form *ζ*. 
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By :ref:`Theorem 2.2.4 <theorem-2-2-4>`, it is known at least one Word must exist in *ζ*. Let *ζ{i}* be one of the Words in the sequence of Words that form *ζ*. 
 
-This means that *ζ* can be written as either, in the case of *Λ(ζ) > 1*, 
+This means that *ζ* can be written as either, in the case of :math:`\Lambda(\zeta) > 1`, 
 
-    1. Case (Λ(ζ) > 1): ζ = (s:sub:`1`)(σ)(ζ{i})(σ)(s:sub:`2`)
+.. math::
+
+    1. \text{Case} (\Lambda(\zeta) > 1): \zeta = (s_1)(\sigma)(\zeta\{i\})(\sigma)(s_2)
     
 where *s*:sub:`1` and *s*:sub:`2` are (possibly Empty) Strings. 
 
 In the case that Λ(ζ) = 1, then, this means *ζ* can be written simply as, 
 
-    1. Case (Λ(ζ) = 1): ζ = ζ{1}
+.. math::
 
-By the Definition 3.1.2, *ς(ζ)* is obtained by removing all Delimiters from *ζ*. Furthermore, by Theorem 3.1.2, *σ*-reduction distributes over concatenation. Thus,
+    2. \text{Case} (\Lambda(\zeta) = 1): \zeta = \zeta\{1\}
+
+By the :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* is obtained by removing all Delimiters from *ζ*. Furthermore, by :ref:`Theorem 3.1.2 <theorem-3-1-2>`, *σ*-reduction distributes over concatenation. Thus,
 
     1. Case (Λ(ζ) > 1): ς(ζ) = (ς(s:sub:`1`))(ς(ζ{i}))(ς(s:sub:`1`))
     2. Case (Λ(ζ) = 1): ς(ζ{1})

@@ -128,7 +128,7 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
 
             i. If l(t) > 0:
 
-                1. Apply Basis Clause of Definition 1.1.1 to t.
+                1. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to t.
                 2. W ← W ∪ { (j, t) }
                 3. j ← j + 1
    
