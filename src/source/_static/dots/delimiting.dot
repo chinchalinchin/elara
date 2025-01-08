@@ -1,0 +1,69 @@
+digraph Delimiting_Algorithm {
+  rankdir=TB;
+  node [shape=box, style=filled, fillcolor=lightblue];
+
+  // Input String
+  Input [label="Input Sentence (ᚠ): &quot;theεσcatσmeows&quot;", fillcolor=lightgreen];
+
+  // Algorithm Steps
+  Step1 [label="1. ᚠ ← Empty(ᚠ)"];
+  Step2 [label="2. Initialize W<sub>ᚠ</sub> = ∅, j = 1, i = 1, t = ε"];
+  Step3 [label="3. While i ≤ l(ᚠ):"];
+  Step4 [label="   a. If ᚠ[i] ≠ σ:"];
+  Step5 [label="      i. t ← (t)(ᚠ[i])"];
+  Step6 [label="   b. Else:"];
+  Step7 [label="      i. If l(t) > 0:"];
+  Step8 [label="         1. Apply Basis Clause of Definition 1.1.1 to t"];
+  Step9 [label="         2. W<sub>ᚠ</sub> ← W<sub>ᚠ</sub> ∪ { (j, t) }"];
+  Step10 [label="         3. j ← j + 1"];
+  Step11 [label="      ii. t ← ε"];
+  Step12 [label="   c. i ← i + 1"];
+  Step13 [label="4. If l(t) > 0:"];
+  Step14 [label="   a. W<sub>ᚠ</sub> ← W<sub>ᚠ</sub> ∪ { (j, t) }"];
+  Step15 [label="   b. j ← j + 1"];
+  Step16 [label="5. Return W<sub>ᚠ</sub>"];
+
+  // Output
+  Output [label="Output (W<sub>ᚠ</sub>): {(1, the), (2, cat), (3, meows)}", fillcolor=lightgreen];
+
+  // Connections
+  Input -> Step1;
+  Step1 -> Step2;
+  Step2 -> Step3;
+  Step3 -> Step4 [label="Yes"];
+  Step4 -> Step5 [label="ᚠ[i] ≠ σ"];
+  Step5 -> Step12;
+  Step4 -> Step6 [label="ᚠ[i] = σ"];
+  Step6 -> Step7;
+  Step7 -> Step8 [label="l(t) > 0"];
+  Step8 -> Step9;
+  Step9 -> Step10;
+  Step10 -> Step11;
+  Step7 -> Step11 [label="l(t) = 0"];
+  Step11 -> Step12;
+  Step12 -> Step3;
+  Step3 -> Step13 [label="No"];
+  Step13 -> Step14 [label="l(t) > 0"];
+  Step14 -> Step15;
+  Step15 -> Step16;
+  Step13 -> Step16 [label="l(t) = 0"];
+  Step16 -> Output;
+
+  // Intermediate Values (Optional)
+  subgraph cluster_Intermediate {
+    label="Intermediate Values";
+    style=dashed;
+    node [shape=record];
+
+    IV1 [label="{ <f0> i: 1 | <f1> j: 1 | <f2> t: ε | <f3> W<sub>ᚠ</sub>: ∅ }"];
+    IV2 [label="{ <f0> i: 4 | <f1> j: 2 | <f2> t: ε | <f3> W<sub>ᚠ</sub>: {(1, the)} }"];
+    IV3 [label="{ <f0> i: 7 | <f1> j: 3 | <f2> t: ε | <f3> W<sub>ᚠ</sub>: {(1, the), (2, cat)} }"];
+    IV4 [label="{ <f0> i: 12 | <f1> j: 4 | <f2> t: ε | <f3> W<sub>ᚠ</sub>: {(1, the), (2, cat), (3, meows)} }"];
+  }
+
+  // Connect steps to intermediate values (Optional)
+  Step2 -> IV1;
+  Step10 -> IV2 [constraint=false, label="i=4"];
+  Step10 -> IV3 [constraint=false, label="i=7"];
+  Step15 -> IV4 [constraint=false, label="i=12"];
+}

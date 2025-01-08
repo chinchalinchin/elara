@@ -75,6 +75,10 @@ To clarify the relationship between Strings, Characters, Alphabets, Words, Langu
 
 This web of categorical relations represents the hierarchy of linguistic entities within the formal system. 
 
+.. graphviz:: ../_static/dots/hierarchy.dot
+    :caption: A diagram of the semantic hierarchy
+    :alt: Semantic Hierarchy Diagram
+
 .. _sentence-notation:
 
 Notation
@@ -141,6 +145,10 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
         a. W ← W ∪ { (j, t) }
         b. j ← j+1
     8. Return W ∎
+
+.. graphviz:: ../_static/dots/delimiting.dot
+    :caption: A diagram of the Delimiting Algorithm
+    :alt: Delimiting Algorithm Diagram
 
 Note the String which is initialized to hold the Sentence Characters in step *5* is set to an initial value of the Empty Character in the Initialization Block. Also note, the application of the Basis Clause in step *1.b.i.1* ensures this Empty Character is removed after each Word has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of :ref:`Theorem 1.2.3 <theorem-1-2-3>`.
 
@@ -500,7 +508,13 @@ Therefore,
 
     - (2/9/4):sub:`ᚠ` (the 9:sup:`th` Character is between the second and fourth Word)
     - (2/10/4):sub:`ᚠ` (the 10:sup:`th` Character is between the second and fourth Word)
-    - etc. ∎
+    - etc. 
+
+.. graphviz:: ../_static/dots/intervention.dot
+    :caption: A diagram of the Intervention relation
+    :alt: Intervention Diagram
+
+∎
 
 As motivation for the first theorem on Interventions and a further clarification to show how Intervention and Delimitation are closely related, consider the following example.
 

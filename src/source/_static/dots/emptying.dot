@@ -1,0 +1,51 @@
+digraph Emptying_Algorithm {
+  rankdir=TB;
+  node [shape=box, style=filled, fillcolor=lightblue];
+
+  // Input String
+  Input [label="Input String (t): &quot;abεc&quot;", fillcolor=lightgreen];
+
+  // Algorithm Steps
+  Step1 [label="1. Initialize T = ∅, j = 1, i = 1"];
+  Step2 [label="2. While a<sub>i</sub> exists:"];
+  Step3 [label="   a. If a<sub>i</sub> ≠ ε:"];
+  Step4 [label="      i. T ← T ∪ {(j, a<sub>i</sub>)}"];
+  Step5 [label="      ii. j ← j + 1"];
+  Step6 [label="   b. i ← i + 1"];
+  Step7 [label="3. Return T"];
+
+  // Output
+  Output [label="Output (T): {(1, a), (2, b), (3, c)}", fillcolor=lightgreen];
+
+  // Connections
+  Input -> Step1;
+  Step1 -> Step2;
+  Step2 -> Step3 [label="Yes"];
+  Step3 -> Step4 [label="a<sub>i</sub> ≠ ε"];
+  Step4 -> Step5;
+  Step5 -> Step6;
+  Step3 -> Step6 [label="a<sub>i</sub> = ε"];
+  Step6 -> Step2;
+  Step2 -> Step7 [label="No (a<sub>i</sub> does not exist)"];
+  Step7 -> Output;
+
+  // Intermediate Values (Optional - for more detailed illustration)
+  subgraph cluster_Intermediate {
+    label="Intermediate Values";
+    style=dashed;
+    node [shape=record];
+    
+    IV1 [label="{ <f0> i: 1 | <f1> j: 1 | <f2> T: ∅ }"];
+    IV2 [label="{ <f0> i: 2 | <f1> j: 2 | <f2> T: {(1, a)} }"];
+    IV3 [label="{ <f0> i: 3 | <f1> j: 3 | <f2> T: {(1, a), (2, b)} }"];
+    IV4 [label="{ <f0> i: 4 | <f1> j: 3 | <f2> T: {(1, a), (2, b)} }"];
+    IV5 [label="{ <f0> i: 5 | <f1> j: 4 | <f2> T: {(1, a), (2, b), (3, c)} }"];
+  }
+
+  // Connect steps to intermediate values (Optional)
+  Step1 -> IV1;
+  Step4 -> IV2 [constraint=false, label="i=1"];
+  Step4 -> IV3 [constraint=false, label="i=2"];
+  Step6 -> IV4 [constraint=false, label="i=3"];
+  Step4 -> IV5 [constraint=false, label="i=4"];
+}

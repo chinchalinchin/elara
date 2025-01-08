@@ -1,0 +1,103 @@
+digraph G {
+  rankdir=TB;
+
+  // Define sets as subgraphs
+  subgraph cluster_S {
+    label = "Strings (S)";
+    style = filled;
+    fillcolor = lightblue;
+    
+    // Define elements within S
+    
+    "ε" [shape=plaintext];
+
+    subgraph cluster_L {
+      label = "Language (L)";
+      style = filled;
+      fillcolor = lightgreen;
+        
+      // Define elements within L
+      "α" [shape=plaintext];
+        
+      subgraph cluster_I {
+        label = "Invertible Words (I)";
+        style = filled;
+        fillcolor = lightyellow;
+
+        subgraph cluster_R {
+          label = "Reflective Words (R)";
+          style = filled;
+          fillcolor = lightcoral;
+            
+          // Define elements within R
+          "α_R" [shape=plaintext, label="α ∈ R"];
+        }
+        "α_I" [shape=plaintext, label="α ∈ I"];
+      }
+    }
+    
+    subgraph cluster_sigma {
+      label = "Alphabet (Σ)";
+      style = filled;
+      fillcolor = lightcyan;
+      
+      // Define elements within Σ
+      "ι" [shape=plaintext];
+      "σ" [shape=plaintext];
+    }
+
+    subgraph cluster_CL {
+      label = "Corpus (C<sub>L</sub>)";
+      style = filled;
+      fillcolor = lightgray;
+
+      // Define elements within CL
+      "ζ" [shape=plaintext];
+        
+      subgraph cluster_K {
+        label = "Invertible Sentences (K)";
+        style = filled;
+        fillcolor = lightpink;
+          
+        // Define elements within K
+        "ζ_K" [shape=plaintext, label="ζ ∈ K"];
+      }
+      
+      subgraph cluster_An {
+        label = "Admissible Sentences (A(n))";
+        style = filled;
+        fillcolor = lightsalmon;
+        
+        // Define elements within A(n)
+        "ζ_A" [shape=plaintext, label="ζ ∈ A(n)"];
+      }
+    }
+  }
+
+  // Define relationships with arrows
+  "ι" -> "Σ";
+  "α" -> "L";
+  "ζ" -> "C<sub>L</sub>";
+  "α_I" -> "I";
+  "α_R" -> "R";
+  "ζ_K" -> "K";
+  "ζ_A" -> "A(n)";
+  "L" -> "S";
+  "C<sub>L</sub>" -> "S";
+  "Σ" -> "S";
+  "R" -> "I";
+  "I" -> "L";
+  "K" -> "C<sub>L</sub>";
+  "A(n)" -> "C<sub>L</sub>";
+  
+  // Additional relationships
+  "ε" -> "S" [label="Example of a String"];
+  "σ" -> "Σ" [label="Example of a Character"];
+  "dog" -> "L" [label="Example of a Word"];
+  "{the, dog, runs}" -> "C<sub>L</sub>" [label="Example of a Sentence"];
+
+  // Operations (Optional)
+  "α" -> "inv(α)" [style=dashed, color=blue, label="Inversion"]; // Could be made more visual
+  "P<sub>n</sub>" -> "DΠ" [style=dashed, color=green, label="Delimitation"];
+  "P<sub>n</sub>" -> "LΠ" [style=dashed, color=red, label="Limitation"];
+}

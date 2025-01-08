@@ -21,6 +21,8 @@ release = '1.0.0'
 extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.mathjax',
+    'sphinx.ext.graphviz',
+    'sphinx_toolbox.collapse',
     'matplotlib.sphinxext.plot_directive'
 ]
 
