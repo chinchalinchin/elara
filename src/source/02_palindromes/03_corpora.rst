@@ -49,13 +49,13 @@ Before proceeding with the definition of Sentences, some notation is introduced,
 
 .. math::
 
-    \rune{f} \in C_L
+    ᚠ \in C_L
 
 From :ref:`Definition 2.1.1 <definition-2-1-1>` and :ref:`Definition 2.1.2 <definition-2-1-2>`, it follows that a Sentence is a String,
 
 .. math::
 
-    \rune{f} \in S
+    ᚠ \in S
 
 It should be stressed, as had been made clear in previous comments, that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus. To reiterate this hierarchy and precisely state how all the entities in this formal system are related,
 
@@ -94,15 +94,15 @@ In a similar way, a method of representing Sentences as sets will now be constru
 
 Let *ζ* be a Sentence in a Corpus C:sub:`L`. Let **Ζ** be the Character-level set representation of *ζ*, i.e. an ordered sequence of Characters from the Alphabet **Σ**. 
 
-The Word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ**  at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *Delimiting Algorithm*.
+The Word-level set representation of *ζ*, denoted by **W**:sub:`ζ`, is defined as the ordered set of words obtained by splitting **Ζ**  at each Delimiter Character, *σ*. Formally, **W**:sub:`ζ` is constructed using the *:ref:`Delimiting Algorithm <delimiting-algorithm>`*.
 
-.. _delimiting_algorithm:
+.. _delimiting-algorithm:
 
 **Algorithm 2: Delimiting Algorithm**
 
-Consider a particular Sentence in the Corpus, *ᚠ*. The Delimiting Algorithm consists of initializing the values of several local variables and then iterating over the Character level set representation of a Sentence *ᚠ* until the Characters have been exhausted. The exact details are given below.
+Consider a particular Sentence in the Corpus, *ᚠ*. The :ref:`Delimiting Algorithm <delimiting-algorithm>` consists of initializing the values of several local variables and then iterating over the Character level set representation of a Sentence *ᚠ* until the Characters have been exhausted. The exact details are given below.
 
-The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and applies the Emptying Algorithm to it to generate a sequence of non-Empty Characters. It then initializes a set **W**:sub:`ᚠ` and index for the Words it will add to **W**:sub:`ᚠ` . The algorithm iterates the index and constructs the Word-level representation by removing the Delimiter character. The Delimiting Algorithm is formally defined below.
+The :ref:`Delimiting Algorithm <delimiting-algorithm>` takes a Sentence *ᚠ* from a Corpus as input, and applies the Emptying Algorithm to it to generate a sequence of non-Empty Characters. It then initializes a set **W**:sub:`ᚠ` and index for the Words it will add to **W**:sub:`ᚠ` . The algorithm iterates the index and constructs the Word-level representation by removing the Delimiter character. The :ref:`Delimiting Algorithm <delimiting-algorithm>` is formally defined below.
 
 .. topic:: Algorithm Delimit(t: String)
     
@@ -111,17 +111,27 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
 
     # Initialization
     ## Character-level representation of ᚠ
+
     1. ᚠ ← Empty(ᚠ)
+   
     ## Initialize empty set to hold Word-level representation of ᚠ
+
     2. W ← ∅
+    
     ## Initialize a counter j for Words
+
     3. j ← 1
+    
     ## Initialize a counter i for characters
+
     4. i ← 1
+    
     ## Initialize an empty string
+
     5. t ← ε
 
     # Iteration
+
     6. While i ≤ l(ᚠ):
    
         a. If ᚠ[i] ≠ σ:
@@ -141,22 +151,25 @@ The Delimiting Algorithm takes a Sentence *ᚠ* from a Corpus as input, and appl
         c. i ← i + 1
 
     # Finalization
+
     7. If l(t) > 0:
+    
         a. W ← W ∪ { (j, t) }
         b. j ← j+1
+    
     8. Return W ∎
 
 .. graphviz:: ../_static/dots/delimiting.dot
-    :caption: A diagram of the Delimiting Algorithm
-    :alt: Delimiting Algorithm Diagram
+    :caption: A diagram of the :ref:`Delimiting Algorithm <delimiting-algorithm>`
+    :alt: :ref:`Delimiting Algorithm <delimiting-algorithm>` Diagram
 
 Note the String which is initialized to hold the Sentence Characters in step *5* is set to an initial value of the Empty Character in the Initialization Block. Also note, the application of the Basis Clause in step *1.b.i.1* ensures this Empty Character is removed after each Word has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of :ref:`Theorem 1.2.3 <theorem-1-2-3>`.
 
-The essence of the Delimiting Algorithm lies in the interplay of the :ref:`Discovery Axiom W.1 <axiom-w1>` and :ref:`Definition 2.1.2 <definition-2-1-2>` of a Sentence as a semantic String. :ref:`Definition 2.1.2 <definition-2-1-2>`, like :ref:`Definition 1.2.2 <definition-1-2-2>`, ensures all Sentences and Words are semantic. The only feature that differentiates Sentence and Words in their *"semanticality"* is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the :ref:`Discovery Axiom W.1 <axiom-w1>`, the Words which a Sentence contains must be exactly those Strings which are separated by a Delimiter Character. 
+The essence of the :ref:`Delimiting Algorithm <delimiting-algorithm>` lies in the interplay of the :ref:`Discovery Axiom W.1 <axiom-w1>` and :ref:`Definition 2.1.2 <definition-2-1-2>` of a Sentence as a semantic String. :ref:`Definition 2.1.2 <definition-2-1-2>`, like :ref:`Definition 1.2.2 <definition-1-2-2>`, ensures all Sentences and Words are semantic. The only feature that differentiates Sentence and Words in their *"semanticality"* is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the :ref:`Discovery Axiom W.1 <axiom-w1>`, the Words which a Sentence contains must be exactly those Strings which are separated by a Delimiter Character. 
 
 This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of Delimiters within the Sentences of its Corpus. 
 
-The following examples show how to apply the Delimiting Algorithm to construct the Word-level representation of a Sentence. 
+The following examples show how to apply the :ref:`Delimiting Algorithm <delimiting-algorithm>` to construct the Word-level representation of a Sentence. 
 
 **Example**
 
@@ -168,15 +181,15 @@ During initialization, the Character-level set representation of *ᚠ* is constr
 
 .. math::
 
-   1. {\large\rune{f}} = (\mathfrak{a},\mathfrak{b},\sigma,\sigma,\mathfrak{b},\mathfrak{a})
+   1. \quad {ᚠ} = (\mathfrak{a},\mathfrak{b},\sigma,\sigma,\mathfrak{b},\mathfrak{a})
    
 .. math::
 
-   2. W_{\rune{f}} = \emptyset
+   2. \quad W_{ᚠ} = \emptyset
    
 .. math::
 
-   3. j = 1
+   3. \quad j = 1
 
 **Iteration**
 
@@ -184,21 +197,23 @@ The following list shows the result of the algorithm after each iteration,
 
 .. math::
 
-   1. j = 2, i = 4, t = \mathfrak{ab}, W_{\rune{f}} = \{ (1, \mathfrak{ab}) \}
+   1. \quad j = 2, i = 4, t = \mathfrak{ab}, W_{ᚠ} = \{ (1, \mathfrak{ab}) \}
 
 .. math::
 
-   2. j = 2, i = 5, t = \sigma, W_{\rune{f}} = \{ (1, \mathfrak{ab}) \}
+   2. \quad j = 2, i = 5, t = \sigma, W_{ᚠ} = \{ (1, \mathfrak{ab}) \}
    
 .. math::
 
-   3. j = 3, i = 7, t = \mathfrak{ba}, W_{\rune{f}} = \{ (1, \mathfrak{ab}), (2, \mathfrak{ba}) }
+   3. j\quad  = 3, i = 7, t = \mathfrak{ba}, W_{ᚠ} = \{ (1, \mathfrak{ab}), (2, \mathfrak{ba}) \}
 
-At which point :math:`i > l(\rune{f})`, so the algorithm halts and returns,
+At which point :math:`i > l(ᚠ)`, so the algorithm halts and returns,
 
 .. math::
 
-    W_{\rune{f}} = { (1, \mathfrak{ab}), (2, \mathfrak{ba}) } ∎
+    4. \quad W_{ᚠ} = \{ (1, \mathfrak{ab}), (2, \mathfrak{ba}) \} 
+    
+∎
 
 **Example** 
 
@@ -206,13 +221,13 @@ Let *ᚠ = "the cat meows"*. Then the Character level representation of *ᚠ* is
 
 .. math::
 
-    {\large\rune{f}} = { (1, \text{"t"}), (2, \text{"h"}), (3,\text{"e"}), (4,\sigma), (5,\text{"c"}), (6,\text{"a"}), (7,\text{"t"}), (8,\sigma), (9,\text{"m"}), (10,\text{"e"}), (12,\text{"o"}), (13,\text{"w"}), (14,\text{"s"}) }.
+    1. \quad {\largeᚠ} = \{ (1, \text{"t"}), (2, \text{"h"}), (3,\text{"e"}), (4,\sigma), (5,\text{"c"}), (6,\text{"a"}), (7,\text{"t"}), (8,\sigma), (9,\text{"m"}), (10,\text{"e"}), (12,\text{"o"}), (13,\text{"w"}), (14,\text{"s"}) \}
 
-Then, applying the *Delimiting Algorithm*, its Word-level representation is constructed, 
+Then, applying the :ref:`Delimiting Algorithm <delimiting-algorithm>`, its Word-level representation is constructed, 
 
 .. math::
 
-    W_{\rune{f}} = \{ (1, \text{"the"}), (2, \text{"cat"}), (3, \text{"meows"}) \} 
+    2. \quad W_{ᚠ} = \{ (1, \text{"the"}), (2, \text{"cat"}), (3, \text{"meows"}) \} 
     
 ∎
 
@@ -259,25 +274,25 @@ Consider the Sentence *ᚠ = "the dog runs"*. Its Character-level set representa
 
 .. math::
 
-    \large\rune{f} = \{ (0,\text{"t"}), (1,\text{"h"}), (2,\text{"e"}), (4,\sigma), (5, \text{"d"}), (6, \text{"o"}), (7, \text{"g"}), (8, \sigma), (9, \text{"r"}), (10, \text{"u"}), (11,\text{"n"}), (12,\text{"s"}) \}
+    1. \quad \largeᚠ = \{ (0,\text{"t"}), (1,\text{"h"}), (2,\text{"e"}), (4,\sigma), (5, \text{"d"}), (6, \text{"o"}), (7, \text{"g"}), (8, \sigma), (9, \text{"r"}), (10, \text{"u"}), (11,\text{"n"}), (12,\text{"s"}) \}
 
 Its Word-level set representation would be given by,
 
 .. math::
 
-    W_{\rune{f}} = \{ (1, \text{"the"}), (2, \text{"dog"}), (3, \text{"runs"}) \}
+    2. \quad W_{ᚠ} = \{ (1, \text{"the"}), (2, \text{"dog"}), (3, \text{"runs"}) \}
 
 Therefore, the length of the sentence is:
 
 .. math::
 
-    \Lambda(\rune{f}) = | W_{\rune{f}} | = 3
+    3. \quad \Lambda(ᚠ) = | W_{ᚠ} | = 3
 
 Note, in this example, 
 
 .. math::
 
-    l(\rune{f}) = 12 
+    4. \quad l(ᚠ) = 12 
     
 ∎
 
@@ -300,7 +315,7 @@ Let *ζ* be a Sentence with Word level set representation, **W**:sub:`ζ`,
 
 .. math::
 
-    W_{\zeta} = (\alpha_1, \alpha_r, ... , \alpha_{\Lambda(\zeta))
+    W_{\zeta} = (\alpha_1, \alpha_r, ... , \alpha_{\Lambda(\zeta)})
 
 Then for any *j* such that :math:`1 \leq j \leq \Lambda(\zeta)`, the Word at index *j*, denoted *ζ{j}*, is defined as the Word which satisfies the following formula,
 
@@ -334,11 +349,11 @@ Let *ζ* and *ξ* be arbitrary Sentences in **C**:sub:`L`. Let **W**:sub:`ζ` an
 
 .. math::
 
-    1. \Lambda(\zeta) = | W_{\zeta} |
+    1. \quad \Lambda(\zeta) = | W_{\zeta} |
 
 .. math::
 
-    2. \Lambda(\zeta) = | W_{\xi} |
+    2. \quad \Lambda(\zeta) = | W_{\xi} |
 
 Let *ζξ* be the concatenation of *ζ* and *ξ*. When *ζ* is concatenated to *ξ*, there are several possible cases to consider. 
 
@@ -351,37 +366,37 @@ Let *ζξ* be the concatenation of *ζ* and *ξ*. When *ζ* is concatenated to *
 
 .. math::
 
-    3. \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).
+    3. \quad \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).
 
-**Case 4**: ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ. 
+**Case 4**: :math:`\zeta[l(\zeta)] \neq \sigma, \xi[1] \neq \sigma` 
 
 In this case, a new Word may be formed during concatenation, but only if *ζ{Λ(ζ)}* concatenated with *ξ{1}* belongs to L (i.e., *(ζ{Λ(ζ)})(ξ{1})* if it is a compound Word). Let *t* be the String such,
 
 .. math::
 
-    4. t = (\zeta\{\Lambda(\zeta)})(\xi\{1\})
+    4. \quad t = (\zeta\{\Lambda(\zeta)\})(\xi\{1\})
 
 This result can be expressed,
 
 .. math::
 
-    5. t \in L \to \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi) - 1.
+    5. \quad t \in L \to \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi) - 1.
     
 .. math::
 
-    6. t \notin L \to \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).
+    6. \quad t \notin L \to \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).
 
 In all cases, 
 
 .. math::
 
-    \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi).
+    7. \quad \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi).
 
 Since *ζ* and *ξ* were arbitrary sentences, this can be generalized over the Corpus,
 
 .. math::
 
-    \forall \zeta, \xi \in C_L: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi) 
+    8. \quad \forall \zeta, \xi \in C_L: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi) 
     
 ∎
 
@@ -402,7 +417,9 @@ Let *ζ* be a Sentence in C:sub:`L`. The Character *ζ[k]* is said to *intervene
 
 .. math::
 
-   l(D\Pi_{x=1}^{i} \zeta(x)) < k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 ∎
+   l(D\Pi_{x=1}^{i} \zeta(x)) < k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 
+   
+∎
 
 The meaning of :ref:`Definition 2.1.6 <definition-2-1-6>` is not immediately intuitive, so a an explanation and thorough example are now presented to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.
 
@@ -420,9 +437,9 @@ Analyzing each component of the inequality in :ref:`Definition 2.1.6 <definition
    
     3. :math:`l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x))`: This is the length of the initial portion of the reversed Sentence.
    
-    4. :math:`l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1 \text{inv}(\zeta)(x))`: This subtracts the length of the initial portion of the reversed sentence from the total length of the original sentence. This gives us the length of the remaining portion of the original sentence, starting from the character after the word corresponding to j in the original sentence.
+    4. :math:`l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x))`: This subtracts the length of the initial portion of the reversed sentence from the total length of the original sentence. This gives us the length of the remaining portion of the original sentence, starting from the character after the word corresponding to j in the original sentence.
    
-    5. :math:`l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta)} - j + 1 \text{inv}(\zeta)(x)) + 1`: Finally, add 1 to get the index of the first Character after the word corresponding to j in the original sentence.
+    5. :math:`l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1`: Finally, add 1 to get the index of the first Character after the word corresponding to j in the original sentence.
 
 To aid in the comprehension of the concept being captured with Definition 2.1.6, the following example shows how to calculate an Intervention.
 
@@ -432,67 +449,67 @@ Let *ᚠ = "repaid a regal leper"*. Note the String and Word Lengths are given b
 
 .. math::
 
-    l(\rune{f}) = 20
+    1. \quad l(ᚠ) = 20
     
 .. math::
 
-    \Lambda(\rune{f}) = 4
+    2. \quad \Lambda(ᚠ) = 4
     
 The Word-level representation of this Sentence is given by,
 
 .. math::
 
-    W_{\rune{f}} = \{ (1, \text{"repaid"}), (2, \text{"a"}), (3, \text{"regal"}), (4, \text{"leper"}) \}
+    3. \quad W_{ᚠ} = \{ (1, \text{"repaid"}), (2, \text{"a"}), (3, \text{"regal"}), (4, \text{"leper"}) \}
 
-Note :math:`\text{inv}(\rune{f}) = \text{"repel lager a diaper"}`. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see :ref:`Definition 2.2.1 <definition-2-2-1>` in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see :ref:`Definition 2.3.1 <definition-2-3-1>` for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
+Note :math:`\text{inv}(ᚠ) = \text{"repel lager a diaper"}`. This is an example of an Invertible Sentence that maintains *semantic coherence* (i.e. all of its inverted Words are Words in the Language; see :ref:`Definition 2.2.1 <definition-2-2-1>` in the next subsection for a more formal definition of *semantic coherence*), but lacks *admissibility* (i.e. it is not a grammatical or syntactical sentence; see :ref:`Definition 2.3.1 <definition-2-3-1>` for a formal definition of *admissibility*.) The Word-level representation of the Inverse is given by,
 
-    W_{inv(\rune{f})} = \{ (1, \text{"repel"}), (2, \text{"lager"}), (3, \text{"a"}), (4, \text{"diaper}) \}
+    4. \quad W_{inv(ᚠ)} = \{ (1, \text{"repel"}), (2, \text{"lager"}), (3, \text{"a"}), (4, \text{"diaper}) \}
     
-To see how Definition 2.1.6 can be used to assert a Character falls between two Words in a sentence, calculate the following Delimitations and String Lengths.
+To see how :ref:`Definition 2.1.6 <definition-2-1-6>` can be used to assert a Character falls between two Words in a Sentence, calculate the following Delimitations and String Lengths.
 
 Consider the words *"a"* and *"leper"*. *"a"* corresponds to the Word Index 2,
 
 .. math::
 
-    \rune{f}\{2\} = \text{"a"}
+    5. \quad ᚠ\{2\} = \text{"a"}
 
-Calculating the left-hand side of the inequality in Definition 2.1.6,
+Calculating the left-hand side of the inequality in :ref:`Definition 2.1.6 <definition-2-1-6>`,
 
 .. math::
 
-    D\Pi_{x=1}^{2} \rune{f}(x) = \text{"repaid a"}
+    6. \quad D\Pi_{x=1}^{2} ᚠ(x) = \text{"repaid a"}
 
 .. math::
     
-    l(D\Pi_{x=1}^{2} \rune{f}(x)) = 8
+    7. \quad l(D\Pi_{x=1}^{2} ᚠ(x)) = 8
 
 The String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 2*. Now note *"leper"* occupies the Word Index 4, 
 
 .. math::
 
-    \rune{f}\{4\} = \text{"leper"}
+    8. \quad ᚠ\{4\} = \text{"leper"}
 
 This corresponds to a :math:`j = 4` in :ref:`Definition 2.1.6 <definition-2-1-6>`. The upperhand limit in the Delimitation on the right-hand side of the inequality in :ref:`Definition 2.1.6 <definition-2-1-6>` is given by,
 
 .. math::
 
-    \Lambda(\rune{f}) - j + 1 = 4 -  4 + 1 = 1
+    7. \quad \Lambda(ᚠ) - j + 1 = 4 -  4 + 1 = 1
 
 Therefore, the corresponding Delimitation of the Inverse Sentence for :ref:`Definition 2.1.6 <definition-2-1-6>` is given by,
 
 .. math::
 
-    D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x) = \text{"repel"}
+    8. \quad D\Pi_{x=1}^{1} \text{inv}(ᚠ)(x) = \text{"repel"}
 
 .. math::
 
-    l(D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x)) = 5
+    9 \quad l(D\Pi_{x=1}^{1} \text{inv}(ᚠ)(x)) = 5
 
 Working from the back of the Sentence, the String Length of this Delimitation is exactly equal to the Sentence Length *up to and including the Word at Index 4*. Calculating the right-hand side of the inequality in :ref:`Definition 2.1.6 <definition-2-1-6>`, 
 
 .. math::
 
-    l(\rune{f}) - l(D\Pi_{x=1}^{1} \text{inv}(\rune{f})(x)) + 1 = 20 - 5 + 1 = 16
+    10. \quad l(ᚠ) - l(D\Pi_{x=1}^{1} \text{inv}(ᚠ)(x)) + 1 = 20 - 5 + 1 = 16
 
 By :ref:`Definition 2.1.6 <definition-2-1-6>`, the Characters *ᚠ[k]* between the indices of 8 and 16 (exclusive) *intervene* *ᚠ{2}* and *ᚠ{4}*, namely, 
 
@@ -524,11 +541,11 @@ Let *ᚠ = "the world divides into facts"*. Then
 
 .. math::
 
-    \Lambda(\rune{f}) = 5
+    1. \quad \Lambda(ᚠ) = 5
 
 .. math::
 
-    l(\rune{f}) = 28
+    2. \quad l(ᚠ) = 28
 
 Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that :math:`i = j` in the :ref:`Definition 2.1.6 <definition-2-1-6>`. Let :math:`i = j = 2`, i.e. consider the second Word in the Sentence, *"world"*. The relation of Intervention that obtains between *"world"* and itself should evaluate to false. In other words, no Characters intervene between a Word and itself. 
 
@@ -536,29 +553,29 @@ The Delimitation of the Sentence up to the Second Word is given by,
 
 .. math::
 
-    D\Pi_{x=1}^{2} \rune{f}(x) = \text{"the world"}
+    3. \quad \Pi_{x=1}^{2} ᚠ(x) = \text{"the world"}
 
 The Delimitation of the Inverse Sentence up to the correspond index of the Second Word (e.g., :math:`5 - 2 + 1 = 4`) is given by (Note the Inverse Sentence is not a Sentence in a Corpus, nor does it possess semantic coherence),
 
 .. math::
 
-    D\Pi_{x=1}^{5 - 2 + 1} \text{inv}(\rune{f}(x)) = D\Pi_{x=1}^{4} \text{inv}(\rune{f}(x)) = \text{"stcaf otni sedivid dlrow"}
+    4. \quad D\Pi_{x=1}^{5 - 2 + 1} \text{inv}(ᚠ(x)) = D\Pi_{x=1}^{4} \text{inv}(ᚠ(x)) = \text{"stcaf otni sedivid dlrow"}
 
 Therefore,
 
 .. math::
 
-    l(D\Pi_{x=1}^{2} \rune{f}(x)) = 9
+    5. \quad l(D\Pi_{x=1}^{2} ᚠ(x)) = 9
 
 .. math::
 
-    l(D\Pi_{x=1}^{4} \text{inv}(\rune{f}(x))) = 24
+    6. \quad l(D\Pi_{x=1}^{4} \text{inv}(ᚠ(x))) = 24
 
 The sum of these String Lengths is given by,
 
 .. math::
 
-    l(D\Pi_{x=1}^{2} \rune{f}(x)) + l(D\Pi_{x=1}^{4} \text{inv}(\rune{f}(x))) = 9 + 24 = 33
+    7. \quad l(D\Pi_{x=1}^{2} ᚠ(x)) + l(D\Pi_{x=1}^{4} \text{inv}(ᚠ(x))) = 9 + 24 = 33
 
 Since the total String Length of both Delimitation exceeds the String Length of the entire Sentence, there does not exist a Character Index *k* such that *k* can be said to intervene the Word at index :math:`i = j = 2`. ∎
 
@@ -574,41 +591,41 @@ Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L` and let *i* and *j* be
 
 .. math::
 
-    1. \zeta \in C_L
+    1. \quad \zeta \in C_L
     
 .. math::
 
-    2. i, j \in N_{\Lambda(\zeta)}
+    2. \quad i, j \in N_{\Lambda(\zeta)}
    
 (→) Assume 
 
 .. math::
 
-    3. i \neq j
+    3. \quad i \neq j
 
 Without loss of generality (since the case :math:`i > j` is symmetrical), assume 
 
 .. math::
 
-    4. i < j
+    4. \quad i < j
 
 By :ref:`Theorem 2.3.4 <theorem-2-3-4>`, 
 
 .. math::
 
-    5. \zeta = D\Pi_{x=1}^{\Lambda(\zeta)} p(x)
+    5. \quad \zeta = D\Pi_{x=1}^{\Lambda(\zeta)} p(x)
 
 Where 
 
 .. math::
     
-    6. p \in X_L(\Lambda(\zeta))`
+    6. \quad p \in X_L(\Lambda(\zeta))`
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitation, this means 
 
 .. math::
 
-    7. \zeta = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda\(ζ)\}) 
+    7. \quad \zeta = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(ζ)\}) 
 
 By step 5, *ζ{i}* comes before *ζ{j}* in the Sentence *ζ*. By the :ref:`Discovery Axiom W.1 <axiom-w1>`, there must be at least one delimiter character between *ζ{i}* and *ζ{j}* because they are distinct Words in a valid Sentence. 
 
@@ -618,55 +635,55 @@ By the :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitations,
 
 .. math::
 
-    8. l(D\Pi_{x=1}^{i} \zeta(x)) 
+    8. \quad l(D\Pi_{x=1}^{i} \zeta(x)) 
     
 Will give the index of the last character of ζ{i}. Since σ comes after ζ{i}, it follows,
 
 .. math::
 
-    9. l(D\Pi_{x=1}^{i} \zeta(x)) < k
+    9. \quad l(D\Pi_{x=1}^{i} \zeta(x)) < k
 
 Similarly, 
 
 .. math::
 
-    10. l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 
+    10. \quad l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1 
     
 Gives the index of the first Character after the Word corresponding to *ζ{j}* in the original sentence. Since σ comes before this character, it follows,
 
 .. math::
 
-    11. k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
+    11. \quad k < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
 
 Therefore, by :ref:`Definition 2.1.6 <definition-2-1-6>`, 
 
 .. math::
 
-    12. (i/k/j)_{\zeta}
+    12. \quad (i/k/j)_{\zeta}
 
 Thus,
 
 .. math::
 
-    13. \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
+    13. \quad \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
 
 (←) Assume a Character exists at index *n* in *ζ* such that it that intervenes *ζ{i}* and *ζ{j}*,
 
 .. math::
 
-    1. \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
+    1. \quad \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
 
 By :ref:`Definition 2.1.6 <definition-2-1-6>`,
 
 .. math::
 
-    2. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
+    2. \quad l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1
 
 Assume, for the sake of contradiction, that :math:`i = j`.
 
 .. math::
 
-    3. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
+    3. \quad l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
 
 Now, consider the term :math:`l(D\Pi_{x=1}^{i} \zeta(x))`. This represents the String Length of the Delimitation of the first *i* words of *ζ*. By the :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitations, this includes the lengths of the first *i* words and the lengths of the :math:`(i - 1)` delimiters between them.
 
@@ -676,37 +693,37 @@ The sum of the String Lengths of these two portions of the Sentence *ζ* is alwa
 
 .. math::
 
-    4. l(D\Pi_{x=1}^{i} \zeta(x)) + l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) >  l(\zeta) 
+    4. \quad l(D\Pi_{x=1}^{i} \zeta(x)) + l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) >  l(\zeta) 
 
-This follows from the fact that these two portions of ζ are overlapping since both  include terms for *ζ{i}* (:math:`\text{inv}(\zeta)\{\Lambda(\zeta) - i + 1}` would be the corresponding Word in the Delimitation of the Inverse). From step 4, it then follows,
+This follows from the fact that these two portions of ζ are overlapping since both  include terms for *ζ{i}* (:math:`\text{inv}(\zeta)\{\Lambda(\zeta) - i + 1\}` would be the corresponding Word in the Delimitation of the Inverse). From step 4, it then follows,
 
 .. math::
 
-    5. l(D\Pi_{x=1}^{i} \zeta(x)) > l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))  
+    5. \quad l(D\Pi_{x=1}^{i} \zeta(x)) > l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))  
     
 Adding 1 to both sides maintains the inequality in step 5,
 
 .. math::
 
-    6. l(D\Pi_{x=1}^{i} \zeta(x)) + 1 > l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
+    6. \quad l(D\Pi_{x=1}^{i} \zeta(x)) + 1 > l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1
 
 Combining this with the left-hand side of the inequality in step 5, we get:
 
 .. math::
 
-    7. l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(D\Pi_{x=1}^{i} \zeta(x)) + 1
+    7. \quad l(D\Pi_{x=1}^{i} \zeta(x)) < n < l(D\Pi_{x=1}^{i} \zeta(x)) + 1
    
 But String Lengths are integers, and by the laws of arithmetic, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that :math:`i = j` must be false.
 
 .. math::
 
-    8. i \neq j.
+    8. \quad i \neq j.
 
 With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized over the Corpus, 
 
 .. math::
 
-    \forall \zeta \in C_L: \forall i, j \in N_{\Lambda(zeta)}: i \neq j ↔ \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta} 
+    9. \quad \forall \zeta \in C_L: \forall i, j \in N_{\Lambda(zeta)}: i \neq j ↔ \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta} 
     
 ∎
 
@@ -725,15 +742,15 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 
 .. math::
 
-    1. \forall \iota \in \Sigma: \iota = \iota
+    1. \quad \forall \iota \in \Sigma: \iota = \iota
 
 .. math::
 
-    2. \forall \iota, \nu \in \Sigma: \iota = \nu ↔ \nu = \iota
+    2. \quad \forall \iota, \nu \in \Sigma: \iota = \nu ↔ \nu = \iota
     
 .. math::
 
-    3. \forall \iota, \nu, \omicron \in \Sigma: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicorn) 
+    3. \quad \forall \iota, \nu, \omicron \in \Sigma: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicron) 
 
 ∎
 
@@ -824,35 +841,35 @@ By the second conjunct of the :ref:`Duality Axiom S.2 <axiom-s2>` and the first 
 
 .. math::
 
-    1. \exists \alpha \in L: \alpha \subset_s \zeta 
+    1. \quad \exists \alpha \in L: \alpha \subset_s \zeta 
     
 .. math::
 
-    2. \forall \alpha \in L: l(\alpha) \neq 0
+    2. \quad \forall \alpha \in L: l(\alpha) \neq 0
 
 Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists a strictly increasing and consecutive function *f* such that,
 
 .. math::
 
-    3. \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)] 
+    3. \quad \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)] 
     
 By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, 
 
 .. math::
 
-    4. \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
+    4. \quad \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
 
 Therefore, combining steps 3 and 4,
 
 .. math::
 
-    5. \forall i \in N_{\alpha}: \zeta[f(i)] \neq ε
+    5. \quad \forall i \in N_{\alpha}: \zeta[f(i)] \neq ε
 
 Since, by step 2, :math:`l(\alpha) \neq 0`, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying :ref:`Definition 1.1.3 <definition-1-1-3>`,
 
 .. math::
 
-    1. l(\zeta) \neq 0 
+    6. \quad l(\zeta) \neq 0 
 
 ∎
 
@@ -864,19 +881,19 @@ Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number 
 
 .. math::
 
-    1. l(s) = 1
+    1. \quad l(s) = 1
 
 Define a function :math:`f: \{1\} \to \{i\}` such that :math:`f(1) = i`. This function is strictly increasing and consecutive. By :ref:`Definition 1.1.6 <definition-1-1-6>` and :ref:`Definition 1.1.7 <definition-1-1-7>`, since there exists a strictly increasing and consecutive function *f* from the indices of *s* to the indices of *ζ*, and since the Character at position 1 in *s* is the same as the Character at position i in *ζ* (both are *ζ[i]*), we can conclude that *s* is contained in *ζ*. Therefore, 
 
 .. math::
 
-    2. \zeta[i] \subset_s \zeta
+    2. \quad \zeta[i] \subset_s \zeta
 
 Since *ζ* and *i* were arbitrary, this can be generalized, 
 
 .. math::
 
-    3. \forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta 
+    3. \quad \forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta 
 
 ∎
 
@@ -888,7 +905,7 @@ Let *ζ* be an arbitrary sentence in **C**:sub:`L`, and let *i* be a natural num
 
 .. math::
     
-    1. \forall i \in N_{l(\zeta)}: \zeta[i] subset_s \zeta
+    1. \quad \forall i \in N_{l(\zeta)}: \zeta[i] subset_s \zeta
 
 By :ref:`Definition 1.1.3 <definition-1-1-3>`, String Length is the number of non-Empty Characters in a String's Character-level set representation. Since :math:`l(\zeta) > 0`, *ζ* must have at least one non-Empty character.
 
@@ -896,13 +913,13 @@ Since :math:`1 \leq i \leq l(\zeta)`, the Character at position *i* in *α*, den
 
 .. math::
 
-    2. \zeta[i] \neq \varepsilon 
+    2. \quad \zeta[i] \neq \varepsilon 
 
 Since *ζ* and *i* are arbitrary, this can generalized,
 
 .. math::
 
-    3. \forall \alpha \in L: \forall i \in N_{l(\zeta)}: \zeta[i] \neq \varepsilon 
+    3. \quad \forall \alpha \in L: \forall i \in N_{l(\zeta)}: \zeta[i] \neq \varepsilon 
 
 ∎
 
@@ -914,43 +931,43 @@ Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By the second conjunct of th
 
 .. math::
 
-    1. \exists \alpha \in L: \alpha \subset_s \zeta
+    1. \quad \exists \alpha \in L: \alpha \subset_s \zeta
 
 By the first conjunct of the :ref:`Discovery Axiom W.1 <axiom-w1>`,
 
 .. math::
 
-    2. l(\alpha) \neq 0
+    2. \quad l(\alpha) \neq 0
 
 Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists an *f* such that, 
 
 .. math::
 
-    3. \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)]
+    3. \quad \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)]
 
 By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, 
 
 .. math::
 
-    4. \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
+    4. \quad \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
 
 Therefore, combining step 3 and 4,
 
 .. math::
 
-    5. \forall i \in N_{l(\alpha)}: \zeta[f(i)] \neq \varepsilon
+    5. \quad \forall i \in N_{l(\alpha)}: \zeta[f(i)] \neq \varepsilon
 
 Since :math:`l(\alpha) \neq 0`, there is at least one non-Empty Character in *ζ* and therefore, by :ref:`Definition 1.1.3 <definition-1-1-3>`,
 
 .. math::
 
-    6. \Lambda(\zeta) \geq 1
+    6. \quad \Lambda(\zeta) \geq 1
 
 Generalizing this over the Corpus,
 
 .. math::
     
-    7. \forall \zeta \in C_L: \Lambda(\zeta) \geq 1 
+    7. \quad \forall \zeta \in C_L: \Lambda(\zeta) \geq 1 
 
 ∎
 
@@ -964,55 +981,55 @@ Assume
 
 .. math::
 
-    1. ζ \in C_L
+    1. \quad ζ \in C_L
 
 By :ref:`Definition 2.1.3 <definition-1-2-3>`,
 
 .. math::
 
-    2. W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)}) 
+    2. \quad W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)}) 
     
 where
 
 .. math::
 
-    3. \alpha_i \in L.
+    3. \quad \alpha_i \in L.
 
 By :ref:`Definition 1.2.5 <definition-1-2-5>`, the sequence **W**:sub:`ζ` forms a phrase P:sub:`Λ(ζ)` of length *Λ(ζ)* where,
 
 .. math::
 
-   4. \forall i \in N_{\Lambda(\zeta)}: P_{\Lambda(\zeta)}(i) = \alpha_i 
+   4. \quad \forall i \in N_{\Lambda(\zeta)}: P_{\Lambda(\zeta)}(i) = \alpha_i 
     
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of P:sub:`Λ(ζ)` is,
 
 .. math::
 
-    4. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
+    5. \quad D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
 The Delimitation reconstructs the original Sentence *ζ* by including the Delimiters between Words. Therefore,
 
 .. math::
 
-    5. \zeta = D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)
+    6. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)
 
 By :ref:`Definition 2.1.5 <definition-2-1-5>`, 
 
 .. math::
 
-    6. \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} = \alpha_i
+    7. \quad \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} = \alpha_i
 
 Therefore,
 
 .. math::
     
-    7. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    8. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
 .. math::
 
-    8. \forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} 
+    9. \quad \forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} 
 
 ∎
 
@@ -1036,13 +1053,13 @@ To see what is meant by this concept of *admissibility*, consider the English se
 
 .. math::
 
-    \rune{f} = \text{"strap on a ton"}
+    ᚠ = \text{"strap on a ton"}
 
 The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (:ref:`Definition 2.2.1 <definition-2-2-1>`). By this it is meant every word in its inversion is part of the English language,
 
 .. math::
 
-    \text{inv}(\rune{f}) = \text{"not a no parts"}
+    \text{inv}(ᚠ) = \text{"not a no parts"}
 
 However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Delimitation introduced in :ref:`Definition 1.2.7 <definition-1-2-7>` must now be leveraged. 
 
@@ -1068,13 +1085,13 @@ Let *t* be an arbitrary String such that :math:`t \in A(n)`. By :ref:`Definition
 
 .. math::
 
-    1. t \in A(n) \to t \in C_L
+    1. \quad t \in A(n) \to t \in C_L
 
 This is exactly the set theoretic definition of a subset. Thus,
 
 .. math::
 
-    2. A(n) \subseteq C_L 
+    2. \quad A(n) \subseteq C_L 
 
 ∎
 
@@ -1088,19 +1105,19 @@ Let *ζ* be an arbitrary sentence in **A**(*n*). By :ref:`Definition 2.3.1 <defi
 
 .. math::
 
-    1. (\zeta \in C_L) \land (\zeta = D\Pi_{i=1}^{n} p(i))
+    1. \quad (\zeta \in C_L) \land (\zeta = D\Pi_{i=1}^{n} p(i))
 
 By :ref:`Definition 1.2.5 <definition-1-2-5>` and :ref:`Definition 1.2.6 <definition-1-2-6>`, a phrase *p* in :math:`X_L(n)` is an ordered sequence of *n* words such that :math:`\alpha_i \in L`,
 
 .. math::
 
-    2. p = (\alpha_1, \alpha_2, ..., \alpha_n)
+    2. \quad p = (\alpha_1, \alpha_2, ..., \alpha_n)
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of *p* is given by,
 
 .. math::
 
-    3. D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
+    3. \quad D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
 
 In other words, the Delimitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* Words separated by Delimiters.
 
@@ -1108,13 +1125,13 @@ By :ref:`Definition 2.1.4 <definition-2-1-4>`, the Word Length *Λ(ζ)* is the n
 
 .. math::
 
-    4. \Lambda(\zeta) = n.
+    4. \quad \Lambda(\zeta) = n.
 
 Since *ζ* was an arbitrary sentence in **A**(*n*), this can generalize as,
 
 .. math::
 
-    5. \forall \zeta \in A(n): \Lambda(\zeta) = n ∎
+    5. \quad \forall \zeta \in A(n): \Lambda(\zeta) = n ∎
 
 .. _theorem-2-3-3:
 
@@ -1124,7 +1141,7 @@ Let ζ be an arbitrary sentence in C:sub:`L`. By :ref:`Definition 2.1.3 <definit
 
 .. math::
 
-    1. W_{\zeta} = (\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)}) 
+    1. \quad W_{\zeta} = (\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)}) 
     
 Where each :math:`\alpha_i \in L`. By :ref:`Definition 1.2.5 <definition-1-2-5>`, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a phrase **P**:sub:`Λ(ζ)` of length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
 
@@ -1132,49 +1149,49 @@ By :ref:`Definition 1.2.6 <definition-1-2-6>`, since **P**:sub:`Λ(ζ)` is a phr
 
 .. math::
 
-    2. P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)).
+    2. \quad P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)).
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of P:sub:`Λ(ζ)` is:
 
 .. math::
 
-    3. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
+    3. \quad D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
 The Delimitation :math:`D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)` reconstructs the original sentence *ζ*, including the Delimiters between Words. Therefore,
 
 .. math::
 
-    4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
+    4. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
 
 By :ref:`Definition 2.3.1 <definition-2-3-1>`, a String *t* is an Admissible Sentence of Word Length *n* (:math:`t \in A(n)`) if and only if there exists a phrase :math:`p \in X_L(n)` such that,
 
 .. math::
 
-    5. t = D\Pi_{i=1}^{n} p(i)
+    5. \quad t = D\Pi_{i=1}^{n} p(i)
     
 .. math::
 
-    6. t \in C_L
+    6. \quad t \in C_L
 
 As a direct consequence of :ref:`Definition 2.3.1 <definition-2-3-1>`, since the conjunction of the following three facts is true,
 
 .. math::
 
-    7. \zeta \in C_L
+    7. \quad \zeta \in C_L
     
 .. math::
     
-    8. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i)
+    8. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i)
    
 .. math::
 
-    9.  P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)) 
+    9. \quad P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)) 
     
 It follows from step 7 - step 9, :math:`\zeta \in A(\Lambda(\zeta))`. Since *ζ* was an arbitrary Sentence in C:sub:`L`, this can generalize over the Corpus,
 
 .. math::
 
-    10. \forall \zeta \in C_L: \zeta \in A(\Lambda(\zeta)) 
+    10. \quad \forall \zeta \in C_L: \zeta \in A(\Lambda(\zeta)) 
 
 ∎
 
@@ -1186,7 +1203,7 @@ Let *ζ* be an arbitrary sentence in C:sub:`L`. By :ref:`Definition 2.1.3 <defin
 
 .. math::
 
-    1. W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)}) 
+    1. \quad W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)}) 
     
 Where each :math:`\alpha_i \in L`.
 
@@ -1196,31 +1213,31 @@ By :ref:`Definition 1.2.6 <definition-1-2-6>`, since **P**:sub:`Λ(ζ)` is a Phr
 
 .. math::
 
-    2. P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta))
+    2. \quad P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta))
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of **P**:sub:`Λ(ζ)` is,
 
 .. math::
 
-    3. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
+    3. \quad D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
 The Delimitation :math:`D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)` reconstructs the original Sentence *ζ*, including the Delimiters between Words. Therefore:
 
 .. math::
 
-    4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
+    4. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
 
 It has been shown that for an arbitrary Sentence :math:`ζ \in C_L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in :math:`X_L(\Lambda(\zeta))` such that,
  
 .. math::
 
-    5. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i). 
+    5. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i). 
     
 Therefore, generalizing this over the Corpus,
 
 .. math::
 
-    \forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta) p(i) 
+    6. \quad \forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i) 
     
 ∎
 
@@ -1263,43 +1280,43 @@ By :ref:`Definition 2.3.2 <definition-2-3-2>`, the inverse of *ζ* belongs to th
 
 .. math::
 
-    1. \text{inv}(\zeta) \in C_L
+    1. \quad \text{inv}(\zeta) \in C_L
 
 To show that *inv(ζ)* is invertible, it must be shown that,
 
 .. math::
 
-    2. \text{inv}(\text{inv}(\zeta)) \in C_L
+    2. \quad \text{inv}(\text{inv}(\zeta)) \in C_L
 
 From :ref:`Theorem 1.2.4 <theorem-1-2-4>`, for any string *s*, 
 
 .. math::
 
-    3. \text{inv}(\text{inv}(s)) = s.  
+    3. \quad \text{inv}(\text{inv}(s)) = s.  
 
 By :ref:`Definition 2.1.1 <definition-2-1-1>`,
 
 .. math::
 
-    4. \zeta \in S
+    4. \quad \zeta \in S
 
 Where **S** is the set of all Strings. Therefore, it follows, 
 
 .. math::
 
-    5. \text{inv}(\text{inv}(\zeta)) = \zeta
+    5. \quad \text{inv}(\text{inv}(\zeta)) = \zeta
 
 From step 1 and step 5, it follows, 
 
 .. math::
 
-    6. \text{inv}(\text{inv}(\zeta)) \in C_L
+    6. \quad \text{inv}(\text{inv}(\zeta)) \in C_L
 
 By :ref:`Definition 2.3.2 <definition-2-3-2>`, this implies,
 
 .. math::
 
-    7. \text{inv}(\zeta) \in K.
+    7. \quad \text{inv}(\zeta) \in K.
 
 (←) Assume :math:`\text{inv}(\zeta) \in K`
 
@@ -1307,31 +1324,31 @@ By :ref:`Definition 2.3.2 <definition-2-3-2>`,
     
 .. math::
 
-    8. \text{inv}(\text{inv}(\zeta)) \in C_L
+    8. \quad \text{inv}(\text{inv}(\zeta)) \in C_L
 
 Applying :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
-    9. \text{inv}(\text{inv}(\zeta)) = \zeta.
+    9. \quad \text{inv}(\text{inv}(\zeta)) = \zeta.
 
 From step 8 and step 9, it follows, 
 
 .. math::
 
-    10. \zeta \in C_L
+    10. \quad \zeta \in C_L
 
 By :ref:`Definition 2.3.2 <definition-2-3-2>`, it follows,
 
 .. math::
 
-    11. \zeta \in K. 
+    11. \quad \zeta \in K. 
 
 Putting both direction of the equivalence together and generalizing over the Corpus, the theorem is shown,
 
 .. math::
 
-    12. \forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K 
+    12. \quad \forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K 
 
 ∎
 
@@ -1343,25 +1360,25 @@ Let *ζ* be any Sentence from Corpus **C**:sub:`L` such that :math:`\text{inv}(\
 
 .. math::
 
-    1. \text{inv}(\text{inv}(\zeta)) \in C_L
+    1. \quad \text{inv}(\text{inv}(\zeta)) \in C_L
 
 By :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
-    2. \text{inv}(\text{inv}(\zeta)) = \zeta
+    2. \quad \text{inv}(\text{inv}(\zeta)) = \zeta
 
 Therefore, combining step 1 and step 2,
 
 .. math::
 
-    3. \zeta \in C_L 
+    3. \quad \zeta \in C_L 
 
 It follows, 
 
 .. math::
 
-    4. \forall \zeta \in C_L: \text{inv}(\zeta) \in K \to \zeta \in C_L 
+    4. \quad \forall \zeta \in C_L: \text{inv}(\zeta) \in K \to \zeta \in C_L 
 
 ∎
 
@@ -1393,25 +1410,25 @@ Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume :math:`ζ \in K` . By :
 
 .. math::
 
-    1. \text{inv}(\zeta) \in C_L
+    1. \quad \text{inv}(\zeta) \in C_L
 
 By the :ref:`Extraction Axiom S.2 <axiom-s2>`,
 
 .. math::
 
-    2. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} \in L 
+    2. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} \in L 
  
 Therefore, 
 
 .. math::
 
-    3. \zeta \in K \to \text{inv}(\zeta)\{i\} \in L 
+    3. \quad \zeta \in K \to \text{inv}(\zeta)\{i\} \in L 
 
 Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
 .. math::
 
-    4. \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L 
+    4. \quad \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L 
 
 ∎
 
@@ -1425,25 +1442,25 @@ Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let :math:`n = \Lambda(\zeta
 
 .. math::
 
-    1. s = D\Pi_{i=1}^{n} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\})
+    1. \quad s = D\Pi_{i=1}^{n} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\})
 
-By :ref:`Theorem 1.2.5 <theorem-1-2-5>`, for any two Strings *u* and *t*, :math:`inv(ut) = inv(t)inv(u)`. Apply this property repeatedly to construct *inv(s)*,
+By :ref:`Theorem 1.2.5 <theorem-1-2-5>`, for any two Strings *u* and *t*, :math:`\text{inv}(ut) = \text{inv}(t)\text{inv}(u)`. Apply this property repeatedly to construct *inv(s)*,
 
 .. math::
 
-    2. \text{inv}(s) = \text{inv}((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\}))
+    2. \quad \text{inv}(s) = \text{inv}((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\}))
 
 Which reduces to,
 
 .. math::
 
-    3. \text{inv}(s) = (\text{inv}(\zeta\{n\}))(\text{inv}(\sigma))(\text{inv}(\zeta\{n-1\}))(\text{inv}(\sigma)) ... (\text{inv}(\zeta\{2\}))(\text{inv}(\sigma))(\text{inv}(\zeta\{1\}))
+    3. \quad \text{inv}(s) = (\text{inv}(\zeta\{n\}))(\text{inv}(\sigma))(\text{inv}(\zeta\{n-1\}))(\text{inv}(\sigma)) ... (\text{inv}(\zeta\{2\}))(\text{inv}(\sigma))(\text{inv}(\zeta\{1\}))
 
 Since *σ* is a single character, :math:`\text{inv}(\sigma) = \sigma`,
 
 .. math::
 
-    4. \text{inv}(s) = (\text{inv}(\zeta\{n\}))(\sigma)(\text{inv}(\zeta\{n-1\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{2\}))(\sigma)(\text{inv}(\zeta\{1\}))
+    4. \quad \text{inv}(s) = (\text{inv}(\zeta\{n\}))(\sigma)(\text{inv}(\zeta\{n-1\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{2\}))(\sigma)(\text{inv}(\zeta\{1\}))
 
 Note that the right-hand side now has the form of a Delimitation, but with the order of Words reversed and each Word inverted.
 
@@ -1451,59 +1468,59 @@ Re-index the terms on the right-hand side to match the form of the Delimitation 
 
 .. math::
 
-    5. \text{inv}(s) = (\text{inv}(ζ\{j_n\}))(\sigma)(\text{inv}(\zeta\{j_{n-1}\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{j_2\}))(\sigma)(\text{inv}(\zeta\{j_1\}))
+    5. \quad \text{inv}(s) = (\text{inv}(ζ\{j_n\}))(\sigma)(\text{inv}(\zeta\{j_{n-1}\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{j_2\}))(\sigma)(\text{inv}(\zeta\{j_1\}))
 
 Where *j*:sub:`i` is obtained by simply substituting :math:`j = n - i + 1`. Using :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitations, the right-hand side becomes,
 
 .. math::
 
-    6. \text{inv}(s) = D\Pi_{j=1}^{n} \text{inv}(\zeta\{n - j + 1\})
+    6. \quad \text{inv}(s) = D\Pi_{j=1}^{n} \text{inv}(\zeta\{n - j + 1\})
 
 Recall that :math:`s = D\Pi_{i=1}^{n} \zeta\{i\}`. Substitute this back into the equation and re-index the right-hand side for consistency to get,
 
 .. math::
 
-    7. \text{inv}(D\Pi_{i=1}^{n} \zeta\{i\}) = D\Pi_{i=1}^{n} \text{inv}(\zeta\{n - i + 1\})
+    7. \quad \text{inv}(D\Pi_{i=1}^{n} \zeta\{i\}) = D\Pi_{i=1}^{n} \text{inv}(\zeta\{n - i + 1\})
 
 Since *ζ* was an arbitrary sentence, this can be generalized over the Corpus,
 
 .. math::
 
-    8. \forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\}) 
+    8. \quad \forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\}) 
 
 ∎
 
 As noted in previous aside, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to the last batch of theorems in this section, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
 
-Consider the Sentences from the English language, :math:`\rune{f} = \text{"this is a test"}`, :math:`\rune{u} = \text{"live on"}`, and :math:`\rune{th} = \text{"step on no pets"}`. Their corresponding Character-level representations are given by,
+Consider the Sentences from the English language, :math:`ᚠ = \text{"this is a test"}`, :math:`ᚢ = \text{"live on"}`, and :math:`ᚦ = \text{"step on no pets"}`. Their corresponding Character-level representations are given by,
 
 .. math::
 
-    {\large\rune{f}} = (\text{"t"}, \text{"h"}, \text{"i"}, \text{"s"}, \sigma, \text{"i"}, \text{"s"}, \sigma, \text{"a"}, \sigma, \text{"t"}, \text{"e"}, \text{"s"}, \text{"t"})
+    {\largeᚠ} = (\text{"t"}, \text{"h"}, \text{"i"}, \text{"s"}, \sigma, \text{"i"}, \text{"s"}, \sigma, \text{"a"}, \sigma, \text{"t"}, \text{"e"}, \text{"s"}, \text{"t"})
 
 .. math::
 
-    {\large\rune{u}} = (\text{"l"}, \text{"i"}, \text{"v"}, \text{"e"}, \sigma, \text{"o"}, \text{"n"})
+    {\largeᚢ} = (\text{"l"}, \text{"i"}, \text{"v"}, \text{"e"}, \sigma, \text{"o"}, \text{"n"})
 
 .. math::
 
-    {\large\rune{th}} = (\text{"s"}, \text{"t"}, \text{"e"}, \text{"p"}, \sigma, \text{"o"}, \text{"n"}, \sigma, \text{"n"}, \text{"o"}, \sigma, \text{"p"}, \text{"e"}, \text{"t"}, \text{"s"})
+    {\largeᚦ} = (\text{"s"}, \text{"t"}, \text{"e"}, \text{"p"}, \sigma, \text{"o"}, \text{"n"}, \sigma, \text{"n"}, \text{"o"}, \sigma, \text{"p"}, \text{"e"}, \text{"t"}, \text{"s"})
 
 The Character-level representation of their Inverses, would be,
 
 .. math::
 
-    {\large\text{inv}(\large\rune{f})} = (\text{"t"}, \text{"s"}, \text{"e"}, \text{"t"}, \sigma, \text{"a"}, \sigma, \text{"s"}, \text{"i"}, \sigma, \text{"s"}, \text{"i"}, \text{"h"}, \text{"t"})
+    {\large\text{inv}(\largeᚠ)} = (\text{"t"}, \text{"s"}, \text{"e"}, \text{"t"}, \sigma, \text{"a"}, \sigma, \text{"s"}, \text{"i"}, \sigma, \text{"s"}, \text{"i"}, \text{"h"}, \text{"t"})
 
 .. math::
 
-    {\large\text{inv}(\rune{u})} = (\text{"n"}, \text{"o"}, \sigma, \text{"e"}, \text{"v"}, \text{"i"}, \text{"l"})
+    {\large\text{inv}(ᚢ)} = (\text{"n"}, \text{"o"}, \sigma, \text{"e"}, \text{"v"}, \text{"i"}, \text{"l"})
 
 .. math::
 
-    {\large\text{inv}(\rune{th})} = (\text{"s"}, \text{"t"}, \text{"e"}, \text{"p"}, \sigma, \text{"o"}, \text{"n"}, \sigma, \text{"n"}, \text{"o"}, \sigma, \text{"p"}, \text{"e"}, \text{"t"}, \text{"s"})
+    {\large\text{inv}(ᚦ)} = (\text{"s"}, \text{"t"}, \text{"e"}, \text{"p"}, \sigma, \text{"o"}, \text{"n"}, \sigma, \text{"n"}, \text{"o"}, \sigma, \text{"p"}, \text{"e"}, \text{"t"}, \text{"s"})
 
-In the case of *ᚠ*, *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and *inv(ᚠ)*, just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the ending of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representatio results in the same delimiting of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted.
+In the case of *ᚠ*, *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and *inv(ᚠ)*, just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the ending of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the :ref:`Delimiting Algorithm <delimiting-algorithm>` identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representatio results in the same delimiting of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted.
 
 In the case of *ᚢ*, *inv(ᚢ)* belongs to the Corpus, since all of its Words belong to the Language (English) and have semantic coherence in *ᚢ*, and the inverted Sentence is admissible. This means *ᚢ* belongs to the class of Invertible Sentences in English. Take note, none of the Words that belong to *ᚢ* (or more precisely, to one of the ordered pairs of **W**:sub:`ᚢ`) belong to *inv(ᚢ)* (or more precisely, to one of the ordered pairs of **W**:sub:`inv(ᚢ)`). However, there does appear to be a relationship between the Words which appear in *ᚢ* and *inv(ᚢ)*, namely, they must be Invertible. The Word *"live"* inverts into *"evil"*, while *"on"* inverts into *"no"*. In other words, based on this preliminary heuristic analysis, if a Sentence is to be Invertible, the Words which belong to it must belong to the class of Invertible Words **I**.
 
@@ -1517,47 +1534,47 @@ These last theorems encapsulate these important properties of Invertible Sentenc
 
 **Theorem 2.3.9** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 
-Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that :math:`1 \leq i \leq \Lanbda(\zeta)`. By :ref:`Definition 2.2.2 <definition-2-2-2>`, 
+Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that :math:`1 \leq i \leq \Lambda(\zeta)`. By :ref:`Definition 2.2.2 <definition-2-2-2>`, 
 
 .. math::
 
-    1. \text{inv}(\zeta) \in C_L.
+    1. \quad \text{inv}(\zeta) \in C_L.
 
 By the :ref:`Extraction Axiom S.2 <axiom-s2>`, 
 
 .. math::
 
-    2. \zeta\{i\} \in L. 
+    2. \quad \zeta\{i\} \in L. 
 
 By :ref:`Definition 1.3.2 <definition-1-3-2>`, a Word *α* is invertible if and only if both *α* and its inverse, *inv(α)*, are in **L**,
 
 .. math::
 
-    3. \alpha \in I \leftrightarrow \text{inv}(\alpha) \in L
+    3. \quad \alpha \in I \leftrightarrow \text{inv}(\alpha) \in L
 
 Therefore, since **L** is closed under inversion for Invertible Words , 
 
 .. math::
 
-    4. \text{inv}(\zeta\{i\}) \in L.
+    4. \quad \text{inv}(\zeta\{i\}) \in L.
 
-*inv(ζ)* can be constructed by concatenating the inverses of the words in ζ in reverse order, with delimiters inserted appropriately. Since by step 1 *inv(ζ)* is a Sentence in the Corpus, **W**:sub:`inv(ζ)` can be constructed by the Delimiting Algorithm (:ref:`Definition 2.1.3 <definition-2-1-3>`). 
+*inv(ζ)* can be constructed by concatenating the inverses of the words in ζ in reverse order, with delimiters inserted appropriately. Since by step 1 *inv(ζ)* is a Sentence in the Corpus, **W**:sub:`inv(ζ)` can be constructed by the :ref:`Delimiting Algorithm <delimiting-algorithm>` (:ref:`Definition 2.1.3 <definition-2-1-3>`). 
 
 .. math::
 
-    5. W_{\text{inv}(\zeta)} = (\text{inv}(\zeta\{\Lambda(\zeta)\}), \text{inv}(\zeta{\Lambda(\zeta)-1\}), ..., \text{inv}(\zeta\{1\}))
+    5. \quad W_{\text{inv}(\zeta)} = (\text{inv}(\zeta\{\Lambda(\zeta)\}), \text{inv}(\zeta{\Lambda(\zeta)-1\}), ..., \text{inv}(\zeta\{1\}))
 
 By :ref:`Definition 2.1.9 <definition-2-1-9>`, 
 
 .. math::
 
-    6. \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta)-i+1\})
+    6. \quad \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta)-i+1\})
 
 Since *ζ* and *i* were arbitrary, this can be generalized over the Corpus,
 
 .. math::
 
-    1. forall \zeta \in C_L: \zeta \in K \leftarrow \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\}) 
+    1. f\quad \forall \zeta \in C_L: \zeta \in K \leftarrow \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\}) 
 
 ∎
 
@@ -1609,37 +1626,37 @@ This theorem can be stated in natural language as follows: For every sentence *�
 
 .. math::
 
-    1. \zeta \in K
+    1. \quad \zeta \in K
 
 By :ref:`Theorem 2.3.9 <theorem-2-3-9>`, the *i*:sup:`th` Word of *inv(ζ)* is the inverse of the *(Λ(ζ) - i + 1)*:sup:`th` Word of *ζ*
 
 .. math::
 
-    2. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+    2. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
    
 Furthermore, by :ref:`Theorem 2.3.3 <theorem-2-3-3>`, since *inv(ζ)* is in the Corpus, *inv(ζ)* is an Admissible Sentence of word length *Λ(ζ)*.
 
 .. math::
 
-    3. \zeta \in A(\Lambda(\zeta))
+    3. \quad \zeta \in A(\Lambda(\zeta))
 
 Since :math:`\zeta \in K`, by :ref:`Definition 2.3.2 <definition-2-3-2>`, 
 
 .. math::
 
-    4. \text{inv}(\zeta) \in C_L.
+    4. \quad \text{inv}(\zeta) \in C_L.
 
 By :ref:`Theorem 2.3.8 <theorem-2-3-8>`, the inverse of *ζ*, *inv(ζ)*, can be expressed as the Delimitation of the inverses of the Words of *ζ* in reverse order,
 
 .. math::
 
-    5. \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+    5. \quad \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
 
 This is equivalent to,
 
 .. math::
 
-    6. \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta)\{i\}
+    6. \quad \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta)\{i\}
 
 Since :math:`\text{inv}(\zeta) \in C_L` by assumption (step 1) and *inv(ζ)* has the same Word Length as *ζ* which is *Λ(ζ)*. 
 
@@ -1647,46 +1664,46 @@ Because *inv(ζ)* is a Delimitation of Words from **L**, by :ref:`Definition 2.3
 
 .. math::
 
-    7. \text{inv}(\zeta) \in A(\Lambda(\zeta)).
+    7. \quad \text{inv}(\zeta) \in A(\Lambda(\zeta)).
 
 Therefore, both conditions hold, 
 
 .. math::
 
-    8. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+    8. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
     
 .. math::
 
-    9. \text{inv}(\zeta) \in A(\Lambda(\zeta))
+    9. \quad \text{inv}(\zeta) \in A(\Lambda(\zeta))
 
 (←) Assume that for an arbitrary Sentence :math:`\zeta \in C_L`, the following holds,
 
 .. math::
 
-    10. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+    10. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
     
 .. math::
 
-    11. \text{inv}(\zeta) \in A(\Lambda(\zeta))
+    11. \quad \text{inv}(\zeta) \in A(\Lambda(\zeta))
 
 
 By :ref:`Definition 2.3.1 <definition-2-3-1>`, since :math:`\text{inv}(\zeta) \in A(\Lambda(\zeta))`, it follows immediately, 
 
 .. math::
 
-    12. \text{inv}(\zeta) \in C_L
+    12. \quad \text{inv}(\zeta) \in C_L
 
 By :ref:`Definition 2.3.2 <definition-2-3-2>`, it follows, 
 
 .. math::
 
-    13. \zeta \in K
+    13. \quad \zeta \in K
 
 Therefore, both directions of the equivalence have been shown. Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus, 
 
 .. math::
 
-    \forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))
+    14. \quad \forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))
 
 ∎
 
@@ -1704,13 +1721,13 @@ Let *ζ* be an arbitrary Invertible Sentence in C:sub:`L`, and let *i* be a natu
 
 .. math::
 
-    1. \text{inv}(\zeta) \in C_L
+    1. \quad \text{inv}(\zeta) \in C_L
 
 By :ref:`Definition 2.1.5 <definition-2-1-5>`, *ζ{i}* refers to the Word at index *i* in the Word-level representation of *ζ*. By :ref:`Theorem 2.3.9 <theorem-2-3-9>`,
 
 .. math:: 
 
-    2. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+    2. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
 
 By the :ref:`Extraction Axiom S.2 <axiom-s2>`, since :math:`\zeta \in C_L`, all Words in its Word-level representation belong to **L**. Therefore, :math:`\zeta\{i\} \in L` for all *i* such that :math:`1 \leq i \leq \Lambda(\zeta)`.
 
@@ -1718,13 +1735,13 @@ Since :math:`\text{inv}(\zeta) \in C_L` (from step 1) and each word *inv(ζ){i}*
 
 .. math::
 
-    3. \text{inv}(\zeta)\{i\} \in L
+    3. \quad \text{inv}(\zeta)\{i\} \in L
 
 By :ref:`Definition 1.3.2 <definition-1-3-2>` of Invertible Words, this means that *ζ{i}* is an Invertible Word. Therefore, :math:`\zeta\{i\} \in I`. Since *ζ* and *i* were arbitrary, this can generalize, 
 
 .. math::
 
-    \forall \zeta \in C_L: \zeta \in K \leftrightarrow \forall i \in N_{\Lambda(\zeta)}`: \zeta\{i\} \in I 
+    4. \quad \forall \zeta \in C_L: \zeta \in K \leftrightarrow \forall i \in N_{\Lambda(\zeta)}`: \zeta\{i\} \in I 
  
 ∎
 

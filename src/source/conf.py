@@ -42,7 +42,9 @@ html_static_path = [
     '_static' 
 ]
 
-imgmath_latex_preamble = r"""
+latex_engine = 'xelatex'
+
+latex_preamble = r"""
 \usepackage{babel}
 \babelprovide[import, main]{coptic} 
 \usepackage{amssymb}
@@ -50,7 +52,17 @@ imgmath_latex_preamble = r"""
 \usepackage[utf8]{inputenc} 
 \usepackage{lmodern}
 \usepackage{runic}
+\newcommand{\rf}{ᚠ} 
+\newcommand{\ru}{ᚢ}
+\newcommand{\rth}{ᚦ} 
 """
+
+imgmath_latex_preamble = latex_preamble
+
+latex_elements = {
+    'preamble': latex_preamble,
+    'inputenc': '\\usepackage[utf][inputenc]'
+}
 
 # -- Theme configuration -----------------------------------------------------
 

@@ -96,7 +96,7 @@ Concatenation is considered the sole constitutive operation for the formation of
 The result of *concatenating* any two Characters *ι* and *ν** is denoted *ιν*. To make the operands of concatenation clear, parenthesis will sometimes be used to separate the Characters being concatenated, e.g. *ι(ν) = (ι)ν = (ι)(ν) = ιν*. Character concatenation is defined inductively through the following schema,
 
     1. Basic Clause: :math:`\forall \iota \in \Sigma : \iota \varepsilon = \iota`
-    2. Inductive Clause: :math:`\forall iota, \nu \in \Sigma : \forall s \in S: \iota(\nu s) = (\iota \nu)s`
+    2. Inductive Clause: :math:`\forall \iota, \nu \in \Sigma : \forall s \in S: \iota(\nu s) = (\iota \nu)s`
     3. Uniqueness Clause: :math:`\forall \iota, \nu, \omicron, \rho \in \Sigma : (\iota \nu = \omicron \rho) \to ((\iota = \omicron) \land (\nu = \rho))` 
     4. Comprehension Clause: :math:`\forall \iota \in \Sigma : \forall s \in S: \iota \in S` 
 

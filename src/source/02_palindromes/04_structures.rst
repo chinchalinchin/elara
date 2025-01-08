@@ -172,7 +172,7 @@ The *σ*-reduced Alphabet (**Σ**:sub:`σ`) can be seen as a subspace within thi
 
 Note that a *σ*-reduction is not a one-to-one operation. It is possible for the *σ*-reduction of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
 
-As an example, consider the (partial, ignoring punctuality) Palindromes :math:`\rune{f} = \text{"madam im adam"}` and :math:`\rune{u} = \text{"mad am i madam"}`. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
+As an example, consider the (partial, ignoring punctuality) Palindromes :math:`ᚠ = \text{"madam im adam"}` and :math:`ᚢ = \text{"mad am i madam"}`. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
 
 Both the Palindrome and the alternative Sentence (which also happens to be a Palindrome) have the same *σ*-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original Word boundaries and Sentence structure are lost.
 
