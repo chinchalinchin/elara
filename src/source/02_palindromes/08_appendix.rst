@@ -1,5 +1,7 @@
-Appendix
-========
+.. _section-viii:
+
+Section VIII: Appendix
+======================
 
 This section contains notes and ideas that do not serve to establish the main results of the work, but the author believes may nevertheless prove useful in extending the formal theory into other epistemological domains.
 
@@ -11,14 +13,14 @@ Table of Contents
 - Section A.IV: Sigma Induction
 - Section A.V: Reflective Structures
 
-Section A.I: Compound Words 
-----------------------------
+Section VIII.I: Compound Words 
+------------------------------
 
 .. note::
 
     Part of the ambiguity in imperfect palindromes is that multiple different palindromes can map to the same *σ-reduced* form. When Delimiters are removed from a Sentence, a certain class of Words can remain in the Language, because their semantic content *"transmutes"*. In the author's opinion, the class of Compound Words bears some relation to palindromic structures, but the exact relation has yet to be uncovered.
 
-**Definition A.1.1: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
+**Definition 8.1.1: Compound Words** η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
 
 This formalization can be translated into natural language as follows: A Word *η* in a Language **L** is a Compound Word if and only if,
 
