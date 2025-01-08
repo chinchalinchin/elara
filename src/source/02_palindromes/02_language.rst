@@ -215,7 +215,7 @@ A step-by-step breakdown of this algorithm is instructive for understanding how 
     3. LOOP_START: This is a label marking the beginning of the loop.
     4. LOAD R3, (R1): The Character at the memory address stored in R1 is loaded into register R3.
     5. CMP R3, 0: The character in R3 is compared to the null terminator (0).
-    6. JE LOOP_END: If the comparison is equal (meaning we've reached the end of the string), the program jumps to the LOOP_END label.
+    6. JE LOOP_END: If the comparison is equal (meaning the end of the string has been reached), the program jumps to the LOOP_END label.
     7. ADD R1, 1: This is the crucial step where the pointer is incremented. 1 is added to R1 because each Character occupies one memory location (in this simplified example). This moves the pointer to the next Character's address.
     8. ADD R2, 1: The counter is incremented.
     9. JMP LOOP_START: The program jumps back to the beginning of the loop.
@@ -291,7 +291,7 @@ This method of abstraction and notation will be employed extensively in the subs
 
 As a brief aside, it may seem the formal system would be better developed by excluding the Empty Character altogether from its Alphabet. The Empty Character's presence in the Alphabet complicates matter extensively, requiring intricate and subtle definitions. 
 
-The reasons for this are two-fold. First: the Empty Character *ε* will be necessary for defining the *Pivot* of a Palindrome, the point around which a certain class of Palindrome reflect. Second: Strings consisting of only the Empty Character are not a mere novelty of abstraction; They play a crucial role in computer science and database management. Any rigorous formal system that excludes the notion of an Empty Character will fail to describe the exact domain from which Language arises, and thus it may fail to account for pre-Language syntactical conditions that necessarily affect the formation of Language.
+The reasons for this are two-fold. First: the Empty Character *ε* plays a part in the *Pivot* of a Palindrome, the point around which a certain class of Palindrome reflect. Second: Strings consisting of only the Empty Character are not a mere novelty of abstraction; They play a crucial role in computer science and database management. Any rigorous formal system that excludes the notion of an Empty Character will fail to describe the exact domain from which Language arises, and thus it may fail to account for pre-Language syntactical conditions that necessarily affect the formation of Language.
 
 This approach is not without its challenges. As :ref:`Definition 1.1.3 <definition-1-1-3>` below will make clear, if *ε* is considered part of the Alphabet, the typical notion of a String's Length is undefined, as *ε* can be concatenated an infinite number of times to a String without altering its content. To explicate the notion of *length*, consider the constraints that must be placed on this concept in the palindromic system,
 

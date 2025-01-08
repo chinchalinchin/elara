@@ -1,9 +1,15 @@
-===============
-Palindrome Data
-===============
+.. _section-viii:
+
+==================
+Section VIII: Data
+==================
+
+.. _english-data:
 
 English 
 =======
+
+.. _reflective-words-data:
 
 Reflective Words
 ----------------
@@ -13,6 +19,8 @@ The following spreadsheet contains a sample of reflective words in English.
 .. csv-table:: Reflective Words
    :file: ../_static/data/words/reflective_words.csv
 
+.. _invertible-words-data:
+
 Invertible Words
 ----------------
 
@@ -20,6 +28,8 @@ The following spreadsheet contains a sampe of invertible words (minus reflective
 
 .. csv-table:: Invertible Words
    :file: ../_static/data/words/invertible_words.csv
+
+.. _ambiguous-words-data:
 
 Ambiguous Words
 ---------------
@@ -29,6 +39,8 @@ The following spreadsheet contains a sample of ambiguous words in English.
 .. csv-table:: Ambiguous Words
    :file: ../_static/data/words/ambiguous_words.csv
 
+.. _palindrome-data:
+
 Palindromes
 ------------
 
@@ -37,8 +49,12 @@ The following spreadsheet contains the results of palindromic analysis conducted
 .. csv-table:: English Palindrome Analysis
    :file: ../_static/data/palindromes/english_palindromes.csv
 
+.. _latin-data:
+
 Latin
 =====
+
+.. _latin-palindrome-data:
 
 Palindromes
 -----------

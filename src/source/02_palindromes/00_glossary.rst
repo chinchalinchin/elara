@@ -63,7 +63,7 @@ Definitions
 - D 1.3.2: Invertible Words: :math:`\alpha \in I \leftrightarrow \text{inv}(\alpha) \in L`
 - D 2.1.1: Corpus: :math:`C_L`
 - D 2.1.2: Sentence: ᚠ
-- D 2.1.3: Word-Level Set Representation: :math:`W_ᚠ`
+- D 2.1.3: Word-Level Set Representation: :math:`W_\rune{f}`
 - D 2.1.4: Word Length: :math:`\Lambda(\zeta)`
 - D 2.1.5: Word Index Notation: :math:`\zeta\{i\}`
 - D 2.1.6: Intervention: :math:`(i/n/j)_\zeta`
@@ -152,8 +152,6 @@ Theorems
 - T 2.3.7: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L`
 - T 2.3.8: :math:`\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 - T 2.3.9: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.10: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
-- T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \to \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
 - T 2.3.10: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
 - T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \to \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
 - T 3.1.1: :math:`\forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))`

@@ -802,11 +802,11 @@ The first theorems proven using these new axioms are analogous versions of the W
 
 .. _theorem-2-2-1:
 
-**Theorem 2.2.1** :math:`\forall \zeta \in C_{L}: l(\zeta) \neq 0`
+**Theorem 2.2.1** :math:`\forall \zeta \in C_L: l(\zeta) \neq 0`
 
 Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`.
 
-By the first conjunct of the :ref:`Discovery Axiom W.1 <axiom-w1>` and the second conjunct of the :ref:`Duality Axiom S.2 <axiom-s2>`,
+By the second conjunct of the :ref:`Duality Axiom S.2 <axiom-s2>` and the first conjunct of the :ref:`Discovery Axiom W.1 <axiom-w1>`,
 
 .. math::
 
@@ -816,17 +816,17 @@ By the first conjunct of the :ref:`Discovery Axiom W.1 <axiom-w1>` and the secon
 
     2. \forall \alpha \in L: l(\alpha) \neq 0
 
-Therefore, by Definition 1.1.7, there exists a strictly increasing and consecutive function *f* such that,
+Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists a strictly increasing and consecutive function *f* such that,
 
 .. math::
 
     3. \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)] 
     
-By Theorem 1.2.3, 
+By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, 
 
 .. math::
 
-    4. \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsiolin
+    4. \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
 
 Therefore, combining steps 3 and 4,
 
@@ -834,25 +834,25 @@ Therefore, combining steps 3 and 4,
 
     5. \forall i \in N_{\alpha}: \zeta[f(i)] \neq ε
 
-Since, by step 2, :math:`l(\alpha) \neq 0`, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying Definition 1.1.3 and Theorem 2.2.1,
+Since, by step 2, :math:`l(\alpha) \neq 0`, there must be some non-zero *i* that satisfies step 5. Therefore, there is at least one non-Empty Character in *ζ*, namely, *ζ[f(i)]*. The theorem is then proven by applying :ref:`Definition 1.1.3 <definition-1-1-3>`,
 
 .. math::
 
-    6. l(\zeta) \neq 0 
+    1. l(\zeta) \neq 0 
 
 ∎
 
 .. _theorem-2-2-2:
 
-**Theorem 2.2.2** :math:`\forall \zeta \in C_{L}: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_{s} \zeta`
+**Theorem 2.2.2** :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta`
 
-Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. By Theorem 2.2.1 and Definition 1.1.3, there must be at least one non-Empty Character in *ζ*. Let *ζ[i]* be a non-Empty Character in *ζ*. Consider the string *s* consisting of the single character *ζ[i]*, :math:`s = \zeta[i]`. Clearly, by Definition 1.1.3, 
+Let *ζ* be an arbitrary sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. By :ref:`Theorem 2.2.1 <theorem-2-2-1>` and :ref:`Definition 1.1.3 <definition-1-1-3>`, there must be at least one non-Empty Character in *ζ*. Let *ζ[i]* be a non-Empty Character in *ζ*. Consider the string *s* consisting of the single character *ζ[i]*, :math:`s = \zeta[i]`. Clearly, by :ref:`Definition 1.1.3 <definition-1-1-3>`, 
 
 .. math::
 
     1. l(s) = 1
 
-Define a function :math:`f: \{1\} \to \{i\}` such that :math:`f(1) = i`. This function is strictly increasing and consecutive. By Definition 1.1.6 and Definition 1.1.7, since there exists a strictly increasing and consecutive function *f* from the indices of *s* to the indices of *ζ*, and since the Character at position 1 in *s* is the same as the Character at position i in *ζ* (both are *ζ[i]*), we can conclude that *s* is contained in *ζ*. Therefore, 
+Define a function :math:`f: \{1\} \to \{i\}` such that :math:`f(1) = i`. This function is strictly increasing and consecutive. By :ref:`Definition 1.1.6 <definition-1-1-6>` and :ref:`Definition 1.1.7 <definition-1-1-7>`, since there exists a strictly increasing and consecutive function *f* from the indices of *s* to the indices of *ζ*, and since the Character at position 1 in *s* is the same as the Character at position i in *ζ* (both are *ζ[i]*), we can conclude that *s* is contained in *ζ*. Therefore, 
 
 .. math::
 
@@ -870,15 +870,15 @@ Since *ζ* and *i* were arbitrary, this can be generalized,
 
 **Theorem 2.2.3** :math:`\forall \zeta \in C_{L} : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. By Theorem 2.2.2, 
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. By :ref:`Theorem 2.2.2 <theorem-2-2-2>`, 
 
 .. math::
     
     1. \forall i \in N_{l(\zeta)}: \zeta[i] subset_s \zeta
 
-By Definition 1.1.3, String Length is the number of non-Empty Characters in a String's Character-level set representation. Since :math:`l(\zeta) > 0`, *ζ* must have at least one non-Empty character.
+By :ref:`Definition 1.1.3 <definition-1-1-3>`, String Length is the number of non-Empty Characters in a String's Character-level set representation. Since :math:`l(\zeta) > 0`, *ζ* must have at least one non-Empty character.
 
-Since :math:`1 \leq i \leq l(\zeta)`, the Character at position *i* in *α*, denoted *ζ[i]*, exists and is non-Empty by Definition 1.1.2. Therefore, 
+Since :math:`1 \leq i \leq l(\zeta)`, the Character at position *i* in *α*, denoted *ζ[i]*, exists and is non-Empty by :ref:`Definition 1.1.2 <definition-1-1-2>`. Therefore, 
 
 .. math::
 
@@ -896,25 +896,25 @@ Since *ζ* and *i* are arbitrary, this can generalized,
 
 **Theorem 2.2.4** :math:`\forall \zeta \in C_{L}: \Lambda(\zeta) \geq 1`
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By the second conjunct of the Duality Axiom S.1,
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By the second conjunct of the :ref:`Duality Axiom S.1 <axiom-s1>`,
 
 .. math::
 
     1. \exists \alpha \in L: \alpha \subset_s \zeta
 
-By the first conjunct of the Discovery Axiom W.1,
+By the first conjunct of the :ref:`Discovery Axiom W.1 <axiom-w1>`,
 
 .. math::
 
     2. l(\alpha) \neq 0
 
-Therefore, by Definition 1.1.7, there exists an *f* such that, 
+Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists an *f* such that, 
 
 .. math::
 
     3. \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)]
 
-By Theorem 1.2.3, 
+By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, 
 
 .. math::
 
@@ -926,7 +926,7 @@ Therefore, combining step 3 and 4,
 
     5. \forall i \in N_{l(\alpha)}: \zeta[f(i)] \neq \varepsilon
 
-Since :math:`l(\alpha) \neq 0`, there is at least one non-Empty Character in *ζ* and therefore, by Definition 1.1.3,
+Since :math:`l(\alpha) \neq 0`, there is at least one non-Empty Character in *ζ* and therefore, by :ref:`Definition 1.1.3 <definition-1-1-3>`,
 
 .. math::
 
@@ -936,11 +936,13 @@ Generalizing this over the Corpus,
 
 .. math::
     
-    7. \forall \zeta \in C_L: \Lambda(\zeta) \geq 1 ∎
+    7. \forall \zeta \in C_L: \Lambda(\zeta) \geq 1 
+
+∎
 
 .. _theorem-2-2-5:
 
-**Theorem 2.2.5** :math:`\forall \zeta \in C_{L}: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
+**Theorem 2.2.5** :math:`\forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
 
 This theorem can be stated in natural language as follows: Every Sentence in the Corpus is the Delimitation of its own Words.
 
@@ -950,7 +952,7 @@ Assume
 
     1. ζ \in C_L
 
-By Definition 2.1.3,
+By :ref:`Definition 2.1.3 <definition-1-2-3>`,
 
 .. math::
 
@@ -962,25 +964,25 @@ where
 
     3. \alpha_i \in L.
 
-By Definition 1.2.5, the sequence **W**:sub:`ζ` forms a phrase P:sub:`Λ(ζ)` of length *Λ(ζ)* where,
+By :ref:`Definition 1.2.5 <definition-1-2-5>`, the sequence **W**:sub:`ζ` forms a phrase P:sub:`Λ(ζ)` of length *Λ(ζ)* where,
 
 .. math::
 
    4. \forall i \in N_{\Lambda(\zeta)}: P_{\Lambda(\zeta)}(i) = \alpha_i 
     
-By Definition 1.27, the Delimitation of P:sub:`Λ(ζ)` is,
+By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of P:sub:`Λ(ζ)` is,
 
 .. math::
 
     4. D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})
 
-The delimitation reconstructs the original sentence ζ by including the delimiters between words. Therefore:
+The Delimitation reconstructs the original Sentence *ζ* by including the Delimiters between Words. Therefore,
 
 .. math::
 
     5. \zeta = D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)
 
-By Definition 2.1.5, 
+By :ref:`Definition 2.1.5 <definition-2-1-5>`, 
 
 .. math::
 
@@ -1000,21 +1002,21 @@ Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
 ∎
 
-.. _section_ii_iii:
+.. _section-ii-iii:
 
 Section II.III: Sentence Classes 
 --------------------------------
 
 As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in linguistics is *inversion* (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will seen to be a *"recursion of inversions"*.
 
-Theorems 2.3.9 - 2.3.11 of this subsection mark the first notable results obtained from the formal system. Their empirical truth in natural language represents confirmation of the formal system's construction. These theorems demonstrate the Character-level symmetries required by invertibility propagate up through the Word-level of linguistics and manifest in conditions that must be imposed on the Word-level structure of an Invertible Sentence.
+:ref:`Theorems 2.3.9 <theorem-2-3-9>` - :ref:`2.3.11 <theorem-2-3-11>` of this subsection mark the first notable results obtained from the formal system. Their empirical truth in natural language represents confirmation of the formal system's construction. These theorems demonstrate the Character-level symmetries required by invertibility propagate up through the Word-level of linguistics and manifest in conditions that must be imposed on the Word-level structure of an Invertible Sentence.
 
-.. _admissible_sentences:
+.. _admissible-sentences:
 
 Admissible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
-The notion of an *Admissible Sentence* is required to prevent a certain class of Sentence inversions from invalidating the symmetry conditions of Palindromes derived in Section III. 
+The notion of an *Admissible Sentence* is required to prevent a certain class of Sentence inversions from invalidating the symmetry conditions of Palindromes derived in :ref:`Section IV <section-iv>`. 
 
 To see what is meant by this concept of *admissibility*, consider the English sentence,
 
@@ -1022,13 +1024,13 @@ To see what is meant by this concept of *admissibility*, consider the English se
 
     \rune{f} = \text{"strap on a ton"}
 
-The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (Definition 2.2.1). By this it is meant every word in its inversion is part of the English language,
+The Inverse of this sentence, *inv(ᚠ)*, is *semantically coherent* (:ref:`Definition 2.2.1 <definition-2-2-1>`). By this it is meant every word in its inversion is part of the English language,
 
 .. math::
 
     \text{inv}(\rune{f}) = \text{"not a no parts"}
 
-However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Delimitation introduced in Definition 1.2.7 must now be leveraged. 
+However, this is not enough to ensure *inv(ᚠ)* is part of the Corpus, as is apparent. *Semantic coherence* is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain *admissible* after inversion, the concept of Delimitation introduced in :ref:`Definition 1.2.7 <definition-1-2-7>` must now be leveraged. 
 
 .. _definition-2-3-1:
 
@@ -1042,13 +1044,13 @@ Let *p* be any Phrase from a Language's *n*:sup:`th` Lexicon **X**:sub:`L`(*n*).
 
 ∎
 
-The notion of *admissibility* is a faint echo of *"grammaticality"*. As inversion is studied in the sentential level of the linguistic hierarchy, it is no longer permitted to ignore semantics in its entirety. Instead, semantics ingresses into the system as implicit properties the extensionally identified Sentences must obey. Before discussing this at greater length, several theorems are proved about classes of Admissible Sentences.
+The notion of *admissibility* is a faint echo of *"grammaticality"*. As inversion is studied at the sentential level of the linguistic hierarchy, it is no longer permitted to ignore semantics in its entirety. Instead, semantics ingresses into the system as implicit properties the extensionally identified Sentences must obey. Before discussing this at greater length, several theorems are proved about classes of Admissible Sentences.
 
 .. _theorem-2-3-1:
 
 **Theorem 2.3.1** :math:`A(n) \subseteq C_{L}`
 
-Let *t* be an arbitrary String such that :math:`t \in A(n)`. By Definition 2.3.1, this implies, :math:`t \in C_L`. Therefore,
+Let *t* be an arbitrary String such that :math:`t \in A(n)`. By :ref:`Definition 2.3.1 <definition-2-3-1>`, this implies, :math:`t \in C_L`. Therefore,
 
 .. math::
 
@@ -1062,25 +1064,25 @@ This is exactly the set theoretic definition of a subset. Thus,
 
 ∎
 
-Theorem 2.3.1 is the formal justification for quantifying Sentence Variables over the set of Admissible Sentences (i.e. all Admissable Sentences are in the Corpus), as in the following theorem.
+:ref:`Theorem 2.3.1 <theorem-2-3-1>` is the formal justification for quantifying Sentence Variables over the set of Admissible Sentences (i.e. all Admissable Sentences are in the Corpus), as in the following theorem.
 
 .. _theorem-2-3-2:
 
 **Theorem 2.3.2** :math:`\forall \zeta \in A(n): \Lambda(\zeta) = n`
 
-Let *ζ* be an arbitrary sentence in **A**(*n*). By Definition 2.3.1, if *ζ* *∈* **A**(*n*), then there exists a Phrase :math:`p \in X_L(n)` such that 
+Let *ζ* be an arbitrary sentence in **A**(*n*). By :ref:`Definition 2.3.1 <definition-2-3-1>`, if *ζ* *∈* **A**(*n*), then there exists a Phrase :math:`p \in X_L(n)` such that 
 
 .. math::
 
     1. (\zeta \in C_L) \land (\zeta = D\Pi_{i=1}^{n} p(i))
 
-By Definition 1.2.5 and 1.2.6, a phrase *p* in :math:`X_L(n)` is an ordered sequence of *n* words such that :math:`\alpha_i \in L`,
+By :ref:`Definition 1.2.5 <definition-1-2-5>` and :ref:`Definition 1.2.6 <definition-1-2-6>`, a phrase *p* in :math:`X_L(n)` is an ordered sequence of *n* words such that :math:`\alpha_i \in L`,
 
 .. math::
 
     2. p = (\alpha_1, \alpha_2, ..., \alpha_n)
 
-By Definition 1.2.7, the Delimitation of *p* is given by,
+By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of *p* is given by,
 
 .. math::
 
@@ -1088,7 +1090,7 @@ By Definition 1.2.7, the Delimitation of *p* is given by,
 
 In other words, the Delimitation of *p* (which is equal to *ζ*) explicitly constructs a String with *n* Words separated by Delimiters.
 
-By Definition 2.1.4, the Word Length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Delimitation process doesn't add or remove Words, the Word Length of *ζ* must be *n*. Therefore, 
+By :ref:`Definition 2.1.4 <definition-2-1-4>`, the Word Length *Λ(ζ)* is the number of Words in *ζ*. Since *ζ* is formed by limiting a Phrase with *n* Words, and the Delimitation process doesn't add or remove Words, the Word Length of *ζ* must be *n*. Therefore, 
 
 .. math::
 
@@ -1104,21 +1106,21 @@ Since *ζ* was an arbitrary sentence in **A**(*n*), this can generalize as,
 
 **Theorem 2.3.3** :math:`\forall \zeta \in C_{L}: \zeta \in A(\Lambda(\zeta))`
 
-Let ζ be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
+Let ζ be an arbitrary sentence in C:sub:`L`. By :ref:`Definition 2.1.3 <definition-2-1-3>`, *ζ* has a Word-level representation,
 
 .. math::
 
     1. W_{\zeta} = (\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)}) 
     
-Where each :math:`\alpha_i \in L`. By Definition 1.2.5, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a phrase **P**:sub:`Λ(ζ)` of length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
+Where each :math:`\alpha_i \in L`. By :ref:`Definition 1.2.5 <definition-1-2-5>`, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a phrase **P**:sub:`Λ(ζ)` of length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
 
-By Definition 1.2,6, since **P**:sub:`Λ(ζ)` is a phrase of length *Λ(ζ)* and all its Words belong to L (by semantic coherence), then,
+By :ref:`Definition 1.2.6 <definition-1-2-6>`, since **P**:sub:`Λ(ζ)` is a phrase of length *Λ(ζ)* and all its Words belong to **L** (by semantic coherence), then,
 
 .. math::
 
     2. P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)).
 
-By Definition 1.2.7, the Delimitation of P:sub:`Λ(ζ)` is:
+By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of P:sub:`Λ(ζ)` is:
 
 .. math::
 
@@ -1130,7 +1132,7 @@ The Delimitation :math:`D\Pi_{i=1}^{\Lambda(\zeta) P_{\Lambda(\zeta)} (i)` recon
 
     4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
 
-By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (:math:`t \in A(n)`) if and only if there exists a phrase :math:`p \in X_L(n)` such that,
+By :ref:`Definition 2.3.1 <definition-2-3-1>`, a String *t* is an Admissible Sentence of Word Length *n* (:math:`t \in A(n)`) if and only if there exists a phrase :math:`p \in X_L(n)` such that,
 
 .. math::
 
@@ -1140,7 +1142,7 @@ By Definition 2.3.1, a String *t* is an Admissible Sentence of Word Length *n* (
 
     6. t \in C_L
 
-By Definition 2.3.1, since the conjunction of the following three facts is true,
+As a direct consequence of :ref:`Definition 2.3.1 <definition-2-3-1>`, since the conjunction of the following three facts is true,
 
 .. math::
 
@@ -1154,7 +1156,7 @@ By Definition 2.3.1, since the conjunction of the following three facts is true,
 
     9.  P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)) 
     
-It follows from step 7 - step 9, :math:`\zeta \in A(\Lambda(\zeta))`. Since *ζ* was an arbitrary sentence in C:sub:`L`, this can generalize as,
+It follows from step 7 - step 9, :math:`\zeta \in A(\Lambda(\zeta))`. Since *ζ* was an arbitrary Sentence in C:sub:`L`, this can generalize over the Corpus,
 
 .. math::
 
@@ -1166,7 +1168,7 @@ It follows from step 7 - step 9, :math:`\zeta \in A(\Lambda(\zeta))`. Since *ζ*
 
 **Theorem 2.3.4** :math:`\forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)`
 
-Let *ζ* be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a Word-level representation,
+Let *ζ* be an arbitrary sentence in C:sub:`L`. By :ref:`Definition 2.1.3 <definition-2-1-3>`, *ζ* has a Word-level representation,
 
 .. math::
 
@@ -1174,15 +1176,15 @@ Let *ζ* be an arbitrary sentence in C:sub:`L`. By Definition 2.1.3, *ζ* has a 
     
 Where each :math:`\alpha_i \in L`.
 
-By Definition 1.2.5, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a Phrase **P**:sub:`Λ(ζ)` of Word Length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)}(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
+By :ref:`Definition 1.2.5 <definition-1-2-5>`, the sequence :math:`(\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})` forms a Phrase **P**:sub:`Λ(ζ)` of Word Length *Λ(ζ)* where :math:`P_{\Lambda(\zeta)}(i) = \alpha_i` for all *i*, :math:`1 \leq i \leq \Lambda(\zeta)`.
 
-By Definition 1.2.6, since **P**:sub:`Λ(ζ)` is a Phrase of Word Length *Λ(ζ)* and all its words belong to **L**, then,
+By :ref:`Definition 1.2.6 <definition-1-2-6>`, since **P**:sub:`Λ(ζ)` is a Phrase of Word Length *Λ(ζ)* and all its words belong to **L**, then,
 
 .. math::
 
     2. P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta))
 
-By Definition 1.2.7, the Delimitation of **P**:sub:`Λ(ζ)` is,
+By :ref:`Definition 1.2.7 <definition-1-2-7>`, the Delimitation of **P**:sub:`Λ(ζ)` is,
 
 .. math::
 
@@ -1194,13 +1196,13 @@ The Delimitation :math:`D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)` recon
 
     4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)
 
-It has been shown that for an arbitrary sentence :math:`ζ \in C_L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in :math:`X_L(\Lambda(\zeta))` such that,
+It has been shown that for an arbitrary Sentence :math:`ζ \in C_L`, there exists a Phrase *p* (specifically, **P**:sub:`Λ(ζ)`) in :math:`X_L(\Lambda(\zeta))` such that,
  
 .. math::
 
     5. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i). 
     
-Therefore,
+Therefore, generalizing this over the Corpus,
 
 .. math::
 
@@ -1208,18 +1210,18 @@ Therefore,
     
 ∎
 
-The condition of *admissibility*, as will be seen in Theorem 2.3.11, prevents the *"inversion propagation"* from being a purely syntactical operation. The Inverse of a Sentences must also be Admissible in the Corpus in order to be considered an Invertible Sentence (Definition 2.3.2 in the next section). This represents a rupture or division from the realm of syntax not seen at the Word level of the linguistic hierarcy when considering the operation of inversion. In order to fully specify the conditions for Sentence invertibility, one must be able to elaborate on what it means to call a Sentence *"admissible"*; in other words, there must be grammatical rules that identify an inverted Sentence as belonging to the Corpus over and above the syntactical conditions that are imposed by invertibility.
+The condition of *admissibility*, as will be seen in :ref:`Theorem 2.3.11 <theorem-2-3-11>`, prevents the *"inversion propagation"* from being a purely syntactical operation. The Inverse of a Sentence must also be Admissible in the Corpus in order to be considered an Invertible Sentence (:ref:`Definition 2.3.2 <definition-2-3-2>` in the next section). This represents a rupture or division from the realm of syntax not seen at the Word level of the linguistic hierarcy when considering the operation of inversion. In order to fully specify the conditions for Sentence invertibility, one must be able to elaborate what it means to call a Sentence *"admissible"*; in other words, there must be grammatical rules that identify an inverted Sentence as belonging to the Corpus over and above the syntactical conditions that are imposed by invertibility.
 
-However, this does not mean *"grammaticality"* is equivalent to *"admissibility"*. As the final section of the work will make clear, there are possible avenues available to formal analysis for parsing the concept of *"admissibility"* into finer partitions such as *"syntactical admissibility"* and *"semantic admissiblity"*. In this way, the origin of meaning in a Sentence can be narrowed down by filtering out the syntactical considerations.
+However, this does not mean *"grammaticality"* is equivalent to *"admissibility"*. As the final section of the work will make clear, there are possible avenues available to formal analysis for parsing the concept of *"admissibility"* into finer partitions such as *"syntactical admissibility"* and *"semantic admissiblity"*. In this way, the origin of meaning in a Sentence can be narrowed down by filtering out its syntactical origins.
 
-.. _invertible_sentences:
+.. _invertible-sentences:
 
 Invertible Sentences
 ^^^^^^^^^^^^^^^^^^^^
 
-Similarly to the progression of Words and their related concepts in the previous section, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of *Invertible Sentences* is essential. The definition, as is fitting in a work focused on palindromes, will mirror Definition 1.3.2 of an *Invertible Word*.
+Similarly to the progression of Words and their related concepts in the previous section, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of *Invertible Sentences* is essential. The definition, as is fitting in a work focused on palindromes, will mirror :ref:`Definition 1.3.2 <definition-1-3-2>` of an *Invertible Word*.
 
-The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of Definition 1.3.2 and Theorem 1.3.2 almost exactly.
+The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of :ref:`Definition 1.3.2 <definition-1-3-2>` and :ref:`Theorem 1.3.2 <theorem-1-3-2>` almost exactly.
 
 .. _definition-2-3-2:
 
@@ -1231,9 +1233,9 @@ Let *ζ* be any Sentence in from a Corpus **C**:sub:`L`. Then the set of Inverti
 
     \zeta \in K \leftrightarrow \text{inv}(\zeta) \in C_L
 
-A Sentence *ζ* will be referred to as *invertible* if it belongs to the class of Invertible Sentences. ∎
+A Sentence *ζ* will be referred to as *Invertible* if it belongs to the class of Invertible Sentences. ∎
 
-This definition is immediately employed to derive the following theorems,
+This definition is immediately employed to derive the following theorems.
 
 .. _theorem-2-3-5:
 
@@ -1243,7 +1245,7 @@ Let *ζ* be any Sentence from Corpus **C**:sub:`L`.
 
 (→) Assume :math:`\zeta \in K`
 
-By Definition 2.3.2, the inverse of *ζ* belongs to the Corpus
+By :ref:`Definition 2.3.2 <definition-2-3-2>`, the inverse of *ζ* belongs to the Corpus
 
 .. math::
 
@@ -1255,13 +1257,13 @@ To show that *inv(ζ)* is invertible, it must be shown that,
 
     2. \text{inv}(\text{inv}(\zeta)) \in C_L
 
-From Theorem 1.2.4, for any string *s*, 
+From :ref:`Theorem 1.2.4 <theorem-1-2-4>`, for any string *s*, 
 
 .. math::
 
     3. \text{inv}(\text{inv}(s)) = s.  
 
-By Definition 2.1.1,
+By :ref:`Definition 2.1.1 <definition-2-1-1>`,
 
 .. math::
 
@@ -1279,7 +1281,7 @@ From step 1 and step 5, it follows,
 
     6. \text{inv}(\text{inv}(\zeta)) \in C_L
 
-By Definition 2.3.2, this implies,
+By :ref:`Definition 2.3.2 <definition-2-3-2>`, this implies,
 
 .. math::
 
@@ -1287,13 +1289,13 @@ By Definition 2.3.2, this implies,
 
 (←) Assume :math:`\text{inv}(\zeta) \in K`
 
-By Definition 2.3.2, 
+By :ref:`Definition 2.3.2 <definition-2-3-2>`, 
     
 .. math::
 
     8. \text{inv}(\text{inv}(\zeta)) \in C_L
 
-Applying Theorem 1.2.4,
+Applying :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
@@ -1305,13 +1307,13 @@ From step 8 and step 9, it follows,
 
     10. \zeta \in C_L
 
-By Definition 2.3.2, it follows,
+By :ref:`Definition 2.3.2 <definition-2-3-2>`, it follows,
 
 .. math::
 
     11. \zeta \in K. 
 
-Putting both direction of the equivalence together, the theorem is shown,
+Putting both direction of the equivalence together and generalizing over the Corpus, the theorem is shown,
 
 .. math::
 
@@ -1323,13 +1325,13 @@ Putting both direction of the equivalence together, the theorem is shown,
 
 **Theorem 2.3.6** :math:`\forall \zeta \in C_L: \text{inv}(\zeta) \in K \to \zeta \in C_L`
 
-Let *ζ* be any Sentence from Corpus **C**:sub:`L` such that :math:`\text{inv}(\zeta) \in K`. Then, by Definition 2.3.2,
+Let *ζ* be any Sentence from Corpus **C**:sub:`L` such that :math:`\text{inv}(\zeta) \in K`. Then, by :ref:`Definition 2.3.2 <definition-2-3-2>`,
 
 .. math::
 
     1. \text{inv}(\text{inv}(\zeta)) \in C_L
 
-By Theorem 1.2.4,
+By :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
@@ -1351,7 +1353,7 @@ It follows,
 
 The notion of Invertible Sentences is not as intuitive as the notion of Invertible Words. This is due to the fact the condition of *invertibility* is not a weak condition; indeed, Sentences that are not invertible far outnumber Sentences that are invertible in a given Language (for all known natural languages, at any rate; it is conceivable a purely formal system with no semantic content or general applicability could be constructed with invertibility in mind). 
 
-To see how strong of a condition invertibility is, the author challenges the reader to try and construct an invertible sentence in English (or whatever their native tongue might be). Section IV contains a list of Invertible Words and Reflective Words. These can be used as a "palette" for the exercise. The exercise is worthwhile, because it forces the reader to think about the mechanics of sentences and how a palindrome resides in the intersection of semantics and syntax.  
+To see how strong of a condition invertibility is, the author challenges the reader to try and construct an invertible sentence in English (or whatever their native tongue might be). :ref:`Section VIII <section-viii>` contains a list of Invertible Words and Reflective Words. These can be used as a "palette" for the exercise. The exercise is worthwhile, because it forces the reader to think about the mechanics of sentences and how a palindrome resides in the intersection of semantics and syntax.  
 
 Consider the following examples phrases from English,
 
@@ -1365,21 +1367,21 @@ All of these phrases may be *inverted* to produce semantically coherent phrases 
 - now god
 - not a ton 
 
-Note the last item in this list is an example of what this work has termed a Perfect Palindrome. These examples were specially chosen to highlight the connection that exists between the class of Perfect Palindromes and the class of Invertible Sentences. It appears, based on this brief and circumstantial analysis, that *Perfect Palindromes* are a subset of a larger class of Sentences, namely, Invertible Sentences.
+Note the last item in this list is an example of what this work has termed a Perfect Palindrome. These examples were specially chosen to highlight the connection that exists between the class of Perfect Palindromes and the class of Invertible Sentences. It appears, based on this brief and circumstantial analysis, that Perfect Palindromes are a subset of a larger class of Sentences, namely, Invertible Sentences.
 
-Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* (Definition 2.2.1) and *admissibility* (Definition 2.3.1) under inversion. In order for a Sentence to be invertible it must possess symmetry on both the Character-level and the Word-level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven by the end of this subsection.
+Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain *semantic coherence* (:ref:`Definition 2.2.1 <definition-2-2-1>`) and *admissibility* (:ref:`Definition 2.3.1 <definition-2-3-1>`) under inversion. In order for a Sentence to be Invertible it must possess symmetry on both the Character-level and the Word-level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven by the end of this subsection. The next series of theorems, :ref:`Theorems 2.3.7 <theorem-2-3-7>` - :ref:`2.3.8 <theorem-2-3-8>` are as the preparatory foundation for establishing this symmetrry. 
 
 .. _theorem-2-3-7:
 
 **Theorem 2.3.7** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L`
 
-Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume :math:`ζ \in K` . By Definition 2.3.2,
+Let *ζ* be a Sentence from Corpus **C**:sub:`L`. Assume :math:`ζ \in K` . By :ref:`Definition 2.3.2 <definition-2-3-2>`,
 
 .. math::
 
     1. \text{inv}(\zeta) \in C_L
 
-By the Extraction Axiom S.2,
+By the :ref:`Extraction Axiom S.2 <axiom-s2>`,
 
 .. math::
 
@@ -1405,13 +1407,13 @@ The next theorem shows how the inversion "distributes" over the Words of a Delim
 
 **Theorem 2.3.8** :math:`\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let :math:`n = \Lambda(\zeta)`. By Definition 2.1.4, this is the Word Length of *ζ*.  Let *s* denote the deDelimitation of *ζ* as follows:
+Let *ζ* be an arbitrary sentence in **C**:sub:`L`. Let :math:`n = \Lambda(\zeta)`. By :ref:`Definition 2.1.4 <definition-2-1-4>`, this is the Word Length of *ζ*.  Let *s* denote the Delimitation of *ζ* as follows:
 
 .. math::
 
     1. s = D\Pi_{i=1}^{n} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\})
 
-By Theorem 1.2.5, for any two Strings *u* and *t*, :math:`inv(ut) = inv(t)inv(u)`. Apply this property repeatedly to construct *inv(s)*,
+By :ref:`Theorem 1.2.5 <theorem-1-2-5>`, for any two Strings *u* and *t*, :math:`inv(ut) = inv(t)inv(u)`. Apply this property repeatedly to construct *inv(s)*,
 
 .. math::
 
@@ -1431,13 +1433,13 @@ Since *σ* is a single character, :math:`\text{inv}(\sigma) = \sigma`,
 
 Note that the right-hand side now has the form of a Delimitation, but with the order of Words reversed and each Word inverted.
 
-Re-index the terms on the right-hand side to match the form of the Delimitation definition, Definition 1.2.7. Let :math:`j = n - i + 1`. Then, as *i* goes from 1 to *n*, *j* goes from *n* to 1,
+Re-index the terms on the right-hand side to match the form of the Delimitation definition, :ref:`Definition 1.2.7 <definition-1-2-7>`. Let :math:`j = n - i + 1`. Then, as *i* goes from 1 to *n*, *j* goes from *n* to 1,
 
 .. math::
 
     5. \text{inv}(s) = (\text{inv}(ζ\{j_n\}))(\sigma)(\text{inv}(\zeta\{j_{n-1}\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{j_2\}))(\sigma)(\text{inv}(\zeta\{j_1\}))
 
-Where *j*:sub:`i` is obtained by simply substituting :math:`j = n - i + 1`. Using Definition 1.2.7 of Delimitations, the right-hand side becomes,
+Where *j*:sub:`i` is obtained by simply substituting :math:`j = n - i + 1`. Using :ref:`Definition 1.2.7 <definition-1-2-7>` of Delimitations, the right-hand side becomes,
 
 .. math::
 
@@ -1459,7 +1461,7 @@ Since *ζ* was an arbitrary sentence, this can be generalized over the Corpus,
 
 As noted in previous aside, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to the last batch of theorems in this section, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.
 
-Consider the Sentences from the English language, *ᚠ = "this is a test"*, *ᚢ = "live on"*,* and *ᚦ = "step on no pets"*. Their Character-level representations would be,
+Consider the Sentences from the English language, :math:`\rune{f} = \text{"this is a test"}`, :math:`\rune{u} = \text{"live on"}`, and :math:`\rune{th} = \text{"step on no pets"}`. Their corresponding Character-level representations are given by,
 
 .. math::
 
@@ -1487,9 +1489,9 @@ The Character-level representation of their Inverses, would be,
 
     {\large\text{inv}(\rune{th})} = (\text{"s"}, \text{"t"}, \text{"e"}, \text{"p"}, \sigma, \text{"o"}, \text{"n"}, \sigma, \text{"n"}, \text{"o"}, \sigma, \text{"p"}, \text{"e"}, \text{"t"}, \text{"s"})
 
-In the case of *ᚠ*, it's *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and *inv(ᚠ)*, just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the beginning of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representation, results in the same limiting of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted.
+In the case of *ᚠ*, *inv(ᚠ)* is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (*σ*) still appear at the same indices in both *ᚠ* and *inv(ᚠ)*, just in reversed order. In *ᚠ*, the Delimiters are at indices 4, 7, and 9. In *inv(ᚠ)*, the Delimiters are at indices 9, 7, and 4 (counting from the ending of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the Delimiting Algorithm identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representatio results in the same delimiting of the linguistic "*entities*" (Strings) which correspond to Words, but in reversed order and inverted.
 
-In the case of *ᚢ*, it's *inv(ᚢ)* belongs to the Corpus, since all of its Words belong to the Language (English) and have semantic coherence in *ᚢ*, and the inverted Sentence is admissible. This means *ᚢ* belongs to the class of Invertible Sentences in English. Take note, none of the Words that belong to *ᚢ* (or more precisely, to one of the ordered pairs of **W**:sub:`ᚢ`) belong to *inv(ᚢ)* (or more precisely, to one of the ordered pairs of **W**:sub:`inv(ᚢ)`). However, there does appear to be a relationship between the Words which appear in *ᚢ* and *inv(ᚢ)*, namely, they must be Invertible. The Word *"live"* inverts into *"evil"*, while *"on"* inverts into *"no"*. In other words, based on this preliminary heuristic analysis, if a Sentence is to be Invertible, the Words which belong to it must belong to the class of Invertible Words **I**.
+In the case of *ᚢ*, *inv(ᚢ)* belongs to the Corpus, since all of its Words belong to the Language (English) and have semantic coherence in *ᚢ*, and the inverted Sentence is admissible. This means *ᚢ* belongs to the class of Invertible Sentences in English. Take note, none of the Words that belong to *ᚢ* (or more precisely, to one of the ordered pairs of **W**:sub:`ᚢ`) belong to *inv(ᚢ)* (or more precisely, to one of the ordered pairs of **W**:sub:`inv(ᚢ)`). However, there does appear to be a relationship between the Words which appear in *ᚢ* and *inv(ᚢ)*, namely, they must be Invertible. The Word *"live"* inverts into *"evil"*, while *"on"* inverts into *"no"*. In other words, based on this preliminary heuristic analysis, if a Sentence is to be Invertible, the Words which belong to it must belong to the class of Invertible Words **I**.
 
 In the case of *ᚦ*, a similar situation is found. Each Word in *ᚦ* is Invertible and pairs with its Inverse Word in *inv(ᚦ)*, e.g. *"pets"* and *"step"* form an Invertible pair, etc. This means, for the same reasons as *ᚢ*, *ᚦ* belongs to the class of Invertible Sentences. However, there is a symmetry embodied in *ᚦ* over and above the pairing of its constituent Words into Invertible pairs. Not only is *inv(ᚦ)* a Sentence in the Corpus, but it's equal to *ᚦ* itself. Indeed, *ᚦ* belongs to a special class of English sentences: Palindromes. 
 
@@ -1501,19 +1503,19 @@ These last theorems encapsulate these important properties of Invertible Sentenc
 
 **Theorem 2.3.9** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 
-Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that :math:`1 \leq i \leq \Lanbda(\zeta)`. By Definition 2.2.2, 
+Let *ζ* be an arbitrary Invertible Sentence in **C**:sub:`L` for *i* such that :math:`1 \leq i \leq \Lanbda(\zeta)`. By :ref:`Definition 2.2.2 <definition-2-2-2>`, 
 
 .. math::
 
     1. \text{inv}(\zeta) \in C_L.
 
-By the Extraction Axiom S.2, 
+By the :ref:`Extraction Axiom S.2 <axiom-s2>`, 
 
 .. math::
 
     2. \zeta\{i\} \in L. 
 
-By Definition 1.3.2, a Word *α* is invertible if and only if both *α* and its inverse, *inv(α)*, are in **L**,
+By :ref:`Definition 1.3.2 <definition-1-3-2>`, a Word *α* is invertible if and only if both *α* and its inverse, *inv(α)*, are in **L**,
 
 .. math::
 
@@ -1525,13 +1527,13 @@ Therefore, since **L** is closed under inversion for Invertible Words ,
 
     4. \text{inv}(\zeta\{i\}) \in L.
 
-*inv(ζ)* can be constructed by concatenating the inverses of the words in ζ in reverse order, with delimiters inserted appropriately. Since by step 1 *inv(ζ)* is a Sentence in the Corpus, **W**:sub:`inv(ζ)` can be constructed by the Delimiting Algorithm (Definition 2.1.3). 
+*inv(ζ)* can be constructed by concatenating the inverses of the words in ζ in reverse order, with delimiters inserted appropriately. Since by step 1 *inv(ζ)* is a Sentence in the Corpus, **W**:sub:`inv(ζ)` can be constructed by the Delimiting Algorithm (:ref:`Definition 2.1.3 <definition-2-1-3>`). 
 
 .. math::
 
     5. W_{\text{inv}(\zeta)} = (\text{inv}(\zeta\{\Lambda(\zeta)\}), \text{inv}(\zeta{\Lambda(\zeta)-1\}), ..., \text{inv}(\zeta\{1\}))
 
-By Definition 2.1.9, 
+By :ref:`Definition 2.1.9 <definition-2-1-9>`, 
 
 .. math::
 
@@ -1545,21 +1547,21 @@ Since *ζ* and *i* were arbitrary, this can be generalized over the Corpus,
 
 ∎
 
-A brief interjection is necessary to discuss the significance of Theorem 2.3.8. The result shown in Theorem 2.3.8 is a direct result of the *"propagation of inversion"* mentioned in the introduction to this subsection.
+A brief interjection is necessary to discuss the significance of :ref:`Theorem 2.3.9 <theorem-2-3-9>`. The result shown in :ref:`Theorem 2.3.9 <theorem-2-3-9>` is a direct result of the *"propagation of inversion"* mentioned in the introduction to this subsection.
 
-As Theorem 1.3.1 showed, Definition 1.3.1 of Reflective Words is equivalent to a definition that simply requires *α* satisfy the String equality relation, 
+As :ref:`Theorem 1.3.1 <theorem-1-3-1>` showed, :ref:`Definition 1.3.1 <definition-1-3-1>` of Reflective Words is equivalent to a definition that simply requires *α* satisfy the String equality relation, 
 
 .. math::
 
     \alpha = \text{inv}(\alpha)
 
-Another way of stating this is through logical equivalence, as Theorem 1.3.2 shows,
+Another way of stating this is through logical equivalence, as :ref:`Theorem 1.3.2 <theorem-1-3-2>` shows,
 
 .. math::
 
     \alpha \in L \leftrightarrow \text{inv}(\alpha) \in L
     
-In turn, Definition 1.2.4 of String Inversion states in order for this to be the case, it must also be the case its Character satisfy,
+In turn, :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion states in order for this to be the case, it must also be the case its Character satisfy,
 
 .. math::
 
@@ -1567,46 +1569,53 @@ In turn, Definition 1.2.4 of String Inversion states in order for this to be the
 
 In other words, a Word is its own Inverse exactly when its Characters are in inverted orders. 
 
-In a similar fashion, as Theorems 2.3.3 and 2.3.4 demonstrate by way of syllogism, a Sentence in a Corpus is invertible if its Inverse belongs to the Corpus,
+In a similar fashion, as :ref:`Theorem 2.3.5 <theorem-2-3-5>` and :ref:`Theorem 2.3.6 <theorem-2-3-6>` demonstrate by way of syllogism, a Sentence in a Corpus is invertible if its Inverse belongs to the Corpus,
 
 .. math::
 
     \zeta \in C_L \leftrightarrow \text{inv}(\zeta) \in C_L
 
-Theorem 2.3.8 *"propagates"* the Character-level symmetries up through the Words in the Sentence, by stating the Words in an invertible Sentence must be inverted Words of the Sentence in reversed order,
+:ref:`Theorem 2.3.9 <theorem-2-3-9>` *"propagates"* the Character-level symmetries up through the Words in the Sentence, by stating the Words in an invertible Sentence must be inverted Words of the Sentence in reversed order,
 
 .. math::
 
     \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
 
-An imporant note to make is the *direction* of the implication in Theorem 2.3.9. A bidirectional equivalence would allow one to infer from the above equation that a Sentence is invertible. However, the direction of Theorem 2.3.9 cannot be strengthened, as the following Theorem 2.3.10 makes clear.
+An imporant note to make is the *direction* of the implication in :ref:`Theorem 2.3.9 <theorem-2-3-9>` . A bidirectional equivalence would allow one to infer from the above equation that a Sentence is invertible. However, the direction of :ref:`Theorem 2.3.9 <theorem-2-3-9>`  cannot be strengthened, as the following :ref:`Theorem 2.3.10 <theorem-2-3-10>` makes clear.
 
-Theorem 2.3.10 also makes clear why Definition 2.3.1 of Admissible Sentence of Word Length *n* is essential to understanding invertibility. 
+:ref:`Theorem 2.3.10 <theorem-2-3-10>` also makes clear why :ref:`Definition 2.3.1 <definition-2-3-1>` of Admissible Sentence of Word Length *n* is essential to understanding invertibility. 
 
 .. _theorem-2-3-10:
 
 **Theorem 2.3.10** :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
 
-This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus C:sub:`L`, *ζ* is invertible if and only if,
+This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus C:sub:`L`, *ζ* is invertible if and only if Words are inverted order and its Inverse is admissible.
 
-(→) Let ζ be an arbitrary invertible sentence in C:sub:`L`.
-
-    1. The i:sup:`th` Word of inv(ζ) is the inverse of the (Λ(ζ) - i + 1):sup:`th` Word of ζ
-    2. inv(ζ) is an admissible sentence of word length Λ(ζ).
-
-Since :math:`\zeta \in K`, by Definition 2.3.2, 
+(→) Let ζ be an arbitrary Invertible Sentence in C:sub:`L`,
 
 .. math::
 
-    3. \text{inv}(\zeta) \in C_L.
+    1. \zeta \in K
 
-By Theorem 2.3.5, the Words in the *inv(ζ)* must be in the reversed order of the inverted Words in *ζ*,
+By :ref:`Theorem 2.3.9 <theorem-2-3-9>`, the *i*:sup:`th` Word of *inv(ζ)* is the inverse of the *(Λ(ζ) - i + 1)*:sup:`th` Word of *ζ*
 
 .. math::
 
-    4. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+    2. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
+   
+Furthermore, by :ref:`Theorem 2.3.3 <theorem-2-3-3>`, since *inv(ζ)* is in the Corpus, *inv(ζ)* is an Admissible Sentence of word length *Λ(ζ)*.
 
-By Theorem 2.3.4, the inverse of *ζ*, *inv(ζ)*, can be expressed as the DeDelimitation of the inverses of the Words of *ζ* in reverse order,
+.. math::
+
+    3. \zeta \in A(\Lambda(\zeta))
+
+Since :math:`\zeta \in K`, by :ref:`Definition 2.3.2 <definition-2-3-2>`, 
+
+.. math::
+
+    4. \text{inv}(\zeta) \in C_L.
+
+By :ref:`Theorem 2.3.8 <theorem-2-3-8>`, the inverse of *ζ*, *inv(ζ)*, can be expressed as the Delimitation of the inverses of the Words of *ζ* in reverse order,
 
 .. math::
 
@@ -1618,7 +1627,9 @@ This is equivalent to,
 
     6. \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta)\{i\}
 
-Since :math:`\text{inv}(\zeta) \in C_L` by assumption (step 1) and *inv(ζ)* has the same Word Length as *ζ* which is *Λ(ζ)*, and *inv(ζ)* is a Delimitation of Words from **L**, by Definition 2.3.1, it follows that,
+Since :math:`\text{inv}(\zeta) \in C_L` by assumption (step 1) and *inv(ζ)* has the same Word Length as *ζ* which is *Λ(ζ)*. 
+
+Because *inv(ζ)* is a Delimitation of Words from **L**, by :ref:`Definition 2.3.1 <definition-2-3-1>`, it follows that,
 
 .. math::
 
@@ -1634,7 +1645,7 @@ Therefore, both conditions hold,
 
     9. \text{inv}(\zeta) \in A(\Lambda(\zeta))
 
-(←) Assume that for an arbitrary sentence :math`ζ \in C_L`, the following holds,
+(←) Assume that for an arbitrary Sentence :math:`\zeta \in C_L`, the following holds,
 
 .. math::
 
@@ -1645,23 +1656,29 @@ Therefore, both conditions hold,
     11. \text{inv}(\zeta) \in A(\Lambda(\zeta))
 
 
-By Definition 2.3.1, since :math:`\text{inv}(\zeta) \in A(\Lambda(\zeta))`, it follows immediately, 
+By :ref:`Definition 2.3.1 <definition-2-3-1>`, since :math:`\text{inv}(\zeta) \in A(\Lambda(\zeta))`, it follows immediately, 
 
 .. math::
 
     12. \text{inv}(\zeta) \in C_L
 
-By Definition 2.3.2, it follows, 
+By :ref:`Definition 2.3.2 <definition-2-3-2>`, it follows, 
 
 .. math::
 
-    4. \zeta \in K
+    13. \zeta \in K
 
-Therefore, the bidirectional theorem holds. ∎
+Therefore, both directions of the equivalence have been shown. Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus, 
 
-Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. Theorem 2.3.10 takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Delimitation of Words that belongs to the Corpus. 
+.. math::
 
-The significance of Theorem 2.3.10 is the additional syntactical constraint that is imposed over and above *admissibility* into a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess *admissibility*, the pre-cursor to *grammaticality*, but it must also display Word-level symmetry. This is definitively confirmed by Theorem 2.3.11.
+    \forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))
+
+∎
+
+Just as the notion of Word Length introduced a dimension of *"semanticality"* to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of *"grammaticality"*. :ref:`Theorem 2.3.10 <theorem-2-3-10>` takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Delimitation of Words that belongs to the Corpus. 
+
+The significance of :ref:`Theorem 2.3.10 <theorem-2-3-10>` is the additional syntactical constraint that is imposed over and above *admissibility* onto a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess *admissibility*, the pre-cursor to *grammaticality*, but it must also display Word-level symmetry. This is definitively confirmed by :ref:`Theorem 2.3.11 <theorem-2-3-11>`.
 
 .. _theorem-2-3-11:
 
@@ -1669,27 +1686,27 @@ The significance of Theorem 2.3.10 is the additional syntactical constraint that
 
 This theorem can be stated in natural language as follows: For every Invertible Sentence *ζ* in the Corpus **C**:sub:`L`, every Word in *ζ* is an Invertible Word.
 
-Let *ζ* be an arbitrary Invertible Sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq \Lambda(\zeta)`. Since :math:`\zeta \in K`, by Definition 2.3.2, 
+Let *ζ* be an arbitrary Invertible Sentence in C:sub:`L`, and let *i* be a natural number such that :math:`1 \leq i \leq \Lambda(\zeta)`. Since :math:`\zeta \in K`, by :ref:`Definition 2.3.2 <definition-2-3-2>`, 
 
 .. math::
 
     1. \text{inv}(\zeta) \in C_L
 
-By Definition 2.1.5, *ζ{i}* refers to the Word at index *i* in the Word-level representation of *ζ*. By Theorem 2.3.9,
+By :ref:`Definition 2.1.5 <definition-2-1-5>`, *ζ{i}* refers to the Word at index *i* in the Word-level representation of *ζ*. By :ref:`Theorem 2.3.9 <theorem-2-3-9>`,
 
 .. math:: 
 
     2. \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})
 
-By the Extraction Axiom S.2, since :math:`\zeta \in C_L`, all Words in its Word-level representation belong to **L**. Therefore, :math:`\zeta\{i\} \in L` for all *i* such that :math:`1 \leq i \leq \Lambda(\zeta)`.
+By the :ref:`Extraction Axiom S.2 <axiom-s2>`, since :math:`\zeta \in C_L`, all Words in its Word-level representation belong to **L**. Therefore, :math:`\zeta\{i\} \in L` for all *i* such that :math:`1 \leq i \leq \Lambda(\zeta)`.
 
-Since :math:`\text{inv}(\zeta) \in C_L` (from step 1) and each word *inv(ζ){i}* is the inverse of a word in ζ (from step 2), by Axiom S.2, all the Words in the Word-level representation of *inv(ζ)* belong to L,
+Since :math:`\text{inv}(\zeta) \in C_L` (from step 1) and each word *inv(ζ){i}* is the inverse of a word in ζ (from step 2), by :ref:`Extraction Axiom S.2 <axiom-s2>`, all the Words in the Word-level representation of *inv(ζ)* belong to L,
 
 .. math::
 
     3. \text{inv}(\zeta)\{i\} \in L
 
-By Definition 1.3.2 of Invertible Words, this means that *ζ{i}* is an Invertible Word. Therefore, :math:`\zeta\{i\} \in I`. Since *ζ* and *i* were arbitrary, this can generalize, 
+By :ref:`Definition 1.3.2 <definition-1-3-2>` of Invertible Words, this means that *ζ{i}* is an Invertible Word. Therefore, :math:`\zeta\{i\} \in I`. Since *ζ* and *i* were arbitrary, this can generalize, 
 
 .. math::
 
@@ -1697,4 +1714,4 @@ By Definition 1.3.2 of Invertible Words, this means that *ζ{i}* is an Invertibl
  
 ∎
 
-The contrapositive of Theorem 2.3.10 provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.
+The contrapositive of :ref:`Theorem 2.3.11 <theorem-2-3-11>` provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Ssentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.

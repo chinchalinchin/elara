@@ -1,4 +1,4 @@
-.. _section_iv:
+.. _section-iv:
 
 Section IV: Palindromes
 =======================
@@ -12,11 +12,6 @@ Unfortunately, as far as the author knows, punctuation and capitalization are sy
 In what follows, two things are implicitly assumed. These assumptions are made explicit here, so the scope of the results can be properly understood. First, the Alphabet **Σ** is assumed to contain no punctuation marks beyond the Delimiter Character (if one is inclined it to consider a form of punctuation). Second, it is assumed every Character in **Σ** is distinct, meaning all matters of case are ignored. To rephrase the same idea more precisely: there is no assumed semantic relation between Characters in the Alphabet that would allow the identification of distinct Characters as different *cases* of the same Character.
 
 With these assumptions, the analysis is confined to the dimensions of *aspect* and *parity*, which will be defined in the following subsections. After the results are derived, consideration will be given to future work that could potentially integrate semantic considerations into the formal framework of palindromic structures to account for the dimensions of punctuality and case, in addition to symmetries above the Sentence level that might be incorporated into the conditions for Palindromes.
-
-.. _section_iv_i:
-
-Section IV.I: Definitions
--------------------------
 
 The current analysis now turns towards its culmination, using the notions that have been developed up to this point to define the mathematical structure of Palindromes. To motivate the next definition, consider how the operation of *σ*-reduction "*projects*" Palindromes onto an Alphabet where their symmetry is preserved.
 
@@ -38,7 +33,7 @@ Again, the *σ*-reduction eliminates the Delimiters, and the inversion of the *�
 
 These examples lead directly to the next, important definition.
 
-**Definition 3.2.1: Palindromes**
+**Definition 4.1.1: Palindromes**
 
 Palindromes are defined as the set of Sentences **P** that satisfy the following formula,
 
@@ -46,14 +41,16 @@ Palindromes are defined as the set of Sentences **P** that satisfy the following
 
 This definition distills the core property of Palindromes, their symmetrical nature, by focusing on the sequence of Characters without the ambiguity of Delimiters. The use of set notation and logical operations provides a mathematically rigorous and unambiguous definition. Moreover, this definition can be easily adapted to different languages by simply defining the appropriate Alphabet **Σ** and the corresponding *σ-reduced* alphabet **Σ**:sub:`σ`
 
-Definition 3.2.1 highlights the core feature of Palindromes: invariance under transformation. A Palindrome remains a Palindrome even when projected onto the *σ-reduced* Alphabet, demonstrating a structural integrity that's independent of the specific Alphabet that is used to represent it.
+:ref:`Definition 4.1.1 <definition-4-1-1>` highlights the core feature of Palindromes: invariance under transformation. A Palindrome remains a Palindrome even when projected onto the *σ-reduced* Alphabet, demonstrating a structural integrity that's independent of the specific Alphabet that is used to represent it.
 
 The condition *ς(ζ) = inv(ς(ζ)) = ς(inv(ζ))*, where the last equality follows from Theorem 3.1.1, can be seen as defining an equivalence relation on the set of Sentences, where Sentences are equivalent if inversion and *σ*-reduction *commute* over them.
 
 This definition highlights that Palindromes possess a structure that is preserved even under the transformation of *σ*-reduction, demonstrating that their palindromic nature is not dependent on the presence of Delimiters. Moreover, it suggests Palindromes are an artifact of a *"hidden"* algebraic structure embedded into linguistics.
 
-Aspect
-^^^^^^
+.. _section-iv-i:
+
+Section IV.I: Aspect
+--------------------
 
 The first classification of Palindromes is now introduced.
 
@@ -67,7 +64,7 @@ Note the name given to this class of Sentences is premature. While the terminolo
 
 Definition 3.2.2 implicitly captures the Character-level symmetry that's characteristic of Perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward. It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of Words within the Sentence, by Theorems 2.3.9 - 2.3.11. A Perfect Palindrome is a confluence of symmetries, a *"singularity"* of reflected inversion at every level of the linguistic hierarchy.
 
-The following theorems will be used to validate the proposed class **PP** does indeed satisfy Definition 3.2.1, and thus Perfect Palindromes are a subset of the class of Palindromes in any Language and its Corpus.
+The following theorems will be used to validate the proposed class **PP** does indeed satisfy :ref:`Definition 4.1.1 <definition-4-1-1>`, and thus Perfect Palindromes are a subset of the class of Palindromes in any Language and its Corpus.
 
 **Theorem 3.2.1** PP ⊂ K
 
@@ -149,7 +146,7 @@ This can be rewritten using the rules of quantifiers,
 
 Which is what was to be shown. ∎ 
 
-It is now shown using the previous theorems that Perfect Palindromes are in fact a subset of the set that implicitly satisfies Definition 3.2.1.
+It is now shown using the previous theorems that Perfect Palindromes are in fact a subset of the set that implicitly satisfies :ref:`Definition 4.1.1 <definition-4-1-1>`.
 
 **Theorem 3.2.4**  PP ⊂ P
 
@@ -173,7 +170,7 @@ Combining steps 3 and 4,
 
     5. ς(ζ) = inv(ς(ζ))
 
-Step 4 exactly satisfies the condition for *ζ* to be a Palindrome according to Definition 3.2.1. Therefore, 
+Step 4 exactly satisfies the condition for *ζ* to be a Palindrome according to :ref:`Definition 4.1.1 <definition-4-1-1>`. Therefore, 
 
     6. ζ ∈ P.
 
@@ -185,7 +182,7 @@ This in turn implies,
 
     8. PP ⊂ P ∎
 
-Now that Perfect Palindromes have been shown to satisfy Definition 3.2.1, it is a simple matter of defining Imperfect Palindromes as those Palindromes which are *not* Perfect.
+Now that Perfect Palindromes have been shown to satisfy :ref:`Definition 4.1.1 <definition-4-1-1>`, it is a simple matter of defining Imperfect Palindromes as those Palindromes which are *not* Perfect.
 
 **Definition 3.2.3: Imperfect Palindromes**
 
@@ -856,7 +853,7 @@ Step 8 from the (⊆) direction and taken with step 7 from the (⊇) together im
 
 With the partitioning of the class **P** of Sentences in a Corpus, i.e. Palindromes, the notion of *parity* can now be stated precisely in the following definition.
 
-**Definition 3.2.10: Parity** 
+**:ref:`Definition 4.1.1 <definition-4-1-1>`0: Parity** 
 
 A Palindrome ζ is said to have a *even parity* or *be even* if and only if,
 
@@ -868,7 +865,7 @@ A Palindrome ζ is said to have an *odd parity* or *be odd* if and only if,
 
 Now that the two partitioning of Palindromes, aspect and parity, have been precisely defined, the final section of this work requires one more definition to correctly formulate its main results. This definition will allow the structure around a Palindrome's Pivot to be described with precise notation.
 
-**Definition 3.2.11: Pivot Words**
+**:ref:`Definition 4.1.1 <definition-4-1-1>`1: Pivot Words**
 
 Let *ζ* be a sentence in C:sub:`L` with length *Λ(ζ)*, word-level representation W:sub:`ζ`, and pivot *ω(ζ)*. The left Pivot Word, denoted *ζ{ω-}*, and the right Pivot Word, denoted *ζ{ω+}*, are defined as follows:
 
@@ -930,7 +927,7 @@ Assume *ζ* is an arbitrary Sentence in the Corpus **C**:sub:`L` such that it is
 
     1. ζ ∈ P
     
-By Definition 3.2.1,
+By :ref:`Definition 4.1.1 <definition-4-1-1>`,
 
     2. ς(ζ) = inv(ς(ζ))
 
@@ -1037,7 +1034,7 @@ Let
     4. α = ζ{ω-}
     5. β = ζ{ω+} 
 
-By Theorem 2.2.4 (Λ(ζ) ≥ 1), step 2 and by Definition 3.2.11, there are two possible cases to consider,
+By Theorem 2.2.4 (Λ(ζ) ≥ 1), step 2 and by :ref:`Definition 4.1.1 <definition-4-1-1>`1, there are two possible cases to consider,
 
 **Case 1**: Λ(ζ) = 1
 
@@ -1073,7 +1070,7 @@ By Definition 1.1.7 of Containment, a String is contained in itself (i.e. let *f
 
 **Case 2**: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
 
-Using Definition 3.2.11, Let 
+Using :ref:`Definition 4.1.1 <definition-4-1-1>`1, Let 
 
     14. ζ{ω-} = α:sub:`j`
     
@@ -1163,7 +1160,7 @@ Case 1: ω:sub:ζ = σ (Delimiter Pivot). In this case, the condition (ω:sub:ζ
 Case 2: ω:sub:ζ ≠ σ (Non-Delimiter Pivot).
 
 In this case, the Pivot is a Character within a Word. Let k be the index such that αₖ contains ω:sub:ζ.
-Since ζ is a Perfect Palindrome, by Definition 3.2.1, ζ = inv(ζ).
+Since ζ is a Perfect Palindrome, by :ref:`Definition 4.1.1 <definition-4-1-1>`, ζ = inv(ζ).
 This implies that the Word αₖ is symmetrical around the Pivot Character ω:sub:ζ.
 Therefore, αₖ must be a Reflective Word (αₖ ∈ R), and ω:sub:ζ ⊂:sub:s αₖ.
 This satisfies the condition [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ].
@@ -1220,7 +1217,7 @@ Proof:
 
 Assume ζ ∈ PP.
 
-Definition of Perfect Palindrome: By Definition 3.2.1, ζ = inv(ζ).
+Definition of Perfect Palindrome: By :ref:`Definition 4.1.1 <definition-4-1-1>`, ζ = inv(ζ).
 Case 1: ζ[ω(ζ)] = σ:
 If the character at the pivot is a delimiter, then by the Second Inverse Postulate , we know that ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ).
 Case 2: ζ[ω(ζ)] ≠ σ:
@@ -1274,7 +1271,7 @@ Proof:
 
 Let ζ be an arbitrary perfect palindrome in PP.
 
-Definition of Perfect Palindrome: By Definition 3.2.1, ζ = inv(ζ).
+Definition of Perfect Palindrome: By :ref:`Definition 4.1.1 <definition-4-1-1>`, ζ = inv(ζ).
 
 Cases based on Parity: We have two cases to consider:
 
