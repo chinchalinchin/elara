@@ -168,9 +168,9 @@ Theorems
 - T 3.2.2: :math:`\forall s \in S: \Delta(s) = \Delta(\text{inv}(s))`
 - T 3.2.3: :math:`\forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))`
 - T 3.2.4: :math:`\forall \alpha \in L: \Delta(\alpha) = 0`
-- T 3.2.5: :math:`\forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \Sigma_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
-- T 3.2.6: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = \Lambda(\zeta) + \Sigma_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
-- T 3.2.7: :math:`\forall \zeta \in C_L: l(\zeta) \geq \Sigma_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
+- T 3.2.5: :math:`\forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
+- T 3.2.6: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = \Lambda(\zeta) + \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
+- T 3.2.7: :math:`\forall \zeta \in C_L: l(\zeta) \geq \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
 - T 3.2.8: :math:`\forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)`
 - T 3.2.9: :math:`\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)`
 - T 3.2.10: :math:`\forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)`

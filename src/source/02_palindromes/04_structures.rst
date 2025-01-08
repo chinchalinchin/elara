@@ -845,291 +845,463 @@ Since every Sentence is a String, it will suffice to define the *Delimiter Count
 
 .. _definition-3-2-1:
 
-**Definition 3.2.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let **T** be the Character-level representation of *t* with the Characters *𝔞*:sub:`i` denoting the *i*:sup:`th` character of the String *t*, where *1 ≤ i ≤ l(t)*,
+**Definition 3.2.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let **T** be the Character-level representation of *t* with the Characters *𝔞*:sub:`i` denoting the *i*:sup:`th` character of the String *t*, where :math:`1 \leq i \leq l(t)`,
 
-    T = { (1, 𝔞:sub:`1`), (2, 𝔞:sub:`2`), ... , (l(t), 𝔞:sub:`l(t)`) }
+.. math::
+
+    T = \{ (1, \mathfrak{a}_1), (2, \mathfrak{a}_2), ... , (l(t), \mathfrak{a}_{l(t)}) }
 
 The Delimiter Count Function, denoted by *Δ(t)*, is defined as the number of Delimiter Characters (*σ*) in the string *t*. Formally, *Δ(t)* is defined as the cardinality of the set that satisfies the following formula:
 
-    D:sub:`t` ↔ { (i, ⲁ) ∈ T | ⲁ = σ, 1 ≤ i ≤ l(t) } 
+.. math::
 
-Then, the delimiter count function is defined as
+    D_t \leftrightarrow \{ (i, \mathfrak{a}_i) \in T \mid \mathfrak{a}_i = \sigma \land 1 \leq i leq l(t) } 
 
-    Δ(t) = | D:sub:`t` | ∎
+Then, the Delimiter Count function is defined as
+
+.. math::
+
+    \Delta(t) = | D_t | 
+    
+∎
 
 **Example** 
 
 Consider the string *t = "a b c"*. The Character-level set representation of *t* is given by,
     
-    T = { (1, "a"), (2, σ), (3, "b"), (4, σ), (5, "c") }.
+.. math::
 
-By Definition 3.2.1, The set **D**:sub:`t` contains the ordered pairs *(2, σ)* and *(4, σ)*, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
+    T = \{ (1, \text{"a"}), (2, \sigma), (3, \text{"b"}), (4, \sigma), (5, \text{"c"}) \}.
+
+By :ref:`Definition 3.2.1 <definition-3-2-1>`, the set **D**:sub:`t` contains the ordered pairs :math:`(2, \sigma)` and :math:`(4, \sigma)`, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
     
-    D:sub:`t`= { (2, σ), (4, σ) }
+.. math::
+
+    D_t = \{ (2, \sigma), (4, \sigma) \}
 
 From this it follows, 
 
-    | D:sub:`t` | = 2 
+.. math::
+
+    | D_t | = 2 
     
 Hence, 
     
-    Δ(t) = 2 ∎
+.. math::
+
+    \Delta(t) = 2 
+    
+∎
 
 From the previous example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the Delimiter count) as output. Multiple sentences can have the same Delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
 
-**Theorem 3.2.1** ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+**Theorem 3.2.1** :math:`\forall \zeta \in C_L: \Lambda(\zeta) = \Delta(\zeta) + 1`
+
+∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
 
 .. note::
 
-    I think this needs revised to be *Λ(ζ) ≥ Δ(ζ) + 1* to account for edge cases where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
+    I think this needs revised to be :math:`\Lambda(\zeta) \geq \Delta(\zeta) + 1` to account for edge cases where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String. 
     
     Alternatively, this inconsistency might be resolvable by introducing an assumption about the structure of a Sentence. Perhaps all Delimiters between two consecutive Words should be treated as a single Delimiter? Or an Axiom to constrain the placement of Delimiters in Sentences?
 
 In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its Delimiter count plus one.
 
-Assume *ζ ∈* **C**:sub:`L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the Character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`ζ` is formed by splitting **Ζ** at each Delimiter Character *σ* with the Delimiting Algorithm in Definition 2.1.3.
+Assume :math:`ζ \in C_L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the Character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`ζ` is formed by splitting **Ζ** at each Delimiter Character *σ* with the Delimiting Algorithm in :ref:`Definition 2.1.3 <definition-2-1-3>`.
 
 Each word in **W**:sub:`ζ` corresponds to a contiguous subsequence of non-Empty, non-Delimiter Characters in **Ζ**.
 
 Since Delimiters separate Words, and each Delimiter corresponds to one Word boundary, the number of Words in the Sentence is always one more than the number of delimiters. Therefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to the Delimiter count of *Δ(ζ)* plus one,
 
-    | W:sub:`ζ` | = Λ(ζ) = Δ(ζ) + 1. ∎
+.. math::
+
+    | W_{\zeta} | = \Lambda(\zeta) = \Delta(\zeta) + 1 
+
+∎
 
 The next two theorems establish the invariance of the Delimiter count under String Inversion for any String, and by extension, any Sentence.
 
-**Theorem 3.2.2** ∀ s ∈ S: Δ(s) = Δ(inv(s))
+.. _theorem-3-2-2:
 
-Let *t* be a string with length *l(t)*. Let *u = inv(t)*. By Definition 1.2.4,
+**Theorem 3.2.2** :math:`\forall s \in S: \Delta(s) = \Delta(\text{inv}(s))`
+
+Let *t* be a string with length *l(t)*. Let :math:`u = \text{inv}(t)`. By :ref:`Definition 1.2.4 <definition-1-2-4>`,
+
+.. math::
 
     1. l(t) = l(u)
-    2. ∀ i ∈ N:sub:`l(t)`: u[i] = t[l(t) - i + 1]
+    
+.. math::
+
+    2. \forall i \in N_{l(t)}: u[i] = t[l(t) - i + 1]
 
 Let **D**:sub:`t` be the set of ordered pairs representing the positions of the Delimiter *σ* in *t*, and let **D**:sub:`u` be the corresponding set for *u*. Assume *(j, σ) ∈*  **D**:sub:`u`, then, by step 2,
+
+.. math::
 
     3. u[j] = t[l(t) - j  + 1]
 
 This means that the Character at position *j* in the inverse string *t* is the Delimiter *σ*. Therefore, 
 
-    4. (l(t) - j  + 1, σ) ∈* **D**:sub:`t`
+.. math::
 
-Thus, it is shown that for every element *(j, σ) ∈*  **D**:sub:`u`, there exists a corresponding element *(i, σ) ∈* **D**:sub:`t`, where *i = l(t) - j + 1*. 
+    4. (l(t) - j  + 1, \sigma) \in D_t
 
-To make the mapping more explicit, define a function *f*: **D**:sub:`t` *→* **D**:sub:`u` as follows. For any (*i*, *σ*) ∈ **D**:sub:`t`, let 
+Thus, it is shown that for every element :math:`(j, \sigma) \in  D_u`, there exists a corresponding element :math:`(i, \sigma) \in D_t`, where :math:`i = l(t) - j + 1`. 
 
-    5. f((i, σ)) = (l(t) - i + 1, σ)
+To make the mapping more explicit, define a function :math:`f: D_t \to D_u` as follows. For any :math:`(i, \sigma) \in D_t`, let 
+
+.. math::
+
+    1. f((i, \sigma)) = (l(t) - i + 1, \sigma)
     
 It will be shown that *f* is a bijection.
 
-**Well Defined** If (*i*, *σ*) ∈ **D**:sub:`t`, then the Character at position *i* in *t* is *σ*. By step 2, the Character at position *l(t) - i + 1* in *u = inv(t)* is also *σ*. Therefore, 
+**Well Defined** If :math:`(i, \sigma) \in D_t`, then the Character at position *i* in *t* is *σ*. By step 2, the Character at position *l(t) - i + 1* in :math:`u = inv(t)` is also *σ*. Therefore, 
 
-    6. (l(t) - i + 1, σ) ∈ D:sub:`u`
+.. math::
+
+    6. (l(t) - i + 1, \sigma) \in D_u
     
 In other words, *f* maps elements of **D**:sub:`t` to elements of **D**:sub:`u`. Thus, *f* is well defined.
  
 **Injective** Suppose 
 
-    7. f((i:sub:`1`, σ)) = f((i:sub:`2`, σ)). 
+.. math::
+
+    7. f((i_1, \sigma)) = f((i_2, \sigma)). 
     
 Then, it follows,
 
-    8. (l(t) - i:sub:`1` + 1, σ) = (l(t) - i:sub:`2` + 1, σ). 
+.. math::
+
+    8. (l(t) - i_1 + 1, \sigma) = (l(t) - i_2 + 1, \sigma). 
     
 This in turn implies, 
 
-    9. l(t) - i:sub:`1` + 1 = l(t) - i:sub:`2` + 1, 
+.. math::
+
+    9. l(t) - i_1 + 1 = l(t) - i_2 + 1, 
     
 So 
-    10. i:sub:`1` = i:sub:`2`
+
+.. math::
+
+    10. i_1 = i_2
     
 Thus, 
 
-    11. (i:sub:`1`, σ) = (i:sub:`2`, σ)
+.. math::
+
+    11. (i_1, \sigma) = (i_2, \sigma)
     
 In other words, *f* is injective. 
 
 **Surjective** Let *(j, σ)* be an arbitrary element of **D**:sub:`u`. Then the Character at position *j* in *u* is *σ*. Let 
 
+.. math::
+
     12. i = l(t) - j + 1. 
     
 Then 
+
+.. math::
 
     13. j = l(t) - i + 1. 
     
 By step 3, the Character at position *i* in *t* is also *σ*. So, 
 
-    14. (i, σ) ∈ D:sub:t
+.. math::
+
+    14. (i, \sigma) \in D_t
     
 And,
 
-    15. f((i, σ)) = (l(t) - i + 1, σ) = (j, σ). 
+    15. f((i, \sigma)) = (l(t) - i + 1, \sigma) = (j, sigma). 
     
 Thus, *f* is surjective. 
 
-This defines a bijective mapping between the elements of **D**:sub:`u` and **D**:sub:`t`. Since there's a one-to-one mapping between the elements of *D**:sub:`u` and **D**:sub:`t`, their cardinalities must be equal,
+This defines a bijective mapping between the elements of **D**:sub:`u` and **D**:sub:`t`. Since there's a one-to-one mapping between the elements of **D**:sub:`u` and **D**:sub:`t`, their cardinalities must be equal,
 
-    16. | D:sub:`u` | = | D:sub:`s` |
+.. math::
 
-By the definition of the delimiter count function, this means *Δ(u) = Δ(t)*. Since *u = inv(t)*, it has been shown *Δ(inv(s)) = Δ(s)*. 
+    16. | D_u | = | D_s |
+
+By :ref:`Definition 3.2.1 <definition-3-2-1>` of the Delimiter Count function, this means :math:`\Delta(u) = \Delta(t)`. Since :math:`u = \text{inv}(t)`, it has been shown :math:`\Delta(\text{inv}(s)) = \Delta(s)`. Generalizing this over the set of all Strings,
+
+.. math::
+
+    17. \forall s \in S: \Delta(s) = \Delta(\text{inv}(s))
 
 Furthmore, an exact relationship has been estalished between the coordinates of Delimiters in Strings and their Inverses, 
 
-    17. D:sub:`inv(t)` = { (l(t) - i + 1, σ) | (i, σ) ∈ D:sub:`t` } ∎
+.. math::
 
-**Theorem 3.2.3** ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
+    18. D_{\text{inv}(t)} = \{ (l(t) - i + 1, \sigma) \mid (i, \sigma) \in D_t \} 
+
+∎
+
+.. _theorem-3-2-3:
+
+**Theorem 3.2.3** :math:`\forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))`
 
 Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L`,
 
-    1. ζ ∈ C:sub:`L`
+.. math::
 
-By Definition 2.1.2, every Sentence is a String. Therefore, *ζ* is a String. By Theorem A.3.2, 
+    1. \zeta \in C_L
 
-    1. Δ(ζ) = Δ(inv(ζ))
+By :math:`Definition 2.1.2 <definition-2-1-2>`, every Sentence is a String. Therefore, *ζ* is a String. By :ref:`Theorem 3.2.2`, 
 
-Which is what was to be shown. ∎
+.. math::
 
-**Theorem 3.2.4** ∀ α ∈ L: Δ(α) = 0
+    2. \Delta(\zeta) = \Delta(\text{inv}(\zeta))
+
+Which is what was to be shown. Since *ζ* was an arbitrary Sentence, this can generalize over the Corpus 
+
+.. math::
+
+    3. \forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))
+
+∎
+
+.. _theorem-3-2-4:
+
+**Theorem 3.2.4** :math:`\forall \alpha \in L: \Delta(\alpha) = 0`
 
 This theorem can be stated in natural language as follows: The Delimtier Count of any Word in a Language is zero.
 
 Assume *α* is a Word in Language **L**,
 
-    1. α ∈ L
+.. math::
+
+    1. \alpha \in L
     
-By the Discovery Axiom W.1, all Words in Language do not have Delimiters,
+By the :ref:`Discovery Axiom W.1 <axiom-w1>`, all Words in a Language do not have Delimiters,
 
-    2. ∀ i ∈ N:sub:`l(s)`: α[i] ≠ σ
+.. math::
 
-Therefore, *α* does not have any Delimiter Characters (*σ*). By Definition 2.4.1, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* hasno Delimiter Characters, the Delimiter Count of *α* must be 0. Therefore,
+    2. ∀ i \in N_{l(\alpha)}: \alpha[i] \neq \sigma
 
-    3. Δ(α) = 0 ∎
+Therefore, *α* does not have any Delimiter Characters (*σ*). By :ref:`Definition 3.2.1 <definition-3-2-1>`, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* hasno Delimiter Characters, the Delimiter Count of *α* must be 0. Therefore,
 
-**Theorem 3.2.5** ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+.. math::
+
+    3. \Delta(\alpha) = 0 
+
+Since *α* was an arbitrary Word, this can generalize over the Language,
+
+.. math::
+    
+    4. \forall \alpha \in L: \Delta(\alpha) = 0
+
+∎
+
+.. _theorem-3-2-5:
+
+**Theorem 3.2.5** :math:`\forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})`
 
 In natural language, this theorem can be stated as follows: For every Sentence in a Corpus, the String Length of the Sentence is equal to the Delimiter Count of the sentence plus the sum of the String Lengths of its Words.
 
 Assume 
 
-    1. ζ ∈ C:sub:`L`. 
+.. math::
 
-Either each *ζ{i}* for *1 ≤ i ≤ l(ζ)* is Delimiter or it is a non-Delimiter, with no overlap. By Definition 3.2.1, the number of Delimiter Characters in *ζ* is *Δ(ζ)*. 
+    1. \zeta \in C_L 
 
-By the Discovery Axiom W.1, words in **L** do not contain Delimiters. By Definition 2.1.3, the Words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the Word Lengths l(ζ{i}) which is 
+Either each *ζ{i}* for :math:`1 \leq i \leq l(\zeta)` is Delimiter or it is a non-Delimiter, with no overlap. By :ref:`Definition 3.2.1 <definition-3-2-1>`, the number of Delimiter Characters in *ζ* is *Δ(ζ)*. 
 
-    2. Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+By the :ref:`Discovery Axiom W.1 <axiom-w1>`, words in **L** do not contain Delimiters. By :ref:`Definition 2.1.3 <definition-2-1-3>`, the Words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the Word Lengths l(ζ{i}) which is 
 
-Since every Character in *ζ* is either a Delimiter or part of a Word (and not both), the total number of Characters in *ζ* is the sum of the number of Delimiters and the number of Characters in Words. By Definition 1.1.3 of String Length, the total number of non-Empty characters in ζ is *l(ζ)*. Therefore, the number of non-Empty Characters in *ζ* is equal to the number of Delimiters plus the sum of its Word Lengths,
+.. math::
 
-    3. ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I}) ∎
+    2. \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
-**Theorem 3.2.6** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+Since every Character in *ζ* is either a Delimiter or part of a Word (and not both), the total number of Characters in *ζ* is the sum of the number of Delimiters and the number of Characters in Words. By :ref:`Definition 1.1.3 <definition-1-1-3>` of String Length, the total number of non-Empty characters in ζ is *l(ζ)*. Therefore, the number of non-Empty Characters in *ζ* is equal to the number of Delimiters plus the sum of its Word Lengths,
 
-Applying the results of Theorem 3.2.1 and Theorem 3.2.5, this theorem follows from simple algebraic manipulation. ∎
+.. math::
 
-**Theorem 3.2.7** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+    3. l(\zeta) = \Delta(\zeta) + \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\}) 
+
+Since *ζ* was arbitrary, this can generalize over the Corpus,
+
+.. math::
+    
+    4. \forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
+
+∎
+
+.. _theorem-3-2-6:
+
+**Theorem 3.2.6** :math:`\forall \zeta \in C_L: l(\zeta) + 1 = \Lambda(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})` 
+
+Applying the results of :ref:`Theorem 3.2.1 <theorem-3-2-1>` and :ref:`Theorem 3.2.5 <theorem-3-2-5>`, this theorem follows from simple algebraic manipulation. ∎
+
+.. _theorem-3-2-7:
+
+**Theorem 3.2.7** :math:`\forall \zeta \in C_L: l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})`
 
 This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is greater than or equal to the sum of the String Length of its Words. 
 
-Assume *ζ ∈* **C**:sub:`L`. By Theorem 3.2.4,
+Assume :math:`ζ \in C_L`. By :ref:`Theorem 3.2.4 <theorem-3-2-4>`,
     
-    1. Λ(ζ) ≥ 1
+.. math::
 
-From Theorem 3.2.6,
+    1. \Lambda(\zeta) \geq 1
 
-    2. l(ζ) + 1 - Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i}) = Λ(ζ)
+From :ref:`Theorem 3.2.6 <theorem-3-2-6>`,
 
-Combining step 1 and step 2, the theorem is obtained through algebraic manipulation,
+.. math::
 
-    l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(α) ∎
+    2. l(\zeta) + 1 - \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) = \Lambda(\zeta)
+
+Combining step 1 and step 2, the theorem is obtained through algebraic manipulation and by generalizing the arbitrary Sentence *ζ* over the Corpus,
+
+.. math::
+
+    l(\zeta) \geq \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\}) 
+
+∎
 
 .. _theorem_3-2-8:
 
-**Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
+**Theorem 3.2.8** :math:`\forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)`
 
 This theorem can be stated in natural language as follows: For any Sentence in a Corpus, its String Length is always greater than or equal to its Word Length.
 
-Let *ζ* be an arbitrary Sentence in C:sub:`L`. Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By Definition 2.1.4, 
+Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By :ref:`Definition 2.1.4 <definition-2-1-4>`, 
 
-    1. Λ(ζ) = | W:sub:`ζ` |
+.. math::
 
-By Theorem 1.2.3, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters. By Theorem 2.2.5, every Sentence is a Delimitation of its Words,
+    1. \Lambda(\zeta) = | W_{\zeta} |
 
-    2. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters. By :ref:`Theorem 2.2.5 <theorem-2-2-5>`, every Sentence is a Delimitation of its Words,
+
+.. math::
+
+    2. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 Where the operation of Delimitation inserts Delimiters between the Words of *ζ*. On the other hand, let *t* be the the Limitation of *ζ*,
 
-    3. t = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+.. math::
 
-By Definition 1.2.7, Definition 1.2.8 and Definition 1.1.3 of String Length,
+    3. t = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
-    4. l(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) = l(ζ) ≥ l(t) = l(LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i})
+By :ref:`Definition 1.2.7 <definition-1-2-7>`, :ref:`Definition 1.2.8 <definition-1-2-8>` and :ref:`Definition 1.1.3 <definition-1-1-3>` of String Length,
 
-By Definition 1.28,
+.. math::
 
-    5. LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i} = (ζ{1})(ζ{2}) .... (ζ{Λ(ζ)-1})(ζ{Λ(ζ)})
+    4. l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = l(\zeta) \geq l(t) = l(L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\})
 
-By Theorem 1.1.1, 
+By :ref:`Definition 1.2.8 <definition-1-2-8>`,
 
-    6. l((ζ{1})(ζ{2}) .... (ζ{Λ(ζ)-1})(ζ{Λ(ζ)})) = Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
+.. math::
+
+    5. L\Pi_{i=1}^{\Lambda(\z)} \zeta\{i\} = (\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta\{\Lambda(\zeta)\})
+
+By :ref:`Theorem 1.1.1 <theorem-1-1-1>`, 
+
+.. math::
+
+    6. l((\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta{\Lambda(\zeta)})) = \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
 Therefore, combining steps 4 and 6
 
-    7. l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I})
+.. math::
+
+    7. l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
 Consider the summation,
 
-    8. Σ:sub:`i = 1`:sup:`Λ(ζ)` 1
+.. math::
 
-Clearly, since *l(ζ{i}) ≥ 1* for all *i*, it follows, 
+    8. \sum_{i=1}^{\Lambda(\zeta)} 1
 
-    9. Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I}) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` 1
+Clearly, since :math:`l(\zeta\{i\}) \geq 1` for all *i*, it follows, 
+
+.. math::
+
+    9. \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq sum^{i=1}^{\Lambda(\zeta)` 1
 
 By the definition of summations, step 8 can be rewritten as,
 
-    10. Σ:sub:`i = 1`:sup:`Λ(ζ)` 1 = 1 + 1 + 1 + .... + 1 = Λ(ζ)
+.. math::
+
+    10. \sum_{i=1}^{\Lambda(\zeta)} 1 = 1 + 1 + 1 + .... + 1 = \Lambda(\zeta)
 
 Combining step 7, step 9 and  step 10,
 
-    11. l(ζ) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{I}) ≥ Σ:sub:`i = 1`:sup:`Λ(ζ)` 1 = Λ(ζ)
+.. math::
 
-Since ζ was arbitrary, this can be generalized as,
+    11. l(\zeta) ≥ \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq \sum_{i=1}^{\Lambda(\zeta)} 1 = \Lambda(\zeta)
 
-    12. ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ) ∎
+Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
-**Theorem 3.2.9 (Informal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+.. math::
+
+    12. \forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta) 
+
+∎
+
+.. _theorem-3-2-9:
+
+**Theorem 3.2.9 (Informal)** :math:`\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)`
 
 Let *u* and *t* be arbitrary strings in S. Let **U** and **T** be the Character-level representations of *u* and *t*, respectively:
 
-    1. U = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`)
+.. math::
 
-    2. T = (𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)`)
+    1. U = (\iota_1, \iota_2, ..., \iota_{l(u)})
+
+.. math::
+
+    2. T = (\nu_1, \nu_2, ..., \nu_{l(t)})
 
 The Character-level representation of *ut* is:
 
-    3. UT = (ⲁ:sub:`1`, ⲁ:sub:`2`, ..., ⲁ:sub:`l(u)`, 𝔟:sub:`1`, 𝔟:sub:`2`, ..., 𝔟:sub:`l(t)``)
+.. math::
 
-By Definition 3.2.1, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the number of Delimiters in *t*, and *Δ(ut)* is the number of Delimiters in *ut*.
+    3. UT = (\iota_1, \iota_2, ..., \iota_{l(u)}, \nu_1, \nu_2, ..., \nu_{l(t)})
+
+By :ref:`Definition 3.2.1 <definition-3-2-1>`, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the number of Delimiters in *t*, and *Δ(ut)* is the number of Delimiters in *ut*.
 
 Since concatenation simply joins two Strings without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the number of Delimiters in *ut* is the sum of the number of Delimiters in *u* and the number of Delimiters in *t*. ∎
 
-**Theorem 3.2.9 (Formal)** ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
+**Theorem 3.2.9 (Formal)**  :math:`\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)`
 
 Let **D**:sub:`u` be the set of indices of Delimiters in *u*. Let **D**:sub:`t` be the set of indices of Delimiters in *t*. Let **D**:sub:`ut` be the set of indices of delimiters in *ut*,
 
-    1. D:sub:`u` = { i | 1 ≤ i ≤ l(u) and u[i] = σ }
-    2. D:sub:`t` = { j | 1 ≤ j ≤ l(t) and t[j] = σ }
-    3. D:sub:`ut` = { k | (1 ≤ k ≤ l(u) + l(t)) ∧ ((k ≤ l(u) ∧ UT[k] = σ) ∨ (k > l(u) ∧ UT[k] = σ)) }
+.. math::
+
+    1. D_u = \{ i \mid 1 \leq i \leq l(u) \land u[i] = \sigma \}
+
+.. math::
+
+    2. D_t = \{ j \mid 1 \leq j \leq l(t) \land t[j] = \sigma \}
+    
+.. math::
+
+    3. D_{ut} = \{ k \mid (1 \leq k \leq l(u) + l(t)) \land ((k \leq l(u) \and UT[k] = \sigma) \lor (k > l(u) \land UT[k] = σ)) }
    
 It is clear that D:sub:`ut` is the union of two disjoint sets, since the indices of the Delimiters in *t* have been shifted by *l(u)*. Therefore,
 
-    | D:sub:`ut` | = | D:sub:`u` | + | D:sub:`t` |.
+.. math::
 
-By Definition A.4.1, this is equivalent to,
+    4. | D_{ut} | = | D_u | + | D_t |.
 
-    Δ(ut) = Δ(u) + Δ(t)
+By :ref:`Definition 3.2.1 <definition-3-2-1>`, this is equivalent to,
 
-Since u and t were arbitrary strings, this can be generalized,
+.. math::
 
-    ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t) ∎
+    5. \Delta(ut) = \Delta(u) + \Delta(t)
+
+Since u and t were arbitrary strings, this can be generalized over the set of all Strings,
+
+.. math::
+
+    6. \forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t) 
+
+∎
 
 **Theorem 3.2.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
 

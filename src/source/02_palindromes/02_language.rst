@@ -785,23 +785,44 @@ Let *s = "abcde"* (:math:`l(s) = 5`). Then :math:`\text{inv}(s) = t = \text{"edc
 
 Since every Word is a String, the Inverse of Word is similarly defined, with the additional constraint that *s* belong to a Language **L**, i.e. by adding a third bullet to :ref:`Definition 1.2.4 <definition-1-2-4>` with :math:`s \in L`. The Inverse of a Word is easily understood through a few illustrative examples in English. The following table lists some words in English and their Inverses,
 
-| Word | Inverse | 
-| ---- | ------- |
-| time | emit    |
-| saw  | was     |
-| raw  | war     |
-| dog  | god     |
-| pool | loop    |
+.. list-table:: 
+
+   :widths: 20 20
+   :header-rows: 1
+
+   * - Word
+     - Inverse
+   * - time
+     - emit
+   * - saw
+     - was
+   * - raw
+     - war
+   * - dog
+     - god
+   * - pool
+     - loop
+
 
 However, this particular example is (intentionally) misleading. In this example, the Inverse of a word in English is also a word in English. In general, this property is not exhibited by the majority of Words in any Language. In other words, every Word in an Language has an Inverse but not every Inverse Word belongs to a Language. This phenomenon is exemplified in the following table,
 
-| Word | Inverse | 
-| ---- | ------- |
-| cat  | x       |
-| you  | x       |
-| help | x       |
-| door | x       |
-| book | x       |
+.. list-table:: 
+
+   :widths: 20 20
+   :header-rows: 1
+
+   * - Word
+     - Inverse
+   * - cat
+     - x
+   * - you
+     - x
+   * - help
+     - x
+   * - door
+     - x
+   * - book
+     - x 
 
 The intent is to define a class of Words whose elements belong to it if and only if their Inverse exists in the Language. As a first step towards this definition, String Inversion was introduced and formalized. In the next section, String Inversion will provide a subdomain in the domain of discourse over which to quantify the conditions that are to be imposed on the class of *Invertible Words*, i.e. the class of Words whose Inverses are also Words. 
 
@@ -1608,15 +1629,19 @@ Reflective Words
 
 The concept of *Reflective Words* can be easily understood by examining some examples in English,
 
-|    Word    |
-| ---------- |
-| mom        |
-| dad        |
-| noon       |
-| racecar    |
-| madam      |
-| level      | 
-| civic      |
+.. list-table:: 
+
+   :widths: 50
+   :header-rows: 1
+
+   * - Word
+   * - mom
+   * - dad 
+   * - noon
+   * - racecar
+   * - madam
+   * - level
+   * - civic
 
 From this list, it should be clear what is meant by the notion of *reflective*. Reflective Words are those Words whose meaning is unchanged by a String Inversion. However, the semantic content that is preserved under inversion is not the primitive property that primarily explains this invariance. The invariance of the semantic content under inversion is the result of Character level symmetries. 
 
