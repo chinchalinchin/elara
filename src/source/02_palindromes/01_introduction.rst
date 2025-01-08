@@ -1,10 +1,10 @@
-.. _palindromic_structures:
+.. _palindromic-structures:
 
 ======================
 Palindromic Structures
 ======================
 
-.. _table_of_contents:
+.. _table-of-contents:
 
 Table of Contents
 =================
@@ -50,21 +50,20 @@ Table of Contents
   
 3. Section III: Structures
 
-    - ASDF
-    - 
+    a. III.I: σ-Reductions
+
+        - Definitions
+        - Theorems
+
+    b. III.II: Delimiter Count Function
 
 4. Section IV: Palindromes
    
     a. IV.I: Definitions
-
-        - Aspect
-        - Parity
+    b. IV.II: Aspect
+    C. IV.III: Parity
   
-    b. IV.II: Strutures
-
-        - Boundary Postulate
-
-5. Section V: Delimiters
+5. Section V: Integration
 
     a. V.I: Definitions
     b. V.II: Theorems
@@ -72,13 +71,29 @@ Table of Contents
 
        - Delimiter Probability Density
 
-6. Appendix
+7. Appendix
    
-TODO 
+    a. A.I: Compound Pairs
+    b. A.II: Palindromic Pairs
+    c. A.III: Categories
 
-7. Data
+        - Axioms
+        - Theorems
+        - Categorical Length
 
-TODO
+    d. A.IV: Sigma Induction
+    e. A.V: Reflective Structures
+
+8. Data
+
+    a. Reflective Words
+    b. Invertible Words 
+    c. Ambiguous Words
+    d. Latin Palindromes
+    e. Palindromes
+
+9. Code
+
 
 .. _introduction:
 
@@ -119,4 +134,4 @@ This restriction to *aspect* and *parity* may appear restrictive; Indeed, it may
 
 A note on the terminology introduced in this work is in order. When a semantic term is capitalized, e.g. Word or Sentence, this will mean it is referred to in its capacity as a formal entity. While the formal system was designed to model the actual syntax of Characters, Words and Sentences, this should not be taken to mean the formal entities that emerge from this system are necessarily representative of actual linguistic entities. While the formal entities in this system may not map *one-to-one* with their empirical counterparts, it will be seen their characteristics nevertheless provide insight into the nature of their empirical counterparts.
 
-As the thrust of the main results in Section IV is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I and parts of Section II is in part an effort to ensure the applicability across natural languages regarding the results shown in Section II.III and Section III. The core theorems of Section III could be proved in a degenerate form in a system with less notational complexity by assuming a specific language, but the depth of insight would be lost in the vagueness of definitions.
+As the thrust of the main results in Section IV is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I and parts of Section II is in part an effort to ensure the applicability across natural languages regarding the results shown in Section II.III and Section IV. The core theorems of Section IV could be proved in a degenerate form in a system with less notationally complexity by assuming a specific language, but the depth of insight would be lost in the vagueness of definitions.

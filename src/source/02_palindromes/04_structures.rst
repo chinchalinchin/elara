@@ -1,9 +1,11 @@
+.. _section-iii:
+
 Section III: Structures
 =======================
 
 The foundation of the formal system has now been laid. Mathematical machinery capable of describing linguistic hierarchies has been constructed. The purpose of this formal system is to analyze the structures embedded in Palindromes. While the formal system possesses flexibility and applicability (as demonstrated by its ability to generate theorems like Theorem 2.3.9 which are empirically verifiable), it does not yet have the necessary tools for describing palindromic structures. 
 
-Inversion, while a key component of the apparatus necessary for understanding the dynamics of Palindromes, is not the only linguistic operation involved in the formation of Palindromes. The pure involutive property of Palindromes (e.g., *ζ = inv(ζ)*) only manifests in a rare class of Sentences known as Perfect Palindrome (Definition 4.1.2).
+Inversion, while a key component of the apparatus necessary for understanding the dynamics of Palindromes, is not the only linguistic operation involved in the formation of Palindromes. The pure involutive property of Palindromes (e.g., :math:`\zeta = \text{inv}(\zeta)) only manifests in a rare class of Sentences known as Perfect Palindrome (:ref:`Definition 4.1.2 <definition-4-1-2>`).
 
 However, the vast majority of Palindromes in any language are not pure involutions. Instead, the operation of inversion usually degrades the semantic content of a Sentence by re-ordering the Delimiters, as seen in the following, 
 
@@ -13,10 +15,10 @@ However, the vast majority of Palindromes in any language are not pure involutio
 
 In order to properly understand the nature of a Palindrome, the formal system under construction must have a method of quantifying the distribution of Delimiters in a Sentence and making claims about the nature of that Distribution. Furthermore, the system requires a method of removing the *"impurities"* in semantic content that introduced through *inversion*.
 
-This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of *σ-reduction*, the *Delimiter Count* function and *Sentence Integrals*.
+This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of *σ-reduction* and the *Delimiter Count* function.
 
 Section III.I: σ-Reductions 
-----------------------------
+---------------------------
 
 The mathematical definition of Palindromes (Definition 4.1.1 in the next section) will revolve around a novel linguistic operation, termed a *σ*-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.
 
@@ -548,10 +550,12 @@ From this, step 1 and step 2, it follows,
 
 Since ζ was arbitary, this can be generalized, 
 
-    5. ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ)) ∎
+    5. ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ)) 
+
+∎
 
 Section III.II: Delimiter Count Function 
---------------------------------------
+----------------------------------------
 
 Before moving onto the formal foundations for the *Delimiter Count Function*, some heuristical motivations will be provided for its introduction. The essence of a Palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a Palindrome is distributed through its syntactical layers. The concepts of *Perfect* and *Imperfect* Palindromes are be defined more rigorously in Section III, but as an intuitive introduction to the ability of a Palindrome to encode meaning on multiple syntactic levels and as a justification for the introduction of the Delimiter Count Function, consider the following two examples,
 

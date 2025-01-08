@@ -14,7 +14,7 @@ Palindromes
    03_corpora
    04_structures
    05_palindromes
-   06_delimiters
+   06_integration
    07_appendix
    08_data
    09_code

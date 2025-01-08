@@ -1,11 +1,16 @@
-.. _section_v:
+.. _section-v:
 
 Section V: Integration
 ======================
 
 TODO: explain
 
-.. _section_v_i:
+.. _section-v-i:
+
+
+Move analysis of Delimiter distribution here.
+
+
 
 Section V.I: Definitions
 ------------------------

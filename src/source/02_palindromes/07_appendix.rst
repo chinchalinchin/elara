@@ -294,8 +294,8 @@ By Axiom G.1,
 
 Therefore, any word *α* in **L** must belong to at least one of these Categories. ∎
 
-Length
-^^^^^^
+Categorical Length
+^^^^^^^^^^^^^^^^^^
 
 Consider the English sentences, *ᚠ = "the man ran over the bridge* and *ᚢ = "the novel novel about a rose rose to the top"*
 

@@ -9,7 +9,7 @@ Notation
 --------
 
 - Punctuation: ∎
-- Logical Operations: :math:`\forall`, :math:`\exists`, :math:`\leftrightarrow`, :math:`\rightarrow`, :math:`\leftarrow`, :math:`\land`, :math:`\lor`
+- Logical Operations: :math:`\forall`, :math:`\exists`, :math:`\leftrightarrow`, :math:`\to`, :math:`\leftarrow`, :math:`\land`, :math:`\lor`
 - Arithmetical Relations: :math:`\neq`, :math:`=`, :math:`\geq`, :math:`\leq`, +, -
 - Sets: :math:`\emptyset`, :math:`\mathbb{N}`, :math:`N_i`
 - Set Operations: :math:`\cup`, :math:`\cap`
@@ -18,26 +18,26 @@ Notation
 - Domain: S
 - Alphabet: :math:`\Sigma`
 - Characters: :math:`\mathfrak{a}`, :math:`\mathfrak{b}`, :math:`\mathfrak{c}`, ... , :math:`\sigma`, :math:`\varepsilon`
-- Character Variables: ⲁ, ⲃ, ⲅ
+- Character Variables: :math:`\iota`, :math:`\nu`, :math:`\omicron`, :math:`\rho`
 - Language: L
 - Words: a, b, c
 - Word Variables: :math:`\alpha`, :math:`\beta`, :math:`\gamma`
 - Character Index Notation: t[i]
 - Word Classes: R, I
 - Phrases of Word Length n: :math:`P_n`
-- Lexicons: :math:`\Chi_L (n)`
+- Lexicons: :math:`X_L (n)`
 - Phrases Variables: p, q, r
 - Sentences: ᚠ, ᚢ, ᚦ
-- Sentence Variables: ζ, ξ
-- Word Index Notation: ζ{i}
-- Partial Sentence: ζ[:i], ζ[i:]
-- Pivots: ω(ζ)
-- Pivot Words: ζ{ω-}, ζ{ω+}
-- Sentence Classes: A(n), K, P, PP, IP, P:sup:`-`, P:sup:`+`
-- Categories: C:sub:`L`(m)
-- Relations: ⊂:sub:`s`, (i/n/j):sub:`ζ`
-- Functions: l(t), Λ(t), Δ(t)
-- Operations: inv(s), ς(ζ), DΠ:sub:`i=1`:sup:`n` p(i), LΠ:sub:`i=1`:sup:`n` p(i)
+- Sentence Variables: :math:`\zeta`, :math:`\xi`
+- Word Index Notation: :math:`\zeta\{i\}`
+- Partial Sentence: :math:`\zeta[:i]`, :math:`\zeta[i:]`
+- Pivots: :math:`\omega(\zeta)`
+- Pivot Words: :math:`\zeta\{\omega-\}`, :math:`\zeta\{\omega+\}`
+- Sentence Classes: :math:`A(n)`, K, P, PP, IP, :math:`P^-`, :math:`P^+`
+- Categories: :math:`C_L(m)`
+- Relations: :math:`\subset_s`, :math:`(i/n/j)_{\zeta}`
+- Functions: l(t), :math:`\Lambda(t)`, :math:`\Delta(t)`
+- Operations: inv(s), :math:`\varsigma(\zeta)`, :math:`D\Pi_{i=1}^{n} p(i)`, :math:`L\Pi_{i=1}^{n} p(i)`
 
 .. _definitions:
 
@@ -52,50 +52,49 @@ Definitions
 - D 1.1.6: Consecutive Functions: f(i)
 - D 1.1.7: Containment: :math:`t \subset_{s} u`
 - D 1.2.1: Language: L
-- D 1.2.2: Word: α
-- D 1.2.3: Word Equality: α = β
+- D 1.2.2: Word: :math:`\alpha`
+- D 1.2.3: Word Equality: :math:`\alpha = \beta`
 - D 1.2.4: String Inversion: inv(s)
-- D 1.2.5: Phrase: P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) = (P:sub:`n`(1), )
-- D 1.2.6: Lexicon: Χ:sub:`L`(n) = { P:sub:`n` | P:sub:`n` = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`) ∧ ∀ i ∈ N:sub:`n`: α:sub:`i` ∈ L } 
-- D 1.2.7: Delimitation: DΠ:sub:`i=1`:sup:`n` p(i)
-- D 1.2.8: Limitation: LΠ:sub:`i=1`:sup:`n` p(i)
-- D 1.3.1: Reflective Words: α ∈ R ↔ ∀ i ∈ N:sub:`l(α)`: α[i] = α[l(α) - i + 1] 
-- D 1.3.2: Invertible Words: α ∈ I ↔ inv(α) ∈ L
-- D 2.1.1: Corpus: C:sub:`L`
+- D 1.2.5: Phrase: :math:`P_n = (\alpha_1, \alpha_2, ..., \alpha_n) = (P_n(1), )`
+- D 1.2.6: Lexicon: :math:`\mathrm{X}_L(n) = \{ P_n | P_n = (\alpha_1, \alpha_2, ..., \alpha_n) \land \forall i \in \mathbb{N}_n: \alpha_i \in L \}`
+- D 1.2.7: Delimitation: :math:`D\Pi_{i=1}^{n} p(i)`
+- D 1.2.8: Limitation: :math:`L\Pi_{i=1}^{n} p(i)`
+- D 1.3.1: Reflective Words: :math:`\alpha \in R \leftrightarrow \forall i \in \mathbb{N}_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]`
+- D 1.3.2: Invertible Words: :math:`\alpha \in I \leftrightarrow \text{inv}(\alpha) \in L`
+- D 2.1.1: Corpus: :math:`C_L`
 - D 2.1.2: Sentence: ᚠ
-- D 2.1.3: Word-Level Set Representation: W:sub:`ᚠ`
-- D 2.1.4: Word Length: Λ(ζ)
-- D 2.1.5: Word Index Notation: ζ{i}
-- D 2.1.6: Intervention: (i/n/j):sub:`ζ`
+- D 2.1.3: Word-Level Set Representation: :math:`W_ᚠ`
+- D 2.1.4: Word Length: :math:`\Lambda(\zeta)`
+- D 2.1.5: Word Index Notation: :math:`\zeta\{i\}`
+- D 2.1.6: Intervention: :math:`(i/n/j)_\zeta`
 - D 2.2.1: Semantic Coherence
-- D 2.3.1: Admissible Sentences: t ∈ A(n) ↔ (∃ p ∈ Χ:sub:`L`(n): t = Π:sub:`i=1`:sup:`n` p(i)) ∧ (t ∈ C:sub:`L`)
-- D 2.3.2: Invertible Sentences: ζ ∈ K ↔ inv(ζ) ∈ C:sub:`L`
-- D 3.1.1: σ-Reduced Alphabet: Σ:sub:`σ` 
-- D 3.1.2: σ-Reduction: ς(ζ)
-- D 3.2.1: Delimiter Count Function: Δ(t) = | D:sub:`t` | 
-- D 4.1.1: Palindromes: ζ ∈ P ↔ (ς(ζ) = inv(ς(ζ))) 
-- D 4.1.2: Perfect Palindromes: ζ ∈ PP ↔ ζ = inv(ζ)
-- D 4.1.3: Imperfect Palindromes: ζ ∈ P - PP
+- D 2.3.1: Admissible Sentences: :math:`t \in A(n) \leftrightarrow (\exists p \in \mathrm{X}_L(n): t = \Pi_{i=1}^{n} p(i)) \land (t \in C_L)`
+- D 2.3.2: Invertible Sentences: :math:`\zeta \in K \leftrightarrow \text{inv}(\zeta) \in C_L`
+- D 3.1.1: :math:`\sigma`-Reduced Alphabet: :math:`\Sigma_\sigma`
+- D 3.1.2: :math:`\sigma`-Reduction: :math:`\varsigma(\zeta)`
+- D 3.2.1: Delimiter Count Function: :math:`\Delta(t) = | D_t |`
+- D 4.1.1: Palindromes: :math:`\zeta \in P \leftrightarrow (\varsigma(\zeta) = \text{inv}(\varsigma(\zeta)))`
+- D 4.1.2: Perfect Palindromes: :math:`\zeta \in PP \leftrightarrow \zeta = \text{inv}(\zeta)`
+- D 4.1.3: Imperfect Palindromes: :math:`\zeta \in P - PP`
 - D 4.1.4: Aspect
-- D 4.1.5: Left Partial Sentence: Z[:n]
-- D 4.1.6: Right Partial Sentence: Z[n:]
-- D 4.1.7: Pivots: ω(ζ)
-- D 4.1.8: Even Palindromes: ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] 
-- D 4.1.9: Odd Palindromes: ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ]
+- D 4.1.5: Left Partial Sentence: :math:`Z[:n]`
+- D 4.1.6: Right Partial Sentence: :math:`Z[n:]`
+- D 4.1.7: Pivots: :math:`\omega(\zeta)`
+- D 4.1.8: Even Palindromes: :math:`\zeta \in P^+ \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )]`
+- D 4.1.9: Odd Palindromes: :math:`\zeta \in P^- \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]`
 - D 4.1.10: Parity
 - D 4.1.11: Pivot Words
-- D 5.1.1: Lefthand Sentence Integrals: Ω:sub:`-`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ))
-- D 5.1.2: Righthand Sentence Integrals: Ω:sub:`+`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ))
-- D 5.2.1: Delimiter Mass: μ:sub:`-`(ζ, i), μ:sub:`+`(ζ, i)
--
-- D A.1.1: Compound Words: η ∈ CW:sub:`L` ↔ [(∃ α, β ∈ L: η = αβ)  ∨  (∃ α ∈ L, ∃ γ ∈ CW:sub:`L`: η = αγ)] ∧ (η ∈ L)
-- D A.1.2: Compound Invertible Words: η ∈ CIW:sub:`L`  ↔ [ (η ∈ CW:sub:`L`)  ∧ (η ∈ I) ]
-- D A.2.1: σ-Pairing Language: α ∈ L:sub:`σ` ↔ ∃ ζ ∈ C:sub:`L`: α = (ζ ⋅ Σ:sub:`σ`)
-- D A.2.2: Palindromic Pairing Language: α ∈ L:sub:`P` ↔  ∃ ζ ∈ P: α = (ζ  ⋅ Σ:sub:`σ`)
-- D A.3.1: Category: C:sub:`L`(m)
-- D A.3.2: Categorical Size: κ
-- D A.4.1: σ-Induction: ς:sup:`-1`(ζ, m, T)
-- D A.5.1: Reflective Structure:  s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
+- D 5.1.1: Lefthand Sentence Integrals: :math:`\Omega_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
+- D 5.1.2: Righthand Sentence Integrals: :math:`\Omega_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
+- D 5.2.1: Delimiter Mass: :math:`\mu_{-}(\zeta, i), \mu_{+}(\zeta, i)`
+- D A.1.1: Compound Words: :math:`\eta \in CW_L \leftrightarrow [(\exists \alpha, \beta \in L: \eta = \alpha\beta) \lor (\exists \alpha \in L, \exists \gamma \in CW_L: \eta = \alpha\gamma)] \land (\eta \in L)`
+- D A.1.2: Compound Invertible Words: :math:`\eta \in CIW_L \leftrightarrow [ (\eta \in CW_L) \land (\eta \in I) ]`
+- D A.2.1: :math:`\sigma`-Pairing Language: :math:`\alpha \in L_\sigma \leftrightarrow \exists \zeta \in C_L: \alpha = (\zeta \cdot \Sigma_\sigma)`
+- D A.2.2: Palindromic Pairing Language: :math:`\alpha \in L_P \leftrightarrow \exists \zeta \in P: \alpha = (\zeta \cdot \Sigma_\sigma)`
+- D A.3.1: Category: :math:`C_L(m)`
+- D A.3.2: Categorical Size: :math:`\kappa`
+- D A.4.1: :math:`\sigma`-Induction: :math:`\varsigma^{-1}(\zeta, m, T)`
+- D A.5.1: Reflective Structure: :math:`s \in RS \leftrightarrow [\exists n \in \mathbb{N}, \exists p \in \mathrm{X}_L(n): (s = \Pi_{i=1}^{n} p(i)) \land (\varsigma(S) = \text{inv}(\varsigma(s)))]`
 
 .. _algorithms:
 
@@ -111,7 +110,7 @@ Algorithms
 Axioms 
 ------
 
-- Character Axiom C.1: :math:`\forall ⲁ \in \Sigma: ⲁ \in S`
+- Character Axiom C.1: :math:`\forall \iota \in \Sigma: \iota \in S`
 - Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
 - Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
 - Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L`
@@ -129,16 +128,16 @@ Theorems
 - T 1.2.4: :math:`\forall s \in S: \text{inv}(\text{inv}(s)) = s`
 - T 1.2.5: :math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
 - T 1.2.6: :math:`\forall u, t \in S : u \subset_{s} t \leftrightarrow \text{inv}(u) \subset_{s} \text{inv}(t)`
-- T 1.2.7: :math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \rightarrow (t \subset_{s} v)`
-- T 1.2.8: :math:`\forall n \in \mathbb{N}: \forall p \in \Chi_{L(n)}: \exists! s \in S: s = D\Pi_{i=1}^{n} p(i)`
-- T 1.2.9: :math:`\forall n \in \mathbb{N}, \forall p \in \Chi_{L(n)} \exists! s \in S: s = L\Pi_{i=1}^{n} p(i)`
+- T 1.2.7: :math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \to (t \subset_{s} v)`
+- T 1.2.8: :math:`\forall n \in \mathbb{N}: \forall p \in X_L(n): \exists! s \in S: s = D\Pi_{i=1}^{n} p(i)`
+- T 1.2.9: :math:`\forall n \in \mathbb{N}: \forall p \in X_L(n): \exists! s \in S: s = L\Pi_{i=1}^{n} p(i)`
 - T 1.3.1: :math:`\forall \alpha \in L: \alpha \in R \leftrightarrow \alpha = \text{inv}(\alpha)`
 - T 1.3.2: :math:`\forall \alpha \in L: \alpha \in I \leftrightarrow \text{inv}(\alpha) \in I`
 - T 1.3.3 :math:`R \subseteq I`
 - T 1.3.4: If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
 - T 2.1.1: :math:`\forall \zeta \in C_L:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)`
 - T 2.1.2: :math:`\forall \zeta, \xi \in C_L: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)`
-- T 2.1.3: :math:`\forall \zeta \in C_L: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \rightarrow \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
+- T 2.1.3: :math:`\forall \zeta \in C_L: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \to \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}`
 - T 2.2.1: :math:`\forall \zeta \in C_L: l(\zeta) \neq 0`
 - T 2.2.2: :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta`
 - T 2.2.3: :math:`\forall \zeta \in C_L : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon`
@@ -147,76 +146,69 @@ Theorems
 - T 2.3.1: :math:`A(n) \subseteq C_{L}`
 - T 2.3.2: :math:`\forall \zeta \in A(n): \Lambda(\zeta) = n`
 - T 2.3.3: :math:`\forall \zeta \in C_L: \zeta \in A(\Lambda(\zeta))`
-- T 2.3.4: :math:`\forall \zeta \in C_L: \exists p \in \Chi_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)`
+- T 2.3.4: :math:`\forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)`
 - T 2.3.5: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K`
-- T 2.3.6: :math:`\forall \zeta \in C_L: \text{inv}(\zeta) \in K \rightarrow \zeta \in C_L`
-- T 2.3.7: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} \in L`
+- T 2.3.6: :math:`\forall \zeta \in C_L: \text{inv}(\zeta) \in K \to \zeta \in C_L`
+- T 2.3.7: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L`
 - T 2.3.8: :math:`\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
-- T 2.3.9: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \rightarrow \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
+- T 2.3.9: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
 - T 2.3.10: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
-- T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \rightarrow \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
-
-
-
-
-
-- T 3.1.1: ∀ ζ ∈ C:sub:`L`: inv(ς(ζ)) = ς(inv(ζ))
-- T 3.1.2: ∀ ζ, ξ ∈ C:sub:`L`: ς(ζξ) = (ς(ζ))(ς(ξ))
-- T 3.1.3: ∀ ζ ∈ C:sub:`L`: ς(ς(ζ)) = ς(ζ)
-- T 3.1.4: ∀ ζ ∈ C:sub:`L`: Λ(ς(ζ)) ≤ 1
-- T 3.1.5: ∀ u, t ∈ S : u ⊂:sub:`s` t ↔ ς(u) ⊂:sub:`s` ς(t) 
-- T 3.1.6: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:`s` ς(ζ)
-- T 3.1.7: ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
-- T 3.1.8: ∀ ζ ∈ C:sub:`L`: ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
-- T 3.1.9: ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DN:sub:`i=1`:sup:`n` p(i)) = LN:sub:`i=1`:sup:`n` p(i)
-- T 3.1.10: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ))
-- T 3.2.1: ∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
-- T 3.2.2: ∀ s ∈ S: Δ(s) = Δ(inv(s))
-- T 3.2.3: ∀ ζ ∈ C:sub:`L`: Δ(ζ) = Δ(inv(ζ))
-- T 3.2.4: ∀ α ∈ L: Δ(α) = 0
-- T 3.2.5: ∀ ζ ∈ C:sub:`L`: l(ζ) = Δ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T 3.2.6: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = Λ(ζ) + Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T 3.2.7: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥  Σ:sub:`i = 1`:sup:`Λ(ζ)` l(ζ{i})
-- T 3.2.8: ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ Λ(ζ)
-- T 3.2.9: ∀ u, t ∈ S: Δ(ut) = Δ(u) + Δ(t)
-- T 3.2.10: ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
-- T 3.2.11: ∀ ζ ∈ C:sub:`L`: Δ(Ζ ⋅ Σ:sub:`σ`)= 0
-- T 3.2.12: ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
-- T 3.2.13: ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
-- 
-- T 3.2.1: PP ⊂ K
-- T 3.2.2: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ){i} = inv(ζ{Λ(ζ) - i + 1})
-- T 3.2.3:∀ ζ ∈ PP: ∀ i ∈ N:sub:`Λ(ζ)`: ζ{i} ∈ I
-- T 3.2.4: PP ⊂ P
-- T 3.2.5: PP ∪ IP = P
-- T 3.2.6: ∀ ζ ∈ C:sub:`L`:  ∀ i ∈ N:sub:`Λ(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
-- T 3.2.7: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
-- T 3.2.8: ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
-- T 3.2.9: ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
-- T 3.2.10: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
-- T 3.2.11: ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
-- T 3.2.12: ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k) ↔ ω(ζ) = l(ζ)/2
-- T 3.2.13: ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
-- T 3.2.14: ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
-- T 3.2.15: ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) 
-- T 3.2.16: P:sup:`-` ∩ P:sup:`+` = ∅
-- T 3.2.17: P:sup:`-` ∪ P:sup:`+` = P
-- T 3.3.1: ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
-- T 3.3.2: ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
-- 
-- T 5.2.1: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
-- T 5.2.2: ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
-- T 5.2.3: ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
-- T 5.2.4: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
-- T 5.2.5: ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
-- 
-- T 5.4.1: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
-- T 5.4.2: ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
-- 
-- T A.1.1: ∀ ζ ∈ C:sub:`L`: L:sub:`ζ` ⊂ L
-- T A.2.1: ∀ α ∈ L: α ∈ L:sub:`σ` ↔ [ ∃ ζ ∈ C:sub:`L`: ∃ i ∈ N:sub:`Λ(ζ)`: ζ{i} ⊂:sub:s α ]
-- T A.2.2: L:sub:`P` ⊂ L:sub:`σ`
-- T A.2.3: ∀ α ∈ L:sub:`P`: α = inv(α)
-- T A.2.4: L ∩ L:sub:`P` ⊆ R
-- T A.2.5: L:sub:`P` ⊂ R:sub:`L_σ`
-- T A.3.1: ∀ α ∈ L: ∃ i ∈ N:sub:`κ`: α ∈ C:sub:`L`(i) 
+- T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \to \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
+- T 2.3.10: :math:`\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))`
+- T 2.3.11: :math:`\forall \zeta \in C_L: \zeta \in K \to \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
+- T 3.1.1: :math:`\forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))`
+- T 3.1.2: :math:`\forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi))`
+- T 3.1.3: :math:`\forall \zeta \in C_L: \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)`
+- T 3.1.4: :math:`\forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1`
+- T 3.1.5: :math:`\forall u, t \in S : u \subset_s t \leftrightarrow \varsigma(u) \subset_s \varsigma(t)`
+- T 3.1.6: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta)`
+- T 3.1.7: :math:`\forall \zeta \in K: [ \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta))) ]`
+- T 3.1.8: :math:`\forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}`
+- T 3.1.9: :math:`\forall n \in \mathbb{N}: \forall p \in \mathrm{X}_{L(n)}: \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)`
+- T 3.1.10: :math:`\forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta))`
+- T 3.2.1: :math:`\forall \zeta \in C_L: \Lambda(\zeta) = \Delta(\zeta) + 1`
+- T 3.2.2: :math:`\forall s \in S: \Delta(s) = \Delta(\text{inv}(s))`
+- T 3.2.3: :math:`\forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))`
+- T 3.2.4: :math:`\forall \alpha \in L: \Delta(\alpha) = 0`
+- T 3.2.5: :math:`\forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \Sigma_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
+- T 3.2.6: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = \Lambda(\zeta) + \Sigma_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
+- T 3.2.7: :math:`\forall \zeta \in C_L: l(\zeta) \geq \Sigma_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})`
+- T 3.2.8: :math:`\forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)`
+- T 3.2.9: :math:`\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)`
+- T 3.2.10: :math:`\forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)`
+- T 3.2.11: :math:`\forall \zeta \in C_L: \Delta(Z \cdot \Sigma_\sigma)= 0`
+- T 3.2.12: :math:`\forall t \in S: l(\varsigma(t)) + \Delta(t) = l(t)`
+- T 3.2.13: :math:`\forall \zeta \in C_L: l(\varsigma(t)) + \Lambda(\zeta) = l(\zeta) + 1`
+- T 4.1.1: :math:`PP \subset K`
+- T 4.1.2: :math:`\forall \zeta \in PP: \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})`
+- T 4.1.3: :math:`\forall \zeta \in PP: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
+- T 4.1.4: :math:`PP \subset P`
+- T 4.1.5: :math:`PP \cup IP = P`
+- T 4.2.1: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta) - i + 1:]`
+- T 4.2.2: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i + 1 ) \land (l(\zeta[:i+1]) = l(\zeta[i+1:]))`
+- T 4.2.3: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i) \land (l(\zeta[:i]) + 1 = l(\zeta[i:]))`
+- T 4.2.4: :math:`\forall \zeta \in C_L: \exists n \in N_{l(\zeta)}: ( l(\zeta[:n]) = l(\zeta[n:]) ) \vee (l(\zeta[:n]) + 1 = l(\zeta[n:]))`
+- T 4.2.5: :math:`\forall \zeta \in C_L: (\exists k \in N : l(\zeta) = 2k + 1) \leftrightarrow \omega(\zeta) = (l(\zeta) + 1)/2`
+- T 4.2.6: :math:`\forall \zeta \in P^-: \omega(\zeta) = (l(\zeta) + 1)/2`
+- T 4.2.7: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N} : l(\zeta) = 2k) \leftrightarrow \omega(\zeta) = l(\zeta)/2`
+- T 4.2.8: :math:`\forall \zeta \in P^+: \omega(\zeta) = l(\zeta)/2`
+- T 4.2.9: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):])`
+- T 4.2.10: :math:`\forall \zeta \in C_L: \omega(\varsigma(\zeta)) \leq \omega(\zeta)`
+- T 4.2.11: :math:`P^- \cap P^+ = \emptyset`
+- T 4.2.12: :math:`P^- \cup P^+ = P`
+- T 4.3.1: :math:`\forall \zeta \in P: [ (\text{inv}(\zeta\{1\}) \subset_s \zeta\{\Lambda(\zeta)\}) \vee (\text{inv}(\zeta\{\Lambda(\zeta)\}) \subset_s \zeta\{1\}) ] \land [ (\zeta\{1\} \subset_s \text{inv}(\zeta\{\Lambda(\zeta)\})) \vee (\zeta\{\Lambda(\zeta)\} \subset_s \text{inv}(\zeta\{1\})) ]`
+- T 4.3.2: :math:`\forall \zeta \in P: (\zeta[\omega(\zeta)] = \sigma) \to ( (\text{inv}(\zeta\{\omega-\}) \subset_s \zeta\{\omega+\}) \vee (\text{inv}(\zeta\{\omega+\}) \subset_s \zeta\{\omega-\}))`
+- T 5.1.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (i/l(\zeta))`
+- T 5.1.2: :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
+- T 5.1.3: :math:`\forall \zeta \in C_L: \Sigma_{i=1}^{\omega(\zeta)} \mu_{+}(\zeta, i) > \Sigma_{i=\omega(\zeta)+1}^{l(\zeta)} \mu_{-}(\zeta, i) \leftrightarrow \Omega_{+}(\zeta,l(\zeta)) > \Omega_{-}(\zeta,l(\zeta))`
+- T 5.2.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Omega_{-}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot (i/l(\zeta))`
+- T 5.2.2: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Omega_{+}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
+- T 5.2.3: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Omega_{-}(\varsigma(\zeta),k) = \Omega_{+}(\varsigma(\zeta),k) = 0`
+- T 5.3.1: :math:`\forall \zeta \in PP: \forall i \in N_{l(\zeta)}: \Omega_{-}(\zeta,i) = \Omega_{+}(\zeta,i)`
+- T A.1.1: :math:`\forall \zeta \in C_L: L_\zeta \subset L`
+- T A.2.1: :math:`\forall \alpha \in L: \alpha \in L_\sigma \leftrightarrow [ \exists \zeta \in C_L: \exists i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \alpha ]`
+- T A.2.2: :math:`L_P \subset L_\sigma`
+- T A.2.3: :math:`\forall \alpha \in L_P: \alpha = \text{inv}(\alpha)`
+- T A.2.4: :math:`L \cap L_P \subseteq R`
+- T A.2.5: :math:`L_P \subset R_{L_\sigma}`
+- T A.3.1: :math:`\forall \alpha \in L: \exists i \in N_\kappa: \alpha \in C_L(i)`
