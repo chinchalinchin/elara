@@ -727,70 +727,103 @@ In other words, taking the *σ*-reduction of a Sentence converts the Delimitatio
 
 .. _theorem-3-1-9:
 
-**Theorem 3.1.9** 
+**Theorem 3.1.9**  :math:`\forall n \in \mathbb{N}: \forall p \in X_L(n): \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)`
 
-∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
-
-This theorem can be stated in natural language as follows: the *σ*-reduction of a Delimitation of a Phrase is equal to a Limitation of the same Phrase.
+This theorem can be stated in natural language as follows: the *σ*-reduction of the Delimitation of a Phrase is equal to the Limitation of the same Phrase.
 
 Let *n* be an arbitrary natural number, and let *p* be an arbitrary Phrase from a Language's *n*:sup:`th` Lexicon, 
 
-    1. p ∈ Χ:sub:L(n)
-    2. p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`).
+.. math::
 
-By Definition 1.2.7, 
+    1. p \in Χ_L(n)
+    
+.. math::
 
-    3. DΠ:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(σ)(α:sub:`2`)(σ) ... (σ)(α:sub:`n`)
+    2. p = (\alpha_1, \alpha_2, ..., \alpha_n).
 
-Applying Definition 3.1.2 of *σ*-reduction to the Delimitation and applying the Basis Clause of Definition 1.1.1,
+By :ref:`Definition 1.2.7 <definition-1-2-7>`, 
 
-    4. ς(DΠ:sub:`i=1`:sup:`n` p(i)) = (α:sub:`1`)(α:sub:`2`)... (α:sub:`n`)
+.. math::
 
-By Definition 1.2.8,
+    3. D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
 
-    5. LΠ:sub:`i=1`:sup:`n` p(i) = (α:sub:`1`)(α:sub:`2`) ... (α:sub:`n`)
+Applying :ref:`Definition 3.1.2 <definition-3-1-2>` of *σ*-reduction to the Delimitation and applying the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>`,
 
-By repeated application of Theorem 1.1.1 to step 4,
+.. math::
 
-    6. ς(DΠ:sub:`i=1`:sup:`n` p(i)) = Σ:sub:`i=1`:sup:`n` α:sub:`i`
+    4. \varsigma(D\Pi_{i=1}^{n} p(i)) = (\alpha_1)(\alpha_2) ... (\alpha_n)
 
-By repeated application of Theorem 1.1.1 to step 5,
+By :ref:`Definition 1.2.8 <definition-1-2-8>`,
 
-    7. l((α:sub:`1`)(α:sub:`2`)... (α:sub:`n`)) = Σ:sub:`i=1`:sup:`n` α:sub:`i`
+.. math::
 
-Comparing step 6 to step 7 and noting the *α*:sub:`i` is in the same position the same for all *1 ≤ i ≤ n*, it follows by Definition 1.1.4 of String Equality, 
+    5. L\Pi_{i=1}^{n} p(i) = (\alpha_1)(\alpha_2) ... (\alpha_n)
 
-    8. ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i)
+By repeated application of :ref:`Theorem 1.1.1 <theorem-1-1-1>` to step 4,
 
-Since n and p were arbitrary, this can be generalized,
+.. math::
 
-    9. ∀ n ∈ ℕ: ∀ p ∈ Χ:sub:`L(n)`: ς(DΠ:sub:`i=1`:sup:`n` p(i)) = LΠ:sub:`i=1`:sup:`n` p(i) ∎
+    6. l(ς(D\Pi_{i=1}^{n} p(i))) = \sum_{i=1}^{n} l(\alpha_i)
 
-The relationship between σ-reductions, Limitations and Delimitations provides an easy method for establishing the relationship between the String Length of a Sentence and the String Length of its σ-reduced form. 
+By repeated application of :ref:`Theorem 1.1.1 <theorem-1-1-1>` to step 5,
 
-**Theorem 3.1.10** ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ))
+.. math::
 
-Let ζ be an arbitrary Sentence in the Corpus. By Theorem 3.1.8,
+    7. l((\alpha_1)(\alpha_2)... (\alpha_n)) = \sum_{i=1}^{n} l(\alpha_i)
 
-    1. ς(ζ) = LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+Comparing step 6 to step 7 and noting the *α*:sub:`i` is in the same position the same for all :math:`1 \leq i \leq n`, it follows by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, 
 
-By Theorem 2.2.5,
+.. math::
 
-    2. ζ = DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+    8. \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)
 
-Since the only different between Definition 1.2.7 and 1.2.8 is that Delimitations insert a Delimiter while Limitations simply concatenate, it must follow,
+Since n and p were arbitrary, this can be generalized over the Lexicon,
 
-    3. l(DΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}) ≥ LΠ:sub:`i=1`:sup:`Λ(ζ)` ζ{i}
+.. math::
+
+    9. \forall n \in \mathbb{N}: \forall p \in Χ_L(n): \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i) 
+
+∎
+
+The relationship between *σ*-reductions, Limitations and Delimitations provides an easy method for establishing the relationship between the String Length of a Sentence and the String Length of its σ-reduced form. 
+
+.. _theorem-3-1-10:
+
+**Theorem 3.1.10** :math:`\forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta))`
+
+Let ζ be an arbitrary Sentence in the Corpus. By :ref:`Theorem 3.1.8 <theorem-3-1-8>`,
+
+.. math::
+
+    1. \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+
+By :ref:`Theorem 2.2.5 <theorem-2-2-5>`,
+
+.. math::
+
+    2. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+
+Since the only different between :ref:`Definition 1.2.7 <definition-1-2-7>` and :ref:`1.2.8 <definition-1-2-8>` is that Delimitations insert a Delimiter while Limitations simply concatenate, it must follow,
+
+.. math::
+
+    3. l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) \geq L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 From this, step 1 and step 2, it follows, 
 
-    4. l(ζ) ≥ l(ς(ζ))
+.. math::
 
-Since ζ was arbitary, this can be generalized, 
+    4. l(\zeta) \geq l(\varsigma(\zeta))
 
-    5. ∀ ζ ∈ C:sub:`L`: l(ζ) ≥ l(ς(ζ)) 
+Since *ζ* was arbitary, this can be generalized over the Corpus,
+
+.. math::
+
+    5. \forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta)) 
 
 ∎
+
+.. _section-iii-ii:
 
 Section III.II: Delimiter Count Function 
 ----------------------------------------
@@ -800,7 +833,7 @@ Before moving onto the formal foundations for the *Delimiter Count Function*, so
     1. dennis sinned
     2. if i had a hifi
 
-The first palindrome "*dennis sinned*" is what will be termed a *Perfect* Palindrome, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second Palindrome *"if i had a hifi"* is what is termed an *Imperfect* Palindrome. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
+The first palindrome "*dennis sinned*" is what will be termed a Perfect Palindrome in :ref:`Definition 4.1.2 <definition-4-1-2>`, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second Palindrome *"if i had a hifi"* is what is termed an Imperfect Palindrome in :ref:`Definition 4.1.3 <definition 4.1.3>`. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
 
     ifih a dah i fi
 
@@ -809,6 +842,8 @@ The order of the Characters in the Inverse of an Imperfect Palindrome is preserv
 The study of Delimiter Characters in a Sentence bears study beyond its application to palindromic structures, though. The following section of the Appendix introduces this function for quantifying the number of Delimiters in a sentence. Various properties about this function are then proved, in particular how the function interacts with other linguistic operations and functions that have been defined in the main body of the work. 
 
 Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings **S**. The following definition will serve that purpose.
+
+.. _definition-3-2-1:
 
 **Definition 3.2.1: Delimiter Count Function** Let *t* be a String with length *l(t)*. Let **T** be the Character-level representation of *t* with the Characters *𝔞*:sub:`i` denoting the *i*:sup:`th` character of the String *t*, where *1 ≤ i ≤ l(t)*,
 
