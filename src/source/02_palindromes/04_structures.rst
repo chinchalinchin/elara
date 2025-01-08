@@ -1303,116 +1303,172 @@ Since u and t were arbitrary strings, this can be generalized over the set of al
 
 ∎
 
-**Theorem 3.2.10** ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t)
+**Theorem 3.2.10**  :math:`\forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)`
 
 Let *u* and *t* be arbitrary strings in S.
 
-By Theorem A.4.2,
+By :ref:`Theorem 3.2.2 <theorem-3-2-2>`,
 
-    1. Δ(s) = Δ(inv(s)).
+.. math::
+
+    1. \Delta(s) = \Delta(\text{inv}(s))
 
 Therefore, 
 
-    2. Δ(ut) = Δ(inv(ut)).
+.. math::
 
-By Theorem 3.2.9,
+    2. \Delta(ut) = \Delta(\text{inv}(ut)).
+
+By :ref:`Theorem 3.2.9 <theorem-3-2-9>`,
  
-    3. Δ(ut) = Δ(u) + Δ(t).
+.. math::
+
+    3. \Delta(ut) = \Delta(u) + \Delta(t)
 
 Combining steps 2 and 3, it follows, 
 
-    4. Δ(inv(ut)) = Δ(ut) = Δ(u) + Δ(t)
+.. math::
 
-Since *u* and *t* were arbitrary strings, this can be generalized,
+    4. \Delta(\text{inv}(ut)) = \Delta(ut) = \Delta(u) + \Delta(t)
 
-    5. ∀ u, t ∈ S: Δ(inv(ut)) = Δ(u) + Δ(t) ∎
+Since *u* and *t* were arbitrary strings, this can be generalized over the set of all Strings,
 
-**Theorem 3.2.11** ∀ t ∈ S: Δ(ς(t)) = 0
+.. math::
+
+    5. \forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t) 
+
+∎
+
+**Theorem 3.2.11** :math:`\forall t \in S: \Delta(\varsigma(t)) = 0`
 
 This theorem can be stated in natural language as follows: For any String, the Delimiter Count of its *σ*-Reduction is 0.
 
 Let t be an arbitrary string in **S**,
 
-    1. t ∈ S
+.. math::
 
-By Definition 3.1.2, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*. By Definition 3.2.1, Δ(t) is the number of Delimiter Characters *σ* in a String *t*. Since *ς(t)* has all its Delimiters removed, it contains no occurrences of the Character *σ*. Therefore, 
+    1. t \in S
 
-    2. Δ(ς(t)) = 0
+By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*. :ref:`Definition 3.2.1 <definition-3-2-1>`, Δ(t) is the number of Delimiter Characters *σ* in a String *t*. Since *ς(t)* has all its Delimiters removed, it contains no occurrences of the Character *σ*. Therefore, 
 
-Since *t* was an arbitrary string in **S**, this can be generalized over **S**,
+.. math::
 
-    3. ∀ t ∈ S: Δ(ς(t)) = 0 ∎
+    2. \Delta(\varsigma(t)) = 0
 
-**Theorem 3.2.12** ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
+Since *t* was an arbitrary String, this can be generalized over the set of all Strings,
+
+.. math::
+
+    3. \forall t \in S: \Delta(\varsigma(t)) = 0 
+
+∎
+
+**Theorem 3.2.12** :math:`\forall t \in S: l(\varsigma(t)) + \Delta(t) = l(t)`
 
 Translation: For any String, its String Length is equal to the String Length of its σ-reduction plus its Delimiter Count.
 
 Let *t* be an arbitrary String in **S**,
 
-   1. t ∈ S
+.. math::
 
-By Definition 3.1.2, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*.
+   1. t \in S
 
-By Definition 3.2.1, *Δ(t)* is the number of Delimiter characters in *t*.
+By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*.
 
-By Definition 1.1.3, *l(t)* is the total number of non-Empty Characters in *t*, including Delimiters.
+By :ref:`Definition 3.2.1 <definition-3-2-1>`, *Δ(t)* is the number of Delimiter characters in *t*.
 
-Similarly, *l(ς(t))* is the number of non-DelimiterCcharacters in *t*.
+By :ref:`Definition 1.1.3 <definition-1-1-3>`, *l(t)* is the total number of non-Empty Characters in *t*, including Delimiters.
+
+Similarly, *l(ς(t))* is the number of non-Delimiter Characters in *t*.
 
 Every Character in *t* is either a Delimiter or a non-Delimiter character. Therefore, the total number of characters in *t* is the sum of the number of non-delimiter characters and the number of delimiter characters.
 
 Therefore,
 
-    2. ∀ t ∈ S: l(ς(t)) + Δ(t) = l(t)
+.. math::
 
-Since *t* was an arbitrary String, this can be generalized over **S**,
+    2. l(\varsigma(t)) + \Delta(t) = l(t)
 
-    1. ∀ s ∈ S: l(s) = l(ς(t)) + Δ(s)  ∎
+Since *t* was an arbitrary String, this can be generalized over the set of all Strings,
 
-Theorem 3.2.12 expresses a fundamental relationship between the String Length of a String, the String Length of its σ-reduction, and its Delimiter Count. It essentially states that the original String Length can be decomposed into the String Length of the String without Delimiters (the *σ*-reduction) and the number of Delimiters that were removed (the Delimiter Count).
+.. math::
+
+    3. \forall t \in S: l(t) = l(\varsigma(t)) + \Delta(t)  
+
+∎
+
+:ref:`Theorem 3.2.12 <theorem-3-2-12>` expresses a fundamental relationship between the String Length of a String, the String Length of its σ-reduction, and its Delimiter Count. It essentially states that the original String Length can be decomposed into the String Length of the String without Delimiters (the *σ*-reduction) and the number of Delimiters that were removed (the Delimiter Count).
 
 **Example**
 
-Let *t = (𝔞)(σ)(𝔟)(σ)(𝔠)*. Then, by Definition 3.1.2,
+Let :math:`t = (\mathfrak{a})(\sigma)(\mathfrak{b})(\sigma)(\mathfrak{c})`. Then, by :ref:`Definition 3.1.2 <definition-3-1-2>`,
 
-    ς(t) = 𝔞𝔟𝔠
+.. math::
+
+    \varsigma(t) = \mathfrak{a}\mathfrak{b}\mathfrak{c}
 
 The following quantities can then be calculated,
 
+.. math::
+
     l(t) = 5    
-    Δ(t) = 2
-    l(ς(t))= 3
+    
+.. math::
+
+    \Delta(t) = 2
+    
+.. math::
+
+    l(\varsigma(t))= 3
 
 And indeed, 
 
-    l(t) = l(ς(t)) + Δ(t) ∎
+.. math::
 
-**Theorem 3.2.13** ∀ ζ ∈ C:sub:`L`: l(ς(t)) + Λ(ζ) = l(ζ) + 1
+    l(t) = l(\varsigma(t)) + \Delta(t) 
+
+∎
+
+**Theorem 3.2.13** :math:`\forall \zeta \in C_L: l(\varsigma(t)) + \Lambda(\zeta) = l(\zeta) + 1`
 
 Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L`,
 
-    1. ζ ∈ C:sub:`L`
+.. math::
 
-By Definition 2.1.2, every Sentence is a String. Therefore, Theorem 3.2.12 may be applied to *ζ*
+    1. \zeta \in C_L
 
-    2. l(ζ) = l(ς(ζ)) + Δ(ζ)
+By :ref:`Definition 2.1.2 <definition-2-1-2>`, every Sentence is a String. Therefore, :ref:`Theorem 3.2.12 <theorem-3-2-12>` may be applied to *ζ*
 
-By Theorem 3.2.1,
+.. math::
 
-    3. Λ(ζ) = Δ(ζ) + 1
+    2. l(\zeta) = l(\varsigma(\zeta)) + \Delta(\zeta)
+
+By :ref:`Theorem 3.2.1 <theorem-3-2-1>`,
+
+.. math::
+
+    3. \Lambda(\zeta) = \Delta(\zeta) + 1
 
 Rearranging,
 
-    4. Δ(ζ) = Λ(ζ) - 1
+.. math::
+
+    4. \Delta(\zeta) = \Lambda(\zeta) - 1
 
 Substituting the expression for *Δ(ζ)* from step 4 into the equation from step 2,
 
-    5. l(ζ) = l(ς(ζ)) + (Λ(ζ) - 1)
+.. math::
+
+    5. l(\zeta) = l(\varsigma(\zeta)) + (\Lmabda(\zeta) - 1)
 
 Rearranging the terms, 
 
-    6. l(ς(ζ)) + Λ(ζ) = l(ζ) + 1
+.. math::
 
-Since ζ** was an arbitrary Sentence in **C**:sub:`L`, this can be generalized over the Corpus as,
+    6. l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1
 
-    7. ∀ ζ ∈ C:sub:`L`: l(ς(ζ)) + Λ(ζ) = l(ζ) + 1 ∎
+Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
+
+    7. \forall ζ \in C_L: l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1 
+
+∎

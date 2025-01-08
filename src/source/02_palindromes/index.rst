@@ -15,6 +15,7 @@ Palindromes
    04_structures
    05_palindromes
    06_integration
-   07_appendix
-   08_data
-   09_code
+   07_postulates
+   08_appendix
+   09_data
+   10_code

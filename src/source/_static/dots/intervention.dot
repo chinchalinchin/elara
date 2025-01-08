@@ -25,10 +25,18 @@ digraph Intervention {
   subgraph cluster_Delimitations {
     label="Delimitations";
     style=dashed;
-    node [shape=record];
+    //node [shape=record]; // Remove this line
 
-    Delim1 [label="{ <f0> DΠ<sub>x=1</sub><sup>2</sup> ᚠ(x): | <f1> repaid σ a }"];
-    Delim2 [label="{ <f0> DΠ<sub>x=1</sub><sup>1</sup> inv(ᚠ)(x): | <f1> repel }"];
+    Delim1 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0"> DΠ<sub>x=1</sub><sup>2</sup> ᚠ(x): </td><td port="f1"> repaid σ a </td></tr>
+      </table>
+    >];
+    Delim2 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0"> DΠ<sub>x=1</sub><sup>1</sup> inv(ᚠ)(x): </td><td port="f1"> repel </td></tr>
+      </table>
+    >];
   }
 
   // Connect to delimitations (Optional)

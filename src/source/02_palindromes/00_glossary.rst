@@ -47,7 +47,7 @@ Definitions
 - D 1.1.1: Concatenation: ut
 - D 1.1.2: Character-Level Set Representation: **T**
 - D 1.1.3: String Length: l(t)
-- D 1.1.4: String Equality: u = t
+- D 1.1.4: String Equality: :math:`u = t`
 - D 1.1.5: Character Index Notation: t[i]
 - D 1.1.6: Consecutive Functions: f(i)
 - D 1.1.7: Containment: :math:`t \subset_{s} u`
