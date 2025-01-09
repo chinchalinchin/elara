@@ -556,494 +556,841 @@ Therefore *l(ζ)* is odd. Putting both directions of the proof together and gene
 
 .. _theorem-4-2-3:
 
-**Theorem 4.2.3** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+**Theorem 4.2.3** :math:`\forall \zeta \in C_L: \exists i \in \mathbb{N}: (l(\zeta) = 2i) \land (l(\zeta[:i]) + 1 = l(\zeta[i:]))`
 
-This theorem can be stated in natural language as follows: For any Sentence in the corpus, its String Length is even if and only if the String Length of the Left Partial Sentence of Length *i* plus 1 is equal to the String Length of the Right Partial Sentence starting at index *i*.
+This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is even if and only if the String Length of the Left Partial Sentence of Length *i* plus 1 is equal to the String Length of the Right Partial Sentence starting at index *i*.
 
 (→) Let *ζ* be an arbitrary sentence in **C**:sub:`L` such that there exists a natural number *i* with the following condition,
  
-    1. l(ζ) = 2i.
+.. math::
 
-Then let,
+    1. \quad l(\zeta) = 2i
 
-    2. n = i. 
+Since *i* is a natural number, it follows,
 
-Since *i* is a natural number, it follows from step 2 that,
-
-    3. 1 ≤ n ≤ l(ζ)
+    2. \quad 1 \leq n \leq l(\zeta)
 
 From which it follows, 
 
-    4. n ∈ N:sub:`l(ζ)`
+    3. \quad i \in N_{l(\zeta)}
 
-The Left Partial Sentence of String Length *n* is then given by,
+By :ref:`Definition 4.2.1 <definition-4-2-1>`, the String Length of the Left Partial Sentence is given by,
 
-    5. ζ[:n] = ζ[:i]
+.. math::
 
-By Definition 3.2.5, 
+    4. \quad l(\zeta[:i]) = i
 
-    6. l(ζ[:i]) = i
+By :ref:`Definition 4.2.2 <definition-4-2-2>`, the String Length of the Right Partial Sentence is given by,
 
-The Right Partial Sentence is given by,
+.. math::
 
-    7. ζ[n:] = ζ[i:].
-
-By Definition 3.2.6, 
-
-    8. l(ζ[i:]) = l(ζ) - i + 1 = 2i - i + 1 = i + 1
+    5. \quad l(\zeta[i:]) = l(\zeta) - i + 1 = 2i - i + 1 = i + 1
 
 Therefore, 
 
-    9. l(ζ[:n]) + 1 = l(ζ[n:]) = i + 1
+.. math::
 
-This shows found an *n* (specifically, *n = i*) exists such that 
+    6. \quad l(\zeta[:i]) + 1 = l(\zeta[i:]) = i + 1
 
-    10. l(ζ[:n]) + 1 = l(ζ[n:])
+This shows an *i* exists such that 
+
+.. math::
+
+    7.  \quad l(\zeta[:i]) + 1 = l(\zeta[i:])
 
 Therefore, 
 
-    11. ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))
+.. math::
+
+    8. \quad \exist i \in N_{l(\zeta)}: (l(\zeta[:i]) + 1 = l(\zeta[i:]))
 
 (←) Let *ζ* be an arbitrary sentence in C:sub:`L` such that, 
 
-    1. ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))
+.. math::
 
-By Definition 3.2.5 and Definition 3.2.6,
+    1. \quad \exists i \in N_{l(\zeta)}: (l(\zeta[:i]) + 1 = l(\zeta[i:]))
 
-    2. l(ζ[:n]) = n
-    3. l(ζ[n:]) = l(ζ) - n + 1
+By :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>`,
+
+.. math::
+
+    2. \quad l(\zeta[:i]) = i
+
+.. math::
+
+    3. \quad l(\zeta[i:]) = l(\zeta) - i + 1
 
 Combining step 1, step 2 and step 3, 
 
-    4. n + 1 = l(ζ) - n + 1
+.. math::
 
-Solving for l(ζ),
+    4. \quad i + 1 = l(\zeta) - i + 1
 
-    5. l(ζ) = 2n
+Solving for *l(ζ)*,
 
-Thus, l(ζ) is even. Since both directions of the implication hold, it can be concluded,
+.. math::
 
-    ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ: l(ζ) = 2i) ↔ (∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) + 1 = l(ζ[n:]))) ∎
+    5. \quad l(\zeta) = 2i
 
-**Theorem 3.2.9** ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: (l(ζ[:n]) = l(ζ[n:])) ∨ (l(ζ[:n]) + 1 = l(ζ[n:]))
+Thus, *l(ζ)* is even. Since both directions of the implication hold and *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
+
+.. math::
+
+    6. \quad \forall \zeta \in C_L: (\exists i \in \mathbb{N}: l(\zeta) = 2i) ↔ (\exists i \in N_{l(\zeta)}: (l(\zeta[:i]) + 1 = l(\zeta[i:]))) 
+
+∎
+
+.. _theorem-4-2-4:
+
+**Theorem 4.2.4** :math:`\forall \zeta \in C_L: \exists n in N_{l(\zeta)}: (l(\zeta[:n]) = l(\zeta[n:])) \lor (l(\zeta[:n]) + 1 = l(\zeta[n:]))` 
 
 This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus, there exists a natural number *n* (between *1* and the length of *ζ*, inclusive) such that either the String Length of its Left Partial Sentence is equal to the String Length of its Right Partial Sentence, or the String Length of the Left Partial Sentence is one more than the String Length of the Right Partial Sentence.
 
-Let ζ be an arbitrary sentence in C:sub:`L`. Let,
+Let *ζ* be an arbitrary sentence in C:sub:`L`. Let,
 
-    1. l(ζ) = k
+.. math::
 
-If k is even, let 
+    1. \quad l(\zeta) = k
 
-    2. n = k/2
+If *k* is even, let 
 
-Then 
+.. math::
 
-    3. l(ζ[:n]) = n = k/2
-
-And 
-
-    4. l(ζ[n:]) = k - n + 1 = k - k/2 = (k + 1)/2
-
-Therefore, 
-
-    5. l(ζ[:n]) + 1 = l(ζ[n:])
-
-If k is odd, let 
-
-    6. n = (k + 1)/2
+    2. \quad n = k/2
 
 Then 
 
-    7. l(ζ[:n]) = n = (k + 1)/2
+.. math::
+
+    3. \quad l(\zeta[:n]) = n = k/2
 
 And 
 
-    8. l(ζ[n:]) = k - n  + 1 = k - (k + 1)/2  + 1= (k - 1)/2 + 1 = (k + 1)/2
+.. math::
+
+    4. \quad l(\zeta[n:]) = k - n + 1 = k - k/2 = (k + 1)/2
 
 Therefore, 
 
-    9. l(ζ[:n]) = l(ζ[n:])
+.. math::
 
-In both cases, an *n* has been found that satisfies the condition in the theorem. Since *ζ* was an arbitrary Sentence, this can generalize over the Corpus,
+    5. \quad l(\zeta[:n]) + 1 = l(ζ[n:])
 
-    10. ∀ ζ ∈ C:sub:`L`: ∃ n ∈ N:sub:`l(ζ)`: ( l(ζ[:n]) = l(ζ[n:]) ) ∨ ( l(ζ[:n]) + 1 = l(ζ[n:]) ) ∎
+If *k* is odd, let 
 
-Theorems 3.2.7 - 3.2.9 conjunctively establish the existence of a natural number that can reliably be called the center, or *Pivot*, of any Sentence in a Corpus. This leads to the following definition. 
+.. math::
 
-**Definition 3.2.7: Pivots** 
+    6. \quad n = (k + 1)/2
+
+Then 
+
+.. math::
+
+    7. \quad l(\zeta[:n]) = n = (k + 1)/2
+
+And 
+
+.. math::
+
+    8. \quad l(\zeta[n:]) = k - n  + 1 = k - (k + 1)/2  + 1= (k - 1)/2 + 1 = (k + 1)/2
+
+Therefore, 
+
+.. math::
+
+    9. \quad l(\zeta[:n]) = l(\zeta[n:])
+
+In both cases, an *n* has been found that satisfies the condition in the theorem. Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
+
+.. math::
+
+    10. \quad \forall \zeta \in C:sub:`L`: \exists n \in N_{l(\zeta)}: ( l(\zeta[:n]) = l(\zeta[n:]) ) \lor ( l(\zeta[:n]) + 1 = l(\zeta[n:]) ) 
+
+∎
+
+:ref:`Theorems 4.2.2 <definition-4-2-2>` - :ref:`4.2.4 <definition-4-2-4>` conjunctively establish the existence of a natural number that can reliably be called the center, or *Pivot*, of any Sentence in a Corpus. This leads to the following definition. 
+
+.. _definition-4-2-3:
+
+**Definition 4.2.3: Pivots** 
 
 The Pivot of a Sentence *ζ*, denoted *ω(ζ)*, is defined as the natural number such that the following formula is true,
 
+.. math::
+
    (l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) ) ∨ (l(ζ[:ω(ζ)]) + 1 = l(ζ[ω(ζ):])) 
    
-Using Theorem 3.2.7 and Theorem 3.2.8, the explicit formula for a Sentence Pivot are given below,
+Using :ref:`Theorem 4.2.2 <theorem-4-2-2>` and :ref:`Theorem 4.2.3 <theorem-4-2-3>`, the explicit formula for a Sentence Pivot are given below,
 
-    - If l(ζ) is odd, then ω(ζ) = i + 1, where i is the natural number satisfying l(ζ) = 2i + 1.
-    - If l(ζ) is even, then ω(ζ) = i, where i is the natural number satisfying l(ζ) = 2i. ∎
+    - If l(ζ) is odd, then :math:`\omega(\zeta) = i + 1`, where i is the natural number satisfying :math:`l(\zeta) = 2i + 1`.
+    - If l(ζ) is even, then :math:`\omega(\zeta) = i`, where i is the natural number satisfying :math:`l(ζ) = 2i`. 
+  
+∎
 
 The following example shows the relationship between Partial Sentences and Pivots.
 
 **Example**
 
-Consider these simple examples from a hypothetical Language **L** with Alphabet *Σ = { "a", "b", "c", " ", "" }*,
+Consider these simple examples from a hypothetical Language **L** with Alphabet,
 
-|    ζ          | l(ζ) | ω(ζ) | ζ[:ω(ζ)]   | l(ζ[:ω(ζ)]) | ζ[ω(ζ):]    | l(ζ[ω(ζ):]) |
-| ------------- | ---- | ---- | ---------- | ----------- | ----------- | ----------- |
-| "a"           | 1    | 1    | "a"        | 1           | "a"         | 1           |
-| "aa"          | 2    | 1    | "a"        | 1           | "aa"        | 2           |
-| "aba"         | 3    | 2    | "ab"       | 2           | "ba"        | 2           |
-| "abba"        | 4    | 2    | "ab"       | 2           | "bba"       | 3           |
-| "abcba"       | 5    | 3    | "abc"      | 3           | "cba"       | 3           |
-| "abccba"      | 6    | 3    | "abc"      | 3           | "ccba"      | 4           |
-| "abbcbba"     | 7    | 4    | "abbc"     | 4           | "cbba"      | 4           |
-| "abbccbba"    | 8    | 4    | "abbc"     | 4           | "ccbba"     | 5           |
-| "abbbcbbba"   | 9    | 5    | "abbbc"    | 5           | "cbbba"     | 5           |
-| "abbbccbbba"  | 10   | 5    | "abbbc"    | 5           | "ccbbba"    | 6           |
-| "a a"         | 3    | 2    | "a "       | 2           | " a"        | 2           |
-| "a ba"        | 4    | 2    | "a "       | 2           | " ba"       | 3           |
-| "ab cb"       | 5    | 3    | "ab "      | 3           | " cb"       | 3           |
-| "a bca"       | 5    | 3    | "a b"      | 3           | "bca"       | 3           |
-| "a bbc  a"    | 8    | 4    | "a bb"     | 3           | "bc  a"     | 5           | ∎
+.. math::
 
-In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with Theorem 3.2.9. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with Theorem 3.2.8. 
+    \Sigma = \{ \text{"a"}, \text{"b"}, \text{"c"}, \text{" "}, \text{""} }
+
+Various "sentences" of this Language are given below, along with their Partial Sentences and Pivots,
+
+.. list-table::
+   :header-rows: 1
+
+   * - ζ
+     - l(ζ)
+     - ω(ζ)
+     - ζ[:ω(ζ)]
+     - l(ζ[:ω(ζ)])
+     - ζ[ω(ζ):]
+     - l(ζ[ω(ζ):])
+   * - "a"
+     - 1
+     - 1
+     - "a"
+     - 1
+     - "a"
+     - 1
+   * - "aa"
+     - 2
+     - 1
+     - "a"
+     - 1
+     - "aa"
+     - 2
+   * - "aba"
+     - 3
+     - 2
+     - "ab"
+     - 2
+     - "ba"
+     - 2
+   * - "abba"
+     - 4
+     - 2
+     - "ab"
+     - 2
+     - "bba"
+     - 3
+   * - "abcba"
+     - 5
+     - 3
+     - "abc"
+     - 3
+     - "cba"
+     - 3
+   * - "abccba"
+     - 6
+     - 3
+     - "abc"
+     - 3
+     - "ccba"
+     - 4
+   * - "abbcbba"
+     - 7
+     - 4
+     - "abbc"
+     - 4
+     - "cbba"
+     - 4
+   * - "abbccbba"
+     - 8
+     - 4
+     - "abbc"
+     - 4
+     - "ccbba"
+     - 5
+   * - "abbbcbbba"
+     - 9
+     - 5
+     - "abbbc"
+     - 5
+     - "cbbba"
+     - 5
+   * - "abbbccbbba"
+     - 10
+     - 5
+     - "abbbc"
+     - 5
+     - "ccbbba"
+     - 6
+   * - "a a"
+     - 3
+     - 2
+     - "a "
+     - 2
+     - " a"
+     - 2
+   * - "a ba"
+     - 4
+     - 2
+     - "a "
+     - 2
+     - " ba"
+     - 3
+   * - "ab cb"
+     - 5
+     - 3
+     - "ab "
+     - 3
+     - " cb"
+     - 3
+   * - "a bca"
+     - 5
+     - 3
+     - "a b"
+     - 3
+     - "bca"
+     - 3
+   * - "a bbc  a"
+     - 8
+     - 4
+     - "a bb"
+     - 3
+     - "bc  a"
+     - 5
+
+∎
+
+In the previous example, take note when the Sentence String Length is even, the Right Partial Sentence accumulates an extra Character relative to the Left Partial Sentence, in accordance with :ref:`Theorem 4.2.3 <theorem-4-2-3>`. Similarly, when the Sentence String Length is odd, the Left Partial Sentence is equal in String Length to the Right Partial, in accordance with :ref:`Theorem 4.2.2 <theorem-4-2-2>`. 
 
 With the notion of a Palindromic Pivot established, the class of Even and Odd Palindromes is now defined. 
 
-**Definition 3.2.8: Even Palindromes**
+.. _definition-4-2-4:
+
+**Definition 4.2.4: Even Palindromes**
 
 The class of Even Palindromes, denoted **P**:sup:`+`, is defined as the set of Sentences ζ which satisfy the following open formula,
 
-    ζ ∈ P:sup:`+` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k )] ∎
+.. math::
 
-**Definition 3.2.9: Odd Palindromes**
+    \zeta \in P_{+} \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )] 
+
+∎
+
+.. _definition-4-2-5:
+
+**Definition 4.2.5: Odd Palindromes**
 
 The class of Even Palindromes, denoted **P**:sup:`-`, is defined as the set of Sentences ζ which satisfy the following open formula,
 
-    ζ ∈ P:sup:`-` ↔ [ (ζ ∈ P) ∧ (∃ k ∈ ℕ : l(ζ) = 2k + 1) ] ∎
+.. math::
 
-The *parity* (to be defined shortly, after it is proved Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior around the Pivot will be important for establishing the various cases of the theorems proved in the next section. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence, while the Left and Right Partial are of equal String Length when the String Length of the Sentence is even.
+    \zeta \in P_{-} \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]
 
-**Theorem 3.2.10** ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2
+∎
+
+The *parity* (to be defined shortly, after it is proven Even and Odd Palindromes partition the class of Palindromes) manifests in a Palindrome's behavior around it's Pivot. This behavior around the Pivot will be important for establishing the various cases of the theorems proved in the next section. The key insight is recognizing, as the previous example shows, the String Length of the Right Partial Sentence for Sentences of odd String Length is always one more than the String Length of the Left Partial Sentence, while the Left and Right Partial are of equal String Length when the String Length of the Sentence is even.
+
+.. _theorem-4-2-5:
+
+**Theorem 4.2.5** :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N}: l(\zeta) = 2k + 1) \leftrightarrow \omega(\zeta) = \frac{l(\zeta) + 1}{2}`
 
 ( → ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
-    1. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+.. math::
 
-From Theorem 3.2.7 and step 1, it follows 
+    1. \quad \exists k \in \mathbb{N} : l(\zeta) = 2k + 1
 
-    2. n = i + 1 
+From :ref:`Theorem 4.2.2 <theorem-4-2-2>` and step 1, it follows 
+
+.. math::
+
+    2. \quad n = k + 1 
     
 Where *n* satisfies,
 
-    3. l(ζ[:n]) = l(ζ[n:]).
+.. math::
+
+    3. \quad l(\zeta[:n]) = l(\zeta[n:])
 
 Therefore, 
 
-    4. n = i + 1 = (2i + 1 + 1)/2 = (l(ζ) + 1)/2.
+.. math::
 
-By Definition 3.2.7, the pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *n* satisfies the condition and is the only solution, it must be the smallest. Therefore, 
+    4. \quad  = k + 1 = (2k + 1 + 1)/2 = \frac{l(\zeta) + 1}{2}
 
-    5. ω(ζ) = (l(ζ) + 1)/2.
+By :ref:`Definition 4.2.3 <definition-4-2-3>`, the pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *n* satisfies the condition and is the only solution, it must be the smallest. Therefore, 
+
+.. math::
+
+    5. \quad \omega(\zeta) = \frac{l(\zeta) + 1}{2}
 
 ( ← ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
-    1. ω(ζ) = (l(ζ) + 1)/2.
+.. math::
+
+    1. \quad \omega(\zeta) = \frac{l(\zeta) + 1}{2}
 
 This can be re-arranged to yield,
 
-    2. l(ζ)  = 2 * ω(ζ) - 1
+.. math::
+
+    2. \quad l(\zeta)  = 2\omega(\zeta) - 1
 
 Since *ω(ζ)* is defined to be a natural number, let *k* be,
 
-    3. k = ω(ζ) + 1
+.. math::
+
+    3. \quad k = \omega(\zeta) + 1
 
 Then, 
 
-    4. l(ζ)  = 2k + 1
+.. math::
+
+    4. \quad l(\zeta)  = 2k + 1
 
 Therefore,
 
-    5. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+.. math::
 
-Since both direction of the equivalence are shown, the theorem is proved, 
+    5. \quad \exists k \in \mathbb{N} : l(\zeta) = 2k + 1
 
-    6. ∀ ζ ∈ C:sub:`L`: (∃ k ∈ ℕ : l(ζ) = 2k + 1) ↔ ω(ζ) = (l(ζ) + 1)/2 ∎
+Since both directions of the equivalence are shown, the theorem is proven by generalizing over the Corpus,
 
-**Theorem 3.2.11** ∀ ζ ∈ P:sup:`-`: ω(ζ) = (l(ζ) + 1)/2
+.. math::
 
-Assume 
+    6. \quad \forall \zeta \in C_L: (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) \leftrightarrow \omega(\zeta) = \frac{l(\zeta) + 1}{2} 
 
-    1. ζ ∈ P:sup:`-`
+∎
 
-From Definition 3.2.9, it follows, 
+.. _theorem-4-2-6:
 
-    2. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+**Theorem 4.2.6** :math:`\forall \zeta \in P^{-}: \omega = \frac{l(\zeta) + 1}{2}`
 
-From Theorem 3.2.10, it follows, 
+Assume *ζ* is an arbitrary Sentence such that,
 
-    3. ω(ζ) = (l(ζ) + 1)/2 ∎
+.. math::
 
-**Theorem 3.2.12** ∀ ζ ∈ C:sub:`L`: (∃ i ∈ ℕ : l(ζ) = 2i) ↔ ω(ζ) = l(ζ)/2
+    1. \quad \zeta \in P^{-}
+
+From :ref:`Definition 4.2.4 <definition-4-2-4>`, it follows, 
+
+.. math::
+
+    2. \quad \exists k \in \mathbb{B} : l(\zeta) = 2k + 1
+
+From :ref:`Theorem 4.2.5 <theorem-4-2-5>`, it follows, 
+
+.. math::
+
+    3. \quad \omega(\zeta) = \frac{l(\zeta) + 1}{2} 
+
+∎
+
+.. _theorem-4-2-7:
+
+**Theorem 4.2.7** :math:`\forall \zeta \in C_L: (\exists i \in \mathbb{N}: l(\zeta) = 2i) \leftrightarrow \omega = \frac{l(\zeta)}{2}`
 
 ( → ) Let ζ be an arbitrary in **C**:sub:`L` such that,
 
-    1. ∃ i ∈ ℕ : l(ζ) = 2i
+.. math::
 
-By Theorem 3.2.8, 
+    1. \quad \exists i \in \mathbb{N} : l(\zeta) = 2i
 
-    2. l(ζ[:i]) + 1 = l(ζ[i:])
+By :ref:`Theorem 4.2.3 <definition-4-2-3>`, 
 
-From Definition 3.2.5 and Definition 3.2.6, this is equivalent to,
+.. math::
 
+    2. \quad l(\zeta[:i]) + 1 = l(\zeta[i:])
 
-    3. i + 1 = l(ζ) - i + 1
+From :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>`, this is equivalent to,
 
-Therefore, 
+.. math::
 
-    4. i = l(ζ)/2.
+    3. \quad i + 1 = l(\zeta) - i + 1
 
-By Definition 3.2.7, the Pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *i* satisfies the condition and is the only solution when *l(ζ)* is even, it must be the smallest. Therefore, 
+Therefore,
 
-    5. ω(ζ) = l(ζ)/2.
+.. math::
+
+    4. \quad i = \frac{l(\zeta)}{2}
+
+By :ref:`Definition 4.2.3 <definition-4-2-3>`, the Pivot *ω(ζ)* is the smallest natural number satisfying the condition. Since *i* satisfies the condition and is the only solution when *l(ζ)* is even, it must be the smallest. Therefore, 
+
+.. math::
+
+    5. \quad \omega(\zeta) = \frac{l(\zeta)}{2}
 
 ( ← ) Let *ζ* be an arbitrary Sentence from **C**:sub:`L` such that
 
-    1. ω(ζ) = l(ζ)/2 
+.. math::
 
-Since by Definition 3.2.7, a Pivot is a natural number, let *i* be a natural number such that,
+    1. \quad \omega(\zeta) = \frac{l(\zeta)}{2} 
 
-    i = ω(ζ)
+Since by :ref:`Definition 4.2.3`, a Pivot is a natural number, let *i* be a natural number such that,
+
+.. math::
+
+    2. \quad i = \omega(\zeta)
 
 It follows immediately,
 
-    l(ζ) = 2i
+.. math::
+
+    3. \quad l(\zeta) = 2i
 
 Therefore *ζ* is even,
 
-    ∃ i ∈ ℕ : l(ζ) = 2i
+.. math::
+
+    4. \quad \exists i \in \mathbb{N}: l(\zeta) = 2i
 
 Since both directions of the equivalence have been shown, it follows,
 
-    ∀ ζ ∈ C:sub:`L`: ω(ζ) = l(ζ)/2 ∎
+.. math::
 
-**Theorem 3.2.13** ∀ ζ ∈ P:sup:`+`: ω(ζ) = l(ζ)/2
+    5. \quad \forall \zeta \in C_L: \omega(\zeta) = \frac{l(\zeta)}{2} 
 
-Assume 
+∎
 
-    1. ζ ∈ P:sup:`+`
+.. _theorem-4-2-8:
 
-From Definition 3.2.8, it follows, 
+**Theorem 4.2.8** :math:`\forall \zeta \in P^{+}: \omega = \frac{l(\zeta)}{2}`
 
-    2. ∃ k ∈ ℕ : l(ζ) = 2k
+Assume *ζ* is arbitrary Sentence such that,
 
-From Theorem 3.2.12, it follows, 
+    1. \quad \zeta \in P^{+}
 
-    3. ω(ζ) = l(ζ)/2 ∎
+From :ref:`Definition 4.2.5 <definition-4-2-5>`, it follows, 
 
-**Theorem 3.2.14** ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):])
+.. math::
+
+    2. \quad \exists k \in \mathbb{N} : l(\zeta) = 2k
+
+From :ref:`Theorem 4.2.8`, it follows, 
+
+.. math::
+
+    3. \quad \omega(\zeta) = \frac{l(\zeta)}{2} 
+
+∎
+
+.. _theorem-4-2-9:
+
+**Theorem 4.2.9** :math:`\forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):])`
 
 Assume *ζ* is an arbtirary Sentence from the Corpus,
 
-    1. ζ ∈ C:sub:`L`
+.. math::
 
-Let *ω(ζ)* be the Pivot of ζ. From Definition 3.2.5 of Left Partial Sentence,
+    1. \quad \zeta \in C_L
 
-    2. l(ζ[:ω(ζ)]) = ω(ζ)
+Let *ω(ζ)* be the Pivot of ζ. From :ref:`Definition 4.2.1 <definition-4-2-1>` of Left Partial Sentence,
 
-From Definition 3.2.6 of Right Partial Sentence, 
+.. math::
 
-    3. l(ζ[ω(ζ):]) =  l(ζ) - ω(ζ) + 1
+    2. \quad l(\zeta[:\omega(\zeta)]) = \omega(\zeta)
+
+From :ref:`Definition 4.2.2 <definition-4-2-2>` of Right Partial Sentence, 
+
+.. math::
+
+    3. \quad l(\zeta[\omega(\zeta):]) =  l(\zeta) - \omega(\zeta) + 1
 
 Therefore, 
 
-    4. l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) = l(ζ) + 1 
+.. math::
+
+    4. \quad l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):]) = l(\zeta) + 1 
     
-Since *ζ* was arbitrary, this can generalize,
+Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
-    5. ∀ ζ ∈ C:sub:`L`: l(ζ) + 1 = l(ζ[:ω(ζ)]) + l(ζ[ω(ζ):]) ∎
+.. math::
 
-**Theorem 3.2.15** ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) 
+    5. \quad \forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):]) 
 
-Let *ζ* be an arbitrary Sentence in the Corpus. By Theorem 3.1.11,
+∎
 
-    1. l(ζ) ≥ l(ς(ζ))
+.. _theorem-4-2-10:
+
+**Theorem 4.2.10** :math:`\forall \zeta \in C_L: \omega(\varsigma(\zeta)) \leq \omega(\zeta)`
+
+Let *ζ* be an arbitrary Sentence in the Corpus. By :ref:`Theorem 3.1.10 <theorem-3-1-10>`,
+
+.. math::
+
+    1. \quad l(\zeta) \geq l(\varsigma(\zeta))
 
 Through algebraic manipulation, this is equivalent to the following,
 
-    2. (l(ζ) + 1)/2 ≥ (l(ς(ζ)) + 1)/2
+.. math::
+
+    2. \quad \frac{l(\zeta) + 1}{2} \geq \frac{l(\varsigma(\zeta)) + 1}{2}
 
 It is also equivalent to,
 
-    3. l(ζ)/2 ≥ l(ς(ζ))/2
+.. math::
+
+    3. \quad \frac{l(\zeta)}{2} \geq \frac{l(\varsigma(\zeta))}{2}
 
 Moreover,
 
-    4. (l(ς(ζ)) + 1)/2 ≥ l(ς(ζ))/2
+    4. \quad \frac{l(\varsigma(\zeta)) + 1}{2} ≥ \frac{l(\varsigma(\zeta))}{2}
 
-By Theorems 3.2.11 and 3.2.13, one of the following must be true,
+By :ref:`Theorems 4.2.6 <theorem-4-2-6>` and :ref:`4.2.8 <theorem-4-2-8>`, one of the following must be true,
 
-    5. ω(ζ) = (l(ζ) + 1)/2
-    6. ω(ζ) = l(ζ)/2
+.. math::
+
+    5. \quad \omega(\zeta) = \frac{l(\zeta) + 1}{2}
+    
+.. math::
+
+    6. \quad \omega(\zeta) = \frac{l(\zeta)}{2}
 
 Similarly, it must be the case, one of the following is true,
 
-    7. ω(ς(ζ)) = (l(c(ζ)) + 1)/2
-    8. ω(ς(ζ)) = l(ς(ζ))/2
+.. math::
 
-If *ω(ζ) = (l(ζ) + 1)/2*, then *l(ζ)* is odd by Theorem 3.2.10. It follows from step 2 and step 4, that no matter the value of *ω(ς(ζ))*,
+    7. \quad \omega(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta)) + 1}{2}
+    
+.. math::
 
-    9. ω(ς(ζ)) ≤ ω(ζ)  
+    8. \quad \omega(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}
 
-If ω(ζ) = l(ζ)/2, then *l(ζ)* is even by Theorem 3.2.12. From step 3, if *ω(ς(ζ)) = l(ς(ζ))/2*, it follows, 
+If :math:`\omega(\zeta) = \frac{l(\zeta) + 1}{2}`, then *l(ζ)* is odd by :ref:`Theorem 4.2.5 <theorem-4-2-5>`. It follows from step 2 and step 4, that no matter the value of *ω(ς(ζ))*,
 
-    10.  ω(ς(ζ)) ≤ ω(ζ) 
+.. math::
 
-If *ω(ς(ζ)) = (l(c(ζ)) + 1)/2*, then *l(ς(ζ))* is odd by Theorem 3.2.10. 
+    9. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta)  
+
+If :math:`\omeag(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by Theorem 3.2.12. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
+
+.. math::
+
+    10. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta) 
+
+If :math:`\omega(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta)) + 1}{2}`, then *l(ς(ζ))* is odd by Theorem 3.2.10. 
 
 Since *l(ς(ζ))* is odd and *l(ζ)* is even, atleast one Delimiter was removed from *ζ* during *σ*-reduction, 
 
-    11. l(ς(ζ)) + 1 ≤ l(ζ).
+.. math::
+
+    11. \quad l(\varsigma(\zeta)) + 1 leq l(\zeta)
 
 Therefore, 
     
-    12. (l(ς(ζ)) + 1)/2 ≤ l(ζ)/2.
+.. math::
+
+    12. \quad \frac{l(\varsigma(\zeta)) + 1}{2} \leq \frac{l(\zeta)}{2}.
 
 It follows,
 
-    13. ω(ς(ζ)) = (l(ς(ζ)) + 1)/2 ≤ l(ζ)/2 = ω(ζ)
+.. math::
+
+    13. \quad \omega(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta)) + 1}{2} \leq \frac{l(\zeta)}{2} = \omega(\zeta)
 
 Thus, in all possible cases,
 
-    14. ω(ς(ζ)) ≤ ω(ζ)
+.. math::
 
-Since *ζ* was arbitrary, this can be generalized over the Corpus as,
+    14. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta)
 
-    15. ∀ ζ ∈ C:sub:`L`: ω(ς(ζ)) ≤ ω(ζ) ∎
+Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
-These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in Theorems 3.1.14 - 3.1.15.
+.. math::
 
-**Theorem 3.2.15** P:sup:`+` ∩ P:sup:`-` = ∅
+    15. \quad \forall \zeta \in C_L: \omega(\varsigma(\zeta)) \leq \omega(\zeta) 
+
+∎
+
+These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in :ref:`Theorems 4.2.11 <theorem-4-2-11>` - :ref:`4.2.12 <theorem-4-2-11>`.
+
+.. _theorem-4-2-11:
+
+**Theorem 4.2.11** :math:`P_{+} \cap P_{-} = \emptyset`
 
 This theorem can be stated in natural language as follows: A Palindrome cannot be both even and odd.
 
 For the sake of contradiction, assume there exists a sentence *ζ* such that 
 
-    1. ζ ∈ P:sup:`+` ∩ P:sup:`-`
+.. math::
+
+    1. \quad \zeta \in P_{+} \cap P_{-}
 
 This means each of the individual expressions is true,
 
-    2. ζ ∈ P:sup:`+``
-    3. ζ ∈ P:sup:`-`
+.. math::
 
-By Definition 3.2.8, it follows from step 2,
+    2. \quad \zeta \in P_{+}
+    
+.. math::
 
-    4. ∃ k ∈ ℕ : l(ζ) = 2k
+    3. \quad \zeta \in P_{-}
 
-By Definition 3.2.9, it follows from step 3,
+By :ref:`Definition 4.2.4 <definition-4-2-4>`, it follows from step 2,
 
-    5. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+.. math::
+
+    4. \quad \exists k \in \mathbb{N} : l(\zeta) = 2k
+
+By :ref:`Definition 4.2.5 <definition-4-2-5>`, it follows from step 3,
+
+.. math::
+
+    5. \quad \exists k \in \mathbb{N} : l(\zeta) = 2k + 1
 
 This leads to the contradiction, 
 
-    6. 0 = 1
+.. math::
 
-Therefore, the assumption that ζ is both an Even and Odd Palindrome must be false. From this it follows,
+    6. \quad 0 = 1
 
-    7. P:sup:`-` ∩ P:sup:`+` = ∅ ∎
+Therefore, the assumption that *ζ* is both an Even and Odd Palindrome must be false. From this it follows,
 
-**Theorem 3.2.16** P:sup:`-` ∪ P:sup:`+` = P
+.. math::
+
+    7. P_{-} \cap P_{+} = \emptyset 
+
+∎
+
+.. _theorem-4-2-12:
+
+**Theorem 4.2.12** :math:`P_{-} \cup P_{+} = P`
 
 This theorem can be translated into natural language as follows: All Palindromes are either Even Palindromes or Odd Palindromes. 
 
 (⊆) Let *ζ* be an arbitrary Sentence of the Corpus such that, 
 
-    1. ζ ∈ P:sup:`-` ∪ P:sup:`+`
+.. math::
+
+    1. \quad \forall \zeta \in P_{-} \cup P_{+}
 
 Which means either of this two cases must obtain, 
 
-    2. ζ ∈ P:sup:`-`
-    3. ζ ∈ P:sup:`+`
+.. math::
 
-By Definition 3.2.8, if step 2 obtains, then 
+    2. \quad \zeta \in P_{-}
+    
+.. math::
 
-    4. ζ ∈ P
+    3. \quad \zeta \in P_{+}
 
-By Definition 3.2.9, if step 3 obtains, then 
+By :ref:`Definition 4.2.4 <definition-4-2-4>`, if step 2 obtains, then 
 
-    5. ζ ∈ P
+.. math::
+
+    4. \quad \zeta \in P
+
+By :ref:`Definition 4.2.5 <definition-4-2-5>`, if step 3 obtains, then 
+
+.. math::
+    
+    5. \quad \zeta \in P
    
 Therefore, in either case, 
 
-    6. ζ ∈ P
+.. math::
 
-Since ζ was arbitrary, this can generalize as,
+    6. \quad \zeta \in P
 
-    1. ∀ ζ ∈ (P:sup:`-` ∪ P:sup:`+`) → ζ ∈ P
+Since *ζ* was an arbitrary Sentence in :math:`P_{-} \cup P_{+}`, this can generalize as,
+
+.. math::
+
+    7. \quad \forall \zeta \in (P_{-} \cup P_{+}) \to \zeta \in P
    
 This in turn implies,
 
-    8. P:sup:`-` ∪ P:sup:`+` ⊆ P
+.. math::
 
-(⊇) Let ζ be an arbitrary Sentence of the Corpus such that, 
+    8. \quad P_{-} \cup P_{+} \subset P
 
-    1. ζ ∈ P 
+(⊇) Let *ζ* be an arbitrary Sentence of the Corpus such that, 
+
+.. math::
+
+    1. \quad \zeta \in P 
 
 By the properties of natural numbers, it must be the case that one of the following obtains,
 
-    1. ∃ k ∈ ℕ : l(ζ) = 2k
-    2. ∃ k ∈ ℕ : l(ζ) = 2k + 1
+.. math::
+
+    2. \quad \exists k \in \mathbb{N} : l(ζ) = 2k
+
+.. math::
+
+    3. \quad \exists k \in \mathbb{N} : l(ζ) = 2k + 1
    
-If step 1 obtains, then by Definition 3.2.8, 
+If *l(ζ)* is even, then by :ref:`Definition 4.2.4 <definition-4-2-4>`, 
     
-    3. ζ ∈ P:sup:`+`
+.. math::
 
-If l(ζ) is odd, then by Definition 3.2.9, 
+    3. \quad \zeta \in P_{+}
 
-    4. ζ ∈ P:sup:`-`
+If *l(ζ)* is odd, then by :ref:`Definition 4.2.5 <definition-4-2-5>`, 
+
+.. math::
+
+    4. \quad \zeta \in P_{-}
 
 Therefore, in either case, 
 
-    5. ζ ∈ P:sup:`+` ∪ P:sup:`-`
-   
-Since ζ was arbitrary, this generalizes as,
+.. math::
 
-    6. ∀ ζ ∈ P → ζ ∈ (P:sup:`+` ∪ P:sup:`-`)
+    5. \quad \zeta \in P_{+} \cup P_{-}
+   
+Since *ζ* was an arbitrary Palindrome, this can generalize as,
+
+.. math::
+
+    6. \quad \forall \zeta \in P \to \zeta \in (P_{+} \cup P_{-})
 
 This implies,
 
-    7. P ⊆ P:sup:`-` ∪ P:sup:`+`
+.. math::
+
+    7. \quad P \subset P_{+} \cup P_{-}
    
 Step 8 from the (⊆) direction and taken with step 7 from the (⊇) together imply,
 
-    P:sup:`-` ∪ P:sup:`+` = P ∎
+.. math::
+
+    8. \quad P_{+} \cup P_{-} = P ∎
 
 With the partitioning of the class **P** of Sentences in a Corpus, i.e. Palindromes, the notion of *parity* can now be stated precisely in the following definition.
 
-**:ref:`Definition 4.1.1 <definition-4-1-1>`0: Parity** 
+.. _definition-4-2-6:
+
+**Definition 4.2.6: Parity** 
 
 A Palindrome ζ is said to have a *even parity* or *be even* if and only if,
 
-    P ∈ P:sup:`+` 
+.. math::
+
+    P \in P_{+} 
     
 A Palindrome ζ is said to have an *odd parity* or *be odd* if and only if,
 
-    P ∈ P:sup:`-` ∎
+.. math::
 
-Now that the two partitioning of Palindromes, aspect and parity, have been precisely defined, the final section of this work requires one more definition to correctly formulate its main results. This definition will allow the structure around a Palindrome's Pivot to be described with precise notation.
+    P \in P_{-} 
 
-**:ref:`Definition 4.1.1 <definition-4-1-1>`1: Pivot Words**
+∎
+
+Now that the two partitioning of Palindromes, aspect and parity, have been precisely defined, the final two sections (:ref:`Section V <section-v>` and :ref:`Section VI <section-vi>`) of this work requires one more definition to correctly formulate its main results. This definition will allow the structure around a Palindrome's Pivot to be described with precise notation.
+
+.. _definition-4-2-7:
+
+**Definition 4.2.7: Pivot Words**
 
 Let *ζ* be a sentence in C:sub:`L` with length *Λ(ζ)*, word-level representation W:sub:`ζ`, and pivot *ω(ζ)*. The left Pivot Word, denoted *ζ{ω-}*, and the right Pivot Word, denoted *ζ{ω+}*, are defined as follows:
 
-**Case 1**: Λ(ζ) = 1
+**Case 1**: :math:`\Lambda(\zeta) = 1`
 
-    - ζ{ω-} = ζ{ω+} = ζ{1} = ζ{Λ(ζ)}
+.. math::
 
-**Case 2**: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
+    \zeta\{\omega-\} = \ζ\{\omega+\} = \ζ\{1\} = \ζ\{\Lambda(\zeta)\}
 
-    - ζ{ω-} = α:sub:`j`, such that (j, α:sub:`j`) ∈ W:sub:`ζ` and α:sub:`j` is immediately to the left of the Delimiter at ω(ζ).
-    - ζ{ω+} = α:sub:`k`, such that (k, α:sub:`k``) ∈ W:sub:`ζ` and k = j + 1.
+**Case 2**: :math:`\Lambda(\zeta) > 1 \landa \zeta[\omega(\zeta)] = \sigma`
+
+    - :math:`\zeta\{\omega-\} = \alpha_j`, such that :math:`(j, \alpha_j) \in W_{\zeta}` and :math:`\alpha_j` is immediately to the left of the Delimiter at ω(ζ).
+    - :math:`\zeta\{\omega+\} = \alpha_k`, such that :math:`(k, \alpha_k) \in W_{\zeta}` and :math:`k = j + 1`.
 
 **Case 3**: Λ(ζ) > 1 and ζ[ω(ζ)] ≠ σ
 

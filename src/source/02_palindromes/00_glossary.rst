@@ -80,10 +80,10 @@ Definitions
 - D 4.2.1: Left Partial Sentence: :math:`Z[:n]`
 - D 4.2.2: Right Partial Sentence: :math:`Z[n:]`
 - D 4.2.3: Pivots: :math:`\omega(\zeta)`
-- D 4.2.4: Even Palindromes: :math:`\zeta \in P^+ \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )]`
-- D 4.2.5: Odd Palindromes: :math:`\zeta \in P^- \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]`
+- D 4.2.4: Even Palindromes: :math:`\zeta \in P_{+} \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )]`
+- D 4.2.5: Odd Palindromes: :math:`\zeta \in P_{-} \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]`
 - D 4.2.6: Parity
-- D 4.1.11: Pivot Words
+- D 4.2.7: Pivot Words
 - D 5.1.1: Lefthand Sentence Integrals: :math:`\Omega_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
 - D 5.1.2: Righthand Sentence Integrals: :math:`\Omega_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
 - D 5.2.1: Delimiter Mass: :math:`\mu_{-}(\zeta, i), \mu_{+}(\zeta, i)`
@@ -114,6 +114,7 @@ Axioms
 - Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
 - Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
 - Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L`
+
 .. _theorems:
 
 Theorems
@@ -185,15 +186,15 @@ Theorems
 - T 4.2.1: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta) - i + 1:]`
 - T 4.2.2: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i + 1 ) \land (l(\zeta[:i+1]) = l(\zeta[i+1:]))`
 - T 4.2.3: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i) \land (l(\zeta[:i]) + 1 = l(\zeta[i:]))`
-- T 4.2.4: :math:`\forall \zeta \in C_L: \exists n \in N_{l(\zeta)}: ( l(\zeta[:n]) = l(\zeta[n:]) ) \vee (l(\zeta[:n]) + 1 = l(\zeta[n:]))`
-- T 4.2.5: :math:`\forall \zeta \in C_L: (\exists k \in N : l(\zeta) = 2k + 1) \leftrightarrow \omega(\zeta) = (l(\zeta) + 1)/2`
-- T 4.2.6: :math:`\forall \zeta \in P^-: \omega(\zeta) = (l(\zeta) + 1)/2`
-- T 4.2.7: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N} : l(\zeta) = 2k) \leftrightarrow \omega(\zeta) = l(\zeta)/2`
-- T 4.2.8: :math:`\forall \zeta \in P^+: \omega(\zeta) = l(\zeta)/2`
+- T 4.2.4: :math:`\forall \zeta \in C_L: \exists n \in N_{l(\zeta)}: ( l(\zeta[:n]) = l(\zeta[n:]) ) \lor (l(\zeta[:n]) + 1 = l(\zeta[n:]))`
+- T 4.2.5: :math:`\forall \zeta \in C_L: (\exists k \in N : l(\zeta) = 2k + 1) \leftrightarrow \omega(\zeta) = \frac{l(\zeta) + 1}{2}`
+- T 4.2.6: :math:`\forall \zeta \in P_{-}: \omega(\zeta) = \frac{l(\zeta) + 1}{2}`
+- T 4.2.7: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N} : l(\zeta) = 2k) \leftrightarrow \omega(\zeta) = \frac{l(\zeta)}{2}`
+- T 4.2.8: :math:`\forall \zeta \in P_{+}: \omega(\zeta) = \frac{l(\zeta)}{2}`
 - T 4.2.9: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):])`
 - T 4.2.10: :math:`\forall \zeta \in C_L: \omega(\varsigma(\zeta)) \leq \omega(\zeta)`
-- T 4.2.11: :math:`P^- \cap P^+ = \emptyset`
-- T 4.2.12: :math:`P^- \cup P^+ = P`
+- T 4.2.11: :math:`P_{-} \cap P^+ = \emptyset`
+- T 4.2.12: :math:`P_{-} \cup P^+ = P`
 - T 4.3.1: :math:`\forall \zeta \in P: [ (\text{inv}(\zeta\{1\}) \subset_s \zeta\{\Lambda(\zeta)\}) \vee (\text{inv}(\zeta\{\Lambda(\zeta)\}) \subset_s \zeta\{1\}) ] \land [ (\zeta\{1\} \subset_s \text{inv}(\zeta\{\Lambda(\zeta)\})) \vee (\zeta\{\Lambda(\zeta)\} \subset_s \text{inv}(\zeta\{1\})) ]`
 - T 4.3.2: :math:`\forall \zeta \in P: (\zeta[\omega(\zeta)] = \sigma) \to ( (\text{inv}(\zeta\{\omega-\}) \subset_s \zeta\{\omega+\}) \vee (\text{inv}(\zeta\{\omega+\}) \subset_s \zeta\{\omega-\}))`
 - T 5.1.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (i/l(\zeta))`
