@@ -6,3 +6,4 @@ numpy
 scipy
 tk
 nltk
+google-generativeai

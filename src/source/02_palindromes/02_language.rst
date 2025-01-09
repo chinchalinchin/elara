@@ -52,13 +52,13 @@ The exact meaning of these symbols should be attended with utmost care. *𝔞*, 
 
 The Empty Character also deserves special mention, since it represents a *null* Character. The Empty Character is to be understood as a Character with no semantic content. It can be added or subtracted from a String without altering it in any way. The domain of all Strings **S**, as will be shown in (the albeit informal) :ref:`Theorem 1.1.2 <theorem-1-1-2>`, is uncountably infinite. Beyond this, the Empty Character introduces further ambiguity when defining the concepts of Word and Language, since multiple Strings with the Empty Character, i.e. *𝔞ε*, *𝔞εε*, *𝔞εεε*, etc., can represent the same semantic content. In order to formally define these linguistic entities, the Empty Character must be excluded from the domain of Words and Language. 
 
-Take note, at this point it is has not yet been shown that Characters are Strings; the preceding statements should be taken heuristically. This will be rectified in the next section with the formal definition of concatenation and the introduction of Character Axiom C.1. 
+Take note, at this point it is has not yet been shown that Characters are Strings; the preceding statements should be taken heuristically. This will be rectified in the next section with the formal definition of concatenation and the introduction of :ref:`Character Axiom C.1 <axiom-c1>`. 
 
 The aggregate of all Characters is called an *Alphabet* and is denoted by an uppercase Sigma, :math:`\Sigma`,
 
 .. math::
 
-    \Sigma = { \varepsilon, \sigma, \mathfrak{a}, \mathfrak{b}, \mathfrak{c}, ... }
+    \Sigma = \{ \varepsilon, \sigma, \mathfrak{a}, \mathfrak{b}, \mathfrak{c}, ... \}
 
 It will sometimes be necessary to refer to indeterminate Characters, so notation is introduced for Character Variables,
 
@@ -112,7 +112,7 @@ It is assumed that the operation of concatenation is closed with respect to the 
 
 Concatenation as it is normally found in the fields of automata theory or regular expressions is treated as a primitive operation performed between two string operands. Concatenation of multiple strings is then defined inductively, similary to :ref:`Definition 1.1.1 <definition-1-1-1>` but differing in the essential quality that it treats of only strings. The current formulation differs in that concatenation in this system is not conceived, at least in the primitive stage, as the "joining" of two or more Strings. Instead, the formal system under construction treats concatenation as an elementary operation that occurs between Characters and Strings, i.e. it is a *hetergeneous* operation.
 
-The reason for this distinction will become clear as the formal theory begins to detail palindromic structures that display symmetry across linguistic levels. It should only be noted at this point that :ref:`Definition 1.1.1 <definition-1-1-1>`is a conscious decision to depart from convention.
+The reason for this distinction will become clear as the formal theory begins to detail palindromic structures that display symmetry across linguistic levels. It should only be noted at this point that :ref:`Definition 1.1.1 <definition-1-1-1>` is a conscious decision to depart from convention.
 
 To make this distinction plain, consider that given an Alphabet :math:`\Sigma` and :ref:`Definition 1.1.1 <definition-1-1-1>`, one still cannot say the result of a concatenation of two Characters is a String, nor make any claim about the contents of :math:`S`, the set of all Strings. The Comprehension Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` only states the result of concatenating a Character with a String is a String. It says nothing at all about whether or not single Characters themselves are Strings, and thus it says nothing about whether the result of concatenating two or more Characters is itself a String. 
 
@@ -126,7 +126,7 @@ In order to rectify this, the first (official) Axiom is now introduced.
 
     \forall \iota \in \Sigma: \iota \in S
 
-This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with :ref:`Definition 1.1.1 <definition-1-1-1>`, immediately populates the set of all Strings **S** with an uncountably infinite domain of objects (See :ref:`Theorem 1.1.2 <theorem-1-1-2>` for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet, in every possible order. In other words, Axiom C.1 in conjunction with :ref:`Definition 1.1.1 <definition-1-1-1>` ensure the domain is non-Empty. 
+This Axiom states the intuitive notion that all Characters are Strings. This includes Empty Characters and Delimiter Characters. This Axiom, in conjunction with :ref:`Definition 1.1.1 <definition-1-1-1>`, immediately populates the set of all Strings **S** with an uncountably infinite domain of objects (See :ref:`Theorem 1.1.2 <theorem-1-1-2>` for an informal proof of this fact) consisting of every possible combination of Characters from the Alphabet, in every possible order. In other words, :ref:`Axiom C.1 <axiom-c1>` in conjunction with :ref:`Definition 1.1.1 <definition-1-1-1>` ensure the domain is non-Empty. 
 
 **Example** Let *s = 𝔞𝔟𝔠* and *t = 𝔡𝔢𝔣*. The concatenation of these two Strings *st* is written,
 
@@ -346,17 +346,17 @@ Let *u* and *t* be arbitrary strings in **S**. Let **U** and **T** be the charac
 
 .. math::
 
-    U = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(u)} )
+    1. \quad U = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(u)} )
 
 .. math::
 
-    T = ( \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)} )
+    2. \quad T = ( \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)} )
 
 Let *ut* be the concatenation of *u* and *t*. By :ref:`Definition 1.1.1 <definition-1-1-1>`, the Character-level representation of *ut* is,
 
 .. math::
 
-    UT = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(s)}, \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)})
+    3. \quad UT = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(s)}, \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)})
 
 By :ref:`Definition 1.1.3 <definition-1-1-3>`, the String Length of a String is the number of indexed non-Empty Characters it contains. Thus, :math:`l(u)` is the number of non-Empty Characters in *u*, :math:`l(t)` is the number of non-Empty Characters in *t*, and :math:`l(ut)` is the number of non-Empty Characters in *ut*.
 
@@ -366,17 +366,17 @@ Therefore, the total number of non-Empty Characters in *ut* is the sum of the nu
 
 .. math::
 
-    l(ut) = l(u) + l(t)
+    4. \quad l(ut) = l(u) + l(t)
 
 Since *u* and *t* were arbitrary strings, this can be generalized over the set of all Strings,
 
 .. math::
 
-    \forall u, t \in S : l(ut) = l(u) + l(t)`
+    5. \quad \forall u, t \in S : l(ut) = l(u) + l(t)
 
 ∎
 
-With the concept of String Length now defined, it is also a simple matter to define String Equality in terms of Character Equality using the Equality Axiom C.0.
+With the concept of String Length now defined, it is also a simple matter to define String Equality in terms of Character Equality using the :ref:`Equality Axiom C.0 <axiom-c0>`.
 
 .. _definition-1-1-4:
 
@@ -397,7 +397,9 @@ Let *u* be a String. Let **U** be the Character-level set representation of *u* 
 The string *t* is said to be *equal* to String *u* if the Strings have equal length and the Characters at each corresponding index are equal. Formally, *t = u* if and only if,
 
     1. :math:`l(t) = l(u)` (The String Lengths of t and u are equal)
-    2. :math:`\forall i \in N_{l(t)}: \mathfrak{a}_{i} = \mathfrak{b}_{i}` (The Characters at each corresponding index are equal) ∎
+    2. :math:`\forall i \in N_{l(t)}: \mathfrak{a}_{i} = \mathfrak{b}_{i}` (The Characters at each corresponding index are equal) 
+
+∎
 
 Finally, String Length provides the means for a quality-of-life enhancement to the formal system in the form of Character Index notation.
 
@@ -433,7 +435,7 @@ Assume, for the sake of contradiction, that the set of all Strings **S** is coun
 
 .. math::
     
-    s_1, s_2, s_3, ...
+    1. \quad s_1, s_2, s_3, ...
 
 Now, construct a new String *t* as follows:
 
@@ -452,13 +454,13 @@ Similar to the explication of *length*, the notion of a String *containing* anot
 
 Consider the Strings *"rat"* and *"strata"*. The string *"rat"* *is contained* in the String strata", because the order of the String *"rat"* is preserved in *"strata"*. An intuitive way of capturing this relationship is to map the indices of the Characters in *"rat"* to the indices of the Characters in *"strata"* which correspond to the indices in *"rat"*. A cursory (but incorrect) definition of *containment* can then be attempted, using this insight as a guide.
 
-**Containment (Incorrect Version)** :math:`t \subset_{s} u` 
+**Containment (Incorrect Version)** :math:`t \subset_s u` 
 
 Let *t* and *u* be Strings. *t* is said to be *contained in u*, denoted by,
 
 .. math::
 
-    t \subset_{s} u
+    t \subset_s u
 
 If and only if there exists a strictly increasing function :math:`f: N_{l(t)} \to N_{l(u)}` such that:
 
@@ -502,7 +504,7 @@ The function defined through :math:`f(1) = 1`, :math:`f(2) = 5` and  :math:`f(3)
 
 **Definition 1.1.6: Consecutive Functions** 
 
-A function *f* is consecutive over N:sub:`s` if it satisfies the formula,
+A function *f* is consecutive over **N**:sub:`s` if it satisfies the formula,
 
 .. math::
 
@@ -534,25 +536,25 @@ The notion of containment will be central to developing the logic of palindromic
 
 .. _theorem-1-1-3:
 
-**Theorem 1.1.3** :math:`\forall s \in S: \varepsilon \subset_{s} s`
+**Theorem 1.1.3** :math:`\forall s \in S: \varepsilon \subset_s s`
 
 Let *s* be an arbitrary string in **S**. By :ref:`Definition 1.1.3 <definition-1-1-3>`, :math:`l(\varepsilon) = 0`. Thus,
 
 .. math::
 
-   1. N_{l(\varepsilon)} = \emptyset
+   1. \quad N_{l(\varepsilon)} = \emptyset
 
-The empty function :math:`f: \emptyset \to N_{l(s)}` vacuously satisfies the condition for containment (Definition 1.1.7), as there are no elements in the domain to violate the condition. Therefore, 
+The empty function :math:`f: \emptyset \to N_{l(s)}` vacuously satisfies the condition for containment (:ref:`Definition 1.1.7 <definition-1-1-7>`), as there are no elements in the domain to violate the condition. Therefore, 
 
 .. math::
 
-    2. \varepsilon \subset_{s} s
+    2. \quad \varepsilon \subset_s s
 
 Since *s* was arbitrary, this can be generalized over the set of all Strings,
  
 .. math::
 
-    \forall s \in S: \varepsilon \subset_{s} s
+    3. \quad \forall s \in S: \varepsilon \subset_s s
     
 ∎
 
@@ -582,7 +584,7 @@ The following symbolic notation is introduced for these terms,
     1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
     2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
 
-In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as *{ "dog", "cat", "hamster", ... }* or *{ "tree", "flower", "grass", .... }*. The number of Words in a Language is denoted | L |.
+In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as :math:`\{ \text{"dog"}, \text{"cat"}, \text{"hamster"}, ... \}` or :math:`\{ \text{"tree"}, \text{"flower"}, \text{"grass"}, .... \}`. The number of Words in a Language is denoted :math:`| L |`.
 
 Again, at the risk of unwarranted repetition, Language is assumed to be a *fixed set* known a priori to the construction of the current formal system. It not the goal of the formal system to describe the semantic conditions for a Word's eligibility in Language or how a Language is constructed from elementary Characters and Strings into a class of Words through systems like grammar or pragmatics, but rather, given a Language of Words, the formal system seeks to elaborate the syntactical conditions that are imposed on Language by its nature as a set of Strings with ordered Characters. 
 
@@ -629,11 +631,11 @@ The next axiom represents the minimal *necessary* assumptions that are placed on
 
 ∎
 
-There are two conjuncts in the Discovery Axiom and each of them captures a noteworthy assumption that is being made about Words in a Language. The first conjunct, (:math:`l(\alpha) \neq 0`), will be used to prove some fundamental properties of Words in the next section. This condition that a Word's String Length cannot be equal to zero serves a dual purpose. First, by :ref:`Definition 1.1.3 <definition-1-1-3>`, it ensures the Empty Character cannot be a Character in a Word (this fact will be more rigorously proven in :ref:`Theorem 1.2.4 <theorem-1-2-4>` below), preventing vacuous semantic content. 
+There are two conjuncts in the :ref:`Discovery Axiom W.1 <axiom-w1>` and each of them captures a noteworthy assumption that is being made about Words in a Language. The first conjunct, (:math:`l(\alpha) \neq 0`), will be used to prove some fundamental properties of Words in the next section. This condition that a Word's String Length cannot be equal to zero serves a dual purpose. First, by :ref:`Definition 1.1.3 <definition-1-1-3>`, it ensures the Empty Character cannot be a Character in a Word (this fact will be more rigorously proven in :ref:`Theorem 1.2.4 <theorem-1-2-4>` below), preventing vacuous semantic content. 
 
 Second, in order for two Words to be distinguished as the same Word, there must be dimensions of comparision over which to assert the equality. One must have some criteria for saying *this* linguistic entity is equal to that *that* linguistic entity. String Length serves as one of the two dimensions for a Word necessary for a word to be "embodied" in a medium (the other being the inherent ordinality of Characters in a Word). In other words, the concept of String Length is foundational to the discovery of Words from the set of all Strings **S**. One must be able to discard those Strings possessing null content before one can engage in Language. 
 
-While the definition of String Length and the first conjunct preclude the inclusion of the Empty Character in a Word, there is no such restriction on the Delimiter, hence the second conjunct of the Discovery Axiom. This conjunct captures the common-sense notion that a Word from a Language cannot contain a Delimiter; Instead, Delimiters are what separate Words from one another in a String. 
+While the definition of String Length and the first conjunct preclude the inclusion of the Empty Character in a Word, there is no such restriction on the Delimiter, hence the second conjunct of the :ref:`Discovery Axiom <axiom-w1>`. This conjunct captures the common-sense notion that a Word from a Language cannot contain a Delimiter; Instead, Delimiters are what separate Words from one another in a String. 
 
 It is these two purely syntactical properties that allow a user of Language to separate Words from the arbitrary chaos of Strings, preparing them for the assignment of semantic content. 
 
@@ -656,17 +658,17 @@ Therefore, *αε* and *εα* are both Strings with the same Characters as *α* i
 
 .. math::
 
-    \alpha\varepsilon = \varepsilon\alpha = \alpha.
+    1. \quad \alpha\varepsilon = \varepsilon\alpha = \alpha.
 
 Since *α* was arbitrary, this can be generalized over the Language, 
 
 .. math::
 
-    \forall \alpha \in L:  \alpha \varepsilon = \varepsilon \alpha = \alpha
+    2. \quad \forall \alpha \in L:  \alpha\varepsilon = \varepsilon\alpha = \alpha
 
 ∎
 
-**Theorem 1.2.2** :math:`\forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_{s} \alpha`
+**Theorem 1.2.2** :math:`\forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_s \alpha`
 
 This theorem can be stated in natural language as follows: All Characters in a Word are contained in the Word.
 
@@ -676,25 +678,25 @@ Consider the String *s* with a single Character :math:`\mathfrak{b}_1 = \alpha[i
 
 .. math::
 
-    s = \alpha[i]
+    1. \quad s = \alpha[i]
 
 Clearly, by :ref:`Definition 1.1.3 <definition-1-1-3>`, :math:`l(s) = 1`. To show that *s* is contained in *α*, a strictly increasing and consecutive function that maps the Characters in *s* to the Characters in *α* must be found. Since :math:`l(s) = 1`, this can be defined simply as,
 
 .. math::
 
-    f(1) = i
+    2. \quad f(1) = i
 
 For any value of *i*. Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>`,
 
 .. math::
 
-    \alpha[i] \subset_{s} \alpha 
+    3. \quad \alpha[i] \subset_{s} \alpha 
     
 Since *α* and *i* are arbitary, this can be generalized, 
 
 .. math::
 
-    \forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_{s} \alpha
+    4. \quad \forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_{s} \alpha
 
 The next theorem, :ref:`Theorem 1.2.3 <theorem-1-2-3>`, is the direct result of defining String length as the number of non-Empty characters in a String and then defining containment based on String length. Careful inspection of :ref:`Definition 1.1.7 <definition-1-1-7>` will show that it depends on a precise notion of String Length. In other words, in the current formal system, containment is derivative of length. The order of definitions and axioms in any formal system of Language cannot be of an arbitary character. There is an inherent hierarchical structure in linguistics that must be captured and formalized in the correct order.
 
@@ -706,7 +708,7 @@ Let *α* be an arbitrary word in **L**, and let *i* be a natural number such tha
  
 .. math::
 
-    1 \leq i \leq l(\alpha)
+    1. \quad 1 \leq i \leq l(\alpha)
     
 By the :ref:`Discovery Axiom W.1 <axiom-w1>`, it is known that :math:`l(\alpha) \neq 0`.
 
@@ -716,21 +718,21 @@ Since :math:`1 \leq i \leq l(\alpha)`, the Character at position *i* in *α*, de
 
 .. math::
 
-    \forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
+   2. \quad \forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon
 
 ∎
 
-:ref:`Theorem 1.2.1 <theorem-1-2-1>`- :ref:`1.2.3 <theorem-1-2-3>`` are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content. Then it must be assumed for semantic content to be assigned to a series of concatenated Characters the length of that String must be non-zero. This is the meaning of the first conjunct in the Discovery Axiom W.1.
+:ref:`Theorem 1.2.1 <theorem-1-2-1>` - :ref:`1.2.3 <theorem-1-2-3>` are the necessary logical pre-conditions for Words to arise from the domain of Strings. In essence, before Language can be distinguished from its uncountably infinite domain, a way of measuring String length must be introduced. This definition must prevent Empty Strings from entering into the Language, which would otherwise allow the annunciation of null content. Then it must be assumed for semantic content to be assigned to a series of concatenated Characters the length of that String must be non-zero. This is the meaning of the first conjunct in the :ref:`Discovery Axiom W.1 <axiom-w1>`.
 
-Language is materially different from its un-structured domain of Strings for this reason. Language does not possess null content. Language is measureable. Words in Language have String Length. Moreover, Words are delimited. In other words, Words are separable, distinct linguistic entities. These facts are guaranteed by the :ref:`Discovery Axiom W.1 <axiom-w1>`and :ref:`Theorem 1.2.1 <theorem-1-2-1>` - :ref:`Theorem 1.2.3 <theorem-1-2-3>`. These results provide the canvas upon which the rest of the theory will be drawn.
+Language is materially different from its un-structured domain of Strings for this reason. Language does not possess null content. Language is measureable. Words in Language have String Length. Moreover, Words are delimited. In other words, Words are separable, distinct linguistic entities. These facts are guaranteed by the :ref:`Discovery Axiom W.1 <axiom-w1>` and :ref:`Theorem 1.2.1 <theorem-1-2-1>` - :ref:`Theorem 1.2.3 <theorem-1-2-3>`. These results provide the canvas upon which the rest of the theory will be drawn.
 
 There may appear to be a contradiction in the results of :ref:`Theorem 1.1.3 <theorem-1-1-3>`, which states the Empty Character is contained in every String, and :ref:`Theorem 1.2.3 <theorem-1-2-3>`, which states no Character in a Word can be the Empty Character. Every Word is a String, by :ref:`Definition 1.2.2 <definition-1-2-2>`, so the results appear at odds. The solution to this apparent contradiction lies in how Characters and Strings have been formalized as distinct, but interrelated, terms. The contradiction is no longer a contradiction once the distinction between a String being contained in another String and a Character being a constituent element at a specific position with in a String is understood.
 
-The containment relation :math:`\varepsilon \subset_{s} s` refers to the Empty Character as a subsequence of *s*. The relation being expressed is about the sequence of Characters, and the Empty sequence is always a subsequence of any other sequence.
+The containment relation :math:`\varepsilon \subset_s s` refers to the Empty Character as a subsequence of *s*. The relation being expressed is about the sequence of Characters, and the Empty sequence is always a subsequence of any other sequence.
 
-:ref:`Theorem 1.2.3 <theorem-1-2-3>`, on the other hand, refers to individual Characters at specific positions within a Word. It is a claim about the elements of the Character-level representation (e.g., the *ι* in :math:`(i, ι) \in \Alpha`).
+:ref:`Theorem 1.2.3 <theorem-1-2-3>`, on the other hand, refers to individual Characters at specific positions within a Word. It is a claim about the elements of the Character-level representation (e.g., the *ι* in :math:`(i, ι) \in A`).
 
-.. _string_inversion:
+.. _string-inversion:
 
 String Inversion
 ^^^^^^^^^^^^^^^^
@@ -842,39 +844,39 @@ By the :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    1. l(t) = l(s)
+    1. \quad l(t) = l(s)
 
 .. math::
 
-    2. \forall i \in N_{l(s)}: t[i] = s[l(s) - i + 1]
+    2. \quad \forall i \in N_{l(s)}: t[i] = s[l(s) - i + 1]
 
 Now, let :math:`u = inv(t)` with length *l(u)*. Applying :ref:`Definition 1.2.4 <definition-1-2-4>` again,
 
 .. math::
 
-    3. l(u) = l(t)
+    3. \quad l(u) = l(t)
     
 .. math::
 
-    4. \forall j \in N_{l(t)}: u[j] = t[l(t) - j + 1]
+    4. \quad \forall j \in N_{l(t)}: u[j] = t[l(t) - j + 1]
 
-Since :math:`l(t) = l(s) = l(u)` and :math:`N_l(t) = N_{l(s)} = N_{l(u)}`(from step 1, step 3 and by definition of natural numbers), these substitions may be made in step 4,
+Since :math:`l(t) = l(s) = l(u)` and :math:`N_{l(t)} = N_{l(s)} = N_{l(u)}`(from step 1, step 3 and by definition of natural numbers), these substitions may be made in step 4,
 
 .. math::
 
-    5. \forall j \in N_{l(s)}: u[j] = s[l(s) - (l(t) - j + 1) + 1]
+    5. \quad \forall j \in N_{l(s)}: u[j] = s[l(s) - (l(t) - j + 1) + 1]
 
 Simplifying the index on the right hand side,
 
 .. math::
 
-    6. \forall j \in N_{l(s)}: u[j] = s[j]
+    6. \quad \forall j \in N_{l(s)}: u[j] = s[j]
 
-Since *u* and *s* have the same length (:math:`l(u) = l(t) = l(s)`) and the same Characters in the same order (:math:`u[j] = s[j]` for all *i*), by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, it can be concluded that :math:`u = s`. Recall that :math:`u = inv(t)` and :math:`t = inv(s)`. Substituting, the desired result is obtained, :math:`inv(inv(s)) = s`. ∎ 
+Since *u* and *s* have the same length (:math:`l(u) = l(t) = l(s)`) and the same Characters in the same order (:math:`u[j] = s[j]` for all *i*), by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, it can be concluded that :math:`u = s`. Recall that :math:`u = \text{inv}(t)` and :math:`t = inv(s)`. Substituting, the desired result is obtained, :math:`\text{inv}(\text{inv}(s)) = s`. ∎ 
 
-Two versions of :ref:`Theorem 1.2.5 <theorem-1-2-5-a>` are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that are better served by the Character-level representation.
+Two versions of :ref:`Theorem 1.2.5 <theorem-1-2-5>` are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that are better served by the Character-level representation.
 
-.. _theorem-1-2-5-a:
+.. _theorem-1-2-5:
 
 **Theorem 1.2.5 (Character-level Representation)** :math:`\forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u)`
 
@@ -882,41 +884,41 @@ Let **U** be the Character level representation of *u*,
 
 .. math::
 
-    1. U = (\mathfrak{a}_1 , \mathfrak{a}_2 , ..., \mathfrak{a}_{l(u)})
+    1. \quad U = (\mathfrak{a}_1 , \mathfrak{a}_2 , ..., \mathfrak{a}_{l(u)})
 
 Let **T** be the Character level representation of *t*,
 
 .. math::
 
-    2. T = (\mathfrak{b}_1, \mathfrak{b}_2, ... , \mathfrak{b}_{l(t)})
+    2. \quad T = (\mathfrak{b}_1, \mathfrak{b}_2, ... , \mathfrak{b}_{l(t)})
 
 The Character level representation of *ut*, denoted **UT**, is then given by,
 
 .. math::
 
-    3. UT = (\mathfrak{a}_1 , \mathfrak{a}_2 , ..., \mathfrak{a}_{l(u)}, \mathfrak{b}_1, \mathfrak{b}_2 , ... , \mathfrak{b}_{l(t)})
+    3. \quad UT = (\mathfrak{a}_1 , \mathfrak{a}_2 , ..., \mathfrak{a}_{l(u)}, \mathfrak{b}_1, \mathfrak{b}_2 , ... , \mathfrak{b}_{l(t)})
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion, the Character level representation of *inv(ut)* is the reversed sequence of **UT**,
 
 .. math::
 
-    4. \text{inv}(UT) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1 , \mathfrak{b}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
+    4. \quad \text{inv}(UT) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1 , \mathfrak{b}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
 
 The Character level representation of *inv(U)*, denoted **inv(U)**,
 
 .. math::
 
-    5. \text{inv}(U) = (\mathfrak{a}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
+    5. \quad \text{inv}(U) = (\mathfrak{a}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
 
 The Character-level representation of *inv(t)*, denoted **inv(T)** is 
 
 .. math::
 
-    6. inv(T) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{𝔟}_1 )
+    6. \quad \text{inv}(T) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{𝔟}_1 )
 
 The Character-level representation of *inv(t)inv(u)* is:
 
-    7. ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1, \mathfrak{a}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
+    7. \quad ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1, \mathfrak{a}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
 
 Comparing the results from step 4 and step 7, it can be seen the Character-level representations of *inv(ut)* and *inv(t)inv(u)* are identical.
 
@@ -930,39 +932,39 @@ Let *u* and *t* be arbitrary strings in **S**. Let :math:`l(u) = m` and :math:`l
 
 Let :math:`s = ut`. Let :math:`v = \text{inv}(s) = \text{inv}(ut)`. Let :math:`w = \text{inv}(t)\text{inv}(u).
 
-To prove show the theorem, it must be shown that *v = w*, which means, by :ref:`Definition 1.1.4 <definition-1-1-4>`, it must be shown that 
+To prove show the theorem, it must be shown that :math:`v = w`, which means, by :ref:`Definition 1.1.4 <definition-1-1-4>`, it must be shown that 
 
 .. math::
 
-    1. l(v) = l(w)
+    1. \quad l(v) = l(w)
     
 .. math::
 
-    2. \forall i ∈ N_{l(v)}: v[i] = w[i] 
+    2. \quad \forall i ∈ N_{l(v)}: v[i] = w[i] 
 
 By repeated applications of :ref:`Definition 1.2.4 <definition-1-2-4>`, 
 
 .. math::
 
-    3. l(v) = l(s) = l(ut) = m + n
+    3. \quad l(v) = l(s) = l(ut) = m + n
     
 .. math::
 
-    4. l(\text{inv}(t)) = l(t) = n
+    4. \quad l(\text{inv}(t)) = l(t) = n
     
 .. math::
 
-    5. l(\text{inv}(u)) = l(u) = m. 
+    5. \quad l(\text{inv}(u)) = l(u) = m. 
 
 From step 3 and step 4, it follows,
  
 .. math::
 
-    5. l(w) = l(\text{inv}(t)\text{inv}(u)) = l(\text{inv}(t)) + l(\text{inv}(u)) = n + m = m + n.
+    5. \quad l(w) = l(\text{inv}(t)\text{inv}(u)) = l(\text{inv}(t)) + l(\text{inv}(u)) = n + m = m + n.
 
 From steps 4 and 5, it follows, 
 
-    6. l(v) = l(w) = m + n.
+    6. \quad l(v) = l(w) = m + n.
 
 Now it is to be shown that :math:`v[i] = w[i]`` for all :math:`i \in N_{l(v)}`. Let *i* be an arbitrary index such that :math:`1 \leq i \leq m + n`.
 
@@ -972,31 +974,31 @@ By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    a. v[i] = s[l(s) - i + 1]
+    a. \quad v[i] = s[l(s) - i + 1]
 
 Since *l(s) = m + n*, it follows,
 
 .. math::
 
-    b. v[i] = s[m + n - i + 1]
+    b. \quad v[i] = s[m + n - i + 1]
     
 Since *m + n - i + 1* corresponds to an index in *t*, it follows,
 
 .. math::
 
-    c. v[i] = t[n - i + 1]
+    c. \quad v[i] = t[n - i + 1]
     
 By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    d. v[i] = \text{inv}(t)[i]
+    d. \quad v[i] = \text{inv}(t)[i]
 
 Since :math:`w = \text{inv}(t)\text{inv}(u)`,
 
 .. math::
 
-    e. v[i] = w[i]
+    e. \quad v[i] = w[i]
 
 **Case 2**: :math:`n + 1 \leq i \leq m + n`:
 
@@ -1004,47 +1006,47 @@ By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    a. v[i] = s[l(s) - i + 1]
+    a. \quad v[i] = s[l(s) - i + 1]
 
 Since :math:`l(s) = m + n`,
 
-    b. v[i] = s[m + n - i + 1]
+    b. \quad v[i] = s[m + n - i + 1]
 
 Since *m + n - i + 1* corresponds to an index in *u*,
 
 .. math::
 
-    c. v[i] = u[m - (i - n) + 1] 
+    c. \quad v[i] = u[m - (i - n) + 1] 
 
 Simplifying,
 
-    d. v[i] = u[m + n - i + 1]
+    d. \quad v[i] = u[m + n - i + 1]
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
-    e. v[i] = \text{inv}(u)[i - n]
+    e. \quad v[i] = \text{inv}(u)[i - n]
 
 Since :math:`w = \text{inv}(t)\text{inv}(u)`,
 
-    f. v[i] = w[i] (since w = inv(t)inv(u))
+    f. \quad v[i] = w[i] (since w = inv(t)inv(u))
 
 In both cases, :math:`v[i] = w[i]` for all :math:`i \in N_{l(v)}`. Since :math:`l(v) = l(w)`, by :ref:`Definition 1.1.4 <definition-1-1-4>` it follows :math:`v = w`. Therefore, 
 
 .. math::
 
-    7. \text{inv}(ut) = \text{inv}(t)\text{inv}(u).
+    7. \quad \text{inv}(ut) = \text{inv}(t)\text{inv}(u).
 
 Since *u* and *t* were arbitrary Strings, this can generalize over the set of all Strings,
 
 .. math::
 
-    8. \forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u) ∎
+    8. \quad \forall u, t \in S: \text{inv}(ut) = \text{inv}(t)\text{inv}(u) ∎
 
 The next theorem establishes the *"distributivity"* of String inversion over the relation of containment. 
 
 .. _theorem-1-2-6:
 
-**Theorem 1.2.6** :math:`\forall u, t \in S : u \subset_{s} t \leftrightarrow \text{inv}(u) \subset_{s} \text{inv}(t)`
+**Theorem 1.2.6** :math:`\forall u, t \in S : u \subset_s t \leftrightarrow \text{inv}(u) \subset_s \text{inv}(t)`
 
 This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the Inverse of *u* is contained in the Inverse of *t*.
 
@@ -1054,39 +1056,39 @@ Let *u* and *t* be arbitrary Strings in **S**.
 
 .. math::
 
-    1. u \subset_s t
+    1. \quad u \subset_s t
 
 By :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists a strictly increasing and consecutive function :math:`f: N_{l(u)} \to N_{l(t)}` such that,
 
 .. math::
 
-    1. \forall i \in N_{l(u)}: u[i] = t[f(i)]
+    1. \quad \forall i \in N_{l(u)}: u[i] = t[f(i)]
 
 Let,
 
 .. math::
 
-    3. v = \text{inv}(t)
+    3. \quad v = \text{inv}(t)
 
 .. math::
 
-    4. w = inv(u).
+    4. \quad w = \text{inv}(u).
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    5. \forall i \in N_{l(u)}: w[i] = \text{inv}(u)[i] = u[l(u) - i + 1]
+    5. \quad \forall i \in N_{l(u)}: w[i] = \text{inv}(u)[i] = u[l(u) - i + 1]
 
 .. math::
 
-    6. \forall i \in N_{l(t)}: v[i] = \text{inv}(t)[i] = t[l(t) - i + 1]
+    6. \quad \forall i \in N_{l(t)}: v[i] = \text{inv}(t)[i] = t[l(t) - i + 1]
    
 Define a function :math:`g: N_{l(w)} \to N_{l(v)}`  as follows,
 
 .. math::
 
-    7. g(i) = l(t) - f(l(u) - i + 1) + 1
+    7. \quad g(i) = l(t) - f(l(u) - i + 1) + 1
 
 This function maps the Character indices of *w* (the inverse of *u*) to the indices of *v* (the inverse of *t*).
 
@@ -1094,37 +1096,37 @@ This function maps the Character indices of *w* (the inverse of *u*) to the indi
 
 .. math::
 
-    8. i, j \in N_{l(w)}
+    8. \quad i, j \in N_{l(w)}
 
 Such that :math:`i < j`. Since :math:`l(w) = l(u)`,
 
 .. math::
 
-    9. i, j \in N_{l(u)}
+    9. \quad i, j \in N_{l(u)}
 
 Because *f* is strictly increasing, and
 
 .. math::
 
-    10. l(u) - j + 1 < l(u) - i + 1,
+    10. \quad l(u) - j + 1 < l(u) - i + 1,
 
 It follows,
 
 .. math::
 
-    11. f(l(u) - j + 1) < f(l(u) - i + 1)
+    11. \quad f(l(u) - j + 1) < f(l(u) - i + 1)
 
 Therefore,
 
 .. math::
 
-    12. l(t) - f(l(u) - i + 1) + 1 < l(t) - f(l(u) - j + 1) + 1
+    12. \quad l(t) - f(l(u) - i + 1) + 1 < l(t) - f(l(u) - j + 1) + 1
 
 which means
 
 .. math::
 
-    13. g(i) < g(j).
+    13. \quad g(i) < g(j).
 
 Thus, *g* is strictly increasing.
 
@@ -1132,45 +1134,45 @@ Thus, *g* is strictly increasing.
 
 .. math::
 
-    14. i \in N_{l(w)}
+    14. \quad i \in N_{l(w)}
 
 Such that :math:`i < l(w)`. Then,
 
 .. math::
 
-    15. g(i+1) = l(t) - f(l(u) - (i + 1) + 1) + 1
+    15. \quad g(i+1) = l(t) - f(l(u) - (i + 1) + 1) + 1
     
 .. math::
 
-    16. g(i+1) = l(t) - f(l(u) - i - 1 + 1) + 1
+    16. \quad g(i+1) = l(t) - f(l(u) - i - 1 + 1) + 1
 
 Since *f* is consecutive, we have:
 
 .. math::
 
-    17. f(l(u) - i - 1 + 1) = f(l(u) - i) + 1
+    17. \quad f(l(u) - i - 1 + 1) = f(l(u) - i) + 1
 
 Then,
 
 .. math::
 
-    18. g(i+1) = l(t) - (f(l(u) - i) + 1) + 1
+    18. \quad g(i+1) = l(t) - (f(l(u) - i) + 1) + 1
     
 .. math::
 
-    19. g(i+1) = l(t) - f(l(u) - i)
+    19. \quad g(i+1) = l(t) - f(l(u) - i)
     
 .. math::
 
-    20. g(i+1) = l(t) - f(l(u) - i + 1) + 1 + 1 - 1
+    20. \quad g(i+1) = l(t) - f(l(u) - i + 1) + 1 + 1 - 1
     
 .. math::
 
-    21. g(i+1) = l(t) - f(l(u) - i + 1) + 1
+    21. \quad g(i+1) = l(t) - f(l(u) - i + 1) + 1
     
 .. math::
 
-    22. g(i+1) = g(i) + 1
+    22. \quad g(i+1) = g(i) + 1
 
 Thus *g* is consecutive.
 
@@ -1178,107 +1180,107 @@ Thus *g* is consecutive.
 
 .. math::
 
-    23. \forall i \in N_{l(w)}: w[i] = v[g(i)]
+    23. \quad \forall i \in N_{l(w)}: w[i] = v[g(i)]
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    24. w[i] = u[l(u) - i + 1]
+    24. \quad w[i] = u[l(u) - i + 1]
 
 From step 2, it follows,
 
 .. math::
 
-    25. w[i] = t[f(l(u) - i + 1)]
+    25. \quad w[i] = t[f(l(u) - i + 1)]
 
 By definition of *g*,
 
 .. math::
 
-    26. g(i) = l(t) - f(l(u) - i + 1) + 1
+    26. \quad g(i) = l(t) - f(l(u) - i + 1) + 1
 
 Rearranging,
 
 .. math::
 
-    27. f(l(u) - i + 1) = l(t) - g(i) + 1
+    27. \quad f(l(u) - i + 1) = l(t) - g(i) + 1
 
 Substituting into step 25,
 
 .. math::
 
-    28. w[i] = t[l(t) - g(i) + 1]
+    28. \quad w[i] = t[l(t) - g(i) + 1]
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>` and the definition of *v*,
 
 .. math::
 
-    29. v[g(i)] = t[l(t) - g(i) + 1]
+    29. \quad v[g(i)] = t[l(t) - g(i) + 1]
 
 Therefore,
 
 .. math::
 
-    30. w[i] = v[g(i)]
+    30. \quad w[i] = v[g(i)]
 
 Since this holds for all :math:`i \in N_{l(w)}`, and *g* is a strictly increasing and consecutive function, by :ref:`Definition 1.1.7 <definition-1-1-7>`, it follows,
 
 .. math::
 
-    31. w \subset_s v
+    31. \quad w \subset_s v
 
 Therefore,
 
 .. math::
 
-    32. \text{inv}(u) \subset_s \text{inv}(t)
+    32. \quad \text{inv}(u) \subset_s \text{inv}(t)
 
 (←) Assume
 
 .. math::
 
-    1. \text{inv}(u) \subset_s \text{inv}(t)
+    1. \quad \text{inv}(u) \subset_s \text{inv}(t)
 
 By :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
-    2. \text{inv}(\text{inv}(u)) = u
+    2. \quad \text{inv}(\text{inv}(u)) = u
 
 .. math::
 
-    3. \text{inv}(\text{inv}(t)) = t
+    3. \quad \text{inv}(\text{inv}(t)) = t
 
 Therefore, using the result just proved in the (→) direction, it can be said since
 
 .. math::
 
-    4. \text{inv}(u) \subset_s \text{inv}(t)
+    4. \quad \text{inv}(u) \subset_s \text{inv}(t)
 
 This implies,
 
 .. math::
 
-    5. \text{inv}(\text{inv}(t)) \subset_s \text{inv}(\text{inv}(u))
+    5. \quad \text{inv}(\text{inv}(t)) \subset_s \text{inv}(\text{inv}(u))
 
 Substituting in steps 2 and 3,
 
 .. math::
 
-    6. t \subset_s u
+    6. \quad t \subset_s u
 
 Since both directions of the implication hold, it follows,
 
 .. math::
 
-    1. \forall u, t \in S: u \subset_s t \leftrightarrow \text{inv}(u) \subset_s \text{inv}(t) ∎
+    1. \quad \forall u, t \in S: u \subset_s t \leftrightarrow \text{inv}(u) \subset_s \text{inv}(t) ∎
 
 The next theorem establishes the *transitivity* of containment over Strings. 
 
 .. _theorem-1-2-7:
 
-**Theorem 1.2.7** :math:`\forall t, u, v \in S : (t \subset_{s} u) \land (u \subset_{s} v) \to (t \subset_{s} v)`
+**Theorem 1.2.7** :math:`\forall t, u, v \in S : (t \subset_s u) \land (u \subset_s v) \to (t \subset_s v)`
 
 This theorem can be stated in natural language as follows: For any Strings *t*, *u*, and *v* in **S**, if *t* is contained in *u* and *u* is contained in *v*, then *t* is contained in *v*.
 
@@ -1286,53 +1288,53 @@ Let *t*, *u*, and *v* be arbitrary Strings in **S** such that both of the follow
 
 .. math::
 
-    1. t \subset_s u
+    1. \quad t \subset_s u
 
 .. math::
 
-    2. u \subset_s v
+    2. \quad u \subset_s v
 
 By :ref:`Definition 1.1.7 <definition-1-1-7>` and step 1, there exists a strictly increasing and consecutive function :math:`f: N_{l(t)} \to N_{l(u)}` such that,
 
 .. math::
 
-    3. \forall i \in N_{l(t)}: t[i] = u[f(i)]
+    3. \quad \forall i \in N_{l(t)}: t[i] = u[f(i)]
 
 Similarly, by :ref:`Definition 1.1.7 <definition-1-1-7>` and step 2, there exists a strictly increasing and consecutive function :math:`g: N_{l(u)} \to N_{l(v)}` such that:
 
 .. math::
 
-    4. \forall j \in N_{l(u)}: u[j] = v[g(j)]
+    4. \quad \forall j \in N_{l(u)}: u[j] = v[g(j)]
 
 Define a new function :math:`h: N_{l(t)} \to N_{l(v)}` as the composition of *f* and *g*,
 
 .. math::
 
-    5. \forall j \in N_{l(t)}: h(i) = g(f(i))
+    5. \quad \forall j \in N_{l(t)}: h(i) = g(f(i))
 
 **Increasing** Let 
 
 .. math::
 
-    6. i, j \in N_{l(t)} 
+    6. \quad i, j \in N_{l(t)} 
     
 Such that :math:`i < j`. Since *f* is strictly increasing, 
 
 .. math::
 
-    7. f(i) < f(j) 
+    7. \quad f(i) < f(j) 
 
 Since *g* is strictly increasing, 
 
 .. math::
 
-    8. g(f(i)) < g(f(j))
+    8. \quad g(f(i)) < g(f(j))
     
 Therefore, 
 
 .. math::
 
-    9. h(i) < h(j)
+    9. \quad h(i) < h(j)
     
 Thus, *h* is strictly increasing.
 
@@ -1340,25 +1342,25 @@ Thus, *h* is strictly increasing.
 
 .. math::
 
-    10. i \in N_{l(t)} 
+    10. \quad i \in N_{l(t)} 
     
 Such that :math:`i < l(t)`. Since *f* is consecutive, 
 
 .. math::
 
-    11. f(i+1) = f(i) + 1 
+    11. \quad f(i+1) = f(i) + 1 
     
 Since *g* is consecutive, following from step 11,
 
 .. math::
 
-    12. g(f(i+1)) = g(f(i) + 1) = g(f(i)) + 1
+    12. \quad g(f(i+1)) = g(f(i) + 1) = g(f(i)) + 1
     
 Therefore, 
 
 .. math::
 
-    13. h(i+1) = h(i) + 1
+    13. \quad h(i+1) = h(i) + 1
 
 Thus, *h* is consecutive.
 
@@ -1366,47 +1368,47 @@ Thus, *h* is consecutive.
 
 .. math::
 
-    14.  i \in N_{l(t)} 
+    14. \quad i \in N_{l(t)} 
     
 Then, by step 3
 
-    15. t[i] = u[f(i)]
+    15. \quad t[i] = u[f(i)]
 
 Since :math:`f: N_{l(t)} \to N_{l(u)}`, it follows that for all 
 
 .. math::
 
-    16. \forall i \in N_{l(t)}: f(i) \in N_{l(u)}`
+    16. \quad \forall i \in N_{l(t)}: f(i) \in N_{l(u)}`
 
 By step 16 and step 4,
 
 .. math::
 
-    17. u[f(i)] = v[g(f(i))]
+    17. \quad u[f(i)] = v[g(f(i))]
 
 By definition of *h*,
 
 .. math::
 
-    18. v[g(f(i))] = v[h(i)]
+    18. \quad v[g(f(i))] = v[h(i)]
 
 Therefore, 
 
 .. math::
 
-    19. \forall i \in N_l(t): t[i] = v[h(i)]
+    19. \quad \forall i \in N_l(t): t[i] = v[h(i)]
 
 Since *h* is a strictly increasing and consecutive function over :math:`N:sub:`l(t) \to N_{l(v)}`, and :math:`t[i] = v[h(i)]` for all :math:`1 \leq i \leq l(t)`, by :ref:`Definition 1.1.7 <definition-1-1-7>`,
 
 .. math::
 
-    20. t \subset_s v.
+    20. \quad t \subset_s v.
 
 Since *t*, *u*, and *v* were arbitrary Strings, this can be generalized over the set of all Strings,
 
 .. math::
 
-    21. \forall t, u, v \in S : (t \subset_s u) \land (u ⊂:sub:`s` v) \to (t subset_s v) ∎
+    21. \quad \forall t, u, v \in S : (t \subset_s u) \land (u ⊂:sub:`s` v) \to (t subset_s v) ∎
 
 .. _phrases:
 
@@ -1415,7 +1417,7 @@ Phrases
 
 While the analyis has not yet introduced the notion of Sentences into the formal system (see Section II), an operation will now be introduced that allows Words to be ordered into Phrases and then concatenated into Strings. This new operation will be important when String Inversion is applied to the sentential level of the formal system, allowing the conditions for a Sentence Inversion to be precisely specified.
 
-The placement of :ref:`Definition 1.2.5 <definition-1-2-5>` and :ref:`Definition 1.2.6 <definition-1-2-6>` is somewhat arbitary. There are valid arguments to be made for placing these definitions after the concepts of Sentence and Word Index notation have been introduced in Section II. However, since the operation of *Delimitation* and *Limitations* to be expounded immediately are essentially an operation defined on the domain of Strings which yields as a result another String, i.e. Delimitation and Limitation are closed with respect to Strings, the definitions are made here, to highlight the derivative notions (Inversion, Delimitation and Limitations) which can be built on top of the primitive notion of concatenation.
+The placement of :ref:`Definition 1.2.5 <definition-1-2-5>` and :ref:`Definition 1.2.6 <definition-1-2-6>` is somewhat arbitary. There are valid arguments to be made for placing these definitions after the concepts of Sentence and Word Index notation have been introduced in :ref:`Section II <section-ii>`. However, since the operation of *Delimitation* and *Limitations* to be expounded immediately are essentially an operation defined on the domain of Strings which yields as a result another String, i.e. Delimitation and Limitation are closed with respect to Strings, the definitions are made here, to highlight the derivative notions (Inversion, Delimitation and Limitations) which can be built on top of the primitive notion of concatenation.
 
 .. _definition-1-2-5:
 
@@ -1441,7 +1443,7 @@ In order to establish some properties of Phrases, Delimitations and Limitations 
 
 **Definition 1.2.6: Lexicon**
 
-Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, denoted **X**:sub:`L`(*n*), as the set of all Phrases of length *n* formed from Words in **L**,
+Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, denoted :math:`X_L(n)`, as the set of all Phrases of length *n* formed from Words in **L**,
 
 .. math::
 
@@ -1453,7 +1455,7 @@ Some of the later theorems in this work will require quantifying over Phrases in
 
     1. Phrase Variables (*p*, *q*, *r*): The lowercase English letters *p*, *q*, *r* are reserved for representing indeterminate Phrases of a Language's *n*:sup:`th` Lexicon.
    
-Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for :math:`1 \leq i leq n`.
+Because Phrases are ordered sequences of Words, the Phrase Variable *p(i)* will denote, exactly like the Definition of a Phrase, the Word at index *i* for :math:`1 \leq i \leq n`.
 
 Using these pair of definitions for Phrases and Lexicons and their associated terminology, the operation of *Delimitation* is now defined over Phrases of fixed Word Length *n* in :ref:`Definition 1.2.7 <definition-1-2-7>`.
 
@@ -1465,13 +1467,15 @@ Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
 
 .. math::
 
-    p = (\alpha_1, \alpha_2`, ... , \alpha_n)
+    p = (\alpha_1, \alpha_2, ... , \alpha_n)
 
 The *Delimitation* of *p*, denoted :math:`D\Pi_{i=1}^{n} p(i)`, is defined recursively as:
 
     1. Empty Clause: :math:`D\Pi_{i=1}^{0} p(i) = \varepsilon`
     2. Basis Clause (:math:`n = 1`): :math:`D\Pi_{i=1}^{1} p(i) = \alpha_1`
-    3. Recursive Clause (:math:`n > 1`): :math:`D\Pi_{i=1}^{n} p(i) = (D\Pi_{i=1}^{n-1} p(i))(\sigma)(\alpha_n)` ∎
+    3. Recursive Clause (:math:`n > 1`): :math:`D\Pi_{i=1}^{n} p(i) = (D\Pi_{i=1}^{n-1} p(i))(\sigma)(\alpha_n)` 
+
+∎
 
 .. _definition-1-2-8:
 
@@ -1479,13 +1483,17 @@ The *Delimitation* of *p*, denoted :math:`D\Pi_{i=1}^{n} p(i)`, is defined recur
 
 Let *p* be a Phrase from a Language **L**'s *n*:sup:`th` Lexicon,
 
-    p = (α:sub:`1`, α:sub:`2`, ..., α:sub:`n`)
+.. math::
+
+    p = (\alpha_1, \alpha_2, ..., \alpha_n)
 
 The *Limitation* of *p*, denoted :math:`L\Pi_{i=1}^{n} p(i)`, is defined recursively as:
 
     1. Empty Clause: :math:`L\Pi_{i=1}^{0} p(i) = \varepsilon`
     2. Basis Clause (:math:`n = 1`): :math:`L\Pi_{i=1}^{1} p(i) = \alpha_1`
-    3. Recursive Clause (:math:`n > 1`): :math:`L\Pi_{i=1}^{n} p(i) = (L\Pi_{i=1}^{n-1} p(i)(\alpha_n)` ∎
+    3. Recursive Clause (:math:`n > 1`): :math:`L\Pi_{i=1}^{n} p(i) = (L\Pi_{i=1}^{n-1} p(i)(\alpha_n)` 
+
+∎
 
 The key difference between :ref:`Definition 1.2.7 <definition-1-2-7>` and :ref:`Definition 1.2.8 <definition-1-2-8>` is the presence of the Delimiter in the Recursive Clause. In other words, a Delimitation inserts a Delimiter between the Words it is concatenating, while a Limitation is simply a shorthand simply for concatenating a sequence of Words.
 
@@ -1497,39 +1505,39 @@ Let
 
 .. math::
 
-    P_3 = (\text{"mother"}, \text{"may"}, \text{"I"})
+    1. \quad P_3 = (\text{"mother"}, \text{"may"}, \text{"I"})
 
 Apply :ref:`Definition 1.2.7 <definition-1-2-7>` to construct the Delimitation of **P**:sub:`3`. The Basis Step yields,
 
 .. math::
 
-    1. n = 1: D\Pi_{i=1}^{1} \alpha_i = \text{"mother"} 
+    1. \quad n = 1: D\Pi_{i=1}^{1} \alpha_i = \text{"mother"} 
 
 And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
 
 .. math::
 
-    2.  n = 2: D\Pi_{i=1}^{2} \alpha_i = (D\Pi_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
+    2.  \quad n = 2: D\Pi_{i=1}^{2} \alpha_i = (D\Pi_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
     
 .. math::
 
-    3.  n = 3: D\Pi_{i=1}^}{3} \alpha_i = (D\Pi_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}σ\text{"may"})(σ\text{"I"}) = \text{"mother"}σ\text{"may"}σ\text{"I"}
+    3.  \quad n = 3: D\Pi_{i=1}^}{3} \alpha_i = (D\Pi_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}\sigma\text{"may"})(\sigma\text{"I"}) = \text{"mother"}\sigma\text{"may"}\sigma\text{"I"}
 
 So the Delimitation of the Phrase is given by,
 
 .. math::
 
-    4. D\Pi_{i=1}^{3} \alpha_i = \text{"mother may I"} 
+    4. \quad D\Pi_{i=1}^{3} \alpha_i = \text{"mother may I"} 
 
 Similarly, the Limitation can be constructed recursive from the same Basis Step using :ref:`Definition 1.2.8 <definition-1-2-8>`,
 
 .. math::
 
-   5. n = 2: L\Pi_{i=1}^{2} \alpha_i = (L\Pi_{i=1}^{1} \alpha_i)(\text{"may"})= (\text{"mother"})(\text{"may"}) = \text{"mothermay"}
+   5. \quad n = 2: L\Pi_{i=1}^{2} \alpha_i = (L\Pi_{i=1}^{1} \alpha_i)(\text{"may"})= (\text{"mother"})(\text{"may"}) = \text{"mothermay"}
    
 .. math::
 
-   6. n = 3: L\Pi_{i=1}^{3} \alpha_i = (L\Pi_{i=1}^{2} \alpha_i)(\text{"I"}) = (\text{"mothermay"})(\text{"I"}) = \text{"mothermayI"} 
+   6. \quad n = 3: L\Pi_{i=1}^{3} \alpha_i = (L\Pi_{i=1}^{2} \alpha_i)(\text{"I"}) = (\text{"mothermay"})(\text{"I"}) = \text{"mothermayI"} 
 
 ∎
 
@@ -1549,7 +1557,7 @@ Let *n* be an arbitrary natural number, and let **P**:sub:`n` be a Phrase of Wor
 
 .. math::
 
-    1. P_n = (\alpha_1, \alpha_2, ..., \alpha_n)
+    1. \quad P_n = (\alpha_1, \alpha_2, ..., \alpha_n)
 
 The theorem will be proved using induction.
 
@@ -1559,13 +1567,13 @@ By :ref:`Definition 1.2.7 <definition-1-2-7>`,
     
 .. math::
 
-    2. D\Pi_{i=1}^{1} P_{n}(i) = \alpha_1
+    2. \quad D\Pi_{i=1}^{1} P_{n}(i) = \alpha_1
 
 Since *α*:sub:`1` is a word in **L** (by :ref:`Definition 1.2.6 <definition-1-2-6>` of Lexicon), it is also a String in S (by :ref:`Definition 1.2.2 <definition-1-2-2>`). Thus, there exists a String :math:`s = \alpha_1` such that 
 
 .. math::
     
-    3. s = D\Pi_{i=1}^{1} P_{n(i)}
+    3. \quad s = D\Pi_{i=1}^{1} P_{n(i)}
 
 Since the base case of Delimitation is defined as simple equality, the string s must be unique.
 
@@ -1575,25 +1583,25 @@ Assume that for some *k ≥ 1*, there exists a unique string *s*:sub:`k` such th
 
 .. math::
 
-    4. s_k = D\Pi_{i=1}^{k} P_n(i)
+    4. \quad s_k = D\Pi_{i=1}^{k} P_n(i)
 
 To complete the induction, it must be shown that there exists a unique string *s*:sub:`k+1` such that,
  
 .. math::
 
-    5. s_{k+1} = D\Pi_{i=1}^{k+1} P_n (i)
+    5. \quad s_{k+1} = D\Pi_{i=1}^{k+1} P_n (i)
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, 
 
 .. math::
 
-    6. D\Pi_{i=1}^{k+1} P_n(i) = (D\Pi_{i=1}^{k} P_n(i))(\sigma)(\alpha_{k+1})
+    6. \quad D\Pi_{i=1}^{k+1} P_n(i) = (D\Pi_{i=1}^{k} P_n(i))(\sigma)(\alpha_{k+1})
 
 By inductive hypothesis,
 
 .. math::
 
-    7. D\Pi_{i=1}^{k} P_n(i) = s_k
+    7. \quad D\Pi_{i=1}^{k} P_n(i) = s_k
     
 Thus, *s*:sub:`k` is unique. Since *α*:sub:`k+1` is a Word in **L** (by the definition of :math:`X_L (n+1)`), it is also a unique String in **S**.
 
@@ -1605,7 +1613,7 @@ By induction, for every natural number *n*, and for every phrase **P**:sub:`n` i
 
 .. math::
 
-    s = D\Pi_{i=1}^{n} P_n (i) 
+    8. \quad s = D\Pi_{i=1}^{n} P_n (i) 
    
 ∎
 
@@ -1630,18 +1638,17 @@ Reflective Words
 The concept of *Reflective Words* can be easily understood by examining some examples in English,
 
 .. list-table:: 
-
-   :widths: 50
-   :header-rows: 1
-
-   * - Word
-   * - mom
-   * - dad 
-   * - noon
-   * - racecar
-   * - madam
-   * - level
-   * - civic
+    :widths: 50
+    :header-rows: 1
+    
+    * - Word
+    * - mom
+    * - dad
+    * - noon
+    * - racecar
+    * - madam
+    * - level
+    * - civic
 
 From this list, it should be clear what is meant by the notion of *reflective*. Reflective Words are those Words whose meaning is unchanged by a String Inversion. However, the semantic content that is preserved under inversion is not the primitive property that primarily explains this invariance. The invariance of the semantic content under inversion is the result of Character level symmetries. 
 

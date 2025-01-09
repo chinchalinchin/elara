@@ -386,35 +386,45 @@ The next two theorems leverage this insight and establish the fundamental relati
 
 .. _theorem-4-2-1:
 
-**Theorem 4.2.1** 
-
-∀ ζ ∈ C:sub:`L`:  ∀ i ∈ N:sub:`l(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
+**Theorem 4.2.1** :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta)-i+1]`
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
-    1. ζ ∈ C:sub:`L`
+.. math::
+
+    1. \quad \zeta \in C_L
 
 Let *i* be a natural number such that,
 
-    2. i ∈ N:sub:`l(ζ)`
+.. math::
 
-By Definition 1.2.4 of String Inversion, the Inverse of *ζ*, denoted *inv(ζ)*, is formed by reversing the order of the Characters in *ζ*.
+    2. \quad i \in N_{l(\zeta)}
 
-By Definition 3.2.5, the Left Partial Sentence of *inv(ζ)* up to index i, denoted *inv(ζ)[:i]*, consists of the first *i* characters of *inv(ζ),
+By :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion, the Inverse of *ζ*, denoted *inv(ζ)*, is formed by reversing the order of the Characters in *ζ*.
 
-    3. inv(ζ)[:i] = (inv(ζ)[1], inv(ζ)[2], ..., inv(ζ)[i])
+By :ref:`Definition 4.2.1 <definition-4-2-1>`, the Left Partial Sentence of *inv(ζ)* up to index i, denoted *inv(ζ)[:i]*, consists of the first *i* characters of *inv(ζ),
 
-By Definition 1.2.4, for any Character index j in inv(ζ):
+.. math::
 
-    4. inv(ζ)[j] = ζ[l(ζ) - j + 1]
+    3. \quad \text{inv}(\zeta)[:i] = (\text{inv}(\zeta)[1], \text{inv}(\zeta)[2], ..., \text{inv}(\zeta)[i])
 
-Applying this to each Character in inv(ζ)[:i], we get:
+By :ref:`Definition 1.2.4 <definition-1-1-24>`, for any Character index *j* in *inv(ζ)*:
 
-    5. inv(ζ)[:i] = (ζ[l(ζ)], ζ[l(ζ) - 1], ..., ζ[l(ζ) - i + 1])
+.. math::
 
-Now, consider the Right Partial Sentence of *ζ* starting at index *l(ζ) - i + 1*, denoted *ζ[l(ζ) - i + 1:]*. By Definition 3.2.6, this consists of the characters from index *l(ζ) - i + 1* to the end of *ζ*,
+    4. \quad \text{inv}(\zeta)[j] = \zeta[l(\zeta) - j + 1]
 
-    6. ζ[l(ζ) - i + 1:] = (ζ[l(ζ) - i + 1], ζ[l(ζ) - i + 2], ..., ζ[l(ζ)])
+Applying this to each Character in *inv(ζ)[:i]*, we get:
+
+.. math::
+
+    5. \quad \text{inv}(\zeta)[:i] = (\zeta[l(\zeta)], \zeta[l(\zeta) - 1], ..., \zeta[l(\zeta) - i + 1])
+
+Now, consider the Right Partial Sentence of *ζ* starting at index *l(ζ) - i + 1*, denoted *ζ[l(ζ) - i + 1:]*. By :ref:`Definition 4.2.2`, this consists of the characters from index *l(ζ) - i + 1* to the end of *ζ*,
+
+.. math::
+
+    6. \quad \zeta[l(\zeta) - i + 1:] = (\zeta[l(\zeta) - i + 1], \zeta[l(\zeta) - i + 2], ..., \zeta[l(\zeta)])
 
 Notice that the sequence of Characters in *inv(ζ)[:i]* (from step 4) is the reverse of the sequence of Characters in *ζ[l(ζ) - i + 1:]* (from step 5).
 
@@ -422,84 +432,131 @@ Since *inv(ζ)* is the Inverse of *ζ*, the Characters in these two sequences ar
 
 Therefore, *inv(ζ)[:i]* and *ζ[l(ζ) - i + 1:]* have the same Characters in the same order. Furthermore, 
 
-    7. l(inv(ζ)[:i]) = i
-    8. l(ζ[l(ζ) - i + 1:]) = l(ζ) - (l(ζ) - i + 1) + 1 = i
+.. math::
 
-Therefore, by definition 1.1.4 means they are equivalent as Strings,
+    7. \quad l(\text{inv}(\zeta)[:i]) = i
+    
+.. math::
 
-    9. inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
+    8. \quad l(\zeta[l(\zeta) - i + 1:]) = l(\zeta) - (l(\zeta) - i + 1) + 1 = i
 
-Since ζ and i were arbitrary, this can generalize over the Corpus, 
+Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>` means they are equivalent as Strings,
 
-    10.  ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:] ∎
+.. math::
 
-**Theorem 3.2.7** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))
+    9. \quad \text{inv}(\zeta)[:i] = \zeta[l(\zeta) - i + 1:]
+
+Since *ζ* and *i* were arbitrary, this can generalize over the Corpus, 
+
+.. math::
+
+    10.  \quad \forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta) - i + 1:] 
+
+∎
+
+.. _theorem-4-2-2:
+
+**Theorem 4.2.2** :math:`\forall \zeta \in C_L: \exists i \in \mathbb{N}: (l(\zeta) = 2i + 1) \land (l(\zeta[:i+1]) = l(\zeta[i+1:]))`
 
 This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is odd if and only if the String Length of the Left Partial Sentence of Length *i+1* is equal to the String Length of the Right Partial Sentence starting at index *i+1*.
 
 (→) Let ζ be an arbitrary sentence in C:sub:`L` with odd length,
 
-    1. ∃ i ∈ ℕ: l(ζ) = 2i + 1
+.. math::
+
+    1. \quad \exists i \in \mathbb{N}: l(\zeta) = 2i + 1
 
 Let
 
-    2. n = i + 1. 
+.. math::
+
+    2. \quad n = i + 1. 
 
 Since *i* is a natural number, *n* is also a natural number (by the property of integer succession). From step 1 and step 2, it follows
 
-    3. 1 ≤ n ≤ l(ζ)
+.. math::
+
+    3. \quad 1 \leq n \leq l(\zeta)
 
 Thus, 
 
-    4. n ∈ N:sub:`l(ζ)`.
+.. math::
+
+    4. \quad n \in N_{l(\zeta)}`.
 
 The Left Partial Sentence of String Length *n* is then given by,
 
-    5. ζ[:n] = ζ[:i+1]
-    
-By Definition 3.2.5 of Left Partial Sentences, 
+.. math::
 
-    6. l(ζ[:i+1]) = i + 1.
+    5. \quad \zeta[:n] = \zeta[:i+1]
+    
+By :ref:`Definition 4.2.1 <definition-4-2-1>` of Left Partial Sentences, 
+
+.. math::
+
+    6. \quad l(\zeta[:i+1]) = i + 1.
 
 The Right Partial Sentence is given by,
 
-    7. ζ[n:] = ζ[i+1:]
+.. math::
+
+    7. \quad \zeta[n:] = \zeta[i+1:]
     
 By the definition of Right Partial Sentences, 
 
-    8. l(ζ[i+1:]) = l(ζ) - n + 1 = (2i + 1) - (i + 1) + 1 = i + 1
+.. math::
+
+    8. \quad l(ζ[i+1:]) = l(\zeta) - n + 1 = (2i + 1) - (i + 1) + 1 = i + 1
 
 Therefore, 
 
-    9. l(ζ[:i+1]) = l(ζ[i+1:]) = i + 1.
+.. math::
+
+    9. \quad l(\zeta[:i+1]) = l(\zeta[i+1:]) = i + 1.
 
 From this it follows, 
 
-    10. ∃ i ∈ N:sub:`l(ζ)`: (l(ζ[:i+1]) = l(ζ[i+1:])).
+    10. \quad \exists i \in N_{l(\zeta)}: (l(\zeta[:i+1]) = l(\zeta[i+1:])).
 
 (←) Let *ζ* be an arbitrary sentence in **C**:sub:`L` such that,
 
-    1. ∃ 1 ∈ N:sub:`l(ζ)`: (l(ζ[:i+1]) = l(ζ[i+1:])).
+.. math::
 
-By the Definitions 3.1.7 and 3.1.8,
+    1. \quad \exists i \in N_{l(\zeta)}: (l(\zeta[:i+1]) = l(\zeta[i+1:])).
 
-    2. l(ζ[:i+1]) = i+1
+By the :ref:`Definitions 4.2.1 <definition-4-2-1>` and :ref:`4.2.2 <definition-4-2-2>`,
 
-    3. l(ζ[i+1:]) = l(ζ) - (i+1) + 1
+.. math::
+
+    2. \quad l(\zeta[:i+1]) = i+1
+
+.. math::
+
+    3. \quad l(\zeta[i+1:]) = l(\zeta) - (i+1) + 1
 
 Putting step 1, step 2 and step 3 together, 
 
-    4. i+1 = l(ζ) - (i+1) + 1
+.. math::
+
+    4. \quad i+1 = l(\zeta) - (i+1) + 1
 
 From which it follows algebraically, 
 
-    5. l(ζ) = 2n + 1.
+.. math::
 
-Therefore l(ζ) is odd. Putting both directions of the proof together and generalizing over all Sentences in the Corpus,
+    5. \quad l(\zeta) = 2n + 1.
 
-    6. ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i + 1 ) ∧ (l(ζ[:i+1]) = l(ζ[i+1:]))  ∎
+Therefore *l(ζ)* is odd. Putting both directions of the proof together and generalizing over all Sentences in the Corpus,
 
-**Theorem 3.2.8** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
+.. math::
+
+    6. \quad \forall \zeta \in C_L: \exists i \in \mathbb{N}: (l(\zeta) = 2i + 1 ) \land (l(\zeta[:i+1]) = l(\zeta[i+1:]))  
+
+∎
+
+.. _theorem-4-2-3:
+
+**Theorem 4.2.3** ∀ ζ ∈ C:sub:`L`: ∃ i ∈ ℕ: (l(ζ) = 2i) ∧ (l(ζ[:i]) + 1 = l(ζ[i:]))
 
 This theorem can be stated in natural language as follows: For any Sentence in the corpus, its String Length is even if and only if the String Length of the Left Partial Sentence of Length *i* plus 1 is equal to the String Length of the Right Partial Sentence starting at index *i*.
 
