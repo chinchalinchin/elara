@@ -77,12 +77,12 @@ Definitions
 - D 4.1.2: Perfect Palindromes: :math:`\zeta \in PP \leftrightarrow \zeta = \text{inv}(\zeta)`
 - D 4.1.3: Imperfect Palindromes: :math:`\zeta \in P - PP`
 - D 4.1.4: Aspect
-- D 4.1.5: Left Partial Sentence: :math:`Z[:n]`
-- D 4.1.6: Right Partial Sentence: :math:`Z[n:]`
-- D 4.1.7: Pivots: :math:`\omega(\zeta)`
-- D 4.1.8: Even Palindromes: :math:`\zeta \in P^+ \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )]`
-- D 4.1.9: Odd Palindromes: :math:`\zeta \in P^- \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]`
-- D 4.1.10: Parity
+- D 4.2.1: Left Partial Sentence: :math:`Z[:n]`
+- D 4.2.2: Right Partial Sentence: :math:`Z[n:]`
+- D 4.2.3: Pivots: :math:`\omega(\zeta)`
+- D 4.2.4: Even Palindromes: :math:`\zeta \in P^+ \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )]`
+- D 4.2.5: Odd Palindromes: :math:`\zeta \in P^- \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]`
+- D 4.2.6: Parity
 - D 4.1.11: Pivot Words
 - D 5.1.1: Lefthand Sentence Integrals: :math:`\Omega_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
 - D 5.1.2: Righthand Sentence Integrals: :math:`\Omega_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
