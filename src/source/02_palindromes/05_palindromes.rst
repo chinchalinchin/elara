@@ -305,37 +305,49 @@ Section IV.II: Parity
 
 One partitioning, or dimension, of Palindromes has been introduced through the concept of *aspect*. A Palindrome can either be perfect or imperfect, but not both. In this section, the definitions and theorems for uncovering the second partitioning of Palindromes, *parity*, will be developed.
 
-In order to develop the notion of parity, a formal method of referring to the *left* and *right* halves of a Sentence must be introduced. This new notation can be seen as an extension of Character Index Notation introduced in Definition 1.1.5.
+In order to develop the notion of parity, a formal method of referring to the *left* and *right* halves of a Sentence must be introduced. This new notation can be seen as an extension of Character Index Notation introduced in :ref:`Definition 1.1.5 <definition-1-1-5>`.
 
-**Definition 3.2.5: Left Partial Sentence**
+.. _definition-4-2-1:
 
-Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
+**Definition 4.2.1: Left Partial Sentence**
 
-    Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
+Let *ζ* be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
-Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Left Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[:n]*, is formally defined as the sequence of Characters which satisfies, 
+.. math::
 
-    Z[:n] = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`n`)  
+    \zeta  = (\iota_1 , \iota_2 , ... , \iota_{l(\zeta)}`).
 
-When *n = 0*, *ζ[:0]* is defined as the empty string, *ε*.
+Let *n* be a fixed natural number such that :math:`1 \leq n \leq l(\zeta)`. A Left Partial Sentence of the *n*:sup:`th` Character, denoted :math:`\zeta[:n]`, is formally defined as the sequence of Characters which satisfies, 
 
-When *n = l(ζ)*, *ζ[:n]* is the entire sentence *ζ*. ∎
+.. math::
 
-**Definition 3.2.6: Right Partial Sentence**
+    \Zeta[:n] = (\iota_1 , \iota_2 , ... , \iota_n`)  
 
-Let ζ be a Sentence in C:sub:`L` with Character-level representation **Z**,
+When :math:`n = 0`, *ζ[:0]* is defined as the empty string, *ε*.
 
-    Z  = (ⲁ:sub:`1` , ⲁ:sub:`2` , ... , ⲁ:sub:`l(ζ)`).
+When :math:`n = l(ζ)`, *ζ[:n]* is the entire sentence *ζ*. ∎
 
-Let *n* be a fixed natural number such that *1 ≤ n ≤ l(ζ)*. A Right Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[n:]*, is formally defined as the String which satisfies, 
+.. _definition-4-2-2:
 
-    ζ[n:] = (ⲁ:sub:`n`, ⲁ:sub:`n+1`, ..., ⲁ:sub:`l(ζ)`)
+**Definition 4.2.2: Right Partial Sentence**
 
-where n is a natural number such that 1 ≤ n ≤ l(ζ) + 1.
+Let *ζ* be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
-When n = 1, ζ[1:] is the entire sentence ζ.
+.. math::
 
-When n = l(ζ) + 1, ζ[n:] is defined as the empty string, ε. ∎
+    \Zeta  = (\iota_1 , \iota_2 , ... , \iota_{l(\zeta)}).
+
+Let *n* be a fixed natural number such that :math:`1 \leq n \leq l(\zeta)*. A Right Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[n:]*, is formally defined as the String which satisfies, 
+
+.. math::
+
+    \Zeta[n:] = (\iota_n, \iota_{n+1}, ..., \iota_{l(\zeta)})
+
+where *n* is a natural number such that 1 ≤ n ≤ l(ζ) + 1.
+
+When :math:`n = 1`, *ζ[1:]* is the entire sentence *ζ*.
+
+When :math:`n = l(ζ) + 1`, *ζ[n:]* is defined as the empty string, *ε*. ∎
 
 **Example**
 
@@ -352,21 +364,31 @@ Take note, Partial Sentences are not necessarily a Word or a sequence of Words. 
 
 Note, regardless of the value of *n*,
 
-    l(ζ[:n]) = n
+.. math::
 
-    l(ζ[n:]) = l(ζ) - n + 1
+    l(\zeta[:n]) = n
 
-This relation bears a similarity to Definition 1.2.4 of String Inversion and Definition 1.3.1 of Reflective Words, both of which require Character-level inversions,
+.. math::
 
-    α[i] = α[l(α) - 1 + 1]
+    l(\zeta[n:]) = l(\zeta) - n + 1
+
+This relation bears a similarity to :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion and :ref:`Definition 1.3.1 <definition-1-3-1>` of Reflective Words, both of which require Character-level inversions,
+
+.. math::
+
+    \alpha[i] = \alpha[l(\alpha) - 1 + 1]
 
 A Palindrome is a type of inversion. In a Palindrome, the requirement that individual Characters must maintain their symmetry across its String Length is extended up to the Sentence level through the requirement that, based on the parity of the Palindrome, the Partial Sentences on either side of the Sentence's center must be mirror images of one another. 
 
-Note that Definition 3.2.5 and Definition 3.2.6 are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial Notation from being applied to Strings that have been stripped of their Empty Characters via the Emptying Algorithm for the construction of their Character-level representation (Definition 1.1.2). In other words, Definition 3.2.5 and Definition 3.2.6 operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has been processed through the Emptying and Delimiting Algorithm.
+Note that :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>` are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial Notation from being applied to Strings that have been stripped of their Empty Characters via the :ref:`Emptying Algorithm <emptying-algorithm>` for the construction of their Character-level representation (:ref:`Definition 1.1.2 <definition-1-1-2>`). In other words, :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>`operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has been processed through the :ref:`Emptying <emptying-algorithm>` and :ref:`Delimiting Algorithm <delimiting-algorithm>`.
 
 The next two theorems leverage this insight and establish the fundamental relationship between Left and Right Partial Sentences. In addition, they prove the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
 
-**Theorem 3.2.6** ∀ ζ ∈ C:sub:`L`:  ∀ i ∈ N:sub:`l(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
+.. _theorem-4-2-1:
+
+**Theorem 4.2.1** 
+
+∀ ζ ∈ C:sub:`L`:  ∀ i ∈ N:sub:`l(ζ)`: inv(ζ)[:i] = ζ[l(ζ) - i + 1:]
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
