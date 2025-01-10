@@ -254,12 +254,24 @@ def analyze_delimiter_distribution(min_length, max_length):
     graphs.delimiter_histogram(results)
     return results
 
+def analyze_sentence_delimiters(sentence):
+    """
+    Analyzes the delimiter distribution in a sentence.
+
+    Args:
+        sentence: The input sentence (string).
+    """
+    delimiter_indices = model.delimit(sentence)
+    graphs.delimiter_barchart(delimiter_indices, sentence)
+
 if __name__ == "__main__":
-    min_length = 50
-    max_length = 50
+    sentences = [
+        "god lived on no devil dog",
+        "i am civic am i",
+        "goddesses so pay a possessed dog",
+        "borrow or rob",
+    ]
 
-    parse.init()
-    
-    distribution = analyze_delimiter_distribution(min_length, max_length)
+    for sentence in sentences:
+        analyze_sentence_delimiters(sentence)
 
-    print(distribution)

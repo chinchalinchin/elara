@@ -101,3 +101,23 @@ def delimiter_histogram(distribution_data):
             plt.xlabel("Delimiter Index")
             plt.ylabel("Frequency")
             plt.show()
+
+def delimiter_barchart(delimiter_indices, sentence):  # Modified function
+    """
+    Generates a bar chart of delimiter indices with a specified left limit.
+
+    Args:
+        delimiter_indices: A list of delimiter indices.
+        limit: The left limit of the x-axis (integer).
+    """
+    if not delimiter_indices:
+        return  # Handle empty list
+
+    plt.figure(figsize=(10, 5))
+    plt.bar(delimiter_indices, [1] * len(delimiter_indices), width=0.05)  # Adjust width as needed
+    plt.xlim(0, len(sentence))  # Set the left limit of the x-axis
+    plt.title("Delimiter Index Distribution")
+    plt.xlabel("Delimiter Index")
+    plt.ylabel("Frequency")
+    plt.suptitle(sentence, fontsize=10) 
+    plt.show()

@@ -3,7 +3,36 @@
 Section V: Integration
 ======================
 
-TODO: explain
+The study of Palindromes leads directly into the study of Delimiter distributions. The partitioning of Palindromes into the Perfect and Imperfect aspects highlights the asymmetry which separates the latter from the former class. Consider the pair of Perfect Palindromes, 
+
+- god lived on no devil dog
+- i am civic am i
+
+Since, by :ref:`Definition 4.1.2 <definition-4-1-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters in the example Perfect Palindromes. Note the horizontal axes are scaled to the Sentence String Length,
+
+.. image:: ../_static/images/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
+  :width: 400
+  :alt: Delimiter Indices, Perfect Palindrome, Example #1
+
+.. image:: ../_static/images/sentences/palindromes/delimiter_indices_perfect_palindrome_2.png
+  :width: 400
+  :alt: Delimiter Indices, Perfect Palindrome, Example #2
+
+Now consider the pair of Imperfect Palindromes, 
+
+- goddesses so pay a possessed dog 
+- borrow or rob
+
+According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes must first be :math:`\sigma-\text{reduced}` to restore their symmetry. An examination of the corresponding barcharts for these examples Imperfect Palindromes show why,
+
+.. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
+  :width: 400
+  :alt: Delimiter Indices, Imperfect Palindrome, Example #1
+
+.. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
+  :width: 400
+  :alt: Delimiter Indices, Imperfect Palindrome, Example #2
+  
 
 Move analysis of Delimiter distribution here.
 
