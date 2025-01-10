@@ -8,7 +8,7 @@ The study of Palindromes leads directly into the study of Delimiter distribution
 - god lived on no devil dog
 - i am civic am i
 
-Since, by :ref:`Definition 4.1.2 <definition-4-1-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters in the example Perfect Palindromes. Note the horizontal axes are scaled to the Sentence String Length,
+Since, by :ref:`Definition 4.1.2 <definition-4-1-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters for these examples. Note the horizontal axes are scaled to the Sentence String Length,
 
 .. image:: ../_static/images/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
   :width: 400
@@ -18,12 +18,12 @@ Since, by :ref:`Definition 4.1.2 <definition-4-1-2>`, Perfect Palindromes are ex
   :width: 400
   :alt: Delimiter Indices, Perfect Palindrome, Example #2
 
-Now consider the pair of Imperfect Palindromes, 
+Notice the Delimiter indices are symmetrical about the center. Now consider the pair of Imperfect Palindromes, 
 
 - goddesses so pay a possessed dog 
 - borrow or rob
 
-According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes must first be :math:`\sigma-\text{reduced}` to restore their symmetry. An examination of the corresponding barcharts for these examples Imperfect Palindromes show why,
+According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes must first be :math:`\sigma-\text{reduced}` to restore their symmetry. An examination of the corresponding barcharts for these examples show why,
 
 .. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
   :width: 400
@@ -32,9 +32,12 @@ According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes m
 .. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
   :width: 400
   :alt: Delimiter Indices, Imperfect Palindrome, Example #2
-  
 
-Move analysis of Delimiter distribution here.
+Imperfect Palindromes are exactly those class of Palindromes which do not have symmetrical Delimiter distribution. 
+
+The goal of this section is to understand the Delimiter symmetry displayed by Perfect Palindromes, in order to help further classify Imperfect Palindromes according to the type of Delimiter asymmetry found in a particular instance. In other words, the analysis seeks a method for quantifying a Perfect Palindrome's symmetry in order to apply the method to Imperfect Palindromes, with the hope of gaining greater insight into the syntactical obstacles preventing direct formal access to the class of Imperfect Palindromes.
+
+TODO
 
 .. image:: ../_static/images/sentences/english/delimiter_distribution_n50.png
   :width: 400
