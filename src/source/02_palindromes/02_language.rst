@@ -11,7 +11,7 @@ Some general notation adopted throughout the course of this work is given below.
 
     N_n = \{ 1, 2, ... , n \}
 
-2. The cardinality of a set **A** will be denoted | A |
+2. The cardinality of a set **A** will be denoted :math:`\lvert A \rvert`
 
 3. The ∎ symbol will be used to denote the ending of all Definitions, Examples and Proofs. 
 
@@ -232,7 +232,7 @@ This insight leads directly to the definition of the Character-level set represe
 
 Let *t* be a String with Characters *𝔞*:sub:`i`. The Character-level set representation of *t*, denoted by bold uppercase letters **T**, is defined as the ordered set of Characters obtained by removing each Empty Character, *ε*. Formally, **T** is constructed using the *Emptying Algorithm* 
 
-.. _algorithm_1:
+.. _algorithm-1:
 
 **Algorithm 1: The Emptying Algorithm**
 
@@ -241,27 +241,38 @@ The Emptying Algorithm takes a string *t* as input, which can be thought of as a
 .. topic:: Algorithm Empty(t: String)
 
     # Input: A string t
+
     # Output: An ordered set T representing the character-level set representation of t
 
     # Initialization
+    
     ## empty set to hold Character-level representation
+    
     T ← ∅
+    
     ## index for non-Empty Characters in T
+    
     j ← 1 
+    
     ## index for iterating through original String t
+    
     i ← 1 
 
     # Iteration
+    
     1. While 𝔞:sub:`i` exists:
 
         a. If 𝔞:sub:`i` ≠ ε:
 
             i. T ← { (j, 𝔞:sub:`i`) } ∪ T
+    
             ii. j ← j + 1
 
         b. i ← i + 1
 
-    1. Return T ∎
+    1. Return T 
+
+∎
 
 .. graphviz:: ../_static/dots/emptying.dot
     :caption: A diagram of the Emptying Algorithm
@@ -312,7 +323,7 @@ Let *t* be a String. Let **T** be the Character-level set representation of *t* 
 
 .. math::
 
-    l(t) = | T | 
+    l(t) = \lvert T \rvert 
     
 ∎
 
@@ -330,7 +341,7 @@ Therefore,
 
 .. math::
 
-    | T | = 6 
+    \lvert T \rvert = 6 
     
 ∎
 
@@ -356,7 +367,7 @@ Let *ut* be the concatenation of *u* and *t*. By :ref:`Definition 1.1.1 <definit
 
 .. math::
 
-    3. \quad UT = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(s)}, \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)})
+    3. \quad UT = ( \mathfrak{a}_1, \mathfrak{a}_2, ..., \mathfrak{a}_{l(u)}, \mathfrak{b}_1, \mathfrak{b}_2, ..., \mathfrak{b}_{l(t)})
 
 By :ref:`Definition 1.1.3 <definition-1-1-3>`, the String Length of a String is the number of indexed non-Empty Characters it contains. Thus, :math:`l(u)` is the number of non-Empty Characters in *u*, :math:`l(t)` is the number of non-Empty Characters in *t*, and :math:`l(ut)` is the number of non-Empty Characters in *ut*.
 
@@ -386,13 +397,13 @@ Let *t* be a String. Let **T** be the Character-level set representation of *t* 
 
 .. math::
 
-    T = \{ (i, \mathfrak{a}_i) | 1 \leq i \leq l(t) \}
+    T = \{ (i, \mathfrak{a}_i) \mid 1 \leq i \leq l(t) \}
      
 Let *u* be a String. Let **U** be the Character-level set representation of *u* constructed through :ref:`Definition 1.1.2 <definition-1-1-2>`,
 
 .. math::
 
-    U = \{ (i, \mathfrak{b}_j) | 1 \leq j \leq l(u) \}
+    U = \{ (i, \mathfrak{b}_j) \mid 1 \leq j \leq l(u) \}
 
 The string *t* is said to be *equal* to String *u* if the Strings have equal length and the Characters at each corresponding index are equal. Formally, *t = u* if and only if,
 
@@ -429,7 +440,7 @@ It is assumed **S** is at least uncountably infinite. A rigorous proof of this f
 
 .. _theorem-1-1-2:
 
-**Theorem 1.1.2** :math:`| S | \geq \aleph_{1}`
+**Theorem 1.1.2** :math:`\lvert S \rvert \geq \aleph_{1}`
 
 Assume, for the sake of contradiction, that the set of all Strings **S** is countable. This means the Strings can be listed in some order, 
 
@@ -584,7 +595,7 @@ The following symbolic notation is introduced for these terms,
     1. Words (*a*, *b*, *c*, etc.): Lowercase English letters represent Words. Subscripts will occassionally be used to denote Words, (*a*:sub:`1`, *a*:sub:`2`, ... )
     2. Language (**L**): The uppercase English letter *L* in boldface represents a Language.
 
-In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as :math:`\{ \text{"dog"}, \text{"cat"}, \text{"hamster"}, ... \}` or :math:`\{ \text{"tree"}, \text{"flower"}, \text{"grass"}, .... \}`. The number of Words in a Language is denoted :math:`| L |`.
+In the case of English, Words would correspond to words such as "dog", "cat", etc. A Language would correspond to a set of words such as :math:`\{ \text{"dog"}, \text{"cat"}, \text{"hamster"}, ... \}` or :math:`\{ \text{"tree"}, \text{"flower"}, \text{"grass"}, .... \}`. The number of Words in a Language is denoted :math:`\lvert L \rvert`.
 
 Again, at the risk of unwarranted repetition, Language is assumed to be a *fixed set* known a priori to the construction of the current formal system. It not the goal of the formal system to describe the semantic conditions for a Word's eligibility in Language or how a Language is constructed from elementary Characters and Strings into a class of Words through systems like grammar or pragmatics, but rather, given a Language of Words, the formal system seeks to elaborate the syntactical conditions that are imposed on Language by its nature as a set of Strings with ordered Characters. 
 
@@ -592,9 +603,7 @@ Note, :ref:`Definition 1.2.1 <definition-1-2-1>` and :ref:`Definition 1.2.2 <def
 
 It will sometimes be necessary to refer to indeterminate Words, so notation is introduced for Word Variables,
 
-    1. Word Variables (*α*, *β*, *γ*, etc. ): Lowercase Greek letters will represent variable words, i.e. indeterminate Words. Subscripts will occassionally be used to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). 
-
-The exceptions to this rule for Lowercase Greek letters are Zeta and Xi, *ζ* and *ξ*, which are reserved for Sentential Variables (see :ref:`Section II.I <section-ii-i>` for more information.), Sigma and Epsilon, *σ* and *ε*, which are reserved for the Delimiter and Empty Character (see :ref:`Section I.I <section-i-i>` for more information), Omega, *ω*, which is reserved for the Palindromic Pivot (see :ref:`Section III.II <section-iii-ii>` for more information), and the lowercase final Sigma, *ς*, which is reserved for *σ*-reductions (see :ref:`Section III.I <section-iii-i>` for more information)
+    1. Word Variables (*α*, *β*, *γ*): The Lowercase Greek letters Alpha, Beta and Gamma will represent variable Words, i.e. indeterminate Words. Subscripts will occassionally be used with Alpha to denote Word Variables, (*α*:sub:`1`, *α*:sub:`2`, ... ). 
 
 The range of a Word Variable is understood to be the Language **L** from the Words are being drawn. 
 
@@ -646,13 +655,15 @@ Theorems
 
 The next theorems establish some basic results about Words in a Language within this formalization. All of these theorems should conform to the common sense notion of Words. 
 
+.. _theorem-1-2-1:
+
 **Theorem 1.2.1** :math:`\forall \alpha \in L:  \alpha \varepsilon = \varepsilon \alpha = \alpha`
 
 This theorem can be stated in natural language as follows: For every Word in a Language, concatenating the Word with the empty String *ε* on either side results in the Word itself.
 
 Let *α* be an arbitrary word in **L**. By :ref:`Definition 1.2.2 <definition-1-2-2>`, *α* is a String of characters. By :ref:`Definition 1.1.3 <definition-1-1-3>`, :math:`l(\alpha)` is the number of non-Empty Characters in *α*. 
 
-Consider *ε*, the empty string. By :ref:`Definition 1.1.3 <definition 1.1.3>`, :math:`l(\varepsilon) = 0`. By Definition 1.1.1, the concatenation of any String *s* with *ε* results in a new string with the same Characters as *s* in the same order.
+Consider *ε*, the empty string. By :ref:`Definition 1.1.3 <definition-1-1-3>`, :math:`l(\varepsilon) = 0`. By Definition 1.1.1, the concatenation of any String *s* with *ε* results in a new string with the same Characters as *s* in the same order.
 
 Therefore, *αε* and *εα* are both Strings with the same Characters as *α* in the same order. Since *α* is a Word in **L** and concatenation with *ε* does not change its length or order of Characters. Thus, by :ref:`Definition 1.2.3 <definition-1-2-3>`, 
 
@@ -668,11 +679,13 @@ Since *α* was arbitrary, this can be generalized over the Language,
 
 ∎
 
+.. _theorem-1-2-2:
+
 **Theorem 1.2.2** :math:`\forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_s \alpha`
 
 This theorem can be stated in natural language as follows: All Characters in a Word are contained in the Word.
 
-Assume *α* is a Word from Language **L**. By the :ref:`Discovery Axiom W.1 <axiom-w1>`, :math:`l(\alpha) \neq 0`` and thus it must have at least one non-Empty Character *α[i]* for some non-zero *i*.
+Assume *α* is a Word from Language **L**. By the :ref:`Discovery Axiom W.1 <axiom-w1>`, :math:`l(\alpha) \neq 0` and thus it must have at least one non-Empty Character *α[i]* for some non-zero *i*.
 
 Consider the String *s* with a single Character :math:`\mathfrak{b}_1 = \alpha[i]`.
 
@@ -858,7 +871,7 @@ Now, let :math:`u = inv(t)` with length *l(u)*. Applying :ref:`Definition 1.2.4 
 
     4. \quad \forall j \in N_{l(t)}: u[j] = t[l(t) - j + 1]
 
-Since :math:`l(t) = l(s) = l(u)` and :math:`N_{l(t)} = N_{l(s)} = N_{l(u)}`(from step 1, step 3 and by definition of natural numbers), these substitions may be made in step 4,
+Since :math:`l(t) = l(s) = l(u)` and :math:`N_{l(t)} = N_{l(s)} = N_{l(u)}` (from step 1, step 3 and by definition of natural numbers), these substitions may be made in step 4,
 
 .. math::
 
@@ -870,7 +883,7 @@ Simplifying the index on the right hand side,
 
     6. \quad \forall j \in N_{l(s)}: u[j] = s[j]
 
-Since *u* and *s* have the same length (:math:`l(u) = l(t) = l(s)`) and the same Characters in the same order (:math:`u[j] = s[j]` for all *i*), by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, it can be concluded that :math:`u = s`. Recall that :math:`u = \text{inv}(t)` and :math:`t = inv(s)`. Substituting, the desired result is obtained, :math:`\text{inv}(\text{inv}(s)) = s`. ∎ 
+Since *u* and *s* have the same length (:math:`l(u) = l(t) = l(s)`) and the same Characters in the same order (:math:`u[j] = s[j]` for all *i*), by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, it can be concluded that :math:`u = s`. Recall that :math:`u = \text{inv}(t)` and :math:`t = \text{inv}(s)`. Substituting, the desired result is obtained, :math:`\text{inv}(\text{inv}(s)) = s`. ∎ 
 
 Two versions of :ref:`Theorem 1.2.5 <theorem-1-2-5>` are given, the first using only the Character-level representation of a String, the second using Character Index notation. This is done to show the two formulations are equivalent, and it is a matter of personal preference which style of notation is employed. Throughout the rest of this work, the Character Index notation is primarily utilized, although there are several proofs that are better served by the Character-level representation.
 
@@ -902,7 +915,7 @@ By :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion, the Character
 
     4. \quad \text{inv}(UT) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1 , \mathfrak{b}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
 
-The Character level representation of *inv(U)*, denoted **inv(U)**,
+The Character level representation of *inv(u)*, denoted **inv(U)**,
 
 .. math::
 
@@ -914,9 +927,11 @@ The Character-level representation of *inv(t)*, denoted **inv(T)** is
 
     6. \quad \text{inv}(T) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{𝔟}_1 )
 
-The Character-level representation of *inv(t)inv(u)* is:
+The Character-level representation of *inv(t)inv(u)*, denoted **inv(T)inv(U)** is:
 
-    7. \quad ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1, \mathfrak{a}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
+.. math::
+
+    7. \quad \text{inv}(T)\text{inv}(U) = ( \mathfrak{b}_{l(t)}, ..., \mathfrak{b}_2 , \mathfrak{b}_1, \mathfrak{a}_{l(u)}, ..., \mathfrak{a}_2 , \mathfrak{a}_1)
 
 Comparing the results from step 4 and step 7, it can be seen the Character-level representations of *inv(ut)* and *inv(t)inv(u)* are identical.
 
@@ -928,7 +943,7 @@ Therefore, :math:`\text{inv}(ut) = \text{inv}(t)\text{inv}(u)`. ∎
 
 Let *u* and *t* be arbitrary strings in **S**. Let :math:`l(u) = m` and :math:`l(t) = n`. Then, :math:`l(ut) = m + n`, by :ref:`Definition 1.1.3 <definition-1-1-3>`.
 
-Let :math:`s = ut`. Let :math:`v = \text{inv}(s) = \text{inv}(ut)`. Let :math:`w = \text{inv}(t)\text{inv}(u).
+Let :math:`s = ut` . Let :math:`v = \text{inv}(s) = \text{inv}(ut)` . Let :math:`w = \text{inv}(t)\text{inv}(u)` .
 
 To prove show the theorem, it must be shown that :math:`v = w`, which means, by :ref:`Definition 1.1.4 <definition-1-1-4>`, it must be shown that 
 
@@ -952,7 +967,7 @@ By repeated applications of :ref:`Definition 1.2.4 <definition-1-2-4>`,
     
 .. math::
 
-    5. \quad l(\text{inv}(u)) = l(u) = m. 
+    5. \quad l(\text{inv}(u)) = l(u) = m
 
 From step 3 and step 4, it follows,
  
@@ -962,7 +977,9 @@ From step 3 and step 4, it follows,
 
 From steps 4 and 5, it follows, 
 
-    6. \quad l(v) = l(w) = m + n.
+.. math::
+
+    6. \quad l(v) = l(w) = m + n
 
 Now it is to be shown that :math:`v[i] = w[i]`` for all :math:`i \in N_{l(v)}`. Let *i* be an arbitrary index such that :math:`1 \leq i \leq m + n`.
 
@@ -1008,6 +1025,8 @@ By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 Since :math:`l(s) = m + n`,
 
+.. math::
+
     b. \quad v[i] = s[m + n - i + 1]
 
 Since *m + n - i + 1* corresponds to an index in *u*,
@@ -1018,13 +1037,19 @@ Since *m + n - i + 1* corresponds to an index in *u*,
 
 Simplifying,
 
+.. math::
+
     d. \quad v[i] = u[m + n - i + 1]
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
+.. math::
+
     e. \quad v[i] = \text{inv}(u)[i - n]
 
 Since :math:`w = \text{inv}(t)\text{inv}(u)`,
+
+.. math::
 
     f. \quad v[i] = w[i] (since w = inv(t)inv(u))
 
@@ -1370,6 +1395,8 @@ Thus, *h* is consecutive.
     
 Then, by step 3
 
+.. math::
+
     15. \quad t[i] = u[f(i)]
 
 Since :math:`f: N_{l(t)} \to N_{l(u)}`, it follows that for all 
@@ -1427,7 +1454,7 @@ Let *n* be a fixed, non-zero natural number, :math:`n \geq 1`. A Phrase of Word 
 
     P_n = (\alpha_1, \alpha_2, ... , \alpha_n)
 
-where each :math:`\alpha_i \in L`. If *i* is :math:`1 \leq i \leq n`, :math:`P_n(i)` denotes the Word *α*:sub:`i` at index *i*, so that **P**:sub:`n` may be rewritten, 
+where each :math:`\alpha_i \in L`. If *i* is such that :math:`1 \leq i \leq n`, :math:`P_n(i)` denotes the Word *α*:sub:`i` at index *i*, so that **P**:sub:`n` may be rewritten, 
 
 .. math::
 
@@ -1445,7 +1472,7 @@ Let *n* be a fixed natural number. We define a Language's *n*:sup:`th` Lexicon, 
 
 .. math::
 
-    X_{L}(n) = \{ P_n | P_n = (\alpha_1, \alpha_2, ..., \alpha_n) \land \forall i \in N_n: \alpha_i` \in L \} 
+    X_{L}(n) = \{ P_n \mid P_n = (\alpha_1, \alpha_2, ..., \alpha_n) \land \forall i \in N_n: \alpha_i \in L \} 
     
 ∎
 
@@ -1509,17 +1536,17 @@ Apply :ref:`Definition 1.2.7 <definition-1-2-7>` to construct the Delimitation o
 
 .. math::
 
-    1. \quad n = 1: D\Pi_{i=1}^{1} \alpha_i = \text{"mother"} 
+    2. \quad n = 1: D\Pi_{i=1}^{1} \alpha_i = \text{"mother"} 
 
 And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
 
 .. math::
 
-    2.  \quad n = 2: D\Pi_{i=1}^{2} \alpha_i = (D\Pi_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
+    3.  \quad n = 2: D\Pi_{i=1}^{2} \alpha_i = (D\Pi_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
     
 .. math::
 
-    3.  \quad n = 3: D\Pi_{i=1}^}{3} \alpha_i = (D\Pi_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}\sigma\text{"may"})(\sigma\text{"I"}) = \text{"mother"}\sigma\text{"may"}\sigma\text{"I"}
+    4.  \quad n = 3: D\Pi_{i=1}^{3} \alpha_i = (D\Pi_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}\sigma\text{"may"})(\sigma\text{"I"}) = \text{"mother"}\sigma\text{"may"}\sigma\text{"I"}
 
 So the Delimitation of the Phrase is given by,
 
@@ -1678,23 +1705,23 @@ In natural language, this theorem can be stated as: A Word in a Language is Refl
 
 .. math::
 
-    1. \forall i \in N_{l(\alpha)}:  \alpha[i] = \alpha[l(\alpha) - i + 1] 
+    1. \quad \forall i \in N_{l(\alpha)}:  \alpha[i] = \alpha[l(\alpha) - i + 1] 
 
 Let :math:`\beta = \text{inv}(\alpha)`. By the :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    2. l(\beta) = l(\alpha)
+    2. \quad l(\beta) = l(\alpha)
     
 .. math::
 
-    3. \forall i \in N_{l(α)}: ( \beta[i] = \alpha[l(\alpha) - i + 1] )
+    3. \quad \forall i \in N_{l(α)}: ( \beta[i] = \alpha[l(\alpha) - i + 1] )
 
 Substituting the property of Reflective Words from step 1 into step 3,
 
 .. math::
 
-    4. \forall i \in N_{l(\alpha)}: \beta[i] = \alpha[i]
+    4. \quad \forall i \in N_{l(\alpha)}: \beta[i] = \alpha[i]
 
 Since :math:`\beta[i] = \alpha[i]` for all :math:`i \in N_{l(\alpha)}`, and both strings have the same length, by :ref:`Definition 1.1.4 <definition-1-1-4>`, it can be concluded that :math:`\alpha = \beta`. Therefore the desired result is obtained, :math:`\alpha = \beta = \text{inv}(\alpha)`.
 
@@ -1702,11 +1729,11 @@ Since :math:`\beta[i] = \alpha[i]` for all :math:`i \in N_{l(\alpha)}`, and both
 
 .. math::
 
-    1. l(\alpha) = l(\text{inv}(\alpha))
+    1. \quad l(\alpha) = l(\text{inv}(\alpha))
     
 .. math::
 
-    2. \forall i \in N_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
+    2. \quad \forall i \in N_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
 
 But step 2 is exactly the definition of Reflective Words, so by :ref:`Definition 1.3.1 <definition-1-3-1>`, :math:`\alpha \in R` ∎ 
 
@@ -1733,37 +1760,39 @@ A Word *α* will be referred to as *invertible* if it belongs to the class of In
 
 :ref:`Definition 1.3.2 <definition-1-3-2>` is immediately employed to derive the following theorems.
 
+.. _theorem-1-3-2:
+
 **Theorem 1.3.2** :math:`\forall \alpha \in L: \alpha \in I \leftrightarrow \text{inv}(\alpha) \in I`
 
 (→) Assume :math:`\alpha \in I`. By :ref:`Definition 1.3.2 <definition-1-3-2>`,
 
 .. math::
 
-    1. \text{inv}(α) \in L
+    1. \quad \text{inv}(α) \in L
     
 Consider *inv(α)*. To show that it's invertible, it must be shown,
 
 .. math::
 
-    2. \text{inv}(\text{inv}(\alpha)) \in L. 
+    2. \quad \text{inv}(\text{inv}(\alpha)) \in L. 
 
 By :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
-    3. \text{inv}(\text{inv}(\alpha)) = \alpha
+    3. \quad \text{inv}(\text{inv}(\alpha)) = \alpha
     
 Since it is known :math:`\alpha \in L`, it follows,
 
 .. math::
 
-    4. \text{inv}(\text{inv}(\alpha)) \in L  
+    4. \quad \text{inv}(\text{inv}(\alpha)) \in L  
     
 By the :ref:`Definition 1.3.2 <definition-1-3-2>`, 
 
 .. math::
 
-    5. inv(\alpha) \in I
+    5. \quad \text{inv}(\alpha) \in I
     
 Therefore, *inv(α)* is also an Invertible Word. 
 
@@ -1771,21 +1800,21 @@ Therefore, *inv(α)* is also an Invertible Word.
 
 .. math::
 
-    1. \text{inv}(\text{inv}(\alpha)) \in L
+    1. \quad \text{inv}(\text{inv}(\alpha)) \in L
 
 By :ref:`Theorem 1.2.4 <theorem-1-2-4>`,
 
 .. math::
 
-    2. \alpha \in L
+    2. \quad \alpha \in L
 
-To show *α* is invertible, it must be shown :math:`inv(\alpha) \in L`, but this is exactly what has been assumed, so it follows immediately. 
+To show *α* is invertible, it must be shown :math:`\text{inv}(\alpha) \in L`, but this is exactly what has been assumed, so it follows immediately. 
 
 Therefore, putting both directions of the equivalence together and generalizing over all Words in a Language, 
 
 .. math::
 
-    \forall \alpha \in L: \alpha \in I ↔ \text{inv}(\alpha) \in I 
+    3. \quad \forall \alpha \in L: \alpha \in I ↔ \text{inv}(\alpha) \in I 
     
 ∎ 
 
@@ -1797,47 +1826,47 @@ Assume :math:`α \in R`. By :ref:`Definition 1.3.2 <definition-1-3-2>`,
 
 .. math::
 
-    1. \forall i \in N_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
+    1. \quad \forall i \in N_{l(\alpha)}: \alpha[i] = \alpha[l(\alpha) - i + 1]
 
 Let :math:`\beta = inv(\alpha)`. By :ref:`Definition 1.2.4 <definition-1-2-4>`,
 
 .. math::
 
-    2. l(\beta) = l(\alpha)
+    2. \quad l(\beta) = l(\alpha)
     
 .. math::
 
-    3. \forall j in N_{l(\alpha)}: \beta[j] = \alpha[l(\alpha) - j + 1]
+    3. \quad \forall j \in N_{l(\alpha)}: \beta[j] = \alpha[l(\alpha) - j + 1]
 
 Substituting step 1 into step 3,
 
 .. math::
 
-    4. \forall i \in N_{l(\alpha)}:  \beta[j] = \alpha[j]
+    4. \quad \forall i \in N_{l(\alpha)}:  \beta[j] = \alpha[j]
 
 Since both strings have the same length and the same Characters in the same order, by :ref:`Definition 1.1.4 <definition-1-1-4>`, 
 
 .. math::
 
-    5. \alpha = \beta = \text{inv}(\alpha)
+    5. \quad \alpha = \beta = \text{inv}(\alpha)
 
 By assumption, *α* is a Word from Language **L** that belongs to **R**. From step 5, this implies *inv(α)* is also part of the Language **L**. By :ref:`Definition 1.3.2 <definition-1-3-2>`, this implies,
 
 .. math::
 
-    6. \alpha \in I 
+    6. \quad \alpha \in I 
 
 In other words, 
 
 .. math::
 
-    \forall \alpha \in L: \alpha \in R \to \alpha \in I 
+    7. \quad \forall \alpha \in L: \alpha \in R \to \alpha \in I 
 
 But this is exactly the definition of the subset relation in set theory. Therefore,
 
 .. math::
 
-    R \subseteq I 
+    8. \quad R \subseteq I 
     
 ∎ 
 
@@ -1850,21 +1879,23 @@ The set of non-reflective Invertible Words, **I** - **R** (where "-" represents 
 
 .. _theorem-1-3-4:
 
-**Theorem 1.3.4** If | R | is even, then | I | is even. If | R | is odd, then | I | is odd.
+**Theorem 1.3.4** If :math:`\lvert R \rvert` is even, then :math:`\lvert I \rvert` is even. If :math:`\lvert R \rvert` is odd, then :math:`\lvert I \rvert` is odd.
 
 Partition the set of Invertible Words, **I**, into two disjoint subsets,
 
     1. **R**: The set of Reflective Words.
     2. **I** - **R**: The set of Invertible Words that are not Reflective.
 
-For every word *α* in **I** *-* **R**, its inverse, *inv(α)*, is also in **I** *-* **R**. Furthermore, they form a distinct pair *(α, inv(α))*. This is because *α* is invertible but not reflective, so *α ≠ inv(α)*.
+For every word *α* in :math:`I - R`, its inverse, *inv(α)*, is also in :math:`I - R`. Furthermore, they form a distinct pair :math:`(\alpha, \text{inv}(\alpha))`. This is because *α* is invertible but not reflective, so :math:`α \neq \text{inv}(\alpha)`.
 
-Since the elements of **I** *-* **R** can be grouped into distinct pairs, the cardinality | I - R | must be even.
+Since the elements of v can be grouped into distinct pairs, the cardinality :math:`\lvert I - R \rvert` must be even.
 
 The total number of Invertible Words is the sum of the number of Reflective Words and the number of Invertible Words that are not Reflective,
 
-    3. | I | = | R | + | I - R |
+.. math::
 
-Let | R | be even. Since | I - R | is always even, and the sum of two even numbers is even, | I | must also be even.
+    3. \quad \lvert I \rvert = \lvert R \rvert + \lvert I - R \lvert
 
-Let | R | be odd. Since | I - R | is always even, and the sum of an odd number and an even number is odd, | I | must also be odd. ∎ 
+Let :math:`\lvert R \rvert` be even. Since :math:`\lvert I - R \rvert` is always even, and the sum of two even numbers is even, :math:`\lvert I \rvert` must also be even.
+
+Let :math:`\lvert R \rvert` be odd. Since :math:`\lvert I - R \rvert` is always even, and the sum of an odd number and an even number is odd, :math:`\lvert I \rvert` must also be odd. ∎ 

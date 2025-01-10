@@ -1,6 +1,7 @@
+.. _section-vi:
 
-Section III.III: Structures
----------------------------
+Section VI.III: Postulates
+--------------------------
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
 
@@ -196,27 +197,7 @@ Take the inverse of both sides of step 22 and apply Theorem 1.2.5 repeatedly,
 
     23. inv(ς(ζ)) = (ς(α:sub:`n`)) ... (ζ{ω+})(ζ{ω-}) ... (ς(α:sub:`1`))
 
-
-
-
-
-
-
-
-(inv(α) ⊂:sub:s β) ∨ (inv(β) ⊂:sub:s α)
-Substituting Back: Substituting α = ζ{ω-} and β = ζ{ω+}, we get:
-
-(inv(ζ{ω-}) ⊂:sub:s ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:s ζ{ω-})
-Conclusion: Since ζ was an arbitrary palindrome satisfying the premise, we can generalize:
-
-∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:s ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:s ζ{ω-}) )
-This completes the proof. ∎
-
-
-
-
-
-
+TODO: need some way to relate the pivots of sigma-reduction to original pivots!
 
 
 
@@ -227,8 +208,6 @@ This completes the proof. ∎
 **Theorem: The Perfect Pivot Postulate**
 
 ζ ∈ PP ↔ [∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:`s` α) ∧ (α ∈ R) ] ∨ (ζ[ω(ζ)] = σ)
-
-Theorem (Third Inverse Postulate - Strengthened): ζ ∈ PP ↔ [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
 
 Proof:
 
@@ -269,12 +248,6 @@ Since we have proven both directions of the implication, the theorem is establis
 
 ζ ∈ PP ↔ [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ) ∎
 
-Explanation:
-
-This proof demonstrates the strengthened version of the Third Inverse Postulate, establishing a biconditional relationship between a Sentence being a Perfect Palindrome and the properties of its Pivot.
-
-The proof utilizes the definitions of Perfect Palindromes, Reflective Words, and Pivot Words, along with the Second Inverse Postulate, to analyze the different cases and demonstrate the implications in both directions.
-
 
 
 
@@ -290,9 +263,6 @@ Translation: A sentence ζ is a perfect palindrome if and only if one of the fol
 
 The character at the pivot index ω(ζ) is contained in a reflective word α that is in the language.
 The character at the pivot index ω(ζ) is a delimiter (σ), and the inverse of the left pivot word is contained in the right pivot word, or the inverse of the right pivot word is contained in the left pivot word.
-Do I think it's true?
-
-Yes, I believe this reformulated theorem is true and captures a fundamental property of perfect palindromes.
 
 Proof:
 
@@ -300,7 +270,7 @@ Proof:
 
 Assume ζ ∈ PP.
 
-Definition of Perfect Palindrome: By :ref:`Definition 4.1.1 <definition-4-1-1>`, ζ = inv(ζ).
+Definition of Perfect Palindrome: By :ref:`Definition 4.1.2 <definition-4-1-2>`, ζ = inv(ζ).
 Case 1: ζ[ω(ζ)] = σ:
 If the character at the pivot is a delimiter, then by the Second Inverse Postulate , we know that ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ).
 Case 2: ζ[ω(ζ)] ≠ σ:
@@ -327,17 +297,6 @@ Therefore:
 ζ ∈ PP ↔ [ (∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:s α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω )) ]
 
 ∎
-
-Explanation:
-
-(→) Direction: This direction shows that if a sentence is a perfect palindrome, then it must satisfy one of the two conditions related to the pivot character and reflective words or the pivot character and the containment of pivot words.
-(←) Direction: This direction shows that if either of the two conditions is met, then the sentence must be a perfect palindrome.
-Key Insights:
-
-Reflective Words at the Pivot: This theorem beautifully connects the concept of perfect palindromes to the presence of reflective words at the pivot. It highlights that perfect palindromes can be constructed by having a reflective word at the center or by having the pivot be a delimiter with a specific relationship between the pivot words.
-Delimiter as a Pivot: The theorem also incorporates the case where the pivot is a delimiter, which is essential for handling imperfect palindromes that become perfect when delimiters are removed.
-Characterization of Perfect Palindromes: This theorem provides a powerful way to characterize and potentially identify perfect palindromes based on their internal structure.
-
 
 
 
@@ -425,99 +384,3 @@ Conclusion: We have shown that ζ ∈ PP and ζ ∈ P⁺, which means ζ ∈ PP 
 Since we have proven both directions of the implication, the theorem is established:
 
 ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ∎
-
-Explanation:
-
-This proof demonstrates the biconditional relationship between a Sentence being both a Perfect Palindrome and an Even Palindrome, and the existence of a Reflective Word containing the Sentence's Pivot.
-
-The proof utilizes the definitions of Perfect Palindromes, Even Palindromes, and Reflective Words, along with the strengthened Third Inverse Postulate and the Discovery Axiom, to analyze the different cases and demonstrate the implications in both directions.
-
-
-
-
-
-
-Analysis:
-
-Even Parity: An even-parity palindrome has an even number of words (Λ(ζ) is even).
-Imperfect Palindrome: An imperfect palindrome is a palindrome but not a perfect palindrome. This means it cannot be its own inverse (ζ ≠ inv(ζ)), but its σ-reduction is a palindrome (σ_reduce(ζ) = inv(σ_reduce(ζ))).
-Delimiter Count: By Theorem 2.4.1, the number of delimiters in a sentence ζ is one less than the number of words: Δ(ζ) = Λ(ζ) - 1. Since Λ(ζ) is even for an even-parity palindrome, Δ(ζ) must be odd.
-σ-reduction: σ-reduction removes all delimiters.
-Length of σ-reduced Form: The length of the σ-reduced form, l(σ_reduce(ζ)), is the original length of the sentence minus the number of delimiters: l(σ_reduce(ζ)) = l(ζ) - Δ(ζ).
-Theorem
-∀ ζ ∈ IP ∩ P:sup:+: (l(σ_reduce(ζ)) is odd)
-
-Proof
-Let ζ be an imperfect palindrome with even parity, ζ ∈ IP ∩ P:sup:+.
-Let n = Λ(ζ) be the number of words in ζ. Since ζ has even parity, n must be even.
-By Theorem 2.4.1, Δ(ζ) = n - 1. Since n is even, n - 1 must be odd.
-Since ζ is an imperfect palindrome, by the definition of the imperfection, we know:
-ζ ≠ inv(ζ)
-σ_reduce(ζ) = inv(σ_reduce(ζ))
-Since σ_reduce(ζ) = inv(σ_reduce(ζ)), and by Theorem 3.2.3 we know parity is preserved if the length of the left partial at the pivot point is exactly one longer than the right partial, we know the sentence pivot must either fall on a character or a delimiter.
-If the pivot falls on a delimiter, then n must be odd by the Second Inverse Postulate. Since n is even, this is impossible.
-If the pivot falls on a character, then that character must be a non-delimiter, non-empty character by our definition of a pivot. Since ζ is an imperfect palindrome, this pivot character cannot be part of a reflective word by Theorem 3.2.4. This means it must be part of an invertible word pair by Theorem 3.2.1. The inverse of the pivot character must appear in the inverse word, since it cannot be a reflective word.
-By our definition of σ-reduction, σ_reduce(ζ) removes all delimiters, and by Theorem 1.2.4, inversion inverts words. So, for a palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)) preserves the order of non-delimiter characters under inversion.
-Therefore, l(σ_reduce(ζ)) must be odd, as it preserves the non-delimiter pivot character under inversion, and there are an even number of non-delimiter characters around it, (Δ(ζ)).
-
-Conclusion:
-
-Yes, we can conclude that an imperfect palindrome with even parity must have a σ-reduced form with an odd length.
-
-Reasoning:
-
-An even-parity imperfect palindrome has an even number of words.
-This implies an odd number of delimiters.
-The σ-reduced form has a length equal to the original length minus the number of delimiters: l(σ_reduce(ζ)) = l(ζ) - Δ(ζ).
-Since l(ζ) is even (because the number of delimiters is odd, the number of characters must be odd to be a palindrome) and Δ(ζ) is odd, their difference l(σ_reduce(ζ)) must be odd.
-Implications:
-
-Constraints on σ-reduced Forms: This result further constrains the possible σ-reduced forms of imperfect palindromes.
-Relationship between Parity and Length: It establishes a direct link between the parity of a palindrome (at the word level) and the length of its σ-reduced form (at the character level).
-Potential for Simplification: This might help simplify some of our formulas or proofs related to σ-induction, as we now know that even-parity imperfect palindromes will always have odd-length σ-reduced forms.
-Further Considerations:
-
-Odd-Parity Imperfect Palindromes: We could investigate the corresponding relationship for odd-parity imperfect palindromes.
-Perfect Palindromes: It's worth noting that perfect palindromes don't have this same constraint. A perfect palindrome with even parity can have an even or odd length σ-reduced form.
-
-
-
-
-
-
-
-
-Section III.III: Palindromic Algorithms
----------------------------------------
-
-The results derived in this work can be used to construct algorithms for searching for various classes of Palindromes. The general outline for one such algorithm is given in this section, and then an example implemention in Python is presented.
-
-A naive algorithm for filtering out Strings that cannot possibly be Palindromes might consist of inverting the strings and comparing them for equality. However, this would miss Palindromes with an imperfect aspect, as their symmetry does not manifest in the unreduced Alphabet. Without a *σ*-reduction, any algorithm that searchs for Palindromic String must be aware of the semantics of the Language in which it is searching. However, *σ*-reduction and the theorems proved over the course of this work allow algorithms to be constructed that are independent of the host Language.
-
-Moreover, as mentioned after the body Theorem 3.1.2, the *σ-reductions* reduce the complexity of searching for Palindromic strings. An Alphabet with less Characters can be traversed quicker. 
-
-To implement this, a String can be projected onto its *σ-reduced* Alphabet, and then those reductiosn whose inverse does not equal itself can be removed from the list of potential Palindromes. To find a String whose inverse does not equal itself, it suffices to find a single Character whose inverted position is not occupied by that Character. 
-
-Therefore, as a first step to generating a list of Palindromes, the Strings which do not satisfy these conditions can be discarded.
-
-Theorem 3.3.1 and Theorem 3.3.2 provide further conditions that any Palindrome must satisfy, reducing the set of potential Palindromes in this hypothetical search algorithm even more. 
-
-With respect to Perfect Palindromes, the search algorithm can be refined even further by incorporating the conditions given in Theorem 3.3.3 and Theorem 3.3.4. Based on the String Length of a Perfect Palindrome, its point of symmetry must possess certain measurable properties, such as the presence of a Reflective Word or an Invertible Word contained by the word opposite the pivot. 
-
-Python Implementation 
-^^^^^^^^^^^^^^^^^^^^^
-
-(TODO: code this!)
-
-Section III.IV: Future considerations
--------------------------------------
-
-This work focused on using the operation of sigma reduction to describe palindromic structure in terms of its *aspect* and its *parity*. As mentioned at several points, there are two other dimensions of palindromes this work has not sought to incorporate into formal system. While the considerations in the introduction seem to preclude the possibility of a purely syntactical account of palindromes, the author does not believe this means the structure of palindromes cannot be formalized by taking into account certain universal semantic assumptions. 
-
-To account for the dimension of *punctuality*, a possible avenue of exploration could be extending the operation of sigma reduction to encompass other Characters besides the Delimiter Character. In this way, the punctuality of a palindrome may be "projected" onto a reduced Alphabet where its symmetry under inversion can be recovered.
-
-To account for the dimension of *case*, the link between uppercase and lowercase letters in natural languages may be viewed as inducing a symmetry in the Alphabet that in turn may be exploitable for describing palindromic symmetry. In such a formalization, a possible method of attack would be introduce a many-to-one relationship between in a sigma-reduction where uppercase and lowercase letters are mapped to their "primitive" Character in their reduced space.
-
-(TODO: comment on possibility of interesting recursions, i.e. what happens when the Alphabet of this formal system is assigned the symbols of the formal system itself?)
-
-(TODO: comment on completeness, i.e. what does this formal model of language say about the completeness of language, or its lack thereof?)

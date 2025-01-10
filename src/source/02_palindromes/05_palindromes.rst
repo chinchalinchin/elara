@@ -78,7 +78,7 @@ Perfect Palindromes are defined as the set of Sentences **PP** that satisfy the 
     
 ∎
 
-Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy :ref:`Definition 4.1.2 <definition-4-1-2>` also satisfy :ref:`Definition 4.1.1 <definition-4-1-1>`. Before moving onto this verification, the motivation for :ref:`Definition 4.1.2 <definition-4-1-2>`will briefly be explained.
+Note the name given to this class of Sentences is premature. While the terminology will prove to be accurate, at this point in the analysis, one must be careful not to confuse Perfect Palindromes with Palindromes. It has not yet been shown the class of Sentences which satisfy :ref:`Definition 4.1.2 <definition-4-1-2>` also satisfy :ref:`Definition 4.1.1 <definition-4-1-1>`. Before moving onto this verification, the motivation for :ref:`Definition 4.1.2 <definition-4-1-2>` will briefly be explained.
 
 :ref:`Definition 4.1.2 <definition-4-1-2>` implicitly captures the Character-level symmetry that's characteristic of Perfect Palindromes. If a Sentence is its own inverse, it means that the sequence of Characters reads the same backward as forward. It also implicitly captures the Word-level symmetry, as the inversion operation takes into account the reversal of Words within the Sentence, by :ref:`Theorems 2.3.9 <theorem-2-3-9>` - :ref:`2.3.11 <theorem-2-3-11>`. A Perfect Palindrome is a confluence of symmetries, a *"singularity"* of reflected inversion at every level of the linguistic hierarchy.
 
@@ -122,9 +122,13 @@ By :ref:`Definition 2.3.2 <definition-2-3-2>` of Invertible Sentences,
 
 Therefore, 
 
+.. math::
+
     6. \quad \zeta \in PP \to \zeta \to K. 
     
 This in turn implies,
+
+.. math::
 
     7. \quad PP \subset K 
 
@@ -212,49 +216,49 @@ Assume *ζ* is arbitrary Sentence in **C**:sub:`L` such that,
 
 .. math::
 
-    1. \zeta \in PP 
+    1. \quad \zeta \in PP 
     
-This means *ζ* is a Perfect Palindrome, so by :math:`Definition 4.1.2 <definition-4-1-2>`, 
+This means *ζ* is a Perfect Palindrome, so by :ref:`Definition 4.1.2 <definition-4-1-2>` , 
 
 .. math::
 
-    2. \zeta = \text{inv}(\zeta).
+    2. \quad \zeta = \text{inv}(\zeta).
 
 Applying a *σ*-reduction to both sides of the equation,
 
 .. math::
 
-    3. \varsigma(\zeta) = \varsigma(\text{inv}(\zeta))
+    3. \quad \varsigma(\zeta) = \varsigma(\text{inv}(\zeta))
 
 By :ref:`Theorem 3.1.1 <theorem-3-1-1>`, 
 
 .. math::
 
-    4. \varsigma(\text{inv}(\zeta)) = \text{inv}(\varsigma(\zeta))
+    4. \quad \varsigma(\text{inv}(\zeta)) = \text{inv}(\varsigma(\zeta))
 
 Combining steps 3 and 4, 
 
 .. math::
 
-    5. \varsigma(\zeta) = \text{inv}(\varsigma(\zeta))
+    5. \quad \varsigma(\zeta) = \text{inv}(\varsigma(\zeta))
 
 Step 4 exactly satisfies the condition for *ζ* to be a Palindrome according to :ref:`Definition 4.1.1 <definition-4-1-1>`. Therefore, 
 
 .. math::
 
-    6. \zeta \in P
+    6. \quad \zeta \in P
 
 Since *ζ* was an arbitrary Perfect Palindrome, it has been shown that,
 
 .. math::
 
-    7. \zeta \in PP \to \zeta \in P
+    7. \quad \zeta \in PP \to \zeta \in P
     
 This in turn implies,
 
 .. math::
 
-    8. PP \subset P 
+    8. \quad PP \subset P 
 
 ∎
 
@@ -276,6 +280,8 @@ Imperfect Palindromes are defined as the set of Sentences **IP** that satisfy th
 
 This gives a way of identifying Sentences such as :math:`ᚠ = \text{"to oscillate metallic soot"}` and :math:`ᚢ = \text{"rats live on no evil star"}` as representatives of the same class, namely Palindromes, but with different *aspects*. *ᚢ* is Perfect, while *ᚠ* requires a *σ*-reduction. 
 
+.. _theorem-4-1-5:
+
 **Theorem 4.1.5** :math:`PP \cup IP = P``
 
 Follows immediately from :ref:`Theorem 4.1.4 <theorem-4-1-4>`, :ref:`Definition 4.1.3 <definition-4-1-3>`, and the fact that **PP** and **IP** are disjoint (by the definition of set difference). ∎
@@ -291,6 +297,8 @@ A Palindrome *ζ* is said to have a *perfect aspect* or *be perfect* if and only
     \zeta \in PP 
 
 A Palindrome *ζ* is said to have an *imperfect aspect* or *be imperfect* if and only if,
+
+.. math::
 
     \zeta \in IP 
     
@@ -321,7 +329,7 @@ Let *n* be a fixed natural number such that :math:`1 \leq n \leq l(\zeta)`. A Le
 
 .. math::
 
-    \Zeta[:n] = (\iota_1 , \iota_2 , ... , \iota_n`)  
+    \zeta[:n] = (\iota_1 , \iota_2 , ... , \iota_n`)  
 
 When :math:`n = 0`, *ζ[:0]* is defined as the empty string, *ε*.
 
@@ -335,13 +343,13 @@ Let *ζ* be a Sentence in C:sub:`L` with Character-level representation **Z**,
 
 .. math::
 
-    \Zeta  = (\iota_1 , \iota_2 , ... , \iota_{l(\zeta)}).
+    \zeta  = (\iota_1 , \iota_2 , ... , \iota_{l(\zeta)}).
 
 Let *n* be a fixed natural number such that :math:`1 \leq n \leq l(\zeta)*. A Right Partial Sentence of the *n*:sup:`th` Character, denoted *ζ[n:]*, is formally defined as the String which satisfies, 
 
 .. math::
 
-    \Zeta[n:] = (\iota_n, \iota_{n+1}, ..., \iota_{l(\zeta)})
+    \zeta[n:] = (\iota_n, \iota_{n+1}, ..., \iota_{l(\zeta)})
 
 where *n* is a natural number such that 1 ≤ n ≤ l(ζ) + 1.
 
@@ -380,7 +388,7 @@ This relation bears a similarity to :ref:`Definition 1.2.4 <definition-1-2-4>` o
 
 A Palindrome is a type of inversion. In a Palindrome, the requirement that individual Characters must maintain their symmetry across its String Length is extended up to the Sentence level through the requirement that, based on the parity of the Palindrome, the Partial Sentences on either side of the Sentence's center must be mirror images of one another. 
 
-Note that :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>` are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial Notation from being applied to Strings that have been stripped of their Empty Characters via the :ref:`Emptying Algorithm <emptying-algorithm>` for the construction of their Character-level representation (:ref:`Definition 1.1.2 <definition-1-1-2>`). In other words, :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>`operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has been processed through the :ref:`Emptying <emptying-algorithm>` and :ref:`Delimiting Algorithm <delimiting-algorithm>`.
+Note that :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>` are given in terms of Sentences because they will be applied primarily to Sentences, but there is nothing inherently in the definitions which prevents the Partial Notation from being applied to Strings that have been stripped of their Empty Characters via the :ref:`Emptying Algorithm <algorithm-1>` for the construction of their Character-level representation (:ref:`Definition 1.1.2 <definition-1-1-2>` ). In other words, :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>` operate on a String's Character-level representation, not the String itself. This is an important distinction to be made (one that must be made for Character Index Notation and Word Index Notation as well). Partial Sentences (and Character Index Notation and Word Index Notation) are abstractions defined on a representation of a String that has been processed through the :ref:`Emptying <algorithm-1>` and :ref:`Delimiting Algorithm <algorithm-2>`.
 
 The next two theorems leverage this insight and establish the fundamental relationship between Left and Right Partial Sentences. In addition, they prove the existence of a natural number that acts as the mid-point of the Sentence's String Length. This in turn will allow for a definition of a Sentence's *Pivot* as the center of a Sentence.
 
@@ -402,13 +410,13 @@ Let *i* be a natural number such that,
 
 By :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion, the Inverse of *ζ*, denoted *inv(ζ)*, is formed by reversing the order of the Characters in *ζ*.
 
-By :ref:`Definition 4.2.1 <definition-4-2-1>`, the Left Partial Sentence of *inv(ζ)* up to index i, denoted *inv(ζ)[:i]*, consists of the first *i* characters of *inv(ζ),
+By :ref:`Definition 4.2.1 <definition-4-2-1>`, the Left Partial Sentence of *inv(ζ)* up to index i, denoted *inv(ζ)[:i]*, consists of the first *i* characters of *inv(ζ)*,
 
 .. math::
 
     3. \quad \text{inv}(\zeta)[:i] = (\text{inv}(\zeta)[1], \text{inv}(\zeta)[2], ..., \text{inv}(\zeta)[i])
 
-By :ref:`Definition 1.2.4 <definition-1-1-24>`, for any Character index *j* in *inv(ζ)*:
+By :ref:`Definition 1.2.4 <definition-1-2-4>`, for any Character index *j* in *inv(ζ)*:
 
 .. math::
 
@@ -420,7 +428,7 @@ Applying this to each Character in *inv(ζ)[:i]*, we get:
 
     5. \quad \text{inv}(\zeta)[:i] = (\zeta[l(\zeta)], \zeta[l(\zeta) - 1], ..., \zeta[l(\zeta) - i + 1])
 
-Now, consider the Right Partial Sentence of *ζ* starting at index *l(ζ) - i + 1*, denoted *ζ[l(ζ) - i + 1:]*. By :ref:`Definition 4.2.2`, this consists of the characters from index *l(ζ) - i + 1* to the end of *ζ*,
+Now, consider the Right Partial Sentence of *ζ* starting at index *l(ζ) - i + 1*, denoted *ζ[l(ζ) - i + 1:]*. By :ref:`Definition 4.2.2 <definition-4-2-2>`, this consists of the characters from index *l(ζ) - i + 1* to the end of *ζ*,
 
 .. math::
 
@@ -568,9 +576,13 @@ This theorem can be stated in natural language as follows: For any Sentence in t
 
 Since *i* is a natural number, it follows,
 
+.. math::
+
     2. \quad 1 \leq n \leq l(\zeta)
 
 From which it follows, 
+
+.. math::
 
     3. \quad i \in N_{l(\zeta)}
 
@@ -602,7 +614,7 @@ Therefore,
 
 .. math::
 
-    8. \quad \exist i \in N_{l(\zeta)}: (l(\zeta[:i]) + 1 = l(\zeta[i:]))
+    8. \quad \exists i \in N_{l(\zeta)}: (l(\zeta[:i]) + 1 = l(\zeta[i:]))
 
 (←) Let *ζ* be an arbitrary sentence in C:sub:`L` such that, 
 
@@ -735,7 +747,7 @@ Consider these simple examples from a hypothetical Language **L** with Alphabet,
 
 .. math::
 
-    \Sigma = \{ \text{"a"}, \text{"b"}, \text{"c"}, \text{" "}, \text{""} }
+    \Sigma = \{ \text{"a"}, \text{"b"}, \text{"c"}, \text{" "}, \text{""} \}
 
 Various "sentences" of this Language are given below, along with their Partial Sentences and Pivots,
 
@@ -1023,7 +1035,7 @@ By :ref:`Definition 4.2.3 <definition-4-2-3>`, the Pivot *ω(ζ)* is the smalles
 
     1. \quad \omega(\zeta) = \frac{l(\zeta)}{2} 
 
-Since by :ref:`Definition 4.2.3`, a Pivot is a natural number, let *i* be a natural number such that,
+Since by :ref:`Definition 4.2.3 <definition-4-2-3>`, a Pivot is a natural number, let *i* be a natural number such that,
 
 .. math::
 
@@ -1055,6 +1067,8 @@ Since both directions of the equivalence have been shown, it follows,
 
 Assume *ζ* is arbitrary Sentence such that,
 
+.. math::
+
     1. \quad \zeta \in P^{+}
 
 From :ref:`Definition 4.2.5 <definition-4-2-5>`, it follows, 
@@ -1063,7 +1077,7 @@ From :ref:`Definition 4.2.5 <definition-4-2-5>`, it follows,
 
     2. \quad \exists k \in \mathbb{N} : l(\zeta) = 2k
 
-From :ref:`Theorem 4.2.8`, it follows, 
+From :ref:`Theorem 4.2.8 <theorem-4-2-8>`, it follows, 
 
 .. math::
 
@@ -1131,6 +1145,8 @@ It is also equivalent to,
 
 Moreover,
 
+.. math::
+
     4. \quad \frac{l(\varsigma(\zeta)) + 1}{2} ≥ \frac{l(\varsigma(\zeta))}{2}
 
 By :ref:`Theorems 4.2.6 <theorem-4-2-6>` and :ref:`4.2.8 <theorem-4-2-8>`, one of the following must be true,
@@ -1159,7 +1175,7 @@ If :math:`\omega(\zeta) = \frac{l(\zeta) + 1}{2}`, then *l(ζ)* is odd by :ref:`
 
     9. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta)  
 
-If :math:`\omeag(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by Theorem 3.2.12. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
+If :math:`\omega(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by Theorem 3.2.12. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
 
 .. math::
 
@@ -1245,7 +1261,7 @@ Therefore, the assumption that *ζ* is both an Even and Odd Palindrome must be f
 
 .. math::
 
-    7. P_{-} \cap P_{+} = \emptyset 
+    7. \quad P_{-} \cap P_{+} = \emptyset 
 
 ∎
 
@@ -1351,7 +1367,9 @@ Step 8 from the (⊆) direction and taken with step 7 from the (⊇) together im
 
 .. math::
 
-    8. \quad P_{+} \cup P_{-} = P ∎
+    8. \quad P_{+} \cup P_{-} = P 
+
+∎
 
 With the partitioning of the class **P** of Sentences in a Corpus, i.e. Palindromes, the notion of *parity* can now be stated precisely in the following definition.
 
@@ -1385,16 +1403,18 @@ Let *ζ* be a sentence in C:sub:`L` with length *Λ(ζ)*, word-level representat
 
 .. math::
 
-    \zeta\{\omega-\} = \ζ\{\omega+\} = \ζ\{1\} = \ζ\{\Lambda(\zeta)\}
+    \zeta\{\omega-\} = \zeta\{\omega+\} = \zeta\{1\} = \zeta\{\Lambda(\zeta)\}
 
-**Case 2**: :math:`\Lambda(\zeta) > 1 \landa \zeta[\omega(\zeta)] = \sigma`
+**Case 2**: :math:`\Lambda(\zeta) > 1 \land \zeta[\omega(\zeta)] = \sigma`
 
     - :math:`\zeta\{\omega-\} = \alpha_j`, such that :math:`(j, \alpha_j) \in W_{\zeta}` and :math:`\alpha_j` is immediately to the left of the Delimiter at ω(ζ).
     - :math:`\zeta\{\omega+\} = \alpha_k`, such that :math:`(k, \alpha_k) \in W_{\zeta}` and :math:`k = j + 1`.
 
-**Case 3**: Λ(ζ) > 1 and ζ[ω(ζ)] ≠ σ
+**Case 3**: :math:`\Lambda(\zeta) > 1 \land \zeta[\omega(\zeta)] \neq \sigma`
 
-    - ζ{ω-} = ζ{ω+} = α:sub:`j` such that (j, α:sub:`j`) ∈ W:sub:`ζ` and α:sub:`j` contains the character at position ω(ζ). ∎
+    - :math:`\zeta\{\omega-\} = \zeta\{\omega+\} = \alpha_j` such that :math:`(j, \alpha_j) \in W_{\zeta}` and :math:`\alpha_j` contains the character at position ω(ζ). 
+  
+  ∎
 
 The meaning of Pivot Words can be clarified with a few examples. 
 
@@ -1411,7 +1431,7 @@ The meaning of Pivot Words can be clarified with a few examples.
 
     - l(ζ) = 7, ω(ζ) = 4, ζ[4] = σ
     - W:sub:`ζ` = {(1, "abc"), (2, "def")}
-    - ζ{ω-} = "abc"
+    - ζ{ω-} = "abc" <definition-4-1-1>`0
     - ζ{ω+} = "def"
 
 3. Let *ᚠ = "a bc de fg h"*

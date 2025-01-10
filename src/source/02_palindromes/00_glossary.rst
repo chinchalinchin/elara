@@ -63,7 +63,7 @@ Definitions
 - D 1.3.2: Invertible Words: :math:`\alpha \in I \leftrightarrow \text{inv}(\alpha) \in L`
 - D 2.1.1: Corpus: :math:`C_L`
 - D 2.1.2: Sentence: ᚠ
-- D 2.1.3: Word-Level Set Representation: :math:`W_\rune{f}`
+- D 2.1.3: Word-Level Set Representation: :math:`W_{ᚠ}`
 - D 2.1.4: Word Length: :math:`\Lambda(\zeta)`
 - D 2.1.5: Word Index Notation: :math:`\zeta\{i\}`
 - D 2.1.6: Intervention: :math:`(i/n/j)_\zeta`
@@ -89,8 +89,8 @@ Definitions
 - D 5.2.1: Delimiter Mass: :math:`\mu_{-}(\zeta, i), \mu_{+}(\zeta, i)`
 - D A.1.1: Compound Words: :math:`\eta \in CW_L \leftrightarrow [(\exists \alpha, \beta \in L: \eta = \alpha\beta) \lor (\exists \alpha \in L, \exists \gamma \in CW_L: \eta = \alpha\gamma)] \land (\eta \in L)`
 - D A.1.2: Compound Invertible Words: :math:`\eta \in CIW_L \leftrightarrow [ (\eta \in CW_L) \land (\eta \in I) ]`
-- D A.2.1: :math:`\sigma`-Pairing Language: :math:`\alpha \in L_\sigma \leftrightarrow \exists \zeta \in C_L: \alpha = (\zeta \cdot \Sigma_\sigma)`
-- D A.2.2: Palindromic Pairing Language: :math:`\alpha \in L_P \leftrightarrow \exists \zeta \in P: \alpha = (\zeta \cdot \Sigma_\sigma)`
+- D A.2.1: :math:`\sigma`-Pairing Language: :math:`\alpha \in L_\sigma \leftrightarrow \exists \zeta \in C_L: \alpha = \varsigma(\zeta)`
+- D A.2.2: Palindromic Pairing Language: :math:`\alpha \in L_P \leftrightarrow \exists \zeta \in P: \alpha = (\varsigma(\zeta))`
 - D A.3.1: Category: :math:`C_L(m)`
 - D A.3.2: Categorical Size: :math:`\kappa`
 - D A.4.1: :math:`\sigma`-Induction: :math:`\varsigma^{-1}(\zeta, m, T)`

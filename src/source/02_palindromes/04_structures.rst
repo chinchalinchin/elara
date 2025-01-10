@@ -21,10 +21,14 @@ In order to properly understand the nature of a Palindrome, the formal system un
 
 This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of *σ-reduction* and the *Delimiter Count* function.
 
+.. _section-iii-i:
+
 Section III.I: σ-Reductions 
 ---------------------------
 
 The mathematical definition of Palindromes (:ref:`Definition 4.1.1 <definition-4-1-1>` in the next section) will revolve around a novel linguistic operation, termed a *σ*-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.
+
+.. _reduction-definitions:
 
 Definitions
 ^^^^^^^^^^^
@@ -32,6 +36,8 @@ Definitions
 Before defining a *σ*-reduction, the preliminary concept of a *σ-reduced Alphabet* must be introduced. The following definition serves as the basis for constructing the operation of *σ*-reduction.
 
 As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. *"bor ro worrob"*, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiters, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
+
+.. _definition-3-1-1:
 
 **Definition 3.1.1: σ-Reduced Alphabet**
 
@@ -45,21 +51,23 @@ A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character r
 
 In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of *σ-reduction*.
 
+.. _definition-3-1-2:
+
 **Definition 3.1.2: σ-Reduction**
 
 Let *t* be a String with length *l(t)* and Character-level representation 
 
 .. math::
 
-    1. T = \{ (1,\mathfrak{a}_1) , (2, \mathfrak{a}_2) , ... , (l(t), \mathfrak{a}_{l(t)}) \} 
+    1. \quad T = \{ (1,\mathfrak{a}_1) , (2, \mathfrak{a}_2) , ... , (l(t), \mathfrak{a}_{l(t)}) \} 
     
 .. math::
 
-    2. \mathfrak{a}_i \in \Sigma.
+    2. \quad \mathfrak{a}_i \in \Sigma.
 
-The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, maps the String *t* to a new String *u* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(t)* is defined and constructed using the *Reduction Algorithm*,
+The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, maps the String *t* to a new String *u* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(t)* is defined and constructed using the :ref:`Reduction Algorithm <algorithm-3>`,
 
-**Reduction Algorithm**
+.. _algorithm-3:
 
 **Algorithm 3: Reduction Algorithm**
 
@@ -68,17 +76,25 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
 .. topic:: Algorithm Reduce(t: String)
 
     # Input: A String t
+
     # Output: A String s that represents the σ-reduction of t
 
     # Initialization
+    
     ## Character-level representation of s
+    
     1. s ← Empty(s)
+    
     ## Index to iterate over input String
+    
     2. i ← 1
+    
     ## Empty string to store σ-reduced String
+    
     3. t ← ε            
 
     # Iteration
+    
     4. While i ≤ l(s):
         
         a. If s[i] ≠ σ:
@@ -88,13 +104,16 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
         c. i ← i + 1
 
     # Finalization
+    
     5. If l(t) > 0:
         
         a. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to t
     
-    6. Return t ∎
+    6. Return t 
 
-Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the Reduction Algorithm, if the input string contained at least one non-Empty Character. Otherwise, the Reduction Algorithm returns an Empty Character. From this, it is clear if a String only contains Delimiters,
+∎
+
+Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the :ref:`Reduction Algorithm <algorithm-3>`, if the input string contained at least one non-Empty Character. Otherwise, the :ref:`Reduction Algorithm <algorithm-3>` returns an Empty Character. From this, it is clear if a String only contains Delimiters,
 
 .. math::
 
@@ -118,7 +137,7 @@ Again, from :ref:`Definition 1.1.3 <definition-1-1-3>`, the String Length of a r
 
     l(\varsigma(\alpha)) = l(\alpha)
 
-A subtlety of the Reduction Algorithm should be noted. While :ref:`\varsigma(\sigma) = \varepsilon` and `\varsigma(\alpha) = \alpha`, it does not follow the *σ*-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
+A subtlety of the :ref:`Reduction Algorithm <algorithm-3>` should be noted. While :math:`\varsigma(\sigma) = \varepsilon` and :math:`\varsigma(\alpha) = \alpha`, it does not follow the *σ*-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
 
 .. math::
 
@@ -128,41 +147,43 @@ Except insofar that the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1
 
 This is because of the condition *(j > 1)* in the Finalization Block of the Reduction ensures Empty Characters are stripped from *t* when the input String contains atleast one non-Empty Character that has been concatenated into the *σ*-reduction String. 
 
-The more complicated properties of *σ*-reductions are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the Reduction Algorithm to construct the *σ*-reduction of a String.
+The more complicated properties of *σ*-reductions are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the :ref:`Reduction Algorithm <algorithm-3>` to construct the *σ*-reduction of a String.
 
 **Example**
 
 Let *s = "a b c"* be a String from the Alphabet 
 
+.. math::
+
     \Sigma = \{ \text{""}, \text{" "} , \text{"a"}, \text{"b"}, \text{"c"} \} 
     
-Note in this example :math:`\sigma = \text{" "}` and :math:`l(s) = 5`. The value of the variables in the Reduction Algorithm after each iteration are given below,
+Note in this example :math:`\sigma = \text{" "}` and :math:`l(s) = 5`. The value of the variables in the :ref:`Reduction Algorithm <algorithm-3>` after each iteration are given below,
 
 .. math::
 
-    1. i = 2, t = \varepsilon\text{"a"}
+    1. \quad i = 2, t = \varepsilon\text{"a"}
 
 .. math::
 
-    2. i = 3, t = \varepsilon\text{"a"}
+    2. \quad i = 3, t = \varepsilon\text{"a"}
 
 .. math::
 
-    3. i = 4, t = \varepsilon\text{"ab"}
+    3. \quad i = 4, t = \varepsilon\text{"ab"}
     
 .. math::
 
-    4. i = 5, t = \varepsilon\text{"ab"}
+    4. \quad i = 5, t = \varepsilon\text{"ab"}
     
 .. math::
 
-    5. i = 5, t = \text{"abc"}
+    5. \quad i = 5, t = \text{"abc"}
         
-The result of the σ-reduction of *s* is thus given by,
+The result of the *σ*-reduction of *s* is thus given by,
 
 .. math::
 
-    \varsigma(s) = \text{"abc"} 
+    6. \quad \varsigma(s) = \text{"abc"} 
     
 ∎
 
@@ -172,7 +193,7 @@ The *σ*-reduced Alphabet (**Σ**:sub:`σ`) can be seen as a subspace within thi
 
 Note that a *σ*-reduction is not a one-to-one operation. It is possible for the *σ*-reduction of a palindrome to map onto a totally different sentence, not necessarily a palindrome.
 
-As an example, consider the (partial, ignoring punctuality) Palindromes :math:`ᚠ = \text{"madam im adam"}` and :math:`ᚢ = \text{"mad am i madam"}`. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *madamimadam".
+As an example, consider the (partial, ignoring punctuality) Palindromes :math:`ᚠ = \text{"madam im adam"}` and :math:`ᚢ = \text{"mad am i madam"}`. The *σ*-reduction of both of these Sentences would map to the *σ-reduced* value of *"madamimadam"*.
 
 Both the Palindrome and the alternative Sentence (which also happens to be a Palindrome) have the same *σ*-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original Word boundaries and Sentence structure are lost.
 
@@ -191,25 +212,25 @@ Let *ζ* be an arbitrary sentence in C:sub:`L`. Let *s* be the *σ*-reduction of
 
 .. math::
 
-    1. s = \varsigma(\zeta)
+    1. \quad s = \varsigma(\zeta)
 
 Let *t* be the Inverse of *s*,
 
 .. math::
 
-    2. t = \text{inv}(s).
+    2. \quad t = \text{inv}(s).
 
 Let *u* be the Inverse of *ζ*,
 
 .. math::
 
-    3. u = \text{inv}(ζ). 
+    3. \quad u = \text{inv}(ζ). 
     
 Let *v* be the *σ*-reduction of *u*,
 
 .. math::
 
-    4. v = \varsigma(u) = \varsigma(\text{inv}(ζ)) 
+    4. \quad v = \varsigma(u) = \varsigma(\text{inv}(ζ)) 
 
 Since *s* contains only the non-Delimiter characters of *ζ* in their original order, and *t* is the reversed sequence of Characters in *s*, *t* contains only the non-Delimiter characters of *ζ* in reversed order.
 
@@ -219,13 +240,13 @@ Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* and *v* must be th
 
 .. math::
 
-    5. \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))
+    5. \quad \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))
 
 Since ζ was an arbitrary Sentence, this can be generalized over the Corpus
 
 .. math::
 
-    6. \forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta)) 
+    6. \quad \forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta)) 
 
 ∎
 
@@ -239,41 +260,41 @@ The next theorem demonstrates how *σ*-reduction interacts with concatenation.
 
 **Theorem 3.1.2** :math:`\forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta)\varsigma(\xi))`
 
-Let *ζ* and *ξ* be arbitrary sentences in **C**:sub:`L`. Let **Ζ** and **Ξ** be the character-level representations of *ζ* and *ξ*, respectively,
+Let *ζ* and *ξ* be arbitrary sentences in :math:`C_L`. Let **Ζ** and **Ξ** be the character-level representations of *ζ* and *ξ*, respectively,
 
 .. math::
 
-    1. \Zeta = (\iota_1, \iota_2, ..., \iota_{l(\zeta)})
+    1. \quad \Zeta = (\iota_1, \iota_2, ..., \iota_{l(\zeta)})
 
 .. math::
 
-    2. \Xi = (\nu_1, \nu_2, ..., \nu_{l(\xi)})
+    2. \quad \Xi = (\nu_1, \nu_2, ..., \nu_{l(\xi)})
 
 Let *ζξ* be the concatenation of *ζ* and *ξ*. The character-level representation of *ζξ* is given by,
 
 .. math::
 
-    3. \Zeta\Xi = (\iota_1, \iota_2, ..., \iota_{l(\zeta)}, \nu_1, \nu_2, ..., \nu_{l(\xi)})
+    3. \quad \Zeta\Xi = (\iota_1, \iota_2, ..., \iota_{l(\zeta)}, \nu_1, \nu_2, ..., \nu_{l(\xi)})
 
 Let *s* be the σ-reduction of *ζξ*. Let *t* be the *σ*-reduction of *ζ*. Let *u* be the *σ*-reduction of *ζξ*,
 
 .. math::
 
-    4. s = \varsigma(\zeta\xi)
+    4. \quad s = \varsigma(\zeta\xi)
     
 .. math::
 
-    5. t = \varsigma(\zeta)
+    5. \quad t = \varsigma(\zeta)
     
 .. math::
 
-    6. u = \varsigma(\xi)
+    6. \quad u = \varsigma(\xi)
 
 Let *v* be the concatenation of the Strings *t* and *u*,
 
 .. math::
 
-    7. v = tu = (\varsigma(\zeta))(\varsigma(\xi))
+    7. \quad v = tu = (\varsigma(\zeta))(\varsigma(\xi))
 
 Since *σ*-reduction only removes Delimiters and doesn't change the order of non-Delimiter Characters, the non-Delimiter characters in *s* (the *σ*-reduction of *ζξ*) are the same as the non-Delimiter Characters in *ζ* followed by the non-Delimiter Characters in ξ.
 
@@ -283,13 +304,13 @@ Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *s* and *v* must be th
 
 .. math::
 
-    8. \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi))
+    8. \quad \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi))
 
 Since ζ and ξ were arbitrary Sentence, this can be generalized over the Corpus,
 
 .. math::
 
-    9. \forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi)) 
+    9. \quad \forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi)) 
 
 ∎
 
@@ -301,31 +322,31 @@ As another example of this *"linguistic algebraic structure"*, the following the
 
 **Theorem 3.1.3** :math:`\forall \zeta \in C_L: \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)`
 
-Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. Let s be the *σ*-reduction of *ζ*,
+Let *ζ* be an arbitrary Sentence in :math:`C_L`. Let s be the *σ*-reduction of *ζ*,
 
 .. math::
 
-    1. s = \varsigma(\zeta)
+    1. \quad s = \varsigma(\zeta)
 
 Let *t* be the *σ*-reduction of *s*,
 
 .. math::
 
-    2. t = \varsigma(s) = \varsigma(\varsigma(\zeta))
+    2. \quad t = \varsigma(s) = \varsigma(\varsigma(\zeta))
 
 Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Delimiter Characters (*σ*).
 
-When *s* is *σ*-reduced (to get *t*), the Reduction Algorithm in :ref:`Definition 3.1.2 <definition-3-1-2>` iterates through the Characters of *s*. Since s has no Delimiters, the condition if :math:`s[i] \neq \sigma` in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
+When *s* is *σ*-reduced (to get *t*), the :ref:`Reduction Algorithm <algorithm-3>` in :ref:`Definition 3.1.2 <definition-3-1-2>` iterates through the Characters of *s*. Since s has no Delimiters, the condition if :math:`s[i] \neq \sigma` in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
 
 .. math::
 
-    3. \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)
+    3. \quad \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)
 
 Since ζ was an arbitrary Sentence, this can be generalized over the Corpus,
 
 .. math::
 
-    4. \forall \zeta \in C_L: \varsigma(\varsigma(zeta)) = \varsigma(\zeta) 
+    4. \quad \forall \zeta \in C_L: \varsigma(\varsigma(\zeta)) = \varsigma(\zeta) 
 
 ∎
 
@@ -333,11 +354,11 @@ Since ζ was an arbitrary Sentence, this can be generalized over the Corpus,
 
 **Theorem 3.1.4** :math:`\forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1`
 
-Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. By the :ref:`Duality Axiom S.1 <axiom-s1>`, every Sentence in **C**:sub:`L` must contain at least one word from **L**. 
+Let *ζ* be an arbitrary Sentence in :math:`C_L`. By the :ref:`Duality Axiom S.1 <axiom-s1>`, every Sentence in :math:`C_L` must contain at least one word from **L**. 
 
 .. math::
 
-    1. \exists \alpha \in L: \alpha subset_s \zeta
+    1. \quad \exists \alpha \in L: \alpha \subset_s \zeta
 
 By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* removes all Delimiters from *ζ*. Therefore, *ς(ζ)* consists of the Characters of the words in *ζ* concatenated together without any delimiters.
 
@@ -349,7 +370,7 @@ If *ζ* contains only one Word, then *ς(ζ)* will be that Word,
 
 .. math::
 
-    2. \Lambda(\varsigma(\zeta)) = 1
+    2. \quad \Lambda(\varsigma(\zeta)) = 1
 
 If *ζ* contains multiple Words, then *ς(ζ)* will be a concatenation of those words without Delimiters. This concatenated String may or may not be a valid Word in **L**.
 
@@ -357,25 +378,25 @@ If the concatenated String is a valid Word in **L**, then,
 
 .. math::
 
-    3. \Lambda(\varsigma(\zeta)) = 1
+    3. \quad \Lambda(\varsigma(\zeta)) = 1
 
 If the concatenated String is not a valid Word in **L**, then,
 
 .. math::
 
-    4. \Lambda(\varsigma(\zeta)) = 0
+    4. \quad \Lambda(\varsigma(\zeta)) = 0
 
 Therefore, in all possible cases,
 
 .. math::
 
-    5. \Lambda(\varsigma(\zeta)) \leq 1
+    5. \quad \Lambda(\varsigma(\zeta)) \leq 1
 
 Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
 .. math::
 
-    6. \forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1 
+    6. \quad \forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1 
 
 ∎
 
@@ -391,23 +412,23 @@ Let *u* and *t* be arbitrary strings in **S**.
 
 .. math::
 
-    1. u \subset_s t
+    1. \quad u \subset_s t
 
 By Definition 1.1.7, there exists a strictly increasing and consecutive function :math:`f: N_{l(u)} \to N_{l(t)}` such that,
 
 .. math::
 
-    2. \forall i \in N_{l(u)}: u[i] = t[f(i)]
+    2. \quad \forall i \in N_{l(u)}: u[i] = t[f(i)]
 
 Let 
 
 .. math::
 
-    3. s = \varsigma(u) 
+    3. \quad s = \varsigma(u) 
     
 .. math::
 
-    4. v = \varsigma(t).
+    4. \quad v = \varsigma(t).
 
 By the :ref:`Definition 3.1.2 <definition-3-1-2>` of *σ*-reduction, *s* is obtained by removing all Delimiters from *u*, and *v* is obtained by removing all Delimiters from *t*.
 
@@ -421,49 +442,49 @@ For any index *i* in *s*,
 
 .. math::
 
-    5. s[i] = u[j] 
+    5. \quad s[i] = u[j] 
     
 for some *j*. Moreover, 
 
 .. math::
 
-    6. u[j] = t[f(j)]. 
+    6. \quad u[j] = t[f(j)]. 
     
 Since *s* and *v* are *σ*-reduced, *s[i]* and *v[g(i)]* correspond to the same non-Delimiter Character, and g(i) is constructed such that 
 
 .. math::
 
-    7. v[g(i)] = t[f(j)]. 
+    7. \quad v[g(i)] = t[f(j)]. 
     
 Therefore, 
 
 .. math::
 
-    8. s[i] = v[g(i)].
+    8. \quad s[i] = v[g(i)].
 
 Since *g* is a strictly increasing and consecutive function and :math:`s[i] = v[g(i)]`, by :ref:`Definition 1.1.7 <definition-1-1-7>`, 
 
 .. math::
 
-    9. s \subset_s v
+    9. \quad s \subset_s v
     
 From which it follows,
 
 .. math::
 
-    10. \varsigma(u) \subset_s \varsigma(t).
+    10. \quad \varsigma(u) \subset_s \varsigma(t).
 
 (←) Assume 
 
 .. math::
 
-    1. \varsigma(u) \subset_s \varsigma(t).
+    1. \quad \varsigma(u) \subset_s \varsigma(t).
 
 By :ref:`Definition 1.1.7 <definition-1-1-7>`, there exists a strictly increasing and consecutive function :math:`g: N_{l(\varsigma(u))} \to N_{l(\varsigma(t))}` such that:
 
 .. math::
 
-    2. \forall i \in N_{l(\varsigma(u))}: \varsigma(u)[i] = \varsigma(t)[g(i)]
+    2. \quad \forall i \in N_{l(\varsigma(u))}: \varsigma(u)[i] = \varsigma(t)[g(i)]
 
 Define a function :math:`f: N_{l(u)} \to N_{l(t)}` that maps the indices of *u* to the indices of *t* by essentially "re-inserting" the delimiters. For each non-Delimiter character in *u* (and corresponding index in *ς(u)*), *f* will map to the corresponding index in *t*. For Delimiter characters in *u*, *f* will map to an index in *t* that preserves the order and consecutiveness.
 
@@ -475,25 +496,25 @@ If *u[i]* is a non-Delimiter character, it corresponds to a Character in *ς(u)*
 
 .. math::
 
-    3. u[i] = \varsigma(u)[j] = \varsigma(t)[g(j)] = t[f(i)] 
+    3. \quad u[i] = \varsigma(u)[j] = \varsigma(t)[g(j)] = t[f(i)] 
 
 If *u[i]* is a Delimiter, then by the construction of *f*, it will be mapped to a corresponding Delimiter in *t*, so 
 
 .. math::
 
-    4. u[i] = t[f(i)]
+    4. \quad  u[i] = t[f(i)]
 
 Since *f* is a strictly increasing and consecutive function and :math:`u[i] = t[f(i)]` for all :math:`i \in N_{l(u)}`, by :ref:`Definition 1.1.7 <definition-1-1-7>`,
 
 .. math::
 
-    5. u \subset_s t
+    5. \quad u \subset_s t
 
 Since both directions of the implication hold, it can be concluded,
 
 .. math::
 
-    6. \forall u, t \in S : u \subset_S t \leftrightarrow varsigma(u) \subset_s \varsigma(t) 
+    6. \quad \forall u, t \in S : u \subset_S t \leftrightarrow \varsigma(u) \subset_s \varsigma(t) 
 
 ∎
 
@@ -507,17 +528,17 @@ However, some semantic information is preserved. The individual words themselves
 
 .. _theorem-3-1-6:
 
-**Theorem 3.1.6** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\Zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta)`
+**Theorem 3.1.6** :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta)`
 
-This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus **C**:sub:`L`, and for every Word *ζ{i}* in the Word-level representation of *ζ*, *ζ{i}* is contained in *ς(ζ)*.
+This theorem can be stated in natural language as follows: For every sentence *ζ* in the Corpus :math:`C_L`, and for every Word *ζ{i}* in the Word-level representation of *ζ*, *ζ{i}* is contained in *ς(ζ)*.
 
-Let *ζ* be an arbitrary sentence in **C**:sub:`L`. By :ref:`Theorem 2.2.4 <theorem-2-2-4>`, it is known at least one Word must exist in *ζ*. Let *ζ{i}* be one of the Words in the sequence of Words that form *ζ*. 
+Let *ζ* be an arbitrary sentence in :math:`C_L`. By :ref:`Theorem 2.2.4 <theorem-2-2-4>`, it is known at least one Word must exist in *ζ*. Let *ζ{i}* be one of the Words in the sequence of Words that form *ζ*. 
 
 This means that *ζ* can be written as either, in the case of :math:`\Lambda(\zeta) > 1`, 
 
 .. math::
 
-    1. \text{Case} (\Lambda(\zeta) > 1): \zeta = (s_1)(\sigma)(\zeta\{i\})(\sigma)(s_2)
+    1. \quad \text{Case} (\Lambda(\zeta) > 1): \zeta = (s_1)(\sigma)(\zeta\{i\})(\sigma)(s_2)
     
 where *s*:sub:`1` and *s*:sub:`2` are (possibly Empty) Strings. 
 
@@ -525,43 +546,43 @@ In the case that Λ(ζ) = 1, then, this means *ζ* can be written simply as,
 
 .. math::
 
-    2. \text{Case} (\Lambda(\zeta) = 1): \zeta = \zeta\{1\}
+    2. \quad \text{Case} (\Lambda(\zeta) = 1): \zeta = \zeta\{1\}
 
 By the :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* is obtained by removing all Delimiters from *ζ*. Furthermore, by :ref:`Theorem 3.1.2 <theorem-3-1-2>`, *σ*-reduction distributes over concatenation. Thus,
 
 .. math::
 
-    3. \text{Case} (\Lambda(\zeta) > 1): \varsigma(\zeta) = (\varsigma(s_1))(\varsigma(\zeta\{i\}))(\varsigma(s_2))
+    3. \quad \text{Case} (\Lambda(\zeta) > 1): \varsigma(\zeta) = (\varsigma(s_1))(\varsigma(\zeta\{i\}))(\varsigma(s_2))
 
 .. math::
 
-    4. \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\})
+    4. \quad \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\})
 
 By the :ref:`Discovery Axiom W.1 <axiom-w1>`, Words in **L** do not contain Delimiters.
 
 .. math::
 
-    5. \text{Case} (\Lambda(\zeta) > 1): \varsigma(\zeta) = (\varsigma(s_1))(\zeta\{i\})(\varsigma(s_2))
+    5. \quad \text{Case} (\Lambda(\zeta) > 1): \varsigma(\zeta) = (\varsigma(s_1))(\zeta\{i\})(\varsigma(s_2))
     
 .. math::
 
-    6. \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\}) = \zeta\{1\}
+    6. \quad \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\}) = \zeta\{1\}
 
 Therefore, by :ref:`Definition 1.1.7 <definition-1-1-7>` of Containment,
 
 .. math::
 
-    7. \text{Case} (\Lambda(\zeta) > 1): \zeta\{i\} \subset_s \varsigma(\zeta)
+    7. \quad \text{Case} (\Lambda(\zeta) > 1): \zeta\{i\} \subset_s \varsigma(\zeta)
     
 .. math::
 
-    8. \text{Case} (\Lambda(\zeta) = 1): \zeta\{1\} \subset_s \varsigma(\zeta) 
+    8. \quad \text{Case} (\Lambda(\zeta) = 1): \zeta\{1\} \subset_s \varsigma(\zeta) 
 
 In both cases, there is a Word in *ζ* that is contained in the *σ*-reduction of *ζ*. Since *ζ* was arbitrary, this can generalize over the Corpus,
 
 .. math::
 
-    9. \forall ζ \in C_L: \forall i \in N_{\Lambda(\zeta)}`: \zeta\{i\} \subset_s \varsigma(\zeta) 
+    9. \quad\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta) 
 
 ∎
 
@@ -569,7 +590,7 @@ This next theorem shows how *σ*-reduction behaves over the class of Invertible 
 
 .. _theorem-3-1-7:
 
-**Theorem 3.1.7** ∀ ζ ∈ K: [ ς(ζ) = inv(inv(ς(ζ))) ]
+**Theorem 3.1.7** :math:`\forall \zeta \in K: \varsigma = \text{inv}(\text{inv}(\varsigma(\zeta)))` 
 
 In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is Invertible, then its invertibility is invariant under *σ*-reduction.
 
@@ -577,57 +598,61 @@ Assume
 
 .. math::
 
-    1. ζ \in K
+    1. \quad \zeta \in K
 
-In other words, assume that *ζ* is an Invertible Sentence. By :ref:`Theorem 2.3.11 <definition-2-3-11>`, since *ζ* is invertible, all its Words are also Invertible,
+In other words, assume that *ζ* is an Invertible Sentence. By :ref:`Theorem 2.3.11 <theorem-2-3-11>`, since *ζ* is invertible, all its Words are also Invertible,
  
  .. math::
 
-    1. \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I
+    2. \quad \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I
 
-The σ-reduction of *ζ*, *ς(ζ)*, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by :ref:`Discovery Axiom W.1 <axiom-w1>`), the *σ*-reduction concatenates the Words of *ζ*,
+The *σ*-reduction of *ζ*, *ς(ζ)*, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by :ref:`Discovery Axiom W.1 <axiom-w1>`), the *σ*-reduction concatenates the Words of *ζ*,
 
 .. math::
 
-    2. \varsigma(\zeta)= (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
+    2. \quad \varsigma(\zeta)= (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
 
 Applying :ref:`Theorem 1.2.5 <theorem-1-2-5>` repeatedly,
 
 .. math::
 
-    3. \text{inv}(\varsigma(\zeta)) = \text{inv}((\zeta\{1\})(\zeta\{2\})...(\zeta{\Lambda(\zeta)\}))
+    3. \quad \text{inv}(\varsigma(\zeta)) = \text{inv}((\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\}))
 
 To get,
 
 .. math::
 
-    5.  \text{inv}(\varsigma(\zeta))  = (\text{inv}(\zeta\{\Lambda(ζ)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\ζ\{1\})))
+    4. \quad \text{inv}(\varsigma(\zeta))  = (\text{inv}(\zeta\{\Lambda(ζ)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\ζ\{1\})))
 
 Applying a second Inversion,
 
 .. math::
 
-    6. \text{inv}(\text{inv}(\varsigma(\zeta))) = \text{inv}((\text{inv}(\zeta\{\Lambda(\zeta)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\zeta\{1\}))))
+    5. \quad \text{inv}(\text{inv}(\varsigma(\zeta))) = \text{inv}((\text{inv}(\zeta\{\Lambda(\zeta)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\zeta\{1\}))))
 
 Applying :ref:`Theorem 1.2.5 <theorem-1-2-5>` again,
 
-    7. \text{inv}(\text{inv}(\varsigma(\zeta))) = (\text{inv}(\text{inv}((\zeta\{1\})))) (\text{inv}(\text{inv}((\zeta\{2\}))))...(\text{inv}(\text{inv}((\zeta\{\Lambda(\zeta)\}))))
+.. math::
+
+    6. \quad \text{inv}(\text{inv}(\varsigma(\zeta))) = (\text{inv}(\text{inv}((\zeta\{1\})))) (\text{inv}(\text{inv}((\zeta\{2\})))) ... (\text{inv}(\text{inv}((\zeta\{\Lambda(\zeta)\}))))
 
 Finally, applying :ref:`Theorem 1.2.4 <theorem-1-2-4>` (:math:`\text{inv}(\text{inv}(s)) = s`)
 
 .. math::
 
-    8. \text{inv}(\text{inv}(\varsigma(\zeta))) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
+    7. \quad \text{inv}(\text{inv}(\varsigma(\zeta))) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
 
 Therefore, combining step 3 and step 8
 
 .. math::
     
-    9. \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))
+    8. \quad \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))
 
 Since *ζ* was an arbitrary Sentence in **K**, this can be generalized over Invertible Sentences,
 
-    10. \forall \zeta \in K: \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))
+.. math::
+
+    9. \quad \forall \zeta \in K: \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))
 
 ∎
 
@@ -641,81 +666,81 @@ The final theorems in this section, :ref:`Theorems 3.1.8 <theorem-3-1-8>` - :ref
 
 This theorem can be stated in natural language as follows: The *σ*-reduction of a Sentence is the Limitation of its Words.
 
-Assume,
+Assume *ζ* was an arbitrary Sentence such that,
 
 .. math::
 
-    1. ζ \in C_L
+    1. \quad \zeta \in C_L
 
 By :ref:`Definition 2.1.3 <definition-2-1-3>`, 
 
 .. math::
 
-    2. W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)})
+    2. \quad W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)})
 
 Where,
 
 .. math::
 
-    3. \forall i \in N_{\Lambda(\zeta)}: \alpha_i \in L
+    3. \quad \forall i \in N_{\Lambda(\zeta)}: \alpha_i \in L
 
 By :ref:`Theorem 2.3.4 <theorem-2-3-4>`, *ζ* can be expressed as the Delimitation of its Words:
 
 .. math::
 
-    4. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\})
+    4. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\})
 
 By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(ζ)* removes all Delimiters from *ζ*. Applying *σ*-reduction to the expression step 4,
 
 .. math::
 
-    5. \varsigma(\zeta) = \varsigma((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\}))
+    5. \quad \varsigma(\zeta) = \varsigma((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\}))
 
-By repeated application of :ref:`Theorem 3.1.2 <theorem-3-13>`, i.e. by distributing the *σ*-reduction over concatenation,
+By repeated application of :ref:`Theorem 3.1.2 <theorem-3-1-2>`, i.e. by distributing the *σ*-reduction over concatenation,
 
 .. math::
 
-    6. \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\sigma))(\varsigma(\zeta\{2\}))(\varsigma(\sigma)) ... (\varsigma(\sigma))(\varsigma(\zeta\{\Lambda(\zeta)\}))
+    6. \quad \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\sigma))(\varsigma(\zeta\{2\}))(\varsigma(\sigma)) ... (\varsigma(\sigma))(\varsigma(\zeta\{\Lambda(\zeta)\}))
 
 Since 
 
 .. math::
 
-    7. \varsigma(\sigma) = \varepsilon
+    7. \quad \varsigma(\sigma) = \varepsilon
 
 This can be rewritten with the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>`,
 
 .. math::
 
-    8. \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\zeta\{2\}))...(\varsigma(\zeta\{\Lambda(\zeta)\}))
+    8. \quad \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\zeta\{2\}))...(\varsigma(\zeta\{\Lambda(\zeta)\}))
 
 By :ref:`Definition 3.1.2 <definition-3-1-2>` and the :ref:`Discovery Axiom W.1 <axiom-w1>`,
 
 .. math::
 
-    9. \forall i \in N_{\Lambda(\zeta)}: \varsigma(\zeta\{i\}) = \zeta\{i\}
+    9. \quad \forall i \in N_{\Lambda(\zeta)}: \varsigma(\zeta\{i\}) = \zeta\{i\}
 
 Therefore,
    
 .. math::
 
-    10. \varsigma(\zeta) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
+    10. \quad \varsigma(\zeta) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})
 
-By :ref:`Definition 1.2.8 <definition-1-2-8>`, the right-hand side is the Limitation of the words in **W**:sub:`ζ`,
+By :ref:`Definition 1.2.8 <definition-1-2-8>`, the right-hand side is the Limitation of the words in :math:`W_{\zeta}`,
 
 .. math::
 
-    11. \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    11. \quad \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
 .. math::
 
-    12.  \forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} 
+    12. \quad \forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} 
 
 ∎
 
-:ref:`Theorem 3.1.8 <theorem-3-1-8>` establishes an important formula for the construction of *σ*-reductions. The Reduction Algorithm targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without :ref:`Theorem 3.1.8 <theorem-3-1-8>`, it would be required to reconstruct the String which corresponds to the sequence and process it through the Reduction Algorithm. Rather than applying the Reduction Algorithm everytime a *σ*-reduction is required, :ref:`Theorem 3.1.8 <theorem-3-1-8>` provides a schema for the construction of *σ*-reductions through the process of Limitation.
+:ref:`Theorem 3.1.8 <theorem-3-1-8>` establishes an important formula for the construction of *σ*-reductions. The :ref:`Reduction Algorithm <algorithm-3>` targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without :ref:`Theorem 3.1.8 <theorem-3-1-8>`, it would be required to reconstruct the String which corresponds to the sequence and process it through the :ref:`Reduction Algorithm <algorithm-3>`. Rather than applying the :ref:`Reduction Algorithm <algorithm-3>` everytime a *σ*-reduction is required, :ref:`Theorem 3.1.8 <theorem-3-1-8>` provides a schema for the construction of *σ*-reductions through the process of Limitation.
 
 Compare :ref:`Theorem 3.1.8 <theorem-3-1-8>` to :ref:`Theorem 2.2.5 <theorem-2-2-5>`, reprinted below for reference,
 
@@ -735,53 +760,53 @@ Let *n* be an arbitrary natural number, and let *p* be an arbitrary Phrase from 
 
 .. math::
 
-    1. p \in Χ_L(n)
+    1. \quad p \in Χ_L(n)
     
 .. math::
 
-    2. p = (\alpha_1, \alpha_2, ..., \alpha_n).
+    2. \quad p = (\alpha_1, \alpha_2, ..., \alpha_n).
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, 
 
 .. math::
 
-    3. D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
+    3. \quad D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
 
 Applying :ref:`Definition 3.1.2 <definition-3-1-2>` of *σ*-reduction to the Delimitation and applying the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>`,
 
 .. math::
 
-    4. \varsigma(D\Pi_{i=1}^{n} p(i)) = (\alpha_1)(\alpha_2) ... (\alpha_n)
+    4. \quad \varsigma(D\Pi_{i=1}^{n} p(i)) = (\alpha_1)(\alpha_2) ... (\alpha_n)
 
 By :ref:`Definition 1.2.8 <definition-1-2-8>`,
 
 .. math::
 
-    5. L\Pi_{i=1}^{n} p(i) = (\alpha_1)(\alpha_2) ... (\alpha_n)
+    5. \quad L\Pi_{i=1}^{n} p(i) = (\alpha_1)(\alpha_2) ... (\alpha_n)
 
 By repeated application of :ref:`Theorem 1.1.1 <theorem-1-1-1>` to step 4,
 
 .. math::
 
-    6. l(ς(D\Pi_{i=1}^{n} p(i))) = \sum_{i=1}^{n} l(\alpha_i)
+    6. \quad l(\varsigma(D\Pi_{i=1}^{n} p(i))) = \sum_{i=1}^{n} l(\alpha_i)
 
 By repeated application of :ref:`Theorem 1.1.1 <theorem-1-1-1>` to step 5,
 
 .. math::
 
-    7. l((\alpha_1)(\alpha_2)... (\alpha_n)) = \sum_{i=1}^{n} l(\alpha_i)
+    7. \quad l((\alpha_1)(\alpha_2)... (\alpha_n)) = \sum_{i=1}^{n} l(\alpha_i)
 
 Comparing step 6 to step 7 and noting the *α*:sub:`i` is in the same position the same for all :math:`1 \leq i \leq n`, it follows by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, 
 
 .. math::
 
-    8. \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)
+    8. \quad \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)
 
-Since n and p were arbitrary, this can be generalized over the Lexicon,
+Since *n* and *p* were arbitrary, this can be generalized over the Lexicon,
 
 .. math::
 
-    9. \forall n \in \mathbb{N}: \forall p \in Χ_L(n): \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i) 
+    9. \quad \forall n \in \mathbb{N}: \forall p \in Χ_L(n): \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i) 
 
 ∎
 
@@ -795,31 +820,31 @@ Let ζ be an arbitrary Sentence in the Corpus. By :ref:`Theorem 3.1.8 <theorem-3
 
 .. math::
 
-    1. \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    1. \quad \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 By :ref:`Theorem 2.2.5 <theorem-2-2-5>`,
 
 .. math::
 
-    2. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    2. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 Since the only different between :ref:`Definition 1.2.7 <definition-1-2-7>` and :ref:`1.2.8 <definition-1-2-8>` is that Delimitations insert a Delimiter while Limitations simply concatenate, it must follow,
 
 .. math::
 
-    3. l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) \geq L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    3. \quad l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) \geq L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 From this, step 1 and step 2, it follows, 
 
 .. math::
 
-    4. l(\zeta) \geq l(\varsigma(\zeta))
+    4. \quad l(\zeta) \geq l(\varsigma(\zeta))
 
 Since *ζ* was arbitary, this can be generalized over the Corpus,
 
 .. math::
 
-    5. \forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta)) 
+    5. \quad \forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta)) 
 
 ∎
 
@@ -833,7 +858,7 @@ Before moving onto the formal foundations for the *Delimiter Count Function*, so
     1. dennis sinned
     2. if i had a hifi
 
-The first palindrome "*dennis sinned*" is what will be termed a Perfect Palindrome in :ref:`Definition 4.1.2 <definition-4-1-2>`, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second Palindrome *"if i had a hifi"* is what is termed an Imperfect Palindrome in :ref:`Definition 4.1.3 <definition 4.1.3>`. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
+The first palindrome "*dennis sinned*" is what will be termed a Perfect Palindrome in :ref:`Definition 4.1.2 <definition-4-1-2>`, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second Palindrome *"if i had a hifi"* is what is termed an Imperfect Palindrome in :ref:`Definition 4.1.3 <definition-4-1-3>`. To see the motivation behind this categorization, note the strict inversion of "If I had a hifi" would be (ignoring capitalization for now),
 
     ifih a dah i fi
 
@@ -849,19 +874,19 @@ Since every Sentence is a String, it will suffice to define the *Delimiter Count
 
 .. math::
 
-    T = \{ (1, \mathfrak{a}_1), (2, \mathfrak{a}_2), ... , (l(t), \mathfrak{a}_{l(t)}) }
+    T = \{ (1, \mathfrak{a}_1), (2, \mathfrak{a}_2), ... , (l(t), \mathfrak{a}_{l(t)}) \}
 
 The Delimiter Count Function, denoted by *Δ(t)*, is defined as the number of Delimiter Characters (*σ*) in the string *t*. Formally, *Δ(t)* is defined as the cardinality of the set that satisfies the following formula:
 
 .. math::
 
-    D_t \leftrightarrow \{ (i, \mathfrak{a}_i) \in T \mid \mathfrak{a}_i = \sigma \land 1 \leq i leq l(t) } 
+    D_t \leftrightarrow \{ (i, \mathfrak{a}_i) \in T \mid \mathfrak{a}_i = \sigma \land 1 \leq i leq l(t) \} 
 
 Then, the Delimiter Count function is defined as
 
 .. math::
 
-    \Delta(t) = | D_t | 
+    \Delta(t) = \lvert D_t \rvert 
     
 ∎
 
@@ -873,7 +898,7 @@ Consider the string *t = "a b c"*. The Character-level set representation of *t*
 
     T = \{ (1, \text{"a"}), (2, \sigma), (3, \text{"b"}), (4, \sigma), (5, \text{"c"}) \}.
 
-By :ref:`Definition 3.2.1 <definition-3-2-1>`, the set **D**:sub:`t` contains the ordered pairs :math:`(2, \sigma)` and :math:`(4, \sigma)`, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
+By :ref:`Definition 3.2.1 <definition-3-2-1>`, the set :math:`D_t` contains the ordered pairs :math:`(2, \sigma)` and :math:`(4, \sigma)`, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore, 
     
 .. math::
 
@@ -883,7 +908,7 @@ From this it follows,
 
 .. math::
 
-    | D_t | = 2 
+    \lvert D_t \rvert = 2 
     
 Hence, 
     
@@ -895,9 +920,9 @@ Hence,
 
 From the previous example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the Delimiter count) as output. Multiple sentences can have the same Delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.
 
-**Theorem 3.2.1** :math:`\forall \zeta \in C_L: \Lambda(\zeta) = \Delta(\zeta) + 1`
+.. _theorem-3-2-1:
 
-∀ ζ ∈ C:sub:`L`: Λ(ζ) = Δ(ζ) + 1
+**Theorem 3.2.1** :math:`\forall \zeta \in C_L: \Lambda(\zeta) = \Delta(\zeta) + 1`
 
 .. note::
 
@@ -907,15 +932,15 @@ From the previous example, it can be seen the Delimiter Count function takes a S
 
 In natural language, this theorem is stated: For any sentence *ζ* in a Corpus C:sub:`L`, the length of the Sentence is equal to its Delimiter count plus one.
 
-Assume :math:`ζ \in C_L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the Character-level representation of ζ. Let **W**:sub:`ζ` be the word-level set representation of ζ. Recall **W**:sub:`ζ` is formed by splitting **Ζ** at each Delimiter Character *σ* with the Delimiting Algorithm in :ref:`Definition 2.1.3 <definition-2-1-3>`.
+Assume :math:`ζ \in C_L`. Let *Δ(ζ)* be the delimiter count of *ζ*. Let **Ζ** be the Character-level representation of ζ. Let :math:`W_{\zeta}` be the word-level set representation of ζ. Recall :math:`W_{\zeta}` is formed by splitting **Ζ** at each Delimiter Character *σ* with the :ref:`Delimiting Algorithm <algorithm-2>` in :ref:`Definition 2.1.3 <definition-2-1-3>`.
 
-Each word in **W**:sub:`ζ` corresponds to a contiguous subsequence of non-Empty, non-Delimiter Characters in **Ζ**.
+Each word in :math:`W_{\zeta}` corresponds to a contiguous subsequence of non-Empty, non-Delimiter Characters in **Ζ**.
 
-Since Delimiters separate Words, and each Delimiter corresponds to one Word boundary, the number of Words in the Sentence is always one more than the number of delimiters. Therefore, the cardinality of **W**:sub:`ζ` (the number of words) is equal to the Delimiter count of *Δ(ζ)* plus one,
+Since Delimiters separate Words, and each Delimiter corresponds to one Word boundary, the number of Words in the Sentence is always one more than the number of delimiters. Therefore, the cardinality of :math:`W_{\zeta}` (the number of words) is equal to the Delimiter count of *Δ(ζ)* plus one,
 
 .. math::
 
-    | W_{\zeta} | = \Lambda(\zeta) = \Delta(\zeta) + 1 
+    \lvert W_{\zeta} \rvert = \Lambda(\zeta) = \Delta(\zeta) + 1 
 
 ∎
 
@@ -929,23 +954,23 @@ Let *t* be a string with length *l(t)*. Let :math:`u = \text{inv}(t)`. By :ref:`
 
 .. math::
 
-    1. l(t) = l(u)
+    1. \quad l(t) = l(u)
     
 .. math::
 
-    2. \forall i \in N_{l(t)}: u[i] = t[l(t) - i + 1]
+    2. \quad \forall i \in N_{l(t)}: u[i] = t[l(t) - i + 1]
 
 Let **D**:sub:`t` be the set of ordered pairs representing the positions of the Delimiter *σ* in *t*, and let **D**:sub:`u` be the corresponding set for *u*. Assume *(j, σ) ∈*  **D**:sub:`u`, then, by step 2,
 
 .. math::
 
-    3. u[j] = t[l(t) - j  + 1]
+    3. \quad u[j] = t[l(t) - j  + 1]
 
 This means that the Character at position *j* in the inverse string *t* is the Delimiter *σ*. Therefore, 
 
 .. math::
 
-    4. (l(t) - j  + 1, \sigma) \in D_t
+    4. \quad (l(t) - j  + 1, \sigma) \in D_t
 
 Thus, it is shown that for every element :math:`(j, \sigma) \in  D_u`, there exists a corresponding element :math:`(i, \sigma) \in D_t`, where :math:`i = l(t) - j + 1`. 
 
@@ -953,7 +978,7 @@ To make the mapping more explicit, define a function :math:`f: D_t \to D_u` as f
 
 .. math::
 
-    1. f((i, \sigma)) = (l(t) - i + 1, \sigma)
+    1. \quad f((i, \sigma)) = (l(t) - i + 1, \sigma)
     
 It will be shown that *f* is a bijection.
 
@@ -961,7 +986,7 @@ It will be shown that *f* is a bijection.
 
 .. math::
 
-    6. (l(t) - i + 1, \sigma) \in D_u
+    6. \quad (l(t) - i + 1, \sigma) \in D_u
     
 In other words, *f* maps elements of **D**:sub:`t` to elements of **D**:sub:`u`. Thus, *f* is well defined.
  
@@ -969,31 +994,31 @@ In other words, *f* maps elements of **D**:sub:`t` to elements of **D**:sub:`u`.
 
 .. math::
 
-    7. f((i_1, \sigma)) = f((i_2, \sigma)). 
+    7. \quad f((i_1, \sigma)) = f((i_2, \sigma)). 
     
 Then, it follows,
 
 .. math::
 
-    8. (l(t) - i_1 + 1, \sigma) = (l(t) - i_2 + 1, \sigma). 
+    8. \quad (l(t) - i_1 + 1, \sigma) = (l(t) - i_2 + 1, \sigma). 
     
 This in turn implies, 
 
 .. math::
 
-    9. l(t) - i_1 + 1 = l(t) - i_2 + 1, 
+    9. \quad l(t) - i_1 + 1 = l(t) - i_2 + 1, 
     
 So 
 
 .. math::
 
-    10. i_1 = i_2
+    10. \quad i_1 = i_2
     
 Thus, 
 
 .. math::
 
-    11. (i_1, \sigma) = (i_2, \sigma)
+    11. \quad (i_1, \sigma) = (i_2, \sigma)
     
 In other words, *f* is injective. 
 
@@ -1001,23 +1026,23 @@ In other words, *f* is injective.
 
 .. math::
 
-    12. i = l(t) - j + 1. 
+    12. \quad i = l(t) - j + 1. 
     
 Then 
 
 .. math::
 
-    13. j = l(t) - i + 1. 
+    13. \quad j = l(t) - i + 1. 
     
 By step 3, the Character at position *i* in *t* is also *σ*. So, 
 
 .. math::
 
-    14. (i, \sigma) \in D_t
+    14. \quad (i, \sigma) \in D_t
     
 And,
 
-    15. f((i, \sigma)) = (l(t) - i + 1, \sigma) = (j, sigma). 
+    15. \quad f((i, \sigma)) = (l(t) - i + 1, \sigma) = (j, sigma). 
     
 Thus, *f* is surjective. 
 
@@ -1025,19 +1050,19 @@ This defines a bijective mapping between the elements of **D**:sub:`u` and **D**
 
 .. math::
 
-    16. | D_u | = | D_s |
+    16. \quad \lvert D_u \rvert = \lvert D_s \rvert
 
 By :ref:`Definition 3.2.1 <definition-3-2-1>` of the Delimiter Count function, this means :math:`\Delta(u) = \Delta(t)`. Since :math:`u = \text{inv}(t)`, it has been shown :math:`\Delta(\text{inv}(s)) = \Delta(s)`. Generalizing this over the set of all Strings,
 
 .. math::
 
-    17. \forall s \in S: \Delta(s) = \Delta(\text{inv}(s))
+    17. \quad \forall s \in S: \Delta(s) = \Delta(\text{inv}(s))
 
 Furthmore, an exact relationship has been estalished between the coordinates of Delimiters in Strings and their Inverses, 
 
 .. math::
 
-    18. D_{\text{inv}(t)} = \{ (l(t) - i + 1, \sigma) \mid (i, \sigma) \in D_t \} 
+    18. \quad D_{\text{inv}(t)} = \{ (l(t) - i + 1, \sigma) \mid (i, \sigma) \in D_t \} 
 
 ∎
 
@@ -1045,23 +1070,23 @@ Furthmore, an exact relationship has been estalished between the coordinates of 
 
 **Theorem 3.2.3** :math:`\forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))`
 
-Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L`,
+Let *ζ* be an arbitrary Sentence in Corpus :math:`C_L`,
 
 .. math::
 
-    1. \zeta \in C_L
+    1. \quad \zeta \in C_L
 
-By :math:`Definition 2.1.2 <definition-2-1-2>`, every Sentence is a String. Therefore, *ζ* is a String. By :ref:`Theorem 3.2.2`, 
+By :math:`Definition 2.1.2 <definition-2-1-2>`, every Sentence is a String. Therefore, *ζ* is a String. By :ref:`Theorem 3.2.2 <theorem-3-2-2>`, 
 
 .. math::
 
-    2. \Delta(\zeta) = \Delta(\text{inv}(\zeta))
+    2. \quad \Delta(\zeta) = \Delta(\text{inv}(\zeta))
 
 Which is what was to be shown. Since *ζ* was an arbitrary Sentence, this can generalize over the Corpus 
 
 .. math::
 
-    3. \forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))
+    3. \quad \forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))
 
 ∎
 
@@ -1075,25 +1100,25 @@ Assume *α* is a Word in Language **L**,
 
 .. math::
 
-    1. \alpha \in L
+    1. \quad \alpha \in L
     
 By the :ref:`Discovery Axiom W.1 <axiom-w1>`, all Words in a Language do not have Delimiters,
 
 .. math::
 
-    2. ∀ i \in N_{l(\alpha)}: \alpha[i] \neq \sigma
+    2. \quad \forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma
 
 Therefore, *α* does not have any Delimiter Characters (*σ*). By :ref:`Definition 3.2.1 <definition-3-2-1>`, *Δ(s)* counts the number of Delimiter Characters (*σ*) in a String *s*. Since *α* hasno Delimiter Characters, the Delimiter Count of *α* must be 0. Therefore,
 
 .. math::
 
-    3. \Delta(\alpha) = 0 
+    3. \quad \Delta(\alpha) = 0 
 
-Since *α* was an arbitrary Word, this can generalize over the Language,
+Since *α* was an arbitrary Word, this can be generalized over the Language,
 
 .. math::
     
-    4. \forall \alpha \in L: \Delta(\alpha) = 0
+    4. \quad \forall \alpha \in L: \Delta(\alpha) = 0
 
 ∎
 
@@ -1103,31 +1128,31 @@ Since *α* was an arbitrary Word, this can generalize over the Language,
 
 In natural language, this theorem can be stated as follows: For every Sentence in a Corpus, the String Length of the Sentence is equal to the Delimiter Count of the sentence plus the sum of the String Lengths of its Words.
 
-Assume 
+Assume *ζ* is an arbitrary Sentenc,
 
 .. math::
 
-    1. \zeta \in C_L 
+    1. \quad \zeta \in C_L 
 
 Either each *ζ{i}* for :math:`1 \leq i \leq l(\zeta)` is Delimiter or it is a non-Delimiter, with no overlap. By :ref:`Definition 3.2.1 <definition-3-2-1>`, the number of Delimiter Characters in *ζ* is *Δ(ζ)*. 
 
-By the :ref:`Discovery Axiom W.1 <axiom-w1>`, words in **L** do not contain Delimiters. By :ref:`Definition 2.1.3 <definition-2-1-3>`, the Words in **W**:sub:`ζ` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the Word Lengths l(ζ{i}) which is 
+By the :ref:`Discovery Axiom W.1 <axiom-w1>`, words in **L** do not contain Delimiters. By :ref:`Definition 2.1.3 <definition-2-1-3>`, the Words in :math:`W_{\zeta}` are obtained by splitting *ζ*  at the Delimiters. Therefore, the total number of non-Delimiter characters in *ζ* is the sum of the Word Lengths l(ζ{i}) which is 
 
 .. math::
 
-    2. \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
+    2. \quad \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
 Since every Character in *ζ* is either a Delimiter or part of a Word (and not both), the total number of Characters in *ζ* is the sum of the number of Delimiters and the number of Characters in Words. By :ref:`Definition 1.1.3 <definition-1-1-3>` of String Length, the total number of non-Empty characters in ζ is *l(ζ)*. Therefore, the number of non-Empty Characters in *ζ* is equal to the number of Delimiters plus the sum of its Word Lengths,
 
 .. math::
 
-    3. l(\zeta) = \Delta(\zeta) + \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\}) 
+    3. \quad l(\zeta) = \Delta(\zeta) + \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\}) 
 
 Since *ζ* was arbitrary, this can generalize over the Corpus,
 
 .. math::
     
-    4. \forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
+    4. \quad \forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
 ∎
 
@@ -1147,99 +1172,99 @@ Assume :math:`ζ \in C_L`. By :ref:`Theorem 3.2.4 <theorem-3-2-4>`,
     
 .. math::
 
-    1. \Lambda(\zeta) \geq 1
+    1. \quad \Lambda(\zeta) \geq 1
 
 From :ref:`Theorem 3.2.6 <theorem-3-2-6>`,
 
 .. math::
 
-    2. l(\zeta) + 1 - \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) = \Lambda(\zeta)
+    2. \quad l(\zeta) + 1 - \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) = \Lambda(\zeta)
 
 Combining step 1 and step 2, the theorem is obtained through algebraic manipulation and by generalizing the arbitrary Sentence *ζ* over the Corpus,
 
 .. math::
 
-    l(\zeta) \geq \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\}) 
+    3. \quad l(\zeta) \geq \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\}) 
 
 ∎
 
-.. _theorem_3-2-8:
+.. _theorem-3-2-8:
 
 **Theorem 3.2.8** :math:`\forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)`
 
 This theorem can be stated in natural language as follows: For any Sentence in a Corpus, its String Length is always greater than or equal to its Word Length.
 
-Let *ζ* be an arbitrary Sentence in **C**:sub:`L`. Let **W**:sub:`ζ`` be the Word-level representation of *ζ*. By :ref:`Definition 2.1.4 <definition-2-1-4>`, 
+Let *ζ* be an arbitrary Sentence in :math:`C_L`. Let :math:`W_{\zeta}`` be the Word-level representation of *ζ*. By :ref:`Definition 2.1.4 <definition-2-1-4>`, 
 
 .. math::
 
-    1. \Lambda(\zeta) = | W_{\zeta} |
+    1. \quad \Lambda(\zeta) = | W_{\zeta} |
 
-By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, each Word in **W**:sub:`ζ` consists of one or more non-Empty Characters. By :ref:`Theorem 2.2.5 <theorem-2-2-5>`, every Sentence is a Delimitation of its Words,
+By :ref:`Theorem 1.2.3 <theorem-1-2-3>`, each Word in :math:`W_{\zeta}` consists of one or more non-Empty Characters. By :ref:`Theorem 2.2.5 <theorem-2-2-5>`, every Sentence is a Delimitation of its Words,
 
 .. math::
 
-    2. \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    2. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 Where the operation of Delimitation inserts Delimiters between the Words of *ζ*. On the other hand, let *t* be the the Limitation of *ζ*,
 
 .. math::
 
-    3. t = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
+    3. \quad t = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}
 
 By :ref:`Definition 1.2.7 <definition-1-2-7>`, :ref:`Definition 1.2.8 <definition-1-2-8>` and :ref:`Definition 1.1.3 <definition-1-1-3>` of String Length,
 
 .. math::
 
-    4. l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = l(\zeta) \geq l(t) = l(L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\})
+    4. \quad l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = l(\zeta) \geq l(t) = l(L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\})
 
 By :ref:`Definition 1.2.8 <definition-1-2-8>`,
 
 .. math::
 
-    5. L\Pi_{i=1}^{\Lambda(\z)} \zeta\{i\} = (\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta\{\Lambda(\zeta)\})
+    5. \quad L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} = (\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta\{\Lambda(\zeta)\})
 
 By :ref:`Theorem 1.1.1 <theorem-1-1-1>`, 
 
 .. math::
 
-    6. l((\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta{\Lambda(\zeta)})) = \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
+    6. \quad l((\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta{\Lambda(\zeta)})) = \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
 Therefore, combining steps 4 and 6
 
 .. math::
 
-    7. l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
+    7. \quad l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})
 
 Consider the summation,
 
 .. math::
 
-    8. \sum_{i=1}^{\Lambda(\zeta)} 1
+    8. \quad \sum_{i=1}^{\Lambda(\zeta)} 1
 
 Clearly, since :math:`l(\zeta\{i\}) \geq 1` for all *i*, it follows, 
 
 .. math::
 
-    9. \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq sum^{i=1}^{\Lambda(\zeta)` 1
+    9. \quad \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq sum^{i=1}^{\Lambda(\zeta)} 1
 
 By the definition of summations, step 8 can be rewritten as,
 
 .. math::
 
-    10. \sum_{i=1}^{\Lambda(\zeta)} 1 = 1 + 1 + 1 + .... + 1 = \Lambda(\zeta)
+    10. \quad \sum_{i=1}^{\Lambda(\zeta)} 1 = 1 + 1 + 1 + .... + 1 = \Lambda(\zeta)
 
 Combining step 7, step 9 and  step 10,
 
 .. math::
 
-    11. l(\zeta) ≥ \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq \sum_{i=1}^{\Lambda(\zeta)} 1 = \Lambda(\zeta)
+    11. \quad l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq \sum_{i=1}^{\Lambda(\zeta)} 1 = \Lambda(\zeta)
 
 Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
 .. math::
 
-    12. \forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta) 
+    12. \quad \forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta) 
 
 ∎
 
@@ -1251,21 +1276,23 @@ Let *u* and *t* be arbitrary strings in S. Let **U** and **T** be the Character-
 
 .. math::
 
-    1. U = (\iota_1, \iota_2, ..., \iota_{l(u)})
+    1. \quad U = (\iota_1, \iota_2, ..., \iota_{l(u)})
 
 .. math::
 
-    2. T = (\nu_1, \nu_2, ..., \nu_{l(t)})
+    2. \quad T = (\nu_1, \nu_2, ..., \nu_{l(t)})
 
 The Character-level representation of *ut* is:
 
 .. math::
 
-    3. UT = (\iota_1, \iota_2, ..., \iota_{l(u)}, \nu_1, \nu_2, ..., \nu_{l(t)})
+    3. \quad UT = (\iota_1, \iota_2, ..., \iota_{l(u)}, \nu_1, \nu_2, ..., \nu_{l(t)})
 
 By :ref:`Definition 3.2.1 <definition-3-2-1>`, *Δ(u)* is the number of Delimiters in *u*, *Δ(t)* is the number of Delimiters in *t*, and *Δ(ut)* is the number of Delimiters in *ut*.
 
 Since concatenation simply joins two Strings without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the number of Delimiters in *ut* is the sum of the number of Delimiters in *u* and the number of Delimiters in *t*. ∎
+
+.. _theorem-3-2-9a:
 
 **Theorem 3.2.9 (Formal)**  :math:`\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)`
 
@@ -1273,35 +1300,37 @@ Let **D**:sub:`u` be the set of indices of Delimiters in *u*. Let **D**:sub:`t` 
 
 .. math::
 
-    1. D_u = \{ i \mid 1 \leq i \leq l(u) \land u[i] = \sigma \}
+    1. \quad D_u = \{ i \mid 1 \leq i \leq l(u) \land u[i] = \sigma \}
 
 .. math::
 
-    2. D_t = \{ j \mid 1 \leq j \leq l(t) \land t[j] = \sigma \}
+    2. \quad D_t = \{ j \mid 1 \leq j \leq l(t) \land t[j] = \sigma \}
     
 .. math::
 
-    3. D_{ut} = \{ k \mid (1 \leq k \leq l(u) + l(t)) \land ((k \leq l(u) \and UT[k] = \sigma) \lor (k > l(u) \land UT[k] = σ)) }
+    3. \quad D_{ut} = \{ k \mid (1 \leq k \leq l(u) + l(t)) \land ((k \leq l(u) \and UT[k] = \sigma) \lor (k > l(u) \land UT[k] = \sigma)) \}
    
 It is clear that D:sub:`ut` is the union of two disjoint sets, since the indices of the Delimiters in *t* have been shifted by *l(u)*. Therefore,
 
 .. math::
 
-    4. | D_{ut} | = | D_u | + | D_t |.
+    4. \lvert D_{ut} \rvert = \lvert D_u \rvert + \lvert D_t \rvert
 
 By :ref:`Definition 3.2.1 <definition-3-2-1>`, this is equivalent to,
 
 .. math::
 
-    5. \Delta(ut) = \Delta(u) + \Delta(t)
+    5. \quad \Delta(ut) = \Delta(u) + \Delta(t)
 
 Since u and t were arbitrary strings, this can be generalized over the set of all Strings,
 
 .. math::
 
-    6. \forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t) 
+    6. \quad \forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t) 
 
 ∎
+
+.. _theorem-3-2-10:
 
 **Theorem 3.2.10**  :math:`\forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)`
 
@@ -1311,33 +1340,35 @@ By :ref:`Theorem 3.2.2 <theorem-3-2-2>`,
 
 .. math::
 
-    1. \Delta(s) = \Delta(\text{inv}(s))
+    1. \quad \Delta(s) = \Delta(\text{inv}(s))
 
 Therefore, 
 
 .. math::
 
-    2. \Delta(ut) = \Delta(\text{inv}(ut)).
+    2. \quad \Delta(ut) = \Delta(\text{inv}(ut)).
 
 By :ref:`Theorem 3.2.9 <theorem-3-2-9>`,
  
 .. math::
 
-    3. \Delta(ut) = \Delta(u) + \Delta(t)
+    3. \quad \Delta(ut) = \Delta(u) + \Delta(t)
 
 Combining steps 2 and 3, it follows, 
 
 .. math::
 
-    4. \Delta(\text{inv}(ut)) = \Delta(ut) = \Delta(u) + \Delta(t)
+    4. \quad \Delta(\text{inv}(ut)) = \Delta(ut) = \Delta(u) + \Delta(t)
 
 Since *u* and *t* were arbitrary strings, this can be generalized over the set of all Strings,
 
 .. math::
 
-    5. \forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t) 
+    5. \quad \forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t) 
 
 ∎
+
+.. _theorem-3-2-11:
 
 **Theorem 3.2.11** :math:`\forall t \in S: \Delta(\varsigma(t)) = 0`
 
@@ -1347,21 +1378,23 @@ Let t be an arbitrary string in **S**,
 
 .. math::
 
-    1. t \in S
+    1. \quad t \in S
 
 By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*. :ref:`Definition 3.2.1 <definition-3-2-1>`, Δ(t) is the number of Delimiter Characters *σ* in a String *t*. Since *ς(t)* has all its Delimiters removed, it contains no occurrences of the Character *σ*. Therefore, 
 
 .. math::
 
-    2. \Delta(\varsigma(t)) = 0
+    2. \quad \Delta(\varsigma(t)) = 0
 
 Since *t* was an arbitrary String, this can be generalized over the set of all Strings,
 
 .. math::
 
-    3. \forall t \in S: \Delta(\varsigma(t)) = 0 
+    3. \quad \forall t \in S: \Delta(\varsigma(t)) = 0 
 
 ∎
+
+.. _theorem-3-2-12:
 
 **Theorem 3.2.12** :math:`\forall t \in S: l(\varsigma(t)) + \Delta(t) = l(t)`
 
@@ -1371,7 +1404,7 @@ Let *t* be an arbitrary String in **S**,
 
 .. math::
 
-   1. t \in S
+   1. \quad t \in S
 
 By :ref:`Definition 3.1.2 <definition-3-1-2>`, *ς(t)* is the String obtained by removing all occurrences of the Delimiter character *σ* from *t*.
 
@@ -1387,13 +1420,13 @@ Therefore,
 
 .. math::
 
-    2. l(\varsigma(t)) + \Delta(t) = l(t)
+    2. \quad l(\varsigma(t)) + \Delta(t) = l(t)
 
 Since *t* was an arbitrary String, this can be generalized over the set of all Strings,
 
 .. math::
 
-    3. \forall t \in S: l(t) = l(\varsigma(t)) + \Delta(t)  
+    3. \quad \forall t \in S: l(t) = l(\varsigma(t)) + \Delta(t)  
 
 ∎
 
@@ -1429,46 +1462,50 @@ And indeed,
 
 ∎
 
+.. _theorem-3-2-13:
+
 **Theorem 3.2.13** :math:`\forall \zeta \in C_L: l(\varsigma(t)) + \Lambda(\zeta) = l(\zeta) + 1`
 
-Let *ζ* be an arbitrary Sentence in Corpus **C**:sub:`L`,
+Let *ζ* be an arbitrary Sentence in Corpus :math:`C_L`,
 
 .. math::
 
-    1. \zeta \in C_L
+    1. \quad \zeta \in C_L
 
 By :ref:`Definition 2.1.2 <definition-2-1-2>`, every Sentence is a String. Therefore, :ref:`Theorem 3.2.12 <theorem-3-2-12>` may be applied to *ζ*
 
 .. math::
 
-    2. l(\zeta) = l(\varsigma(\zeta)) + \Delta(\zeta)
+    2. \quad  l(\zeta) = l(\varsigma(\zeta)) + \Delta(\zeta)
 
 By :ref:`Theorem 3.2.1 <theorem-3-2-1>`,
 
 .. math::
 
-    3. \Lambda(\zeta) = \Delta(\zeta) + 1
+    3. \quad \Lambda(\zeta) = \Delta(\zeta) + 1
 
 Rearranging,
 
 .. math::
 
-    4. \Delta(\zeta) = \Lambda(\zeta) - 1
+    4. \quad \Delta(\zeta) = \Lambda(\zeta) - 1
 
 Substituting the expression for *Δ(ζ)* from step 4 into the equation from step 2,
 
 .. math::
 
-    5. l(\zeta) = l(\varsigma(\zeta)) + (\Lmabda(\zeta) - 1)
+    5. \quad l(\zeta) = l(\varsigma(\zeta)) + (\Lambda(\zeta) - 1)
 
 Rearranging the terms, 
 
 .. math::
 
-    6. l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1
+    6. \quad l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1
 
 Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
-    7. \forall ζ \in C_L: l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1 
+.. math::
+
+    7. \quad \forall \zeta \in C_L: l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1 
 
 ∎

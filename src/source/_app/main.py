@@ -226,10 +226,40 @@ def analyze_delimiter_posterior(min_length, max_length):
     graphs.posterior_delimiter_histogram(p_values, posterior_probs, midpoint)
     return posterior_probs
 
+def analyze_delimiter_distribution(min_length, max_length):
+    """
+    Analyzes the distribution of delimiter indices in sentences of varying lengths across different corpora.
+
+    Args:
+        min_length: The minimum sentence length to analyze.
+        max_length: The maximum sentence length to analyze.
+
+    Returns:
+        A dictionary containing the delimiter index frequency distributions for each language and sentence length.
+    """
+    corpora = [parse.CORPORA.ENGLISH, parse.CORPORA.SPANISH, parse.CORPORA.HINDI]
+    results = {}
+
+    for corpus in corpora:
+        results[corpus.value] = {}
+        sentences = parse.corpus(min_length, max_length, corpus)
+        for sentence in sentences:
+            delimiter_indices = model.delimit(sentence)
+            length = len(sentence)
+            if length not in results[corpus.value]:
+                results[corpus.value][length] = {}
+            for index in delimiter_indices:
+                results[corpus.value][length][index] = results[corpus.value][length].get(index, 0) + 1
+
+    graphs.delimiter_histogram(results)
+    return results
+
 if __name__ == "__main__":
-    min_length = 100
-    max_length = 100
+    min_length = 50
+    max_length = 50
 
-    posterior = analyze_delimiter_posterior(min_length, max_length)
+    parse.init()
+    
+    distribution = analyze_delimiter_distribution(min_length, max_length)
 
-    print(posterior)
+    print(distribution)

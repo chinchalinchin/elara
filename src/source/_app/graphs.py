@@ -82,3 +82,22 @@ def posterior_delimiter_histogram(p_values, posterior_probs, num_bins=20):
     plt.xlabel("p")
     plt.ylabel("Probability Density")
     plt.show()
+
+def delimiter_histogram(distribution_data):
+    """
+    Generates histograms of delimiter index distributions for each language and sentence length.
+
+    Args:
+        distribution_data: A dictionary containing the delimiter index frequency distributions.
+    """
+    for language, length_data in distribution_data.items():
+        for length, index_freq in length_data.items():
+            indices = list(index_freq.keys())
+            frequencies = list(index_freq.values())
+
+            plt.figure(figsize=(10, 5))
+            plt.bar(indices, frequencies)
+            plt.title(f"Delimiter Index Distribution ({language}, Length = {length})")
+            plt.xlabel("Delimiter Index")
+            plt.ylabel("Frequency")
+            plt.show()

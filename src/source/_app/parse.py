@@ -16,6 +16,7 @@ def init():
     nltk.download('brown')
     nltk.download('cess_esp')
     nltk.download('punkt')
+    nltk.download('punkt_tab')
     nltk.download('indian')
 
 def _clean_corpus(language, min_length, max_length):
