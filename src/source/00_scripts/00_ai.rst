@@ -1,0 +1,10 @@
+.. _ai-scripts:
+
+Artificial Intelligence
+=======================
+
+Google Generative AI
+--------------------
+
+.. literalinclude:: ../_static/scripts/gemini.py
+   :language: python

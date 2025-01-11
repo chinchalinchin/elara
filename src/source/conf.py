@@ -11,9 +11,9 @@ import argparse
 import os
 
 project = "elara protocol"
-copyright = '2024, chinchalinchin'
-author = 'chinchalinchin'
-release = '1.0.0'
+toc_title ="elara protocol"
+copyright = '2024, chinchalinchin industries'
+author = 'Grant Moore'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -28,19 +28,23 @@ extensions = [
 
 templates_path = [ ]
 
+html_static_path = [ 
+    '_static' 
+]
+
 exclude_patterns = [ ]
 
 plot_html_show_source_link = True
 
-
 # -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_book_theme'
 
-html_static_path = [ 
-    '_static' 
-]
+html_theme_options = { }
+
+html_title = "elara protocol"
+
+# -- Latex configuration -----------------------------------------------------
 
 latex_engine = 'xelatex'
 
@@ -57,19 +61,12 @@ latex_preamble = r"""
 \newcommand{\rth}{ᚦ} 
 """
 
-imgmath_latex_preamble = latex_preamble
-
 latex_elements = {
     'preamble': latex_preamble,
     'inputenc': '\\usepackage[utf][inputenc]'
 }
 
 # -- Theme configuration -----------------------------------------------------
-
-html_theme_options = { }
-
-
-# ... your Sphinx configuration settings ...
 
 def build_pdf(source_dir, output_dir, filename):
     """
