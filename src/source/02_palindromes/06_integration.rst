@@ -10,11 +10,11 @@ The study of Palindromes leads directly into the study of Delimiter distribution
 
 Since, by :ref:`Definition 4.1.2 <definition-4-1-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters for these examples. Note the horizontal axes are scaled to the Sentence String Length,
 
-.. image:: ../_static/images/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
+.. image:: ../_static/img/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
   :width: 400
   :alt: Delimiter Indices, Perfect Palindrome, Example #1
 
-.. image:: ../_static/images/sentences/palindromes/delimiter_indices_perfect_palindrome_2.png
+.. image:: ../_static/img/sentences/palindromes/delimiter_indices_perfect_palindrome_2.png
   :width: 400
   :alt: Delimiter Indices, Perfect Palindrome, Example #2
 
@@ -25,11 +25,11 @@ Notice the Delimiter indices are symmetrical about the center. Now consider the 
 
 According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes must first be :math:`\sigma\text{-reduced}` to restore their symmetry. An examination of the corresponding barcharts for these examples show why,
 
-.. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
+.. image:: ../_static/img/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
   :width: 400
   :alt: Delimiter Indices, Imperfect Palindrome, Example #1
 
-.. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
+.. image:: ../_static/img/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
   :width: 400
   :alt: Delimiter Indices, Imperfect Palindrome, Example #2
 
@@ -51,15 +51,15 @@ Consider taking Sentences from a Corpus and for each one, calculating and return
 
 Note the set :math:`D_ᚠ` is the set involved in :ref:`Definition 3.2.1 <definition-3-2-1>` of the Delimiter Count function. If a large Corpus is analyzed so that each Sentence is reduced to a set of Delimiter indices, and then the frequency of Delimiter Counts is plotted, an interesting, but potentially misleading result is obtained. The following histograms show the result of this technique for Sentences of various fixed lengths. 
 
-.. image:: ../_static/images/sentences/english/delimiter_distribution_n50.png
+.. image:: ../_static/img/sentences/english/delimiter_distribution_n50.png
   :width: 400
   :alt: Delimiter Distribution, Sentence String Length = 50
 
-.. image:: ../_static/images/sentences/english/delimiter_distribution_n100.png
+.. image:: ../_static/img/sentences/english/delimiter_distribution_n100.png
   :width: 400
   :alt: Delimiter Distribution, Sentence String Length = 100
 
-.. image:: ../_static/images/sentences/english/delimiter_distribution_n200.png
+.. image:: ../_static/img/sentences/english/delimiter_distribution_n200.png
   :width: 400
   :alt: Delimiter Distribution, Sentence String Length = 200
 
@@ -1520,7 +1520,7 @@ A Sentence Integral, on the other hand, is a distilled quantity that encapsulate
 
 To see the power of Sentence integration, it is instructive to seek out real world data. The following histogram was generated using the Brown University Standard Corpus of Present-Day American English (Brown Corpus). It shows the frequency of Delimiter Count coefficients (i.e. the *2i - l(ζ) - 1* coefficient) for a sample of Sentences of String Length 105. The sample contains several thousand data points,
 
-.. image:: ../_static/images/sentences/english/delimiter_coefficient_distribution_n105.png
+.. image:: ../_static/img/sentences/english/delimiter_coefficient_distribution_n105.png
   :width: 400
   :alt: Delimiter Count Coefficient Distribution
 

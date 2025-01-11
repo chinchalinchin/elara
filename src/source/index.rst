@@ -3,7 +3,7 @@ Elara Protocol
 
    *ό ποιητα, ἢ πῖθι ἢ ἄπιθι*
 
-   - Inscription on Ancient Greek drinking vessel.
+   - Inscription on an Ancient Grecian drinking vessel.
 
 .. toctree::
    :maxdepth: 1

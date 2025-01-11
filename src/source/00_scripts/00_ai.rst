@@ -6,5 +6,5 @@ Artificial Intelligence
 Google Generative AI
 --------------------
 
-.. literalinclude:: ../_static/scripts/gemini.py
+.. literalinclude:: ../_static/py/gemini.py
    :language: python

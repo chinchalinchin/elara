@@ -6,11 +6,11 @@ Mathematics
 Number Theory
 -------------
 
-.. literalinclude:: ../_static/scripts/primes.py
+.. literalinclude:: ../_static/py/primes.py
    :language: python
 
 Statistics
 ----------
 
-.. literalinclude:: ../_static/scripts/variance.py
+.. literalinclude:: ../_static/py/variance.py
    :language: python
