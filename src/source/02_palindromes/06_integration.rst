@@ -23,7 +23,7 @@ Notice the Delimiter indices are symmetrical about the center. Now consider the 
 - goddesses so pay a possessed dog 
 - borrow or rob
 
-According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes must first be :math:`\sigma-\text{reduced}` to restore their symmetry. An examination of the corresponding barcharts for these examples show why,
+According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes must first be :math:`\sigma\text{-reduced}` to restore their symmetry. An examination of the corresponding barcharts for these examples show why,
 
 .. image:: ../_static/images/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
   :width: 400
@@ -33,11 +33,23 @@ According to :ref:`Definition 4.1.3 <definition-4-1-3>`, Imperfect Palindromes m
   :width: 400
   :alt: Delimiter Indices, Imperfect Palindrome, Example #2
 
-Imperfect Palindromes are exactly those class of Palindromes which do not have symmetrical Delimiter distribution. 
+Imperfect Palindromes are exactly those class of Palindromes which do not have symmetrical Delimiter distributions. 
 
-The goal of this section is to understand the Delimiter symmetry displayed by Perfect Palindromes, in order to help further classify Imperfect Palindromes according to the type of Delimiter asymmetry found in a particular instance. In other words, the analysis seeks a method for quantifying a Perfect Palindrome's symmetry in order to apply the method to Imperfect Palindromes, with the hope of gaining greater insight into the syntactical obstacles preventing direct formal access to the class of Imperfect Palindromes.
+The goal of this section is to understand the Delimiter symmetry displayed by Perfect Palindromes, in order to help further classify Imperfect Palindromes according to the type of Delimiter asymmetry found in a particular instance. In other words, the analysis seeks a method for quantifying a Perfect Palindrome's Delimiter symmetry in order to apply the same method to Imperfect Palindromes, with the hope of gaining greater insight into the syntactical obstacles preventing direct formal access to the class of Imperfect Palindromes.
 
-TODO
+The essential problem of modelling Delimiter distributions is the method of approach. Analytical methods, if not well constructed, are liable to lead to seemingly well-supported, but logically flawed conclusions. 
+
+Consider taking Sentences from a Corpus and for each one, calculating and returning the Delimiter indices, as in the following,
+
+.. math::
+
+  ᚠ = \text{"error is the price we pay for progress"}
+
+.. math::
+
+  D_ᚠ = \{ (6, \sigma), (9, \sigma), (13, \sigma), (19, \sigma), (22, \sigma), (26, \sigma), (30, \sigma) \}
+
+Note the set :math:`D_ᚠ` is the set involved in :ref:`Definition 3.2.1 <definition-3-2-1>` of the Delimiter Count function. If a large Corpus is analyzed so that each Sentence is reduced to a set of Delimiter indices, and then the frequency of Delimiter Counts is plotted, an interesting, but potentially misleading result is obtained. The following histograms show the result of this technique for Sentences of various fixed lengths. 
 
 .. image:: ../_static/images/sentences/english/delimiter_distribution_n50.png
   :width: 400
@@ -47,24 +59,68 @@ TODO
   :width: 400
   :alt: Delimiter Distribution, Sentence String Length = 100
 
-.. image:: ../_static/images/sentences/english/delimiter_distribution_n100.png
+.. image:: ../_static/images/sentences/english/delimiter_distribution_n200.png
   :width: 400
   :alt: Delimiter Distribution, Sentence String Length = 200
+
+As can be seen from the shape of the histograms, the Delimiter index distribution for Sentences of fixed length is roughly uniform (with a potentially significant spike in the far left tail of each distribution). These graphs suggest the Delimiter Count of a single Character, :math:`\zeta[k]`, can be approximated by a discrete, uniform random variable, conditional on the Sentence String Length,
+
+.. math::
+
+  P(\Delta(\hat{\zeta}[k]) | l(\zeta) = \lambda) = \frac{1}{\lambda}
+
+Where :math:`P()` represents the probability of an event, :math:`\hat{\zeta[k]}` represents a random varaible and :math:`\lambda` represents a fixed String Length. However alluring, there is a subtle, but important assumption going into the generation of these histograms that prevents the acceptance of this conclusion.
+
+When Sentences are reduced to Delimiter indices and plotted in aggregate, information related to the relative order of the Delimiter in the Sentence is lost. In other words, the method of construction used to generate these histogram implicitly assumes,
+
+.. math::
+
+  P(\Delta(\hat{zeta}[k]) | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
+
+To provide a more concrete example, consider the Sentences, 
+
+.. math::
+
+  ᚢ = \text{"the dog runs across the field"}
+
+.. math::
+  
+  ᚦ = \text{"the child laughs at the joke"}
+
+In each case,
+
+.. math::
+
+  \Delta(ᚢ[4]) = \Delta(ᚦ[4]) = 1
+
+The presence of the Delimiter after the article *"the"* affects the subsequent appearance of Delimiters in the Sentences. Due to grammatical rules, a noun must follow the article and this has tangible, measureable syntactic effects. Given the information :math:`\Delta(ᚢ[4]) = 1`, this fact greatly decreases (perhaps even nullifies) the event of :math:`\Delta(ᚢ[5]) = 1`. In fact, a probability model that describes linguistic entities might take it as an axiom,
+
+.. math::
+
+  P(\Delta(\hat{zeta}[k]) | \Delta(\zeta[k-1]) = 1 ) = 0
+
+In summary, it cannot be discounted that knowing where a single Delimiter occurs in a Sentence influences the possible locations where other Delimiters might occur. However, accounting for this contingency presents computational challenges. A Sentence with 100 Characters will have :math:`2^100` possible Delimiter configurations, by the Fundamental Counting Principle. Tracking the Delimiter distribution across different Sentence String Lengths becomes impossible. Enumerating and tallying these outcomes is a prohibitively expensive task, if abstraction is not employed to summarize the Delimiter *"mass"* of a Sentence. 
 
 .. _section-v-i:
 
 Section V.I: Definitions
 ------------------------
 
-TODO: explain 
+Before attempting to extricate the probability density of Delimiters within the Sentences of a Corpus, a conceptual apparatus is required for aggregating and assessing the distribution and configuration of Delimiters in a particular Sentence. 
+
+This apparatus is embodied the concept of a *Sentence Integral*. A Sentence Integral is simply the sum of Delimiter indices in a Sentence. The reason for introducing the connotation of *"integration"* into the vernacular will become apparent after the particular form of its definition is appreciated. In short, the term *"integration"* is used here to evoke the idea of summing or accumulating values over a range, similar to the integral in calculus.
 
 .. _definition-5-1-1:
 
 **Definition 5.1.1: Lefthand Sentence Integrals**
 
-Let ζ be an arbitary Sentence from Corpus **C**:sub:`L` and let *k* be a natural number such that *1 ≤ k ≤ Λ(ζ)*. The *Lefthand Integral* of Sentence ζ, denoted *Ω*:sub:`-`*(ζ,k)*, is defined as,
+Let *ζ* be an arbitary Sentence from Corpus :math:`C_L` and let *k* be a natural number such that :math:`1 ≤ k ≤ \Lambda(\zeta)`. The *Lefthand Integral* of Sentence *ζ*, denoted :math:`\Omega_{-}(\zeta, k)`, is defined as,
 
-    Ω:sub:`-`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) ∎
+.. math::
+
+  \Omega_{-}(\zeta, k) = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[:i])}{l(\zeta)}
+    
+∎
     
 .. _definition-5-1-2:
 
@@ -72,15 +128,25 @@ Let ζ be an arbitary Sentence from Corpus **C**:sub:`L` and let *k* be a natura
 
 The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defined as,
 
-    Ω:sub:`+`(ζ,k) =  Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) ∎
+.. math::
 
-TODO: explain 
+  \Omega_{+}(\zeta, k) = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[i:])}{l(\zeta)}
+    
+∎
 
-To develop an understanding of what is meant by the concept of a *Sentence Integral*, recall the String Length of the Left and Right Partial Sentences (Definition 4.1.6 and Definition 4.1.7) depends on the index of the Partial,
+Take note how the Delimiter Count function is employed in this definitions. Since the domain of discourse is Strings and all Characters are Strings, a Character is valid input to the Delimiter Count. The quantity :math:`\Delta(\zeta[i])` is essentially an indicator variable, taking on the values of 0 or 1, depending on if :math:`\zeta[i] = \sigma` or :math:`\zeta[i] \neq \sigma`.To draw an analogy to a famous mathematical function, the Delimiter Count :math:`\Delta(\zeta[i])` acts in a similar way to the a Dirac delta function :math:`\delta(x)`, in that it selects particular values to contribute to the integrand. 
 
-    l(ζ[:k]) = k
+Each Delimiter that is encountered along the length of the String is then weighted by the length of the Partial Sentence. Recall, by :ref:`Definition 4.2.1` and :ref:`Definition 4.2.2`, the length of Partial Sentences are given by,
 
-    l(ζ[k:]) = l(ζ) - k + 1
+.. math::
+
+  l(\zeta[:i]) = i
+
+.. math::
+
+  l(\zeta[i:]) = l(\zeta) - i + 1
+
+In other words, the weights given to the Delimiter Count are exactly the Character indices *relative to the starting or ending Character in the Sentence*. The Lefthand Sentence Integral represents the sum of Delimiter positions relative to the first Character, normalized by the String Length of the Sentence, while the Righthand Sentence Integral represents the sum of Delimiter positions relative to the last Character, also normalized by the String Length of the Sentence.
 
 The following examples calculate the Lefthand and Righthand Sentence Integrals for various illustrative Palindromes.
 
@@ -494,18 +560,96 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
 
 ∎
 
-TODO: explain
+From these examples, it can be seen that Sentence Integrals can be regarded as a measure of *"delimiter mass"*. When the Lefthand Sentence Integral is greater than the Righthand Sentence Integral, this is an indication the Sentence has more Delimiters in its right half than its left half. In other words, the Delimiters positions relative to the start of the Sentence sum to a greater number than the Delimiter positions relative to the end.
 
-.. _section_v_ii:
+For the same reason, if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral, this is an indication the Sentence has more Delimiters in its left half than its right half. In other words, the Delimiters positions relative to the end of the Sentence sum to a greater number than the Delimiter positions relative to the start.
+
+This method of *"weighing"* the Delimiters in a Sentence provides a method for abstractly describing the symmetry of Delimiters in Perfect Palindromes. Before using this method to quantify the symmetry of Perfect Palindromes, the next section will strengthen the definitions of Sentence Integrals with some theorems. 
+
+.. _section-v-ii:
 
 Section V.II: Theorems 
 ----------------------
 
-TODO: explain
+TODO: explain 
 
 .. _theorem-5-2-1:
 
-**Theorem 5.2.1** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+**Theorem 5.2.1**: ∀ ζ ∈ C:sub:L: ∀ k ∈ N:sub:l(ζ): Ω:sub:-(ζ,k) ≥ 0 and Ω:sub:+(ζ,k) ≥ 0
+
+Proof:
+
+Let ζ be an arbitrary Sentence in the Corpus C:sub:L, and let k be a natural number such that 1 ≤ k ≤ l(ζ).
+
+By Definition A.8.1:
+
+Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ))
+Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ))
+Δ(ζ[i]) is either 0 or 1 for all i (since it counts delimiters).
+l(ζ[:i]), l(ζ[i:]), and l(ζ) are all positive (lengths are always positive).
+i is positive.
+Therefore, each term in the summations is non-negative (either 0 * something or 1 * something non-negative). The sum of non-negative terms is always non-negative.
+
+Thus, Ω:sub:-(ζ,k) ≥ 0 and Ω:sub:+(ζ,k) ≥ 0.
+
+Since ζ and k were arbitrary, we can generalize:
+
+∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,k) ≥ 0 and Ω:sub:`+`(ζ,k) ≥ 0
+This completes the proof.
+
+
+.. _theorem-5-2-2:
+
+**Theorem 5.2.2** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+
+Let *ζ* be an arbitrary Sentence in the Corpus and let *k* be a natural number such that,
+
+   1. ζ ∈ C:sub:`L`
+   2. k ∈ N:sub:`l(ζ)`:
+
+By Definition 3.1.2, the *σ*-reduction of *ζ*, denoted *ς(ζ)*, is a String obtained by removing all Delimiter Characters (*σ*) from *ζ*. By Theorem A.2.11, 
+
+   3. Δ(ς(t)) = 0
+
+Consider the Left-Hand Integral of *ς(ζ)* up to index k:
+
+   4. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[:i]) * (l(ς(ζ)[:i])/l(ς(ζ)))
+   
+By the Definition 3.2.5 of Left Partial Sentence and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[:i]* is a String contained in *ς(ζ)* from the beginning up to the *i*:sup:`th` Character. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[:i]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
+
+   5. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[:i]) = 0
+   
+Substituting this into step 4,
+
+   6. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[:i])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
+   
+Consider the Right-Hand Integral of *ς(ζ)* up to index *k*:
+
+   7. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[i:]) * (l(ς(ζ)[i:])/l(ς(ζ)))
+   
+By the Definition 3.2.6 of Right Partial Sentence  and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[i:]* is a String contained in *ς(ζ)* from the *i*:sup:`th` Character to the end. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[i:]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
+
+   8. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[i:]) = 0
+   
+Substituting this into the expression into step 7,
+
+   9. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[i:])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
+
+Thus, both the Left-Hand and Right-Hand Integrals of *ς(ζ)* are equal to 0,
+
+   10. Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+   
+Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
+
+   11. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0  
+
+∎
+
+The next two theorems provide a method for calculating the Lefthand and Righthand Sentence Integrals numerically.
+
+.. _theorem-5-2-3:
+
+**Theorem 5.2.3** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -529,13 +673,13 @@ Substituting l(ζ[:i]) = i into the expression, we get:
    
 Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
-    6. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ)) ∎
+    6. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ)) 
 
-TODO: explain 
+∎
 
-.. _theorem-5-2-2:
+.. _theorem-5-2-4:
 
-**Theorem 5.2.2** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+**Theorem 5.2.4** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
 
 PLet *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -555,19 +699,21 @@ Now, consider the Right-Hand Integral up to index *k*:
 
 Substituting step 3 into step 4,
 
-    1. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))
+    5. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))
 
 Since ζ and k were arbitrary, this can generalize over the Corpus,
 
-    1. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) ∎
+    6. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) 
 
-The terms *(l(ζ) - i + 1)* and *i* that appear in the Sentence Integral summation may be thought of as the *"weight"* of a Character Index. Since the Delimiter Count is either 0 or 1 for a single Character, the weight of Delimiters in a Sentence are the only contributions to the summation in a Sentence Integral. This analogy to the mathematical concepts of density and mass is codified in the following definition.
+∎
+
+The terms *(l(ζ) - i + 1)* and *i* that appear in the Sentence Integral summation may be thought of as the *"weight"* of a Delimiter. Since the Delimiter Count is either 0 or 1 for a single Character, the weight of Delimiters in a Sentence are the only contributions to the summation in a Sentence Integral. This analogy to the mathematical concepts of density and mass is codified in the following definition.
 
 .. _definition-5-2-1:
 
 **Definition 5.2.1: Delimiter Mass**
 
-Let *ζ* be an arbitrary Sentence in the Corpus **C**:sub:`L`, and let *I* be a natural number such that *1 ≤ i ≤ l(ζ)*. T
+Let *ζ* be an arbitrary Sentence in the Corpus :math:`C_L`, and let *I* be a natural number such that *1 ≤ i ≤ l(ζ)*. T
 
 The Righthand Delimiter Mass at Character Index *i*, denoted μ:sub:`+`(ζ, i), is defined as,
 
@@ -577,11 +723,11 @@ The Lefthand Delimiter Mass at Character Index *i*, denoted μ:sub:`-`(ζ, i) is
 
     μ:sub:`-`(ζ, i) = Δ(ζ[i]) * i ∎
 
-TODO: explain
+The next theorem uses :ref:`Definition 5.2.1 <definition-5-2-1>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\omega(\zeta)` in :ref:`Theorem 5.2.5 <theorem-5-2-5>`.
 
-.. _theorem-5-2-3:
+.. _theorem-5-2-5:
 
-**Theorem 5.2.3** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+**Theorem 5.2.5** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
 
 (→) Let *m = ω(ζ)*. Assume 
 
@@ -644,77 +790,10 @@ Plugging in Definition A.8.2,
 
 Since both directions of the equivalence hold and *ζ* was arbitrary, this can generalize over the Corpus,
  
-    ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ)) ∎
+    ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ)) 
+  
+∎
 
-.. _theorem-5-2-4:
-
-**Theorem 5.2.4** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
-
-Let *ζ* be an arbitrary Sentence in the Corpus and let *k* be a natural number such that,
-
-   1. ζ ∈ C:sub:`L`
-   2. k ∈ N:sub:`l(ζ)`:
-
-By Definition 3.1.2, the *σ*-reduction of *ζ*, denoted *ς(ζ)*, is a String obtained by removing all Delimiter Characters (*σ*) from *ζ*. By Theorem A.2.11, 
-
-   3. Δ(ς(t)) = 0
-
-Consider the Left-Hand Integral of *ς(ζ)* up to index k:
-
-   4. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[:i]) * (l(ς(ζ)[:i])/l(ς(ζ)))
-   
-By the Definition 3.2.5 of Left Partial Sentence and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[:i]* is a String contained in *ς(ζ)* from the beginning up to the *i*:sup:`th` Character. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[:i]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
-
-   5. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[:i]) = 0
-   
-Substituting this into step 4,
-
-   6. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[:i])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
-   
-Consider the Right-Hand Integral of *ς(ζ)* up to index *k*:
-
-   7. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[i:]) * (l(ς(ζ)[i:])/l(ς(ζ)))
-   
-By the Definition 3.2.6 of Right Partial Sentence  and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[i:]* is a String contained in *ς(ζ)* from the *i*:sup:`th` Character to the end. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[i:]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
-
-   8. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[i:]) = 0
-   
-Substituting this into the expression into step 7,
-
-   9. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[i:])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
-
-Thus, both the Left-Hand and Right-Hand Integrals of *ς(ζ)* are equal to 0,
-
-   10. Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
-   
-Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
-
-   11. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0  ∎
-
-
-.. _theorem-5-2-5:
-
-**Theorem 5.2.5**: ∀ ζ ∈ C:sub:L: ∀ k ∈ N:sub:l(ζ): Ω:sub:-(ζ,k) ≥ 0 and Ω:sub:+(ζ,k) ≥ 0
-
-Proof:
-
-Let ζ be an arbitrary Sentence in the Corpus C:sub:L, and let k be a natural number such that 1 ≤ k ≤ l(ζ).
-
-By Definition A.8.1:
-
-Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ))
-Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ))
-Δ(ζ[i]) is either 0 or 1 for all i (since it counts delimiters).
-l(ζ[:i]), l(ζ[i:]), and l(ζ) are all positive (lengths are always positive).
-i is positive.
-Therefore, each term in the summations is non-negative (either 0 * something or 1 * something non-negative). The sum of non-negative terms is always non-negative.
-
-Thus, Ω:sub:-(ζ,k) ≥ 0 and Ω:sub:+(ζ,k) ≥ 0.
-
-Since ζ and k were arbitrary, we can generalize:
-
-∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,k) ≥ 0 and Ω:sub:`+`(ζ,k) ≥ 0
-This completes the proof.
 
 TODO: explain
 
@@ -1112,9 +1191,9 @@ The total number of Delimiters starting at Character Index 26 and working backwa
 
 TODO: explain
 
-.. _theorem-5-2-6:
+.. _theorem-5-2-7:
 
-**Theorem 5.2.6**  ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+**Theorem 5.2.7**  ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
 
 Let ζ be an arbitrary Sentence and let k be a natural number suchm
 
@@ -1147,9 +1226,9 @@ Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
     ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
 
-.. _theorem-5-2-7:
+.. _theorem-5-2-8:
 
-**Theorem 5.2.7** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+**Theorem 5.2.8** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
 
 Let ζ be an arbitrary Sentence and let k be a natural number suchm
 
@@ -1178,9 +1257,9 @@ Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
 TODO: explain
 
-.. _theorem-5-2-8:
+.. _theorem-5-2-9:
 
-**Theorem 5.2.8** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+**Theorem 5.2.9** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
 
 Let *ζ* be an arbitrary Perfect Palindrome in the Corpus C:sub:`L`,
 
@@ -1285,7 +1364,7 @@ The shortcut formulae for Sentence Integrals given in Theorem 3.3.1 and Theorem 
 
 Theorem 3.3.5 shows for the highly symmetric and involutive class of Perfect Palindromes, these quantities are perfectly balanced. The Delimiter placement relative to the start of a Perfect Palindrome exactly mirrors the Delimiter placement relative to the end. When these quantities are *not* equal, it is an indication of Delimiter asymmetry in the Sentence. 
 
-However, when these quantities are equal, it cannot be said the Sentence is definitively a Perfect Palindrome. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
+However, when these quantities are equal, it cannot be said the Sentence is definitively a symmetric with respect to Delimiters. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
 
     Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * [i - (l(ζ) - i + 1)]/l(ζ)
 
@@ -1305,7 +1384,7 @@ To establish the existence of asymmetrical solutions, consider the difference of
 
     Ω:sub:`-`(ζ,l(ζ)) - Ω:sub:`+`(ζ,l(ζ))
 
-In this case, the summation will range from (1 - l(ζ)) to (l(ζ) - 1). Furthermore, note the coefficient *(2i - l(ζ) - 1)* increases as twice the rate as the index *i* in *Δ(ζ[i]*). This means, depending on the parity of the Sentence, the equation will either consist of odd integer coefficients or even integer coefficients. 
+In this case, the summation will range from (1 - l(ζ)) to (l(ζ) - 1). Furthermore, note the coefficient *(2i - l(ζ) - 1)* increases at twice the rate as the index *i* in *Δ(ζ[i]*). This means, depending on the parity of the Sentence, the equation will either consist of odd integer coefficients or even integer coefficients. 
 
 A pair of examples will help illustrate this. 
 
@@ -1325,12 +1404,14 @@ In the odd integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5]) 
 
 In the even integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5]) = Δ(ζ[6]) = 1* will also result in a solution that balances the equation to 0.
 
-In other words, any time a Character index coefficient can be expressed as the sum of coefficients of other Character indexes, a solution exists. It is worth noting this species of solutions to the Sentence Integral difference expansion does not seem to correspond to meaning Sentence structure, i.e. both solutions correspond to sequences of consecutive Delimiter. 
+In other words, any time a Character index coefficient can be expressed as the sum of coefficients of other Character indexes, a solution exists. It is worth noting this species of solutions to the Sentence Integral difference expansion does not seem to correspond to meaning Sentence structure, i.e. both solutions correspond to sequences of consecutive Delimiters. 
 
 This cursory analysis suggests, while the Sentence Integral may not provide a necessary and sufficient condition for classifying Imperfect Palindrome's delimiter asymmetry, it may nevertheless be an important diagnostic tool for understanding the distribution of Delimiters in a Corpus of Sentence. 
  
-Section V.II: Statistical Analysis
------------------------------------
+.. _section-v-iii:
+
+Section V.III: Probability Models
+---------------------------------
 
 Sentence Integrals provide a method of approaching a previously intractable problem in linguistics. Consider a sample of data that consists of Sentences with a fixed String length of 100, i.e. *l(ζ) = 100*. To accurately study the distribution of Delimiters in sample, every possible configuration of Delimiters, from 0 up to 100, must be included as a possibility. Attempting to determine the sampling distribution of such a complex statistical problem is a lesson in the curse of dimensionality and combinatorial explosions.
 
@@ -1344,9 +1425,9 @@ To see the power of Sentence integration, it is instructive to seek out real wor
   :width: 400
   :alt: Delimiter Count Coefficient Distribution
 
-This is the raw frequency of the Delimiter Count over the entire Corpus of Sentences with String Length 105. Without taking into account how the Delimiters behave in reference to other Delimiters in the sentences, this histogram might mislead the observer into believing the Delimiter distribution for English is relatively uniform.
+This is the raw frequency of the Delimiter Count over the entire Corpus of Sentences with String Length 105, similar to the histograms shown in the introduction to this section. Without taking into account how the Delimiters behave in reference to other Delimiters in the sentences, this histogram might mislead the observer into believing the Delimiter distribution for English is relatively uniform.
 
-The key insight affored by Sentence Integrals is that this histogram is the *Character population distribution*, which is to say, it is the distribution that results when Sentences are treated as concatenated Characters without further semantic content. In other words, this distribution is equivalent to picking random Characters from Sentences in the Corpus and recording whether or not they are Delimiters. 
+The key insight affored by Sentence Integrals is that this histogram is the *Character population distribution*, which is to say, it is the distribution that results when Sentences are treated as disparate Characters without correlated semantic content. In other words, this distribution is equivalent to assuming independence and then picking random Characters from Sentences in the Corpus and recording whether or not they are Delimiters. 
 
 This histogram *does not* account for the semantical features of Delimiters, in so far that the dsitribution of Delimiters within a Sentence contains information about the rhythym and prosody of its Words. However, it does suggest a probabilistic/statistical interpretation of Sentence Integral might be beneficial. 
 
