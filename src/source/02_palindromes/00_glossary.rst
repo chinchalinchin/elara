@@ -43,6 +43,7 @@ Notation
 
 Definitions 
 -----------
+In oth
 
 - D 1.1.1: Concatenation: ut
 - D 1.1.2: Character-Level Set Representation: **T**
@@ -183,7 +184,7 @@ Theorems
 - T 4.1.3: :math:`\forall \zeta \in PP: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I`
 - T 4.1.4: :math:`PP \subset P`
 - T 4.1.5: :math:`PP \cup IP = P`
-- T 4.2.1: :math:`\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta) - i + 1:]`
+- T 4.2.1: :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta) - i + 1:]`
 - T 4.2.2: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i + 1 ) \land (l(\zeta[:i+1]) = l(\zeta[i+1:]))`
 - T 4.2.3: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i) \land (l(\zeta[:i]) + 1 = l(\zeta[i:]))`
 - T 4.2.4: :math:`\forall \zeta \in C_L: \exists n \in N_{l(\zeta)}: ( l(\zeta[:n]) = l(\zeta[n:]) ) \lor (l(\zeta[:n]) + 1 = l(\zeta[n:]))`
@@ -193,8 +194,10 @@ Theorems
 - T 4.2.8: :math:`\forall \zeta \in P_{+}: \omega(\zeta) = \frac{l(\zeta)}{2}`
 - T 4.2.9: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):])`
 - T 4.2.10: :math:`\forall \zeta \in C_L: \omega(\varsigma(\zeta)) \leq \omega(\zeta)`
-- T 4.2.11: :math:`P_{-} \cap P^+ = \emptyset`
-- T 4.2.12: :math:`P_{-} \cup P^+ = P`
+- T 4.2.11: :math:`\forall \zeta in C_L: \zeta[\omega(\zeta)] \neq \text{inv}(\zeta)[\omega(\zeta)]) \to (\exists k \in \mathbb{N}: l(\zeta) = 2k)`
+- T 4.2.12: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N}: l(\zeta)=2k) \to \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\omega(\zeta)+1]`
+- T 4.2.13: :math:`P_{-} \cap P^+ = \emptyset`
+- T 4.2.14: :math:`P_{-} \cup P^+ = P`
 - T 4.3.1: :math:`\forall \zeta \in P: [ (\text{inv}(\zeta\{1\}) \subset_s \zeta\{\Lambda(\zeta)\}) \vee (\text{inv}(\zeta\{\Lambda(\zeta)\}) \subset_s \zeta\{1\}) ] \land [ (\zeta\{1\} \subset_s \text{inv}(\zeta\{\Lambda(\zeta)\})) \vee (\zeta\{\Lambda(\zeta)\} \subset_s \text{inv}(\zeta\{1\})) ]`
 - T 4.3.2: :math:`\forall \zeta \in P: (\zeta[\omega(\zeta)] = \sigma) \to ( (\text{inv}(\zeta\{\omega-\}) \subset_s \zeta\{\omega+\}) \vee (\text{inv}(\zeta\{\omega+\}) \subset_s \zeta\{\omega-\}))`
 - T 5.1.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (i/l(\zeta))`

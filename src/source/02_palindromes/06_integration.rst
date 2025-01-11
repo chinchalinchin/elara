@@ -558,19 +558,19 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - (61/26)
     - (74/26)
 
-To analyze the information provided in this particular example, consider the following breakdown. The inverse of *ᚠ = "draw no dray a yard onward"* is given by,
+To analyze the information provided in this particular example further, consider the following breakdown. The inverse of *ᚠ = "draw no dray a yard onward"* is given by,
 
 .. math::
 
   \text{inv}(ᚠ) = "drawno dray a yard on ward"
 
-Since the String Length of the Sentence and its Inverse are even, by :ref:`Theorem 4.2.3`, the Pivot is given by,
+Since the String Length of the Sentence and its Inverse are both even, by :ref:`Theorem 4.2.3`, the Pivot is given by,
 
 .. math::
 
   \omega{ᚠ} = 13
 
-Using :ref:`Definition 3.2.1 <definitino-3-2-1>`, the Delimiter Count is found by first identifying the Character indices of Delimiters,
+Using :ref:`Definition 3.2.1 <definition-3-2-1>`, the Delimiter Count is found by first identifying the Character indices of Delimiters in the Sentence and collecting them into the set :math:`D_{ᚠ}`,
 
 .. math::
 
@@ -582,16 +582,14 @@ So that the Delimiter Count is found by taking the cardinality of the set :math:
 
   \Delta(ᚠ) = \lvert D_{ᚠ} \rvert = 5
 
-The set :math:`D_{ᚠ}` expresses the distance of the Delimiters relative to the start of the Sentence. The distances can be expressed relative to the Pivot by subtractin the value of :math:`\omega(\zeta)` from each value in :math:`D_{ᚠ}`,
+The set :math:`D_{ᚠ}` expresses the distance of the Delimiters relative to the start of the Sentence. The distances can be expressed relative to the Pivot by subtracting the value of :math:`\omega(\zeta)` from each value in :math:`D_{ᚠ}`,
 
 .. math::
 
     \{ (-8, \sigma), (-5, \sigma), (0, \sigma), (2, \sigma), (7, \sigma) \}
 
 
-This makes clear the Delimiters on the left side of the Pivot are closer to the start of the Sentence than the Delimiters on the right side of the Pivot. In other words, the Delimiters in the left half are further from the Pivot than the Delimiters in the right half.
-
-Furthermore, notice the Delimiter Count of the Inverse is calculated with, 
+This makes clear the Delimiters on the left side of the Pivot are further from the Pivot than the Delimiters on the right side. Furthermore, notice the Delimiter Count of the Inverse is calculated with, 
 
 .. math::
     
@@ -613,7 +611,16 @@ If the Pivot is subtracted from each coordinate in :math:`D_{\text{inv}(ᚠ)}`,
 
     \{ (-6, \sigma), (-1, \sigma), (1, \sigma), (6, \sigma), (9, \sigma) \}
 
+When *ᚠ* is inverted, the index at the Pivot is no longer occupied by the same Character,
 
+.. math::
+
+  ᚠ[\omega(\zeta)] = ᚠ[13] = \sigma 
+
+.. math::
+
+  \text{inv}(ᚠ)[\omega(\zeta)] = \text{inv}(ᚠ)[13] = "a"
+  
 The Lefthand Integral of the Original Sentence is,
 
 .. math::

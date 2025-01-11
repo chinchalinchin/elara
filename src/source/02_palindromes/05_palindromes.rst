@@ -394,7 +394,7 @@ The next two theorems leverage this insight and establish the fundamental relati
 
 .. _theorem-4-2-1:
 
-**Theorem 4.2.1** :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta)-i+1]`
+**Theorem 4.2.1** :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \text{inv}(\zeta)[:i] = \zeta[l(\zeta)-i+1:]`
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -1175,13 +1175,13 @@ If :math:`\omega(\zeta) = \frac{l(\zeta) + 1}{2}`, then *l(ζ)* is odd by :ref:`
 
     9. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta)  
 
-If :math:`\omega(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by Theorem 3.2.12. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
+If :math:`\omega(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by :ref:`Theorem 4.2.7 <theorem-4-2-7>. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
 
 .. math::
 
     10. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta) 
 
-If :math:`\omega(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta)) + 1}{2}`, then *l(ς(ζ))* is odd by Theorem 3.2.10. 
+If :math:`\omega(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta)) + 1}{2}`, then *l(ς(ζ))* is odd by :ref:`Theorem 4.2.5 <theorem-4-2-5>`. 
 
 Since *l(ς(ζ))* is odd and *l(ζ)* is even, atleast one Delimiter was removed from *ζ* during *σ*-reduction, 
 
@@ -1215,11 +1215,149 @@ Since *ζ* was arbitrary, this can be generalized over the Corpus,
 
 ∎
 
-These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in :ref:`Theorems 4.2.11 <theorem-4-2-11>` - :ref:`4.2.12 <theorem-4-2-11>`.
+When a Sentence has odd parity, the Character at its pivot, :math:`\zeta[\omega(\zeta)]` will remain at its Pivot under inversion, i.e. the following implication will always obtain,
+
+.. math::
+
+    \exists k \in \mathbb{N}: l(\zeta) = 2k+1 \to \zeta[\omega(\zeta)] = \text{inv}(\zeta)[omega(\zeta)]
+
+However, this is not the case when a Sentence has even parity. The Pivot of an inverted Sentence with even parity will shift. First note, by :ref:`Definition 4.2.3 <definition-4-2-3>`, the Pivot only depends on the length of a Sentence. By :ref:`Definition 1.2.4 <definition-1-2-4>`, String Inversion preserves length. Therefore, the Pivots of a Sentence and its Inverse are equal,
+
+.. math::
+
+    \omega(\zeta) = \omega(\text{inv}(\zeta))
+
+Consider now the following Sentence and its Inverse,
+
+.. math::
+
+    ᚠ = \text{"not on"} \quad ; \quad ᚠ[\omega(ᚠ)] = \text{"t"}
+
+.. math::
+
+    \text{inv}(ᚠ) = \text{"no ton"} \quad ; \quad \text{inv}(ᚠ)[\omega(ᚠ)] = \text{" "}
+
+Since Sentences with even parity have no Character about which to reflect, the Pivot switches Characters when the Sentence is inverted. This observation is formalized in the next two theorems.
 
 .. _theorem-4-2-11:
 
-**Theorem 4.2.11** :math:`P_{+} \cap P_{-} = \emptyset`
+**Theorem 4.2.11** :math:`\forall \zeta in C_L: \zeta[\omega(\zeta)] \neq \text{inv}(\zeta)[\omega(\zeta)]) \to (\exists k \in \mathbb{N}: l(\zeta) = 2k)`
+
+This theorem can be stated in natural language as follows: For all Sentences in the Corpus, if the Character at the Pivot of the Sentence is not equal to the Character at the Pivot of its Inverse, then the String Length of the Sentence is even.
+
+Let *ζ* be an arbitrary sentence in :math:`C_L` such that,
+
+.. math::
+
+    1. \quad \zeta[\omega(\zeta)] \neq \text{inv}(\zeta)[\omega(\zeta)]
+
+For the sake of contradiction, assume *l(ζ)* is not even. Then l(ζ) must be odd. If l(ζ) is odd, then by :ref:`Definition 4.2.3 <definition-4-2-3>`,
+
+.. math::
+
+    2. \quad \omega(\zeta) = \frac{(l(\zeta) + 1)}{2}
+
+By :ref:`Definition 1.2.4 <definition-1-2-4>` of String Inversion, for any :math:`i \in N_{l(\text{inv}(\zeta))}`,
+
+.. math::
+
+    3. \quad \text{inv}(\zeta)[i] = \zeta[l(\zeta) - i + 1]
+
+Let :math:`i = \omega(\zeta)`. Substituting this into step 3 and then using the relation in step 2,
+
+.. math::
+
+    4. \quad \text{inv}(\zeta)[\omega(\zeta)] = \zeta[l(\zeta) - \omega(\zeta) + 1] = \zeta[l(\zeta) - \frac{l(\zeta) + 1}{2} + 1] 
+    
+.. math::
+    
+    5. \quad \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\frac{2l(\zeta) - l(\zeta) - 1 + 2}{2}] = \zeta[\frac{l(\zeta) + 1}{2}]
+   
+From step 2 and step 5,
+
+.. math::
+
+    6. \quad \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\omega(\zeta)]
+
+However, this contradicts the initial assumption in step 1. Therefore, *l(ζ)* cannot be odd and must be even. Since l(ζ) is even, 
+
+.. math::
+
+    7. \quad \exists k in \mathbb{N}: l(\zeta) = 2k
+
+Since *ζ* was an arbitrary sentence in :math:`C_L`, this can be generalized over the Corpus,
+
+.. math::
+
+    8. \quad \forall \zeta \in C_L: \zeta[\omega(\zeta)] \neq \text(\zeta)[\omega(\zeta)] \to (\exists k \in \mathbb{N}: l(\zeta) = 2k)
+
+∎
+
+The direction of implication in :ref:`Theorem 4.2.11` is important. From the inequality of the Pivot Characters in a Sentence and its Inverse, the parity of a Sentence may be inferred. However, the converse is not true: from the parity of a Sentence, the inequality of its Pivots Characters may not be inferred, as the simple String *"a ba"* illustrates
+
+TODO
+
+.. _theorem-4-2-12:
+
+**Theorem 4.2.12** :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N}: l(\zeta)=2k) \to \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\omega(\zeta)+1]`
+
+This theorem can be stated in natural language as follows: For all Sentence in the Corpus, if the String Length of the Sentence is even, then the Pivot Character of its Inverse is equal to the Character at one plus the Pivot index of the original Sentence.
+
+Let *ζ* be an arbitrary sentence in :math:`C_L` such that, 
+
+.. math::
+
+    1. \quad \exists k \in \mathbb{N}: l(\zeta) = 2k
+
+We want to show that inv(ζ)[ω(ζ)] = ζ[ω(ζ) + 1].
+
+Since *l(ζ)* is even, by :ref:`Definition 4.2.3 <definition-4-2-3>`,
+
+.. math::
+
+    2. \quad \omega(\zeta) = \frac{l(\zeta)}{2}
+
+By :ref:`Definition 1.2.4 <definition-1-2-4>`,
+
+.. math::
+
+    3. \quad \text{inv}(\zeta)[i] = \zeta[l(\zeta) - i + 1]
+
+Let :math:`i = ω(\zeta)`. Substituting step 2 into step 3,
+
+    4. \quad \text{inv}(\zeta)[\omega(\zeta)] = \zeta[l(\zeta) - \frac{l(\zeta)}{2} + 1]
+
+Simplifying,
+
+.. math::
+
+    5. \quad \text{inv}(\zeta)[\omega(\zeta)] = \zeta[l(\zeta)/2 + 1]
+
+Substituting :math:`\omega(\zeta) = \frac{l(\zeta)}{2}`,
+
+.. math::
+
+    6. \quad \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\omega(\zeta) + 1]
+   
+Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
+
+    7. \quad \forall \zeta \in C_L: (\exists k \in \mathbb{ℕ}: l(\zeta) = 2k) \to \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\omega(\zeta) + 1]
+
+∎
+
+TODO
+
+In other words, from the inequality of Pivot Characters in a Sentence and its Inverse, we can infer even parity. From even parity, we can infer the Pivot Character of the Inverse is equal to the Character at one plus the Pivot Index of the original Sentence. This is the price we pay for repeated Characters. Inside of a full equivalence, we have to be careful in the direction and exact conditions.
+
+TODO
+
+
+
+These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in :ref:`Theorems 4.2.11 <theorem-4-2-11>` - :ref:`4.2.12 <theorem-4-2-11>`.
+
+.. _theorem-4-2-12:
+
+**Theorem 4.2.13** :math:`P_{+} \cap P_{-} = \emptyset`
 
 This theorem can be stated in natural language as follows: A Palindrome cannot be both even and odd.
 
@@ -1265,9 +1403,9 @@ Therefore, the assumption that *ζ* is both an Even and Odd Palindrome must be f
 
 ∎
 
-.. _theorem-4-2-12:
+.. _theorem-4-2-13:
 
-**Theorem 4.2.12** :math:`P_{-} \cup P_{+} = P`
+**Theorem 4.2.14** :math:`P_{-} \cup P_{+} = P`
 
 This theorem can be translated into natural language as follows: All Palindromes are either Even Palindromes or Odd Palindromes. 
 
