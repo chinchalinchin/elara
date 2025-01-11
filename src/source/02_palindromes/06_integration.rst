@@ -99,7 +99,7 @@ The presence of the Delimiter after the article *"the"* affects the subsequent a
 
   P(\Delta(\hat{zeta}[k]) | \Delta(\zeta[k-1]) = 1 ) = 0
 
-In summary, it cannot be discounted that knowing where a single Delimiter occurs in a Sentence influences the possible locations where other Delimiters might occur. However, accounting for this contingency presents computational challenges. A Sentence with 100 Characters will have :math:`2^100` possible Delimiter configurations, by the Fundamental Counting Principle. Tracking the Delimiter distribution across different Sentence String Lengths becomes impossible. Enumerating and tallying these outcomes is a prohibitively expensive task, if abstraction is not employed to summarize the Delimiter *"mass"* of a Sentence. 
+In summary, it cannot be discounted that knowing where a single Delimiter occurs in a Sentence influences the possible locations where other Delimiters in the same Sentence might occur. However, accounting for this contingency presents computational challenges. A Sentence with 100 Characters will have :math:`2^100` possible Delimiter configurations, by the Fundamental Counting Principle. Tracking the Delimiter distribution across different Sentence String Lengths becomes impossible. Enumerating and tallying these outcomes is a prohibitively expensive task, if abstraction is not employed to summarize the Delimiter *"mass"* of a Sentence. 
 
 .. _section-v-i:
 
@@ -557,6 +557,98 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - 0
     - (61/26)
     - (74/26)
+
+To analyze the information provided in this particular example, consider the following breakdown. The inverse of *ᚠ = "draw no dray a yard onward"* is given by,
+
+.. math::
+
+  \text{inv}(ᚠ) = "drawno dray a yard on ward"
+
+Since the String Length of the Sentence and its Inverse are even, by :ref:`Theorem 4.2.3`, the Pivot is given by,
+
+.. math::
+
+  \omega{ᚠ} = 13
+
+Using :ref:`Definition 3.2.1 <definitino-3-2-1>`, the Delimiter Count is found by first identifying the Character indices of Delimiters,
+
+.. math::
+
+  D_{ᚠ} = \{ (5, \sigma), (8, \sigma), (13, \sigma), (15, \sigma), (20, \sigma) \}
+
+So that the Delimiter Count is found by taking the cardinality of the set :math:`D_{ᚠ}`,
+
+.. math::
+
+  \Delta(ᚠ) = \lvert D_{ᚠ} \rvert = 5
+
+The set :math:`D_{ᚠ}` expresses the distance of the Delimiters relative to the start of the Sentence. The distances can be expressed relative to the Pivot by subtractin the value of :math:`\omega(\zeta)` from each value in :math:`D_{ᚠ}`,
+
+.. math::
+
+    \{ (-8, \sigma), (-5, \sigma), (0, \sigma), (2, \sigma), (7, \sigma) \}
+
+
+This makes clear the Delimiters on the left side of the Pivot are closer to the start of the Sentence than the Delimiters on the right side of the Pivot. In other words, the Delimiters in the left half are further from the Pivot than the Delimiters in the right half.
+
+Furthermore, notice the Delimiter Count of the Inverse is calculated with, 
+
+.. math::
+    
+    D_{\text{inv}(ᚠ)} = \{ (26 - 20 + 1, \sigma), (26 - 15 + 1, \sigma), (26 - 13 + 1, \sigma), (26 - 8 + 1, \sigma), (26 - 5 + 1, \sigma) \}
+
+.. math::
+
+    D_{\text{inv}(ᚠ)} = \{ (7, \sigma), (12, \sigma),  (14, \sigma), (19, \sigma), (22, \sigma) \}
+
+Which confirms :ref:`Theorem 3.2.2 <theorem-3-2-2>`,
+
+.. math::
+
+  \Delta(ᚠ) = \lvert D_{ᚠ} \rvert = 5
+
+If the Pivot is subtracted from each coordinate in :math:`D_{\text{inv}(ᚠ)}`,
+
+.. math::
+
+    \{ (-6, \sigma), (-1, \sigma), (1, \sigma), (6, \sigma), (9, \sigma) \}
+
+
+The Lefthand Integral of the Original Sentence is,
+
+.. math::
+
+  \Omega_{-}(ᚠ ,26) = \frac{61/26} = 2.3461538461538463
+
+The Righthand Integral of the Original Sentence is,
+
+.. math::
+  
+  \Omega_{+}(ᚠ ,26) = \frac{74/26} = 2.8461538461538463
+
+The midpoint of the integrals is given by,
+
+.. math::
+
+  \frac{\Omega_{+}(ᚠ ,26) + \Omega_{-}(ᚠ ,26)}{2} = 2.5961538461538463
+
+The difference of the integrals is given by,
+
+.. math::
+
+  \Omega_{+}(ᚠ ,26) - \Omega_{-}(ᚠ ,26)} = 0.5
+
+TODO
+
+.. math::
+
+  \Omega_{-}(\text{inv}(ᚠ) ,26) = \frac{74/26} = 2.8461538461538463
+
+TODO
+
+.. math::
+  
+  \Omega_{+}(\text{inv}(ᚠ),26) = \frac{61/26} = 2.3461538461538463
 
 ∎
 
