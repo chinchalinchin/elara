@@ -1,7 +1,7 @@
 .. _plugin_functions:
 
-Plugin IV:  Functions
-=====================
+Plugin IV: Functions
+====================
 
 .. note::
 

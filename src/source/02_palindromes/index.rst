@@ -18,4 +18,4 @@ Palindromes
    07_postulates
    08_appendix
    09_data
-   10_code
+   10_app

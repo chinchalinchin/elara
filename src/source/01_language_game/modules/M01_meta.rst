@@ -1,5 +1,5 @@
-Module: Meta Grammar
-====================
+Module I: Meta Grammar
+======================
 
 The Meta Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Meta Module consists of two component: the Monitor and Markers.
 
