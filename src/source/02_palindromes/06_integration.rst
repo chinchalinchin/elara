@@ -136,7 +136,7 @@ The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defin
 
 Take note how the Delimiter Count function is employed in this definitions. Since the domain of discourse is Strings and all Characters are Strings, a Character is valid input to the Delimiter Count. The quantity :math:`\Delta(\zeta[i])` is essentially an indicator variable, taking on the values of 0 or 1, depending on if :math:`\zeta[i] = \sigma` or :math:`\zeta[i] \neq \sigma`.To draw an analogy to a famous mathematical function, the Delimiter Count :math:`\Delta(\zeta[i])` acts in a similar way to the a Dirac delta function :math:`\delta(x)`, in that it selects particular values to contribute to the integrand. 
 
-Each Delimiter that is encountered along the length of the String is then weighted by the length of the Partial Sentence. Recall, by :ref:`Definition 4.2.1` and :ref:`Definition 4.2.2`, the length of Partial Sentences are given by,
+Each Delimiter that is encountered along the length of the String is then weighted by the length of the Partial Sentence. Recall, by :ref:`Definition 4.2.1 <definition-4-2-1>` and :ref:`Definition 4.2.2 <definition-4-2-2>`, the length of Partial Sentences are given by,
 
 .. math::
 
@@ -564,7 +564,7 @@ To analyze the information provided in this particular example further, consider
 
   \text{inv}(ᚠ) = "drawno dray a yard on ward"
 
-Since the String Length of the Sentence and its Inverse are both even, by :ref:`Theorem 4.2.3`, the Pivot is given by,
+Since the String Length of the Sentence and its Inverse are both even, by :ref:`Theorem 4.2.3 <theorem-4-2-3>`, the Pivot is given by,
 
 .. math::
 

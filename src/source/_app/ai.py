@@ -4,7 +4,6 @@ import time
 
 import google.generativeai as genai
 from google.api_core.exceptions import ResourceExhausted
-# Configure the logger to only show errors
 
 api_key = os.environ.get("GEMINI_KEY")
 model_type = os.environ.setdefault("GEMINI_MODEL", "gemini-1.5-pro")
@@ -16,18 +15,16 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel(model_type)
 
 preamble = """
-The following prompt contains our conversation history as additional context. My prompts are denoted by $$ .. $$ markers. Your responses are denoted with && .. && markers.  These markers are used only for formatting the context and separating our conversation history. These markers should not be included in your actual responses. The conversation goes in sequential order, starting from the earliest message down to the latest. \n\n
+The following prompt contains our conversation history as additional context. My prompts are denoted by $ .. $ markers. Your responses are denoted with & .. & markers.  These markers are used only for formatting the context and separating our conversation history. These markers should not be included in your actual responses. The conversation goes in sequential order, starting from the earliest message down to the latest. \n\n
 """
 
 def format_prompt(prompt):
-    return f"\n$$\n{prompt}\n$$"
+    return f"\n$\n{prompt}\n$"
 
 def format_response(response):
-    return f"\n&&\n{response}\n&&"
+    return f"\n&\n{response}\n&"
 
 def args():
-    """Parses the arguments."""
-
     parser = argparse.ArgumentParser(description="Interact with Gemini.")
     parser.add_argument(
         "operation", 
@@ -55,9 +52,7 @@ def args():
     args = parser.parse_args()
     return args
 
-def talk_to_gemini(prompt, context_file="context.txt"):
-    """Sends the prompt to Gemini, managing context with an external file."""
-
+def chat(prompt, context_file="context.txt"):
     if os.path.exists(context_file):
         with open(context_file, "r") as f:
             context = f.read()
@@ -68,10 +63,10 @@ def talk_to_gemini(prompt, context_file="context.txt"):
     response = model.generate_content(full_prompt)
     print(response.text)
 
-    context = append_to_context(prompt, response.text, context_file)
+    context = persist_context(prompt, response.text, context_file)
     return context
 
-def append_to_context(prompt, response, context_file="context.txt"):
+def persist_context(prompt, response, context_file="context.txt"):
     """Appends the prompt and response to the context file."""
 
     if not os.path.exists(context_file):
@@ -92,7 +87,7 @@ def experiment(choice):
     if choice == "duality":
         duality()
 
-def duality(exp_name="duality", max_cycles = 20, max_delay = 60):
+def duality(max_cycles = 20, max_delay = 60, initial_prompt = "Form is the possibility of structure."):
     """
     Conducts the 'duality' experiment with exponential backoff, 
     separate error handling, and correct sleep placement.
@@ -100,7 +95,6 @@ def duality(exp_name="duality", max_cycles = 20, max_delay = 60):
     context_A = preamble
     context_B = preamble
     cycle = 0
-    initial_prompt = "Form is the possibility of structure."
     delay = 1  # Initial delay in seconds
 
     # Initial interaction
@@ -133,19 +127,19 @@ def duality(exp_name="duality", max_cycles = 20, max_delay = 60):
         delay = 1  # Reset delay after a successful cycle
 
     # Output to files
-    with open(f"{exp_name}_A.txt", "w") as f:
+    with open("duality_context_A.txt", "w") as f:
         f.write(context_A)
-    with open(f"{exp_name}_B.txt", "w") as f:
+    with open("duality_context_B.txt", "w") as f:
         f.write(context_B)
 
-    print(f"Duality experiment completed. Results saved to {exp_name}_A.txt and {exp_name}_B.txt")
+    print('Duality experiment completed. Results saved to "duality_context_A.txt" and "duality_context_B.txt"')
 
 
 if __name__ == "__main__":
     parsed_args = args()
     if parsed_args.operation == "chat":
         if parsed_args.string:
-            talk_to_gemini(parsed_args.string, parsed_args.context_file)
+            chat(parsed_args.string, parsed_args.context_file)
             exit()
         print("No string provided with the -c argument for chat operation.")
     elif parsed_args.operation == "experiment":

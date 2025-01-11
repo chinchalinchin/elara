@@ -1175,7 +1175,7 @@ If :math:`\omega(\zeta) = \frac{l(\zeta) + 1}{2}`, then *l(ζ)* is odd by :ref:`
 
     9. \quad \omega(\varsigma(\zeta)) \leq \omega(\zeta)  
 
-If :math:`\omega(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by :ref:`Theorem 4.2.7 <theorem-4-2-7>. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
+If :math:`\omega(\zeta) = \frac{l(\zeta)}{2}`, then *l(ζ)* is even by :ref:`Theorem 4.2.7 <theorem-4-2-7>`. From step 3, if :math:`(\varsigma(\zeta)) = \frac{l(\varsigma(\zeta))}{2}`, it follows, 
 
 .. math::
 
@@ -1293,7 +1293,7 @@ Since *ζ* was an arbitrary sentence in :math:`C_L`, this can be generalized ove
 
 ∎
 
-The direction of implication in :ref:`Theorem 4.2.11` is important. From the inequality of the Pivot Characters in a Sentence and its Inverse, the parity of a Sentence may be inferred. However, the converse is not true: from the parity of a Sentence, the inequality of its Pivots Characters may not be inferred, as the simple String *"a ba"* illustrates
+The direction of implication in :ref:`Theorem 4.2.11 <theorem-4-2-11>` is important. From the inequality of the Pivot Characters in a Sentence and its Inverse, the parity of a Sentence may be inferred. However, the converse is not true: from the parity of a Sentence, the inequality of its Pivots Characters may not be inferred, as the simple String *"a ba"* illustrates
 
 TODO
 
