@@ -1355,7 +1355,7 @@ TODO
 
 These properties of Pivots and Partial Sentences will be necessary to state and prove the main results of the work in the next section. In addition, it will be necessary to know the class of Odd Palindromes and the class of Even Palindromes form a partition of the class of all Palindromes. This result is definitively established in :ref:`Theorems 4.2.11 <theorem-4-2-11>` - :ref:`4.2.12 <theorem-4-2-11>`.
 
-.. _theorem-4-2-12:
+.. _theorem-4-2-13:
 
 **Theorem 4.2.13** :math:`P_{+} \cap P_{-} = \emptyset`
 
@@ -1403,7 +1403,7 @@ Therefore, the assumption that *ζ* is both an Even and Odd Palindrome must be f
 
 ∎
 
-.. _theorem-4-2-13:
+.. _theorem-4-2-14:
 
 **Theorem 4.2.14** :math:`P_{-} \cup P_{+} = P`
 
