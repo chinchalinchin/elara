@@ -6,30 +6,30 @@ Section VIII: Code
 Main
 ----
 
-.. literalinclude:: ../_app/main.py
+.. literalinclude:: ../_palindromes/main.py
     :language: python
 
 Model
 -----
 
-.. literalinclude:: ../_app/model.py
+.. literalinclude:: ../_palindromes/model.py
     :language: python
 
 
 Estimators
 ----------
 
-.. literalinclude:: ../_app/estimators.py
+.. literalinclude:: ../_palindromes/estimators.py
     :language: python
 
 Graphs 
 ------
 
-.. literalinclude:: ../_app/graphs.py
+.. literalinclude:: ../_palindromes/graphs.py
     :language: python
 
 Parse
 -----
 
-.. literalinclude:: ../_app/parse.py
+.. literalinclude:: ../_palindromes/parse.py
     :language: python
