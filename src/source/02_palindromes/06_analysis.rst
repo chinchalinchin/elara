@@ -723,27 +723,27 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - (74/26)
     - (59/26)
 
-Consider :math:`k = 6`. It's corresponding inverted Character position would be :math:`l(ᚠ) - k + 1 = 26 - 6 + 1 = 21`. The Delimiter Counts of the Partial Sentences are given by,
+Consider :math:`k = 6`. It's corresponding inverted Character position would be :math:`l(ᚠ) - k + 1 = 26 - 6 + 1 = 21`. The Delimiter Counts of the Partial Sentences up to these indices are given by,
 
   - Δ(ᚠ[:6]) = 1
   - Δ(ᚠ[6:]) = 4
   - Δ(ᚠ[:21]) = 5
   - Δ(ᚠ[21:]) = 0
 
-The Delimiter Counts of the Inverse Partial Sentences are given by,
+The Delimiter Counts of the Inverse Partial Sentences up to these indices are given by,
 
   - Δ(inv(ᚠ)[:21]) = 4
   - Δ(inv(ᚠ)[21:]) = 1
   - Δ(inv(ᚠ)[:6]) = 0
   - Δ(inv(ᚠ)[6:]) = 5
 
-Note the total number of Delimiters starting at Character Index 1 up to Character Index 6 in the original Sentence is 1. This corresponds to Δ(ᚠ)[:6] and to Δ(inv(ᚠ)[21:]). In addition, The total number of Delimiters starting at Character Index 26 and working backwards toward Character Index 21 is 0. This corresponds to Δ(ᚠ)[21:] and to Δ(inv(ᚠ)[:6]).
+Note the total number of Delimiters starting at Character Index 1 up to Character Index 6 in the original Sentence is 1. This corresponds to *Δ(ᚠ)[:6]* and to *Δ(inv(ᚠ)[21:])*. In addition, The total number of Delimiters starting at Character Index 26 and working backwards toward Character Index 21 is 0. This corresponds to *Δ(ᚠ)[21:]* and to *Δ(inv(ᚠ)[:6])*.
 
 Since the String Length of the Sentence and its Inverse are both even, by :ref:`Theorem 4.2.3 <theorem-4-2-3>`, the Pivot is given by,
 
 .. math::
 
-  \Phi{ᚠ} = 13
+  \omega{ᚠ} = 13
 
 Using :ref:`Definition 3.2.1 <definition-3-2-1>`, the Delimiter Count is found by first identifying the Character indices of Delimiters in the Sentence and collecting them into the set :math:`D_{ᚠ}`,
 
@@ -790,11 +790,11 @@ When *ᚠ* is inverted, the index at the Pivot is no longer occupied by the same
 
 .. math::
 
-  ᚠ[\Phi(\zeta)] = ᚠ[13] = \sigma 
+  ᚠ[\omega(\zeta)] = ᚠ[13] = \sigma 
 
 .. math::
 
-  \text{inv}(ᚠ)[\Phi(\zeta)] = \text{inv}(ᚠ)[13] = "a"
+  \text{inv}(ᚠ)[\omega(\zeta)] = \text{inv}(ᚠ)[13] = "a"
   
 The Lefthand Integral of the Original Sentence is,
 
@@ -1010,7 +1010,7 @@ The Lefthand Delimiter Mass at Character Index *i*, denoted :math:`\mu_sub{-}(\z
 
 ∎
 
-The next theorem uses :ref:`Definition 5.1.3 <definition-5-1-3>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\Phi(\zeta)` in following theorem.
+The next theorem uses :ref:`Definition 5.1.3 <definition-5-1-3>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\omega(\zeta)` in following theorem.
 
 .. _theorem-5-1-5:
 
@@ -1248,7 +1248,7 @@ This cursory analysis suggests, while the Sentence Integral may not provide a ne
 Section V.II: Probability
 -------------------------
 
-A probabilistic framework is now constructed on top of the formal system developed thus far. In particular, a *sample space*, *sigma algebra (event space)* and *probability measure* that conforms to the strictures of Kolmogrov's Axioms of Probability are defined in this section.
+A probabilistic framework is now constructed on top of the formal system developed thus far. In particular, a *sample space*, *sigma algebra (event space)* and *probability measure* that conform to the strictures of Kolmogrov's Axioms of Probability are defined in this section.
 
 It is the intention of this analysis to treat the observance of a single Character in a Sentence as an elementary random event. In other words, the integrand in :ref:`Definitions 5.1.1 <definition-5-1-1>` - :ref:`5.1.2 <definition-5-1-2>`, :math:`\Delta(\zeta[i])`, can be understood as a function of a random variable. In other to construct this probabilistic interpretation of Sentence Integrals, it is necessary to define the sample space on which they operate. There lies a problem with this approach that will become apparent after some preliminary notation is introducted. 
 
