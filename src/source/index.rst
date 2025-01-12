@@ -9,6 +9,7 @@ Elara Protocol
    :maxdepth: 1
    :caption: Contents:
 
-   00_scripts/index
-   01_language_game/index
-   02_palindromes/index
+   00_esoterica/index
+   01_organon/index
+   02_universalis/index
+   03_palindromia/index

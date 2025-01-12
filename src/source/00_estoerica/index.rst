@@ -1,8 +1,8 @@
-.. _scripts:
+.. _esoterica:
 
-=======
-Scripts
-=======
+=========
+Esoterica
+=========
 
 .. toctree::
    :maxdepth: 2

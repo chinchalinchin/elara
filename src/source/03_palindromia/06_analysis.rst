@@ -1349,7 +1349,7 @@ TODO
 
 .. math::
 
-  E_{(i, \iota)} = { \zeta \in \Omega | \zeta[i] = \iota }
+  E_{(i, \iota)} = \{ \zeta \in \Omega | \zeta[i] = \iota \}
 
 ∎
 

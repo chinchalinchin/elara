@@ -87,6 +87,8 @@ Definitions
 - D 5.1.1: Lefthand Sentence Integrals: :math:`\Phi_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
 - D 5.1.2: Righthand Sentence Integrals: :math:`\Phi_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
 - D 5.1.3: Delimiter Mass: :math:`\mu_{-}(\zeta, i)`, :math:`\mu_{+}(\zeta, i)`
+- D 5.2.1: Sample Space: :math:`\Omega = C_L`
+- D 5.2.2: Basis Event: :math:`E_{(i, \iota)} = \{ \zeta \in \Omega | \zeta[i] = \iota \}`
 - D A.1.1: Compound Words: :math:`\eta \in CW_L \leftrightarrow [(\exists \alpha, \beta \in L: \eta = \alpha\beta) \lor (\exists \alpha \in L, \exists \gamma \in CW_L: \eta = \alpha\gamma)] \land (\eta \in L)`
 - D A.1.2: Compound Invertible Words: :math:`\eta \in CIW_L \leftrightarrow [ (\eta \in CW_L) \land (\eta \in I) ]`
 - D A.2.1: :math:`\sigma`-Pairing Language: :math:`\alpha \in L_\sigma \leftrightarrow \exists \zeta \in C_L: \alpha = \varsigma(\zeta)`

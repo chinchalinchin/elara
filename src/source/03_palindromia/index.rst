@@ -1,7 +1,7 @@
-.. _palindromes:
+.. _palindromia:
 
 ===========
-Palindromes
+Palindromia
 ===========
 
 .. toctree::
