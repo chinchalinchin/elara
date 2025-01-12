@@ -166,8 +166,8 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - l(ᚠ[:k])
     - l(ᚠ[k:])
     - Δ(ᚠ[k])
-    - Ω:sub:`-`(ᚠ ,k)
-    - Ω:sub:`+`(ᚠ ,k)
+    - :math:`\Phi_{-}(ᚠ ,k)`
+    - :math:`\Phi_{+}(ᚠ ,k)`
   * - 1
     - "l"
     - 1
@@ -243,8 +243,8 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - l(ᚠ[:k])
     - l(ᚠ[k:])
     - Δ(ᚠ[k])
-    - Ω:sub:`-`(ᚠ ,k)
-    - Ω:sub:`+`(ᚠ ,k)
+    - :math:`\Phi_{-}(ᚠ ,k)`
+    - :math:`\Phi_{+}(ᚠ ,k)`
   * - 1
     - "w"
     - 1
@@ -376,8 +376,8 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - l(ᚠ[:k])
     - l(ᚠ[k:])
     - Δ(ᚠ[k])
-    - Ω:sub:`-`(ᚠ ,k)
-    - Ω:sub:`+`(ᚠ ,k)
+    - :math:`\Phi_{-}(ᚠ ,k)`
+    - :math:`\Phi_{+}(ᚠ ,k)`
   * - 1
     - "d"
     - 1
@@ -820,15 +820,21 @@ As mentioned previously, the terms *(l(ζ) - i + 1)* and *i* that appear in the 
 
 **Definition 5.1.3: Delimiter Mass**
 
-Let *ζ* be an arbitrary Sentence in the Corpus :math:`C_L`, and let *I* be a natural number such that *1 ≤ i ≤ l(ζ)*. T
+Let *ζ* be an arbitrary Sentence in the Corpus :math:`C_L`, and let *I* be a natural number such that :math:`1 \leq i \leq l(\zeta)`. 
 
-The Righthand Delimiter Mass at Character Index *i*, denoted μ:sub:`+`(ζ, i), is defined as,
+The Righthand Delimiter Mass at Character Index *i*, denoted :math:`\mu_sub{+}(\zeta, i)`, is defined as,
 
-    μ:sub:`+`(ζ, i) = Δ(ζ[i]) * (l(ζ) - i + 1)
+.. math::
 
-The Lefthand Delimiter Mass at Character Index *i*, denoted μ:sub:`-`(ζ, i) is defined as,
+  \mu_{+}(\zeta, i) = \Delta(\zeta[i]) \cdot (l(\zeta) - i + 1)
 
-    μ:sub:`-`(ζ, i) = Δ(ζ[i]) * i ∎
+The Lefthand Delimiter Mass at Character Index *i*, denoted :math:`\mu_sub{-}(\zeta, i)` is defined as,
+
+.. math::
+
+  \mu_{-}(\zeta, i) = \Delta(\zeta[i]) \cdot i
+
+∎
 
 The next theorem uses :ref:`Definition 5.1.3 <definition-5-1-3>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\Phi(\zeta)` in :ref:`Theorem 5.1.5 <theorem-5-1-5>`.
 
@@ -917,12 +923,12 @@ TODO: explain
       - l(ᚠ[k:])
       - Δ(ᚠ[k])
       - Δ(inv(ᚠ)[k])
-      - Ω:sub:`-`(ᚠ ,k)
-      - Ω:sub:`+`(ᚠ ,k)
+      - :math:`\Phi_{-}(ᚠ ,k)`
+      - :math:`\Phi_{+}(ᚠ ,k)`
       - Δ(ᚠ[:k])
       - Δ(inv(ᚠ)[:k])
-      - Ω:sub:`-`(inv(ᚠ) , k)
-      - Ω:sub:`+`(inv(ᚠ) , k)
+      - :math:`\Phi_{-}(\text{inv}(ᚠ) ,k)`
+      - :math:`\Phi_{+}(\text{inv}(ᚠ) ,k)`
     * - 1
       - "d"
       - "d"
@@ -1266,31 +1272,31 @@ Consider k = 6. It's corresponding inverted Character position would be l(ᚠ) -
 
 The Delimiter Counts of the Partial Sentences are given by,
 
-    - Δ(ᚠ[:6]) = 1
-    - Δ(ᚠ[6:]) = 4
-    - Δ(ᚠ[:21]) = 5
-    - Δ(ᚠ[21:]) = 0
+  - Δ(ᚠ[:6]) = 1
+  - Δ(ᚠ[6:]) = 4
+  - Δ(ᚠ[:21]) = 5
+  - Δ(ᚠ[21:]) = 0
 
 The Delimiter Counts of the Inverse Partial Sentences are given by,
 
-    - Δ(inv(ᚠ)[:21]) = 4
-    - Δ(inv(ᚠ)[21:]) = 1
-    - Δ(inv(ᚠ)[:6]) = 0
-    - Δ(inv(ᚠ)[6:]) = 5
+  - Δ(inv(ᚠ)[:21]) = 4
+  - Δ(inv(ᚠ)[21:]) = 1
+  - Δ(inv(ᚠ)[:6]) = 0
+  - Δ(inv(ᚠ)[6:]) = 5
 
 The Sentence Integrals for the Partial Sentences are given by,
 
-    0 Ω:sub:`-`(ᚠ, 6) =  (5/26) 
-    - Ω:sub:`+`(ᚠ, 6) =  (22/26) 
-    - Ω:sub:`-`(ᚠ, 21) = (61/26) 
-    - Ω:sub:`+`(ᚠ, 21) = (74/26)  
+  - :math:`\Phi_{-}(ᚠ, 6) =  \frac{5}{26}`
+  - :math:`\Phi_{+}(ᚠ, 6) =  \frac{22}{26}`
+  - :math:`\Phi_{-}(ᚠ, 21) = \frac{61}{26}`
+  - :math:`\Phi_{+}(ᚠ, 21) = \frac{74}{26}`
 
 The Sentence Integrals for the Inverse Partial Sentences are given by,
 
-    - Ω:sub:`-`(inv(ᚠ), 6) = 0
-    - Ω:sub:`+`(inv(ᚠ), 6) = 0
-    - Ω:sub:`-`(inv(ᚠ), 21) = (52/26)               
-    - Ω:sub:`+`(inv(ᚠ), 21) = (54/26)
+  - :math:`\Phi_{-}(\text{inv}(ᚠ), 6) = 0`
+  - :math:`\Phi_{+}(\text{inv}(ᚠ), 6) = 0`
+  - :math:`\Phi_{-}(\text{inv}(ᚠ), 21) = \frac{52}{26}`
+  - :math:`\Phi_{+}(\text{inv}(ᚠ), 21) = \frac{54}{26}`
 
 The total number of Delimiters starting at Character Index 1 up to Character Index 6 in the original Sentence is 1. This corresponds to Δ(ᚠ)[:6] and to Δ(inv(ᚠ)[21:]). 
 
