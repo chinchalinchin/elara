@@ -365,207 +365,379 @@ The following examples calculate the Lefthand and Righthand Sentence Integrals f
     - (38/17)
     - (34/17) 
 
-3. Let *ᚠ = "draw no dray a yard onward"*. Then *l(ᚠ) = 26*. Note *ᚠ* is an Imperfect Palindrome with a similar (but not identical) distribution of Delimiters around the Pivot.
+3. Consider how the Sentence Integrals behave String Inversion. Let *ᚠ = "draw no dray a yard onward"*. Then *l(ᚠ) = 26*. Note *ᚠ* is an Imperfect Palindrome with a similar (but not identical) distribution of Delimiters around the Pivot.
 
 .. list-table::
-  :widths: 10 10 10 10 10 15 15
+  :widths: 8 8 12 12 10 10 12 15 15 10 12 18 18
   :header-rows: 1
 
   * - k
     - ᚠ[k]
+    - inv(ᚠ)[k]
     - l(ᚠ[:k])
     - l(ᚠ[k:])
     - Δ(ᚠ[k])
+    - Δ(inv(ᚠ)[k])
     - :math:`\Phi_{-}(ᚠ ,k)`
     - :math:`\Phi_{+}(ᚠ ,k)`
+    - Δ(ᚠ[:k])
+    - Δ(inv(ᚠ)[:k])
+    - :math:`\Phi_{-}(\text{inv}(ᚠ) ,k)`
+    - :math:`\Phi_{+}(\text{inv}(ᚠ) ,k)`
   * - 1
+    - "d"
     - "d"
     - 1
     - 26
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
   * - 2
     - "r"
+    - "r"
     - 2
     - 25
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
   * - 3
     - "a"
+    - "a"
     - 3
     - 24
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
   * - 4
     - "w"
+    - "w"
     - 4
     - 23
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
     - 0
     - 0
     - 0
   * - 5
     - " "
+    - "n"
     - 5
     - 22
     - 1
+    - 0
     - (5/26)
     - (22/26)
+    - 1
+    - 0
+    - 0
+    - 0
   * - 6
     - "n"
+    - "o"
     - 6
     - 21
     - 0
+    - 0
     - (5/26)
     - (22/26)
+    - 1
+    - 0
+    - 0
+    - 0
   * - 7
     - "o"
+    - " "
     - 7
     - 20
     - 0
+    - 1
     - (5/26)
     - (22/26)
+    - 1
+    - 1
+    - (7/26)
+    - (20/26)
   * - 8
     - " "
+    - "d"
     - 8
     - 19
     - 1
+    - 0
     - (13/26)
     - (41/26)
+    - 2
+    - 1
+    - (7/26)
+    - (20/26)
   * - 9
     - "d"
+    - "r"
     - 9
     - 18
     - 0
+    - 0
     - (13/26)
     - (41/26)
+    - 2
+    - 1
+    - (7/26)
+    - (20/26)
   * - 10
     - "r"
+    - "a"
     - 10
     - 17
     - 0
+    - 0
     - (13/26)
     - (41/26)
+    - 2
+    - 1
+    - (7/26)
+    - (20/26)
   * - 11
     - "a"
+    - "y"
     - 11
     - 16
     - 0
+    - 0
     - (13/26)
     - (41/26)
+    - 2
+    - 1
+    - (7/26)
+    - (20/26)
   * - 12
     - "y"
+    - " "
     - 12
     - 15
     - 0
+    - 1
     - (13/26)
     - (41/26)
+    - 2
+    - 2
+    - (19/26)
+    - (32/26)
   * - 13
     - " "
+    - "a"
     - 13
     - 14
     - 1
-    - (26/26)
-    - (55/26)
-  * - 14
-    - "a"
-    - 14
-    - 13
     - 0
     - (26/26)
     - (55/26)
+    - 3
+    - 2
+    - (19/26)
+    - (32/26)
+  * - 14
+    - "a"
+    - " "
+    - 14
+    - 13
+    - 0
+    - 1
+    - (26/26)
+    - (55/26)
+    - 3
+    - 3
+    - (33/26)
+    - (46/26)
   * - 15
     - " "
+    - "y"
     - 15
     - 12
     - 1
+    - 0
     - (41/26)
     - (67/26)
+    - 4
+    - 3
+    - (33/26)
+    - (46/26)
   * - 16
     - "y"
+    - "a"
     - 16
     - 11
     - 0
+    - 0
     - (41/26)
     - (67/26)
+    - 4
+    - 3
+    - (33/26)
+    - (46/26)
   * - 17
     - "a"
+    - "r"
     - 17
     - 10
     - 0
+    - 0
     - (41/26)
     - (67/26)
+    - 4
+    - 3
+    - (33/26)
+    - (46/26)
   * - 18
     - "r"
+    - "d"
     - 18
     - 9
     - 0
+    - 0
     - (41/26)
     - (67/26)
+    - 4
+    - 3
+    - (33/26)
+    - (46/26)
   * - 19
     - "d"
+    - " "
     - 19
     - 8
     - 0
+    - 1
     - (41/26)
     - (67/26)
+    - 4
+    - 4
+    - (52/26)
+    - (54/26)
   * - 20
     - " "
+    - "o"
     - 20
     - 7
     - 1
+    - 0
     - (61/26)
     - (74/26)
+    - 5
+    - 4
+    - (52/26)
+    - (54/26)
   * - 21
     - "o"
+    - "n"
     - 21
     - 6
     - 0
+    - 0
     - (61/26)
     - (74/26)
+    - 5
+    - 4
+    - (52/26)
+    - (54/26)
   * - 22
     - "n"
+    - " "
     - 22
     - 5
     - 0
+    - 1
     - (61/26)
     - (74/26)
+    - 5
+    - 5
+    - (74/26)
+    - (59/26)
   * - 23
+    - "w"
     - "w"
     - 23
     - 4
     - 0
+    - 0
     - (61/26)
     - (74/26)
+    - 5
+    - 5
+    - (74/26)
+    - (59/26)
   * - 24
+    - "a"
     - "a"
     - 24
     - 3
     - 0
+    - 0
     - (61/26)
     - (74/26)
+    - 5
+    - 5
+    - (74/26)
+    - (59/26)
   * - 25
+    - "r"
     - "r"
     - 25
     - 2
     - 0
+    - 0
     - (61/26)
     - (74/26)
+    - 5
+    - 5
+    - (74/26)
+    - (59/26)
   * - 26
+    - "d"
     - "d"
     - 26
     - 1
     - 0
+    - 0
     - (61/26)
     - (74/26)
+    - 5
+    - 5
+    - (74/26)
+    - (59/26)
 
-To analyze the information provided in this particular example further, consider the following breakdown. The inverse of *ᚠ = "draw no dray a yard onward"* is given by,
+Consider :math:`k = 6`. It's corresponding inverted Character position would be :math:`l(ᚠ) - k + 1 = 26 - 6 + 1 = 21`. The Delimiter Counts of the Partial Sentences are given by,
 
-.. math::
+  - Δ(ᚠ[:6]) = 1
+  - Δ(ᚠ[6:]) = 4
+  - Δ(ᚠ[:21]) = 5
+  - Δ(ᚠ[21:]) = 0
 
-  \text{inv}(ᚠ) = "drawno dray a yard on ward"
+The Delimiter Counts of the Inverse Partial Sentences are given by,
+
+  - Δ(inv(ᚠ)[:21]) = 4
+  - Δ(inv(ᚠ)[21:]) = 1
+  - Δ(inv(ᚠ)[:6]) = 0
+  - Δ(inv(ᚠ)[6:]) = 5
+
+Note the total number of Delimiters starting at Character Index 1 up to Character Index 6 in the original Sentence is 1. This corresponds to Δ(ᚠ)[:6] and to Δ(inv(ᚠ)[21:]). In addition, The total number of Delimiters starting at Character Index 26 and working backwards toward Character Index 21 is 0. This corresponds to Δ(ᚠ)[21:] and to Δ(inv(ᚠ)[:6]).
 
 Since the String Length of the Sentence and its Inverse are both even, by :ref:`Theorem 4.2.3 <theorem-4-2-3>`, the Pivot is given by,
 
@@ -916,402 +1088,7 @@ Since both directions of the equivalence hold and *ζ* was arbitrary, this can g
   
 ∎
 
-
-TODO: explain
-
-**Example***
-
-.. list-table::
-    :widths: 8 8 12 12 10 10 12 15 15 10 12 18 18
-    :header-rows: 1
-
-    * - k
-      - ᚠ[k]
-      - inv(ᚠ)[k]
-      - l(ᚠ[:k])
-      - l(ᚠ[k:])
-      - Δ(ᚠ[k])
-      - Δ(inv(ᚠ)[k])
-      - :math:`\Phi_{-}(ᚠ ,k)`
-      - :math:`\Phi_{+}(ᚠ ,k)`
-      - Δ(ᚠ[:k])
-      - Δ(inv(ᚠ)[:k])
-      - :math:`\Phi_{-}(\text{inv}(ᚠ) ,k)`
-      - :math:`\Phi_{+}(\text{inv}(ᚠ) ,k)`
-    * - 1
-      - "d"
-      - "d"
-      - 1
-      - 26
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    * - 2
-      - "r"
-      - "r"
-      - 2
-      - 25
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    * - 3
-      - "a"
-      - "a"
-      - 3
-      - 24
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    * - 4
-      - "w"
-      - "w"
-      - 4
-      - 23
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    * - 5
-      - " "
-      - "n"
-      - 5
-      - 22
-      - 1
-      - 0
-      - (5/26)
-      - (22/26)
-      - 1
-      - 0
-      - 0
-      - 0
-    * - 6
-      - "n"
-      - "o"
-      - 6
-      - 21
-      - 0
-      - 0
-      - (5/26)
-      - (22/26)
-      - 1
-      - 0
-      - 0
-      - 0
-    * - 7
-      - "o"
-      - " "
-      - 7
-      - 20
-      - 0
-      - 1
-      - (5/26)
-      - (22/26)
-      - 1
-      - 1
-      - (7/26)
-      - (20/26)
-    * - 8
-      - " "
-      - "d"
-      - 8
-      - 19
-      - 1
-      - 0
-      - (13/26)
-      - (41/26)
-      - 2
-      - 1
-      - (7/26)
-      - (20/26)
-    * - 9
-      - "d"
-      - "r"
-      - 9
-      - 18
-      - 0
-      - 0
-      - (13/26)
-      - (41/26)
-      - 2
-      - 1
-      - (7/26)
-      - (20/26)
-    * - 10
-      - "r"
-      - "a"
-      - 10
-      - 17
-      - 0
-      - 0
-      - (13/26)
-      - (41/26)
-      - 2
-      - 1
-      - (7/26)
-      - (20/26)
-    * - 11
-      - "a"
-      - "y"
-      - 11
-      - 16
-      - 0
-      - 0
-      - (13/26)
-      - (41/26)
-      - 2
-      - 1
-      - (7/26)
-      - (20/26)
-    * - 12
-      - "y"
-      - " "
-      - 12
-      - 15
-      - 0
-      - 1
-      - (13/26)
-      - (41/26)
-      - 2
-      - 2
-      - (19/26)
-      - (32/26)
-    * - 13
-      - " "
-      - "a"
-      - 13
-      - 14
-      - 1
-      - 0
-      - (26/26)
-      - (55/26)
-      - 3
-      - 2
-      - (19/26)
-      - (32/26)
-    * - 14
-      - "a"
-      - " "
-      - 14
-      - 13
-      - 0
-      - 1
-      - (26/26)
-      - (55/26)
-      - 3
-      - 3
-      - (33/26)
-      - (46/26)
-    * - 15
-      - " "
-      - "y"
-      - 15
-      - 12
-      - 1
-      - 0
-      - (41/26)
-      - (67/26)
-      - 4
-      - 3
-      - (33/26)
-      - (46/26)
-    * - 16
-      - "y"
-      - "a"
-      - 16
-      - 11
-      - 0
-      - 0
-      - (41/26)
-      - (67/26)
-      - 4
-      - 3
-      - (33/26)
-      - (46/26)
-    * - 17
-      - "a"
-      - "r"
-      - 17
-      - 10
-      - 0
-      - 0
-      - (41/26)
-      - (67/26)
-      - 4
-      - 3
-      - (33/26)
-      - (46/26)
-    * - 18
-      - "r"
-      - "d"
-      - 18
-      - 9
-      - 0
-      - 0
-      - (41/26)
-      - (67/26)
-      - 4
-      - 3
-      - (33/26)
-      - (46/26)
-    * - 19
-      - "d"
-      - " "
-      - 19
-      - 8
-      - 0
-      - 1
-      - (41/26)
-      - (67/26)
-      - 4
-      - 4
-      - (52/26)
-      - (54/26)
-    * - 20
-      - " "
-      - "o"
-      - 20
-      - 7
-      - 1
-      - 0
-      - (61/26)
-      - (74/26)
-      - 5
-      - 4
-      - (52/26)
-      - (54/26)
-    * - 21
-      - "o"
-      - "n"
-      - 21
-      - 6
-      - 0
-      - 0
-      - (61/26)
-      - (74/26)
-      - 5
-      - 4
-      - (52/26)
-      - (54/26)
-    * - 22
-      - "n"
-      - " "
-      - 22
-      - 5
-      - 0
-      - 1
-      - (61/26)
-      - (74/26)
-      - 5
-      - 5
-      - (74/26)
-      - (59/26)
-    * - 23
-      - "w"
-      - "w"
-      - 23
-      - 4
-      - 0
-      - 0
-      - (61/26)
-      - (74/26)
-      - 5
-      - 5
-      - (74/26)
-      - (59/26)
-    * - 24
-      - "a"
-      - "a"
-      - 24
-      - 3
-      - 0
-      - 0
-      - (61/26)
-      - (74/26)
-      - 5
-      - 5
-      - (74/26)
-      - (59/26)
-    * - 25
-      - "r"
-      - "r"
-      - 25
-      - 2
-      - 0
-      - 0
-      - (61/26)
-      - (74/26)
-      - 5
-      - 5
-      - (74/26)
-      - (59/26)
-    * - 26
-      - "d"
-      - "d"
-      - 26
-      - 1
-      - 0
-      - 0
-      - (61/26)
-      - (74/26)
-      - 5
-      - 5
-      - (74/26)
-      - (59/26)
-
-Consider k = 6. It's corresponding inverted Character position would be l(ᚠ) - k + 1 = 26 - 6 + 1 = 21. 
-
-The Delimiter Counts of the Partial Sentences are given by,
-
-  - Δ(ᚠ[:6]) = 1
-  - Δ(ᚠ[6:]) = 4
-  - Δ(ᚠ[:21]) = 5
-  - Δ(ᚠ[21:]) = 0
-
-The Delimiter Counts of the Inverse Partial Sentences are given by,
-
-  - Δ(inv(ᚠ)[:21]) = 4
-  - Δ(inv(ᚠ)[21:]) = 1
-  - Δ(inv(ᚠ)[:6]) = 0
-  - Δ(inv(ᚠ)[6:]) = 5
-
-The Sentence Integrals for the Partial Sentences are given by,
-
-  - :math:`\Phi_{-}(ᚠ, 6) =  \frac{5}{26}`
-  - :math:`\Phi_{+}(ᚠ, 6) =  \frac{22}{26}`
-  - :math:`\Phi_{-}(ᚠ, 21) = \frac{61}{26}`
-  - :math:`\Phi_{+}(ᚠ, 21) = \frac{74}{26}`
-
-The Sentence Integrals for the Inverse Partial Sentences are given by,
-
-  - :math:`\Phi_{-}(\text{inv}(ᚠ), 6) = 0`
-  - :math:`\Phi_{+}(\text{inv}(ᚠ), 6) = 0`
-  - :math:`\Phi_{-}(\text{inv}(ᚠ), 21) = \frac{52}{26}`
-  - :math:`\Phi_{+}(\text{inv}(ᚠ), 21) = \frac{54}{26}`
-
-The total number of Delimiters starting at Character Index 1 up to Character Index 6 in the original Sentence is 1. This corresponds to Δ(ᚠ)[:6] and to Δ(inv(ᚠ)[21:]). 
-
-The total number of Delimiters starting at Character Index 26 and working backwards toward Character Index 21 is 0. This corresponds to Δ(ᚠ)[21:] and to Δ(inv(ᚠ)[:6]). ∎
-
-
+TODO
 
 .. _theorem-5-1-6:
 
