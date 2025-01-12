@@ -31,8 +31,8 @@ Notation
 - Sentence Variables: :math:`\zeta`, :math:`\xi`
 - Word Index Notation: :math:`\zeta\{i\}`
 - Partial Sentence: :math:`\zeta[:i]`, :math:`\zeta[i:]`
-- Pivots: :math:`\omega(\zeta)`
-- Pivot Words: :math:`\zeta\{\omega-\}`, :math:`\zeta\{\omega+\}`
+- Pivots: :math:`\Phi(\zeta)`
+- Pivot Words: :math:`\zeta\{\Phi-\}`, :math:`\zeta\{\Phi+\}`
 - Sentence Classes: :math:`A(n)`, K, P, PP, IP, :math:`P^-`, :math:`P^+`
 - Categories: :math:`C_L(m)`
 - Relations: :math:`\subset_s`, :math:`(i/n/j)_{\zeta}`
@@ -43,7 +43,6 @@ Notation
 
 Definitions 
 -----------
-In oth
 
 - D 1.1.1: Concatenation: ut
 - D 1.1.2: Character-Level Set Representation: **T**
@@ -80,13 +79,13 @@ In oth
 - D 4.1.4: Aspect
 - D 4.2.1: Left Partial Sentence: :math:`Z[:n]`
 - D 4.2.2: Right Partial Sentence: :math:`Z[n:]`
-- D 4.2.3: Pivots: :math:`\omega(\zeta)`
+- D 4.2.3: Pivots: :math:`\Phi(\zeta)`
 - D 4.2.4: Even Palindromes: :math:`\zeta \in P_{+} \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k )]`
 - D 4.2.5: Odd Palindromes: :math:`\zeta \in P_{-} \leftrightarrow [ (\zeta \in P) \land (\exists k \in \mathbb{N} : l(\zeta) = 2k + 1) ]`
 - D 4.2.6: Parity
 - D 4.2.7: Pivot Words
-- D 5.1.1: Lefthand Sentence Integrals: :math:`\Omega_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
-- D 5.1.2: Righthand Sentence Integrals: :math:`\Omega_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
+- D 5.1.1: Lefthand Sentence Integrals: :math:`\Phi_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
+- D 5.1.2: Righthand Sentence Integrals: :math:`\Phi_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
 - D 5.2.1: Delimiter Mass: :math:`\mu_{-}(\zeta, i), \mu_{+}(\zeta, i)`
 - D A.1.1: Compound Words: :math:`\eta \in CW_L \leftrightarrow [(\exists \alpha, \beta \in L: \eta = \alpha\beta) \lor (\exists \alpha \in L, \exists \gamma \in CW_L: \eta = \alpha\gamma)] \land (\eta \in L)`
 - D A.1.2: Compound Invertible Words: :math:`\eta \in CIW_L \leftrightarrow [ (\eta \in CW_L) \land (\eta \in I) ]`
@@ -115,6 +114,7 @@ Axioms
 - Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
 - Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
 - Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L`
+- Finite Axiom S.3: :math:`\exists N \in \mathbb{N}: \forall \zeta \in C_L, l(\zeta) \leq N`
 
 .. _theorems:
 
@@ -176,7 +176,7 @@ Theorems
 - T 3.2.8: :math:`\forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)`
 - T 3.2.9: :math:`\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)`
 - T 3.2.10: :math:`\forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)`
-- T 3.2.11: :math:`\forall \zeta \in C_L: \Delta(Z \cdot \Sigma_\sigma)= 0`
+- T 3.2.11: :math:`\forall \zeta \in C_L: \Delta(\varsigma(\zeta))= 0`
 - T 3.2.12: :math:`\forall t \in S: l(\varsigma(t)) + \Delta(t) = l(t)`
 - T 3.2.13: :math:`\forall \zeta \in C_L: l(\varsigma(t)) + \Lambda(\zeta) = l(\zeta) + 1`
 - T 4.1.1: :math:`PP \subset K`
@@ -188,25 +188,27 @@ Theorems
 - T 4.2.2: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i + 1 ) \land (l(\zeta[:i+1]) = l(\zeta[i+1:]))`
 - T 4.2.3: :math:`\forall \zeta \in C_L: \exists i \in N: (l(\zeta) = 2i) \land (l(\zeta[:i]) + 1 = l(\zeta[i:]))`
 - T 4.2.4: :math:`\forall \zeta \in C_L: \exists n \in N_{l(\zeta)}: ( l(\zeta[:n]) = l(\zeta[n:]) ) \lor (l(\zeta[:n]) + 1 = l(\zeta[n:]))`
-- T 4.2.5: :math:`\forall \zeta \in C_L: (\exists k \in N : l(\zeta) = 2k + 1) \leftrightarrow \omega(\zeta) = \frac{l(\zeta) + 1}{2}`
-- T 4.2.6: :math:`\forall \zeta \in P_{-}: \omega(\zeta) = \frac{l(\zeta) + 1}{2}`
-- T 4.2.7: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N} : l(\zeta) = 2k) \leftrightarrow \omega(\zeta) = \frac{l(\zeta)}{2}`
-- T 4.2.8: :math:`\forall \zeta \in P_{+}: \omega(\zeta) = \frac{l(\zeta)}{2}`
-- T 4.2.9: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\omega(\zeta)]) + l(\zeta[\omega(\zeta):])`
-- T 4.2.10: :math:`\forall \zeta \in C_L: \omega(\varsigma(\zeta)) \leq \omega(\zeta)`
-- T 4.2.11: :math:`\forall \zeta in C_L: \zeta[\omega(\zeta)] \neq \text{inv}(\zeta)[\omega(\zeta)]) \to (\exists k \in \mathbb{N}: l(\zeta) = 2k)`
-- T 4.2.12: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N}: l(\zeta)=2k) \to \text{inv}(\zeta)[\omega(\zeta)] = \zeta[\omega(\zeta)+1]`
+- T 4.2.5: :math:`\forall \zeta \in C_L: (\exists k \in N : l(\zeta) = 2k + 1) \leftrightarrow \Phi(\zeta) = \frac{l(\zeta) + 1}{2}`
+- T 4.2.6: :math:`\forall \zeta \in P_{-}: \Phi(\zeta) = \frac{l(\zeta) + 1}{2}`
+- T 4.2.7: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N} : l(\zeta) = 2k) \leftrightarrow \Phi(\zeta) = \frac{l(\zeta)}{2}`
+- T 4.2.8: :math:`\forall \zeta \in P_{+}: \Phi(\zeta) = \frac{l(\zeta)}{2}`
+- T 4.2.9: :math:`\forall \zeta \in C_L: l(\zeta) + 1 = l(\zeta[:\Phi(\zeta)]) + l(\zeta[\Phi(\zeta):])`
+- T 4.2.10: :math:`\forall \zeta \in C_L: \Phi(\varsigma(\zeta)) \leq \Phi(\zeta)`
+- T 4.2.11: :math:`\forall \zeta in C_L: \zeta[\Phi(\zeta)] \neq \text{inv}(\zeta)[\Phi(\zeta)]) \to (\exists k \in \mathbb{N}: l(\zeta) = 2k)`
+- T 4.2.12: :math:`\forall \zeta \in C_L: (\exists k \in \mathbb{N}: l(\zeta)=2k) \to \text{inv}(\zeta)[\Phi(\zeta)] = \zeta[\Phi(\zeta)+1]`
 - T 4.2.13: :math:`P_{-} \cap P^+ = \emptyset`
 - T 4.2.14: :math:`P_{-} \cup P^+ = P`
 - T 4.3.1: :math:`\forall \zeta \in P: [ (\text{inv}(\zeta\{1\}) \subset_s \zeta\{\Lambda(\zeta)\}) \vee (\text{inv}(\zeta\{\Lambda(\zeta)\}) \subset_s \zeta\{1\}) ] \land [ (\zeta\{1\} \subset_s \text{inv}(\zeta\{\Lambda(\zeta)\})) \vee (\zeta\{\Lambda(\zeta)\} \subset_s \text{inv}(\zeta\{1\})) ]`
-- T 4.3.2: :math:`\forall \zeta \in P: (\zeta[\omega(\zeta)] = \sigma) \to ( (\text{inv}(\zeta\{\omega-\}) \subset_s \zeta\{\omega+\}) \vee (\text{inv}(\zeta\{\omega+\}) \subset_s \zeta\{\omega-\}))`
+- T 4.3.2: :math:`\forall \zeta \in P: (\zeta[\Phi(\zeta)] = \sigma) \to ( (\text{inv}(\zeta\{\Phi-\}) \subset_s \zeta\{\Phi+\}) \vee (\text{inv}(\zeta\{\Phi+\}) \subset_s \zeta\{\Phi-\}))`
 - T 5.1.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (i/l(\zeta))`
 - T 5.1.2: :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
-- T 5.1.3: :math:`\forall \zeta \in C_L: \Sigma_{i=1}^{\omega(\zeta)} \mu_{+}(\zeta, i) > \Sigma_{i=\omega(\zeta)+1}^{l(\zeta)} \mu_{-}(\zeta, i) \leftrightarrow \Omega_{+}(\zeta,l(\zeta)) > \Omega_{-}(\zeta,l(\zeta))`
-- T 5.2.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Omega_{-}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot (i/l(\zeta))`
-- T 5.2.2: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Omega_{+}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
-- T 5.2.3: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Omega_{-}(\varsigma(\zeta),k) = \Omega_{+}(\varsigma(\zeta),k) = 0`
-- T 5.3.1: :math:`\forall \zeta \in PP: \forall i \in N_{l(\zeta)}: \Omega_{-}(\zeta,i) = \Omega_{+}(\zeta,i)`
+- T 5.1.3: :math:`\forall \zeta \in C_L: \Sigma_{i=1}^{\Phi(\zeta)} \mu_{+}(\zeta, i) > \Sigma_{i=\Phi(\zeta)+1}^{l(\zeta)} \mu_{-}(\zeta, i) \leftrightarrow \Phi_{+}(\zeta,l(\zeta)) > \Phi_{-}(\zeta,l(\zeta))`
+- T 5.2.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\zeta, k) \geq 0 \land \Phi_{+}(\zeta,) \geq 0`
+- T 5.2.2: :math:`\forall \zeta in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\varsigma(\zeta), k) = \Phi_{+}(\varsigma(\zeta), k) = 0`
+- T 5.2.3: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot (i/l(\zeta))`
+- T 5.2.4: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{+}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
+- T 5.2.5: :math:``
+- T 5.2.6; :math:`\forall \zeta \in PP: \forall i \in N_{l(\zeta)}: \Phi_{-}(\zeta,i) = \Phi_{+}(\zeta,i)`
 - T A.1.1: :math:`\forall \zeta \in C_L: L_\zeta \subset L`
 - T A.2.1: :math:`\forall \alpha \in L: \alpha \in L_\sigma \leftrightarrow [ \exists \zeta \in C_L: \exists i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \alpha ]`
 - T A.2.2: :math:`L_P \subset L_\sigma`

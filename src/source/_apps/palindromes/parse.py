@@ -78,3 +78,12 @@ def _clean_corpus(language, min_length, max_length):
 
 def corpus(min_length = 100, max_length = 200, language = CORPORA.ENGLISH):
     return _clean_corpus(language, min_length, max_length)
+
+def words(length, language = CORPORA.ENGLISH):
+    if language == CORPORA.ENGLISH:
+       return [ 
+          word 
+          for word 
+          in brown.words() 
+          if len(word) == length and word.isalpha() 
+        ]

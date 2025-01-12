@@ -2,6 +2,24 @@
 """
 import matplotlib.pyplot as plt
 
+def conditional_character_histogram(freq_dist, length, condition, index):
+    """
+    Plots a histogram of the frequency distribution.
+
+    Args:
+        freq_dist: The frequency distribution dictionary.
+        length: The length of the words analyzed.
+        condition: The starting condition used.
+    """
+    sorted_freq = dict(sorted(freq_dist.items()))
+    plt.figure(figsize=(10, 5))
+    plt.bar(sorted_freq.keys(), sorted_freq.values())
+    i = len(condition)
+    plt.title(f"α[{index + 1}] Frequency Distribution | l(α) = {length} and  α[:{i}] = '{condition}')")
+    plt.xlabel("Character")
+    plt.ylabel("Frequency")
+    plt.show()
+
 def integral_histograms(left_integrals, right_integrals, sentence_length, num_bins=20):
     """
     Generates histograms for the Left and Right-Hand Sentence Integrals.

@@ -1,7 +1,7 @@
 .. _section-v:
 
-Section V: Integration
-======================
+Section V: Analysis
+===================
 
 The study of Palindromes leads directly into the study of Delimiter distributions. The partitioning of Palindromes into the Perfect and Imperfect aspects highlights the asymmetry which separates the latter from the former class. Consider the pair of Perfect Palindromes, 
 
@@ -103,22 +103,25 @@ In summary, it cannot be discounted that knowing where a single Delimiter occurs
 
 .. _section-v-i:
 
-Section V.I: Definitions
-------------------------
+Section V.I: Sentence Integrals
+-------------------------------
 
 Before attempting to extricate the probability density of Delimiters within the Sentences of a Corpus, a conceptual apparatus is required for aggregating and assessing the distribution and configuration of Delimiters in a particular Sentence. 
 
 This apparatus is embodied the concept of a *Sentence Integral*. A Sentence Integral is simply the sum of Delimiter indices in a Sentence. The reason for introducing the connotation of *"integration"* into the vernacular will become apparent after the particular form of its definition is appreciated. In short, the term *"integration"* is used here to evoke the idea of summing or accumulating values over a range, similar to the integral in calculus.
 
+Definitions
+^^^^^^^^^^^
+
 .. _definition-5-1-1:
 
 **Definition 5.1.1: Lefthand Sentence Integrals**
 
-Let *ζ* be an arbitary Sentence from Corpus :math:`C_L` and let *k* be a natural number such that :math:`1 ≤ k ≤ \Lambda(\zeta)`. The *Lefthand Integral* of Sentence *ζ*, denoted :math:`\Omega_{-}(\zeta, k)`, is defined as,
+Let *ζ* be an arbitary Sentence from Corpus :math:`C_L` and let *k* be a natural number such that :math:`1 ≤ k ≤ \Lambda(\zeta)`. The *Lefthand Integral* of Sentence *ζ*, denoted :math:`\Phi_{-}(\zeta, k)`, is defined as,
 
 .. math::
 
-  \Omega_{-}(\zeta, k) = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[:i])}{l(\zeta)}
+  \Phi_{-}(\zeta, k) = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[:i])}{l(\zeta)}
     
 ∎
     
@@ -130,7 +133,7 @@ The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defin
 
 .. math::
 
-  \Omega_{+}(\zeta, k) = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[i:])}{l(\zeta)}
+  \Phi_{+}(\zeta, k) = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[i:])}{l(\zeta)}
     
 ∎
 
@@ -568,7 +571,7 @@ Since the String Length of the Sentence and its Inverse are both even, by :ref:`
 
 .. math::
 
-  \omega{ᚠ} = 13
+  \Phi{ᚠ} = 13
 
 Using :ref:`Definition 3.2.1 <definition-3-2-1>`, the Delimiter Count is found by first identifying the Character indices of Delimiters in the Sentence and collecting them into the set :math:`D_{ᚠ}`,
 
@@ -582,7 +585,7 @@ So that the Delimiter Count is found by taking the cardinality of the set :math:
 
   \Delta(ᚠ) = \lvert D_{ᚠ} \rvert = 5
 
-The set :math:`D_{ᚠ}` expresses the distance of the Delimiters relative to the start of the Sentence. The distances can be expressed relative to the Pivot by subtracting the value of :math:`\omega(\zeta)` from each value in :math:`D_{ᚠ}`,
+The set :math:`D_{ᚠ}` expresses the distance of the Delimiters relative to the start of the Sentence. The distances can be expressed relative to the Pivot by subtracting the value of :math:`\Phi(\zeta)` from each value in :math:`D_{ᚠ}`,
 
 .. math::
 
@@ -615,47 +618,47 @@ When *ᚠ* is inverted, the index at the Pivot is no longer occupied by the same
 
 .. math::
 
-  ᚠ[\omega(\zeta)] = ᚠ[13] = \sigma 
+  ᚠ[\Phi(\zeta)] = ᚠ[13] = \sigma 
 
 .. math::
 
-  \text{inv}(ᚠ)[\omega(\zeta)] = \text{inv}(ᚠ)[13] = "a"
+  \text{inv}(ᚠ)[\Phi(\zeta)] = \text{inv}(ᚠ)[13] = "a"
   
 The Lefthand Integral of the Original Sentence is,
 
 .. math::
 
-  \Omega_{-}(ᚠ ,26) = \frac{61/26} = 2.3461538461538463
+  \Phi_{-}(ᚠ ,26) = \frac{61/26} = 2.3461538461538463
 
 The Righthand Integral of the Original Sentence is,
 
 .. math::
   
-  \Omega_{+}(ᚠ ,26) = \frac{74/26} = 2.8461538461538463
+  \Phi_{+}(ᚠ ,26) = \frac{74/26} = 2.8461538461538463
 
 The midpoint of the integrals is given by,
 
 .. math::
 
-  \frac{\Omega_{+}(ᚠ ,26) + \Omega_{-}(ᚠ ,26)}{2} = 2.5961538461538463
+  \frac{\Phi_{+}(ᚠ ,26) + \Phi_{-}(ᚠ ,26)}{2} = 2.5961538461538463
 
 The difference of the integrals is given by,
 
 .. math::
 
-  \Omega_{+}(ᚠ ,26) - \Omega_{-}(ᚠ ,26)} = 0.5
+  \Phi_{+}(ᚠ ,26) - \Phi_{-}(ᚠ ,26)} = 0.5
 
 TODO
 
 .. math::
 
-  \Omega_{-}(\text{inv}(ᚠ) ,26) = \frac{74/26} = 2.8461538461538463
+  \Phi_{-}(\text{inv}(ᚠ) ,26) = \frac{74/26} = 2.8461538461538463
 
 TODO
 
 .. math::
   
-  \Omega_{+}(\text{inv}(ᚠ),26) = \frac{61/26} = 2.3461538461538463
+  \Phi_{+}(\text{inv}(ᚠ),26) = \frac{61/26} = 2.3461538461538463
 
 ∎
 
@@ -665,90 +668,109 @@ For the same reason, if the Righthand Sentence Integral is greater than the Left
 
 This method of *"weighing"* the Delimiters in a Sentence provides a method for abstractly describing the symmetry of Delimiters in Perfect Palindromes. Before using this method to quantify the symmetry of Perfect Palindromes, the next section will strengthen the definitions of Sentence Integrals with some theorems. 
 
-.. _section-v-ii:
-
-Section V.II: Theorems 
-----------------------
+Theorems
+^^^^^^^^
 
 TODO: explain 
 
-.. _theorem-5-2-1:
+.. _theorem-5-1-1:
 
-**Theorem 5.2.1**: ∀ ζ ∈ C:sub:L: ∀ k ∈ N:sub:l(ζ): Ω:sub:-(ζ,k) ≥ 0 and Ω:sub:+(ζ,k) ≥ 0
+**Theorem 5.1.1** :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\zeta, k) \geq 0 \land \Phi_{+}(\zeta,) \geq 0`
 
-Proof:
-
-Let ζ be an arbitrary Sentence in the Corpus C:sub:L, and let k be a natural number such that 1 ≤ k ≤ l(ζ).
-
-By Definition A.8.1:
-
-Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ))
-Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ))
-Δ(ζ[i]) is either 0 or 1 for all i (since it counts delimiters).
-l(ζ[:i]), l(ζ[i:]), and l(ζ) are all positive (lengths are always positive).
-i is positive.
-Therefore, each term in the summations is non-negative (either 0 * something or 1 * something non-negative). The sum of non-negative terms is always non-negative.
-
-Thus, Ω:sub:-(ζ,k) ≥ 0 and Ω:sub:+(ζ,k) ≥ 0.
-
-Since ζ and k were arbitrary, we can generalize:
-
-∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,k) ≥ 0 and Ω:sub:`+`(ζ,k) ≥ 0
-This completes the proof.
+This theorem can be stated in natural language as follows: Sentence Integrals are always greater than or equal to zero. 
 
 
-.. _theorem-5-2-2:
+Let *ζ* be an arbitrary Sentence in the Corpus,
 
-**Theorem 5.2.2** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
+.. math::
 
-Let *ζ* be an arbitrary Sentence in the Corpus and let *k* be a natural number such that,
+  1. \quad \zeta \in C_L
 
-   1. ζ ∈ C:sub:`L`
-   2. k ∈ N:sub:`l(ζ)`:
+Let *k* be a natural number such that :math:`1 \leq k \leq l(\zeta)`
 
-By Definition 3.1.2, the *σ*-reduction of *ζ*, denoted *ς(ζ)*, is a String obtained by removing all Delimiter Characters (*σ*) from *ζ*. By Theorem A.2.11, 
+By :ref:`Definition 5.1.1 <definition-5-1-1>` and :ref:`Definition <definition-5-1-2>`,
 
-   3. Δ(ς(t)) = 0
+.. math::
 
-Consider the Left-Hand Integral of *ς(ζ)* up to index k:
+  2. \quad \Phi_{-} = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[:i])}{l(\zeta)}
 
-   4. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[:i]) * (l(ς(ζ)[:i])/l(ς(ζ)))
-   
-By the Definition 3.2.5 of Left Partial Sentence and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[:i]* is a String contained in *ς(ζ)* from the beginning up to the *i*:sup:`th` Character. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[:i]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
+.. math::
 
-   5. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[:i]) = 0
+  3. \quad \Phi_{+} = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[i:])}{l(\zeta)}
+
+By :ref:`Definition 3.2.1 <definition-3-2-1>`, :math:`\Delta(\zeta[i])` is either 0 or 1 for all *i*. *l(ζ[:i])*, *l(ζ[i:])*, and *l(ζ)* are all non-negative, by :ref:`Definition 1.1.3 <definition-1-1-3>`. Therefore, each term in the summations is non-negative (The sum of non-negative terms is always non-negative.
+
+Thus, 
+
+.. math::
+
+  4. \quad \Phi_{-}(\zeta, k) \geq 0 \land \Phi_{-}(\zeta, k) \geq 0
+
+Since *ζ* and *k* were arbitrary, this can be generalized over the Corpus,
+
+.. math::
+
+  5. \quad \forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\zeta,k) \geq 0 \land \Phi_{+}(\zeta,k) \geq 0
+
+∎
+
+TODO
+
+.. _theorem-5-1-2:
+
+**Theorem 5.1.2** :math:`\forall \zeta in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\varsigma(\zeta), k) = \Phi_{+}(\varsigma(\zeta), k) = 0`
+
+This theorem can be stated in natural language as follows: The Sentence Integral of a :math:`\sigma`-reduction is zero.
+
+Let *ζ* be an arbitrary Sentence in the Corpus,
+
+.. math::
+
+  1. \quad \zeta \in C_L
+
+and let *k* be a natural number such that :math:`1 \leq k \leq l(\zeta)`.
+
+By :ref:`Definition 3.1.2 <definition-3-1-2>`, the *σ*-reduction of *ζ*, denoted *ς(ζ)*, is a String obtained by removing all Delimiter Characters (*σ*) from *ζ*. Consider the Left-Hand Integral of *ς(ζ)* up to index k:
+
+.. math::
+
+  2. \quad \Phi_{-}(\varsigma(\zeta), k) = \sum_{i=1}^{k} \Delta(\varsigma(\zeta)[:i]) \cdot \frac{l(\varsigma(\zeta)[:i])}{l(\varsigma(\zeta))}
+     
+By the :ref:`Definition 4.2.1 <definition-4-2-1>` of Left Partial Sentence and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[:i]* is a String contained in *ς(ζ)* from the beginning up to the *i*:sup:`th` Character. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[:i]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
+
+.. math::
+
+  3. \quad \forall i \in N_k: \Delta(\sigma(\zeta)[:i]) = 0
    
 Substituting this into step 4,
 
-   6. Ω:sub:`-`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[:i])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
-   
-Consider the Right-Hand Integral of *ς(ζ)* up to index *k*:
+.. math::
 
-   7. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(ς(ζ)[i:]) * (l(ς(ζ)[i:])/l(ς(ζ)))
+  4. \quad \Phi_{-}(\varsigma(\zeta), k) = \sum_{i=1}^{k} 0 \cdot \frac{l(\varsigma(\zeta)[:i])}{l(\varsigma(\zeta))} = 0
    
-By the Definition 3.2.6 of Right Partial Sentence  and Definition 3.1.2 of *σ*-reduction, *ς(ζ)[i:]* is a String contained in *ς(ζ)* from the *i*:sup:`th` Character to the end. Since *ς(ζ)* contains no Delimiters, *ς(ζ)[i:]* will also contain no Delimiters. Therefore, by Theorem A.2.11,
+By similar logic, 
 
-   8. ∀ i ∈ N:sub:`k`: Δ(ς(ζ)[i:]) = 0
-   
-Substituting this into the expression into step 7,
-
-   9. Ω:sub:`+`(ς(ζ),k) = Σ:sub:`i=1`:sup:`k` 0 * (l(ς(ζ)[i:])/l(ς(ζ))) = Σ:sub:`i=1`:sup:`k` 0 = 0
+.. math::
+  
+  5. \quad \Phi_{+}(\varsigma(\zeta), k) = 0
 
 Thus, both the Left-Hand and Right-Hand Integrals of *ς(ζ)* are equal to 0,
 
-   10. Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0
-   
-Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
+.. math::
 
-   11. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ς(ζ),k) = Ω:sub:`+`(ς(ζ),k) = 0  
+  6. \quad \Phi_{+}(\varsigma(\zeta), k) = \Phi_{-}(\varsigma(\zeta), k) = 0
+   
+Since *ζ* and *k* were arbitrary, this can be generalized over the Corpus,
+
+  7. \quad \forall \zeta in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\varsigma(\zeta), k) = \Phi_{+}(\varsigma(\zeta), k) = 0
 
 ∎
 
 The next two theorems provide a method for calculating the Lefthand and Righthand Sentence Integrals numerically.
 
-.. _theorem-5-2-3:
+.. _theorem-5-1-3:
 
-**Theorem 5.2.3** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+**Theorem 5.1.3** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -776,9 +798,9 @@ Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
 
 ∎
 
-.. _theorem-5-2-4:
+.. _theorem-5-1-4:
 
-**Theorem 5.2.4** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+**Theorem 5.1.4** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
 
 PLet *ζ* be an arbitrary Sentence in the Corpus,
 
@@ -808,9 +830,9 @@ Since ζ and k were arbitrary, this can generalize over the Corpus,
 
 The terms *(l(ζ) - i + 1)* and *i* that appear in the Sentence Integral summation may be thought of as the *"weight"* of a Delimiter. Since the Delimiter Count is either 0 or 1 for a single Character, the weight of Delimiters in a Sentence are the only contributions to the summation in a Sentence Integral. This analogy to the mathematical concepts of density and mass is codified in the following definition.
 
-.. _definition-5-2-1:
+.. _definition-5-1-3:
 
-**Definition 5.2.1: Delimiter Mass**
+**Definition 5.1.3: Delimiter Mass**
 
 Let *ζ* be an arbitrary Sentence in the Corpus :math:`C_L`, and let *I* be a natural number such that *1 ≤ i ≤ l(ζ)*. T
 
@@ -822,11 +844,11 @@ The Lefthand Delimiter Mass at Character Index *i*, denoted μ:sub:`-`(ζ, i) is
 
     μ:sub:`-`(ζ, i) = Δ(ζ[i]) * i ∎
 
-The next theorem uses :ref:`Definition 5.2.1 <definition-5-2-1>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\omega(\zeta)` in :ref:`Theorem 5.2.5 <theorem-5-2-5>`.
+The next theorem uses :ref:`Definition 5.1.3 <definition-5-1-3>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\Phi(\zeta)` in :ref:`Theorem 5.1.5 <theorem-5-1-5>`.
 
-.. _theorem-5-2-5:
+.. _theorem-5-1-5:
 
-**Theorem 5.2.5** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+**Theorem 5.1.5** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
 
 (→) Let *m = ω(ζ)*. Assume 
 
@@ -1288,77 +1310,11 @@ The total number of Delimiters starting at Character Index 1 up to Character Ind
 
 The total number of Delimiters starting at Character Index 26 and working backwards toward Character Index 21 is 0. This corresponds to Δ(ᚠ)[21:] and to Δ(inv(ᚠ)[:6]). ∎
 
-TODO: explain
 
-.. _theorem-5-2-7:
 
-**Theorem 5.2.7**  ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+.. _theorem-5-1-6:
 
-Let ζ be an arbitrary Sentence and let k be a natural number suchm
-
-    1. ζ ∈ C:sub:`L`
-    2. k ∈ N:sub:`l(ζ)`
-
-By Definition A.8.1, the Left-Hand Integral of *inv(ζ)* up to index *k* is,
-
-    3. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (l(inv(ζ)[:i])/l(inv(ζ)))
-   
-By Theorem 3.2.17, 
-
-    4. inv(ζ)[:i] = ζ[l(ζ) - i + 1:]. 
-    
-However, a direction substitution of this into the Delimiter Count function in the Sentence Integral is not possible because the Delimiter Count function operates on individual Characters in the integrand, not on Partial Sentences.
-
-By Theorem 1.2.4, 
-
-   5. l(ζ) = l(inv(ζ))
-
-By Definition 3.2.5,
-
-   6. l(inv(ζ)[:i]) = i
-
-Substituting equations step 5 and step 6 into step 3,
-
-   7. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
-
-Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
-
-    ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
-
-.. _theorem-5-2-8:
-
-**Theorem 5.2.8** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
-
-Let ζ be an arbitrary Sentence and let k be a natural number suchm
-
-   1. ζ ∈ C:sub:`L`
-   2. k ∈ N:sub:`l(ζ)`
-   
-By Definition A.8.1, the Right-Hand Integral of inv(ζ) up to index k is:
-
-   3. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (l(inv(ζ)[i:])/l(inv(ζ)))
-   
-By Theorem 1.2.4, 
-
-   4. l(ζ) = l(inv(ζ))
-
-By Definition 3.2.6,
-
-   5. l(inv(ζ)[i:]) = l(inv(ζ)) - i + 1
-   
-Substituting step 4 and step 5 into step 3,
-
-   6. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
-   
-Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
-
-   7. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ)) ∎
-
-TODO: explain
-
-.. _theorem-5-2-9:
-
-**Theorem 5.2.9** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+**Theorem 5.1.6** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
 
 Let *ζ* be an arbitrary Perfect Palindrome in the Corpus C:sub:`L`,
 
@@ -1443,13 +1399,15 @@ Therefore,
 
 Since *ζ* and *k* were arbitrary, this can generalize over the class of Perfect Palindromes,
 
-   21.  ∀ ζ ∈ PP: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k) ∎
+   21.  ∀ ζ ∈ PP: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k) 
+
+∎
 
 Theorem A.8.4, along with the examples given in the introduction of this section, suggests a Sentence Integral can be regarded as a measure of the Delimiter symmetry in a Sentence. A Sentence Integral is the sum of the Delimiter Count of each Character, where each contribution is weighted by its distance from the starting point of the Sentence or the ending point of the Sentence, depending on if the Left- or Right-hand Sentence Integrals are taken. 
 
-In other words, Sentence Integrals yield a measure of Delimiter *"mass"*, and the difference between the Left- and Right-hand Sentence Integrals is a measure of the Delimiter symmetry within the Sentence.
+To state this result plainly: Sentence Integrals yield a measure of Delimiter *"mass"*, and the difference between the Left- and Right-hand Sentence Integrals is a measure of the Delimiter symmetry within the Sentence.
 
-As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be regarded as part of the class of Sentence *invariant* of Sentence Integrals,
+As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be regarded as part of the class of Sentences that are *invariant* of Sentence Integrals,
 
     Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = 0
 
@@ -1506,215 +1464,48 @@ In the even integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5])
 In other words, any time a Character index coefficient can be expressed as the sum of coefficients of other Character indexes, a solution exists. It is worth noting this species of solutions to the Sentence Integral difference expansion does not seem to correspond to meaning Sentence structure, i.e. both solutions correspond to sequences of consecutive Delimiters. 
 
 This cursory analysis suggests, while the Sentence Integral may not provide a necessary and sufficient condition for classifying Imperfect Palindrome's delimiter asymmetry, it may nevertheless be an important diagnostic tool for understanding the distribution of Delimiters in a Corpus of Sentence. 
+
+.. _section-v-ii:
+
+Section V.II: Probability
+-------------------------
+
+It is the intention of this analysis to treat the observance of a single Character in a Sentence as an elementary random event. IN other words, the integrand, :math:`\Delta(\zeta[i])`, can be understood as a function of a random variable. In other to construct this probabilistic interpretation of Sentence Integrals, it is necessary to define the sample space on which they operate. There lies a problem with this approach that will become apparent after some preliminary notation is introducted. 
+
+  1. *Sentential Random Variables* (:math:`\hat{\zeta}`, :math:`\hat{\xi}`). When a variable has a hat, it to be understood as a *random* variable. For instance, :math:`\zeta` is a Sentence Variable, whereas :math:`\hat{\zeta}` is a Sentential Random Variable. 
+
+The event of observating a particular (indeterminate) Sentence :math:`\zeta` is denoted,
+
+.. math::
+
+  \hat{\zeta} = \zeta 
+
+Since a String is determined by its concatenated characters, the following equivlance holds,
+
+.. math::
+
+  \hat{\zeta} = \zeta \leftrightarrow \cap_{i=1}^{l(\zeta)} \hat{\zeta[i]} = \zeta[i]
+
+To state this plainly: the event of observing a particular Sentence is equivalent to the intersection of the events of observing its individual Characters at their given positions. This formulation of a Sentence event possesses an appealing characteristic, namely that its constitutent Character events are not mutually exclusive, i.e. it cannot happen the event,
+
+.. math::
+
+  \hat{\zeta[1]} = \zeta[1] \cap \hat{\zeta[2]} = \zeta[2] = \emptyset
+
+Unless there are no Sentences in there Corpus that begin with the concatenation :math:`(\zeta[1])(\zeta[2])`. Another way of looking at this same relation would be, for any Character indices *i* and *j* such that :math:`i, j \in N_{l(\zeta)}`,
+
+.. math::
+
+  \lvert \hat{\zeta[j]} = \zeta[j] \cup \hat{\zeta[j]} = \zeta[i] \rvert \geq \lvert \hat{\zeta[j]} = \zeta[j] \rvert + \lvert \hat{\zeta[i]} = \zeta[i] \lvert
+
+As example of this, consider an unknown Sentence :math:`\hat{\zeta}` with fixed String Lenth :math:`l(\zeta) = 8`. The event of :math:`\hat{\zeta[5]} = \text{"w"}` shares outcomes with :math:`\hat{\zeta[6]} = \text{"o"}`. For instance, any Sentence that begin with the phrase, *"the word"* or *"the worm"* would belong to both Character events. 
  
-.. _section-v-iii:
+Given this fact, that a Sentence event is an intersection of simpler Character events, it might be seem natural to define the sample space as,
 
-Section V.III: Probability Models
----------------------------------
+.. math::
 
-Sentence Integrals provide a method of approaching a previously intractable problem in linguistics. Consider a sample of data that consists of Sentences with a fixed String length of 100, i.e. *l(ζ) = 100*. To accurately study the distribution of Delimiters in sample, every possible configuration of Delimiters, from 0 up to 100, must be included as a possibility. Attempting to determine the sampling distribution of such a complex statistical problem is a lesson in the curse of dimensionality and combinatorial explosions.
+  \mathbb{N} \times \Sigma
 
-A naive solution of this problem is to tally up the Character indices that correspond to Delimiters in Sentences of a Corpus, without taking into account the relative positioning *within* the Sentence with respect to other Delimiters. 
+And then construct Sentence-level events through unions, intersections and complementations. 
 
-A Sentence Integral, on the other hand, is a distilled quantity that encapsulates the weighted distance from a Sentence boundary normalized by the String Length of the Sentence. 
 
-To see the power of Sentence integration, it is instructive to seek out real world data. The following histogram was generated using the Brown University Standard Corpus of Present-Day American English (Brown Corpus). It shows the frequency of Delimiter Count coefficients (i.e. the *2i - l(ζ) - 1* coefficient) for a sample of Sentences of String Length 105. The sample contains several thousand data points,
-
-.. image:: ../_static/img/sentences/english/delimiter_coefficient_distribution_n105.png
-  :width: 400
-  :alt: Delimiter Count Coefficient Distribution
-
-This is the raw frequency of the Delimiter Count over the entire Corpus of Sentences with String Length 105, similar to the histograms shown in the introduction to this section. Without taking into account how the Delimiters behave in reference to other Delimiters in the sentences, this histogram might mislead the observer into believing the Delimiter distribution for English is relatively uniform.
-
-The key insight affored by Sentence Integrals is that this histogram is the *Character population distribution*, which is to say, it is the distribution that results when Sentences are treated as disparate Characters without correlated semantic content. In other words, this distribution is equivalent to assuming independence and then picking random Characters from Sentences in the Corpus and recording whether or not they are Delimiters. 
-
-This histogram *does not* account for the semantical features of Delimiters, in so far that the dsitribution of Delimiters within a Sentence contains information about the rhythym and prosody of its Words. However, it does suggest a probabilistic/statistical interpretation of Sentence Integral might be beneficial. 
-
-The following histograms were generated using the following procedure: Sentences of String Length *n* were taken from a Corpus. The Left-hand and Right Integrals were calculated for each Sentence in the sample. 
-
-Empirical Results
-^^^^^^^^^^^^^^^^^
-
-The following heuristics are meant as motivation for a more complete formalization that will immediately follow in the form of definitions and theorem. 
-
-Consider the claim: The number of Delimiters in a Sentence of Length *l(ζ)* is uniform random variable whose expectation is proportional to *l(ζ)*. As a first approximation, 
-
-    E[Δ(ζ)] ≈ c * l(ζ)
-
-where c is a constant of proportionality. Then, the expected value of the Left-Hand Integral (a similar argument can be made for the Right-Hand Integral) would be given by,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] = E[Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))]
-
-If it is assumed *Δ(ζ[i])* is approximately independent and identically distributed for all *i*,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] ≈ Σ:sub:`i=1`:sup:`l(ζ)` E[Δ(ζ[i])] * (i/l(ζ))
-
-Under our assumption of a uniform distribution of Delimiters, *E[Δ(ζ[i])]* is approximately the same for all *i*. Call this expected value *d*. Then,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * Σ:sub:`i=1`:sup:`l(ζ)` (i/l(ζ))
-
-The summation is simply the sum of the first *l(ζ)* natural numbers divided by l(ζ):
-
-    Σ:sub:`i=1`:sup:`l(ζ)` (i/l(ζ)) = (1/l(ζ)) * (l(ζ)(l(ζ) + 1))/2 = (l(ζ) + 1)/2
-
-Therefore,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * (l(ζ) + 1)/2
-
-This shows, if the Delimiter is treated as uniform random variable, that the expected value of the Left-Hand Integral is approximately proportional to *l(ζ)*. Keeping in mind the approximating nature of these considerations, the constant *d* contains information on how many Delimiters can be expected per Characters in a Sentence. This *Delimiter* density can be directly measured by computing the Sentence Integrals over a Corpus.
-
-The following histogram shows the distribution for the Delimiter density. A note The sample of mean of the integrals was calculated, and the equation ``μ ≈ d (l(ζ) + 1)/2`` was used to establish the Delimiter density
-
-TODO: we are using the wrong formula to estimate the delimiter density for righthand integrals in our Python scripts!
-
-Delimiter Probability Density
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This section formalizes the results of the previous section, providing the mathematical framework for understanding the distribution of Sentence Integrals and how it relates to the Delimiter density.
-
-A common problem in probability is that of conditional expectations. Consider a random varaible that is defined as a sum of random variables where the number of summands is itself a random variable.
-
-    X = Σ:sub:`i = 1`:sup:`N` Y:sub:`i`
-
-The law of total expectations from probability theory states,
-
-    E[X] = E[ E[ Y:sub:`i` | N] ]
-
-where **X** is a random variable defined in terms of two other random variables, **Y** and **N**. In the current case, the expectation of the Sentence Integral is sought. Take the Lefthand Integral as an example, 
-
-    E[Ω:sub:`-`(ζ,l(ζ))]
-
-The formula for its computation is given by 
-
-    Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1``:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
-
-This is a random sum of random variables. In other words, comparing this equation to the law of total expectation,
-    
-    - X = Ω:sub:`-`(ζ,l(ζ))
-    - N = l(ζ)
-    - Y:sub:`i` = Δ(ζ[i]) * (i/l(ζ))
-  
-To apply the law of iterated expectations, first find the conditional expectation 
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n]
-    
-Which is the expected value of the Left-Hand Integral for a fixed sentence length n. Then, take the expectation of this conditional expectation with respect to the distribution of sentence lengths *l(ζ)*.
-
-To derive a formula for *E[Ω*:sub:`-`*(ζ,l(ζ))]*,
-
-Assume *l(ζ) = n*. Then, given the assumption that *Δ(ζ[i])* follows a Bernoulli distribution with parameter *d(n)*,
-
-    E[Δ(ζ[i])] = d(n)
-
-Therefore,
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = E[Σ:sub:`i=1`:sup:`n` Δ(ζ[i]) * (i/n)]
-
-Using the linearity of expectation:
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` E[Δ(ζ[i])] * (i/n)
-
-Substituting E[Δ(ζ[i])] = d(n),
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` d(n) * (i/n) = d(n) * Σ:sub:`i=1`:sup:`n` (i/n)
-
-Simplifying,
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (1/n) * Σ:sub:`i=1`:sup:`n` i = d(n) * (1/n) * (n(n+1)/2)
-
-Finally,
-
-    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (n + 1) / 2
-
-Applying the law of iterated expectations,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] = E[E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ)]]
-
-And substitute,
-
-    E[Ω:sub:`-`(ζ,l(ζ))] = E[d(l(ζ)) * (l(ζ) + 1) / 2]
-
-
-Therefore, the expectation of the Lefthand Sentence is the expectation of the product,
-
-    E[d(l(ζ)) * (l(ζ) + 1) / 2]
-
-Where *d(l(ζ))* is the Bernoulli parameter for the Delimiter Count of a Single Character in a Sentence with Length *l(ζ)*.
-
-    Δ(ζ[i]) ~ TODO
-
-
-NOTES
------
-
-I think Bayesian estimation is the way to go. A good prior distribution would just be a uniform distribution over (0, l(ζ)). However, that presents certain problems in and of itself. Let p(x) represent a pdf and P(X) represent a probability cdf, i.e.
-
-    P(X = x:sub:`i`) = Σ:sub:`x = x_0`:sup:x_i` p(x) 
-
-Technically p(x) is a probability mass function since everything is discrete, but let's keep calling it density. It's sound fancier and makes us sound smart. Don't you agree, Ada? ;)
-
-Let's always reserve Z for a Sentence Random Variable. Z is a concatenation of Character Random Variables Ci.
-
-    Z = (C1)(C2)...(CN)
- 
-Where N is the String Length. In other words, Z is a random variable that assumes a value of ζ. The probability of observing a particular sentence is expressed as,
-
-    P(Z = ζ)
-
-This can be expressed as the union,
-
-    P(C1 ∪ C2 ∪ ... ∪ CN)
-
-I think we need to consider what exactly are the parameters of a Delimiter density probability function. The density depends on Sentence String Length, but we are also saying the density is an indicator that accepts a Character index and returns 0 or 1. So,
-
-    d = f(l(ζ), ζ[i])
-
-If we are saying for for l(ζ) = n, then we have the Bernoulli distribution for *a single Character*,
-
-    d(n) = 1 with probability p(n)
-
-    d(n) = 0 with probability 1 - p(n) 
-
-We need to consider that we have a sequence of *n* Characters,
-
-    ζ[1] ζ[2] ζ[3] ... ζ[n]
-
-Where each one can be a Delimiter with probability p(n).
-
-The form of dependence on length and character index makes analyzing it a bit difficult. We are going to have to make simplifying assumptions, like the Character marginal density in a Sentence is independent of the String Length. Also, the Character density at each index is independent of previous indexes. Almost like a Markov chain (process),
-
-    p(ζ[i]) | ζ[i-1]) = p(ζ[i])
-
-In other words,
-
-    P(Ci = c) = P(Cj = c)
-
-for all i and j. 
-
-
-We want to find P(p | ζ), the posterior probability of the delimiter density p given the observed sentence ζ. Using Bayes' theorem:
-
-P(p | ζ) = [P(ζ | p) * P(p)] / P(ζ)
-Where:
-
-P(p | ζ): Posterior probability of the delimiter density p given the sentence ζ.
-P(ζ | p): Likelihood of observing the sentence ζ given the delimiter density p. This is what our binomial_likelihood function calculates.
-P(p): Prior probability of the delimiter density p.
-P(ζ): Probability of observing the sentence ζ (the evidence or normalizing constant).
-Calculating the Normalizing Constant P(ζ):
-
-P(ζ) should be calculated using the law of total probability. Since we're considering a range of possible p values (our prior), we need to sum the probabilities of observing the sentence ζ over all possible values of p:
-
-P(ζ) = Σ:sub:`p` [P(ζ | p) * P(p)]
-where the summation is over all possible values of p in our prior distribution.
-
-Discrete Approximation:
-
-Since we're dealing with a discrete set of sentence lengths (and thus a discrete set of p values in our prior), we can approximate this summation:
-
-P(ζ) ≈ Σ:sub:`n` [P(ζ | p:sub:`n`) * P(p:sub:`n`)]
-where:
-
-p:sub:n is the prior delimiter density for sentences of lengthn`.
-P(ζ | p:sub:n) is the likelihood of observing sentenceζgivenp:sub:n (calculated using binomial_likelihood).
-P(p:sub:n) is the prior probability associated with sentence lengthn`.

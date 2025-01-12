@@ -14,7 +14,7 @@ Palindromes
    03_corpora
    04_structures
    05_palindromes
-   06_integration
+   06_analysis
    07_postulates
    08_appendix
    09_data

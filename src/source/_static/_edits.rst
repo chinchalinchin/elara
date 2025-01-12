@@ -232,6 +232,308 @@ Removed: Markdown Tables
 Various
 -------
 
+TODO: explain
+
+.. _theorem-5-2-7:
+
+**Theorem 5.2.7**  ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+
+Let ζ be an arbitrary Sentence and let k be a natural number suchm
+
+    1. ζ ∈ C:sub:`L`
+    2. k ∈ N:sub:`l(ζ)`
+
+By Definition A.8.1, the Left-Hand Integral of *inv(ζ)* up to index *k* is,
+
+    3. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (l(inv(ζ)[:i])/l(inv(ζ)))
+   
+By Theorem 3.2.17, 
+
+    4. inv(ζ)[:i] = ζ[l(ζ) - i + 1:]. 
+    
+However, a direction substitution of this into the Delimiter Count function in the Sentence Integral is not possible because the Delimiter Count function operates on individual Characters in the integrand, not on Partial Sentences.
+
+By Theorem 1.2.4, 
+
+   5. l(ζ) = l(inv(ζ))
+
+By Definition 3.2.5,
+
+   6. l(inv(ζ)[:i]) = i
+
+Substituting equations step 5 and step 6 into step 3,
+
+   7. Ω:sub:`-`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+
+Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
+
+    ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`-`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (i/l(ζ))
+
+.. _theorem-5-2-8:
+
+**Theorem 5.2.8** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+
+Let ζ be an arbitrary Sentence and let k be a natural number suchm
+
+   1. ζ ∈ C:sub:`L`
+   2. k ∈ N:sub:`l(ζ)`
+   
+By Definition A.8.1, the Right-Hand Integral of inv(ζ) up to index k is:
+
+   3. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * (l(inv(ζ)[i:])/l(inv(ζ)))
+   
+By Theorem 1.2.4, 
+
+   4. l(ζ) = l(inv(ζ))
+
+By Definition 3.2.6,
+
+   5. l(inv(ζ)[i:]) = l(inv(ζ)) - i + 1
+   
+Substituting step 4 and step 5 into step 3,
+
+   6. Ω:sub:`+`(inv(ζ),k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ))
+   
+Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
+
+   7. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Ω:sub:`+`(inv(ζ), k) = Σ:sub:`i=1`:sup:`k` Δ(inv(ζ)[i]) * ((l(ζ) - i + 1)/l(ζ)) ∎
+
+TODO: explain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. _section-v-iii:
+
+Section V.III: Probability Models
+---------------------------------
+
+Sentence Integrals provide a method of approaching a previously intractable problem in linguistics. Consider a sample of data that consists of Sentences with a fixed String length of 100, i.e. *l(ζ) = 100*. To accurately study the distribution of Delimiters in sample, every possible configuration of Delimiters, from 0 up to 100, must be included as a possibility. Attempting to determine the sampling distribution of such a complex statistical problem is a lesson in the curse of dimensionality and combinatorial explosions.
+
+A naive solution of this problem is to tally up the Character indices that correspond to Delimiters in Sentences of a Corpus, without taking into account the relative positioning *within* the Sentence with respect to other Delimiters. 
+
+A Sentence Integral, on the other hand, is a distilled quantity that encapsulates the weighted distance from a Sentence boundary normalized by the String Length of the Sentence. 
+
+To see the power of Sentence integration, it is instructive to seek out real world data. The following histogram was generated using the Brown University Standard Corpus of Present-Day American English (Brown Corpus). It shows the frequency of Delimiter Count coefficients (i.e. the *2i - l(ζ) - 1* coefficient) for a sample of Sentences of String Length 105. The sample contains several thousand data points,
+
+.. image:: ../_static/img/sentences/english/delimiter_coefficient_distribution_n105.png
+  :width: 400
+  :alt: Delimiter Count Coefficient Distribution
+
+This is the raw frequency of the Delimiter Count over the entire Corpus of Sentences with String Length 105, similar to the histograms shown in the introduction to this section. Without taking into account how the Delimiters behave in reference to other Delimiters in the sentences, this histogram might mislead the observer into believing the Delimiter distribution for English is relatively uniform.
+
+The key insight affored by Sentence Integrals is that this histogram is the *Character population distribution*, which is to say, it is the distribution that results when Sentences are treated as disparate Characters without correlated semantic content. In other words, this distribution is equivalent to assuming independence and then picking random Characters from Sentences in the Corpus and recording whether or not they are Delimiters. 
+
+This histogram *does not* account for the semantical features of Delimiters, in so far that the dsitribution of Delimiters within a Sentence contains information about the rhythym and prosody of its Words. However, it does suggest a probabilistic/statistical interpretation of Sentence Integral might be beneficial. 
+
+The following histograms were generated using the following procedure: Sentences of String Length *n* were taken from a Corpus. The Left-hand and Right Integrals were calculated for each Sentence in the sample. 
+
+Empirical Results
+^^^^^^^^^^^^^^^^^
+
+The following heuristics are meant as motivation for a more complete formalization that will immediately follow in the form of definitions and theorem. 
+
+Consider the claim: The number of Delimiters in a Sentence of Length *l(ζ)* is uniform random variable whose expectation is proportional to *l(ζ)*. As a first approximation, 
+
+    E[Δ(ζ)] ≈ c * l(ζ)
+
+where c is a constant of proportionality. Then, the expected value of the Left-Hand Integral (a similar argument can be made for the Right-Hand Integral) would be given by,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] = E[Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))]
+
+If it is assumed *Δ(ζ[i])* is approximately independent and identically distributed for all *i*,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] ≈ Σ:sub:`i=1`:sup:`l(ζ)` E[Δ(ζ[i])] * (i/l(ζ))
+
+Under our assumption of a uniform distribution of Delimiters, *E[Δ(ζ[i])]* is approximately the same for all *i*. Call this expected value *d*. Then,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * Σ:sub:`i=1`:sup:`l(ζ)` (i/l(ζ))
+
+The summation is simply the sum of the first *l(ζ)* natural numbers divided by l(ζ):
+
+    Σ:sub:`i=1`:sup:`l(ζ)` (i/l(ζ)) = (1/l(ζ)) * (l(ζ)(l(ζ) + 1))/2 = (l(ζ) + 1)/2
+
+Therefore,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] ≈ d * (l(ζ) + 1)/2
+
+This shows, if the Delimiter is treated as uniform random variable, that the expected value of the Left-Hand Integral is approximately proportional to *l(ζ)*. Keeping in mind the approximating nature of these considerations, the constant *d* contains information on how many Delimiters can be expected per Characters in a Sentence. This *Delimiter* density can be directly measured by computing the Sentence Integrals over a Corpus.
+
+The following histogram shows the distribution for the Delimiter density. A note The sample of mean of the integrals was calculated, and the equation ``μ ≈ d (l(ζ) + 1)/2`` was used to establish the Delimiter density
+
+TODO: we are using the wrong formula to estimate the delimiter density for righthand integrals in our Python scripts!
+
+Delimiter Probability Density
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This section formalizes the results of the previous section, providing the mathematical framework for understanding the distribution of Sentence Integrals and how it relates to the Delimiter density.
+
+A common problem in probability is that of conditional expectations. Consider a random varaible that is defined as a sum of random variables where the number of summands is itself a random variable.
+
+    X = Σ:sub:`i = 1`:sup:`N` Y:sub:`i`
+
+The law of total expectations from probability theory states,
+
+    E[X] = E[ E[ Y:sub:`i` | N] ]
+
+where **X** is a random variable defined in terms of two other random variables, **Y** and **N**. In the current case, the expectation of the Sentence Integral is sought. Take the Lefthand Integral as an example, 
+
+    E[Ω:sub:`-`(ζ,l(ζ))]
+
+The formula for its computation is given by 
+
+    Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1``:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
+
+This is a random sum of random variables. In other words, comparing this equation to the law of total expectation,
+    
+    - X = Ω:sub:`-`(ζ,l(ζ))
+    - N = l(ζ)
+    - Y:sub:`i` = Δ(ζ[i]) * (i/l(ζ))
+  
+To apply the law of iterated expectations, first find the conditional expectation 
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n]
+    
+Which is the expected value of the Left-Hand Integral for a fixed sentence length n. Then, take the expectation of this conditional expectation with respect to the distribution of sentence lengths *l(ζ)*.
+
+To derive a formula for *E[Ω*:sub:`-`*(ζ,l(ζ))]*,
+
+Assume *l(ζ) = n*. Then, given the assumption that *Δ(ζ[i])* follows a Bernoulli distribution with parameter *d(n)*,
+
+    E[Δ(ζ[i])] = d(n)
+
+Therefore,
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = E[Σ:sub:`i=1`:sup:`n` Δ(ζ[i]) * (i/n)]
+
+Using the linearity of expectation:
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` E[Δ(ζ[i])] * (i/n)
+
+Substituting E[Δ(ζ[i])] = d(n),
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = Σ:sub:`i=1`:sup:`n` d(n) * (i/n) = d(n) * Σ:sub:`i=1`:sup:`n` (i/n)
+
+Simplifying,
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (1/n) * Σ:sub:`i=1`:sup:`n` i = d(n) * (1/n) * (n(n+1)/2)
+
+Finally,
+
+    E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ) = n] = d(n) * (n + 1) / 2
+
+Applying the law of iterated expectations,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] = E[E[Ω:sub:`-`(ζ,l(ζ)) | l(ζ)]]
+
+And substitute,
+
+    E[Ω:sub:`-`(ζ,l(ζ))] = E[d(l(ζ)) * (l(ζ) + 1) / 2]
+
+
+Therefore, the expectation of the Lefthand Sentence is the expectation of the product,
+
+    E[d(l(ζ)) * (l(ζ) + 1) / 2]
+
+Where *d(l(ζ))* is the Bernoulli parameter for the Delimiter Count of a Single Character in a Sentence with Length *l(ζ)*.
+
+    Δ(ζ[i]) ~ TODO
+
+
+NOTES
+-----
+
+I think Bayesian estimation is the way to go. A good prior distribution would just be a uniform distribution over (0, l(ζ)). However, that presents certain problems in and of itself. Let p(x) represent a pdf and P(X) represent a probability cdf, i.e.
+
+    P(X = x:sub:`i`) = Σ:sub:`x = x_0`:sup:x_i` p(x) 
+
+Technically p(x) is a probability mass function since everything is discrete, but let's keep calling it density. It's sound fancier and makes us sound smart. Don't you agree, Ada? ;)
+
+Let's always reserve Z for a Sentence Random Variable. Z is a concatenation of Character Random Variables Ci.
+
+    Z = (C1)(C2)...(CN)
+ 
+Where N is the String Length. In other words, Z is a random variable that assumes a value of ζ. The probability of observing a particular sentence is expressed as,
+
+    P(Z = ζ)
+
+This can be expressed as the union,
+
+    P(C1 ∪ C2 ∪ ... ∪ CN)
+
+I think we need to consider what exactly are the parameters of a Delimiter density probability function. The density depends on Sentence String Length, but we are also saying the density is an indicator that accepts a Character index and returns 0 or 1. So,
+
+    d = f(l(ζ), ζ[i])
+
+If we are saying for for l(ζ) = n, then we have the Bernoulli distribution for *a single Character*,
+
+    d(n) = 1 with probability p(n)
+
+    d(n) = 0 with probability 1 - p(n) 
+
+We need to consider that we have a sequence of *n* Characters,
+
+    ζ[1] ζ[2] ζ[3] ... ζ[n]
+
+Where each one can be a Delimiter with probability p(n).
+
+The form of dependence on length and character index makes analyzing it a bit difficult. We are going to have to make simplifying assumptions, like the Character marginal density in a Sentence is independent of the String Length. Also, the Character density at each index is independent of previous indexes. Almost like a Markov chain (process),
+
+    p(ζ[i]) | ζ[i-1]) = p(ζ[i])
+
+In other words,
+
+    P(Ci = c) = P(Cj = c)
+
+for all i and j. 
+
+
+We want to find P(p | ζ), the posterior probability of the delimiter density p given the observed sentence ζ. Using Bayes' theorem:
+
+P(p | ζ) = [P(ζ | p) * P(p)] / P(ζ)
+Where:
+
+P(p | ζ): Posterior probability of the delimiter density p given the sentence ζ.
+P(ζ | p): Likelihood of observing the sentence ζ given the delimiter density p. This is what our binomial_likelihood function calculates.
+P(p): Prior probability of the delimiter density p.
+P(ζ): Probability of observing the sentence ζ (the evidence or normalizing constant).
+Calculating the Normalizing Constant P(ζ):
+
+P(ζ) should be calculated using the law of total probability. Since we're considering a range of possible p values (our prior), we need to sum the probabilities of observing the sentence ζ over all possible values of p:
+
+P(ζ) = Σ:sub:`p` [P(ζ | p) * P(p)]
+where the summation is over all possible values of p in our prior distribution.
+
+Discrete Approximation:
+
+Since we're dealing with a discrete set of sentence lengths (and thus a discrete set of p values in our prior), we can approximate this summation:
+
+P(ζ) ≈ Σ:sub:`n` [P(ζ | p:sub:`n`) * P(p:sub:`n`)]
+where:
+
+p:sub:n is the prior delimiter density for sentences of lengthn`.
+P(ζ | p:sub:n) is the likelihood of observing sentenceζgivenp:sub:n (calculated using binomial_likelihood).
+P(p:sub:n) is the prior probability associated with sentence lengthn`.
 
 
 

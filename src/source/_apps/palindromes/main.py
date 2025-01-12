@@ -264,14 +264,47 @@ def analyze_sentence_delimiters(sentence):
     delimiter_indices = model.delimit(sentence)
     graphs.delimiter_barchart(delimiter_indices, sentence)
 
-if __name__ == "__main__":
-    sentences = [
-        "god lived on no devil dog",
-        "i am civic am i",
-        "goddesses so pay a possessed dog",
-        "borrow or rob",
-    ]
+def analyze_conditional_word_probability(length, condition, offset=0):
+    """
+    Calculates the frequency distribution of characters at a specific position 
+    in words of a given length that start with a given condition.
 
-    for sentence in sentences:
-        analyze_sentence_delimiters(sentence)
+    Args:
+        length: The desired length of the words.
+        condition: The starting string condition (e.g., "da").
+
+    Returns:
+        A dictionary representing the frequency distribution of characters 
+        at the position after the condition.
+    """
+
+    if len(condition) >= length:
+        raise ValueError("Length of condition must be less than the length of the word.")
+
+    # Get all words from the Brown corpus, convert to lowercase, remove non-alphanumeric,
+    # and filter by length and starting condition
+    words = parse.words(length)
+    all_words = set(
+        word.lower()
+        for word in words
+        if word.startswith(condition)
+    )
+
+    # Calculate the position after the condition
+    position = len(condition) + offset
+
+    # Create a frequency distribution of characters at the specified position
+    freq_dist = {}
+    for word in all_words:
+        char = word[position]
+        freq_dist[char] = freq_dist.get(char, 0) + 1
+
+    graphs.conditional_character_histogram(freq_dist, length, condition, position)
+
+    return freq_dist
+
+if __name__ == "__main__":
+    length = 4
+    condition = "wor"
+    freq_dist = analyze_conditional_word_probability(length, condition, 0)
 
