@@ -47,6 +47,8 @@ For the sake of contradiction, suppose there exists a bijection (a one-to-one co
 
 Consider the rebellious set, 
 
+.. math::
+    
     R = \{ x \in A \, \mid \, x \notin f(x)}. 
 
 This set :math:`R` contains all elements of :math:`A` that are not members of the subset they are mapped to by *f*. By the previous theorem, this set is non-empty. Since *f* is a bijection, there must be an element :math:`r \in A` such that :math:`f(r) = R`.
