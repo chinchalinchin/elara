@@ -26,7 +26,7 @@ module "bucket" {
     platform                    = local.platform
     kms                         = local.kms
     s3                          = {
-        purpose                 = "Hosting of static web content for the Elara website"
+        purpose                 = "Hosting of static web content for the Elara Protocol website"
         suffix                  = "elara"
         website_configuration   = {
             enabled             = true

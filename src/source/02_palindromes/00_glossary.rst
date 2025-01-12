@@ -86,7 +86,7 @@ Definitions
 - D 4.2.7: Pivot Words
 - D 5.1.1: Lefthand Sentence Integrals: :math:`\Phi_{-}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[:i])/l(\zeta))`
 - D 5.1.2: Righthand Sentence Integrals: :math:`\Phi_{+}(\zeta,k) =  \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta))`
-- D 5.2.1: Delimiter Mass: :math:`\mu_{-}(\zeta, i), \mu_{+}(\zeta, i)`
+- D 5.1.3: Delimiter Mass: :math:`\mu_{-}(\zeta, i)`, :math:`\mu_{+}(\zeta, i)`
 - D A.1.1: Compound Words: :math:`\eta \in CW_L \leftrightarrow [(\exists \alpha, \beta \in L: \eta = \alpha\beta) \lor (\exists \alpha \in L, \exists \gamma \in CW_L: \eta = \alpha\gamma)] \land (\eta \in L)`
 - D A.1.2: Compound Invertible Words: :math:`\eta \in CIW_L \leftrightarrow [ (\eta \in CW_L) \land (\eta \in I) ]`
 - D A.2.1: :math:`\sigma`-Pairing Language: :math:`\alpha \in L_\sigma \leftrightarrow \exists \zeta \in C_L: \alpha = \varsigma(\zeta)`
@@ -114,7 +114,7 @@ Axioms
 - Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
 - Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
 - Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L`
-- Finite Axiom S.3: :math:`\exists N \in \mathbb{N}: \forall \zeta \in C_L, l(\zeta) \leq N`
+- Finite Axiom S.3: :math:`\exists N \in \mathbb{N}: \forall \zeta \in C_L: l(\zeta) \leq N`
 
 .. _theorems:
 

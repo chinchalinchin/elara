@@ -97,7 +97,7 @@ The presence of the Delimiter after the article *"the"* affects the subsequent a
 
 .. math::
 
-  P(\Delta(\hat{zeta}[k]) | \Delta(\zeta[k-1]) = 1 ) = 0
+  P(\Delta(\hat{zeta}[k]) \,|\, \Delta(\zeta[k-1]) = 1 ) = 0
 
 In summary, it cannot be discounted that knowing where a single Delimiter occurs in a Sentence influences the possible locations where other Delimiters in the same Sentence might occur. However, accounting for this contingency presents computational challenges. A Sentence with 100 Characters will have :math:`2^100` possible Delimiter configurations, by the Fundamental Counting Principle. Tracking the Delimiter distribution across different Sentence String Lengths becomes impossible. Enumerating and tallying these outcomes is a prohibitively expensive task, if abstraction is not employed to summarize the Delimiter *"mass"* of a Sentence. 
 
@@ -671,6 +671,8 @@ This method of *"weighing"* the Delimiters in a Sentence provides a method for a
 Theorems
 ^^^^^^^^
 
+As the introduction suggested through example a Sentence Integral can be regarded as a measure of the Delimiter symmetry in a Sentence. A Sentence Integral is the sum of the Delimiter indices. Each contribution of the Delimiter Count (0 or 1) to the integral is weighted by its distance from the starting point of the Sentence or the ending point of the Sentence (the Character index of the Delimiter), depending on if the Left- or Right-hand Sentence Integrals are taken. The theorems in this section will establish the properties of this sentential *"center of delimter mass"*.
+
 The first two theorems, :ref:`Theorem 5-1-1 <theorem-5-1-1>` and :ref:`Theorem 5.1.2 <theorem-5-1-2>`, establish the lower bound for all Sentence Integrals. 
 
 .. _theorem-5-1-1:
@@ -836,29 +838,36 @@ The Lefthand Delimiter Mass at Character Index *i*, denoted :math:`\mu_sub{-}(\z
 
 ∎
 
-The next theorem uses :ref:`Definition 5.1.3 <definition-5-1-3>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\Phi(\zeta)` in :ref:`Theorem 5.1.5 <theorem-5-1-5>`.
+The next theorem uses :ref:`Definition 5.1.3 <definition-5-1-3>` to show if the Delimiters in the left half of Sentence relative to the end *"weigh"* more than the Delimiters in the right half relative to the start, then this can only happen if the Righthand Sentence Integral is greater than the Lefthand Sentence Integral. Note the use of the Pivot :math:`\Phi(\zeta)` in following theorem.
 
 .. _theorem-5-1-5:
 
-**Theorem 5.1.5** ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+**Theorem 5.1.5** :math:`\forall \zeta \in C_L: \sum_{i=1}^{\omega(\zeta)} \mu_{+}(\zeta,i) > \sum_{\omega(\zeta)+1}^{l(\zeta) \mu_{-}(\zeta, i) \leftrightarrow \Phi_{+}(\zeta, l(\zeta)) > \Phi_{-}(\zeta, l(\zeta))`
 
-(→) Let *m = ω(ζ)*. Assume 
 
-    1.  Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i)
+(→) Let *ζ* be an arbitrary Sentence in the Corpus. Assume,
 
-By Definition A.8.2, this is equivalent to,
+.. math::
+  
+  1. \quad \sum_{i=1}^{\omega(\zeta)} \mu_{+}(\zeta,i) > \sum_{i=\omega(\zeta)+1}^{l(\zeta)} \mu_{-}(\zeta,i)
 
-    2. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (l(ζ) - i + 1) > Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * i.
+By :ref:`Definition 5.1.3 <definition-5-1-3>`, this is equivalent to,
+
+.. math::
+
+  2. \quad \sum_{i=1}^{\omega(\zeta)} \Delta(\zeta[i]) \cdot (l(\zeta - 1 + 1)) > \sum_{i=\omega(\zeta)+1}^{l(\zeta)} \Delta(\zeta[i]) \cdot i
 
 In other words, the assumption in step 1 is equivalent to claiming the sum of the Delimiters weights in the first half of the Sentence (up to and including the Pivot) is greater than the dum of Delimiter weights in the second half (after the Pivot). It is to be shown,
 
-    3. Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ)).
+.. math::
+
+  2. \quad \Phi_{-}(\zeta, l(\zeta)) > \Phi_{-}(\zeta, l(\zeta))
 
 Expanding the integrals,
 
-    4. Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (i/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
+    1. Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (i/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
 
-    5. Ω:sub:`+`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+    2. Ω:sub:`+`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
 
 We can rewrite the assumption as:
 
@@ -1395,10 +1404,6 @@ Since *ζ* and *k* were arbitrary, this can generalize over the class of Perfect
 
 ∎
 
-Theorem A.8.4, along with the examples given in the introduction of this section, suggests a Sentence Integral can be regarded as a measure of the Delimiter symmetry in a Sentence. A Sentence Integral is the sum of the Delimiter Count of each Character, where each contribution is weighted by its distance from the starting point of the Sentence or the ending point of the Sentence, depending on if the Left- or Right-hand Sentence Integrals are taken. 
-
-To state this result plainly: Sentence Integrals yield a measure of Delimiter *"mass"*, and the difference between the Left- and Right-hand Sentence Integrals is a measure of the Delimiter symmetry within the Sentence.
-
 As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be regarded as part of the class of Sentences that are *invariant* of Sentence Integrals,
 
     Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = 0
@@ -1439,19 +1444,23 @@ A pair of examples will help illustrate this.
 
 **Example**
 
-Let *ζ = ⲁⲃⲅⲇⲉⲋⲍ* (recall Coptic lowercase letters are indeterminate Characters, i.e. potential Delimiters).In this case, *l(ζ) = 6*. The expansion of the summation can be written,
+Let :math:`\zeta = (\iota_1)(\iota_2)(\iota_3)(\iota_4)(\iota_5)(\iota_6)`. In this case, :math:`l(\zeta) = 6`. The expansion of the summation can be written,
 
-    -5*Δ(ζ[1]) -3*Δ(ζ[2]) -1*Δ(ζ[3]) +1*Δ(ζ[4]) +3*Δ(ζ[5]) +5*Δ(ζ[6])
+.. math::
 
-Let *ζ = ⲁⲃⲅⲇⲉⲋⲍ* where Copitc letters are indeterminate Characters. *l(ζ) = 7*. The expansion of the summation can be written,
+  -5 \cdot \Delta(\zeta[1]) -3 \cdot \Delta(\zeta[2]) - 1 \cdot \Delta(\zeta[3]) +1 \cdot \Delta(\zeta[4]) + 3 \cdot \Delta(\zeta[5]) + 5 \cdot \Delta(\zeta[6])
 
-    -6*Δ(ζ[1]) -4*Δ(ζ[2]) -2*Δ(ζ[3]) + 0*Δ(ζ[4]) + 2*Δ(ζ[5]) + 4*Δ(ζ[6]) + 6*Δ(ζ[7])
+Let :math:`\xi = (\iota_1)(\iota_2)(\iota_3)(\iota_4)(\iota_5)(\iota_6)(\iota_7)`. In this case, :math:`l(\zeta) = 7`. The expansion of the summation can be written,
 
-Note the Pivot Character, *ω(ζ) = 4* , never contributes to an odd sum. ∎
+.. math::
 
-In the odd integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5]) = Δ(ζ[6]) = 1* result in a solution that balances the equations to 0. 
+  -6 \cdot \Delta(\zeta[1]) -4 \cdot \Delta(\zeta[2]) - 2 \cdot \Delta(\zeta[3]) + 0 \cdot (\Delta(\zeta[4])) + 2 \cdot \Delta(\zeta[5]) + 4 \cdot \Delta(\zeta[6]) + 6 \cdot \Delta(\zeta[7])
 
-In the even integer coefficient example, an assignment of *Δ(ζ[1]) = Δ(ζ[5]) = Δ(ζ[6]) = 1* will also result in a solution that balances the equation to 0.
+Note the Pivot Character, :math:`\omega(\zeta) = 4` , never contributes to an odd sum. ∎
+
+In the odd integer coefficient example, an assignment of :math:`\Delta(\zeta[1]) = \Delta(\zeta[5]) = \Delta(\zeta[6]) = 1` result in a solution that balances the equations to 0. 
+
+In the even integer coefficient example, an assignment of :math:`\Delta(\zeta[1]) = \Delta(\zeta[5]) = Delta(\zeta[6]) = 1` will also result in a solution that balances the equation to 0.
 
 In other words, any time a Character index coefficient can be expressed as the sum of coefficients of other Character indexes, a solution exists. It is worth noting this species of solutions to the Sentence Integral difference expansion does not seem to correspond to meaning Sentence structure, i.e. both solutions correspond to sequences of consecutive Delimiters. 
 
@@ -1462,42 +1471,109 @@ This cursory analysis suggests, while the Sentence Integral may not provide a ne
 Section V.II: Probability
 -------------------------
 
-It is the intention of this analysis to treat the observance of a single Character in a Sentence as an elementary random event. IN other words, the integrand, :math:`\Delta(\zeta[i])`, can be understood as a function of a random variable. In other to construct this probabilistic interpretation of Sentence Integrals, it is necessary to define the sample space on which they operate. There lies a problem with this approach that will become apparent after some preliminary notation is introducted. 
+A probabilistic framework is now constructed on top of the formal system developed thus far. In particular, a *sample space*, *sigma algebra (event space)* and *probability measure* that conforms to the strictures of Kolmogrov's Axioms of Probability are defined in this section.
 
-  1. *Sentential Random Variables* (:math:`\hat{\zeta}`, :math:`\hat{\xi}`). When a variable has a hat, it to be understood as a *random* variable. For instance, :math:`\zeta` is a Sentence Variable, whereas :math:`\hat{\zeta}` is a Sentential Random Variable. 
+It is the intention of this analysis to treat the observance of a single Character in a Sentence as an elementary random event. In other words, the integrand in :ref:`Definitions 5.1.1 <definition-5-1-1>` - :ref:`5.1.2 <definition-5-1-2>`, :math:`\Delta(\zeta[i])`, can be understood as a function of a random variable. In other to construct this probabilistic interpretation of Sentence Integrals, it is necessary to define the sample space on which they operate. There lies a problem with this approach that will become apparent after some preliminary notation is introducted. 
 
-The event of observating a particular (indeterminate) Sentence :math:`\zeta` is denoted,
+  1. *Sample Space* (:math:`\Omega`): The uppercase Greek Omega is reserved for the sample space of a probability measure, *P*.
+  2. *Sentential Random Variables* (:math:`\hat{\zeta}`, :math:`\hat{\xi}`). When a variable has a hat, it is to be understood as a *random* variable. For instance, :math:`\zeta` is a Sentence Variable, whereas :math:`\hat{\zeta}` is a Sentential Random Variable. 
+
+The event of observing a particular (indeterminate) Sentence :math:`\zeta` is denoted,
 
 .. math::
 
   \hat{\zeta} = \zeta 
 
-Since a String is determined by its concatenated characters, the following equivlance holds,
+Since a String is determined by its concatenated characters, the following equivalence should hold in any probability model,
 
 .. math::
 
-  \hat{\zeta} = \zeta \leftrightarrow \cap_{i=1}^{l(\zeta)} \hat{\zeta[i]} = \zeta[i]
+  (\hat{\zeta} = \zeta) \leftrightarrow \cap_{i=1}^{l(\zeta)} (\hat{\zeta[i]} = \zeta[i])
 
 To state this plainly: the event of observing a particular Sentence is equivalent to the intersection of the events of observing its individual Characters at their given positions. This formulation of a Sentence event possesses an appealing characteristic, namely that its constitutent Character events are not mutually exclusive, i.e. it cannot happen the event,
 
 .. math::
 
-  \hat{\zeta[1]} = \zeta[1] \cap \hat{\zeta[2]} = \zeta[2] = \emptyset
+  (\hat{\zeta[1]} = \zeta[1]) \cap (\hat{\zeta[2]} = \zeta[2]) = \emptyset
 
 Unless there are no Sentences in there Corpus that begin with the concatenation :math:`(\zeta[1])(\zeta[2])`. Another way of looking at this same relation would be, for any Character indices *i* and *j* such that :math:`i, j \in N_{l(\zeta)}`,
 
 .. math::
 
-  \lvert \hat{\zeta[j]} = \zeta[j] \cup \hat{\zeta[j]} = \zeta[i] \rvert \geq \lvert \hat{\zeta[j]} = \zeta[j] \rvert + \lvert \hat{\zeta[i]} = \zeta[i] \lvert
+  \lvert (\hat{\zeta[j]} = \zeta[j]) \cup (\hat{\zeta[j]} = \zeta[i]) \rvert \geq \lvert \hat{\zeta[j]} = \zeta[j] \rvert + \lvert \hat{\zeta[i]} = \zeta[i] \lvert
 
 As example of this, consider an unknown Sentence :math:`\hat{\zeta}` with fixed String Lenth :math:`l(\zeta) = 8`. The event of :math:`\hat{\zeta[5]} = \text{"w"}` shares outcomes with :math:`\hat{\zeta[6]} = \text{"o"}`. For instance, any Sentence that begin with the phrase, *"the word"* or *"the worm"* would belong to both Character events. 
  
-Given this fact, that a Sentence event is an intersection of simpler Character events, it might be seem natural to define the sample space as,
+Given this fact, that a Sentence event is an intersection of simpler Character events, it might seem natural to define the sample space as simply :math:`\Sigma`, but this leads to theoretical difficulties in defining a probability measure, since there is no sigma algebra that can be constructed on this sample space where events would correspond to the event of a Sentence. To see this, note *"not"* and *"ton"* would be considered the same event, namely,
+
+.. math::
+
+  E = \{ \text{"n"}, \text{"o"}, \text{"t"} \} = \{ \text{"t"}, \text{"o"}, \text{"n"} \}
+
+This sample space does not capture the ordinality of Strings, i.e. their ability to be ordered in sequence. A possible solution for differentiating outcomes like :math:`(1, \text{"a"})` and :math:`(2, \text{"a"})` in the sample space is to take the Cartesian product of the natural numbers with the Alphabet,
 
 .. math::
 
   \mathbb{N} \times \Sigma
 
-And then construct Sentence-level events through unions, intersections and complementations. 
+In this way, the event of a Word may be described in a way analogous to :ref:`Definition 1.1.2 <definition-1-1-2>`, where it is associated with a set of ordered pairs,
 
+.. math::
 
+  E = \{ (1, \text{"d"}), (2, \text{"o"}), (3, \text{"g"}) \}
+
+More complicated Sentence-level events can then be constructed through unions, intersections and complementations. But this immediately leads to two technical difficulties. 
+
+First, this implies a sample space with infinite cardinality which can lead to overly technical and mathematical caveats to prevent paradoxes and inconsistencies from arising in the probability model. However, this difficulty can be overcome with the adoption of an axiom that prohibits Sentences of infinite length,
+
+.. _axiom-s3:
+
+**Axiom S.3: The Finite Axiom**
+
+.. math::
+
+  \exists N \in \mathbb{N}: \forall \zeta \in C_L: l(\zeta) \leq N
+
+∎
+
+This axiom captures the common-sense notion that every Sentence in a Corpus must be finite. With this addition, the sample space might be defined as,
+
+.. math::
+
+  \Omega = \{ (i, \iota) | (i \in \mathbb{N}) \land (1 \leq i \leq N) \land (\iota \in \Sigma_{\epsilon}) \}
+
+Adoption of :ref:`Axiom S.3 <axiom-s3>` and this sample space would immediately solve the problem of infinitude. However, a deeper and more subtle problem lurks in this formulation that cannot be axiomatized away.
+
+If the sigma algebra is defined as the power set of :math:`\mathbb{N} \times \Sigma`, then the complement of **E**, denoted :math:`E^{c}`, would consist of every possible combination of ordered Characters that does not involve :math:`(1, \text{"d"})`, :math:`(2, \text{"o"})` or :math:`(3, \text{"g"})`. For example, the following would be true,
+
+.. math::
+
+  \forall i \in \mathbb{N}: (i, \sigma) \in E^{c}
+
+From this, it can be seen the complement of **E** in a :math:`\mathbb{N} \times \Sigma` sample space contains a multiplicity of ordered pairs that cannot be put into any definite order. In other words, :math:`E^c` is not *semantically coherent*. Attempting to restrict the sigma algebra defined on :math:`\mathbb{N} \times \Sigma` to only those strings which are semantic leads to insurmountable obstacles, since the grammatical rules which construct semantically coherent and admissible Strings would need to be known a priori. Moreover, it would need to be shown the operations of complementation and finite unions are closed, which is to say, these operations only produce classes of grammatical Strings. 
+
+A more technically feasible approach would be to define the sample space as the Corpus and then define basis events on this sample space as Character level events. This leads to the following definition,
+
+**Definition 5.2.1: Sample Space**
+
+The sample space for a linguistic experiment is the Corpus of its Language, 
+
+.. math::
+
+  \Omega = C_L
+
+∎
+
+TODO
+
+**Definition 5.2.2: Basis Events**
+
+TODO 
+
+.. math::
+
+  E_{(i, \iota)} = { \zeta \in \Omega | \zeta[i] = \iota }
+
+∎
+
+TODO
