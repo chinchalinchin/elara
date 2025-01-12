@@ -127,9 +127,9 @@ Let *ζ* be an arbitary Sentence from Corpus :math:`C_L` and let *k* be a natura
     
 .. _definition-5-1-2:
 
-**Definition 5.1.2: Lefthand Sentence Integrals**
+**Definition 5.1.2: Righthand Sentence Integrals**
 
-The *Right-Hand Integral* of Sentence ζ, denoted *Ω*:sub:`+`*(ζ,k)*, is defined as,
+The *Right-Hand Integral* of Sentence ζ, denoted :math:`\Phi_{+}(\zeta, k)`, is defined as,
 
 .. math::
 
@@ -671,7 +671,7 @@ This method of *"weighing"* the Delimiters in a Sentence provides a method for a
 Theorems
 ^^^^^^^^
 
-TODO: explain 
+The first two theorems, :ref:`Theorem 5-1-1 <theorem-5-1-1>` and :ref:`Theorem 5.1.2 <theorem-5-1-2>`, establish the lower bound for all Sentence Integrals. 
 
 .. _theorem-5-1-1:
 
@@ -713,8 +713,6 @@ Since *ζ* and *k* were arbitrary, this can be generalized over the Corpus,
   5. \quad \forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\zeta,k) \geq 0 \land \Phi_{+}(\zeta,k) \geq 0
 
 ∎
-
-TODO
 
 .. _theorem-5-1-2:
 
@@ -770,65 +768,53 @@ The next two theorems provide a method for calculating the Lefthand and Righthan
 
 .. _theorem-5-1-3:
 
-**Theorem 5.1.3** ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+**Theorem 5.1.3** :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[:i])}{l(\zeta)} = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{i}{l(\zeta)}`
 
 Let *ζ* be an arbitrary Sentence in the Corpus,
 
-    1. ζ ∈ C:sub:`L` 
+.. math::
+
+  1. \quad \zeta \in C_L 
     
-Let *k* be a natural number such that,
+Let *k* be a natural number such that :math:`1 \leq k \leq N_{l(\zeta)}`. By :ref:`Definition 4.2.1 <definition-4-2-1>` of Left Partial Sentences, for any *i* where :math:`1 \leq i \leq l(\zeta)`,
 
-    2. k ∈ N:sub:`l(ζ)`
+.. math::
 
-By Definition 3.2.5 of Left Partial Sentences, for any *i* where *1 ≤ i ≤ l(ζ)*,
+  2. \quad l(\zeta[:i]) = i
 
-    3. l(ζ[:i]) = i
+Substituting step 2 into :ref:`Definition 5.1.1 <definition-5-1-1>` of Lefthand Sentence Integrals and generalizing over the Corpus,
 
-Now, consider the Left-Hand Integral up to index *k*,
+..  math::
 
-    4. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ))
-
-Substituting l(ζ[:i]) = i into the expression, we get:
-
-    5. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ))
-   
-Since *ζ* and *k* were arbitrary, this can generalize over the Corpus,
-
-    6. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (i/l(ζ)) 
+  3. \quad \forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[:i])}{l(\zeta)} = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{i}{l(\zeta)}
 
 ∎
 
 .. _theorem-5-1-4:
 
-**Theorem 5.1.4** ∀ ζ ∈ C:sub:`L`: ∀ i ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+**Theorem 5.1.4** :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[i:])}{l(\zeta)} = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta)-i+1}{l(\zeta)}`
 
-PLet *ζ* be an arbitrary Sentence in the Corpus,
+Let *ζ* be an arbitrary Sentence in the Corpus,
 
-    1. ζ ∈ C:sub:`L` 
+.. math::
+
+  1. \quad \zeta \in C_L 
     
-Let *k* be a natural number such that,
+Let *k* be a natural number such that :math:`1 \leq k \leq l(\zeta)`. By :ref:`Definition 4.2.2 <definition-4-2-2>` of Right Partial Sentences, for any *i* where :math:`1 \leq i \leq l(\zeta)`, 
 
-    2. k ∈ N:sub:`l(ζ)`
-   
-By Definition 3.2.6 of Right Partial Sentences, for any *i* where *1 ≤ i ≤ l(ζ)*, 
+.. math::
 
-    3. l(ζ[i:]) = l(ζ) - i + 1
-   
-Now, consider the Right-Hand Integral up to index *k*:
+  2. l(\zeta[i:]) = l(\zeta) - i + 1
+  
+Substituting step 2 into :ref:`Definition 5.1.2 <definition-5-1-2>` of Righthand Sentence Integrals and generalizing over the Corpus,
 
-    4. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))`
+.. math::
 
-Substituting step 3 into step 4,
-
-    5. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ))
-
-Since ζ and k were arbitrary, this can generalize over the Corpus,
-
-    6. ∀ ζ ∈ C:sub:`L`: ∀ k ∈ N:sub:`l(ζ)`: Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ)) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * ((l(ζ) - i + 1)/l(ζ)) 
+  \forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta[i:])}{l(\zeta)} = \sum_{i=1}^{k} \Delta(\zeta[i]) \cdot \frac{l(\zeta)-i+1}{l(\zeta)}
 
 ∎
 
-The terms *(l(ζ) - i + 1)* and *i* that appear in the Sentence Integral summation may be thought of as the *"weight"* of a Delimiter. Since the Delimiter Count is either 0 or 1 for a single Character, the weight of Delimiters in a Sentence are the only contributions to the summation in a Sentence Integral. This analogy to the mathematical concepts of density and mass is codified in the following definition.
+As mentioned previously, the terms *(l(ζ) - i + 1)* and *i* that appear in the Sentence Integral summation may be thought of as the *"weight"* of a Delimiter. Since the Delimiter Count is either 0 or 1 for a single Character, the weight assigned to Delimiters, i.e. when :math:`\Delta(\zeta[i]) = 1`, in a Sentence are the only contributions to the summation in a Sentence Integral. This analogy to the mathematical concepts of density and mass is codified in the following definition.
 
 .. _definition-5-1-3:
 
