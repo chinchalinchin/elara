@@ -8,4 +8,4 @@ Organon
   :maxdepth: 2
   :caption: Contents:
 
-   00_cantor
+  00_cantor
