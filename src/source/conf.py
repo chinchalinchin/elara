@@ -40,7 +40,9 @@ html_css_files = [
     'custom.css'
 ] 
 
-exclude_patterns = [ ]
+exclude_patterns = [
+    '_apps/elara/data/context.rst'
+]
 
 plot_html_show_source_link = True
 

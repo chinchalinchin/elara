@@ -8,3 +8,4 @@ venv/**
 !/venv/.gitkeep
 **/pyvenv.cfg
 **/*.pyc
+src/source/_apps/elara/data/context.rst
