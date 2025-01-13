@@ -8,7 +8,7 @@ Facticity
   :maxdepth: 2
   :caption: Contents:
 
-  00_BC
-  01_AD
-  02_AEI
-  03_ENT
+  00_ante_christum
+  01_anno_domini
+  02_aidion
+  03_kairos

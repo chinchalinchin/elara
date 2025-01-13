@@ -3,10 +3,10 @@
 ἀίδιον
 ======
 
-    We shall not cease from exploration<br>
-    And the end of all our exploring<br>
-    Will be to arrive where we started<br>
-    And know the place for the first time.<br>
+    We shall not cease from exploration
+    And the end of all our exploring
+    Will be to arrive where we started.
+    And know the place for the first time.
 
     -- *Little Gidding V*, T.S. Eliot
 

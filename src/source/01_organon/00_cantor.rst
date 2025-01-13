@@ -3,22 +3,31 @@
 Cantor
 ======
 
+    Je le vois, mais je ne le crois pas!
+
+    -- *Correspondence with Richard Dedekind*, Georg Cantor, 1877
+
+.. _transfinitude: 
+
+Transfinitude
+-------------
+
 .. _rebellious-set:
 
 The Curse of the Rebellious Set
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _definition_rebellious_set:
 
-**Definition: The Rebellious Set**
+.. topic:: Definition: The Rebellious Set 
 
-Let :math:`A` be any set and let :math:`P(A)` be it's power set. Assume :math:`f: A \to P(A)`. The Rebellious Set, denoted R, is defined as the set which satisfies this formula,
+    Let :math:`A` be any set and let :math:`P(A)` be it's power set. Assume :math:`f: A \to P(A)`. The Rebellious Set, denoted R, is defined as the set which satisfies this formula,
 
-.. math::
+    .. math::
 
-    R = \{ x \in A \, \mid \, x \notin f(x) \}
+        R = \{ x \in A \, \mid \, x \notin f(x) \}
 
-∎
+    ∎
 
 .. _rebellious-set-theorem:
 
@@ -37,7 +46,7 @@ If :math:`y \neq a`, then :math:`y \notin f(y)`, which means *y* should be in :m
 .. _more-parts-than-wholes:
 
 More Parts Than Wholes
------------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. _part-whole-theorem:
 

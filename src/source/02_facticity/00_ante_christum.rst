@@ -1,6 +1,6 @@
-.. _4th-century:
+.. _ante-christum:
 
-Before Christ
+Ante Christum
 =============
 
 400s
