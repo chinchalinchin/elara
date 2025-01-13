@@ -1,6 +1,13 @@
 Elara Protocol
 ##############
 
+.. image:: _static/img/etc/wittgenstein_rabbit_duck.svg
+   :width: 600px
+   :alt: the eye of the beholder
+   :align: center
+   
+---
+
    *ό ποιητα, ἢ πῖθι ἢ ἄπιθι*
 
    -- Inscription on an Ancient Grecian drinking vessel.
@@ -14,3 +21,8 @@ Elara Protocol
    02_facticity/index
    03_universalis/index
    04_palindromia/index
+
+.. toctree::
+   :hidden:
+
+   radix

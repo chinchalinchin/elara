@@ -9,6 +9,12 @@ pip install -r requirements.txt
 cd src 
 make html
 ```
+### Documentation
+
+- [ReStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html)
+- [Sphinx Book Theme](https://sphinx-book-theme.readthedocs.io/en/stable/index.html)
+- [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/index.html)
+- [Sphinx Design](https://sphinx-design.readthedocs.io/en/pydata-theme/index.html)
 
 ### Reference
 

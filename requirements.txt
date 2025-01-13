@@ -1,6 +1,7 @@
 sphinx
 sphinx-toolbox
 sphinx-book-theme
+sphinx_design
 matplotlib
 numpy
 scipy
