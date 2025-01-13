@@ -1,7 +1,7 @@
 .. _math-scripts:
 
-Mathematics
-===========
+Abstracta
+=========
 
 Number Theory
 -------------

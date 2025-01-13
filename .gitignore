@@ -7,3 +7,4 @@ src/build/**
 venv/**
 !/venv/.gitkeep
 **/pyvenv.cfg
+**/*.pyc
