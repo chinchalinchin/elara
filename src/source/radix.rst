@@ -32,3 +32,13 @@ classics.mit.edu
 
 - [Physics](http://classics.mit.edu/Aristotle/physics.html)
 - [Metaphysics](http://classics.mit.edu/Aristotle/metaphysics.html)
+
+columbia.edu
+------------
+
+- `Little Gidding <https://www.columbia.edu/itc/history/winter/w3206/edit/tseliotlittlegidding.html>`
+
+poetryfoundation.org
+--------------------
+
+- `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`
