@@ -74,14 +74,20 @@ def chat(prompt, context, model_type=model.DEFAULT_MODEL):
     context = parse.persist(prompt, response, context)
     return response
 
-if __name__ == "__main__":
+def main():
+    """
+    Main function to run the command-line interface.
+    """
     parsed_args = args()
     if parsed_args.operation == "chat":
         res = chat(parsed_args.prompt, parsed_args.context, parsed_args.model)
         print(res)
     elif parsed_args.operation == "conduct":
-        experiment.conduct(parsed_args.experiment, parsed_args.model)
+        experiment.conduct(parsed_args.experiment)
     elif parsed_args.operation == "summarize":
         parse.summarize(parsed_args.directory)
     else:
         print("Invalid operation. Choose 'chat', 'conduct', or 'summarize'.")
+
+if __name__ == "__main__":
+    main()
