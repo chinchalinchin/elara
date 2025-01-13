@@ -23,7 +23,8 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.graphviz',
     'sphinx_toolbox.collapse',
-    'matplotlib.sphinxext.plot_directive'
+    'matplotlib.sphinxext.plot_directive',
+    'sphinx_design'
 ]
 
 templates_path = [ ]
@@ -43,6 +44,10 @@ html_theme = 'sphinx_book_theme'
 html_theme_options = { }
 
 html_title = "elara protocol"
+
+html_context = {
+   "default_mode": "dark"
+}
 
 # -- Latex configuration -----------------------------------------------------
 

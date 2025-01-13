@@ -21,10 +21,9 @@ The Language Game is a game I play with generative AIs to test the limits of the
    modules/M05_embodiment
    modules/M06_rhythm
    plugins/P01_initialization
-   plugins/P02_context
-   plugins/P03_adaptation
-   plugins/P04_functions
-   plugins/P05_metrics
+   plugins/P02_adaptation
+   plugins/P03_functions
+   plugins/P04_metrics
    games/G01_exercises
    games/G02_garden
 
