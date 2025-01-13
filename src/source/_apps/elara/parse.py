@@ -4,6 +4,7 @@ Module for formatting prompts and responses. It also handles context.
 import os
 import subprocess
 import textwrap
+from pathlib import Path
 
 preamble = """
 Our Conversation
@@ -17,12 +18,13 @@ included in your actual responses. The conversation goes in sequential order, st
 the earliest message down to the latest.\n\n
 """
 
-DATA_DIR="data"
-DEFAULT_CONTEXT = os.path.join(DATA_DIR, "context.rst")
-DEFAULT_SUMMARY = os.getcwd()
+THIS_DIR = Path(__file__).resolve().parent
+DATA_DIR = os.path.join(THIS_DIR, "data")
+DEFAULT_CONTEXT = os.path.join(DATA_DIR,"context.rst")
+DEFAULT_SUMMARY = THIS_DIR
 
 def prompt(text):
-    return f".. me::\n\n\t{text}\n"
+    return f"\n.. me::\n\n\t{text}\n"
 
 def response(text):
     """Formats the model's response for RST.
