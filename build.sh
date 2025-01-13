@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Get the directory where the script resides
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 source "$SCRIPT_DIR/venv/bin/activate"
@@ -8,8 +7,6 @@ source "$SCRIPT_DIR/venv/bin/activate"
 S3_BUCKET=$ELARA_BUCKET
 DISTRIBUTION_ID=$ELARA_DIST
 DIRECTORY="src/build/html"
-
-# Initialize the build flag
 BUILD=false
 
 # Parse command-line arguments
