@@ -1,172 +1,290 @@
 """ # parse.py
 Module for formatting prompts and responses. It also handles context.
 """
+# Standard Library Modules
 import os
+import json
 import subprocess
 import textwrap
 
+# Application Modules
 import conf
 
+# External Modules
+from jinja2 import Template
+
 _personas = { } 
+_cache = None 
 
-def personas():
-    return [ key for key in _personas.keys() ]
+class TreeCommandNotFoundError(Exception):
+    """
+    Raised when the 'tree' command is not found.
+    """
+    pass
 
-def preamble(
-    persona = conf.DEFAULTS["PERSONA"]
+class TreeCommandFailedError(Exception):
+    """
+    Raised when the 'tree' command returns a non-zero exit code.
+    """
+    pass
+
+class SummarizeDirectoryNotFoundError(Exception):
+    """
+    Raised when the ``directory`` passed to the ``summarize()`` function does not exist
+    """
+    pass
+
+# PRIVATE FUNCTIONS 
+
+def _prompt(
+    text,
+    prompter = None
 ):
-    return _personas[persona]["PREAMBLE"]
+    """
+    Template prompts with RST admonition and prompter name.
+    """
+    if prompter is None:
+        cache = load_cache()
+        prompter = cache["template"]["currentPrompter"]
 
-def training_data(
-    persona = conf.DEFAULTS["PERSONA"]
+    indented_lines = textwrap.indent(text, "\t").splitlines()
+
+    formatted_response = f"\n.. admonition:: {prompter}\n\n" + "\n".join(indented_lines) + "\n"
+    return formatted_response
+
+def _response(
+    text,
+    persona = None
 ):
-    return _personas[persona]["TUNING"]
+    """
+    Formats the model's response for RST.
+    """
+    if persona is None:
+        cache = load_cache()
+        persona = cache["template"]["currentPersona"]
+
+    indented_lines = textwrap.indent(text, "\t").splitlines()
+
+    formatted_response = f"\n.. admonition:: {persona}\n\n" + "\n".join(indented_lines) + "\n"
+    return formatted_response
+
+# PUBLIC FUNCTIONS
 
 def init():
-    os.makedirs(conf.PERSONA_DIR, exist_ok=True)
-    os.makedirs(conf.TUNING_DIR, exist_ok=True)
-    for root, _, files in os.walk(conf.PERSONA_DIR):
+    """
+    Initialize parse module.
+    """
+    global _personas
+
+    for root, _, files in os.walk(conf.PERSIST["DIR"]["PREAMBLE"]):
         for file in files:
             if os.path.splitext(file)[1] not in  [".rst", ".md"]:
                 continue
 
+            persona = os.path.splitext(file)[0]
             file_path = os.path.join(root, file)
 
             with open(file_path, "r") as f:
                 payload  = f.read()
-                
-            _personas[os.path.splitext(file)[0]] = {}
-            _personas[os.path.splitext(file)[0]]["PREAMBLE"] = payload
 
-    for root, _, files in os.walk(conf.TUNING_DIR):
+            _personas[persona] = {}
+            _personas[persona]["PREAMBLE"] = payload
+
+    for root, _, files in os.walk(conf.PERSIST["DIR"]["TUNING"]):
         for file in files:
             if os.path.splitext(file)[1] !=  ".json":
                 continue
 
+            persona = os.path.splitext(file)[0]
+            file_path = os.path.join(root, file)
+
+            with open(file_path, "r") as f:
+                payload  = json.load(f)
+
+            _personas[persona]["TUNING"] = payload
+    
+    for root, _, files in os.walk(conf.PERSIST["DIR"]["SYSTEM"]):
+        for file in files:
+            if os.path.splitext(file)[1] !=  ".txt":
+                continue
+
+            persona = os.path.splitext(file)[0]
             file_path = os.path.join(root, file)
 
             with open(file_path, "r") as f:
                 payload  = f.read()
 
-            _personas[os.path.splitext(file)[0]]["TUNING"] = payload
+            _personas[persona]["SYSTEM"] = payload
+
+    for root, _, files in os.walk(conf.PERSIST["DIR"]["THREADS"]):
+        for file in files:
+            if os.path.splitext(file)[1] !=  ".rst":
+                continue
+
+            persona = os.path.splitext(file)[0]
+            file_path = os.path.join(root, file)
+
+            with open(file_path, "r") as f:
+                payload  = f.read()
+
+            _personas[persona]["THREADS"] = {}
+            _personas[persona]["THREADS"]["FILE"] = file_path
+            _personas[persona]["THREADS"]["DATA"] = payload
+
     return
 
-def prompt(text):
-    return f"\n.. admonition:: {conf.PROMPTER}\n\n\t{text}\n"
-
-def response(
-    text, 
-    persona=conf.DEFAULTS["PERSONA"]
-):
-    """Formats the model's response for RST.
+def load_cache():
+    """Loads the tuned model cache from the JSON file."""
+    global _cache
     
-    This function now handles multiple newlines correctly.
-    """
-    # Indent each line individually
-    indented_lines = textwrap.indent(text, "\t").splitlines()
-    # Join with newline and add to directive
+    if _cache is not None:
+        return _cache
+    
+    try:
+        with open(conf.PERSIST["FILE"]["CACHE"], "r") as f:
+            _cache = json.load(f)
+    except FileNotFoundError:
+        _cache = {
+            "baseModels": conf.MODEL["BASE_MODELS"],
+            "tunedModels": [],
+            "currentModel": conf.MODEL["BASE_MODELS"][0]["path"],
+            "template": {
+                "currentPersona": conf.DEFAULTS["PERSONA"],
+                "currentPrompter": conf.DEFAULTS["PROMPTER"]
+            }
+        }
 
-    formatted_response = f".. admonition:: {persona}\n\n" + "\n".join(indented_lines) + "\n"
-    return formatted_response
+    return _cache
+
+def save_cache(cache):
+    """Saves the tuned model cache to the JSON file."""
+    global _cache
+
+    _cache = cache
+    with open(conf.PERSIST["FILE"]["CACHE"], "w") as f:
+        json.dump(cache, f, indent=4)
+
+def persona():
+    """
+    Get current persona.
+    """
+    global _personas 
+
+    cache = load_cache()
+    return _personas[cache["template"]["currentPersona"]]
+
+def all_personas():
+    return [ key for key in _personas.keys() ]
 
 def persist(
-    raw_prompt, 
     raw_response, 
-    context_file=conf.DEFAULTS["CONTEXT"], 
-    persona=conf.DEFAULTS["PERSONA"]
+    persona=None
 ):
-    """Appends the prompt and response to the context file."""
+    """
+    Appends the prompt and response to the context file.
+    """
+    global _personas
+    
+    if persona is None:
+        cache = load_cache()
+        persona = cache["template"]["currentPersona"]
 
-    # Create context if file doesn't exist
-    if not os.path.exists(context_file):
-        with open(context_file, "w") as f:
-            f.write(preamble(persona) + "\n")  # Initialize with the preamble
+    _personas[persona]["THREADS"]["DATA"] += _response(raw_response, persona)
 
-    context = prompt(raw_prompt) + "\n" + response(raw_response, persona)  # Removed extra newline
+    with open(_personas[persona]["THREADS"]["FILE"], "w") as f:
+        f.write(_personas[persona]["THREADS"]["DATA"] + "\n")
 
-    with open(context_file, "a") as f:
-        f.write(context)
-
-    return context
+    return _personas[persona]["THREADS"]["DATA"]
 
 def contextualize(
     raw_prompt, 
-    context_file=conf.DEFAULTS["CONTEXT"], 
-    persona=conf.DEFAULTS["PERSONA"]
+    persona=None,
+    summarize_dir=None
 ):
     """Appends the preamble and context to prompt."""
+    global _personas
 
-    prefixed_prompt = ""
+    cache = load_cache()
+    template_vars = cache["template"]
 
-    if os.path.exists(context_file):
-        with open(context_file, "r") as f:
-            context = f.read()
-        prefixed_prompt += preamble(persona) + context
-    prefixed_prompt += prompt(raw_prompt)
+    if persona is None:
+        persona = cache["template"]["currentPersona"]
 
-    return prefixed_prompt
+    if summarize_dir is not None:
+        template_vars["summary"] = summarize(summarize_dir, stringify=True)
+
+    _personas[persona]["THREADS"]["DATA"] += _prompt(raw_prompt)
+
+    payload = _personas[persona]["PREAMBLE"] + _personas[persona]["THREADS"]["DATA"]
+
+    return Template(payload).render(template_vars)
 
 def summarize(
-    directory=conf.DEFAULTS["SUMMARY"]
+    directory,
+    stringify = False
 ):
     """Summarizes the contents of a directory in an RST document."""
+
     if not os.path.isdir(directory):
-        print(f"Error: '{directory}' is not a valid directory.")
-        return
+        raise SummarizeDirectoryNotFoundError(f"{directory} does not exist.")
 
-    output_file = os.path.join(directory, "summary.rst")
-    with open(output_file, "w") as f:
-        f.write(f"{os.path.basename(directory)}\n")  # Directory name as title
-        f.write("=" * len(os.path.basename(directory)) + "\n\n")  # Underline
+    summary_file = conf.summary_file()
+    output_file = os.path.join(directory, summary_file)
 
-        # Generate directory tree using subprocess
-        f.write("Directory Structure\n")
-        f.write("-" * 19 + "\n\n")
-        f.write(".. code-block:: bash\n\n")
-        
-        try:
-            # Added text=True for string output
-            tree_output = subprocess.check_output(
-                ["tree", "-n", directory], 
-                text=True
-            )
-            f.write(textwrap.indent(tree_output, "\t"))
-        except FileNotFoundError:
-            print("Error: The 'tree' command was not found. Please install it.")
-            return
-        except subprocess.CalledProcessError as e:
-            print(f"Error: The 'tree' command returned a non-zero exit code: {e.returncode}")
-            return
-        f.write("\n")
+    payload= f"{os.path.basename(directory)}\n" + \
+        "=" * len(os.path.basename(directory)) + "\n\n" + \
+        "Directory Structure\n" + \
+        "-" * 19 + "\n\n" + \
+        ".. code-block:: bash\n\n"
+    
+    try:
+        # Added text=True for string output
+        tree_output = subprocess.check_output(
+            ["tree", "-n", directory], 
+            text=True
+        )
+        payload += textwrap.indent(tree_output, "\t")
+    except FileNotFoundError:
+        raise TreeCommandNotFoundError("The 'tree' command was not found. Please install it.")
+    except subprocess.CalledProcessError as e:
+        raise TreeCommandFailedError(f"The 'tree' command returned a non-zero exit code: {e.returncode}")
+    
+    payload += "\n\n"
 
-        # Iterate through files and add their contents
-        for root, _, files in os.walk(directory):
-            for file in files:
-                # Filter file extensions
-                _, ext = os.path.splitext(file)
-                if ext not in conf.EXTENSIONS:
-                    continue
+    for root, _, files in os.walk(directory):
+        for file in files:
 
-                file_path = os.path.join(root, file)
-                relative_path = os.path.relpath(file_path, directory)
+            base, ext = os.path.splitext(file)
+            if ext not in conf.extensions() or base == conf.SUMMARIZE["FILE"]:
+                continue
 
-                f.write(f"{relative_path}\n")
-                f.write("-" * len(relative_path) + "\n\n")
+            file_path = os.path.join(root, file)
+            relative_path = os.path.relpath(file_path, directory)
 
-                directive = ext in conf.SUMMARIZE["DIRECTIVES"].keys()
+            payload += f"{relative_path}\n" + \
+                "-" * len(relative_path) + \
+                "\n\n"
 
+            directive = ext in conf.SUMMARIZE["DIRECTIVES"].keys()
+
+            if directive:
+                payload += f"{conf.SUMMARIZE["DIRECTIVES"][ext]}\n\n"
+
+            with open(file_path, "r") as infile:
+                content = infile.read()
+
+                # Indent content for RST directives
                 if directive:
-                    f.write(f"{conf.SUMMARIZE["DIRECTIVES"][ext]}\n\n")
+                    content = textwrap.indent(content, "\t")
 
-                with open(file_path, "r") as infile:
-                    content = infile.read()
+                payload += content
 
-                    # Indent content for RST directives
-                    if directive:
-                        content = textwrap.indent(content, "\t")
-
-                    f.write(content)
-
-                f.write("\n\n")
+            payload += "\n\n"
 
     print(f"Summary generated at: {output_file}")
+    
+    if not stringify:     
+        with open(output_file, "w") as out:
+            out.write(payload)
+
+    return payload

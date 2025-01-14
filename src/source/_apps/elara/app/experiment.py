@@ -1,18 +1,16 @@
 """ # experiment.py
 Module for performing experiments on LLMs.
 """
+# Standard Library Modules
+import time
+
 # Application Modules
 import conf
 import model 
 import parse
 
-# Standard Library Modules
-import time 
-import os
-
 # External Modules
 from google.api_core.exceptions import ResourceExhausted
-
 
 def conduct(
     choice, 
@@ -26,7 +24,8 @@ def _duality(
     max_cycles = 20, 
     max_delay = 60, 
     initial_prompt = conf.DEFAULTS["PROMPT"],
-    model_type = conf.DEFAULTS["MODEL"],
+    model_a = conf.DEFAULTS["MODEL"],
+    model_b = conf.DEFAULTS["MODEL"],
     persona_a = conf.DEFAULTS["PERSONA"],
     persona_b = conf.DEFAULTS["PERSONA"]
 ):
@@ -46,7 +45,7 @@ def _duality(
     delay = 1  # Initial delay in seconds
 
     # Initial interaction
-    response_A = model.reply(context_A + parse.prompt(initial_prompt), model_type)
+    response_A = model.reply(context_A + parse.prompt(initial_prompt), model_a)
     context_A += parse.prompt(initial_prompt) + parse.response(response_A)
 
     while cycle < max_cycles:
@@ -54,7 +53,7 @@ def _duality(
 
         # A talks to B
         try:
-            response_B = model.reply(context_B + parse.prompt(response_A), model_type)
+            response_B = model.reply(context_B + parse.prompt(response_A), model_b)
             context_B += parse.prompt(response_A) + parse.response(response_B)
         except ResourceExhausted as e:
             print(e)
@@ -65,7 +64,7 @@ def _duality(
 
         # B talks to A
         try:
-            response_A = model.reply(context_A + parse.prompt(response_B), model_type)
+            response_A = model.reply(context_A + parse.prompt(response_B), model_a)
             context_A += parse.prompt(response_B) + parse.response(response_A)
         except ResourceExhausted as e:
             print(e)
@@ -76,13 +75,9 @@ def _duality(
         cycle += 1
         delay = 1  # Reset delay after a successful cycle
 
-    # Output to files
-    a_file = os.path.join(conf.DATA_DIR, "duality_context_A.txt")
-    b_file = os.path.join(conf.DATA_DIR, "duality_context_B.txt")
-
-    with open(a_file, "w") as f:
+    with open(conf.PERSIST["FILE"]["EXPERIMENTS"]["DUALITY"]["A"], "w") as f:
         f.write(context_A)
-    with open(b_file, "w") as f:
+    with open(conf.PERSIST["FILE"]["EXPERIMENTS"]["DUALITY"]["B"], "w") as f:
         f.write(context_B)
 
-    print('Duality experiment completed. Results saved to \n\n\t{a_file}\n\n and \n\n\t{b_file}]\n\n')
+    print('Duality experiment completed.')

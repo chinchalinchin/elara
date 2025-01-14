@@ -1,0 +1,42 @@
+{
+    "baseModels": [
+        {
+            "tag": "pro",
+            "path": "models/gemini-1.5-pro-latest"
+        },
+        {
+            "tag": "flash",
+            "path": "models/gemini-1.5-flash-latest"
+        },
+        {
+            "tag": "flash-tune",
+            "path": "models/gemini-1.5-flash-001-tuning"
+        },
+        {
+            "tag": "flash-exp",
+            "path": "model/gemini-2.0-flash-exp"
+        },
+        {
+            "tag": "flash-think-exp",
+            "path": "model/gemini-2.0-flash-thinking-exp"
+        }
+    ],
+    "tunedModels": [
+        {
+            "name": "elara",
+            "path": "tunedModels/elara-a38gqsr3zzw8",
+            "version": "1.0"
+        },
+        {
+            "name": "axiom",
+            "path": "tunedModels/axiom-rx8g5v830mqn",
+            "version": "1.0"
+        }
+    ],
+    "tuningModel": "models/gemini-1.5-flash-001-tuning",
+    "currentModel": "models/gemini-1.5-pro-latest",
+    "template": {
+        "currentPersona": "elara",
+        "currentPrompter": "grant"
+    }
+}
