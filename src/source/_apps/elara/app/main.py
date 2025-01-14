@@ -1,14 +1,14 @@
 """ # main.py
 Module for command line parsing.
 """
-
+# Standard Library Imports 
 import argparse
 
+# Application Module Imports
 import conf
 import experiment
 import model
 import parse
-
 
 def args():
     parser = argparse.ArgumentParser(description="Interact with Gemini.")
@@ -30,7 +30,9 @@ def args():
     return args
 
 def chat(prompt, context, model_type=conf.DEFAULTS["MODEL"]):
-    """Chat with Gemini"""
+    """
+    Chat with Gemini
+    """
     parsed_prompt = parse.contextualize(prompt, context)
     response = model.reply(parsed_prompt, model_type)
     context = parse.persist(prompt, response, context)

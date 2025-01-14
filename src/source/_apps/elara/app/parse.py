@@ -122,7 +122,7 @@ def summarize(
             for file in files:
                 # Filter file extensions
                 _, ext = os.path.splitext(file)
-                if ext not in conf.WHITELISTED_EXTS:
+                if ext not in conf.EXTENSIONS:
                     continue
 
                 file_path = os.path.join(root, file)
@@ -131,10 +131,10 @@ def summarize(
                 f.write(f"{relative_path}\n")
                 f.write("-" * len(relative_path) + "\n\n")
 
-                directive = ext in conf.SUMMARY["DIRECTIVES"].keys()
+                directive = ext in conf.SUMMARIZE["DIRECTIVES"].keys()
 
                 if directive:
-                    f.write(f"{conf.SUMMARY["DIRECTIVES"][ext]}\n\n")
+                    f.write(f"{conf.SUMMARIZE["DIRECTIVES"][ext]}\n\n")
 
                 with open(file_path, "r") as infile:
                     content = infile.read()
