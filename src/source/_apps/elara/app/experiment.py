@@ -2,6 +2,7 @@
 Module for performing experiments on LLMs.
 """
 # Application Modules
+import conf
 import model 
 import parse
 
@@ -12,19 +13,23 @@ import os
 # External Modules
 from google.api_core.exceptions import ResourceExhausted
 
-DEFAULT_EXPERIMENT = "duality"
-"""Default experiment to conduct."""
 
-def conduct(choice, model_type = model.DEFAULT_MODEL):
+def conduct(
+    choice, 
+    model_type=conf.DEFAULTS["MODEL"]
+):
     """Conducts an experiment based on the given choice."""
     if choice == "duality":
         _duality(model_type=model_type)
 
 def _duality(
-        max_cycles = 20, 
-        max_delay = 60, 
-        initial_prompt = "Form is the possibility of structure.",
-        model_type = model.DEFAULT_MODEL):
+    max_cycles = 20, 
+    max_delay = 60, 
+    initial_prompt = conf.DEFAULTS["PROMPT"],
+    model_type = conf.DEFAULTS["MODEL"],
+    persona_a = conf.DEFAULTS["PERSONA"],
+    persona_b = conf.DEFAULTS["PERSONA"]
+):
     """
     Conducts the 'duality' experiment with exponential backoff,
     separate error handling, and correct sleep placement.
@@ -35,8 +40,8 @@ def _duality(
         initial_prompt (str): The initial prompt to start the conversation.
         model_type (str): The type of model to use (e.g., "gemini-pro").
     """
-    context_A = parse.preamble
-    context_B = parse.preamble
+    context_A = parse.preamble(persona_a)
+    context_B = parse.preamble(persona_b)
     cycle = 0
     delay = 1  # Initial delay in seconds
 
@@ -72,8 +77,8 @@ def _duality(
         delay = 1  # Reset delay after a successful cycle
 
     # Output to files
-    a_file = os.path.join(parse.DATA_DIR, "duality_context_A.txt")
-    b_file = os.path.join(parse.DATA_DIR, "duality_context_B.txt")
+    a_file = os.path.join(conf.DATA_DIR, "duality_context_A.txt")
+    b_file = os.path.join(conf.DATA_DIR, "duality_context_B.txt")
 
     with open(a_file, "w") as f:
         f.write(context_A)
