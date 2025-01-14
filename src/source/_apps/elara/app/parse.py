@@ -9,13 +9,22 @@ import conf
 
 _personas = { } 
 
+def personas():
+    return [ key for key in _personas.keys() ]
+
 def preamble(
     persona = conf.DEFAULTS["PERSONA"]
 ):
-    return _personas[f"persona_{persona}"]
+    return _personas[persona]["PREAMBLE"]
+
+def training_data(
+    persona = conf.DEFAULTS["PERSONA"]
+):
+    return _personas[persona]["TUNING"]
 
 def init():
     os.makedirs(conf.PERSONA_DIR, exist_ok=True)
+    os.makedirs(conf.TUNING_DIR, exist_ok=True)
     for root, _, files in os.walk(conf.PERSONA_DIR):
         for file in files:
             if os.path.splitext(file)[1] not in  [".rst", ".md"]:
@@ -25,8 +34,21 @@ def init():
 
             with open(file_path, "r") as f:
                 payload  = f.read()
+                
+            _personas[os.path.splitext(file)[0]] = {}
+            _personas[os.path.splitext(file)[0]]["PREAMBLE"] = payload
 
-            _personas[os.path.splitext(file)[0]] = payload
+    for root, _, files in os.walk(conf.TUNING_DIR):
+        for file in files:
+            if os.path.splitext(file)[1] !=  ".json":
+                continue
+
+            file_path = os.path.join(root, file)
+
+            with open(file_path, "r") as f:
+                payload  = f.read()
+
+            _personas[os.path.splitext(file)[0]]["TUNING"] = payload
     return
 
 def prompt(text):
