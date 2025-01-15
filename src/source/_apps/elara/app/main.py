@@ -86,7 +86,6 @@ def chat(
 
     convo.update(persona, prompter, prompt)
     parsed_prompt = parse.contextualize(persona, summarize_dir)
-    print(parsed_prompt)
     response = model.reply(parsed_prompt, persona, model_type)
     convo.update(persona, persona, response)
 
