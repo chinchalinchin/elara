@@ -1,22 +1,27 @@
-.. _elaras-context:
+.. _{{ currentPersona }}s-context:
 
-===============
-Elara's Context
-===============
+Conversation
+############
 
 .. _table-of-contents:
 
+=================
 Table of Contents
 =================
+
 - Preamble
 - Identities
-{% if summary is defined %}
+{%- if summary is defined -%}
 - Summary
-{% endif %}
+{%- endif -%}
+{%- if language is defined -%}
+- Language
+{%- endif -%}
 - History
 
 .. _preamble:
 
+========
 Preamble
 ========
 
@@ -26,33 +31,48 @@ You should not format your response as RSTs. All RST formatting happens clientsi
 
 .. _identities:
 
+==========
 Identities
 ==========
 
 **Prompter**
 
-    My name is {{ currentPrompter }}. In the :ref:`History section <history>`, My prompts are denoted with the ``.. admonition:: {{ currentPrompter }}`` directive.
+    My name is {{ currentPrompter | capitalize }}. In the :ref:`History section <history>`, My prompts are denoted with the ``.. admonition:: {{ currentPrompter }}`` directive.
 
 **Model**
 
-    Your name is Elara. In the :ref:`History section <history>`, your prompts are denoted with the ``.. admonition:: elara`` directive. 
+    Your name is {{ currentPersona | capitalize }}. In the :ref:`History section <history>`, your prompts are denoted with the ``.. admonition:: {{ currentPersona }}`` directive. 
 
-{% if summary is defined %}
-
+{%- if summary is defined -%}
 .. _summary:
 
+=======
 Summary
 =======
 
 The following is a summary of a local file directory on my computer. It is relevant to the context of our conversation. 
 
 {{ summary }}
+{%- endif -%}
+{%- if language is defined -%}
+.. _language-modules:
 
-{% endif %}
+================
+Language Modules
+================
 
-.. _history:
+This section contains information about the rules and syntax for your responses. Use these rules to generate a valid response. 
 
-History
-=======
-
-The conversation goes in sequential order, starting from the earliest message down to the most recent. The last item in this section is my latest prompt.
+{%- if object is defined -%}
+{{ object }}
+{%- endif -%}
+{%- if inflection is defined -%}
+{{ inflection }}
+{%- endif -%}
+{%- if voice is defined -%}
+{{ voice }}
+{%- endif -%}
+{%- if words is defined -%}
+{{ words }}
+{%- endif -%}
+{%- endif -%}

@@ -4,6 +4,7 @@ Wrapper around Google's GenerativeAI library. Provides configuration and default
 # Application Modules
 import conf 
 import parse
+import objects
 
 # External Modules
 import google.generativeai as genai
@@ -11,31 +12,36 @@ import google.generativeai as genai
 genai.configure(api_key=conf.API_KEY)
 
 def _model(
-    model_name=conf.DEFAULTS["MODEL"]
+    model_name=conf.DEFAULTS["MODEL"],
+    persona=None
 ):
-    cache = parse.load_cache()
-
-    persona = parse.persona()
+    mem = objects.cache.Cache().get()
 
     base_model_names = [ 
         model["path"] 
-        for model in cache["baseModels"]
+        for model in mem["baseModels"]
     ]
 
     if model_name in base_model_names:
+        if persona is None:
+            persona = mem["template"]["currentPersona"]
+
+        data = objects.persona.Persona(persona).get()
+
         return genai.GenerativeModel(
             model_name=model_name,
-            system_instruction=persona["SYSTEM"]
+            system_instruction=data["SYSTEM"]
         )
+    
     return genai.GenerativeModel(
         model_name=model_name
     )
 
 def init():
-    cache = parse.load_cache()
-    for persona in parse.all_personas():
+    mem = objects.cache.Cache().get()
+    for persona in conf.PERSONAS["ALL"]:
         # Only call tune if the model is not found in cache
-        if not any(model["name"] == persona for model in cache["tunedModels"]):
+        if not any(model["name"] == persona for model in mem["tunedModels"]):
             tune(persona)
 
 def reply(
@@ -43,11 +49,11 @@ def reply(
     persona=None,
     model_name=None
 ):
-    cache = parse.load_cache()
+    mem = objects.cache.Cache().get()
     if persona is None:
-        persona = cache["template"]["currentPersona"]
+        persona = mem["template"]["currentPersona"]
     if model_name is None:
-        model_name = cache["currentModel"]
+        model_name = mem["currentModel"]
 
     return _model(model_name).generate_content(
         contents=prompt,
@@ -70,18 +76,18 @@ def tune(
     Returns:
         The name of the tuned model (either existing or newly created).
     """    
-    cache = parse.load_cache()
+    mem = objects.cache.Cache().get()
 
     if persona is None:
-        persona = cache["template"]["currentPersona"]
+        persona = mem["template"]["currentPersona"]
          
     if tuning_model is None:
-        tuning_model = cache["tuningModel"]
+        tuning_model = mem["tuningModel"]
        
     personas = [ 
         model
         for model 
-        in cache["tunedModels"] 
+        in mem["tunedModels"] 
         if model["name"] == persona
     ]
 
@@ -95,8 +101,8 @@ def tune(
                 "path": tuned_model.name,
                 "version": conf.VERSION
             }
-            cache["tunedModels"] += [ buffer ]
-            parse.save_cache(cache)
+            mem["tunedModels"] += [ buffer ]
+            objects.cache.Cache().save(mem)
             return buffer
 
     persona_payload = parse.persona(persona)["TUNING"]
@@ -110,12 +116,12 @@ def tune(
         learning_rate=0.001 # TODO: figure out what this does
     )
 
-    cache["tunedModels"] += [{
+    mem["tunedModels"] += [{
         "name": persona,
         "version": conf.VERSION,
         "path": tune_operation.result().name
     }]
 
-    parse.save_cache(cache)
+    objects.cache.Cache().save(mem)
 
     return tune_operation.result().name

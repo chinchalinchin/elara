@@ -13,13 +13,13 @@ _dir = Path(__file__).resolve().parent
 PERSIST = {
     "DIR": {
         "APP": _dir,
-        "CACHE": os.path.join(_dir, "data", "cache"),
         "DATA": os.path.join(_dir, "data"),
-        "PREAMBLE": os.path.join(_dir, "data", "preamble"),
+        "EXPERIMENTS": os.path.join(_dir, "data", "experiment"),
+        "HISTORY": os.path.join(_dir, "data", "history"),
+        "MODULES": os.path.join(_dir, "data", "modules"),
+        "TEMPLATES": os.path.join(_dir, "data", "templates"),
         "TUNING": os.path.join(_dir, "data", "tuning"),
-        "THREADS": os.path.join(_dir, "data", "threads"),
         "SYSTEM": os.path.join(_dir, "data", "system"),
-        "EXPERIMENTS": os.path.join(_dir, "data", "experiment")
     },
     "FILE": {
         "CACHE": os.path.join(_dir, "data", "cache.json"),
@@ -66,6 +66,32 @@ MODEL = {
 }
 """Configuration for ``google.generativeai.GenerativeModel``"""
 
+LANGUAGE = {
+    "EXTENSION": ".rst",
+    "MODULES": {
+        "OBJECT": bool(os.environ.setdefault("LANGUAGE_OBJECT", "1")),
+        "INFLECTION": bool(os.environ.setdefault("INFLECTION", "1")),
+        "VOICE": bool(os.environ.setdefault("VOICE", "0")),
+        "WORDS": bool(os.environ.setdefault("WORDS", "1"))
+    }
+}
+"""Configuration for Language modules"""
+
+PERSONAS = {
+    "ALL": ["elara", "axiom"]
+}
+"""Configuration for personas"""
+
+DEFAULTS = {
+    "SOURCE": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
+    "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
+    "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
+    "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
+    "PROMPT": "Hello! Form is the possibility of structure.",
+    "EXPERIMENT": "duality"
+}
+"""Configuration for application deaults"""
+
 SUMMARIZE = {
     "DIRECTIVES": {
         ".py": ".. code:: python",
@@ -87,17 +113,6 @@ SUMMARIZE = {
     "EXT": "rst"
 }
 """Configuration for the ``summarize`` function. """
-
-
-DEFAULTS = {
-    "SOURCE": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
-    "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
-    "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
-    "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
-    "PROMPT": "Hello! Form is the possibility of structure.",
-    "EXPERIMENT": "duality"
-}
-"""Configuration for application deaults"""
 
 ARGUMENTS = [{
     "mode": "name",
@@ -142,7 +157,7 @@ ARGUMENTS = [{
 }]
 """Configuration for command line arguments"""
 
-VERSION ="1.0"
+VERSION = os.environ.setdefault("VERSION", "1.0")
 """Version configuration"""
 
 API_KEY = os.environ.get("GEMINI_KEY")
@@ -164,3 +179,8 @@ def summary_file():
     Returns the ``summarize()`` filename and extension
     """
     return ".".join([SUMMARIZE["FILE"], SUMMARIZE["EXT"]])
+
+def modules():
+    if any(v for v in LANGUAGE["MODULES"].values()):
+        return [ k.lower() for k,v in LANGUAGE["MODULES"].items() ]
+    return []

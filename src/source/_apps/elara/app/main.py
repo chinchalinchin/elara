@@ -6,8 +6,10 @@ import argparse
 
 # Application Modules
 import conf
-import experiment
 import model
+import objects.cache as cache
+import objects.conversation as conversation
+import objects.personas as personas
 import parse
 
 def args():
@@ -47,21 +49,31 @@ def configure(config_pairs):
     return None
 
 def chat(
-    prompt, 
+    prompt,
+    persona=None,
+    prompter=None,
     model_type=None, 
     summarize_dir=None
 ):
     """
     Chat with Gemini
     """
-    cache = parse.load_cache()
+    mem = cache.Cache().get()
+    convo = conversation.Conversation()
 
     if model_type is None:
-        model_type = cache["currentModel"]
+        model_type = mem["currentModel"]
 
+    if persona is None:
+        persona = mem["template"]["currentPersona"]
+
+    if prompter is None:
+        prompter = mem["template"]["currentPrompter"]
+
+    convo.update(persona, prompter, prompt)
     parsed_prompt = parse.contextualize(prompt, summarize_dir)
     response = model.reply(parsed_prompt, model_type)
-    _ = parse.persist(response)
+    convo.update(persona, persona, response)
 
     return response
 
@@ -69,7 +81,8 @@ def init():
     """
     Initialize application
     """
-    parse.init()
+    mem = cache.Cache().get()
+    per = personas.Persona(current=mem["template"]["currentPersona"]).get()
     model.init()
     return args()
 
@@ -81,8 +94,6 @@ def main():
     if parsed_args.operation == "chat":
         res = chat(parsed_args.prompt, parsed_args.model)
         print(res)
-    elif parsed_args.operation == "conduct":
-        experiment.conduct(parsed_args.experiment)
     elif parsed_args.operation == "summarize":
         parse.summarize(parsed_args.directory)
     elif parsed_args.operation == "configure":

@@ -35,6 +35,10 @@ elara summarize -d /path/to/directory
 
 ## Application Structure
 
+### Flow
+
+- Application Initializes: `parse.init()` traverses `data`, `modules` and `templates`.
+- 
 ### Tuned Models 
 
 Tuned models are initialized the first time the command line interface is invoked. These models have been fine-tuned with JSONs in `data/tuning/*`.
