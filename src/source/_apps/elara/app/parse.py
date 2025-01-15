@@ -4,7 +4,6 @@ Module for formatting prompts and responses. It also handles context management.
 # Standard Library Modules
 import os
 import subprocess
-import textwrap
 
 # Application Modules
 import conf
@@ -29,14 +28,14 @@ def contextualize(
     :rtype: str
     """
     mem = cache.Cache()
-    temps = templates.Template().get()
+    temps = templates.Template()
     convo = conversation.Conversation()
     lang = language.Language(
         enabled = conf.language_modules()
     )
-
+    
     preamble_vars = { 
-        **mem,
+        **mem.all(),
         **lang.get_modules()
     }
 
@@ -84,18 +83,11 @@ def summarize(
     summary_file = conf.summary_file()
     output_file = os.path.join(directory, summary_file)
 
-    payload= f"{os.path.basename(directory)}\n" + \
-        "=" * len(os.path.basename(directory)) + "\n\n" + \
-        "Directory Structure\n" + \
-        "-" * 19 + "\n\n" + \
-        ".. code-block:: bash\n\n"
-    
     try:
         tree_output = subprocess.check_output(
             ["tree", "-n", directory], 
             text=True
         )
-        payload += textwrap.indent(tree_output, "\t")
     except FileNotFoundError:
         raise errors.TreeCommandNotFoundError(
             "The 'tree' command was not found. Please install it."
@@ -105,43 +97,47 @@ def summarize(
             f"The 'tree' command returned a non-zero exit code: {e.returncode}"
         )
     
-    payload += "\n\n"
+    template_vars = {
+        "directory": os.path.basename(directory),
+        "tree": tree_output,
+        "files": []
+    }
 
     for root, _, files in os.walk(directory):
         for file in files:
-
             base, ext = os.path.splitext(file)
             if ext not in conf.summary_extensions() \
                 or base == conf.SUMMARIZE["FILE"]:
                 continue
 
             file_path = os.path.join(root, file)
-            relative_path = os.path.relpath(file_path, directory)
-
-            payload += f"{relative_path}\n" + \
-                "-" * len(relative_path) + \
-                "\n\n"
 
             directive = ext in conf.SUMMARIZE["DIRECTIVES"].keys()
 
-            if directive:
-                payload += f"{conf.SUMMARIZE["DIRECTIVES"][ext]}\n\n"
-
             with open(file_path, "r") as infile:
-                content = infile.read()
+                data = infile.read()
 
-                # Indent content for RST directives
-                if directive:
-                    content = textwrap.indent(content, "\t")
+            if directive:
+                template_vars["files"] += [{
+                    "type": "code",
+                    "data": data,
+                    "lang": conf.SUMMARIZE["DIRECTIVES"][ext],
+                    "name" : os.path.relpath(file_path, directory)
+                }]
+                continue
 
-                payload += content
+            template_vars["files"] += [{
+                "type": "raw",
+                "data": data,
+                "lang": "TODO",
+                "name": os.path.relpath(file_path, directory)
+            }]
 
-            payload += "\n\n"
-
-    print(f"Summary generated at: {output_file}")
+    payload = templates.Template().render("summary", template_vars)
     
     if not stringify:     
         with open(output_file, "w") as out:
             out.write(payload)
+        print(f"Summary generated at: {output_file}")
 
     return payload

@@ -33,7 +33,9 @@ class Template:
         """
         self.dir = dir
         self.ext = ext
-        self._load()
+        self.templates = Environment(
+            loader=FileSystemLoader(self.dir)
+        )
 
     def __new__(
         self, 
@@ -49,17 +51,6 @@ class Template:
                 self
             ).__new__(self, *args, **kwargs)
         return self.inst
-    
-    def _load(
-        self, 
-    ):
-        """
-        Load Templates
-        """
-        self.templates = Environment(
-            loader=FileSystemLoader(self.template_dir)
-        )
-
 
     def get(
         self, 
@@ -76,8 +67,8 @@ class Template:
         :type template: str
         :returns: Jinja2 template
         """
-        file_name = ".".join([template, self.template_ext])
-        return self.templates.get(file_name)
+        file_name = "".join([template, self.ext])
+        return self.templates.get_template(file_name)
 
     def render(
         self, 

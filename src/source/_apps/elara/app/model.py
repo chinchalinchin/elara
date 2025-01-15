@@ -26,6 +26,8 @@ def _model(
 
         data = personas.Personas(persona).get()
 
+        print(data["SYSTEM"])
+
         return genai.GenerativeModel(
             model_name=model_name,
             system_instruction=data["SYSTEM"]

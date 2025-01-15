@@ -2,6 +2,8 @@
 Object for managing conversation chat history.
 """
 # Standard Library Modules
+import datetime
+import json
 import os
 
 # Application Modules
@@ -16,11 +18,14 @@ class Conversation:
     """Chat history"""
     inst = None
     """Singleton instance"""
+    tz_offset = None
+    """Timezone offset"""
 
     def __init__(
         self, 
         dir = conf.PERSIST["DIR"]["HISTORY"],
-        ext = ".json"
+        ext = ".json",
+        tz_offset = conf.CONVERSATION["TIMEZONE_OFFSET"]
     ):
         """
         Initialize Conversation object.
@@ -32,6 +37,7 @@ class Conversation:
         """
         self.dir = dir
         self.ext = ext
+        self.tz_offset = tz_offset
         self._load()
 
     def __new__(
@@ -63,9 +69,9 @@ class Conversation:
                 file_path = os.path.join(root, file)
 
                 with open(file_path, "r") as f:
-                    payload  = f.read()
+                    payload  = json.load(f)
                 
-                self.hist[persona] = payload
+                self.hist[persona] = payload["payload"]
 
     def _persist(
         self, 
@@ -77,12 +83,26 @@ class Conversation:
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
-        file = ".".join([persona, self.ext])
+        file = "".join([persona, self.ext])
         file_path = os.path.join(self.dir, file)
-        with open(file_path, 'a') as f:
-            f.write(self.hist[persona])
-        return 
+        payload = { "payload": self.hist[persona] }
+        with open(file_path, 'w') as f:
+            return json.dump(payload, f)
+        return None
     
+    def _timestamp(self):
+        """
+        Generates a timestamp in MM-DD HH:MM EST 24-hour format.
+        """
+        now = datetime.datetime.now(
+            datetime.timezone(
+                datetime.timedelta(
+                    hours=self.tz_offset
+                )
+            )
+        ) 
+        return now.strftime("%m-%d %H:%M")
+
     def get(
         self, 
         persona : str
@@ -93,9 +113,7 @@ class Conversation:
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
-        return {
-            "history": self.hist[persona]
-        }
+        return { "history": self.hist[persona] }
     
     def update(
         self, 
@@ -115,9 +133,12 @@ class Conversation:
         :returns: Full chat history
         :rtype: dict
         """
+        index = len(self.hist[persona])
         self.hist[persona] += [{ 
             "name": name,
-            "text": text
+            "text": text,
+            "index": index,
+            "timestamp": self._timestamp()
         }]
         self._persist(persona)
         return self.hist[persona]

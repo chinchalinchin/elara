@@ -22,7 +22,7 @@ class Personas:
         tune_dir = conf.PERSIST["DIR"]["TUNING"],
         sys_dir = conf.PERSIST["DIR"]["SYSTEM"],
         tune_ext = ".json",
-        sys_ext = ".txt"
+        sys_ext = ".json"
     ):
         """
         Initialize *Personas* object.
@@ -34,11 +34,12 @@ class Personas:
         :param tune_ext: Extension for tuning data. Defaults to ``.json``.
         :param sys_ext: Extension for the system instructions data. Defaults to ``.txt``
         """
-        self.current = current
+        self.current = None
         self.personas = { }
         self._load(
             tune_dir, tune_ext, 
-            sys_dir, sys_ext
+            sys_dir, sys_ext,
+            current
         )
 
     def __new__(
@@ -61,7 +62,8 @@ class Personas:
         tune_dir : str , 
         tune_ext : str,
         sys_dir : str,
-        sys_ext : str
+        sys_ext : str,
+        current : str
     ):
         """
         Load *Personas* into runtime.
@@ -74,6 +76,8 @@ class Personas:
         :type sys_dir: str
         :param sys_ext: The file extension for the system instructions data.
         :type sys_ext: str
+        :param current: Persona to initialize
+        :type current: str
         """
         for root, _, files in os.walk(tune_dir):
             for file in files:
@@ -87,7 +91,7 @@ class Personas:
                     payload  = json.load(f)
 
                 self.personas[persona] = {}
-                self.personas[persona]["TUNING"] = payload
+                self.personas[persona]["TUNING"] = payload["payload"]
     
         for root, _, files in os.walk(sys_dir):
             for file in files:
@@ -98,9 +102,11 @@ class Personas:
                 file_path = os.path.join(root, file)
 
                 with open(file_path, "r") as f:
-                    payload  = f.read()
+                    payload  = json.load(f)
 
-                self.personas[persona]["SYSTEM"] = payload
+                self.personas[persona]["SYSTEM"] = payload["payload"]
+
+        self.current = self.personas[persona]
 
     def update(
         self, 

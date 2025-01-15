@@ -107,7 +107,7 @@ class Language:
         """
         if len(self.modules) > 0:
             return {**{
-                "langage": True
+                "language": True
             }, **self.modules}
         return self.modules
     

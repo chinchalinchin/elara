@@ -58,7 +58,19 @@ class Cache:
                 }
             }
 
-    def get(self, attribute):
+    def all(self) -> dict:
+        """
+        Retrieve the entire Cache.
+
+        :returns: A dictionary of key-value pairs.
+        :rtype: dict
+        """
+        return self.data
+    
+    def get(
+        self, 
+        attribute: str
+    ) -> str:
         """
         Retrieve attributes from the Cache. Cache keys are given below,
 
@@ -79,14 +91,14 @@ class Cache:
         Update the Cache using keyword arguments. Key must exist in Cache to be updated.
         """
         for key, value in kwargs.items():
-            if key not in self._data:
+            if key not in self.data:
                 continue 
 
-            if isinstance(self._data[key], list):
-                self._data[key].extend(value)
+            if isinstance(self.data[key], list):
+                self.data[key].extend(value)
                 continue
 
-            self._data[key] = value 
+            self.data[key] = value 
     
     def save(self):
         """

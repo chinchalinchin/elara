@@ -54,7 +54,7 @@ def configure(
     return None
 
 def chat(
-    prompt : str ,
+    prompt : str,
     persona : str = None,
     prompter : str = None,
     model_type : str = None, 
@@ -85,8 +85,9 @@ def chat(
         prompter = mem.get("currentPrompter")
 
     convo.update(persona, prompter, prompt)
-    parsed_prompt = parse.contextualize(prompt, summarize_dir)
-    response = model.reply(parsed_prompt, model_type)
+    parsed_prompt = parse.contextualize(persona, summarize_dir)
+    print(parsed_prompt)
+    response = model.reply(parsed_prompt, persona, model_type)
     convo.update(persona, persona, response)
 
     return response
@@ -115,7 +116,13 @@ def main():
     """
     parsed_args = init()
     if parsed_args.operation == "chat":
-        res = chat(parsed_args.prompt, parsed_args.model)
+        res = chat(
+            prompt=parsed_args.prompt, 
+            model_type=parsed_args.model,
+            prompter=parsed_args.self,
+            persona=parsed_args.persona,
+            summarize_dir=parsed_args.directory
+        )
         print(res)
     elif parsed_args.operation == "summarize":
         parse.summarize(parsed_args.directory)

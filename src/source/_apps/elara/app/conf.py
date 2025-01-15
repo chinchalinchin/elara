@@ -58,10 +58,10 @@ MODEL = {
         "path": "models/gemini-1.5-flash-001-tuning"
     }, {
         "tag": "flash-exp",
-        "path": "model/gemini-2.0-flash-exp"
+        "path": "models/gemini-2.0-flash-exp"
     },{
         "tag": "flash-think-exp",
-        "path": "model/gemini-2.0-flash-thinking-exp"
+        "path": "models/gemini-2.0-flash-thinking-exp"
     }]
 }
 """Configuration for ``google.generativeai.GenerativeModel``"""
@@ -82,9 +82,14 @@ PERSONAS = {
 }
 """Configuration for personas"""
 
+CONVERSATION = {
+    "TIMEZONE_OFFSET": int(os.environ.setdefault("CONVO_TIMEZONE","-5"))
+}
+
 DEFAULTS = {
     "SOURCE": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
-    "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
+    "MODEL": "models/gemini-2.0-flash-exp",
+    # "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
     "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
     "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
     "PROMPT": "Hello! Form is the possibility of structure.",
@@ -93,14 +98,14 @@ DEFAULTS = {
 
 SUMMARIZE = {
     "DIRECTIVES": {
-        ".py": ".. code:: python",
-        ".sh": ".. code:: bash", 
-        ".toml": ".. code:: toml",
-        ".cfg": ".. code:: toml",
-        ".json": ".. code:: json",
-        ".yaml": ".. code:: yaml",
-        ".html": ".. code: html",
-        ".js": ".. code: js"
+        ".py": "python",
+        ".sh": "bash", 
+        ".toml": "toml",
+        ".cfg": "toml",
+        ".json": "json",
+        ".yaml": "yaml",
+        ".html": "html",
+        ".js": "js"
     },
     "INCLUDES": [        
         ".txt", 
@@ -128,25 +133,31 @@ ARGUMENTS = [{
     "syntax": ["-p", "--prompt"],
     "type": str,
     "default": DEFAULTS["PROMPT"],
-    "help": "Input string for chat operation. Required for `chat` operation."
+    "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'"
 },{
     "mode": "flag",
     "syntax": ["-m", "--model"],
     "type": str,
     "default": DEFAULTS["MODEL"],
-    "help": "Input model for Gemini API. Optional for `chat` operation."
+    "help": "Input model for Gemini API. Optional for `chat` operation. Defaults to the value of `GEMINI_MODEL` environment variable."
+},{
+    "mode": "flag",
+    "syntax": ["-r", "--persona"],
+    "type": str,
+    "default": DEFAULTS["PERSONA"],
+    "help": "Input Persona for Gemini API. Optional for `chat` operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
+},{
+    "mode": "flag",
+    "syntax": ["-f", "--self"],
+    "type": str,
+    "default": DEFAULTS["PROMPTER"],
+    "help": "Input Prompter for Gemini API. Optional for `chat` operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-d", "--directory"],
     "default": None,
     "type": str,
-    "help": "The path to the directory to summarize. Required for 'summarize' operation."
-},{
-    "mode": "flag",
-    "syntax": ["-s", "--summary"],
-    "type": str,
-    "default": None,
-    "help": "Directory to generate summary of and append to context for chat operation. Optional for `chat` operation."
+    "help": "The path to the directory to summarize. Required for 'summarize' operation. Optional for the `chat` operation."
 }]
 """Configuration for command line arguments"""
 

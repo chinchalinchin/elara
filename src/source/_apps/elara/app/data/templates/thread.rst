@@ -5,9 +5,11 @@ History
 
 The conversation goes in sequential order, starting from the earliest message down to the most recent. The last item in this section is my latest prompt.
 
-{%- for msg in history -%}
+{% for msg in history %}
 .. admonition:: {{ msg.name }}
 
-    {{ msg.content }}
+    **Timestamp**: {{ msg.timestamp }}
 
-{%- endfor -%}
+    {{ msg.text }}
+
+{% endfor %}
