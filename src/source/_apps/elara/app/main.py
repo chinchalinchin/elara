@@ -9,6 +9,7 @@ import conf
 import model
 import objects.cache as cache
 import objects.conversation as conversation
+import objects.language as language
 import objects.personas as personas
 import parse
 
@@ -41,34 +42,47 @@ def args():
     args = parser.parse_args()
     return args
 
-def configure(config_pairs):
+def configure(
+    config_pairs
+):
     """
     Parses and applies configuration settings.
     """
-    print("Configure function called with:", config_pairs)  # Placeholder
+    print("Configure function called with:", config_pairs)
+    # TODO: allow user to update cache.
+    # TODO: something like `mem.update(**config_pairs)` would be nice.
     return None
 
 def chat(
-    prompt,
-    persona=None,
-    prompter=None,
-    model_type=None, 
-    summarize_dir=None
-):
+    prompt : str ,
+    persona : str = None,
+    prompter : str = None,
+    model_type : str = None, 
+    summarize_dir : str = None
+) -> str:
     """
     Chat with Gemini
+
+    :param prompt: Prompt to send.
+    :type prompt: str
+    :param persona: Persona with which to converse.
+    :type persona: str
+    :param model_type: Gemini model to use.
+    :type model_type: str
+    :param summarize_dir: Directory of additional context to inject into prompt.
+    :type summarize_dir: str
     """
-    mem = cache.Cache().get()
+    mem = cache.Cache()
     convo = conversation.Conversation()
 
     if model_type is None:
-        model_type = mem["currentModel"]
+        model_type = mem.get("currentModel")
 
     if persona is None:
-        persona = mem["template"]["currentPersona"]
+        persona = mem.get("currentPersona")
 
     if prompter is None:
-        prompter = mem["template"]["currentPrompter"]
+        prompter = mem.get("currentPrompter")
 
     convo.update(persona, prompter, prompt)
     parsed_prompt = parse.contextualize(prompt, summarize_dir)
@@ -79,10 +93,19 @@ def chat(
 
 def init():
     """
-    Initialize application
+    Initialize application:
+    
+    - Create class singletons to load in data.
+    - Initiate model tuning, if applicable.
+    - Parse command line arguments
+
+    :returns: Command line arguments
+    :rtype: dict
     """
-    mem = cache.Cache().get()
-    per = personas.Persona(current=mem["template"]["currentPersona"]).get()
+    cache.Cache()
+    personas.Personas()
+    conversation.Conversation()
+    language.Language(enabled = conf.language_modules())
     model.init()
     return args()
 

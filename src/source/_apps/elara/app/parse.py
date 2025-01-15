@@ -1,5 +1,5 @@
 """ # parse.py
-Module for formatting prompts and responses. It also handles context.
+Module for formatting prompts and responses. It also handles context management.
 """
 # Standard Library Modules
 import os
@@ -15,30 +15,39 @@ import objects.language as language
 import objects.conversation as conversation
 
 def contextualize(
-    persona=None,
-    summarize_dir=None
-):
-    """Appends the preamble and context to prompt."""
-    mem = cache.Cache().get()
+    persona : str = None,
+    summarize_dir : str = None
+) -> str:
+    """
+    Appends the preamble and formats the prompt. A directory on the local filesystem can be specified to add  additional context to the prompt. This directory will be summarized using the ``data/templates/summary.rst`` template and injected into the prompt.
+
+    :param persona: Persona with which the prompter is conversing.
+    :type persona: str
+    :param summarize_dir: Directory containing additional context that is to be summarized.
+    :type summarize_dir: str
+    :returns: A contextualized prompt.
+    :rtype: str
+    """
+    mem = cache.Cache()
     temps = templates.Template().get()
-    lang = language.Language(enabled = conf.modules())
     convo = conversation.Conversation()
-
-    module_vars = lang.get_modules()
-
-    if len(module_vars) > 0:
-        module_vars["language"] = True
+    lang = language.Language(
+        enabled = conf.language_modules()
+    )
 
     preamble_vars = { 
-        **mem["template"],
-        **module_vars
+        **mem,
+        **lang.get_modules()
     }
 
     if summarize_dir is not None:
-        preamble_vars["summary"] = summarize(summarize_dir, stringify=True)
+        preamble_vars["summary"] = summarize(
+            summarize_dir, 
+            stringify=True
+        )
 
     if persona is None:
-        persona = mem["template"]["currentPersona"]
+        persona = mem.get("currentPersona")
 
     preamble_temp = temps.get("preamble")
     history_temp = temps.get("thread")
@@ -53,10 +62,19 @@ def contextualize(
     return payload
 
 def summarize(
-    directory,
-    stringify = False
-):
-    """Summarizes the contents of a directory in an RST document."""
+    directory : str,
+    stringify : bool = False
+) -> str:
+    """
+    Summarizes the contents of a directory in an RST document. The summary will be written to the directory it is summarizing.
+    
+    :param directory: Directory to be summarized.
+    :type directory: str
+    :param stringify: Return the result as a string instead of writing to file.
+    :type stringify: bool
+    :returns: A summary string in RST format.
+    :rtype: str
+    """
 
     if not os.path.isdir(directory):
         raise errors.SummarizeDirectoryNotFoundError(
@@ -93,7 +111,8 @@ def summarize(
         for file in files:
 
             base, ext = os.path.splitext(file)
-            if ext not in conf.extensions() or base == conf.SUMMARIZE["FILE"]:
+            if ext not in conf.summary_extensions() \
+                or base == conf.SUMMARIZE["FILE"]:
                 continue
 
             file_path = os.path.join(root, file)

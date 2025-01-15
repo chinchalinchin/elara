@@ -35,8 +35,6 @@
     ],
     "tuningModel": "models/gemini-1.5-flash-001-tuning",
     "currentModel": "models/gemini-1.5-pro-latest",
-    "template": {
-        "currentPersona": "elara",
-        "currentPrompter": "grant"
-    }
+    "currentPersona": "elara",
+    "currentPrompter": "grant"
 }

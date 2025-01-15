@@ -9,18 +9,30 @@ from jinja2 import Environment, FileSystemLoader
 
 
 class Template:
-    instance = None
+    inst = None
+    """Singleton instance"""
     templates = None
-    template_dir = None
-    template_ext = None
+    """Application templates"""
+    dir = None
+    """Directory containing templates"""
+    ext = None
+    """File extension of templates"""
 
     def __init__(
         self, 
-        template_dir = conf.PERSIST["DIR"]["TEMPLATES"],
-        template_ext = ".rst"
+        dir = conf.PERSIST["DIR"]["TEMPLATES"],
+        ext = ".rst"
     ):
-        self.template_dir = template_dir
-        self.template_ext = template_ext
+        """"
+        Initialize *Templates* object.
+
+        :param dir: Directory containg the templates. Defaults to ``data/templates``.
+        :type dir: str
+        :param ext: Extension of template files. Defaults to ``.rst``.
+        :type ext: str
+        """
+        self.dir = dir
+        self.ext = ext
         self._load()
 
     def __new__(
@@ -28,26 +40,58 @@ class Template:
         *args, 
         **kwargs
     ):
-        if not self.instance:
-            self.instance = super(
+        """
+        Create single *Templates* object.
+        """
+        if not self.inst:
+            self.inst = super(
                 Template, 
                 self
             ).__new__(self, *args, **kwargs)
-        return self.instance
+        return self.inst
     
     def _load(
         self, 
     ):
-        """Load Templates"""
+        """
+        Load Templates
+        """
         self.templates = Environment(
             loader=FileSystemLoader(self.template_dir)
         )
 
 
-    def get(self, template):
+    def get(
+        self, 
+        template: str
+    ):
+        """
+        Retrieve a named template. Named templates are given below,
+
+        - summary: Template for directory summaries.
+        - preamble: Template for chat preamble.
+        - thread: Template for chat history.
+
+        :param template: Name of the template to retrieve.
+        :type template: str
+        :returns: Jinja2 template
+        """
         file_name = ".".join([template, self.template_ext])
         return self.templates.get(file_name)
 
-    def render(self, template, vars):
-        temp = self.get(template)
-        return temp.render(vars)
+    def render(
+        self, 
+        template: str, 
+        variables : dict
+    ) -> str:
+        """
+        Render a template. 
+
+        :param template: Template to render.
+        :type template: str
+        :param variables: Variables to inject into template.
+        :type variables: dict
+        :returns: A templated string.
+        :rtype: str
+        """
+        return self.get(template).render(variables)

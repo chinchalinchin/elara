@@ -3,8 +3,8 @@ Wrapper around Google's GenerativeAI library. Provides configuration and default
 """
 # Application Modules
 import conf 
-import parse
-import objects
+import objects.cache as cache
+import objects.personas as personas
 
 # External Modules
 import google.generativeai as genai
@@ -15,18 +15,16 @@ def _model(
     model_name=conf.DEFAULTS["MODEL"],
     persona=None
 ):
-    mem = objects.cache.Cache().get()
+    """
+    TODO: explain
+    """
+    mem = cache.Cache()
 
-    base_model_names = [ 
-        model["path"] 
-        for model in mem["baseModels"]
-    ]
-
-    if model_name in base_model_names:
+    if model_name in mem.base_models():
         if persona is None:
-            persona = mem["template"]["currentPersona"]
+            persona = mem.get("currentPersona")
 
-        data = objects.persona.Persona(persona).get()
+        data = personas.Personas(persona).get()
 
         return genai.GenerativeModel(
             model_name=model_name,
@@ -38,24 +36,33 @@ def _model(
     )
 
 def init():
-    mem = objects.cache.Cache().get()
-    for persona in conf.PERSONAS["ALL"]:
-        # Only call tune if the model is not found in cache
-        if not any(model["name"] == persona for model in mem["tunedModels"]):
-            tune(persona)
+    """
+    TODO: explain
+    """
+    for p in personas.Personas().all():
+        if p not in cache.Cache().tuned_personas():
+            tune(p)
 
 def reply(
     prompt, 
     persona=None,
     model_name=None
 ):
-    mem = objects.cache.Cache().get()
-    if persona is None:
-        persona = mem["template"]["currentPersona"]
-    if model_name is None:
-        model_name = mem["currentModel"]
+    """
+    TODO: explain
+    """
+    mem = cache.Cache()
 
-    return _model(model_name).generate_content(
+    if persona is None:
+        persona = mem.get("currentPersona")
+
+    if model_name is None:
+        model_name = mem.get("currentModel")
+
+    return _model(
+        model_name = model_name,
+        persona = persona
+    ).generate_content(
         contents=prompt,
         generation_config=conf.MODEL["GENERATION_CONFIG"],
         safety_settings=conf.MODEL["SAFETY_SETTINGS"]
@@ -76,23 +83,16 @@ def tune(
     Returns:
         The name of the tuned model (either existing or newly created).
     """    
-    mem = objects.cache.Cache().get()
+    mem = cache.Cache()
 
     if persona is None:
-        persona = mem["template"]["currentPersona"]
+        persona = mem.get("currentPersona")
          
     if tuning_model is None:
-        tuning_model = mem["tuningModel"]
-       
-    personas = [ 
-        model
-        for model 
-        in mem["tunedModels"] 
-        if model["name"] == persona
-    ]
+        tuning_model = mem.get("tuningModel")
 
-    if len(personas) > 0:
-        return personas[0]
+    if mem.is_tuned(persona):
+        return persona
 
     for tuned_model in genai.list_tuned_models():
         if tuned_model.display_name == persona:
@@ -101,27 +101,31 @@ def tune(
                 "path": tuned_model.name,
                 "version": conf.VERSION
             }
-            mem["tunedModels"] += [ buffer ]
-            objects.cache.Cache().save(mem)
+            mem.update({
+                "tunedModels": [buffer]
+            })
+            mem.save()
             return buffer
 
-    persona_payload = parse.persona(persona)["TUNING"]
+    tuning_data = personas.Personas(persona).tuning()
 
     tune_operation = genai.create_tuned_model(
         display_name=persona,
         source_model=tuning_model,
-        training_data=persona_payload,
+        training_data=tuning_data,
         epoch_count=1, # TODO: figure out what this does
         batch_size=1, # TODO: figure out if I need batches
         learning_rate=0.001 # TODO: figure out what this does
     )
 
-    mem["tunedModels"] += [{
-        "name": persona,
-        "version": conf.VERSION,
-        "path": tune_operation.result().name
-    }]
+    mem.update({
+        "tunedModels": [{
+            "name": persona,
+            "version": conf.VERSION,
+            "path": tune_operation.result().name
+        }]
+    })
 
-    objects.cache.Cache().save(mem)
+    mem.save()
 
     return tune_operation.result().name

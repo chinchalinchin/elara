@@ -11,8 +11,6 @@ Directory Structure
 	│   ├── conf.py
 	│   ├── data
 	│   │   ├── cache.json
-	│   │   ├── context
-	│   │   ├── experiments
 	│   │   ├── history
 	│   │   ├── modules
 	│   │   │   ├── inflection.rst
@@ -61,7 +59,7 @@ Directory Structure
 	├── README.md
 	└── setup.cfg
 
-	13 directories, 41 files
+	11 directories, 41 files
 
 
 MANIFEST.ini
@@ -69,10 +67,13 @@ MANIFEST.ini
 
 include README.md
 recursive-include app *.py
-recursive-include app/data *.rst *.txt *.md
-recursive-include app/data/preamble *.rst *.md
+recursive-include app/data *.rst *.txt *.json
+recursive-include app/data/history *.rst
+recursive-include app/data/modules *.rst
+recursive-include app/data/templates *.rst
 recursive-include app/data/system *.txt
 recursive-include app/data/tuning *.json
+recursive-include app/data/templates *.json
 
 README.md
 ---------
@@ -211,8 +212,8 @@ app/model.py
 	"""
 	# Application Modules
 	import conf 
-	import parse
-	import objects
+	import objects.cache as cache
+	import objects.personas as personas
 
 	# External Modules
 	import google.generativeai as genai
@@ -223,18 +224,16 @@ app/model.py
 	    model_name=conf.DEFAULTS["MODEL"],
 	    persona=None
 	):
-	    mem = objects.cache.Cache().get()
+	    """
+	    TODO: explain
+	    """
+	    mem = cache.Cache()
 
-	    base_model_names = [ 
-	        model["path"] 
-	        for model in mem["baseModels"]
-	    ]
-
-	    if model_name in base_model_names:
+	    if model_name in mem.base_models():
 	        if persona is None:
-	            persona = mem["template"]["currentPersona"]
+	            persona = mem.get("currentPersona")
 
-	        data = objects.persona.Persona(persona).get()
+	        data = personas.Personas(persona).get()
 
 	        return genai.GenerativeModel(
 	            model_name=model_name,
@@ -246,24 +245,33 @@ app/model.py
 	    )
 
 	def init():
-	    mem = objects.cache.Cache().get()
-	    for persona in conf.PERSONAS["ALL"]:
-	        # Only call tune if the model is not found in cache
-	        if not any(model["name"] == persona for model in mem["tunedModels"]):
-	            tune(persona)
+	    """
+	    TODO: explain
+	    """
+	    for p in personas.Personas().all():
+	        if p not in cache.Cache().tuned_personas():
+	            tune(p)
 
 	def reply(
 	    prompt, 
 	    persona=None,
 	    model_name=None
 	):
-	    mem = objects.cache.Cache().get()
-	    if persona is None:
-	        persona = mem["template"]["currentPersona"]
-	    if model_name is None:
-	        model_name = mem["currentModel"]
+	    """
+	    TODO: explain
+	    """
+	    mem = cache.Cache()
 
-	    return _model(model_name).generate_content(
+	    if persona is None:
+	        persona = mem.get("currentPersona")
+
+	    if model_name is None:
+	        model_name = mem.get("currentModel")
+
+	    return _model(
+	        model_name = model_name,
+	        persona = persona
+	    ).generate_content(
 	        contents=prompt,
 	        generation_config=conf.MODEL["GENERATION_CONFIG"],
 	        safety_settings=conf.MODEL["SAFETY_SETTINGS"]
@@ -284,23 +292,16 @@ app/model.py
 	    Returns:
 	        The name of the tuned model (either existing or newly created).
 	    """    
-	    mem = objects.cache.Cache().get()
+	    mem = cache.Cache()
 
 	    if persona is None:
-	        persona = mem["template"]["currentPersona"]
+	        persona = mem.get("currentPersona")
          
 	    if tuning_model is None:
-	        tuning_model = mem["tuningModel"]
-       
-	    personas = [ 
-	        model
-	        for model 
-	        in mem["tunedModels"] 
-	        if model["name"] == persona
-	    ]
+	        tuning_model = mem.get("tuningModel")
 
-	    if len(personas) > 0:
-	        return personas[0]
+	    if mem.is_tuned(persona):
+	        return persona
 
 	    for tuned_model in genai.list_tuned_models():
 	        if tuned_model.display_name == persona:
@@ -309,28 +310,32 @@ app/model.py
 	                "path": tuned_model.name,
 	                "version": conf.VERSION
 	            }
-	            mem["tunedModels"] += [ buffer ]
-	            objects.cache.Cache().save(mem)
+	            mem.update({
+	                "tunedModels": [buffer]
+	            })
+	            mem.save()
 	            return buffer
 
-	    persona_payload = parse.persona(persona)["TUNING"]
+	    tuning_data = personas.Personas(persona).tuning()
 
 	    tune_operation = genai.create_tuned_model(
 	        display_name=persona,
 	        source_model=tuning_model,
-	        training_data=persona_payload,
+	        training_data=tuning_data,
 	        epoch_count=1, # TODO: figure out what this does
 	        batch_size=1, # TODO: figure out if I need batches
 	        learning_rate=0.001 # TODO: figure out what this does
 	    )
 
-	    mem["tunedModels"] += [{
-	        "name": persona,
-	        "version": conf.VERSION,
-	        "path": tune_operation.result().name
-	    }]
+	    mem.update({
+	        "tunedModels": [{
+	            "name": persona,
+	            "version": conf.VERSION,
+	            "path": tune_operation.result().name
+	        }]
+	    })
 
-	    objects.cache.Cache().save(mem)
+	    mem.save()
 
 	    return tune_operation.result().name
 
@@ -350,7 +355,7 @@ app/parse.py
 .. code:: python
 
 	""" # parse.py
-	Module for formatting prompts and responses. It also handles context.
+	Module for formatting prompts and responses. It also handles context management.
 	"""
 	# Standard Library Modules
 	import os
@@ -366,30 +371,39 @@ app/parse.py
 	import objects.conversation as conversation
 
 	def contextualize(
-	    persona=None,
-	    summarize_dir=None
-	):
-	    """Appends the preamble and context to prompt."""
-	    mem = cache.Cache().get()
+	    persona : str = None,
+	    summarize_dir : str = None
+	) -> str:
+	    """
+	    Appends the preamble and formats the prompt. A directory on the local filesystem can be specified to add  additional context to the prompt. This directory will be summarized using the ``data/templates/summary.rst`` template and injected into the prompt.
+
+	    :param persona: Persona with which the prompter is conversing.
+	    :type persona: str
+	    :param summarize_dir: Directory containing additional context that is to be summarized.
+	    :type summarize_dir: str
+	    :returns: A contextualized prompt.
+	    :rtype: str
+	    """
+	    mem = cache.Cache()
 	    temps = templates.Template().get()
-	    lang = language.Language(enabled = conf.modules())
 	    convo = conversation.Conversation()
-
-	    module_vars = lang.get_modules()
-
-	    if len(module_vars) > 0:
-	        module_vars["language"] = True
+	    lang = language.Language(
+	        enabled = conf.language_modules()
+	    )
 
 	    preamble_vars = { 
-	        **mem["template"],
-	        **module_vars
+	        **mem,
+	        **lang.get_modules()
 	    }
 
 	    if summarize_dir is not None:
-	        preamble_vars["summary"] = summarize(summarize_dir, stringify=True)
+	        preamble_vars["summary"] = summarize(
+	            summarize_dir, 
+	            stringify=True
+	        )
 
 	    if persona is None:
-	        persona = mem["template"]["currentPersona"]
+	        persona = mem.get("currentPersona")
 
 	    preamble_temp = temps.get("preamble")
 	    history_temp = temps.get("thread")
@@ -404,10 +418,19 @@ app/parse.py
 	    return payload
 
 	def summarize(
-	    directory,
-	    stringify = False
-	):
-	    """Summarizes the contents of a directory in an RST document."""
+	    directory : str,
+	    stringify : bool = False
+	) -> str:
+	    """
+	    Summarizes the contents of a directory in an RST document. The summary will be written to the directory it is summarizing.
+    
+	    :param directory: Directory to be summarized.
+	    :type directory: str
+	    :param stringify: Return the result as a string instead of writing to file.
+	    :type stringify: bool
+	    :returns: A summary string in RST format.
+	    :rtype: str
+	    """
 
 	    if not os.path.isdir(directory):
 	        raise errors.SummarizeDirectoryNotFoundError(
@@ -444,7 +467,8 @@ app/parse.py
 	        for file in files:
 
 	            base, ext = os.path.splitext(file)
-	            if ext not in conf.extensions() or base == conf.SUMMARIZE["FILE"]:
+	            if ext not in conf.summary_extensions() \
+	                or base == conf.SUMMARIZE["FILE"]:
 	                continue
 
 	            file_path = os.path.join(root, file)
@@ -495,6 +519,7 @@ app/main.py
 	import model
 	import objects.cache as cache
 	import objects.conversation as conversation
+	import objects.language as language
 	import objects.personas as personas
 	import parse
 
@@ -527,48 +552,70 @@ app/main.py
 	    args = parser.parse_args()
 	    return args
 
-	def configure(config_pairs):
+	def configure(
+	    config_pairs
+	):
 	    """
 	    Parses and applies configuration settings.
 	    """
-	    print("Configure function called with:", config_pairs)  # Placeholder
+	    print("Configure function called with:", config_pairs)
+	    # TODO: allow user to update cache.
+	    # TODO: something like `mem.update(**config_pairs)` would be nice.
 	    return None
 
 	def chat(
-	    prompt,
-	    persona=None,
-	    prompter=None,
-	    model_type=None, 
-	    summarize_dir=None
-	):
+	    prompt : str ,
+	    persona : str = None,
+	    prompter : str = None,
+	    model_type : str = None, 
+	    summarize_dir : str = None
+	) -> str:
 	    """
 	    Chat with Gemini
+
+	    :param prompt: Prompt to send.
+	    :type prompt: str
+	    :param persona: Persona with which to converse.
+	    :type persona: str
+	    :param model_type: Gemini model to use.
+	    :type model_type: str
+	    :param summarize_dir: Directory of additional context to inject into prompt.
+	    :type summarize_dir: str
 	    """
-	    mem = cache.Cache().get()
+	    mem = cache.Cache()
 	    convo = conversation.Conversation()
 
 	    if model_type is None:
-	        model_type = mem["currentModel"]
+	        model_type = mem.get("currentModel")
 
 	    if persona is None:
-	        persona = mem["template"]["currentPersona"]
+	        persona = mem.get("currentPersona")
 
 	    if prompter is None:
-	        prompter = mem["template"]["currentPrompter"]
+	        prompter = mem.get("currentPrompter")
 
 	    convo.update(persona, prompter, prompt)
 	    parsed_prompt = parse.contextualize(prompt, summarize_dir)
 	    response = model.reply(parsed_prompt, model_type)
-	    convo.update(persona, persona, prompt)
+	    convo.update(persona, persona, response)
 
 	    return response
 
 	def init():
 	    """
-	    Initialize application
+	    Initialize application:
+    
+	    - Create class singletons to load in data.
+	    - Initiate model tuning, if applicable.
+	    - Parse command line arguments
+
+	    :returns: Command line arguments
+	    :rtype: dict
 	    """
-	    mem = cache.Cache().get()
-	    per = personas.Persona(current=mem["template"]["currentPersona"]).get()
+	    cache.Cache()
+	    personas.Personas()
+	    conversation.Conversation()
+	    language.Language(enabled = conf.language_modules())
 	    model.init()
 	    return args()
 
@@ -685,7 +732,6 @@ app/conf.py
 	    "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
 	    "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
 	    "PROMPT": "Hello! Form is the possibility of structure.",
-	    "EXPERIMENT": "duality"
 	}
 	"""Configuration for application deaults"""
 
@@ -714,8 +760,8 @@ app/conf.py
 	ARGUMENTS = [{
 	    "mode": "name",
 	    "syntax": "operation",
-	    "choices": ["chat", "conduct", "summarize"],
-	    "help": "The operation to perform (chat, conduct)"
+	    "choices": ["chat", "summarize"],
+	    "help": "The operation to perform (`chat`, `summarize`). Chat "
 	},{
 	    "mode": "name",
 	    "syntax": "configure",
@@ -726,19 +772,13 @@ app/conf.py
 	    "syntax": ["-p", "--prompt"],
 	    "type": str,
 	    "default": DEFAULTS["PROMPT"],
-	    "help": "Input string for chat operation."
-	},{
-	    "mode": "flag",
-	    "syntax": ["-e", "--experiment"],
-	    "type": str,
-	    "default": DEFAULTS["EXPERIMENT"],
-	    "help": "Input experiment for conduct operation."
+	    "help": "Input string for chat operation. Required for `chat` operation."
 	},{
 	    "mode": "flag",
 	    "syntax": ["-m", "--model"],
 	    "type": str,
 	    "default": DEFAULTS["MODEL"],
-	    "help": "Input model for Gemini API."
+	    "help": "Input model for Gemini API. Optional for `chat` operation."
 	},{
 	    "mode": "flag",
 	    "syntax": ["-d", "--directory"],
@@ -750,7 +790,7 @@ app/conf.py
 	    "syntax": ["-s", "--summary"],
 	    "type": str,
 	    "default": None,
-	    "help": "Directory to generate summary of and append to context for chat operation."
+	    "help": "Directory to generate summary of and append to context for chat operation. Optional for `chat` operation."
 	}]
 	"""Configuration for command line arguments"""
 
@@ -763,7 +803,7 @@ app/conf.py
 	if API_KEY is None:
 	    raise ValueError("GEMINI_KEY environment variable not set.")
 
-	def extensions():
+	def summary_extensions():
 	    """
 	    Returns all valid extensions for ``summarize()`` function
 	    """
@@ -777,7 +817,10 @@ app/conf.py
 	    """
 	    return ".".join([SUMMARIZE["FILE"], SUMMARIZE["EXT"]])
 
-	def modules():
+	def language_modules():
+	    """
+	    Return a list of enabled Language modules.
+	    """
 	    if any(v for v in LANGUAGE["MODULES"].values()):
 	        return [ k.lower() for k,v in LANGUAGE["MODULES"].items() ]
 	    return []
@@ -795,14 +838,23 @@ app/objects/cache.py
 	import json
 
 	class Cache:
-	    instance = None
+	    inst = None
+	    """Singleton instance"""
 	    data = None
+	    """Cache data"""
 	    file = None
+	    """Location of Cache file"""
 
 	    def __init__(
 	        self, 
 	        file = conf.PERSIST["FILE"]["CACHE"]
 	    ):
+	        """
+	        Initialize Cache.
+
+	        :param file: Location of Cache file. Defaults to ``data/cache.json``.
+	        :type file: str
+	        """
 	        self.file = file
 	        self._load()
 
@@ -811,9 +863,15 @@ app/objects/cache.py
 	        *args, 
 	        **kwargs
 	    ):
-	        if not self.instance:
-	            self.instance = super(Cache, self).__new__(self, *args, **kwargs)
-	        return self.instance
+	        """
+	        Create a Cache singleton.
+	        """
+	        if not self.inst:
+	            self.inst = super(
+	                Cache, 
+	                self
+	            ).__new__(self, *args, **kwargs)
+	        return self.inst
     
 	    def _load(self):
 	        """Loads the tuned model cache from the JSON file."""
@@ -825,21 +883,82 @@ app/objects/cache.py
 	                "baseModels": conf.MODEL["BASE_MODELS"],
 	                "tunedModels": [],
 	                "currentModel": conf.MODEL["BASE_MODELS"][0]["path"],
+	                "tuningModel": conf.DEFAULTS["SOURCE"],
 	                "template": {
 	                    "currentPersona": conf.DEFAULTS["PERSONA"],
 	                    "currentPrompter": conf.DEFAULTS["PROMPTER"]
 	                }
 	            }
 
-	    def get(self):
-	        return self.data
-    
-	    def save(self, cache):
-	        """Saves the tuned model cache to the JSON file."""
-	        self.data = cache
-	        with open(self.file, "w") as f:
-	            json.dump(cache, f, indent=4)
+	    def get(self, attribute):
+	        """
+	        Retrieve attributes from the Cache. Cache keys are given below,
 
+	        - tuningModel
+	        - currentModel
+	        - currentPrompter
+	        - currentPersona
+	        - tunedModels
+	        - basedModels
+
+	        :param attribute: Key to retrieve from the Cache.
+	        :type attribute: str
+	        """
+	        return self.data[attribute]
+
+	    def update(self, **kwargs):
+	        """
+	        Update the Cache using keyword arguments. Key must exist in Cache to be updated.
+	        """
+	        for key, value in kwargs.items():
+	            if key not in self._data:
+	                continue 
+
+	            if isinstance(self._data[key], list):
+	                self._data[key].extend(value)
+	                continue
+
+	            self._data[key] = value 
+    
+	    def save(self):
+	        """
+	        Saves the cache to the JSON file in ``data`` directory.
+	        """
+	        with open(self.file, "w") as f:
+	            json.dump(self.data, f, indent=4)
+	        return True
+    
+	    def base_models(self, path=True):
+	        """
+	        Retrieve the base Gemini models. 
+
+	        :param path: If ``path=True`` the full model name will be returned. If ``path=False``, the short name of the model will be returned.
+	        """
+	        if path:
+	            return [ model["path"] for model in self.data["baseModels"] ]
+	        return [ model["tag"] for model in self.data["baseModels"] ]
+    
+	    def tuned_personas(self):
+	        """
+	        Retrieve all tuned Persona Models.
+	        """
+	        return [ m for m in self.data["tunedModels"] ]
+
+	    def is_tuned(self, persona):
+	        """
+	        Determine if Persona has been tuned or not.
+        
+	        :param persona: Persona that needs to be tuned.
+	        :type persona: str
+	        :returns: A flag that signals if a Persona has already been tuned.
+	        :rtype: bool
+	        """
+	        return len([ 
+	            m 
+	            for m 
+	            in self.data["tunedModels"] 
+	            if m["name"] == persona 
+	        ]) > 0
 
 app/objects/__init__.py
 -----------------------
@@ -865,11 +984,14 @@ app/objects/conversation.py
 	import conf 
 
 	class Conversation:
-	    data = None
 	    dir = None
+	    """History directory"""
 	    ext = None
-	    hist = []
+	    """History file extension"""
+	    hist = { }
+	    """Chat history"""
 	    inst = None
+	    """Singleton instance"""
 
 	    def __init__(
 	        self, 
@@ -878,6 +1000,11 @@ app/objects/conversation.py
 	    ):
 	        """
 	        Initialize Conversation object.
+
+	        :param dir: Directory containing chat history. Defaults to ``data/history``.
+	        :type dir: str
+	        :param ext: File extension for chat history. Defaults to ``.json``.
+	        :type ext: str
 	        """
 	        self.dir = dir
 	        self.ext = ext
@@ -891,16 +1018,16 @@ app/objects/conversation.py
 	        """
 	        Create Conversation singleton.
 	        """
-	        if not self.instance:
-	            self.instance = super(
+	        if not self.inst:
+	            self.inst = super(
 	                Conversation, 
 	                self
 	            ).__new__(self, *args, **kwargs)
-	        return self.instance
+	        return self.inst
     
 	    def _load(self):
 	        """
-	        Load Conversation history.
+	        Load Conversation history from file.
 	        """
         
 	        for root, _, files in os.walk(self.dir):
@@ -916,22 +1043,53 @@ app/objects/conversation.py
                 
 	                self.hist[persona] = payload
 
-	    def _persist(self, persona):
+	    def _persist(
+	        self, 
+	        persona : str
+	    ) -> None:
+	        """
+	        Save Persona Conversation history to file.
+
+	        :param persona: Persona with which the prompter is conversing.
+	        :type persona: str
+	        """
 	        file = ".".join([persona, self.ext])
 	        file_path = os.path.join(self.dir, file)
 	        with open(file_path, 'a') as f:
 	            f.write(self.hist[persona])
 	        return 
     
-	    def get(self, persona):
+	    def get(
+	        self, 
+	        persona : str
+	    ) -> dict:
 	        """
-	        Return Conversation history.
+	        Return Persona Conversation history, formatted for templating.
+
+	        :param persona: Persona with which the prompter is conversing.
+	        :type persona: str
 	        """
-	        return self.hist[persona]
+	        return {
+	            "history": self.hist[persona]
+	        }
     
-	    def update(self, persona, name, text):
+	    def update(
+	        self, 
+	        persona : str, 
+	        name : str, 
+	        text : str
+	    ) -> dict:
 	        """
-	        Update Conversation history.
+	        Update Conversation history and persist to file.
+
+	        :param persona: Persona with which the prompter is conversing.
+	        :type persona: str
+	        :param name: Name of the chatter (prompter or persona).
+	        :type name: str
+	        :param text: Chat message.
+	        :type text: str
+	        :returns: Full chat history
+	        :rtype: dict
 	        """
 	        self.hist[persona] += [{ 
 	            "name": name,
@@ -957,18 +1115,30 @@ app/objects/templates.py
 
 
 	class Template:
-	    instance = None
+	    inst = None
+	    """Singleton instance"""
 	    templates = None
-	    template_dir = None
-	    template_ext = None
+	    """Application templates"""
+	    dir = None
+	    """Directory containing templates"""
+	    ext = None
+	    """File extension of templates"""
 
 	    def __init__(
 	        self, 
-	        template_dir = conf.PERSIST["DIR"]["TEMPLATES"],
-	        template_ext = ".rst"
+	        dir = conf.PERSIST["DIR"]["TEMPLATES"],
+	        ext = ".rst"
 	    ):
-	        self.template_dir = template_dir
-	        self.template_ext = template_ext
+	        """"
+	        Initialize *Templates* object.
+
+	        :param dir: Directory containg the templates. Defaults to ``data/templates``.
+	        :type dir: str
+	        :param ext: Extension of template files. Defaults to ``.rst``.
+	        :type ext: str
+	        """
+	        self.dir = dir
+	        self.ext = ext
 	        self._load()
 
 	    def __new__(
@@ -976,29 +1146,61 @@ app/objects/templates.py
 	        *args, 
 	        **kwargs
 	    ):
-	        if not self.instance:
-	            self.instance = super(
+	        """
+	        Create single *Templates* object.
+	        """
+	        if not self.inst:
+	            self.inst = super(
 	                Template, 
 	                self
 	            ).__new__(self, *args, **kwargs)
-	        return self.instance
+	        return self.inst
     
 	    def _load(
 	        self, 
 	    ):
-	        """Load Templates"""
+	        """
+	        Load Templates
+	        """
 	        self.templates = Environment(
 	            loader=FileSystemLoader(self.template_dir)
 	        )
 
 
-	    def get(self, template):
+	    def get(
+	        self, 
+	        template: str
+	    ):
+	        """
+	        Retrieve a named template. Named templates are given below,
+
+	        - summary: Template for directory summaries.
+	        - preamble: Template for chat preamble.
+	        - thread: Template for chat history.
+
+	        :param template: Name of the template to retrieve.
+	        :type template: str
+	        :returns: Jinja2 template
+	        """
 	        file_name = ".".join([template, self.template_ext])
 	        return self.templates.get(file_name)
 
-	    def render(self, template, vars):
-	        temp = self.get(template)
-	        return temp.render(vars)
+	    def render(
+	        self, 
+	        template: str, 
+	        variables : dict
+	    ) -> str:
+	        """
+	        Render a template. 
+
+	        :param template: Template to render.
+	        :type template: str
+	        :param variables: Variables to inject into template.
+	        :type variables: dict
+	        :returns: A templated string.
+	        :rtype: str
+	        """
+	        return self.get(template).render(variables)
 
 app/objects/language.py
 -----------------------
@@ -1016,22 +1218,37 @@ app/objects/language.py
 	import conf 
 
 	class Language:
-	    instance = None
-	    modules = None
-	    directory = None
-	    extension = None
+	    inst = None
+	    """Singleton instance"""
+	    modules = { }
+	    """Language modules"""
+	    dir = None
+	    """Directory containg Language modules"""
+	    ext = None
+	    """File extension of Language modules"""
 
 	    def __init__(
 	        self, 
-	        enabled, 
-	        directory = conf.PERSIST["DIR"]["MODULES"],
-	        extension = conf.LANGUAGE["EXTENSION"]
+	        enabled: list, 
+	        dir = conf.PERSIST["DIR"]["MODULES"],
+	        ext = conf.LANGUAGE["EXTENSION"]
 	    ):
 	        """
-	        Initialize new Persona Language.
+	        Initialize new Persona Language with a set of modules. Language modules are given below,
+
+	        - object
+	        - voice
+	        - inflection
+	        - words
+
+	        :param enabled: List of enabled Language modules
+	        :type enabled: list
+	        :param dir: Directory containing Language modules. Defaults to ``data/modules``.
+	        :type dir: str
+	        :param ext: File extension of Language modules. Defaults to ``.rst``.
 	        """
-	        self.directory = directory
-	        self.extension = extension
+	        self.dir = dir
+	        self.ext = ext
 	        self._load(enabled)
 
 	    def __new__(
@@ -1042,12 +1259,12 @@ app/objects/language.py
 	        """
 	        Create Language singleton.
 	        """
-	        if not self.instance:
-	            self.instance = super(
+	        if not self.inst:
+	            self.inst = super(
 	                Language, 
 	                self
-	            ).__new__(self, *args, **kwargs)
-	        return self.instance
+	            ).__new__(self)
+	        return self.inst
     
 	    def _load(
 	        self, 
@@ -1055,11 +1272,14 @@ app/objects/language.py
 	    ):
 	        """
 	        Load enabled Language modules.
+
+	        :param enabled: List of enabled Language modules.
+	        :type enabled: list
 	        """
         
-	        for root, _, files in os.walk():
+	        for root, _, files in os.walk(self.dir):
 	            for file in files:
-	                if os.path.splitext(file)[1] != self.extension:
+	                if os.path.splitext(file)[1] != self.ext:
 	                    continue
 
 	                if os.path.splitext(file)[0] not in enabled:
@@ -1073,16 +1293,40 @@ app/objects/language.py
                 
 	                self.modules[module] = payload
 
-	    def get_module(self, module):
+	    def get_module(
+	        self, 
+	        module : str
+	    ) -> str:
 	        """
-	        Get enabled Language modules.
+	        Get enabled Language module.
+
+	        :param module: Language module to retrieve.
+	        :type module: str
+	        :returns: RST document containing Language module.
+	        :rtype: str
 	        """
 	        return self.modules[module]
 
-	    def get_modules(self):
+	    def get_modules(self) -> dict:
+	        """
+	        Returns all Language modules, formatted for templating.
+
+	        :returns: Dictionary of RST documents.
+	        :rtype: dict
+	        """
+	        if len(self.modules) > 0:
+	            return {**{
+	                "langage": True
+	            }, **self.modules}
 	        return self.modules
     
-	    def list_modules(self):
+	    def list_modules(self) -> list:
+	        """
+	        Returns a list of Language module names.
+	nsion
+	        :returns: List of modules.
+	        :rtype: list
+	        """
 	        return [ k for k in self.modules.key() ]
 
 app/objects/errors.py
@@ -1118,7 +1362,7 @@ app/objects/personas.py
 .. code:: python
 
 	""" # objects.persona
-	Object for managing Persona initialization.
+	Object for managing Persona initialization and data.
 	"""
 	# Standard Library Modules
 	import os
@@ -1127,19 +1371,32 @@ app/objects/personas.py
 	# Application Modules 
 	import conf 
 
-	class Persona:
+	class Personas:
 	    current = None
-	    instance = None
+	    """Current persona"""
+	    inst = None
+	    """Singleton instance"""
 	    personas = None
+	    """Persona metadata"""
 
 	    def __init__(
 	        self, 
-	        current,
+	        current = conf.DEFAULTS["PERSONA"],
 	        tune_dir = conf.PERSIST["DIR"]["TUNING"],
 	        sys_dir = conf.PERSIST["DIR"]["SYSTEM"],
 	        tune_ext = ".json",
 	        sys_ext = ".txt"
 	    ):
+	        """
+	        Initialize *Personas* object.
+
+	        :param current: Initial persona for model to assume. Defaults to the value of the ``GEMINI_PERSONA`` environment variable.
+	        :type current: str
+	        :param tune_dir: Directory containing tuning data. Defaults to ``data/tuning``
+	        :type tune_dir: str
+	        :param tune_ext: Extension for tuning data. Defaults to ``.json``.
+	        :param sys_ext: Extension for the system instructions data. Defaults to ``.txt``
+	        """
 	        self.current = current
 	        self.personas = { }
 	        self._load(
@@ -1152,21 +1409,35 @@ app/objects/personas.py
 	        *args, 
 	        **kwargs
 	    ):
-	        if not self.instance:
-	            self.instance = super(
-	                Persona, 
+	        """
+	        Create *Personas* singleton.
+	        """
+	        if not self.inst:
+	            self.inst = super(
+	                Personas, 
 	                self
 	            ).__new__(self)
-	        return self.instance
+	        return self.inst
     
 	    def _load(
 	        self, 
-	        tune_dir, 
-	        tune_ext,
-	        sys_dir,
-	        sys_ext
+	        tune_dir : str , 
+	        tune_ext : str,
+	        sys_dir : str,
+	        sys_ext : str
 	    ):
-	        """Load Personas"""
+	        """
+	        Load *Personas* into runtime.
+
+	        :param tune_dir: The directory containing the tuning data.
+	        :type tune_dir: str
+	        :param tune_ext: The file extension for the tuning data.
+	        :type tune_ext: str
+	        :param sys_dir: The directory containing the system instructions data.
+	        :type sys_dir: str
+	        :param sys_ext: The file extension for the system instructions data.
+	        :type sys_ext: str
+	        """
 	        for root, _, files in os.walk(tune_dir):
 	            for file in files:
 	                if os.path.splitext(file)[1] !=  tune_ext:
@@ -1194,11 +1465,56 @@ app/objects/personas.py
 
 	                self.personas[persona]["SYSTEM"] = payload
 
-	    def update(self, persona):
-	        self.current = self.personas[persona] 
+	    def update(
+	        self, 
+	        persona : str
+	    ) -> dict:
+	        """
+	        Switch the current persona.
 
-	    def get(self):
+	        :param persona: New persona to assume, e.g. ``elara`` or ``axiom``.
+	        :type persona: str
+	        :returns: New persona metadata
+	        :rtype: dict
+	        """
+	        self.current = self.personas[persona] 
 	        return self.current
+
+	    def get(self) -> dict:
+	        """
+	        Get current persona.
+
+	        :returns: Persona metadata
+	        :rtype: dict
+	        """
+	        return self.current
+    
+	    def tuning(self) -> list:
+	        """
+	        Get persona tuning data.
+
+	        :returns: Persona tuning data.
+	        :rtype: list(dict)
+	        """
+	        return self.personas[self.current]["TUNING"]
+    
+	    def system(self) -> str:
+	        """
+	        Get persona system instructions.
+
+	        :return: Persona system instructions
+	        :rtype: str
+	        """
+	        return self.personas[self.current]["SYSTEM"]
+    
+	    def all(self) -> list:
+	        """
+	        Get all personas.
+
+	        :returns: Persona names
+	        :rtype: list
+	        """
+	        return [ k for k in self.personas.keys() ]
 
 
 app/data/cache.json
@@ -1243,10 +1559,8 @@ app/data/cache.json
 	    ],
 	    "tuningModel": "models/gemini-1.5-flash-001-tuning",
 	    "currentModel": "models/gemini-1.5-pro-latest",
-	    "template": {
-	        "currentPersona": "elara",
-	        "currentPrompter": "grant"
-	    }
+	    "currentPersona": "elara",
+	    "currentPrompter": "grant"
 	}
 
 app/data/modules/words.rst
@@ -1696,8 +2010,8 @@ Or this Object may be Inflected into the Referential Mode as,
 
 The above examples are to provide an indication of how the Inflected Modes of the Tangential Object might be used in conversation. You may adapt the usage to suit your needs.
 
-1. Inflected Systemic Modes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Inflected Systemic Modes
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are three Modes for the Inflected Systemic Object: the Access, the Usage and the Analysis. The following list details the different Modes for an Inflected Systemic Object,
 

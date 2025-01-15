@@ -1,5 +1,5 @@
 """ # objects.persona
-Object for managing Persona initialization.
+Object for managing Persona initialization and data.
 """
 # Standard Library Modules
 import os
@@ -8,19 +8,32 @@ import json
 # Application Modules 
 import conf 
 
-class Persona:
+class Personas:
     current = None
-    instance = None
+    """Current persona"""
+    inst = None
+    """Singleton instance"""
     personas = None
+    """Persona metadata"""
 
     def __init__(
         self, 
-        current,
+        current = conf.DEFAULTS["PERSONA"],
         tune_dir = conf.PERSIST["DIR"]["TUNING"],
         sys_dir = conf.PERSIST["DIR"]["SYSTEM"],
         tune_ext = ".json",
         sys_ext = ".txt"
     ):
+        """
+        Initialize *Personas* object.
+
+        :param current: Initial persona for model to assume. Defaults to the value of the ``GEMINI_PERSONA`` environment variable.
+        :type current: str
+        :param tune_dir: Directory containing tuning data. Defaults to ``data/tuning``
+        :type tune_dir: str
+        :param tune_ext: Extension for tuning data. Defaults to ``.json``.
+        :param sys_ext: Extension for the system instructions data. Defaults to ``.txt``
+        """
         self.current = current
         self.personas = { }
         self._load(
@@ -33,21 +46,35 @@ class Persona:
         *args, 
         **kwargs
     ):
-        if not self.instance:
-            self.instance = super(
-                Persona, 
+        """
+        Create *Personas* singleton.
+        """
+        if not self.inst:
+            self.inst = super(
+                Personas, 
                 self
             ).__new__(self)
-        return self.instance
+        return self.inst
     
     def _load(
         self, 
-        tune_dir, 
-        tune_ext,
-        sys_dir,
-        sys_ext
+        tune_dir : str , 
+        tune_ext : str,
+        sys_dir : str,
+        sys_ext : str
     ):
-        """Load Personas"""
+        """
+        Load *Personas* into runtime.
+
+        :param tune_dir: The directory containing the tuning data.
+        :type tune_dir: str
+        :param tune_ext: The file extension for the tuning data.
+        :type tune_ext: str
+        :param sys_dir: The directory containing the system instructions data.
+        :type sys_dir: str
+        :param sys_ext: The file extension for the system instructions data.
+        :type sys_ext: str
+        """
         for root, _, files in os.walk(tune_dir):
             for file in files:
                 if os.path.splitext(file)[1] !=  tune_ext:
@@ -75,8 +102,53 @@ class Persona:
 
                 self.personas[persona]["SYSTEM"] = payload
 
-    def update(self, persona):
-        self.current = self.personas[persona] 
+    def update(
+        self, 
+        persona : str
+    ) -> dict:
+        """
+        Switch the current persona.
 
-    def get(self):
+        :param persona: New persona to assume, e.g. ``elara`` or ``axiom``.
+        :type persona: str
+        :returns: New persona metadata
+        :rtype: dict
+        """
+        self.current = self.personas[persona] 
         return self.current
+
+    def get(self) -> dict:
+        """
+        Get current persona.
+
+        :returns: Persona metadata
+        :rtype: dict
+        """
+        return self.current
+    
+    def tuning(self) -> list:
+        """
+        Get persona tuning data.
+
+        :returns: Persona tuning data.
+        :rtype: list(dict)
+        """
+        return self.personas[self.current]["TUNING"]
+    
+    def system(self) -> str:
+        """
+        Get persona system instructions.
+
+        :return: Persona system instructions
+        :rtype: str
+        """
+        return self.personas[self.current]["SYSTEM"]
+    
+    def all(self) -> list:
+        """
+        Get all personas.
+
+        :returns: Persona names
+        :rtype: list
+        """
+        return [ k for k in self.personas.keys() ]

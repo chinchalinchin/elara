@@ -8,11 +8,14 @@ import os
 import conf 
 
 class Conversation:
-    data = None
     dir = None
+    """History directory"""
     ext = None
+    """History file extension"""
     hist = { }
+    """Chat history"""
     inst = None
+    """Singleton instance"""
 
     def __init__(
         self, 
@@ -21,6 +24,11 @@ class Conversation:
     ):
         """
         Initialize Conversation object.
+
+        :param dir: Directory containing chat history. Defaults to ``data/history``.
+        :type dir: str
+        :param ext: File extension for chat history. Defaults to ``.json``.
+        :type ext: str
         """
         self.dir = dir
         self.ext = ext
@@ -34,16 +42,16 @@ class Conversation:
         """
         Create Conversation singleton.
         """
-        if not self.instance:
-            self.instance = super(
+        if not self.inst:
+            self.inst = super(
                 Conversation, 
                 self
             ).__new__(self, *args, **kwargs)
-        return self.instance
+        return self.inst
     
     def _load(self):
         """
-        Load Conversation history.
+        Load Conversation history from file.
         """
         
         for root, _, files in os.walk(self.dir):
@@ -59,22 +67,53 @@ class Conversation:
                 
                 self.hist[persona] = payload
 
-    def _persist(self, persona):
+    def _persist(
+        self, 
+        persona : str
+    ) -> None:
+        """
+        Save Persona Conversation history to file.
+
+        :param persona: Persona with which the prompter is conversing.
+        :type persona: str
+        """
         file = ".".join([persona, self.ext])
         file_path = os.path.join(self.dir, file)
         with open(file_path, 'a') as f:
             f.write(self.hist[persona])
         return 
     
-    def get(self, persona):
+    def get(
+        self, 
+        persona : str
+    ) -> dict:
         """
-        Return Conversation history.
+        Return Persona Conversation history, formatted for templating.
+
+        :param persona: Persona with which the prompter is conversing.
+        :type persona: str
         """
-        return self.hist[persona]
+        return {
+            "history": self.hist[persona]
+        }
     
-    def update(self, persona, name, text):
+    def update(
+        self, 
+        persona : str, 
+        name : str, 
+        text : str
+    ) -> dict:
         """
-        Update Conversation history.
+        Update Conversation history and persist to file.
+
+        :param persona: Persona with which the prompter is conversing.
+        :type persona: str
+        :param name: Name of the chatter (prompter or persona).
+        :type name: str
+        :param text: Chat message.
+        :type text: str
+        :returns: Full chat history
+        :rtype: dict
         """
         self.hist[persona] += [{ 
             "name": name,

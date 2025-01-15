@@ -88,7 +88,6 @@ DEFAULTS = {
     "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
     "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
     "PROMPT": "Hello! Form is the possibility of structure.",
-    "EXPERIMENT": "duality"
 }
 """Configuration for application deaults"""
 
@@ -117,8 +116,8 @@ SUMMARIZE = {
 ARGUMENTS = [{
     "mode": "name",
     "syntax": "operation",
-    "choices": ["chat", "conduct", "summarize"],
-    "help": "The operation to perform (chat, conduct)"
+    "choices": ["chat", "summarize"],
+    "help": "The operation to perform (`chat`, `summarize`). Chat "
 },{
     "mode": "name",
     "syntax": "configure",
@@ -129,19 +128,13 @@ ARGUMENTS = [{
     "syntax": ["-p", "--prompt"],
     "type": str,
     "default": DEFAULTS["PROMPT"],
-    "help": "Input string for chat operation."
-},{
-    "mode": "flag",
-    "syntax": ["-e", "--experiment"],
-    "type": str,
-    "default": DEFAULTS["EXPERIMENT"],
-    "help": "Input experiment for conduct operation."
+    "help": "Input string for chat operation. Required for `chat` operation."
 },{
     "mode": "flag",
     "syntax": ["-m", "--model"],
     "type": str,
     "default": DEFAULTS["MODEL"],
-    "help": "Input model for Gemini API."
+    "help": "Input model for Gemini API. Optional for `chat` operation."
 },{
     "mode": "flag",
     "syntax": ["-d", "--directory"],
@@ -153,7 +146,7 @@ ARGUMENTS = [{
     "syntax": ["-s", "--summary"],
     "type": str,
     "default": None,
-    "help": "Directory to generate summary of and append to context for chat operation."
+    "help": "Directory to generate summary of and append to context for chat operation. Optional for `chat` operation."
 }]
 """Configuration for command line arguments"""
 
@@ -166,7 +159,7 @@ API_KEY = os.environ.get("GEMINI_KEY")
 if API_KEY is None:
     raise ValueError("GEMINI_KEY environment variable not set.")
 
-def extensions():
+def summary_extensions():
     """
     Returns all valid extensions for ``summarize()`` function
     """
@@ -180,7 +173,10 @@ def summary_file():
     """
     return ".".join([SUMMARIZE["FILE"], SUMMARIZE["EXT"]])
 
-def modules():
+def language_modules():
+    """
+    Return a list of enabled Language modules.
+    """
     if any(v for v in LANGUAGE["MODULES"].values()):
         return [ k.lower() for k,v in LANGUAGE["MODULES"].items() ]
     return []
