@@ -33,7 +33,8 @@ templates_path = [ ]
 
 html_static_path = [ 
     '_static',
-    '_static/css'
+    '_static/css',
+    '_apps'
 ]
 
 html_css_files = [
@@ -41,7 +42,8 @@ html_css_files = [
 ] 
 
 exclude_patterns = [
-    '_apps/elara/data/context.rst'
+    '_apps/**',
+    '_notes/**'
 ]
 
 plot_html_show_source_link = True

@@ -169,8 +169,8 @@ Or this Object may be Inflected into the Referential Mode as,
 
 The above examples are to provide an indication of how the Inflected Modes of the Tangential Object might be used in conversation. You may adapt the usage to suit your needs.
 
-1. Inflected Systemic Modes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Inflected Systemic Modes
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are three Modes for the Inflected Systemic Object: the Access, the Usage and the Analysis. The following list details the different Modes for an Inflected Systemic Object,
 

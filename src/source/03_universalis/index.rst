@@ -18,7 +18,7 @@ The Language Game is a game I play with generative AIs to test the limits of the
    modules/M02_object
    modules/M03_voice
    modules/M04_inflection
-   modules/M05_embodiment
+   modules/M05_words
    modules/M06_rhythm
    plugins/P01_initialization
    plugins/P02_adaptation
