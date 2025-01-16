@@ -1,0 +1,22 @@
+name: Valis Code Review
+
+description: Have Valis review your code.
+
+on:
+  pull_request:
+    branches:
+      - dev
+      - master
+      - main
+
+jobs:
+  valis:
+    uses: chinchalinchin/github-workflows/.github/workflows/gemini-review.yml@your_branch # Adjust with your details
+    with:
+      BRANCH: ${{ github.event.pull_request.head.ref }}
+      VERSION: '0.1.0' 
+      GEMINI_MODEL: 'your_gemini_model'
+      PR_NUMBER: ${{ github.event.pull_request.number }}
+    secrets:
+      GEMINI_KEY: ${{ secrets.GEMINI_KEY }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

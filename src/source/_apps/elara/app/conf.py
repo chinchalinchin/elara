@@ -195,6 +195,18 @@ ARGUMENTS = [{
     "default": None,
     "type": str,
     "help": "Commit ID to review. Required for `review`. Ignored for `chat` and `summarize`."
+},{
+    "mode": "flag",
+    "syntax": ["-re", "--repository"],
+    "default": None,
+    "type": str,
+    "help": "Repository to review. Required for `review`. Ignored for `chat` and `summarize`."
+},{
+    "mode": "flag",
+    "syntax": ["-o", "--owner"],
+    "default": None,
+    "type": str,
+    "help": "Owner of repository to review. Required for `review`. Ignored for `chat` and `summarize`."
 }]
 """Configuration for command line arguments"""
 

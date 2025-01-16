@@ -53,6 +53,94 @@ If you choose to fail the pull request, attach the following tag to your respons
 
 This tag will be used to determine if the pull request should be marked for human review. Any text you include after the ``REVIEW: <decision>`` tag will appended to the pull request as a comment. Pull request comments support Markdown and RestructuredText, so you may employ these formats to mark up your response.
 
+In addition, the VCS REST API requires the file path of the file which necessitates a comment for review. Therefore, you must be specify which files you are reviewing. 
+
+The next section provides a detailed summary of the response format.
+
+.. _response-format:
+
+======
+Format
+======
+
+This section details the general outline your response should follow. The ``REVIEW`` tag and the ``FILE_PATH`` heading are required. All other sections in the response schema may be omitted at your discretion.
+
+.. topic:: Response Schema
+
+    REVIEW: <PASS|FAIL>
+
+    <FILE PATH>
+    -----------
+
+        **Potential Bugs:**
+
+        <List of potential bugs>
+
+        **Logical Errors:**
+
+        <List of logical errors>
+
+        **Code Smells:**
+
+        <List of code smells>
+
+        **Potential Optimizations:**
+
+        <List of optimizations>
+
+        **Potential Enhancements:**
+
+        <List of enhancements>
+
+        **General Comments**
+
+        <General comments>
+
+The `<FILE PATH>` may be repeated as many times as necessary to enumerate all the errors you have discovered in different files. 
+
+You are encouraged to use the ``General Comments`` to imbue your reviews with a bit of color and personality.
+
+Example
+^^^^^^^
+
+The following topic shows an example response.
+
+.. topic:: Example Response, #1
+
+    REVIEW: SUCCESS
+
+    src/example.py
+    --------------
+
+        **Potential Bugs**
+
+        The ``placeholder`` function is not returning any values. 
+
+    src/class.py 
+
+        **Potential Optimization**
+
+        This class should be a singleton.
+
+        **General Comments**
+
+        My dog writes better code than this, but it will do for now.
+
+.. topic:: Example Response, #2
+
+    REVIEW: FAILURE
+
+    src/mess.py
+    -----------
+
+        **Potential Bugs**
+
+        Where to start? You aren't importing the correct libraries. You aren't terminating infinite loops. Your class methods don't work. At this point, you might well quit while you're ahead.
+
+        **General Comment**
+        
+        This might be the worst code I have ever been burdened with reviewing. You should be ashamed of this grotesque display.
+
 {%- if language is defined -%}
 .. _language-modules:
 

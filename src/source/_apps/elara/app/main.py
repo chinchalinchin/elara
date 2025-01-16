@@ -96,12 +96,20 @@ def chat(
 
 def review(
     pr : str,
+    src : str,
+    owner : str,
+    commit : str,
     model_name : str = None,
 ) -> str:
     """
     Placeholder for the code review logic.
+
+    TODO: debug and finalize
     """
-    source = repo.Repo()
+    source = repo.Repo(
+        repo = src,
+        owner = owner
+    )
     prompt = parse.git()
     print(prompt)
     # response = model.reply(
@@ -109,7 +117,11 @@ def review(
     #     persona=persona, 
     #     model_name=model_name
     # )
-    # source.comment(response, pr)
+    # source.comment(
+    #     msg = response, 
+    #     pr = pr,
+    #     commit = commit
+    # )
 
 
     return "placeholder"
@@ -160,6 +172,8 @@ def main():
         review(
             pr=parsed_args.pullrequest,
             commit=parsed_args.commit,
+            repository=parsed_args.repository,
+            owner=parsed_args.owner,
             model_type=parsed_args.model
         )
     else:
