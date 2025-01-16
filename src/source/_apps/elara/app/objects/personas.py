@@ -139,7 +139,7 @@ class Personas:
         :returns: Persona tuning data.
         :rtype: list(dict)
         """
-        return self.personas[self.current]["TUNING"]
+        return self.current["TUNING"]
     
     def system(self) -> str:
         """
@@ -148,7 +148,7 @@ class Personas:
         :return: Persona system instructions
         :rtype: str
         """
-        return self.personas[self.current]["SYSTEM"]
+        return self.current["SYSTEM"]
     
     def all(self) -> list:
         """

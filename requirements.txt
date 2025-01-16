@@ -9,3 +9,7 @@ tk
 nltk
 google-generativeai
 Jinja2
+
+# Build Packages
+build
+twine

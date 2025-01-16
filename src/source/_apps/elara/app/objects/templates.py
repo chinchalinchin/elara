@@ -59,6 +59,7 @@ class Template:
         """
         Retrieve a named template. Named templates are given below,
 
+        - review: Template for pull request reviews.
         - summary: Template for directory summaries.
         - preamble: Template for chat preamble.
         - thread: Template for chat history.

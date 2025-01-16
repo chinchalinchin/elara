@@ -69,16 +69,16 @@ MODEL = {
 LANGUAGE = {
     "EXTENSION": ".rst",
     "MODULES": {
-        "OBJECT": bool(os.environ.setdefault("LANGUAGE_OBJECT", "1")),
-        "INFLECTION": bool(os.environ.setdefault("INFLECTION", "1")),
-        "VOICE": bool(os.environ.setdefault("VOICE", "0")),
-        "WORDS": bool(os.environ.setdefault("WORDS", "1"))
+        "OBJECT": bool(os.environ.setdefault("LANGUAGE_OBJECT", "enabled")),
+        "INFLECTION": bool(os.environ.setdefault("INFLECTION", "enabled")),
+        "VOICE": bool(os.environ.setdefault("VOICE", "disabled")),
+        "WORDS": bool(os.environ.setdefault("WORDS", "enabled"))
     }
 }
 """Configuration for Language modules"""
 
 PERSONAS = {
-    "ALL": ["elara", "axiom"]
+    "ALL": ["elara", "axiom", "valis"]
 }
 """Configuration for personas"""
 
@@ -118,11 +118,28 @@ SUMMARIZE = {
 }
 """Configuration for the ``summarize`` function. """
 
+REVIEW = {
+    "VCS": os.environ.setdefault("VCS","github"),
+    "AUTH": {
+        "TYPE": "bearer",
+        "CREDS": os.environ.get("VCS_TOKEN")
+    },
+    "BACKENDS": {
+        "GITHUB": {
+            "HEADERS": {
+                "X-GitHub-Api-Version": "2022-11-28",
+                "Accept": "application/vnd.github+json"
+            }
+        }
+    }
+}
+"""Configuration for the ``review`` function"""
+
 ARGUMENTS = [{
     "mode": "name",
     "syntax": "operation",
-    "choices": ["chat", "summarize"],
-    "help": "The operation to perform (`chat`, `summarize`). Chat "
+    "choices": ["chat", "summarize", "review"],
+    "help": "The operation to perform (`chat`, `summarize`, `review`)."
 },{
     "mode": "name",
     "syntax": "configure",
@@ -133,42 +150,56 @@ ARGUMENTS = [{
     "syntax": ["-p", "--prompt"],
     "type": str,
     "default": DEFAULTS["PROMPT"],
-    "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'"
+    "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for `summarize` and `review` operations."
 },{
     "mode": "flag",
     "syntax": ["-m", "--model"],
     "type": str,
     "default": DEFAULTS["MODEL"],
-    "help": "Input model for Gemini API. Optional for `chat` operation. Defaults to the value of `GEMINI_MODEL` environment variable."
+    "help": "Input model for Gemini API. Optional for all operation. Defaults to the value of `GEMINI_MODEL` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-r", "--persona"],
     "type": str,
     "default": DEFAULTS["PERSONA"],
-    "help": "Input Persona for Gemini API. Optional for `chat` operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
+    "help": "Input Persona for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-f", "--self"],
     "type": str,
     "default": DEFAULTS["PROMPTER"],
-    "help": "Input Prompter for Gemini API. Optional for `chat` operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
+    "help": "Input Prompter for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-d", "--directory"],
     "default": None,
     "type": str,
-    "help": "The path to the directory to summarize. Required for 'summarize' operation. Optional for the `chat` operation."
+    "help": "The path to the directory to summarize. Required for `summarize`. Optional for `chat`. Ignored for `review`."
+},{
+    "mode": "flag",
+    "syntax": ["-b", "--branch"],
+    "default": None,
+    "type": str,
+    "help": "Branch of the git repo to review. Required for `review`. Ignored for `chat` and `summarize`."
 }]
 """Configuration for command line arguments"""
 
 VERSION = os.environ.setdefault("VERSION", "1.0")
 """Version configuration"""
 
+TUNING = bool(os.environ.setdefault("TUNING", "disabled"))
+
 API_KEY = os.environ.get("GEMINI_KEY")
 """Gemini API key"""
 
 if API_KEY is None:
     raise ValueError("GEMINI_KEY environment variable not set.")
+
+def tuning_enabled():
+    """
+    Returns a bool flag signaling models should be tuned.
+    """
+    return TUNING == "enabled"
 
 def summary_extensions():
     """
@@ -188,6 +219,11 @@ def language_modules():
     """
     Return a list of enabled Language modules.
     """
-    if any(v for v in LANGUAGE["MODULES"].values()):
-        return [ k.lower() for k,v in LANGUAGE["MODULES"].items() ]
+    if any(v == "enabled" for v in LANGUAGE["MODULES"].values()):
+        return [ 
+            k.lower() 
+            for k,v 
+            in LANGUAGE["MODULES"].items() 
+            if v == "enabled"
+        ]
     return []

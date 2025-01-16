@@ -1,4 +1,7 @@
-""" # parse.py
+""" 
+parse.py
+--------
+
 Module for formatting prompts and responses. It also handles context management.
 """
 # Standard Library Modules
@@ -13,6 +16,21 @@ import objects.templates as templates
 import objects.language as language
 import objects.conversation as conversation
 
+def git(
+    persona = "valis"        
+):
+    mem = cache.Cache()
+    temps = templates.Template()
+
+    if persona is None:
+        persona = mem.get("currentPersona")
+
+    dir = os.getcwd()  
+    summary = summarize(dir, stringify=True)
+
+    review_temp = temps.get("review")
+
+    
 def contextualize(
     persona : str = None,
     summarize_dir : str = None
