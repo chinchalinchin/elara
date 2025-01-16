@@ -16,19 +16,24 @@ import objects.templates as templates
 import objects.language as language
 import objects.conversation as conversation
 
-def git(
-    persona = "valis"        
-):
+def git():
     mem = cache.Cache()
     temps = templates.Template()
-
-    if persona is None:
-        persona = mem.get("currentPersona")
-
+    lang = language.Language(
+        enabled = conf.language_modules()
+    )
     dir = os.getcwd()  
-    summary = summarize(dir, stringify=True)
 
-    review_temp = temps.get("review")
+    buffer = mem.all()
+    buffer["currentPersona"] = conf.PERSONAS["DEFAULT"]["REVIEW"]
+
+    return temps.render("review", { 
+        **buffer,
+        **lang.get_modules(),
+        **{
+            "summary": summarize(dir, stringify=True)
+        }
+    })
 
     
 def contextualize(

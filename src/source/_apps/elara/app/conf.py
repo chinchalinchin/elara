@@ -10,7 +10,7 @@ import google.generativeai as genai
 
 _dir = Path(__file__).resolve().parent
 
-PERSIST = {
+CACHE = {
     "DIR": {
         "APP": _dir,
         "DATA": os.path.join(_dir, "data"),
@@ -62,7 +62,14 @@ MODEL = {
     },{
         "tag": "flash-think-exp",
         "path": "models/gemini-2.0-flash-thinking-exp"
-    }]
+    }],
+    "DEFAULTS": {
+        "TUNING": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
+        "MODEL": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-2.0-flash-exp"),
+        # "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
+    },
+    "TUNING": os.environ.setdefault("TUNING", "disabled")
+
 }
 """Configuration for ``google.generativeai.GenerativeModel``"""
 
@@ -78,6 +85,11 @@ LANGUAGE = {
 """Configuration for Language modules"""
 
 PERSONAS = {
+    "DEFAULTS": {
+        "CHAT": "elara",
+        "REVIEW": "valis",
+        "ANALYSIS": "axiom"
+    },
     "ALL": ["elara", "axiom", "valis"]
 }
 """Configuration for personas"""
@@ -86,15 +98,11 @@ CONVERSATION = {
     "TIMEZONE_OFFSET": int(os.environ.setdefault("CONVO_TIMEZONE","-5"))
 }
 
-DEFAULTS = {
-    "SOURCE": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
-    "MODEL": "models/gemini-2.0-flash-exp",
-    # "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
-    "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
+PROMPTS = {
     "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
-    "PROMPT": "Hello! Form is the possibility of structure.",
+    "DEFAULT": "Hello! Form is the possibility of structure.",
 }
-"""Configuration for application deaults"""
+"""Configuration for prompt defaults."""
 
 SUMMARIZE = {
     "DIRECTIVES": {
@@ -149,25 +157,25 @@ ARGUMENTS = [{
     "mode": "flag",
     "syntax": ["-p", "--prompt"],
     "type": str,
-    "default": DEFAULTS["PROMPT"],
+    "default": PROMPTS["DEFAULT"],
     "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for `summarize` and `review` operations."
 },{
     "mode": "flag",
     "syntax": ["-m", "--model"],
     "type": str,
-    "default": DEFAULTS["MODEL"],
+    "default": MODEL["DEFAULTS"]["MODEL"],
     "help": "Input model for Gemini API. Optional for all operation. Defaults to the value of `GEMINI_MODEL` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-r", "--persona"],
     "type": str,
-    "default": DEFAULTS["PERSONA"],
+    "default": PERSONAS["DEFAULTS"]["CHAT"],
     "help": "Input Persona for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-f", "--self"],
     "type": str,
-    "default": DEFAULTS["PROMPTER"],
+    "default": PROMPTS["PROMPTER"],
     "help": "Input Prompter for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
 },{
     "mode": "flag",
@@ -177,17 +185,21 @@ ARGUMENTS = [{
     "help": "The path to the directory to summarize. Required for `summarize`. Optional for `chat`. Ignored for `review`."
 },{
     "mode": "flag",
-    "syntax": ["-b", "--branch"],
+    "syntax": ["-pr", "--pullrequest"],
     "default": None,
     "type": str,
-    "help": "Branch of the git repo to review. Required for `review`. Ignored for `chat` and `summarize`."
+    "help": "Pull request number to review. Required for `review`. Ignored for `chat` and `summarize`."
+},{
+    "mode": "flag",
+    "syntax": ["-c", "--commit"],
+    "default": None,
+    "type": str,
+    "help": "Commit ID to review. Required for `review`. Ignored for `chat` and `summarize`."
 }]
 """Configuration for command line arguments"""
 
 VERSION = os.environ.setdefault("VERSION", "1.0")
 """Version configuration"""
-
-TUNING = bool(os.environ.setdefault("TUNING", "disabled"))
 
 API_KEY = os.environ.get("GEMINI_KEY")
 """Gemini API key"""
@@ -199,7 +211,7 @@ def tuning_enabled():
     """
     Returns a bool flag signaling models should be tuned.
     """
-    return TUNING == "enabled"
+    return MODEL["TUNING"] == "enabled"
 
 def summary_extensions():
     """

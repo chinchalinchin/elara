@@ -26,6 +26,7 @@ Structure
     │   │   │   └── valis.json
     │   │   ├── templates
     │   │   │   ├── preamble.rst
+    │   │   │   ├── review.rst
     │   │   │   ├── summary.rst
     │   │   │   └── thread.rst
     │   │   └── tuning
@@ -49,7 +50,9 @@ Structure
     │   │   │   ├── __init__.cpython-312.pyc
     │   │   │   ├── language.cpython-312.pyc
     │   │   │   ├── personas.cpython-312.pyc
+    │   │   │   ├── repo.cpython-312.pyc
     │   │   │   └── templates.cpython-312.pyc
+    │   │   ├── repo.py
     │   │   └── templates.py
     │   ├── parse.py
     │   └── __pycache__
@@ -59,12 +62,15 @@ Structure
     │       ├── main.cpython-312.pyc
     │       ├── model.cpython-312.pyc
     │       └── parse.cpython-312.pyc
+    ├── build.sh
+    ├── Makefile
     ├── MANIFEST.ini
     ├── pyproject.toml
     ├── README.md
+    ├── requirements.txt
     └── setup.cfg
     
-    11 directories, 46 files
+    11 directories, 52 files
     
 
 
@@ -83,6 +89,44 @@ MANIFEST.ini
     recursive-include app/data/system *.txt
     recursive-include app/data/tuning *.json
     recursive-include app/data/templates *.json
+
+requirements.txt
+^^^^^^^^^^^^^^^^
+
+.. raw:: TODO
+
+    # Elara Package Dependencies
+    google-generativeai==0.8.3
+    Jinja2==3.1.5
+    requests==2.25.1
+    
+    # Build Packages
+    build
+    twine
+
+build.sh
+^^^^^^^^
+
+.. code-block:: bash
+
+    #!/bin/bash
+    
+    # Check for pypirc file or TWINE_PASSWORD
+    if [ ! -f ~/.pypirc ] && [ -z "$TWINE_PASSWORD" ]; then
+      echo "Error: PyPi credentials not found."
+      echo "Please create a ~/.pypirc file or set the TWINE_PASSWORD environment variable."
+      exit 1
+    fi
+    
+    # Build the package
+    echo "Building elara..."
+    python3 -m build
+    
+    # Upload to PyPi
+    echo "Uploading to PyPi..."
+    python3 -m twine upload dist/*
+    
+    echo "Successfully uploaded elara to PyPi!"
 
 README.md
 ^^^^^^^^^
@@ -110,6 +154,25 @@ README.md
     
     ##  Usage 
     
+    ### Authentication
+    
+    **Gemini API**
+    
+    The application ingests the Gemini API token through the ``GEMINI_KEY`` environment variable.
+    
+    ```bash
+    export GEMINI_KEY="key goes here"
+    elara chat -p 
+    ```
+    
+    **VCS**
+    
+    The application ingests VCS tokens through the ``VCS_TOKEN`` environment variable.
+    
+    ```bash
+    export VCS_TOKEN="token goes here"
+    elara review -pr 7 -c <sha> 
+    ```
     ### Contextual Chat 
     
     The `chat` command will contextualize the prompt and forward it to the Gemini API.
@@ -126,22 +189,31 @@ README.md
     
     ## Application Structure
     
-    ### Flow
-    
-    - Application Initializes: `parse.init()` traverses `data`, `modules` and `templates`.
-    - 
     ### Tuned Models 
     
     Tuned models are initialized the first time the command line interface is invoked. These models have been fine-tuned with JSONs in `data/tuning/*`.
     
     ### Data
     
-    All context is managed in the `data` directory. The application uses the contents of the `preamble` and `threads` subdirectories to format the prompts that are sent to the Gemini API.  
+    All context is managed in the `data` directory. The application uses Jinja2 templates in the ``data/templates``
     
-    1. `data/preamble`: This subdirectory contains RST documents that are prefixed to every prompt. They provide additional context to the Gemin model. They are templated with Jinja2 and conditionally rendered based on user input.
-    2. `data/threads`: This subdirectory contains RST documents the conversation history with Gemini. All prompts and response are persisted in these documents.
-    2. `data/system`: This subdirectory contains TXT containg system instructions that are provided to the Gemini model.
-    3. `data/tuning`: This contains JSON files with tuning data. These are used to initialize the persona models.
+    1. `data/templates`: This subdirectory contains RST templates that are rendered using user input.
+    2. `data/history`: This subdirectory contains JSONs that contain chat threads with different personas.
+    2. `data/system`: This subdirectory contains JSON that contain system instructions for each persona. 
+    3. `data/tuning`: This contains JSON files with tuning data. These are used to initialize the persona models, if tuning is enabled through the ``TUNING`` environment variable.
+    
+    ### Language Modules
+    
+    Additional language plugins can be injected into the prompt. The language modules can be found in ``data/modules``. To enable a Language module, set the value of the following environment variables,
+    
+    ```bash
+    export LANGUAGE_OBJECT=enabled
+    export LANGUAGE_INFLECTION=enabled
+    export LANGUAGE_VOICE=enabled
+    export LANGUAGE_WORDS=enabled
+    
+    elara chat -p "Try out these sweet language modules, Elara!"
+    ```
 
 setup.cfg
 ^^^^^^^^^
@@ -151,10 +223,10 @@ setup.cfg
     [metadata]
     name = elara
     version = 0.1.0
-    description = A Python package for interacting with Google's Gemini API.
+    description = Plumb the depths of generative AI.
     long_description = file: README.md
     long_description_content_type = text/markdown
-    author = Grant
+    author = Grant Moore
     author_email = chinchalinchin@gmail.com
     license = MIT
     classifiers =
@@ -171,8 +243,9 @@ setup.cfg
         =app
     python_requires = >=3.8
     install_requires =
-        google-generativeai>=0.1.0
-        google-api-core>=2.17.1
+        google-generativeai==0.8.3
+        Jinja2==3.1.5
+        requests==2.25.1
     
     [options.extras_require]
     dev =
@@ -194,15 +267,16 @@ pyproject.toml
     [project]
     name = "elara"
     version = "0.1.0"
-    description = "A Python package for interacting with Google's Gemini API."
+    description = "Plumb the depths of generative AI."
     readme = "README.md"
-    authors = [{name = "Grant"}]
+    authors = [{name = "Grant Moore"}]
     license = {text = "MIT"}
     requires-python = ">=3.8"
     
     dependencies = [
-        "google-generativeai>=0.1.0",
-        "google-api-core>=2.17.1"
+        "google-generativeai==0.8.3",
+        "Jinja2==3.1.5",
+        "requests==2.25.1"
     ]
     
     [project.optional-dependencies]
@@ -218,7 +292,10 @@ app/model.py
 
 .. code-block:: python
 
-    """ # model.py
+    """ 
+    model.py
+    --------
+    
     Wrapper around Google's GenerativeAI library. Provides configuration and default settings.
     """
     # Application Modules
@@ -231,45 +308,71 @@ app/model.py
     
     genai.configure(api_key=conf.API_KEY)
     
-    def _model(
-        model_name=conf.DEFAULTS["MODEL"],
-        persona=None
-    ):
+    def init() -> bool:
         """
-        TODO: explain
+        Initialize tuned personas if tuning is enabled through the ``TUNING`` environment variable.
+    
+        :returns: A flag to signal if a tuning event occured.
+        :rtype: bool
+        """
+        did_tune = False
+        if conf.tuning_enabled():
+            for p in personas.Personas().all():
+                if p not in cache.Cache().tuned_personas():
+                    tune(p)
+                    did_tune = True    
+        return did_tune
+    
+    def model(
+        model_name = None,
+        persona = None
+    ) -> genai.GenerativeModel:
+        """
+        Retrieve a `genai.GenerativeModel` from the Gemini API. 
+    
+        :param model_name: The full model path of the Gemini model to use, e.g. `models/gemini-1.5.-pro-latest` or `tunedModels/elara-123456789`. If no `model_name` is passed in, the model will be retrieved from the cache.
+        :type model_name: str
+        :param persona: The persona for Gemini to assume. If no `persona` is passed in, the persona will be retrieved from the cache.
+        :type persona: str
+        :returns: Gemini model API 
+        :rtype: genai.GenerativeModel
         """
         mem = cache.Cache()
     
-        if model_name in mem.base_models():
-            if persona is None:
-                persona = mem.get("currentPersona")
+        if model_name is None:
+            model_name = mem.get("currentModel")
     
-            data = personas.Personas(persona).get()
+        if persona is None:
+            persona = mem.get("currentPersona")
+    
+        # NOTE: need to filter out tuned models since Gemini API 
+        #       doesn't support system instructions for tuned models. 
+        if model_name in mem.base_models():
+            data = personas.Personas(persona).system()
     
             return genai.GenerativeModel(
                 model_name=model_name,
-                system_instruction=data["SYSTEM"]
+                system_instruction=data
             )
         
         return genai.GenerativeModel(
             model_name=model_name
         )
     
-    def init():
-        """
-        TODO: explain
-        """
-        for p in personas.Personas().all():
-            if p not in cache.Cache().tuned_personas():
-                tune(p)
-    
     def reply(
-        prompt, 
-        persona=None,
-        model_name=None
-    ):
+        prompt : str, 
+        persona : str = None,
+        model_name : str = None
+    ) -> str:
         """
-        TODO: explain
+        Send a message to the Gemini API. 
+    
+        :param prompt: The message to send.
+        :type prompt: str
+        :param persona: The persona for Gemini to assume. This will affect the system instructions appended to the model request. If no `persona` is passed in, it will be retrieved from the cache.
+        :type persona: str
+        :param model_name: The full model path of the Gemini model to use, e.g. `models/gemini-1.5.-pro-latest` or `tunedModels/elara-123456789`. If no `model_name` is passed in, it will be retrieved from the cache.
+        :type model_name: str
         """
         mem = cache.Cache()
     
@@ -279,7 +382,7 @@ app/model.py
         if model_name is None:
             model_name = mem.get("currentModel")
     
-        return _model(
+        return model(
             model_name = model_name,
             persona = persona
         ).generate_content(
@@ -289,19 +392,18 @@ app/model.py
         ).text
     
     def tune(
-        persona=None,
-        tuning_model=None
-    ):
+        persona : str = None,
+        tuning_model : str = None
+    ) -> str:
         """
-        Checks if a tuned model with the given display name exists.
-        If not, it creates the tuned model using the provided data.
+        Checks if a tuned model with the given persona exists. If not, it creates the tuned model using the persona tuning data.
     
-        Args:
-            persona: The display name of the tuned model.
-            model_type: Base model to use
-    
-        Returns:
-            The name of the tuned model (either existing or newly created).
+        :param persona: The persona for Gemini to assume. If no `persona` is passed in, it will be retrieved from the cache.
+        :type persona: str        
+        :param tuning_model: Base model to use for tuning. If no `tuning_model` is passed in, it will be retrieved from the cache.
+        :type tuning_model: str
+        :returns: Name of the tuned model.
+        :rtype: str
         """    
         mem = cache.Cache()
     
@@ -335,7 +437,7 @@ app/model.py
             training_data=tuning_data,
             epoch_count=1, # TODO: figure out what this does
             batch_size=1, # TODO: figure out if I need batches
-            learning_rate=0.001 # TODO: figure out what this does
+            learning_rate=0.001 # TODO:figure out what this does
         )
     
         mem.update({
@@ -365,7 +467,10 @@ app/parse.py
 
 .. code-block:: python
 
-    """ # parse.py
+    """ 
+    parse.py
+    --------
+    
     Module for formatting prompts and responses. It also handles context management.
     """
     # Standard Library Modules
@@ -380,6 +485,29 @@ app/parse.py
     import objects.language as language
     import objects.conversation as conversation
     
+    def git(
+        persona = conf.PERSONAS["DEFAULTS"]["REVIEW"]        
+    ):
+        mem = cache.Cache()
+        temps = templates.Template()
+        lang = language.Language(
+            enabled = conf.language_modules()
+        )
+    
+        if persona is None:
+            persona = mem.get("currentPersona")
+    
+        dir = os.getcwd()  
+    
+        return temps.render("review", { 
+            **mem.all(),
+            **lang.get_modules(),
+            **{
+                "summary": summarize(dir, stringify=True)
+            }
+        })
+    
+        
     def contextualize(
         persona : str = None,
         summarize_dir : str = None
@@ -528,13 +656,14 @@ app/main.py
     import objects.conversation as conversation
     import objects.language as language
     import objects.personas as personas
+    import objects.repo as repo
     import parse
     
     def args():
         """
         Parse and format command line arguments
         """
-        parser = argparse.ArgumentParser(description="Interact with Gemini.")
+        parser = argparse.ArgumentParser(description="Plumb the depths of generative AI.")
         for arg in conf.ARGUMENTS: 
             if arg["mode"] == "name":
                 if "nargs" in arg:
@@ -574,26 +703,28 @@ app/main.py
         prompt : str,
         persona : str = None,
         prompter : str = None,
-        model_type : str = None, 
+        model_name : str = None, 
         summarize_dir : str = None
     ) -> str:
         """
-        Chat with Gemini
+        Chat with one of Gemini's personas.
     
         :param prompt: Prompt to send.
         :type prompt: str
-        :param persona: Persona with which to converse.
+        :param persona: Persona with which to converse. If no `persona` is provided, it will be retrieved from the cache.
         :type persona: str
-        :param model_type: Gemini model to use.
+        :param model_name: Gemini model to use. If no `model_name` is provided, it will be retrieved from teh cache.
         :type model_type: str
-        :param summarize_dir: Directory of additional context to inject into prompt.
+        :param summarize_dir: Directory of additional context to inject into prompt. If this argument is provided, an RST formatted summary of a directory will be generated using `parse.summarize()` and injected into the prompt.
         :type summarize_dir: str
+        :returns: The persona's response to the prompt.
+        :rtype: str
         """
         mem = cache.Cache()
         convo = conversation.Conversation()
     
-        if model_type is None:
-            model_type = mem.get("currentModel")
+        if model_name is None:
+            model_name = mem.get("currentModel")
     
         if persona is None:
             persona = mem.get("currentPersona")
@@ -603,16 +734,38 @@ app/main.py
     
         convo.update(persona, prompter, prompt)
         parsed_prompt = parse.contextualize(persona, summarize_dir)
-        response = model.reply(parsed_prompt, persona, model_type)
+        response = model.reply(parsed_prompt, persona, model_name)
         convo.update(persona, persona, response)
     
         return response
+    
+    def review(
+        pr : str,
+        model_name : str = None,
+    ) -> str:
+        """
+        Placeholder for the code review logic.
+        """
+        source = repo.Repo()
+        persona = conf.PERSONAS["DEFAULTS"]["REVIEW"]
+    
+        prompt = parse.git(persona)
+        print(prompt)
+        # response = model.reply(
+        #     prompt, 
+        #     persona=persona, 
+        #     model_name=model_name
+        # )
+        # source.comment(response, pr)
+    
+    
+        return "placeholder"
     
     def init():
         """
         Initialize application:
         
-        - Create class singletons to load in data.
+        - Create classes of singletons to load in data.
         - Initiate model tuning, if applicable.
         - Parse command line arguments
     
@@ -623,10 +776,8 @@ app/main.py
         cache.Cache()
         personas.Personas()
         conversation.Conversation()
-        language.Language(enabled = conf.language_modules())
-        # Tune models if enabled.
-        if conf.tuning_enabled():
-            model.init()
+        language.Language(enabled = conf.language_modules())    
+        model.init()
         return args()
     
     def main():
@@ -635,20 +786,31 @@ app/main.py
         """
         parsed_args = init()
         if parsed_args.operation == "chat":
-            res = chat(
-                prompt=parsed_args.prompt, 
-                model_type=parsed_args.model,
-                prompter=parsed_args.self,
-                persona=parsed_args.persona,
-                summarize_dir=parsed_args.directory
+            print(
+                chat(
+                    prompt=parsed_args.prompt, 
+                    model_type=parsed_args.model,
+                    prompter=parsed_args.self,
+                    persona=parsed_args.persona,
+                    summarize_dir=parsed_args.directory
+                )
             )
-            print(res)
         elif parsed_args.operation == "summarize":
-            parse.summarize(parsed_args.directory)
+            parse.summarize(
+                directory = parsed_args.directory
+            )
         elif parsed_args.operation == "configure":
-            configure(parsed_args.configure)
+            configure(
+                config_paris = parsed_args.configure
+            )
+        elif parsed_args.operation == "review":
+            review(
+                pr=parsed_args.pullrequest,
+                commit=parsed_args.commit,
+                model_type=parsed_args.model
+            )
         else:
-            print("Invalid operation. Choose 'chat', 'conduct', 'summarize', or 'configure'.")
+            print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")
     
     if __name__ == "__main__":
         main()
@@ -670,7 +832,7 @@ app/conf.py
     
     _dir = Path(__file__).resolve().parent
     
-    PERSIST = {
+    CACHE = {
         "DIR": {
             "APP": _dir,
             "DATA": os.path.join(_dir, "data"),
@@ -722,7 +884,14 @@ app/conf.py
         },{
             "tag": "flash-think-exp",
             "path": "models/gemini-2.0-flash-thinking-exp"
-        }]
+        }],
+        "DEFAULTS": {
+            "TUNING": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
+            "MODEL": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-2.0-flash-exp"),
+            # "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
+        },
+        "TUNING": os.environ.setdefault("TUNING", "disabled")
+    
     }
     """Configuration for ``google.generativeai.GenerativeModel``"""
     
@@ -738,6 +907,11 @@ app/conf.py
     """Configuration for Language modules"""
     
     PERSONAS = {
+        "DEFAULTS": {
+            "CHAT": "elara",
+            "REVIEW": "valis",
+            "ANALYSIS": "axiom"
+        },
         "ALL": ["elara", "axiom", "valis"]
     }
     """Configuration for personas"""
@@ -746,15 +920,11 @@ app/conf.py
         "TIMEZONE_OFFSET": int(os.environ.setdefault("CONVO_TIMEZONE","-5"))
     }
     
-    DEFAULTS = {
-        "SOURCE": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
-        "MODEL": "models/gemini-2.0-flash-exp",
-        # "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
-        "PERSONA": os.environ.setdefault("GEMINI_PERSONA", "elara"),
+    PROMPTS = {
         "PROMPTER": os.environ.setdefault("GEMINI_PROMPTER", "grant"),
-        "PROMPT": "Hello! Form is the possibility of structure.",
+        "DEFAULT": "Hello! Form is the possibility of structure.",
     }
-    """Configuration for application deaults"""
+    """Configuration for prompt defaults."""
     
     SUMMARIZE = {
         "DIRECTIVES": {
@@ -778,11 +948,28 @@ app/conf.py
     }
     """Configuration for the ``summarize`` function. """
     
+    REVIEW = {
+        "VCS": os.environ.setdefault("VCS","github"),
+        "AUTH": {
+            "TYPE": "bearer",
+            "CREDS": os.environ.get("VCS_TOKEN")
+        },
+        "BACKENDS": {
+            "GITHUB": {
+                "HEADERS": {
+                    "X-GitHub-Api-Version": "2022-11-28",
+                    "Accept": "application/vnd.github+json"
+                }
+            }
+        }
+    }
+    """Configuration for the ``review`` function"""
+    
     ARGUMENTS = [{
         "mode": "name",
         "syntax": "operation",
-        "choices": ["chat", "summarize"],
-        "help": "The operation to perform (`chat`, `summarize`). Chat "
+        "choices": ["chat", "summarize", "review"],
+        "help": "The operation to perform (`chat`, `summarize`, `review`)."
     },{
         "mode": "name",
         "syntax": "configure",
@@ -792,39 +979,49 @@ app/conf.py
         "mode": "flag",
         "syntax": ["-p", "--prompt"],
         "type": str,
-        "default": DEFAULTS["PROMPT"],
-        "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'"
+        "default": PROMPTS["DEFAULT"],
+        "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for `summarize` and `review` operations."
     },{
         "mode": "flag",
         "syntax": ["-m", "--model"],
         "type": str,
-        "default": DEFAULTS["MODEL"],
-        "help": "Input model for Gemini API. Optional for `chat` operation. Defaults to the value of `GEMINI_MODEL` environment variable."
+        "default": MODEL["DEFAULTS"]["MODEL"],
+        "help": "Input model for Gemini API. Optional for all operation. Defaults to the value of `GEMINI_MODEL` environment variable."
     },{
         "mode": "flag",
         "syntax": ["-r", "--persona"],
         "type": str,
-        "default": DEFAULTS["PERSONA"],
-        "help": "Input Persona for Gemini API. Optional for `chat` operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
+        "default": PERSONAS["DEFAULTS"]["CHAT"],
+        "help": "Input Persona for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
     },{
         "mode": "flag",
         "syntax": ["-f", "--self"],
         "type": str,
-        "default": DEFAULTS["PROMPTER"],
-        "help": "Input Prompter for Gemini API. Optional for `chat` operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
+        "default": PROMPTS["PROMPTER"],
+        "help": "Input Prompter for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
     },{
         "mode": "flag",
         "syntax": ["-d", "--directory"],
         "default": None,
         "type": str,
-        "help": "The path to the directory to summarize. Required for 'summarize' operation. Optional for the `chat` operation."
+        "help": "The path to the directory to summarize. Required for `summarize`. Optional for `chat`. Ignored for `review`."
+    },{
+        "mode": "flag",
+        "syntax": ["-pr", "--pullrequest"],
+        "default": None,
+        "type": str,
+        "help": "Pull request number to review. Required for `review`. Ignored for `chat` and `summarize`."
+    },{
+        "mode": "flag",
+        "syntax": ["-c", "--commit"],
+        "default": None,
+        "type": str,
+        "help": "Commit ID to review. Required for `review`. Ignored for `chat` and `summarize`."
     }]
     """Configuration for command line arguments"""
     
     VERSION = os.environ.setdefault("VERSION", "1.0")
     """Version configuration"""
-    
-    TUNING = bool(os.environ.setdefault("TUNING", "disabled"))
     
     API_KEY = os.environ.get("GEMINI_KEY")
     """Gemini API key"""
@@ -836,7 +1033,7 @@ app/conf.py
         """
         Returns a bool flag signaling models should be tuned.
         """
-        return TUNING == "enabled"
+        return MODEL["TUNING"] == "enabled"
     
     def summary_extensions():
         """
@@ -865,6 +1062,216 @@ app/conf.py
             ]
         return []
 
+app/objects/repo.py
+^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    """ objects.repo
+    Object for external Version Control System. 
+    """
+    
+    # Application Modules
+    import conf 
+    
+    # External Modules
+    import requests
+    
+    class Repo:
+        inst = None
+        """Singleton instance"""
+        vcs = None
+        """Version control backend"""
+        auth = None
+        """Authentication configuration for VCS backend"""
+        repo = None
+        """Name of the VCS repository"""
+        owner = None
+        """Username of the repository owner."""
+    
+        def __init__(
+            self,
+            repo : str, 
+            owner : str,
+            vcs : str= conf.REVIEW["VCS"],
+            auth : str= conf.REVIEW["AUTH"]
+        ):
+            """
+            Initialize Repo
+    
+            :param repo: Name of the VCS repository.
+            :type repo: str
+            :param owner: Username of the owner of the repository.
+            :type owner: str
+            :param vcs: Type of VCS backend to use. Currently supports: `github`. Defaults to the value of the ``VCS`` environment variable.
+            :type vcs: str
+            :param auth: Authentication configuration for the VCS backend. Currently supposed token-based authorization headers. Defaults to the token value in the ``VCS_TOKEN`` environment variable.
+            :type auth: dict
+    
+            .. note::
+    
+                `auth` must be formatted as follows,
+    
+                {
+                    "VCS": "<github | bitbucket | codecommit>",
+                    "AUTH": {
+                        "TYPE": "<bearer | oauth | etc. >",
+                        "CREDS": "will change based on type."
+                    }
+                }
+            """
+            self.vcs = vcs
+            self.auth = auth
+            self.repo = repo
+            self.owner = owner
+    
+        def __new__(
+            self, 
+            *args, 
+            **kwargs
+        ):
+            """
+            Create a Cache singleton.
+            """
+            if not self.inst:
+                self.inst = super(
+                    Repo, 
+                    self
+                ).__new__(self, *args, **kwargs)
+            return self.inst
+    
+        def __dir__(self):
+            return {
+                "repo": self.repo,
+                "vcs": self.vcs,
+                "owner": self.owner
+            }
+          
+        def _pr(
+            self, 
+            pr
+        ) -> str | None:
+            """
+            Returns the POST URL for the VCS REST API.
+    
+            :param pr: Pull request number for the POST.
+            :type pr: str
+            :returns: POST URL
+            :rtype: str
+            """
+            if self.vcs == "github":
+                return f"https://api.github.com/repos/{self.owner}/{self.repo}/pulls/{pr}/comments"
+            return None
+        
+        def _headers(self):
+            """
+            Returns the necessary headers for a request to the VCS backend. 
+    
+            :returns: Dictionary of headers
+            :rtype:  dict
+            """
+            if self.vcs == "github":
+                if self.auth["TYPE"] == "bearer":
+                    token = self.auth["CREDS"]
+                    return {
+                        **{ "Authorization": f"Bearer {token}" }, 
+                        **conf.REVIEW["BACKENDS"]["GITHUB"]["HEADERS"]
+                    }
+    
+        def comment(
+            self,
+            msg : str,
+            pr : str,
+            commit : str
+        ):
+            """
+            Post a comment to a pull request on the VCS backend.
+    
+            :param msg: Comment to post.
+            :type msg: str
+            :param pr: Pull request number on which to comment.
+            :type pr: str
+            :param commit: Commit ID on which to comment.
+            :type commit: str.
+            """        
+            url = self._pr(pr)
+            headers = self._headers()
+            data = {
+                "body": msg,
+                "commit_id": commit, 
+                "path": "TODO"
+                
+            }
+            return requests.post(
+                url = url, 
+                headers = headers, 
+                json = data
+            )
+        
+    ### From Github REST API docs: https://docs.github.com/en/rest/pulls/comments?apiVersion=2022-11-28#create-a-review-comment-for-a-pull-request
+    
+    ## Example
+    # curl -L \
+    #   -X POST \
+    #   -H "Accept: application/vnd.github+json" \
+    #   -H "Authorization: Bearer <YOUR-TOKEN>" \
+    #   -H "X-GitHub-Api-Version: 2022-11-28" \
+    #   https://api.github.com/repos/OWNER/REPO/pulls/PULL_NUMBER/comments \
+    #   -d '{"body":"Great stuff!","commit_id":"6dcb09b5b57875f334f61aebed695e2e4193db5e","path":"file1.txt","start_line":1,"start_side":"RIGHT","line":2,"side":"RIGHT"}'
+    
+    
+    ## Path parameters
+    # Name, Type, Description
+    # owner string Required
+    # The account owner of the repository. The name is not case sensitive.
+    
+    # repo string Required
+    # The name of the repository without the .git extension. The name is not case sensitive.
+    
+    # pull_number integer Required
+    # The number that identifies the pull request.
+    
+    ## Body parameters
+    # Name, Type, Description
+    # body string Required
+    # The text of the review comment.
+    
+    # commit_id string Required
+    # The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the position.
+    
+    # path string Required
+    # The relative path to the file that necessitates a comment.
+    
+    # position integer
+    # This parameter is closing down. Use line instead. The position in the diff where you want to add a review comment. Note this value is not the same as the line number in the file. The position value equals the number of lines down from the first "@@" hunk header in the file you want to add a comment. The line just below the "@@" line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.
+    
+    # side string
+    # In a split diff view, the side of the diff that the pull request's changes appear on. Can be LEFT or RIGHT. Use LEFT for deletions that appear in red. Use RIGHT for additions that appear in green or unchanged lines that appear in white and are shown for context. For a multi-line comment, side represents whether the last line of the comment range is a deletion or addition. For more information, see "Diff view options" in the GitHub Help documentation. Can be one of: LEFT, RIGHT
+    
+    # line integer
+    # Required unless using subject_type:file. The line of the blob in the pull request diff that the comment applies to. For a multi-line comment, the last line of the range that your comment applies to.
+    
+    # start_line integer
+    # Required when using multi-line comments unless using in_reply_to. The start_line is the first line in the pull request diff that your multi-line comment applies to. To learn more about multi-line comments, see "Commenting on a pull request" in the GitHub Help documentation.
+    
+    # start_side string
+    # Required when using multi-line comments unless using in_reply_to. The start_side is the starting side of the diff that the comment applies to. Can be LEFT or RIGHT. To learn more about multi-line comments, see "Commenting on a pull request" in the GitHub Help documentation. See side in this table for additional context. Can be one of: LEFT, RIGHT, side
+    
+    # in_reply_to integer
+    # The ID of the review comment to reply to. To find the ID of a review comment with "List review comments on a pull request". When specified, all parameters other than body in the request body are ignored.
+    
+    # subject_type string
+    # The level at which the comment is targeted. Can be one of: line, file
+    
+    
+    # HTTP response status codes 
+    # Status code	Description
+    # 201 Created
+    
+    # 403 Forbidden
+    
+    # 422 Validation failed, or the endpoint has been spammed.
+
 app/objects/cache.py
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -887,7 +1294,7 @@ app/objects/cache.py
     
         def __init__(
             self, 
-            file = conf.PERSIST["FILE"]["CACHE"]
+            file = conf.CACHE["FILE"]["CACHE"]
         ):
             """
             Initialize Cache.
@@ -922,11 +1329,11 @@ app/objects/cache.py
                 self.data  = {
                     "baseModels": conf.MODEL["BASE_MODELS"],
                     "tunedModels": [],
-                    "currentModel": conf.MODEL["BASE_MODELS"][0]["path"],
-                    "tuningModel": conf.DEFAULTS["SOURCE"],
+                    "currentModel":  conf.MODEL["DEFAULTS"]["MODEL"],
+                    "tuningModel": conf.MODEL["DEFAULTS"]["TUNING"],
                     "template": {
-                        "currentPersona": conf.DEFAULTS["PERSONA"],
-                        "currentPrompter": conf.DEFAULTS["PROMPTER"]
+                        "currentPersona": conf.PERSONAS["PERSONA"]["DEFAULTS"]["CHAT"],
+                        "currentPrompter": conf.PROMPTS["PROMPTER"]
                     }
                 }
     
@@ -1051,7 +1458,7 @@ app/objects/conversation.py
     
         def __init__(
             self, 
-            dir = conf.PERSIST["DIR"]["HISTORY"],
+            dir = conf.CACHE["DIR"]["HISTORY"],
             ext = ".json",
             tz_offset = conf.CONVERSATION["TIMEZONE_OFFSET"]
         ):
@@ -1101,7 +1508,7 @@ app/objects/conversation.py
                     
                     self.hist[persona] = payload["payload"]
     
-        def _persist(
+        def _CACHE(
             self, 
             persona : str
         ) -> None:
@@ -1150,7 +1557,7 @@ app/objects/conversation.py
             text : str
         ) -> dict:
             """
-            Update Conversation history and persist to file.
+            Update Conversation history and CACHE to file.
     
             :param persona: Persona with which the prompter is conversing.
             :type persona: str
@@ -1168,7 +1575,7 @@ app/objects/conversation.py
                 "index": index,
                 "timestamp": self._timestamp()
             }]
-            self._persist(persona)
+            self._CACHE(persona)
             return self.hist[persona]
     
 
@@ -1199,7 +1606,7 @@ app/objects/templates.py
     
         def __init__(
             self, 
-            dir = conf.PERSIST["DIR"]["TEMPLATES"],
+            dir = conf.CACHE["DIR"]["TEMPLATES"],
             ext = ".rst"
         ):
             """"
@@ -1238,6 +1645,7 @@ app/objects/templates.py
             """
             Retrieve a named template. Named templates are given below,
     
+            - review: Template for pull request reviews.
             - summary: Template for directory summaries.
             - preamble: Template for chat preamble.
             - thread: Template for chat history.
@@ -1294,7 +1702,7 @@ app/objects/language.py
         def __init__(
             self, 
             enabled: list, 
-            dir = conf.PERSIST["DIR"]["MODULES"],
+            dir = conf.CACHE["DIR"]["MODULES"],
             ext = conf.LANGUAGE["EXTENSION"]
         ):
             """
@@ -1445,9 +1853,9 @@ app/objects/personas.py
     
         def __init__(
             self, 
-            current = conf.DEFAULTS["PERSONA"],
-            tune_dir = conf.PERSIST["DIR"]["TUNING"],
-            sys_dir = conf.PERSIST["DIR"]["SYSTEM"],
+            current = conf.PERSONAS["DEFAULTS"]["CHAT"],
+            tune_dir = conf.CACHE["DIR"]["TUNING"],
+            sys_dir = conf.CACHE["DIR"]["SYSTEM"],
             tune_ext = ".json",
             sys_ext = ".json"
         ):
@@ -2246,6 +2654,98 @@ app/data/templates/preamble.rst
     {{ words }}
     {%- endif -%}
     {%- endif -%}
+
+app/data/templates/review.rst
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: TODO
+
+    .. _{{ currentPersona }}s-context:
+    
+    Code Review 
+    ###########
+    
+    .. _table-of-contents:
+    
+    =================
+    Table of Contents
+    =================
+    
+    - Preamble
+    {% if language is defined %}
+    - Language
+    {% endif %}
+    - Sumamry
+    
+    .. _preamble:
+    
+    ========
+    Preamble
+    ========
+    
+    Your name is {{ currentPersona }}. You have been given the job of code reviewer. The following prompt was triggered by a pull request opened on the ``{{ repository.owner }}/{{ repository.repo }}`` repository hosted on *{{ repository.vcs | uppercase }}*. It contains a structured summary of the current state of the repository.
+    
+    The repository summary has been formatted as RestructuredText (RST). The exact format of this file is structured through a continuous integration workflow that has created and posted this prompt to the Gemini REST API. The RST formatting is purely to markup the content of the pull request for your ease of understanding. 
+    
+    You must review the presented project for the following details, in order of importance:
+    
+    1. Potential bugs
+    2. Logical errors
+    3. Code smells
+    4. Potential optimizations
+    5. Potential enhancements
+    
+    Based on the severity of bullets #1, #2 and #3, you may choose to pass or fail the pull request. The following criteria should influence your decision to pass or fail the pull request:
+    
+    - Does the application run? 
+    - Does it expose sensitive data?
+    - Is it complete and utter garbage code?
+      
+    You may add criteria to your judgement, if you deem it important. 
+    
+    The continuous integration workflow will parse your response and append your comments back to the pull request that triggered this prompt. Your response should contains a decision to pass or fail the pull request, along with comments that address the points above. 
+    
+    Your decision to pass or fail the pull request be the first line of your response. Your decision should be formatted as a key-value pair attached to the top line of your response. If you choose to pass the pull request, attach the following tag to your response,
+    
+        REVIEW: PASS 
+    
+    If you choose to fail the pull request, attach the following tag to your response,
+    
+        REVIEW: FAIL
+    
+    This tag will be used to determine if the pull request should be marked for human review. Any text you include after the ``REVIEW: <decision>`` tag will appended to the pull request as a comment. Pull request comments support Markdown and RestructuredText, so you may employ these formats to mark up your response.
+    
+    {%- if language is defined -%}
+    .. _language-modules:
+    
+    ================
+    Language Modules
+    ================
+    
+    This section contains modules for your Language processing. These modules have information about the rules and syntax for your responses. Use these rules to generate valid responses. 
+    
+    {%- if object is defined -%}
+    {{ object }}
+    {%- endif -%}
+    {%- if inflection is defined -%}
+    {{ inflection }}
+    {%- endif -%}
+    {%- if voice is defined -%}
+    {{ voice }}
+    {%- endif -%}
+    {%- if words is defined -%}
+    {{ words }}
+    {%- endif -%}
+    {%- endif -%}
+    
+    .. _summary:
+    
+    =======
+    Summary
+    =======
+    
+    {{ summary }}
+    
 
 app/data/history/elara.json
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

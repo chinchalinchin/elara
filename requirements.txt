@@ -1,14 +1,20 @@
+# Documentation dependencies
 sphinx
 sphinx-toolbox
 sphinx-book-theme
 sphinx_design
+
+# Palindromes dependencies
 matplotlib
 numpy
 scipy
 tk
 nltk
-google-generativeai
-Jinja2
+
+# Elara dependencies
+google-generativeai==0.8.3
+Jinja2==3.1.5
+requests==2.25.1
 
 # Build Packages
 build

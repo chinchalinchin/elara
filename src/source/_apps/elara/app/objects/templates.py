@@ -20,7 +20,7 @@ class Template:
 
     def __init__(
         self, 
-        dir = conf.PERSIST["DIR"]["TEMPLATES"],
+        dir = conf.CACHE["DIR"]["TEMPLATES"],
         ext = ".rst"
     ):
         """"

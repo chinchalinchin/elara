@@ -6,12 +6,12 @@ import argparse
 
 # Application Modules
 import conf
-import git
 import model
 import objects.cache as cache
 import objects.conversation as conversation
 import objects.language as language
 import objects.personas as personas
+import objects.repo as repo
 import parse
 
 def args():
@@ -95,26 +95,23 @@ def chat(
     return response
 
 def review(
-    pr_number : str,
-    branch : str ,
-    model_type : str = conf.DEFAULTS["MODEL"],
-    persona : str = conf.DEFAULTS["PERSONA"],
+    pr : str,
+    model_name : str = None,
 ) -> str:
     """
     Placeholder for the code review logic.
     """
     source = repo.Repo()
+    prompt = parse.git()
+    print(prompt)
+    # response = model.reply(
+    #     prompt, 
+    #     persona=persona, 
+    #     model_name=model_name
+    # )
+    # source.comment(response, pr)
 
 
-    review_comment = model.reply(prompt, persona=persona, model_name=model_type)
-    # 1. Get current working directory
-    # 2. Call parse.summarize to get RST string of git repo
-    # 3. Call model.reply to send RST string to Gemini
-    # 4. Take respond and add to pull request
-
-    # NOTE: In step 4, we will probably need to use the Github API to post the comment to Github.
-    #       Look up libraries we can use. I am hoping there is something simple we can install
-    #       to accomplish this. If not, we will have to construct the POST request ourselves.
     return "placeholder"
 
 def init():
@@ -160,11 +157,10 @@ def main():
             config_paris = parsed_args.configure
         )
     elif parsed_args.operation == "review":
-        git.review(
-            branch=parsed_args.branch,
-            pr_number=parsed_args.pr,
-            model_type=parsed_args.model,
-            persona=parsed_args.persona
+        review(
+            pr=parsed_args.pullrequest,
+            commit=parsed_args.commit,
+            model_type=parsed_args.model
         )
     else:
         print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")

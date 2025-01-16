@@ -1,0 +1,8 @@
+# Elara Package Dependencies
+google-generativeai==0.8.3
+Jinja2==3.1.5
+requests==2.25.1
+
+# Build Packages
+build
+twine

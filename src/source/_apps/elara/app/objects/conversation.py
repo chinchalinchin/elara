@@ -23,7 +23,7 @@ class Conversation:
 
     def __init__(
         self, 
-        dir = conf.PERSIST["DIR"]["HISTORY"],
+        dir = conf.CACHE["DIR"]["HISTORY"],
         ext = ".json",
         tz_offset = conf.CONVERSATION["TIMEZONE_OFFSET"]
     ):
@@ -73,7 +73,7 @@ class Conversation:
                 
                 self.hist[persona] = payload["payload"]
 
-    def _persist(
+    def _CACHE(
         self, 
         persona : str
     ) -> None:
@@ -122,7 +122,7 @@ class Conversation:
         text : str
     ) -> dict:
         """
-        Update Conversation history and persist to file.
+        Update Conversation history and CACHE to file.
 
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
@@ -140,5 +140,5 @@ class Conversation:
             "index": index,
             "timestamp": self._timestamp()
         }]
-        self._persist(persona)
+        self._CACHE(persona)
         return self.hist[persona]

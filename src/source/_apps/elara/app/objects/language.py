@@ -21,7 +21,7 @@ class Language:
     def __init__(
         self, 
         enabled: list, 
-        dir = conf.PERSIST["DIR"]["MODULES"],
+        dir = conf.CACHE["DIR"]["MODULES"],
         ext = conf.LANGUAGE["EXTENSION"]
     ):
         """

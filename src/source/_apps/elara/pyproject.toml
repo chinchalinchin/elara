@@ -5,15 +5,16 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "elara"
 version = "0.1.0"
-description = "A Python package for interacting with Google's Gemini API."
+description = "Plumb the depths of generative AI."
 readme = "README.md"
-authors = [{name = "Grant"}]
+authors = [{name = "Grant Moore"}]
 license = {text = "MIT"}
 requires-python = ">=3.8"
 
 dependencies = [
-    "google-generativeai>=0.1.0",
-    "google-api-core>=2.17.1"
+    "google-generativeai==0.8.3",
+    "Jinja2==3.1.5",
+    "requests==2.25.1"
 ]
 
 [project.optional-dependencies]

@@ -18,9 +18,9 @@ class Personas:
 
     def __init__(
         self, 
-        current = conf.DEFAULTS["PERSONA"],
-        tune_dir = conf.PERSIST["DIR"]["TUNING"],
-        sys_dir = conf.PERSIST["DIR"]["SYSTEM"],
+        current = conf.PERSONAS["DEFAULTS"]["CHAT"],
+        tune_dir = conf.CACHE["DIR"]["TUNING"],
+        sys_dir = conf.CACHE["DIR"]["SYSTEM"],
         tune_ext = ".json",
         sys_ext = ".json"
     ):

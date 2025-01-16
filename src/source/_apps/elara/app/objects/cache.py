@@ -15,7 +15,7 @@ class Cache:
 
     def __init__(
         self, 
-        file = conf.PERSIST["FILE"]["CACHE"]
+        file = conf.CACHE["FILE"]["CACHE"]
     ):
         """
         Initialize Cache.
@@ -50,11 +50,11 @@ class Cache:
             self.data  = {
                 "baseModels": conf.MODEL["BASE_MODELS"],
                 "tunedModels": [],
-                "currentModel": conf.MODEL["BASE_MODELS"][0]["path"],
-                "tuningModel": conf.DEFAULTS["SOURCE"],
+                "currentModel":  conf.MODEL["DEFAULTS"]["MODEL"],
+                "tuningModel": conf.MODEL["DEFAULTS"]["TUNING"],
                 "template": {
-                    "currentPersona": conf.DEFAULTS["PERSONA"],
-                    "currentPrompter": conf.DEFAULTS["PROMPTER"]
+                    "currentPersona": conf.PERSONAS["PERSONA"]["DEFAULTS"]["CHAT"],
+                    "currentPrompter": conf.PROMPTS["PROMPTER"]
                 }
             }
 
