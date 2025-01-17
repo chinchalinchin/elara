@@ -15,8 +15,18 @@ import objects.errors as errors
 import objects.templates as templates
 import objects.language as language
 import objects.conversation as conversation
+import objects.repo as repo
 
-def git():
+def scrutinize(
+    src : repo.Repo
+) -> str:
+    """
+    
+    :param src: The class object that contains the repository metadata.
+    :type src: repo.Repo
+    :returns: Rendered template of pull request review
+    :rtype: str
+    """
     mem = cache.Cache()
     temps = templates.Template()
     lang = language.Language(
@@ -24,15 +34,14 @@ def git():
     )
     dir = os.getcwd()  
 
-    buffer = mem.all()
-    buffer["currentPersona"] = conf.PERSONAS["DEFAULT"]["REVIEW"]
+    buffer = mem.vars()
+    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["REVIEW"]
 
     return temps.render("review", { 
         **buffer,
-        **lang.get_modules(),
-        **{
-            "summary": summarize(dir, stringify=True)
-        }
+        **src.vars(),
+        **lang.vars(),
+        **summarize(dir, stringify=True)
     })
 
     
@@ -41,7 +50,7 @@ def contextualize(
     summarize_dir : str = None
 ) -> str:
     """
-    Appends the preamble and formats the prompt. A directory on the local filesystem can be specified to add  additional context to the prompt. This directory will be summarized using the ``data/templates/summary.rst`` template and injected into the prompt.
+    Appends the preamble and formats the prompt. A directory on the local filesystem can be specified to add additional context to the prompt. This directory will be summarized using the ``data/templates/summary.rst`` template and injected into the prompt.
 
     :param persona: Persona with which the prompter is conversing.
     :type persona: str
@@ -58,14 +67,13 @@ def contextualize(
     )
     
     preamble_vars = { 
-        **mem.all(),
-        **lang.get_modules()
+        **mem.vars(),
+        **lang.vars()
     }
 
     if summarize_dir is not None:
-        preamble_vars["summary"] = summarize(
-            summarize_dir, 
-            stringify=True
+        preamble_vars.update(
+            summarize(summarize_dir, stringify=True)
         )
 
     if persona is None:
@@ -152,7 +160,6 @@ def summarize(
             template_vars["files"] += [{
                 "type": "raw",
                 "data": data,
-                "lang": "TODO",
                 "name": os.path.relpath(file_path, directory)
             }]
 
@@ -163,4 +170,4 @@ def summarize(
             out.write(payload)
         print(f"Summary generated at: {output_file}")
 
-    return payload
+    return { "summary": payload }

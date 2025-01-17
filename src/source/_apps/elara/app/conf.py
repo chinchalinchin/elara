@@ -126,7 +126,7 @@ SUMMARIZE = {
 }
 """Configuration for the ``summarize`` function. """
 
-REVIEW = {
+REPOS = {
     "VCS": os.environ.setdefault("VCS","github"),
     "AUTH": {
         "TYPE": "bearer",
@@ -137,6 +137,9 @@ REVIEW = {
             "HEADERS": {
                 "X-GitHub-Api-Version": "2022-11-28",
                 "Accept": "application/vnd.github+json"
+            },
+            "API": {
+                "PR": "https://api.github.com/repo/{owner}/{repo}/pulls/{pr}/comments"
             }
         }
     }

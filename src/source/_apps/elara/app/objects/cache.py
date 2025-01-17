@@ -49,18 +49,16 @@ class Cache:
         except FileNotFoundError:
             self.data  = {
                 "baseModels": conf.MODEL["BASE_MODELS"],
-                "tunedModels": [],
                 "currentModel":  conf.MODEL["DEFAULTS"]["MODEL"],
+                "currentPersona": conf.PERSONAS["PERSONA"]["DEFAULTS"]["CHAT"],
+                "currentPrompter": conf.PROMPTS["PROMPTER"],
+                "tunedModels": [],
                 "tuningModel": conf.MODEL["DEFAULTS"]["TUNING"],
-                "template": {
-                    "currentPersona": conf.PERSONAS["PERSONA"]["DEFAULTS"]["CHAT"],
-                    "currentPrompter": conf.PROMPTS["PROMPTER"]
-                }
             }
 
-    def all(self) -> dict:
+    def vars(self) -> dict:
         """
-        Retrieve the entire Cache.
+        Retrieve the entire Cache, formatted for templating.
 
         :returns: A dictionary of key-value pairs.
         :rtype: dict

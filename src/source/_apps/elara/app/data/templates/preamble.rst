@@ -1,23 +1,7 @@
-.. _{{ currentPersona }}s-context:
+.. _{{ currentPersona }}-context:
 
 Conversation
 ############
-
-.. _table-of-contents:
-
-=================
-Table of Contents
-=================
-
-- Preamble
-- Identities
-{% if summary is defined %}
-- Summary
-{% endif %}
-{% if language is defined %}
-- Language
-{% endif %}
-- History
 
 .. _preamble:
 

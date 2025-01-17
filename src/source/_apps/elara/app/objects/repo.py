@@ -11,24 +11,20 @@ import requests
 class Repo:
     inst = None
     """Singleton instance"""
-    vcs = None
-    """Version control backend"""
     auth = None
     """Authentication configuration for VCS backend"""
-    repo = None
-    """Name of the VCS repository"""
-    owner = None
-    """Username of the repository owner."""
+    src = None
+    """VCS source information"""
 
     def __init__(
         self,
         repo : str, 
         owner : str,
-        vcs : str= conf.REVIEW["VCS"],
-        auth : str= conf.REVIEW["AUTH"]
+        vcs : str= conf.REPOS["VCS"],
+        auth : str= conf.REPOS["AUTH"]
     ):
         """
-        Initialize Repo
+        Initialize Repository object.
 
         :param repo: Name of the VCS repository.
         :type repo: str
@@ -50,11 +46,18 @@ class Repo:
                     "CREDS": "will change based on type."
                 }
             }
+        
+        .. note::
+
+            Only ``github`` VCS is supported at this time.
+            
         """
-        self.vcs = vcs
         self.auth = auth
-        self.repo = repo
-        self.owner = owner
+        self.src = {
+            "owner": owner,
+            "repo": repo,
+            "vcs": vcs,
+        }
 
     def __new__(
         self, 
@@ -68,16 +71,13 @@ class Repo:
             self.inst = super(
                 Repo, 
                 self
-            ).__new__(self, *args, **kwargs)
+            ).__new__(self)
         return self.inst
+    
+    def __iter__(self):
+        for k, v in self.src.items(): 
+            yield (k, v)
 
-    def __dir__(self):
-        return {
-            "repo": self.repo,
-            "vcs": self.vcs,
-            "owner": self.owner
-        }
-      
     def _pr(
         self, 
         pr
@@ -85,30 +85,48 @@ class Repo:
         """
         Returns the POST URL for the VCS REST API.
 
+        .. note::
+
+            Only ``github`` VCS is supported at this time.
+            
         :param pr: Pull request number for the POST.
         :type pr: str
         :returns: POST URL
         :rtype: str
         """
-        if self.vcs == "github":
-            return f"https://api.github.com/repos/{self.owner}/{self.repo}/pulls/{pr}/comments"
+        if self.src["vcs"] == "github":
+            return conf.REPOS["BACKENDS"]["GITHUB"]["API"]["PR"].format({
+                "owner": self.src["owner"],
+                "repo": self.src["repo"],
+                "pr": pr
+            })
         return None
     
     def _headers(self):
         """
         Returns the necessary headers for a request to the VCS backend. 
 
+        .. note::
+
+            Only ``github`` VCS is supported at this time.
+            
         :returns: Dictionary of headers
         :rtype:  dict
         """
-        if self.vcs == "github":
+        if self.src["vcs"] == "github":
             if self.auth["TYPE"] == "bearer":
                 token = self.auth["CREDS"]
                 return {
                     **{ "Authorization": f"Bearer {token}" }, 
-                    **conf.REVIEW["BACKENDS"]["GITHUB"]["HEADERS"]
+                    **conf.REPOS["BACKENDS"]["GITHUB"]["HEADERS"]
                 }
 
+    def vars(self):
+        """
+        Retrieve VCS metadata, formatted for templating.
+        """
+        return { "repository": self.src }
+    
     def comment(
         self,
         msg : str,
@@ -116,9 +134,13 @@ class Repo:
         commit : str
     ):
         """
-        Post a comment to a pull request on the VCS backend. Links detail the specific VCS provider endpoints,
+        Post a comment to a pull request on the VCS backend. Links below detail the specific VCS provider endpoints,
 
         - **Github**: `Github REST API Docs <https://docs.github.com/en/rest/pulls/comments?apiVersion=2022-11-28#create-a-review-comment-for-a-pull-request>
+
+        .. note::
+
+            Only ``github`` VCS is supported at this time.
 
         :param msg: Comment to post.
         :type msg: str
@@ -136,13 +158,20 @@ class Repo:
             #
             #       The relative path to the file that necessitates a comment.
             #
-            # TODO: need to figure out how to get Gemini to output
-            #       filepath!
-            "path": "TODO" 
+            # TODO: need to figure out how to make Gemini output filepath!
+            "path": "README.md" 
             
         }
-        return requests.post(
-            url = url, 
-            headers = headers, 
-            json = data
-        )
+        # TODO: make sure everything is formatted properly before posting 
+        #       to Github API.
+        #       need to test this locally somehow...but how?
+        #       could open PR manually? 
+        print(url)
+        print(headers)
+        print(data)
+        return "placeholder"
+        # return requests.post(
+        #     url = url, 
+        #     headers = headers, 
+        #     json = data
+        # )

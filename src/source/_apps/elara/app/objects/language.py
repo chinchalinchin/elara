@@ -57,6 +57,10 @@ class Language:
             ).__new__(self)
         return self.inst
     
+    def __iter__(self):
+        for k, v in self.modules: 
+            yield (k, v)
+
     def _load(
         self, 
         enabled
@@ -98,7 +102,7 @@ class Language:
         """
         return self.modules[module]
 
-    def get_modules(self) -> dict:
+    def vars(self) -> dict:
         """
         Returns all Language modules, formatted for templating.
 

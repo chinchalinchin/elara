@@ -24,21 +24,21 @@ def args():
             if "nargs" in arg:
                 parser.add_argument(
                     arg["syntax"],
-                    nargs=arg["nargs"],
-                    help=arg["help"]
+                    nargs = arg["nargs"],
+                    help = arg["help"]
                 )
             else:
                 parser.add_argument(
                     arg["syntax"],
-                    choices=arg["choices"],
-                    help=arg["help"]
+                    choices = arg["choices"],
+                    help = arg["help"]
                 )
         elif arg["mode"] == "flag":
             parser.add_argument(
                 *arg["syntax"], 
-                type=arg["type"],
-                default=arg["default"],
-                help=arg["help"]
+                type = arg["type"],
+                default = arg["default"],
+                help = arg["help"]
             )
     args = parser.parse_args()
     return args
@@ -87,10 +87,28 @@ def chat(
     if prompter is None:
         prompter = mem.get("currentPrompter")
 
-    convo.update(persona, prompter, prompt)
-    parsed_prompt = parse.contextualize(persona, summarize_dir)
-    response = model.reply(parsed_prompt, persona, model_name)
-    convo.update(persona, persona, response)
+    convo.update(
+        persona = persona, 
+        name = prompter, 
+        text = prompt
+    )
+    
+    parsed_prompt = parse.contextualize(
+        persona = persona, 
+        summarize_dir = summarize_dir
+    )
+
+    response = model.reply(
+        prompt = parsed_prompt, 
+        persona = persona, 
+        model_name = model_name
+    )
+
+    convo.update(
+        persona = persona, 
+        name = persona, 
+        text = response
+    )
 
     return response
 
@@ -99,32 +117,56 @@ def review(
     src : str,
     owner : str,
     commit : str,
-    model_name : str = None,
+    model_name : str = None
 ) -> str:
     """
-    Placeholder for the code review logic.
+    This function initiates the following workflow:
 
-    TODO: debug and finalize
+    1. It takes a snapshot of the current working directory by calling the ``summarize`` function (via ``parse.git``).
+    2. It templates the summary of the current working directory into the pull request review template in ``data/templates/review.rst`` (via ``parse.git``).
+    3. It sends the templated review to the Gemini API (via ``model.reply``).
+    4. It takes Gemini's response and posts to the Github API for commenting on pull requests.
+
+    :param pr: The PR number.
+    :type pr: str
+    :param src: The repository name
+    :type src: str
+    :param owner: The repository owner.
+    :type owner: str
+    :param commit: The SHA ID of the commit.
+    :type commit: str
+    :param model_name: Name of the Gemini Model to use. Defaults to the value of the environment variable ``GEMINI_MODEL``.
     """
     source = repo.Repo(
         repo = src,
         owner = owner
     )
-    prompt = parse.git()
-    print(prompt)
-    # response = model.reply(
-    #     prompt, 
-    #     persona=persona, 
-    #     model_name=model_name
-    # )
-    # source.comment(
-    #     msg = response, 
-    #     pr = pr,
-    #     commit = commit
-    # )
 
+    prompt = parse.scrutinize(
+        src = source
+    )
 
-    return "placeholder"
+    gemini_res = model.reply(
+        prompt = prompt, 
+        persona = conf.PERSONAS["DEFAULTS"]["REVIEW"], 
+        model_name = model_name
+    )
+
+    try:
+        github_res = source.comment(
+            msg = gemini_res, 
+            pr = pr,
+            commit = commit
+        )
+        return {
+            "gemini": gemini_res,
+            "github": github_res
+        }
+    except Exception as e:
+        print(e)
+        return {
+            "gemini": gemini_res
+        }
 
 def init():
     """
@@ -137,7 +179,6 @@ def init():
     :returns: Command line arguments
     :rtype: dict
     """
-    # Initialize application objects
     cache.Cache()
     personas.Personas()
     conversation.Conversation()
@@ -150,34 +191,36 @@ def main():
     Main function to run the command-line interface.
     """
     parsed_args = init()
+    res = None
     if parsed_args.operation == "chat":
-        print(
-            chat(
-                prompt=parsed_args.prompt, 
-                model_type=parsed_args.model,
-                prompter=parsed_args.self,
-                persona=parsed_args.persona,
-                summarize_dir=parsed_args.directory
-            )
+        res = chat(
+            prompt=parsed_args.prompt, 
+            model_name=parsed_args.model,
+            prompter=parsed_args.self,
+            persona=parsed_args.persona,
+            summarize_dir=parsed_args.directory
         )
     elif parsed_args.operation == "summarize":
-        parse.summarize(
+        res = parse.summarize(
             directory = parsed_args.directory
-        )
+        )["summary"]
     elif parsed_args.operation == "configure":
         configure(
             config_paris = parsed_args.configure
         )
     elif parsed_args.operation == "review":
-        review(
+        res = review(
             pr=parsed_args.pullrequest,
             commit=parsed_args.commit,
-            repository=parsed_args.repository,
+            src=parsed_args.repository,
             owner=parsed_args.owner,
-            model_type=parsed_args.model
-        )
+            model_name=parsed_args.model
+        )["gemini"]
     else:
         print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")
+    
+    if res is not None:
+        print(res)
 
 if __name__ == "__main__":
     main()
