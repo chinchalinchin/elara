@@ -156,7 +156,8 @@ def review(
     """
     source = repo.Repo(
         repo = src,
-        owner = owner
+        owner = owner,
+        commit = commit
     )
 
     prompt = parse.scrutinize(

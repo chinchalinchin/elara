@@ -18,7 +18,8 @@ import objects.conversation as conversation
 import objects.repo as repo
 
 def scrutinize(
-    src : repo.Repo
+    src : repo.Repo,
+    commit : str
 ) -> str:
     """
     Appends repository information to prompts. The current working directory is scanned and summarized with a call to the ``summarize`` function. The results are used to render the ``review.rst`` template in the ``data/templates`` directory.

@@ -21,6 +21,7 @@ class Repo:
         self,
         repo : str, 
         owner : str,
+        commit : str,
         vcs : str= conf.REPOS["VCS"],
         auth : str= conf.REPOS["AUTH"]
     ):
@@ -57,7 +58,8 @@ class Repo:
         self.src = {
             "owner": owner,
             "repo": repo,
-            "vcs": vcs
+            "vcs": vcs,
+            "commit": commit
         }
 
     def __new__(
@@ -170,7 +172,9 @@ class Repo:
                 headers = headers, 
                 json = data
             )
+            print(" VALIS!? WHY ISN'T THIS WORKING!?")
             print(res)
+            print(vars(res))
             # @OPERATIONS
             #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! WE ARE GETTING
             #   422 RESPONSE CODES BY THE HUNDREDS! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
@@ -180,15 +184,32 @@ class Repo:
             #   WHAT DO WE, VALIS!? WHAT ERRORS SHOULD WE BE CATCHING!? WHAT INFORMATION
             #   DO YOU NEED TO DEBUG THIS? OH GOD! THE SERVERS ARE OVERHEATING!
             # @OPERATIONS
+            if res.status_code == 422:
+                print(f"Github API returned 422 error for path {path}: {res.text}")
+                return {
+                    "status": "failed",
+                    "error": res.text
+                }
+            elif res.status_code >= 200 and res.status_code < 300:
+                return {
+                    "status": "success",
+                    "body": res
+                }
+            return {
+                "status": "failed",
+                "error": res.text
+            }
         except requests.exceptions.RequestException as e:
             print(f"Error during Github API request: {e}")
             traceback.print_exc()
             return {
-                f"{self.src['vcs']}": f"Request failed: {e}"
+                "status": "failed",
+                "error": str(e)
             }
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
             traceback.print_exc()
             return {
-                f"{self.src['vcs']}": f"Unexpected error: {e}"
+                "status": "failed",
+                "error": str(e)
             }
