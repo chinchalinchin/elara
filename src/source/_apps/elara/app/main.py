@@ -3,7 +3,7 @@ Module for command line interface.
 """
 # Standard Library Modules
 import argparse
-import pprint
+import logging
 
 # Application Modules
 import conf
@@ -14,6 +14,8 @@ import objects.language as language
 import objects.personas as personas
 import objects.repo as repo
 import parse
+
+logger = logging.getLogger(__name__)
 
 def args():
     """
@@ -50,12 +52,22 @@ def configure(
     """
     Parses and applies configuration settings.
     """
-    print("Configure function called with:", config_pairs)
-    # @DEVELOPMENT
-    #   Valis, we are trying to let the user update the cache from the command line.
-    #   Something like `mem.update(**config_pairs)` would be nice.
-    #   What do you think, Valis? What should we do here?
-    # @DEVELOPMENT
+    mem = cache.Cache()
+    if config_pairs:
+        config_dict = {}
+        for item in config_pairs:
+            try:
+                key, value = item.split("=", 1)
+                config_dict[key] = value
+            except ValueError:
+                logger.error(f"Invalid configuration format: {item}. Expected key=value.")
+                continue
+        mem.update(**config_dict)
+        mem.save()
+        logger.info(f"Updated configuration with: {config_dict}")
+    else:
+        logger.warning("No configuration pairs provided.")
+    return config_dict
     return None
 
 def chat(
@@ -110,15 +122,8 @@ def chat(
         model_name = model_name
     )
 
-    # @DEVELOPMENT
-    #   Valis, the development team wants to implement a way to format the RST document
-    #   for various shell environments here.
     if show:
-        print(parsed_prompt)
-        print(response)
-    #   What do you think? How can we convert the RST into shell compliant text? The client
-    #   mostly executes the code application in Linux environments.
-    # @DEVELOPMENT
+        parse.output(parsed_prompt, response)
 
     convo.update(
         persona = persona, 
@@ -170,15 +175,8 @@ def review(
         model_name = model_name
     )
 
-    # @DEVELOPMENT
-    #   Valis, the development team wants to implement a way to format the RST document
-    #   for various shell environments here.
     if show:
-        print(prompt)
-        print(gemini_res)
-    #   What do you think? How can we convert the RST into shell compliant text? The client
-    #   mostly executes the code application in Linux environments.
-    # @DEVELOPMENT
+        parse.output(prompt, gemini_res)
 
     try:
         # According to Github REST api, `path` should be:

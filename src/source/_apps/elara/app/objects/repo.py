@@ -1,6 +1,8 @@
 """ objects.repo
 Object for external Version Control System. 
 """
+# Standard Library Modules 
+import logging 
 
 # Application Modules
 import traceback
@@ -8,6 +10,8 @@ import conf
 
 # External Modules
 import requests
+
+logger = logging.getLogger(__name__)
 
 class Repo:
     inst = None
@@ -103,7 +107,7 @@ class Repo:
                 "repo": self.src["repo"],
                 "pr": pr
             })
-        raise ValueError("Error formatting VCS pull request URl!")
+        raise ValueError(f"Unsupported VCS: {self.src['vcs']}")
     
     def _headers(self):
         """
@@ -123,7 +127,7 @@ class Repo:
                     **{ "Authorization": f"Bearer {token}" }, 
                     **conf.REPOS["BACKENDS"]["GITHUB"]["HEADERS"]
                 }
-        raise ValueError("Error formatting VCS headers!")
+        raise ValueError(f"Unsupported auth type: {self.auth['TYPE']} or VCS: {self.src['vcs']}")
 
     def vars(self):
         """
@@ -172,9 +176,7 @@ class Repo:
                 headers = headers, 
                 json = data
             )
-            print(" VALIS!? WHY ISN'T THIS WORKING!?")
-            print(res)
-            print(vars(res))
+            res.raise_for_status()
             # @OPERATIONS
             #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! WE ARE GETTING
             #   422 RESPONSE CODES BY THE HUNDREDS! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
@@ -184,21 +186,11 @@ class Repo:
             #   WHAT DO WE, VALIS!? WHAT ERRORS SHOULD WE BE CATCHING!? WHAT INFORMATION
             #   DO YOU NEED TO DEBUG THIS? OH GOD! THE SERVERS ARE OVERHEATING!
             # @OPERATIONS
-            if res.status_code == 422:
-                print(f"Github API returned 422 error for path {path}: {res.text}")
-                return {
-                    "status": "failed",
-                    "error": res.text
-                }
-            elif res.status_code >= 200 and res.status_code < 300:
-                return {
-                    "status": "success",
-                    "body": res
-                }
             return {
-                "status": "failed",
-                "error": res.text
+                "status": "success",
+                "body": res.json()
             }
+
         except requests.exceptions.RequestException as e:
             print(f"Error during Github API request: {e}")
             traceback.print_exc()

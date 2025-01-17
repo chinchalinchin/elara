@@ -37,9 +37,10 @@ class Personas:
         self.current = None
         self.personas = { }
         self._load(
-            tune_dir, tune_ext, 
-            sys_dir, sys_ext,
-            current
+            tune_dir, 
+            tune_ext, 
+            sys_dir, 
+            sys_ext
         )
 
     def __new__(
