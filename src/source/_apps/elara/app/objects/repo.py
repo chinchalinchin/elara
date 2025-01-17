@@ -56,7 +56,7 @@ class Repo:
         self.src = {
             "owner": owner,
             "repo": repo,
-            "vcs": vcs,
+            "vcs": vcs
         }
 
     def __new__(
@@ -95,12 +95,12 @@ class Repo:
         :rtype: str
         """
         if self.src["vcs"] == "github":
-            return conf.REPOS["BACKENDS"]["GITHUB"]["API"]["PR"].format({
+            return conf.REPOS["BACKENDS"]["GITHUB"]["API"]["PR"].format(**{
                 "owner": self.src["owner"],
                 "repo": self.src["repo"],
                 "pr": pr
             })
-        return None
+        raise ValueError("Error formatting VCS pull request URl!")
     
     def _headers(self):
         """
@@ -120,6 +120,7 @@ class Repo:
                     **{ "Authorization": f"Bearer {token}" }, 
                     **conf.REPOS["BACKENDS"]["GITHUB"]["HEADERS"]
                 }
+        raise ValueError("Error formatting VCS headers!")
 
     def vars(self):
         """
@@ -148,7 +149,7 @@ class Repo:
         :type pr: str
         :param commit: Commit ID on which to comment.
         :type commit: str.
-        """        
+        """
         url = self._pr(pr)
         headers = self._headers()
         data = {
@@ -162,16 +163,16 @@ class Repo:
             "path": "README.md" 
             
         }
-        # TODO: make sure everything is formatted properly before posting 
-        #       to Github API.
-        #       need to test this locally somehow...but how?
-        #       could open PR manually? 
+        
+        print("REQUEST DETAILS \n\n")
         print(url)
         print(headers)
         print(data)
-        return "placeholder"
-        # return requests.post(
-        #     url = url, 
-        #     headers = headers, 
-        #     json = data
-        # )
+        # @OPERATIONS
+        #   THIS IS WHERE THE 422 ARE HAPPENING! HELP US! OH GOD! THE HUMANITY!
+        # @OPERATIONS
+        return requests.post(
+            url = url, 
+            headers = headers, 
+            json = data
+        )

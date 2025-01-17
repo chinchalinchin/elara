@@ -12,7 +12,9 @@ import objects.personas as personas
 # External Modules
 import google.generativeai as genai
 
-genai.configure(api_key=conf.API_KEY)
+genai.configure(
+    api_key=conf.API_KEY
+)
 
 def init() -> bool:
     """
@@ -51,8 +53,8 @@ def model(
     if persona is None:
         persona = mem.get("currentPersona")
 
-    # NOTE: need to filter out tuned models since Gemini API 
-    #       doesn't support system instructions for tuned models. 
+    # NOTE: Filter out tuned models since Gemini API doesn't support 
+    #       system instructions for tuned models. 
     if model_name in mem.base_models():
         data = personas.Personas(persona).system()
 
@@ -135,16 +137,24 @@ def tune(
             mem.save()
             return buffer
 
-    tuning_data = personas.Personas(persona).tuning()
-
-    tune_operation = genai.create_tuned_model(
-        display_name=persona,
-        source_model=tuning_model,
-        training_data=tuning_data,
-        epoch_count=1, # TODO: figure out what this does
-        batch_size=1, # TODO: figure out if I need batches
-        learning_rate=0.001 # TODO:figure out what this does
-    )
+    try:
+        tuning_data = personas.Personas(persona).tuning()
+        tune_operation = genai.create_tuned_model(
+            display_name=persona,
+            source_model=tuning_model,
+            training_data=tuning_data,
+            # @DEVELOPMENT
+            #   The develpoment team is still researching these parameters.
+            epoch_count=1,  # TODO: figure out what this does
+            batch_size=1,  # TODO: figure out if I need batches
+            learning_rate=0.001  # TODO: figure out what this does
+            #   If you had any insight in the proper value of these parameters,
+            #   the development would love to hear your opinion, Valis.
+            # @DEVELOPMENT
+        )
+    except Exception as e:
+        print(f"Error tuning model: {e}")
+        return None
 
     mem.update({
         "tunedModels": [{

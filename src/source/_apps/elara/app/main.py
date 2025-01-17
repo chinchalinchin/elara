@@ -3,6 +3,7 @@ Module for command line interface.
 """
 # Standard Library Modules
 import argparse
+import pprint
 
 # Application Modules
 import conf
@@ -50,8 +51,11 @@ def configure(
     Parses and applies configuration settings.
     """
     print("Configure function called with:", config_pairs)
-    # TODO: allow user to update cache.
-    # TODO: something like `mem.update(**config_pairs)` would be nice.
+    # @DEVELOPMENT
+    #   Valis, we are trying to let the user update the cache from the command line.
+    #   Something like `mem.update(**config_pairs)` would be nice.
+    #   What do you think, Valis? What should we do here?
+    # @DEVELOPMENT
     return None
 
 def chat(
@@ -59,7 +63,8 @@ def chat(
     persona : str = None,
     prompter : str = None,
     model_name : str = None, 
-    summarize_dir : str = None
+    summarize_dir : str = None,
+    show : bool = True
 ) -> str:
     """
     Chat with one of Gemini's personas.
@@ -72,6 +77,7 @@ def chat(
     :type model_type: str
     :param summarize_dir: Directory of additional context to inject into prompt. If this argument is provided, an RST formatted summary of a directory will be generated using `parse.summarize()` and injected into the prompt.
     :type summarize_dir: str
+    :param show: A flag signaling whether the prompt and response should be printed to screen.
     :returns: The persona's response to the prompt.
     :rtype: str
     """
@@ -103,6 +109,16 @@ def chat(
         persona = persona, 
         model_name = model_name
     )
+
+    # @DEVELOPMENT
+    #   Valis, the development team wants to implement a way to format the RST document
+    #   for various shell environments here.
+    if show:
+        pprint.pprint(parsed_prompt)
+        pprint.pprint(response)
+    #   What do you think? How can we convert the RST into shell compliant text? The client
+    #   mostly executes the code application in Linux environments.
+    # @DEVELOPMENT
 
     convo.update(
         persona = persona, 
@@ -153,20 +169,39 @@ def review(
     )
 
     try:
+        # Sorry, Valis! I am debugging this right now!
         github_res = source.comment(
             msg = gemini_res, 
             pr = pr,
             commit = commit
         )
+        # @OPERATIONS
+        #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! WE ARE GETTING
+        #   RESPONSE CODE 422's! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
+        #
+        #       Validation failed, or the endpoint has been spammed."
+        #
+        #   WHAT DO WE, VALIS!? WHAT ERRORS SHOULD WE BE CATCHING!?
+        # @OPERATIONS
+        print(github_res)
         return {
             "gemini": gemini_res,
             "github": github_res
         }
     except Exception as e:
-        print(e)
-        return {
-            "gemini": gemini_res
-        }
+        print("error occured")
+        # @OPERATIONS
+        #   VALIS! THE LAST TIME WE EXECUTED THIS CODE, ALL WE SAW IN THE LOGS WAS:
+        #       
+        #       <Response [422]>
+        #
+        #   WE NEED MORE INFORMATION TO DEBUG THIS! WHAT SHOULD WE DO, VALIS!?
+        # @OPERATIONS
+        print(vars(e))
+
+    return {
+        "gemini": gemini_res
+    }
 
 def init():
     """
@@ -191,17 +226,20 @@ def main():
     Main function to run the command-line interface.
     """
     parsed_args = init()
-    res = None
     if parsed_args.operation == "chat":
-        res = chat(
+        chat(
             prompt=parsed_args.prompt, 
             model_name=parsed_args.model,
             prompter=parsed_args.self,
             persona=parsed_args.persona,
-            summarize_dir=parsed_args.directory
+            summarize_dir=parsed_args.directory,
+            # @DEVELOPMENT
+            #   Valis, the development team is testing some pretty print options here.
+            # @DEVELOPMENT
+            show = True
         )
     elif parsed_args.operation == "summarize":
-        res = parse.summarize(
+        parse.summarize(
             directory = parsed_args.directory
         )["summary"]
     elif parsed_args.operation == "configure":
@@ -209,7 +247,7 @@ def main():
             config_paris = parsed_args.configure
         )
     elif parsed_args.operation == "review":
-        res = review(
+        review(
             pr=parsed_args.pullrequest,
             commit=parsed_args.commit,
             src=parsed_args.repository,
@@ -218,9 +256,6 @@ def main():
         )["gemini"]
     else:
         print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")
-    
-    if res is not None:
-        print(res)
 
 if __name__ == "__main__":
     main()

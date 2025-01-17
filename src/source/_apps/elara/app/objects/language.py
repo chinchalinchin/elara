@@ -118,8 +118,8 @@ class Language:
     def list_modules(self) -> list:
         """
         Returns a list of Language module names.
-nsion
+
         :returns: List of modules.
         :rtype: list
         """
-        return [ k for k in self.modules.key() ]
+        return [ k for k in self.modules.keys() ]

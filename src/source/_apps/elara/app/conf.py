@@ -65,7 +65,7 @@ MODEL = {
     }],
     "DEFAULTS": {
         "TUNING": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
-        "MODEL": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-2.0-flash-exp"),
+        "MODEL": os.environ.setdefault("GEMINI_MODEL", "models/gemini-2.0-flash-exp"),
         # "MODEL": os.environ.setdefault("GEMINI_MODEL", "tunedModels/elara-a38gqsr3zzw8"),
     },
     "TUNING": os.environ.setdefault("TUNING", "disabled")
@@ -139,7 +139,7 @@ REPOS = {
                 "Accept": "application/vnd.github+json"
             },
             "API": {
-                "PR": "https://api.github.com/repo/{owner}/{repo}/pulls/{pr}/comments"
+                "PR": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
             }
         }
     }
