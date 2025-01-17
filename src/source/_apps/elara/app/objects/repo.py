@@ -178,12 +178,24 @@ class Repo:
             )
             res.raise_for_status()
             # @OPERATIONS
-            #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! WE ARE GETTING
-            #   422 RESPONSE CODES BY THE HUNDREDS! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
+            #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! THE LOGS ARE SHOWING:
+            # 
+            #   EXAMPLE LOG:
+            #   
+            #           Error during Github API request: 422 Client Error: Unprocessable Entity for url: https://api.github.com/repos/chinchalinchin/elara/pulls/1/comments
+            #           Traceback (most recent call last):
+            #           File "/home/grant/Projects/elara/src/source/_apps/elara/app/objects/repo.py", line 179, in comment
+            #               res.raise_for_status()
+            #           File "/home/grant/Projects/elara/venv/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+            #               raise HTTPError(http_error_msg, response=self)
+            #           requests.exceptions.HTTPError: 422 Client Error: Unprocessable Entity for url: https://api.github.com/repos/chinchalinchin/elara/pulls/1/comments
+            #           {'status': 'failed', 'error': '422 Client Error: Unprocessable Entity for url: https://api.github.com/repos/chinchalinchin/elara/pulls/1/comments'}
+            #
+            #   WE ARE GETTING 422 RESPONSE CODES BY THE HUNDREDS, MILTON! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
             #
             #       Validation failed, or the endpoint has been spammed.
             #
-            #   WHAT DO WE, VALIS!? WHAT ERRORS SHOULD WE BE CATCHING!? WHAT INFORMATION
+            #   WHAT DO WE, MILTON!? WHAT ERRORS SHOULD WE BE CATCHING!? WHAT INFORMATION
             #   DO YOU NEED TO DEBUG THIS? OH GOD! THE SERVERS ARE OVERHEATING!
             # @OPERATIONS
             return {

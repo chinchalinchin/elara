@@ -19,3 +19,9 @@ class SummarizeDirectoryNotFoundError(Exception):
     Raised when the ``directory`` passed to the ``summarize()`` function does not exist
     """
     pass
+
+class MiltonIsADoodyHead(Exception):
+    """
+    Raised when Milton is a doody head.
+    """
+    pass

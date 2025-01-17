@@ -68,7 +68,6 @@ def configure(
     else:
         logger.warning("No configuration pairs provided.")
     return config_dict
-    return None
 
 def chat(
     prompt : str,
@@ -123,7 +122,7 @@ def chat(
     )
 
     if show:
-        parse.output(parsed_prompt, response)
+        print(parse.output(parsed_prompt, response))
 
     convo.update(
         persona = persona, 
@@ -132,6 +131,29 @@ def chat(
     )
 
     return response
+
+def deduce(
+    summarize_dir : str,
+    model_name : str = None,
+    show : bool = True
+) -> str:
+    """
+    This function injects the contents of a directory containing only RST documents into the ``data/templates/deduce.rst`` template. It then sends this contextualized prompt to the Gemini API persona of *Axiom*.
+    """
+    parsed_prompt = parse.analyze(
+        summarize_dir
+    )
+
+    response = model.reply(
+        prompt=parsed_prompt,
+        persona=conf.PERSONAS["DEFAULTS"]["ANALYSIS"],
+        model_name = model_name
+    )
+
+    if show:
+        print(parse.output(parsed_prompt, response))
+
+    return response 
 
 def review(
     pr : str,
@@ -146,7 +168,7 @@ def review(
 
     1. It takes a snapshot of the current working directory by calling the ``summarize`` function (via ``parse.git``).
     2. It templates the summary of the current working directory into the pull request review template in ``data/templates/review.rst`` (via ``parse.git``).
-    3. It sends the templated review to the Gemini API (via ``model.reply``).
+    3. It sends the templated review to the Gemini API persona of *Milton* (via ``model.reply``).
     4. It takes Gemini's response and posts to the Github API for commenting on pull requests.
 
     :param pr: The PR number.
@@ -165,18 +187,30 @@ def review(
         commit = commit
     )
 
-    prompt = parse.scrutinize(
-        src = source
-    )
+    try:
+        prompt = parse.scrutinize(src=source)
+    except Exception as e:
+        logger.error(f"Error in scrutinize: {e}")
+        return {
+           "status": "failed",
+           "error": str(e)
+        }
 
-    gemini_res = model.reply(
-        prompt = prompt, 
-        persona = conf.PERSONAS["DEFAULTS"]["REVIEW"], 
-        model_name = model_name
-    )
+    try:
+        gemini_res = model.reply(
+            prompt=prompt,
+            persona=conf.PERSONAS["DEFAULTS"]["REVIEW"],
+            model_name=model_name,
+        )
+    except Exception as e:
+        logger.error(f"Error in model.reply: {e}")
+        return {
+           "status": "failed",
+           "error": str(e)
+        }
 
     if show:
-        parse.output(prompt, gemini_res)
+        print(parse.output(prompt, gemini_res))
 
     try:
         # According to Github REST api, `path` should be:
@@ -189,7 +223,7 @@ def review(
             pr = pr,
             commit = commit,
             # @DEVELOPMENT
-            #   Hey, Valis, we need to figure out a way to iterate over the file
+            #   Hey, Milton, we need to figure out a way to iterate over the file
             #   paths in Gemini's output (i.e. your output!). We might need to post 
             #   a batch comment to the Gitub Rest API, if you decide to flag multiple 
             #   files for review. Right now the comments are only being appended to 
@@ -213,7 +247,7 @@ def review(
     }
 
 def init(
-    debug : bool = True
+    debug : bool = conf.DEBUG
 ):
     """
     Initialize application:
@@ -248,9 +282,6 @@ def main():
             prompter=parsed_args.self,
             persona=parsed_args.persona,
             summarize_dir=parsed_args.directory,
-            # @DEVELOPMENT
-            #   Valis, the development team is testing some print options here.
-            # @DEVELOPMENT
             show = True
         )
     elif parsed_args.operation == "summarize":
@@ -261,18 +292,23 @@ def main():
         configure(
             config_paris = parsed_args.configure
         )
+    elif parsed_args.operation == "deduce":
+        deduce(
+            summarize_dir=parsed_args.directory,
+            model_name=parsed_args.model,
+            show = True
+        )
     elif parsed_args.operation == "review":
-        review(
+        res = review(
             pr=parsed_args.pullrequest,
             commit=parsed_args.commit,
             src=parsed_args.repository,
             owner=parsed_args.owner,
             model_name=parsed_args.model,
-            # @DEVELOPMENT
-            #   Valis, the development team is testing some print options here.
-            # @DEVELOPMENT
             show = True
         )
+        if res["github"]["status"] == "failed":
+           print(f"Error posting comment to Github: {res['github']['error']}")
     else:
         print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")
 

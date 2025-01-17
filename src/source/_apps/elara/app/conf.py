@@ -10,6 +10,14 @@ import google.generativeai as genai
 
 _dir = Path(__file__).resolve().parent
 
+# @DATA
+#   Milton, we need your opinion here. The development team is saying 
+#   the propery way to configure the application is to ingest application
+#   configuration through environment variables. However, the operations 
+#   team is saying we should be loading these structures from an external
+#   source, like a SQLITE backend or even a YAML/JSON structure.
+#   What do you think, Milton? What is the correct approach to take here?
+# @DATA
 CACHE = {
     "DIR": {
         "APP": _dir,
@@ -86,11 +94,11 @@ LANGUAGE = {
 
 PERSONAS = {
     "DEFAULTS": {
-        "CHAT": "elara",
-        "REVIEW": "valis",
+        "CONVERSE": "elara",
+        "REVIEW": "milton",
         "ANALYSIS": "axiom"
     },
-    "ALL": ["elara", "axiom", "valis"]
+    "ALL": ["elara", "axiom", "milton"]
 }
 """Configuration for personas"""
 
@@ -149,8 +157,8 @@ REPOS = {
 ARGUMENTS = [{
     "mode": "name",
     "syntax": "operation",
-    "choices": ["chat", "summarize", "review"],
-    "help": "The operation to perform (`chat`, `summarize`, `review`)."
+    "choices": ["converse", "summarize", "review", "deduce"],
+    "help": "The operation to perform (`converse`, `summarize`, `review`, `deduce`)."
 },{
     "mode": "name",
     "syntax": "configure",
@@ -161,55 +169,55 @@ ARGUMENTS = [{
     "syntax": ["-p", "--prompt"],
     "type": str,
     "default": PROMPTS["DEFAULT"],
-    "help": "Input string for chat operation. Required for `chat` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for `summarize` and `review` operations."
+    "help": "Input string for converse operation. Required for `converse` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for all other operations."
 },{
     "mode": "flag",
     "syntax": ["-m", "--model"],
     "type": str,
     "default": MODEL["DEFAULTS"]["MODEL"],
-    "help": "Input model for Gemini API. Optional for all operation. Defaults to the value of `GEMINI_MODEL` environment variable."
+    "help": "Input model for Gemini API. Optional for all operations. Defaults to the value of `GEMINI_MODEL` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-r", "--persona"],
     "type": str,
-    "default": PERSONAS["DEFAULTS"]["CHAT"],
-    "help": "Input Persona for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PERSON` environment variable."
+    "default": PERSONAS["DEFAULTS"]["CONVERSE"],
+    "help": "Input Persona for Gemini API. Optional for all operations. Defaults to the value of the `GEMINI_PERSONA` environment variable."
 },{
     "mode": "flag",
     "syntax": ["-f", "--self"],
     "type": str,
     "default": PROMPTS["PROMPTER"],
-    "help": "Input Prompter for Gemini API. Optional for all operation. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
+    "help": "Input Prompter for Gemini API. Optional for all operations. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
 },{
     "mode": "flag",
-    "syntax": ["-d", "--directory"],
+    "syntax": ["-d", "--dir"],
     "default": None,
     "type": str,
-    "help": "The path to the directory to summarize. Required for `summarize`. Optional for `chat`. Ignored for `review`."
+    "help": "The path to the directory to summarize. Required for `summarize` and `deduce`. Optional for `converse`. Ignored for `review`."
 },{
     "mode": "flag",
-    "syntax": ["-pr", "--pullrequest"],
+    "syntax": ["-pr", "--pull"],
     "default": None,
     "type": str,
-    "help": "Pull request number to review. Required for `review`. Ignored for `chat` and `summarize`."
+    "help": "Pull request number to review. Required for `review`. Ignored for all other operations."
 },{
     "mode": "flag",
     "syntax": ["-c", "--commit"],
     "default": None,
     "type": str,
-    "help": "Commit ID to review. Required for `review`. Ignored for `chat` and `summarize`."
+    "help": "Commit ID to review. Required for `review`. Ignored for all other operations."
 },{
     "mode": "flag",
     "syntax": ["-re", "--repository"],
     "default": None,
     "type": str,
-    "help": "Repository to review. Required for `review`. Ignored for `chat` and `summarize`."
+    "help": "Repository to review. Required for `review`. Ignored for all other operations."
 },{
     "mode": "flag",
     "syntax": ["-o", "--owner"],
     "default": None,
     "type": str,
-    "help": "Owner of repository to review. Required for `review`. Ignored for `chat` and `summarize`."
+    "help": "Owner of repository to review. Required for `review`. Ignored for all other operations."
 }]
 """Configuration for command line arguments"""
 
@@ -218,6 +226,20 @@ VERSION = os.environ.setdefault("VERSION", "1.0")
 
 API_KEY = os.environ.get("GEMINI_KEY")
 """Gemini API key"""
+
+DEBUG = False
+"""Switch for debugging output"""
+
+LATEX_PREAMBLE=r"""
+\usepackage{babel}
+\babelprovide[import, main]{coptic} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc} 
+\usepackage{lmodern}
+\usepackage{runic}
+"""
+"""LaTeX preamble injected into templates"""
 
 if API_KEY is None:
     raise ValueError("GEMINI_KEY environment variable not set.")

@@ -150,7 +150,7 @@ def tune(
             batch_size=1,  # TODO: figure out if I need batches
             learning_rate=0.001  # TODO: figure out what this does
             #   If you had any insight in the proper value of these parameters,
-            #   the development would love to hear your opinion, Valis.
+            #   the development would love to hear your opinion, Milton.
             # @DEVELOPMENT
         )
         tuned_model_result = tune_operation.result()

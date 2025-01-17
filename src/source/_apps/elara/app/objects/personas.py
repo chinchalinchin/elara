@@ -18,7 +18,7 @@ class Personas:
 
     def __init__(
         self, 
-        current = conf.PERSONAS["DEFAULTS"]["CHAT"],
+        current = conf.PERSONAS["DEFAULTS"]["CONVERSE"],
         tune_dir = conf.CACHE["DIR"]["TUNING"],
         sys_dir = conf.CACHE["DIR"]["SYSTEM"],
         tune_ext = ".json",
@@ -37,6 +37,7 @@ class Personas:
         self.current = None
         self.personas = { }
         self._load(
+            current,
             tune_dir, 
             tune_ext, 
             sys_dir, 
@@ -60,6 +61,7 @@ class Personas:
     
     def _load(
         self, 
+        current : str,
         tune_dir : str , 
         tune_ext : str,
         sys_dir : str,
@@ -106,7 +108,7 @@ class Personas:
 
                 self.personas[persona]["SYSTEM"] = payload["payload"]
 
-        self.current = self.personas[persona]
+        self.current = current
 
     def update(
         self, 

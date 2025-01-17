@@ -6,7 +6,7 @@ The following personas are under development.
 
 - Elara: A generalized assistant. Whimsical, absurd and playful. 
 - Axiom: A mathematical mind. Thoughtful, precise and deep.
-- Valis: A code analyst. Cranky, a bit of a sourpuss, but a top-tier programmer. 
+- Milton: A code analyst. Cranky, a bit of a sourpuss, but a top-tier programmer. 
 
 ## Quickstart 
 
@@ -34,16 +34,41 @@ The application ingests API tokenS through the `GEMINI_KEY` and `VCS_TOKEN` envi
 # VCS_TOKEN: Version control API token
 export GEMINI_KEY="key"
 export VCS_TOKEN="token"
-elara chat -p "Hi there, Elara!"
+elara converse -p "Hi there, Elara!"
 ```
 
-### Contextual Chat 
+### Contextual Conversation
 
-The `chat` command will contextualize the prompt and forward it to the Gemini API,
+The `converse` command will contextualize the prompt and forward it to the Gemini API,
 
 ```bash
-elara chat -p "Hello Elara!" 
+elara converse -p "Hello Elara!" 
 ```
+
+The conversation history is stored locally in the `data/history` directory as a JSON. This JSON is used to render Jinja2 templates to embed the chat history into a layer of context provided by the template. 
+
+The summary of a local directory can also be injected into a chat prompt with the following argument,
+
+```bash
+## VARIABLES
+# DIR: directory to summarize
+elara converse -p "Take a look at this!" -d $DIR
+```
+
+You can view the summary yourself with the next command. The default persona for conversations is `elara`. Gemini can assume a different persona if the persona flag is passed in as follows,
+
+```bash
+elara converse -p "Hello Axiom!" -r "axiom"
+```
+
+Alternatively, you can set the default persona using the `GEMINI_PERSONA` environment variable,
+
+```bash
+export GEMINI_PERSONA="axiom"
+elara converse -p "Hello Axiom!"
+```
+
+### Directory Summaries
 
 The `summarize` command will generate an RST summary of a directory and its contents with the following command,
 
@@ -55,16 +80,9 @@ elara summarize -d $DIR
 
 **NOTE**: The summary will be written to the directory it is summarizing. 
 
-A directory summary can also be injected into a chat prompt.
-
-```bash
-## VARIABLES
-# DIR: directory to summarize
-elara chat -p "Take a look at this!" -d $DIR
-```
 ### Code Review
 
-The application persona `valis` will provide pull request comments on the current working directory. In order to use the pull request commenting functionality, the VCS backend must be set through the `VCS` environment variable. Currently only values of `github` are supported. A personal access token must be provided through the `VCS_TOKEN` environment variable.
+The persona `milton` will provide pull request comments on the current working directory and then post the comments to a VCS backend where the pull request is hosted. In order to use the pull request commenting functionality, the VCS backend must be set through the `VCS` environment variable. Currently only values of `github` are supported. A personal access token must be provided through the `VCS_TOKEN` environment variable.
 
 Using the following commands,
 
@@ -82,10 +100,15 @@ elara review -pr $PR_NUMBER -re $REPO -o $OWNER -c $COMMIT_ID
 
 **TODO**: should allow user to change directory instead of running in current working directory!
 
-In addition, `valis` will has special tags that can be appended to code comments. These comment tags signal different types of attention `valis` will direct to certain sections of the code.
+In addition, `milton` will has special tags that can be appended to code comments. These comment tags signal different types of attention `milton` will direct to certain sections of the code.
 
-- `@DEVELOPMENT`: Attach this tag to comments above code that is still in the development phase. `valis` will provide helpful comments on possible solutions.
-- `@OPERATIONS`: Attach this tag to comments above critical code that needs special attention. `valis` will direct his attention to searching this code for potential errors and bugs.
+- `@DEVELOPMENT`: Attach this tag to comments above code that is still in the development phase. `milton` will provide helpful comments on possible solutions.
+- `@OPERATIONS`: Attach this tag to comments above critical code that needs special attention. `milton` will direct his attention to searching this code for potential errors and bugs.
+- `@DATA`: Attach this tag to comments above data structures. `milton` will analyze the data structure in the context of the application and suggests alternative constructions and ways of managing the data structure.
+
+### Mathematical Analysis
+
+The persona `axiom` will provide formal and mathematical analysis.
 
 ## Application Structure
 

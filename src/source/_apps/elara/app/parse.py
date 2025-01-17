@@ -7,6 +7,7 @@ Module for formatting prompts and responses. It also handles context management.
 # Standard Library Modules
 import os
 import subprocess
+import logging 
 
 # Application Modules
 import conf
@@ -17,14 +18,21 @@ import objects.language as language
 import objects.conversation as conversation
 import objects.repo as repo
 
+logger = logging.getLogger(__name__)
+
 def output(prompt, response):
     """
     Formats and prints the prompt and response.
     """
-    print("====================== PROMPT =======================")
-    print(prompt)
-    print("===================== RESPONSE ======================")
-    print(response)
+    return """"
+    ====================== PROMPT =======================
+
+    {prompt}
+
+    ===================== RESPONSE ======================"
+
+    {response}
+    """.format(prompt=prompt, response=response)
 
 def scrutinize(
     src : repo.Repo
@@ -38,7 +46,7 @@ def scrutinize(
     :rtype: str
     """
     # @DEVELOPMENT
-    #   Valis, the team has been thinking about allowing the user to specify 
+    #   Milton, the team has been thinking about allowing the user to specify 
     #   the directory containing the version control source directory. Currently 
     #   the application uses the current working directory. We should probably add
     #   a parameter to this function. We might be able to overload the existing 
@@ -62,7 +70,31 @@ def scrutinize(
         **summarize(dir, stringify=True)
     })
 
-    
+def analyze(
+    summarize_dir : str = None
+   
+) -> str: 
+    """
+    Injects the contents of a directory in the ``data/templates/analyze.rst`` template.
+
+    :param summarize_dir: Directory of documents to analyze.
+    :type summarize_dir: str
+    """
+    mem = cache.Cache()
+    temps = templates.Template()
+    lang = language.Language(
+        enabled = conf.language_modules()
+    )
+    buffer = mem.vars()
+    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["ANALYSIS"]
+
+    return temps.render("deduce", {
+        **buffer,
+        **lang.vars(),
+        **summarize(summarize_dir, stringify=True),
+        **{ "latex": conf.LATEX_PREAMBLE }
+    })
+
 def contextualize(
     persona : str = None,
     summarize_dir : str = None
@@ -133,6 +165,21 @@ def summarize(
     output_file = os.path.join(directory, summary_file)
 
     try:
+        # @DEVELOPMENT
+        #   Hey, Milton, the client wants us to refactor this.
+        #   They don't like making the application dependent on the `tree`
+        #   application. They want to generate a data structure that
+        #   represents the structure of ``directory`` as a dict, then
+        #   they want to update the application to use this output 
+        #   to render the ``data/templates/review.rst`` template.
+        #   In other words, instead of injecting the raw ``tree``
+        #   output into the template, they want to format the directory
+        #   structure and then modify the template to generate the 
+        #   git summary more gracefully. 
+        #
+        #   The development team is pulling their hair out trying to
+        #   figure out how to implement this. We need your skill, Milton!
+        # @DEVELOPMENT
         tree_output = subprocess.check_output(
             ["tree", "-n", directory], 
             text=True
@@ -152,9 +199,12 @@ def summarize(
         "files": []
     }
 
+    # Use `os.walk` to recursivle scan sub-directories.
     for root, _, files in os.walk(directory):
         for file in files:
+
             base, ext = os.path.splitext(file)
+
             if ext not in conf.summary_extensions() \
                 or base == conf.SUMMARIZE["FILE"]:
                 continue
@@ -163,29 +213,33 @@ def summarize(
 
             directive = ext in conf.SUMMARIZE["DIRECTIVES"].keys()
 
-            with open(file_path, "r") as infile:
-                data = infile.read()
+            try:
+                with open(file_path, "r") as infile:
+                    data = infile.read()
 
-            if directive:
+                if directive:
+                    template_vars["files"] += [{
+                        "type": "code",
+                        "data": data,
+                        "lang": conf.SUMMARIZE["DIRECTIVES"][ext],
+                        "name" : os.path.relpath(file_path, directory)
+                    }]
+                    continue
+
                 template_vars["files"] += [{
-                    "type": "code",
+                    "type": "raw",
                     "data": data,
-                    "lang": conf.SUMMARIZE["DIRECTIVES"][ext],
-                    "name" : os.path.relpath(file_path, directory)
+                    "name": os.path.relpath(file_path, directory)
                 }]
+            except Exception as e:
+                logger.error(F"Error reading file {file_path}: {e}")
                 continue
-
-            template_vars["files"] += [{
-                "type": "raw",
-                "data": data,
-                "name": os.path.relpath(file_path, directory)
-            }]
 
     payload = templates.Template().render("summary", template_vars)
     
     if not stringify:     
         with open(output_file, "w") as out:
             out.write(payload)
-        print(f"Summary generated at: {output_file}")
+        logger.info(f"Summary generated at: {output_file}")
 
     return { "summary": payload }
