@@ -21,12 +21,21 @@ def scrutinize(
     src : repo.Repo
 ) -> str:
     """
-    
+    Appends repository information to prompts. The current working directory is scanned and summarized with a call to the ``summarize`` function. The results are used to render the ``review.rst`` template in the ``data/templates`` directory.
+
     :param src: The class object that contains the repository metadata.
     :type src: repo.Repo
     :returns: Rendered template of pull request review
     :rtype: str
     """
+    # @DEVELOPMENT
+    #   Valis, the team has been thinking about allowing the user to specify 
+    #   the directory containing the version control source directory. Currently 
+    #   the application uses the current working directory. We should probably add
+    #   a parameter to this function. We might be able to overload the existing 
+    #   ``--directory`` command line argument for the ``scrutinizze`` function.
+    #   What do you think?
+    # @DEVELOPMENT
     mem = cache.Cache()
     temps = templates.Template()
     lang = language.Language(

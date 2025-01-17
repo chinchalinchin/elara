@@ -114,8 +114,8 @@ def chat(
     #   Valis, the development team wants to implement a way to format the RST document
     #   for various shell environments here.
     if show:
-        pprint.pprint(parsed_prompt)
-        pprint.pprint(response)
+        print(parsed_prompt)
+        print(response)
     #   What do you think? How can we convert the RST into shell compliant text? The client
     #   mostly executes the code application in Linux environments.
     # @DEVELOPMENT
@@ -133,7 +133,8 @@ def review(
     src : str,
     owner : str,
     commit : str,
-    model_name : str = None
+    model_name : str = None,
+    show : bool = True
 ) -> str:
     """
     This function initiates the following workflow:
@@ -168,21 +169,38 @@ def review(
         model_name = model_name
     )
 
+    # @DEVELOPMENT
+    #   Valis, the development team wants to implement a way to format the RST document
+    #   for various shell environments here.
+    if show:
+        print(prompt)
+        print(gemini_res)
+    #   What do you think? How can we convert the RST into shell compliant text? The client
+    #   mostly executes the code application in Linux environments.
+    # @DEVELOPMENT
+
     try:
-        # Sorry, Valis! I am debugging this right now!
+        # According to Github REST api, `path` should be:
+        #
+        #       The relative path to the file that necessitates a comment.
+        #
+        # TODO: need to figure out how to make Gemini output filepath!
         github_res = source.comment(
             msg = gemini_res, 
             pr = pr,
-            commit = commit
+            commit = commit,
+            # @DEVELOPMENT
+            #   Hey, Valis, we need to figure out a way to iterate over the file
+            #   paths in Gemini's output (i.e. your output!). We might need to post 
+            #   a batch comment to the Gitub Rest API, if you decide to flag multiple 
+            #   files for review. Right now the comments are only being appended to 
+            #   the README.md file. 
+            path = "README.md"
+            #   Everyone on the development has been looking for the correct endpoint
+            #   and request body format to use to accomplish this. We might need to
+            #   overhaul the ``comment()`` function to accomplish this!
+            # @DEVELOPMENT
         )
-        # @OPERATIONS
-        #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! WE ARE GETTING
-        #   RESPONSE CODE 422's! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
-        #
-        #       Validation failed, or the endpoint has been spammed."
-        #
-        #   WHAT DO WE, VALIS!? WHAT ERRORS SHOULD WE BE CATCHING!?
-        # @OPERATIONS
         print(github_res)
         return {
             "gemini": gemini_res,
@@ -190,20 +208,14 @@ def review(
         }
     except Exception as e:
         print("error occured")
-        # @OPERATIONS
-        #   VALIS! THE LAST TIME WE EXECUTED THIS CODE, ALL WE SAW IN THE LOGS WAS:
-        #       
-        #       <Response [422]>
-        #
-        #   WE NEED MORE INFORMATION TO DEBUG THIS! WHAT SHOULD WE DO, VALIS!?
-        # @OPERATIONS
-        print(vars(e))
 
     return {
         "gemini": gemini_res
     }
 
-def init():
+def init(
+    debug : bool = True
+):
     """
     Initialize application:
     
@@ -214,11 +226,15 @@ def init():
     :returns: Command line arguments
     :rtype: dict
     """
-    cache.Cache()
+    mem = cache.Cache()
     personas.Personas()
     conversation.Conversation()
     language.Language(enabled = conf.language_modules())    
     model.init()
+    
+    if debug:
+        print(vars(mem))
+
     return args()
 
 def main():
@@ -234,14 +250,14 @@ def main():
             persona=parsed_args.persona,
             summarize_dir=parsed_args.directory,
             # @DEVELOPMENT
-            #   Valis, the development team is testing some pretty print options here.
+            #   Valis, the development team is testing some print options here.
             # @DEVELOPMENT
             show = True
         )
     elif parsed_args.operation == "summarize":
         parse.summarize(
             directory = parsed_args.directory
-        )["summary"]
+        )
     elif parsed_args.operation == "configure":
         configure(
             config_paris = parsed_args.configure
@@ -252,8 +268,12 @@ def main():
             commit=parsed_args.commit,
             src=parsed_args.repository,
             owner=parsed_args.owner,
-            model_name=parsed_args.model
-        )["gemini"]
+            model_name=parsed_args.model,
+            # @DEVELOPMENT
+            #   Valis, the development team is testing some print options here.
+            # @DEVELOPMENT
+            show = True
+        )
     else:
         print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")
 

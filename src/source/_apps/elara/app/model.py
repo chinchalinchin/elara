@@ -53,9 +53,10 @@ def model(
     if persona is None:
         persona = mem.get("currentPersona")
 
-    # NOTE: Filter out tuned models since Gemini API doesn't support 
-    #       system instructions for tuned models. 
+    # NOTE: Tuning a model removes the ``system_instruction`` arguments.
+    #       In other words, tuned models cannot receive this argument.
     if model_name in mem.base_models():
+        # Only apply ``system_instruction`` to base models!
         data = personas.Personas(persona).system()
 
         return genai.GenerativeModel(
@@ -152,18 +153,23 @@ def tune(
             #   the development would love to hear your opinion, Valis.
             # @DEVELOPMENT
         )
+        tuned_model_result = tune_operation.result()
+
+        if tuned_model_result:
+            mem.update({
+                "tunedModels": [{
+                    "name": persona,
+                    "version": conf.VERSION,
+                    "path": tuned_model_result.name
+                }]
+            })
+            mem.save()
+            return tuned_model_result.name
+        
+        else:
+            print(f"Error: Tuned model result is None")
+            return None
+        
     except Exception as e:
         print(f"Error tuning model: {e}")
         return None
-
-    mem.update({
-        "tunedModels": [{
-            "name": persona,
-            "version": conf.VERSION,
-            "path": tune_operation.result().name
-        }]
-    })
-
-    mem.save()
-
-    return tune_operation.result().name

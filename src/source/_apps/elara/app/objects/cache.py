@@ -46,7 +46,8 @@ class Cache:
         try:
             with open(self.file, "r") as f:
                 self.data = json.load(f)
-        except FileNotFoundError:
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            print(e)
             self.data  = {
                 "baseModels": conf.MODEL["BASE_MODELS"],
                 "currentModel":  conf.MODEL["DEFAULTS"]["MODEL"],
@@ -82,7 +83,11 @@ class Cache:
         :param attribute: Key to retrieve from the Cache.
         :type attribute: str
         """
-        return self.data[attribute]
+        try:
+            return self.data[attribute]
+        except KeyError:
+            print(f"KeyError: Attribute {attribute} not found")
+            return None
 
     def update(self, **kwargs):
         """
@@ -92,11 +97,12 @@ class Cache:
             if key not in self.data:
                 continue 
 
-            if isinstance(self.data[key], list):
+            if isinstance(self.data[key], list) and isinstance(value, list):
                 self.data[key].extend(value)
-                continue
-
-            self.data[key] = value 
+            elif isinstance(self.data[key], dict) and isinstance(value, dict):
+                self.data[key].update(value)
+            else:
+                self.data[key] = value
     
     def save(self):
         """

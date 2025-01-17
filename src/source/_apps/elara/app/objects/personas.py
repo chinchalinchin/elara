@@ -62,8 +62,7 @@ class Personas:
         tune_dir : str , 
         tune_ext : str,
         sys_dir : str,
-        sys_ext : str,
-        current : str
+        sys_ext : str
     ):
         """
         Load *Personas* into runtime.

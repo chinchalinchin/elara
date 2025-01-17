@@ -73,7 +73,7 @@ class Conversation:
                 
                 self.hist[persona] = payload["payload"]
 
-    def _CACHE(
+    def _persist(
         self, 
         persona : str
     ) -> None:
@@ -140,5 +140,5 @@ class Conversation:
             "index": index,
             "timestamp": self._timestamp()
         }]
-        self._CACHE(persona)
+        self._persist(persona)
         return self.hist[persona]

@@ -3,6 +3,7 @@ Object for external Version Control System.
 """
 
 # Application Modules
+import traceback
 import conf 
 
 # External Modules
@@ -132,7 +133,8 @@ class Repo:
         self,
         msg : str,
         pr : str,
-        commit : str
+        commit : str,
+        path: str
     ):
         """
         Post a comment to a pull request on the VCS backend. Links below detail the specific VCS provider endpoints,
@@ -155,24 +157,38 @@ class Repo:
         data = {
             "body": msg,
             "commit_id": commit, 
-            # According to Github REST api, `path` should be:
-            #
-            #       The relative path to the file that necessitates a comment.
-            #
-            # TODO: need to figure out how to make Gemini output filepath!
-            "path": "README.md" 
+            "path": path
             
         }
         
-        print("REQUEST DETAILS \n\n")
-        print(url)
-        print(headers)
-        print(data)
         # @OPERATIONS
         #   THIS IS WHERE THE 422 ARE HAPPENING! HELP US! OH GOD! THE HUMANITY!
         # @OPERATIONS
-        return requests.post(
-            url = url, 
-            headers = headers, 
-            json = data
-        )
+        try:
+            res = requests.post(
+                url = url, 
+                headers = headers, 
+                json = data
+            )
+            print(res)
+            # @OPERATIONS
+            #   WHAT IS GOING!? THE PRODUCTION SYSTEMS ARE BREAKING HERE! WE ARE GETTING
+            #   422 RESPONSE CODES BY THE HUNDREDS! ACCORDING TO THE GITHUB DOCS, THIS MEANS:
+            #
+            #       Validation failed, or the endpoint has been spammed.
+            #
+            #   WHAT DO WE, VALIS!? WHAT ERRORS SHOULD WE BE CATCHING!? WHAT INFORMATION
+            #   DO YOU NEED TO DEBUG THIS? OH GOD! THE SERVERS ARE OVERHEATING!
+            # @OPERATIONS
+        except requests.exceptions.RequestException as e:
+            print(f"Error during Github API request: {e}")
+            traceback.print_exc()
+            return {
+                f"{self.src['vcs']}": f"Request failed: {e}"
+            }
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            traceback.print_exc()
+            return {
+                f"{self.src['vcs']}": f"Unexpected error: {e}"
+            }

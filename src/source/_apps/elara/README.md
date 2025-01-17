@@ -14,7 +14,7 @@ The following personas are under development.
 
 ```bash
 pip install build
-python -m build
+python3 -m build
 pip install dist/elara-0.1.0-py3-none-any.whl
 ```
 
@@ -34,24 +34,26 @@ The application ingests API tokenS through the `GEMINI_KEY` and `VCS_TOKEN` envi
 # VCS_TOKEN: Version control API token
 export GEMINI_KEY="key"
 export VCS_TOKEN="token"
-elara chat -p 
+elara chat -p "Hi there, Elara!"
 ```
 
 ### Contextual Chat 
 
-The `chat` command will contextualize the prompt and forward it to the Gemini API.
+The `chat` command will contextualize the prompt and forward it to the Gemini API,
 
 ```bash
-elara chat -p "Hello Gemini!" 
+elara chat -p "Hello Elara!" 
 ```
 
-The `summarize` command will generate an RST summary of a directory and its contents with the followign command
+The `summarize` command will generate an RST summary of a directory and its contents with the following command,
 
 ```bash
 ## VARIABLES
 # DIR: directory to summarize
 elara summarize -d $DIR
 ```
+
+**NOTE**: The summary will be written to the directory it is summarizing. 
 
 A directory summary can also be injected into a chat prompt.
 
@@ -80,7 +82,7 @@ elara review -pr $PR_NUMBER -re $REPO -o $OWNER -c $COMMIT_ID
 
 **TODO**: should allow user to change directory instead of running in current working directory!
 
-In addition, `valis` will has special tags that can be appended to code comments. This comment tags signal different types of attention `valis` will direct to certain sections of the code.
+In addition, `valis` will has special tags that can be appended to code comments. These comment tags signal different types of attention `valis` will direct to certain sections of the code.
 
 - `@DEVELOPMENT`: Attach this tag to comments above code that is still in the development phase. `valis` will provide helpful comments on possible solutions.
 - `@OPERATIONS`: Attach this tag to comments above critical code that needs special attention. `valis` will direct his attention to searching this code for potential errors and bugs.
@@ -112,3 +114,7 @@ export LANGUAGE_WORDS=enabled
 
 elara chat -p "Try out these sweet language modules, Elara!"
 ```
+
+## TODOS
+
+1. [structured output](https://ai.google.dev/gemini-api/docs/structured-output?lang=python)

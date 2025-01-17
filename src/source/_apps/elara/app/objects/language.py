@@ -1,5 +1,5 @@
 """ # objects.language
-Object for Language module parsing and loading. Language modules are plugins for the persona's model.
+Object for Language module parsing and loading. Language modules are plugins for the prompt instructions.
 """
 
 # Standard Library Modules

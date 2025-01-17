@@ -36,8 +36,8 @@ CACHE = {
 MODEL = {
     "GENERATION_CONFIG": genai.types.GenerationConfig(
         candidate_count=int(os.environ.setdefault("GEMINI_CANDIDATES", "1")),
-        max_output_tokens=int(os.environ.setdefault("GEMINI_OUTPUT_TOKENS", "6000")),
-        temperature=float(os.environ.setdefault("GEMINI_TEMPERATURE", "0.7")),
+        max_output_tokens=int(os.environ.setdefault("GEMINI_OUTPUT_TOKENS", "8000")),
+        temperature=float(os.environ.setdefault("GEMINI_TEMPERATURE", "0.9")),
         top_p=float(os.environ.setdefault("GEMINI_TOP_P", "0.9")), 
         top_k=int(os.environ.setdefault("GEMINI_TOP_K", "40"))
     ),
