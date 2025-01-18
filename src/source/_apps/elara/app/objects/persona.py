@@ -125,13 +125,19 @@ class Persona:
         self.current = self.personas[persona] 
         return self.current
 
-    def get(self) -> dict:
+    def get(self, func: str = None) -> dict:
         """
         Get current persona.
 
         :returns: Persona metadata
         :rtype: dict
         """
+        if func == "converse":
+            return self.personas["elara"]
+        if func == "analyze":
+            return self.personas["axiom"]
+        if func == "review":
+            return self.personas["milton"]
         return self.current
     
     def tuning(self) -> list:

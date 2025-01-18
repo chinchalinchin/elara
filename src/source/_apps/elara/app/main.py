@@ -6,11 +6,8 @@ import argparse
 import logging
 import os
 import pathlib
-import pprint
 
 # Application Modules
-import conf
-import model
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as conversation
@@ -19,95 +16,84 @@ import objects.persona as persona
 import objects.model as model
 import objects.repo as repo
 import objects.template as template
-import parse
 
 logger = logging.getLogger(__name__)
 
-def output(prompt, response):
-    """
-    Formats and prints the prompt and response.
-    """
-    return """"
-    ====================== PROMPT =======================
-
-    {prompt}
-
-    ===================== RESPONSE ======================"
-
-    {response}
-    """.format(prompt=prompt, response=response)
-
 def args( 
-    configuration : config.Config
-) -> argparse.Namespace:
+    configuration                       : config.Config
+)                                       -> argparse.Namespace:
     """
     Parse and format command line arguments
     """
-    parser                          = argparse.ArgumentParser(
-        description                 = conf.get("INTERFACE.HELP.PARSER")
+    parser                              = argparse.ArgumentParser(
+        description                     = configuration.get("INTERFACE.HELP.PARSER")
     )
     
     for global_arg in configuration.get("INTERFACE.ARGUMENTS"):
         parser.add_argument(*global_arg["SYNTAX"],
-            dest                    = global_arg["DEST"],
-            help                    = global_arg["HELP"],
-            type                    = eval(global_arg["TYPE"])
+            dest                        = global_arg["DEST"],
+            help                        = global_arg["HELP"],
+            type                        = eval(global_arg["TYPE"])
         )
 
-    subparsers                      = parser.add_subparsers(
-        dest                        = 'operation', 
-        help                        = conf.get("INTERFACE.HELP.SUBPARSER")
+    subparsers                          = parser.add_subparsers(
+        dest                            = 'operation', 
+        help                            = configuration.get("INTERFACE.HELP.SUBPARSER")
     )
 
     for op, op_config in configuration.get("INTERFACE.OPERATIONS"):
-        op_parser                   = subparsers.add_parser(
-            name                    = op_config["NAME"],
-            help                    = op_config["HELP"]
+        op_parser                       = subparsers.add_parser(
+            name                        = op_config["NAME"],
+            help                        = op_config["HELP"]
         )
         for op_arg in op["ARGUMENTS"]:
             if op_arg["SYNTAX"] == "nargs":
                 op_parser.add_argument(
-                    default         = op_arg["DEFAULT"],
-                    dest            = op_arg["DEST"],
-                    help            = op_arg["HELP"],
-                    type            = eval(op_arg["TYPE"])
+                    default             = op_arg["DEFAULT"],
+                    dest                = op_arg["DEST"],
+                    help                = op_arg["HELP"],
+                    type                = eval(op_arg["TYPE"])
                 )
                 continue
             op_parser.add_argument(*op_arg["SYNTAX"],
-                default             = op_arg["DEFAULT"],
-                dest                = op_arg["DEST"],
-                help                = op_arg["HELP"],
-                type                = eval(op_arg["TYPE"])
+                default                 = op_arg["DEFAULT"],
+                dest                    = op_arg["DEST"],
+                help                    = op_arg["HELP"],
+                type                    = eval(op_arg["TYPE"])
             )
 
     return parser.parse_args()
 
+
 def configure(
-    existing : config.Config,
-    config : str
-):
+    app                                 : dict
+)                                       -> dict:
     """
     Parses and applies configuration settings.
     """
-    config_dict = {}
+    config                              = {}
 
-    if config:
-        for item in config:
+    if app["ARGUMENTS"].config:
+        for item in app["ARGUMENTS"].config:
             try:
-                key, value = item.split("=", 1)
-                config_dict[key] = value
+                key, value              = item.split("=", 1)
+                config[key]             = value
             except ValueError:
                 logger.error(f"Invalid configuration format: {item}. Expected key=value.")
                 continue
-        existing.update(**config_dict)
-        existing.save()
-        logger.info(f"Updated configuration with: {config_dict}")
-        return config_dict
+
+        app["CONFIG"].update(**config)
+        app["CONFIG"].save()
+        logger.info(f"Updated configuration with: {config}")
+        return config
     
     logger.warning("No configuration pairs provided.")
-    return config_dict
+    return config
 
-def converse(app : dict) -> str:
+
+def converse(
+    app                                 : dict
+)                                       -> str:
     """
     Chat with one of Gemini's personas.
 
@@ -124,165 +110,139 @@ def converse(app : dict) -> str:
     :rtype: str
     """
     convo = conversation.Conversation()
-    temps = template.Template()
-    convo = conversation.Conversation()
-    lang = language.Language(
-        enabled = conf.language_modules()
-    )
 
     convo.update(
-        persona = persona, 
-        name = prompter, 
-        text = prompt
+        persona                         = app["CACHE"].get("currentPersona"), 
+        name                            = app["CACHE"].get("currentPrompter"), 
+        text                            = app["ARGUMENTS"].get("prompt")
     )
     
-    template_vars = { 
-        **mem.vars(),
-        **lang.vars(),
+    template_vars                       = { 
+        **app["CACHE"].vars(), 
+        **app["LANGUAGE"].vars(),
         **convo.vars()
     }
 
-    if summarize_dir is not None:
+    if app["ARGUMENTS"].get("directory") is not None:
         template_vars.update(
-            summarize(summarize_dir, stringify=True)
+            summarize(
+                directory               = app["ARGUMENTS"].get("directory"),
+                stringify               = True
+            )
         )
 
-    parsed_prompt = temps.get("conversation").render(template_vars)
+    parsed_prompt                       = app["TEMPLATES"].render(
+        temp                            = "conversation", 
+        variables                       = template_vars
+    )
 
-    response = model.reply(
-        prompt = parsed_prompt, 
-        persona = persona, 
-        model_name = model_name
+    response                            = app["MODEL"].respond(
+        prompt                          = parsed_prompt, 
+        persona                         = app["CACHE"].get("currentPersona"), 
+        model_name                      = app["CACHE"].get("currentModel")
     )
 
     convo.update(
-        persona = persona, 
-        name = persona, 
-        text = response
+        persona                         = app["CACHE"].get("currentPersona"), 
+        name                            = app["CACHE"].get("currentPersona"), 
+        text                            = response
     )
 
-    return response
+    return {
+        "prompt"                        : parsed_prompt,
+        "response"                      : response
+    }
 
 def analyze(
-    summarize_dir : str,
-    model_name : str = None,
-    show : bool = True
-) -> str:
+    app                                 : dict
+)                                       -> str:
     """
     This function injects the contents of a directory containing only RST documents into the ``data/templates/deduce.rst`` template. It then sends this contextualized prompt to the Gemini API persona of *Axiom*.
     """
-    parsed_prompt = parse.analyze(
-        summarize_dir
+    buffer                              = app["CACHE"].vars()
+    buffer["currentPersona"]            = app["PERSONAS"].get("analyze")
+
+    analyze_vars                        = {
+        **buffer,
+        **summarize(app),
+        **app["LANGUAGE"].vars(),
+        **{ "latex": app["CONFIG"].get("ANALYZE.LATEX_PREAMBLE") }
+    }
+
+    parsed_prompt                       = app["TEMPLATES"].render(
+        temp                            = "analysis", 
+        variables                        = analyze_vars
     )
 
-    response = model.reply(
-        prompt=parsed_prompt,
-        persona=conf.PERSONAS["DEFAULTS"]["ANALYSIS"],
-        model_name = model_name
+    response                            = model.reply(
+        prompt                          = parsed_prompt,
+        persona                         = app["PERSONAS"].get("analyze"),
+        model_name                      = app["CACHE"].get("currentModel")
     )
-
-    if show:
-        print(parse.output(parsed_prompt, response))
-
-    return response 
+    
+    return {
+        "prompt"                        : parsed_prompt,
+        "response"                      : response
+    }
 
 def review(
-    pr : str,
-    src : str,
-    owner : str,
-    commit : str,
-    model_name : str = None,
-    output: str = None,
-    show : bool = True
-) -> str:
+    app                                 : dict
+)                                       -> str:
     """
-    This function initiates the following workflow:
 
-    1. It takes a snapshot of the current working directory by calling the ``summarize`` function (via ``parse.git``).
-    2. It templates the summary of the current working directory into the pull request review template in ``data/templates/review.rst`` (via ``parse.git``).
-    3. It sends the templated review to the Gemini API persona of *Milton* (via ``model.reply``).
-    4. It takes Gemini's response and posts to the Github API for commenting on pull requests.
-
-    :param pr: The PR number.
-    :type pr: str
-    :param src: The repository name
-    :type src: str
-    :param owner: The repository owner.
-    :type owner: str
-    :param commit: The SHA ID of the commit.
-    :type commit: str
-    :param model_name: Name of the Gemini Model to use. Defaults to the value of the environment variable ``GEMINI_MODEL``.
     """
-    source = repo.Repo(
-        repo = src,
-        owner = owner,
-        commit = commit
+    source                              = repo.Repo(
+        repo                            = app["ARGUMENTS"].get("repository"),
+        owner                           = app["ARGUMENTS"].get("owner"),
+        commit                          = app["ARGUMENTS"].get("commit")
     )
 
-    mem = cache.Cache()
-    conf = config.Config(
+    buffer                              = app["CACHE"].vars()
+    buffer["currentPersona"]            = app["PERSONAS"].get("review")
 
-    )
-    temps = template.Template()
-    lang = language.Language(
-        enabled = conf.language_modules()
-    )
-    dir = os.getcwd()  
-
-    buffer = mem.vars()
-    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["REVIEW"]
-
-    review_prompt = temps.render("review", { 
+    review_variables                    = { 
         **buffer,
-        **src.vars(),
-        **lang.vars(),
-        **summarize(dir, stringify=True)
-    })
-
-    gemini_res = model.reply(
-        prompt=review_prompt,
-        persona=conf.PERSONAS["DEFAULTS"]["REVIEW"],
-        model_name=model_name,
+        **source.vars(),
+        **app["LANGUAGE"].vars(),
+        **summarize(app)
+    }
+    review_prompt                       = app["TEMPLATES"].render(
+        temp                            = "review", 
+        variables                       = review_variables
     )
 
-    if output is not None:
-        with open(f"{output}/milton.md", "w") as out:
-            out.write(gemini_res)
-            
-    if show:
-        print(parse.output(review_prompt, gemini_res))
+    model_res                           = app["MODEL"].respond(
+        prompt                          = review_prompt,
+        persona                         = buffer["currentPersona"],
+        model_name                      = buffer["currentModel"],
+    )
 
-    # According to Github REST api, `path` should be:
-    #
-    #       The relative path to the file that necessitates a comment.
-    #
-    # TODO: need to figure out how to make Gemini output filepath!
-    github_res = source.comment(
-        msg = gemini_res, 
-        pr = pr,
-        commit = commit,
+    source_res                          = source.comment(
+        msg                             = model_res, 
+        pr                              = app["ARGUMENTS"].pull,
         # @DEVELOPMENT
         #   Hey, Milton, we need to figure out a way to iterate over the file
         #   paths in Gemini's output (i.e. your output!). 
         #   
         #   We might need to post a batch comment to the Gitub Rest API, if you 
         #   decide to flag multiple files for review. Right now the comments are only 
-        #   being appended to the README.md file. 
-        path = "README.md"
+        #   being appended to the README.md file.
+        #
         #   Everyone on the development team has been looking for the correct endpoint
         #   and request body format to use to accomplish this. We might need to
         #   overhaul the ``comment()`` function to accomplish this!
         #
         #   However, the crux of the issue is parsing Gemini's response. 
         #   We need a clever way to pull the file name from the response, Milton!
+        path                            = "README.md"
     )
-    print(github_res)
     return {
-        "gemini": gemini_res,
-        "github": github_res
+        "prompt"                        : review_prompt,
+        "response"                      : model_res,
+        "vcs"                           : source_res
     }
 
-def summarize():
+def summarize(app : dict) -> str:
     pass 
 
 def init():
@@ -313,7 +273,7 @@ def init():
         }) or update_event
 
     if app["ARGUMENTS"].prompter:
-        update_event                    =  app["CACHE"].update({ 
+        update_event                    = app["CACHE"].update({ 
             "currentPrompter"           : app["ARGUMENTS"].prompter 
         }) or update_event
 
@@ -329,7 +289,7 @@ def init():
     lang_dir                            = os.path.join(app_dir, lang_rel_path)
     app["LANGUAGE"]                     = language.Language(
         directory                       = lang_dir,
-        extension                       = app["CONFIG"].get("TREE.FILES.LANGUAGE"),
+        extension                       = app["CONFIG"].get("TREE.EXTENSIONS.LANGUAGE"),
         enabled                         = app["CONFIG"].language_modules()
     )
 
@@ -337,13 +297,21 @@ def init():
     temp_dir                            = os.path.join(app_dir, temp_rel_path)
     app["TEMPLATES"]                    = template.Template(
         directory                       = temp_dir,
-        extension                       = app["CONFIG"].get("TREE.FILES.TEMPLATE")
+        extension                       = app["CONFIG"].get("TREE.EXTENSIONS.TEMPLATE")
     )
 
     app["MODEL"]                        = model.Model(
         api_key                         = app["CONFIG"].get("GEMINI_KEY"),
         tuning                          = app["CONFIG"].get("TUNING")
     )
+
+    app["PERSONAS"]                      = persona.Persona(
+        current                         = app["CACHE"].get("currentPersona"),
+        tune_dir                        = app["CONFIG"].get("TREE.DIRECTORIES.TUNING"),
+        tune_ext                        = app["CONFIG"].get("TREE.EXTENSIONS.TUNING"),
+        sys_dir                         = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM"),
+        sys_ext                         = app["CONFIG"].get("TREE.EXTENSIONS.TUNING")
+    )            
     
     if app["CONFIG"].get("DEBUG"):
         print(app)
@@ -354,8 +322,8 @@ def main():
     """
     Main function to run the command-line interface.
     """
-    app = init()
-    res = exec(app["OPERATION"], app)
+    app                                 = init()
+    res                                 = exec(app["OPERATION"], app)
 
     if app["ARGUMENTS"].output:
         # TODO: output to file

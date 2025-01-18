@@ -125,9 +125,12 @@
         },
         "FILES": {
             "CACHE": "cache.json",
-            "CONFIG": "config.json",
+            "CONFIG": "config.json"
+        },
+        "EXTENSIONS": {
             "TEMPLATE": ".rst",
-            "LANGUAGE": ".rst"
+            "LANGUAGE": ".rst",
+            "TUNING": ".json"
         }
     },
     "LANGUAGE": {
@@ -237,10 +240,12 @@
             }
         }
     }, 
+    "TUNING": {
+        "ENABLED": false,
+        "SOURCE": "models/gemini-1.5-flash-001-tuning"
+    },
     "VERSION": "1.0", 
     "GEMINI_KEY": null,
     "DEBUG": false, 
-    "TUNING": false,
-    "TUNING_SOURCE": "models/gemini-1.5-flash-001-tuning",
     "DEFAULT_MODEL": "models/gemini-2.0-flash-exp"
 }

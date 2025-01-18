@@ -23,7 +23,7 @@ class Repo:
 
     def __init__(
         self,
-        repo : str, 
+        repository : str, 
         owner : str,
         commit : str,
         vcs : str= conf.REPOS["VCS"],
@@ -61,7 +61,7 @@ class Repo:
         self.auth = auth
         self.src = {
             "owner": owner,
-            "repo": repo,
+            "repo": repository,
             "vcs": vcs,
             "commit": commit
         }

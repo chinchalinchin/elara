@@ -73,17 +73,17 @@ class Template:
 
     def render(
         self, 
-        template: str, 
+        temp: str, 
         variables : dict
     ) -> str:
         """
         Render a template. 
 
-        :param template: Template to render.
-        :type template: str
+        :param temp: Template to render.
+        :type temp: str
         :param variables: Variables to inject into template.
         :type variables: dict
         :returns: A templated string.
         :rtype: str
         """
-        return self.get(template).render(variables)
+        return self.get(temp).render(variables)

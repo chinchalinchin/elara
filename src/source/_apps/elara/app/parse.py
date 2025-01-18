@@ -8,115 +8,11 @@ Module for formatting prompts and responses. It also handles context management.
 import os
 import pathlib
 import subprocess
-import logging 
 
 # Application Modules
 import conf
-import objects.cache as cache
 import objects.error as error
 import objects.template as template
-import objects.language as language
-import objects.conversation as conversation
-import objects.repo as repo
-
-logger = logging.getLogger(__name__)
-
-def scrutinize(
-    src : repo.Repo
-) -> str:
-    """
-    Appends repository information to prompts. The current working directory is scanned and summarized with a call to the ``summarize`` function. The results are used to render the ``review.rst`` template in the ``data/templates`` directory.
-
-    :param src: The class object that contains the repository metadata.
-    :type src: repo.Repo
-    :returns: Rendered template of pull request review
-    :rtype: str
-    """
-    # @DEVELOPMENT
-    #   Milton, the team has been thinking about allowing the user to specify 
-    #   the directory containing the version control source directory. Currently 
-    #   the application uses the current working directory. We should probably add
-    #   a parameter to this function. We might be able to overload the existing 
-    #   ``--directory`` command line argument for the ``scrutinizze`` function.
-    #   What do you think?
-    mem = cache.Cache()
-    temps = template.Template()
-    lang = language.Language(
-        enabled = conf.language_modules()
-    )
-    dir = os.getcwd()  
-
-    buffer = mem.vars()
-    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["REVIEW"]
-
-    return temps.render("review", { 
-        **buffer,
-        **src.vars(),
-        **lang.vars(),
-        **summarize(dir, stringify=True)
-    })
-
-def analyze(
-    summarize_dir : str = None
-   
-) -> str: 
-    """
-    Injects the contents of a directory in the ``data/templates/article.rst`` template.
-
-    :param summarize_dir: Directory of documents to analyze.
-    :type summarize_dir: str
-    """
-    mem = cache.Cache()
-    temps = template.Template()
-    lang = language.Language(
-        enabled = conf.language_modules()
-    )
-    buffer = mem.vars()
-    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["ANALYSIS"]
-
-    return temps.render("article", {
-        **buffer,
-        **lang.vars(),
-        **summarize(summarize_dir, stringify=True),
-        **{ "latex": conf.LATEX_PREAMBLE }
-    })
-
-def contextualize(
-    persona : str = None,
-    summarize_dir : str = None
-) -> str:
-    """
-    Appends the preamble and formats the prompt. A directory on the local filesystem can be specified to add additional context to the prompt. This directory will be summarized using the ``data/templates/summary.rst`` template and injected into the prompt.
-
-    :param persona: Persona with which the prompter is conversing.
-    :type persona: str
-    :param summarize_dir: Directory containing additional context that is to be summarized.
-    :type summarize_dir: str
-    :returns: A contextualized prompt.
-    :rtype: str
-    """
-    mem = cache.Cache()
-    temps = template.Template()
-    convo = conversation.Conversation()
-    lang = language.Language(
-        enabled = conf.language_modules()
-    )
-    
-    template_vars = { 
-        **mem.vars(),
-        **lang.vars()
-    }
-
-    if summarize_dir is not None:
-        template_vars.update(
-            summarize(summarize_dir, stringify=True)
-        )
-
-    context = convo.get(persona)
-
-    history_temp = temps.get("conversation")
-
-    return temps.get("conversation").render(context)
 
 def summarize(
     directory : str,
