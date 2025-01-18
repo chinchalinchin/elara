@@ -1,3 +1,738 @@
+
+```python
+""" # main.py
+Module for command line interface.
+"""
+# Standard Library Modules
+import argparse
+import logging
+import re
+
+# Application Modules
+import conf
+import model
+import objects.cache as cache
+import objects.conversation as conversation
+import objects.language as language
+import objects.personas as personas
+import objects.repo as repo
+import parse
+
+logger = logging.getLogger(__name__)
+
+def args():
+    """
+    Parse and format command line arguments
+    """
+    parser = argparse.ArgumentParser(description="Plumb the depths of generative AI.")
+    for arg in conf.ARGUMENTS:
+        if arg["mode"] == "name":
+            if "nargs" in arg:
+                parser.add_argument(
+                    arg["syntax"],
+                    nargs=arg["nargs"],
+                    help=arg["help"]
+                )
+            else:
+                parser.add_argument(
+                    arg["syntax"],
+                    choices=arg["choices"],
+                    help=arg["help"]
+                )
+        elif arg["mode"] == "flag":
+            parser.add_argument(
+                *arg["syntax"],
+                type=arg["type"],
+                default=arg["default"],
+                help=arg["help"]
+            )
+    args = parser.parse_args()
+    return args
+
+def configure(
+    config_pairs
+):
+    """
+    Parses and applies configuration settings.
+    """
+    mem = cache.Cache()
+    if config_pairs:
+        config_dict = {}
+        for item in config_pairs:
+            try:
+                key, value = item.split("=", 1)
+                config_dict[key] = value
+            except ValueError:
+                logger.error(f"Invalid configuration format: {item}. Expected key=value.")
+                continue
+        mem.update(**config_dict)
+        mem.save()
+        logger.info(f"Updated configuration with: {config_dict}")
+    else:
+        logger.warning("No configuration pairs provided.")
+    return config_dict
+
+def chat(
+    prompt: str,
+    persona: str = None,
+    prompter: str = None,
+    model_name: str = None,
+    summarize_dir: str = None,
+    show: bool = True
+) -> str:
+    """
+    Chat with one of Gemini's personas.
+
+    :param prompt: Prompt to send.
+    :type prompt: str
+    :param persona: Persona with which to converse. If no `persona` is provided, it will be retrieved from the cache.
+    :type persona: str
+    :param model_name: Gemini model to use. If no `model_name` is provided, it will be retrieved from teh cache.
+    :type model_type: str
+    :param summarize_dir: Directory of additional context to inject into prompt. If this argument is provided, an RST formatted summary of a directory will be generated using `parse.summarize()` and injected into the prompt.
+    :type summarize_dir: str
+    :param show: A flag signaling whether the prompt and response should be printed to screen.
+    :returns: The persona's response to the prompt.
+    :rtype: str
+    """
+    mem = cache.Cache()
+    convo = conversation.Conversation()
+
+    if model_name is None:
+        model_name = mem.get("currentModel")
+
+    if persona is None:
+        persona = mem.get("currentPersona")
+
+    if prompter is None:
+        prompter = mem.get("currentPrompter")
+
+    convo.update(
+        persona=persona,
+        name=prompter,
+        text=prompt
+    )
+
+    parsed_prompt = parse.contextualize(
+        persona=persona,
+        summarize_dir=summarize_dir
+    )
+
+    response = model.reply(
+        prompt=parsed_prompt,
+        persona=persona,
+        model_name=model_name
+    )
+
+    if show:
+        print(parse.output(parsed_prompt, response))
+
+    convo.update(
+        persona=persona,
+        name=persona,
+        text=response
+    )
+
+    return response
+
+def analysis(
+    summarize_dir: str,
+    model_name: str = None,
+    show: bool = True
+) -> str:
+    """
+    This function injects the contents of a directory containing only RST documents into the ``data/templates/deduce.rst`` template. It then sends this contextualized prompt to the Gemini API persona of *Axiom*.
+    """
+    parsed_prompt = parse.analyze(
+        summarize_dir
+    )
+
+    response = model.reply(
+        prompt=parsed_prompt,
+        persona=conf.PERSONAS["DEFAULTS"]["ANALYSIS"],
+        model_name=model_name
+    )
+
+    if show:
+        print(parse.output(parsed_prompt, response))
+
+    return response
+
+def review(
+    pr: str,
+    src: str,
+    owner: str,
+    commit: str,
+    model_name: str = None,
+    show: bool = True
+) -> str:
+    """
+    This function initiates the following workflow:
+
+    1. It takes a snapshot of the current working directory by calling the ``summarize`` function (via ``parse.git``).
+    2. It templates the summary of the current working directory into the pull request review template in ``data/templates/review.rst`` (via ``parse.git``).
+    3. It sends the templated review to the Gemini API persona of *Milton* (via ``model.reply``).
+    4. It takes Gemini's response and posts to the Github API for commenting on pull requests.
+
+    :param pr: The PR number.
+    :type pr: str
+    :param src: The repository name
+    :type src: str
+    :param owner: The repository owner.
+    :type owner: str
+    :param commit: The SHA ID of the commit.
+    :type commit: str
+    :param model_name: Name of the Gemini Model to use. Defaults to the value of the environment variable ``GEMINI_MODEL``.
+    """
+    source = repo.Repo(
+        repo=src,
+        owner=owner,
+        commit=commit
+    )
+
+    try:
+        prompt = parse.scrutinize(src=source)
+    except Exception as e:
+        logger.error(f"Error in scrutinize: {e}")
+        return {
+           "status": "failed",
+           "error": str(e)
+        }
+
+    try:
+        gemini_res = model.reply(
+            prompt=prompt,
+            persona=conf.PERSONAS["DEFAULTS"]["REVIEW"],
+            model_name=model_name,
+        )
+    except Exception as e:
+        logger.error(f"Error in model.reply: {e}")
+```
+
+
+
+```python
+""" # conf.py
+Constants and static functions for the application.
+"""
+# Standard Library Modules
+import os
+from pathlib import Path
+
+# External Modules
+import google.generativeai as genai
+import yaml
+
+_dir = Path(__file__).resolve().parent
+
+# @DATA
+#   Milton, we need your opinion here. The development team is saying
+#   the proper way to configure the application is to ingest application
+#   configuration through environment variables. However, the operations
+#   team is saying we should be loading these structures from an external
+#   source, like a SQLITE backend or even a YAML/JSON structure.
+#   What do you think, Milton? What is the correct approach to take here?
+CACHE = {
+    "DIR": {
+        "APP": _dir,
+        "DATA": os.path.join(_dir, "data"),
+        "EXPERIMENTS": os.path.join(_dir, "data", "experiment"),
+        "HISTORY": os.path.join(_dir, "data", "history"),
+        "MODULES": os.path.join(_dir, "data", "modules"),
+        "TEMPLATES": os.path.join(_dir, "data", "templates"),
+        "TUNING": os.path.join(_dir, "data", "tuning"),
+        "SYSTEM": os.path.join(_dir, "data", "system"),
+    },
+    "FILE": {
+        "CACHE": os.path.join(_dir, "data", "cache.json"),
+        "EXPERIMENTS": {
+            "DUALITY": {
+                "A": os.path.join(_dir, "data", "experiment", "duality_A.txt"),
+                "B": os.path.join(_dir, "data", "experiment", "duality_B.txt"),
+            }
+        }
+    }
+}
+"""Configuration for application file structures and output."""
+
+MODEL = {
+    "GENERATION_CONFIG": genai.types.GenerationConfig(
+        candidate_count=1,
+        max_output_tokens=8000,
+        temperature=0.9,
+        top_p=0.9,
+        top_k=40
+    ),
+    "SAFETY_SETTINGS": {
+        genai.types.HarmCategory.HARM_CATEGORY_HATE_SPEECH: genai.types.HarmBlockThreshold.BLOCK_NONE,
+        genai.types.HarmCategory.HARM_CATEGORY_HARASSMENT: genai.types.HarmBlockThreshold.BLOCK_NONE,
+        genai.types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: genai.types.HarmBlockThreshold.BLOCK_NONE,
+        genai.types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: genai.types.HarmBlockThreshold.BLOCK_NONE
+    },
+    "BASE_MODELS": [{
+        "tag": "pro",
+        "path": "models/gemini-1.5-pro-latest"
+    },{
+        "tag": "pro-002",
+        "path": "models/gemini-1.5-pro-002"
+    },{
+        "tag": "flash",
+        "path": "models/gemini-1.5-flash-latest"
+    },{
+        "tag": "flash-tune",
+        "path": "models/gemini-1.5-flash-001-tuning"
+    }, {
+        "tag": "exp-flash",
+        "path": "models/gemini-2.0-flash-exp"
+        # input token limit: 1048576
+    },{
+        "tag": "exp-flash-think",
+        "path": "models/gemini-2.0-flash-thinking-exp"
+    }, {
+        "tag": "exp-1206",
+        "path": "models/gemini-exp-1206"
+        # input token limit: 2097152
+    },{
+        "tag": "exp-1121",
+        "path": "models/gemini-exp-1121"
+        # input token limit: 2097152
+    },{
+        "tag": "exp-1114",
+        "path": "models/gemini-exp-1114"
+        # input token limit: 2097152
+    }],
+    "DEFAULTS": {
+        "TUNING": "models/gemini-1.5-flash-001-tuning",
+        "MODEL": "models/gemini-2.0-flash-exp",
+        # "MODEL": "tunedModels/elara-a38gqsr3zzw8",
+    },
+    "TUNING": "disabled"
+
+}
+"""Configuration for ``google.generativeai.GenerativeModel``"""
+
+LANGUAGE = {
+    "EXTENSION": ".rst",
+    "MODULES": {
+        "OBJECT": True,
+        "INFLECTION": True,
+        "VOICE": False,
+        "WORDS": True
+    }
+}
+"""Configuration for Language modules"""
+
+PERSONAS = {
+    "DEFAULTS": {
+        "CONVERSE": "elara",
+        "REVIEW": "milton",
+        "ANALYSIS": "axiom"
+    },
+    "ALL": ["elara", "axiom", "milton"]
+}
+"""Configuration for personas"""
+
+CONVERSATION = {
+    "TIMEZONE_OFFSET": -5
+}
+
+PROMPTS = {
+    "PROMPTER": "grant",
+    "DEFAULT": "Hello! Form is the possibility of structure.",
+}
+"""Configuration for prompt defaults."""
+
+SUMMARIZE = {
+    "DIRECTIVES": {
+        ".py": "python",
+        ".sh": "bash",
+        ".toml": "toml",
+        ".cfg": "toml",
+        ".json": "json",
+        ".yaml": "yaml",
+        ".html": "html",
+        ".js": "js"
+    },
+    "INCLUDES": [
+        ".txt",
+        ".rst",
+        ".md",
+        ".ini"
+    ],
+    "FILE": "summary",
+    "EXT": "rst"
+}
+"""Configuration for the ``summarize`` function. """
+
+REPOS = {
+    "VCS": "github",
+    "AUTH": {
+        "TYPE": "bearer",
+        "CREDS": None  # Placeholder, to be handled securely
+    },
+    "BACKENDS": {
+        "GITHUB": {
+            "HEADERS": {
+                "X-GitHub-Api-Version": "2022-11-28",
+                "Accept": "application/vnd.github+json"
+            },
+            "API": {
+                "PR": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+            }
+        }
+    }
+}
+"""Configuration for the ``review`` function"""
+
+ARGUMENTS = [{
+    "mode": "name",
+    "syntax": "operation",
+    "choices": ["converse", "summarize", "review", "analyze"],
+    "help": "The operation to perform (`converse`, `summarize`, `review`, `analyze`)."
+},{
+    "mode": "name",
+    "syntax": "configure",
+    "nargs": "*",
+    "help": "Set configuration values as key-value pairs (e.g., currentModel=models/gemini-pro)."
+},{
+    "mode": "flag",
+    "syntax": ["-p", "--prompt"],
+    "type": str,
+    "default": PROMPTS["DEFAULT"],
+    "help": "Input string for converse operation. Required for `converse` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for all other operations."
+},{
+    "mode": "flag",
+    "syntax": ["-m", "--model"],
+    "type": str,
+    "default": MODEL["DEFAULTS"]["MODEL"],
+    "help": "Input model for Gemini API. Optional for all operations. Defaults to the value of `GEMINI_MODEL` environment variable."
+},{
+    "mode": "flag",
+    "syntax": ["-r", "--persona"],
+    "type": str,
+    "default": PERSONAS["DEFAULTS"]["CONVERSE"],
+    "help": "Input Persona for Gemini API. Optional for all operations. Defaults to the value of the `GEMINI_PERSONA` environment variable."
+},{
+    "mode": "flag",
+    "syntax": ["-f", "--self"],
+    "type": str,
+    "default": PROMPTS["PROMPTER"],
+    "help": "Input Prompter for Gemini API. Optional for all operations. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
+},{
+    "mode": "flag",
+    "syntax": ["-d", "--dir"],
+    "default": None,
+    "type": str,
+    "help": "The path to the directory to summarize. Required for `summarize` and `contemplate`. Optional for `converse`. Ignored for `review`."
+},{
+    "mode": "flag",
+    "syntax": ["-pr", "--pull"],
+    "default": None,
+    "type": str,
+    "help": "Pull request number to review. Required for `review`. Ignored for all other operations."
+},{
+    "mode": "flag",
+    "syntax": ["-c", "--commit"],
+    "default": None,
+    "type": str,
+    "help": "Commit ID to review. Required for `review`. Ignored for all other operations."
+},{
+    "mode": "flag",
+    "syntax": ["-re", "--repository"],
+    "default": None,
+    "type": str,
+    "help": "Repository to review. Required for `review`. Ignored for all other operations."
+},{
+    "mode": "flag",
+    "syntax": ["-o", "--owner"],
+    "default": None,
+    "type": str,
+    "help": "Owner of repository to review. Required for `review`. Ignored for all other operations."
+}]
+"""Configuration for command line arguments"""
+
+VERSION = "1.0"
+"""Version configuration"""
+
+API_KEY = None  # Placeholder, to be handled securely
+"""Gemini API key"""
+
+DEBUG = False
+"""Switch for debugging output"""
+
+LATEX_PREAMBLE=r"""
+\usepackage{babel}
+\babelprovide[import, main]{coptic}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{runic}
+"""
+"""LaTeX preamble injected into templates"""
+
+class Config:
+    _instance = None
+    _config_data = None
+    _config_file_path = os.path.join(_dir, "config.yaml")
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(Config, cls).__new__(cls)
+            cls._instance.load_config()
+        return cls._instance
+
+    def load_config(self):
+        try:
+            with open(self._config_file_path, "r") as f:
+                self._config_data = yaml.safe_load(f)
+        except (FileNotFoundError, yaml.YAMLError) as e:
+            print(f"Error loading config file: {e}")
+            self._config_data = {}
+
+        # Apply environment variable overrides
+        self._apply_env_overrides()
+
+    def _apply_env_overrides(self):
+        if self._config_data:
+            self._config_data["MODEL"]["GENERATION_CONFIG"]["candidate_count"] = int(os.environ.get("GEMINI_CANDIDATES", self._config_data["MODEL"]["GENERATION_CONFIG"]["candidate_count"]))
+            self._config_data["MODEL"]["GENERATION_CONFIG"]["max_output_tokens"] = int(os.environ.get("GEMINI_OUTPUT_TOKENS", self._config_data["MODEL"]["GENERATION_CONFIG"]["max_output_tokens"]))
+            self._config_data["MODEL"]["GENERATION_CONFIG"]["temperature"] = float(os.environ.get("GEMINI_TEMPERATURE", self._config_data["MODEL"]["GENERATION_CONFIG"]["temperature"]))
+            self._config_data["MODEL"]["GENERATION_CONFIG"]["top_p"] = float(os.environ.get("GEMINI_TOP_P", self._config_data["MODEL"]["GENERATION_CONFIG"]["top_p"]))
+            self._config_data["MODEL"]["GENERATION_CONFIG"]["top_k"] = int(os.environ.get("GEMINI_TOP_K", self._config_data["MODEL"]["GENERATION_CONFIG"]["top_k"]))
+
+            self._config_data["MODEL"]["DEFAULTS"]["TUNING"] = os.environ.get("GEMINI_SOURCE", self._config_data["MODEL"]["DEFAULTS"]["TUNING"])
+            self._config_data["MODEL"]["DEFAULTS"]["MODEL"] = os.environ.get("GEMINI_MODEL", self._config_data["MODEL"]["DEFAULTS"]["MODEL"])
+
+            self._config_data["LANGUAGE"]["MODULES"]["OBJECT"] = bool(os.environ.get("LANGUAGE_OBJECT", self._config_data["LANGUAGE"]["MODULES"]["OBJECT"]))
+            self._config_data["LANGUAGE"]["MODULES"]["INFLECTION"] = bool(os.environ.get("INFLECTION", self._config_data["LANGUAGE"]["MODULES"]["INFLECTION"]))
+            self._config_data["LANGUAGE"]["MODULES"]["VOICE"] = bool(os.environ.get("VOICE", self._config_data["LANGUAGE"]["MODULES"]["VOICE"]))
+            self._config_data["LANGUAGE"]["MODULES"]["WORDS"] = bool(os.environ.get("WORDS", self._config_data["LANGUAGE"]["MODULES"]["WORDS"]))
+
+            self._config_data["CONVERSATION"]["TIMEZONE_OFFSET"] = int(os.environ.get("CONVO_TIMEZONE", self._config_data["CONVERSATION"]["TIMEZONE_OFFSET"]))
+
+            self._config_data["PROMPTS"]["PROMPTER"] = os.environ.get("GEMINI_PROMPTER", self._config_data["PROMPTS"]["PROMPTER"])
+
+            self._config_data["REPOS"]["VCS"] = os.environ.get("VCS", self._config_data["REPOS"]["VCS"])
+
+            self._config_data["VERSION"] = os.environ.get("VERSION", self._config_data["VERSION"])
+            self._config_data["API_KEY"] = os.environ.get("GEMINI_KEY", self._config_data["API_KEY"])
+
+    def get(self, key, default=None):
+        keys = key.split(".")
+        value = self._config_data
+        for k in keys:
+            if isinstance(value, dict):
+                value = value.get(k)
+            else:
+                return default
+            if value is None:
+                return default
+        return value
+
+    def set(self, key, value):
+        keys = key.split(".")
+        target = self._config_data
+        for k in keys[:-1]:
+            if k not in target:
+                target[k] = {}
+            target = target[k]
+        target[keys[-1]] = value
+
+    def save_config(self):
+        try:
+            with open(self._config_file_path, "w") as f:
+                yaml.dump(self._config_data, f, indent=4)
+        except (FileNotFoundError, yaml.YAMLError) as e:
+            print(f"Error saving config file: {e}")
+
+    @property
+    def api_key(self):
+        return self.get("API_KEY")
+
+    @property
+    def latex_preamble(self):
+        return self.get("LATEX_PREAMBLE", LATEX_PREAMBLE)
+
+    @property
+    def debug(self):
+        return self.get("DEBUG", DEBUG)
+
+def tuning_enabled():
+    """
+    Returns a bool flag signaling models should be tuned.
+    """
+    config = Config()
+    return config.get("MODEL.TUNING") == "enabled"
+
+def summary_extensions():
+    """
+    Returns all valid extensions for ``summarize()`` function
+    """
+    config = Config()
+    return [
+        k for k in config.get("SUMMARIZE.DIRECTIVES").keys()
+    ] + config.get("SUMMARIZE.INCLUDES")
+
+def summary_file():
+    """
+    Returns the ``summarize()`` filename and extension
+    """
+    config = Config()
+    return ".".join([config.get("SUMMARIZE.FILE"), config.get("SUMMARIZE.EXT")])
+
+def language_modules():
+    """
+    Return a list of enabled Language modules.
+    """
+    config = Config()
+    modules = config.get("LANGUAGE.MODULES")
+    if any(v == "enabled" for v in modules.values()):
+        return [
+            k.lower()
+            for k,v
+            in modules.items()
+            if v == "enabled"
+        ]
+    return []
+
+# Initialize the configuration
+config = Config()
+
+# Ensure API key is handled securely
+if config.api_key is None:
+    raise ValueError("GEMINI_KEY environment variable not set.")
+
+# Configure genai with the API key from the configuration
+genai.configure(api_key=config.api_key)
+```
+
+**config.yaml**
+
+```yaml
+CACHE:
+  DIR:
+    APP: "/home/grant/Projects/elara/src/source/_apps/elara/app"
+    DATA: "/home/grant/Projects/elara/src/source/_apps/elara/app/data"
+    EXPERIMENTS: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/experiment"
+    HISTORY: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/history"
+    MODULES: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/modules"
+    TEMPLATES: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/templates"
+    TUNING: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/tuning"
+    SYSTEM: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/system"
+  FILE:
+    CACHE: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/cache.json"
+    EXPERIMENTS:
+      DUALITY:
+        A: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/experiment/duality_A.txt"
+        B: "/home/grant/Projects/elara/src/source/_apps/elara/app/data/experiment/duality_B.txt"
+
+MODEL:
+  GENERATION_CONFIG:
+    candidate_count: 1
+    max_output_tokens: 8000
+    temperature: 0.9
+    top_p: 0.9
+    top_k: 40
+  SAFETY_SETTINGS:
+    HARM_CATEGORY_HATE_SPEECH: "BLOCK_NONE"
+    HARM_CATEGORY_HARASSMENT: "BLOCK_NONE"
+    HARM_CATEGORY_SEXUALLY_EXPLICIT: "BLOCK_NONE"
+    HARM_CATEGORY_DANGEROUS_CONTENT: "BLOCK_NONE"
+  BASE_MODELS:
+    - tag: "pro"
+      path: "models/gemini-1.5-pro-latest"
+    - tag: "pro-002"
+      path: "models/gemini-1.5-pro-002"
+    - tag: "flash"
+      path: "models/gemini-1.5-flash-latest"
+    - tag: "flash-tune"
+      path: "models/gemini-1.5-flash-001-tuning"
+    - tag: "exp-flash"
+      path: "models/gemini-2.0-flash-exp"
+    - tag: "exp-flash-think"
+      path: "models/gemini-2.0-flash-thinking-exp"
+    - tag: "exp-1206"
+      path: "models/gemini-exp-1206"
+    - tag: "exp-1121"
+      path: "models/gemini-exp-1121"
+    - tag: "exp-1114"
+      path: "models/gemini-exp-1114"
+  DEFAULTS:
+    TUNING: "models/gemini-1.5-flash-001-tuning"
+    MODEL: "models/gemini-2.0-flash-exp"
+  TUNING: "disabled"
+
+LANGUAGE:
+  EXTENSION: ".rst"
+  MODULES:
+    OBJECT: true
+    INFLECTION: true
+    VOICE: false
+    WORDS: true
+
+PERSONAS:
+  DEFAULTS:
+    CONVERSE: "elara"
+    REVIEW: "milton"
+    ANALYSIS: "axiom"
+  ALL:
+    - "elara"
+    - "axiom"
+    - "milton"
+
+CONVERSATION:
+  TIMEZONE_OFFSET: -5
+
+PROMPTS:
+  PROMPTER: "grant"
+  DEFAULT: "Hello! Form is the possibility of structure."
+
+SUMMARIZE:
+  DIRECTIVES:
+    ".py": "python"
+    ".sh": "bash"
+    ".toml": "toml"
+    ".cfg": "toml"
+    ".json": "json"
+    ".yaml": "yaml"
+    ".html": "html"
+    ".js": "js"
+  INCLUDES:
+    - ".txt"
+    - ".rst"
+    - ".md"
+    - ".ini"
+  FILE: "summary"
+  EXT: "rst"
+
+REPOS:
+  VCS: "github"
+  AUTH:
+    TYPE: "bearer"
+    CREDS: null  # Placeholder, to be handled securely
+  BACKENDS:
+    GITHUB:
+      HEADERS:
+        X-GitHub-Api-Version: "2022-11-28"
+        Accept: "application/vnd.github+json"
+      API:
+        PR: "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+
+VERSION: "1.0"
+API_KEY: null  # Placeholder, to be handled securely
+DEBUG: false
+LATEX_PREAMBLE: |
+  \usepackage{babel}
+  \babelprovide[import, main]{coptic}
+  \usepackage{amssymb}
+  \usepackage{amsmath}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+  \usepackage{runic}
+```
+
+
 ```python
 # app/objects/repo.py
 

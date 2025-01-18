@@ -1,0 +1,210 @@
+{
+    "ARGUMENTS": [{
+        "mode": "name",
+        "syntax": "operation",
+        "choices": ["converse", "summarize", "review", "analyze"],
+        "help": "The operation to perform (`converse`, `summarize`, `review`, `analyze`)."
+    },{
+        "mode": "name",
+        "syntax": "configure",
+        "nargs": "*",
+        "help": "Set configuration values as key-value pairs (e.g., currentModel=models/gemini-pro)."
+    },{
+        "mode": "flag",
+        "syntax": ["-p", "--prompt"],
+        "type": "str",
+        "default": "Hello! Form is the possibility of structure!",
+        "help": "Input string for converse operation. Required for `converse` operation. Defaults to 'Hello! Form is the possibility of structure!'. Ignored for all other operations."
+    },{
+        "mode": "flag",
+        "syntax": ["-m", "--model"],
+        "type": "str",
+        "default": "models/gemini-2.0-flash-exp",
+        "help": "Input model for Gemini API. Optional for all operations. Defaults to the value of `GEMINI_MODEL` environment variable."
+    },{
+        "mode": "flag",
+        "syntax": ["-r", "--persona"],
+        "type": "str",
+        "default": "elara",
+        "help": "Input Persona for Gemini API. Optional for all operations. Defaults to the value of the `GEMINI_PERSONA` environment variable."
+    },{
+        "mode": "flag",
+        "syntax": ["-f", "--self"],
+        "type": "str",
+        "default": "grant",
+        "help": "Input Prompter for Gemini API. Optional for all operations. Defaults to the value of the `GEMINI_PROMPTER` environment variable."
+    },{
+        "mode": "flag",
+        "syntax": ["-d", "--dir"],
+        "default": null,
+        "type": "str",
+        "help": "The path to the directory to summarize. Required for `summarize` and `contemplate`. Optional for `converse`. Ignored for `review`."
+    },{
+        "mode": "flag",
+        "syntax": ["-pr", "--pull"],
+        "default": null,
+        "type": "str",
+        "help": "Pull request number to review. Required for `review`. Ignored for all other operations."
+    },{
+        "mode": "flag",
+        "syntax": ["-c", "--commit"],
+        "default": null,
+        "type": "str",
+        "help": "Commit ID to review. Required for `review`. Ignored for all other operations."
+    },{
+        "mode": "flag",
+        "syntax": ["-re", "--repository"],
+        "default": null,
+        "type": "str",
+        "help": "Repository to review. Required for `review`. Ignored for all other operations."
+    },{
+        "mode": "flag",
+        "syntax": ["-o", "--owner"],
+        "default": null,
+        "type": "str",
+        "help": "Owner of repository to review. Required for `review`. Ignored for all other operations."
+    }, {
+        "mode": "flag",
+        "syntax": ["-out", "--output"],
+        "default": null,
+        "type": "str",
+        "help": "Output directory."
+    }],
+    "TREE": {
+        "DIR": {
+            "APP": "/home/grant/Projects/elara/src/source/_apps/elara/app",
+            "DATA": "/home/grant/Projects/elara/src/source/_apps/elara/app/data",
+            "EXPERIMENTS": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/experiment",
+            "HISTORY": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/history",
+            "MODULES": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/modules",
+            "TEMPLATES": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/templates",
+            "TUNING": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/tuning",
+            "SYSTEM": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/system"
+        },
+        "FILE": {
+            "CACHE": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/cache.json",
+            "CONIFG": "/home/grant/Projects/elara/src/source/_apps/elara/app/data/config.json"
+        }
+    },
+    "MODEL": {
+        "GENERATION_CONFIG": {
+            "CANDIDATE_COUNT": 1,
+            "MAX_OUTPUT_TOKENS": 8000,
+            "TEMPERATURE": 0.9,
+            "TOP_P": 0.9,
+            "TOP_K": 40
+        },
+        "SAFETY_SETTINGS": {
+            "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+            "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+            "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+            "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+        },
+        "BASE_MODELS": [{
+            "tag": "pro",
+            "path": "models/gemini-1.5-pro-latest"
+        },{
+            "tag": "pro-002",
+            "path": "models/gemini-1.5-pro-002"
+        },{
+            "tag": "flash",
+            "path": "models/gemini-1.5-flash-latest"
+        },{
+            "tag": "flash-tune",
+            "path": "models/gemini-1.5-flash-001-tuning"
+        }, {
+            "tag": "exp-flash",
+            "path": "models/gemini-2.0-flash-exp",
+            "token_limit": 1048576
+        },{
+            "tag": "exp-flash-think",
+            "path": "models/gemini-2.0-flash-thinking-exp"
+        }, {
+            "tag": "exp-1206",
+            "path": "models/gemini-exp-1206",
+            "token_limit": 2097152    
+        },{
+            "tag": "exp-1121",
+            "path": "models/gemini-exp-1121",
+            "token_limit": 2097152
+        },{
+            "tag": "exp-1114",
+            "path": "models/gemini-exp-1114",
+            "token_limit": 2097152
+        }],
+        "DEFAULTS": {
+            "TUNING": "models/gemini-1.5-flash-001-tuning",
+            "MODEL": "models/gemini-2.0-flash-exp"
+        },
+        "TUNING": "disabled"
+    },
+    "LANGUAGE": {
+        "EXTENSION": ".rst",
+        "MODULES": {
+            "OBJECT": true,
+            "INFLECTION": true, 
+            "VOICE": false,
+            "WORDS": true
+        }
+    },
+    "PERSONAS": {
+        "DEFAULTS": {
+            "CONVERSE": "elara",
+            "REVIEW": "milton",
+            "ANALYSIS": "axiom"
+        },
+        "ALL": [
+            "elara",
+            "milton",
+            "axiom"
+        ]
+    },
+    "CONVERSATION": {
+        "TIMEZONE_OFFSET": -5
+    },
+    "PROMPTS": {
+        "PROMPTER": "grant", 
+        "DEFAULT": "Hello! Form is the possibility of structure!"
+    },
+    "SUMMARIZE": {
+        "DIRECTIVES": {
+            ".py": "python",
+            ".sh": "bash", 
+            ".toml": "toml",
+            ".cfg": "toml",
+            ".json": "json",
+            ".html": "html", 
+            ".js": "js"
+        },
+        "INCLUDES": [
+            ".rst",
+            ".md",
+            ".ini",
+            ".txt"
+        ],
+        "FILE": "summary",
+        "EXT": "rst"
+    }, 
+    "REPOS": {
+        "VCS": "github",
+        "AUTH": {
+            "TYPE": "bearer",
+            "CREDS": null
+        },
+        "BACKENDS": {
+            "GITHUB": {
+                "HEADERS": {
+                    "X-GitHub-Api-Version": "2022-11-28",
+                    "Accept": "application/vnd.github+json"
+                },
+                "API": {
+                    "PR" : "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+                }
+            }
+        }
+    }, 
+    "VERSION": "1.0", 
+    "API_KEY": null,
+    "DEBUG": false, 
+    "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+}

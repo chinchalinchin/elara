@@ -8,7 +8,7 @@ import json
 # Application Modules 
 import conf 
 
-class Personas:
+class Persona:
     current = None
     """Current persona"""
     inst = None
@@ -54,7 +54,7 @@ class Personas:
         """
         if not self.inst:
             self.inst = super(
-                Personas, 
+                Persona, 
                 self
             ).__new__(self)
         return self.inst

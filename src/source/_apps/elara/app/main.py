@@ -4,14 +4,16 @@ Module for command line interface.
 # Standard Library Modules
 import argparse
 import logging
+from pathlib import Path
 
 # Application Modules
 import conf
 import model
 import objects.cache as cache
+import objects.config as config
 import objects.conversation as conversation
 import objects.language as language
-import objects.personas as personas
+import objects.persona as persona
 import objects.repo as repo
 import parse
 
@@ -161,6 +163,7 @@ def review(
     owner : str,
     commit : str,
     model_name : str = None,
+    output: str = None,
     show : bool = True
 ) -> str:
     """
@@ -209,6 +212,10 @@ def review(
            "error": str(e)
         }
 
+    if output is not None:
+        with open(f"{output}/milton.md", "w") as out:
+            out.write(gemini_res)
+            
     if show:
         print(parse.output(prompt, gemini_res))
 
@@ -262,8 +269,13 @@ def init(
     :returns: Command line arguments
     :rtype: dict
     """
+
+    conf = config.Config(
+        Path(__file__).resolve().parent
+    )
+
     mem = cache.Cache()
-    personas.Personas()
+    persona.Personas()
     conversation.Conversation()
     language.Language(enabled = conf.language_modules())    
     model.init()
@@ -308,6 +320,7 @@ def main():
             src=parsed_args.repository,
             owner=parsed_args.owner,
             model_name=parsed_args.model,
+            output=parsed_args.output,
             show = True
         )
     else:

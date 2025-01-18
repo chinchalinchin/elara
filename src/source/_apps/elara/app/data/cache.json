@@ -1,26 +1,4 @@
 {
-    "baseModels": [
-        {
-            "tag": "pro",
-            "path": "models/gemini-1.5-pro-latest"
-        },
-        {
-            "tag": "flash",
-            "path": "models/gemini-1.5-flash-latest"
-        },
-        {
-            "tag": "flash-tune",
-            "path": "models/gemini-1.5-flash-001-tuning"
-        },
-        {
-            "tag": "flash-exp",
-            "path": "model/gemini-2.0-flash-exp"
-        },
-        {
-            "tag": "flash-think-exp",
-            "path": "model/gemini-2.0-flash-thinking-exp"
-        }
-    ],
     "tunedModels": [
         {
             "name": "elara",

@@ -13,8 +13,8 @@ import logging
 # Application Modules
 import conf
 import objects.cache as cache
-import objects.errors as errors
-import objects.templates as templates
+import objects.error as error
+import objects.template as template
 import objects.language as language
 import objects.conversation as conversation
 import objects.repo as repo
@@ -54,7 +54,7 @@ def scrutinize(
     #   ``--directory`` command line argument for the ``scrutinizze`` function.
     #   What do you think?
     mem = cache.Cache()
-    temps = templates.Template()
+    temps = template.Template()
     lang = language.Language(
         enabled = conf.language_modules()
     )
@@ -81,7 +81,7 @@ def analyze(
     :type summarize_dir: str
     """
     mem = cache.Cache()
-    temps = templates.Template()
+    temps = template.Template()
     lang = language.Language(
         enabled = conf.language_modules()
     )
@@ -110,7 +110,7 @@ def contextualize(
     :rtype: str
     """
     mem = cache.Cache()
-    temps = templates.Template()
+    temps = template.Template()
     convo = conversation.Conversation()
     lang = language.Language(
         enabled = conf.language_modules()
@@ -157,7 +157,7 @@ def summarize(
     """
 
     if not os.path.isdir(directory):
-        raise errors.SummarizeDirectoryNotFoundError(
+        raise error.SummarizeDirectoryNotFoundError(
             f"{directory} does not exist."
         )
 
@@ -187,11 +187,11 @@ def summarize(
             text=True
         )
     except FileNotFoundError:
-        raise errors.TreeCommandNotFoundError(
+        raise error.TreeCommandNotFoundError(
             "The 'tree' command was not found. Please install it."
         )
     except subprocess.CalledProcessError as e:
-        raise errors.TreeCommandFailedError(
+        raise error.TreeCommandFailedError(
             f"The 'tree' command returned a non-zero exit code: {e.returncode}"
         )
     
@@ -239,7 +239,7 @@ def summarize(
                 logger.error(F"Error reading file {file_path}: {e}")
                 continue
 
-    payload = templates.Template().render("summary", template_vars)
+    payload = template.Template().render("summary", template_vars)
     
     if not stringify:     
         with open(output_file, "w") as out:

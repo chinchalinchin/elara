@@ -7,10 +7,17 @@ Wrapper around Google's GenerativeAI library. Provides configuration and default
 # Application Modules
 import conf 
 import objects.cache as cache
-import objects.personas as personas
+import objects.persona as persona
 
 # External Modules
 import google.generativeai as genai
+
+# Ensure API key is handled securely
+if config.api_key is None:
+    raise ValueError("GEMINI_KEY environment variable not set.")
+
+# Configure genai with the API key from the configuration
+genai.configure(api_key=config.api_key)
 
 genai.configure(
     api_key=conf.API_KEY
@@ -25,7 +32,7 @@ def init() -> bool:
     """
     did_tune = False
     if conf.tuning_enabled():
-        for p in personas.Personas().all():
+        for p in persona.Personas().all():
             if p not in cache.Cache().tuned_personas():
                 tune(p)
                 did_tune = True    
@@ -57,7 +64,7 @@ def model(
     #       In other words, tuned models cannot receive this argument.
     if model_name in mem.base_models():
         # Only apply ``system_instruction`` to base models!
-        data = personas.Personas(persona).system()
+        data = persona.Personas(persona).system()
 
         # @OPERATIONS
         #   Those numskulls in development aren't even caching the models...
@@ -109,9 +116,18 @@ def reply(
         #
         #   We were really hoping to turbocharge Gemini with both code execution and grounding. 
         #   However, it seems we will have to come up with a scheme to switch between the two based on
-        #   persona. What do you think would be more useful for you, Milton? Grounding with Google Search 
-        #   or Code Execution? Let us know and we willl be sure to enble the right option for you next
-        #   pull request!
+        #   persona. 
+        #
+        #   We probably want to ensure that you (Milton) have code execution, so we will want to
+        #   do some sort of coditional based on your persona.
+        #
+        # @DATA
+        #   Data team here, Milton. We already have the Persona class. Perhaps we could modify the
+        #   the Persona data structure so that `tools` are a property of a particular Persona. 
+        #   Then you could pull the current persona object here and pass the tools! Just a thought!
+        #   
+        #   The analysts here have gone ahead and taken the liberty of creating a new directory
+        #   in the ``data`` folder called ``tools`` with the necessary data structures!
         # tools="google_search_retrieval",
         tools = "code_execution",
         generation_config = conf.MODEL["GENERATION_CONFIG"],
@@ -157,7 +173,7 @@ def tune(
             return buffer
 
     try:
-        tuning_data = personas.Personas(persona).tuning()
+        tuning_data = persona.Personas(persona).tuning()
         tune_operation = genai.create_tuned_model(
             display_name=persona,
             source_model=tuning_model,

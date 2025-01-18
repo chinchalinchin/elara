@@ -49,7 +49,6 @@ class Cache:
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(e)
             self.data  = {
-                "baseModels": conf.MODEL["BASE_MODELS"],
                 "currentModel":  conf.MODEL["DEFAULTS"]["MODEL"],
                 "currentPersona": conf.PERSONAS["PERSONA"]["DEFAULTS"]["CHAT"],
                 "currentPrompter": conf.PROMPTS["PROMPTER"],
