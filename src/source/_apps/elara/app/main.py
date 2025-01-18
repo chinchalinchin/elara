@@ -11,6 +11,7 @@ import pathlib
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as conversation
+import objects.directory as directory
 import objects.language as language
 import objects.persona as persona
 import objects.model as model
@@ -88,7 +89,9 @@ def configure(
         return config
     
     logger.warning("No configuration pairs provided.")
-    return config
+    return {
+        "response"                      : config
+    }
 
 
 def converse(
@@ -243,7 +246,25 @@ def review(
     }
 
 def summarize(app : dict) -> str:
-    pass 
+    """
+    
+    """
+    local_dir                           = app["ARGUMENTS"].get("directory")
+
+    dir                                 = directory.Directory(
+        directory                       = local_dir,
+        summary_file                    = app["CONFIG"].get("TREE.FILES.SUMMARY"),
+        summary_includes                = app["CONFIG"].get("SUMMARIZE.INCLDUES"),
+        summary_directives              = app["CONFIG"].get("SUMMARIZE.DIRECTIVES")
+    )
+
+    summary_vars                        = dir.summary()
+
+    summary                             = app["TEMPLATES"].render("summary", summary_vars)
+    
+    return                              { 
+        "response"                      : summary
+    }
 
 def init():
     """
@@ -326,11 +347,14 @@ def main():
     res                                 = exec(app["OPERATION"], app)
 
     if app["ARGUMENTS"].output:
-        # TODO: output to file
-        pass
+        with open(app["ARGUMENTS"].output, "w") as out:
+            out.write(res["response"])
 
-    if app["ARGUMENTS"].show:
-        print(res)
+    if app["ARGUMENTS"].show and "prompt" in res.keys():
+        print(res["prompt"])
+
+    if app["ARGUMENTS"].show and "response" in res.keys():
+        print(res["response"])
 
 if __name__ == "__main__":
     main()

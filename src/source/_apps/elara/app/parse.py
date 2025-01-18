@@ -1,6 +1,6 @@
 """ 
-parse.py
---------
+parse
+-----
 
 Module for formatting prompts and responses. It also handles context management.
 """
@@ -9,10 +9,6 @@ import os
 import pathlib
 import subprocess
 
-# Application Modules
-import conf
-import objects.error as error
-import objects.template as template
 
 def summarize(
     directory : str,

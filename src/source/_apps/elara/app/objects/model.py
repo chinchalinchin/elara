@@ -43,9 +43,7 @@ class Model:
             model_name=model_name
         )
 
-    def base_models(
-        self
-    ):
+    def base_models(self) -> list:
         return [{
             "path": m.name,
             "version": m.version,
@@ -61,9 +59,7 @@ class Model:
             )
         ]
     
-    def tuning_models(
-        self
-    ):
+    def tuning_models(self) -> list:
         return [{
             "path": m.name,
             "version": m.version,
@@ -79,24 +75,24 @@ class Model:
             )
         ]
         
-    def tuned_models():
+    def tuned_models(self) -> list:
         return genai.list_tuned_models()
     
     def tune(
-        display_name,
-        tuning_model,
-        tuning_data,
+        self,
+        display_name : str,
+        tuning_model : str,
+        tuning_data : dict,
         # @DEVELOPMENT
-            #   The develpoment team is still researching these parameters, Milton.
-            #   We are defaulting them to the values that were given in the 
-            #   documentation. The devs aren't sure how these values affect Gemini's
-            #   model, so they don't want to mess around with them.
-            #   If you had any insight into the proper value of these parameters,
-            #   the development team would love to hear your opinion, Milton!
+        #   The develpoment team is still researching these parameters, Milton.
+        #   We are defaulting them to the values that were given in the 
+        #   documentation. The devs aren't sure how these values affect Gemini's
+        #   model, so they don't want to mess around with them.
+        #   If you had any insight into the proper value of these parameters,
+        #   the development team would love to hear your opinion, Milton!
         epoch_count : int = 1,
         batch_size : int = 1,
         learning_rate : float = 0.001
-
     ):
         return genai.create_tuned_model(
             display_name=display_name,
@@ -115,7 +111,7 @@ class Model:
         safety_settings : dict, 
         tools : str, 
         system_instruction: list
-    ):
+    ) -> str:
         self._get(model_name, system_instruction)
         return self._get(
             model_name = model_name,

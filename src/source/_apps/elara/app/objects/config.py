@@ -174,23 +174,6 @@ class Config:
         """
         return self.get("MODEL.TUNING") == "enabled"
 
-    def summary_extensions(self):
-        """
-        Returns all valid extensions for ``summarize()`` function
-        """
-        return [
-            k for k in self.data["SUMMARIZE"]["DIRECTIVES"].keys()
-        ] + self.data["SUMMARIZE"]["INCLUDES"]
-
-    def summary_file(self):
-        """
-        Returns the ``summarize()`` filename and extension
-        """
-        return ".".join([
-            self.data["SUMMARIZE"]["FILE"], 
-            self.data["SUMMARIZE"]["EXT"]
-        ])
-
     def language_modules(self):
         """
         Return a list of enabled Language modules.
