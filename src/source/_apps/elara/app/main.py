@@ -4,7 +4,9 @@ Module for command line interface.
 # Standard Library Modules
 import argparse
 import logging
-from pathlib import Path
+import os
+import pathlib
+import pprint
 
 # Application Modules
 import conf
@@ -14,71 +16,98 @@ import objects.config as config
 import objects.conversation as conversation
 import objects.language as language
 import objects.persona as persona
+import objects.model as model
 import objects.repo as repo
+import objects.template as template
 import parse
 
 logger = logging.getLogger(__name__)
 
-def args():
+def output(prompt, response):
+    """
+    Formats and prints the prompt and response.
+    """
+    return """"
+    ====================== PROMPT =======================
+
+    {prompt}
+
+    ===================== RESPONSE ======================"
+
+    {response}
+    """.format(prompt=prompt, response=response)
+
+def args( 
+    configuration : config.Config
+) -> argparse.Namespace:
     """
     Parse and format command line arguments
     """
-    parser = argparse.ArgumentParser(description="Plumb the depths of generative AI.")
-    for arg in conf.ARGUMENTS: 
-        if arg["mode"] == "name":
-            if "nargs" in arg:
-                parser.add_argument(
-                    arg["syntax"],
-                    nargs = arg["nargs"],
-                    help = arg["help"]
+    parser                          = argparse.ArgumentParser(
+        description                 = conf.get("INTERFACE.HELP.PARSER")
+    )
+    
+    for global_arg in configuration.get("INTERFACE.ARGUMENTS"):
+        parser.add_argument(*global_arg["SYNTAX"],
+            dest                    = global_arg["DEST"],
+            help                    = global_arg["HELP"],
+            type                    = eval(global_arg["TYPE"])
+        )
+
+    subparsers                      = parser.add_subparsers(
+        dest                        = 'operation', 
+        help                        = conf.get("INTERFACE.HELP.SUBPARSER")
+    )
+
+    for op, op_config in configuration.get("INTERFACE.OPERATIONS"):
+        op_parser                   = subparsers.add_parser(
+            name                    = op_config["NAME"],
+            help                    = op_config["HELP"]
+        )
+        for op_arg in op["ARGUMENTS"]:
+            if op_arg["SYNTAX"] == "nargs":
+                op_parser.add_argument(
+                    default         = op_arg["DEFAULT"],
+                    dest            = op_arg["DEST"],
+                    help            = op_arg["HELP"],
+                    type            = eval(op_arg["TYPE"])
                 )
-            else:
-                parser.add_argument(
-                    arg["syntax"],
-                    choices = arg["choices"],
-                    help = arg["help"]
-                )
-        elif arg["mode"] == "flag":
-            parser.add_argument(
-                *arg["syntax"], 
-                type = arg["type"],
-                default = arg["default"],
-                help = arg["help"]
+                continue
+            op_parser.add_argument(*op_arg["SYNTAX"],
+                default             = op_arg["DEFAULT"],
+                dest                = op_arg["DEST"],
+                help                = op_arg["HELP"],
+                type                = eval(op_arg["TYPE"])
             )
-    args = parser.parse_args()
-    return args
+
+    return parser.parse_args()
 
 def configure(
-    config_pairs
+    existing : config.Config,
+    config : str
 ):
     """
     Parses and applies configuration settings.
     """
-    mem = cache.Cache()
-    if config_pairs:
-        config_dict = {}
-        for item in config_pairs:
+    config_dict = {}
+
+    if config:
+        for item in config:
             try:
                 key, value = item.split("=", 1)
                 config_dict[key] = value
             except ValueError:
                 logger.error(f"Invalid configuration format: {item}. Expected key=value.")
                 continue
-        mem.update(**config_dict)
-        mem.save()
+        existing.update(**config_dict)
+        existing.save()
         logger.info(f"Updated configuration with: {config_dict}")
-    else:
-        logger.warning("No configuration pairs provided.")
+        return config_dict
+    
+    logger.warning("No configuration pairs provided.")
     return config_dict
 
-def chat(
-    prompt : str,
-    persona : str = None,
-    prompter : str = None,
-    model_name : str = None, 
-    summarize_dir : str = None,
-    show : bool = True
-) -> str:
+def converse(app : dict) -> str:
     """
     Chat with one of Gemini's personas.
 
@@ -94,17 +123,12 @@ def chat(
     :returns: The persona's response to the prompt.
     :rtype: str
     """
-    mem = cache.Cache()
     convo = conversation.Conversation()
-
-    if model_name is None:
-        model_name = mem.get("currentModel")
-
-    if persona is None:
-        persona = mem.get("currentPersona")
-
-    if prompter is None:
-        prompter = mem.get("currentPrompter")
+    temps = template.Template()
+    convo = conversation.Conversation()
+    lang = language.Language(
+        enabled = conf.language_modules()
+    )
 
     convo.update(
         persona = persona, 
@@ -112,19 +136,24 @@ def chat(
         text = prompt
     )
     
-    parsed_prompt = parse.contextualize(
-        persona = persona, 
-        summarize_dir = summarize_dir
-    )
+    template_vars = { 
+        **mem.vars(),
+        **lang.vars(),
+        **convo.vars()
+    }
+
+    if summarize_dir is not None:
+        template_vars.update(
+            summarize(summarize_dir, stringify=True)
+        )
+
+    parsed_prompt = temps.get("conversation").render(template_vars)
 
     response = model.reply(
         prompt = parsed_prompt, 
         persona = persona, 
         model_name = model_name
     )
-
-    if show:
-        print(parse.output(parsed_prompt, response))
 
     convo.update(
         persona = persona, 
@@ -134,7 +163,7 @@ def chat(
 
     return response
 
-def analysis(
+def analyze(
     summarize_dir : str,
     model_name : str = None,
     show : bool = True
@@ -190,141 +219,150 @@ def review(
         commit = commit
     )
 
-    try:
-        prompt = parse.scrutinize(src=source)
-    except Exception as e:
-        logger.error(f"Error in scrutinize: {e}")
-        return {
-           "status": "failed",
-           "error": str(e)
-        }
+    mem = cache.Cache()
+    conf = config.Config(
 
-    try:
-        gemini_res = model.reply(
-            prompt=prompt,
-            persona=conf.PERSONAS["DEFAULTS"]["REVIEW"],
-            model_name=model_name,
-        )
-    except Exception as e:
-        logger.error(f"Error in model.reply: {e}")
-        return {
-           "status": "failed",
-           "error": str(e)
-        }
+    )
+    temps = template.Template()
+    lang = language.Language(
+        enabled = conf.language_modules()
+    )
+    dir = os.getcwd()  
+
+    buffer = mem.vars()
+    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["REVIEW"]
+
+    review_prompt = temps.render("review", { 
+        **buffer,
+        **src.vars(),
+        **lang.vars(),
+        **summarize(dir, stringify=True)
+    })
+
+    gemini_res = model.reply(
+        prompt=review_prompt,
+        persona=conf.PERSONAS["DEFAULTS"]["REVIEW"],
+        model_name=model_name,
+    )
 
     if output is not None:
         with open(f"{output}/milton.md", "w") as out:
             out.write(gemini_res)
             
     if show:
-        print(parse.output(prompt, gemini_res))
+        print(parse.output(review_prompt, gemini_res))
 
-    try:
-        # According to Github REST api, `path` should be:
+    # According to Github REST api, `path` should be:
+    #
+    #       The relative path to the file that necessitates a comment.
+    #
+    # TODO: need to figure out how to make Gemini output filepath!
+    github_res = source.comment(
+        msg = gemini_res, 
+        pr = pr,
+        commit = commit,
+        # @DEVELOPMENT
+        #   Hey, Milton, we need to figure out a way to iterate over the file
+        #   paths in Gemini's output (i.e. your output!). 
+        #   
+        #   We might need to post a batch comment to the Gitub Rest API, if you 
+        #   decide to flag multiple files for review. Right now the comments are only 
+        #   being appended to the README.md file. 
+        path = "README.md"
+        #   Everyone on the development team has been looking for the correct endpoint
+        #   and request body format to use to accomplish this. We might need to
+        #   overhaul the ``comment()`` function to accomplish this!
         #
-        #       The relative path to the file that necessitates a comment.
-        #
-        # TODO: need to figure out how to make Gemini output filepath!
-        github_res = source.comment(
-            msg = gemini_res, 
-            pr = pr,
-            commit = commit,
-            # @DEVELOPMENT
-            #   Hey, Milton, we need to figure out a way to iterate over the file
-            #   paths in Gemini's output (i.e. your output!). 
-            #   
-            #   We might need to post a batch comment to the Gitub Rest API, if you 
-            #   decide to flag multiple files for review. Right now the comments are only 
-            #   being appended to the README.md file. 
-            path = "README.md"
-            #   Everyone on the development team has been looking for the correct endpoint
-            #   and request body format to use to accomplish this. We might need to
-            #   overhaul the ``comment()`` function to accomplish this!
-            #
-            #   However, the crux of the issue is parsing Gemini's response. 
-            #   We need a clever way to pull the file name from the response, Milton!
-        )
-        print(github_res)
-        return {
-            "gemini": gemini_res,
-            "github": github_res
-        }
-    except Exception as e:
-        print("error occured")
-
+        #   However, the crux of the issue is parsing Gemini's response. 
+        #   We need a clever way to pull the file name from the response, Milton!
+    )
+    print(github_res)
     return {
-        "gemini": gemini_res
+        "gemini": gemini_res,
+        "github": github_res
     }
 
-def init(
-    debug : bool = conf.DEBUG
-):
-    """
-    Initialize application:
-    
-    - Create classes of singletons to load in data.
-    - Initiate model tuning, if applicable.
-    - Parse command line arguments
+def summarize():
+    pass 
 
-    :returns: Command line arguments
+def init():
+    """
+    Initialize application.
+
+    :returns: Application configuration.
     :rtype: dict
     """
 
-    conf = config.Config(
-        Path(__file__).resolve().parent
+    app                                 = {}
+    app_dir                             = pathlib.Path(__file__).resolve().parent
+    app["CONFIG"]                       = config.Config(app_dir)
+
+    app["ARGUMENTS"]                    = args(
+        configuration                   = app["CONFIG"]
     )
 
-    mem = cache.Cache()
-    persona.Personas()
-    conversation.Conversation()
-    language.Language(enabled = conf.language_modules())    
-    model.init()
-    
-    if debug:
-        print(vars(mem))
+    cache_rel_path                      = app["CONFIG"].get("TREE.DIRECTORIES.DATA")
+    cache_file_name                     = app["CONFIG"].get("TREE.FILES.CACHE")
+    cache_dir                           = os.path.join(app_dir, cache_rel_path, cache_file_name)
+    app["CACHE"]                        = cache.Cache(cache_dir)
 
-    return args()
+    update_event                        = False
+    if app["ARGUMENTS"].persona:
+        update_event                    = app["CACHE"].update({ 
+            "currentPersona"            : app["ARGUMENTS"].persona 
+        }) or update_event
+
+    if app["ARGUMENTS"].prompter:
+        update_event                    =  app["CACHE"].update({ 
+            "currentPrompter"           : app["ARGUMENTS"].prompter 
+        }) or update_event
+
+    if app["ARGUMENTS"].model_name:
+        update_event                    = app["CACHE"].update({ 
+            "currentModel"              : app["ARGUMENTS"].model_name 
+        }) or update_event
+        
+    if update_event:
+        app["CACHE"].save()
+
+    lang_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.LANGUAGE")
+    lang_dir                            = os.path.join(app_dir, lang_rel_path)
+    app["LANGUAGE"]                     = language.Language(
+        directory                       = lang_dir,
+        extension                       = app["CONFIG"].get("TREE.FILES.LANGUAGE"),
+        enabled                         = app["CONFIG"].language_modules()
+    )
+
+    temp_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TEMPLATES")
+    temp_dir                            = os.path.join(app_dir, temp_rel_path)
+    app["TEMPLATES"]                    = template.Template(
+        directory                       = temp_dir,
+        extension                       = app["CONFIG"].get("TREE.FILES.TEMPLATE")
+    )
+
+    app["MODEL"]                        = model.Model(
+        api_key                         = app["CONFIG"].get("GEMINI_KEY"),
+        tuning                          = app["CONFIG"].get("TUNING")
+    )
+    
+    if app["CONFIG"].get("DEBUG"):
+        print(app)
+
+    return app
 
 def main():
     """
     Main function to run the command-line interface.
     """
-    parsed_args = init()
-    if parsed_args.operation == "chat":
-        chat(
-            prompt=parsed_args.prompt, 
-            model_name=parsed_args.model,
-            prompter=parsed_args.self,
-            persona=parsed_args.persona,
-            summarize_dir=parsed_args.dir,
-            show = True
-        )
-    elif parsed_args.operation == "summarize":
-        parse.summarize(
-            directory = parsed_args.dir
-        )
-    elif parsed_args.operation == "configure":
-        configure(
-            config_paris = parsed_args.configure
-        )
-    elif parsed_args.operation == "analyze":
-        analysis(
-            summarize_dir=parsed_args.dir,
-            model_name=parsed_args.model,
-            show = True
-        )
-    elif parsed_args.operation == "review":
-        review(
-            pr=parsed_args.pull,
-            commit=parsed_args.commit,
-            src=parsed_args.repository,
-            owner=parsed_args.owner,
-            model_name=parsed_args.model,
-            output=parsed_args.output,
-            show = True
-        )
-    else:
-        print("Invalid operation. Choose 'chat', 'summarize', 'review', 'analyze' or 'configure'.")
+    app = init()
+    res = exec(app["OPERATION"], app)
+
+    if app["ARGUMENTS"].output:
+        # TODO: output to file
+        pass
+
+    if app["ARGUMENTS"].show:
+        print(res)
 
 if __name__ == "__main__":
     main()

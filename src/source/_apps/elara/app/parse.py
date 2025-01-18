@@ -21,20 +21,6 @@ import objects.repo as repo
 
 logger = logging.getLogger(__name__)
 
-def output(prompt, response):
-    """
-    Formats and prints the prompt and response.
-    """
-    return """"
-    ====================== PROMPT =======================
-
-    {prompt}
-
-    ===================== RESPONSE ======================"
-
-    {response}
-    """.format(prompt=prompt, response=response)
-
 def scrutinize(
     src : repo.Repo
 ) -> str:
@@ -116,30 +102,21 @@ def contextualize(
         enabled = conf.language_modules()
     )
     
-    preamble_vars = { 
+    template_vars = { 
         **mem.vars(),
         **lang.vars()
     }
 
     if summarize_dir is not None:
-        preamble_vars.update(
+        template_vars.update(
             summarize(summarize_dir, stringify=True)
         )
 
-    if persona is None:
-        persona = mem.get("currentPersona")
+    context = convo.get(persona)
 
-    preamble_temp = temps.get("preamble")
     history_temp = temps.get("conversation")
 
-    data = convo.get(persona)
-
-    preamble = preamble_temp.render(preamble_vars)
-    history = history_temp.render(data)
-
-    payload = preamble + history
-
-    return payload
+    return temps.get("conversation").render(context)
 
 def summarize(
     directory : str,

@@ -23,9 +23,9 @@ class Conversation:
 
     def __init__(
         self, 
-        dir = conf.CACHE["DIR"]["HISTORY"],
-        ext = ".json",
-        tz_offset = conf.CONVERSATION["TIMEZONE_OFFSET"]
+        dir = None,
+        ext = None,
+        tz_offset = None
     ):
         """
         Initialize Conversation object.
@@ -108,12 +108,12 @@ class Conversation:
         persona : str
     ) -> dict:
         """
-        Return Persona Conversation history, formatted for templating.
+        Return current persona.
 
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
-        return { "history": self.hist[persona] }
+        return self.hist[persona]
     
     def update(
         self, 
@@ -142,3 +142,17 @@ class Conversation:
         }]
         self._persist(persona)
         return self.hist[persona]
+
+    def vars(
+        self,
+        persona: str
+    ) -> dict: 
+        """
+        Return current persona formatted for templating.
+
+        :param persona: Persona with which the prompter is conversing.
+        :type persona: str
+        """
+        return {
+            "history": self.hist[persona]
+        }

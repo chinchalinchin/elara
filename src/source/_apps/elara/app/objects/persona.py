@@ -5,9 +5,6 @@ Object for managing Persona initialization and data.
 import os
 import json
 
-# Application Modules 
-import conf 
-
 class Persona:
     current = None
     """Current persona"""
@@ -18,14 +15,14 @@ class Persona:
 
     def __init__(
         self, 
-        current = conf.PERSONAS["DEFAULTS"]["CONVERSE"],
-        tune_dir = conf.CACHE["DIR"]["TUNING"],
-        sys_dir = conf.CACHE["DIR"]["SYSTEM"],
-        tune_ext = ".json",
-        sys_ext = ".json"
+        current = None,
+        tune_dir = None,
+        sys_dir = None,
+        tune_ext = None,
+        sys_ext = None
     ):
         """
-        Initialize *Personas* object.
+        Initialize Persona object.
 
         :param current: Initial persona for model to assume. Defaults to the value of the ``GEMINI_PERSONA`` environment variable.
         :type current: str
@@ -34,6 +31,9 @@ class Persona:
         :param tune_ext: Extension for tuning data. Defaults to ``.json``.
         :param sys_ext: Extension for the system instructions data. Defaults to ``.txt``
         """
+        if None in [current, tune_dir, sys_dir, tune_ext, sys_ext]:
+            raise ValueError("Must set all class properties: (current, tune_dir, tune_ext, sys_dir, sys_ext)")
+        
         self.current = None
         self.personas = { }
         self._load(

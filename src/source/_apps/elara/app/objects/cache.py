@@ -88,21 +88,29 @@ class Cache:
             print(f"KeyError: Attribute {attribute} not found")
             return None
 
-    def update(self, **kwargs):
+    def update(self, **kwargs) -> bool:
         """
         Update the Cache using keyword arguments. Key must exist in Cache to be updated.
         """
+        updated = False
         for key, value in kwargs.items():
             if key not in self.data:
                 continue 
 
             if isinstance(self.data[key], list) and isinstance(value, list):
+                updated = True
                 self.data[key].extend(value)
-            elif isinstance(self.data[key], dict) and isinstance(value, dict):
+                continue 
+
+            if isinstance(self.data[key], dict) and isinstance(value, dict):
+                updated = True
                 self.data[key].update(value)
-            else:
-                self.data[key] = value
-    
+                continue 
+
+            updated = True
+            self.data[key] = value
+        return updated
+
     def save(self):
         """
         Saves the cache to the JSON file in ``data`` directory.

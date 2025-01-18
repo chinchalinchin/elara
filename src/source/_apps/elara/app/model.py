@@ -4,24 +4,6 @@ model.py
 
 Wrapper around Google's GenerativeAI library. Provides configuration and default settings.
 """
-# Application Modules
-import conf 
-import objects.cache as cache
-import objects.persona as persona
-
-# External Modules
-import google.generativeai as genai
-
-# Ensure API key is handled securely
-if config.api_key is None:
-    raise ValueError("GEMINI_KEY environment variable not set.")
-
-# Configure genai with the API key from the configuration
-genai.configure(api_key=config.api_key)
-
-genai.configure(
-    api_key=conf.API_KEY
-)
 
 def init() -> bool:
     """

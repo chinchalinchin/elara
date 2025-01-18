@@ -3,9 +3,7 @@ import os
 
 
 class Config:
-    # Config has to be naively aware of directory with hardcode values
-    #   since it is the first data that is initialized in applciation.
-    _rel_path = os.path.join("data", "config.json")
+    _rel_path = None
 
     inst = None
     
@@ -15,9 +13,15 @@ class Config:
 
     def __init__(
         self, 
-        app_directory : str
+        app_directory : str, 
+        rel_path : str = os.path.join("data", "config.json")
     ):
         self.app_directory = app_directory
+        self.rel_path = rel_path
+        self.file_name = os.path.join(
+            self.app_directory, 
+            self._rel_path 
+        )
         self._load()
         self._override()
 
@@ -34,57 +38,23 @@ class Config:
         Load in configuration data from file.
         """
         try:
-            file_name = os.path.join(
-                self.app_directory, 
-                self._rel_path 
-            )
-            with open(file_name, "r") as f:
+            with open(self.file_name, "r") as f:
                 self.data = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f"Error loading config file: {e}")
             self.data = {}
-
+    
     def _override(self):
         """
         Override configuration with environment variables, if applicable.
         """
-        self.data["MODEL"]["GENERATION_CONFIG"]["candidate_count"] = int(
-            os.environ.get(
-                "GEMINI_CANDIDATES", 
-                self.data["MODEL"]["GENERATION_CONFIG"]["candidate_count"]
-            )
-        )
-        self.data["MODEL"]["GENERATION_CONFIG"]["max_output_tokens"] = int(
-            os.environ.get(
-                "GEMINI_OUTPUT_TOKENS", 
-                self.data["MODEL"]["GENERATION_CONFIG"]["max_output_tokens"]
-            )
-        )
-        self.data["MODEL"]["GENERATION_CONFIG"]["temperature"] = float(
-            os.environ.get(
-                "GEMINI_TEMPERATURE", 
-                self.data["MODEL"]["GENERATION_CONFIG"]["temperature"]
-            )
-        )
-        self.data["MODEL"]["GENERATION_CONFIG"]["top_p"] = float(
-            os.environ.get(
-                "GEMINI_TOP_P", 
-                self.data["MODEL"]["GENERATION_CONFIG"]["top_p"]
-            )
-        )
-        self.data["MODEL"]["GENERATION_CONFIG"]["top_k"] = int(
-            os.environ.get(
-                "GEMINI_TOP_K", 
-                self.data["MODEL"]["GENERATION_CONFIG"]["top_k"]
-            )
-        )
 
-        self.data["MODEL"]["DEFAULTS"]["TUNING"] = os.environ.get(
-            "GEMINI_SOURCE", 
+        self.data["TUNING_SOURCE"] = os.environ.get(
+            "TUNING_SOURCE", 
             self.data["MODEL"]["DEFAULTS"]["TUNING"]
         )
 
-        self.data["MODEL"]["DEFAULTS"]["MODEL"] = os.environ.get(
+        self.data["DEFAULT_MODEL"] = os.environ.get(
             "GEMINI_MODEL", 
             self.data["MODEL"]["DEFAULTS"]["MODEL"]
         )
@@ -112,7 +82,7 @@ class Config:
         
         self.data["LANGUAGE"]["MODULES"]["WORDS"] = bool(
             os.environ.get(
-                "WORDS", 
+                "LANGUAGE_WORDS", 
                 self.data["LANGUAGE"]["MODULES"]["WORDS"]
             )
         )
@@ -123,15 +93,20 @@ class Config:
                 self.data["CONVERSATION"]["TIMEZONE_OFFSET"]
             )
         )
-
-        self.data["PROMPTS"]["PROMPTER"] = os.environ.get(
-            "GEMINI_PROMPTER", 
-            self.data["PROMPTS"]["PROMPTER"]
+        
+        self.data["ANALYSIS"]["LATEX_PREAMBLE"] = os.environ.get(
+            "LATEX_PREAMBLE",
+            self.data["LATEX_PREAMBLE"]
         )
 
-        self.data["REPOS"]["VCS"] = os.environ.get(
+        self.data["REPO"]["VCS"] = os.environ.get(
             "VCS", 
             self.data["REPOS"]["VCS"]
+        )
+
+        self.data["REPO"]["AUTH"]["CREDS"] = os.environ.get(
+            "VCS_TOKEN",
+            self.data["REPO"]["AUTH"]["CREDS"]
         )
 
         self.data["VERSION"] = os.environ.get(
@@ -139,9 +114,9 @@ class Config:
             self.data["VERSION"]
         )
 
-        self.data["API_KEY"] = os.environ.get(
+        self.data["GEMINI_KEY"] = os.environ.get(
             "GEMINI_KEY", 
-            self.data["API_KEY"]
+            self.data["GEMINI_KEY"]
         )
 
         self.data["DEBUG"] = os.environ.get(
@@ -149,11 +124,14 @@ class Config:
             self.data["DEBUG"]
         )
 
-        self.data["LATEX_PREAMBLE"] = os.environ.get(
-            "LATEX_PREAMBLE",
-            self.data["LATEX_PREAMBLE"]
-        )
-
+    def save(self):
+        """
+        Saves the cache to the JSON file in ``data`` directory.
+        """
+        with open(self.file, "w") as f:
+            json.dump(self.data, f, indent=4)
+        return True
+    
     def get(self, key, default=None):
         keys = key.split(".")
         value = self.data
@@ -175,6 +153,21 @@ class Config:
             target = target[k]
         target[keys[-1]] = value
 
+    def update(self, **kwargs):
+        """
+        Update the Config using keyword arguments. Key must exist in Config to be updated.
+        """
+        for key, value in kwargs.items():
+            if key not in self.data:
+                continue 
+
+            if isinstance(self.data[key], list) and isinstance(value, list):
+                self.data[key].extend(value)
+            elif isinstance(self.data[key], dict) and isinstance(value, dict):
+                self.data[key].update(value)
+            else:
+                self.data[key] = value
+    
     def tuning_enabled(self):
         """
         Returns a bool flag signaling models should be tuned.
@@ -186,20 +179,23 @@ class Config:
         Returns all valid extensions for ``summarize()`` function
         """
         return [
-            k for k in self.get("SUMMARIZE.DIRECTIVES").keys()
-        ] + self.get("SUMMARIZE.INCLUDES")
+            k for k in self.data["SUMMARIZE"]["DIRECTIVES"].keys()
+        ] + self.data["SUMMARIZE"]["INCLUDES"]
 
     def summary_file(self):
         """
         Returns the ``summarize()`` filename and extension
         """
-        return ".".join([self.get("SUMMARIZE.FILE"), self.get("SUMMARIZE.EXT")])
+        return ".".join([
+            self.data["SUMMARIZE"]["FILE"], 
+            self.data["SUMMARIZE"]["EXT"]
+        ])
 
     def language_modules(self):
         """
         Return a list of enabled Language modules.
         """
-        modules = self.get("LANGUAGE.MODULES")
+        modules = self.data["LANGUAGE"]["MODULES"]
         if any(v == "enabled" for v in modules.values()):
             return [
                 k.lower()
