@@ -157,8 +157,8 @@ REPOS = {
 ARGUMENTS = [{
     "mode": "name",
     "syntax": "operation",
-    "choices": ["converse", "summarize", "review", "deduce"],
-    "help": "The operation to perform (`converse`, `summarize`, `review`, `deduce`)."
+    "choices": ["converse", "summarize", "review", "analyze"],
+    "help": "The operation to perform (`converse`, `summarize`, `review`, `analyze`)."
 },{
     "mode": "name",
     "syntax": "configure",
@@ -193,7 +193,7 @@ ARGUMENTS = [{
     "syntax": ["-d", "--dir"],
     "default": None,
     "type": str,
-    "help": "The path to the directory to summarize. Required for `summarize` and `deduce`. Optional for `converse`. Ignored for `review`."
+    "help": "The path to the directory to summarize. Required for `summarize` and `contemplate`. Optional for `converse`. Ignored for `review`."
 },{
     "mode": "flag",
     "syntax": ["-pr", "--pull"],

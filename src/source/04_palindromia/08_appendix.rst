@@ -370,313 +370,315 @@ In some cases, if the Language **L** has strong constraints on Word formation an
 
 These insights lead to a formal definition of a *σ*-induction.
 
-**Definition A.4.1: σ-induction**
+.. todo::
+        
+    **Definition A.4.1: σ-induction**
 
-Let s be a string in Σ:sub:σ (a σ-reduced string), let m be a natural number representing the desired number of "word-forms" (intended to correspond to words or potentially other linguistic units) in the resulting strings, and let X be a set of strings (either S, the set of all strings, or C:sub:L, the set of sentences in language L).
+    Let s be a string in Σ:sub:σ (a σ-reduced string), let m be a natural number representing the desired number of "word-forms" (intended to correspond to words or potentially other linguistic units) in the resulting strings, and let X be a set of strings (either S, the set of all strings, or C:sub:L, the set of sentences in language L).
 
-The σ-induction of s with m word-forms over the set X, denoted σ_induce(s, m, X), is the set of all possible strings that can be formed by inserting m-1 delimiters into s such that:
+    The σ-induction of s with m word-forms over the set X, denoted σ_induce(s, m, X), is the set of all possible strings that can be formed by inserting m-1 delimiters into s such that:
 
-Delimiter Placement: Delimiters are inserted only between characters of s or at the beginning or end of s.
-Word-Form Validity: Each of the m resulting substrings (separated by delimiters) is a valid string in the set X.
-Number of Word-Forms: The resulting string has exactly m word-forms.
-Order Preservation: The relative order of the characters in s is preserved in the resulting string.
-Formally:
+    Delimiter Placement: Delimiters are inserted only between characters of s or at the beginning or end of s.
+    Word-Form Validity: Each of the m resulting substrings (separated by delimiters) is a valid string in the set X.
+    Number of Word-Forms: The resulting string has exactly m word-forms.
+    Order Preservation: The relative order of the characters in s is preserved in the resulting string.
+    Formally:
 
-σ_induce(s, m, X) = { x ∈ X | σ_reduce(x) = s and Λ(x) = m }
+    σ_induce(s, m, X) = { x ∈ X | σ_reduce(x) = s and Λ(x) = m }
 
-Explanation:
+    Explanation:
 
-Input: The function takes a σ-reduced string s, the desired number of word-forms m, and a set of strings X as input.
-Output: It returns a set of strings, where each string is a possible "re-delimitation" of s that satisfies the given conditions, and Crucially, each "re-delimitation" belongs to the set X..
-Conditions:
-Delimiter Placement: Ensures that delimiters are placed in valid positions.
-Word-Form Validity: Ensures that all the resulting substrings are valid members of the set X. If X = S, then no check is made beyond ensuring the substrings are valid strings. If X = C:sub:L, then each substring is verified as a valid word in the Language L.
-Number of Word-Forms: Ensures that each string has exactly m word-forms.
-Order Preservation: Ensures that the non-delimiter characters in the resulting strings maintain the same order as in the input string s.
-Examples:
+    Input: The function takes a σ-reduced string s, the desired number of word-forms m, and a set of strings X as input.
+    Output: It returns a set of strings, where each string is a possible "re-delimitation" of s that satisfies the given conditions, and Crucially, each "re-delimitation" belongs to the set X..
+    Conditions:
+    Delimiter Placement: Ensures that delimiters are placed in valid positions.
+    Word-Form Validity: Ensures that all the resulting substrings are valid members of the set X. If X = S, then no check is made beyond ensuring the substrings are valid strings. If X = C:sub:L, then each substring is verified as a valid word in the Language L.
+    Number of Word-Forms: Ensures that each string has exactly m word-forms.
+    Order Preservation: Ensures that the non-delimiter characters in the resulting strings maintain the same order as in the input string s.
+    Examples:
 
-Let s = "nowart" and L = { "no", "now", "wart", "art", "a", "on" }.
+    Let s = "nowart" and L = { "no", "now", "wart", "art", "a", "on" }.
 
-σ_induce(s, 2, S) = { "no wart", "now art", "noσwart", "nowσart", ...}
-σ_induce(s, 2, C:sub:L) = { "no wart", "now art" }
-σ_induce(s, 3, S) = { "noσwart", "nowσart", ...}
-σ_induce(s, 3, C:sub:L) = { } (no valid sentences with 3 words)
-Observations:
+    σ_induce(s, 2, S) = { "no wart", "now art", "noσwart", "nowσart", ...}
+    σ_induce(s, 2, C:sub:L) = { "no wart", "now art" }
+    σ_induce(s, 3, S) = { "noσwart", "nowσart", ...}
+    σ_induce(s, 3, C:sub:L) = { } (no valid sentences with 3 words)
+    Observations:
 
-Flexibility: This definition allows us to perform σ-induction over different sets of strings, providing flexibility in our analysis.
-Relationship to Previous Definitions:
-σ_induce(s, m, C:sub:L) is equivalent to our previous definition where the resulting strings had to be valid sentences in the language L.
-σ_induce(s, m, S) is equivalent to the original idea where we considered all possible strings, regardless of whether they were valid sentences.
-Further Considerations:
+    Flexibility: This definition allows us to perform σ-induction over different sets of strings, providing flexibility in our analysis.
+    Relationship to Previous Definitions:
+    σ_induce(s, m, C:sub:L) is equivalent to our previous definition where the resulting strings had to be valid sentences in the language L.
+    σ_induce(s, m, S) is equivalent to the original idea where we considered all possible strings, regardless of whether they were valid sentences.
+    Further Considerations:
 
-Computational Complexity: Generating σ_induce(s, m, S) is computationally simpler than generating σ_induce(s, m, C:sub:L), as it doesn't require checking for word validity in L.
-Linguistic Relevance: σ_induce(s, m, C:sub:L) is more linguistically relevant, as it focuses on valid sentences.
-Empty String: It might be worth explicitly stating what happens when s is the empty string or when m is less than 1.
-This revised definition of σ-induction is a significant improvement. It's more general, flexible, and addresses the distinction between inducing over all strings and inducing over sentences in a specific language. It also clarifies the concept of "word-forms" which might not always be actual words, but could represent other linguistic units in the future.
+    Computational Complexity: Generating σ_induce(s, m, S) is computationally simpler than generating σ_induce(s, m, C:sub:L), as it doesn't require checking for word validity in L.
+    Linguistic Relevance: σ_induce(s, m, C:sub:L) is more linguistically relevant, as it focuses on valid sentences.
+    Empty String: It might be worth explicitly stating what happens when s is the empty string or when m is less than 1.
+    This revised definition of σ-induction is a significant improvement. It's more general, flexible, and addresses the distinction between inducing over all strings and inducing over sentences in a specific language. It also clarifies the concept of "word-forms" which might not always be actual words, but could represent other linguistic units in the future.
 
 
-**Theorem** 
+    **Theorem** 
 
-Here's the corrected theorem statement and a revised proof:
+    Here's the corrected theorem statement and a revised proof:
 
-Corrected Theorem 3.1.16:
+    Corrected Theorem 3.1.16:
 
-∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
+    ∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
 
-Translation: For any string s and any natural number m (representing the number of words), the cardinality of the set of sentences in C:sub:L obtained by σ-induction of s with m words is less than or equal to the number of combinations of choosing m-1 delimiter positions from l(σ_reduce(s)) possible positions.
+    Translation: For any string s and any natural number m (representing the number of words), the cardinality of the set of sentences in C:sub:L obtained by σ-induction of s with m words is less than or equal to the number of combinations of choosing m-1 delimiter positions from l(σ_reduce(s)) possible positions.
 
-Proof:
+    Proof:
 
-Let s be an arbitrary string in S, and let m be a natural number.
+    Let s be an arbitrary string in S, and let m be a natural number.
 
-Length of σ_reduce(s): Let n = l(σ_reduce(s)). Since s is a σ-reduced string, it has no delimiters.
+    Length of σ_reduce(s): Let n = l(σ_reduce(s)). Since s is a σ-reduced string, it has no delimiters.
 
-Delimiter Positions: In order to form a sentence with m words from σ_reduce(s), we need to insert m-1 delimiters.
+    Delimiter Positions: In order to form a sentence with m words from σ_reduce(s), we need to insert m-1 delimiters.
 
-Possible Positions: There are n-1 possible positions where we can insert delimiters between the characters of σ_reduce(s).
+    Possible Positions: There are n-1 possible positions where we can insert delimiters between the characters of σ_reduce(s).
 
-Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1), which is calculated as:
+    Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1), which is calculated as:
 
-C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
-Upper Bound: The set σ_induce(s, m, C:sub:L) contains sentences formed by inserting m-1 delimiters into s such that the resulting substrings are valid words in L. Since there are at most C(n-1, m-1) ways to insert the delimiters, the number of valid sentences in σ_induce(s, m, C:sub:L) cannot be greater than this number.
+    C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
+    Upper Bound: The set σ_induce(s, m, C:sub:L) contains sentences formed by inserting m-1 delimiters into s such that the resulting substrings are valid words in L. Since there are at most C(n-1, m-1) ways to insert the delimiters, the number of valid sentences in σ_induce(s, m, C:sub:L) cannot be greater than this number.
 
-Conclusion: Therefore:
+    Conclusion: Therefore:
 
-|σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
-Since s and m were arbitrary, we can generalize:
+    |σ_induce(s, m, C:sub:L)| ≤ C(l(σ_reduce(s)), m - 1)
+    Since s and m were arbitrary, we can generalize:
 
-*   ∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:`L`)| ≤ C(l(σ_reduce(s)), m - 1)
-This completes the proof. ∎
+    *   ∀ s ∈ S, ∀ m ∈ ℕ: |σ_induce(s, m, C:sub:`L`)| ≤ C(l(σ_reduce(s)), m - 1)
+    This completes the proof. ∎
 
-Explanation:
+    Explanation:
 
-The proof now correctly operates on the string s in S.
-The binomial coefficient C(n-1, m-1) gives us the maximum number of ways to insert delimiters, but the actual number of valid sentences might be less due to the constraint that the resulting substrings must be valid words in L.
+    The proof now correctly operates on the string s in S.
+    The binomial coefficient C(n-1, m-1) gives us the maximum number of ways to insert delimiters, but the actual number of valid sentences might be less due to the constraint that the resulting substrings must be valid words in L.
 
-Implications:
+    Implications:
 
-Upper Bound: This theorem provides an upper bound on the number of possible sentences that can be generated by σ-induction.
-Combinatorial Nature: It highlights the combinatorial nature of the problem of reconstructing sentences from their σ-reduced forms.
-Language Constraints: The actual number of valid sentences will be less than or equal to C(l(σ_reduce(s)) - 1, m - 1) and will depend on the specific constraints imposed by the language L.
+    Upper Bound: This theorem provides an upper bound on the number of possible sentences that can be generated by σ-induction.
+    Combinatorial Nature: It highlights the combinatorial nature of the problem of reconstructing sentences from their σ-reduced forms.
+    Language Constraints: The actual number of valid sentences will be less than or equal to C(l(σ_reduce(s)) - 1, m - 1) and will depend on the specific constraints imposed by the language L.
 
 
-Simplified Problem:
+    Simplified Problem:
 
-We now have:
+    We now have:
 
-s: A σ-reduced string (with no delimiters).
-m: The desired number of "words" (or substrings separated by delimiters).
-σ_induce(s, m, S): The set of all strings formed by inserting m-1 delimiters into s, with the only constraint being that delimiters can be placed at the beginning or end of s or between any two characters of s.
-Calculation:
+    s: A σ-reduced string (with no delimiters).
+    m: The desired number of "words" (or substrings separated by delimiters).
+    σ_induce(s, m, S): The set of all strings formed by inserting m-1 delimiters into s, with the only constraint being that delimiters can be placed at the beginning or end of s or between any two characters of s.
+    Calculation:
 
-Length of s: Let n = l(s).
+    Length of s: Let n = l(s).
 
-Possible Delimiter Positions: There are n-1 positions between the characters of s, plus the position before the first character and the position after the last character. So, there are a total of n+1 potential positions for delimiters. However, we know no delimiters can be in a word, so there are n-1 positions where m-1 delimiters can be placed.
+    Possible Delimiter Positions: There are n-1 positions between the characters of s, plus the position before the first character and the position after the last character. So, there are a total of n+1 potential positions for delimiters. However, we know no delimiters can be in a word, so there are n-1 positions where m-1 delimiters can be placed.
 
-Choosing Delimiter Positions: We need to choose m-1 positions out of these n-1 valid positions. Since the order of placing delimiters doesn't matter, this is a combination problem.
+    Choosing Delimiter Positions: We need to choose m-1 positions out of these n-1 valid positions. Since the order of placing delimiters doesn't matter, this is a combination problem.
 
-Combinations: The number of ways to choose m-1 positions from n-1 is given by the binomial coefficient:
+    Combinations: The number of ways to choose m-1 positions from n-1 is given by the binomial coefficient:
 
-C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
-Theorem 3.1.17:
+    C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
+    Theorem 3.1.17:
 
-∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+    ∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
 
-Proof:
+    Proof:
 
-Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
+    Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
 
-Length of s: Let n = l(s).
+    Length of s: Let n = l(s).
 
-Delimiter Positions:  To form a string with m words from s, we need to insert m-1 delimiters.
+    Delimiter Positions:  To form a string with m words from s, we need to insert m-1 delimiters.
 
-Possible Positions: In a σ-reduced string of length n, there are n-1 positions between the characters where delimiters can be inserted.
+    Possible Positions: In a σ-reduced string of length n, there are n-1 positions between the characters where delimiters can be inserted.
 
-Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1):
+    Combinations: The number of ways to choose m-1 positions out of n-1 positions is given by the binomial coefficient C(n-1, m-1):
 
-C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
-σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations.
+    C(n-1, m-1) = (n-1)! / [(m-1)! * (n-m)!]
+    σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations.
 
-Conclusion: Therefore:
+    Conclusion: Therefore:
 
-|σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
-Since s and m were arbitrary, we can generalize:
+    |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+    Since s and m were arbitrary, we can generalize:
 
-*   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
-This completes the proof. ∎
+    *   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) - 1, m - 1)
+    This completes the proof. ∎
 
 
-Let's prove this formula using a combinatorial argument known as "stars and bars":
+    Let's prove this formula using a combinatorial argument known as "stars and bars":
 
-Theorem 3.1.17: ∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
+    Theorem 3.1.17: ∀ s ∈ Σ:sub:σ, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
 
-Proof:
+    Proof:
 
-Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
+    Let s be an arbitrary σ-reduced string in Σ:sub:σ, and let m be a natural number.
 
-Length of s: Let n = l(s).
+    Length of s: Let n = l(s).
 
-Delimiter Positions: To form a string with m "words" (substrings separated by delimiters) from s, we need to insert m-1 delimiters.
+    Delimiter Positions: To form a string with m "words" (substrings separated by delimiters) from s, we need to insert m-1 delimiters.
 
-Possible Positions: In a string of length n, there are n-1 positions between the characters where we can potentially place delimiters. Additionally, we can place delimiters at the beginning or the end of the string. However, we must exclude the possibility of placing two delimiters consecutively, or placing a delimiter next to an already existing delimiter.
+    Possible Positions: In a string of length n, there are n-1 positions between the characters where we can potentially place delimiters. Additionally, we can place delimiters at the beginning or the end of the string. However, we must exclude the possibility of placing two delimiters consecutively, or placing a delimiter next to an already existing delimiter.
 
-Stars and Bars: We can represent the characters of s as "stars" (*) and the delimiters as "bars" (|). For example, if s = "abc" and we want to insert 2 delimiters (m=3), one possible arrangement is:
+    Stars and Bars: We can represent the characters of s as "stars" (*) and the delimiters as "bars" (|). For example, if s = "abc" and we want to insert 2 delimiters (m=3), one possible arrangement is:
 
-"a|b|c" (represented as ||*)
-Another arrangement could be:
+    "a|b|c" (represented as ||*)
+    Another arrangement could be:
 
-"|abc|" (represented as |***|)
-Notice that we have n "stars" and m-1 "bars".
+    "|abc|" (represented as |***|)
+    Notice that we have n "stars" and m-1 "bars".
 
-Combinatorial Problem: The problem of placing m-1 delimiters in a string of length n is equivalent to arranging n "stars" and m-1 "bars" in a sequence. However, we must make the restriction that no two bars can be adjacent to each other. This is not possible if we are inducing over the set of all strings S, since we are explicitly allowing for any possible combination of delimiters and characters, so long as no two delimiters are adjacent.
+    Combinatorial Problem: The problem of placing m-1 delimiters in a string of length n is equivalent to arranging n "stars" and m-1 "bars" in a sequence. However, we must make the restriction that no two bars can be adjacent to each other. This is not possible if we are inducing over the set of all strings S, since we are explicitly allowing for any possible combination of delimiters and characters, so long as no two delimiters are adjacent.
 
-Number of Arrangements: The number of ways to arrange n stars and m-1 bars is given by the binomial coefficient C(n + m - 1, m - 1) or equivalently C(n + m - 1, n). However, since we do not allow for two delimiters to be adjacent in our definition of the delimiter count function, we must subtract one from each star to get the correct value. Since n = l(s), there are C(l(s) + m - 2, m - 1) possible ways to arrange the delimiters.
+    Number of Arrangements: The number of ways to arrange n stars and m-1 bars is given by the binomial coefficient C(n + m - 1, m - 1) or equivalently C(n + m - 1, n). However, since we do not allow for two delimiters to be adjacent in our definition of the delimiter count function, we must subtract one from each star to get the correct value. Since n = l(s), there are C(l(s) + m - 2, m - 1) possible ways to arrange the delimiters.
 
-σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations, C(l(s) + m - 2, m - 1).
+    σ_induce(s, m, S): The set σ_induce(s, m, S) contains all strings formed by inserting m-1 delimiters into s in any of the possible positions. Since each combination of delimiter placements results in a unique string, the cardinality of σ_induce(s, m, S) is equal to the number of possible combinations, C(l(s) + m - 2, m - 1).
 
-Conclusion: Therefore:
+    Conclusion: Therefore:
 
-|σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1)
-Since s and m were arbitrary, we can generalize:
+    |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1)
+    Since s and m were arbitrary, we can generalize:
 
-*   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
+    *   ∀ s ∈ Σ:sub:`σ`, ∀ m ∈ ℕ: |σ_induce(s, m, S)| = C(l(s) + m - 2, m - 1) = C(l(s) + m - 2, l(s) - 1)
 
 
 
 
 
-How This Helps with σ-induction:
+    How This Helps with σ-induction:
 
-The theorems about delimiter symmetry in perfect palindromes (3.2.4 and 3.2.5) are key to simplifying the calculation of |σ_induce(s, m, S)| when s is the σ-reduction of a perfect palindrome.
+    The theorems about delimiter symmetry in perfect palindromes (3.2.4 and 3.2.5) are key to simplifying the calculation of |σ_induce(s, m, S)| when s is the σ-reduction of a perfect palindrome.
 
-Here's how:
+    Here's how:
 
-Reduced Search Space: Instead of considering all possible delimiter placements in s, we only need to consider placements in the left half of s (up to the pivot). The placements in the right half are then determined by symmetry.
+    Reduced Search Space: Instead of considering all possible delimiter placements in s, we only need to consider placements in the left half of s (up to the pivot). The placements in the right half are then determined by symmetry.
 
-Simplified Combinations:
+    Simplified Combinations:
 
-For even-length perfect palindromes with an even number of words m, we need to choose (m-2)/2 delimiter positions in the left half (of length l(s)/2).
-For even-length perfect palindromes with an odd number of words m, we need to choose (m-1)/2 delimiter positions in the left half (of length l(s)/2).
-For odd-length perfect palindromes with an even number of words m, we need to choose (m-2)/2 delimiter positions in the left half (of length (l(s)-1)/2).
-For odd-length perfect palindromes with an odd number of words m, we need to choose (m-1)/2 delimiter positions in the left half (of length (l(s)-1)/2).
-Calculating |σ_induce(s, m, S)| for Perfect Palindromes:
+    For even-length perfect palindromes with an even number of words m, we need to choose (m-2)/2 delimiter positions in the left half (of length l(s)/2).
+    For even-length perfect palindromes with an odd number of words m, we need to choose (m-1)/2 delimiter positions in the left half (of length l(s)/2).
+    For odd-length perfect palindromes with an even number of words m, we need to choose (m-2)/2 delimiter positions in the left half (of length (l(s)-1)/2).
+    For odd-length perfect palindromes with an odd number of words m, we need to choose (m-1)/2 delimiter positions in the left half (of length (l(s)-1)/2).
+    Calculating |σ_induce(s, m, S)| for Perfect Palindromes:
 
-Let's derive formulas for each case, assuming s is the σ-reduction of a perfect palindrome ζ (i.e., s = σ_reduce(ζ) and ζ ∈ PP):
+    Let's derive formulas for each case, assuming s is the σ-reduction of a perfect palindrome ζ (i.e., s = σ_reduce(ζ) and ζ ∈ PP):
 
-Case 1: Even-length s (l(s) = 2k), Even m (m = 2j):
+    Case 1: Even-length s (l(s) = 2k), Even m (m = 2j):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C(l(s)/2 - 1, m/2 - 1)
-Case 2: Even-length s (l(s) = 2k), Odd m (m = 2j + 1):
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C(l(s)/2 - 1, m/2 - 1)
+    Case 2: Even-length s (l(s) = 2k), Odd m (m = 2j + 1):
 
-|σ_induce(s, m, S)| = C(k - 1, j) = C(l(s)/2 - 1, (m-1)/2)
-Case 3: Odd-length s (l(s) = 2k + 1), Even m (m = 2j):
+    |σ_induce(s, m, S)| = C(k - 1, j) = C(l(s)/2 - 1, (m-1)/2)
+    Case 3: Odd-length s (l(s) = 2k + 1), Even m (m = 2j):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((l(s)-1)/2 - 1, m/2 - 1)
-Case 4: Odd-length s (l(s) = 2k + 1), Odd m (m = 2j + 1):
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((l(s)-1)/2 - 1, m/2 - 1)
+    Case 4: Odd-length s (l(s) = 2k + 1), Odd m (m = 2j + 1):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((l(s)-1)/2 - 1, (m-1)/2)
-Explanation:
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((l(s)-1)/2 - 1, (m-1)/2)
+    Explanation:
 
-We divide the length of s by 2 (or subtract one and then divide by 2 for odd-length s) to get the length of the left half.
-We divide m by 2 (or subtract one or two depending on parity and then divide by 2) to get the number of delimiters to place in the left half.
-We use the combination formula C(n, r) to calculate the number of ways to choose r delimiter positions from n available positions.
+    We divide the length of s by 2 (or subtract one and then divide by 2 for odd-length s) to get the length of the left half.
+    We divide m by 2 (or subtract one or two depending on parity and then divide by 2) to get the number of delimiters to place in the left half.
+    We use the combination formula C(n, r) to calculate the number of ways to choose r delimiter positions from n available positions.
 
 
-Theorem 3.2.6:
+    Theorem 3.2.6:
 
-Let ζ ∈ PP with s = σ_reduce(ζ), n = l(s), and m be the desired number of words. Then:
+    Let ζ ∈ PP with s = σ_reduce(ζ), n = l(s), and m be the desired number of words. Then:
 
-Case 1: Even-length s (n = 2k), Even m (m = 2j):
+    Case 1: Even-length s (n = 2k), Even m (m = 2j):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1)
-Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1)
+    Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
 
-|σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2)
-Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
+    |σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2)
+    Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1)
-Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1)
+    Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
 
-|σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
-Proof:
+    |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
+    Proof:
 
-Let ζ be an arbitrary perfect palindrome (ζ ∈ PP) and let s = σ_reduce(ζ), n = l(s), and m be the desired number of words.
+    Let ζ be an arbitrary perfect palindrome (ζ ∈ PP) and let s = σ_reduce(ζ), n = l(s), and m be the desired number of words.
 
-Case 1: Even-length s (n = 2k), Even m (m = 2j):
+    Case 1: Even-length s (n = 2k), Even m (m = 2j):
 
-Pivot: Since n is even, the pivot of ζ falls between two characters. By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1. Since ζ is a perfect palindrome, by theorem 3.1.6, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s lies between the characters at indices k and k+1.
+    Pivot: Since n is even, the pivot of ζ falls between two characters. By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1. Since ζ is a perfect palindrome, by theorem 3.1.6, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s lies between the characters at indices k and k+1.
 
-Delimiter Placement: To form m = 2j words, we need to place m-1 = 2j-1 delimiters. By Theorem 3.2.4, the delimiters must be placed symmetrically around the pivot. We place j-1 delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
+    Delimiter Placement: To form m = 2j words, we need to place m-1 = 2j-1 delimiters. By Theorem 3.2.4, the delimiters must be placed symmetrically around the pivot. We place j-1 delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
 
-Left Half: The left half of s has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is even).
+    Left Half: The left half of s has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is even).
 
-Combinations: We need to choose j-1 positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j-1).
+    Combinations: We need to choose j-1 positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j-1).
 
-Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+    Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
 
-Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1).
+    Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1).
 
-Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
+    Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
 
-Pivot: Since n is even, the pivot of ζ falls between two characters. By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1. Since ζ is a perfect palindrome, by theorem 3.1.6, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s lies between the characters at indices k and k+1.
+    Pivot: Since n is even, the pivot of ζ falls between two characters. By Theorem 3.1.9, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]) + 1. Since ζ is a perfect palindrome, by theorem 3.1.6, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s lies between the characters at indices k and k+1.
 
-Delimiter Placement: To form m = 2j+1 words, we need to place m-1 = 2j delimiters. We place j delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
+    Delimiter Placement: To form m = 2j+1 words, we need to place m-1 = 2j delimiters. We place j delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
 
-Left Half: The left half of s has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is even).
+    Left Half: The left half of s has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is even).
 
-Combinations: We need to choose j positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j).
+    Combinations: We need to choose j positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j).
 
-Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+    Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
 
-Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2).
+    Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2).
 
-Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
+    Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
 
-Pivot: Since n is odd, the pivot of ζ falls on a character. By Theorem 3.1.8, since ζ is a perfect palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s is the character at index k+1. Since m is even, by Theorem 3.2.5, this pivot character cannot be a delimiter.
+    Pivot: Since n is odd, the pivot of ζ falls on a character. By Theorem 3.1.8, since ζ is a perfect palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s is the character at index k+1. Since m is even, by Theorem 3.2.5, this pivot character cannot be a delimiter.
 
-Delimiter Placement: To form m = 2j words, we need to place m-1 = 2j-1 delimiters. We place j-1 delimiters in the left half of s (excluding the pivot character) and mirror them to the right half. The remaining delimiter is placed at the pivot.
+    Delimiter Placement: To form m = 2j words, we need to place m-1 = 2j-1 delimiters. We place j-1 delimiters in the left half of s (excluding the pivot character) and mirror them to the right half. The remaining delimiter is placed at the pivot.
 
-Left Half: The left half of s, excluding the pivot character, has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is odd).
+    Left Half: The left half of s, excluding the pivot character, has length k. We have k-1 possible positions to place delimiters (excluding the character at index k itself because n is odd).
 
-Combinations: We need to choose j-1 positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j-1).
+    Combinations: We need to choose j-1 positions out of k-1 to place the delimiters. The number of ways to do this is C(k-1, j-1).
 
-Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+    Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
 
-Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1).
+    Conclusion: Therefore, |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1).
 
-Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
+    Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
 
-Pivot: Since n is odd, the pivot of ζ falls on a character. By Theorem 3.1.8, since ζ is a perfect palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s is the character at index k+1. Since m is odd, by Theorem 3.2.5, this pivot character cannot be a delimiter.
+    Pivot: Since n is odd, the pivot of ζ falls on a character. By Theorem 3.1.8, since ζ is a perfect palindrome, σ_reduce(ζ) = inv(σ_reduce(ζ)). The pivot of s is the character at index k+1. Since m is odd, by Theorem 3.2.5, this pivot character cannot be a delimiter.
 
-Delimiter Placement: To form m = 2j+1 words, we need to place m-1 = 2j delimiters. We place j delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
+    Delimiter Placement: To form m = 2j+1 words, we need to place m-1 = 2j delimiters. We place j delimiters in the left half of s (excluding the pivot character) and mirror them to the right half.
 
-Left Half: The left half of s, excluding the pivot character, has length k.
+    Left Half: The left half of s, excluding the pivot character, has length k.
 
-Combinations: We need to choose j positions out of k to place the delimiters. The number of ways to do this is C(k, j).
+    Combinations: We need to choose j positions out of k to place the delimiters. The number of ways to do this is C(k, j).
 
-Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
+    Symmetry: For each valid placement in the left half, there's a unique corresponding symmetrical placement in the right half.
 
-Conclusion: Therefore, |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2).
+    Conclusion: Therefore, |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2).
 
-Final Result:
+    Final Result:
 
-Combining all four cases, we have proven the theorem:
+    Combining all four cases, we have proven the theorem:
 
-Let ζ ∈ PP with s = σ_reduce(ζ), n = l(s), and m be the desired number of words. Then:
+    Let ζ ∈ PP with s = σ_reduce(ζ), n = l(s), and m be the desired number of words. Then:
 
-Case 1: Even-length s (n = 2k), Even m (m = 2j):
+    Case 1: Even-length s (n = 2k), Even m (m = 2j):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1)
-Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C(n/2 - 1, m/2 - 1)
+    Case 2: Even-length s (n = 2k), Odd m (m = 2j + 1):
 
-|σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2)
-Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
+    |σ_induce(s, m, S)| = C(k - 1, j) = C(n/2 - 1, (m-1)/2)
+    Case 3: Odd-length s (n = 2k + 1), Even m (m = 2j):
 
-|σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1)
-Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
+    |σ_induce(s, m, S)| = C(k - 1, j - 1) = C((n-1)/2 - 1, m/2 - 1)
+    Case 4: Odd-length s (n = 2k + 1), Odd m (m = 2j + 1):
 
-|σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
-This completes the proof. ∎
+    |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
+    This completes the proof. ∎
 
 
 
@@ -689,22 +691,24 @@ A Reflective Structure, denoted **RS**, is the set of Strings *s* which satisfy 
 
     s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
 
-**Theorem A.6.1** R ⊆ RS
+.. todo::
 
-TODO 
+    **Theorem A.6.1** R ⊆ RS
 
-**Theorem A.6.2** ∀ α ∈ L: α ∈ RS ↔ (α)(σ)(inv(α)) ∈ RS
+    TODO 
 
-TODO 
+    **Theorem A.6.2** ∀ α ∈ L: α ∈ RS ↔ (α)(σ)(inv(α)) ∈ RS
 
-**Theorem A.6.3** ∀ α ∈ L: α ∈ RS ↔ (α)(inv(α)) ∈ RS
+    TODO 
 
-TODO 
+    **Theorem A.6.3** ∀ α ∈ L: α ∈ RS ↔ (α)(inv(α)) ∈ RS
 
-**Theorem A.6.4**  ∀ p ∈ X:sub:`L`(2): Π:sub:`i=1`:sup:`2` p(i) ∈ RS ↔ Π:sub:`i=1`:sup:`1` p(i) = inv(Π:sub:`i=2`:sup:`2` p(i))
+    TODO 
 
-TODO 
+    **Theorem A.6.4**  ∀ p ∈ X:sub:`L`(2): Π:sub:`i=1`:sup:`2` p(i) ∈ RS ↔ Π:sub:`i=1`:sup:`1` p(i) = inv(Π:sub:`i=2`:sup:`2` p(i))
 
-**Theorem A.6.5** P ⊆ RS
+    TODO 
 
-TODO 
+    **Theorem A.6.5** P ⊆ RS
+
+    TODO 

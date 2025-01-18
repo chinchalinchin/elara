@@ -75,7 +75,7 @@ def analyze(
    
 ) -> str: 
     """
-    Injects the contents of a directory in the ``data/templates/analyze.rst`` template.
+    Injects the contents of a directory in the ``data/templates/article.rst`` template.
 
     :param summarize_dir: Directory of documents to analyze.
     :type summarize_dir: str
@@ -88,7 +88,7 @@ def analyze(
     buffer = mem.vars()
     buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["ANALYSIS"]
 
-    return temps.render("deduce", {
+    return temps.render("article", {
         **buffer,
         **lang.vars(),
         **summarize(summarize_dir, stringify=True),
@@ -130,7 +130,7 @@ def contextualize(
         persona = mem.get("currentPersona")
 
     preamble_temp = temps.get("preamble")
-    history_temp = temps.get("thread")
+    history_temp = temps.get("conversation")
 
     data = convo.get(persona)
 
@@ -201,6 +201,8 @@ def summarize(
 
     # Use `os.walk` to recursivle scan sub-directories.
     for root, _, files in os.walk(directory):
+        # traverse files in alphabetical order
+        files.sort()
         for file in files:
 
             base, ext = os.path.splitext(file)

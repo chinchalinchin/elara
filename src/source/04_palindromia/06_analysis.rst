@@ -1331,26 +1331,28 @@ From this, it can be seen the complement of **E** in a :math:`\mathbb{N} \times 
 
 A more technically feasible approach would be to define the sample space as the Corpus and then define basis events on this sample space as Character level events. This leads to the following definition,
 
-**Definition 5.2.1: Sample Space**
+.. todo::
+  
+  **Definition 5.2.1: Sample Space**
 
-The sample space for a linguistic experiment is the Corpus of its Language, 
+  The sample space for a linguistic experiment is the Corpus of its Language, 
 
-.. math::
+  .. math::
 
-  \Omega = C_L
+    \Omega = C_L
 
-∎
+  ∎
 
-TODO
+  TODO
 
-**Definition 5.2.2: Basis Events**
+  **Definition 5.2.2: Basis Events**
 
-TODO 
+  TODO 
 
-.. math::
+  .. math::
 
-  E_{(i, \iota)} = \{ \zeta \in \Omega | \zeta[i] = \iota \}
+    E_{(i, \iota)} = \{ \zeta \in \Omega | \zeta[i] = \iota \}
 
-∎
+  ∎
 
-TODO
+  TODO

@@ -132,7 +132,7 @@ def chat(
 
     return response
 
-def deduce(
+def analysis(
     summarize_dir : str,
     model_name : str = None,
     show : bool = True
@@ -281,20 +281,20 @@ def main():
             model_name=parsed_args.model,
             prompter=parsed_args.self,
             persona=parsed_args.persona,
-            summarize_dir=parsed_args.directory,
+            summarize_dir=parsed_args.dir,
             show = True
         )
     elif parsed_args.operation == "summarize":
         parse.summarize(
-            directory = parsed_args.directory
+            directory = parsed_args.dir
         )
     elif parsed_args.operation == "configure":
         configure(
             config_paris = parsed_args.configure
         )
-    elif parsed_args.operation == "deduce":
-        deduce(
-            summarize_dir=parsed_args.directory,
+    elif parsed_args.operation == "analyze":
+        analysis(
+            summarize_dir=parsed_args.dir,
             model_name=parsed_args.model,
             show = True
         )
