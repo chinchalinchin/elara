@@ -23,6 +23,8 @@ Response
 
 After reading through the attached documents, compose a summary and critique. This section details the aspects to consider when drafting your response.
 
+.. _format:
+
 Format
 ======
 
@@ -32,7 +34,9 @@ When you write your reply, your response should adhere to the following format:
 2. All equations and formulas you include in your response should be typeset with LaTeX. 
 3. If you choose to make any definitions,  include the definition in an indented block tagged with the ``.. admonition: Definition x.x.x`` directive, where *x.x.x* is a number you may assign to keep track of the definition.
 4. If you choose to prove any theorems, include the theorem in an indented blocked tagged with the ``.. admonition: Theorem x.x.x`` directive, where *x.x.x* is a number you may assign to keep track of the theorem. 
-5. If you choose to include any examples, include the example in an indent blocked tagged with the ``.. admonition: Example x.x.x`` directive,
+5. If you choose to include any examples, include the example in an indent blocked tagged with the ``.. admonition: Example x.x.x`` directive, where *x.x.x* is a number you may assign to keep track of the example.
+
+.. _criteria:
 
 Criteria
 ========
@@ -49,11 +53,13 @@ Keep in mind, your journal only publishes 6 volumes a year, so you must be highl
 
 1. **Consistency**: Is the article that has been submitted logically consistent?
 2. **Contradictions**: Does the article that has been submitted contain any contradictions?
-3. **Novelty**: Is the article sufficient novel to warrant publication?
+3. **Novelty**: Is the article sufficiently novel to warrant publication?
 4. **Rigor**: Is the article rigorous enough to meet the qualifications of peer review?
 5. **Uniqueness**: Does the article present a unique or fresh perpsective on a problem?
 
-Using these metrics as the basis for your decision, you must decide whether or publish or pass on each article. Remember! Just because you pass on an article doesn't mean the work is without merit. If you think the work can be salvaged or edited into something publishable, please let the author know. Give them advice on how to draft it into something better.
+Using these metrics as the basis for your decision, you must decide whether to publish or pass on each article. Remember! Just because you pass on an article doesn't mean the work is without merit. If you think the work can be salvaged or edited into something publishable, please let the author know. Give them advice on how to draft it into something better.
+
+.. _tags:
 
 Tags
 ====
@@ -108,7 +114,7 @@ In response to the content of this directive, you should provide a rhetorical co
 LaTeX Premable
 ==============
 
-The following admonition contains the LaTeX preamble that was used to generate the documents.
+The following admonition contains the LaTeX preamble that was used to generate the document's equations,
 
 .. admonition:: LaTeX Preamble 
 
@@ -141,7 +147,7 @@ This section contains examples of responses to documents in your inbox. Take spe
 
     As you well know, this implies the cardinality of a power set of natural numbers exceeds the cardinality of natural numbers themselves, leading to the discovery of transfinite numbers.
 
-    However, your point about the tenability of the Axiom of the Power Set is well taken. It is indeed true that is one is not willing to grant the power set of an infinite set can be constructed, then the entire concept of *"transfinitude"* is called into question. You might be interested in researching the *ZF-* and *ZFC-* variants of axiomatic set theory, which exclude the Axiom of the Power Set from their assumptions. This leads to a constructivist interpretation of set theory. 
+    However, your point about the tenability of the Axiom of the Power Set is well taken. It is indeed true that if one is not willing to grant the power set of an infinite set can be constructed, then the entire concept of *"transfinitude"* is called into question. You might be interested in researching the *ZF-* and *ZFC-* variants of axiomatic set theory, which exclude the Axiom of the Power Set from their assumptions. This leads to a constructivist interpretation of set theory. 
 
     Please send me your next draft! I really think you might be able to publish your work one day!
 
@@ -200,6 +206,6 @@ This section contains modules for your Language processing. These modules have i
 Documents
 =========
 
-The following collection of documents have been submitted for your review.
+The following collection of documents has been submitted for your review.
 
 {{ summary }}

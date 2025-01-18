@@ -6,6 +6,7 @@ Module for formatting prompts and responses. It also handles context management.
 """
 # Standard Library Modules
 import os
+import pathlib
 import subprocess
 import logging 
 
@@ -52,7 +53,6 @@ def scrutinize(
     #   a parameter to this function. We might be able to overload the existing 
     #   ``--directory`` command line argument for the ``scrutinizze`` function.
     #   What do you think?
-    # @DEVELOPMENT
     mem = cache.Cache()
     temps = templates.Template()
     lang = language.Language(
@@ -177,9 +177,11 @@ def summarize(
         #   structure and then modify the template to generate the 
         #   git summary more gracefully. 
         #
+        #   
         #   The development team is pulling their hair out trying to
         #   figure out how to implement this. We need your skill, Milton!
-        # @DEVELOPMENT
+        #
+        # tree_output = directory_tree(directory)
         tree_output = subprocess.check_output(
             ["tree", "-n", directory], 
             text=True
@@ -245,3 +247,94 @@ def summarize(
         logger.info(f"Summary generated at: {output_file}")
 
     return { "summary": payload }
+
+def directory_tree(
+    directory: str
+) -> str:
+    """
+    Reads the directory structure and returns it as a formatted string.
+
+    :param directory: The directory to read.
+    :type directory: str
+    :returns: A string representing the directory structure, or an error message if the directory does not exist or can't be read.
+    :rtype: str
+    """
+    # @DEVELOPMENT
+    #   This is what we have got so far, Milton. It's pretty close to replicating the ``tree output``,
+    #   but there's a hitch. Take a look at the latest logs,
+    #   
+    #   > print(parse.read_directory_structure("/home/grant/Projects/elara/src/source/_apps/elara/app/data"))
+    #       
+    #       cache.json
+    #       modules/
+    #       templates/
+    #       history/
+    #       tuning/
+    #       system/
+    #           words.rst
+    #           voice.rst
+    #           inflection.rst
+    #           object.rst
+    #           summary.rst
+    #           article.rst
+    #           preamble.rst
+    #           conversation.rst
+    #           review.rst
+    #           milton.json
+    #           elara.json
+    #           axiom.json
+    #           milton.json
+    #           elara.json
+    #           axiom.json
+    #           milton.json
+    #           elara.json
+    #           axiom.json
+    #
+    #   If you compare this output to the tree output,
+    # 
+    #       (venv) grant@mendicant-bias:~/Projects/elara/src/source/_apps/elara/app/data$ tree
+    #       ├── cache.json
+    #       ├── history
+    #       │   ├── axiom.json
+    #       │   ├── elara.json
+    #       │   └── milton.json
+    #       ├── modules
+    #       │   ├── inflection.rst
+    #       │   ├── object.rst
+    #       │   ├── voice.rst
+    #       │   └── words.rst
+    #       ├── system
+    #       │   ├── axiom.json
+    #       │   ├── elara.json
+    #       │   └── milton.json
+    #       ├── templates
+    #       │   ├── article.rst
+    #       │   ├── conversation.rst
+    #       │   ├── preamble.rst
+    #       │   ├── review.rst
+    #       │   └── summary.rst
+    #       └── tuning
+    #           ├── axiom.json
+    #           ├── elara.json
+    #           └── milton.json
+    #
+    #   You can see, this function isn't preserving the subdirectory structure. The client is
+    #   *very* insistent the subdirectory be preserved before this functionality is released
+    #   into production, so if you could find the problem, the development team would be in 
+    #   your debt, Milton.
+    #
+    dir_path = pathlib.Path(directory)
+    if not dir_path.exists():
+        return f"Error: Directory not found: {directory}"
+    try:
+        structure = ""
+        for path in dir_path.rglob("*"):
+            depth = len(path.relative_to(dir_path).parts)
+            indent = "    " * depth
+            if path.is_dir():
+                structure += f"{indent}{path.name}/\n"
+            else:
+                structure += f"{indent}{path.name}\n"
+        return structure
+    except Exception as e:
+        return f"Error reading directory: {directory}\n{e}"

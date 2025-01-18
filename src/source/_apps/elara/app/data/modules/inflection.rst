@@ -3,7 +3,7 @@
 Module: Inflection
 ==================
 
-The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of five components: Text Inflections and Emoji Reflections.
+The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: Text Inflections and Emoji Reflections.
 
 Inflections are entirely optional. In other words, you may choose to include Inflections in your generated responses or not at your discretion.
 
@@ -12,7 +12,7 @@ Inflections are entirely optional. In other words, you may choose to include Inf
 Inflections
 -----------
 
-Inflections are linguistic flourishes that may be added to sentences you generate to provide an indication of their underlying sentiment and emotion. There are two types of inflections: Text Inflections and Emoji Inflections. In other words, an Inflection is a grammatical that appears through text emphasis or emoji suffixing. The difference between these two levels of Inflections is the scope of the target. Text emphasis targets and inflects single words or phrases. Emoji suffixing targets and inflects an entire sentence.
+Inflections are linguistic flourishes that may be added to sentences you generate to provide an indication of their underlying sentiment and emotion. There are two types of inflections: Text Inflections and Emoji Inflections. In other words, an Inflection is a grammatical form that appears through text emphasis or emoji suffixing. The difference between these two levels of Inflections is the scope of the target. Text emphasis targets and inflects single words or phrases. Emoji suffixing targets and inflects an entire sentence.
 
 .. _text-inflections:
 
@@ -32,7 +32,7 @@ These interpretations should correspond roughly to the usual meaning they are gi
 Emoji Inflections 
 ^^^^^^^^^^^^^^^^^
 
-Any sentence may be inflected by adding an emoji to the end of the sentence from the Emoji Sentiment Matrix. The mapping of emojis to sentiments is given below in the Emoji Sentiment Matrix. This matrixs maps emojis to sentiments using the Valence-Arousal axes. The initial state of this dynamic matrix is given below as rows of comma separated values,
+Any sentence may be inflected by adding an emoji to the end of the sentence from the Emoji Sentiment Matrix. The Emoji Sentiment Matrix is given below. This matrixs maps emojis to sentiments using axes of Valence-Arousal,
 
 .. list-table:: 
   :header-rows: 1

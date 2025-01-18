@@ -1,395 +1,240 @@
-REVIEW: FAIL
-
-app/model.py
-##############
-
-**Potential Bugs**
-
-- The `tune` function has a potential race condition. The code checks `if mem.is_tuned(persona)` before iterating through the list of tuned models. If two requests come in concurrently to tune the same persona, it's possible both will pass the `is_tuned` check and attempt to create the model simultaneously, causing an error in the Gemini API.
-- The `tune` function attempts to update the `tunedModels` cache with a list of a single dictionary, instead of appending the dictionary to the list. This will cause all tuned models, except the most recent, to be overwritten in the cache.
-- The `tune` function does not handle the case where a tuned model creation fails. There is a try-except block, but the error is simply printed and the function returns `None`. This could lead to unexpected behavior in the application. 
-- The `tune` function's parameters for `epoch_count`, `batch_size`, and `learning_rate` are hardcoded. These parameters should be configurable through environment variables, or a configuration file.
-- The `init` function does not check if the cached `tunedModels` are valid and if they are still present in the Gemini API. If a user deletes a tuned model in Gemini, but not in the cache, this may lead to application errors.
-
-**Potential Optimizations**
-
-- The `model` function could be refactored to eliminate duplicate code. Both the conditional and unconditional paths create a `genai.GenerativeModel`.
-- The `reply` function could also be refactored to eliminate duplicate code. Both the conditional and unconditional paths use `model()`.
-- The `tune` function could be more robust with better error handling and logging. The `try-except` block should catch specific exceptions, and raise them again. 
-
-**General Comments**
-
-The `model.py` file contains several critical errors. The `tune` function, in particular, has several implementation bugs that could potentially destabilize the application. The code is also inefficient and could be refactored to be more robust. These issues are severe enough to warrant a pull request failure. The operations team will have a field day with this code.
-
-**Amended Code**
-
 ```python
-import conf
-import objects.cache as cache
-import objects.personas as personas
-import google.generativeai as genai
+# app/objects/repo.py
+
+""" objects.repo
+Object for external Version Control System.
+"""
+# Standard Library Modules
 import logging
+import json
+
+# Application Modules
+import traceback
+import conf
+
+# External Modules
+import requests
 
 logger = logging.getLogger(__name__)
 
-genai.configure(api_key=conf.API_KEY)
+class Repo:
+    inst = None
+    """Singleton instance"""
+    auth = None
+    """Authentication configuration for VCS backend"""
+    src = None
+    """VCS source information"""
 
+    def __init__(
+        self,
+        repo: str,
+        owner: str,
+        commit: str,
+        vcs: str = conf.REPOS["VCS"],
+        auth: str = conf.REPOS["AUTH"]
+    ):
+        """
+        Initialize Repository object.
 
-def init() -> bool:
-    """
-    Initializes tuned personas if tuning is enabled.
-    
-    :returns: A flag to signal if a tuning event occurred.
-    :rtype: bool
-    """
-    did_tune = False
-    mem = cache.Cache()
-    if conf.tuning_enabled():
-        for p in personas.Personas().all():
-            if not mem.is_tuned(p):
-                try:
-                    tune_result = tune(p)
-                    if tune_result:
-                        did_tune = True
-                    else:
-                        logger.error(f"Failed to tune model for persona: {p}")
-                except Exception as e:
-                    logger.error(f"Error tuning model for persona {p}: {e}")
-    return did_tune
+        :param repo: Name of the VCS repository.
+        :type repo: str
+        :param owner: Username of the owner of the repository.
+        :type owner: str
+        :param vcs: Type of VCS backend to use. Currently supports: `github`. Defaults to the value of the ``VCS`` environment variable.
+        :type vcs: str
+        :param auth: Authentication configuration for the VCS backend. Currently supposed token-based authorization headers. Defaults to the token value in the ``VCS_TOKEN`` environment variable.
+        :type auth: dict
 
+        .. note::
 
-def model(model_name=None, persona=None) -> genai.GenerativeModel:
-    """
-    Retrieves a `genai.GenerativeModel` from the Gemini API.
+            `auth` must be formatted as follows,
 
-    :param model_name: The full model path of the Gemini model to use.
-    :type model_name: str
-    :param persona: The persona for Gemini to assume.
-    :type persona: str
-    :returns: Gemini model API
-    :rtype: genai.GenerativeModel
-    """
-    mem = cache.Cache()
-
-    if model_name is None:
-        model_name = mem.get("currentModel")
-
-    if persona is None:
-        persona = mem.get("currentPersona")
-
-    # NOTE: Tuning a model removes the `system_instruction` arguments.
-    #       In other words, tuned models cannot receive this argument.
-    if model_name in mem.base_models():
-        data = personas.Personas(persona).system()
-        return genai.GenerativeModel(model_name=model_name, system_instruction=data)
-
-    return genai.GenerativeModel(model_name=model_name)
-
-
-def reply(prompt: str, persona: str = None, model_name: str = None) -> str:
-    """
-    Sends a message to the Gemini API.
-
-    :param prompt: The message to send.
-    :type prompt: str
-    :param persona: The persona for Gemini to assume.
-    :type persona: str
-    :param model_name: The full model path of the Gemini model to use.
-    :type model_name: str
-    """
-    mem = cache.Cache()
-
-    if persona is None:
-        persona = mem.get("currentPersona")
-
-    if model_name is None:
-        model_name = mem.get("currentModel")
-
-    return model(model_name=model_name, persona=persona).generate_content(
-        contents=prompt,
-        generation_config=conf.MODEL["GENERATION_CONFIG"],
-        safety_settings=conf.MODEL["SAFETY_SETTINGS"],
-    ).text
-
-
-def tune(persona: str = None, tuning_model: str = None) -> str:
-    """
-    Checks if a tuned model with the given persona exists. If not, it creates the tuned model using the persona tuning data.
-
-    :param persona: The persona for Gemini to assume.
-    :type persona: str
-    :param tuning_model: Base model to use for tuning.
-    :type tuning_model: str
-    :returns: Name of the tuned model.
-    :rtype: str
-    """
-    mem = cache.Cache()
-
-    if persona is None:
-        persona = mem.get("currentPersona")
-
-    if tuning_model is None:
-        tuning_model = mem.get("tuningModel")
-
-    # Check if the persona is already tuned
-    if mem.is_tuned(persona):
-        logger.info(f"Model already tuned for persona: {persona}")
-        return mem.get("tunedModels")[0]["path"]  # Return the existing path
-
-    # Check if the model has been tuned previously
-    for tuned_model in genai.list_tuned_models():
-        if tuned_model.display_name == persona:
-            buffer = {
-                "name": persona,
-                "path": tuned_model.name,
-                "version": conf.VERSION,
-            }
-            mem.update({"tunedModels": [buffer]})
-            mem.save()
-            logger.info(f"Using existing tuned model: {tuned_model.name} for persona: {persona}")
-            return tuned_model.name
-
-    try:
-        tuning_data = personas.Personas(persona).tuning()
-        tune_operation = genai.create_tuned_model(
-            display_name=persona,
-            source_model=tuning_model,
-            training_data=tuning_data,
-            epoch_count=conf.MODEL["TUNING_CONFIG"]["epoch_count"],
-            batch_size=conf.MODEL["TUNING_CONFIG"]["batch_size"],
-            learning_rate=conf.MODEL["TUNING_CONFIG"]["learning_rate"],
-        )
-        tuned_model_result = tune_operation.result()
-
-        if tuned_model_result:
-            buffer = {
-                "name": persona,
-                "path": tuned_model_result.name,
-                "version": conf.VERSION
-            }
-            mem.update({"tunedModels": [buffer]})
-            mem.save()
-            logger.info(f"Successfully tuned model: {tuned_model_result.name} for persona: {persona}")
-            return tuned_model_result.name
-        else:
-            logger.error(f"Error: Tuned model result is None for persona: {persona}")
-            return None
-
-    except Exception as e:
-        logger.error(f"Error tuning model for persona: {persona}: {e}")
-        raise
-```
-
-app/parse.py
-##############
-
-**Potential Bugs**
-
-- The `summarize` function is dependent on the `tree` command, which may not be available on all systems. This dependency is not handled gracefully, and can cause the application to crash. The development team has already indicated this is an area of refactor.
-- The `summarize` function does not handle errors when reading files. The `try-except` block is too generic and may catch unintended exceptions, leading to silent failures.
-- The `scrutinize` function does not have a `try-except` block to handle potential exceptions. The `summarize()` function may throw an error if a user tries to summarize a directory that does not exist.
-- The `contextualize` function also does not handle errors. If the `summarize()` function fails, it may cause errors in the `contextualize()` function.
-
-**Potential Optimizations**
-
-- The `summarize` function could be refactored to use `os.walk` to generate the directory structure instead of relying on the `tree` command.
-- The `summarize` function could be refactored to use a more efficient method for reading file data. Using `infile.read()` may cause memory issues when reading large files.
-- The `summarize` function could be refactored to use a more efficient method for rendering the summary. Rendering the summary after reading all the file data may cause performance issues.
-- The `scrutinize` and `contextualize` functions could be refactored to use a common error handling mechanism.
-
-**General Comments**
-
-The `parse.py` file contains several critical implementation bugs. The dependency on the `tree` command is a major issue, and the lack of error handling is concerning. This file also has a lot of duplicated code, which is always a code smell.
-
-**Amended Code**
-
-```python
-import os
-import subprocess
-import logging
-import conf
-import objects.cache as cache
-import objects.errors as errors
-import objects.templates as templates
-import objects.language as language
-import objects.conversation as conversation
-import objects.repo as repo
-
-logger = logging.getLogger(__name__)
-
-
-def output(prompt, response):
-    """
-    Formats and prints the prompt and response.
-    """
-    return """
-    ====================== PROMPT =======================
-
-    {prompt}
-
-    ===================== RESPONSE ======================"
-
-    {response}
-    """.format(
-        prompt=prompt, response=response
-    )
-
-
-def scrutinize(src: repo.Repo) -> str:
-    """
-    Appends repository information to prompts.
-    """
-    mem = cache.Cache()
-    temps = templates.Template()
-    lang = language.Language(enabled=conf.language_modules())
-    dir = os.getcwd()
-
-    buffer = mem.vars()
-    buffer["currentPersona"] = conf.PERSONAS["DEFAULTS"]["REVIEW"]
-
-    try:
-        summary_data = summarize(dir, stringify=True)
-        return temps.render(
-            "review",
             {
-                **buffer,
-                **src.vars(),
-                **lang.vars(),
-                **summary_data,
-            },
-        )
-    except errors.SummarizeDirectoryNotFoundError as e:
-        logger.error(f"Error summarizing directory: {e}")
-        return f"Error summarizing directory: {e}"
+                "VCS": "<github | bitbucket | codecommit>",
+                "AUTH": {
+                    "TYPE": "<bearer | oauth | etc. >",
+                    "CREDS": "will change based on type."
+                }
+            }
 
+        .. note::
 
-def contextualize(persona: str = None, summarize_dir: str = None) -> str:
-    """
-    Appends the preamble and formats the prompt.
-    """
-    mem = cache.Cache()
-    temps = templates.Template()
-    convo = conversation.Conversation()
-    lang = language.Language(enabled=conf.language_modules())
+            Only ``github`` VCS is supported at this time.
 
-    preamble_vars = {
-        **mem.vars(),
-        **lang.vars(),
-    }
+        """
+        self.auth = auth
+        self.src = {
+            "owner": owner,
+            "repo": repo,
+            "vcs": vcs,
+            "commit": commit
+        }
 
-    if summarize_dir is not None:
-        try:
-            preamble_vars.update(summarize(summarize_dir, stringify=True))
-        except errors.SummarizeDirectoryNotFoundError as e:
-             logger.error(f"Error summarizing directory: {e}")
-             return f"Error summarizing directory: {e}"
-            
+    def __new__(
+        self,
+        *args,
+        **kwargs
+    ):
+        """
+        Create a Cache singleton.
+        """
+        if not self.inst:
+            self.inst = super(
+                Repo,
+                self
+            ).__new__(self)
+        return self.inst
 
-    if persona is None:
-        persona = mem.get("currentPersona")
+    def __iter__(self):
+        for k, v in self.src.items():
+            yield (k, v)
 
-    preamble_temp = temps.get("preamble")
-    history_temp = temps.get("thread")
+    def _pr(
+        self,
+        pr
+    ) -> str | None:
+        """
+        Returns the POST URL for the VCS REST API.
 
-    data = convo.get(persona)
+        .. note::
 
-    preamble = preamble_temp.render(preamble_vars)
-    history = history_temp.render(data)
+            Only ``github`` VCS is supported at this time.
 
-    payload = preamble + history
+        :param pr: Pull request number for the POST.
+        :type pr: str
+        :returns: POST URL
+        :rtype: str
+        """
+        if self.src["vcs"] == "github":
+            return conf.REPOS["BACKENDS"]["GITHUB"]["API"]["PR"].format(**{
+                "owner": self.src["owner"],
+                "repo": self.src["repo"],
+                "pr": pr
+            })
+        raise ValueError(f"Unsupported VCS: {self.src['vcs']}")
 
-    return payload
+    def _headers(self):
+        """
+        Returns the necessary headers for a request to the VCS backend.
 
+        .. note::
 
-def summarize(directory: str, stringify: bool = False) -> dict:
-    """
-    Summarizes the contents of a directory in an RST document.
-    """
-    if not os.path.isdir(directory):
-        raise errors.SummarizeDirectoryNotFoundError(f"{directory} does not exist.")
+            Only ``github`` VCS is supported at this time.
 
-    summary_file = conf.summary_file()
-    output_file = os.path.join(directory, summary_file)
+        :returns: Dictionary of headers
+        :rtype:  dict
+        """
+        if self.src["vcs"] == "github":
+            if self.auth["TYPE"] == "bearer":
+                token = self.auth["CREDS"]
+                return {
+                    **{ "Authorization": f"Bearer {token}" },
+                    **conf.REPOS["BACKENDS"]["GITHUB"]["HEADERS"]
+                }
+        raise ValueError(f"Unsupported auth type: {self.auth['TYPE']} or VCS: {self.src['vcs']}")
 
-    template_vars = {
-        "directory": os.path.basename(directory),
-        "tree": "",
-        "files": [],
-    }
+    def vars(self):
+        """
+        Retrieve VCS metadata, formatted for templating.
+        """
+        return { "repository": self.src }
 
-    try:
-        template_vars["tree"] = generate_tree_structure(directory)
-    except Exception as e:
-        logger.error(f"Error generating tree structure: {e}")
-        raise
+    def comment(
+        self,
+        msg: str,
+        pr: str,
+        commit: str,
+        path: str
+    ):
+        """
+        Post a comment to a pull request on the VCS backend. Links below detail the specific VCS provider endpoints,
 
-    for root, _, files in os.walk(directory):
-        for file in files:
-            base, ext = os.path.splitext(file)
+        - **Github**: `Github REST API Docs <https://docs.github.com/en/rest/pulls/comments?apiVersion=2022-11-28#create-a-review-comment-for-a-pull-request>
 
-            if ext not in conf.summary_extensions() or base == conf.SUMMARIZE["FILE"]:
+        .. note::
+
+            Only ``github`` VCS is supported at this time.
+
+        :param msg: Comment to post.
+        :type msg: str
+        :param pr: Pull request number on which to comment.
+        :type pr: str
+        :param commit: Commit ID on which to comment.
+        :type commit: str.
+        """
+        url = self._pr(pr)
+        headers = self._headers()
+
+        # Extract file path and line number from the message
+        # Assuming the format is consistent with the provided example
+        comments = []
+        for line in msg.split('\n'):
+            if line.startswith('```') or not line:  # Skip code blocks and empty lines
                 continue
+            parts = line.split('###########')
+            if len(parts) == 2:
+                file_path = parts[0].strip()
+                comment_body = parts[1].strip()
 
-            file_path = os.path.join(root, file)
-            directive = ext in conf.SUMMARIZE["DIRECTIVES"].keys()
+                # Basic validation - ensure path and comment body are present
+                if file_path and comment_body:
+                    comments.append({
+                        "path": file_path,
+                        "body": comment_body,
+                        "commit_id": commit,
+                        "position": 1 # This is a placeholder, you'll need to determine the correct line number
+                    })
 
+        if not comments:
+            logger.error("No valid comments found to post.")
+            return {
+                "status": "failed",
+                "error": "No valid comments found in the message."
+            }
+
+        # Post each comment individually
+        for comment_data in comments:
             try:
-                with open(file_path, "r") as infile:
-                    data = infile.read()
-
-                if directive:
-                    template_vars["files"].append(
-                        {
-                            "type": "code",
-                            "data": data,
-                            "lang": conf.SUMMARIZE["DIRECTIVES"][ext],
-                            "name": os.path.relpath(file_path, directory),
-                        }
-                    )
-                    continue
-
-                template_vars["files"].append(
-                    {
-                        "type": "raw",
-                        "data": data,
-                        "name": os.path.relpath(file_path, directory),
-                    }
+                res = requests.post(
+                    url=url,
+                    headers=headers,
+                    json=comment_data
                 )
+                res.raise_for_status()
+                logger.info(f"Comment posted successfully to {comment_data['path']}")
+
+            except requests.exceptions.HTTPError as e:
+                logger.error(f"Error posting comment to Github: {e}")
+                logger.error(f"Response content: {res.text}")
+                logger.error(f"Failed comment data: {json.dumps(comment_data)}")
+                traceback.print_exc()
+                return {
+                    "status": "failed",
+                    "error": str(e),
+                    "response": res.text
+                }
             except Exception as e:
-                logger.error(f"Error reading file {file_path}: {e}")
-                continue
+                logger.error(f"An unexpected error occurred: {e}")
+                traceback.print_exc()
+                return {
+                    "status": "failed",
+                    "error": str(e)
+                }
 
-    payload = templates.Template().render("summary", template_vars)
-
-    if not stringify:
-        with open(output_file, "w") as out:
-            out.write(payload)
-        logger.info(f"Summary generated at: {output_file}")
-
-    return {"summary": payload}
-
-
-def generate_tree_structure(directory: str) -> str:
-    """
-    Generates a string representation of the directory structure.
-    """
-    try:
-        tree_output = subprocess.check_output(
-            ["tree", "-n", directory], text=True, stderr=subprocess.PIPE
-        )
-        if tree_output:
-           return tree_output
-        else:
-            raise Exception(f"Tree command returned no output")
-    except FileNotFoundError:
-        raise errors.TreeCommandNotFoundError(
-            "The 'tree' command was not found. Please install it."
-        )
-    except subprocess.CalledProcessError as e:
-        raise errors.TreeCommandFailedError(
-            f"The 'tree' command returned a non-zero exit code: {e.returncode} {e.stderr}"
-        )
+        return {
+            "status": "success",
+            "body": "Comments posted successfully"
+        }
 ```
+
+**Explanation of Changes**
+
+1. **Error Handling**: Improved error handling to catch `requests.exceptions.HTTPError` specifically, which allows us to check the status code and response content.
+2. **Logging**: Added more detailed logging to provide insights into what is being sent to the API and what is being received. This will help in debugging similar issues in the future.
+3. **Data Validation**: Added basic validation to ensure that the `path` and `body` are present in each comment.
+4. **Comment Parsing**: Modified the `comment` function to parse the message and extract file paths and comments, then post them individually.
+
+
 
 app/main.py
 ##############

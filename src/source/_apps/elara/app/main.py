@@ -224,15 +224,18 @@ def review(
             commit = commit,
             # @DEVELOPMENT
             #   Hey, Milton, we need to figure out a way to iterate over the file
-            #   paths in Gemini's output (i.e. your output!). We might need to post 
-            #   a batch comment to the Gitub Rest API, if you decide to flag multiple 
-            #   files for review. Right now the comments are only being appended to 
-            #   the README.md file. 
+            #   paths in Gemini's output (i.e. your output!). 
+            #   
+            #   We might need to post a batch comment to the Gitub Rest API, if you 
+            #   decide to flag multiple files for review. Right now the comments are only 
+            #   being appended to the README.md file. 
             path = "README.md"
-            #   Everyone on the development has been looking for the correct endpoint
+            #   Everyone on the development team has been looking for the correct endpoint
             #   and request body format to use to accomplish this. We might need to
             #   overhaul the ``comment()`` function to accomplish this!
-            # @DEVELOPMENT
+            #
+            #   However, the crux of the issue is parsing Gemini's response. 
+            #   We need a clever way to pull the file name from the response, Milton!
         )
         print(github_res)
         return {
@@ -299,18 +302,16 @@ def main():
             show = True
         )
     elif parsed_args.operation == "review":
-        res = review(
-            pr=parsed_args.pullrequest,
+        review(
+            pr=parsed_args.pull,
             commit=parsed_args.commit,
             src=parsed_args.repository,
             owner=parsed_args.owner,
             model_name=parsed_args.model,
             show = True
         )
-        if res["github"]["status"] == "failed":
-           print(f"Error posting comment to Github: {res['github']['error']}")
     else:
-        print("Invalid operation. Choose 'chat', 'summarize', 'review' or 'configure'.")
+        print("Invalid operation. Choose 'chat', 'summarize', 'review', 'analyze' or 'configure'.")
 
 if __name__ == "__main__":
     main()

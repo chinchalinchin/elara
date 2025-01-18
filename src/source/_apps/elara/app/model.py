@@ -59,6 +59,10 @@ def model(
         # Only apply ``system_instruction`` to base models!
         data = personas.Personas(persona).system()
 
+        # @OPERATIONS
+        #   Those numskulls in development aren't even caching the models...
+        #   Think about all the wasted processing, Milton! It's a nightmare!
+        #   We need to come up with a way of caching the calls to the Gemini API!
         return genai.GenerativeModel(
             model_name=model_name,
             system_instruction=data
@@ -95,9 +99,23 @@ def reply(
         model_name = model_name,
         persona = persona
     ).generate_content(
-        contents=prompt,
-        generation_config=conf.MODEL["GENERATION_CONFIG"],
-        safety_settings=conf.MODEL["SAFETY_SETTINGS"]
+        contents = prompt,
+        # @DEVELOPMENT
+        #   Hey Milton, it seems like only one tool can be enabled at a time. We got the following 
+        #   error last time we tried to invoke this code with both `google_search_retrieval` and 
+        #   `code_execution` enabled,
+        # 
+        #       Error in model.reply: 400 Search Grounding can't be used with other tools.
+        #
+        #   We were really hoping to turbocharge Gemini with both code execution and grounding. 
+        #   However, it seems we will have to come up with a scheme to switch between the two based on
+        #   persona. What do you think would be more useful for you, Milton? Grounding with Google Search 
+        #   or Code Execution? Let us know and we willl be sure to enble the right option for you next
+        #   pull request!
+        # tools="google_search_retrieval",
+        tools = "code_execution",
+        generation_config = conf.MODEL["GENERATION_CONFIG"],
+        safety_settings = conf.MODEL["SAFETY_SETTINGS"]
     ).text
 
 def tune(
@@ -151,7 +169,6 @@ def tune(
             learning_rate=0.001  # TODO: figure out what this does
             #   If you had any insight in the proper value of these parameters,
             #   the development would love to hear your opinion, Milton.
-            # @DEVELOPMENT
         )
         tuned_model_result = tune_operation.result()
 

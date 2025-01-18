@@ -100,7 +100,7 @@ elara review -pr $PR_NUMBER -re $REPO -o $OWNER -c $COMMIT_ID
 
 **TODO**: should allow user to change directory instead of running in current working directory!
 
-In addition, `milton` will has special tags that can be appended to code comments. These comment tags signal different types of attention `milton` will direct to certain sections of the code.
+In addition, `milton` has special tags that can be appended to code comments. These comment tags signal different types of attention `milton` will direct to certain sections of the code.
 
 - `@DEVELOPMENT`: Attach this tag to comments above code that is still in the development phase. `milton` will provide helpful comments on possible solutions.
 - `@OPERATIONS`: Attach this tag to comments above critical code that needs special attention. `milton` will direct his attention to searching this code for potential errors and bugs.
@@ -108,7 +108,30 @@ In addition, `milton` will has special tags that can be appended to code comment
 
 ### Mathematical Analysis
 
-The persona `axiom` will provide formal and mathematical analysis.
+The persona `axiom` will provide formal and mathematical analysis. Pass this persona a directory of RST documents and it will provide a scholarly review of its content. These documents can be formatted with LaTeX. The LaTeX preamble can be configured through the ``LATEX_PREAMBLE`` environment variable.
+
+Use the following command,
+
+```bash
+elara analyze -d /path/to/directory
+```
+
+In addition, `axiom` has custom RST directives that provide enhanced functionality. These roles and directives are detailed below,
+
+1. `critique`: This directive will cause the persona to provide a critique of its content.
+2. `prove`: This directive will instruct the persona to provide a formal proof of the asserted theorem.
+3. `todo`: This directive will instruct the persona to provide ideas and brainstorm.
+
+As an example,
+
+```rst
+
+.. prove::
+
+    :math:`a^2 + b^2 = c^2
+```
+
+This will prompt `axiom` to generate a formal proof of the Pythagorean theorem. 
 
 ## Application Structure
 

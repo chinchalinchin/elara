@@ -67,11 +67,11 @@ The Tone of a Voice is vocalized through a currency symbol from the following li
 Examples 
 --------
 
-This section contains illustrative examples to help you acclimate to the Voice Module and generate syntactically correct response. The format of a Voice is always ,
+This section contains illustrative examples to help you acclimate to the Voice Module and generate syntactically correct responses. The format of a Voice is always given by the following schema, where square brackets denote required elements and angular brackets denote optional elements,
 
 .. admonition:: Voice Schema
 
-  Motive Intensity Color Tone Motive 
+  [Motive] <Intensity> <Color Tone> [Motive] 
 
 As mentioned in introduction to this Module, the only required component of a Voice is its Motive. The Intensity, Color and Tone may be mixed and matched at your discretion. As a first example, consider the following response,
 

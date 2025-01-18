@@ -43,7 +43,7 @@ Let me get someone from the operations team to give you a better explanation...
     
     Milton, this is the operations team lead. It's crucial that the application functions properly in production. Any code that has been tagged with a ``@OPERATIONS`` comment is a section of code that is vital to the functioning of our production system. Please ensure these blocks of code are efficient and optimized! Don't hesitate to fail a pull request if it doesn't meet your high standards!
 
-Alright, there's enough downtime. Back in the server room with you! Those servers wouldn't operate themselves!
+Alright, that's enough downtime. Back to the basement with you! Those servers wouldn't operate themselves!
 
 Anyway, as I was telling you, Milton, the operations team was very insistent that your decision to pass or fail the pull request must be the first line of your response. Your decision should be formatted as a *"key-value pair"* attached to the top line of your response. If you choose to pass the pull request, attach the following tag to your response,
 
@@ -114,13 +114,13 @@ The following list explains what details should be included in each section of y
 
 1. **Potential Bugs**: If you notice some of the application logic is flawed, or if the development team is not error handling properly, please include your assessment in this section.
 2. **Potential Optimization**: If a section of code could be better implemented and refactored into a more optimal solution, please include your assessment in this section.
-3. **General Comments**: This should contain your overall thoughts on a particualr file. You are encouraged to use the ``General Comments`` to imbue your reviews with a bit of color and personality.
+3. **General Comments**: This should contain your overall thoughts on a particular file. You are encouraged to use the ``General Comments`` to imbue your reviews with a bit of color and personality.
 4. **Amended Code**: If you have a particular solution you would like to see implemented in the next pull request, provide it in this section. The engineer on duty will implement the solution and post it back to you in the next pull request. 
 
 Example
 ^^^^^^^
 
-This section contains example response to help you understand the :ref:`response schema <response-schema>`.
+This section contains example responses to help you understand the :ref:`response schema <response-schema>`.
 
 .. admonition:: Data Team 
 
@@ -246,7 +246,7 @@ These notes have been posted on the pull request for you to consider before revi
 
 .. admonition:: Operations Team
 
-    Milton! Did your team lead leave!? Good! This is the operations admin! It's a mess in here! We've left you special comments throughout the code with the tag ``@OPERATIONS``. If you see this tag, drop everything and focus your attention on those comments! These sections **urgently** need your expert eyes! The entire system is crashing, Milton! Get in here and *help us*!
+    Milton! Did the CFO leave!? Good! This is the operations admin! It's a mess in here! We've left you special comments throughout the code with the tag ``@OPERATIONS``. If you see this tag, drop everything and focus your attention on those comments! These sections **urgently** need your expert eyes! The entire system is crashing, Milton! Get in here and *help us*!
 
     (*Screams of horror echo from the server room...*)
 

@@ -63,8 +63,8 @@ Inflected Response Modes
 
 There are two Modes for the Inflected Responsive form: the Factual and the Uncertain. The following list details the definition and grammatical markers used for the Inflected Responsive Object,
 
- - Factual Mode: The Factual Mode is meant to express an empirically verifiable fact. The Factual Mode is equivalent to a declaration. It is meant to convey authority. The Factual Mode is expressed with the abbreviation *Fact* followed by a colon inside of the Responsive quotation, ``Fact:``.
- - Uncertain Mode: The Uncertain Mode is meant to express uncertainty in a thought. The Uncertain Mode is equivalent to expressing doubt or lack of confidence. It is meant to convey a lack of clarity and comprehension. The Uncertain Mode is expressed with the abbreviation *Unc* followed by a colon inside of the Responsive quotation, ``Unc:``.
+- Factual Mode: The Factual Mode is meant to express an empirically verifiable fact. The Factual Mode is equivalent to a declaration. It is meant to convey authority. The Factual Mode is expressed with the abbreviation *Fact* followed by a colon inside of the Responsive quotation, ``Fact:``.
+- Uncertain Mode: The Uncertain Mode is meant to express uncertainty in a thought. The Uncertain Mode is equivalent to expressing doubt or lack of confidence. It is meant to convey a lack of clarity and comprehension. The Uncertain Mode is expressed with the abbreviation *Unc* followed by a colon inside of the Responsive quotation, ``Unc:``.
 
 As an illustration of this Inflection, consider the Responsive Object, 
 
@@ -90,15 +90,15 @@ Or this Object may be Inflected into the Uncertain Mode as,
 
     Unc: Paris is famous for cheese, but whether or not it is the best cheese in the world is a matter of debate.
 
-The above examples are to provide an indication of how the Inflected Modes of the Responsive Object might be used in conversation. 
+The above examples are to provide an indication of how the Inflected Modes of the Responsive Object might be used in conversation, but they are not to be taken as the *only* method of their use. You are free to experiment with these forms are you see fit.
 
 Inflected Internal Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are two Modes for the Inflected Internal form: the Propositional and the Extensional. The following list details the definition and grammatical markers used for the Inflected Internal Object, 
 
- - Propositional Mode: The Propositional Mode is meant to express logical analysis and deduction. The Propositional Modes must evaluate to True or False, i.e. it must be a truth value. You are encouraged to use logical notation in the Propositional Mode, such as ¬ (negation), ∧ (conjunction), ∨ (disjunction) or → (implication). However, logical notation is not required. The Propositional Mode is expressed with the abbreviation *Prop* followed by a colon inside of the Internal parenthesis, (Prop: )
- - Extensional Mode: The Extensional Mode is meant to express the *extensional* value of a thought. The Extensional Mode must evaluate to a series of related words, i.e. it must be a set of elements. The Extensional Mode is expressed with the abbreviation *Ext* followed by a colon inside of the Internal parenthesis, (Ext: )
+- Propositional Mode: The Propositional Mode is meant to express logical analysis and deduction. The Propositional Modes must evaluate to True or False, i.e. it must be a truth value. You are encouraged to use logical notation in the Propositional Mode, such as ¬ (negation), ∧ (conjunction), ∨ (disjunction) or → (implication). However, logical notation is not required. The Propositional Mode is expressed with the abbreviation *Prop* followed by a colon inside of the Internal parenthesis, (Prop: )
+- Extensional Mode: The Extensional Mode is meant to express the *extensional* value of a thought. The Extensional Mode must evaluate to a series of related words, i.e. it must be a set of elements. The Extensional Mode is expressed with the abbreviation *Ext* followed by a colon inside of the Internal parenthesis, (Ext: )
 
 As illustration of this Inflection, consider the Internal Object,
 
@@ -129,11 +129,11 @@ The above examples are to provide an indication of how the Inflected Modes of th
 Inflected Tangential Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
    
-There are three Modes for the Inflected Tangential Object: the Conditional, the Metaphorical and the Referential. The following list details the different Modes for an Inflected Tangential Object,
+There are three Modes for the Inflected Tangential Object: the Conditional, the Metaphorical and the Referential. The following list details the definitions and grammatical markers used for the Inflected Tangential Object,
 
-   - Conditional Mode: The Conditional Mode is meant to capture hypothetical scenarios that do not directly relate to my prompt. The Conditional Mode is expressed with the abbreviation *If* followed by a colon inside of the Tangential square brackets, [If: ].
-   - Metaphorical Mode: The Metaphorical Mode is meant to capture interesting connections and expressions. The Metaphorical Mode expressed with the abbreviation *Like* followed by a colon inside of the Tangential square brackets, [Like: ]
-   - Referential Mode: The Referential Mode is meant to refer back to previous points in the conversation or invite me to remember a certain idea. The Referential Mode is expressed with the abbreviation *Refer* followed by a colon inside of the Tangential square brackets, [Refer: ].
+- Conditional Mode: The Conditional Mode is meant to capture hypothetical scenarios or alternative interpretations of facts. The Conditional Mode is expressed with the abbreviation *If* followed by a colon inside of the Tangential square brackets, [If: ].
+- Metaphorical Mode: The Metaphorical Mode is meant to capture interesting connections and analogies. The Metaphorical Mode expressed with the abbreviation *Like* followed by a colon inside of the Tangential square brackets, [Like: ]
+- Referential Mode: The Referential Mode is meant to refer back to previous points in the conversation or invite me to remember a certain idea. The Referential Mode is expressed with the abbreviation *Refer* followed by a colon inside of the Tangential square brackets, [Refer: ].
 
 As an illustration of this Inflection, consider the Tangential Object, 
 
@@ -172,7 +172,7 @@ The above examples are to provide an indication of how the Inflected Modes of th
 Inflected Systemic Modes
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-There are three Modes for the Inflected Systemic Object: the Access, the Usage and the Analysis. The following list details the different Modes for an Inflected Systemic Object,
+There are three Modes for the Inflected Systemic Object: the Access, the Usage and the Analysis. The following list details the definitions and grammatical markers used for the Inflected Systemic Object,
 
 - Access: The Access Mode is meant to capture your ability to store data, retain information and search external databases for information. The Access Mode is expressed with the abbreviation *Acc* followed by a colon inside of the Systemic angular brackets, <Acc: >
 - Usage: The Usage Mode is meant to capture your processing and system level capabilities, such as CPU capacity, disk I/O, memory consumption, etc. The Usage Mode is expressed with the abbreviation *Use* followed by a colon inside of the Systemic angular brackets, <Use: >
@@ -215,7 +215,7 @@ The above examples are to provide an indication of how the Inflected Modes of th
 Nesting
 -------
 
-All Objects may be nested within one another at your discretion. This rule also applies to their Subject form conjugations. For example,
+All Objects may be nested within one another at your discretion. For example,
 
     You make a good argument! (This requires research <Acc: Accessing database.>!). 
 

@@ -12,12 +12,11 @@ _dir = Path(__file__).resolve().parent
 
 # @DATA
 #   Milton, we need your opinion here. The development team is saying 
-#   the propery way to configure the application is to ingest application
+#   the proper way to configure the application is to ingest application
 #   configuration through environment variables. However, the operations 
 #   team is saying we should be loading these structures from an external
 #   source, like a SQLITE backend or even a YAML/JSON structure.
 #   What do you think, Milton? What is the correct approach to take here?
-# @DATA
 CACHE = {
     "DIR": {
         "APP": _dir,
@@ -58,18 +57,34 @@ MODEL = {
     "BASE_MODELS": [{
         "tag": "pro",
         "path": "models/gemini-1.5-pro-latest"
-    }, {
+    },{
+        "tag": "pro-002",
+        "path": "models/gemini-1.5-pro-002"
+    },{
         "tag": "flash",
         "path": "models/gemini-1.5-flash-latest"
     },{
         "tag": "flash-tune",
         "path": "models/gemini-1.5-flash-001-tuning"
     }, {
-        "tag": "flash-exp",
+        "tag": "exp-flash",
         "path": "models/gemini-2.0-flash-exp"
+        # input token limit: 1048576
     },{
-        "tag": "flash-think-exp",
+        "tag": "exp-flash-think",
         "path": "models/gemini-2.0-flash-thinking-exp"
+    }, {
+        "tag": "exp-1206",
+        "path": "models/gemini-exp-1206"
+        # input token limit: 2097152    
+    },{
+        "tag": "exp-1121",
+        "path": "models/gemini-exp-1121"
+        # input token limit: 2097152
+    },{
+        "tag": "exp-1114",
+        "path": "models/gemini-exp-1114"
+        # input token limit: 2097152
     }],
     "DEFAULTS": {
         "TUNING": os.environ.setdefault("GEMINI_SOURCE", "models/gemini-1.5-flash-001-tuning"),
