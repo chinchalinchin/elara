@@ -1,4 +1,7 @@
-""" # objects.model
+""" 
+objects.model
+-------------
+
 Object for managing Gemini Model. Essentially, a fancy wrapper around Google's GenerativeAI library to abstract away some of the details. Provides configuration and default settings.
 """
 

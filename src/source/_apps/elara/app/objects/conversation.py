@@ -1,4 +1,7 @@
-""" # objects.conversation
+"""
+objects.conversation
+--------------------
+
 Object for managing conversation chat history.
 """
 # Standard Library Modules

@@ -31,6 +31,13 @@ def args(
     )
     
     for global_arg in configuration.get("INTERFACE.ARGUMENTS"):
+        if "ACTION" in global_arg.keys():
+            parser.add_argument(*global_arg["SYNTAX"],
+                dest                    = global_arg["DEST"],
+                help                    = global_arg["HELP"],
+                action                  = global_arg["ACTION"]
+            )
+            continue
         parser.add_argument(*global_arg["SYNTAX"],
             dest                        = global_arg["DEST"],
             help                        = global_arg["HELP"],
@@ -139,9 +146,10 @@ def converse(
         variables                       = template_vars
     )
 
+    persona                             = app["CACHE"].get("currentPersona"), 
+
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt, 
-        persona                         = app["CACHE"].get("currentPersona"), 
         model_name                      = app["CACHE"].get("currentModel")
     )
 
@@ -156,6 +164,7 @@ def converse(
         "response"                      : response
     }
 
+
 def analyze(
     app                                 : dict
 )                                       -> str:
@@ -163,7 +172,7 @@ def analyze(
     This function injects the contents of a directory containing only RST documents into the ``data/templates/deduce.rst`` template. It then sends this contextualized prompt to the Gemini API persona of *Axiom*.
     """
     buffer                              = app["CACHE"].vars()
-    buffer["currentPersona"]            = app["PERSONAS"].get("analyze")
+    buffer["currentPersona"]            = app["PERSONAS"].function("analyze")
 
     analyze_vars                        = {
         **buffer,
@@ -188,6 +197,7 @@ def analyze(
         "response"                      : response
     }
 
+
 def review(
     app                                 : dict
 )                                       -> str:
@@ -201,7 +211,7 @@ def review(
     )
 
     buffer                              = app["CACHE"].vars()
-    buffer["currentPersona"]            = app["PERSONAS"].get("review")
+    buffer["currentPersona"]            = app["PERSONAS"].function("review")
 
     review_variables                    = { 
         **buffer,
@@ -245,6 +255,7 @@ def review(
         "vcs"                           : source_res
     }
 
+
 def summarize(app : dict) -> str:
     """
     
@@ -265,6 +276,33 @@ def summarize(app : dict) -> str:
     return                              { 
         "response"                      : summary
     }
+
+
+def tune(app : dict) -> bool:
+    """
+    Initialize tuned personas if tuning is enabled through the ``TUNING`` environment variable.
+
+    :returns: A flag to signal if a tuning event occured.
+    :rtype: bool
+    """
+    
+    if app["CONFIG"].get("TUNING.ENABLED"):
+        for p in app["PERSONAS"].all():
+                res                     = app["MODEL"].tune(
+                    display_name        = p,
+                    tuning_model        = app["CONFIG"].get("TUNING.SOURCE"),
+                    tuning_data         = app["PERSONA"].tuning(p)
+                )
+                app["CACHE"].update({
+                    "tunedModels"       : [{
+                        "name"          : p,
+                        "version"       : app["CONFIG"].get("VERSION"),
+                        "path"          : res.name
+                    }]
+                })
+                app["CACHE"].save()
+    return app["CACHE"].get("tunedModels")
+    
 
 def init():
     """
@@ -328,6 +366,7 @@ def init():
 
     app["PERSONAS"]                      = persona.Persona(
         current                         = app["CACHE"].get("currentPersona"),
+        config                          = app["CONFIG"].get("PERSONA"),
         tune_dir                        = app["CONFIG"].get("TREE.DIRECTORIES.TUNING"),
         tune_ext                        = app["CONFIG"].get("TREE.EXTENSIONS.TUNING"),
         sys_dir                         = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM"),

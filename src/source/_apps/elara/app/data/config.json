@@ -19,7 +19,7 @@
             "DEST": "show",
             "HELP": "Print output to console.",
             "SYNTAX": ["-s", "--show"],
-            "TYPE": "str"
+            "ACTION": "store_true"
         },{
             "DEST": "output",
             "HELP": "Save Gemini's response to local directory.",
@@ -119,7 +119,8 @@
         },
         "FILES": {
             "CACHE": "cache.json",
-            "CONFIG": "config.json"
+            "CONFIG": "config.json",
+            "SUMMARY": "summary.rst"
         },
         "EXTENSIONS": {
             "TEMPLATE": ".rst",

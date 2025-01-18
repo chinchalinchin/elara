@@ -1,4 +1,7 @@
-""" objects.cache
+""" 
+objects.cache
+-------------
+
 Object for managing application data.
 """
 

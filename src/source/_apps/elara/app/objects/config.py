@@ -1,6 +1,12 @@
+"""
+objects.config
+--------------
+
+Object for managing application configuration.
+"""
+
 import json 
 import os
-
 
 class Config:
     _rel_path = None

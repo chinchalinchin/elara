@@ -1,4 +1,7 @@
-""" # objects.language
+"""
+objects.language
+----------------
+
 Object for Language module parsing and loading. Language modules are plugins for the prompt instructions.
 """
 

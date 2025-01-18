@@ -1,4 +1,7 @@
-""" # objects.persona
+""" 
+objects.persona
+---------------
+
 Object for managing Persona initialization and data.
 """
 # Standard Library Modules
@@ -16,6 +19,7 @@ class Persona:
     def __init__(
         self, 
         current = None,
+        config = None,
         tune_dir = None,
         sys_dir = None,
         tune_ext = None,
@@ -31,13 +35,14 @@ class Persona:
         :param tune_ext: Extension for tuning data. Defaults to ``.json``.
         :param sys_ext: Extension for the system instructions data. Defaults to ``.txt``
         """
-        if None in [current, tune_dir, sys_dir, tune_ext, sys_ext]:
-            raise ValueError("Must set all class properties: (current, tune_dir, tune_ext, sys_dir, sys_ext)")
+        if None in [current, config, tune_dir, tune_ext, sys_dir, sys_ext]:
+            raise ValueError("Must set all class properties: (current, config, tune_dir, tune_ext, sys_dir, sys_ext)")
         
         self.current = None
         self.personas = { }
         self._load(
             current,
+            config,
             tune_dir, 
             tune_ext, 
             sys_dir, 
@@ -62,6 +67,7 @@ class Persona:
     def _load(
         self, 
         current : str,
+        config : str,
         tune_dir : str , 
         tune_ext : str,
         sys_dir : str,
@@ -108,6 +114,13 @@ class Persona:
 
                 self.personas[persona]["SYSTEM"] = payload["payload"]
 
+        for persona in self.personas.keys():
+            key = persona.upper()
+            self.personas[persona]["GENERATION_CONFIG"] = config[key]["GENERATION_CONFIG"]
+            self.personas[persona]["SAFETY_SETTINGS"] = config[key]["SAFETY_SETTINGS"]
+            self.personas[persona]["TOOLS"] = config[key]["TOOLS"]
+            self.personas[persona]["FUNCTIONS"] = config[key]["FUNCTIONS"]
+
         self.current = current
 
     def update(
@@ -125,38 +138,107 @@ class Persona:
         self.current = self.personas[persona] 
         return self.current
 
-    def get(self, func: str = None) -> dict:
+    def get(self) -> dict:
         """
         Get current persona.
 
         :returns: Persona metadata
         :rtype: dict
         """
-        if func == "converse":
-            return self.personas["elara"]
-        if func == "analyze":
-            return self.personas["axiom"]
-        if func == "review":
-            return self.personas["milton"]
         return self.current
     
-    def tuning(self) -> list:
+    def function(
+        self, 
+        func : str = None
+    ) -> dict:
+        """
+        
+        """
+        for p in self.personas:
+            if func in p["FUNCTIONS"]:
+                return p
+        return self.current
+
+    def tuning(
+        self,
+        persona : str = None
+    ) -> list:
         """
         Get persona tuning data.
 
+        :param persona: Persona whose tuning data is to be retrieved. If no persona is provided, the current persona's tuning data will be returned.
+        :type persona: str
         :returns: Persona tuning data.
         :rtype: list(dict)
         """
-        return self.current["TUNING"]
-    
-    def system(self) -> str:
+        if persona is None:
+            return self.current["TUNING"]
+        return self.personas[persona]["TUNING"]
+
+    def system(
+        self,
+        persona : str = None
+    ) -> str:
         """
         Get persona system instructions.
 
+        :param persona: Persona whose system instructions are to be retrieved. If no persona is provided, the current persona's system instructions will be returned.
+        :type persona: str
         :return: Persona system instructions
         :rtype: str
         """
-        return self.current["SYSTEM"]
+        if persona is None:
+            return self.current["SYSTEM"]
+        return self.personas[persona]["SYSTEM"]
+    
+    def generation_config(
+        self,
+        persona : str = None
+    ) -> str:
+        """
+        Get persona generation config.
+
+        :param persona: Persona whose system instructions are to be retrieved. If no persona is provided, the current persona's system instructions will be returned.
+        :type persona: str
+        :return: Persona system instructions
+        :rtype: str
+        """
+        if persona is None:
+            return self.current["GENERATION_CONFIG"]
+        return self.personas[persona]["GENERATION_CONFIG"]
+    
+    def safety_settings(
+        self,
+        persona : str = None
+    ) -> str:
+        """
+        Get persona system instructions.
+
+        :param persona: Persona whose system instructions are to be retrieved. If no persona is provided, the current persona's system instructions will be returned.
+        :type persona: str
+        :return: Persona system instructions
+        :rtype: str
+        """
+        if persona is None:
+            return self.current["SAFETY_SETTINGS"]
+        return self.personas[persona]["SAFETY_SETTINGS"]
+    
+    def tools(
+        self,
+        persona : str = None
+    ) -> str:
+        """
+        Get persona system instructions.
+
+        :param persona: Persona whose system instructions are to be retrieved. If no persona is provided, the current persona's system instructions will be returned.
+        :type persona: str
+        :return: Persona system instructions
+        :rtype: str
+        """
+        if persona is None:
+            return self.current["TOOLS"]
+        return self.personas[persona]["TOOLS"]
+    
     
     def all(self) -> list:
         """

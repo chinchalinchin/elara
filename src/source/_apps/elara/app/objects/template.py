@@ -1,11 +1,14 @@
-""" # objects.template
-Object for managing Template loading and rendering.
+""" 
+objects.template
+----------------
+
+Object for managing template loading and rendering.
 """
 # Application Modules 
 import conf 
 
 # External Modules
-from jinja2 import Environment, FileSystemLoader
+import jinja2
 
 
 class Template:
@@ -33,8 +36,8 @@ class Template:
         """
         self.dir = dir
         self.ext = ext
-        self.templates = Environment(
-            loader=FileSystemLoader(self.dir)
+        self.templates = jinja2.Environment(
+            loader = jinja2.FileSystemLoader(self.dir)
         )
 
     def __new__(
