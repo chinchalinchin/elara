@@ -9,42 +9,42 @@ import json
 import os
 
 class Config:
-    _rel_path = None
-
     inst = None
-    
+    """Singleton instance"""
     data = None
-
-    directory = None 
+    """Config data"""
+    file = None
+    """Location of Config file"""
 
     def __init__(
         self, 
-        app_directory : str, 
-        rel_path : str = os.path.join("data", "config.json")
+        config_file : str
     ):
-        self.app_directory = app_directory
-        self.rel_path = rel_path
-        self.file_name = os.path.join(
-            self.app_directory, 
-            self._rel_path 
-        )
+        self.file = config_file
         self._load()
         self._override()
 
-    def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super(
+    def __new__(
+        self, 
+        *args, 
+        **kwargs
+    ):
+        """
+        Create Config singleton.
+        """
+        if not self.inst:
+            self.inst = super(
                 Config, 
-                cls
-            ).__new__(cls)
-        return cls._instance
+                self
+            ).__new__(self)
+        return self.inst
 
     def _load(self):
         """
         Load in configuration data from file.
         """
         try:
-            with open(self.file_name, "r") as f:
+            with open(self.file, "r") as f:
                 self.data = json.load(f)
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f"Error loading config file: {e}")
@@ -55,14 +55,14 @@ class Config:
         Override configuration with environment variables, if applicable.
         """
 
-        self.data["TUNING_SOURCE"] = os.environ.get(
+        self.data["TUNING"]["SOURCE"] = os.environ.get(
             "TUNING_SOURCE", 
-            self.data["MODEL"]["DEFAULTS"]["TUNING"]
+            self.data["TUNING"]["SOURCE"]
         )
 
         self.data["DEFAULT_MODEL"] = os.environ.get(
             "GEMINI_MODEL", 
-            self.data["MODEL"]["DEFAULTS"]["MODEL"]
+            self.data["DEFAULT_MODEL"]
         )
 
         self.data["LANGUAGE"]["MODULES"]["OBJECT"] = bool(
@@ -100,14 +100,14 @@ class Config:
             )
         )
         
-        self.data["ANALYSIS"]["LATEX_PREAMBLE"] = os.environ.get(
+        self.data["ANALYZE"]["LATEX_PREAMBLE"] = os.environ.get(
             "LATEX_PREAMBLE",
-            self.data["LATEX_PREAMBLE"]
+            self.data["ANALYZE"]["LATEX_PREAMBLE"]
         )
 
         self.data["REPO"]["VCS"] = os.environ.get(
             "VCS", 
-            self.data["REPOS"]["VCS"]
+            self.data["REPO"]["VCS"]
         )
 
         self.data["REPO"]["AUTH"]["CREDS"] = os.environ.get(

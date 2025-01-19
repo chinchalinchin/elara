@@ -6,10 +6,7 @@ Object for external Version Control System.
 """
 # Standard Library Modules 
 import logging 
-
-# Application Modules
 import traceback
-import conf 
 
 # External Modules
 import requests
@@ -23,14 +20,17 @@ class Repo:
     """Authentication configuration for VCS backend"""
     src = None
     """VCS source information"""
+    backends = None
+    """Backend configurations"""
 
     def __init__(
         self,
         repository : str, 
         owner : str,
         commit : str,
-        vcs : str= conf.REPOS["VCS"],
-        auth : str= conf.REPOS["AUTH"]
+        vcs : str ,
+        auth : str,
+        backends : dict
     ):
         """
         Initialize Repository object.
@@ -43,6 +43,8 @@ class Repo:
         :type vcs: str
         :param auth: Authentication configuration for the VCS backend. Currently supposed token-based authorization headers. Defaults to the token value in the ``VCS_TOKEN`` environment variable.
         :type auth: dict
+        :param backends: Dictionary containing backend configurations.
+        :type backends: dict
 
         .. note::
 
@@ -62,6 +64,7 @@ class Repo:
             
         """
         self.auth = auth
+        self.backends = backends
         self.src = {
             "owner": owner,
             "repo": repository,
@@ -105,11 +108,13 @@ class Repo:
         :rtype: str
         """
         if self.src["vcs"] == "github":
-            return conf.REPOS["BACKENDS"]["GITHUB"]["API"]["PR"].format(**{
+            key = self.src["vcs"].upper()
+            return self.backends[key]["API"]["PR"].format(**{
                 "owner": self.src["owner"],
                 "repo": self.src["repo"],
                 "pr": pr
             })
+        
         raise ValueError(f"Unsupported VCS: {self.src['vcs']}")
     
     def _headers(self):
@@ -124,12 +129,15 @@ class Repo:
         :rtype:  dict
         """
         if self.src["vcs"] == "github":
+            key = self.src["vcs"].upper()
+
             if self.auth["TYPE"] == "bearer":
                 token = self.auth["CREDS"]
                 return {
                     **{ "Authorization": f"Bearer {token}" }, 
-                    **conf.REPOS["BACKENDS"]["GITHUB"]["HEADERS"]
+                    **self.backends[key]["HEADERS"]
                 }
+            
         raise ValueError(f"Unsupported auth type: {self.auth['TYPE']} or VCS: {self.src['vcs']}")
 
     def vars(self):
@@ -166,8 +174,17 @@ class Repo:
         data = {
             "body": msg,
             "commit_id": commit, 
+            # @DEVELOPMENT
+            #   We need some way to extract this information from Gemini's response!
+            #   What do you think, Milton? You probably have a particuarly insightful
+            #   way to ensure Gemini returns the necessary information for this pull
+            #   request to get posted to the correct file lines!
             "path": path,
-            "position": 1
+            "position": 1,
+            "start_line":1,
+            "start_side":"RIGHT",
+            "line":2,
+            "side":"RIGHT"
         }
         
         try:

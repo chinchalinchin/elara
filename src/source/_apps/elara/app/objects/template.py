@@ -4,9 +4,6 @@ objects.template
 
 Object for managing template loading and rendering.
 """
-# Application Modules 
-import conf 
-
 # External Modules
 import jinja2
 
@@ -16,28 +13,28 @@ class Template:
     """Singleton instance"""
     templates = None
     """Application templates"""
-    dir = None
+    directory = None
     """Directory containing templates"""
-    ext = None
+    extension = None
     """File extension of templates"""
 
     def __init__(
         self, 
-        dir = conf.CACHE["DIR"]["TEMPLATES"],
-        ext = ".rst"
+        directory : str,
+        extension : str
     ):
         """"
         Initialize *Templates* object.
 
-        :param dir: Directory containg the templates. Defaults to ``data/templates``.
-        :type dir: str
-        :param ext: Extension of template files. Defaults to ``.rst``.
-        :type ext: str
+        :param directory: Directory containg the templates. Defaults to ``data/templates``.
+        :type directory: str
+        :param extension: Extension of template files. Defaults to ``.rst``.
+        :type extension: str
         """
-        self.dir = dir
-        self.ext = ext
+        self.directory = directory
+        self.extension = extension
         self.templates = jinja2.Environment(
-            loader = jinja2.FileSystemLoader(self.dir)
+            loader = jinja2.FileSystemLoader(self.directory)
         )
 
     def __new__(
@@ -52,7 +49,7 @@ class Template:
             self.inst = super(
                 Template, 
                 self
-            ).__new__(self, *args, **kwargs)
+            ).__new__(self)
         return self.inst
 
     def get(
@@ -71,7 +68,7 @@ class Template:
         :type template: str
         :returns: Jinja2 template
         """
-        file_name = "".join([template, self.ext])
+        file_name = "".join([template, self.extension])
         return self.templates.get_template(file_name)
 
     def render(

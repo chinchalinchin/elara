@@ -8,24 +8,22 @@ Object for Language module parsing and loading. Language modules are plugins for
 # Standard Library Modules
 import os
 
-# Application Modules
-import conf 
 
 class Language:
     inst = None
     """Singleton instance"""
     modules = { }
     """Language modules"""
-    dir = None
+    directory = None
     """Directory containg Language modules"""
-    ext = None
+    extension = None
     """File extension of Language modules"""
 
     def __init__(
         self, 
         enabled: list, 
-        dir = conf.CACHE["DIR"]["MODULES"],
-        ext = conf.LANGUAGE["EXTENSION"]
+        directory: str,
+        extension : str
     ):
         """
         Initialize new Persona Language with a set of modules. Language modules are given below,
@@ -37,12 +35,13 @@ class Language:
 
         :param enabled: List of enabled Language modules
         :type enabled: list
-        :param dir: Directory containing Language modules. Defaults to ``data/modules``.
-        :type dir: str
+        :param directory: Directory containing Language modules. Defaults to ``data/modules``.
+        :type directory: str
         :param ext: File extension of Language modules. Defaults to ``.rst``.
+        :type ext: str
         """
-        self.dir = dir
-        self.ext = ext
+        self.directory = directory
+        self.extension = extension
         self._load(enabled)
 
     def __new__(
@@ -75,9 +74,9 @@ class Language:
         :type enabled: list
         """
         
-        for root, _, files in os.walk(self.dir):
+        for root, _, files in os.walk(self.directory):
             for file in files:
-                if os.path.splitext(file)[1] != self.ext:
+                if os.path.splitext(file)[1] != self.extension:
                     continue
 
                 if os.path.splitext(file)[0] not in enabled:

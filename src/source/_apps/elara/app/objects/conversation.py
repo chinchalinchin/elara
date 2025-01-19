@@ -9,9 +9,6 @@ import datetime
 import json
 import os
 
-# Application Modules
-import conf 
-
 class Conversation:
     dir = None
     """History directory"""

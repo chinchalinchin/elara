@@ -5,7 +5,6 @@ objects.cache
 Object for managing application data.
 """
 
-import conf 
 import json
 
 class Cache:
@@ -18,7 +17,7 @@ class Cache:
 
     def __init__(
         self, 
-        file = conf.CACHE["FILE"]["CACHE"]
+        cache_file : str
     ):
         """
         Initialize Cache.
@@ -26,7 +25,7 @@ class Cache:
         :param file: Location of Cache file. Defaults to ``data/cache.json``.
         :type file: str
         """
-        self.file = file
+        self.file = cache_file
         self._load()
 
     def __new__(
@@ -41,7 +40,7 @@ class Cache:
             self.inst = super(
                 Cache, 
                 self
-            ).__new__(self, *args, **kwargs)
+            ).__new__(self)
         return self.inst
     
     def _load(self):
@@ -52,11 +51,11 @@ class Cache:
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(e)
             self.data  = {
-                "currentModel":  conf.MODEL["DEFAULTS"]["MODEL"],
-                "currentPersona": conf.PERSONAS["PERSONA"]["DEFAULTS"]["CHAT"],
-                "currentPrompter": conf.PROMPTS["PROMPTER"],
+                "currentModel":  None,
+                "currentPersona": None,
+                "currentPrompter": None,
                 "tunedModels": [],
-                "tuningModel": conf.MODEL["DEFAULTS"]["TUNING"],
+                "tuningModel":None,
             }
 
     def vars(self) -> dict:

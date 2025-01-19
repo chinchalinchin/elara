@@ -20,11 +20,12 @@ import objects.template as template
 
 logger = logging.getLogger(__name__)
 
-def args( 
-    configuration                       : config.Config
-)                                       -> argparse.Namespace:
+def args(configuration : config.Config) -> argparse.Namespace:
     """
-    Parse and format command line arguments
+    Parse and format command line arguments.
+
+    :returns: Parsed arguments.
+    :rtype: argparse.Namespace
     """
     parser                              = argparse.ArgumentParser(
         description                     = configuration.get("INTERFACE.HELP.PARSER")
@@ -49,12 +50,12 @@ def args(
         help                            = configuration.get("INTERFACE.HELP.SUBPARSER")
     )
 
-    for op, op_config in configuration.get("INTERFACE.OPERATIONS"):
+    for op_config in configuration.get("INTERFACE.OPERATIONS"):
         op_parser                       = subparsers.add_parser(
             name                        = op_config["NAME"],
             help                        = op_config["HELP"]
         )
-        for op_arg in op["ARGUMENTS"]:
+        for op_arg in op_config["ARGUMENTS"]:
             if op_arg["SYNTAX"] == "nargs":
                 op_parser.add_argument(
                     default             = op_arg["DEFAULT"],
@@ -73,11 +74,13 @@ def args(
     return parser.parse_args()
 
 
-def configure(
-    app                                 : dict
-)                                       -> dict:
+def configure(app : dict) -> dict:
     """
     Parses and applies configuration settings.
+
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing the current configuration
     """
     config                              = {}
 
@@ -96,35 +99,24 @@ def configure(
         return config
     
     logger.warning("No configuration pairs provided.")
-    return {
-        "response"                      : config
-    }
+    return config
 
 
-def converse(
-    app                                 : dict
-)                                       -> str:
+def converse(app : dict) -> str:
     """
     Chat with one of Gemini's personas.
 
-    :param prompt: Prompt to send.
-    :type prompt: str
-    :param persona: Persona with which to converse. If no `persona` is provided, it will be retrieved from the cache.
-    :type persona: str
-    :param model_name: Gemini model to use. If no `model_name` is provided, it will be retrieved from teh cache.
-    :type model_type: str
-    :param summarize_dir: Directory of additional context to inject into prompt. If this argument is provided, an RST formatted summary of a directory will be generated using `parse.summarize()` and injected into the prompt.
-    :type summarize_dir: str
-    :param show: A flag signaling whether the prompt and response should be printed to screen.
-    :returns: The persona's response to the prompt.
-    :rtype: str
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated prompt and model response.
+    :rtype: dict
     """
-    convo = conversation.Conversation()
+    convo                               = conversation.Conversation()
 
     convo.update(
         persona                         = app["CACHE"].get("currentPersona"), 
         name                            = app["CACHE"].get("currentPrompter"), 
-        text                            = app["ARGUMENTS"].get("prompt")
+        text                            = app["ARGUMENTS"].prompt
     )
     
     template_vars                       = { 
@@ -133,11 +125,10 @@ def converse(
         **convo.vars()
     }
 
-    if app["ARGUMENTS"].get("directory") is not None:
+    if app["ARGUMENTS"].directory is not None:
         template_vars.update(
             summarize(
-                directory               = app["ARGUMENTS"].get("directory"),
-                stringify               = True
+                directory               = app["ARGUMENTS"].directory,
             )
         )
 
@@ -146,11 +137,13 @@ def converse(
         variables                       = template_vars
     )
 
-    persona                             = app["CACHE"].get("currentPersona"), 
-
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt, 
-        model_name                      = app["CACHE"].get("currentModel")
+        model_name                      = app["CACHE"].get("currentModel"),
+        generation_config               = app["PERSONA"].get("generationConfig"),
+        safety_settings                 = app["PERSONA"].get("safetySettings"),
+        tools                           = app["PERSONA"].get("tools"),
+        system_instruction              = app["PERSONA"].get("systemInstruction")
     )
 
     convo.update(
@@ -165,14 +158,18 @@ def converse(
     }
 
 
-def analyze(
-    app                                 : dict
-)                                       -> str:
+def analyze(app: dict) -> str:
     """
-    This function injects the contents of a directory containing only RST documents into the ``data/templates/deduce.rst`` template. It then sends this contextualized prompt to the Gemini API persona of *Axiom*.
+    This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
+
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated prompt and model response.
+    :rtype: dict
     """
     buffer                              = app["CACHE"].vars()
-    buffer["currentPersona"]            = app["PERSONAS"].function("analyze")
+    persona                             = app["PERSONAS"].function("analyze")
+    buffer["currentPersona"]            = persona
 
     analyze_vars                        = {
         **buffer,
@@ -185,11 +182,15 @@ def analyze(
         temp                            = "analysis", 
         variables                        = analyze_vars
     )
-
-    response                            = model.reply(
+    
+    response                            = model.respond(
         prompt                          = parsed_prompt,
-        persona                         = app["PERSONAS"].get("analyze"),
-        model_name                      = app["CACHE"].get("currentModel")
+        persona                         = persona,
+        model_name                      = app["CACHE"].get("currentModel"),
+        generation_config               = app["PERSONAS"].get("generationConfig", persona),
+        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
+        tools                           = app["PERSONAS"].get("tools", persona),
+        system_instructions             = app["PERSONAS"].get("systemInstructions", persona)
     )
     
     return {
@@ -198,20 +199,27 @@ def analyze(
     }
 
 
-def review(
-    app                                 : dict
-)                                       -> str:
+def review(app : dict) -> str:
     """
+    This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated prompt and model response.
+    :rtype: dict
     """
     source                              = repo.Repo(
-        repo                            = app["ARGUMENTS"].get("repository"),
-        owner                           = app["ARGUMENTS"].get("owner"),
-        commit                          = app["ARGUMENTS"].get("commit")
+        repo                            = app["ARGUMENTS"].repository,
+        owner                           = app["ARGUMENTS"].owner,
+        commit                          = app["ARGUMENTS"].commit,
+        vcs                             = "TODO",
+        auth                            = "TODO",
+        backend                         = "TODO"
     )
 
     buffer                              = app["CACHE"].vars()
-    buffer["currentPersona"]            = app["PERSONAS"].function("review")
+    persona                             = app["PERSONAS"].function("review")
+    buffer["currentPersona"]            = persona
 
     review_variables                    = { 
         **buffer,
@@ -226,8 +234,12 @@ def review(
 
     model_res                           = app["MODEL"].respond(
         prompt                          = review_prompt,
-        persona                         = buffer["currentPersona"],
-        model_name                      = buffer["currentModel"],
+        persona                         = persona,
+        model_name                      = app["CACHE"].get("currentModel"),
+        generation_config               = app["PERSONAS"].get("generationConfig", persona),
+        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
+        tools                           = app["PERSONAS"].get("tools", persona),
+        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
     )
 
     source_res                          = source.comment(
@@ -258,14 +270,19 @@ def review(
 
 def summarize(app : dict) -> str:
     """
-    
+    This function summarizes the contents of a directory and writes the sumamry to an RST file. 
+
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated summary.
+    :rtype: dict
     """
-    local_dir                           = app["ARGUMENTS"].get("directory")
+    local_dir                           = app["ARGUMENTS"].directory
 
     dir                                 = directory.Directory(
         directory                       = local_dir,
         summary_file                    = app["CONFIG"].get("TREE.FILES.SUMMARY"),
-        summary_includes                = app["CONFIG"].get("SUMMARIZE.INCLDUES"),
+        summary_includes                = app["CONFIG"].get("SUMMARIZE.INCLUDES"),
         summary_directives              = app["CONFIG"].get("SUMMARIZE.DIRECTIVES")
     )
 
@@ -304,9 +321,12 @@ def tune(app : dict) -> bool:
     return app["CACHE"].get("tunedModels")
     
 
-def init():
+def init(
+    data_dir : str = "data",
+    config_file : str = "config.json"
+) -> dict:
     """
-    Initialize application.
+    Initialize the application.
 
     :returns: Application configuration.
     :rtype: dict
@@ -314,16 +334,22 @@ def init():
 
     app                                 = {}
     app_dir                             = pathlib.Path(__file__).resolve().parent
-    app["CONFIG"]                       = config.Config(app_dir)
+
+    config_filepath                     = os.path.join(app_dir, data_dir, config_file)
+    app["CONFIG"]                       = config.Config(
+        config_file                     = config_filepath
+    )
 
     app["ARGUMENTS"]                    = args(
         configuration                   = app["CONFIG"]
     )
 
     cache_rel_path                      = app["CONFIG"].get("TREE.DIRECTORIES.DATA")
-    cache_file_name                     = app["CONFIG"].get("TREE.FILES.CACHE")
-    cache_dir                           = os.path.join(app_dir, cache_rel_path, cache_file_name)
-    app["CACHE"]                        = cache.Cache(cache_dir)
+    cache_file                          = app["CONFIG"].get("TREE.FILES.CACHE")
+    cache_filepath                      = os.path.join(app_dir, cache_rel_path, cache_file)
+    app["CACHE"]                        = cache.Cache(
+        cache_file                      = cache_filepath
+    )
 
     update_event                        = False
     if app["ARGUMENTS"].persona:
@@ -378,12 +404,26 @@ def init():
 
     return app
 
-def main():
+def main() -> bool:
     """
     Main function to run the command-line interface.
     """
     app                                 = init()
-    res                                 = exec(app["OPERATION"], app)
+    operations                          = {
+        "summarize"                     : summarize,
+        "converse"                      : converse,
+        "configure"                     : configure,
+        "review"                        : review,
+        "tune"                          : tune,
+        "analyze"                       : analyze
+    }
+
+    operation_name                      = app["ARGUMENTS"].operation
+
+    if operation_name not in operations:
+        return False 
+    
+    res = operations[operation_name](app)
 
     if app["ARGUMENTS"].output:
         with open(app["ARGUMENTS"].output, "w") as out:
