@@ -109,7 +109,6 @@ class Directory:
             # traverse files in alphabetical order
             files.sort()
             for file in files:
-
                 base, ext = os.path.splitext(file)
 
                 if ext not in self._extensions() \

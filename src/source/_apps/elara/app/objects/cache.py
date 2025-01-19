@@ -6,6 +6,10 @@ Object for managing application data.
 """
 
 import json
+import logging
+import threading
+
+logger = logging.getLogger(__name__)
 
 class Cache:
     inst = None
@@ -14,6 +18,7 @@ class Cache:
     """Cache data"""
     file = None
     """Location of Cache file"""
+    _lock = threading.Lock()
 
     def __init__(
         self, 
@@ -36,31 +41,40 @@ class Cache:
         """
         Create a Cache singleton.
         """
-        if not self.inst:
-            self.inst = super(
-                Cache, 
-                self
-            ).__new__(self)
+        with self._lock:
+            if not self.inst:
+                self.inst = super(
+                    Cache, 
+                    self
+                ).__new__(self)
         return self.inst
     
+    @staticmethod
+    def _fresh():
+        return {
+            "currentModel":  None,
+            "currentPersona": None,
+            "currentPrompter": None,
+            "tunedModels": [],
+            "tuningModel":None,
+        }
+    
     def _load(self):
-        """Loads the tuned model cache from the JSON file."""
+        """Loads the cache from the JSON file."""
         try:
             with open(self.file, "r") as f:
-                self.data = json.load(f)
+                content = f.read()
+                if content:
+                    self.data = json.loads(f)
+                else:
+                    self.data = self._fresh()
         except (FileNotFoundError, json.JSONDecodeError) as e:
-            print(e)
-            self.data  = {
-                "currentModel":  None,
-                "currentPersona": None,
-                "currentPrompter": None,
-                "tunedModels": [],
-                "tuningModel":None,
-            }
+            logger.error(f"Error loading cache: {e}")
+            self.data  = self._fresh()
 
     def vars(self) -> dict:
         """
-        Retrieve the entire Cache, formatted for templating.
+        Retrieve the entire cache, ready for templating.
 
         :returns: A dictionary of key-value pairs.
         :rtype: dict
@@ -87,7 +101,7 @@ class Cache:
         try:
             return self.data[attribute]
         except KeyError:
-            print(f"KeyError: Attribute {attribute} not found")
+            logger.error(f"KeyError: Attribute {attribute} not found")
             return None
 
     def update(self, **kwargs) -> bool:
@@ -117,9 +131,14 @@ class Cache:
         """
         Saves the cache to the JSON file in ``data`` directory.
         """
-        with open(self.file, "w") as f:
-            json.dump(self.data, f, indent=4)
-        return True
+        try:
+            with open(self.file, "w") as f:
+                json.dump(self.data, f, indent=4)
+            return True
+        except Exception as e:
+            logger.error(f"Error saving cache: {e}")
+            return False
+            
     
     def base_models(self, path=True):
         """
@@ -127,8 +146,12 @@ class Cache:
 
         :param path: If ``path=True`` the full model name will be returned. If ``path=False``, the short name of the model will be returned.
         """
+        if "baseModels" not in self.data:
+            return []
+        
         if path:
             return [ model["path"] for model in self.data["baseModels"] ]
+        
         return [ model["tag"] for model in self.data["baseModels"] ]
     
     def tuned_personas(self):

@@ -6,6 +6,7 @@ import argparse
 import logging
 import os
 import pathlib
+import re
 
 # Application Modules
 import objects.cache as cache
@@ -91,6 +92,9 @@ def configure(app : dict) -> dict:
                     logger.error(f"Invalid configuration format: {item}. Expected key=value.")
                     continue
                 key, value              = item.split("=", 1)
+                if key not in app["CONFIG"].data:
+                     logger.error(f"Invalid configuration key: {key}. Key not in configuration.")
+                     continue
                 config[key]             = value
             except ValueError:
                 logger.error(f"Invalid configuration format: {item}. Expected key=value.")
@@ -206,6 +210,13 @@ def review(app : dict) -> str:
     :returns: Dictionary containing templated prompt and model response.
     :rtype: dict
     """
+    if app["CONFIG"].get("REPO.VCS") is None:
+        raise ValueError("VCS backend not set.")
+    
+    if app["CONFIG"].get("REPO.VCS") == "github" \
+        and not app["CONFIG"].get("REPO.AUTH.CREDS"):
+        raise ValueError("VCS_TOKEN environment variable not set for github VCS.")
+    
     source                              = repo.Repo(
         repository                      = app["ARGUMENTS"].repository,
         owner                           = app["ARGUMENTS"].owner,
@@ -239,25 +250,14 @@ def review(app : dict) -> str:
         system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
     )
 
-    source_res                          = source.comment(
-        msg                             = model_res, 
-        pr                              = app["ARGUMENTS"].pull,
-        # @DEVELOPMENT
-        #   Hey, Milton, we need to figure out a way to iterate over the file
-        #   paths in Gemini's output (i.e. your output!). 
-        #   
-        #   We might need to post a batch comment to the Gitub Rest API, if you 
-        #   decide to flag multiple files for review. Right now the comments are only 
-        #   being appended to the README.md file.
-        #
-        #   Everyone on the development team has been looking for the correct endpoint
-        #   and request body format to use to accomplish this. We might need to
-        #   overhaul the ``comment()`` function to accomplish this!
-        #
-        #   However, the crux of the issue is parsing Gemini's response. 
-        #   We need a clever way to pull the file name from the response, Milton!
-        path                            = "README.md"
-    )
+    file_paths                          = re.findall(r'(?m)^([\w\/\.\-]+)\n[-]+$', model_res)
+    source_res                          = []
+    for file_path in file_paths:
+        source_res                      += [source.comment(
+            msg                         = model_res,
+            pr                          = app["ARGUMENTS"].pull,
+            path                        = file_path
+        )]
     return {
         "prompt"                        : review_prompt,
         "response"                      : model_res,
@@ -302,6 +302,7 @@ def tune(app : dict) -> bool:
     
     if app["CONFIG"].get("TUNING.ENABLED"):
         for p in app["PERSONAS"].all():
+            if not app["CACHE"].is_tuned(p):
                 res                     = app["MODEL"].tune(
                     display_name        = p,
                     tuning_model        = app["CONFIG"].get("TUNING.SOURCE"),
@@ -336,6 +337,9 @@ def init(
     app["CONFIG"]                       = config.Config(
         config_file                     = config_filepath
     )
+
+    if not app["CONFIG"].get("GEMINI_KEY"):
+        raise ValueError("GEMINI_KEY environment variable not set.")
 
     app["ARGUMENTS"]                    = args(
         configuration                   = app["CONFIG"]
