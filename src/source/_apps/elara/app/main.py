@@ -312,7 +312,12 @@ def review(app : dict) -> dict:
 
 def request(app: dict) -> dict:
     """
+    This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
     
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated feature request.
+    :rtype: dict
     """
     buffer                              = app["CACHE"].vars()
     persona                             = app["PERSONAS"].function("request")
