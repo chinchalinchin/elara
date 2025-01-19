@@ -7,7 +7,11 @@ Object for managing conversation chat history.
 # Standard Library Modules
 import datetime
 import json
+import logging
 import os
+import threading
+
+logger = logging.getLogger(__name__)
 
 class Conversation:
     dir = None
@@ -20,6 +24,7 @@ class Conversation:
     """Singleton instance"""
     tz_offset = None
     """Timezone offset"""
+    _lock = threading.Lock()
 
     def __init__(
         self, 
@@ -48,11 +53,12 @@ class Conversation:
         """
         Create Conversation singleton.
         """
-        if not self.inst:
-            self.inst = super(
-                Conversation, 
-                self
-            ).__new__(self, *args, **kwargs)
+        with self._lock:
+            if not self.inst:
+                self.inst = super(
+                    Conversation, 
+                    self
+                ).__new__(self, *args, **kwargs)
         return self.inst
     
     def _load(self):
@@ -67,11 +73,18 @@ class Conversation:
 
                 persona = os.path.splitext(file)[0]
                 file_path = os.path.join(root, file)
-
-                with open(file_path, "r") as f:
-                    payload  = json.load(f)
                 
-                self.hist[persona] = payload["payload"]
+                try:
+                    with open(file_path, "r") as f:
+                        content = f.read()
+                    if content:
+                        payload  = json.loads(f)
+                    else: 
+                        payload = { "payload": [] }
+                    self.hist[persona] = payload["payload"]
+                except (FileNotFoundError, json.JSONDecodeError) as e:
+                    logger.error(f"Error loading conversation history: {e}")
+                    self.hist[persona] = []
 
     def _persist(
         self, 
@@ -113,6 +126,8 @@ class Conversation:
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
+        if persona not in self.hist.keys():
+            raise ValueError(f"Persona {persona} conversation history not found.")
         return self.hist[persona]
     
     def update(
@@ -133,13 +148,14 @@ class Conversation:
         :returns: Full chat history
         :rtype: dict
         """
-        index = len(self.hist[persona])
-        self.hist[persona] += [{ 
+        if persona not in self.hist.keys():
+            self.hist[persona] = []
+
+        self.hist[persona].append({ 
             "name": name,
             "text": text,
-            "index": index,
             "timestamp": self._timestamp()
-        }]
+        })
         self._persist(persona)
         return self.hist[persona]
 
@@ -153,6 +169,9 @@ class Conversation:
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
+        if persona not in self.hist.keys():
+            raise ValueError(f"Persona {persona} conversation history not found")
+        
         return {
             "history": self.hist[persona]
         }

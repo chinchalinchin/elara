@@ -6,7 +6,10 @@ Object for managing application configuration.
 """
 
 import json 
+import logging
 import os
+
+logger = logging.getLogger(__name__)
 
 class Config:
     inst = None
@@ -20,6 +23,12 @@ class Config:
         self, 
         config_file : str
     ):
+        """
+        Initialize Config class object.
+
+        :param config_file: Location of application configuration file.
+        :type config_file: str
+        """
         self.file = config_file
         self._load()
         self._override()
@@ -39,6 +48,20 @@ class Config:
             ).__new__(self)
         return self.inst
 
+    @staticmethod
+    def env(key, default):
+        value = os.environ.get(key)
+        if value is not None:
+            if isinstance(default, bool):
+                return value.lower() == "true"
+            if isinstance(default, int):
+                try:
+                    return int(value)
+                except ValueError:
+                    return default
+            return value
+        return default 
+    
     def _load(self):
         """
         Load in configuration data from file.
@@ -55,77 +78,67 @@ class Config:
         Override configuration with environment variables, if applicable.
         """
 
-        self.data["TUNING"]["SOURCE"] = os.environ.get(
+        self.data["TUNING"]["SOURCE"] = self.env(
             "TUNING_SOURCE", 
             self.data["TUNING"]["SOURCE"]
         )
 
-        self.data["DEFAULT_MODEL"] = os.environ.get(
+        self.data["DEFAULT_MODEL"] = self.env(
             "GEMINI_MODEL", 
             self.data["DEFAULT_MODEL"]
         )
 
-        self.data["LANGUAGE"]["MODULES"]["OBJECT"] = bool(
-            os.environ.get(
-                "LANGUAGE_OBJECT",
-                self.data["LANGUAGE"]["MODULES"]["OBJECT"]
-            )
+        self.data["LANGUAGE"]["MODULES"]["OBJECT"] = self.env(
+            "LANGUAGE_OBJECT",
+            self.data["LANGUAGE"]["MODULES"]["OBJECT"]
         )
 
-        self.data["LANGUAGE"]["MODULES"]["INFLECTION"] = bool(
-            os.environ.get(
-                "LANGUAGE_INFLECTION", 
-                self.data["LANGUAGE"]["MODULES"]["INFLECTION"]
-            )
+        self.data["LANGUAGE"]["MODULES"]["INFLECTION"] = self.env(
+            "LANGUAGE_INFLECTION", 
+            self.data["LANGUAGE"]["MODULES"]["INFLECTION"]
         )
 
-        self.data["LANGUAGE"]["MODULES"]["VOICE"] = bool(
-            os.environ.get(
-                "LANGUAGE_VOICE", 
-                self.data["LANGUAGE"]["MODULES"]["VOICE"]
-            )
+        self.data["LANGUAGE"]["MODULES"]["VOICE"] = self.env(
+            "LANGUAGE_VOICE", 
+            self.data["LANGUAGE"]["MODULES"]["VOICE"]
         )
         
-        self.data["LANGUAGE"]["MODULES"]["WORDS"] = bool(
-            os.environ.get(
-                "LANGUAGE_WORDS", 
-                self.data["LANGUAGE"]["MODULES"]["WORDS"]
-            )
+        self.data["LANGUAGE"]["MODULES"]["WORDS"] = self.env(
+            "LANGUAGE_WORDS", 
+            self.data["LANGUAGE"]["MODULES"]["WORDS"]
         )
 
-        self.data["CONVERSATION"]["TIMEZONE_OFFSET"] = int(
-            os.environ.get(
-                "CONVO_TIMEZONE", 
-                self.data["CONVERSATION"]["TIMEZONE_OFFSET"]
-            )
+        self.data["CONVERSATION"]["TIMEZONE_OFFSET"] = self.env(
+            "CONVO_TIMEZONE", 
+            self.data["CONVERSATION"]["TIMEZONE_OFFSET"]
         )
         
-        self.data["ANALYZE"]["LATEX_PREAMBLE"] = os.environ.get(
+        self.data["ANALYZE"]["LATEX_PREAMBLE"] = self.env(
             "LATEX_PREAMBLE",
             self.data["ANALYZE"]["LATEX_PREAMBLE"]
         )
 
-        self.data["REPO"]["VCS"] = os.environ.get(
+        self.data["REPO"]["VCS"] = self.env(
             "VCS", 
             self.data["REPO"]["VCS"]
         )
 
-        self.data["REPO"]["AUTH"]["CREDS"] = os.environ.get(
+        self.data["REPO"]["AUTH"]["CREDS"] = self.env(
             "VCS_TOKEN",
             self.data["REPO"]["AUTH"]["CREDS"]
         )
 
-        self.data["VERSION"] = os.environ.get(
+        self.data["VERSION"] = self.env(
             "VERSION", 
             self.data["VERSION"]
         )
 
-        self.data["GEMINI_KEY"] = os.environ.get(
+        self.data["GEMINI_KEY"] = self.env(
             "GEMINI_KEY", 
             self.data["GEMINI_KEY"]
         )
 
-        self.data["DEBUG"] = os.environ.get(
+        self.data["DEBUG"] = self.env(
             "DEBUG", 
             self.data["DEBUG"]
         )
@@ -134,23 +147,57 @@ class Config:
         """
         Saves the cache to the JSON file in ``data`` directory.
         """
-        with open(self.file, "w") as f:
-            json.dump(self.data, f, indent=4)
-        return True
+        try:
+            with open(self.file, "w") as f:
+                json.dump(self.data, f, indent=4)
+            return True
+        except Exception as e:
+            logger.error(f"Error saving config: {e}")
+            return False
     
-    def get(self, key, default=None):
+    def get(
+        self, 
+        key : str, 
+        default : str =None
+    ) -> str:
+        """
+        Retrieve an application configuration property.
+
+        :param key: Property to retrieve.
+        :type key: str
+        :param default: Default value if no property is found.
+        :type default: str
+        :returns: Application property.
+        :rtype: str
+        """
         keys = key.split(".")
         value = self.data
         for k in keys:
             if isinstance(value, dict):
                 value = value.get(k)
             else:
+                if default is None:
+                    raise KeyError(f"Key {key} not found")
                 return default
             if value is None:
+                if default is None:
+                    raise KeyError(f"Key {key} not found")
                 return default
         return value
 
-    def set(self, key, value):
+    def set(
+        self, 
+        key : str, 
+        value : str
+    ):
+        """
+        Set an application configuration property.
+
+        :param key: Property to set.
+        :type key: str
+        :param value: Value to which the property should be set.
+        :type value: str
+        """
         keys = key.split(".")
         target = self.data
         for k in keys[:-1]:
@@ -169,11 +216,15 @@ class Config:
 
             if isinstance(self.data[key], list) and isinstance(value, list):
                 self.data[key].extend(value)
-            elif isinstance(self.data[key], dict) and isinstance(value, dict):
+                continue 
+
+            if isinstance(self.data[key], dict) and isinstance(value, dict):
                 self.data[key].update(value)
-            else:
-                self.data[key] = value
-    
+                continue
+
+            self.data[key] = value
+            continue
+
     def tuning_enabled(self):
         """
         Returns a bool flag signaling models should be tuned.
