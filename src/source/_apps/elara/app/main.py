@@ -87,6 +87,9 @@ def configure(app : dict) -> dict:
     if app["ARGUMENTS"].config:
         for item in app["ARGUMENTS"].config:
             try:
+                if "=" not in item:
+                    logger.error(f"Invalid configuration format: {item}. Expected key=value.")
+                    continue
                 key, value              = item.split("=", 1)
                 config[key]             = value
             except ValueError:
@@ -126,11 +129,7 @@ def converse(app : dict) -> str:
     }
 
     if app["ARGUMENTS"].directory is not None:
-        template_vars.update(
-            summarize(
-                directory               = app["ARGUMENTS"].directory,
-            )
-        )
+        template_vars.update(summarize(app))
 
     parsed_prompt                       = app["TEMPLATES"].render(
         temp                            = "conversation", 
@@ -141,7 +140,7 @@ def converse(app : dict) -> str:
         prompt                          = parsed_prompt, 
         model_name                      = app["CACHE"].get("currentModel"),
         generation_config               = app["PERSONA"].get("generationConfig"),
-        safety_settings                 = app["PERSONA"].get("safetySettings"),
+        safety_settings                 = app["PERSONA"].get(" model.safetySettings"),
         tools                           = app["PERSONA"].get("tools"),
         system_instruction              = app["PERSONA"].get("systemInstruction")
     )
@@ -173,8 +172,8 @@ def analyze(app: dict) -> str:
 
     analyze_vars                        = {
         **buffer,
-        **summarize(app),
         **app["LANGUAGE"].vars(),
+        **summarize(app),
         **{ "latex": app["CONFIG"].get("ANALYZE.LATEX_PREAMBLE") }
     }
 
@@ -183,9 +182,8 @@ def analyze(app: dict) -> str:
         variables                        = analyze_vars
     )
     
-    response                            = model.respond(
+    response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt,
-        persona                         = persona,
         model_name                      = app["CACHE"].get("currentModel"),
         generation_config               = app["PERSONAS"].get("generationConfig", persona),
         safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
@@ -209,12 +207,12 @@ def review(app : dict) -> str:
     :rtype: dict
     """
     source                              = repo.Repo(
-        repo                            = app["ARGUMENTS"].repository,
+        repository                      = app["ARGUMENTS"].repository,
         owner                           = app["ARGUMENTS"].owner,
         commit                          = app["ARGUMENTS"].commit,
-        vcs                             = "TODO",
-        auth                            = "TODO",
-        backend                         = "TODO"
+        vcs                             = app["CONFIG"].get("REPO.VCS"),
+        auth                            = app["CONFIG"].get("REPO.AUTH"),
+        backends                        = app["CONFIG"].get("REPO.BACKENDS")
     )
 
     buffer                              = app["CACHE"].vars()
@@ -234,7 +232,6 @@ def review(app : dict) -> str:
 
     model_res                           = app["MODEL"].respond(
         prompt                          = review_prompt,
-        persona                         = persona,
         model_name                      = app["CACHE"].get("currentModel"),
         generation_config               = app["PERSONAS"].get("generationConfig", persona),
         safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
@@ -291,7 +288,7 @@ def summarize(app : dict) -> str:
     summary                             = app["TEMPLATES"].render("summary", summary_vars)
     
     return                              { 
-        "response"                      : summary
+        "summary"                       : summary
     }
 
 
@@ -390,12 +387,16 @@ def init(
         tuning                          = app["CONFIG"].get("TUNING")
     )
 
-    app["PERSONAS"]                      = persona.Persona(
+    tune_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TUNING")
+    sys_rel_path                        = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM")
+    tune_dir                            = os.path.join(app_dir, tune_rel_path)
+    sys_dir                             = os.path.join(app_dir, sys_rel_path)
+    app["PERSONAS"]                     = persona.Persona(
         current                         = app["CACHE"].get("currentPersona"),
         config                          = app["CONFIG"].get("PERSONA"),
-        tune_dir                        = app["CONFIG"].get("TREE.DIRECTORIES.TUNING"),
+        tune_dir                        = tune_dir,
         tune_ext                        = app["CONFIG"].get("TREE.EXTENSIONS.TUNING"),
-        sys_dir                         = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM"),
+        sys_dir                         = sys_dir,
         sys_ext                         = app["CONFIG"].get("TREE.EXTENSIONS.TUNING")
     )            
     
@@ -425,9 +426,13 @@ def main() -> bool:
     
     res = operations[operation_name](app)
 
-    if app["ARGUMENTS"].output:
+    if app["ARGUMENTS"].output and "response" in res.keys():
         with open(app["ARGUMENTS"].output, "w") as out:
             out.write(res["response"])
+
+    if app["ARGUMENTS"].output and "summary" in res.keys():
+        with open(app["ARGUMENTS"].output, "w") as out:
+            out.write(res["summary"])
 
     if app["ARGUMENTS"].show and "prompt" in res.keys():
         print(res["prompt"])

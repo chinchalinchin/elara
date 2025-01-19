@@ -108,11 +108,9 @@ class Repo:
         :rtype: str
         """
         if self.src["vcs"] == "github":
-            key = self.src["vcs"].upper()
-            return self.backends[key]["API"]["PR"].format(**{
-                "owner": self.src["owner"],
-                "repo": self.src["repo"],
-                "pr": pr
+            return self.backends["GITHUB"]["API"]["PR"].format(**{
+                **{ "pr": pr }, 
+                **self.src
             })
         
         raise ValueError(f"Unsupported VCS: {self.src['vcs']}")
@@ -129,13 +127,11 @@ class Repo:
         :rtype:  dict
         """
         if self.src["vcs"] == "github":
-            key = self.src["vcs"].upper()
-
             if self.auth["TYPE"] == "bearer":
                 token = self.auth["CREDS"]
                 return {
                     **{ "Authorization": f"Bearer {token}" }, 
-                    **self.backends[key]["HEADERS"]
+                    **self.backends["GITHUB"]["HEADERS"]
                 }
             
         raise ValueError(f"Unsupported auth type: {self.auth['TYPE']} or VCS: {self.src['vcs']}")
@@ -150,7 +146,6 @@ class Repo:
         self,
         msg : str,
         pr : str,
-        commit : str,
         path: str
     ):
         """
@@ -173,7 +168,7 @@ class Repo:
         headers = self._headers()
         data = {
             "body": msg,
-            "commit_id": commit, 
+            "commit_id": self.src["commit"], 
             # @DEVELOPMENT
             #   We need some way to extract this information from Gemini's response!
             #   What do you think, Milton? You probably have a particuarly insightful

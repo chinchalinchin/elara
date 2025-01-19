@@ -13,7 +13,7 @@ class Persona:
     """Current persona"""
     inst = None
     """Singleton instance"""
-    personas = None
+    personas = {}
     """Persona metadata"""
 
     def __init__(
@@ -62,6 +62,10 @@ class Persona:
                 self
             ).__new__(self)
         return self.inst
+    
+    @staticmethod
+    def _lower(d):
+        return { k.lower(): v for k, v in d.items() }
     
     def _load(
         self, 
@@ -114,8 +118,8 @@ class Persona:
 
         for persona in self.personas.keys():
             key = persona.upper()
-            self.personas[persona]["generationConfig"] = config[key]["GENERATION_CONFIG"]
-            self.personas[persona]["safetySettings"] = config[key]["SAFETY_SETTINGS"]
+            self.personas[persona]["generationConfig"] = self._lower(config[key]["GENERATION_CONFIG"])
+            self.personas[persona]["safetySettings"] = self._lower(config[key]["SAFETY_SETTINGS"])
             self.personas[persona]["tools"] = config[key]["TOOLS"]
             self.personas[persona]["functions"] = config[key]["FUNCTIONS"]
 
@@ -172,7 +176,7 @@ class Persona:
         :rtype: dict
         """
         for name, persona in self.personas.items():
-            if func in persona["FUNCTIONS"]:
+            if func in persona["functions"]:
                 return name
             
         return self.current

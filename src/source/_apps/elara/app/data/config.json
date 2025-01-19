@@ -174,8 +174,8 @@
             }
         },
         "MILTON": {
-            "FUNCTION": ["review"],
-            "TOOLS": "code_execution",
+            "FUNCTIONS": ["review"],
+            "TOOLS": "google_search_retrieval",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
                 "MAX_OUTPUT_TOKENS": 8000,
