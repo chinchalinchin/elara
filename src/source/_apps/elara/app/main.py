@@ -68,20 +68,6 @@ def args(configuration : config.Config) -> argparse.Namespace:
         description                     = configuration.get("INTERFACE.HELP.PARSER")
     )
     
-    for global_arg in configuration.get("INTERFACE.ARGUMENTS"):
-        if "ACTION" in global_arg.keys():
-            parser.add_argument(*global_arg["SYNTAX"],
-                dest                    = global_arg["DEST"],
-                help                    = global_arg["HELP"],
-                action                  = global_arg["ACTION"]
-            )
-            continue
-        parser.add_argument(*global_arg["SYNTAX"],
-            dest                        = global_arg["DEST"],
-            help                        = global_arg["HELP"],
-            type                        = eval(global_arg["TYPE"])
-        )
-
     subparsers                          = parser.add_subparsers(
         dest                            = 'operation', 
         help                            = configuration.get("INTERFACE.HELP.SUBPARSER")
@@ -93,14 +79,35 @@ def args(configuration : config.Config) -> argparse.Namespace:
             help                        = op_config["HELP"]
         )
         for op_arg in op_config["ARGUMENTS"]:
-            if op_arg["SYNTAX"] == "nargs":
+            if all(k in [ 
+                "DEFAULT", 
+                "DEST", 
+                "HELP", 
+                "SYNTAX", 
+                "ACTION", 
+                "NARGS",
+                "TYPE"
+            ] for k in op_arg.keys()):
+                continue
+
+            if "ACTION" in op_arg.keys():
+                op_parser.add_argument(*op_arg["SYNTAX"],
+                    dest                = op_arg["DEST"],
+                    help                = op_arg["HELP"],
+                    action              = op_arg["ACTION"]
+                )
+                continue
+
+            if "NARGS" in op_arg.keys():
                 op_parser.add_argument(
+                    nargs               = op_arg["NARGS"],
                     default             = op_arg["DEFAULT"],
                     dest                = op_arg["DEST"],
                     help                = op_arg["HELP"],
                     type                = eval(op_arg["TYPE"])
                 )
                 continue
+            
             op_parser.add_argument(*op_arg["SYNTAX"],
                 default                 = op_arg["DEFAULT"],
                 dest                    = op_arg["DEST"],
@@ -219,7 +226,7 @@ def analyze(app: dict) -> str:
 
     parsed_prompt                       = app["TEMPLATES"].render(
         temp                            = "analysis", 
-        variables                        = analyze_vars
+        variables                       = analyze_vars
     )
     
     response                            = app["MODEL"].respond(
@@ -385,10 +392,12 @@ def init(
         file                            = log_filepath
     )
 
+    app["LOGGER"].debug("Initializing arguments...")
     app["ARGUMENTS"]                    = args(
         configuration                   = app["CONFIG"]
     )
 
+    app["LOGGER"].debug("Initializing application cache...")
     cache_rel_path                      = app["CONFIG"].get("TREE.DIRECTORIES.DATA")
     cache_file                          = app["CONFIG"].get("TREE.FILES.CACHE")
     cache_filepath                      = os.path.join(app_dir, cache_rel_path, cache_file)
@@ -396,7 +405,17 @@ def init(
         cache_file                      = cache_filepath
     )
 
+    app["LOGGER"].debug("Writing command line arguments to cache...")
     update_event                        = False
+    # @OPERATIONS
+    #   Milton, the lunkheads in development have an issue here that 
+    #   is affect production.
+    # @DEVELOPMENT
+    #   Milton, we have to ensure the argument is defined before 
+    #   updating the cache, so we can't update the cache in one 
+    #   fell swoop. If we overhauld the `update` method to filter
+    #   out null values, we might be able to refactor these lines
+    #   into something simpler!
     if app["ARGUMENTS"].persona:
         update_event                    = app["CACHE"].update({ 
             "currentPersona"            : app["ARGUMENTS"].persona 
@@ -415,6 +434,7 @@ def init(
     if update_event:
         app["CACHE"].save()
 
+    app["LOGGER"].debug("Initializing language modules...")
     lang_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.LANGUAGE")
     lang_dir                            = os.path.join(app_dir, lang_rel_path)
     app["LANGUAGE"]                     = language.Language(
@@ -423,6 +443,7 @@ def init(
         enabled                         = app["CONFIG"].language_modules()
     )
 
+    app["LOGGER"].debug("Initializing application templates...")
     temp_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TEMPLATES")
     temp_dir                            = os.path.join(app_dir, temp_rel_path)
     app["TEMPLATES"]                    = template.Template(
@@ -430,12 +451,14 @@ def init(
         extension                       = app["CONFIG"].get("TREE.EXTENSIONS.TEMPLATE")
     )
 
+    app["LOGGER"].debug("Initializing Gemini Model...")
     app["MODEL"]                        = model.Model(
         api_key                         = app["CONFIG"].get("GEMINI.KEY"),
         default_model                   = app["CONFIG"].get("GEMINI.DEFAULT"),
         tuning                          = app["CONFIG"].get("TUNING.ENABLED")
     )
 
+    app["LOGGER"].debug("Initializing personas...")
     tune_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TUNING")
     sys_rel_path                        = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM")
     tune_dir                            = os.path.join(app_dir, tune_rel_path)
@@ -449,8 +472,8 @@ def init(
         sys_ext                         = app["CONFIG"].get("TREE.EXTENSIONS.TUNING")
     )            
     
-    if app["CONFIG"].get("DEBUG"):
-        pprint.pp(app)
+    app["LOGGER"].debug("Application initialized!")
+    app["LOGGER"].debug(pprint.pformat(app))
 
     return app
 

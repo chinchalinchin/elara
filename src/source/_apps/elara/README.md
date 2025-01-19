@@ -26,7 +26,7 @@ Various properties can be configured through environment variables. See `app/con
 
 ### Authentication
 
-The application ingests API tokenS through the `GEMINI_KEY` and `VCS_TOKEN` environment variables.
+The application ingests API tokens through the `GEMINI_KEY` and `VCS_TOKEN` environment variables.
 
 ```bash
 ## VARIABLES
@@ -34,7 +34,7 @@ The application ingests API tokenS through the `GEMINI_KEY` and `VCS_TOKEN` envi
 # VCS_TOKEN: Version control API token
 export GEMINI_KEY="key"
 export VCS_TOKEN="token"
-elara converse -p "Hi there, Elara!"
+elara converse --prompt "Hi there, Elara!"
 ```
 
 ### Contextual Conversation
@@ -42,7 +42,7 @@ elara converse -p "Hi there, Elara!"
 The `converse` command will contextualize the prompt and forward it to the Gemini API,
 
 ```bash
-elara converse -p "Hello Elara!" 
+elara converse --prompt "Hello Elara!" 
 ```
 
 The conversation history is stored locally in the `data/history` directory as a JSON. This JSON is used to render Jinja2 templates to embed the chat history into a layer of context provided by the template. 
@@ -52,20 +52,20 @@ The summary of a local directory can also be injected into a chat prompt with th
 ```bash
 ## VARIABLES
 # DIR: directory to summarize
-elara converse -p "Take a look at this!" -d $DIR
+elara converse --prompt "Take a look at this!" --directory $DIR
 ```
 
-You can view the summary yourself with the next command. The default persona for conversations is `elara`. Gemini can assume a different persona if the persona flag is passed in as follows,
+The default persona for conversations is `elara`. Gemini can assume a different persona if the persona flag is passed in as follows,
 
 ```bash
-elara converse -p "Hello Axiom!" -r "axiom"
+elara converse --prompt "Hello Axiom!" --persona "axiom"
 ```
 
 Alternatively, you can set the default persona using the `GEMINI_PERSONA` environment variable,
 
 ```bash
 export GEMINI_PERSONA="axiom"
-elara converse -p "Hello Axiom!"
+elara converse --prompt "Hello Axiom!"
 ```
 
 ### Directory Summaries
@@ -75,7 +75,7 @@ The `summarize` command will generate an RST summary of a directory and its cont
 ```bash
 ## VARIABLES
 # DIR: directory to summarize
-elara summarize -d $DIR
+elara summarize --directory $DIR
 ```
 
 **NOTE**: The summary will be written to the directory it is summarizing. 

@@ -183,6 +183,7 @@ class Repo:
         }
         
         try:
+            logger.debug(f"Making HTTP call to {url}")
             res = requests.post(
                 url = url, 
                 headers = headers, 
