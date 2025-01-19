@@ -83,9 +83,9 @@ class Config:
             self.data["TUNING"]["SOURCE"]
         )
 
-        self.data["DEFAULT_MODEL"] = self.env(
-            "GEMINI_MODEL", 
-            self.data["DEFAULT_MODEL"]
+        self.data["TUNING"]["ENABLED"] = self.env(
+            "TUNING_ENABLED",
+            self.data["TUNING"]["ENABLED"]
         )
 
         self.data["LANGUAGE"]["MODULES"]["OBJECT"] = self.env(
@@ -133,14 +133,19 @@ class Config:
             self.data["VERSION"]
         )
 
-        self.data["GEMINI_KEY"] = self.env(
+        self.data["GEMINI"]["KEY"] = self.env(
             "GEMINI_KEY", 
-            self.data["GEMINI_KEY"]
+            self.data["GEMINI"]["KEY"]
         )
 
-        self.data["DEBUG"] = self.env(
-            "DEBUG", 
-            self.data["DEBUG"]
+        self.data["GEMINI"]["DEFAULT"] = self.env(
+            "GEMINI_DEFAULT", 
+            self.data["GEMINI"]["DEFAULT"]
+        )
+
+        self.data["LOGS"]["LEVEL"] = self.env(
+            "LOG_LEVEL", 
+            self.data["LOGS"]["LEVEL"]
         )
 
     def save(self):

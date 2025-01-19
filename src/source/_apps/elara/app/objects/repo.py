@@ -189,23 +189,20 @@ class Repo:
                 json = data
             )
             res.raise_for_status()
-            # @OPERATIONS
-            #   Those fools in development don't know what they're doing, Milton. I swear, this 
-            #   application is held together with duct tape. Look at this error handling!
             return {
                 "status": "success",
                 "body": res.json()
             }
 
         except requests.exceptions.RequestException as e:
-            print(f"Error during Github API request: {e}")
+            logger.error(f"Error during Github API request: {e}")
             traceback.print_exc()
             return {
                 "status": "failed",
                 "error": str(e)
             }
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
+            logger.error(f"An unexpected error occurred: {e}")
             traceback.print_exc()
             return {
                 "status": "failed",

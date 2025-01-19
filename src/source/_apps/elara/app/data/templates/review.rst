@@ -262,4 +262,8 @@ Pull Request
     **Repository**: {{ repository.vcs}}/{{ repository.owner }}/{{ repository.repo }}
     **Commit ID**: {{ repository.commit }}
 
+.. warning::
+
+    Keep in mind, these files are on the remote repository. They are not on your local machine, so you cannot import directly the application modules into your code execution environment. 
+    
 {{ summary }}

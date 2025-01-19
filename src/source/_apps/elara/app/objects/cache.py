@@ -7,7 +7,6 @@ Object for managing application data.
 
 import json
 import logging
-import threading
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +17,6 @@ class Cache:
     """Cache data"""
     file = None
     """Location of Cache file"""
-    _lock = threading.Lock()
 
     def __init__(
         self, 
@@ -41,12 +39,11 @@ class Cache:
         """
         Create a Cache singleton.
         """
-        with self._lock:
-            if not self.inst:
-                self.inst = super(
-                    Cache, 
-                    self
-                ).__new__(self)
+        if not self.inst:
+            self.inst = super(
+                Cache, 
+                self
+            ).__new__(self)
         return self.inst
     
     @staticmethod
@@ -56,7 +53,7 @@ class Cache:
             "currentPersona": None,
             "currentPrompter": None,
             "tunedModels": [],
-            "tuningModel":None,
+            "tuningModel":None
         }
     
     def _load(self):
@@ -64,10 +61,10 @@ class Cache:
         try:
             with open(self.file, "r") as f:
                 content = f.read()
-                if content:
-                    self.data = json.loads(f)
-                else:
-                    self.data = self._fresh()
+            if content:
+                self.data = json.loads(content)
+            else:
+                self.data = self._fresh()
         except (FileNotFoundError, json.JSONDecodeError) as e:
             logger.error(f"Error loading cache: {e}")
             self.data  = self._fresh()

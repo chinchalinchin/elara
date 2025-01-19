@@ -116,12 +116,14 @@
             "TEMPLATES": "data/templates",
             "TOOLS": "data/tools",
             "TUNING": "data/tuning",
-            "SYSTEM": "data/system"
+            "SYSTEM": "data/system",
+            "LOGS": "data/logs"
         },
         "FILES": {
             "CACHE": "cache.json",
             "CONFIG": "config.json",
-            "SUMMARY": "summary.rst"
+            "SUMMARY": "summary.rst",
+            "LOG": "elara.log"
         },
         "EXTENSIONS": {
             "TEMPLATE": ".rst",
@@ -175,7 +177,7 @@
         },
         "MILTON": {
             "FUNCTIONS": ["review"],
-            "TOOLS": "google_search_retrieval",
+            "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
                 "MAX_OUTPUT_TOKENS": 8000,
@@ -240,8 +242,13 @@
         "ENABLED": false,
         "SOURCE": "models/gemini-1.5-flash-001-tuning"
     },
-    "VERSION": "1.0", 
-    "GEMINI_KEY": null,
-    "DEBUG": false, 
-    "DEFAULT_MODEL": "models/gemini-2.0-flash-exp"
+    "GEMINI": {
+        "KEY": null, 
+        "DEFAULT": "models/gemini-2.0-flash-exp"
+    },
+    "LOGS": {
+        "LEVEL": "DEBUG",
+        "SCHEMA": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "VERSION": "1.0"
 }

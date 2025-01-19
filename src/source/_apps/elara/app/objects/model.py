@@ -4,22 +4,25 @@ objects.model
 
 Object for managing Gemini Model. Essentially, a fancy wrapper around Google's GenerativeAI library to abstract away some of the details. Provides configuration and default settings.
 """
+# Standard Library Modulse
+import logging
 
 # External Modules 
 import google.generativeai as genai
 
+logger = logging.getLogger(__name__)
+
 class Model:
-    inst = None
-    """Singleton instance"""
-    model = None 
-    """Gemini model"""
+    default_model = None 
+    """Default Gemini model"""
     tuning = False
     """Flag for Gemini model tuning"""
 
     def __init__(
         self,
-        api_key : str = None,
-        tuning: bool = False
+        api_key : str,
+        default_model : str,
+        tuning: bool = False,
     ):
         """
         Initialize Model object.
@@ -29,24 +32,46 @@ class Model:
         
         genai.configure(api_key=api_key)
 
+        self.default_model = default_model
         self.tuning = tuning
 
     def _get(
         self,
-        model_name,
-        system_instruction
-    ):
-        if model_name in self.base_models():
-            return genai.GenerativeModel(
-                model_name=model_name,
-                system_instruction=system_instruction
-            )
+        system_instruction,
+        model_name : str = None
+    ) -> genai.GenerativeModel:
+        """
+        Retrieve system instructions.
+        """
+        if model_name is not None:
+            if model_name in [
+                m["path"] for m in self.base_models()
+            ]:
+                logger.info(f"Appending system instructions to base model: {model_name}")
+                return genai.GenerativeModel(
+                    model_name=model_name,
+                    system_instruction=system_instruction
+                )
+            else:
+                logger.info(f"Retrieving model without system instructions: {model_name}")
+                return genai.GenerativeModel(
+                    model_name=model_name
+                )
         
+        logger.warning(f"{model_name} is not defined, using default model.")
         return genai.GenerativeModel(
-            model_name=model_name
+            model_name=self.default_model,
+            system_instruction=system_instruction
         )
 
     def base_models(self) -> list:
+        """
+        Retrieve all Gemini models.
+        """
+        # @OPERATIONS
+        #   MILTON! These jokers in Development don't know the first thing about error handling.
+        #   What happens if `genai.list_models()` returns a 400? I'm sure it never crossed those
+        #   code monkeys' empty heads they might need to actually do their jobs...
         return [{
             "path": m.name,
             "version": m.version,
@@ -63,6 +88,12 @@ class Model:
         ]
     
     def tuning_models(self) -> list:
+        """
+        Retrieve all Gemini models that can be tuned.
+        """
+        # @OPERATIONS
+        #   MILTON! Look at this! Multiple calls to `genai.list_models()`! No caching whatsoever!
+        #   These bytes aren't free, Milton! We need to be optimizing our API calls!
         return [{
             "path": m.name,
             "version": m.version,
@@ -79,6 +110,9 @@ class Model:
         ]
         
     def tuned_models(self) -> list:
+        """
+        Retreive all tuned models
+        """
         return genai.list_tuned_models()
     
     def tune(
@@ -97,6 +131,9 @@ class Model:
         batch_size : int = 1,
         learning_rate : float = 0.001
     ):
+        """
+        
+        """
         return genai.create_tuned_model(
             display_name=display_name,
             source_model=tuning_model,
@@ -109,15 +146,27 @@ class Model:
     def respond(
         self,
         prompt : str, 
-        model_name : str,
         generation_config : dict, 
         safety_settings : dict, 
         tools : str, 
-        system_instruction: list
+        system_instruction: list,
+        model_name : str = None,
     ) -> str:
-        self._get(model_name, system_instruction)
+        """
+        
+        """
+        if model_name is not None:
+            return self._get(
+                model_name = model_name,
+                system_instruction = system_instruction
+            ).generate_content(
+                contents = prompt,
+                tools = tools,
+                generation_config = generation_config,
+                safety_settings = safety_settings
+            ).text
         return self._get(
-            model_name = model_name,
+            model_name = self.default_model,
             system_instruction = system_instruction
         ).generate_content(
             contents = prompt,

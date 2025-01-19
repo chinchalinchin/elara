@@ -6,6 +6,7 @@ import argparse
 import logging
 import os
 import pathlib
+import pprint
 import re
 
 # Application Modules
@@ -19,7 +20,42 @@ import objects.model as model
 import objects.repo as repo
 import objects.template as template
 
-logger = logging.getLogger(__name__)
+def logger(
+    app: dict,
+    file : str = None
+) -> logging.Logger:
+    """
+    Configure application logging
+
+    :param file: Location of log file, if logs are to be written to file.
+    :type log_file: str
+    :param app: Dictionary containing application configuration.
+    :type app: dict
+    """
+    logger                              = logging.getLogger() 
+    level                               = app["CONFIG"].get("LOGS.LEVEL")
+    schema                              = app["CONFIG"].get("LOGS.SCHEMA") 
+
+    if level in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
+        logger.setLevel(level)
+    else:
+        logger.setLevel("INFO") 
+
+    formatter                           = logging.Formatter(schema)
+
+    if file is not None:
+        file_handler                    = logging.FileHandler(file)
+        file_handler.setLevel(level) 
+        file_handler.setFormatter(formatter)
+
+    console_handler                     = logging.StreamHandler()
+    console_handler.setLevel(level)
+    console_handler.setFormatter(formatter)
+
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
+    return logger
 
 def args(configuration : config.Config) -> argparse.Namespace:
     """
@@ -79,7 +115,7 @@ def configure(app : dict) -> dict:
     """
     Parses and applies configuration settings.
 
-    :param app: Dictioanry containing application configuration.
+    :param app: Dictionary containing application configuration.
     :type app: dict
     :returns: Dictionary containing the current configuration
     """
@@ -89,23 +125,23 @@ def configure(app : dict) -> dict:
         for item in app["ARGUMENTS"].config:
             try:
                 if "=" not in item:
-                    logger.error(f"Invalid configuration format: {item}. Expected key=value.")
+                    app["LOGGER"].error(f"Invalid configuration format: {item}. Expected key=value.")
                     continue
                 key, value              = item.split("=", 1)
                 if key not in app["CONFIG"].data:
-                     logger.error(f"Invalid configuration key: {key}. Key not in configuration.")
-                     continue
+                    app["LOGGER"].error(f"Invalid configuration key: {key}. Key not in configuration.")
+                    continue
                 config[key]             = value
             except ValueError:
-                logger.error(f"Invalid configuration format: {item}. Expected key=value.")
+                app["LOGGER"].error(f"Invalid configuration format: {item}. Expected key=value.")
                 continue
 
         app["CONFIG"].update(**config)
         app["CONFIG"].save()
-        logger.info(f"Updated configuration with: {config}")
+        app["LOGGER"].info(f"Updated configuration with: {config}")
         return config
     
-    logger.warning("No configuration pairs provided.")
+    app["LOGGER"].warning("No configuration pairs provided.")
     return config
 
 
@@ -320,8 +356,8 @@ def tune(app : dict) -> bool:
     
 
 def init(
-    data_dir : str = "data",
-    config_file : str = "config.json"
+    data_dir                            : str = "data",
+    config_file                         : str = "config.json"
 ) -> dict:
     """
     Initialize the application.
@@ -329,7 +365,6 @@ def init(
     :returns: Application configuration.
     :rtype: dict
     """
-
     app                                 = {}
     app_dir                             = pathlib.Path(__file__).resolve().parent
 
@@ -338,8 +373,17 @@ def init(
         config_file                     = config_filepath
     )
 
-    if not app["CONFIG"].get("GEMINI_KEY"):
+    if not app["CONFIG"].get("GEMINI.KEY"):
         raise ValueError("GEMINI_KEY environment variable not set.")
+
+    log_rel_path                        = app["CONFIG"].get("TREE.DIRECTORIES.LOGS")
+    log_file                            = app["CONFIG"].get("TREE.FILES.LOG")
+    log_filepath                        = os.path.join(app_dir, log_rel_path, log_file)
+    
+    app["LOGGER"]                       = logger(
+        app                             = app,
+        file                            = log_filepath
+    )
 
     app["ARGUMENTS"]                    = args(
         configuration                   = app["CONFIG"]
@@ -387,8 +431,9 @@ def init(
     )
 
     app["MODEL"]                        = model.Model(
-        api_key                         = app["CONFIG"].get("GEMINI_KEY"),
-        tuning                          = app["CONFIG"].get("TUNING")
+        api_key                         = app["CONFIG"].get("GEMINI.KEY"),
+        default_model                   = app["CONFIG"].get("GEMINI.DEFAULT"),
+        tuning                          = app["CONFIG"].get("TUNING.ENABLED")
     )
 
     tune_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TUNING")
@@ -405,7 +450,7 @@ def init(
     )            
     
     if app["CONFIG"].get("DEBUG"):
-        print(app)
+        pprint.pp(app)
 
     return app
 
@@ -441,8 +486,14 @@ def main() -> bool:
     if app["ARGUMENTS"].show and "prompt" in res.keys():
         print(res["prompt"])
 
+    if app["ARGUMENTS"].show and "summary" in res.keys():
+        print(res["summary"])
+
     if app["ARGUMENTS"].show and "response" in res.keys():
         print(res["response"])
+
+    if app["ARGUMENTS"].show and "vcs" in res.keys():
+        print(res["vcs"])
 
 if __name__ == "__main__":
     main()

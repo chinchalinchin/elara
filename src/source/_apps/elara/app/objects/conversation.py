@@ -9,7 +9,6 @@ import datetime
 import json
 import logging
 import os
-import threading
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +23,6 @@ class Conversation:
     """Singleton instance"""
     tz_offset = None
     """Timezone offset"""
-    _lock = threading.Lock()
 
     def __init__(
         self, 
@@ -53,12 +51,11 @@ class Conversation:
         """
         Create Conversation singleton.
         """
-        with self._lock:
-            if not self.inst:
-                self.inst = super(
-                    Conversation, 
-                    self
-                ).__new__(self, *args, **kwargs)
+        if not self.inst:
+            self.inst = super(
+                Conversation, 
+                self
+            ).__new__(self, *args, **kwargs)
         return self.inst
     
     def _load(self):
