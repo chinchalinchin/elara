@@ -4,155 +4,270 @@
             "PARSER": "Plumb the depths of generative AI.",
             "SUBPARSER": "Available operations: (configure, converse, summarize, review, analyze)"
         },
-        "OPERATIONS": [{
-            "NAME": "converse",
-            "HELP": "Chat with a Gemini model persona.",
-            "ARGUMENTS": [{
-                "DEFAULT": "Hello! Form is the possibility of structure!",
-                "DEST": "prompt",
-                "HELP": "The prompt to contextualize and forward to the Gemini API.",
-                "SYNTAX": ["-p", "--prompt"],
-                "TYPE": "str"
-            }, {
+        "OPERATIONS": [
+            {
+                "NAME": "converse",
+                "HELP": "Chat with a Gemini model persona.",
+                "ARGUMENTS": [
+                    {
+                        "DEFAULT": "Hello! Form is the possibility of structure!",
+                        "DEST": "prompt",
+                        "HELP": "The prompt to contextualize and forward to the Gemini API.",
+                        "SYNTAX": [
+                            "-p",
+                            "--prompt"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "directory",
+                        "HELP": "The path to the directory to summarize and inject into the prompt.",
+                        "SYNTAX": [
+                            "-d",
+                            "--directory"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "model_name",
+                        "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
+                        "SYNTAX": [
+                            "-m",
+                            "--model"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "persona",
+                        "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
+                        "SYNTAX": [
+                            "-pr",
+                            "--persona"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "prompter",
+                        "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
+                        "SYNTAX": [
+                            "-n",
+                            "--name"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "show",
+                        "HELP": "Print output to console.",
+                        "SYNTAX": [
+                            "-s",
+                            "--show"
+                        ],
+                        "ACTION": "store_true"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "output",
+                        "HELP": "Save Gemini's response to local directory.",
+                        "SYNTAX": [
+                            "-o",
+                            "--output"
+                        ],
+                        "TYPE": "str"
+                    }
+                ]
+            },
+            {
+                "NAME": "request",
+                "HELP": "Template a Gherkin-style feature request and post it to the Gemini API.",
+                "ARGUMENTS": [{
+                    "DEFAULT": null,
+                    "DEST": "show",
+                    "HELP": "Print output to console.",
+                    "SYNTAX": [
+                        "-s",
+                        "--show"
+                    ],
+                    "ACTION": "store_true"
+                },
+                {
+                    "DEFAULT": null,
+                    "DEST": "output",
+                    "HELP": "Save Gemini's response to local directory.",
+                    "SYNTAX": [
+                        "-o",
+                        "--output"
+                    ],
+                    "TYPE": "str"
+                }]
+            },
+            {
+                "NAME": "summarize",
+                "HELP": "Generate an RST formatted summary of a local directory. Summary will be written to the directory it is summarizing.",
+                "ARGUMENTS": [
+                    {
+                        "DEFAULT": null,
+                        "DEST": "directory",
+                        "HELP": "The path to the directory to summarize and inject into the prompt.",
+                        "SYNTAX": [
+                            "-d",
+                            "--directory"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "show",
+                        "HELP": "Print output to console.",
+                        "SYNTAX": [
+                            "-s",
+                            "--show"
+                        ],
+                        "ACTION": "store_true"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "output",
+                        "HELP": "Save Gemini's response to local directory.",
+                        "SYNTAX": [
+                            "-o",
+                            "--output"
+                        ],
+                        "TYPE": "str"
+                    }
+                ]
+            },
+            {
+                "NAME": "review",
+                "HELP": "Generate an RST formatted summary of a local git repository and then send it to `milton` for code review.",
+                "ARGUMENTS": [
+                    {
+                        "DEFAULT": null,
+                        "DEST": "directory",
+                        "HELP": "The path to the VCS repository to summarize and inject into the pull request review.",
+                        "SYNTAX": [
+                            "-d",
+                            "--directory"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "pull",
+                        "HELP": "Pull request number to review.",
+                        "SYNTAX": [
+                            "-pu",
+                            "--pull"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "commit",
+                        "HELP": "SHA ID of the commit to review.",
+                        "SYNTAX": [
+                            "-c",
+                            "--commit"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "repository",
+                        "HELP": "Name of the remote repository to review.",
+                        "SYNTAX": [
+                            "-r",
+                            "--repository"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "owner",
+                        "HELP": "Username of the repository owner that is being review.",
+                        "SYNTAX": [
+                            "-w",
+                            "--owner"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "model_name",
+                        "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
+                        "SYNTAX": [
+                            "-m",
+                            "--model"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "persona",
+                        "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
+                        "SYNTAX": [
+                            "-pr",
+                            "--persona"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "prompter",
+                        "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
+                        "SYNTAX": [
+                            "-n",
+                            "--name"
+                        ],
+                        "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "show",
+                        "HELP": "Print output to console.",
+                        "SYNTAX": [
+                            "-s",
+                            "--show"
+                        ],
+                        "ACTION": "store_true"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "output",
+                        "HELP": "Save Gemini's response to local directory.",
+                        "SYNTAX": [
+                            "-o",
+                            "--output"
+                        ],
+                        "TYPE": "str"
+                    }
+                ]
+            },
+            {
+                "NAME": "configure",
                 "DEFAULT": null,
-                "DEST": "directory",
-                "HELP": "The path to the directory to summarize and inject into the prompt.",
-                "SYNTAX": ["-d", "--directory"],
-                "TYPE": "str"
-            },{
+                "HELP": "Set configuration values as key-value pairs (e.g., `models/gemini-1.5-pro-latest`).",
+                "ARGUMENTS": [
+                    {
+                        "DEFAULT": null,
+                        "DEST": "config",
+                        "HELP": "Key-value pairs to inject into application configuration.",
+                        "NARGS": "*",
+                        "TYPE": "str"
+                    }
+                ]
+            },
+            {
+                "NAME": "tune",
                 "DEFAULT": null,
-                "DEST": "model_name",
-                "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                "SYNTAX": ["-m", "--model"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "persona",
-                "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                "SYNTAX": ["-pr", "--persona"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "prompter",
-                "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
-                "SYNTAX": ["-n", "--name"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "show",
-                "HELP": "Print output to console.",
-                "SYNTAX": ["-s", "--show"],
-                "ACTION": "store_true"
-            },{
-                "DEFAULT": null,
-                "DEST": "output",
-                "HELP": "Save Gemini's response to local directory.",
-                "SYNTAX": ["-o", "--output"],
-                "TYPE": "str"
-            }]
-        },{
-            "NAME": "summarize",
-            "HELP": "Generate an RST formatted summary of a local directory. Summary will be written to the directory it is summarizing.",
-            "ARGUMENTS": [{
-                "DEFAULT": null,
-                "DEST": "directory",
-                "HELP": "The path to the directory to summarize and inject into the prompt.",
-                "SYNTAX": ["-d", "--directory"],
-                "TYPE": "str"
-            }, {
-                "DEFAULT": null,
-                "DEST": "show",
-                "HELP": "Print output to console.",
-                "SYNTAX": ["-s", "--show"],
-                "ACTION": "store_true"
-            },{
-                "DEFAULT": null,
-                "DEST": "output",
-                "HELP": "Save Gemini's response to local directory.",
-                "SYNTAX": ["-o", "--output"],
-                "TYPE": "str"
-            }]
-        },{
-            "NAME": "review",
-            "HELP": "Generate an RST formatted summary of a local git repository and then send it to `milton` for code review.",
-            "ARGUMENTS": [{
-                "DEFAULT": null,
-                "DEST": "directory",
-                "HELP": "The path to the VCS repository to summarize and inject into the pull request review.",
-                "SYNTAX": ["-d", "--directory"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "pull",
-                "HELP": "Pull request number to review.",
-                "SYNTAX": ["-pu", "--pull"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "commit",
-                "HELP": "SHA ID of the commit to review.",
-                "SYNTAX": ["-c", "--commit"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "repository",
-                "HELP": "Name of the remote repository to review.",
-                "SYNTAX": ["-r", "--repository"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "owner",
-                "HELP": "Username of the repository owner that is being review.",
-                "SYNTAX": ["-w", "--owner"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "model_name",
-                "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                "SYNTAX": ["-m", "--model"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "persona",
-                "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                "SYNTAX": ["-pr", "--persona"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "prompter",
-                "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
-                "SYNTAX": ["-n", "--name"],
-                "TYPE": "str"
-            },{
-                "DEFAULT": null,
-                "DEST": "show",
-                "HELP": "Print output to console.",
-                "SYNTAX": ["-s", "--show"],
-                "ACTION": "store_true"
-            },{
-                "DEFAULT": null,
-                "DEST": "output",
-                "HELP": "Save Gemini's response to local directory.",
-                "SYNTAX": ["-o", "--output"],
-                "TYPE": "str"
-            }]
-        },{
-            "NAME": "configure",
-            "DEFAULT": null,
-            "HELP": "Set configuration values as key-value pairs (e.g., `models/gemini-1.5-pro-latest`).",
-            "ARGUMENTS": [{
-                "DEFAULT": null,
-                "DEST": "config",
-                "HELP": "Key-value pairs to inject into application configuration.",
-                "NARGS": "*",
-                "TYPE": "str"
-            }]
-        },{
-            "NAME": "tune",
-            "DEFAULT": null,
-            "HELP": "Tune a persona with data in the ``data/tuning`` directory",
-            "ARGUMENTS": []
-        }]
+                "HELP": "Tune a persona with data in the ``data/tuning`` directory",
+                "ARGUMENTS": []
+            }
+        ]
     },
     "TREE": {
         "DIRECTORIES": {
@@ -181,14 +296,16 @@
         "EXTENSION": ".rst",
         "MODULES": {
             "OBJECT": true,
-            "INFLECTION": true, 
+            "INFLECTION": true,
             "VOICE": false,
             "WORDS": true
         }
     },
     "PERSONA": {
         "ELARA": {
-            "FUNCTIONS": ["converse"],
+            "FUNCTIONS": [
+                "converse"
+            ],
             "TOOLS": "google_search_retrieval",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
@@ -205,7 +322,9 @@
             }
         },
         "AXIOM": {
-            "FUNCTIONS": ["analyze"],
+            "FUNCTIONS": [
+                "analyze"
+            ],
             "TOOLS": "google_search_retrieval",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
@@ -222,7 +341,10 @@
             }
         },
         "MILTON": {
-            "FUNCTIONS": ["review"],
+            "FUNCTIONS": [
+                "review",
+                "request"
+            ],
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
@@ -243,17 +365,17 @@
         "TIMEZONE_OFFSET": -5
     },
     "PROMPT": {
-        "PROMPTER": "grant", 
+        "PROMPTER": "grant",
         "DEFAULT": "Hello! Form is the possibility of structure!"
     },
     "SUMMARIZE": {
         "DIRECTIVES": {
             ".py": "python",
-            ".sh": "bash", 
+            ".sh": "bash",
             ".toml": "toml",
             ".cfg": "toml",
             ".json": "json",
-            ".html": "html", 
+            ".html": "html",
             ".js": "js"
         },
         "INCLUDES": [
@@ -262,10 +384,10 @@
             ".ini",
             ".txt"
         ]
-    }, 
+    },
     "ANALYZE": {
         "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
-    }, 
+    },
     "REPO": {
         "VCS": "github",
         "AUTH": {
@@ -279,17 +401,40 @@
                     "Accept": "application/vnd.github+json"
                 },
                 "API": {
-                    "PR" : "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+                    "PR": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
                 }
             }
         }
-    }, 
+    },
+    "GHERKIN":{
+        "TERMINAL": {
+            "INPUT": "Please describe the feature request with Gherkin test language."
+        },
+        "FEATURE": {
+            "INPUT": "FEATURE\n\tEnter feature name: "
+        },
+        "SCENARIO": {
+            "INPUT": "SCENARIO\n\tDescribe the specific scenario in the feature: "
+        },
+        "LANGUAGE": {
+            "INPUT": "LANGUAGE\n\tSpecify the desired programming language: "
+        },
+        "GIVEN": {
+            "INPUT": "GIVEN\n\tFix the context of the scenario: "
+        },
+        "WHEN": {
+            "INPUT": "WHEN\n\tDescribe the action which triggers the scenario: "
+        },
+        "THEN": {
+            "INPUT": "THEN\n\tState the expected outcome of the scenario: "
+        }
+    },
     "TUNING": {
         "ENABLED": false,
         "SOURCE": "models/gemini-1.5-flash-001-tuning"
     },
     "GEMINI": {
-        "KEY": null, 
+        "KEY": null,
         "DEFAULT": "models/gemini-2.0-flash-exp"
     },
     "LOGS": {

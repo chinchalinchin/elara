@@ -19,11 +19,12 @@ import objects.persona as persona
 import objects.model as model
 import objects.repo as repo
 import objects.template as template
+import objects.terminal as terminal
 
 def logger(
-    app: dict,
-    file : str = None
-) -> logging.Logger:
+    app                                 : dict,
+    file                                : str = None
+)                                       -> logging.Logger:
     """
     Configure application logging
 
@@ -57,6 +58,7 @@ def logger(
 
     return logger
 
+
 def args(configuration : config.Config) -> argparse.Namespace:
     """
     Parse and format command line arguments.
@@ -79,7 +81,7 @@ def args(configuration : config.Config) -> argparse.Namespace:
             help                        = op_config["HELP"]
         )
         for op_arg in op_config["ARGUMENTS"]:
-            if all(k in [ 
+            if any(k not in [ 
                 "DEFAULT", 
                 "DEST", 
                 "HELP", 
@@ -152,7 +154,7 @@ def configure(app : dict) -> dict:
     return config
 
 
-def converse(app : dict) -> str:
+def converse(app : dict) -> dict:
     """
     Chat with one of Gemini's personas.
 
@@ -204,7 +206,7 @@ def converse(app : dict) -> str:
     }
 
 
-def analyze(app: dict) -> str:
+def analyze(app: dict) -> dict:
     """
     This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
 
@@ -235,7 +237,7 @@ def analyze(app: dict) -> str:
         generation_config               = app["PERSONAS"].get("generationConfig", persona),
         safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
         tools                           = app["PERSONAS"].get("tools", persona),
-        system_instructions             = app["PERSONAS"].get("systemInstructions", persona)
+        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
     )
     
     return {
@@ -244,7 +246,7 @@ def analyze(app: dict) -> str:
     }
 
 
-def review(app : dict) -> str:
+def review(app : dict) -> dict:
     """
     This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
@@ -308,7 +310,37 @@ def review(app : dict) -> str:
     }
 
 
-def summarize(app : dict) -> str:
+def request(app: dict) -> dict:
+    """
+    
+    """
+    buffer                              = app["CACHE"].vars()
+    persona                             = app["PERSONAS"].function("request")
+    buffer["currentPersona"]            = persona
+    term                                = terminal.Terminal(
+        gherkin_config                  = app["CONFIG"].get("GHERKIN")
+    )
+    request_vars                         = { 
+        **term.gherkin(), 
+        **buffer 
+    }
+    
+    parsed_prompt                       = app["TEMPLATES"].render("request", request_vars)
+    
+    response                            = app["MODEL"].respond(
+        prompt                          = parsed_prompt,
+        model_name                      = app["CACHE"].get("currentModel"),
+        generation_config               = app["PERSONAS"].get("generationConfig", persona),
+        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
+        tools                           = app["PERSONAS"].get("tools", persona),
+        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
+    )
+    return {
+        "response"                      : response
+    }
+
+
+def summarize(app : dict) -> dict:
     """
     This function summarizes the contents of a directory and writes the sumamry to an RST file. 
 
@@ -407,26 +439,28 @@ def init(
 
     app["LOGGER"].debug("Writing command line arguments to cache...")
     update_event                        = False
+    arguments                           = vars(app["ARGUMENTS"])
     # @OPERATIONS
     #   Milton, the lunkheads in development have an issue here that 
-    #   is affect production.
+    #   is affecting production. They've programmed themselves into 
+    #   a real corner here...
     # @DEVELOPMENT
     #   Milton, we have to ensure the argument is defined before 
     #   updating the cache, so we can't update the cache in one 
     #   fell swoop. If we overhauld the `update` method to filter
     #   out null values, we might be able to refactor these lines
     #   into something simpler!
-    if app["ARGUMENTS"].persona:
+    if "persona" in arguments:
         update_event                    = app["CACHE"].update({ 
             "currentPersona"            : app["ARGUMENTS"].persona 
         }) or update_event
 
-    if app["ARGUMENTS"].prompter:
+    if "prompter" in arguments:
         update_event                    = app["CACHE"].update({ 
             "currentPrompter"           : app["ARGUMENTS"].prompter 
         }) or update_event
 
-    if app["ARGUMENTS"].model_name:
+    if "model_name" in arguments:
         update_event                    = app["CACHE"].update({ 
             "currentModel"              : app["ARGUMENTS"].model_name 
         }) or update_event
@@ -477,6 +511,7 @@ def init(
 
     return app
 
+
 def main() -> bool:
     """
     Main function to run the command-line interface.
@@ -487,6 +522,7 @@ def main() -> bool:
         "converse"                      : converse,
         "configure"                     : configure,
         "review"                        : review,
+        "request"                       : request,
         "tune"                          : tune,
         "analyze"                       : analyze
     }
@@ -496,26 +532,27 @@ def main() -> bool:
     if operation_name not in operations:
         return False 
     
-    res = operations[operation_name](app)
+    res                                 = operations[operation_name](app)
+    arguments                           = vars(app["ARGUMENTS"]) 
 
-    if app["ARGUMENTS"].output and "response" in res.keys():
+    if "output" in arguments and "response" in res.keys():
         with open(app["ARGUMENTS"].output, "w") as out:
             out.write(res["response"])
 
-    if app["ARGUMENTS"].output and "summary" in res.keys():
+    if "output" in arguments and "summary" in res.keys():
         with open(app["ARGUMENTS"].output, "w") as out:
             out.write(res["summary"])
 
-    if app["ARGUMENTS"].show and "prompt" in res.keys():
+    if "show" in arguments and "prompt" in res.keys():
         print(res["prompt"])
 
-    if app["ARGUMENTS"].show and "summary" in res.keys():
+    if "show" in arguments and "summary" in res.keys():
         print(res["summary"])
 
-    if app["ARGUMENTS"].show and "response" in res.keys():
+    if "show" in arguments and "response" in res.keys():
         print(res["response"])
 
-    if app["ARGUMENTS"].show and "vcs" in res.keys():
+    if "show" in arguments and "vcs" in res.keys():
         print(res["vcs"])
 
 if __name__ == "__main__":
