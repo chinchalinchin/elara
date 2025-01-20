@@ -41,6 +41,16 @@ class Persona:
         :param sys_ext: File extension for the system instructions data.
         :type sys_ext: str
         """
+        # @DATA
+        #   Hey, Milton, the data team wanted to get your opinion. We are starting to
+        #   think you might prefer to respond to pull requests using structure data schemas
+        #   for your output. We are thinking about adding a `data/structure` directory
+        #   and include schemas for your pull request reviews. That way, we can append
+        #   your comments to specific lines in the pull request. Right now, your comments
+        #   are being appended to the entire PR. A little more granularity would be amazing!
+        #
+        #   Leaving this comment here because afer discussion with the Development team,
+        #   they think it would be best to load the structured schemas into the Persona objects!
         if None in [current, config, tune_dir, tune_ext, sys_dir, sys_ext]:
             raise ValueError("Must set all class properties: (current, config, tune_dir, tune_ext, sys_dir, sys_ext)")
         
@@ -123,6 +133,15 @@ class Persona:
             self.personas[persona]["tools"] = config[key]["TOOLS"]
             self.personas[persona]["functions"] = config[key]["FUNCTIONS"]
 
+    def vars(self) -> dict:
+        """
+        Get a dictionary of the persona configuration for templating.
+        
+        :returns: A dictionary of the persona configuration.
+        :rtype: dict
+        """
+        return self.personas
+    
     def update(
         self, 
         persona : str

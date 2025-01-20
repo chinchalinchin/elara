@@ -89,42 +89,42 @@ class Config:
         )
 
         self.data["LANGUAGE"]["MODULES"]["OBJECT"] = self.env(
-            "LANGUAGE_OBJECT",
+            "LANGUAGE_MODLES_OBJECT",
             self.data["LANGUAGE"]["MODULES"]["OBJECT"]
         )
 
         self.data["LANGUAGE"]["MODULES"]["INFLECTION"] = self.env(
-            "LANGUAGE_INFLECTION", 
+            "LANGUAGE_MODLES_INFLECTION", 
             self.data["LANGUAGE"]["MODULES"]["INFLECTION"]
         )
 
         self.data["LANGUAGE"]["MODULES"]["VOICE"] = self.env(
-            "LANGUAGE_VOICE", 
+            "LANGUAGE_MODULES_VOICE", 
             self.data["LANGUAGE"]["MODULES"]["VOICE"]
         )
         
         self.data["LANGUAGE"]["MODULES"]["WORDS"] = self.env(
-            "LANGUAGE_WORDS", 
+            "LANGUAGE_MODULES_WORDS", 
             self.data["LANGUAGE"]["MODULES"]["WORDS"]
         )
 
         self.data["CONVERSATION"]["TIMEZONE_OFFSET"] = self.env(
-            "CONVO_TIMEZONE", 
+            "CONVERSATION_TIMEZONE_OFFSET", 
             self.data["CONVERSATION"]["TIMEZONE_OFFSET"]
         )
         
         self.data["ANALYZE"]["LATEX_PREAMBLE"] = self.env(
-            "LATEX_PREAMBLE",
+            "ANALYZE_LATEX_PREAMBLE",
             self.data["ANALYZE"]["LATEX_PREAMBLE"]
         )
 
         self.data["REPO"]["VCS"] = self.env(
-            "VCS", 
+            "REPO_VCS", 
             self.data["REPO"]["VCS"]
         )
 
         self.data["REPO"]["AUTH"]["CREDS"] = self.env(
-            "VCS_TOKEN",
+            "REPO_AUTH_CREDS",
             self.data["REPO"]["AUTH"]["CREDS"]
         )
 
@@ -144,10 +144,25 @@ class Config:
         )
 
         self.data["LOGS"]["LEVEL"] = self.env(
-            "LOG_LEVEL", 
+            "LOGS_LEVEL", 
             self.data["LOGS"]["LEVEL"]
         )
 
+    def vars(self) -> dict:
+        """
+        Get a dictionary of the application configuration for templating.
+
+        :returns: A dictionary of the application configuration.
+        :rtype: dict
+        """
+        # Filter out attributes with sensitive values!
+        return { 
+            k: v 
+            for k,v 
+            in self.data.items()
+            if k not in ["GEMINI", "REPO"]
+        }
+    
     def save(self):
         """
         Saves the cache to the JSON file in ``data`` directory.

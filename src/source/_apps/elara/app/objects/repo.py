@@ -27,7 +27,6 @@ class Repo:
         self,
         repository : str, 
         owner : str,
-        commit : str,
         vcs : str ,
         auth : str,
         backends : dict
@@ -68,8 +67,7 @@ class Repo:
         self.src = {
             "owner": owner,
             "repo": repository,
-            "vcs": vcs,
-            "commit": commit
+            "vcs": vcs
         }
 
     def __new__(
@@ -108,7 +106,7 @@ class Repo:
         :rtype: str
         """
         if self.src["vcs"] == "github":
-            return self.backends["GITHUB"]["API"]["PR"].format(**{
+            return self.backends["GITHUB"]["API"]["PR"]["ISSUE"].format(**{
                 **{ "pr": pr }, 
                 **self.src
             })
@@ -145,8 +143,7 @@ class Repo:
     def comment(
         self,
         msg : str,
-        pr : str,
-        path: str
+        pr : str
     ):
         """
         Post a comment to a pull request on the VCS backend. Links below detail the specific VCS provider endpoints,
@@ -161,35 +158,20 @@ class Repo:
         :type msg: str
         :param pr: Pull request number on which to comment.
         :type pr: str
-        :param commit: Commit ID on which to comment.
-        :type commit: str.
         """
-        url = self._pr(pr)
-        headers = self._headers()
-        data = {
-            "body": msg,
-            "commit_id": self.src["commit"], 
-            # @DEVELOPMENT
-            #   We need some way to extract this information from Gemini's response!
-            #   What do you think, Milton? You probably have a particuarly insightful
-            #   way to ensure Gemini returns the necessary information for this pull
-            #   request to get posted to the correct file lines!
-            "path": path,
-            "position": 1,
-            "start_line":1,
-            "start_side":"RIGHT",
-            "line":2,
-            "side":"RIGHT"
-        }
-        
         try:
-            logger.debug(f"Making HTTP call to {url}")
+            logger.debug(f"Making HTTP call to {self._pr(pr)}")
+
             res = requests.post(
-                url = url, 
-                headers = headers, 
-                json = data
+                url = self._pr(pr), 
+                headers = self._headers(), 
+                json = { "body": msg }
             )
+
+            logger.debug(res)
+
             res.raise_for_status()
+            
             return {
                 "status": "success",
                 "body": res.json()

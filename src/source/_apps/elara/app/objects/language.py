@@ -7,7 +7,9 @@ Object for Language module parsing and loading. Language modules are plugins for
 
 # Standard Library Modules
 import os
+import logging
 
+logger = logging.getLogger(__name__)
 
 class Language:
     inst = None
@@ -85,10 +87,14 @@ class Language:
                 module = os.path.splitext(file)[0]
                 file_path = os.path.join(root, file)
 
-                with open(file_path, "r") as f:
-                    payload  = f.read()
-                
-                self.modules[module] = payload
+                try:
+                    with open(file_path, "r") as f:
+                        payload  = f.read()
+                    self.modules[module] = payload
+
+                except Exception as e:
+                    logger.error(f"Error loading language module {file_path}: {e}")
+                    continue
 
     def get_module(
         self, 
@@ -115,7 +121,7 @@ class Language:
             return {**{
                 "language": True
             }, **self.modules}
-        return self.modules
+        return { }
     
     def list_modules(self) -> list:
         """

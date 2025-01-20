@@ -31,7 +31,7 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "model_name",
+                        "DEST": "currentModel",
                         "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                         "SYNTAX": [
                             "-m",
@@ -41,7 +41,7 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "persona",
+                        "DEST": "currentPersona",
                         "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                         "SYNTAX": [
                             "-pr",
@@ -51,7 +51,7 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "prompter",
+                        "DEST": "currentPrompter",
                         "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
                         "SYNTAX": [
                             "-n",
@@ -167,16 +167,6 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "commit",
-                        "HELP": "SHA ID of the commit to review.",
-                        "SYNTAX": [
-                            "-c",
-                            "--commit"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
                         "DEST": "repository",
                         "HELP": "Name of the remote repository to review.",
                         "SYNTAX": [
@@ -197,7 +187,7 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "model_name",
+                        "DEST": "currentModel",
                         "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                         "SYNTAX": [
                             "-m",
@@ -207,7 +197,7 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "persona",
+                        "DEST": "currentPersona",
                         "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                         "SYNTAX": [
                             "-pr",
@@ -217,7 +207,7 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "prompter",
+                        "DEST": "currentPrompter",
                         "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
                         "SYNTAX": [
                             "-n",
@@ -383,6 +373,11 @@
             ".md",
             ".ini",
             ".txt"
+        ],
+        "EXCLUDES": [
+            ".pyc",
+            ".zip",
+            ".gz"
         ]
     },
     "ANALYZE": {
@@ -401,7 +396,10 @@
                     "Accept": "application/vnd.github+json"
                 },
                 "API": {
-                    "PR": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+                    "PR": {
+                        "ISSUE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                        "LINE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/pulls"
+                    }
                 }
             }
         }

@@ -7,9 +7,9 @@ import logging
 import os
 import pathlib
 import pprint
-import re
 
 # Application Modules
+import util
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as conversation
@@ -48,12 +48,12 @@ def logger(
         file_handler                    = logging.FileHandler(file)
         file_handler.setLevel(level) 
         file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
 
     console_handler                     = logging.StreamHandler()
     console_handler.setLevel(level)
     console_handler.setFormatter(formatter)
-
-    logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
     return logger
@@ -106,7 +106,7 @@ def args(configuration : config.Config) -> argparse.Namespace:
                     default             = op_arg["DEFAULT"],
                     dest                = op_arg["DEST"],
                     help                = op_arg["HELP"],
-                    type                = eval(op_arg["TYPE"])
+                    type                = util.map(op_arg["TYPE"])
                 )
                 continue
             
@@ -114,7 +114,7 @@ def args(configuration : config.Config) -> argparse.Namespace:
                 default                 = op_arg["DEFAULT"],
                 dest                    = op_arg["DEST"],
                 help                    = op_arg["HELP"],
-                type                    = eval(op_arg["TYPE"])
+                type                    = util.map(op_arg["TYPE"])
             )
 
     return parser.parse_args()
@@ -132,19 +132,25 @@ def configure(app : dict) -> dict:
 
     if app["ARGUMENTS"].config:
         for item in app["ARGUMENTS"].config:
-            try:
-                if "=" not in item:
-                    app["LOGGER"].error(f"Invalid configuration format: {item}. Expected key=value.")
-                    continue
-                key, value              = item.split("=", 1)
-                if key not in app["CONFIG"].data:
-                    app["LOGGER"].error(f"Invalid configuration key: {key}. Key not in configuration.")
-                    continue
-                config[key]             = value
-            except ValueError:
+            if "=" not in item:
                 app["LOGGER"].error(f"Invalid configuration format: {item}. Expected key=value.")
                 continue
+            
+            key, value                  = item.split("=", 1)
 
+            if key not in app["CONFIG"].data:
+                app["LOGGER"].error(f"Invalid configuration key: {key}. Key not in configuration.")
+                continue
+
+            validated_value             = util.validate(value)
+
+            if validated_value is None:
+                app["LOGGER"].error(f"Invalidate configuration type: {key}={value}")
+                continue 
+
+            config[key]                 = validated_value
+
+    if config:
         app["CONFIG"].update(**config)
         app["CONFIG"].save()
         app["LOGGER"].info(f"Updated configuration with: {config}")
@@ -265,7 +271,6 @@ def review(app : dict) -> dict:
     source                              = repo.Repo(
         repository                      = app["ARGUMENTS"].repository,
         owner                           = app["ARGUMENTS"].owner,
-        commit                          = app["ARGUMENTS"].commit,
         vcs                             = app["CONFIG"].get("REPO.VCS"),
         auth                            = app["CONFIG"].get("REPO.AUTH"),
         backends                        = app["CONFIG"].get("REPO.BACKENDS")
@@ -281,6 +286,7 @@ def review(app : dict) -> dict:
         **app["LANGUAGE"].vars(),
         **summarize(app)
     }
+
     review_prompt                       = app["TEMPLATES"].render(
         temp                            = "review", 
         variables                       = review_variables
@@ -295,14 +301,10 @@ def review(app : dict) -> dict:
         system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
     )
 
-    file_paths                          = re.findall(r'(?m)^([\w\/\.\-]+)\n[-]+$', model_res)
-    source_res                          = []
-    for file_path in file_paths:
-        source_res                      += [source.comment(
-            msg                         = model_res,
-            pr                          = app["ARGUMENTS"].pull,
-            path                        = file_path
-        )]
+    source_res                          = source.comment(
+        msg                             = model_res,
+        pr                              = app["ARGUMENTS"].pull,
+    )
     return {
         "prompt"                        : review_prompt,
         "response"                      : model_res,
@@ -312,7 +314,12 @@ def review(app : dict) -> dict:
 
 def request(app: dict) -> dict:
     """
-    
+    This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
+
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated feature request.
+    :rtype: dict
     """
     buffer                              = app["CACHE"].vars()
     persona                             = app["PERSONAS"].function("request")
@@ -354,8 +361,7 @@ def summarize(app : dict) -> dict:
     dir                                 = directory.Directory(
         directory                       = local_dir,
         summary_file                    = app["CONFIG"].get("TREE.FILES.SUMMARY"),
-        summary_includes                = app["CONFIG"].get("SUMMARIZE.INCLUDES"),
-        summary_directives              = app["CONFIG"].get("SUMMARIZE.DIRECTIVES")
+        summary_config                  = app["CONFIG"].get("SUMMARIZE")
     )
 
     summary_vars                        = dir.summary()
@@ -376,6 +382,7 @@ def tune(app : dict) -> bool:
     """
     
     if app["CONFIG"].get("TUNING.ENABLED"):
+        tuned_models = []
         for p in app["PERSONAS"].all():
             if not app["CACHE"].is_tuned(p):
                 res                     = app["MODEL"].tune(
@@ -383,15 +390,18 @@ def tune(app : dict) -> bool:
                     tuning_model        = app["CONFIG"].get("TUNING.SOURCE"),
                     tuning_data         = app["PERSONA"].tuning(p)
                 )
-                app["CACHE"].update({
-                    "tunedModels"       : [{
-                        "name"          : p,
-                        "version"       : app["CONFIG"].get("VERSION"),
-                        "path"          : res.name
-                    }]
+                tuned_models.append({
+                    "name"              : p,
+                    "version"           : app["CONFIG"].get("VERSION"),
+                    "path"              : res.name
                 })
-                app["CACHE"].save()
-    return app["CACHE"].get("tunedModels")
+        if tuned_models:
+            app["CACHE"].update(**{
+                "tunedModels"           : tuned_models
+            })
+            app["CACHE"].save()
+            return True
+    return False
     
 
 def init(
@@ -407,6 +417,9 @@ def init(
     app                                 = {}
     app_dir                             = pathlib.Path(__file__).resolve().parent
 
+    #############################
+    # APPLICATION CONFIGURATION #
+    #############################
     config_filepath                     = os.path.join(app_dir, data_dir, config_file)
     app["CONFIG"]                       = config.Config(
         config_file                     = config_filepath
@@ -415,20 +428,28 @@ def init(
     if not app["CONFIG"].get("GEMINI.KEY"):
         raise ValueError("GEMINI_KEY environment variable not set.")
 
+    #######################
+    # APPLICATION LOGGING #
+    #######################
     log_rel_path                        = app["CONFIG"].get("TREE.DIRECTORIES.LOGS")
     log_file                            = app["CONFIG"].get("TREE.FILES.LOG")
     log_filepath                        = os.path.join(app_dir, log_rel_path, log_file)
-    
     app["LOGGER"]                       = logger(
         app                             = app,
         file                            = log_filepath
     )
 
+    #########################
+    # APPLICATION ARGUMENTS #
+    #########################
     app["LOGGER"].debug("Initializing arguments...")
     app["ARGUMENTS"]                    = args(
         configuration                   = app["CONFIG"]
     )
 
+    #####################
+    # APPLICATION CACHE #
+    ##################### 
     app["LOGGER"].debug("Initializing application cache...")
     cache_rel_path                      = app["CONFIG"].get("TREE.DIRECTORIES.DATA")
     cache_file                          = app["CONFIG"].get("TREE.FILES.CACHE")
@@ -437,37 +458,25 @@ def init(
         cache_file                      = cache_filepath
     )
 
+    # Write arguments to cache
     app["LOGGER"].debug("Writing command line arguments to cache...")
     update_event                        = False
     arguments                           = vars(app["ARGUMENTS"])
-    # @OPERATIONS
-    #   Milton, the lunkheads in development have an issue here that 
-    #   is affecting production. They've programmed themselves into 
-    #   a real corner here...
-    # @DEVELOPMENT
-    #   Milton, we have to ensure the argument is defined before 
-    #   updating the cache, so we can't update the cache in one 
-    #   fell swoop. If we overhauld the `update` method to filter
-    #   out null values, we might be able to refactor these lines
-    #   into something simpler!
-    if "persona" in arguments:
-        update_event                    = app["CACHE"].update({ 
-            "currentPersona"            : app["ARGUMENTS"].persona 
-        }) or update_event
+    for k, v in arguments.items():
+        if k in app["CACHE"].vars():
+            if v is None:
+                v = app["CACHE"].get(k)
 
-    if "prompter" in arguments:
-        update_event                    = app["CACHE"].update({ 
-            "currentPrompter"           : app["ARGUMENTS"].prompter 
-        }) or update_event
+            update_event                = app["CACHE"].update(**{
+                k                       : v
+            }) or update_event
 
-    if "model_name" in arguments:
-        update_event                    = app["CACHE"].update({ 
-            "currentModel"              : app["ARGUMENTS"].model_name 
-        }) or update_event
-        
     if update_event:
         app["CACHE"].save()
 
+    ########################
+    # APPLICATION LANGUAGE #
+    ######################## 
     app["LOGGER"].debug("Initializing language modules...")
     lang_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.LANGUAGE")
     lang_dir                            = os.path.join(app_dir, lang_rel_path)
@@ -477,6 +486,9 @@ def init(
         enabled                         = app["CONFIG"].language_modules()
     )
 
+    #########################
+    # APPLICATION TEMPLATES #
+    #########################
     app["LOGGER"].debug("Initializing application templates...")
     temp_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TEMPLATES")
     temp_dir                            = os.path.join(app_dir, temp_rel_path)
@@ -485,6 +497,9 @@ def init(
         extension                       = app["CONFIG"].get("TREE.EXTENSIONS.TEMPLATE")
     )
 
+    #####################
+    # APPLICATION MODEL #
+    #####################
     app["LOGGER"].debug("Initializing Gemini Model...")
     app["MODEL"]                        = model.Model(
         api_key                         = app["CONFIG"].get("GEMINI.KEY"),
@@ -492,6 +507,9 @@ def init(
         tuning                          = app["CONFIG"].get("TUNING.ENABLED")
     )
 
+    ########################
+    # APPLICATION PERSONAS #
+    ########################
     app["LOGGER"].debug("Initializing personas...")
     tune_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TUNING")
     sys_rel_path                        = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM")
@@ -507,8 +525,13 @@ def init(
     )            
     
     app["LOGGER"].debug("Application initialized!")
-    app["LOGGER"].debug(pprint.pformat(app))
-
+    app["LOGGER"].debug("--- Application Configuration")
+    app["LOGGER"].debug(pprint.pformat(app["CONFIG"].vars()))
+    app["LOGGER"].debug("--- Application Cache")
+    app["LOGGER"].debug(pprint.pformat(app["CACHE"].vars()))
+    app["LOGGER"].debug("--- Application Arguments")
+    app["LOGGER"].debug(pprint.pformat(arguments))
+    
     return app
 
 
@@ -535,25 +558,26 @@ def main() -> bool:
     res                                 = operations[operation_name](app)
     arguments                           = vars(app["ARGUMENTS"]) 
 
-    if "output" in arguments and "response" in res.keys():
+    if "output" in arguments and app["ARGUMENTS"].output and "response" in res.keys():
         with open(app["ARGUMENTS"].output, "w") as out:
             out.write(res["response"])
 
-    if "output" in arguments and "summary" in res.keys():
+    if "output" in arguments and app["ARGUMENTS"].output and  "summary" in res.keys():
         with open(app["ARGUMENTS"].output, "w") as out:
             out.write(res["summary"])
 
-    if "show" in arguments and "prompt" in res.keys():
-        print(res["prompt"])
+    if "show" in arguments and app["ARGUMENTS"].show:
+        if "prompt" in res.keys():
+            print(res["prompt"])
 
-    if "show" in arguments and "summary" in res.keys():
-        print(res["summary"])
+        if "summary" in res.keys():
+            print(res["summary"])
 
-    if "show" in arguments and "response" in res.keys():
-        print(res["response"])
+        if "response" in res.keys():
+            print(res["response"])
 
-    if "show" in arguments and "vcs" in res.keys():
-        print(res["vcs"])
+        if "vcs" in res.keys():
+            print(res["vcs"])
 
 if __name__ == "__main__":
     main()

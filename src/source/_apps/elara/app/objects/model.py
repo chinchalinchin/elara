@@ -17,6 +17,8 @@ class Model:
     """Default Gemini model"""
     tuning = False
     """Flag for Gemini model tuning"""
+    models = None
+    """Gemini model metadata cache"""
 
     def __init__(
         self,
@@ -34,6 +36,7 @@ class Model:
 
         self.default_model = default_model
         self.tuning = tuning
+        self.models = genai.list_models()
 
     def _get(
         self,
@@ -68,10 +71,6 @@ class Model:
         """
         Retrieve all Gemini models.
         """
-        # @OPERATIONS
-        #   MILTON! These jokers in Development don't know the first thing about error handling.
-        #   What happens if `genai.list_models()` returns a 400? I'm sure it never crossed those
-        #   code monkeys' empty heads they might need to actually do their jobs...
         return [{
             "path": m.name,
             "version": m.version,
@@ -79,7 +78,7 @@ class Model:
             "output_token_limit": m.output_token_limit
         } 
             for m 
-            in genai.list_models()
+            in self.models
             if (
                 "gemini" in m.name 
                 and 
@@ -91,9 +90,6 @@ class Model:
         """
         Retrieve all Gemini models that can be tuned.
         """
-        # @OPERATIONS
-        #   MILTON! Look at this! Multiple calls to `genai.list_models()`! No caching whatsoever!
-        #   These bytes aren't free, Milton! We need to be optimizing our API calls!
         return [{
             "path": m.name,
             "version": m.version,
@@ -101,7 +97,7 @@ class Model:
             "output_token_limit": m.output_token_limit
         } 
             for m 
-            in genai.list_models()
+            in self.models
             if (
                 "tuning" in m.name 
                 and 
@@ -134,14 +130,18 @@ class Model:
         """
         
         """
-        return genai.create_tuned_model(
-            display_name=display_name,
-            source_model=tuning_model,
-            training_data=tuning_data,
-            epoch_count=epoch_count,
-            batch_size=batch_size,
-            learning_rate=learning_rate
-        ).result()
+        try:
+            return genai.create_tuned_model(
+                display_name=display_name,
+                source_model=tuning_model,
+                training_data=tuning_data,
+                epoch_count=epoch_count,
+                batch_size=batch_size,
+                learning_rate=learning_rate
+            ).result()
+        except Exception as e:
+            logger.error(f"Error tuning model {display_name}: {e}")
+            raise
     
     def respond(
         self,
@@ -155,9 +155,19 @@ class Model:
         """
         
         """
-        if model_name is not None:
+        try:
+            if model_name is not None:
+                return self._get(
+                    model_name = model_name,
+                    system_instruction = system_instruction
+                ).generate_content(
+                    contents = prompt,
+                    tools = tools,
+                    generation_config = generation_config,
+                    safety_settings = safety_settings
+                ).text
             return self._get(
-                model_name = model_name,
+                model_name = self.default_model,
                 system_instruction = system_instruction
             ).generate_content(
                 contents = prompt,
@@ -165,12 +175,6 @@ class Model:
                 generation_config = generation_config,
                 safety_settings = safety_settings
             ).text
-        return self._get(
-            model_name = self.default_model,
-            system_instruction = system_instruction
-        ).generate_content(
-            contents = prompt,
-            tools = tools,
-            generation_config = generation_config,
-            safety_settings = safety_settings
-        ).text
+        except Exception as e:
+            logger.error(f"Error generating content: {e}")
+            raise
