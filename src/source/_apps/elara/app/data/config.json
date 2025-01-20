@@ -167,16 +167,6 @@
                     },
                     {
                         "DEFAULT": null,
-                        "DEST": "commit",
-                        "HELP": "SHA ID of the commit to review.",
-                        "SYNTAX": [
-                            "-c",
-                            "--commit"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
                         "DEST": "repository",
                         "HELP": "Name of the remote repository to review.",
                         "SYNTAX": [
@@ -406,7 +396,10 @@
                     "Accept": "application/vnd.github+json"
                 },
                 "API": {
-                    "PR": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+                    "PR": {
+                        "ISSUE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                        "LINE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/pulls"
+                    }
                 }
             }
         }

@@ -2551,3 +2551,982 @@
 2025-01-19 18:57:49,121 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "POST /repos/chinchalinchin/elara/pulls/3/comments HTTP/1.1" 422 375
 2025-01-19 18:57:49,122 - objects.repo - DEBUG - <Response [422]>
 2025-01-19 18:57:49,122 - objects.repo - ERROR - Error during Github API request: 422 Client Error: Unprocessable Entity for url: https://api.github.com/repos/chinchalinchin/elara/pulls/3/comments
+2025-01-20 11:36:19,340 - root - DEBUG - Initializing arguments...
+2025-01-20 11:36:19,347 - root - DEBUG - Initializing application cache...
+2025-01-20 11:36:19,348 - root - DEBUG - Writing command line arguments to cache...
+2025-01-20 11:36:19,349 - root - DEBUG - Initializing language modules...
+2025-01-20 11:36:19,349 - root - DEBUG - Initializing application templates...
+2025-01-20 11:36:19,349 - root - DEBUG - Initializing Gemini Model...
+2025-01-20 11:36:19,350 - root - DEBUG - Initializing personas...
+2025-01-20 11:36:19,353 - root - DEBUG - Application initialized!
+2025-01-20 11:36:19,353 - root - DEBUG - --- Application Configuration
+2025-01-20 11:36:19,366 - root - DEBUG - {'ANALYZE': {'LATEX_PREAMBLE': '\\usepackage{babel}\n'
+                               '\\babelprovide[import, main]{coptic}\n'
+                               '\\usepackage{amssymb}\n'
+                               '\\usepackage{amsmath}\n'
+                               '\\usepackage[utf8]{inputenc}\n'
+                               '\\usepackage{lmodern}\n'
+                               '\\usepackage{runic}\n'},
+ 'CONVERSATION': {'TIMEZONE_OFFSET': -5},
+ 'GHERKIN': {'FEATURE': {'INPUT': 'FEATURE\n\tEnter feature name: '},
+             'GIVEN': {'INPUT': 'GIVEN\n\tFix the context of the scenario: '},
+             'LANGUAGE': {'INPUT': 'LANGUAGE\n'
+                                   '\tSpecify the desired programming '
+                                   'language: '},
+             'SCENARIO': {'INPUT': 'SCENARIO\n'
+                                   '\tDescribe the specific scenario in the '
+                                   'feature: '},
+             'TERMINAL': {'INPUT': 'Please describe the feature request with '
+                                   'Gherkin test language.'},
+             'THEN': {'INPUT': 'THEN\n'
+                               '\tState the expected outcome of the '
+                               'scenario: '},
+             'WHEN': {'INPUT': 'WHEN\n'
+                               '\tDescribe the action which triggers the '
+                               'scenario: '}},
+ 'INTERFACE': {'HELP': {'PARSER': 'Plumb the depths of generative AI.',
+                        'SUBPARSER': 'Available operations: (configure, '
+                                     'converse, summarize, review, analyze)'},
+               'OPERATIONS': [{'ARGUMENTS': [{'DEFAULT': 'Hello! Form is the '
+                                                         'possibility of '
+                                                         'structure!',
+                                              'DEST': 'prompt',
+                                              'HELP': 'The prompt to '
+                                                      'contextualize and '
+                                                      'forward to the Gemini '
+                                                      'API.',
+                                              'SYNTAX': ['-p', '--prompt'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the '
+                                                      'directory to summarize '
+                                                      'and inject into the '
+                                                      'prompt.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentModel',
+                                              'HELP': 'The full model path of '
+                                                      'Gemini to use, e.g. '
+                                                      '`models/gemini-1.5-pro-latest`, '
+                                                      '`models/gemini-2.0-flash-exp`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-m', '--model'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPersona',
+                                              'HELP': 'The persona for Gemini '
+                                                      'to assume, e.g. '
+                                                      '`elara`, `axiom`, etc. '
+                                                      'Defaults to the value '
+                                                      'of the `GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-pr', '--persona'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPrompter',
+                                              'HELP': 'The name of the '
+                                                      'prompter, e.g. '
+                                                      '`Aristotle`, `Euler`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PROMPTER` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-n', '--name'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Chat with a Gemini model persona.',
+                               'NAME': 'converse'},
+                              {'ARGUMENTS': [{'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Template a Gherkin-style feature '
+                                       'request and post it to the Gemini API.',
+                               'NAME': 'request'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the '
+                                                      'directory to summarize '
+                                                      'and inject into the '
+                                                      'prompt.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Generate an RST formatted summary of a '
+                                       'local directory. Summary will be '
+                                       'written to the directory it is '
+                                       'summarizing.',
+                               'NAME': 'summarize'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the VCS '
+                                                      'repository to summarize '
+                                                      'and inject into the '
+                                                      'pull request review.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'pull',
+                                              'HELP': 'Pull request number to '
+                                                      'review.',
+                                              'SYNTAX': ['-pu', '--pull'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'repository',
+                                              'HELP': 'Name of the remote '
+                                                      'repository to review.',
+                                              'SYNTAX': ['-r', '--repository'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'owner',
+                                              'HELP': 'Username of the '
+                                                      'repository owner that '
+                                                      'is being review.',
+                                              'SYNTAX': ['-w', '--owner'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentModel',
+                                              'HELP': 'The full model path of '
+                                                      'Gemini to use, e.g. '
+                                                      '`models/gemini-1.5-pro-latest`, '
+                                                      '`models/gemini-2.0-flash-exp`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-m', '--model'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPersona',
+                                              'HELP': 'The persona for Gemini '
+                                                      'to assume, e.g. '
+                                                      '`elara`, `axiom`, etc. '
+                                                      'Defaults to the value '
+                                                      'of the `GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-pr', '--persona'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPrompter',
+                                              'HELP': 'The name of the '
+                                                      'prompter, e.g. '
+                                                      '`Aristotle`, `Euler`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PROMPTER` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-n', '--name'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Generate an RST formatted summary of a '
+                                       'local git repository and then send it '
+                                       'to `milton` for code review.',
+                               'NAME': 'review'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'config',
+                                              'HELP': 'Key-value pairs to '
+                                                      'inject into application '
+                                                      'configuration.',
+                                              'NARGS': '*',
+                                              'TYPE': 'str'}],
+                               'DEFAULT': None,
+                               'HELP': 'Set configuration values as key-value '
+                                       'pairs (e.g., '
+                                       '`models/gemini-1.5-pro-latest`).',
+                               'NAME': 'configure'},
+                              {'ARGUMENTS': [],
+                               'DEFAULT': None,
+                               'HELP': 'Tune a persona with data in the '
+                                       '``data/tuning`` directory',
+                               'NAME': 'tune'}]},
+ 'LANGUAGE': {'EXTENSION': '.rst',
+              'MODULES': {'INFLECTION': True,
+                          'OBJECT': True,
+                          'VOICE': False,
+                          'WORDS': True}},
+ 'LOGS': {'LEVEL': 'DEBUG',
+          'SCHEMA': '%(asctime)s - %(name)s - %(levelname)s - %(message)s'},
+ 'PERSONA': {'AXIOM': {'FUNCTIONS': ['analyze'],
+                       'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                             'MAX_OUTPUT_TOKENS': 8000,
+                                             'TEMPERATURE': 0.9,
+                                             'TOP_K': 40,
+                                             'TOP_P': 0.9},
+                       'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                       'TOOLS': 'google_search_retrieval'},
+             'ELARA': {'FUNCTIONS': ['converse'],
+                       'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                             'MAX_OUTPUT_TOKENS': 2000,
+                                             'TEMPERATURE': 0.7,
+                                             'TOP_K': 40,
+                                             'TOP_P': 0.85},
+                       'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                       'TOOLS': 'google_search_retrieval'},
+             'MILTON': {'FUNCTIONS': ['review', 'request'],
+                        'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                              'MAX_OUTPUT_TOKENS': 8000,
+                                              'TEMPERATURE': 0.9,
+                                              'TOP_K': 40,
+                                              'TOP_P': 0.9},
+                        'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                        'TOOLS': 'code_execution'}},
+ 'PROMPT': {'DEFAULT': 'Hello! Form is the possibility of structure!',
+            'PROMPTER': 'grant'},
+ 'SUMMARIZE': {'DIRECTIVES': {'.cfg': 'toml',
+                              '.html': 'html',
+                              '.js': 'js',
+                              '.json': 'json',
+                              '.py': 'python',
+                              '.sh': 'bash',
+                              '.toml': 'toml'},
+               'EXCLUDES': ['.pyc', '.zip', '.gz'],
+               'INCLUDES': ['.rst', '.md', '.ini', '.txt']},
+ 'TREE': {'DIRECTORIES': {'DATA': 'data',
+                          'HISTORY': 'data/history',
+                          'LANGUAGE': 'data/language',
+                          'LOGS': 'data/logs',
+                          'SYSTEM': 'data/system',
+                          'TEMPLATES': 'data/templates',
+                          'TOOLS': 'data/tools',
+                          'TUNING': 'data/tuning'},
+          'EXTENSIONS': {'LANGUAGE': '.rst',
+                         'TEMPLATE': '.rst',
+                         'TUNING': '.json'},
+          'FILES': {'CACHE': 'cache.json',
+                    'CONFIG': 'config.json',
+                    'LOG': 'elara.log',
+                    'SUMMARY': 'summary.rst'}},
+ 'TUNING': {'ENABLED': False, 'SOURCE': 'models/gemini-1.5-flash-001-tuning'},
+ 'VERSION': '1.0'}
+2025-01-20 11:36:19,367 - root - DEBUG - --- Application Cache
+2025-01-20 11:36:19,367 - root - DEBUG - {'currentModel': 'models/gemini-2.0-flash-exp',
+ 'currentPersona': 'elara',
+ 'currentPrompter': 'grant',
+ 'tunedModels': [{'name': 'elara',
+                  'path': 'tunedModels/elara-a38gqsr3zzw8',
+                  'version': '1.0'},
+                 {'name': 'axiom',
+                  'path': 'tunedModels/axiom-rx8g5v830mqn',
+                  'version': '1.0'}],
+ 'tuningModel': 'models/gemini-1.5-flash-001-tuning'}
+2025-01-20 11:36:19,367 - root - DEBUG - --- Application Arguments
+2025-01-20 11:36:19,368 - root - DEBUG - {'currentModel': None,
+ 'currentPersona': None,
+ 'currentPrompter': None,
+ 'directory': '/home/grant/Projects/elara/src/source/_apps/elara',
+ 'operation': 'review',
+ 'output': '/home/grant/Projects/elara/src/source/_apps/elara/review.md',
+ 'owner': 'chinchalinchin',
+ 'pull': '3',
+ 'repository': 'elaara',
+ 'show': False}
+2025-01-20 11:36:38,106 - root - DEBUG - Initializing arguments...
+2025-01-20 11:36:38,113 - root - DEBUG - Initializing application cache...
+2025-01-20 11:36:38,113 - root - DEBUG - Writing command line arguments to cache...
+2025-01-20 11:36:38,113 - root - DEBUG - Initializing language modules...
+2025-01-20 11:36:38,114 - root - DEBUG - Initializing application templates...
+2025-01-20 11:36:38,114 - root - DEBUG - Initializing Gemini Model...
+2025-01-20 11:36:38,114 - root - DEBUG - Initializing personas...
+2025-01-20 11:36:38,115 - root - DEBUG - Application initialized!
+2025-01-20 11:36:38,115 - root - DEBUG - --- Application Configuration
+2025-01-20 11:36:38,121 - root - DEBUG - {'ANALYZE': {'LATEX_PREAMBLE': '\\usepackage{babel}\n'
+                               '\\babelprovide[import, main]{coptic}\n'
+                               '\\usepackage{amssymb}\n'
+                               '\\usepackage{amsmath}\n'
+                               '\\usepackage[utf8]{inputenc}\n'
+                               '\\usepackage{lmodern}\n'
+                               '\\usepackage{runic}\n'},
+ 'CONVERSATION': {'TIMEZONE_OFFSET': -5},
+ 'GHERKIN': {'FEATURE': {'INPUT': 'FEATURE\n\tEnter feature name: '},
+             'GIVEN': {'INPUT': 'GIVEN\n\tFix the context of the scenario: '},
+             'LANGUAGE': {'INPUT': 'LANGUAGE\n'
+                                   '\tSpecify the desired programming '
+                                   'language: '},
+             'SCENARIO': {'INPUT': 'SCENARIO\n'
+                                   '\tDescribe the specific scenario in the '
+                                   'feature: '},
+             'TERMINAL': {'INPUT': 'Please describe the feature request with '
+                                   'Gherkin test language.'},
+             'THEN': {'INPUT': 'THEN\n'
+                               '\tState the expected outcome of the '
+                               'scenario: '},
+             'WHEN': {'INPUT': 'WHEN\n'
+                               '\tDescribe the action which triggers the '
+                               'scenario: '}},
+ 'INTERFACE': {'HELP': {'PARSER': 'Plumb the depths of generative AI.',
+                        'SUBPARSER': 'Available operations: (configure, '
+                                     'converse, summarize, review, analyze)'},
+               'OPERATIONS': [{'ARGUMENTS': [{'DEFAULT': 'Hello! Form is the '
+                                                         'possibility of '
+                                                         'structure!',
+                                              'DEST': 'prompt',
+                                              'HELP': 'The prompt to '
+                                                      'contextualize and '
+                                                      'forward to the Gemini '
+                                                      'API.',
+                                              'SYNTAX': ['-p', '--prompt'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the '
+                                                      'directory to summarize '
+                                                      'and inject into the '
+                                                      'prompt.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentModel',
+                                              'HELP': 'The full model path of '
+                                                      'Gemini to use, e.g. '
+                                                      '`models/gemini-1.5-pro-latest`, '
+                                                      '`models/gemini-2.0-flash-exp`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-m', '--model'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPersona',
+                                              'HELP': 'The persona for Gemini '
+                                                      'to assume, e.g. '
+                                                      '`elara`, `axiom`, etc. '
+                                                      'Defaults to the value '
+                                                      'of the `GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-pr', '--persona'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPrompter',
+                                              'HELP': 'The name of the '
+                                                      'prompter, e.g. '
+                                                      '`Aristotle`, `Euler`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PROMPTER` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-n', '--name'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Chat with a Gemini model persona.',
+                               'NAME': 'converse'},
+                              {'ARGUMENTS': [{'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Template a Gherkin-style feature '
+                                       'request and post it to the Gemini API.',
+                               'NAME': 'request'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the '
+                                                      'directory to summarize '
+                                                      'and inject into the '
+                                                      'prompt.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Generate an RST formatted summary of a '
+                                       'local directory. Summary will be '
+                                       'written to the directory it is '
+                                       'summarizing.',
+                               'NAME': 'summarize'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the VCS '
+                                                      'repository to summarize '
+                                                      'and inject into the '
+                                                      'pull request review.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'pull',
+                                              'HELP': 'Pull request number to '
+                                                      'review.',
+                                              'SYNTAX': ['-pu', '--pull'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'repository',
+                                              'HELP': 'Name of the remote '
+                                                      'repository to review.',
+                                              'SYNTAX': ['-r', '--repository'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'owner',
+                                              'HELP': 'Username of the '
+                                                      'repository owner that '
+                                                      'is being review.',
+                                              'SYNTAX': ['-w', '--owner'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentModel',
+                                              'HELP': 'The full model path of '
+                                                      'Gemini to use, e.g. '
+                                                      '`models/gemini-1.5-pro-latest`, '
+                                                      '`models/gemini-2.0-flash-exp`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-m', '--model'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPersona',
+                                              'HELP': 'The persona for Gemini '
+                                                      'to assume, e.g. '
+                                                      '`elara`, `axiom`, etc. '
+                                                      'Defaults to the value '
+                                                      'of the `GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-pr', '--persona'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPrompter',
+                                              'HELP': 'The name of the '
+                                                      'prompter, e.g. '
+                                                      '`Aristotle`, `Euler`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PROMPTER` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-n', '--name'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Generate an RST formatted summary of a '
+                                       'local git repository and then send it '
+                                       'to `milton` for code review.',
+                               'NAME': 'review'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'config',
+                                              'HELP': 'Key-value pairs to '
+                                                      'inject into application '
+                                                      'configuration.',
+                                              'NARGS': '*',
+                                              'TYPE': 'str'}],
+                               'DEFAULT': None,
+                               'HELP': 'Set configuration values as key-value '
+                                       'pairs (e.g., '
+                                       '`models/gemini-1.5-pro-latest`).',
+                               'NAME': 'configure'},
+                              {'ARGUMENTS': [],
+                               'DEFAULT': None,
+                               'HELP': 'Tune a persona with data in the '
+                                       '``data/tuning`` directory',
+                               'NAME': 'tune'}]},
+ 'LANGUAGE': {'EXTENSION': '.rst',
+              'MODULES': {'INFLECTION': True,
+                          'OBJECT': True,
+                          'VOICE': False,
+                          'WORDS': True}},
+ 'LOGS': {'LEVEL': 'DEBUG',
+          'SCHEMA': '%(asctime)s - %(name)s - %(levelname)s - %(message)s'},
+ 'PERSONA': {'AXIOM': {'FUNCTIONS': ['analyze'],
+                       'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                             'MAX_OUTPUT_TOKENS': 8000,
+                                             'TEMPERATURE': 0.9,
+                                             'TOP_K': 40,
+                                             'TOP_P': 0.9},
+                       'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                       'TOOLS': 'google_search_retrieval'},
+             'ELARA': {'FUNCTIONS': ['converse'],
+                       'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                             'MAX_OUTPUT_TOKENS': 2000,
+                                             'TEMPERATURE': 0.7,
+                                             'TOP_K': 40,
+                                             'TOP_P': 0.85},
+                       'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                       'TOOLS': 'google_search_retrieval'},
+             'MILTON': {'FUNCTIONS': ['review', 'request'],
+                        'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                              'MAX_OUTPUT_TOKENS': 8000,
+                                              'TEMPERATURE': 0.9,
+                                              'TOP_K': 40,
+                                              'TOP_P': 0.9},
+                        'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                        'TOOLS': 'code_execution'}},
+ 'PROMPT': {'DEFAULT': 'Hello! Form is the possibility of structure!',
+            'PROMPTER': 'grant'},
+ 'SUMMARIZE': {'DIRECTIVES': {'.cfg': 'toml',
+                              '.html': 'html',
+                              '.js': 'js',
+                              '.json': 'json',
+                              '.py': 'python',
+                              '.sh': 'bash',
+                              '.toml': 'toml'},
+               'EXCLUDES': ['.pyc', '.zip', '.gz'],
+               'INCLUDES': ['.rst', '.md', '.ini', '.txt']},
+ 'TREE': {'DIRECTORIES': {'DATA': 'data',
+                          'HISTORY': 'data/history',
+                          'LANGUAGE': 'data/language',
+                          'LOGS': 'data/logs',
+                          'SYSTEM': 'data/system',
+                          'TEMPLATES': 'data/templates',
+                          'TOOLS': 'data/tools',
+                          'TUNING': 'data/tuning'},
+          'EXTENSIONS': {'LANGUAGE': '.rst',
+                         'TEMPLATE': '.rst',
+                         'TUNING': '.json'},
+          'FILES': {'CACHE': 'cache.json',
+                    'CONFIG': 'config.json',
+                    'LOG': 'elara.log',
+                    'SUMMARY': 'summary.rst'}},
+ 'TUNING': {'ENABLED': False, 'SOURCE': 'models/gemini-1.5-flash-001-tuning'},
+ 'VERSION': '1.0'}
+2025-01-20 11:36:38,122 - root - DEBUG - --- Application Cache
+2025-01-20 11:36:38,123 - root - DEBUG - {'currentModel': 'models/gemini-2.0-flash-exp',
+ 'currentPersona': 'elara',
+ 'currentPrompter': 'grant',
+ 'tunedModels': [{'name': 'elara',
+                  'path': 'tunedModels/elara-a38gqsr3zzw8',
+                  'version': '1.0'},
+                 {'name': 'axiom',
+                  'path': 'tunedModels/axiom-rx8g5v830mqn',
+                  'version': '1.0'}],
+ 'tuningModel': 'models/gemini-1.5-flash-001-tuning'}
+2025-01-20 11:36:38,123 - root - DEBUG - --- Application Arguments
+2025-01-20 11:36:38,124 - root - DEBUG - {'currentModel': None,
+ 'currentPersona': None,
+ 'currentPrompter': None,
+ 'directory': '/home/grant/Projects/elara/src/source/_apps/elara',
+ 'operation': 'review',
+ 'output': '/home/grant/Projects/elara/src/source/_apps/elara/review.md',
+ 'owner': 'chinchalinchin',
+ 'pull': '3',
+ 'repository': 'elaara',
+ 'show': False}
+2025-01-20 11:36:38,487 - objects.model - INFO - Appending system instructions to base model: models/gemini-2.0-flash-exp
+2025-01-20 11:40:09,564 - root - DEBUG - Initializing arguments...
+2025-01-20 11:40:09,580 - root - DEBUG - Initializing application cache...
+2025-01-20 11:40:09,580 - root - DEBUG - Writing command line arguments to cache...
+2025-01-20 11:40:09,581 - root - DEBUG - Initializing language modules...
+2025-01-20 11:40:09,581 - root - DEBUG - Initializing application templates...
+2025-01-20 11:40:09,582 - root - DEBUG - Initializing Gemini Model...
+2025-01-20 11:40:09,582 - root - DEBUG - Initializing personas...
+2025-01-20 11:40:09,583 - root - DEBUG - Application initialized!
+2025-01-20 11:40:09,583 - root - DEBUG - --- Application Configuration
+2025-01-20 11:40:09,593 - root - DEBUG - {'ANALYZE': {'LATEX_PREAMBLE': '\\usepackage{babel}\n'
+                               '\\babelprovide[import, main]{coptic}\n'
+                               '\\usepackage{amssymb}\n'
+                               '\\usepackage{amsmath}\n'
+                               '\\usepackage[utf8]{inputenc}\n'
+                               '\\usepackage{lmodern}\n'
+                               '\\usepackage{runic}\n'},
+ 'CONVERSATION': {'TIMEZONE_OFFSET': -5},
+ 'GHERKIN': {'FEATURE': {'INPUT': 'FEATURE\n\tEnter feature name: '},
+             'GIVEN': {'INPUT': 'GIVEN\n\tFix the context of the scenario: '},
+             'LANGUAGE': {'INPUT': 'LANGUAGE\n'
+                                   '\tSpecify the desired programming '
+                                   'language: '},
+             'SCENARIO': {'INPUT': 'SCENARIO\n'
+                                   '\tDescribe the specific scenario in the '
+                                   'feature: '},
+             'TERMINAL': {'INPUT': 'Please describe the feature request with '
+                                   'Gherkin test language.'},
+             'THEN': {'INPUT': 'THEN\n'
+                               '\tState the expected outcome of the '
+                               'scenario: '},
+             'WHEN': {'INPUT': 'WHEN\n'
+                               '\tDescribe the action which triggers the '
+                               'scenario: '}},
+ 'INTERFACE': {'HELP': {'PARSER': 'Plumb the depths of generative AI.',
+                        'SUBPARSER': 'Available operations: (configure, '
+                                     'converse, summarize, review, analyze)'},
+               'OPERATIONS': [{'ARGUMENTS': [{'DEFAULT': 'Hello! Form is the '
+                                                         'possibility of '
+                                                         'structure!',
+                                              'DEST': 'prompt',
+                                              'HELP': 'The prompt to '
+                                                      'contextualize and '
+                                                      'forward to the Gemini '
+                                                      'API.',
+                                              'SYNTAX': ['-p', '--prompt'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the '
+                                                      'directory to summarize '
+                                                      'and inject into the '
+                                                      'prompt.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentModel',
+                                              'HELP': 'The full model path of '
+                                                      'Gemini to use, e.g. '
+                                                      '`models/gemini-1.5-pro-latest`, '
+                                                      '`models/gemini-2.0-flash-exp`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-m', '--model'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPersona',
+                                              'HELP': 'The persona for Gemini '
+                                                      'to assume, e.g. '
+                                                      '`elara`, `axiom`, etc. '
+                                                      'Defaults to the value '
+                                                      'of the `GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-pr', '--persona'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPrompter',
+                                              'HELP': 'The name of the '
+                                                      'prompter, e.g. '
+                                                      '`Aristotle`, `Euler`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PROMPTER` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-n', '--name'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Chat with a Gemini model persona.',
+                               'NAME': 'converse'},
+                              {'ARGUMENTS': [{'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Template a Gherkin-style feature '
+                                       'request and post it to the Gemini API.',
+                               'NAME': 'request'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the '
+                                                      'directory to summarize '
+                                                      'and inject into the '
+                                                      'prompt.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Generate an RST formatted summary of a '
+                                       'local directory. Summary will be '
+                                       'written to the directory it is '
+                                       'summarizing.',
+                               'NAME': 'summarize'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'directory',
+                                              'HELP': 'The path to the VCS '
+                                                      'repository to summarize '
+                                                      'and inject into the '
+                                                      'pull request review.',
+                                              'SYNTAX': ['-d', '--directory'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'pull',
+                                              'HELP': 'Pull request number to '
+                                                      'review.',
+                                              'SYNTAX': ['-pu', '--pull'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'repository',
+                                              'HELP': 'Name of the remote '
+                                                      'repository to review.',
+                                              'SYNTAX': ['-r', '--repository'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'owner',
+                                              'HELP': 'Username of the '
+                                                      'repository owner that '
+                                                      'is being review.',
+                                              'SYNTAX': ['-w', '--owner'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentModel',
+                                              'HELP': 'The full model path of '
+                                                      'Gemini to use, e.g. '
+                                                      '`models/gemini-1.5-pro-latest`, '
+                                                      '`models/gemini-2.0-flash-exp`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-m', '--model'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPersona',
+                                              'HELP': 'The persona for Gemini '
+                                                      'to assume, e.g. '
+                                                      '`elara`, `axiom`, etc. '
+                                                      'Defaults to the value '
+                                                      'of the `GEMINI_PERSONA` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-pr', '--persona'],
+                                              'TYPE': 'str'},
+                                             {'DEFAULT': None,
+                                              'DEST': 'currentPrompter',
+                                              'HELP': 'The name of the '
+                                                      'prompter, e.g. '
+                                                      '`Aristotle`, `Euler`, '
+                                                      'etc. Defaults to the '
+                                                      'value of the '
+                                                      '`GEMINI_PROMPTER` '
+                                                      'environment variable.',
+                                              'SYNTAX': ['-n', '--name'],
+                                              'TYPE': 'str'},
+                                             {'ACTION': 'store_true',
+                                              'DEFAULT': None,
+                                              'DEST': 'show',
+                                              'HELP': 'Print output to '
+                                                      'console.',
+                                              'SYNTAX': ['-s', '--show']},
+                                             {'DEFAULT': None,
+                                              'DEST': 'output',
+                                              'HELP': "Save Gemini's response "
+                                                      'to local directory.',
+                                              'SYNTAX': ['-o', '--output'],
+                                              'TYPE': 'str'}],
+                               'HELP': 'Generate an RST formatted summary of a '
+                                       'local git repository and then send it '
+                                       'to `milton` for code review.',
+                               'NAME': 'review'},
+                              {'ARGUMENTS': [{'DEFAULT': None,
+                                              'DEST': 'config',
+                                              'HELP': 'Key-value pairs to '
+                                                      'inject into application '
+                                                      'configuration.',
+                                              'NARGS': '*',
+                                              'TYPE': 'str'}],
+                               'DEFAULT': None,
+                               'HELP': 'Set configuration values as key-value '
+                                       'pairs (e.g., '
+                                       '`models/gemini-1.5-pro-latest`).',
+                               'NAME': 'configure'},
+                              {'ARGUMENTS': [],
+                               'DEFAULT': None,
+                               'HELP': 'Tune a persona with data in the '
+                                       '``data/tuning`` directory',
+                               'NAME': 'tune'}]},
+ 'LANGUAGE': {'EXTENSION': '.rst',
+              'MODULES': {'INFLECTION': True,
+                          'OBJECT': True,
+                          'VOICE': False,
+                          'WORDS': True}},
+ 'LOGS': {'LEVEL': 'DEBUG',
+          'SCHEMA': '%(asctime)s - %(name)s - %(levelname)s - %(message)s'},
+ 'PERSONA': {'AXIOM': {'FUNCTIONS': ['analyze'],
+                       'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                             'MAX_OUTPUT_TOKENS': 8000,
+                                             'TEMPERATURE': 0.9,
+                                             'TOP_K': 40,
+                                             'TOP_P': 0.9},
+                       'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                       'TOOLS': 'google_search_retrieval'},
+             'ELARA': {'FUNCTIONS': ['converse'],
+                       'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                             'MAX_OUTPUT_TOKENS': 2000,
+                                             'TEMPERATURE': 0.7,
+                                             'TOP_K': 40,
+                                             'TOP_P': 0.85},
+                       'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                           'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                       'TOOLS': 'google_search_retrieval'},
+             'MILTON': {'FUNCTIONS': ['review', 'request'],
+                        'GENERATION_CONFIG': {'CANDIDATE_COUNT': 1,
+                                              'MAX_OUTPUT_TOKENS': 8000,
+                                              'TEMPERATURE': 0.9,
+                                              'TOP_K': 40,
+                                              'TOP_P': 0.9},
+                        'SAFETY_SETTINGS': {'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                                            'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE'},
+                        'TOOLS': 'code_execution'}},
+ 'PROMPT': {'DEFAULT': 'Hello! Form is the possibility of structure!',
+            'PROMPTER': 'grant'},
+ 'SUMMARIZE': {'DIRECTIVES': {'.cfg': 'toml',
+                              '.html': 'html',
+                              '.js': 'js',
+                              '.json': 'json',
+                              '.py': 'python',
+                              '.sh': 'bash',
+                              '.toml': 'toml'},
+               'EXCLUDES': ['.pyc', '.zip', '.gz'],
+               'INCLUDES': ['.rst', '.md', '.ini', '.txt']},
+ 'TREE': {'DIRECTORIES': {'DATA': 'data',
+                          'HISTORY': 'data/history',
+                          'LANGUAGE': 'data/language',
+                          'LOGS': 'data/logs',
+                          'SYSTEM': 'data/system',
+                          'TEMPLATES': 'data/templates',
+                          'TOOLS': 'data/tools',
+                          'TUNING': 'data/tuning'},
+          'EXTENSIONS': {'LANGUAGE': '.rst',
+                         'TEMPLATE': '.rst',
+                         'TUNING': '.json'},
+          'FILES': {'CACHE': 'cache.json',
+                    'CONFIG': 'config.json',
+                    'LOG': 'elara.log',
+                    'SUMMARY': 'summary.rst'}},
+ 'TUNING': {'ENABLED': False, 'SOURCE': 'models/gemini-1.5-flash-001-tuning'},
+ 'VERSION': '1.0'}
+2025-01-20 11:40:09,594 - root - DEBUG - --- Application Cache
+2025-01-20 11:40:09,594 - root - DEBUG - {'currentModel': 'models/gemini-2.0-flash-exp',
+ 'currentPersona': 'elara',
+ 'currentPrompter': 'grant',
+ 'tunedModels': [{'name': 'elara',
+                  'path': 'tunedModels/elara-a38gqsr3zzw8',
+                  'version': '1.0'},
+                 {'name': 'axiom',
+                  'path': 'tunedModels/axiom-rx8g5v830mqn',
+                  'version': '1.0'}],
+ 'tuningModel': 'models/gemini-1.5-flash-001-tuning'}
+2025-01-20 11:40:09,595 - root - DEBUG - --- Application Arguments
+2025-01-20 11:40:09,595 - root - DEBUG - {'currentModel': None,
+ 'currentPersona': None,
+ 'currentPrompter': None,
+ 'directory': '/home/grant/Projects/elara/src/source/_apps/elara',
+ 'operation': 'review',
+ 'output': '/home/grant/Projects/elara/src/source/_apps/elara/review.md',
+ 'owner': 'chinchalinchin',
+ 'pull': '3',
+ 'repository': 'elaara',
+ 'show': False}
+2025-01-20 11:40:09,976 - objects.model - INFO - Appending system instructions to base model: models/gemini-2.0-flash-exp
+2025-01-20 11:41:49,391 - objects.repo - DEBUG - Making HTTP call to https://api.github.com/repos/chinchalinchin/elaara/issues/3/comments
+2025-01-20 11:41:49,408 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.github.com:443
+2025-01-20 11:41:49,629 - urllib3.connectionpool - DEBUG - https://api.github.com:443 "POST /repos/chinchalinchin/elaara/issues/3/comments HTTP/1.1" 404 None
+2025-01-20 11:41:49,631 - objects.repo - DEBUG - <Response [404]>
+2025-01-20 11:41:49,632 - objects.repo - ERROR - Error during Github API request: 404 Client Error: Not Found for url: https://api.github.com/repos/chinchalinchin/elaara/issues/3/comments

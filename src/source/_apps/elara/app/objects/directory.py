@@ -68,11 +68,6 @@ class Directory:
         :returns: A string representing the directory structure, or an error message if the directory does not exist or can't be read.
         :rtype: str
         """
-        # @OPERATIONS
-        #   Milton, this function is catching *.pyc files. The client
-        #   wants to add an `IGNORE` property to `data/config.json` that
-        #   configures which files the directory summaries ignore. We 
-        #   need to make sure we aren't printing binary files, like .pyc!
         dir_path = pathlib.Path(self.directory)
         if not dir_path.exists():
             return f"Error: Directory not found: {self.directory}"
@@ -141,8 +136,14 @@ class Directory:
                         "name": os.path.relpath(file_path, self.directory)
                     }]
 
-                except Exception as e:
+                except FileNotFoundError as e:
                     logger.error(F"Error reading file {file_path}: {e}")
+                    continue
+                except PermissionError as e:
+                    logger.error(F"Permission error reading file {file_path}: {e}")
+                    continue
+                except Exception as e:
+                    logger.error(F"An unexpected error occurred while reading {file_path}: {e}")
                     continue
         
         return dir_summary

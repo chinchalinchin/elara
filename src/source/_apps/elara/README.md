@@ -5,8 +5,8 @@ A Python package for interacting with Google's Gemini API. This application uses
 The following personas are under development.
 
 - Elara: A generalized assistant. Whimsical, absurd and playful. 
-- Axiom: A mathematical mind. Thoughtful, precise and deep.
-- Milton: A code analyst. Cranky, a bit of a sourpuss, but a top-tier programmer. 
+- Axiom: A mathematical explorer. Thoughtful, precise and deep.
+- Milton: An embittered engineer. Cranky, a bit of a sourpuss, but a top-tier programmer. 
 
 ## Quickstart 
 
@@ -26,16 +26,18 @@ Various properties can be configured through environment variables. See `app/con
 
 ### Authentication
 
-The application ingests API tokens through the `GEMINI_KEY` and `VCS_TOKEN` environment variables.
+The application ingests API tokens through the `GEMINI_KEY` and `REPO_AUTH_CREDS` environment variables.
 
 ```bash
 ## VARIABLES
 # GEMINI_KEY: Gemini API key
-# VCS_TOKEN: Version control API token
+# REPO_AUTH_CREDS: Version control API token
 export GEMINI_KEY="key"
-export VCS_TOKEN="token"
+export REPO_AUTH_CREDS="token"
 elara converse --prompt "Hi there, Elara!"
 ```
+
+**Note**: The `REPO_AUTH_CREDS` environment variable is only required for operations that require a VCS, such as having `milton` comment on pull requests. See the **Code Review** section below.
 
 ### Contextual Conversation
 
@@ -82,23 +84,21 @@ elara summarize --directory $DIR
 
 ### Code Review
 
-The persona `milton` will provide pull request comments on the current working directory and then post the comments to a VCS backend where the pull request is hosted. In order to use the pull request commenting functionality, the VCS backend must be set through the `VCS` environment variable. Currently only values of `github` are supported. A personal access token must be provided through the `VCS_TOKEN` environment variable.
+The persona `milton` will provide pull request comments on a local git repository and then post the comments to a VCS backend where the pull request is hosted. In order to use the pull request commenting functionality, the VCS backend must be set through the `REPO_VCS` environment variable. Currently only values of `github` are supported. A personal access token must be provided through the `REPO_AUTH_CREDS` environment variable.
 
 Using the following commands,
 
 ```bash
 ## VARIABLES
-# PR_NUMBER: The number of the pull request to comment on. 
-# REPO: The name of the repository that contains the pull request.
+# DIR: Directory containing the git repository to review.
 # OWNER: The username of the repository owner.
-# COMMIT_ID: SHA Hash ID of the commit which opened the pull request.
-# GITHUB_TOKEN: A personal access token for the Github API.
-export VCS="github"
-export VCS_TOKEN="token"
-elara review -pr $PR_NUMBER -re $REPO -o $OWNER -c $COMMIT_ID
+# PR_NUMBER: The number of the pull request to comment on. 
+# REPO_AUTH_CREDS: A personal access token for the Github API.
+# REPO_VCS: The name of the repository that contains the pull request.
+export REPO_VCS="github"
+export REPO_AUTH_CREDS="<inset API token>"
+elara review --repository $REPO --owner $OWNER --pull $PR_NUMBER 
 ```
-
-**TODO**: should allow user to change directory instead of running in current working directory!
 
 In addition, `milton` has special tags that can be appended to code comments. These comment tags signal different types of attention `milton` will direct to certain sections of the code.
 
@@ -106,9 +106,19 @@ In addition, `milton` has special tags that can be appended to code comments. Th
 - `@OPERATIONS`: Attach this tag to comments above critical code that needs special attention. `milton` will direct his attention to searching this code for potential errors and bugs.
 - `@DATA`: Attach this tag to comments above data structures. `milton` will analyze the data structure in the context of the application and suggests alternative constructions and ways of managing the data structure.
 
+### Feature Request 
+
+`milton` will can also implement functions in any programming language, if the functions are specified using a Gherkin-style specification. To initiate the feature request shell,
+
+```bash
+elara request
+```
+
+You will then be prompted to enter information regarding the feature request through the terminal. 
+
 ### Mathematical Analysis
 
-The persona `axiom` will provide formal and mathematical analysis. Pass this persona a directory of RST documents and it will provide a scholarly review of its content. These documents can be formatted with LaTeX. The LaTeX preamble can be configured through the ``LATEX_PREAMBLE`` environment variable.
+The persona `axiom` will provide formal and mathematical analysis. Pass this persona a directory of RST documents and it will provide a scholarly review of its content. These documents can be formatted with LaTeX. The LaTeX preamble can be configured through the ``ANALYZE_LATEX_PREAMBLE`` environment variable.
 
 Use the following command,
 
@@ -145,23 +155,29 @@ All context is managed in the `data` directory. The application uses Jinja2 temp
 
 1. `data/templates`: This subdirectory contains RST templates that are rendered using user input.
 2. `data/history`: This subdirectory contains JSONs that contain chat threads with different personas.
-2. `data/system`: This subdirectory contains JSON that contain system instructions for each persona. 
-3. `data/tuning`: This contains JSON files with tuning data. These are used to initialize the persona models, if tuning is enabled through the ``TUNING`` environment variable.
+3. `data/system`: This subdirectory contains JSON that contain system instructions for each persona. 
+4. `data/tuning`: This subdirectory contains JSON files with tuning data. These are used to initialize the persona models, if tuning is enabled through the ``TUNING`` environment variable.
+5. `data/language`: This subdirectory contains RST modules for language processing. These modules add grammatical forms to the persona's diction.
 
 ### Language Modules
 
 Additional language plugins can be injected into the prompt. The language modules can be found in ``data/modules``. To enable a Language module, set the value of the following environment variables,
 
 ```bash
-export LANGUAGE_OBJECT=enabled
-export LANGUAGE_INFLECTION=enabled
-export LANGUAGE_VOICE=enabled
-export LANGUAGE_WORDS=enabled
+export LANGUAGE_MODULES_OBJECT=enabled
+export LANGUAGE_MODULES_INFLECTION=enabled
+export LANGUAGE_MODULES_VOICE=enabled
+export LANGUAGE_MODULES_WORDS=enabled
 
 elara chat -p "Try out these sweet language modules, Elara!"
 ```
 
+**TODO**: explain purpose of language modules
+
 ## TODOS
 
 1. [structured output](https://ai.google.dev/gemini-api/docs/structured-output?lang=python)
-2. Lean heavily into the tags in Milton's system instructions. Encourage him to provide feedback on code that is tagged with OPERATIONS, DATA, and DEVELOPMENT
+2. Milton should probably respond with structured output for pull requests. Currently his comments are posted to the main pull request. If structured output were implemented, his comments could tag specific lines in a file.
+3. Lean heavily into the tags in Milton's system instructions. Encourage him to provide feedback on code that is tagged with OPERATIONS, DATA, and DEVELOPMENT
+4. Should allow the user to specify for Gherkin script directly through command line for the `request` function.
+5. Need to formalize the tuning sets for all three personas.

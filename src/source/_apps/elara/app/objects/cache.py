@@ -106,6 +106,7 @@ class Cache:
         Update the Cache using keyword arguments. Key must exist in Cache to be updated.
         """
         updated = False
+        new_data = self.data.copy()
         for key, value in kwargs.items():
             if key not in self.data:
                 continue 
@@ -122,6 +123,10 @@ class Cache:
 
             updated = True
             self.data[key] = value
+        
+        if updated:
+            self.data = new_data
+            
         return updated
 
     def save(self):

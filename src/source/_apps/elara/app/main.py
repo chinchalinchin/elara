@@ -7,9 +7,9 @@ import logging
 import os
 import pathlib
 import pprint
-import re
 
 # Application Modules
+import util
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as conversation
@@ -106,12 +106,7 @@ def args(configuration : config.Config) -> argparse.Namespace:
                     default             = op_arg["DEFAULT"],
                     dest                = op_arg["DEST"],
                     help                = op_arg["HELP"],
-                    # @OPERATION
-                    #   FOR THE LOVE OF GOD, MILTON! LOOK AT WHAT THE DEVS
-                    #   ARE DOING!
-                    #   This is a ticking time bomb, Milton. You must surely
-                    #   have a better solution than these code monkeys!
-                    type                = eval(op_arg["TYPE"])
+                    type                = util.map(op_arg["TYPE"])
                 )
                 continue
             
@@ -119,7 +114,7 @@ def args(configuration : config.Config) -> argparse.Namespace:
                 default                 = op_arg["DEFAULT"],
                 dest                    = op_arg["DEST"],
                 help                    = op_arg["HELP"],
-                type                    = eval(op_arg["TYPE"])
+                type                    = util.map(op_arg["TYPE"])
             )
 
     return parser.parse_args()
@@ -137,19 +132,25 @@ def configure(app : dict) -> dict:
 
     if app["ARGUMENTS"].config:
         for item in app["ARGUMENTS"].config:
-            try:
-                if "=" not in item:
-                    app["LOGGER"].error(f"Invalid configuration format: {item}. Expected key=value.")
-                    continue
-                key, value              = item.split("=", 1)
-                if key not in app["CONFIG"].data:
-                    app["LOGGER"].error(f"Invalid configuration key: {key}. Key not in configuration.")
-                    continue
-                config[key]             = value
-            except ValueError:
+            if "=" not in item:
                 app["LOGGER"].error(f"Invalid configuration format: {item}. Expected key=value.")
                 continue
+            
+            key, value                  = item.split("=", 1)
 
+            if key not in app["CONFIG"].data:
+                app["LOGGER"].error(f"Invalid configuration key: {key}. Key not in configuration.")
+                continue
+
+            validated_value             = util.validate(value)
+
+            if validated_value is None:
+                app["LOGGER"].error(f"Invalidate configuration type: {key}={value}")
+                continue 
+
+            config[key]                 = validated_value
+
+    if config:
         app["CONFIG"].update(**config)
         app["CONFIG"].save()
         app["LOGGER"].info(f"Updated configuration with: {config}")
@@ -270,7 +271,6 @@ def review(app : dict) -> dict:
     source                              = repo.Repo(
         repository                      = app["ARGUMENTS"].repository,
         owner                           = app["ARGUMENTS"].owner,
-        commit                          = app["ARGUMENTS"].commit,
         vcs                             = app["CONFIG"].get("REPO.VCS"),
         auth                            = app["CONFIG"].get("REPO.AUTH"),
         backends                        = app["CONFIG"].get("REPO.BACKENDS")
@@ -286,6 +286,7 @@ def review(app : dict) -> dict:
         **app["LANGUAGE"].vars(),
         **summarize(app)
     }
+
     review_prompt                       = app["TEMPLATES"].render(
         temp                            = "review", 
         variables                       = review_variables
@@ -300,15 +301,9 @@ def review(app : dict) -> dict:
         system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
     )
 
-    # @OPERATIONS
-    #   Oh boy, Milton, wait until you see what's inside the `comment()` function.
-    #   We haven't been able to successfully post a comment back to the VCS backend
-    #   yet! I don't know if there's a gas leak in the development department or what,
-    #   but they sure aren't developing stable software, that is for sure.
     source_res                          = source.comment(
         msg                             = model_res,
         pr                              = app["ARGUMENTS"].pull,
-        path                            = "README.md"
     )
     return {
         "prompt"                        : review_prompt,
@@ -387,6 +382,7 @@ def tune(app : dict) -> bool:
     """
     
     if app["CONFIG"].get("TUNING.ENABLED"):
+        tuned_models = []
         for p in app["PERSONAS"].all():
             if not app["CACHE"].is_tuned(p):
                 res                     = app["MODEL"].tune(
@@ -394,15 +390,18 @@ def tune(app : dict) -> bool:
                     tuning_model        = app["CONFIG"].get("TUNING.SOURCE"),
                     tuning_data         = app["PERSONA"].tuning(p)
                 )
-                app["CACHE"].update(**{
-                    "tunedModels"       : [{
-                        "name"          : p,
-                        "version"       : app["CONFIG"].get("VERSION"),
-                        "path"          : res.name
-                    }]
+                tuned_models.append({
+                    "name"              : p,
+                    "version"           : app["CONFIG"].get("VERSION"),
+                    "path"              : res.name
                 })
-                app["CACHE"].save()
-    return app["CACHE"].get("tunedModels")
+        if tuned_models:
+            app["CACHE"].update(**{
+                "tunedModels"           : tuned_models
+            })
+            app["CACHE"].save()
+            return True
+    return False
     
 
 def init(

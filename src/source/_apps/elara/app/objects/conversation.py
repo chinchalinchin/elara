@@ -82,6 +82,9 @@ class Conversation:
                 except (FileNotFoundError, json.JSONDecodeError) as e:
                     logger.error(f"Error loading conversation history: {e}")
                     self.hist[persona] = []
+                except Exception as e:
+                        logger.error(f"An unexpected error occurred while loading conversation history from {file_path}: {e}")
+                        self.hist[persona] = []
 
     def _persist(
         self, 
@@ -96,9 +99,12 @@ class Conversation:
         file = "".join([persona, self.ext])
         file_path = os.path.join(self.dir, file)
         payload = { "payload": self.hist[persona] }
-        with open(file_path, 'w') as f:
-            return json.dump(payload, f)
-        return None
+        try:
+            with open(file_path, 'w') as f:
+                return json.dump(payload, f)
+        except Exception as e:
+            logger.errro(f"Error persisting conversation history for {persona}: {e}")
+            return None
     
     def _timestamp(self):
         """
@@ -167,7 +173,10 @@ class Conversation:
         :type persona: str
         """
         if persona not in self.hist.keys():
-            raise ValueError(f"Persona {persona} conversation history not found")
+            logger.error(f"Persona {persona} conversation history not found")
+            return {
+                "history": []
+            }
         
         return {
             "history": self.hist[persona]
