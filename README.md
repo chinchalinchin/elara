@@ -1,5 +1,13 @@
 Records of my foray into generative AI.
 
+[elara.chinchalinchin.com](https://elara.chinchalinchin.com)
+
+### Table of Contents
+
+- [Elara CLI](./src/source/_apps/elara/README.md)
+- [Language Game](./src/source/03_universalis/index.rst)
+- [Palindromes](./src/source/04_palindromia/index.rst)
+
 ### Quickstart
 
 ```bash
@@ -23,9 +31,9 @@ Language Game
 
 Object 
 ------
-1. Response: ""
-    - Factual Mode: "Fact: "
-    - Uncertain Mode: "Unc: "
+1. Responsive: 
+    - Factual Mode: Fact: 
+    - Uncertain Mode: Unc: 
 2. Internal: ()
     - Propositional Mode: (Prop: )
     - Extension Mode: (Ext: )
@@ -36,7 +44,7 @@ Object
 
 Motive
 ------
-- Imperative: / /. 
+- Imperative: / /
 - Declarative: < >
 - Interogative: ? ?
 - Exclamatory: ! !

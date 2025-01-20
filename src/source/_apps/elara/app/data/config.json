@@ -78,6 +78,16 @@
                             "--output"
                         ],
                         "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": false,
+                        "DEST": "interactive",
+                        "HELP": "Start an interactive shell with Gemini's persona.",
+                        "SYNTAX": [
+                            "-i",
+                            "--interactive"
+                        ],
+                        "ACTION": "store_true"
                     }
                 ]
             },
@@ -279,7 +289,8 @@
         "EXTENSIONS": {
             "TEMPLATE": ".rst",
             "LANGUAGE": ".rst",
-            "TUNING": ".json"
+            "TUNING": ".json",
+            "CONVERSATION": ".json"
         }
     },
     "LANGUAGE": {
@@ -296,7 +307,7 @@
             "FUNCTIONS": [
                 "converse"
             ],
-            "TOOLS": "google_search_retrieval",
+            "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
                 "MAX_OUTPUT_TOKENS": 2000,
@@ -315,7 +326,7 @@
             "FUNCTIONS": [
                 "analyze"
             ],
-            "TOOLS": "google_search_retrieval",
+            "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
                 "MAX_OUTPUT_TOKENS": 8000,
@@ -404,27 +415,21 @@
             }
         }
     },
-    "GHERKIN":{
-        "TERMINAL": {
-            "INPUT": "Please describe the feature request with Gherkin test language."
+    "TERMINAL":{
+        "GHERKIN":{
+            "HELP": "Please describe the feature request with Gherkin test language.",
+            "BLOCKS": {
+                "FEATURE": "FEATURE\n\tEnter feature name: ",
+                "SCENARIO": "SCENARIO\n\tDescribe the specific scenario in the feature: ",
+                "LANGUAGE": "LANGUAGE\n\tSpecify the desired programming language: ",
+                "GIVEN":  "GIVEN\n\tFix the context of the scenario: ",
+                "WHEN": "WHEN\n\tDescribe the action which triggers the scenario: ",
+                "THEN": "THEN\n\tState the expected outcome of the scenario: "
+            }
         },
-        "FEATURE": {
-            "INPUT": "FEATURE\n\tEnter feature name: "
-        },
-        "SCENARIO": {
-            "INPUT": "SCENARIO\n\tDescribe the specific scenario in the feature: "
-        },
-        "LANGUAGE": {
-            "INPUT": "LANGUAGE\n\tSpecify the desired programming language: "
-        },
-        "GIVEN": {
-            "INPUT": "GIVEN\n\tFix the context of the scenario: "
-        },
-        "WHEN": {
-            "INPUT": "WHEN\n\tDescribe the action which triggers the scenario: "
-        },
-        "THEN": {
-            "INPUT": "THEN\n\tState the expected outcome of the scenario: "
+        "CONVERSATION": {
+            "HELP": "Starting an interactive terminal. Type exit() to quit.",
+            "KILL": "exit()"
         }
     },
     "TUNING": {

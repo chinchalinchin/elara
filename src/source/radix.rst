@@ -23,6 +23,7 @@ gutenberg.org
 -------------
 
 - [Critique of Pure Reason](https://www.gutenberg.org/ebooks/4280)
+- [Essay on Man](https://www.gutenberg.org/ebooks/2428)
 - [Foundations of Arithmetic, The](https://www.gutenberg.org/ebooks/48312)
 - [Tractatus Logico-Philosophicus](https://www.gutenberg.org/ebooks/5740)
 - [World as Will and Representation](https://www.gutenberg.org/ebooks/38427)

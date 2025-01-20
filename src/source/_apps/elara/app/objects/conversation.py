@@ -13,9 +13,9 @@ import os
 logger = logging.getLogger(__name__)
 
 class Conversation:
-    dir = None
+    directory = None
     """History directory"""
-    ext = None
+    extension = None
     """History file extension"""
     hist = { }
     """Chat history"""
@@ -26,20 +26,20 @@ class Conversation:
 
     def __init__(
         self, 
-        dir = None,
-        ext = None,
-        tz_offset = None
+        directory : str,
+        extension : str,
+        tz_offset : str,
     ):
         """
         Initialize Conversation object.
 
-        :param dir: Directory containing chat history. Defaults to ``data/history``.
+        :param dir: Directory containing chat history.
         :type dir: str
-        :param ext: File extension for chat history. Defaults to ``.json``.
+        :param ext: File extension for chat history.
         :type ext: str
         """
-        self.dir = dir
-        self.ext = ext
+        self.directory = directory
+        self.extension = extension
         self.tz_offset = tz_offset
         self._load()
 
@@ -55,7 +55,7 @@ class Conversation:
             self.inst = super(
                 Conversation, 
                 self
-            ).__new__(self, *args, **kwargs)
+            ).__new__(self)
         return self.inst
     
     def _load(self):
@@ -63,9 +63,9 @@ class Conversation:
         Load Conversation history from file.
         """
         
-        for root, _, files in os.walk(self.dir):
+        for root, _, files in os.walk(self.directory):
             for file in files:
-                if os.path.splitext(file)[1] != self.ext:
+                if os.path.splitext(file)[1] != self.extension:
                     continue
 
                 persona = os.path.splitext(file)[0]
@@ -75,7 +75,7 @@ class Conversation:
                     with open(file_path, "r") as f:
                         content = f.read()
                     if content:
-                        payload  = json.loads(f)
+                        payload  = json.loads(content)
                     else: 
                         payload = { "payload": [] }
                     self.hist[persona] = payload["payload"]
@@ -96,8 +96,8 @@ class Conversation:
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
-        file = "".join([persona, self.ext])
-        file_path = os.path.join(self.dir, file)
+        file = "".join([persona, self.extension])
+        file_path = os.path.join(self.directory, file)
         payload = { "payload": self.hist[persona] }
         try:
             with open(file_path, 'w') as f:
