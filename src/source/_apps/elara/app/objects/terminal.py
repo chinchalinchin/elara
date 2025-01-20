@@ -6,22 +6,22 @@ Object for managing terminal input.
 """
 # Standard Library Modules
 import logging 
+import typing
 
 logger = logging.getLogger(__name__)
 
 class Terminal:
-    gherkin_config = None
-    """Configuration for Gherkin scripts"""
+    config = None
+    """Terminal configuration"""
 
     def __init__(
         self,
-        gherkin_config : dict
+        terminal_config : dict,
     ):
         """
         Initialize Terminal object.
         """
-        self.gherkin_config = gherkin_config
-        pass
+        self.config = terminal_config
     
     def gherkin(self):
         """
@@ -30,7 +30,7 @@ class Terminal:
         :returns: A Gherkin script dictionary.
         :rtype: dict
         """
-        logger.info(self.gherkin_config["TERMINAL"]["INPUT"])
+        logger.info(self.config["GHERKIN"]["HELP"])
         feature = { }
         feature["request"] = { }
 
@@ -38,45 +38,47 @@ class Terminal:
         #   Hey, Milton, right now the `gherkin` is only returning a single Gherkin script. 
         #   Some of the devs were tossing around the idea of letting the user specify as 
         #   many Gherkin scripts as they want. What do you think? How should we implement that?
-        for block, config in self.gherkin_config.items():
-            if block == "TERMINAL":
-                continue
-
-            feature["request"][block.lower()] = input(config["INPUT"])
+        for block, prompt in self.config["GHERKIN"]["BLOCKS"].items():
+            feature["request"][block.lower()] = input(prompt)
 
         return feature
     
-    def interact(
-        callable, 
+    def interact(\
+        self,
+        callable: typing.Callable, 
         callable_args : dict, 
-        printer, 
-        printer_args : dict,
-        kill : str = "exit"
-    ):
+        printer: typing.Callable, 
+        printer_args : dict
+    ) -> bool:
         """
-        
         Loop over terminal input and call a function. Function should have the following signature:
 
-            callable(app: dict, override: str = None)
+            callable(callable_args: dict, override: str = None)
 
-        Input from the terminal will be passed into the `override` argument.
+        Input from the terminal will be passed into the `override` argument. Similary, the function used to print the output to string should have the following signature,
 
+            printer(printer_args: dict, override : str = None)
+
+        The output from the `callable` function will be passed into the printer through the `override` argument.
+        
         :param callable: Function to invoke over the course of an interaction. 
-        :type callable:
+        :type callable: typing.Callable
         :param app: Application configuration and data dictioanry
         :type app: dict
-        :param printer:
-        :type printer:
+        :param printer: Function to print output.
+        :type printer: typing.Callable
+        :returns: Boolean flag
+        :rtype: bool
         """
 
         interacting = True
 
-        logger.info(f"Starting interactive terminal. Type {kill} to quit.")
+        logger.info(self.config["CONVERSATION"]["HELP"])
         
         while interacting:
             prompt = input("Enter prompt: ")
             
-            if prompt == kill:
+            if prompt == self.config["CONVERSATION"]["KILL"]:
                 break
 
             response = callable(callable_args, prompt)

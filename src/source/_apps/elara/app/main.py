@@ -61,7 +61,8 @@ def logger(
 
 def output(
     arguments : argparse.Namespace, 
-    response : dict,
+    out_map : dict,
+    suppress_prompt = True
 ):
     """
     
@@ -70,30 +71,34 @@ def output(
     :param response:
     :type response: dict
     """
-    arg_dict                            = vars(arguments)
-    to_file                             = "output" in arg_dict.keys() and arg_dict["output"]
-    to_screen                           = "show" in arg_dict.keys() and arg_dict["show"]
-    response                            = "response" in response.keys()
-    summary                             = "summary" in response.keys()
-    vcs                                 = "vcs" in response.keys()
+    arg_map                             = vars(arguments)
+    to_file                             = "output" in arg_map.keys() and arg_map["output"]
+    to_screen                           = "show" in arg_map.keys() and arg_map["show"]
+    prompt                              = "prompt" in out_map.keys() and not suppress_prompt
+    response                            = "response" in out_map.keys()
+    summary                             = "summary" in out_map.keys()
+    vcs                                 = "vcs" in out_map.keys()
 
     if to_file and response:
-        with open(arg_dict["output"], "w") as out:
-            out.write(response["response"])
+        with open(arg_map["output"], "w") as out:
+            out.write(out_map["response"])
 
     if to_file and summary:
-        with open(arg_dict["output"], "w") as out:
-            out.write(response["summary"])
+        with open(arg_map["output"], "w") as out:
+            out.write(out_map["summary"])
 
     if to_screen:
         if summary:
-            print(response["summary"])
+            print(out_map["summary"])
+
+        if prompt:
+            print(out_map["prompt"])
 
         if response:
-            print(response["response"])
+            print(out_map["response"])
 
         if vcs:
-            print(response["vcs"])
+            print(out_map["vcs"])
 
 
 def args(configuration : config.Config) -> argparse.Namespace:
@@ -213,6 +218,14 @@ def converse(
                                             if tty_prompt is None \
                                             else tty_prompt
     
+    if app["CACHE"].get("currentPersona") is None:
+        converse_persona                = app["PERSONAS"].function("converse")
+        app["CACHE"].update(**{
+            "currentPersona"            : converse_persona
+        })
+        app["CACHE"].save()
+        app["PERSONAS"].update(converse_persona)
+
     app["CONVERSATIONS"].update(
         persona                         = app["CACHE"].get("currentPersona"), 
         name                            = app["CACHE"].get("currentPrompter"), 
@@ -222,10 +235,11 @@ def converse(
     template_vars                       = { 
         **app["CACHE"].vars(), 
         **app["LANGUAGE"].vars(),
-        **app["CONVERSATIONS"].vars()
+        **app["CONVERSATIONS"].vars(app["CACHE"].get("currentPersona"))
     }
 
     if app["ARGUMENTS"].directory is not None:
+        app["LOGGER"].info("Injecting file summary into prompt...")
         template_vars.update(summarize(app))
 
     parsed_prompt                       = app["TEMPLATES"].render(
@@ -236,10 +250,10 @@ def converse(
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt, 
         model_name                      = app["CACHE"].get("currentModel"),
-        generation_config               = app["PERSONA"].get("generationConfig"),
-        safety_settings                 = app["PERSONA"].get(" model.safetySettings"),
-        tools                           = app["PERSONA"].get("tools"),
-        system_instruction              = app["PERSONA"].get("systemInstruction")
+        generation_config               = app["PERSONAS"].get("generationConfig"),
+        safety_settings                 = app["PERSONAS"].get("safetySettings"),
+        tools                           = app["PERSONAS"].get("tools"),
+        system_instruction              = app["PERSONAS"].get("systemInstruction")
     )
 
     app["CONVERSATIONS"].update(
@@ -581,7 +595,7 @@ def init(
     ########################
     app["LOGGER"].debug("Initialize interactive terminal...")
     app["TERMINAL"]                     = terminal.Terminal(
-        gherkin_config                  = app["CONFIG"].get("GHERKIN")
+        terminal_config                 = app["CONFIG"].get("TERMINAL")
     )
 
     app["LOGGER"].debug("Application initialized!")
@@ -613,21 +627,25 @@ def main() -> bool:
     operation_name                      = app["ARGUMENTS"].operation
     arguments                           = vars(app["ARGUMENTS"]) 
 
+    tty                                 = "interactive" in arguments \
+                                            and arguments["interactive"]
+    
     if operation_name not in operations:
         return False 
     
-    if "interactive" in arguments and operation_name == "converse": 
+    if tty and operation_name == "converse": 
         app["TERMINAL"].interact(
             callable                    = converse,
-            app                         = app,
+            callable_args               = app,
             printer                     = output,
-            kill                        = app["CONFIG"].get("CONVERSATION.TERMINAL.KILL")
+            printer_args                = app["ARGUMENTS"]
         )
         return
         
     output(
         arguments                       = app["ARGUMENTS"], 
-        response                        = operations[operation_name](app)
+        out_map                         = operations[operation_name](app),
+        suppress_prompt                 = False
     )
     
 

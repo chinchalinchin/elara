@@ -68,7 +68,11 @@ class Config:
         """
         try:
             with open(self.file, "r") as f:
-                self.data = json.load(f)
+                content = f.read()
+            if content:
+                self.data = json.loads(content)
+            else:
+                self.data = {}
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f"Error loading config file: {e}")
             self.data = {}

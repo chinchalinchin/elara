@@ -55,7 +55,7 @@ class Conversation:
             self.inst = super(
                 Conversation, 
                 self
-            ).__new__(self, *args, **kwargs)
+            ).__new__(self)
         return self.inst
     
     def _load(self):
@@ -75,7 +75,7 @@ class Conversation:
                     with open(file_path, "r") as f:
                         content = f.read()
                     if content:
-                        payload  = json.loads(f)
+                        payload  = json.loads(content)
                     else: 
                         payload = { "payload": [] }
                     self.hist[persona] = payload["payload"]
