@@ -17,6 +17,8 @@ class Model:
     """Default Gemini model"""
     tuning = False
     """Flag for Gemini model tuning"""
+    models = None
+    """Gemini model metadata cache"""
 
     def __init__(
         self,
@@ -34,6 +36,7 @@ class Model:
 
         self.default_model = default_model
         self.tuning = tuning
+        self.models = genai.list_models()
 
     def _get(
         self,
@@ -68,10 +71,6 @@ class Model:
         """
         Retrieve all Gemini models.
         """
-        # @OPERATIONS
-        #   MILTON! These jokers in Development don't know the first thing about error handling.
-        #   What happens if `genai.list_models()` returns a 400? I'm sure it never crossed those
-        #   code monkeys' empty heads they might need to actually do their jobs...
         return [{
             "path": m.name,
             "version": m.version,
@@ -79,7 +78,7 @@ class Model:
             "output_token_limit": m.output_token_limit
         } 
             for m 
-            in genai.list_models()
+            in self.models
             if (
                 "gemini" in m.name 
                 and 
@@ -91,9 +90,6 @@ class Model:
         """
         Retrieve all Gemini models that can be tuned.
         """
-        # @OPERATIONS
-        #   MILTON! Look at this! Multiple calls to `genai.list_models()`! No caching whatsoever!
-        #   These bytes aren't free, Milton! We need to be optimizing our API calls!
         return [{
             "path": m.name,
             "version": m.version,
@@ -101,7 +97,7 @@ class Model:
             "output_token_limit": m.output_token_limit
         } 
             for m 
-            in genai.list_models()
+            in self.models
             if (
                 "tuning" in m.name 
                 and 

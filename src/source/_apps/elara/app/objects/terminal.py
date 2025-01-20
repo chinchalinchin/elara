@@ -34,6 +34,10 @@ class Terminal:
         feature = { }
         feature["request"] = { }
 
+        # @DEVELOPMENT
+        #   Hey, Milton, right now the `gherkin` is only returning a single Gherkin script. 
+        #   Some of the devs were tossing around the idea of letting the user specify as 
+        #   many Gherkin scripts as they want. What do you think? How should we implement that?
         for block, config in self.gherkin_config.items():
             if block == "TERMINAL":
                 continue

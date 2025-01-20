@@ -166,14 +166,14 @@ class Repo:
         """
         url = self._pr(pr)
         headers = self._headers()
+        # @DEVELOPMENT
+        #   We need some way to extract this information from Gemini's response!
+        #   What do you think, Milton? You probably have a particuarly insightful
+        #   way to ensure Gemini returns the necessary information for this pull
+        #   request to get posted to the correct file lines!
         data = {
             "body": msg,
             "commit_id": self.src["commit"], 
-            # @DEVELOPMENT
-            #   We need some way to extract this information from Gemini's response!
-            #   What do you think, Milton? You probably have a particuarly insightful
-            #   way to ensure Gemini returns the necessary information for this pull
-            #   request to get posted to the correct file lines!
             "path": path,
             "position": 1,
             "start_line":1,
@@ -184,12 +184,19 @@ class Repo:
         
         try:
             logger.debug(f"Making HTTP call to {url}")
+            # @OPERATIONS
+            #   This is where our requests are failing with 422s, Milton. Take a look
+            #   and see if you can find the source of our woes. 
             res = requests.post(
                 url = url, 
                 headers = headers, 
                 json = data
             )
+
+            logger.debug(res)
+
             res.raise_for_status()
+            
             return {
                 "status": "success",
                 "body": res.json()

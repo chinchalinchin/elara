@@ -148,6 +148,21 @@ class Config:
             self.data["LOGS"]["LEVEL"]
         )
 
+    def vars(self) -> dict:
+        """
+        Get a dictionary of the application configuration for templating.
+
+        :returns: A dictionary of the application configuration.
+        :rtype: dict
+        """
+        # Filter out attributes with sensitive values!
+        return { 
+            k: v 
+            for k,v 
+            in self.data.items()
+            if k not in ["GEMINI", "REPO"]
+        }
+    
     def save(self):
         """
         Saves the cache to the JSON file in ``data`` directory.

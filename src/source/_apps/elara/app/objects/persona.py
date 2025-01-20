@@ -123,6 +123,15 @@ class Persona:
             self.personas[persona]["tools"] = config[key]["TOOLS"]
             self.personas[persona]["functions"] = config[key]["FUNCTIONS"]
 
+    def vars(self) -> dict:
+        """
+        Get a dictionary of the persona configuration for templating.
+        
+        :returns: A dictionary of the persona configuration.
+        :rtype: dict
+        """
+        return self.personas
+    
     def update(
         self, 
         persona : str

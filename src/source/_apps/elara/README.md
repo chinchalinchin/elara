@@ -128,7 +128,7 @@ As an example,
 
 .. prove::
 
-    :math:`a^2 + b^2 = c^2
+    :math:`a^2 + b^2 = c^2`
 ```
 
 This will prompt `axiom` to generate a formal proof of the Pythagorean theorem. 
@@ -164,3 +164,4 @@ elara chat -p "Try out these sweet language modules, Elara!"
 ## TODOS
 
 1. [structured output](https://ai.google.dev/gemini-api/docs/structured-output?lang=python)
+2. Lean heavily into the tags in Milton's system instructions. Encourage him to provide feedback on code that is tagged with OPERATIONS, DATA, and DEVELOPMENT
