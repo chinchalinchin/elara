@@ -37,7 +37,7 @@ export REPO_AUTH_CREDS="token"
 elara converse --prompt "Hi there, Elara!"
 ```
 
-**Note**: The `REPO_AUTH_CREDS` environment variable is only required for operations that require a VCS, such as having `milton` comment on pull requests. See the **Code Review** section below.
+**Note**: The `REPO_AUTH_CREDS` environment variable is only required for operations that require a VCS, such as having `milton` comment on pull requests. See the **Code Review** section below. 
 
 ### Contextual Conversation
 
@@ -92,12 +92,13 @@ Using the following commands,
 ## VARIABLES
 # DIR: Directory containing the git repository to review.
 # OWNER: The username of the repository owner.
+# REPO: Name of the remote repository.
 # PR_NUMBER: The number of the pull request to comment on. 
 # REPO_AUTH_CREDS: A personal access token for the Github API.
 # REPO_VCS: The name of the repository that contains the pull request.
 export REPO_VCS="github"
 export REPO_AUTH_CREDS="<inset API token>"
-elara review --repository $REPO --owner $OWNER --pull $PR_NUMBER 
+elara review --repository $REPO --owner $OWNER --pull $PR_NUMBER  --directory $DIR
 ```
 
 In addition, `milton` has special tags that can be appended to code comments. These comment tags signal different types of attention `milton` will direct to certain sections of the code.
