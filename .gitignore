@@ -8,3 +8,4 @@ venv/**
 !/venv/.gitkeep
 **/pyvenv.cfg
 **/*.pyc
+**/*.log
