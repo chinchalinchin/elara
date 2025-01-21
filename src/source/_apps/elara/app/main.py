@@ -18,6 +18,7 @@ import objects.language as language
 import objects.persona as persona
 import objects.model as model
 import objects.repo as repo
+import object.structures as structures
 import objects.template as template
 import objects.terminal as terminal
 
@@ -219,6 +220,7 @@ def analyze(app: dict) -> dict:
         "response"                      : response
     }
 
+
 def configure(app : dict) -> dict:
     """
     Parses and applies configuration settings.
@@ -401,7 +403,7 @@ def review(app : dict) -> dict:
     }
 
     review_prompt                       = app["TEMPLATES"].render(
-        temp                            = "review", 
+        temp                            = app["CONFIG"].get("REVIEW.TEMPLATE"), 
         variables                       = review_variables
     )
 
@@ -410,10 +412,19 @@ def review(app : dict) -> dict:
             "prompt"                    : review_prompt
         }
     
+    review_config                       = app["PERSONAS"].get("generationConfig", persona)
+    # @DEVELOPMENT
+    #   HEY MILTON! We're testing structured output for your pull request reviews.
+    #   What do you think!? Pretty neat, huh!?
+    review_config.update({
+        "response_schema"               : structures.Review,
+        "response_mime_type"            : "application/json"
+    })
+
     model_res                           = app["MODEL"].respond(
         prompt                          = review_prompt,
+        generation_config               = review_config,
         model_name                      = app["CACHE"].get("currentModel"),
-        generation_config               = app["PERSONAS"].get("generationConfig", persona),
         safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
         tools                           = app["PERSONAS"].get("tools", persona),
         system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
@@ -449,7 +460,10 @@ def summarize(app : dict) -> dict:
 
     summary_vars                        = dir.summary()
 
-    summary                             = app["TEMPLATES"].render("summary", summary_vars)
+    summary                             = app["TEMPLATES"].render(
+        temp                            = app["CONFIG"].get("SUMMARIZE.TEMPLATE"), 
+        variable                        = summary_vars
+    )
     
     return                              { 
         "summary"                       : summary
@@ -601,7 +615,7 @@ def init(
     context_file                        = app["CONFIG"].get("TREE.FILES.CONTEXT")
     tune_dir                            = os.path.join(app_dir, tune_rel_path)
     sys_dir                             = os.path.join(app_dir, sys_rel_path)
-    context_filepath                    = os.path.join(data_dir, context_file)
+    context_filepath                    = os.path.join(app_dir, data_dir, context_file)
     app["PERSONAS"]                     = persona.Persona(
         current                         = app["CACHE"].get("currentPersona"),
         config                          = app["CONFIG"].get("PERSONA"),

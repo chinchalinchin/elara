@@ -15,11 +15,13 @@ class Persona:
     """Singleton instance"""
     personas = {}
     """Persona metadata"""
+    functional_structures = {}
+    """Structured output for functions"""
 
     def __init__(
         self, 
-        current : str = None,
-        config : dict = None,
+        current_persona : str = None,
+        persona_config : dict = None,
         context_file : str = None,
         tune_dir :str = None,
         sys_dir : str = None,
@@ -29,10 +31,10 @@ class Persona:
         """
         Initialize Persona object.
 
-        :param current: Initial persona for model to assume. 
-        :type current: str
-        :param config: Persona configuration.
-        :type config: dict
+        :param current_persona: Initial persona for model to assume. 
+        :type current_persona: str
+        :param persona_config: Persona configuration.
+        :type persona_config: dict
         :param tune_dir: Directory containing tuning data.
         :type tune_dir: str
         :param tune_ext: File xtension for tuning data.
@@ -52,12 +54,25 @@ class Persona:
         #
         #   Leaving this comment here because afer discussion with the Development team,
         #   they think it would be best to load the structured schemas into the Persona objects!
-        if None in [current, config, tune_dir, tune_ext, sys_dir, sys_ext]:
+        if None in [
+            current_persona, 
+            persona_config, 
+            tune_dir, 
+            tune_ext, 
+            sys_dir, 
+            sys_ext
+        ]:
             raise ValueError("Must set all class properties: (current, config, tune_dir, tune_ext, sys_dir, sys_ext)")
         
-        self.current = current
+        self.current = current_persona
         self.personas = { }
-        self._load(config, context_file, tune_dir, tune_ext, sys_dir, sys_ext)
+        self._load(
+            persona_config, 
+            context_file, 
+            tune_dir, 
+            tune_ext, 
+            sys_dir, 
+            sys_ext)
 
     def __new__(
         self,

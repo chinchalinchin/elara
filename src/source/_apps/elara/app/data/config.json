@@ -442,7 +442,11 @@
             ".pyc",
             ".zip",
             ".gz"
-        ]
+        ],
+        "TEMPLATE": "summary"
+    },
+    "REVIEW": {
+        "TEMPLATE": "review"
     },
     "ANALYZE": {
         "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
