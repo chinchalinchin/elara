@@ -59,6 +59,43 @@ def logger(
     return logger
 
 
+def output(
+    arguments : argparse.Namespace, 
+    response : dict,
+):
+    """
+    
+    :param arguments:
+    :type arguments: argparse.Namespace
+    :param response:
+    :type response: dict
+    """
+    arg_dict                            = vars(arguments)
+    to_file                             = "output" in arg_dict.key() and arg_dict["output"]
+    to_screen                           = "show" in arg_dict.keys() and arg_dict["show"]
+    response                            = "response" in response.keys()
+    summary                             = "summary" in response.keys()
+    vcs                                 = "vcs" in response.keys()
+
+    if to_file and response:
+        with open(arg_dict["output"], "w") as out:
+            out.write(response["response"])
+
+    if to_file and summary:
+        with open(arg_dict["output"], "w") as out:
+            out.write(response["summary"])
+
+    if to_screen:
+        if summary:
+            print(response["summary"])
+
+        if response:
+            print(response["response"])
+
+        if vcs:
+            print(response["vcs"])
+
+
 def args(configuration : config.Config) -> argparse.Namespace:
     """
     Parse and format command line arguments.
@@ -160,7 +197,10 @@ def configure(app : dict) -> dict:
     return config
 
 
-def converse(app : dict) -> dict:
+def converse(
+    app                                 : dict,
+    tty_prompt                          : str = None    
+) -> dict:
     """
     Chat with one of Gemini's personas.
 
@@ -169,18 +209,20 @@ def converse(app : dict) -> dict:
     :returns: Dictionary containing templated prompt and model response.
     :rtype: dict
     """
-    convo                               = conversation.Conversation()
-
-    convo.update(
+    prompt                              = app["ARGUMENTS"].prompt \
+                                            if tty_prompt is None \
+                                            else tty_prompt
+    
+    app["CONVERSATIONS"].update(
         persona                         = app["CACHE"].get("currentPersona"), 
         name                            = app["CACHE"].get("currentPrompter"), 
-        text                            = app["ARGUMENTS"].prompt
+        text                            = prompt
     )
     
     template_vars                       = { 
         **app["CACHE"].vars(), 
         **app["LANGUAGE"].vars(),
-        **convo.vars()
+        **app["CONVERSATIONS"].vars()
     }
 
     if app["ARGUMENTS"].directory is not None:
@@ -200,7 +242,7 @@ def converse(app : dict) -> dict:
         system_instruction              = app["PERSONA"].get("systemInstruction")
     )
 
-    convo.update(
+    app["CONVERSATIONS"].update(
         persona                         = app["CACHE"].get("currentPersona"), 
         name                            = app["CACHE"].get("currentPersona"), 
         text                            = response
@@ -324,11 +366,9 @@ def request(app: dict) -> dict:
     buffer                              = app["CACHE"].vars()
     persona                             = app["PERSONAS"].function("request")
     buffer["currentPersona"]            = persona
-    term                                = terminal.Terminal(
-        gherkin_config                  = app["CONFIG"].get("GHERKIN")
-    )
+
     request_vars                         = { 
-        **term.gherkin(), 
+        **app["TERMINAL"].gherkin(), 
         **buffer 
     }
     
@@ -524,6 +564,26 @@ def init(
         sys_ext                         = app["CONFIG"].get("TREE.EXTENSIONS.TUNING")
     )            
     
+    #############################
+    # APPLICATION CONVERSATIONS #
+    #############################
+    app["LOGGER"].debug("Initialize chat histories...")
+    hist_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.HISTORY")
+    hist_dir                            = os.path.join(app_dir, hist_rel_path)
+    app["CONVERSATIONS"]                = conversation.Conversation(
+        directory                       = hist_dir,
+        extension                       = app["CONFIG"].get("TREE.EXTENSIONS.CONVERSATION"),
+        tz_offset                       = app["CONFIG"].get("CONVERSATION.TIMEZONE_OFFSET")
+    )
+
+    ########################
+    # APPLICATION TERMINAL #
+    ########################
+    app["LOGGER"].debug("Initialize interactive terminal...")
+    app["TERMINAL"]                     = terminal.Terminal(
+        gherkin_config                  = app["CONFIG"].get("GHERKIN")
+    )
+
     app["LOGGER"].debug("Application initialized!")
     app["LOGGER"].debug("--- Application Configuration")
     app["LOGGER"].debug(pprint.pformat(app["CONFIG"].vars()))
@@ -551,33 +611,25 @@ def main() -> bool:
     }
 
     operation_name                      = app["ARGUMENTS"].operation
+    arguments                           = vars(app["ARGUMENTS"]) 
 
     if operation_name not in operations:
         return False 
     
-    res                                 = operations[operation_name](app)
-    arguments                           = vars(app["ARGUMENTS"]) 
-
-    if "output" in arguments and app["ARGUMENTS"].output and "response" in res.keys():
-        with open(app["ARGUMENTS"].output, "w") as out:
-            out.write(res["response"])
-
-    if "output" in arguments and app["ARGUMENTS"].output and  "summary" in res.keys():
-        with open(app["ARGUMENTS"].output, "w") as out:
-            out.write(res["summary"])
-
-    if "show" in arguments and app["ARGUMENTS"].show:
-        if "prompt" in res.keys():
-            print(res["prompt"])
-
-        if "summary" in res.keys():
-            print(res["summary"])
-
-        if "response" in res.keys():
-            print(res["response"])
-
-        if "vcs" in res.keys():
-            print(res["vcs"])
+    if "interactive" in arguments and operation_name == "converse": 
+        app["TERMINAL"].interact(
+            callable                    = converse,
+            app                         = app,
+            printer                     = output,
+            kill                        = app["CONFIG"].get("CONVERSATION.TERMINAL.KILL")
+        )
+        return
+        
+    output(
+        arguments                       = app["ARGUMENTS"], 
+        response                        = operations[operation_name](app)
+    )
+    
 
 if __name__ == "__main__":
     main()

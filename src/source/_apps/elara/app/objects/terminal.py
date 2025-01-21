@@ -45,3 +45,42 @@ class Terminal:
             feature["request"][block.lower()] = input(config["INPUT"])
 
         return feature
+    
+    def interact(
+        callable, 
+        callable_args : dict, 
+        printer, 
+        printer_args : dict,
+        kill : str = "exit"
+    ):
+        """
+        
+        Loop over terminal input and call a function. Function should have the following signature:
+
+            callable(app: dict, override: str = None)
+
+        Input from the terminal will be passed into the `override` argument.
+
+        :param callable: Function to invoke over the course of an interaction. 
+        :type callable:
+        :param app: Application configuration and data dictioanry
+        :type app: dict
+        :param printer:
+        :type printer:
+        """
+
+        interacting = True
+
+        logger.info(f"Starting interactive terminal. Type {kill} to quit.")
+        
+        while interacting:
+            prompt = input("Enter prompt: ")
+            
+            if prompt == kill:
+                break
+
+            response = callable(callable_args, prompt)
+            printer(printer_args, response)
+            
+
+        return True

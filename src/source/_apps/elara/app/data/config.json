@@ -78,6 +78,16 @@
                             "--output"
                         ],
                         "TYPE": "str"
+                    },
+                    {
+                        "DEFAULT": false,
+                        "DEST": "interactive",
+                        "HELP": "Start an interactive shell with Gemini's persona.",
+                        "SYNTAX": [
+                            "-i",
+                            "--interactive"
+                        ],
+                        "ACTION": "store_true"
                     }
                 ]
             },
@@ -279,7 +289,8 @@
         "EXTENSIONS": {
             "TEMPLATE": ".rst",
             "LANGUAGE": ".rst",
-            "TUNING": ".json"
+            "TUNING": ".json",
+            "CONVERSATION": ".json"
         }
     },
     "LANGUAGE": {
@@ -352,7 +363,11 @@
         }
     },
     "CONVERSATION": {
-        "TIMEZONE_OFFSET": -5
+        "TIMEZONE_OFFSET": -5,
+        "TERMINAL": {
+            "INPUT": "Enter prompt: ",
+            "KILL": "exit()"
+        }
     },
     "PROMPT": {
         "PROMPTER": "grant",
