@@ -61,6 +61,7 @@ def logger(
 
 def output(
     arguments : argparse.Namespace, 
+    out_format: dict,
     out_map : dict,
     suppress_prompt = True
 ):
@@ -92,10 +93,18 @@ def output(
             print(out_map["summary"])
 
         if prompt:
-            print(out_map["prompt"])
+            print(
+                out_format["PROMPT"].format(
+                    content             = out_map["prompt"]
+                )
+            )
 
         if response:
-            print(out_map["response"])
+            print(
+                out_format["RESPONSE"].format(
+                    content             = out_map["response"]
+                )
+            )
 
         if vcs:
             print(out_map["vcs"])
@@ -634,16 +643,19 @@ def main() -> bool:
         return False 
     
     if tty and operation_name == "converse": 
+        app["ARGUMENTS"].show           = True
         app["TERMINAL"].interact(
             callable                    = converse,
             callable_args               = app,
             printer                     = output,
+            printer_format              = app["CONFIG"].get("OUTPUT"),
             printer_args                = app["ARGUMENTS"]
         )
         return
         
     output(
         arguments                       = app["ARGUMENTS"], 
+        out_format                      = app["CONFIG"].get("OUTPUT"),
         out_map                         = operations[operation_name](app),
         suppress_prompt                 = False
     )

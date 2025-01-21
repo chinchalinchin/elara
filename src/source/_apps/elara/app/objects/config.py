@@ -77,80 +77,47 @@ class Config:
             print(f"Error loading config file: {e}")
             self.data = {}
     
+    def _unnest(
+        self, 
+        keys: list, 
+        default=None
+    ):
+        """
+        Recursively retrieves a value from a nested dictionary.
+        """
+        value = self.data
+        for k in keys:
+            if isinstance(value, dict) and k in value:
+                value = value[k]
+            else:
+                return default
+        return value
+    
+    def _nest(
+        self, 
+        keys: list, 
+        value
+    ):
+        """
+        Recursively sets a value in a nested dictionary.
+        """
+        target = self.data
+        for k in keys[:-1]:
+            if k not in target:
+                target[k] = {}
+            target = target[k]
+        target[keys[-1]] = value
+
     def _override(self):
         """
         Override configuration with environment variables, if applicable.
         """
-
-        self.data["TUNING"]["SOURCE"] = self.env(
-            "TUNING_SOURCE", 
-            self.data["TUNING"]["SOURCE"]
-        )
-
-        self.data["TUNING"]["ENABLED"] = self.env(
-            "TUNING_ENABLED",
-            self.data["TUNING"]["ENABLED"]
-        )
-
-        self.data["LANGUAGE"]["MODULES"]["OBJECT"] = self.env(
-            "LANGUAGE_MODLES_OBJECT",
-            self.data["LANGUAGE"]["MODULES"]["OBJECT"]
-        )
-
-        self.data["LANGUAGE"]["MODULES"]["INFLECTION"] = self.env(
-            "LANGUAGE_MODLES_INFLECTION", 
-            self.data["LANGUAGE"]["MODULES"]["INFLECTION"]
-        )
-
-        self.data["LANGUAGE"]["MODULES"]["VOICE"] = self.env(
-            "LANGUAGE_MODULES_VOICE", 
-            self.data["LANGUAGE"]["MODULES"]["VOICE"]
-        )
-        
-        self.data["LANGUAGE"]["MODULES"]["WORDS"] = self.env(
-            "LANGUAGE_MODULES_WORDS", 
-            self.data["LANGUAGE"]["MODULES"]["WORDS"]
-        )
-
-        self.data["CONVERSATION"]["TIMEZONE_OFFSET"] = self.env(
-            "CONVERSATION_TIMEZONE_OFFSET", 
-            self.data["CONVERSATION"]["TIMEZONE_OFFSET"]
-        )
-        
-        self.data["ANALYZE"]["LATEX_PREAMBLE"] = self.env(
-            "ANALYZE_LATEX_PREAMBLE",
-            self.data["ANALYZE"]["LATEX_PREAMBLE"]
-        )
-
-        self.data["REPO"]["VCS"] = self.env(
-            "REPO_VCS", 
-            self.data["REPO"]["VCS"]
-        )
-
-        self.data["REPO"]["AUTH"]["CREDS"] = self.env(
-            "REPO_AUTH_CREDS",
-            self.data["REPO"]["AUTH"]["CREDS"]
-        )
-
-        self.data["VERSION"] = self.env(
-            "VERSION", 
-            self.data["VERSION"]
-        )
-
-        self.data["GEMINI"]["KEY"] = self.env(
-            "GEMINI_KEY", 
-            self.data["GEMINI"]["KEY"]
-        )
-
-        self.data["GEMINI"]["DEFAULT"] = self.env(
-            "GEMINI_DEFAULT", 
-            self.data["GEMINI"]["DEFAULT"]
-        )
-
-        self.data["LOGS"]["LEVEL"] = self.env(
-            "LOGS_LEVEL", 
-            self.data["LOGS"]["LEVEL"]
-        )
+        env_overrides = self.data["OVERRIDES"]
+        for key, env_var in env_overrides.items():
+            default = self._get_nested_value(key.split("."))
+            value = self._env(env_var, default)
+            if value != default:
+                self._set_nested_value(key.split("."), value)
 
     def vars(self) -> dict:
         """
@@ -195,19 +162,7 @@ class Config:
         :rtype: str
         """
         keys = key.split(".")
-        value = self.data
-        for k in keys:
-            if isinstance(value, dict):
-                value = value.get(k)
-            else:
-                if default is None:
-                    raise KeyError(f"Key {key} not found")
-                return default
-            if value is None:
-                if default is None:
-                    raise KeyError(f"Key {key} not found")
-                return default
-        return value
+        return self._unnest(keys, default)
 
     def set(
         self, 
@@ -223,12 +178,7 @@ class Config:
         :type value: str
         """
         keys = key.split(".")
-        target = self.data
-        for k in keys[:-1]:
-            if k not in target:
-                target[k] = {}
-            target = target[k]
-        target[keys[-1]] = value
+        self._nest(keys, value)
 
     def update(self, **kwargs):
         """
@@ -260,11 +210,11 @@ class Config:
         Return a list of enabled Language modules.
         """
         modules = self.data["LANGUAGE"]["MODULES"]
-        if any(v == "enabled" for v in modules.values()):
+        if any(v for v in modules.values()):
             return [
                 k.lower()
                 for k,v
                 in modules.items()
-                if v == "enabled"
+                if v
             ]
         return []

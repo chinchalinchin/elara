@@ -441,8 +441,28 @@
         "DEFAULT": "models/gemini-2.0-flash-exp"
     },
     "LOGS": {
-        "LEVEL": "DEBUG",
+        "LEVEL": "INFO",
         "SCHEMA": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
-    "VERSION": "1.0"
+    "VERSION": "1.0",
+    "OUTPUT": {
+        "PROMPT": "PROMPT: \n\t{content}\n",
+        "RESPONSE": "RESPONSE: \n\t{content}\n"
+    },
+    "OVERRIDES": {
+        "TUNING.SOURCE": "TUNING_SOURCE",
+        "TUNING.ENABLED": "TUNING_ENABLED",
+        "LANGUAGE.MODULES.OBJECT": "LANGUAGE_MODLES_OBJECT",
+        "LANGUAGE.MODULES.INFLECTION": "LANGUAGE_MODLES_INFLECTION",
+        "LANGUAGE.MODULES.VOICE": "LANGUAGE_MODULES_VOICE",
+        "LANGUAGE.MODULES.WORDS": "LANGUAGE_MODULES_WORDS",
+        "CONVERSATION.TIMEZONE_OFFSET": "CONVERSATION_TIMEZONE_OFFSET",
+        "ANALYZE.LATEX_PREAMBLE": "ANALYZE_LATEX_PREAMBLE",
+        "REPO.VCS": "REPO_VCS",
+        "REPO.AUTH.CREDS": "REPO_AUTH_CREDS",
+        "VERSION": "VERSION",
+        "GEMINI.KEY": "GEMINI_KEY",
+        "GEMINI.DEFAULT": "GEMINI_DEFAULT",
+        "LOGS.LEVEL": "LOGS_LEVEL"
+    }
 }

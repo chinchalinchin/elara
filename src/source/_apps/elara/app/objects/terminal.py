@@ -48,6 +48,7 @@ class Terminal:
         callable: typing.Callable, 
         callable_args : dict, 
         printer: typing.Callable, 
+        printer_format: dict,
         printer_args : dict
     ) -> bool:
         """
@@ -57,16 +58,20 @@ class Terminal:
 
         Input from the terminal will be passed into the `override` argument. Similary, the function used to print the output to string should have the following signature,
 
-            printer(printer_args: dict, override : str = None)
+            printer(printer_args: dict, printer_format: dict, override : str = None)
 
         The output from the `callable` function will be passed into the printer through the `override` argument.
         
         :param callable: Function to invoke over the course of an interaction. 
         :type callable: typing.Callable
-        :param app: Application configuration and data dictioanry
-        :type app: dict
+        :param callable_args: Arguments to pass into callable
+        :type callable_args: dict
         :param printer: Function to print output.
         :type printer: typing.Callable
+        :param printer_format: Dictionary containg printer format.
+        :type printer: dict
+        :param printer_args: Dictionary containing printer arguments
+        :type printer_args: dict
         :returns: Boolean flag
         :rtype: bool
         """
@@ -82,7 +87,7 @@ class Terminal:
                 break
 
             response = callable(callable_args, prompt)
-            printer(printer_args, response)
+            printer(printer_args, printer_format, response)
             
 
         return True
