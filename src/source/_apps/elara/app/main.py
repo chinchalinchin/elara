@@ -71,7 +71,7 @@ def output(
     :type response: dict
     """
     arg_dict                            = vars(arguments)
-    to_file                             = "output" in arg_dict.key() and arg_dict["output"]
+    to_file                             = "output" in arg_dict.keys() and arg_dict["output"]
     to_screen                           = "show" in arg_dict.keys() and arg_dict["show"]
     response                            = "response" in response.keys()
     summary                             = "summary" in response.keys()
