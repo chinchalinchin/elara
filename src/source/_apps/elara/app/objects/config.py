@@ -48,20 +48,6 @@ class Config:
             ).__new__(self)
         return self.inst
 
-    @staticmethod
-    def env(key, default):
-        value = os.environ.get(key)
-        if value is not None:
-            if isinstance(default, bool):
-                return value.lower() == "true"
-            if isinstance(default, int):
-                try:
-                    return int(value)
-                except ValueError:
-                    return default
-            return value
-        return default 
-    
     def _load(self):
         """
         Load in configuration data from file.
@@ -76,37 +62,6 @@ class Config:
         except (FileNotFoundError, json.JSONDecodeError) as e:
             print(f"Error loading config file: {e}")
             self.data = {}
-    
-    def _unnest(
-        self, 
-        keys: list, 
-        default=None
-    ):
-        """
-        Recursively retrieves a value from a nested dictionary.
-        """
-        value = self.data
-        for k in keys:
-            if isinstance(value, dict) and k in value:
-                value = value[k]
-            else:
-                return default
-        return value
-    
-    def _nest(
-        self, 
-        keys: list, 
-        value
-    ):
-        """
-        Recursively sets a value in a nested dictionary.
-        """
-        target = self.data
-        for k in keys[:-1]:
-            if k not in target:
-                target[k] = {}
-            target = target[k]
-        target[keys[-1]] = value
 
     def _override(self):
         """
@@ -114,10 +69,55 @@ class Config:
         """
         env_overrides = self.data["OVERRIDES"]
         for key, env_var in env_overrides.items():
-            default = self._get_nested_value(key.split("."))
-            value = self._env(env_var, default)
+            default = self.unnest(key.split("."), self.data)
+            value = self.env(env_var, default)
             if value != default:
-                self._set_nested_value(key.split("."), value)
+                self.nest(key.split("."), self.data, value)
+
+    @staticmethod
+    def env(key, default):
+        value = os.environ.get(key)
+        if value is not None:
+            if isinstance(default, bool):
+                return value.lower() == "true"
+            if isinstance(default, int):
+                try:
+                    return int(value)
+                except ValueError:
+                    return default
+            return value
+        return default 
+    
+    @staticmethod
+    def unnest(
+        keys: list, 
+        target : dict,
+        default=None
+    ):
+        """
+        Recursively retrieves a value from a nested dictionary.
+        """
+        for k in keys:
+            if isinstance(target, dict) and k in target:
+                target = target[k]
+            else:
+                return default
+        return target
+    
+    @staticmethod
+    def nest(
+        keys: list, 
+        target: dict,
+        value
+    ):
+        """
+        Recursively sets a value in a nested dictionary.
+        """
+        for k in keys[:-1]:
+            if k not in target:
+                target[k] = {}
+            target = target[k]
+        target[keys[-1]] = value
 
     def vars(self) -> dict:
         """
@@ -162,7 +162,7 @@ class Config:
         :rtype: str
         """
         keys = key.split(".")
-        return self._unnest(keys, default)
+        return self.unnest(keys, self.data, default)
 
     def set(
         self, 
@@ -178,7 +178,7 @@ class Config:
         :type value: str
         """
         keys = key.split(".")
-        self._nest(keys, value)
+        self.nest(keys, self.data, value)
 
     def update(self, **kwargs):
         """

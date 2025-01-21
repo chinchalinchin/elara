@@ -46,24 +46,23 @@ def validate(
     :returns: Validated value.
     :rtype: typing.Union[str, int, float, bool]
     """
-    value_type = type(value)
-
-    if value_type == int:
+    if isinstance(value, int):
         try:
             return int(value)
         except ValueError:
             logger.error(f"Invalid value type: {value} not a integer")
 
-    elif value_type == float:
+    elif isinstance(value, float):
         try: 
             return float(value)
         except ValueError:
             logger.error(f"Invalid value type: {value} not a float")
     
-    elif value_type == bool:
-        return value.lower() == "true"
-    
-    elif value_type:
+    elif isinstance(value, str):
+        if value.lower() == "true":
+           return True
+        if value.lower() == "false":
+           return False
         return value
     
     return None
