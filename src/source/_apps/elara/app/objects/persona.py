@@ -20,17 +20,18 @@ class Persona:
         self, 
         current : str = None,
         config : dict = None,
-        tune_dir = None,
-        sys_dir = None,
-        tune_ext = None,
-        sys_ext = None
+        context_file : str = None,
+        tune_dir :str = None,
+        sys_dir : str = None,
+        tune_ext : str = None,
+        sys_ext : str = None
     ):
         """
         Initialize Persona object.
 
         :param current: Initial persona for model to assume. 
         :type current: str
-        :param config: Application configuration.
+        :param config: Persona configuration.
         :type config: dict
         :param tune_dir: Directory containing tuning data.
         :type tune_dir: str
@@ -56,7 +57,7 @@ class Persona:
         
         self.current = current
         self.personas = { }
-        self._load(config, tune_dir, tune_ext, sys_dir, sys_ext)
+        self._load(config, context_file, tune_dir, tune_ext, sys_dir, sys_ext)
 
     def __new__(
         self,
@@ -80,10 +81,11 @@ class Persona:
     def _load(
         self, 
         config : dict,
+        context_file: str, 
         tune_dir : str , 
         tune_ext : str,
         sys_dir : str,
-        sys_ext : str
+        sys_ext : str,
     ):
         """
         Load *Personas* into runtime.
@@ -126,21 +128,39 @@ class Persona:
 
                 self.personas[persona]["systemInstruction"] = payload["payload"]
 
+        with open(context_file, "r") as f: 
+            context = json.load(f)
+
         for persona in self.personas.keys():
             key = persona.upper()
+
             self.personas[persona]["generationConfig"] = self._lower(config[key]["GENERATION_CONFIG"])
             self.personas[persona]["safetySettings"] = self._lower(config[key]["SAFETY_SETTINGS"])
             self.personas[persona]["tools"] = config[key]["TOOLS"]
             self.personas[persona]["functions"] = config[key]["FUNCTIONS"]
+            
+            self.personas[persona]["context"] = {}
 
-    def vars(self) -> dict:
+            for c_key, c_value in self._lower(config[key]["CONTEXT"]).items(): 
+                self.personas[persona]["context"][c_key] = []
+                for c_index in c_value: 
+                    self.personas[persona]["context"][c_key].append(
+                        self._lower(
+                            context[c_key.upper()][c_index]
+                        )
+                    )
+
+    def vars(
+        self, 
+        persona
+    ) -> dict:
         """
         Get a dictionary of the persona configuration for templating.
         
         :returns: A dictionary of the persona configuration.
         :rtype: dict
         """
-        return self.personas
+        return self.personas.get(persona)
     
     def update(
         self, 

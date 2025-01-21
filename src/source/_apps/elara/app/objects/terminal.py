@@ -43,13 +43,11 @@ class Terminal:
 
         return feature
     
-    def interact(\
+    def interact(
         self,
         callable: typing.Callable, 
-        callable_args : dict, 
         printer: typing.Callable, 
-        printer_format: dict,
-        printer_args : dict
+        app: dict
     ) -> bool:
         """
         Loop over terminal input and call a function. Function should have the following signature:
@@ -64,16 +62,12 @@ class Terminal:
         
         :param callable: Function to invoke over the course of an interaction. 
         :type callable: typing.Callable
-        :param callable_args: Arguments to pass into callable
-        :type callable_args: dict
+        :param app: Dictionary containing application configuration.
+        :type app: dict
         :param printer: Function to print output.
         :type printer: typing.Callable
-        :param printer_format: Dictionary containg printer format.
-        :type printer: dict
-        :param printer_args: Dictionary containing printer arguments
-        :type printer_args: dict
         :returns: Boolean flag
-        :rtype: bool
+        :rtype: boold
         """
 
         interacting = True
@@ -86,8 +80,9 @@ class Terminal:
             if prompt == self.config["CONVERSATION"]["KILL"]:
                 break
 
-            response = callable(callable_args, prompt)
-            printer(printer_args, printer_format, response)
+            app["ARGUMENTS"].prompt = prompt
+            out = callable(app)
+            printer(app, out)
             
 
         return True

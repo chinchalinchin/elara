@@ -21,6 +21,8 @@ import objects.repo as repo
 import objects.template as template
 import objects.terminal as terminal
 
+# APPLICATION UTILITIES
+
 def logger(
     app                                 : dict,
     file                                : str = None
@@ -60,10 +62,9 @@ def logger(
 
 
 def output(
-    arguments : argparse.Namespace, 
-    out_format: dict,
-    out_map : dict,
-    suppress_prompt = True
+    app                                 : dict,
+    out                                 : dict,
+    suppress_prompt                     : bool = True
 ):
     """
     
@@ -72,42 +73,43 @@ def output(
     :param response:
     :type response: dict
     """
-    arg_map                             = vars(arguments)
+    arg_map                             = vars(app["ARGUMENTS"])
     to_file                             = "output" in arg_map.keys() and arg_map["output"]
     to_screen                           = "show" in arg_map.keys() and arg_map["show"]
-    prompt                              = "prompt" in out_map.keys() and not suppress_prompt
-    response                            = "response" in out_map.keys()
-    summary                             = "summary" in out_map.keys()
-    vcs                                 = "vcs" in out_map.keys()
+    prompt                              = "prompt" in out.keys() and arg_map["prompt"]
+    response                            = "response" in out.keys()
+    summary                             = "summary" in out.keys()
+    vcs                                 = "vcs" in out.keys()
 
-    if to_file and response:
-        with open(arg_map["output"], "w") as out:
-            out.write(out_map["response"])
-
-    if to_file and summary:
-        with open(arg_map["output"], "w") as out:
-            out.write(out_map["summary"])
+    if to_file:
+        with open(arg_map["output"], "w") as outfile:
+            if prompt: 
+                outfile.write(out["prompt"])
+            if response:
+                outfile.write(out["response"])
+            if summary: 
+                outfile.write(out["summary"])
 
     if to_screen:
         if summary:
-            print(out_map["summary"])
+            print(out["summary"])
 
-        if prompt:
+        if prompt and not suppress_prompt:
             print(
-                out_format["PROMPT"].format(
-                    content             = out_map["prompt"]
+                app["CONFIG"].get("OUTPUT.PROMPT").format(
+                    content             = out["prompt"]
                 )
             )
 
         if response:
             print(
-                out_format["RESPONSE"].format(
-                    content             = out_map["response"]
+                app["CONFIG"].get("OUTPUT.RESPONSE").format(
+                    content             = out["response"]
                 )
             )
 
         if vcs:
-            print(out_map["vcs"])
+            print(out["vcs"])
 
 
 def args(configuration : config.Config) -> argparse.Namespace:
@@ -171,6 +173,52 @@ def args(configuration : config.Config) -> argparse.Namespace:
     return parser.parse_args()
 
 
+## APPLICATION FUNCTIONS
+
+def analyze(app: dict) -> dict:
+    """
+    This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
+
+    :param app: Dictioanry containing application configuration.
+    :type app: dict
+    :returns: Dictionary containing templated prompt and model response.
+    :rtype: dict
+    """
+    buffer                              = app["CACHE"].vars()
+    persona                             = app["PERSONAS"].function("analyze")
+    buffer["currentPersona"]            = persona
+
+    analyze_vars                        = {
+        **buffer,
+        **app["LANGUAGE"].vars(),
+        **summarize(app),
+        **{ "latex": app["CONFIG"].get("ANALYZE.LATEX_PREAMBLE") }
+    }
+
+    parsed_prompt                       = app["TEMPLATES"].render(
+        temp                            = "analysis", 
+        variables                       = analyze_vars
+    )
+    
+    if app["ARGUMENTS"].render:
+        return {
+            "prompt"                    : parsed_prompt
+        }
+    
+    response                            = app["MODEL"].respond(
+        prompt                          = parsed_prompt,
+        model_name                      = app["CACHE"].get("currentModel"),
+        generation_config               = app["PERSONAS"].get("generationConfig", persona),
+        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
+        tools                           = app["PERSONAS"].get("tools", persona),
+        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
+    )
+    
+    return {
+        "prompt"                        : parsed_prompt,
+        "response"                      : response
+    }
+
 def configure(app : dict) -> dict:
     """
     Parses and applies configuration settings.
@@ -211,10 +259,7 @@ def configure(app : dict) -> dict:
     return config
 
 
-def converse(
-    app                                 : dict,
-    tty_prompt                          : str = None    
-) -> dict:
+def converse(app: dict) -> dict:
     """
     Chat with one of Gemini's personas.
 
@@ -223,9 +268,7 @@ def converse(
     :returns: Dictionary containing templated prompt and model response.
     :rtype: dict
     """
-    prompt                              = app["ARGUMENTS"].prompt \
-                                            if tty_prompt is None \
-                                            else tty_prompt
+    prompt                              = app["ARGUMENTS"].prompt
     
     if app["CACHE"].get("currentPersona") is None:
         converse_persona                = app["PERSONAS"].function("converse")
@@ -244,6 +287,7 @@ def converse(
     template_vars                       = { 
         **app["CACHE"].vars(), 
         **app["LANGUAGE"].vars(),
+        **app["PERSONAS"].vars(app["CACHE"].get("currentPersona")),
         **app["CONVERSATIONS"].vars(app["CACHE"].get("currentPersona"))
     }
 
@@ -256,6 +300,11 @@ def converse(
         variables                       = template_vars
     )
 
+    if app["ARGUMENTS"].render:
+        return {
+            "prompt"                    : parsed_prompt
+        }
+    
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt, 
         model_name                      = app["CACHE"].get("currentModel"),
@@ -277,30 +326,30 @@ def converse(
     }
 
 
-def analyze(app: dict) -> dict:
+def request(app: dict) -> dict:
     """
-    This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
+    This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
 
     :param app: Dictioanry containing application configuration.
     :type app: dict
-    :returns: Dictionary containing templated prompt and model response.
+    :returns: Dictionary containing templated feature request.
     :rtype: dict
     """
     buffer                              = app["CACHE"].vars()
-    persona                             = app["PERSONAS"].function("analyze")
+    persona                             = app["PERSONAS"].function("request")
     buffer["currentPersona"]            = persona
 
-    analyze_vars                        = {
-        **buffer,
-        **app["LANGUAGE"].vars(),
-        **summarize(app),
-        **{ "latex": app["CONFIG"].get("ANALYZE.LATEX_PREAMBLE") }
+    request_vars                         = { 
+        **app["TERMINAL"].gherkin(), 
+        **buffer 
     }
-
-    parsed_prompt                       = app["TEMPLATES"].render(
-        temp                            = "analysis", 
-        variables                       = analyze_vars
-    )
+    
+    parsed_prompt                       = app["TEMPLATES"].render("request", request_vars)
+    
+    if app["ARGUMENTS"].render:
+        return {
+            "prompt"                    : parsed_prompt
+        }
     
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt,
@@ -310,7 +359,6 @@ def analyze(app: dict) -> dict:
         tools                           = app["PERSONAS"].get("tools", persona),
         system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
     )
-    
     return {
         "prompt"                        : parsed_prompt,
         "response"                      : response
@@ -357,6 +405,11 @@ def review(app : dict) -> dict:
         variables                       = review_variables
     )
 
+    if app["ARGUMENTS"].render:
+        return {
+            "prompt"                    : review_prompt
+        }
+    
     model_res                           = app["MODEL"].respond(
         prompt                          = review_prompt,
         model_name                      = app["CACHE"].get("currentModel"),
@@ -374,39 +427,6 @@ def review(app : dict) -> dict:
         "prompt"                        : review_prompt,
         "response"                      : model_res,
         "vcs"                           : source_res
-    }
-
-
-def request(app: dict) -> dict:
-    """
-    This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
-
-    :param app: Dictioanry containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing templated feature request.
-    :rtype: dict
-    """
-    buffer                              = app["CACHE"].vars()
-    persona                             = app["PERSONAS"].function("request")
-    buffer["currentPersona"]            = persona
-
-    request_vars                         = { 
-        **app["TERMINAL"].gherkin(), 
-        **buffer 
-    }
-    
-    parsed_prompt                       = app["TEMPLATES"].render("request", request_vars)
-    
-    response                            = app["MODEL"].respond(
-        prompt                          = parsed_prompt,
-        model_name                      = app["CACHE"].get("currentModel"),
-        generation_config               = app["PERSONAS"].get("generationConfig", persona),
-        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
-        tools                           = app["PERSONAS"].get("tools", persona),
-        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
-    )
-    return {
-        "response"                      : response
     }
 
 
@@ -466,6 +486,8 @@ def tune(app : dict) -> bool:
             return True
     return False
     
+
+# APPLICATION INITIALIZATION
 
 def init(
     data_dir                            : str = "data",
@@ -576,11 +598,14 @@ def init(
     app["LOGGER"].debug("Initializing personas...")
     tune_rel_path                       = app["CONFIG"].get("TREE.DIRECTORIES.TUNING")
     sys_rel_path                        = app["CONFIG"].get("TREE.DIRECTORIES.SYSTEM")
+    context_file                        = app["CONFIG"].get("TREE.FILES.CONTEXT")
     tune_dir                            = os.path.join(app_dir, tune_rel_path)
     sys_dir                             = os.path.join(app_dir, sys_rel_path)
+    context_filepath                    = os.path.join(data_dir, context_file)
     app["PERSONAS"]                     = persona.Persona(
         current                         = app["CACHE"].get("currentPersona"),
         config                          = app["CONFIG"].get("PERSONA"),
+        context_file                    = context_filepath,
         tune_dir                        = tune_dir,
         tune_ext                        = app["CONFIG"].get("TREE.EXTENSIONS.TUNING"),
         sys_dir                         = sys_dir,
@@ -617,6 +642,7 @@ def init(
     
     return app
 
+# APPLICATION ENTRYPOINT
 
 def main() -> bool:
     """
@@ -646,17 +672,14 @@ def main() -> bool:
         app["ARGUMENTS"].show           = True
         app["TERMINAL"].interact(
             callable                    = converse,
-            callable_args               = app,
             printer                     = output,
-            printer_format              = app["CONFIG"].get("OUTPUT"),
-            printer_args                = app["ARGUMENTS"]
+            app                         = app
         )
         return
         
     output(
-        arguments                       = app["ARGUMENTS"], 
-        out_format                      = app["CONFIG"].get("OUTPUT"),
-        out_map                         = operations[operation_name](app),
+        app                             = app,
+        out                             = operations[operation_name](app),
         suppress_prompt                 = False
     )
     

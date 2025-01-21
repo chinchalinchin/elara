@@ -1,4 +1,5 @@
 {
+    "VERSION": "1.0",
     "INTERFACE": {
         "HELP": {
             "PARSER": "Plumb the depths of generative AI.",
@@ -44,7 +45,7 @@
                         "DEST": "currentPersona",
                         "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                         "SYNTAX": [
-                            "-pr",
+                            "-r",
                             "--persona"
                         ],
                         "TYPE": "str"
@@ -88,32 +89,53 @@
                             "--interactive"
                         ],
                         "ACTION": "store_true"
+                    },
+                    {
+                        "ACTION": "store_true",
+                        "DEFAULT": false,
+                        "DEST": "render",
+                        "HELP": "Render template without sending to Gemini API.",
+                        "SYNTAX": [
+                            "-e",
+                            "--render"
+                        ]
                     }
                 ]
             },
             {
                 "NAME": "request",
                 "HELP": "Template a Gherkin-style feature request and post it to the Gemini API.",
-                "ARGUMENTS": [{
-                    "DEFAULT": null,
-                    "DEST": "show",
-                    "HELP": "Print output to console.",
-                    "SYNTAX": [
-                        "-s",
-                        "--show"
-                    ],
-                    "ACTION": "store_true"
-                },
-                {
-                    "DEFAULT": null,
-                    "DEST": "output",
-                    "HELP": "Save Gemini's response to local directory.",
-                    "SYNTAX": [
-                        "-o",
-                        "--output"
-                    ],
-                    "TYPE": "str"
-                }]
+                "ARGUMENTS": [
+                    {
+                        "ACTION": "store_true",
+                        "DEFAULT": false,
+                        "DEST": "render",
+                        "HELP": "Render template without sending to Gemini API.",
+                        "SYNTAX": [
+                            "-e",
+                            "--render"
+                        ]
+                    },{
+                        "DEFAULT": null,
+                        "DEST": "show",
+                        "HELP": "Print output to console.",
+                        "SYNTAX": [
+                            "-s",
+                            "--show"
+                        ],
+                        "ACTION": "store_true"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "output",
+                        "HELP": "Save Gemini's response to local directory.",
+                        "SYNTAX": [
+                            "-o",
+                            "--output"
+                        ],
+                        "TYPE": "str"
+                    }
+                ]
             },
             {
                 "NAME": "summarize",
@@ -156,6 +178,16 @@
                 "HELP": "Generate an RST formatted summary of a local git repository and then send it to `milton` for code review.",
                 "ARGUMENTS": [
                     {
+                        "ACTION": "store_true",
+                        "DEFAULT": false,
+                        "DEST": "render",
+                        "HELP": "Render template without sending to Gemini API.",
+                        "SYNTAX": [
+                            "-e",
+                            "--render"
+                        ]
+                    },
+                    {
                         "DEFAULT": null,
                         "DEST": "directory",
                         "HELP": "The path to the VCS repository to summarize and inject into the pull request review.",
@@ -170,7 +202,7 @@
                         "DEST": "pull",
                         "HELP": "Pull request number to review.",
                         "SYNTAX": [
-                            "-pu",
+                            "-u",
                             "--pull"
                         ],
                         "TYPE": "str"
@@ -180,7 +212,7 @@
                         "DEST": "repository",
                         "HELP": "Name of the remote repository to review.",
                         "SYNTAX": [
-                            "-r",
+                            "-t",
                             "--repository"
                         ],
                         "TYPE": "str"
@@ -210,7 +242,7 @@
                         "DEST": "currentPersona",
                         "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                         "SYNTAX": [
-                            "-pr",
+                            "-r",
                             "--persona"
                         ],
                         "TYPE": "str"
@@ -283,6 +315,7 @@
         "FILES": {
             "CACHE": "cache.json",
             "CONFIG": "config.json",
+            "CONTEXT": "context.json",
             "SUMMARY": "summary.rst",
             "LOG": "elara.log"
         },
@@ -304,6 +337,16 @@
     },
     "PERSONA": {
         "ELARA": {
+            "CONTEXT": {
+                "QUOTATIONS": [
+                    "CIOR_01",
+                    "BADI_01"
+                ],
+                "POEMS": [
+                    "DONN_01"
+                ],
+                "PROOFS": []
+            },
             "FUNCTIONS": [
                 "converse"
             ],
@@ -323,6 +366,11 @@
             }
         },
         "AXIOM": {
+            "CONTEXT": {
+                "QUOTATIONS": [],
+                "POEMS": [],
+                "PROOFS": []
+            },
             "FUNCTIONS": [
                 "analyze"
             ],
@@ -342,6 +390,11 @@
             }
         },
         "MILTON": {
+            "CONTEXT": {
+                "QUOTATIONS": [],
+                "POEMS": [],
+                "PROOFS": []
+            },
             "FUNCTIONS": [
                 "review",
                 "request"
@@ -444,7 +497,6 @@
         "LEVEL": "INFO",
         "SCHEMA": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
-    "VERSION": "1.0",
     "OUTPUT": {
         "PROMPT": "PROMPT: \n\t{content}\n",
         "RESPONSE": "RESPONSE: \n\t{content}\n"
