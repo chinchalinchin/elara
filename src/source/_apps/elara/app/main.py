@@ -27,6 +27,9 @@ import objects.template as template
 import objects.terminal as terminal
 
 class App(typing.TypedDict):
+    """
+    Data structure for managing application objects.
+    """
     ARGUMENTS : argparse.Namespace
     CACHE : cache.Cache
     CONFIG : config.Config
@@ -39,6 +42,14 @@ class App(typing.TypedDict):
     REPO: repo.Repo | None
     TEMPLATES : template.Template
 
+class Output(typing.TypedDict):
+    """
+    Data structure for managing application output
+    """
+    RESPONSE : str
+    PROMPT : str
+    SUMMARY : str | None
+    VCS : str | None
 
 def logger(
     application                         : App,
@@ -80,15 +91,26 @@ def logger(
 
 def output(
     application                         : App,
-    out                                 : dict,
+    out                                 : Output,
     suppress_prompt                     : bool = True
 ):
     """
-    
-    :param arguments:
-    :type arguments: argparse.Namespace
-    :param response:
-    :type response: dict
+    Write output to appropriate location. Output should follow the format,
+
+    .. code-block:: python
+
+        out                             = {
+            "prompt"                    : "words",
+            "response"                  : "words",
+            "summary"                   : "words",
+            "vcs"                       : "words"
+        }
+
+    :param application:
+    :type application: App
+    :param out: application output to be written.
+    :type out: 
+    :
     """
     arg_map                             = vars(application["ARGUMENTS"])
     to_file                             = "output" in arg_map.keys() and arg_map.get("output")
@@ -454,9 +476,12 @@ def main() -> bool:
         )
         return
         
+    out                                 = operations[operation_name](application)
+    typed_out                           = Output(out)
+    
     output(
         application                     = application,
-        out                             = operations[operation_name](application),
+        out                             = typed_out,
         suppress_prompt                 = False
     )
     

@@ -54,6 +54,7 @@ def analyze(app: main.App) -> dict:
 
 def brainstorm(app: main.App) -> dict:
     # TODO: My idea is to create a new function called 'brainstorm' that Valis oversees. My thought is to remove myself entirely from the conversation. Valis would initiatialize the first prompt based on user input (I am thinking the input will be a list of concept words)  and then Valis picks a persona at random and forwards it to them. I would have the personas return structured output that contains their reply and the persona they are passing to. I would let a conversation develop until it reaches a certain length and kill it and return the 'brainstorm' session. I was thinking of then having Valis summarize and extract the salient points that were 'brainstormed'
+    # TODO: need to ensure the brainstorm history doesn't get persisted in individual conversation threads!
     return {}
 def converse(app: main.App) -> dict:
     """
