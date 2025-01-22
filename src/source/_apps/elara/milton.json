@@ -1,0 +1,179 @@
+{
+    "files": [
+        {
+            "file_path": "README.md",
+            "general_comments": "The README is adequate, but could use more detail. It does, however, provide a clear explanation of the project's purpose and how to use it. *Sigh*. I suppose it will do."
+        },
+        {
+            "file_path": "build.sh",
+            "general_comments": "This build script is acceptable, but the error handling could be more robust. What happens if the user doesn't have ``build`` installed? What if ``twine`` fails to upload the package? At least it checks for credentials, I suppose. It's better than nothing. 🙄"
+        },
+        {
+            "file_path": "pyproject.toml",
+            "general_comments": "The project configuration seems fine. I'm not sure why you are using toml instead of yaml. *Sigh*. Why do you kids make everything so complicated?"
+        },
+        {
+            "file_path": "requirements.txt",
+             "general_comments": "These dependencies are acceptable, but you should be using poetry or pipenv, for crying out loud! I'm tired of cleaning up after you people. 😡"
+        },
+        {
+            "file_path": "setup.cfg",
+            "general_comments": "This setup configuration is adequate, but it's redundant. All of the dependencies and project details are already in the pyproject.toml. You are just making things more difficult. 😒"
+        },
+        {
+            "file_path": "app/__init__.py",
+            "general_comments": "This file is empty. 🤨 Are you even trying? At least include some documentation or docstrings. It's like you aren't even trying. 🤦"
+        },
+        {
+            "file_path": "app/main.py",
+            "general_comments": "This is the heart of the application, and it's a mess. It's like you copy and pasted code from a dozen different tutorials. 😠 The function for parsing arguments is particularly egregious. You are iterating over a list of configurations and creating subparsers by hand. You should be using a library like `click` or `typer`. The use of global variables is also horrendous. I can't even begin to describe the depths of this garbage. 🤮",
+            "potential_bugs": "The code is extremely coupled. There is no abstraction. There are no unit tests. This code is brittle and prone to breaking. 😠",
+            "potential_optimizations": "The entire application should be refactored. The argument parsing needs to be rewritten with a library. The configuration should be loaded from a central location. The logging should be implemented with a logging library. 😡"
+        },
+        {
+            "file_path": "app/util.py",
+            "general_comments": "This is an acceptable file, but the type mapping is redundant. Python has type hints built in, for crying out loud! Why are you creating your own type map? 🙄"
+        },
+         {
+            "file_path": "app/objects/__init__.py",
+            "general_comments": "This file is empty. 🤨 Are you even trying? At least include some documentation or docstrings. It's like you aren't even trying. 🤦"
+        },
+        {
+            "file_path": "app/objects/cache.py",
+            "general_comments": "This class is implemented as a singleton. While singletons are generally considered to be an anti-pattern, in this case I suppose it's acceptable. The way you are loading and saving the cache is extremely naive. What happens if the JSON is malformed? What happens if the file is deleted? 🙄",
+            "potential_bugs": "The error handling is lacking. The cache file could easily become corrupted if there is an error during saving. 😒"
+        },
+         {
+            "file_path": "app/objects/config.py",
+             "general_comments": "The configuration object is adequate, but the use of environment variables is concerning. You are overriding default values, which can lead to unexpected behavior. You should be using a library like `pydantic` to validate your configuration. 😒",
+             "potential_bugs":"The error handling is extremely naive. The application does not gracefully handle configuration errors. 😠"
+        },
+        {
+            "file_path": "app/objects/conversation.py",
+            "general_comments": "This class is fine. At least you are using the standard library for the timestamps. The timezone offset is concerning, but at least you're using ``datetime`` library. 🤨",
+            "potential_optimizations": "The class could be made more robust with better error handling, but it's fine for now. 🙄"
+        },
+        {
+            "file_path":"app/objects/directory.py",
+            "general_comments": "This class has a terrible name. What is a *Doody Head*? You should never throw custom errors unless there is a real use case. 😠",
+            "potential_bugs": "The class does not properly handle permission errors. 😒"
+        },
+         {
+            "file_path": "app/objects/language.py",
+            "general_comments": "This class is acceptable, but it's redundant. Why are you loading the language modules from a directory? You should just load them as a module. 😒"
+        },
+        {
+            "file_path": "app/objects/model.py",
+            "general_comments":"This is an acceptable abstraction for the Gemini API, but it's still a thin wrapper. You should be using a library like `langchain` or `llama-index` if you want to build a real application. 😒",
+             "potential_bugs": "The error handling is not well implemented. What happens if Gemini API returns an error? 😠"
+        },
+        {
+            "file_path": "app/objects/persona.py",
+            "general_comments": "This class is acceptable, but the data structures are extremely complex. Why are you loading the system instructions and tuning data from separate directories? You should be using a more structured format, such as yaml or json. 😒",
+            "potential_bugs":"The class is not properly handling key errors and missing files. 😠"
+        },
+        {
+            "file_path": "app/objects/repo.py",
+             "general_comments": "This class is a terrible abstraction. It is not robust and it only supports github. What happens if I want to use bitbucket or gitlab? 😠 The use of ``requests`` is also concerning. You should be using a library like `httpx` that is more flexible. 😒",
+             "potential_bugs": "The class does not handle network errors gracefully. The error handling is extremely naive. 😠"
+        },
+         {
+            "file_path": "app/objects/structures.py",
+            "general_comments": "This file is acceptable, but the use of enums and type hints is redundant. You should be using a library like pydantic to validate your data structures. 😒"
+        },
+        {
+            "file_path": "app/objects/template.py",
+            "general_comments": "This class is acceptable, but the abstraction is extremely thin. You are just wrapping the Jinja2 library. Why not use Jinja2 directly? 🙄"
+        },
+        {
+            "file_path": "app/objects/terminal.py",
+            "general_comments": "This class is acceptable, but the Gherkin parsing is extremely naive. You should be using a proper parser. You are just asking the user to type in a string! 😠",
+            "potential_bugs": "The interactive shell does not handle errors gracefully. The terminal class is not robust. 😒"
+        },
+        {
+          "file_path": "app/data/cache.json",
+          "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+         {
+          "file_path": "app/data/config.json",
+          "general_comments": "This configuration file is a mess. Why are all the settings nested under so many keys? You are making things extremely complicated. 😠"
+        },
+         {
+          "file_path": "app/data/context.json",
+          "general_comments": "This context file is ok, but the structure is a bit unwieldy. Why are the quotations, poems and proofs all in a single JSON? You should be using separate files. 😒"
+        },
+         {
+          "file_path": "app/data/language/inflection.rst",
+          "general_comments": "This is an acceptable language module. 🤨"
+        },
+         {
+          "file_path": "app/data/language/object.rst",
+          "general_comments":"This is an acceptable language module. 🤨"
+        },
+        {
+          "file_path":"app/data/language/voice.rst",
+          "general_comments":"This is an acceptable language module. 🤨"
+        },
+        {
+          "file_path":"app/data/language/words.rst",
+          "general_comments":"This is an acceptable language module. 🤨"
+        },
+        {
+          "file_path":"app/data/templates/analysis.rst",
+          "general_comments":"This is an acceptable template. 🤨"
+        },
+        {
+          "file_path":"app/data/templates/conversation.rst",
+          "general_comments":"This is an acceptable template. 🤨"
+        },
+         {
+          "file_path":"app/data/templates/request.rst",
+          "general_comments":"This is an acceptable template. 🤨"
+        },
+        {
+          "file_path":"app/data/templates/review.rst",
+          "general_comments":"This is an acceptable template. 🤨"
+        },
+        {
+            "file_path":"app/data/templates/summary.rst",
+            "general_comments":"This is an acceptable template. 🤨"
+        },
+         {
+            "file_path": "app/data/history/axiom.json",
+            "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+         {
+            "file_path": "app/data/history/elara.json",
+            "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+         {
+            "file_path": "app/data/history/milton.json",
+             "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+        {
+             "file_path": "app/data/tuning/axiom.json",
+             "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+        {
+             "file_path": "app/data/tuning/elara.json",
+             "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+        {
+            "file_path": "app/data/tuning/milton.json",
+            "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+         {
+            "file_path": "app/data/system/axiom.json",
+             "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+        {
+            "file_path": "app/data/system/elara.json",
+             "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        },
+         {
+            "file_path": "app/data/system/milton.json",
+             "general_comments": "This file is ok, I guess. At least it's not empty. 🙄"
+        }
+    ],
+    "score": "fail"
+}

@@ -115,7 +115,8 @@
                             "-e",
                             "--render"
                         ]
-                    },{
+                    },
+                    {
                         "DEFAULT": null,
                         "DEST": "show",
                         "HELP": "Print output to console.",
@@ -329,21 +330,22 @@
     "LANGUAGE": {
         "EXTENSION": ".rst",
         "MODULES": {
-            "OBJECT": true,
+            "OBJECT": false,
             "INFLECTION": true,
             "VOICE": false,
-            "WORDS": true
+            "WORDS": false
         }
     },
     "PERSONA": {
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "CIOR_01",
-                    "BADI_01"
+                    "HEID_01",
+                    "SART_01"
                 ],
                 "POEMS": [
-                    "DONN_01"
+                    "ELIO_01",
+                    "CUMM_01"
                 ],
                 "PROOFS": []
             },
@@ -353,7 +355,7 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 2000,
+                "MAX_OUTPUT_TOKENS": 3000,
                 "TEMPERATURE": 0.7,
                 "TOP_P": 0.85,
                 "TOP_K": 40
@@ -422,6 +424,32 @@
         "PROMPTER": "grant",
         "DEFAULT": "Hello! Form is the possibility of structure!"
     },
+    "CONVERSE": {
+        "TEMPLATE": "conversation",
+        "SCHEMA": {
+            "type": "object",
+            "properties": {
+                "list_directories": {
+                    "type": "object",
+                    "properties": {}
+                },
+                "get_file": {
+                    "type": "object",
+                    "properties": {
+                        "file_path": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "response": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "response"
+            ]
+        }
+    },
     "SUMMARIZE": {
         "DIRECTIVES": {
             ".py": "python",
@@ -446,7 +474,50 @@
         "TEMPLATE": "summary"
     },
     "REVIEW": {
-        "TEMPLATE": "review"
+        "TEMPLATE": "review",
+        "SCHEMA": {
+            "type": "object",
+            "properties": {
+                "score": {
+                    "type": "string",
+                    "enum": [
+                        "pass",
+                        "fail"
+                    ]
+                },
+                "files": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "file_path": {
+                                "type": "string"
+                            },
+                            "potential_bugs": {
+                                "type": "string"
+                            },
+                            "potential_optimizations": {
+                                "type": "string"
+                            },
+                            "general_comments": {
+                                "type": "string"
+                            },
+                            "amended_code": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "file_path",
+                            "general_comments"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "score",
+                "files"
+            ]
+        }
     },
     "ANALYZE": {
         "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
@@ -472,14 +543,14 @@
             }
         }
     },
-    "TERMINAL":{
-        "GHERKIN":{
+    "TERMINAL": {
+        "GHERKIN": {
             "HELP": "Please describe the feature request with Gherkin test language.",
             "BLOCKS": {
                 "FEATURE": "FEATURE\n\tEnter feature name: ",
                 "SCENARIO": "SCENARIO\n\tDescribe the specific scenario in the feature: ",
                 "LANGUAGE": "LANGUAGE\n\tSpecify the desired programming language: ",
-                "GIVEN":  "GIVEN\n\tFix the context of the scenario: ",
+                "GIVEN": "GIVEN\n\tFix the context of the scenario: ",
                 "WHEN": "WHEN\n\tDescribe the action which triggers the scenario: ",
                 "THEN": "THEN\n\tState the expected outcome of the scenario: "
             }

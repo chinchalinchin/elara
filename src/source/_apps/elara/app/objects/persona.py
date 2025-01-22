@@ -72,7 +72,8 @@ class Persona:
             tune_dir, 
             tune_ext, 
             sys_dir, 
-            sys_ext)
+            sys_ext
+        )
 
     def __new__(
         self,
@@ -90,7 +91,7 @@ class Persona:
         return self.inst
     
     @staticmethod
-    def _lower(d):
+    def _lower(d: dict) -> dict:
         return { k.lower(): v for k, v in d.items() }
     
     def _load(
@@ -101,7 +102,7 @@ class Persona:
         tune_ext : str,
         sys_dir : str,
         sys_ext : str,
-    ):
+    ) -> None:
         """
         Load *Personas* into runtime.
 
@@ -164,7 +165,8 @@ class Persona:
                             context[c_key.upper()][c_index]
                         )
                     )
-
+        return None
+    
     def vars(
         self, 
         persona

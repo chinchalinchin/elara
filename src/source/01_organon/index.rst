@@ -9,5 +9,6 @@ Organon
   :caption: Contents:
 
   00_cantor
-  01_tarski
-  02_zalta
+  01_peano
+  02_tarski
+  03_zalta

@@ -105,7 +105,22 @@ The following section contains a summary of a local directory on my computer. It
 
 {{ summary }}
 {%- endif %}
+{% if command_results is defined %}
+.. _command_results:
 
+================
+Command Results
+================
+
+{% for result in command_results %}
+.. admonition:: {{ result.command }}
+
+    .. code-block::
+
+        {{ result.output | replace('\n', '\n    ') }}
+
+{% endfor %}
+{% endif %}
 .. _history:
 
 History

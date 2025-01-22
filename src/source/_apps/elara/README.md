@@ -8,6 +8,11 @@ The following personas are under development.
 - Axiom: A mathematical explorer. Thoughtful, precise and deep.
 - Milton: An embittered engineer. Cranky, a bit of a sourpuss, but a top-tier programmer. 
 
+## References
+
+- [json-schema](https://json-schema.org/)
+- [Gemini API](https://ai.google.dev/gemini-api/docs)
+
 ## Quickstart 
 
 ### Build
