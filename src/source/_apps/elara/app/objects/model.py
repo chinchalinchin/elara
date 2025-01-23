@@ -6,6 +6,7 @@ Object for managing Gemini Model. Essentially, a fancy wrapper around Google's G
 """
 # Standard Library Modulse
 import logging
+import json
 
 # External Modules 
 import google.generativeai as genai
@@ -153,11 +154,11 @@ class Model:
         model_name : str = None,
     ) -> str:
         """
-        
+
         """
         try:
             if model_name is not None:
-                return self._get(
+                res = self._get(
                     model_name = model_name,
                     system_instruction = system_instruction
                 ).generate_content(
@@ -165,16 +166,21 @@ class Model:
                     tools = tools,
                     generation_config = generation_config,
                     safety_settings = safety_settings
-                ).text
-            return self._get(
-                model_name = self.default_model,
-                system_instruction = system_instruction
-            ).generate_content(
-                contents = prompt,
-                tools = tools,
-                generation_config = generation_config,
-                safety_settings = safety_settings
-            ).text
+                )
+            else:
+                res = self._get(
+                    model_name = self.default_model,
+                    system_instruction = system_instruction
+                ).generate_content(
+                    contents = prompt,
+                    tools = tools,
+                    generation_config = generation_config,
+                    safety_settings = safety_settings
+                )
         except Exception as e:
             logger.error(f"Error generating content: {e}")
             raise
+        
+        if "response_schema" in generation_config.keys():
+            return json.loads(res.text)
+        return res.text

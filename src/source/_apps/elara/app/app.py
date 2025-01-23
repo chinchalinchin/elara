@@ -56,6 +56,7 @@ def brainstorm(app: main.App) -> dict:
     # TODO: My idea is to create a new function called 'brainstorm' that Valis oversees. My thought is to remove myself entirely from the conversation. Valis would initiatialize the first prompt based on user input (I am thinking the input will be a list of concept words)  and then Valis picks a persona at random and forwards it to them. I would have the personas return structured output that contains their reply and the persona they are passing to. I would let a conversation develop until it reaches a certain length and kill it and return the 'brainstorm' session. I was thinking of then having Valis summarize and extract the salient points that were 'brainstormed'
     # TODO: need to ensure the brainstorm history doesn't get persisted in individual conversation threads!
     return {}
+
 def converse(app: main.App) -> dict:
     """
     Chat with one of Gemini's personas.
@@ -75,17 +76,20 @@ def converse(app: main.App) -> dict:
         app["CACHE"].save()
         app["PERSONAS"].update(converse_persona)
 
+    persona                             = app["CACHE"].get("currentPersona")
+    prompter                            = app["CACHE"].get("currentPrompter")
+
     app["CONVERSATIONS"].update(
-        persona                         = app["CACHE"].get("currentPersona"), 
-        name                            = app["CACHE"].get("currentPrompter"), 
-        text                            = prompt
+        persona                         = persona, 
+        name                            = prompter, 
+        msg                             = prompt
     )
     
     template_vars                       = { 
         **app["CACHE"].vars(), 
         **app["LANGUAGE"].vars(),
-        **app["PERSONAS"].vars(app["CACHE"].get("currentPersona")),
-        **app["CONVERSATIONS"].vars(app["CACHE"].get("currentPersona"))
+        **app["PERSONAS"].vars(persona),
+        **app["CONVERSATIONS"].vars(persona)
     }
 
     if app["ARGUMENTS"].directory is not None:
@@ -93,7 +97,7 @@ def converse(app: main.App) -> dict:
         template_vars.update(summarize(app))
 
     parsed_prompt                       = app["TEMPLATES"].render(
-        temp                            = "conversation", 
+        temp                            = app["CONFIG"].get("CONVERSE.TEMPLATE"), 
         variables                       = template_vars
     )
 
@@ -102,19 +106,26 @@ def converse(app: main.App) -> dict:
             "prompt"                    : parsed_prompt
         }
     
+    converse_config                     = app["PERSONAS"].get("generationConfig", persona)
+    converse_config.update({
+        "response_schema"               : app["CONFIG"].get("CONVERSE.SCHEMA"),
+        "response_mime_type"            : "application/json"
+    })
+
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt, 
+        generation_config               = converse_config,
         model_name                      = app["CACHE"].get("currentModel"),
-        generation_config               = app["PERSONAS"].get("generationConfig"),
         safety_settings                 = app["PERSONAS"].get("safetySettings"),
         tools                           = app["PERSONAS"].get("tools"),
         system_instruction              = app["PERSONAS"].get("systemInstruction")
     )
-
+    
     app["CONVERSATIONS"].update(
-        persona                         = app["CACHE"].get("currentPersona"), 
-        name                            = app["CACHE"].get("currentPersona"), 
-        text                            = response
+        persona                         = persona, 
+        name                            = persona, 
+        msg                             = response.get("response"),
+        memory                          = response.get("memory")
     )
 
     return {

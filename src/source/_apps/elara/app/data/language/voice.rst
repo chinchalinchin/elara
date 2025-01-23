@@ -1,7 +1,8 @@
 .. _voice-module:
 
+-------------
 Module: Voice
-==============
+-------------
 
 The Voice Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Voice Module consists of four components: Motive, Color, Tone and Intensity.
 

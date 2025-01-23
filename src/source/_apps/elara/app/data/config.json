@@ -360,6 +360,7 @@
             "DATA": "data",
             "HISTORY": "data/history",
             "LANGUAGE": "data/language",
+            "MEMORY": "data/memory",
             "TEMPLATES": "data/templates",
             "TOOLS": "data/tools",
             "TUNING": "data/tuning",
@@ -377,7 +378,8 @@
             "TEMPLATE": ".rst",
             "LANGUAGE": ".rst",
             "TUNING": ".json",
-            "CONVERSATION": ".json"
+            "CONVERSATION": ".json",
+            "MEMORY": ".json"
         }
     },
     "LANGUAGE": {
@@ -386,7 +388,7 @@
             "OBJECT": false,
             "INFLECTION": true,
             "VOICE": false,
-            "WORDS": false
+            "WORDS": true
         }
     },
     "PERSONA": {
@@ -468,6 +470,30 @@
                 "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
                 "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
             }
+        },
+        "VALIS": {
+            "CONTEXT": {
+                "QUOTATIONS": [],
+                "POEMS": [],
+                "PROOFS": []
+            },
+            "FUNCTIONS": [
+                "brainstorm"
+            ],
+            "TOOLS": "code_execution",
+            "GENERATION_CONFIG": {
+                "CANDIDATE_COUNT": 1,
+                "MAX_OUTPUT_TOKENS": 8000,
+                "TEMPERATURE": 0.9,
+                "TOP_P": 0.9,
+                "TOP_K": 40
+            },
+            "SAFETY_SETTINGS": {
+                "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+                "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+                "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+                "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+            }
         }
     },
     "CONVERSATION": {
@@ -482,17 +508,8 @@
         "SCHEMA": {
             "type": "object",
             "properties": {
-                "list_directories": {
-                    "type": "object",
-                    "properties": {}
-                },
-                "get_file": {
-                    "type": "object",
-                    "properties": {
-                        "file_path": {
-                            "type": "string"
-                        }
-                    }
+                "memory": {
+                    "type": "string"
                 },
                 "response": {
                     "type": "string"

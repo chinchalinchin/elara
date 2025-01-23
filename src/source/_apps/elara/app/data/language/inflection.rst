@@ -1,7 +1,8 @@
 .. _inflection-module:
 
+------------------
 Module: Inflection
-==================
+------------------
 
 The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: Text Inflections and Emoji Reflections.
 

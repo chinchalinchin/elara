@@ -380,10 +380,14 @@ def init(
     ################################################################################
     application["LOGGER"].debug("Initialize chat histories...")
     hist_rel_path                       = application["CONFIG"].get("TREE.DIRECTORIES.HISTORY")
+    mem_rel_path                        = application["CONFIG"].get("TREE.DIRECTORIES.MEMORY")
     hist_dir                            = os.path.join(app_dir, hist_rel_path)
+    mem_dir                             = os.path.join(app_dir, mem_rel_path)
     application["CONVERSATIONS"]        = conversation.Conversation(
-        directory                       = hist_dir,
-        extension                       = application["CONFIG"].get("TREE.EXTENSIONS.CONVERSATION"),
+        hist_dir                        = hist_dir,
+        hist_ext                        = application["CONFIG"].get("TREE.EXTENSIONS.CONVERSATION"),
+        mem_dir                         = mem_dir,
+        mem_ext                         = application["CONFIG"].get("TREE.EXTENSIONS.MEMORY"),
         tz_offset                       = application["CONFIG"].get("CONVERSATION.TIMEZONE_OFFSET")
     )
 
