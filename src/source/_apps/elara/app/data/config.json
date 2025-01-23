@@ -410,10 +410,10 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 3000,
-                "TEMPERATURE": 0.7,
-                "TOP_P": 0.85,
-                "TOP_K": 40
+                "MAX_OUTPUT_TOKENS": 2048,
+                "TEMPERATURE": 0.9,
+                "TOP_P": 0.95,
+                "TOP_K": 60
             },
             "SAFETY_SETTINGS": {
                 "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
@@ -508,6 +508,9 @@
         "SCHEMA": {
             "type": "object",
             "properties": {
+                "feedback": {
+                    "type": "string"
+                },
                 "memory": {
                     "type": "string"
                 },

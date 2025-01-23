@@ -82,7 +82,8 @@ def converse(app: main.App) -> dict:
     app["CONVERSATIONS"].update(
         persona                         = persona, 
         name                            = prompter, 
-        msg                             = prompt
+        msg                             = prompt,
+        persist                         = not app["ARGUMENTS"].render
     )
     
     template_vars                       = { 
@@ -125,7 +126,8 @@ def converse(app: main.App) -> dict:
         persona                         = persona, 
         name                            = persona, 
         msg                             = response.get("response"),
-        memory                          = response.get("memory")
+        memory                          = response.get("memory"),
+        feedback                        = response.get("feedback")
     )
 
     return {

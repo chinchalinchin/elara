@@ -183,7 +183,9 @@ class Conversation:
         persona : str, 
         name : str, 
         msg : str,
-        memory: str | None = None
+        memory: str | None = None,
+        feedback: str | None = None,
+        persist: bool = True
     ) -> dict:
         """
         Update Conversation history and CACHE to file.
@@ -202,7 +204,9 @@ class Conversation:
         if persona not in self.convo.keys():
             self.convo[persona] = {}
             self.convo[persona]["history"] = []
-            self.convo[persona]["memories"] = []
+            self.convo[persona]["memories"] = {}
+            self.convo[persona]["memories"]["sequence"] = []
+            self.convo[persona]["memories"]["feedback"] = None
 
         self.convo[persona]["history"].append({ 
             "name": name,
@@ -211,11 +215,16 @@ class Conversation:
         })
         
         if memory is not None:
-            self.convo[persona]["memories"].append({
+            self.convo[persona]["memories"]["sequence"].append({
                 "memory": memory
             })
 
-        self._persist(persona)
+        if feedback is not None:
+            self.convo[persona]["memories"]["feedback"] = feedback
+
+        if persist:
+            self._persist(persona)
+
         return self.convo[persona]
 
     def vars(
@@ -232,7 +241,7 @@ class Conversation:
             logger.error(f"Persona {persona} conversation history not found")
             return {
                 "history": [],
-                "memories": []
+                "memories": {}
             }
         
         return {
