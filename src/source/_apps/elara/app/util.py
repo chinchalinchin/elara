@@ -66,3 +66,24 @@ def validate(
         return value
     
     return None
+
+def merge(
+    dict1: dict, 
+    dict2: dict
+) -> dict:
+    """
+    Recursively merges two dictionaries using the union operator (|).
+
+    :param dict_1: First dictionary to merge.
+    :type dict_1: dict 
+    :param dict_2: Second dictionary to merge.
+    :type dict_2: dict 
+    """
+    if not (isinstance(dict1, dict) and isinstance(dict2, dict)):
+        return dict2  # Or handle as an error, depending on your needs
+
+    result = dict1 | dict2
+    for key in result.keys():
+        if key in dict1 and key in dict2:
+            result[key] = merge(dict1[key], dict2[key])
+    return result

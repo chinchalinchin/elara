@@ -180,9 +180,9 @@ class Model:
         except Exception as e:
             logger.error(f"Error generating content: {e}")
             raise
-        
+
         print(res)
-        
+           
         if "response_schema" in generation_config.keys():
             return json.loads(res.text)
         return res.text

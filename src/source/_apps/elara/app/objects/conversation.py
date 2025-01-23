@@ -9,6 +9,10 @@ import datetime
 import json
 import logging
 import os
+import typing
+
+# Application Modules
+import util 
 
 logger = logging.getLogger(__name__)
 
@@ -66,58 +70,66 @@ class Conversation:
             ).__new__(self)
         return self.inst
     
+    @staticmethod
+    def _process(
+        dir : str, 
+        ext : str, 
+        prop: str,
+        default : typing.Any,
+        temp : str = "_new"
+    ) -> dict:
+        raw = { }
+        for root, _, files in os.walk(dir):
+            for file in files:
+                persona = os.path.splitext(file)[0]
+                ext = os.path.splitext(file)[1]
+
+                if ext != ext or persona == temp:
+                    continue
+
+                persona = os.path.splitext(file)[0]
+                file_path = os.path.join(root, file)
+                raw[persona] = { }
+
+                try:
+                    with open(file_path, "r") as f:
+                        content = f.read()
+                    if content:
+                        payload  = json.loads(content)
+                    else: 
+                        payload = { "payload": default }
+
+                    raw[persona][prop] = payload["payload"]
+                except (FileNotFoundError, json.JSONDecodeError) as e:
+                    logger.error(f"Error loading JSON data: {e}")
+                    raw[persona][prop] = default
+                except Exception as e:
+                    logger.error(f"An unexpected error occurred while loading from {file_path}: {e}")
+                    raw[persona][prop] = default
+        
+        return raw
+
     def _load(self):
         """
         Load Conversation history from file.
         """
         
-        for root, _, files in os.walk(self.hist_dir):
-            for file in files:
-                if os.path.splitext(file)[1] != self.hist_ext:
-                    continue
-
-                persona = os.path.splitext(file)[0]
-                file_path = os.path.join(root, file)
-                self.convo[persona] = { }
-
-                try:
-                    with open(file_path, "r") as f:
-                        content = f.read()
-                    if content:
-                        payload  = json.loads(content)
-                    else: 
-                        payload = { "payload": [] }
-
-                    self.convo[persona]["history"] = payload["payload"]
-                except (FileNotFoundError, json.JSONDecodeError) as e:
-                    logger.error(f"Error loading conversation history: {e}")
-                    self.convo[persona]["history"] = []
-                except Exception as e:
-                    logger.error(f"An unexpected error occurred while loading conversation history from {file_path}: {e}")
-                    self.convo[persona]["history"] = []
-        
-        for root, _, files in os.walk(self.mem_dir):
-            for file in files:
-                if os.path.splitext(file)[1] != self.mem_ext:
-                    continue
-
-                persona = os.path.splitext(file)[0]
-                file_path = os.path.join(root, file)
-                
-                try:
-                    with open(file_path, "r") as f:
-                        content = f.read()
-                    if content:
-                        payload  = json.loads(content)
-                    else: 
-                        payload = { "payload": [] }
-                    self.convo[persona]["memories"] = payload["payload"]
-                except (FileNotFoundError, json.JSONDecodeError) as e:
-                    logger.error(f"Error loading memories: {e}")
-                    self.convo[persona]["memories"] = []
-                except Exception as e:
-                    logger.error(f"An unexpected error occurred while memories froms {file_path}: {e}")
-                    self.convo[persona]["memories"] = []
+        history = self._process(
+            dir = self.hist_dir, 
+            ext = self.hist_ext,
+            prop = "history",
+            default = [ ]
+        )
+        memories = self._process(
+            dir = self.mem_dir, 
+            ext = self.mem_ext,
+            prop = "memories",
+            default = {
+                "sequence": [],
+                "feedback": None
+            } 
+        )
+        self.convo = util.merge(history, memories)
 
     def _persist(
         self, 

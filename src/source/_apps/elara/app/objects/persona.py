@@ -7,6 +7,12 @@ Object for managing Persona initialization and data.
 # Standard Library Modules
 import os
 import json
+import logging 
+
+# Application Modules
+import util
+
+logger = logging.getLogger(__name__)
 
 class Persona:
     current = None
@@ -94,6 +100,46 @@ class Persona:
     def _lower(d: dict) -> dict:
         return { k.lower(): v for k, v in d.items() }
     
+    @staticmethod
+    def _process(
+        dir : str, 
+        ext : str,
+        prop : str,
+        default : str,
+        temp : str = "_new"
+    ):
+        """
+        """
+        raw = {}
+        for root, _, files in os.walk(dir):
+            for file in files:
+                persona = os.path.splitext(file)[0]
+                ext = os.path.splitext(file)[1]
+
+                if ext !=  ext or persona == temp:
+                    continue
+
+                file_path = os.path.join(root, file)
+                raw[persona] = { }
+
+                try:
+                    with open(file_path, "r") as f:
+                        content = f.read()
+                    if content:
+                        payload  = json.loads(content)
+                    else: 
+                        payload = { "payload": default }
+                    raw[persona][prop] = payload["payload"]
+
+                except (FileNotFoundError, json.JSONDecodeError) as e:
+                    logger.error(f"Error loading JSON data: {e}")
+                    raw[persona][prop] = default
+                except Exception as e:
+                    logger.error(f"An unexpected error occurred while loading from {file_path}: {e}")
+                    raw[persona][prop] = default
+        return raw
+
+                
     def _load(
         self, 
         config : dict,
@@ -117,32 +163,20 @@ class Persona:
         :param current: Persona to initialize
         :type current: str
         """
-        for root, _, files in os.walk(tune_dir):
-            for file in files:
-                if os.path.splitext(file)[1] !=  tune_ext:
-                    continue
+        tuning = self._process(
+            dir = tune_dir, 
+            ext = tune_ext,
+            prop = "tuningData",
+            default = []
+        )
+        system = self._process(
+            dir = sys_dir, 
+            ext = sys_ext,
+            prop = "systemInstruction",
+            default = []
+        )
 
-                persona = os.path.splitext(file)[0]
-                file_path = os.path.join(root, file)
-
-                with open(file_path, "r") as f:
-                    payload  = json.load(f)
-
-                self.personas[persona] = {}
-                self.personas[persona]["tuningData"] = payload["payload"]
-    
-        for root, _, files in os.walk(sys_dir):
-            for file in files:
-                if os.path.splitext(file)[1] !=  sys_ext:
-                    continue
-
-                persona = os.path.splitext(file)[0]
-                file_path = os.path.join(root, file)
-
-                with open(file_path, "r") as f:
-                    payload  = json.load(f)
-
-                self.personas[persona]["systemInstruction"] = payload["payload"]
+        self.personas = util.merge(tuning, system)
 
         with open(context_file, "r") as f: 
             context = json.load(f)
