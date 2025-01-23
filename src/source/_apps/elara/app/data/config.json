@@ -388,18 +388,16 @@
             "OBJECT": false,
             "INFLECTION": true,
             "VOICE": false,
-            "WORDS": true
+            "WORDS": false
         }
     },
     "PERSONA": {
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "HEID_01",
                     "SART_01"
                 ],
                 "POEMS": [
-                    "ELIO_01",
                     "CUMM_01"
                 ],
                 "PROOFS": []
@@ -410,10 +408,10 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 2048,
+                "MAX_OUTPUT_TOKENS": 8000,
                 "TEMPERATURE": 0.9,
                 "TOP_P": 0.95,
-                "TOP_K": 60
+                "TOP_K": 30
             },
             "SAFETY_SETTINGS": {
                 "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
@@ -496,15 +494,10 @@
             }
         }
     },
-    "CONVERSATION": {
-        "TIMEZONE_OFFSET": -5
-    },
-    "PROMPT": {
-        "PROMPTER": "grant",
-        "DEFAULT": "Hello! Form is the possibility of structure!"
-    },
     "CONVERSE": {
-        "TEMPLATE": "conversation",
+        "CONFIG": {
+            "TIMEZONE_OFFSET": -5
+        },
         "SCHEMA": {
             "type": "object",
             "properties": {
@@ -521,32 +514,36 @@
             "required": [
                 "response"
             ]
-        }
+        },
+        "MIME": "application/json",
+        "TEMPLATE": "conversation"
     },
     "BRAINSTORM": {
         "TEMPLATE": "conversation"
     },
     "SUMMARIZE": {
-        "DIRECTIVES": {
-            ".py": "python",
-            ".sh": "bash",
-            ".toml": "toml",
-            ".cfg": "toml",
-            ".json": "json",
-            ".html": "html",
-            ".js": "js"
+        "CONFIG": {
+            "DIRECTIVES": {
+                ".py": "python",
+                ".sh": "bash",
+                ".toml": "toml",
+                ".cfg": "toml",
+                ".json": "json",
+                ".html": "html",
+                ".js": "js"
+            },
+            "INCLUDES": [
+                ".rst",
+                ".md",
+                ".ini",
+                ".txt"
+            ],
+            "EXCLUDES": [
+                ".pyc",
+                ".zip",
+                ".gz"
+            ]
         },
-        "INCLUDES": [
-            ".rst",
-            ".md",
-            ".ini",
-            ".txt"
-        ],
-        "EXCLUDES": [
-            ".pyc",
-            ".zip",
-            ".gz"
-        ],
         "TEMPLATE": "summary"
     },
     "REVIEW": {
@@ -593,7 +590,8 @@
                 "score",
                 "files"
             ]
-        }
+        },
+        "MIME": "application/json"
     },
     "ANALYZE": {
         "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"

@@ -57,6 +57,7 @@ def brainstorm(app: main.App) -> dict:
     # TODO: need to ensure the brainstorm history doesn't get persisted in individual conversation threads!
     return {}
 
+
 def converse(app: main.App) -> dict:
     """
     Chat with one of Gemini's personas.
@@ -107,15 +108,15 @@ def converse(app: main.App) -> dict:
             "prompt"                    : parsed_prompt
         }
     
-    converse_config                     = app["PERSONAS"].get("generationConfig", persona)
-    converse_config.update({
+    response_config                     = app["PERSONAS"].get("generationConfig", persona)
+    response_config.update({
         "response_schema"               : app["CONFIG"].get("CONVERSE.SCHEMA"),
-        "response_mime_type"            : "application/json"
+        "response_mime_type"            : app["CONFIG"].get("CONVERSE.MIME")
     })
 
     response                            = app["MODEL"].respond(
         prompt                          = parsed_prompt, 
-        generation_config               = converse_config,
+        generation_config               = response_config,
         model_name                      = app["CACHE"].get("currentModel"),
         safety_settings                 = app["PERSONAS"].get("safetySettings"),
         tools                           = app["PERSONAS"].get("tools"),
@@ -206,18 +207,18 @@ def review(app : main.App) -> dict:
             "prompt"                    : review_prompt
         }
     
-    review_config                       = app["PERSONAS"].get("generationConfig", persona)
+    response_config                     = app["PERSONAS"].get("generationConfig", persona)
     # @DEVELOPMENT
     #   HEY MILTON! We're testing structured output for your pull request reviews.
     #   What do you think!? Pretty neat, huh!?
-    review_config.update({
+    response_config.update({
         "response_schema"               : app["CONFIG"].get("REVIEW.SCHEMA"),
-        "response_mime_type"            : "application/json"
+        "response_mime_type"            : app["CONFIG"].get("REVIEW.MIME")
     })
 
     model_res                           = app["MODEL"].respond(
         prompt                          = review_prompt,
-        generation_config               = review_config,
+        generation_config               = response_config,
         model_name                      = app["CACHE"].get("currentModel"),
         safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
         tools                           = app["PERSONAS"].get("tools", persona),

@@ -29,8 +29,8 @@ class Conversation:
     """Chat history"""
     inst = None
     """Singleton instance"""
-    tz_offset = None
-    """Timezone offset"""
+    converse_config = {}
+    """Conversation configuration."""
 
     def __init__(
         self, 
@@ -38,7 +38,7 @@ class Conversation:
         mem_dir: str,
         hist_ext: str,
         mem_ext: str,
-        tz_offset : str,
+        converse_config : dict,
     ):
         """
         Initialize Conversation object.
@@ -52,7 +52,7 @@ class Conversation:
         self.hist_ext = hist_ext
         self.mem_dir = mem_dir
         self.mem_ext = mem_ext
-        self.tz_offset = tz_offset
+        self.converse_config = converse_config
         self._load()
 
     def __new__(
@@ -170,7 +170,7 @@ class Conversation:
         now = datetime.datetime.now(
             datetime.timezone(
                 datetime.timedelta(
-                    hours=self.tz_offset
+                    hours=self.converse_config["TIMEZONE_OFFSET"]
                 )
             )
         ) 

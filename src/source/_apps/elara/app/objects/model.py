@@ -163,7 +163,15 @@ class Model:
                     system_instruction = system_instruction
                 ).generate_content(
                     contents = prompt,
-                    tools = tools,
+                    # TODO: there is an undocumented interaction
+                    #       model versions, response schemas and 
+                    #       supported tools.
+                    # 
+                    #       For example, models/gemini-exp-1206 does not 
+                    #       support `code_execution` tool if using a 
+                    #       a structured output schema!
+                    #   
+                    # tools = tools,
                     generation_config = generation_config,
                     safety_settings = safety_settings
                 )
@@ -180,8 +188,6 @@ class Model:
         except Exception as e:
             logger.error(f"Error generating content: {e}")
             raise
-
-        print(res)
            
         if "response_schema" in generation_config.keys():
             return json.loads(res.text)

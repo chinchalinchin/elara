@@ -388,7 +388,7 @@ def init(
         hist_ext                        = application["CONFIG"].get("TREE.EXTENSIONS.CONVERSATION"),
         mem_dir                         = mem_dir,
         mem_ext                         = application["CONFIG"].get("TREE.EXTENSIONS.MEMORY"),
-        tz_offset                       = application["CONFIG"].get("CONVERSATION.TIMEZONE_OFFSET")
+        converse_config                 = application["CONFIG"].get("CONVERSE.CONFIG")
     )
 
     ################################################################################
@@ -423,7 +423,7 @@ def init(
         application["DIRECTORY"]        = directory.Directory(
             directory                   = application["ARGUMENTS"].directory,
             summary_file                = application["CONFIG"].get("TREE.FILES.SUMMARY"),
-            summary_config              = application["CONFIG"].get("SUMMARIZE")
+            summary_config              = application["CONFIG"].get("SUMMARIZE.CONFIG")
         )
 
     application["LOGGER"].debug("Application initialized!")
