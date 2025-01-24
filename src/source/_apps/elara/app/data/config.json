@@ -395,9 +395,10 @@
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "SART_01"
+                    "CIOR_01"
                 ],
                 "POEMS": [
+                    "POPE_01",
                     "CUMM_01"
                 ],
                 "PROOFS": []
