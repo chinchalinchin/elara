@@ -80,7 +80,7 @@ class Terminal:
             if prompt == self.config["CONVERSATION"]["KILL"]:
                 break
 
-            app["ARGUMENTS"].prompt = prompt
+            app.arguments.prompt = prompt
             out = callable(app)
             printer(app, out)
             

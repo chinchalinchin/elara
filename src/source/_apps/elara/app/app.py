@@ -10,49 +10,55 @@ import dataclasses
 import logging 
 
 # Application Modules
-import objects.cache as cache
-import objects.config as config
-import objects.conversation as conversation
-import objects.directory as directory
-import objects.language as language
-import objects.persona as persona
-import objects.model as model
+import objects.cache as cac
+import objects.config as conf
+import objects.conversation as convo
+import objects.directory as dir
+import objects.language as lang
+import objects.persona as per
+import objects.model as mod
 import objects.repo as repo
-import objects.template as template
-import objects.terminal as terminal
+import objects.template as temp
+import objects.terminal as term
 
 @dataclasses.dataclass
 class Output:
     """
     Data structure for managing application output
     """
-    prompt : str | None
-    response : str | None
-    summary: str | None
-    vcs : str | None
+    prompt : str | None                     = None
+    response : str | None                   = None
+    summary: str | None                     = None
+    vcs : str | None                        = None
+    
 
+    def to_dict(self):
+        return {
+            "prompt"                        : self.prompt,
+            "response"                      : self.response,
+            "summary"                       : self.summary,
+            "vcs"                           : self.vcs
+        }
+    
 
-@dataclasses.dataclass
 class App:
     """
     Data structure for managing application objects.
     """
-    arguments : argparse.Namespace | None
-    cache : cache.Cache  | None
-    config : config.Config  | None
-    conversations: conversation.Conversation | None
-    directory: directory.Directory | None
-    language: language.Language  | None
-    logger : logging.Logger | None
-    model : model.Model | None
-    personas : persona.Persona | None
-    repository: repo.Repo | None
-    templates : template.Template | None
-    terminal : terminal.Terminal | None
-
-    def __init__(self):
-        return 
+    arguments : argparse.Namespace | None   = None 
+    cache : cac.Cache  | None               = None
+    config : conf.Config  | None            = None
+    conversations: convo.Conversation | None = None
+    directory: dir.Directory | None         = None
+    language: lang.Language  | None         = None
+    logger : logging.Logger | None          = None
+    model : mod.Model | None                = None
+    personas : per.Persona | None           = None
+    repository: repo.Repo | None            = None
+    templates : temp.Template | None        = None
+    terminal : term.Terminal | None         = None
     
+
     def analyze(self)                       -> Output:
         """
         This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
@@ -69,7 +75,7 @@ class App:
         analyze_vars                        = {
             **buffer,
             **self.language.vars(),
-            **self.summarize(),
+            **self.summarize().to_dict(),
             **{ "latex": self.config.get("ANALYZE.LATEX_PREAMBLE") }
         }
 
@@ -137,7 +143,7 @@ class App:
         if self.arguments.directory is not None:
             self.logger.info("Injecting file summary into prompt...")
             template_vars.update(
-                self.summarize()
+                self.summarize().to_dict()
             )
 
         parsed_prompt                       = self.templates.render(
@@ -237,7 +243,7 @@ class App:
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
-            **self.summarize()
+            **self.summarize().to_dict()
         }
 
         review_prompt                       = self.templates.render(
@@ -298,7 +304,7 @@ class App:
         """
         summary_vars                        = self.directory.summary()
 
-        summary                             = self.tempaltes.render(
+        summary                             = self.templates.render(
             temp                            = self.config.get("SUMMARIZE.TEMPLATE"), 
             variables                       = summary_vars
         )

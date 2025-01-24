@@ -159,8 +159,8 @@ class Persona:
         )
 
         self.personas                       = util.merge(
-            dict_1                          = tuning, 
-            dict_2                          = system
+            dict1                           = tuning, 
+            dict2                           = system
         )
 
         with open(context_file, "r") as f: 

@@ -47,14 +47,16 @@ def out(
     :type suppress_prompt: bool
     """
 
-    args                                = vars(application.arguments)
+    if _output(application.arguments):
+        payload                         = application.templates.render(
+            temp                        = "output", 
+            variables                   = output.to_dict()
+        )
 
-    if _output(args):
-        payload                         = application.templates.render("output", output)
-        with open(args["output"], "w") as outfile:
+        with open(application.arguments.output, "w") as outfile:
             outfile.write(payload)
 
-    if _show(args):
+    if _show(application.arguments):
         if output.summary:
             print(output.summary)
 

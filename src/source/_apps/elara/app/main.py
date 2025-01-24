@@ -109,7 +109,7 @@ def main() -> bool:
     """
     Main function to run the command-line interface.
     """
-    application : app.App               = init(
+    this_app : app.App                  = init(
         command_line                    = True
     )
 
@@ -117,16 +117,16 @@ def main() -> bool:
         # Administrative functions
         "configure"                     : configure,
         # Application functions
-        "summarize"                     : application.summarize,
-        "converse"                      : application.converse,
-        "review"                        : application.review,
-        "request"                       : application.request,
-        "tune"                          : application.tune,
-        "analyze"                       : application.analyze
+        "summarize"                     : lambda app: app.summarize(),
+        "converse"                      : lambda app: app.converse(),
+        "review"                        : lambda app: app.review(),
+        "request"                       : lambda app: app.request(),
+        "tune"                          : lambda app: app.tune(),
+        "analyze"                       : lambda app: app.analyze()
     }
 
-    operation_name                      = application.arguments.operation
-    arguments                           = vars(application.arguments) 
+    operation_name                      = this_app.arguments.operation
+    arguments                           = vars(this_app.arguments) 
 
     tty                                 = "interactive" in arguments \
                                             and arguments["interactive"]
@@ -135,18 +135,18 @@ def main() -> bool:
         return False 
     
     if tty and operation_name == "converse": 
-        application.arguments.show   = True
-        application.terminal.interact(
-            callable                    = application.converse,
+        this_app.arguments.show         = True
+        this_app.terminal.interact(
+            callable                    = lambda app: app.converse(),
             printer                     = printer.out,
-            app                         = application
+            app                         = this_app
         )
         return
         
-    out                                 = operations[operation_name](application)
+    out                                 = operations[operation_name](this_app)
     
     printer.out(
-        application                     = application,
+        application                     = this_app,
         output                          = out,
         suppress_prompt                 = False
     )

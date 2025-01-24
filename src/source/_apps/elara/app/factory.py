@@ -9,6 +9,7 @@ import typing
 
 # Application Modules
 import util
+import app as ap
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as conversation
@@ -20,23 +21,6 @@ import objects.repo as repo
 import objects.template as template
 import objects.terminal as terminal
 
-@dataclasses.dataclass
-class App:
-    """
-    Data structure for managing application objects.
-    """
-    arguments : argparse.Namespace
-    cache : cache.Cache
-    config : config.Config
-    conversations: conversation.Conversation
-    directory: directory.Directory | None
-    language: language.Language
-    logger : logging.Logger
-    model : model.Model
-    personas : persona.Persona
-    repository: repo.Repo | None
-    templates : template.Template
-    terminal : terminal.Terminal
 
 @dataclasses.dataclass
 class Output:
@@ -48,8 +32,9 @@ class Output:
     summary: str | None
     vcs : str | None
 
+
 class AppFactory:
-    app : App                           = None
+    app : ap.App                        = None
     """Factory's application."""
     app_dir : str                       = None
     """Directory containing application."""
@@ -71,12 +56,12 @@ class AppFactory:
         """
         self.app_dir                    = pathlib.Path(__file__).resolve().parent
         self.config_file                = os.path.join(self.app_dir, rel_dir, filename)
-        self.app                        = App()
+        self.app                        = ap.App()
         self.app.config                 = config.Config(
             config_file                 = self.config_file
         )
 
-        if self.app.config.get("GEMINI.KEY"):
+        if not self.app.config.get("GEMINI.KEY"):
             raise ValueError("GEMINI_KEY environment variable not set.")
 
 
@@ -119,7 +104,7 @@ class AppFactory:
             self.app.logger.debug("Initailizing application command line arguments...")
 
         parser                          = argparse.ArgumentParser(
-            description                 = self.config.get("INTERFACE.HELP.PARSER")
+            description                 = self.app.config.get("INTERFACE.HELP.PARSER")
         )
     
         subparsers                      = parser.add_subparsers(
@@ -213,10 +198,10 @@ class AppFactory:
         return self
     
 
-    def with_logger(self) -> typing.Self:
+    def with_logger(self)               -> typing.Self:
         log_file                        = self._path([
             "TREE.DIRECTORIES.LOGS",
-            "TREE.FILES.LOGS"
+            "TREE.FILES.LOG"
         ])
 
         self.app.logger                 = util.logger(
@@ -227,7 +212,7 @@ class AppFactory:
         return self
     
 
-    def with_model(self) -> typing.Self: 
+    def with_model(self)                -> typing.Self: 
         self.app.model                  = model.Model(
             api_key                     = self.app.config.get("GEMINI.KEY"),
             default_model               = self.app.config.get("GEMINI.DEFAULT"),
@@ -235,7 +220,7 @@ class AppFactory:
         ) 
         return self
 
-    def with_personas(self) -> typing.Self:
+    def with_personas(self)             -> typing.Self:
         if self.app.cache is None:
             raise ValueError("Cache must be initialized before Personas!")
         
@@ -256,7 +241,7 @@ class AppFactory:
         )
         return self
     
-    def with_templates(self) -> typing.Self:
+    def with_templates(self)            -> typing.Self:
         temp_dir                        = self._path([
             "TREE.DIRECTORIES.TEMPLATES"
         ])
@@ -267,13 +252,13 @@ class AppFactory:
         )
         return self
     
-    def with_terminal(self) -> typing.Self:
+    def with_terminal(self)             -> typing.Self:
         self.app.terminal               = terminal.Terminal(
             terminal_config             = self.app.config.get("TERMINAL")
         )
         return self
 
-    def with_repository(self) -> typing.Self:
+    def with_repository(self)           -> typing.Self:
         if self.app.arguments is None:
             raise ValueError("Arguments must be initialized before Repository!")
         
@@ -297,5 +282,5 @@ class AppFactory:
 
         return self
     
-    def build(self):
+    def build(self)                     -> ap.App :
         return self.app

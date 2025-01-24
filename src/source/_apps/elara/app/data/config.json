@@ -405,10 +405,10 @@
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "CIOR_01"
+                    "SART_01"
                 ],
                 "POEMS": [
-                    "POPE_01",
+                    "ELIO_01",
                     "CUMM_01"
                 ],
                 "PROOFS": []
@@ -433,8 +433,13 @@
         },
         "AXIOM": {
             "CONTEXT": {
-                "QUOTATIONS": [],
-                "POEMS": [],
+                "QUOTATIONS": [
+                    "TARS_01",
+                    "RSWH_01"
+                ],
+                "POEMS": [
+                    "POPE_01"
+                ],
                 "PROOFS": []
             },
             "FUNCTIONS": [
