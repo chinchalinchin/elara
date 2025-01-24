@@ -16,6 +16,9 @@ TYPE_MAP = {
     "bool": bool
 }
 
+def lower(d: dict) -> dict:
+    return { k.lower(): v for k, v in d.items() }
+
 def map(
     type_string: str
 ) -> typing.Union[str, int, float, bool]:

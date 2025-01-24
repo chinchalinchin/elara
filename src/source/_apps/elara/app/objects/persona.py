@@ -12,27 +12,27 @@ import logging
 # Application Modules
 import util
 
-logger = logging.getLogger(__name__)
+logger                                      = logging.getLogger(__name__)
 
 class Persona:
-    current = None
+    current                                 = None
     """Current persona"""
-    inst = None
+    inst                                    = None
     """Singleton instance"""
-    personas = {}
+    personas                                = {}
     """Persona metadata"""
-    functional_structures = {}
+    functional_structures                   = {}
     """Structured output for functions"""
 
     def __init__(
         self, 
-        current_persona : str = None,
-        persona_config : dict = None,
-        context_file : str = None,
-        tune_dir :str = None,
-        sys_dir : str = None,
-        tune_ext : str = None,
-        sys_ext : str = None
+        current_persona                     : str,
+        persona_config                      : dict,
+        context_file                        : str,
+        tune_dir                            : str,
+        sys_dir                             : str,
+        tune_ext                            : str,
+        sys_ext                             : str
     ):
         """
         Initialize Persona object.
@@ -50,35 +50,15 @@ class Persona:
         :param sys_ext: File extension for the system instructions data.
         :type sys_ext: str
         """
-        # @DATA
-        #   Hey, Milton, the data team wanted to get your opinion. We are starting to
-        #   think you might prefer to respond to pull requests using structure data schemas
-        #   for your output. We are thinking about adding a `data/structure` directory
-        #   and include schemas for your pull request reviews. That way, we can append
-        #   your comments to specific lines in the pull request. Right now, your comments
-        #   are being appended to the entire PR. A little more granularity would be amazing!
-        #
-        #   Leaving this comment here because afer discussion with the Development team,
-        #   they think it would be best to load the structured schemas into the Persona objects!
-        if None in [
-            current_persona, 
-            persona_config, 
-            tune_dir, 
-            tune_ext, 
-            sys_dir, 
-            sys_ext
-        ]:
-            raise ValueError("Must set all class properties: (current, config, tune_dir, tune_ext, sys_dir, sys_ext)")
-        
-        self.current = current_persona
-        self.personas = { }
+        self.current                        = current_persona
+        self.personas                       = { }
         self._load(
-            persona_config, 
-            context_file, 
-            tune_dir, 
-            tune_ext, 
-            sys_dir, 
-            sys_ext
+            persona_config                  = persona_config, 
+            context_file                    = context_file, 
+            tune_dir                        = tune_dir, 
+            tune_ext                        = tune_ext, 
+            sys_dir                         = sys_dir, 
+            sys_ext                         = sys_ext
         )
 
     def __new__(
@@ -90,15 +70,11 @@ class Persona:
         Create *Personas* singleton.
         """
         if not self.inst:
-            self.inst = super(
+            self.inst                       = super(
                 Persona, 
                 self
             ).__new__(self)
         return self.inst
-    
-    @staticmethod
-    def _lower(d: dict) -> dict:
-        return { k.lower(): v for k, v in d.items() }
     
     @staticmethod
     def _process(
@@ -113,42 +89,48 @@ class Persona:
         raw = {}
         for root, _, files in os.walk(dir):
             for file in files:
-                persona = os.path.splitext(file)[0]
-                ext = os.path.splitext(file)[1]
+                persona, ext                = os.path.splitext(file)
 
                 if ext !=  ext or persona == temp:
                     continue
 
-                file_path = os.path.join(root, file)
-                raw[persona] = { }
+                file_path                   = os.path.join(root, file)
+                raw[persona]                = { }
 
                 try:
                     with open(file_path, "r") as f:
-                        content = f.read()
+                        content             = f.read()
+
                     if content:
-                        payload  = json.loads(content)
+                        payload             = json.loads(content)
                     else: 
-                        payload = { "payload": default }
-                    raw[persona][prop] = payload["payload"]
+                        payload             = { "payload": default }
+
+                    raw[persona][prop]      = payload["payload"]
 
                 except (FileNotFoundError, json.JSONDecodeError) as e:
-                    logger.error(f"Error loading JSON data: {e}")
-                    raw[persona][prop] = default
+                    logger.error(
+                        f"Error loading JSON data from {file_path}: {e}"
+                    )
+                    raw[persona][prop]      = default
+                    
                 except Exception as e:
-                    logger.error(f"An unexpected error occurred while loading from {file_path}: {e}")
-                    raw[persona][prop] = default
+                    logger.error(
+                        f"An unexpected error occurred while loading from {file_path}: {e}"
+                    )
+                    raw[persona][prop]      = default
         return raw
 
                 
     def _load(
         self, 
-        config : dict,
-        context_file: str, 
-        tune_dir : str , 
-        tune_ext : str,
-        sys_dir : str,
-        sys_ext : str,
-    ) -> None:
+        persona_config                      : dict,
+        context_file                        : str, 
+        tune_dir                            : str , 
+        tune_ext                            : str,
+        sys_dir                             : str,
+        sys_ext                             : str,
+    )                                       -> None:
         """
         Load *Personas* into runtime.
 
@@ -163,48 +145,64 @@ class Persona:
         :param current: Persona to initialize
         :type current: str
         """
-        tuning = self._process(
-            dir = tune_dir, 
-            ext = tune_ext,
-            prop = "tuningData",
-            default = []
+        tuning                              = self._process(
+            dir                             = tune_dir, 
+            ext                             = tune_ext,
+            prop                            = "tuningData",
+            default                         = []
         )
-        system = self._process(
-            dir = sys_dir, 
-            ext = sys_ext,
-            prop = "systemInstruction",
-            default = []
+        system                              = self._process(
+            dir                             = sys_dir, 
+            ext                             = sys_ext,
+            prop                            = "systemInstruction",
+            default                         = []
         )
 
-        self.personas = util.merge(tuning, system)
+        self.personas                       = util.merge(
+            dict_1                          = tuning, 
+            dict_2                          = system
+        )
 
         with open(context_file, "r") as f: 
-            context = json.load(f)
+            context                         = json.load(f)
 
         for persona in self.personas.keys():
-            key = persona.upper()
+            key                             = persona.upper()
 
-            self.personas[persona]["generationConfig"] = self._lower(config[key]["GENERATION_CONFIG"])
-            self.personas[persona]["safetySettings"] = self._lower(config[key]["SAFETY_SETTINGS"])
-            self.personas[persona]["tools"] = config[key]["TOOLS"]
-            self.personas[persona]["functions"] = config[key]["FUNCTIONS"]
+            self.personas[persona][
+                "generationConfig"
+            ]                               = util.lower(persona_config[key]["GENERATION_CONFIG"])
+            self.personas[persona][
+                "safetySettings"
+            ]                               = util.lower(persona_config[key]["SAFETY_SETTINGS"])
+            self.personas[persona][
+                "tools"
+            ]                               = persona_config[key]["TOOLS"]
+            self.personas[persona][
+                "functions"
+            ]                               = persona_config[key]["FUNCTIONS"]
             
-            self.personas[persona]["context"] = {}
+            self.personas[persona][
+                "context"
+            ]                               = {}
 
-            for c_key, c_value in self._lower(config[key]["CONTEXT"]).items(): 
-                self.personas[persona]["context"][c_key] = []
+            for c_key, c_value in util.lower(persona_config[key]["CONTEXT"]).items(): 
+                self.personas[persona][
+                    "context"
+                ][c_key]                    = []
+
                 for c_index in c_value: 
                     self.personas[persona]["context"][c_key].append(
-                        self._lower(
-                            context[c_key.upper()][c_index]
+                        util.lower(
+                            d               = context[c_key.upper()][c_index]
                         )
                     )
         return None
     
     def vars(
         self, 
-        persona
-    ) -> dict:
+        persona                             : str
+    )                                       -> dict:
         """
         Get a dictionary of the persona configuration for templating.
         
@@ -215,8 +213,8 @@ class Persona:
     
     def update(
         self, 
-        persona : str
-    ) -> dict:
+        persona                             : str
+    )                                       -> dict:
         """
         Switch the current persona.
 
@@ -226,13 +224,13 @@ class Persona:
         :rtype: dict
         """
         if self.personas.get(persona) is not None:
-            self.current = persona
+            self.current                    = persona
         return self.current
 
     def get(
         self,
-        attribute : str,
-        persona : str = None,
+        attribute                           : str,
+        persona                             : str = None,
     ) -> dict:
         """
         Get a persona's attribute. Attributes are given in the following list,
@@ -248,15 +246,15 @@ class Persona:
         :returns: Persona metadata
         :rtype: dict
         """
-        buffer = self.personas.get(persona)
+        buffer                              = self.personas.get(persona)
         if persona is None or buffer is None:
             return self.personas.get(self.current).get(attribute)
         return buffer.get(attribute)
 
     def function(
         self, 
-        func : str = None
-    ) -> dict:
+        func                            : str = None
+    )                                   -> dict:
         """
         Get the persona name associated with an application function.
 
@@ -271,7 +269,7 @@ class Persona:
             
         return self.current
 
-    def all(self) -> list:
+    def all(self)                       -> list:
         """
         Get all personas.
 

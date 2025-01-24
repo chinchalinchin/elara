@@ -209,7 +209,7 @@ class Config:
         """
         Return a list of enabled Language modules.
         """
-        modules = self.data["LANGUAGE"]["MODULES"]
+        modules = self.get("LANGUAGE.MODULES")
         if any(v for v in modules.values()):
             return [
                 k.lower()

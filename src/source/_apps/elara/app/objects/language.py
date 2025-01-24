@@ -23,9 +23,9 @@ class Language:
 
     def __init__(
         self, 
-        enabled: list, 
-        directory: str,
-        extension : str
+        enabled                             : list, 
+        directory                           : str,
+        extension                           : str
     ):
         """
         Initialize new Persona Language with a set of modules. Language modules are given below,
@@ -42,8 +42,8 @@ class Language:
         :param ext: File extension of Language modules. Defaults to ``.rst``.
         :type ext: str
         """
-        self.directory = directory
-        self.extension = extension
+        self.directory                      = directory
+        self.extension                      = extension
         self._load(enabled)
 
     def __new__(
@@ -55,7 +55,7 @@ class Language:
         Create Language singleton.
         """
         if not self.inst:
-            self.inst = super(
+            self.inst                       = super(
                 Language, 
                 self
             ).__new__(self)
@@ -78,19 +78,24 @@ class Language:
         
         for root, _, files in os.walk(self.directory):
             for file in files:
-                if os.path.splitext(file)[1] != self.extension:
+                module, ext                 = os.path.splitext(file)
+
+                if ext != self.extension:
                     continue
 
-                if os.path.splitext(file)[0] not in enabled:
+                if module not in enabled:
                     continue
 
-                module = os.path.splitext(file)[0]
-                file_path = os.path.join(root, file)
+                file_path                   = os.path.join(root, file)
 
                 try:
                     with open(file_path, "r") as f:
-                        payload  = f.read()
-                    self.modules[module] = payload
+                        payload             = f.read()
+
+                    if payload:
+                        self.modules[module]= payload
+                    else: 
+                        logger.warning(f"No content found in {module} language module.")
 
                 except Exception as e:
                     logger.error(f"Error loading language module {file_path}: {e}")
@@ -118,9 +123,7 @@ class Language:
         :rtype: dict
         """
         if len(self.modules) > 0:
-            return {**{
-                "language": True
-            }, **self.modules}
+            return {**{ "language": True }, **self.modules}
         return { }
     
     def list_modules(self) -> list:

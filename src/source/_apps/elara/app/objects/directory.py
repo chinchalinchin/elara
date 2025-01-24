@@ -24,11 +24,11 @@ class MiltonIsADoodyHead(Exception):
     pass
 
 class Directory:
-    directory = None
+    directory                           = None
     """Local directory"""
-    summary_config = None
+    summary_config                      = None
     """Summarize function configuration"""
-    summary_file = None
+    summary_file                        = None
     """Summary file location"""
 
     def __init__(
@@ -47,17 +47,19 @@ class Directory:
         :param summary_config: Summary funcion configuration.
         :type summary_config: dict
         """
-        self.directory = directory
-        self.summary_config = summary_config
-        self.summary_file = summary_file
+        self.directory                  = directory
+        self.summary_config             = summary_config
+        self.summary_file               = summary_file
 
     def _extensions(self):
         """
         Returns all valid extensions
         """
         return [
-            k for k in self.summary_config["DIRECTIVES"].keys()
-        ] + self.summary_config["INCLUDES"]
+            k 
+            for k 
+            in self.summary_config.get("DIRECTIVES").keys()
+        ] + self.summary_config.get("INCLUDES")
 
     def _tree(self) -> str:
         """
@@ -70,19 +72,24 @@ class Directory:
         """
         dir_path = pathlib.Path(self.directory)
         if not dir_path.exists():
-            return f"Error: Directory not found: {self.directory}"
+            raise ValueError(f"Error: Directory not found: {self.directory}")
+        
         try:
-            structure = ""
+            structure                   = ""
+
             for path in sorted(dir_path.rglob("*")):
-                depth = len(path.relative_to(dir_path).parts)
-                indent = "    " * depth
+                depth                   = len(path.relative_to(dir_path).parts)
+                indent                  = "    " * depth
+
                 if path.is_dir():
-                    structure += f"{indent}{path.name}/\n"
-                elif path.suffix not in self.summary_config["EXCLUDES"]:
-                    structure += f"{indent}{path.name}\n"
+                    structure           += f"{indent}{path.name}/\n"
+
+                elif path.suffix not in self.summary_config.get("EXCLUDES"):
+                    structure           += f"{indent}{path.name}\n"
+
             return structure
         except Exception as e:
-            return f"Error reading directory: {self.directory}\n{e}"
+            raise ValueError(f"Error reading directory: {self.directory}\n{e}")
     
     def summary(self) -> dict:
         """
@@ -96,52 +103,52 @@ class Directory:
                 f"{self.directory} does not exist."
             )
         
-        dir_summary  = {
-            "directory": os.path.basename(self.directory),
-            "tree": self._tree(),
-            "files": []
+        dir_summary                     = {
+            "directory"                 : os.path.basename(self.directory),
+            "tree"                      : self._tree(),
+            "files"                     : []
         }
 
-        # Use `os.walk` to recursivle scan sub-directories.
-        for root, _, files in os.walk(self.directory):
-            # traverse files in alphabetical order
-            files.sort()
+        for root, _, files in os.walk(self.directory): # Use `os.walk` to recursivle scan sub-directories.
+            
+            files.sort() # traverse files in alphabetical order
             for file in files:
-                base, ext = os.path.splitext(file)
+                base, ext               = os.path.splitext(file)
 
                 if ext not in self._extensions() \
                     or base == self.summary_file:
                     continue
 
-                file_path = os.path.join(root, file)
-
-                directive = ext in self.summary_config["DIRECTIVES"].keys()
+                file_path               = os.path.join(root, file)
+                directive               = ext in self.summary_config.get("DIRECTIVES").keys()
 
                 try:
                     with open(file_path, "r") as infile:
-                        data = infile.read()
+                        data            = infile.read()
 
                     if directive:
                         dir_summary["files"] += [{
-                            "type": "code",
-                            "data": data,
-                            "lang": self.summary_config["DIRECTIVES"][ext],
-                            "name" : os.path.relpath(file_path, self.directory)
+                            "type"      : "code",
+                            "data"      : data,
+                            "lang"      : self.summary_config.get("DIRECTIVES").get(ext),
+                            "name"      : os.path.relpath(file_path, self.directory)
                         }]
                         continue
 
                     dir_summary["files"] += [{
-                        "type": "raw",
-                        "data": data,
-                        "name": os.path.relpath(file_path, self.directory)
+                        "type"          : "raw",
+                        "data"          : data,
+                        "name"          : os.path.relpath(file_path, self.directory)
                     }]
 
                 except FileNotFoundError as e:
                     logger.error(F"Error reading file {file_path}: {e}")
                     continue
+
                 except PermissionError as e:
                     logger.error(F"Permission error reading file {file_path}: {e}")
                     continue
+                
                 except Exception as e:
                     logger.error(F"An unexpected error occurred while reading {file_path}: {e}")
                     continue

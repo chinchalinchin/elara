@@ -81,25 +81,24 @@ class Conversation:
         raw = { }
         for root, _, files in os.walk(dir):
             for file in files:
-                persona = os.path.splitext(file)[0]
-                ext = os.path.splitext(file)[1]
+                persona, ext                = os.path.splitext(file)
 
                 if ext != ext or persona == temp:
                     continue
 
-                persona = os.path.splitext(file)[0]
-                file_path = os.path.join(root, file)
-                raw[persona] = { }
+                file_path                   = os.path.join(root, file)
+                raw[persona]                = { }
 
                 try:
                     with open(file_path, "r") as f:
-                        content = f.read()
+                        content             = f.read()
                     if content:
-                        payload  = json.loads(content)
+                        payload             = json.loads(content)
                     else: 
-                        payload = { "payload": default }
+                        payload             = { "payload": default }
 
                     raw[persona][prop] = payload["payload"]
+
                 except (FileNotFoundError, json.JSONDecodeError) as e:
                     logger.error(f"Error loading JSON data: {e}")
                     raw[persona][prop] = default
@@ -170,7 +169,7 @@ class Conversation:
         now = datetime.datetime.now(
             datetime.timezone(
                 datetime.timedelta(
-                    hours=self.converse_config["TIMEZONE_OFFSET"]
+                    hours=self.converse_config.get("TIMEZONE_OFFSET")
                 )
             )
         ) 

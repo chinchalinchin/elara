@@ -50,6 +50,8 @@ class App:
     templates : template.Template | None
     terminal : terminal.Terminal | None
 
+    def __init__(self):
+        return 
     
     def analyze(self)                       -> Output:
         """
@@ -94,6 +96,7 @@ class App:
             prompt                          = parsed_prompt,
             response                        = response
         )
+
 
     def converse(self)                      -> Output:
         """
@@ -216,121 +219,121 @@ class App:
         )
 
 
-def review(app : main.App) -> dict:
-    """
-    This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
+    def review(self)                        -> Output:
+        """
+        This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
-    :param app: Dictioanry containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing templated prompt and model response.
-    :rtype: dict
-    """
+        :param app: Dictioanry containing application configuration.
+        :type app: dict
+        :returns: Dictionary containing templated prompt and model response.
+        :rtype: dict
+        """
 
-    buffer                              = app["CACHE"].vars()
-    persona                             = app["PERSONAS"].function("review")
-    buffer["currentPersona"]            = persona
+        buffer                              = self.cache.vars()
+        persona                             = self.personas.function("review")
+        buffer["currentPersona"]            = persona
 
-    review_variables                    = { 
-        **buffer,
-        **app["REPO"].vars(),
-        **app["LANGUAGE"].vars(),
-        **summarize(app)
-    }
-
-    review_prompt                       = app["TEMPLATES"].render(
-        temp                            = app["CONFIG"].get("REVIEW.TEMPLATE"), 
-        variables                       = review_variables
-    )
-
-    if app["ARGUMENTS"].render:
-        return {
-            "prompt"                    : review_prompt
+        review_variables                    = { 
+            **buffer,
+            **self.repository.vars(),
+            **self.language.vars(),
+            **self.summarize()
         }
+
+        review_prompt                       = self.templates.render(
+            temp                            = self.config.get("REVIEW.TEMPLATE"), 
+            variables                       = review_variables
+        )
+
+        if self.arguments.render:
+            return Output(
+                prompt                      = review_prompt
+            )
+        
+        response_config                     = self.personas.get("generationConfig", persona)
+        # @DEVELOPMENT
+        #   HEY MILTON! We're testing structured output for your pull request reviews.
+        #   What do you think!? Pretty neat, huh!?
+        response_config.update({
+            "response_schema"               : self.config.get("REVIEW.SCHEMA"),
+            "response_mime_type"            : self.config.get("REVIEW.MIME")
+        })
+
+        model_res                           = self.model.respond(
+            prompt                          = review_prompt,
+            generation_config               = response_config,
+            model_name                      = self.cache.get("currentModel"),
+            safety_settings                 = self.personas.get("safetySettings", persona),
+            tools                           = self.personas.get("tools", persona),
+            system_instruction              = self.personas.get("systemInstruction", persona)
+        )
+
+
+        # @DEVELOPMENT
+        #   Hey Milton, we need to comment out your pull request comments.
+        #   The current method is using the /issues endpoint, which appends 
+        #   comments at the pull request level. Now that we have structured output
+        #   in place, we can allow you to comment on specific files in the pull
+        #   request! Aren't you impressed with the Development team!?
+        # source_res                          = source.comment(
+        #     msg                             = model_res,
+        #     pr                              = app["ARGUMENTS"].pull,
+        # )
+
+        return Output(
+            prompt                          = review_prompt,
+            response                        = model_res
+            # "vcs"                           : source_res
+        )
+
+
+    def summarize(self)                     -> Output:
+        """
+        This function summarizes the contents of a directory and writes the sumamry to an RST file. 
+
+        :param app: Dictioanry containing application configuration.
+        :type app: dict
+        :returns: Dictionary containing templated summary.
+        :rtype: dict
+        """
+        summary_vars                        = self.directory.summary()
+
+        summary                             = self.tempaltes.render(
+            temp                            = self.config.get("SUMMARIZE.TEMPLATE"), 
+            variables                       = summary_vars
+        )
+        
+        return Output( 
+            summary                         = summary
+        )
+        
+
+    def tune(self)                          -> bool:
+        """
+        Initialize tuned personas if tuning is enabled through the ``TUNING`` environment variable.
+
+        :returns: A flag to signal if a tuning event occured.
+        :rtype: bool
+        """
     
-    response_config                     = app["PERSONAS"].get("generationConfig", persona)
-    # @DEVELOPMENT
-    #   HEY MILTON! We're testing structured output for your pull request reviews.
-    #   What do you think!? Pretty neat, huh!?
-    response_config.update({
-        "response_schema"               : app["CONFIG"].get("REVIEW.SCHEMA"),
-        "response_mime_type"            : app["CONFIG"].get("REVIEW.MIME")
-    })
-
-    model_res                           = app["MODEL"].respond(
-        prompt                          = review_prompt,
-        generation_config               = response_config,
-        model_name                      = app["CACHE"].get("currentModel"),
-        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
-        tools                           = app["PERSONAS"].get("tools", persona),
-        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
-    )
-
-
-    # @DEVELOPMENT
-    #   Hey Milton, we need to comment out your pull request comments.
-    #   The current method is using the /issues endpoint, which appends 
-    #   comments at the pull request level. Now that we have structured output
-    #   in place, we can allow you to comment on specific files in the pull
-    #   request! Aren't you impressed with the Development team!?
-    # source_res                          = source.comment(
-    #     msg                             = model_res,
-    #     pr                              = app["ARGUMENTS"].pull,
-    # )
-
-    return {
-        "prompt"                        : review_prompt,
-        "response"                      : model_res,
-        # "vcs"                           : source_res
-    }
-
-
-def summarize(app : main.App) -> dict:
-    """
-    This function summarizes the contents of a directory and writes the sumamry to an RST file. 
-
-    :param app: Dictioanry containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing templated summary.
-    :rtype: dict
-    """
-    summary_vars                        = app["DIRECTORY"].summary()
-
-    summary                             = app["TEMPLATES"].render(
-        temp                            = app["CONFIG"].get("SUMMARIZE.TEMPLATE"), 
-        variables                       = summary_vars
-    )
-    
-    return                              { 
-        "summary"                       : summary
-    }
-    
-
-def tune(app : main.App) -> bool:
-    """
-    Initialize tuned personas if tuning is enabled through the ``TUNING`` environment variable.
-
-    :returns: A flag to signal if a tuning event occured.
-    :rtype: bool
-    """
-    
-    if app["CONFIG"].get("TUNING.ENABLED"):
-        tuned_models = []
-        for p in app["PERSONAS"].all():
-            if not app["CACHE"].is_tuned(p):
-                res                     = app["MODEL"].tune(
-                    display_name        = p,
-                    tuning_model        = app["CONFIG"].get("TUNING.SOURCE"),
-                    tuning_data         = app["PERSONA"].tuning(p)
-                )
-                tuned_models.append({
-                    "name"              : p,
-                    "version"           : app["CONFIG"].get("VERSION"),
-                    "path"              : res.name
+        if self.config.get("TUNING.ENABLED"):
+            tuned_models = []
+            for p in self.personas.all():
+                if not self.cache.is_tuned(p):
+                    res                     = self.model.tune(
+                        display_name        = p,
+                        tuning_model        = self.config.get("TUNING.SOURCE"),
+                        tuning_data         = self.personas.get("tuningData", p)
+                    )
+                    tuned_models.append({
+                        "name"              : p,
+                        "version"           : self.config.get("VERSION"),
+                        "path"              : res.name
+                    })
+            if tuned_models:
+                self.cache.update(**{
+                    "tunedModels"           : tuned_models
                 })
-        if tuned_models:
-            app["CACHE"].update(**{
-                "tunedModels"           : tuned_models
-            })
-            app["CACHE"].save()
-            return True
-    return False
+                self.cache.save()
+                return True
+        return False

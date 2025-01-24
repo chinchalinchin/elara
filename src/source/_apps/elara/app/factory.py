@@ -50,35 +50,53 @@ class Output:
 
 class AppFactory:
     app : App                           = None
+    """Factory's application."""
     app_dir : str                       = None
+    """Directory containing application."""
     config_file : str                   = None
-    configuration : config.Config       = None
+    """Full path of the application's configuration file."""
 
     def __init__(
         self,
         rel_dir : str                   = "data",
         filename : str                  = "config.json"
     ):
+        """
+        Initialization a new application factory object.
+
+        :param rel_dir: Directory relative to the application directory that contains the application data.
+        :type rel_dir: str
+        :param filename: Name of the application configuration file.
+        :type filename: str
+        """
         self.app_dir                    = pathlib.Path(__file__).resolve().parent
         self.config_file                = os.path.join(self.app_dir, rel_dir, filename)
         self.app                        = App()
-        self.configuration              = config.Config(
+        self.app.config                 = config.Config(
             config_file                 = self.config_file
         )
-        self.app.config                 = self.configuration
 
-        if self.config.get("GEMINI.KEY"):
+        if self.app.config.get("GEMINI.KEY"):
             raise ValueError("GEMINI_KEY environment variable not set.")
 
 
     def _path(self, parts)              -> str:
         return os.path.join(
             self.app_dir,
-            *[self.configuration.get(p) for p in parts ]
+            *[self.app.config.get(p) for p in parts ]
         )
     
 
     def with_cache(self)                -> typing.Self:
+        """
+        Initialize and append a objects.cache.Cache object to the factory's app.App object.
+
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
+        if self.app.logger is not None:
+            self.app.logger.debug("Initializing application cache...")
+
         cache_file                      = self._path([
             "TREE.DIRECTORIES.DATA",
             "TREE.FILES.CACHE"
@@ -91,23 +109,32 @@ class AppFactory:
     
 
     def with_cli_args(self)             -> typing.Self:
+        """
+        Initialize and append argparse.Namespace obejct to the factory's app.App object.
+
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
+        if self.app.logger is not None:
+            self.app.logger.debug("Initailizing application command line arguments...")
+
         parser                          = argparse.ArgumentParser(
             description                 = self.config.get("INTERFACE.HELP.PARSER")
         )
     
         subparsers                      = parser.add_subparsers(
             dest                        = 'operation', 
-            help                        = self.configuration.get("INTERFACE.HELP.SUBPARSER")
+            help                        = self.app.config.get("INTERFACE.HELP.SUBPARSER")
         )
 
-        for op_config in self.configuration.get("INTERFACE.OPERATIONS"):
+        for op_config in self.app.config.get("INTERFACE.OPERATIONS"):
             op_parser                   = subparsers.add_parser(
                 name                    = op_config["NAME"],
                 help                    = op_config["HELP"]
             )
             for op_arg in op_config["ARGUMENTS"]:
                 if any(
-                    k not in self.configuration.get("INTERFACE.FIELDS") 
+                    k not in self.app.config.get("INTERFACE.FIELDS") 
                     for k in op_arg.keys()
                 ):
                     continue
@@ -143,14 +170,22 @@ class AppFactory:
     
 
     def with_conversations(self)        -> typing.Self:
+        """
+        Initialize and append objects.conversation.Conversation to 
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
+        if self.app.logger is not None:
+            self.app.logger.debug("Initializing application conversations...")
+
         hist_dir                        = self._path(["TREE.DIRECTORIES.HISTORY"])
         mem_dir                         = self._path(["TREE.DIRECTORIES.MEMORY"])
         self.app.conversations          = conversation.Conversation(
             hist_dir                    = hist_dir,
-            hist_ext                    = self.configuration.get("TREE.EXTENSIONS.CONVERSATION"),
+            hist_ext                    = self.app.config.get("TREE.EXTENSIONS.CONVERSATION"),
             mem_dir                     = mem_dir,
-            mem_ext                     = self.configuration.get("TREE.EXTENSIONS.MEMORY"),
-            converse_config             = self.configuration.get("CONVERSE.CONFIG")
+            mem_ext                     = self.app.config.get("TREE.EXTENSIONS.MEMORY"),
+            converse_config             = self.app.config.get("CONVERSE.CONFIG")
         )
         return self
     
@@ -163,8 +198,8 @@ class AppFactory:
         if "directory" in arguments:
             self.app.directory          = directory.Directory(
                 directory               = self.app.arguments.directory,
-                summary_file            = self.configuration.get("TREE.FILES.SUMMARY"),
-                summary_config          = self.configuration.get("SUMMARIZE.CONFIG")
+                summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
+                summary_config          = self.app.config.get("SUMMARIZE.CONFIG")
             )
         return self 
     
@@ -172,8 +207,8 @@ class AppFactory:
         lang_dir                        = self._path(["TREE.DIRECTORIES.LANGUAGE"])
         self.app.language               = language.Language(
             directory                   = lang_dir,
-            extension                   = self.configuration.get("TREE.EXTENSIONS.LANGUAGE"),
-            enabled                     = self.configuration.language_modules()
+            extension                   = self.app.config.get("TREE.EXTENSIONS.LANGUAGE"),
+            enabled                     = self.app.config.language_modules()
         )
         return self
     
@@ -186,17 +221,17 @@ class AppFactory:
 
         self.app.logger                 = util.logger(
             file                        = log_file,
-            level                       = self.configuration.get("LOGS.LEVEL"),
-            schema                      = self.configuration.get("LOGS.SCHEMA")
+            level                       = self.app.config.get("LOGS.LEVEL"),
+            schema                      = self.app.config.get("LOGS.SCHEMA")
         )
         return self
     
 
     def with_model(self) -> typing.Self: 
         self.app.model                  = model.Model(
-            api_key                     = self.configuration.get("GEMINI.KEY"),
-            default_model               = self.configuration.get("GEMINI.DEFAULT"),
-            tuning                      = self.configuration.get("TUNING.ENABLED")
+            api_key                     = self.app.config.get("GEMINI.KEY"),
+            default_model               = self.app.config.get("GEMINI.DEFAULT"),
+            tuning                      = self.app.config.get("TUNING.ENABLED")
         ) 
         return self
 
@@ -212,12 +247,12 @@ class AppFactory:
         ])
         self.app.personas               = persona.Persona(
             current_persona             = self.app.cache.get("currentPersona"),
-            persona_config              = self.configuration.get("PERSONA"),
+            persona_config              = self.app.config.get("PERSONA"),
             context_file                = context_file,
             tune_dir                    = tune_dir,
-            tune_ext                    = self.configuration.get("TREE.EXTENSIONS.TUNING"),
+            tune_ext                    = self.app.config.get("TREE.EXTENSIONS.TUNING"),
             sys_dir                     = sys_dir,
-            sys_ext                     = self.configuration.get("TREE.EXTENSIONS.SYSTEM")
+            sys_ext                     = self.app.config.get("TREE.EXTENSIONS.SYSTEM")
         )
         return self
     
@@ -228,13 +263,13 @@ class AppFactory:
 
         self.app.templates              = template.Template(
             directory                   = temp_dir,
-            extension                   = self.configuration.get("TREE.EXTENSIONS.TEMPLATE")
+            extension                   = self.app.config.get("TREE.EXTENSIONS.TEMPLATE")
         )
         return self
     
     def with_terminal(self) -> typing.Self:
         self.app.terminal               = terminal.Terminal(
-            terminal_config             = self.configuration.get("TERMINAL")
+            terminal_config             = self.app.config.get("TERMINAL")
         )
         return self
 
@@ -245,19 +280,19 @@ class AppFactory:
         arguments                       = vars(self.app.arguments)
 
         if "repository" in arguments and "owner" in arguments:
-            if self.configuration.get("REPO.VCS") is None:
+            if self.app.config.get("REPO.VCS") is None:
                 raise ValueError("VCS backend not set.")
             
-            if self.configuration.get("REPO.VCS") == "github" \
-                and not self.configuration.get("REPO.AUTH.CREDS"):
+            if self.app.config.get("REPO.VCS") == "github" \
+                and not self.app.config.get("REPO.AUTH.CREDS"):
                 raise ValueError("VCS_TOKEN environment variable not set for github VCS.")
         
             self.app.repository         = repo.Repo(
                 repository              = self.app.arguments.repository,
                 owner                   = self.app.arguments.owner,
-                vcs                     = self.configuration.get("REPO.VCS"),
-                auth                    = self.configuration.get("REPO.AUTH"),
-                backends                = self.configuration.get("REPO.BACKENDS")
+                vcs                     = self.app.config.get("REPO.VCS"),
+                auth                    = self.app.config.get("REPO.AUTH"),
+                backends                = self.app.config.get("REPO.BACKENDS")
             )
 
         return self

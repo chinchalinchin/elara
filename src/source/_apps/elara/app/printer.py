@@ -3,8 +3,7 @@ import argparse
 import pprint
 
 # Application Modules
-import elara.src.source._apps.elara.app.factory as factory
-
+import app
 
 def _output(args: argparse.Namespace)   -> bool:
     return "output" in vars(args).keys() and args.output
@@ -15,7 +14,7 @@ def _show(args: argparse.Namespace)     -> bool:
 
 
 def debug(
-    app                                 : factory.App
+    app                                 : app.App
 ):
     app.logger.debug("Application initialized!")
     app.logger.debug("--- Application Configuration")
@@ -32,26 +31,18 @@ def debug(
     )
 
 def out(
-    application                         : factory.App,
-    output                              : factory.Output,
+    application                         : app.App,
+    output                              : app.Output,
     suppress_prompt                     : bool = True
 ):
     """
     Write output to appropriate location. Output should follow the format,
 
-    .. code-block:: python
 
-        out                             = schema.Output(**{
-            "prompt"                    : "words",
-            "response"                  : "words",
-            "summary"                   : "words",
-            "vcs"                       : "words"
-        })
-
-    :param application:
-    :type application: App
+    :param application: Application
+    :type application: app.App
     :param output: application output to be written.
-    :type output:
+    :type output: app.Output
     :param suppress_prompt: Flag to suppress prompts from the output. This argument only applies to terminal commands.  
     :type suppress_prompt: bool
     """
@@ -59,27 +50,27 @@ def out(
     args                                = vars(application.arguments)
 
     if _output(args):
-        payload = application.templates.render("output", output)
+        payload                         = application.templates.render("output", output)
         with open(args["output"], "w") as outfile:
             outfile.write(payload)
 
     if _show(args):
         if output.summary:
-            print(out["summary"])
+            print(output.summary)
 
         if output.prompt and not suppress_prompt:
             print(
                 application.config.get("OUTPUT.PROMPT").format(
-                    content             = out["prompt"]
+                    content             = output.prompt
                 )
             )
 
         if output.response:
             print(
                 application.config.get("OUTPUT.RESPONSE").format(
-                    content             = out["response"]
+                    content             = output.response
                 )
             )
 
         if output.vcs:
-            print(out["vcs"])
+            print(output.vcs)

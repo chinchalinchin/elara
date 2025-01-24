@@ -11,7 +11,7 @@ import factory
 import printer
 
 
-def configure(application : factory.App) -> dict:
+def configure(application : app.App)    -> dict:
     """
     Parses and applies configuration settings.
 
@@ -48,8 +48,8 @@ def configure(application : factory.App) -> dict:
             config[key]                 = validated_value
 
     if config:
-        application.logger.update(**config)
-        application.logger.save()
+        application.cache.update(**config)
+        application.cache.save()
         application.logger.info(f"Updated configuration with: {config}")
         return config
     
@@ -57,17 +57,22 @@ def configure(application : factory.App) -> dict:
     return config
 
 
-def init()                              -> factory.App:
+def init(
+    command_line : bool                 = False
+)                                       -> app.App:
     """
     Initialize the application.
 
-    :returns: Application configuration.
-    :rtype: dict
+    :returns: The appliation
+    :rtype: app.App
     """
+    application                         = factory.AppFactory()
 
-    application                         = factory.AppFactory() \
+    if command_line:
+        application                     = application.with_cli_args()
+
+    application                         = application \
                                             .with_logger() \
-                                            .with_cli_args() \
                                             .with_cache() \
                                             .with_language() \
                                             .with_model() \
@@ -104,17 +109,20 @@ def main() -> bool:
     """
     Main function to run the command-line interface.
     """
-    application                         = init()
-    operations                          = {
+    application : app.App               = init(
+        command_line                    = True
+    )
+
+    operations : dict                   = {
         # Administrative functions
         "configure"                     : configure,
         # Application functions
-        "summarize"                     : app.summarize,
-        "converse"                      : app.converse,
-        "review"                        : app.review,
-        "request"                       : app.request,
-        "tune"                          : app.tune,
-        "analyze"                       : app.analyze
+        "summarize"                     : application.summarize,
+        "converse"                      : application.converse,
+        "review"                        : application.review,
+        "request"                       : application.request,
+        "tune"                          : application.tune,
+        "analyze"                       : application.analyze
     }
 
     operation_name                      = application.arguments.operation
@@ -129,18 +137,17 @@ def main() -> bool:
     if tty and operation_name == "converse": 
         application.arguments.show   = True
         application.terminal.interact(
-            callable                    = app.converse,
+            callable                    = application.converse,
             printer                     = printer.out,
             app                         = application
         )
         return
         
     out                                 = operations[operation_name](application)
-    typed_out                           = factory.Output(out)
     
     printer.out(
         application                     = application,
-        output                          = typed_out,
+        output                          = out,
         suppress_prompt                 = False
     )
     
