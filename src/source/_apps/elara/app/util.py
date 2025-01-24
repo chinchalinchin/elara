@@ -9,8 +9,6 @@ Static application utilties.
 import logging
 import typing
 
-logger = logging.getLogger(__name__)
-
 TYPE_MAP = {
     "str": str, 
     "int": int,
@@ -50,13 +48,13 @@ def validate(
         try:
             return int(value)
         except ValueError:
-            logger.error(f"Invalid value type: {value} not a integer")
+            raise ValueError(f"Invalid value type: {value} not a integer")
 
     elif isinstance(value, float):
         try: 
             return float(value)
         except ValueError:
-            logger.error(f"Invalid value type: {value} not a float")
+            raise ValueError(f"Invalid value type: {value} not a float")
     
     elif isinstance(value, str):
         if value.lower() == "true":
@@ -87,3 +85,37 @@ def merge(
         if key in dict1 and key in dict2:
             result[key] = merge(dict1[key], dict2[key])
     return result
+
+def logger(
+    file                                : str = None,
+    level                               : str = "INFO",
+    schema                              : str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+)                                       -> logging.Logger:
+    """
+    Configure application logging
+
+    :param file: Location of log file, if logs are to be written to file.
+    :type log_file: str
+    :param app: Dictionary containing application configuration.
+    :type app: dict
+    """
+    logger                              = logging.getLogger()
+
+    if level in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
+        logger.setLevel(level)
+    else:
+        logger.setLevel("INFO") 
+
+    formatter                           = logging.Formatter(schema)
+
+    if file is not None:
+        file_handler                    = logging.FileHandler(file)
+        file_handler.setLevel(level) 
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+    console_handler                     = logging.StreamHandler()
+    console_handler.setLevel(level)
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+    return logger

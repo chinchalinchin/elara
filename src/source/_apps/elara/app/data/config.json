@@ -353,6 +353,15 @@
                 "HELP": "Tune a persona with data in the ``data/tuning`` directory",
                 "ARGUMENTS": []
             }
+        ],
+        "FIELDS": [ 
+            "DEFAULT", 
+            "DEST", 
+            "HELP", 
+            "SYNTAX", 
+            "ACTION", 
+            "NARGS",
+            "TYPE"
         ]
     },
     "TREE": {
@@ -365,7 +374,7 @@
             "TOOLS": "data/tools",
             "TUNING": "data/tuning",
             "SYSTEM": "data/system",
-            "LOGS": "data/logs"
+            "LOGS": "logs"
         },
         "FILES": {
             "CACHE": "cache.json",
@@ -379,7 +388,8 @@
             "LANGUAGE": ".rst",
             "TUNING": ".json",
             "CONVERSATION": ".json",
-            "MEMORY": ".json"
+            "MEMORY": ".json",
+            "SYSTEM": ".json"
         }
     },
     "LANGUAGE": {

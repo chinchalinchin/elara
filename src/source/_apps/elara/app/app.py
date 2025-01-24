@@ -5,175 +5,215 @@ app.py
 Application functions. All application functions require an `app` argument. The format of the `app` argument is given through the `app.App` typed dictionary.
 """
 # Standard Library Modules
-import main
+import argparse
+import dataclasses
+import logging 
 
+# Application Modules
+import objects.cache as cache
+import objects.config as config
+import objects.conversation as conversation
+import objects.directory as directory
+import objects.language as language
+import objects.persona as persona
+import objects.model as model
+import objects.repo as repo
+import objects.template as template
+import objects.terminal as terminal
 
-def analyze(app: main.App) -> dict:
+@dataclasses.dataclass
+class Output:
     """
-    This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
-
-    :param app: Dictioanry containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing templated prompt and model response.
-    :rtype: dict
+    Data structure for managing application output
     """
-    buffer                              = app["CACHE"].vars()
-    persona                             = app["PERSONAS"].function("analyze")
-    buffer["currentPersona"]            = persona
+    prompt : str | None
+    response : str | None
+    summary: str | None
+    vcs : str | None
 
-    analyze_vars                        = {
-        **buffer,
-        **app["LANGUAGE"].vars(),
-        **summarize(app),
-        **{ "latex": app["CONFIG"].get("ANALYZE.LATEX_PREAMBLE") }
-    }
 
-    parsed_prompt                       = app["TEMPLATES"].render(
-        temp                            = "analysis", 
-        variables                       = analyze_vars
-    )
+@dataclasses.dataclass
+class App:
+    """
+    Data structure for managing application objects.
+    """
+    arguments : argparse.Namespace | None
+    cache : cache.Cache  | None
+    config : config.Config  | None
+    conversations: conversation.Conversation | None
+    directory: directory.Directory | None
+    language: language.Language  | None
+    logger : logging.Logger | None
+    model : model.Model | None
+    personas : persona.Persona | None
+    repository: repo.Repo | None
+    templates : template.Template | None
+    terminal : terminal.Terminal | None
+
     
-    if app["ARGUMENTS"].render:
-        return {
-            "prompt"                    : parsed_prompt
+    def analyze(self)                       -> Output:
+        """
+        This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
+
+        :param app: Dictioanry containing application configuration.
+        :type app: dict
+        :returns: Dictionary containing templated prompt and model response.
+        :rtype: dict
+        """
+        buffer                              = self.cache.vars()
+        persona                             = self.personas.function("analyze")
+        buffer["currentPersona"]            = persona
+
+        analyze_vars                        = {
+            **buffer,
+            **self.language.vars(),
+            **self.summarize(),
+            **{ "latex": self.config.get("ANALYZE.LATEX_PREAMBLE") }
         }
-    
-    response                            = app["MODEL"].respond(
-        prompt                          = parsed_prompt,
-        model_name                      = app["CACHE"].get("currentModel"),
-        generation_config               = app["PERSONAS"].get("generationConfig", persona),
-        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
-        tools                           = app["PERSONAS"].get("tools", persona),
-        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
-    )
-    
-    return {
-        "prompt"                        : parsed_prompt,
-        "response"                      : response
-    }
 
-def brainstorm(app: main.App) -> dict:
-    # TODO: My idea is to create a new function called 'brainstorm' that Valis oversees. My thought is to remove myself entirely from the conversation. Valis would initiatialize the first prompt based on user input (I am thinking the input will be a list of concept words)  and then Valis picks a persona at random and forwards it to them. I would have the personas return structured output that contains their reply and the persona they are passing to. I would let a conversation develop until it reaches a certain length and kill it and return the 'brainstorm' session. I was thinking of then having Valis summarize and extract the salient points that were 'brainstormed'
-    # TODO: need to ensure the brainstorm history doesn't get persisted in individual conversation threads!
-    return {}
+        parsed_prompt                       = self.templates.render(
+            temp                            = "analysis", 
+            variables                       = analyze_vars
+        )
+        
+        if self.arguments.render:
+            return Output(
+                prompt                      = parsed_prompt
+            )
+        
+        response                            = self.model.respond(
+            prompt                          = parsed_prompt,
+            model_name                      = self.cache.get("currentModel"),
+            generation_config               = self.personas.get("generationConfig", persona),
+            safety_settings                 = self.personas.get("safetySettings", persona),
+            tools                           = self.personas.get("tools", persona),
+            system_instruction              = self.personas.get("systemInstruction", persona)
+        )
+        
+        return Output(
+            prompt                          = parsed_prompt,
+            response                        = response
+        )
 
+    def converse(self)                      -> Output:
+        """
+        Chat with one of Gemini's personas.
 
-def converse(app: main.App) -> dict:
-    """
-    Chat with one of Gemini's personas.
+        :param app: Dictioanry containing application configuration.
+        :type app: dict
+        :returns: Dictionary containing templated prompt and model response.
+        :rtype: dict
+        """
+        prompt                              = self.arguments.prompt
+        
+        if self.cache.get("currentPersona") is None:
+            converse_persona                = self.personas.function("converse")
+            self.cache.update(**{
+                "currentPersona"            : converse_persona
+            })
+            self.cache.save()
+            self.personas.update(converse_persona)
 
-    :param app: Dictioanry containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing templated prompt and model response.
-    :rtype: dict
-    """
-    prompt                              = app["ARGUMENTS"].prompt
-    
-    if app["CACHE"].get("currentPersona") is None:
-        converse_persona                = app["PERSONAS"].function("converse")
-        app["CACHE"].update(**{
-            "currentPersona"            : converse_persona
+        persona                             = self.cache.get("currentPersona")
+        prompter                            = self.cache.get("currentPrompter")
+
+        self.conversations.update(
+            persona                         = persona, 
+            name                            = prompter, 
+            msg                             = prompt,
+            persist                         = not self.arguments.render
+        )
+        
+        template_vars                       = { 
+            **self.cache.vars(), 
+            **self.language.vars(),
+            **self.personas.vars(persona),
+            **self.conversations.vars(persona)
+        }
+
+        if self.arguments.directory is not None:
+            self.logger.info("Injecting file summary into prompt...")
+            template_vars.update(
+                self.summarize()
+            )
+
+        parsed_prompt                       = self.templates.render(
+            temp                            = self.config.get("CONVERSE.TEMPLATE"), 
+            variables                       = template_vars
+        )
+
+        if self.arguments.render:
+            return Output(
+                prompt                      = parsed_prompt
+            )
+        
+        response_config                     = self.personas.get("generationConfig", persona)
+        response_config.update({
+            "response_schema"               : self.config.get("CONVERSE.SCHEMA"),
+            "response_mime_type"            : self.config.get("CONVERSE.MIME")
         })
-        app["CACHE"].save()
-        app["PERSONAS"].update(converse_persona)
 
-    persona                             = app["CACHE"].get("currentPersona")
-    prompter                            = app["CACHE"].get("currentPrompter")
+        response                            = self.model.respond(
+            prompt                          = parsed_prompt, 
+            generation_config               = response_config,
+            model_name                      = self.cache.get("currentModel"),
+            safety_settings                 = self.personas.get("safetySettings"),
+            tools                           = self.personas.get("tools"),
+            system_instruction              = self.personas.get("systemInstruction")
+        )
+        
+        self.conversations.update(
+            persona                         = persona, 
+            name                            = persona, 
+            msg                             = response.get("response"),
+            memory                          = response.get("memory"),
+            feedback                        = response.get("feedback")
+        )
 
-    app["CONVERSATIONS"].update(
-        persona                         = persona, 
-        name                            = prompter, 
-        msg                             = prompt,
-        persist                         = not app["ARGUMENTS"].render
-    )
-    
-    template_vars                       = { 
-        **app["CACHE"].vars(), 
-        **app["LANGUAGE"].vars(),
-        **app["PERSONAS"].vars(persona),
-        **app["CONVERSATIONS"].vars(persona)
-    }
+        return Output(
+            prompt                          = parsed_prompt,
+            response                        = response
+        )
 
-    if app["ARGUMENTS"].directory is not None:
-        app["LOGGER"].info("Injecting file summary into prompt...")
-        template_vars.update(summarize(app))
 
-    parsed_prompt                       = app["TEMPLATES"].render(
-        temp                            = app["CONFIG"].get("CONVERSE.TEMPLATE"), 
-        variables                       = template_vars
-    )
+    def request(self)                       -> Output:
+        """
+        This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
 
-    if app["ARGUMENTS"].render:
-        return {
-            "prompt"                    : parsed_prompt
+        :param app: Dictioanry containing application configuration.
+        :type app: dict
+        :returns: Dictionary containing templated feature request.
+        :rtype: dict
+        """
+        buffer                              = self.cache.vars()
+        persona                             = self.personas.function("request")
+        buffer["currentPersona"]            = persona
+
+        request_vars                         = { 
+            **self.terminal.gherkin(), 
+            **buffer 
         }
-    
-    response_config                     = app["PERSONAS"].get("generationConfig", persona)
-    response_config.update({
-        "response_schema"               : app["CONFIG"].get("CONVERSE.SCHEMA"),
-        "response_mime_type"            : app["CONFIG"].get("CONVERSE.MIME")
-    })
-
-    response                            = app["MODEL"].respond(
-        prompt                          = parsed_prompt, 
-        generation_config               = response_config,
-        model_name                      = app["CACHE"].get("currentModel"),
-        safety_settings                 = app["PERSONAS"].get("safetySettings"),
-        tools                           = app["PERSONAS"].get("tools"),
-        system_instruction              = app["PERSONAS"].get("systemInstruction")
-    )
-    
-    app["CONVERSATIONS"].update(
-        persona                         = persona, 
-        name                            = persona, 
-        msg                             = response.get("response"),
-        memory                          = response.get("memory"),
-        feedback                        = response.get("feedback")
-    )
-
-    return {
-        "prompt"                        : parsed_prompt,
-        "response"                      : response
-    }
-
-
-def request(app: main.App) -> dict:
-    """
-    This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
-
-    :param app: Dictioanry containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing templated feature request.
-    :rtype: dict
-    """
-    buffer                              = app["CACHE"].vars()
-    persona                             = app["PERSONAS"].function("request")
-    buffer["currentPersona"]            = persona
-
-    request_vars                         = { 
-        **app["TERMINAL"].gherkin(), 
-        **buffer 
-    }
-    
-    parsed_prompt                       = app["TEMPLATES"].render("request", request_vars)
-    
-    if app["ARGUMENTS"].render:
-        return {
-            "prompt"                    : parsed_prompt
-        }
-    
-    response                            = app["MODEL"].respond(
-        prompt                          = parsed_prompt,
-        model_name                      = app["CACHE"].get("currentModel"),
-        generation_config               = app["PERSONAS"].get("generationConfig", persona),
-        safety_settings                 = app["PERSONAS"].get("safetySettings", persona),
-        tools                           = app["PERSONAS"].get("tools", persona),
-        system_instruction              = app["PERSONAS"].get("systemInstruction", persona)
-    )
-    return {
-        "prompt"                        : parsed_prompt,
-        "response"                      : response
-    }
+        
+        parsed_prompt                       = self.templates.render("request", request_vars)
+        
+        if self.arguments.render:
+            return {
+                "prompt"                    : parsed_prompt
+            }
+        
+        response                            = self.model.respond(
+            prompt                          = parsed_prompt,
+            model_name                      = self.cache.get("currentModel"),
+            generation_config               = self.personas.get("generationConfig", persona),
+            safety_settings                 = self.personas.get("safetySettings", persona),
+            tools                           = self.personas.get("tools", persona),
+            system_instruction              = self.personas.get("systemInstruction", persona)
+        )
+        
+        return Output(
+            prompt                          = parsed_prompt,
+            response                        = response
+        )
 
 
 def review(app : main.App) -> dict:
