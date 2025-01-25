@@ -419,13 +419,16 @@
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "FREG_01",
-                    "RUSS_01"
+                    "TARS_01",
+                    "SART_01"
                 ],
                 "POEMS": [
+                    "ELIO_01",
+                    "CUMM_01",
                     "CUMM_02",
-                    "POPE_01",
-                    "THOM_01"
+                    "HOPK_01",
+                    "THOM_01",
+                    "SHAK_01"
                 ],
                 "PROOFS": []
             },
@@ -435,9 +438,9 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 8000,
+                "MAX_OUTPUT_TOKENS": 10000,
                 "TEMPERATURE": 0.9,
-                "TOP_P": 0.95,
+                "TOP_P": 0.80,
                 "TOP_K": 30
             },
             "SAFETY_SETTINGS": {
@@ -537,14 +540,15 @@
             "type": "object",
             "properties": {
                 "feedback": {
-                    "type": "string",
-                    "maxLength": 1000
+                    "type": "string"
                 },
                 "memory": {
-                    "type": "string",
-                    "maxLength": 240
+                    "type": "string"
                 },
                 "response": {
+                    "type": "string"
+                },
+                "next_prompt": {
                     "type": "string"
                 }
             },

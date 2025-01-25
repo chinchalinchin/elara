@@ -46,10 +46,7 @@ class Cache:
         Create a Cache singleton.
         """
         if not self.inst:
-            self.inst                       = super(
-                t                           = Cache, 
-                obj                         = self
-            ).__new__(self)
+            self.inst                       = super(Cache, self).__new__(self)
         return self.inst
     
 

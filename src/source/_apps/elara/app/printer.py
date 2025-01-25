@@ -83,8 +83,8 @@ def out(
             outfile.write(payload)
 
     if _show(application.arguments):
-        if output.summary:
-            print(output.summary)
+        if output.report:
+            print(output.report)
 
         if output.prompt and not suppress_prompt:
             print(

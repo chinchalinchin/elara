@@ -8,9 +8,6 @@ Object for managing terminal input.
 import logging 
 import typing
 
-# Application Modules
-import app 
-
 logger                                      = logging.getLogger(__name__)
 
 class Terminal:
@@ -59,7 +56,7 @@ class Terminal:
         self,
         callable                            : typing.Callable, 
         printer                             : typing.Callable, 
-        app                                 : app.App
+        app                                 : typing.Any
     )                                       -> bool:
         """
         Loop over terminal input and call a function. Function should have the following signature:

@@ -24,28 +24,33 @@ class Conversation:
 
         Conversation is implemented as a singleton to prevent concurrent writes to the a persona's chat history and memories.
     """
-    hist_dir = None
+    hist_dir                                    = None
     """History directory"""
-    mem_dir = None
+    mem_dir                                     = None
     """Memory directory"""
-    hist_ext = None
+    hist_ext                                    = None
     """History file extension"""
-    mem_ext = None 
+    mem_ext                                     = None 
     """Memory file extension"""
-    convo = { }
+    convo                                       = { }
     """Chat history"""
-    inst = None
+    inst                                        = None
     """Singleton instance"""
-    converse_config = {}
+    converse_config                             = { }
     """Conversation configuration."""
+    schemas                                     = { }
+    """Schema skeletons for new conversations and memories"""
+    schema_filename                             = None
+    """File name for schema."""
 
     def __init__(
         self, 
-        hist_dir : str,
-        mem_dir: str,
-        hist_ext: str,
-        mem_ext: str,
-        converse_config : dict,
+        hist_dir                                : str,
+        mem_dir                                 : str,
+        hist_ext                                : str,
+        mem_ext                                 : str,
+        converse_config                         : dict,
+        schema_filename                         : str = "_new"
     ):
         """
         Initialize Conversation object.
@@ -55,40 +60,55 @@ class Conversation:
         :param hist_ext: File extension for chat history.
         :type hist_ext: str
         """
-        self.hist_dir = hist_dir
-        self.hist_ext = hist_ext
-        self.mem_dir = mem_dir
-        self.mem_ext = mem_ext
-        self.converse_config = converse_config
+        self.hist_dir                           = hist_dir
+        self.hist_ext                           = hist_ext
+        self.mem_dir                            = mem_dir
+        self.mem_ext                            = mem_ext
+        self.converse_config                    = converse_config
+        self.schema_filename                    = schema_filename
         self._load()
 
-    def __new__(
-        self, 
-        *args, 
-        **kwargs
-    ):
+
+    def __new__(self, *args, **kwargs):
         """
         Create Conversation singleton.
         """
         if not self.inst:
-            self.inst = super(
-                Conversation, 
-                self
-            ).__new__(self)
+            self.inst                           = super(Conversation, self).__new__(self)
         return self.inst
     
+
+    @staticmethod
+    def _read(
+        schema_file                             : str,
+    ):
+        try:
+            with open(schema_file, "r") as f:
+                content             = f.read()
+
+            if content:
+                payload             = json.loads(content)
+
+            else: 
+                raise ValueError(f"No schema found at {schema_file}")
+            
+            return payload["payload"]
+
+        except (FileNotFoundError, json.JSONDecodeError, Exception) as e:
+            raise ValueError(f"Error loading JSON schema {schema_file}")
+
     @staticmethod
     def _process(
         dir : str, 
         ext : str, 
         prop: str,
-        default : typing.Any,
+        default: typing.Any,
         temp : str = "_new"
     ) -> dict:
         raw = { }
         for root, _, files in os.walk(dir):
             for file in files:
-                persona, ext                = os.path.splitext(file)
+                persona, ext                    = os.path.splitext(file)
 
                 if ext != ext or persona == temp:
                     continue
@@ -99,8 +119,10 @@ class Conversation:
                 try:
                     with open(file_path, "r") as f:
                         content             = f.read()
+
                     if content:
                         payload             = json.loads(content)
+
                     else: 
                         payload             = { "payload": default }
 
@@ -109,33 +131,46 @@ class Conversation:
                 except (FileNotFoundError, json.JSONDecodeError) as e:
                     logger.error(f"Error loading JSON data: {e}")
                     raw[persona][prop] = default
+
                 except Exception as e:
                     logger.error(f"An unexpected error occurred while loading from {file_path}: {e}")
                     raw[persona][prop] = default
         
         return raw
 
+
     def _load(self):
         """
         Load Conversation history from file.
         """
+        hist_schema_filename = self.schema_filename + self.hist_ext
+        hist_schema_file = os.path.join(
+            self.hist_dir, hist_schema_filename)
         
+        self.schemas["history"] = self._read(hist_schema_file)
+
+        mem_schema_filename = self.schema_filename + self.mem_ext
+        mem_schema_file = os.path.join(
+            self.mem_dir, mem_schema_filename)
+        
+        self.schemas["memories"] = self._read(mem_schema_file)
+
         history = self._process(
             dir = self.hist_dir, 
             ext = self.hist_ext,
             prop = "history",
-            default = [ ]
+            default = self.schemas["history"]
         )
+
         memories = self._process(
             dir = self.mem_dir, 
             ext = self.mem_ext,
             prop = "memories",
-            default = {
-                "sequence": [],
-                "feedback": None
-            } 
+            default = self.schemas["memories"]
         )
+
         self.convo = util.merge(history, memories)
+
 
     def _persist(
         self, 
@@ -169,6 +204,7 @@ class Conversation:
     
         return None
     
+
     def _timestamp(self):
         """
         Generates a timestamp in MM-DD HH:MM EST 24-hour format.
@@ -181,6 +217,7 @@ class Conversation:
             )
         ) 
         return now.strftime("%m-%d %H:%M")
+
 
     def get(
         self, 
@@ -196,6 +233,7 @@ class Conversation:
             raise ValueError(f"Persona {persona} conversation history not found.")
         return self.convo[persona]
     
+
     def update(
         self, 
         persona : str, 
@@ -244,6 +282,7 @@ class Conversation:
             self._persist(persona)
 
         return self.convo[persona]
+
 
     def vars(
         self,
