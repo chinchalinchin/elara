@@ -5,6 +5,7 @@ objects.conversation
 Object for managing conversation chat history.
 """
 # Standard Library Modules
+import enum
 import datetime
 import json
 import logging
@@ -16,56 +17,67 @@ import util
 
 logger = logging.getLogger(__name__)
 
+class ConvoProps(enum.Enum):
+    """
+    Conversation property key enumeration.
+    """
+    # Internal Properties
+    HISTORY                                     = "history"
+    MEMORIES                                    = "memories"
+    MEMORY                                      = "memory"
+    SEQUENCE                                    = "sequence"
+    FEEDBACK                                    = "feedback"
+    MESSAGE                                     = "msg"
+    TIMESTAMP                                   = "timestamp"
+    NAME                                        = "name"
+    # Configuration Properties
+    SCHEMA_FILENAME                             = "SCHEMA_FILENAME"
+
+
 class Conversation:
     """
-    Application conversations. Object for loading and persisting messages to the chat history,  and updating persona memories.
+    Application conversations. Object for loading and persisting messages to the chat history, and updating persona memories.
 
     .. important::
 
         Conversation is implemented as a singleton to prevent concurrent writes to the a persona's chat history and memories.
     """
-    hist_dir                                    = None
-    """History directory"""
-    mem_dir                                     = None
-    """Memory directory"""
-    hist_ext                                    = None
-    """History file extension"""
-    mem_ext                                     = None 
-    """Memory file extension"""
-    convo                                       = { }
-    """Chat history"""
-    inst                                        = None
-    """Singleton instance"""
-    converse_config                             = { }
+    convo_config                                = { }
     """Conversation configuration."""
+    convo                                       = { }
+    """Conversation history."""
+    dirs                                        = None
+    """Conversation data directories."""
+    exts                                        = None
+    """Conversation data extensions."""
+    inst                                        = None
+    """Singleton instance."""
     schemas                                     = { }
-    """Schema skeletons for new conversations and memories"""
-    schema_filename                             = None
-    """File name for schema."""
+    """Schema skeletons for new conversation data structures."""
 
     def __init__(
         self, 
-        hist_dir                                : str,
-        mem_dir                                 : str,
-        hist_ext                                : str,
-        mem_ext                                 : str,
-        converse_config                         : dict,
-        schema_filename                         : str = "_new"
+        dirs                                    : str,
+        exts                                    : str,
+        convo_config                            : dict,
     ):
         """
         Initialize Conversation object.
 
-        :param hist_dir: Directory containing chat history.
-        :type hist_dir: str
+        .. note::
+
+            dirs = {
+                f"{conversation.ConvoProps.HISTORY}": "history directory",
+                f"{convversation.ConvoProps.MEMORY}": "memory directory"
+            }
+
+        :param dirs: Directories 
         :param hist_ext: File extension for chat history.
         :type hist_ext: str
         """
-        self.hist_dir                           = hist_dir
-        self.hist_ext                           = hist_ext
-        self.mem_dir                            = mem_dir
-        self.mem_ext                            = mem_ext
-        self.converse_config                    = converse_config
-        self.schema_filename                    = schema_filename
+        self.dirs                               = dirs
+        self.exts                               = exts
+        self.convo_config                       = convo_config
         self._load()
 
 
@@ -78,63 +90,113 @@ class Conversation:
         return self.inst
     
 
-    @staticmethod
-    def _read(
-        schema_file                             : str,
+    def _schema(self,
+        prop                                    : ConvoProps
     ):
+        schema_filename                         = self.convo_config[ConvoProps.SCHEMA_FILENAME.value]
+        schema_file                             = "".join([
+                                                    schema_filename,
+                                                    self.exts[prop]
+                                                ])
+        schema_path                             = os.path.join(
+                                                    self.dirs[prop], 
+                                                    schema_file
+                                                )
+        
         try:
-            with open(schema_file, "r") as f:
-                content             = f.read()
+            with open(schema_path, "r") as f:
+                content                         = f.read()
 
             if content:
-                payload             = json.loads(content)
+                payload                         = json.loads(content)
 
             else: 
-                raise ValueError(f"No schema found at {schema_file}")
+                raise ValueError(f"No schema found at {schema_path}")
             
             return payload["payload"]
 
         except (FileNotFoundError, json.JSONDecodeError, Exception) as e:
-            raise ValueError(f"Error loading JSON schema {schema_file}")
+            raise ValueError(f"Error loading JSON schema {schema_path}")
 
-    @staticmethod
-    def _process(
-        dir : str, 
-        ext : str, 
-        prop: str,
-        default: typing.Any,
-        temp : str = "_new"
-    ) -> dict:
-        raw = { }
-        for root, _, files in os.walk(dir):
+
+    def _write(self,
+        persona                                 : str,
+        prop                                    : ConvoProps
+    )                                           -> None:
+        """
+        Persist a conversation property for a persona.
+
+        :param persona: Persona whose data is being persisted.
+        :type persona: str
+        :param prop: Property of persona that is being persisted.
+        :type: `conversation.ConvoProps`
+        """
+        file                                    = "".join([
+                                                    persona, 
+                                                    self.exts[prop]
+                                                ])
+        
+        file_path                               = os.path.join(
+                                                    self.dirs[prop], 
+                                                    file
+                                                )
+        
+        payload                                 = util.payload(
+                                                    self.convo[persona][prop]
+                                                )
+        
+        try:
+            with open(file_path, 'w') as f:
+                json.dump(payload, f)
+
+        except Exception as e:
+            logger.error(f"Error persisting {prop} for {persona}: {e}")
+
+
+    def _process(self,
+        prop                                    : ConvoProps,
+    )                                           -> dict:
+        """
+        Traverse the conversation property directory and read the contents into a data structure.
+
+        :param prop: Conversation property to read.
+        :type: `conversation.ConvoProps`
+        :returns: A dictionary containing the parsed data.
+        :rtype: `dict`
+        """
+        raw                                     = { }
+        for root, _, files in os.walk(self.dirs[prop]):
             for file in files:
                 persona, ext                    = os.path.splitext(file)
 
-                if ext != ext or persona == temp:
+                if ext != self.exts[prop] or \
+                    persona == self.convo_config[ConvoProps.SCHEMA_FILENAME.value]:
                     continue
 
-                file_path                   = os.path.join(root, file)
-                raw[persona]                = { }
+                file_path                       = os.path.join(root, file)
+                raw[persona]                    = { }
 
                 try:
                     with open(file_path, "r") as f:
-                        content             = f.read()
+                        content                 = f.read()
 
                     if content:
-                        payload             = json.loads(content)
+                        payload                 = json.loads(content)
 
                     else: 
-                        payload             = { "payload": default }
+                        payload                 = util.payload(self.schemas[prop])
 
-                    raw[persona][prop] = payload["payload"]
+                    raw[persona][prop]          = payload["payload"]
 
                 except (FileNotFoundError, json.JSONDecodeError) as e:
                     logger.error(f"Error loading JSON data: {e}")
-                    raw[persona][prop] = default
+                    raw[persona][prop]          = self.schemas[prop]
 
                 except Exception as e:
-                    logger.error(f"An unexpected error occurred while loading from {file_path}: {e}")
-                    raw[persona][prop] = default
+                    logger.error(
+                        f"An unexpected error occurred while loading from {file_path}: {e}"
+                    )
+                    raw[persona][prop]          = self.schemas[prop]
         
         return raw
 
@@ -143,86 +205,85 @@ class Conversation:
         """
         Load Conversation history from file.
         """
-        hist_schema_filename = self.schema_filename + self.hist_ext
-        hist_schema_file = os.path.join(
-            self.hist_dir, hist_schema_filename)
-        
-        self.schemas["history"] = self._read(hist_schema_file)
 
-        mem_schema_filename = self.schema_filename + self.mem_ext
-        mem_schema_file = os.path.join(
-            self.mem_dir, mem_schema_filename)
-        
-        self.schemas["memories"] = self._read(mem_schema_file)
-
-        history = self._process(
-            dir = self.hist_dir, 
-            ext = self.hist_ext,
-            prop = "history",
-            default = self.schemas["history"]
+        self.schemas[ConvoProps.HISTORY.value]  = self._schema(
+            prop                                = ConvoProps.HISTORY.value
         )
 
-        memories = self._process(
-            dir = self.mem_dir, 
-            ext = self.mem_ext,
-            prop = "memories",
-            default = self.schemas["memories"]
+        self.schemas[ConvoProps.MEMORIES.value] = self._schema(
+            prop                                = ConvoProps.MEMORIES.value
         )
 
-        self.convo = util.merge(history, memories)
+        history                                 = self._process(
+            prop                                = ConvoProps.HISTORY.value,
+        )
+
+        memories                                = self._process(
+            prop                                = ConvoProps.MEMORIES.value,
+        )
+
+        self.convo                              = util.merge(
+            dict1                               = history, 
+            dict2                               = memories
+        )
 
 
-    def _persist(
-        self, 
-        persona : str
-    ) -> None:
+    def _persist(self, 
+        persona                                 : str
+    )                                           -> None:
         """
         Save Persona Conversation history to file.
 
         :param persona: Persona with which the prompter is conversing.
         :type persona: str
         """
-        file = "".join([persona, self.hist_ext])
-        file_path = os.path.join(self.hist_dir, file)
-        payload = { "payload": self.convo[persona]["history"] }
-        try:
-            with open(file_path, 'w') as f:
-                json.dump(payload, f)
-        except Exception as e:
-            logger.error(f"Error persisting conversation history for {persona}: {e}")
-            return None
+
+        self._write(
+            persona                             = persona,
+            prop                                = ConvoProps.HISTORY.value
+        )
         
-        file = "".join([persona, self.mem_ext])
-        file_path = os.path.join(self.mem_dir, file)
-        payload = { "payload": self.convo[persona]["memories"] }
-        try:
-            with open(file_path, 'w') as f:
-                json.dump(payload, f)
-        except Exception as e:
-            logger.error(f"Error persisting memories for {persona}: {e}")
-            return None
-    
-        return None
+        self._write(
+            persona                             = persona, 
+            prop                                = ConvoProps.MEMORIES.value
+        )
     
 
     def _timestamp(self):
         """
         Generates a timestamp in MM-DD HH:MM EST 24-hour format.
         """
-        now = datetime.datetime.now(
-            datetime.timezone(
-                datetime.timedelta(
-                    hours=self.converse_config.get("TIMEZONE_OFFSET")
-                )
-            )
+        delta                                   = datetime.timedelta(
+            hours                               = self.convo_config.get("TIMEZONE_OFFSET")
+        )
+        zone                                    = datetime.timezone(
+            offset                              = delta
+        )
+        now                                     = datetime.datetime.now(
+            tz                                  = zone
         ) 
         return now.strftime("%m-%d %H:%M")
 
 
-    def get(
-        self, 
-        persona : str
-    ) -> dict:
+    def clear(self,
+        persona                                 : str
+    )                                           -> None:
+        """
+        Remove a persona's conversation history and memories.
+
+        :param persona: Persona to be cleared.
+        :type persona: str
+        """
+        self.convo[persona][ConvoProps.HISTORY.value] \
+                                                = self.schemas[ConvoProps.HISTORY.value]
+        self.convo[persona][ConvoProps.MEMORIES.value] \
+                                                = self.schemas[ConvoProps.MEMORIES.value] 
+        self._persist()
+
+
+    def get(self, 
+        persona                                 : str
+    )                                           -> dict:
         """
         Return current persona.
 
@@ -234,49 +295,48 @@ class Conversation:
         return self.convo[persona]
     
 
-    def update(
-        self, 
-        persona : str, 
-        name : str, 
-        msg : str,
-        memory: str | None = None,
-        feedback: str | None = None,
-        persist: bool = True
+    def update(self, 
+        persona                                 : str, 
+        name                                    : str, 
+        msg                                     : str,
+        memory                                  : str | None = None,
+        feedback                                : str | None = None,
+        persist                                 : bool = True
     ) -> dict:
         """
-        Update Conversation history and CACHE to file.
+        Update and persist conversation properties.
 
         :param persona: Persona with which the prompter is conversing.
-        :type persona: str
-        :param name: Name of the chatter (prompter or persona).
-        :type name: str
+        :type persona: `str`
+        :param name: Name of the speaker (prompter or persona).
+        :type name: `str`
         :param msg: Chat message.
-        :type msg: str
-        :param mem: Memory string
-        :type msg: str
+        :type msg: `str`
+        :param memory: Memory string
+        :type memory: `str`
         :returns: Full chat history
-        :rtype: dict
+        :rtype: `dict`
         """
         if persona not in self.convo.keys():
-            self.convo[persona] = {}
-            self.convo[persona]["history"] = []
-            self.convo[persona]["memories"] = {}
-            self.convo[persona]["memories"]["sequence"] = []
-            self.convo[persona]["memories"]["feedback"] = None
+            self.convo[persona][ConvoProps.HISTORY.value] \
+                                                = self.schemas[ConvoProps.HISTORY.value]
+            self.convo[persona][ConvoProps.MEMORIES.value] \
+                                                = self.schemas[ConvoProps.MEMORIES.value] 
 
-        self.convo[persona]["history"].append({ 
-            "name": name,
-            "msg": msg,
-            "timestamp": self._timestamp()
+        self.convo[persona][ConvoProps.HISTORY.value].append({ 
+            ConvoProps.NAME.value               : name,
+            ConvoProps.MESSAGE.value            : msg,
+            ConvoProps.TIMESTAMP.value          : self._timestamp()
         })
         
         if memory is not None:
-            self.convo[persona]["memories"]["sequence"].append({
-                "memory": memory
+            self.convo[persona][ConvoProps.MEMORIES.value][ConvoProps.SEQUENCE.value].append({
+                ConvoProps.MEMORY.value         : memory
             })
 
         if feedback is not None:
-            self.convo[persona]["memories"]["feedback"] = feedback
+            self.convo[persona][ConvoProps.MEMORIES.value][ConvoProps.FEEDBACK.value] \
+                                                = feedback
 
         if persist:
             self._persist(persona)
@@ -284,10 +344,9 @@ class Conversation:
         return self.convo[persona]
 
 
-    def vars(
-        self,
-        persona: str
-    ) -> dict: 
+    def vars(self,
+        persona                                 : str
+    )                                           -> dict: 
         """
         Return current persona formatted for templating.
 
@@ -297,11 +356,8 @@ class Conversation:
         if persona not in self.convo.keys():
             logger.error(f"Persona {persona} conversation history not found")
             return {
-                "history": [],
-                "memories": {}
+                ConvoProps.HISTORY.value        : self.schemas[ConvoProps.HISTORY.value],
+                ConvoProps.MEMORIES.value       : self.schemas[ConvoProps.MEMORIES.value]
             }
         
-        return {
-            "history": self.convo[persona]["history"],
-            "memories": self.convo[persona]["memories"]
-        }
+        return self.convo[persona]

@@ -16,7 +16,7 @@ import util
 import app as schema
 import objects.cache as cache
 import objects.config as config
-import objects.conversation as conversation
+import objects.conversation as convo
 import objects.directory as directory
 import objects.language as language
 import objects.persona as persona
@@ -166,14 +166,23 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
 
-        hist_dir                        = self._path(["TREE.DIRECTORIES.HISTORY"])
-        mem_dir                         = self._path(["TREE.DIRECTORIES.MEMORY"])
-        self.app.conversations          = conversation.Conversation(
-            hist_dir                    = hist_dir,
-            hist_ext                    = self.app.config.get("TREE.EXTENSIONS.CONVERSATION"),
-            mem_dir                     = mem_dir,
-            mem_ext                     = self.app.config.get("TREE.EXTENSIONS.MEMORY"),
-            converse_config             = self.app.config.get("CONVERSE.CONFIG")
+        hist_key                        = convo.ConvoProps.HISTORY.value
+        mem_key                         = convo.ConvoProps.MEMORIES.value
+
+        dirs                            = {
+            hist_key                    : self._path(["TREE.DIRECTORIES.HISTORY"]),
+            mem_key                     : self._path(["TREE.DIRECTORIES.MEMORY"])
+        }
+
+        exts                            = {
+            hist_key                    : self.app.config.get("TREE.EXTENSIONS.CONVERSATION"),
+            mem_key                     : self.app.config.get("TREE.EXTENSIONS.MEMORY")
+        }
+
+        self.app.conversations          = convo.Conversation(
+            dirs                        = dirs,
+            exts                        = exts,
+            convo_config                = self.app.config.get("CONVERSE.CONFIG")
         )
         return self
     

@@ -19,8 +19,7 @@ def clear(application: app.App)         -> None:
     :type app: `app.App`
     """
     for persona in application.arguments.clear:
-        # TODO: clear persona data and uses `_new` schema to reset structure.
-        pass 
+        application.conversations.clear(persona)
 
 
 def configure(application : app.App)    -> None:

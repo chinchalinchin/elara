@@ -534,7 +534,8 @@
     },
     "CONVERSE": {
         "CONFIG": {
-            "TIMEZONE_OFFSET": -5
+            "TIMEZONE_OFFSET": -5,
+            "SCHEMA_FILENAME": "_new"
         },
         "SCHEMA": {
             "type": "object",

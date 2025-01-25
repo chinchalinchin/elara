@@ -15,6 +15,11 @@ TYPE_MAP                                = {
     "bool"                              : bool
 }
 
+
+def payload(a: typing.Any):
+    return { "payload": a }
+
+
 def lower(d: dict)                      -> dict:
     """
     Convert the keys of a dictionary to lowercase.
