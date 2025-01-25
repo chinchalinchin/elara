@@ -1,15 +1,19 @@
 
+"""
+factory.py
+----------
+
+Factory object for building application objects.
+"""
 # Standard Library Modules
 import argparse
-import dataclasses
-import logging
 import os
 import pathlib
 import typing
 
 # Application Modules
 import util
-import app as ap
+import app as schema
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as conversation
@@ -22,27 +26,15 @@ import objects.template as template
 import objects.terminal as terminal
 
 
-@dataclasses.dataclass
-class Output:
-    """
-    Data structure for managing application output
-    """
-    prompt : str | None
-    response : str
-    summary: str | None
-    vcs : str | None
-
-
 class AppFactory:
-    app : ap.App                        = None
+    app : schema.App                    = None
     """Factory's application."""
     app_dir : str                       = None
     """Directory containing application."""
     config_file : str                   = None
     """Full path of the application's configuration file."""
 
-    def __init__(
-        self,
+    def __init__(self,
         rel_dir : str                   = "data",
         filename : str                  = "config.json"
     ):
@@ -56,7 +48,7 @@ class AppFactory:
         """
         self.app_dir                    = pathlib.Path(__file__).resolve().parent
         self.config_file                = os.path.join(self.app_dir, rel_dir, filename)
-        self.app                        = ap.App()
+        self.app                        = schema.App()
         self.app.config                 = config.Config(
             config_file                 = self.config_file
         )
@@ -65,7 +57,17 @@ class AppFactory:
             raise ValueError("GEMINI_KEY environment variable not set.")
 
 
-    def _path(self, parts)              -> str:
+    def _path(self, 
+        parts                           : list
+    )                                   -> str:
+        """
+        Append the application directory to a list of relative paths. 
+        
+        :param parts: List of configuration paths to append to application directory.
+        :type parts: list
+        :returns: System formatted path.
+        :rtype: str
+        """
         return os.path.join(
             self.app_dir,
             *[self.app.config.get(p) for p in parts ]
@@ -74,7 +76,7 @@ class AppFactory:
 
     def with_cache(self)                -> typing.Self:
         """
-        Initialize and append a objects.cache.Cache object to the factory's app.App object.
+        Initialize and append a `objects.cache.Cache` object to the factory's `app.App` object.
 
         :returns: Updated self.
         :rtype: typing.Self
@@ -95,7 +97,7 @@ class AppFactory:
 
     def with_cli_args(self)             -> typing.Self:
         """
-        Initialize and append argparse.Namespace obejct to the factory's app.App object.
+        Initialize and append `argparse.Namespace` object to the factory's `app.App` object.
 
         :returns: Updated self.
         :rtype: typing.Self
@@ -156,9 +158,10 @@ class AppFactory:
 
     def with_conversations(self)        -> typing.Self:
         """
-        Initialize and append objects.conversation.Conversation to 
+        Initialize and append a `objects.conversation.Conversation` object to the factory's `app.App` object. 
+
         :returns: Updated self.
-        :rtype: typing.Self
+        :rtype: `typing.Self`
         """
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
@@ -174,7 +177,14 @@ class AppFactory:
         )
         return self
     
+
     def with_directory(self)            -> typing.Self:
+        """
+        Initialize and append a `objects.directory.Directory` object to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype: `typing.Self`
+        """
         if self.app.arguments is None:
             raise ValueError("Arguments must be initialized before Repository!")
         
@@ -188,7 +198,14 @@ class AppFactory:
             )
         return self 
     
+
     def with_language(self)             -> typing.Self:
+        """
+        Initialize and append a `objects.conversation.Conversation` object to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype: `typing.Self`
+        """
         lang_dir                        = self._path(["TREE.DIRECTORIES.LANGUAGE"])
         self.app.language               = language.Language(
             directory                   = lang_dir,
@@ -199,6 +216,12 @@ class AppFactory:
     
 
     def with_logger(self)               -> typing.Self:
+        """
+        Initialize and append `logging.Logger` to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
         log_file                        = self._path([
             "TREE.DIRECTORIES.LOGS",
             "TREE.FILES.LOG"
@@ -213,6 +236,12 @@ class AppFactory:
     
 
     def with_model(self)                -> typing.Self: 
+        """
+        Initialize and append a `objects.model.Model` object to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype: `typing.Self`
+        """
         self.app.model                  = model.Model(
             api_key                     = self.app.config.get("GEMINI.KEY"),
             default_model               = self.app.config.get("GEMINI.DEFAULT"),
@@ -220,7 +249,14 @@ class AppFactory:
         ) 
         return self
 
+
     def with_personas(self)             -> typing.Self:
+        """
+        Initialize and append `objects.persona.Persona` to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
         if self.app.cache is None:
             raise ValueError("Cache must be initialized before Personas!")
         
@@ -241,7 +277,14 @@ class AppFactory:
         )
         return self
     
+
     def with_templates(self)            -> typing.Self:
+        """
+        Initialize and append a `objects.template.Template` object to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype:`typing.Self`
+        """
         temp_dir                        = self._path([
             "TREE.DIRECTORIES.TEMPLATES"
         ])
@@ -252,13 +295,27 @@ class AppFactory:
         )
         return self
     
+
     def with_terminal(self)             -> typing.Self:
+        """
+        Initialize and append a `objects.terminal.Terminal` object to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype:`typing.Self`
+        """
         self.app.terminal               = terminal.Terminal(
             terminal_config             = self.app.config.get("TERMINAL")
         )
         return self
 
+
     def with_repository(self)           -> typing.Self:
+        """
+        Initialize and append a `objects.repo.Repo` object to the factory's `app.App` object. 
+        
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
         if self.app.arguments is None:
             raise ValueError("Arguments must be initialized before Repository!")
         
@@ -281,6 +338,7 @@ class AppFactory:
             )
 
         return self
+   
     
-    def build(self)                     -> ap.App :
+    def build(self)                     -> schema.App :
         return self.app

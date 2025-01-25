@@ -96,6 +96,29 @@
             "TITLE": "95 Poems, #16",
             "AUTHOR": "e.e. cummings"
         },
+        "CUMM_02": {
+            "LINES": [
+                "all which isn't singing is mere talking",
+                "and all talking's talking to oneself",
+                "(whether that oneself be sought or seeking",
+                "master or disciple sheep or wolf)",
+                "",
+                "gush to it as deity or devil",
+                "--toss in sobs and reasons threats and smiles",
+                "name it cruel fair or blessed evil--",
+                "it is you (ne i)nobody else",
+                "",
+                "drive dumb mankind dizzy with haranguing",
+                "--you are deafened every mother's son--",
+                "all is merely talk which isn't singing",
+                "and all talking's to oneself alone",
+                "",
+                "But the very song of(as mountains",
+                "feel and lovers)singing is silence"
+            ],
+            "TITLE": "73 Poems, #32",
+            "AUTHOR": "e.e. cummings"
+        },
         "DONN_01": {
             "LINES": [
                 "I shall be made thy music; as I come",
@@ -136,6 +159,27 @@
             "AUTHOR": "John Donne"
         },
         "ELIO_01": {
+            "LINES": [
+                "The dove descending breaks the air",
+                "With flame of incandescent terror",
+                "Of which the tongues declare",
+                "The one discharge from sin and error.",
+                "The only hope, or else despair",
+                "Lies in the choice of pyre or pyre--",
+                "To be redeemed from fire by fire.",
+                "",
+                "Who then devised the torment? Love.",
+                "Love is the unfamiliar Name",
+                "Behind the hands that wove",
+                "The intolerable shirt of flame",
+                "Which human power cannot remove.",
+                "We only live, only suspire",
+                "Consumed by either fire or fire."
+            ],
+            "TITLE": "Little Gidding IV",
+            "AUTHOR": "T.S. Eliot"
+        },
+        "ELIO_02": {
             "LINES": [
                 "What we call the beginning is often the end",
                 "And to make and end is to make a beginning.",
@@ -189,7 +233,7 @@
             "TITLE": "Little Gidding V",
             "AUTHOR": "T.S. Eliot"
         },
-        "ELIO_02": {
+        "ELIO_03": {
             "LINES": [
                 "We are the hollow men",
                 "We are the stuffed men",
@@ -385,6 +429,59 @@
             ],
             "TITLE": "Sonnet 64",
             "AUTHOR": "William Shakespeare"
+        },
+        "THOM_01": {
+            "LINES": [
+                "I",
+                "",
+                "All all and all the dry worlds lever,",
+                "Stage of the ice, the solid ocean,",
+                "All from the oil, the pound of lava.",
+                "City of spring, the governed flower,",
+                "Turns in the earth that turn the ashen",
+                "Towns around on a wheel of fire.",
+                "",
+                "How now my flesh, my naked fellow,",
+                "Dug of the sea, the glanded morrow,",
+                "Worm in the scalp, the staked and fallow.",
+                "All all and all, the corpse's lover,",
+                "Skinny as sin, the foaming marrow,",
+                "All of the flesh, the dry worlds lever.",
+                "",
+                "II",
+                "",
+                "Fear not the waking world, my mortal,",
+                "Fear not the flat, synthetic blood,",
+                "Nor the heart in the ribbing metal.",
+                "Fear not the tread, the seeded milling,",
+                "The trigger and scythe, the bridal blade,",
+                "Nor the flint in the lover's mauling.",
+                "",
+                "Man of my flesh, the jawbone riven,",
+                "Know now the flesh's lock and vice,",
+                "And the cage for the scythe-eyed raver.",
+                "Know, O my bone, the jointed lever,",
+                "Fear not the screws that turn the voice",
+                "And the face to the driven lover.",
+                "",
+                "III",
+                "",
+                "All all and all the dry worlds couple,",
+                "Ghost with her ghost, contagious man", 
+                "With the womb of his shapeless people.",
+                "All that shapes from the caul and suckle,",
+                "Stroke of mechanical flesh on mine,",
+                "Square in these worlds the mortal circle.",
+                "",
+                "Flower, flower, the people's fusion",
+                "O light in zenith, the coupled bud,",
+                "And the flame in the flesh's vision.",
+                "Out of the sea, the drive of oil,",
+                "Socket and grave, the brassy blood,",
+                "Flower, flower, all all and all."
+            ],
+            "TITLE": "All All and All",
+            "AUTHOR": "Dylan Thomas"
         }
     },
     "PROOFS": {

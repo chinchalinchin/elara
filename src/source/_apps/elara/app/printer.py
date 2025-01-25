@@ -1,3 +1,10 @@
+"""
+printer.py
+----------
+
+Functions for displaying and saving application out.
+"""
+
 # Standard Library Modules
 import argparse
 import pprint
@@ -6,29 +13,48 @@ import pprint
 import app
 
 def _output(args: argparse.Namespace)   -> bool:
+    """
+    Determine if ``output`` has been passed into the application arguments.
+
+    :params args: Application arguments
+    :type args: `argparse.Namespace`
+    """
     return "output" in vars(args).keys() and args.output
 
 
 def _show(args: argparse.Namespace)     -> bool:
+    """
+    Determine if ``show`` has been passed into the application arguments.
+
+    :param application: Application
+    :type application: `app.App`
+    """
     return "show" in vars(args).keys() and args.show
 
 
 def debug(
-    app                                 : app.App
+    application                         : app.App
 ):
-    app.logger.debug("Application initialized!")
-    app.logger.debug("--- Application Configuration")
-    app.logger.debug(
-        pprint.pformat(app.config.vars())
+    """
+    Log application debug metadata.
+
+    :param application: Application
+    :type application: `app.App`
+    """
+    application.logger.debug("Application initialized!")
+    application.logger.debug("--- Application Configuration")
+    application.logger.debug(
+        pprint.pformat(application.config.vars())
     )
-    app.logger.debug("--- Application Cache")
-    app.logger.debug(
-        pprint.pformat(app.cache.vars())
+    application.logger.debug("--- Application Cache")
+    application.logger.debug(
+        pprint.pformat(application.cache.vars())
     )
-    app.logger.debug("--- Application Arguments")
-    app.logger.debug(
-        pprint.pformat(app.arguments)
+    application.logger.debug("--- Application Arguments")
+    application.logger.debug(
+        pprint.pformat(application.arguments)
     )
+
 
 def out(
     application                         : app.App,
@@ -40,11 +66,11 @@ def out(
 
 
     :param application: Application
-    :type application: app.App
+    :type application: `app.App`
     :param output: application output to be written.
-    :type output: app.Output
+    :type output: `app.Output`
     :param suppress_prompt: Flag to suppress prompts from the output. This argument only applies to terminal commands.  
-    :type suppress_prompt: bool
+    :type suppress_prompt: `bool`
     """
 
     if _output(application.arguments):

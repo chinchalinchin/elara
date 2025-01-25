@@ -8,149 +8,201 @@ Object for managing application configuration.
 import json 
 import logging
 import os
+import typing
 
-logger = logging.getLogger(__name__)
+logger                                      = logging.getLogger(__name__)
+
+HIDE                                        = ["GEMINI", "REPO"]
+"""Configuration properties that should be hidden from logging due to their sensitive nature."""
 
 class Config:
-    inst = None
+    """
+    Application configuration. Loads values from the ``data/config.json`` and then applies environment variable overrides.
+    """
+
+    inst                                    = None
     """Singleton instance"""
-    data = None
+
+    data                                    = None
     """Config data"""
-    file = None
+    
+    file                                    = None
     """Location of Config file"""
 
-    def __init__(
-        self, 
-        config_file : str
-    ):
+
+    def __init__(self, 
+        config_file                         : str
+    )                                       -> None:
         """
         Initialize Config class object.
 
         :param config_file: Location of application configuration file.
         :type config_file: str
         """
-        self.file = config_file
+        self.file                           = config_file
         self._load()
         self._override()
 
-    def __new__(
-        self, 
-        *args, 
-        **kwargs
-    ):
+
+    def __new__(self, *args, **kwargs)      -> typing.Self:
         """
         Create Config singleton.
         """
         if not self.inst:
-            self.inst = super(
-                Config, 
-                self
+            self.inst                       = super(
+                t                           = Config, 
+                obj                         = self
             ).__new__(self)
         return self.inst
 
-    def _load(self):
+
+    def _load(self)                         -> None:
         """
         Load in configuration data from file.
         """
         try:
             with open(self.file, "r") as f:
-                content = f.read()
-            if content:
-                self.data = json.loads(content)
-            else:
-                self.data = {}
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            print(f"Error loading config file: {e}")
-            self.data = {}
+                content                     = f.read()
 
-    def _override(self):
+            if content:
+                self.data                   = json.loads(content)
+                return 
+            
+        except (FileNotFoundError, json.JSONDecodeError) as e:
+            raise ValueError(f"Application configuration not found: {e}!")
+
+        raise ValueError("Application configuration is empty!")
+
+
+    def _override(self)                     -> None:
         """
         Override configuration with environment variables, if applicable.
         """
-        env_overrides = self.data["OVERRIDES"]
+        env_overrides                       = self.data["OVERRIDES"]
+
         for key, env_var in env_overrides.items():
-            default = self.unnest(key.split("."), self.data)
-            value = self.env(env_var, default)
+            default                         = self.unnest(key.split("."), self.data)
+            value                           = self._env(env_var, default)
+            
             if value != default:
                 self.nest(key.split("."), self.data, value)
 
+
     @staticmethod
-    def env(key, default):
-        value = os.environ.get(key)
+    def _env(
+        env_var                             : str, 
+        default                             : str
+    )                                       -> typing.Any:
+        """
+        Pull environment variables and parse into Python data structures.
+
+        :returns: Parsed environment variable or default value.
+        :rtype: `typing.Any`
+        """
+        value = os.environ.get(env_var)
+
         if value is not None:
+
             if isinstance(default, bool):
                 return value.lower() == "true"
+            
             if isinstance(default, int):
                 try:
                     return int(value)
+                
                 except ValueError:
+                    logger.error(
+                        f"Environment variable {env_var} must be int! Using default value."
+                    )
                     return default
+            
+            if isinstance(default, float):
+                try:
+                    return float(value)
+                
+                except ValueError:
+                    logger.error(
+                        f"Environment variable {env_var} must be float! Using default value."
+                    )
+                    return default 
+                
             return value
         return default 
     
+    
     @staticmethod
     def unnest(
-        keys: list, 
-        target : dict,
-        default=None
-    ):
+        keys                                : list, 
+        target                              : dict,
+        default                             : typing.Any = None
+    )                                       -> typing.Any:
         """
         Recursively retrieves a value from a nested dictionary.
+
+        :param keys: List of keys to traverse in dictionary tree.
+        :type keys: `list`
+        :param target: Dictionary to traverse.
+        :type target: `dict`
+        :param default: Default value to set for endpoint.
+        :type default: `typing.Any`
+        :returns: Value found at node or default value.
+        :rtype: `typing.Any`
         """
         for k in keys:
             if isinstance(target, dict) and k in target:
-                target = target[k]
+                target                      = target[k]
             else:
                 return default
         return target
     
+
     @staticmethod
     def nest(
-        keys: list, 
-        target: dict,
-        value
-    ):
+        keys                                : list, 
+        target                              : dict,
+        value                               : typing.Any
+    )                                       -> None:
         """
         Recursively sets a value in a nested dictionary.
         """
         for k in keys[:-1]:
             if k not in target:
-                target[k] = {}
-            target = target[k]
-        target[keys[-1]] = value
+                target[k]                   = {}
+            target                          = target[k]
+        target[keys[-1]]                    = value
 
-    def vars(self) -> dict:
+
+    def vars(self)                          -> dict:
         """
         Get a dictionary of the application configuration for templating.
 
         :returns: A dictionary of the application configuration.
         :rtype: dict
         """
-        # Filter out attributes with sensitive values!
-        return { 
-            k: v 
-            for k,v 
-            in self.data.items()
-            if k not in ["GEMINI", "REPO"]
-        }
+        return { k: v for k,v in self.data.items() if k not in HIDE }
     
-    def save(self):
+
+    def save(self)                          -> bool:
         """
         Saves the cache to the JSON file in ``data`` directory.
+
+        :returns: Flag signalling if save was successful.
+        :rtype: `bool`
         """
         try:
             with open(self.file, "w") as f:
                 json.dump(self.data, f, indent=4)
             return True
+        
         except Exception as e:
             logger.error(f"Error saving config: {e}")
             return False
     
-    def get(
-        self, 
-        key : str, 
-        default : str =None
-    ) -> str:
+
+    def get(self, 
+        key                                 : str, 
+        default                             : str = None
+    )                                       -> str:
         """
         Retrieve an application configuration property.
 
@@ -161,14 +213,14 @@ class Config:
         :returns: Application property.
         :rtype: str
         """
-        keys = key.split(".")
+        keys                                = key.split(".")
         return self.unnest(keys, self.data, default)
 
-    def set(
-        self, 
-        key : str, 
-        value : str
-    ):
+
+    def set(self, 
+        key                                 : str, 
+        value                               : str
+    )                                       -> None:
         """
         Set an application configuration property.
 
@@ -177,10 +229,11 @@ class Config:
         :param value: Value to which the property should be set.
         :type value: str
         """
-        keys = key.split(".")
+        keys                                = key.split(".")
         self.nest(keys, self.data, value)
 
-    def update(self, **kwargs):
+
+    def update(self, **kwargs)              -> None:
         """
         Update the Config using keyword arguments. Key must exist in Config to be updated.
         """
@@ -197,7 +250,7 @@ class Config:
                 continue
 
             self.data[key] = value
-            continue
+
 
     def tuning_enabled(self):
         """
@@ -205,16 +258,14 @@ class Config:
         """
         return self.get("MODEL.TUNING") == "enabled"
 
+
     def language_modules(self):
         """
         Return a list of enabled Language modules.
         """
         modules = self.get("LANGUAGE.MODULES")
+
         if any(v for v in modules.values()):
-            return [
-                k.lower()
-                for k,v
-                in modules.items()
-                if v
-            ]
+            return [ k.lower() for k,v in modules.items() if v ]
+        
         return []

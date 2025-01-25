@@ -13,6 +13,6 @@
     ],
     "tuningModel": "models/gemini-1.5-flash-001-tuning",
     "currentModel": "models/gemini-2.0-flash-exp",
-    "currentPersona": "milton",
+    "currentPersona": "elara",
     "currentPrompter": "grant"
 }

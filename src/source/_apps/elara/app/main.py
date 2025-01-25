@@ -93,6 +93,8 @@ def init(
             if v is None:
                 v                       = application.cache.get(k)
 
+            application.logger.debug(f"Setting {k} = {v}")
+            
             update_event                = application.cache.update(**{
                 k                       : v
             }) or update_event

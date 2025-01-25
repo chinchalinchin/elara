@@ -2,7 +2,7 @@
 app.py
 ------
 
-Application functions. All application functions require an `app` argument. The format of the `app` argument is given through the `app.App` typed dictionary.
+Objects for orchestrating the application.
 """
 # Standard Library Modules
 import argparse
@@ -20,6 +20,7 @@ import objects.model as mod
 import objects.repo as repo
 import objects.template as temp
 import objects.terminal as term
+
 
 @dataclasses.dataclass
 class Output:
@@ -43,7 +44,7 @@ class Output:
 
 class App:
     """
-    Data structure for managing application objects.
+    Class for managing application objects and functions.
     """
     arguments : argparse.Namespace | None   = None 
     cache : cac.Cache  | None               = None
@@ -61,7 +62,7 @@ class App:
 
     def analyze(self)                       -> Output:
         """
-        This function injects the contents of a directory containing only RST documents into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
+        This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
 
         :param app: Dictioanry containing application configuration.
         :type app: dict

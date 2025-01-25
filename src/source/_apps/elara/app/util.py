@@ -2,21 +2,28 @@
 util.py
 -------
 
-Static application utilties.
+Static application utilities.
 """
-
 # Standard Library Modules
 import logging
 import typing
 
-TYPE_MAP = {
-    "str": str, 
-    "int": int,
-    "float": float, 
-    "bool": bool
+TYPE_MAP                                = {
+    "str"                               : str, 
+    "int"                               : int,
+    "float"                             : float, 
+    "bool"                              : bool
 }
 
-def lower(d: dict) -> dict:
+def lower(d: dict)                      -> dict:
+    """
+    Convert the keys of a dictionary to lowercase.
+
+    :param d: Dictionary with string keys.
+    :type d: `dict`
+    :returns: Dictionary with lowercase keys.
+    :rtype: `dict`
+    """
     return { k.lower(): v for k, v in d.items() }
 
 def map(
@@ -26,9 +33,9 @@ def map(
     Maps type strings to Python types.
     
     :param type_string: String containing a Python data type.
-    :type type_string: str
+    :type type_string: `str`
     :returns: Python type that corresponds to input string.
-    :rtype: typing.Union[str, int, float, bool]
+    :rtype: `typing.Union[str, int, float, bool]`
     """
 
     if type_string not in TYPE_MAP:
@@ -68,10 +75,11 @@ def validate(
     
     return None
 
+
 def merge(
-    dict1: dict, 
-    dict2: dict
-) -> dict:
+    dict1                               : dict, 
+    dict2                               : dict
+)                                       -> dict:
     """
     Recursively merges two dictionaries using the union operator (|).
 
@@ -80,14 +88,20 @@ def merge(
     :param dict_2: Second dictionary to merge.
     :type dict_2: dict 
     """
-    if not (isinstance(dict1, dict) and isinstance(dict2, dict)):
-        return dict2  # Or handle as an error, depending on your needs
+    if not isinstance(dict1, dict):
+        raise ValueError("dict1 is not a dictionary!")
+    
+    if not isinstance(dict2, dict):
+        raise ValueError("dict2 is not a dictionary!")
 
-    result = dict1 | dict2
+    result                              = dict1 | dict2
+
     for key in result.keys():
         if key in dict1 and key in dict2:
-            result[key] = merge(dict1[key], dict2[key])
+            result[key]                 = merge(dict1[key], dict2[key])
+            
     return result
+
 
 def logger(
     file                                : str = None,

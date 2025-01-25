@@ -398,18 +398,20 @@
             "OBJECT": false,
             "INFLECTION": true,
             "VOICE": false,
-            "WORDS": false
+            "WORDS": true
         }
     },
     "PERSONA": {
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "SART_01"
+                    "FREG_01",
+                    "RUSS_01"
                 ],
                 "POEMS": [
-                    "ELIO_01",
-                    "CUMM_01"
+                    "CUMM_02",
+                    "POPE_01",
+                    "THOM_01"
                 ],
                 "PROOFS": []
             },
@@ -463,7 +465,10 @@
         "MILTON": {
             "CONTEXT": {
                 "QUOTATIONS": [],
-                "POEMS": [],
+                "POEMS": [
+                    "ELIO_03",
+                    "POPE_01"
+                ],
                 "PROOFS": []
             },
             "FUNCTIONS": [
