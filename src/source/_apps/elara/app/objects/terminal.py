@@ -80,14 +80,34 @@ class Terminal:
         """
 
         interacting                         = True
+        commands                            = self.config["CONVERSATION"]["COMMANDS"]
+        start_msg                           = self.config["CONVERSATION"]["START"]
+        help_msg                            = self.config["CONVERSATION"]["HELP"]
 
-        logger.info(self.config["CONVERSATION"]["HELP"])
+        print(start_msg)
         
         while interacting:
             prompt                          = input("Enter prompt: ")
             
-            if prompt == self.config["CONVERSATION"]["KILL"]:
+            if prompt == commands["EXIT"]:
                 break
+
+            elif prompt == commands["HELP"]:
+                print(help_msg)
+                continue
+
+            elif prompt == commands["PERSONA"]:
+                pass
+
+            elif prompt == commands["PROMPTER"]:
+                pass 
+
+            elif prompt == commands["DIRECTORY"]:
+                pass 
+
+            elif prompt == commands["MODEL"]:
+                pass 
+
 
             app.arguments.prompt            = prompt
             out                             = callable(app)

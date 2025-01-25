@@ -672,8 +672,17 @@
             }
         },
         "CONVERSATION": {
-            "HELP": "Starting an interactive terminal. Type exit() to quit.",
-            "KILL": "exit()"
+            "START": "Starting an interactive terminal. \n\tType exit() to quit.\n\t Type help() to see list of commands.",
+            "HELP": "TODO ",
+            "COMMANDS": {
+                "EXIT": "exit()",
+                "HELP": "help()",
+                "PERSONA": "persona({persona})",
+                "PROMPTER": "prompter({prompter})",
+                "DIRECTORY": "directory({directory})",
+                "MODEL": "model({model})"
+            }
+
         }
     },
     "GEMINI": {
