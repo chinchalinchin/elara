@@ -13,6 +13,7 @@ import google.generativeai as genai
 
 logger                                  = logging.getLogger(__name__)
 
+
 class Model:
     default_model                       : str | None = None 
     """Default Gemini model"""
@@ -48,11 +49,12 @@ class Model:
         self.tuning                     = tuning
         self.models                     = genai.list_models()
 
+
     def _get(
         self,
         system_instruction              : list,
         model_name                      : str = None
-    ) -> genai.GenerativeModel:
+    )                                   -> genai.GenerativeModel:
         """
         Retrieve a Gemini Model.
 
@@ -85,25 +87,54 @@ class Model:
             system_instruction          = system_instruction
         )
 
+
+    @staticmethod
+    def _is_text_model(m)               -> bool:
+        """
+        Determine if a model is a text-based model based on the presence of fields in metadata.
+        """
+        return "gemini" in m.name and \
+            "generateContent" in m.supported_generation_methods
+    
+
+    @staticmethod
+    def _is_tuning_model(m):
+        """
+        Determine if a model is a tuning model based on the presence of fields in metadata. 
+        """
+        return "tuning" in m.name and \
+            "generateContent" in m.supported_generation_methods
+        
+
+    def vars(self)                      -> dict:
+        """
+        Retrieve Gemini metadata for templating.
+
+        :returns: Dictionary of Gemini metadata.
+        :rtype: `dict`
+        """
+        return {
+            "base_models": self.base_models(),
+            "tuning_models": self.tuning_models(),
+            "tuned_models": self.tuned_models()
+        }
+    
+    
     def base_models(self)               -> list:
         """
-        Retrieve all Gemini models.
+        Retrieve all Gemini base models.
+
+        :returns: List of Gemini base models.
+        :rtype: `list`
         """
         return [{
             "path"                      : m.name,
             "version"                   : m.version,
             "input_token_limit"         : m.input_token_limit,
             "output_token_limit"        : m.output_token_limit
-        } 
-            for m 
-            in self.models
-            if (
-                "gemini" in m.name 
-                and 
-                "generateContent" in m.supported_generation_methods
-            )
-        ]
+        } for m in self.models if self._is_text_model(m) ]
     
+
     def tuning_models(self)             -> list:
         """
         Retrieve all Gemini models that can be tuned.
@@ -113,22 +144,16 @@ class Model:
             "version"                   : m.version,
             "input_token_limit"         : m.input_token_limit,
             "output_token_limit"        : m.output_token_limit
-        } 
-            for m 
-            in self.models
-            if (
-                "tuning" in m.name 
-                and 
-                "generateContent" in m.supported_generation_methods
-            )
-        ]
-        
-    def tuned_models(self) -> list:
+        } for m in self.models if self._is_tuning_model(m)]
+
+
+    def tuned_models(self)              -> list:
         """
         Retreive all tuned models
         """
         return genai.list_tuned_models()
     
+
     def tune(
         self,
         display_name                    : str,
@@ -169,7 +194,8 @@ class Model:
         except Exception as e:
             logger.error(f"Error tuning model {display_name}: {e}")
             return None
-        
+
+
     def respond(
         self,
         prompt                          : str, 

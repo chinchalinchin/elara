@@ -11,50 +11,59 @@ import factory
 import printer
 
 
-def configure(application : app.App)    -> dict:
+def clear(application: app.App)         -> None:
     """
-    Parses and applies configuration settings.
+    Parses command line arguments and uses them to clear application data.
 
-    :param app: Dictionary containing application configuration.
-    :type app: dict
-    :returns: Dictionary containing the current configuration
+    :param app: Application object.
+    :type app: `app.App`
+    """
+    for persona in application.arguments.clear:
+        # TODO: clear persona data and uses `_new` schema to reset structure.
+        pass 
+
+
+def configure(application : app.App)    -> None:
+    """
+    Parses command line arguments and uses them to update the cache.
+
+    :param app: Application object.
+    :type app: `app.App`
     """
     config                              = {}
 
-    if application.arguments.config:
-        for item in application.arguments.config:
-            if "=" not in item:
-                application.logger.error(
-                    f"Invalid configuration format: {item}. Expected key=value."
-                )
-                continue
-            
-            key, value                  = item.split("=", 1)
+    for item in application.arguments.configure:
+        if "=" not in item:
+            application.logger.error(
+                f"Invalid configuration format: {item}. Expected key=value."
+            )
+            continue
+        
+        key, value                  = item.split("=", 1)
 
-            if key not in application.config.data:
-                application.logger.error(
-                    f"Invalid configuration key: {key}. Key not in configuration."
-                )
-                continue
+        if key not in application.config.data:
+            application.logger.error(
+                f"Invalid configuration key: {key}. Key not in configuration."
+            )
+            continue
 
-            validated_value             = util.validate(value)
+        validated_value             = util.validate(value)
 
-            if validated_value is None:
-                application.logger.error(
-                    f"Invalidate configuration type: {key}={value}"
-                )
-                continue 
+        if validated_value is None:
+            application.logger.error(
+                f"Invalidate configuration type: {key}={value}"
+            )
+            continue 
 
-            config[key]                 = validated_value
+        config[key]                 = validated_value
 
     if config:
         application.cache.update(**config)
         application.cache.save()
         application.logger.info(f"Updated configuration with: {config}")
-        return config
-    
+        return
+        
     application.logger.warning("No configuration pairs provided.")
-    return config
 
 
 def init(
@@ -118,6 +127,7 @@ def main() -> bool:
     operations : dict                   = {
         # Administrative functions
         "configure"                     : configure,
+        "clear"                         : clear,
         # Application functions
         "summarize"                     : lambda app: app.summarize(),
         "converse"                      : lambda app: app.converse(),

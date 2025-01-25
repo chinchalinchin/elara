@@ -21,9 +21,6 @@ class Config:
     Application configuration. Loads values from the ``data/config.json`` and then applies environment variable overrides.
     """
 
-    inst                                    = None
-    """Singleton instance"""
-
     data                                    = None
     """Config data"""
     
@@ -43,18 +40,6 @@ class Config:
         self.file                           = config_file
         self._load()
         self._override()
-
-
-    def __new__(self, *args, **kwargs)      -> typing.Self:
-        """
-        Create Config singleton.
-        """
-        if not self.inst:
-            self.inst                       = super(
-                t                           = Config, 
-                obj                         = self
-            ).__new__(self)
-        return self.inst
 
 
     def _load(self)                         -> None:

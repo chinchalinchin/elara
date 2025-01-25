@@ -340,8 +340,22 @@
                 "ARGUMENTS": [
                     {
                         "DEFAULT": null,
-                        "DEST": "config",
+                        "DEST": "configure",
                         "HELP": "Key-value pairs to inject into application configuration.",
+                        "NARGS": "*",
+                        "TYPE": "str"
+                    }
+                ]
+            },
+            {
+                "NAME": "clear",
+                "DEFAULT": null,
+                "HELP": "Purge persona data.",
+                "ARGUMENTS": [
+                    {
+                        "DEFAULT": null,
+                        "DEST": "clear",
+                        "HELP": "List of persoans to purge",
                         "NARGS": "*",
                         "TYPE": "str"
                     }
@@ -523,10 +537,12 @@
             "type": "object",
             "properties": {
                 "feedback": {
-                    "type": "string"
+                    "type": "string",
+                    "maxLength": 1000
                 },
                 "memory": {
-                    "type": "string"
+                    "type": "string",
+                    "maxLength": 240
                 },
                 "response": {
                     "type": "string"
@@ -655,13 +671,12 @@
             "KILL": "exit()"
         }
     },
-    "TUNING": {
-        "ENABLED": false,
-        "SOURCE": "models/gemini-1.5-flash-001-tuning"
-    },
     "GEMINI": {
         "KEY": null,
-        "DEFAULT": "models/gemini-2.0-flash-exp"
+        "DEFAULT": "models/gemini-2.0-flash-exp",
+        "TUNING": {
+            "SOURCE": "models/gemini-1.5-flash-001-tuning"
+        }
     },
     "LOGS": {
         "LEVEL": "INFO",
@@ -672,10 +687,11 @@
         "RESPONSE": "RESPONSE: \n\t{content}\n"
     },
     "OVERRIDES": {
-        "TUNING.SOURCE": "TUNING_SOURCE",
-        "TUNING.ENABLED": "TUNING_ENABLED",
-        "LANGUAGE.MODULES.OBJECT": "LANGUAGE_MODLES_OBJECT",
-        "LANGUAGE.MODULES.INFLECTION": "LANGUAGE_MODLES_INFLECTION",
+        "GEMINI.TUNING.SOURCE": "GEMINI_TUNING_SOURCE",
+        "GEMINI.KEY": "GEMINI_KEY",
+        "GEMINI.DEFAULT": "GEMINI_DEFAULT",
+        "LANGUAGE.MODULES.OBJECT": "LANGUAGE_MODULES_OBJECT",
+        "LANGUAGE.MODULES.INFLECTION": "LANGUAGE_MODULES_INFLECTION",
         "LANGUAGE.MODULES.VOICE": "LANGUAGE_MODULES_VOICE",
         "LANGUAGE.MODULES.WORDS": "LANGUAGE_MODULES_WORDS",
         "CONVERSATION.TIMEZONE_OFFSET": "CONVERSATION_TIMEZONE_OFFSET",
@@ -683,8 +699,6 @@
         "REPO.VCS": "REPO_VCS",
         "REPO.AUTH.CREDS": "REPO_AUTH_CREDS",
         "VERSION": "VERSION",
-        "GEMINI.KEY": "GEMINI_KEY",
-        "GEMINI.DEFAULT": "GEMINI_DEFAULT",
         "LOGS.LEVEL": "LOGS_LEVEL"
     }
 }

@@ -27,18 +27,17 @@ class Output:
     """
     Data structure for managing application output
     """
-    prompt : str | None                     = None
-    response : str | None                   = None
-    summary: str | None                     = None
-    vcs : str | None                        = None
-    
+    prompt                                  : str | None = None
+    response                                : str | None = None
+    report                                  : str | None = None
+    vcs                                     : str | None = None
 
     def to_dict(self):
         return {
             "prompt"                        : self.prompt,
             "response"                      : self.response,
-            "summary"                       : self.summary,
-            "vcs"                           : self.vcs
+            "report"                        : self.report,
+            "vcs"                           : self.vcs,
         }
     
 
@@ -46,19 +45,30 @@ class App:
     """
     Class for managing application objects and functions.
     """
-    arguments : argparse.Namespace | None   = None 
-    cache : cac.Cache  | None               = None
-    config : conf.Config  | None            = None
-    conversations: convo.Conversation | None = None
-    directory: dir.Directory | None         = None
-    language: lang.Language  | None         = None
-    logger : logging.Logger | None          = None
-    model : mod.Model | None                = None
-    personas : per.Persona | None           = None
-    repository: repo.Repo | None            = None
-    templates : temp.Template | None        = None
-    terminal : term.Terminal | None         = None
-    
+    arguments                               : argparse.Namespace | None = None 
+    """"""
+    cache                                   : cac.Cache  | None = None
+    """"""
+    config                                  : conf.Config  | None = None
+    """"""
+    conversations                           : convo.Conversation | None = None
+    """"""
+    directory                               : dir.Directory | None = None
+    """"""
+    language                                : lang.Language  | None = None
+    """"""
+    logger                                  : logging.Logger | None = None
+    """"""
+    model                                   : mod.Model | None = None
+    """"""
+    personas                                : per.Persona | None = None
+    """"""
+    repository                              : repo.Repo | None = None
+    """"""
+    templates                               : temp.Template | None = None
+    """"""
+    terminal                                : term.Terminal | None = None
+    """"""
 
     def analyze(self)                       -> Output:
         """
@@ -109,10 +119,8 @@ class App:
         """
         Chat with one of Gemini's personas.
 
-        :param app: Dictioanry containing application configuration.
-        :type app: dict
-        :returns: Dictionary containing templated prompt and model response.
-        :rtype: dict
+        :returns: Objet containing the contextualized prompt and model response.
+        :rtype: `app.Output`
         """
         prompt                              = self.arguments.prompt
         
@@ -183,6 +191,23 @@ class App:
         return Output(
             prompt                          = parsed_prompt,
             response                        = response
+        )
+
+
+    def metadata(self)                      -> Output:
+        """
+        Retrieve model metadata.
+
+        :returns: Objet containing the contextualized prompt and model response.
+        :rtype: `app.Output``
+        """
+        metadata_report                     = self.templates.render(
+            temp                            = "metadata", 
+            variables                       = self.model.vars()
+        )
+
+        return Output(
+            report                          = metadata_report                        
         )
 
 
@@ -311,7 +336,7 @@ class App:
         )
         
         return Output( 
-            summary                         = summary
+            report                          = summary
         )
         
 

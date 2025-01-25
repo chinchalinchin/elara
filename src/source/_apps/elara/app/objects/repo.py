@@ -14,12 +14,17 @@ import requests
 logger = logging.getLogger(__name__)
 
 class Repo:
+    """
+    Application repository. Class for managing interactions with a VCS backend. 
+    """
+
     auth = None
     """Authentication configuration for VCS backend"""
     src = None
     """VCS source information"""
     backends = None
     """Backend configurations"""
+
 
     def __init__(
         self,
@@ -73,6 +78,7 @@ class Repo:
         for k, v in self.src.items(): 
             yield (k, v)
 
+
     def _pr(
         self, 
         pr
@@ -97,6 +103,7 @@ class Repo:
         
         raise ValueError(f"Unsupported VCS: {self.src['vcs']}")
     
+
     def _headers(self):
         """
         Returns the necessary headers for a request to the VCS backend. 
@@ -116,14 +123,18 @@ class Repo:
                     **self.backends["GITHUB"]["HEADERS"]
                 }
             
-        raise ValueError(f"Unsupported auth type: {self.auth['TYPE']} or VCS: {self.src['vcs']}")
+        raise ValueError(
+            f"Unsupported auth type: {self.auth['TYPE']} or VCS: {self.src['vcs']}"
+        )
+
 
     def vars(self):
         """
         Retrieve VCS metadata, formatted for templating.
         """
         return { "repository": self.src }
-    
+
+
     def comment(
         self,
         msg : str,
@@ -168,6 +179,7 @@ class Repo:
                 "status": "failed",
                 "error": str(e)
             }
+        
         except Exception as e:
             logger.error(f"An unexpected error occurred: {e}")
             traceback.print_exc()

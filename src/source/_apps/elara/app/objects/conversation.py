@@ -17,6 +17,13 @@ import util
 logger = logging.getLogger(__name__)
 
 class Conversation:
+    """
+    Application conversations. Object for loading and persisting messages to the chat history,  and updating persona memories.
+
+    .. important::
+
+        Conversation is implemented as a singleton to prevent concurrent writes to the a persona's chat history and memories.
+    """
     hist_dir = None
     """History directory"""
     mem_dir = None

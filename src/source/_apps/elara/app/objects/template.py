@@ -55,6 +55,7 @@ class Template:
         file_name = "".join([template, self.extension])
         return self.templates.get_template(file_name)
 
+
     def render(
         self, 
         temp: str, 

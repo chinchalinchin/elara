@@ -14,6 +14,10 @@ logger                                      = logging.getLogger(__name__)
 class Cache:
     """
     Application cache. Loads and persists frequently accessed application properties.
+
+    .. important::
+
+        The Cache class is implemented as a singleton to prevent concurrent writes to the cache file.
     """
     
     inst                                    = None

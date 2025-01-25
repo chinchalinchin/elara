@@ -8,49 +8,59 @@ Object for managing terminal input.
 import logging 
 import typing
 
-logger = logging.getLogger(__name__)
+# Application Modules
+import app 
+
+logger                                      = logging.getLogger(__name__)
 
 class Terminal:
-    config = None
+    """
+    Application terminal interface. Initiates shell-based input loops.
+    """
+
+    config                                  = None
     """Terminal configuration"""
 
-    def __init__(
-        self,
-        terminal_config : dict,
+    def __init__(self,
+        terminal_config                     : dict,
     ):
         """
         Initialize Terminal object.
+
+        :param terminal_config: Configuration for the Terminal.
+        :type terminal_config: `dict`.
         """
         self.config = terminal_config
     
 
-    def gherkin(self):
+    def gherkin(self)                       -> dict:
         """
         Generate a Gherkin script using terminal input
 
         :returns: A Gherkin script dictionary.
-        :rtype: dict
+        :rtype: `dict`
         """
         logger.info(self.config["GHERKIN"]["HELP"])
-        feature = { }
-        feature["request"] = { }
+
+        feat                                = { }
+        feat["request"]                     = { }
 
         # @DEVELOPMENT
         #   Hey, Milton, right now the `gherkin` is only returning a single Gherkin script. 
         #   Some of the devs were tossing around the idea of letting the user specify as 
         #   many Gherkin scripts as they want. What do you think? How should we implement that?
         for block, prompt in self.config["GHERKIN"]["BLOCKS"].items():
-            feature["request"][block.lower()] = input(prompt)
+            feat["request"][block.lower()]  = input(prompt)
 
-        return feature
+        return feat
     
-    
+
     def interact(
         self,
-        callable: typing.Callable, 
-        printer: typing.Callable, 
-        app: dict
-    ) -> bool:
+        callable                            : typing.Callable, 
+        printer                             : typing.Callable, 
+        app                                 : app.App
+    )                                       -> bool:
         """
         Loop over terminal input and call a function. Function should have the following signature:
 
@@ -72,19 +82,19 @@ class Terminal:
         :rtype: boold
         """
 
-        interacting = True
+        interacting                         = True
 
         logger.info(self.config["CONVERSATION"]["HELP"])
         
         while interacting:
-            prompt = input("Enter prompt: ")
+            prompt                          = input("Enter prompt: ")
             
             if prompt == self.config["CONVERSATION"]["KILL"]:
                 break
 
-            app.arguments.prompt = prompt
-            out = callable(app)
-            printer(app, out)
+            app.arguments.prompt            = prompt
+            out                             = callable(app)
             
+            printer(app, out)
 
         return True
