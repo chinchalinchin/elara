@@ -15,6 +15,7 @@ logger                                      = logging.getLogger(__name__)
 HIDE                                        = ["GEMINI", "REPO"]
 """Configuration properties that should be hidden from logging due to their sensitive nature."""
 
+
 class Config:
     """
     Application configuration. Loads values from the ``data/config.json`` and then applies environment variable overrides.

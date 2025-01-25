@@ -23,6 +23,7 @@ class Terminal:
         """
         self.config = terminal_config
     
+
     def gherkin(self):
         """
         Generate a Gherkin script using terminal input
@@ -42,6 +43,7 @@ class Terminal:
             feature["request"][block.lower()] = input(prompt)
 
         return feature
+    
     
     def interact(
         self,

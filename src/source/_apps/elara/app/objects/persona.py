@@ -17,12 +17,11 @@ logger                                      = logging.getLogger(__name__)
 class Persona:
     current                                 = None
     """Current persona"""
-    inst                                    = None
-    """Singleton instance"""
     personas                                = {}
     """Persona metadata"""
     functional_structures                   = {}
     """Structured output for functions"""
+
 
     def __init__(
         self, 
@@ -61,21 +60,7 @@ class Persona:
             sys_ext                         = sys_ext
         )
 
-    def __new__(
-        self,
-        *args, 
-        **kwargs
-    ):
-        """
-        Create *Personas* singleton.
-        """
-        if not self.inst:
-            self.inst                       = super(
-                Persona, 
-                self
-            ).__new__(self)
-        return self.inst
-    
+
     @staticmethod
     def _process(
         dir : str, 

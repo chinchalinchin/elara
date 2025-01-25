@@ -14,8 +14,6 @@ import requests
 logger = logging.getLogger(__name__)
 
 class Repo:
-    inst = None
-    """Singleton instance"""
     auth = None
     """Authentication configuration for VCS backend"""
     src = None
@@ -70,20 +68,6 @@ class Repo:
             "vcs": vcs
         }
 
-    def __new__(
-        self, 
-        *args, 
-        **kwargs
-    ):
-        """
-        Create a Cache singleton.
-        """
-        if not self.inst:
-            self.inst = super(
-                Repo, 
-                self
-            ).__new__(self)
-        return self.inst
     
     def __iter__(self):
         for k, v in self.src.items(): 

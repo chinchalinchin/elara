@@ -9,8 +9,6 @@ import jinja2
 
 
 class Template:
-    inst = None
-    """Singleton instance"""
     templates = None
     """Application templates"""
     directory = None
@@ -37,20 +35,6 @@ class Template:
             loader = jinja2.FileSystemLoader(self.directory)
         )
 
-    def __new__(
-        self, 
-        *args, 
-        **kwargs
-    ):
-        """
-        Create single *Templates* object.
-        """
-        if not self.inst:
-            self.inst = super(
-                Template, 
-                self
-            ).__new__(self)
-        return self.inst
 
     def get(
         self, 

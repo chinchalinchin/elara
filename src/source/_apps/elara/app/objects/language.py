@@ -12,8 +12,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 class Language:
-    inst = None
-    """Singleton instance"""
     modules = { }
     """Language modules"""
     directory = None
@@ -46,20 +44,6 @@ class Language:
         self.extension                      = extension
         self._load(enabled)
 
-    def __new__(
-        self, 
-        *args, 
-        **kwargs
-    ):
-        """
-        Create Language singleton.
-        """
-        if not self.inst:
-            self.inst                       = super(
-                Language, 
-                self
-            ).__new__(self)
-        return self.inst
     
     def __iter__(self):
         for k, v in self.modules: 
