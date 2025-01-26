@@ -1,15 +1,16 @@
+{%- set models= includes.get('models') %}
 .. _base_models:
 
 Base Models
 ^^^^^^^^^^^
-{% if base_models | length > 0 %}
+{% if models.get("base_models") | length > 0 %}
 .. list-table:: 
   :header-rows: 1
 
   * - Path
     - Input Token Limit
     - Output Token Limit
-{%- for model in base_models %}
+{%- for model in models.get("base_models") %}
   * - {{ model.path }}
     - {{ model.input_token_limit }}
     - {{ model.output_token_limit }}
@@ -18,14 +19,14 @@ Base Models
 Tuning Models 
 ^^^^^^^^^^^^^
 
-{% if tuning_models | length > 0 %}
+{% if models.get("tuning_models") | length > 0 %}
 .. list-table:: 
   :header-rows: 1
 
   * - Path
     - Input Token Limit
     - Output Token Limit
-{%- for model in tuning_models %}
+{%- for model in models.get("tuning_models") %}
   * - {{ model.path }}
     - {{ model.input_token_limit }}
     - {{ model.output_token_limit }}

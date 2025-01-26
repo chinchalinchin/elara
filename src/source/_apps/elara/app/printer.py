@@ -12,6 +12,7 @@ import pprint
 # Application Modules
 import app
 
+
 def _output(args: argparse.Namespace)   -> bool:
     """
     Determine if ``output`` has been passed into the application arguments.
@@ -32,9 +33,7 @@ def _show(args: argparse.Namespace)     -> bool:
     return "show" in vars(args).keys() and args.show
 
 
-def debug(
-    application                         : app.App
-):
+def debug(application: app.App)         -> None:
     """
     Log application debug metadata.
 
@@ -58,9 +57,8 @@ def debug(
 
 def out(
     application                         : app.App,
-    output                              : app.Output,
-    suppress_prompt                     : bool = True
-):
+    output                              : app.Output
+)                                       -> None:
     """
     Write output to appropriate location. Output should follow the format,
 
@@ -73,36 +71,14 @@ def out(
     :type suppress_prompt: `bool`
     """
 
-    if _output(application.arguments):
-        payload                         = application.templates.render(
-            temp                        = "output", 
-            variables                   = output.to_dict()
-        )
+    payload                             = application.templates.render(
+        temp                            = "output", 
+        variables                       = output.to_dict()
+    )
 
+    if _output(application.arguments):
         with open(application.arguments.output, "w") as outfile:
             outfile.write(payload)
 
     if _show(application.arguments):
-        if output.report:
-            print(output.report)
-
-        if output.prompt and not suppress_prompt:
-            print(
-                application.config.get("OUTPUT.PROMPT").format(
-                    content             = output.prompt
-                )
-            )
-
-        if output.response:
-            if isinstance(output.response, dict):
-                pprint.pp(output.response)
-
-            else:
-                print(
-                    application.config.get("OUTPUT.RESPONSE").format(
-                        content             = output.response
-                    )
-                )
-
-        if output.vcs:
-            print(output.vcs)
+        print(payload)

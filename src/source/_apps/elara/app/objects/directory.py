@@ -103,7 +103,8 @@ class Directory:
                 f"{self.directory} does not exist."
             )
         
-        dir_summary                     = {
+        dir_summary                     = { }
+        dir_summary["summary"]          = {
             "directory"                 : os.path.basename(self.directory),
             "tree"                      : self._tree(),
             "files"                     : []

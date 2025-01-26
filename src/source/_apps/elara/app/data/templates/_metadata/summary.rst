@@ -1,17 +1,20 @@
-{{ directory }}
-{{ '-' * directory | length }}
+{%- set summary = includes.get('summary') %}
+{{ summary.get('directory') }}
+{{ '-' * summary.get('directory') | length }}
+
+.. _directory-structure:
 
 Structure
 ^^^^^^^^^
 
 .. code-block:: bash
 
-    {{ tree | replace('\n', '\n    ') }}
+    {{ summary.get('tree') }}
 
 {# Template files #}
-{%- for file in files -%}
-{# File title #}
-
+{%- for file in summary.get('files') -%}
+.. _{{ file.name | split(',') | first }}:
+ 
 {{ file.name }}
 {{ '^' * file.name | length }}
 

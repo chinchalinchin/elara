@@ -1,10 +1,10 @@
-######
+.. _output:
+
 ######
 Output
 ######
 ######
-
-{% if prompt is defined and prompt is not none %}
+{% if prompt -%}
 .. _prompt:
 
 Prompt
@@ -12,9 +12,8 @@ Prompt
 ######
 
 {{ prompt }}
-{% endif %}
-
-{% if response is defined and response is not none %}
+{%- endif -%}
+{% if response -%}
 .. _response:
 
 Response
@@ -22,12 +21,25 @@ Response
 ########
 
 {{ response }}
+{%- endif -%}
+{% if includes -%}
+.. _reports:
+
+Reports
+#######
+#######
+
+{%- if includes.get('summary') -%}
+.. _summary-report:
+Summary
+#######
+{% include '_meta/summary.rst' %}
 {% endif %}
+{% if includes.get('models') %}
+.. _model-report: 
 
-{% if report is defined and report is not none %}
-Report
+Models
 ######
-######
-
-{{ report }}
+{% include '_meta/models.rst' %}
+{% endif %}
 {% endif %}

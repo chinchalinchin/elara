@@ -26,19 +26,17 @@ import objects.terminal as term
 @dataclasses.dataclass
 class Output:
     """
-    Data structure for managing application output
+    Data structure for managing application output.
     """
     prompt                                  : str | None = None
-    response                                : typing.Any | None = None
-    report                                  : str | None = None
-    vcs                                     : str | None = None
+    response                                : dict | str | None = None
+    includes                                : dict | None = None
 
     def to_dict(self):
         return {
             "prompt"                        : self.prompt,
             "response"                      : self.response,
-            "report"                        : self.report,
-            "vcs"                           : self.vcs,
+            "includes"                      : self.includes
         }
     
 
@@ -47,38 +45,36 @@ class App:
     Class for managing application objects and functions.
     """
     arguments                               : argparse.Namespace | None = None 
-    """"""
+    """Application arguments"""
     cache                                   : cac.Cache  | None = None
-    """"""
+    """Application cache"""
     config                                  : conf.Config  | None = None
-    """"""
+    """Application configuration"""
     conversations                           : convo.Conversation | None = None
-    """"""
+    """Application conversation history"""
     directory                               : dir.Directory | None = None
-    """"""
+    """Application local directory"""
     language                                : lang.Language  | None = None
-    """"""
+    """Application language modules"""
     logger                                  : logging.Logger | None = None
-    """"""
+    """Application logger"""
     model                                   : mod.Model | None = None
-    """"""
+    """Application model"""
     personas                                : per.Persona | None = None
-    """"""
+    """Application personas"""
     repository                              : repo.Repo | None = None
-    """"""
+    """Application version control repository backend"""
     templates                               : temp.Template | None = None
-    """"""
+    """Application prompt and output templates"""
     terminal                                : term.Terminal | None = None
-    """"""
+    """Application terminal emulator"""
 
     def analyze(self)                       -> Output:
         """
-        This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini mdeol persona of *Axiom*.
+        This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini modl persona of *Axiom*.
 
-        :param app: Dictioanry containing application configuration.
-        :type app: dict
-        :returns: Dictionary containing templated prompt and model response.
-        :rtype: dict
+        :returns: Data structure containing parsed prompt and response.
+        :rtype: `app.Output`
         """
         buffer                              = self.cache.vars()
         persona                             = self.personas.function("analyze")
@@ -87,7 +83,7 @@ class App:
         analyze_vars                        = {
             **buffer,
             **self.language.vars(),
-            **self.summarize().to_dict(),
+            **self.directory.summary(),
             **{ "latex": self.config.get("ANALYZE.LATEX_PREAMBLE") }
         }
 
@@ -153,7 +149,7 @@ class App:
         if self.arguments.directory is not None:
             self.logger.info("Injecting file summary into prompt...")
             template_vars.update(
-                self.summarize().to_dict()
+                self.directory.summary()
             )
 
         parsed_prompt                       = self.templates.render(
@@ -193,23 +189,6 @@ class App:
         return Output(
             prompt                          = parsed_prompt,
             response                        = response
-        )
-
-
-    def metadata(self)                      -> Output:
-        """
-        Retrieve model metadata.
-
-        :returns: Objet containing the contextualized prompt and model response.
-        :rtype: `app.Output``
-        """
-        metadata_report                     = self.templates.render(
-            temp                            = "metadata", 
-            variables                       = self.model.vars()
-        )
-
-        return Output(
-            report                          = metadata_report                        
         )
 
 
@@ -271,7 +250,7 @@ class App:
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
-            **self.summarize().to_dict()
+            **self.directory.summary()
         }
 
         review_prompt                       = self.templates.render(
@@ -317,30 +296,9 @@ class App:
         return Output(
             prompt                          = review_prompt,
             response                        = model_res
-            # "vcs"                           : source_res
+            # includes                      = "TODO"
         )
 
-
-    def summarize(self)                     -> Output:
-        """
-        This function summarizes the contents of a directory and writes the sumamry to an RST file. 
-
-        :param app: Dictioanry containing application configuration.
-        :type app: dict
-        :returns: Dictionary containing templated summary.
-        :rtype: dict
-        """
-        summary_vars                        = self.directory.summary()
-
-        summary                             = self.templates.render(
-            temp                            = self.config.get("SUMMARIZE.TEMPLATE"), 
-            variables                       = summary_vars
-        )
-        
-        return Output( 
-            report                          = summary
-        )
-        
 
     def tune(self)                          -> bool:
         """

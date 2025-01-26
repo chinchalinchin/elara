@@ -116,9 +116,43 @@ def init(
     return application
 
 
-def main() -> bool:
+def summarize(application: app.App)     -> app.Output:
+    """
+    Generate a RestructuredText (RST) summary of a local directory.
+
+    :param app: Application object.
+    :type app: `app.App`
+    :returns: Data structure containing the directory metadata and contents.
+    :rtype: `app.Output`
+    """
+    summary_vars                        = application.directory.summary()
+    return app.Output(
+        includes                        = summary_vars
+    )
+
+
+def show(application: app.App)      -> app.Output:
+    """
+    Generate a RestructuredText (RST) summary of application metadata.
+
+    :param app: Application object.
+    :type app: `app.App`
+    :returns: Data structure containing application metadata.
+    :rtype: `app.Output`
+    """
+    metadata_vars                       = application.model.vars()
+    application.arguments.show          = True
+    return app.Output(
+        includes                        = metadata_vars
+    )
+
+
+def main()                              -> bool:
     """
     Main function to run the command-line interface.
+
+    :returns: A signal the application has halted.
+    :rtype: `bool`
     """
     this_app : app.App                  = init(
         command_line                    = True
@@ -128,6 +162,7 @@ def main() -> bool:
         # Administrative functions
         "configure"                     : configure,
         "clear"                         : clear,
+        "show"                          : show,
         # Application functions
         "summarize"                     : lambda app: app.summarize(),
         "converse"                      : lambda app: app.converse(),
@@ -160,8 +195,7 @@ def main() -> bool:
         
     printer.out(
         application                     = this_app,
-        output                          = out,
-        suppress_prompt                 = False
+        output                          = out
     )
     
 

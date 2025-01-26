@@ -237,4 +237,4 @@ Pull Request
 
     Keep in mind, these files are on the remote repository. They are not on your local machine, so you cannot directly import the application modules into your code execution environment! 
     
-{{ summary }}
+{% include '_includes/summary.rst' %}

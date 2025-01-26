@@ -113,9 +113,11 @@ class Model:
         :rtype: `dict`
         """
         return {
-            "base_models": self.base_models(),
-            "tuning_models": self.tuning_models(),
-            "tuned_models": self.tuned_models()
+            "models": {
+                "base_models": self.base_models(),
+                "tuning_models": self.tuning_models(),
+                "tuned_models": self.tuned_models()
+            }
         }
     
     
@@ -227,15 +229,19 @@ class Model:
                     system_instruction      = system_instruction
                 ).generate_content(
                     contents = prompt,
-                    # TODO: there is an undocumented interaction
-                    #       model versions, response schemas and 
-                    #       supported tools.
+                    # @OPERATIONS
+                    #   Milton, we've discovered there is an undocumented interaction
+                    #   between model versions, response schemas and supported tools.
                     # 
-                    #       For example, models/gemini-exp-1206 does not 
-                    #       support `code_execution` tool if using a 
-                    #       a structured output schema!
-                    #   
-                    # tools = tools,
+                    #   For example, models/gemini-exp-1206 does not support 
+                    #  `code_execution` tool if using a a structured output schema!
+                    #  
+                    #   Of course, the knuckleheads in Development forgot to capture
+                    #   the error logs, so we don't have the response code or exception
+                    #   that is being thrown. Now that operations is aware of the problem,
+                    #   we'll be sure to capture the error log for you next time it pops 
+                    #   up! 
+                    tools = tools,
                     generation_config       = generation_config,
                     safety_settings         = safety_settings
                 )
