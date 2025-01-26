@@ -128,7 +128,7 @@ class Directory:
                         data            = infile.read()
 
                     if directive:
-                        dir_summary["files"] += [{
+                        dir_summary["summary"]["files"] += [{
                             "type"      : "code",
                             "data"      : data,
                             "lang"      : self.summary_config.get("DIRECTIVES").get(ext),
@@ -136,12 +136,11 @@ class Directory:
                         }]
                         continue
 
-                    dir_summary["files"] += [{
+                    dir_summary["summary"]["files"] += [{
                         "type"          : "raw",
                         "data"          : data,
                         "name"          : os.path.relpath(file_path, self.directory)
                     }]
-
                 except FileNotFoundError as e:
                     logger.error(F"Error reading file {file_path}: {e}")
                     continue

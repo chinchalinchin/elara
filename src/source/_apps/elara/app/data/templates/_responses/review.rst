@@ -1,39 +1,35 @@
 {%- set review = response.get('review') %}
-
 .. important::
 
     SCORE: {{ review.get('score') }}
 
+Assessment
+##########
+
+{{ review.get('overall') }}
+
 Files 
 #####
-
-{% for f in files %}
-
-{{ '=' * f.get('filepath') | length }}
-{{ f.filepath }}
-{{ '=' * f.get('filepath') | length }}
+{% for f in review.get('files') %}
+{{ '=' * f.get('path') | length }}
+{{ f.path }}
+{{ '=' * f.get('path') | length }}
 
 General Comments
 ----------------
 
-{{ f.get("general_comments")
+{{ f.get("comments") }}
+{% if f.get('bugs') %}
+Bugs
+----
 
-{% if f.get('potential_bugs') %}
-Potential Bugs
---------------
+{{ f.get('bugs') }}
+{%- endif %}
 
-{{ f.get('potential_bugs') }}
-{% endif %}
-{% if f.get('potential_optimizations') %}
-Potential Optimizations
------------------------
-
-{{ f.get('potential_optimizations') }}
-{% endif %}
-
-{% if f.get('amended_code') %}
+{% if f.get('amendments') %}
 Amended Code
 ------------
 
-{{ f.get('amended_code') }}
-{% endif %}
+{{ f.get('amendments') }}
+{%- endif %}
+{% endfor %}

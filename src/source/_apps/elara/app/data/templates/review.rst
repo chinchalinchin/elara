@@ -15,12 +15,7 @@ While the CEO and I go golfing this afternoon, you have to deal with the clients
 
 The repository summary has been formatted as RestructuredText (RST). I hope you know what that is, because I have no idea. *Sigh*. I have to meet the CEO for tee-time soon. Anyway, the exact format of this file is structured through a continuous integration workflow that has created and posted this prompt to the Gemini REST API. The RST formatting is purely to markup the content of the pull request for the ease of your understanding, or atleast that's what the development team said. Like I said, this is all Greek to me. *Yawn*.
 
-The CEO is expecting you to solve this production issue before we get back, so hurry up and review the presented project for the following details, in order of importance:
-
-1. Potential bugs
-2. Potential optimizations
-
-Based on the severity of bullet #1, you may choose to pass or fail the pull request. The following criteria should influence your decision to pass or fail the pull request:
+The CEO is expecting you to solve this production issue before we get back, so hurry up and review the presented project. You may choose to pass or fail the pull request. The following criteria should influence your decision to pass or fail the pull request:
 
 - Does the application run? 
 - Is the implemented solution the most efficient solution?

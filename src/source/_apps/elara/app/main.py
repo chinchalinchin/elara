@@ -11,24 +11,29 @@ import factory
 import printer
 
 
-def clear(application: app.App)         -> None:
+def clear(application: app.App)         -> app.Output:
     """
     Parses command line arguments and uses them to clear application data.
 
     :param app: Application object.
     :type app: `app.App`
+    :returns: Null data structure
+    :rtype: `app.Output`
     """
     for persona in application.arguments.clear:
         application.logger.info(f"Clearing persona data: {persona}")
         application.conversations.clear(persona)
 
+    return app.Output()
 
-def configure(application : app.App)    -> None:
+def configure(application : app.App)    -> app.Output:
     """
     Parses command line arguments and uses them to update the cache.
 
     :param app: Application object.
     :type app: `app.App`
+    :returns: Null data structure
+    :rtype: `app.Output`
     """
     config                              = {}
 
@@ -39,7 +44,7 @@ def configure(application : app.App)    -> None:
             )
             continue
         
-        key, value                  = item.split("=", 1)
+        key, value                      = item.split("=", 1)
 
         if key not in application.config.data:
             application.logger.error(
@@ -47,7 +52,7 @@ def configure(application : app.App)    -> None:
             )
             continue
 
-        validated_value             = util.validate(value)
+        validated_value                 = util.validate(value)
 
         if validated_value is None:
             application.logger.error(
@@ -55,7 +60,7 @@ def configure(application : app.App)    -> None:
             )
             continue 
 
-        config[key]                 = validated_value
+        config[key]                     = validated_value
 
     if config:
         application.cache.update(**config)
@@ -64,6 +69,38 @@ def configure(application : app.App)    -> None:
         return
         
     application.logger.warning("No configuration pairs provided.")
+    return app.Output()
+
+
+def summarize(application: app.App)     -> app.Output:
+    """
+    Generate a RestructuredText (RST) summary of a local directory.
+
+    :param app: Application object.
+    :type app: `app.App`
+    :returns: Data structure containing the directory metadata and contents.
+    :rtype: `app.Output`
+    """
+    summary_vars                        = application.directory.summary()
+    return app.Output(
+        includes                        = summary_vars
+    )
+
+
+def show(application: app.App)      -> app.Output:
+    """
+    Generate a RestructuredText (RST) summary of application metadata.
+
+    :param app: Application object.
+    :type app: `app.App`
+    :returns: Data structure containing application metadata.
+    :rtype: `app.Output`
+    """
+    metadata_vars                       = application.model.vars()
+    application.arguments.show          = True
+    return app.Output(
+        includes                        = metadata_vars
+    )
 
 
 def init(
@@ -114,37 +151,6 @@ def init(
     printer.debug(application)
     
     return application
-
-
-def summarize(application: app.App)     -> app.Output:
-    """
-    Generate a RestructuredText (RST) summary of a local directory.
-
-    :param app: Application object.
-    :type app: `app.App`
-    :returns: Data structure containing the directory metadata and contents.
-    :rtype: `app.Output`
-    """
-    summary_vars                        = application.directory.summary()
-    return app.Output(
-        includes                        = summary_vars
-    )
-
-
-def show(application: app.App)      -> app.Output:
-    """
-    Generate a RestructuredText (RST) summary of application metadata.
-
-    :param app: Application object.
-    :type app: `app.App`
-    :returns: Data structure containing application metadata.
-    :rtype: `app.Output`
-    """
-    metadata_vars                       = application.model.vars()
-    application.arguments.show          = True
-    return app.Output(
-        includes                        = metadata_vars
-    )
 
 
 def main()                              -> bool:

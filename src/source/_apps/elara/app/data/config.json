@@ -503,8 +503,8 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 8000,
-                "TEMPERATURE": 0.9,
+                "MAX_OUTPUT_TOKENS": 20000,
+                "TEMPERATURE": 0.75,
                 "TOP_P": 0.9,
                 "TOP_K": 40
             },
@@ -608,37 +608,37 @@
                         "fail"
                     ]
                 },
+                "overall": {
+                    "type": "string"
+                },
                 "files": {
                     "type": "array",
                     "items": {
                         "type": "object",
                         "properties": {
-                            "file_path": {
+                            "path": {
                                 "type": "string"
                             },
-                            "potential_bugs": {
+                            "bugs": {
                                 "type": "string"
                             },
-                            "potential_optimizations": {
+                            "comments": {
                                 "type": "string"
                             },
-                            "general_comments": {
-                                "type": "string"
-                            },
-                            "amended_code": {
+                            "amendments": {
                                 "type": "string"
                             }
                         },
                         "required": [
-                            "file_path",
-                            "general_comments"
+                            "path",
+                            "comments"
                         ]
                     }
                 }
             },
             "required": [
                 "score",
-                "files"
+                "overall"
             ]
         },
         "MIME": "application/json"

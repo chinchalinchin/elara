@@ -269,7 +269,7 @@ class App:
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
-            **self.directory.summary()
+            **{ "includes": self.directory.summary() }
         }
 
         review_prompt                       = self.templates.render(
@@ -300,6 +300,8 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
 
+        print(response)
+        
         # @DEVELOPMENT
         #   Hey Milton, we need to comment out your pull request comments.
         #   The current method is using the /issues endpoint, which appends 

@@ -12,9 +12,9 @@ Structure
 
     {{ summary.get('tree') }}
 
-{# Template files #}
-{%- for file in summary.get('files') -%}
-.. _{{ file.name | split(',') | first }}:
+{% for file in summary.get('files') %}
+
+.. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-") }}:
  
 {{ file.name }}
 {{ '^' * file.name | length }}
@@ -29,4 +29,4 @@ Structure
 
     {{ file.data | replace('\n', '\n    ') }}
 {%- endif -%}
-{%- endfor -%}
+{% endfor %}
