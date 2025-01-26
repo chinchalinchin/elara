@@ -1,11 +1,12 @@
 {%- set summary = includes.get('summary') %}
+{{ '-' * summary.get('directory') | length }}
 {{ summary.get('directory') }}
 {{ '-' * summary.get('directory') | length }}
 
 .. _directory-structure:
 
 Structure
-^^^^^^^^^
+---------
 
 .. code-block:: bash
 

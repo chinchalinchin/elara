@@ -41,9 +41,9 @@ This section is not directly related to your conversation history, but it does c
 Summary
 =======
 
-The following section contains a summary of a local directory on {{ currentPrompter | capitalize }}'s' local fileystem. It is relevant to the context of your conversation. It has been temporarily injected into the context for your inspection.
+The following section contains a summary of a local directory on {{ currentPrompter | capitalize }}'s local fileystem. It is relevant to the context of your conversation. It has been temporarily injected into the context for your inspection.
 
-{% include '_meta/summary.rst' %}
+{% include '_metadata/summary.rst' %}
 {%- endif %}
 
 {% include '_blocks/internal.rst' %}

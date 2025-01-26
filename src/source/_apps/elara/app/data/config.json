@@ -439,10 +439,7 @@
                 "POEMS": [
                     "ELIO_01",
                     "CUMM_01",
-                    "CUMM_02",
-                    "HOPK_01",
-                    "THOM_01",
-                    "SHAK_01"
+                    "THOM_01"
                 ],
                 "PROOFS": []
             },
@@ -496,10 +493,7 @@
         "MILTON": {
             "CONTEXT": {
                 "QUOTATIONS": [],
-                "POEMS": [
-                    "ELIO_03",
-                    "POPE_01"
-                ],
+                "POEMS": [],
                 "PROOFS": []
             },
             "FUNCTIONS": [

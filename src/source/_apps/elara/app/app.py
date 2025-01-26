@@ -6,9 +6,9 @@ Objects for orchestrating the application.
 """
 # Standard Library Modules
 import argparse
+import enum
 import dataclasses
 import logging 
-import typing
 
 # Application Modules
 import objects.cache as cac
@@ -29,7 +29,7 @@ class Output:
     Data structure for managing application output.
     """
     prompt                                  : str | None = None
-    response                                : dict | str | None = None
+    response                                : dict | None = None
     includes                                : dict | None = None
 
     def to_dict(self):
@@ -39,10 +39,17 @@ class Output:
             "includes"                      : self.includes
         }
     
+class Functions(enum.Enum):
+    """Application functions"""
+    ANAYLZE                                 = "analyze"
+    CONVERSE                                = "converse"
+    REVIEW                                  = "review"
+    REQUEST                                 = "request"
+
 
 class App:
     """
-    Class for managing application objects and functions.
+    Class for managing application objects and functions. This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``currentPersona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
     """
     arguments                               : argparse.Namespace | None = None 
     """Application arguments"""
@@ -71,7 +78,7 @@ class App:
 
     def analyze(self)                       -> Output:
         """
-        This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini modl persona of *Axiom*.
+        This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
 
         :returns: Data structure containing parsed prompt and response.
         :rtype: `app.Output`
@@ -106,9 +113,13 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
         
+        analyze_response                    = {
+            Functions.ANAYLZE.VALUE         : response
+        }
+
         return Output(
             prompt                          = parsed_prompt,
-            response                        = response
+            response                        = analyze_response
         )
 
 
@@ -116,7 +127,7 @@ class App:
         """
         Chat with one of Gemini's personas.
 
-        :returns: Objet containing the contextualized prompt and model response.
+        :returns: Object containing the contextualized prompt and model response.
         :rtype: `app.Output`
         """
         prompt                              = self.arguments.prompt
@@ -146,11 +157,13 @@ class App:
             **self.conversations.vars(persona)
         }
 
+        includes                            = {}
+        
         if self.arguments.directory is not None:
             self.logger.info("Injecting file summary into prompt...")
-            template_vars.update(
-                self.directory.summary()
-            )
+            template_vars.update({
+                "includes"                  : self.directory.summary()
+            })
 
         parsed_prompt                       = self.templates.render(
             temp                            = self.config.get("CONVERSE.TEMPLATE"), 
@@ -186,27 +199,31 @@ class App:
             feedback                        = response.get("feedback")
         )
 
+        converse_response                   = {
+            Functions.CONVERSE.value        : response
+        }
+
         return Output(
             prompt                          = parsed_prompt,
-            response                        = response
+            response                        = converse_response
         )
 
 
     def request(self)                       -> Output:
         """
-        This function halts the application to wait for the user to specify the feature request through Gherkin-style syntax.
+        This function initiates an input loop and prompt the the user to specify the feature request through Gherkin-style syntax.
 
-        :param app: Dictioanry containing application configuration.
-        :type app: dict
-        :returns: Dictionary containing templated feature request.
-        :rtype: dict
+        :returns: Object containing the contextualized prompt and model response.
+        :rtype: `app.Output`
         """
         buffer                              = self.cache.vars()
         persona                             = self.personas.function("request")
         buffer["currentPersona"]            = persona
+        
+        request                             = self.terminal.gherkin()
 
         request_vars                         = { 
-            **self.terminal.gherkin(), 
+            **request, 
             **buffer 
         }
         
@@ -226,9 +243,13 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
         
+        request_response                    = {
+            Functions.REQUEST.value         : response
+        }
+
         return Output(
             prompt                          = parsed_prompt,
-            response                        = response
+            response                        = request_response
         )
 
 
@@ -272,7 +293,7 @@ class App:
             "response_mime_type"            : self.config.get("REVIEW.MIME")
         })
 
-        model_res                           = self.model.respond(
+        response                            = self.model.respond(
             prompt                          = review_prompt,
             generation_config               = response_config,
             model_name                      = self.cache.get("currentModel"),
@@ -281,7 +302,6 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
 
-
         # @DEVELOPMENT
         #   Hey Milton, we need to comment out your pull request comments.
         #   The current method is using the /issues endpoint, which appends 
@@ -289,13 +309,17 @@ class App:
         #   in place, we can allow you to comment on specific files in the pull
         #   request! Aren't you impressed with the Development team!?
         # source_res                          = source.comment(
-        #     msg                             = model_res,
-        #     pr                              = app["ARGUMENTS"].pull,
+        #     msg                             = response,
+        #     pr                              = self.arguments.pull,
         # )
+
+        review_response                     = {
+            Functions.REVIEW.value          : response
+        }
 
         return Output(
             prompt                          = review_prompt,
-            response                        = model_res
+            response                        = review_response
             # includes                      = "TODO"
         )
 
