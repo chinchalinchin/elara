@@ -43,7 +43,7 @@ Summary
 
 The following section contains a summary of a local directory on {{ currentPrompter | capitalize }}'s local fileystem. It is relevant to the context of your conversation. It has been temporarily injected into the context for your inspection.
 
-{% include '_metadata/summary.rst' %}
+{% include '_reports/summary.rst' %}
 {%- endif %}
 
 {% include '_blocks/internal.rst' %}

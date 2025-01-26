@@ -1,8 +1,16 @@
-{%- set models= includes.get('models') %}
+{%- set models = includes.get('models') %}
+
+.. _models:
+
+------
+Models 
+------
+
 .. _base_models:
 
 Base Models
-^^^^^^^^^^^
+-----------
+
 {% if models.get("base_models") | length > 0 %}
 .. list-table:: 
   :header-rows: 1
@@ -17,7 +25,7 @@ Base Models
 {%- endfor %}
 {% endif %}
 Tuning Models 
-^^^^^^^^^^^^^
+-------------
 
 {% if models.get("tuning_models") | length > 0 %}
 .. list-table:: 

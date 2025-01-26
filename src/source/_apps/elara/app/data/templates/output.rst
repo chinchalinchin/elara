@@ -42,6 +42,7 @@ Reports
 
 {%- if includes.get('summary') -%}
 .. _summary-report:
+
 Summary
 #######
 {% include '_metadata/summary.rst' %}
@@ -52,5 +53,12 @@ Summary
 Models
 ######
 {% include '_metadata/models.rst' %}
+{% endif %}
+{%- if includes.get('service') -%}
+.. _service-report:
+
+Service
+#######
+{% include '_metadata/service.rst' %}
 {% endif %}
 {% endif %}

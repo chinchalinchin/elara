@@ -449,7 +449,7 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 10000,
+                "MAX_OUTPUT_TOKENS": 100000,
                 "TEMPERATURE": 0.9,
                 "TOP_P": 0.80,
                 "TOP_K": 30
@@ -478,7 +478,7 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 8000,
+                "MAX_OUTPUT_TOKENS": 80000,
                 "TEMPERATURE": 0.9,
                 "TOP_P": 0.9,
                 "TOP_K": 40
@@ -503,10 +503,10 @@
             "TOOLS": "code_execution",
             "GENERATION_CONFIG": {
                 "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 20000,
-                "TEMPERATURE": 0.75,
+                "MAX_OUTPUT_TOKENS": 200000,
+                "TEMPERATURE": 0.5,
                 "TOP_P": 0.9,
-                "TOP_K": 40
+                "TOP_K": 10
             },
             "SAFETY_SETTINGS": {
                 "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",

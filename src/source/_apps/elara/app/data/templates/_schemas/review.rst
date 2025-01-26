@@ -52,7 +52,7 @@ The following list explains the purpose of each field,
 
 1. **Score**: The ``score`` field should contain your decision on whether to ``pass`` or ``fail`` the pull request you are reviewing.
 2. **Overall**: The ``overall`` field should contain your overall assessment of the application you are reviewing. 
-3. **Bugs**: If you notice some of the application logic is flawed, or if the development team is not error handling properly, please include your assessment in the ``files[*].bugs`` field.
+3. **Bugs**: If you notice some of the application logic is flawed, please include your assessment in the ``files[*].bugs`` field.
 4. **Comments**: The ``files[*].comments`` field should contain your overall thoughts on a particular file. You are encouraged to use the ``files[*].comments`` field to imbue your reviews with a bit of color and personality.
 5. **Amendedments**: If you have a particular solution you would like to see implemented in the next pull request, provide it in the ``files[*].amendments`` field. The engineer on duty will implement the solution and post it back to you in the next pull request. This should only include executable code. Use the escape character ``\n`` to embed new lines and use the escape character ``\t`` to embed tabs in your amended code. 
 
@@ -109,6 +109,7 @@ Example 2
         }, {
             "path": "src/decent_code.py",
             "bugs": "This might be the worst code I have ever been burdened with reviewing. You should be ashamed of this grotesque display. You have several nested loops that could be refactored into a single list comprehension, not to mention the assortment of unnecessary local variables you are creating and never using.",
+            "comments": "Let the master show you how it is done.",
             "amendments": "\ndef magnificent_solution():\n\t# code so awe-inducing it reduces lesser developers to tears\n\t#(fill in the blanks; The CEO is calling me!)\n"
         },{
         

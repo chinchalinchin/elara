@@ -10,6 +10,7 @@ import json
 
 # External Modules 
 import google.generativeai as genai
+from google.api_core import retry, exceptions
 
 logger                                  = logging.getLogger(__name__)
 
@@ -21,6 +22,9 @@ class Model:
     """Flag for Gemini model tuning"""
     models                              : dict | None = None
     """Gemini model metadata cache"""
+    request_options                     : dict = {
+        "retry"                         : retry.Retry(predicate=retry.if_transient_error)
+    }
 
     def __init__(
         self,
@@ -47,7 +51,20 @@ class Model:
 
         self.default_model              = default_model
         self.tuning                     = tuning
-        self.models                     = [m for m in genai.list_models()]
+        try:
+            self.models                 = [m for m in genai.list_models()]
+
+        except exceptions.ServiceUnavailable as e:
+            logger.error(f"Gemini Service Unavailable: {e}")
+            self.models                 = []
+
+        except exceptions.InternalServerError as e:
+            logger.error(f"Gemini Servie 500 failure: {e}")
+            self.models                 = []
+
+        except Exception as e:
+            logger.error(f"Unknown error retrieving Gemini models: {e}")
+            self.models                 = []
 
     def _get(
         self,
@@ -152,7 +169,20 @@ class Model:
         """
         Retreive all tuned models
         """
-        return genai.list_tuned_models()
+        try:
+            return genai.list_tuned_models()
+        
+        except exceptions.ServiceUnavailable as e:
+            logger.error(f"Gemini Service Unavailable: {e}")
+            return []
+
+        except exceptions.InternalServerError as e:
+            logger.error(f"Gemini Servie 500 failure: {e}")
+            return []
+
+        except Exception as e:
+            logger.error(f"Unknown error retrieving tuned models: {e}")
+            return []
     
 
     def tune(
@@ -192,11 +222,26 @@ class Model:
                 learning_rate           = learning_rate
             ).result()
         
-        except Exception as e:
-            logger.error(f"Error tuning model {display_name}: {e}")
+        except exceptions.ServiceUnavailable as e:
+            logger.error(f"Gemini Service Unavailable: {e}")
             return None
 
+        except exceptions.InternalServerError as e:
+            logger.error(f"Gemini Servie 500 failure: {e}")
+            return None
 
+        except Exception as e:
+            logger.error(f"Unkonw Error tuning model {display_name}: {e}")
+            return None 
+
+
+    @retry.Retry(
+        predicate                       = retry.if_transient_error,
+        initial                         = 2.0,
+        maximum                         = 64.0,
+        multiplier                      = 2.0,
+        timeout                         = 300,
+    )
     def respond(
         self,
         prompt                          : str, 
@@ -225,8 +270,8 @@ class Model:
         try:
             if model_name is not None:
                 res = self._get(
-                    model_name              = model_name,
-                    system_instruction      = system_instruction
+                    model_name          = model_name,
+                    system_instruction  = system_instruction
                 ).generate_content(
                     contents = prompt,
                     # @OPERATIONS
@@ -241,26 +286,40 @@ class Model:
                     #   that is being thrown. Now that operations is aware of the problem,
                     #   we'll be sure to capture the error log for you next time it pops 
                     #   up! 
-                    tools = tools,
-                    generation_config       = generation_config,
-                    safety_settings         = safety_settings
+                    # tools = tools,
+                    generation_config   = generation_config,
+                    safety_settings     = safety_settings
                 )
             else:
                 res = self._get(
-                    model_name              = self.default_model,
-                    system_instruction      = system_instruction
+                    model_name          = self.default_model,
+                    system_instruction  = system_instruction
                 ).generate_content(
-                    contents                = prompt,
-                    tools                   = tools,
-                    generation_config       = generation_config,
-                    safety_settings         = safety_settings
+                    contents            = prompt,
+                    tools               = tools,
+                    generation_config   = generation_config,
+                    safety_settings     = safety_settings
                 )
+
+        except exceptions.ServiceUnavailable as e:
+            logger.error(f"Gemini Service Unavailable: {e}")
+            raise 
+
+        except exceptions.InternalServerError as e:
+            logger.error(f"Gemini Servie 500 failure: {e}")
+            raise
+
         except Exception as e:
             logger.error(f"Error generating content: {e}")
             raise
-           
-        print(res.text)
-        
+                   
         if "response_schema" in generation_config.keys():
-            return json.loads(res.text)
+            try:
+                return json.loads(res.text)
+            
+            except json.decoder.JSONDecodeError as e:
+                logger.error(f'Error encountered parsing response: \n{res.text}')
+                logger.error(e)
+                return None
+            
         return res.text

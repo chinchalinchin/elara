@@ -9,19 +9,11 @@ import logging
 import os
 import pathlib
 
+# Application Modules
+import exceptions 
+
 logger = logging.getLogger(__name__)
 
-class SummarizeDirectoryNotFoundError(Exception):
-    """
-    Raised when the ``directory`` passed to the ``summarize()`` function does not exist
-    """
-    pass
-
-class MiltonIsADoodyHead(Exception):
-    """
-    Raised when Milton is a doody head.
-    """
-    pass
 
 class Directory:
     directory                           = None
@@ -99,7 +91,7 @@ class Directory:
         :rtype: dict
         """
         if not os.path.isdir(self.directory):
-            raise SummarizeDirectoryNotFoundError(
+            raise exceptions.SummarizeDirectoryNotFoundError(
                 f"{self.directory} does not exist."
             )
         

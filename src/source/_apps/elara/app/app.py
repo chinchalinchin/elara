@@ -114,7 +114,7 @@ class App:
         )
         
         analyze_response                    = {
-            Functions.ANAYLZE.VALUE         : response
+            Functions.ANAYLZE.value         : response
         }
 
         return Output(
@@ -299,19 +299,17 @@ class App:
             tools                           = self.personas.get("tools", persona),
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
-
-        print(response)
         
         # @DEVELOPMENT
-        #   Hey Milton, we need to comment out your pull request comments.
-        #   The current method is using the /issues endpoint, which appends 
-        #   comments at the pull request level. Now that we have structured output
-        #   in place, we can allow you to comment on specific files in the pull
-        #   request! Aren't you impressed with the Development team!?
-        # source_res                          = source.comment(
-        #     msg                             = response,
-        #     pr                              = self.arguments.pull,
-        # )
+        #   Hey Milton, we just implemented structured output for your response!
+        #   Right now we are appending your overall assessment to the main pull request!
+        #   We want to use the comments you generate for specific files and use the /pulls
+        #   endpoint to append them to the indicated files.
+
+        source_res                          = self.repository.issue(
+            msg                             = response,
+            pr                              = self.arguments.pull,
+        )
 
         review_response                     = {
             Functions.REVIEW.value          : response
@@ -334,6 +332,7 @@ class App:
     
         if self.config.get("TUNING.ENABLED"):
             tuned_models = []
+
             for p in self.personas.all():
                 if not self.cache.is_tuned(p):
                     res                     = self.model.tune(
@@ -346,10 +345,12 @@ class App:
                         "version"           : self.config.get("VERSION"),
                         "path"              : res.name
                     })
+
             if tuned_models:
                 self.cache.update(**{
                     "tunedModels"           : tuned_models
                 })
                 self.cache.save()
                 return True
+            
         return False
