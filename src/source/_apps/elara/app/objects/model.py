@@ -47,8 +47,7 @@ class Model:
 
         self.default_model              = default_model
         self.tuning                     = tuning
-        self.models                     = genai.list_models()
-
+        self.models                     = [m for m in genai.list_models()]
 
     def _get(
         self,

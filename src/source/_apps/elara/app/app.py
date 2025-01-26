@@ -8,6 +8,7 @@ Objects for orchestrating the application.
 import argparse
 import dataclasses
 import logging 
+import typing
 
 # Application Modules
 import objects.cache as cac
@@ -28,7 +29,7 @@ class Output:
     Data structure for managing application output
     """
     prompt                                  : str | None = None
-    response                                : str | None = None
+    response                                : typing.Any | None = None
     report                                  : str | None = None
     vcs                                     : str | None = None
 
@@ -165,9 +166,10 @@ class App:
                 prompt                      = parsed_prompt
             )
         
+        response_schema                     = self.config.get("CONVERSE.SCHEMA")
         response_config                     = self.personas.get("generationConfig", persona)
         response_config.update({
-            "response_schema"               : self.config.get("CONVERSE.SCHEMA"),
+            "response_schema"               : response_schema,
             "response_mime_type"            : self.config.get("CONVERSE.MIME")
         })
 

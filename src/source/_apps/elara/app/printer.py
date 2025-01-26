@@ -94,11 +94,15 @@ def out(
             )
 
         if output.response:
-            print(
-                application.config.get("OUTPUT.RESPONSE").format(
-                    content             = output.response
+            if isinstance(output.response, dict):
+                pprint.pp(output.response)
+
+            else:
+                print(
+                    application.config.get("OUTPUT.RESPONSE").format(
+                        content             = output.response
+                    )
                 )
-            )
 
         if output.vcs:
             print(output.vcs)

@@ -19,6 +19,7 @@ def clear(application: app.App)         -> None:
     :type app: `app.App`
     """
     for persona in application.arguments.clear:
+        application.logger.info(f"Clearing persona data: {persona}")
         application.conversations.clear(persona)
 
 
@@ -93,7 +94,7 @@ def init(
                                             .build()
 
     # Write arguments to cache
-    application.logger.debug("Writing command line arguments to cache...")
+    application.logger.debug("Writing command line arguments to cache.")
     update_event                        = False
     arguments                           = vars(application.arguments)
     for k, v in arguments.items():
@@ -133,7 +134,8 @@ def main() -> bool:
         "review"                        : lambda app: app.review(),
         "request"                       : lambda app: app.request(),
         "tune"                          : lambda app: app.tune(),
-        "analyze"                       : lambda app: app.analyze()
+        "analyze"                       : lambda app: app.analyze(),
+        "metadata"                      : lambda app: app.metadata()
     }
 
     operation_name                      = this_app.arguments.operation
@@ -155,7 +157,7 @@ def main() -> bool:
         return
         
     out                                 = operations[operation_name](this_app)
-    
+        
     printer.out(
         application                     = this_app,
         output                          = out,

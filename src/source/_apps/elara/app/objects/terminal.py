@@ -7,12 +7,13 @@ Object for managing terminal input.
 # Standard Library Modules
 import logging 
 import typing
+import re
 
 logger                                      = logging.getLogger(__name__)
 
 class Terminal:
     """
-    Application terminal interface. Initiates shell-based input loops.
+    Application terminal interface for Gemini API. Initiates shell-based input loops.
     """
 
     config                                  = None
@@ -30,6 +31,29 @@ class Terminal:
         self.config = terminal_config
     
 
+    @staticmethod
+    def _extract(
+        string                              : str
+    )                                       -> tuple:
+        """
+        Extract function word and argument from a terminal command.
+
+        :param string: String against which to match.
+        :type string: `str`
+        :returns: Ordered pair of (function, argument)
+        :rtype: `tuple`
+        """
+
+        # Matches "word(word)"
+        pattern = r"^([a-zA-Z]+)\(([a-zA-Z]+)\)$" 
+
+        match = re.match(pattern, string)
+        if match:
+            return match.group(1), match.group(2)
+        
+        return None, None
+        
+    
     def gherkin(self)                       -> dict:
         """
         Generate a Gherkin script using terminal input
@@ -42,10 +66,6 @@ class Terminal:
         feat                                = { }
         feat["request"]                     = { }
 
-        # @DEVELOPMENT
-        #   Hey, Milton, right now the `gherkin` is only returning a single Gherkin script. 
-        #   Some of the devs were tossing around the idea of letting the user specify as 
-        #   many Gherkin scripts as they want. What do you think? How should we implement that?
         for block, prompt in self.config["GHERKIN"]["BLOCKS"].items():
             feat["request"][block.lower()]  = input(prompt)
 
@@ -61,53 +81,52 @@ class Terminal:
         """
         Loop over terminal input and call a function. Function should have the following signature:
 
-            callable(callable_args: dict, override: str = None)
+            callable(application: app.App)
 
-        Input from the terminal will be passed into the `override` argument. Similary, the function used to print the output to string should have the following signature,
+        Similary, the function used to print the output to string should have the following signature,
 
-            printer(printer_args: dict, printer_format: dict, override : str = None)
+            printer(application: app.App, output: app.Output)
 
-        The output from the `callable` function will be passed into the printer through the `override` argument.
+        The output from the `callable` function will be passed into the printer along with the application..
         
         :param callable: Function to invoke over the course of an interaction. 
-        :type callable: typing.Callable
-        :param app: Dictionary containing application configuration.
-        :type app: dict
+        :type callable: `typing.Callable`
+        :param app: Application object
+        :type app: `app.App`
         :param printer: Function to print output.
-        :type printer: typing.Callable
+        :type printer: `typing.Callable`
         :returns: Boolean flag
-        :rtype: boold
+        :rtype: `bool`
         """
 
         interacting                         = True
         commands                            = self.config["CONVERSATION"]["COMMANDS"]
-        start_msg                           = self.config["CONVERSATION"]["START"]
-        help_msg                            = self.config["CONVERSATION"]["HELP"]
+        functions                           = self.config["CONVERSATION"]["FUNCTIONS"]
+        display                             = self.config["CONVERSATION"]["DISPLAY"]
 
-        print(start_msg)
-        
+        # @DEVELOPMENT
+        #   Hey Milton, this is pretty basic for now, but we're separating the 
+        #   INIT, TITLE and START outputs so we can make them fancier down the
+        #   line. The CFO loves green text and all of those bullshit emojis. 
+        #   He wants the user shell to be vibrant and full of energy, so this
+        #   is where we will inject all his frilly nonsense.
+        print(display["INIT"])
+        print(display["TITLE"])
+        print(display["START"])
+
         while interacting:
-            prompt                          = input("Enter prompt: ")
-            
+            prompt                          = input(display["PROMPT"])
+            func, arg                       = self._extract(prompt)
+
             if prompt == commands["EXIT"]:
                 break
 
             elif prompt == commands["HELP"]:
-                print(help_msg)
+                print(display["HELP"])
                 continue
 
-            elif prompt == commands["PERSONA"]:
-                pass
-
-            elif prompt == commands["PROMPTER"]:
-                pass 
-
-            elif prompt == commands["DIRECTORY"]:
-                pass 
-
-            elif prompt == commands["MODEL"]:
-                pass 
-
+            elif func in functions:
+                setattr(app.arguments, func, arg)
 
             app.arguments.prompt            = prompt
             out                             = callable(app)

@@ -366,6 +366,33 @@
                 "DEFAULT": null,
                 "HELP": "Tune a persona with data in the ``data/tuning`` directory",
                 "ARGUMENTS": []
+            },
+            {
+                "NAME": "metadata",
+                "DEFAULT": null,
+                "HELP": "Display application metadata.",
+                "ARGUMENTS": [
+                    {
+                        "DEFAULT": null,
+                        "DEST": "show",
+                        "HELP": "Print output to console.",
+                        "SYNTAX": [
+                            "-s",
+                            "--show"
+                        ],
+                        "ACTION": "store_true"
+                    },
+                    {
+                        "DEFAULT": null,
+                        "DEST": "output",
+                        "HELP": "Save Gemini's response to local directory.",
+                        "SYNTAX": [
+                            "-o",
+                            "--output"
+                        ],
+                        "TYPE": "str"
+                    }
+                ]
             }
         ],
         "FIELDS": [ 
@@ -672,17 +699,23 @@
             }
         },
         "CONVERSATION": {
-            "START": "Starting an interactive terminal. \n\tType exit() to quit.\n\t Type help() to see list of commands.",
-            "HELP": "TODO ",
+            "DISPLAY":{
+                "PROMPT": "\tPrompt: ",
+                "INIT": "Starting an interactive terminal...",
+                "TITLE": "\n---------------\n  ELARA SHELL  \n---------------\n",
+                "START": "\n\tType exit() to quit.\n\tType help() to see list of commands.\n\n",
+                "HELP": "TODO"
+            },
             "COMMANDS": {
                 "EXIT": "exit()",
-                "HELP": "help()",
-                "PERSONA": "persona({persona})",
-                "PROMPTER": "prompter({prompter})",
-                "DIRECTORY": "directory({directory})",
-                "MODEL": "model({model})"
-            }
-
+                "HELP": "help()"
+            },
+            "FUNCTIONS": [
+                "currentPersona",
+                "currentPrompter",
+                "directory",
+                "currentModel"
+            ]
         }
     },
     "GEMINI": {

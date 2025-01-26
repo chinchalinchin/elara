@@ -8,6 +8,7 @@ Static application utilities.
 import logging
 import typing
 
+
 TYPE_MAP                                = {
     "str"                               : str, 
     "int"                               : int,

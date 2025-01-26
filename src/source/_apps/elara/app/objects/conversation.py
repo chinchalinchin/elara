@@ -278,7 +278,7 @@ class Conversation:
                                                 = self.schemas[ConvoProps.HISTORY.value]
         self.convo[persona][ConvoProps.MEMORIES.value] \
                                                 = self.schemas[ConvoProps.MEMORIES.value] 
-        self._persist()
+        self._persist(persona)
 
 
     def get(self, 
