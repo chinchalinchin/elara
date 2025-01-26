@@ -10,29 +10,13 @@ import datetime
 import json
 import logging
 import os
-import typing
 
 # Application Modules
 import util 
+import constants
+
 
 logger = logging.getLogger(__name__)
-
-class ConvoProps(enum.Enum):
-    """
-    Conversation property key enumeration.
-    """
-    # Internal Properties
-    HISTORY                                     = "history"
-    MEMORIES                                    = "memories"
-    MEMORY                                      = "memory"
-    SEQUENCE                                    = "sequence"
-    FEEDBACK                                    = "feedback"
-    MESSAGE                                     = "msg"
-    TIMESTAMP                                   = "timestamp"
-    NAME                                        = "name"
-    # Configuration Properties
-    SCHEMA_FILENAME                             = "SCHEMA_FILENAME"
-
 
 class Conversation:
     """
@@ -41,6 +25,7 @@ class Conversation:
     .. important::
 
         Conversation is implemented as a singleton to prevent concurrent writes to the a persona's chat history and memories.
+        
     """
     convo_config                                = { }
     """Conversation configuration."""
@@ -57,23 +42,29 @@ class Conversation:
 
     def __init__(
         self, 
-        dirs                                    : str,
-        exts                                    : str,
+        dirs                                    : dict,
+        exts                                    : dict,
         convo_config                            : dict,
     ):
         """
-        Initialize Conversation object.
+        Initialize the Conversation object. The schemas for the ``dirs`` and ``ext`` arguments are given below,
 
-        .. note::
+        .. code-block:: python
 
             dirs = {
                 f"{conversation.ConvoProps.HISTORY}": "history directory",
                 f"{convversation.ConvoProps.MEMORY}": "memory directory"
             }
+            exts = {
+                f"{conversation.ConvoProps.HISTORY}": "history directory",
+                f"{convversation.ConvoProps.MEMORY}": "memory directory"
+            }
 
-        :param dirs: Directories 
-        :param hist_ext: File extension for chat history.
-        :type hist_ext: str
+
+        :param dirs: Directories containing conversation data.
+        :type dirs: `dict`
+        :param exts: File xtensions for conversation data.
+        :type exts: `dict`
         """
         self.dirs                               = dirs
         self.exts                               = exts
@@ -91,9 +82,9 @@ class Conversation:
     
 
     def _schema(self,
-        prop                                    : ConvoProps
+        prop                                    : constants.ConvoProps
     ):
-        schema_filename                         = self.convo_config[ConvoProps.SCHEMA_FILENAME.value]
+        schema_filename                         = self.convo_config[constants.ConvoProps.SCHEMA_FILENAME.value]
         schema_file                             = "".join([
                                                     schema_filename,
                                                     self.exts[prop]
@@ -121,7 +112,7 @@ class Conversation:
 
     def _write(self,
         persona                                 : str,
-        prop                                    : ConvoProps
+        prop                                    : constants.ConvoProps
     )                                           -> None:
         """
         Persist a conversation property for a persona.
@@ -154,7 +145,7 @@ class Conversation:
 
 
     def _process(self,
-        prop                                    : ConvoProps,
+        prop                                    : constants.ConvoProps,
     )                                           -> dict:
         """
         Traverse the conversation property directory and read the contents into a data structure.
@@ -170,7 +161,7 @@ class Conversation:
                 persona, ext                    = os.path.splitext(file)
 
                 if ext != self.exts[prop] or \
-                    persona == self.convo_config[ConvoProps.SCHEMA_FILENAME.value]:
+                    persona == self.convo_config[constants.ConvoProps.SCHEMA_FILENAME.value]:
                     continue
 
                 file_path                       = os.path.join(root, file)
@@ -206,20 +197,22 @@ class Conversation:
         Load Conversation history from file.
         """
 
-        self.schemas[ConvoProps.HISTORY.value]  = self._schema(
-            prop                                = ConvoProps.HISTORY.value
-        )
+        self.schemas[constants.ConvoProps.HISTORY.value] \
+            = self._schema(
+                prop                            = constants.ConvoProps.HISTORY.value
+            )
 
-        self.schemas[ConvoProps.MEMORIES.value] = self._schema(
-            prop                                = ConvoProps.MEMORIES.value
-        )
+        self.schemas[constants.ConvoProps.MEMORIES.value] \
+            = self._schema(
+                prop                            = constants.ConvoProps.MEMORIES.value
+            )
 
         history                                 = self._process(
-            prop                                = ConvoProps.HISTORY.value,
+            prop                                = constants.ConvoProps.HISTORY.value,
         )
 
         memories                                = self._process(
-            prop                                = ConvoProps.MEMORIES.value,
+            prop                                = constants.ConvoProps.MEMORIES.value,
         )
 
         self.convo                              = util.merge(
@@ -240,12 +233,12 @@ class Conversation:
 
         self._write(
             persona                             = persona,
-            prop                                = ConvoProps.HISTORY.value
+            prop                                = constants.ConvoProps.HISTORY.value
         )
         
         self._write(
             persona                             = persona, 
-            prop                                = ConvoProps.MEMORIES.value
+            prop                                = constants.ConvoProps.MEMORIES.value
         )
     
 
@@ -274,10 +267,10 @@ class Conversation:
         :param persona: Persona to be cleared.
         :type persona: str
         """
-        self.convo[persona][ConvoProps.HISTORY.value] \
-                                                = self.schemas[ConvoProps.HISTORY.value]
-        self.convo[persona][ConvoProps.MEMORIES.value] \
-                                                = self.schemas[ConvoProps.MEMORIES.value] 
+        self.convo[persona][constants.ConvoProps.HISTORY.value] \
+                                                = self.schemas[constants.ConvoProps.HISTORY.value]
+        self.convo[persona][constants.ConvoProps.MEMORIES.value] \
+                                                = self.schemas[constants.ConvoProps.MEMORIES.value] 
         self._persist(persona)
 
 
@@ -318,24 +311,27 @@ class Conversation:
         :rtype: `dict`
         """
         if persona not in self.convo.keys():
-            self.convo[persona][ConvoProps.HISTORY.value] \
-                                                = self.schemas[ConvoProps.HISTORY.value]
-            self.convo[persona][ConvoProps.MEMORIES.value] \
-                                                = self.schemas[ConvoProps.MEMORIES.value] 
+            self.convo[persona][constants.ConvoProps.HISTORY.value] \
+                                                = self.schemas[constants.ConvoProps.HISTORY.value]
+            self.convo[persona][constants.ConvoProps.MEMORIES.value] \
+                                                = self.schemas[constants.ConvoProps.MEMORIES.value] 
 
-        self.convo[persona][ConvoProps.HISTORY.value].append({ 
-            ConvoProps.NAME.value               : name,
-            ConvoProps.MESSAGE.value            : msg,
-            ConvoProps.TIMESTAMP.value          : self._timestamp()
+        self.convo[persona][constants.ConvoProps.HISTORY.value].append({ 
+            constants.ConvoProps.NAME.value     : name,
+            constants.ConvoProps.MESSAGE.value  : msg,
+            constants.ConvoProps.TIMESTAMP.value: self._timestamp()
         })
         
         if memory is not None:
-            self.convo[persona][ConvoProps.MEMORIES.value][ConvoProps.SEQUENCE.value].append({
-                ConvoProps.MEMORY.value         : memory
+            self.convo[persona][
+                constants.ConvoProps.MEMORIES.value][constants.ConvoProps.SEQUENCE.value
+            ].append({
+                constants.ConvoProps.MEMORY.value         : memory
             })
 
         if feedback is not None:
-            self.convo[persona][ConvoProps.MEMORIES.value][ConvoProps.FEEDBACK.value] \
+            self.convo[persona][
+                constants.ConvoProps.MEMORIES.value][constants.ConvoProps.FEEDBACK.value] \
                                                 = feedback
 
         if persist:
@@ -356,8 +352,10 @@ class Conversation:
         if persona not in self.convo.keys():
             logger.error(f"Persona {persona} conversation history not found")
             return {
-                ConvoProps.HISTORY.value        : self.schemas[ConvoProps.HISTORY.value],
-                ConvoProps.MEMORIES.value       : self.schemas[ConvoProps.MEMORIES.value]
+                constants.ConvoProps.HISTORY.value: \
+                    self.schemas[constants.ConvoProps.HISTORY.value],
+                constants.ConvoProps.MEMORIES.value: \
+                    self.schemas[constants.ConvoProps.MEMORIES.value]
             }
         
         return self.convo[persona]

@@ -6,11 +6,11 @@ Objects for orchestrating the application.
 """
 # Standard Library Modules
 import argparse
-import enum
 import dataclasses
 import logging 
 
 # Application Modules
+import constants
 import objects.cache as cac
 import objects.config as conf
 import objects.conversation as convo
@@ -38,14 +38,6 @@ class Output:
             "response"                      : self.response,
             "includes"                      : self.includes
         }
-    
-class Functions(enum.Enum):
-    """Application functions"""
-    ANAYLZE                                 = "analyze"
-    CONVERSE                                = "converse"
-    REVIEW                                  = "review"
-    REQUEST                                 = "request"
-
 
 class App:
     """
@@ -76,6 +68,7 @@ class App:
     terminal                                : term.Terminal | None = None
     """Application terminal emulator"""
 
+
     def analyze(self)                       -> Output:
         """
         This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
@@ -84,18 +77,24 @@ class App:
         :rtype: `app.Output`
         """
         buffer                              = self.cache.vars()
-        persona                             = self.personas.function("analyze")
+        persona                             = self.personas.function(
+            func                            = constants.Functions.ANAYLZE.value
+        )
         buffer["currentPersona"]            = persona
+
+        latex_preamble                      = { 
+            "latex"                         : self.config.get("FUNCTIONS.ANALYZE.LATEX_PREAMBLE") 
+        }
 
         analyze_vars                        = {
             **buffer,
+            **latex_preamble
             **self.language.vars(),
             **self.directory.summary(),
-            **{ "latex": self.config.get("ANALYZE.LATEX_PREAMBLE") }
         }
 
         parsed_prompt                       = self.templates.render(
-            temp                            = "analysis", 
+            temp                            = constants.Functions.ANAYLZE.value, 
             variables                       = analyze_vars
         )
         
@@ -113,9 +112,7 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
         
-        analyze_response                    = {
-            Functions.ANAYLZE.value         : response
-        }
+        analyze_response                    = { constants.Functions.ANAYLZE.value : response }
 
         return Output(
             prompt                          = parsed_prompt,
@@ -133,7 +130,9 @@ class App:
         prompt                              = self.arguments.prompt
         
         if self.cache.get("currentPersona") is None:
-            converse_persona                = self.personas.function("converse")
+            converse_persona                = self.personas.function(
+                func                        = constants.Functions.CONVERSE.value
+            )
             self.cache.update(**{
                 "currentPersona"            : converse_persona
             })
@@ -156,8 +155,6 @@ class App:
             **self.personas.vars(persona),
             **self.conversations.vars(persona)
         }
-
-        includes                            = {}
         
         if self.arguments.directory is not None:
             self.logger.info("Injecting file summary into prompt...")
@@ -166,7 +163,7 @@ class App:
             })
 
         parsed_prompt                       = self.templates.render(
-            temp                            = self.config.get("CONVERSE.TEMPLATE"), 
+            temp                            = self.config.get("FUNCTIONS.CONVERSE.TEMPLATE"), 
             variables                       = template_vars
         )
 
@@ -175,11 +172,11 @@ class App:
                 prompt                      = parsed_prompt
             )
         
-        response_schema                     = self.config.get("CONVERSE.SCHEMA")
+        response_schema                     = self.config.get("FUNCTIONS.CONVERSE.SCHEMA")
         response_config                     = self.personas.get("generationConfig", persona)
         response_config.update({
             "response_schema"               : response_schema,
-            "response_mime_type"            : self.config.get("CONVERSE.MIME")
+            "response_mime_type"            : self.config.get("FUNCTIONS.CONVERSE.MIME")
         })
 
         response                            = self.model.respond(
@@ -199,9 +196,7 @@ class App:
             feedback                        = response.get("feedback")
         )
 
-        converse_response                   = {
-            Functions.CONVERSE.value        : response
-        }
+        converse_response                   = { constants.Functions.CONVERSE.value : response }
 
         return Output(
             prompt                          = parsed_prompt,
@@ -217,7 +212,9 @@ class App:
         :rtype: `app.Output`
         """
         buffer                              = self.cache.vars()
-        persona                             = self.personas.function("request")
+        persona                             = self.personas.function(
+            func                            = constants.Functions.REQUEST.value
+        )
         buffer["currentPersona"]            = persona
         
         request                             = self.terminal.gherkin()
@@ -227,7 +224,10 @@ class App:
             **buffer 
         }
         
-        parsed_prompt                       = self.templates.render("request", request_vars)
+        parsed_prompt                       = self.templates.render(
+            temp                            = constants.Functions.REQUEST.value, 
+            request_vars                    = request_vars
+        )
         
         if self.arguments.render:
             return {
@@ -243,9 +243,7 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
         
-        request_response                    = {
-            Functions.REQUEST.value         : response
-        }
+        request_response                    = { constants.Functions.REQUEST.value: response }
 
         return Output(
             prompt                          = parsed_prompt,
@@ -262,18 +260,22 @@ class App:
         """
 
         buffer                              = self.cache.vars()
-        persona                             = self.personas.function("review")
+        persona                             = self.personas.function(
+            func                            = constants.Functions.REVIEW.value
+        )
         buffer["currentPersona"]            = persona
 
+        includes                            = { "includes": self.directory.summary() }
+
         review_variables                    = { 
+            **includes
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
-            **{ "includes": self.directory.summary() }
         }
 
         review_prompt                       = self.templates.render(
-            temp                            = self.config.get("REVIEW.TEMPLATE"), 
+            temp                            = self.config.get("FUNCTIONS.REVIEW.TEMPLATE"), 
             variables                       = review_variables
         )
 
@@ -283,12 +285,13 @@ class App:
             )
         
         response_config                     = self.personas.get("generationConfig", persona)
+
         # @DEVELOPMENT
         #   HEY MILTON! We're testing structured output for your pull request reviews.
-        #   What do you think!? Pretty neat, huh!?
+        #   What do you think!? Pretty neat, huh!? Aren't you proud of us!?
         response_config.update({
-            "response_schema"               : self.config.get("REVIEW.SCHEMA"),
-            "response_mime_type"            : self.config.get("REVIEW.MIME")
+            "response_schema"               : self.config.get("FUNCTIONS.REVIEW.SCHEMA"),
+            "response_mime_type"            : self.config.get("FUNCTIONS.REVIEW.MIME")
         })
 
         response                            = self.model.respond(
@@ -306,19 +309,31 @@ class App:
         #   We want to use the comments you generate for specific files and use the /pulls
         #   endpoint to append them to the indicated files.
 
-        source_res                          = self.repository.issue(
-            msg                             = response,
-            pr                              = self.arguments.pull,
-        )
+        includes                            = { "includes": {} }
+        if response.get("overall"):
+            source_res                      = self.repository.issue(
+                msg                         = response.get("overall"),
+                pr                          = self.arguments.pull,
+            )
+            includes["includes"]            = source_res
 
-        review_response                     = {
-            Functions.REVIEW.value          : response
-        }
+        # @DEVELOPMENT
+        #   Milton, here is our plan with your structured output:
+        #       1. Add function to repo.Repo for posting to the /pulls endpoint
+        #       2. iterate over response.get("files")
+        #       3. Call /pulls function for each file.
+        #
+        #   Unfortunately, none of the devs could find a batch processing
+        #   endpoint in the Github documentation for processing all of
+        #   your file comments and amendments all at once, so we will have
+        #   to post them in a flurry of API calls. We need to be careful
+        #   how we implement them!
+        review_response                     = { constants.Functions.REVIEW.value: response}
 
         return Output(
             prompt                          = review_prompt,
-            response                        = review_response
-            # includes                      = "TODO"
+            response                        = review_response,
+            includes                        = includes 
         )
 
 
@@ -330,14 +345,16 @@ class App:
         :rtype: bool
         """
     
-        if self.config.get("TUNING.ENABLED"):
+        # @DEVELOPMENT
+        #   Hey, Milton! It seems like this function should go into `objects/model.py`, don't you think?
+        if self.config.get("GEMINI.TUNING.ENABLED"):
             tuned_models = []
 
             for p in self.personas.all():
                 if not self.cache.is_tuned(p):
                     res                     = self.model.tune(
                         display_name        = p,
-                        tuning_model        = self.config.get("TUNING.SOURCE"),
+                        tuning_model        = self.config.get("GEMINI.TUNING.SOURCE"),
                         tuning_data         = self.personas.get("tuningData", p)
                     )
                     tuned_models.append({

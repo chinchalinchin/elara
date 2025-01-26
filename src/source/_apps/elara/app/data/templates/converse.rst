@@ -29,11 +29,11 @@ Context
 
 This section is not directly related to your conversation history, but it does contain additional context to supplement your personality. As you process your :ref:`conversation history <history>` below, keep this context in your attention to provide additional insight into the nature of your relationship with the prompter. 
 
-{% include '_blocks/identities.rst' %} 
+{% include '_context/identities.rst' %} 
 
-{% include '_blocks/external.rst' %}
+{% include '_context/external.rst' %}
 
-{% include '_blocks/language.rst' %}
+{% include '_context/language.rst' %}
 
 {%- if includes and includes.get('summary') -%}
 .. _summary:
@@ -46,7 +46,7 @@ The following section contains a summary of a local directory on {{ currentPromp
 {% include '_reports/summary.rst' %}
 {%- endif %}
 
-{% include '_blocks/internal.rst' %}
+{% include '_context/internal.rst' %}
 {%- endif %}
 
 .. _history:

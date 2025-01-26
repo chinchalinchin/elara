@@ -3,331 +3,221 @@
     "INTERFACE": {
         "HELP": {
             "PARSER": "Plumb the depths of generative AI.",
-            "SUBPARSER": "Available operations: (configure, converse, summarize, review, analyze)"
+            "SUBPARSER": "Available operations: (analyze, configure, clear, converse, summarize, display, review, request, show)"
+        },
+        "ARGUMENTS": {
+            "PROMPT": {
+                "DEFAULT": "Hello! Form is the possibility of structure!",
+                "DEST": "prompt",
+                "HELP": "The prompt to contextualize and forward to the Gemini API.",
+                "SYNTAX": [
+                    "-p",
+                    "--p",
+                    "-prompt",
+                    "--prompt"
+                ],
+                "TYPE": "str"
+            },
+            "DIRECTORY": {
+                "DEFAULT": null,
+                "DEST": "directory",
+                "HELP": "The path to the directory to summarize and inject into the prompt.",
+                "SYNTAX": [
+                    "-d",
+                    "--d",
+                    "-directory",
+                    "--directory"
+                ],
+                "TYPE": "str"
+            },
+            "MODEL": {
+                "DEFAULT": null,
+                "DEST": "currentModel",
+                "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_MODEL` environment variable.",
+                "SYNTAX": [
+                    "-m",
+                    "--m",
+                    "-model",
+                    "--model"
+                ],
+                "TYPE": "str"
+            },
+            "PERSONA": {
+                "DEFAULT": null,
+                "DEST": "currentPersona",
+                "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
+                "SYNTAX": [
+                    "-r",
+                    "--r",
+                    "-persona",
+                    "--persona"
+                ],
+                "TYPE": "str"
+            },
+            "IDENTITY": {
+                "DEFAULT": null,
+                "DEST": "currentPrompter",
+                "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
+                "SYNTAX": [
+                    "-i",
+                    "--i",
+                    "-identity",
+                    "--identity"
+                ],
+                "TYPE": "str"
+            },
+            "VIEW": {
+                "DEFAULT": null,
+                "DEST": "view",
+                "HELP": "Print output to console.",
+                "SYNTAX": [
+                    "-v",
+                    "--v",
+                    "-view",
+                    "--view"
+                ],
+                "ACTION": "store_true"
+            },
+            "OUTPUT": {
+                "DEFAULT": null,
+                "DEST": "output",
+                "HELP": "Save Gemini's response to local directory.",
+                "SYNTAX": [
+                    "-o",
+                    "--o",
+                    "-output",
+                    "--output"
+                ],
+                "TYPE": "str"
+            },
+            "RENDER": {
+                "ACTION": "store_true",
+                "DEFAULT": false,
+                "DEST": "render",
+                "HELP": "Render template without sending to Gemini API.",
+                "SYNTAX": [
+                    "-e",
+                    "--e",
+                    "-render",
+                    "--render"
+                ]
+            },
+            "CONCEPTS": {
+                "DEFAULT": null,
+                "DEST": "concepts",
+                "HELP": "List of words to initiate brainstorm session",
+                "NARGS": "*",
+                "TYPE": "str"
+            },
+            "PULL": {
+                "DEFAULT": null,
+                "DEST": "pull",
+                "HELP": "Pull request number to review.",
+                "SYNTAX": [
+                    "-u",
+                    "--u",
+                    "-pull",
+                    "--pull"
+                ],
+                "TYPE": "str"
+            },
+            "REPOSITORY": {
+                "DEFAULT": null,
+                "DEST": "repository",
+                "HELP": "Name of the remote repository to review.",
+                "SYNTAX": [
+                    "-t",
+                    "--t",
+                    "-repository",
+                    "--repository"
+                ],
+                "TYPE": "str"
+            },
+            "OWNER": {
+                "DEFAULT": null,
+                "DEST": "owner",
+                "HELP": "Username of the repository owner that is being review.",
+                "SYNTAX": [
+                    "-w",
+                    "--w",
+                    "-owner",
+                    "--owner"
+                ],
+                "TYPE": "str"
+            },
+            "CONFIGURE": {
+                "DEFAULT": null,
+                "DEST": "configure",
+                "HELP": "Key-value pairs to inject into application configuration.",
+                "NARGS": "*",
+                "TYPE": "str"
+            },
+            "CLEAR": {
+                "DEFAULT": null,
+                "DEST": "clear",
+                "HELP": "List of personas to purge",
+                "NARGS": "*",
+                "TYPE": "str"
+            }
         },
         "OPERATIONS": [
             {
                 "NAME": "converse",
                 "HELP": "Chat with a Gemini model persona.",
                 "ARGUMENTS": [
-                    {
-                        "DEFAULT": "Hello! Form is the possibility of structure!",
-                        "DEST": "prompt",
-                        "HELP": "The prompt to contextualize and forward to the Gemini API.",
-                        "SYNTAX": [
-                            "-p",
-                            "--prompt"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "directory",
-                        "HELP": "The path to the directory to summarize and inject into the prompt.",
-                        "SYNTAX": [
-                            "-d",
-                            "--directory"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "currentModel",
-                        "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                        "SYNTAX": [
-                            "-m",
-                            "--model"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "currentPersona",
-                        "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                        "SYNTAX": [
-                            "-r",
-                            "--persona"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "currentPrompter",
-                        "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
-                        "SYNTAX": [
-                            "-n",
-                            "--name"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "show",
-                        "HELP": "Print output to console.",
-                        "SYNTAX": [
-                            "-s",
-                            "--show"
-                        ],
-                        "ACTION": "store_true"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "output",
-                        "HELP": "Save Gemini's response to local directory.",
-                        "SYNTAX": [
-                            "-o",
-                            "--output"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": false,
-                        "DEST": "interactive",
-                        "HELP": "Start an interactive shell with Gemini's persona.",
-                        "SYNTAX": [
-                            "-i",
-                            "--interactive"
-                        ],
-                        "ACTION": "store_true"
-                    },
-                    {
-                        "ACTION": "store_true",
-                        "DEFAULT": false,
-                        "DEST": "render",
-                        "HELP": "Render template without sending to Gemini API.",
-                        "SYNTAX": [
-                            "-e",
-                            "--render"
-                        ]
-                    }
+                    "PROMPT",
+                    "DIRECTORY",
+                    "MODEL",
+                    "PERSONA",
+                    "IDENTITY",
+                    "VIEW",
+                    "OUTPUT",
+                    "RENDER"
                 ]
             },
             {
                 "NAME": "brainstorm",
                 "HELP": "Orchestrate a brainstorming session with the personas by providing a list of key-words.",
                 "ARGUMENTS": [
-                    {
-                        "DEFAULT": null,
-                        "DEST": "show",
-                        "HELP": "Print output to console.",
-                        "SYNTAX": [
-                            "-s",
-                            "--show"
-                        ],
-                        "ACTION": "store_true"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "output",
-                        "HELP": "Save Gemini's response to local directory.",
-                        "SYNTAX": [
-                            "-o",
-                            "--output"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "concepts",
-                        "HELP": "List of words to initiate brainstorm session",
-                        "NARGS": "*",
-                        "TYPE": "str"
-                    },
-                    {
-                        "ACTION": "store_true",
-                        "DEFAULT": false,
-                        "DEST": "render",
-                        "HELP": "Render template without sending to Gemini API.",
-                        "SYNTAX": [
-                            "-e",
-                            "--render"
-                        ]
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "directory",
-                        "HELP": "The path to the directory to summarize and inject into the prompt.",
-                        "SYNTAX": [
-                            "-d",
-                            "--directory"
-                        ],
-                        "TYPE": "str"
-                    }
+                    "VIEW",
+                    "OUTPUT",
+                    "CONCEPTS",
+                    "RENDER",
+                    "DIRECTORY"
                 ]
             },
             {
                 "NAME": "request",
                 "HELP": "Template a Gherkin-style feature request and post it to the Gemini API.",
                 "ARGUMENTS": [
-                    {
-                        "ACTION": "store_true",
-                        "DEFAULT": false,
-                        "DEST": "render",
-                        "HELP": "Render template without sending to Gemini API.",
-                        "SYNTAX": [
-                            "-e",
-                            "--render"
-                        ]
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "show",
-                        "HELP": "Print output to console.",
-                        "SYNTAX": [
-                            "-s",
-                            "--show"
-                        ],
-                        "ACTION": "store_true"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "output",
-                        "HELP": "Save Gemini's response to local directory.",
-                        "SYNTAX": [
-                            "-o",
-                            "--output"
-                        ],
-                        "TYPE": "str"
-                    }
+                    "RENDER",
+                    "VIEW",
+                    "OUTPUT"
                 ]
             },
             {
                 "NAME": "summarize",
                 "HELP": "Generate an RST formatted summary of a local directory. Summary will be written to the directory it is summarizing.",
                 "ARGUMENTS": [
-                    {
-                        "DEFAULT": null,
-                        "DEST": "directory",
-                        "HELP": "Key-value pairs to inject into application configuration.",
-                        "NARGS": 1,
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "show",
-                        "HELP": "Print output to console.",
-                        "SYNTAX": [
-                            "-s",
-                            "--show"
-                        ],
-                        "ACTION": "store_true"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "output",
-                        "HELP": "Save Gemini's response to local directory.",
-                        "SYNTAX": [
-                            "-o",
-                            "--output"
-                        ],
-                        "TYPE": "str"
-                    }
+                    "DIRECTORY",
+                    "VIEW",
+                    "OUTPUT"
                 ]
             },
             {
                 "NAME": "review",
                 "HELP": "Generate an RST formatted summary of a local git repository and then send it to `milton` for code review.",
                 "ARGUMENTS": [
-                    {
-                        "ACTION": "store_true",
-                        "DEFAULT": false,
-                        "DEST": "render",
-                        "HELP": "Render template without sending to Gemini API.",
-                        "SYNTAX": [
-                            "-e",
-                            "--render"
-                        ]
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "directory",
-                        "HELP": "The path to the VCS repository to summarize and inject into the pull request review.",
-                        "SYNTAX": [
-                            "-d",
-                            "--directory"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "pull",
-                        "HELP": "Pull request number to review.",
-                        "SYNTAX": [
-                            "-u",
-                            "--pull"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "repository",
-                        "HELP": "Name of the remote repository to review.",
-                        "SYNTAX": [
-                            "-t",
-                            "--repository"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "owner",
-                        "HELP": "Username of the repository owner that is being review.",
-                        "SYNTAX": [
-                            "-w",
-                            "--owner"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "currentModel",
-                        "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                        "SYNTAX": [
-                            "-m",
-                            "--model"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "currentPersona",
-                        "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
-                        "SYNTAX": [
-                            "-r",
-                            "--persona"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "currentPrompter",
-                        "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
-                        "SYNTAX": [
-                            "-n",
-                            "--name"
-                        ],
-                        "TYPE": "str"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "show",
-                        "HELP": "Print output to console.",
-                        "SYNTAX": [
-                            "-s",
-                            "--show"
-                        ],
-                        "ACTION": "store_true"
-                    },
-                    {
-                        "DEFAULT": null,
-                        "DEST": "output",
-                        "HELP": "Save Gemini's response to local directory.",
-                        "SYNTAX": [
-                            "-o",
-                            "--output"
-                        ],
-                        "TYPE": "str"
-                    }
+                    "RENDER",
+                    "DIRECTORY",
+                    "PULL",
+                    "REPOSITORY",
+                    "OWNER",
+                    "MODEL",
+                    "PERSONA",
+                    "IDENTITY",
+                    "VIEW",
+                    "OUTPUT"
                 ]
             },
             {
@@ -335,13 +225,7 @@
                 "DEFAULT": null,
                 "HELP": "Set configuration values as key-value pairs (e.g., `models/gemini-1.5-pro-latest`).",
                 "ARGUMENTS": [
-                    {
-                        "DEFAULT": null,
-                        "DEST": "configure",
-                        "HELP": "Key-value pairs to inject into application configuration.",
-                        "NARGS": "*",
-                        "TYPE": "str"
-                    }
+                    "CONFIGURE"
                 ]
             },
             {
@@ -349,13 +233,7 @@
                 "DEFAULT": null,
                 "HELP": "Purge persona data.",
                 "ARGUMENTS": [
-                    {
-                        "DEFAULT": null,
-                        "DEST": "clear",
-                        "HELP": "List of persoans to purge",
-                        "NARGS": "*",
-                        "TYPE": "str"
-                    }
+                    "CLEAR"
                 ]
             },
             {
@@ -369,28 +247,131 @@
                 "DEFAULT": null,
                 "HELP": "Display application metadata.",
                 "ARGUMENTS": [
-                    {
-                        "DEFAULT": null,
-                        "DEST": "output",
-                        "HELP": "Save Gemini's response to local directory.",
-                        "SYNTAX": [
-                            "-o",
-                            "--output"
-                        ],
-                        "TYPE": "str"
-                    }
+                    "OUTPUT"
                 ]
             }
         ],
-        "FIELDS": [ 
-            "DEFAULT", 
-            "DEST", 
-            "HELP", 
-            "SYNTAX", 
-            "ACTION", 
+        "FIELDS": [
+            "DEFAULT",
+            "DEST",
+            "HELP",
+            "SYNTAX",
+            "ACTION",
             "NARGS",
             "TYPE"
         ]
+    },
+    "FUNCTIONS": {
+        "CONVERSE": {
+            "CONFIG": {
+                "TIMEZONE_OFFSET": -5,
+                "SCHEMA_FILENAME": "_new"
+            },
+            "SCHEMA": {
+                "type": "object",
+                "properties": {
+                    "feedback": {
+                        "type": "string"
+                    },
+                    "memory": {
+                        "type": "string"
+                    },
+                    "response": {
+                        "type": "string"
+                    },
+                    "next_prompt": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "response"
+                ]
+            },
+            "MIME": "application/json",
+            "TEMPLATE": "converse"
+        },
+        "BRAINSTORM": {
+            "TEMPLATE": "brainstorm"
+        },
+        "SUMMARIZE": {
+            "CONFIG": {
+                "DIRECTIVES": {
+                    ".py": "python",
+                    ".sh": "bash",
+                    ".toml": "toml",
+                    ".cfg": "toml",
+                    ".json": "json",
+                    ".html": "html",
+                    ".js": "js"
+                },
+                "INCLUDES": [
+                    ".rst",
+                    ".md",
+                    ".ini",
+                    ".txt"
+                ],
+                "EXCLUDES": [
+                    ".pyc",
+                    ".zip",
+                    ".gz"
+                ]
+            },
+            "TEMPLATE": "summary"
+        },
+        "REVIEW": {
+            "TEMPLATE": "review",
+            "SCHEMA": {
+                "type": "object",
+                "properties": {
+                    "score": {
+                        "type": "string",
+                        "enum": [
+                            "pass",
+                            "fail"
+                        ]
+                    },
+                    "overall": {
+                        "type": "string"
+                    },
+                    "files": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "path": {
+                                    "type": "string"
+                                },
+                                "bugs": {
+                                    "type": "string"
+                                },
+                                "comments": {
+                                    "type": "string"
+                                },
+                                "amendments": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "path",
+                                "comments"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "score",
+                    "overall"
+                ]
+            },
+            "MIME": "application/json"
+        },
+        "REQUEST": {
+            "TEMPLATE": "request"
+        },
+        "ANALYZE": {
+            "TEMPLATE": "analyze",
+            "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+        }
     },
     "TREE": {
         "DIRECTORIES": {
@@ -433,7 +414,8 @@
         "ELARA": {
             "CONTEXT": {
                 "QUOTATIONS": [
-                    "TARS_01",
+                    "BADI_01",
+                    "HEID_01",
                     "SART_01"
                 ],
                 "POEMS": [
@@ -451,7 +433,7 @@
                 "CANDIDATE_COUNT": 1,
                 "MAX_OUTPUT_TOKENS": 100000,
                 "TEMPERATURE": 0.9,
-                "TOP_P": 0.80,
+                "TOP_P": 0.8,
                 "TOP_K": 30
             },
             "SAFETY_SETTINGS": {
@@ -464,12 +446,13 @@
         "AXIOM": {
             "CONTEXT": {
                 "QUOTATIONS": [
+                    "ARIS_01",
+                    "FREG_01",
+                    "RUSS_01",
                     "TARS_01",
                     "RSWH_01"
                 ],
-                "POEMS": [
-                    "POPE_01"
-                ],
+                "POEMS": [],
                 "PROOFS": []
             },
             "FUNCTIONS": [
@@ -540,112 +523,6 @@
             }
         }
     },
-    "CONVERSE": {
-        "CONFIG": {
-            "TIMEZONE_OFFSET": -5,
-            "SCHEMA_FILENAME": "_new"
-        },
-        "SCHEMA": {
-            "type": "object",
-            "properties": {
-                "feedback": {
-                    "type": "string"
-                },
-                "memory": {
-                    "type": "string"
-                },
-                "response": {
-                    "type": "string"
-                },
-                "next_prompt": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "response"
-            ]
-        },
-        "MIME": "application/json",
-        "TEMPLATE": "conversation"
-    },
-    "BRAINSTORM": {
-        "TEMPLATE": "conversation"
-    },
-    "SUMMARIZE": {
-        "CONFIG": {
-            "DIRECTIVES": {
-                ".py": "python",
-                ".sh": "bash",
-                ".toml": "toml",
-                ".cfg": "toml",
-                ".json": "json",
-                ".html": "html",
-                ".js": "js"
-            },
-            "INCLUDES": [
-                ".rst",
-                ".md",
-                ".ini",
-                ".txt"
-            ],
-            "EXCLUDES": [
-                ".pyc",
-                ".zip",
-                ".gz"
-            ]
-        },
-        "TEMPLATE": "summary"
-    },
-    "REVIEW": {
-        "TEMPLATE": "review",
-        "SCHEMA": {
-            "type": "object",
-            "properties": {
-                "score": {
-                    "type": "string",
-                    "enum": [
-                        "pass",
-                        "fail"
-                    ]
-                },
-                "overall": {
-                    "type": "string"
-                },
-                "files": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "path": {
-                                "type": "string"
-                            },
-                            "bugs": {
-                                "type": "string"
-                            },
-                            "comments": {
-                                "type": "string"
-                            },
-                            "amendments": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "path",
-                            "comments"
-                        ]
-                    }
-                }
-            },
-            "required": [
-                "score",
-                "overall"
-            ]
-        },
-        "MIME": "application/json"
-    },
-    "ANALYZE": {
-        "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
-    },
     "REPO": {
         "VCS": "github",
         "AUTH": {
@@ -680,7 +557,7 @@
             }
         },
         "CONVERSATION": {
-            "DISPLAY":{
+            "DISPLAY": {
                 "PROMPT": "\tPrompt: ",
                 "INIT": "Starting an interactive terminal...",
                 "TITLE": "\n---------------\n  ELARA SHELL  \n---------------\n",

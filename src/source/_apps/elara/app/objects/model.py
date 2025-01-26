@@ -7,6 +7,7 @@ Object for managing Gemini Model. Essentially, a fancy wrapper around Google's G
 # Standard Library Modulse
 import logging
 import json
+import traceback
 
 # External Modules 
 import google.generativeai as genai
@@ -237,6 +238,7 @@ class Model:
 
     @retry.Retry(
         predicate                       = retry.if_transient_error,
+        # TODO: figure out optimal settings here
         initial                         = 2.0,
         maximum                         = 64.0,
         multiplier                      = 2.0,
@@ -302,15 +304,15 @@ class Model:
                 )
 
         except exceptions.ServiceUnavailable as e:
-            logger.error(f"Gemini Service Unavailable: {e}")
+            logger.error(f"Gemini Service Unavailable: {e}\n\n{traceback.format_exc()}")
             raise 
 
         except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Servie 500 failure: {e}")
+            logger.error(f"Gemini Servie 500 failure: {e}\n\n{traceback.format_exc()}")
             raise
 
         except Exception as e:
-            logger.error(f"Error generating content: {e}")
+            logger.error(f"Error generating content: {e}\n\n{traceback.format_exc()}")
             raise
                    
         if "response_schema" in generation_config.keys():

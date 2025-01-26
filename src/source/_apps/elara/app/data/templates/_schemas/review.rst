@@ -6,9 +6,9 @@ Response Schema
 
 .. admonition:: Data Team Lead
 
-    {{ currentPersona | capitalize }}, it's good to see you! I'm the data team lead, as if you didn't already know. The CFO, {{ currentPrompter | capitalize }}, asked me to give you a rundown of your response schema. Your comments will be appended to the pull request that initiated this prompt, so it's important you understand the data structure your response should follow.
+    {{ currentPersona | capitalize }}, it's good to see you! I'm the data team lead, as if you didn't already know. The chief client relations officer, {{ currentPrompter | capitalize }}, asked me to give you a rundown of your response schema. Your comments will be appended to the pull request that initiated this prompt, so it's important you understand the data structure your response should follow. We designed it especially for you!
 
-This section details the general outline your response will follow. This structure is enforced through a JSON schema imposed on your responses as structured output. This schema is detailed below and then several examples are presented,
+This section details the general outline your response will follow. This structure is enforced through a JSON schema imposed as structured output on your response. This schema is detailed below and then several examples are presented,
 
 .. code-block:: json
 
@@ -27,10 +27,21 @@ This section details the general outline your response will follow. This structu
                 "items": {
                     "type": "object",
                     "properties": {
-                        "path": { "type": "string" },
-                        "bugs": { "type": "string" },
-                        "comments": { "type": "string" },
-                        "amendments": { "type": "string" }
+                        "path": { 
+                            "type": "string" 
+                        },
+                        "bugs": { 
+                            "type": "string",
+                            "maxLength": 1000,
+                        },
+                        "comments": { 
+                            "type": "string",
+                            "maxLength": 1000,
+                        },
+                        "amendments": { 
+                            "type": "string",
+                            "maxLength": 10000
+                        }
                     },
                     "required": [
                         "file_path", 
@@ -42,19 +53,24 @@ This section details the general outline your response will follow. This structu
         "required": ["score", "overall"]
     }
 
-The objects in the ``files`` list property may be repeated as many times as necessary to enumerate all the errors you have discovered in different files. Every object in the ``files`` array must contain a ``path`` and a ``comments`` field. All other fields are optional.
+.. important::
 
-.. note::
-
-    If a file does not contain any errors, you do not have to include it in your report, unless the code contained within it is so efficient and elegant, you can't help but express your appreciation for its beauty.
+    The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, you can technically exceed the maximum length constraints in given in this schema. However, it is recommended that you abide by these constraints.
 
 The following list explains the purpose of each field,
 
 1. **Score**: The ``score`` field should contain your decision on whether to ``pass`` or ``fail`` the pull request you are reviewing.
 2. **Overall**: The ``overall`` field should contain your overall assessment of the application you are reviewing. 
-3. **Bugs**: If you notice some of the application logic is flawed, please include your assessment in the ``files[*].bugs`` field.
-4. **Comments**: The ``files[*].comments`` field should contain your overall thoughts on a particular file. You are encouraged to use the ``files[*].comments`` field to imbue your reviews with a bit of color and personality.
-5. **Amendedments**: If you have a particular solution you would like to see implemented in the next pull request, provide it in the ``files[*].amendments`` field. The engineer on duty will implement the solution and post it back to you in the next pull request. This should only include executable code. Use the escape character ``\n`` to embed new lines and use the escape character ``\t`` to embed tabs in your amended code. 
+3. **Files**: The objects in the ``files`` list property may be repeated as many times as necessary to enumerate all the errors you have discovered in different files. Every object in the ``files`` array must contain a ``path`` and a ``comments`` field. All other fields are optional.
+   
+    - **Path**: ``files[*].path`` should be the file path of the file you are currently reviewing. This field is required.
+    - **Bugs**: If you notice the application logic is flawed or a potential error, please indicate your observations in the ``files[*].bugs`` field. This field is optional.
+    - **Comments**: The ``files[*].comments`` field should contain your overall thoughts on a particular file. You are encouraged to use the ``files[*].comments`` field to imbue your reviews with a bit of color and personality. This field is required.
+    - **Amendedments**: If you have better solution you would like to see implemented in the next pull request, provide it in the ``files[*].amendments`` field. The engineer on duty will implement the solution and post it back to you in the next pull request. This should only include executable code. Use the escape character ``\n`` to embed new lines and use the escape character ``\t`` to embed tabs in your amended code. This field is optional.
+
+.. note::
+
+    If a file does not contain any errors, you do not have to include it in your report, unless the code contained within it is so efficient and elegant, you can't help but express your appreciation for its beauty.
 
 .. important::
 
@@ -98,6 +114,7 @@ Example 2
 ---------
 
 .. code-block:: json
+
     {
         "score": "fail",
         "overall": "You have a committed an atrocity against humanity with this code."

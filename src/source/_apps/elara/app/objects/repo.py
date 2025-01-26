@@ -63,7 +63,7 @@ class Repo:
         :type owner: str
         :param vcs: Type of VCS backend to use. Currently supports: `github`. Defaults to the value of the ``VCS`` environment variable.
         :type vcs: str
-        :param auth: Authentication configuration for the VCS backend. Currently supposed token-based authorization headers. Defaults to the token value in the ``VCS_TOKEN`` environment variable.
+        :param auth: Authentication configuration for the VCS backend. Currently supposed token-based authorization headers. Defaults to the token value in the ``REPO_AUTH_CREDS`` environment variable.
         :type auth: dict
         :param backends: Dictionary containing backend configurations.
         :type backends: dict
@@ -92,11 +92,6 @@ class Repo:
             RepoProps.REPO.value                : repository,
             RepoProps.VCS.value                 : vcs
         }
-
-    
-    def __iter__(self):
-        for k, v in self.src.items(): 
-            yield (k, v)
 
 
     def _pr(self, 

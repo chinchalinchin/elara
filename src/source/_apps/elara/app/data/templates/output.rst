@@ -4,7 +4,7 @@
 Output
 ######
 ######
-{% if prompt -%}
+{% if prompt %}
 .. _prompt:
 
 Prompt
@@ -12,8 +12,8 @@ Prompt
 ######
 
 {{ prompt }}
-{%- endif -%}
-{% if response -%}
+{%- endif %}
+{%- if response -%}
 .. _response:
 
 Response
@@ -45,20 +45,20 @@ Reports
 
 Summary
 #######
-{% include '_metadata/summary.rst' %}
+{% include '_reports/summary.rst' %}
 {% endif %}
 {% if includes.get('models') %}
 .. _model-report: 
 
 Models
 ######
-{% include '_metadata/models.rst' %}
+{% include '_reports/models.rst' %}
 {% endif %}
 {%- if includes.get('service') -%}
 .. _service-report:
 
 Service
 #######
-{% include '_metadata/service.rst' %}
+{% include '_reports/service.rst' %}
 {% endif %}
 {% endif %}

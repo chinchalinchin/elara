@@ -23,14 +23,14 @@ def _output(args: argparse.Namespace)   -> bool:
     return "output" in vars(args).keys() and args.output
 
 
-def _show(args: argparse.Namespace)     -> bool:
+def _view(args: argparse.Namespace)     -> bool:
     """
-    Determine if ``show`` has been passed into the application arguments.
+    Determine if ``view`` has been passed into the application arguments.
 
     :param application: Application
     :type application: `app.App`
     """
-    return "show" in vars(args).keys() and args.show
+    return "view" in vars(args).keys() and args.view
 
 
 def debug(application: app.App)         -> None:
@@ -62,7 +62,7 @@ def out(
     """
     Write output to appropriate location. Output should follow the format,
 
-
+s
     :param application: Application
     :type application: `app.App`
     :param output: application output to be written.
@@ -80,5 +80,5 @@ def out(
         with open(application.arguments.output, "w") as outfile:
             outfile.write(payload)
 
-    if _show(application.arguments):
+    if _view(application.arguments):
         print(payload)

@@ -97,7 +97,7 @@ def show(application: app.App)      -> app.Output:
     :rtype: `app.Output`
     """
     metadata_vars                       = application.model.vars()
-    application.arguments.show          = True
+    application.arguments.view          = True
     return app.Output(
         includes                        = metadata_vars
     )
@@ -189,7 +189,7 @@ def main()                              -> bool:
         return False 
     
     if tty and operation_name == "converse": 
-        this_app.arguments.show         = True
+        this_app.arguments.view         = True
         this_app.terminal.interact(
             callable                    = lambda app: app.converse(),
             printer                     = printer.out,

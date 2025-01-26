@@ -114,18 +114,22 @@ class AppFactory:
             help                        = self.app.config.get("INTERFACE.HELP.SUBPARSER")
         )
 
+        arg_schema                      = self.app.config.get("INTERFACE.ARGUMENTS")
+
         for op_config in self.app.config.get("INTERFACE.OPERATIONS"):
             op_parser                   = subparsers.add_parser(
                 name                    = op_config["NAME"],
                 help                    = op_config["HELP"]
             )
-            for op_arg in op_config["ARGUMENTS"]:
+            for op_arg_key in op_config["ARGUMENTS"]:
+                op_arg                  = arg_schema.get(op_arg_key)
+                
                 if any(
                     k not in self.app.config.get("INTERFACE.FIELDS") 
                     for k in op_arg.keys()
                 ):
                     continue
-
+                
                 if "ACTION" in op_arg.keys():
                     op_parser.add_argument(*op_arg["SYNTAX"],
                         dest            = op_arg["DEST"],
@@ -182,7 +186,7 @@ class AppFactory:
         self.app.conversations          = convo.Conversation(
             dirs                        = dirs,
             exts                        = exts,
-            convo_config                = self.app.config.get("CONVERSE.CONFIG")
+            convo_config                = self.app.config.get("FUNCTIONS.CONVERSE.CONFIG")
         )
         return self
     
@@ -203,7 +207,7 @@ class AppFactory:
             self.app.directory          = directory.Directory(
                 directory               = self.app.arguments.directory,
                 summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
-                summary_config          = self.app.config.get("SUMMARIZE.CONFIG")
+                summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE.CONFIG")
             )
         return self 
     
@@ -336,7 +340,7 @@ class AppFactory:
             
             if self.app.config.get("REPO.VCS") == "github" \
                 and not self.app.config.get("REPO.AUTH.CREDS"):
-                raise ValueError("VCS_TOKEN environment variable not set for github VCS.")
+                raise ValueError("REPO_AUTH_CREDS environment variable not set for github VCS.")
         
             self.app.repository         = repo.Repo(
                 repository              = self.app.arguments.repository,
