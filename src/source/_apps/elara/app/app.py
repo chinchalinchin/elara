@@ -257,10 +257,8 @@ class App:
         """
         This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
-        :param app: Dictioanry containing application configuration.
-        :type app: dict
-        :returns: Dictionary containing templated prompt and model response.
-        :rtype: dict
+        :returns: Object containing the contextualized prompt and model response.
+        :rtype: `app.Output`
         """
 
         buffer                              = self.cache.vars()
