@@ -7,51 +7,57 @@ Object for managing template loading and rendering.
 template.Template
 -----------------
 
-Templates are organized through the hierarchy of application's functions.
+Templates are organized through the hierarchy of application's functions. All application templates can be found in the ``data/templates`` directory. The templates on the first level of this directoy correspond to core application functions. The templates in the subdirectories corresponds to modular templates.
 
-**Functional Templates**: Templates that encapsulate a function.
+**Functional Templates**
+    Templates that encapsulate a function.
 
-    - analyze
-    - brainstorm
-    - converse
-    - request
-    - review
-    - output
+- analyze
+- brainstorm
+- converse
+- request
+- review
+- output
 
 These functional templates are built out of modular templates. Modular templates are broken into several categories.
 
-**Context Templates**: These templates serve as plugins for the model context.
+**Context Templates**
+    These templates serve as plugins for the model context.
         
-    - _context/external
-    - _context/identities
-    - _context/internal
-    - _context/language
+- _context/external
+- _context/identities
+- _context/internal
+- _context/language
 
-**Interface Templates**: These templates give Gemini information regarding the interface that is being used to send prompts.
+**Interface Templates**
+    These templates give Gemini information regarding the interface that is being used to send prompts.
 
-    - _interfaces/cli
+- _interfaces/cli
 
-**Report Templates**: These templates are used to render application reports
+**Report Templates**
+    These templates are used to render application reports
 
-    - _reports/models
-    - _reports/service
-    - _reports/summary
+- _reports/models
+- _reports/service
+- _reports/summary
 
-**Response Templates**: These templates are used to render Gemini's structured output.
+**Response Templates**
+    These templates are used to render Gemini's structured output.
 
-    - _responses/analyze
-    - _responses/brainstorm
-    - _responses/converse
-    - _responses/request
-    - _responses/review
+- _responses/analyze
+- _responses/brainstorm
+- _responses/converse
+- _responses/request
+- _responses/review
 
-**Schema Templates**: These templates are used to provide Gemini information about the schema imposed on the model's structured output.
+**Schema Templates**
+    These templates are used to provide Gemini information about the schema imposed on the model's structured output.
 
-    - _schemas/analyze
-    - _schemas/brainstorm
-    - _schemas/converse
-    - _schemas/request
-    - _schemas/review
+- _schemas/analyze
+- _schemas/brainstorm
+- _schemas/converse
+- _schemas/request
+- _schemas/review
 
 """
 # External Modules

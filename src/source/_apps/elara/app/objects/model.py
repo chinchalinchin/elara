@@ -302,13 +302,18 @@ class Model:
                     generation_config   = generation_config,
                     safety_settings     = safety_settings
                 )
-
+                
+        # TODO: implement error handling
         except exceptions.ServiceUnavailable as e:
             logger.error(f"Gemini Service Unavailable: {e}\n\n{traceback.format_exc()}")
             raise 
 
         except exceptions.InternalServerError as e:
             logger.error(f"Gemini Servie 500 failure: {e}\n\n{traceback.format_exc()}")
+            raise
+
+        except exceptions.BadRequest as e: # Catch bad request exceptions
+            logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
             raise
 
         except Exception as e:

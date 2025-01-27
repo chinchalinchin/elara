@@ -1,4 +1,6 @@
 {%- set summary = includes.get('summary') %}
+.. _{{ summary.get('directory').replace("/", "-").replace(".", "-")}}-directory-report:
+
 {{ '-' * summary.get('directory') | length }}
 {{ summary.get('directory') }}
 {{ '-' * summary.get('directory') | length }}
@@ -8,12 +10,21 @@
 Structure
 ---------
 
+The following block shows the directory structure of the files given in the :ref:`directory-files` section.
+
 .. code-block:: bash
 
-    {{ summary.get('tree') }}
+{{ summary.get('tree') }}
 
+.. _directory-files:
+
+Files
+-----
+
+.. note::
+
+    Some of the files may have been excluded from the summary to conserve space.
 {% for file in summary.get('files') %}
-
 .. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-") }}:
  
 {{ file.name }}

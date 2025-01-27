@@ -19,13 +19,12 @@ General Comments
 ----------------
 
 {{ f.get("comments") }}
-{% if f.get('bugs') %}
+{%- if f.get('bugs') %}
 Bugs
 ----
 
 {{ f.get('bugs') }}
 {%- endif %}
-
 {% if f.get('amendments') %}
 Amended Code
 ------------

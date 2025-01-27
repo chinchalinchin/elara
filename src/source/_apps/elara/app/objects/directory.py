@@ -8,6 +8,7 @@ Object for managing local directories and filesystems
 import logging 
 import os
 import pathlib
+import traceback
 
 # Application Modules
 import exceptions 
@@ -51,7 +52,7 @@ class Directory:
             k 
             for k 
             in self.summary_config.get("DIRECTIVES").keys()
-        ] + self.summary_config.get("INCLUDES")
+        ] + self.summary_config.get("INCLUDES").get("EXT")
 
     def _tree(self) -> str:
         """
@@ -76,12 +77,12 @@ class Directory:
                 if path.is_dir():
                     structure           += f"{indent}{path.name}/\n"
 
-                elif path.suffix not in self.summary_config.get("EXCLUDES"):
+                elif path.suffix not in self.summary_config.get("EXCLUDES").get("EXT"):
                     structure           += f"{indent}{path.name}\n"
 
             return structure
         except Exception as e:
-            raise ValueError(f"Error reading directory: {self.directory}\n{e}")
+            raise ValueError(f"Error reading {self.directory}:\n{e}:\n\n{traceback.format_exc()}")
     
     def summary(self) -> dict:
         """
@@ -106,6 +107,9 @@ class Directory:
             
             files.sort() # traverse files in alphabetical order
             for file in files:
+                if file in self.summary_config.get("EXCLUDES").get("FILE"):
+                    continue
+
                 base, ext               = os.path.splitext(file)
 
                 if ext not in self._extensions() \

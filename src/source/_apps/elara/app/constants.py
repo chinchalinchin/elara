@@ -33,3 +33,24 @@ class ConvoProps(enum.Enum):
     # Configuration Properties
     SCHEMA_FILENAME                             = "SCHEMA_FILENAME"
 
+class RepoProps(enum.Enum):
+    """
+    Conversation property key enumeration.
+    """
+    # Internal Properties
+    OWNER                                       = "owner"
+    REPO                                        = "repo"
+    VCS                                         = "vcs"
+    # Configuration Properties 
+    AUTH                                        = "AUTH"
+    BACKENDS                                    = "BACKENDS"
+    VCS_TYPE                                    = "VCS"
+    TYPE                                        = "TYPE"
+    GITHUB                                      = "GITHUB"
+    # GITHUB Service Properties
+    API                                         = "API"
+    PR                                          = "PR"
+    COMMENTS                                    = "COMMENTS"
+    PULLS                                       = "PULLS"
+    CREDS                                       = "CREDS"
+    HEADERS                                     = "HEADERS"

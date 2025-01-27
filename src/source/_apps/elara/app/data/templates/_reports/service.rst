@@ -3,8 +3,10 @@
 Service Response
 ----------------
 
-**Service**: {{ service.name }}
+**Service**
+    {{ service.name }}
 
-**Status**: {{ service.status }}
+**Status**
+    {{ service.status }}
 
 {{ service.body }}

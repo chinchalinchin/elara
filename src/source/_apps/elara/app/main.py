@@ -168,15 +168,15 @@ def main()                              -> bool:
         # Administrative functions
         "configure"                     : configure,
         "clear"                         : clear,
+        # Meta functions
+        "summarize"                     : summarize,
         "show"                          : show,
-        # Application functions
-        "summarize"                     : lambda app: app.summarize(),
+        # Application Functions
         "converse"                      : lambda app: app.converse(),
         "review"                        : lambda app: app.review(),
         "request"                       : lambda app: app.request(),
         "tune"                          : lambda app: app.tune(),
         "analyze"                       : lambda app: app.analyze(),
-        "metadata"                      : lambda app: app.metadata()
     }
 
     operation_name                      = this_app.arguments.operation

@@ -5,33 +5,18 @@ objects.repo
 Object for external Version Control System. 
 """
 # Standard Library Modules 
-import enum
 import logging 
 import traceback
+import typing
 
 # External Modules
 import requests
 
+# Application Modules
+import constants 
 
 logger = logging.getLogger(__name__)
 
-
-class RepoProps(enum.Enum):
-    """
-    Conversation property key enumeration.
-    """
-    # Internal Properties
-    OWNER                                       = "owner"
-    REPO                                        = "repo"
-    VCS                                         = "vcs"
-    # Configuration Properties 
-    TYPE                                        = "TYPE"
-    GITHUB                                      = "GITHUB"
-    API                                         = "API"
-    PR                                          = "PR"
-    ISSUE                                       = "ISSUE"
-    CREDS                                       = "CREDS"
-    HEADERS                                     = "HEADERS"
 
 class Repo:
     """
@@ -46,13 +31,10 @@ class Repo:
     """Backend configurations"""
 
 
-    def __init__(
-        self,
+    def __init__(self,
+        repository_config                       : dict,
         repository                              : str, 
         owner                                   : str,
-        vcs                                     : str ,
-        auth                                    : str,
-        backends                                : dict
     ):
         """
         Initialize Repository object.
@@ -61,22 +43,29 @@ class Repo:
         :type repo: str
         :param owner: Username of the owner of the repository.
         :type owner: str
-        :param vcs: Type of VCS backend to use. Currently supports: `github`. Defaults to the value of the ``VCS`` environment variable.
-        :type vcs: str
-        :param auth: Authentication configuration for the VCS backend. Currently supposed token-based authorization headers. Defaults to the token value in the ``REPO_AUTH_CREDS`` environment variable.
-        :type auth: dict
-        :param backends: Dictionary containing backend configurations.
-        :type backends: dict
+        :param repostiry_config: Repository configuration.
+        :type repository_config: `dict`
 
-        .. note::
+        **Note**: `repository` must follow the schema,,
 
-            `auth` must be formatted as follows,
+        .. code-block:: python
 
-            {
-                "VCS": "<github | bitbucket | codecommit>",
-                "AUTH": {
-                    "TYPE": "<bearer | oauth | etc. >",
-                    "CREDS": "will change based on type."
+
+            repository_config               = {
+                "VCS"                       : "<github | bitbucket | codecommit>",
+                "AUTH"                      : {
+                    "TYPE"                  : "<bearer | oauth | etc. >",
+                    "CREDS"                 : "will change based on type."
+                },
+                "BACKENDS"                  : {
+                    "GITHUB"                : {
+                        "HEADERS"           : {
+                            # github vcs service headers
+                        },
+                        "API"               : {
+                            # github vcs service endpoints
+                        }
+                    }
                 }
             }
         
@@ -85,40 +74,77 @@ class Repo:
             Only ``github`` VCS is supported at this time.
             
         """
-        self.auth                               = auth
-        self.backends                           = backends
+        self.auth                               = repository_config[
+            constants.RepoProps.AUTH.value
+        ]
+        self.backends                           = repository_config[
+            constants.RepoProps.BACKENDS.value
+        ]
         self.src                                = {
-            RepoProps.OWNER.value               : owner,
-            RepoProps.REPO.value                : repository,
-            RepoProps.VCS.value                 : vcs
+            constants.RepoProps.OWNER.value     : owner,
+            constants.RepoProps.REPO.value      : repository,
+            constants.RepoProps.VCS.value       : repository_config[
+                constants.RepoProps.VCS_TYPE.value
+            ]
         }
 
 
-    def _pr(self, 
-        pr                                      : int
-    )                                           -> str | None:
+        # @DEVELOPMENT
+        #   Sssh! Milton won't notice all of these static methods if we don't tell him!
+    @staticmethod
+    def _body(body: typing.Any):
+        return { "body" : body }
+    
+    
+    @staticmethod
+    def _pr(pr: str)                            -> dict: 
+        return { "pr": pr }
+    
+
+    @staticmethod
+    def _service(svc: typing.Any)               -> dict:
+        return { "service": svc }
+    
+
+    @staticmethod
+    def _repo(repo: typing.Any)                 -> dict:
+        return { "repository": repo }
+    
+
+    @staticmethod
+    def _auth(auth)                             -> dict:
+        return { "Authorization": f"Bearer {auth}"}
+    
+
+    def _pull(self, 
+        num                                     : int,
+        endpoint                                : typing.Union[constants.RepoProps.COMMENTS |\
+                                                                constants.RepoProps.PULLS]
+    )                                           -> typing.Union[str | None]:
         """
-        Returns the POST URL for the VCS REST API.
+        Returns the POST URL for the VCS REST API pull request endpoints.
 
         .. note::
 
             Only ``github`` VCS is supported at this time.
             
-        :param pr: Pull request number for the POST.
-        :type pr: str
+        :param num: Pull request number for the POST.
+        :type num: `str`
+        :param endpoint: Type of pull request endpoint.
+        :type endpont: `constants.RepoProps.COMMENTS | constants.RepoProps.PULLS]`
         :returns: POST URL
-        :rtype: str
+        :rtype: `str`
         """
-        if self.src[RepoProps.VCS.value] == "github":
+        if self.src[constants.RepoProps.VCS.value] == "github":
 
-            return self.backends[RepoProps.GITHUB.value][
-                RepoProps.API.value][RepoProps.PR.value][RepoProps.ISSUE.value
-            ].format(**{
-                **{ "pr": pr }, 
+            return self.backends[constants.RepoProps.GITHUB.value][
+                constants.RepoProps.API.value][constants.RepoProps.PR.value
+            ][endpoint].format(**{
+                **self._pr(num), 
                 **self.src
             })
         
-        raise ValueError(f"Unsupported VCS: {self.src[RepoProps.VCS.value ]}")
+        raise ValueError(f"Unsupported VCS: {self.src[constants.RepoProps.VCS.value ]}")
     
 
     def _headers(self):
@@ -132,85 +158,145 @@ class Repo:
         :returns: Dictionary of headers
         :rtype:  dict
         """
-        if self.src[RepoProps.VCS.value] == "github":
-            if self.auth[RepoProps.TYPE.value] == "bearer":
-                token = self.auth[RepoProps.CREDS.value]
+        if self.src[constants.RepoProps.VCS.value] == "github":
+            if self.auth[constants. RepoProps.TYPE.value] == "bearer":
+                token = self.auth[constants.RepoProps.CREDS.value]
+
                 return {
-                    **{ "Authorization": f"Bearer {token}" }, 
-                    **self.backends[RepoProps.GITHUB.value][RepoProps.HEADERS.value]
+                    **self._auth(token), 
+                    **self.backends[constants.RepoProps.GITHUB.value
+                                    ][constants.RepoProps.HEADERS.value]
                 }
             
         raise ValueError(
-            f"Unsupported auth type: {self.auth[RepoProps.TYPE.value]} or VCS: {self.src[RepoProps.VCS.value]}"
+            f"Unsupported auth type: {self.auth[
+                constants.RepoProps.TYPE.value]} or VCS: {self.src[constants.RepoProps.VCS.value]}"
         )
 
 
-    def vars(self):
+    def _request(self,
+        url                                     : str,
+        body                                    : typing.Any
+    )                                           -> dict:
+        """
+        Make a HTTP call to a VCS backend.
+
+        :param 
+        """
+        try:
+            logger.debug(f"Making HTTP call to {url}")
+
+            res                                 = requests.post(
+                url                             = url, 
+                headers                         = self._headers(), 
+                json                            = body
+            )
+            logger.debug(res)
+            res.raise_for_status()
+            
+            return self._service({
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : res.json(),
+                "status"                        : "success"
+            })
+
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error during {self.src[
+                constants.RepoProps.VCS.value]} API request:\n{e}\n\n{traceback.print_exc()}")
+            return self._service({
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : str(e),
+                "status"                        : "failure"
+            })
+        
+        except Exception as e:
+            logger.error(f"An unexpected error occurred:\n{e}\n\n{traceback.print_exc()}")
+            return self._service({
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : str(e),
+                "status"                        : "failure"
+            })
+        
+    def vars(self)                              -> dict:
         """
         Retrieve VCS metadata, formatted for templating.
         """
-        return { "repository": self.src }
+        return self._repo(self.src)
 
 
-    def issue(self,
+    def file(self,
+        msg                                     : str,
+        pr                                      : str,
+        commit                                  : str,
+        path                                    : str
+    )                                           -> dict:
+        """
+        Posts a comment to a pull request file on the VCS backend. Links below detail the specific VCS provider endpoints,
+
+        - **Github**: `Github REST API Docs: Pull Request COmments <https://docs.github.com/en/rest/pulls/comments?apiVersion=2022-11-28#create-a-review-comment-for-a-pull-request>
+
+        .. important::
+
+            This is different than the `self.comment` function. This endpoint will target specific files.
+            
+        .. note::
+
+            Only ``github`` VCS is supported at this time.
+
+        :param msg: Comment to post.
+        :type msg: `str`
+        :param pr: Pull request number on which to comment.
+        :type pr: `str`,
+        :param commit: Commit ID of the commit in the pull request necessitating comment.
+        :type commit: `str`
+        :param path: File path of the file necessitating comment.
+        :type path: `str`
+        :returns: Dictionary containing VCS response.
+        :rtype: `dict`
+        """
+        url                                     = self._pull(
+            num                                 = pr,
+            endpoint                            = constants.RepoProps.PULLS.value
+        )
+        body                                    = {
+            **self._body(msg),
+            **{
+                "commit_id"                     : commit,
+                "path"                          : path
+            }
+        }
+        return self._request(
+            url                                 = url,
+            body                                = body
+        )
+    
+    def comment(self,
         msg                                     : str,
         pr                                      : str
     )                                           -> dict:
         """
         Post a comment to a pull request on the VCS backend. Links below detail the specific VCS provider endpoints,
 
-        - **Github**: `Github REST API Docs <https://docs.github.com/en/rest/pulls/comments?apiVersion=2022-11-28#create-a-review-comment-for-a-pull-request>
+        - **Github**: `Github REST API Docs: Issue Comments <https://docs.github.com/en/rest/issues/comments?apiVersion=2022-11-28#create-an-issue-comment>
+
+        .. important::
+
+            Github treats pull requests as issues. Posting to an Pull Request issue creates a comment on the main thread of the pull request. 
 
         .. note::
 
             Only ``github`` VCS is supported at this time.
 
         :param msg: Comment to post.
-        :type msg: str
+        :type msg: `str`
         :param pr: Pull request number on which to comment.
-        :type pr: str
+        :type pr: `str`
         """
-        try:
-            logger.debug(f"Making HTTP call to {self._pr(pr)}")
-
-            res                                 = requests.post(
-                url                             = self._pr(pr), 
-                headers                         = self._headers(), 
-                json                            = { 
-                    "body"                      : f"MILTON SAYS: \n\n {msg}" 
-                }
-            )
-
-            logger.debug(res)
-
-            res.raise_for_status()
-            
-            return {
-                "service"                           : {
-                    "name"                          : self.src[RepoProps.VCS.value],
-                    "body"                          : res.json(),
-                    "status"                        : "success"
-                }
-            }
-
-        except requests.exceptions.RequestException as e:
-            logger.error(f"Error during {self.src[RepoProps.VCS.value]} API request: {e}")
-            traceback.print_exc()
-            return {
-                "service"                           : {
-                    "name"                          : self.src[RepoProps.VCS.value],
-                    "body"                          : str(e),
-                    "status"                        : "failure"
-                }
-            }
-        
-        except Exception as e:
-            logger.error(f"An unexpected error occurred: {e}")
-            traceback.print_exc()
-            return {
-                "service"                           : {
-                    "name"                          : self.src[RepoProps.VCS.value],
-                    "body"                          : str(e),
-                    "status"                        : "failure"
-                }
-            }
+        url                                     = self._pull(
+            num                                 = pr,
+            endpoint                            = constants.RepoProps.COMMENTS.value
+        )
+        return self._request(
+            url                                 = url,
+            body                                = self._body(msg)
+        )

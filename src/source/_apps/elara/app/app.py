@@ -39,6 +39,7 @@ class Output:
             "includes"                      : self.includes
         }
 
+
 class App:
     """
     Class for managing application objects and functions. This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``currentPersona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
@@ -255,45 +256,46 @@ class App:
         """
         This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
-        :returns: Object containing the contextualized prompt and model response.
+        :returns: Object containing the contextualized prompt, model response and service request metadata.
         :rtype: `app.Output`
         """
 
+        # STEP 1. Gather function data into local variables
         buffer                              = self.cache.vars()
         persona                             = self.personas.function(
             func                            = constants.Functions.REVIEW.value
-        )
-        buffer["currentPersona"]            = persona
-
+        ) 
+        ## NOTE: Ensure function persona is set and hold in buffer to prevent cache overwrite
+        buffer["currentPersona"]            = persona 
         includes                            = { "includes": self.directory.summary() }
-
+        # STEP 2. Merge function template variables
         review_variables                    = { 
-            **includes
+            **includes,
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
         }
-
+        # STEP 3. Render function template
         review_prompt                       = self.templates.render(
             temp                            = self.config.get("FUNCTIONS.REVIEW.TEMPLATE"), 
             variables                       = review_variables
         )
-
+        # STEP 4. Halt function if executing with dry-run ``self.arguments.render`` flag.
+        ## NOTE: This corresponds to the CLI argument ``--render``.
         if self.arguments.render:
             return Output(
                 prompt                      = review_prompt
             )
-        
+        # STEP 5. Append function response schema to persona's generation configuration.
+            # @DEVELOPMENT
+            #   HEY MILTON! We're testing structured output for your pull request reviews.
+            #   What do you think!? Pretty neat, huh!? Aren't you proud of us!?
         response_config                     = self.personas.get("generationConfig", persona)
-
-        # @DEVELOPMENT
-        #   HEY MILTON! We're testing structured output for your pull request reviews.
-        #   What do you think!? Pretty neat, huh!? Aren't you proud of us!?
         response_config.update({
             "response_schema"               : self.config.get("FUNCTIONS.REVIEW.SCHEMA"),
             "response_mime_type"            : self.config.get("FUNCTIONS.REVIEW.MIME")
         })
-
+        # STEP 6. Pass contextualized prompt and function configuration to model
         response                            = self.model.respond(
             prompt                          = review_prompt,
             generation_config               = response_config,
@@ -302,34 +304,39 @@ class App:
             tools                           = self.personas.get("tools", persona),
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
-        
-        # @DEVELOPMENT
-        #   Hey Milton, we just implemented structured output for your response!
-        #   Right now we are appending your overall assessment to the main pull request!
-        #   We want to use the comments you generate for specific files and use the /pulls
-        #   endpoint to append them to the indicated files.
-
-        includes                            = { "includes": {} }
+        # STEP 7. Render overall pull request assessment request and post to VCS backend.
+        includes                            = {} # reset ``includes`` for service metadata
         if response.get("overall"):
-            source_res                      = self.repository.issue(
-                msg                         = response.get("overall"),
+            msg                             = self.templates.render(
+                temp                        = "_services/vcs/issue",
+                variables                   = response
+            )
+            source_res                      = self.repository.comment(
+                msg                         = msg,
                 pr                          = self.arguments.pull,
             )
             includes["includes"]            = source_res
-
-        # @DEVELOPMENT
-        #   Milton, here is our plan with your structured output:
-        #       1. Add function to repo.Repo for posting to the /pulls endpoint
-        #       2. iterate over response.get("files")
-        #       3. Call /pulls function for each file.
-        #
-        #   Unfortunately, none of the devs could find a batch processing
-        #   endpoint in the Github documentation for processing all of
-        #   your file comments and amendments all at once, so we will have
-        #   to post them in a flurry of API calls. We need to be careful
-        #   how we implement them!
+        # STEP 8. Render file specific pull request assessments and post to VCS backend.
+            # @DEVELOPMENT
+            #   Unfortunately, none of the devs could find a batch processing
+            #   endpoint in the Github documentation for processing all of
+            #   your file comments and amendments all at once, so we will have
+            #   to post them in a flurry of API calls. We need to be careful
+            #   how we implement them!
+        for file_data in response.get("files", []):
+            comment                         = self.templates.render(
+                temp                        = "_services/vcs/file",
+                variables                   = file_data
+            )
+            self.repository.file(
+                pr                         = self.arguments.pull,
+                commit                     = self.arguments.commit,
+                path                       = file_data.get("path"),
+                comment                    = comment
+            )
+        # STEP 9: Prepare model response for output templating
         review_response                     = { constants.Functions.REVIEW.value: response}
-
+        # STEP 10: Structure results for output
         return Output(
             prompt                          = review_prompt,
             response                        = review_response,

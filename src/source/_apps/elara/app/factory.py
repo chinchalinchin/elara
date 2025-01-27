@@ -12,6 +12,7 @@ import pathlib
 import typing
 
 # Application Modules
+import constants
 import util
 import app as schema
 import objects.cache as cache
@@ -170,8 +171,8 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
 
-        hist_key                        = convo.ConvoProps.HISTORY.value
-        mem_key                         = convo.ConvoProps.MEMORIES.value
+        hist_key                        = constants.ConvoProps.HISTORY.value
+        mem_key                         = constants.ConvoProps.MEMORIES.value
 
         dirs                            = {
             hist_key                    : self._path(["TREE.DIRECTORIES.HISTORY"]),
@@ -258,7 +259,7 @@ class AppFactory:
         self.app.model                  = model.Model(
             api_key                     = self.app.config.get("GEMINI.KEY"),
             default_model               = self.app.config.get("GEMINI.DEFAULT"),
-            tuning                      = self.app.config.get("TUNING.ENABLED")
+            tuning                      = self.app.config.get("GEMINI.TUNING.ENABLED")
         ) 
         return self
 
@@ -281,7 +282,7 @@ class AppFactory:
         ])
         self.app.personas               = persona.Persona(
             current_persona             = self.app.cache.get("currentPersona"),
-            persona_config              = self.app.config.get("PERSONA"),
+            persona_config              = self.app.config.get("OBJECTS.PERSONA"),
             context_file                = context_file,
             tune_dir                    = tune_dir,
             tune_ext                    = self.app.config.get("TREE.EXTENSIONS.TUNING"),
@@ -317,7 +318,7 @@ class AppFactory:
         :rtype:`typing.Self`
         """
         self.app.terminal               = terminal.Terminal(
-            terminal_config             = self.app.config.get("TERMINAL")
+            terminal_config             = self.app.config.get("OBJECTS.TERMINAL")
         )
         return self
 
@@ -343,11 +344,9 @@ class AppFactory:
                 raise ValueError("REPO_AUTH_CREDS environment variable not set for github VCS.")
         
             self.app.repository         = repo.Repo(
+                repository_config       = self.app.config.get("OBJECTS.REPO.VCS"),
                 repository              = self.app.arguments.repository,
-                owner                   = self.app.arguments.owner,
-                vcs                     = self.app.config.get("REPO.VCS"),
-                auth                    = self.app.config.get("REPO.AUTH"),
-                backends                = self.app.config.get("REPO.BACKENDS")
+                owner                   = self.app.arguments.owner
             )
 
         return self

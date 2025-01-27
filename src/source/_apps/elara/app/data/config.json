@@ -304,17 +304,25 @@
                     ".html": "html",
                     ".js": "js"
                 },
-                "INCLUDES": [
-                    ".rst",
-                    ".md",
-                    ".ini",
-                    ".txt"
-                ],
-                "EXCLUDES": [
-                    ".pyc",
-                    ".zip",
-                    ".gz"
-                ]
+                "INCLUDES": {
+                    "EXT": [
+                        ".rst",
+                        ".md",
+                        ".ini",
+                        ".txt"
+                    ]
+                },
+                "EXCLUDES": {
+                    "EXT":  [
+                        ".pyc",
+                        ".zip",
+                        ".gz"
+                    ],
+                    "FILE": [
+                        "context.json"
+                    ],
+                    "DIR": []
+                }
             },
             "TEMPLATE": "summary"
         },
@@ -401,179 +409,181 @@
             "SYSTEM": ".json"
         }
     },
-    "LANGUAGE": {
-        "EXTENSION": ".rst",
-        "MODULES": {
-            "OBJECT": false,
-            "INFLECTION": true,
-            "VOICE": false,
-            "WORDS": false
-        }
-    },
-    "PERSONA": {
-        "ELARA": {
-            "CONTEXT": {
-                "QUOTATIONS": [
-                    "BADI_01",
-                    "HEID_01",
-                    "SART_01"
-                ],
-                "POEMS": [
-                    "ELIO_01",
-                    "CUMM_01",
-                    "THOM_01"
-                ],
-                "PROOFS": []
-            },
-            "FUNCTIONS": [
-                "converse"
-            ],
-            "TOOLS": "code_execution",
-            "GENERATION_CONFIG": {
-                "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 100000,
-                "TEMPERATURE": 0.9,
-                "TOP_P": 0.8,
-                "TOP_K": 30
-            },
-            "SAFETY_SETTINGS": {
-                "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
-                "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
-                "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
-                "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+    "OBJECTS": {
+        "LANGUAGE": {
+            "EXTENSION": ".rst",
+            "MODULES": {
+                "OBJECT": false,
+                "INFLECTION": true,
+                "VOICE": false,
+                "WORDS": false
             }
         },
-        "AXIOM": {
-            "CONTEXT": {
-                "QUOTATIONS": [
-                    "ARIS_01",
-                    "FREG_01",
-                    "RUSS_01",
-                    "TARS_01",
-                    "RSWH_01"
-                ],
-                "POEMS": [],
-                "PROOFS": []
-            },
-            "FUNCTIONS": [
-                "analyze"
-            ],
-            "TOOLS": "code_execution",
-            "GENERATION_CONFIG": {
-                "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 80000,
-                "TEMPERATURE": 0.9,
-                "TOP_P": 0.9,
-                "TOP_K": 40
-            },
-            "SAFETY_SETTINGS": {
-                "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
-                "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
-                "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
-                "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
-            }
-        },
-        "MILTON": {
-            "CONTEXT": {
-                "QUOTATIONS": [],
-                "POEMS": [],
-                "PROOFS": []
-            },
-            "FUNCTIONS": [
-                "review",
-                "request"
-            ],
-            "TOOLS": "code_execution",
-            "GENERATION_CONFIG": {
-                "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 200000,
-                "TEMPERATURE": 0.5,
-                "TOP_P": 0.9,
-                "TOP_K": 10
-            },
-            "SAFETY_SETTINGS": {
-                "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
-                "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
-                "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
-                "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
-            }
-        },
-        "VALIS": {
-            "CONTEXT": {
-                "QUOTATIONS": [],
-                "POEMS": [],
-                "PROOFS": []
-            },
-            "FUNCTIONS": [
-                "brainstorm"
-            ],
-            "TOOLS": "code_execution",
-            "GENERATION_CONFIG": {
-                "CANDIDATE_COUNT": 1,
-                "MAX_OUTPUT_TOKENS": 8000,
-                "TEMPERATURE": 0.9,
-                "TOP_P": 0.9,
-                "TOP_K": 40
-            },
-            "SAFETY_SETTINGS": {
-                "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
-                "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
-                "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
-                "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
-            }
-        }
-    },
-    "REPO": {
-        "VCS": "github",
-        "AUTH": {
-            "TYPE": "bearer",
-            "CREDS": null
-        },
-        "BACKENDS": {
-            "GITHUB": {
-                "HEADERS": {
-                    "X-GitHub-Api-Version": "2022-11-28",
-                    "Accept": "application/vnd.github+json"
+        "PERSONA": {
+            "ELARA": {
+                "CONTEXT": {
+                    "QUOTATIONS": [
+                        "BADI_01",
+                        "HEID_01",
+                        "SART_01"
+                    ],
+                    "POEMS": [
+                        "ELIO_01",
+                        "CUMM_01",
+                        "THOM_01"
+                    ],
+                    "PROOFS": []
                 },
-                "API": {
-                    "PR": {
-                        "ISSUE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
-                        "LINE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/pulls"
+                "FUNCTIONS": [
+                    "converse"
+                ],
+                "TOOLS": "code_execution",
+                "GENERATION_CONFIG": {
+                    "CANDIDATE_COUNT": 1,
+                    "MAX_OUTPUT_TOKENS": 100000,
+                    "TEMPERATURE": 0.9,
+                    "TOP_P": 0.8,
+                    "TOP_K": 30
+                },
+                "SAFETY_SETTINGS": {
+                    "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+                    "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+                    "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+                    "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+                }
+            },
+            "AXIOM": {
+                "CONTEXT": {
+                    "QUOTATIONS": [
+                        "ARIS_01",
+                        "FREG_01",
+                        "RUSS_01",
+                        "TARS_01",
+                        "RSWH_01"
+                    ],
+                    "POEMS": [],
+                    "PROOFS": []
+                },
+                "FUNCTIONS": [
+                    "analyze"
+                ],
+                "TOOLS": "code_execution",
+                "GENERATION_CONFIG": {
+                    "CANDIDATE_COUNT": 1,
+                    "MAX_OUTPUT_TOKENS": 80000,
+                    "TEMPERATURE": 0.9,
+                    "TOP_P": 0.9,
+                    "TOP_K": 40
+                },
+                "SAFETY_SETTINGS": {
+                    "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+                    "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+                    "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+                    "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+                }
+            },
+            "MILTON": {
+                "CONTEXT": {
+                    "QUOTATIONS": [],
+                    "POEMS": [],
+                    "PROOFS": []
+                },
+                "FUNCTIONS": [
+                    "review",
+                    "request"
+                ],
+                "TOOLS": "code_execution",
+                "GENERATION_CONFIG": {
+                    "CANDIDATE_COUNT": 1,
+                    "MAX_OUTPUT_TOKENS": 200000,
+                    "TEMPERATURE": 0.75,
+                    "TOP_P": 0.9,
+                    "TOP_K": 10
+                },
+                "SAFETY_SETTINGS": {
+                    "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+                    "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+                    "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+                    "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+                }
+            },
+            "VALIS": {
+                "CONTEXT": {
+                    "QUOTATIONS": [],
+                    "POEMS": [],
+                    "PROOFS": []
+                },
+                "FUNCTIONS": [
+                    "brainstorm"
+                ],
+                "TOOLS": "code_execution",
+                "GENERATION_CONFIG": {
+                    "CANDIDATE_COUNT": 1,
+                    "MAX_OUTPUT_TOKENS": 8000,
+                    "TEMPERATURE": 0.9,
+                    "TOP_P": 0.9,
+                    "TOP_K": 40
+                },
+                "SAFETY_SETTINGS": {
+                    "HARM_CATEGORY_HATE_SPEECH": "BLOCK_NONE",
+                    "HARM_CATEGORY_SEXUALLY_EXPLICIT": "BLOCK_NONE",
+                    "HARM_CATEGORY_DANGEROUS_CONTENT": "BLOCK_NONE",
+                    "HARM_CATEGORY_HARASSMENT": "BLOCK_NONE"
+                }
+            }
+        },
+        "REPO": {
+            "VCS": "github",
+            "AUTH": {
+                "TYPE": "bearer",
+                "CREDS": null
+            },
+            "BACKENDS": {
+                "GITHUB": {
+                    "HEADERS": {
+                        "X-GitHub-Api-Version": "2022-11-28",
+                        "Accept": "application/vnd.github+json"
+                    },
+                    "API": {
+                        "PR": {
+                            "COMMENT": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                            "FILE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/pulls"
+                        }
                     }
                 }
             }
-        }
-    },
-    "TERMINAL": {
-        "GHERKIN": {
-            "HELP": "Please describe the feature request with Gherkin test language.",
-            "BLOCKS": {
-                "FEATURE": "FEATURE\n\tEnter feature name: ",
-                "SCENARIO": "SCENARIO\n\tDescribe the specific scenario in the feature: ",
-                "LANGUAGE": "LANGUAGE\n\tSpecify the desired programming language: ",
-                "GIVEN": "GIVEN\n\tFix the context of the scenario: ",
-                "WHEN": "WHEN\n\tDescribe the action which triggers the scenario: ",
-                "THEN": "THEN\n\tState the expected outcome of the scenario: "
-            }
         },
-        "CONVERSATION": {
-            "DISPLAY": {
-                "PROMPT": "\tPrompt: ",
-                "INIT": "Starting an interactive terminal...",
-                "TITLE": "\n---------------\n  ELARA SHELL  \n---------------\n",
-                "START": "\n\tType exit() to quit.\n\tType help() to see list of commands.\n\n",
-                "HELP": "TODO"
+        "TERMINAL": {
+            "GHERKIN": {
+                "HELP": "Please describe the feature request with Gherkin test language.",
+                "BLOCKS": {
+                    "FEATURE": "FEATURE\n\tEnter feature name: ",
+                    "SCENARIO": "SCENARIO\n\tDescribe the specific scenario in the feature: ",
+                    "LANGUAGE": "LANGUAGE\n\tSpecify the desired programming language: ",
+                    "GIVEN": "GIVEN\n\tFix the context of the scenario: ",
+                    "WHEN": "WHEN\n\tDescribe the action which triggers the scenario: ",
+                    "THEN": "THEN\n\tState the expected outcome of the scenario: "
+                }
             },
-            "COMMANDS": {
-                "EXIT": "exit()",
-                "HELP": "help()"
-            },
-            "FUNCTIONS": [
-                "currentPersona",
-                "currentPrompter",
-                "directory",
-                "currentModel"
-            ]
+            "CONVERSATION": {
+                "DISPLAY": {
+                    "PROMPT": "\tPrompt: ",
+                    "INIT": "Starting an interactive terminal...",
+                    "TITLE": "\n---------------\n  ELARA SHELL  \n---------------\n",
+                    "START": "\n\tType exit() to quit.\n\tType help() to see list of commands.\n\n",
+                    "HELP": "TODO"
+                },
+                "COMMANDS": {
+                    "EXIT": "exit()",
+                    "HELP": "help()"
+                },
+                "FUNCTIONS": [
+                    "currentPersona",
+                    "currentPrompter",
+                    "directory",
+                    "currentModel"
+                ]
+            }
         }
     },
     "GEMINI": {

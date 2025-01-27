@@ -33,14 +33,13 @@ Response
 {% include '_responses/request.rst' %}
 {% endif %}
 {%- endif -%}
-{% if includes -%}
+{% if includes %}
 .. _reports:
 
 Reports
 #######
 #######
-
-{%- if includes.get('summary') -%}
+{% if includes.get('summary') %}
 .. _summary-report:
 
 Summary

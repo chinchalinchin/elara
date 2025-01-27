@@ -67,9 +67,9 @@ s
     :type application: `app.App`
     :param output: application output to be written.
     :type output: `app.Output`
-    :param suppress_prompt: Flag to suppress prompts from the output. This argument only applies to terminal commands.  
-    :type suppress_prompt: `bool`
     """
+    # @TODO: remove after debug.
+    pprint.pp(output.to_dict().get("includes"))
 
     payload                             = application.templates.render(
         temp                            = "output", 
