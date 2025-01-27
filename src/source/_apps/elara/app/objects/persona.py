@@ -12,7 +12,7 @@ import logging
 # Application Modules
 import constants
 import exceptions
-
+import util
 
 logger                              = logging.getLogger(__name__)
 
@@ -161,7 +161,7 @@ class Persona:
                     context_plugin         = context[con_type.upper()][con_key]
 
                     self.personas[persona][self._prop_cont][con_type]\
-                                            .append(context_plugin)
+                                            .append(util.lower(context_plugin))
         return
     
 
@@ -176,6 +176,7 @@ class Persona:
         """
         if persona is None:
             return self.personas.get(self.current)
+        
         return self.personas.get(persona)
     
 

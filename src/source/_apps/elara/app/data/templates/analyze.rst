@@ -1,4 +1,4 @@
-.. _{{ currentPersona }}-context:
+.. _{{ current_persona }}-context:
 
 Critical Review
 ###############

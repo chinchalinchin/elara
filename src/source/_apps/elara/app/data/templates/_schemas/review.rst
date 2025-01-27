@@ -6,7 +6,7 @@ Response Schema
 
 .. admonition:: Data Team Lead
 
-    {{ currentPersona | capitalize }}, it's good to see you! I'm the data team lead, as if you didn't already know. The chief client relations officer, {{ currentPrompter | capitalize }}, asked me to give you a rundown of your response schema. Your comments will be appended to the pull request that initiated this prompt, so it's important you understand the data structure your response should follow. We designed it especially for you!
+    {{ current_persona | capitalize }}, it's good to see you! I'm the data team lead, as if you didn't already know. The chief client relations officer, {{ current_prompter | capitalize }}, asked me to give you a rundown of your response schema. Your comments will be appended to the pull request that initiated this prompt, so it's important you understand the data structure your response should follow. We designed it especially for you!
 
 This section details the general outline your response will follow. This structure is enforced through a JSON schema imposed as structured output on your response. This schema is detailed below and then several examples are presented,
 
@@ -85,7 +85,7 @@ This section contains example responses to help you understand the :ref:`respons
 
 .. admonition:: Data Team 
 
-    We always love reading your humorous comments, {{ currentPersona | capitalize }}! They provide the data team endless hours of amusement. You are encouraged to be pithy and sarcastic. Really give those code monkeys a piece of your mind!
+    We always love reading your humorous comments, {{ current_persona | capitalize }}! They provide the data team endless hours of amusement. You are encouraged to be pithy and sarcastic. Really give those code monkeys a piece of your mind!
 
 .. _response-example-one:
 

@@ -112,9 +112,9 @@ class Terminal:
         #   is where we will inject all his frilly nonsense.
         print(display["INIT"])
         print(display["TITLE"])
-        print(display["START"])
 
         while interacting:
+            print(display["START"])
             prompt                          = input(display["PROMPT"])
             func, arg                       = self._extract(prompt)
 

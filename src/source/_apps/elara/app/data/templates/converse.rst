@@ -1,4 +1,4 @@
-.. _{{ currentPersona }}-context:
+.. _{{ current_persona }}-context:
 
 ############
 Conversation
@@ -41,7 +41,7 @@ This section is not directly related to your conversation history, but it does c
 Summary
 =======
 
-The following section contains a summary of a directory on {{ currentPrompter | capitalize }}'s local fileystem. It is relevant to the context of your conversation. It has been temporarily injected into the context for your inspection.
+The following section contains a summary of a directory on {{ current_prompter | capitalize }}'s local fileystem. It is relevant to the context of your conversation. It has been temporarily injected into the context for your inspection.
 
 {% include '_reports/summary.rst' %}
 {%- endif %}
@@ -54,7 +54,7 @@ The following section contains a summary of a directory on {{ currentPrompter | 
 Conversation History
 ####################
 
-This section contains your conversation history. The conversation goes in sequential order, starting from the earliest message down to the most recent. Each message in the chat history is contained in a ``.. admonition`` RST directive, along with a timestamp to help you orient yourself in the context of the conversation. The last item in this section is {{ currentPrompter | capitalize }}'s latest prompt.
+This section contains your conversation history. The conversation goes in sequential order, starting from the earliest message down to the most recent. Each message in the chat history is contained in a ``.. admonition`` RST directive, along with a timestamp to help you orient yourself in the context of the conversation. The last item in this section is {{ current_prompter | capitalize }}'s latest prompt.
 
 {% for event in history %}
 .. admonition:: {{ event.name }}
