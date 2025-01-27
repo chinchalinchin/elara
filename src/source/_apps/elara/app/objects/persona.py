@@ -40,7 +40,7 @@ class Persona:
 
 
     def __init__(self, persona: str, directory: str, extension: str,
-        persona_config: dict, context: str) => None:
+        persona_config: dict, context: str) -> None:
         """
         Initialize Persona object.
 
@@ -222,6 +222,7 @@ class Persona:
         if persona is None or buffer is None:
             return self.personas.get(self.current).get(attribute)
         return buffer.get(attribute)
+
 
     def function(self, func: str = None) -> dict:
         """
