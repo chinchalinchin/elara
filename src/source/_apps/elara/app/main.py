@@ -108,10 +108,9 @@ def init(
                                             .with_conversations() \
                                             .with_templates() \
                                             .with_terminal() \
-                                            .with_repository() \
                                             .with_directory() \
+                                            .with_repository() \
                                             .build()
-
 
     if command_line:
         application.logger.debug("Writing command line arguments to cache.")
@@ -129,6 +128,7 @@ def main()                              -> bool:
     :returns: A signal the application has halted.
     :rtype: `bool`
     """
+    # TODO: move dispatch logic into app.App.run()
     this_app : app.App                  = init(
         command_line                    = True
     )

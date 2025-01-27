@@ -62,9 +62,9 @@ class App:
         """
         buffer                              = self.cache.vars()
         persona                             = self.personas.function(
-            func                            = constants.Functions.ANAYLZE.value
-        )
-        buffer["currentPersona"]            = persona
+                                                constants.Functions.ANAYLZE.value)
+        buffer[constants.CacheProps.CURRENT_PERSONA.value] \
+                                            = persona
 
         latex_preamble                      = { 
             "latex"                         : self.config.get("FUNCTIONS.ANALYZE.LATEX_PREAMBLE") 
@@ -89,11 +89,15 @@ class App:
         
         response                            = self.model.respond(
             prompt                          = parsed_prompt,
-            model_name                      = self.cache.get("currentModel"),
-            generation_config               = self.personas.get("generationConfig", persona),
-            safety_settings                 = self.personas.get("safetySettings", persona),
-            tools                           = self.personas.get("tools", persona),
-            system_instruction              = self.personas.get("systemInstruction", persona)
+            model_name                      = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
+            generation_config               = self.personas.get(
+                                                constants.PersonaProps.GENERATION_CONFIG.value, persona),
+            safety_settings                 = self.personas.get(
+                                                constants.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools                           = self.personas.get(
+                                                constants.PersonaProps.TOOLS.value, persona),
+            system_instruction              = self.personas.get(
+                                                constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
         
         analyze_response                    = { constants.Functions.ANAYLZE.value : response }
@@ -113,18 +117,20 @@ class App:
         """
         prompt                              = self.arguments.prompt
         
-        if self.cache.get("currentPersona") is None:
+        if self.cache.get(constants.CacheProps.CURRENT_PERSONA.value) is None:
             converse_persona                = self.personas.function(
-                func                        = constants.Functions.CONVERSE.value
-            )
+                                                constants.Functions.CONVERSE.value)
             self.cache.update(**{
-                "currentPersona"            : converse_persona
+                constants.CacheProps.CURRENT_PERSONA.value
+                                            : converse_persona
             })
             self.cache.save()
             self.personas.update(converse_persona)
 
-        persona                             = self.cache.get("currentPersona")
-        prompter                            = self.cache.get("currentPrompter")
+        persona                             = self.cache.get(
+                                                constants.CacheProps.CURRENT_PERSONA.value)
+        prompter                            = self.cache.get(
+                                                constants.CacheProps.CURRENT_PROMPTER.value)
 
         self.conversations.update(
             persona                         = persona, 
@@ -157,7 +163,8 @@ class App:
             )
         
         response_schema                     = self.config.get("FUNCTIONS.CONVERSE.SCHEMA")
-        response_config                     = self.personas.get("generationConfig", persona)
+        response_config                     = self.personas.get(
+                                                constants.PersonaProps.GENERATION_CONFIG.value, persona)
         response_config.update({
             "response_schema"               : response_schema,
             "response_mime_type"            : self.config.get("FUNCTIONS.CONVERSE.MIME")
@@ -166,10 +173,13 @@ class App:
         response                            = self.model.respond(
             prompt                          = parsed_prompt, 
             generation_config               = response_config,
-            model_name                      = self.cache.get("currentModel"),
-            safety_settings                 = self.personas.get("safetySettings"),
-            tools                           = self.personas.get("tools"),
-            system_instruction              = self.personas.get("systemInstruction")
+            model_name                      = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
+            safety_settings                 = self.personas.get(
+                                                constants.PersonaProps.GENERATION_CONFIG.value, persona),
+            tools                           = self.personas.get(
+                                                constants.PersonaProps.TOOLS.value, persona),
+            system_instruction              = self.personas.get(
+                                                constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
         
         self.conversations.update(
@@ -199,7 +209,8 @@ class App:
         persona                             = self.personas.function(
             func                            = constants.Functions.REQUEST.value
         )
-        buffer["currentPersona"]            = persona
+        buffer[constants.CacheProps.CURRENT_PERSONA.value] \
+                                            = persona
         
         request                             = self.terminal.gherkin()
 
@@ -214,17 +225,22 @@ class App:
         )
         
         if self.arguments.render:
-            return {
-                "prompt"                    : parsed_prompt
-            }
+            return schemas.Output(
+                prompt                      = parsed_prompt
+            )
         
         response                            = self.model.respond(
             prompt                          = parsed_prompt,
-            model_name                      = self.cache.get("currentModel"),
-            generation_config               = self.personas.get("generationConfig", persona),
-            safety_settings                 = self.personas.get("safetySettings", persona),
-            tools                           = self.personas.get("tools", persona),
-            system_instruction              = self.personas.get("systemInstruction", persona)
+            model_name                      = self.cache.get(
+                                                constants.CacheProps.CURRENT_MODEL.value),
+            generation_config               = self.personas.get(
+                                                constants.PersonaProps.GENERATION_CONFIG.value, persona),
+            safety_settings                 = self.personas.get(
+                                                constants.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools                           = self.personas.get(
+                                                constants.PersonaProps.TOOLS.value, persona),
+            system_instruction              = self.personas.get(
+                                                constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
         
         request_response                    = { constants.Functions.REQUEST.value: response }
@@ -246,10 +262,10 @@ class App:
         # STEP 1. Gather function data into local variables
         buffer                              = self.cache.vars()
         persona                             = self.personas.function(
-            func                            = constants.Functions.REVIEW.value
-        ) 
+                                                constants.Functions.REVIEW.value) 
         ## NOTE: Ensure function persona is set and hold in buffer to prevent cache overwrite
-        buffer["currentPersona"]            = persona 
+        buffer[constants.CacheProps.CURRENT_PERSONA.value] \
+                                            = persona 
         includes                            = { 
             "includes"                      : self.directory.summary() 
         }
@@ -272,11 +288,12 @@ class App:
         # STEP 4. Halt function if executing with dry-run ``self.arguments.render`` flag.
         ## NOTE: This corresponds to the CLI argument ``--render``.
         if self.arguments.render:
-            return Output(
+            return schemas.Output(
                 prompt                      = review_prompt
             )
         # STEP 5. Append function response schema to persona's generation configuration.
-        response_config                     = self.personas.get("generationConfig", persona)
+        response_config                     = self.personas.get(
+                                                constants.PersonaProps.GENERATION_CONFIG.value, persona)
         response_config.update({
             "response_schema"               : self.config.get("FUNCTIONS.REVIEW.SCHEMA"),
             "response_mime_type"            : self.config.get("FUNCTIONS.REVIEW.MIME")
@@ -285,10 +302,14 @@ class App:
         response                            = self.model.respond(
             prompt                          = review_prompt,
             generation_config               = response_config,
-            model_name                      = self.cache.get("currentModel"),
-            safety_settings                 = self.personas.get("safetySettings", persona),
-            tools                           = self.personas.get("tools", persona),
-            system_instruction              = self.personas.get("systemInstruction", persona)
+            model_name                      = self.cache.get(
+                                                constants.CacheProps.CURRENT_MODEL.value),
+            safety_settings                 = self.personas.get(
+                                                constants.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools                           = self.personas.get(
+                                                constants.PersonaProps.TOOLS.value, persona),
+            system_instruction              = self.personas.get(
+                                                constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
         # STEP 7. Render overall pull request assessment request and post to VCS backend.
         if response and response.get("overall"):
@@ -349,19 +370,29 @@ class App:
                 res                     = self.model.tune(
                     display_name        = p,
                     tuning_model        = self.config.get("GEMINI.TUNING.SOURCE"),
-                    tuning_data         = self.personas.get("tuningData", p)
+                    tuning_data         = self.personas.get(
+                                            constants.PersonaProps.TUNING.value, p)
                 )
                 tuned_models.append({
-                    "name"              : p,
-                    "version"           : self.config.get("VERSION"),
-                    "path"              : res.name
+                    constants.ModelProps.NAME.value
+                                        : p,
+                    constants.ModelProps.VERSION.value           
+                                        : self.config.get("VERSION"),
+                    constants.ModelProps.PATH
+                                        : res.name
                 })
 
         if tuned_models:
             self.cache.update(**{
-                "tunedModels"           : tuned_models
+                constants.CacheProps.TUNED_MODELS.value \
+                                        : tuned_models
             })
             self.cache.save()
             return True
             
         return False
+    
+
+    def run(self)                       -> schemas.Output:
+        # TODO: application function dispatch logic here
+        return schemas.Output()

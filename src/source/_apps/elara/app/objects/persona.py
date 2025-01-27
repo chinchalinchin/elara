@@ -12,7 +12,7 @@ import logging
 # Application Modules
 import constants
 import exceptions
-import util
+
 
 logger                              = logging.getLogger(__name__)
 
@@ -35,18 +35,23 @@ class Persona:
 
     # Persona properties
     _prop_tune                      = constants.PersonaProps.TUNING.value
-    _prop_syst                      = constants.PersonaProps.SYSTEM.value
+    _prop_syst                      = constants.PersonaProps.SYSTEM_INSTRUCTION.value
+    _prop_cont                      = constants.PersonaProps.CONTEXT.value
+    _prop_func                      = constants.PersonaProps.FUNCTIONS.value
+    _prop_tool                      = constants.PersonaProps.TOOLS.value
+    _prop_gene                      = constants.PersonaProps.GENERATION_CONFIG.value
+    _prop_safe                      = constants.PersonaProps.SAFETY_SETTINGS.value
     _prop_schema                    = constants.PersonaProps.SCHEMA_FILENAME.value
 
 
-    def __init__(self, persona: str, directory: str, extension: str,
-        persona_config: dict, context: str) -> None:
+    def __init__(self, persona: str, persona_config: dict, 
+                 directory: str, extension: str, context: str) -> None:
         """
         Initialize Persona object.
 
         :param persona: Initial persona for model to assume. 
         :type persona: `str`
-        :param directory: Directory containingg persona data.
+        :param directory: Directory containing persona data.
         :type directory: `str`
         :param extension: File extension of persona data.
         :type extension: `str`
@@ -61,6 +66,7 @@ class Persona:
         self.context                    = context
         self.personas                   = { }
         self.persona_config             = persona_config
+        self.schema                     = self._schema()
         self._personas()
         self._context(context)
 
@@ -144,29 +150,18 @@ class Persona:
             context                     = json.load(f)
 
         for persona in self.personas.keys():
-            key                         = persona.upper()
+            context_config              = self.personas[persona][self._prop_cont]
 
-            self.personas[persona].update({
-                "tools"                 : self.persona_config[key]["TOOLS"],
-                "context"               : {},
-                "generationConfig"      : util.lower(
-                    self.persona_config[key].get("GENERATION_CONFIG")),
-                "safetySettings"        : util.lower(
-                    self.persona_config[key].get("SAFETY_SETTINGS")),
-                "functions"             : self.persona_config[key].get("FUNCTIONS")
-            })
-
-            for c_key, c_value in \
-                util.lower(self.persona_config[key]["CONTEXT"]).items(): 
+            for con_type, con_keys in context_config.items(): 
                 
-                self.personas[persona]["context"][c_key] \
+                self.personas[persona][self._prop_cont][con_type] \
                                         = []
 
-                for c_index in c_value: 
-                    context_mod         = context[c_key.upper()][c_index]
-                    context_mod         = util.lower(context_mod)
+                for con_key in con_keys: 
+                    context_plugin         = context[con_type.upper()][con_key]
 
-                    self.personas[persona]["context"][c_key].append(context_mod)
+                    self.personas[persona][self._prop_cont][con_key]\
+                                            .append(context_plugin)
         return
     
 
@@ -207,16 +202,20 @@ class Persona:
         """
         Get a persona's attribute. Attributes are given in the following list,
 
-        - systemInstruction
-        - tuningData
+        - system
+        - tuning
         - tools
-        - safetySettings
-        - generationConfig
+        - functions
+        - safety_settings
+        - generation_config
+        - context
 
-        :param persona: Persona to retrieve. If no persona is provided, the current persona will be returned.
-        :type persona: str
-        :returns: Persona metadata
-        :rtype: dict
+        :param persona: Persona whose attribute is to be retrieved. If no persona is provided, the current persona will be used.
+        :type persona: `str`
+        :param attribute: Persona attribute to retrieve.
+        :type attribute: `str`
+        :returns: Persona attribute metadata
+        :rtype: `dict`
         """
         buffer                          = self.personas.get(persona)
         if persona is None or buffer is None:
@@ -234,7 +233,7 @@ class Persona:
         :rtype: dict
         """
         for name, persona in self.personas.items():
-            if func in persona["functions"]:
+            if func in persona[self._prop_func]:
                 return name
             
         return self.current

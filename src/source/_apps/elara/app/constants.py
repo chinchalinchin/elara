@@ -38,10 +38,36 @@ class PersonaProps(enum.Enum):
     """
     # Internal Properties
     TUNING              = "tuning"
-    SYSTEM              = "system"
+    SYSTEM_INSTRUCTION  = "system"
+    CONTEXT             = "context"
+    FUNCTIONS           = "functions"
+    TOOLS               = "tools"
+    GENERATION_CONFIG   = "generation_config"
+    SAFETY_SETTINGS     = "safety_settings"
     # Configuration Properties
     SCHEMA_FILENAME     = "SCHEMA_FILENAME"
 
+
+class ModelProps(enum.Enum):
+    """
+    Model property key enumeration
+    """
+    # Internal Properties
+    NAME                = "name"
+    VERSION             = "version"
+    PATH                = "path"
+
+
+class CacheProps(enum.Enum):
+    """
+    Cache property key enumeration
+    """
+    # Internal Properties
+    CURRENT_MODEL       = "current_model"
+    CURRENT_PERSONA     = "current_persona"
+    CURRENT_PROMPTER    = "current_prompter"
+    TUNED_MODELS        = "tuned_models"
+    
 
 class RepoProps(enum.Enum):
     """

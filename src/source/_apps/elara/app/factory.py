@@ -178,14 +178,15 @@ class AppFactory:
         if self.app.arguments is None:
             raise ValueError("Arguments must be initialized before Repository!")
         
-        arguments                       = vars(self.app.arguments)
-
-        if "directory" in arguments:
-            self.app.directory          = directory.Directory(
-                directory               = self.app.arguments.directory,
-                summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
-                summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE.CONFIG")
-            )
+        if "directory" not in vars(self.app.arguments) and self.app.logger:
+            self.app.logger.warning("Directory missing from arguments, ignoring initialization.")
+            return self 
+        
+        self.app.directory          = directory.Directory(
+            directory               = self.app.arguments.directory,
+            summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
+            summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE.CONFIG")
+        )
         return self 
     
 
@@ -196,9 +197,8 @@ class AppFactory:
         :returns: Updated self.
         :rtype: `typing.Self`
         """
-        lang_dir                        = self._path(["TREE.DIRECTORIES.LANGUAGE"])
         self.app.language               = language.Language(
-            directory                   = lang_dir,
+            directory                   = self._path(["TREE.DIRECTORIES.LANGUAGE"]),
             extension                   = self.app.config.get("TREE.EXTENSIONS.LANGUAGE"),
             enabled                     = self.app.config.language_modules()
         )
@@ -253,9 +253,9 @@ class AppFactory:
         self.app.personas               = persona.Persona(
             persona                     = self.app.cache.get("currentPersona"),
             persona_config              = self.app.config.get("OBJECTS.PERSONA"),
-            context_file                = self._path(["TREE.DIRECTORIES.DATA", "TREE.FILES.CONTEXT"]),
             directory                   = self._path(["TREE.DIRECTORIES.PERSONAS"]),
-            extension                   = self.app.config.get("TREE.EXTENSIONS.PERSONAS")
+            extension                   = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
+            context                     = self._path(["TREE.DIRECTORIES.DATA", "TREE.FILES.CONTEXT"])
         )
         return self
     
