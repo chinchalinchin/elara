@@ -1,7 +1,14 @@
 {%- set service = includes.get('service') %}
+.. _service-report:
 
+Service
+#######
+
+.. _service-response:
+
+===============
 Service Response
-----------------
+================
 
 **Service**
     {{ service.name }}
@@ -9,4 +16,7 @@ Service Response
 **Status**
     {{ service.status }}
 
-{{ service.body }}
+{% if service.body.get("url") %}
+**Url**
+    {{ service.body.url }}
+{% endif %}

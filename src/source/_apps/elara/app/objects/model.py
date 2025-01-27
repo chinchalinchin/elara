@@ -228,11 +228,11 @@ class Model:
             return None
 
         except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Servie 500 failure: {e}")
+            logger.error(f"Gemini Service 500 failure: {e}")
             return None
 
         except Exception as e:
-            logger.error(f"Unkonw Error tuning model {display_name}: {e}")
+            logger.error(f"Unknonww error tuning model {display_name}: {e}")
             return None 
 
 
@@ -312,7 +312,7 @@ class Model:
             logger.error(f"Gemini Servie 500 failure: {e}\n\n{traceback.format_exc()}")
             raise
 
-        except exceptions.BadRequest as e: # Catch bad request exceptions
+        except exceptions.BadRequest as e: 
             logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
             raise
 

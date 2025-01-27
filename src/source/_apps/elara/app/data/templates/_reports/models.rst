@@ -1,15 +1,19 @@
 {%- set models = includes.get('models') %}
+.. _model-report: 
+
+Models
+######
 
 .. _models:
 
-------
+======
 Models 
-------
+======
 
 .. _base_models:
 
 Base Models
------------
+===========
 
 {% if models.get("base_models") | length > 0 %}
 .. list-table:: 
@@ -25,7 +29,7 @@ Base Models
 {%- endfor %}
 {% endif %}
 Tuning Models 
--------------
+=============
 
 {% if models.get("tuning_models") | length > 0 %}
 .. list-table:: 

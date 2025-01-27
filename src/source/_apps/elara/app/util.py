@@ -32,6 +32,7 @@ def lower(d: dict)                      -> dict:
     """
     return { k.lower(): v for k, v in d.items() }
 
+
 def map(
     type_string: str
 ) -> typing.Union[str, int, float, bool]:
@@ -48,6 +49,7 @@ def map(
         raise ValueError(f"Invalid type: {type_string}")
     
     return TYPE_MAP[type_string]
+
 
 def validate(
     value: typing.Any

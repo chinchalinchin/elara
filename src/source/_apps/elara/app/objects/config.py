@@ -238,18 +238,11 @@ class Config:
             self.data[key] = value
 
 
-    def tuning_enabled(self):
-        """
-        Returns a bool flag signaling models should be tuned.
-        """
-        return self.get("MODEL.TUNING") == "enabled"
-
-
     def language_modules(self):
         """
         Return a list of enabled Language modules.
         """
-        modules = self.get("LANGUAGE.MODULES")
+        modules = self.get("OBJECTS.LANGUAGE.MODULES")
 
         if any(v for v in modules.values()):
             return [ k.lower() for k,v in modules.items() if v ]

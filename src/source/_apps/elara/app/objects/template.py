@@ -60,66 +60,80 @@ These functional templates are built out of modular templates. Modular templates
 - _schemas/review
 
 """
+# Standard Library Modules
+import logging 
+
 # External Modules
 import jinja2
+
+
+logger                                  = logging.getLogger(__name__)
 
 
 class Template:
     """
     Class for managing application templates. 
     """
-    templates = None
+    templates                           = None
     """Application templates"""
-    directory = None
+    directory                           = None
     """Directory containing templates"""
-    extension = None
+    extension                           = None
     """File extension of templates"""
 
     def __init__(self, 
-        directory : str,
-        extension : str
-    ) -> None:
+        directory                       : str,
+        extension                       : str
+    )                                   -> None:
         """"
-        Initialize *Templates* object.
+        Initialize a Template object.
 
         :param directory: Directory containg the templates. Defaults to ``data/templates``.
         :type directory: str
         :param extension: Extension of template files. Defaults to ``.rst``.
         :type extension: str
         """
-        self.directory = directory
-        self.extension = extension
-        self.templates = jinja2.Environment(
-            loader = jinja2.FileSystemLoader(self.directory)
+        self.directory                  = directory
+        self.extension                  = extension
+        self.templates                  = jinja2.Environment(
+            loader                      = jinja2.FileSystemLoader(self.directory)
         )
 
 
     def get(self, 
-        template: str
-    ) -> jinja2.Template:
+        template                        : str,
+        ext                             : str | None = None
+    )                                   -> jinja2.Template:
         """
         Retrieve a template. 
 
         :param template: Name of the template to retrieve.
-        :type template: str
-        :returns: Jinja2 template
+        :type template: `str`
+        :param ext: Extension of the template. Defaults to ``.rst``.
+        :type ext: `str`
+        :returns: A template
+        :rtype: `jinja2.Template`
         """
-        file_name = "".join([template, self.extension])
+        extension                       = self.extension if ext is None else ext
+        file_name                       = "".join([template, extension])
         return self.templates.get_template(file_name)
 
 
     def render(self, 
-        temp: str, 
-        variables : dict
-    ) -> str:
+        temp                            : str, 
+        variables                       : dict,
+        ext                             : str | None = None
+    )                                   -> str:
         """
         Render a template. 
 
         :param temp: Template to render.
-        :type temp: str
+        :type temp: `str`
         :param variables: Variables to inject into template.
-        :type variables: dict
+        :type variables: `dict`
+        :param ext: Extension of the template. Defaults to ``.rst``.
+        :type ext: `str`
         :returns: A templated string.
-        :rtype: str
+        :rtype: `str`
         """
-        return self.get(temp).render(variables)
+        return self.get(temp, ext).render(variables)

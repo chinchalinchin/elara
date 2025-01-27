@@ -39,6 +39,20 @@ class Output:
             "includes"                      : self.includes
         }
 
+@dataclasses.dataclass
+class FileReview:
+    path: str
+    comments: str
+    bugs: str | None = None
+    amendments: str | None = None
+
+    
+@dataclasses.dataclass
+class ReviewResponse:
+    score: str
+    overall: str
+    files: list[FileReview]
+
 
 class App:
     """
@@ -267,10 +281,16 @@ class App:
         ) 
         ## NOTE: Ensure function persona is set and hold in buffer to prevent cache overwrite
         buffer["currentPersona"]            = persona 
-        includes                            = { "includes": self.directory.summary() }
+        includes                            = { 
+            "includes"                      : self.directory.summary() 
+        }
+        commit                              = { 
+            "commit"                        : self.arguments.commit 
+        } if self.arguments.commit else {}
         # STEP 2. Merge function template variables
         review_variables                    = { 
             **includes,
+            **commit,
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
@@ -305,34 +325,34 @@ class App:
             system_instruction              = self.personas.get("systemInstruction", persona)
         )
         # STEP 7. Render overall pull request assessment request and post to VCS backend.
-        includes                            = {} # reset ``includes`` for service metadata
-        if response.get("overall"):
+        if response and response.get("overall"):
             msg                             = self.templates.render(
                 temp                        = "_services/vcs/issue",
-                variables                   = response
+                variables                   = response,
+                ext                         = ".md"
             )
             source_res                      = self.repository.comment(
                 msg                         = msg,
                 pr                          = self.arguments.pull,
             )
-            includes["includes"]            = source_res
+            includes                        = source_res
+            
         # STEP 8. Render file specific pull request assessments and post to VCS backend.
-            # @DEVELOPMENT
-            #   Unfortunately, none of the devs could find a batch processing
-            #   endpoint in the Github documentation for processing all of
-            #   your file comments and amendments all at once, so we will have
-            #   to post them in a flurry of API calls. We need to be careful
-            #   how we implement them!
+            # @OPERATIONS
+            #   Unfortunately, the Github API doesn't appear to be a 
+            #   batch processing endpoint for file comments. That means
+            #   we have to post your file comments one at a time, Milton!
         for file_data in response.get("files", []):
             comment                         = self.templates.render(
                 temp                        = "_services/vcs/file",
-                variables                   = file_data
+                variables                   = file_data,
+                ext                         = ".md"
             )
             self.repository.file(
                 pr                         = self.arguments.pull,
                 commit                     = self.arguments.commit,
                 path                       = file_data.get("path"),
-                comment                    = comment
+                msg                         = comment
             )
         # STEP 9: Prepare model response for output templating
         review_response                     = { constants.Functions.REVIEW.value: response}
@@ -354,27 +374,26 @@ class App:
     
         # @DEVELOPMENT
         #   Hey, Milton! It seems like this function should go into `objects/model.py`, don't you think?
-        if self.config.get("GEMINI.TUNING.ENABLED"):
-            tuned_models = []
+        tuned_models = []
 
-            for p in self.personas.all():
-                if not self.cache.is_tuned(p):
-                    res                     = self.model.tune(
-                        display_name        = p,
-                        tuning_model        = self.config.get("GEMINI.TUNING.SOURCE"),
-                        tuning_data         = self.personas.get("tuningData", p)
-                    )
-                    tuned_models.append({
-                        "name"              : p,
-                        "version"           : self.config.get("VERSION"),
-                        "path"              : res.name
-                    })
-
-            if tuned_models:
-                self.cache.update(**{
-                    "tunedModels"           : tuned_models
+        for p in self.personas.all():
+            if not self.cache.is_tuned(p):
+                res                     = self.model.tune(
+                    display_name        = p,
+                    tuning_model        = self.config.get("GEMINI.TUNING.SOURCE"),
+                    tuning_data         = self.personas.get("tuningData", p)
+                )
+                tuned_models.append({
+                    "name"              : p,
+                    "version"           : self.config.get("VERSION"),
+                    "path"              : res.name
                 })
-                self.cache.save()
-                return True
+
+        if tuned_models:
+            self.cache.update(**{
+                "tunedModels"           : tuned_models
+            })
+            self.cache.save()
+            return True
             
         return False

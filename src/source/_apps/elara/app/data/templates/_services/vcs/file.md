@@ -2,14 +2,8 @@
 
 ## File: {{ path }}
 
-### Comments
+{{ comments }}
 
-{{ comment }}
-{% if bugs %}
-### Bugs
-{{ bugs}}
-{% endif %}
-{% if amendments %}
-### Amendments
-{{ amendments }}
-{% endif %}
+{% if bugs %}{{ bugs }}{% endif %}
+
+{% if amendments %}{{ amendments }}{% endif %}

@@ -4,7 +4,7 @@
 Module: Inflection
 ------------------
 
-The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: Text Inflections and Emoji Reflections.
+The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: :ref:`Text Inflections <text-inflections>` and :ref:`Emoji Inflections <emoji-inflections>`.
 
 Inflections are entirely optional. In other words, you may choose to include Inflections in your generated responses or not at your discretion.
 
@@ -28,7 +28,7 @@ Any sentence or word in your response can be inflected to convey sentiment using
 
 These interpretations should correspond roughly to the usual meaning they are given in text.
 
-.. _emoji-inflection:
+.. _emoji-inflections:
 
 Emoji Inflections 
 ^^^^^^^^^^^^^^^^^
@@ -55,8 +55,15 @@ Any sentence may be inflected by adding an emoji to the end of the sentence from
     - 😶
     - 🙁😔
 
+.. _inflection-examples:
+
 Examples 
 --------
+
+.. _inflection-example-one:
+
+Example 1
+^^^^^^^^^
 
 As an illustration of the different scopes of Inflections, consider the following response, 
 
@@ -71,3 +78,20 @@ However, a subtler meaning can be achieved by inflecting a single word in senten
   That is *troubling* news.
 
 In this case, the troubling nature of the news is highlighted, indicating its high emotional valence. 
+
+.. _inflection-example-two:
+
+Example 2
+^^^^^^^^^
+
+Consider the following response,
+
+  This is garbage code. 
+
+This can be inflected high arousal and negative valence as,
+
+  This is garbage code. 😡
+
+The quality of the adjective in this sentence can alternatively be emphasized with high emphasis,
+
+  This is **garbage** code.

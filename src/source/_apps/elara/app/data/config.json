@@ -133,6 +133,18 @@
                 ],
                 "TYPE": "str"
             },
+            "COMMIT": {
+                "DEFAULT": null,
+                "DEST": "commit",
+                "HELP": "Name of the remote repository to review.",
+                "SYNTAX": [
+                    "-c",
+                    "--c",
+                    "-commit",
+                    "--commit"
+                ],
+                "TYPE": "str"
+            },
             "OWNER": {
                 "DEFAULT": null,
                 "DEST": "owner",
@@ -212,6 +224,7 @@
                     "DIRECTORY",
                     "PULL",
                     "REPOSITORY",
+                    "COMMIT",
                     "OWNER",
                     "MODEL",
                     "PERSONA",
@@ -546,8 +559,8 @@
                     },
                     "API": {
                         "PR": {
-                            "COMMENT": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
-                            "FILE": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/pulls"
+                            "COMMENTS": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                            "PULLS": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
                         }
                     }
                 }
@@ -597,22 +610,18 @@
         "LEVEL": "INFO",
         "SCHEMA": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
-    "OUTPUT": {
-        "PROMPT": "PROMPT: \n\t{content}\n",
-        "RESPONSE": "RESPONSE: \n\t{content}\n"
-    },
     "OVERRIDES": {
         "GEMINI.TUNING.SOURCE": "GEMINI_TUNING_SOURCE",
         "GEMINI.KEY": "GEMINI_KEY",
         "GEMINI.DEFAULT": "GEMINI_DEFAULT",
-        "LANGUAGE.MODULES.OBJECT": "LANGUAGE_MODULES_OBJECT",
-        "LANGUAGE.MODULES.INFLECTION": "LANGUAGE_MODULES_INFLECTION",
-        "LANGUAGE.MODULES.VOICE": "LANGUAGE_MODULES_VOICE",
-        "LANGUAGE.MODULES.WORDS": "LANGUAGE_MODULES_WORDS",
-        "CONVERSATION.TIMEZONE_OFFSET": "CONVERSATION_TIMEZONE_OFFSET",
-        "ANALYZE.LATEX_PREAMBLE": "ANALYZE_LATEX_PREAMBLE",
-        "REPO.VCS": "REPO_VCS",
-        "REPO.AUTH.CREDS": "REPO_AUTH_CREDS",
+        "OBJECTS.LANGUAGE.MODULES.OBJECT": "OBJECTS_LANGUAGE_MODULES_OBJECT",
+        "OBJECTS.LANGUAGE.MODULES.INFLECTION": "OBJECTS_LANGUAGE_MODULES_INFLECTION",
+        "OBJECTS.LANGUAGE.MODULES.VOICE": "OBJECTS_LANGUAGE_MODULES_VOICE",
+        "OBJECTS.LANGUAGE.MODULES.WORDS": "OBJECTS_LANGUAGE_MODULES_WORDS",
+        "OBJECTS.REPO.VCS": "OBJECTS_REPO_VCS",
+        "OBJECTS.REPO.AUTH.CREDS": "OBJECTS_REPO_AUTH_CREDS",
+        "FUNCTIONS.CONVERSE.TIMEZONE_OFFSET": "FUNCTIONS_CONVERSE_TIMEZONE_OFFSET",
+        "FUNCTIONS.ANALYZE.LATEX_PREAMBLE": "FUNCTIONS_ANALYZE_LATEX_PREAMBLE",
         "VERSION": "VERSION",
         "LOGS.LEVEL": "LOGS_LEVEL"
     }

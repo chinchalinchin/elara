@@ -14,12 +14,13 @@ The following personas are under development.
 - [Gemini API](https://ai.google.dev/gemini-api/docs)
 
 ### Models 
-- models/gemini-2.0-flash-exp
+
 - models/gemini-exp-1206
 - models/gemini-exp-1121
 - models/gemini-exp-1114
-- models/gemini-2.0-flash-thinking-exp-01-21
+- models/gemini-2.0-flash-exp
 - models/gemini-2.0-flash-thinking-exp
+- models/gemini-2.0-flash-thinking-exp-01-21
 - models/gemini-2.0-flash-thinking-exp-1219
 
 ## Quickstart 
@@ -40,18 +41,18 @@ Various properties can be configured through environment variables. See `app/con
 
 ### Authentication
 
-The application ingests API tokens through the `GEMINI_KEY` and `REPO_AUTH_CREDS` environment variables.
+The application ingests API tokens through the `GEMINI_KEY` and `OBJECTS_REPO_AUTH_CREDS` environment variables.
 
 ```bash
 ## VARIABLES
 # GEMINI_KEY: Gemini API key
-# REPO_AUTH_CREDS: Version control API token
+# OBJECTS_REPO_AUTH_CREDS: Version control API token
 export GEMINI_KEY="key"
-export REPO_AUTH_CREDS="token"
+export OBJECTS_REPO_AUTH_CREDS="token"
 elara converse --prompt "Hi there, Elara!"
 ```
 
-**Note**: The `REPO_AUTH_CREDS` environment variable is only required for operations that require a VCS, such as having `milton` comment on pull requests. See the **Code Review** section below. 
+**Note**: The `OBJECTS_REPO_AUTH_CREDS` environment variable is only required for operations that require a VCS, such as having `milton` comment on pull requests. See the **Code Review** section below. 
 
 ### Contextual Conversation
 
@@ -77,13 +78,6 @@ The default persona for conversations is `elara`. Gemini can assume a different 
 elara converse --prompt "Hello Axiom!" --persona "axiom"
 ```
 
-Alternatively, you can set the default persona using the `GEMINI_PERSONA` environment variable,
-
-```bash
-export GEMINI_PERSONA="axiom"
-elara converse --prompt "Hello Axiom!"
-```
-
 ### Directory Summaries
 
 The `summarize` command will generate an RST summary of a directory and its contents with the following command,
@@ -98,7 +92,7 @@ elara summarize --directory $DIR
 
 ### Code Review
 
-The persona `milton` will provide pull request comments on a local git repository and then post the comments to a VCS backend where the pull request is hosted. In order to use the pull request commenting functionality, the VCS backend must be set through the `REPO_VCS` environment variable. Currently only values of `github` are supported. A personal access token must be provided through the `REPO_AUTH_CREDS` environment variable.
+The persona `milton` will provide pull request comments on a local git repository and then post the comments to a VCS backend where the pull request is hosted. In order to use the pull request commenting functionality, the VCS backend must be set through the `OBJECTS_REPO_VCS` environment variable. Currently only values of `github` are supported. A personal access token must be provided through the `OBJECTS_REPO_AUTH_CREDS` environment variable.
 
 Using the following commands,
 
@@ -108,10 +102,10 @@ Using the following commands,
 # OWNER: The username of the repository owner.
 # REPO: Name of the remote repository.
 # PR_NUMBER: The number of the pull request to comment on. 
-# REPO_AUTH_CREDS: A personal access token for the Github API.
-# REPO_VCS: The name of the repository that contains the pull request.
-export REPO_VCS="github"
-export REPO_AUTH_CREDS="<inset API token>"
+# OBJECTS_REPO_AUTH_CREDS: A personal access token for the Github API.
+# OBJECTS_REPO_VCS: The name of the repository that contains the pull request.
+export OBJECTS_REPO_VCS="github"
+export OBJECTS_REPO_AUTH_CREDS="<inset API token>"
 elara review --repository $REPO --owner $OWNER --pull $PR_NUMBER  --directory $DIR
 ```
 
@@ -133,7 +127,7 @@ You will then be prompted to enter information regarding the feature request thr
 
 ### Mathematical Analysis
 
-The persona `axiom` will provide formal and mathematical analysis. Pass this persona a directory of RST documents and it will provide a scholarly review of its content. These documents can be formatted with LaTeX. The LaTeX preamble can be configured through the ``ANALYZE_LATEX_PREAMBLE`` environment variable.
+The persona `axiom` will provide formal and mathematical analysis. Pass this persona a directory of RST documents and it will provide a scholarly review of its content. These documents can be formatted with LaTeX. The LaTeX preamble can be configured through the ``FUNCTIONS_ANALYZE_LATEX_PREAMBLE`` environment variable.
 
 Use the following command,
 
@@ -171,6 +165,7 @@ All context is managed in the `data` directory. The application uses Jinja2 temp
 1. `data/templates`: This subdirectory contains RST templates that are rendered using user input.
 2. `data/history`: This subdirectory contains JSONs that contain chat threads with different personas.
 3. `data/system`: This subdirectory contains JSON that contain system instructions for each persona. 
+4. `data/memories`: This subdirectory contains JSONS that contain chat memories with different personas.
 4. `data/tuning`: This subdirectory contains JSON files with tuning data. These are used to initialize the persona models, if tuning is enabled through the ``TUNING`` environment variable.
 5. `data/language`: This subdirectory contains RST modules for language processing. These modules add grammatical forms to the persona's diction.
 
@@ -179,20 +174,12 @@ All context is managed in the `data` directory. The application uses Jinja2 temp
 Additional language plugins can be injected into the prompt. The language modules can be found in ``data/modules``. To enable a Language module, set the value of the following environment variables,
 
 ```bash
-export LANGUAGE_MODULES_OBJECT=enabled
-export LANGUAGE_MODULES_INFLECTION=enabled
-export LANGUAGE_MODULES_VOICE=enabled
-export LANGUAGE_MODULES_WORDS=enabled
+export OBJECTS_LANGUAGE_MODULES_OBJECT=enabled
+export OBJECTS_LANGUAGE_MODULES_INFLECTION=enabled
+export OBJECTS_LANGUAGE_MODULES_VOICE=enabled
+export OBJECTS_LANGUAGE_MODULES_WORDS=enabled
 
 elara chat -p "Try out these sweet language modules, Elara!"
 ```
 
 **TODO**: explain purpose of language modules
-
-## TODOS
-
-1. [structured output](https://ai.google.dev/gemini-api/docs/structured-output?lang=python)
-2. Milton should probably respond with structured output for pull requests. Currently his comments are posted to the main pull request. If structured output were implemented, his comments could tag specific lines in a file.
-3. Lean heavily into the tags in Milton's system instructions. Encourage him to provide feedback on code that is tagged with OPERATIONS, DATA, and DEVELOPMENT
-4. Should allow the user to specify for Gherkin script directly through command line for the `request` function.
-5. Need to formalize the tuning sets for all three personas.

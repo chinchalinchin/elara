@@ -336,15 +336,15 @@ class AppFactory:
         arguments                       = vars(self.app.arguments)
 
         if "repository" in arguments and "owner" in arguments:
-            if self.app.config.get("REPO.VCS") is None:
+            if self.app.config.get("OBJECTS.REPO.VCS") is None:
                 raise ValueError("VCS backend not set.")
             
-            if self.app.config.get("REPO.VCS") == "github" \
-                and not self.app.config.get("REPO.AUTH.CREDS"):
+            if self.app.config.get("OBJECTS.REPO.VCS") == "github" \
+                and not self.app.config.get("OBJECTS.REPO.AUTH.CREDS"):
                 raise ValueError("REPO_AUTH_CREDS environment variable not set for github VCS.")
         
             self.app.repository         = repo.Repo(
-                repository_config       = self.app.config.get("OBJECTS.REPO.VCS"),
+                repository_config       = self.app.config.get("OBJECTS.REPO"),
                 repository              = self.app.arguments.repository,
                 owner                   = self.app.arguments.owner
             )

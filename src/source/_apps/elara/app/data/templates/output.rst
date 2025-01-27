@@ -31,7 +31,7 @@ Response
 {% endif %}
 {% if response.get("request") %}
 {% include '_responses/request.rst' %}
-{% endif %}
+{% endif -%}
 {%- endif -%}
 {% if includes %}
 .. _reports:
@@ -39,25 +39,17 @@ Response
 Reports
 #######
 #######
-{% if includes.get('summary') %}
+{% if includes.get("summary") %}
 .. _summary-report:
 
 Summary
 #######
 {% include '_reports/summary.rst' %}
 {% endif %}
-{% if includes.get('models') %}
-.. _model-report: 
-
-Models
-######
+{% if includes.get("models") %}
 {% include '_reports/models.rst' %}
 {% endif %}
-{%- if includes.get('service') -%}
-.. _service-report:
-
-Service
-#######
+{%- if includes.get("service") -%}
 {% include '_reports/service.rst' %}
 {% endif %}
 {% endif %}

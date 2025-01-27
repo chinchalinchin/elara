@@ -195,7 +195,7 @@ def main()                              -> bool:
             printer                     = printer.out,
             app                         = this_app
         )
-        return
+        return True
         
     out                                 = operations[operation_name](this_app)
         
@@ -203,7 +203,7 @@ def main()                              -> bool:
         application                     = this_app,
         output                          = out
     )
-    
+    return True
 
 if __name__ == "__main__":
     main()

@@ -89,37 +89,14 @@ class Repo:
         }
 
 
-        # @DEVELOPMENT
-        #   Sssh! Milton won't notice all of these static methods if we don't tell him!
-    @staticmethod
-    def _body(body: typing.Any):
-        return { "body" : body }
-    
-    
-    @staticmethod
-    def _pr(pr: str)                            -> dict: 
-        return { "pr": pr }
-    
-
     @staticmethod
     def _service(svc: typing.Any)               -> dict:
         return { "service": svc }
     
 
-    @staticmethod
-    def _repo(repo: typing.Any)                 -> dict:
-        return { "repository": repo }
-    
-
-    @staticmethod
-    def _auth(auth)                             -> dict:
-        return { "Authorization": f"Bearer {auth}"}
-    
-
     def _pull(self, 
         num                                     : int,
-        endpoint                                : typing.Union[constants.RepoProps.COMMENTS |\
-                                                                constants.RepoProps.PULLS]
+        endpoint                                : constants.RepoProps
     )                                           -> typing.Union[str | None]:
         """
         Returns the POST URL for the VCS REST API pull request endpoints.
@@ -140,7 +117,7 @@ class Repo:
             return self.backends[constants.RepoProps.GITHUB.value][
                 constants.RepoProps.API.value][constants.RepoProps.PR.value
             ][endpoint].format(**{
-                **self._pr(num), 
+                "pr": num, 
                 **self.src
             })
         
@@ -163,7 +140,7 @@ class Repo:
                 token = self.auth[constants.RepoProps.CREDS.value]
 
                 return {
-                    **self._auth(token), 
+                    "Authorization": f"Bearer {token}", 
                     **self.backends[constants.RepoProps.GITHUB.value
                                     ][constants.RepoProps.HEADERS.value]
                 }
@@ -202,7 +179,7 @@ class Repo:
 
         except requests.exceptions.RequestException as e:
             logger.error(f"Error during {self.src[
-                constants.RepoProps.VCS.value]} API request:\n{e}\n\n{traceback.print_exc()}")
+                constants.RepoProps.VCS.value]} API request:\n\n{e}\n\n{traceback.print_exc()}")
             return self._service({
                 "name"                          : self.src[constants.RepoProps.VCS.value],
                 "body"                          : str(e),
@@ -210,7 +187,7 @@ class Repo:
             })
         
         except Exception as e:
-            logger.error(f"An unexpected error occurred:\n{e}\n\n{traceback.print_exc()}")
+            logger.error(f"An unexpected error occurred:\n\n{e}\n\n{traceback.print_exc()}")
             return self._service({
                 "name"                          : self.src[constants.RepoProps.VCS.value],
                 "body"                          : str(e),
@@ -221,7 +198,9 @@ class Repo:
         """
         Retrieve VCS metadata, formatted for templating.
         """
-        return self._repo(self.src)
+        return {
+            "repository"                        : self.src
+        }
 
 
     def file(self,
@@ -259,7 +238,9 @@ class Repo:
             endpoint                            = constants.RepoProps.PULLS.value
         )
         body                                    = {
-            **self._body(msg),
+            **{
+                "body"                          : msg
+            },
             **{
                 "commit_id"                     : commit,
                 "path"                          : path
@@ -296,7 +277,10 @@ class Repo:
             num                                 = pr,
             endpoint                            = constants.RepoProps.COMMENTS.value
         )
+        body                                    = {
+            "body"                              : msg
+        }
         return self._request(
             url                                 = url,
-            body                                = self._body(msg)
+            body                                = body
         )
