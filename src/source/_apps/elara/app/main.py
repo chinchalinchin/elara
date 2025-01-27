@@ -131,22 +131,23 @@ def init(
                                             .build()
 
     # Write arguments to cache
-    application.logger.debug("Writing command line arguments to cache.")
-    update_event                        = False
-    arguments                           = vars(application.arguments)
-    for k, v in arguments.items():
-        if k in application.cache.vars():
-            if v is None:
-                v                       = application.cache.get(k)
+    if command_line:
+        application.logger.debug("Writing command line arguments to cache.")
+        update_event                        = False
+        arguments                           = vars(application.arguments)
+        for k, v in arguments.items():
+            if k in application.cache.vars():
+                if v is None:
+                    v                       = application.cache.get(k)
 
-            application.logger.debug(f"Setting {k} = {v}")
-            
-            update_event                = application.cache.update(**{
-                k                       : v
-            }) or update_event
+                application.logger.debug(f"Setting {k} = {v}")
+                
+                update_event                = application.cache.update(**{
+                    k                       : v
+                }) or update_event
 
-    if update_event:
-        application.cache.save()
+        if update_event:
+            application.cache.save()
          
     printer.debug(application)
     

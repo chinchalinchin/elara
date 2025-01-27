@@ -2,7 +2,11 @@
 objects.repo
 ------------
 
-Object for external Version Control System. 
+Object for external Version Control System.
+
+.. note::
+
+    Only ``github`` VCS is supported at this time.    
 """
 # Standard Library Modules 
 import logging 
@@ -53,18 +57,18 @@ class Repo:
         .. code-block:: python
 
 
-            repository_config               = {
-                "VCS"                       : "<github | bitbucket | codecommit>",
-                "AUTH"                      : {
-                    "TYPE"                  : "<bearer | oauth | etc. >",
-                    "CREDS"                 : "will change based on type."
+            repository_config                   = {
+                "VCS"                           : "<github | bitbucket | codecommit>",
+                "AUTH"                          : {
+                    "TYPE"                      : "<bearer | oauth | etc. >",
+                    "CREDS"                     : "will change based on type."
                 },
-                "BACKENDS"                  : {
-                    "GITHUB"                : {
-                        "HEADERS"           : {
+                "BACKENDS"                      : {
+                    "GITHUB"                    : {
+                        "HEADERS"               : {
                             # github vcs service headers
                         },
-                        "API"               : {
+                        "API"                   : {
                             # github vcs service endpoints
                         }
                     }
@@ -106,9 +110,9 @@ class Repo:
 
     @staticmethod
     def _backoff(
-        callable                                    : typing.Callable,
-        max_retries                                 : int = 3
-    )                                               -> typing.Any:
+        callable                                : typing.Callable,
+        max_retries                             : int = 3
+    )                                           -> typing.Any:
         """
         Wrap a service call in exponential backoff error handling.
 
@@ -125,7 +129,7 @@ class Repo:
                 
             except requests.exceptions.RequestException as e:
                 if attempt < max_retries - 1:
-                    wait                            = 2 ** attempt
+                    wait                        = 2 ** attempt
                     logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")
                     time.sleep(wait)
                 else:
@@ -211,29 +215,29 @@ class Repo:
         def _call():
             logger.debug(f"Making HTTP call to {url}")
 
-            res                                     = requests.post(
-                url                                 = url, 
-                headers                             = self._headers(), 
-                json                                = body
+            res                                 = requests.post(
+                url                             = url, 
+                headers                         = self._headers(), 
+                json                            = body
             )
             logger.debug(res)
             res.raise_for_status()
             return self._service({
-                "name"                              : self.src[constants.RepoProps.VCS.value],
-                "body"                              : res.json(),
-                "status"                            : "success"
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : res.json(),
+                "status"                        : "success"
             })
         
         try:
             return self._backoff(
-                callable                            = _call
+                callable                        = _call
             )
         
         except exceptions.VCSRequestError as e:
             return self._service({
-                "name"                              : self.src[constants.RepoProps.VCS.value],
-                "body"                              : str(e),
-                "status"                            : "failure"
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : str(e),
+                "status"                        : "failure"
             })
                 
 
@@ -248,28 +252,28 @@ class Repo:
         """
         def _call():
             logger.debug(f"Making HTTP call to {url}")
-            res                                     = requests.get(
-                url                                 = url, 
-                headers                             = self._headers()
+            res                                 = requests.get(
+                url                             = url, 
+                headers                         = self._headers()
             )
             logger.debug(res)
             res.raise_for_status()
             return self._service({
-                "name"                              : self.src[constants.RepoProps.VCS.value],
-                "body"                              : res.json(),
-                "status"                            : "success"
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : res.json(),
+                "status"                        : "success"
             })
         
         try:
             return self._backoff(
-                callable                            = _call
+                callable                        = _call
             )
         
         except exceptions.VCSRequestError as e:
             return self._service({
-                "name"                              : self.src[constants.RepoProps.VCS.value],
-                "body"                              : str(e),
-                "status"                            : "failure"
+                "name"                          : self.src[constants.RepoProps.VCS.value],
+                "body"                          : str(e),
+                "status"                        : "failure"
             })
         
 
@@ -328,7 +332,6 @@ class Repo:
         return self._get(
             url                                 = url
         )
-
 
 
     def file(self,

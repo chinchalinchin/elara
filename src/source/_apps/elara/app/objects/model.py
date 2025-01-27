@@ -7,6 +7,7 @@ Object for managing Gemini Model. Essentially, a fancy wrapper around Google's G
 # Standard Library Modulse
 import logging
 import json
+import time
 import traceback
 
 # External Modules 
@@ -213,14 +214,20 @@ class Model:
         """
 
         try:
-            return genai.create_tuned_model(
+            operation                  = genai.create_tuned_model(
                 display_name            = display_name,
                 source_model            = tuning_model,
                 training_data           = tuning_data,
                 epoch_count             = epoch_count,
                 batch_size              = batch_size,
                 learning_rate           = learning_rate
-            ).result()
+            )
+        
+            for status in operation.wait_bar():
+                logger.info(f"Awaiting tuning results: {status}")
+                time.sleep(10)
+
+            return operation.result()
         
         except exceptions.ServiceUnavailable as e:
             logger.error(f"Gemini Service Unavailable: {e}")

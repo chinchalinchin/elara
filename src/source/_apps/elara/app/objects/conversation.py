@@ -310,7 +310,12 @@ class Conversation:
         :returns: Full chat history
         :rtype: `dict`
         """
+        if not msg:
+            logger.warning("Cannot update conversation with an empty message.")
+            return
+        
         if persona not in self.convo.keys():
+            self.convo[persona]                 = {}
             self.convo[persona][constants.ConvoProps.HISTORY.value] \
                                                 = self.schemas[constants.ConvoProps.HISTORY.value]
             self.convo[persona][constants.ConvoProps.MEMORIES.value] \
@@ -323,6 +328,10 @@ class Conversation:
         })
         
         if memory is not None:
+            if not self.convo[persona][
+                constants.ConvoProps.MEMORIES.value][constants.ConvoProps.SEQUENCE.value]:
+                    self.convo[persona][constants.ConvoProps.MEMORIES.value][
+                        constants.ConvoProps.SEQUENCE.value] = []
             self.convo[persona][
                 constants.ConvoProps.MEMORIES.value][constants.ConvoProps.SEQUENCE.value
             ].append({

@@ -508,7 +508,7 @@
                 "TOOLS": "code_execution",
                 "GENERATION_CONFIG": {
                     "CANDIDATE_COUNT": 1,
-                    "MAX_OUTPUT_TOKENS": 200000,
+                    "MAX_OUTPUT_TOKENS": 500000,
                     "TEMPERATURE": 0.75,
                     "TOP_P": 0.9,
                     "TOP_K": 10

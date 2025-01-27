@@ -15,3 +15,4 @@ class VCSRequestError(Exception):
     """
     Raised when an API request to the VCS backend failes.
     """
+    pass
