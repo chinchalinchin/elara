@@ -6,6 +6,7 @@ Object for external Version Control System.
 """
 # Standard Library Modules 
 import logging 
+import time
 import traceback
 import typing
 
@@ -153,46 +154,53 @@ class Repo:
 
     def _request(self,
         url                                     : str,
-        body                                    : typing.Any
+        body                                    : typing.Any,
+        max_retries                             : int = 3
     )                                           -> dict:
         """
         Make a HTTP call to a VCS backend.
 
         :param 
         """
-        try:
-            logger.debug(f"Making HTTP call to {url}")
+        for attempt in range(max_retries):
+            try:
+                logger.debug(f"Making HTTP call to {url}")
 
-            res                                 = requests.post(
-                url                             = url, 
-                headers                         = self._headers(), 
-                json                            = body
-            )
-            logger.debug(res)
-            res.raise_for_status()
+                res                                 = requests.post(
+                    url                             = url, 
+                    headers                         = self._headers(), 
+                    json                            = body
+                )
+                logger.debug(res)
+                res.raise_for_status()
+                
+                return self._service({
+                    "name"                          : self.src[constants.RepoProps.VCS.value],
+                    "body"                          : res.json(),
+                    "status"                        : "success"
+                })
+
+            except requests.exceptions.RequestException as e:
+                if attempt < max_retries - 1:
+                    wait                            = 2 ** attempt
+                    logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")
+                    time.sleep(wait)
+                else:
+                    logger.error(f"Request to {self.src[
+                    constants.RepoProps.VCS.value]} failed after {max_retries} attempts:\n\n{e}\n\n{traceback.print_exc()}")
+                    return self._service({
+                        "name"                          : self.src[constants.RepoProps.VCS.value],
+                        "body"                          : str(e),
+                        "status"                        : "failure"
+                    })
             
-            return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : res.json(),
-                "status"                        : "success"
-            })
-
-        except requests.exceptions.RequestException as e:
-            logger.error(f"Error during {self.src[
-                constants.RepoProps.VCS.value]} API request:\n\n{e}\n\n{traceback.print_exc()}")
-            return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : str(e),
-                "status"                        : "failure"
-            })
-        
-        except Exception as e:
-            logger.error(f"An unexpected error occurred:\n\n{e}\n\n{traceback.print_exc()}")
-            return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : str(e),
-                "status"                        : "failure"
-            })
+            except Exception as e:
+                logger.error(f"An unexpected error occurred:\n\n{e}\n\n{traceback.print_exc()}")
+                return self._service({
+                    "name"                          : self.src[constants.RepoProps.VCS.value],
+                    "body"                          : str(e),
+                    "status"                        : "failure"
+                })
         
     def vars(self)                              -> dict:
         """
@@ -207,7 +215,7 @@ class Repo:
         msg                                     : str,
         pr                                      : str,
         commit                                  : str,
-        path                                    : str
+        path                                    : str,
     )                                           -> dict:
         """
         Posts a comment to a pull request file on the VCS backend. Links below detail the specific VCS provider endpoints,
@@ -230,6 +238,7 @@ class Repo:
         :type commit: `str`
         :param path: File path of the file necessitating comment.
         :type path: `str`
+        :param max_retries: Number of times to attempt to post before failing the request. Wait time between retries is exponential.
         :returns: Dictionary containing VCS response.
         :rtype: `dict`
         """
@@ -248,7 +257,7 @@ class Repo:
             url                                 = url,
             body                                = body
         )
-    
+
     def comment(self,
         msg                                     : str,
         pr                                      : str

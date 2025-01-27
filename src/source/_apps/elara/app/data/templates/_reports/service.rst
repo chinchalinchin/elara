@@ -15,7 +15,6 @@ Service Response
 
 **Status**
     {{ service.status }}
-
 {% if service.body.get("url") %}
 **Url**
     {{ service.body.url }}

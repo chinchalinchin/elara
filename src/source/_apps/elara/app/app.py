@@ -307,9 +307,6 @@ class App:
                 prompt                      = review_prompt
             )
         # STEP 5. Append function response schema to persona's generation configuration.
-            # @DEVELOPMENT
-            #   HEY MILTON! We're testing structured output for your pull request reviews.
-            #   What do you think!? Pretty neat, huh!? Aren't you proud of us!?
         response_config                     = self.personas.get("generationConfig", persona)
         response_config.update({
             "response_schema"               : self.config.get("FUNCTIONS.REVIEW.SCHEMA"),
@@ -339,7 +336,7 @@ class App:
             
         # STEP 8. Render file specific pull request assessments and post to VCS backend.
             # @OPERATIONS
-            #   Unfortunately, the Github API doesn't appear to be a 
+            #   Unfortunately, the Github API doesn't appear to have a
             #   batch processing endpoint for file comments. That means
             #   we have to post your file comments one at a time, Milton!
         for file_data in response.get("files", []):
