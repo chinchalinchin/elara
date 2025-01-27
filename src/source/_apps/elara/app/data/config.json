@@ -560,7 +560,8 @@
                     "API": {
                         "PR": {
                             "COMMENTS": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
-                            "PULLS": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments"
+                            "PULLS": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments",
+                            "FILES": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/files"
                         }
                     }
                 }

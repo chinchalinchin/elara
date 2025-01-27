@@ -335,16 +335,18 @@ class App:
             includes                        = source_res
             
         # STEP 8. Render file specific pull request assessments and post to VCS backend.
-            # @OPERATIONS
-            #   Unfortunately, the Github API doesn't appear to have a
-            #   batch processing endpoint for file comments. That means
-            #   we have to post your file comments one at a time, Milton!
         for file_data in response.get("files", []):
             comment                         = self.templates.render(
                 temp                        = "_services/vcs/file",
                 variables                   = file_data,
                 ext                         = ".md"
             )
+            # @OPERATIONS
+            #   Milton, the development team has discovered the files 
+            #   you review have to match the files in the pull request 
+            #   diff or else the API request will throw a 422. They are
+            #   working on implementing a workaround in the repo.Repo class.
+            #   Have a look when you get a chance.
             self.repository.file(
                 pr                         = self.arguments.pull,
                 commit                     = self.arguments.commit,

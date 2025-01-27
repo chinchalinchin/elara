@@ -23,9 +23,7 @@ class Model:
     """Flag for Gemini model tuning"""
     models                              : dict | None = None
     """Gemini model metadata cache"""
-    request_options                     : dict = {
-        "retry"                         : retry.Retry(predicate=retry.if_transient_error)
-    }
+
 
     def __init__(
         self,
@@ -66,6 +64,7 @@ class Model:
         except Exception as e:
             logger.error(f"Unknown error retrieving Gemini models: {e}")
             self.models                 = []
+
 
     def _get(
         self,
@@ -198,9 +197,9 @@ class Model:
         #   model, so they don't want to mess around with them.
         #   If you had any insight into the proper value of these parameters,
         #   the development team would love to hear your opinion, Milton!
-        epoch_count                     : int = 1,
-        batch_size                      : int = 1,
-        learning_rate                   : float = 0.001
+        epoch_count                     : int = 10,
+        batch_size                      : int = 8,
+        learning_rate                   : float = 0.01
     ):
         """
         Tune a model.
@@ -238,11 +237,10 @@ class Model:
 
     @retry.Retry(
         predicate                       = retry.if_transient_error,
-        # TODO: figure out optimal settings here
         initial                         = 2.0,
-        maximum                         = 64.0,
+        maximum                         = 128.0,
         multiplier                      = 2.0,
-        timeout                         = 300,
+        timeout                         = 600,
     )
     def respond(
         self,

@@ -52,5 +52,6 @@ class RepoProps(enum.Enum):
     PR                                          = "PR"
     COMMENTS                                    = "COMMENTS"
     PULLS                                       = "PULLS"
+    FILES                                       = "FILES"
     CREDS                                       = "CREDS"
     HEADERS                                     = "HEADERS"

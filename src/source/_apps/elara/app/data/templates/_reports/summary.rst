@@ -24,7 +24,8 @@ Files
 .. note::
 
     Some of the files may have been excluded from the summary to conserve space.
-{% for file in summary.get('files') %}
+{%- for file in summary.get('files') %}
+
 .. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-") }}:
  
 {{ file.name }}
