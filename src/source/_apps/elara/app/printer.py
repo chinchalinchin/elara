@@ -68,9 +68,6 @@ s
     :param output: application output to be written.
     :type output: `app.Output`
     """
-    # @TODO: remove after debug.
-    pprint.pp(output.to_dict().get("includes"))
-
     payload                             = application.templates.render(
         temp                            = "output", 
         variables                       = output.to_dict()

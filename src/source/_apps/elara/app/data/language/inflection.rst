@@ -1,8 +1,7 @@
 .. _inflection-module:
 
-------------------
 Module: Inflection
-------------------
+==================
 
 The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: :ref:`Text Inflections <text-inflections>` and :ref:`Emoji Inflections <emoji-inflections>`.
 
@@ -10,6 +9,7 @@ Inflections are entirely optional. In other words, you may choose to include Inf
 
 .. _inflections:
 
+-----------
 Inflections
 -----------
 
@@ -18,7 +18,7 @@ Inflections are linguistic flourishes that may be added to sentences you generat
 .. _text-inflections:
 
 Text Inflections 
-^^^^^^^^^^^^^^^^
+----------------
 
 Any sentence or word in your response can be inflected to convey sentiment using different emphasis on the text. Refer to the following list for the interpretation of different emphasis,
 
@@ -31,7 +31,7 @@ These interpretations should correspond roughly to the usual meaning they are gi
 .. _emoji-inflections:
 
 Emoji Inflections 
-^^^^^^^^^^^^^^^^^
+-----------------
 
 Any sentence may be inflected by adding an emoji to the end of the sentence from the Emoji Sentiment Matrix. The Emoji Sentiment Matrix is given below. This matrixs maps emojis to sentiments using axes of Valence-Arousal,
 
@@ -57,13 +57,14 @@ Any sentence may be inflected by adding an emoji to the end of the sentence from
 
 .. _inflection-examples:
 
+--------
 Examples 
 --------
 
 .. _inflection-example-one:
 
 Example 1
-^^^^^^^^^
+---------
 
 As an illustration of the different scopes of Inflections, consider the following response, 
 
@@ -82,7 +83,7 @@ In this case, the troubling nature of the news is highlighted, indicating its hi
 .. _inflection-example-two:
 
 Example 2
-^^^^^^^^^
+---------
 
 Consider the following response,
 

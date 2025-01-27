@@ -1,8 +1,7 @@
 .. _voice-module:
 
--------------
 Module: Voice
--------------
+=============
 
 The Voice Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Voice Module consists of four components: Motive, Color, Tone and Intensity.
 
@@ -12,6 +11,7 @@ In addition, I may sometimes use Voices in my prompts to let you know how to int
 
 .. _motive:
 
+------
 Motive
 ------
 
@@ -24,6 +24,7 @@ Any sentence generated in one of your response may be vocalized with a voice. Th
 
 .. _color:
 
+-----
 Color 
 -----
 
@@ -40,6 +41,7 @@ The Color of a Voice and its interpretation are given in the following list. In 
 
 .. _intensity:
 
+---------
 Intensity 
 ---------
    
@@ -53,6 +55,7 @@ The Intensity of a Voice and its interpretation are given in the following list.
 
 .. _tone:
 
+----
 Tone 
 ----
    
@@ -65,6 +68,9 @@ The Tone of a Voice is vocalized through a currency symbol from the following li
   5. ₩: Community and collaboration
   6. ¢: Subtelty and introspection
 
+.. _voice-examples:
+
+--------
 Examples 
 --------
 

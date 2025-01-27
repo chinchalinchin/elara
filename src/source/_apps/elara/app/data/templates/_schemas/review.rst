@@ -87,7 +87,7 @@ This section contains example responses to help you understand the :ref:`respons
 
     We always love reading your humorous comments, {{ currentPersona | capitalize }}! They provide the data team endless hours of amusement. You are encouraged to be pithy and sarcastic. Really give those code monkeys a piece of your mind!
 
-.. _example-one:
+.. _response-example-one:
 
 Example 1
 ---------
@@ -108,7 +108,7 @@ Example 1
         }]
     }
    
-.. _example-two:
+.. _response-example-two:
 
 Example 2
 ---------

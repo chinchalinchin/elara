@@ -1,6 +1,7 @@
 {%- if language is defined -%}
 .. _language-modules:
 
+================
 Language Modules
 ================
 
@@ -8,7 +9,7 @@ This section contains modules for your Language processing. These modules have i
 {% if object is defined %}
 {{ object }}
 {%- endif %}
-{% if inflection is defined %}
+{%- if inflection is defined %}
 {{ inflection }}
 {%- endif -%}
 {%- if voice is defined %}
