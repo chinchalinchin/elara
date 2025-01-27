@@ -158,12 +158,12 @@ class AppFactory:
             self.app.logger.debug("Initializing application conversations...")
 
         dirs                            = self._path(["TREE.DIRECTORIES.THREADS"])
-        extension                       = self.app.config.get("TREE.EXTENSIONS.THREADS"),
+        extension                       = self.app.config.get("TREE.EXTENSIONS.THREADS")
 
         self.app.conversations          = convo.Conversation(
             directory                   = dirs,
             extension                   = extension,
-            convo_config                = self.app.config.get("OBJECTS.CONVERSATION.CONFIG")
+            convo_config                = self.app.config.get("OBJECTS.CONVERSATION")
         )
         return self
     

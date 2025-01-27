@@ -175,7 +175,7 @@ class App:
             generation_config               = response_config,
             model_name                      = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
             safety_settings                 = self.personas.get(
-                                                constants.PersonaProps.GENERATION_CONFIG.value, persona),
+                                                constants.PersonaProps.SAFETY_SETTINGS.value, persona),
             tools                           = self.personas.get(
                                                 constants.PersonaProps.TOOLS.value, persona),
             system_instruction              = self.personas.get(
@@ -187,7 +187,6 @@ class App:
             name                            = persona, 
             msg                             = response.get("response"),
             memory                          = response.get("memory"),
-            feedback                        = response.get("feedback")
         )
 
         converse_response                   = { constants.Functions.CONVERSE.value : response }

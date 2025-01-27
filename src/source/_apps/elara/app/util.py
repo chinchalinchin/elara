@@ -10,22 +10,10 @@ import logging
 import typing
 
 
-logger                                  = logging.getLogger(__name__)
+logs                        = logging.getLogger(__name__)
 
 
-def payload(o: typing.Any):
-    """
-    Wrap a data structure in a dictionary with a ``payload`` key.
-
-    :param a: Object to be wrapped.
-    :param type: `typing.Any`
-    :returns: Dictionary containing object keyed to ``payload``.
-    :rtype: `dict`
-    """
-    return { "payload": o }
-
-
-def lower(d: dict)                      -> dict:
+def lower(d: dict) -> dict:
     """
     Convert the keys of a dictionary to lowercase.
 
@@ -37,26 +25,23 @@ def lower(d: dict)                      -> dict:
     return { k.lower(): v for k, v in d.items() }
 
 
-def map(
-    typed_string                        : str
-)                                       -> typing.Union[str, int, 
-                                                float, bool, None]:
+def map(typed_string: str) -> typing.Any:
     """
     Maps type strings to Python types.
     
     :param type_string: String containing a Python data type.
     :type type_string: `str`
     :returns: Python type that corresponds to input string.
-    :rtype: `typing.Union[str, int, float, bool]`
+    :rtype: `typing.Any`
     """
-    types                               = {
-      'str'                             : str,
-      'dict'                            : dict,
-      'list'                            : list,
-      'int'                             : int,
-      'float'                           : float,
-      'bool'                            : bool,
-      'set'                             : set
+    types                   = {
+      'str'                 : str,
+      'dict'                : dict,
+      'list'                : list,
+      'int'                 : int,
+      'float'               : float,
+      'bool'                : bool,
+      'set'                 : set
     }
     if typed_string not in types.keys():
         return None
@@ -64,9 +49,7 @@ def map(
     return types[typed_string]    
 
 
-def validate(
-    value                               : str
-)                                       -> typing.Any:
+def validate(value : str) -> typing.Any:
     """
     Validate the data type of a string.
 
@@ -78,15 +61,12 @@ def validate(
     try:
         return ast.literal_eval(value)
     except (ValueError, SyntaxError) as e:
-        logger.error("Unable to validate input!")
+        logs.error("Unable to validate input!")
         return None
     
 
 
-def merge(
-    d1                                  : dict, 
-    d2                                  : dict
-)                                       -> dict:
+def merge(d1: dict, d2: dict) -> dict:
     """
     Recursively merges two dictionaries using the union operator (|).
 
@@ -101,44 +81,43 @@ def merge(
     if not isinstance(d2, dict):
         raise ValueError("d2 is not a dictionary!")
 
-    result                              = d1 | d2
+    result                  = d1 | d2
 
     for key in result.keys():
         if key in d1 and key in d2:
-            result[key]                 = merge(d1[key], d2[key])
+            result[key]     = merge(d1[key], d2[key])
             
     return result
 
 
-def logger(
-    file                                : str = None,
-    level                               : str = "INFO",
-    schema                              : str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)                                       -> logging.Logger:
+def logger(schema : str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+           file: str = None, level: str = "INFO")  -> logging.Logger:
     """
     Configure application logging
 
+    :param schema: Schema for logs
+    :type schema: `str`
     :param file: Location of log file, if logs are to be written to file.
-    :type log_file: str
-    :param app: Dictionary containing application configuration.
-    :type app: dict
+    :type file: `str`
+    :param level: Level of logs to capture.
+    :type level: `str`
     """
-    logger                              = logging.getLogger()
+    logger                  = logging.getLogger()
 
     if level in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
         logger.setLevel(level)
     else:
         logger.setLevel("INFO") 
 
-    formatter                           = logging.Formatter(schema)
+    formatter               = logging.Formatter(schema)
 
     if file is not None:
-        file_handler                    = logging.FileHandler(file)
+        file_handler        = logging.FileHandler(file)
         file_handler.setLevel(level) 
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
 
-    console_handler                     = logging.StreamHandler()
+    console_handler         = logging.StreamHandler()
     console_handler.setLevel(level)
     console_handler.setFormatter(formatter)
     logger.addHandler(console_handler)

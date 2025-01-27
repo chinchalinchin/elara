@@ -100,9 +100,9 @@ class Terminal:
         """
 
         interacting                         = True
-        commands                            = self.config["CONVERSATION"]["COMMANDS"]
-        functions                           = self.config["CONVERSATION"]["FUNCTIONS"]
-        display                             = self.config["CONVERSATION"]["DISPLAY"]
+        commands                            = self.config["CONVERSE"]["COMMANDS"]
+        functions                           = self.config["CONVERSE"]["FUNCTIONS"]
+        display                             = self.config["CONVERSE"]["DISPLAY"]
 
         # @DEVELOPMENT
         #   Hey Milton, this is pretty basic for now, but we're separating the 

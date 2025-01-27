@@ -95,18 +95,9 @@ class Cache:
         return self.data
     
 
-    def get(self, 
-        attribute                           : str
-    )                                       -> str:
+    def get(self, attribute: str) -> str:
         """
-        Retrieve attributes from the Cache. Cache keys are given below,
-
-        - tuningModel
-        - currentModel
-        - currentPrompter
-        - currentPersona
-        - tunedModels
-        - basedModels
+        Retrieve attributes from the Cache. Cache properties are enumerated through `constants.CacheProp` enum.
 
         :param attribute: Key to retrieve from the Cache.
         :type attribute: str
@@ -125,17 +116,13 @@ class Cache:
         updated                             = False
         for key, value in kwargs.items():
             if key not in self.data.keys():
-                logger.warning(
-                    f"Invalidate cache key!"
-                )
+                logger.warning("Invalidate cache key!")
                 continue 
 
             validated_value                 = util.validate(value)
 
             if validated_value is None:
-                logger.warning(
-                    f"Invalidate configuration value!"
-                )
+                logger.warning("Invalidate configuration value!")
                 continue 
 
             if isinstance(self.data[key], list) and isinstance(value, list):

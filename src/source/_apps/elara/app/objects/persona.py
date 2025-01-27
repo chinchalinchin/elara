@@ -68,7 +68,7 @@ class Persona:
         self.persona_config             = persona_config
         self.schema                     = self._schema()
         self._personas()
-        self._context(context)
+        self._context()
 
 
     def _schema(self) -> dict:
@@ -160,7 +160,7 @@ class Persona:
                 for con_key in con_keys: 
                     context_plugin         = context[con_type.upper()][con_key]
 
-                    self.personas[persona][self._prop_cont][con_key]\
+                    self.personas[persona][self._prop_cont][con_type]\
                                             .append(context_plugin)
         return
     

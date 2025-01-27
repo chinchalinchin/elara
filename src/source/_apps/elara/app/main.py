@@ -114,7 +114,7 @@ def init(
 
     if command_line:
         application.logger.debug("Writing command line arguments to cache.")
-        application.cache.update(vars(application.arguments))
+        application.cache.update(**vars(application.arguments))
          
     printer.debug(application)
     

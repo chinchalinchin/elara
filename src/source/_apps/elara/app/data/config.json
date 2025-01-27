@@ -32,7 +32,7 @@
             },
             "MODEL": {
                 "DEFAULT": null,
-                "DEST": "currentModel",
+                "DEST": "current_model",
                 "HELP": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. Defaults to the value of the `GEMINI_MODEL` environment variable.",
                 "SYNTAX": [
                     "-m",
@@ -44,7 +44,7 @@
             },
             "PERSONA": {
                 "DEFAULT": null,
-                "DEST": "currentPersona",
+                "DEST": "current_persona",
                 "HELP": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. Defaults to the value of the `GEMINI_PERSONA` environment variable.",
                 "SYNTAX": [
                     "-r",
@@ -56,7 +56,7 @@
             },
             "IDENTITY": {
                 "DEFAULT": null,
-                "DEST": "currentPrompter",
+                "DEST": "current_prompter",
                 "HELP": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. Defaults to the value of the `GEMINI_PROMPTER` environment variable.",
                 "SYNTAX": [
                     "-i",
@@ -292,16 +292,10 @@
             "SCHEMA": {
                 "type": "object",
                 "properties": {
-                    "feedback": {
-                        "type": "string"
-                    },
                     "memory": {
                         "type": "string"
                     },
                     "response": {
-                        "type": "string"
-                    },
-                    "next_prompt": {
                         "type": "string"
                     }
                 },
