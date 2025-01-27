@@ -238,13 +238,11 @@ class Repo:
             endpoint                            = constants.RepoProps.PULLS.value
         )
         body                                    = {
-            **{
-                "body"                          : msg
-            },
-            **{
-                "commit_id"                     : commit,
-                "path"                          : path
-            }
+            "body"                              : msg,
+            "commit_id"                         : commit,
+            "path"                              : path,
+            "subject_type"                      : "file"
+            
         }
         return self._request(
             url                                 = url,
