@@ -163,7 +163,7 @@ class AppFactory:
         self.app.conversations          = convo.Conversation(
             directory                   = dirs,
             extension                   = extension,
-            convo_config                = self.app.config.get("FUNCTIONS.CONVERSE.CONFIG")
+            convo_config                = self.app.config.get("OBJECTS.CONVERSATION.CONFIG")
         )
         return self
     
@@ -249,21 +249,13 @@ class AppFactory:
         """
         if self.app.cache is None:
             raise ValueError("Cache must be initialized before Personas!")
-        
-        tune_dir                        = self._path(["TREE.DIRECTORIES.TUNING"])
-        sys_dir                         = self._path(["TREE.DIRECTORIES.SYSTEM"])
-        context_file                    = self._path([
-            "TREE.DIRECTORIES.DATA",
-            "TREE.FILES.CONTEXT"
-        ])
+
         self.app.personas               = persona.Persona(
-            current_persona             = self.app.cache.get("currentPersona"),
+            persona                     = self.app.cache.get("currentPersona"),
             persona_config              = self.app.config.get("OBJECTS.PERSONA"),
-            context_file                = context_file,
-            tune_dir                    = tune_dir,
-            tune_ext                    = self.app.config.get("TREE.EXTENSIONS.TUNING"),
-            sys_dir                     = sys_dir,
-            sys_ext                     = self.app.config.get("TREE.EXTENSIONS.SYSTEM")
+            context_file                = self._path(["TREE.DIRECTORIES.DATA", "TREE.FILES.CONTEXT"]),
+            directory                   = self._path(["TREE.DIRECTORIES.PERSONAS"]),
+            extension                   = self.app.config.get("TREE.EXTENSIONS.PERSONAS")
         )
         return self
     
@@ -275,13 +267,9 @@ class AppFactory:
         :returns: Updated self.
         :rtype:`typing.Self`
         """
-        temp_dir                        = self._path([
-            "TREE.DIRECTORIES.TEMPLATES"
-        ])
-
         self.app.templates              = template.Template(
-            directory                   = temp_dir,
-            extension                   = self.app.config.get("TREE.EXTENSIONS.TEMPLATE")
+            directory                   = self._path(["TREE.DIRECTORIES.TEMPLATES"]),
+            extension                   = self.app.config.get("TREE.EXTENSIONS.TEMPLATES")
         )
         return self
     
@@ -317,7 +305,8 @@ class AppFactory:
             
             if self.app.config.get("OBJECTS.REPO.VCS") == "github" \
                 and not self.app.config.get("OBJECTS.REPO.AUTH.CREDS"):
-                raise ValueError("REPO_AUTH_CREDS environment variable not set for github VCS.")
+                raise ValueError(
+                    "REPO_AUTH_CREDS environment variable not set for github VCS.")
         
             self.app.repository         = repository.Repo(
                 repository_config       = self.app.config.get("OBJECTS.REPO"),
@@ -328,5 +317,5 @@ class AppFactory:
         return self
    
     
-    def build(self)                     -> schema.App :
+    def build(self)                     -> apps.App :
         return self.app

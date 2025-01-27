@@ -19,7 +19,7 @@ def clear(application: app.App)         -> schemas.Output:
     :param app: Application object.
     :type app: `app.App`
     :returns: Null data structure
-    :rtype: `app.Output`
+    :rtype: `schemas.Output`
     """
     for persona in application.arguments.clear:
         application.conversations.clear(persona)
@@ -34,7 +34,7 @@ def set(application : app.App)          -> schemas.Output:
     :param app: Application object.
     :type app: `app.App`
     :returns: Null data structure
-    :rtype: `app.Output`
+    :rtype: `schemas.Output`
     """
     cache                               = {}
 
@@ -63,7 +63,7 @@ def summarize(application: app.App)     -> schemas.Output:
     :param app: Application object.
     :type app: `app.App`
     :returns: Data structure containing the directory metadata and contents.
-    :rtype: `app.Output`
+    :rtype: `schemas.Output`
     """
     return schemas.Output(
         includes                        = application.directory.summary()
@@ -77,7 +77,7 @@ def show(application: app.App)          -> schemas.Output:
     :param app: Application object.
     :type app: `app.App`
     :returns: Data structure containing application metadata.
-    :rtype: `app.Output`
+    :rtype: `schemas.Output`
     """
     application.arguments.view          = True
     return schemas.Output(
@@ -135,7 +135,7 @@ def main()                              -> bool:
 
     operations : dict                   = {
         # Administrative functions
-        "set"                           : configure,
+        "set"                           : set,
         "clear"                         : clear,
         # Meta functions
         "summarize"                     : summarize,
@@ -151,8 +151,8 @@ def main()                              -> bool:
     operation_name                      = this_app.arguments.operation
     arguments                           = vars(this_app.arguments) 
 
-    tty                                 = "interactive" in arguments \
-                                            and arguments["interactive"]
+    tty                                 = "terminal" in arguments \
+                                            and arguments["terminal"]
     
     if operation_name not in operations:
         return False 

@@ -58,7 +58,7 @@ class App:
         This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
 
         :returns: Data structure containing parsed prompt and response.
-        :rtype: `app.Output`
+        :rtype: `schemas.Output`
         """
         buffer                              = self.cache.vars()
         persona                             = self.personas.function(
@@ -109,7 +109,7 @@ class App:
         Chat with one of Gemini's personas.
 
         :returns: Object containing the contextualized prompt and model response.
-        :rtype: `app.Output`
+        :rtype: `schemas.Output`
         """
         prompt                              = self.arguments.prompt
         
@@ -193,7 +193,7 @@ class App:
         This function initiates an input loop and prompt the the user to specify the feature request through Gherkin-style syntax.
 
         :returns: Object containing the contextualized prompt and model response.
-        :rtype: `app.Output`
+        :rtype: `schemas.Output`
         """
         buffer                              = self.cache.vars()
         persona                             = self.personas.function(
@@ -240,7 +240,7 @@ class App:
         This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
         :returns: Object containing the contextualized prompt, model response and service request metadata.
-        :rtype: `app.Output`
+        :rtype: `schemas.Output`
         """
 
         # STEP 1. Gather function data into local variables

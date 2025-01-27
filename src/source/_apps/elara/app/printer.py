@@ -11,6 +11,7 @@ import pprint
 
 # Application Modules
 import app
+import schemas
 
 
 def _output(args: argparse.Namespace)   -> bool:
@@ -57,7 +58,7 @@ def debug(application: app.App)         -> None:
 
 def out(
     application                         : app.App,
-    output                              : app.Output
+    output                              : schemas.Output
 )                                       -> None:
     """
     Write output to appropriate location. Output should follow the format,
@@ -66,7 +67,7 @@ s
     :param application: Application
     :type application: `app.App`
     :param output: application output to be written.
-    :type output: `app.Output`
+    :type output: `schemas.Output`
     """
     payload                             = application.templates.render(
         temp                            = "output", 
