@@ -6,11 +6,11 @@ Objects for orchestrating the application.
 """
 # Standard Library Modules
 import argparse
-import dataclasses
 import logging 
 
 # Application Modules
 import constants
+import schemas
 import objects.cache as cac
 import objects.config as conf
 import objects.conversation as convo
@@ -18,40 +18,9 @@ import objects.directory as dir
 import objects.language as lang
 import objects.persona as per
 import objects.model as mod
-import objects.repo as repo
+import objects.repository as repo
 import objects.template as temp
 import objects.terminal as term
-
-
-@dataclasses.dataclass
-class Output:
-    """
-    Data structure for managing application output.
-    """
-    prompt                                  : str | None = None
-    response                                : dict | None = None
-    includes                                : dict | None = None
-
-    def to_dict(self):
-        return {
-            "prompt"                        : self.prompt,
-            "response"                      : self.response,
-            "includes"                      : self.includes
-        }
-
-@dataclasses.dataclass
-class FileReview:
-    path: str
-    comments: str
-    bugs: str | None = None
-    amendments: str | None = None
-
-    
-@dataclasses.dataclass
-class ReviewResponse:
-    score: str
-    overall: str
-    files: list[FileReview]
 
 
 class App:
@@ -84,7 +53,7 @@ class App:
     """Application terminal emulator"""
 
 
-    def analyze(self)                       -> Output:
+    def analyze(self)                       -> schemas.Output:
         """
         This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
 
@@ -114,7 +83,7 @@ class App:
         )
         
         if self.arguments.render:
-            return Output(
+            return schemas.Output(
                 prompt                      = parsed_prompt
             )
         
@@ -129,13 +98,13 @@ class App:
         
         analyze_response                    = { constants.Functions.ANAYLZE.value : response }
 
-        return Output(
+        return schemas.Output(
             prompt                          = parsed_prompt,
             response                        = analyze_response
         )
 
 
-    def converse(self)                      -> Output:
+    def converse(self)                      -> schemas.Output:
         """
         Chat with one of Gemini's personas.
 
@@ -183,7 +152,7 @@ class App:
         )
 
         if self.arguments.render:
-            return Output(
+            return schemas.Output(
                 prompt                      = parsed_prompt
             )
         
@@ -213,13 +182,13 @@ class App:
 
         converse_response                   = { constants.Functions.CONVERSE.value : response }
 
-        return Output(
+        return schemas.Output(
             prompt                          = parsed_prompt,
             response                        = converse_response
         )
 
 
-    def request(self)                       -> Output:
+    def request(self)                       -> schemas.Output:
         """
         This function initiates an input loop and prompt the the user to specify the feature request through Gherkin-style syntax.
 
@@ -260,13 +229,13 @@ class App:
         
         request_response                    = { constants.Functions.REQUEST.value: response }
 
-        return Output(
+        return schemas.Output(
             prompt                          = parsed_prompt,
             response                        = request_response
         )
 
 
-    def review(self)                        -> Output:
+    def review(self)                        -> schemas.Output:
         """
         This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
@@ -356,7 +325,7 @@ class App:
         # STEP 9: Prepare model response for output templating
         review_response                     = { constants.Functions.REVIEW.value: response}
         # STEP 10: Structure results for output
-        return Output(
+        return schemas.Output(
             prompt                          = review_prompt,
             response                        = review_response,
             includes                        = includes 

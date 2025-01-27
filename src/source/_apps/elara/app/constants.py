@@ -23,10 +23,7 @@ class ConvoProps(enum.Enum):
     """
     # Internal Properties
     HISTORY                                     = "history"
-    MEMORIES                                    = "memories"
     MEMORY                                      = "memory"
-    SEQUENCE                                    = "sequence"
-    FEEDBACK                                    = "feedback"
     MESSAGE                                     = "msg"
     TIMESTAMP                                   = "timestamp"
     NAME                                        = "name"

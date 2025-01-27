@@ -12,9 +12,8 @@ import pathlib
 import typing
 
 # Application Modules
-import constants
 import util
-import app as schema
+import app as apps
 import objects.cache as cache
 import objects.config as config
 import objects.conversation as convo
@@ -22,23 +21,21 @@ import objects.directory as directory
 import objects.language as language
 import objects.persona as persona
 import objects.model as model
-import objects.repo as repo
+import objects.repository as repository
 import objects.template as template
 import objects.terminal as terminal
 
 
 class AppFactory:
-    app : schema.App                    = None
+    app                             : apps.App | None = None
     """Factory's application."""
-    app_dir : str                       = None
+    app_dir                         : str | None = None
     """Directory containing application."""
-    config_file : str                   = None
+    config_file                     : str | None = None
     """Full path of the application's configuration file."""
 
-    def __init__(self,
-        rel_dir : str                   = "data",
-        filename : str                  = "config.json"
-    ):
+
+    def __init__(self, rel_dir : str = "data", filename : str = "config.json") -> None:
         """
         Initialization a new application factory object.
 
@@ -47,20 +44,16 @@ class AppFactory:
         :param filename: Name of the application configuration file.
         :type filename: str
         """
-        self.app_dir                    = pathlib.Path(__file__).resolve().parent
-        self.config_file                = os.path.join(self.app_dir, rel_dir, filename)
-        self.app                        = schema.App()
-        self.app.config                 = config.Config(
-            config_file                 = self.config_file
-        )
+        self.app_dir                = pathlib.Path(__file__).resolve().parent
+        self.config_file            = os.path.join(self.app_dir, rel_dir, filename)
+        self.app                    = apps.App()
+        self.app.config             = config.Config(self.config_file)
 
         if not self.app.config.get("GEMINI.KEY"):
             raise ValueError("GEMINI_KEY environment variable not set.")
 
 
-    def _path(self, 
-        parts                           : list
-    )                                   -> str:
+    def _path(self, parts: list) -> str:
         """
         Append the application directory to a list of relative paths. 
         
@@ -69,13 +62,12 @@ class AppFactory:
         :returns: System formatted path.
         :rtype: str
         """
-        return os.path.join(
-            self.app_dir,
+        return os.path.join(self.app_dir, 
             *[self.app.config.get(p) for p in parts ]
         )
     
 
-    def with_cache(self)                -> typing.Self:
+    def with_cache(self) -> typing.Self:
         """
         Initialize and append a `objects.cache.Cache` object to the factory's `app.App` object.
 
@@ -85,18 +77,12 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application cache...")
 
-        cache_file                      = self._path([
-            "TREE.DIRECTORIES.DATA",
-            "TREE.FILES.CACHE"
-        ])
-
-        self.app.cache                  = cache.Cache(
-            cache_file                  = cache_file
-        )
+        cache_file              = self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CACHE"])
+        self.app.cache          = cache.Cache(cache_file)
         return self 
     
 
-    def with_cli_args(self)             -> typing.Self:
+    def with_cli_args(self) -> typing.Self:
         """
         Initialize and append `argparse.Namespace` object to the factory's `app.App` object.
 
@@ -106,24 +92,24 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initailizing application command line arguments...")
 
-        parser                          = argparse.ArgumentParser(
-            description                 = self.app.config.get("INTERFACE.HELP.PARSER")
+        parser                  = argparse.ArgumentParser(
+            description         = self.app.config.get("INTERFACE.HELP.PARSER")
         )
     
-        subparsers                      = parser.add_subparsers(
-            dest                        = 'operation', 
-            help                        = self.app.config.get("INTERFACE.HELP.SUBPARSER")
+        subparsers              = parser.add_subparsers(
+            dest                = 'operation', 
+            help                = self.app.config.get("INTERFACE.HELP.SUBPARSER")
         )
 
-        arg_schema                      = self.app.config.get("INTERFACE.ARGUMENTS")
+        arg_schema              = self.app.config.get("INTERFACE.ARGUMENTS")
 
         for op_config in self.app.config.get("INTERFACE.OPERATIONS"):
-            op_parser                   = subparsers.add_parser(
-                name                    = op_config["NAME"],
-                help                    = op_config["HELP"]
+            op_parser           = subparsers.add_parser(
+                name            = op_config["NAME"],
+                help            = op_config["HELP"]
             )
             for op_arg_key in op_config["ARGUMENTS"]:
-                op_arg                  = arg_schema.get(op_arg_key)
+                op_arg          = arg_schema.get(op_arg_key)
                 
                 if any(
                     k not in self.app.config.get("INTERFACE.FIELDS") 
@@ -133,27 +119,27 @@ class AppFactory:
                 
                 if "ACTION" in op_arg.keys():
                     op_parser.add_argument(*op_arg["SYNTAX"],
-                        dest            = op_arg["DEST"],
-                        help            = op_arg["HELP"],
-                        action          = op_arg["ACTION"]
+                        dest    = op_arg["DEST"],
+                        help    = op_arg["HELP"],
+                        action  = op_arg["ACTION"]
                     )
                     continue
 
                 if "NARGS" in op_arg.keys():
                     op_parser.add_argument(
-                        nargs           = op_arg["NARGS"],
-                        default         = op_arg["DEFAULT"],
-                        dest            = op_arg["DEST"],
-                        help            = op_arg["HELP"],
-                        type            = util.map(op_arg["TYPE"])
+                        nargs   = op_arg["NARGS"],
+                        default = op_arg["DEFAULT"],
+                        dest    = op_arg["DEST"],
+                        help    = op_arg["HELP"],
+                        type    = util.map(op_arg["TYPE"])
                     )
                     continue
                 
                 op_parser.add_argument(*op_arg["SYNTAX"],
-                    default             = op_arg["DEFAULT"],
-                    dest                = op_arg["DEST"],
-                    help                = op_arg["HELP"],
-                    type                = util.map(op_arg["TYPE"])
+                    default     = op_arg["DEFAULT"],
+                    dest        = op_arg["DEST"],
+                    help        = op_arg["HELP"],
+                    type        = util.map(op_arg["TYPE"])
                 )
 
         self.app.arguments              = parser.parse_args()
@@ -161,7 +147,7 @@ class AppFactory:
         return self
     
 
-    def with_conversations(self)        -> typing.Self:
+    def with_conversations(self) -> typing.Self:
         """
         Initialize and append a `objects.conversation.Conversation` object to the factory's `app.App` object. 
 
@@ -171,22 +157,12 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
 
-        hist_key                        = constants.ConvoProps.HISTORY.value
-        mem_key                         = constants.ConvoProps.MEMORIES.value
-
-        dirs                            = {
-            hist_key                    : self._path(["TREE.DIRECTORIES.HISTORY"]),
-            mem_key                     : self._path(["TREE.DIRECTORIES.MEMORY"])
-        }
-
-        exts                            = {
-            hist_key                    : self.app.config.get("TREE.EXTENSIONS.CONVERSATION"),
-            mem_key                     : self.app.config.get("TREE.EXTENSIONS.MEMORY")
-        }
+        dirs                            = self._path(["TREE.DIRECTORIES.THREADS"])
+        extension                       = self.app.config.get("TREE.EXTENSIONS.THREADS"),
 
         self.app.conversations          = convo.Conversation(
-            dirs                        = dirs,
-            exts                        = exts,
+            directory                   = dirs,
+            extension                   = extension,
             convo_config                = self.app.config.get("FUNCTIONS.CONVERSE.CONFIG")
         )
         return self
@@ -343,7 +319,7 @@ class AppFactory:
                 and not self.app.config.get("OBJECTS.REPO.AUTH.CREDS"):
                 raise ValueError("REPO_AUTH_CREDS environment variable not set for github VCS.")
         
-            self.app.repository         = repo.Repo(
+            self.app.repository         = repository.Repo(
                 repository_config       = self.app.config.get("OBJECTS.REPO"),
                 repository              = self.app.arguments.repository,
                 owner                   = self.app.arguments.owner

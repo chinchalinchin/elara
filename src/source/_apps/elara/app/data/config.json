@@ -157,10 +157,10 @@
                 ],
                 "TYPE": "str"
             },
-            "CONFIGURE": {
+            "PAIRS": {
                 "DEFAULT": null,
-                "DEST": "configure",
-                "HELP": "Key-value pairs to inject into application configuration.",
+                "DEST": "pairs",
+                "HELP": "Key-value pairs to inject into application cache.",
                 "NARGS": "*",
                 "TYPE": "str"
             },
@@ -234,11 +234,11 @@
                 ]
             },
             {
-                "NAME": "configure",
+                "NAME": "SET",
                 "DEFAULT": null,
                 "HELP": "Set configuration values as key-value pairs (e.g., `models/gemini-1.5-pro-latest`).",
                 "ARGUMENTS": [
-                    "CONFIGURE"
+                    "PAIRS"
                 ]
             },
             {
@@ -397,9 +397,8 @@
     "TREE": {
         "DIRECTORIES": {
             "DATA": "data",
-            "HISTORY": "data/history",
             "LANGUAGE": "data/language",
-            "MEMORY": "data/memory",
+            "THREADS": "data/threads",
             "TEMPLATES": "data/templates",
             "TOOLS": "data/tools",
             "TUNING": "data/tuning",
@@ -417,8 +416,7 @@
             "TEMPLATE": ".rst",
             "LANGUAGE": ".rst",
             "TUNING": ".json",
-            "CONVERSATION": ".json",
-            "MEMORY": ".json",
+            "THREADS": ".json",
             "SYSTEM": ".json"
         }
     },

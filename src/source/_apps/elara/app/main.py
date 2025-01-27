@@ -9,9 +9,10 @@ import app
 import util
 import factory
 import printer
+import schemas
 
 
-def clear(application: app.App)         -> app.Output:
+def clear(application: app.App)         -> schemas.Output:
     """
     Parses command line arguments and uses them to clear application data.
 
@@ -21,12 +22,12 @@ def clear(application: app.App)         -> app.Output:
     :rtype: `app.Output`
     """
     for persona in application.arguments.clear:
-        application.logger.info(f"Clearing persona data: {persona}")
         application.conversations.clear(persona)
 
-    return app.Output()
+    return schemas.Output()
 
-def configure(application : app.App)    -> app.Output:
+
+def set(application : app.App)          -> schemas.Output:
     """
     Parses command line arguments and uses them to update the cache.
 
@@ -35,44 +36,27 @@ def configure(application : app.App)    -> app.Output:
     :returns: Null data structure
     :rtype: `app.Output`
     """
-    config                              = {}
+    cache                               = {}
 
-    for item in application.arguments.configure:
+    for item in application.arguments.pairs:
         if "=" not in item:
             application.logger.error(
-                f"Invalid configuration format: {item}. Expected key=value."
+                f"Invalid cache format. Expected 'key=value'."
             )
             continue
         
         key, value                      = item.split("=", 1)
+        cache[key]                      = value
 
-        if key not in application.config.data:
-            application.logger.error(
-                f"Invalid configuration key: {key}. Key not in configuration."
-            )
-            continue
-
-        validated_value                 = util.validate(value)
-
-        if validated_value is None:
-            application.logger.error(
-                f"Invalidate configuration type: {key}={value}"
-            )
-            continue 
-
-        config[key]                     = validated_value
-
-    if config:
-        application.cache.update(**config)
-        application.cache.save()
-        application.logger.info(f"Updated configuration with: {config}")
-        return
+    if cache and application.cache.update(**cache):
+        application.logger.info("Updated cache.")
+        return schemas.Output()
         
     application.logger.warning("No configuration pairs provided.")
-    return app.Output()
+    return schemas.Output()
 
 
-def summarize(application: app.App)     -> app.Output:
+def summarize(application: app.App)     -> schemas.Output:
     """
     Generate a RestructuredText (RST) summary of a local directory.
 
@@ -81,13 +65,12 @@ def summarize(application: app.App)     -> app.Output:
     :returns: Data structure containing the directory metadata and contents.
     :rtype: `app.Output`
     """
-    summary_vars                        = application.directory.summary()
-    return app.Output(
-        includes                        = summary_vars
+    return schemas.Output(
+        includes                        = application.directory.summary()
     )
 
 
-def show(application: app.App)      -> app.Output:
+def show(application: app.App)          -> schemas.Output:
     """
     Generate a RestructuredText (RST) summary of application metadata.
 
@@ -96,10 +79,9 @@ def show(application: app.App)      -> app.Output:
     :returns: Data structure containing application metadata.
     :rtype: `app.Output`
     """
-    metadata_vars                       = application.model.vars()
     application.arguments.view          = True
-    return app.Output(
-        includes                        = metadata_vars
+    return schemas.Output(
+        includes                        = application.model.vars()
     )
 
 
@@ -130,24 +112,10 @@ def init(
                                             .with_directory() \
                                             .build()
 
-    # Write arguments to cache
+
     if command_line:
         application.logger.debug("Writing command line arguments to cache.")
-        update_event                        = False
-        arguments                           = vars(application.arguments)
-        for k, v in arguments.items():
-            if k in application.cache.vars():
-                if v is None:
-                    v                       = application.cache.get(k)
-
-                application.logger.debug(f"Setting {k} = {v}")
-                
-                update_event                = application.cache.update(**{
-                    k                       : v
-                }) or update_event
-
-        if update_event:
-            application.cache.save()
+        application.cache.update(vars(application.arguments))
          
     printer.debug(application)
     
@@ -167,7 +135,7 @@ def main()                              -> bool:
 
     operations : dict                   = {
         # Administrative functions
-        "configure"                     : configure,
+        "set"                           : configure,
         "clear"                         : clear,
         # Meta functions
         "summarize"                     : summarize,

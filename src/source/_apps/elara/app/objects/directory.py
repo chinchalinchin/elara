@@ -13,6 +13,7 @@ import traceback
 # Application Modules
 import exceptions 
 
+
 logger = logging.getLogger(__name__)
 
 
@@ -92,7 +93,7 @@ class Directory:
         :rtype: dict
         """
         if not os.path.isdir(self.directory):
-            raise exceptions.SummarizeDirectoryNotFoundError(
+            raise exceptions.DirectoryNotFoundError(
                 f"{self.directory} does not exist."
             )
         

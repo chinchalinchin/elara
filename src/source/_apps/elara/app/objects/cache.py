@@ -4,12 +4,16 @@ objects.cache
 
 Object for managing application data.
 """
-
+# Standard Library Modules
 import json
 import logging
 import typing
 
+# Application Modules
+import util
+
 logger                                      = logging.getLogger(__name__)
+
 
 class Cache:
     """
@@ -118,9 +122,20 @@ class Cache:
         """
         Update the Cache using keyword arguments. Key must exist in Cache to be updated.
         """
-        updated = False
+        updated                             = False
         for key, value in kwargs.items():
-            if key not in self.data:
+            if key not in self.data.keys():
+                logger.warning(
+                    f"Invalidate cache key!"
+                )
+                continue 
+
+            validated_value                 = util.validate(value)
+
+            if validated_value is None:
+                logger.warning(
+                    f"Invalidate configuration value!"
+                )
                 continue 
 
             if isinstance(self.data[key], list) and isinstance(value, list):
@@ -136,6 +151,9 @@ class Cache:
             updated                         = True
             self.data[key]                  = value
             
+        if updated:
+            self.save()
+
         return updated
 
 

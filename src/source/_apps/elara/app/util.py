@@ -5,20 +5,24 @@ util.py
 Static application utilities.
 """
 # Standard Library Modules
+import ast
 import logging
 import typing
 
 
-TYPE_MAP                                = {
-    "str"                               : str, 
-    "int"                               : int,
-    "float"                             : float, 
-    "bool"                              : bool
-}
+logger                                  = logging.getLogger(__name__)
 
 
-def payload(a: typing.Any):
-    return { "payload": a }
+def payload(o: typing.Any):
+    """
+    Wrap a data structure in a dictionary with a ``payload`` key.
+
+    :param a: Object to be wrapped.
+    :param type: `typing.Any`
+    :returns: Dictionary containing object keyed to ``payload``.
+    :rtype: `dict`
+    """
+    return { "payload": o }
 
 
 def lower(d: dict)                      -> dict:
@@ -34,8 +38,9 @@ def lower(d: dict)                      -> dict:
 
 
 def map(
-    type_string: str
-) -> typing.Union[str, int, float, bool]:
+    typed_string                        : str
+)                                       -> typing.Union[str, int, 
+                                                float, bool, None]:
     """
     Maps type strings to Python types.
     
@@ -44,69 +49,63 @@ def map(
     :returns: Python type that corresponds to input string.
     :rtype: `typing.Union[str, int, float, bool]`
     """
+    types                               = {
+      'str'                             : str,
+      'dict'                            : dict,
+      'list'                            : list,
+      'int'                             : int,
+      'float'                           : float,
+      'bool'                            : bool,
+      'set'                             : set
+    }
+    if typed_string not in types.keys():
+        return None
 
-    if type_string not in TYPE_MAP:
-        raise ValueError(f"Invalid type: {type_string}")
-    
-    return TYPE_MAP[type_string]
+    return types[typed_string]    
 
 
 def validate(
-    value: typing.Any
-) -> typing.Union[str, int, float, bool ]:
+    value                               : str
+)                                       -> typing.Any:
     """
-    Validate the data type of a value.
+    Validate the data type of a string.
 
     :param value: The value to be validated.
-    :type value: typing.Any
+    :type value: `str`
     :returns: Validated value.
     :rtype: typing.Union[str, int, float, bool]
     """
-    if isinstance(value, int):
-        try:
-            return int(value)
-        except ValueError:
-            raise ValueError(f"Invalid value type: {value} not a integer")
-
-    elif isinstance(value, float):
-        try: 
-            return float(value)
-        except ValueError:
-            raise ValueError(f"Invalid value type: {value} not a float")
+    try:
+        return ast.literal_eval(value)
+    except (ValueError, SyntaxError) as e:
+        logger.error("Unable to validate input!")
+        return None
     
-    elif isinstance(value, str):
-        if value.lower() == "true":
-           return True
-        if value.lower() == "false":
-           return False
-        return value
-    
-    return None
 
 
 def merge(
-    dict1                               : dict, 
-    dict2                               : dict
+    d1                                  : dict, 
+    d2                                  : dict
 )                                       -> dict:
     """
     Recursively merges two dictionaries using the union operator (|).
 
-    :param dict_1: First dictionary to merge.
-    :type dict_1: dict 
-    :param dict_2: Second dictionary to merge.
-    :type dict_2: dict 
+    :param d1: First dictionary to merge.
+    :type d1: dict 
+    :param d2: Second dictionary to merge.
+    :type d2: dict 
     """
-    if not isinstance(dict1, dict):
-        raise ValueError("dict1 is not a dictionary!")
+    if not isinstance(d1, dict):
+        raise ValueError("d1 is not a dictionary!")
     
-    if not isinstance(dict2, dict):
-        raise ValueError("dict2 is not a dictionary!")
+    if not isinstance(d2, dict):
+        raise ValueError("d2 is not a dictionary!")
 
-    result                              = dict1 | dict2
+    result                              = d1 | d2
 
     for key in result.keys():
-        if key in dict1 and key in dict2:
-            result[key]                 = merge(dict1[key], dict2[key])
+        if key in d1 and key in d2:
+            result[key]                 = merge(d1[key], d2[key])
             
     return result
 

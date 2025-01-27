@@ -5,11 +5,19 @@ exceptions.py
 Application exceptions.
 """
 
-class SummarizeDirectoryNotFoundError(Exception):
+class DirectoryNotFoundError(Exception):
     """
     Raised when the ``directory`` passed to the ``directory.Directory.summarize()`` function does not exist
     """
     pass
+
+
+class DataNotFoundError(Exception):
+    """
+    Raised when application data is not present.
+    """
+    pass 
+
 
 class VCSRequestError(Exception):
     """
