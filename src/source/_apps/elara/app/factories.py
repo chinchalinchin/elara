@@ -26,11 +26,10 @@ import objects.template as template
 import objects.terminal as terminal
 
 
-
 class ArgFactory:
-    arguments                       : schemas.Arguments | None = None
+    arguments                   : schemas.Arguments | None = None
     """Factory's arguments"""
-    argument_config                 : conf.Config | None = None
+    argument_config             : conf.Config | None = None
     """Application argument configuration"""
 
 
@@ -41,10 +40,9 @@ class ArgFactory:
         :param filename: Name of the argument configuration file.
         :type filename: `str`
         """
-        app_dir                     = pathlib.Path(__file__).resolve().parent
-        self.config                 = conf.Config(
-            config_file             = os.path.join(app_dir, rel_dir, filename)
-        )
+        app_dir                 = pathlib.Path(__file__).resolve().parent
+        self.config             = conf.Config(
+                                    os.path.join(app_dir, rel_dir, filename))
 
 
     def with_cli_args(self) -> typing.Self:

@@ -18,9 +18,9 @@ class Output:
 
     def to_dict(self):
         return {
-            "prompt"        : self.prompt,
-            "response"      : self.response,
-            "includes"      : self.includes
+            field.name: getattr(self, field.name)
+            for field in dataclasses.fields(self)
+            if getattr(self, field.name) is not None
         }
 
 
@@ -29,6 +29,8 @@ class Arguments:
     """
     
     """
+    # ARGUMENT ROOT
+    operation               : str | None = None
     # MAIN ARGUMENTS
     prompt                  : str | None = None
     """Prompt to post to model"""
@@ -74,6 +76,13 @@ class Arguments:
     def has_dir_args(self):
         return self.directory is not None
     
+
+    def to_dict(self):
+        return {
+            field.name: getattr(self, field.name)
+            for field in dataclasses.fields(self)
+            if getattr(self, field.name) is not None
+        }
 
 
 @dataclasses.dataclass

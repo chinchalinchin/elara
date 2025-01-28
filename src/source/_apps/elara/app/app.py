@@ -5,19 +5,16 @@ app.py
 Objects for orchestrating the application.
 """
 # Standard Library Modules
-import argparse
 import logging 
 import typing
 
 # Application Modules
 import constants
 import schemas
-import util
 import objects.cache as cac
 import objects.config as conf
 import objects.conversation as convo
 import objects.directory as dir
-import objects.language as lang
 import objects.persona as per
 import objects.model as mod
 import objects.repository as repo
@@ -29,33 +26,42 @@ class App:
     """
     Class for managing application objects and functions. This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``current_persona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
     """
-    arguments                               : argparse.Namespace | None = None 
-    """Application arguments"""
-    cache                                   : cac.Cache  | None = None
+    cache                           : cac.Cache  | None = None
     """Application cache"""
-    config                                  : conf.Config  | None = None
+    config                          : conf.Config  | None = None
     """Application configuration"""
-    conversations                           : convo.Conversation | None = None
+    conversations                   : convo.Conversation | None = None
     """Application conversation history"""
-    directory                               : dir.Directory | None = None
+    directory                       : dir.Directory | None = None
     """Application local directory"""
-    language                                : lang.Language  | None = None
-    """Application language modules"""
-    logger                                  : logging.Logger | None = None
+    logger                          : logging.Logger | None = None # Remove. Just create it here. Init in main.
     """Application logger"""
-    model                                   : mod.Model | None = None
+    model                           : mod.Model | None = None
     """Application model"""
-    personas                                : per.Persona | None = None
+    personas                        : per.Persona | None = None
     """Application personas"""
-    repository                              : repo.Repo | None = None
+    repository                      : repo.Repo | None = None
     """Application version control repository backend"""
-    templates                               : temp.Template | None = None
+    templates                       : temp.Template | None = None
     """Application prompt and output templates"""
-    terminal                                : term.Terminal | None = None
+    terminal                        : term.Terminal | None = None
     """Application terminal emulator"""
 
 
-    def analyze(self)                       -> schemas.Output:
+    # Internal Properties
+    dispatch                        = {}
+
+
+    def __init__(self):
+        self.dispatch               = {
+            "converse"              : self.converse,
+            "review"                : self.review,
+            "request"               : self.request,
+            "tune"                  : self.tune,
+            "analyze"               : self.analyze,
+        }
+
+    def analyze(self) -> schemas.Output:
         """
         This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
 
@@ -391,7 +397,7 @@ class App:
         return False
     
 
-    def run(self, printer: typing.Callable) -> schemas.Output:
+    def run(self, arguments: schemas.Arguments, printer: typing.Callable) -> schemas.Output:
         """
         Dispatch the application arguments. ``printer`` must have function signature,
 
@@ -429,5 +435,6 @@ class App:
             
         return operations[operation_name]()
     
-    def tty(self):
+
+    def tty(self, arguments: schemas.Arguments, printer: typing.Callable):
         pass

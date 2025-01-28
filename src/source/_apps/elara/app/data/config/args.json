@@ -241,14 +241,6 @@
             ]
         },
         {
-            "name": "set",
-            "default": null,
-            "help": "Set configuration values as key-value pairs (e.g., `models/gemini-1.5-pro-latest`).",
-            "arguments": [
-                "pairs"
-            ]
-        },
-        {
             "name": "clear",
             "default": null,
             "help": "Purge persona data.",
@@ -259,7 +251,7 @@
         {
             "name": "tune",
             "default": null,
-            "help": "Tune a persona with data in the ``data/tuning`` directory",
+            "help": "Tune a persona with the data in its persona configuration.",
             "arguments": []
         },
         {
