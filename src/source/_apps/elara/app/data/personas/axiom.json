@@ -24,7 +24,12 @@
         "poems": [ ],
         "proofs": []
     },
-    "language": [ "object" ],
+    "language": {
+        "object": true,
+        "voice": false,
+        "inflection": false,
+        "words": false
+    },
     "functions": [ "analyze" ],
     "tools": "code_execution",
     "generation_config": {

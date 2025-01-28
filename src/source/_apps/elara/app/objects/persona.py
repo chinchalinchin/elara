@@ -22,8 +22,6 @@ class Persona:
     """Directory containing persona data"""
     extension                       : str = None
     """Extension of persona data files"""
-    context                         : str = None
-    """Location of external context file"""
     current                         : str = None
     """Current persona"""
     personas                        : dict = {}
@@ -36,16 +34,15 @@ class Persona:
     # Persona properties
     _prop_tune                      = constants.PersonaProps.TUNING.value
     _prop_syst                      = constants.PersonaProps.SYSTEM_INSTRUCTION.value
-    _prop_cont                      = constants.PersonaProps.CONTEXT.value
     _prop_func                      = constants.PersonaProps.FUNCTIONS.value
     _prop_tool                      = constants.PersonaProps.TOOLS.value
     _prop_gene                      = constants.PersonaProps.GENERATION_CONFIG.value
     _prop_safe                      = constants.PersonaProps.SAFETY_SETTINGS.value
     _prop_schema                    = constants.PersonaProps.SCHEMA_FILENAME.value
-
+    _prop_cont                      = constants.PersonaProps.CONTEXT.value
 
     def __init__(self, persona: str, persona_config: dict, 
-                 directory: str, extension: str, context: str) -> None:
+                 directory: str, extension: str) -> None:
         """
         Initialize Persona object.
 
@@ -60,15 +57,13 @@ class Persona:
         :param context: Location of context file
         :type context: str
         """
-        self.current                    = persona
-        self.directory                  = directory
-        self.extension                  = extension
-        self.context                    = context
-        self.personas                   = { }
-        self.persona_config             = persona_config
-        self.schema                     = self._schema()
+        self.current                = persona
+        self.directory              = directory
+        self.extension              = extension
+        self.personas               = { }
+        self.persona_config         = persona_config
+        self.schema                 = self._schema()
         self._personas()
-        self._context()
 
 
     def _schema(self) -> dict:
@@ -78,16 +73,16 @@ class Persona:
         :returns: Dictionaryschema for new conversation.
         :rtype: `dict`
         """
-        schema_filename                 = self.persona_config[self._prop_schema]
-        schema_file                     = "".join([schema_filename, self.extension])
-        schema_path                     = os.path.join(self.directory, schema_file)
+        schema_filename             = self.persona_config[self._prop_schema]
+        schema_file                 = "".join([schema_filename, self.extension])
+        schema_path                 = os.path.join(self.directory, schema_file)
         
         try:
             with open(schema_path, "r") as f:
-                content                 = f.read()
+                content             = f.read()
 
             if content:
-                payload                 = json.loads(content)
+                payload             = json.loads(content)
                 return payload
 
             raise exceptions.DataNotFoundError(schema_path)
@@ -98,86 +93,72 @@ class Persona:
 
     def _personas(self) -> None:
         """
-        Load persona data from directory
+        Load persona configuration from application directory.
         """
         raw = {}
         for root, _, files in os.walk(self.directory):
             for file in files:
-                persona, ext            = os.path.splitext(file)
+                persona, ext        = os.path.splitext(file)
 
                 if ext !=  self.extension or \
                     persona == self.persona_config[self._prop_schema] :
                     continue
 
-                file_path               = os.path.join(root, file)
-                raw[persona]            = { }
+                file_path           = os.path.join(root, file)
+                raw[persona]        = { }
 
                 try:
                     with open(file_path, "r") as f:
-                        content         = f.read()
+                        content     = f.read()
 
                     if content:
-                        payload         = json.loads(content)
+                        payload     = json.loads(content)
                     else: 
                         logger.warning(
                             f"No data found for {persona}, applying new schema.")
-                        payload         = self.schema
+                        payload     = self.schema
 
-                    raw[persona]        = payload
+                    raw[persona]    = payload
 
                 except (FileNotFoundError, json.JSONDecodeError) as e:
                     logger.error(
                         f"Error loading JSON from {file_path}: {e}")
-                    raw[persona]        = self.schema
+                    raw[persona]    = self.schema
                     
                 except Exception as e:
                     logger.error(
                         f"An unexpected error occurred loading {file_path}: {e}")
-                    raw[persona]        = self.schema
+                    raw[persona]    = self.schema
 
-        self.personas                   = raw
+        self.personas               = raw
         return
 
-                
-    def _context(self) -> None:
-        """
-        Apply contextual configuration to personas.
-
-        :param context_file: Location of the context file.
-        :type context_file: `str`
-        """
-        with open(self.context, "r") as f: 
-            context                     = json.load(f)
-
-        for persona in self.personas.keys():
-            context_config              = self.personas[persona][self._prop_cont]
-
-            for con_type, con_keys in context_config.items(): 
-                
-                self.personas[persona][self._prop_cont][con_type] \
-                                        = []
-
-                for con_key in con_keys: 
-                    context_plugin         = context[con_type.upper()][con_key]
-
-                    self.personas[persona][self._prop_cont][con_type]\
-                                            .append(util.lower(context_plugin))
-        return
-    
 
     def vars(self, persona: str = None) -> dict:
         """
         Get a dictionary of the persona configuration for templating.
         
+        .. note::
+
+            This method filters out a persona's context keys. Before injected the context keys into a template, they must be converted into raw context using the `objects.context.Context` class.
+
         :param persona: Persona whose properties are to be retrieved.
         :type persona: `str`
         :returns: A dictionary of the persona configuration.
         :rtype: `dict`
         """
-        if persona is None:
-            return self.personas.get(self.current)
+        if persona is None or self.personas.get(persona):
+            return {
+                k: v for k,v in 
+                self.personas.get(self.current)
+                if k != self._prop_cont
+            }
         
-        return self.personas.get(persona)
+        return {
+            k: v for k,v in 
+            self.personas.get(persona)
+            if k != self._prop_cont
+        }
     
 
 
@@ -190,11 +171,11 @@ class Persona:
         :returns: New persona metadata
         :rtype: dict
         """
-        if persona is None:
-            persona                     = self.current
+        if persona is None or self.personas.get(persona):
+            persona                 = self.current
 
         if self.personas.get(persona) is not None:
-            self.current                = persona
+            self.current            = persona
 
         return self.current
 
@@ -218,10 +199,9 @@ class Persona:
         :returns: Persona attribute metadata
         :rtype: `dict`
         """
-        buffer                          = self.personas.get(persona)
-        if persona is None or buffer is None:
+        if persona is None or self.personas.get(persona) is None:
             return self.personas.get(self.current).get(attribute)
-        return buffer.get(attribute)
+        return self.personas.get(persona) 
 
 
     def function(self, func: str = None) -> dict:
@@ -248,3 +228,12 @@ class Persona:
         :rtype: list
         """
         return [ k for k in self.personas.keys() ]
+
+
+    def context(self, persona: str = None) -> dict:
+        """
+        Retrieve a dictionary of context keys associated with a persona.
+        """
+        if persona is None or self.personas.get(persona) is None:
+            return self.personas.get(self.current).get(self._prop_cont)
+        return self.personas.get(persona).get(self._prop_cont)

@@ -28,7 +28,12 @@
         "poems": [ ],
         "proofs": []
     },
-    "language": [ "inflections" ],
+    "language": {
+        "object": false,
+        "voice": false,
+        "inflection": true,
+        "words": false
+    },
     "functions": [
         "review",
         "request"

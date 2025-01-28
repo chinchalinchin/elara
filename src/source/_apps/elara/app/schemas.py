@@ -77,6 +77,10 @@ class Arguments:
         return self.directory is not None
     
 
+    def has_tty_args(self):
+        return self.terminal is not None
+    
+    
     def to_dict(self):
         return {
             field.name: getattr(self, field.name)

@@ -1,14 +1,11 @@
 {
-    "FUNCTIONS": {
-        "ANALYZE": {
-            "TEMPLATE": "analyze",
-            "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+    "functions": {
+        "analyze": {
+            "latex_preamble": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
         },
-        "BRAINSTORM": {
-            "TEMPLATE": "brainstorm"
-        },
-        "CONVERSE": {
-            "SCHEMA": {
+        "brainstorm": { },
+        "converse": {
+            "schema": {
                 "type": "object",
                 "properties": {
                     "memory": {
@@ -22,12 +19,10 @@
                     "response"
                 ]
             },
-            "MIME": "application/json",
-            "TEMPLATE": "converse"
+            "mime": "application/json",
         },
-        "REVIEW": {
-            "TEMPLATE": "review",
-            "SCHEMA": {
+        "review": {
+            "schema": {
                 "type": "object",
                 "properties": {
                     "score": {
@@ -86,42 +81,40 @@
                     "overall"
                 ]
             },
-            "MIME": "application/json"
+            "mime": "application/json"
         },
-        "REQUEST": {
-            "TEMPLATE": "request"
+        "request": { }
+    },
+    "tree": {
+        "directories": {
+            "data": "data",
+            "logs": "logs",
+            "config": "data/config",
+            "context": "data/context",
+            "personas": "data/personas",
+            "threads": "data/threads",
+            "templates": "data/templates",
+            "tools": "data/tools"
+        },
+        "files": {
+            "cache": "cache.json",
+            "log": "elara.log"
+        },
+        "extensions": {
+            "context": ".json",
+            "personas": ".json",
+            "templates": ".rst",
+            "threads": ".json"
         }
     },
-    "TREE": {
-        "DIRECTORIES": {
-            "DATA": "data",
-            "LOGS": "logs",
-            "CONFIG": "data/config",
-            "CONTEXT": "data/context",
-            "PERSONAS": "data/personas",
-            "THREADS": "data/threads",
-            "TEMPLATES": "data/templates",
-            "TOOLS": "data/tools"
+    "objects": {
+        "conversation": {
+            "timezone_offset": -5,
+            "schema_filename": "_new"
         },
-        "FILES": {
-            "CACHE": "cache.json",
-            "LOG": "elara.log"
-        },
-        "EXTENSIONS": {
-            "TEMPLATES": ".rst",
-            "LANGUAGE": ".rst",
-            "PERSONAS": ".json",
-            "THREADS": ".json"
-        }
-    },
-    "OBJECTS": {
-        "CONVERSATION": {
-            "TIMEZONE_OFFSET": -5,
-            "SCHEMA_FILENAME": "_new"
-        },
-        "DIRECTORY": {
-            "SUMMARIZE": {
-                "DIRECTIVES": {
+        "directory": {
+            "summarize": {
+                "directives": {
                     ".py": "python",
                     ".sh": "bash",
                     ".toml": "toml",
@@ -130,78 +123,78 @@
                     ".html": "html",
                     ".js": "js"
                 },
-                "INCLUDES": {
-                    "EXT": [
+                "includes": {
+                    "ext": [
                         ".rst",
                         ".md",
                         ".ini",
                         ".txt"
                     ]
                 },
-                "EXCLUDES": {
-                    "EXT":  [
+                "excludes": {
+                    "ext":  [
                         ".pyc",
                         ".zip",
                         ".gz"
                     ],
-                    "FILE": [
+                    "file": [
                         "context.json"
                     ],
-                    "DIR": []
+                    "dir": []
                 },
-                "TEMPLATE": "summary"
+                "template": "summary"
             }
         },
-        "PERSONA":{
-            "SCHEMA_FILENAME": "_new"
+        "persona":{
+            "schema_filename": "_new"
         },
-        "REPO": {
-            "VCS": "github",
-            "AUTH": {
-                "TYPE": "bearer",
-                "CREDS": null
+        "repository": {
+            "vcs": "github",
+            "auth": {
+                "type": "bearer",
+                "creds": null
             },
-            "BACKENDS": {
-                "GITHUB": {
-                    "HEADERS": {
-                        "X-GitHub-Api-Version": "2022-11-28",
-                        "Accept": "application/vnd.github+json"
+            "backends": {
+                "github": {
+                    "headers": {
+                        "x-github-api-version": "2022-11-28",
+                        "accept": "application/vnd.github+json"
                     },
-                    "API": {
-                        "PR": {
-                            "COMMENTS": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
-                            "PULLS": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments",
-                            "FILES": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/files"
+                    "api": {
+                        "pr": {
+                            "comments": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                            "pulls": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments",
+                            "files": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/files"
                         }
                     }
                 }
             }
         },
-        "TERMINAL": {
-            "GHERKIN": {
-                "HELP": "Please describe the feature request with Gherkin test language.",
-                "BLOCKS": {
-                    "FEATURE": "FEATURE\n\tEnter feature name: ",
-                    "SCENARIO": "SCENARIO\n\tDescribe the specific scenario in the feature: ",
-                    "LANGUAGE": "LANGUAGE\n\tSpecify the desired programming language: ",
-                    "GIVEN": "GIVEN\n\tFix the context of the scenario: ",
-                    "WHEN": "WHEN\n\tDescribe the action which triggers the scenario: ",
-                    "THEN": "THEN\n\tState the expected outcome of the scenario: "
+        "terminal": {
+            "gherkin": {
+                "help": "please describe the feature request with gherkin test language.",
+                "blocks": {
+                    "feature": "feature\n\tenter feature name: ",
+                    "scenario": "scenario\n\tdescribe the specific scenario in the feature: ",
+                    "language": "language\n\tspecify the desired programming language: ",
+                    "given": "given\n\tfix the context of the scenario: ",
+                    "when": "when\n\tdescribe the action which triggers the scenario: ",
+                    "then": "then\n\tstate the expected outcome of the scenario: "
                 }
             },
-            "CONVERSE": {
-                "DISPLAY": {
-                    "PROMPT": "\tPrompt: ",
-                    "INIT": "Starting an interactive terminal...",
-                    "TITLE": "\n---------------\n  ELARA SHELL  \n---------------\n",
-                    "START": "\n\tType exit() to quit.\n\tType help() to see list of commands.\n\n",
-                    "HELP": "TODO"
+            "converse": {
+                "display": {
+                    "prompt": "\tprompt: ",
+                    "init": "starting an interactive terminal...",
+                    "title": "\n---------------\n  elara shell  \n---------------\n",
+                    "start": "\n\ttype exit() to quit.\n\ttype help() to see list of commands.\n\n",
+                    "help": "todo"
                 },
-                "COMMANDS": {
-                    "EXIT": "exit()",
-                    "HELP": "help()"
+                "commands": {
+                    "exit": "exit()",
+                    "help": "help()"
                 },
-                "FUNCTIONS": [
+                "functions": [
                     "current_persona",
                     "current_prompter",
                     "current_model",
@@ -209,33 +202,28 @@
                 ]
             }
         },
-        "MODEL": {
-            "GEMINI": {
-                "KEY": null,
-                "DEFAULT": "models/gemini-2.0-flash-exp",
-                "TUNING": {
-                    "SOURCE": "models/gemini-1.5-flash-001-tuning"
+        "model": {
+            "gemini": {
+                "key": null,
+                "default": "models/gemini-2.0-flash-exp",
+                "tuning": {
+                    "source": "models/gemini-1.5-flash-001-tuning"
                 }
             }
         }
     },
-    "LOGS": {
-        "LEVEL": "INFO",
-        "SCHEMA": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    "logs": {
+        "level": "info",
+        "schema": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
-    "OVERRIDES": {
-        "GEMINI.TUNING.SOURCE": "GEMINI_TUNING_SOURCE",
-        "GEMINI.KEY": "GEMINI_KEY",
-        "GEMINI.DEFAULT": "GEMINI_DEFAULT",
-        "OBJECTS.LANGUAGE.MODULES.OBJECT": "OBJECTS_LANGUAGE_MODULES_OBJECT",
-        "OBJECTS.LANGUAGE.MODULES.INFLECTION": "OBJECTS_LANGUAGE_MODULES_INFLECTION",
-        "OBJECTS.LANGUAGE.MODULES.VOICE": "OBJECTS_LANGUAGE_MODULES_VOICE",
-        "OBJECTS.LANGUAGE.MODULES.WORDS": "OBJECTS_LANGUAGE_MODULES_WORDS",
-        "OBJECTS.REPO.VCS": "OBJECTS_REPO_VCS",
-        "OBJECTS.REPO.AUTH.CREDS": "OBJECTS_REPO_AUTH_CREDS",
-        "FUNCTIONS.CONVERSE.TIMEZONE_OFFSET": "FUNCTIONS_CONVERSE_TIMEZONE_OFFSET",
-        "FUNCTIONS.ANALYZE.LATEX_PREAMBLE": "FUNCTIONS_ANALYZE_LATEX_PREAMBLE",
-        "VERSION": "VERSION",
-        "LOGS.LEVEL": "LOGS_LEVEL"
+    "overrides": {
+        "objects.model.gemini.tuning.source": "OBJECTS_MODEL_GEMINI_TUNING_SOURCE",
+        "objects.model.gemini.key": "OBJECTS_MODEL_GEMINI_KEY",
+        "objects.model.gemini.default": "OBJECTS_MODEL_GEMINI_DEFAUlT",
+        "objects.repo.vcs": "OBJECTS_REPO_VCS",
+        "objects.repo.auth.creds": "OBJECTS_REPO_AUTH_CREDS",
+        "functions.converse.timezone_offset": "FUNCTIONS_CONVERSE_TIMEZONE_OFFSET",
+        "functions.analyze.latex_preamble": "FUNCTIONS_ANALYZE_LATEX_PREAMBLE",
+        "logs.level": "LOGS_LEVEL"
     }
 }

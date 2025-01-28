@@ -32,7 +32,6 @@ This section is not directly related to your conversation history, but it does c
 {% include '_context/identities.rst' %} 
 
 {% include '_context/external.rst' %}
-
 {% include '_context/language.rst' %}
 
 {%- if includes and includes.get('summary') -%}

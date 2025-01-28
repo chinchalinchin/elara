@@ -17,6 +17,7 @@ import schemas
 import util
 import objects.cache as cache
 import objects.config as conf
+import objects.context as cont
 import objects.conversation as convo
 import objects.directory as directory
 import objects.persona as persona
@@ -110,6 +111,12 @@ class ArgFactory:
 
 
     def build(self) -> schemas.Arguments:
+        """
+        Retrieve factory constructed application arguments.
+
+        :returns: Application arguments.
+        :rtype: `schemas.Arguments`
+        """
         return self.arguments
 
 
@@ -151,22 +158,39 @@ class AppFactory:
         """
         Initialize and append a `objects.cache.Cache` object to the factory's `app.App` object.
 
-        :returns: Updated self.
-        :rtype: typing.Self
+        :returns: Self with updated application attribute.
+        :rtype: `typing.Self`
         """
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application cache...")
 
-        cache_file              = self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CACHE" ])
-        self.app.cache          = cache.Cache(cache_file)
+        self.app.cache          = cache.Cache(
+                                    self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CACHE" ]))
         return self 
+    
+
+    def with_context(self) -> typing.Self:
+        """
+        Initialize and append a `objects.context.Context` object to the factory's `app.App` object.
+
+        :returns: Self with updated application attribute.
+        :rtype: `typing.Self`
+        """
+        if self.app.logger is not None:
+            self.app.logger.debug("Initializing application context...")
+
+        self.app.context        = cont.Context(
+            directory           = self._path([ "TREE.DIRECTORIES.CONTEXT" ]),
+            extension           = self.app.config.get("TREE.EXTESIONS.CONTEXT")
+        )
+        return self
     
 
     def with_conversations(self) -> typing.Self:
         """
         Initialize and append a `objects.conversation.Conversation` object to the factory's `app.App` object. 
 
-        :returns: Updated self.
+        :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
         if self.app.logger is not None:
@@ -189,7 +213,7 @@ class AppFactory:
         
         :param arguments: Application arguments.
         :type arguments: `schemas.Arguments`
-        :returns: Updated self.
+        :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
         if not arguments.has_dir_args() and self.app.logger:
@@ -207,8 +231,8 @@ class AppFactory:
         """
         Initialize and append `logging.Logger` to the factory's `app.App` object. 
         
-        :returns: Updated self.
-        :rtype: typing.Self
+        :returns: Self with updated application attribute.
+        :rtype: `typing.Self`
         """
         log_file                = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ])
 
@@ -224,7 +248,7 @@ class AppFactory:
         """
         Initialize and append a `objects.model.Model` object to the factory's `app.App` object. 
         
-        :returns: Updated self.
+        :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
         if not self.app.config.get("GEMINI.KEY"):
@@ -238,8 +262,8 @@ class AppFactory:
         """
         Initialize and append `objects.persona.Persona` to the factory's `app.App` object. 
         
-        :returns: Updated self.
-        :rtype: typing.Self
+        :returns: Self with updated application attribute.
+        :rtype: `typing.Self`
         """
         if self.app.cache is None:
             raise ValueError("Cache must be initialized before Personas!")
@@ -258,7 +282,7 @@ class AppFactory:
         """
         Initialize and append a `objects.template.Template` object to the factory's `app.App` object. 
         
-        :returns: Updated self.
+        :returns: Self with updated application attribute.
         :rtype:`typing.Self`
         """
         self.app.templates      = template.Template(
@@ -272,7 +296,7 @@ class AppFactory:
         """
         Initialize and append a `objects.terminal.Terminal` object to the factory's `app.App` object. 
         
-        :returns: Updated self.
+        :returns: Self with updated application attribute.
         :rtype:`typing.Self`
         """
         self.app.terminal       = terminal.Terminal(
@@ -285,8 +309,8 @@ class AppFactory:
         """
         Initialize and append a `objects.repo.Repo` object to the factory's `app.App` object. 
         
-        :returns: Updated self.
-        :rtype: typing.Self
+        :returns: Self with updated application attribute.
+        :rtype: `typing.Self`
         """
         if not arguments.has_vcs_args():
             raise ValueError("VCS arguments must before creating a Repository object!")
@@ -312,7 +336,7 @@ class AppFactory:
         """
         Retrieve factory constructed application.
 
-        :returns: Application.
+        :returns: Factory constructed application.
         :rtype: `app.App`
         """
         return self.app

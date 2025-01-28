@@ -31,7 +31,17 @@ class ConvoProps(enum.Enum):
     TIMESTAMP           = "timestamp"
     NAME                = "name"
     # Configuration Properties
-    SCHEMA_FILENAME     = "SCHEMA_FILENAME"
+    SCHEMA_FILENAME     = "schema_filename"
+
+
+class ContextProps(enum.Enum):
+    """
+    Context property key enumeration
+    """
+    # Internal Properties 
+    POEMS               = "poems"
+    PROOFS              = "proofs"
+    QUOTES              = "quotes"
 
 
 class PersonaProps(enum.Enum):
@@ -47,7 +57,7 @@ class PersonaProps(enum.Enum):
     GENERATION_CONFIG   = "generation_config"
     SAFETY_SETTINGS     = "safety_settings"
     # Configuration Properties
-    SCHEMA_FILENAME     = "SCHEMA_FILENAME"
+    SCHEMA_FILENAME     = "schema_filename"
 
 
 class ModelProps(enum.Enum):

@@ -9,7 +9,12 @@
         "poems": [ ],
         "proofs": []
     },
-    "language": [ ],
+    "language": {
+        "object": false,
+        "voice": false,
+        "inflection": false,
+        "words": false
+    },
     "functions": [ "brainstorm" ],
     "tools": "code_execution",
     "generation_config": {

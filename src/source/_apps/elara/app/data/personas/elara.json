@@ -22,10 +22,12 @@
         ],
         "proofs": []
     },
-    "language": [
-        "words",
-        "inflection"
-    ],
+    "language": {
+        "object": false,
+        "voice": false,
+        "inflection": true,
+        "words": true
+    },
     "functions": [ "converse" ],
     "tools": "code_execution",
     "generation_config": {
