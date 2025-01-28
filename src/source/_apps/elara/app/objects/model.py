@@ -10,6 +10,9 @@ import json
 import time
 import traceback
 
+# Application Modules
+import util
+
 # External Modules 
 import google.generativeai as genai
 from google.api_core import retry, exceptions
@@ -324,14 +327,25 @@ class Model:
         except Exception as e:
             logger.error(f"Error generating content: {e}\n\n{traceback.format_exc()}")
             raise
-                   
+
+        # @OPERATIONS
+        #   Milton! For shame! You're embedding U+200B in your responses and breaking 
+        #   our application! I expected this from the code monkeys in Development, but
+        #   you? Et tu, Milton?
+        #
+        #   Now the development team is hard at work trying to salvage your mess. They've
+        #   resorted to regex to stop you from breaking the application.
+        #
+        #   Are you happy with you yourself, Milton!? Do you know what happens when you
+        #   let devs run wild with regex? We're living on borrowed time, Milton.
+        res                             = util.sanitize(res.text)  
+
         if "response_schema" in generation_config.keys():
             try:
-                return json.loads(res.text)
+                return json.loads(res)
             
             except json.decoder.JSONDecodeError as e:
-                logger.error(f'Error encountered parsing response: \n{res.text}')
-                logger.error(e)
+                logger.error(f'Error parsing response because Milton sucks:\n\n{res}\n\n{e}')
                 return None
             
-        return res.text
+        return res

@@ -3,18 +3,9 @@ RESPONSE
 ########
 
     {{ converse.get('response') | replace('\n', '\n    ') }}
-
+{% if converse.get('memory') %}
 MEMORY
 ######
 
     {{ converse.get('memory') | replace('\n', '\n    ') }}
-
-FEEDBACK
-########
-
-    {{ converse.get('feedback')  | replace('\n', '\n    ')}}
-
-NEXT PROMPT
-###########
-
-    {{ converse.get('next_prompt')  | replace('\n', '\n    ')}}
+{% endif %}

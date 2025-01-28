@@ -98,7 +98,6 @@ Metadata
 .. admonition:: Source Code Metadata
 
     **Repository**: {{ repository.vcs}}/{{ repository.owner }}/{{ repository.repo }}
-    **Commit ID**: {{ repository.commit }}
 
 .. warning::
 

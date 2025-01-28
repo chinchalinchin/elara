@@ -49,7 +49,7 @@ Summary
 {% if includes.get("models") %}
 {% include '_reports/models.rst' %}
 {% endif %}
-{%- if includes.get("service") -%}
-{% include '_reports/service.rst' %}
+{%- if includes.get("repository") -%}
+{% include '_reports/repository.rst' %}
 {% endif %}
 {% endif %}

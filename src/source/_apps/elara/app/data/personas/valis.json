@@ -15,7 +15,7 @@
     "tools": "code_execution",
     "generation_config": {
         "candidate_count": 1,
-        "max_output_tokens": 100000,
+        "max_output_tokens": 8000,
         "temperature": 2,
         "top_p": 0.5,
         "top_k": 32

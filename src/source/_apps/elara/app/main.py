@@ -6,13 +6,12 @@ Module for command line interface.
 """
 # Application Modules
 import app
-import util
 import factory
 import printer
 import schemas
 
 
-def clear(application: app.App)         -> schemas.Output:
+def clear(application: app.App) -> schemas.Output:
     """
     Parses command line arguments and uses them to clear application data.
 
@@ -27,7 +26,7 @@ def clear(application: app.App)         -> schemas.Output:
     return schemas.Output()
 
 
-def set(application : app.App)          -> schemas.Output:
+def set(application : app.App) -> schemas.Output:
     """
     Parses command line arguments and uses them to update the cache.
 
@@ -56,7 +55,7 @@ def set(application : app.App)          -> schemas.Output:
     return schemas.Output()
 
 
-def summarize(application: app.App)     -> schemas.Output:
+def summarize(application: app.App) -> schemas.Output:
     """
     Generate a RestructuredText (RST) summary of a local directory.
 
@@ -70,7 +69,7 @@ def summarize(application: app.App)     -> schemas.Output:
     )
 
 
-def show(application: app.App)          -> schemas.Output:
+def show(application: app.App) -> schemas.Output:
     """
     Generate a RestructuredText (RST) summary of application metadata.
 
@@ -85,14 +84,12 @@ def show(application: app.App)          -> schemas.Output:
     )
 
 
-def init(
-    command_line : bool                 = False
-)                                       -> app.App:
+def init(command_line : bool = False) -> app.App:
     """
     Initialize the application.
 
     :returns: The appliation
-    :rtype: app.App
+    :rtype: `app.App`
     """
     application                         = factory.AppFactory()
 
@@ -121,58 +118,34 @@ def init(
     return application
 
 
-def main()                              -> bool:
+def main() -> None:
     """
     Main function to run the command-line interface.
-
-    :returns: A signal the application has halted.
-    :rtype: `bool`
     """
-    # TODO: move dispatch logic into app.App.run()
     this_app : app.App                  = init(
         command_line                    = True
     )
 
-    operations : dict                   = {
+    admin_operations : dict             = {
         # Administrative functions
         "set"                           : set,
         "clear"                         : clear,
-        # Meta functions
         "summarize"                     : summarize,
         "show"                          : show,
-        # Application Functions
-        "converse"                      : lambda app: app.converse(),
-        "review"                        : lambda app: app.review(),
-        "request"                       : lambda app: app.request(),
-        "tune"                          : lambda app: app.tune(),
-        "analyze"                       : lambda app: app.analyze(),
     }
 
     operation_name                      = this_app.arguments.operation
-    arguments                           = vars(this_app.arguments) 
 
-    tty                                 = "terminal" in arguments \
-                                            and arguments["terminal"]
-    
-    if operation_name not in operations:
-        return False 
-    
-    if tty and operation_name == "converse": 
-        this_app.arguments.view         = True
-        this_app.terminal.interact(
-            callable                    = lambda app: app.converse(),
-            printer                     = printer.out,
-            app                         = this_app
-        )
-        return True
-        
-    out                                 = operations[operation_name](this_app)
-        
+    if operation_name in admin_operations:
+        out                             = admin_operations[operation_name](this_app)
+
+    else:
+        out                             = this_app.run(printer.out)
+
     printer.out(
         application                     = this_app,
         output                          = out
     )
-    return True
 
 if __name__ == "__main__":
     main()

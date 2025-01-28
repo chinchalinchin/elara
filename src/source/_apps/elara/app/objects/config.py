@@ -10,9 +10,9 @@ import logging
 import os
 import typing
 
-logger                                      = logging.getLogger(__name__)
+logger                          = logging.getLogger(__name__)
 
-HIDE                                        = ["GEMINI", "REPO"]
+HIDE                            = ["GEMINI", "REPO"]
 """Configuration properties that should be hidden from logging due to their sensitive nature."""
 
 
@@ -21,37 +21,35 @@ class Config:
     Application configuration. Loads values from the ``data/config.json`` and then applies environment variable overrides.
     """
 
-    data                                    = None
+    data                        = None
     """Config data"""
     
-    file                                    = None
+    file                        = None
     """Location of Config file"""
 
 
-    def __init__(self, 
-        config_file                         : str
-    )                                       -> None:
+    def __init__(self, config_file: str) -> None:
         """
         Initialize Config class object.
 
         :param config_file: Location of application configuration file.
         :type config_file: str
         """
-        self.file                           = config_file
+        self.file               = config_file
         self._load()
         self._override()
 
 
-    def _load(self)                         -> None:
+    def _load(self) -> None:
         """
         Load in configuration data from file.
         """
         try:
             with open(self.file, "r") as f:
-                content                     = f.read()
+                content         = f.read()
 
             if content:
-                self.data                   = json.loads(content)
+                self.data       = json.loads(content)
                 return 
             
         except (FileNotFoundError, json.JSONDecodeError) as e:
@@ -60,32 +58,29 @@ class Config:
         raise ValueError("Application configuration is empty!")
 
 
-    def _override(self)                     -> None:
+    def _override(self) -> None:
         """
         Override configuration with environment variables, if applicable.
         """
-        env_overrides                       = self.data["OVERRIDES"]
+        env_overrides           = self.data["OVERRIDES"]
 
         for key, env_var in env_overrides.items():
-            default                         = self.unnest(key.split("."), self.data)
-            value                           = self._env(env_var, default)
+            default             = self.unnest(key.split("."), self.data)
+            value               = self._env(env_var, default)
             
             if value != default:
                 self.nest(key.split("."), self.data, value)
 
 
     @staticmethod
-    def _env(
-        env_var                             : str, 
-        default                             : str
-    )                                       -> typing.Any:
+    def _env(env_var: str, default: str) -> typing.Any:
         """
         Pull environment variables and parse into Python data structures.
 
         :returns: Parsed environment variable or default value.
         :rtype: `typing.Any`
         """
-        value = os.environ.get(env_var)
+        value                   = os.environ.get(env_var)
 
         if value is not None:
 
@@ -98,8 +93,7 @@ class Config:
                 
                 except ValueError:
                     logger.error(
-                        f"Environment variable {env_var} must be int! Using default value."
-                    )
+                        f"Environment variable {env_var} must be int! Using default value.")
                     return default
             
             if isinstance(default, float):
@@ -108,8 +102,7 @@ class Config:
                 
                 except ValueError:
                     logger.error(
-                        f"Environment variable {env_var} must be float! Using default value."
-                    )
+                        f"Environment variable {env_var} must be float! Using default value.")
                     return default 
                 
             return value

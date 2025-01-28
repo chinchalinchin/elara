@@ -7,10 +7,12 @@ Objects for orchestrating the application.
 # Standard Library Modules
 import argparse
 import logging 
+import typing
 
 # Application Modules
 import constants
 import schemas
+import util
 import objects.cache as cac
 import objects.config as conf
 import objects.conversation as convo
@@ -25,7 +27,7 @@ import objects.terminal as term
 
 class App:
     """
-    Class for managing application objects and functions. This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``currentPersona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
+    Class for managing application objects and functions. This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``current_persona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
     """
     arguments                               : argparse.Namespace | None = None 
     """Application arguments"""
@@ -205,9 +207,7 @@ class App:
         :rtype: `schemas.Output`
         """
         buffer                              = self.cache.vars()
-        persona                             = self.personas.function(
-            func                            = constants.Functions.REQUEST.value
-        )
+        persona                             = self.personas.function(constants.Functions.REQUEST.value)
         buffer[constants.CacheProps.CURRENT_PERSONA.value] \
                                             = persona
         
@@ -268,13 +268,9 @@ class App:
         includes                            = { 
             "includes"                      : self.directory.summary() 
         }
-        commit                              = { 
-            "commit"                        : self.arguments.commit 
-        } if self.arguments.commit else {}
         # STEP 2. Merge function template variables
         review_variables                    = { 
             **includes,
-            **commit,
             **buffer,
             **self.repository.vars(),
             **self.language.vars(),
@@ -321,27 +317,28 @@ class App:
                 msg                         = msg,
                 pr                          = self.arguments.pull,
             )
-            includes                        = source_res
-            
+            includes                        = [ source_res ] 
         # STEP 8. Render file specific pull request assessments and post to VCS backend.
-        for file_data in response.get("files", []):
-            comment                         = self.templates.render(
-                temp                        = "_services/vcs/file",
-                variables                   = file_data,
-                ext                         = ".md"
+        if response and response.get("files"):
+            bodies                          = []
+            for file_data in response.get("files", []):
+                comment                     = self.templates.render(
+                    temp                    = "_services/vcs/file",
+                    variables               = file_data,
+                    ext                     = ".md"
+                )
+                bodies.append({
+                    "path"                  : file_data.get("path"),
+                    "msg"                   : comment
+                })
+            source_res                      = self.repository.files(
+                pr                          = self.arguments.pull,
+                bodies                      = bodies
             )
-            # @OPERATIONS
-            #   Milton, the development team has discovered the files 
-            #   you review have to match the files in the pull request 
-            #   diff or else the API request will throw a 422. They are
-            #   working on implementing a workaround in the repo.Repo class.
-            #   Have a look when you get a chance.
-            self.repository.file(
-                pr                         = self.arguments.pull,
-                commit                     = self.arguments.commit,
-                path                       = file_data.get("path"),
-                msg                         = comment
-            )
+            includes                        = {
+                "repository"                : includes + source_res
+            }
+            print("\n includes \n",includes)
         # STEP 9: Prepare model response for output templating
         review_response                     = { constants.Functions.REVIEW.value: response}
         # STEP 10: Structure results for output
@@ -362,6 +359,8 @@ class App:
     
         # @DEVELOPMENT
         #   Hey, Milton! It seems like this function should go into `objects/model.py`, don't you think?
+        #   Problem is, this function uses the cache, and we would prefer to keep the model and cache
+        #   decoupled...
         tuned_models = []
 
         for p in self.personas.all():
@@ -392,6 +391,40 @@ class App:
         return False
     
 
-    def run(self)                       -> schemas.Output:
-        # TODO: application function dispatch logic here
-        return schemas.Output()
+    def run(self, printer: typing.Callable) -> schemas.Output:
+        """
+        Dispatch the application arguments. ``printer`` must have function signature,
+
+            printer(application: app.App, output: schemas.Output)
+
+        :param printer: Callable function to print application output during terminal sessions.
+        :type printer: `typing.Callable`.
+        """
+        # Application function dispatch dictionary
+        operations : dict                   = {
+            "converse"                      : self.converse,
+            "review"                        : self.review,
+            "request"                       : self.request,
+            "tune"                          : self.tune,
+            "analyze"                       : self.analyze,
+        }
+
+        operation_name                      = self.arguments.operation
+        arguments                           = vars(self.arguments) 
+
+        tty                                 = "terminal" in arguments \
+                                                and arguments["terminal"]
+        
+        if operation_name not in operations:
+            return schemas.Output()
+        
+        if tty and operation_name == "converse": 
+            self.arguments.view             = True
+            self.terminal.interact(
+                callable                    = self.converse,
+                printer                     = printer.out,
+                app                         = self
+            )
+            return schemas.Output()
+            
+        return operations[operation_name]()

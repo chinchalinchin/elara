@@ -56,10 +56,7 @@ def debug(application: app.App)         -> None:
     )
 
 
-def out(
-    application                         : app.App,
-    output                              : schemas.Output
-)                                       -> None:
+def out(application: app.App, output: schemas.Output) -> None:
     """
     Write output to appropriate location. Output should follow the format,
 

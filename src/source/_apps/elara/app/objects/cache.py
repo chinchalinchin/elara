@@ -10,9 +10,11 @@ import logging
 import typing
 
 # Application Modules
+import constants
 import util
 
-logger                                      = logging.getLogger(__name__)
+
+logger                              = logging.getLogger(__name__)
 
 
 class Cache:
@@ -24,51 +26,54 @@ class Cache:
         The Cache class is implemented as a singleton to prevent concurrent writes to the cache file.
     """
     
-    inst                                    = None
+    inst                            = None
     """Singleton instance"""
-    data                                    = None
+    data                            = None
     """Cache data"""
-    file                                    = None
+    file                            = None
     """Location of Cache file"""
 
-    def __init__(
-        self, 
-        cache_file                          : str
-    )                                       -> None:
+    # Cache Properties
+    _prop_mod                       = constants.CacheProps.CURRENT_MODEL.value
+    _prop_per                       = constants.CacheProps.CURRENT_PERSONA.value
+    _prop_pro                       = constants.CacheProps.CURRENT_PROMPTER.value
+    _prop_tun                       = constants.CacheProps.TUNED_MODELS.value
+    _prop_src                       = constants.CacheProps.TUNING_MODEL.value
+    
+    def __init__(self, cache_file: str) -> None:
         """
         Initialize Cache.
 
         :param file: Location of Cache file. Defaults to ``data/cache.json``.
         :type file: str
         """
-        self.file                           = cache_file
+        self.file                   = cache_file
         self._load()
 
 
-    def __new__(self, *args, **kwargs)      -> typing.Self:
+    def __new__(self, *args, **kwargs) -> typing.Self:
         """
         Create a Cache singleton.
         """
         if not self.inst:
-            self.inst                       = super(Cache, self).__new__(self)
+            self.inst               = super(Cache, self).__new__(self)
         return self.inst
     
 
-    @staticmethod
-    def _fresh()                            -> dict:
+    def _fresh(self) -> dict:
         """
         Create a fresh Cache from an empty schema.
         """
         return {
-            "currentModel"                  :  None,
-            "currentPersona"                : None,
-            "currentPrompter"               : None,
-            "tunedModels"                   : [],
-            "tuningModel"                   : None
+            self._prop_mod          : None,
+            self._prop_per          : None,
+            self._prop_pro          : None,
+            self._prop_tun          : [],
+            self._prop_src          : None
         }
     
     
-    def _load(self)                         -> None:
+    def _load(self) -> None:
         """
         Loads the cache from the JSON file.
         
@@ -79,13 +84,14 @@ class Cache:
             if content:
                 self.data                   = json.loads(content)
             else:
+                logger.warning("Cache empty! Initializing new cache...")
                 self.data                   = self._fresh()
         except (FileNotFoundError, json.JSONDecodeError) as e:
             logger.error(f"Error loading cache: {e}")
             self.data                       = self._fresh()
 
 
-    def vars(self)                          -> dict:
+    def vars(self) -> dict:
         """
         Retrieve the entire cache, ready for templating.
 
@@ -109,7 +115,7 @@ class Cache:
             return None
 
 
-    def update(self, **kwargs)              -> bool:
+    def update(self, **kwargs) -> bool:
         """
         Update the Cache using keyword arguments. Key must exist in Cache to be updated.
         """
@@ -144,7 +150,7 @@ class Cache:
         return updated
 
 
-    def save(self)                          -> bool:
+    def save(self) -> bool:
         """
         Saves the cache to the JSON file in ``data`` directory.
         """
@@ -157,29 +163,11 @@ class Cache:
             return False
             
     
-    def base_models(self, 
-        path : bool                         = True
-    )                                       -> list:
-        """
-        Retrieve the base Gemini models. 
-
-        :param path: If ``path=True`` the full model name will be returned. If ``path=False``, the short name of the model will be returned.
-        :type path: bool
-        """
-        if "baseModels" not in self.data:
-            return []
-        
-        if path:
-            return [ model["path"] for model in self.data["baseModels"] ]
-        
-        return [ model["tag"] for model in self.data["baseModels"] ]
-
-
     def tuned_personas(self)                -> list:
         """
         Retrieve all tuned Persona Models.
         """
-        return [ m for m in self.data["tunedModels"] ]
+        return [ m for m in self.data[self._prop_tun] ]
 
 
     def is_tuned(self, 
@@ -194,5 +182,7 @@ class Cache:
         :rtype: bool
         """
         return len([ 
-            m for m in self.data["tunedModels"] if m["name"] == persona 
+            m for m in self.data[self._prop_tun] if m[
+                constants.ModelProps.NAME.value
+            ] == persona 
         ]) > 0

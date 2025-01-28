@@ -29,19 +29,16 @@ class Repo:
     Application repository. Class for managing interactions with a VCS backend. 
     """
 
-    auth                                        = None
+    auth                            = None
     """Authentication configuration for VCS backend"""
-    src                                         = None
+    src                             = None
     """VCS source information"""
-    backends                                    = None
+    backends                        = None
     """Backend configurations"""
 
 
-    def __init__(self,
-        repository_config                       : dict,
-        repository                              : str, 
-        owner                                   : str,
-    ):
+    def __init__(self, repository_config: dict, 
+                 repository: str, owner: str) -> None:
         """
         Initialize Repository object.
 
@@ -57,18 +54,18 @@ class Repo:
         .. code-block:: python
 
 
-            repository_config                   = {
-                "VCS"                           : "<github | bitbucket | codecommit>",
-                "AUTH"                          : {
-                    "TYPE"                      : "<bearer | oauth | etc. >",
-                    "CREDS"                     : "will change based on type."
+            repository_config       = {
+                "VCS"               : "<github | bitbucket | codecommit>",
+                "AUTH"              : {
+                    "TYPE"          : "<bearer | oauth | etc. >",
+                    "CREDS"         : "will change based on type."
                 },
-                "BACKENDS"                      : {
-                    "GITHUB"                    : {
-                        "HEADERS"               : {
+                "BACKENDS"          : {
+                    "GITHUB"        : {
+                        "HEADERS"   : {
                             # github vcs service headers
                         },
-                        "API"                   : {
+                        "API"       : {
                             # github vcs service endpoints
                         }
                     }
@@ -80,23 +77,23 @@ class Repo:
             Only ``github`` VCS is supported at this time.
             
         """
-        self.auth                               = repository_config[
-            constants.RepoProps.AUTH.value
-        ]
-        self.backends                           = repository_config[
-            constants.RepoProps.BACKENDS.value
-        ]
-        self.src                                = {
-            constants.RepoProps.OWNER.value     : owner,
-            constants.RepoProps.REPO.value      : repository,
-            constants.RepoProps.VCS.value       : repository_config[
-                constants.RepoProps.VCS_TYPE.value
-            ]
+        self.auth                   = repository_config[
+            constants.RepoProps.AUTH.value]
+        self.backends               = repository_config[
+            constants.RepoProps.BACKENDS.value]
+        self.src                    = {
+            constants.RepoProps.OWNER.value
+                                    : owner,
+            constants.RepoProps.REPO.value
+                                    : repository,
+            constants.RepoProps.VCS.value
+                                    : repository_config[
+                                        constants.RepoProps.VCS_TYPE.value]
         }
 
 
     @staticmethod
-    def _service(svc: typing.Any)               -> dict:
+    def _service(svc: typing.Any) -> dict:
         """
         Wrap service response in dictionary for templates.
 
@@ -109,10 +106,7 @@ class Repo:
     
 
     @staticmethod
-    def _backoff(
-        callable                                : typing.Callable,
-        max_retries                             : int = 3
-    )                                           -> typing.Any:
+    def _backoff(callable: typing.Callable, max_retries: int = 3) -> typing.Any:
         """
         Wrap a service call in exponential backoff error handling.
 
@@ -129,7 +123,7 @@ class Repo:
                 
             except requests.exceptions.RequestException as e:
                 if attempt < max_retries - 1:
-                    wait                        = 2 ** attempt
+                    wait            = 2 ** attempt
                     logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")
                     time.sleep(wait)
                 else:
@@ -141,10 +135,7 @@ class Repo:
                 raise exceptions.VCSRequestError("Request failed")
             
 
-    def _pull(self, 
-        num                                     : int,
-        endpoint                                : constants.RepoProps
-    )                                           -> typing.Union[str | None]:
+    def _pull(self, pr: int, endpoint: constants.RepoProps) -> typing.Union[str | None]:
         """
         Returns the POST URL for the VCS REST API pull request endpoints.
 
@@ -152,8 +143,8 @@ class Repo:
 
             Only ``github`` VCS is supported at this time.
             
-        :param num: Pull request number for the POST.
-        :type num: `str`
+        :param pr: Pull request number for the POST.
+        :type pr: `str`
         :param endpoint: Type of pull request endpoint.
         :type endpont: `constants.RepoProps.COMMENTS | constants.RepoProps.PULLS]`
         :returns: POST URL
@@ -163,12 +154,10 @@ class Repo:
 
             return self.backends[constants.RepoProps.GITHUB.value][
                 constants.RepoProps.API.value][constants.RepoProps.PR.value
-            ][endpoint].format(**{
-                "pr": num, 
-                **self.src
-            })
+            ][endpoint].format(**{ "pr": pr, **self.src})
         
-        raise ValueError(f"Unsupported VCS: {self.src[constants.RepoProps.VCS.value ]}")
+        raise ValueError(
+            f"Unsupported VCS: {self.src[constants.RepoProps.VCS.value ]}")
     
 
     def _headers(self):
@@ -198,10 +187,7 @@ class Repo:
         )
 
 
-    def _post(self,
-        url                                     : str,
-        body                                    : typing.Any
-    )                                           -> dict:
+    def _post(self, url: str, body: typing.Any) -> dict:
         """
         Make a HTTP post to a VCS backend. 
 
@@ -215,35 +201,31 @@ class Repo:
         def _call():
             logger.debug(f"Making HTTP call to {url}")
 
-            res                                 = requests.post(
-                url                             = url, 
-                headers                         = self._headers(), 
-                json                            = body
+            res                     = requests.post(
+                url                 = url, 
+                headers             = self._headers(), 
+                json                = body
             )
             logger.debug(res)
             res.raise_for_status()
             return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : res.json(),
-                "status"                        : "success"
+                "name"              : self.src[constants.RepoProps.VCS.value],
+                "body"              : res.json(),
+                "status"            : "success"
             })
         
         try:
-            return self._backoff(
-                callable                        = _call
-            )
+            return self._backoff(_call)
         
         except exceptions.VCSRequestError as e:
             return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : str(e),
-                "status"                        : "failure"
+                "name"              : self.src[constants.RepoProps.VCS.value],
+                "body"              : str(e),
+                "status"            : "failure"
             })
                 
 
-    def _get(self,
-        url                                     : str,
-    ):
+    def _get(self, url: str) -> dict:
         """
         Make a HTTP get to a VCS backend. 
 
@@ -252,43 +234,37 @@ class Repo:
         """
         def _call():
             logger.debug(f"Making HTTP call to {url}")
-            res                                 = requests.get(
-                url                             = url, 
-                headers                         = self._headers()
+            res                     = requests.get(
+                url                 = url, 
+                headers             = self._headers()
             )
             logger.debug(res)
             res.raise_for_status()
             return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : res.json(),
-                "status"                        : "success"
+                "name"              : self.src[constants.RepoProps.VCS.value],
+                "body"              : res.json(),
+                "status"            : "success"
             })
         
         try:
-            return self._backoff(
-                callable                        = _call
-            )
+            return self._backoff(_call)
         
         except exceptions.VCSRequestError as e:
             return self._service({
-                "name"                          : self.src[constants.RepoProps.VCS.value],
-                "body"                          : str(e),
-                "status"                        : "failure"
+                "name"              : self.src[constants.RepoProps.VCS.value],
+                "body"              : str(e),
+                "status"            : "failure"
             })
-        
+    
 
-    def vars(self)                              -> dict:
+    def vars(self) -> dict:
         """
         Retrieve VCS metadata, formatted for templating.
         """
-        return {
-            "repository"                        : self.src
-        }
+        return { "repository" : self.src }
 
 
-    def list(self,
-        pr                                      : str,
-    ):
+    def pulls(self, pr: str) -> dict:
         """
         List the files in a pull request diff.
 
@@ -296,50 +272,22 @@ class Repo:
 
         - **Github**: `Github REST API Docs: Pull Request Files <https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests-files>`
         """
-        # @DEVELOPMENT
-        #   We have hit a bit of a snag, Milton! Turns out, you can only comment
-        #   on files in a pull request that have changed! That means we can only
-        #   apply your comments on files that have been updated in the pull
-        #   request! We are going to have to use the endpoint,
-        #
-        #       https://api.github.com/repos/OWNER/REPO/pulls/PULL_NUMBER/files
-        #
-        #   To list out the files in a particular pull request. According to the
-        #   the docs, the pull request /files endpoint returns a response that
-        #   looks like this,
-        #
-        #   [
-        #       {
-        #           "sha": "bbcd538c8e72b8c175046e27cc8f907076331401",
-        #           "filename": "file1.txt",  
-        #            # some other nonsense we don't care about!
-        #       }
-        #   ]
-        #
-        #   the "sha" appears to be the commit ID, which we will need.
-        #   We will also need to grab the "filename" from the response
-        #   and compare it against the filenames you return in your pull
-        #   request review.
-        #
-        # @OPERATIONS
-        #   On the plus side, we will be able to get rid of the ``commit`` command line
-        #   arguments, since we will be able to pull it directly from the VCS!
-        url                                     = self._pull(
-            num                                 = pr,
-            endpoint                            = constants.RepoProps.FILES.value
+        url                 = self._pull(
+            pr              = pr,
+            endpoint        = constants.RepoProps.FILES.value
         )  
-        # TODO: parse response for sha commit ids and filenames!
-        return self._get(
-            url                                 = url
-        )
+        res                 = self._get(url)
+        files               = []
+        if res and res.get("service").get("status") == "success":
+            for f in res.get("service").get("body"):
+                files.append({
+                    "file"  : f.get("filename"),
+                    "sha"   : f.get("sha")
+                })
+        return files
 
 
-    def file(self,
-        msg                                     : str,
-        pr                                      : str,
-        commit                                  : str,
-        path                                    : str,
-    )                                           -> dict:
+    def files(self, pr: str, bodies: list) -> list:
         """
         Posts a comment to a pull request file on the VCS backend. Links below detail the specific VCS provider endpoints,
 
@@ -357,34 +305,37 @@ class Repo:
         :type msg: `str`
         :param pr: Pull request number on which to comment.
         :type pr: `str`,
-        :param commit: Commit ID of the commit in the pull request necessitating comment.
-        :type commit: `str`
-        :param path: File path of the file necessitating comment.
-        :type path: `str`
-        :returns: Dictionary containing VCS response.
-        :rtype: `dict`
+        :param paths: List of file paths necessitating comment.
+        :type path: `list`
+        :returns: List of VCS responses.
+        :rtype: `list`
         """
-        url                                     = self._pull(
-            num                                 = pr,
-            endpoint                            = constants.RepoProps.PULLS.value
+        files               = self.pulls(pr)
+        url                 = self._pull(
+            pr              = pr,
+            endpoint        = constants.RepoProps.PULLS.value
         )
-        body                                    = {
-            "body"                              : msg,
-            "commit_id"                         : commit,
-            "path"                              : path,
-            "line"                              : 1
-            
-        }
-        return self._post(
-            url                                 = url,
-            body                                = body
-        )
+        paths               = [ b["path"] for b in bodies ]
+        res                 = []
+
+        for f in files:
+            for p in paths:
+                if f.get('file').endswith(p):
+                    body    = {
+                        "body"  : bodies[paths.index(p)],
+                        "path"  : f.get("file"),
+                        "commit_id" : f.get("sha"),
+                        "line"  : 1
+                    }
+                    res         += self._post(
+                        url     = url,
+                        body    = body
+                    )
+                    break 
+        return res
 
 
-    def comment(self,
-        msg                                     : str,
-        pr                                      : str
-    )                                           -> dict:
+    def comment(self, msg: str, pr: str) -> dict:
         """
         Post a comment to a pull request on the VCS backend. Links below detail the specific VCS provider endpoints,
 
@@ -403,14 +354,14 @@ class Repo:
         :param pr: Pull request number on which to comment.
         :type pr: `str`
         """
-        url                                     = self._pull(
-            num                                 = pr,
-            endpoint                            = constants.RepoProps.COMMENTS.value
+        url                 = self._pull(
+            pr              = pr,
+            endpoint        = constants.RepoProps.COMMENTS.value
         )
-        body                                    = {
-            "body"                              : msg
+        body                = {
+            "body"          : msg
         }
         return self._post(
-            url                                 = url,
-            body                                = body
+            url             = url,
+            body            = body
         )

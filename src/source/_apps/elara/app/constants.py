@@ -67,6 +67,7 @@ class CacheProps(enum.Enum):
     CURRENT_PERSONA     = "current_persona"
     CURRENT_PROMPTER    = "current_prompter"
     TUNED_MODELS        = "tuned_models"
+    TUNING_MODEL        = "tuning_model"
     
 
 class RepoProps(enum.Enum):

@@ -7,7 +7,7 @@ Application exceptions.
 
 class DirectoryNotFoundError(Exception):
     """
-    Raised when the ``directory`` passed to the ``directory.Directory.summarize()`` function does not exist
+    Raised when the ``directory`` passed to the ``directory.Directory`` object does not exist
     """
     pass
 

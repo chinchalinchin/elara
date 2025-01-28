@@ -163,12 +163,10 @@ Tuned models are initialized the first time the command line interface is invoke
 All context is managed in the `data` directory. The application uses Jinja2 templates in the ``data/templates``
 
 1. `data/templates`: This subdirectory contains RST templates that are rendered using user input.
-2. `data/history`: This subdirectory contains JSONs that contain chat threads with different personas.
-3. `data/system`: This subdirectory contains JSON that contain system instructions for each persona. 
-4. `data/memories`: This subdirectory contains JSONS that contain chat memories with different personas.
-4. `data/tuning`: This subdirectory contains JSON files with tuning data. These are used to initialize the persona models, if tuning is enabled through the ``TUNING`` environment variable.
-5. `data/language`: This subdirectory contains RST modules for language processing. These modules add grammatical forms to the persona's diction.
-
+2. `data/threads`: This subdirectory contains JSONs that contain chat threads with different personas.
+3. `data/personas`: This subdirectory contains JSON that contain persona configurations. 
+4. `data/language`: This subdirectory contains RST modules for language processing. These modules add grammatical forms to the persona's diction.
+    
 ### Language Modules
 
 Additional language plugins can be injected into the prompt. The language modules can be found in ``data/modules``. To enable a Language module, set the value of the following environment variables,

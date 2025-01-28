@@ -8,9 +8,20 @@ Static application utilities.
 import ast
 import logging
 import typing
+import re
 
 
 logs                        = logging.getLogger(__name__)
+
+
+def sanitize(s: str) -> str:
+    """
+    Sanitize a string of escape characters.
+    """
+    # @DEVELOPMENT
+    #   This is where we have to clean up Milton's mess. 
+    #   (I bet you he complains about the regex...)
+    return re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]", "", s)
 
 
 def lower(d: dict) -> dict:

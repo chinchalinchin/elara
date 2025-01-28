@@ -185,7 +185,7 @@ class AppFactory:
         self.app.directory          = directory.Directory(
             directory               = self.app.arguments.directory,
             summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
-            summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE.CONFIG")
+            summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE")
         )
         return self 
     
@@ -251,7 +251,7 @@ class AppFactory:
             raise ValueError("Cache must be initialized before Personas!")
 
         self.app.personas               = persona.Persona(
-            persona                     = self.app.cache.get("currentPersona"),
+            persona                     = self.app.cache.get("current_persona"),
             persona_config              = self.app.config.get("OBJECTS.PERSONA"),
             directory                   = self._path(["TREE.DIRECTORIES.PERSONAS"]),
             extension                   = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
