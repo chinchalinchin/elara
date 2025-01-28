@@ -113,7 +113,7 @@ def main() -> None:
         out                 = admin_operations[operation_name](this_app)
 
     else:
-        out                 = this_app.run(printer.out)
+        out                 = this_app.run(these_args)
 
     printer.out(these_args, out)
 

@@ -28,6 +28,9 @@ import objects.terminal as terminal
 
 
 class ArgFactory:
+    """
+    TODO: explain
+    """
     arguments                   : schemas.Arguments | None = None
     """Factory's arguments"""
     argument_config             : conf.Config | None = None
@@ -115,12 +118,15 @@ class ArgFactory:
         Retrieve factory constructed application arguments.
 
         :returns: Application arguments.
-        :rtype: `schemas.Arguments`
+        :rtype: `schemas.Arguments`operation_name
         """
         return self.arguments
 
 
 class AppFactory:
+    """
+    TODO: explain
+    """
     app                         : apps.App | None = None
     """Factory's application."""
     app_dir                     : str | None = None
@@ -196,12 +202,9 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
 
-        dirs                    = self._path([ "TREE.DIRECTORIES.THREADS" ])
-        extension               = self.app.config.get("TREE.EXTENSIONS.THREADS")
-
         self.app.conversations  = convo.Conversation(
-            directory           = dirs,
-            extension           = extension,
+            directory           = self._path([ "TREE.DIRECTORIES.THREADS" ]),
+            extension           = self.app.config.get("TREE.EXTENSIONS.THREADS"),
             convo_config        = self.app.config.get("OBJECTS.CONVERSATION")
         )
         return self
@@ -234,10 +237,8 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        log_file                = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ])
-
         self.app.logger         = util.logger(
-            file                = log_file,
+            file                = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ]),
             level               = self.app.config.get("LOGS.LEVEL"),
             schema              = self.app.config.get("LOGS.SCHEMA")
         )
