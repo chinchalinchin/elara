@@ -19,7 +19,7 @@
                     "response"
                 ]
             },
-            "mime": "application/json",
+            "mime": "application/json"
         },
         "review": {
             "schema": {
