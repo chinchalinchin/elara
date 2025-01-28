@@ -13,6 +13,8 @@ import typing
 
 # Application Modules
 import app as apps
+import constants
+import exceptions
 import schemas
 import util
 import objects.cache as cache
@@ -29,12 +31,30 @@ import objects.terminal as terminal
 
 class ArgFactory:
     """
-    TODO: explain
+    Factory for construcing the application arguments via different entrypoints.
     """
     arguments                   : schemas.Arguments | None = None
     """Factory's arguments"""
     argument_config             : conf.Config | None = None
     """Application argument configuration"""
+
+    # Argument Propeties
+    ## COMMAND LINE PARSERS
+    _prop_parh                  : str = constants.CommandLineProps.PARSER_HELP.value
+    _prop_subh                  : str = constants.CommandLineProps.SUBPARSER_HELP.value
+    _prop_subd                  : str = constants.CommandLineProps.SUBPARSER_DEST.value
+    _prop_args                  : str = constants.CommandLineProps.ARGUMENTS.value
+    _prop_oper                  : str = constants.CommandLineProps.OPERATIONS.value
+    _prop_fiel                  : str = constants.CommandLineProps.FIELDS.value
+    _prop_name                  : str = constants.CommandLineProps.NAME.value
+    ## COMMAND LINE ARGUMENTS
+    _prop_help                  : str = constants.CommandLineProps.HELP.value
+    _prop_synt                  : str = constants.CommandLineProps.SYNTAX.value
+    _prop_dest                  : str = constants.CommandLineProps.DEST.value
+    _prop_acti                  : str = constants.CommandLineProps.ACTION.value
+    _prop_narg                  : str = constants.CommandLineProps.NARGS.value
+    _prop_defa                  : str = constants.CommandLineProps.DEFAULT.value
+    _prop_type                  : str = constants.CommandLineProps.TYPE.value 
 
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "args.json") -> None:
@@ -57,54 +77,54 @@ class ArgFactory:
         :rtype: `typing.Self`
         """
         parser                  = argparse.ArgumentParser(
-            description         = self.config.get("help.parser")
+            description         = self.config.get(self._prop_parh)
         )
     
         subparsers              = parser.add_subparsers(
-            dest                = 'operation', 
-            help                = self.config.get("help.subparser")
+            dest                = self._prop_subd, 
+            help                = self.config.get(self._prop_subh)
         )
 
-        arg_schema              = self.config.get("arguments")
+        arg_schema              = self.config.get(self._prop_args)
 
-        for op_config in self.config.get("interface.operations"):
+        for op_config in self.config.get(self._prop_oper):
             op_parser           = subparsers.add_parser(
-                name            = op_config["name"],
-                help            = op_config["help"]
+                name            = op_config[self._prop_name],
+                help            = op_config[self._prop_help]
             )
-            for op_arg_key in op_config["arguments"]:
+            for op_arg_key in op_config[self._prop_args]:
                 # filter arguments by 'name' to retrieve correct schema
-                op_arg_schema   = (arg for arg in arg_schema if op_arg_key == arg["name"])
+                op_arg_schema   = (arg for arg in arg_schema if op_arg_key == arg[self._prop_dest])
                 op_arg          = next(op_arg_schema, {})
                 if any(
-                    k not in self.config.get("fields") 
+                    k not in self.config.get(self._prop_fiel) 
                     for k in op_arg.keys()
                 ):
                     continue
                 
-                if "action" in op_arg.keys():
-                    op_parser.add_argument(*op_arg["syntax"],
-                        dest    = op_arg["dest"],
-                        help    = op_arg["help"],
-                        action  = op_arg["action"]
+                if self._prop_acti in op_arg.keys():
+                    op_parser.add_argument(*op_arg[self._prop_synt],
+                        dest    = op_arg[self._prop_dest],
+                        help    = op_arg[self._prop_help],
+                        action  = op_arg[self._prop_acti]
                     )
                     continue
 
-                if "nargs" in op_arg.keys():
+                if self._prop_narg in op_arg.keys():
                     op_parser.add_argument(
-                        nargs   = op_arg["nargs"],
-                        default = op_arg["default"],
-                        dest    = op_arg["dest"],
-                        help    = op_arg["help"],
-                        type    = util.map(op_arg["type"])
+                        nargs   = op_arg[self._prop_narg],
+                        default = op_arg[self._prop_defa],
+                        dest    = op_arg[self._prop_dest],
+                        help    = op_arg[self._prop_help],
+                        type    = util.map(op_arg[self._prop_type])
                     )
                     continue
                 
-                op_parser.add_argument(*op_arg["syntax"],
-                    default     = op_arg["default"],
-                    dest        = op_arg["dest"],
-                    help        = op_arg["help"],
-                    type        = util.map(op_arg["type"])
+                op_parser.add_argument(*op_arg[self._prop_synt],
+                    default     = op_arg[self._prop_defa],
+                    dest        = op_arg[self._prop_dest],
+                    help        = op_arg[self._prop_help],
+                    type        = util.map(op_arg[self._prop_type])
                 )
 
         parsed_args             = vars(parser.parse_args())
@@ -125,12 +145,46 @@ class ArgFactory:
 
 class AppFactory:
     """
-    TODO: explain
+    Factory for managing the application object initialization.
     """
     app                         : apps.App | None = None
     """Factory's application."""
     app_dir                     : str | None = None
     """Directory containing application."""
+
+
+    # Factory Properties
+    ## AUTHENTICATION
+    _prop_auth_gem              = constants.FactoryProps.AUTH_GEMINI.value
+    _prop_auth_vcs              = constants.FactoryProps.AUTH_VCS.value
+    ## DIRECTORIES
+    _prop_dir_data              = constants.FactoryProps.DIR_DATA.value
+    _prop_dir_cont              = constants.FactoryProps.DIR_CONTEXT.value
+    _prop_dir_pers              = constants.FactoryProps.DIR_PERSONA.value
+    _prop_dir_thrd              = constants.FactoryProps.DIR_THREADS.value
+    _prop_dir_logs              = constants.FactoryProps.DIR_LOGS.value
+    _prop_dir_temp              = constants.FactoryProps.DIR_TEMPLATES.value
+    ## FILES 
+    _prop_file_logs             = constants.FactoryProps.FILE_LOG.value
+    _prop_file_cach             = constants.FactoryProps.FILE_CACHE.value
+    ## EXTENSIONS
+    _prop_ext_cont              = constants.FactoryProps.EXT_CONTEXT.value
+    _prop_ext_temp              = constants.FactoryProps.EXT_TEMPLATES.value
+    _prop_ext_thrd              = constants.FactoryProps.EXT_THREADS.value
+    _prop_ext_pers              = constants.FactoryProps.EXT_PERSONA.value
+    ## OBJECTS
+    _prop_obj_conv              = constants.FactoryProps.OBJECT_CONVO.value
+    _prop_obj_dir               = constants.FactoryProps.OBJECT_DIR.value
+    _prop_obj_per               = constants.FactoryProps.OBJECT_PERSONA.value
+    _prop_obj_mod               = constants.FactoryProps.OBJECT_MODEL.value
+    _prop_obj_term              = constants.FactoryProps.OBJECT_TERMINAL.value
+    _prop_obj_repo              = constants.FactoryProps.OBJECTS_REPOSITORY.value
+    ## EXTERNAL SERVICES
+    _prop_vcs                   = constants.FactoryProps.VCS.value          
+    ## LOGS
+    _prop_log_lvl               = constants.FactoryProps.LOG_LEVEL.value
+    _prop_log_sch               = constants.FactoryProps.LOG_SCHEMA.value
+
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "app.json") -> None:
         """
@@ -146,6 +200,7 @@ class AppFactory:
         self.app.config         = conf.Config(
             config_file         = os.path.join(self.app_dir, rel_dir, filename)
         )
+
 
     def _path(self, parts: list) -> str:
         """
@@ -171,7 +226,7 @@ class AppFactory:
             self.app.logger.debug("Initializing application cache...")
 
         self.app.cache          = cache.Cache(
-                                    self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CACHE" ]))
+                                    self._path([self._prop_dir_data, self._prop_file_cach]))
         return self 
     
 
@@ -186,8 +241,8 @@ class AppFactory:
             self.app.logger.debug("Initializing application context...")
 
         self.app.context        = cont.Context(
-            directory           = self._path([ "TREE.DIRECTORIES.CONTEXT" ]),
-            extension           = self.app.config.get("TREE.EXTESIONS.CONTEXT")
+            directory           = self._path([self._prop_dir_cont]),
+            extension           = self.app.config.get(self._prop_ext_cont)
         )
         return self
     
@@ -203,9 +258,9 @@ class AppFactory:
             self.app.logger.debug("Initializing application conversations...")
 
         self.app.conversations  = convo.Conversation(
-            directory           = self._path([ "TREE.DIRECTORIES.THREADS" ]),
-            extension           = self.app.config.get("TREE.EXTENSIONS.THREADS"),
-            convo_config        = self.app.config.get("OBJECTS.CONVERSATION")
+            directory           = self._path([self._prop_dir_thrd]),
+            extension           = self.app.config.get(self._prop_ext_thrd),
+            convo_config        = self.app.config.get(self._prop_obj_conv)
         )
         return self
     
@@ -225,7 +280,7 @@ class AppFactory:
         
         self.app.directory      = directory.Directory(
             directory           = arguments.directory,
-            directory_config    = self.app.config.get("OBJECTS.DIRECTORY")
+            directory_config    = self.app.config.get(self._prop_obj_dir)
         )
         return self 
     
@@ -238,9 +293,9 @@ class AppFactory:
         :rtype: `typing.Self`
         """
         self.app.logger         = util.logger(
-            file                = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ]),
-            level               = self.app.config.get("LOGS.LEVEL"),
-            schema              = self.app.config.get("LOGS.SCHEMA")
+            file                = self._path([self._prop_dir_logs, self._prop_file_logs]),
+            level               = self.app.config.get(self._prop_log_lvl),
+            schema              = self.app.config.get(self._prop_log_sch)
         )
         return self
     
@@ -252,10 +307,7 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        if not self.app.config.get("GEMINI.KEY"):
-            raise ValueError("GEMINI_KEY environment variable not set.")
-
-        self.app.model          = model.Model(self.app.config.get("OBJECTS.MODEL")) 
+        self.app.model          = model.Model(self.app.config.get(self._prop_obj_mod)) 
         return self
 
 
@@ -270,11 +322,10 @@ class AppFactory:
             raise ValueError("Cache must be initialized before Personas!")
 
         self.app.personas       = persona.Persona(
-            persona             = self.app.cache.get("current_persona"),
-            persona_config      = self.app.config.get("OBJECTS.PERSONA"),
-            context             = self._path([ "TREE.DIRECTORIES.CONTEXT" ]),
-            directory           = self._path([ "TREE.DIRECTORIES.PERSONAS" ]),
-            extension           = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
+            persona             = self.app.cache.get(constants.CacheProps.CURRENT_PERSONA.value),
+            persona_config      = self.app.config.get(self._prop_obj_per),
+            directory           = self._path([self._prop_dir_pers]),
+            extension           = self.app.config.get(self._prop_ext_pers),
         )
         return self
     
@@ -287,8 +338,8 @@ class AppFactory:
         :rtype:`typing.Self`
         """
         self.app.templates      = template.Template(
-            directory           = self._path([ "TREE.DIRECTORIES.TEMPLATES" ]),
-            extension           = self.app.config.get("TREE.EXTENSIONS.TEMPLATES")
+            directory           = self._path([self._prop_dir_temp]),
+            extension           = self.app.config.get(self._prop_ext_temp)
         )
         return self
     
@@ -301,7 +352,7 @@ class AppFactory:
         :rtype:`typing.Self`
         """
         self.app.terminal       = terminal.Terminal(
-            terminal_config     = self.app.config.get("OBJECTS.TERMINAL")
+            terminal_config     = self.app.config.get(self._prop_obj_term)
         )
         return self
 
@@ -316,16 +367,16 @@ class AppFactory:
         if not arguments.has_vcs_args():
             raise ValueError("VCS arguments must before creating a Repository object!")
         
-        if self.app.config.get("OBJECTS.REPO.VCS") is None:
-            raise ValueError("VCS backend not set.")
+        if self.app.config.get(self._prop_vcs) is None:
+            raise exceptions.VCSBackendError("VCS backend not set.")
         
-        if self.app.config.get("OBJECTS.REPO.VCS") == "github" \
-            and not self.app.config.get("OBJECTS.REPO.AUTH.CREDS"):
-            raise ValueError(
-                "REPO_AUTH_CREDS environment variable not set for github VCS.")
+        if self.app.config.get(self._prop_vcs) == constants.VersionControl.GITHUB.value \
+            and not self.app.config.get(self._prop_auth_vcs):
+            raise exceptions.VCSCredentialsError(
+                "VCS credentials not set for GitHub backend.")
     
         self.app.repository     = repository.Repo(
-            repository_config   = self.app.config.get("OBJECTS.REPO"),
+            repository_config   = self.app.config.get(self._prop_obj_repo),
             repository          = arguments.repository,
             owner               = arguments.owner
         )

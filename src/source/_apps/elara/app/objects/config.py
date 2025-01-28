@@ -12,6 +12,7 @@ import typing
 
 
 # Application Modules
+import constants
 import util
 
 
@@ -23,11 +24,14 @@ class Config:
     Application configuration. Loads values from the ``data/config.json`` and then applies environment variable overrides.
     """
 
-    data                        = None
+    data                        : dict = {}
     """Config data"""
-    
-    file                        = None
+    file                        : str = None
     """Location of Config file"""
+
+
+    # Configuration Properties
+    _prop_over                  = constants.ConfigProps.OVERRIDES.value
 
 
     def __init__(self, config_file: str, override: bool = True) -> None:
@@ -100,18 +104,25 @@ class Config:
         raise ValueError("Application configuration is empty!")
 
 
-    def _override(self) -> None:
+    def _override(self, delimiter : str = ".") -> None:
         """
         Override configuration with environment variables, if applicable.
+        
+        :param delimiter: Mark separating nested properties.
+        :type delimiter: `str`
         """
-        env_overrides           = self.data["OVERRIDES"]
+        if self._prop_over not in self.data.keys():
+            logger.warning("No environment overrides available.")
+            return 
+        
+        env_overrides           = self.data[self._prop_over]
 
         for key, env_var in env_overrides.items():
-            default             = util.unnest(key.split("."), self.data)
+            default             = util.unnest(key.split(delimiter), self.data)
             value               = self._env(env_var, default)
             
             if value != default:
-                util.nest(key.split("."), self.data, value)
+                util.nest(key.split(delimiter), self.data, value)
 
 
     def save(self) -> bool:
@@ -148,7 +159,7 @@ class Config:
         return util.unnest(keys, self.data, default)
 
 
-    def set(self, key: str, value: str, delimiter : str = ".") -> None:
+    def set(self, key: str, value: str, delimiter : str = ".") -> dict:
         """
         Set an application configuration property.
 
@@ -161,3 +172,4 @@ class Config:
         """
         keys                    = key.split(delimiter)
         self.data               = util.nest(keys, self.data, value)
+        return self.data

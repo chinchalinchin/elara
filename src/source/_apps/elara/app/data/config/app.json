@@ -98,7 +98,7 @@
         },
         "files": {
             "cache": "cache.json",
-            "log": "elara.log"
+            "logs": "elara.log"
         },
         "extensions": {
             "context": ".json",
@@ -213,17 +213,17 @@
         }
     },
     "logs": {
-        "level": "info",
+        "level": "INFO",
         "schema": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
     "overrides": {
-        "objects.model.gemini.tuning.source": "OBJECTS_MODEL_GEMINI_TUNING_SOURCE",
-        "objects.model.gemini.key": "OBJECTS_MODEL_GEMINI_KEY",
-        "objects.model.gemini.default": "OBJECTS_MODEL_GEMINI_DEFAUlT",
-        "objects.repo.vcs": "OBJECTS_REPO_VCS",
-        "objects.repo.auth.creds": "OBJECTS_REPO_AUTH_CREDS",
-        "functions.converse.timezone_offset": "FUNCTIONS_CONVERSE_TIMEZONE_OFFSET",
-        "functions.analyze.latex_preamble": "FUNCTIONS_ANALYZE_LATEX_PREAMBLE",
+        "objects.model.gemini.tuning.source": "TUNING_SOURCE",
+        "objects.model.gemini.key": "GEMINI_KEY",
+        "objects.model.gemini.default": "GEMINI_DEFAUlT",
+        "objects.repo.vcs": "VCS",
+        "objects.repo.auth.creds": "VCS_TOKEN",
+        "functions.converse.timezone_offset": "TIMEZONE_OFFSET",
+        "functions.analyze.latex_preamble": "LATEX_PREAMBLE",
         "logs.level": "LOGS_LEVEL"
     }
 }

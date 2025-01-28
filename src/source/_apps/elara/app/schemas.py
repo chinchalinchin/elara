@@ -60,12 +60,12 @@ class Arguments:
     owner                   : str | None = None 
     """Username of the remote VCS repository owner."""
     # ORCHESTRATION ARGUMENTS
-    concepts                : list = []
+    concepts                : list = dataclasses.field(default_factory=list)
     """List of concept words to use for brainstorming"""
     #  META ARGUMENTS
-    clear                   : list = []
+    clear                   : list = dataclasses.field(default_factory=list)
     """List of personas whose data is to be cleared."""
-    pairs                   : list = []
+    pairs                   : list = dataclasses.field(default_factory=list)
     """List of 'key=value' strings to save to cache."""
 
 
@@ -101,4 +101,4 @@ class FileReview:
 class ReviewResponse:
     score                   : str = None
     overall                 : str = None
-    files                   : list[FileReview] = []
+    files                   : list[FileReview] = dataclasses.field(default_factory=list)

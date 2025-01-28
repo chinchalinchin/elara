@@ -113,7 +113,7 @@
             "default": null,
             "dest": "concepts",
             "help": "List of words to initiate brainstorm session",
-            "NARGS": "*",
+            "nargs": "*",
             "type": "str"
         },
         {
@@ -156,14 +156,14 @@
             "default": null,
             "dest": "pairs",
             "help": "Key-value pairs to inject into application cache.",
-            "NARGS": "*",
+            "nargs": "*",
             "type": "str"
         },
         {
             "default": null,
             "dest": "clear",
             "help": "List of personas to purge",
-            "NARGS": "*",
+            "nargs": "*",
             "type": "str"
         },
         {
@@ -186,9 +186,9 @@
             "arguments": [
                 "prompt",
                 "directory",
-                "model",
-                "persona",
-                "identity",
+                "current_model",
+                "current_persona",
+                "current_prompter",
                 "view",
                 "output",
                 "render",
@@ -233,9 +233,9 @@
                 "pull",
                 "repository",
                 "owner",
-                "model",
-                "persona",
-                "identity",
+                "current_model",
+                "current_persona",
+                "current_prompter",
                 "view",
                 "output"
             ]

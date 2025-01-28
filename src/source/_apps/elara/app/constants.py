@@ -8,9 +8,11 @@ Application constants and properties.
 import enum
 
 
+# APPLICATION PROPERTIES
+
 class Functions(enum.Enum):
     """
-    Application functions enumeration.
+    Application function key enumeration.
     """
     ANAYLZE             = "analyze"
     BRAINSTORM          = "brainstorm"
@@ -18,6 +20,62 @@ class Functions(enum.Enum):
     REVIEW              = "review"
     REQUEST             = "request"
     TUNE                = "tune"
+
+class FactoryProps(enum.Enum):
+    """
+    Application property key enumeration
+    """
+    AUTH_GEMINI         = "objects.model.gemini.key"
+    AUTH_VCS            = "objects.repository.auth.creds"
+    DIR_DATA            = "tree.directories.data"
+    DIR_CONTEXT         = "tree.directories.context"
+    DIR_PERSONA         = "tree.directories.personas"
+    DIR_THREADS         = "tree.directories.threads"
+    DIR_LOGS            = "tree.directories.logs"
+    DIR_TEMPLATES       = "tree.directories.templates"
+    FILE_LOG            = "tree.files.logs"
+    FILE_CACHE          = "tree.files.cache"
+    EXT_CONTEXT         = "tree.extensions.context"
+    EXT_TEMPLATES       = "tree.extensions.templates"
+    EXT_THREADS         = "tree.extensions.threads"
+    EXT_PERSONA         = "tree.extensions.personas"
+    OBJECT_CONVO        = "objects.conversation"
+    OBJECT_DIR          = "objects.directory"
+    OBJECT_PERSONA      = "objects.person"
+    OBJECT_MODEL        = "objects.model"
+    OBJECT_TERMINAL     = "objects.terminal"
+    OBJECTS_REPOSITORY  = "objects.repository"
+    VCS                 = "objects.repository.vcs"
+    LOG_LEVEL           = "logs.level"
+    LOG_SCHEMA          = "logs.schema"
+    
+# SERVICE PROPERTIES
+
+class VersionControl(enum.Enum):
+    GITHUB              = "github"
+
+# OBJECT PROPERTIES
+
+class CommandLineProps(enum.Enum):
+    """
+    Command line argument property key enumeration.
+    """
+    # Argument Configuration Properties
+    PARSER_HELP         = "help.parser"
+    SUBPARSER_HELP      = "help.subparser"
+    SUBPARSER_DEST      = "operation"
+    OPERATIONS          = "operations"
+    ARGUMENTS           = "arguments"
+    FIELDS              = "fields"
+    NAME                = "name"
+    # Argument Schema Configuration Properties
+    HELP                = "help"
+    SYNTAX              = "syntax"
+    DEST                = "dest"
+    ACTION              = "action"
+    NARGS               = "nargs"
+    DEFAULT             = "default"
+    TYPE                = "type"
 
 
 class ConvoProps(enum.Enum):
@@ -33,6 +91,13 @@ class ConvoProps(enum.Enum):
     # Configuration Properties
     SCHEMA_FILENAME     = "schema_filename"
 
+
+class ConfigProps(enum.Enum):
+    """
+    Configuration property key enumeration.
+    """
+    OVERRIDES           = "overrides"
+    
 
 class ContextProps(enum.Enum):
     """
@@ -68,7 +133,13 @@ class ModelProps(enum.Enum):
     NAME                = "name"
     VERSION             = "version"
     PATH                = "path"
-
+    INPUT_LIMIT         = "input_token_limit"
+    OUTPUT_LIMIT        = "output_token_limit"
+    # Configuration Properties
+    ## Gemini Properties
+    API_KEY             = "gemini.key"
+    DEFAULT             = "gemini.default"
+    TUNING_SOURCE       = "gemini.tuning.source"
 
 class CacheProps(enum.Enum):
     """
@@ -80,7 +151,6 @@ class CacheProps(enum.Enum):
     CURRENT_PROMPTER    = "current_prompter"
     TUNED_MODELS        = "tuned_models"
     TUNING_MODEL        = "tuning_model"
-    
 
 class RepoProps(enum.Enum):
     """
@@ -91,20 +161,21 @@ class RepoProps(enum.Enum):
     REPO                = "repo"
     VCS                 = "vcs"
     # Configuration Properties 
-    AUTH                = "AUTH"
-    BACKENDS            = "BACKENDS"
-    VCS_TYPE            = "VCS"
-    TYPE                = "TYPE"
-    GITHUB              = "GITHUB"
+    AUTH                = "auth"
+    BACKENDS            = "backends"
+    VCS_TYPE            = "vcs"
+    TYPE                = "type"
+    GITHUB              = "github"
     # GitHub Service Properties
-    API                 = "API"
-    PR                  = "PR"
-    COMMENTS            = "COMMENTS"
-    PULLS               = "PULLS"
-    FILES               = "FILES"
-    CREDS               = "CREDS"
-    HEADERS             = "HEADERS"
+    API                 = "api"
+    PR                  = "pr"
+    COMMENTS            = "comments"
+    PULLS               = "pulls"
+    FILES               = "files"
+    CREDS               = "creds"
+    HEADERS             = "headers"
 
+# VARIOUS PROPERTIES
 
 class ReviewScore(enum.Enum):
     """
