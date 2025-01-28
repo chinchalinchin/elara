@@ -23,10 +23,33 @@ import objects.context as cont
 import objects.conversation as convo
 import objects.directory as directory
 import objects.persona as persona
+import objects.printer as printer
 import objects.model as model
 import objects.repository as repository
 import objects.template as template
 import objects.terminal as terminal
+
+
+class PrinterFactory:
+    """
+    TODO: explain
+    """
+
+    _prop_dir_temp              = constants.FactoryProps.DIR_TEMPLATES.value
+
+
+    def __init__(self,rel_dir : str = "data/config", filename : str = "app.json"):
+        """
+        :param rel_dir: Directory relative to the application directory that contains the application configuration data.
+        :type rel_dir: `str`
+        :param filename: Name of the argument configuration file.
+        :type filename: `str`
+        """
+        app_dir                 = pathlib.Path(__file__).resolve().parent
+        self.config             = conf.Config(
+                                    os.path.join(app_dir, rel_dir, filename))
+    def build(self):
+        return printer.Printer(self.config.get(self._prop_dir_temp))
 
 
 class ArgFactory:
@@ -59,6 +82,8 @@ class ArgFactory:
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "args.json") -> None:
         """
+        Initialize an ArgFactory object.
+
         :param rel_dir: Directory relative to the application directory that contains the application configuration data.
         :type rel_dir: `str`
         :param filename: Name of the argument configuration file.

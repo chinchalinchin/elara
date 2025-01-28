@@ -74,6 +74,9 @@ import logging
 # External Modules
 import jinja2
 
+# Application Modules
+import constants
+
 
 logger                      = logging.getLogger(__name__)
 
@@ -135,3 +138,22 @@ class Template:
         :rtype: `str`
         """
         return self.get(temp, ext).render(variables)
+    
+
+    def function(self, template: constants.Functions, variables: dict, ext: str | None = None) -> str:
+        """
+        Render a function template. 
+
+        :param template: Template to render.
+        :type template: `str`
+        :param variables: Variables to inject into template.
+        :type variables: `dict`
+        :param ext: Extension of the template. Defaults to ``.rst``.
+        :type ext: `str`
+        :returns: A templated string.
+        :rtype: `str`
+        """
+        extension           = self.extension if ext is None else ext
+        file_name           = "".join([template, extension])
+        temp                = "_functions/{file_name}".format(file_name=file_name)
+        return self.render(temp, variables, ext)

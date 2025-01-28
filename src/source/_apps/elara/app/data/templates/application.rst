@@ -1,9 +1,9 @@
-.. _output:
+.. _application:
 
-######
-Output
-######
-######
+###########
+Application
+###########
+###########
 {% if prompt %}
 .. _prompt:
 

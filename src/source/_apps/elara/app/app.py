@@ -18,6 +18,7 @@ import objects.conversation as convo
 import objects.directory as dir
 import objects.persona as per
 import objects.model as mod
+import objects.printer as printer
 import objects.repository as repo
 import objects.template as temp
 import objects.terminal as term
@@ -94,7 +95,7 @@ class App:
             **self.personas.vars(persona),
             **self.directory.summary(),
         }
-        parsed_prompt               = self.templates.render(
+        parsed_prompt               = self.templates.function(
             temp                    = constants.Functions.ANAYLZE.value, 
             variables               = analyze_vars
         )
@@ -157,8 +158,8 @@ class App:
             template_vars.update({
                 "includes"          : self.directory.summary()
             })
-        parsed_prompt               = self.templates.render(
-            temp                    = constants.Functions.CONVERSE.value, 
+        parsed_prompt               = self.templates.function(
+            template                = constants.Functions.CONVERSE.value, 
             variables               = template_vars
         )
         if arguments.render:
@@ -207,8 +208,8 @@ class App:
         context                     = self.context.vars(
                                         self.personas.context(persona))
         request_vars                = { **context, **request, **buffer }
-        parsed_prompt               = self.templates.render(
-            temp                    = constants.Functions.REQUEST.value, 
+        parsed_prompt               = self.templates.function(
+            template                = constants.Functions.REQUEST.value, 
             request_vars            = request_vars
         )
         if arguments.render:
@@ -257,8 +258,8 @@ class App:
             **self.repository.vars(),
         }
         # STEP 3. Render function template
-        review_prompt               = self.templates.render(
-            temp                    = constants.Functions.REVIEW.value, 
+        review_prompt               = self.templates.function(
+            template                = constants.Functions.REVIEW.value, 
             variables               = review_variables
         )
         # STEP 4. Halt function if executing with dry-run ``arguments.render`` flag.
@@ -378,11 +379,9 @@ class App:
         return self.dispatch[operation_name](arguments)
     
 
-    def tty(self, arguments: schemas.Arguments, printer: typing.Callable) -> schemas.Output:
+    def tty(self, arguments: schemas.Arguments, printer: printer.Printer) -> schemas.Output:
         """
-        Dispatch the application arguments. ``printer`` must have function signature,
-
-            printer(application: app.App, output: schemas.Output)
+        Initiate an interactive terminal
 
         :param printer: Callable function to print application output during terminal sessions.
         :type printer: `typing.Callable`.

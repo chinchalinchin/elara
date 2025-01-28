@@ -27,7 +27,7 @@ class Output:
 @dataclasses.dataclass
 class Arguments:
     """
-    
+    Data astructure for managing application arguments.
     """
     # ARGUMENT ROOT
     operation               : str | None = None

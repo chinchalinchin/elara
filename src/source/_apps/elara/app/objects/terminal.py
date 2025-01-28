@@ -11,10 +11,10 @@ import re
 
 # Application Modules
 import schemas
+import objects.printer as printer
 
 
 logger                                      = logging.getLogger(__name__)
-
 
 
 class Terminal:
@@ -38,9 +38,7 @@ class Terminal:
     
 
     @staticmethod
-    def _extract(
-        string                              : str
-    )                                       -> tuple:
+    def _extract(string: str) -> tuple:
         """
         Extract function word and argument from a terminal command.
 
@@ -51,39 +49,36 @@ class Terminal:
         """
 
         # Matches "word_word(word)"
-        pattern = r"^([a-zA-Z_]+)\(([a-zA-Z]+)\)$" 
+        pattern         = r"^([a-zA-Z_]+)\(([a-zA-Z]+)\)$" 
 
-        match = re.match(pattern, string)
+        match           = re.match(pattern, string)
         if match:
             return match.group(1), match.group(2)
         
         return None, None
         
     
-    def gherkin(self)                       -> dict:
+    def gherkin(self) -> dict:
         """
         Generate a Gherkin script using terminal input
 
         :returns: A Gherkin script dictionary.
         :rtype: `dict`
         """
+        # TODO: pass in printer and use that instead of logger
         logger.info(self.config["GHERKIN"]["HELP"])
 
-        feat                                = { }
-        feat["request"]                     = { }
+        feat            = { }
+        feat["request"] = { }
 
         for block, prompt in self.config["GHERKIN"]["BLOCKS"].items():
-            feat["request"][block.lower()]  = input(prompt)
+            feat["request"][block.lower()]  \
+                        = input(prompt)
 
         return feat
     
 
-    def interact(
-        self,
-        callable                            : typing.Callable, 
-        printer                             : typing.Callable, 
-        args                                : schemas.Arguments
-    )                                       -> bool:
+    def interact(self, callable: typing.Callable, prnter: printer.Printer, args: schemas.Arguments) -> bool:
         """
         Loop over terminal input and call a function. Function should have the following signature:
 
@@ -116,11 +111,11 @@ class Terminal:
         #   line. The CFO loves green text and all of those bullshit emojis. 
         #   He wants the user shell to be vibrant and full of energy, so this
         #   is where we will inject all his frilly nonsense.
-        print(display["INIT"])
-        print(display["TITLE"])
+        print(display["INIT"]) # TODO: subsume into printer
+        print(display["TITLE"]) # TODO: subsume into printer
 
         while interacting:
-            print(display["START"])
+            print(display["START"]) # TODO: subsume into printer
             prompt                          = input(display["PROMPT"])
             func, arg                       = self._extract(prompt)
 
@@ -128,7 +123,7 @@ class Terminal:
                 break
 
             elif prompt == commands["HELP"]:
-                print(display["HELP"])
+                print(display["HELP"]) # TODO: subsume into printer
                 continue
 
             elif func in functions:
@@ -137,6 +132,6 @@ class Terminal:
             args.prompt                     = prompt
             out                             = callable()
             
-            printer(args, out)
+            prnter.out(args, out)
 
         return True

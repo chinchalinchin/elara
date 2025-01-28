@@ -12,9 +12,8 @@ import typing
 # Application Modules
 import app
 import factories
-import printer
 import schemas
-
+import objects.printer as printer
 
 logger                      = logging.getLogger(__name__)
 
@@ -62,7 +61,7 @@ def show(application: app.App) -> schemas.Output:
     )
 
 
-def init() -> typing.Tuple[app.App, schemas.Arguments]:
+def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     """
     Initialize the application.
 
@@ -85,20 +84,23 @@ def init() -> typing.Tuple[app.App, schemas.Arguments]:
                                 .with_directory(arguments) \
                                 .with_repository(arguments) \
                                 .build()
+    
+    prnter                  = factories.PrinterFactory().build()
 
     application.logger.info("Writing command line arguments to cache.")
     application.cache.update(**arguments.to_dict())
          
-    printer.debug(application, arguments)
+    prnter.debug(application, arguments)
     
-    return application, arguments 
+    return application, arguments, prnter
 
 
 def main() -> None:
     """
     Main function to run the command-line interface.
     """
-    this_app, these_args    = init()
+    this_app, these_args, this_printer    \
+                            = init()
 
     # Administrative function dispatch dictionary
     admin_operations        = {
@@ -116,7 +118,7 @@ def main() -> None:
     else:
         out                 = this_app.run(these_args)
 
-    printer.out(these_args, out)
+    this_printer.out(these_args, out)
 
 if __name__ == "__main__":
     main()
