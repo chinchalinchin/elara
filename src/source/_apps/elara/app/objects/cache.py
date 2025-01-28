@@ -80,15 +80,15 @@ class Cache:
         """
         try:
             with open(self.file, "r") as f:
-                content                     = f.read()
+                content             = f.read()
             if content:
-                self.data                   = json.loads(content)
+                self.data           = json.loads(content)
             else:
                 logger.warning("Cache empty! Initializing new cache...")
-                self.data                   = self._fresh()
+                self.data           = self._fresh()
         except (FileNotFoundError, json.JSONDecodeError) as e:
             logger.error(f"Error loading cache: {e}")
-            self.data                       = self._fresh()
+            self.data               = self._fresh()
 
 
     def vars(self) -> dict:
@@ -119,32 +119,34 @@ class Cache:
         """
         Update the Cache using keyword arguments. Key must exist in Cache to be updated.
         """
-        updated                             = False
+        updated                     = False
         for key, value in kwargs.items():
             if key not in self.data.keys():
-                logger.warning("Invalidate cache key!")
+                logger.warning("Non-existent cache key!")
                 continue 
 
-            validated_value                 = util.validate(value)
-
-            if validated_value is None:
-                logger.warning("Invalidate configuration value!")
+            if value is None:
+                logger.warning("Empy configuration value!")
                 continue 
 
             if isinstance(self.data[key], list) and isinstance(value, list):
-                updated                     = True
+                updated             = True
                 self.data[key].extend(value)
+                logger.info(f"Updating {key} = {value}")
                 continue 
 
             if isinstance(self.data[key], dict) and isinstance(value, dict):
-                updated                     = True
+                updated             = True
                 self.data[key].update(value)
+                logger.info(f"Updating {key} = {value}")
                 continue 
 
-            updated                         = True
-            self.data[key]                  = value
+            updated                 = True
+            self.data[key]          = value
+            logger.info(f"Updating {key} = {value}")
             
         if updated:
+            logger.info("Saving cache!")
             self.save()
 
         return updated
@@ -163,16 +165,14 @@ class Cache:
             return False
             
     
-    def tuned_personas(self)                -> list:
+    def tuned_personas(self) -> list:
         """
         Retrieve all tuned Persona Models.
         """
         return [ m for m in self.data[self._prop_tun] ]
 
 
-    def is_tuned(self, 
-        persona                             : str
-    )                                       -> bool:
+    def is_tuned(self, persona: str) -> bool:
         """
         Determine if Persona has been tuned or not.
         

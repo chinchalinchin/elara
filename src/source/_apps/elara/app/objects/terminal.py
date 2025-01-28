@@ -9,7 +9,13 @@ import logging
 import typing
 import re
 
+# Application Modules
+import schemas
+
+
 logger                                      = logging.getLogger(__name__)
+
+
 
 class Terminal:
     """
@@ -44,8 +50,8 @@ class Terminal:
         :rtype: `tuple`
         """
 
-        # Matches "word(word)"
-        pattern = r"^([a-zA-Z]+)\(([a-zA-Z]+)\)$" 
+        # Matches "word_word(word)"
+        pattern = r"^([a-zA-Z_]+)\(([a-zA-Z]+)\)$" 
 
         match = re.match(pattern, string)
         if match:
@@ -76,23 +82,23 @@ class Terminal:
         self,
         callable                            : typing.Callable, 
         printer                             : typing.Callable, 
-        app                                 : typing.Any
+        args                                : schemas.Arguments
     )                                       -> bool:
         """
         Loop over terminal input and call a function. Function should have the following signature:
 
-            callable(application: app.App)
+            callable(args: schemas.Arguments)
 
         Similary, the function used to print the output to string should have the following signature,
 
-            printer(application: app.App, output: app.Output)
+            printer(args: schemas.Arguments, output: schemas.Output)
 
-        The output from the `callable` function will be passed into the printer along with the application..
+        The input from the terminal will be used to mutate the `args` object before passing it into the `callable` function.
         
         :param callable: Function to invoke over the course of an interaction. 
         :type callable: `typing.Callable`
-        :param app: Application object
-        :type app: `app.App`
+        :param args: Argumnets object
+        :type args: `schemas.Arguments`
         :param printer: Function to print output.
         :type printer: `typing.Callable`
         :returns: Boolean flag
@@ -126,11 +132,11 @@ class Terminal:
                 continue
 
             elif func in functions:
-                setattr(app.arguments, func, arg)
+                setattr(args, func, arg)
 
-            app.arguments.prompt            = prompt
-            out                             = callable(app)
+            args.prompt                     = prompt
+            out                             = callable()
             
-            printer(app, out)
+            printer(args, out)
 
         return True

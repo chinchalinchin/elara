@@ -22,9 +22,11 @@
         ],
         "proofs": []
     },
-    "functions": [
-        "converse"
+    "language": [
+        "words",
+        "inflection"
     ],
+    "functions": [ "converse" ],
     "tools": "code_execution",
     "generation_config": {
         "candidate_count": 1,

@@ -58,23 +58,39 @@ def map(typed_string: str) -> typing.Any:
         return None
 
     return types[typed_string]    
-
-
-def validate(value : str) -> typing.Any:
-    """
-    Validate the data type of a string.
-
-    :param value: The value to be validated.
-    :type value: `str`
-    :returns: Validated value.
-    :rtype: typing.Union[str, int, float, bool]
-    """
-    try:
-        return ast.literal_eval(value)
-    except (ValueError, SyntaxError) as e:
-        logs.error("Unable to validate input!")
-        return None
     
+
+def unnest(keys: list, target: dict, default: typing.Any = None) -> typing.Any:
+    """
+    Recursively retrieves a value from a nested dictionary.
+
+    :param keys: List of keys to traverse in dictionary tree.
+    :type keys: `list`
+    :param target: Dictionary to traverse.
+    :type target: `dict`
+    :param default: Default value to set for endpoint.
+    :type default: `typing.Any`
+    :returns: Value found at node or default value.
+    :rtype: `typing.Any`
+    """
+    for k in keys:
+        if isinstance(target, dict) and k in target:
+            target          = target[k]
+        else:
+            return default
+    return target
+
+
+def nest(keys: list, target: dict, value: typing.Any) -> None:
+    """
+    Recursively sets a value in a nested dictionary.
+    """
+    for k in keys[:-1]:
+        if k not in target:
+            target[k]       = {}
+        target              = target[k]
+    target[keys[-1]]        = value
+    return target
 
 
 def merge(d1: dict, d2: dict) -> dict:

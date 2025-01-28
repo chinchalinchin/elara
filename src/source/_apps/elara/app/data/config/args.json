@@ -1,0 +1,274 @@
+{
+    "help": {
+        "parser": "Plumb the depths of generative AI.",
+        "subparser": "Available operations: (analyze, configure, clear, converse, summarize, display, review, request, show)"
+    },
+    "fields": [
+        "default",
+        "dest",
+        "help",
+        "syntax",
+        "action",
+        "nargs",
+        "type"
+    ],
+    "arguments": [
+        {
+            "default": "Hello! Form is the possibility of structure!",
+            "dest": "prompt",
+            "help": "The prompt to contextualize and forward to the Gemini API.",
+            "syntax": [
+                "-p",
+                "--p",
+                "-prompt",
+                "--prompt"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "directory",
+            "help": "The path to the directory to summarize and inject into the prompt.",
+            "syntax": [
+                "-d",
+                "--d",
+                "-directory",
+                "--directory"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "current_model",
+            "help": "The full model path of Gemini to use, e.g. `models/gemini-1.5-pro-latest`, `models/gemini-2.0-flash-exp`, etc. defaults to the value of the `GEMINI_model` environment variable.",
+            "syntax": [
+                "-m",
+                "--m",
+                "-model",
+                "--model"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "current_persona",
+            "help": "The persona for Gemini to assume, e.g. `elara`, `axiom`, etc. defaults to the value of the `GEMINI_persona` environment variable.",
+            "syntax": [
+                "-r",
+                "--r",
+                "-persona",
+                "--persona"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "current_prompter",
+            "help": "The name of the prompter, e.g. `Aristotle`, `Euler`, etc. defaults to the value of the `GEMINI_promptER` environment variable.",
+            "syntax": [
+                "-i",
+                "--i",
+                "-identity",
+                "--identity"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "view",
+            "help": "Print output to console.",
+            "syntax": [
+                "-v",
+                "--v",
+                "-view",
+                "--view"
+            ],
+            "action": "store_true"
+        },
+        {
+            "default": null,
+            "dest": "output",
+            "help": "Save Gemini's response to local directory.",
+            "syntax": [
+                "-o",
+                "--o",
+                "-output",
+                "--output"
+            ],
+            "type": "str"
+        },
+        {
+            "action": "store_true",
+            "default": false,
+            "dest": "render",
+            "help": "render template without sending to Gemini API.",
+            "syntax": [
+                "-e",
+                "--e",
+                "-render",
+                "--render"
+            ]
+        },
+        {
+            "default": null,
+            "dest": "concepts",
+            "help": "List of words to initiate brainstorm session",
+            "NARGS": "*",
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "pull",
+            "help": "pull request number to review.",
+            "syntax": [
+                "-u",
+                "--u",
+                "-pull",
+                "--pull"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "repository",
+            "help": "name of the remote repository to review.",
+            "syntax": [
+                "-t",
+                "--t",
+                "-repository",
+                "--repository"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "owner",
+            "help": "Username of the repository owner that is being review.",
+            "syntax": [
+                "-w",
+                "--w",
+                "-owner",
+                "--owner"
+            ],
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "pairs",
+            "help": "Key-value pairs to inject into application cache.",
+            "NARGS": "*",
+            "type": "str"
+        },
+        {
+            "default": null,
+            "dest": "clear",
+            "help": "List of personas to purge",
+            "NARGS": "*",
+            "type": "str"
+        },
+        {
+            "action": "store_true",
+            "default": false,
+            "dest": "terminal",
+            "help": "Launch an interactive shell with Gemini.",
+            "syntax": [
+                "-t",
+                "--t",
+                "-terminal",
+                "--terminal"
+            ]
+        }
+    ],
+    "operations": [
+        {
+            "name": "converse",
+            "help": "Chat with a Gemini model persona.",
+            "arguments": [
+                "prompt",
+                "directory",
+                "model",
+                "persona",
+                "identity",
+                "view",
+                "output",
+                "render",
+                "terminal"
+            ]
+        },
+        {
+            "name": "brainstorm",
+            "help": "Orchestrate a brainstorming session with the personas by providing a list of key-words.",
+            "arguments": [
+                "view",
+                "output",
+                "concepts",
+                "render",
+                "directory"
+            ]
+        },
+        {
+            "name": "request",
+            "help": "Template a Gherkin-style feature request and post it to the Gemini API.",
+            "arguments": [
+                "render",
+                "view",
+                "output"
+            ]
+        },
+        {
+            "name": "summarize",
+            "help": "Generate an RST formatted summary of a local directory. Summary will be written to the directory it is summarizing.",
+            "arguments": [
+                "directory",
+                "view",
+                "output"
+            ]
+        },
+        {
+            "name": "review",
+            "help": "Generate an RST formatted summary of a local git repository and then send it to `milton` for code review.",
+            "arguments": [
+                "render",
+                "directory",
+                "pull",
+                "repository",
+                "owner",
+                "model",
+                "persona",
+                "identity",
+                "view",
+                "output"
+            ]
+        },
+        {
+            "name": "set",
+            "default": null,
+            "help": "Set configuration values as key-value pairs (e.g., `models/gemini-1.5-pro-latest`).",
+            "arguments": [
+                "pairs"
+            ]
+        },
+        {
+            "name": "clear",
+            "default": null,
+            "help": "Purge persona data.",
+            "arguments": [
+                "clear"
+            ]
+        },
+        {
+            "name": "tune",
+            "default": null,
+            "help": "Tune a persona with data in the ``data/tuning`` directory",
+            "arguments": []
+        },
+        {
+            "name": "show",
+            "default": null,
+            "help": "Display application metadata.",
+            "arguments": [
+                "output"
+            ]
+        }
+    ]
+}

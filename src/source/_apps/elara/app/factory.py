@@ -12,13 +12,13 @@ import pathlib
 import typing
 
 # Application Modules
-import util
 import app as apps
+import schemas
+import util
 import objects.cache as cache
-import objects.config as config
+import objects.config as conf
 import objects.conversation as convo
 import objects.directory as directory
-import objects.language as language
 import objects.persona as persona
 import objects.model as model
 import objects.repository as repository
@@ -26,16 +26,96 @@ import objects.template as template
 import objects.terminal as terminal
 
 
+
+class ArgFactory:
+    arguments                       : schemas.Arguments | None = None
+    """Factory's arguments"""
+    argument_config                 : conf.Config | None = None
+    """Application argument configuration"""
+
+
+    def __init__(self, rel_dir : str = "data/config", filename : str = "args.json") -> None:
+        app_dir                     = pathlib.Path(__file__).resolve().parent
+        self.config                 = conf.Config(
+            config_file             = os.path.join(app_dir, rel_dir, filename)
+        )
+
+
+    def with_cli_args(self) -> typing.Self:
+        """
+        Initialize and parse command line arguments. Append the result to the factory's arguments.
+
+        :returns: Updated self.
+        :rtype: typing.Self
+        """
+        parser                  = argparse.ArgumentParser(
+            description         = self.config.get("help.parser")
+        )
+    
+        subparsers              = parser.add_subparsers(
+            dest                = 'operation', 
+            help                = self.config.get("help.subparser")
+        )
+
+        arg_schema              = self.config.get("arguments")
+
+        for op_config in self.config.get("interface.operations"):
+            op_parser           = subparsers.add_parser(
+                name            = op_config["name"],
+                help            = op_config["help"]
+            )
+            for op_arg_key in op_config["arguments"]:
+                # filter arguments by 'name' to retrieve correct schema
+                op_arg_schema   = (arg for arg in arg_schema if op_arg_key == arg["name"])
+                op_arg          = next(op_arg_schema, {})
+                if any(
+                    k not in self.config.get("fields") 
+                    for k in op_arg.keys()
+                ):
+                    continue
+                
+                if "action" in op_arg.keys():
+                    op_parser.add_argument(*op_arg["syntax"],
+                        dest    = op_arg["dest"],
+                        help    = op_arg["help"],
+                        action  = op_arg["action"]
+                    )
+                    continue
+
+                if "nargs" in op_arg.keys():
+                    op_parser.add_argument(
+                        nargs   = op_arg["nargs"],
+                        default = op_arg["default"],
+                        dest    = op_arg["dest"],
+                        help    = op_arg["help"],
+                        type    = util.map(op_arg["type"])
+                    )
+                    continue
+                
+                op_parser.add_argument(*op_arg["syntax"],
+                    default     = op_arg["default"],
+                    dest        = op_arg["dest"],
+                    help        = op_arg["help"],
+                    type        = util.map(op_arg["type"])
+                )
+
+        parsed_args             = vars(parser.parse_args())
+
+        self.arguments          = schemas.Arguments(**parsed_args)
+        return self
+
+
+    def build(self) -> schemas.Arguments:
+        return self.arguments
+
+
 class AppFactory:
-    app                             : apps.App | None = None
+    app                         : apps.App | None = None
     """Factory's application."""
-    app_dir                         : str | None = None
+    app_dir                     : str | None = None
     """Directory containing application."""
-    config_file                     : str | None = None
-    """Full path of the application's configuration file."""
 
-
-    def __init__(self, rel_dir : str = "data", filename : str = "config.json") -> None:
+    def __init__(self, rel_dir : str = "data/config", filename : str = "app.json") -> None:
         """
         Initialization a new application factory object.
 
@@ -44,10 +124,11 @@ class AppFactory:
         :param filename: Name of the application configuration file.
         :type filename: str
         """
-        self.app_dir                = pathlib.Path(__file__).resolve().parent
-        self.config_file            = os.path.join(self.app_dir, rel_dir, filename)
-        self.app                    = apps.App()
-        self.app.config             = config.Config(self.config_file)
+        self.app_dir            = pathlib.Path(__file__).resolve().parent
+        self.app                = apps.App()
+        self.app.config         = conf.Config(
+            config_file         = os.path.join(self.app_dir, rel_dir, filename)
+        )
 
         if not self.app.config.get("GEMINI.KEY"):
             raise ValueError("GEMINI_KEY environment variable not set.")
@@ -63,8 +144,7 @@ class AppFactory:
         :rtype: str
         """
         return os.path.join(self.app_dir, 
-            *[self.app.config.get(p) for p in parts ]
-        )
+            *[self.app.config.get(p) for p in parts ])
     
 
     def with_cache(self) -> typing.Self:
@@ -77,74 +157,9 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application cache...")
 
-        cache_file              = self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CACHE"])
+        cache_file              = self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CACHE" ])
         self.app.cache          = cache.Cache(cache_file)
         return self 
-    
-
-    def with_cli_args(self) -> typing.Self:
-        """
-        Initialize and append `argparse.Namespace` object to the factory's `app.App` object.
-
-        :returns: Updated self.
-        :rtype: typing.Self
-        """
-        if self.app.logger is not None:
-            self.app.logger.debug("Initailizing application command line arguments...")
-
-        parser                  = argparse.ArgumentParser(
-            description         = self.app.config.get("INTERFACE.HELP.PARSER")
-        )
-    
-        subparsers              = parser.add_subparsers(
-            dest                = 'operation', 
-            help                = self.app.config.get("INTERFACE.HELP.SUBPARSER")
-        )
-
-        arg_schema              = self.app.config.get("INTERFACE.ARGUMENTS")
-
-        for op_config in self.app.config.get("INTERFACE.OPERATIONS"):
-            op_parser           = subparsers.add_parser(
-                name            = op_config["NAME"],
-                help            = op_config["HELP"]
-            )
-            for op_arg_key in op_config["ARGUMENTS"]:
-                op_arg          = arg_schema.get(op_arg_key)
-                
-                if any(
-                    k not in self.app.config.get("INTERFACE.FIELDS") 
-                    for k in op_arg.keys()
-                ):
-                    continue
-                
-                if "ACTION" in op_arg.keys():
-                    op_parser.add_argument(*op_arg["SYNTAX"],
-                        dest    = op_arg["DEST"],
-                        help    = op_arg["HELP"],
-                        action  = op_arg["ACTION"]
-                    )
-                    continue
-
-                if "NARGS" in op_arg.keys():
-                    op_parser.add_argument(
-                        nargs   = op_arg["NARGS"],
-                        default = op_arg["DEFAULT"],
-                        dest    = op_arg["DEST"],
-                        help    = op_arg["HELP"],
-                        type    = util.map(op_arg["TYPE"])
-                    )
-                    continue
-                
-                op_parser.add_argument(*op_arg["SYNTAX"],
-                    default     = op_arg["DEFAULT"],
-                    dest        = op_arg["DEST"],
-                    help        = op_arg["HELP"],
-                    type        = util.map(op_arg["TYPE"])
-                )
-
-        self.app.arguments              = parser.parse_args()
-
-        return self
     
 
     def with_conversations(self) -> typing.Self:
@@ -157,7 +172,7 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
 
-        dirs                            = self._path(["TREE.DIRECTORIES.THREADS"])
+        dirs                            = self._path([ "TREE.DIRECTORIES.THREADS" ])
         extension                       = self.app.config.get("TREE.EXTENSIONS.THREADS")
 
         self.app.conversations          = convo.Conversation(
@@ -168,79 +183,60 @@ class AppFactory:
         return self
     
 
-    def with_directory(self)            -> typing.Self:
+    def with_directory(self, arguments: schemas.Arguments) -> typing.Self:
         """
         Initialize and append a `objects.directory.Directory` object to the factory's `app.App` object. 
         
+        :param arguments: Application arguments.
+        :type arguments: `schemas.Arguments`
         :returns: Updated self.
         :rtype: `typing.Self`
         """
-        if self.app.arguments is None:
-            raise ValueError("Arguments must be initialized before Repository!")
-        
-        if "directory" not in vars(self.app.arguments) and self.app.logger:
+        if not arguments.has_dir_args() and self.app.logger:
             self.app.logger.warning("Directory missing from arguments, ignoring initialization.")
             return self 
         
         self.app.directory          = directory.Directory(
-            directory               = self.app.arguments.directory,
+            directory               = arguments.directory,
             summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
             summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE")
         )
         return self 
     
 
-    def with_language(self)             -> typing.Self:
-        """
-        Initialize and append a `objects.conversation.Conversation` object to the factory's `app.App` object. 
-        
-        :returns: Updated self.
-        :rtype: `typing.Self`
-        """
-        self.app.language               = language.Language(
-            directory                   = self._path(["TREE.DIRECTORIES.LANGUAGE"]),
-            extension                   = self.app.config.get("TREE.EXTENSIONS.LANGUAGE"),
-            enabled                     = self.app.config.language_modules()
-        )
-        return self
-    
-
-    def with_logger(self)               -> typing.Self:
+    def with_logger(self) -> typing.Self:
         """
         Initialize and append `logging.Logger` to the factory's `app.App` object. 
         
         :returns: Updated self.
         :rtype: typing.Self
         """
-        log_file                        = self._path([
-            "TREE.DIRECTORIES.LOGS",
-            "TREE.FILES.LOG"
-        ])
+        log_file                    = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ])
 
-        self.app.logger                 = util.logger(
-            file                        = log_file,
-            level                       = self.app.config.get("LOGS.LEVEL"),
-            schema                      = self.app.config.get("LOGS.SCHEMA")
+        self.app.logger             = util.logger(
+            file                    = log_file,
+            level                   = self.app.config.get("LOGS.LEVEL"),
+            schema                  = self.app.config.get("LOGS.SCHEMA")
         )
         return self
     
 
-    def with_model(self)                -> typing.Self: 
+    def with_model(self) -> typing.Self: 
         """
         Initialize and append a `objects.model.Model` object to the factory's `app.App` object. 
         
         :returns: Updated self.
         :rtype: `typing.Self`
         """
-        self.app.model                  = model.Model(
-            api_key                     = self.app.config.get("GEMINI.KEY"),
-            default_model               = self.app.config.get("GEMINI.DEFAULT"),
-            tuning                      = self.app.config.get("GEMINI.TUNING.ENABLED")
+        self.app.model              = model.Model(
+            api_key                 = self.app.config.get("GEMINI.KEY"),
+            default_model           = self.app.config.get("GEMINI.DEFAULT"),
+            tuning                  = self.app.config.get("GEMINI.TUNING.ENABLED")
         ) 
         return self
 
 
-    def with_personas(self)             -> typing.Self:
+    def with_personas(self) -> typing.Self:
         """
         Initialize and append `objects.persona.Persona` to the factory's `app.App` object. 
         
@@ -250,56 +246,51 @@ class AppFactory:
         if self.app.cache is None:
             raise ValueError("Cache must be initialized before Personas!")
 
-        self.app.personas               = persona.Persona(
-            persona                     = self.app.cache.get("current_persona"),
-            persona_config              = self.app.config.get("OBJECTS.PERSONA"),
-            directory                   = self._path(["TREE.DIRECTORIES.PERSONAS"]),
-            extension                   = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
-            context                     = self._path(["TREE.DIRECTORIES.DATA", "TREE.FILES.CONTEXT"])
+        self.app.personas           = persona.Persona(
+            persona                 = self.app.cache.get("current_persona"),
+            persona_config          = self.app.config.get("OBJECTS.PERSONA"),
+            directory               = self._path([ "TREE.DIRECTORIES.PERSONAS" ]),
+            extension               = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
+            context                 = self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CONTEXT" ])
         )
         return self
     
 
-    def with_templates(self)            -> typing.Self:
+    def with_templates(self) -> typing.Self:
         """
         Initialize and append a `objects.template.Template` object to the factory's `app.App` object. 
         
         :returns: Updated self.
         :rtype:`typing.Self`
         """
-        self.app.templates              = template.Template(
-            directory                   = self._path(["TREE.DIRECTORIES.TEMPLATES"]),
-            extension                   = self.app.config.get("TREE.EXTENSIONS.TEMPLATES")
+        self.app.templates          = template.Template(
+            directory               = self._path([ "TREE.DIRECTORIES.TEMPLATES" ]),
+            extension               = self.app.config.get("TREE.EXTENSIONS.TEMPLATES")
         )
         return self
     
 
-    def with_terminal(self)             -> typing.Self:
+    def with_terminal(self) -> typing.Self:
         """
         Initialize and append a `objects.terminal.Terminal` object to the factory's `app.App` object. 
         
         :returns: Updated self.
         :rtype:`typing.Self`
         """
-        self.app.terminal               = terminal.Terminal(
-            terminal_config             = self.app.config.get("OBJECTS.TERMINAL")
+        self.app.terminal           = terminal.Terminal(
+            terminal_config         = self.app.config.get("OBJECTS.TERMINAL")
         )
         return self
 
 
-    def with_repository(self)           -> typing.Self:
+    def with_repository(self, arguments: schemas.Arguments) -> typing.Self:
         """
         Initialize and append a `objects.repo.Repo` object to the factory's `app.App` object. 
         
         :returns: Updated self.
         :rtype: typing.Self
         """
-        if self.app.arguments is None:
-            raise ValueError("Arguments must be initialized before Repository!")
-        
-        arguments                       = vars(self.app.arguments)
-
-        if "repository" in arguments and "owner" in arguments:
+        if arguments.has_vcs_args():
             if self.app.config.get("OBJECTS.REPO.VCS") is None:
                 raise ValueError("VCS backend not set.")
             
@@ -308,14 +299,20 @@ class AppFactory:
                 raise ValueError(
                     "REPO_AUTH_CREDS environment variable not set for github VCS.")
         
-            self.app.repository         = repository.Repo(
-                repository_config       = self.app.config.get("OBJECTS.REPO"),
-                repository              = self.app.arguments.repository,
-                owner                   = self.app.arguments.owner
+            self.app.repository     = repository.Repo(
+                repository_config   = self.app.config.get("OBJECTS.REPO"),
+                repository          = arguments.repository,
+                owner               = arguments.owner
             )
 
         return self
    
     
-    def build(self)                     -> apps.App :
+    def build(self) -> apps.App :
+        """
+        Retrieve factory constructed application.
+
+        :returns: Application.
+        :rtype: `app.App`
+        """
         return self.app

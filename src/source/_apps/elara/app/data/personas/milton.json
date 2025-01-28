@@ -28,6 +28,7 @@
         "poems": [ ],
         "proofs": []
     },
+    "language": [ "inflections" ],
     "functions": [
         "review",
         "request"

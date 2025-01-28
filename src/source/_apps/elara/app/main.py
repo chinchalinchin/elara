@@ -92,21 +92,21 @@ def init(command_line : bool = False) -> app.App:
     :rtype: `app.App`
     """
     application                         = factory.AppFactory()
+    arguments                           = factory.ArgFactory()
 
-    if command_line:
-        application                     = application.with_cli_args()
-
+    arguments                           = arguments.with_cli_args() \
+                                            .build()
+    
     application                         = application \
                                             .with_logger() \
                                             .with_cache() \
-                                            .with_language() \
                                             .with_model() \
                                             .with_personas() \
                                             .with_conversations() \
                                             .with_templates() \
                                             .with_terminal() \
-                                            .with_directory() \
-                                            .with_repository() \
+                                            .with_directory(arguments) \
+                                            .with_repository(arguments) \
                                             .build()
 
     if command_line:

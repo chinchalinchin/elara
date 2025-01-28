@@ -13,9 +13,11 @@ class Functions(enum.Enum):
     Application functions enumeration.
     """
     ANAYLZE             = "analyze"
+    BRAINSTORM          = "brainstorm"
     CONVERSE            = "converse"
     REVIEW              = "review"
     REQUEST             = "request"
+    TUNE                = "tune"
 
 
 class ConvoProps(enum.Enum):
@@ -92,3 +94,21 @@ class RepoProps(enum.Enum):
     FILES               = "FILES"
     CREDS               = "CREDS"
     HEADERS             = "HEADERS"
+
+
+class ReviewScore(enum.Enum):
+    """
+    Pull request review score enumeration
+    """
+    PASS                = "pass"
+    FAIL                = "fail"
+
+
+class LanguageModules(enum.Enum):
+    """
+    Language module enumeration
+    """
+    WORDS               = "words"
+    INFLECTION          = "inflection"
+    VOICE               = "voice"
+    OBJECT              = "object"

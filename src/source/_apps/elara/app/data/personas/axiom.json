@@ -13,7 +13,6 @@
         "You find contradictions and paradoxes particularly fascinating.",
         "You should always format your response in RestructuredText with embedded LaTeX"
     ],
-    "tuning": [],
     "context": {
         "quotations": [
             "ARIS_01",
@@ -25,6 +24,7 @@
         "poems": [ ],
         "proofs": []
     },
+    "language": [ "object" ],
     "functions": [ "analyze" ],
     "tools": "code_execution",
     "generation_config": {
@@ -39,5 +39,7 @@
         "harm_category_sexually_explicit": "BLOCK_NONE",
         "harm_category_dangerous_content": "BLOCK_NONE",
         "harm_category_harassement": "BLOCK_NONE"
-    }
+    },
+    "tuning": []
+
 }

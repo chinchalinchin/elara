@@ -1,0 +1,246 @@
+{
+    "VERSION": "1.0",
+    "FUNCTIONS": {
+        "CONVERSE": {
+            "SCHEMA": {
+                "type": "object",
+                "properties": {
+                    "memory": {
+                        "type": "string"
+                    },
+                    "response": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "response"
+                ]
+            },
+            "MIME": "application/json",
+            "TEMPLATE": "converse"
+        },
+        "BRAINSTORM": {
+            "TEMPLATE": "brainstorm"
+        },
+        "SUMMARIZE": {
+            "DIRECTIVES": {
+                ".py": "python",
+                ".sh": "bash",
+                ".toml": "toml",
+                ".cfg": "toml",
+                ".json": "json",
+                ".html": "html",
+                ".js": "js"
+            },
+            "INCLUDES": {
+                "EXT": [
+                    ".rst",
+                    ".md",
+                    ".ini",
+                    ".txt"
+                ]
+            },
+            "EXCLUDES": {
+                "EXT":  [
+                    ".pyc",
+                    ".zip",
+                    ".gz"
+                ],
+                "FILE": [
+                    "context.json"
+                ],
+                "DIR": []
+            },
+            "TEMPLATE": "summary"
+        },
+        "REVIEW": {
+            "TEMPLATE": "review",
+            "SCHEMA": {
+                "type": "object",
+                "properties": {
+                    "score": {
+                        "type": "string",
+                        "enum": [
+                            "pass",
+                            "fail"
+                        ]
+                    },
+                    "overall": {
+                        "type": "string"
+                    },
+                    "files": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "path": {
+                                    "type": "string"
+                                },
+                                "bugs": {
+                                    "type": "string"
+                                },
+                                "comments": {
+                                    "type": "string"
+                                },
+                                "code": {
+                                    "type": "string"
+                                },
+                                "language": {
+                                    "type": "string",
+                                    "enum": [
+                                        "node",
+                                        "python",
+                                        "java",
+                                        "html",
+                                        "json",
+                                        "yaml",
+                                        "bash",
+                                        "toml",
+                                        "txt",
+                                        "md",
+                                        "rst"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "path",
+                                "comments"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "score",
+                    "overall"
+                ]
+            },
+            "MIME": "application/json"
+        },
+        "REQUEST": {
+            "TEMPLATE": "request"
+        },
+        "ANALYZE": {
+            "TEMPLATE": "analyze",
+            "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+        }
+    },
+    "TREE": {
+        "DIRECTORIES": {
+            "DATA": "data",
+            "LOGS": "logs",
+            "CONFIG": "data/config",
+            "CONTEXT": "data/context",
+            "PERSONAS": "data/personas",
+            "THREADS": "data/threads",
+            "TEMPLATES": "data/templates",
+            "TOOLS": "data/tools"
+        },
+        "FILES": {
+            "CACHE": "cache.json",
+            "LOG": "elara.log"
+        },
+        "EXTENSIONS": {
+            "TEMPLATES": ".rst",
+            "LANGUAGE": ".rst",
+            "PERSONAS": ".json",
+            "THREADS": ".json"
+        }
+    },
+    "OBJECTS": {
+        "CONVERSATION": {
+            "TIMEZONE_OFFSET": -5,
+            "SCHEMA_FILENAME": "_new"
+        },
+        "LANGUAGE": {
+            "MODULES": {
+                "OBJECT": false,
+                "INFLECTION": true,
+                "VOICE": false,
+                "WORDS": false
+            }
+        },
+        "PERSONA":{
+            "SCHEMA_FILENAME": "_new"
+        },
+        "REPO": {
+            "VCS": "github",
+            "AUTH": {
+                "TYPE": "bearer",
+                "CREDS": null
+            },
+            "BACKENDS": {
+                "GITHUB": {
+                    "HEADERS": {
+                        "X-GitHub-Api-Version": "2022-11-28",
+                        "Accept": "application/vnd.github+json"
+                    },
+                    "API": {
+                        "PR": {
+                            "COMMENTS": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                            "PULLS": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments",
+                            "FILES": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/files"
+                        }
+                    }
+                }
+            }
+        },
+        "TERMINAL": {
+            "GHERKIN": {
+                "HELP": "Please describe the feature request with Gherkin test language.",
+                "BLOCKS": {
+                    "FEATURE": "FEATURE\n\tEnter feature name: ",
+                    "SCENARIO": "SCENARIO\n\tDescribe the specific scenario in the feature: ",
+                    "LANGUAGE": "LANGUAGE\n\tSpecify the desired programming language: ",
+                    "GIVEN": "GIVEN\n\tFix the context of the scenario: ",
+                    "WHEN": "WHEN\n\tDescribe the action which triggers the scenario: ",
+                    "THEN": "THEN\n\tState the expected outcome of the scenario: "
+                }
+            },
+            "CONVERSE": {
+                "DISPLAY": {
+                    "PROMPT": "\tPrompt: ",
+                    "INIT": "Starting an interactive terminal...",
+                    "TITLE": "\n---------------\n  ELARA SHELL  \n---------------\n",
+                    "START": "\n\tType exit() to quit.\n\tType help() to see list of commands.\n\n",
+                    "HELP": "TODO"
+                },
+                "COMMANDS": {
+                    "EXIT": "exit()",
+                    "HELP": "help()"
+                },
+                "FUNCTIONS": [
+                    "current_persona",
+                    "current_prompter",
+                    "current_model",
+                    "directory"
+                ]
+            }
+        }
+    },
+    "GEMINI": {
+        "KEY": null,
+        "DEFAULT": "models/gemini-2.0-flash-exp",
+        "TUNING": {
+            "SOURCE": "models/gemini-1.5-flash-001-tuning"
+        }
+    },
+    "LOGS": {
+        "LEVEL": "INFO",
+        "SCHEMA": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "OVERRIDES": {
+        "GEMINI.TUNING.SOURCE": "GEMINI_TUNING_SOURCE",
+        "GEMINI.KEY": "GEMINI_KEY",
+        "GEMINI.DEFAULT": "GEMINI_DEFAULT",
+        "OBJECTS.LANGUAGE.MODULES.OBJECT": "OBJECTS_LANGUAGE_MODULES_OBJECT",
+        "OBJECTS.LANGUAGE.MODULES.INFLECTION": "OBJECTS_LANGUAGE_MODULES_INFLECTION",
+        "OBJECTS.LANGUAGE.MODULES.VOICE": "OBJECTS_LANGUAGE_MODULES_VOICE",
+        "OBJECTS.LANGUAGE.MODULES.WORDS": "OBJECTS_LANGUAGE_MODULES_WORDS",
+        "OBJECTS.REPO.VCS": "OBJECTS_REPO_VCS",
+        "OBJECTS.REPO.AUTH.CREDS": "OBJECTS_REPO_AUTH_CREDS",
+        "FUNCTIONS.CONVERSE.TIMEZONE_OFFSET": "FUNCTIONS_CONVERSE_TIMEZONE_OFFSET",
+        "FUNCTIONS.ANALYZE.LATEX_PREAMBLE": "FUNCTIONS_ANALYZE_LATEX_PREAMBLE",
+        "VERSION": "VERSION",
+        "LOGS.LEVEL": "LOGS_LEVEL"
+    }
+}

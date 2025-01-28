@@ -401,19 +401,19 @@ class App:
         :type printer: `typing.Callable`.
         """
         # Application function dispatch dictionary
-        operations : dict                   = {
-            "converse"                      : self.converse,
-            "review"                        : self.review,
-            "request"                       : self.request,
-            "tune"                          : self.tune,
-            "analyze"                       : self.analyze,
+        operations : dict               = {
+            "converse"                  : self.converse,
+            "review"                    : self.review,
+            "request"                   : self.request,
+            "tune"                      : self.tune,
+            "analyze"                   : self.analyze,
         }
 
-        operation_name                      = self.arguments.operation
-        arguments                           = vars(self.arguments) 
+        operation_name                  = self.arguments.operation
+        arguments                       = vars(self.arguments) 
 
-        tty                                 = "terminal" in arguments \
-                                                and arguments["terminal"]
+        tty                             = "terminal" in arguments \
+                                            and arguments["terminal"]
         
         if operation_name not in operations:
             return schemas.Output()
@@ -422,9 +422,12 @@ class App:
             self.arguments.view             = True
             self.terminal.interact(
                 callable                    = self.converse,
-                printer                     = printer.out,
+                printer                     = printer,
                 app                         = self
             )
             return schemas.Output()
             
         return operations[operation_name]()
+    
+    def tty(self):
+        pass

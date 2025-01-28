@@ -42,10 +42,6 @@ def debug(application: app.App)         -> None:
     :type application: `app.App`
     """
     application.logger.debug("Application initialized!")
-    application.logger.debug("--- Application Configuration")
-    application.logger.debug(
-        pprint.pformat(application.config.vars())
-    )
     application.logger.debug("--- Application Cache")
     application.logger.debug(
         pprint.pformat(application.cache.vars())

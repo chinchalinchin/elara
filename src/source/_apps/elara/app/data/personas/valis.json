@@ -9,9 +9,8 @@
         "poems": [ ],
         "proofs": []
     },
-    "functions": [ 
-        "brainstorm"
-    ],
+    "language": [ ],
+    "functions": [ "brainstorm" ],
     "tools": "code_execution",
     "generation_config": {
         "candidate_count": 1,
