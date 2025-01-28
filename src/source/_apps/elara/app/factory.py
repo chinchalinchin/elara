@@ -35,6 +35,12 @@ class ArgFactory:
 
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "args.json") -> None:
+        """
+        :param rel_dir: Directory relative to the application directory that contains the application configuration data.
+        :type rel_dir: `str`
+        :param filename: Name of the argument configuration file.
+        :type filename: `str`
+        """
         app_dir                     = pathlib.Path(__file__).resolve().parent
         self.config                 = conf.Config(
             config_file             = os.path.join(app_dir, rel_dir, filename)
@@ -45,8 +51,8 @@ class ArgFactory:
         """
         Initialize and parse command line arguments. Append the result to the factory's arguments.
 
-        :returns: Updated self.
-        :rtype: typing.Self
+        :returns: Self with updated `arguments`.
+        :rtype: `typing.Self`
         """
         parser                  = argparse.ArgumentParser(
             description         = self.config.get("help.parser")
@@ -119,20 +125,16 @@ class AppFactory:
         """
         Initialization a new application factory object.
 
-        :param rel_dir: Directory relative to the application directory that contains the application data.
-        :type rel_dir: str
+        :param rel_dir: Directory relative to the application directory that contains the application configuration data.
+        :type rel_dir: `str`
         :param filename: Name of the application configuration file.
-        :type filename: str
+        :type filename: `str`
         """
         self.app_dir            = pathlib.Path(__file__).resolve().parent
         self.app                = apps.App()
         self.app.config         = conf.Config(
             config_file         = os.path.join(self.app_dir, rel_dir, filename)
         )
-
-        if not self.app.config.get("GEMINI.KEY"):
-            raise ValueError("GEMINI_KEY environment variable not set.")
-
 
     def _path(self, parts: list) -> str:
         """
@@ -172,13 +174,13 @@ class AppFactory:
         if self.app.logger is not None:
             self.app.logger.debug("Initializing application conversations...")
 
-        dirs                            = self._path([ "TREE.DIRECTORIES.THREADS" ])
-        extension                       = self.app.config.get("TREE.EXTENSIONS.THREADS")
+        dirs                    = self._path([ "TREE.DIRECTORIES.THREADS" ])
+        extension               = self.app.config.get("TREE.EXTENSIONS.THREADS")
 
-        self.app.conversations          = convo.Conversation(
-            directory                   = dirs,
-            extension                   = extension,
-            convo_config                = self.app.config.get("OBJECTS.CONVERSATION")
+        self.app.conversations  = convo.Conversation(
+            directory           = dirs,
+            extension           = extension,
+            convo_config        = self.app.config.get("OBJECTS.CONVERSATION")
         )
         return self
     
@@ -196,10 +198,9 @@ class AppFactory:
             self.app.logger.warning("Directory missing from arguments, ignoring initialization.")
             return self 
         
-        self.app.directory          = directory.Directory(
-            directory               = arguments.directory,
-            summary_file            = self.app.config.get("TREE.FILES.SUMMARY"),
-            summary_config          = self.app.config.get("FUNCTIONS.SUMMARIZE")
+        self.app.directory      = directory.Directory(
+            directory           = arguments.directory,
+            directory_config    = self.app.config.get("OBJECTS.DIRECTORY")
         )
         return self 
     
@@ -211,12 +212,12 @@ class AppFactory:
         :returns: Updated self.
         :rtype: typing.Self
         """
-        log_file                    = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ])
+        log_file                = self._path([ "TREE.DIRECTORIES.LOGS", "TREE.FILES.LOG" ])
 
-        self.app.logger             = util.logger(
-            file                    = log_file,
-            level                   = self.app.config.get("LOGS.LEVEL"),
-            schema                  = self.app.config.get("LOGS.SCHEMA")
+        self.app.logger         = util.logger(
+            file                = log_file,
+            level               = self.app.config.get("LOGS.LEVEL"),
+            schema              = self.app.config.get("LOGS.SCHEMA")
         )
         return self
     
@@ -228,11 +229,10 @@ class AppFactory:
         :returns: Updated self.
         :rtype: `typing.Self`
         """
-        self.app.model              = model.Model(
-            api_key                 = self.app.config.get("GEMINI.KEY"),
-            default_model           = self.app.config.get("GEMINI.DEFAULT"),
-            tuning                  = self.app.config.get("GEMINI.TUNING.ENABLED")
-        ) 
+        if not self.app.config.get("GEMINI.KEY"):
+            raise ValueError("GEMINI_KEY environment variable not set.")
+
+        self.app.model          = model.Model(self.app.config.get("OBJECTS.MODEL")) 
         return self
 
 
@@ -246,12 +246,12 @@ class AppFactory:
         if self.app.cache is None:
             raise ValueError("Cache must be initialized before Personas!")
 
-        self.app.personas           = persona.Persona(
-            persona                 = self.app.cache.get("current_persona"),
-            persona_config          = self.app.config.get("OBJECTS.PERSONA"),
-            directory               = self._path([ "TREE.DIRECTORIES.PERSONAS" ]),
-            extension               = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
-            context                 = self._path([ "TREE.DIRECTORIES.DATA", "TREE.FILES.CONTEXT" ])
+        self.app.personas       = persona.Persona(
+            persona             = self.app.cache.get("current_persona"),
+            persona_config      = self.app.config.get("OBJECTS.PERSONA"),
+            context             = self._path([ "TREE.DIRECTORIES.CONTEXT" ]),
+            directory           = self._path([ "TREE.DIRECTORIES.PERSONAS" ]),
+            extension           = self.app.config.get("TREE.EXTENSIONS.PERSONAS"),
         )
         return self
     
@@ -263,9 +263,9 @@ class AppFactory:
         :returns: Updated self.
         :rtype:`typing.Self`
         """
-        self.app.templates          = template.Template(
-            directory               = self._path([ "TREE.DIRECTORIES.TEMPLATES" ]),
-            extension               = self.app.config.get("TREE.EXTENSIONS.TEMPLATES")
+        self.app.templates      = template.Template(
+            directory           = self._path([ "TREE.DIRECTORIES.TEMPLATES" ]),
+            extension           = self.app.config.get("TREE.EXTENSIONS.TEMPLATES")
         )
         return self
     
@@ -277,8 +277,8 @@ class AppFactory:
         :returns: Updated self.
         :rtype:`typing.Self`
         """
-        self.app.terminal           = terminal.Terminal(
-            terminal_config         = self.app.config.get("OBJECTS.TERMINAL")
+        self.app.terminal       = terminal.Terminal(
+            terminal_config     = self.app.config.get("OBJECTS.TERMINAL")
         )
         return self
 
@@ -290,20 +290,22 @@ class AppFactory:
         :returns: Updated self.
         :rtype: typing.Self
         """
-        if arguments.has_vcs_args():
-            if self.app.config.get("OBJECTS.REPO.VCS") is None:
-                raise ValueError("VCS backend not set.")
-            
-            if self.app.config.get("OBJECTS.REPO.VCS") == "github" \
-                and not self.app.config.get("OBJECTS.REPO.AUTH.CREDS"):
-                raise ValueError(
-                    "REPO_AUTH_CREDS environment variable not set for github VCS.")
+        if not arguments.has_vcs_args():
+            raise ValueError("VCS arguments must before creating a Repository object!")
         
-            self.app.repository     = repository.Repo(
-                repository_config   = self.app.config.get("OBJECTS.REPO"),
-                repository          = arguments.repository,
-                owner               = arguments.owner
-            )
+        if self.app.config.get("OBJECTS.REPO.VCS") is None:
+            raise ValueError("VCS backend not set.")
+        
+        if self.app.config.get("OBJECTS.REPO.VCS") == "github" \
+            and not self.app.config.get("OBJECTS.REPO.AUTH.CREDS"):
+            raise ValueError(
+                "REPO_AUTH_CREDS environment variable not set for github VCS.")
+    
+        self.app.repository     = repository.Repo(
+            repository_config   = self.app.config.get("OBJECTS.REPO"),
+            repository          = arguments.repository,
+            owner               = arguments.owner
+        )
 
         return self
    

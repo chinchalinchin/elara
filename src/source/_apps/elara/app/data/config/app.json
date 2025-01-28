@@ -1,6 +1,12 @@
 {
-    "VERSION": "1.0",
     "FUNCTIONS": {
+        "ANALYZE": {
+            "TEMPLATE": "analyze",
+            "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+        },
+        "BRAINSTORM": {
+            "TEMPLATE": "brainstorm"
+        },
         "CONVERSE": {
             "SCHEMA": {
                 "type": "object",
@@ -18,40 +24,6 @@
             },
             "MIME": "application/json",
             "TEMPLATE": "converse"
-        },
-        "BRAINSTORM": {
-            "TEMPLATE": "brainstorm"
-        },
-        "SUMMARIZE": {
-            "DIRECTIVES": {
-                ".py": "python",
-                ".sh": "bash",
-                ".toml": "toml",
-                ".cfg": "toml",
-                ".json": "json",
-                ".html": "html",
-                ".js": "js"
-            },
-            "INCLUDES": {
-                "EXT": [
-                    ".rst",
-                    ".md",
-                    ".ini",
-                    ".txt"
-                ]
-            },
-            "EXCLUDES": {
-                "EXT":  [
-                    ".pyc",
-                    ".zip",
-                    ".gz"
-                ],
-                "FILE": [
-                    "context.json"
-                ],
-                "DIR": []
-            },
-            "TEMPLATE": "summary"
         },
         "REVIEW": {
             "TEMPLATE": "review",
@@ -118,10 +90,6 @@
         },
         "REQUEST": {
             "TEMPLATE": "request"
-        },
-        "ANALYZE": {
-            "TEMPLATE": "analyze",
-            "LATEX_PREAMBLE": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
         }
     },
     "TREE": {
@@ -151,12 +119,37 @@
             "TIMEZONE_OFFSET": -5,
             "SCHEMA_FILENAME": "_new"
         },
-        "LANGUAGE": {
-            "MODULES": {
-                "OBJECT": false,
-                "INFLECTION": true,
-                "VOICE": false,
-                "WORDS": false
+        "DIRECTORY": {
+            "SUMMARIZE": {
+                "DIRECTIVES": {
+                    ".py": "python",
+                    ".sh": "bash",
+                    ".toml": "toml",
+                    ".cfg": "toml",
+                    ".json": "json",
+                    ".html": "html",
+                    ".js": "js"
+                },
+                "INCLUDES": {
+                    "EXT": [
+                        ".rst",
+                        ".md",
+                        ".ini",
+                        ".txt"
+                    ]
+                },
+                "EXCLUDES": {
+                    "EXT":  [
+                        ".pyc",
+                        ".zip",
+                        ".gz"
+                    ],
+                    "FILE": [
+                        "context.json"
+                    ],
+                    "DIR": []
+                },
+                "TEMPLATE": "summary"
             }
         },
         "PERSONA":{
@@ -215,13 +208,15 @@
                     "directory"
                 ]
             }
-        }
-    },
-    "GEMINI": {
-        "KEY": null,
-        "DEFAULT": "models/gemini-2.0-flash-exp",
-        "TUNING": {
-            "SOURCE": "models/gemini-1.5-flash-001-tuning"
+        },
+        "MODEL": {
+            "GEMINI": {
+                "KEY": null,
+                "DEFAULT": "models/gemini-2.0-flash-exp",
+                "TUNING": {
+                    "SOURCE": "models/gemini-1.5-flash-001-tuning"
+                }
+            }
         }
     },
     "LOGS": {
