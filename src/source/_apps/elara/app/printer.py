@@ -6,7 +6,6 @@ Functions for displaying and saving application out.
 """
 
 # Standard Library Modules
-import argparse
 import pprint
 
 # Application Modules
@@ -14,27 +13,7 @@ import app
 import schemas
 
 
-def _output(args: argparse.Namespace)   -> bool:
-    """
-    Determine if ``output`` has been passed into the application arguments.
-
-    :params args: Application arguments
-    :type args: `argparse.Namespace`
-    """
-    return "output" in vars(args).keys() and args.output
-
-
-def _view(args: argparse.Namespace)     -> bool:
-    """
-    Determine if ``view`` has been passed into the application arguments.
-
-    :param application: Application
-    :type application: `app.App`
-    """
-    return "view" in vars(args).keys() and args.view
-
-
-def debug(application: app.App)         -> None:
+def debug(application: app.App, arguments: schemas.Arguments) -> None:
     """
     Log application debug metadata.
 
@@ -48,11 +27,11 @@ def debug(application: app.App)         -> None:
     )
     application.logger.debug("--- Application Arguments")
     application.logger.debug(
-        pprint.pformat(application.arguments)
+        pprint.pformat(arguments.to_dict())
     )
 
 
-def out(application: app.App, output: schemas.Output) -> None:
+def out(arguments: schemas.Arguments, output: schemas.Output) -> None:
     """
     Write output to appropriate location. Output should follow the format,
 
@@ -62,14 +41,14 @@ s
     :param output: application output to be written.
     :type output: `schemas.Output`
     """
-    payload                             = application.templates.render(
-        temp                            = "output", 
-        variables                       = output.to_dict()
+    payload             = application.templates.render(
+        temp            = "output", 
+        variables       = output.to_dict()
     )
 
-    if _output(application.arguments):
-        with open(application.arguments.output, "w") as outfile:
+    if arguments.output:
+        with open(arguments.output, "w") as outfile:
             outfile.write(payload)
 
-    if _view(application.arguments):
+    if arguments.view:
         print(payload)

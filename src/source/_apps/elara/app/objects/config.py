@@ -112,7 +112,6 @@ class Config:
         :type delimiter: `str`
         """
         if self._prop_over not in self.data.keys():
-            logger.warning("No environment overrides available.")
             return 
         
         env_overrides           = self.data[self._prop_over]

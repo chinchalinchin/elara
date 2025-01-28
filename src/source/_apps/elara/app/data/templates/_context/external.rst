@@ -8,7 +8,7 @@ This section of your :ref:`context` is modified by {{ current_prompter }} as the
 
 Keep in mind, the context that appears in this section is dynamically configured; In other words, the content of this section will change over the course of your conversation. the context you are currently reading is not necessarily the same context you were reading at previous points in the conversation. 
 
-{% if context.quotations|length > 0  %}
+{% if context.quotes|length > 0  %}
 .. _quotations:
 
 Quotations 

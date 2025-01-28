@@ -365,8 +365,9 @@ class AppFactory:
         :rtype: `typing.Self`
         """
         if not arguments.has_vcs_args():
-            raise ValueError("VCS arguments must before creating a Repository object!")
-        
+            self.app.logger.warning("No repository arguments provided, skipping initialization")
+            return self 
+                
         if self.app.config.get(self._prop_vcs) is None:
             raise exceptions.VCSBackendError("VCS backend not set.")
         

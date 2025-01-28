@@ -3,7 +3,6 @@
 {% for key, value in language.items() %}
   {% if value %}
     {% set any_true = true %}
-    {% break %}
   {% endif %}
 {% endfor %}
 {% if any_true %}

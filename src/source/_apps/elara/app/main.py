@@ -76,6 +76,7 @@ def init() -> typing.Tuple[app.App, schemas.Arguments]:
     application             =  factories.AppFactory()\
                                 .with_logger() \
                                 .with_cache() \
+                                .with_context() \
                                 .with_model() \
                                 .with_personas() \
                                 .with_conversations() \
@@ -85,10 +86,10 @@ def init() -> typing.Tuple[app.App, schemas.Arguments]:
                                 .with_repository(arguments) \
                                 .build()
 
-    application.logger.debug("Writing command line arguments to cache.")
+    application.logger.info("Writing command line arguments to cache.")
     application.cache.update(**arguments.to_dict())
          
-    printer.debug(application)
+    printer.debug(application, arguments)
     
     return application, arguments 
 

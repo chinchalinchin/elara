@@ -34,9 +34,11 @@ class Model:
     _prop_vers                  = constants.ModelProps.VERSION.value
     _prop_path                  = constants.ModelProps.PATH.value
     ## GEMINI PROPERTIES
+    _prop_gem                   = constants.ModelProps.GEMINI.value
     _prop_auth                  = constants.ModelProps.API_KEY.value
     _prop_dflt                  = constants.ModelProps.DEFAULT.value
-    _prop_tune                  = constants.ModelProps.TUNING_SOURCE.value
+    _prop_tune                  = constants.ModelProps.TUNING.value
+    _prop_src                   = constants.ModelProps.SOURCE.value
 
 
     def __init__(self, model_config : dict) -> None:
@@ -48,10 +50,11 @@ class Model:
         """
         self.model_config       = model_config
 
-        if not self.model_config.get(self._prop_auth):
+        if not self.model_config[self._prop_gem].get(self._prop_auth):
             raise excepts.GeminiAPIKeyError("Gemini API Key not set!")
 
-        genai.configure(self.model_config[self._prop_auth])
+        genai.configure(
+            api_key = self.model_config[self._prop_gem][self._prop_auth])
 
         try:
             self.models         = [m for m in genai.list_models()]
@@ -104,8 +107,8 @@ class Model:
         """
         if model_name is None:
             logger.warning(f"{model_name} is not defined, using default model.")
-            return genai.GenerativeModel(model_name = self.default_model,
-                                            system_instruction  = system_instruction)
+            return genai.GenerativeModel(model_name = self.model_config[self._prop_gem][self._prop_dflt],
+                                            system_instruction  = system_instruction,)
 
         base_paths              =  [ m["path"] for m in self.base_models()]
 
@@ -279,7 +282,7 @@ class Model:
                 )
             else:
                 res = self._get(
-                    model_name          = self.default_model,
+                    model_name          = self.model_config[self._prop_gem][self._prop_dflt],
                     system_instruction  = system_instruction
                 ).generate_content(
                     contents            = prompt,

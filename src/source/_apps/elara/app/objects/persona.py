@@ -57,6 +57,7 @@ class Persona:
         :param context: Location of context file
         :type context: str
         """
+        print(persona_config)
         self.current                = persona
         self.directory              = directory
         self.extension              = extension
@@ -150,13 +151,13 @@ class Persona:
         if persona is None or self.personas.get(persona):
             return {
                 k: v for k,v in 
-                self.personas.get(self.current)
+                self.personas.get(self.current).items()
                 if k != self._prop_cont
             }
         
         return {
             k: v for k,v in 
-            self.personas.get(persona)
+            self.personas.get(persona).items()
             if k != self._prop_cont
         }
     

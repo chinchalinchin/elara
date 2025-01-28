@@ -158,10 +158,10 @@ class App:
                 "includes"          : self.directory.summary()
             })
         parsed_prompt               = self.templates.render(
-            temp                    = self.config.get(constants.Functions.CONVERSE.value), 
+            temp                    = constants.Functions.CONVERSE.value, 
             variables               = template_vars
         )
-        if self.arguments.render:
+        if arguments.render:
             return schemas.Output(
                 prompt              = parsed_prompt
             )
@@ -261,7 +261,7 @@ class App:
             temp                    = constants.Functions.REVIEW.value, 
             variables               = review_variables
         )
-        # STEP 4. Halt function if executing with dry-run ``self.arguments.render`` flag.
+        # STEP 4. Halt function if executing with dry-run ``arguments.render`` flag.
         ## NOTE: This corresponds to the CLI argument ``--render``.
         if arguments.render:
             return schemas.Output(
@@ -345,8 +345,8 @@ class App:
                     tuning_data     = self.personas.get(constants.PersonaProps.TUNING.value, p)
                 )
                 tuned_models.append({
-                    constants.ModelProps.NAME.value: p,
-                    constants.ModelProps.PATH: res.name
+                    constants.ModelProps.NAME.value : p,
+                    constants.ModelProps.PATH       : res.name
                 })
 
         if tuned_models:
@@ -375,7 +375,7 @@ class App:
             self.logger(f"Invalid operation: {operation_name}")
             return schemas.Output()
 
-        return self.dispatch[operation_name]()
+        return self.dispatch[operation_name](arguments)
     
 
     def tty(self, arguments: schemas.Arguments, printer: typing.Callable) -> schemas.Output:
@@ -396,7 +396,7 @@ class App:
         if arguments.has_tty_args() and operation_name == "converse": 
             arguments.view              = True
             self.terminal.interact(
-                callable                = self.converse,
+                callable                = lambda: self.converse(arguments),
                 printer                 = printer,
                 app                     = self
             )

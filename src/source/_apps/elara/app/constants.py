@@ -41,7 +41,7 @@ class FactoryProps(enum.Enum):
     EXT_PERSONA         = "tree.extensions.personas"
     OBJECT_CONVO        = "objects.conversation"
     OBJECT_DIR          = "objects.directory"
-    OBJECT_PERSONA      = "objects.person"
+    OBJECT_PERSONA      = "objects.persona"
     OBJECT_MODEL        = "objects.model"
     OBJECT_TERMINAL     = "objects.terminal"
     OBJECTS_REPOSITORY  = "objects.repository"
@@ -90,7 +90,7 @@ class ConvoProps(enum.Enum):
     NAME                = "name"
     # Configuration Properties
     SCHEMA_FILENAME     = "schema_filename"
-
+    TIMEZONE_OFFSET     = "timezone_offset"
 
 class ConfigProps(enum.Enum):
     """
@@ -137,9 +137,11 @@ class ModelProps(enum.Enum):
     OUTPUT_LIMIT        = "output_token_limit"
     # Configuration Properties
     ## Gemini Properties
-    API_KEY             = "gemini.key"
-    DEFAULT             = "gemini.default"
-    TUNING_SOURCE       = "gemini.tuning.source"
+    GEMINI              = "gemini"
+    API_KEY             = "key"
+    DEFAULT             = "default"
+    TUNING              = "tuning"
+    SOURCE              = "source"
 
 class CacheProps(enum.Enum):
     """

@@ -34,6 +34,14 @@ These functional templates are built out of modular templates. Modular templates
 
 - _interfaces/cli
 
+**Language TEmplates**
+    These templates give Gemini additional grammatical and linguistic forms for its language processing.
+
+- _language/voice.rst
+- _language/words.rst
+- _language/object.rst
+- _language/inflection.rst
+
 **Report Templates**
     These templates are used to render application reports
 
@@ -67,24 +75,21 @@ import logging
 import jinja2
 
 
-logger                                  = logging.getLogger(__name__)
+logger                      = logging.getLogger(__name__)
 
 
 class Template:
     """
     Class for managing application templates. 
     """
-    templates                           = None
+    templates               = None
     """Application templates"""
-    directory                           = None
+    directory               = None
     """Directory containing templates"""
-    extension                           = None
+    extension               = None
     """File extension of templates"""
 
-    def __init__(self, 
-        directory                       : str,
-        extension                       : str
-    )                                   -> None:
+    def __init__(self,  directory: str, extension: str) -> None:
         """"
         Initialize a Template object.
 
@@ -93,17 +98,14 @@ class Template:
         :param extension: Extension of template files. Defaults to ``.rst``.
         :type extension: str
         """
-        self.directory                  = directory
-        self.extension                  = extension
-        self.templates                  = jinja2.Environment(
-            loader                      = jinja2.FileSystemLoader(self.directory)
+        self.directory      = directory
+        self.extension      = extension
+        self.templates      = jinja2.Environment(
+            loader          = jinja2.FileSystemLoader(self.directory)
         )
 
 
-    def get(self, 
-        template                        : str,
-        ext                             : str | None = None
-    )                                   -> jinja2.Template:
+    def get(self, template: str, ext: str | None = None) -> jinja2.Template:
         """
         Retrieve a template. 
 
@@ -114,16 +116,12 @@ class Template:
         :returns: A template
         :rtype: `jinja2.Template`
         """
-        extension                       = self.extension if ext is None else ext
-        file_name                       = "".join([template, extension])
+        extension           = self.extension if ext is None else ext
+        file_name           = "".join([template, extension])
         return self.templates.get_template(file_name)
 
 
-    def render(self, 
-        temp                            : str, 
-        variables                       : dict,
-        ext                             : str | None = None
-    )                                   -> str:
+    def render(self, temp: str, variables: dict, ext: str | None = None) -> str:
         """
         Render a template. 
 
