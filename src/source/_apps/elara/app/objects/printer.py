@@ -37,7 +37,7 @@ class Printer:
         )
 
 
-    def debug(self, application: app.App, arguments: schemas.Arguments, temp = "debug.rst") -> None:
+    def debug(self, arguments: schemas.Arguments, temp = "debug.rst") -> None:
         """
         Log application debug metadata.
 
@@ -47,8 +47,9 @@ class Printer:
         :type arguments: `schemas.Arguments`
         """
         payload             = self.templates.get_template(temp).render(
-            temp            = temp,
-            variables       = "todo"
+            variables       = {
+                "test"      : "todo"
+            }
         )
         # application.logger.debug("Application initialized!")
         # application.logger.debug("--- Application Cache")
@@ -68,7 +69,7 @@ class Printer:
         """
         Write output to appropriate location. Output should follow the format,
 
-    s
+    
         :param application: Application
         :type application: `app.App`
         :param output: application output to be written.

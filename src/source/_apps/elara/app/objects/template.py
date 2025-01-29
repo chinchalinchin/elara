@@ -153,7 +153,5 @@ class Template:
         :returns: A templated string.
         :rtype: `str`
         """
-        extension           = self.extension if ext is None else ext
-        file_name           = "".join([template, extension])
-        temp                = "_functions/{file_name}".format(file_name=file_name)
+        temp                = "_functions/{template}".format(template=template)
         return self.render(temp, variables, ext)

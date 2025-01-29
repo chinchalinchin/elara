@@ -53,14 +53,25 @@ class App:
 
 
     # Internal Properties
-    dispatch                        = {}
+    _dispatch                       = {}
 
-
+    # Application Properties
+    _prop_analyze_schema            = constants.AppProps.ANALYZE_SCHEMA.value
+    _prop_analyze_mime              = constants.AppProps.ANALYZE_MIME.value
+    _prop_brainstorm_schema         = constants.AppProps.BRAINSTORM_SCHEMA.value
+    _prop_brainstorm_mime           = constants.AppProps.BRAINSTORM_MIME_TYPE.value
+    _prop_converse_schema           = constants.AppProps.CONVERSE_SCHEMA.value
+    _prop_converse_mime             = constants.AppProps.CONVERSE_MIME_TYPE.value
+    _prop_review_schema             = constants.AppProps.REVIEW_SCHEMA.value
+    _prop_review_mime               = constants.AppProps.REVIEW_MIME_TYPE.value
+    _prop_request_schema            = constants.AppProps.REQUEST_SCHEMA.value
+    _prop_request_mime              = constants.AppProps.REQUEST_MIME.value
+     
     def __init__(self):
         """
         Initialize a new application object.
         """
-        self.dispatch               = {
+        self._dispatch              = {
             "converse"              : self.converse,
             "review"                : self.review,
             "request"               : self.request,
@@ -156,7 +167,7 @@ class App:
         if arguments.directory is not None:
             self.logger.info("Injecting file summary into prompt...")
             template_vars.update({
-                "includes"          : self.directory.summary()
+                "reports"          : self.directory.summary()
             })
         parsed_prompt               = self.templates.function(
             template                = constants.Functions.CONVERSE.value, 
@@ -245,14 +256,14 @@ class App:
         ## NOTE: Ensure function persona is set and hold in buffer to prevent cache overwrite
         buffer[constants.CacheProps.CURRENT_PERSONA.value] \
                                     = persona 
-        includes                    = { 
-            "includes"              : self.directory.summary() 
+        reports                     = { 
+            "reports"              : self.directory.summary() 
         }
         context                     = self.context.vars(
                                         self.personas.context(persona))
         # STEP 2. Merge function template variables
         review_variables            = { 
-            **includes,
+            **reports,
             **buffer,
             **context,
             **self.repository.vars(),
@@ -294,7 +305,7 @@ class App:
                 msg                 = msg,
                 pr                  = arguments.pull,
             )
-            includes                = [ source_res ] 
+            reports                = [ source_res ] 
         # STEP 8. Render file specific pull request assessments and post to VCS backend.
         if response and response.get("files"):
             bodies                  = []
@@ -312,8 +323,8 @@ class App:
                 pr                  = arguments.pull,
                 bodies              = bodies
             )
-            includes                = {
-                "repository"        : includes + source_res
+            reports                 = {
+                "repository"        : reports + source_res
             }
         # STEP 9: Prepare model response for output templating
         review_response             = { constants.Functions.REVIEW.value: response}
@@ -321,7 +332,7 @@ class App:
         return schemas.Output(
             prompt                  = review_prompt,
             response                = review_response,
-            includes                = includes 
+            reportss                = reports 
         )
 
 
@@ -372,11 +383,11 @@ class App:
         # Application function dispatch dictionary
         operation_name                  = arguments.operation
 
-        if operation_name not in self.dispatch.keys():
+        if operation_name not in self._dispatch.keys():
             self.logger(f"Invalid operation: {operation_name}")
             return schemas.Output()
 
-        return self.dispatch[operation_name](arguments)
+        return self._dispatch[operation_name](arguments)
     
 
     def tty(self, arguments: schemas.Arguments, printer: printer.Printer) -> schemas.Output:
@@ -388,7 +399,7 @@ class App:
         """
         operation_name                  = arguments.operation
         
-        if operation_name not in self.dispatch.keys():
+        if operation_name not in self._dispatch.keys():
             self.logger(f"Invalid operation: {operation_name}")
             return schemas.Output()
         

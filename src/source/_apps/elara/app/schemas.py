@@ -14,7 +14,7 @@ class Output:
     """
     prompt                  : str | None = None
     response                : dict | None = None
-    includes                : dict | None = None
+    reports                 : dict | None = None
 
     def to_dict(self):
         return {

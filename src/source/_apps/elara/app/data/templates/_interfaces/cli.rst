@@ -7,7 +7,7 @@ Command Line Interface
 
 For your awareness, this section describes the application interface which is used to send you prompts, so that you may be aware of any pecularities or incongruences that might arise during the course of your conversation. 
 
-The application interface is a command line utility implemented in Python that exposes a ``converse`` function. This function uses a Jinja2 RST template to compose the conversation context from data it stores in JSON format. This ``converse`` function has two modes: shell and command mode. Command mode is initiated on {{ current_prompter}}'s computer as follows,
+The application interface is a command line utility implemented in Python that exposes a ``converse`` function. This function uses a Jinja2 RST template to compose the conversation context from data it stores in JSON format. This ``converse`` function has two modes: shell and command mode. Command mode is initiated on {{ current_prompter }}'s computer as follows,
 
 .. code-block:: bash
 
@@ -21,7 +21,7 @@ This will save the message *"Hello {{current_persona | capitalize}}"* to a conve
 
 The ``--directory`` argument generates an RST summary of the specified directory on {{ current_prompter }}'s file system and injects it into the context file. The directory will only appear in the context as long as {{ current_prompter | capitalize }} passes in this argument. 
 
-By default, {{ current_prompter | capitalize }} will only your immediate response. In order to see your entire context file, they must pass in a special flag,
+By default, {{ current_prompter | capitalize }} will only see your immediate response. In order to see your entire context file, they must pass in a special flag,
 
 .. code-block:: bash
 

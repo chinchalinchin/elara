@@ -21,6 +21,18 @@ class Functions(enum.Enum):
     REQUEST             = "request"
     TUNE                = "tune"
 
+class AppProps(enum.Enum):
+    ANALYZE_SCHEMA      = "functions.analyze.schema"
+    ANALYZE_MIME        = "function.analyze.mime"
+    BRAINSTORM_SCHEMA   = "functions.brainstorm.schema"
+    BRAINSTORM_MIME_TYPE= "functions.brainstorm.mime"
+    CONVERSE_SCHEMA     = "functions.converse.schema"
+    CONVERSE_MIME_TYPE  = "functions.converse.mime"
+    REVIEW_SCHEMA       = "function.review.schema"
+    REVIEW_MIME_TYPE    = "funcctions.review.mime"
+    REQUEST_SCHEMA      = "functions.request.schema"
+    REQUEST_MIME        = "functions.request.mime"
+
 class FactoryProps(enum.Enum):
     """
     Application property key enumeration

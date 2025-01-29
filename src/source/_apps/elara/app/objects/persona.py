@@ -202,8 +202,7 @@ class Persona:
         """
         if persona is None or self.personas.get(persona) is None:
             return self.personas.get(self.current).get(attribute)
-        return self.personas.get(persona) 
-
+        return self.personas.get(persona).get(attribute)
 
     def function(self, func: str = None) -> dict:
         """

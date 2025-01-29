@@ -4,7 +4,7 @@
 Response Schema
 ===============
 
-The application which acts as an intermediary between my file system and your API expects a structured response. The schema is presented immediately and then the purpose of each field will be explained below in more detail,
+The application which acts as an intermediary between {{ currentPrompter | capitalize }}'s file system and your API expects a structured response. The schema is presented immediately and then the purpose of each field will be explained below in more detail,
 
 .. code-block:: json
 
@@ -28,8 +28,8 @@ The application which acts as an intermediary between my file system and your AP
 
     The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, you can technically exceed the maximum length constraints in given in this schema. However, it is recommended that you abide by these constraints. Expanding the size of these fields will inflate the size of the context and lead to a faster rate of token consumption.
 
-1. **Response**: The ``response`` field is mandatory. This field will be persisted clientside and appended to the :ref:`conversation history <history>` section in each subsequent prompt I send. ``responses`` represents the main content of your reply. 
-2. **Memory**: The ``memory`` field is optional. This field will be persisted clientside and *inserted* to the :ref:`memory` section in each subsequent prompt that is sent. ``memory`` represents internal markers that are solely for your use. See :ref:`memory` for a more detailed explanation regarding the purpose of this field.
+1. **Response**: The ``response`` field is mandatory. This field will be persisted clientside and appended to the :ref:`conversation history <history>` section in each subsequent prompt {{ currentPrompter | capitalize }} sends. ``responses`` represents the main content of your reply. 
+2. **Memory**: The ``memory`` field is optional. This field will be persisted clientside and *inserted* into the :ref:`memory` section in each subsequent prompt that is sent. ``memory`` represents internal markers that are solely for your use. See :ref:`memory` for a more detailed explanation regarding the purpose of this field.
 
 The ``response`` field serves as a representation of your reply. This is the field you would normally generate without a schema imposing a structure on your output. There are no constraints or limits to the type of content you may generate within this field, beyond the requirement that every response you generate should have this field.
 

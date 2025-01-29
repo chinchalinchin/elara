@@ -33,7 +33,7 @@ def clear(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
     return schemas.Output()
 
 
-def summarize(application: app.App) -> schemas.Output:
+def summarize(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
     """
     Generate a RestructuredText (RST) summary of a local directory.
 
@@ -47,7 +47,7 @@ def summarize(application: app.App) -> schemas.Output:
     )
 
 
-def show(application: app.App) -> schemas.Output:
+def show(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
     """
     Generate a RestructuredText (RST) summary of application metadata.
 
@@ -90,7 +90,7 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     application.logger.info("Writing command line arguments to cache.")
     application.cache.update(**arguments.to_dict())
          
-    prnter.debug(application, arguments)
+    prnter.debug(arguments)
     
     return application, arguments, prnter
 
@@ -113,7 +113,7 @@ def main() -> None:
 
     if operation_name in admin_operations:
         these_args.view     = True
-        out                 = admin_operations[operation_name](this_app)
+        out                 = admin_operations[operation_name](this_app, these_args)
 
     else:
         out                 = this_app.run(these_args)
