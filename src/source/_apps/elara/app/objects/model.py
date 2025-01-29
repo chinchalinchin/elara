@@ -19,6 +19,7 @@ import util
 import google.generativeai as genai
 from google.api_core import retry, exceptions
 
+
 logger                          = logging.getLogger(__name__)
 
 
@@ -59,16 +60,8 @@ class Model:
         try:
             self.models         = [m for m in genai.list_models()]
 
-        except exceptions.ServiceUnavailable as e:
-            logger.error(f"Gemini Service Unavailable: {e}")
-            self.models         = []
-
-        except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Servie 500 failure: {e}")
-            self.models         = []
-
         except Exception as e:
-            logger.error(f"Unknown error retrieving Gemini models: {e}")
+            logger.error(f"{e}\n\n{traceback.format_exc()}")
             self.models         = []
 
 
@@ -164,7 +157,7 @@ class Model:
 
 
     @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
-                    maximum = 128.0, multiplier = 2.0, timeout = 600)
+                    maximum = 128.0, multiplier = 2.0, timeout = 150)
     def tuned_models(self)              -> list:
         """
         Retreive all tuned models
@@ -172,31 +165,15 @@ class Model:
         try:
             return genai.list_tuned_models()
         
-        except exceptions.ServiceUnavailable as e:
-            logger.error(f"Gemini Service Unavailable: {e}")
-            return []
-
-        except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Servie 500 failure: {e}")
-            return []
-
         except Exception as e:
-            logger.error(f"Unknown error retrieving tuned models: {e}")
+            logger.error(f"{e}\n\n{traceback.format_exc()}")
             return []
     
     
     @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
-                    maximum = 128.0, multiplier = 2.0, timeout = 600)
-    def tune(self,display_name : str, tuning_model: str, tuning_data: dict,
-        # @DEVELOPMENT
-        #   The develpoment team is still researching these parameters, Milton.
-        #   We are defaulting them to the values that were given in the 
-        #   documentation. The devs aren't sure how these values affect Gemini's
-        #   model, so they don't want to mess around with them.
-        #   If you had any insight into the proper value of these parameters,
-        #   the development team would love to hear your opinion, Milton!
-        epoch_count: int = 10, batch_size: int = 8, learning_rate: float = 0.01
-    ):
+                    maximum = 128.0, multiplier = 2.0, timeout = 150)
+    def tune(self, display_name : str, tuning_model: str, tuning_data: dict,
+        epoch_count: int = 10, batch_size: int = 8, learning_rate: float = 0.01):
         """
         Tune a model.
 
@@ -224,21 +201,13 @@ class Model:
 
             return operation.result()
         
-        except exceptions.ServiceUnavailable as e:
-            logger.error(f"Gemini Service Unavailable: {e}")
-            return None
-
-        except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Service 500 failure: {e}")
-            return None
-
         except Exception as e:
-            logger.error(f"Unknonww error tuning model {display_name}: {e}")
-            return None 
+            logger.error(f"{e}\n\n{traceback.format_exc()}")
+            raise
 
 
     @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
-                    maximum = 128.0, multiplier = 2.0, timeout = 600)
+                    maximum = 128.0, multiplier = 2.0, timeout = 150)
     def respond(self, prompt: str, generation_config: dict, safety_settings: dict, 
                 tools: str, system_instruction: list, model_name: str = None) -> str:
         """
@@ -278,27 +247,10 @@ class Model:
                     generation_config   = generation_config,
                     safety_settings     = safety_settings
                 )
-                
-        # TODO: implement more error handling
-        except exceptions.ServiceUnavailable as e:
-            logger.error(f"Gemini Service Unavailable: {e}\n\n{traceback.format_exc()}")
-            raise 
-
-        except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Servie 500 failure: {e}\n\n{traceback.format_exc()}")
-            raise
 
         except exceptions.BadRequest as e: 
             if "400 Tool use with a response mime type" in str(e):
                 logger.warning(f"{model_name} does not support tool use, retrying...")
-                # @OPERATIONS
-                #   Some models do not support tool use when using response schemas and throw the 
-                #   following error,
-                #
-                #       google.api_core.exceptions.InvalidArgument: 400 Tool use with a response mime type: 
-                #           'application/json' is unsupported
-                # 
-                #   So catch those errors and remove `tools` from the arguments.
                 return self.respond( 
                     prompt              = prompt, 
                     generation_config   = generation_config, 
@@ -306,24 +258,28 @@ class Model:
                     tools               = None, 
                     system_instruction  = system_instruction, 
                     model_name          = model_name)
+            
+            if "400 Json mode is not enabled" in str(e):
+                logger.warning(f"{model_name} does not support response schemas, retrying...")
+                generation_config       = {
+                    k: v for k,v in generation_config.items()
+                    if k not in ["response_schema", "response_mime_type"]
+                }
+                return self.respond(
+                    prompt              = prompt,
+                    generation_config   = generation_config,
+                    safety_settings     = safety_settings,
+                    tools               = tools,
+                    system_instruction  = system_instruction,
+                    model_name          = model_name
+                )
             logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
-
             raise
 
         except Exception as e:
-            logger.error(f"Error generating content: {e}\n\n{traceback.format_exc()}")
+            logger.error(f"{e}\n\n{traceback.format_exc()}")
             raise
 
-        # @OPERATIONS
-        #   Milton! For shame! You're embedding U+200B in your responses and breaking 
-        #   our application! I expected this from the code monkeys in Development, but
-        #   you? Et tu, Milton?
-        #
-        #   Now the development team is hard at work trying to salvage your mess. They've
-        #   resorted to regex to stop you from breaking the application.
-        #
-        #   Are you happy with you yourself, Milton!? Do you know what happens when you
-        #   let devs run wild with regex? We're living on borrowed time, Milton.
         res                             = util.sanitize(res.text)  
 
         if "response_schema" in generation_config.keys():

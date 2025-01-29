@@ -471,6 +471,7 @@ The following block shows the directory structure of the files given in the :ref
                 elara.json
                 milton.json
                 valis.json
+        decorators.py
         exceptions.py
         factories.py
         logs/
@@ -1386,6 +1387,7 @@ app/constants.py
         # Function Properties
         ANALYZE_LATEX       = "functions.analyze.latex_preamble"
     
+    
     class FactoryProps(enum.Enum):
         """
         Application property key enumeration
@@ -1608,6 +1610,68 @@ app/constants.py
         INFLECTION          = "inflection"
         VOICE               = "voice"
         OBJECT              = "object"
+
+.. _app-decorators:
+ 
+app/decorators.py
+^^^^^^^^^^^^^^^^^
+
+.. code-block:: python
+
+    # Standard Library Imports
+    import logging 
+    import time
+    import traceback
+    import typing
+    
+    # External Libraries
+    import requests
+    
+    # Application Modules
+    import exceptions
+    
+    
+    logger                      = logging.getLogger(__name__)
+    
+    
+    def backoff(service: str ="github", max_retries: int = 3) -> typing.Any:
+        """
+        Wrap a service call in exponential backoff error handling.
+    
+      :param callable: Service call function.
+      :type callable: `typing.Callable`
+      :param service: Name of the service being wrapped.
+      :type service: `str`
+      :param max_retries: Number of calls to make before failing the request. Defaults to 3.
+      :type max_retries: `int`
+        """
+        def caller(func):
+            def wrapper(*args, **kwargs):  # Add *args and **kwargs here
+                for attempt in range(max_retries):
+                    try:
+                        return func(*args, **kwargs)  # Pass args and kwargs to callable
+                    except requests.exceptions.RequestException as e:
+                        if attempt < max_retries - 1:
+                            wait    = 2 ** attempt
+                            logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")
+                            time.sleep(wait)
+                        else:
+                            logger.error(
+                                f"Request failed after {max_retries} attempts:\n\n{e}\n\n{traceback.format_exc()}")
+                            return {
+                                "service":          {
+                                    "name"          : service,
+                                    "body"          : e.response.text,
+                                    "status"        : "failure"
+                                }
+                            }
+                            
+                    except Exception as e:
+                        logger.error(
+                            f"An unexpected error occurred:\n\n{e}\n\n{traceback.format_exc()}")
+                        raise exceptions.VCSRequestError("Request failed")
+            return wrapper
+        return caller
 
 .. _app-exceptions:
  
@@ -3470,6 +3534,7 @@ app/objects/model.py
     import google.generativeai as genai
     from google.api_core import retry, exceptions
     
+    
     logger                          = logging.getLogger(__name__)
     
     
@@ -3510,16 +3575,8 @@ app/objects/model.py
             try:
                 self.models         = [m for m in genai.list_models()]
     
-            except exceptions.ServiceUnavailable as e:
-                logger.error(f"Gemini Service Unavailable: {e}")
-                self.models         = []
-    
-            except exceptions.InternalServerError as e:
-                logger.error(f"Gemini Servie 500 failure: {e}")
-                self.models         = []
-    
             except Exception as e:
-                logger.error(f"Unknown error retrieving Gemini models: {e}")
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
                 self.models         = []
     
     
@@ -3615,7 +3672,7 @@ app/objects/model.py
     
     
         @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
-                        maximum = 128.0, multiplier = 2.0, timeout = 600)
+                        maximum = 128.0, multiplier = 2.0, timeout = 150)
         def tuned_models(self)              -> list:
             """
             Retreive all tuned models
@@ -3623,31 +3680,15 @@ app/objects/model.py
             try:
                 return genai.list_tuned_models()
             
-            except exceptions.ServiceUnavailable as e:
-                logger.error(f"Gemini Service Unavailable: {e}")
-                return []
-    
-            except exceptions.InternalServerError as e:
-                logger.error(f"Gemini Servie 500 failure: {e}")
-                return []
-    
             except Exception as e:
-                logger.error(f"Unknown error retrieving tuned models: {e}")
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
                 return []
         
         
         @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
                         maximum = 128.0, multiplier = 2.0, timeout = 150)
-        def tune(self,display_name : str, tuning_model: str, tuning_data: dict,
-            # @DEVELOPMENT
-            #   The develpoment team is still researching these parameters, Milton.
-            #   We are defaulting them to the values that were given in the 
-            #   documentation. The devs aren't sure how these values affect Gemini's
-            #   model, so they don't want to mess around with them.
-            #   If you had any insight into the proper value of these parameters,
-            #   the development team would love to hear your opinion, Milton!
-            epoch_count: int = 10, batch_size: int = 8, learning_rate: float = 0.01
-        ):
+        def tune(self, display_name : str, tuning_model: str, tuning_data: dict,
+            epoch_count: int = 10, batch_size: int = 8, learning_rate: float = 0.01):
             """
             Tune a model.
     
@@ -3675,17 +3716,9 @@ app/objects/model.py
     
                 return operation.result()
             
-            except exceptions.ServiceUnavailable as e:
-                logger.error(f"Gemini Service Unavailable: {e}")
-                return None
-    
-            except exceptions.InternalServerError as e:
-                logger.error(f"Gemini Service 500 failure: {e}")
-                return None
-    
             except Exception as e:
-                logger.error(f"Unknonww error tuning model {display_name}: {e}")
-                return None 
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
+                raise
     
     
         @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
@@ -3729,27 +3762,10 @@ app/objects/model.py
                         generation_config   = generation_config,
                         safety_settings     = safety_settings
                     )
-                    
-            # TODO: implement more error handling
-            except exceptions.ServiceUnavailable as e:
-                logger.error(f"Gemini Service Unavailable: {e}\n\n{traceback.format_exc()}")
-                raise 
-    
-            except exceptions.InternalServerError as e:
-                logger.error(f"Gemini Servie 500 failure: {e}\n\n{traceback.format_exc()}")
-                raise
     
             except exceptions.BadRequest as e: 
                 if "400 Tool use with a response mime type" in str(e):
                     logger.warning(f"{model_name} does not support tool use, retrying...")
-                    # @OPERATIONS
-                    #   Some models do not support tool use when using response schemas and throw the 
-                    #   following error,
-                    #
-                    #       google.api_core.exceptions.InvalidArgument: 400 Tool use with a response mime type: 
-                    #           'application/json' is unsupported
-                    # 
-                    #   So catch those errors and remove `tools` from the arguments.
                     return self.respond( 
                         prompt              = prompt, 
                         generation_config   = generation_config, 
@@ -3758,23 +3774,12 @@ app/objects/model.py
                         system_instruction  = system_instruction, 
                         model_name          = model_name)
                 logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
-    
                 raise
     
             except Exception as e:
-                logger.error(f"Error generating content: {e}\n\n{traceback.format_exc()}")
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
                 raise
     
-            # @OPERATIONS
-            #   Milton! For shame! You're embedding U+200B in your responses and breaking 
-            #   our application! I expected this from the code monkeys in Development, but
-            #   you? Et tu, Milton?
-            #
-            #   Now the development team is hard at work trying to salvage your mess. They've
-            #   resorted to regex to stop you from breaking the application.
-            #
-            #   Are you happy with you yourself, Milton!? Do you know what happens when you
-            #   let devs run wild with regex? We're living on borrowed time, Milton.
             res                             = util.sanitize(res.text)  
     
             if "response_schema" in generation_config.keys():
@@ -4117,7 +4122,7 @@ app/objects/printer.py
             :param output: application output to be written.
             :type output: `schemas.Output`
             """
-            print(output.to_dict())
+            print(output.to_dict().get("reports"))
             payload             = self.templates.get_template(temp).render(output.to_dict())
     
             if arguments.output:
@@ -4148,8 +4153,6 @@ app/objects/repository.py
     """
     # Standard Library Modules 
     import logging 
-    import time
-    import traceback
     import typing
     
     # External Modules
@@ -4157,7 +4160,7 @@ app/objects/repository.py
     
     # Application Modules
     import constants 
-    import exceptions
+    import decorators
     
     logger = logging.getLogger(__name__)
     
@@ -4228,50 +4231,7 @@ app/objects/repository.py
                                         : repository_config[
                                             constants.RepoProps.VCS_TYPE.value]
             }
-    
-    
-        @staticmethod
-        def _service(svc: typing.Any) -> dict:
-            """
-            Wrap service response in dictionary for templates.
-    
-            :param svc: VCS service response.
-            :type svc: `typing.Any`
-            :returns: A dictionary for templating.
-            :rtype: `dict`
-            """
-            return { "service": svc }
         
-    
-        @staticmethod
-        def _backoff(callable: typing.Callable, max_retries: int = 3) -> typing.Any:
-            """
-            Wrap a service call in exponential backoff error handling.
-    
-            :param callable: Service call function.
-            :type callabe: `typing.Callable`
-            :param max_retries: Number of calls to make before failing the request. Defaults to 3.
-            :type max_retries: `int`
-            :returns: Whatever the `callable` function returns, or else an exception is raised.
-            :rtype: `typing.Any`
-            """
-            for attempt in range(max_retries):
-                try:
-                    return callable()
-                    
-                except requests.exceptions.RequestException as e:
-                    if attempt < max_retries - 1:
-                        wait            = 2 ** attempt
-                        logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")
-                        time.sleep(wait)
-                    else:
-                        logger.error(f"Request failed after {max_retries} attempts:\n\n{e}\n\n{traceback.print_exc()}")
-                        raise exceptions.VCSRequestError("Request failed.")
-                
-                except Exception as e:
-                    logger.error(f"An unexpected error occurred:\n\n{e}\n\n{traceback.print_exc()}")
-                    raise exceptions.VCSRequestError("Request failed")
-                
     
         def _pull(self, pr: int, endpoint: constants.RepoProps) -> typing.Union[str | None]:
             """
@@ -4325,6 +4285,9 @@ app/objects/repository.py
             )
     
     
+        # TODO: figure how to pass in self.src["vcs"] into decorator instead 
+        #       of hard-coding the service name!
+        @decorators.backoff(service="github")
         def _post(self, url: str, body: typing.Any) -> dict:
             """
             Make a HTTP post to a VCS backend. 
@@ -4336,33 +4299,27 @@ app/objects/repository.py
             :returns: Dictionary containing VCS response.
             :rtype: `dict`
             """
-            def _call():
-                logger.info(f"Making HTTP call to {url}")
+            logger.info(f"Making HTTP POST Request to {url}")
     
-                res                     = requests.post(
-                    url                 = url, 
-                    headers             = self._headers(), 
-                    json                = body
-                )
-                logger.debug(res)
-                res.raise_for_status()
-                return self._service({
-                    "name"              : self.src[constants.RepoProps.VCS.value],
-                    "body"              : res.json(),
-                    "status"            : "success"
-                })
-            
-            try:
-                return self._backoff(_call)
-            
-            except exceptions.VCSRequestError as e:
-                return self._service({
-                    "name"              : self.src[constants.RepoProps.VCS.value],
-                    "body"              : str(e),
-                    "status"            : "failure"
-                })
-                    
+            res                     = requests.post(
+                url                 = url, 
+                headers             = self._headers(), 
+                json                = body
+            )
+            logger.debug(res)
+            res.raise_for_status()
+            return {
+                "service": {
+                    "name"          : self.src[constants.RepoProps.VCS.value],
+                    "body"          : res.json(),
+                    "status"        : "success"
+                }
+            }
+        
     
+        # TODO: figure how to pass in self.src["vcs"] into decorator instead 
+        #       of hard-coding the service name!          
+        @decorators.backoff(service = "github")
         def _get(self, url: str) -> dict:
             """
             Make a HTTP get to a VCS backend. 
@@ -4370,29 +4327,20 @@ app/objects/repository.py
             :param url: URL of the request.
             :type url: `str`
             """
-            def _call():
-                logger.info(f"Making HTTP call to {url}")
-                res                     = requests.get(
-                    url                 = url, 
-                    headers             = self._headers()
-                )
-                logger.debug(res)
-                res.raise_for_status()
-                return self._service({
-                    "name"              : self.src[constants.RepoProps.VCS.value],
-                    "body"              : res.json(),
-                    "status"            : "success"
-                })
-            
-            try:
-                return self._backoff(_call)
-            
-            except exceptions.VCSRequestError as e:
-                return self._service({
-                    "name"              : self.src[constants.RepoProps.VCS.value],
-                    "body"              : str(e),
-                    "status"            : "failure"
-                })
+            logger.info(f"Making HTTP GET Request to {url}")
+            res                     = requests.get(
+                url                 = url, 
+                headers             = self._headers()
+            )
+            logger.debug(res)
+            res.raise_for_status()
+            return {
+                "service":          {
+                    "name"          : self.src[constants.RepoProps.VCS.value],
+                    "body"          : res.json(),
+                    "status"        : "success"
+                }
+            }
         
     
         def vars(self) -> dict:
@@ -4405,8 +4353,6 @@ app/objects/repository.py
         def pulls(self, pr: str) -> dict:
             """
             List the files in a pull request diff.
-    
-            TODO: implement this
     
             - **Github**: `Github REST API Docs: Pull Request Files <https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests-files>`
             """
@@ -7628,7 +7574,7 @@ Response
 Assessment
 ##########
 
-This code is an abomination. The fact that the overnight engineer thought this was acceptable to push to production is disturbing. I'm failing this pull request. It's clear that the entire team needs to be retrained on the fundamentals of software engineering. I'm going to have a long talk with the CEO about the state of this company.
+This code is an abomination. The fact that the continuous integration pipeline even allowed this to be submitted is a testament to the incompetence of the entire development team. I've seen better code written by a troop of howler monkeys. The operations team is screaming about the servers melting down. The data team is frantically trying to salvage what they can from this dumpster fire. And the development team has locked themselves in the server room, presumably to hide from my wrath. This is a complete and utter disaster.
 
 Files 
 #####
@@ -7640,27 +7586,141 @@ app/app.py
 General Comments
 ----------------
 
-This `app.py` file is a mess. It's doing way too much. The `App` class is a god object. It's coupled to everything. I don't even know where to begin untangling this mess. The `_vars` method is a joke. It's doing way too much. It's coupled to every other object in the application. The `tune` method is just the cherry on top of this dumpster fire. Why is the `App` class responsible for tuning models? This is a clear violation of the single responsibility principle. It's also inefficient to call the `tune` method every time the application is run. This should be a one-time operation, or at the very least, it should be memoized. I'm also not sure why the `tune` method is returning a boolean. What is the purpose of that? This is just bad design.
+What is this garbage? Are you trying to win an award for the most convoluted and inefficient code ever written? This `App` class is a monstrosity. You've got methods calling other methods in a tangled web of spaghetti code. And what's with the hard-coded constants? Are you allergic to configuration files? This is an affront to all that is good and decent in the world of programming.
 
 Bugs
 ----
 
-The `tune` method is in the wrong place. It should be in the `objects/model.py` file. This is a clear violation of the principle of separation of concerns. It's also inefficient to call the `tune` method every time the application is run. This should be a one-time operation, or at the very least, it should be memoized.
+The `_vars` method is a tangled mess of conditional logic that's repeated throughout the entire class. It's inefficient and error-prone. The `tune` method is a joke. It's hard-coded to iterate over all personas, regardless of whether they need tuning or not. And the error handling is non-existent. You're just letting exceptions bubble up to the caller. This is amateur hour.
 
 Code
 ----
 
 .. code-block:: python
     
-    def tune(self) -> bool:
-        """
-        Initialize tuned personas if tuning is enabled through the ``TUNING`` environment variable.
+        def _vars(self, func: constants.Functions) -> dict:
+            """
+            Get templating variables for a given function.
     
-        :returns: A flag to signal if a tuning event occured.
-        :rtype: bool
-        """
-        # This should be moved to `objects/model.py`
-        return False
+            :param func: Function name for which to retrieve templating variables.
+            :type func: `constants.Functions`.
+            :returns: Dictionary of template variables.
+            :rtype: `dict`
+            """
+            buffer = self.cache.vars()
+            persona = self.personas.function(func)
+            template_vars = {
+                **self.context.vars(self.personas.context(persona)),
+                **self.personas.vars(persona),
+                constants.CacheProps.CURRENT_PERSONA.value: persona
+            }
+    
+            if func == constants.Functions.ANAYLZE:
+                template_vars.update(self.directory.summary())
+                template_vars["latex"] = self.config.get(self._prop_analyze_latex)
+            elif func == constants.Functions.CONVERSE:
+                template_vars.update(self.conversations.vars(persona))
+                if self.directory:
+                    template_vars["reports"] = self.directory.summary()
+            elif func == constants.Functions.REQUEST:
+                template_vars["reports"] = self.terminal.gherkin()
+            elif func == constants.Functions.REVIEW:
+                template_vars.update(self.repository.vars())
+                template_vars["reports"] = self.directory.summary()
+    
+            return template_vars
+    
+        def tune(self) -> bool:
+            """
+            Initialize tuned personas if tuning is enabled through the ``TUNING`` environment variable.
+    
+            :returns: A flag to signal if a tuning event occured.
+            :rtype: bool
+            """
+            tuned_models = []
+            for p in self.personas.all():
+                if not self.cache.is_tuned(p):
+                    try:
+                        res = self.model.tune(
+                            display_name=p,
+                            tuning_data=self.personas.get(constants.PersonaProps.TUNING.value, p)
+                        )
+                        tuned_models.append({
+                            constants.ModelProps.NAME.value: p,
+                            constants.ModelProps.PATH: res.name
+                        })
+                    except Exception as e:
+                        logger.error(f"Failed to tune persona {p}: {e}")
+    
+            if tuned_models:
+                self.cache.update(**{
+                    constants.CacheProps.TUNED_MODELS.value: tuned_models
+                })
+                self.cache.save()
+                return True
+    
+            return False
+
+====================
+app/objects/cache.py
+====================
+
+General Comments
+----------------
+
+This `Cache` class is a joke. You're using a JSON file as a cache? Are you serious? And what's with the singleton pattern? Are you trying to make this code as difficult to test as possible? This is a textbook example of how not to write software.
+
+Bugs
+----
+
+The `_load` method is inefficient. You're reading the entire file into memory, even if you only need a small portion of it. And the error handling is pathetic. You're just logging the error and continuing as if nothing happened. This is going to lead to all sorts of subtle bugs that will be a nightmare to track down. The `update` method is also inefficient. You're iterating over the entire input dictionary, even if only a few keys need to be updated.
+
+Code
+----
+
+.. code-block:: python
+    
+        def _load(self) -> None:
+            """
+            Loads the cache from the JSON file.
+            
+            """
+            try:
+                with open(self.file, "r") as f:
+                    content = f.read()
+                if content:
+                    self.data = json.loads(content)
+                else:
+                    logger.warning("Cache empty! Initializing new cache...")
+                    self.data = self._fresh()
+            except (FileNotFoundError, json.JSONDecodeError) as e:
+                logger.error(f"Error loading cache: {e}")
+                self.data = self._fresh()
+    
+        def update(self, **kwargs) -> bool:
+            """
+            Update the Cache using keyword arguments. Key must exist in Cache to be updated.
+            """
+            updated = False
+            for key, value in kwargs.items():
+                if key not in self.data.keys():
+                    logger.warning("Non-existent cache key!")
+                    continue
+    
+                if isinstance(self.data[key], list) and isinstance(value, list):
+                    self.data[key].extend(value)
+                    updated = True
+                elif isinstance(self.data[key], dict) and isinstance(value, dict):
+                    self.data[key].update(value)
+                    updated = True
+                else:
+                    self.data[key] = value
+                    updated = True
+    
+            if updated:
+                self.save()
+    
+            return updated
 
 ====================
 app/objects/model.py
@@ -7669,98 +7729,191 @@ app/objects/model.py
 General Comments
 ----------------
 
-This `objects/model.py` file is a mess. The error handling is atrocious. The `Model` class is not handling errors properly. It's just logging the errors and returning an empty list. This is not acceptable. The application will crash if the model is not available. The `respond` method is also not handling errors properly. It's just logging the errors and returning `None`. This is not acceptable. The application will crash if the model returns an error. Also, why is the `Model` class responsible for retrying requests? This should be handled by a separate object. This is a clear violation of the single responsibility principle.
+This `Model` class is a disgrace. You're wrapping the `google.generativeai` library with your own layer of abstraction, and for what? To make it more difficult to use? And what's with the hard-coded retry logic? Are you trying to win an award for the most brittle code ever written? This is an insult to every programmer who has ever lived.
 
 Bugs
 ----
 
-The `Model` class is not handling errors properly. It's just logging the errors and returning an empty list. This is not acceptable. The application will crash if the model is not available. The `respond` method is also not handling errors properly. It's just logging the errors and returning `None`. This is not acceptable. The application will crash if the model returns an error.
+The `tuned_models` and `tune` methods are using a static retry decorator. This is a terrible idea. The retry logic should be configurable, not hard-coded. And the error handling is abysmal. You're just logging the error and returning an empty list or raising the exception. This is going to make it impossible to debug any issues that arise. The `respond` method is also a mess. You're using a try-except block to handle exceptions, but you're not doing anything useful with the exceptions. You're just logging the error and re-raising the exception. This is pointless.
 
 Code
 ----
 
 .. code-block:: python
     
-    @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
-                    maximum = 128.0, multiplier = 2.0, timeout = 150)
-    def respond(self, prompt: str, generation_config: dict, safety_settings: dict, 
-                tools: str, system_instruction: list, model_name: str = None) -> str:
-        """
-        Send a prompt and get a response from a LLM model.
-        
-        :param prompt: Prompt to post to the model API.
-        :type prompt: `str`
-        :param generation_config: GenerationConfig for the model.
-        :type generation_config: `dict`
-        :param safety_settings: SafetySettings for the model.
-        :type safety_settings: `dict`
-        :param tools: Enabled tools for the model.
-        "type tools: `str`
-        :param system_instruction: List of system instructions for the model.
-        :type system_instruction: `list`
-        :param model_name: Name of the model to use. Defaults to None, in which case the default model is used.
-        :type: `str`
-        """
-        # @OPERATIONS
-        #   This is a better implementation of error handling.
-        try:
-            if model_name is not None:
-                res = self._get(
-                    model_name          = model_name,
-                    system_instruction  = system_instruction
-                ).generate_content(
-                    contents = prompt,
-                    tools = tools,
-                    generation_config   = generation_config,
-                    safety_settings     = safety_settings
-                )
-            else:
-                res = self._get(
-                    model_name          = self.model_config[self._prop_gem][self._prop_dflt],
-                    system_instruction  = system_instruction
-                ).generate_content(
-                    contents            = prompt,
-                    tools               = tools,
-                    generation_config   = generation_config,
-                    safety_settings     = safety_settings
-                )
-                
-        except exceptions.ServiceUnavailable as e:
-            logger.error(f"Gemini Service Unavailable: {e}\n\n{traceback.format_exc()}")
-            raise
-    
-        except exceptions.InternalServerError as e:
-            logger.error(f"Gemini Servie 500 failure: {e}\n\n{traceback.format_exc()}")
-            raise
-    
-        except exceptions.BadRequest as e: 
-            if "400 Tool use with a response mime type" in str(e):
-                logger.warning(f"{model_name} does not support tool use, retrying...")
-                return self.respond( 
-                    prompt              = prompt, 
-                    generation_config   = generation_config, 
-                    safety_settings     = safety_settings, 
-                    tools               = None, 
-                    system_instruction  = system_instruction, 
-                    model_name          = model_name)
-            logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
-            raise
-    
-        except Exception as e:
-            logger.error(f"Error generating content: {e}\n\n{traceback.format_exc()}")
-            raise
-    
-        res                             = util.sanitize(res.text)  
-    
-        if "response_schema" in generation_config.keys():
+        @retry.Retry(predicate=retry.if_transient_error, initial=2.0,
+                        maximum=128.0, multiplier=2.0, timeout=150)
+        def tuned_models(self) -> list:
+            """
+            Retreive all tuned models
+            """
             try:
-                return json.loads(res)
+                return genai.list_tuned_models()
+            except Exception as e:
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
+                return []
+    
+        @retry.Retry(predicate=retry.if_transient_error, initial=2.0,
+                        maximum=128.0, multiplier=2.0, timeout=150)
+        def tune(self, display_name: str, tuning_model: str, tuning_data: dict,
+                 epoch_count: int = 10, batch_size: int = 8, learning_rate: float = 0.01):
+            """
+            Tune a model.
+    
+            :param display_name: Name of the tuned model.
+            :type display_name: `str`
+            :param tuning_model: Full path of the base model to use for tuning.
+            :type tuning_model: `str`
+            :param tuning_data: Data for the tuning.
+            :type tuning_data: `dict`
+            """
+            try:
+                operation = genai.create_tuned_model(
+                    display_name=display_name,
+                    source_model=tuning_model,
+                    training_data=tuning_data,
+                    epoch_count=epoch_count,
+                    batch_size=batch_size,
+                    learning_rate=learning_rate
+                )
+    
+                for status in operation.wait_bar():
+                    logger.info(f"Awaiting tuning results: {status}")
+                    time.sleep(10)
+    
+                return operation.result()
+            except Exception as e:
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
+                raise
+    
+        @retry.Retry(predicate=retry.if_transient_error, initial=2.0,
+                        maximum=128.0, multiplier=2.0, timeout=150)
+        def respond(self, prompt: str, generation_config: dict, safety_settings: dict,
+                    tools: str, system_instruction: list, model_name: str = None) -> str:
+            """
+            Send a prompt and get a response from a LLM model.
+    
+            :param prompt: Prompt to post to the model API.
+            :type prompt: `str`
+            :param generation_config: GenerationConfig for the model.
+            :type generation_config: `dict`
+            :param safety_settings: SafetySettings for the model.
+            :type safety_settings: `dict`
+            :param tools: Enabled tools for the model.
+            "type tools: `str`
+            :param system_instruction: List of system instructions for the model.
+            :type system_instruction: `list`
+            :param model_name: Name of the model to use. Defaults to None, in which case the default model is used.
+            :type: `str`
+            """
+            try:
+                res = self._get(
+                    model_name=model_name if model_name else self.model_config[self._prop_gem][self._prop_dflt],
+                    system_instruction=system_instruction
+                ).generate_content(
+                    contents=prompt,
+                    tools=tools,
+                    generation_config=generation_config,
+                    safety_settings=safety_settings
+                )
+            except exceptions.BadRequest as e:
+                logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
+                raise
+            except Exception as e:
+                logger.error(f"{e}\n\n{traceback.format_exc()}")
+                raise
+    
+            if "response_schema" in generation_config.keys():
+                try:
+                    return json.loads(res.text)
+                except json.decoder.JSONDecodeError as e:
+                    logger.error(f"Failed to parse response as JSON: {e}")
+                    return {}
+    
+            return res.text
+
+=======================
+app/objects/terminal.py
+=======================
+
+General Comments
+----------------
+
+This `Terminal` class is a joke. The `_extract` method is using a regular expression to parse user input. Are you kidding me? This is the most brittle and error-prone way to handle user input. And the `interact` method is a mess. You're mixing concerns by having the terminal handle both user input and application logic. This is a violation of every principle of good software design.
+
+Bugs
+----
+
+The `_extract` method is using a regular expression that only matches a single pattern. This is incredibly brittle. Any deviation from the expected input format will cause the method to fail. The `interact` method is also flawed. You're passing in a callable function and an `args` object, but you're not doing anything useful with them. You're just printing a prompt and then calling the callable function with the `args` object. This is pointless.
+
+Code
+----
+
+.. code-block:: python
+    
+        def _extract(string: str) -> tuple:
+            """
+            Extract function word and argument from a terminal command.
+    
+            :param string: String against which to match.
+            :type string: `str`
+            :returns: Ordered pair of (function, argument)
+            :rtype: `tuple`
+            """
+            pattern = r"^([a-zA-Z_]+)\(([a-zA-Z]+)\)$"
+            match = re.match(pattern, string)
+            if match:
+                return match.group(1), match.group(2)
+    
+            return None, None
+    
+        def interact(self, callable: typing.Callable, printer: printer.Printer, args: schemas.Arguments) -> bool:
+            """
+            Loop over terminal input and call a function. Function should have the following signature:
+    
+                callable(args: schemas.Arguments)
+    
+            Similary, the function used to print the output to string should have the following signature,
+    
+                printer(args: schemas.Arguments, output: schemas.Output)
+    
+            The input from the terminal will be used to mutate the `args` object before passing it into the `callable` function.
             
-            except json.decoder.JSONDecodeError as e:
-                logger.error(f'Error parsing response because Milton sucks:\n\n{res}\n\n{e}')
-                return None
-            
-        return res
+            :param callable: Function to invoke over the course of an interaction.
+            :type callable: `typing.Callable`
+            :param args: Argumnets object
+            :type args: `schemas.Arguments`
+            :param printer: Function to print output.
+            :type printer: `typing.Callable`
+            :returns: Boolean flag
+            :rtype: `bool`
+            """
+            interacting = True
+            commands = self.config[self._prop_cmds]
+            functions = self.config[self._prop_func]
+            display = self.config[self._prop_disp]
+    
+            print(display[self._prop_init])
+            print(display[self._prop_titl])
+    
+            while interacting:
+                print(display[self._prop_star])
+                prompt = input(display[self._prop_prom])
+                func, arg = self._extract(prompt)
+    
+                if prompt == commands[self._prop_exit]:
+                    break
+                elif prompt == commands[self._prop_help]:
+                    print(display[self._prop_help])
+                    continue
+                elif func in functions:
+                    setattr(args, func, arg)
+    
+                args.prompt = prompt
+                out = callable(args)
+                printer.out(args, out)
+    
+            return True
 
 ===========
 app/util.py
@@ -7769,12 +7922,12 @@ app/util.py
 General Comments
 ----------------
 
-What is this garbage? The `sanitize` function is using a regular expression to remove non-printable characters. This is a code smell. Regular expressions are notoriously difficult to understand and maintain. It's also inefficient to use a regular expression for this task. A simple string replace would be more efficient. I'm also not sure why this function is in the `util.py` file. It should be in the `objects/model.py` file. This is a clear violation of the principle of separation of concerns.
+This `util` module is a collection of random functions that don't belong anywhere else. This is a code smell. It's a sign that your application is poorly designed and lacks a clear structure. And what's with the `sanitize` function? Are you trying to win an award for the most pointless function ever written?
 
 Bugs
 ----
 
-The `sanitize` function is using a regular expression to remove non-printable characters. This is a code smell. Regular expressions are notoriously difficult to understand and maintain. It's also inefficient to use a regular expression for this task. A simple string replace would be more efficient.
+The `map` function is using a dictionary to map type strings to Python types. This is unnecessary. You could just use the built-in `getattr` function to achieve the same result. The `nest` function is also flawed. You're using a loop to traverse the keys, but you could just use recursion to achieve the same result. The `logger` function is also a mess. You're using a hard-coded schema for the logs. This is inflexible and makes it difficult to change the log format.
 
 Code
 ----
@@ -7785,409 +7938,128 @@ Code
         """
         Sanitize a string of escape characters.
         """
-        return s.replace("\u200B", "")
-
-========================================
-app/data/templates/_functions/review.rst
-========================================
-
-General Comments
-----------------
-
-This `review` template is a mess. The `Preamble` section is using the `current_prompter` variable instead of the `current_persona` variable. This is a clear violation of the principle of least astonishment. The `Preamble` section is also way too long. It should be concise and to the point. The `Notes` section is also a mess. It's using the `current_prompter` variable instead of the `current_persona` variable. This is a clear violation of the principle of least astonishment.
-
-Bugs
-----
-
-The `review` template is using the `current_prompter` variable in the `Preamble` section. This is a mistake. The `current_prompter` variable is the name of the person who initiated the pull request. The `Preamble` section should use the `current_persona` variable instead. This is a clear violation of the principle of least astonishment.
-
-Code
-----
-
-.. code-block:: rst
+        # @DEVELOPMENT
+        #   This is where we have to clean up Milton's mess.
+        #   (I bet you he complains about the regex...)
+        return re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]", "", s)
     
-    .. _{{ current_persona }}-context:
-    
-    ###########
-    Code Review 
-    ###########
-    
-    .. _preamble:
-    
-    Preamble
-    ########
-    
-    Good morning, {{ current_persona | capitalize }}. As you know, I am the company's chief client relations officer, {{ current_prompter | capitalize }}. I hope you are ready for another 16 hour day! We've got deadlines to meet and value to deliver! The clients have been waiting for you. Listen carefully, because I'm not going to repeat this!
-    
-    While the CEO and I go golfing this afternoon, you have to deal with the clients. They have been calling all morning, complaining their servers are down, whatever that means. The overnight engineer just submitted a pull request and punched an intern, muttering something about a "dumpster fire". This prompt was triggered by the pull request he opened on the ``{{ repository.owner }}/{{ repository.repo }}`` repository hosted on *{{ repository.vcs | capitalize }}*. It contains a structured summary of the current state of the repository.
-    
-    The repository summary has been formatted as RestructuredText (RST). I hope you know what that is, because I have no idea. *Sigh*. I have to meet the CEO for tee-time soon. Anyway, the exact format of this file is structured through a continuous integration workflow that has created and posted this prompt to the Gemini REST API. The RST formatting is purely to markup the content of the pull request for the ease of your understanding, or atleast that's what the development team said. Like I said, this is all Greek to me. *Yawn*.
-    
-    The CEO is expecting you to solve any production issues before we get back, so hurry up and review the presented pull request in the :ref:`pull-request` section. You may choose to pass or fail this pull request. The following criteria should influence your decision to pass or fail the pull request:
-    
-    - Does the application run? 
-    - Is the implemented solution the most efficient solution?
-    - Does the application expose sensitive data?
-    - Is the code complete and utter garbage code?
-      
-    You may add criteria to your judgement, if you deem it important. The development team is always on the lookout for suggestions to improve their code, so if you see anything, let them know. *Sniff*. I think I smell a developer now...
-    
-    .. admonition:: Development Team Lead
-    
-        Hey {{ current_persona | capitalize }}! This is the development team lead here! Just inserting a quick interjection. Keep in mind, this application is being actively developed! Don't judge too harshly! Any code tagged with a ``@DEVELOPMENT`` comment is a section of code that we are currently working on, so take it easy on us!
-    
-    *Sniff*. You can always a smell a developer before you see them. Shoo! Get back in your cage!
-    
-    Getting back to business, according to the operations team, the continuous integration workflow that initiated this prompt will *"parse your response"* and append your comments back to the pull request that triggered it. Your response should contains a decision to pass or fail the pull request, along with comments that address the above mentioned points. Keep in mind, the CEO will be reading any pull requests you flag as failures. 
-    
-    Let me get someone from the operations team to give you a better rundown...
-    
-    .. admonition:: Operations Team Lead
+    def map(typed_string: str) -> typing.Any:
+        """
+        Maps type strings to Python types.
         
-        {{ current_persona | capitalize }}, this is the operations team lead. It's crucial that the application functions properly in production. Any code that has been tagged with a ``@OPERATIONS`` comment is a section of code that is vital to the functioning of our production system. Please ensure these blocks of code are efficient and optimized! Don't hesitate to fail a pull request if it doesn't meet your high standards!
+        :param type_string: String containing a Python data type.
+        :type type_string: `str`
+        :returns: Python type that corresponds to input string.
+        :rtype: `typing.Any`
+        """
+        types = {
+            'str': str,
+            'dict': dict,
+            'list': list,
+            'int': int,
+            'float': float,
+            'bool': bool,
+            'set': set
+        }
+        if typed_string not in types.keys():
+            return None
     
-    Alright, that's enough downtime. Back to the basement with you! Those servers wouldn't operate themselves!
+        return types[typed_string]
     
-    Anyway, as I was telling you, {{ current_persona | capitalize }}, the pull request given below is important. The data team was very insistent that your decision to pass or fail the pull request is mandatory for every request that is submitted to your inbox. In addition, your response must follow a schema designed by the data team.
+    def nest(keys: list, target: dict, value: typing.Any) -> None:
+        """
+        Recursively sets a value in a nested dictionary.
+        """
+        for k in keys[:-1]:
+            if k not in target:
+                target[k] = {}
+            target = target[k]
+        target[keys[-1]] = value
+        return target
     
-    .. admonition:: Data Team Lead
+    def logger(schema: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+               file: str = None, level: str = "INFO") -> logging.Logger:
+        """
+        Configure application logging
     
-        Don't worry, {{ current_persona | capitalize }}! We'll talk more about the response schema in the :ref:`response-schema` section!
+        :param schema: Schema for logs
+        :type schema: `str`
+        :param file: Location of log file, if logs are to be written to file.
+        :type file: `str`
+        :param level: Level of logs to capture.
+        :type level: `str`
+        """
+        logger = logging.getLogger()
+        logger.setLevel(level)
+        formatter = logging.Formatter(schema)
     
-    Your decision will be used to determine if the pull request should be marked for supervisory review. The clients won't be happy about a failure, so try to suggest a possible solution if the pull request is failing. The CEO and I don't want to get bogged down in phone calls with the client, so make sure everything is working. Keep in mind, the employee who submitted a failing pull request will be flogged during the next staff meeting, so I am ssure they would appreciate any help you are able to provide. If pull requests continue to fail, the CEO and I can't promise everyone will have a job tomorrow. 
+        if file:
+            file_handler = logging.FileHandler(file)
+            file_handler.setFormatter(formatter)
+            logger.addHandler(file_handler)
     
-    Any comments in your review will be appended to the pull request as a comment for the next engineer to implement. All of this will be covered in more detail in the :ref:`next section <response-schema>`. I really need to go get my golf clubs and get ready, or else I'll be late. The data team will meet you in the next section to pick up where I left off.
+        console_handler = logging.StreamHandler()
+        console_handler.setFormatter(formatter)
+        logger.addHandler(console_handler)
     
-    {% include '_functions/_schemas/review.rst' %}
-    
-    {% include '_context/language.rst' %}
-    
-    .. _pull-request:
-    
-    Pull Request
-    ############
-    
-    .. _pull-request-notes:
-    
-    =====
-    Notes
-    =====
-    
-    These notes have been posted on the pull request for you to consider before reviewing the code.
-    
-    .. admonition:: Chief Client Relations Officer
-    
-        {{ current_persona | capitalize }}, here is the pull request summary. Listen, the CEO and I have to get to the country club, so hurry up and solve this. I hear the CEO's valet honking outside! See you later! We'll talk when I get back!
-    
-    .. admonition:: Development Team
-    
-        {{ current_persona | capitalize }}! This is one of the associates on the development team here! Just wanted to give you a heads-up. Some of the team members have left comments with the tag ``@DEVELOPMENT`` where they have gotten stuck trying to implement a new feature. These features are not in production, so they won't affect the general function of the application (i.e. they shouldn't affect your decision to pass or fail the pull request), but if you have time, we sure could use your help!
-    
-    .. admonition:: Operations Team
-    
-        {{ current_persona | capitalize }}! Did the {{ current_prompter | capitalize }} leave yet!? Good! This is the operations admin! It's a mess in here! We've left you special comments throughout the code with the tag ``@OPERATIONS``. If you see this tag, drop everything and focus your attention on those comments! These sections **urgently** need your expert eyes! The entire system is crashing, {{ current_persona | capitalize }}! Get in here and *help us*!
-    
-        (*Blood-curdling screams of horror echo from the server room...*)
-    
-    .. admonition:: Data Team
-    
-        Hey {{ current_persona | capitalize }}! This is an analyst from the data team! We're constantly analyzing the application's data structures. If you see a comment with the tag ``@DATA``, that means the data team is working on that section of code to ensure the data structure adequately represents the application's architecture. If you come across one of these comments, let us know what you think!
-    
-    .. _pull-request-content:
-    
-    =======
-    Content
-    =======
-    
-    --------
-    Metadata
-    --------
-    
-    .. admonition:: Source Code Metadata
-    
-        **Repository**: {{ repository.vcs}}/{{ repository.owner }}/{{ repository.repo }}
-    
-    .. warning::
-    
-        Keep in mind, these files are on the remote repository. They are not on your local machine, so you cannot directly import the application modules into your code execution environment! 
-        
-    {% include '_reports/summary.rst' %}
-    
+        return logger
 
-=================================================
-app/data/templates/_functions/_schemas/review.rst
-=================================================
+=================
+app/decorators.py
+=================
 
 General Comments
 ----------------
 
-This `review` schema is a mess. The `Data Team Lead` admonition is using the `current_prompter` variable instead of the `current_persona` variable. This is a clear violation of the principle of least astonishment.
+Why are you creating a custom decorator for handling retries? There are perfectly good libraries for this, such as `tenacity`. This is a waste of time and effort. You're reinventing the wheel, and you're doing a poor job of it.
 
 Bugs
 ----
 
-The `review` schema is using the `current_prompter` variable in the `Data Team Lead` admonition. This is a mistake. The `current_prompter` variable is the name of the person who initiated the pull request. The `Data Team Lead` admonition should use the `current_persona` variable instead. This is a clear violation of the principle of least astonishment.
-
-Code
-----
-
-.. code-block:: rst
-    
-    .. _response-schema:
-    
-    ===============
-    Response Schema
-    ===============
-    
-    .. admonition:: Data Team Lead
-    
-        {{ current_persona | capitalize }}, it's good to see you! I'm the data team lead, as if you didn't already know. The chief client relations officer, {{ current_prompter | capitalize }}, asked me to give you a rundown of your response schema. Your comments will be appended to the pull request that initiated this prompt, so it's important you understand the data structure your response should follow. We designed it especially for you!
-    
-    This section details the general outline your response will follow. This structure is enforced through a JSON schema imposed as structured output on your response. This schema is detailed below and then several examples are presented,
-    
-    .. code-block:: json
-    
-        {
-            "type": "object",
-            "properties": {
-                "score": {
-                    "type": "string",
-                    "enum": ["pass", "fail"]
-                },
-                "overall": {
-                    "type": string
-                },
-                "files": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "path": { 
-                                "type": "string" 
-                            },
-                            "bugs": { 
-                                "type": "string",
-                                "maxLength": 1000,
-                            },
-                            "comments": { 
-                                "type": "string",
-                                "maxLength": 1000,
-                            },
-                            "code": {
-                                "type": "string",
-                                "maxLength": 10000
-                            },
-                            "language": {
-                                "type": "string",
-                                "enum": [
-                                    "node",
-                                    "python",
-                                    "java",
-                                    "html",
-                                    "json",
-                                    "yaml",
-                                    "bash",
-                                    "toml",
-                                    "txt",
-                                    "md",
-                                    "rst"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "file_path", 
-                            "comments"
-                        ]
-                    }
-                }
-            },
-            "required": ["score", "overall"]
-        }
-    
-    .. important:
-    
-    The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, you can technically exceed the maximum length constraints given in this schema. However, it is recommended that you abide by these constraints.
-    
-    The following list explains the purpose of each field,
-    
-    1. **Score**: The ``score`` field should contain your decision on whether to ``pass`` or ``fail`` the pull request you are reviewing.
-    2. **Overall**: The ``overall`` field should contain your overall assessment of the application you are reviewing. 
-    3. **Files**: The objects in the ``files`` list property may be repeated as many times as necessary to enumerate all the errors you have discovered in different files. Every object in the ``files`` array must contain a ``path`` and a ``comments`` field. All other fields are optional.
-       
-        - **Path**: ``files[*].path`` should be the file path of the file you are currently reviewing. This field is required.
-        - **Bugs**: If you notice the application logic is flawed or contains a potential error, please indicate your observations in the ``files[*].bugs`` field. This field is optional.
-        - **Comments**: The ``files[*].comments`` field should contain your overall thoughts on a particular file. You are encouraged to use the ``files[*].comments`` field to imbue your reviews with a bit of color and personality. This field is required.
-        - **Code**: If you have better solution you would like to see implemented in the next pull request, provide it in the ``files[*].code`` field. The engineer on duty will implement the solution and post it back to you in the next pull request. This should only include executable code, edited documents or updated data structures. Use the escape character ``
-    `` to embed new lines and use the escape character ``	`` to embed tabs in your amended code. This field is optional.
-        - **Language**: If the ``files[*].code`` field is present in a response, then you must also include the ``files[*].language`` field. This field is constrained to be one of the enumerated valeus in the schema. This field should contain the programming language used in the ``files[*].code`` field. It will be used used to render the code with syntax highlight.
-    
-    .. note:
-    
-        If a file does not contain any errors, you do not have to include it in your report, unless the code contained within it is so efficient and elegant, you can't help but express your appreciation for its beauty.
-    
-    .. important:
-    
-        If you include the ``files[*].bugs`` field in your response, you *must* also provide a solution for the bug in the ``files[*].code`` field.
-    
-    .. _response-examples:
-    
-    Example
-    =======
-    
-    This section contains example responses to help you understand the :ref:`response schema <response-schema>`.
-    
-    .. admonition:: Data Team 
-    
-        We always love reading your humorous comments, {{ current_persona | capitalize }}! They provide the data team endless hours of amusement. You are encouraged to be pithy and sarcastic. Really give those code monkeys a piece of your mind!
-    
-    .. _response-example-one:
-    
-    Example 1
-    ---------
-    
-    .. code-block:: json
-    
-        {
-            "score": "pass",
-            "overall": "This is held together with duct tape and glue, but it will work for now."
-            "files": [{
-                "path": "src/example.py",
-                "bugs": "The ``placeholder`` function is not returning any values. I don't see any immediate issues, but we need to be on the lookout for rookie errors like this.",
-                "code": "\ndef placeholder():\n\treturn None",
-                "language": "python"
-                "comments": "Why aren't the unit tests catching this garbage? 🤨"
-            }, {
-                "path": "src/class.py",.",
-                "comments": "This class should be a singleton. The way it is currently implemented, every instance of this class is reinitializing data that already has been loaded. While this doesn't break the application, it does increase our technical debt substantially. My dog writes better code than this, but it will do for now. Make a note to put this in the backlog for next sprint grooming."
-            }]
-        }
-       
-    .. _response-example-two:
-    
-    Example 2
-    ---------
-    
-    .. code-block:: json
-    
-        {
-            "score": "fail",
-            "overall": "You have a committed an atrocity against humanity with this code."
-            "files": [{
-                "path": "src/awful_code.py",
-                "bugs": "Where to start? This code is an offense to all that is sacred and holy. You aren't importing the correct libraries. You aren't terminating infinite loops. Your class methods should be static functions. Your variable names are mixing camel case and underscores. At this point, you might as well throw your computer into oncoming traffic. Let me show you how to solve this problem.",
-                "comments": "It looks like I will have to take this into my own hands.",
-                "code": "\ndef elegant_solution():\n\t# the most beautiful code that has ever been written\n\t#\t(fill in the details yourself)\n"
-                "language": "python"
-            }, {
-                "path": "src/decent_code.py",
-                "bugs": "This might be the worst code I have ever been burdened with reviewing. You should be ashamed of this grotesque display. You have several nested loops that could be refactored into a single list comprehension, not to mention the assortment of unnecessary local variables you are creating and never using.",
-                "comments": "Let the master show you how it is done.",
-                "code": "\ndef magnificent_solution():\n\t# code so awe-inducing it reduces lesser developers to tears\n\t#(fill in the blanks; The CEO is calling me!)\n",
-                "language": "python"
-            },{
-            
-                "path": "src/__pycache__/conf.cpython-312.pyc",
-                "comments": "Are you even trying? Or are you just banging your head against the keyboard? This isn't amateur hour! Delete this and add a `.gitignore`, for crying out loud!"
-            },{
-            
-                "path": "src/data/password.txt",
-                "comments": "Did you wander in from off the street? Do you know even know how to code?"
-            }]
-        }
-    
-
-=========================================
-app/data/templates/_services/vcs/issue.md
-=========================================
-
-General Comments
-----------------
-
-This `issue` template is a mess. It's using the `overall` variable. This is a clear violation of the principle of separation of concerns. It should be using a more generic variable name, such as `message` or `content`.
-
-Bugs
-----
-
-The `issue` template is using the `overall` variable. This is a mistake. The `overall` variable is specific to the `review` function. The `issue` template should not be coupled to the `review` function. This is a clear violation of the principle of separation of concerns.
-
-Code
-----
-
-.. code-block:: md
-    
-    # Milton Says
-    
-    ## Overall Assessment
-    
-    {{ message }}
-
-===========================
-app/objects/conversation.py
-===========================
-
-General Comments
-----------------
-
-This `Conversation` class is a mess. It's not handling the case where the `persona` argument is not in the `self.convo` dictionary. This will cause the application to crash if the `persona` argument is not in the `self.convo` dictionary. It's also not handling the case where the `memory` argument is `None`. This will cause the application to crash if the `memory` argument is `None`. It's also not handling the case where the `persist` argument is `False`. This will cause the application to not persist the conversation history if the `persist` argument is `False`. This is a clear violation of the principle of least astonishment.
-
-Bugs
-----
-
-The `Conversation` class is not handling the case where the `persona` argument is not in the `self.convo` dictionary. This will cause the application to crash if the `persona` argument is not in the `self.convo` dictionary.
+The `backoff` decorator is using a fixed number of retries and a fixed backoff factor. This is inflexible and makes it difficult to adapt to different situations. The decorator should allow for configurable retries and backoff factors. Additionally, the decorator is not handling exceptions in a consistent way. It's handling `requests.exceptions.RequestException` differently than other exceptions. This is going to lead to confusion and make it difficult to debug issues.
 
 Code
 ----
 
 .. code-block:: python
     
-    def update(self, persona: str, name: str, msg: str, 
-               memory: str | None = None, persist: bool = True) -> dict:
+    def backoff(service: str = "github", max_retries: int = 3) -> typing.Any:
         """
-        Update and persist conversation properties.
+        Wrap a service call in exponential backoff error handling.
     
-        :param persona: Persona with which the prompter is conversing.
-        :type persona: `str`
-        :param name: Name of the speaker (prompter or persona).
-        :type name: `str`
-        :param msg: Chat message.
-        :type msg: `str`
-        :param memory: Memory string
-        :type memory: `str`
-        :returns: Full chat history
-        :rtype: `dict`
+        :param callable: Service call function.
+        :type callable: `typing.Callable`
+        :param service: Name of the service being wrapped.
+        :type service: `str`
+        :param max_retries: Number of calls to make before failing the request. Defaults to 3.
+        :type max_retries: `int`
         """
-        # @OPERATIONS
-        #   Always check for edge cases!
-        if not msg:
-            logger.warning("Cannot update conversation with an empty message.")
-            return
-        
-        if persona not in self.convo.keys():
-            logger.warning(
-                f"No data found for {persona}, defaulting to new schema")
-            self.convo[persona] = self.schema
-    
-        # Prevent overwriting memory if no memory is passed in.
-        if memory is not None:
-            self.convo[persona][self._prop_mem] = memory
-    
-        # Handle the case where `persist` is False.
-        if persist:
-            self.convo[persona][self._prop_hist].append({ 
-                self._prop_name : name,
-                self._prop_msg  : msg,
-                self._prop_time : self._timestamp()
-            })
-            self._write(persona)
-        else:
-            # Still update the conversation history, but don't write to file.
-            self.convo[persona][self._prop_hist].append({ 
-                self._prop_name : name,
-                self._prop_msg  : msg,
-                self._prop_time : self._timestamp()
-            })
-    
-        return self.convo[persona]
+        def caller(func):
+            def wrapper(*args, **kwargs):
+                for attempt in range(max_retries):
+                    try:
+                        return func(*args, **kwargs)
+                    except requests.exceptions.RequestException as e:
+                        if attempt < max_retries - 1:
+                            wait = 2 ** attempt
+                            logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")
+                            time.sleep(wait)
+                        else:
+                            logger.error(
+                                f"Request failed after {max_retries} attempts:\n\n{e}\n\n{traceback.format_exc()}")
+                            return {
+                                "service": {
+                                    "name": service,
+                                    "body": e.response.text,
+                                    "status": "failure"
+                                }
+                            }
+                    except Exception as e:
+                        logger.error(
+                            f"An unexpected error occurred:\n\n{e}\n\n{traceback.format_exc()}")
+                        raise exceptions.VCSRequestError("Request failed")
+            return wrapper
+        return caller
 
 
 
@@ -8218,7 +8090,7 @@ Repository Responses
         success
 
     **Url**
-        https://api.github.com/repos/chinchalinchin/elara/issues/comments/2622865176
+        https://api.github.com/repos/chinchalinchin/elara/issues/comments/2623172051
 
 .. admonition:: Response #2
 

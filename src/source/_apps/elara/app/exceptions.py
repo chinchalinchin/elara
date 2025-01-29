@@ -44,3 +44,10 @@ class GeminiAPIKeyError(Exception):
     Raised when the application cannot find the API Key for Gemini.
     """
     pass
+
+
+class FactoryError(Exception):
+    """
+    Raised when a Factory cannot construct an object.
+    """
+    pass

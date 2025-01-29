@@ -9,6 +9,7 @@ import logging
 
 # Application Modules
 import constants
+import exceptions
 import schemas
 import objects.cache as cac
 import objects.config as conf
@@ -23,9 +24,19 @@ import objects.template as temp
 import objects.terminal as term
 
 
+logger                              = logging.getLogger(__name__)
+
+
 class App:
     """
-    Class for managing application objects and functions. This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``current_persona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
+    Class for managing application objects and functions. 
+    
+    .. important::
+
+        Generally speaking, the `app.App` should be not instantiated directly. It should be constructed using a `factory.AppFactory` to inject its dependencies. 
+
+    `app.App` has its dependencies injected into it during initialization. 
+    This object orchestrates the application objects and exposes their functionality through its class methods. The application pulls the ``current_persona``, ``curentPrompter`` and ``currentModel`` fields from the application ``cache``. It will pull the user-provided ``prompt``, ``render`` and ``directory`` fields from the application ``arguments``. In other words, ``cache`` properties persist across application method calls and generally do not need updated, whereas the ``arguments`` properties are dynamic and dependent on the user.
     """
     cache                           : cac.Cache  | None = None
     """Application cache"""
@@ -37,8 +48,6 @@ class App:
     """Application conversation history"""
     directory                       : dir.Directory | None = None
     """Application local directory"""
-    logger                          : logging.Logger | None = None # Remove. Just create it here. Init in main.
-    """Application logger"""
     model                           : mod.Model | None = None
     """Application model"""
     personas                        : per.Persona | None = None
@@ -75,11 +84,16 @@ class App:
         Initialize a new application object.
         """
         self._dispatch              = {
-            "converse"              : self.converse,
-            "review"                : self.review,
-            "request"               : self.request,
-            "tune"                  : self.tune,
-            "analyze"               : self.analyze,
+            constants.Functions.CONVERSE.value             
+                                    : self.converse,
+            constants.Functions.REVIEW.value
+                                    : self.review,
+            constants.Functions.REQUEST.value               
+                                    : self.request,
+            constants.Functions.TUNE.value                 
+                                    : self.tune,
+            constants.Functions.ANAYLZE.value              
+                                    : self.analyze,
         }
 
 
@@ -105,7 +119,7 @@ class App:
         template_vars               = { **context, **self.personas.vars(persona) }
         # Function leveltemplate variables
         if func == constants.Functions.ANAYLZE:
-            self.logger.info("Injecting file summary into prompt...")
+            logger.info("Injecting file summary into prompt...")
             template_vars.update(**buffer, **self.directory.summary(), **{
                 "latex"             : self.config.get(self._prop_analyze_latex)
             })
@@ -114,19 +128,19 @@ class App:
             template_vars.update(**self.cache.vars(), 
                                  **self.conversations.vars(persona))
             if self.directory:
-                self.logger.info("Injecting file summary into prompt...")
+                logger.info("Injecting file summary into prompt...")
                 template_vars.update({
                     "reports"       : self.directory.summary()
                 })
         
         elif func == constants.Functions.REQUEST.value:
-            self.logger.info("Injecting Gherkin script into prompt...")
-            template_vars.update(**buffer, {
-                "reports"           : self.terminal.gherkin()
+            logger.info("Injecting Gherkin script into prompt...")
+            template_vars.update(**buffer, **{
+                "reports"               : self.terminal.gherkin()
             })
 
         elif func == constants.Functions.REVIEW.value:
-            self.logger.info("Injecting file summary into prompt...")
+            logger.info("Injecting file summary into prompt...")
             template_vars.update(**buffer, **self.repository.vars(), **{
                 "reports"               : self.directory.summary()
             })
@@ -245,7 +259,7 @@ class App:
 
         parsed_prompt               = self.templates.function(
             template                = constants.Functions.REQUEST.value, 
-            request_vars            = request_vars
+            request_vars            = self._vars(constants.Functions.REQUEST.value)
         )
         if arguments.render:
             return schemas.Output(
@@ -274,27 +288,24 @@ class App:
         :rtype: `schemas.Output`
         """
 
-        # STEP 1. Gather function data into local variables
+        # STEP 1. Prepare template variables and then render function template. Render
+        #           to screen if applicable.
         persona                     = self.personas.function(constants.Functions.REVIEW.value) 
-
-        # STEP 3. Render function template
         review_prompt               = self.templates.function(
             template                = constants.Functions.REVIEW.value, 
             variables               = self._vars(constants.Functions.REVIEW.value)
         )
-        # STEP 4. Halt function if executing with dry-run ``arguments.render`` flag.
-        ## NOTE: This corresponds to the CLI argument ``--render``.
         if arguments.render:
             return schemas.Output(
                 prompt              = review_prompt
             )
-        # STEP 5. Append function response schema to persona's generation configuration.
+        # STEP 2. Append function response schema to persona's generation configuration 
+        #           and post contextualized prompt to model API.
         response_config             = self.personas.get(constants.PersonaProps.GENERATION_CONFIG.value, persona)
         response_config.update({
             "response_schema"       : self.config.get(self._prop_review_schema),
             "response_mime_type"    : self.config.get(self._prop_review_mime)
         })
-        # STEP 6. Pass contextualized prompt and function configuration to model
         response                    = self.model.respond(
             prompt                  = review_prompt,
             generation_config       = response_config,
@@ -303,7 +314,8 @@ class App:
             tools                   = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
             system_instruction      = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
-        # STEP 7. Render overall pull request assessment request and post to VCS backend.
+        # STEP 3. Render overall pull request assessment request and post to VCS backend.
+        reports                     = [ ]
         if response and response.get("overall"):
             msg                     = self.templates.render(
                 temp                = "_services/vcs/issue",
@@ -315,7 +327,7 @@ class App:
                 pr                  = arguments.pull,
             )
             reports                = [ source_res ] 
-        # STEP 8. Render file specific pull request assessments and post to VCS backend.
+        # STEP 4. Render file specific pull request assessments and post to VCS backend.
         if response and response.get("files"):
             bodies                  = []
             for file_data in response.get("files", []):
@@ -335,13 +347,17 @@ class App:
             reports                 = {
                 "repository"        : reports + source_res
             }
-        # STEP 9: Prepare model response for output templating
-        review_response             = { constants.Functions.REVIEW.value: response}
-        # STEP 10: Structure results for output
+        # STEP 5: Prepare model response for output templating and return
+        review_response             = { constants.Functions.REVIEW.value: response}        
+        if len(reports) > 0:
+            return schemas.Output(
+                prompt                  = review_prompt,
+                response                = review_response,
+                reports                 = reports 
+            )
         return schemas.Output(
             prompt                  = review_prompt,
-            response                = review_response,
-            reportss                = reports 
+            response                = review_response
         )
 
 
@@ -393,7 +409,7 @@ class App:
         operation_name                  = arguments.operation
 
         if operation_name not in self._dispatch.keys():
-            self.logger(f"Invalid operation: {operation_name}")
+            logger(f"Invalid operation: {operation_name}")
             return schemas.Output()
 
         return self._dispatch[operation_name](arguments)
@@ -403,13 +419,15 @@ class App:
         """
         Initiate an interactive terminal
 
+        :param argumnets: Application arguments.
+        :type arguments: `schemas.Arguments`
         :param printer: Callable function to print application output during terminal sessions.
         :type printer: `typing.Callable`.
         """
         operation_name                  = arguments.operation
         
         if operation_name not in self._dispatch.keys():
-            self.logger(f"Invalid operation: {operation_name}")
+            logger(f"Invalid operation: {operation_name}")
             return schemas.Output()
         
         # @DATA
@@ -433,3 +451,33 @@ class App:
             return schemas.Output()
             
         return schemas.Output()
+    
+    
+    def validate(self, arguments: schemas.Arguments = None) -> bool:
+        """
+        Validate an application object and its arguments.
+        
+        :param argumnets: Application arguments. Defaults to None.
+        :type arguments: `schemas.Arguments`
+        :returns: Signal app is valid.
+        :rtype: `bool`
+        """
+        # Evaluate in order of application dependency
+        if not self.cache:
+            raise exceptions.FactoryError("Cache not initialized!")
+        if not self.config:
+            raise exceptions.FactoryError("Config not initialized!")
+        if not self.templates:
+            raise exceptions.FactoryError("Context not initialized!")
+        if not self.personas:
+            raise exceptions.FactoryError("Personas not initialized!")
+        if not self.model:
+            raise exceptions.FactoryError("Model not initialized!")
+        if not self.terminal:
+            raise exceptions.FactoryError("Terminal not initialized!")
+        # Conditional objects
+        if arguments and arguments.has_vcs_args() and not self.repository:
+            raise exceptions.FactoryError("Repository not initalized!")
+        if arguments and arguments.directory and not self.directory:
+            raise exceptions.FactoryError("Directory not initialized!")
+        return True

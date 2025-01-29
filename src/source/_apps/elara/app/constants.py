@@ -21,6 +21,7 @@ class Functions(enum.Enum):
     REQUEST             = "request"
     TUNE                = "tune"
 
+
 class AppProps(enum.Enum):
     """
     Application property key enumeration
@@ -32,12 +33,13 @@ class AppProps(enum.Enum):
     BRAINSTORM_MIME_TYPE= "functions.brainstorm.mime"
     CONVERSE_SCHEMA     = "functions.converse.schema"
     CONVERSE_MIME_TYPE  = "functions.converse.mime"
-    REVIEW_SCHEMA       = "function.review.schema"
-    REVIEW_MIME_TYPE    = "funcctions.review.mime"
+    REVIEW_SCHEMA       = "functions.review.schema"
+    REVIEW_MIME_TYPE    = "functions.review.mime"
     REQUEST_SCHEMA      = "functions.request.schema"
     REQUEST_MIME        = "functions.request.mime"
     # Function Properties
     ANALYZE_LATEX       = "functions.analyze.latex_preamble"
+
 
 class FactoryProps(enum.Enum):
     """

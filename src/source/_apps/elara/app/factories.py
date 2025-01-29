@@ -7,6 +7,7 @@ Factory object for building application objects.
 """
 # Standard Library Modules
 import argparse
+import logging
 import os
 import pathlib
 import typing
@@ -28,6 +29,9 @@ import objects.model as model
 import objects.repository as repository
 import objects.template as template
 import objects.terminal as terminal
+
+
+logger                          = logging.getLogger(__name__)
 
 
 class PrinterFactory:
@@ -251,8 +255,7 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        if self.app.logger is not None:
-            self.app.logger.debug("Initializing application cache...")
+        logger.debug("Initializing application cache...")
 
         self.app.cache          = cache.Cache(
                                     self._path([self._prop_dir_data, self._prop_file_cach]))
@@ -266,8 +269,7 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        if self.app.logger is not None:
-            self.app.logger.debug("Initializing application context...")
+        logger.debug("Initializing application context...")
 
         self.app.context        = cont.Context(
             directory           = self._path([self._prop_dir_cont]),
@@ -283,8 +285,7 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        if self.app.logger is not None:
-            self.app.logger.debug("Initializing application conversations...")
+        logger.debug("Initializing application conversations...")
 
         self.app.conversations  = convo.Conversation(
             directory           = self._path([self._prop_dir_thrd]),
@@ -303,8 +304,8 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        if not arguments.directory and self.app.logger:
-            self.app.logger.warning("Directory missing from arguments, ignoring initialization.")
+        if not arguments.directory:
+            logger.warning("Directory missing from arguments, ignoring initialization.")
             return self 
         
         self.app.directory      = directory.Directory(
@@ -312,21 +313,6 @@ class AppFactory:
             directory_config    = self.app.config.get(self._prop_obj_dir)
         )
         return self 
-    
-
-    def with_logger(self) -> typing.Self:
-        """
-        Initialize and append `logging.Logger` to the factory's `app.App` object. 
-        
-        :returns: Self with updated application attribute.
-        :rtype: `typing.Self`
-        """
-        self.app.logger         = util.logger(
-            file                = self._path([self._prop_dir_logs, self._prop_file_logs]),
-            level               = self.app.config.get(self._prop_log_lvl),
-            schema              = self.app.config.get(self._prop_log_sch)
-        )
-        return self
     
 
     def with_model(self) -> typing.Self: 
@@ -348,7 +334,7 @@ class AppFactory:
         :rtype: `typing.Self`
         """
         if self.app.cache is None:
-            raise ValueError("Cache must be initialized before Personas!")
+            raise exceptions.FactoryError("Cache must be initialized before Personas!")
 
         self.app.personas       = persona.Persona(
             persona             = self.app.cache.get(constants.CacheProps.CURRENT_PERSONA.value),
@@ -394,7 +380,7 @@ class AppFactory:
         :rtype: `typing.Self`
         """
         if not arguments.has_vcs_args():
-            self.app.logger.warning("No repository arguments provided, skipping initialization")
+            logger.warning("No repository arguments provided, skipping initialization")
             return self 
                 
         if self.app.config.get(self._prop_vcs) is None:
@@ -414,11 +400,16 @@ class AppFactory:
         return self
    
     
-    def build(self) -> apps.App :
+    def build(self, arguments: schemas.Arguments = None) -> apps.App :
         """
         Retrieve factory constructed application.
 
         :returns: Factory constructed application.
         :rtype: `app.App`
         """
+        # Raise 
+        try:
+            self.app.validate(arguments)
+        except exceptions.FactoryError as e:
+            logger.error(f"Factory Error:\n\n{e}")
         return self.app

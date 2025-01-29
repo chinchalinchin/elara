@@ -5,7 +5,6 @@ main.py
 Module for command line interface.
 """
 # Standard Library Modules
-import logging
 import typing 
 
 
@@ -13,9 +12,11 @@ import typing
 import app
 import factories
 import schemas
+import util
 import objects.printer as printer
 
-logger                      = logging.getLogger(__name__)
+
+logger                      = util.logger()
 
 
 def clear(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
@@ -73,7 +74,6 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
                                 .build()
     
     application             =  factories.AppFactory()\
-                                .with_logger() \
                                 .with_cache() \
                                 .with_context() \
                                 .with_model() \
@@ -83,11 +83,11 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
                                 .with_terminal() \
                                 .with_directory(arguments) \
                                 .with_repository(arguments) \
-                                .build()
+                                .build(arguments)
     
     prnter                  = factories.PrinterFactory().build()
 
-    application.logger.info("Writing command line arguments to cache.")
+    logger.info("Writing command line arguments to cache.")
     application.cache.update(**arguments.to_dict())
          
     prnter.debug(arguments)
@@ -110,10 +110,6 @@ def main() -> None:
     }
 
     operation_name          = these_args.operation
-
-    import pprint
-
-    pprint.pp(these_args.to_dict())
 
     if operation_name in admin_operations:
         these_args.view     = True

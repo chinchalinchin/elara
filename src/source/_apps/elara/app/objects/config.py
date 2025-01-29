@@ -8,7 +8,6 @@ Object for managing application configuration.
 import json 
 import logging
 import os
-import typing
 
 
 # Application Modules

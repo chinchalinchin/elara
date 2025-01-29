@@ -41,7 +41,7 @@ class Conversation:
     """Singleton instance."""
     schema                      : dict = { }
     """Schema skeleton for new conversation data structures."""
-
+    _zone                       : datetime.timezone = None
 
     # Conversation properties
     _prop_hist                  = constants.ConvoProps.HISTORY.value
@@ -69,6 +69,9 @@ class Conversation:
         self.convo_config       = convo_config
         self.schema             = self._schema()
         self.convo              = self._convo()
+        self._zone              = datetime.timezone(datetime.timedelta(
+            hours               = self.convo_config.get(self._prop_zone)
+        ))
 
 
     def __new__(self, *args, **kwargs) -> typing.Self:
@@ -172,11 +175,7 @@ class Conversation:
         """
         Generates a timestamp in MM-DD HH:MM EST 24-hour format.
         """
-        delta               = datetime.timedelta(
-            hours           = self.convo_config.get(self._prop_zone)
-        )
-        zone                = datetime.timezone(delta)
-        now                 = datetime.datetime.now(zone) 
+        now                     = datetime.datetime.now(self._zone) 
         return now.strftime("%m-%d %H:%M")
 
 
@@ -189,7 +188,7 @@ class Conversation:
         """
         logger.warning(
             f"Clearing {persona}'s conversation history and memories.")
-        self.convo[persona] = self.schema
+        self.convo[persona]     = self.schema
         self._write(persona)
         return
 
