@@ -57,7 +57,6 @@ class Persona:
         :param context: Location of context file
         :type context: str
         """
-        print(persona_config)
         self.current                = persona
         self.directory              = directory
         self.extension              = extension

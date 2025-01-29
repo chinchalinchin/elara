@@ -1,4 +1,4 @@
-{%- set models = includes.get('models') %}
+{%- set models = reports.get('models') %}
 .. _model-report: 
 
 Models

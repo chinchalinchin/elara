@@ -14,12 +14,12 @@
         "You should always format your response in RestructuredText with embedded LaTeX"
     ],
     "context": {
-        "quotations": [
-            "ARIS_01",
-            "FREG_01",
-            "RUSS_01",
-            "TARS_01",
-            "RSWH_01"
+        "quotes": [
+            "aris_01",
+            "freg_01",
+            "russ_01",
+            "tars_01",
+            "rswh_01"
         ],
         "poems": [ ],
         "proofs": []

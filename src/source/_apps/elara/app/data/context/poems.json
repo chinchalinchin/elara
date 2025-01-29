@@ -1,6 +1,6 @@
 {
-    "CUMM_01": {
-        "LINES": [
+    "cumm_01": {
+        "lines": [
             "in time of daffodils(who know",
             "the goal of living is to grow)", 
             "forgetting why,remember how",
@@ -20,11 +20,11 @@
             "(when time from time shall set us free)",
             "forgetting me,remember me"
         ],
-        "TITLE": "95 Poems, #16",
-        "AUTHOR": "e.e. cummings"
+        "title": "95 Poems, #16",
+        "author": "e.e. cummings"
     },
-    "CUMM_02": {
-        "LINES": [
+    "cumm_02": {
+        "lines": [
             "all which isn't singing is mere talking",
             "and all talking's talking to oneself",
             "(whether that oneself be sought or seeking",
@@ -43,11 +43,11 @@
             "But the very song of(as mountains",
             "feel and lovers)singing is silence"
         ],
-        "TITLE": "73 Poems, #32",
-        "AUTHOR": "e.e. cummings"
+        "title": "73 Poems, #32",
+        "author": "e.e. cummings"
     },
-    "DONN_01": {
-        "LINES": [
+    "donn_01": {
+        "lines": [
             "I shall be made thy music; as I come",
             "   I tune the instrument here at the door,",
             "   And what I must do then, think here before.",
@@ -82,11 +82,11 @@
             "   Be this my text, my sermon to mine own:",
             "Therefore that he may raise, the Lord throws down."
         ],
-        "TITLE": "Hymn to God, My God, In Sickness",
-        "AUTHOR": "John Donne"
+        "title": "Hymn to God, My God, In Sickness",
+        "author": "John Donne"
     },
-    "ELIO_01": {
-        "LINES": [
+    "elio_01": {
+        "lines": [
             "The dove descending breaks the air",
             "With flame of incandescent terror",
             "Of which the tongues declare",
@@ -103,11 +103,11 @@
             "We only live, only suspire",
             "Consumed by either fire or fire."
         ],
-        "TITLE": "Little Gidding IV",
-        "AUTHOR": "T.S. Eliot"
+        "title": "Little Gidding IV",
+        "author": "T.S. Eliot"
     },
-    "ELIO_02": {
-        "LINES": [
+    "elio_02": {
+        "lines": [
             "What we call the beginning is often the end",
             "And to make and end is to make a beginning.",
             "The end is where we start from. And every phrase",
@@ -157,11 +157,11 @@
             "Into the crowned knot of fire",
             "And the fire and the rose are one."
         ],
-        "TITLE": "Little Gidding V",
-        "AUTHOR": "T.S. Eliot"
+        "title": "Little Gidding V",
+        "author": "T.S. Eliot"
     },
-    "ELIO_03": {
-        "LINES": [
+    "elio_03": {
+        "lines": [
             "We are the hollow men",
             "We are the stuffed men",
             "Leaning together",
@@ -273,11 +273,11 @@
             "*This is the way the world ends*",
             "*Not with a bang but a whimper*"
         ],
-        "TITLE": "The Hollow Men",
-        "AUTHOR": "T.S. Eliot"
+        "title": "The Hollow Men",
+        "author": "T.S. Eliot"
     },
-    "HOPK_01": {
-        "LINES": [
+    "hopk_01": {
+        "lines": [
             "Márgarét, áre you gríeving",
             "Over Goldengrove unleaving?",
             "Leáves like the things of man, you",
@@ -294,11 +294,11 @@
             "It ís the blight man was born for,",
             "It is Margaret you mourn for."
         ],
-        "TITLE": "Spring and Fall",
-        "AUTHOR": "Gerard Manley Hopkins"
+        "title": "Spring and Fall",
+        "author": "Gerard Manley Hopkins"
     },
-    "POPE_01": {
-        "LINES": [
+    "pope_01": {
+        "lines": [
             "Awake, my St. John! Leave all meaner things",
             "To low ambition, and the pride of Kings,",
             "Let us (since Life can little more supply",
@@ -334,11 +334,11 @@
             "   Is the great chain, that draws all to agree,",
             "And drawn supports, upheld by God, or thee?"
         ],
-        "TITLE": "Essay On Man, Epistle I, Part I",
-        "AUTHOR": "Alexander Pope"
+        "title": "Essay On Man, Epistle I, Part I",
+        "author": "Alexander Pope"
     },
-    "SHAK_01": {
-        "LINES": [
+    "shak_01": {
+        "lines": [
             "When I have seen by Time's fell hand defac'd",
             "The rich proud cost of outworn buried age;",
             "When sometime lofty towers I see down-ras'd",
@@ -354,11 +354,11 @@
             "This thought is as a death, which cannot choose",
             "But weep to have that which it fears to lose."
         ],
-        "TITLE": "Sonnet 64",
-        "AUTHOR": "William Shakespeare"
+        "title": "Sonnet 64",
+        "author": "William Shakespeare"
     },
-    "THOM_01": {
-        "LINES": [
+    "thom_01": {
+        "lines": [
             "I",
             "",
             "All all and all the dry worlds lever,",
@@ -407,7 +407,7 @@
             "Socket and grave, the brassy blood,",
             "Flower, flower, all all and all."
         ],
-        "TITLE": "All All and All",
-        "AUTHOR": "Dylan Thomas"
+        "title": "All All and All",
+        "author": "Dylan Thomas"
     }
 }

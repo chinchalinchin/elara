@@ -107,8 +107,7 @@ class Model:
         """
         if model_name is None:
             logger.warning(f"{model_name} is not defined, using default model.")
-            return genai.GenerativeModel(model_name = self.model_config[self._prop_gem][self._prop_dflt],
-                                            system_instruction  = system_instruction,)
+            model_name          = self.model_config[self._prop_gem][self._prop_dflt]
 
         base_paths              =  [ m["path"] for m in self.base_models()]
 
@@ -264,18 +263,6 @@ class Model:
                     system_instruction  = system_instruction
                 ).generate_content(
                     contents = prompt,
-                    # @OPERATIONS
-                    #   Milton, we've discovered there is an undocumented interaction
-                    #   between model versions, response schemas and supported tools.
-                    # 
-                    #   For example, models/gemini-exp-1206 does not support 
-                    #  `code_execution` tool if using a a structured output schema!
-                    #  
-                    #   Of course, the knuckleheads in Development forgot to capture
-                    #   the error logs, so we don't have the response code or exception
-                    #   that is being thrown. Now that operations is aware of the problem,
-                    #   we'll be sure to capture the error log for you next time it pops 
-                    #   up! 
                     tools = tools,
                     generation_config   = generation_config,
                     safety_settings     = safety_settings
@@ -291,7 +278,7 @@ class Model:
                     safety_settings     = safety_settings
                 )
                 
-        # TODO: implement error handling
+        # TODO: implement more error handling
         except exceptions.ServiceUnavailable as e:
             logger.error(f"Gemini Service Unavailable: {e}\n\n{traceback.format_exc()}")
             raise 
@@ -301,7 +288,25 @@ class Model:
             raise
 
         except exceptions.BadRequest as e: 
+            if "400 Tool use with a response mime type" in str(e):
+                logger.warning(f"{model_name} does not support tool use, retrying...")
+                # @OPERATIONS
+                #   Some models do not support tool use when using response schemas and throw the 
+                #   following error,
+                #
+                #       google.api_core.exceptions.InvalidArgument: 400 Tool use with a response mime type: 
+                #           'application/json' is unsupported
+                # 
+                #   So catch those errors and remove `tools` from the arguments.
+                return self.respond( 
+                    prompt              = prompt, 
+                    generation_config   = generation_config, 
+                    safety_settings     = safety_settings, 
+                    tools               = None, 
+                    system_instruction  = system_instruction, 
+                    model_name          = model_name)
             logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
+
             raise
 
         except Exception as e:

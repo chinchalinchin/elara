@@ -11,132 +11,162 @@ import pathlib
 import traceback
 
 # Application Modules
+import constants
 import exceptions 
 
 
-logger = logging.getLogger(__name__)
+logger                          = logging.getLogger(__name__)
 
 
 class Directory:
-    directory                           = None
+    """
+    TODO: explain
+    """
+    directory                   = None
     """Local directory"""
-    summary_config                      = None
-    """Summarize function configuration"""
-    summary_file                        = None
-    """Summary file location"""
+    directory_config            = None
+    """Directory summary configuration"""
 
-    def __init__(
-        self,
-        directory : str,
-        summary_file : str,
-        summary_config : dict
-    ):
+    # Directory Properties
+    ## Summary Properties
+    _prop_sum                   = constants.DirectoryProps.SUMMARY.value
+    _prop_sum_dir               = constants.DirectoryProps.SUMMARY_DIRECTORY.value
+    _prop_sum_tree              = constants.DirectoryProps.SUMMARY_TREE.value
+    _prop_sum_files             = constants.DirectoryProps.SUMMARY_FILES.value
+    _prop_sum_type              = constants.DirectoryProps.SUMMARY_TYPE.value
+    _prop_sum_data              = constants.DirectoryProps.SUMMARY_DATA.value
+    _prop_sum_lang              = constants.DirectoryProps.SUMMARY_LANGUAGE.value
+    _prop_sum_name              = constants.DirectoryProps.SUMMARY_NAME.value
+    ## Configuration Properties
+    _prop_sum_directives        = constants.DirectoryProps.SUMMARY_DIRECTIVES.value
+    _prop_sum_includes          = constants.DirectoryProps.SUMMARY_INCLUDES.value
+    _prop_sum_excludes          = constants.DirectoryProps.SUMMARY_EXCLUDES.value
+    _prop_sum_ext               = constants.DirectoryProps.SUMMARY_EXT.value
+    _prop_sum_file              = constants.DirectoryProps.SUMMARY_FILE.value
+
+    def __init__(self, directory : str, directory_config : dict) -> None:
         """
         Initialize Directory object.
         
         :param dictectory: The location of the directory.
-        :type directory: str
-        :param summary_file: File to which the summary will be written.
-        :type summary_file: str
-        :param summary_config: Summary funcion configuration.
-        :type summary_config: dict
+        :type directory: `str`
+        :param directory_config: Summary funcion configuration.
+        :type directory_config: dict
         """
-        self.directory                  = directory
-        self.summary_config             = summary_config
-        self.summary_file               = summary_file
+        self.directory          = directory
+        self.directory_config   = directory_config
 
     def _extensions(self):
         """
         Returns all valid extensions
         """
         return [
-            k 
-            for k 
-            in self.summary_config.get("DIRECTIVES").keys()
-        ] + self.summary_config.get("INCLUDES").get("EXT")
+            k for k in self.directory_config.get(self._prop_sum)\
+                                                .get(self._prop_sum_directives)\
+                                                .keys()
+        ] + self.directory_config.get(self._prop_sum)\
+                                    .get(self._prop_sum_includes)\
+                                    .get(self._prop_sum_ext)
 
     def _tree(self) -> str:
         """
         Reads the directory structure and returns it as a formatted string.
 
-        :param directory: The directory to read.
-        :type directory: str
-        :returns: A string representing the directory structure, or an error message if the directory does not exist or can't be read.
-        :rtype: str
+        :returns: A string representing the dir_ectory structure, or an error message if the directory does not exist or can't be read.
+        :rtype: `str`
         """
         dir_path = pathlib.Path(self.directory)
         if not dir_path.exists():
             raise ValueError(f"Error: Directory not found: {self.directory}")
         
         try:
-            structure                   = ""
+            structure           = ""
 
             for path in sorted(dir_path.rglob("*")):
-                depth                   = len(path.relative_to(dir_path).parts)
-                indent                  = "    " * depth
+                depth           = len(path.relative_to(dir_path).parts)
+                indent          = "    " * depth
 
+                excludes_exts   = self.directory_config.get(self._prop_sum)\
+                                                        .get(self._prop_sum_excludes)\
+                                                        .get(self._prop_sum_ext)
                 if path.is_dir():
-                    structure           += f"{indent}{path.name}/\n"
+                    structure   += f"{indent}{path.name}/\n"
 
-                elif path.suffix not in self.summary_config.get("EXCLUDES").get("EXT"):
-                    structure           += f"{indent}{path.name}\n"
+                elif path.suffix not in excludes_exts:
+                    structure   += f"{indent}{path.name}\n"
 
             return structure
         except Exception as e:
-            raise ValueError(f"Error reading {self.directory}:\n{e}:\n\n{traceback.format_exc()}")
+            raise ValueError(
+                f"Error reading {self.directory}:\n{e}:\n\n{traceback.format_exc()}")
     
+
     def summary(self) -> dict:
         """
         Generate a dictionary summary of a directory
 
         :returns: Dictionary summary of a directory
-        :rtype: dict
+        :rtype: `dict`
         """
         if not os.path.isdir(self.directory):
             raise exceptions.DirectoryNotFoundError(
                 f"{self.directory} does not exist."
             )
         
-        dir_summary                     = { }
-        dir_summary["summary"]          = {
-            "directory"                 : os.path.basename(self.directory),
-            "tree"                      : self._tree(),
-            "files"                     : []
+        dir_summary                 = { }
+        dir_summary[self._prop_sum] = {
+            self._prop_sum_dir      : os.path.basename(self.directory),
+            self._prop_sum_tree     : self._tree(),
+            self._prop_sum_files    : []
         }
-
-        for root, _, files in os.walk(self.directory): # Use `os.walk` to recursivle scan sub-directories.
-            
-            files.sort() # traverse files in alphabetical order
+        file_excludes               = self.directory_config.get(self._prop_sum)\
+                                                            .get(self._prop_sum_excludes)\
+                                                            .get(self._prop_sum_file)
+        directives                  = self.directory_config.get(self._prop_sum)\
+                                                            .get(self._prop_sum_directives)\
+                                                            .keys()
+        # Use `os.walk` to recursivle scan sub-directories.
+        for root, _, files in os.walk(self.directory): 
+            # traverse files in alphabetical order
+            files.sort()
             for file in files:
-                if file in self.summary_config.get("EXCLUDES").get("FILE"):
+                if file in file_excludes:
                     continue
 
-                base, ext               = os.path.splitext(file)
+                ext                 = os.path.splitext(file)[1]
 
-                if ext not in self._extensions() \
-                    or base == self.summary_file:
+                if ext not in self._extensions():
                     continue
 
-                file_path               = os.path.join(root, file)
-                directive               = ext in self.summary_config.get("DIRECTIVES").keys()
+                file_path           = os.path.join(root, file)
+                directive           = ext in directives
 
                 try:
                     with open(file_path, "r") as infile:
-                        data            = infile.read()
+                        data        = infile.read()
 
                     if directive:
-                        dir_summary["summary"]["files"] += [{
-                            "type"      : "code",
-                            "data"      : data,
-                            "lang"      : self.summary_config.get("DIRECTIVES").get(ext),
-                            "name"      : os.path.relpath(file_path, self.directory)
+                        dir_summary[self._prop_sum][self._prop_sum_files] += [{
+                            self._prop_sum_type     
+                                    : "code",
+                            self._prop_sum_data
+                                    : data,
+                            self._prop_sum_lang
+                                    : self.directory_config.get(self._prop_sum)\
+                                                            .get(self._prop_sum_directives)\
+                                                            .get(ext),
+                            self._prop_sum_name
+                                    : os.path.relpath(file_path, self.directory)
                         }]
                         continue
 
-                    dir_summary["summary"]["files"] += [{
-                        "type"          : "raw",
-                        "data"          : data,
-                        "name"          : os.path.relpath(file_path, self.directory)
+                    dir_summary[self._prop_sum][self._prop_sum_files] += [{
+                        self._prop_sum_type
+                                    : "raw",
+                        self._prop_sum_data
+                                    : data,
+                        self._prop_sum_name
+                                    : os.path.relpath(file_path, self.directory)
                     }]
                 except FileNotFoundError as e:
                     logger.error(F"Error reading file {file_path}: {e}")

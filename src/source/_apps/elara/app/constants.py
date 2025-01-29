@@ -22,6 +22,10 @@ class Functions(enum.Enum):
     TUNE                = "tune"
 
 class AppProps(enum.Enum):
+    """
+    Application property key enumeration
+    """
+    # Structured Output Schemas and Mime Types
     ANALYZE_SCHEMA      = "functions.analyze.schema"
     ANALYZE_MIME        = "function.analyze.mime"
     BRAINSTORM_SCHEMA   = "functions.brainstorm.schema"
@@ -32,6 +36,8 @@ class AppProps(enum.Enum):
     REVIEW_MIME_TYPE    = "funcctions.review.mime"
     REQUEST_SCHEMA      = "functions.request.schema"
     REQUEST_MIME        = "functions.request.mime"
+    # Function Properties
+    ANALYZE_LATEX       = "functions.analyze.latex_preamble"
 
 class FactoryProps(enum.Enum):
     """
@@ -68,6 +74,18 @@ class VersionControl(enum.Enum):
 
 # OBJECT PROPERTIES
 
+class CacheProps(enum.Enum):
+    """
+    Cache property key enumeration
+    """
+    # Internal Properties
+    CURRENT_MODEL       = "current_model"
+    CURRENT_PERSONA     = "current_persona"
+    CURRENT_PROMPTER    = "current_prompter"
+    TUNED_MODELS        = "tuned_models"
+    TUNING_MODEL        = "tuning_model"
+
+
 class CommandLineProps(enum.Enum):
     """
     Command line argument property key enumeration.
@@ -90,20 +108,6 @@ class CommandLineProps(enum.Enum):
     TYPE                = "type"
 
 
-class ConvoProps(enum.Enum):
-    """
-    Conversation property key enumeration.
-    """
-    # Internal Properties
-    HISTORY             = "history"
-    MEMORY              = "memory"
-    MESSAGE             = "msg"
-    TIMESTAMP           = "timestamp"
-    NAME                = "name"
-    # Configuration Properties
-    SCHEMA_FILENAME     = "schema_filename"
-    TIMEZONE_OFFSET     = "timezone_offset"
-
 class ConfigProps(enum.Enum):
     """
     Configuration property key enumeration.
@@ -120,6 +124,43 @@ class ContextProps(enum.Enum):
     PROOFS              = "proofs"
     QUOTES              = "quotes"
 
+
+class ConvoProps(enum.Enum):
+    """
+    Conversation property key enumeration.
+    """
+    # Internal Properties
+    HISTORY             = "history"
+    MEMORY              = "memory"
+    MESSAGE             = "msg"
+    TIMESTAMP           = "timestamp"
+    NAME                = "name"
+    # Configuration Properties
+    SCHEMA_FILENAME     = "schema_filename"
+    TIMEZONE_OFFSET     = "timezone_offset"
+
+
+class DirectoryProps(enum.Enum):
+    """
+    Directory property key enumeration
+    """
+    # Internal Properties
+    ## Summary Properties
+    SUMMARY             = "summary"
+    SUMMARY_DIRECTORY   = "directory"
+    SUMMARY_TREE        = "tree"
+    SUMMARY_FILES       = "files"
+    SUMMARY_TYPE        = "type"
+    SUMMARY_DATA        = "data"
+    SUMMARY_LANGUAGE    = "lang"
+    SUMMARY_NAME        = "name"
+    # Configuration Properties
+    ## Summary Configuration Properties
+    SUMMARY_DIRECTIVES  = "directives"
+    SUMMARY_INCLUDES    = "includes"
+    SUMMARY_EXCLUDES    = "excludes"
+    SUMMARY_EXT         = "ext"
+    SUMMARY_FILE        = "file"
 
 class PersonaProps(enum.Enum):
     """
@@ -155,16 +196,6 @@ class ModelProps(enum.Enum):
     TUNING              = "tuning"
     SOURCE              = "source"
 
-class CacheProps(enum.Enum):
-    """
-    Cache property key enumeration
-    """
-    # Internal Properties
-    CURRENT_MODEL       = "current_model"
-    CURRENT_PERSONA     = "current_persona"
-    CURRENT_PROMPTER    = "current_prompter"
-    TUNED_MODELS        = "tuned_models"
-    TUNING_MODEL        = "tuning_model"
 
 class RepoProps(enum.Enum):
     """
@@ -189,6 +220,29 @@ class RepoProps(enum.Enum):
     CREDS               = "creds"
     HEADERS             = "headers"
 
+
+class TerminalProps(enum.Enum):
+    """
+    Terminal property key enumeration.
+    """
+    # Internal Properties
+    REQUEST             = "request"
+    # Configuration Properties
+    ## Shell Properties
+    COMMANDS            = "commands"
+    FUNCTIONS           = "functions"
+    DISPLAY             = "display"
+    INIT                = "init"
+    TITLE               = "title"
+    START               = "start"
+    EXIT                = "exit"
+    HELP                = "help"
+    PROMPT              = "prompt"
+    ## Gherkin Properties
+    GHERKIN             = "gherkin"
+    GHERKIN_BLOCKS      = "blocks"
+    GHERKIN_HELP        = "help"
+    ## 
 # VARIOUS PROPERTIES
 
 class ReviewScore(enum.Enum):

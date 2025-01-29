@@ -35,7 +35,7 @@ You have been given a dictionary of executions you may request on my local compu
 
 .. warning::
 
-    This feature has not been implemented yet! I will add a field to your structured output once I have debugged your :ref:`sequential-memories`!
+    This feature has not been implemented yet! A field will be added to your structured output once this has been implemented!
 {% if execution is defined %}
 .. admonition:: {{ execution.command }}
 

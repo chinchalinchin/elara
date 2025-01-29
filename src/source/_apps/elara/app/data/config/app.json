@@ -113,7 +113,7 @@
             "schema_filename": "_new"
         },
         "directory": {
-            "summarize": {
+            "summary": {
                 "directives": {
                     ".py": "python",
                     ".sh": "bash",
@@ -138,7 +138,13 @@
                         ".gz"
                     ],
                     "file": [
-                        "context.json"
+                        "poems.json",
+                        "proofs.json",
+                        "quotes.json",
+                        "axiom.json",
+                        "elara.json",
+                        "milton.json",
+                        "valis.json"
                     ],
                     "dir": []
                 },
@@ -182,25 +188,23 @@
                     "then": "then\n\tstate the expected outcome of the scenario: "
                 }
             },
-            "converse": {
-                "display": {
-                    "prompt": "\tprompt: ",
-                    "init": "starting an interactive terminal...",
-                    "title": "\n---------------\n  elara shell  \n---------------\n",
-                    "start": "\n\ttype exit() to quit.\n\ttype help() to see list of commands.\n\n",
-                    "help": "todo"
-                },
-                "commands": {
-                    "exit": "exit()",
-                    "help": "help()"
-                },
-                "functions": [
-                    "current_persona",
-                    "current_prompter",
-                    "current_model",
-                    "directory"
-                ]
-            }
+            "display": {
+                "prompt": "\tprompt: ",
+                "init": "starting an interactive terminal...",
+                "title": "\n---------------\n  elara shell  \n---------------\n",
+                "start": "\n\ttype exit() to quit.\n\ttype help() to see list of commands.\n\n",
+                "help": "todo"
+            },
+            "commands": {
+                "exit": "exit()",
+                "help": "help()"
+            },
+            "functions": [
+                "current_persona",
+                "current_prompter",
+                "current_model",
+                "directory"
+            ]
         },
         "model": {
             "gemini": {

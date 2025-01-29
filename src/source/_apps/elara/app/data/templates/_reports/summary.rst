@@ -1,5 +1,5 @@
-{%- set summary = includes.get('summary') %}
-.. _{{ summary.get('directory').replace("/", "-").replace(".", "-")}}-directory-report:
+{%- set summary = reports.get('summary') %}
+.. _{{ summary.get('directory').replace("/", "-").replace(".", "-").replace("_","")}}-directory-report:
 
 {{ '-' * summary.get('directory') | length }}
 {{ summary.get('directory') }}
@@ -26,7 +26,7 @@ Files
     Some of the files may have been excluded from the summary to conserve space.
 {%- for file in summary.get('files') %}
 
-.. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-") }}:
+.. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-").replace("_","") }}:
  
 {{ file.name }}
 {{ '^' * file.name | length }}

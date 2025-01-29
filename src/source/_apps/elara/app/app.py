@@ -6,7 +6,6 @@ Objects for orchestrating the application.
 """
 # Standard Library Modules
 import logging 
-import typing
 
 # Application Modules
 import constants
@@ -66,7 +65,9 @@ class App:
     _prop_review_mime               = constants.AppProps.REVIEW_MIME_TYPE.value
     _prop_request_schema            = constants.AppProps.REQUEST_SCHEMA.value
     _prop_request_mime              = constants.AppProps.REQUEST_MIME.value
-     
+    ## Special Properties
+    _prop_analyze_latex             = constants.AppProps.ANALYZE_LATEX.value
+
     def __init__(self):
         """
         Initialize a new application object.
@@ -94,7 +95,7 @@ class App:
         buffer[constants.CacheProps.CURRENT_PERSONA.value] \
                                     = persona
         latex_preamble              = { 
-            "latex"                 : self.config.get("FUNCTIONS.ANALYZE.LATEX_PREAMBLE") 
+            "latex"                 : self.config.get(self._prop_analyze_latex) 
         }
         context                     = self.context.vars(
                                         self.personas.context(persona))
@@ -177,11 +178,11 @@ class App:
             return schemas.Output(
                 prompt              = parsed_prompt
             )
-        response_schema             = self.config.get("FUNCTIONS.CONVERSE.SCHEMA")
+        response_schema             = self.config.get(self._prop_converse_schema)
         response_config             = self.personas.get(constants.PersonaProps.GENERATION_CONFIG.value, persona)
         response_config.update({
             "response_schema"       : response_schema,
-            "response_mime_type"    : self.config.get("FUNCTIONS.CONVERSE.MIME")
+            "response_mime_type"    : self.config.get(self._prop_converse_mime)
         })
         response                    = self.model.respond(
             prompt                  = parsed_prompt, 
@@ -282,8 +283,8 @@ class App:
         # STEP 5. Append function response schema to persona's generation configuration.
         response_config             = self.personas.get(constants.PersonaProps.GENERATION_CONFIG.value, persona)
         response_config.update({
-            "response_schema"       : self.config.get("FUNCTIONS.REVIEW.SCHEMA"),
-            "response_mime_type"    : self.config.get("FUNCTIONS.REVIEW.MIME")
+            "response_schema"       : self.config.get(self._prop_review_schema),
+            "response_mime_type"    : self.config.get(self._prop_review_mime)
         })
         # STEP 6. Pass contextualized prompt and function configuration to model
         response                    = self.model.respond(
@@ -403,12 +404,23 @@ class App:
             self.logger(f"Invalid operation: {operation_name}")
             return schemas.Output()
         
-        if arguments.has_tty_args() and operation_name == "converse": 
+        # @DATA
+        #   Only the ``converse`` function supports interactive mode so far. 
+        #   The other functions would benefit from interactive modes, but 
+        #   in order to implement that interactivity, the templates for those
+        #   functions in ``templates/_functions/*`` will need redesigned to
+        #   support conversational threads. Some of the functions seem more 
+        #   like one-off functions, like ``review`` and ``request``. We need
+        #   to brainstorm on which functions require interactive and which ones
+        #   are "static".
+        #
+        #   AI is an interesting problem! Don't you agree, Milton?!
+        if operation_name == constants.Functions.CONVERSE.value: 
             arguments.view              = True
             self.terminal.interact(
-                callable                = lambda: self.converse(arguments),
+                callable                = lambda args: self.converse(args),
                 printer                 = printer,
-                app                     = self
+                args                    = arguments
             )
             return schemas.Output()
             

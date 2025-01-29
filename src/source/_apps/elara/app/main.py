@@ -43,7 +43,7 @@ def summarize(application: app.App, arguments: schemas.Arguments) -> schemas.Out
     :rtype: `schemas.Output`
     """
     return schemas.Output(
-        includes            = application.directory.summary()
+        reports             = application.directory.summary()
     )
 
 
@@ -57,7 +57,7 @@ def show(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
     :rtype: `schemas.Output`
     """
     return schemas.Output(
-        includes            = application.model.vars()
+        reports             = application.model.vars()
     )
 
 
@@ -111,14 +111,24 @@ def main() -> None:
 
     operation_name          = these_args.operation
 
+    import pprint
+
+    pprint.pp(these_args.to_dict())
+
     if operation_name in admin_operations:
         these_args.view     = True
         out                 = admin_operations[operation_name](this_app, these_args)
-
-    else:
-        out                 = this_app.run(these_args)
-
+        this_printer.out(these_args, out)
+        return 
+    
+    elif these_args.terminal:
+        this_app.tty(these_args, this_printer)
+        return
+    
+    out                     = this_app.run(these_args)
     this_printer.out(these_args, out)
+    return 
+
 
 if __name__ == "__main__":
     main()

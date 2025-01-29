@@ -1,4 +1,4 @@
-{%- set repository = includes.get('repository') %}
+{%- set repository = reports.get('repository') %}
 .. _repository-report:
 
 Repository

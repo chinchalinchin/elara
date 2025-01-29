@@ -303,7 +303,7 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        if not arguments.has_dir_args() and self.app.logger:
+        if not arguments.directory and self.app.logger:
             self.app.logger.warning("Directory missing from arguments, ignoring initialization.")
             return self 
         

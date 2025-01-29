@@ -115,16 +115,16 @@ class Context:
         """
         res                     = {}
         for con_type, type_keys in context_keys.items():
-
             if con_type not in self.context.keys():
                 logger.warning(f"Invalid context type: {con_type}")
                 continue 
 
+            res[con_type]       = []
             for con_key in type_keys:
                 if con_key not in self.context[con_type].keys():
                     logger.warning(f"Invalid context key {con_key} for {con_type}.")
                     continue
 
-                res[con_type] = self.context[con_type][con_key]
+                res[con_type].append(self.context[con_type][con_key])
 
         return { "context": res }

@@ -10,15 +10,15 @@
     ],
     "tuning": [],
     "context": {
-        "quotations": [
-            "BADI_01",
-            "HEID_01",
-            "SART_01"
+        "quotes": [
+            "badi_01",
+            "heid_01",
+            "sart_01"
         ],
         "poems": [
-            "ELIO_01",
-            "CUMM_01",
-            "THOM_01"
+            "elio_01",
+            "cumm_01",
+            "thom_01"
         ],
         "proofs": []
     },
