@@ -67,6 +67,8 @@ class App:
     _prop_request_mime              = constants.AppProps.REQUEST_MIME.value
     ## Special Properties
     _prop_analyze_latex             = constants.AppProps.ANALYZE_LATEX.value
+    ## Nested Object Properties
+
 
     def __init__(self):
         """
@@ -81,6 +83,58 @@ class App:
         }
 
 
+    def _vars(self, func : constants.Functions) -> dict:
+        """
+        Get templating variables for a given function.
+
+        :param func: Function name for which to retrieve templating variables.
+        :type func: `constants.Functions`.
+        :returns: Dictionary of template variables.
+        :rtype: `dict`
+        """
+        # Ensure functional persona is used.
+        buffer                      = self.cache.vars()
+        persona                     = self.personas.function(func)
+        buffer.update({
+            constants.CacheProps.CURRENT_PERSONA.value
+                                    : persona
+        })
+        context                     = self.context.vars(
+                                        self.personas.context(persona))
+        # Base level template variables
+        template_vars               = { **context, **self.personas.vars(persona) }
+        # Function leveltemplate variables
+        if func == constants.Functions.ANAYLZE:
+            self.logger.info("Injecting file summary into prompt...")
+            template_vars.update(**buffer, **self.directory.summary(), **{
+                "latex"             : self.config.get(self._prop_analyze_latex)
+            })
+
+        if func == constants.Functions.CONVERSE:
+            template_vars.update(**self.cache.vars(), 
+                                 **self.conversations.vars(persona))
+            if self.directory:
+                self.logger.info("Injecting file summary into prompt...")
+                template_vars.update({
+                    "reports"       : self.directory.summary()
+                })
+        
+        elif func == constants.Functions.REQUEST.value:
+            self.logger.info("Injecting Gherkin script into prompt...")
+            template_vars.update(**buffer, {
+                "reports"           : self.terminal.gherkin()
+            })
+
+        elif func == constants.Functions.REVIEW.value:
+            self.logger.info("Injecting file summary into prompt...")
+            template_vars.update(**buffer, **self.repository.vars(), **{
+                "reports"               : self.directory.summary()
+            })
+        
+        return template_vars
+        
+
+
     def analyze(self, arguments: schemas.Arguments) -> schemas.Output:
         """
         This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
@@ -90,26 +144,11 @@ class App:
         :returns: Data structure containing parsed prompt and response.
         :rtype: `schemas.Output`
         """
-        buffer                      = self.cache.vars()
         persona                     = self.personas.function(constants.Functions.ANAYLZE.value)
-        buffer[constants.CacheProps.CURRENT_PERSONA.value] \
-                                    = persona
-        latex_preamble              = { 
-            "latex"                 : self.config.get(self._prop_analyze_latex) 
-        }
-        context                     = self.context.vars(
-                                        self.personas.context(persona))
-        analyze_vars                = {
-            **buffer,
-            **context,
-            **latex_preamble,
-            **self.context.vars()
-            **self.personas.vars(persona),
-            **self.directory.summary(),
-        }
+
         parsed_prompt               = self.templates.function(
             temp                    = constants.Functions.ANAYLZE.value, 
-            variables               = analyze_vars
+            variables               = self._vars(constants.Functions.ANAYLZE.value)
         )
         if arguments.render:
             return schemas.Output(
@@ -157,33 +196,23 @@ class App:
             msg                     = arguments.prompt,
             persist                 = not arguments.render
         )
-        context                     = self.context.vars(
-                                        self.personas.context(persona)) 
-        template_vars               = {
-            **context,
-            **self.cache.vars(), 
-            **self.personas.vars(persona),
-            **self.conversations.vars(persona)
-        } 
-        if arguments.directory is not None:
-            self.logger.info("Injecting file summary into prompt...")
-            template_vars.update({
-                "reports"          : self.directory.summary()
-            })
         parsed_prompt               = self.templates.function(
             template                = constants.Functions.CONVERSE.value, 
-            variables               = template_vars
+            variables               = self._vars(constants.Functions.CONVERSE.value)
         )
+
         if arguments.render:
             return schemas.Output(
                 prompt              = parsed_prompt
             )
+        
         response_schema             = self.config.get(self._prop_converse_schema)
         response_config             = self.personas.get(constants.PersonaProps.GENERATION_CONFIG.value, persona)
         response_config.update({
             "response_schema"       : response_schema,
             "response_mime_type"    : self.config.get(self._prop_converse_mime)
         })
+
         response                    = self.model.respond(
             prompt                  = parsed_prompt, 
             generation_config       = response_config,
@@ -212,14 +241,8 @@ class App:
         :returns: Object containing the contextualized prompt and model response.
         :rtype: `schemas.Output`
         """
-        buffer                      = self.cache.vars()
         persona                     = self.personas.function(constants.Functions.REQUEST.value)
-        buffer[constants.CacheProps.CURRENT_PERSONA.value] \
-                                    = persona
-        request                     = self.terminal.gherkin()
-        context                     = self.context.vars(
-                                        self.personas.context(persona))
-        request_vars                = { **context, **request, **buffer }
+
         parsed_prompt               = self.templates.function(
             template                = constants.Functions.REQUEST.value, 
             request_vars            = request_vars
@@ -252,27 +275,12 @@ class App:
         """
 
         # STEP 1. Gather function data into local variables
-        buffer                      = self.cache.vars()
         persona                     = self.personas.function(constants.Functions.REVIEW.value) 
-        ## NOTE: Ensure function persona is set and hold in buffer to prevent cache overwrite
-        buffer[constants.CacheProps.CURRENT_PERSONA.value] \
-                                    = persona 
-        reports                     = { 
-            "reports"              : self.directory.summary() 
-        }
-        context                     = self.context.vars(
-                                        self.personas.context(persona))
-        # STEP 2. Merge function template variables
-        review_variables            = { 
-            **reports,
-            **buffer,
-            **context,
-            **self.repository.vars(),
-        }
+
         # STEP 3. Render function template
         review_prompt               = self.templates.function(
             template                = constants.Functions.REVIEW.value, 
-            variables               = review_variables
+            variables               = self._vars(constants.Functions.REVIEW.value)
         )
         # STEP 4. Halt function if executing with dry-run ``arguments.render`` flag.
         ## NOTE: This corresponds to the CLI argument ``--render``.

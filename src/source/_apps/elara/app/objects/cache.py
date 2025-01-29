@@ -125,10 +125,6 @@ class Cache:
                 logger.warning("Non-existent cache key!")
                 continue 
 
-            if value is None:
-                logger.warning("Empy configuration value!")
-                continue 
-
             if isinstance(self.data[key], list) and isinstance(value, list):
                 updated             = True
                 self.data[key].extend(value)

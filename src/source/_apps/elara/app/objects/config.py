@@ -49,42 +49,6 @@ class Config:
         if override:
             self._override()
 
-    @staticmethod
-    def _env(env_var: str, default: str) -> typing.Any:
-        """
-        Pull environment variables and parse into Python data structures.
-
-        :returns: Parsed environment variable or default value.
-        :rtype: `typing.Any`
-        """
-        value                   = os.environ.get(env_var)
-
-        if value is not None:
-
-            if isinstance(default, bool):
-                return value.lower() == "true"
-            
-            if isinstance(default, int):
-                try:
-                    return int(value)
-                
-                except ValueError:
-                    logger.error(
-                        f"Environment variable {env_var} must be int! Using default value.")
-                    return default
-            
-            if isinstance(default, float):
-                try:
-                    return float(value)
-                
-                except ValueError:
-                    logger.error(
-                        f"Environment variable {env_var} must be float! Using default value.")
-                    return default 
-                
-            return value
-        return default 
-    
 
     def _load(self) -> None:
         """
@@ -118,7 +82,7 @@ class Config:
 
         for key, env_var in env_overrides.items():
             default             = util.unnest(key.split(delimiter), self.data)
-            value               = self._env(env_var, default)
+            value               = os.environ.get(env_var, default)
             
             if value != default:
                 util.nest(key.split(delimiter), self.data, value)

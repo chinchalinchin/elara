@@ -12,7 +12,7 @@ import logging
 # Application Modules
 import constants
 import exceptions
-import util
+
 
 logger                              = logging.getLogger(__name__)
 

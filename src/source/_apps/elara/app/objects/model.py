@@ -85,7 +85,7 @@ class Model:
     
 
     @staticmethod
-    def _is_tuning_model(m):
+    def _is_tuning_model(m) -> bool:
         """
         Determine if a model is a tuning model based on the presence of fields in metadata. 
 
@@ -114,7 +114,7 @@ class Model:
         if model_name in base_paths:
             logger.info(f"Appending system instructions to base model: {model_name}")
             return genai.GenerativeModel(model_name = model_name,
-                                            system_instruction  = system_instruction)
+                                            system_instruction = system_instruction)
         
         logger.info(f"Retrieving model without system instructions: {model_name}")
         return genai.GenerativeModel(model_name = model_name)
@@ -183,6 +183,7 @@ class Model:
         except Exception as e:
             logger.error(f"Unknown error retrieving tuned models: {e}")
             return []
+    
     
     @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
                     maximum = 128.0, multiplier = 2.0, timeout = 600)

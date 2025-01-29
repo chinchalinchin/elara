@@ -224,8 +224,8 @@
         "objects.model.gemini.tuning.source": "TUNING_SOURCE",
         "objects.model.gemini.key": "GEMINI_KEY",
         "objects.model.gemini.default": "GEMINI_DEFAUlT",
-        "objects.repo.vcs": "VCS",
-        "objects.repo.auth.creds": "VCS_TOKEN",
+        "objects.repository.vcs": "VCS",
+        "objects.repository.auth.creds": "VCS_TOKEN",
         "functions.converse.timezone_offset": "TIMEZONE_OFFSET",
         "functions.analyze.latex_preamble": "LATEX_PREAMBLE",
         "logs.level": "LOGS_LEVEL"

@@ -50,7 +50,7 @@ Your decision will be used to determine if the pull request should be marked for
 
 Any comments in your review will be appended to the pull request as a comment for the next engineer to implement. All of this will be covered in more detail in the :ref:`next section <response-schema>`. I really need to go get my golf clubs and get ready, or else I'll be late. The data team will meet you in the next section to pick up where I left off.
 
-{% include '_schemas/review.rst' %}
+{% include '_functions/_schemas/review.rst' %}
 
 {% include '_context/language.rst' %}
 
