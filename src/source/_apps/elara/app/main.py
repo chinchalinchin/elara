@@ -6,9 +6,7 @@ Module for command line interface.
 """
 # Standard Library Modules
 import logging
-import os
 import typing 
-
 
 # Application Modules
 import app
@@ -51,48 +49,6 @@ def logs(schema : str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     logger.addHandler(console_handler)
     return
 
-def clear(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
-    """
-    Parses command line arguments and uses them to clear application data.
-
-    :param app: Application object.
-    :type app: `app.App`
-    :returns: Null data structure
-    :rtype: `schemas.Output`
-    """
-    for persona in arguments.clear:
-        application.conversations.clear(persona)
-
-    return schemas.Output()
-
-
-def summarize(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
-    """
-    Generate a RestructuredText (RST) summary of a local directory.
-
-    :param app: Application object.
-    :type app: `app.App`
-    :returns: Data structure containing the directory metadata and contents.
-    :rtype: `schemas.Output`
-    """
-    return schemas.Output(
-        reports             = application.directory.summary()
-    )
-
-
-def show(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
-    """
-    Generate a RestructuredText (RST) summary of application metadata.
-
-    :param app: Application object.
-    :type app: `app.App`
-    :returns: Data structure containing application metadata.
-    :rtype: `schemas.Output`
-    """
-    return schemas.Output(
-        reports             = application.model.vars()
-    )
-
 
 def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     """
@@ -120,11 +76,11 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
                                 .with_repository(arguments) \
                                 .build(arguments)
     
-    prnter                  = factories.PrinterFactory().build()
+    prnter                  = printer.Printer()
 
     application.cache.update(**arguments.to_dict())
          
-    prnter.debug(arguments)
+    prnter.out(arguments, application.debug())
     
     log_file                = app_factory.log_file()
     log_level               = application.config.get(constants.LogProps.LEVEL.value)
@@ -142,22 +98,7 @@ def main() -> None:
     this_app, these_args, this_printer    \
                             = init()
 
-    # Administrative function dispatch dictionary
-    admin_operations        = {
-        "clear"             : clear,
-        "summarize"         : summarize,
-        "show"              : show,
-    }
-
-    operation_name          = these_args.operation
-
-    if operation_name in admin_operations:
-        these_args.view     = True
-        out                 = admin_operations[operation_name](this_app, these_args)
-        this_printer.out(these_args, out)
-        return 
-    
-    elif these_args.terminal:
+    if these_args.terminal:
         this_app.tty(these_args, this_printer)
         return
     

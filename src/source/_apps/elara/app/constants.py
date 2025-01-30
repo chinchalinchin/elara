@@ -14,12 +14,20 @@ class Functions(enum.Enum):
     """
     Application function key enumeration.
     """
+    ## Administrative Functions
+    CLEAR               = "clear"
+    DEBUG               = "debug"
+    ## Rendering Functions 
+    SUMMARIZE           = "summarize"
+    ## Model Functions
+    MODELS              = "models"
+    TUNE                = "tune"
+    ## Generative Functions
     BRAINSTORM          = "brainstorm"
     CONVERSE            = "converse"
     FORMALIZE           = "formalize"
     REVIEW              = "review"
     REQUEST             = "request"
-    TUNE                = "tune"
 
 
 class AppProps(enum.Enum):

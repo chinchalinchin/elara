@@ -181,6 +181,17 @@
     ],
     "operations": [
         {
+            "name": "brainstorm",
+            "help": "Orchestrate a brainstorming session with the personas by providing a list of key-words.",
+            "arguments": [
+                "view",
+                "output",
+                "concepts",
+                "render",
+                "directory"
+            ]
+        },
+        {
             "name": "converse",
             "help": "Chat with a Gemini model persona.",
             "arguments": [
@@ -208,30 +219,10 @@
             ]
         },
         {
-            "name": "brainstorm",
-            "help": "Orchestrate a brainstorming session with the personas by providing a list of key-words.",
-            "arguments": [
-                "view",
-                "output",
-                "concepts",
-                "render",
-                "directory"
-            ]
-        },
-        {
             "name": "request",
             "help": "Template a Gherkin-style feature request and post it to the Gemini API.",
             "arguments": [
                 "render",
-                "view",
-                "output"
-            ]
-        },
-        {
-            "name": "summarize",
-            "help": "Generate an RST formatted summary of a local directory. Summary will be written to the directory it is summarizing.",
-            "arguments": [
-                "directory",
                 "view",
                 "output"
             ]
@@ -253,6 +244,15 @@
             ]
         },
         {
+            "name": "summarize",
+            "help": "Generate an RST formatted summary of a local directory. Summary will be written to the directory it is summarizing.",
+            "arguments": [
+                "directory",
+                "view",
+                "output"
+            ]
+        },
+        {
             "name": "clear",
             "default": null,
             "help": "Purge persona data.",
@@ -267,9 +267,9 @@
             "arguments": []
         },
         {
-            "name": "show",
+            "name": "models",
             "default": null,
-            "help": "Display application metadata.",
+            "help": "Display model metadata.",
             "arguments": [
                 "output"
             ]

@@ -7,22 +7,6 @@ Objects for managing application and service responses.
 # Standard Library Modules
 import dataclasses
 
-@dataclasses.dataclass
-class Output:
-    """
-    Data structure for managing application output.
-    """
-    application             : str | None = None
-    response                : dict | None = None
-    reports                 : dict | None = None
-
-    def to_dict(self):
-        return {
-            field.name: getattr(self, field.name)
-            for field in dataclasses.fields(self)
-            if getattr(self, field.name) is not None
-        }
-
 
 @dataclasses.dataclass
 class Arguments:
@@ -79,18 +63,3 @@ class Arguments:
             for field in dataclasses.fields(self)
             if getattr(self, field.name) is not None
         }
-
-
-@dataclasses.dataclass
-class FileReview:
-    path                    : str
-    comments                : str
-    bugs                    : str | None = None
-    amendments              : str | None = None
-
-
-@dataclasses.dataclass
-class ReviewResponse:
-    score                   : str = None
-    overall                 : str = None
-    files                   : list[FileReview] = dataclasses.field(default_factory=list)

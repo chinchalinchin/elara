@@ -107,7 +107,7 @@ Metadata
     
 {% include '_blocks/directory.rst' %}
 
-{%- set review = response.get('review') %}
+{% if review %}
 .. important::
 
     SCORE: {{ review.get('score') }}

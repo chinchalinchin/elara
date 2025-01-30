@@ -1,3 +1,6 @@
+"""
+TODO
+"""
 # Standard Library Modules
 import json
 import logging 
@@ -7,9 +10,17 @@ logger              = logging.getLogger(__name__)
 
 
 def raw_file(path) -> typing.Union[str | None]:
+    """
+    Load text from file.
+
+    :param path: File path.
+    :type path: `str`
+    :returns: Raw file text
+    :rtype: `str`
+    """
     try:
         with open(path, "r") as infile:
-            data        = infile.read()
+            data    = infile.read()
 
         return data
     
@@ -27,22 +38,24 @@ def raw_file(path) -> typing.Union[str | None]:
     
 
 def json_file(path: str) -> dict:
-    try:
-        with open(path, "r") as f:
-            content = f.read()
+    """
+    Load a JSON from file.
 
+    :param path: File path of JSON.
+    :type path: `str`
+    :returns: JSON
+    :rtype: `dict`
+    """
+    content         = raw_file(path)
+
+    try:
         if content:
             return json.loads(content)
         logger.warning(
-            f"No data found injection, initializing empty schema.")
+            f"No data found injection, initializing empty object.")
         return {}
 
-    except (FileNotFoundError, json.JSONDecodeError) as e:
+    except json.JSONDecodeError as e:
         logger.error(
             f"Error loading JSON from {path}: {e}")
-        return {}
-        
-    except Exception as e:
-        logger.error(
-            f"An unexpected error occurred loading {path}: {e}")
         return {}

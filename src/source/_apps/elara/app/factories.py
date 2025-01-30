@@ -34,32 +34,6 @@ import objects.terminal as terminal
 logger                          = logging.getLogger(__name__)
 
 
-class PrinterFactory:
-    """
-    TODO: explain
-    """
-
-    app_dir                     : str = None
-
-    _prop_dir_temp              : constants.FactoryProps = constants.FactoryProps.DIR_TEMPLATES.value
-
-
-    def __init__(self, rel_dir : str = "data/config", filename : str = "app.json"):
-        """
-        :param rel_dir: Directory relative to the application directory that contains the application configuration data.
-        :type rel_dir: `str`
-        :param filename: Name of the argument configuration file.
-        :type filename: `str`
-        """
-        self.app_dir            = pathlib.Path(__file__).resolve().parent
-        self.config             = conf.Config(
-                                    os.path.join(self.app_dir, rel_dir, filename))
-    def build(self):
-        template_dir            = os.path.join(
-                                    self.app_dir, self.config.get(self._prop_dir_temp))
-        return printer.Printer(template_dir)
-
-
 class ArgFactory:
     """
     Factory for construcing the application arguments via different entrypoints.

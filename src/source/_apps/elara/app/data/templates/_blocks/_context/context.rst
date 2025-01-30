@@ -4,29 +4,58 @@
 Context
 #######
 
-This section is not directly related to your conversation history, but it does contain additional context to supplement your personality. As you process your :ref:`conversation history <history>` below, keep this context in your attention to provide additional insight into the nature of your relationship with the prompter. 
+This section is not directly related to the :ref:`history` but it does contain additional information to supplement the document. As you process the :ref:`history`, keep this context in your attention to provide additional insight into the nature of the :ref:`interaction`. 
 
-{% if context.interal %}
-.. _internal-context:
+The blocks in this section will be dynamically altered as the :ref:`interaction` in :ref:`history` progresses. In other words, the content of this section will change over the course of the :ref:`interaction`. The context you are currently reading in this section is not necessarily the same context you were reading at previous points in the :ref:`history`.
 
-========
-Internal
-========
+{%- if context.get('interface') %}
+.. _interface:
 
-This block of your :ref:`context` is modified by you as the conversation progresses. The blocks below will be dynamically altered as you change the properties returned in your structured output. 
+=========
+Interface
+=========
 
+For your awareness, this section describes the application interface which is used to post this document to your API. This is done so you may be aware of any pecularities or incongruences that might arise during the course of the :ref:`interaction`.
+
+{% if context.interface == 'command_line' %}
+{% include '_context/_interface/cli.rst'
 {% endif %}
 
-{% if context.external %}
-.. _external-context:
+{%- endif -%}
 
-========
-External
-========
+{%- if context.get('specifications') %}
+.. _specifications:
 
-This section of your :ref:`context` is modified by {{ current_prompter }} as the conversation progresses. The blocks below will be dynamically altered as they change the arguments they pass into the application which interfaces with your API.
+=============
+Specification  
+=============
 
-Keep in mind, the context that appears in this section is dynamically configured; In other words, the content of this section will change over the course of your conversation. The context you are currently reading in this section is not necessarily the same context you were reading at previous points in the conversation. 
+This document contains within it embedded documents. This section details the specifications for interpretting those embedded documents.
+
+{% if context.specifications.get('latex') %}
+{% include '_context/_specifications/latex.rst' %}
+{% endif %}
 
 {%- endif -%}
+
+{% if context.get('injections') %}
+.. _injections:
+
+==========
+Injections
+==========
+
+{% if context.injections.get('quotes') %}
+{% include '_context/_injections/quotes.rst' %}
+{% endif %}
+
+{% if context.injections.get('poems') %}
+{% include '_context/_injections/poems.rst' %}
+{% endif %}
+
+{% if context.injections.get('proofs') %}
+{% include '_context/_injections/proofs.rst' %}
+{% endif %}
+
+{% endif %}
 {% endif %}

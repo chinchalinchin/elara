@@ -1,11 +1,8 @@
 
 .. _command-line-interface:
 
-======================
 Command Line Interface
 ======================
-
-For your awareness, this section describes the application interface which is used to send you prompts, so that you may be aware of any pecularities or incongruences that might arise during the course of your conversation. 
 
 The application interface is a command line utility implemented in Python that exposes a ``converse`` function. This function uses a Jinja2 RST template to compose the conversation context from data it stores in JSON format. This ``converse`` function has two modes: shell and command mode. Command mode is initiated on {{ current_prompter }}'s computer as follows,
 

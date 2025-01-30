@@ -1,3 +1,4 @@
+HELLO {{ function }}
 {#- FUNCTIONS #}
 {%- if function == 'converse' %}
 {% include '_functions/converse.rst' %}
@@ -19,7 +20,9 @@
 {% include '_functions/request.rst' %}
 {%- endif %}
 
-{# REPORTS #}
+{#- REPORTS #}
+{% if reports %}
+
 {%- if reports.get("summary") %}
 {% include '_reports/summary.rst' %}
 {% endif %}
@@ -30,4 +33,5 @@
 
 {%- if reports.get("repository") -%}
 {% include '_reports/repository.rst' %}
+{%- endif -%}
 {%- endif %}

@@ -124,7 +124,7 @@ class Template:
         return self.templates.get_template(file_name)
 
 
-    def render(self, temp: str, variables: dict, ext: str | None = None) -> str:
+    def render(self, template: str, variables: dict, extension: str | None = None) -> str:
         """
         Render a template. 
 
@@ -137,27 +137,10 @@ class Template:
         :returns: A templated string.
         :rtype: `str`
         """
-        return self.get(temp, ext).render(variables)
+        return self.get(template, extension).render(variables)
     
 
-    def function_prompt(self, template: constants.Functions, variables: dict, ext: str | None = None) -> str:
-        """
-        Render a function template. 
-
-        :param template: Template to render.
-        :type template: `str`
-        :param variables: Variables to inject into template.
-        :type variables: `dict`
-        :param ext: Extension of the template. Defaults to ``.rst``.
-        :type ext: `str`
-        :returns: A templated string.
-        :rtype: `str`
-        """
-        temp                = "_functions/_prompts/{template}".format(template=template)
-        return self.render(temp, variables, ext)
-    
-
-    def service_vcs(self, template: str, variables: dict, ext: str = ".md") -> str:
+    def service_vcs(self, template: str, variables: dict, extension: str = ".md") -> str:
         """
         Render a VCS template. 
 
@@ -171,4 +154,4 @@ class Template:
         :rtype: `str`
         """
         temp                = "_service/vcs/{template}".format(template=template)
-        return self.render(temp, variables, ext)
+        return self.render(temp, variables, extension)

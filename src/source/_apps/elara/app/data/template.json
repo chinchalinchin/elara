@@ -62,7 +62,65 @@
                 }
             }
         },
-        "context": { },
+        "context": { 
+            "specifications": {
+                "type": "object",
+                "properties": {
+                    "latex": {
+                        "type": "string"
+                    }
+                }
+            },
+            "injections": {
+                "type": "object",
+                "properties": {
+                    "poems": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "lines": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "title": {
+                                    "type": "string"
+                                },
+                                "author": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "proofs":{},
+                    "quotes": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "quote": {
+                                    "type": "string"
+                                },
+                                "source": {
+                                    "type": "string"
+                                },
+                                "quoter": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "interfaces": {
+                "type": "string",
+                "enum": [
+                    "command_line"
+                ]
+            }
+        },
         "current_prompter": {
             "type": "string"
         },
@@ -95,52 +153,6 @@
                     }
                 }
             }
-        },
-        "injections": {
-            "type": "object",
-            "properties": {
-                "poems": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "lines": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "title": {
-                                "type": "string"
-                            },
-                            "author": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                },
-                "proofs":{},
-                "quotes": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "quote": {
-                                "type": "string"
-                            },
-                            "source": {
-                                "type": "string"
-                            },
-                            "quoter": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "latex": {
-            "type": "string"
         },
         "memory": {
             "type": "string",
@@ -177,8 +189,23 @@
                         }
                     }
                 },
-                "repository": {
-                    
+                "service": {
+                    "type": "array",
+                    "items": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "body": {
+                            "type": "string"
+                        }, 
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "success",
+                                "failure"
+                            ]
+                        }
+                    }
                 }
             }
         }

@@ -7,7 +7,6 @@ Static application utilities.
 # Standard Library Modules
 import logging
 import typing
-import re
 
 
 logs                        = logging.getLogger(__name__)

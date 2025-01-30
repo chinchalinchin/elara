@@ -1,9 +1,8 @@
-{%- set summary = reports.get('summary') %}
+{% if summary %}
 .. _{{ summary.get('directory').replace("/", "-").replace(".", "-").replace("_","")}}-directory-report:
-
-{{ '-' * summary.get('directory') | length }}
-{{ summary.get('directory') }}
-{{ '-' * summary.get('directory') | length }}
+{{ '-' * summary.directory | length }}
+{{ summary.directory }}
+{{ '-' * summary.getdirectory | length }}
 
 .. _directory-structure:
 
@@ -14,7 +13,7 @@ The following block shows the directory structure of the files given in the :ref
 
 .. code-block:: bash
 
-{{ summary.get('tree') }}
+{{ summary.tree }}
 
 .. _directory-files:
 
@@ -24,7 +23,7 @@ Files
 .. note::
 
     Some of the files may have been excluded from the summary to conserve space.
-{%- for file in summary.get('files') %}
+{%- for file in summary.files %}
 
 .. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-").replace("_","") }}:
  
@@ -41,4 +40,5 @@ Files
 
     {{ file.data | replace('\n', '\n    ') }}
 {%- endif -%}
-{% endfor %}
+{%- endfor -%}
+{% endif %}

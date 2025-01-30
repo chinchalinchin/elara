@@ -1,4 +1,4 @@
-{%- if context.proofs|length > 0 -%}
+{%- if context.injections.proofs|length > 0 -%}
 .. _proofs:
 
 Proofs 

@@ -12,6 +12,7 @@ import typing
 import constants
 import exceptions
 import schemas
+import util
 import objects.cache as cac
 import objects.config as conf
 import objects.conversation as convo
@@ -106,14 +107,23 @@ class App:
         :rtype: `None`
         """
         self._dispatch          = {
+            ## ADMINISTRATIVE FUNCTIONS
+            constants.Functions.CLEAR
+                                : self.clear,
+            constants.Functions.DEBUG
+                                : self.debug,
+            ## MODEL FUNCTIONS
+            constants.Functions.MODELS.value
+                                : self.models,
+            constants.Functions.TUNE.value                 
+                                : self.tune,
+            ## GENERATIVE FUNCTIOSN
             constants.Functions.CONVERSE.value             
                                 : self.converse,
             constants.Functions.REVIEW.value
                                 : self.review,
             constants.Functions.REQUEST.value               
                                 : self.request,
-            constants.Functions.TUNE.value                 
-                                : self.tune,
             constants.Functions.FORMALIZE.value              
                                 : self.formalize,
         }
@@ -156,6 +166,7 @@ class App:
             **self.personas.vars(persona),
             **self.config.get(self._prop_latex),
             **self.conversations.vars(persona),
+            **{ "function"      : func }
         }
 
         template_vars["reports"] = {}
@@ -221,7 +232,7 @@ class App:
         return self.cache.get(persona_key), self.cache.get(prompter_key)
 
 
-    def formalize(self, arguments: schemas.Arguments) -> schemas.Output:
+    def formalize(self, arguments: schemas.Arguments) -> str:
         """
         This function injects the contents of a directory into the ``data/templates/formalize.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
 
@@ -231,7 +242,7 @@ class App:
         :rtype: `schemas.Output`
         """
         persona, prompter       = self._validate(arguments, constants.Functions.FORMALIZE.value)
-
+        
         self.conversations.update(
             persona             = persona, 
             name                = prompter, 
@@ -239,7 +250,7 @@ class App:
             persist             = not arguments.render
         )
 
-        parsed_prompt           = self.templates.function_prompt(
+        parsed_prompt           = self.templates.function(
             temp                = constants.Functions.FORMALIZE.value, 
             variables           = self._vars(constants.Functions.FORMALIZE.value)
         )
@@ -265,15 +276,20 @@ class App:
             memory              = response.get("memory"),
         )
 
-        formalize_response      = { constants.Functions.FORMALIZE.value : response }
-
-        return schemas.Output(
-            application         = parsed_prompt,
-            response            = formalize_response
+        variables               = {
+            **self._vars(constants.Functions.FORMALIZE.value),
+            constants.Functions.FORMALIZE.value: response
+        }
+        
+        application             = self.templates.function(
+            temp                = constants.Functions.FORMALIZE.value, 
+            variables           = variables
         )
 
+        return schemas.Output(application)
 
-    def converse(self, arguments: schemas.Arguments) -> schemas.Output:
+
+    def converse(self, arguments: schemas.Arguments) -> str:
         """
         Chat with one of Gemini's personas.
 
@@ -291,13 +307,13 @@ class App:
             persist             = not arguments.render
         )
 
-        parsed_prompt           = self.templates.function_prompt(
-            template            = constants.Functions.CONVERSE.value, 
+        parsed_prompt           = self.templates.render(
+            template            = "application", 
             variables           = self._vars(constants.Functions.CONVERSE.value)
         )
 
         if arguments.render:
-            return schemas.Output(parsed_prompt)
+            return parsed_prompt
         
         response_config         = self._schema(self._prop_converse_schema, self._prop_converse_mime)
 
@@ -317,14 +333,13 @@ class App:
             memory              = response.get("memory"),
         )
 
-        application             = self.templates.function(
-            template            = constants.Functions.CONVERSE.value, 
+        return self.templates.render(
+            template            = "application", 
             variables           = self._vars(constants.Functions.CONVERSE.value)
         )
-        return schemas.Output(application)
 
 
-    def request(self, arguments: schemas.Arguments) -> schemas.Output:
+    def request(self, arguments: schemas.Arguments) -> str:
         """
         This function initiates an input loop and prompt the the user to specify the feature request through Gherkin-style syntax.
 
@@ -332,14 +347,15 @@ class App:
         :rtype: `schemas.Output`
         """
         persona                 = self.personas.function(constants.Functions.REQUEST.value)
+        variables               = self._vars(constants.Functions.REQUEST.value)
 
-        parsed_prompt           = self.templates.function_prompt(
+        parsed_prompt           = self.templates.function(
             template            = constants.Functions.REQUEST.value, 
-            request_vars        = self._vars(constants.Functions.REQUEST.value)
+            variables           = variables 
         )
 
         if arguments.render:
-            return schemas.Output(parsed_prompt)
+            return parsed_prompt
         
         # TODO: response schema for request function
 
@@ -352,15 +368,20 @@ class App:
             system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
-        request_response        = { constants.Functions.REQUEST.value: response }
+        variables               = {
+            **variables,
+            constants.Functions.REQUEST.value: response,
+        }
         
-        return schemas.Output(
-            application         = parsed_prompt,
-            response            = request_response
+        application             = self.templates.function(
+            template            = constants.Functions.REQUEST.value, 
+            request_vars        = variables
         )
+        
+        return application
 
 
-    def review(self, arguments: schemas.Arguments) -> schemas.Output:
+    def review(self, arguments: schemas.Arguments) -> str:
         """
         This function injects the contents of a git repository into the ``data/templates/review.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Milton*. *Milton*'s response is then parsed and posted to the remote VCS backend that contains the pull request corresponding to the git repository.
 
@@ -368,14 +389,14 @@ class App:
         :rtype: `schemas.Output`
         """
         persona                 = self.personas.function(constants.Functions.REVIEW.value) 
-
-        review_prompt           = self.templates.function_prompt(
+        variables               = self._vars(constants.Functions.REVIEW.value)
+        review_prompt           = self.templates.function(
             template            = constants.Functions.REVIEW.value, 
-            variables           = self._vars(constants.Functions.REVIEW.value)
+            variables           = variables
         )
 
         if arguments.render:
-            return schemas.Output(review_prompt)
+            return review_prompt
         
         response_config         = self._schema(self._prop_review_schema, self._prop_review_mime)
         response                = self.model.respond(
@@ -387,13 +408,11 @@ class App:
             system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
-        repo_key                = constants.TemplateVars.REPORT_REPO.value
-        reports                 = { repo_key: [ ] }
+        vcs_res                 = {  }
 
         if response and response.get("overall"):
             msg                 = self.templates.service_vcs("comment", response)
-            source_res          = self.repository.comment(msg, arguments.pull)
-            reports[repo_key].append(source_res)
+            vcs_res             = self.repository.comment(msg, arguments.pull)
             
         if response and response.get("files"):
             bodies              = []
@@ -403,21 +422,17 @@ class App:
                     "path"      : file_data.get("path"),
                     "msg"       : comment
                 })
-            source_res          = self.repository.files(arguments.pull, bodies)
-            reports[repo_key].append(source_res)
+            vcs_res             = util.merge(vcs_res,
+                                    self.repository.files(arguments.pull, bodies))
 
-        review_response         = { constants.Functions.REVIEW.value: response}  
+        variables               = {
+            **variables,
+            constants.Functions.REVIEW.value: response
+        }
 
-        if len(reports) > 0:
-            return schemas.Output(
-                application     = review_prompt,
-                response        = review_response,
-                reports         = reports 
-            )
-        
-        return schemas.Output(
-            application         = review_prompt,
-            response            = review_response
+        return self.templates.function(
+            template            = constants.Functions.REVIEW.value, 
+            variables           = variables
         )
 
 
@@ -456,7 +471,7 @@ class App:
         return False
     
 
-    def run(self, arguments: schemas.Arguments) -> schemas.Output:
+    def run(self, arguments: schemas.Arguments) -> typing.Union[str, None]:
         """
         Dispatch the application arguments. ``printer`` must have function signature,
 
@@ -470,12 +485,12 @@ class App:
 
         if operation_name not in self._dispatch.keys():
             logger(f"Invalid operation: {operation_name}")
-            return schemas.Output()
+            return None
 
         return self._dispatch[operation_name](arguments)
     
 
-    def tty(self, arguments: schemas.Arguments, printer: printer.Printer) -> schemas.Output:
+    def tty(self, arguments: schemas.Arguments, printer: printer.Printer) -> bool:
         """
         Initiate an interactive terminal
 
@@ -503,14 +518,13 @@ class App:
         #   AI is an interesting problem! Don't you agree, Milton?!
         if operation_name == constants.Functions.CONVERSE.value: 
             arguments.view              = True
-            self.terminal.interact(
+            return self.terminal.interact(
                 callable                = lambda args: self.converse(args),
                 printer                 = printer,
                 args                    = arguments
             )
-            return schemas.Output()
             
-        return schemas.Output()
+        return False
     
     
     def validate(self, arguments: schemas.Arguments = None) -> bool:
@@ -541,3 +555,46 @@ class App:
         if arguments and arguments.directory and not self.directory:
             raise exceptions.FactoryError("Directory not initialized!")
         return True
+    
+    
+    def summarize(self) -> str:
+        """
+        Return a summary of a directory.
+
+        :returns: RST formatted summary of Directory object.
+        :rtype: `str`
+        """
+        if not self.directory:
+            logger.error("Directory object not initialized!")
+            raise exceptions.ObjectNotInitialized(
+                "objects.directory.Directory not initialized!")
+        return self.directory.summary()
+    
+
+    def clear(self, arguments: schemas.Arguments) -> None:
+        """
+        Wipe persona conversation history.
+
+        :param argumnets: Application arguments.
+        :type arguments: `schemas.Arguments`
+        """
+        for persona in arguments.clear:
+            logger.warning(f"Clearing {persona} conversation history...")
+            self.conversations.clear(persona)
+
+
+    def models(self) -> dict:
+        """
+        Retrieve model metadata.
+
+        :returns: Dictionary of model metadata.
+        :rtype: `dict`
+        """
+        return self.model.vars()
+    
+
+    def debug(self):
+        """
+        TODO
+        """
+        return "TODO"

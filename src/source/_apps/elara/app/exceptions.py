@@ -5,9 +5,23 @@ exceptions.py
 Application exceptions.
 """
 
+
+class MissingArgument(Exception):
+    """
+    Raised when a function is missing a required argument.
+    """
+    pass
+
+
+class ObjectNotInitialized(Exception):
+    """
+    Raised when a function requires an object that has not been initialized and injected into the application object.
+    """
+    pass
+
 class DirectoryNotFoundError(Exception):
     """
-    Raised when the ``directory`` passed to the ``directory.Directory`` object does not exist
+    Raised when a directory does not exist
     """
     pass
 
