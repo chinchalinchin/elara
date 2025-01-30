@@ -1,4 +1,4 @@
-.. _{{ current_persona }}-context:
+.. _conversation:
 
 ############
 Conversation
@@ -17,11 +17,9 @@ You are not required to format your response in RST. All RST formatting happens 
 
 The next sections of the :ref:`preamble` provide details about the interface from which this prompt was sent, the schema your response should follow and additional rules imposed on your response.
 
-{% include '_interfaces/cli.rst' %}
-
 {% include '_functions/_schemas/converse.rst' %} 
 
-{% include '_context/language.rst' %}
+{% include '_functions/_plugins/plugins.rst' %}
 
 .. _context:
 
@@ -34,6 +32,14 @@ This section is not directly related to your conversation history, but it does c
 
 {% include '_context/external.rst' %}
 
+{% include '_context/internal.rst' %}
+
+{% if reports %}
+.. _reports:
+
+Reports
+#######
+
 {%- if reports and reports.get('summary') -%}
 .. _summary:
 
@@ -43,21 +49,9 @@ Summary
 The following section contains a summary of a directory on {{ current_prompter | capitalize }}'s local fileystem. It is relevant to the context of your conversation. It has been temporarily injected into the context for your inspection.
 
 {% include '_reports/summary.rst' %}
+
+{%- endif -%}
+
 {%- endif %}
 
-{% include '_context/internal.rst' %}
-
-.. _history:
-
-Conversation History
-####################
-
-This section contains your conversation history. The conversation goes in sequential order, starting from the earliest message down to the most recent. Each message in the chat history is contained in a ``.. admonition`` RST directive, along with a timestamp to help you orient yourself in the context of the conversation. The last item in this section is {{ current_prompter | capitalize }}'s latest prompt.
-
-{% for event in history %}
-.. admonition:: {{ event.name }}
-
-    **Timestamp**: {{ event.timestamp }}
-
-    {{ event.msg | replace('\n', '\n    ') }}
-{% endfor %}
+{% include '_functions/_blocks/history.rst' %}

@@ -1,47 +1,36 @@
+{#- APPLICATION -#}
 {% if application %}
-.. _application:
-
-Application
-###########
-###########
 
 {{ application }}
+
 {%- endif %}
 
+{#- FUNCTIONS -#}
 {%- if response -%}
-.. _response:
 
-Response
-########
-########
-
-{% if response.get("analyze") %}
-{% include '_responses/analyze.rst' %}
-{% endif %}
-{% if response.get("review") %}
+{%- if response.get("review") %}
 {% include '_responses/review.rst' %}
-{% endif %}
-{% if response.get("request") %}
+{%- endif %}
+
+{%- if response.get("request") %}
 {% include '_responses/request.rst' %}
-{% endif -%}
+{%- endif %}
+
 {%- endif -%}
-{% if reports %}
-.. _reports:
 
-Reports
-#######
-#######
-{% if reports.get("summary") %}
-.. _summary-report:
+{#- REPORTS - #}
+{%- if reports %}
 
-Summary
-#######
-{% include '_reports/summary.rst' %}
+{%- if reports.get("summary") %}
+{%- include '_reports/summary.rst' %}
 {% endif %}
+
 {% if reports.get("models") %}
 {% include '_reports/models.rst' %}
 {% endif %}
-{%- if reports.get("repository") -%}
+
+{% if reports.get("repository") -%}
 {% include '_reports/repository.rst' %}
 {% endif %}
-{% endif %}
+
+{%- endif -%}

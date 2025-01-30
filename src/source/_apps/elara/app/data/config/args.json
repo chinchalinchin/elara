@@ -196,6 +196,18 @@
             ]
         },
         {
+            "name": "formalize",
+            "help": "Get help with formal and mathematical analysis",
+            "arguments": [
+                "prompt",
+                "directory",
+                "view",
+                "output",
+                "render",
+                "terminal"
+            ]
+        },
+        {
             "name": "brainstorm",
             "help": "Orchestrate a brainstorming session with the personas by providing a list of key-words.",
             "arguments": [

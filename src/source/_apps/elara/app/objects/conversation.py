@@ -205,7 +205,7 @@ class Conversation:
         return self.convo[persona]
     
 
-    def update(self, persona: str, name: str, msg: str, 
+    def update(self, persona: str, name: str, message: str, 
                memory: str | None = None, persist: bool = True) -> dict:
         """
         Update and persist conversation properties.
@@ -214,14 +214,14 @@ class Conversation:
         :type persona: `str`
         :param name: Name of the speaker (prompter or persona).
         :type name: `str`
-        :param msg: Chat message.
-        :type msg: `str`
+        :param message: Conversation string 
+        :type messagge: `str`
         :param memory: Memory string
         :type memory: `str`
-        :returns: Full chat history
+        :returns: Full conversation history
         :rtype: `dict`
         """
-        if not msg:
+        if not message:
             logger.warning("Cannot update conversation with an empty message.")
             return
         
@@ -231,13 +231,14 @@ class Conversation:
             self.convo[persona] = self.schema
 
         self.convo[persona][self._prop_hist].append({ 
-            self._prop_name : name,
-            self._prop_msg  : msg,
-            self._prop_time : self._timestamp()
+            self._prop_name     : name,
+            self._prop_msg      : message,
+            self._prop_time     : self._timestamp()
         })
         
         if memory is not None:
-            self.convo[persona][self._prop_mem] = memory
+            self.convo[persona][self._prop_mem] \
+                                = memory
 
         if persist:
             self._write(persona)

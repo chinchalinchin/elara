@@ -1,7 +1,72 @@
 {
     "functions": {
-        "analyze": {
-            "latex_preamble": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+        "formalize": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "critiques": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "reference": {
+                                    "type": "string"
+                                },
+                                "content": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "reference",
+                                "content"
+                            ]
+                        }
+                    },
+                    "proofs": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "reference": {
+                                    "type": "string"
+                                },
+                                "content": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "reference",
+                                "content"
+                            ]
+                        }
+                    },
+                    "response": {
+                        "type": "string"
+                    },
+                    "todos": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "reference": {
+                                    "type": "string"
+                                },
+                                "content": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "reference",
+                                "content"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "reply"
+                ]
+            },
+            "mime": "application/json"
         },
         "brainstorm": { },
         "converse": {
@@ -85,27 +150,12 @@
         },
         "request": { }
     },
-    "tree": {
-        "directories": {
-            "data": "data",
-            "logs": "logs",
-            "config": "data/config",
-            "context": "data/context",
-            "personas": "data/personas",
-            "threads": "data/threads",
-            "templates": "data/templates",
-            "tools": "data/tools"
-        },
-        "files": {
-            "cache": "cache.json",
-            "logs": "elara.log"
-        },
-        "extensions": {
-            "context": ".json",
-            "personas": ".json",
-            "templates": ".rst",
-            "threads": ".json"
-        }
+    "latex": {
+        "preamble": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+    },
+    "logs": {
+        "level": "INFO",
+        "schema": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     },
     "objects": {
         "conversation": {
@@ -217,10 +267,6 @@
             }
         }
     },
-    "logs": {
-        "level": "INFO",
-        "schema": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-    },
     "overrides": {
         "objects.model.gemini.tuning.source": "TUNING_SOURCE",
         "objects.model.gemini.key": "GEMINI_KEY",
@@ -228,7 +274,29 @@
         "objects.repository.vcs": "VCS",
         "objects.repository.auth.creds": "VCS_TOKEN",
         "functions.converse.timezone_offset": "TIMEZONE_OFFSET",
-        "functions.analyze.latex_preamble": "LATEX_PREAMBLE",
+        "latex.preamble": "LATEX_PREAMBLE",
         "logs.level": "LOGS_LEVEL"
+    },
+    "tree": {
+        "directories": {
+            "data": "data",
+            "logs": "logs",
+            "config": "data/config",
+            "context": "data/context",
+            "personas": "data/personas",
+            "threads": "data/threads",
+            "templates": "data/templates",
+            "tools": "data/tools"
+        },
+        "files": {
+            "cache": "cache.json",
+            "logs": "elara.log"
+        },
+        "extensions": {
+            "context": ".json",
+            "personas": ".json",
+            "templates": ".rst",
+            "threads": ".json"
+        }
     }
 }

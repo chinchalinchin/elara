@@ -14,9 +14,9 @@ class Functions(enum.Enum):
     """
     Application function key enumeration.
     """
-    ANAYLZE             = "analyze"
     BRAINSTORM          = "brainstorm"
     CONVERSE            = "converse"
+    FORMALIZE           = "formalize"
     REVIEW              = "review"
     REQUEST             = "request"
     TUNE                = "tune"
@@ -27,18 +27,19 @@ class AppProps(enum.Enum):
     Application property key enumeration
     """
     # Structured Output Schemas and Mime Types
-    ANALYZE_SCHEMA      = "functions.analyze.schema"
-    ANALYZE_MIME        = "function.analyze.mime"
     BRAINSTORM_SCHEMA   = "functions.brainstorm.schema"
     BRAINSTORM_MIME_TYPE= "functions.brainstorm.mime"
     CONVERSE_SCHEMA     = "functions.converse.schema"
     CONVERSE_MIME_TYPE  = "functions.converse.mime"
+    FORMALIZE_SCHEMA    = "functions.formalize.schema"
+    FORMALIZE_MIME      = "functions.formalize.mime"
     REVIEW_SCHEMA       = "functions.review.schema"
     REVIEW_MIME_TYPE    = "functions.review.mime"
     REQUEST_SCHEMA      = "functions.request.schema"
     REQUEST_MIME        = "functions.request.mime"
     # Function Properties
-    ANALYZE_LATEX       = "functions.analyze.latex_preamble"
+    LATEX               = "latex"
+    LATEX_PREAMBLE      = "latex.preamble"
 
 
 class FactoryProps(enum.Enum):
@@ -134,7 +135,7 @@ class ConvoProps(enum.Enum):
     # Internal Properties
     HISTORY             = "history"
     MEMORY              = "memory"
-    MESSAGE             = "msg"
+    MESSAGE             = "message"
     TIMESTAMP           = "timestamp"
     NAME                = "name"
     # Configuration Properties
@@ -247,13 +248,6 @@ class TerminalProps(enum.Enum):
     ## 
 # VARIOUS PROPERTIES
 
-class ReviewScore(enum.Enum):
-    """
-    Pull request review score enumeration
-    """
-    PASS                = "pass"
-    FAIL                = "fail"
-
 
 class LanguageModules(enum.Enum):
     """
@@ -263,3 +257,17 @@ class LanguageModules(enum.Enum):
     INFLECTION          = "inflection"
     VOICE               = "voice"
     OBJECT              = "object"
+
+
+class ReviewScore(enum.Enum):
+    """
+    Pull request review score enumeration
+    """
+    PASS                = "pass"
+    FAIL                = "fail"
+
+
+class TemplateVars(enum.Enum):
+    """
+    Template variable enumeration
+    """

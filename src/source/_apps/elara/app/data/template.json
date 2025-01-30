@@ -1,0 +1,151 @@
+{
+    "type": "object",
+    "properties": {
+        "articles": {
+            "type": "object",
+            "properties": {
+                "business": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "headline": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "foreign": {
+                    "type": "array", 
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "headline": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "local": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "headline": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "national": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "headline": {
+                                "type": "string"
+                            },
+                            "content": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "context": {
+            "type": "object",
+            "properties": {
+                "poems": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "lines": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "author": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "proofs":{},
+                "quotes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "quote": {
+                                "type": "string"
+                            },
+                            "source": {
+                                "type": "string"
+                            },
+                            "quoter": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "current_prompter": {
+            "type": "string"
+        },
+        "current_persona": {
+            "type": "string"
+        },
+        "latex": {
+            "type": "string"
+        },
+        "history": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "memory": {
+            "type": "string",
+            "maxLength": 2000
+        },
+        "reports": {
+            "type": "object",
+            "properties": {
+                "summary": {
+
+                }
+            }
+        }
+    },
+    "required": [
+        "current_prompter",
+        "current_persona"
+    ]
+}

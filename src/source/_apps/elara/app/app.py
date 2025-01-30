@@ -62,24 +62,25 @@ class App:
     # Internal Properties
     _dispatch                   = {}
     # Application Properties
-    _prop_analyze_schema        = constants.AppProps.ANALYZE_SCHEMA.value
-    _prop_analyze_mime          = constants.AppProps.ANALYZE_MIME.value
     _prop_brainstorm_schema     = constants.AppProps.BRAINSTORM_SCHEMA.value
     _prop_brainstorm_mime       = constants.AppProps.BRAINSTORM_MIME_TYPE.value
     _prop_converse_schema       = constants.AppProps.CONVERSE_SCHEMA.value
     _prop_converse_mime         = constants.AppProps.CONVERSE_MIME_TYPE.value
+    _prop_formalize_schema      = constants.AppProps.FORMALIZE_SCHEMA.value
+    _prop_formalize_mime        = constants.AppProps.FORMALIZE_MIME.value
     _prop_review_schema         = constants.AppProps.REVIEW_SCHEMA.value
     _prop_review_mime           = constants.AppProps.REVIEW_MIME_TYPE.value
     _prop_request_schema        = constants.AppProps.REQUEST_SCHEMA.value
     _prop_request_mime          = constants.AppProps.REQUEST_MIME.value
     ## Special Function Properties
-    _prop_analyze_latex         = constants.AppProps.ANALYZE_LATEX.value
+    _prop_latex                 = constants.AppProps.LATEX.value
 
 
-    def __init__(self, cache: cac.Cache, config: conf.Config, context: cont.Context,
-                 conversations: convo.Conversation, directory: dir.Directory,
-                 model: mod.Model, personas: per.Persona, repo: repo.Repo,
-                 templates: temp.Template, terminal: term.Terminal) -> None:
+    def __init__(self, cache: cac.Cache | None = None, config: conf.Config | None = None, 
+                context: cont.Context | None = None, conversations: convo.Conversation | None = None,
+                directory: dir.Directory | None = None, model: mod.Model | None = None, 
+                personas: per.Persona | None = None, repo: repo.Repo | None = None,
+                templates: temp.Template | None = None, terminal: term.Terminal | None = None) -> None:
         """
         Initialize a new `app.App` object. This constructor can be used to create a new object, however it is recommended instead to use the `factories.AppFactory` object to inject the dependencies into the application rather than using this constructor to create a new `App` object.
 
@@ -113,8 +114,8 @@ class App:
                                 : self.request,
             constants.Functions.TUNE.value                 
                                 : self.tune,
-            constants.Functions.ANAYLZE.value              
-                                : self.analyze,
+            constants.Functions.FORMALIZE.value              
+                                : self.formalize,
         }
         self.cache              = cache
         self.config             = config
@@ -141,7 +142,7 @@ class App:
         buffer.update({constants.CacheProps.CURRENT_PERSONA.value
                                 : self.personas.function(func)})
 
-        if func == constants.Functions.ANAYLZE.value:
+        if func == constants.Functions.FORMALIZE.value:
             persona             = self.personas.function(func)
             context             = self.context.vars(self.personas.context(persona))
             logger.info("Injecting file summary into prompt...")
@@ -150,7 +151,7 @@ class App:
                 **context,
                 **self.personas.vars(persona)
                 **self.directory.summary(), 
-                **{ "latex" : self.config.get(self._prop_analyze_latex)}
+                **self.config.get(self._prop_latex)
             }
 
         if func == constants.Functions.CONVERSE.value:
@@ -228,49 +229,68 @@ class App:
         persona_key             = constants.CacheProps.CURRENT_PERSONA.value
         prompter_key            = constants.CacheProps.CURRENT_PROMPTER.value
         cached_persona          = self.cache.get(persona_key)
+
         if cached_persona is None:
             if arguments.current_persona is None:
                 arguments.current_persona \
                                 = self.personas.function(func)
+                
             self.cache.update(**{ persona_key: arguments.current_persona })
             self.personas.update(arguments.current_persona)
             self.cache.save()
+
         return self.cache.get(persona_key), self.cache.get(prompter_key)
 
 
-    def analyze(self, arguments: schemas.Arguments) -> schemas.Output:
+    def formalize(self, arguments: schemas.Arguments) -> schemas.Output:
         """
-        This function injects the contents of a directory into the ``data/templates/analysis.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
+        This function injects the contents of a directory into the ``data/templates/formalize.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
 
         :param arguments: Application arguments.
         :type arguments: `schemas.Argument`
         :returns: Data structure containing parsed prompt and response.
         :rtype: `schemas.Output`
         """
-        persona                 = self.personas.function(constants.Functions.ANAYLZE.value)
+        persona, prompter       = self._validate(arguments, constants.Functions.FORMALIZE.value)
 
-        parsed_prompt           = self.templates.function(
-            temp                = constants.Functions.ANAYLZE.value, 
-            variables           = self._vars(constants.Functions.ANAYLZE.value)
+        self.conversations.update(
+            persona             = persona, 
+            name                = prompter, 
+            message             = arguments.prompt,
+            persist             = not arguments.render
+        )
+
+        parsed_prompt           = self.templates.function_prompt(
+            temp                = constants.Functions.FORMALIZE.value, 
+            variables           = self._vars(constants.Functions.FORMALIZE.value)
         )
 
         if arguments.render:
             return schemas.Output(application=parsed_prompt)
         
+        response_config         = self._schema(self._prop_formalize_schema, self._prop_formalize_mime)
+
         response                = self.model.respond(
             prompt              = parsed_prompt,
             model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
-            generation_config   = self.personas.get(constants.PersonaProps.GENERATION_CONFIG.value, persona),
+            generation_config   = response_config,
             safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
             tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
             system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
-        analyze_response            = { constants.Functions.ANAYLZE.value : response }
+        self.conversations.update(
+            persona             = persona, 
+            name                = persona, 
+            message             = response.get("response"),
+            memory              = response.get("memory"),
+        )
+
+        analyze_response        = { constants.Functions.FORMALIZE.value : response }
 
         return schemas.Output(
-            application             = parsed_prompt,
-            response                = analyze_response
+            application         = parsed_prompt,
+            response            = analyze_response
         )
 
 
@@ -288,11 +308,11 @@ class App:
         self.conversations.update(
             persona             = persona, 
             name                = prompter, 
-            msg                 = arguments.prompt,
+            message             = arguments.prompt,
             persist             = not arguments.render
         )
 
-        parsed_prompt           = self.templates.function(
+        parsed_prompt           = self.templates.function_prompt(
             template            = constants.Functions.CONVERSE.value, 
             variables           = self._vars(constants.Functions.CONVERSE.value)
         )
@@ -314,7 +334,7 @@ class App:
         self.conversations.update(
             persona             = persona, 
             name                = persona, 
-            msg                 = response.get("response"),
+            message             = response.get("response"),
             memory              = response.get("memory"),
         )
 
@@ -334,10 +354,11 @@ class App:
         """
         persona                 = self.personas.function(constants.Functions.REQUEST.value)
 
-        parsed_prompt           = self.templates.function(
+        parsed_prompt           = self.templates.function_prompt(
             template            = constants.Functions.REQUEST.value, 
             request_vars        = self._vars(constants.Functions.REQUEST.value)
         )
+
         if arguments.render:
             return schemas.Output(application=parsed_prompt)
         
@@ -367,19 +388,16 @@ class App:
         :returns: Object containing the contextualized prompt, model response and service request metadata.
         :rtype: `schemas.Output`
         """
-
-        # STEP 1. Prepare template variables and then render function template. Render
-        #           to screen if applicable.
         persona                 = self.personas.function(constants.Functions.REVIEW.value) 
-        review_prompt           = self.templates.function(
+
+        review_prompt           = self.templates.function_prompt(
             template            = constants.Functions.REVIEW.value, 
             variables           = self._vars(constants.Functions.REVIEW.value)
         )
+
         if arguments.render:
             return schemas.Output(application = review_prompt)
         
-        # STEP 2. Append function response schema to persona's generation configuration 
-        #           and post contextualized prompt to model API.
         response_config         = self._schema(self._prop_review_schema, self._prop_review_mime)
         response                = self.model.respond(
             prompt              = review_prompt,
@@ -390,50 +408,35 @@ class App:
             system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
-        # STEP 3. Render overall pull request assessment request and post to VCS backend.
         reports                 = { "repository": [ ] }
         if response and response.get("overall"):
-            msg                 = self.templates.render(
-                temp            = "_services/vcs/comment",
-                variables       = response,
-                ext             = ".md"
-            )
-            source_res          = self.repository.comment(
-                msg             = msg,
-                pr              = arguments.pull,
-            )
+            msg                 = self.templates.service_vcs("comment", response)
+            source_res          = self.repository.comment(msg, arguments.pull)
             reports["repository"].append(source_res)
             
-        # STEP 4. Render file specific pull request assessments and post to VCS backend.
         if response and response.get("files"):
             bodies              = []
             for file_data in response.get("files", []):
-                comment         = self.templates.render(
-                    temp        = "_services/vcs/file",
-                    variables   = file_data,
-                    ext         = ".md"
-                )
+                comment         = self.templates.service_vcs("file", file_data,)
                 bodies.append({
                     "path"      : file_data.get("path"),
                     "msg"       : comment
                 })
-            source_res          = self.repository.files(
-                pr              = arguments.pull,
-                bodies          = bodies
-            )
+            source_res          = self.repository.files(arguments.pull, bodies)
             reports["repository"].append(source_res)
 
-        # STEP 5: Prepare model response for output templating and return
-        review_response             = { constants.Functions.REVIEW.value: response}        
+        review_response         = { constants.Functions.REVIEW.value: response}  
+
         if len(reports) > 0:
             return schemas.Output(
-                application         = review_prompt,
-                response                = review_response,
-                reports                 = reports 
+                application     = review_prompt,
+                response        = review_response,
+                reports         = reports 
             )
+        
         return schemas.Output(
-            prompt                  = review_prompt,
-            response                = review_response
+            application         = review_prompt,
+            response            = review_response
         )
 
 
