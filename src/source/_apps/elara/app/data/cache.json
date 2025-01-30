@@ -1,5 +1,5 @@
 {
-    "tunedModels": [
+    "tuned_models": [
         {
             "name": "elara",
             "path": "tunedModels/elara-a38gqsr3zzw8",
@@ -11,8 +11,8 @@
             "version": "1.0"
         }
     ],
-    "tuningModel": "models/gemini-1.5-flash-001-tuning",
-    "currentModel": "models/gemini-exp-1206",
-    "currentPersona": "elara",
-    "currentPrompter": "grant"
+    "tuning_model": "models/gemini-1.5-flash-001-tuning",
+    "current_model": "models/gemini-exp-1206",
+    "current_persona": "elara",
+    "current_prompter": "grant"
 }

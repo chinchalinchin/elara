@@ -1,4 +1,4 @@
-{%- if language is defined -%}
+{% if language.values() | select() | list | length > 0 %}
 .. _language-modules:
 
 ================
@@ -6,16 +6,16 @@ Language Modules
 ================
 
 This section contains modules for your Language processing. These modules have information about the rules and syntax for your responses. Use these rules to generate valid responses. 
-{% if object is defined %}
-{{ object }}
+{% if language.get('object') %}
+{% include '_context/_language/object.rst' %}
 {%- endif %}
-{%- if inflection is defined %}
-{{ inflection }}
+{%- if language.get('inflection') %}
+{% include '_context/_language/inflection.rst' %}
 {%- endif -%}
-{%- if voice is defined %}
-{{ voice }}
+{%- if language.get('voice') %}
+{% include '_context/_language/voice.rst' %}
 {%- endif -%}
-{%- if words is defined %}
-{{ words }}
+{%- if language.get('words') %}
+{% include '_context/_language/words.rst' %}
 {%- endif -%}
 {%- endif -%}

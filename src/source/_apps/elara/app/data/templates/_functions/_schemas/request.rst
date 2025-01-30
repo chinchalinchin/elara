@@ -55,7 +55,7 @@ Once you have understood the feature requirements, please compose a response usi
 
 .. admonition:: Response Schema
 
-    # {{ currentPersona | capitalize }}'s Response
+    # {{ current_persona | capitalize }}'s Response
 
     ## General Comments
     <General comments>
@@ -110,9 +110,9 @@ Example #1
     
         The user sees a random number between 0 and 100.
 
-.. admonition:: {{ currentPersona | capitalize }}'s Response
+.. admonition:: {{ current_persona | capitalize }}'s Response
 
-    # {{ currentPersona | capitalize }}'s Response 
+    # {{ current_persona | capitalize }}'s Response 
 
     ## General Comments 
 
@@ -164,9 +164,9 @@ Example #2
         
         The application uses ``argparse`` to parse user input and print a random number between ``min`` and ``max``.
     
-.. admonition:: {{ currentPersona | capitalize }}'s Response
+.. admonition:: {{ current_persona | capitalize }}'s Response
 
-    # {{ currentPersona | capitalize }}'s Response
+    # {{ current_persona | capitalize }}'s Response
 
     ## General Comments
 

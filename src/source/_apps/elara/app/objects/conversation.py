@@ -16,7 +16,7 @@ import constants
 import exceptions
 
 
-logger = logging.getLogger(__name__)
+logger                          = logging.getLogger(__name__)
 
 
 class Conversation:
@@ -29,26 +29,29 @@ class Conversation:
         
     """
     # Class properties
-    convo_config                        : dict = { }
+    convo_config                : dict = { }
     """Conversation configuration."""
-    convo                               : dict = { }
+    convo                       : dict = { }
     """Conversation history."""
-    directory                           : str = None
+    directory                   : str = None
     """Conversation data directories."""
-    extension                           : str = None
+    extension                   : str = None
     """Conversation data extensions."""
-    inst                                = None
+    inst                        : typing.Self = None
     """Singleton instance."""
-    schema                             : dict = { }
+    schema                      : dict = { }
     """Schema skeleton for new conversation data structures."""
+    _zone                       : datetime.timezone = None
 
     # Conversation properties
-    _prop_hist                          = constants.ConvoProps.HISTORY.value
-    _prop_mem                           = constants.ConvoProps.MEMORY.value
-    _prop_msg                           = constants.ConvoProps.MESSAGE.value
-    _prop_name                          = constants.ConvoProps.NAME.value
-    _prop_schema                        = constants.ConvoProps.SCHEMA_FILENAME.value
-    _prop_time                          = constants.ConvoProps.TIMESTAMP.value
+    _prop_hist                  = constants.ConvoProps.HISTORY.value
+    _prop_mem                   = constants.ConvoProps.MEMORY.value
+    _prop_msg                   = constants.ConvoProps.MESSAGE.value
+    _prop_name                  = constants.ConvoProps.NAME.value
+    _prop_schema                = constants.ConvoProps.SCHEMA_FILENAME.value
+    _prop_time                  = constants.ConvoProps.TIMESTAMP.value
+    _prop_zone                  = constants.ConvoProps.TIMEZONE_OFFSET.value
+
 
     def __init__(self, directory: str, extension: str, convo_config: dict):
         """
@@ -61,11 +64,14 @@ class Conversation:
         :param convo_config: Conversation configuration properties
         :type convo_config: `dict`
         """
-        self.directory                  = directory
-        self.extension                  = extension
-        self.convo_config               = convo_config
-        self.schema                     = self._schema()
-        self.convo                      = self._convo()
+        self.directory          = directory
+        self.extension          = extension
+        self.convo_config       = convo_config
+        self.schema             = self._schema()
+        self.convo              = self._convo()
+        self._zone              = datetime.timezone(datetime.timedelta(
+            hours               = self.convo_config.get(self._prop_zone)
+        ))
 
 
     def __new__(self, *args, **kwargs) -> typing.Self:
@@ -73,7 +79,7 @@ class Conversation:
         Create Conversation singleton.
         """
         if not self.inst:
-            self.inst                   = super(Conversation, self).__new__(self)
+            self.inst           = super(Conversation, self).__new__(self)
         return self.inst
     
 
@@ -84,8 +90,8 @@ class Conversation:
         :param persona: Persona whose data is being persisted.
         :type persona: `str`
         """
-        file                            = "".join([persona, self.extension])
-        file_path                       = os.path.join(self.directory, file)
+        file                    = "".join([persona, self.extension])
+        file_path               = os.path.join(self.directory, file)
         
         try:
             with open(file_path, 'w') as f:
@@ -102,16 +108,16 @@ class Conversation:
         :returns: Dictionaryschema for new conversation.
         :rtype: `dict`
         """
-        schema_filename                 = self.convo_config[self._prop_schema]
-        schema_file                     = "".join([schema_filename, self.extension])
-        schema_path                     = os.path.join(self.directory, schema_file)
+        schema_filename         = self.convo_config[self._prop_schema]
+        schema_file             = "".join([schema_filename, self.extension])
+        schema_path             = os.path.join(self.directory, schema_file)
         
         try:
             with open(schema_path, "r") as f:
-                content                 = f.read()
+                content         = f.read()
 
             if content:
-                payload                 = json.loads(content)
+                payload         = json.loads(content)
                 return payload
 
             raise exceptions.DataNotFoundError(schema_path)
@@ -127,40 +133,40 @@ class Conversation:
         :returns: A dictionary containing the parsed data.
         :rtype: `dict`
         """
-        raw                             = { }
+        raw                     = { }
         for root, _, files in os.walk(self.directory):
             for file in files:
-                persona, ext            = os.path.splitext(file)
+                persona, ext    = os.path.splitext(file)
 
                 if ext != self.extension or \
                     persona == self.convo_config[self._prop_schema]:
                     continue
 
-                file_path               = os.path.join(root, file)
-                raw[persona]            = { }
+                file_path       = os.path.join(root, file)
+                raw[persona]    = { }
 
                 try:
                     with open(file_path, "r") as f:
-                        content         = f.read()
+                        content = f.read()
 
                     if content:
-                        payload         = json.loads(content)
+                        payload = json.loads(content)
 
                     else: 
                         logger.warning(
                             f"No history found for {persona}, applying new schema.")
-                        payload         = self.schema
+                        payload = self.schema
 
-                    raw[persona]        = payload
+                    raw[persona] = payload
 
                 except (FileNotFoundError, json.JSONDecodeError) as e:
                     logger.error(f"Error loading JSON at {file_path}: {e}")
-                    raw[persona]        = self.schema
+                    raw[persona] = self.schema
 
                 except Exception as e:
                     logger.error(
                         f"Unexpected error occurred while loading {file_path}: {e}")
-                    raw[persona]        = self.schema
+                    raw[persona] = self.schema
         
         return raw
 
@@ -169,11 +175,7 @@ class Conversation:
         """
         Generates a timestamp in MM-DD HH:MM EST 24-hour format.
         """
-        delta                       = datetime.timedelta(
-            hours                   = self.convo_config.get("TIMEZONE_OFFSET")
-        )
-        zone                        = datetime.timezone(delta)
-        now                         = datetime.datetime.now(zone) 
+        now                     = datetime.datetime.now(self._zone) 
         return now.strftime("%m-%d %H:%M")
 
 
@@ -182,11 +184,11 @@ class Conversation:
         Remove a persona's conversation history and memories.
 
         :param persona: Persona to be cleared.
-        :type persona: str
+        :type persona: `str`
         """
         logger.warning(
             f"Clearing {persona}'s conversation history and memories.")
-        self.convo[persona]         = self.schema
+        self.convo[persona]     = self.schema
         self._write(persona)
         return
 
@@ -196,20 +198,15 @@ class Conversation:
         Return current persona.
 
         :param persona: Persona with which the prompter is conversing.
-        :type persona: str
+        :type persona: `str`
         """
         if persona not in self.convo.keys():
             raise exceptions.DataNotFoundError(persona)
         return self.convo[persona]
     
 
-    def update(self, 
-        persona                     : str, 
-        name                        : str, 
-        msg                         : str,
-        memory                      : str | None = None,
-        persist                     : bool = True
-    ) -> dict:
+    def update(self, persona: str, name: str, msg: str, 
+               memory: str | None = None, persist: bool = True) -> dict:
         """
         Update and persist conversation properties.
 
@@ -231,12 +228,12 @@ class Conversation:
         if persona not in self.convo.keys():
             logger.warning(
                 f"No data found for {persona}, defaulting to new schema")
-            self.convo[persona]     = self.schema
+            self.convo[persona] = self.schema
 
         self.convo[persona][self._prop_hist].append({ 
-            self._prop_name         : name,
-            self._prop_msg          : msg,
-            self._prop_time         : self._timestamp()
+            self._prop_name : name,
+            self._prop_msg  : msg,
+            self._prop_time : self._timestamp()
         })
         
         if memory is not None:
@@ -248,9 +245,7 @@ class Conversation:
         return self.convo[persona]
 
 
-    def vars(self,
-        persona                                 : str
-    )                                           -> dict: 
+    def vars(self, persona: str) -> dict: 
         """
         Return current persona formatted for templating.
 

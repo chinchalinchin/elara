@@ -1,0 +1,234 @@
+{
+    "functions": {
+        "analyze": {
+            "latex_preamble": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+        },
+        "brainstorm": { },
+        "converse": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "memory": {
+                        "type": "string"
+                    },
+                    "response": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "response"
+                ]
+            },
+            "mime": "application/json"
+        },
+        "review": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "score": {
+                        "type": "string",
+                        "enum": [
+                            "pass",
+                            "fail"
+                        ]
+                    },
+                    "overall": {
+                        "type": "string"
+                    },
+                    "files": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "path": {
+                                    "type": "string"
+                                },
+                                "bugs": {
+                                    "type": "string"
+                                },
+                                "comments": {
+                                    "type": "string"
+                                },
+                                "code": {
+                                    "type": "string"
+                                },
+                                "language": {
+                                    "type": "string",
+                                    "enum": [
+                                        "node",
+                                        "python",
+                                        "java",
+                                        "html",
+                                        "json",
+                                        "yaml",
+                                        "bash",
+                                        "toml",
+                                        "txt",
+                                        "md",
+                                        "rst"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "path",
+                                "comments"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "score",
+                    "overall"
+                ]
+            },
+            "mime": "application/json"
+        },
+        "request": { }
+    },
+    "tree": {
+        "directories": {
+            "data": "data",
+            "logs": "logs",
+            "config": "data/config",
+            "context": "data/context",
+            "personas": "data/personas",
+            "threads": "data/threads",
+            "templates": "data/templates",
+            "tools": "data/tools"
+        },
+        "files": {
+            "cache": "cache.json",
+            "logs": "elara.log"
+        },
+        "extensions": {
+            "context": ".json",
+            "personas": ".json",
+            "templates": ".rst",
+            "threads": ".json"
+        }
+    },
+    "objects": {
+        "conversation": {
+            "timezone_offset": -5,
+            "schema_filename": "_new"
+        },
+        "directory": {
+            "summary": {
+                "directives": {
+                    ".py": "python",
+                    ".sh": "bash",
+                    ".toml": "toml",
+                    ".cfg": "toml",
+                    ".json": "json",
+                    ".html": "html",
+                    ".js": "js"
+                },
+                "includes": {
+                    "ext": [
+                        ".rst",
+                        ".md",
+                        ".ini",
+                        ".txt"
+                    ]
+                },
+                "excludes": {
+                    "ext":  [
+                        ".pyc",
+                        ".zip",
+                        ".gz"
+                    ],
+                    "file": [
+                        "poems.json",
+                        "proofs.json",
+                        "quotes.json",
+                        "axiom.json",
+                        "elara.json",
+                        "milton.json",
+                        "valis.json",
+                        "murrow.json"
+                    ],
+                    "dir": []
+                },
+                "template": "summary"
+            }
+        },
+        "persona":{
+            "schema_filename": "_new"
+        },
+        "repository": {
+            "vcs": "github",
+            "auth": {
+                "type": "bearer",
+                "creds": null
+            },
+            "backends": {
+                "github": {
+                    "headers": {
+                        "x-github-api-version": "2022-11-28",
+                        "accept": "application/vnd.github+json"
+                    },
+                    "api": {
+                        "pr": {
+                            "comments": "https://api.github.com/repos/{owner}/{repo}/issues/{pr}/comments",
+                            "pulls": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/comments",
+                            "files": "https://api.github.com/repos/{owner}/{repo}/pulls/{pr}/files"
+                        }
+                    }
+                }
+            }
+        },
+        "terminal": {
+            "gherkin": {
+                "help": "please describe the feature request with gherkin test language.",
+                "blocks": {
+                    "feature": "feature\n\tenter feature name: ",
+                    "scenario": "scenario\n\tdescribe the specific scenario in the feature: ",
+                    "language": "language\n\tspecify the desired programming language: ",
+                    "given": "given\n\tfix the context of the scenario: ",
+                    "when": "when\n\tdescribe the action which triggers the scenario: ",
+                    "then": "then\n\tstate the expected outcome of the scenario: "
+                }
+            },
+            "display": {
+                "prompt": "\tprompt: ",
+                "init": "starting an interactive terminal...",
+                "title": "\n---------------\n  elara shell  \n---------------\n",
+                "start": "\n\ttype exit() to quit.\n\ttype help() to see list of commands.\n\n",
+                "help": "todo"
+            },
+            "commands": {
+                "exit": "exit()",
+                "help": "help()"
+            },
+            "functions": [
+                "current_persona",
+                "current_prompter",
+                "current_model",
+                "directory"
+            ]
+        },
+        "model": {
+            "gemini": {
+                "key": null,
+                "default": "models/gemini-2.0-flash-exp",
+                "tuning": {
+                    "source": "models/gemini-1.5-flash-001-tuning"
+                }
+            }
+        }
+    },
+    "logs": {
+        "level": "INFO",
+        "schema": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "overrides": {
+        "objects.model.gemini.tuning.source": "TUNING_SOURCE",
+        "objects.model.gemini.key": "GEMINI_KEY",
+        "objects.model.gemini.default": "GEMINI_DEFAUlT",
+        "objects.repository.vcs": "VCS",
+        "objects.repository.auth.creds": "VCS_TOKEN",
+        "functions.converse.timezone_offset": "TIMEZONE_OFFSET",
+        "functions.analyze.latex_preamble": "LATEX_PREAMBLE",
+        "logs.level": "LOGS_LEVEL"
+    }
+}

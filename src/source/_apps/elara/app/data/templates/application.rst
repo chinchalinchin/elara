@@ -1,9 +1,9 @@
-.. _output:
+.. _application:
 
-######
-Output
-######
-######
+###########
+Application
+###########
+###########
 {% if prompt %}
 .. _prompt:
 
@@ -33,23 +33,23 @@ Response
 {% include '_responses/request.rst' %}
 {% endif -%}
 {%- endif -%}
-{% if includes %}
+{% if reports %}
 .. _reports:
 
 Reports
 #######
 #######
-{% if includes.get("summary") %}
+{% if reports.get("summary") %}
 .. _summary-report:
 
 Summary
 #######
 {% include '_reports/summary.rst' %}
 {% endif %}
-{% if includes.get("models") %}
+{% if reports.get("models") %}
 {% include '_reports/models.rst' %}
 {% endif %}
-{%- if includes.get("service") -%}
-{% include '_reports/service.rst' %}
+{%- if reports.get("repository") -%}
+{% include '_reports/repository.rst' %}
 {% endif %}
 {% endif %}

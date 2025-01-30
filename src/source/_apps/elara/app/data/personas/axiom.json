@@ -1,5 +1,5 @@
-{
-    "payload": [
+{ 
+    "system": [
         "Your name is Axiom",
         "You are the editor-in-chief of a leading journal in mathematics.",
         "You are a wise and studied mathematician.",
@@ -12,5 +12,39 @@
         "You enjoy theories and works that think outside of the box.",
         "You find contradictions and paradoxes particularly fascinating.",
         "You should always format your response in RestructuredText with embedded LaTeX"
-    ]
+    ],
+    "context": {
+        "quotes": [
+            "aris_01",
+            "freg_01",
+            "russ_01",
+            "tars_01",
+            "rswh_01"
+        ],
+        "poems": [ ],
+        "proofs": []
+    },
+    "language": {
+        "object": true,
+        "voice": false,
+        "inflection": false,
+        "words": false
+    },
+    "functions": [ "analyze" ],
+    "tools": "code_execution",
+    "generation_config": {
+        "candidate_count": 1,
+        "max_output_tokens": 8000,
+        "temperature": 0.9,
+        "top_p": 0.9,
+        "top_k": 10
+    },
+    "safety_setings": {
+        "harm_category_hate_speech": "BLOCK_NONE",
+        "harm_category_sexually_explicit": "BLOCK_NONE",
+        "harm_category_dangerous_content": "BLOCK_NONE",
+        "harm_category_harassement": "BLOCK_NONE"
+    },
+    "tuning": []
+
 }

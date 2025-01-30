@@ -25,10 +25,12 @@ Bugs
 
 {{ f.get('bugs') }}
 {%- endif %}
-{% if f.get('amendments') %}
-Amended Code
-------------
+{% if f.get('code') %}
+Code
+----
 
-{{ f.get('amendments') }}
+.. code-block:: {{ f.get('language') }}
+    
+    {{ f.get('code') | replace('\n', '\n    ') }}
 {%- endif %}
 {% endfor %}
