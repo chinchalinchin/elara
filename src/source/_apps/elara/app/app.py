@@ -117,9 +117,10 @@ class App:
             logger.info("Injecting file summary into prompt...")
             return {
                 **buffer, 
-                **context, 
+                **context,
+                **self.personas.vars(persona)
                 **self.directory.summary(), 
-                **{ "latex": self.config.get(self._prop_analyze_latex)}
+                **{ "latex"         : self.config.get(self._prop_analyze_latex)}
             }
 
 
@@ -129,6 +130,7 @@ class App:
             template_vars           = {
                 **context,
                 **self.cache.vars(),
+                **self.personas.vars(persona),
                 **self.conversations.vars(persona)
             }
             if self.directory:
@@ -145,7 +147,8 @@ class App:
             return {
                 **buffer,
                 **context,
-                ** { "reports": self.terminal.gherkin() }
+                **self.personas.vars(persona)
+                ** { "reports"      : self.terminal.gherkin() }
             }
 
         if func == constants.Functions.REVIEW.value:
@@ -155,8 +158,9 @@ class App:
             return {
                 **buffer, 
                 **context,
+                **self.personas.vars(persona),
                 **self.repository.vars(),
-                **{ "reports": self.directory.summary()}
+                **{ "reports":       self.directory.summary()}
             }
         
         return {}
@@ -206,25 +210,16 @@ class App:
         :returns: Object containing the contextualized prompt and model response.
         :rtype: `schemas.Output`
         """
-        print(self.cache.get(constants.CacheProps.CURRENT_PERSONA.value))
         if self.cache.get(constants.CacheProps.CURRENT_PERSONA.value) is None:
             if arguments.current_persona is None:
                 arguments.current_persona \
                                     = self.personas.function(constants.Functions.CONVERSE.value)
-
             self.cache.update(**{
                 constants.CacheProps.CURRENT_PERSONA.value
                                     : arguments.current_persona 
             })
             self.personas.update(arguments.current_persona)
             self.cache.save()
-            print("here")
-        print("wut")
-        import pprint
-
-        pprint.pp(self._vars(constants.Functions.CONVERSE.value))
-        exit()
-
         persona                     = self.cache.get(constants.CacheProps.CURRENT_PERSONA.value)
         prompter                    = self.cache.get(constants.CacheProps.CURRENT_PROMPTER.value)
         self.conversations.update(
