@@ -75,7 +75,6 @@ class Printer:
         :param output: application output to be written.
         :type output: `schemas.Output`
         """
-        print(output.to_dict().get("reports"))
         payload             = self.templates.get_template(temp).render(output.to_dict())
 
         if arguments.output:
