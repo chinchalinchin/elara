@@ -19,7 +19,8 @@ import requests
 import constants 
 import decorators
 
-logger = logging.getLogger(__name__)
+
+logger                      = logging.getLogger(__name__)
 
 
 class Repo:
@@ -27,11 +28,11 @@ class Repo:
     Application repository. Class for managing interactions with a VCS backend. 
     """
 
-    auth                            = None
+    auth                    = None
     """Authentication configuration for VCS backend"""
-    src                             = None
+    src                     = None
     """VCS source information"""
-    backends                        = None
+    backends                = None
     """Backend configurations"""
 
 
@@ -75,18 +76,19 @@ class Repo:
             Only ``github`` VCS is supported at this time.
             
         """
-        self.auth                   = repository_config[
-            constants.RepoProps.AUTH.value]
-        self.backends               = repository_config[
-            constants.RepoProps.BACKENDS.value]
-        self.src                    = {
-            constants.RepoProps.OWNER.value
-                                    : owner,
-            constants.RepoProps.REPO.value
-                                    : repository,
-            constants.RepoProps.VCS.value
-                                    : repository_config[
-                                        constants.RepoProps.VCS_TYPE.value]
+        owner_key           = constants.RepoProps.OWNER.value
+        repo_key            = constants.RepoProps.REPO.value
+        vcs_key             = constants.RepoProps.REPO.value
+        vcs_type_key        = constants.RepoProps.VCS_TYPE.value
+        backends_key        = constants.RepoProps.BACKENDS.value
+        auth_key            = constants.RepoProps.AUTH.value
+
+        self.auth           = repository_config[auth_key]
+        self.backends       = repository_config[backends_key]
+        self.src            = {
+            owner_key       : owner,
+            repo_key        : repository,
+            vcs_key         : repository_config[vcs_type_key]
         }
     
 
@@ -105,14 +107,17 @@ class Repo:
         :returns: POST URL
         :rtype: `str`
         """
-        if self.src[constants.RepoProps.VCS.value] == "github":
+        vcs_key             = constants.RepoProps.VCS.value
+        api_key             = constants.RepoProps.API.value
+        pr_key              = constants.RepoProps.PR.value
 
-            return self.backends[constants.RepoProps.GITHUB.value][
-                constants.RepoProps.API.value][constants.RepoProps.PR.value
-            ][endpoint].format(**{ "pr": pr, **self.src})
+        if self.src[vcs_key] == "github":
+            github_key      = constants.RepoProps.GITHUB.value
+            return self.backends[github_key][api_key][pr_key][endpoint]\
+                            .format(**{ "pr": pr, **self.src})
         
         raise ValueError(
-            f"Unsupported VCS: {self.src[constants.RepoProps.VCS.value ]}")
+            f"Unsupported VCS: {self.src[vcs_key]}")
     
 
     def _headers(self):
@@ -126,19 +131,23 @@ class Repo:
         :returns: Dictionary of headers
         :rtype:  dict
         """
-        if self.src[constants.RepoProps.VCS.value] == "github":
-            if self.auth[constants. RepoProps.TYPE.value] == "bearer":
-                token = self.auth[constants.RepoProps.CREDS.value]
+        vcs_key             = constants.RepoProps.VCS.value
+        github_key          = constants.RepoProps.GITHUB.value
+        type_key            = constants.RepoProps.TYPE.value
+        headers_key         = constants.RepoProps.HEADERS.value
+        creds_key           = constants.RepoProps.CREDS.value
 
-                return {
-                    "Authorization": f"Bearer {token}", 
-                    **self.backends[constants.RepoProps.GITHUB.value
-                                    ][constants.RepoProps.HEADERS.value]
+        if self.src[vcs_key] == "github":
+            if self.auth[type_key] == "bearer":
+                token       = self.auth[creds_key]
+
+                return {  
+                    **self.backends[github_key][headers_key],
+                    "Authorization": f"Bearer {token}" 
                 }
             
         raise ValueError(
-            f"Unsupported auth type: {self.auth[
-                constants.RepoProps.TYPE.value]} or VCS: {self.src[constants.RepoProps.VCS.value]}"
+            f"Unsupported auth type: {self.auth[type_key]} or VCS: {self.src[vcs_key]}"
         )
 
 
@@ -158,18 +167,18 @@ class Repo:
         """
         logger.info(f"Making HTTP POST Request to {url}")
 
-        res                     = requests.post(
-            url                 = url, 
-            headers             = self._headers(), 
-            json                = body
+        res                 = requests.post(
+            url             = url, 
+            headers         = self._headers(), 
+            json            = body
         )
         logger.debug(res)
         res.raise_for_status()
         return {
             "service": {
-                "name"          : self.src[constants.RepoProps.VCS.value],
-                "body"          : res.json(),
-                "status"        : "success"
+                "name"      : self.src[constants.RepoProps.VCS.value],
+                "body"      : res.json(),
+                "status"    : "success"
             }
         }
     
@@ -185,17 +194,17 @@ class Repo:
         :type url: `str`
         """
         logger.info(f"Making HTTP GET Request to {url}")
-        res                     = requests.get(
-            url                 = url, 
-            headers             = self._headers()
+        res                 = requests.get(
+            url             = url, 
+            headers         = self._headers()
         )
         logger.debug(res)
         res.raise_for_status()
         return {
-            "service":          {
-                "name"          : self.src[constants.RepoProps.VCS.value],
-                "body"          : res.json(),
-                "status"        : "success"
+            "service":      {
+                "name"      : self.src[constants.RepoProps.VCS.value],
+                "body"      : res.json(),
+                "status"    : "success"
             }
         }
     
@@ -242,20 +251,24 @@ class Repo:
 
             Only ``github`` VCS is supported at this time.
 
-        :param msg: Comment to post.
-        :type msg: `str`
+        The `bodies` parameter must follow the following schema,
+
+        .. code-block:: python
+
+            bodies      = [{
+                "path"  : "path of file"
+                "msg    : "message to post"
+            }]
+
         :param pr: Pull request number on which to comment.
         :type pr: `str`,
-        :param paths: List of file paths necessitating comment.
-        :type path: `list`
+        :param bodies: List of request bodies to post.
+        :type bodies: `list`
         :returns: List of VCS responses.
         :rtype: `list`
         """
         files               = self.pulls(pr)
-        url                 = self._pull(
-            pr              = pr,
-            endpoint        = constants.RepoProps.PULLS.value
-        )
+        url                 = self._pull(pr, constants.RepoProps.PULLS.value)
         paths               = [ b["path"] for b in bodies ]
         res                 = []
 
@@ -263,15 +276,12 @@ class Repo:
             for p in paths:
                 if f.get('file').endswith(p):
                     body    = {
-                        "body"  : bodies[paths.index(p)],
-                        "path"  : f.get("file"),
-                        "commit_id" : f.get("sha"),
-                        "line"  : 1
+                        "body": bodies[paths.index(p)],
+                        "path": f.get("file"),
+                        "commit_id": f.get("sha"),
+                        "line": 1
                     }
-                    res.append(self._post(
-                        url     = url,
-                        body    = body
-                    ))
+                    res.append(self._post(url,body))
                     break 
         return res
 
@@ -295,14 +305,6 @@ class Repo:
         :param pr: Pull request number on which to comment.
         :type pr: `str`
         """
-        url                 = self._pull(
-            pr              = pr,
-            endpoint        = constants.RepoProps.COMMENTS.value
-        )
-        body                = {
-            "body"          : msg
-        }
-        return self._post(
-            url             = url,
-            body            = body
-        )
+        url                 = self._pull(pr,constants.RepoProps.COMMENTS.value)
+        body                = { "body": msg}
+        return self._post(url, body)

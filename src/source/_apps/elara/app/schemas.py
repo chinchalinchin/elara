@@ -12,7 +12,7 @@ class Output:
     """
     Data structure for managing application output.
     """
-    prompt                  : str | None = None
+    application             : str | None = None
     response                : dict | None = None
     reports                 : dict | None = None
 

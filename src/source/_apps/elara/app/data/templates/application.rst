@@ -1,18 +1,13 @@
+{% if application %}
 .. _application:
 
-###########
 Application
 ###########
 ###########
-{% if prompt %}
-.. _prompt:
 
-Prompt
-######
-######
-
-{{ prompt }}
+{{ application }}
 {%- endif %}
+
 {%- if response -%}
 .. _response:
 
@@ -20,9 +15,6 @@ Response
 ########
 ########
 
-{% if response.get("converse") %}
-{% include '_responses/converse.rst' %}
-{% endif %}
 {% if response.get("analyze") %}
 {% include '_responses/analyze.rst' %}
 {% endif %}
