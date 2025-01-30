@@ -20,12 +20,12 @@ import schemas
 import util
 import objects.cache as cache
 import objects.config as conf
-import objects.context as cont
 import objects.conversation as convo
 import objects.directory as directory
+import objects.injection as inject
+import objects.model as model
 import objects.persona as persona
 import objects.printer as printer
-import objects.model as model
 import objects.repository as repository
 import objects.template as template
 import objects.terminal as terminal
@@ -192,16 +192,14 @@ class AppFactory:
     _prop_auth_vcs              = constants.FactoryProps.AUTH_VCS.value
     ## DIRECTORIES
     _prop_dir_data              = constants.FactoryProps.DIR_DATA.value
-    _prop_dir_cont              = constants.FactoryProps.DIR_CONTEXT.value
+    _prop_dir_injs              = constants.FactoryProps.DIR_INJECTIONS.value
     _prop_dir_pers              = constants.FactoryProps.DIR_PERSONA.value
     _prop_dir_thrd              = constants.FactoryProps.DIR_THREADS.value
-    _prop_dir_logs              = constants.FactoryProps.DIR_LOGS.value
     _prop_dir_temp              = constants.FactoryProps.DIR_TEMPLATES.value
     ## FILES 
-    _prop_file_logs             = constants.FactoryProps.FILE_LOG.value
     _prop_file_cach             = constants.FactoryProps.FILE_CACHE.value
     ## EXTENSIONS
-    _prop_ext_cont              = constants.FactoryProps.EXT_CONTEXT.value
+    _prop_ext_injs              = constants.FactoryProps.EXT_INJECTIONS.value
     _prop_ext_temp              = constants.FactoryProps.EXT_TEMPLATES.value
     _prop_ext_thrd              = constants.FactoryProps.EXT_THREADS.value
     _prop_ext_pers              = constants.FactoryProps.EXT_PERSONA.value
@@ -215,8 +213,8 @@ class AppFactory:
     ## EXTERNAL SERVICES
     _prop_vcs                   = constants.FactoryProps.VCS.value          
     ## LOGS
-    _prop_log_lvl               = constants.FactoryProps.LOG_LEVEL.value
-    _prop_log_sch               = constants.FactoryProps.LOG_SCHEMA.value
+    _prop_log_dir               = constants.LogProps.DIRECTORY.value
+    _prop_log_file              = constants.LogProps.FILE.value
 
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "app.json") -> None:
@@ -248,6 +246,16 @@ class AppFactory:
             *[self.app.config.get(p) for p in parts ])
     
 
+    def log_file(self) -> str:
+        """
+        Return the location of the application log file.
+
+        :returns: Log file path.
+        :rtype: `str`
+        """
+        return self._path([ self._prop_log_dir, self._prop_log_file ])
+
+
     def with_cache(self) -> typing.Self:
         """
         Initialize and append a `objects.cache.Cache` object to the factory's `app.App` object.
@@ -260,22 +268,6 @@ class AppFactory:
         self.app.cache          = cache.Cache(
                                     self._path([self._prop_dir_data, self._prop_file_cach]))
         return self 
-    
-
-    def with_context(self) -> typing.Self:
-        """
-        Initialize and append a `objects.context.Context` object to the factory's `app.App` object.
-
-        :returns: Self with updated application attribute.
-        :rtype: `typing.Self`
-        """
-        logger.debug("Initializing application context...")
-
-        self.app.context        = cont.Context(
-            directory           = self._path([self._prop_dir_cont]),
-            extension           = self.app.config.get(self._prop_ext_cont)
-        )
-        return self
     
 
     def with_conversations(self) -> typing.Self:
@@ -315,6 +307,22 @@ class AppFactory:
         return self 
     
 
+    def with_injections(self) -> typing.Self:
+        """
+        Initialize and append a `objects.context.Context` object to the factory's `app.App` object.
+
+        :returns: Self with updated application attribute.
+        :rtype: `typing.Self`
+        """
+        logger.debug("Initializing application context...")
+
+        self.app.injections     = inject.Injection(
+            directory           = self._path([self._prop_dir_injs]),
+            extension           = self.app.config.get(self._prop_ext_injs)
+        )
+        return self
+    
+    
     def with_model(self) -> typing.Self: 
         """
         Initialize and append a `objects.model.Model` object to the factory's `app.App` object. 

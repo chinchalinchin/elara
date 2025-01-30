@@ -1,13 +1,15 @@
-.. _{{ current_persona }}-context:
+.. _code-review:
 
 ###########
 Code Review 
 ###########
 
-.. _preamble:
+{% include '_blocks/preamble.rst' %}
 
-Preamble
-########
+.. _introduction:
+
+Introduction
+############
 
 Good morning, {{ current_persona | capitalize }}. As you know, I am the company's chief client relations officer, {{ current_prompter | capitalize }}. I hope you are ready for another 16 hour day! We've got deadlines to meet and value to deliver! The clients have been waiting for you. Listen carefully, because I'm not going to repeat this!
 
@@ -50,9 +52,9 @@ Your decision will be used to determine if the pull request should be marked for
 
 Any comments in your review will be appended to the pull request as a comment for the next engineer to implement. All of this will be covered in more detail in the :ref:`next section <response-schema>`. I really need to go get my golf clubs and get ready, or else I'll be late. The data team will meet you in the next section to pick up where I left off.
 
-{% include '_functions/_schemas/review.rst' %}
+{% include '_schemas/schema.rst' %}
 
-{% include '_context/language.rst' %}
+{% include '_blocks/_plugins/plugins.rst' %}
 
 .. _pull-request:
 
@@ -103,4 +105,45 @@ Metadata
 
     Keep in mind, these files are on the remote repository. They are not on your local machine, so you cannot directly import the application modules into your code execution environment! 
     
-{% include '_reports/summary.rst' %}
+{% include '_blocks/directory.rst' %}
+
+{%- set review = response.get('review') %}
+.. important::
+
+    SCORE: {{ review.get('score') }}
+
+.._assessement:
+
+Assessment
+##########
+
+{{ review.get('overall') }}
+
+.. _files:
+
+Files 
+#####
+{% for f in review.get('files') %}
+{{ '=' * f.get('path') | length }}
+{{ f.path }}
+{{ '=' * f.get('path') | length }}
+
+General Comments
+----------------
+
+{{ f.get("comments") }}
+{% if f.get('bugs') %}
+Bugs
+----
+
+{{ f.get('bugs') }}
+{%- endif %}
+{% if f.get('code') %}
+Code
+----
+
+.. code-block:: {{ f.get('language') }}
+    
+    {{ f.get('code') | replace('\n', '\n    ') }}
+{%- endif %}
+{% endfor %}

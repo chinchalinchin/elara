@@ -282,7 +282,7 @@
             "data": "data",
             "logs": "logs",
             "config": "data/config",
-            "context": "data/context",
+            "injections": "data/injections",
             "personas": "data/personas",
             "threads": "data/threads",
             "templates": "data/templates",
@@ -293,7 +293,7 @@
             "logs": "elara.log"
         },
         "extensions": {
-            "context": ".json",
+            "injections": ".json",
             "personas": ".json",
             "templates": ".rst",
             "threads": ".json"

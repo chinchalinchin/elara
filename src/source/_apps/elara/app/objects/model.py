@@ -13,7 +13,6 @@ import traceback
 # Application Modules
 import constants
 import exceptions as excepts
-import util
 
 # External Modules 
 import google.generativeai as genai
@@ -279,8 +278,6 @@ class Model:
         except Exception as e:
             logger.error(f"{e}\n\n{traceback.format_exc()}")
             raise
-
-        res                             = util.sanitize(res.text)  
 
         if "response_schema" in generation_config.keys():
             try:

@@ -62,7 +62,41 @@
                 }
             }
         },
-        "context": {
+        "context": { },
+        "current_prompter": {
+            "type": "string"
+        },
+        "current_persona": {
+            "type": "string"
+        },
+        "function": {
+            "type": "string",
+            "enum": [
+                "brainstorm",
+                "converse", 
+                "investigate",
+                "request",
+                "review"
+            ]
+        },
+        "history": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "timestamp": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "injections": {
             "type": "object",
             "properties": {
                 "poems": {
@@ -105,31 +139,8 @@
                 }
             }
         },
-        "current_prompter": {
-            "type": "string"
-        },
-        "current_persona": {
-            "type": "string"
-        },
         "latex": {
             "type": "string"
-        },
-        "history": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "message": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "timestamp": {
-                        "type": "string"
-                    }
-                }
-            }
         },
         "memory": {
             "type": "string",
@@ -139,7 +150,35 @@
             "type": "object",
             "properties": {
                 "summary": {
-
+                    "type": "object",
+                    "properties": {
+                        "directory": {
+                            "type": "string"
+                        },
+                        "tree": {
+                            "type": "string"
+                        },
+                        "files": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string"
+                                    },
+                                    "data": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "repository": {
+                    
                 }
             }
         }

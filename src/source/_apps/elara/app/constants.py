@@ -49,14 +49,12 @@ class FactoryProps(enum.Enum):
     AUTH_GEMINI         = "objects.model.gemini.key"
     AUTH_VCS            = "objects.repository.auth.creds"
     DIR_DATA            = "tree.directories.data"
-    DIR_CONTEXT         = "tree.directories.context"
+    DIR_INJECTIONS      = "tree.directories.injections"
     DIR_PERSONA         = "tree.directories.personas"
     DIR_THREADS         = "tree.directories.threads"
-    DIR_LOGS            = "tree.directories.logs"
     DIR_TEMPLATES       = "tree.directories.templates"
-    FILE_LOG            = "tree.files.logs"
     FILE_CACHE          = "tree.files.cache"
-    EXT_CONTEXT         = "tree.extensions.context"
+    EXT_INJECTIONS      = "tree.extensions.context"
     EXT_TEMPLATES       = "tree.extensions.templates"
     EXT_THREADS         = "tree.extensions.threads"
     EXT_PERSONA         = "tree.extensions.personas"
@@ -67,8 +65,6 @@ class FactoryProps(enum.Enum):
     OBJECT_TERMINAL     = "objects.terminal"
     OBJECTS_REPOSITORY  = "objects.repository"
     VCS                 = "objects.repository.vcs"
-    LOG_LEVEL           = "logs.level"
-    LOG_SCHEMA          = "logs.schema"
     
 # SERVICE PROPERTIES
 
@@ -118,16 +114,6 @@ class ConfigProps(enum.Enum):
     OVERRIDES           = "overrides"
     
 
-class ContextProps(enum.Enum):
-    """
-    Context property key enumeration
-    """
-    # Internal Properties 
-    POEMS               = "poems"
-    PROOFS              = "proofs"
-    QUOTES              = "quotes"
-
-
 class ConvoProps(enum.Enum):
     """
     Conversation property key enumeration.
@@ -164,6 +150,28 @@ class DirectoryProps(enum.Enum):
     SUMMARY_EXCLUDES    = "excludes"
     SUMMARY_EXT         = "ext"
     SUMMARY_FILE        = "file"
+
+
+class InjectionProps(enum.Enum):
+    """
+    Injection property key enumeration
+    """
+    # Internal Properties 
+    POEMS               = "poems"
+    PROOFS              = "proofs"
+    QUOTES              = "quotes"
+
+
+class LogProps(enum.Enum):
+    """
+    Log property key enumeration
+    """
+    # Configuration Properties
+    DIRECTORY           = "tree.directories.logs"
+    FILE                = "tree.files.logs"
+    LEVEL               = "logs.level"
+    SCHEMA              = "logs.schema"
+
 
 class PersonaProps(enum.Enum):
     """
@@ -245,7 +253,8 @@ class TerminalProps(enum.Enum):
     GHERKIN             = "gherkin"
     GHERKIN_BLOCKS      = "blocks"
     GHERKIN_HELP        = "help"
-    ## 
+
+
 # VARIOUS PROPERTIES
 
 
@@ -271,3 +280,15 @@ class TemplateVars(enum.Enum):
     """
     Template variable enumeration
     """
+    # Contextualizations
+    CONTEXT             = "context"
+    CONTEXT_INTERNAL    = "internal"
+    # Injections
+    INJECT              = "injections"
+    INJECT_POEMS        = "poems"
+    INJECT_PROOFS       = "proofs"
+    INJECT_QUOTES       = "quotes"
+    # Reporting
+    REPORT              = "reports"
+    REPORT_SUMMARY      = "summary"
+    REPORT_REPO         = "repository"

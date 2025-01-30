@@ -13,6 +13,7 @@ import traceback
 # Application Modules
 import constants
 import exceptions 
+import loader
 
 
 logger                          = logging.getLogger(__name__)
@@ -113,18 +114,22 @@ class Directory:
                 f"{self.directory} does not exist."
             )
         
-        dir_summary                 = { }
+        dir_summary             = { }
+
         dir_summary[self._prop_sum] = {
-            self._prop_sum_dir      : os.path.basename(self.directory),
-            self._prop_sum_tree     : self._tree(),
-            self._prop_sum_files    : []
+            self._prop_sum_dir  : os.path.basename(self.directory),
+            self._prop_sum_tree : self._tree(),
+            self._prop_sum_files: []
         }
-        file_excludes               = self.directory_config.get(self._prop_sum)\
-                                                            .get(self._prop_sum_excludes)\
-                                                            .get(self._prop_sum_file)
-        directives                  = self.directory_config.get(self._prop_sum)\
-                                                            .get(self._prop_sum_directives)\
-                                                            .keys()
+
+        file_excludes           = self.directory_config.get(self._prop_sum)\
+                                                        .get(self._prop_sum_excludes)\
+                                                        .get(self._prop_sum_file)
+        
+        directives              = self.directory_config.get(self._prop_sum)\
+                                                        .get(self._prop_sum_directives)\
+                                                        .keys()
+        
         # Use `os.walk` to recursivle scan sub-directories.
         for root, _, files in os.walk(self.directory): 
             # traverse files in alphabetical order
@@ -133,51 +138,42 @@ class Directory:
                 if file in file_excludes:
                     continue
 
-                ext                 = os.path.splitext(file)[1]
+                ext             = os.path.splitext(file)[1]
 
                 if ext not in self._extensions():
                     continue
 
-                file_path           = os.path.join(root, file)
-                directive           = ext in directives
+                file_path       = os.path.join(root, file)
+                directive       = ext in directives
 
-                try:
-                    with open(file_path, "r") as infile:
-                        data        = infile.read()
+                data            = loader.raw_file(file_path)
 
-                    if directive:
-                        dir_summary[self._prop_sum][self._prop_sum_files] += [{
-                            self._prop_sum_type     
-                                    : "code",
-                            self._prop_sum_data
-                                    : data,
-                            self._prop_sum_lang
-                                    : self.directory_config.get(self._prop_sum)\
-                                                            .get(self._prop_sum_directives)\
-                                                            .get(ext),
-                            self._prop_sum_name
-                                    : os.path.relpath(file_path, self.directory)
-                        }]
-                        continue
-
-                    dir_summary[self._prop_sum][self._prop_sum_files] += [{
-                        self._prop_sum_type
-                                    : "raw",
-                        self._prop_sum_data
-                                    : data,
-                        self._prop_sum_name
-                                    : os.path.relpath(file_path, self.directory)
-                    }]
-                except FileNotFoundError as e:
-                    logger.error(F"Error reading file {file_path}: {e}")
-                    continue
-
-                except PermissionError as e:
-                    logger.error(F"Permission error reading file {file_path}: {e}")
-                    continue
+                if not data:
+                    continue 
                 
-                except Exception as e:
-                    logger.error(F"An unexpected error occurred while reading {file_path}: {e}")
+                if directive:
+                    dir_summary[self._prop_sum][self._prop_sum_files] += [{
+                        self._prop_sum_type     
+                                : "code",
+                        self._prop_sum_data
+                                : data,
+                        self._prop_sum_lang
+                                : self.directory_config.get(self._prop_sum)\
+                                                        .get(self._prop_sum_directives)\
+                                                        .get(ext),
+                        self._prop_sum_name
+                                : os.path.relpath(file_path, self.directory)
+                    }]
                     continue
+
+                dir_summary[self._prop_sum][self._prop_sum_files] += [{
+                    self._prop_sum_type
+                                : "raw",
+                    self._prop_sum_data
+                                : data,
+                    self._prop_sum_name
+                                : os.path.relpath(file_path, self.directory)
+                }]
+                
         
         return dir_summary

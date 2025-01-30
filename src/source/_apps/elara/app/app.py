@@ -14,9 +14,9 @@ import exceptions
 import schemas
 import objects.cache as cac
 import objects.config as conf
-import objects.context as cont
 import objects.conversation as convo
 import objects.directory as dir
+import objects.injection as inject
 import objects.persona as per
 import objects.model as mod
 import objects.printer as printer
@@ -41,7 +41,7 @@ class App:
     """Application cache"""
     config                      : conf.Config  | None = None
     """Application configuration"""
-    context                     : cont.Context | None = None
+    injections                  : inject.Injection | None = None
     """Application context"""
     conversations               : convo.Conversation | None = None
     """Application conversation history"""
@@ -77,7 +77,7 @@ class App:
 
 
     def __init__(self, cache: cac.Cache | None = None, config: conf.Config | None = None, 
-                context: cont.Context | None = None, conversations: convo.Conversation | None = None,
+                injections: inject.Injection | None = None, conversations: convo.Conversation | None = None,
                 directory: dir.Directory | None = None, model: mod.Model | None = None, 
                 personas: per.Persona | None = None, repo: repo.Repo | None = None,
                 templates: temp.Template | None = None, terminal: term.Terminal | None = None) -> None:
@@ -88,8 +88,8 @@ class App:
         :type cache: `objects.cache.Cache`
         :param config: Config object.
         :type config: `objects.config.Config`
-        :param context: Context object
-        :type context: `objects.context.Context`
+        :param injections: Injection object
+        :type injections: `objects.injection.Injection`
         :param conversations: Conversation object
         :type conversations: `objects.conversation.Conversation`
         :param directory: Directory object.
@@ -119,7 +119,7 @@ class App:
         }
         self.cache              = cache
         self.config             = config
-        self.content            = context
+        self.injections         = injections
         self.conversations      = conversations
         self.directory          = directory
         self.model              = model
@@ -138,61 +138,40 @@ class App:
         :returns: Dictionary of template variables.
         :rtype: `dict`
         """
-        buffer                  = self.cache.vars().copy()
-        buffer.update({constants.CacheProps.CURRENT_PERSONA.value
-                                : self.personas.function(func)})
-
-        if func == constants.Functions.FORMALIZE.value:
-            persona             = self.personas.function(func)
-            context             = self.context.vars(self.personas.context(persona))
-            logger.info("Injecting file summary into prompt...")
-            return {
-                **buffer, 
-                **context,
-                **self.personas.vars(persona)
-                **self.directory.summary(), 
-                **self.config.get(self._prop_latex)
-            }
+        persona_key             = constants.CacheProps.CURRENT_PERSONA.value
+        prompter_key            = constants.CacheProps.CURRENT_PROMPTER.value
 
         if func == constants.Functions.CONVERSE.value:
-            persona             = self.cache.get(constants.CacheProps.CURRENT_PERSONA.value)
-            context             = self.context.vars(self.personas.context(persona))
-            template_vars       = {
-                **context,
-                **self.cache.vars(),
-                **self.personas.vars(persona),
-                **self.conversations.vars(persona)
-            }
-            if self.directory:
-                logger.info("Injecting file summary into prompt...")
-                template_vars.update({ "reports" : self.directory.summary()})
-            return template_vars 
-        
-        if func == constants.Functions.REQUEST.value:
-            persona             = self.personas.function(func)
-            context             = self.context.vars(self.personas.context(persona))
-            logger.info("Injecting Gherkin script into prompt...")
-            return {
-                **buffer,
-                **context,
-                **self.personas.vars(persona)
-                ** { "reports": self.terminal.gherkin() }
-            }
+            persona             = self.cache.get(persona_key)
 
-        if func == constants.Functions.REVIEW.value:
+        else:
             persona             = self.personas.function(func)
-            context             = self.context.vars(self.personas.context(persona))
+
+        injections              = self.injections.vars(self.personas.context(persona))
+
+        template_vars           = {
+            persona_key         : persona, 
+            prompter_key        : self.cache.get(prompter_key),
+            **injections,
+            **self.personas.vars(persona),
+            **self.config.get(self._prop_latex),
+            **self.conversations.vars(persona),
+        }
+
+        template_vars["reports"] = {}
+
+        if self.directory:
             logger.info("Injecting file summary into prompt...")
-            return {
-                **buffer, 
-                **context,
-                **self.personas.vars(persona),
-                **self.repository.vars(),
-                **{ "reports" : self.directory.summary()}
-            }
-        
-        return {}
-        
+            template_vars["reports"].update(
+                self.directory.summary())
+
+        if func == constants.Functions.REQUEST.value:
+            logger.info("Injecting Gherkin script into prompt...")
+            template_vars["reports"].update(
+                self.terminal.gherkin())
+            
+        return template_vars
+
 
     def _schema(self, schema: constants.AppProps, mime: constants.AppProps, persona: str) -> dict:
         """
@@ -266,7 +245,7 @@ class App:
         )
 
         if arguments.render:
-            return schemas.Output(application=parsed_prompt)
+            return schemas.Output(parsed_prompt)
         
         response_config         = self._schema(self._prop_formalize_schema, self._prop_formalize_mime)
 
@@ -286,11 +265,11 @@ class App:
             memory              = response.get("memory"),
         )
 
-        analyze_response        = { constants.Functions.FORMALIZE.value : response }
+        formalize_response      = { constants.Functions.FORMALIZE.value : response }
 
         return schemas.Output(
             application         = parsed_prompt,
-            response            = analyze_response
+            response            = formalize_response
         )
 
 
@@ -318,7 +297,7 @@ class App:
         )
 
         if arguments.render:
-            return schemas.Output(application = parsed_prompt)
+            return schemas.Output(parsed_prompt)
         
         response_config         = self._schema(self._prop_converse_schema, self._prop_converse_mime)
 
@@ -342,7 +321,7 @@ class App:
             template            = constants.Functions.CONVERSE.value, 
             variables           = self._vars(constants.Functions.CONVERSE.value)
         )
-        return schemas.Output(application=application)
+        return schemas.Output(application)
 
 
     def request(self, arguments: schemas.Arguments) -> schemas.Output:
@@ -360,7 +339,7 @@ class App:
         )
 
         if arguments.render:
-            return schemas.Output(application=parsed_prompt)
+            return schemas.Output(parsed_prompt)
         
         # TODO: response schema for request function
 
@@ -396,7 +375,7 @@ class App:
         )
 
         if arguments.render:
-            return schemas.Output(application = review_prompt)
+            return schemas.Output(review_prompt)
         
         response_config         = self._schema(self._prop_review_schema, self._prop_review_mime)
         response                = self.model.respond(
@@ -408,11 +387,13 @@ class App:
             system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
-        reports                 = { "repository": [ ] }
+        repo_key                = constants.TemplateVars.REPORT_REPO.value
+        reports                 = { repo_key: [ ] }
+
         if response and response.get("overall"):
             msg                 = self.templates.service_vcs("comment", response)
             source_res          = self.repository.comment(msg, arguments.pull)
-            reports["repository"].append(source_res)
+            reports[repo_key].append(source_res)
             
         if response and response.get("files"):
             bodies              = []
@@ -423,7 +404,7 @@ class App:
                     "msg"       : comment
                 })
             source_res          = self.repository.files(arguments.pull, bodies)
-            reports["repository"].append(source_res)
+            reports[repo_key].append(source_res)
 
         review_response         = { constants.Functions.REVIEW.value: response}  
 

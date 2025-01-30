@@ -13,6 +13,7 @@ import typing
 
 # Application Modules
 import constants
+import loader
 import exceptions
 
 
@@ -112,19 +113,13 @@ class Conversation:
         schema_file             = "".join([schema_filename, self.extension])
         schema_path             = os.path.join(self.directory, schema_file)
         
-        try:
-            with open(schema_path, "r") as f:
-                content         = f.read()
+        payload                 = loader.json_file(schema_path)
 
-            if content:
-                payload         = json.loads(content)
-                return payload
+        if payload:
+            return payload 
 
-            raise exceptions.DataNotFoundError(schema_path)
-            
-        except (FileNotFoundError, json.JSONDecodeError, Exception) as e:
-            raise ValueError(f"Error loading JSON at {schema_path}: {e}")
-
+        raise exceptions.DataNotFoundError(schema_path)
+        
 
     def _convo(self) -> dict:
         """
@@ -143,30 +138,7 @@ class Conversation:
                     continue
 
                 file_path       = os.path.join(root, file)
-                raw[persona]    = { }
-
-                try:
-                    with open(file_path, "r") as f:
-                        content = f.read()
-
-                    if content:
-                        payload = json.loads(content)
-
-                    else: 
-                        logger.warning(
-                            f"No history found for {persona}, applying new schema.")
-                        payload = self.schema
-
-                    raw[persona] = payload
-
-                except (FileNotFoundError, json.JSONDecodeError) as e:
-                    logger.error(f"Error loading JSON at {file_path}: {e}")
-                    raw[persona] = self.schema
-
-                except Exception as e:
-                    logger.error(
-                        f"Unexpected error occurred while loading {file_path}: {e}")
-                    raw[persona] = self.schema
+                raw[persona]    = loader.json_file(file_path)
         
         return raw
 

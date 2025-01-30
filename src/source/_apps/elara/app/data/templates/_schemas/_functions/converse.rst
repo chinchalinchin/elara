@@ -8,21 +8,7 @@ The application which acts as an intermediary between {{ current_prompter | capi
 
 .. code-block:: json
 
-    {
-        "type": "object",
-        "properties": {
-            "response": {
-                "type": "string"
-            },
-            "memory": {
-                "type": "string",
-                "maxLength": 2000
-            },
-        },
-        "required": [
-            "response"
-        ]
-    }
+    {{ schema }}
 
 .. important::
 
@@ -39,10 +25,15 @@ The ``memory`` field is meant to be used as a way of bootstrapping your personal
 
 The important distinction between the ``response`` and ``memory`` is their cumulative effect. Each ``response`` will be appended to the :ref:`history` section in sequential order. The ``memory`` field however overwrites the current value stored in the :ref:`memory` section. See :ref:`history` and :ref:`memory` sections for more information. 
 
-.. _response-example:
+.. _response-examples:
 
-Example
-=======
+Examples
+========
+
+.. _example-one:
+
+Example #1
+----------
 
 Consider the following response,
 
@@ -55,7 +46,10 @@ Consider the following response,
 
 In this example, the ``response`` field will be appended to the :ref:`conversation history <history>` section. The ``memory`` field will be appended to the :ref:`memory <memory>` section.
 
-Note in this example all fields are present. However, ``memory`` is optional. The following example makes that clear,
+Example #2
+----------
+
+In the previous example all fields were present. The following example should make clear only ``response`` is required. ``memory`` is entirely optional.
 
 .. code-block::
 

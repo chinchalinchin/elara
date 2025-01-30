@@ -5,23 +5,12 @@ util.py
 Static application utilities.
 """
 # Standard Library Modules
-import ast
 import logging
 import typing
 import re
 
 
 logs                        = logging.getLogger(__name__)
-
-
-def sanitize(s: str) -> str:
-    """
-    Sanitize a string of escape characters.
-    """
-    # @DEVELOPMENT
-    #   This is where we have to clean up Milton's mess. 
-    #   (I bet you he complains about the regex...)
-    return re.sub(r"[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]", "", s)
 
 
 def lower(d: dict) -> dict:
@@ -115,37 +104,3 @@ def merge(d1: dict, d2: dict) -> dict:
             result[key]     = merge(d1[key], d2[key])
             
     return result
-
-
-def logger(schema : str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-           file: str = None, level: str = "INFO")  -> logging.Logger:
-    """
-    Configure application logging
-
-    :param schema: Schema for logs
-    :type schema: `str`
-    :param file: Location of log file, if logs are to be written to file.
-    :type file: `str`
-    :param level: Level of logs to capture.
-    :type level: `str`
-    """
-    logger                  = logging.getLogger()
-
-    if level in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
-        logger.setLevel(level)
-    else:
-        logger.setLevel("INFO") 
-
-    formatter               = logging.Formatter(schema)
-
-    if file is not None:
-        file_handler        = logging.FileHandler(file)
-        file_handler.setLevel(level) 
-        file_handler.setFormatter(formatter)
-        logger.addHandler(file_handler)
-
-    console_handler         = logging.StreamHandler()
-    console_handler.setLevel(level)
-    console_handler.setFormatter(formatter)
-    logger.addHandler(console_handler)
-    return logger

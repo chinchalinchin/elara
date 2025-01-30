@@ -1,9 +1,11 @@
+{% if plugins %}
 .. _plugins:
 
 =======
 Plugins
 =======
 
+T
 {% if language.values() | select() | list | length > 0 %}
 .. _language-modules:
 
@@ -29,3 +31,5 @@ This section contains modules for your Language processing. These modules have i
 {%- endif -%}
 
 {%- endif -%}
+
+{% endif %}

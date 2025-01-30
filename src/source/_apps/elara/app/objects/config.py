@@ -85,7 +85,7 @@ class Config:
             
             if value != default:
                 util.nest(key.split(delimiter), self.data, value)
-
+                
 
     def save(self) -> bool:
         """

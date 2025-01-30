@@ -5,19 +5,51 @@ main.py
 Module for command line interface.
 """
 # Standard Library Modules
+import logging
+import os
 import typing 
 
 
 # Application Modules
 import app
+import constants
 import factories
 import schemas
-import util
 import objects.printer as printer
 
 
-logger                      = util.logger()
+def logs(schema : str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+           file: str = None, level: str = "INFO")  -> None:
+    """
+    Configure application logging
 
+    :param schema: Schema for logs
+    :type schema: `str`
+    :param file: Location of log file, if logs are to be written to file.
+    :type file: `str`
+    :param level: Level of logs to capture.
+    :type level: `str`
+    """
+    logger                  = logging.getLogger()
+
+    if level in ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]:
+        logger.setLevel(level)
+    else:
+        logger.setLevel("INFO") 
+
+    formatter               = logging.Formatter(schema)
+
+    if file is not None:
+        file_handler        = logging.FileHandler(file)
+        file_handler.setLevel(level) 
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+    console_handler         = logging.StreamHandler()
+    console_handler.setLevel(level)
+    console_handler.setFormatter(formatter)
+    logger.addHandler(console_handler)
+    return
 
 def clear(application: app.App, arguments: schemas.Arguments) -> schemas.Output:
     """
@@ -69,13 +101,16 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     :returns: The appliation
     :rtype: `app.App`
     """
-    arguments               = factories.ArgFactory() \
+    app_factory             = factories.AppFactory()
+    arg_factory             = factories.ArgFactory()
+
+    arguments               = arg_factory \
                                 .with_cli_args() \
                                 .build()
     
-    application             =  factories.AppFactory()\
+    application             =  app_factory\
                                 .with_cache() \
-                                .with_context() \
+                                .with_injections() \
                                 .with_model() \
                                 .with_personas() \
                                 .with_conversations() \
@@ -87,11 +122,16 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     
     prnter                  = factories.PrinterFactory().build()
 
-    logger.info("Writing command line arguments to cache.")
     application.cache.update(**arguments.to_dict())
          
     prnter.debug(arguments)
     
+    log_file                = app_factory.log_file()
+    log_level               = application.config.get(constants.LogProps.LEVEL.value)
+    log_schema              = application.config.get(constants.LogProps.SCHEMA.value)
+    
+    logs(log_schema, log_file, log_level)
+
     return application, arguments, prnter
 
 
