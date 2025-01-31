@@ -415,7 +415,6 @@ class App:
         if arguments.render:
             return review_prompt
         
-        response_config         = self._schema(self._prop_review_schema, self._prop_review_mime)
         response                = self.model.respond(
             prompt              = review_prompt,
             generation_config   = response_config,
@@ -514,13 +513,15 @@ class App:
             self.conversations.clear(persona)
 
 
-    def models(self) -> dict:
+    def models(self, arguments: schemas.Arguments) -> dict:
         """
         Retrieve model metadata.
 
         :returns: Dictionary of model metadata.
         :rtype: `dict`
         """
+        arguments.view                  = True
+        # TODO: template out
         return self.model.vars()
     
 
@@ -556,7 +557,7 @@ class App:
         
         if operation_name not in self._dispatch.keys():
             logger(f"Invalid operation: {operation_name}")
-            return schemas.Output()
+            return False
         
         # @DATA
         #   Only the ``converse`` function supports interactive mode so far. 

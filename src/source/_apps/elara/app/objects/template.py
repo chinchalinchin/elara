@@ -145,8 +145,8 @@ class Template:
         :returns: A templated string.
         :rtype: `str`
         """
-        temp                = "_functions/_services/{service}/{template}".format(
+        temp                = "_functions/_services/_{service}/{template}".format(
             template        = template,
             service         = service
         )
-        return self.render(temp, variables, extension)
+        return self.render(variables, temp, extension)
