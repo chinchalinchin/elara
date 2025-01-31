@@ -155,7 +155,7 @@ class Persona:
         :returns: A dictionary of the persona configuration.
         :rtype: `dict`
         """
-        if persona is None or self.personas.get(persona):
+        if persona is None or not self.personas.get(persona):
             persona                 = self.current
         
         return self.personas.get(persona)

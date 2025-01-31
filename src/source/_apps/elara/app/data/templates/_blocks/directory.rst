@@ -4,7 +4,9 @@
 Summary
 #######
 
+{% if definitions.interaction %}
 The following section contains an RST formatted summary of a directory that is relevant to the :ref:`interaction`.
+{% endif %}
 
 .. _{{ reports.summary.directory.replace("/", "-").replace(".", "-").replace("_","")}}-directory-report:
 

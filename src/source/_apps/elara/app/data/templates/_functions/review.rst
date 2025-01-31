@@ -54,8 +54,7 @@ Any comments in your review will be appended to the pull request as a comment fo
 
 {% include '_functions/_schemas/schema.rst' %}
 
-{% include '_blocks/_plugins/plugins.rst' %}
-
+{%- include '_blocks/_plugins/plugins.rst' -%}
 .. _pull-request:
 
 Pull Request
@@ -147,3 +146,4 @@ Code
     {{ f.get('code') | replace('\n', '\n    ') }}
 {%- endif %}
 {% endfor %}
+{% endif %}

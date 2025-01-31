@@ -1,19 +1,19 @@
 {%- if function == 'converse' %}
-{% include '_schemas/_functions/converse.rst' %}
+{% include '_functions/_schemas/_functions/converse.rst' %}
 {%- endif %}
 
 {%- if function == 'formalize' %}
-{% include '_schemas/_functions/formalize.rst' %}
+{% include '_functions/_schemas/_functions/formalize.rst' %}
 {%- endif %}
 
 {%- if function == 'investigate' %}
-{% include '_schemas/_functions/investigate.rst' %}
+{% include '_functions/_schemas/_functions/investigate.rst' %}
 {%- endif %}
 
 {%- if function == 'review' %}
-{% include '_schemas/_functions/review.rst' %}
+{% include '_functions/_schemas/_functions/review.rst' %}
 {%- endif %}
 
 {%- if function == 'request' %}
-{% include '_schemas/_functions/request.rst' %}
+{% include 'functions/_schemas/_functions/request.rst' %}
 {%- endif %}

@@ -1,6 +1,9 @@
 {
     "functions": {
         "formalize": {
+            "definitions": {
+                "interaction": true
+            },
             "schema": {
                 "type": "object",
                 "properties": {
@@ -68,8 +71,20 @@
             },
             "mime": "application/json"
         },
-        "brainstorm": { },
+        "brainstorm": { 
+            "definitions": {
+                "interaction": true
+            }
+        },
         "converse": {
+            "blocks": {
+                "preamble": {
+                    "definitions": {
+                        "interaction": true
+                    },
+                    "identities": true
+                }
+            },
             "schema": {
                 "type": "object",
                 "properties": {
@@ -177,15 +192,18 @@
                     "ext": [
                         ".rst",
                         ".md",
-                        ".ini",
                         ".txt"
                     ]
                 },
                 "excludes": {
                     "ext":  [
+                        ".mo",
+                        ".po",
+                        ".o",
                         ".pyc",
                         ".zip",
-                        ".gz"
+                        ".gz",
+                        ".log"
                     ],
                     "file": [
                         "poems.json",
@@ -195,9 +213,22 @@
                         "elara.json",
                         "milton.json",
                         "valis.json",
-                        "murrow.json"
+                        "murrow.json",
+                        ".DS_Store",
+                        "Thumbs.db",
+                        "desktop.ini"
                     ],
-                    "dir": []
+                    "dir": [
+                        "__pycache__",
+                        "locales",
+                        ".terraform",
+                        ".git",
+                        ".vscode",
+                        ".settings",
+                        "node_modules",
+                        "venv",
+                        ".venv"
+                    ]
                 },
                 "template": "summary"
             }

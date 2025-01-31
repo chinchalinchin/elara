@@ -33,16 +33,9 @@
     ],
     "context": {
         "injections": {
-            "quotes": [
-                "badi_01",
-                "heid_01",
-                "sart_01"
-            ],
-            "poems": [
-                "elio_01",
-                "cumm_01",
-                "thom_01"
-            ]
+            "quotes": [],
+            "poems": [],
+            "proofs": []
         }
     },
     "plugins": {

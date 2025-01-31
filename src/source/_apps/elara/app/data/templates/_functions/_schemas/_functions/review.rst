@@ -16,7 +16,7 @@ This section details the general outline your response will follow. This structu
 
 .. important::
 
-    The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, you can technically exceed the maximum length constraints given in this schema. However, it is recommended that you abide by these constraints.
+    The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, technically there is no length constraints on any of these fields, but it recommended you try to keep each field 2000 characters or less.
 
 The following list explains the purpose of each field,
 

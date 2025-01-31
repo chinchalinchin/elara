@@ -156,9 +156,10 @@ class DirectoryProps(enum.Enum):
     SUMMARY_DIRECTIVES  = "directives"
     SUMMARY_INCLUDES    = "includes"
     SUMMARY_EXCLUDES    = "excludes"
-    SUMMARY_EXT         = "ext"
-    SUMMARY_FILE        = "file"
-
+    SUMMARY_EXCLUDE_EXT = "ext"
+    SUMMARY_EXCLUDE_DIR = "dir"
+    SUMMARY_EXCLUDE_FILE= "file"
+    
 
 class InjectionProps(enum.Enum):
     """

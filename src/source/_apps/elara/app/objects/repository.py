@@ -78,7 +78,7 @@ class Repo:
         """
         owner_key           = constants.RepoProps.OWNER.value
         repo_key            = constants.RepoProps.REPO.value
-        vcs_key             = constants.RepoProps.REPO.value
+        vcs_key             = constants.RepoProps.VCS.value
         vcs_type_key        = constants.RepoProps.VCS_TYPE.value
         backends_key        = constants.RepoProps.BACKENDS.value
         auth_key            = constants.RepoProps.AUTH.value

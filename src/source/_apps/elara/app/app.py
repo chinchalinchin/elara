@@ -185,6 +185,10 @@ class App:
             template_vars["reports"].update(
                 self.directory.summary())
 
+        if self.repository:
+            logger.info("Injecting repository info into prompt...")
+            template_vars.update(self.repository.vars())
+
         if func == constants.Functions.REQUEST.value:
             logger.info("Injecting Gherkin script into prompt...")
             template_vars["reports"].update(

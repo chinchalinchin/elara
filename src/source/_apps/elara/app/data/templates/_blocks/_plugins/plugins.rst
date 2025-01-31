@@ -19,7 +19,7 @@ This section contains modules for your language processing. These modules have i
 {% include '_blocks/_plugins/_language/object.rst' %}
 {%- endif %}
 
-{% if plugins.language.inflection -%}
+{%- if plugins.language.inflection -%}
 {% include '_blocks/_plugins/_language/inflection.rst' %}
 {%- endif %}
 
@@ -30,7 +30,5 @@ This section contains modules for your language processing. These modules have i
 {% if plugins.language.words -%}
 {% include '_blocks/_plugins/_language/words.rst' %}
 {%- endif -%}
-
 {%- endif -%}
-
 {%- endif -%}
