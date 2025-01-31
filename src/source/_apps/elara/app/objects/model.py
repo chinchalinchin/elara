@@ -283,10 +283,10 @@ class Model:
 
         if "response_schema" in generation_config.keys():
             try:
-                return json.loads(res)
+                return json.loads(res.text)
             
             except json.decoder.JSONDecodeError as e:
                 logger.error(f'Error parsing response because Milton sucks:\n\n{res}\n\n{e}')
                 return None
             
-        return res
+        return res.text

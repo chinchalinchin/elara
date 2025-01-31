@@ -14,6 +14,6 @@ Conversation
 
 {% include '_blocks/directory.rst' %}
 
-{% include '_schemas/schema.rst' %}
+{% include '_functions/_schemas/schema.rst' %}
 
 {% include '_blocks/history.rst' %}

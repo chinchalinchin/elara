@@ -10,6 +10,6 @@ This section contains your correspondence history. The conversation goes in sequ
 
     **Timestamp**: {{ h.timestamp }}
 
-    {{ h.message | replace('\n', '\n    ') }}
+    {{ h.message | indent }}
     
 {% endfor %}

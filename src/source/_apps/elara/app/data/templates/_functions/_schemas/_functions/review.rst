@@ -12,62 +12,7 @@ This section details the general outline your response will follow. This structu
 
 .. code-block:: json
 
-    {
-        "type": "object",
-        "properties": {
-            "score": {
-                "type": "string",
-                "enum": ["pass", "fail"]
-            },
-            "overall": {
-                "type": string
-            },
-            "files": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "path": { 
-                            "type": "string" 
-                        },
-                        "bugs": { 
-                            "type": "string",
-                            "maxLength": 1000,
-                        },
-                        "comments": { 
-                            "type": "string",
-                            "maxLength": 1000,
-                        },
-                        "code": {
-                            "type": "string",
-                            "maxLength": 10000
-                        },
-                        "language": {
-                            "type": "string",
-                            "enum": [
-                                "node",
-                                "python",
-                                "java",
-                                "html",
-                                "json",
-                                "yaml",
-                                "bash",
-                                "toml",
-                                "txt",
-                                "md",
-                                "rst"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "file_path", 
-                        "comments"
-                    ]
-                }
-            }
-        },
-        "required": ["score", "overall"]
-    }
+    {{ schema | prettify | indent }}
 
 .. important::
 

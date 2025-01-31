@@ -4,7 +4,7 @@
 Context
 #######
 
-This section is not directly related to the :ref:`history` but it does contain additional information to supplement the document. As you process the :ref:`history`, keep this context in your attention to provide additional insight into the nature of the :ref:`interaction`. 
+This section is not directly related to the :ref:`history` of the :ref:`interaction` but it does contain additional information to supplement the document. As you process the :ref:`history`, keep this context in your attention to provide additional insight into the nature of the :ref:`interaction`. 
 
 The blocks in this section will be dynamically altered as the :ref:`interaction` in :ref:`history` progresses. In other words, the content of this section will change over the course of the :ref:`interaction`. The context you are currently reading in this section is not necessarily the same context you were reading at previous points in the :ref:`history`.
 
@@ -44,6 +44,8 @@ This document contains within it embedded documents. This section details the sp
 ==========
 Injections
 ==========
+
+This section contains additional context that has been injected into the document for the purposes of modulating the activations in your neural network. The content in this section is included to set the tone, motif and atmosphere of the :ref:`interaction`.
 
 {%- if context.injections.get('quotes') %}
 {% include '_blocks/_context/_injections/quotes.rst' %}

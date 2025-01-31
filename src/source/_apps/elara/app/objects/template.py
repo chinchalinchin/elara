@@ -21,61 +21,15 @@ Templates are organized through the hierarchy of application's functions. All ap
 
 These functional templates are built out of modular templates. Modular templates are broken into several categories.
 
-**Context Templates**
-    These templates serve as plugins for the model context.
-        
-- _context/external
-- _context/identities
-- _context/internal
-- _context/language
-
-**Interface Templates**
-    These templates give Gemini information regarding the interface that is being used to send prompts.
-
-- _interfaces/cli
-
-**Language TEmplates**
-    These templates give Gemini additional grammatical and linguistic forms for its language processing.
-
-- _language/voice.rst
-- _language/words.rst
-- _language/object.rst
-- _language/inflection.rst
-
-**Report Templates**
-    These templates are used to render application reports
-
-- _reports/models
-- _reports/service
-- _reports/summary
-
-**Response Templates**
-    These templates are used to render Gemini's structured output.
-
-- _responses/analyze
-- _responses/brainstorm
-- _responses/converse
-- _responses/request
-- _responses/review
-
-**Schema Templates**
-    These templates are used to provide Gemini information about the schema imposed on the model's structured output.
-
-- _schemas/analyze
-- _schemas/brainstorm
-- _schemas/converse
-- _schemas/request
-- _schemas/review
+TODO: document /data/templates structure here
 
 """
 # Standard Library Modules
 import logging 
+import json
 
 # External Modules
 import jinja2
-
-# Application Modules
-import constants
 
 
 logger                      = logging.getLogger(__name__)
@@ -106,7 +60,43 @@ class Template:
         self.templates      = jinja2.Environment(
             loader          = jinja2.FileSystemLoader(self.directory)
         )
+        self.templates.filters.update({
+            "prettify"      : self._prettify,
+            "indent"        : self._indent
+        })
 
+
+    @staticmethod
+    def _prettify(value, indent: int = 4):
+        """
+        Jinja2 filter to pretty-print JSON.
+
+        :param value: The JSON string to format
+        :type value: `str`
+        :param indent: The number of spaces to use for indentation. Defaults to 4.
+        :type indent: `str`
+        :returns: A pretty-printed JSON string, or the original value if it's not a valid JSON string.
+        :rtype: `str
+        """
+        try:
+            parsed_json     = json.loads(value)
+            return json.dumps(parsed_json, indent=indent, sort_keys=True)
+        except (ValueError, TypeError) as e:
+            logger.error(e)
+            return value
+        
+
+    @staticmethod
+    def _indent(value) -> str:
+        """
+        Jinja2 filter to indent new lines in a string.
+
+        :param value: String to be indented.
+        :type value: `str`
+        :returns: Indented string
+        :rtype: `str`
+        """
+        return value.replace('\n', '\n    ')
 
     def get(self, template: str, ext: str | None = None) -> jinja2.Template:
         """
@@ -124,7 +114,7 @@ class Template:
         return self.templates.get_template(file_name)
 
 
-    def render(self, template: str, variables: dict, extension: str | None = None) -> str:
+    def render(self, variables: dict, template: str = "application", extension: str | None = None) -> str:
         """
         Render a template. 
 
@@ -140,7 +130,7 @@ class Template:
         return self.get(template, extension).render(variables)
     
 
-    def service_vcs(self, template: str, variables: dict, extension: str = ".md") -> str:
+    def service(self, template: str, service: str, variables: dict, extension: str = ".md") -> str:
         """
         Render a VCS template. 
 
@@ -148,10 +138,15 @@ class Template:
         :type template: `str`
         :param variables: Variables to inject into template.
         :type variables: `dict`
+        :param service: Type of service.
+        :type service: `str`
         :param ext: Extension of the template. Defaults to ``.rst``.
         :type ext: `str`
         :returns: A templated string.
         :rtype: `str`
         """
-        temp                = "_service/vcs/{template}".format(template=template)
+        temp                = "_functions/_services/{service}/{template}".format(
+            template        = template,
+            service         = service
+        )
         return self.render(temp, variables, extension)

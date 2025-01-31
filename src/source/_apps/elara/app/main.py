@@ -60,6 +60,12 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     app_factory             = factories.AppFactory()
     arg_factory             = factories.ArgFactory()
 
+    log_file                = app_factory.log_file()
+    log_level               = app_factory.app.config.get(constants.LogProps.LEVEL.value)
+    log_schema              = app_factory.app.config.get(constants.LogProps.SCHEMA.value)
+    
+    logs(log_schema, log_file, log_level)
+
     arguments               = arg_factory \
                                 .with_cli_args() \
                                 .build()
@@ -81,12 +87,6 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     application.cache.update(**arguments.to_dict())
          
     prnter.out(arguments, application.debug())
-    
-    log_file                = app_factory.log_file()
-    log_level               = application.config.get(constants.LogProps.LEVEL.value)
-    log_schema              = application.config.get(constants.LogProps.SCHEMA.value)
-    
-    logs(log_schema, log_file, log_level)
 
     return application, arguments, prnter
 

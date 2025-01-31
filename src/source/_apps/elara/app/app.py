@@ -6,6 +6,7 @@ Objects for orchestrating the application.
 """
 # Standard Library Modules
 import logging 
+import json
 import typing
 
 # Application Modules
@@ -142,12 +143,14 @@ class App:
         self.terminal           = terminal
 
 
-    def _vars(self, func : constants.Functions) -> dict:
+    def _vars(self, func : constants.Functions, schema: typing.Union[str | None] = None) -> dict:
         """
         Get templating variables for a given function.
 
         :param func: Function name for which to retrieve templating variables.
         :type func: `constants.Functions`.
+        :param schema: Functional output schema. Defaults to `None`
+        :param schema: `typing.Union[str | None]`
         :returns: Dictionary of template variables.
         :rtype: `dict`
         """
@@ -168,7 +171,11 @@ class App:
             **self.personas.vars(persona),
             **self.config.get(self._prop_latex),
             **self.conversations.vars(persona),
-            **{ "function"      : func }
+            **{ 
+                "function"      : func,
+                "schema"        : json.dumps(schema)
+            }
+
         }
 
         template_vars["reports"] = {}
@@ -244,6 +251,12 @@ class App:
         :rtype: `schemas.Output`
         """
         persona, prompter       = self._validate(arguments, constants.Functions.CONVERSE.value)
+        response_config         = self._schema(
+            schema              = self._prop_converse_schema, 
+            mime                = self._prop_converse_mime,
+            persona             = persona
+        )
+        schema                  = response_config["response_schema"]
 
         self.conversations.update(
             persona             = persona, 
@@ -253,14 +266,10 @@ class App:
         )
 
         parsed_prompt           = self.templates.render(
-            template            = "application", 
-            variables           = self._vars(constants.Functions.CONVERSE.value)
-        )
+                                    self._vars(constants.Functions.CONVERSE.value, schema))
 
         if arguments.render:
             return parsed_prompt
-        
-        response_config         = self._schema(self._prop_converse_schema, self._prop_converse_mime)
 
         response                = self.model.respond(
             prompt              = parsed_prompt, 
@@ -279,9 +288,7 @@ class App:
         )
 
         return self.templates.render(
-            template            = "application", 
-            variables           = self._vars(constants.Functions.CONVERSE.value)
-        )
+                                self._vars(constants.Functions.CONVERSE.value, schema))
 
 
     def formalize(self, arguments: schemas.Arguments) -> str:
@@ -294,7 +301,13 @@ class App:
         :rtype: `schemas.Output`
         """
         persona, prompter       = self._validate(arguments, constants.Functions.FORMALIZE.value)
-        
+        response_config         = self._schema(
+            schema              = self._prop_formalize_schema, 
+            mime                = self._prop_formalize_mime,
+            persona             = persona
+        )
+        schema                  = response_config["response_schema"]
+
         self.conversations.update(
             persona             = persona, 
             name                = prompter, 
@@ -302,16 +315,12 @@ class App:
             persist             = not arguments.render
         )
 
-        parsed_prompt           = self.templates.function(
-            temp                = constants.Functions.FORMALIZE.value, 
-            variables           = self._vars(constants.Functions.FORMALIZE.value)
-        )
+        parsed_prompt           = self.templates.render(
+                                    self._vars(constants.Functions.FORMALIZE.value, schema))
 
         if arguments.render:
             return parsed_prompt
         
-        response_config         = self._schema(self._prop_formalize_schema, self._prop_formalize_mime)
-
         response                = self.model.respond(
             prompt              = parsed_prompt,
             generation_config   = response_config,
@@ -333,12 +342,7 @@ class App:
             constants.Functions.FORMALIZE.value: response
         }
         
-        application             = self.templates.function(
-            temp                = constants.Functions.FORMALIZE.value, 
-            variables           = variables
-        )
-
-        return application
+        return self.templates.render(variables)
 
 
     def request(self, arguments: schemas.Arguments) -> str:
@@ -351,15 +355,13 @@ class App:
         persona                 = self.personas.function(constants.Functions.REQUEST.value)
         variables               = self._vars(constants.Functions.REQUEST.value)
 
-        parsed_prompt           = self.templates.function(
-            template            = constants.Functions.REQUEST.value, 
-            variables           = variables 
-        )
+        # TODO: response schema for request function
+
+        parsed_prompt           = self.templates.render(variables)
 
         if arguments.render:
             return parsed_prompt
         
-        # TODO: response schema for request function
 
         response                = self.model.respond(
             prompt              = parsed_prompt,
@@ -391,11 +393,14 @@ class App:
         :rtype: `schemas.Output`
         """
         persona                 = self.personas.function(constants.Functions.REVIEW.value) 
-        variables               = self._vars(constants.Functions.REVIEW.value)
-        review_prompt           = self.templates.function(
-            template            = constants.Functions.REVIEW.value, 
-            variables           = variables
+        response_config         = self._schema(
+            schema              = self._prop_review_schema, 
+            mime                = self._prop_review_mime,
+            persona             = persona
         )
+        schema                  = response_config["response_schema"]
+        review_prompt           = self.templates.render(
+                                    self._vars(constants.Functions.REVIEW.value, schema))
 
         if arguments.render:
             return review_prompt
@@ -413,13 +418,13 @@ class App:
         vcs_res                 = {  }
 
         if response and response.get("overall"):
-            msg                 = self.templates.service_vcs("comment", response)
+            msg                 = self.templates.service("comment", "vcs", response)
             vcs_res             = self.repository.comment(msg, arguments.pull)
             
         if response and response.get("files"):
             bodies              = []
             for file_data in response.get("files", []):
-                comment         = self.templates.service_vcs("file", file_data,)
+                comment         = self.templates.service("file", "vcs", file_data,)
                 bodies.append({
                     "path"      : file_data.get("path"),
                     "msg"       : comment
@@ -428,14 +433,11 @@ class App:
                                     self.repository.files(arguments.pull, bodies))
 
         variables               = {
-            **variables,
+            **self._vars(constants.Functions.REVIEW.value, schema),
             constants.Functions.REVIEW.value: response
         }
 
-        return self.templates.function(
-            template            = constants.Functions.REVIEW.value, 
-            variables           = variables
-        )
+        return self.templates.render(variables)
 
 
     def tune(self) -> bool:
@@ -524,7 +526,6 @@ class App:
         # Application function dispatch dictionary
         operation_name                  = arguments.operation
 
-        print(self._dispatch.keys())
         if operation_name not in self._dispatch.keys():
             logger.error(f"Invalid operation: {operation_name}")
             return None

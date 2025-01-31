@@ -8,11 +8,11 @@ The application which acts as an intermediary between {{ current_prompter | capi
 
 .. code-block:: json
 
-    {{ schema }}
+    {{ schema | prettify | indent }}
 
 .. important::
 
-    The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, you can technically exceed the maximum length constraints in given in this schema. However, it is recommended that you abide by these constraints. Expanding the size of these fields will inflate the size of the context and lead to a faster rate of token consumption.
+    The ``google.generativeai`` library currently does not explicitly support the ``maxLength`` property for JSON schemas. So, there is technically no limit on the size of your response. However, it is recommended that you try to keep your ``memory`` field to less than 2000 characters. Expanding the size of these fields will inflate the size of the context and lead to a faster rate of token consumption.
 
 1. **Response**: The ``response`` field is mandatory. This field will be persisted clientside and appended to the :ref:`conversation history <history>` section in each subsequent prompt {{ current_prompter | capitalize }} sends. ``responses`` represents the main content of your reply. 
 2. **Memory**: The ``memory`` field is optional. This field will be persisted clientside and *inserted* into the :ref:`memory` section in each subsequent prompt that is sent. ``memory`` represents internal markers that are solely for your use. See :ref:`memory` for a more detailed explanation regarding the purpose of this field.
