@@ -4,9 +4,9 @@
 Summary
 #######
 
-{% if definitions.interaction %}
+{%- if blocks.preamble.definitions.interaction -%}
 The following section contains an RST formatted summary of a directory that is relevant to the :ref:`interaction`.
-{% endif %}
+{%- endif %}
 
 .. _{{ reports.summary.directory.replace("/", "-").replace(".", "-").replace("_","")}}-directory-report:
 
@@ -24,7 +24,6 @@ The following block shows the directory structure of the files given in the :ref
 .. code-block:: bash
 
 {{ reports.summary.tree }}
-
 .. _directory-files:
 
 Files

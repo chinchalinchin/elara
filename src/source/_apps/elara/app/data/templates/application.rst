@@ -1,9 +1,9 @@
 {% macro interaction() %}
-  {% if blocks.preamble.definitions and blocks.preamble.definitions.interaction -%}
+  {%- if blocks.preamble.definitions and blocks.preamble.definitions.interaction -%}
     :ref:`interaction`
   {%- else -%}
     interaction
-  {%- endif %}
+  {%- endif -%}
 {% endmacro %}
 
 {#- FUNCTIONS #}

@@ -34,6 +34,7 @@ class AppProps(enum.Enum):
     """
     Application property key enumeration
     """
+    BLOCKS              = "blocks"
     # Structured Output Schemas and Mime Types
     BRAINSTORM_SCHEMA   = "functions.brainstorm.schema"
     BRAINSTORM_MIME_TYPE= "functions.brainstorm.mime"
@@ -46,6 +47,7 @@ class AppProps(enum.Enum):
     REQUEST_SCHEMA      = "functions.request.schema"
     REQUEST_MIME        = "functions.request.mime"
     # Function Properties
+    FUNCTIONS           = "functions"
     LATEX               = "latex"
     LATEX_PREAMBLE      = "latex.preamble"
 

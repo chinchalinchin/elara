@@ -76,6 +76,7 @@ class App:
     _prop_request_mime          = constants.AppProps.REQUEST_MIME.value
     ## Special Function Properties
     _prop_latex                 = constants.AppProps.LATEX.value
+    _prop_block                 = constants.AppProps.BLOCKS.value
 
 
     def __init__(self, cache: cac.Cache | None = None, config: conf.Config | None = None, 
@@ -143,6 +144,35 @@ class App:
         self.terminal           = terminal
 
 
+    def _schema(self, schema: constants.AppProps, mime: constants.AppProps, persona: str) -> dict:
+        """
+        Apply a functional response schema to a persona.
+
+        :param schema: Functional schema to apply.
+        :type schema: `constants.AppProps`
+        :param mime: Mime type of functional schema.
+        :type mime: `constants.AppProps`
+        :param persona: Persona that needs a schema.
+        :type persona: `str`
+        """
+        res_schema              = self.config.get(schema)
+        res_config              = self.personas.get(
+                                    constants.PersonaProps.GENERATION_CONFIG.value, persona)
+        res_config.update({
+            "response_schema"   : res_schema,
+            "response_mime_type": self.config.get(mime)
+        })
+        return res_config
+    
+
+    def _blocks(self, func: constants.Functions) -> dict:
+        """
+        Retrieve the block configuration for a function
+        """
+        path                    = ".".join([ constants.AppProps.FUNCTIONS.value, func, self._prop_block ])
+        return { self._prop_block: self.config.get(path)}
+
+
     def _vars(self, func : constants.Functions, schema: typing.Union[str | None] = None) -> dict:
         """
         Get templating variables for a given function.
@@ -168,14 +198,11 @@ class App:
         template_vars           = {
             persona_key         : persona, 
             prompter_key        : self.cache.get(prompter_key),
+            **self._blocks(func),
             **self.personas.vars(persona),
             **self.config.get(self._prop_latex),
             **self.conversations.vars(persona),
-            **{ 
-                "function"      : func,
-                "schema"        : json.dumps(schema)
-            }
-
+            **{ "function": func, "schema": json.dumps(schema)}
         }
 
         template_vars["reports"] = {}
@@ -196,27 +223,6 @@ class App:
             
         return template_vars
 
-
-    def _schema(self, schema: constants.AppProps, mime: constants.AppProps, persona: str) -> dict:
-        """
-        Apply a functional response schema to a persona.
-
-        :param schema: Functional schema to apply.
-        :type schema: `constants.AppProps`
-        :param mime: Mime type of functional schema.
-        :type mime: `constants.AppProps`
-        :param persona: Persona that needs a schema.
-        :type persona: `str`
-        """
-        res_schema              = self.config.get(schema)
-        res_config              = self.personas.get(
-                                    constants.PersonaProps.GENERATION_CONFIG.value, persona)
-        res_config.update({
-            "response_schema"   : res_schema,
-            "response_mime_type": self.config.get(mime)
-        })
-        return res_config
-    
 
     def _validate(self, arguments: schemas.Arguments, func: constants.Functions) -> typing.Tuple[str, str]:
         """
