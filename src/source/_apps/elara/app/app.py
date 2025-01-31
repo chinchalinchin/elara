@@ -308,14 +308,14 @@ class App:
         )
 
         if arguments.render:
-            return schemas.Output(parsed_prompt)
+            return parsed_prompt
         
         response_config         = self._schema(self._prop_formalize_schema, self._prop_formalize_mime)
 
         response                = self.model.respond(
             prompt              = parsed_prompt,
-            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
             generation_config   = response_config,
+            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
             safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
             tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
             system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
@@ -338,7 +338,7 @@ class App:
             variables           = variables
         )
 
-        return schemas.Output(application)
+        return application
 
 
     def request(self, arguments: schemas.Arguments) -> str:

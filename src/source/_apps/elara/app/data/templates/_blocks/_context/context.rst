@@ -1,4 +1,4 @@
-{% if context %}
+{%- if context -%}
 .. _context:
 
 Context
@@ -17,9 +17,9 @@ Interface
 
 For your awareness, this section describes the application interface which is used to post this document to your API. This is done so you may be aware of any pecularities or incongruences that might arise during the course of the :ref:`interaction`.
 
-{% if context.interface == 'command_line' %}
+{%- if context.interface == 'command_line' %}
 {% include '_context/_interface/cli.rst' %}
-{% endif %}
+{%- endif %}
 
 {%- endif -%}
 
@@ -34,28 +34,28 @@ This document contains within it embedded documents. This section details the sp
 
 {% if context.specifications.get('latex') %}
 {% include '_context/_specifications/latex.rst' %}
-{% endif %}
-
 {%- endif -%}
 
-{% if context.get('injections') %}
+{%- endif %}
+
+{% if context.get('injections') -%}
 .. _injections:
 
 ==========
 Injections
 ==========
 
-{% if context.injections.get('quotes') %}
+{%- if context.injections.get('quotes') %}
 {% include '_blocks/_context/_injections/quotes.rst' %}
-{% endif %}
+{%- endif -%}
 
-{% if context.injections.get('poems') %}
+{%- if context.injections.get('poems') -%}
 {% include '_blocks/_context/_injections/poems.rst' %}
-{% endif %}
+{%- endif -%}
 
-{% if context.injections.get('proofs') %}
+{%- if context.injections.get('proofs') -%}
 {% include '_blocks/_context/_injections/proofs.rst' %}
-{% endif %}
+{%- endif -%}
 
-{% endif %}
-{% endif %}
+{%- endif -%}
+{%- endif -%}

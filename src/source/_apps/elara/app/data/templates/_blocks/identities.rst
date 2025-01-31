@@ -1,8 +1,7 @@
 .. _identities:
 
-==========
 Identities
-==========
+##########
 
 **Prompter**
 

@@ -11,4 +11,4 @@ The following section contains formal proofs for you to consider.
     TODO!
 
 {%- endif -%}
-{% endif %}
+{%- endif -%}

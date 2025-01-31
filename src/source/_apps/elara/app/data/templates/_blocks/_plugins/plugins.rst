@@ -1,4 +1,4 @@
-{% if plugins %}
+{%- if plugins -%}
 .. _plugins:
 
 Plugins
@@ -6,7 +6,7 @@ Plugins
 
 TODO
 
-{% if plugins.language.values() | select() | list | length > 0 %}
+{% if plugins.language.values() | select() | list | length > 0 -%}
 .. _language-modules:
 
 ================
@@ -17,20 +17,20 @@ This section contains modules for your Language processing. These modules have i
 
 {%- if plugins.language.object %}
 {% include '_blocks/_plugins/_language/object.rst' %}
-{%- endif -%}
+{%- endif %}
 
-{%- if plugins.language.inflection %}
+{% if plugins.language.inflection -%}
 {% include '_blocks/_plugins/_language/inflection.rst' %}
-{%- endif -%}
+{%- endif %}
 
-{%- if plugins.language.voice %}
+{% if plugins.language.voice %}
 {% include '_blocks/_plugins/_language/voice.rst' %}
-{%- endif -%}
+{%- endif %}
 
-{%- if plugins.language.words %}
+{% if plugins.language.words -%}
 {% include '_blocks/_plugins/_language/words.rst' %}
 {%- endif -%}
 
 {%- endif -%}
 
-{% endif %}
+{%- endif -%}

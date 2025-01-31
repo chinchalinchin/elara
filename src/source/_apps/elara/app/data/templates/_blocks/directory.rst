@@ -1,13 +1,21 @@
-{% if reports.get('summary') %}
+{%- if reports.get('summary') -%}
+.. _summary:
+
+Summary
+#######
+
+The following section contains an RST formatted summary of a directory that is relevant to the :ref:`interaction`.
+
 .. _{{ reports.summary.directory.replace("/", "-").replace(".", "-").replace("_","")}}-directory-report:
-{{ '-' * reports.summary.directory | length }}
+
+{{ '=' * reports.summary.directory | length }}
 {{ reports.summary.directory }}
-{{ '-' * reports.summary.directory | length }}
+{{ '=' * reports.summary.directory | length }}
 
 .. _directory-structure:
 
 Structure
----------
+=========
 
 The following block shows the directory structure of the files given in the :ref:`directory-files` section.
 
@@ -18,7 +26,7 @@ The following block shows the directory structure of the files given in the :ref
 .. _directory-files:
 
 Files
------
+=====
 
 .. note::
 
@@ -27,8 +35,9 @@ Files
 
 .. _{{ file.name.split('.')[0].replace("/", "-").replace(".", "-").replace("_","") }}:
  
+{{ '-' * file.name | length }}
 {{ file.name }}
-{{ '^' * file.name | length }}
+{{ '-' * file.name | length }}
 
 {# File directive #}
 {%- if file.type == 'code' -%}

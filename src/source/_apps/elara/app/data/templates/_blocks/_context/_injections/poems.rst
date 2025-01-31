@@ -4,12 +4,11 @@
 Poems
 =====
 
-The following section contains poems for you to consider. 
+The following section contains poems for you to consider.
     {% for p in context.injections.poems -%}
     {% for l in p.lines %}
-    | {{ l }} 
+    | {{ l }}
     {%- endfor %}
-    
-    - {{ p.title }}, {{ p.author}} 
-    {% endfor %} 
-{% endif %}
+    - {{ p.title }}, {{ p.author}}
+    {% endfor -%}
+{%- endif -%}
