@@ -9,7 +9,7 @@ import typing
 logger              = logging.getLogger(__name__)
 
 
-def raw_file(path) -> typing.Union[str | None]:
+def raw_file(path, default : typing.Any = None) -> typing.Any:
     """
     Load text from file.
 
@@ -26,7 +26,7 @@ def raw_file(path) -> typing.Union[str | None]:
     
     except FileNotFoundError as e:
         logger.error(F"Error reading file {path}: {e}")
-        return None
+        return default
 
     except PermissionError as e:
         logger.error(F"Permission error reading file {path}: {e}")
@@ -37,7 +37,7 @@ def raw_file(path) -> typing.Union[str | None]:
         return None
     
 
-def json_file(path: str) -> dict:
+def json_file(path: str, default:dict = {}) -> dict:
     """
     Load a JSON from file.
 
@@ -53,9 +53,9 @@ def json_file(path: str) -> dict:
             return json.loads(content)
         logger.warning(
             f"No data found injection, initializing empty object.")
-        return {}
+        return default
 
     except json.JSONDecodeError as e:
         logger.error(
             f"Error loading JSON from {path}: {e}")
-        return {}
+        return default

@@ -18,7 +18,7 @@ Interface
 For your awareness, this section describes the application interface which is used to post this document to your API. This is done so you may be aware of any pecularities or incongruences that might arise during the course of the :ref:`interaction`.
 
 {% if context.interface == 'command_line' %}
-{% include '_context/_interface/cli.rst'
+{% include '_context/_interface/cli.rst' %}
 {% endif %}
 
 {%- endif -%}
@@ -46,15 +46,15 @@ Injections
 ==========
 
 {% if context.injections.get('quotes') %}
-{% include '_context/_injections/quotes.rst' %}
+{% include '_blocks/_context/_injections/quotes.rst' %}
 {% endif %}
 
 {% if context.injections.get('poems') %}
-{% include '_context/_injections/poems.rst' %}
+{% include '_blocks/_context/_injections/poems.rst' %}
 {% endif %}
 
 {% if context.injections.get('proofs') %}
-{% include '_context/_injections/proofs.rst' %}
+{% include '_blocks/_context/_injections/proofs.rst' %}
 {% endif %}
 
 {% endif %}

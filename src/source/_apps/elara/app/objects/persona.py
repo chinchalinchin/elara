@@ -12,6 +12,7 @@ import logging
 # Application Modules
 import constants
 import exceptions
+import loader
 
 
 logger                              = logging.getLogger(__name__)
@@ -28,6 +29,8 @@ class Persona:
     """Persona metadata"""
     persona_config                  : dict = {}
     """Persona configuration"""
+    populated                       : bool = False
+    """Flag for injection population"""
     schema                          : dict = {}
     """Schema for persona data"""
 
@@ -39,7 +42,8 @@ class Persona:
     _prop_gene                      = constants.PersonaProps.GENERATION_CONFIG.value
     _prop_safe                      = constants.PersonaProps.SAFETY_SETTINGS.value
     _prop_schema                    = constants.PersonaProps.SCHEMA_FILENAME.value
-    _prop_cont                      = constants.PersonaProps.CONTEXT.value
+    _prop_context                   = constants.PersonaProps.CONTEXT.value
+    _prop_inject                    = constants.PersonaProps.INJECTIONS.value
 
     def __init__(self, persona: str, persona_config: dict, 
                  directory: str, extension: str) -> None:
@@ -95,7 +99,6 @@ class Persona:
         """
         Load persona configuration from application directory.
         """
-        raw = {}
         for root, _, files in os.walk(self.directory):
             for file in files:
                 persona, ext        = os.path.splitext(file)
@@ -105,34 +108,39 @@ class Persona:
                     continue
 
                 file_path           = os.path.join(root, file)
-                raw[persona]        = { }
-
-                try:
-                    with open(file_path, "r") as f:
-                        content     = f.read()
-
-                    if content:
-                        payload     = json.loads(content)
-                    else: 
-                        logger.warning(
-                            f"No data found for {persona}, applying new schema.")
-                        payload     = self.schema
-
-                    raw[persona]    = payload
-
-                except (FileNotFoundError, json.JSONDecodeError) as e:
-                    logger.error(
-                        f"Error loading JSON from {file_path}: {e}")
-                    raw[persona]    = self.schema
-                    
-                except Exception as e:
-                    logger.error(
-                        f"An unexpected error occurred loading {file_path}: {e}")
-                    raw[persona]    = self.schema
-
-        self.personas               = raw
+                self.personas[persona] \
+                                    = loader.json_file(file_path, self.schema)
         return
 
+
+    def populate(self, injections, persona):
+        """
+        Populate persona injections.
+
+        :param injections:
+        :type injections: `dict`
+        :param persona:
+        :type persona: `str`
+        """
+        if self.populated:
+            return 
+        
+        inject_keys                 = self.personas[persona][
+                                        self._prop_context][self._prop_inject]
+
+        for i_type, i_keys in inject_keys.items():
+            inject_buffer           = []
+
+            for i, content in injections[i_type].items():
+                if i in i_keys:
+                    inject_buffer.append(content)
+
+            self.personas[persona][self._prop_context][self._prop_inject][i_type]\
+                                    = inject_buffer
+
+        self.populated              = True
+        return 
+    
 
     def vars(self, persona: str = None) -> dict:
         """
@@ -148,18 +156,9 @@ class Persona:
         :rtype: `dict`
         """
         if persona is None or self.personas.get(persona):
-            return {
-                k: v for k,v in 
-                self.personas.get(self.current).items()
-                if k != self._prop_cont
-            }
+            persona                 = self.current
         
-        return {
-            k: v for k,v in 
-            self.personas.get(persona).items()
-            if k != self._prop_cont
-        }
-    
+        return self.personas.get(persona)
 
 
     def update(self, persona: str = None) -> dict:
@@ -203,6 +202,7 @@ class Persona:
             return self.personas.get(self.current).get(attribute)
         return self.personas.get(persona).get(attribute)
 
+
     def function(self, func: str = None) -> dict:
         """
         Get the persona name associated with an application function.
@@ -227,12 +227,3 @@ class Persona:
         :rtype: list
         """
         return [ k for k in self.personas.keys() ]
-
-
-    def context(self, persona: str = None) -> dict:
-        """
-        Retrieve a dictionary of context keys associated with a persona.
-        """
-        if persona is None or self.personas.get(persona) is None:
-            return self.personas.get(self.current).get(self._prop_cont)
-        return self.personas.get(persona).get(self._prop_cont)

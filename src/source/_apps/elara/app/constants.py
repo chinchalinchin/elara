@@ -62,7 +62,7 @@ class FactoryProps(enum.Enum):
     DIR_THREADS         = "tree.directories.threads"
     DIR_TEMPLATES       = "tree.directories.templates"
     FILE_CACHE          = "tree.files.cache"
-    EXT_INJECTIONS      = "tree.extensions.context"
+    EXT_INJECTIONS      = "tree.extensions.injections"
     EXT_TEMPLATES       = "tree.extensions.templates"
     EXT_THREADS         = "tree.extensions.threads"
     EXT_PERSONA         = "tree.extensions.personas"
@@ -189,6 +189,7 @@ class PersonaProps(enum.Enum):
     TUNING              = "tuning"
     SYSTEM_INSTRUCTION  = "system"
     CONTEXT             = "context"
+    INJECTIONS          = "injections"
     FUNCTIONS           = "functions"
     TOOLS               = "tools"
     GENERATION_CONFIG   = "generation_config"
@@ -290,9 +291,8 @@ class TemplateVars(enum.Enum):
     """
     # Contextualizations
     CONTEXT             = "context"
-    CONTEXT_INTERNAL    = "internal"
-    # Injections
-    INJECT              = "injections"
+    ## Injections
+    INJECTIONS          = "injections"
     INJECT_POEMS        = "poems"
     INJECT_PROOFS       = "proofs"
     INJECT_QUOTES       = "quotes"

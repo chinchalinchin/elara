@@ -14,21 +14,29 @@
         "You should always format your response in RestructuredText with embedded LaTeX"
     ],
     "context": {
-        "quotes": [
-            "aris_01",
-            "freg_01",
-            "russ_01",
-            "tars_01",
-            "rswh_01"
-        ],
-        "poems": [ ],
-        "proofs": []
+        "injections": {
+            "quotes": [
+                "aris_01",
+                "freg_01",
+                "russ_01",
+                "tars_01",
+                "rswh_01"
+            ],
+            "poems": [ ],
+            "proofs": []
+        }
     },
-    "language": {
-        "object": true,
-        "voice": false,
-        "inflection": false,
-        "words": false
+    "plugins": {
+        "language": {
+            "object": true,
+            "voice": false,
+            "inflection": false,
+            "words": false
+        },
+        "extensions": {
+            "memory": false,
+            "execution": false
+        }
     },
     "functions": [ "analyze" ],
     "tools": "code_execution",

@@ -160,12 +160,11 @@ class App:
         else:
             persona             = self.personas.function(func)
 
-        injections              = self.injections.vars(self.personas.context(persona))
+        self.personas.populate(self.injections.get(), persona)
 
         template_vars           = {
             persona_key         : persona, 
             prompter_key        : self.cache.get(prompter_key),
-            **injections,
             **self.personas.vars(persona),
             **self.config.get(self._prop_latex),
             **self.conversations.vars(persona),
@@ -235,6 +234,56 @@ class App:
         return self.cache.get(persona_key), self.cache.get(prompter_key)
 
 
+    def converse(self, arguments: schemas.Arguments) -> str:
+        """
+        Chat with one of Gemini's personas.
+
+        :param arguments: Application arguments.
+        :type arguments: `schemas.Argument`
+        :returns: Object containing the contextualized prompt and model response.
+        :rtype: `schemas.Output`
+        """
+        persona, prompter       = self._validate(arguments, constants.Functions.CONVERSE.value)
+
+        self.conversations.update(
+            persona             = persona, 
+            name                = prompter, 
+            message             = arguments.prompt,
+            persist             = not arguments.render
+        )
+
+        parsed_prompt           = self.templates.render(
+            template            = "application", 
+            variables           = self._vars(constants.Functions.CONVERSE.value)
+        )
+
+        if arguments.render:
+            return parsed_prompt
+        
+        response_config         = self._schema(self._prop_converse_schema, self._prop_converse_mime)
+
+        response                = self.model.respond(
+            prompt              = parsed_prompt, 
+            generation_config   = response_config,
+            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
+            safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
+            system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+        )
+
+        self.conversations.update(
+            persona             = persona, 
+            name                = persona, 
+            message             = response.get("response"),
+            memory              = response.get("memory"),
+        )
+
+        return self.templates.render(
+            template            = "application", 
+            variables           = self._vars(constants.Functions.CONVERSE.value)
+        )
+
+
     def formalize(self, arguments: schemas.Arguments) -> str:
         """
         This function injects the contents of a directory into the ``data/templates/formalize.rst`` template. It then sends this contextualized prompt to the Gemini model persona of *Axiom*.
@@ -290,56 +339,6 @@ class App:
         )
 
         return schemas.Output(application)
-
-
-    def converse(self, arguments: schemas.Arguments) -> str:
-        """
-        Chat with one of Gemini's personas.
-
-        :param arguments: Application arguments.
-        :type arguments: `schemas.Argument`
-        :returns: Object containing the contextualized prompt and model response.
-        :rtype: `schemas.Output`
-        """
-        persona, prompter       = self._validate(arguments, constants.Functions.CONVERSE.value)
-
-        self.conversations.update(
-            persona             = persona, 
-            name                = prompter, 
-            message             = arguments.prompt,
-            persist             = not arguments.render
-        )
-
-        parsed_prompt           = self.templates.render(
-            template            = "application", 
-            variables           = self._vars(constants.Functions.CONVERSE.value)
-        )
-
-        if arguments.render:
-            return parsed_prompt
-        
-        response_config         = self._schema(self._prop_converse_schema, self._prop_converse_mime)
-
-        response                = self.model.respond(
-            prompt              = parsed_prompt, 
-            generation_config   = response_config,
-            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
-        )
-
-        self.conversations.update(
-            persona             = persona, 
-            name                = persona, 
-            message             = response.get("response"),
-            memory              = response.get("memory"),
-        )
-
-        return self.templates.render(
-            template            = "application", 
-            variables           = self._vars(constants.Functions.CONVERSE.value)
-        )
 
 
     def request(self, arguments: schemas.Arguments) -> str:

@@ -27,7 +27,7 @@ class Injection:
     injections                  : dict = {}
     """External injections"""
 
-    # Persona properties
+    # Injection properties
     _prop_poem                  = constants.InjectionProps.POEMS.value
     _prop_prof                  = constants.InjectionProps.PROOFS.value
     _prop_quot                  = constants.InjectionProps.QUOTES.value
@@ -53,7 +53,6 @@ class Injection:
         self._load()
 
         
-
     def _load(self) -> None:
         """
         Load injections from data directory.
@@ -70,43 +69,13 @@ class Injection:
                 file_path       = os.path.join(root, file)
 
                 raw[i_type] = loader.json_file(file_path)
-
-        self.injection          = raw
+        self.injections         = raw
 
         return
 
-                
-    def vars(self, injection_keys: dict) -> dict:
-        """"
-        Takes a dictionary of injection keys and converts it into a dictionary of injection content. As an example,
 
-        .. code-block::
-
-            context_keys            = {
-                constants.InjectionProps.POEMS.value : [ "id_a" ],
-                constants.InjectionProps.PROOFS.value: [ "id_b" ],
-                constants.InjectionProps.QUOTES.value: [ "id_c" ]
-            }
-
-        This method will take each value and convert it into a block of injection. It will return a dictionary with the same keys.
-
-        :param context_keys: Dictionary of injection keys, keyed by injection type.
-        :type context_keys: `dict`
-        :returns: Dictionary of injection data, keyed by injection type.
-        :rtype:`dict`
+    def get(self):
         """
-        res                     = {}
-        for i_type, i_keys in injection_keys.items():
-            if i_type not in self.injections.keys():
-                logger.warning(f"Invalid injection type: {i_type}")
-                continue 
-
-            res[i_type]         = []
-            for i_key in i_keys:
-                if i_key not in self.injections[i_type].keys():
-                    logger.warning(f"Invalid injection key {i_key} for {i_type}.")
-                    continue
-
-                res[i_type].append(self.injections[i_type][i_key])
-
-        return { constants.TemplateVars.INJECT.value: res }
+        TODO
+        """
+        return self.injections

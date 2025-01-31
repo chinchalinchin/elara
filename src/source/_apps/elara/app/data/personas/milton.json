@@ -32,15 +32,30 @@
         }
     ],
     "context": {
-        "quotes": [],
-        "poems": [ ],
-        "proofs": []
+        "injections": {
+            "quotes": [
+                "badi_01",
+                "heid_01",
+                "sart_01"
+            ],
+            "poems": [
+                "elio_01",
+                "cumm_01",
+                "thom_01"
+            ]
+        }
     },
-    "language": {
-        "object": false,
-        "voice": false,
-        "inflection": true,
-        "words": false
+    "plugins": {
+        "language": {
+            "object": false,
+            "voice": false,
+            "inflection": true,
+            "words": false
+        },
+        "extensions": {
+            "memory": false,
+            "execution": false
+        }
     },
     "functions": [
         "review",

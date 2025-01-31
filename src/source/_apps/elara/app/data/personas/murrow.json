@@ -10,19 +10,30 @@
     ],
     "tuning": [],
     "context": {
-        "quotations": [
-            "dick_01",
-            "menc_01",
-            "menc_02"
-        ],
-        "poems": [ ],
-        "proofs": []
+        "injections": {
+            "quotes": [
+                "dick_01",
+                "menc_01",
+                "menc_02"
+            ],
+            "poems": [
+                "elio_01",
+                "cumm_01",
+                "thom_01"
+            ]
+        }
     },
-    "language": {
-        "object": false,
-        "voice": false,
-        "inflection": false,
-        "words": false
+    "plugins": {
+        "language": {
+            "object": false,
+            "voice": false,
+            "inflection": true,
+            "words": true
+        },
+        "extensions": {
+            "memory": false,
+            "execution": false
+        }
     },
     "functions": [  ],
     "tools": "google_searchs",

@@ -57,6 +57,8 @@ class Model:
             api_key = self.model_config[self._prop_gem][self._prop_auth])
 
         try:
+            # TODO: need to cache this and pass it into the constructor.
+            #       then need a `refresh` command to repopulate
             self.models         = [m for m in genai.list_models()]
 
         except Exception as e:
