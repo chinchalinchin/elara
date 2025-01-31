@@ -107,10 +107,13 @@ class App:
         :rtype: `None`
         """
         self._dispatch          = {
+            ## RENDERING FUNCTIONS 
+            constants.Functions.SUMMARIZE.value
+                                : self.summarize,
             ## ADMINISTRATIVE FUNCTIONS
-            constants.Functions.CLEAR
+            constants.Functions.CLEAR.value
                                 : self.clear,
-            constants.Functions.DEBUG
+            constants.Functions.DEBUG.value
                                 : self.debug,
             ## MODEL FUNCTIONS
             constants.Functions.MODELS.value
@@ -470,6 +473,45 @@ class App:
             
         return False
     
+        
+    def summarize(self, arguments: schemas.Arguments) -> str:
+        """
+        Return a summary of a directory.
+
+        :returns: RST formatted summary of Directory object.
+        :rtype: `str`
+        """
+        if not self.directory:
+            logger.error("Directory object not initialized!")
+            # TODO: create it with the arguments.
+            raise exceptions.ObjectNotInitialized(
+                "objects.directory.Directory not initialized!")
+        return self.templates.render(
+            template            = "application", 
+            variables           = self._vars(constants.Functions.SUMMARIZE.value)
+        )
+
+    def clear(self, arguments: schemas.Arguments) -> None:
+        """
+        Wipe persona conversation history.
+
+        :param argumnets: Application arguments.
+        :type arguments: `schemas.Arguments`
+        """
+        for persona in arguments.clear:
+            logger.warning(f"Clearing {persona} conversation history...")
+            self.conversations.clear(persona)
+
+
+    def models(self) -> dict:
+        """
+        Retrieve model metadata.
+
+        :returns: Dictionary of model metadata.
+        :rtype: `dict`
+        """
+        return self.model.vars()
+    
 
     def run(self, arguments: schemas.Arguments) -> typing.Union[str, None]:
         """
@@ -483,8 +525,9 @@ class App:
         # Application function dispatch dictionary
         operation_name                  = arguments.operation
 
+        print(self._dispatch.keys())
         if operation_name not in self._dispatch.keys():
-            logger(f"Invalid operation: {operation_name}")
+            logger.error(f"Invalid operation: {operation_name}")
             return None
 
         return self._dispatch[operation_name](arguments)
@@ -555,42 +598,6 @@ class App:
         if arguments and arguments.directory and not self.directory:
             raise exceptions.FactoryError("Directory not initialized!")
         return True
-    
-    
-    def summarize(self) -> str:
-        """
-        Return a summary of a directory.
-
-        :returns: RST formatted summary of Directory object.
-        :rtype: `str`
-        """
-        if not self.directory:
-            logger.error("Directory object not initialized!")
-            raise exceptions.ObjectNotInitialized(
-                "objects.directory.Directory not initialized!")
-        return self.directory.summary()
-    
-
-    def clear(self, arguments: schemas.Arguments) -> None:
-        """
-        Wipe persona conversation history.
-
-        :param argumnets: Application arguments.
-        :type arguments: `schemas.Arguments`
-        """
-        for persona in arguments.clear:
-            logger.warning(f"Clearing {persona} conversation history...")
-            self.conversations.clear(persona)
-
-
-    def models(self) -> dict:
-        """
-        Retrieve model metadata.
-
-        :returns: Dictionary of model metadata.
-        :rtype: `dict`
-        """
-        return self.model.vars()
     
 
     def debug(self):

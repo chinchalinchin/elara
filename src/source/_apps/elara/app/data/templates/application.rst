@@ -24,7 +24,7 @@ HELLO {{ function }}
 {% if reports %}
 
 {%- if reports.get("summary") %}
-{% include '_reports/summary.rst' %}
+{% include '_blocks/directory.rst' %}
 {% endif %}
 
 {%- if reports.get("models") %}

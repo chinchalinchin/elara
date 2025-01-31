@@ -121,11 +121,41 @@
                 ]
             }
         },
-        "current_prompter": {
-            "type": "string"
-        },
-        "current_persona": {
-            "type": "string"
+        "interaction": {
+            "type": "object",
+            "properties": {
+                "current_prompter": {
+                    "type": "string"
+                },
+                "current_persona": {
+                    "type": "string"
+                },
+                "history": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "message": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "timestamp": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "memory": {
+                    "type": "string",
+                    "maxLength": 2000
+                }
+            },
+            "required": [
+                "current_prompter",
+                "current_persona"
+            ]
         },
         "function": {
             "type": "string",
@@ -137,26 +167,19 @@
                 "review"
             ]
         },
-        "history": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "message": {
-                        "type": "string"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "timestamp": {
-                        "type": "string"
-                    }
+        "plugins": {
+            "language": {
+                "type": "array",
+                "items": {
+                    "type": "str",
+                    "enum": [
+                        "object",
+                        "inflection",
+                        "voice",
+                        "words"
+                    ]
                 }
             }
-        },
-        "memory": {
-            "type": "string",
-            "maxLength": 2000
         },
         "reports": {
             "type": "object",
@@ -211,7 +234,6 @@
         }
     },
     "required": [
-        "current_prompter",
-        "current_persona"
+        "interaction"
     ]
 }
