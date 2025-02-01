@@ -88,6 +88,8 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
          
     prnter.out(arguments, application.debug())
 
+    application.cache.save()
+    
     return application, arguments, prnter
 
 

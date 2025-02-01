@@ -36,6 +36,23 @@ class Repo:
     """Backend configurations"""
 
 
+    # Repository Properties
+    _prop_own               = constants.RepoProps.OWNER.value
+    _prop_repo              = constants.RepoProps.REPO.value
+    _prop_vcs               = constants.RepoProps.VCS.value
+    _prop_type              = constants.RepoProps.VCS_TYPE.value
+    _prop_back              = constants.RepoProps.BACKENDS.value
+    _prop_auth              = constants.RepoProps.AUTH.value
+    _prop_head              = constants.RepoProps.HEADERS.value
+    _prop_creds             = constants.RepoProps.CREDS.value
+    ## Github Properties
+    _prop_git               = constants.RepoProps.GITHUB.value
+    _prop_api               = constants.RepoProps.API.value
+    _prop_pr                = constants.RepoProps.PR.value
+    _prop_com               = constants.RepoProps.COMMENTS.value
+    _prop_pulls             = constants.RepoProps.PULLS.value
+    _prop_files             = constants.RepoProps.FILES.value
+
     def __init__(self, repository_config: dict, 
                  repository: str, owner: str) -> None:
         """
@@ -76,19 +93,12 @@ class Repo:
             Only ``github`` VCS is supported at this time.
             
         """
-        owner_key           = constants.RepoProps.OWNER.value
-        repo_key            = constants.RepoProps.REPO.value
-        vcs_key             = constants.RepoProps.VCS.value
-        vcs_type_key        = constants.RepoProps.VCS_TYPE.value
-        backends_key        = constants.RepoProps.BACKENDS.value
-        auth_key            = constants.RepoProps.AUTH.value
-
-        self.auth           = repository_config[auth_key]
-        self.backends       = repository_config[backends_key]
+        self.auth           = repository_config[self._prop_auth]
+        self.backends       = repository_config[self._prop_back]
         self.src            = {
-            owner_key       : owner,
-            repo_key        : repository,
-            vcs_key         : repository_config[vcs_type_key]
+            self._prop_own  : owner,
+            self._prop_repo : repository,
+            self._prop_vcs  : repository_config[self._prop_type]
         }
     
 
@@ -107,17 +117,13 @@ class Repo:
         :returns: POST URL
         :rtype: `str`
         """
-        vcs_key             = constants.RepoProps.VCS.value
-        api_key             = constants.RepoProps.API.value
-        pr_key              = constants.RepoProps.PR.value
 
-        if self.src[vcs_key] == "github":
-            github_key      = constants.RepoProps.GITHUB.value
-            return self.backends[github_key][api_key][pr_key][endpoint]\
-                            .format(**{ "pr": pr, **self.src})
+        if self.src[self._prop_vcs] == self._prop_git:
+            return self.backends[self._prop_git][self._prop_api][self._prop_pr][endpoint]\
+                            .format(**{ self._prop_pr: pr, **self.src})
         
         raise ValueError(
-            f"Unsupported VCS: {self.src[vcs_key]}")
+            f"Unsupported VCS: {self.src[self._prop_vcs]}")
     
 
     def _headers(self):
@@ -131,24 +137,16 @@ class Repo:
         :returns: Dictionary of headers
         :rtype:  dict
         """
-        vcs_key             = constants.RepoProps.VCS.value
-        github_key          = constants.RepoProps.GITHUB.value
-        type_key            = constants.RepoProps.TYPE.value
-        headers_key         = constants.RepoProps.HEADERS.value
-        creds_key           = constants.RepoProps.CREDS.value
 
-        if self.src[vcs_key] == "github":
-            if self.auth[type_key] == "bearer":
-                token       = self.auth[creds_key]
-
+        if self.src[self._prop_vcs] == self._prop_git:
+            if self.auth[self._prop_type] == "bearer":
                 return {  
-                    **self.backends[github_key][headers_key],
-                    "Authorization": f"Bearer {token}" 
+                    **self.backends[self._prop_git][self._prop_head],
+                    "Authorization": "Bearer {token}".format(
+                            token = self.auth[self._prop_creds]) 
                 }
             
-        raise ValueError(
-            f"Unsupported auth type: {self.auth[type_key]} or VCS: {self.src[vcs_key]}"
-        )
+        raise ValueError("Error setting VCS Credentials")
 
 
     # TODO: figure how to pass in self.src["vcs"] into decorator instead 
@@ -176,7 +174,7 @@ class Repo:
         res.raise_for_status()
         return {
             "service": {
-                "name"      : self.src[constants.RepoProps.VCS.value],
+                "name"      : self.src[self._prop_vcs],
                 "body"      : res.json(),
                 "status"    : "success"
             }
@@ -202,7 +200,7 @@ class Repo:
         res.raise_for_status()
         return {
             "service":      {
-                "name"      : self.src[constants.RepoProps.VCS.value],
+                "name"      : self.src[self._prop_vcs],
                 "body"      : res.json(),
                 "status"    : "success"
             }
@@ -213,7 +211,8 @@ class Repo:
         """
         Retrieve VCS metadata, formatted for templating.
         """
-        return { "repository" : self.src }
+        return { constants.TemplateVars.REPORT_REPO.value 
+                            : self.src }
 
 
     def pulls(self, pr: str) -> dict:
@@ -268,7 +267,7 @@ class Repo:
         :rtype: `list`
         """
         files               = self.pulls(pr)
-        url                 = self._pull(pr, constants.RepoProps.PULLS.value)
+        url                 = self._pull(pr, self._prop_pulls)
         paths               = [ b["path"] for b in bodies ]
         res                 = []
 
@@ -305,6 +304,6 @@ class Repo:
         :param pr: Pull request number on which to comment.
         :type pr: `str`
         """
-        url                 = self._pull(pr,constants.RepoProps.COMMENTS.value)
-        body                = { "body": msg}
+        url                 = self._pull(pr, self._prop_com)
+        body                = { "body": msg }
         return self._post(url, body)

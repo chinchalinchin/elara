@@ -219,6 +219,13 @@
             ]
         },
         {
+            "name": "refresh",
+            "help": "Pull the latest model information and save to the cache.",
+            "arguments": [
+                
+            ]
+        },
+        {
             "name": "request",
             "help": "Template a Gherkin-style feature request and post it to the Gemini API.",
             "arguments": [
@@ -271,7 +278,8 @@
             "default": null,
             "help": "Display model metadata.",
             "arguments": [
-                "output"
+                "output",
+                "view"
             ]
         }
     ]

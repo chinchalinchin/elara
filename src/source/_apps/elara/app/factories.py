@@ -304,7 +304,15 @@ class AppFactory:
         :returns: Self with updated application attribute.
         :rtype: `typing.Self`
         """
-        self.app.model          = model.Model(self.app.config.get(self._prop_obj_mod)) 
+        models                  = None
+        if self.app.cache:
+            models              = self.app.cache.get(constants.CacheProps.MODELS.value)
+
+        self.app.model          = model.Model(self.app.config.get(self._prop_obj_mod), models) 
+
+        if self.app.model.refresh:
+            self.app.cache.update(**self.app.model.vars())
+
         return self
 
 

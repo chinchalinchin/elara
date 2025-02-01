@@ -77,6 +77,7 @@ class App:
     ## Special Function Properties
     _prop_latex                 = constants.AppProps.LATEX.value
     _prop_block                 = constants.AppProps.BLOCKS.value
+    _prop_reports               = constants.AppProps.REPORTS.value
 
 
     def __init__(self, cache: cac.Cache | None = None, config: conf.Config | None = None, 
@@ -501,6 +502,7 @@ class App:
             variables           = self._vars(constants.Functions.SUMMARIZE.value)
         )
 
+
     def clear(self, arguments: schemas.Arguments) -> None:
         """
         Wipe persona conversation history.
@@ -520,9 +522,10 @@ class App:
         :returns: Dictionary of model metadata.
         :rtype: `dict`
         """
-        arguments.view                  = True
-        # TODO: template out
-        return self.model.vars()
+        variables                       = {
+            "reports"                   : self.model.vars()
+        }
+        return self.templates.render(variables)
     
 
     def run(self, arguments: schemas.Arguments) -> typing.Union[str, None]:

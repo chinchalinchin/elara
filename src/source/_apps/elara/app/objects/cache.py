@@ -36,9 +36,9 @@ class Cache:
     _prop_mod                       = constants.CacheProps.CURRENT_MODEL.value
     _prop_per                       = constants.CacheProps.CURRENT_PERSONA.value
     _prop_pro                       = constants.CacheProps.CURRENT_PROMPTER.value
-    _prop_tun                       = constants.CacheProps.TUNED_MODELS.value
     _prop_src                       = constants.CacheProps.TUNING_MODEL.value
-    
+    _prop_mods                      = constants.CacheProps.MODELS.value
+
     def __init__(self, cache_file: str) -> None:
         """
         Initialize Cache.
@@ -67,7 +67,7 @@ class Cache:
             self._prop_mod          : None,
             self._prop_per          : None,
             self._prop_pro          : None,
-            self._prop_tun          : [],
+            self._prop_mods         : [],
             self._prop_src          : None
         }
     

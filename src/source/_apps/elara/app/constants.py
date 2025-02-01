@@ -34,7 +34,6 @@ class AppProps(enum.Enum):
     """
     Application property key enumeration
     """
-    BLOCKS              = "blocks"
     # Structured Output Schemas and Mime Types
     BRAINSTORM_SCHEMA   = "functions.brainstorm.schema"
     BRAINSTORM_MIME_TYPE= "functions.brainstorm.mime"
@@ -48,8 +47,10 @@ class AppProps(enum.Enum):
     REQUEST_MIME        = "functions.request.mime"
     # Function Properties
     FUNCTIONS           = "functions"
+    BLOCKS              = "blocks"
     LATEX               = "latex"
     LATEX_PREAMBLE      = "latex.preamble"
+    REPORTS             = "reports"
 
 
 class FactoryProps(enum.Enum):
@@ -91,9 +92,8 @@ class CacheProps(enum.Enum):
     CURRENT_MODEL       = "current_model"
     CURRENT_PERSONA     = "current_persona"
     CURRENT_PROMPTER    = "current_prompter"
-    TUNED_MODELS        = "tuned_models"
+    MODELS              = "models"
     TUNING_MODEL        = "tuning_model"
-
 
 class CommandLineProps(enum.Enum):
     """
@@ -209,8 +209,6 @@ class ModelProps(enum.Enum):
     NAME                = "name"
     VERSION             = "version"
     PATH                = "path"
-    INPUT_LIMIT         = "input_token_limit"
-    OUTPUT_LIMIT        = "output_token_limit"
     # Configuration Properties
     ## Gemini Properties
     GEMINI              = "gemini"
@@ -218,6 +216,10 @@ class ModelProps(enum.Enum):
     DEFAULT             = "default"
     TUNING              = "tuning"
     SOURCE              = "source"
+    INPUT_LIMIT         = "input_token_limit"
+    OUTPUT_LIMIT        = "output_token_limit"
+    GENERATE            = "generateContent"
+    METHODS             = "supported_generation_methods"
 
 
 class RepoProps(enum.Enum):
@@ -230,18 +232,18 @@ class RepoProps(enum.Enum):
     VCS                 = "vcs"
     # Configuration Properties 
     AUTH                = "auth"
+    HEADERS             = "headers"
+    CREDS               = "creds"
     BACKENDS            = "backends"
     VCS_TYPE            = "vcs"
     TYPE                = "type"
-    GITHUB              = "github"
-    # GitHub Service Properties
     API                 = "api"
+    # GitHub Service Properties
+    GITHUB              = "github"
     PR                  = "pr"
     COMMENTS            = "comments"
     PULLS               = "pulls"
     FILES               = "files"
-    CREDS               = "creds"
-    HEADERS             = "headers"
 
 
 class TerminalProps(enum.Enum):
@@ -303,3 +305,7 @@ class TemplateVars(enum.Enum):
     REPORT              = "reports"
     REPORT_SUMMARY      = "summary"
     REPORT_REPO         = "repository"
+    REPORT_MODELS       = "models"
+    REPORT_BASE         = "base_models"
+    REPORT_TUNING       = "tuning_models"
+    REPORT_TUNED        = "tuned_models"

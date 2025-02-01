@@ -27,26 +27,31 @@ class Model:
     """Model configuration"""
     models                      : dict  = {}
     """Model metadata cache"""
-
+    refresh                     : bool = False
+    """Flag to populate the cache with model metadata"""
 
     # Model Properties
     _prop_name                  = constants.ModelProps.NAME.value
     _prop_vers                  = constants.ModelProps.VERSION.value
     _prop_path                  = constants.ModelProps.PATH.value
+    _prop_dflt                  = constants.ModelProps.DEFAULT.value
     ## GEMINI PROPERTIES
     _prop_gem                   = constants.ModelProps.GEMINI.value
     _prop_auth                  = constants.ModelProps.API_KEY.value
-    _prop_dflt                  = constants.ModelProps.DEFAULT.value
     _prop_tune                  = constants.ModelProps.TUNING.value
     _prop_src                   = constants.ModelProps.SOURCE.value
+    _prop_in                    = constants.ModelProps.INPUT_LIMIT.value
+    _prop_out                   = constants.ModelProps.OUTPUT_LIMIT.value
+    _prop_gene                  = constants.ModelProps.GENERATE.value
+    _prop_meth                  = constants.ModelProps.METHODS.value
 
-
-    def __init__(self, model_config : dict) -> None:
+    def __init__(self, model_config : dict, cached_models : list = None) -> None:
         """
         Initialize Model object.
 
         :param model_config: Dictionary of model configuration.
         :type model_config: `dict`
+        :param cached_models: List of models. Defaults to None. If not specified, an API call will be made to retrieve the latest list.
         """
         self.model_config       = model_config
 
@@ -56,38 +61,85 @@ class Model:
         genai.configure(
             api_key = self.model_config[self._prop_gem][self._prop_auth])
 
-        try:
-            # TODO: need to cache this and pass it into the constructor.
-            #       then need a `refresh` command to repopulate
-            self.models         = [m for m in genai.list_models()]
+        if not cached_models:
+            self.models         = {
+                **self._models(),
+                constants.TemplateVars.REPORT_TUNED.value
+                                : self._tuned()
+            }
+            self.refresh        = True    
+        else:
+            self.models             = cached_models
 
-        except Exception as e:
-            logger.error(f"{e}\n\n{traceback.format_exc()}")
-            self.models         = []
 
-
-    @staticmethod
-    def _is_text_model(m) -> bool:
+    def _is_text_model(self, m: dict) -> bool:
         """
         Determine if a model is a text-based model based on the presence of fields in metadata.
         
         :returns: Signal if model is text-based.
         :rtype: `bool`
         """
-        return "gemini" in m.name and \
-            "generateContent" in m.supported_generation_methods
+        return self._prop_gem in m.name and \
+            self._prop_gene in m.supported_generation_methods
     
 
-    @staticmethod
-    def _is_tuning_model(m) -> bool:
+    def _is_tuning_model(self, m) -> bool:
         """
         Determine if a model is a tuning model based on the presence of fields in metadata. 
 
         :returns: Signal if model supports tunning
         :rtype: `bool`
         """
-        return "tuning" in m.name and \
-            "generateContent" in m.supported_generation_methods
+        return self._prop_tune in m.name and \
+            self._prop_gene in m.supported_generation_methods
+
+
+    @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
+                    maximum = 128.0, multiplier = 2.0, timeout = 150)
+    def _models(self)  -> dict:
+        """
+        Retrieve all Gemini base models.
+
+        :returns: List of Gemini base models.
+        :rtype: `list`
+        """
+        try:
+            models = [m for m in genai.list_models()]
+            return {
+                constants.TemplateVars.REPORT_BASE.value: [{
+                    self._prop_path     : m.name,
+                    self._prop_vers     : m.version,
+                    self._prop_in       : m.input_token_limit,
+                    self._prop_out      : m.output_token_limit
+                } for m in models if self._is_text_model(m) ],
+                constants.TemplateVars.REPORT_TUNING.value:[{
+                    self._prop_path     : m.name,
+                    self._prop_vers     : m.version,
+                    self._prop_in       : m.input_token_limit,
+                    self._prop_out      : m.output_token_limit
+                } for m in models if self._is_tuning_model(m)]
+            }
+        except Exception as e:
+            logger.error(f"{e}\n\n{traceback.format_exc()}")
+            return {}
+
+
+    @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
+                    maximum = 128.0, multiplier = 2.0, timeout = 150)
+    def _tuned(self) -> list:
+        """
+        Retreive all tuned models
+        """
+        try:
+            return {
+                constants.TemplateVars.REPORT_TUNED.value: [{ 
+                    self._prop_path : m.name 
+                } for m in genai.list_tuned_models()]
+            }
+        
+        except Exception as e:
+            logger.error(f"{e}\n\n{traceback.format_exc()}")
+            return []
         
 
     def _get(self, system_instruction: list, model_name: str = None) -> genai.GenerativeModel:
@@ -103,7 +155,7 @@ class Model:
             logger.warning(f"{model_name} is not defined, using default model.")
             model_name          = self.model_config[self._prop_gem][self._prop_dflt]
 
-        base_paths              =  [ m["path"] for m in self.base_models()]
+        base_paths              =  [ m[self._prop_path] for m in self.base_models()]
 
         if model_name in base_paths:
             logger.info(f"Appending system instructions to base model: {model_name}")
@@ -121,54 +173,8 @@ class Model:
         :returns: Dictionary of Gemini metadata.
         :rtype: `dict`
         """
-        return {
-            "models": {
-                "base_models"   : self.base_models(),
-                "tuning_models" : self.tuning_models(),
-                "tuned_models"  : self.tuned_models()
-            }
-        }
+        return { constants.TemplateVars.REPORT_MODELS.value: self.models }
     
-    
-    def base_models(self) -> list:
-        """
-        Retrieve all Gemini base models.
-
-        :returns: List of Gemini base models.
-        :rtype: `list`
-        """
-        return [{
-            "path"              : m.name,
-            "version"           : m.version,
-            "input_token_limit" : m.input_token_limit,
-            "output_token_limit": m.output_token_limit
-        } for m in self.models if self._is_text_model(m) ]
-    
-
-    def tuning_models(self)             -> list:
-        """
-        Retrieve all Gemini models that can be tuned.
-        """
-        return [{
-            "path"              : m.name,
-            "version"           : m.version,
-            "input_token_limit" : m.input_token_limit,
-            "output_token_limit": m.output_token_limit
-        } for m in self.models if self._is_tuning_model(m)]
-
-
-    @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
-                    maximum = 128.0, multiplier = 2.0, timeout = 150)
-    def tuned_models(self)              -> list:
-        """
-        Retreive all tuned models
-        """
-        try:
-            return genai.list_tuned_models()
-        
-        except Exception as e:
-            logger.error(f"{e}\n\n{traceback.format_exc()}")
-            return []
     
     
     @retry.Retry(predicate = retry.if_transient_error, initial = 2.0,
