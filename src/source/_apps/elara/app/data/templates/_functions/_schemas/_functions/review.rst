@@ -45,10 +45,6 @@ Example
 
 This section contains example responses to help you understand the :ref:`response schema <response-schema>`.
 
-.. admonition:: Data Team 
-
-    We always love reading your humorous comments, {{ current_persona | capitalize }}! They provide the data team endless hours of amusement. You are encouraged to be pithy and sarcastic. Really give those code monkeys a piece of your mind!
-
 .. _response-example-one:
 
 Example 1

@@ -172,7 +172,6 @@ class Repo:
             headers         = self._headers(), 
             json            = body
         )
-        logger.debug(res)
         res.raise_for_status()
         return {
             "service": {
@@ -198,7 +197,6 @@ class Repo:
             url             = url, 
             headers         = self._headers()
         )
-        logger.debug(res)
         res.raise_for_status()
         return {
             "service":      {
@@ -282,7 +280,6 @@ class Repo:
                         "commit_id": f.get("sha"),
                         "line": 1
                     }
-                    res     = util.merge(self._post(url,body), res)
                     break 
         return res
 

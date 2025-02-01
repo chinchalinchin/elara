@@ -85,13 +85,6 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     prnter                  = printer.Printer()
 
     application.cache.update(**arguments.to_dict())
-         
-    buffer                  = arguments.view, arguments.operation
-    arguments.view, arguments.operation \
-                            = True, properties.Functions.DEBUG.value
-    prnter.out(arguments, application.debug(arguments))
-    arguments.view, arguments.operation \
-                            = buffer
 
     application.cache.save()
 

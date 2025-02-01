@@ -29,10 +29,16 @@ def backoff(service: str ="github", max_retries: int = 3) -> typing.Any:
         def wrapper(*args, **kwargs):  # Add *args and **kwargs here
             for attempt in range(max_retries):
                 try:
-                    return func(*args, **kwargs)  # Pass args and kwargs to callable
+                    return func(*args, **kwargs)
                 except requests.exceptions.RequestException as e:
                     if '422 Client Error: Unprocessable Entity' in str(e):
-                        raise e
+                        return {
+                            "service":          {
+                                "name"          : service,
+                                "body"          : e.response.text,
+                                "status"        : "failure"
+                            }
+                        }
                     
                     if attempt < max_retries - 1:
                         wait    = 2 ** attempt
@@ -52,6 +58,12 @@ def backoff(service: str ="github", max_retries: int = 3) -> typing.Any:
                 except Exception as e:
                     logger.error(
                         f"An unexpected error occurred:\n\n{e}\n\n{traceback.format_exc()}")
-                    raise exceptions.VCSRequestError("Request failed")
+                    return {
+                        "service":          {
+                            "name"          : service,
+                            "body"          : e.response.text,
+                            "status"        : "failure"
+                        }
+                    }
         return wrapper
     return caller

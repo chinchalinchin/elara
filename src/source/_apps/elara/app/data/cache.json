@@ -202,7 +202,7 @@
         }
     },
     "tuning_model": "models/gemini-1.5-flash-001-tuning",
-    "current_model": "models/gemini-2.0-flash-exp",
-    "current_persona": "elara",
+    "current_model": "models/gemini-1.5-pro-latest",
+    "current_persona": "milton",
     "current_prompter": "grant"
 }

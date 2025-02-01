@@ -13,16 +13,6 @@ The following personas are under development.
 - [json-schema](https://json-schema.org/)
 - [Gemini API](https://ai.google.dev/gemini-api/docs)
 
-### Models 
-
-- models/gemini-exp-1206
-- models/gemini-exp-1121
-- models/gemini-exp-1114
-- models/gemini-2.0-flash-exp
-- models/gemini-2.0-flash-thinking-exp
-- models/gemini-2.0-flash-thinking-exp-01-21
-- models/gemini-2.0-flash-thinking-exp-1219
-
 ## Quickstart 
 
 ### Build
@@ -182,6 +172,6 @@ elara chat -p "Try out these sweet language modules, Elara!"
 
 **TODO**: explain purpose of language modules
 
-### Important Message
+### TODOs
 
-Milton is a doodyhead.
+1. Need to remove last prompt from conversation history if request to Gemini fails.

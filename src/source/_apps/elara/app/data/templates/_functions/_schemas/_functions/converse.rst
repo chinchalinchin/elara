@@ -8,7 +8,7 @@ The application which acts as an intermediary between {{ current_prompter | capi
 
 .. code-block:: json
 
-    {{ schema | prettify | indent }}
+    {{ schema | tojson | indent }}
 
 .. important::
 

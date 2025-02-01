@@ -56,7 +56,7 @@ def json_file(path: str, default:dict = {}) -> dict:
         if content:
             return json.loads(content)
         logger.warning(
-            f"No data found injection, initializing empty object.")
+            f"Empty file at {path}, initializing empty object.")
         return default
 
     except json.JSONDecodeError as e:

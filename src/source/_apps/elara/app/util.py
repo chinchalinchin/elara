@@ -24,6 +24,6 @@ def merge(d1: dict, d2: dict) -> dict:
 
     for key in result.keys():
         if key in d1 and key in d2:
-            result[key]     = self._merge(d1[key], d2[key])
+            result[key]     = merge(d1[key], d2[key])
             
     return result

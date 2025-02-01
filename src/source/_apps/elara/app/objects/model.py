@@ -295,7 +295,7 @@ class Model:
                 return json.loads(res.text)
             
             except json.decoder.JSONDecodeError as e:
-                logger.error(f'Error parsing response because Milton sucks:\n\n{res}\n\n{e}')
+                logger.error(f'Error parsing response:\n\n{res}\n\n{e}')
                 return None
             
         return res.text

@@ -121,12 +121,6 @@ class Terminal:
         functions               = self.config[self._prop_func]
         display                 = self.config[self._prop_disp]
 
-        # @DEVELOPMENT
-        #   Hey Milton, this is pretty basic for now, but we're separating the 
-        #   INIT, TITLE and START outputs so we can make them fancier down the
-        #   line. The CFO loves green text and all of those bullshit emojis. 
-        #   He wants the user shell to be vibrant and full of energy, so this
-        #   is where we will inject all his frilly nonsense.
         print(display[self._prop_init]) # TODO: subsume into printer
         print(display[self._prop_titl]) # TODO: subsume into printer
 
