@@ -19,6 +19,7 @@ class ObjectNotInitialized(Exception):
     """
     pass
 
+
 class DirectoryNotFoundError(Exception):
     """
     Raised when a directory does not exist
@@ -52,6 +53,7 @@ class VCSCredentialsError(Exception):
     Raised when the application cannot find the VCS credentials for the backend.
     """
     pass
+
 
 class GeminiAPIKeyError(Exception):
     """

@@ -12,9 +12,9 @@ import os
 import typing
 
 # Application Modules
-import constants
-import loader
 import exceptions
+import loader
+import properties
 
 
 logger                          = logging.getLogger(__name__)
@@ -45,13 +45,13 @@ class Conversation:
     _zone                       : datetime.timezone = None
 
     # Conversation properties
-    _prop_hist                  = constants.ConvoProps.HISTORY.value
-    _prop_mem                   = constants.ConvoProps.MEMORY.value
-    _prop_msg                   = constants.ConvoProps.MESSAGE.value
-    _prop_name                  = constants.ConvoProps.NAME.value
-    _prop_schema                = constants.ConvoProps.SCHEMA_FILENAME.value
-    _prop_time                  = constants.ConvoProps.TIMESTAMP.value
-    _prop_zone                  = constants.ConvoProps.TIMEZONE_OFFSET.value
+    _prop_hist                  = properties.ConvoProps.HISTORY.value
+    _prop_mem                   = properties.ConvoProps.MEMORY.value
+    _prop_msg                   = properties.ConvoProps.MESSAGE.value
+    _prop_name                  = properties.ConvoProps.NAME.value
+    _prop_schema                = properties.ConvoProps.SCHEMA_FILENAME.value
+    _prop_time                  = properties.ConvoProps.TIMESTAMP.value
+    _prop_zone                  = properties.ConvoProps.TIMEZONE_OFFSET.value
 
 
     def __init__(self, directory: str, extension: str, convo_config: dict):

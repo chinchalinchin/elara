@@ -8,11 +8,10 @@ Object for managing application configuration.
 import json 
 import logging
 import os
-
+import typing
 
 # Application Modules
-import constants
-import util
+import properties
 
 
 logger                          = logging.getLogger(__name__)
@@ -30,7 +29,7 @@ class Config:
 
 
     # Configuration Properties
-    _prop_over                  = constants.ConfigProps.OVERRIDES.value
+    _prop_over                  = properties.ConfigProps.OVERRIDES.value
 
 
     def __init__(self, config_file: str, override: bool = True) -> None:
@@ -80,12 +79,47 @@ class Config:
         env_overrides           = self.data[self._prop_over]
 
         for key, env_var in env_overrides.items():
-            default             = util.unnest(key.split(delimiter), self.data)
+            default             = self._unnest(key.split(delimiter), self.data)
             value               = os.environ.get(env_var, default)
             
             if value != default:
-                util.nest(key.split(delimiter), self.data, value)
-                
+                self._nest(key.split(delimiter), self.data, value)
+
+
+    @staticmethod       
+    def _unnest(keys: list, target: dict, default: typing.Any = None) -> typing.Any:
+        """
+        Recursively retrieves a value from a nested dictionary.
+
+        :param keys: List of keys to traverse in dictionary tree.
+        :type keys: `list`
+        :param target: Dictionary to traverse.
+        :type target: `dict`
+        :param default: Default value to set for endpoint.
+        :type default: `typing.Any`
+        :returns: Value found at node or default value.
+        :rtype: `typing.Any`
+        """
+        for k in keys:
+            if isinstance(target, dict) and k in target:
+                target          = target[k]
+            else:
+                return default
+        return target
+
+
+    @staticmethod
+    def _nest(keys: list, target: dict, value: typing.Any) -> None:
+        """
+        Recursively sets a value in a nested dictionary.
+        """
+        for k in keys[:-1]:
+            if k not in target:
+                target[k]       = {}
+            target              = target[k]
+        target[keys[-1]]        = value
+        return target
+    
 
     def save(self) -> bool:
         """
@@ -118,7 +152,7 @@ class Config:
         :rtype: `str`
         """
         keys                    = key.split(delimiter)
-        return util.unnest(keys, self.data, default)
+        return self._unnest(keys, self.data, default)
 
 
     def set(self, key: str, value: str, delimiter : str = ".") -> dict:
@@ -133,5 +167,7 @@ class Config:
         :type delimiter: `str`
         """
         keys                    = key.split(delimiter)
-        self.data               = util.nest(keys, self.data, value)
+        self.data               = self._nest(keys, self.data, value)
         return self.data
+    
+    

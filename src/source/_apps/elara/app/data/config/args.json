@@ -207,6 +207,11 @@
             ]
         },
         {
+            "name": "debug",
+            "help": "Display debug mesasge.",
+            "arguments": []
+        },
+        {
             "name": "formalize",
             "help": "Get help with formal and mathematical analysis",
             "arguments": [
@@ -222,7 +227,7 @@
             "name": "refresh",
             "help": "Pull the latest model information and save to the cache.",
             "arguments": [
-                
+
             ]
         },
         {

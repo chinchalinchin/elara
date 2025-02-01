@@ -10,7 +10,7 @@ import json
 import logging 
 
 # Application Modules
-import constants
+import properties
 import exceptions
 import loader
 
@@ -35,15 +35,15 @@ class Persona:
     """Schema for persona data"""
 
     # Persona properties
-    _prop_tune                      = constants.PersonaProps.TUNING.value
-    _prop_syst                      = constants.PersonaProps.SYSTEM_INSTRUCTION.value
-    _prop_func                      = constants.PersonaProps.FUNCTIONS.value
-    _prop_tool                      = constants.PersonaProps.TOOLS.value
-    _prop_gene                      = constants.PersonaProps.GENERATION_CONFIG.value
-    _prop_safe                      = constants.PersonaProps.SAFETY_SETTINGS.value
-    _prop_schema                    = constants.PersonaProps.SCHEMA_FILENAME.value
-    _prop_context                   = constants.PersonaProps.CONTEXT.value
-    _prop_inject                    = constants.PersonaProps.INJECTIONS.value
+    _prop_tune                      = properties.PersonaProps.TUNING.value
+    _prop_syst                      = properties.PersonaProps.SYSTEM_INSTRUCTION.value
+    _prop_func                      = properties.PersonaProps.FUNCTIONS.value
+    _prop_tool                      = properties.PersonaProps.TOOLS.value
+    _prop_gene                      = properties.PersonaProps.GENERATION_CONFIG.value
+    _prop_safe                      = properties.PersonaProps.SAFETY_SETTINGS.value
+    _prop_schema                    = properties.PersonaProps.SCHEMA_FILENAME.value
+    _prop_context                   = properties.PersonaProps.CONTEXT.value
+    _prop_inject                    = properties.PersonaProps.INJECTIONS.value
 
     def __init__(self, persona: str, persona_config: dict, 
                  directory: str, extension: str) -> None:

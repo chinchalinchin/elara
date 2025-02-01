@@ -10,7 +10,7 @@ import typing
 
 # Application Modules
 import app
-import constants
+import properties
 import factories
 import schemas
 import objects.printer as printer
@@ -61,8 +61,8 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
     arg_factory             = factories.ArgFactory()
 
     log_file                = app_factory.log_file()
-    log_level               = app_factory.app.config.get(constants.LogProps.LEVEL.value)
-    log_schema              = app_factory.app.config.get(constants.LogProps.SCHEMA.value)
+    log_level               = app_factory.app.config.get(properties.LogProps.LEVEL.value)
+    log_schema              = app_factory.app.config.get(properties.LogProps.SCHEMA.value)
     
     logs(log_schema, log_file, log_level)
 
@@ -86,10 +86,13 @@ def init() -> typing.Tuple[app.App, schemas.Arguments, printer.Printer]:
 
     application.cache.update(**arguments.to_dict())
          
-    prnter.out(arguments, application.debug())
+    buffer                  = arguments.view 
+    arguments.view          = True
+    prnter.out(arguments, application.debug(arguments))
+    arguments.view          = buffer
 
     application.cache.save()
-    
+
     return application, arguments, prnter
 
 

@@ -10,7 +10,7 @@ import typing
 import re
 
 # Application Modules
-import constants
+import properties
 import schemas
 import objects.printer as printer
 
@@ -28,20 +28,20 @@ class Terminal:
 
 
     # Terminal Properties
-    _prop_req                   = constants.TerminalProps.REQUEST.value
-    _prop_cmds                  = constants.TerminalProps.COMMANDS.value 
-    _prop_func                  = constants.TerminalProps.FUNCTIONS.value
-    _prop_disp                  = constants.TerminalProps.DISPLAY.value
-    _prop_init                  = constants.TerminalProps.INIT.value
-    _prop_titl                  = constants.TerminalProps.TITLE.value
-    _prop_star                  = constants.TerminalProps.START.value
-    _prop_exit                  = constants.TerminalProps.EXIT.value
-    _prop_help                  = constants.TerminalProps.HELP.value
-    _prop_prom                  = constants.TerminalProps.PROMPT.value
+    _prop_req                   = properties.TerminalProps.REQUEST.value
+    _prop_cmds                  = properties.TerminalProps.COMMANDS.value 
+    _prop_func                  = properties.TerminalProps.FUNCTIONS.value
+    _prop_disp                  = properties.TerminalProps.DISPLAY.value
+    _prop_init                  = properties.TerminalProps.INIT.value
+    _prop_titl                  = properties.TerminalProps.TITLE.value
+    _prop_star                  = properties.TerminalProps.START.value
+    _prop_exit                  = properties.TerminalProps.EXIT.value
+    _prop_help                  = properties.TerminalProps.HELP.value
+    _prop_prom                  = properties.TerminalProps.PROMPT.value
     ## Gherkin Properties
-    _prop_gher                  = constants.TerminalProps.GHERKIN.value
-    _prop_gher_blks             = constants.TerminalProps.GHERKIN_BLOCKS.value
-    _prop_gher_help             = constants.TerminalProps.GHERKIN_HELP.value
+    _prop_gher                  = properties.TerminalProps.GHERKIN.value
+    _prop_gher_blks             = properties.TerminalProps.GHERKIN_BLOCKS.value
+    _prop_gher_help             = properties.TerminalProps.GHERKIN_HELP.value
 
     def __init__(self, terminal_config: dict):
         """

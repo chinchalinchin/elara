@@ -10,7 +10,7 @@ import logging
 import typing
 
 # Application Modules
-import constants
+import properties
 
 
 logger                              = logging.getLogger(__name__)
@@ -33,11 +33,11 @@ class Cache:
     """Location of Cache file"""
 
     # Cache Properties
-    _prop_mod                       = constants.CacheProps.CURRENT_MODEL.value
-    _prop_per                       = constants.CacheProps.CURRENT_PERSONA.value
-    _prop_pro                       = constants.CacheProps.CURRENT_PROMPTER.value
-    _prop_src                       = constants.CacheProps.TUNING_MODEL.value
-    _prop_mods                      = constants.CacheProps.MODELS.value
+    _prop_mod                       = properties.CacheProps.CURRENT_MODEL.value
+    _prop_per                       = properties.CacheProps.CURRENT_PERSONA.value
+    _prop_pro                       = properties.CacheProps.CURRENT_PROMPTER.value
+    _prop_src                       = properties.CacheProps.TUNING_MODEL.value
+    _prop_mods                      = properties.CacheProps.MODELS.value
 
     def __init__(self, cache_file: str) -> None:
         """
@@ -102,7 +102,7 @@ class Cache:
 
     def get(self, attribute: str) -> str:
         """
-        Retrieve attributes from the Cache. Cache properties are enumerated through `constants.CacheProp` enum.
+        Retrieve attributes from the Cache. Cache properties are enumerated through `properties.CacheProp` enum.
 
         :param attribute: Key to retrieve from the Cache.
         :type attribute: str
@@ -178,6 +178,6 @@ class Cache:
         """
         return len([ 
             m for m in self.data[self._prop_tun] if m[
-                constants.ModelProps.NAME.value
+                properties.ModelProps.NAME.value
             ] == persona 
         ]) > 0

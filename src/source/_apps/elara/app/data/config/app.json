@@ -333,7 +333,7 @@
         "objects.repository.auth.creds": "VCS_TOKEN",
         "functions.converse.timezone_offset": "TIMEZONE_OFFSET",
         "latex.preamble": "LATEX_PREAMBLE",
-        "logs.level": "LOGS_LEVEL"
+        "logs.level": "LOG_LEVEL"
     },
     "tree": {
         "directories": {

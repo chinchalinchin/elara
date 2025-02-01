@@ -11,7 +11,7 @@ import pathlib
 import traceback
 
 # Application Modules
-import constants
+import properties
 import exceptions 
 import loader
 
@@ -30,21 +30,21 @@ class Directory:
 
     # Directory Properties
     ## Summary Properties
-    _prop_sum                   = constants.DirectoryProps.SUMMARY.value
-    _prop_sum_root              = constants.DirectoryProps.SUMMARY_DIRECTORY.value
-    _prop_sum_tree              = constants.DirectoryProps.SUMMARY_TREE.value
-    _prop_sum_files             = constants.DirectoryProps.SUMMARY_FILES.value
-    _prop_sum_type              = constants.DirectoryProps.SUMMARY_TYPE.value
-    _prop_sum_data              = constants.DirectoryProps.SUMMARY_DATA.value
-    _prop_sum_lang              = constants.DirectoryProps.SUMMARY_LANGUAGE.value
-    _prop_sum_name              = constants.DirectoryProps.SUMMARY_NAME.value
+    _prop_sum                   = properties.DirectoryProps.SUMMARY.value
+    _prop_sum_root              = properties.DirectoryProps.SUMMARY_DIRECTORY.value
+    _prop_sum_tree              = properties.DirectoryProps.SUMMARY_TREE.value
+    _prop_sum_files             = properties.DirectoryProps.SUMMARY_FILES.value
+    _prop_sum_type              = properties.DirectoryProps.SUMMARY_TYPE.value
+    _prop_sum_data              = properties.DirectoryProps.SUMMARY_DATA.value
+    _prop_sum_lang              = properties.DirectoryProps.SUMMARY_LANGUAGE.value
+    _prop_sum_name              = properties.DirectoryProps.SUMMARY_NAME.value
     ## Configuration Properties
-    _prop_sum_directives        = constants.DirectoryProps.SUMMARY_DIRECTIVES.value
-    _prop_sum_includes          = constants.DirectoryProps.SUMMARY_INCLUDES.value
-    _prop_sum_excludes          = constants.DirectoryProps.SUMMARY_EXCLUDES.value
-    _prop_sum_ext               = constants.DirectoryProps.SUMMARY_EXCLUDE_EXT.value
-    _prop_sum_file              = constants.DirectoryProps.SUMMARY_EXCLUDE_FILE.value
-    _prop_sum_dir               = constants.DirectoryProps.SUMMARY_EXCLUDE_DIR.value
+    _prop_sum_directives        = properties.DirectoryProps.SUMMARY_DIRECTIVES.value
+    _prop_sum_includes          = properties.DirectoryProps.SUMMARY_INCLUDES.value
+    _prop_sum_excludes          = properties.DirectoryProps.SUMMARY_EXCLUDES.value
+    _prop_sum_ext               = properties.DirectoryProps.SUMMARY_EXCLUDE_EXT.value
+    _prop_sum_file              = properties.DirectoryProps.SUMMARY_EXCLUDE_FILE.value
+    _prop_sum_dir               = properties.DirectoryProps.SUMMARY_EXCLUDE_DIR.value
 
     def __init__(self, directory : str, directory_config : dict) -> None:
         """

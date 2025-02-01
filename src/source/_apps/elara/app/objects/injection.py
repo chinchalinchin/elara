@@ -9,7 +9,7 @@ import os
 import logging 
 
 # Application Modules
-import constants
+import properties
 import loader
 
 
@@ -28,9 +28,9 @@ class Injection:
     """External injections"""
 
     # Injection properties
-    _prop_poem                  = constants.InjectionProps.POEMS.value
-    _prop_prof                  = constants.InjectionProps.PROOFS.value
-    _prop_quot                  = constants.InjectionProps.QUOTES.value
+    _prop_poem                  = properties.InjectionProps.POEMS.value
+    _prop_prof                  = properties.InjectionProps.PROOFS.value
+    _prop_quot                  = properties.InjectionProps.QUOTES.value
 
 
     def __init__(self, directory: str, extension: str) -> None:

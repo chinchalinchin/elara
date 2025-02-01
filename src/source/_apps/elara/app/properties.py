@@ -1,5 +1,5 @@
 """
-constants.py
+properties.py
 ------------
 
 Application constants and properties.

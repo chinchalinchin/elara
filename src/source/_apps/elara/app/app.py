@@ -10,10 +10,9 @@ import json
 import typing
 
 # Application Modules
-import constants
+import properties
 import exceptions
 import schemas
-import util
 import objects.cache as cac
 import objects.config as conf
 import objects.conversation as convo
@@ -64,20 +63,20 @@ class App:
     # Internal Properties
     _dispatch                   = {}
     # Application Properties
-    _prop_brainstorm_schema     = constants.AppProps.BRAINSTORM_SCHEMA.value
-    _prop_brainstorm_mime       = constants.AppProps.BRAINSTORM_MIME_TYPE.value
-    _prop_converse_schema       = constants.AppProps.CONVERSE_SCHEMA.value
-    _prop_converse_mime         = constants.AppProps.CONVERSE_MIME_TYPE.value
-    _prop_formalize_schema      = constants.AppProps.FORMALIZE_SCHEMA.value
-    _prop_formalize_mime        = constants.AppProps.FORMALIZE_MIME.value
-    _prop_review_schema         = constants.AppProps.REVIEW_SCHEMA.value
-    _prop_review_mime           = constants.AppProps.REVIEW_MIME_TYPE.value
-    _prop_request_schema        = constants.AppProps.REQUEST_SCHEMA.value
-    _prop_request_mime          = constants.AppProps.REQUEST_MIME.value
+    _prop_brainstorm_schema     = properties.AppProps.BRAINSTORM_SCHEMA.value
+    _prop_brainstorm_mime       = properties.AppProps.BRAINSTORM_MIME_TYPE.value
+    _prop_converse_schema       = properties.AppProps.CONVERSE_SCHEMA.value
+    _prop_converse_mime         = properties.AppProps.CONVERSE_MIME_TYPE.value
+    _prop_formalize_schema      = properties.AppProps.FORMALIZE_SCHEMA.value
+    _prop_formalize_mime        = properties.AppProps.FORMALIZE_MIME.value
+    _prop_review_schema         = properties.AppProps.REVIEW_SCHEMA.value
+    _prop_review_mime           = properties.AppProps.REVIEW_MIME_TYPE.value
+    _prop_request_schema        = properties.AppProps.REQUEST_SCHEMA.value
+    _prop_request_mime          = properties.AppProps.REQUEST_MIME.value
     ## Special Function Properties
-    _prop_latex                 = constants.AppProps.LATEX.value
-    _prop_block                 = constants.AppProps.BLOCKS.value
-    _prop_reports               = constants.AppProps.REPORTS.value
+    _prop_latex                 = properties.AppProps.LATEX.value
+    _prop_block                 = properties.AppProps.BLOCKS.value
+    _prop_reports               = properties.AppProps.REPORTS.value
 
 
     def __init__(self, cache: cac.Cache | None = None, config: conf.Config | None = None, 
@@ -111,26 +110,26 @@ class App:
         """
         self._dispatch          = {
             ## RENDERING FUNCTIONS 
-            constants.Functions.SUMMARIZE.value
+            properties.Functions.SUMMARIZE.value
                                 : self.summarize,
             ## ADMINISTRATIVE FUNCTIONS
-            constants.Functions.CLEAR.value
+            properties.Functions.CLEAR.value
                                 : self.clear,
-            constants.Functions.DEBUG.value
+            properties.Functions.DEBUG.value
                                 : self.debug,
             ## MODEL FUNCTIONS
-            constants.Functions.MODELS.value
+            properties.Functions.MODELS.value
                                 : self.models,
-            constants.Functions.TUNE.value                 
+            properties.Functions.TUNE.value                 
                                 : self.tune,
             ## GENERATIVE FUNCTIOSN
-            constants.Functions.CONVERSE.value             
+            properties.Functions.CONVERSE.value             
                                 : self.converse,
-            constants.Functions.REVIEW.value
+            properties.Functions.REVIEW.value
                                 : self.review,
-            constants.Functions.REQUEST.value               
+            properties.Functions.REQUEST.value               
                                 : self.request,
-            constants.Functions.FORMALIZE.value              
+            properties.Functions.FORMALIZE.value              
                                 : self.formalize,
         }
         self.cache              = cache
@@ -145,20 +144,44 @@ class App:
         self.terminal           = terminal
 
 
-    def _schema(self, schema: constants.AppProps, mime: constants.AppProps, persona: str) -> dict:
+    def _merge(self, d1: dict, d2: dict) -> dict:
+        """
+        Recursively merges two dictionaries using the union operator (|).
+
+        :param d1: First dictionary to merge.
+        :type d1: dict 
+        :param d2: Second dictionary to merge.
+        :type d2: dict 
+        """
+        if not isinstance(d1, dict):
+            raise ValueError("d1 is not a dictionary!")
+        
+        if not isinstance(d2, dict):
+            raise ValueError("d2 is not a dictionary!")
+
+        result                  = d1 | d2
+
+        for key in result.keys():
+            if key in d1 and key in d2:
+                result[key]     = self._merge(d1[key], d2[key])
+                
+        return result
+    
+
+    def _schema(self, schema: properties.AppProps, mime: properties.AppProps, persona: str) -> dict:
         """
         Apply a functional response schema to a persona.
 
         :param schema: Functional schema to apply.
-        :type schema: `constants.AppProps`
+        :type schema: `properties.AppProps`
         :param mime: Mime type of functional schema.
-        :type mime: `constants.AppProps`
+        :type mime: `properties.AppProps`
         :param persona: Persona that needs a schema.
         :type persona: `str`
         """
         res_schema              = self.config.get(schema)
         res_config              = self.personas.get(
-                                    constants.PersonaProps.GENERATION_CONFIG.value, persona)
+                                    properties.PersonaProps.GENERATION_CONFIG.value, persona)
         res_config.update({
             "response_schema"   : res_schema,
             "response_mime_type": self.config.get(mime)
@@ -166,29 +189,29 @@ class App:
         return res_config
     
 
-    def _blocks(self, func: constants.Functions) -> dict:
+    def _blocks(self, func: properties.Functions) -> dict:
         """
         Retrieve the block configuration for a function
         """
-        path                    = ".".join([ constants.AppProps.FUNCTIONS.value, func, self._prop_block ])
+        path                    = ".".join([ properties.AppProps.FUNCTIONS.value, func, self._prop_block ])
         return { self._prop_block: self.config.get(path)}
 
 
-    def _vars(self, func : constants.Functions, schema: typing.Union[str | None] = None) -> dict:
+    def _vars(self, func : properties.Functions, schema: typing.Union[str | None] = None) -> dict:
         """
         Get templating variables for a given function.
 
         :param func: Function name for which to retrieve templating variables.
-        :type func: `constants.Functions`.
+        :type func: `properties.Functions`.
         :param schema: Functional output schema. Defaults to `None`
         :param schema: `typing.Union[str | None]`
         :returns: Dictionary of template variables.
         :rtype: `dict`
         """
-        persona_key             = constants.CacheProps.CURRENT_PERSONA.value
-        prompter_key            = constants.CacheProps.CURRENT_PROMPTER.value
+        persona_key             = properties.CacheProps.CURRENT_PERSONA.value
+        prompter_key            = properties.CacheProps.CURRENT_PROMPTER.value
 
-        if func == constants.Functions.CONVERSE.value:
+        if func == properties.Functions.CONVERSE.value:
             persona             = self.cache.get(persona_key)
 
         else:
@@ -217,7 +240,7 @@ class App:
             logger.info("Injecting repository info into prompt...")
             template_vars.update(self.repository.vars())
 
-        if func == constants.Functions.REQUEST.value:
+        if func == properties.Functions.REQUEST.value:
             logger.info("Injecting Gherkin script into prompt...")
             template_vars["reports"].update(
                 self.terminal.gherkin())
@@ -225,19 +248,19 @@ class App:
         return template_vars
 
 
-    def _validate(self, arguments: schemas.Arguments, func: constants.Functions) -> typing.Tuple[str, str]:
+    def _validate(self, arguments: schemas.Arguments, func: properties.Functions) -> typing.Tuple[str, str]:
         """
         Validate application function arguments.
 
         :param arguments: Application arguments.
         :type arguments: `schemas.Arguments`
         :param func: Application function.
-        :type func: `constants.Functions`
+        :type func: `properties.Functions`
         :returns: A tuple ccontaining the current persona and current prompter.
         :rtype: `typing.Tuple[str, str]`
         """
-        persona_key             = constants.CacheProps.CURRENT_PERSONA.value
-        prompter_key            = constants.CacheProps.CURRENT_PROMPTER.value
+        persona_key             = properties.CacheProps.CURRENT_PERSONA.value
+        prompter_key            = properties.CacheProps.CURRENT_PROMPTER.value
         cached_persona          = self.cache.get(persona_key)
 
         if cached_persona is None:
@@ -261,7 +284,7 @@ class App:
         :returns: Object containing the contextualized prompt and model response.
         :rtype: `schemas.Output`
         """
-        persona, prompter       = self._validate(arguments, constants.Functions.CONVERSE.value)
+        persona, prompter       = self._validate(arguments, properties.Functions.CONVERSE.value)
         response_config         = self._schema(
             schema              = self._prop_converse_schema, 
             mime                = self._prop_converse_mime,
@@ -277,7 +300,7 @@ class App:
         )
 
         parsed_prompt           = self.templates.render(
-                                    self._vars(constants.Functions.CONVERSE.value, schema))
+                                    self._vars(properties.Functions.CONVERSE.value, schema))
 
         if arguments.render:
             return parsed_prompt
@@ -285,10 +308,10 @@ class App:
         response                = self.model.respond(
             prompt              = parsed_prompt, 
             generation_config   = response_config,
-            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
         self.conversations.update(
@@ -299,7 +322,7 @@ class App:
         )
 
         return self.templates.render(
-                                self._vars(constants.Functions.CONVERSE.value, schema))
+                                self._vars(properties.Functions.CONVERSE.value, schema))
 
 
     def formalize(self, arguments: schemas.Arguments) -> str:
@@ -311,7 +334,7 @@ class App:
         :returns: Data structure containing parsed prompt and response.
         :rtype: `schemas.Output`
         """
-        persona, prompter       = self._validate(arguments, constants.Functions.FORMALIZE.value)
+        persona, prompter       = self._validate(arguments, properties.Functions.FORMALIZE.value)
         response_config         = self._schema(
             schema              = self._prop_formalize_schema, 
             mime                = self._prop_formalize_mime,
@@ -327,7 +350,7 @@ class App:
         )
 
         parsed_prompt           = self.templates.render(
-                                    self._vars(constants.Functions.FORMALIZE.value, schema))
+                                    self._vars(properties.Functions.FORMALIZE.value, schema))
 
         if arguments.render:
             return parsed_prompt
@@ -335,10 +358,10 @@ class App:
         response                = self.model.respond(
             prompt              = parsed_prompt,
             generation_config   = response_config,
-            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
         self.conversations.update(
@@ -349,8 +372,8 @@ class App:
         )
 
         variables               = {
-            **self._vars(constants.Functions.FORMALIZE.value),
-            constants.Functions.FORMALIZE.value: response
+            **self._vars(properties.Functions.FORMALIZE.value),
+            properties.Functions.FORMALIZE.value: response
         }
         
         return self.templates.render(variables)
@@ -363,8 +386,8 @@ class App:
         :returns: Object containing the contextualized prompt and model response.
         :rtype: `schemas.Output`
         """
-        persona                 = self.personas.function(constants.Functions.REQUEST.value)
-        variables               = self._vars(constants.Functions.REQUEST.value)
+        persona                 = self.personas.function(properties.Functions.REQUEST.value)
+        variables               = self._vars(properties.Functions.REQUEST.value)
 
         # TODO: response schema for request function
 
@@ -376,20 +399,20 @@ class App:
 
         response                = self.model.respond(
             prompt              = parsed_prompt,
-            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
-            generation_config   = self.personas.get(constants.PersonaProps.GENERATION_CONFIG.value, persona),
-            safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+            generation_config   = self.personas.get(properties.PersonaProps.GENERATION_CONFIG.value, persona),
+            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
         variables               = {
             **variables,
-            constants.Functions.REQUEST.value: response,
+            properties.Functions.REQUEST.value: response,
         }
         
         application             = self.templates.function(
-            template            = constants.Functions.REQUEST.value, 
+            template            = properties.Functions.REQUEST.value, 
             request_vars        = variables
         )
         
@@ -403,7 +426,7 @@ class App:
         :returns: Object containing the contextualized prompt, model response and service request metadata.
         :rtype: `schemas.Output`
         """
-        persona                 = self.personas.function(constants.Functions.REVIEW.value) 
+        persona                 = self.personas.function(properties.Functions.REVIEW.value) 
         response_config         = self._schema(
             schema              = self._prop_review_schema, 
             mime                = self._prop_review_mime,
@@ -411,7 +434,7 @@ class App:
         )
         schema                  = response_config["response_schema"]
         review_prompt           = self.templates.render(
-                                    self._vars(constants.Functions.REVIEW.value, schema))
+                                    self._vars(properties.Functions.REVIEW.value, schema))
 
         if arguments.render:
             return review_prompt
@@ -419,10 +442,10 @@ class App:
         response                = self.model.respond(
             prompt              = review_prompt,
             generation_config   = response_config,
-            model_name          = self.cache.get(constants.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(constants.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(constants.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(constants.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
         )
 
         vcs_res                 = {  }
@@ -439,12 +462,12 @@ class App:
                     "path"      : file_data.get("path"),
                     "msg"       : comment
                 })
-            vcs_res             = util.merge(vcs_res,
+            vcs_res             = self._merge(vcs_res,
                                     self.repository.files(arguments.pull, bodies))
 
         variables               = {
-            **self._vars(constants.Functions.REVIEW.value, schema),
-            constants.Functions.REVIEW.value: response
+            **self._vars(properties.Functions.REVIEW.value, schema),
+            properties.Functions.REVIEW.value: response
         }
 
         return self.templates.render(variables)
@@ -468,16 +491,16 @@ class App:
             if not self.cache.is_tuned(p):
                 res                 = self.model.tune(
                     display_name    = p,
-                    tuning_data     = self.personas.get(constants.PersonaProps.TUNING.value, p)
+                    tuning_data     = self.personas.get(properties.PersonaProps.TUNING.value, p)
                 )
                 tuned_models.append({
-                    constants.ModelProps.NAME.value : p,
-                    constants.ModelProps.PATH       : res.name
+                    properties.ModelProps.NAME.value : p,
+                    properties.ModelProps.PATH       : res.name
                 })
 
         if tuned_models:
             self.cache.update(**{
-                constants.CacheProps.TUNED_MODELS.value: tuned_models
+                properties.CacheProps.TUNED_MODELS.value: tuned_models
             })
             self.cache.save()
             return True
@@ -499,7 +522,7 @@ class App:
                 "objects.directory.Directory not initialized!")
         return self.templates.render(
             template            = "application", 
-            variables           = self._vars(constants.Functions.SUMMARIZE.value)
+            variables           = self._vars(properties.Functions.SUMMARIZE.value)
         )
 
 
@@ -573,7 +596,7 @@ class App:
         #   are "static".
         #
         #   AI is an interesting problem! Don't you agree, Milton?!
-        if operation_name == constants.Functions.CONVERSE.value: 
+        if operation_name == properties.Functions.CONVERSE.value: 
             arguments.view              = True
             return self.terminal.interact(
                 callable                = lambda args: self.converse(args),
@@ -614,8 +637,12 @@ class App:
         return True
     
 
-    def debug(self):
+    def debug(self, arguments: schemas.Arguments):
         """
-        TODO
+        Get application debug message.
         """
-        return "TODO"
+        variables                       = { 
+            **self.cache.vars(),
+            **arguments.to_dict()
+        }
+        return self.templates.render(variables, "debug")

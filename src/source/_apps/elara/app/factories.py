@@ -14,10 +14,9 @@ import typing
 
 # Application Modules
 import app as apps
-import constants
+import properties
 import exceptions
 import schemas
-import util
 import objects.cache as cache
 import objects.config as conf
 import objects.conversation as convo
@@ -45,21 +44,21 @@ class ArgFactory:
 
     # Argument Propeties
     ## COMMAND LINE PARSERS
-    _prop_parh                  : str = constants.CommandLineProps.PARSER_HELP.value
-    _prop_subh                  : str = constants.CommandLineProps.SUBPARSER_HELP.value
-    _prop_subd                  : str = constants.CommandLineProps.SUBPARSER_DEST.value
-    _prop_args                  : str = constants.CommandLineProps.ARGUMENTS.value
-    _prop_oper                  : str = constants.CommandLineProps.OPERATIONS.value
-    _prop_fiel                  : str = constants.CommandLineProps.FIELDS.value
-    _prop_name                  : str = constants.CommandLineProps.NAME.value
+    _prop_parh                  : str = properties.CommandLineProps.PARSER_HELP.value
+    _prop_subh                  : str = properties.CommandLineProps.SUBPARSER_HELP.value
+    _prop_subd                  : str = properties.CommandLineProps.SUBPARSER_DEST.value
+    _prop_args                  : str = properties.CommandLineProps.ARGUMENTS.value
+    _prop_oper                  : str = properties.CommandLineProps.OPERATIONS.value
+    _prop_fiel                  : str = properties.CommandLineProps.FIELDS.value
+    _prop_name                  : str = properties.CommandLineProps.NAME.value
     ## COMMAND LINE ARGUMENTS
-    _prop_help                  : str = constants.CommandLineProps.HELP.value
-    _prop_synt                  : str = constants.CommandLineProps.SYNTAX.value
-    _prop_dest                  : str = constants.CommandLineProps.DEST.value
-    _prop_acti                  : str = constants.CommandLineProps.ACTION.value
-    _prop_narg                  : str = constants.CommandLineProps.NARGS.value
-    _prop_defa                  : str = constants.CommandLineProps.DEFAULT.value
-    _prop_type                  : str = constants.CommandLineProps.TYPE.value 
+    _prop_help                  : str = properties.CommandLineProps.HELP.value
+    _prop_synt                  : str = properties.CommandLineProps.SYNTAX.value
+    _prop_dest                  : str = properties.CommandLineProps.DEST.value
+    _prop_acti                  : str = properties.CommandLineProps.ACTION.value
+    _prop_narg                  : str = properties.CommandLineProps.NARGS.value
+    _prop_defa                  : str = properties.CommandLineProps.DEFAULT.value
+    _prop_type                  : str = properties.CommandLineProps.TYPE.value 
 
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "args.json") -> None:
@@ -75,6 +74,31 @@ class ArgFactory:
         self.config             = conf.Config(
                                     os.path.join(app_dir, rel_dir, filename))
 
+
+    @staticmethod
+    def _map(typed_string: str) -> typing.Any:
+        """
+        Maps type strings to Python types.
+        
+        :param type_string: String containing a Python data type.
+        :type type_string: `str`
+        :returns: Python type that corresponds to input string.
+        :rtype: `typing.Any`
+        """
+        types                   = {
+            'str'               : str,
+            'dict'              : dict,
+            'list'              : list,
+            'int'               : int,
+            'float'             : float,
+            'bool'              : bool,
+            'set'               : set
+        }
+        if typed_string not in types.keys():
+            return None
+
+        return types[typed_string]    
+        
 
     def with_cli_args(self) -> typing.Self:
         """
@@ -123,7 +147,7 @@ class ArgFactory:
                         default = op_arg[self._prop_defa],
                         dest    = op_arg[self._prop_dest],
                         help    = op_arg[self._prop_help],
-                        type    = util.map(op_arg[self._prop_type])
+                        type    = self._map(op_arg[self._prop_type])
                     )
                     continue
                 
@@ -131,7 +155,7 @@ class ArgFactory:
                     default     = op_arg[self._prop_defa],
                     dest        = op_arg[self._prop_dest],
                     help        = op_arg[self._prop_help],
-                    type        = util.map(op_arg[self._prop_type])
+                    type        = self._map(op_arg[self._prop_type])
                 )
 
         parsed_args             = vars(parser.parse_args())
@@ -162,33 +186,33 @@ class AppFactory:
 
     # Factory Properties
     ## AUTHENTICATION
-    _prop_auth_gem              = constants.FactoryProps.AUTH_GEMINI.value
-    _prop_auth_vcs              = constants.FactoryProps.AUTH_VCS.value
+    _prop_auth_gem              = properties.FactoryProps.AUTH_GEMINI.value
+    _prop_auth_vcs              = properties.FactoryProps.AUTH_VCS.value
     ## DIRECTORIES
-    _prop_dir_data              = constants.FactoryProps.DIR_DATA.value
-    _prop_dir_injs              = constants.FactoryProps.DIR_INJECTIONS.value
-    _prop_dir_pers              = constants.FactoryProps.DIR_PERSONA.value
-    _prop_dir_thrd              = constants.FactoryProps.DIR_THREADS.value
-    _prop_dir_temp              = constants.FactoryProps.DIR_TEMPLATES.value
+    _prop_dir_data              = properties.FactoryProps.DIR_DATA.value
+    _prop_dir_injs              = properties.FactoryProps.DIR_INJECTIONS.value
+    _prop_dir_pers              = properties.FactoryProps.DIR_PERSONA.value
+    _prop_dir_thrd              = properties.FactoryProps.DIR_THREADS.value
+    _prop_dir_temp              = properties.FactoryProps.DIR_TEMPLATES.value
     ## FILES 
-    _prop_file_cach             = constants.FactoryProps.FILE_CACHE.value
+    _prop_file_cach             = properties.FactoryProps.FILE_CACHE.value
     ## EXTENSIONS
-    _prop_ext_injs              = constants.FactoryProps.EXT_INJECTIONS.value
-    _prop_ext_temp              = constants.FactoryProps.EXT_TEMPLATES.value
-    _prop_ext_thrd              = constants.FactoryProps.EXT_THREADS.value
-    _prop_ext_pers              = constants.FactoryProps.EXT_PERSONA.value
+    _prop_ext_injs              = properties.FactoryProps.EXT_INJECTIONS.value
+    _prop_ext_temp              = properties.FactoryProps.EXT_TEMPLATES.value
+    _prop_ext_thrd              = properties.FactoryProps.EXT_THREADS.value
+    _prop_ext_pers              = properties.FactoryProps.EXT_PERSONA.value
     ## OBJECTS
-    _prop_obj_conv              = constants.FactoryProps.OBJECT_CONVO.value
-    _prop_obj_dir               = constants.FactoryProps.OBJECT_DIR.value
-    _prop_obj_per               = constants.FactoryProps.OBJECT_PERSONA.value
-    _prop_obj_mod               = constants.FactoryProps.OBJECT_MODEL.value
-    _prop_obj_term              = constants.FactoryProps.OBJECT_TERMINAL.value
-    _prop_obj_repo              = constants.FactoryProps.OBJECTS_REPOSITORY.value
+    _prop_obj_conv              = properties.FactoryProps.OBJECT_CONVO.value
+    _prop_obj_dir               = properties.FactoryProps.OBJECT_DIR.value
+    _prop_obj_per               = properties.FactoryProps.OBJECT_PERSONA.value
+    _prop_obj_mod               = properties.FactoryProps.OBJECT_MODEL.value
+    _prop_obj_term              = properties.FactoryProps.OBJECT_TERMINAL.value
+    _prop_obj_repo              = properties.FactoryProps.OBJECTS_REPOSITORY.value
     ## EXTERNAL SERVICES
-    _prop_vcs                   = constants.FactoryProps.VCS.value          
+    _prop_vcs                   = properties.FactoryProps.VCS.value          
     ## LOGS
-    _prop_log_dir               = constants.LogProps.DIRECTORY.value
-    _prop_log_file              = constants.LogProps.FILE.value
+    _prop_log_dir               = properties.LogProps.DIRECTORY.value
+    _prop_log_file              = properties.LogProps.FILE.value
 
 
     def __init__(self, rel_dir : str = "data/config", filename : str = "app.json") -> None:
@@ -306,7 +330,7 @@ class AppFactory:
         """
         models                  = None
         if self.app.cache:
-            models              = self.app.cache.get(constants.CacheProps.MODELS.value)
+            models              = self.app.cache.get(properties.CacheProps.MODELS.value)
 
         self.app.model          = model.Model(self.app.config.get(self._prop_obj_mod), models) 
 
@@ -327,7 +351,7 @@ class AppFactory:
             raise exceptions.FactoryError("Cache must be initialized before Personas!")
 
         self.app.personas       = persona.Persona(
-            persona             = self.app.cache.get(constants.CacheProps.CURRENT_PERSONA.value),
+            persona             = self.app.cache.get(properties.CacheProps.CURRENT_PERSONA.value),
             persona_config      = self.app.config.get(self._prop_obj_per),
             directory           = self._path([self._prop_dir_pers]),
             extension           = self.app.config.get(self._prop_ext_pers),
@@ -376,7 +400,7 @@ class AppFactory:
         if self.app.config.get(self._prop_vcs) is None:
             raise exceptions.VCSBackendError("VCS backend not set.")
         
-        if self.app.config.get(self._prop_vcs) == constants.VersionControl.GITHUB.value \
+        if self.app.config.get(self._prop_vcs) == properties.VersionControl.GITHUB.value \
             and not self.app.config.get(self._prop_auth_vcs):
             raise exceptions.VCSCredentialsError(
                 "VCS credentials not set for GitHub backend.")

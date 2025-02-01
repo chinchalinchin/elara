@@ -16,7 +16,7 @@ import typing
 import requests
 
 # Application Modules
-import constants 
+import properties 
 import decorators
 
 
@@ -37,21 +37,21 @@ class Repo:
 
 
     # Repository Properties
-    _prop_own               = constants.RepoProps.OWNER.value
-    _prop_repo              = constants.RepoProps.REPO.value
-    _prop_vcs               = constants.RepoProps.VCS.value
-    _prop_type              = constants.RepoProps.VCS_TYPE.value
-    _prop_back              = constants.RepoProps.BACKENDS.value
-    _prop_auth              = constants.RepoProps.AUTH.value
-    _prop_head              = constants.RepoProps.HEADERS.value
-    _prop_creds             = constants.RepoProps.CREDS.value
+    _prop_own               = properties.RepoProps.OWNER.value
+    _prop_repo              = properties.RepoProps.REPO.value
+    _prop_vcs               = properties.RepoProps.VCS.value
+    _prop_type              = properties.RepoProps.VCS_TYPE.value
+    _prop_back              = properties.RepoProps.BACKENDS.value
+    _prop_auth              = properties.RepoProps.AUTH.value
+    _prop_head              = properties.RepoProps.HEADERS.value
+    _prop_creds             = properties.RepoProps.CREDS.value
     ## Github Properties
-    _prop_git               = constants.RepoProps.GITHUB.value
-    _prop_api               = constants.RepoProps.API.value
-    _prop_pr                = constants.RepoProps.PR.value
-    _prop_com               = constants.RepoProps.COMMENTS.value
-    _prop_pulls             = constants.RepoProps.PULLS.value
-    _prop_files             = constants.RepoProps.FILES.value
+    _prop_git               = properties.RepoProps.GITHUB.value
+    _prop_api               = properties.RepoProps.API.value
+    _prop_pr                = properties.RepoProps.PR.value
+    _prop_com               = properties.RepoProps.COMMENTS.value
+    _prop_pulls             = properties.RepoProps.PULLS.value
+    _prop_files             = properties.RepoProps.FILES.value
 
     def __init__(self, repository_config: dict, 
                  repository: str, owner: str) -> None:
@@ -102,7 +102,7 @@ class Repo:
         }
     
 
-    def _pull(self, pr: int, endpoint: constants.RepoProps) -> typing.Union[str | None]:
+    def _pull(self, pr: int, endpoint: properties.RepoProps) -> typing.Union[str | None]:
         """
         Returns the POST URL for the VCS REST API pull request endpoints.
 
@@ -113,7 +113,7 @@ class Repo:
         :param pr: Pull request number for the POST.
         :type pr: `str`
         :param endpoint: Type of pull request endpoint.
-        :type endpont: `constants.RepoProps.COMMENTS | constants.RepoProps.PULLS]`
+        :type endpont: `properties.RepoProps.COMMENTS | properties.RepoProps.PULLS]`
         :returns: POST URL
         :rtype: `str`
         """
@@ -211,7 +211,7 @@ class Repo:
         """
         Retrieve VCS metadata, formatted for templating.
         """
-        return { constants.TemplateVars.REPORT_REPO.value 
+        return { properties.TemplateVars.REPORT_REPO.value 
                             : self.src }
 
 
@@ -223,7 +223,7 @@ class Repo:
         """
         url                 = self._pull(
             pr              = pr,
-            endpoint        = constants.RepoProps.FILES.value
+            endpoint        = properties.RepoProps.FILES.value
         )  
         res                 = self._get(url)
         files               = []

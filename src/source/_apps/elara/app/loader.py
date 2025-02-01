@@ -1,10 +1,14 @@
 """
-TODO
+loader.py
+---------
+
+Module for loading files.
 """
 # Standard Library Modules
 import json
 import logging 
 import typing
+
 
 logger              = logging.getLogger(__name__)
 

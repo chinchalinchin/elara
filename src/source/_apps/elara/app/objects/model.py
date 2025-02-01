@@ -11,7 +11,7 @@ import time
 import traceback
 
 # Application Modules
-import constants
+import properties
 import exceptions as excepts
 
 # External Modules 
@@ -30,20 +30,22 @@ class Model:
     refresh                     : bool = False
     """Flag to populate the cache with model metadata"""
 
+
     # Model Properties
-    _prop_name                  = constants.ModelProps.NAME.value
-    _prop_vers                  = constants.ModelProps.VERSION.value
-    _prop_path                  = constants.ModelProps.PATH.value
-    _prop_dflt                  = constants.ModelProps.DEFAULT.value
+    _prop_name                  = properties.ModelProps.NAME.value
+    _prop_vers                  = properties.ModelProps.VERSION.value
+    _prop_path                  = properties.ModelProps.PATH.value
+    _prop_dflt                  = properties.ModelProps.DEFAULT.value
     ## GEMINI PROPERTIES
-    _prop_gem                   = constants.ModelProps.GEMINI.value
-    _prop_auth                  = constants.ModelProps.API_KEY.value
-    _prop_tune                  = constants.ModelProps.TUNING.value
-    _prop_src                   = constants.ModelProps.SOURCE.value
-    _prop_in                    = constants.ModelProps.INPUT_LIMIT.value
-    _prop_out                   = constants.ModelProps.OUTPUT_LIMIT.value
-    _prop_gene                  = constants.ModelProps.GENERATE.value
-    _prop_meth                  = constants.ModelProps.METHODS.value
+    _prop_gem                   = properties.ModelProps.GEMINI.value
+    _prop_auth                  = properties.ModelProps.API_KEY.value
+    _prop_tune                  = properties.ModelProps.TUNING.value
+    _prop_src                   = properties.ModelProps.SOURCE.value
+    _prop_in                    = properties.ModelProps.INPUT_LIMIT.value
+    _prop_out                   = properties.ModelProps.OUTPUT_LIMIT.value
+    _prop_gene                  = properties.ModelProps.GENERATE.value
+    _prop_meth                  = properties.ModelProps.METHODS.value
+
 
     def __init__(self, model_config : dict, cached_models : list = None) -> None:
         """
@@ -64,7 +66,7 @@ class Model:
         if not cached_models:
             self.models         = {
                 **self._models(),
-                constants.TemplateVars.REPORT_TUNED.value
+                properties.TemplateVars.REPORT_TUNED.value
                                 : self._tuned()
             }
             self.refresh        = True    
@@ -106,13 +108,13 @@ class Model:
         try:
             models = [m for m in genai.list_models()]
             return {
-                constants.TemplateVars.REPORT_BASE.value: [{
+                properties.TemplateVars.REPORT_BASE.value: [{
                     self._prop_path     : m.name,
                     self._prop_vers     : m.version,
                     self._prop_in       : m.input_token_limit,
                     self._prop_out      : m.output_token_limit
                 } for m in models if self._is_text_model(m) ],
-                constants.TemplateVars.REPORT_TUNING.value:[{
+                properties.TemplateVars.REPORT_TUNING.value:[{
                     self._prop_path     : m.name,
                     self._prop_vers     : m.version,
                     self._prop_in       : m.input_token_limit,
@@ -132,7 +134,7 @@ class Model:
         """
         try:
             return {
-                constants.TemplateVars.REPORT_TUNED.value: [{ 
+                properties.TemplateVars.REPORT_TUNED.value: [{ 
                     self._prop_path : m.name 
                 } for m in genai.list_tuned_models()]
             }
@@ -155,7 +157,8 @@ class Model:
             logger.warning(f"{model_name} is not defined, using default model.")
             model_name          = self.model_config[self._prop_gem][self._prop_dflt]
 
-        base_paths              =  [ m[self._prop_path] for m in self.base_models()]
+        base_models             = properties.TemplateVars.REPORT_BASE.value
+        base_paths              =  [ m[self._prop_path] for m in self.models[base_models] ]
 
         if model_name in base_paths:
             logger.info(f"Appending system instructions to base model: {model_name}")
@@ -173,7 +176,7 @@ class Model:
         :returns: Dictionary of Gemini metadata.
         :rtype: `dict`
         """
-        return { constants.TemplateVars.REPORT_MODELS.value: self.models }
+        return { properties.TemplateVars.REPORT_MODELS.value: self.models }
     
     
     
