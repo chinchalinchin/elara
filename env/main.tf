@@ -11,38 +11,68 @@ provider "aws" {
 }
 
 locals {
-    platform                    = {
-        client                  = "CUMBERLAND CLOUD"
-        environment             = "PRODUCTION"
+    platform                            = {
+        client                          = "CUMBERLAND CLOUD"
+        environment                     = "PRODUCTION"
     }
-    kms                         = {
-        aws_managed             = true
+    kms                                 = {
+        aws_managed                     = true
     }
 }
 
 module "bucket" {
-    source                      = "github.com/cumberland-terraform/storage-s3.git"
+    source                              = "github.com/cumberland-terraform/storage-s3.git"
     
-    platform                    = local.platform
-    kms                         = local.kms
-    s3                          = {
-        purpose                 = "Hosting of static web content for the Elara Protocol website"
-        suffix                  = "elara"
-        website_configuration   = {
-            enabled             = true
+    platform                            = local.platform
+    kms                                 = local.kms
+    s3                                  = {
+        purpose                         = "Hosting of static web content for the Elara Protocol website"
+        suffix                          = "elara"
+        website_configuration           = {
+            enabled                     = true
         } 
     }
 }
 
 module "distribution" {
-    source                      = "github.com/cumberland-terraform/network-cdn.git"
+    source                              = "github.com/cumberland-terraform/network-cdn.git"
     
-    platform                    = local.platform
-    kms                         = local.kms
-    s3                          = module.bucket.bucket[0]
-    cdn                         = {
-        domain                  = "elara.chinchalinchin.com"
-        name                    = "elara"
+    platform                            = local.platform
+    kms                                 = local.kms
+    s3                                  = module.bucket.bucket[0]
+    cdn                                 = {
+        domain                          = "elara.chinchalinchin.com"
+        name                            = "elara"
     }
 
+}
+
+
+module "build" {
+    source                              = "github.com/cumberland-terraform/orchestrate-build.git"
+
+    platform                            = local.platform
+
+    kms                                 = {
+        aws_managed                     = true
+    }
+
+    connection                          = {
+        provider_type                   = "GITHUB"
+    }
+    
+    build                               = {
+        suffix                          = "elara"
+    }
+
+    pipeline                            = {
+        source_stage                    = {
+            action                      = {
+                FullRepositoryId        = "https://github.com/chinchalinchin/elara"
+                BranchName              = "pypi"
+            }
+        }
+    }
+
+    secrets                             = [ "cumberland-cloud/pypi" ]
 }

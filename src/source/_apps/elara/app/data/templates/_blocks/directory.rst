@@ -4,7 +4,7 @@
 Summary
 #######
 
-{%- if blocks.preamble.definitions.interaction -%}
+{%- if block and blocks.preamble.definitions.interaction -%}
 The following section contains an RST formatted summary of a directory that is relevant to the :ref:`interaction`.
 {%- endif %}
 

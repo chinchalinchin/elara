@@ -213,7 +213,10 @@
                     ".cfg": "toml",
                     ".json": "json",
                     ".html": "html",
-                    ".js": "js"
+                    ".js": "js",
+                    ".hcl": "hcl",
+                    ".tf": "tf",
+                    ".yml": "yaml"
                 },
                 "includes": {
                     "ext": [
