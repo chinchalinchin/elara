@@ -235,7 +235,6 @@ class RepoProps(enum.Enum):
     HEADERS             = "headers"
     CREDS               = "creds"
     BACKENDS            = "backends"
-    VCS_TYPE            = "vcs"
     TYPE                = "type"
     API                 = "api"
     # GitHub Service Properties

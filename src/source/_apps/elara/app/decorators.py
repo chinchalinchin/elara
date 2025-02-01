@@ -31,6 +31,9 @@ def backoff(service: str ="github", max_retries: int = 3) -> typing.Any:
                 try:
                     return func(*args, **kwargs)  # Pass args and kwargs to callable
                 except requests.exceptions.RequestException as e:
+                    if '422 Client Error: Unprocessable Entity' in str(e):
+                        raise e
+                    
                     if attempt < max_retries - 1:
                         wait    = 2 ** attempt
                         logger.warning(f"Request failed, retrying in {wait} seconds:\n\n{e}")

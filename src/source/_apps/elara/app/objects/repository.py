@@ -16,8 +16,9 @@ import typing
 import requests
 
 # Application Modules
-import properties 
 import decorators
+import properties 
+import util
 
 
 logger                      = logging.getLogger(__name__)
@@ -40,7 +41,7 @@ class Repo:
     _prop_own               = properties.RepoProps.OWNER.value
     _prop_repo              = properties.RepoProps.REPO.value
     _prop_vcs               = properties.RepoProps.VCS.value
-    _prop_type              = properties.RepoProps.VCS_TYPE.value
+    _prop_type              = properties.RepoProps.TYPE.value
     _prop_back              = properties.RepoProps.BACKENDS.value
     _prop_auth              = properties.RepoProps.AUTH.value
     _prop_head              = properties.RepoProps.HEADERS.value
@@ -52,6 +53,7 @@ class Repo:
     _prop_com               = properties.RepoProps.COMMENTS.value
     _prop_pulls             = properties.RepoProps.PULLS.value
     _prop_files             = properties.RepoProps.FILES.value
+
 
     def __init__(self, repository_config: dict, 
                  repository: str, owner: str) -> None:
@@ -98,7 +100,7 @@ class Repo:
         self.src            = {
             self._prop_own  : owner,
             self._prop_repo : repository,
-            self._prop_vcs  : repository_config[self._prop_type]
+            self._prop_vcs  : repository_config[self._prop_vcs]
         }
     
 
@@ -269,7 +271,7 @@ class Repo:
         files               = self.pulls(pr)
         url                 = self._pull(pr, self._prop_pulls)
         paths               = [ b["path"] for b in bodies ]
-        res                 = []
+        res                 = {}
 
         for f in files:
             for p in paths:
@@ -280,7 +282,7 @@ class Repo:
                         "commit_id": f.get("sha"),
                         "line": 1
                     }
-                    res.append(self._post(url,body))
+                    res     = util.merge(self._post(url,body), res)
                     break 
         return res
 
