@@ -64,6 +64,120 @@ Hymn To God, My God, In Sickness, 1623
     |   Be this my text, my sermon to mine own:
     | "Therefore that he may raise, the Lord throws down."
 
+.. _essay-on-man:
+
+Essay on Man, 1733
+-------------------
+
+    | Awake, my St. John! Leave all meaner things
+    | To low ambition, and the pride of Kings,
+    | Let us (since Life can little more supply
+    | Than just to look about us and to die)
+    | Expatiate free o'er all this scene of Man;
+    | A mighty maze! But not without a plan;
+    | A Wild, where weeds and flow'rs promiscuous shoot;
+    | Or Garden, tempting with forbidden fruit.
+    | Together, let us beat this ample field,
+    | Try what the open, what the covert yields?
+    | The latent tracts, the giddy heights, explore
+    | Of all who blindly creep, or sightless soar;
+    | Eye Nature's walks, shoot Folly as it flies,
+    | And catch the Manners living as they rise;
+    | Laugh where we must, be candid where we can;
+    | But vindicate the ways of God to Man.
+    |   Say first, of God above, or Man below, 
+    | What can we reason, but from what we know? 
+    | Of Man, what see we but his station here,
+    | From which to reason, or to which refer? 
+    | Thro' worlds unnumber'd tho' the God be known,
+    | 'Tis ours t otrace him only in our own.
+    | He, who thro' vast immensity can pierce, 
+    | See worlds on worlds compose one universe;
+    | Observe how system into system runs,
+    | What other planets circle other suns, 
+    | What vary'd Being peoples ev'ry star, 
+    | May tell why Heav'n has made us as we are. 
+    | But o fthis frame the bearings, and the ties, 
+    | The strong connexions, nice dependencies,
+    | Gradations just, has they pervading soul
+    | Look'd thro'? Or can a part contain the whole?
+    |   Is the great chain, that draws all to agree, 
+    | And drawn supports, upheld by God, or thee?
+    
+.. _spring-and-fall:
+
+Spring and Fall, 1918 
+---------------------
+
+    | Margaret, are you grieving
+    | Over Goldengrove unleaving?
+    | Leaves like the things of man, you
+    | With your fresh thoughts care for, can you?
+    | Ah! As the the heart grows older
+    | It will come to such sights colder
+    | By and by, nor spare a sigh
+    | Though worlds of wanwood leafmeal lie;
+    | And yet you will weep and know why.
+    | Now no matter, child, the name:
+    | Sorrow's springs are the same.
+    | Nor mouth had, no nor mind, expressed
+    | What heart heard of, ghost guessed:
+    | It is the blight man was born for,
+    | It is Margaret you mourn for. 
+
+.. _all-all-and-all:
+
+All All and All, 1934
+---------------------
+
+    | I 
+    |
+    | All all and all the dry worlds lever,
+    | Stage of the ice, the solid ocean, 
+    | All from the oil, the pound of lava. 
+    | City of spring, the governed flower, 
+    | Turns in the earth that turns the ashen
+    | Towns around on a wheel of fire. 
+    |
+    | How now my flesh, my naked fellow, 
+    | Dug of the sea, the glanded morrow, 
+    | Worm in the scalp, the staked and fallow.
+    | All all and all, the corpse's lover,
+    | Skinny as sin, the foaming marrow, 
+    | All of the flesh, the dry worlds lever. 
+    |
+    | II 
+    |
+    | Fear not the waking world, my mortal, 
+    | Fear not the flat, synthetic blood,
+    | Nor the heart in the ribbing metal. 
+    | Fear not the tread, the seeded milling, 
+    | The trigger and scythe, the bridal blade, 
+    | Nor the flint in the lover's mauling.
+    |
+    | Man of my flesh, the jawbone riven, 
+    | Know now the flesh's lock and vice,
+    | And the cage for the scythe-eyed raver. 
+    | Know, O my bone, the jointed lever, 
+    | Fear not the screws that turn the voice 
+    | And the face to the driven lover. 
+    |
+    | III
+    | 
+    | All all and all the dry worlds couple,
+    | Ghost with her ghost, contagious man
+    | With the womb of his shapeless people. 
+    | All that shapes from the caul and suckle,
+    | Stroke of mechanical flesh on mine, 
+    | Square in these worlds the mortal circle. 
+    | 
+    | Flower, flower, the people's fusion,
+    | O light in zenith, the coupled bud, 
+    | And the flame in the flesh's vision.
+    | Out of the sea, the drive of oil,
+    | Socket and grave, the brassy blood, 
+    | Flower, flower, all all and all.
+
 .. _little-gidding-v:
 
 Little Gidding V, 1942 

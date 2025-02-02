@@ -177,6 +177,18 @@ class Conversation:
         return self.convo[persona]
     
 
+    def revert(self, persona) -> dict:
+        """
+        Remove the last message in a conversation.
+
+        :param persona: Persona with which the prompter is conversing.
+        :type persona: `str`
+        :returns: The last message in the conversation.
+        :rtype: `dict`
+        """
+        return self.convo[persona][self._prop_hist].pop()
+    
+    
     def update(self, persona: str, name: str, message: str, 
                memory: str | None = None, persist: bool = True) -> dict:
         """

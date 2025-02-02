@@ -282,14 +282,19 @@ class App:
         if arguments.render:
             return parsed_prompt
 
-        response                = self.model.respond(
-            prompt              = parsed_prompt, 
-            generation_config   = response_config,
-            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
-        )
+        try:
+            response                = self.model.respond(
+                prompt              = parsed_prompt, 
+                generation_config   = response_config,
+                model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+                safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+                tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+                system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            )
+        except exceptions.GeminiResponseFailure:
+            logger.error("Model response error, reverting conversation thread to prior state...")
+            self.conversations.revert(persona)
+            raise
 
         self.conversations.update(
             persona             = persona, 
@@ -323,7 +328,7 @@ class App:
             persona             = persona, 
             name                = prompter, 
             message             = arguments.prompt,
-            persist             = not arguments.render
+            persist             = False
         )
 
         parsed_prompt           = self.templates.render(
@@ -332,20 +337,26 @@ class App:
         if arguments.render:
             return parsed_prompt
         
-        response                = self.model.respond(
-            prompt              = parsed_prompt,
-            generation_config   = response_config,
-            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
-        )
+        try:
+            response                = self.model.respond(
+                prompt              = parsed_prompt,
+                generation_config   = response_config,
+                model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+                safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+                tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+                system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            )
+        except exceptions.GeminiResponseFailure:
+            logger.error("Model response error, reverting conversation thread to prior state...")
+            self.conversations.revert(persona)
+            raise
 
         self.conversations.update(
             persona             = persona, 
             name                = persona, 
             message             = response.get("response"),
             memory              = response.get("memory"),
+            persist             = True
         )
 
         variables               = {
@@ -373,15 +384,17 @@ class App:
         if arguments.render:
             return parsed_prompt
         
-
-        response                = self.model.respond(
-            prompt              = parsed_prompt,
-            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
-            generation_config   = self.personas.get(properties.PersonaProps.GENERATION_CONFIG.value, persona),
-            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
-        )
+        try:
+            response                = self.model.respond(
+                prompt              = parsed_prompt,
+                model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+                generation_config   = self.personas.get(properties.PersonaProps.GENERATION_CONFIG.value, persona),
+                safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+                tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+                system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            )
+        except Exception:
+            raise
 
         variables               = {
             **variables,
@@ -416,14 +429,17 @@ class App:
         if arguments.render:
             return review_prompt
         
-        response                = self.model.respond(
-            prompt              = review_prompt,
-            generation_config   = response_config,
-            model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
-            safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
-            tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
-            system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
-        )
+        try:
+            response                = self.model.respond(
+                prompt              = review_prompt,
+                generation_config   = response_config,
+                model_name          = self.cache.get(properties.CacheProps.CURRENT_MODEL.value),
+                safety_settings     = self.personas.get(properties.PersonaProps.SAFETY_SETTINGS.value, persona),
+                tools               = self.personas.get(properties.PersonaProps.TOOLS.value, persona),
+                system_instruction  = self.personas.get(properties.PersonaProps.SYSTEM_INSTRUCTION.value, persona)
+            )
+        except Exception:
+            raise 
 
         vcs_res                 = {  }
 

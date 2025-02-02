@@ -199,7 +199,7 @@ Take the inverse of both sides of step 22 and apply Theorem 1.2.5 repeatedly,
 
 TODO: need some way to relate the pivots of sigma-reduction to original pivots!
 
-.. todo::
+.. admonition:: TODO
 
     **Theorem: The Perfect Pivot Postulate**
 

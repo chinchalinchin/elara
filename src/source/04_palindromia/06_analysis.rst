@@ -1331,7 +1331,7 @@ From this, it can be seen the complement of **E** in a :math:`\mathbb{N} \times 
 
 A more technically feasible approach would be to define the sample space as the Corpus and then define basis events on this sample space as Character level events. This leads to the following definition,
 
-.. todo::
+.. admonition:: TODO
   
   **Definition 5.2.1: Sample Space**
 

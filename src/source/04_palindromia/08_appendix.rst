@@ -370,7 +370,7 @@ In some cases, if the Language **L** has strong constraints on Word formation an
 
 These insights lead to a formal definition of a *σ*-induction.
 
-.. todo::
+.. admonition:: TODO
         
     **Definition A.4.1: σ-induction**
 
@@ -691,7 +691,7 @@ A Reflective Structure, denoted **RS**, is the set of Strings *s* which satisfy 
 
     s ∈ RS ↔ [∃ n ∈ ℕ, ∃ p ∈ Χ:sub:`L`(n): (s = Π:sub:`i=1`:sup:`n` p(i)) ∧ (ς(S) = inv(ς(s)))]
 
-.. todo::
+.. admonition:: TODO
 
     **Theorem A.6.1** R ⊆ RS
 

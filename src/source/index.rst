@@ -6,7 +6,6 @@ elara protocol
    :caption: Contents:
    :hidden:
 
-   00_esoterica/index
    01_organon/index
    02_facticity/index
    03_universalis/index

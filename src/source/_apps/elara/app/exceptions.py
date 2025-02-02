@@ -62,6 +62,11 @@ class GeminiAPIKeyError(Exception):
     pass
 
 
+class GeminiResponseFailure(Exception):
+    """
+    Raised when the Gemini Model fails to generate a response.
+    """
+
 class FactoryError(Exception):
     """
     Raised when a Factory cannot construct an object.

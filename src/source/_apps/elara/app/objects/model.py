@@ -283,12 +283,13 @@ class Model:
                     system_instruction  = system_instruction,
                     model_name          = model_name
                 )
+            
             logger.error(f"BadRequest Error: {e}\n\n{traceback.format_exc()}")
-            raise
+            raise excepts.GeminiResponseFailure(str(e))
 
         except Exception as e:
             logger.error(f"{e}\n\n{traceback.format_exc()}")
-            raise
+            raise excepts.GeminiResponseFailure(str(e))
 
         if "response_schema" in generation_config.keys():
             try:
@@ -296,6 +297,6 @@ class Model:
             
             except json.decoder.JSONDecodeError as e:
                 logger.error(f'Error parsing response:\n\n{res}\n\n{e}')
-                return None
+                raise excepts.GeminiResponseFailure
             
         return res.text

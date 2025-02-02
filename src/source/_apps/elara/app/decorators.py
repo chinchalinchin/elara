@@ -26,7 +26,7 @@ def backoff(service: str ="github", max_retries: int = 3) -> typing.Any:
   :type max_retries: `int`
     """
     def caller(func):
-        def wrapper(*args, **kwargs):  # Add *args and **kwargs here
+        def wrapper(*args, **kwargs):
             for attempt in range(max_retries):
                 try:
                     return func(*args, **kwargs)

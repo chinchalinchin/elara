@@ -1,13 +1,13 @@
 terraform {
     backend "s3" {
-        bucket                  = "cumberland-cloud-terraform-state"
-        key                     = "web/elara/terraform.tfstate"
-        region                  = "us-east-1"
+        bucket                          = "cumberland-cloud-terraform-state"
+        key                             = "web/elara/terraform.tfstate"
+        region                          = "us-east-1"
     }
 }
 
 provider "aws" {
-    region                      = "us-east-1"
+    region                              = "us-east-1"
 }
 
 locals {
@@ -52,27 +52,22 @@ module "build" {
     source                              = "github.com/cumberland-terraform/orchestrate-build.git"
 
     platform                            = local.platform
-
     kms                                 = {
         aws_managed                     = true
     }
-
     connection                          = {
-        provider_type                   = "GITHUB"
+        provider_type                   = "GitHub"
     }
-    
-    build                               = {
-        suffix                          = "elara"
-    }
-
     pipeline                            = {
         source_stage                    = {
             action                      = {
-                FullRepositoryId        = "https://github.com/chinchalinchin/elara"
-                BranchName              = "pypi"
+                configuration           = {
+                    FullRepositoryId    = "https://github.com/chinchalinchin/elara"
+                    BranchName          = "pypi"
+                }
             }
         }
     }
-
     secrets                             = [ "cumberland-cloud/pypi" ]
+    suffix                              = "elara"
 }
