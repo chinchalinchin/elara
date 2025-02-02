@@ -20,10 +20,9 @@ For your awareness, this section describes the application interface which is us
 {%- if context.interface == 'command_line' %}
 {% include '_context/_interface/cli.rst' %}
 {%- endif %}
-
-{%- endif -%}
-
+{%- endif %}
 {%- if context.get('specifications') %}
+
 .. _specifications:
 
 =============
@@ -32,13 +31,12 @@ Specification
 
 This document contains within it embedded documents. This section details the specifications for interpretting those embedded documents.
 
-{% if context.specifications.get('latex') %}
-{% include '_context/_specifications/latex.rst' %}
+{% if context.specifications.get('latex') -%}
+{% include '_blocks/_context/_specifications/latex.rst' %}
+{%- endif -%}
 {%- endif -%}
 
-{%- endif %}
-
-{% if context.get('injections') -%}
+{% if context.get('injections') %}
 .. _injections:
 
 ==========

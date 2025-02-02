@@ -9,7 +9,7 @@ The following document has been designed to provide you a detailed contextual su
 
     You are not required to format your response in RST. All RST formatting happens clientside. The RST formatting is purely to markup the prompt for your clarity and understanding.
 
-{%- if blocks.preamble.definitions.values() | select() | list | length > 0 -%}
+{% if blocks.preamble.definitions.values() | select() | list | length > 0 -%}
 .. _definitions:
 
 ===========
@@ -18,12 +18,13 @@ Definitions
 
 This section contains definitions that will be referenced through the document. 
 
-{% if blocks.preamble.definitions.interactions %}
+{% if blocks.preamble.definitions.interaction -%}
 .. _interaction:
 
 **Interaction**
+    
     When this term is used, it is meant to denote the real-world exchange that is occuring between you and the entity responsible for posting this document to your API. 
-{% endif %}
+{%- endif %}
 {%- endif %}
 {%- if blocks.preamble.identities %}
 .. _identities:

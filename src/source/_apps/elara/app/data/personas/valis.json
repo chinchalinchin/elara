@@ -5,10 +5,14 @@
     ],
     "tuning": [],
     "context": {
+        "interface": null,
         "injections": {
             "quotes": [],
             "poems": [],
             "proofs": []
+        },
+        "specifications": {
+            "latex": false
         }
     },
     "plugins": {

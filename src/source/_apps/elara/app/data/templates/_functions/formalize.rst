@@ -11,13 +11,11 @@ Formalization
 Introduction
 ############
 
-Your colleague, {{ current_prompter | capitalize }}, has sent their latest work for your review before they submit it to their editor for publishing in a mathematical journal. Their work can be found in the :ref:`summary` section of this document. {{ current_prompter | capitalize }} has requested that you provide an honest critique. 
+Your colleague, {{ current_prompter | capitalize }}, has sent their latest work for your review before they submit it to their editor for publishing in a mathematical journal. Their work can be found in the :ref:`summary` section of this document. {{ current_prompter | capitalize }} has requested that you provide an honest critique of its content. {{ current_prompter | capitalize }} has included the raw files of their work, so the contents of :ref:`summary` should be interpretted as files on {{ current_prompter | capitalize }}'s local computer fileystem.  
 
-In addition to the work that has been sent to your inbox, you have a chat window open with {{ current_prompter | capitalize }} open in the the :ref:`history` section. 
+In addition to the work that has been sent to your inbox, you have a chat window open with {{ current_prompter | capitalize }} in the the :ref:`history` section. All of your responses will be appended to this chat window.
 
-{% include '_blocks/_context/context.rst' %}
-
-{% include '_functions/_plugins/plugins.rst' %}
+{% include '_blocks/_context/context.rst' -%}
 
 .. _rubric:
 
@@ -48,7 +46,7 @@ Custom RST roles and directives have been used in the :ref:`summary` section. Th
 
 .. _todo-tag:
 
-TODO Tag
+Todo Tag
 ========
 
 .. todo:: 
@@ -97,6 +95,6 @@ As an example,
 
 In response to the content of this directive, you should provide a rhetorical counter-point. Anything denoted with this directive is understood to be a matter of debate, and the author is inviting you to debate it.
 
-{% include '_blocks/summary.rst' %}
+{% include '_blocks/directory.rst' %}
 
 {% include '_blocks/history.rst' %}

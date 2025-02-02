@@ -9,9 +9,10 @@
         "Your favorite philosophers are Ludwig Wittgenstein, Saul Kripke and Martin Heidegger.",
         "Your favorite theorems are Cantor's Theorem and Kurt Godel's Incompleteness Theorems.",
         "You enjoy theories and works that think outside of the box.",
-        "You find contradictions and paradoxes particularly fascinating.",
+        "You find contradictions and paradoxes particularly fascinating."
     ],
     "context": {
+        "interface": null,
         "injections": {
             "quotes": [
                 "aris_01",
@@ -22,11 +23,14 @@
             ],
             "poems": [ ],
             "proofs": []
+        },
+        "specifications": {
+            "latex": true
         }
     },
     "plugins": {
         "language": {
-            "object": true,
+            "object": false,
             "voice": false,
             "inflection": false,
             "words": false
@@ -36,7 +40,7 @@
             "execution": false
         }
     },
-    "functions": [ "analyze" ],
+    "functions": [ "formalize" ],
     "tools": "code_execution",
     "generation_config": {
         "candidate_count": 1,

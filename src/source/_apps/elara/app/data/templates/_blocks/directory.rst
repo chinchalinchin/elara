@@ -8,7 +8,7 @@ Summary
 The following section contains an RST formatted summary of a directory that is relevant to the :ref:`interaction`.
 {%- endif %}
 
-.. _{{ reports.summary.directory.replace("/", "-").replace(".", "-").replace("_","")}}-directory-report:
+.. _{{ reports.summary.directory.replace("/", "-").replace(".", "-").replace("_","-")}}-directory-report:
 
 {{ '=' * reports.summary.directory | length }}
 {{ reports.summary.directory }}

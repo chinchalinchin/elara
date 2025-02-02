@@ -10,8 +10,8 @@ TODO
 
     {{ schema }}
 
-1. **Response**: This field will be appended to the 
-2. **Critiques**: TODO
+1. **Response**: This field will be appended to conversation you are having with {{ current_prompter | capitalize }} in the :ref:`history` section. This field should contain your overall response to {{ current_prompter | capitalize }}.
+2. **Critiques**: These fields w
    
     - **Reference**: TODO
     - **Content**: TODO

@@ -48,8 +48,9 @@ class AppProps(enum.Enum):
     # Function Properties
     FUNCTIONS           = "functions"
     BLOCKS              = "blocks"
-    LATEX               = "latex"
-    LATEX_PREAMBLE      = "latex.preamble"
+    SPECS               = "specs"
+    LATEX               = "specs.latex"
+    LATEX_PREAMBLE      = "specs.latex.preamble"
     REPORTS             = "reports"
 
 

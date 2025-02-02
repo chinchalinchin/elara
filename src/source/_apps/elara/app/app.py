@@ -75,7 +75,7 @@ class App:
     _prop_request_schema        = properties.AppProps.REQUEST_SCHEMA.value
     _prop_request_mime          = properties.AppProps.REQUEST_MIME.value
     ## Special Function Properties
-    _prop_latex                 = properties.AppProps.LATEX.value
+    _prop_specs                 = properties.AppProps.SPECS.value
     _prop_block                 = properties.AppProps.BLOCKS.value
     _prop_reports               = properties.AppProps.REPORTS.value
 
@@ -201,7 +201,7 @@ class App:
             prompter_key        : self.cache.get(prompter_key),
             **self._blocks(func),
             **self.personas.vars(persona),
-            **self.config.get(self._prop_latex),
+            **self.config.get(self._prop_specs),
             **self.conversations.vars(persona),
             **{ "function": func, "schema": json.dumps(schema)}
         }
@@ -240,16 +240,20 @@ class App:
         prompter_key            = properties.CacheProps.CURRENT_PROMPTER.value
         cached_persona          = self.cache.get(persona_key)
 
-        if cached_persona is None:
-            if arguments.current_persona is None:
-                arguments.current_persona \
-                                = self.personas.function(func)
-                
+        if arguments.current_persona is None:
+            arguments.current_persona \
+                            = self.personas.function(func)
+            
+        if cached_persona is None:                
             self.cache.update(**{ persona_key: arguments.current_persona })
             self.personas.update(arguments.current_persona)
             self.cache.save()
 
-        return self.cache.get(persona_key), self.cache.get(prompter_key)
+        # NOTE: the converse function should *always* use the cached persona
+        if func == properties.Functions.CONVERSE.value:
+            return self.cache.get(persona_key), self.cache.get(prompter_key)
+
+        return arguments.current_persona, self.cache.get(prompter_key)
 
 
     def converse(self, arguments: schemas.Arguments) -> str:
@@ -317,12 +321,17 @@ class App:
         :rtype: `schemas.Output`
         """
         persona, prompter       = self._validate(arguments, properties.Functions.FORMALIZE.value)
-        response_config         = self._schema(
-            schema              = self._prop_formalize_schema, 
-            mime                = self._prop_formalize_mime,
-            persona             = persona
-        )
-        schema                  = response_config["response_schema"]
+        response_config         = self.personas.get(properties.PersonaProps.GENERATION_CONFIG.value, persona)
+        
+        # response_config         = self._schema(
+        #     schema              = self._prop_formalize_schema, 
+        #     mime                = self._prop_formalize_mime,
+        #     persona             = persona
+        # )
+        
+        # TODO: need to think about what the formalize schema should look like
+        #       how to inject critiques, todos and proofs?
+        # schema                  = response_config["response_schema"]
 
         self.conversations.update(
             persona             = persona, 
@@ -332,7 +341,7 @@ class App:
         )
 
         parsed_prompt           = self.templates.render(
-                                    self._vars(properties.Functions.FORMALIZE.value, schema))
+                                    self._vars(properties.Functions.FORMALIZE.value))
 
         if arguments.render:
             return parsed_prompt
@@ -354,8 +363,9 @@ class App:
         self.conversations.update(
             persona             = persona, 
             name                = persona, 
-            message             = response.get("response"),
-            memory              = response.get("memory"),
+            message             = response,
+            # message             = response.get("response"),
+            memory              = None,
             persist             = True
         )
 
@@ -577,28 +587,21 @@ class App:
         if operation_name not in self._dispatch.keys():
             logger(f"Invalid operation: {operation_name}")
             return False
-        
-        # @DATA
-        #   Only the ``converse`` function supports interactive mode so far. 
-        #   The other functions would benefit from interactive modes, but 
-        #   in order to implement that interactivity, the templates for those
-        #   functions in ``templates/_functions/*`` will need redesigned to
-        #   support conversational threads. Some of the functions seem more 
-        #   like one-off functions, like ``review`` and ``request``. We need
-        #   to brainstorm on which functions require interactive and which ones
-        #   are "static".
-        #
-        #   AI is an interesting problem! Don't you agree, Milton?!
-        if operation_name == properties.Functions.CONVERSE.value: 
-            arguments.view              = True
-            return self.terminal.interact(
-                callable                = lambda args: self.converse(args),
-                printer                 = printer,
-                args                    = arguments
-            )
-            
-        return False
-    
+
+        tty_functions                   = [ 
+            properties.Functions.CONVERSE.value,
+            properties.Functions.FORMALIZE.value
+        ]
+
+        if operation_name not in tty_functions:
+            return False   
+           
+        return self.terminal.interact(
+            callable                    = lambda args: self._dispatch[operation_name](args),
+            printer                     = printer,
+            args                        = arguments
+        )
+
     
     def validate(self, arguments: schemas.Arguments = None) -> bool:
         """

@@ -10,6 +10,7 @@
     ],
     "tuning": [],
     "context": {
+        "interface": null,
         "injections": {
             "quotes": [
                 "badi_01",
@@ -21,6 +22,9 @@
                 "cumm_01",
                 "thom_01"
             ]
+        },
+        "specifications": {
+            "latex": false
         }
     },
     "plugins": {

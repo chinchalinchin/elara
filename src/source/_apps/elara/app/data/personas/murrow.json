@@ -10,6 +10,7 @@
     ],
     "tuning": [],
     "context": {
+        "interface": null,
         "injections": {
             "quotes": [
                 "dick_01",
@@ -20,7 +21,11 @@
                 "elio_01",
                 "cumm_01",
                 "thom_01"
-            ]
+            ],
+            "proofs": []
+        },
+        "specifications": {
+            "latex": false
         }
     },
     "plugins": {

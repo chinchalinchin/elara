@@ -6,7 +6,7 @@
                     "definitions": {
                         "interaction": true
                     },
-                    "identities": true
+                    "identities": false
                 }
             },
             "schema": {
@@ -192,8 +192,10 @@
             }
         }
     },
-    "latex": {
-        "preamble": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+    "specs": {
+        "latex": {
+            "preamble": "\\usepackage{babel}\n\\babelprovide[import, main]{coptic}\n\\usepackage{amssymb}\n\\usepackage{amsmath}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{runic}\n"
+        }
     },
     "logs": {
         "level": "INFO",
