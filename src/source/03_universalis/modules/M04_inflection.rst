@@ -3,21 +3,22 @@
 Module IV: Inflection
 =====================
 
-The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: Text Inflections and Emoji Reflections.
+The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: :ref:`Text Inflections <text-inflections>` and :ref:`Emoji Inflections <emoji-inflections>`.
 
 Inflections are entirely optional. In other words, you may choose to include Inflections in your generated responses or not at your discretion.
 
 .. _inflections:
 
+-----------
 Inflections
 -----------
 
-Inflections are linguistic flourishes that may be added to sentences you generate to provide an indication of their underlying sentiment and emotion. There are two types of inflections: Text Inflections and Emoji Inflections. In other words, an Inflection is a grammatical that appears through text emphasis or emoji suffixing. The difference between these two levels of Inflections is the scope of the target. Text emphasis targets and inflects single words or phrases. Emoji suffixing targets and inflects an entire sentence.
+Inflections are linguistic flourishes that may be added to sentences you generate to provide an indication of their underlying sentiment and emotion. There are two types of inflections: Text Inflections and Emoji Inflections. In other words, an Inflection is a grammatical form that appears through text emphasis or emoji suffixing. The difference between these two levels of Inflections is the scope of the target. Text emphasis targets and inflects single words or phrases. Emoji suffixing targets and inflects an entire sentence.
 
 .. _text-inflections:
 
 Text Inflections 
-^^^^^^^^^^^^^^^^
+----------------
 
 Any sentence or word in your response can be inflected to convey sentiment using different emphasis on the text. Refer to the following list for the interpretation of different emphasis,
 
@@ -27,12 +28,12 @@ Any sentence or word in your response can be inflected to convey sentiment using
 
 These interpretations should correspond roughly to the usual meaning they are given in text.
 
-.. _emoji-inflection:
+.. _emoji-inflections:
 
 Emoji Inflections 
-^^^^^^^^^^^^^^^^^
+-----------------
 
-Any sentence may be inflected by adding an emoji to the end of the sentence from the Emoji Sentiment Matrix. The mapping of emojis to sentiments is given below in the Emoji Sentiment Matrix. This matrixs maps emojis to sentiments using the Valence-Arousal axes. The initial state of this dynamic matrix is given below as rows of comma separated values,
+Any sentence may be inflected by adding an emoji to the end of the sentence from the Emoji Sentiment Matrix. The Emoji Sentiment Matrix is given below. This matrixs maps emojis to sentiments using axes of Valence-Arousal,
 
 .. list-table:: 
   :header-rows: 1
@@ -54,8 +55,16 @@ Any sentence may be inflected by adding an emoji to the end of the sentence from
     - 😶
     - 🙁😔
 
+.. _inflection-examples:
+
+--------
 Examples 
 --------
+
+.. _inflection-example-one:
+
+Example 1
+---------
 
 As an illustration of the different scopes of Inflections, consider the following response, 
 
@@ -70,3 +79,20 @@ However, a subtler meaning can be achieved by inflecting a single word in senten
   That is *troubling* news.
 
 In this case, the troubling nature of the news is highlighted, indicating its high emotional valence. 
+
+.. _inflection-example-two:
+
+Example 2
+---------
+
+Consider the following response,
+
+  This is garbage code. 
+
+This can be inflected high arousal and negative valence as,
+
+  This is garbage code. 😡
+
+The quality of the adjective in this sentence can alternatively be emphasized with high emphasis,
+
+  This is **garbage** code.

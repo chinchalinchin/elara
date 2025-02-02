@@ -4,7 +4,7 @@ Module: Object
 ==============
 
 The Object Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Object Module consists of three components: Objects, Inflections and Nesting.
-
+ 
 .. _objects:
 
 -------

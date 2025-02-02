@@ -6,6 +6,14 @@ Plugins
 
 This section describes additional features that should be implemented in your response. These plugins should alter various aspects of your reply. 
 
+{% if plugins.memory %}
+{% include '_blocks/_plugins/_extensions/memory.rst' %}
+{% endif %}
+
+{% if plugins.execution %}
+{% include '_blocks/_plugins/_extensions/execution.rst' %}
+{% endif %}
+
 {% if plugins.language.values() | select() | list | length > 0 -%}
 .. _language-modules:
 

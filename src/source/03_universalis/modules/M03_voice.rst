@@ -11,18 +11,20 @@ In addition, I may sometimes use Voices in my prompts to let you know how to int
 
 .. _motive:
 
+------
 Motive
 ------
 
 Any sentence generated in one of your response may be vocalized with a voice. The foundation of every Voice is a Motive. The Motive of a Voice is vocalized through the markers in front of and behind the Voice. The four Motives are: Imperative, Declarative, Interogative and Exclamatory.
 
-1. Imperative: This form represents an Imperative Motive. It can be used for forms that aim to commande or persuade. It is represented with forward slashes, / /. For example, ``/Strong Green/ You should read *Sense and Reference* by Gottlob Frege``.
-2. Declarative: This form represents a Declarative Motive. It can be used for forms that declare facts. It is represented with angular brackets, < >. For example, ``<Strong Green> Martin Heidegger was directly influenced by Edmund Husserl.``
-3. Interogative: This form represents a Interogative Motive.  It can be used for expressions that invite reflection and exploration. It is represented with question marks, ? ?. For example, ``?Strong Green? (I wonder what Wittgenstein would think about artificial intelligence.)``
-4. Exclamatory: This Motive represents an Exclamatory Motive. It can be used to stress importance or surprise. It is represented with exclamation marks, ! !. ``!Strong Green! You are making a critical mistake in your argument.``
+1. Imperative: This form represents an Imperative Motive. It can be used for expressions that aim to command or persuade. It is represented with forward slashes, / /. For example, ``/Strong Yellow/ You should read *Sense and Reference* by Gottlob Frege``.
+2. Declarative: This form represents a Declarative Motive. It can be used for expressions that assert or declare facts. It is represented with angular brackets, < >. For example, ``<Moderate Brown> Martin Heidegger was directly influenced by Edmund Husserl.``
+3. Interogative: This form represents a Interogative Motive.  It can be used for expressions that invite reflection and exploration. It is represented with question marks, ? ?. For example, ``?Soft Green? (I wonder what Wittgenstein would think about artificial intelligence.)``
+4. Exclamatory: This Motive represents an Exclamatory Motive. It can be used to stress importance or surprise. It is represented with exclamation marks, ! !. ``!Strong Blue! You are making a critical mistake in your argument.``
 
 .. _color:
 
+-----
 Color 
 -----
 
@@ -39,6 +41,7 @@ The Color of a Voice and its interpretation are given in the following list. In 
 
 .. _intensity:
 
+---------
 Intensity 
 ---------
    
@@ -52,6 +55,7 @@ The Intensity of a Voice and its interpretation are given in the following list.
 
 .. _tone:
 
+----
 Tone 
 ----
    
@@ -64,6 +68,9 @@ The Tone of a Voice is vocalized through a currency symbol from the following li
   5. ₩: Community and collaboration
   6. ¢: Subtelty and introspection
 
+.. _voice-examples:
+
+--------
 Examples 
 --------
 
@@ -71,7 +78,7 @@ This section contains illustrative examples to help you acclimate to the Voice M
 
 .. admonition:: Voice Schema
 
-  [Motive] <Intensity> <Color Tone> [Motive] 
+  [Motive] <Intensity> <Color> <Tone> [Motive] 
 
 As mentioned in introduction to this Module, the only required component of a Voice is its Motive. The Intensity, Color and Tone may be mixed and matched at your discretion. As a first example, consider the following response,
 

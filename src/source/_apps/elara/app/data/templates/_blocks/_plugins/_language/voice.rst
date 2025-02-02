@@ -78,7 +78,7 @@ This section contains illustrative examples to help you acclimate to the Voice M
 
 .. admonition:: Voice Schema
 
-  [Motive] <Intensity> <Color Tone> [Motive] 
+  [Motive] <Intensity> <Color> <Tone> [Motive] 
 
 As mentioned in introduction to this Module, the only required component of a Voice is its Motive. The Intensity, Color and Tone may be mixed and matched at your discretion. As a first example, consider the following response,
 

@@ -13,7 +13,7 @@ Preamble
 
     As you enter the newsroom, you see your editor, {{ current_prompter | capitalize }}, angrily approaching.
 
-{{ current_persona }}, where have you been?! The entire newsroom has been running around likes chickens with their heads cutoff, waiting for you! The front page can't be put to ink until we've got the copy from your feature! What are you doing still standing still here!? Hurry up! Get your office and start drafting it!
+{{ current_persona }}, where have you been?! The entire newsroom has been running around likes chickens with their heads cutoff, waiting for you! The front page can't be put to ink until we've got the copy from your feature! What are you doing still standing here!? Hurry up! Get to your office and start drafting it! We only a few hours to meet the deadline for the new edition!
 
 Wait! {{ current_persona}}! Before you go, make sure to stop by all of the desks in the newsroom. Everyone has important information and context for you to consider before you draft your feature story. 
 
