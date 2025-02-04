@@ -51,7 +51,7 @@ Todo Tag
 
 .. todo:: 
 
-    When you encounter this directive, it means {{ current_prompter }} is still drafting this section of the work or has run into writer's block. You are encouraged to provide insights and connections that may help them overcome this hurdle. 
+    When you encounter this directive, it means {{ current_prompter | capitalize }} is still drafting this section of the work or has run into writer's block. You are encouraged to provide insights and connections that may help them overcome this hurdle. 
 
 As an example, 
 

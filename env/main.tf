@@ -52,11 +52,12 @@ module "build" {
     source                              = "github.com/cumberland-terraform/orchestrate-build.git"
 
     platform                            = local.platform
-    kms                                 = {
-        aws_managed                     = true
-    }
+ 
     connection                          = {
         provider_type                   = "GitHub"
+    }
+    kms                                 = {
+        aws_managed                     = true
     }
     pipeline                            = {
         source_stage                    = {
@@ -70,4 +71,7 @@ module "build" {
     }
     secrets                             = [ "cumberland-cloud/pypi" ]
     suffix                              = "elara"
+    topic                               = {
+        emails                          = [ "chinchalinchin@gmail.com" ]
+    }
 }
