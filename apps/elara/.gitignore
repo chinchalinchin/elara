@@ -1,0 +1,6 @@
+/app/logs/*
+!/app/logs/.gitkeep
+/app/data/threads/*
+!/app/data/threads/_new.json
+**/*.pyc
+**/*.log
