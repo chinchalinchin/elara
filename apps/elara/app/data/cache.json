@@ -190,19 +190,18 @@
                 "output_token_limit": 8192
             }
         ],
-        "tuned_models": {
-            "tuned_models": [
-                {
-                    "path": "tunedModels/elara-a38gqsr3zzw8"
-                },
-                {
-                    "path": "tunedModels/axiom-rx8g5v830mqn"
-                }
-            ]
-        }
+        "tuned_models": [
+            {   
+                "path": "tunedModels/elara-a38gqsr3zzw8"
+            },
+            {
+                "path": "tunedModels/axiom-rx8g5v830mqn"
+            }
+                 
+        ]
     },
     "tuning_model": "models/gemini-1.5-flash-001-tuning",
     "current_model": "models/gemini-exp-1206",
-    "current_persona": "gemini",
+    "current_persona": "elara",
     "current_prompter": "grant"
 }

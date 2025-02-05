@@ -251,6 +251,7 @@
                         "desktop.ini"
                     ],
                     "dir": [
+                        ".pytest_cache",
                         "__pycache__",
                         "locales",
                         ".terraform",

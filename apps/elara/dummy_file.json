@@ -1,0 +1,68 @@
+{
+    "models": {
+        "base_models": [
+            {
+                "path": "models/gemini-2.0-flash-exp",
+                "version": "2.0",
+                "input_token_limit": 1048576,
+                "output_token_limit": 8192
+            },
+            {
+                "path": "models/gemini-exp-1206",
+                "version": "exp_1206",
+                "input_token_limit": 2097152,
+                "output_token_limit": 8192
+            },
+            {
+                "path": "models/gemini-exp-1121",
+                "version": "exp-1206",
+                "input_token_limit": 2097152,
+                "output_token_limit": 8192
+            },
+            {
+                "path": "models/gemini-exp-1114",
+                "version": "exp-1206",
+                "input_token_limit": 2097152,
+                "output_token_limit": 8192
+            },
+            {
+                "path": "models/gemini-2.0-flash-thinking-exp-01-21",
+                "version": "2.0-exp-01-21",
+                "input_token_limit": 1048576,
+                "output_token_limit": 65536
+            },
+            {
+                "path": "models/gemini-2.0-flash-thinking-exp",
+                "version": "2.0-exp-01-21",
+                "input_token_limit": 1048576,
+                "output_token_limit": 65536
+            },
+            {
+                "path": "models/gemini-2.0-flash-thinking-exp-1219",
+                "version": "2.0",
+                "input_token_limit": 1048576,
+                "output_token_limit": 65536
+            }
+        ],
+        "tuning_models": [
+            {
+                "path": "models/gemini-1.5-flash-001-tuning",
+                "version": "001",
+                "input_token_limit": 16384,
+                "output_token_limit": 8192
+            }
+        ],
+        "tuned_models": [
+            {
+                "path": "tunedModels/elara-a38gqsr3zzw8"
+            },
+            {
+                "path": "tunedModels/axiom-rx8g5v830mqn"
+            }
+        ]
+    },
+    "tuning_model": "models/gemini-1.5-flash-001-tuning",
+    "current_model": "another_test_model",
+    "current_persona": "elara",
+    "current_prompter": "grant"
+}

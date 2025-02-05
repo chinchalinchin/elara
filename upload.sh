@@ -41,7 +41,7 @@ fi
 
 # Perform the build if the --build flag is set
 if $BUILD; then
-  cd "$SCRIPT_DIR/src"  # Change to the src directory
+  cd "$SCRIPT_DIR/docs"  # Change to the src directory
   if make clean && make html | grep -iE "ERROR|FAILED"; then
     echo "Build failed. Aborting deployment."
     exit 1

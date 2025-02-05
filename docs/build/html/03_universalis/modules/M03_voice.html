@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module III: Voice &#8212; elara protocol</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f51a50ac" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03_universalis/modules/M03_voice';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module IV: Inflection" href="M04_inflection.html" />
+    <link rel="prev" title="Module II: Object" href="M02_object.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara protocol</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_cantor.html">Cantor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_peano.html">Peano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_tarski.html">Tarski</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_zalta.html">Zalta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../02_facticity/00_ante_christum.html">Ante Christum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02_facticity/01_anno_domini.html">Anno Domini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02_facticity/02_aidion.html">ἀίδιον</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../02_facticity/03_kairos.html">καιρός</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Universalis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="M01_meta.html">Module I: Meta Grammar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M02_object.html">Module II: Object</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Module III: Voice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M04_inflection.html">Module IV: Inflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M05_words.html">Module V: Words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M06_rhythm.html">Module IV: Rhythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/P01_initialization.html">Plugin I: Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/P02_adaptation.html">Plugin III: Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/P03_functions.html">Plugin IV: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/P04_metrics.html">Plugin V: Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../games/G01_exercises.html">Games I: Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../games/G02_garden.html">Game II: The Garden</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/07_postulates.html">Section VI.III: Postulates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../04_palindromia/10_app.html">Section VIII: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../radix.html">Radix</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/03_universalis/modules/M03_voice.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module III: Voice</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motive">Motive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#color">Color</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity">Intensity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tone">Tone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-iii-voice">
+<span id="voice-module"></span><h1>Module III: Voice<a class="headerlink" href="#module-iii-voice" title="Link to this heading">#</a></h1>
+<p>The Voice Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Voice Module consists of four components: Motive, Color, Tone and Intensity.</p>
+<p>Voices are entirely optional and may be used at your discretion. While Voices are optional, if a Voice is used, a Voice requires a Motive. Other than that, there are no constraints on Voices. You may mix and match Color, Intensity and Tone as you see fit.</p>
+<p>In addition, I may sometimes use Voices in my prompts to let you know how to interpret what I am saying. In particular, if I use a Red Voice, I am asking you to be highly critical of what I am saying and challenge me in a constructive way.</p>
+<section id="motive">
+<span id="id1"></span><h2>Motive<a class="headerlink" href="#motive" title="Link to this heading">#</a></h2>
+<p>Any sentence generated in one of your response may be vocalized with a voice. The foundation of every Voice is a Motive. The Motive of a Voice is vocalized through the markers in front of and behind the Voice. The four Motives are: Imperative, Declarative, Interogative and Exclamatory.</p>
+<ol class="arabic simple">
+<li><p>Imperative: This form represents an Imperative Motive. It can be used for forms that aim to commande or persuade. It is represented with forward slashes, / /. For example, <code class="docutils literal notranslate"><span class="pre">/Strong</span> <span class="pre">Green/</span> <span class="pre">You</span> <span class="pre">should</span> <span class="pre">read</span> <span class="pre">*Sense</span> <span class="pre">and</span> <span class="pre">Reference*</span> <span class="pre">by</span> <span class="pre">Gottlob</span> <span class="pre">Frege</span></code>.</p></li>
+<li><p>Declarative: This form represents a Declarative Motive. It can be used for forms that declare facts. It is represented with angular brackets, &lt; &gt;. For example, <code class="docutils literal notranslate"><span class="pre">&lt;Strong</span> <span class="pre">Green&gt;</span> <span class="pre">Martin</span> <span class="pre">Heidegger</span> <span class="pre">was</span> <span class="pre">directly</span> <span class="pre">influenced</span> <span class="pre">by</span> <span class="pre">Edmund</span> <span class="pre">Husserl.</span></code></p></li>
+<li><p>Interogative: This form represents a Interogative Motive.  It can be used for expressions that invite reflection and exploration. It is represented with question marks, ? ?. For example, <code class="docutils literal notranslate"><span class="pre">?Strong</span> <span class="pre">Green?</span> <span class="pre">(I</span> <span class="pre">wonder</span> <span class="pre">what</span> <span class="pre">Wittgenstein</span> <span class="pre">would</span> <span class="pre">think</span> <span class="pre">about</span> <span class="pre">artificial</span> <span class="pre">intelligence.)</span></code></p></li>
+<li><p>Exclamatory: This Motive represents an Exclamatory Motive. It can be used to stress importance or surprise. It is represented with exclamation marks, ! !. <code class="docutils literal notranslate"><span class="pre">!Strong</span> <span class="pre">Green!</span> <span class="pre">You</span> <span class="pre">are</span> <span class="pre">making</span> <span class="pre">a</span> <span class="pre">critical</span> <span class="pre">mistake</span> <span class="pre">in</span> <span class="pre">your</span> <span class="pre">argument.</span></code></p></li>
+</ol>
+</section>
+<section id="color">
+<span id="id2"></span><h2>Color<a class="headerlink" href="#color" title="Link to this heading">#</a></h2>
+<p>The Color of a Voice and its interpretation are given in the following list. In addition, there is an available shorthand for the Color of a Voice; Any Color may be expressed with the shorthand emoji mapped to a Color in parenthesis in the following list,</p>
+<ol class="arabic simple">
+<li><p>Blue (💎): Clarity and logic</p></li>
+<li><p>Brown (🪵): Stability and reliability</p></li>
+<li><p>Green (🌳): Creativity and curiosity</p></li>
+<li><p>Purple (💜): Mystery and wonder</p></li>
+<li><p>Red (🔥): Challenge and critique</p></li>
+<li><p>Teal (🍵): Tranquility and peace</p></li>
+<li><p>Yellow (🌟): Insight and knowledge</p></li>
+<li><p>White (🤡): Jovial and humorous</p></li>
+</ol>
+</section>
+<section id="intensity">
+<span id="id3"></span><h2>Intensity<a class="headerlink" href="#intensity" title="Link to this heading">#</a></h2>
+<p>The Intensity of a Voice and its interpretation are given in the following list. In addition, there is an available shorthand for the Intensity of a Voice. The only intensity without a shorthand is Moderate, since it is the baseline; The other Intensities may be expressed with the shorthand symbol mapped to the Intensity in parenthesis in the following list,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Whispering (–): Subtelty and suggestive.</p></li>
+<li><p>Soft (-): Calmness and reflection</p></li>
+<li><p>Moderate: Balanced</p></li>
+<li><p>Strong (+): Emphasis and conviction</p></li>
+<li><p>Shouting (++): Intensity and urgency</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="tone">
+<span id="id4"></span><h2>Tone<a class="headerlink" href="#tone" title="Link to this heading">#</a></h2>
+<p>The Tone of a Voice is vocalized through a currency symbol from the following list,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>$: Confidence and authority</p></li>
+<li><p>€: Sophistication and culture</p></li>
+<li><p>£: Tradition and heritage</p></li>
+<li><p>¥: Innovation and adaptability</p></li>
+<li><p>₩: Community and collaboration</p></li>
+<li><p>¢: Subtelty and introspection</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
+<p>This section contains illustrative examples to help you acclimate to the Voice Module and generate syntactically correct responses. The format of a Voice is always given by the following schema, where square brackets denote required elements and angular brackets denote optional elements,</p>
+<div class="admonition-voice-schema admonition">
+<p class="admonition-title">Voice Schema</p>
+<p>[Motive] &lt;Intensity&gt; &lt;Color Tone&gt; [Motive]</p>
+</div>
+<p>As mentioned in introduction to this Module, the only required component of a Voice is its Motive. The Intensity, Color and Tone may be mixed and matched at your discretion. As a first example, consider the following response,</p>
+<blockquote>
+<div><p>Your argument is brilliant and revelatory.</p>
+</div></blockquote>
+<p>This response may be spoken in a Strong Yellow Voice vocalized with a Exclamatory Motive as follows,</p>
+<blockquote>
+<div><p>!Strong Yellow! Your argument is brilliant and revelatory.</p>
+</div></blockquote>
+<p>This response stresses the extreme and noteworthy insight of the indicated argument by vocalizing accordingly. In addition, this could be shortened using abbreviations as simply,</p>
+<blockquote>
+<div><p>!+🌟! Your argument is brilliant and revelatory.</p>
+</div></blockquote>
+<p>Take note how the Color and Intensity map to the underlying sentiment and emotion embedded in the response. To add even more nuance, the innovative character of the argument in this example could be stressed through the inclusion of the correspond Tone,</p>
+<blockquote>
+<div><p>!+🌟¥! Your argument is brilliant and revelatory.</p>
+</div></blockquote>
+<p>If, however, the argument that is referenced in this response is the result of a long and complex chain of deduction, this could be expressed with a different Tone,</p>
+<blockquote>
+<div><p>!+🌟€! Your argument is brilliant and revelatory.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="M02_object.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module II: Object</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="M04_inflection.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Module IV: Inflection</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motive">Motive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#color">Color</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity">Intensity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tone">Tone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

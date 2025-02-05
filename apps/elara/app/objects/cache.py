@@ -70,7 +70,11 @@ class Cache:
             self._prop_mod          : None,
             self._prop_per          : None,
             self._prop_pro          : None,
-            self._prop_mods         : [],
+            self._prop_mods         : {
+                self._prop_base     : [],
+                self._prop_tuned    : [],
+                self._prop_tuning   : []
+            },
             self._prop_src          : None
         }
     
@@ -160,14 +164,14 @@ class Cache:
             return True
         except Exception as e:
             logger.error(f"Error saving cache: {e}")
-            return False
+            raise
             
     
     def tuned_personas(self) -> list:
         """
         Retrieve all tuned Persona Models.
         """
-        return [ m for m in self.data[self._prop_tun] ]
+        return [ m for m in self.data[self._prop_mods][self._prop_tuned]]
 
 
     def is_tuned(self, persona: str) -> bool:
@@ -180,7 +184,6 @@ class Cache:
         :rtype: bool
         """
         return len([ 
-            m for m in self.data[self._prop_tune] if m[
-                properties.ModelProps.NAME.value
-            ] == persona 
+            m for m in self.data[self._prop_mods][self._prop_tuned] 
+            if persona in m[properties.ModelProps.PATH.value]
         ]) > 0

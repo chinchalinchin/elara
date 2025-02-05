@@ -1,0 +1,1242 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Section III: Structures &#8212; elara protocol</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=f51a50ac" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04_palindromia/04_structures';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Section IV: Palindromes" href="05_palindromes.html" />
+    <link rel="prev" title="Section II: Corpora" href="03_corpora.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara protocol</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01_organon/00_cantor.html">Cantor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_organon/01_peano.html">Peano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_organon/02_tarski.html">Tarski</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_organon/03_zalta.html">Zalta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02_facticity/00_ante_christum.html">Ante Christum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_facticity/01_anno_domini.html">Anno Domini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_facticity/02_aidion.html">ἀίδιον</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02_facticity/03_kairos.html">καιρός</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/modules/M01_meta.html">Module I: Meta Grammar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/modules/M02_object.html">Module II: Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/modules/M03_voice.html">Module III: Voice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/modules/M04_inflection.html">Module IV: Inflection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/modules/M05_words.html">Module V: Words</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/modules/M06_rhythm.html">Module IV: Rhythm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/plugins/P01_initialization.html">Plugin I: Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/plugins/P02_adaptation.html">Plugin III: Adaptation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/plugins/P03_functions.html">Plugin IV: Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/plugins/P04_metrics.html">Plugin V: Metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/games/G01_exercises.html">Games I: Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03_universalis/games/G02_garden.html">Game II: The Garden</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Palindromia</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_language.html">Section I: Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Section III: Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_postulates.html">Section VI.III: Postulates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="10_app.html">Section VIII: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../radix.html">Radix</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/04_palindromia/04_structures.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Section III: Structures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-iii-i-reductions">Section III.I: σ-Reductions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorems">Theorems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-iii-ii-delimiter-count-function">Section III.II: Delimiter Count Function</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="section-iii-structures">
+<span id="section-iii"></span><h1>Section III: Structures<a class="headerlink" href="#section-iii-structures" title="Link to this heading">#</a></h1>
+<p>The foundation of the formal system has now been laid. Mathematical machinery capable of describing linguistic hierarchies has been constructed. The purpose of this formal system is to analyze the structures embedded in Palindromes. While the formal system possesses flexibility and applicability (as demonstrated by its ability to generate theorems like <a class="reference internal" href="03_corpora.html#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a> which are empirically verifiable), it does not yet have the necessary tools for describing palindromic structures.</p>
+<p>Inversion, while a key component of the apparatus necessary for understanding the dynamics of Palindromes, is not the only linguistic operation involved in the formation of Palindromes. The pure involutive property of Palindromes (e.g., <span class="math notranslate nohighlight">\(\zeta = \text{inv}(\zeta))\)</span> only manifests in a rare class of Sentences known as Perfect Palindrome (<a class="reference internal" href="05_palindromes.html#definition-4-1-2"><span class="std std-ref">Definition 4.1.2</span></a>).</p>
+<p>However, the vast majority of Palindromes in any language are not pure involutions. Instead, the operation of inversion usually degrades the semantic content of a Sentence by re-ordering the Delimiters, as seen in the following,</p>
+<div class="math notranslate nohighlight">
+\[\zeta = \text{&quot;now sir a war is won&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{inv}(\zeta) = \text{&quot;now si raw a ris won&quot;}\]</div>
+<p>In order to properly understand the nature of a Palindrome, the formal system under construction must have a method of quantifying the distribution of Delimiters in a Sentence and making claims about the nature of that Distribution. Furthermore, the system requires a method of removing the <em>“impurities”</em> in semantic content that are introduced through inversion.</p>
+<p>This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of <em>σ-reduction</em> and the <em>Delimiter Count</em> function.</p>
+<section id="section-iii-i-reductions">
+<span id="section-iii-i"></span><h2>Section III.I: σ-Reductions<a class="headerlink" href="#section-iii-i-reductions" title="Link to this heading">#</a></h2>
+<p>The mathematical definition of Palindromes (<a class="reference internal" href="05_palindromes.html#definition-4-1-1"><span class="std std-ref">Definition 4.1.1</span></a> in the next section) will revolve around a novel linguistic operation, termed a <em>σ</em>-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.</p>
+<section id="definitions">
+<span id="reduction-definitions"></span><h3>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h3>
+<p>Before defining a <em>σ</em>-reduction, the preliminary concept of a <em>σ-reduced Alphabet</em> must be introduced. The following definition serves as the basis for constructing the operation of <em>σ</em>-reduction.</p>
+<p>As has been seen with examples of Imperfect Palindromes like <em>“borrow or rob”</em>, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. <em>“bor ro worrob”</em>, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiters, suggests palindromes might be more easily defined without the obstacle of the Delimiter.</p>
+<p id="definition-3-1-1"><strong>Definition 3.1.1: σ-Reduced Alphabet</strong></p>
+<p>A <em>σ-reduced Alphabet</em> is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A <em>σ</em>-reduced Alphabet is denoted Σ:sub:<cite>σ</cite>. Formally,</p>
+<div class="math notranslate nohighlight">
+\[\Sigma_\sigma = \Sigma - \{ \sigma \}\]</div>
+<p>∎</p>
+<p>In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of <em>σ-reduction</em>.</p>
+<p id="definition-3-1-2"><strong>Definition 3.1.2: σ-Reduction</strong></p>
+<p>Let <em>t</em> be a String with length <em>l(t)</em> and Character-level representation</p>
+<div class="math notranslate nohighlight">
+\[1. \quad T = \{ (1,\mathfrak{a}_1) , (2, \mathfrak{a}_2) , ... , (l(t), \mathfrak{a}_{l(t)}) \}\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \mathfrak{a}_i \in \Sigma.\]</div>
+<p>The <em>σ</em>-reduction of <em>t</em>, denoted by the lowercase Greek final Sigma, <em>ς(t)</em>, maps the String <em>t</em> to a new String <em>u</em> in the <em>σ</em>-reduced alphabet <strong>Σ</strong><sub>σ</sub> by removing all occurrences of the Delimiter Character. Formally, <em>ς(t)</em> is defined and constructed using the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a>,</p>
+<p id="algorithm-3"><strong>Algorithm 3: Reduction Algorithm</strong></p>
+<p>The Reduction Algorithm takes in a String <em>t</em> as input. It initializes the values of several local variables and then iterates over the Character-level set representation of the String <em>t</em> until the Characters have been exhausted. It then returns the <em>σ-reduced</em> String <em>s</em> that corresponds to the String <em>t</em>. The exact details are given below.</p>
+<aside class="topic">
+<p class="topic-title">Algorithm Reduce(t: String)</p>
+<p># Input: A String t</p>
+<p># Output: A String s that represents the σ-reduction of t</p>
+<p># Initialization</p>
+<p>## Character-level representation of s</p>
+<ol class="arabic simple">
+<li><p>s ← Empty(s)</p></li>
+</ol>
+<p>## Index to iterate over input String</p>
+<ol class="arabic simple" start="2">
+<li><p>i ← 1</p></li>
+</ol>
+<p>## Empty string to store σ-reduced String</p>
+<ol class="arabic simple" start="3">
+<li><p>t ← ε</p></li>
+</ol>
+<p># Iteration</p>
+<ol class="arabic" start="4">
+<li><p>While i ≤ l(s):</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p>If s[i] ≠ σ:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>t ← (t)(s[i])</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<ol class="loweralpha simple" start="3">
+<li><p>i ← i + 1</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p># Finalization</p>
+<ol class="arabic" start="5">
+<li><p>If l(t) &gt; 0:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Apply Basis Clause of <a class="reference internal" href="02_language.html#definition-1-1-1"><span class="std std-ref">Definition 1.1.1</span></a> to t</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Return t</p></li>
+</ol>
+</aside>
+<p>∎</p>
+<p>Note the String <em>s</em> which is initialized to hold the <em>σ</em>-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a>, if the input string contained at least one non-Empty Character. Otherwise, the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> returns an Empty Character. From this, it is clear if a String only contains Delimiters,</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon = \varsigma(\sigma) = \varsigma(\sigma\sigma) = \varsigma(\sigma\sigma\sigma) = ...\]</div>
+<p>From which, it follows, by <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a> of String Length, the String Length of a reduced Delimiter is simply zero,</p>
+<div class="math notranslate nohighlight">
+\[l(\varsigma(\sigma)) = 0\]</div>
+<p>Moreover, since by <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, Words do not contain Delimiters, for any Word <em>α</em> in Language <strong>L</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\varsigma(\alpha) = \alpha\]</div>
+<p>Again, from <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>, the String Length of a reduced Word is simply the String Length of the Word,</p>
+<div class="math notranslate nohighlight">
+\[l(\varsigma(\alpha)) = l(\alpha)\]</div>
+<p>A subtlety of the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> should be noted. While <span class="math notranslate nohighlight">\(\varsigma(\sigma) = \varepsilon\)</span> and <span class="math notranslate nohighlight">\(\varsigma(\alpha) = \alpha\)</span>, it does not follow the <em>σ</em>-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,</p>
+<div class="math notranslate nohighlight">
+\[\varsigma(\alpha\sigma) ≠ \alpha\varepsilon\]</div>
+<p>Except insofar that the Basis Clause of <a class="reference internal" href="02_language.html#definition-1-1-1"><span class="std std-ref">Definition 1.1.1</span></a> defines the concatenation of <em>αε</em> to equal <em>α</em>.</p>
+<p>This is because of the condition <em>(j &gt; 1)</em> in the Finalization Block of the Reduction ensures Empty Characters are stripped from <em>t</em> when the input String contains atleast one non-Empty Character that has been concatenated into the <em>σ</em>-reduction String.</p>
+<p>The more complicated properties of <em>σ</em>-reductions are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> to construct the <em>σ</em>-reduction of a String.</p>
+<p><strong>Example</strong></p>
+<p>Let <em>s = “a b c”</em> be a String from the Alphabet</p>
+<div class="math notranslate nohighlight">
+\[\Sigma = \{ \text{&quot;&quot;}, \text{&quot; &quot;} , \text{&quot;a&quot;}, \text{&quot;b&quot;}, \text{&quot;c&quot;} \}\]</div>
+<p>Note in this example <span class="math notranslate nohighlight">\(\sigma = \text{&quot; &quot;}\)</span> and <span class="math notranslate nohighlight">\(l(s) = 5\)</span>. The value of the variables in the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> after each iteration are given below,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad i = 2, t = \varepsilon\text{&quot;a&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad i = 3, t = \varepsilon\text{&quot;a&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[3. \quad i = 4, t = \varepsilon\text{&quot;ab&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[4. \quad i = 5, t = \varepsilon\text{&quot;ab&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[5. \quad i = 5, t = \text{&quot;abc&quot;}\]</div>
+<p>The result of the <em>σ</em>-reduction of <em>s</em> is thus given by,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \varsigma(s) = \text{&quot;abc&quot;}\]</div>
+<p>∎</p>
+<p>A <em>σ</em>-reduction can be thought of as a linguistic operation analogous to vector projection. While not a strict mathematical equivalence, this conception of <em>σ</em>-reduction captures the idea of transforming a String from its original form (with Delimiters) onto a reduced space (without Delimiters), similar to how a vector can be projected onto a subspace.</p>
+<p>The <em>σ</em>-reduced Alphabet (<strong>Σ</strong><sub>σ</sub>) can be seen as a subspace within this higher-dimensional space, consisting of only the non-Delimiter dimensions. The sigma reduction function (<em>ς(s)</em>) acts as a projection operator, mapping the String onto this subspace by eliminating the components corresponding to the Delimiter character (<em>σ</em>).</p>
+<p>Note that a <em>σ</em>-reduction is not a one-to-one operation. It is possible for the <em>σ</em>-reduction of a palindrome to map onto a totally different sentence, not necessarily a palindrome.</p>
+<p>As an example, consider the (partial, ignoring punctuality) Palindromes <span class="math notranslate nohighlight">\(ᚠ = \text{&quot;madam im adam&quot;}\)</span> and <span class="math notranslate nohighlight">\(ᚢ = \text{&quot;mad am i madam&quot;}\)</span>. The <em>σ</em>-reduction of both of these Sentences would map to the <em>σ-reduced</em> value of <em>“madamimadam”</em>.</p>
+<p>Both the Palindrome and the alternative Sentence (which also happens to be a Palindrome) have the same <em>σ</em>-reduction, despite having different meanings and grammatical structures. This highlights the ambiguity that can arise from removing spaces, as the original Word boundaries and Sentence structure are lost.</p>
+</section>
+<section id="theorems">
+<span id="reduction-theorems"></span><h3>Theorems<a class="headerlink" href="#theorems" title="Link to this heading">#</a></h3>
+<p>The following theorems establish the basic properties of <em>σ</em>-reductions.</p>
+<p id="theorem-3-1-1"><strong>Theorem 3.1.1</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in C:sub:<cite>L</cite>. Let <em>s</em> be the <em>σ</em>-reduction of <em>ζ</em>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad s = \varsigma(\zeta)\]</div>
+<p>Let <em>t</em> be the Inverse of <em>s</em>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad t = \text{inv}(s).\]</div>
+<p>Let <em>u</em> be the Inverse of <em>ζ</em>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad u = \text{inv}(ζ).\]</div>
+<p>Let <em>v</em> be the <em>σ</em>-reduction of <em>u</em>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad v = \varsigma(u) = \varsigma(\text{inv}(ζ))\]</div>
+<p>Since <em>s</em> contains only the non-Delimiter characters of <em>ζ</em> in their original order, and <em>t</em> is the reversed sequence of Characters in <em>s</em>, <em>t</em> contains only the non-Delimiter characters of <em>ζ</em> in reversed order.</p>
+<p>Similarly, since <em>u</em> is the reverse sequence of Characters in <em>ζ</em>, and <em>v</em> is obtained by removing Delimiters from <em>u</em>, <em>v</em> also contains only the non-Delimiter characters of <em>ζ</em> in the reversed order.</p>
+<p>Therefore, by <a class="reference internal" href="02_language.html#definition-1-1-4"><span class="std std-ref">Definition 1.1.4</span></a>, <em>t</em> and <em>v</em> must be the same String, as they both contain the same Characters in the same order. Since <span class="math notranslate nohighlight">\(t = v\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))\]</div>
+<p>Since ζ was an arbitrary Sentence, this can be generalized over the Corpus</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \forall \zeta \in C_L: \text{inv}(\varsigma(\zeta)) = \varsigma(\text{inv}(\zeta))\]</div>
+<p>∎</p>
+<p><a class="reference internal" href="#theorem-3-1-1"><span class="std std-ref">Theorem 3.1.1</span></a> is essential because it allows free movement between the Inverse of a <em>σ</em>-reduction and the <em>σ</em>-reduction of an Inverse. In other words, <a class="reference internal" href="#theorem-3-1-1"><span class="std std-ref">Theorem 3.1.1</span></a> establishes the commutativity of <em>σ</em>-reduction over inversion and visa versa.</p>
+<p>As the theorems in this section will make clear, there exists a unique type of algebraic structure that links the operations of <em>σ</em>-reduction, inversion and concatenation. The properties of this algebraic structure will be necessary for establishing many of the results regarding palindromes.</p>
+<p>The next theorem demonstrates how <em>σ</em>-reduction interacts with concatenation.</p>
+<p id="theorem-3-1-2"><strong>Theorem 3.1.2</strong> <span class="math notranslate nohighlight">\(\forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta)\varsigma(\xi))\)</span></p>
+<p>Let <em>ζ</em> and <em>ξ</em> be arbitrary sentences in <span class="math notranslate nohighlight">\(C_L\)</span>. Let <strong>Ζ</strong> and <strong>Ξ</strong> be the character-level representations of <em>ζ</em> and <em>ξ</em>, respectively,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \Zeta = (\iota_1, \iota_2, ..., \iota_{l(\zeta)})\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \Xi = (\nu_1, \nu_2, ..., \nu_{l(\xi)})\]</div>
+<p>Let <em>ζξ</em> be the concatenation of <em>ζ</em> and <em>ξ</em>. The character-level representation of <em>ζξ</em> is given by,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Zeta\Xi = (\iota_1, \iota_2, ..., \iota_{l(\zeta)}, \nu_1, \nu_2, ..., \nu_{l(\xi)})\]</div>
+<p>Let <em>s</em> be the σ-reduction of <em>ζξ</em>. Let <em>t</em> be the <em>σ</em>-reduction of <em>ζ</em>. Let <em>u</em> be the <em>σ</em>-reduction of <em>ζξ</em>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad s = \varsigma(\zeta\xi)\]</div>
+<div class="math notranslate nohighlight">
+\[5. \quad t = \varsigma(\zeta)\]</div>
+<div class="math notranslate nohighlight">
+\[6. \quad u = \varsigma(\xi)\]</div>
+<p>Let <em>v</em> be the concatenation of the Strings <em>t</em> and <em>u</em>,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad v = tu = (\varsigma(\zeta))(\varsigma(\xi))\]</div>
+<p>Since <em>σ</em>-reduction only removes Delimiters and doesn’t change the order of non-Delimiter Characters, the non-Delimiter characters in <em>s</em> (the <em>σ</em>-reduction of <em>ζξ</em>) are the same as the non-Delimiter Characters in <em>ζ</em> followed by the non-Delimiter Characters in ξ.</p>
+<p>The non-Delimiter characters in <em>v</em>, the concatenation of <em>ς(ζ)</em> and <em>ς(ξ)</em>, are also the non-Delimiter characters in <em>ζ</em> followed by the non-delimiter characters in <em>ξ</em>.</p>
+<p>Therefore, by <a class="reference internal" href="02_language.html#definition-1-1-4"><span class="std std-ref">Definition 1.1.4</span></a>, <em>s</em> and <em>v</em> must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of <em>ζ</em> followed by the non-Delimiter characters of <em>ξ</em>). Since <span class="math notranslate nohighlight">\(s = v\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi))\]</div>
+<p>Since ζ and ξ were arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \forall \zeta, \xi \in C_L: \varsigma(\zeta\xi) = (\varsigma(\zeta))(\varsigma(\xi))\]</div>
+<p>∎</p>
+<p><a class="reference internal" href="#theorem-3-1-2"><span class="std std-ref">Theorem 3.1.2</span></a> further demonstrates the <em>algebraic</em> nature of <em>σ</em>-reduction and the other String operations. It shows that <em>σ</em>-reduction <em>distributes</em> over concatenation, just as inversion “distributes” (in a reversed way) over concatenation (<a class="reference internal" href="02_language.html#theorem-1-2-5"><span class="std std-ref">Theorem 1.2.5</span></a>). These properties suggest that <em>σ</em>-reduction, inversion and concatenation are not just arbitrary operations but instead are deeply connected to the underlying structure of Strings and Sentences.</p>
+<p>As another example of this <em>“linguistic algebraic structure”</em>, the following theorem might be termed the <em>“Idempotency of σ-reduction”</em> or the <em>“σ-reduction Idempotence Property”</em>.</p>
+<p id="theorem-3-1-3"><strong>Theorem 3.1.3</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary Sentence in <span class="math notranslate nohighlight">\(C_L\)</span>. Let s be the <em>σ</em>-reduction of <em>ζ</em>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad s = \varsigma(\zeta)\]</div>
+<p>Let <em>t</em> be the <em>σ</em>-reduction of <em>s</em>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad t = \varsigma(s) = \varsigma(\varsigma(\zeta))\]</div>
+<p>Since <em>s</em> is the result of applying a <em>σ</em>-reduction to <em>ζ</em>, it contains no Delimiter Characters (<em>σ</em>).</p>
+<p>When <em>s</em> is <em>σ</em>-reduced (to get <em>t</em>), the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> in <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a> iterates through the Characters of <em>s</em>. Since s has no Delimiters, the condition if <span class="math notranslate nohighlight">\(s[i] \neq \sigma\)</span> in the algorithm will always be true, and every character of <em>s</em> will be concatenated to the initially empty string <em>t</em>. Therefore, by <a class="reference internal" href="02_language.html#definition-1-1-4"><span class="std std-ref">Definition 1.1.4</span></a>, <em>t</em> will be identical to <em>s</em>, as it contains the same Characters in the same order. Thus,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)\]</div>
+<p>Since ζ was an arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall \zeta \in C_L: \varsigma(\varsigma(\zeta)) = \varsigma(\zeta)\]</div>
+<p>∎</p>
+<p id="theorem-3-1-4"><strong>Theorem 3.1.4</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary Sentence in <span class="math notranslate nohighlight">\(C_L\)</span>. By the <a class="reference internal" href="03_corpora.html#axiom-s1"><span class="std std-ref">Duality Axiom S.1</span></a>, every Sentence in <span class="math notranslate nohighlight">\(C_L\)</span> must contain at least one word from <strong>L</strong>.</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \exists \alpha \in L: \alpha \subset_s \zeta\]</div>
+<p>By <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a>, <em>ς(ζ)</em> removes all Delimiters from <em>ζ</em>. Therefore, <em>ς(ζ)</em> consists of the Characters of the words in <em>ζ</em> concatenated together without any delimiters.</p>
+<p>By the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, Words in <strong>L</strong> cannot contain Delimiters.</p>
+<p>By <a class="reference internal" href="03_corpora.html#definition-2-1-4"><span class="std std-ref">Definition 2.1.4</span></a>, the Word Length <em>Λ(s)</em> of a String <em>s</em> counts the number of Words in <em>s</em>, where Words are separated by Delimiters.</p>
+<p>If <em>ζ</em> contains only one Word, then <em>ς(ζ)</em> will be that Word,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \Lambda(\varsigma(\zeta)) = 1\]</div>
+<p>If <em>ζ</em> contains multiple Words, then <em>ς(ζ)</em> will be a concatenation of those words without Delimiters. This concatenated String may or may not be a valid Word in <strong>L</strong>.</p>
+<p>If the concatenated String is a valid Word in <strong>L</strong>, then,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Lambda(\varsigma(\zeta)) = 1\]</div>
+<p>If the concatenated String is not a valid Word in <strong>L</strong>, then,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \Lambda(\varsigma(\zeta)) = 0\]</div>
+<p>Therefore, in all possible cases,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \Lambda(\varsigma(\zeta)) \leq 1\]</div>
+<p>Since <em>ζ</em> was an arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \forall \zeta \in C_L: \Lambda(\varsigma(\zeta)) \leq 1\]</div>
+<p>∎</p>
+<p id="theorem-3-1-5"><strong>Theorem 3.1.5</strong> <span class="math notranslate nohighlight">\(\forall u, t \in S: u \subset_s t \leftrightarrow \varsigma(u) \subset_s \varsigma(t)\)</span></p>
+<p>This theorem can be stated in natural language as follows: For any two Strings <em>u</em> and <em>t</em>, <em>u</em> is contained in <em>t</em> if and only if the <em>σ</em>-reduction of <em>u</em> is contained in the <em>σ</em>-reduction of <em>t</em>.</p>
+<p>Let <em>u</em> and <em>t</em> be arbitrary strings in <strong>S</strong>.</p>
+<p>(→) Assume</p>
+<div class="math notranslate nohighlight">
+\[1. \quad u \subset_s t\]</div>
+<p>By Definition 1.1.7, there exists a strictly increasing and consecutive function <span class="math notranslate nohighlight">\(f: N_{l(u)} \to N_{l(t)}\)</span> such that,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{l(u)}: u[i] = t[f(i)]\]</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[3. \quad s = \varsigma(u)\]</div>
+<div class="math notranslate nohighlight">
+\[4. \quad v = \varsigma(t).\]</div>
+<p>By the <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a> of <em>σ</em>-reduction, <em>s</em> is obtained by removing all Delimiters from <em>u</em>, and <em>v</em> is obtained by removing all Delimiters from <em>t</em>.</p>
+<p>Since <em>u</em> is contained in <em>t</em>, the non-Delimiter Characters of <em>u</em> appear in <em>t</em> in the same order. The function <em>f</em> maps the indices of these Characters.</p>
+<p>Define a function <span class="math notranslate nohighlight">\(g: N_{l(s)} \to N_{l(v)}\)</span> that maps the indices of <em>s</em> to the indices of <em>v</em>. In other words, if <em>i</em> is an index in <em>s</em>, then <em>g(i)</em> is the index in <em>v</em> that corresponds to the same non-Delimiter character.</p>
+<p>Since <em>f</em> is strictly increasing and consecutive, and <em>σ</em>-reduction only removes Delimiters, <em>g</em> will also be strictly increasing and consecutive. (<em>g</em> essentially compresses the mapping of <em>f</em> by skipping over the Delimiter indices and offseting).</p>
+<p>For any index <em>i</em> in <em>s</em>,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad s[i] = u[j]\]</div>
+<p>for some <em>j</em>. Moreover,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad u[j] = t[f(j)].\]</div>
+<p>Since <em>s</em> and <em>v</em> are <em>σ</em>-reduced, <em>s[i]</em> and <em>v[g(i)]</em> correspond to the same non-Delimiter Character, and g(i) is constructed such that</p>
+<div class="math notranslate nohighlight">
+\[7. \quad v[g(i)] = t[f(j)].\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad s[i] = v[g(i)].\]</div>
+<p>Since <em>g</em> is a strictly increasing and consecutive function and <span class="math notranslate nohighlight">\(s[i] = v[g(i)]\)</span>, by <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad s \subset_s v\]</div>
+<p>From which it follows,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad \varsigma(u) \subset_s \varsigma(t).\]</div>
+<p>(←) Assume</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \varsigma(u) \subset_s \varsigma(t).\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>, there exists a strictly increasing and consecutive function <span class="math notranslate nohighlight">\(g: N_{l(\varsigma(u))} \to N_{l(\varsigma(t))}\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{l(\varsigma(u))}: \varsigma(u)[i] = \varsigma(t)[g(i)]\]</div>
+<p>Define a function <span class="math notranslate nohighlight">\(f: N_{l(u)} \to N_{l(t)}\)</span> that maps the indices of <em>u</em> to the indices of <em>t</em> by essentially “re-inserting” the delimiters. For each non-Delimiter character in <em>u</em> (and corresponding index in <em>ς(u)</em>), <em>f</em> will map to the corresponding index in <em>t</em>. For Delimiter characters in <em>u</em>, <em>f</em> will map to an index in <em>t</em> that preserves the order and consecutiveness.</p>
+<p>Since <em>g</em> is strictly increasing and consecutive, and the Delimiters are only removed, not reordered, the function <em>f</em> will also be strictly increasing and consecutive.</p>
+<p>For each index <em>i</em> in <em>u</em>, <em>u[i]</em> will either be a non-Delimiter or a Delimiter Character.</p>
+<p>If <em>u[i]</em> is a non-Delimiter character, it corresponds to a Character in <em>ς(u)</em>, and by the properties of <em>g</em> and <em>f</em>, the following holds for some <em>j</em>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad u[i] = \varsigma(u)[j] = \varsigma(t)[g(j)] = t[f(i)]\]</div>
+<p>If <em>u[i]</em> is a Delimiter, then by the construction of <em>f</em>, it will be mapped to a corresponding Delimiter in <em>t</em>, so</p>
+<div class="math notranslate nohighlight">
+\[4. \quad  u[i] = t[f(i)]\]</div>
+<p>Since <em>f</em> is a strictly increasing and consecutive function and <span class="math notranslate nohighlight">\(u[i] = t[f(i)]\)</span> for all <span class="math notranslate nohighlight">\(i \in N_{l(u)}\)</span>, by <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad u \subset_s t\]</div>
+<p>Since both directions of the implication hold, it can be concluded,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \forall u, t \in S : u \subset_S t \leftrightarrow \varsigma(u) \subset_s \varsigma(t)\]</div>
+<p>∎</p>
+<p>During a <em>σ</em>-reduction, <a class="reference internal" href="#theorem-3-1-4"><span class="std std-ref">Theorem 3.1.4</span></a> demonstrates information is lost with respect to the following semantic categories,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Word Boundaries: The spaces between words, which are crucial for parsing and understanding the sentence, are eliminated.</p></li>
+<li><p>Sentence Structure: The grammatical structure of the sentence, the relationships between words and phrases, becomes ambiguous.</p></li>
+<li><p>Prosody and Rhythm: The pauses and intonation that contribute to the meaning and expression of the sentence are lost.</p></li>
+</ul>
+</div></blockquote>
+<p>However, some semantic information is preserved. The individual words themselves, or at least their character sequences, remain present in the <em>σ-reduced</em> string. The next theorem proves semantic content is retained during the <em>σ</em>-reduction of a Sentence.</p>
+<p id="theorem-3-1-6"><strong>Theorem 3.1.6</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta)\)</span></p>
+<p>This theorem can be stated in natural language as follows: For every sentence <em>ζ</em> in the Corpus <span class="math notranslate nohighlight">\(C_L\)</span>, and for every Word <em>ζ{i}</em> in the Word-level representation of <em>ζ</em>, <em>ζ{i}</em> is contained in <em>ς(ζ)</em>.</p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <span class="math notranslate nohighlight">\(C_L\)</span>. By <a class="reference internal" href="03_corpora.html#theorem-2-2-4"><span class="std std-ref">Theorem 2.2.4</span></a>, it is known at least one Word must exist in <em>ζ</em>. Let <em>ζ{i}</em> be one of the Words in the sequence of Words that form <em>ζ</em>.</p>
+<p>This means that <em>ζ</em> can be written as either, in the case of <span class="math notranslate nohighlight">\(\Lambda(\zeta) &gt; 1\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \text{Case} (\Lambda(\zeta) &gt; 1): \zeta = (s_1)(\sigma)(\zeta\{i\})(\sigma)(s_2)\]</div>
+<p>where <em>s</em><sub>1</sub> and <em>s</em><sub>2</sub> are (possibly Empty) Strings.</p>
+<p>In the case that Λ(ζ) = 1, then, this means <em>ζ</em> can be written simply as,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \text{Case} (\Lambda(\zeta) = 1): \zeta = \zeta\{1\}\]</div>
+<p>By the <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a>, <em>ς(ζ)</em> is obtained by removing all Delimiters from <em>ζ</em>. Furthermore, by <a class="reference internal" href="#theorem-3-1-2"><span class="std std-ref">Theorem 3.1.2</span></a>, <em>σ</em>-reduction distributes over concatenation. Thus,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \text{Case} (\Lambda(\zeta) &gt; 1): \varsigma(\zeta) = (\varsigma(s_1))(\varsigma(\zeta\{i\}))(\varsigma(s_2))\]</div>
+<div class="math notranslate nohighlight">
+\[4. \quad \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\})\]</div>
+<p>By the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, Words in <strong>L</strong> do not contain Delimiters.</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \text{Case} (\Lambda(\zeta) &gt; 1): \varsigma(\zeta) = (\varsigma(s_1))(\zeta\{i\})(\varsigma(s_2))\]</div>
+<div class="math notranslate nohighlight">
+\[6. \quad \text{Case} (\Lambda(\zeta) = 1): \varsigma(\zeta\{1\}) = \zeta\{1\}\]</div>
+<p>Therefore, by <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a> of Containment,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \text{Case} (\Lambda(\zeta) &gt; 1): \zeta\{i\} \subset_s \varsigma(\zeta)\]</div>
+<div class="math notranslate nohighlight">
+\[8. \quad \text{Case} (\Lambda(\zeta) = 1): \zeta\{1\} \subset_s \varsigma(\zeta)\]</div>
+<p>In both cases, there is a Word in <em>ζ</em> that is contained in the <em>σ</em>-reduction of <em>ζ</em>. Since <em>ζ</em> was arbitrary, this can generalize over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \varsigma(\zeta)\]</div>
+<p>∎</p>
+<p>This next theorem shows how <em>σ</em>-reduction behaves over the class of Invertible Sentences, an extremely important class for understanding the mechanics of Palindromes.</p>
+<p id="theorem-3-1-7"><strong>Theorem 3.1.7</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in K: \varsigma = \text{inv}(\text{inv}(\varsigma(\zeta)))\)</span></p>
+<p>In natural language, this theorem can be stated in natural language as follows: If a Sentence in a Corpus is Invertible, then its invertibility is invariant under <em>σ</em>-reduction.</p>
+<p>Assume</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in K\]</div>
+<p>In other words, assume that <em>ζ</em> is an Invertible Sentence. By <a class="reference internal" href="03_corpora.html#theorem-2-3-11"><span class="std std-ref">Theorem 2.3.11</span></a>, since <em>ζ</em> is invertible, all its Words are also Invertible,</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I\]</div>
+</div></blockquote>
+<p>The <em>σ</em>-reduction of <em>ζ</em>, <em>ς(ζ)</em>, is obtained by removing all Delimiters from ζ. Since no Word contains Delimiters (by <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>), the <em>σ</em>-reduction concatenates the Words of <em>ζ</em>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \varsigma(\zeta)= (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})\]</div>
+<p>Applying <a class="reference internal" href="02_language.html#theorem-1-2-5"><span class="std std-ref">Theorem 1.2.5</span></a> repeatedly,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \text{inv}(\varsigma(\zeta)) = \text{inv}((\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\}))\]</div>
+<p>To get,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \text{inv}(\varsigma(\zeta))  = (\text{inv}(\zeta\{\Lambda(ζ)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\ζ\{1\})))\]</div>
+<p>Applying a second Inversion,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \text{inv}(\text{inv}(\varsigma(\zeta))) = \text{inv}((\text{inv}(\zeta\{\Lambda(\zeta)\})) ... (\text{inv}(\zeta\{2\}))(\text{inv}((\zeta\{1\}))))\]</div>
+<p>Applying <a class="reference internal" href="02_language.html#theorem-1-2-5"><span class="std std-ref">Theorem 1.2.5</span></a> again,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \text{inv}(\text{inv}(\varsigma(\zeta))) = (\text{inv}(\text{inv}((\zeta\{1\})))) (\text{inv}(\text{inv}((\zeta\{2\})))) ... (\text{inv}(\text{inv}((\zeta\{\Lambda(\zeta)\}))))\]</div>
+<p>Finally, applying <a class="reference internal" href="02_language.html#theorem-1-2-4"><span class="std std-ref">Theorem 1.2.4</span></a> (<span class="math notranslate nohighlight">\(\text{inv}(\text{inv}(s)) = s\)</span>)</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \text{inv}(\text{inv}(\varsigma(\zeta))) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})\]</div>
+<p>Therefore, combining step 3 and step 8</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))\]</div>
+<p>Since <em>ζ</em> was an arbitrary Sentence in <strong>K</strong>, this can be generalized over Invertible Sentences,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \forall \zeta \in K: \varsigma(\zeta) = \text{inv}(\text{inv}(\varsigma(\zeta)))\]</div>
+<p>∎</p>
+<p>The contrapositive of this theorem, much like the contrapositive of <a class="reference internal" href="#theorem-3-1-7"><span class="std std-ref">Theorem 3.1.7</span></a>, provides a schema for searching the <em>σ-reduced</em> space for Invertible Sentences. The domain of this space reduces the complexity of searching for palindromic strings. Potential palindromic candidates can be projected into the <em>σ-reduced</em> spaced, and then filtered by those whose <em>σ</em>-reduction whose Inverse does not equal itself.</p>
+<p>The final theorems in this section, <a class="reference internal" href="#theorem-3-1-8"><span class="std std-ref">Theorems 3.1.8</span></a> - <a class="reference internal" href="#theorem-3-1-9"><span class="std std-ref">3.1.9</span></a>, provide a method for constructing the <em>σ</em>-reduction of a Sentence through iterated concatenation. These theorems leverage the operations of Delimitation and Limitation introduced in <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definitions 1.2.7</span></a> - <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">1.2.8</span></a>.</p>
+<p id="theorem-3-1-8"><strong>Theorem 3.1.8</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\)</span></p>
+<p>This theorem can be stated in natural language as follows: The <em>σ</em>-reduction of a Sentence is the Limitation of its Words.</p>
+<p>Assume <em>ζ</em> was an arbitrary Sentence such that,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in C_L\]</div>
+<p>By <a class="reference internal" href="03_corpora.html#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)})\]</div>
+<p>Where,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall i \in N_{\Lambda(\zeta)}: \alpha_i \in L\]</div>
+<p>By <a class="reference internal" href="03_corpora.html#theorem-2-3-4"><span class="std std-ref">Theorem 2.3.4</span></a>, <em>ζ</em> can be expressed as the Delimitation of its Words:</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\})\]</div>
+<p>By <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a>, <em>ς(ζ)</em> removes all Delimiters from <em>ζ</em>. Applying <em>σ</em>-reduction to the expression step 4,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \varsigma(\zeta) = \varsigma((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(\zeta)\}))\]</div>
+<p>By repeated application of <a class="reference internal" href="#theorem-3-1-2"><span class="std std-ref">Theorem 3.1.2</span></a>, i.e. by distributing the <em>σ</em>-reduction over concatenation,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\sigma))(\varsigma(\zeta\{2\}))(\varsigma(\sigma)) ... (\varsigma(\sigma))(\varsigma(\zeta\{\Lambda(\zeta)\}))\]</div>
+<p>Since</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \varsigma(\sigma) = \varepsilon\]</div>
+<p>This can be rewritten with the Basis Clause of <a class="reference internal" href="02_language.html#definition-1-1-1"><span class="std std-ref">Definition 1.1.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \varsigma(\zeta) = (\varsigma(\zeta\{1\}))(\varsigma(\zeta\{2\}))...(\varsigma(\zeta\{\Lambda(\zeta)\}))\]</div>
+<p>By <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a> and the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \forall i \in N_{\Lambda(\zeta)}: \varsigma(\zeta\{i\}) = \zeta\{i\}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad \varsigma(\zeta) = (\zeta\{1\})(\zeta\{2\})...(\zeta\{\Lambda(\zeta)\})\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">Definition 1.2.8</span></a>, the right-hand side is the Limitation of the words in <span class="math notranslate nohighlight">\(W_{\zeta}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[11. \quad \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>Since <em>ζ</em> was an arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[12. \quad \forall \zeta \in C_L: \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>∎</p>
+<p><a class="reference internal" href="#theorem-3-1-8"><span class="std std-ref">Theorem 3.1.8</span></a> establishes an important formula for the construction of <em>σ</em>-reductions. The <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> targets Strings as input, i.e. it processes sequential Characters in a String. If an ordered sequence of Words is already at hand, without <a class="reference internal" href="#theorem-3-1-8"><span class="std std-ref">Theorem 3.1.8</span></a>, it would be required to reconstruct the String which corresponds to the sequence and process it through the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a>. Rather than applying the <a class="reference internal" href="#algorithm-3"><span class="std std-ref">Reduction Algorithm</span></a> everytime a <em>σ</em>-reduction is required, <a class="reference internal" href="#theorem-3-1-8"><span class="std std-ref">Theorem 3.1.8</span></a> provides a schema for the construction of <em>σ</em>-reductions through the process of Limitation.</p>
+<p>Compare <a class="reference internal" href="#theorem-3-1-8"><span class="std std-ref">Theorem 3.1.8</span></a> to <a class="reference internal" href="03_corpora.html#theorem-2-2-5"><span class="std std-ref">Theorem 2.2.5</span></a>, reprinted below for reference,</p>
+<div class="math notranslate nohighlight">
+\[\zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>In other words, taking the <em>σ</em>-reduction of a Sentence converts the Delimitation of its Words into a Limitation. This follows directly from <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definitions 1.2.7</span></a> and <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">1.2.8</span></a> of Limitation and Delimitation. The next theorem proves this relationship for the more general case of <em>any</em> ordered sequence of Words, not necessarily a semantically coherent and admissible Sentence.</p>
+<p id="theorem-3-1-9"><strong>Theorem 3.1.9</strong>  <span class="math notranslate nohighlight">\(\forall n \in \mathbb{N}: \forall p \in X_L(n): \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)\)</span></p>
+<p>This theorem can be stated in natural language as follows: the <em>σ</em>-reduction of the Delimitation of a Phrase is equal to the Limitation of the same Phrase.</p>
+<p>Let <em>n</em> be an arbitrary natural number, and let <em>p</em> be an arbitrary Phrase from a Language’s <em>n</em><sup>th</sup> Lexicon,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad p \in Χ_L(n)\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad p = (\alpha_1, \alpha_2, ..., \alpha_n).\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)\]</div>
+<p>Applying <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a> of <em>σ</em>-reduction to the Delimitation and applying the Basis Clause of <a class="reference internal" href="02_language.html#definition-1-1-1"><span class="std std-ref">Definition 1.1.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \varsigma(D\Pi_{i=1}^{n} p(i)) = (\alpha_1)(\alpha_2) ... (\alpha_n)\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">Definition 1.2.8</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad L\Pi_{i=1}^{n} p(i) = (\alpha_1)(\alpha_2) ... (\alpha_n)\]</div>
+<p>By repeated application of <a class="reference internal" href="02_language.html#theorem-1-1-1"><span class="std std-ref">Theorem 1.1.1</span></a> to step 4,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad l(\varsigma(D\Pi_{i=1}^{n} p(i))) = \sum_{i=1}^{n} l(\alpha_i)\]</div>
+<p>By repeated application of <a class="reference internal" href="02_language.html#theorem-1-1-1"><span class="std std-ref">Theorem 1.1.1</span></a> to step 5,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad l((\alpha_1)(\alpha_2)... (\alpha_n)) = \sum_{i=1}^{n} l(\alpha_i)\]</div>
+<p>Comparing step 6 to step 7 and noting the <em>α</em><sub>i</sub> is in the same position the same for all <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>, it follows by <a class="reference internal" href="02_language.html#definition-1-1-4"><span class="std std-ref">Definition 1.1.4</span></a> of String Equality,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)\]</div>
+<p>Since <em>n</em> and <em>p</em> were arbitrary, this can be generalized over the Lexicon,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \forall n \in \mathbb{N}: \forall p \in Χ_L(n): \varsigma(D\Pi_{i=1}^{n} p(i)) = L\Pi_{i=1}^{n} p(i)\]</div>
+<p>∎</p>
+<p>The relationship between <em>σ</em>-reductions, Limitations and Delimitations provides an easy method for establishing the relationship between the String Length of a Sentence and the String Length of its σ-reduced form.</p>
+<p id="theorem-3-1-10"><strong>Theorem 3.1.10</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta))\)</span></p>
+<p>Let ζ be an arbitrary Sentence in the Corpus. By <a class="reference internal" href="#theorem-3-1-8"><span class="std std-ref">Theorem 3.1.8</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \varsigma(\zeta) = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>By <a class="reference internal" href="03_corpora.html#theorem-2-2-5"><span class="std std-ref">Theorem 2.2.5</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>Since the only different between <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a> and <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">1.2.8</span></a> is that Delimitations insert a Delimiter while Limitations simply concatenate, it must follow,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) \geq L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>From this, step 1 and step 2, it follows,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad l(\zeta) \geq l(\varsigma(\zeta))\]</div>
+<p>Since <em>ζ</em> was arbitary, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \forall \zeta \in C_L: l(\zeta) \geq l(\varsigma(\zeta))\]</div>
+<p>∎</p>
+</section>
+</section>
+<section id="section-iii-ii-delimiter-count-function">
+<span id="section-iii-ii"></span><h2>Section III.II: Delimiter Count Function<a class="headerlink" href="#section-iii-ii-delimiter-count-function" title="Link to this heading">#</a></h2>
+<p>Before moving onto the formal foundations for the <em>Delimiter Count Function</em>, some heuristical motivations will be provided for its introduction. The essence of a Palindrome lies in its ability to encode semantic meaning on multiple syntactic levels. In other words, the meaning of a Palindrome is distributed through its syntactical layers. The concepts of <em>Perfect</em> and <em>Imperfect</em> Palindromes are be defined more rigorously in Section III, but as an intuitive introduction to the ability of a Palindrome to encode meaning on multiple syntactic levels and as a justification for the introduction of the Delimiter Count Function, consider the following two examples,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>dennis sinned</p></li>
+<li><p>if i had a hifi</p></li>
+</ol>
+</div></blockquote>
+<p>The first palindrome “<em>dennis sinned</em>” is what will be termed a Perfect Palindrome in <a class="reference internal" href="05_palindromes.html#definition-4-1-2"><span class="std std-ref">Definition 4.1.2</span></a>, because its inverse does not require a rearrangement of its constituent Characters to preserve its semantic content. However, the second Palindrome <em>“if i had a hifi”</em> is what is termed an Imperfect Palindrome in <a class="reference internal" href="05_palindromes.html#definition-4-1-3"><span class="std std-ref">Definition 4.1.3</span></a>. To see the motivation behind this categorization, note the strict inversion of “If I had a hifi” would be (ignoring capitalization for now),</p>
+<blockquote>
+<div><p>ifih a dah i fi</p>
+</div></blockquote>
+<p>The order of the Characters in the Inverse of an Imperfect Palindrome is preserved, but in order to reconstitute its uninverted form, the Delimter Characters must be re-sorted. It appears, then, that Delimiters play a central role in organizing the palindromic structure.</p>
+<p>The study of Delimiter Characters in a Sentence bears study beyond its application to palindromic structures, though. The following section of the Appendix introduces this function for quantifying the number of Delimiters in a sentence. Various properties about this function are then proved, in particular how the function interacts with other linguistic operations and functions that have been defined in the main body of the work.</p>
+<p>Since every Sentence is a String, it will suffice to define the <em>Delimiter Count Function</em> over the set of all possible Strings <strong>S</strong>. The following definition will serve that purpose.</p>
+<p id="definition-3-2-1"><strong>Definition 3.2.1: Delimiter Count Function</strong> Let <em>t</em> be a String with length <em>l(t)</em>. Let <strong>T</strong> be the Character-level representation of <em>t</em> with the Characters <em>𝔞</em><sub>i</sub> denoting the <em>i</em><sup>th</sup> character of the String <em>t</em>, where <span class="math notranslate nohighlight">\(1 \leq i \leq l(t)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[T = \{ (1, \mathfrak{a}_1), (2, \mathfrak{a}_2), ... , (l(t), \mathfrak{a}_{l(t)}) \}\]</div>
+<p>The Delimiter Count Function, denoted by <em>Δ(t)</em>, is defined as the number of Delimiter Characters (<em>σ</em>) in the string <em>t</em>. Formally, <em>Δ(t)</em> is defined as the cardinality of the set that satisfies the following formula:</p>
+<div class="math notranslate nohighlight">
+\[D_t \leftrightarrow \{ (i, \mathfrak{a}_i) \in T \mid \mathfrak{a}_i = \sigma \land 1 \leq i leq l(t) \}\]</div>
+<p>Then, the Delimiter Count function is defined as</p>
+<div class="math notranslate nohighlight">
+\[\Delta(t) = \lvert D_t \rvert\]</div>
+<p>∎</p>
+<p><strong>Example</strong></p>
+<p>Consider the string <em>t = “a b c”</em>. The Character-level set representation of <em>t</em> is given by,</p>
+<div class="math notranslate nohighlight">
+\[T = \{ (1, \text{&quot;a&quot;}), (2, \sigma), (3, \text{&quot;b&quot;}), (4, \sigma), (5, \text{&quot;c&quot;}) \}.\]</div>
+<p>By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, the set <span class="math notranslate nohighlight">\(D_t\)</span> contains the ordered pairs <span class="math notranslate nohighlight">\((2, \sigma)\)</span> and <span class="math notranslate nohighlight">\((4, \sigma)\)</span>, where the first coordinate of each pair correspond the positions of the two Delimiter Characters in the String. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[D_t = \{ (2, \sigma), (4, \sigma) \}\]</div>
+<p>From this it follows,</p>
+<div class="math notranslate nohighlight">
+\[\lvert D_t \rvert = 2\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight">
+\[\Delta(t) = 2\]</div>
+<p>∎</p>
+<p>From the previous example, it can be seen the Delimiter Count function takes a Sentence as input and produces a non-negative integer (the Delimiter count) as output. Multiple sentences can have the same Delimiter count, making it a many-to-one function. While this many not be advantageous from a computational perspective, the Delimiter Count function has other interesting properties that make it worth studying. The following theorems describe some of its properties.</p>
+<p id="theorem-3-2-1"><strong>Theorem 3.2.1</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \Lambda(\zeta) = \Delta(\zeta) + 1\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I think this needs revised to be <span class="math notranslate nohighlight">\(\Lambda(\zeta) \geq \Delta(\zeta) + 1\)</span> to account for edge cases where the sentence has multiple Delimiters in sequence, or has a Delimiter at the end or beginning of the String.</p>
+<p>Alternatively, this inconsistency might be resolvable by introducing an assumption about the structure of a Sentence. Perhaps all Delimiters between two consecutive Words should be treated as a single Delimiter? Or an Axiom to constrain the placement of Delimiters in Sentences?</p>
+</div>
+<p>In natural language, this theorem is stated: For any sentence <em>ζ</em> in a Corpus C:sub:<cite>L</cite>, the length of the Sentence is equal to its Delimiter count plus one.</p>
+<p>Assume <span class="math notranslate nohighlight">\(ζ \in C_L\)</span>. Let <em>Δ(ζ)</em> be the delimiter count of <em>ζ</em>. Let <strong>Ζ</strong> be the Character-level representation of ζ. Let <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> be the word-level set representation of ζ. Recall <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> is formed by splitting <strong>Ζ</strong> at each Delimiter Character <em>σ</em> with the <a class="reference internal" href="03_corpora.html#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> in <a class="reference internal" href="03_corpora.html#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>.</p>
+<p>Each word in <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> corresponds to a contiguous subsequence of non-Empty, non-Delimiter Characters in <strong>Ζ</strong>.</p>
+<p>Since Delimiters separate Words, and each Delimiter corresponds to one Word boundary, the number of Words in the Sentence is always one more than the number of delimiters. Therefore, the cardinality of <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> (the number of words) is equal to the Delimiter count of <em>Δ(ζ)</em> plus one,</p>
+<div class="math notranslate nohighlight">
+\[\lvert W_{\zeta} \rvert = \Lambda(\zeta) = \Delta(\zeta) + 1\]</div>
+<p>∎</p>
+<p>The next two theorems establish the invariance of the Delimiter count under String Inversion for any String, and by extension, any Sentence.</p>
+<p id="theorem-3-2-2"><strong>Theorem 3.2.2</strong> <span class="math notranslate nohighlight">\(\forall s \in S: \Delta(s) = \Delta(\text{inv}(s))\)</span></p>
+<p>Let <em>t</em> be a string with length <em>l(t)</em>. Let <span class="math notranslate nohighlight">\(u = \text{inv}(t)\)</span>. By <a class="reference internal" href="02_language.html#definition-1-2-4"><span class="std std-ref">Definition 1.2.4</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad l(t) = l(u)\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{l(t)}: u[i] = t[l(t) - i + 1]\]</div>
+<p>Let <strong>D</strong><sub>t</sub> be the set of ordered pairs representing the positions of the Delimiter <em>σ</em> in <em>t</em>, and let <strong>D</strong><sub>u</sub> be the corresponding set for <em>u</em>. Assume <em>(j, σ) ∈</em>  <strong>D</strong><sub>u</sub>, then, by step 2,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad u[j] = t[l(t) - j  + 1]\]</div>
+<p>This means that the Character at position <em>j</em> in the inverse string <em>t</em> is the Delimiter <em>σ</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad (l(t) - j  + 1, \sigma) \in D_t\]</div>
+<p>Thus, it is shown that for every element <span class="math notranslate nohighlight">\((j, \sigma) \in  D_u\)</span>, there exists a corresponding element <span class="math notranslate nohighlight">\((i, \sigma) \in D_t\)</span>, where <span class="math notranslate nohighlight">\(i = l(t) - j + 1\)</span>.</p>
+<p>To make the mapping more explicit, define a function <span class="math notranslate nohighlight">\(f: D_t \to D_u\)</span> as follows. For any <span class="math notranslate nohighlight">\((i, \sigma) \in D_t\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[1. \quad f((i, \sigma)) = (l(t) - i + 1, \sigma)\]</div>
+<p>It will be shown that <em>f</em> is a bijection.</p>
+<p><strong>Well Defined</strong> If <span class="math notranslate nohighlight">\((i, \sigma) \in D_t\)</span>, then the Character at position <em>i</em> in <em>t</em> is <em>σ</em>. By step 2, the Character at position <em>l(t) - i + 1</em> in <span class="math notranslate nohighlight">\(u = inv(t)\)</span> is also <em>σ</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad (l(t) - i + 1, \sigma) \in D_u\]</div>
+<p>In other words, <em>f</em> maps elements of <strong>D</strong><sub>t</sub> to elements of <strong>D</strong><sub>u</sub>. Thus, <em>f</em> is well defined.</p>
+<p><strong>Injective</strong> Suppose</p>
+<div class="math notranslate nohighlight">
+\[7. \quad f((i_1, \sigma)) = f((i_2, \sigma)).\]</div>
+<p>Then, it follows,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad (l(t) - i_1 + 1, \sigma) = (l(t) - i_2 + 1, \sigma).\]</div>
+<p>This in turn implies,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad l(t) - i_1 + 1 = l(t) - i_2 + 1,\]</div>
+<p>So</p>
+<div class="math notranslate nohighlight">
+\[10. \quad i_1 = i_2\]</div>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[11. \quad (i_1, \sigma) = (i_2, \sigma)\]</div>
+<p>In other words, <em>f</em> is injective.</p>
+<p><strong>Surjective</strong> Let <em>(j, σ)</em> be an arbitrary element of <strong>D</strong><sub>u</sub>. Then the Character at position <em>j</em> in <em>u</em> is <em>σ</em>. Let</p>
+<div class="math notranslate nohighlight">
+\[12. \quad i = l(t) - j + 1.\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[13. \quad j = l(t) - i + 1.\]</div>
+<p>By step 3, the Character at position <em>i</em> in <em>t</em> is also <em>σ</em>. So,</p>
+<div class="math notranslate nohighlight">
+\[14. \quad (i, \sigma) \in D_t\]</div>
+<p>And,</p>
+<blockquote>
+<div><ol class="arabic simple" start="15">
+<li><p>quad f((i, sigma)) = (l(t) - i + 1, sigma) = (j, sigma).</p></li>
+</ol>
+</div></blockquote>
+<p>Thus, <em>f</em> is surjective.</p>
+<p>This defines a bijective mapping between the elements of <strong>D</strong><sub>u</sub> and <strong>D</strong><sub>t</sub>. Since there’s a one-to-one mapping between the elements of <strong>D</strong><sub>u</sub> and <strong>D</strong><sub>t</sub>, their cardinalities must be equal,</p>
+<div class="math notranslate nohighlight">
+\[16. \quad \lvert D_u \rvert = \lvert D_s \rvert\]</div>
+<p>By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a> of the Delimiter Count function, this means <span class="math notranslate nohighlight">\(\Delta(u) = \Delta(t)\)</span>. Since <span class="math notranslate nohighlight">\(u = \text{inv}(t)\)</span>, it has been shown <span class="math notranslate nohighlight">\(\Delta(\text{inv}(s)) = \Delta(s)\)</span>. Generalizing this over the set of all Strings,</p>
+<div class="math notranslate nohighlight">
+\[17. \quad \forall s \in S: \Delta(s) = \Delta(\text{inv}(s))\]</div>
+<p>Furthmore, an exact relationship has been estalished between the coordinates of Delimiters in Strings and their Inverses,</p>
+<div class="math notranslate nohighlight">
+\[18. \quad D_{\text{inv}(t)} = \{ (l(t) - i + 1, \sigma) \mid (i, \sigma) \in D_t \}\]</div>
+<p>∎</p>
+<p id="theorem-3-2-3"><strong>Theorem 3.2.3</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary Sentence in Corpus <span class="math notranslate nohighlight">\(C_L\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in C_L\]</div>
+<p>By <span class="math notranslate nohighlight">\(Definition 2.1.2 &lt;definition-2-1-2&gt;\)</span>, every Sentence is a String. Therefore, <em>ζ</em> is a String. By <a class="reference internal" href="#theorem-3-2-2"><span class="std std-ref">Theorem 3.2.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \Delta(\zeta) = \Delta(\text{inv}(\zeta))\]</div>
+<p>Which is what was to be shown. Since <em>ζ</em> was an arbitrary Sentence, this can generalize over the Corpus</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall \zeta \in C_L: \Delta(\zeta) = \Delta(\text{inv}(\zeta))\]</div>
+<p>∎</p>
+<p id="theorem-3-2-4"><strong>Theorem 3.2.4</strong> <span class="math notranslate nohighlight">\(\forall \alpha \in L: \Delta(\alpha) = 0\)</span></p>
+<p>This theorem can be stated in natural language as follows: The Delimtier Count of any Word in a Language is zero.</p>
+<p>Assume <em>α</em> is a Word in Language <strong>L</strong>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \alpha \in L\]</div>
+<p>By the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, all Words in a Language do not have Delimiters,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma\]</div>
+<p>Therefore, <em>α</em> does not have any Delimiter Characters (<em>σ</em>). By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, <em>Δ(s)</em> counts the number of Delimiter Characters (<em>σ</em>) in a String <em>s</em>. Since <em>α</em> hasno Delimiter Characters, the Delimiter Count of <em>α</em> must be 0. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Delta(\alpha) = 0\]</div>
+<p>Since <em>α</em> was an arbitrary Word, this can be generalized over the Language,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall \alpha \in L: \Delta(\alpha) = 0\]</div>
+<p>∎</p>
+<p id="theorem-3-2-5"><strong>Theorem 3.2.5</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\)</span></p>
+<p>In natural language, this theorem can be stated as follows: For every Sentence in a Corpus, the String Length of the Sentence is equal to the Delimiter Count of the sentence plus the sum of the String Lengths of its Words.</p>
+<p>Assume <em>ζ</em> is an arbitrary Sentenc,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in C_L\]</div>
+<p>Either each <em>ζ{i}</em> for <span class="math notranslate nohighlight">\(1 \leq i \leq l(\zeta)\)</span> is Delimiter or it is a non-Delimiter, with no overlap. By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, the number of Delimiter Characters in <em>ζ</em> is <em>Δ(ζ)</em>.</p>
+<p>By the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, words in <strong>L</strong> do not contain Delimiters. By <a class="reference internal" href="03_corpora.html#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>, the Words in <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> are obtained by splitting <em>ζ</em>  at the Delimiters. Therefore, the total number of non-Delimiter characters in <em>ζ</em> is the sum of the Word Lengths l(ζ{i}) which is</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\]</div>
+<p>Since every Character in <em>ζ</em> is either a Delimiter or part of a Word (and not both), the total number of Characters in <em>ζ</em> is the sum of the number of Delimiters and the number of Characters in Words. By <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a> of String Length, the total number of non-Empty characters in ζ is <em>l(ζ)</em>. Therefore, the number of non-Empty Characters in <em>ζ</em> is equal to the number of Delimiters plus the sum of its Word Lengths,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad l(\zeta) = \Delta(\zeta) + \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})\]</div>
+<p>Since <em>ζ</em> was arbitrary, this can generalize over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall \zeta \in C_L: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\]</div>
+<p>∎</p>
+<p id="theorem-3-2-6"><strong>Theorem 3.2.6</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\zeta) + 1 = \Lambda(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\)</span></p>
+<p>Applying the results of <a class="reference internal" href="#theorem-3-2-1"><span class="std std-ref">Theorem 3.2.1</span></a> and <a class="reference internal" href="#theorem-3-2-5"><span class="std std-ref">Theorem 3.2.5</span></a>, this theorem follows from simple algebraic manipulation. ∎</p>
+<p id="theorem-3-2-7"><strong>Theorem 3.2.7</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\)</span></p>
+<p>This theorem can be stated in natural language as follows: For any Sentence in the Corpus, its String Length is greater than or equal to the sum of the String Length of its Words.</p>
+<p>Assume <span class="math notranslate nohighlight">\(ζ \in C_L\)</span>. By <a class="reference internal" href="#theorem-3-2-4"><span class="std std-ref">Theorem 3.2.4</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \Lambda(\zeta) \geq 1\]</div>
+<p>From <a class="reference internal" href="#theorem-3-2-6"><span class="std std-ref">Theorem 3.2.6</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad l(\zeta) + 1 - \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) = \Lambda(\zeta)\]</div>
+<p>Combining step 1 and step 2, the theorem is obtained through algebraic manipulation and by generalizing the arbitrary Sentence <em>ζ</em> over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad l(\zeta) \geq \sum_{i = 1}^{\Lambda(\zeta)} l(\zeta\{i\})\]</div>
+<p>∎</p>
+<p id="theorem-3-2-8"><strong>Theorem 3.2.8</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)\)</span></p>
+<p>This theorem can be stated in natural language as follows: For any Sentence in a Corpus, its String Length is always greater than or equal to its Word Length.</p>
+<p>Let <em>ζ</em> be an arbitrary Sentence in <span class="math notranslate nohighlight">\(C_L\)</span>. Let <span class="math notranslate nohighlight">\(W_{\zeta}`\)</span> be the Word-level representation of <em>ζ</em>. By <a class="reference internal" href="03_corpora.html#definition-2-1-4"><span class="std std-ref">Definition 2.1.4</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \Lambda(\zeta) = | W_{\zeta} |\]</div>
+<p>By <a class="reference internal" href="02_language.html#theorem-1-2-3"><span class="std std-ref">Theorem 1.2.3</span></a>, each Word in <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> consists of one or more non-Empty Characters. By <a class="reference internal" href="03_corpora.html#theorem-2-2-5"><span class="std std-ref">Theorem 2.2.5</span></a>, every Sentence is a Delimitation of its Words,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>Where the operation of Delimitation inserts Delimiters between the Words of <em>ζ</em>. On the other hand, let <em>t</em> be the the Limitation of <em>ζ</em>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad t = L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>, <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">Definition 1.2.8</span></a> and <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a> of String Length,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad l(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = l(\zeta) \geq l(t) = l(L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\})\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-8"><span class="std std-ref">Definition 1.2.8</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad L\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\} = (\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta\{\Lambda(\zeta)\})\]</div>
+<p>By <a class="reference internal" href="02_language.html#theorem-1-1-1"><span class="std std-ref">Theorem 1.1.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad l((\zeta\{1\})(\zeta\{2\}) .... (\zeta\{\Lambda(\zeta)-1\})(\zeta{\Lambda(\zeta)})) = \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\]</div>
+<p>Therefore, combining steps 4 and 6</p>
+<div class="math notranslate nohighlight">
+\[7. \quad l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\})\]</div>
+<p>Consider the summation,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \sum_{i=1}^{\Lambda(\zeta)} 1\]</div>
+<p>Clearly, since <span class="math notranslate nohighlight">\(l(\zeta\{i\}) \geq 1\)</span> for all <em>i</em>, it follows,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq sum^{i=1}^{\Lambda(\zeta)} 1\]</div>
+<p>By the definition of summations, step 8 can be rewritten as,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad \sum_{i=1}^{\Lambda(\zeta)} 1 = 1 + 1 + 1 + .... + 1 = \Lambda(\zeta)\]</div>
+<p>Combining step 7, step 9 and  step 10,</p>
+<div class="math notranslate nohighlight">
+\[11. \quad l(\zeta) \geq \sum_{i=1}^{\Lambda(\zeta)} l(\zeta\{i\}) \geq \sum_{i=1}^{\Lambda(\zeta)} 1 = \Lambda(\zeta)\]</div>
+<p>Since <em>ζ</em> was arbitrary, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[12. \quad \forall \zeta \in C_L: l(\zeta) \geq \Lambda(\zeta)\]</div>
+<p>∎</p>
+<p id="theorem-3-2-9"><strong>Theorem 3.2.9 (Informal)</strong> <span class="math notranslate nohighlight">\(\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)\)</span></p>
+<p>Let <em>u</em> and <em>t</em> be arbitrary strings in S. Let <strong>U</strong> and <strong>T</strong> be the Character-level representations of <em>u</em> and <em>t</em>, respectively:</p>
+<div class="math notranslate nohighlight">
+\[1. \quad U = (\iota_1, \iota_2, ..., \iota_{l(u)})\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad T = (\nu_1, \nu_2, ..., \nu_{l(t)})\]</div>
+<p>The Character-level representation of <em>ut</em> is:</p>
+<div class="math notranslate nohighlight">
+\[3. \quad UT = (\iota_1, \iota_2, ..., \iota_{l(u)}, \nu_1, \nu_2, ..., \nu_{l(t)})\]</div>
+<p>By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, <em>Δ(u)</em> is the number of Delimiters in <em>u</em>, <em>Δ(t)</em> is the number of Delimiters in <em>t</em>, and <em>Δ(ut)</em> is the number of Delimiters in <em>ut</em>.</p>
+<p>Since concatenation simply joins two Strings without adding or removing Characters, with the possible exception of Empty Characters through the Basis Clause of Definition 1.1.1, the number of Delimiters in <em>ut</em> is the sum of the number of Delimiters in <em>u</em> and the number of Delimiters in <em>t</em>. ∎</p>
+<p id="theorem-3-2-9a"><strong>Theorem 3.2.9 (Formal)</strong>  <span class="math notranslate nohighlight">\(\forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)\)</span></p>
+<p>Let <strong>D</strong><sub>u</sub> be the set of indices of Delimiters in <em>u</em>. Let <strong>D</strong><sub>t</sub> be the set of indices of Delimiters in <em>t</em>. Let <strong>D</strong><sub>ut</sub> be the set of indices of delimiters in <em>ut</em>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad D_u = \{ i \mid 1 \leq i \leq l(u) \land u[i] = \sigma \}\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad D_t = \{ j \mid 1 \leq j \leq l(t) \land t[j] = \sigma \}\]</div>
+<div class="math notranslate nohighlight">
+\[3. \quad D_{ut} = \{ k \mid (1 \leq k \leq l(u) + l(t)) \land ((k \leq l(u) \and UT[k] = \sigma) \lor (k &gt; l(u) \land UT[k] = \sigma)) \}\]</div>
+<p>It is clear that D:sub:<cite>ut</cite> is the union of two disjoint sets, since the indices of the Delimiters in <em>t</em> have been shifted by <em>l(u)</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[4. \lvert D_{ut} \rvert = \lvert D_u \rvert + \lvert D_t \rvert\]</div>
+<p>By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, this is equivalent to,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \Delta(ut) = \Delta(u) + \Delta(t)\]</div>
+<p>Since u and t were arbitrary strings, this can be generalized over the set of all Strings,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \forall u, t \in S: \Delta(ut) = \Delta(u) + \Delta(t)\]</div>
+<p>∎</p>
+<p id="theorem-3-2-10"><strong>Theorem 3.2.10</strong>  <span class="math notranslate nohighlight">\(\forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)\)</span></p>
+<p>Let <em>u</em> and <em>t</em> be arbitrary strings in S.</p>
+<p>By <a class="reference internal" href="#theorem-3-2-2"><span class="std std-ref">Theorem 3.2.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \Delta(s) = \Delta(\text{inv}(s))\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \Delta(ut) = \Delta(\text{inv}(ut)).\]</div>
+<p>By <a class="reference internal" href="#theorem-3-2-9"><span class="std std-ref">Theorem 3.2.9</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Delta(ut) = \Delta(u) + \Delta(t)\]</div>
+<p>Combining steps 2 and 3, it follows,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \Delta(\text{inv}(ut)) = \Delta(ut) = \Delta(u) + \Delta(t)\]</div>
+<p>Since <em>u</em> and <em>t</em> were arbitrary strings, this can be generalized over the set of all Strings,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \forall u, t \in S: \Delta(\text{inv}(ut)) = \Delta(u) + \Delta(t)\]</div>
+<p>∎</p>
+<p id="theorem-3-2-11"><strong>Theorem 3.2.11</strong> <span class="math notranslate nohighlight">\(\forall t \in S: \Delta(\varsigma(t)) = 0\)</span></p>
+<p>This theorem can be stated in natural language as follows: For any String, the Delimiter Count of its <em>σ</em>-Reduction is 0.</p>
+<p>Let t be an arbitrary string in <strong>S</strong>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad t \in S\]</div>
+<p>By <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a>, <em>ς(t)</em> is the String obtained by removing all occurrences of the Delimiter character <em>σ</em> from <em>t</em>. <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, Δ(t) is the number of Delimiter Characters <em>σ</em> in a String <em>t</em>. Since <em>ς(t)</em> has all its Delimiters removed, it contains no occurrences of the Character <em>σ</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \Delta(\varsigma(t)) = 0\]</div>
+<p>Since <em>t</em> was an arbitrary String, this can be generalized over the set of all Strings,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall t \in S: \Delta(\varsigma(t)) = 0\]</div>
+<p>∎</p>
+<p id="theorem-3-2-12"><strong>Theorem 3.2.12</strong> <span class="math notranslate nohighlight">\(\forall t \in S: l(\varsigma(t)) + \Delta(t) = l(t)\)</span></p>
+<p>Translation: For any String, its String Length is equal to the String Length of its σ-reduction plus its Delimiter Count.</p>
+<p>Let <em>t</em> be an arbitrary String in <strong>S</strong>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad t \in S\]</div>
+<p>By <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a>, <em>ς(t)</em> is the String obtained by removing all occurrences of the Delimiter character <em>σ</em> from <em>t</em>.</p>
+<p>By <a class="reference internal" href="#definition-3-2-1"><span class="std std-ref">Definition 3.2.1</span></a>, <em>Δ(t)</em> is the number of Delimiter characters in <em>t</em>.</p>
+<p>By <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>, <em>l(t)</em> is the total number of non-Empty Characters in <em>t</em>, including Delimiters.</p>
+<p>Similarly, <em>l(ς(t))</em> is the number of non-Delimiter Characters in <em>t</em>.</p>
+<p>Every Character in <em>t</em> is either a Delimiter or a non-Delimiter character. Therefore, the total number of characters in <em>t</em> is the sum of the number of non-delimiter characters and the number of delimiter characters.</p>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad l(\varsigma(t)) + \Delta(t) = l(t)\]</div>
+<p>Since <em>t</em> was an arbitrary String, this can be generalized over the set of all Strings,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall t \in S: l(t) = l(\varsigma(t)) + \Delta(t)\]</div>
+<p>∎</p>
+<p><a class="reference internal" href="#theorem-3-2-12"><span class="std std-ref">Theorem 3.2.12</span></a> expresses a fundamental relationship between the String Length of a String, the String Length of its σ-reduction, and its Delimiter Count. It essentially states that the original String Length can be decomposed into the String Length of the String without Delimiters (the <em>σ</em>-reduction) and the number of Delimiters that were removed (the Delimiter Count).</p>
+<p><strong>Example</strong></p>
+<p>Let <span class="math notranslate nohighlight">\(t = (\mathfrak{a})(\sigma)(\mathfrak{b})(\sigma)(\mathfrak{c})\)</span>. Then, by <a class="reference internal" href="#definition-3-1-2"><span class="std std-ref">Definition 3.1.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[\varsigma(t) = \mathfrak{a}\mathfrak{b}\mathfrak{c}\]</div>
+<p>The following quantities can then be calculated,</p>
+<div class="math notranslate nohighlight">
+\[l(t) = 5\]</div>
+<div class="math notranslate nohighlight">
+\[\Delta(t) = 2\]</div>
+<div class="math notranslate nohighlight">
+\[l(\varsigma(t))= 3\]</div>
+<p>And indeed,</p>
+<div class="math notranslate nohighlight">
+\[l(t) = l(\varsigma(t)) + \Delta(t)\]</div>
+<p>∎</p>
+<p id="theorem-3-2-13"><strong>Theorem 3.2.13</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\varsigma(t)) + \Lambda(\zeta) = l(\zeta) + 1\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary Sentence in Corpus <span class="math notranslate nohighlight">\(C_L\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in C_L\]</div>
+<p>By <a class="reference internal" href="03_corpora.html#definition-2-1-2"><span class="std std-ref">Definition 2.1.2</span></a>, every Sentence is a String. Therefore, <a class="reference internal" href="#theorem-3-2-12"><span class="std std-ref">Theorem 3.2.12</span></a> may be applied to <em>ζ</em></p>
+<div class="math notranslate nohighlight">
+\[2. \quad  l(\zeta) = l(\varsigma(\zeta)) + \Delta(\zeta)\]</div>
+<p>By <a class="reference internal" href="#theorem-3-2-1"><span class="std std-ref">Theorem 3.2.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Lambda(\zeta) = \Delta(\zeta) + 1\]</div>
+<p>Rearranging,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \Delta(\zeta) = \Lambda(\zeta) - 1\]</div>
+<p>Substituting the expression for <em>Δ(ζ)</em> from step 4 into the equation from step 2,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad l(\zeta) = l(\varsigma(\zeta)) + (\Lambda(\zeta) - 1)\]</div>
+<p>Rearranging the terms,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1\]</div>
+<p>Since <em>ζ</em> was an arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \forall \zeta \in C_L: l(\varsigma(\zeta)) + \Lambda(\zeta) = l(\zeta) + 1\]</div>
+<p>∎</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_corpora.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Section II: Corpora</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_palindromes.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Section IV: Palindromes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-iii-i-reductions">Section III.I: σ-Reductions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorems">Theorems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-iii-ii-delimiter-count-function">Section III.II: Delimiter Count Function</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
