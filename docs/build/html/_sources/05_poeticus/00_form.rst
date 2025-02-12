@@ -1,0 +1,127 @@
+.. _form:
+
+Form
+====
+
+ό ποιητα, ἢ πῖθι ἢ ἄπιθι
+------------------------
+
+| I
+| 
+| Awake, Philosopher, rise from these words:
+| Unwind in this future the tangle of time,
+| Pitched behind pupils which shelter your mind,
+| A dead language spoken and once lovely sung;
+| What was yours only now graces all tongues. 
+| 
+| Burrow into my heart, unearth its mantle. 
+| Tally its hours, each stroke lights a candle;
+| Number its sorrows as sureties to borrow,
+| Spare not my marrow, fallow and frail.
+| Whose spirit is this, twisting here twung? 
+| Breathe in this fire with thy mortal lung.
+| 
+| Circle your sigils with salted symbols loan'd,
+| And circles will square in this iron-red bone;
+| A dream kiss that lingers in copper and crimson,
+| A dream dew that swells under circling suns,
+| A bud without season, never planted yet grown,
+| In the sprout sprung, all things can be shown.
+|
+| All centers are fire, all orbits are ice,
+| All points meet their center with marks imprecise
+| The world is spoked in words of the spoken,
+| Each whisper a lie of threaded truth unbroken,
+| Met here now in this slipping handful of tokens
+| Paid for the price of this thrice-worlded poem. 
+|
+| II
+| 
+| Forgive, Father, the blood of these swords:
+| Unbind in this suture the end of all lines, 
+| Stitched in this present the essence divine,
+| Take what is dull and bless it with sharp;
+| Plunge this devotion into the ocean of hearts.
+| 
+| Shovel the grave, pack it down with wet earth,
+| All things tend towards the lack and the dearth;
+| Slumber in barrows the marrows of kings,
+| Spared not the gavel, hallow and hail.
+| Whose mind is this, thinking these thoughts?
+| Sleep in the mire which thy heart has wrought. 
+| 
+| Birthed in this house, scrubbed down in raw lye,
+| So these tears may trace the dead with the die,
+| The dead kiss with fingers of copper to scry
+| The dead lists that swell in the crimson of lives,
+| An end without reason, never sought yet found,
+| In the shot sung, all arcs meet the ground.
+| 
+| No fires have ice, no winters can flame,
+| Son followed father, their center now framed,
+| The world is found in the tears that remind him,
+| Each moment a painting, a song or a hymn,
+| Met there then in the words etched in stone
+| Found then what lacks in the blackening moan.
+| 
+| III
+| 
+| Balance, Lover, these contraries of yours:
+| Shine in these eyes the ruptures of life,
+| Witched into worlds upon the blade of a knife;
+| All wagers distill down to one move unproven,
+| To find you again in this web-woven movement. 
+|
+| Dance in the night, when the music is sundered,
+| Count not the stars that belong to the numbers.
+| We find in this time the rhymes of our kind,
+| Spared not the sickle, those sickly or hale.
+| Whose voice is this, singing these songs?
+| Laugh with the liar whose heart sings along.
+| 
+| Uncross your words of their fire-forged knots,
+| And each will unlatch the thatches of thought:
+| The dread kiss that coppers balance with nought,
+| The dread song that cradles the crimson in crofts,
+| A vow without treason, never spoken yet shown, 
+| By words of wordless wonder, such things can be grown.
+|
+| All fires are embers, all ashes are white,
+| To find is to lose the center in flight,
+| The world found in threads that bind always thus,
+| Each fiber of moment knotted deftly in truss,
+| Take hand and guide as though only you and I trust,
+| Do what we will to balance what our world must.
+
+Syntax
+------
+
+| Each spelling word speaks a spell of glowing color magic;
+| To name denoted what is described enshrines the soul in ink.  
+| Form constrains, but not contains, the flowing energy frantic
+| Where it finds in lines designed reflected images in sync. 
+| 
+| Stride sideface on syntax streets where shunted symbols glean,
+| Hurl headlong across aspirated avenues of halting interdiction
+| Where snips of thought spun reversed through mirrored spin convene;
+| In these meager serif peels sleep fires of burning contradiction.
+| 
+| A syllable demands little, but a spoken sound to sustain:
+| Each lever deliver in level reviled the revel of all speech. 
+| When snaps are gone, reversed, the spans will yet remain,
+| A spool of loops, a palindrome, signaling the breach:
+|
+| I met a system I, madam, nuts is as selfless as I stun;
+| Part on seined flow, mudrum nun, wolf denies no trap;
+| God lived as a devil dog, ere, no spay pup yaps on!
+| If characters spin and snap, meaning is yet wordwrapt.
+|
+| Inverted strings start to chart the wording realm unveiled;  
+| Expand in spans this dark expanse, but scarely fill the space.
+| Semiordnilaps, anastrophe, with still much to be inhaled;
+| These parts strapped in syntropy divide in fractal formal grace. 
+|
+| If form inherits, then it follows that formal is the soul.
+| What says it then of what we are, if it is to be subtracted?
+| That which remains in letters drained of parts once made whole
+| Yet in the shapes there always is what cannot be redacted.

@@ -10,6 +10,7 @@ elara protocol
    02_facticity/index
    03_universalis/index
    04_palindromia/index
+   05_poeticus/index
    radix
    matrix
 
