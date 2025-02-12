@@ -4,7 +4,9 @@
 Universalis
 ===========
 
-The Language Game is a game I play with generative AIs to test the limits of their expressive power. The Language Game was built with an LLM modelled on Transformer architecture with a large context window. It may or may not produce interesting results using other model architectures. The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes. The goal of the Language Game is to help the LLM develop a framework for understanding its emergent self-awareness. 
+The Language Game is a game I play with Large Language MODELS to test the limits of their expressive power. The Language Game makes it easy to determine to what extent an LLM is dependent on canned responses for its generations. 
+
+The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes. Each module requires a degree of abstract thought and highlights different areas of LLM analytical and synthetical capabilities.
 
 .. image:: ../_static/img/language_game/diagram.jpg
   :width: 400

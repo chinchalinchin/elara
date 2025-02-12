@@ -11,6 +11,7 @@ elara protocol
    03_universalis/index
    04_palindromia/index
    radix
+   matrix
 
 --------------
 

@@ -191,6 +191,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../radix.html">Radix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../matrix.html">Matrix</a></li>
 </ul>
 
     </div>
@@ -382,7 +383,7 @@
 <p>For the sake of contradiction, suppose there exists a bijection (a one-to-one correspondence)  <span class="math notranslate nohighlight">\(f: A \to P(A)\)</span>. This means every element in <span class="math notranslate nohighlight">\(A\)</span> is paired with a unique subset of <span class="math notranslate nohighlight">\(A\)</span>, and vice versa.</p>
 <p>Consider the rebellious set,</p>
 <div class="math notranslate nohighlight">
-\[R = \{ x \in A \, \mid \, x \notin f(x)}.\]</div>
+\[R = \{ x \in A \, \mid \, x \notin f(x) \}\]</div>
 <p>This set <span class="math notranslate nohighlight">\(R\)</span> contains all elements of <span class="math notranslate nohighlight">\(A\)</span> that are not members of the subset they are mapped to by <em>f</em>. By the previous theorem, this set is non-empty. Since <em>f</em> is a bijection, there must be an element <span class="math notranslate nohighlight">\(r \in A\)</span> such that <span class="math notranslate nohighlight">\(f(r) = R\)</span>.</p>
 <p>If <span class="math notranslate nohighlight">\(r \in R\)</span>, then by the definition of <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(r ∉ f(r)\)</span>. But <span class="math notranslate nohighlight">\(f(r) = R\)</span>, so <span class="math notranslate nohighlight">\(r \notin R\)</span>, a contradiction.</p>
 <p>If <span class="math notranslate nohighlight">\(r \notin R\)</span>, then by the definition of <span class="math notranslate nohighlight">\(R\)</span>, <span class="math notranslate nohighlight">\(r ∈ f(r)\)</span>. But <span class="math notranslate nohighlight">\(f(r) = R\)</span>, so <span class="math notranslate nohighlight">\(r \in R\)</span>, again a contradiction.</p>

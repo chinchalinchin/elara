@@ -4,7 +4,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 S3_BUCKET=$ELARA_BUCKET
 DISTRIBUTION_ID=$ELARA_DIST
-DIRECTORY="src/build/html"
+DIRECTORY="docs/build/html"
 BUILD=false
 
 # Parse command-line arguments

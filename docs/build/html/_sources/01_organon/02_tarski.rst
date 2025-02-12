@@ -56,7 +56,7 @@ Mereology
 
 .. math::
 
-    \forall x: \forall y: ((x \subeset y) \land (y \subset x) \to x = y)
+    \forall x: \forall y: ((x \subset y) \land (y \subset x) \to x = y)
 
 ∎
 
