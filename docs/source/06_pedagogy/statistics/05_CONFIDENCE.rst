@@ -1,4 +1,4 @@
-.. _confidence_intervals:
+.. _confidence-intervals:
 
 ====================
 Confidence Intervals
@@ -6,6 +6,8 @@ Confidence Intervals
 
 Definitions
 ===========
+
+.. _critical-value-definition:
 
 Critical Value
 --------------
@@ -28,6 +30,8 @@ TODO
 	
 		P(\frac{\bar{\mathcal{X}}-\mu}{\mathcal{S}} \leq t_{\alpha}) = 1 - \alpha
 
+.. _standard-error-definition:
+
 Standard Error
 --------------
 
@@ -41,7 +45,9 @@ TODO
 	.. math::
 	
 		s_{\theta} = E( (\theta - E(\hat{\theta}))^2 )
-		
+
+.. _margin-of-error-definition:
+
 Margin of Error
 ---------------
 
@@ -52,7 +58,9 @@ Margin of Error
 	.. math::
 	
 		\text{MOE} = c \rvert \cdot s_{\theta}		
-		
+	
+.. _confidence-interval-definition:
+
 Intervals
 ---------
 
@@ -65,6 +73,8 @@ Intervals
 		\hat{\theta} - \text{MOE}_{\theta} \leq \theta \leq \hat{\theta} + \text{MOE}_{\theta}
 
 TODO
+
+.. _poulation-proportion-confidence-interval:
 
 Population Proportion
 =====================
@@ -99,6 +109,7 @@ Intervals
 
 TODO
 
+.. _population-mean-confidence-interval:
 
 Population Mean
 ===============
@@ -122,7 +133,7 @@ Difference of Two Means
 		\text{s}_{\bar{x_2}_2 - \bar{x_1}} = \sqrt{ \frac{ s_{ \bar{x_1} } }{n_1} + \frac{ s_{ \bar{x_2}} }{n_2} }
 
 Margin of Error
---------------
+---------------
 
 .. topic:: Population Mean Margin of Error, Known Standard Deviation
 

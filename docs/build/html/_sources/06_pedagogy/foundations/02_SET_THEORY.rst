@@ -149,12 +149,12 @@ Venn Diagrams
 
 A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set **A** shown against the universal set **S**, 
 
-.. image:: ../../_static/imgs/sets/sets_simple.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_simple.jpg
 	:align: center
 
 You will sometimes set *Venn Diagrams* with the elements of the sets written in, as in the following picture,
 
-.. image:: ../../_static/imgs/sets/sets_simple_with_elements.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_simple_with_elements.jpg
 	:align: center
 
 *Venn Diagrams* are useful for visualizing :ref:`set_relations`. For this reason, we will see more complex examples of *Venn Diagrams* in the next section.
@@ -185,7 +185,7 @@ To say the same thing in a different way, if the element *x* belongs to **A**, t
 
 The relation of *subset* can be seen in the following *Venn Diagram*, 
 
-.. image:: ../../_static/imgs/sets/sets_subset.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_subset.jpg
 
 This diagram represents the relationship :math:`A \subseteq B`.
 
@@ -310,7 +310,7 @@ The set containing elements that do not belong to the set **A**.
 
 The complement can be visualized with the following *Venn Diagram*,
 
-.. image:: ../../_static/img/sets/sets_complement.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_complement.jpg
 
 .. tip:: 
 
@@ -359,13 +359,13 @@ We have to be careful with *Venn Diagrams* that represent unions, because the tw
 
 The first case, where the two sets have no elements in common is shown below,
 
-.. image:: ../../_static/img/sets/sets_union_disjoint.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_union_disjoint.jpg
 
 The union would be represented by *both* circles. Notice the circles do not touch. Sets that have no elements in common are called *disjoint*. 
 
 The second case, where the two sets have elements in common is shown in the next diagram,
 
-.. image:: ../../_static/img/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
 
 The union would be represented by the entire area of both circles. Notice the circles share some elements in this case. Sets that have elements in common, but are not subsets in either direction (i.e. neither :math:`A \subseteq B` nor :math:`B \subseteq A`), are called *overlapping*.
 
@@ -412,7 +412,7 @@ As in the union, there are two cases we need to consider when representing the i
 
 The first case, where the two sets have elements in common is shown in the next diagram,
 
-.. image:: ../../_static/img/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
 
 The intersection is represented by where the circles meet. In the case of *overlapping* sets, this is non-empty,
 
@@ -422,7 +422,7 @@ The intersection is represented by where the circles meet. In the case of *overl
 
 The second case, where the two sets have no elements in common is shown below,
 
-.. image:: ../../_static/img/sets/sets_union_disjoint.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_union_disjoint.jpg
 
 The intersection is represented by where the circles meet. In the case of *disjoint sets*, the circles do not meet. Thus, 
 
@@ -910,7 +910,7 @@ The number of elements in **A** or **B** is equal to the number of elements in *
 
 This is another theorem most easily understood by considering the following :ref:`venn diagram <venn_diagrams>`,
 
-.. image:: ../../_static/img/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
 	:align: center
 
 The area encompassed by both circles is the union :math:`A \cup B`. The overlap in the circles is intersection :math:`A \cap B`. 
@@ -972,7 +972,7 @@ The number of elements in any set **A** plus the number of elements in its compl
 
 This theorem follows from the :ref:`venn diagram <venn_diagrams>` of a set with its complement,
 
-.. image:: ../../_static/img/sets/sets_complement.jpg 
+.. image:: ../../_static/img/mathematics/sets/sets_complement.jpg 
 	:align: center
 
 It can proved formally as follows,
@@ -1183,7 +1183,7 @@ The *square of opposition* is constructed by first drawing a table,
 
 In the entries of this table, you draw :ref:`venn_diagrams` that represent the intersection of the row and column. Putting the results together, we get the following picture,
 
-.. image:: ../../_static/img/sets/square_of_opposition.jpg
+.. image:: ../../_static/img/mathematics/sets/square_of_opposition.jpg
 
 Notice the diagonals of the picture, the line that connects the top left to the bottom right and the line that connects the top right to the bottom left, form the contradictory pairs of propositions, namely,
 

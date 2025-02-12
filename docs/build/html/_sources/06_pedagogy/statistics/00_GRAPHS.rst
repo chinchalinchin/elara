@@ -220,7 +220,7 @@ With these definitions in hand, we can think of the table being filled like so,
 		
 		the outcome of :math:`\text{yes}_{t}` and :math:`\text{yes}_{e}` is *in* the event :math:`E \cap T`.
 	
-The *joint probability* (*percentage*) of two *events* occuring is given by :ref:`classical definition of probability<classical_definition>`. For example, the percentage of people who have seen the *Empire Strkes Back* and the *Two Towers*,
+The *joint probability* (*percentage*) of two *events* occuring is given by :ref:`classical definition of probability<classical-definition-of-probability>`. For example, the percentage of people who have seen the *Empire Strkes Back* and the *Two Towers*,
 
 .. math::
 
@@ -546,7 +546,7 @@ If you are given a sample of *n* data points :math:`S = \{ x_1, x_2, ... , x_n \
 
 .. note:: 
 
-    Using the :ref:`ceiling_function` from a future section, we could simply write,
+    Using the :ref:`ceiling-function` from a future section, we could simply write,
 
     .. math::
 
@@ -840,18 +840,18 @@ A histogram where the classes are symmetric and decreasing around a common point
 
 The line of symmetry in a perfectly symmetrical distribution is the :ref:`median`. The reason for this can seen by equating the *area* under the distribution with the proportion of the sample that belongs to that area. Since the *areas* on either side of a symmetric distribution are equal,
 
-.. image:: ../../_static/img/statistics/normal_distribution_graphic.jpg
+.. image:: ../../_static/img/mathematics/statistics/normal_distribution_graphic.jpg
 
 It follows these areas both represent fifty percent of the distribution. 
 
 A *normal distribution* tells us classes closer to the :ref:`median` are more likely to be observed.
 
 Example
-    :download:`Old Faithful Data Set <../../_static/csv/datasets/old_faithful_data.csv>`.
+    :download:`Old Faithful Data Set <../../_static/csv/datasets/scientific/old_faithful_data.csv>`.
 
 *Old Faithful* is a famous hot-water geyser in Yellowstone National Park that erupts every 45 minutes to 2 hours. 
 
-.. image:: ../../_static/img/context/old_faithful.jpg
+.. image:: ../../_static/img/context/scientific/old-faithful.jpg
     :width: 200
     :align: center
 
@@ -873,7 +873,7 @@ A histogram where two classes are more frequent than the other classes in the di
 .. plot:: _plots/histograms/histogram_bimodal.py
 
 Example
-    :download:`Pigeon Racing Speeds <../../_static/csv/datasets/pigeon_racing_times_data.csv>`.
+    :download:`Pigeon Racing Speeds <../../_static/csv/datasets/cultural/pigeon_racing_times_data.csv>`.
 
 Skewed
 ******
@@ -888,7 +888,7 @@ A *skewed* distribution has *tails*, indicating the distribution is not symmetri
 .. plot:: _plots/histograms/histogram_skewed_right.py
 
 Example
-    :download:`here <../../_static/csv/datasets/roman_emperors_data.csv>`.
+    :download:`here <../../_static/csv/datasets/historical/roman_emperors_data.csv>`.
 
 .. note::
 
@@ -1064,7 +1064,7 @@ Distribution Shapes
 
 A boxplot provides another window into a distribution by revealing the characteristic features of important distribution *shapes*.
 
-The comparative lengths of the boxplot *whiskers* show us in what direction the distribution is being pulled by :ref:`outliers <outliers>`.
+The comparative lengths of the boxplot *whiskers* show us in what direction the distribution is being pulled by :ref:`outliers`.
 
 For this last reason, *boxplots* are often useful graphical tools for quickly identifying *outliers*. We will talk more about how to use *boxplots* to identify outlying observations when we get to the :ref:`interquartile-range` descriptive statistic in the next section.
 

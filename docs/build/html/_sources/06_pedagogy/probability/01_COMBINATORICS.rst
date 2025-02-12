@@ -25,7 +25,7 @@ The factorial of a number *n*, denoted *n!*, is the product of all the numbers u
 
 *0!* is undefined and taken to be *1* by convention.
 
-.. _power_set:
+.. _power-set:
 
 Power Set
 ---------
@@ -40,13 +40,13 @@ The *Power Set* of a set **A**, or more simply the *Power Set of A*, denoted :ma
 
     Then :math:`\mathcal{P}(A) = \{ \{\}, \{a\}, \{b\}, \{a, b\} \}`
 
-We can define the *Power Set* of a set **A** formally by quantifying over all sets in the :ref:`Sample Space<sample_space>` (:ref:`Universal Set <universal_set>`) and imposing the condition we only look at subsets of a given set **A**
+We can define the *Power Set* of a set **A** formally by quantifying over all sets in the :ref:`Sample Space <sample-space>` (:ref:`Universal Set <universal-set>`) and imposing the condition we only look at subsets of a given set **A**
 
 :math:`\forall B: B \subseteq A \implies B \in \mathcal{P}(A)`
 
 In English, "for all *B*, if *B* is a subset of *A*, then *B* belongs to the *Power Set of A*"
 
-.. _counting_principles:
+.. _counting-principles:
 
 Counting Principles
 ===================
@@ -58,13 +58,13 @@ Suppose you live in the aptly named *Town A* and are planing a road trip to the 
 
 Suppose further there are two routes from *Town A* to *Town B*, and there are three routes from *Town B* to *Town C*. Let us call the routes from *Town A* to *Town B* *a* :sub:`1` and *a* :sub:`2`, respectively. Let us call the routes from *Town B* to *Town C* *b* :sub:`1`, *b* :sub:`2`, and *b* :sub:`3`, respectively. This setup is depicted in the following diagram,
 
-.. image:: ../../_static/img/combinatorics/combinatorics_road_trip.png
+.. image:: ../../_static/img/mathematics/combinatorics/combinatorics-road-trip.png
    :width: 60%
    :align: center
 
 How many different routes can you take from *Town A* to *Town C*, by way of *Town B*?
 
-Before toggling the solution below, try and figure out the answer by drawing arrows from *Town A* to *Town B*, and then from *Town B* to *Town C* that represent the possible routes you can take and then count up each distinct route. In other worlds, generate a :ref:`Sample Space<sample_space>` for this "experiment".
+Before toggling the solution below, try and figure out the answer by drawing arrows from *Town A* to *Town B*, and then from *Town B* to *Town C* that represent the possible routes you can take and then count up each distinct route. In other worlds, generate a :ref:`Sample Space <sample-space>` for this "experiment".
 
 .. collapse:: Solution
 
@@ -72,13 +72,13 @@ Before toggling the solution below, try and figure out the answer by drawing arr
 
     Each choice represents a branch. Every time we make a choice, we are narrowing down the set of possible outcomes. With that in mind, we can represent each choice as a *branch* in a tree, as in the following diagram,
 
-    .. image:: ../../_static/img/combinatorics/combinatorics_tree_diagram.png
+    .. image:: ../../_static/img/mathematics/combinatorics/combinatorics-tree-diagram.png
         :width: 60%
         :align: center
 
-    The number of possible routes is equal to the number of endpoints in this graph. In this case, there are 6 possible routes we can take, where each route is represented by a particular branch of the tree. These types of graphs are called :ref:`tree diagrams <tree_diagrams>`, for this reason. They are very useful for visualizing the sample spaces of experiments that are composed of successive, independent choices, as in this example. 
+    The number of possible routes is equal to the number of endpoints in this graph. In this case, there are 6 possible routes we can take, where each route is represented by a particular branch of the tree. These types of graphs are called :ref:`tree diagrams <tree-diagrams>`, for this reason. They are very useful for visualizing the sample spaces of experiments that are composed of successive, independent choices, as in this example. 
 
-    We may also see the solution by enumerating every possible choice in :ref:`list_notation`,
+    We may also see the solution by enumerating every possible choice in :ref:`list-notation`,
 
     .. math::
         
@@ -88,7 +88,7 @@ Before toggling the solution below, try and figure out the answer by drawing arr
 
         \implies n(G) = 6
 
-.. _counting_principle:
+.. _counting-principle:
 
 The Fundamental Counting Principle
 ----------------------------------
@@ -121,7 +121,7 @@ You are trying to figure out what to outfit to wear. In your closet, you have a 
     
     We have two sets in this problem: the set of shirts in our closet, and the set of pants in our dresser. 
 
-    .. image:: ../../_static/img/combinatorics/combinatorics_example.png
+    .. image:: ../../_static/img/mathematics/combinatorics/combinatorics-example.png
         :width: 60%
         :align: center
 
@@ -150,7 +150,7 @@ You are trying to figure out what to outfit to wear. In your closet, you have a 
 Replacement
 ***********
 
-.. _with_replacement:
+.. _with-replacement:
 
 .. topic:: With Replacement
 
@@ -160,7 +160,7 @@ Replacement
 
 TODO
 
-.. _without_replacement:
+.. _without-replacement:
 
 .. topic:: Without Replacement
 
@@ -170,26 +170,26 @@ A hand of cards in a card game such as poker is dealt from the deck *without rep
 
 TODO
 
-.. _tree_diagrams:
+.. _tree-diagrams:
 
 Tree Diagrams
 -------------
 
 TODO
 
-A *tree diagram* is a way of representing a multi-step random process, where each step in the process is drawn from a finite number of choices (i.e., a :ref:`set <set_theory>` of outcomes) . A *tree diagram* is composed of *nodes* and *branches*. Each node of a *tree diagram* represents an outcome of one step in the random process and each branch of the tree diagram represents the paths available after one step has concluded. An example will make this laborious description more clear.
+A *tree diagram* is a way of representing a multi-step random process, where each step in the process is drawn from a finite number of choices (i.e., a :ref:`set <set-theory>` of outcomes) . A *tree diagram* is composed of *nodes* and *branches*. Each node of a *tree diagram* represents an outcome of one step in the random process and each branch of the tree diagram represents the paths available after one step has concluded. An example will make this laborious description more clear.
 
 Example
 	A coin is flipped three times. Use a tree diagram to find the sample space.
 	
 TODO
 
-.. image:: ../../_static/img/combinatorics/combinatorics_tree_diagram_coinflips.png
+.. image:: ../../_static/img/mathematics/combinatorics/combinatorics-tree-diagram-coinflips.png
     :align: center
 
 TODO
 
-.. _generalized_counting_principle:
+.. _generalized-counting-principle:
 
 Generalized Counting Principle
 ------------------------------
@@ -207,7 +207,7 @@ Before stating the first important corollary that follows from the *Generalized 
     How many different pizzas can you order from this restaurant? 
     
 .. note:: 
-    This example can be rephrased in a more general way using the language of :ref:`Set Theory<set_theory>`: *how many subsets can be formed from the set* **A**? 
+    This example can be rephrased in a more general way using the language of :ref:`Set Theory <set-theory>`: *how many subsets can be formed from the set* **A**? 
     
     In other words, what is the *cardinality* of the *Power Set of A*, :math:`n(\mathcal{P}(A))`?
 
@@ -277,17 +277,17 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
 
     For example, *abc* represents the outcome of Alethia finishing first, Bertha second and Cornelius third, whereas *cab* would represent Cornelius finishing first, Bertha finishing second and Alethia finishing third, etc. From this we see there are 6 ways to *permute* the sequence *abc*. 
 
-    By applying the :ref:`generalized_counting_principle`, we can arrive at the same solution through another means. In the race, there are three positions to fill (1 :sup:`st` Place, 2 :sup:`nd` Place, 3 :sup:`rd` Place). According to the counting principle, the number of ways to pick how the race will end is equal to the number of ways to pick 1 :sup:`st` Place, times the number of ways to pick 2 :sup:`nd` Place, times the number of ways to pick 3 :sup:`rd` Place. 
+    By applying the :ref:`generalized-counting-principle`, we can arrive at the same solution through another means. In the race, there are three positions to fill (1 :sup:`st` Place, 2 :sup:`nd` Place, 3 :sup:`rd` Place). According to the counting principle, the number of ways to pick how the race will end is equal to the number of ways to pick 1 :sup:`st` Place, times the number of ways to pick 2 :sup:`nd` Place, times the number of ways to pick 3 :sup:`rd` Place. 
     
     However, the choice we make for 1 :sup:`st` Place affects the choice we make for 2 :sup:`nd` Place, and the choice we make for 2 :sup:`nd` Place affects the choice we make for 3 :sup:`rd` Place. In other words, if Aletheia comes in 1 :sup:`st` Place, she is unable to also come in 2 :sup:`nd` or 3 :sup:`rd` place. By selecting someone to fill one place, we remove the possibility of them filling any of the other places in the sequence.
 
-    This can be visualized through a modified :ref:`tree diagram <tree_diagrams>`, where subsequent branches in the tree diagram are affected by the value of the current branch,
+    This can be visualized through a modified :ref:`tree diagram <tree-diagrams>`, where subsequent branches in the tree diagram are affected by the value of the current branch,
 
-        .. image:: ../../_static/img/combinatorics/combinatorics_permuted_tree_diagram.png
+        .. image:: ../../_static/img/mathematics/combinatorics/combinatorics-permuted-tree-diagram.png
             :width: 60%
             :align: center
 
-    Notice at each step of the diagram, a choice is lost, representing the selection of an individual to fill the given position along the given branch. This type of selection is called :ref:`selection without replacement <without_replacement>`.
+    Notice at each step of the diagram, a choice is lost, representing the selection of an individual to fill the given position along the given branch. This type of selection is called :ref:`selection without replacement <without-replacement>`.
 
     By counting up the endpoints of the graph, the answer is again found to be there are *6* ways to finish the race.
 
@@ -299,7 +299,7 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
 
     TODO 
 
-.. _permutation_formula: 
+.. _permutation-formula: 
 
 Formula
 -------
@@ -307,6 +307,7 @@ Formula
 TODO 
 
 .. math::
+
     P_r^n = \frac{n!}{(n-r)!}
 
 TODO
@@ -330,7 +331,7 @@ The same three friends from the permutation section, Aletheia, Bertha and Cornel
 
 **Example**
 
-.. _combination_formula:
+.. _combination-formula:
 
 Formula
 -------
@@ -351,7 +352,7 @@ Formula
 
     Let **Z** represent the event of selecting all six winning numbers. Let **Y** represent the event of selecting five winning numbers. Let **X** represent the event of selecting four winning numbers.  
 
-    The :ref:`Classical Definition of Probability <classical_definition>` states,
+    The :ref:`Classical Definition of Probability <classical-definition-of-probability>` states,
 
     .. math::
     
@@ -365,7 +366,7 @@ Formula
 
         :math:`P(X)` = (# of ways to match a 6-element sequence with 4 elements) / (# of 6-element sequences)
 
-    In order to calculate the desired probability, each calculation requires the total number of 6-element sequences, where each element of the sequence is an integer between 1 and 49. Furthermore, the selection of one element in the sequence removes it from the pool of possible selections. In other words, there can be no repetitions of any of the integers between 1 and 49 in any sequence of winning numbers. For instance the sequence ``15 15 37 42 32 27`` is not allowed, because *15* occurs twice. This is what is meant by the phrase "*pick six different integers*". This is an example of :ref:`selection without replacement <without_replacement>`.
+    In order to calculate the desired probability, each calculation requires the total number of 6-element sequences, where each element of the sequence is an integer between 1 and 49. Furthermore, the selection of one element in the sequence removes it from the pool of possible selections. In other words, there can be no repetitions of any of the integers between 1 and 49 in any sequence of winning numbers. For instance the sequence ``15 15 37 42 32 27`` is not allowed, because *15* occurs twice. This is what is meant by the phrase "*pick six different integers*". This is an example of :ref:`selection without replacement <without-replacement>`.
 
     TODO 
 
@@ -403,7 +404,7 @@ If the condition that order is important is removed, then the permutation *ab* a
 
     ab ac bc
     
-.. image:: ../../_static/img/combinatorics/combinatorics_connection.png
+.. image:: ../../_static/img/mathematics/combinatorics/combinatorics-connection.png
         :width: 60%
         :align: center
 

@@ -1,6 +1,13 @@
 elara protocol
 ##############
 
+| Part no seined flow
+|                 mudrum 
+|                   nun
+|                     Wolf denies no trap
+
+---------------
+
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
@@ -17,7 +24,7 @@ elara protocol
 
 --------------
 
-.. image:: _static/img/etc/wittgenstein_rabbit_duck.svg
+.. image:: _static/img/context/philosophical/wittgenstein-rabbit-duck.svg
    :width: 600px
    :alt: the eye of the beholder
    :align: center

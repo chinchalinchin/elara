@@ -52,6 +52,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '06_pedagogy/statistics/05_CONFIDENCE';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Distributions" href="../distributions/index.html" />
+    <link rel="prev" title="Sampling Distributions" href="04_SAMPLING.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -103,8 +105,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -144,7 +144,7 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_cantor.html">Cantor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_peano.html">Peano</a></li>
@@ -194,7 +194,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../05_poeticus/00_form.html">Form</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../index.html">Pedagogy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../foundations/00_HISTORY.html">Knowledge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../foundations/01_LOGIC.html">Logic</a></li>
@@ -208,12 +208,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../probability/03_RANDOM_VARIABLES.html">Random Variables</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Statistics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="00_GRAPHS.html">Graphical Representations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="01_ESTIMATION.html">Point Estimation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_CORRELATION.html">Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_REGRESSION.html">Linear Regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Confidence Intervals</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -427,7 +428,7 @@
 <section id="definitions">
 <h2>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h2>
 <section id="critical-value">
-<h3>Critical Value<a class="headerlink" href="#critical-value" title="Link to this heading">#</a></h3>
+<span id="critical-value-definition"></span><h3>Critical Value<a class="headerlink" href="#critical-value" title="Link to this heading">#</a></h3>
 <p>TODO</p>
 <aside class="topic">
 <p class="topic-title">Critical Z Value</p>
@@ -443,7 +444,7 @@
 </aside>
 </section>
 <section id="standard-error">
-<h3>Standard Error<a class="headerlink" href="#standard-error" title="Link to this heading">#</a></h3>
+<span id="standard-error-definition"></span><h3>Standard Error<a class="headerlink" href="#standard-error" title="Link to this heading">#</a></h3>
 <p>TODO</p>
 <aside class="topic">
 <p class="topic-title">Standard Error</p>
@@ -453,7 +454,7 @@
 </aside>
 </section>
 <section id="margin-of-error">
-<h3>Margin of Error<a class="headerlink" href="#margin-of-error" title="Link to this heading">#</a></h3>
+<span id="margin-of-error-definition"></span><h3>Margin of Error<a class="headerlink" href="#margin-of-error" title="Link to this heading">#</a></h3>
 <aside class="topic">
 <p class="topic-title">Margin of Error</p>
 <p>If <em>c</em> is a critical value from a point estimator <span class="math notranslate nohighlight">\(\theta\)</span>’s sampling distribution and <span class="math notranslate nohighlight">\(s_{\theta}\)</span> is the standard error of that estimator, then the margin of error for that point estimator is given by,</p>
@@ -462,7 +463,7 @@
 </aside>
 </section>
 <section id="intervals">
-<h3>Intervals<a class="headerlink" href="#intervals" title="Link to this heading">#</a></h3>
+<span id="confidence-interval-definition"></span><h3>Intervals<a class="headerlink" href="#intervals" title="Link to this heading">#</a></h3>
 <aside class="topic">
 <p class="topic-title">Confidence Intervals</p>
 <p>If <span class="math notranslate nohighlight">\(\theta\)</span> is a population parameter, <span class="math notranslate nohighlight">\(\hat{\theta}\)</span> is a point estimator of <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(\text{MOE}_{\theta}\)</span> is the margin of error for that estimator, the confidence interval for <span class="math notranslate nohighlight">\(\theta\)</span> is given by,</p>
@@ -473,7 +474,7 @@
 </section>
 </section>
 <section id="population-proportion">
-<h2>Population Proportion<a class="headerlink" href="#population-proportion" title="Link to this heading">#</a></h2>
+<span id="poulation-proportion-confidence-interval"></span><h2>Population Proportion<a class="headerlink" href="#population-proportion" title="Link to this heading">#</a></h2>
 <section id="id2">
 <h3>Standard Error<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <aside class="topic">
@@ -501,7 +502,7 @@
 </section>
 </section>
 <section id="population-mean">
-<h2>Population Mean<a class="headerlink" href="#population-mean" title="Link to this heading">#</a></h2>
+<span id="population-mean-confidence-interval"></span><h2>Population Mean<a class="headerlink" href="#population-mean" title="Link to this heading">#</a></h2>
 <section id="id5">
 <h3>Standard Error<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <aside class="topic">
@@ -565,6 +566,24 @@
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="04_SAMPLING.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sampling Distributions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../distributions/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Distributions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               

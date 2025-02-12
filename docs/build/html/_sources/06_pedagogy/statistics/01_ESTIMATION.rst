@@ -829,7 +829,7 @@ From this definition, it should be clear *percentiles* only have meaning with re
 
 *Order statistics* give us a way to precisely define a percentile. *Order statistics* divide the interval on which the sample is measured into :math:`n+1` intervals, pictured below,
 
-.. image:: ../../assets/imgs/statistics/order_statistics.jpg
+.. image:: ../../_static/img/mathematics/statistics/order_statistics.jpg
     :align: center
 
 Note all of the intervals are *below* the order statistic except the last one, which is *above* its order statistic. Hence :math:`n+1`.
@@ -969,7 +969,7 @@ Applying *Equation 1* to the example, we calculate the *25* :sup:`th` percentile
 
 In both cases, we arrive at the same answer of a 25 :sup:`th` percentile of ``-1.25`` minutes.     
 
-Before moving onto the next section where we give the general formula for calculating the *sample percentile*, let us note both *Equation 1* and *Equation 2* can be rewritten in terms of the :ref:`floor_function` and the :ref:`ceiling_function`,
+Before moving onto the next section where we give the general formula for calculating the *sample percentile*, let us note both *Equation 1* and *Equation 2* can be rewritten in terms of the :ref:`floor-function` and the :ref:`ceiling-function`,
 
 .. math::
 
@@ -1186,7 +1186,7 @@ Then we order the sample,
 
     S_{(o)} = \{ \$ 30000, \$ 45000, \$ 50000, \$ 55000, \$ 56000, \$ 65000, \$ 70000, \$ 120000, \$ 200000, \$ 2000000 \}
 
-Finally, we apply the :ref:`general percentile formula <percentile_formula>`, with :math:`x_{(5)} = \$ 56000` and :math:`x_{(6)} = \$ 65000`,
+Finally, we apply the :ref:`general percentile formula <percentile-formula>`, with :math:`x_{(5)} = \$ 56000` and :math:`x_{(6)} = \$ 65000`,
 
 .. math:: 
 

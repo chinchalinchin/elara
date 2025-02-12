@@ -52,7 +52,7 @@ In order for an experiment to be *Binomial*, the experiment must the conditions 
 	4. The probability of success is the same in each trial.
 	
 
-.. _binomial_parameters
+.. _binomial-parameters:
 
 Parameters
 ----------
@@ -76,8 +76,10 @@ TODO
 .. plot:: _plots/distributions/binomial/binomial_distribution_04.py
 
 
-Probabilitiy Distribution
-=========================
+.. _binomial-probability:
+
+Binomial Probability
+====================
 
 TODO
 
@@ -149,6 +151,7 @@ TODO
 	.. math::
 	
 		\sigma_{Bin(n,p)} = n \ cdot p
+		
 TODO
 
 derive through rules of independent random variable sums

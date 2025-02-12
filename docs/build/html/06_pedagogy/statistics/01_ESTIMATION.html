@@ -214,6 +214,7 @@
 <li class="toctree-l3"><a class="reference internal" href="02_CORRELATION.html">Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_REGRESSION.html">Linear Regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_CONFIDENCE.html">Confidence Intervals</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -988,7 +989,7 @@
 <p>So, which point estimate of centrality do we use? The arithmetic mean or the geometric mean?</p>
 <p>There are several reasons to prefer the arithmetic mean. Perhaps the simplest to understand at this point in your study of statistics is its simplicity: it is easy to calculate and easy to interpret.</p>
 <p>The geometric mean, on the other hand, is not <em>as</em> easy to calculate.</p>
-<p>Beyond that, there are more philosophical reasons for preferring the arithmetic mean over the geometric mean. These reasons we are not yet ready to discuss, as they require a deeper understanding of probability, <a class="reference internal" href="../probability/03_RANDOM_VARIABLES.html#random-variables"><span class="std std-ref">Random Variables</span></a> and <a class="reference internal" href="04_SAMPLING.html#central-limit-theorem"><span class="std std-ref">Central Limit Theorem</span></a>. Suffice to say, the arithmetic mean has very nice properties that lend themselves to statistical inference easier than the geometric mean do.</p>
+<p>Beyond that, there are more philosophical reasons for preferring the arithmetic mean over the geometric mean. These reasons we are not yet ready to discuss, as they require a deeper understanding of probability, <a class="reference internal" href="../probability/03_RANDOM_VARIABLES.html#random-variables"><span class="std std-ref">Random Variables</span></a> and <span class="xref std std-ref">central_limit_theorem</span>. Suffice to say, the arithmetic mean has very nice properties that lend themselves to statistical inference easier than the geometric mean do.</p>
 </section>
 <section id="the-moral-of-the-story">
 <h4>The Moral of the Story<a class="headerlink" href="#the-moral-of-the-story" title="Link to this heading">#</a></h4>
@@ -1084,7 +1085,7 @@
 </dl>
 <p>From this definition, it should be clear <em>percentiles</em> only have meaning with respect to <a class="reference internal" href="../inference/02_DESIGN.html#data-characteristic"><span class="std std-ref">quantitative data</span></a>. To <em>order</em> a sample of data <span class="math notranslate nohighlight">\(\{ x_i \}\)</span>, the relation <span class="math notranslate nohighlight">\(x_{i-1} &lt; x_i\)</span> must have meaning.</p>
 <p><em>Order statistics</em> give us a way to precisely define a percentile. <em>Order statistics</em> divide the interval on which the sample is measured into <span class="math notranslate nohighlight">\(n+1\)</span> intervals, pictured below,</p>
-<img alt="assets/imgs/statistics/order_statistics.jpg" class="align-center" src="assets/imgs/statistics/order_statistics.jpg" />
+<img alt="../../_images/order_statistics.jpg" class="align-center" src="../../_images/order_statistics.jpg" />
 <p>Note all of the intervals are <em>below</em> the order statistic except the last one, which is <em>above</em> its order statistic. Hence <span class="math notranslate nohighlight">\(n+1\)</span>.</p>
 <p>The number of such intervals below a given order statistic is <em>equal to</em> to the <em>order</em> of that observation. In other words, the fraction of intervals below the <em>m</em> <sup>th</sup> order statistic is given by,</p>
 <div class="math notranslate nohighlight">
@@ -1167,7 +1168,7 @@
 <div class="math notranslate nohighlight">
 \[x_{(2.5)} = -1.5 + (-1.0 - (-1.5)) \cdot (2.5 - 2) = -1.5 + 0.25 = -1.25\]</div>
 <p>In both cases, we arrive at the same answer of a 25 <sup>th</sup> percentile of <code class="docutils literal notranslate"><span class="pre">-1.25</span></code> minutes.</p>
-<p>Before moving onto the next section where we give the general formula for calculating the <em>sample percentile</em>, let us note both <em>Equation 1</em> and <em>Equation 2</em> can be rewritten in terms of the <span class="xref std std-ref">floor_function</span> and the <span class="xref std std-ref">ceiling_function</span>,</p>
+<p>Before moving onto the next section where we give the general formula for calculating the <em>sample percentile</em>, let us note both <em>Equation 1</em> and <em>Equation 2</em> can be rewritten in terms of the <a class="reference internal" href="#floor-function"><span class="std std-ref">Floor Function</span></a> and the <a class="reference internal" href="#ceiling-function"><span class="std std-ref">Ceiling Function</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[x_{(2.5)} = x_{(\lceil 2.5 \rceil)} - (x_{(\lceil 2.5 \rceil)} - x_{(\lfloor 2.5 \rfloor)}) \cdot (\lceil 2.5 \rceil - 2.5) \text{      Equation 1, Redux}\]</div>
 <p>Or equivalently (plugging <span class="math notranslate nohighlight">\(x_{(2)}\)</span> into the point-slope formula instead of <span class="math notranslate nohighlight">\(x_{(3)}\)</span>),</p>
@@ -1327,7 +1328,7 @@
 <p>Then we order the sample,</p>
 <div class="math notranslate nohighlight">
 \[S_{(o)} = \{ \$ 30000, \$ 45000, \$ 50000, \$ 55000, \$ 56000, \$ 65000, \$ 70000, \$ 120000, \$ 200000, \$ 2000000 \}\]</div>
-<p>Finally, we apply the <span class="xref std std-ref">general percentile formula</span>, with <span class="math notranslate nohighlight">\(x_{(5)} = \$ 56000\)</span> and <span class="math notranslate nohighlight">\(x_{(6)} = \$ 65000\)</span>,</p>
+<p>Finally, we apply the <a class="reference internal" href="#percentile-formula"><span class="std std-ref">general percentile formula</span></a>, with <span class="math notranslate nohighlight">\(x_{(5)} = \$ 56000\)</span> and <span class="math notranslate nohighlight">\(x_{(6)} = \$ 65000\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\pi_{0.50} = x_{(5.5)} = x_{(\lfloor 5.5 \rfloor)} + (x_{(\lceil 5.5 \rceil)} - x_{(\lfloor 5.5 \rfloor)}) \cdot (5.5 - \lfloor 5.5 \rfloor)\]</div>
 <div class="math notranslate nohighlight">

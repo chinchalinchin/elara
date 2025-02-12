@@ -214,6 +214,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../statistics/02_CORRELATION.html">Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics/03_REGRESSION.html">Linear Regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics/04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/05_CONFIDENCE.html">Confidence Intervals</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -435,12 +436,12 @@
 </ol>
 </div></blockquote>
 </aside>
-<p>Let <strong>A</strong> represent the event of selecting a ball numbered 2. Let <strong>B</strong> represent the event of selecting a red ball. Then <span class="math notranslate nohighlight">\(n(A) = 2\)</span>, <span class="math notranslate nohighlight">\(n(B)=3\)</span> and <span class="math notranslate nohighlight">\(n(S) = 7\)</span> (Why?) Without taking into account the second part of the problem yet, the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> yields the probability the ball she selected has the number 2 written it,</p>
+<p>Let <strong>A</strong> represent the event of selecting a ball numbered 2. Let <strong>B</strong> represent the event of selecting a red ball. Then <span class="math notranslate nohighlight">\(n(A) = 2\)</span>, <span class="math notranslate nohighlight">\(n(B)=3\)</span> and <span class="math notranslate nohighlight">\(n(S) = 7\)</span> (Why?) Without taking into account the second part of the problem yet, the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> yields the probability the ball she selected has the number 2 written it,</p>
 <div class="math notranslate nohighlight">
 \[P(A) = \frac{2}{7} \approx 0.286\]</div>
 <p>This number represents the probability of <strong>A</strong> <em>without any further information</em> provided about the sample space.</p>
 <p>If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been <em>removed</em> from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of <a class="reference internal" href="#reduction-of-the-sample-space"><span class="std std-ref">Reduction of Sample Space</span></a> is called <em>conditioning on the event</em> <strong>B</strong>. The event of <strong>A</strong> given <strong>B</strong> is denoted <span class="math notranslate nohighlight">\(A \mid B\)</span></p>
-<p>Applying the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> to this <em>reduced</em> sample space, we get the <em>probability of selecting a ball with the number 2, given the ball is red</em>,</p>
+<p>Applying the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> to this <em>reduced</em> sample space, we get the <em>probability of selecting a ball with the number 2, given the ball is red</em>,</p>
 <div class="math notranslate nohighlight">
 \[P(A \mid B) = \frac{1}{3} \approx 0.333\]</div>
 <p>In other words, knowing the event a red ball was selected has <em>increased</em> the probability the ball has the number 2 written onit. Taking a look at the original sample space, this should be intuitive. There are less red balls than green balls, so more probability is “concentrated” in the red number 2 ball when the green balls are removed from the sample space.</p>
@@ -472,7 +473,7 @@
 </aside>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>It is important to keep in mind that conditional probability is a <em>definition</em>. It is not an <a class="reference internal" href="00_INTRODUCTION.html#axioms-of-probability"><span class="std std-ref">axiom of probability</span></a>.</p>
+<p>It is important to keep in mind that conditional probability is a <em>definition</em>. It is not an <span class="xref std std-ref">axiom of probability</span>.</p>
 <p>In mathematics, <em>axioms</em> represent the necessary assumptions for deriving a corpus of knowledge through syntactical rules: the initial <em>starting points</em> from which theorems are deduced.</p>
 <p>A <em>definition</em> is <em>semantical</em> in nature, insofar that it expresses the opinion of the definer that the thing being defined is deserving of special notice, for it delineates a special concept that (hopefully) corresponds in some way to the observer’s intuitive notions about reality.</p>
 </div>
@@ -491,7 +492,7 @@
 </aside>
 <aside class="topic">
 <p class="topic-title">Solution #1: Application of Conditional Probability Formula</p>
-<p>Before solving the problem, first define the <a class="reference internal" href="00_INTRODUCTION.html#sample-space"><span class="std std-ref">sample space</span></a> and identify the events that correspond to its various outcomes.</p>
+<p>Before solving the problem, first define the <span class="xref std std-ref">sample space</span> and identify the events that correspond to its various outcomes.</p>
 <p>Let <span class="math notranslate nohighlight">\((x, y)\)</span> represent the ordered pair of outcomes, where <span class="math notranslate nohighlight">\(x\)</span> represents the face of the coin observed and <span class="math notranslate nohighlight">\(y\)</span> represents the type of coin selected. The following table illustrates what is meant by this assignment,</p>
 <p>+————————-+—————————————–|
 | Symbolic Representation |          Interpretation                 |
@@ -528,7 +529,7 @@
 <p>The problem can then be expressed in terms of the <a class="reference internal" href="#conditional-probability-formula"><span class="std std-ref">Condtional Probability Formula</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(D \mid H) = \frac{P(D \cap H)}{P(H)}\]</div>
-<p>The denominator of this expression can be found by straight-forward application of the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<p>The denominator of this expression can be found by straight-forward application of the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(H) = \frac{3}{4}\]</div>
 <p>Whereas the numerator first requires calculating the intersection of <strong>D</strong> and <strong>H</strong>,</p>
@@ -536,7 +537,7 @@
 \[D \cap H = \{ (h_1, d), (h_2,d) \}\]</div>
 <div class="math notranslate nohighlight">
 \[n(D \cap H) = 2\]</div>
-<p>Whereupon the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> can be applied again,</p>
+<p>Whereupon the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> can be applied again,</p>
 <div class="math notranslate nohighlight">
 \[P(D \cap H) = \frac{2}{4} = \frac{1}{2}\]</div>
 <p>The conditional probability of <strong>D</strong> given the occurrence of <strong>H</strong> is then calculated from the previously mentioned <a class="reference internal" href="#conditional-probability-formula"><span class="std std-ref">Condtional Probability Formula</span></a>,</p>
@@ -594,14 +595,14 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Solution #1: Combinatorics</p>
-<p>The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the <a class="reference internal" href="01_COMBINATORICS.html#combination-formula"><span class="std std-ref">Formula</span></a> is used,</p>
+<p>The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the <span class="xref std std-ref">combination_formula</span> is used,</p>
 <div class="math notranslate nohighlight">
 \[C_2^{52} = \frac{52!}{2! \cdot 50!} = \frac{52 \cdot 51}{2} = 1326\]</div>
 <p>Therefore, there are a total of <em>1326</em> hands that can be dealt.</p>
 <p>The same logic can be used to find the number of ways to pick two red cards. Note there are <span class="math notranslate nohighlight">\(\frac{52}/{2}=26\)</span> red cards in a standard deck of playing cards. Therefore, the number of combinations of 26 distinct objects taken 2 at a time is,</p>
 <div class="math notranslate nohighlight">
 \[C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325\]</div>
-<p>Therefore, the desired probability can be found using the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<p>Therefore, the desired probability can be found using the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(&quot;two red cards&quot;) = \frac{325}{1326} \approx 0.2451\]</div>
 </div>
@@ -611,10 +612,10 @@
 <p>Let <strong>R</strong> <sub>1</sub> represent the event the first card drawn is red. Let <strong>R</strong> <sub>2</sub> represent the event the second card drawn is red. Then the event <span class="math notranslate nohighlight">\(R_1 \cap R_2\)</span> represents the event the first card is red <em>and</em> the second card is red. The <em>Multiplication Rule</em> states the probability of an intersection can be expressed as,</p>
 <div class="math notranslate nohighlight">
 \[P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)\]</div>
-<p>The term <span class="math notranslate nohighlight">\(P(R_1)\)</span> is the probability of selecting a red card on the first draw. This can be calculated easily with the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<p>The term <span class="math notranslate nohighlight">\(P(R_1)\)</span> is the probability of selecting a red card on the first draw. This can be calculated easily with the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(R_1) = \frac{26}{52}\]</div>
-<p>The term <span class="math notranslate nohighlight">\(P(R_2 \mid R_1)\)</span> can likewise be quickly decomposed by noticing the event <strong>R</strong> <sub>1</sub> <em>reduces the sample space</em> to <em>51</em> cards, <em>25</em> of which are red. Using the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> once again, the conditional probability of <strong>R</strong> <sub>2</sub> given the occurrence of <strong>R</strong> <sub>1</sub> is,</p>
+<p>The term <span class="math notranslate nohighlight">\(P(R_2 \mid R_1)\)</span> can likewise be quickly decomposed by noticing the event <strong>R</strong> <sub>1</sub> <em>reduces the sample space</em> to <em>51</em> cards, <em>25</em> of which are red. Using the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> once again, the conditional probability of <strong>R</strong> <sub>2</sub> given the occurrence of <strong>R</strong> <sub>1</sub> is,</p>
 <div class="math notranslate nohighlight">
 \[P(R_2 \mid R_1) = \frac{25}{51}\]</div>
 <p>Therefore,</p>
@@ -638,10 +639,10 @@
 <p>In order to prove this corrollary, consider the following identity,</p>
 <div class="math notranslate nohighlight">
 \[A = (A \cap B) \cup (A \cap B^c)\]</div>
-<p>Now, by definition, <span class="math notranslate nohighlight">\(A \cap B\)</span> and <span class="math notranslate nohighlight">\(A \cap B^c\)</span> are <a class="reference internal" href="00_INTRODUCTION.html#mutual-exclusion"><span class="std std-ref">mutually exclusive</span></a>. Therefore, it follows from the <a class="reference internal" href="../foundations/02_SET_THEORY.html#counting-theorems"><span class="std std-ref">Counting Theorems</span></a> of set theory,</p>
+<p>Now, by definition, <span class="math notranslate nohighlight">\(A \cap B\)</span> and <span class="math notranslate nohighlight">\(A \cap B^c\)</span> are <span class="xref std std-ref">mutually exclusive</span>. Therefore, it follows from the <a class="reference internal" href="../foundations/02_SET_THEORY.html#counting-theorems"><span class="std std-ref">Counting Theorems</span></a> of set theory,</p>
 <div class="math notranslate nohighlight">
 \[n(A) = n(A \cap B) + n(A \cap B^c)\]</div>
-<p>An application of the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> leads directly to the result of the corrollary,</p>
+<p>An application of the <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> leads directly to the result of the corrollary,</p>
 <div class="math notranslate nohighlight">
 \[P(A) = P(A \cap B) + P(A \cap B^c)\]</div>
 </section>

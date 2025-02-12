@@ -3,24 +3,35 @@
 καιρός
 ======
 
-.. image:: ../_static/img/comics/calvin_and_hobbes_inscrutable_exhortations.jpeg
+-------
+Comical 
+-------
+
+.. image:: ../_static/img/context/comical/calvin-and-hobbes-inscrutable-exhortations.jpeg
    :alt: Inscrutable Exhortations
    :align: center
 
 --------------------
 
-.. image:: ../_static/img/comics/calvin_and_hobbes_pointless.jpeg
+.. image:: ../_static/img/context/comical/calvin-and-hobbes-pointless.jpeg
    :alt: Pointless
    :align: center
 
 --------------------
 
-.. image:: ../_static/img/comics/calvin_and_hobbes_significant.jpeg
+.. image:: ../_static/img/context/comical/calvin-and-hobbes-significant.jpeg
    :alt: Significant
    :align: center
 
 --------------------
 
-.. image:: ../_static/img/comics/calvin_and_hobbes_infinity.jpeg
+.. image:: ../_static/img/context/comical/calvin-and-hobbes-infinity.jpeg
    :alt: Infinity
    :align: center
+
+
+--------
+Artistic
+--------
+
+TODO

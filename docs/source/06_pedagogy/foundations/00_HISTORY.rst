@@ -108,9 +108,9 @@ The third proposition, ``o``, is the *particular* conclusion we draw by applying
 
 In other words, *knowledge* is the process of inferring.
 
-We can visualize this argument with a :ref:`Venn diagram <venn_diagrams>`,
+We can visualize this argument with a :ref:`Venn diagram <venn-diagrams>`,
 
-.. image:: ../../assets/imgs/context/syllogism.jpg
+.. image:: ../../_static/img/context/philosophical/syllogism.jpg
 
 In later sections, we will define the relation shown here more precisely as one of *containment* between two sets, i.e. the relation of one set **A** being wholly contained in another set **B**.
 
@@ -239,7 +239,6 @@ Below you will find the first formal definition of *probability* in the history 
 	6. Events are independent when the happening of any one of them does neither increase nor abate the probability of the rest. 
 
 At this point, we leave aside the historical narrative and take up the subject itself. 
-
 
 References
 ==========

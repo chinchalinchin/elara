@@ -1,4 +1,4 @@
-.. _uniform_distribution:
+.. _uniform-distribution:
 
 ====================
 Uniform Distribution
@@ -6,7 +6,7 @@ Uniform Distribution
 
 TODO
 
-.. _uniform_random_variable:
+.. _uniform-random-variable:
 
 Uniform Random Variable
 =======================
@@ -29,10 +29,10 @@ A Uniform Random Variabe has two parameters.
 
 TODO
 
-.. _uniform_distribution:
+.. _uniform-probability:
 
-Uniform Distribution
-====================
+Uniform Probability
+===================
 
 Probability Density Function
 ----------------------------

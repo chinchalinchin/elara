@@ -18,7 +18,7 @@ Motivation
 	        
 	        2. If she now tells you the ball she selected is red, how does this affect the probability in part 1? 
 
-Let **A** represent the event of selecting a ball numbered 2. Let **B** represent the event of selecting a red ball. Then :math:`n(A) = 2`, :math:`n(B)=3` and :math:`n(S) = 7` (Why?) Without taking into account the second part of the problem yet, the :ref:`classical_definition` yields the probability the ball she selected has the number 2 written it,
+Let **A** represent the event of selecting a ball numbered 2. Let **B** represent the event of selecting a red ball. Then :math:`n(A) = 2`, :math:`n(B)=3` and :math:`n(S) = 7` (Why?) Without taking into account the second part of the problem yet, the :ref:`classical-definition-of-probability` yields the probability the ball she selected has the number 2 written it,
 
 .. math::   
 
@@ -28,7 +28,7 @@ This number represents the probability of **A** *without any further information
 
 If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been *removed* from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of :ref:`reduction_of_the_sample_space` is called *conditioning on the event* **B**. The event of **A** given **B** is denoted :math:`A \mid B`
 
-Applying the :ref:`classical_definition` to this *reduced* sample space, we get the *probability of selecting a ball with the number 2, given the ball is red*,
+Applying the :ref:`classical-definition-of-probability` to this *reduced* sample space, we get the *probability of selecting a ball with the number 2, given the ball is red*,
 
 .. math:: 
     
@@ -176,7 +176,7 @@ The following example and its accompanying solutions serve to illustrate how con
 	
 		P(D \mid H) = \frac{P(D \cap H)}{P(H)}
 
-	The denominator of this expression can be found by straight-forward application of the :ref:`classical_definition`,
+	The denominator of this expression can be found by straight-forward application of the :ref:`classical-definition-of-probability`,
 
 	.. math::
 	
@@ -192,7 +192,7 @@ The following example and its accompanying solutions serve to illustrate how con
         
         	n(D \cap H) = 2
 
-	Whereupon the :ref:`classical_definition` can be applied again,
+	Whereupon the :ref:`classical-definition-of-probability` can be applied again,
 
 	.. math::
 	
@@ -277,7 +277,7 @@ The *conditional probability* formula can be rearranged with the aid of some sim
 	
 		P(A \cap B) = P(B \mid A) \cdot P(A)
 
-This version of the *conditional probability* formula along with the technique of :ref:`reduction_of_the_sample_space` give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated :ref:`compound event <compound_events>`, which usually involves cumbersome combinatorial analysis. *Conditional probability* can be used to sidestep these calculations.
+This version of the *conditional probability* formula along with the technique of :ref:`reduction_of_the_sample_space` give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated :ref:`compound event <compound-events>`, which usually involves cumbersome combinatorial analysis. *Conditional probability* can be used to sidestep these calculations.
 		
 The following example illustrates the simplification affected by the introduction of *conditional probability* into combinatorial problems. This example can be solved in one of two ways. The first solution uses the techniques from the :ref:`Combinatorics section <combinatorics>`. The second solution uses the techniques of the *Multiplication Rule* and *Reduction of the Sample Space* just discussed. The reader will observe, while both methods yield the same answer, the second method is substantially easier, both from a calculation perpsective and from a conceptual perspective (i.e., it's easier to understand).
 
@@ -302,7 +302,7 @@ The following example illustrates the simplification affected by the introductio
         	
         	C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325
     
-    	Therefore, the desired probability can be found using the :ref:`classical_definition`,
+    	Therefore, the desired probability can be found using the :ref:`classical-definition-of-probability`,
 
     	.. math::
         	
@@ -316,13 +316,13 @@ The following example illustrates the simplification affected by the introductio
         
         	P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)
 
-    	The term :math:`P(R_1)` is the probability of selecting a red card on the first draw. This can be calculated easily with the :ref:`classical_definition`,
+    	The term :math:`P(R_1)` is the probability of selecting a red card on the first draw. This can be calculated easily with the :ref:`classical-definition-of-probability`,
     
     	.. math::
         
         	P(R_1) = \frac{26}{52}
 
-    	The term :math:`P(R_2 \mid R_1)` can likewise be quickly decomposed by noticing the event **R** :sub:`1` *reduces the sample space* to *51* cards, *25* of which are red. Using the :ref:`classical_definition` once again, the conditional probability of **R** :sub:`2` given the occurrence of **R** :sub:`1` is,
+    	The term :math:`P(R_2 \mid R_1)` can likewise be quickly decomposed by noticing the event **R** :sub:`1` *reduces the sample space* to *51* cards, *25* of which are red. Using the :ref:`classical-definition-of-probability` once again, the conditional probability of **R** :sub:`2` given the occurrence of **R** :sub:`1` is,
 
     	.. math::
         
@@ -368,7 +368,7 @@ Now, by definition, :math:`A \cap B` and :math:`A \cap B^c` are :ref:`mutually e
 
 	n(A) = n(A \cap B) + n(A \cap B^c)
 
-An application of the :ref:`classical_definition` leads directly to the result of the corrollary,
+An application of the :ref:`classical-definition-of-probability` leads directly to the result of the corrollary,
  
 .. math::
 

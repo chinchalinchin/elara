@@ -1,4 +1,4 @@
-.. _sampling_distributions:
+.. _sampling-distributions:
 
 ======================
 Sampling Distributions
@@ -6,7 +6,7 @@ Sampling Distributions
 
 TODO
 
-.. _central_limit_theorem:
+.. _central-limit-theorem:
 
 Central Limit Theorem
 =====================
@@ -15,7 +15,7 @@ The **Central Limit Theorem** is one of the most important theorems in statistic
 
 TODO
 
-.. _clt_motivation:
+.. _clt-motivation:
 
 Motivation
 ----------
@@ -33,7 +33,7 @@ Consider a pop-quiz made up of two questions administered to a population of a 1
 +-----+-------+
 
 
-It is important to keep in mind the meaning of this table. The right hand column represents the probability of selecting an individual with the left hand column number of answers correct. In other words, the probability a single randomly selected individual from the population got 0 answers correct is *0.20*, or *20%*. Similarly, the probability a single randomly selected individual from the population got 1 answer correct is *0.40*, or *40%*. Finally, the probability a single randomly selected individual from the population got both answers correct is again *0.50*, or *50%*. A graph of the :ref:`density_function` helps visualizes the situation,
+It is important to keep in mind the meaning of this table. The right hand column represents the probability of selecting an individual with the left hand column number of answers correct. In other words, the probability a single randomly selected individual from the population got 0 answers correct is *0.20*, or *20%*. Similarly, the probability a single randomly selected individual from the population got 1 answer correct is *0.40*, or *40%*. Finally, the probability a single randomly selected individual from the population got both answers correct is again *0.50*, or *50%*. A graph of the :ref:`density-function` helps visualizes the situation,
 
 .. plot:: _plots/sampling/population_histogram.py
     :align: center
@@ -42,7 +42,7 @@ Since we are assuming we know the population distribution, we can see how sampli
 
 Suppose a random sample of 2 students are drawn from this population *with replacement*. Recall "*with replacement*" means the same student may be observed more than once, since every student is put back into the population for subsequenct selections. 
 
-In drawing a sample of 2 students, an account must be taken of all possible ways this sample that might be drawn. Each student will have either gotten 2 answers correct, 1 answer correct or 0 answers correct. By the :ref:`generalized_counting_principle`, the total number of possible 2 person samples that can be drawn from this population is,
+In drawing a sample of 2 students, an account must be taken of all possible ways this sample that might be drawn. Each student will have either gotten 2 answers correct, 1 answer correct or 0 answers correct. By the :ref:`generalized-counting-principle`, the total number of possible 2 person samples that can be drawn from this population is,
 
 .. math:: 
     3 \cdot 3 = 9

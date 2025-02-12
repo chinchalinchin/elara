@@ -1,4 +1,4 @@
-.. _geometric_distribution:
+.. _geometric-distribution:
 
 ======================
 Geometric Distribution
@@ -6,7 +6,7 @@ Geometric Distribution
 
 TODO
 
-.. _geometric_random_variable:
+.. _geometric-random-variable:
 
 Geometric Random Variable
 =========================
@@ -15,6 +15,8 @@ Definition
 ----------
 
 TODO
+
+.. _geometric-conditions:
 
 Geometric Conditions
 --------------------
@@ -32,8 +34,10 @@ TODO
 
 TODO
 
-Parameters
-----------
+.. _geometric-parameters:
+
+Geometric Parameters
+--------------------
 
 A Geometric Random Variable has single parameter.
 
@@ -41,14 +45,14 @@ A Geometric Random Variable has single parameter.
 
 	1. :math:`p`: the probability of success in a single trial.
 
-.. _geometric_distribution:
+.. _geometric-probability:
 
-Geometric Distribution
-======================
+Geometric Probability
+=====================
 
 TODO 
 
-.. _geometric_pdf:
+.. _geometric-pdf:
 
 Probability Density Function
 ----------------------------
@@ -60,7 +64,8 @@ TODO
     P(\mathcal{X} = x) = \sum_{i=1}^{x} (1-p)^{x-1} \cdot p
 
 TODO
-.. _geometric_cdf:
+
+.. _geometric-cdf:
 
 Cumulative Distribution Function
 --------------------------------
@@ -69,7 +74,7 @@ TODO
 
 In order to show the geometric density represents a distribution, we must show the probability of all outcomes sums to 1. In order to do this, we must first talk about the *geometric series*.
 
-.. _geometric_series:
+.. _geometric-series:
 
 Geometric Series
 ****************
@@ -88,9 +93,12 @@ The reason it is called *geometric* can be easily seen if we give ``r`` a value.
 
 Each term on the right hand side can be identified with the areas of successive squares in the following picture,
 
-.. image:: ../../_static/img/context/geometric_series.png
+.. image:: ../../_static/img/mathematics/geometric_series.png
     :align: center
     
+.. _geometric-expectation:
+
 Expectation
 -----------
 
+TODO

@@ -21,7 +21,7 @@ As an extreme example to illustrate the meaning of this type of *bias*, if you w
 
 A famous example of *how to avoid selection bias* is the work of Abraham Wald during World War II. Wald was a statistican at Columbia University who was analyzing damage done to aircraft that had taken enemy fire. Had he only used the sample as his disposal, the aircraft that *survived* the war and made their way to Columbia University to be examined by him, he would have erroneously concluded the areas where craft sustained major damaged needed re-inforced with armor. 
 
-.. image:: ../../assets/imgs/context/wald_plane_armor.png
+.. image:: ../../_static/img/context/statistical/wald_plane_armor.png
     :width: 50%
     :align: center
 
@@ -55,7 +55,7 @@ Other            5      6     9      5
 
 While polls will never agree 100% of the time with reality, the error in this case was extreme. Upon investigating what went wrong, it was discovered the pollsters at the organizations of Crossley, Gallup and Roper were told to survey a certain number of people. Beyond that, they were free to choose who to include in the survey. They ended up calling their friends, family and close relatives. This led to the data they collected being *biased*, resulting in an infamous photograph,
 
-.. image:: ../../assets/imgs/context/dewey_defeats_truman.jpg
+.. image:: ../../_static/img/context/historical/dewey_defeats_truman.jpg
     :align: center
 
 Observer Bias
@@ -126,6 +126,6 @@ In each of these cases, we can identify "*how*" one variable determines the valu
 
 The following image illustrates why we cannot infer *causation* from *correlation*,
 
-.. image:: ../../assets/imgs/context/spurious_correlation.jpeg
+.. image:: ../../_static/img/context/statistical/spurious_correlation.jpeg
     :align: center
 

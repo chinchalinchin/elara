@@ -93,7 +93,7 @@ Recall the concept of a *function* from your other mathematics classes. You prob
 
 When the concept of *functions* is first taught, students are encouraged to treat a function as an algebraic expression, such as :math:`f(x) = x^2`. It's an algebraic *thing* that you plug numbers into and out of which you get numbers, which may or may not be the same numbers that were inputted (consider the output of  :math:`f(x) = x` versus :math:`f(x) = x^2`; what is the difference between the set of things output by each of these function?). When `f(x)=x^2`, we put `x = 5` and get `f(5) = 25`, which describes an ordered pair in the **Cartesian** plane, :math:`(5, f(5))`. Students are told about the *domain* and *range*; The :ref:`set <sets>` of all values that are input into a function is called the *domain*. Likewise, the set of all values that is output by the function is called the *range*. You probably remember seeing a diagram to help you visualize this idea and it probably looked like this,
 
-.. image:: ../../_static/img/probability/function.png
+.. image:: ../../_static/img/mathematics/probability/function.png
 
 And then you studied various types of algebraic functions, such as logs and sines. You learned about the joy of factoring and finding roots. You plotted curves and found inflection points. Life was idyllic; It seemed as though nothing could ever shatter the peace and serenity you were blessed with amidst the glory of algebra. However, this is not the whole story.
 
@@ -138,7 +138,7 @@ In each case, the cardinality of *something* is being asserted. In other words, 
 
 Put in the parlance of modern mathematics, a function *maps* a value to a given set. The set of all values that are mapped is likewise a set of *things*. This leds to the idea of a *function* as a map between sets. A *function* takes elements from one set and *maps* them to the elements of another set. This slight change in the way functions are talked about leads to a revision of the diagram given at the beginning of this section,
 
-.. image:: ../../_static/img/probability/random_variable.png
+.. image:: ../../_static/img/mathematics/probability/random_variable.png
     :align: center
 
 This suggests we view random variables as *functions* of the outcomes in sample space, 
@@ -158,7 +158,7 @@ Random Variables and Events
 
 The outcomes in a event determine the value of the random variable in the same way the values inputted into a function determine the output of the function. However, the input to a random variable is uncertain, therefore the output is likewise uncertain. The probability of an event occuring in the sample space is transferred, through the outcomes that determine the random variable, into the probability of a random variable assuming a particular value. An event (set) of outcomes in the *sample space* becomes an assignment of a particular value to a *random variable*,
 
-.. image:: ../../_static/img/probability/random_variable_events.png
+.. image:: ../../_static/img/mathematics/probability/random_variable_events.png
     :align: center
 
 A random variable shows how events from the sample space (the domain) are transformed into events of the random variable (the range). 
@@ -168,7 +168,7 @@ A random variable shows how events from the sample space (the domain) are transf
 Properties
 ==========
 
-.. _pdf:
+.. _random-variable-pdf:
 
 Probability Density Function
 ----------------------------
@@ -177,14 +177,14 @@ The *density function* should be familiar. We have already encountered its stati
 
 TODO
     
-.. _cdf:
+.. _random-variable-cdf:
 
 Cumulative Distribution Function
 --------------------------------    
 
 TODO 
 
-.. _expectation:
+.. _random-variable-expectation:
 
 Expectation
 ===========
@@ -198,6 +198,7 @@ TODO
 	.. math::
 	
 		E(\mathcal{X}) = \sum_{x \in \mathcal{X}(S)}{x \ \cdot P(\mathcal{X} = x) }
+
 TODO
 
 The *expectation* of a Random Variable :math:`\mathcal{X}` is the weighted sum of its outcome. The *weight* of each outcome is exactly the probability of that outcome occuring.

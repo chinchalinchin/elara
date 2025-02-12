@@ -214,6 +214,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../statistics/02_CORRELATION.html">Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics/03_REGRESSION.html">Linear Regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics/04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/05_CONFIDENCE.html">Confidence Intervals</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -538,10 +539,10 @@
 <div class="math notranslate nohighlight">
 \[T = \{ t \}\]</div>
 <p>Be careful not to confuse the outcome <em>h</em> with the event <strong>H</strong>, and likewise the outcome <em>t</em> with the event <strong>T</strong>. They have different, but related, meanings. The outcomes <em>h</em> and <em>t</em> are individual observables; they are physically measured by flipping a coin and observing on which side it lands. An event, on the other hand, is a <a class="reference internal" href="../foundations/02_SET_THEORY.html#sets"><span class="std std-ref">set</span></a>, and <em>sets</em> are abstract collections of individual elements. In this case, the sets are <em>singletons</em>, i.e. the sets <strong>H</strong> and <strong>T</strong> only contain one element each, which can lead to confusing the set for the outcome. Let us extend this example further, to put a finer point on this subtlety.</p>
-<p>Consider now flipping the same fair, two-sided coin twice. A <a class="reference internal" href="01_COMBINATORICS.html#tree-diagrams"><span class="std std-ref">tree diagram</span></a> can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,</p>
+<p>Consider now flipping the same fair, two-sided coin twice. A <span class="xref std std-ref">tree diagram</span> can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,</p>
 <a class="reference internal image-reference" href="../../_images/sample_space_coin_flip.png"><img alt="../../_images/sample_space_coin_flip.png" class="align-center" src="../../_images/sample_space_coin_flip.png" style="width: 60%;" />
 </a>
-<p>The outcomes of the sample space are found by tracing each possible path of the <a class="reference internal" href="01_COMBINATORICS.html#tree-diagrams"><span class="std std-ref">tree diagram</span></a> and then collecting them into a set,</p>
+<p>The outcomes of the sample space are found by tracing each possible path of the <span class="xref std std-ref">tree diagram</span> and then collecting them into a set,</p>
 <div class="math notranslate nohighlight">
 \[S = \{ hh, ht, th, tt \}\]</div>
 <p>In this example, there is no simple correspondence between the events defined on the sample space and the outcomes within those events, as in the previous example.</p>
@@ -559,7 +560,7 @@
 </section>
 <section id="compound-events">
 <span id="id2"></span><h3>Compound Events<a class="headerlink" href="#compound-events" title="Link to this heading">#</a></h3>
-<p>A <em>compound</em> event is formed by composing simpler events with <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-operations"><span class="std std-ref">Operations</span></a>.</p>
+<p>A <em>compound</em> event is formed by composing simpler events with <span class="xref std std-ref">set-operations</span>.</p>
 <dl class="simple">
 <dt>Example</dt><dd><p>Consider the experiment of drawing a single card at random from a well-shuffled, standard playing deck. Let <strong>A</strong> represent the event of drawing a 2. Let <strong>B</strong> represent the event of drawing a heart.</p>
 </dd>
@@ -573,7 +574,7 @@
 </ol>
 </section>
 <section id="classical-definition-of-probability">
-<span id="classical-definition"></span><h3>Classical Definition of Probability<a class="headerlink" href="#classical-definition-of-probability" title="Link to this heading">#</a></h3>
+<span id="id3"></span><h3>Classical Definition of Probability<a class="headerlink" href="#classical-definition-of-probability" title="Link to this heading">#</a></h3>
 <p>Returning to the experiment of flipping a fair coin once, we have a sample space and two events, <strong>H</strong> and <strong>T</strong>, defined on that sample space,</p>
 <div class="math notranslate nohighlight">
 \[S = \{ h, t \}\]</div>
@@ -606,7 +607,7 @@
 </section>
 </section>
 <section id="axioms-of-probability">
-<span id="id3"></span><h2>Axioms of Probability<a class="headerlink" href="#axioms-of-probability" title="Link to this heading">#</a></h2>
+<span id="id4"></span><h2>Axioms of Probability<a class="headerlink" href="#axioms-of-probability" title="Link to this heading">#</a></h2>
 <p>The <em>classical definition of probability</em> suffices for a general understanding of probability, but there are cases where it fails to account for every feature we would expect a definition of probability to satisfy.</p>
 <p>To see this, consider the experiment of spinning a dial on a clock with radius <em>r</em>,</p>
 <p>(INSERT PICTURE)</p>
@@ -614,31 +615,31 @@
 <p>For this reason and other similar cases, the <em>classical definition of probability</em> is not sufficient to completely determine the nature of probability. This leads to the <em>axiomatization of probability</em>, which acts as additional constraints any model of probability must satisfy in order to be considered a probability.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We will see in a subsequent section, when we discuss <span class="xref std std-ref">the uniform distribution</span>, while we cannot calculate the probability of the dial exactly landing on a given number, we can calculate the probability the dial lands within a certain interval (that is to say, a certain <a class="reference external" href="https://en.wikipedia.org/wiki/Arc_length">arc length</a> of the clock’s circumference).</p>
+<p>We will see in a subsequent section, when we discuss <a class="reference internal" href="../distributions/03_UNIFORM.html#uniform-distribution"><span class="std std-ref">the uniform distribution</span></a>, while we cannot calculate the probability of the dial exactly landing on a given number, we can calculate the probability the dial lands within a certain interval (that is to say, a certain <a class="reference external" href="https://en.wikipedia.org/wiki/Arc_length">arc length</a> of the clock’s circumference).</p>
 </div>
 <section id="axioms">
 <h3>Axioms<a class="headerlink" href="#axioms" title="Link to this heading">#</a></h3>
 <section id="axiom-1">
-<span id="id4"></span><h4>Axiom 1<a class="headerlink" href="#axiom-1" title="Link to this heading">#</a></h4>
+<span id="probability-axiom-1"></span><h4>Axiom 1<a class="headerlink" href="#axiom-1" title="Link to this heading">#</a></h4>
 <dl class="simple">
 <dt><span class="math notranslate nohighlight">\(P(A)&gt;=0\)</span></dt><dd><p>All probabilities are positive; No probabilities are negative.</p>
 </dd>
 </dl>
 </section>
 <section id="axiom-2">
-<span id="id5"></span><h4>Axiom 2<a class="headerlink" href="#axiom-2" title="Link to this heading">#</a></h4>
+<span id="probability-axiom-2"></span><h4>Axiom 2<a class="headerlink" href="#axiom-2" title="Link to this heading">#</a></h4>
 <dl class="simple">
 <dt><span class="math notranslate nohighlight">\(P(S)=1\)</span></dt><dd><p>The probability of <em>some</em> outcome from the sample space <strong>S</strong> occuring is equal to 1.</p>
 </dd>
 </dl>
 </section>
 <section id="axiom-3">
-<span id="id6"></span><h4>Axiom 3<a class="headerlink" href="#axiom-3" title="Link to this heading">#</a></h4>
+<span id="probability-axiom-3"></span><h4>Axiom 3<a class="headerlink" href="#axiom-3" title="Link to this heading">#</a></h4>
 <dl class="simple">
 <dt><span class="math notranslate nohighlight">\(\forall i \neq j: A_i \cap A_j = \varnothing \implies P(\bigcup\limits_{i=1}^{n} A_i) = \sum_{i=1}^n P(A_i)\)</span></dt><dd><p>If each event <sub>i</sub> <strong>A</strong> in the sample space <strong>S</strong> is <em>mutually exclusive</em> with every other event <span class="math notranslate nohighlight">\(\forall i \neq j: A_i\)</span>, then the probability of the union of all of these events is equal to the sum of the probabilities of each individual event.</p>
 </dd>
 </dl>
-<p><a class="reference internal" href="#axiom-1"><span class="std std-ref">Axiom 1</span></a> and <a class="reference internal" href="#axiom-2"><span class="std std-ref">Axiom 2</span></a> are fairly intuitive and straight-forward in their meaning, while <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a> takes a bit of study to fully appreciate. To help in that endeavor, consider the following example.</p>
+<p><a class="reference internal" href="#probability-axiom-1"><span class="std std-ref">Axiom 1</span></a> and <a class="reference internal" href="#probability-axiom-2"><span class="std std-ref">Axiom 2</span></a> are fairly intuitive and straight-forward in their meaning, while <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a> takes a bit of study to fully appreciate. To help in that endeavor, consider the following example.</p>
 <dl>
 <dt>Example</dt><dd><p>Let us return again to the experiment of flipping a fair coin twice. Consider now two different events <strong>A</strong> and <strong>B</strong> defined on this sample space,</p>
 <div class="math notranslate nohighlight">
@@ -660,22 +661,22 @@
 \[B = \{ ht, th \}\]</div>
 <div class="math notranslate nohighlight">
 \[n(B) = 2\]</div>
-<p>And, using the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>, the probabilities of these events can be calculated by,</p>
+<p>And, using the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>, the probabilities of these events can be calculated by,</p>
 <div class="math notranslate nohighlight">
 \[P(A) = \frac{3}{4}\]</div>
 <div class="math notranslate nohighlight">
 \[P(B) = \frac{2}{4} = \frac{1}{2}\]</div>
-<p><a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a> tells us how to compute <span class="math notranslate nohighlight">\(A \cup B\)</span>; it tells us the probability of the union is equal to the sum of the individual probabilities. However, if we try to apply <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a> here, we wind up with a contradiction,</p>
+<p><a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a> tells us how to compute <span class="math notranslate nohighlight">\(A \cup B\)</span>; it tells us the probability of the union is equal to the sum of the individual probabilities. However, if we try to apply <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a> here, we wind up with a contradiction,</p>
 <div class="math notranslate nohighlight">
 \[P(A) + P(B) = \frac{3}{4} + \frac{2}{4} = \frac{5}{4} \geq 1\]</div>
 <p>Here is a probability greater than 1, which cannot be the case. What is going on?</p>
-<p>The issue is the <em>condition</em> that must be met to apply <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a>; the events <strong>A</strong> and <strong>B</strong> must be <em>mutually exclusive</em>, <span class="math notranslate nohighlight">\(A \cap B = \varnothing\)</span>, while in this example we have,</p>
+<p>The issue is the <em>condition</em> that must be met to apply <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a>; the events <strong>A</strong> and <strong>B</strong> must be <em>mutually exclusive</em>, <span class="math notranslate nohighlight">\(A \cap B = \varnothing\)</span>, while in this example we have,</p>
 <div class="math notranslate nohighlight">
 \[A \cap B = \{ ht, th \}\]</div>
 <p>In other words, <strong>A</strong> and <strong>B</strong> are <em>not</em> mutually exclusive here. Therefore, we <em>cannot</em> say the probability of the union  of these two events is equal to the sum of the probabilities of each individual event. In fact, in this example,</p>
 <div class="math notranslate nohighlight">
 \[A \cup B = \{ hh, ht, th \}\]</div>
-<p>And therefore, by the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<p>And therefore, by the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup B) = \frac{3}{4}\]</div>
 <p>Which is clearly not greater than 1.</p>
@@ -698,18 +699,18 @@
 <p>So the probability of the compound event <span class="math notranslate nohighlight">\(B \cup C\)</span> is calculated as,</p>
 <div class="math notranslate nohighlight">
 \[P(B \cup C) = \frac{3}{4}\]</div>
-<p>Notice <span class="math notranslate nohighlight">\(B \cap C = \varnothing\)</span>, i.e. <strong>B</strong> and <strong>C</strong> are mutually exclusive, so by <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a>, we may also decompose this probability into its individual probabilities,</p>
+<p>Notice <span class="math notranslate nohighlight">\(B \cap C = \varnothing\)</span>, i.e. <strong>B</strong> and <strong>C</strong> are mutually exclusive, so by <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a>, we may also decompose this probability into its individual probabilities,</p>
 <div class="math notranslate nohighlight">
 \[P(B \cup C) = P(B) + P(C) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}\]</div>
-<p>In this case, the two methods of finding the probabilities agree <em>because the condition (or hypothesis) of</em> <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a> <em>was met</em>, namely, that the events are mutually exclusive. If the condition (or hypothesis) of <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a> is not met, then its conclusion does not follow.</p>
+<p>In this case, the two methods of finding the probabilities agree <em>because the condition (or hypothesis) of</em> <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a> <em>was met</em>, namely, that the events are mutually exclusive. If the condition (or hypothesis) of <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a> is not met, then its conclusion does not follow.</p>
 </section>
 </section>
 </section>
 <section id="theorems">
 <h2>Theorems<a class="headerlink" href="#theorems" title="Link to this heading">#</a></h2>
-<p>We can use these <em>axioms</em>, along with the <cite>theorems of set theory &lt;set_theorems&gt;</cite> to prove various things about probability.</p>
+<p>We can use these <em>axioms</em>, along with the <cite>theorems of set theory &lt;set-theorems&gt;</cite> to prove various things about probability.</p>
 <section id="law-of-complements">
-<span id="id7"></span><h3>Law of Complements<a class="headerlink" href="#law-of-complements" title="Link to this heading">#</a></h3>
+<span id="id5"></span><h3>Law of Complements<a class="headerlink" href="#law-of-complements" title="Link to this heading">#</a></h3>
 <dl>
 <dt>Symbolic Expression</dt><dd><div class="math notranslate nohighlight">
 \[P(A) + P(A^c) = 1\]</div>
@@ -738,7 +739,7 @@
 </div></blockquote>
 <p>Two equivalent formal proofs of this theorem are given below. Choose whichever one makes more sense to you.</p>
 <dl>
-<dt>Proof #1</dt><dd><p>By the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>, the probability of <span class="math notranslate nohighlight">\(A \cup A^c\)</span> is given by,</p>
+<dt>Proof #1</dt><dd><p>By the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>, the probability of <span class="math notranslate nohighlight">\(A \cup A^c\)</span> is given by,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup A^c) = \frac{n(A \cup A^c)}{n(S)}\]</div>
 <p>By <span class="xref std std-ref">Counting Theorem 1</span>,</p>
@@ -750,13 +751,13 @@
 <p>Distributing <span class="math notranslate nohighlight">\(\frac{1}{n(S)}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup A^c) = \frac{n(A)}{n(S)} + \frac{n(A^c)}{n(S)}\]</div>
-<p>Applying the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> to both terms on the right hand side of the equation,</p>
+<p>Applying the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> to both terms on the right hand side of the equation,</p>
 <div class="math notranslate nohighlight">
 \[= P(A) + P(A^c)\]</div>
 <p>On the other hand, by <span class="xref std std-ref">Complement Theorem 2</span>,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup A^c) = P(S)\]</div>
-<p>By <a class="reference internal" href="#axiom-2"><span class="std std-ref">Axiom 2</span></a>,</p>
+<p>By <a class="reference internal" href="#probability-axiom-2"><span class="std std-ref">Axiom 2</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(S) = 1\]</div>
 <p>Putting it altogether,</p>
@@ -766,13 +767,13 @@
 <dt>Proof #2</dt><dd><p>By <span class="xref std std-ref">Complement Theorem 3</span>,</p>
 <div class="math notranslate nohighlight">
 \[A \cap A^c = \varnothing\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A^c\)</span> are <em>mutually exclusive</em>. So by <a class="reference internal" href="#axiom-3"><span class="std std-ref">Axiom 3</span></a>, we can say,</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A^c\)</span> are <em>mutually exclusive</em>. So by <a class="reference internal" href="#probability-axiom-3"><span class="std std-ref">Axiom 3</span></a>, we can say,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup A^c) = P(A) + P(A^c)\]</div>
-<p>But, by <span class="xref std std-ref">Complement Theorem TWo</span>,</p>
+<p>But, by <span class="xref std std-ref">Complement Theorem Two</span>,</p>
 <div class="math notranslate nohighlight">
 \[A \cup A^c = S\]</div>
-<p>And by <a class="reference internal" href="#axiom-2"><span class="std std-ref">Axiom 2</span></a>,</p>
+<p>And by <a class="reference internal" href="#probability-axiom-2"><span class="std std-ref">Axiom 2</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(S) = 1\]</div>
 <p>So,</p>
@@ -785,18 +786,18 @@
 <p>TODO</p>
 </section>
 <section id="law-of-unions">
-<span id="id8"></span><h3>Law of Unions<a class="headerlink" href="#law-of-unions" title="Link to this heading">#</a></h3>
+<span id="id6"></span><h3>Law of Unions<a class="headerlink" href="#law-of-unions" title="Link to this heading">#</a></h3>
 <dl>
 <dt>Symbolic Expression</dt><dd><div class="math notranslate nohighlight">
 \[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</div>
 </dd>
 </dl>
-<p>Again, from inspection of a <a class="reference internal" href="../foundations/02_SET_THEORY.html#venn-diagrams"><span class="std std-ref">Venn Diagram</span></a> of <em>overlappying</em> sets, this theorem should be obvious,</p>
+<p>Again, from inspection of a <span class="xref std std-ref">Venn Diagram</span> of <em>overlappying</em> sets, this theorem should be obvious,</p>
 <img alt="../../_images/sets_union_overlapping.jpg" src="../../_images/sets_union_overlapping.jpg" />
 <p>The union is the area encompassed by bother circles. When we add the probability of <strong>A</strong> (area of circle <strong>A</strong>) to the probability of <strong>B</strong> (area of circle <strong>B</strong>), we double-count the area <span class="math notranslate nohighlight">\(A \cap B\)</span>, so to correct the overcount, we must subtract once by the offending area.</p>
-<p>The formal proof <strong>Law of Unions</strong> follows directly from <span class="xref std std-ref">Counting Theorem 1</span> and the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>. The proof is given below.</p>
+<p>The formal proof <strong>Law of Unions</strong> follows directly from <span class="xref std std-ref">Counting Theorem 1</span> and the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>. The proof is given below.</p>
 <dl>
-<dt>Proof</dt><dd><p>By the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<dt>Proof</dt><dd><p>By the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup B) = \frac{n(A \cup B)}{n(S)}\]</div>
 <p>By <span class="xref std std-ref">Counting Teorem 1</span>,</p>
@@ -805,7 +806,7 @@
 <p>Distributing <span class="math notranslate nohighlight">\(\frac{1}{n(S)}\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup B) = \frac{n(A)}{n(S)} + \frac{n(B)}{n(S)} - \frac{n(A \cap B)}{n(S)}\]</div>
-<p>Applying the <a class="reference internal" href="#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> to all three terms on the right side of the equation,</p>
+<p>Applying the <a class="reference internal" href="#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> to all three terms on the right side of the equation,</p>
 <div class="math notranslate nohighlight">
 \[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</div>
 </dd>
@@ -830,7 +831,7 @@
 <div class="math notranslate nohighlight">
 \[= \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13} \approx 0.31\]</div>
 <section id="probability-tables">
-<span id="id9"></span><h4>Probability Tables<a class="headerlink" href="#probability-tables" title="Link to this heading">#</a></h4>
+<span id="id7"></span><h4>Probability Tables<a class="headerlink" href="#probability-tables" title="Link to this heading">#</a></h4>
 <p>If you have two events, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, then you can form a <em>two-way</em> probability table by partitioning the sample space into <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A^c\)</span> and then simultaneously partitioning the sample space into <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(B^c\)</span>,</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>

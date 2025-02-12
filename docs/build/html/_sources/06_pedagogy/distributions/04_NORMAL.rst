@@ -132,7 +132,7 @@ For example, :math:`sin(x)` is a trigonometric quantity defined as the ratio of 
 
 Similarly, the Standard Normal distribution is defined by a density curve whose area is not easily calculated without a substantial amount of math-power (like horse-power, but with math). In order to aid in calculations, statisticians of the past tabulated the values of the Standard Normal and devised a way of representing the CDF of the Standard Values through a two-way table,
 
-.. image:: ../../_static/img/tables/table_positive_z.png
+.. image:: ../../_static/img/mathematics/tables/table_positive_z.png
 	:align: center
 
 This table can answers questions like,
@@ -144,12 +144,12 @@ This table can answers questions like,
 
 First, we find the row that corresponds to the two leading digits, `1.4`. 
 
-.. image:: ../../_static/img/tables/table_positive_z_example_step1.png
+.. image:: ../../_static/img/mathematics/tables/table_positive_z_example_step1.png
 	:align: center
 
 Then, we find the column that corresonds to the last decimal spot, `0.05`. 
 
-.. image:: ../../_static/img/tables/table_positive_z_example_step2.png
+.. image:: ../../_static/img/mathematics/tables/table_positive_z_example_step2.png
 	:align: center
 
 This tells us that `92.65%` of the Standard Normal distribution has a distance less than or equal to 1.45 standard deviations from the mean.
@@ -195,7 +195,7 @@ TODO
 
 The *Empirical Rule* can be visualized through the area underneath the Normal curve,
 
-.. image:: ../../_static/img/distributions/normal/normal_distribution_empirical_rule.png
+.. image:: ../../_static/img/mathematics/distributions/normal/normal_distribution_empirical_rule.png
     :align: center
 
 TODO

@@ -8,9 +8,45 @@ Anno Domini
 17th Century
 ------------
 
+.. _1640s:
+
+1640s
+-----
+
+    All that up to the present time I have accepted as most true and certain I have learned either from the senses or through the senses; but it is sometimes proved to me that these senses are deceptive, and it is wiser not to trust entirely to anything by which we have once been deceived.
+
+	But it may be that although the senses sometimes deceive us concerning things which are hardly perceptible, or very far away, there are yet many others to be met with as to which we cannot reasonably have any doubt, although we recognize them by their means. For example, there is the fact that I am here, seated by the fire, attired in a dressing gown, having this paper in my hands and other similar matters. And how could I deny that these hands and this body are mine, were it not perhaps that I compare myself to certain persons, devoid of sense, whose cerebella are so troubled and clouded by violent vapours of black bile, that they constantly assure us that they think they are kings when they are really quite poor, or that they are clothed in purple when they are really without covering, or who imagine that they have an earthernware head or are nothing but pumpkins or are made of glass. But they are mad, and I should be any the less insane were I to follow examples so extravagant.
+
+	At the same time I must remember that I am a man, and that consequently I am in the habit of sleeping, and in my dreams representing to myself those same things or sometimes even less probable things, than do those who are insane in their waking moments. How often has it happened to me that in the night I dreamt that I found myself in this particular place, that I was dressed and seated near the fire, whilst in reality I was lying undressed in bed! At this moment it does indeed seem to me that it is with eyes awake that I am looking at this paper; that this head which I move is not asleep, that it is deliberately and of set purpose that I extend my hand and perceive it; what happens in sleep does not appear so clear nor so distinct as does all this. But in thinking over this I remind myself that on many occasions I have in sleep been deceived by similar illusions, and in dwelling carefully on this reflection I see so manifestly that there are no certain indications by which we may clearly distinguish wakefulness from sleep that I am lost in astonishment. And my astonishment is such that it is almost capable of persuading me that I now dream.
+
+	I suppose, then, that all the things I see are false; I persuade myself that nothing has ever existed of all that my fallacious memory represents to me. I consider that I possess no senses; I imagine that body, figure, extension, movement and place are but fictions of my mind. What, then, can be esteemed as true? Perhaps nothing at all, unless that there is nothing in this world that is certain.
+
+    -- *Meditations on First Philosophy*, Rene Descartes
+
+.. _1670s:
+
+1670s
+^^^^^
+
     To be brief, I hold as axiomatic the identical proposition which varies only in emphasis: that what is not truly one *being* is not truly *one* being either
 
     -- *Letters*, Gottfried Wilhelm Leibniz
+
+.. _18th-century:
+
+18th Century
+------------
+
+.. _1780s:
+
+1780s
+^^^^^
+
+    That all our knowledge begins with experience there can be no doubt. For how should the faculty of knowledge be called into activity, if not by objects which affect our senses and which, on the one hand, produce representations by themselves or on the other, rouse the activity of our understanding to compare, connect, or to separate them and thus to convert the raw material of our sensible impressions into knowledge of objects, which we call experience? With respect to time, therefore, no knowledge within us is antecedent to experience, but all knowledge begins with it.
+
+	But though all our knowledge begins with experience, it does not follow that it all arises from experience. For it is quite possible that even our empirical knowledge is a compound of that which we perceive through impression, and of that which our own faculty of knowledge (incited by sense impressions) supplies from itself, a supplement which we do not distinguish from that raw material until long practice and rendered us capable of separating one from the other.  It is therefore a question which deserves at least closer investigation and cannot be disposed of at first sight: Whether there is any knowledge independent of all experience and even of all impressions of the senses? Such knowledge is called *"a priori*"and is distguished from empirical knowledge, which has its source "*a posteriori*", that is, in experience...
+
+    -- *Critique of Pure Reason*, Immanuel Kant
 
 .. _19th-century:
 

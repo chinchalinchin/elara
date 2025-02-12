@@ -214,6 +214,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../statistics/02_CORRELATION.html">Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics/03_REGRESSION.html">Linear Regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../statistics/04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/05_CONFIDENCE.html">Confidence Intervals</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -453,7 +454,7 @@
 <p>If <span class="math notranslate nohighlight">\(A = \{ a, b \}\)</span></p>
 <p>Then <span class="math notranslate nohighlight">\(\mathcal{P}(A) = \{ \{\}, \{a\}, \{b\}, \{a, b\} \}\)</span></p>
 </div>
-<p>We can define the <em>Power Set</em> of a set <strong>A</strong> formally by quantifying over all sets in the <a class="reference internal" href="00_INTRODUCTION.html#sample-space"><span class="std std-ref">Sample Space</span></a> (<a class="reference internal" href="../foundations/02_SET_THEORY.html#universal-set"><span class="std std-ref">Universal Set</span></a>) and imposing the condition we only look at subsets of a given set <strong>A</strong></p>
+<p>We can define the <em>Power Set</em> of a set <strong>A</strong> formally by quantifying over all sets in the <a class="reference internal" href="00_INTRODUCTION.html#sample-space"><span class="std std-ref">Sample Space</span></a> (<span class="xref std std-ref">Universal Set</span>) and imposing the condition we only look at subsets of a given set <strong>A</strong></p>
 <p><span class="math notranslate nohighlight">\(\forall B: B \subseteq A \implies B \in \mathcal{P}(A)\)</span></p>
 <p>In English, “for all <em>B</em>, if <em>B</em> is a subset of <em>A</em>, then <em>B</em> belongs to the <em>Power Set of A</em>”</p>
 </section>
@@ -464,17 +465,17 @@
 <h3>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h3>
 <p>Suppose you live in the aptly named <em>Town A</em> and are planing a road trip to the similarly uninspired <em>Town C</em>. You plan on stopping at <em>Town B</em> to fill up your gas tank before proceeding to <em>Town C</em>.</p>
 <p>Suppose further there are two routes from <em>Town A</em> to <em>Town B</em>, and there are three routes from <em>Town B</em> to <em>Town C</em>. Let us call the routes from <em>Town A</em> to <em>Town B</em> <em>a</em> <sub>1</sub> and <em>a</em> <sub>2</sub>, respectively. Let us call the routes from <em>Town B</em> to <em>Town C</em> <em>b</em> <sub>1</sub>, <em>b</em> <sub>2</sub>, and <em>b</em> <sub>3</sub>, respectively. This setup is depicted in the following diagram,</p>
-<a class="reference internal image-reference" href="../../_images/combinatorics_road_trip.png"><img alt="../../_images/combinatorics_road_trip.png" class="align-center" src="../../_images/combinatorics_road_trip.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="../../_images/combinatorics-road-trip.png"><img alt="../../_images/combinatorics-road-trip.png" class="align-center" src="../../_images/combinatorics-road-trip.png" style="width: 60%;" />
 </a>
 <p>How many different routes can you take from <em>Town A</em> to <em>Town C</em>, by way of <em>Town B</em>?</p>
 <p>Before toggling the solution below, try and figure out the answer by drawing arrows from <em>Town A</em> to <em>Town B</em>, and then from <em>Town B</em> to <em>Town C</em> that represent the possible routes you can take and then count up each distinct route. In other worlds, generate a <a class="reference internal" href="00_INTRODUCTION.html#sample-space"><span class="std std-ref">Sample Space</span></a> for this “experiment”.</p>
 <details class="summary-solution">
 <summary>Solution</summary><p>We start by breaking down the problem into the choices we are making at each stage of the road trip. Starting in <em>Town A</em>, we have two possible routes from which we can choose to get to <em>Town B</em>. Once we arrive in <em>Town B</em>, regardless of the route we took to get there, we then have three possible routes to choose from that lead from <em>Town B</em> to <em>Town C</em>. To put it a different way, for each route from <em>Town A</em> to <em>Town B</em>, there are three routes from <em>Town B</em> to <em>Town C</em>.</p>
 <p>Each choice represents a branch. Every time we make a choice, we are narrowing down the set of possible outcomes. With that in mind, we can represent each choice as a <em>branch</em> in a tree, as in the following diagram,</p>
-<a class="reference internal image-reference" href="../../_images/combinatorics_tree_diagram.png"><img alt="../../_images/combinatorics_tree_diagram.png" class="align-center" src="../../_images/combinatorics_tree_diagram.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="../../_images/combinatorics-tree-diagram.png"><img alt="../../_images/combinatorics-tree-diagram.png" class="align-center" src="../../_images/combinatorics-tree-diagram.png" style="width: 60%;" />
 </a>
 <p>The number of possible routes is equal to the number of endpoints in this graph. In this case, there are 6 possible routes we can take, where each route is represented by a particular branch of the tree. These types of graphs are called <a class="reference internal" href="#tree-diagrams"><span class="std std-ref">tree diagrams</span></a>, for this reason. They are very useful for visualizing the sample spaces of experiments that are composed of successive, independent choices, as in this example.</p>
-<p>We may also see the solution by enumerating every possible choice in <a class="reference internal" href="../foundations/02_SET_THEORY.html#list-notation"><span class="std std-ref">List Notation</span></a>,</p>
+<p>We may also see the solution by enumerating every possible choice in <span class="xref std std-ref">list-notation</span>,</p>
 <div class="math notranslate nohighlight">
 \[G = \{ {a_1}{b_1}, {a_1}{b_2}, {a_1}{b_3}, {a_2}{b_1}, {a_2}{b_2}, {a_2}{b_3} \}\]</div>
 <div class="math notranslate nohighlight">
@@ -503,7 +504,7 @@
 <p>You are trying to figure out what to outfit to wear. In your closet, you have a red, green, blue and orange shirt. In your dresser, you have a pair of blue jeans, a pair of khakis and a pair of sweat pants. How many possible choices do you have for your outfit?</p>
 <details class="summary-solution">
 <summary>Solution</summary><p>We have two sets in this problem: the set of shirts in our closet, and the set of pants in our dresser.</p>
-<a class="reference internal image-reference" href="../../_images/combinatorics_example.png"><img alt="../../_images/combinatorics_example.png" class="align-center" src="../../_images/combinatorics_example.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="../../_images/combinatorics-example.png"><img alt="../../_images/combinatorics-example.png" class="align-center" src="../../_images/combinatorics-example.png" style="width: 60%;" />
 </a>
 <p>The outfits we can pick are formed by first picking a shirt from the set of shirts, and then picking a pair of pants from the set of pants. The first set contains four elements and the second set contains three elements. Therefore, by the <strong>Counting Principle</strong>, the total number of outfits is the product of the two cardinalities, <span class="math notranslate nohighlight">\(4 \cdot 3 = 12\)</span>.</p>
 </details><aside class="topic">
@@ -539,13 +540,13 @@
 <section id="tree-diagrams">
 <span id="id5"></span><h3>Tree Diagrams<a class="headerlink" href="#tree-diagrams" title="Link to this heading">#</a></h3>
 <p>TODO</p>
-<p>A <em>tree diagram</em> is a way of representing a multi-step random process, where each step in the process is drawn from a finite number of choices (i.e., a <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-theory"><span class="std std-ref">set</span></a> of outcomes) . A <em>tree diagram</em> is composed of <em>nodes</em> and <em>branches</em>. Each node of a <em>tree diagram</em> represents an outcome of one step in the random process and each branch of the tree diagram represents the paths available after one step has concluded. An example will make this laborious description more clear.</p>
+<p>A <em>tree diagram</em> is a way of representing a multi-step random process, where each step in the process is drawn from a finite number of choices (i.e., a <span class="xref std std-ref">set</span> of outcomes) . A <em>tree diagram</em> is composed of <em>nodes</em> and <em>branches</em>. Each node of a <em>tree diagram</em> represents an outcome of one step in the random process and each branch of the tree diagram represents the paths available after one step has concluded. An example will make this laborious description more clear.</p>
 <dl class="simple">
 <dt>Example</dt><dd><p>A coin is flipped three times. Use a tree diagram to find the sample space.</p>
 </dd>
 </dl>
 <p>TODO</p>
-<img alt="../../_images/combinatorics_tree_diagram_coinflips.png" class="align-center" src="../../_images/combinatorics_tree_diagram_coinflips.png" />
+<img alt="../../_images/combinatorics-tree-diagram-coinflips.png" class="align-center" src="../../_images/combinatorics-tree-diagram-coinflips.png" />
 <p>TODO</p>
 </section>
 <section id="generalized-counting-principle">
@@ -562,7 +563,7 @@
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This example can be rephrased in a more general way using the language of <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-theory"><span class="std std-ref">Set Theory</span></a>: <em>how many subsets can be formed from the set</em> <strong>A</strong>?</p>
+<p>This example can be rephrased in a more general way using the language of <span class="xref std std-ref">Set Theory</span>: <em>how many subsets can be formed from the set</em> <strong>A</strong>?</p>
 <p>In other words, what is the <em>cardinality</em> of the <em>Power Set of A</em>, <span class="math notranslate nohighlight">\(n(\mathcal{P}(A))\)</span>?</p>
 </div>
 <details class="summary-solution">
@@ -615,7 +616,7 @@
 <p>However, the choice we make for 1 <sup>st</sup> Place affects the choice we make for 2 <sup>nd</sup> Place, and the choice we make for 2 <sup>nd</sup> Place affects the choice we make for 3 <sup>rd</sup> Place. In other words, if Aletheia comes in 1 <sup>st</sup> Place, she is unable to also come in 2 <sup>nd</sup> or 3 <sup>rd</sup> place. By selecting someone to fill one place, we remove the possibility of them filling any of the other places in the sequence.</p>
 <p>This can be visualized through a modified <a class="reference internal" href="#tree-diagrams"><span class="std std-ref">tree diagram</span></a>, where subsequent branches in the tree diagram are affected by the value of the current branch,</p>
 <blockquote>
-<div><a class="reference internal image-reference" href="../../_images/combinatorics_permuted_tree_diagram.png"><img alt="../../_images/combinatorics_permuted_tree_diagram.png" class="align-center" src="../../_images/combinatorics_permuted_tree_diagram.png" style="width: 60%;" />
+<div><a class="reference internal image-reference" href="../../_images/combinatorics-permuted-tree-diagram.png"><img alt="../../_images/combinatorics-permuted-tree-diagram.png" class="align-center" src="../../_images/combinatorics-permuted-tree-diagram.png" style="width: 60%;" />
 </a>
 </div></blockquote>
 <p>Notice at each step of the diagram, a choice is lost, representing the selection of an individual to fill the given position along the given branch. This type of selection is called <a class="reference internal" href="#without-replacement"><span class="std std-ref">selection without replacement</span></a>.</p>
@@ -660,7 +661,7 @@
 </div></blockquote>
 <details class="summary-solution">
 <summary>Solution</summary><p>Let <strong>Z</strong> represent the event of selecting all six winning numbers. Let <strong>Y</strong> represent the event of selecting five winning numbers. Let <strong>X</strong> represent the event of selecting four winning numbers.</p>
-<p>The <a class="reference internal" href="00_INTRODUCTION.html#classical-definition"><span class="std std-ref">Classical Definition of Probability</span></a> states,</p>
+<p>The <a class="reference internal" href="00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> states,</p>
 <div class="math notranslate nohighlight">
 \[P(A) = \frac{n(A)}{n(S)}\]</div>
 <p>In the context of the given problem, this translates to,</p>
@@ -700,7 +701,7 @@
 <blockquote>
 <div><p>ab ac bc</p>
 </div></blockquote>
-<a class="reference internal image-reference" href="../../_images/combinatorics_connection.png"><img alt="../../_images/combinatorics_connection.png" class="align-center" src="../../_images/combinatorics_connection.png" style="width: 60%;" />
+<a class="reference internal image-reference" href="../../_images/combinatorics-connection.png"><img alt="../../_images/combinatorics-connection.png" class="align-center" src="../../_images/combinatorics-connection.png" style="width: 60%;" />
 </a>
 </section>
 <section id="permuted-combinations">

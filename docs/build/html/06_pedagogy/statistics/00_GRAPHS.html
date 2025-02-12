@@ -214,6 +214,7 @@
 <li class="toctree-l3"><a class="reference internal" href="02_CORRELATION.html">Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_REGRESSION.html">Linear Regression</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_CONFIDENCE.html">Confidence Intervals</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -637,7 +638,7 @@
 <div><p>the outcome of <span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span> and <span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span> is <em>in</em> the event <span class="math notranslate nohighlight">\(E \cap T\)</span>.</p>
 </div></blockquote>
 </div>
-<p>The <em>joint probability</em> (<em>percentage</em>) of two <em>events</em> occuring is given by <a class="reference internal" href="../probability/00_INTRODUCTION.html#classical-definition"><span class="std std-ref">classical definition of probability</span></a>. For example, the percentage of people who have seen the <em>Empire Strkes Back</em> and the <em>Two Towers</em>,</p>
+<p>The <em>joint probability</em> (<em>percentage</em>) of two <em>events</em> occuring is given by <a class="reference internal" href="../probability/00_INTRODUCTION.html#classical-definition-of-probability"><span class="std std-ref">classical definition of probability</span></a>. For example, the percentage of people who have seen the <em>Empire Strkes Back</em> and the <em>Two Towers</em>,</p>
 <div class="math notranslate nohighlight">
 \[P(E \cap T) = \frac{n(E \cap T)}{n(S)}\]</div>
 <p>In this case, <span class="math notranslate nohighlight">\(n(S)=10\)</span>. To find <span class="math notranslate nohighlight">\(n(E \cap T)\)</span>, we count up all the <em>outcomes</em> that satisfy the condition of seeing both movines, or in symbols,</p>
@@ -793,7 +794,7 @@
 <p>The equation,</p>
 <div class="math notranslate nohighlight">
 \[P(A) + P(A^c) = 1\]</div>
-<p>is known as the <span class="xref std std-ref">law-of-complements</span>.</p>
+<p>is known as the <a class="reference internal" href="../probability/00_INTRODUCTION.html#law-of-complements"><span class="std std-ref">Law of Complements</span></a>.</p>
 </div>
 <p>When one variable is ignored entirely, i.e. if only one variable is observed for each individual, the distribution formed by the <em>partition</em> is known as a <em>marginal frequency distribution</em>.</p>
 </section>
@@ -964,7 +965,7 @@
 \[w = \frac{R}{n}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Using the <span class="xref std std-ref">ceiling_function</span> from a future section, we could simply write,</p>
+<p>Using the <a class="reference internal" href="01_ESTIMATION.html#ceiling-function"><span class="std std-ref">Ceiling Function</span></a> from a future section, we could simply write,</p>
 <div class="math notranslate nohighlight">
 \[w = \lceil \frac{R}{n} \rceil\]</div>
 <p>And the <em>rounding</em> would be implied.</p>
@@ -1197,11 +1198,11 @@
 <p>It follows these areas both represent fifty percent of the distribution.</p>
 <p>A <em>normal distribution</em> tells us classes closer to the <a class="reference internal" href="01_ESTIMATION.html#median"><span class="std std-ref">Median</span></a> are more likely to be observed.</p>
 <dl class="simple">
-<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/c1108d8b7ef3804bb036923de92085ca/old_faithful_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Old</span> <span class="pre">Faithful</span> <span class="pre">Data</span> <span class="pre">Set</span></code></a>.</p>
+<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/b7593510e95be05c72cd954f184141ec/old_faithful_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Old</span> <span class="pre">Faithful</span> <span class="pre">Data</span> <span class="pre">Set</span></code></a>.</p>
 </dd>
 </dl>
 <p><em>Old Faithful</em> is a famous hot-water geyser in Yellowstone National Park that erupts every 45 minutes to 2 hours.</p>
-<a class="reference internal image-reference" href="../../_images/old_faithful.jpg"><img alt="../../_images/old_faithful.jpg" class="align-center" src="../../_images/old_faithful.jpg" style="width: 200px;" />
+<a class="reference internal image-reference" href="../../_images/old-faithful.jpg"><img alt="../../_images/old-faithful.jpg" class="align-center" src="../../_images/old-faithful.jpg" style="width: 200px;" />
 </a>
 <p>The first column of this dataset represents the <em>length of an eruption in minutes</em> while the second column represents the <em>waiting time in minutes</em> until the next eruption.</p>
 <div class="admonition note">
@@ -1221,7 +1222,7 @@
 <img alt="../../_images/histogram_bimodal.png" class="plot-directive" src="../../_images/histogram_bimodal.png" />
 </figure>
 <dl class="simple">
-<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/4c72245a6c2bb910a6b985df0cc85f0a/pigeon_racing_times_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Pigeon</span> <span class="pre">Racing</span> <span class="pre">Speeds</span></code></a>.</p>
+<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/674354b843e46dcdfa56194b698ce56a/pigeon_racing_times_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Pigeon</span> <span class="pre">Racing</span> <span class="pre">Speeds</span></code></a>.</p>
 </dd>
 </dl>
 </section>
@@ -1238,7 +1239,7 @@
 <img alt="../../_images/histogram_skewed_right.png" class="plot-directive" src="../../_images/histogram_skewed_right.png" />
 </figure>
 <dl class="simple">
-<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/3b050a7036501e1e783ee31d25034b47/roman_emperors_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
+<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/4e690e5b37e91a0ba91cf1d85df11531/roman_emperors_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
 </dd>
 </dl>
 <div class="admonition note">
@@ -1364,7 +1365,7 @@
 <section id="stacked-bar-chart">
 <h4>Stacked Bar Chart<a class="headerlink" href="#stacked-bar-chart" title="Link to this heading">#</a></h4>
 <p>A <em>stacked bar chart</em> is a type of <em>ogive</em> that is used specifically for <em>categorical data</em>. In particular, it is meant to visualize the <a class="reference internal" href="#conditional-frequency-distribution"><span class="std std-ref">Conditional Frequency Distribution</span></a> of one categorical variable with respect to all the other values of the other categorical variable.</p>
-<p>With a <em>stacked bar chart</em>, the sample is broken up into non-overlapping (<span class="xref std std-ref">mutual exclusive</span>) groups. The <em>conditional distribution</em> of each group is plotted as a vertical bar that totals to 100%,</p>
+<p>With a <em>stacked bar chart</em>, the sample is broken up into non-overlapping (<a class="reference internal" href="../probability/00_INTRODUCTION.html#mutual-exclusion"><span class="std std-ref">mutual exclusive</span></a>) groups. The <em>conditional distribution</em> of each group is plotted as a vertical bar that totals to 100%,</p>
 <p>(<a class="reference download internal" download="" href="../../_downloads/37f3ec50408a4e2341eae04e5c20f28c/stacked_bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/cab088261a1ea66fc71e69f28df3a6bc/stacked_bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/034eb96c0a9542dd757eccd5b8dab0cc/stacked_bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3221ff9a87335e4908eb1d2dbbbfdcda/stacked_bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
 <figure class="align-default">
 <img alt="../../_images/stacked_bar_chart.png" class="plot-directive" src="../../_images/stacked_bar_chart.png" />
@@ -1410,7 +1411,7 @@
 <section id="id20">
 <span id="id21"></span><h3>Distribution Shapes<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <p>A boxplot provides another window into a distribution by revealing the characteristic features of important distribution <em>shapes</em>.</p>
-<p>The comparative lengths of the boxplot <em>whiskers</em> show us in what direction the distribution is being pulled by <a class="reference internal" href="01_ESTIMATION.html#outliers"><span class="std std-ref">outliers</span></a>.</p>
+<p>The comparative lengths of the boxplot <em>whiskers</em> show us in what direction the distribution is being pulled by <a class="reference internal" href="01_ESTIMATION.html#outliers"><span class="std std-ref">Outliers</span></a>.</p>
 <p>For this last reason, <em>boxplots</em> are often useful graphical tools for quickly identifying <em>outliers</em>. We will talk more about how to use <em>boxplots</em> to identify outlying observations when we get to the <a class="reference internal" href="01_ESTIMATION.html#interquartile-range"><span class="std std-ref">Interquartile Range</span></a> descriptive statistic in the next section.</p>
 <p>For now, we present various boxplots in order to exhibit how the distribution shape is manifested in the relative lengths of the whisker.</p>
 <section id="id22">

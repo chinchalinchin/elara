@@ -1,4 +1,4 @@
-.. _probability_introduction:
+.. _probability-introduction:
 
 ============
 Introduction
@@ -9,7 +9,7 @@ Probability is the study of the properties of random events.
 Preliminaries
 =============
 
-.. _compound union:
+.. _compound-union:
 
 Compound Union 
 --------------
@@ -96,7 +96,7 @@ Definitions
 Experiment
     An *uncertain* event.    
 
-.. _mutual_exclusion:
+.. _mutual-exclusion:
 
 Mutual Exclusivity
     .. math::
@@ -112,7 +112,7 @@ Outcomes
         
 A possible way an experiment might occur.
     
-.. _sample_space: 
+.. _sample-space: 
 
 Sample Space 
     :math:`S`
@@ -140,7 +140,7 @@ Probability
         
 A numerical measure of the *likelihood*, or *chance*, that an event **A** occurs.
 
-.. _sample_spaces:
+.. _sample-spaces:
 
 Sample Spaces and Events
 ========================
@@ -170,7 +170,7 @@ Be careful not to confuse the outcome *h* with the event **H**, and likewise the
 
 Consider now flipping the same fair, two-sided coin twice. A :ref:`tree diagram <tree_diagrams>` can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,
 
-.. image:: ../../_static/img/probability/sample_space_coin_flip.png
+.. image:: ../../_static/img/mathematics/probability/sample_space_coin_flip.png
     :width: 60%
     :align: center
 
@@ -193,12 +193,12 @@ It is important to keep in mind the distinction between *events* and *outcomes*.
     1. *Outcomes* are elements. *Events* are sets.
     2. *Outcomes* are observed. *Events* occur.
 
-.. _compound_events:
+.. _compound-events:
 
 Compound Events
 ---------------
 
-A *compound* event is formed by composing simpler events with :ref:`set_operations`.
+A *compound* event is formed by composing simpler events with :ref:`set-operations`.
 
 Example
     Consider the experiment of drawing a single card at random from a well-shuffled, standard playing deck. Let **A** represent the event of drawing a 2. Let **B** represent the event of drawing a heart.
@@ -210,7 +210,7 @@ The meaning of a few different *compound events* is considered below,
 3. :math:`A^c` This *compound event* represents the event of getting any card except a 2.
 4. :math:`A \cap B^c` This *compond event* represents the event of getting a two that is *not* a heart.
    
-.. _classical_definition:
+.. _classical-definition-of-probability:
 
 Classical Definition of Probability
 -----------------------------------
@@ -257,7 +257,7 @@ Applying this definition to the events **H** and **T** in the first example, it 
 .. math:: 
     P(T) = \frac{n(T)}{n(S)} = \frac{1}{2}
 
-.. _axioms_of_probability:
+.. _axioms-of-probability:
 
 Axioms of Probability
 =====================
@@ -273,12 +273,12 @@ The dial can land at any point between 0 and the circumference of the clock, :ma
 For this reason and other similar cases, the *classical definition of probability* is not sufficient to completely determine the nature of probability. This leads to the *axiomatization of probability*, which acts as additional constraints any model of probability must satisfy in order to be considered a probability. 
 
 .. note::
-    We will see in a subsequent section, when we discuss :ref:`the uniform distribution <uniform_distribution>`, while we cannot calculate the probability of the dial exactly landing on a given number, we can calculate the probability the dial lands within a certain interval (that is to say, a certain `arc length <https://en.wikipedia.org/wiki/Arc_length>`_ of the clock's circumference).
+    We will see in a subsequent section, when we discuss :ref:`the uniform distribution <uniform-distribution>`, while we cannot calculate the probability of the dial exactly landing on a given number, we can calculate the probability the dial lands within a certain interval (that is to say, a certain `arc length <https://en.wikipedia.org/wiki/Arc_length>`_ of the clock's circumference).
 
 Axioms
 ------
 
-.. _axiom_1:
+.. _probability-axiom-1:
 
 Axiom 1
 *******
@@ -286,7 +286,7 @@ Axiom 1
 :math:`P(A)>=0`    
     All probabilities are positive; No probabilities are negative.
 
-.. _axiom_2:
+.. _probability-axiom-2:
 
 Axiom 2
 *******
@@ -294,7 +294,7 @@ Axiom 2
 :math:`P(S)=1`
     The probability of *some* outcome from the sample space **S** occuring is equal to 1.
 
-.. _axiom_3:
+.. _probability-axiom-3:
 
 Axiom 3
 *******
@@ -302,7 +302,7 @@ Axiom 3
 :math:`\forall i \neq j: A_i \cap A_j = \varnothing \implies P(\bigcup\limits_{i=1}^{n} A_i) = \sum_{i=1}^n P(A_i)`
     If each event :sub:`i` **A** in the sample space **S** is *mutually exclusive* with every other event :math:`\forall i \neq j: A_i`, then the probability of the union of all of these events is equal to the sum of the probabilities of each individual event.
 
-:ref:`axiom_1` and :ref:`axiom_2` are fairly intuitive and straight-forward in their meaning, while :ref:`axiom_3` takes a bit of study to fully appreciate. To help in that endeavor, consider the following example.
+:ref:`probability-axiom-1` and :ref:`probability-axiom-2` are fairly intuitive and straight-forward in their meaning, while :ref:`probability-axiom-3` takes a bit of study to fully appreciate. To help in that endeavor, consider the following example.
 
 Example
     Let us return again to the experiment of flipping a fair coin twice. Consider now two different events **A** and **B** defined on this sample space,
@@ -336,7 +336,7 @@ Then, in terms of outcomes, clearly, these events can be defined as,
 .. math::
     n(B) = 2
 
-And, using the :ref:`classical_definition`, the probabilities of these events can be calculated by,
+And, using the :ref:`classical-definition-of-probability`, the probabilities of these events can be calculated by,
 
 .. math::
     P(A) = \frac{3}{4}
@@ -344,14 +344,14 @@ And, using the :ref:`classical_definition`, the probabilities of these events ca
 .. math::
     P(B) = \frac{2}{4} = \frac{1}{2}
 
-:ref:`axiom_3` tells us how to compute :math:`A \cup B`; it tells us the probability of the union is equal to the sum of the individual probabilities. However, if we try to apply :ref:`axiom_3` here, we wind up with a contradiction,
+:ref:`probability-axiom-3` tells us how to compute :math:`A \cup B`; it tells us the probability of the union is equal to the sum of the individual probabilities. However, if we try to apply :ref:`probability-axiom-3` here, we wind up with a contradiction,
 
 .. math:: 
     P(A) + P(B) = \frac{3}{4} + \frac{2}{4} = \frac{5}{4} \geq 1
 
 Here is a probability greater than 1, which cannot be the case. What is going on?
 
-The issue is the *condition* that must be met to apply :ref:`axiom_3`; the events **A** and **B** must be *mutually exclusive*, :math:`A \cap B = \varnothing`, while in this example we have,
+The issue is the *condition* that must be met to apply :ref:`probability-axiom-3`; the events **A** and **B** must be *mutually exclusive*, :math:`A \cap B = \varnothing`, while in this example we have,
 
 .. math::
 
@@ -363,7 +363,7 @@ In other words, **A** and **B** are *not* mutually exclusive here. Therefore, we
 
     A \cup B = \{ hh, ht, th \}
 
-And therefore, by the :ref:`classical_definition`,
+And therefore, by the :ref:`classical-definition-of-probability`,
 
 .. math::
     P(A \cup B) = \frac{3}{4}
@@ -388,7 +388,7 @@ And the probability of the event **C**,
 .. math::
     P(C) = \frac{1}{4}
 
-Then, the :ref:`compound event <compound_events>` :math:`B \cup C` is found by aggregating the outcomes in both of the individual events **B** and **C** into a single new set,
+Then, the :ref:`compound event <compound-events>` :math:`B \cup C` is found by aggregating the outcomes in both of the individual events **B** and **C** into a single new set,
 
 .. math::
     B \cup C = \{ hh, th, ht \}
@@ -401,19 +401,19 @@ So the probability of the compound event :math:`B \cup C` is calculated as,
 .. math::
     P(B \cup C) = \frac{3}{4}
 
-Notice :math:`B \cap C = \varnothing`, i.e. **B** and **C** are mutually exclusive, so by :ref:`axiom_3`, we may also decompose this probability into its individual probabilities,
+Notice :math:`B \cap C = \varnothing`, i.e. **B** and **C** are mutually exclusive, so by :ref:`probability-axiom-3`, we may also decompose this probability into its individual probabilities,
 
 .. math::
     P(B \cup C) = P(B) + P(C) = \frac{1}{2} + \frac{1}{4} = \frac{3}{4}
 
-In this case, the two methods of finding the probabilities agree *because the condition (or hypothesis) of* :ref:`axiom_3` *was met*, namely, that the events are mutually exclusive. If the condition (or hypothesis) of :ref:`axiom_3` is not met, then its conclusion does not follow.
+In this case, the two methods of finding the probabilities agree *because the condition (or hypothesis) of* :ref:`probability-axiom-3` *was met*, namely, that the events are mutually exclusive. If the condition (or hypothesis) of :ref:`probability-axiom-3` is not met, then its conclusion does not follow.
 
 Theorems
 ========
 
-We can use these *axioms*, along with the `theorems of set theory <set_theorems>` to prove various things about probability.
+We can use these *axioms*, along with the `theorems of set theory <set-theorems>` to prove various things about probability.
 
-.. _law_of_complements:
+.. _law-of-complements:
 
 Law of Complements 
 ------------------
@@ -425,7 +425,7 @@ Symbolic Expression
 
 This corollary should be intuitively obvious, considering the Venn Diagramm of complementary sets,
 
-.. image:: ../../_static/img/sets/sets_complement.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_complement.jpg
     :align: center
 
 If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space **S**, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
@@ -461,13 +461,13 @@ But **A** and **B** are *not* complements. To restart this result in plain Engli
 Two equivalent formal proofs of this theorem are given below. Choose whichever one makes more sense to you.
 
 Proof #1 
-    By the :ref:`classical_definition`, the probability of :math:`A \cup A^c` is given by,
+    By the :ref:`classical-definition-of-probability`, the probability of :math:`A \cup A^c` is given by,
 
     .. math::
 
         P(A \cup A^c) = \frac{n(A \cup A^c)}{n(S)}
         
-    By :ref:`Counting Theorem 1 <counting_theorem_one>`,
+    By :ref:`Counting Theorem 1 <counting-theorem-one>`,
 
     .. math::
 
@@ -485,19 +485,19 @@ Proof #1
 
         P(A \cup A^c) = \frac{n(A)}{n(S)} + \frac{n(A^c)}{n(S)}
 
-    Applying the :ref:`classical_definition` to both terms on the right hand side of the equation, 
+    Applying the :ref:`classical-definition-of-probability` to both terms on the right hand side of the equation, 
 
     .. math::
 
         = P(A) + P(A^c)
 
-    On the other hand, by :ref:`Complement Theorem 2 <complement_theorem_two>`,
+    On the other hand, by :ref:`Complement Theorem 2 <complement-theorem-two>`,
 
     .. math::
 
         P(A \cup A^c) = P(S)
 
-    By :ref:`axiom_2`,
+    By :ref:`probability-axiom-2`,
 
     .. math::
         
@@ -510,25 +510,25 @@ Proof #1
         1 = P(A) + P(A^C)
 
 Proof #2
-    By :ref:`Complement Theorem 3 <complement_theorem_three>`,
+    By :ref:`Complement Theorem 3 <complement-theorem-three>`,
 
     .. math::
 
         A \cap A^c = \varnothing
 
-    Therefore, :math:`A` and :math:`A^c` are *mutually exclusive*. So by :ref:`axiom_3`, we can say,
+    Therefore, :math:`A` and :math:`A^c` are *mutually exclusive*. So by :ref:`probability-axiom-3`, we can say,
 
     .. math::
 
         P(A \cup A^c) = P(A) + P(A^c)
 
-    But, by :ref:`Complement Theorem TWo <complement_theorem_two>`,
+    But, by :ref:`Complement Theorem Two <complement-theorem-two>`,
 
     .. math::
         
         A \cup A^c = S
 
-    And by :ref:`axiom_2`,
+    And by :ref:`probability-axiom-2`,
 
     .. math::
 
@@ -553,21 +553,21 @@ Symbolic Expression
     .. math:: 
         P(A \cup B) = P(A) + P(B) - P(A \cap B)
 
-Again, from inspection of a :ref:`Venn Diagram <venn_diagrams>` of *overlappying* sets, this theorem should be obvious,
+Again, from inspection of a :ref:`Venn Diagram <venn-diagrams>` of *overlappying* sets, this theorem should be obvious,
 
-.. image:: ../../_static/img/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
 
 The union is the area encompassed by bother circles. When we add the probability of **A** (area of circle **A**) to the probability of **B** (area of circle **B**), we double-count the area :math:`A \cap B`, so to correct the overcount, we must subtract once by the offending area.
 
-The formal proof **Law of Unions** follows directly from :ref:`Counting Theorem 1 <counting_theorem_one>` and the :ref:`classical_definition`. The proof is given below.
+The formal proof **Law of Unions** follows directly from :ref:`Counting Theorem 1 <counting-theorem-one>` and the :ref:`classical-definition-of-probability`. The proof is given below.
 
 Proof 
-    By the :ref:`classical_definition`,
+    By the :ref:`classical-definition-of-probability`,
 
     .. math:: 
         P(A \cup B) = \frac{n(A \cup B)}{n(S)}
 
-    By :ref:`Counting Teorem 1 <counting_theorem_one>`,
+    By :ref:`Counting Teorem 1 <counting-theorem-one>`,
 
     .. math:: 
         P(A \cup B) = \frac{n(A) + n(B) - n(A \cap B)}/{n(S)}
@@ -577,7 +577,7 @@ Proof
     .. math:: 
         P(A \cup B) = \frac{n(A)}{n(S)} + \frac{n(B)}{n(S)} - \frac{n(A \cap B)}{n(S)}
 
-    Applying the :ref:`classical_definition` to all three terms on the right side of the equation,
+    Applying the :ref:`classical-definition-of-probability` to all three terms on the right side of the equation,
 
     .. math::
         P(A \cup B) = P(A) + P(B) - P(A \cap B)
@@ -587,7 +587,7 @@ Example
 
 The sample space for a selecting a single card from a deck of 52 cards is shown below,
 
-.. image:: ../../_static/img/probability/playing_cards.jpg
+.. image:: ../../_static/img/mathematics/probability/playing_cards.jpg
    :width: 60%
    :align: center
 

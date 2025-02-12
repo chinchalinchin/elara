@@ -113,7 +113,7 @@ Population
 Definition
     The *population* is the set of all possible individuals that can be observed in a given experiment. 
 
-.. _sample_definition:
+.. _sample-definition:
 
 Sample
 ------
@@ -121,14 +121,14 @@ Sample
 Definition 
     A *sample* is a subset of individuals drawn from the population in a given experiment.
 
-.. _population_subset_sample:
+.. _population-subset-sample:
 
 Population vs. Sample 
 *********************
 
-The relationship between the *population* and the *sample* can be visualized with the following :ref:`venn diagram <venn_diagrams>`. 
+The relationship between the *population* and the *sample* can be visualized with the following :ref:`venn diagram <venn-diagrams>`. 
 
-.. image:: ../../assets/imgs/statistics/sample_subset_population.jpg
+.. image:: ../../_static/img/mathematics/statistics/sample_subset_population.jpg
     :align: center
 
 
@@ -136,9 +136,9 @@ The *sample* is contained in the *population*; it is the portion of the populati
 
 .. note:: 
 
-    We will study :ref:`venn diagrams <venn_diagrams>` in more detail in later chapters. 
+    We will study :ref:`venn diagrams <venn-diagrams>` in more detail in later chapters. 
 
-.. _observation_methods:
+.. _observation-methods:
 
 Methods of Observation
 ======================
@@ -169,12 +169,12 @@ At the same time, we need a *representative* sample because we do not want the d
 
 Often, these two goals are at odds with one another. In order to make a sample *representative*, you must impose some sort of order on the way you sample the population, but doing so then affects the *randomness* of the sample. Finding the right balance between these two directives is the topic of the next section.
 
-.. _sampling_techniques:
+.. _sampling-techniques:
 
 Sampling Techniques
 -------------------
 
-.. _random_sampling:
+.. _random-sampling:
 
 Random
 ******
@@ -216,7 +216,7 @@ The last item in the list above is the most common technique in practice. A stan
 
 Once each individual in the population is associated with an *index*, random numbers are generated; the indices that are selected by the random number generator then tell us what individuals to select for the sample. For example, the random number generator might output *3*, *6*,  and *10*; from this, we would then construct a sample of individuals: *Edmund Husserl*, *Gottlob Frege*, *Alain Badiou*. 
 
-.. _systematic_sampling:
+.. _systematic-sampling:
 
 Systematic
 **********
@@ -229,13 +229,13 @@ Examples
     - Selecting ten people from every zipcode.
     - Sending out surveys and using every 5 :sup:`th` one that is returned.
 
-.. _stratifed_sampling:
+.. _stratifed-sampling:
 
 Stratified
 **********
 
 Definition
-    To get *stratified* samples, the population is broken up into :ref:`mutually exclusive <mutual_exclusion>` groups. Then a *random* sample from every group is taken.
+    To get *stratified* samples, the population is broken up into :ref:`mutually exclusive <mutual-exclusion>` groups. Then a *random* sample from every group is taken.
 
 Example
     - Sampling a highschool by grouping the school into freshmen, sophomores, juniors and seniors. 
@@ -258,9 +258,9 @@ The different groups of a stratified sample as sometimes known as *strata*.
 | Seniors    | 23          | 21          | 2     |
 +------------+-------------+-------------+-------+
 
-These tables will pop up in a later chapter under the name :ref:`probability_tables`.
+These tables will pop up in a later chapter under the name :ref:`probability-tables`.
 
-.. _cluster_sampling:
+.. _cluster-sampling:
 
 Cluster
 *******
@@ -286,24 +286,3 @@ It is easy to confuse the method of *cluster* sampling with the method of *strat
     In a clustered sample, each cluster is *hetergeneous*; Each group contains representatives of all subsets of the population.
 
     In a stratified sample, each strata is *homogeneous*; Each group contains representatives of a certain subset of the population.
-
-Other Terminology
------------------
-
-.. _with_replacement:
-
-With Replacement
-    An observation has been made *with replacement*, if after its selection, it is placed back into the population. 
-
-Example 
-
-    Consider drawing a single card from a deck of cards, shuffling it back into the deck and then selecting another card. The event of getting the same card on both draws is a possible event because the card selected on the first draw is returned to the population of possible observation before making the second draw.
-
-.. _without_replacement:
-
-Without Replacement 
-    An observation has been made *without replacement*, if after its selection, it is removed from the population and is no longer a possible observation.
-
-Example
-
-    Consider drawing a single card from a deck of cards, setting it aside and then selecting another card. The event of getting the same card on both draws is an impossible event because the card selected on the first draw is no longer in the population of possible observation, and therefore cannot possible be selected again. In other words, when we sample data *without replacement*, we affect the *sample space* of subsequent experiments.

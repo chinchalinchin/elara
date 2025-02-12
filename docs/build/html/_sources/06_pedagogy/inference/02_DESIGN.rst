@@ -75,7 +75,7 @@ A *matched pairs* design is an experimental design where researchers match pairs
 
 An ideal example of a *matched pairs design* would be twins,
 
-.. image:: ../../_static/img/context/twins.jpg
+.. image:: ../../_static/img/context/statistical/twins.jpg
     :align: center
 
 If one of the twins is submitted to a *treatment*, their genetically identical counterpart serves as a nearly perfect *control*. 
@@ -87,7 +87,7 @@ A *randomized block* experiment should be understood a series of identical exper
 
 A *randomized block* design is commonly encountered in *agricultural* applications. Consider a farmer who wants to test a new type of seed against his usual stock to determine if the yield is higher. In a *randomized block* experiment, he would break his plots of land into *blocks*, and then partition each block into segments, call them *A*, *B*, *C* and *D*,
 
-.. image:: ../../_static/img/statistics/randomized_blocks.png
+.. image:: ../../_static/img/mathematics/statistics/randomized_blocks.png
     :align: center
 
 The type of seed would be planted in the *A* segment of each block, i.e. the *A* segment would receive a *treatment*, while the other segments would be planted with the farmer's usual stock. Data would then be collected from each block and analyzed in isolation to determine if the new type of seed has any benefits. 
@@ -213,7 +213,7 @@ Example
 Scale 
 -----
 
-.. image:: ../../_static/img/statistics/measurement_scales.jpg
+.. image:: ../../_static/img/mathematics/statistics/measurement_scales.jpg
     :align: center
 
 Nominal Level

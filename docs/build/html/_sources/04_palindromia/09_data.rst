@@ -16,7 +16,7 @@ Reflective Words
 The following spreadsheet contains a sample of reflective words in English.
 
 .. csv-table:: Reflective Words
-   :file: ../_static/csv/words/reflective_words.csv
+   :file: ../_static/csv/datasets/linguistic/words/reflective_words.csv
 
 .. _invertible-words-data:
 
@@ -26,7 +26,7 @@ Invertible Words
 The following spreadsheet contains a sampe of invertible words (minus reflective words) in English.
 
 .. csv-table:: Invertible Words
-   :file: ../_static/csv/words/invertible_words.csv
+   :file: ../_static/csv/datasets/linguistic/words/invertible_words.csv
 
 .. _ambiguous-words-data:
 
@@ -36,7 +36,7 @@ Ambiguous Words
 The following spreadsheet contains a sample of ambiguous words in English.
 
 .. csv-table:: Ambiguous Words
-   :file: ../_static/csv/words/ambiguous_words.csv
+   :file: ../_static/csv/datasets/linguistic/words/ambiguous_words.csv
 
 .. _palindrome-data:
 
@@ -46,7 +46,7 @@ Palindromes
 The following spreadsheet contains the results of palindromic analysis conducted on a sample of English palindromes. 
 
 .. csv-table:: English Palindrome Analysis
-   :file: ../_static/csv/palindromes/english_palindromes.csv
+   :file: ../_static/csv/datasets/linguistic/palindromes/english_palindromes.csv
 
 .. _latin-data:
 
@@ -59,4 +59,4 @@ Palindromes
 -----------
 
 .. csv-table:: Latin Palindromes
-   :file: ../_static/csv/palindromes/latin_palindromes.csv
+   :file: ../_static/csv/datasets/linguistic/palindromes/latin_palindromes.csv
