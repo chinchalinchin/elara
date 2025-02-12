@@ -27,12 +27,26 @@ gutenberg.org
 - `Foundations of Arithmetic, The <https://www.gutenberg.org/ebooks/48312>`_
 - `Tractatus Logico-Philosophicus <https://www.gutenberg.org/ebooks/5740>`_
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
+- `A Budget of Paradoxes, Augustus De Morgan <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
+
+classicallibrary.org
+--------------------
+
+- `Meditations on First Philosophy, Rene Descartes <http://www.classicallibrary.org/descartes/meditations/4.htm>`_
+
+royalsocietypublishing.org
+--------------------------
+
+- `An essay towards solving a problem in the doctrine of chances, Thomas Bayes <https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053>`_
 
 classics.mit.edu
 ----------------
 
 - `Physics <http://classics.mit.edu/Aristotle/physics.html>`_
 - `Metaphysics <http://classics.mit.edu/Aristotle/metaphysics.html>`_
+- `Posterior Analytics, Aristotle <http://classics.mit.edu/Aristotle/posterior.1.i.html>`_
+- `Prior Analytics, Aristotle <https://classics.mit.edu/Aristotle/prior.1.i.html>`_
+- `Theatetus, Plato <http://classics.mit.edu/Plato/theatu.html>`_
 
 columbia.edu
 ------------

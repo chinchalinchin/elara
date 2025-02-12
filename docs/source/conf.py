@@ -33,8 +33,8 @@ templates_path = [ ]
 
 html_static_path = [ 
     '_static',
-    '_static/css',
-    '_apps'
+    '_apps',
+    '_plots'
 ]
 
 html_css_files = [

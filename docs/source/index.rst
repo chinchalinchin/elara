@@ -11,6 +11,7 @@ elara protocol
    03_universalis/index
    04_palindromia/index
    05_poeticus/index
+   06_pedagogy/index
    radix
    matrix
 

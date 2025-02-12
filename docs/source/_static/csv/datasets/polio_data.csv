@@ -1,0 +1,10 @@
+Randomized Control,,,,,
+RC,Vaccinated,200745,33,24,25
+RC,Placebo,201229,115,27,20
+RC,Not Inoculated,338778,121,36,25
+RC,Incomplete,8484,1,1,0
+Observed Control (Biased),,,,,
+OC,Vaccinated,221998,38,18,20
+OC,Controls,725173,330,61,48
+OC,Not Inoculated,123605,43,11,12
+OC,Incomplete,9904,4,0,0
