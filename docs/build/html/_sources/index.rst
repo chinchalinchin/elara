@@ -8,7 +8,6 @@ elara protocol
 
 ---------------
 
-
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
