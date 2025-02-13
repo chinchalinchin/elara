@@ -413,7 +413,7 @@ Theorems
 
 We can use these *axioms*, along with the `theorems of set theory <set-theorems>` to prove various things about probability.
 
-.. _law-of-complements:
+.. _probability-law-of-complements:
 
 Law of Complements 
 ------------------
@@ -425,7 +425,7 @@ Symbolic Expression
 
 This corollary should be intuitively obvious, considering the Venn Diagramm of complementary sets,
 
-.. image:: ../../_static/img/mathematics/sets/sets_complement.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-complement.jpg
     :align: center
 
 If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space **S**, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
@@ -467,7 +467,7 @@ Proof #1
 
         P(A \cup A^c) = \frac{n(A \cup A^c)}{n(S)}
         
-    By :ref:`Counting Theorem 1 <counting-theorem-one>`,
+    By :ref:`law-of-unions` and :ref:`law-of-noncontradiction`,
 
     .. math::
 
@@ -491,7 +491,7 @@ Proof #1
 
         = P(A) + P(A^c)
 
-    On the other hand, by :ref:`Complement Theorem 2 <complement-theorem-two>`,
+    On the other hand, by :ref:`law-of-excluded-middle`,
 
     .. math::
 
@@ -510,7 +510,7 @@ Proof #1
         1 = P(A) + P(A^C)
 
 Proof #2
-    By :ref:`Complement Theorem 3 <complement-theorem-three>`,
+    By :ref:`law-of-noncontradiction`,
 
     .. math::
 
@@ -522,7 +522,7 @@ Proof #2
 
         P(A \cup A^c) = P(A) + P(A^c)
 
-    But, by :ref:`Complement Theorem Two <complement-theorem-two>`,
+    But, by :ref:`law-of-excluded-middle`,
 
     .. math::
         
@@ -544,7 +544,7 @@ Example
 
 TODO
 
-.. _law_of_unions:
+.. _probability-law-of-unions:
 
 Law of Unions
 -------------
@@ -553,13 +553,13 @@ Symbolic Expression
     .. math:: 
         P(A \cup B) = P(A) + P(B) - P(A \cap B)
 
-Again, from inspection of a :ref:`Venn Diagram <venn-diagrams>` of *overlappying* sets, this theorem should be obvious,
+Again, from inspection of a :ref:`venn-diagrams` of *overlappying* sets, this theorem should be obvious,
 
-.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-union-overlapping.jpg
 
 The union is the area encompassed by bother circles. When we add the probability of **A** (area of circle **A**) to the probability of **B** (area of circle **B**), we double-count the area :math:`A \cap B`, so to correct the overcount, we must subtract once by the offending area.
 
-The formal proof **Law of Unions** follows directly from :ref:`Counting Theorem 1 <counting-theorem-one>` and the :ref:`classical-definition-of-probability`. The proof is given below.
+The formal proof **Law of Unions** follows directly from :ref:`law-of-unions` and the :ref:`classical-definition-of-probability`. The proof is given below.
 
 Proof 
     By the :ref:`classical-definition-of-probability`,
@@ -567,7 +567,7 @@ Proof
     .. math:: 
         P(A \cup B) = \frac{n(A \cup B)}{n(S)}
 
-    By :ref:`Counting Teorem 1 <counting-theorem-one>`,
+    By :ref:`law-of-unions`,
 
     .. math:: 
         P(A \cup B) = \frac{n(A) + n(B) - n(A \cap B)}/{n(S)}
@@ -587,7 +587,7 @@ Example
 
 The sample space for a selecting a single card from a deck of 52 cards is shown below,
 
-.. image:: ../../_static/img/mathematics/probability/playing_cards.jpg
+.. image:: ../../_static/img/mathematics/probability/playing-cards.jpg
    :width: 60%
    :align: center
 
@@ -619,7 +619,7 @@ Therefore, the desired probability is,
 
     = \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13} \approx 0.31
 
-.. _probability_tables:
+.. _probability-tables:
 
 Probability Tables
 ******************

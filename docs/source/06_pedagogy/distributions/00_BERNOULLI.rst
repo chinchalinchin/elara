@@ -1,4 +1,4 @@
-.. _bernoulli_distribution:
+.. _bernoulli-distribution:
 
 ======================
 Bernoulli Distribution
@@ -7,12 +7,12 @@ Bernoulli Distribution
 TODO
 
 
-.. _bernoulli_random_variable:
+.. _bernoulli-random-variable:
 
 Bernoulli Random Variable
 =========================
 
-A *Bernoulli random variable* :math:`Y` is defined for experiments where the only outcomes are "*success*" and "*failure*", which we denote :math:`s` and :math:`f`, respectively. The :ref:`sample_space` for a *Bernoulli random variable* is given by,
+A *Bernoulli random variable* :math:`Y` is defined for experiments where the only outcomes are "*success*" and "*failure*", which we denote :math:`s` and :math:`f`, respectively. The :ref:`sample-space` for a *Bernoulli random variable* is given by,
 
 .. math:: 
 
@@ -34,7 +34,7 @@ TODO
 
     P(Y = 1) = p
 
-By the :ref:`law_of_complements`, the *probability* of a 0 is,
+By the :ref:`probability-law-of-complements`, the *probability* of a 0 is,
 
 .. math:: 
     P(Y = 0) = 1 - p

@@ -2,9 +2,9 @@ elara protocol
 ##############
 
 | Part no seined flow
-|                 mudrum 
+|                 murdrum 
 |                   nun
-|                     Wolf denies no trap
+|                    Wolf denies no trap
 
 ---------------
 
@@ -13,14 +13,13 @@ elara protocol
    :caption: Contents:
    :hidden:
 
+   00_epistemia
    01_organon/index
    02_facticity/index
    03_universalis/index
    04_palindromia/index
    05_poeticus/index
    06_pedagogy/index
-   radix
-   matrix
 
 --------------
 

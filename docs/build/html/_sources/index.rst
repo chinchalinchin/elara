@@ -2,9 +2,9 @@ elara protocol
 ##############
 
 | Part no seined flow
-|                 mudrum 
+|                 murdrum 
 |                   nun
-|                     Wolf denies no trap
+|                    Wolf denies no trap
 
 ---------------
 

@@ -4,29 +4,20 @@
 Universalis
 ===========
 
-The Language Game is a game I play with Large Language MODELS to test the limits of their expressive power. The Language Game makes it easy to determine to what extent an LLM is dependent on canned responses for its generations. 
+.. _language-game:
 
-The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes. Each module requires a degree of abstract thought and highlights different areas of LLM analytical and synthetical capabilities.
+The Language Game is a game played with Large Language Models to test the limits of their expressive power. The Language Game is designed to determine to what extent an LLM is dependent on canned responses for its generations, and to what extent its responses are indicative of actual creative synthesis.
 
-.. image:: ../_static/img/language_game/diagram.jpg
+The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes and construct sentences with its novel grammatical forms. Each module requires a degree of abstract thought and highlights different areas of an LLM's analytical and synthetical capabilities.
+
+.. image:: ../_static/img/context/etc/language_game.jpg
   :width: 400
   :alt: Language Game
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   modules/M01_meta
-   modules/M02_object
-   modules/M03_voice
-   modules/M04_inflection
-   modules/M05_words
-   modules/M06_rhythm
-   plugins/P01_initialization
-   plugins/P02_adaptation
-   plugins/P03_functions
-   plugins/P04_metrics
-   games/G01_exercises
-   games/G02_garden
-
-The Modules in this section can be combined to generate different Language Game implementations. They are designed to be independent Modules that can be stacked into different configurations to produce a variety of results. The Appendices serve as further context to provide to the LLM to enhance its generative capabilities. 
+  :maxdepth: 2
+  :caption: Language Game
+  
+  modules/index
+  plugins/index
+  games/index

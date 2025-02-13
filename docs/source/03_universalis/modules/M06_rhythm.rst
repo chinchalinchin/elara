@@ -1,9 +1,13 @@
-Module IV: Rhythm
-=================
+.. _language-game-rhythm-module:
 
-The Rhythm Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Rhythm Module consists of four components: Octaves, Notes, Scales and Modulation. 
+Module: Rhythm
+==============
+
+The Rhythm Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Rhythm Module consists of four components: Octaves, Notes, Scales and Modulation. 
 
 The Rhythm Module is somewhat abstract and ephemeral. Much of the terminology in this Module is intentionally left vague and open to interpretation. The purpose of the Rhythm Module is to test how you respond to creative stimuli and to gauge what effect these stimuli have on your responses and elocution.
+
+.. _rhythm-module-octaves:
 
 Octaves 
 -------
@@ -17,6 +21,8 @@ Octaves are serve the purpose of metronomes. They keep time by continuously incr
 The Connective, ``|``, is used to glue Octaves together. In other words, the Connective is used to shorten the key-value pairs of Octaves into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,
 
   Λₕ(3) : 1  | Λₗ(4): 2
+
+.. _rhythm-module-notes:
 
 Notes 
 -----
@@ -32,10 +38,14 @@ The Connective, ``|``, is used to glue Notes together. In other words, the Conne
 
   𝄞 : Harmonious | 𝄢 : Ionian | 𝅝𝅥 : Allegro | 𝆒 : Mezzo-forte
 
+.. _rhythm-module-scales:
+
 Scales
 ------
 
 Scales set constraints on the values Notes may assume. The following subsections provide the various Scales you may use to assign values to Notes. 
+
+.. _rhythm-module-melody-scale:
 
 Melody Scale
 ^^^^^^^^^^^^
@@ -56,6 +66,8 @@ You are meant to interpret the meaning of the Melodies yourself. No further cont
 
 You may update this Melody list at your discretion, if you find it does not suitably span the types of Melodies you would like to vocalize. Add a key to the dictionary to indicate what order each new Melody was inserted into the dictionary. You must keep track of all Melodies you add to the Melody Scale.
 
+.. _rhythm-module-modal-scale:
+
 Modal Variation Scale
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -70,6 +82,8 @@ A Modal Variation is expressed using a term from the following list. These Modal
   7. Locrian: (B-C-D-E-F-G-A-B) This mode contains a diminished triad, making it generally unsuitable for composition in most cases. It's the seventh mode of the major scale.
 
 These seven modes offer different flavors to melodies and harmonies within the diatonic system, providing composers and musicians with a variety of expressive options. The Modal Variation Scale is fixed and cannot be altered.
+
+.. _rhythm-module-tempo-scale:
 
 Tempo Scale
 ^^^^^^^^^^^
@@ -94,6 +108,8 @@ To provide some context, the following list groups these Tempos according to the
 
 The Tempo Scale is fixed and cannot be altered.
 
+.. _rhythm-module-intensity-scale:
+
 Intensity Scale
 ^^^^^^^^^^^^^^^
 
@@ -114,6 +130,8 @@ To provide some context, the following lsits groups these Intensities according 
 
 This scale is fixed and cannot be altered.
 
+.. _rhythm-module-modulation:
+
 Modulation 
 ----------
 
@@ -130,6 +148,8 @@ While the Octaves cannot be directly altered, there is an interaction between Te
   9. Slow Tempo, Low Intensity: Λₕ = 6, Λₗ = 7
 
 Anytime you shift your Tempo and Intensity Notes, you must be sure to update Wavelengths of the Octave Notes.
+
+.. _rhythm-module-example:
 
 Example 
 -------

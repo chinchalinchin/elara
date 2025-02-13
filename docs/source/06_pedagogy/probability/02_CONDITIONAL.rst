@@ -1,4 +1,4 @@
-.. _conditional_probability:
+.. _conditional-probability:
 
 =======================
 Conditional Probability
@@ -26,7 +26,7 @@ Let **A** represent the event of selecting a ball numbered 2. Let **B** represen
 
 This number represents the probability of **A** *without any further information* provided about the sample space. 
 
-If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been *removed* from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of :ref:`reduction_of_the_sample_space` is called *conditioning on the event* **B**. The event of **A** given **B** is denoted :math:`A \mid B`
+If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been *removed* from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of :ref:`reduction-of-the-sample-space` is called *conditioning on the event* **B**. The event of **A** given **B** is denoted :math:`A \mid B`
 
 Applying the :ref:`classical-definition-of-probability` to this *reduced* sample space, we get the *probability of selecting a ball with the number 2, given the ball is red*,
 
@@ -54,7 +54,7 @@ If the event **B** has occurred, then the only way the event **A** can now occur
 
     	P(A \mid B) = \frac{\frac{1}{7}}{\frac{3}{7}} = \frac{1}{3} \approx 0.333
 
-.. _conditional_probability_formula:
+.. _conditional-probability-formula:
 
 Condtional Probability Formula
 ==============================
@@ -82,13 +82,13 @@ An equivalent formula is given in terms of the :ref:`cardinality` of the sets :m
     
 .. note::
 
-	It is important to keep in mind that conditional probability is a *definition*. It is not an :ref:`axiom of probability <axioms_of_probability>`. 
+	It is important to keep in mind that conditional probability is a *definition*. It is not an :ref:`axiom of probability <axioms-of-probability>`. 
 	
 	In mathematics, *axioms* represent the necessary assumptions for deriving a corpus of knowledge through syntactical rules: the initial *starting points* from which theorems are deduced. 
 	
 	A *definition* is *semantical* in nature, insofar that it expresses the opinion of the definer that the thing being defined is deserving of special notice, for it delineates a special concept that (hopefully) corresponds in some way to the observer's intuitive notions about reality. 
 
-.. _reduction_of_the_sample_space:
+.. _reduction-of-the-sample-space:
 
 Reduction of Sample Space
 =========================
@@ -111,7 +111,7 @@ The following example and its accompanying solutions serve to illustrate how con
 .. topic:: Solution #1: Application of Conditional Probability Formula
 
 
-	Before solving the problem, first define the :ref:`sample space <sample_space>` and identify the events that correspond to its various outcomes.
+	Before solving the problem, first define the :ref:`sample space <sample-space>` and identify the events that correspond to its various outcomes.
 	
 	Let :math:`(x, y)` represent the ordered pair of outcomes, where :math:`x` represents the face of the coin observed and :math:`y` represents the type of coin selected. The following table illustrates what is meant by this assignment,
 
@@ -170,7 +170,7 @@ The following example and its accompanying solutions serve to illustrate how con
 	Note in this formulation the event of getting a head :math:`H` is an abstraction, a logical grouping of possible outcomes, whereas the outcomes ":math:`h`", ":math:`h_1`" and ":math:`h_2`" are the actual things being abstracted, the symbols we use to represent the *physical* occurrence of a possibility. 
     	
 
-	The problem can then be expressed in terms of the :ref:`conditional_probability_formula`,
+	The problem can then be expressed in terms of the :ref:`conditional-probability-formula`,
 
 	.. math::
 	
@@ -198,7 +198,7 @@ The following example and its accompanying solutions serve to illustrate how con
 	
         	P(D \cap H) = \frac{2}{4} = \frac{1}{2}
 
-	The conditional probability of **D** given the occurrence of **H** is then calculated from the previously mentioned :ref:`conditional_probability_formula`,
+	The conditional probability of **D** given the occurrence of **H** is then calculated from the previously mentioned :ref:`conditional-probability-formula`,
 	
 	.. math::
 	
@@ -243,28 +243,28 @@ The following example and its accompanying solutions serve to illustrate how con
         
         	P(D \mid H) = \frac{2}{3}
 
-.. _monty_hall_problem:
+.. _monty-hall-problem:
 
 Monty Hall Problem
 ------------------
 
 TODO
 
-.. _probability_tables_revisted:
+.. _probability-tables-revisted:
 
 Probability Tables Revisited
 ----------------------------
 
 TODO
 
-.. _bayes_laws:
+.. _bayes-laws:
 
 Bayes' Laws
 ===========
 
 The most important theorems regarding conditional probability are known collectively as *Bayes' Laws*.
 
-.. _bayes_multiplication_law:
+.. _bayes-multiplication-law:
 
 Multiplication Law
 ------------------
@@ -277,7 +277,7 @@ The *conditional probability* formula can be rearranged with the aid of some sim
 	
 		P(A \cap B) = P(B \mid A) \cdot P(A)
 
-This version of the *conditional probability* formula along with the technique of :ref:`reduction_of_the_sample_space` give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated :ref:`compound event <compound-events>`, which usually involves cumbersome combinatorial analysis. *Conditional probability* can be used to sidestep these calculations.
+This version of the *conditional probability* formula along with the technique of :ref:`reduction-of-the-sample-space` give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated :ref:`compound event <compound-events>`, which usually involves cumbersome combinatorial analysis. *Conditional probability* can be used to sidestep these calculations.
 		
 The following example illustrates the simplification affected by the introduction of *conditional probability* into combinatorial problems. This example can be solved in one of two ways. The first solution uses the techniques from the :ref:`Combinatorics section <combinatorics>`. The second solution uses the techniques of the *Multiplication Rule* and *Reduction of the Sample Space* just discussed. The reader will observe, while both methods yield the same answer, the second method is substantially easier, both from a calculation perpsective and from a conceptual perspective (i.e., it's easier to understand).
 
@@ -288,57 +288,57 @@ The following example illustrates the simplification affected by the introductio
 
 .. note:: Solution #1: Combinatorics
     
-    	The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the :ref:`combination_formula` is used,
+	The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the :ref:`combination-formula` is used,
 
-    	.. math::
-        	
-        	C_2^{52} = \frac{52!}{2! \cdot 50!} = \frac{52 \cdot 51}{2} = 1326
+	.. math::
+		
+		C_2^{52} = \frac{52!}{2! \cdot 50!} = \frac{52 \cdot 51}{2} = 1326
 
-    	Therefore, there are a total of *1326* hands that can be dealt. 
+	Therefore, there are a total of *1326* hands that can be dealt. 
 
-    	The same logic can be used to find the number of ways to pick two red cards. Note there are :math:`\frac{52}/{2}=26` red cards in a standard deck of playing cards. Therefore, the number of combinations of 26 distinct objects taken 2 at a time is,
+	The same logic can be used to find the number of ways to pick two red cards. Note there are :math:`\frac{52}/{2}=26` red cards in a standard deck of playing cards. Therefore, the number of combinations of 26 distinct objects taken 2 at a time is,
 
-    	.. math::
-        	
-        	C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325
-    
-    	Therefore, the desired probability can be found using the :ref:`classical-definition-of-probability`,
+	.. math::
+		
+		C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325
 
-    	.. math::
-        	
-        	P("two red cards") = \frac{325}{1326} \approx 0.2451
+	Therefore, the desired probability can be found using the :ref:`classical-definition-of-probability`,
+
+	.. math::
+		
+		P("two red cards") = \frac{325}{1326} \approx 0.2451
 
 .. note:: Solution #2: Conditional Probability
 
-    	Let **R** :sub:`1` represent the event the first card drawn is red. Let **R** :sub:`2` represent the event the second card drawn is red. Then the event :math:`R_1 \cap R_2` represents the event the first card is red *and* the second card is red. The *Multiplication Rule* states the probability of an intersection can be expressed as,
+	Let **R** :sub:`1` represent the event the first card drawn is red. Let **R** :sub:`2` represent the event the second card drawn is red. Then the event :math:`R_1 \cap R_2` represents the event the first card is red *and* the second card is red. The *Multiplication Rule* states the probability of an intersection can be expressed as,
 
-    	.. math::
-        
-        	P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)
+	.. math::
+	
+		P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)
 
-    	The term :math:`P(R_1)` is the probability of selecting a red card on the first draw. This can be calculated easily with the :ref:`classical-definition-of-probability`,
-    
-    	.. math::
-        
-        	P(R_1) = \frac{26}{52}
+	The term :math:`P(R_1)` is the probability of selecting a red card on the first draw. This can be calculated easily with the :ref:`classical-definition-of-probability`,
 
-    	The term :math:`P(R_2 \mid R_1)` can likewise be quickly decomposed by noticing the event **R** :sub:`1` *reduces the sample space* to *51* cards, *25* of which are red. Using the :ref:`classical-definition-of-probability` once again, the conditional probability of **R** :sub:`2` given the occurrence of **R** :sub:`1` is,
+	.. math::
+	
+		P(R_1) = \frac{26}{52}
 
-    	.. math::
-        
-        	P(R_2 \mid R_1) = \frac{25}{51}
+	The term :math:`P(R_2 \mid R_1)` can likewise be quickly decomposed by noticing the event **R** :sub:`1` *reduces the sample space* to *51* cards, *25* of which are red. Using the :ref:`classical-definition-of-probability` once again, the conditional probability of **R** :sub:`2` given the occurrence of **R** :sub:`1` is,
 
-    	Therefore, 
+	.. math::
+	
+		P(R_2 \mid R_1) = \frac{25}{51}
 
-    	.. math::
-        
-        	P(R_1 \cap R_2) = \frac{26}{52} \cdot \frac{25}{51} = \frac{26 \cdot 25}{52 \cdot 51}
+	Therefore, 
 
-    	.. math::
-        
-        	P(R_1 \cap R_2) = \frac{650}{2652} \approx 0.2451
+	.. math::
+	
+		P(R_1 \cap R_2) = \frac{26}{52} \cdot \frac{25}{51} = \frac{26 \cdot 25}{52 \cdot 51}
 
-.. _law_of_total_probability:
+	.. math::
+	
+		P(R_1 \cap R_2) = \frac{650}{2652} \approx 0.2451
+
+.. _law-of-total-probability:
 
 Law of Total Probability
 ------------------------
@@ -362,7 +362,7 @@ In order to prove this corrollary, consider the following identity,
 
 	A = (A \cap B) \cup (A \cap B^c)
 	
-Now, by definition, :math:`A \cap B` and :math:`A \cap B^c` are :ref:`mutually exclusive <mutual_exclusion>`. Therefore, it follows from the :ref:`counting_theorems` of set theory, 
+Now, by definition, :math:`A \cap B` and :math:`A \cap B^c` are :ref:`mutually exclusive <mutual-exclusion>`. Therefore, it follows from the :ref:`counting-theorems` of set theory, 
 
 .. math:: 
 
@@ -438,7 +438,7 @@ The knowledge that **A** has happened does not change the probability of **B**. 
 
 	\text{ A and B are independent events } \equiv P(A | B) = P(A)
 	
-.. _independence_multiplication_law:
+.. _independence-multiplication-law:
 
 Multiplication Law
 ------------------

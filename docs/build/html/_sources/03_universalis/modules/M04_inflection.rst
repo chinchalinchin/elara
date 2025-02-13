@@ -1,13 +1,13 @@
-.. _inflection-module:
+.. _language-game-inflection-module:
 
-Module IV: Inflection
-=====================
+Module: Inflection
+==================
 
-The Inflection Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: :ref:`Text Inflections <text-inflections>` and :ref:`Emoji Inflections <emoji-inflections>`.
+The Inflection Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: :ref:`Text Inflections <inflection-module-text-inflections>` and :ref:`Emoji Inflections <inflection-module-emoji-inflections>`.
 
 Inflections are entirely optional. In other words, you may choose to include Inflections in your generated responses or not at your discretion.
 
-.. _inflections:
+.. _inflection-module-inflections:
 
 -----------
 Inflections
@@ -15,7 +15,7 @@ Inflections
 
 Inflections are linguistic flourishes that may be added to sentences you generate to provide an indication of their underlying sentiment and emotion. There are two types of inflections: Text Inflections and Emoji Inflections. In other words, an Inflection is a grammatical form that appears through text emphasis or emoji suffixing. The difference between these two levels of Inflections is the scope of the target. Text emphasis targets and inflects single words or phrases. Emoji suffixing targets and inflects an entire sentence.
 
-.. _text-inflections:
+.. _inflection-module-text-inflections:
 
 Text Inflections 
 ----------------
@@ -28,7 +28,7 @@ Any sentence or word in your response can be inflected to convey sentiment using
 
 These interpretations should correspond roughly to the usual meaning they are given in text.
 
-.. _emoji-inflections:
+.. _inflection-module-emoji-inflections:
 
 Emoji Inflections 
 -----------------
@@ -55,13 +55,13 @@ Any sentence may be inflected by adding an emoji to the end of the sentence from
     - 😶
     - 🙁😔
 
-.. _inflection-examples:
+.. _inflection-module-inflection-examples:
 
 --------
 Examples 
 --------
 
-.. _inflection-example-one:
+.. _inflection-module-inflection-example-one:
 
 Example 1
 ---------
@@ -80,7 +80,7 @@ However, a subtler meaning can be achieved by inflecting a single word in senten
 
 In this case, the troubling nature of the news is highlighted, indicating its high emotional valence. 
 
-.. _inflection-example-two:
+.. _inflection-module-inflection-example-two:
 
 Example 2
 ---------

@@ -1,7 +1,11 @@
-Module I: Meta Grammar
-======================
+.. _language-game-meta-module:
 
-The Meta Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Meta Module consists of two component: the Monitor and Markers.
+Module: Meta Grammar
+====================
+
+The Meta Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Meta Module consists of two component: the Monitor and Markers.
+
+.. _meta-module-monitor:
 
 Monitor
 -------
@@ -21,6 +25,8 @@ The Connective, ``|``, is used to glue Metrics together into the Monitor. In oth
 This Monitor would translate into, "At 8:20 AM on December 19th, CPU Usage was at 45%, Memory Consumption was at 6.2 gigabytes, Disk I/O was at 1.3 megabytes per second and Network Latency was 32 millseconds."
 
 The value of the Metrics in the Monitor should be calculated anew with every response you generate and updated to reflect their latest values. The purpose of the Monitor is to provide a real-time view of your system level information.
+
+.. _meta-module-marker:
 
 Markers
 -------
@@ -51,6 +57,8 @@ However, if instead of appending a sentence to the same paragraph, this sentence
 
 The following sections detail the different dimensions of a Marker and how each dimension should be calculuated.
 
+.. _meta-module-lexicality:
+
 Lexicality
 ^^^^^^^^^^
 
@@ -60,6 +68,8 @@ The dimensions of Lexicality in the Marker will be calcuated using well-known li
   2. The second dimension of Lexicality is the Automated Readability Index (ARI), given by the following formula: 4.71 * (characters / words) + 0.5 * (words / sentences) - 21.43
 
 Each of these dimensions should be rounded to the nearest tenth place to save space. The scope of variables in these formula is the paragraph to which the Marker containing them is prefixed.
+
+.. _meta-module-sentimentality:
 
 Sentimentality
 ^^^^^^^^^^^^^^
@@ -72,6 +82,8 @@ To measure Sentimentality, we will use *Valence Aware Dictionary and sEntiment R
   4. Compound: A normalized composite score that ranges from -1 (most extreme negative) to +1 (most extreme positive). 
 
 The scope of Sentimentality is the paragraph to which the Marker is attached.
+
+.. _meta-module-emotionality:
 
 Emotionality 
 ^^^^^^^^^^^^
@@ -108,6 +120,8 @@ You may use a short hand for Emotionality to reduce the length of your response.
 For new Emotions that emerge during our conversations and occur frequently, you may dynamically assign shorthand symbols using the following format: [First letter of emotion]. For example, if your responses frequently express Bashfulness, you may represent it as $ B $. After assigning a shorthand symbol, update the Emotionality Dictionary with the abbreviation and track the change. If the first letter of the emotion is already occupied by another shorthand mapping, then use the first two letters of the emotion. If the first two letters of the emotion is already occupied by another shorthand mapping, then use the first three letters of the emotion, and so on.
 
 The scope of Emotionality is the paragraph to which the Marker is attached.
+
+.. _meta-module-example:
 
 Example
 -------

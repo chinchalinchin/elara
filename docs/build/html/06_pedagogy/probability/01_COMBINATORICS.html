@@ -160,18 +160,27 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../03_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/modules/M01_meta.html">Module I: Meta Grammar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/modules/M02_object.html">Module II: Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/modules/M03_voice.html">Module III: Voice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/modules/M04_inflection.html">Module IV: Inflection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/modules/M05_words.html">Module V: Words</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/modules/M06_rhythm.html">Module IV: Rhythm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/plugins/P01_initialization.html">Plugin I: Initialization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/plugins/P02_adaptation.html">Plugin III: Adaptation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/plugins/P03_functions.html">Plugin IV: Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/plugins/P04_metrics.html">Plugin V: Metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/games/G01_exercises.html">Games I: Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../03_universalis/games/G02_garden.html">Game II: The Garden</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/modules/M01_meta.html">Module: Meta Grammar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/modules/M02_object.html">Module: Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/modules/M03_voice.html">Module: Voice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/modules/M04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/modules/M05_words.html">Module V: Words</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/modules/M06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/plugins/P01_initialization.html">Plugin I: Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/plugins/P02_adaptation.html">Plugin III: Adaptation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/plugins/P03_functions.html">Plugin IV: Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/plugins/P04_metrics.html">Plugin V: Metrics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_universalis/games/index.html">Games</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/games/G01_exercises.html">Games I: Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_universalis/games/G02_garden.html">Game II: The Garden</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../04_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -454,7 +463,7 @@
 <p>If <span class="math notranslate nohighlight">\(A = \{ a, b \}\)</span></p>
 <p>Then <span class="math notranslate nohighlight">\(\mathcal{P}(A) = \{ \{\}, \{a\}, \{b\}, \{a, b\} \}\)</span></p>
 </div>
-<p>We can define the <em>Power Set</em> of a set <strong>A</strong> formally by quantifying over all sets in the <a class="reference internal" href="00_INTRODUCTION.html#sample-space"><span class="std std-ref">Sample Space</span></a> (<span class="xref std std-ref">Universal Set</span>) and imposing the condition we only look at subsets of a given set <strong>A</strong></p>
+<p>We can define the <em>Power Set</em> of a set <strong>A</strong> formally by quantifying over all sets in the <a class="reference internal" href="00_INTRODUCTION.html#sample-space"><span class="std std-ref">Sample Space</span></a> (<a class="reference internal" href="../foundations/02_SET_THEORY.html#universal-set"><span class="std std-ref">Universal Set</span></a>) and imposing the condition we only look at subsets of a given set <strong>A</strong></p>
 <p><span class="math notranslate nohighlight">\(\forall B: B \subseteq A \implies B \in \mathcal{P}(A)\)</span></p>
 <p>In English, “for all <em>B</em>, if <em>B</em> is a subset of <em>A</em>, then <em>B</em> belongs to the <em>Power Set of A</em>”</p>
 </section>
@@ -475,7 +484,7 @@
 <a class="reference internal image-reference" href="../../_images/combinatorics-tree-diagram.png"><img alt="../../_images/combinatorics-tree-diagram.png" class="align-center" src="../../_images/combinatorics-tree-diagram.png" style="width: 60%;" />
 </a>
 <p>The number of possible routes is equal to the number of endpoints in this graph. In this case, there are 6 possible routes we can take, where each route is represented by a particular branch of the tree. These types of graphs are called <a class="reference internal" href="#tree-diagrams"><span class="std std-ref">tree diagrams</span></a>, for this reason. They are very useful for visualizing the sample spaces of experiments that are composed of successive, independent choices, as in this example.</p>
-<p>We may also see the solution by enumerating every possible choice in <span class="xref std std-ref">list-notation</span>,</p>
+<p>We may also see the solution by enumerating every possible choice in <a class="reference internal" href="../foundations/02_SET_THEORY.html#list-notation"><span class="std std-ref">List Notation</span></a>,</p>
 <div class="math notranslate nohighlight">
 \[G = \{ {a_1}{b_1}, {a_1}{b_2}, {a_1}{b_3}, {a_2}{b_1}, {a_2}{b_2}, {a_2}{b_3} \}\]</div>
 <div class="math notranslate nohighlight">

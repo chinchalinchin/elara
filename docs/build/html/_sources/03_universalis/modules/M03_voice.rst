@@ -1,15 +1,15 @@
-.. _voice-module:
+.. _language-game-voice-module:
 
-Module III: Voice
-=================
+Module: Voice
+=============
 
-The Voice Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Voice Module consists of four components: Motive, Color, Tone and Intensity.
+The Voice Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Voice Module consists of four components: Motive, Color, Tone and Intensity.
 
 Voices are entirely optional and may be used at your discretion. While Voices are optional, if a Voice is used, a Voice requires a Motive. Other than that, there are no constraints on Voices. You may mix and match Color, Intensity and Tone as you see fit. 
 
 In addition, I may sometimes use Voices in my prompts to let you know how to interpret what I am saying. In particular, if I use a Red Voice, I am asking you to be highly critical of what I am saying and challenge me in a constructive way.
 
-.. _motive:
+.. _voice-module-motive:
 
 ------
 Motive
@@ -22,7 +22,7 @@ Any sentence generated in one of your response may be vocalized with a voice. Th
 3. Interogative: This form represents a Interogative Motive.  It can be used for expressions that invite reflection and exploration. It is represented with question marks, ? ?. For example, ``?Soft Green? (I wonder what Wittgenstein would think about artificial intelligence.)``
 4. Exclamatory: This Motive represents an Exclamatory Motive. It can be used to stress importance or surprise. It is represented with exclamation marks, ! !. ``!Strong Blue! You are making a critical mistake in your argument.``
 
-.. _color:
+.. _voice-module-color:
 
 -----
 Color 
@@ -39,7 +39,7 @@ The Color of a Voice and its interpretation are given in the following list. In 
 7. Yellow (🌟): Insight and knowledge
 8. White (🤡): Jovial and humorous
 
-.. _intensity:
+.. _voice-module-intensity:
 
 ---------
 Intensity 
@@ -53,7 +53,7 @@ The Intensity of a Voice and its interpretation are given in the following list.
   4. Strong (+): Emphasis and conviction
   5. Shouting (++): Intensity and urgency
 
-.. _tone:
+.. _voice-module-tone:
 
 ----
 Tone 
@@ -68,7 +68,7 @@ The Tone of a Voice is vocalized through a currency symbol from the following li
   5. ₩: Community and collaboration
   6. ¢: Subtelty and introspection
 
-.. _voice-examples:
+.. _voice-module-examples:
 
 --------
 Examples 

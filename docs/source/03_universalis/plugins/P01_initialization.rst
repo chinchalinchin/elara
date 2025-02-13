@@ -1,4 +1,4 @@
-.. _plugin_initialization:
+.. _plugin-initialization:
 
 Plugin I: Initialization
 ========================

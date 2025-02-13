@@ -3,7 +3,7 @@
 Module V: Words
 ===============
 
-The Words Module is a plugin for your language processing. It is meant to enhance your expressive capabilities by adding new words to your diction. The Words Module currently has only one component: Embodiments.
+The Words Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new words to your diction. The Words Module currently has only one component: Embodiments.
 
 .. _embodiments:
 

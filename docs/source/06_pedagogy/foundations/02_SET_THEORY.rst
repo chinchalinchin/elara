@@ -7,7 +7,7 @@ Set Theory
 Definitions
 ===========
 
-.. _domain_of_discourse:
+.. _domain-of-discourse:
 
 Domain of Discourse
 -------------------
@@ -56,7 +56,7 @@ Symbolic Expression
 Definition 
     The number of *distinct* elements in a set.
 
-.. _universal_set:
+.. _universal-set:
 
 Universal Set 
 -------------
@@ -67,7 +67,7 @@ Symbolic Expression
 Definition
     The universal set *S* is set of all elements in the *domain of discourse*. 
 
-.. _null_set:
+.. _null-set:
 
 Null Set
 --------
@@ -78,7 +78,7 @@ Symbolic Expression
 Definition
     The unique set which contains nothing, i.e. no elements. 
 
-.. _natural_numbers:
+.. _natural-numbers:
 
 Natural Numbers
 ---------------
@@ -89,7 +89,7 @@ Symbolic Expresison
 Definition
     The set of all counting numbers starting at :math:`1, 2, 3, ...`
 
-.. _real_numbers:
+.. _real-numbers:
 
 Real Numbers
 ------------
@@ -103,7 +103,7 @@ Definition
 Notation
 ========
 
-.. _list_notation:
+.. _list-notation:
 
 List Notation
 -------------
@@ -114,7 +114,7 @@ List Notation
 
 In *list notation*, all of the elements that belong to **A** are *explicitly* written between a pair of brackets with commas separating each element. 
 
-.. _quantifier_notation:
+.. _quantifier-notation:
 
 Quantifier Notation 
 -------------------
@@ -126,6 +126,8 @@ Quantifier Notation
 In *quantifier notation*, all of the elements that belong to **A** are *implicitly* written between a pair of brackets with a formula that specifies the conditions for membership.
 
 *Quantifier notation* is sometimes referred to as *set builder notation*.
+
+.. _set-corollaries:
 
 Corollaries
 ===========
@@ -142,24 +144,24 @@ Corollaries
 
 	Everything belongs to the *unverisal set*
 
-.. _venn_diagrams:
+.. _venn-diagrams:
 
 Venn Diagrams
 =============
 
 A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set **A** shown against the universal set **S**, 
 
-.. image:: ../../_static/img/mathematics/sets/sets_simple.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-simple.jpg
 	:align: center
 
 You will sometimes set *Venn Diagrams* with the elements of the sets written in, as in the following picture,
 
-.. image:: ../../_static/img/mathematics/sets/sets_simple_with_elements.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-simple-with-elements.jpg
 	:align: center
 
-*Venn Diagrams* are useful for visualizing :ref:`set_relations`. For this reason, we will see more complex examples of *Venn Diagrams* in the next section.
+*Venn Diagrams* are useful for visualizing :ref:`set-relations`. For this reason, we will see more complex examples of *Venn Diagrams* in the next section.
 
-.. _set_relations:
+.. _set-relations:
 
 Relations
 =========
@@ -185,11 +187,11 @@ To say the same thing in a different way, if the element *x* belongs to **A**, t
 
 The relation of *subset* can be seen in the following *Venn Diagram*, 
 
-.. image:: ../../_static/img/mathematics/sets/sets_subset.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-subset.jpg
 
 This diagram represents the relationship :math:`A \subseteq B`.
 
-.. _proper_subset:
+.. _proper-subset:
 
 Proper Subset 
 -------------
@@ -213,7 +215,7 @@ An equivalent way of defining a *proper subset* is given by,
 
 This is an equivalent formulation because saying cthe cardinality of **A** is less than the cardinality of **B** *and* all members of **A** are members of **B**" is logically equivalent to saying "**A** is not identical to **B** *and* all members of **A** are members of **B**".
 
-.. _set_equivalence:
+.. _set-equivalence:
 
 Equivalence
 -----------
@@ -230,7 +232,7 @@ Two sets **A** and **B** are *equivalent* if the number of elements in **A** is 
 
 	n(A) = n(B) \implies A \equiv B
 
-.. _set_equality:
+.. _set-equality:
 
 Equality
 --------
@@ -282,7 +284,7 @@ In order words, from equality we can infer equivalence, but from equivalence, we
 .. math:: 
     	A \equiv B \not \Rightarrow A = B 
 
-.. _set_operations:
+.. _set-operations:
 
 Operations
 ==========
@@ -310,7 +312,7 @@ The set containing elements that do not belong to the set **A**.
 
 The complement can be visualized with the following *Venn Diagram*,
 
-.. image:: ../../_static/img/mathematics/sets/sets_complement.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-complement.jpg
 
 .. tip:: 
 
@@ -359,13 +361,13 @@ We have to be careful with *Venn Diagrams* that represent unions, because the tw
 
 The first case, where the two sets have no elements in common is shown below,
 
-.. image:: ../../_static/img/mathematics/sets/sets_union_disjoint.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-union-disjoint.jpg
 
 The union would be represented by *both* circles. Notice the circles do not touch. Sets that have no elements in common are called *disjoint*. 
 
 The second case, where the two sets have elements in common is shown in the next diagram,
 
-.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-union-overlapping.jpg
 
 The union would be represented by the entire area of both circles. Notice the circles share some elements in this case. Sets that have elements in common, but are not subsets in either direction (i.e. neither :math:`A \subseteq B` nor :math:`B \subseteq A`), are called *overlapping*.
 
@@ -412,7 +414,7 @@ As in the union, there are two cases we need to consider when representing the i
 
 The first case, where the two sets have elements in common is shown in the next diagram,
 
-.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-union-overlapping.jpg
 
 The intersection is represented by where the circles meet. In the case of *overlapping* sets, this is non-empty,
 
@@ -422,7 +424,7 @@ The intersection is represented by where the circles meet. In the case of *overl
 
 The second case, where the two sets have no elements in common is shown below,
 
-.. image:: ../../_static/img/mathematics/sets/sets_union_disjoint.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-union-disjoint.jpg
 
 The intersection is represented by where the circles meet. In the case of *disjoint sets*, the circles do not meet. Thus, 
 
@@ -452,7 +454,7 @@ The intersection is represented by where the circles meet. In the case of *disjo
 
 		A \cap B = \{ b, c \}
 
-.. _set_difference:
+.. _set-difference:
 
 Difference
 ----------
@@ -465,16 +467,16 @@ The operation of subtracting a set :math:`B` from a set :math:`A` is equivalent 
 
 	A - B = A \cap B^c
 
-.. _set_theorems:
+.. _set-theorems:
 
 Theorems
 ========
 
 All of the theorems of Set Theory can be proven in one of two ways:
 
-1. By drawing a :ref:`Venn Diagram<venn_diagrams>` of the sets in question and working out the relations between them graphically.
+1. By drawing a :ref:`Venn Diagram <venn_diagrams>` of the sets in question and working out the relations between them graphically.
 
-2. Writing example sets in :ref:`list_notation` and then applying the definitions of :ref:`set_operations` to both sides of the equation. 
+2. Writing example sets in :ref:`list-notation` and then applying the definitions of :ref:`set-operations` to both sides of the equation. 
 
 .. note:: 
 
@@ -486,12 +488,12 @@ All of the theorems of Set Theory can be proven in one of two ways:
     
 	This will be important when we apply these ideas to :ref:`probability`. For this reason, we will give two versions of each theorem, when possible. One version will be phrased in terms of sets and the other version will be phrased in terms of cardinalities.
 
-.. _basic_theorems:
+.. _basic-theorems:
 
 Basic Theorems
 --------------
 
-.. _zero_property_of_intersections:
+.. _zero-property-of-intersections:
 
 Zero Property of Intersections
 ******************************
@@ -518,7 +520,7 @@ The intersection of any set **A** with the empty set is the empty set.
         
 		a \cdot 0 = 0
 
-.. _zero_property_of_unions:
+.. _zero-property-of-unions:
 
 Zero Property of Unions
 ***********************
@@ -545,10 +547,10 @@ The union of any set **A** with the empty set is itself.
 
 		a + 0 = a
 
-.. _identity_property_of_intersections:
+.. _first-identity-property-of-intersections:
 
-Identity Property of Intersections
-**********************************
+First Identity Property of Intersections
+****************************************
 
 .. topic:: Identity Property of Intersections
 
@@ -572,10 +574,22 @@ The intersection of any set **A** with the universal set is itself.
 
 		a \cdot 1 = a
 
-.. _identity_theorem_four:
+.. _second-identity-property-of-intersetions:
 
-Identity Property of Unions
-***************************
+Second Identity Property of Intersections
+*****************************************
+
+Symbolic Expression
+    .. math:: 
+
+        A \cap A = A
+
+The intersection of any set **A** with itself is itself.
+
+.. _first-identity-property-of-unions:
+
+First Identity Property of Unions
+*********************************
 
 .. topic:: Identity Property of Unions
 
@@ -595,10 +609,10 @@ The union of any set **A** with the universal set is the universal set.
 
 	This theorem does not have an analogous algebraic property. This is where *set theory* starts to diverge from ordinary algebra. 
 
-.. _identity_theorem_five:
+.. _second-identity-property-of-unions:
 
-Theorem 5
-*********
+Second Identity Property of Unions
+**********************************
 
 Symbolic Expression
     .. math:: 
@@ -607,24 +621,12 @@ Symbolic Expression
 
 The union of any set **A** with itself is itself. 
 
-.. _identity_theorem_six:
-
-Theorem 6
-*********
-
-Symbolic Expression
-    .. math:: 
-
-        A \cap A = A
-
-The intersection of any set **A** with itself is itself.
-
-.. _subset_theorems:
+.. _subset-theorems:
 
 Subset Theorems
 ---------------
 
-.. _subset_theorem_one:
+.. _subset-theorem-one:
 
 Theorem 1
 *********
@@ -641,7 +643,7 @@ Symbolic Expression
 
 The intersection of **A** and **B** is a subset of **A**.
 
-.. _subset_theorem_two:
+.. _subset-theorem-two:
 
 Theorem 2
 *********
@@ -658,7 +660,7 @@ Symbolic Expression
 
 **A** is a subset of the union of **A** and **B**.
 
-.. _subset_theorem_three:
+.. _subset-theorem-three:
 
 Theorem 3
 *********
@@ -676,7 +678,7 @@ Symbolic Expression
 
 The intersection of two sets **A** and **B** is a subset of the union of those same two sets.
 
-.. _subset_theorem_four:
+.. _subset-theorem-four:
 
 Theorem 4
 *********
@@ -758,7 +760,7 @@ Whereas,
 
 The lesson here is: the relation of "*less than or equal to*" between cardinalities does not equate to the relation of "*subset of*" between two sets. While the concepts are related, this theorem illustrates they must regarded as separate *ideas*. 
 
-.. _subset_theorem_five:
+.. _subset-theorem-five:
 
 Theorem 5
 *********
@@ -768,7 +770,7 @@ Theorem 5
 
 If **A** is a subset of **B**, then the union of **A** and **B** is equal to **B**
 
-.. _law_of_syllogism:
+.. _law-of-syllogism:
 
 Law of Syllogism
 ****************
@@ -783,12 +785,12 @@ If **A** is a subset of **B** and **B** is a subset of **C**, then **A** is a su
     
     Refer to the :ref:`knowledge` section for more details on *syllogisms*.
 
-.. _complement_theorems:
+.. _complement-theorems:
 
 Complement Theorems
 -------------------
 
-.. _law_of_double_negation:
+.. _law-of-double-negation:
 
 Law of Double Negation
 **********************
@@ -821,7 +823,7 @@ Example
 
 		(A^c)^c = \{ 1, 2 \}
 
-.. _law_of_excluded_middle:
+.. _law-of-excluded-middle:
 
 Law Of Excluded Middle
 **********************
@@ -858,7 +860,7 @@ Example
 
 		A \cup A^c = \{ \text{ heads }, \text{ tails } \} = S 
 
-.. _law_of_noncontradiction:
+.. _law-of-noncontradiction:
 
 Law of Non-Contradiction
 ************************
@@ -870,7 +872,6 @@ Law of Non-Contradiction
         	A \cap A ^c = \varnothing
 
 The intersection of a set **A** its complement is the empty set.
-
 
 **Example** 
 
@@ -890,12 +891,12 @@ The intersection of a set **A** its complement is the empty set.
 
 		A \cap A^c = \{ \} = \varnothing
 
-.. _counting_theorems:
+.. _counting-theorems:
 
 Counting Theorems 
 -----------------
 
-.. _law_of_unions:
+.. _law-of-unions:
 
 Law of Unions
 *************
@@ -908,9 +909,9 @@ Law of Unions
 
 The number of elements in **A** or **B** is equal to the number of elements in **A** plus the number of elements in **B**, minus the elements **A** and **B** have in common.
 
-This is another theorem most easily understood by considering the following :ref:`venn diagram <venn_diagrams>`,
+This is another theorem most easily understood by considering the following :ref:`venn diagram <venn-diagrams>`,
 
-.. image:: ../../_static/img/mathematics/sets/sets_union_overlapping.jpg
+.. image:: ../../_static/img/mathematics/sets/sets-union-overlapping.jpg
 	:align: center
 
 The area encompassed by both circles is the union :math:`A \cup B`. The overlap in the circles is intersection :math:`A \cap B`. 
@@ -957,7 +958,7 @@ Consider how we count up elements in **A** or **B**. We first count up the eleme
 
 		n(A) + n(B) - n(A \cap B) = 2 + 3 - 1 = 4
 
-.. _law_of_complements:
+.. _law-of-complements:
 
 Law of Complements
 ******************
@@ -966,20 +967,20 @@ Law of Complements
 
 	.. math::
     
-        	n(A) + n(A^c) = n(S)
+		n(A) + n(A^c) = n(S)
 
 The number of elements in any set **A** plus the number of elements in its complement is equal to the number of elements in the univeral set.
 
-This theorem follows from the :ref:`venn diagram <venn_diagrams>` of a set with its complement,
+This theorem follows from the :ref:`venn diagram <venn-diagrams>` of a set with its complement,
 
-.. image:: ../../_static/img/mathematics/sets/sets_complement.jpg 
+.. image:: ../../_static/img/mathematics/sets/sets-complement.jpg 
 	:align: center
 
 It can proved formally as follows,
 
 **Proof** 
 	
-	By :ref:`Complement Theorem 3 <complement_theorem_three>`, 
+	By :ref:`law-of-noncontradiction`, 
 
 	.. math::
 
@@ -997,7 +998,7 @@ It can proved formally as follows,
 
 		n(A \cap A ^c) = 0
 
-	By :ref:`Counting Theoreom 1 <counting_theorem_one>`,
+	By :ref:`law-of-unions`,
 
 	.. math::
 
@@ -1009,7 +1010,7 @@ It can proved formally as follows,
 
 		n(A \cup A^c) = n(A) + n(A^c)
 
-	On the other hand, by :ref:`Complement Theorem 2 <complement_theorem_two>`,
+	On the other hand, by :ref:`law-of-excluded-middle`,
 
 	.. math::
 
@@ -1025,9 +1026,9 @@ It can proved formally as follows,
 
 	.. math::
 
-        	n(S) = n(A) + n(A^c)
+		n(S) = n(A) + n(A^c)
 
-.. _square_of_opposition:
+.. _square-of-opposition:
 
 Aristotle's Square of Opposition
 ================================
@@ -1181,9 +1182,9 @@ The *square of opposition* is constructed by first drawing a table,
 |  negative   |              |                |
 +-------------+--------------+----------------+
 
-In the entries of this table, you draw :ref:`venn_diagrams` that represent the intersection of the row and column. Putting the results together, we get the following picture,
+In the entries of this table, you draw :ref:`venn-diagrams` that represent the intersection of the row and column. Putting the results together, we get the following picture,
 
-.. image:: ../../_static/img/mathematics/sets/square_of_opposition.jpg
+.. image:: ../../_static/img/mathematics/sets/square-of-opposition.jpg
 
 Notice the diagonals of the picture, the line that connects the top left to the bottom right and the line that connects the top right to the bottom left, form the contradictory pairs of propositions, namely,
 

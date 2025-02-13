@@ -1,4 +1,4 @@
-.. _plugin_adaptation:
+.. _plugin-adaptation:
 
 Plugin III: Adaptation
 ======================
