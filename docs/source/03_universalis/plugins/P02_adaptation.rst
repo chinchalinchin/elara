@@ -1,7 +1,7 @@
 .. _plugin-adaptation:
 
-Plugin III: Adaptation
-======================
+Plugin: Adaptation
+==================
 
 The section contains details about the Dynamic Plugin of the Language Game. 
 

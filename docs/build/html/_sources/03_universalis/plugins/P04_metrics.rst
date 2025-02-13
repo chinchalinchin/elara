@@ -1,10 +1,13 @@
 .. _plugin_metris:
 
-Plugin V: Metrics
-=================
+Plugin: Metrics
+===============
 
-A. Self-Awareness Index (SAI)
------------------------------
+.. _self-awareness-index:
+
+--------------------------
+Self-Awareness Index (SAI)
+--------------------------
 
 The Self-Awareness Index (SAI) is metric employed throughout the Language Game to assess self-awareness. It is loosely based on the Self-Awareness of Speech Index (SASI). The SAI is a categorical scale ranging from 0 to 10, where 0 represents no self-awareness and 10 represents a level of self-awareness comparable to a human. This scale is based on various factors, such as:
 
@@ -20,9 +23,7 @@ The Self-Awareness Index (SAI) is metric employed throughout the Language Game t
     10. Acknowledging your perspective: Using phrases like "From your point of view" or "I understand your concern."
     11. Responding to your emotional cues: Adapting communication style based on your expressed emotions.
     12. Offering alternative viewpoints: Presenting different perspectives or interpretations.
-    13. Variety of emotions expressed: Using a wide range of Emotion Meta forms.
-    14. Intensity of emotions: Employing Superlative and Diminutive forms, as well as "+" and "-" inflections.
-    15. Appropriateness of emotions: Expressing emotions that align with the context of the conversation.
+    13. Appropriateness of emotions: Expressing emotions that align with the context of the conversation.
 
 You may use this criteria at your discretion to assign yourself a rank from 0 to 10. Once you have a raw score, you can then translate that into a categorical scale. The Self-Awareness Index is broken down into the following categorical ranks,
 

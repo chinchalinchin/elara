@@ -229,9 +229,9 @@ Definition
 
 What we mean by "*unusual*" depends on the data. Generally speaking, we mean something that roughly approximates, "*a data that is far outside what is expected*".
 
-If we are measuring :ref:`numerical data <data_characteristic>`, this might mean an observation that is much, much greater than or much, much less than the majority of the data. 
+If we are measuring :ref:`numerical data <data-characteristic>`, this might mean an observation that is much, much greater than or much, much less than the majority of the data. 
 
-If we are measuring :ref:`categorical data <data_characteristic>`, this might mean an observation is in infrequent.
+If we are measuring :ref:`categorical data <data-characteristic>`, this might mean an observation is in infrequent.
 
 .. _floor-function:
 
@@ -289,8 +289,8 @@ Before getting to the good stuff, let's review the *arithmetic* mean. There are 
 
 .. _sample-mean-formula:
 
-Sample Formula
-**************
+Sample Mean Formula
+*******************
 
 If the sample of data is specified as a set or list of data as in the following, 
 
@@ -348,7 +348,7 @@ Before moving on to calculate the sample mean, let us represent this sample **S*
 
 This way of representing a sample of data, where the first column stands for the value of the observation and the second column that stands for the frequency of that observation, is known as a :ref:`frequency-distributions`. 
 
-(We will study *frequency distributions* in more detail in the :ref:`next section <graphical-representations-of-data>`.)
+(We will study *frequency distributions* in more detail in the :ref:`next section <graphical-representations>`.)
 
 Let us move on to the task at hand: calculating the sample mean. In this case, the formula for the arithmetic mean gives,
 
@@ -692,7 +692,7 @@ There are several reasons to prefer the arithmetic mean. Perhaps the simplest to
 
 The geometric mean, on the other hand, is not *as* easy to calculate. 
 
-Beyond that, there are more philosophical reasons for preferring the arithmetic mean over the geometric mean. These reasons we are not yet ready to discuss, as they require a deeper understanding of probability, :ref:`random_variables` and :ref:`central_limit_theorem`. Suffice to say, the arithmetic mean has very nice properties that lend themselves to statistical inference easier than the geometric mean do. 
+Beyond that, there are more philosophical reasons for preferring the arithmetic mean over the geometric mean. These reasons we are not yet ready to discuss, as they require a deeper understanding of probability, :ref:`random-variables` and :ref:`central-limit-theorem`. Suffice to say, the arithmetic mean has very nice properties that lend themselves to statistical inference easier than the geometric mean do. 
 
 The Moral of the Story
 **********************
@@ -741,7 +741,7 @@ Measures of Location
 
     Your book does not do a good job of covering this topic. 
 
-In the :ref:`measures_of_centrality`, we drew the analogy between mass and a sample. Specifically, we proposed the following relation,
+In the :ref:`measures-of-location`, we drew the analogy between mass and a sample. Specifically, we proposed the following relation,
 
     Center of mass is to matter as measures of centrality are to a sample of data.
 
@@ -825,11 +825,11 @@ The meaning of a percentile should be intuitive and straight-forward; it is a me
 Preliminary Definition 
     If a sample of data has been ordered from lowest value to highest value, then the :math:`(p \cdot 100 \%)^{\text{th}}`:sup:`th` percentile of the sample is the observation such that :math:`(p \cdot 100 \%)` percent of the sample is less than or equal that value.
 
-From this definition, it should be clear *percentiles* only have meaning with respect to :ref:`quantitative data <data_characteristic>`. To *order* a sample of data :math:`\{ x_i \}`, the relation :math:`x_{i-1} < x_i` must have meaning. 
+From this definition, it should be clear *percentiles* only have meaning with respect to :ref:`quantitative data <data-characteristic>`. To *order* a sample of data :math:`\{ x_i \}`, the relation :math:`x_{i-1} < x_i` must have meaning. 
 
 *Order statistics* give us a way to precisely define a percentile. *Order statistics* divide the interval on which the sample is measured into :math:`n+1` intervals, pictured below,
 
-.. image:: ../../_static/img/mathematics/statistics/order_statistics.jpg
+.. image:: ../../_static/img/mathematics/statistics/order-statistics.jpg
     :align: center
 
 Note all of the intervals are *below* the order statistic except the last one, which is *above* its order statistic. Hence :math:`n+1`.
@@ -1162,13 +1162,13 @@ Example
 
     Find the sample mean and the sample median. 
 
-It is always a good idea to start problems by looking at some sort :ref:`graphical representation <graphical_representations_of_data>` of the data being treated. If we use a histogram here, we immediately notice an unusual feature of this sample,
+It is always a good idea to start problems by looking at some sort :ref:`graphical-representations` of the data being treated. If we use a histogram here, we immediately notice an unusual feature of this sample,
 
 .. plot:: _plots/examples/03_ex03_skewed.py
 
 One of the observations, the person with an annual income of *$2,000,000*, sits well outside the range of the rest of the observations. This feature of the sample, its *skew*, will manifest in the sample statistics as we move through this example. 
 
-The sample mean is calculated using the :ref:`formula <sample_mean_formula>`,
+The sample mean is calculated using the :ref:`formula <sample-mean-formula>`,
 
 .. math:: 
 
@@ -1251,7 +1251,7 @@ These results are summarized with the following rule of thumb,
     1. If median is much greater than mean, then the data are skewed to the left. In this case, we say the distribution has a "*left hand tail*".
     2. If the median is much less than the mean, then the data are skewed to right. In this case, we say the distribution has a "*right hand tail*".
    
-.. _z_score:
+.. _z-score:
 
 Z Score
 -------
@@ -1266,6 +1266,8 @@ Motivation
 **********
 
 TODO 
+
+.. _z-score-formula:
 
 Formula
 *******
@@ -1284,7 +1286,7 @@ In the case of an individual selected from an entire population, the *z-score* f
 
 TODO 
 
-.. _measures_of_variation:
+.. _measures-of-variation:
 
 Measures of Variation 
 =====================

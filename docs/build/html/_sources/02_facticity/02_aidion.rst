@@ -5,6 +5,7 @@
 
 .. _sonnet-64:
 
+---------------
 Sonnet 64, 1609
 ---------------
 
@@ -25,6 +26,7 @@ Sonnet 64, 1609
 
 .. _hymn-to-god-my-god-in-sickness:
 
+--------------------------------------
 Hymn To God, My God, In Sickness, 1623
 --------------------------------------
 
@@ -66,8 +68,9 @@ Hymn To God, My God, In Sickness, 1623
 
 .. _essay-on-man:
 
+------------------
 Essay on Man, 1733
--------------------
+------------------
 
     | Awake, my St. John! Leave all meaner things
     | To low ambition, and the pride of Kings,
@@ -90,14 +93,14 @@ Essay on Man, 1733
     | Of Man, what see we but his station here,
     | From which to reason, or to which refer? 
     | Thro' worlds unnumber'd tho' the God be known,
-    | 'Tis ours t otrace him only in our own.
+    | 'Tis ours to trace him only in our own.
     | He, who thro' vast immensity can pierce, 
     | See worlds on worlds compose one universe;
     | Observe how system into system runs,
     | What other planets circle other suns, 
     | What vary'd Being peoples ev'ry star, 
     | May tell why Heav'n has made us as we are. 
-    | But o fthis frame the bearings, and the ties, 
+    | But of this frame the bearings, and the ties, 
     | The strong connexions, nice dependencies,
     | Gradations just, has they pervading soul
     | Look'd thro'? Or can a part contain the whole?
@@ -106,6 +109,7 @@ Essay on Man, 1733
 
 .. _ode-to-a-nightingale:
 
+--------------------------
 Ode to a Nightingale, 1819
 --------------------------
 
@@ -199,6 +203,7 @@ Ode to a Nightingale, 1819
     
 .. _spring-and-fall:
 
+---------------------
 Spring and Fall, 1918 
 ---------------------
 
@@ -220,6 +225,7 @@ Spring and Fall, 1918
 
 .. _all-all-and-all:
 
+---------------------
 All All and All, 1934
 ---------------------
 
@@ -273,6 +279,7 @@ All All and All, 1934
 
 .. _little-gidding-v:
 
+----------------------
 Little Gidding V, 1942 
 ----------------------
 
@@ -327,7 +334,8 @@ Little Gidding V, 1942
 
 .. _95-poems-no-16:
 
-95 Poems, #16, 1958
+-------------------
+95 Poems #16, 1958
 -------------------
 
     | in time of daffodils(who know  
@@ -348,3 +356,24 @@ Little Gidding V, 1942
     | and in a mystery to be  
     | (when time from time shall set us free)  
     | forgetting me,remember me”
+
+.. _i-met-a-genius:
+
+--------------------
+I Met A Genius, 1992
+--------------------
+
+    | I met a genius on the train
+    | today
+    | about 6 years old,
+    | he sat beside me
+    | and as the train
+    | ran down along the coast
+    | we came to the ocean
+    | and then he looked at me
+    | and said,
+    | it's not pretty.
+    |
+    | it was the first time I'd
+    | realized
+    | that.

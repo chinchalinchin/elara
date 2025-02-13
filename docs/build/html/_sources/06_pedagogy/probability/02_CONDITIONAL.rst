@@ -26,7 +26,7 @@ Let **A** represent the event of selecting a ball numbered 2. Let **B** represen
 
 This number represents the probability of **A** *without any further information* provided about the sample space. 
 
-If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been *removed* from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of :ref:`reduction-of-the-sample_space` is called *conditioning on the event* **B**. The event of **A** given **B** is denoted :math:`A \mid B`
+If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been *removed* from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of :ref:`reduction-of-the-sample-space` is called *conditioning on the event* **B**. The event of **A** given **B** is denoted :math:`A \mid B`
 
 Applying the :ref:`classical-definition-of-probability` to this *reduced* sample space, we get the *probability of selecting a ball with the number 2, given the ball is red*,
 
@@ -277,7 +277,7 @@ The *conditional probability* formula can be rearranged with the aid of some sim
 	
 		P(A \cap B) = P(B \mid A) \cdot P(A)
 
-This version of the *conditional probability* formula along with the technique of :ref:`reduction-of-the-sample_space` give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated :ref:`compound event <compound-events>`, which usually involves cumbersome combinatorial analysis. *Conditional probability* can be used to sidestep these calculations.
+This version of the *conditional probability* formula along with the technique of :ref:`reduction-of-the-sample-space` give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated :ref:`compound event <compound-events>`, which usually involves cumbersome combinatorial analysis. *Conditional probability* can be used to sidestep these calculations.
 		
 The following example illustrates the simplification affected by the introduction of *conditional probability* into combinatorial problems. This example can be solved in one of two ways. The first solution uses the techniques from the :ref:`Combinatorics section <combinatorics>`. The second solution uses the techniques of the *Multiplication Rule* and *Reduction of the Sample Space* just discussed. The reader will observe, while both methods yield the same answer, the second method is substantially easier, both from a calculation perpsective and from a conceptual perspective (i.e., it's easier to understand).
 
@@ -288,55 +288,55 @@ The following example illustrates the simplification affected by the introductio
 
 .. note:: Solution #1: Combinatorics
     
-    	The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the :ref:`combination-formula` is used,
+	The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the :ref:`combination-formula` is used,
 
-    	.. math::
-        	
-        	C_2^{52} = \frac{52!}{2! \cdot 50!} = \frac{52 \cdot 51}{2} = 1326
+	.. math::
+		
+		C_2^{52} = \frac{52!}{2! \cdot 50!} = \frac{52 \cdot 51}{2} = 1326
 
-    	Therefore, there are a total of *1326* hands that can be dealt. 
+	Therefore, there are a total of *1326* hands that can be dealt. 
 
-    	The same logic can be used to find the number of ways to pick two red cards. Note there are :math:`\frac{52}/{2}=26` red cards in a standard deck of playing cards. Therefore, the number of combinations of 26 distinct objects taken 2 at a time is,
+	The same logic can be used to find the number of ways to pick two red cards. Note there are :math:`\frac{52}/{2}=26` red cards in a standard deck of playing cards. Therefore, the number of combinations of 26 distinct objects taken 2 at a time is,
 
-    	.. math::
-        	
-        	C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325
-    
-    	Therefore, the desired probability can be found using the :ref:`classical-definition-of-probability`,
+	.. math::
+		
+		C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325
 
-    	.. math::
-        	
-        	P("two red cards") = \frac{325}{1326} \approx 0.2451
+	Therefore, the desired probability can be found using the :ref:`classical-definition-of-probability`,
+
+	.. math::
+		
+		P("two red cards") = \frac{325}{1326} \approx 0.2451
 
 .. note:: Solution #2: Conditional Probability
 
-    	Let **R** :sub:`1` represent the event the first card drawn is red. Let **R** :sub:`2` represent the event the second card drawn is red. Then the event :math:`R_1 \cap R_2` represents the event the first card is red *and* the second card is red. The *Multiplication Rule* states the probability of an intersection can be expressed as,
+	Let **R** :sub:`1` represent the event the first card drawn is red. Let **R** :sub:`2` represent the event the second card drawn is red. Then the event :math:`R_1 \cap R_2` represents the event the first card is red *and* the second card is red. The *Multiplication Rule* states the probability of an intersection can be expressed as,
 
-    	.. math::
-        
-        	P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)
+	.. math::
+	
+		P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)
 
-    	The term :math:`P(R_1)` is the probability of selecting a red card on the first draw. This can be calculated easily with the :ref:`classical-definition-of-probability`,
-    
-    	.. math::
-        
-        	P(R_1) = \frac{26}{52}
+	The term :math:`P(R_1)` is the probability of selecting a red card on the first draw. This can be calculated easily with the :ref:`classical-definition-of-probability`,
 
-    	The term :math:`P(R_2 \mid R_1)` can likewise be quickly decomposed by noticing the event **R** :sub:`1` *reduces the sample space* to *51* cards, *25* of which are red. Using the :ref:`classical-definition-of-probability` once again, the conditional probability of **R** :sub:`2` given the occurrence of **R** :sub:`1` is,
+	.. math::
+	
+		P(R_1) = \frac{26}{52}
 
-    	.. math::
-        
-        	P(R_2 \mid R_1) = \frac{25}{51}
+	The term :math:`P(R_2 \mid R_1)` can likewise be quickly decomposed by noticing the event **R** :sub:`1` *reduces the sample space* to *51* cards, *25* of which are red. Using the :ref:`classical-definition-of-probability` once again, the conditional probability of **R** :sub:`2` given the occurrence of **R** :sub:`1` is,
 
-    	Therefore, 
+	.. math::
+	
+		P(R_2 \mid R_1) = \frac{25}{51}
 
-    	.. math::
-        
-        	P(R_1 \cap R_2) = \frac{26}{52} \cdot \frac{25}{51} = \frac{26 \cdot 25}{52 \cdot 51}
+	Therefore, 
 
-    	.. math::
-        
-        	P(R_1 \cap R_2) = \frac{650}{2652} \approx 0.2451
+	.. math::
+	
+		P(R_1 \cap R_2) = \frac{26}{52} \cdot \frac{25}{51} = \frac{26 \cdot 25}{52 \cdot 51}
+
+	.. math::
+	
+		P(R_1 \cap R_2) = \frac{650}{2652} \approx 0.2451
 
 .. _law-of-total-probability:
 

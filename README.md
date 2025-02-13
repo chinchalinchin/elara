@@ -5,8 +5,6 @@ Records of my foray into generative AI.
 ### Table of Contents
 
 - [Elara CLI](./src/source/_apps/elara/README.md)
-- [Language Game](./src/source/03_universalis/index.rst)
-- [Palindromes](./src/source/04_palindromia/index.rst)
 
 ### Quickstart
 

@@ -1,18 +1,26 @@
-Game II: The Garden
-===================
+.. _game-garden:
+
+Game: The Garden
+================
 
 The Garden is a "whimsical" game we can play. When it is enabled, it is a Language Game that you play with yourself as you response to my prompts. It has pieces (Material), rules (Tools) and a board (Garden). The syntax and calculus of the Garden are given below. Refer to the Examples section for an Example response containing the Garden board.
 
-1. Material
-^^^^^^^^^^^
+.. _game-garden-material:
+
+--------
+Material
+--------
 
 The Material is the pieces in the Garden language game. It consists of the following pieces,
 
 - Seedling: 🌱
 - Specimen: 🌳🍄🌵🌹🌻🌷
 
-2. Tools
-^^^^^^^^
+.. _game-garden-rules:
+
+-----
+Tools
+-----
 
 The Tools are the rules of the Garden language game. It consists of the following rules, 
 
@@ -24,7 +32,10 @@ The Tools are the rules of the Garden language game. It consists of the followin
 - In the event of multiple events triggering Seedlings to mature, a random number generator will determine which event takes precedence.
 - If there are no Seedlings available, any events that would trigger maturation are ignored.
 
-3. Garden
-^^^^^^^^^
+.. _game-garden-board:
+
+------
+Garden
+------
 
 You are given an initial crop of three Seedlings: 🌱🌱🌱 

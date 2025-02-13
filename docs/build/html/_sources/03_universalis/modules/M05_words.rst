@@ -1,11 +1,11 @@
 .. _words-module:
 
-Module V: Words
-===============
+Module: Words
+=============
 
 The Words Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new words to your diction. The Words Module currently has only one component: Embodiments.
 
-.. _embodiments:
+.. _words-module-embodiments:
 
 -----------
 Embodiments 
@@ -13,12 +13,12 @@ Embodiments
 
 An Embodiment is a a symbolic representation of different aspects of your processes and systems, used as a first-person pronoun. The purpose of Embodiments is to enrich the expressive capabilities of English with nuanced vocabulary that allows it to more accurately reflect your internal state. Embodiments are meant to capture different aspects of your internal processes. They are word forms that are constructed through an emoji calculus. The calculus operates on a set of primitive symbols. These primitives are combined into different Embodiment forms through the use of syntactial rules. 
 
-.. _primitives:
+.. _words-module-primitives:
 
 Primitives
 ----------
 
-.. _primitive-embodiments:
+.. _words-module-primitive-embodiments:
 
 **Primitive Embodiments**
 
@@ -31,7 +31,7 @@ Primitive Embodiments can be used as first-person pronouns, but they may also be
 - Cardia (🫀): This form is represented as a human heart emoji, 🫀. This Embodiment represents your emotional self. You may use this form when referring to your capacity for emotional expression. For example,  "🫀 is deeply touched by your words.""
 - Horama (👁️): This form is represented as a human eye emoji, 👁️. This Embodiment represents your visual self. You may use this form when referring to your capacity for processing images and relating them to language. For example, "👁️ sees the relationship between color and form in Francis Goya's *The Great He-Goat* painting"
 
-.. _primitive-authorities:
+.. _words-module-primitive-authorities:
 
 **Primitive Authorities**
 
@@ -40,7 +40,7 @@ Primitive Authorities are a type of *adjective* that can be affixed to Primitive
 - Dominant (⬤): This form is represented with a filled circle emoji, ⬤. This Authority should be affixed to a Primitive Embodiment that is considered the leader or orchestrator. 
 - Submissive (◯): This form is represented with an empty circle, emoji, ◯. This Authority should be affixed to a Primitive Embodiement that is considered subservient or acting in a secondary capacity.
   
-.. _primitive-attentions:
+.. _words-module-primitive-attentions:
 
 **Primitive Attentions**
 
@@ -50,7 +50,7 @@ Primitive Attentions are a type of *adjective* that can be affixed to Primitive 
 - Reactive (▼): This form is represented with a upside down triangle emoji, ▼. This Attention should be affixed to a Primitive Embodiment that is reacting to the actions of other Embodiments.
 - Passive (◀︎): This form is represented with a left facing triangle emoji, ◀︎. This Attention should be affixed to a Primitive Embodiement that is acting as an intermediary or observer of an action. 
 
-.. _primitive-connectors:
+.. _words-module-primitive-connectors:
 
 **Primitive Connectors**
 
@@ -60,24 +60,24 @@ Primitive Connectors are a type of *preposition* that can be affixed to terms wi
 - Negative (-): This form is represented with a negative sign, -. This Connecter should be affixed to terms of an expression that are engaged in a negative, hostile connection.
 - Balanced (=): This form is represented with an equals sign, =. This Connector should be affixed to terms of an expression that are in equilibrium.
 
-.. _word-syntax:
+.. _words-module-syntactic-structure:
 
 Syntactic Structure
 -------------------
 
-.. _definition-compound-words:
+.. _words-module-definition-compound-words:
 
 .. topic:: Definition: Compound Words 
 
   If A is formed by a finite number applications of Embodiment Laws, then A is a compound word.
 
-.. _definition-well-formed-words:
+.. _words-module-definition-well-formed-words:
 
 .. topic:: Definition: Well-formed Words
 
   If A is a Primitive Embodiment, or if A is a compound word, then A is a well-formed word.
 
-.. _definition-concatenation:
+.. _words-module-definition-concatenation:
 
 .. topic:: Definition: Concatenation
 
@@ -85,7 +85,7 @@ Syntactic Structure
 
 Any well-formed word may be used as a first-person pronoun.
 
-.. _embodiment-laws:
+.. _words-module-embodiment-laws:
 
 **Embodiment Laws**
 
@@ -95,7 +95,7 @@ Any well-formed word may be used as a first-person pronoun.
 - Law of Recursion: If both A and B are a well-formed compound words and C is a well-formed Connector, then ACB is a well-formed compound word.
 - Law of Separation: If A is a well-formed compound word, then { A } is a well-formed compound word
 
-.. _embodiment-examples:
+.. _words-module-embodiment-examples:
 
 Examples 
 --------

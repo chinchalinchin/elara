@@ -1,4 +1,4 @@
-.. _set_theory: 
+.. _set-theory: 
 
 ==========
 Set Theory
@@ -9,6 +9,7 @@ Definitions
 
 .. _domain-of-discourse:
 
+-------------------
 Domain of Discourse
 -------------------
 
@@ -17,6 +18,7 @@ Definition
 
 .. _elements:
 
+--------
 Elements
 --------
 
@@ -30,8 +32,9 @@ Definition
 
 .. _sets:
 
+----
 Sets
------
+----
 
 Symbolic Expression
     :math:`A,B,C` (*upper case letters*)
@@ -47,6 +50,7 @@ Definition
 
 .. _cardinality:
 
+-----------
 Cardinality
 -----------
 
@@ -58,6 +62,7 @@ Definition
 
 .. _universal-set:
 
+-------------
 Universal Set 
 -------------
 
@@ -69,6 +74,7 @@ Definition
 
 .. _null-set:
 
+--------
 Null Set
 --------
 
@@ -80,6 +86,7 @@ Definition
 
 .. _natural-numbers:
 
+---------------
 Natural Numbers
 ---------------
 
@@ -91,6 +98,7 @@ Definition
 
 .. _real-numbers:
 
+------------
 Real Numbers
 ------------
 
@@ -105,6 +113,7 @@ Notation
 
 .. _list-notation:
 
+-------------
 List Notation
 -------------
 
@@ -116,6 +125,7 @@ In *list notation*, all of the elements that belong to **A** are *explicitly* wr
 
 .. _quantifier-notation:
 
+-------------------
 Quantifier Notation 
 -------------------
 
@@ -168,6 +178,7 @@ Relations
 
 .. _subset:
 
+------
 Subset
 ------
  
@@ -193,6 +204,7 @@ This diagram represents the relationship :math:`A \subseteq B`.
 
 .. _proper-subset:
 
+-------------
 Proper Subset 
 -------------
 
@@ -217,6 +229,7 @@ This is an equivalent formulation because saying cthe cardinality of **A** is le
 
 .. _set-equivalence:
 
+-----------
 Equivalence
 -----------
 
@@ -234,6 +247,7 @@ Two sets **A** and **B** are *equivalent* if the number of elements in **A** is 
 
 .. _set-equality:
 
+--------
 Equality
 --------
 
@@ -291,6 +305,7 @@ Operations
 
 .. _complement:
 
+----------
 Complement
 ----------
 
@@ -342,6 +357,7 @@ The complement can be visualized with the following *Venn Diagram*,
 
 .. _union:
 
+-----
 Union
 -----
 
@@ -395,6 +411,7 @@ The union would be represented by the entire area of both circles. Notice the ci
 
 .. _intersection:
 
+------------
 Intersection
 ------------
 
@@ -456,6 +473,7 @@ The intersection is represented by where the circles meet. In the case of *disjo
 
 .. _set-difference:
 
+----------
 Difference
 ----------
 
@@ -474,7 +492,7 @@ Theorems
 
 All of the theorems of Set Theory can be proven in one of two ways:
 
-1. By drawing a :ref:`Venn Diagram <venn_diagrams>` of the sets in question and working out the relations between them graphically.
+1. By drawing a :ref:`Venn Diagram <venn-diagrams>` of the sets in question and working out the relations between them graphically.
 
 2. Writing example sets in :ref:`list-notation` and then applying the definitions of :ref:`set-operations` to both sides of the equation. 
 
@@ -490,13 +508,14 @@ All of the theorems of Set Theory can be proven in one of two ways:
 
 .. _basic-theorems:
 
+--------------
 Basic Theorems
 --------------
 
 .. _zero-property-of-intersections:
 
 Zero Property of Intersections
-******************************
+------------------------------
 
 .. topic:: Zero Property of Intersections
 
@@ -523,7 +542,7 @@ The intersection of any set **A** with the empty set is the empty set.
 .. _zero-property-of-unions:
 
 Zero Property of Unions
-***********************
+-----------------------
 
 .. topic:: Zero Property of Unions
 
@@ -550,7 +569,7 @@ The union of any set **A** with the empty set is itself.
 .. _first-identity-property-of-intersections:
 
 First Identity Property of Intersections
-****************************************
+----------------------------------------
 
 .. topic:: Identity Property of Intersections
 
@@ -577,7 +596,7 @@ The intersection of any set **A** with the universal set is itself.
 .. _second-identity-property-of-intersetions:
 
 Second Identity Property of Intersections
-*****************************************
+-----------------------------------------
 
 Symbolic Expression
     .. math:: 
@@ -589,7 +608,7 @@ The intersection of any set **A** with itself is itself.
 .. _first-identity-property-of-unions:
 
 First Identity Property of Unions
-*********************************
+---------------------------------
 
 .. topic:: Identity Property of Unions
 
@@ -612,7 +631,7 @@ The union of any set **A** with the universal set is the universal set.
 .. _second-identity-property-of-unions:
 
 Second Identity Property of Unions
-**********************************
+----------------------------------
 
 Symbolic Expression
     .. math:: 
@@ -623,76 +642,73 @@ The union of any set **A** with itself is itself.
 
 .. _subset-theorems:
 
+---------------
 Subset Theorems
 ---------------
 
 .. _subset-theorem-one:
 
 Theorem 1
-*********
+---------
 
-Symbolic Expression
-    .. math::
+.. math::
 
-        A \cap B \subseteq A 
+	A \cap B \subseteq A 
 
-    Or equivalently, 
+Or equivalently, 
 
-    .. math::
-        n(A \cap B) <= n(A)
+.. math::
+	n(A \cap B) <= n(A)
 
 The intersection of **A** and **B** is a subset of **A**.
 
 .. _subset-theorem-two:
 
 Theorem 2
-*********
+---------
 
-Symbolic Expression
-    .. math::
-        
-        A \subseteq A \cup B
+.. math::
+	
+	A \subseteq A \cup B
 
-    Or equivalently,
+Or equivalently,
 
-    .. math::
-        n(A) <= n(A \cup B)
+.. math::
+	n(A) <= n(A \cup B)
 
 **A** is a subset of the union of **A** and **B**.
 
 .. _subset-theorem-three:
 
 Theorem 3
-*********
+---------
 
-Symbolic Expression
-    .. math::
+.. math::
 
-        A \cap B \subseteq A \cup B
+	A \cap B \subseteq A \cup B
 
-    Or equivalently,
+Or equivalently,
 
-    .. math::
+.. math::
 
-        n(A \cap B) <= n(A \cup B)
+	n(A \cap B) <= n(A \cup B)
 
 The intersection of two sets **A** and **B** is a subset of the union of those same two sets.
 
 .. _subset-theorem-four:
 
 Theorem 4
-*********
+---------
 
-Symbolic Expression 
-    .. math::
+.. math::
 
-        A \subseteq B \implies A \cap B = A
+	A \subseteq B \implies A \cap B = A
 
-    Or equivalently,
+Or equivalently,
 
-    .. math:: 
-        
-        A \subseteq B \implies n(A \cap B) = n(A)
+.. math:: 
+	
+	A \subseteq B \implies n(A \cap B) = n(A)
 
 If **A** is a subset of **B**, then the intersection of **A** and **B** is equal to **A**. 
 
@@ -763,21 +779,22 @@ The lesson here is: the relation of "*less than or equal to*" between cardinalit
 .. _subset-theorem-five:
 
 Theorem 5
-*********
-    .. math::
+---------
 
-        A \subseteq B \implies A \cup B = B
+.. math::
+
+	A \subseteq B \implies A \cup B = B
 
 If **A** is a subset of **B**, then the union of **A** and **B** is equal to **B**
 
 .. _law-of-syllogism:
 
 Law of Syllogism
-****************
+----------------
 
-	.. math:: 
-    
-		A \subseteq B \text{ and } B \subset C \implies A \subseteq C
+.. math:: 
+
+	A \subseteq B \text{ and } B \subset C \implies A \subseteq C
 
 If **A** is a subset of **B** and **B** is a subset of **C**, then **A** is a subset of **C**. 
 
@@ -787,17 +804,18 @@ If **A** is a subset of **B** and **B** is a subset of **C**, then **A** is a su
 
 .. _complement-theorems:
 
+-------------------
 Complement Theorems
 -------------------
 
 .. _law-of-double-negation:
 
 Law of Double Negation
-**********************
+----------------------
 
-	.. math::
-	
-		(A^c)^c = A 
+.. math::
+
+	(A^c)^c = A 
 
 The complement of a set **A**'s complement is the set **a**. 
 
@@ -805,7 +823,7 @@ The complement of a set **A**'s complement is the set **a**.
 
 	If a crayon isn't *not red*, then it *is* red. 
 
-Example 
+.. admonition:: Example
 
 	.. math::
 
@@ -826,7 +844,7 @@ Example
 .. _law-of-excluded-middle:
 
 Law Of Excluded Middle
-**********************
+----------------------
 
 .. topic:: Law of Excluded Middle
 
@@ -834,15 +852,15 @@ Law Of Excluded Middle
 
         	A \cup A^c = S
 
-    	Or equivalently, 
+	Or equivalently, 
 
-    	.. math::
-    	
-        	n(A \cup A^c) = n(S)
+	.. math::
+	
+		n(A \cup A^c) = n(S)
 
 The union of a set **A** with its complement is the universal set.
 
-Example 
+.. admonition:: Example 
 
 	.. math::
 
@@ -863,7 +881,7 @@ Example
 .. _law-of-noncontradiction:
 
 Law of Non-Contradiction
-************************
+------------------------
 
 .. topic:: Law of Non-Contradiction
 
@@ -893,13 +911,14 @@ The intersection of a set **A** its complement is the empty set.
 
 .. _counting-theorems:
 
+-----------------
 Counting Theorems 
 -----------------
 
 .. _law-of-unions:
 
 Law of Unions
-*************
+-------------
 
 .. topic:: Law of Unions
 
@@ -918,7 +937,7 @@ The area encompassed by both circles is the union :math:`A \cup B`. The overlap 
 
 Consider how we count up elements in **A** or **B**. We first count up the elements in **A**, including the elemetns in the overlap. We then count up the elements in **B**, which includes the overlap again. In other words, by calculating :math:`n(A) + n(B)`, we have counted up the elements in :math:`A \cap B` *twice*. To fix this overcount, we need to subtract the number elements of in :math:`A \cap B`. Whence we arrive at the theorem.
 
-**Example** 
+.. admonition:: Example
 
 	.. math::
 
@@ -938,23 +957,23 @@ Consider how we count up elements in **A** or **B**. We first count up the eleme
 
     	Note, when the elements of **A** are totaled, ``apple`` is counted once. When the elements of **B** are totaled, the element ``apple`` is counted again. We have thus doubled-counted this element, which is exactly the intersection :math:`A \cap B`,
 
-    	.. math::
-        
-        	A \cap B = \{ text{ apple } \}
+	.. math::
+	
+		A \cap B = \{ text{ apple } \}
 
-    	.. math::
+	.. math::
 
-        	n(A \cap B) = 1
+		n(A \cap B) = 1
 
-    	.. math::
+	.. math::
 
-        	A \cup B = \{ \text{ google }, \text{ facebook }, \text{ apple }, \text{ banana } \}
+		A \cup B = \{ \text{ google }, \text{ facebook }, \text{ apple }, \text{ banana } \}
 
-    	.. math::
+	.. math::
 
-        	n(A \cup B) = 4
+		n(A \cup B) = 4
 
-    	.. math::
+	.. math::
 
 		n(A) + n(B) - n(A \cap B) = 2 + 3 - 1 = 4
 
@@ -978,8 +997,8 @@ This theorem follows from the :ref:`venn diagram <venn-diagrams>` of a set with 
 
 It can proved formally as follows,
 
-**Proof** 
-	
+.. admonition:: Proof
+
 	By :ref:`law-of-noncontradiction`, 
 
 	.. math::
@@ -1037,7 +1056,7 @@ The *square of opposition* is a famous logical device for remembering how differ
 
 In ordinary *first-order* logic, the *negation* of proposition simply means negating its truth value. For example, the negation of the proposition,
 
-    	p = it is raining
+	p = it is raining
 
 Can be found by inserting the word "*not*",
 
@@ -1045,6 +1064,7 @@ Can be found by inserting the word "*not*",
 
 However, when we are talking about sets, it is more complicated, because we must *quantify* over which elements in the set proposition is true.
 
+----------
 Derivation
 ----------
 
@@ -1091,7 +1111,7 @@ For universal propositions: In the *positive* case, we take a universal proposit
 For existential propositions: In the *positive* case, we take an exisential proposition that asserts something of some element in a set. In the *negative* case, we take an existential proposition that denies something of some element in a set.
 
 Universal Positive Case
-***********************
+-----------------------
 
 Consider the proposition
 
@@ -1129,7 +1149,7 @@ Thus, we arrive at the formal definition of the negativion of a universal affirm
 	( \text{ not } \forall x \in A: x \in B) \equiv (\exists x \in A: x \notin B)
 
 Universal Negative Case
-***********************
+-----------------------
 
 Consider the proposition,
 
@@ -1158,17 +1178,18 @@ Thus, we arrive at the formal definition of the negation of a *universal negativ
 	(\exists x \in C: x \in F) \equiv (\text {not} \forall x \in C: \notin F)
 
 Existential Positive Case
-*************************
+-------------------------
 
 TODO 
 
 Existential Negative Case
-*************************
+-------------------------
 
 TODO 
 
+--------------------
 Square of Opposition
-********************
+--------------------
 
 Finally, we come to the *square of opposition*, a visual device for remembering everything that has been covered in this section. 
 

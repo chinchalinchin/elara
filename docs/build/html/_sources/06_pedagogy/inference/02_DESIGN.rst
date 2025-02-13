@@ -1,4 +1,4 @@
-.. _experimental_design:
+.. _experimental-design:
 
 ===================
 Experimental Design
@@ -41,6 +41,8 @@ In this example, the *indicator* or *explanatory* variable is the *pH contentrat
 Experiments
 ===========
 
+.. _blind-studies:
+
 Blind Studies
 -------------
 
@@ -56,6 +58,8 @@ In medical studies, the *test* group will receive the real treatment while the *
 
     Click on the image to watch the video.
 
+.. _placebo-effect:
+
 .. topic:: Placebo Effect
 
     The *Placebo Effect* occurs when individuals in the *control group* appear as if they have received *treatment*. 
@@ -68,6 +72,8 @@ Single Blind
 Double Blind
     In a double blind study, neither the participant nor the researcher administering the treatment know if the individual is in the *control* or *test* group.
 
+.. _matched-pairs:
+
 Matched Pairs 
 -------------
 
@@ -79,6 +85,8 @@ An ideal example of a *matched pairs design* would be twins,
     :align: center
 
 If one of the twins is submitted to a *treatment*, their genetically identical counterpart serves as a nearly perfect *control*. 
+
+.. _randomized-blocks:
 
 Randomized Blocks
 -----------------
@@ -121,7 +129,7 @@ Classifications
 
 The data we collect from an experiment is classified according to several factors.
 
-.. _data_dimensionality:
+.. _data-dimensionality:
 
 Dimensionality
 --------------
@@ -164,7 +172,7 @@ Example
 .. csv-table:: Bear Measurements
     :file: ../../_static/csv/datasets/previews/bear_measurements_data_preview.csv
 
-.. _data_characteristic:
+.. _data-characteristic:
 
 Characteristic
 --------------

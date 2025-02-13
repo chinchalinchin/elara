@@ -47,7 +47,7 @@ In drawing a sample of 2 students, an account must be taken of all possible ways
 .. math:: 
     3 \cdot 3 = 9
 
-All possible samples **S**:sub:`i` are enumerated below in :ref:`list_notation`
+All possible samples **S**:sub:`i` are enumerated below in :ref:`list-notation`
 
     :math:`S_1  = \{ 0, 0 \}`
     

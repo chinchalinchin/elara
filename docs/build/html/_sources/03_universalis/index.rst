@@ -10,10 +10,6 @@ The Language Game is a game played with Large Language Models to test the limits
 
 The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes and construct sentences with its novel grammatical forms. Each module requires a degree of abstract thought and highlights different areas of an LLM's analytical and synthetical capabilities.
 
-.. image:: ../_static/img/context/etc/language_game.jpg
-  :width: 400
-  :alt: Language Game
-
 .. toctree::
   :maxdepth: 2
   :caption: Language Game
@@ -21,3 +17,28 @@ The essence of the Language Game is to invite the LLM to use the new avenues of 
   modules/index
   plugins/index
   games/index
+
+.. _language-game-supplements:
+
+Supplements
+===========
+
+Providing an LLM multiple levels of context through different mediums often results in interesting generations. The following supplements can be attached to an LLM session to give the model a different perspective on the formal constraints of the Language Game. 
+
+Visual
+------
+
+The following image contains a visual representation of the Language Game.
+
+.. figure:: ../_static/img/context/etc/language_game.jpg
+  :width: 80%
+  :alt: JPG Representation of Language Game
+  :align: center
+
+Relational
+----------
+
+The following XML document uses a loose implementation of a `OWL 2 <https://www.w3.org/TR/owl2-overview/>`_ ontologyto schematize the Language Game.
+
+.. literalinclude:: ../_static/xml/etc/language_game.xml
+  :language: xml

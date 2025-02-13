@@ -1,7 +1,7 @@
 .. _games:
 
-Games I: Exercises
-==================
+Games: Exercises
+================
 
 Free Association
 ----------------

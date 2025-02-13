@@ -121,7 +121,7 @@ The set of all possible outcomes for an experiment.
 
 .. note:: 
 
-    The *sample space* is simply the :ref:`universal_set` in probability's :ref:`domain_of_discourse`.
+    The *sample space* is simply the :ref:`universal-set` in probability's :ref:`domain-of-discourse`.
 
 .. _event:
 
@@ -168,13 +168,13 @@ Events can be defined as :ref:`subsets <subset>` of the sample space. If we let 
 
 Be careful not to confuse the outcome *h* with the event **H**, and likewise the outcome *t* with the event **T**. They have different, but related, meanings. The outcomes *h* and *t* are individual observables; they are physically measured by flipping a coin and observing on which side it lands. An event, on the other hand, is a :ref:`set <sets>`, and *sets* are abstract collections of individual elements. In this case, the sets are *singletons*, i.e. the sets **H** and **T** only contain one element each, which can lead to confusing the set for the outcome. Let us extend this example further, to put a finer point on this subtlety.   
 
-Consider now flipping the same fair, two-sided coin twice. A :ref:`tree diagram <tree_diagrams>` can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,
+Consider now flipping the same fair, two-sided coin twice. A :ref:`tree diagram <tree-diagrams>` can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,
 
-.. image:: ../../_static/img/mathematics/probability/sample_space_coin_flip.png
+.. image:: ../../_static/img/mathematics/probability/sample-space-coin-flip.png
     :width: 60%
     :align: center
 
-The outcomes of the sample space are found by tracing each possible path of the :ref:`tree diagram <tree_diagrams>` and then collecting them into a set,
+The outcomes of the sample space are found by tracing each possible path of the :ref:`tree diagram <tree-diagrams>` and then collecting them into a set,
 
 .. math::
     S = \{ hh, ht, th, tt \}

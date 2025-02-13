@@ -1,4 +1,4 @@
-.. _graphical_-epresentations:
+.. _graphical-representations:
 
 =========================
 Graphical Representations

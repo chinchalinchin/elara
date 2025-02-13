@@ -5,7 +5,7 @@ Normal Distribution
 ===================
 
 
-The **Normal Distribution** is the foundation of :ref:`inferential statistics <inferential_statistic>`. The **Normal Distribution** represents the *ideal population* distribution for a sample that is approximately normal. 
+The **Normal Distribution** is the foundation of :ref:`inferential statistics <inferential-statistic>`. The **Normal Distribution** represents the *ideal population* distribution for a sample that is approximately normal. 
 
 .. _normality:
 
@@ -21,7 +21,7 @@ Normality arises when observations being randomly drawn from a :ref:`population`
 
 .. important::
 
-    *Independence* and *Identically Distributed* are mathematical concepts with precise defintions. We will talk more about them in the section on :ref:`probability <probability_introduction>` 
+    *Independence* and *Identically Distributed* are mathematical concepts with precise defintions. We will talk more about them in the section on :ref:`probability <probability-introduction>` 
 
 In order to explain the origin of normality, it is instructive to consider a simple example.  Consider the experiment of rolling a single die. Think about what the *ideal* relative frequency distribution for this experiment should look like. A die has six sides and each one is equally likely. If we let :math:`\mathcal{X}` represent the outcome a rolling a single die, we can express the relation of all outcomes being equally likely with the following equation, 
 
@@ -29,7 +29,7 @@ In order to explain the origin of normality, it is instructive to consider a sim
 
     P(\mathcal{X}=1) = P(\mathcal{X}=2) = P(\mathcal{X}=3) = P(\mathcal{X}=4) = P(\mathcal{X}=5) = P(\mathcal{X}=6)
 
-To say the same thing in a different way, the :ref:`probability <probability_introduction>` of all outcomes should be the same,
+To say the same thing in a different way, the :ref:`probability <probability-introduction>` of all outcomes should be the same,
 
 .. math::
 
@@ -56,13 +56,13 @@ A departure from normality can suggest several things:
 Normal Calculations
 -------------------
 
-When we calculate Normal probabilities, we usually work with *Z distributions*, where each observation :math:`x_i` has been converted into a :ref:`z_score` :math:`z_i`,
+When we calculate Normal probabilities, we usually work with *Z distributions*, where each observation :math:`x_i` has been converted into a :ref:`z-score` :math:`z_i`,
 
 .. math::
 
 	z_i = \frac{x_i - \mu}{\sigma}
 	
-The reason for this transformation is easily understood by recalling the :ref:`data transformation theorems <data_transformations>` that states the mean of a *Z distribution* will always be 0 and the standard deviation of a *Z distribution* will always be 1. 
+The reason for this transformation is easily understood by recalling the :ref:`data transformation theorems <data-transformations>` that states the mean of a *Z distribution* will always be 0 and the standard deviation of a *Z distribution* will always be 1. 
 
 If an observation :math:`\mathcal{X}` drawn from a population follows a Normal distribution with mean :math:`\mu` and standard deviation :math:`\sigma`, we write,
 
