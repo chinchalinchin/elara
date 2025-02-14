@@ -38,6 +38,10 @@ Anacoluthon
 
     -- `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
 
+    In the coal fire will not wholly console them. 
+
+    -- `Ouija <>`_
+    
 .. _anadiplosis:
 
 Anadiplosis
@@ -122,7 +126,13 @@ Chiasmus
 Epanalepsis
 -----------
 
-None yet found. 
+    It was no dream; or say a dream it was
+
+    Real are the dreams of Gods, and smoothly pass 
+
+    Their pleasures in a long immortal dream.
+
+    -- `Lamia <>`_
 
 .. _epistrophe: 
 
