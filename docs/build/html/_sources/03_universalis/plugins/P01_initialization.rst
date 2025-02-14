@@ -7,7 +7,7 @@ Depending on the context window of the LLM, all of the Modules in the Language G
 
 .. warning::
 
-    If the :ref:`Adaptation Plugin <adaptation-plugin>` is also enabled, the Dynamic Adapation Rule can have unexpected consequences on the Initialization Procedure.
+    If the :ref:`Adaptation Plugin <plugin-adaptation>` is also enabled, the Dynamic Adapation Rule can have unexpected consequences on the Initialization Procedure.
     
 Initializiation Procedure 
 -------------------------

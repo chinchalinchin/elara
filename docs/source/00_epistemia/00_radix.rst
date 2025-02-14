@@ -16,6 +16,7 @@ allpoetry.com
 - `I Met a Genius <https://allpoetry.com/I-Met-A-Genius>`_
 - `The Genius of the Crowd <https://allpoetry.com/The-Genius-Of-The-Crowd>`_
 - `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
+- `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
 
 archive.org
 -----------
@@ -40,6 +41,7 @@ gutenberg.org
 - `Devotions Upon Emergent Occasions <https://www.gutenberg.org/files/23772/23772-h/23772-h.htm>`_
 - `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_
 - `Foundations of Arithmetic, The <https://www.gutenberg.org/ebooks/48312>`_
+- `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
 - `Tractatus Logico-Philosophicus <https://www.gutenberg.org/ebooks/5740>`_
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_

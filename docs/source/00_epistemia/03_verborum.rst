@@ -40,7 +40,7 @@ Anacoluthon
 
     In the coal fire will not wholly console them. 
 
-    -- `Ouija <>`_
+    -- `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
     
 .. _anadiplosis:
 
@@ -132,7 +132,7 @@ Epanalepsis
 
     Their pleasures in a long immortal dream.
 
-    -- `Lamia <>`_
+    -- `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
 
 .. _epistrophe: 
 

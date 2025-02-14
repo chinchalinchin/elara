@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Random Variables &#8212; elara protocol</title>
+    <title>Random Variables &#8212; Ἐλάρα</title>
   
   
   
@@ -33,9 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -50,6 +50,7 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '06_pedagogy/probability/03_RANDOM_VARIABLES';</script>
+    <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Statistics" href="../statistics/index.html" />
@@ -131,9 +132,48 @@
   
   
   
-    <p class="title logo__title">elara protocol</p>
+    <p class="title logo__title">Ἐλάρα</p>
   
 </a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
         <div class="sidebar-primary-item">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -523,7 +563,7 @@
 <p>The set of all natural numbers is infinite.</p>
 <p>The set of all prime numbers is infinite.</p>
 </div></blockquote>
-<p>These statements could be translated into <span class="xref std std-ref">set theoretic</span> symbols in the following way,</p>
+<p>These statements could be translated into <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-theory"><span class="std std-ref">set theoretic</span></a> symbols in the following way,</p>
 <div class="math notranslate nohighlight">
 \[n(\{ \forall x: x \in U \}) = 0\]</div>
 <div class="math notranslate nohighlight">
@@ -535,7 +575,7 @@
 <p>If the specifics were abstracted away, this would lead to an expression that looks like,</p>
 <div class="math notranslate nohighlight">
 \[n(x) = y\]</div>
-<p>In each case, the cardinality of <em>something</em> is being asserted. In other words, a <em>value</em> is being assigned to an input, but what exactly is the input? Each proposition is asserting a property of an entire <span class="xref std std-ref">set</span>; this suggests the constraint that functions are <em>numbers</em> be relaxed so that we may input <em>sets</em> into <em>funtions</em>.</p>
+<p>In each case, the cardinality of <em>something</em> is being asserted. In other words, a <em>value</em> is being assigned to an input, but what exactly is the input? Each proposition is asserting a property of an entire <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-theory"><span class="std std-ref">set</span></a>; this suggests the constraint that functions are <em>numbers</em> be relaxed so that we may input <em>sets</em> into <em>funtions</em>.</p>
 <p>Put in the parlance of modern mathematics, a function <em>maps</em> a value to a given set. The set of all values that are mapped is likewise a set of <em>things</em>. This leds to the idea of a <em>function</em> as a map between sets. A <em>function</em> takes elements from one set and <em>maps</em> them to the elements of another set. This slight change in the way functions are talked about leads to a revision of the diagram given at the beginning of this section,</p>
 <img alt="../../_images/random_variable.png" class="align-center" src="../../_images/random_variable.png" />
 <p>This suggests we view random variables as <em>functions</em> of the outcomes in sample space,</p>
@@ -577,7 +617,7 @@
 <p>TODO</p>
 <p>The <em>expectation</em> of a Random Variable <span class="math notranslate nohighlight">\(\mathcal{X}\)</span> is the weighted sum of its outcome. The <em>weight</em> of each outcome is exactly the probability of that outcome occuring.</p>
 <p>TODO</p>
-<p>Here the subject matter is sample spaces and probability, but the current discussion bares a striking similarity of the discussion of the <a class="reference internal" href="../statistics/01_ESTIMATION.html#sample-mean-formula"><span class="std std-ref">Sample Mean Formula</span></a>. The reader may wonder if there is a connection between the <em>expectation of a random variable</em> and the <em>mean of a sample where each observation is randomly drawn from the same underlying population</em> (if the reader does not wonder this, this sentence is meant to elicit said wonder, so start wondering). In fact, the formulae for expectations and sample means share a connection through the <span class="xref std std-ref">law-of-large-numbers</span>.</p>
+<p>Here the subject matter is sample spaces and probability, but the current discussion bares a striking similarity of the discussion of the <a class="reference internal" href="../statistics/01_ESTIMATION.html#sample-mean-formula"><span class="std std-ref">Sample Mean Formula</span></a>. The reader may wonder if there is a connection between the <em>expectation of a random variable</em> and the <em>mean of a sample where each observation is randomly drawn from the same underlying population</em> (if the reader does not wonder this, this sentence is meant to elicit said wonder, so start wondering). In fact, the formulae for expectations and sample means share a connection through the <a class="reference internal" href="00_INTRODUCTION.html#law-of-large-numbers"><span class="std std-ref">Law of Large Numbers</span></a>.</p>
 <p>Recall the formula for the sample mean is written,</p>
 <div class="math notranslate nohighlight">
 \[\bar{x} = \frac{ \sum_{i=1}^{n} x_i }{n}\]</div>

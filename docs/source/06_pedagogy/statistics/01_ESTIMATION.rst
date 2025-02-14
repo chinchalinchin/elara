@@ -63,7 +63,7 @@ Symbolic Expression
     :math:`S = \{ x_1, x_2, ..., x_{n-1}, x_n \}`
 
 Definition 
-    A collection, or :ref:`set <set_theory>`, of observations. 
+    A collection, or :ref:`set <set-theory>`, of observations. 
     
 The number of samples, *n*, is called the *sample size*.
 
@@ -486,7 +486,7 @@ Then we find the *weight* :math:`w_j` of the male and female groups. The weight 
 
 .. note:: 
 
-    We are using :ref:`set theoretic <set_theory>` notation here that we have not yet introduced formally. Nevertheless, the meaning of this equation should be intuitive. It represents the fraction of the sample that belongs to the given group.
+    We are using :ref:`set theoretic <set-theory>` notation here that we have not yet introduced formally. Nevertheless, the meaning of this equation should be intuitive. It represents the fraction of the sample that belongs to the given group.
 
 The number of males in this sample is 5 and the number of females in this sample is 4. Thus,
 
@@ -829,7 +829,7 @@ From this definition, it should be clear *percentiles* only have meaning with re
 
 *Order statistics* give us a way to precisely define a percentile. *Order statistics* divide the interval on which the sample is measured into :math:`n+1` intervals, pictured below,
 
-.. image:: ../../_static/img/mathematics/statistics/order-statistics.jpg
+.. image:: ../../_static/img/math/statistics/order-statistics.jpg
     :align: center
 
 Note all of the intervals are *below* the order statistic except the last one, which is *above* its order statistic. Hence :math:`n+1`.
@@ -866,7 +866,7 @@ Note in this sample we have :math:`n = 9` total samples.
 
 Before we move onto solving the problem, consider a scatter plot of these observations against their observation order,
 
-.. plot:: _plots/examples/03_ex01_unordered.py
+.. plot:: _scripts/py/plotsexamples/03_ex01_unordered.py
 
 To find the percentiles, we need to find the *order statistics*, i.e. we need to *order* the sample from lowest to highest,
 
@@ -876,7 +876,7 @@ To find the percentiles, we need to find the *order statistics*, i.e. we need to
 
 Once ordered, we can plot the observations against their *rank order*,
 
-.. plot:: _plots/examples/03_ex02_ordered.py
+.. plot:: _scripts/py/plotsexamples/03_ex02_ordered.py
     
 The previous two graphs should make clear the meaning of *order statistics*. To find the 20 :sup:`th` percentile, :math:`pi_{.20}`, we find the *order* in which it occurs in the sample,
 
@@ -1164,7 +1164,7 @@ Example
 
 It is always a good idea to start problems by looking at some sort :ref:`graphical-representations` of the data being treated. If we use a histogram here, we immediately notice an unusual feature of this sample,
 
-.. plot:: _plots/examples/03_ex03_skewed.py
+.. plot:: _scripts/py/plotsexamples/03_ex03_skewed.py
 
 One of the observations, the person with an annual income of *$2,000,000*, sits well outside the range of the rest of the observations. This feature of the sample, its *skew*, will manifest in the sample statistics as we move through this example. 
 
@@ -1218,7 +1218,7 @@ Consider a symmetrical sample distribution,
 
 As is easily verified in this example, the mean and median agree. A histogram of this situation would look like,
 
-.. plot:: _plots/examples/03_ex04_symmetric.py
+.. plot:: _scripts/py/plotsexamples/03_ex04_symmetric.py
 
 The median and mean are shown with green and blue lines respectively, but because they overlap exactly in this admittedly contrived example, you only see a single line in the graph.
 
@@ -1230,17 +1230,17 @@ In general, when dealing with symmetrical distributions, the following result ho
 
 A histogram for a symmetrical distribution is given below, with the median and mean again labelled with a green and blue line respectively,
 
-.. plot:: _plots/examples/03_ex05_normal.py
+.. plot:: _scripts/py/plotsexamples/03_ex05_normal.py
 
 In this case, the mean and median do not *exactly* agree. The extent to which the mean and median do **not** agree is a measure of a distribution's departure from *normality*. The less *normal* (*symmetrical*) the distribution becomes, the further apart the mean and median will split. Consider an extreme example like the following,
 
-.. plot:: _plots/examples/03_ex07_right_skew.py
+.. plot:: _scripts/py/plotsexamples/03_ex07_right_skew.py
 
 Most of the distribution is *clustered* to the left of the mean. The presence of the *right hand tail* on this distribution pulls the sample mean *towards* it. 
 
 Consider the opposite case, where most of the data is clustered to the right of the mean,
 
-.. plot:: _plots/examples/03_ex06_left_skew.py
+.. plot:: _scripts/py/plotsexamples/03_ex06_left_skew.py
 
 As in the previous case, the presence of a *tails* acts like a sink towards which the mean is drawn. 
 

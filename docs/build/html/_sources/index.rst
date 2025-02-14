@@ -1,5 +1,5 @@
-elara protocol
-##############
+Ἐλάρα
+-----
 
 .. toctree::
    :maxdepth: 1

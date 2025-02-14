@@ -11,6 +11,7 @@ Preliminaries
 
 .. _compound-union:
 
+--------------
 Compound Union 
 --------------
 
@@ -21,7 +22,8 @@ Symbolic Expression
 
 A symbol that represents the union of a sequence of sets.
 
-Example 
+.. admonition:: Example
+    
     Let **A**, **B**, **C** and **D** be sets given by, 
 
     .. math::
@@ -50,8 +52,10 @@ Example
 
         = \{ a, b, c, d, e, f \}
 
-
+---------
 Summation
+---------
+
     Symbolic Expression 
         .. math::
         
@@ -67,7 +71,8 @@ Summation
     
 A symbol that represents the sum of elements :math:`x_i`.
 
-Example
+.. admonition:: Example
+
     Let the set **A** be given by,
 
     .. math::
@@ -147,6 +152,7 @@ Sample Spaces and Events
 
 The *sample space* for an experiment is the set of everything that could possibly happen.
 
+----------
 Motivation
 ----------
 
@@ -170,7 +176,7 @@ Be careful not to confuse the outcome *h* with the event **H**, and likewise the
 
 Consider now flipping the same fair, two-sided coin twice. A :ref:`tree diagram <tree-diagrams>` can help visualize the sample space for this experiment. We represent each each flip as a branch in the tree diagram, with each outcome forking the tree,
 
-.. image:: ../../_static/img/mathematics/probability/sample-space-coin-flip.png
+.. image:: ../../_static/img/math/probability/sample-space-coin-flip.png
     :width: 60%
     :align: center
 
@@ -195,6 +201,7 @@ It is important to keep in mind the distinction between *events* and *outcomes*.
 
 .. _compound-events:
 
+---------------
 Compound Events
 ---------------
 
@@ -212,6 +219,7 @@ The meaning of a few different *compound events* is considered below,
    
 .. _classical-definition-of-probability:
 
+-----------------------------------
 Classical Definition of Probability
 -----------------------------------
 
@@ -257,6 +265,13 @@ Applying this definition to the events **H** and **T** in the first example, it 
 .. math:: 
     P(T) = \frac{n(T)}{n(S)} = \frac{1}{2}
 
+.. _law-of-large-numbers:
+
+Law of Large Numbers
+--------------------
+
+TODO 
+
 .. _axioms-of-probability:
 
 Axioms of Probability
@@ -275,13 +290,14 @@ For this reason and other similar cases, the *classical definition of probabilit
 .. note::
     We will see in a subsequent section, when we discuss :ref:`the uniform distribution <uniform-distribution>`, while we cannot calculate the probability of the dial exactly landing on a given number, we can calculate the probability the dial lands within a certain interval (that is to say, a certain `arc length <https://en.wikipedia.org/wiki/Arc_length>`_ of the clock's circumference).
 
+------
 Axioms
 ------
 
 .. _probability-axiom-1:
 
 Axiom 1
-*******
+-------
 
 :math:`P(A)>=0`    
     All probabilities are positive; No probabilities are negative.
@@ -289,7 +305,7 @@ Axiom 1
 .. _probability-axiom-2:
 
 Axiom 2
-*******
+-------
 
 :math:`P(S)=1`
     The probability of *some* outcome from the sample space **S** occuring is equal to 1.
@@ -297,7 +313,7 @@ Axiom 2
 .. _probability-axiom-3:
 
 Axiom 3
-*******
+-------
 
 :math:`\forall i \neq j: A_i \cap A_j = \varnothing \implies P(\bigcup\limits_{i=1}^{n} A_i) = \sum_{i=1}^n P(A_i)`
     If each event :sub:`i` **A** in the sample space **S** is *mutually exclusive* with every other event :math:`\forall i \neq j: A_i`, then the probability of the union of all of these events is equal to the sum of the probabilities of each individual event.
@@ -408,6 +424,8 @@ Notice :math:`B \cap C = \varnothing`, i.e. **B** and **C** are mutually exclusi
 
 In this case, the two methods of finding the probabilities agree *because the condition (or hypothesis) of* :ref:`probability-axiom-3` *was met*, namely, that the events are mutually exclusive. If the condition (or hypothesis) of :ref:`probability-axiom-3` is not met, then its conclusion does not follow.
 
+.. _probability-theorems:
+
 Theorems
 ========
 
@@ -415,6 +433,7 @@ We can use these *axioms*, along with the `theorems of set theory <set-theorems>
 
 .. _probability-law-of-complements:
 
+------------------
 Law of Complements 
 ------------------
 
@@ -425,7 +444,7 @@ Symbolic Expression
 
 This corollary should be intuitively obvious, considering the Venn Diagramm of complementary sets,
 
-.. image:: ../../_static/img/mathematics/sets/sets-complement.jpg
+.. image:: ../../_static/img/math/sets/sets-complement.jpg
     :align: center
 
 If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space **S**, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
@@ -555,7 +574,7 @@ Symbolic Expression
 
 Again, from inspection of a :ref:`venn-diagrams` of *overlappying* sets, this theorem should be obvious,
 
-.. image:: ../../_static/img/mathematics/sets/sets-union-overlapping.jpg
+.. image:: ../../_static/img/math/sets/sets-union-overlapping.jpg
 
 The union is the area encompassed by bother circles. When we add the probability of **A** (area of circle **A**) to the probability of **B** (area of circle **B**), we double-count the area :math:`A \cap B`, so to correct the overcount, we must subtract once by the offending area.
 
@@ -587,7 +606,7 @@ Example
 
 The sample space for a selecting a single card from a deck of 52 cards is shown below,
 
-.. image:: ../../_static/img/mathematics/probability/playing-cards.jpg
+.. image:: ../../_static/img/math/probability/playing-cards.jpg
    :width: 60%
    :align: center
 

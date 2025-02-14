@@ -109,7 +109,7 @@ No Correlation
 
 A scatterplot with no correlation between the :math:`x` and :math:`y` variables should appear random,
 
-.. plot:: _plots/scatterplots/scatterplot_no_correlation.py
+.. plot:: _scripts/py/plotsscatterplots/scatterplot_no_correlation.py
 
 .. _positive-correlation:
 
@@ -118,14 +118,14 @@ Positive Correlation
 
 A scatterplot with a positive correlation betwen the :math:`x` and :math:`y` variables should have a general upward trend,
 
-.. plot:: _plots/scatterplots/scatterplot_positive_correlation.py
+.. plot:: _scripts/py/plotsscatterplots/scatterplot_positive_correlation.py
 
 .. _negative_correlation:
 
 Negative Correlation
 ********************
 
-.. plot:: _plots/scatterplots/scatterplot_negative_correlation.py
+.. plot:: _scripts/py/plotsscatterplots/scatterplot_negative_correlation.py
 
 .. _correlation_strength:
 
@@ -175,14 +175,14 @@ A *time series* is similar to a *scatter plot* in almost all ways, except the *i
 Positive Trend
 --------------
 
-.. plot:: _plots/timeseries/timeseries_positive_trend.py
+.. plot:: _scripts/py/plotstimeseries/timeseries_positive_trend.py
 
 Negative Trend
 --------------
 
-.. plot:: _plots/timeseries/timeseries_negative_trend.py
+.. plot:: _scripts/py/plotstimeseries/timeseries_negative_trend.py
 
 No Trend
 --------
 
-.. plot:: _plots/timeseries/timeseries_no_trend.py
+.. plot:: _scripts/py/plotstimeseries/timeseries_no_trend.py

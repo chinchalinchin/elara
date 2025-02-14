@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Point Estimation &#8212; elara protocol</title>
+    <title>Point Estimation &#8212; Ἐλάρα</title>
   
   
   
@@ -33,9 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -50,6 +50,7 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '06_pedagogy/statistics/01_ESTIMATION';</script>
+    <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Correlation" href="02_CORRELATION.html" />
@@ -131,9 +132,48 @@
   
   
   
-    <p class="title logo__title">elara protocol</p>
+    <p class="title logo__title">Ἐλάρα</p>
   
 </a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
         <div class="sidebar-primary-item">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -548,7 +588,7 @@
 <dl class="simple">
 <dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(S = \{ x_1, x_2, ..., x_{n-1}, x_n \}\)</span></p>
 </dd>
-<dt>Definition</dt><dd><p>A collection, or <span class="xref std std-ref">set</span>, of observations.</p>
+<dt>Definition</dt><dd><p>A collection, or <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-theory"><span class="std std-ref">set</span></a>, of observations.</p>
 </dd>
 </dl>
 <p>The number of samples, <em>n</em>, is called the <em>sample size</em>.</p>
@@ -889,7 +929,7 @@
 \[w_j = \frac{n(\{ x_j \})}{n}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We are using <span class="xref std std-ref">set theoretic</span> notation here that we have not yet introduced formally. Nevertheless, the meaning of this equation should be intuitive. It represents the fraction of the sample that belongs to the given group.</p>
+<p>We are using <a class="reference internal" href="../foundations/02_SET_THEORY.html#set-theory"><span class="std std-ref">set theoretic</span></a> notation here that we have not yet introduced formally. Nevertheless, the meaning of this equation should be intuitive. It represents the fraction of the sample that belongs to the given group.</p>
 </div>
 <p>The number of males in this sample is 5 and the number of females in this sample is 4. Thus,</p>
 <div class="math notranslate nohighlight">
@@ -1122,18 +1162,10 @@
 </dl>
 <p>Note in this sample we have <span class="math notranslate nohighlight">\(n = 9\)</span> total samples.</p>
 <p>Before we move onto solving the problem, consider a scatter plot of these observations against their observation order,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/abf5f2d79a8ec2a539120b0c8354bf86/03_ex01_unordered.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/ff4a11bff7de77640ae3771bbf6634e2/03_ex01_unordered.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/27f6b6e57fd67d1d389d37476aacc786/03_ex01_unordered.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/98541b71acb7d273fcccf677c1676975/03_ex01_unordered.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex01_unordered.png" class="plot-directive" src="../../_images/03_ex01_unordered.png" />
-</figure>
 <p>To find the percentiles, we need to find the <em>order statistics</em>, i.e. we need to <em>order</em> the sample from lowest to highest,</p>
 <div class="math notranslate nohighlight">
 \[S_{(o)}= \{ -2.5 \text{min}, -1.5 \text{min}, -1.0 \text{min}, 0.5 \text{min}, 3.0 \text{min}, 4.3 \text{min}, 5.0 \text{min}, 6.5 \text{min}, 7.0 \text{min} \}\]</div>
 <p>Once ordered, we can plot the observations against their <em>rank order</em>,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/4f820e67aed8ad14c5930128e816e640/03_ex02_ordered.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2e795555bcfea1c0642826b185618baf/03_ex02_ordered.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b18a84a59c530d3a973c0e67d9d685eb/03_ex02_ordered.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b194a540a7660cc0e46620763c58b5ce/03_ex02_ordered.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex02_ordered.png" class="plot-directive" src="../../_images/03_ex02_ordered.png" />
-</figure>
 <p>The previous two graphs should make clear the meaning of <em>order statistics</em>. To find the 20 <sup>th</sup> percentile, <span class="math notranslate nohighlight">\(pi_{.20}\)</span>, we find the <em>order</em> in which it occurs in the sample,</p>
 <div class="math notranslate nohighlight">
 \[m = 0.20 \cdot (9 + 1) = 2\]</div>
@@ -1328,10 +1360,6 @@
 </dd>
 </dl>
 <p>It is always a good idea to start problems by looking at some sort <a class="reference internal" href="00_GRAPHS.html#graphical-representations"><span class="std std-ref">Graphical Representations</span></a> of the data being treated. If we use a histogram here, we immediately notice an unusual feature of this sample,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/685ffeaf6db3794f0130cc0fef59e1d9/03_ex03_skewed.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/87049f0ab80dbdda8751a9cad30ecc0a/03_ex03_skewed.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/18b1c1f6adb1319727c63e261a2efda6/03_ex03_skewed.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5589ce003742c57de4dd590ad5ea4e42/03_ex03_skewed.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex03_skewed.png" class="plot-directive" src="../../_images/03_ex03_skewed.png" />
-</figure>
 <p>One of the observations, the person with an annual income of <em>$2,000,000</em>, sits well outside the range of the rest of the observations. This feature of the sample, its <em>skew</em>, will manifest in the sample statistics as we move through this example.</p>
 <p>The sample mean is calculated using the <a class="reference internal" href="#sample-mean-formula"><span class="std std-ref">formula</span></a>,</p>
 <div class="math notranslate nohighlight">
@@ -1359,30 +1387,14 @@
 <div class="math notranslate nohighlight">
 \[S = \{ 1, 5, 5, 5, 9 \}\]</div>
 <p>As is easily verified in this example, the mean and median agree. A histogram of this situation would look like,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/ba989f1030dd6c3da36e07092c87408d/03_ex04_symmetric.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b81796e038c65d7b3a882482763293f2/03_ex04_symmetric.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/cb83f3a7c62c56df242a3f937905ae9e/03_ex04_symmetric.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d0fc4f47fe4e6bb2cdfea3a7cb40d686/03_ex04_symmetric.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex04_symmetric.png" class="plot-directive" src="../../_images/03_ex04_symmetric.png" />
-</figure>
 <p>The median and mean are shown with green and blue lines respectively, but because they overlap exactly in this admittedly contrived example, you only see a single line in the graph.</p>
 <p>In general, when dealing with symmetrical distributions, the following result holds,</p>
 <div class="math notranslate nohighlight">
 \[\bar{x} \approx \pi_{0.50}\]</div>
 <p>A histogram for a symmetrical distribution is given below, with the median and mean again labelled with a green and blue line respectively,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/0b0557491028dd69629317bd91dbd878/03_ex05_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/ac94b7b728e0d47ee2778c44454dba77/03_ex05_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/9790057ebb32ecdf27c8cb356cb65c16/03_ex05_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b4ab23f75d994b938aa3179fc94ac318/03_ex05_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex05_normal.png" class="plot-directive" src="../../_images/03_ex05_normal.png" />
-</figure>
 <p>In this case, the mean and median do not <em>exactly</em> agree. The extent to which the mean and median do <strong>not</strong> agree is a measure of a distribution’s departure from <em>normality</em>. The less <em>normal</em> (<em>symmetrical</em>) the distribution becomes, the further apart the mean and median will split. Consider an extreme example like the following,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/54dcbc960d37b1edf31b6ee5c7bf285f/03_ex07_right_skew.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/94c16d9e2745b578f31beaf46e873bf9/03_ex07_right_skew.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4bd15807ef74ad97598dd97fb87aff81/03_ex07_right_skew.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/590d4a4644fedbb1e39c747e060a5d3c/03_ex07_right_skew.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex07_right_skew.png" class="plot-directive" src="../../_images/03_ex07_right_skew.png" />
-</figure>
 <p>Most of the distribution is <em>clustered</em> to the left of the mean. The presence of the <em>right hand tail</em> on this distribution pulls the sample mean <em>towards</em> it.</p>
 <p>Consider the opposite case, where most of the data is clustered to the right of the mean,</p>
-<p>(<a class="reference download internal" download="" href="../../_downloads/d916d8cbe641fafb7dd9b0e871c54acd/03_ex06_left_skew.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3d8c767eda8283822d9b601e3c4cd402/03_ex06_left_skew.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/dd2b91922dd72eca44c46bf1012800f2/03_ex06_left_skew.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/38800d21231ed5f44878f320ea45a75c/03_ex06_left_skew.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
-<figure class="align-default">
-<img alt="../../_images/03_ex06_left_skew.png" class="plot-directive" src="../../_images/03_ex06_left_skew.png" />
-</figure>
 <p>As in the previous case, the presence of a <em>tails</em> acts like a sink towards which the mean is drawn.</p>
 <p>These results are summarized with the following rule of thumb,</p>
 <aside class="topic">

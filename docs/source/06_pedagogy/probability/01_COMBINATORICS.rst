@@ -58,7 +58,7 @@ Suppose you live in the aptly named *Town A* and are planing a road trip to the 
 
 Suppose further there are two routes from *Town A* to *Town B*, and there are three routes from *Town B* to *Town C*. Let us call the routes from *Town A* to *Town B* *a* :sub:`1` and *a* :sub:`2`, respectively. Let us call the routes from *Town B* to *Town C* *b* :sub:`1`, *b* :sub:`2`, and *b* :sub:`3`, respectively. This setup is depicted in the following diagram,
 
-.. image:: ../../_static/img/mathematics/combinatorics/combinatorics-road-trip.png
+.. image:: ../../_static/img/math/combinatorics/combinatorics-road-trip.png
    :width: 60%
    :align: center
 
@@ -72,7 +72,7 @@ Before toggling the solution below, try and figure out the answer by drawing arr
 
     Each choice represents a branch. Every time we make a choice, we are narrowing down the set of possible outcomes. With that in mind, we can represent each choice as a *branch* in a tree, as in the following diagram,
 
-    .. image:: ../../_static/img/mathematics/combinatorics/combinatorics-tree-diagram.png
+    .. image:: ../../_static/img/math/combinatorics/combinatorics-tree-diagram.png
         :width: 60%
         :align: center
 
@@ -93,7 +93,7 @@ Before toggling the solution below, try and figure out the answer by drawing arr
 The Fundamental Counting Principle
 ----------------------------------
 
-We now generalize the example in the previous section into the *Counting Principle* in three steps: first, we give an intuitive explanation fo the *Counting Principle*, then we state it in :ref:`propositional <proposition>` form using the language of :ref:`Set Theory<set_theory>` and finally, we state it entirely symbolically.
+We now generalize the example in the previous section into the *Counting Principle* in three steps: first, we give an intuitive explanation fo the *Counting Principle*, then we state it in :ref:`propositional <proposition>` form using the language of :ref:`Set Theory <set-theory>` and finally, we state it entirely symbolically.
 
 **Heuristic**
 
@@ -121,7 +121,7 @@ You are trying to figure out what to outfit to wear. In your closet, you have a 
     
     We have two sets in this problem: the set of shirts in our closet, and the set of pants in our dresser. 
 
-    .. image:: ../../_static/img/mathematics/combinatorics/combinatorics-example.png
+    .. image:: ../../_static/img/math/combinatorics/combinatorics-example.png
         :width: 60%
         :align: center
 
@@ -184,7 +184,7 @@ Example
 	
 TODO
 
-.. image:: ../../_static/img/mathematics/combinatorics/combinatorics-tree-diagram-coinflips.png
+.. image:: ../../_static/img/math/combinatorics/combinatorics-tree-diagram-coinflips.png
     :align: center
 
 TODO
@@ -283,7 +283,7 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
 
     This can be visualized through a modified :ref:`tree diagram <tree-diagrams>`, where subsequent branches in the tree diagram are affected by the value of the current branch,
 
-        .. image:: ../../_static/img/mathematics/combinatorics/combinatorics-permuted-tree-diagram.png
+        .. image:: ../../_static/img/math/combinatorics/combinatorics-permuted-tree-diagram.png
             :width: 60%
             :align: center
 
@@ -404,7 +404,7 @@ If the condition that order is important is removed, then the permutation *ab* a
 
     ab ac bc
     
-.. image:: ../../_static/img/mathematics/combinatorics/combinatorics-connection.png
+.. image:: ../../_static/img/math/combinatorics/combinatorics-connection.png
         :width: 60%
         :align: center
 

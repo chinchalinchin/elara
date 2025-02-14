@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction &#8212; elara protocol</title>
+    <title>Introduction &#8212; Ἐλάρα</title>
   
   
   
@@ -33,9 +33,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -50,6 +50,7 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '06_pedagogy/probability/00_INTRODUCTION';</script>
+    <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Combinatorics" href="01_COMBINATORICS.html" />
@@ -131,9 +132,48 @@
   
   
   
-    <p class="title logo__title">elara protocol</p>
+    <p class="title logo__title">Ἐλάρα</p>
   
 </a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
         <div class="sidebar-primary-item">
 
 <button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -400,13 +440,17 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-union">Compound Union</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summation">Summation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spaces-and-events">Sample Spaces and Events</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-events">Compound Events</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-definition-of-probability">Classical Definition of Probability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-definition-of-probability">Classical Definition of Probability</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-large-numbers">Law of Large Numbers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axioms-of-probability">Axioms of Probability</a><ul class="nav section-nav flex-column">
@@ -419,9 +463,11 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theorems">Theorems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-complements">Law of Complements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-unions">Law of Unions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-tables">Probability Tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-complements">Law of Complements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-unions">Law of Unions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-tables">Probability Tables</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -450,8 +496,9 @@
 </dd>
 </dl>
 <p>A symbol that represents the union of a sequence of sets.</p>
-<dl>
-<dt>Example</dt><dd><p>Let <strong>A</strong>, <strong>B</strong>, <strong>C</strong> and <strong>D</strong> be sets given by,</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Let <strong>A</strong>, <strong>B</strong>, <strong>C</strong> and <strong>D</strong> be sets given by,</p>
 <div class="math notranslate nohighlight">
 \[A_1 = \{ a, b, c \}\]</div>
 <div class="math notranslate nohighlight">
@@ -465,8 +512,12 @@
 \[\bigcup\limits_{i=1}^{4} A_{i} = A_1 \cup A_2 \cup A_3 \cup A_4\]</div>
 <div class="math notranslate nohighlight">
 \[= \{ a, b, c, d, e, f \}\]</div>
-</dd>
-<dt>Summation</dt><dd><dl>
+</div>
+</section>
+<section id="summation">
+<h3>Summation<a class="headerlink" href="#summation" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><dl>
 <dt>Symbolic Expression</dt><dd><div class="math notranslate nohighlight">
 \[\sum_{i=1}^n x_i = x_1 + x_2 + ... x_{n-1} + x_n\]</div>
 <p>Sometimes written as,</p>
@@ -475,18 +526,17 @@
 <p>Where <strong>B</strong> is a set of elements.</p>
 </dd>
 </dl>
-</dd>
-</dl>
+</div></blockquote>
 <p>A symbol that represents the sum of elements <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
-<dl>
-<dt>Example</dt><dd><p>Let the set <strong>A</strong> be given by,</p>
+<div class="admonition-example admonition">
+<p class="admonition-title">Example</p>
+<p>Let the set <strong>A</strong> be given by,</p>
 <div class="math notranslate nohighlight">
 \[A = \{ 1, 2, 3, 4, 5 \}\]</div>
 <p>Then,</p>
 <div class="math notranslate nohighlight">
 \[\sum_{x_i \in A} x_i = 1 + 2 + 3 + 4 + 5 = 15\]</div>
-</dd>
-</dl>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The sum <span class="math notranslate nohighlight">\(\sum\)</span> is only defined if the set it is summing contains <em>only</em> numerical elements. It makes no sense to take about the sum of elements with a set like,</p>
@@ -618,10 +668,14 @@
 \[P(H) = \frac{n(H)}{n(S)} = \frac{1}{2}\]</div>
 <div class="math notranslate nohighlight">
 \[P(T) = \frac{n(T)}{n(S)} = \frac{1}{2}\]</div>
+<section id="law-of-large-numbers">
+<span id="id4"></span><h4>Law of Large Numbers<a class="headerlink" href="#law-of-large-numbers" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
 </section>
 </section>
 <section id="axioms-of-probability">
-<span id="id4"></span><h2>Axioms of Probability<a class="headerlink" href="#axioms-of-probability" title="Link to this heading">#</a></h2>
+<span id="id5"></span><h2>Axioms of Probability<a class="headerlink" href="#axioms-of-probability" title="Link to this heading">#</a></h2>
 <p>The <em>classical definition of probability</em> suffices for a general understanding of probability, but there are cases where it fails to account for every feature we would expect a definition of probability to satisfy.</p>
 <p>To see this, consider the experiment of spinning a dial on a clock with radius <em>r</em>,</p>
 <p>(INSERT PICTURE)</p>
@@ -721,7 +775,7 @@
 </section>
 </section>
 <section id="theorems">
-<h2>Theorems<a class="headerlink" href="#theorems" title="Link to this heading">#</a></h2>
+<span id="probability-theorems"></span><h2>Theorems<a class="headerlink" href="#theorems" title="Link to this heading">#</a></h2>
 <p>We can use these <em>axioms</em>, along with the <cite>theorems of set theory &lt;set-theorems&gt;</cite> to prove various things about probability.</p>
 <section id="law-of-complements">
 <span id="probability-law-of-complements"></span><h3>Law of Complements<a class="headerlink" href="#law-of-complements" title="Link to this heading">#</a></h3>
@@ -798,9 +852,8 @@
 </dd>
 </dl>
 <p>TODO</p>
-</section>
 <section id="law-of-unions">
-<span id="probability-law-of-unions"></span><h3>Law of Unions<a class="headerlink" href="#law-of-unions" title="Link to this heading">#</a></h3>
+<span id="probability-law-of-unions"></span><h4>Law of Unions<a class="headerlink" href="#law-of-unions" title="Link to this heading">#</a></h4>
 <dl>
 <dt>Symbolic Expression</dt><dd><div class="math notranslate nohighlight">
 \[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</div>
@@ -845,7 +898,7 @@
 <div class="math notranslate nohighlight">
 \[= \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13} \approx 0.31\]</div>
 <section id="probability-tables">
-<span id="id5"></span><h4>Probability Tables<a class="headerlink" href="#probability-tables" title="Link to this heading">#</a></h4>
+<span id="id6"></span><h5>Probability Tables<a class="headerlink" href="#probability-tables" title="Link to this heading">#</a></h5>
 <p>If you have two events, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, then you can form a <em>two-way</em> probability table by partitioning the sample space into <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A^c\)</span> and then simultaneously partitioning the sample space into <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(B^c\)</span>,</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
@@ -872,6 +925,7 @@
 </tbody>
 </table>
 </div>
+</section>
 </section>
 </section>
 </section>
@@ -925,13 +979,17 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preliminaries">Preliminaries</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-union">Compound Union</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summation">Summation</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-spaces-and-events">Sample Spaces and Events</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compound-events">Compound Events</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-definition-of-probability">Classical Definition of Probability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-definition-of-probability">Classical Definition of Probability</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-large-numbers">Law of Large Numbers</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#axioms-of-probability">Axioms of Probability</a><ul class="nav section-nav flex-column">
@@ -944,9 +1002,11 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#theorems">Theorems</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-complements">Law of Complements</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-unions">Law of Unions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-tables">Probability Tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-complements">Law of Complements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-unions">Law of Unions</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-tables">Probability Tables</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

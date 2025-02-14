@@ -13,7 +13,7 @@ import argparse
 import os
 
 project = "elara protocol"
-toc_title ="elara protocol"
+toc_title = "elara protocol"
 copyright = '2025, chinchalinchin industries'
 author = 'Grant Moore'
 
@@ -31,16 +31,6 @@ extensions = [
 
 templates_path = [ ]
 
-html_static_path = [ 
-    '_static',
-    '_apps',
-    '_plots'
-]
-
-html_css_files = [
-    'custom.css'
-] 
-
 exclude_patterns = [
     '_apps/**',
     '_notes/**'
@@ -52,9 +42,41 @@ plot_html_show_source_link = True
 
 html_theme = 'sphinx_book_theme'
 
-html_theme_options = { }
+html_static_path = [ 
+    '_static',
+    '_scripts'
+]
 
-html_title = "elara protocol"
+html_css_files = [
+    'css/custom.css'
+] 
+
+html_js_files = [
+   'js/custom-icons.js'
+]
+
+html_theme_options = {
+    "icon_links": [
+        {
+            "name": "Docker",
+            "url": "https://hub.docker.com/u/chinchalinchin",
+            "type": "fontawesome",
+            "icon": "fa-custom fa-docker"
+        },{
+            "name": "GitHub",
+            "url": "https://github.com/chinchalinchin/",
+            "type": "fontawesome",
+            "icon": "fa-custom fa-github"
+        },{
+            "name": "PyPi",
+            "url": "https://pypi.org/user/chinchalinchin/",
+            "type": "fontawesome",
+            "icon": "fa-custom fa-pypi"
+        }
+   ]
+}
+
+html_title = "Ἐλάρα"
 
 html_context = {
    "default_mode": "dark"
