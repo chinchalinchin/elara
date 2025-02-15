@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
@@ -193,10 +193,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_cantor.html">Cantor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_peano.html">Peano</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_tarski.html">Tarski</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_zalta.html">Zalta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/04_zalta.html">Zalta</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -291,6 +292,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../inference/06_VARIANCE.html">Population Standard Deviation</a></li>
 </ul>
 </details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2025.html">2025</a></li>
 </ul>
 </details></li>
 </ul>
@@ -1136,6 +1144,10 @@
 <section id="histograms">
 <span id="id7"></span><h2>Histograms<a class="headerlink" href="#histograms" title="Link to this heading">#</a></h2>
 <p>A <em>histogram</em> is a graphical representation of a <a class="reference internal" href="#frequency-distributions"><span class="std std-ref">frequency distribution</span></a>. The <em>classes</em> or <em>bins</em> are plotted on the <em>x-axis</em> against the frequency of each <em>class</em> on the <em>y-axis</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/eae08e3b224d7296651aa5af1168314b/histogram_random.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4e489d83b1680daa1fb7509ab33c47f7/histogram_random.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/19ff50ebdbf6067ae2a08f24a9ed9442/histogram_random.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/810aae0d48fb4af83f00b3043922a668/histogram_random.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_random.png" class="plot-directive" src="../../_images/histogram_random.png" />
+</figure>
 <p>The <em>width</em> of the bars is normalized so that the bars of the histogram meet.</p>
 <section id="variations">
 <span id="histogram-variatians"></span><h3>Variations<a class="headerlink" href="#variations" title="Link to this heading">#</a></h3>
@@ -1147,6 +1159,10 @@
 <div class="math notranslate nohighlight">
 \[S = \{ 3, 3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 9 \}\]</div>
 <p>Then the dot plot is constructed by drawing a number of dots above a point on the number line that corresponds to the <em>frequency</em> of that observation.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/9b49e2c50b4296e3df288e3a2f0e3eca/dot_plot.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/dc14a1abed162cd588da631fdd7039b7/dot_plot.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/0ff9c7d0ea476fe72eb171f11b1afd4c/dot_plot.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5a67a714f6dac2aee90362a685b2dd66/dot_plot.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/dot_plot.png" class="plot-directive" src="../../_images/dot_plot.png" />
+</figure>
 <p><em>Dot plots</em> are a quick and easy to represent a sample of data graphically. When in doubt, throw together a dot plot to see if it gives you any clues about the distribution.</p>
 </section>
 <section id="stem-leaf-plots">
@@ -1200,11 +1216,19 @@
 \[\sum_{x_i \in S} r(x_i) = 1\]</div>
 <p>This intuitive result simply means the distribution must total to <em>100%</em>.</p>
 <p>In other words, <em>relative frequency</em> histograms do not change the shape of the distribution; they scale (<em>normalize</em>) the distribution so that the sum of class frequencies is <em>100%</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/48f50b43274c2dd9ed3b52e66d4488f9/histogram_relative.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a6670a67d70d09152312d88a39237611/histogram_relative.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3e4a1e7e35882ccc26f04d51c91aa311/histogram_relative.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/46cb1ad4b3b744f6b0a73fc76bc113e5/histogram_relative.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_relative.png" class="plot-directive" src="../../_images/histogram_relative.png" />
+</figure>
 </section>
 <section id="pie-charts">
 <h4>Pie Charts<a class="headerlink" href="#pie-charts" title="Link to this heading">#</a></h4>
 <p><em>Pie charts</em> are a special type of relative frequency histogram. Since the relative frequencies sum to 1, we can represent the distribution as <em>one</em> circle and then express the proportion the distribtion that belongs to class by the proportion of area in a circular sector.</p>
 <p>In other words, the size of each slice of the pie represents the relative frequency of that class.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3e0f1e9e8980e1efb89dc04e1d84dc0d/pie_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d5b086734c2cd8ce02d1b90907b47e5a/pie_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3bc338d0cba1489655c7dda46bed2ab5/pie_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b034e570f569c874a2356cd46c063b3b/pie_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/pie_chart.png" class="plot-directive" src="../../_images/pie_chart.png" />
+</figure>
 </section>
 </section>
 <section id="distribution-shapes">
@@ -1213,6 +1237,10 @@
 <section id="uniform">
 <span id="uniform-shape"></span><h4>Uniform<a class="headerlink" href="#uniform" title="Link to this heading">#</a></h4>
 <p>A histogram where each class is approximately level with every other class is known as a <em>uniform</em> distribution.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/34bd822861f4b034051e9b9f92f94b8a/histogram_uniform.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/155f17f82d3b54009c68098bc91e74fc/histogram_uniform.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4312ca8bf96e4d6cf575c0f3e425d765/histogram_uniform.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/024005d81a34d100f1704ae4f144c82a/histogram_uniform.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_uniform.png" class="plot-directive" src="../../_images/histogram_uniform.png" />
+</figure>
 <p>A <em>uniform distribution</em> tells us each class is <em>equally likely</em>. In other words, if we were to randomly select an individual from this sample, there is an equal chance the selected individual will come from each class.</p>
 <dl class="simple">
 <dt>Example</dt><dd><p>Find yourself a die and roll it 30 or so times, keeping track of each outcome. Once you have a large enough sample, create and graph a frequency distribution. The resulting display will approximate a <em>uniform</em> distribution.</p>
@@ -1222,6 +1250,10 @@
 <section id="normal">
 <h4>Normal<a class="headerlink" href="#normal" title="Link to this heading">#</a></h4>
 <p>A histogram where the classes are symmetric and decreasing around a common point is known as <em>normal</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/7b0c3e5f0f733ab0dd7f2a0aafef4593/histogram_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d21e66ed5826775ed9c6d468510ad6c4/histogram_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6439622930238a391bedb78005569866/histogram_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7530e71137c09a86a178e9909d1dc451/histogram_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_normal.png" class="plot-directive" src="../../_images/histogram_normal.png" />
+</figure>
 <p>The line of symmetry in a perfectly symmetrical distribution is the <a class="reference internal" href="01_ESTIMATION.html#median"><span class="std std-ref">Median</span></a>. The reason for this can seen by equating the <em>area</em> under the distribution with the proportion of the sample that belongs to that area. Since the <em>areas</em> on either side of a symmetric distribution are equal,</p>
 <img alt="../../_images/normal_distribution_graphic.jpg" src="../../_images/normal_distribution_graphic.jpg" />
 <p>It follows these areas both represent fifty percent of the distribution.</p>
@@ -1240,12 +1272,16 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We will also look at this dataset again when we get to <a class="reference internal" href="02_CORRELATION.html#correlation"><span class="std std-ref">Correlation</span></a> and <span class="xref std std-ref">scatter_plots</span>.</p>
+<p>We will also look at this dataset again when we get to <a class="reference internal" href="02_CORRELATION.html#correlation"><span class="std std-ref">Correlation</span></a> and <a class="reference internal" href="02_CORRELATION.html#scatter-plots"><span class="std std-ref">Scatter Plots</span></a>.</p>
 </div>
 </section>
 <section id="bimodal">
 <h4>Bimodal<a class="headerlink" href="#bimodal" title="Link to this heading">#</a></h4>
 <p>A histogram where two classes are more frequent than the other classes in the distribution is known as <em>bimodal</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/437c50920addc38f3befac3ebc31d87d/histogram_bimodal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1b402f33d6ecd1a5d511ac5ff452dfcb/histogram_bimodal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5dada81b031ca868de0473e405fad598/histogram_bimodal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1a257af810022e29730663405a9117d1/histogram_bimodal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_bimodal.png" class="plot-directive" src="../../_images/histogram_bimodal.png" />
+</figure>
 <dl class="simple">
 <dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/674354b843e46dcdfa56194b698ce56a/pigeon_racing_times_data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Pigeon</span> <span class="pre">Racing</span> <span class="pre">Speeds</span></code></a>.</p>
 </dd>
@@ -1259,7 +1295,15 @@
 </dl>
 <p>A <em>skewed</em> distribution has <em>tails</em>, indicating the distribution is not symmetric (or, <em>asymmetric</em>). Individuals drawn from a <em>skewed</em> distribution are more likely to have extreme values. By “<em>extreme</em>” we mean values outside of the intervals where the majority of the distribution lies.</p>
 <p><strong>Skewed Right</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/bd1d0cc4e27a7d5d55d682552b602ef2/histogram_skewed_right.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d1f2006164cbdc715637be413d0ddbe5/histogram_skewed_right.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/db0ea51224881b5e512f360a24a6b803/histogram_skewed_right.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/70637a1c2f76f343579aa69b535eddfa/histogram_skewed_right.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_skewed_right.png" class="plot-directive" src="../../_images/histogram_skewed_right.png" />
+</figure>
 <p><strong>Skewed Left</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/7e04873a715f999fa62530385d1ca6a0/histogram_skewed_left.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/107833c4aed8971eda446b790d4f38c5/histogram_skewed_left.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1704193efbc54516d0273d6411e54710/histogram_skewed_left.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/314794d4c36758dffa7b1aaf8e19d42d/histogram_skewed_left.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_skewed_left.png" class="plot-directive" src="../../_images/histogram_skewed_left.png" />
+</figure>
 </section>
 </section>
 </section>
@@ -1312,12 +1356,20 @@
 </tbody>
 </table>
 </div>
+<p>(<a class="reference download internal" download="" href="../../_downloads/35033ee64e51eb9e4f7710f2daf20d00/histogram_and_ogive.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d5e8e329d964f881e6370335355f6c5d/histogram_and_ogive.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e020c90185bdaeb3c89ccc3964ece47f/histogram_and_ogive.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/34ca8b5d9cde97cc22dcfa8c991eacfe/histogram_and_ogive.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_and_ogive.png" class="plot-directive" src="../../_images/histogram_and_ogive.png" />
+</figure>
 <section id="id13">
 <h3>Distribution Shapes<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <p>All <em>cumulative frequency histograms</em> (<em>ogives</em>) are <em>monotonic</em>. A <em>monotonic</em> functions is <em>non-decreasing</em>. Another way of saying <em>non-decreasing</em> is to say “<em>always increases or stays the same</em>”. The reason for this should be clear: we are always adding quantities to the cumulative frequency as <span class="math notranslate nohighlight">\(x_i\)</span> increases. The <em>cumulative frequency</em> never <em>decreases</em>.</p>
 <p>Thus, it can sometimes be difficult to discern any features of the distribution from the cumulative frequency histogram. Nevertheless, closer inspection reveals a few things we can infer.</p>
 <section id="id14">
 <h4>Uniform<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/fb02db42fc3cb171ea3db4141c4cebb2/ogive_uniform.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/037aa330c2f095a769792a2c2dff8d33/ogive_uniform.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d2179a95892bb3373f4f93936479cffe/ogive_uniform.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/411702e57e68f8b48839133afc5ca05f/ogive_uniform.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_uniform.png" class="plot-directive" src="../../_images/ogive_uniform.png" />
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Notice each step in the ogive increase by roughly the same amount. This is because frequencies in a uniform distribution are roughly equal.</p>
@@ -1325,6 +1377,10 @@
 </section>
 <section id="id15">
 <h4>Normal<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/e5db9120256cef8478beb2f32af4a663/ogive_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d7c1e2bba8a3baa63b589d74a7faa187/ogive_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/533a8f36b4747b4bfb480de3c66318ad/ogive_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/02d919241e67ffea661b65ad4752f635/ogive_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_normal.png" class="plot-directive" src="../../_images/ogive_normal.png" />
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Notice the steps in the graph increase in size up to the center and then decrease in size until the ogive levels off. This is because normal distributions are centered around the mean and drop off in frequency as distance from the mean increases.</p>
@@ -1332,6 +1388,10 @@
 </section>
 <section id="id16">
 <h4>Bimodal<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/e540b25feddd772890f454247b1da815/ogive_bimodal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1ec0f296d364105fc5b0d1e99e8d9d77/ogive_bimodal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/43cea834ac25228696166e8d44e0aedd/ogive_bimodal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/29332ac0f3af8890439f7245775c009b/ogive_bimodal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_bimodal.png" class="plot-directive" src="../../_images/ogive_bimodal.png" />
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Notice there are two steps in the graph larger than the rest, due to the large frequencies of the modes in a bimodal distribution.</p>
@@ -1339,9 +1399,17 @@
 </section>
 <section id="id17">
 <h4>Skewed<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
-<dl class="simple">
-<dt>Skewed Right</dt><dd></dd>
-<dt>Skewed Left</dt><dd></dd>
+<dl>
+<dt>Skewed Right</dt><dd><p>(<a class="reference download internal" download="" href="../../_downloads/e11408e13d27ccdf40afa077ebbe4e9f/ogive_skewed_right.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/01f45180e062a981941e03e2e458f52b/ogive_skewed_right.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/994fc68fd1f787efab892e1a69542bb5/ogive_skewed_right.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7023b01f3af7664e2d86f3f48b54e03d/ogive_skewed_right.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_skewed_right.png" class="plot-directive" src="../../_images/ogive_skewed_right.png" />
+</figure>
+</dd>
+<dt>Skewed Left</dt><dd><p>(<a class="reference download internal" download="" href="../../_downloads/d884b34158d64634a104cb8993757c9b/ogive_skewed_left.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/bf34a21edc16d1f63d9b1dd84b2059ed/ogive_skewed_left.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/0addfee48cf23ab749987f8045351fc5/ogive_skewed_left.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7dd4d989cab6ec394e262bd3bcaf5847/ogive_skewed_left.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_skewed_left.png" class="plot-directive" src="../../_images/ogive_skewed_left.png" />
+</figure>
+</dd>
 </dl>
 </section>
 </section>
@@ -1351,6 +1419,10 @@
 <h4>Stacked Bar Chart<a class="headerlink" href="#stacked-bar-chart" title="Link to this heading">#</a></h4>
 <p>A <em>stacked bar chart</em> is a type of <em>ogive</em> that is used specifically for <em>categorical data</em>. In particular, it is meant to visualize the <a class="reference internal" href="#conditional-frequency-distribution"><span class="std std-ref">Conditional Frequency Distribution</span></a> of one categorical variable with respect to all the other values of the other categorical variable.</p>
 <p>With a <em>stacked bar chart</em>, the sample is broken up into non-overlapping (<a class="reference internal" href="../probability/00_INTRODUCTION.html#mutual-exclusion"><span class="std std-ref">mutual exclusive</span></a>) groups. The <em>conditional distribution</em> of each group is plotted as a vertical bar that totals to 100%,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3876d09c245f53bc9f7a7fab15be8c1b/stacked_bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/aeffde20930d1bf3c8034a6f6c678b39/stacked_bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4238c92ad5e8f1b1ad3dc3cc1d20f964/stacked_bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/59deb6bf7ef2debb65ab5d931419a250/stacked_bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/stacked_bar_chart.png" class="plot-directive" src="../../_images/stacked_bar_chart.png" />
+</figure>
 <p>Each bar of the graph is <em>conditioned</em> on one variable. In this example, the <em>condition</em> is the event of a red object or a blue object. <em>Given</em> a blue object has been selected from the groups on the horizontal axis, the <em>conditional distribution</em> of shape (i.e., duck or ball) is plotted on the vertical axis.</p>
 <p>In this example, the <em>red</em> group is broken down into a distribution of <em>ducks</em> and <em>balls</em> according to the formulae,</p>
 <div class="math notranslate nohighlight">
@@ -1397,15 +1469,27 @@
 <p>For now, we present various boxplots in order to exhibit how the distribution shape is manifested in the relative lengths of the whisker.</p>
 <section id="id23">
 <h4>Normal<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/a2596a54f0fbfb006433513db85189d5/boxplot_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a2f58fbdb0fa3c5f6586149573a45593/boxplot_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1aa272e718e7d1a9b450363d6a1d9b30/boxplot_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/30da364bbd1e91606bdc0a45092cb7b3/boxplot_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/boxplot_normal.png" class="plot-directive" src="../../_images/boxplot_normal.png" />
+</figure>
 <p>A <em>normal</em> boxplot has a <em>box</em> that sits evenly between its <em>whiskers</em>. The length of the left <em>whisker</em> is roughly equal to the length of the right <em>whisker</em>. There are no <em>outlying observations</em> to skew the whiskers.</p>
 <p>Notice the red line that represents the <em>median</em> is roughly centered within the <em>box</em>.</p>
 </section>
 <section id="id24">
 <h4>Skewed<a class="headerlink" href="#id24" title="Link to this heading">#</a></h4>
 <p><strong>Skewed Right</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3b4871b77a6f16b8fe0d121c59e7b99e/boxplot_skewed_right.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2270cc87aebc9d2848445f18c116001a/boxplot_skewed_right.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2afa6a4a2f13fdbf1c286d12babb1d5b/boxplot_skewed_right.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/233b9bc3e4b5ed1df54b1d61a49a3aff/boxplot_skewed_right.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/boxplot_skewed_right.png" class="plot-directive" src="../../_images/boxplot_skewed_right.png" />
+</figure>
 <p>A <em>skewed right</em> boxplot has a <em>box</em> with lopsided <em>whiskers</em>. Its right <em>whisker</em> is pulled in the direction of the skew, i.e. towards the right. The presence of outlying observations on the right causes the distribution to <em>stretch</em> towards them.</p>
 <p>Notice the red line that represents the median sits close to the left side of the <em>box</em>, where the majority of the distribution lies.</p>
 <p><strong>Skewed Left</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/b406415ccdc5cc911d4ab54a5a06e0d9/boxplot_skewed_left.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d9636e60d888c278ff26b058e1270ca8/boxplot_skewed_left.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/bd80982d88c8e3ef78c6079cad4f0567/boxplot_skewed_left.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/f6f9401301388b04384fb964f0bb397c/boxplot_skewed_left.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/boxplot_skewed_left.png" class="plot-directive" src="../../_images/boxplot_skewed_left.png" />
+</figure>
 <p>A skewed left boxplot has a <em>box</em> with lopsided <em>whiskers</em>. Its left <em>whisker</em> is pulled in the direction of the skew, i.e towards the left. The presence of outlying observations on the left causes the distribution to <em>stretch</em> towards them.</p>
 <p>Notice the red line that represents the median sits close to the right side of the <em>box</em>, where the majority of the distribution lies.</p>
 </section>

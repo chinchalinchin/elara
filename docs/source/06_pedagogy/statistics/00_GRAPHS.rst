@@ -693,7 +693,7 @@ Histograms
 
 A *histogram* is a graphical representation of a :ref:`frequency distribution <frequency-distributions>`. The *classes* or *bins* are plotted on the *x-axis* against the frequency of each *class* on the *y-axis*.
 
-.. plot:: _scripts/py/plotshistograms/histogram_random.py
+.. plot:: _scripts/py/plots/histograms/histogram_random.py
 
 The *width* of the bars is normalized so that the bars of the histogram meet. 
 
@@ -719,7 +719,7 @@ Suppose a quiz with nine questions was administered to an A.P. Statistics course
 
 Then the dot plot is constructed by drawing a number of dots above a point on the number line that corresponds to the *frequency* of that observation.
 
-.. plot:: _scripts/py/plotsother/dot_plot.py
+.. plot:: _scripts/py/plots/other/dot_plot.py
 
 *Dot plots* are a quick and easy to represent a sample of data graphically. When in doubt, throw together a dot plot to see if it gives you any clues about the distribution.
 
@@ -796,7 +796,7 @@ This intuitive result simply means the distribution must total to *100%*.
 
 In other words, *relative frequency* histograms do not change the shape of the distribution; they scale (*normalize*) the distribution so that the sum of class frequencies is *100%*.
 
-.. plot:: _scripts/py/plotshistograms/histogram_relative.py
+.. plot:: _scripts/py/plots/histograms/histogram_relative.py
 
 
 Pie Charts
@@ -806,7 +806,7 @@ Pie Charts
 
 In other words, the size of each slice of the pie represents the relative frequency of that class. 
 
-.. plot:: _scripts/py/plotsother/pie_chart.py
+.. plot:: _scripts/py/plots/other/pie_chart.py
 
 .. _distribution_shapes:
 
@@ -822,7 +822,7 @@ Uniform
 
 A histogram where each class is approximately level with every other class is known as a *uniform* distribution. 
 
-.. plot:: _scripts/py/plotshistograms/histogram_uniform.py
+.. plot:: _scripts/py/plots/histograms/histogram_uniform.py
 
 A *uniform distribution* tells us each class is *equally likely*. In other words, if we were to randomly select an individual from this sample, there is an equal chance the selected individual will come from each class. 
 
@@ -834,7 +834,7 @@ Normal
 
 A histogram where the classes are symmetric and decreasing around a common point is known as *normal*.
 
-.. plot:: _scripts/py/plotshistograms/histogram_normal.py
+.. plot:: _scripts/py/plots/histograms/histogram_normal.py
 
 The line of symmetry in a perfectly symmetrical distribution is the :ref:`median`. The reason for this can seen by equating the *area* under the distribution with the proportion of the sample that belongs to that area. Since the *areas* on either side of a symmetric distribution are equal,
 
@@ -861,14 +861,14 @@ The first column of this dataset represents the *length of an eruption in minute
 
 .. note:: 
 
-    We will also look at this dataset again when we get to :ref:`correlation` and :ref:`scatter_plots`.
+    We will also look at this dataset again when we get to :ref:`correlation` and :ref:`scatter-plots`.
     
 Bimodal
 *******
 
 A histogram where two classes are more frequent than the other classes in the distribution is known as *bimodal*.
 
-.. plot:: _scripts/py/plotshistograms/histogram_bimodal.py
+.. plot:: _scripts/py/plots/histograms/histogram_bimodal.py
 
 Example
     :download:`Pigeon Racing Speeds <../../_static/csv/datasets/cultural/pigeon_racing_times_data.csv>`.
@@ -883,12 +883,12 @@ A *skewed* distribution has *tails*, indicating the distribution is not symmetri
 
 **Skewed Right**
 
-.. plot:: _scripts/py/plotshistograms/histogram_skewed_right.py
+.. plot:: _scripts/py/plots/histograms/histogram_skewed_right.py
 
 .. c
 **Skewed Left**
 
-.. plot:: _scripts/py/plotshistograms/histogram_skewed_left.py
+.. plot:: _scripts/py/plots/histograms/histogram_skewed_left.py
     
 .. _ogives:
 
@@ -935,7 +935,7 @@ Recall the *frequency distribution* created in the :ref:`ungrouped-frequency-dis
 | :math:`6.1 \leq x \leq 6.3` | 1              | 12 = 1 + 2 + 4 + 2 + 3 |
 +-----------------------------+----------------+------------------------+
 
-.. plot:: _scripts/py/plotshistograms/histogram_and_ogive.py
+.. plot:: _scripts/py/plots/histograms/histogram_and_ogive.py
 
 Distribution Shapes
 -------------------
@@ -947,7 +947,7 @@ Thus, it can sometimes be difficult to discern any features of the distribution 
 Uniform
 *******
 
-.. plot:: _scripts/py/plotsogives/ogive_uniform.py
+.. plot:: _scripts/py/plots/ogives/ogive_uniform.py
 
 .. note::
 
@@ -956,7 +956,7 @@ Uniform
 Normal
 ******
 
-.. plot:: _scripts/py/plotsogives/ogive_normal.py
+.. plot:: _scripts/py/plots/ogives/ogive_normal.py
 
 .. note::
 
@@ -965,7 +965,7 @@ Normal
 Bimodal
 *******
 
-.. plot:: _scripts/py/plotsogives/ogive_bimodal.py
+.. plot:: _scripts/py/plots/ogives/ogive_bimodal.py
 
 .. note::
     
@@ -975,10 +975,10 @@ Skewed
 ******
 
 Skewed Right
-    .. plot:: _scripts/py/plotsogives/ogive_skewed_right.py
+    .. plot:: _scripts/py/plots/ogives/ogive_skewed_right.py
 
 Skewed Left
-    .. plot:: _scripts/py/plotsogives/ogive_skewed_left.py
+    .. plot:: _scripts/py/plots/ogives/ogive_skewed_left.py
 
 Variations
 ----------
@@ -990,7 +990,7 @@ A *stacked bar chart* is a type of *ogive* that is used specifically for *catego
 
 With a *stacked bar chart*, the sample is broken up into non-overlapping (:ref:`mutual exclusive <mutual-exclusion>`) groups. The *conditional distribution* of each group is plotted as a vertical bar that totals to 100%,
 
-.. plot:: _scripts/py/plotsother/stacked_bar_chart.py
+.. plot:: _scripts/py/plots/other/stacked_bar_chart.py
 
 Each bar of the graph is *conditioned* on one variable. In this example, the *condition* is the event of a red object or a blue object. *Given* a blue object has been selected from the groups on the horizontal axis, the *conditional distribution* of shape (i.e., duck or ball) is plotted on the vertical axis.
 
@@ -1065,7 +1065,7 @@ For now, we present various boxplots in order to exhibit how the distribution sh
 Normal
 ******
 
-.. plot:: _scripts/py/plotsboxplots/boxplot_normal.py
+.. plot:: _scripts/py/plots/boxplots/boxplot_normal.py
 
 A *normal* boxplot has a *box* that sits evenly between its *whiskers*. The length of the left *whisker* is roughly equal to the length of the right *whisker*. There are no *outlying observations* to skew the whiskers. 
 
@@ -1076,7 +1076,7 @@ Skewed
 
 **Skewed Right**
 
-.. plot:: _scripts/py/plotsboxplots/boxplot_skewed_right.py
+.. plot:: _scripts/py/plots/boxplots/boxplot_skewed_right.py
 
 A *skewed right* boxplot has a *box* with lopsided *whiskers*. Its right *whisker* is pulled in the direction of the skew, i.e. towards the right. The presence of outlying observations on the right causes the distribution to *stretch* towards them. 
 
@@ -1085,7 +1085,7 @@ Notice the red line that represents the median sits close to the left side of th
 
 **Skewed Left**
 
-.. plot:: _scripts/py/plotsboxplots/boxplot_skewed_left.py
+.. plot:: _scripts/py/plots/boxplots/boxplot_skewed_left.py
 
 A skewed left boxplot has a *box* with lopsided *whiskers*. Its left *whisker* is pulled in the direction of the skew, i.e towards the left. The presence of outlying observations on the left causes the distribution to *stretch* towards them.
 

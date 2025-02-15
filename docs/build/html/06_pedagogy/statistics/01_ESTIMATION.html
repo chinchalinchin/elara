@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
@@ -193,10 +193,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_cantor.html">Cantor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_peano.html">Peano</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_tarski.html">Tarski</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_zalta.html">Zalta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/04_zalta.html">Zalta</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -291,6 +292,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../inference/06_VARIANCE.html">Population Standard Deviation</a></li>
 </ul>
 </details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2025.html">2025</a></li>
 </ul>
 </details></li>
 </ul>
@@ -1162,10 +1170,18 @@
 </dl>
 <p>Note in this sample we have <span class="math notranslate nohighlight">\(n = 9\)</span> total samples.</p>
 <p>Before we move onto solving the problem, consider a scatter plot of these observations against their observation order,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/2bcc0cea4f0c4e058df715906942f051/03_ex01_unordered.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/c2d8dd40916687343585dda0fedd580f/03_ex01_unordered.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/19e389f6840dc95e4ff3ca8f364fc444/03_ex01_unordered.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a57d7c780e8c30f4d84d02df9fef7181/03_ex01_unordered.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex01_unordered.png" class="plot-directive" src="../../_images/03_ex01_unordered.png" />
+</figure>
 <p>To find the percentiles, we need to find the <em>order statistics</em>, i.e. we need to <em>order</em> the sample from lowest to highest,</p>
 <div class="math notranslate nohighlight">
 \[S_{(o)}= \{ -2.5 \text{min}, -1.5 \text{min}, -1.0 \text{min}, 0.5 \text{min}, 3.0 \text{min}, 4.3 \text{min}, 5.0 \text{min}, 6.5 \text{min}, 7.0 \text{min} \}\]</div>
 <p>Once ordered, we can plot the observations against their <em>rank order</em>,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/0c4d56dcee37782eee403554c56ad3c9/03_ex02_ordered.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6ab73f605710acb16d7234e844d767ef/03_ex02_ordered.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a7edcfaaec433426ee22c092ed5c2ef5/03_ex02_ordered.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/c50710d9378d603ef786a2a3f06718e7/03_ex02_ordered.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex02_ordered.png" class="plot-directive" src="../../_images/03_ex02_ordered.png" />
+</figure>
 <p>The previous two graphs should make clear the meaning of <em>order statistics</em>. To find the 20 <sup>th</sup> percentile, <span class="math notranslate nohighlight">\(pi_{.20}\)</span>, we find the <em>order</em> in which it occurs in the sample,</p>
 <div class="math notranslate nohighlight">
 \[m = 0.20 \cdot (9 + 1) = 2\]</div>
@@ -1360,6 +1376,10 @@
 </dd>
 </dl>
 <p>It is always a good idea to start problems by looking at some sort <a class="reference internal" href="00_GRAPHS.html#graphical-representations"><span class="std std-ref">Graphical Representations</span></a> of the data being treated. If we use a histogram here, we immediately notice an unusual feature of this sample,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/6383dbdde08aca9d33cd0a2d32c49ca0/03_ex03_skewed.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a79f5d34f07dd6c5d1ea140ad51b1dd0/03_ex03_skewed.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e09db5a1b57c2fe088f7d193cb13882b/03_ex03_skewed.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/45850f5ffb33683eda32dca838e1e3bb/03_ex03_skewed.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex03_skewed.png" class="plot-directive" src="../../_images/03_ex03_skewed.png" />
+</figure>
 <p>One of the observations, the person with an annual income of <em>$2,000,000</em>, sits well outside the range of the rest of the observations. This feature of the sample, its <em>skew</em>, will manifest in the sample statistics as we move through this example.</p>
 <p>The sample mean is calculated using the <a class="reference internal" href="#sample-mean-formula"><span class="std std-ref">formula</span></a>,</p>
 <div class="math notranslate nohighlight">
@@ -1387,14 +1407,30 @@
 <div class="math notranslate nohighlight">
 \[S = \{ 1, 5, 5, 5, 9 \}\]</div>
 <p>As is easily verified in this example, the mean and median agree. A histogram of this situation would look like,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/8455146b4897afccd9500a3eed98d921/03_ex04_symmetric.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e753b093d426add3a84356e0477c31d6/03_ex04_symmetric.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d0423a9313b0144224046b769ad559fe/03_ex04_symmetric.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/71dc2de41c10b7db43d5aa23dfa03c5f/03_ex04_symmetric.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex04_symmetric.png" class="plot-directive" src="../../_images/03_ex04_symmetric.png" />
+</figure>
 <p>The median and mean are shown with green and blue lines respectively, but because they overlap exactly in this admittedly contrived example, you only see a single line in the graph.</p>
 <p>In general, when dealing with symmetrical distributions, the following result holds,</p>
 <div class="math notranslate nohighlight">
 \[\bar{x} \approx \pi_{0.50}\]</div>
 <p>A histogram for a symmetrical distribution is given below, with the median and mean again labelled with a green and blue line respectively,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/c8b443580e0ac9077ef988baac288db4/03_ex05_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d441d0a5c0f753bf089a6e2b79f9a4e6/03_ex05_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/58e6325445335fe29dfbda7854cb9c3e/03_ex05_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/451717b65d7b6094db3f79b02d136b40/03_ex05_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex05_normal.png" class="plot-directive" src="../../_images/03_ex05_normal.png" />
+</figure>
 <p>In this case, the mean and median do not <em>exactly</em> agree. The extent to which the mean and median do <strong>not</strong> agree is a measure of a distribution’s departure from <em>normality</em>. The less <em>normal</em> (<em>symmetrical</em>) the distribution becomes, the further apart the mean and median will split. Consider an extreme example like the following,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/edd64231bfe28a600e0723e2e709ef88/03_ex07_right_skew.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/daa1504ad5797f77a9bdbdc5190cf3d9/03_ex07_right_skew.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7f7e5e5d5a22a1968f555a1a507119d0/03_ex07_right_skew.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/c0d3e2f443d8cf1762063bc7c8953261/03_ex07_right_skew.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex07_right_skew.png" class="plot-directive" src="../../_images/03_ex07_right_skew.png" />
+</figure>
 <p>Most of the distribution is <em>clustered</em> to the left of the mean. The presence of the <em>right hand tail</em> on this distribution pulls the sample mean <em>towards</em> it.</p>
 <p>Consider the opposite case, where most of the data is clustered to the right of the mean,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/4eb376dab880962aff3e35bcffc25cde/03_ex06_left_skew.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/11238d6b98519809908ed7cff2790586/03_ex06_left_skew.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b6b0ae458850a6eb36e624a5e0334ef7/03_ex06_left_skew.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/50fde781c6bd4d6ccc3b357cd5cf7abd/03_ex06_left_skew.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/03_ex06_left_skew.png" class="plot-directive" src="../../_images/03_ex06_left_skew.png" />
+</figure>
 <p>As in the previous case, the presence of a <em>tails</em> acts like a sink towards which the mean is drawn.</p>
 <p>These results are summarized with the following rule of thumb,</p>
 <aside class="topic">

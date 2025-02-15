@@ -37,7 +37,7 @@ To say the same thing in a different way, the :ref:`probability <probability-int
 
 Where *p* is a constant. The *ideal* histogram (in other words, the distribution of the *population*) would look perfectly uniform,
 
-.. plot:: _scripts/py/plotsexamples/04_ex01_die_roll.py
+.. plot:: _scripts/py/plots/examples/04_ex01_die_roll.py
 
 Consider now the experiment of rolling 30 die. The *relative* frequency of each outcome in the *ideal distribution* will not change, since the new die being rolled consist of the same outcomes as the original die; Outcomes are added to the experiment in the same proportion. 
 
@@ -93,7 +93,7 @@ This function represents the area under the density curve to the left of the poi
 
 Graphically, we can think of the Normal CDF at a point, :math:`\Phi(z)` as representing the shaded area to the left of :math:`z`. For example, the quantity :math:`\Phi(0.5)` can be visualized as the shaded region under the density curve,
 
-.. plot:: _scripts/py/plotsdistributions/normal/normal_distribution_cdf.py
+.. plot:: _scripts/py/plots/distributions/normal/normal_distribution_cdf.py
 
 .. _normal_inverse_cdf:
 
@@ -110,7 +110,7 @@ The CDF tells us, given a value of :math:`z`, what percent of the distribution i
 
 As an example, if we were interested in the 35 :sup:`th` percentile of the Standard Normal distribution, the inverse CDF would tell us the point :math:`z` such that 35% of the distribution is less than or equal to that point, i.e. the point where the area to the left of the :math:`z` is 35%.
 
-.. plot:: _scripts/py/plotsdistributions/normal/normal_distribution_inverse.py
+.. plot:: _scripts/py/plots/distributions/normal/normal_distribution_inverse.py
 
 .. _normal_symmetry:
 
@@ -223,7 +223,7 @@ Varying the Standard Deviation Parameter
 
 By changing the :ref:`standard-deviation`, the shape of the distribution changes. As the :ref:`standard-deviation` increase, the graph spreads out. This is because :ref:`standard-deviation` is a :ref:`measure of variation <measures-of-variation>`. In other words, :ref:`standard-deviation` quantifies how the distribution is spread out along the *x*-axis.
 
-.. plot:: _scripts/py/plotsdistributions/normal/normal_distribution_parameters.py
+.. plot:: _scripts/py/plots/distributions/normal/normal_distribution_parameters.py
 
 Summary
 -------
@@ -318,7 +318,7 @@ After constructing the theoretical percentiles, we create a scatter plot using t
 	
 If the sample distribution is Normal, we should observe a linear relationship between the x-value and the y-value of this scatter plot. The following plot is the QQ plot summarizes the normality of this example,
 
-.. plot:: _scripts/py/plotsother/qq_plot_simple.py
+.. plot:: _scripts/py/plots/other/qq_plot_simple.py
 
 We notice an approximately linear relationship between the observed percentiles and the theoretical percentile, and thus we conclude there is no evidence to suggest the distribution is not normal.
 

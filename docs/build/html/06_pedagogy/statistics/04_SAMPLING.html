@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
@@ -193,10 +193,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_cantor.html">Cantor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_peano.html">Peano</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_tarski.html">Tarski</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_zalta.html">Zalta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/04_zalta.html">Zalta</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -291,6 +292,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../inference/06_VARIANCE.html">Population Standard Deviation</a></li>
 </ul>
 </details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2025.html">2025</a></li>
 </ul>
 </details></li>
 </ul>
@@ -495,7 +503,11 @@
 </tbody>
 </table>
 </div>
-<p>It is important to keep in mind the meaning of this table. The right hand column represents the probability of selecting an individual with the left hand column number of answers correct. In other words, the probability a single randomly selected individual from the population got 0 answers correct is <em>0.20</em>, or <em>20%</em>. Similarly, the probability a single randomly selected individual from the population got 1 answer correct is <em>0.40</em>, or <em>40%</em>. Finally, the probability a single randomly selected individual from the population got both answers correct is again <em>0.50</em>, or <em>50%</em>. A graph of the <span class="xref std std-ref">density-function</span> helps visualizes the situation,</p>
+<p>It is important to keep in mind the meaning of this table. The right hand column represents the probability of selecting an individual with the left hand column number of answers correct. In other words, the probability a single randomly selected individual from the population got 0 answers correct is <em>0.20</em>, or <em>20%</em>. Similarly, the probability a single randomly selected individual from the population got 1 answer correct is <em>0.40</em>, or <em>40%</em>. Finally, the probability a single randomly selected individual from the population got both answers correct is again <em>0.50</em>, or <em>50%</em>. A graph of the <a class="reference internal" href="../probability/03_RANDOM_VARIABLES.html#random-variable-pdf"><span class="std std-ref">Probability Density Function</span></a> helps visualizes the situation,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/8eec592b4ac80c848a57a6ba94d8c06f/population_histogram.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/c5e0d864ed38cfbf705d91b3d2bae6f6/population_histogram.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/fa55aba72fee62cc5248b228c6859a5f/population_histogram.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/23b1b567e1d1b4c7b6a06ba90243316d/population_histogram.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-center">
+<img alt="../../_images/population_histogram.png" class="plot-directive" src="../../_images/population_histogram.png" />
+</figure>
 <p>Since we are assuming we know the population distribution, we can see how sampling the population affects the value and distribution of the sample mean. This will provide insight into the more likely scenario of <em>not</em> knowing anything about the population and only having information about the sample. In other words, in what follows, the population distribution will be assumed to see what this implies about the sample mean. Then, the conclusions regarding the sample mean will be applied to scenarios where the population distribution is <em>unknown</em>.</p>
 <p>Suppose a random sample of 2 students are drawn from this population <em>with replacement</em>. Recall “<em>with replacement</em>” means the same student may be observed more than once, since every student is put back into the population for subsequenct selections.</p>
 <p>In drawing a sample of 2 students, an account must be taken of all possible ways this sample that might be drawn. Each student will have either gotten 2 answers correct, 1 answer correct or 0 answers correct. By the <a class="reference internal" href="../probability/01_COMBINATORICS.html#generalized-counting-principle"><span class="std std-ref">Generalized Counting Principle</span></a>, the total number of possible 2 person samples that can be drawn from this population is,</p>

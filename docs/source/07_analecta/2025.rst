@@ -1,0 +1,25 @@
+.. _2025:
+
+2025
+====
+
+.. _2025-january:
+
+-------
+January
+-------
+
+A perfect palindrome is symmetric, a mirror image of itself no matter which way it is written. Of the types of palindromes, they are likely the most rare, because their grammatical conditions are so stringent, at least as far as English is concerned. 
+
+Perfect palindromes mostly hinge on invertible grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a perfect palindrome must rely on the symmetry of a central palindromic word. 
+
+In other words, the cardinality of perfect palindromes is related to the cardinality of invertible words and the cardinality of purely reflective words. 
+
+- repel on no leper
+- dog saw raw war was god
+- gateman now won nametag
+- snoops now won spoons
+- pupils did slipup
+- strips deified spirits
+
+Compare these examples to a case like "*borrow or rob*" which, while palindromic, does not preserve its semantic content under inversion.

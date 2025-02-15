@@ -33,9 +33,9 @@ Consider a pop-quiz made up of two questions administered to a population of a 1
 +-----+-------+
 
 
-It is important to keep in mind the meaning of this table. The right hand column represents the probability of selecting an individual with the left hand column number of answers correct. In other words, the probability a single randomly selected individual from the population got 0 answers correct is *0.20*, or *20%*. Similarly, the probability a single randomly selected individual from the population got 1 answer correct is *0.40*, or *40%*. Finally, the probability a single randomly selected individual from the population got both answers correct is again *0.50*, or *50%*. A graph of the :ref:`density-function` helps visualizes the situation,
+It is important to keep in mind the meaning of this table. The right hand column represents the probability of selecting an individual with the left hand column number of answers correct. In other words, the probability a single randomly selected individual from the population got 0 answers correct is *0.20*, or *20%*. Similarly, the probability a single randomly selected individual from the population got 1 answer correct is *0.40*, or *40%*. Finally, the probability a single randomly selected individual from the population got both answers correct is again *0.50*, or *50%*. A graph of the :ref:`random-variable-pdf` helps visualizes the situation,
 
-.. plot:: _scripts/py/plotssampling/population_histogram.py
+.. plot:: _scripts/py/plots/sampling/population_histogram.py
     :align: center
 
 Since we are assuming we know the population distribution, we can see how sampling the population affects the value and distribution of the sample mean. This will provide insight into the more likely scenario of *not* knowing anything about the population and only having information about the sample. In other words, in what follows, the population distribution will be assumed to see what this implies about the sample mean. Then, the conclusions regarding the sample mean will be applied to scenarios where the population distribution is *unknown*.

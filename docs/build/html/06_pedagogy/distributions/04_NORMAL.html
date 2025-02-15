@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
@@ -193,10 +193,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_cantor.html">Cantor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_peano.html">Peano</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_tarski.html">Tarski</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_zalta.html">Zalta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_organon/04_zalta.html">Zalta</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../02_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -291,6 +292,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../inference/06_VARIANCE.html">Population Standard Deviation</a></li>
 </ul>
 </details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../07_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../07_analecta/2025.html">2025</a></li>
 </ul>
 </details></li>
 </ul>
@@ -501,6 +509,10 @@
 <div class="math notranslate nohighlight">
 \[P(\mathcal{X}=i) = p \text{ for }   i = 1, 2, 3, 4, 5, 6\]</div>
 <p>Where <em>p</em> is a constant. The <em>ideal</em> histogram (in other words, the distribution of the <em>population</em>) would look perfectly uniform,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/215e0045df88a71f0970f43a724324bc/04_ex01_die_roll.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/af06369034e6946bb95b61a1d8896935/04_ex01_die_roll.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/58c88c15189c183a82e07d18853ffcc5/04_ex01_die_roll.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4b44ecb10156c46e7d63ccfc3943d16b/04_ex01_die_roll.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/04_ex01_die_roll.png" class="plot-directive" src="../../_images/04_ex01_die_roll.png" />
+</figure>
 <p>Consider now the experiment of rolling 30 die. The <em>relative</em> frequency of each outcome in the <em>ideal distribution</em> will not change, since the new die being rolled consist of the same outcomes as the original die; Outcomes are added to the experiment in the same proportion.</p>
 <p>Take this experiment of rolling 30 die and repeat</p>
 <p>TODO</p>
@@ -531,6 +543,10 @@
 \[\Phi(z) = P(\mathcal{Z} \leq z) = p\]</div>
 <p>This function represents the area under the density curve to the left of the point <span class="math notranslate nohighlight">\(z\)</span>. In other words, This function tells us the <em>percentage</em> <span class="math notranslate nohighlight">\(p\)</span> of the Standard Normal distribution that is less than or equal to the point <span class="math notranslate nohighlight">\(z\)</span>. To put it yet another way, it tells us what percentage <span class="math notranslate nohighlight">\(p\)</span> of the original Normal distribution is less than or equal to <span class="math notranslate nohighlight">\(z\)</span> standard deviations away from the mean.</p>
 <p>Graphically, we can think of the Normal CDF at a point, <span class="math notranslate nohighlight">\(\Phi(z)\)</span> as representing the shaded area to the left of <span class="math notranslate nohighlight">\(z\)</span>. For example, the quantity <span class="math notranslate nohighlight">\(\Phi(0.5)\)</span> can be visualized as the shaded region under the density curve,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/65d5d86d73be76e2b7836c989ebcf110/normal_distribution_cdf.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6362802c661f545ed0c913a2facfc89e/normal_distribution_cdf.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/ffecc7bbdf6e2d4c862522c7b537f9d8/normal_distribution_cdf.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/793f867525a5136e3cd647c742b04bc7/normal_distribution_cdf.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/normal_distribution_cdf.png" class="plot-directive" src="../../_images/normal_distribution_cdf.png" />
+</figure>
 </section>
 <section id="inverse-cumulative-distribution-function">
 <span id="normal-inverse-cdf"></span><h4>Inverse Cumulative Distribution Function<a class="headerlink" href="#inverse-cumulative-distribution-function" title="Link to this heading">#</a></h4>
@@ -539,6 +555,10 @@
 \[\Phi^{-1}(p) = z\]</div>
 <p>The CDF tells us, given a value of <span class="math notranslate nohighlight">\(z\)</span>, what percent of the distribution is below <span class="math notranslate nohighlight">\(z\)</span>. The inverse CDF, on the other hand, tells us, given a value of <span class="math notranslate nohighlight">\(p\)</span>, what observation <span class="math notranslate nohighlight">\(z\)</span> corresponds to that percentile. It is the point <span class="math notranslate nohighlight">\(z\)</span> on the Normal density curve such that the shaded area below <span class="math notranslate nohighlight">\(z\)</span> is equal to <span class="math notranslate nohighlight">\(p\)</span>.</p>
 <p>As an example, if we were interested in the 35 <sup>th</sup> percentile of the Standard Normal distribution, the inverse CDF would tell us the point <span class="math notranslate nohighlight">\(z\)</span> such that 35% of the distribution is less than or equal to that point, i.e. the point where the area to the left of the <span class="math notranslate nohighlight">\(z\)</span> is 35%.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/4bed9dd6bb20585c97a000eafda0144e/normal_distribution_inverse.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4aee6d6639f4e64d6daeb77a4d9c5259/normal_distribution_inverse.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/33e615aeed6bdb159616869009350b26/normal_distribution_inverse.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3262768a266e6dd792d0f2b96338a36a/normal_distribution_inverse.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/normal_distribution_inverse.png" class="plot-directive" src="../../_images/normal_distribution_inverse.png" />
+</figure>
 </section>
 </section>
 <section id="symmetry">
@@ -606,6 +626,10 @@
 <section id="varying-the-standard-deviation-parameter">
 <h4>Varying the Standard Deviation Parameter<a class="headerlink" href="#varying-the-standard-deviation-parameter" title="Link to this heading">#</a></h4>
 <p>By changing the <a class="reference internal" href="../statistics/01_ESTIMATION.html#standard-deviation"><span class="std std-ref">Standard Deviation</span></a>, the shape of the distribution changes. As the <a class="reference internal" href="../statistics/01_ESTIMATION.html#standard-deviation"><span class="std std-ref">Standard Deviation</span></a> increase, the graph spreads out. This is because <a class="reference internal" href="../statistics/01_ESTIMATION.html#standard-deviation"><span class="std std-ref">Standard Deviation</span></a> is a <a class="reference internal" href="../statistics/01_ESTIMATION.html#measures-of-variation"><span class="std std-ref">measure of variation</span></a>. In other words, <a class="reference internal" href="../statistics/01_ESTIMATION.html#standard-deviation"><span class="std std-ref">Standard Deviation</span></a> quantifies how the distribution is spread out along the <em>x</em>-axis.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/09f87e3ab19f16ec4ad034cbe52611cd/normal_distribution_parameters.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/dd3e5f19c3c604e7cfe6564bd1d7edb4/normal_distribution_parameters.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/03c0eb644d6719c8fc1ca062197d0c6a/normal_distribution_parameters.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3b65f4340aa2d7cd9b7da0abdded668d/normal_distribution_parameters.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/normal_distribution_parameters.png" class="plot-directive" src="../../_images/normal_distribution_parameters.png" />
+</figure>
 </section>
 </section>
 <section id="summary">
@@ -678,6 +702,10 @@
 <div><p>( actual percentile, theoretical percentiles )</p>
 </div></blockquote>
 <p>If the sample distribution is Normal, we should observe a linear relationship between the x-value and the y-value of this scatter plot. The following plot is the QQ plot summarizes the normality of this example,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/6bfeb8f518932cc92824461eadb2fe63/qq_plot_simple.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/c3d9f7916fe74ea8f8bf43cc96894fbb/qq_plot_simple.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/9173291f3df18d0f47be1d56644c571a/qq_plot_simple.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1d75d85821c986a4e340b3505e41014b/qq_plot_simple.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/qq_plot_simple.png" class="plot-directive" src="../../_images/qq_plot_simple.png" />
+</figure>
 <p>We notice an approximately linear relationship between the observed percentiles and the theoretical percentile, and thus we conclude there is no evidence to suggest the distribution is not normal.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>

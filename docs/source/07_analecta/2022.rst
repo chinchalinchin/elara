@@ -1,0 +1,98 @@
+.. _2022:
+
+2022
+====
+
+.. _may-2022:
+
+---
+May
+---
+
+While Newton was in England developing his three laws from which he would deduce a broad array of phenomenon, such as planetary motion, geometric optics, etc., work was being done in continential Europe to express physical law in terms of an extremum principle. Rather than asserting the three laws of the motion as the primitives of mechanics, Hamilton and Lagrange showed these laws were the result of a more fundamental principle, that of *least action*:
+
+.. admonition:: Principle of Least Action 
+
+    The trajectory of a particle between two fixed points in time is such that it extremizes the quantity of *action*. 
+
+Where *action* is defined as the difference between the potential and kinetic energy in a system integrated over the time period in consideration, i.e. the accumulated excess energy over and above what is proscribed by the system itself. By asserting motion is such that it minimizes this quantity, Newton's laws naturally fall out of the mathematical conversation of energy.
+
+By positing the laws of motions thus, Hamilton and Lagrange displayed a formulation which represents the world as the intersection of all possibilities. It is as if the universe looked at all the possible lines that connected two points and brought into existence only the single one which satisfied the conditions of necessity.
+
+Except when we say "*universe*" in the preceding, we should be careful, for what we truly mean is the apprehensions of the subject apprehending, the :ref:`dasein` that reflects on its Being. Hamilton and Lagrange have expressed an opinion on an ontological primitive: balance is an immanent, self-evident form.
+
+.. _june-2022:
+
+----
+June
+----
+
+The great workhorse of mathematics is proof by contradiction. An assumption is made, an absurdity is shown to result from the assumption, therefore the assumption is shown to be false. In this way was modern mathematics constructed, by outlining the truth and demarcating its boundary with falsity. Anyone who has studied higher mathematics will attest to the way most mathematical proofs work by letting the truth "`in through the back door <https://www.gutenberg.org/ebooks/38427>`", that is to say, they work by showing what cannot be the case in order to prove the opposite must be so, but this gets us no closer to *why* it is so.
+
+This method does not reveal the *intuition*  the theorem to the observer; indeed one can comprehend a proof without understanding anything about what it trying to say and in the converse direction, one may understand a concept without being able to grasp its proof in the slightest.
+
+So it is with induction: the proof of induction, and therefore every proof *by* induction, relies on a contradiction that an element belongs to two mutually exclusive sets, which we are forced to admit is absurdity, therefore we conclude induction must be true; but nowhere in the proof do we see why the form in an induced series is transmitted from one term to the next. Likewise, a student can spend an entire academic career studying the axioms and theorems of real analysis and still have no intuition for how a falling stone's trajectory traces a parabola with respect to time, despite having memorized a series of proofs that show how to go from set theory to differential calculus.
+
+.. _2022-july:
+
+----
+July
+----
+
+Frege uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects, 
+
+.. math::
+
+    A = \{ x \mid x \neq x \} 
+
+.. math::
+
+    n(A) = 0 
+
+Zero is defined as the cardinality of a contradictory set. Logic, as it were, has an opinion of itself, namely that its contradictions are empty. This, however, requires the symbolism to express the contradictions that must contain nothing via the contingency of their form.
+
+Furthermore, the subsequent form of numbers can be expressed via recursion back to this original proposition about the cardinality of contradictions.
+
+.. math::
+    
+    B = \{ y \mid y = n(A) \}
+
+.. math::
+    
+    n(B) = 1
+
+Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the Fregean definition of zero: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in Frege's case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
+
+---
+
+Consider the etymological link between *passion* and *passive*. In the first reading, one might make the mistake of assuming a polarity between these terms, that is to say, a diametrical opposition. The former is a driving force whereas the latter is the lack of a driving force.
+
+However, both emerge from a common Latin root of *passio*: to endure. That which is passive endures any state impressed upon it, while that which is passionate endures (perhaps unwillingly) the burden of seizure, of complete domination by an external source. In both cases, there is a commonality: the removal of the subject. The subject in a passive state is the same as a subject in a passionate state, which is null and void. In neither case is there a conscious decision to be made; instead one surrenders themselves to an unknown sovereignty; unknown because consciousness relinquishes its ability to care; sovereign because it is the determinate factor in the outcome that proceeds from said state.
+
+.. _2022-september:
+
+---------
+September 
+---------
+
+Where is the evidence to be found for the assertion *I am not this*?
+
+If the *this* is, while *I* am, where is the coincidence? If the *this* has being through *is*, then what does *I* have through *am*? 
+
+---
+
+A tragedy, in three lines:
+
+    **Pessimist**: What could possibly happen?
+
+    **Optimist**: the best of all possible worlds.
+
+    **Pessimist**: and then what?
+
+.. _2022-december:
+
+--------
+December
+--------
+
+When one sees a bird and says *that is blue*, does the *that* refer to the bird or the color? Is there a difference?

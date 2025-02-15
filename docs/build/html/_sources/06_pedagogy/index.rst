@@ -1,5 +1,6 @@
 .. _pedagogy:
 
+========
 Pedagogy
 ========
 

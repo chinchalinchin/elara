@@ -75,7 +75,7 @@ poetryfoundation.org
 
 - `An Irish Airman Foresees His Death <https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death>`_
 - `Anyone Lived in a Pretty How Town <https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town>`_
-- `Do Not Go Gentle Into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>_`
+- `Do Not Go Gentle Into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>`_
 - `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_

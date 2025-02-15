@@ -13,6 +13,7 @@
    04_palindromia/index
    05_poeticus/index
    06_pedagogy/index
+   07_analecta/index
 
 ---------------
 

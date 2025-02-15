@@ -31,17 +31,21 @@ Anacoluthon
     with up so floating many bells down 
     
     -- `anyone lived in a pretty how town <https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town>`_
-
-    She's all states, and all princes, I,
     
-    Nothing else is.
-
-    -- `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
-
     In the coal fire will not wholly console them. 
 
     -- `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
+
+    She's all states, and all princes, I,
+
+    Nothing else is.
+
+    -- `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
     
+    From there are ghosts in the air 
+
+    -- `I Have Longed To Move Away <>`_
+
 .. _anadiplosis:
 
 Anadiplosis
@@ -68,7 +72,7 @@ Anaphora
 
     Fear not the waking world, my mortal, 
     
-    Fear not the flat, synthetic blood,
+    Fear not the flat, synthetic blood
     
     -- `All All and All <https://allpoetry.com/All-All-And-All>`_
     
@@ -83,6 +87,10 @@ Anaphora
 
 Anastrophe
 ----------
+
+    The widening circles into nothing gone
+
+    -- `Calidore: A Fragment <>`_
 
     With fruit the vines that round the thatch-eves run
 
