@@ -12,8 +12,8 @@ from sphinx.application import Sphinx
 import argparse
 import os
 
-project = "elara protocol"
-toc_title = "elara protocol"
+project = "elara"
+toc_title = "elara"
 copyright = '2025, chinchalinchin industries'
 author = 'Grant Moore'
 
@@ -32,8 +32,9 @@ extensions = [
 templates_path = [ ]
 
 exclude_patterns = [
-    '_apps/**',
-    '_notes/**'
+    '**/_apps/**',
+    '**/_notes/**',
+    '**/_poems/**'
 ]
 
 plot_html_show_source_link = True
@@ -76,7 +77,7 @@ html_theme_options = {
    ]
 }
 
-html_title = "Ἐλάρα"
+html_title = "elara"
 
 html_context = {
    "default_mode": "dark"

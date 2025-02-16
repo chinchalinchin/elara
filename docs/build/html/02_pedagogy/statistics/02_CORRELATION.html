@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Correlation &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/statistics/02_CORRELATION';</script>
+    <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Linear Regression" href="03_REGRESSION.html" />
+    <link rel="prev" title="Point Estimation" href="01_ESTIMATION.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_epistemia/00_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/04_zalta.html">Zalta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_epistemia/01_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/00_ante_christum.html">Ante Christum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/01_anno_domini.html">Anno Domini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/02_aidion.html">ἀίδιον</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/03_kairos.html">καιρός</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_epistemia/02_penetralia/index.html">Penetralia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/02_penetralia/00_verborum.html">Verborum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/02_penetralia/01_tractatus.html">Tractatus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_epistemia/01_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_epistemia/02_datum.html">Datum</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M01_meta.html">Module: Meta Grammar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P01_initialization.html">Plugin: Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P02_adaptation.html">Plugin: Adaptation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P03_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P04_metrics.html">Plugin: Metrics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/games/index.html">Games</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/games/G01_exercises.html">Games: Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/games/G02_garden.html">Game: The Garden</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_theurgy/01_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/07_postulates.html">Section VI.III: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/10_app.html">Section VIII: Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/00_HISTORY.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/01_LOGIC.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/02_SET_THEORY.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../probability/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/01_COMBINATORICS.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/02_CONDITIONAL.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/03_RANDOM_VARIABLES.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Statistics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_GRAPHS.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_ESTIMATION.html">Point Estimation</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_REGRESSION.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_CONFIDENCE.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/00_BERNOULLI.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/01_GEOMETRIC.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/02_BINOMIAL.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/03_UNIFORM.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/04_NORMAL.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../inference/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/01_BIAS.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/02_DESIGN.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/03_HYPOTHESES.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/04_MEAN.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/05_PROPORTION.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/06_VARIANCE.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/02_pedagogy/statistics/02_CORRELATION.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Correlation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bivariate-data">Bivariate Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Correlation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#univariate-statistics">Univariate Statistics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direction">Direction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#no-correlation">No Correlation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-correlation">Positive Correlation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-correlation">Negative Correlation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strength">Strength</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong">Strong</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#weak">Weak</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearity">Linearity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear">Linear</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear">Non-Linear</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series">Time Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-trend">Positive Trend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-trend">Negative Trend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-trend">No Trend</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="correlation">
+<span id="id1"></span><h1>Correlation<a class="headerlink" href="#correlation" title="Link to this heading">#</a></h1>
+<p>Up to now we have been dealing with <em>univariate</em> data. In this section, we begin the study of <em>bivariate data</em>.</p>
+<section id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h2>
+<section id="bivariate-data">
+<span id="id2"></span><h3>Bivariate Data<a class="headerlink" href="#bivariate-data" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><span class="math notranslate nohighlight">\(S = \{ (x_1, y_1), (x_2, y_2), ... , (x_n, y_n) \}\)</span></dt><dd><p>When two variables are measured on one individual, we call such data <em>bivariate</em>.</p>
+</dd>
+</dl>
+<p>The <span class="math notranslate nohighlight">\(x\)</span> variable is sometimes called the <em>independent</em> or <em>predictor</em> variable. The <span class="math notranslate nohighlight">\(y\)</span> variable is sometimes called the <em>dependent</em> or <em>response</em> variable. It is important to understand this terminology is only used in the context of the <a class="reference internal" href="03_REGRESSION.html#linear-regression"><span class="std std-ref">Linear Regression</span></a> model introduced in the next section. Before the <em>statistical significance</em> of the relationship is established, this terminology is misleading, as it implies a relationship between the <span class="math notranslate nohighlight">\(x\)</span> and <cite>y</cite> variable when none may exist. Correlation can be measured between variables that have no relationship whatsoever; in such instance we call the variables <em>uncorrelated</em>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Because we are dealing with randomness, <em>uncorrelated</em> variables will not necessarily have a correlation of 0. In fact, correlations of 0 are never observed in practice. There will always be a non-zero correlation between any given variables; the task of statistics is to determine whether or not this correlation is significant enough to use the outcome of one variable to make predictions about the outcome of the other variable.</p>
+</div>
+</section>
+<section id="id3">
+<h3>Correlation<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Correlation is a measure of the strength of a relationship that exists between two observable variables. Before we can begin our study of <em>correlation</em>, let’s make some preliminary defintions that will help us keep everything clear and precise.</p>
+<section id="univariate-statistics">
+<span id="univariate-correlation-statistics"></span><h4>Univariate Statistics<a class="headerlink" href="#univariate-statistics" title="Link to this heading">#</a></h4>
+<p>In order to differentiate between the statistics relationing to the <em>x</em> and <em>y</em> variables, we introduce some notation.</p>
+<p><span class="math notranslate nohighlight">\(\bar{x}\)</span> and <span class="math notranslate nohighlight">\(\bar{y}\)</span> are defined as the <em>univariate</em> sample means of the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variables. In other words, <span class="math notranslate nohighlight">\(\bar{y}\)</span> is the sample mean of the <span class="math notranslate nohighlight">\(y\)</span> variable, as if we were observing the <span class="math notranslate nohighlight">\(y\)</span> variable in isolation. Similarly for <span class="math notranslate nohighlight">\(\bar{x}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\(s_x\)</span> and <span class="math notranslate nohighlight">\(s_y\)</span> are defined as the <em>univariate</em> standard deviations of the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variables. In other words, <span class="math notranslate nohighlight">\(s_x\)</span> is the standard deviation of the <span class="math notranslate nohighlight">\(x\)</span> variable, as if we were observing the <span class="math notranslate nohighlight">\(x\)</span> variable in isolation. Similarly, for <span class="math notranslate nohighlight">\(s_y\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[s_{x}^2 = \frac{1}{n-1} \cdot \sum_{i=1}^{n} (x_i - \bar{x})^2\]</div>
+<div class="math notranslate nohighlight">
+\[s_{y}^2 = \frac{1}{n-1} \cdot \sum_{i=1}^{n} (y_i - \bar{y})^2\]</div>
+<p>TODO</p>
+<p><span class="math notranslate nohighlight">\(s_x\)</span> and <span class="math notranslate nohighlight">\(s_y\)</span> are defined as the <em>univariate</em> standard deviations of the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variables. In other words, <span class="math notranslate nohighlight">\(s_x\)</span> is the standard deviation of the <span class="math notranslate nohighlight">\(x\)</span> variable, as if we were observing only <span class="math notranslate nohighlight">\(x\)</span> alone. Similarly, for <span class="math notranslate nohighlight">\(s_y\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[s_{x}^2 = \frac{1}{n-1} \cdot \sum_{i=1}^{n} (x_i - \bar{x})^2\]</div>
+<div class="math notranslate nohighlight">
+\[s_{y}^2 = \frac{1}{n-1} \cdot \sum{i=1}^{n} (y_i - \bar{y})^2\]</div>
+<p>TODO</p>
+</section>
+<section id="definition">
+<h4>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+<aside class="topic">
+<p class="topic-title">Correlation, Version 1</p>
+<div class="math notranslate nohighlight">
+\[r_{xy} = \frac{1}{n-1} \cdot \sum_{i=1}^{n} z^{x}_i \cdot z^{y}_i\]</div>
+</aside>
+<p>TODO: justification. make some plots.</p>
+<aside class="topic">
+<p class="topic-title">Correlation, Version 2</p>
+<div class="math notranslate nohighlight">
+\[r_{xy} = \frac{1}{n-1} \cdot \sum_{i=1}^{n} (\frac{x_i - \bar{x}}{s_x}) \cdot (\frac{y_i - \bar{y}}{s_y})\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Correlation “Shortcut” Formula</p>
+<p>TODO</p>
+</aside>
+</section>
+</section>
+</section>
+<section id="scatter-plots">
+<span id="id4"></span><h2>Scatter Plots<a class="headerlink" href="#scatter-plots" title="Link to this heading">#</a></h2>
+<p>A scatterplot is a very simple and easy to understand graphical representation of bivariate data. The <span class="math notranslate nohighlight">\(x\)</span> variable is plotted on the horizontal axis versus the <span class="math notranslate nohighlight">\(y\)</span> variable on the vertical axis. Graphs of <em>scatterplots</em> are classified based on the <em>direction</em> of the relationship observed, the <em>strength</em> of the relationship observed and the <em>linearity</em> of the relationship observed.</p>
+<section id="direction">
+<span id="correlation-direction"></span><h3>Direction<a class="headerlink" href="#direction" title="Link to this heading">#</a></h3>
+<section id="no-correlation">
+<span id="id5"></span><h4>No Correlation<a class="headerlink" href="#no-correlation" title="Link to this heading">#</a></h4>
+<p>A scatterplot with no correlation between the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variables should appear random,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/59892d0fd44d581db2b6321b24458ea8/scatterplot_no_correlation.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2867a27e86cfa40a034748a7257c067a/scatterplot_no_correlation.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e2bf44508bee3c690ee07a5c45f024a5/scatterplot_no_correlation.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a07f944569af68cf1c635196db4754b1/scatterplot_no_correlation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/scatterplot_no_correlation.png" class="plot-directive" src="../../_images/scatterplot_no_correlation.png" />
+</figure>
+</section>
+<section id="positive-correlation">
+<span id="id6"></span><h4>Positive Correlation<a class="headerlink" href="#positive-correlation" title="Link to this heading">#</a></h4>
+<p>A scatterplot with a positive correlation betwen the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variables should have a general upward trend,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/37be5d46f4d9e1b6edbdd9ec9c9cac38/scatterplot_positive_correlation.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/92bc2e65a9fb60c75dd4d8205554a42b/scatterplot_positive_correlation.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/cf0fb45fda888546cba88fe7516b5123/scatterplot_positive_correlation.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/c6b0fb8289ad5d2e5a3139bb22574e98/scatterplot_positive_correlation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/scatterplot_positive_correlation.png" class="plot-directive" src="../../_images/scatterplot_positive_correlation.png" />
+</figure>
+</section>
+<section id="negative-correlation">
+<span id="id7"></span><h4>Negative Correlation<a class="headerlink" href="#negative-correlation" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/4f03fbd0d716ebf9cc26ae744fa12fc0/scatterplot_negative_correlation.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/34bc2f0cf48c1c7db39d224b806037a2/scatterplot_negative_correlation.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7f1ec245e6256d7056c0a070b9053fa7/scatterplot_negative_correlation.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/330a760b213d12ef8eefdaf5e948fc04/scatterplot_negative_correlation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/scatterplot_negative_correlation.png" class="plot-directive" src="../../_images/scatterplot_negative_correlation.png" />
+</figure>
+</section>
+</section>
+<section id="strength">
+<span id="correlation-strength"></span><h3>Strength<a class="headerlink" href="#strength" title="Link to this heading">#</a></h3>
+<section id="strong">
+<span id="strong-correlation"></span><h4>Strong<a class="headerlink" href="#strong" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
+<section id="weak">
+<span id="weak-correlation"></span><h4>Weak<a class="headerlink" href="#weak" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
+</section>
+<section id="linearity">
+<span id="correlation-linearity"></span><h3>Linearity<a class="headerlink" href="#linearity" title="Link to this heading">#</a></h3>
+<section id="linear">
+<span id="linear-correlation"></span><h4>Linear<a class="headerlink" href="#linear" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
+<section id="non-linear">
+<span id="nonlinear-correlation"></span><h4>Non-Linear<a class="headerlink" href="#non-linear" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
+</section>
+</section>
+<section id="time-series">
+<span id="id8"></span><h2>Time Series<a class="headerlink" href="#time-series" title="Link to this heading">#</a></h2>
+<p>A <em>time series</em> is similar to a <em>scatter plot</em> in almost all ways, except the <em>independent</em> variable in a <em>time series</em> is always a unit of time. A <em>correlation</em> for a <em>time series</em> is called a <em>trend</em>.</p>
+<section id="positive-trend">
+<h3>Positive Trend<a class="headerlink" href="#positive-trend" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../_downloads/44158b40446f33d70728c5492e5ca0e1/timeseries_positive_trend.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7f66868714c6a9b8b5c5b85bd4f582a5/timeseries_positive_trend.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/f11aadb8cbf444109ddb0c7a6217a3a6/timeseries_positive_trend.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/170a3b215afa3263c0fbe90024e287eb/timeseries_positive_trend.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/timeseries_positive_trend.png" class="plot-directive" src="../../_images/timeseries_positive_trend.png" />
+</figure>
+</section>
+<section id="negative-trend">
+<h3>Negative Trend<a class="headerlink" href="#negative-trend" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../_downloads/816c767be88ac9ed214acd6ed12ed5ec/timeseries_negative_trend.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/bc81960bdf62116aa9db5971e538d831/timeseries_negative_trend.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6121cf02fd0a52176b9dcffc0f6980e2/timeseries_negative_trend.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5d8ac9e0d712dd0ba0f67a06c6195fff/timeseries_negative_trend.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/timeseries_negative_trend.png" class="plot-directive" src="../../_images/timeseries_negative_trend.png" />
+</figure>
+</section>
+<section id="no-trend">
+<h3>No Trend<a class="headerlink" href="#no-trend" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../_downloads/53f58ef3250b12787d3bade6a96ad174/timeseries_no_trend.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e116404f0d751313fe60f3ad1dde7e41/timeseries_no_trend.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6758fb34bbeee0d96a8e013e10ce0f5e/timeseries_no_trend.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/319ff082ae08197047a07a4e84319b56/timeseries_no_trend.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/timeseries_no_trend.png" class="plot-directive" src="../../_images/timeseries_no_trend.png" />
+</figure>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_ESTIMATION.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Point Estimation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_REGRESSION.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Linear Regression</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bivariate-data">Bivariate Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Correlation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#univariate-statistics">Univariate Statistics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scatter-plots">Scatter Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#direction">Direction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#no-correlation">No Correlation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-correlation">Positive Correlation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-correlation">Negative Correlation</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#strength">Strength</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#strong">Strong</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#weak">Weak</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linearity">Linearity</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear">Linear</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear">Non-Linear</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series">Time Series</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#positive-trend">Positive Trend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#negative-trend">Negative Trend</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-trend">No Trend</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

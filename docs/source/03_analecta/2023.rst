@@ -1,0 +1,37 @@
+.. _2023:
+
+2023
+====
+
+.. _2023-february:
+
+February
+--------
+
+Everything is language.
+
+Everything signifies something it is not. 
+
+As I get older, the thoughts are harder to string together. More and more, it is a morass of half-understood images, glimpsed with uncertain comprehension. It feels like my mind is falling apart. 
+
+I want to say something definite: that what we are is symbolic. Our nature consists of naming and relating. There is no greater power in this world than to invoke a thing's name, to draw it into the foreground of attention and present that which is named as a singular thing, separate and isolated from the world in which it arose. 
+
+They tell me I am made of particles, incomprehensibly tiny things that are concentrated into mathematical points, but then I am told this is not quite right, because points have positions and no one has ever been able to say where exactly a particle is. 
+
+Science has a hole in its foundation. Or more precisely: an impassable bedrock that prevents the inductive advance of human knowledge beyond a prescribed depth, the limit of abstraction. Predicated on measurement, science immediately deteriorates when the truth upon which it rests is sought. 
+
+The idea that things can be measured relies on the idea that a property of a thing can be abstracted away from the thing's being. A thing is not a unit, but it is equal, in some way, to the units which comprise its measurement. Equality, as a concept, only obtains when a thing is abstracted of its qualities and reduced to a quantitative description. 
+
+To understand everything as measureable is to understand everything as a quantity. The act of measurement is equivalent to comparison. A thing is named to be the unit. To measure a thing is to relate it to this designation. To say a thing has two units it to say it has two units *of* the designated unit. 
+
+Humans have somehow inverted the direction of dependence in the relation of measurement to reality. We live with an unconscious assumption, at least in aggregate within the context of the modern world, one that happens to be false: that the only things that are real are those which can be measured. We have abstracted from measurement a definite mathematical structure the world must abide. And so we fail to comprehend the fundamental uncertainty from which being is born.
+
+Measurement can only exist in relation to the units which have been demarcated and designated as things which measure. Measurability cannot be the basis for being, because it must be predicated on a reference to another being, namely the unit, which only exists as a designation within an interpretation. In other words, the entire edifice of science presupposes a subject is *in the world*, engaged in the act of interpretation.
+
+---
+
+There are no answers. More fundamentally, there does not even exist the possibility of an answer.
+
+---
+
+The problem is truth. It's impossible to define. More precisely: it's definition undoes its foundation. If you say: something is true if it is the case (i.e. agrees with reality), then by allowing the indeterminate sentence to be named, even with a name so innocuous as "something", you've allowed the necessary and sufficient conditions for a contradiction to emerge. Let the next sentence be called P. The sentence P is not true. Then, by our definition of truth, we see we have named an undecidable sentence.  More than that, we have annihilated the possibility of truth by demonstrating an example of something to which it cannot apply, that is, something neither true or false. Self reference is a paradox that cannot be exorcised; it's impossible to give a name to something without that name referencing the thing to be named. You cannot talk about truth without giving things names and you cannot name a thing without decimating the foundations of language. We arise from a vacuum of meaning, and blindly seek what cannot be sought. All that we know and think is built on top of a void.

@@ -1,0 +1,1556 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Section II: Corpora &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01_theurgy/01_palindromia/03_corpora';</script>
+    <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section III: Structures" href="04_structures.html" />
+    <link rel="prev" title="Section I: Language" href="02_language.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_epistemia/00_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/00_organon/04_zalta.html">Zalta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_epistemia/01_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/00_ante_christum.html">Ante Christum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/01_anno_domini.html">Anno Domini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/02_aidion.html">ἀίδιον</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/01_facticity/03_kairos.html">καιρός</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_epistemia/02_penetralia/index.html">Penetralia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/02_penetralia/00_verborum.html">Verborum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../00_epistemia/02_penetralia/01_tractatus.html">Tractatus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_epistemia/01_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_epistemia/02_datum.html">Datum</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Theurgy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../00_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../00_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/modules/M01_meta.html">Module: Meta Grammar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/modules/M02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/modules/M03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/modules/M04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/modules/M05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/modules/M06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../00_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/plugins/P01_initialization.html">Plugin: Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/plugins/P02_adaptation.html">Plugin: Adaptation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/plugins/P03_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/plugins/P04_metrics.html">Plugin: Metrics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../00_universalis/games/index.html">Games</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/games/G01_exercises.html">Games: Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_universalis/games/G02_garden.html">Game: The Garden</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Palindromia</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_language.html">Section I: Language</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_postulates.html">Section VI.III: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="10_app.html">Section VIII: Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02_pedagogy/index.html">Pedagogy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/00_HISTORY.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/01_LOGIC.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/02_SET_THEORY.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/01_COMBINATORICS.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/02_CONDITIONAL.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/03_RANDOM_VARIABLES.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/00_GRAPHS.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/01_ESTIMATION.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/02_CORRELATION.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/03_REGRESSION.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/05_CONFIDENCE.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/00_BERNOULLI.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/01_GEOMETRIC.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/02_BINOMIAL.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/03_UNIFORM.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/04_NORMAL.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/01_BIAS.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/02_DESIGN.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/03_HYPOTHESES.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/04_MEAN.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/05_PROPORTION.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/06_VARIANCE.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/01_theurgy/01_palindromia/03_corpora.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Section II: Corpora</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-ii-i-definitions">Section II.I: Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus">Corpus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentence">Sentence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#word-length">Word Length</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intervention">Intervention</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-ii-ii-axioms">Section II.II: Axioms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorems">Theorems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-ii-iii-sentence-classes">Section II.III: Sentence Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#admissible-sentences">Admissible Sentences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invertible-sentences">Invertible Sentences</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="section-ii-corpora">
+<span id="section-ii"></span><h1>Section II: Corpora<a class="headerlink" href="#section-ii-corpora" title="Link to this heading">#</a></h1>
+<p>The work so far has formally constructed a system for representing the first two levels of artifacts from a natural language, Characters (Alphabet) and Words (Language), without appealing to their interpretation in any way except insofar that it takes a stance on the <em>existence</em> of an interpretation. As the analysis moves up the chain of linguistic artifacts to the next highest level, Sentences (Corpus), it is tempting to start incorporating semantic features into the theory. However, the objective is to derive palindromic conditions independent of a particular semantic interpretation. Therefore, as the analysis proceeds, special care will be given to the definition of a <em>Sentence</em> and its <em>Corpus</em>.</p>
+<section id="section-ii-i-definitions">
+<span id="section-ii-i"></span><h2>Section II.I: Definitions<a class="headerlink" href="#section-ii-i-definitions" title="Link to this heading">#</a></h2>
+<p>The next level of the semantic hierarchy will now be constructed. Many of the definitions made in this subsection will not be referenced until the final section of this work, when the fundamental properties of Palindromes are established. They are given here, due to the natural progression of concept formation dictating they be defined after the notion of Sentence and Corpus is introduced.</p>
+<section id="corpus">
+<span id="id1"></span><h3>Corpus<a class="headerlink" href="#corpus" title="Link to this heading">#</a></h3>
+<p>The entire system so far constructed relies on the domain of <strong>S</strong>, the set of all Strings that can be formed from an Alphabet of Characters <span class="math notranslate nohighlight">\(\Sigma\)</span>. Attention has been confined to those entities that satisfy the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>.</p>
+<p>In other words, the definitions and theorems so far introduced deal with linguistics entities that do not possess a Delimiter Character. Delimiters will be of central importance in describing palindromic structures, because Delimiters play a central role in the definition of the linguistic entity that will ultimately allow a palindrome to be rigorously defined, a <em>Sentence</em>. With that in mind, the concepts and definitions that pave the way to an explication of <em>Sentence</em> start with the definition of a <em>Corpus</em>.</p>
+<p id="definition-2-1-1"><strong>Definition 2.1.1: Corpus</strong> The Corpus of Language <strong>L</strong> is denoted by <strong>C</strong><sub>L</sub>. The Corpus set represents a collection of grammatically valid and semantically meaningful Strings. ∎</p>
+<p>From the definition, it can easily be seen the Corpus of a Language is a subset of the set of all possible Strings, <strong>S</strong></p>
+<div class="math notranslate nohighlight">
+\[C_L \subset S\]</div>
+<p>This aligns with the idea that the domain of entities in this formal system is defined either as a type of <em>element</em> of <strong>S</strong> or a type of <em>subset</em> of <strong>S</strong>.</p>
+</section>
+<section id="sentence">
+<span id="id2"></span><h3>Sentence<a class="headerlink" href="#sentence" title="Link to this heading">#</a></h3>
+<p>Before proceeding with the definition of Sentences, some notation is introduced,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Sentences (<em>ᚠ</em>, <em>ᚢ</em>, <em>ᚦ</em>, … ): Anglo-Saxon (<em>Old English</em>) Runes represent a Sentence. Subscripts will occassionally be used in conjunction with Anglo-Saxon letters to denote Sentences, (<em>ᚠ</em><sub>1</sub>, <em>ᚠ</em><sub>2</sub>, … ).</p></li>
+<li><p>Sentential Variables (<em>ζ</em>, <em>ξ</em>): The lowercase Greek letter Zeta and Xi are reserved for indeterminate Sentences, i.e. Sentential Variables. Subscripts will occassionally be used in conjunction with Zeta to denote Sentential Variables, (<em>ζ</em><sub>1</sub>, <em>ζ</em><sub>2</sub>, …)</p></li>
+</ol>
+</div></blockquote>
+<p id="definition-2-1-2"><strong>Definition 2.1.2: Sentence</strong> A Sentence in Language <strong>L</strong> is an element of its Corpus. ∎</p>
+<div class="math notranslate nohighlight">
+\[ᚠ \in C_L\]</div>
+<p>From <a class="reference internal" href="#definition-2-1-1"><span class="std std-ref">Definition 2.1.1</span></a> and <a class="reference internal" href="#definition-2-1-2"><span class="std std-ref">Definition 2.1.2</span></a>, it follows that a Sentence is a String,</p>
+<div class="math notranslate nohighlight">
+\[ᚠ \in S\]</div>
+<p>It should be stressed, as had been made clear in previous comments, that Characters, Words and Sentences in the current formulation are elements of the same underlying set, the set of all Strings. This connection in the domain of Characters, Words and Sentences is what will allow the analysis to begin to construct the outline of palindromic structures in a Language and Corpus. To reiterate this hierarchy and precisely state how all the entities in this formal system are related,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Strings: ι, α, ζ</p></li>
+<li><p>Sets: Σ, L, <span class="math notranslate nohighlight">\(C_L\)</span></p></li>
+<li><p>Character Membership: <span class="math notranslate nohighlight">\(\iota \in \Sigma\)</span></p></li>
+<li><p>Word Membership: <span class="math notranslate nohighlight">\(\alpha \in L\)</span></p></li>
+<li><p>Sentence Membership: <span class="math notranslate nohighlight">\(\zeta \in C_L\)</span></p></li>
+</ol>
+</div></blockquote>
+<p>To clarify the relationship between Strings, Characters, Alphabets, Words, Languages, Sentences and Corpus in plain language,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>All Characters, Words and Sentences are Strings.</p></li>
+<li><p>All Alphabets, Languages and Corpuses are sets of Strings.</p></li>
+<li><p>All Characters belong to an Alphabet.</p></li>
+<li><p>All Words belong to a Language.</p></li>
+<li><p>All Sentences belong to a Corpus.</p></li>
+</ol>
+</div></blockquote>
+<p>This web of categorical relations represents the hierarchy of linguistic entities within the formal system.</p>
+<figure class="align-default" id="id7">
+<div class="graphviz"><img src="../../_images/graphviz-53752826e6296be303c0025831f3e626aa92086a.png" alt="Semantic Hierarchy Diagram" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">A diagram of the semantic hierarchy</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="notation">
+<span id="sentence-notation"></span><h3>Notation<a class="headerlink" href="#notation" title="Link to this heading">#</a></h3>
+<p>In <a class="reference internal" href="02_language.html#section-i-i"><span class="std std-ref">Section I.I</span></a>, notation was introduced for representing Strings a a sets of ordered Characters. This form of representation provided a formal method for specifying various syntactical conditions and properties of Strings and Words. In particular, this method allowed a formal definition of String Length.</p>
+<p>In a similar way, a method of representing Sentences as sets will now be constructed to enrich the symbolic form given to a Sentence in this formal system. Since all Sentences are Strings, all Sentences have Character-level set or sequence representations, by the Emptying Algorithm. The Discovery Axiom W.1 allows the definition of an algorithm to parse the Words of a Sentence based purely on the presence of Delimiters.</p>
+<p id="definition-2-1-3"><strong>Definition 2.1.3: Word-Level Set Representation</strong></p>
+<p>Let <em>ζ</em> be a Sentence in a Corpus <span class="math notranslate nohighlight">\(C_L\)</span>. Let <strong>Ζ</strong> be the Character-level set representation of <em>ζ</em>, i.e. an ordered sequence of Characters from the Alphabet <strong>Σ</strong>.</p>
+<p>The Word-level set representation of <em>ζ</em>, denoted by <span class="math notranslate nohighlight">\(W_{\zeta}\)</span>, is defined as the ordered set of words obtained by splitting <strong>Ζ</strong>  at each Delimiter Character, <em>σ</em>. Formally, <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> is constructed using the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a>.</p>
+<p id="algorithm-2"><strong>Algorithm 2: Delimiting Algorithm</strong></p>
+<p>Consider a particular Sentence in the Corpus, <em>ᚠ</em>. The <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> consists of initializing the values of several local variables and then iterating over the Character level set representation of a Sentence <em>ᚠ</em> until the Characters have been exhausted. The exact details are given below.</p>
+<p>The <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> takes a Sentence <em>ᚠ</em> from a Corpus as input, and applies the Emptying Algorithm to it to generate a sequence of non-Empty Characters. It then initializes a set <strong>W</strong><sub>ᚠ</sub> and index for the Words it will add to <strong>W</strong><sub>ᚠ</sub> . The algorithm iterates the index and constructs the Word-level representation by removing the Delimiter character. The <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> is formally defined below.</p>
+<aside class="topic">
+<p class="topic-title">Algorithm Delimit(t: String)</p>
+<p># Input: A string t
+# Output: An ordered set W representing the Word-level set representation of t</p>
+<p># Initialization
+## Character-level representation of ᚠ</p>
+<ol class="arabic simple">
+<li><p>ᚠ ← Empty(ᚠ)</p></li>
+</ol>
+<p>## Initialize empty set to hold Word-level representation of ᚠ</p>
+<ol class="arabic simple" start="2">
+<li><p>W ← ∅</p></li>
+</ol>
+<p>## Initialize a counter j for Words</p>
+<ol class="arabic simple" start="3">
+<li><p>j ← 1</p></li>
+</ol>
+<p>## Initialize a counter i for characters</p>
+<ol class="arabic simple" start="4">
+<li><p>i ← 1</p></li>
+</ol>
+<p>## Initialize an empty string</p>
+<ol class="arabic simple" start="5">
+<li><p>t ← ε</p></li>
+</ol>
+<p># Iteration</p>
+<ol class="arabic" start="6">
+<li><p>While i ≤ l(ᚠ):</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p>If ᚠ[i] ≠ σ:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>t ← (t)(ᚠ[i])</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Else:</p>
+<blockquote>
+<div><ol class="lowerroman">
+<li><p>If l(t) &gt; 0:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Apply Basis Clause of <a class="reference internal" href="02_language.html#definition-1-1-1"><span class="std std-ref">Definition 1.1.1</span></a> to t.</p></li>
+<li><p>W ← W ∪ { (j, t) }</p></li>
+<li><p>j ← j + 1</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>t ← ε</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>i ← i + 1</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<p># Finalization</p>
+<ol class="arabic" start="7">
+<li><p>If l(t) &gt; 0:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>W ← W ∪ { (j, t) }</p></li>
+<li><p>j ← j+1</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Return W ∎</p></li>
+</ol>
+</aside>
+<figure class="align-default" id="id8">
+<div class="graphviz"><img src="../../_images/graphviz-00f85397f191682bcd0a20bc7f1896332528cdef.png" alt=":ref:`Delimiting Algorithm <algorithm-2>` Diagram" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">A diagram of the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a></span><a class="headerlink" href="#id8" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Note the String which is initialized to hold the Sentence Characters in step <em>5</em> is set to an initial value of the Empty Character in the Initialization Block. Also note, the application of the Basis Clause in step <em>1.b.i.1</em> ensures this Empty Character is removed after each Word has been processed. This is required, because otherwise the last Word in the Word-level representation will have an Empty Character, which violates the results of <a class="reference internal" href="02_language.html#theorem-1-2-3"><span class="std std-ref">Theorem 1.2.3</span></a>.</p>
+<p>The essence of the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> lies in the interplay of the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a> and <a class="reference internal" href="#definition-2-1-2"><span class="std std-ref">Definition 2.1.2</span></a> of a Sentence as a semantic String. <a class="reference internal" href="#definition-2-1-2"><span class="std std-ref">Definition 2.1.2</span></a>, like <a class="reference internal" href="02_language.html#definition-1-2-2"><span class="std std-ref">Definition 1.2.2</span></a>, ensures all Sentences and Words are semantic. The only feature that differentiates Sentence and Words in their <em>“semanticality”</em> is the presence of a Delimiter (from a syntactical perspective, at any rate). Therefore, by the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, the Words which a Sentence contains must be exactly those Strings which are separated by a Delimiter Character.</p>
+<p>This formulation has the advantage of not taking a stance on the semantics of a particular language. It allows for the discovery of Words in a Language through the simple boundary of Delimiters within the Sentences of its Corpus.</p>
+<p>The following examples show how to apply the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> to construct the Word-level representation of a Sentence.</p>
+<p><strong>Example</strong></p>
+<p>Let <em>ᚠ = (𝔞𝔟)(σ)(ε)(σ)(𝔟𝔞)</em>. Note <em>l(ᚠ) = 6</em>.</p>
+<p><strong>Initialization</strong></p>
+<p>During initialization, the Character-level set representation of <em>ᚠ</em> is constructed with <a class="reference internal" href="02_language.html#definition-1-1-2"><span class="std std-ref">Definition 1.1.2</span></a> using the Emptying Algorithm, which strips it of its Empty Characters,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad {ᚠ} = (\mathfrak{a},\mathfrak{b},\sigma,\sigma,\mathfrak{b},\mathfrak{a})\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad W_{ᚠ} = \emptyset\]</div>
+<div class="math notranslate nohighlight">
+\[3. \quad j = 1\]</div>
+<p><strong>Iteration</strong></p>
+<p>The following list shows the result of the algorithm after each iteration,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad j = 2, i = 4, t = \mathfrak{ab}, W_{ᚠ} = \{ (1, \mathfrak{ab}) \}\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad j = 2, i = 5, t = \sigma, W_{ᚠ} = \{ (1, \mathfrak{ab}) \}\]</div>
+<div class="math notranslate nohighlight">
+\[3. j\quad  = 3, i = 7, t = \mathfrak{ba}, W_{ᚠ} = \{ (1, \mathfrak{ab}), (2, \mathfrak{ba}) \}\]</div>
+<p>At which point <span class="math notranslate nohighlight">\(i &gt; l(ᚠ)\)</span>, so the algorithm halts and returns,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad W_{ᚠ} = \{ (1, \mathfrak{ab}), (2, \mathfrak{ba}) \}\]</div>
+<p>∎</p>
+<p><strong>Example</strong></p>
+<p>Let <em>ᚠ = “the cat meows”</em>. Then the Character level representation of <em>ᚠ</em> is given by,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad {\largeᚠ} = \{ (1, \text{&quot;t&quot;}), (2, \text{&quot;h&quot;}), (3,\text{&quot;e&quot;}), (4,\sigma), (5,\text{&quot;c&quot;}), (6,\text{&quot;a&quot;}), (7,\text{&quot;t&quot;}), (8,\sigma), (9,\text{&quot;m&quot;}), (10,\text{&quot;e&quot;}), (12,\text{&quot;o&quot;}), (13,\text{&quot;w&quot;}), (14,\text{&quot;s&quot;}) \}\]</div>
+<p>Then, applying the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a>, its Word-level representation is constructed,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad W_{ᚠ} = \{ (1, \text{&quot;the&quot;}), (2, \text{&quot;cat&quot;}), (3, \text{&quot;meows&quot;}) \}\]</div>
+<p>∎</p>
+<p>Similar to the Character-level set representation of String, where the Character position is encoded into the first coordinate, the Word-level set representation of a String encodes the presence of Delimiters through its first coordinate. Once Word Length is defined in the next section, a notational shortcut similar to Character Index Notation defined in <a class="reference internal" href="02_language.html#definition-1-1-5"><span class="std std-ref">Definition 1.1.5</span></a> will use this method of Sentence representation to simplify many of the upcoming proofs.</p>
+<p>There is a subtle assumption being made in the idea a Sentence can be reduced to a sequence of ordered Words that deserves special mention, as this perhaps reasonable assumption implicitly elides a question of much greater complexity regarding where precisely the semantic information of a Sentence resides. To see what is meant by this, consider the three sentences from Latin,</p>
+<ul class="simple">
+<li><p>Puella canem videt. (Girl dog sees)</p></li>
+<li><p>Canem puella videt. (Dog girl sees)</p></li>
+<li><p>Videt puella canem. (Sees girl dog)</p></li>
+</ul>
+<p>Latin, like many other natural languages, uses declensions to imbue words with syntactic functions. In some respect, all three of these sentences could be considered the <em>same</em> sentence, as the order of the words is not the primary bearer of semantic information; the suffixes do all of the work. While the order of words lends itself to the <em>voice</em> and <em>tone</em> of the sentence, the meaning of the sentence does not primarily emerge through its Word order. Similar cases exist in any natural language that uses declensions to modify the syntactic function of words, such as Greek.</p>
+<p>The current formal system treats these sentences in Latin as distinct Sentences. If the Latin sentences in this example are to be identified as representatives of the same semantic <em>“token”</em>, this cannot occur on the Sentence level of this formal system’s linguistic hierarchy. This example suggests Sentences are not the final level of the hierarchy, and that to find the source of meaning in a Sentence, another level must be constructed on top of it capable of identifying these different manifestations as the same <em>“token”</em>.</p>
+<p>This example does not invalidate the analysis, but it does introduce subtlety that must be appreciated. These concerns must be kept in mind while the formal notion of a Sentence is developed.</p>
+</section>
+<section id="word-length">
+<span id="id3"></span><h3>Word Length<a class="headerlink" href="#word-length" title="Link to this heading">#</a></h3>
+<p>The notion of String Length <em>l(s)</em> was introduced in <a class="reference internal" href="02_language.html#section-i-i"><span class="std std-ref">Section I.I</span></a> as a way of measuring the number of non-Empty Characters in a String <em>s</em>. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different <em>“spatial”</em> dimension in the domain of a Language and its Corpus: <em>Word Length</em>.</p>
+<p>Intuitively, the length of a Sentence is the number of Words it contains. Since there is no analogue of <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a> for Sentences (nor should there be), this means Sentences may contain Delimiter Characters. The Words of a Language are separated by Delimiters in the Sentences of its Corpus.</p>
+<p><a class="reference internal" href="#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a> provides a way of dispensing with the Delimiter Character in Sentences, while still retaining the information they provides about the demarcation of Words through the first coordinate of a Sentence’s Word-level representation. With the Word-level set representation of Sentence in hand, it is a simple matter to define the notion of Word Length in the formal system.</p>
+<p id="definition-2-1-4"><strong>Definition 2.1.4: Word Length</strong></p>
+<p>Let <em>ζ</em> be a Sentence in a <strong>C</strong><sub>L</sub>. Let <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> be the Word-level set representation of <em>ζ</em>, as defined in <a class="reference internal" href="#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>. The Word Length of the Sentence <em>ζ</em>, denoted by <span class="math notranslate nohighlight">\(\Lambda(\zeta)\)</span>, is defined as the cardinality of the set <span class="math notranslate nohighlight">\(W_{\zeta}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\Lambda(\zeta) = | W_{\zeta} |\]</div>
+<p>∎</p>
+<p><strong>Example</strong></p>
+<p>Consider the Sentence <em>ᚠ = “the dog runs”</em>. Its Character-level set representation would be given by,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \largeᚠ = \{ (0,\text{&quot;t&quot;}), (1,\text{&quot;h&quot;}), (2,\text{&quot;e&quot;}), (4,\sigma), (5, \text{&quot;d&quot;}), (6, \text{&quot;o&quot;}), (7, \text{&quot;g&quot;}), (8, \sigma), (9, \text{&quot;r&quot;}), (10, \text{&quot;u&quot;}), (11,\text{&quot;n&quot;}), (12,\text{&quot;s&quot;}) \}\]</div>
+<p>Its Word-level set representation would be given by,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad W_{ᚠ} = \{ (1, \text{&quot;the&quot;}), (2, \text{&quot;dog&quot;}), (3, \text{&quot;runs&quot;}) \}\]</div>
+<p>Therefore, the length of the sentence is:</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Lambda(ᚠ) = | W_{ᚠ} | = 3\]</div>
+<p>Note, in this example,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad l(ᚠ) = 12\]</div>
+<p>∎</p>
+<p>This example demonstrates the essential difference in the notions of length that have been introduced. It is worthwhile to clarify the distinction between these two conceptions.</p>
+<p>Let <em>t</em> be a String with Character-level representation <strong>T</strong> and Word-level representation <strong>W</strong><sub>t</sub>. The hierarchy of its “spatial” dimensions is given below, in order of greatest to least (this fact is proven in <a class="reference internal" href="04_structures.html#section-iii-ii"><span class="std std-ref">Section III.II</span></a> with <a class="reference internal" href="04_structures.html#theorem-3-2-8"><span class="std std-ref">Theorem 3.2.8</span></a> ). Terminology is introduced in parenthesis to distinguish these notions of length,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>l(t) (String Length): The number of non-Empty Characters contained in a String.</p></li>
+<li><p>Λ(t) (Word Length): The number of Words contained in a String</p></li>
+</ul>
+</div></blockquote>
+<p>Note the first level is purely syntactical. Any String <em>t</em> will have a String Length <em>l(t)</em>. However, not every String possesses Word Length, <em>Λ(s)</em>. Word Length contains semantic information. While the presence of Word Length does not necessarily mean the String is semantically coherent (see <a class="reference internal" href="#definition-2-2-1"><span class="std std-ref">Definition 2.2.1</span></a> for a precise definition of <em>semantic coherence</em>), e.g. “asdf dog fdsa”, Word Length does signal an <em>extension</em> of Strings into the semantic domain.</p>
+<p>Word Length can be used to simplify some of the complex notation the formal system has accumulated. Similar to the Character Index Notation, a way of referring to Words in Sentences within propositions without excessive quantification is now introduced through Word Index notation.</p>
+<p id="definition-2-1-5"><strong>Definition 2.1.5: Word Index Notation</strong></p>
+<p>Let <em>ζ</em> be a Sentence with Word level set representation, <span class="math notranslate nohighlight">\(W_{\zeta}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[W_{\zeta} = (\alpha_1, \alpha_r, ... , \alpha_{\Lambda(\zeta)})\]</div>
+<p>Then for any <em>j</em> such that <span class="math notranslate nohighlight">\(1 \leq j \leq \Lambda(\zeta)\)</span>, the Word at index <em>j</em>, denoted <em>ζ{j}</em>, is defined as the Word which satisfies the following formula,</p>
+<div class="math notranslate nohighlight">
+\[\forall (j, \alpha_j) \in W_{\zeta}: \zeta\{j\} = \alpha_j\]</div>
+<p>∎</p>
+<p>The following theorem uses this notation to proves an intuitive concept: the total number of Characters in all of the Words in a Sentence must exceed the number of Words in a Sentence (since there are no Words with a negative amount of Characters).</p>
+<p id="theorem-2-1-1"><strong>Theorem 2.1.1</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_{L}:  \sum_{j=1}^{\Lambda(\zeta)} l(\zeta\{j\}) \geq \Lambda(\zeta)\)</span></p>
+<p>This theorem can be stated in natural language as follows: For any sentence <em>ζ</em> in Corpus <strong>C</strong><sub>L</sub>, the sum of the String Lengths of the Words in <em>ζ</em> is always greater than the Word Length of <em>ζ</em>.</p>
+<p>Assume <span class="math notranslate nohighlight">\(\zeta \in C_L\)</span>. Let <em>j</em> be a natural number such that <span class="math notranslate nohighlight">\(1 ≤ j ≤ \Lambda(\zeta)\)</span></p>
+<p>For each ordered Word <em>ζ{j}</em> in <em>ζ</em>, its String Length <em>l(ζ{j})</em> must be greater 0 by the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a> and <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>. Therefore, since each Word contributes at least a String Length of 1, the sum of the String Lengths <em>l(ζ{j})</em> must be greater than or equal to <em>Λ(ζ)</em>. ∎</p>
+<p>Word Length and Word Index Notation can be used to define the notion of <em>Boundary Words</em>, which will be utilized in the main results about Palindromes.</p>
+<p>To illustrate another simplification effected by Index notation in formal proofs about Language, consider how laborious the proof of the following <a class="reference internal" href="#theorem-2-1-1"><span class="std std-ref">Theorem 2.1.2</span></a> would be without the ability to refer to Characters embedded in Strings and Words embedded in Sentences through Index notation.</p>
+<p id="theorem-2-1-2"><strong>Theorem 2.1.2</strong> <span class="math notranslate nohighlight">\(\forall \zeta, \xi \in C_{L}: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)\)</span></p>
+<p>Let <em>ζ</em> and <em>ξ</em> be arbitrary Sentences in <strong>C</strong><sub>L</sub>. Let <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> and <strong>W</strong><sub>ξ</sub> be the Word-level representations of <em>ζ</em> and <em>ξ</em>, respectively. By Definition 2.1.4,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \Lambda(\zeta) = | W_{\zeta} |\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \Lambda(\zeta) = | W_{\xi} |\]</div>
+<p>Let <em>ζξ</em> be the concatenation of <em>ζ</em> and <em>ξ</em>. When <em>ζ</em> is concatenated to <em>ξ</em>, there are several possible cases to consider.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ζ[l(ζ)] = σ, ξ[1] = σ</p></li>
+<li><p>ζ[l(ζ)] = σ, ξ[1] ≠ σ</p></li>
+<li><p>ζ[l(ζ)] ≠ σ, ξ[1] = σ</p></li>
+<li><p>ζ[l(ζ)] ≠ σ, ξ[1] ≠ σ</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Case 1 - 3</strong>: In each of theses cases, the Words of <em>ζ</em> and the Words of <em>ξ</em> are still separated by at least one Delimiter. Therefore, no new Word is formed during concatenation, and the words in <em>ζξ</em> are simply the words of <em>ζ</em> followed by the words of <em>ξ</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).\]</div>
+<p><strong>Case 4</strong>: <span class="math notranslate nohighlight">\(\zeta[l(\zeta)] \neq \sigma, \xi[1] \neq \sigma\)</span></p>
+<p>In this case, a new Word may be formed during concatenation, but only if <em>ζ{Λ(ζ)}</em> concatenated with <em>ξ{1}</em> belongs to L (i.e., <em>(ζ{Λ(ζ)})(ξ{1})</em> if it is a compound Word). Let <em>t</em> be the String such,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad t = (\zeta\{\Lambda(\zeta)\})(\xi\{1\})\]</div>
+<p>This result can be expressed,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad t \in L \to \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi) - 1.\]</div>
+<div class="math notranslate nohighlight">
+\[6. \quad t \notin L \to \Lambda(\zeta\xi) = \Lambda(\zeta) + \Lambda(\xi).\]</div>
+<p>In all cases,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi).\]</div>
+<p>Since <em>ζ</em> and <em>ξ</em> were arbitrary sentences, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \forall \zeta, \xi \in C_L: \Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)\]</div>
+<p>∎</p>
+<p>Word Length is fundamentally different to String Length with respect to the operation of concatenation. In <a class="reference internal" href="02_language.html#theorem-1-1-1"><span class="std std-ref">Theorem 1.1.1</span></a>, it was shown String Length sums over concatenation. <a class="reference internal" href="#theorem-2-1-2"><span class="std std-ref">Theorem 2.1.2</span></a> demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the ability of concatenation to destroy semantic content.</p>
+</section>
+<section id="intervention">
+<span id="id4"></span><h3>Intervention<a class="headerlink" href="#intervention" title="Link to this heading">#</a></h3>
+<p>Colloquially, in the Sentence, <em>“never a dull day”</em>, the ordered Characters <em>“a”</em>,*”d”<em>,</em>”u”<em>, *”l”</em>, <em>“l”</em> are between the Words <em>“never”</em> and <em>“day”</em>. The concept of <em>Intervention</em> is introduced into the formal system to explicate this everyday notion of <em>“betweenness”</em>. A precise definition of what it means for a Character to <em>intervene</em> two Words in a Sentence is given using the operation of Delimitation introduced in <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>.</p>
+<p id="definition-2-1-6"><strong>Definition 2.1.6: Intervention</strong></p>
+<p>Let <em>ζ</em> be a Sentence in <span class="math notranslate nohighlight">\(C_L\)</span> . The Character <em>ζ[k]</em> is said to <em>intervene</em> the Words <em>ζ{i}</em> and <em>ζ{j}</em>, denoted as <em>(i/k/j)</em><sub>ζ</sub>, if the following condition holdS</p>
+<div class="math notranslate nohighlight">
+\[l(D\Pi_{x=1}^{i} \zeta(x)) &lt; k &lt; l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1\]</div>
+<p>∎</p>
+<p>The meaning of <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a> is not immediately intuitive, so a an explanation and thorough example are now presented to show how the definition corresponds to the common-sense notion of a Character falling between two Words in a Sentence.</p>
+<p>Analyzing each component of the inequality in <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(l(D\Pi_{x=1}^{i} \zeta(x))\)</span>: This represents the length of the Delimitation of the first i words of the sentence ζ. In simpler terms, it’s the length of the string up to and including the i-th word, including the delimiters.</p></li>
+<li><p>k: This is the index of the character in question, ζ[k].</p></li>
+<li><p><span class="math notranslate nohighlight">\(l(\zeta) - l(D\Pi_{x=1}^{Λ(ζ) - j + 1} \text{inv}(ζ)(x)) + 1\)</span>: This is the most complex component for the formula, so it deserves a finer analysis,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\Lambda(\zeta) - j + 1\)</span>: This calculates the index of the word in the reversed sentence that corresponds to the j:sup:<cite>th</cite> word in the original sentence.</p></li>
+<li><p><span class="math notranslate nohighlight">\(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)\)</span>: This is the Delimitation of the first <span class="math notranslate nohighlight">\((\Lambda(\zeta) - j + 1)\)</span> Words of the Inverse of the Sentence <em>ζ</em>. This will correspond to the beginning portion of the reversed Sentence up to the Word that corresponds to the j:sup:<cite>th</cite> Word in the original Sentence.</p></li>
+<li><p><span class="math notranslate nohighlight">\(l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x))\)</span>: This is the length of the initial portion of the reversed Sentence.</p></li>
+<li><p><span class="math notranslate nohighlight">\(l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x))\)</span>: This subtracts the length of the initial portion of the reversed sentence from the total length of the original sentence. This gives us the length of the remaining portion of the original sentence, starting from the character after the word corresponding to j in the original sentence.</p></li>
+<li><p><span class="math notranslate nohighlight">\(l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1\)</span>: Finally, add 1 to get the index of the first Character after the word corresponding to j in the original sentence.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ul>
+<p>To aid in the comprehension of the concept being captured with Definition 2.1.6, the following example shows how to calculate an Intervention.</p>
+<p><strong>Example</strong></p>
+<p>Let <em>ᚠ = “repaid a regal leper”</em>. Note the String and Word Lengths are given by,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad l(ᚠ) = 20\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \Lambda(ᚠ) = 4\]</div>
+<p>The Word-level representation of this Sentence is given by,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad W_{ᚠ} = \{ (1, \text{&quot;repaid&quot;}), (2, \text{&quot;a&quot;}), (3, \text{&quot;regal&quot;}), (4, \text{&quot;leper&quot;}) \}\]</div>
+<p>Note <span class="math notranslate nohighlight">\(\text{inv}(ᚠ) = \text{&quot;repel lager a diaper&quot;}\)</span>. This is an example of an Invertible Sentence that maintains <em>semantic coherence</em> (i.e. all of its inverted Words are Words in the Language; see <a class="reference internal" href="#definition-2-2-1"><span class="std std-ref">Definition 2.2.1</span></a> in the next subsection for a more formal definition of <em>semantic coherence</em>), but lacks <em>admissibility</em> (i.e. it is not a grammatical or syntactical sentence; see <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a> for a formal definition of <em>admissibility</em>.) The Word-level representation of the Inverse is given by,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad W_{\text{inv}(ᚠ)} = \{ (1, \text{&quot;repel&quot;}), (2, \text{&quot;lager&quot;}), (3, \text{&quot;a&quot;}), (4, \text{&quot;diaper}) \}\]</div>
+<p>To see how <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a> can be used to assert a Character falls between two Words in a Sentence, calculate the following Delimitations and String Lengths.</p>
+<p>Consider the words <em>“a”</em> and <em>“leper”</em>. <em>“a”</em> corresponds to the Word Index 2,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad ᚠ\{2\} = \text{&quot;a&quot;}\]</div>
+<p>Calculating the left-hand side of the inequality in <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad D\Pi_{x=1}^{2} ᚠ(x) = \text{&quot;repaid a&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[7. \quad l(D\Pi_{x=1}^{2} ᚠ(x)) = 8\]</div>
+<p>The String Length of this Delimitation is exactly equal to the Sentence Length <em>up to and including the Word at Index 2</em>. Now note <em>“leper”</em> occupies the Word Index 4,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad ᚠ\{4\} = \text{&quot;leper&quot;}\]</div>
+<p>This corresponds to a <span class="math notranslate nohighlight">\(j = 4\)</span> in <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>. The upperhand limit in the Delimitation on the right-hand side of the inequality in <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a> is given by,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \Lambda(ᚠ) - j + 1 = 4 -  4 + 1 = 1\]</div>
+<p>Therefore, the corresponding Delimitation of the Inverse Sentence for <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a> is given by,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad D\Pi_{x=1}^{1} \text{inv}(ᚠ)(x) = \text{&quot;repel&quot;}\]</div>
+<div class="math notranslate nohighlight">
+\[9 \quad l(D\Pi_{x=1}^{1} \text{inv}(ᚠ)(x)) = 5\]</div>
+<p>Working from the back of the Sentence, the String Length of this Delimitation is exactly equal to the Sentence Length <em>up to and including the Word at Index 4</em>. Calculating the right-hand side of the inequality in <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad l(ᚠ) - l(D\Pi_{x=1}^{1} \text{inv}(ᚠ)(x)) + 1 = 20 - 5 + 1 = 16\]</div>
+<p>By <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>, the Characters <em>ᚠ[k]</em> between the indices of 8 and 16 (exclusive) <em>intervene</em> <em>ᚠ{2}</em> and <em>ᚠ{4}</em>, namely,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ᚠ[9] = “ “</p></li>
+<li><p>ᚠ[10] = “r”</p></li>
+<li><p>ᚠ[11] = “e”</p></li>
+<li><p>ᚠ[12] = “g”</p></li>
+<li><p>ᚠ[13] = “a”</p></li>
+<li><p>ᚠ[14] = “l”</p></li>
+<li><p>ᚠ[15] = “ “</p></li>
+</ul>
+</div></blockquote>
+<p>Therefore,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((2/9/4)_{ᚠ}\)</span> (the <span class="math notranslate nohighlight">\(9^{\text{th}}\)</span> Character is between the second and fourth Word)</p></li>
+<li><p><span class="math notranslate nohighlight">\((2/10/4)_{ᚠ}\)</span> (the <span class="math notranslate nohighlight">\(10^{\text{th}}\)</span> Character is between the second and fourth Word)</p></li>
+<li><p>etc.</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-default" id="id9">
+<div class="graphviz"><img src="../../_images/graphviz-4bec52bb92f2bd12477912d35da18fc07da7c664.png" alt="Intervention Diagram" class="graphviz" /></div>
+<figcaption>
+<p><span class="caption-text">A diagram of the Intervention relation</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>∎</p>
+<p>As motivation for the first theorem on Interventions and a further clarification to show how Intervention and Delimitation are closely related, consider the following example.</p>
+<p><strong>Example</strong></p>
+<p>Let <em>ᚠ = “the world divides into facts”</em>. Then</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \Lambda(ᚠ) = 5\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad l(ᚠ) = 28\]</div>
+<p>Consider what happens when the limits of the Delimitation of a Sentence and the Delimitation of its Inverse are such that <span class="math notranslate nohighlight">\(i = j\)</span> in the <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>. Let <span class="math notranslate nohighlight">\(i = j = 2\)</span>, i.e. consider the second Word in the Sentence, <em>“world”</em>. The relation of Intervention that obtains between <em>“world”</em> and itself should evaluate to false. In other words, no Characters intervene between a Word and itself.</p>
+<p>The Delimitation of the Sentence up to the Second Word is given by,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \Pi_{x=1}^{2} ᚠ(x) = \text{&quot;the world&quot;}\]</div>
+<p>The Delimitation of the Inverse Sentence up to the correspond index of the Second Word (e.g., <span class="math notranslate nohighlight">\(5 - 2 + 1 = 4\)</span>) is given by (Note the Inverse Sentence is not a Sentence in a Corpus, nor does it possess semantic coherence),</p>
+<div class="math notranslate nohighlight">
+\[4. \quad D\Pi_{x=1}^{5 - 2 + 1} \text{inv}(ᚠ(x)) = D\Pi_{x=1}^{4} \text{inv}(ᚠ(x)) = \text{&quot;stcaf otni sedivid dlrow&quot;}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad l(D\Pi_{x=1}^{2} ᚠ(x)) = 9\]</div>
+<div class="math notranslate nohighlight">
+\[6. \quad l(D\Pi_{x=1}^{4} \text{inv}(ᚠ(x))) = 24\]</div>
+<p>The sum of these String Lengths is given by,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad l(D\Pi_{x=1}^{2} ᚠ(x)) + l(D\Pi_{x=1}^{4} \text{inv}(ᚠ(x))) = 9 + 24 = 33\]</div>
+<p>Since the total String Length of both Delimitation exceeds the String Length of the entire Sentence, there does not exist a Character Index <em>k</em> such that <em>k</em> can be said to intervene the Word at index <span class="math notranslate nohighlight">\(i = j = 2\)</span>. ∎</p>
+<p>This example provides justification for the next theorem.</p>
+<p id="theorem-2-1-3"><strong>Theorem 2.1.3</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_{L}: \forall i, j \in N_{\Lambda(\zeta)}: i \neq k \to \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}\)</span></p>
+<p>This theorem can be stated in natural language as follows: For any Sentence in a Corpus, there exists a Character that intervenes two Words in the Sentence if and only the Words occupy different positions. Note this doesn’t exclude possibility the Words at different positions are the same Word.</p>
+<p>Let <em>ζ</em> be an arbitrary Sentence in Corpus <strong>C</strong><sub>L</sub> and let <em>i</em> and <em>j</em> be natural numbers such that,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in C_L\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad i, j \in N_{\Lambda(\zeta)}\]</div>
+<p>(→) Assume</p>
+<div class="math notranslate nohighlight">
+\[3. \quad i \neq j\]</div>
+<p>Without loss of generality (since the case <span class="math notranslate nohighlight">\(i &gt; j\)</span> is symmetrical), assume</p>
+<div class="math notranslate nohighlight">
+\[4. \quad i &lt; j\]</div>
+<p>By <a class="reference internal" href="#theorem-2-3-4"><span class="std std-ref">Theorem 2.3.4</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \zeta = D\Pi_{x=1}^{\Lambda(\zeta)} p(x)\]</div>
+<p>Where</p>
+<div class="math notranslate nohighlight">
+\[6. \quad p \in X_L(\Lambda(\zeta))`\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a> of Delimitation, this means</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \zeta = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{\Lambda(ζ)\})\]</div>
+<p>By step 5, <em>ζ{i}</em> comes before <em>ζ{j}</em> in the Sentence <em>ζ</em>. By the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, there must be at least one delimiter character between <em>ζ{i}</em> and <em>ζ{j}</em> because they are distinct Words in a valid Sentence.</p>
+<p>Let <em>σ</em> be a delimiter Character between <em>ζ{i}</em> and <em>ζ{j}</em>. Let <em>k be the index of this σ in the character-level representation of ζ (i.e., *ζ[k] = σ</em>).</p>
+<p>By the <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a> of Delimitations,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad l(D\Pi_{x=1}^{i} \zeta(x))\]</div>
+<p>Will give the index of the last character of ζ{i}. Since σ comes after ζ{i}, it follows,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad l(D\Pi_{x=1}^{i} \zeta(x)) &lt; k\]</div>
+<p>Similarly,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1\]</div>
+<p>Gives the index of the first Character after the Word corresponding to <em>ζ{j}</em> in the original sentence. Since σ comes before this character, it follows,</p>
+<div class="math notranslate nohighlight">
+\[11. \quad k &lt; l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1\]</div>
+<p>Therefore, by <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[12. \quad (i/k/j)_{\zeta}\]</div>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[13. \quad \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}\]</div>
+<p>(←) Assume a Character exists at index <em>n</em> in <em>ζ</em> such that it that intervenes <em>ζ{i}</em> and <em>ζ{j}</em>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}\]</div>
+<p>By <a class="reference internal" href="#definition-2-1-6"><span class="std std-ref">Definition 2.1.6</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad l(D\Pi_{x=1}^{i} \zeta(x)) &lt; n &lt; l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - j + 1} \text{inv}(\zeta)(x)) + 1\]</div>
+<p>Assume, for the sake of contradiction, that <span class="math notranslate nohighlight">\(i = j\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[3. \quad l(D\Pi_{x=1}^{i} \zeta(x)) &lt; n &lt; l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1\]</div>
+<p>Now, consider the term <span class="math notranslate nohighlight">\(l(D\Pi_{x=1}^{i} \zeta(x))\)</span>. This represents the String Length of the Delimitation of the first <em>i</em> words of <em>ζ</em>. By the <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a> of Delimitations, this includes the lengths of the first <em>i</em> words and the lengths of the <span class="math notranslate nohighlight">\((i - 1)\)</span> delimiters between them.</p>
+<p>Similarly, consider the term <span class="math notranslate nohighlight">\(l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))\)</span>. This represents the String Length of the Delimitation of the first <em>Λ(ζ) - i + 1</em> words of <em>inv(ζ)</em>.  Since <em>inv(ζ)</em> has the same words as <em>ζ</em> but inverted and in reverse order, this is equivalent to the String Length of the uninverted Sentence up to the <em>i</em><sup>th</sup> word of <em>ζ</em>, measured from the last Character in the String.</p>
+<p>The sum of the String Lengths of these two portions of the Sentence <em>ζ</em> is always greater than the String Length of the Sentence,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad l(D\Pi_{x=1}^{i} \zeta(x)) + l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) &gt;  l(\zeta)\]</div>
+<p>This follows from the fact that these two portions of ζ are overlapping since both  include terms for <em>ζ{i}</em> (<span class="math notranslate nohighlight">\(\text{inv}(\zeta)\{\Lambda(\zeta) - i + 1\}\)</span> would be the corresponding Word in the Delimitation of the Inverse). From step 4, it then follows,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad l(D\Pi_{x=1}^{i} \zeta(x)) &gt; l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x))\]</div>
+<p>Adding 1 to both sides maintains the inequality in step 5,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad l(D\Pi_{x=1}^{i} \zeta(x)) + 1 &gt; l(\zeta) - l(D\Pi_{x=1}^{\Lambda(\zeta) - i + 1} \text{inv}(\zeta)(x)) + 1\]</div>
+<p>Combining this with the left-hand side of the inequality in step 5, we get:</p>
+<div class="math notranslate nohighlight">
+\[7. \quad l(D\Pi_{x=1}^{i} \zeta(x)) &lt; n &lt; l(D\Pi_{x=1}^{i} \zeta(x)) + 1\]</div>
+<p>But String Lengths are integers, and by the laws of arithmetic, there cannot exists a natural number between two numbers that are successors of one another. A contradiction has been dervied. Therefore, the assumption that <span class="math notranslate nohighlight">\(i = j\)</span> must be false.</p>
+<div class="math notranslate nohighlight">
+\[8. \quad i \neq j.\]</div>
+<p>With both directions of the equivalence proven, since <em>ζ</em>, <em>i</em>, and <em>j</em> were arbitrary, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \forall \zeta \in C_L: \forall i, j \in N_{\Lambda(zeta)}: i \neq j ↔ \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}\]</div>
+<p>∎</p>
+</section>
+</section>
+<section id="section-ii-ii-axioms">
+<span id="section-ii-ii"></span><h2>Section II.II: Axioms<a class="headerlink" href="#section-ii-ii-axioms" title="Link to this heading">#</a></h2>
+<p>In <a class="reference internal" href="02_language.html#section-i"><span class="std std-ref">Section I</span></a>, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.</p>
+<p>Note the Discovery Axiom has been revised to employ Character Index notation.</p>
+<p id="axiom-c0-2"><strong>Axiom C.0: The Equality Axiom</strong></p>
+<div class="math notranslate nohighlight">
+\[1. \quad \forall \iota \in \Sigma: \iota = \iota\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall \iota, \nu \in \Sigma: \iota = \nu ↔ \nu = \iota\]</div>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall \iota, \nu, \omicron \in \Sigma: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicron)\]</div>
+<p>∎</p>
+<p id="axiom-c1-2"><strong>Axiom C.1: The Character Axiom</strong></p>
+<div class="math notranslate nohighlight">
+\[\forall \iota \in \Sigma: \iota \in S\]</div>
+<p>∎</p>
+<p id="axiom-w1-2"><strong>Axiom W.1: The Discovery Axiom</strong></p>
+<div class="math notranslate nohighlight">
+\[\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]\]</div>
+<p>∎</p>
+<p id="axiom-s1"><strong>Axiom S.1: The Duality Axiom</strong></p>
+<div class="math notranslate nohighlight">
+\[( \forall \alpha \in L: \exists \zeta \in C_L: \alpha \subset_s \zeta ) ∧ ( \forall \zeta \in C_L: \exists \alpha \in L: \alpha \subset_s \zeta )\]</div>
+<p>∎</p>
+<p id="axiom-s2"><strong>Axiom S.2: The Extraction Axiom</strong></p>
+<div class="math notranslate nohighlight">
+\[\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L\]</div>
+<p>∎</p>
+<p>Two new axioms, the <a class="reference internal" href="#axiom-s1"><span class="std std-ref">Duality Axiom S.1</span></a> and the <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Extraction Axiom S.2</span></a>, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language).</p>
+<p>To briefly summarize the axioms previously introduced: The system <em>“initializes”</em> with the assumption of an equality relation and the selection of an Alphabet <strong>Σ</strong>. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about <em>what</em> a Word is, except that it possesses a semantic character. To re-iterate, a Language and Corpus are fixed on top of the domain of all Strings outside of the system.</p>
+<p>The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories.</p>
+<p>The <a class="reference internal" href="#axiom-s1"><span class="std std-ref">Duality Axiom S.1</span></a> bares a striking resemblance to the idea of <em>surjection</em> in real analysis. Recall, a function <span class="math notranslate nohighlight">\(f: X \to Y\)</span> is called <em>surjective</em> if,</p>
+<div class="math notranslate nohighlight">
+\[\forall y \in Y: \exists x \in X : f(x) = y\]</div>
+<p>Meaning, every element in the co-domain is mapped to at least one element in the domain.</p>
+<p>In a sense, the <a class="reference internal" href="#axiom-s1"><span class="std std-ref">Duality Axiom S.1</span></a> asserts a type of <em>“double-surjectivity”</em> exists between the domain of Words and the co-domain of Sentences.  In plain language, the <a class="reference internal" href="#axiom-s1"><span class="std std-ref">Duality Axiom</span></a> asserts for every Word <em>α</em> in the Language <strong>L</strong>, there exists a sentence <em>ζ</em> in the Corpus <strong>C</strong><sub>L</sub> such that <em>α</em> is contained in <em>ζ</em>, and for every Sentence <em>ζ</em> in the corpus <strong>C</strong><sub>L</sub>, there exists a word <em>α</em> in the language <strong>L</strong> such that <em>α</em> is contained in <em>ζ</em>.</p>
+<p>However, there is a key difference between the notion of <em>surjection</em> in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By <a class="reference internal" href="02_language.html#definition-1-1-6"><span class="std std-ref">Definition 1.1.6</span></a> and <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>, containment reduces to the existence of a mapping between Characters in different Strings. Due to the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>, with the exception of Sentences consisting of a Single Word, a Word is contained in a Sentence but a Sentence is not contained in a Word.</p>
+<p>More plainly, the <a class="reference internal" href="#axiom-s1"><span class="std std-ref">Duality Axiom S.1</span></a> states a Word cannot exist in a Language without being included in a Sentence of the Corpus, and a Sentence cannot exist in a Corpus without including a Word from the Language. This Axiom captures an inextricable duality between the metamathematical concepts of Sentence and Word, and the concepts of Language and Corpus: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation. A Language and its Corpus require one another.</p>
+<p>The <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Extraction Axiom S.2</span></a> further strengthens the relationship that exists between a Corpus and Language. It states every Word in the Sentence of a Corpus must be included in a Language. This idea of being able <em>extract</em> the Words of a Language from a Sentence is captured in the terminology introduced in <a class="reference internal" href="#definition-2-2-1"><span class="std std-ref">Definition 2.2.1</span></a> directly below.</p>
+<p id="definition-2-2-1"><strong>Definition 2.2.1: Semantic Coherence</strong></p>
+<p>A Sentence <em>ᚠ</em> is <em>semantically coherent</em> in a Language <strong>L</strong> if and only if <strong>W</strong><sub>ᚠ</sub> only contains words from Language <strong>L</strong>.</p>
+<p>A Corpus <span class="math notranslate nohighlight">\(C_L\)</span> is <em>semantically coherent</em> in a Language <strong>L</strong> if and only if the Word-level set representation of all its Sentences are semantically coherent. ∎</p>
+<section id="theorems">
+<span id="sentence-theorems"></span><h3>Theorems<a class="headerlink" href="#theorems" title="Link to this heading">#</a></h3>
+<p>The first theorems proven using these new axioms are analogous versions of the Word theorems <a class="reference internal" href="02_language.html#theorem-1-2-1"><span class="std std-ref">Theorems 1.2.1</span></a> - <a class="reference internal" href="02_language.html#theorem-1-2-3"><span class="std std-ref">1.2.3</span></a> for Sentences. These theorems, like their Word counterparts, represent the logical pre-conditions for Sentences to arise in the domain of all Strings.</p>
+<p id="theorem-2-2-1"><strong>Theorem 2.2.1</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: l(\zeta) \neq 0\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <span class="math notranslate nohighlight">\(C_L\)</span>, and let <em>i</em> be a natural number such that <span class="math notranslate nohighlight">\(1 \leq i \leq l(\zeta)\)</span>.</p>
+<p>By the second conjunct of the <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Duality Axiom S.2</span></a> and the first conjunct of the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \exists \alpha \in L: \alpha \subset_s \zeta\]</div>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall \alpha \in L: l(\alpha) \neq 0\]</div>
+<p>Therefore, by <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>, there exists a strictly increasing and consecutive function <em>f</em> such that,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)]\]</div>
+<p>By <a class="reference internal" href="02_language.html#theorem-1-2-3"><span class="std std-ref">Theorem 1.2.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon\]</div>
+<p>Therefore, combining steps 3 and 4,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \forall i \in N_{\alpha}: \zeta[f(i)] \neq ε\]</div>
+<p>Since, by step 2, <span class="math notranslate nohighlight">\(l(\alpha) \neq 0\)</span>, there must be some non-zero <em>i</em> that satisfies step 5. Therefore, there is at least one non-Empty Character in <em>ζ</em>, namely, <em>ζ[f(i)]</em>. The theorem is then proven by applying <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad l(\zeta) \neq 0\]</div>
+<p>∎</p>
+<p id="theorem-2-2-2"><strong>Theorem 2.2.2</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <span class="math notranslate nohighlight">\(C_L\)</span>, and let <em>i</em> be a natural number such that <span class="math notranslate nohighlight">\(1 \leq i \leq l(\zeta)\)</span>. By <a class="reference internal" href="#theorem-2-2-1"><span class="std std-ref">Theorem 2.2.1</span></a> and <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>, there must be at least one non-Empty Character in <em>ζ</em>. Let <em>ζ[i]</em> be a non-Empty Character in <em>ζ</em>. Consider the string <em>s</em> consisting of the single character <em>ζ[i]</em>, <span class="math notranslate nohighlight">\(s = \zeta[i]\)</span>. Clearly, by <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad l(s) = 1\]</div>
+<p>Define a function <span class="math notranslate nohighlight">\(f: \{1\} \to \{i\}\)</span> such that <span class="math notranslate nohighlight">\(f(1) = i\)</span>. This function is strictly increasing and consecutive. By <a class="reference internal" href="02_language.html#definition-1-1-6"><span class="std std-ref">Definition 1.1.6</span></a> and <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>, since there exists a strictly increasing and consecutive function <em>f</em> from the indices of <em>s</em> to the indices of <em>ζ</em>, and since the Character at position 1 in <em>s</em> is the same as the Character at position i in <em>ζ</em> (both are <em>ζ[i]</em>), we can conclude that <em>s</em> is contained in <em>ζ</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \zeta[i] \subset_s \zeta\]</div>
+<p>Since <em>ζ</em> and <em>i</em> were arbitrary, this can be generalized,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \zeta[i] \subset_s \zeta\]</div>
+<p>∎</p>
+<p id="theorem-2-2-3"><strong>Theorem 2.2.3</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_{L} : \forall i \in N_{l(\zeta)}:  \zeta[i] \neq \varepsilon\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <strong>C</strong><sub>L</sub>, and let <em>i</em> be a natural number such that <span class="math notranslate nohighlight">\(1 \leq i \leq l(\zeta)\)</span>. By <a class="reference internal" href="#theorem-2-2-2"><span class="std std-ref">Theorem 2.2.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \forall i \in N_{l(\zeta)}: \zeta[i] subset_s \zeta\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>, String Length is the number of non-Empty Characters in a String’s Character-level set representation. Since <span class="math notranslate nohighlight">\(l(\zeta) &gt; 0\)</span>, <em>ζ</em> must have at least one non-Empty character.</p>
+<p>Since <span class="math notranslate nohighlight">\(1 \leq i \leq l(\zeta)\)</span>, the Character at position <em>i</em> in <em>α</em>, denoted <em>ζ[i]</em>, exists and is non-Empty by <a class="reference internal" href="02_language.html#definition-1-1-2"><span class="std std-ref">Definition 1.1.2</span></a>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \zeta[i] \neq \varepsilon\]</div>
+<p>Since <em>ζ</em> and <em>i</em> are arbitrary, this can generalized,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall \alpha \in L: \forall i \in N_{l(\zeta)}: \zeta[i] \neq \varepsilon\]</div>
+<p>∎</p>
+<p id="theorem-2-2-4"><strong>Theorem 2.2.4</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_{L}: \Lambda(\zeta) \geq 1\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <strong>C</strong><sub>L</sub>. By the second conjunct of the <a class="reference internal" href="#axiom-s1"><span class="std std-ref">Duality Axiom S.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \exists \alpha \in L: \alpha \subset_s \zeta\]</div>
+<p>By the first conjunct of the <a class="reference internal" href="02_language.html#axiom-w1"><span class="std std-ref">Discovery Axiom W.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad l(\alpha) \neq 0\]</div>
+<p>Therefore, by <a class="reference internal" href="02_language.html#definition-1-1-7"><span class="std std-ref">Definition 1.1.7</span></a>, there exists an <em>f</em> such that,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \forall i \in N_{l(\alpha)}: \alpha[i] = \zeta[f(i)]\]</div>
+<p>By <a class="reference internal" href="02_language.html#theorem-1-2-3"><span class="std std-ref">Theorem 1.2.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall i \in N_{l(\alpha)}: \alpha[i] \neq \varepsilon\]</div>
+<p>Therefore, combining step 3 and 4,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \forall i \in N_{l(\alpha)}: \zeta[f(i)] \neq \varepsilon\]</div>
+<p>Since <span class="math notranslate nohighlight">\(l(\alpha) \neq 0\)</span>, there is at least one non-Empty Character in <em>ζ</em> and therefore, by <a class="reference internal" href="02_language.html#definition-1-1-3"><span class="std std-ref">Definition 1.1.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \Lambda(\zeta) \geq 1\]</div>
+<p>Generalizing this over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \forall \zeta \in C_L: \Lambda(\zeta) \geq 1\]</div>
+<p>∎</p>
+<p id="theorem-2-2-5"><strong>Theorem 2.2.5</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\)</span></p>
+<p>This theorem can be stated in natural language as follows: Every Sentence in the Corpus is the Delimitation of its own Words.</p>
+<p>Assume</p>
+<div class="math notranslate nohighlight">
+\[1. \quad ζ \in C_L\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-3"><span class="std std-ref">Definition 2.1.3</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)})\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \alpha_i \in L.\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-5"><span class="std std-ref">Definition 1.2.5</span></a>, the sequence <span class="math notranslate nohighlight">\(W_{\zeta}\)</span> forms a phrase <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> of length <em>Λ(ζ)</em> where,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall i \in N_{\Lambda(\zeta)}: P_{\Lambda(\zeta)}(i) = \alpha_i\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>, the Delimitation of P:sub:<cite>Λ(ζ)</cite> is,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})\]</div>
+<p>The Delimitation reconstructs the original Sentence <em>ζ</em> by including the Delimiters between Words. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i)\]</div>
+<p>By <a class="reference internal" href="#definition-2-1-5"><span class="std std-ref">Definition 2.1.5</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} = \alpha_i\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>Since <em>ζ</em> was an arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \forall \zeta \in C_L: \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}\]</div>
+<p>∎</p>
+</section>
+</section>
+<section id="section-ii-iii-sentence-classes">
+<span id="section-ii-iii"></span><h2>Section II.III: Sentence Classes<a class="headerlink" href="#section-ii-iii-sentence-classes" title="Link to this heading">#</a></h2>
+<p>As the astute reader has no doubt surmised at this point, the foundational operation that defines a palindromic structure in linguistics is <em>inversion</em> (i.e. a method of reversal). What may not yet be clear is how this operation of inversion propagates through the hierarchy of entities defined over its domain. As this necessary structure of interdependent inversions between hierarchical layers becomes apparent, the mathematical description of a Palindrome will seen to be a <em>“recursion of inversions”</em>.</p>
+<p><a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorems 2.3.9</span></a> - <a class="reference internal" href="#theorem-2-3-11"><span class="std std-ref">2.3.11</span></a> of this subsection mark the first notable results obtained from the formal system. Their empirical truth in natural language represents confirmation of the formal system’s construction. These theorems demonstrate the Character-level symmetries required by invertibility propagate up through the Word-level of linguistics and manifest in conditions that must be imposed on the Word-level structure of an Invertible Sentence.</p>
+<section id="admissible-sentences">
+<span id="id5"></span><h3>Admissible Sentences<a class="headerlink" href="#admissible-sentences" title="Link to this heading">#</a></h3>
+<p>The notion of an <em>Admissible Sentence</em> is required to prevent a certain class of Sentence inversions from invalidating the symmetry conditions of Palindromes derived in <a class="reference internal" href="05_palindromes.html#section-iv"><span class="std std-ref">Section IV</span></a>.</p>
+<p>To see what is meant by this concept of <em>admissibility</em>, consider the English sentence,</p>
+<div class="math notranslate nohighlight">
+\[ᚠ = \text{&quot;strap on a ton&quot;}\]</div>
+<p>The Inverse of this sentence, <em>inv(ᚠ)</em>, is <em>semantically coherent</em> (<a class="reference internal" href="#definition-2-2-1"><span class="std std-ref">Definition 2.2.1</span></a>). By this it is meant every word in its inversion is part of the English language,</p>
+<div class="math notranslate nohighlight">
+\[\text{inv}(ᚠ) = \text{&quot;not a no parts&quot;}\]</div>
+<p>However, this is not enough to ensure <em>inv(ᚠ)</em> is part of the Corpus, as is apparent. <em>Semantic coherence</em> is a necessary but not sufficient condition for the Inverse of a Sentence to remain in the Corpus. In order to state the requirement that must be imposed on a Sentence to remain <em>admissible</em> after inversion, the concept of Delimitation introduced in <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a> must now be leveraged.</p>
+<p id="definition-2-3-1"><strong>Definition 2.3.1: Admissible Sentences</strong></p>
+<p>Let <em>p</em> be any Phrase from a Language’s <em>n</em><sup>th</sup> Lexicon <span class="math notranslate nohighlight">\(X_L (n)\)</span>. A String <em>t</em> is said to belong to the class of <em>Admissible Sentences of Word Length n</em> in Language <strong>L</strong>, denoted <span class="math notranslate nohighlight">\(A(n)\)</span>, if it satisfies the following open formula</p>
+<div class="math notranslate nohighlight">
+\[t \in A(n) \leftrightarrow (\exists p \in X_L(n): t = D\Pi_{i=1}^{n} p(i)) \land (t \in C_L)\]</div>
+<p>∎</p>
+<p>The notion of <em>admissibility</em> is a faint echo of <em>“grammaticality”</em>. As inversion is studied at the sentential level of the linguistic hierarchy, it is no longer permitted to ignore semantics in its entirety. Instead, semantics ingresses into the system as implicit properties the extensionally identified Sentences must obey. Before discussing this at greater length, several theorems are proved about classes of Admissible Sentences.</p>
+<p id="theorem-2-3-1"><strong>Theorem 2.3.1</strong> <span class="math notranslate nohighlight">\(A(n) \subseteq C_{L}\)</span></p>
+<p>Let <em>t</em> be an arbitrary String such that <span class="math notranslate nohighlight">\(t \in A(n)\)</span>. By <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>, this implies, <span class="math notranslate nohighlight">\(t \in C_L\)</span>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad t \in A(n) \to t \in C_L\]</div>
+<p>This is exactly the set theoretic definition of a subset. Thus,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad A(n) \subseteq C_L\]</div>
+<p>∎</p>
+<p><a class="reference internal" href="#theorem-2-3-1"><span class="std std-ref">Theorem 2.3.1</span></a> is the formal justification for quantifying Sentence Variables over the set of Admissible Sentences (i.e. all Admissable Sentences are in the Corpus), as in the following theorem.</p>
+<p id="theorem-2-3-2"><strong>Theorem 2.3.2</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in A(n): \Lambda(\zeta) = n\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <span class="math notranslate nohighlight">\(A(n)\)</span>. By <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>, if <span class="math notranslate nohighlight">\(\zeta \in A(n)\)</span>, then there exists a Phrase <span class="math notranslate nohighlight">\(p \in X_L(n)\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[1. \quad (\zeta \in C_L) \land (\zeta = D\Pi_{i=1}^{n} p(i))\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-5"><span class="std std-ref">Definition 1.2.5</span></a> and <a class="reference internal" href="02_language.html#definition-1-2-6"><span class="std std-ref">Definition 1.2.6</span></a>, a phrase <em>p</em> in <span class="math notranslate nohighlight">\(X_L(n)\)</span> is an ordered sequence of <em>n</em> words such that <span class="math notranslate nohighlight">\(\alpha_i \in L\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad p = (\alpha_1, \alpha_2, ..., \alpha_n)\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>, the Delimitation of <em>p</em> is given by,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)\]</div>
+<p>In other words, the Delimitation of <em>p</em> (which is equal to <em>ζ</em>) explicitly constructs a String with <em>n</em> Words separated by Delimiters.</p>
+<p>By <a class="reference internal" href="#definition-2-1-4"><span class="std std-ref">Definition 2.1.4</span></a>, the Word Length <em>Λ(ζ)</em> is the number of Words in <em>ζ</em>. Since <em>ζ</em> is formed by limiting a Phrase with <em>n</em> Words, and the Delimitation process doesn’t add or remove Words, the Word Length of <em>ζ</em> must be <em>n</em>. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \Lambda(\zeta) = n.\]</div>
+<p>Since <em>ζ</em> was an arbitrary sentence in <span class="math notranslate nohighlight">\(A(n)\)</span>, this can generalize as,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \forall \zeta \in A(n): \Lambda(\zeta) = n\]</div>
+<p>∎</p>
+<p id="theorem-2-3-3"><strong>Theorem 2.3.3</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_{L}: \zeta \in A(\Lambda(\zeta))\)</span></p>
+<p>Let ζ be an arbitrary sentence in <span class="math notranslate nohighlight">\(C_L\)</span>. By <a class="reference internal" href="#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>, <em>ζ</em> has a Word-level representation,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad W_{\zeta} = (\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})\]</div>
+<p>Where each <span class="math notranslate nohighlight">\(\alpha_i \in L\)</span>. By <a class="reference internal" href="02_language.html#definition-1-2-5"><span class="std std-ref">Definition 1.2.5</span></a>, the sequence <span class="math notranslate nohighlight">\((\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})\)</span> forms a phrase <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> of length <em>Λ(ζ)</em> where <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}(i) = \alpha_i\)</span> for all <em>i</em> such that <span class="math notranslate nohighlight">\(1 \leq i \leq \Lambda(\zeta)\)</span>.</p>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-6"><span class="std std-ref">Definition 1.2.6</span></a>, since <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> is a phrase of length <em>Λ(ζ)</em> and all its Words belong to <strong>L</strong> (by semantic coherence), then,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta)).\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>, the Delimitation of <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[3. \quad D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})\]</div>
+<p>The Delimitation <span class="math notranslate nohighlight">\(D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i)\)</span> reconstructs the original sentence <em>ζ</em>, including the Delimiters between Words. Therefore,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)\]</div>
+<p>By <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>, a String <em>t</em> is an Admissible Sentence of Word Length <em>n</em> (<span class="math notranslate nohighlight">\(t \in A(n)\)</span>) if and only if there exists a phrase <span class="math notranslate nohighlight">\(p \in X_L(n)\)</span> such that,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad t = D\Pi_{i=1}^{n} p(i)\]</div>
+<div class="math notranslate nohighlight">
+\[6. \quad t \in C_L\]</div>
+<p>As a direct consequence of <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>, since the conjunction of the following three facts is true,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \zeta \in C_L\]</div>
+<div class="math notranslate nohighlight">
+\[8. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i)\]</div>
+<div class="math notranslate nohighlight">
+\[9. \quad P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta))\]</div>
+<p>It follows from step 7 - step 9, <span class="math notranslate nohighlight">\(\zeta \in A(\Lambda(\zeta))\)</span>. Since <em>ζ</em> was an arbitrary Sentence in <span class="math notranslate nohighlight">\(C_L\)</span>, this can generalize over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad \forall \zeta \in C_L: \zeta \in A(\Lambda(\zeta))\]</div>
+<p>∎</p>
+<p id="theorem-2-3-4"><strong>Theorem 2.3.4</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <span class="math notranslate nohighlight">\(C_L\)</span>. By <a class="reference internal" href="#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>, <em>ζ</em> has a Word-level representation,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad W_{\zeta} = (\alpha_1, \alpha_2, ..., \alpha_{\Lambda(\zeta)})\]</div>
+<p>Where each <span class="math notranslate nohighlight">\(\alpha_i \in L\)</span>.</p>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-5"><span class="std std-ref">Definition 1.2.5</span></a>, the sequence <span class="math notranslate nohighlight">\((\alpha_1, \alpha_2, ... , \alpha_{\Lambda(\zeta)})\)</span> forms a Phrase <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> of Word Length <em>Λ(ζ)</em> where <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}(i) = \alpha_i\)</span> for all <em>i</em>, <span class="math notranslate nohighlight">\(1 \leq i \leq \Lambda(\zeta)\)</span>.</p>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-6"><span class="std std-ref">Definition 1.2.6</span></a>, since <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> is a Phrase of Word Length <em>Λ(ζ)</em> and all its words belong to <strong>L</strong>, then,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad P_{\Lambda(\zeta)} \in X_L(\Lambda(\zeta))\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>, the Delimitation of <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span> is,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)} (i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_{\Lambda(\zeta)})\]</div>
+<p>The Delimitation <span class="math notranslate nohighlight">\(D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)\)</span> reconstructs the original Sentence <em>ζ</em>, including the Delimiters between Words. Therefore:</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} P_{\Lambda(\zeta)}(i)\]</div>
+<p>It has been shown that for an arbitrary Sentence <span class="math notranslate nohighlight">\(ζ \in C_L\)</span>, there exists a Phrase <em>p</em> (specifically, <span class="math notranslate nohighlight">\(P_{\Lambda(\zeta)}\)</span>) in <span class="math notranslate nohighlight">\(X_L(\Lambda(\zeta))\)</span> such that,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i).\]</div>
+<p>Therefore, generalizing this over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \forall \zeta \in C_L: \exists p \in X_L(\Lambda(\zeta)): \zeta = D\Pi_{i=1}^{\Lambda(\zeta)} p(i)\]</div>
+<p>∎</p>
+<p>The condition of <em>admissibility</em>, as will be seen in <a class="reference internal" href="#theorem-2-3-11"><span class="std std-ref">Theorem 2.3.11</span></a>, prevents the <em>“inversion propagation”</em> from being a purely syntactical operation. The Inverse of a Sentence must also be Admissible in the Corpus in order to be considered an Invertible Sentence (<a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a> in the next section). This represents a rupture or division from the realm of syntax not seen at the Word level of the linguistic hierarcy when considering the operation of inversion. In order to fully specify the conditions for Sentence invertibility, one must be able to elaborate what it means to call a Sentence <em>“admissible”</em>; in other words, there must be grammatical rules that identify an inverted Sentence as belonging to the Corpus over and above the syntactical conditions that are imposed by invertibility.</p>
+<p>However, this does not mean <em>“grammaticality”</em> is equivalent to <em>“admissibility”</em>. As the final section of the work will make clear, there are possible avenues available to formal analysis for parsing the concept of <em>“admissibility”</em> into finer partitions such as <em>“syntactical admissibility”</em> and <em>“semantic admissiblity”</em>. In this way, the origin of meaning in a Sentence can be narrowed down by filtering out its syntactical origins.</p>
+</section>
+<section id="invertible-sentences">
+<span id="id6"></span><h3>Invertible Sentences<a class="headerlink" href="#invertible-sentences" title="Link to this heading">#</a></h3>
+<p>Similarly to the progression of Words and their related concepts in the previous section, a special class of Sentences will now be classified according to their syntactical properties. In the study of palindromic structures, the notion of <em>Invertible Sentences</em> is essential. The definition, as is fitting in a work focused on palindromes, will mirror <a class="reference internal" href="02_language.html#definition-1-3-1"><span class="std std-ref">Definition 1.3.1</span></a> of an <em>Invertible Word</em>.</p>
+<p>The notion of Invertible Sentences will first be defined extensionally, and then clarified heuristically. The following definition and theorem mirror the mechanics of <a class="reference internal" href="02_language.html#definition-1-3-1"><span class="std std-ref">Definition 1.3.1</span></a> and <a class="reference internal" href="02_language.html#theorem-1-3-1"><span class="std std-ref">Theorem 1.3.1</span></a> almost exactly.</p>
+<p id="definition-2-3-2"><strong>Definition 2.3.2: Invertible Sentences</strong></p>
+<p>Let <em>ζ</em> be any Sentence in from a Corpus <strong>C</strong><sub>L</sub>. Then the set of Invertible Sentences <strong>K</strong> is defined as the set of <em>ζ</em> which satisfy the open formula,</p>
+<div class="math notranslate nohighlight">
+\[\zeta \in K \leftrightarrow \text{inv}(\zeta) \in C_L\]</div>
+<p>A Sentence <em>ζ</em> will be referred to as <em>Invertible</em> if it belongs to the class of Invertible Sentences. ∎</p>
+<p>This definition is immediately employed to derive the following theorems.</p>
+<p id="theorem-2-3-5"><strong>Theorem 2.3.5</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K\)</span></p>
+<p>Let <em>ζ</em> be any Sentence from Corpus <strong>C</strong><sub>L</sub>.</p>
+<p>(→) Assume <span class="math notranslate nohighlight">\(\zeta \in K\)</span></p>
+<p>By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>, the inverse of <em>ζ</em> belongs to the Corpus</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \text{inv}(\zeta) \in C_L\]</div>
+<p>To show that <em>inv(ζ)</em> is invertible, it must be shown that,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \text{inv}(\text{inv}(\zeta)) \in C_L\]</div>
+<p>From <a class="reference internal" href="02_language.html#theorem-1-2-4"><span class="std std-ref">Theorem 1.2.4</span></a>, for any string <em>s</em>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \text{inv}(\text{inv}(s)) = s.\]</div>
+<p>By <a class="reference internal" href="#definition-2-1-1"><span class="std std-ref">Definition 2.1.1</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \zeta \in S\]</div>
+<p>Where <strong>S</strong> is the set of all Strings. Therefore, it follows,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \text{inv}(\text{inv}(\zeta)) = \zeta\]</div>
+<p>From step 1 and step 5, it follows,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \text{inv}(\text{inv}(\zeta)) \in C_L\]</div>
+<p>By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>, this implies,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \text{inv}(\zeta) \in K\]</div>
+<p>(←) Assume <span class="math notranslate nohighlight">\(\text{inv}(\zeta) \in K\)</span></p>
+<p>By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \text{inv}(\text{inv}(\zeta)) \in C_L\]</div>
+<p>Applying <a class="reference internal" href="02_language.html#theorem-1-2-4"><span class="std std-ref">Theorem 1.2.4</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[9. \quad \text{inv}(\text{inv}(\zeta)) = \zeta\]</div>
+<p>From step 8 and step 9, it follows,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad \zeta \in C_L\]</div>
+<p>By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>, it follows,</p>
+<div class="math notranslate nohighlight">
+\[11. \quad \zeta \in K\]</div>
+<p>Putting both direction of the equivalence together and generalizing over the Corpus, the theorem is shown,</p>
+<div class="math notranslate nohighlight">
+\[12. \quad \forall \zeta \in C_L: \zeta \in K \leftrightarrow \text{inv}(\zeta) \in K\]</div>
+<p>∎</p>
+<p id="theorem-2-3-6"><strong>Theorem 2.3.6</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \text{inv}(\zeta) \in K \to \zeta \in C_L\)</span></p>
+<p>Let <em>ζ</em> be any Sentence from Corpus <strong>C</strong><sub>L</sub> such that <span class="math notranslate nohighlight">\(\text{inv}(\zeta) \in K\)</span>. Then, by <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \text{inv}(\text{inv}(\zeta)) \in C_L\]</div>
+<p>By <a class="reference internal" href="02_language.html#theorem-1-2-4"><span class="std std-ref">Theorem 1.2.4</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \text{inv}(\text{inv}(\zeta)) = \zeta\]</div>
+<p>Therefore, combining step 1 and step 2,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \zeta \in C_L\]</div>
+<p>It follows,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall \zeta \in C_L: \text{inv}(\zeta) \in K \to \zeta \in C_L\]</div>
+<p>∎</p>
+<p>The notion of Invertible Sentences is not as intuitive as the notion of Invertible Words. This is due to the fact the condition of <em>invertibility</em> is not a weak condition; indeed, Sentences that are not invertible far outnumber Sentences that are invertible in a given Language (for all known natural languages, at any rate; it is conceivable a purely formal system with no semantic content or general applicability could be constructed with invertibility in mind).</p>
+<p>To see how strong of a condition invertibility is, the author challenges the reader to try and construct an invertible sentence in English (or whatever their native tongue might be). <a class="reference internal" href="08_appendix.html#section-vii"><span class="std std-ref">Section VIII</span></a> contains a list of Invertible Words and Reflective Words. These can be used as a “palette” for the exercise. The exercise is worthwhile, because it forces the reader to think about the mechanics of sentences and how a palindrome resides in the intersection of semantics and syntax.</p>
+<p>Consider the following examples phrases from English,</p>
+<ul class="simple">
+<li><p>no time</p></li>
+<li><p>dog won</p></li>
+<li><p>not a ton</p></li>
+</ul>
+<p>All of these phrases may be <em>inverted</em> to produce semantically coherent phrases in English,</p>
+<ul class="simple">
+<li><p>emit on</p></li>
+<li><p>now god</p></li>
+<li><p>not a ton</p></li>
+</ul>
+<p>Note the last item in this list is an example of what this work has termed a Perfect Palindrome. These examples were specially chosen to highlight the connection that exists between the class of Perfect Palindromes and the class of Invertible Sentences. It appears, based on this brief and circumstantial analysis, that Perfect Palindromes are a subset of a larger class of Sentences, namely, Invertible Sentences.</p>
+<p>Due to the definition of Sentences as semantic constructs and the definition of Invertible Sentences as Sentences whose Inverses belong to the Corpus, this means Invertible Sentences are exactly those Sentences that maintain <em>semantic coherence</em> (<a class="reference internal" href="#definition-2-2-1"><span class="std std-ref">Definition 2.2.1</span></a>) and <em>admissibility</em> (<a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>) under inversion. In order for a Sentence to be Invertible it must possess symmetry on both the Character-level and the Word-level, while maintaining a semantic structure at the Sentence level that accomodates this symmetry. This connection between the symmetries in the different linguistic levels of an Invertible Sentence will be formalized and proven by the end of this subsection. The next series of theorems, <a class="reference internal" href="#theorem-2-3-7"><span class="std std-ref">Theorems 2.3.7</span></a> - <a class="reference internal" href="#theorem-2-3-8"><span class="std std-ref">2.3.8</span></a> are the preparatory foundation for establishing this symmetrry.</p>
+<p id="theorem-2-3-7"><strong>Theorem 2.3.7</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L\)</span></p>
+<p>Let <em>ζ</em> be a Sentence from Corpus <strong>C</strong><sub>L</sub>. Assume <span class="math notranslate nohighlight">\(ζ \in K\)</span> . By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \text{inv}(\zeta) \in C_L\]</div>
+<p>By the <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Extraction Axiom S.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} \in L\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \zeta \in K \to \text{inv}(\zeta)\{i\} \in L\]</div>
+<p>Since <em>ζ</em> was arbitrary, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} \in L\]</div>
+<p>∎</p>
+<p>The next theorem shows how the inversion “distributes” over the Words of a Delimited Sentence.</p>
+<p id="theorem-2-3-8"><strong>Theorem 2.3.8</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary sentence in <strong>C</strong><sub>L</sub>. Let <span class="math notranslate nohighlight">\(n = \Lambda(\zeta)\)</span>. By <a class="reference internal" href="#definition-2-1-4"><span class="std std-ref">Definition 2.1.4</span></a>, this is the Word Length of <em>ζ</em>.  Let <em>s</em> denote the Delimitation of <em>ζ</em> as follows:</p>
+<div class="math notranslate nohighlight">
+\[1. \quad s = D\Pi_{i=1}^{n} \zeta\{i\} = (\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\})\]</div>
+<p>By <a class="reference internal" href="02_language.html#theorem-1-2-5"><span class="std std-ref">Theorem 1.2.5</span></a>, for any two Strings <em>u</em> and <em>t</em>, <span class="math notranslate nohighlight">\(\text{inv}(ut) = \text{inv}(t)\text{inv}(u)\)</span>. Apply this property repeatedly to construct <em>inv(s)</em>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \text{inv}(s) = \text{inv}((\zeta\{1\})(\sigma)(\zeta\{2\})(\sigma) ... (\sigma)(\zeta\{n\}))\]</div>
+<p>Which reduces to,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \text{inv}(s) = (\text{inv}(\zeta\{n\}))(\text{inv}(\sigma))(\text{inv}(\zeta\{n-1\}))(\text{inv}(\sigma)) ... (\text{inv}(\zeta\{2\}))(\text{inv}(\sigma))(\text{inv}(\zeta\{1\}))\]</div>
+<p>Since <em>σ</em> is a single character, <span class="math notranslate nohighlight">\(\text{inv}(\sigma) = \sigma\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \text{inv}(s) = (\text{inv}(\zeta\{n\}))(\sigma)(\text{inv}(\zeta\{n-1\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{2\}))(\sigma)(\text{inv}(\zeta\{1\}))\]</div>
+<p>Note that the right-hand side now has the form of a Delimitation, but with the order of Words reversed and each Word inverted.</p>
+<p>Re-index the terms on the right-hand side to match the form of the Delimitation definition, <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a>. Let <span class="math notranslate nohighlight">\(j = n - i + 1\)</span>. Then, as <em>i</em> goes from 1 to <em>n</em>, <em>j</em> goes from <em>n</em> to 1,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \text{inv}(s) = (\text{inv}(ζ\{j_n\}))(\sigma)(\text{inv}(\zeta\{j_{n-1}\}))(\sigma) ... (\sigma)(\text{inv}(\zeta\{j_2\}))(\sigma)(\text{inv}(\zeta\{j_1\}))\]</div>
+<p>Where <em>j</em><sub>i</sub> is obtained by simply substituting <span class="math notranslate nohighlight">\(j = n - i + 1\)</span>. Using <a class="reference internal" href="02_language.html#definition-1-2-7"><span class="std std-ref">Definition 1.2.7</span></a> of Delimitations, the right-hand side becomes,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \text{inv}(s) = D\Pi_{j=1}^{n} \text{inv}(\zeta\{n - j + 1\})\]</div>
+<p>Recall that <span class="math notranslate nohighlight">\(s = D\Pi_{i=1}^{n} \zeta\{i\}\)</span>. Substitute this back into the equation and re-index the right-hand side for consistency to get,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \text{inv}(D\Pi_{i=1}^{n} \zeta\{i\}) = D\Pi_{i=1}^{n} \text{inv}(\zeta\{n - i + 1\})\]</div>
+<p>Since <em>ζ</em> was an arbitrary sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \forall \zeta \in C_L: \text{inv}(D\Pi_{i=1}^{\Lambda(\zeta)} \zeta\{i\}) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<p>∎</p>
+<p>As noted in previous aside, the condition of Invertibility is strong. While the Inverse of every Sentence is defined in the domain of Strings, an Inverse Sentence does not necessarily belong to the Corpus of its uninverted form. Therefore, when a Sentence is Invertible, it will exhibit syntactical symmetries at not just the Character level, but also at the individual Word level. Before moving onto to the last batch of theorems in this section, a digression into their motivation is in order, as it will help highlight the interplay of syntactic symmetries that give rise to palindromes.</p>
+<p>Consider the Sentences from the English language, <span class="math notranslate nohighlight">\(ᚠ = \text{&quot;this is a test&quot;}\)</span>, <span class="math notranslate nohighlight">\(ᚢ = \text{&quot;live on&quot;}\)</span>, and <span class="math notranslate nohighlight">\(ᚦ = \text{&quot;step on no pets&quot;}\)</span>. Their corresponding Character-level representations are given by,</p>
+<div class="math notranslate nohighlight">
+\[{\largeᚠ} = (\text{&quot;t&quot;}, \text{&quot;h&quot;}, \text{&quot;i&quot;}, \text{&quot;s&quot;}, \sigma, \text{&quot;i&quot;}, \text{&quot;s&quot;}, \sigma, \text{&quot;a&quot;}, \sigma, \text{&quot;t&quot;}, \text{&quot;e&quot;}, \text{&quot;s&quot;}, \text{&quot;t&quot;})\]</div>
+<div class="math notranslate nohighlight">
+\[{\largeᚢ} = (\text{&quot;l&quot;}, \text{&quot;i&quot;}, \text{&quot;v&quot;}, \text{&quot;e&quot;}, \sigma, \text{&quot;o&quot;}, \text{&quot;n&quot;})\]</div>
+<div class="math notranslate nohighlight">
+\[{\largeᚦ} = (\text{&quot;s&quot;}, \text{&quot;t&quot;}, \text{&quot;e&quot;}, \text{&quot;p&quot;}, \sigma, \text{&quot;o&quot;}, \text{&quot;n&quot;}, \sigma, \text{&quot;n&quot;}, \text{&quot;o&quot;}, \sigma, \text{&quot;p&quot;}, \text{&quot;e&quot;}, \text{&quot;t&quot;}, \text{&quot;s&quot;})\]</div>
+<p>The Character-level representation of their Inverses, would be,</p>
+<div class="math notranslate nohighlight">
+\[{\large\text{inv}(\largeᚠ)} = (\text{&quot;t&quot;}, \text{&quot;s&quot;}, \text{&quot;e&quot;}, \text{&quot;t&quot;}, \sigma, \text{&quot;a&quot;}, \sigma, \text{&quot;s&quot;}, \text{&quot;i&quot;}, \sigma, \text{&quot;s&quot;}, \text{&quot;i&quot;}, \text{&quot;h&quot;}, \text{&quot;t&quot;})\]</div>
+<div class="math notranslate nohighlight">
+\[{\large\text{inv}(ᚢ)} = (\text{&quot;n&quot;}, \text{&quot;o&quot;}, \sigma, \text{&quot;e&quot;}, \text{&quot;v&quot;}, \text{&quot;i&quot;}, \text{&quot;l&quot;})\]</div>
+<div class="math notranslate nohighlight">
+\[{\large\text{inv}(ᚦ)} = (\text{&quot;s&quot;}, \text{&quot;t&quot;}, \text{&quot;e&quot;}, \text{&quot;p&quot;}, \sigma, \text{&quot;o&quot;}, \text{&quot;n&quot;}, \sigma, \text{&quot;n&quot;}, \text{&quot;o&quot;}, \sigma, \text{&quot;p&quot;}, \text{&quot;e&quot;}, \text{&quot;t&quot;}, \text{&quot;s&quot;})\]</div>
+<p>In the case of <em>ᚠ</em>, <em>inv(ᚠ)</em> is not a Sentence in the Corpus, since none of the Words in it belong to the Language (English). Notice that the Delimiters (<em>σ</em>) still appear at the same indices in both <em>ᚠ</em> and <em>inv(ᚠ)</em>, just in reversed order. In <em>ᚠ</em>, the Delimiters are at indices 4, 7, and 9. In <em>inv(ᚠ)</em>, the Delimiters are at indices 9, 7, and 4 (counting from the ending of the reversed string). So, while the sequence of Delimiters is reversed, their positions relative to the beginning and end of the String remain the same. Since the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> identifies Words based on Delimiter positions, this means application of the algorithm to the reversed Character-level representation results in the same delimiting of the linguistic “<em>entities</em>” (Strings) which correspond to Words, but in reversed order and inverted.</p>
+<p>In the case of <em>ᚢ</em>, <em>inv(ᚢ)</em> belongs to the Corpus, since all of its Words belong to the Language (English), it has semantic coherence in <em>ᚢ</em>, and the inverted Sentence is admissible. This means <em>ᚢ</em> belongs to the class of Invertible Sentences in English. Take note, none of the Words that belong to <em>ᚢ</em> (or more precisely, to one of the ordered pairs of <strong>W</strong><sub>ᚢ</sub>) belong to <em>inv(ᚢ)</em> (or more precisely, to one of the ordered pairs of <strong>W</strong><sub>inv(ᚢ)</sub>). However, there does appear to be a relationship between the Words which appear in <em>ᚢ</em> and <em>inv(ᚢ)</em>, namely, they must be Invertible. The Word <em>“live”</em> inverts into <em>“evil”</em>, while <em>“on”</em> inverts into <em>“no”</em>. In other words, based on this preliminary heuristic analysis, if a Sentence is to be Invertible, the Words which belong to it must belong to the class of Invertible Words <strong>I</strong>.</p>
+<p>In the case of <em>ᚦ</em>, a similar situation is found. Each Word in <em>ᚦ</em> is Invertible and pairs with its Inverse Word in <em>inv(ᚦ)</em>, e.g. <em>“pets”</em> and <em>“step”</em> form an Invertible pair, etc. This means, for the same reasons as <em>ᚢ</em>, <em>ᚦ</em> belongs to the class of Invertible Sentences. However, there is a symmetry embodied in <em>ᚦ</em> over and above the pairing of its constituent Words into Invertible pairs. Not only is <em>inv(ᚦ)</em> a Sentence in the Corpus, but it’s equal to <em>ᚦ</em> itself. Indeed, <em>ᚦ</em> belongs to a special class of English sentences: Palindromes.</p>
+<p>Note, in order for the Sentence to invert, i.e. the case of <em>ᚢ</em> and <em>ᚦ</em>, the order of the Words in the inverted Sentences must be the reversed order of the inverted Words in the uninverted Sentence. In other words, the inversion defined on the String <em>“propagates”</em> up through the levels of the semantic hierarchy and manifests at each level in the form of a semantic inversion. This will be discussed in greater detail after the next theorems are established.</p>
+<p>These last theorems encapsulate these important properties of Invertible Sentences. When Palindromes are formally defined in the next section, these theorems will be used extensively to prove the main results of this work.</p>
+<p id="theorem-2-3-9"><strong>Theorem 2.3.9</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta \in K \to \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\)</span></p>
+<p>Let <em>ζ</em> be an arbitrary Invertible Sentence in <strong>C</strong><sub>L</sub> for <em>i</em> such that <span class="math notranslate nohighlight">\(1 \leq i \leq \Lambda(\zeta)\)</span>. By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \text{inv}(\zeta) \in C_L.\]</div>
+<p>By the <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Extraction Axiom S.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \zeta\{i\} \in L.\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-3-2"><span class="std std-ref">Definition 1.3.2</span></a>, a Word <em>α</em> is invertible if and only if both <em>α</em> and its inverse, <em>inv(α)</em>, are in <strong>L</strong>,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \alpha \in I \leftrightarrow \text{inv}(\alpha) \in L\]</div>
+<p>Therefore, since <strong>L</strong> is closed under inversion for Invertible Words ,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \text{inv}(\zeta\{i\}) \in L.\]</div>
+<p><em>inv(ζ)</em> can be constructed by concatenating the inverses of the words in ζ in reverse order, with delimiters inserted appropriately. Since by step 1 <em>inv(ζ)</em> is a Sentence in the Corpus, <strong>W</strong><sub>inv(ζ)</sub> can be constructed by the <a class="reference internal" href="#algorithm-2"><span class="std std-ref">Delimiting Algorithm</span></a> (<a class="reference internal" href="#definition-2-1-3"><span class="std std-ref">Definition 2.1.3</span></a>).</p>
+<div class="math notranslate nohighlight">
+\[5. \quad W_{\text{inv}(\zeta)} = (\text{inv}(\zeta\{\Lambda(\zeta)\}), \text{inv}(\zeta\{\Lambda(\zeta)-1\}), ..., \text{inv}(\zeta\{1\}))\]</div>
+<p>By <a class="reference internal" href="#definition-2-1-5"><span class="std std-ref">Definition 2.1.5</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta)-i+1\})\]</div>
+<p>Since <em>ζ</em> and <em>i</em> were arbitrary, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[1. f\quad \forall \zeta \in C_L: \zeta \in K \leftarrow \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<p>∎</p>
+<p>A brief interjection is necessary to discuss the significance of <a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a>. The result shown in <a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a> is a direct result of the <em>“propagation of inversion”</em> mentioned in the introduction to this subsection.</p>
+<p>As <a class="reference internal" href="02_language.html#theorem-1-3-1"><span class="std std-ref">Theorem 1.3.1</span></a> showed, <a class="reference internal" href="02_language.html#definition-1-3-1"><span class="std std-ref">Definition 1.3.1</span></a> of Reflective Words is equivalent to a definition that simply requires <em>α</em> satisfy the String equality relation,</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \text{inv}(\alpha)\]</div>
+<p>Another way of stating this is through logical equivalence, as <a class="reference internal" href="02_language.html#theorem-1-3-2"><span class="std std-ref">Theorem 1.3.2</span></a> shows,</p>
+<div class="math notranslate nohighlight">
+\[\alpha \in L \leftrightarrow \text{inv}(\alpha) \in L\]</div>
+<p>In turn, <a class="reference internal" href="02_language.html#definition-1-2-4"><span class="std std-ref">Definition 1.2.4</span></a> of String Inversion states in order for this to be the case, it must also be the case its Character satisfy,</p>
+<div class="math notranslate nohighlight">
+\[\alpha[i] = \alpha[l(\alpha) - i + 1]\]</div>
+<p>In other words, a Word is its own Inverse exactly when its Characters are in inverted orders.</p>
+<p>In a similar fashion, as <a class="reference internal" href="#theorem-2-3-5"><span class="std std-ref">Theorem 2.3.5</span></a> and <a class="reference internal" href="#theorem-2-3-6"><span class="std std-ref">Theorem 2.3.6</span></a> demonstrate by way of syllogism, a Sentence in a Corpus is invertible if its Inverse belongs to the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[\zeta \in C_L \leftrightarrow \text{inv}(\zeta) \in C_L\]</div>
+<p><a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a> <em>“propagates”</em> the Character-level symmetries up through the Words in the Sentence, by stating the Words in an invertible Sentence must be inverted Words of the Sentence in reversed order,</p>
+<div class="math notranslate nohighlight">
+\[\text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<p>An imporant note to make is the <em>direction</em> of the implication in <a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a> . A bidirectional equivalence would allow one to infer from the above equation that a Sentence is invertible. However, the direction of <a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a>  cannot be strengthened, as the following <a class="reference internal" href="#theorem-2-3-10"><span class="std std-ref">Theorem 2.3.10</span></a> makes clear.</p>
+<p><a class="reference internal" href="#theorem-2-3-10"><span class="std std-ref">Theorem 2.3.10</span></a> also makes clear why <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a> of Admissible Sentence of Word Length <em>n</em> is essential to understanding invertibility.</p>
+<p id="theorem-2-3-10"><strong>Theorem 2.3.10</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))\)</span></p>
+<p>This theorem can be stated in natural language as follows: For every sentence <em>ζ</em> in the Corpus <span class="math notranslate nohighlight">\(C_L\)</span>, <em>ζ</em> is invertible if and only if Words are inverted order and its Inverse is admissible.</p>
+<p>(→) Let ζ be an arbitrary Invertible Sentence in <span class="math notranslate nohighlight">\(C_L\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \zeta \in K\]</div>
+<p>By <a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a>, the <em>i</em><sup>th</sup> Word of <em>inv(ζ)</em> is the inverse of the <em>(Λ(ζ) - i + 1)</em><sup>th</sup> Word of <em>ζ</em></p>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<p>Furthermore, by <a class="reference internal" href="#theorem-2-3-3"><span class="std std-ref">Theorem 2.3.3</span></a>, since <em>inv(ζ)</em> is in the Corpus, <em>inv(ζ)</em> is an Admissible Sentence of word length <em>Λ(ζ)</em>.</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \zeta \in A(\Lambda(\zeta))\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\zeta \in K\)</span>, by <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \text{inv}(\zeta) \in C_L.\]</div>
+<p>By <a class="reference internal" href="#theorem-2-3-8"><span class="std std-ref">Theorem 2.3.8</span></a>, the inverse of <em>ζ</em>, <em>inv(ζ)</em>, can be expressed as the Delimitation of the inverses of the Words of <em>ζ</em> in reverse order,</p>
+<div class="math notranslate nohighlight">
+\[5. \quad \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<p>This is equivalent to,</p>
+<div class="math notranslate nohighlight">
+\[6. \quad \text{inv}(\zeta) = D\Pi_{i=1}^{\Lambda(\zeta)} \text{inv}(\zeta)\{i\}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\text{inv}(\zeta) \in C_L\)</span> by assumption (step 1) and <em>inv(ζ)</em> has the same Word Length as <em>ζ</em> which is <em>Λ(ζ)</em>.</p>
+<p>Because <em>inv(ζ)</em> is a Delimitation of Words from <strong>L</strong>, by <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>, it follows that,</p>
+<div class="math notranslate nohighlight">
+\[7. \quad \text{inv}(\zeta) \in A(\Lambda(\zeta)).\]</div>
+<p>Therefore, both conditions hold,</p>
+<div class="math notranslate nohighlight">
+\[8. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<div class="math notranslate nohighlight">
+\[9. \quad \text{inv}(\zeta) \in A(\Lambda(\zeta))\]</div>
+<p>(←) Assume that for an arbitrary Sentence <span class="math notranslate nohighlight">\(\zeta \in C_L\)</span>, the following holds,</p>
+<div class="math notranslate nohighlight">
+\[10. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<div class="math notranslate nohighlight">
+\[11. \quad \text{inv}(\zeta) \in A(\Lambda(\zeta))\]</div>
+<p>By <a class="reference internal" href="#definition-2-3-1"><span class="std std-ref">Definition 2.3.1</span></a>, since <span class="math notranslate nohighlight">\(\text{inv}(\zeta) \in A(\Lambda(\zeta))\)</span>, it follows immediately,</p>
+<div class="math notranslate nohighlight">
+\[12. \quad \text{inv}(\zeta) \in C_L\]</div>
+<p>By <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>, it follows,</p>
+<div class="math notranslate nohighlight">
+\[13. \quad \zeta \in K\]</div>
+<p>Therefore, both directions of the equivalence have been shown. Since <em>ζ</em> was an arbitrary Sentence, this can be generalized over the Corpus,</p>
+<div class="math notranslate nohighlight">
+\[14. \quad \forall \zeta \in C_L: \zeta \in K \leftrightarrow (\forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})) \land (\text{inv}(\zeta) \in A(\Lambda(\zeta)))\]</div>
+<p>∎</p>
+<p>Just as the notion of Word Length introduced a dimension of <em>“semanticality”</em> to the formal system, so too does the notion of an Admissible Sentence introduce a dimension of <em>“grammaticality”</em>. <a class="reference internal" href="#theorem-2-3-10"><span class="std std-ref">Theorem 2.3.10</span></a> takes no stance on what constitutes an Admissible Sentence, what sort of grammatical forms and structures might define this notion, except to say it must be the result of a Delimitation of Words that belongs to the Corpus.</p>
+<p>The significance of <a class="reference internal" href="#theorem-2-3-10"><span class="std std-ref">Theorem 2.3.10</span></a> is the additional syntactical constraint that is imposed over and above <em>admissibility</em> onto a Corpus when a Sentence under goes inversion. Not only must the Inverse Sentence possess <em>admissibility</em>, the pre-cursor to <em>grammaticality</em>, but it must also display Word-level symmetry. This is definitively confirmed by <a class="reference internal" href="#theorem-2-3-11"><span class="std std-ref">Theorem 2.3.11</span></a>.</p>
+<p id="theorem-2-3-11"><strong>Theorem 2.3.11</strong> <span class="math notranslate nohighlight">\(\forall \zeta \in C_L: \zeta \in K \to \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in I\)</span></p>
+<p>This theorem can be stated in natural language as follows: For every Invertible Sentence <em>ζ</em> in the Corpus <strong>C</strong><sub>L</sub>, every Word in <em>ζ</em> is an Invertible Word.</p>
+<p>Let <em>ζ</em> be an arbitrary Invertible Sentence in <span class="math notranslate nohighlight">\(C_L\)</span>, and let <em>i</em> be a natural number such that <span class="math notranslate nohighlight">\(1 \leq i \leq \Lambda(\zeta)\)</span>. Since <span class="math notranslate nohighlight">\(\zeta \in K\)</span>, by <a class="reference internal" href="#definition-2-3-2"><span class="std std-ref">Definition 2.3.2</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[1. \quad \text{inv}(\zeta) \in C_L\]</div>
+<p>By <a class="reference internal" href="#definition-2-1-5"><span class="std std-ref">Definition 2.1.5</span></a>, <em>ζ{i}</em> refers to the Word at index <em>i</em> in the Word-level representation of <em>ζ</em>. By <a class="reference internal" href="#theorem-2-3-9"><span class="std std-ref">Theorem 2.3.9</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[2. \quad \forall i \in N_{\Lambda(\zeta)}: \text{inv}(\zeta)\{i\} = \text{inv}(\zeta\{\Lambda(\zeta) - i + 1\})\]</div>
+<p>By the <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Extraction Axiom S.2</span></a>, since <span class="math notranslate nohighlight">\(\zeta \in C_L\)</span>, all Words in its Word-level representation belong to <strong>L</strong>. Therefore, <span class="math notranslate nohighlight">\(\zeta\{i\} \in L\)</span> for all <em>i</em> such that <span class="math notranslate nohighlight">\(1 \leq i \leq \Lambda(\zeta)\)</span>.</p>
+<p>Since <span class="math notranslate nohighlight">\(\text{inv}(\zeta) \in C_L\)</span> (from step 1) and each word <em>inv(ζ){i}</em> is the inverse of a word in ζ (from step 2), by <a class="reference internal" href="#axiom-s2"><span class="std std-ref">Extraction Axiom S.2</span></a>, all the Words in the Word-level representation of <em>inv(ζ)</em> belong to L,</p>
+<div class="math notranslate nohighlight">
+\[3. \quad \text{inv}(\zeta)\{i\} \in L\]</div>
+<p>By <a class="reference internal" href="02_language.html#definition-1-3-2"><span class="std std-ref">Definition 1.3.2</span></a> of Invertible Words, this means that <em>ζ{i}</em> is an Invertible Word. Therefore, <span class="math notranslate nohighlight">\(\zeta\{i\} \in I\)</span>. Since <em>ζ</em> and <em>i</em> were arbitrary, this can generalize,</p>
+<div class="math notranslate nohighlight">
+\[4. \quad \forall \zeta \in C_L: \zeta \in K \leftrightarrow \forall i \in N_{\Lambda(\zeta)}`: \zeta\{i\} \in I\]</div>
+<p>∎</p>
+<p>The contrapositive of <a class="reference internal" href="#theorem-2-3-11"><span class="std std-ref">Theorem 2.3.11</span></a> provides a schema for searching for Invertible Sentences. If any of Words in a Sentence are not Invertible, then the Sentence is not Invertible. In other words, it suffices to find a single word in a Sentence that is not Invertible to show the entire Sentence is not Invertible.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_language.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Section I: Language</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04_structures.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Section III: Structures</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-ii-i-definitions">Section II.I: Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corpus">Corpus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentence">Sentence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#word-length">Word Length</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intervention">Intervention</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-ii-ii-axioms">Section II.II: Axioms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorems">Theorems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-ii-iii-sentence-classes">Section II.III: Sentence Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#admissible-sentences">Admissible Sentences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#invertible-sentences">Invertible Sentences</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

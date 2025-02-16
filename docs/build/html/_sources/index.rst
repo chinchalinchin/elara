@@ -7,13 +7,9 @@
    :hidden:
 
    00_epistemia/index
-   01_organon/index
-   02_facticity/index
-   03_universalis/index
-   04_palindromia/index
-   05_poeticus/index
-   06_pedagogy/index
-   07_analecta/index
+   01_theurgy/index
+   02_pedagogy/index
+   03_analecta/index
 
 ---------------
 

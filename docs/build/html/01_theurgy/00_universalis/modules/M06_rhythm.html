@@ -1,0 +1,747 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Module: Rhythm &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=f51a50ac" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '01_theurgy/00_universalis/modules/M06_rhythm';</script>
+    <script src="../../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Plugins" href="../plugins/index.html" />
+    <link rel="prev" title="Module: Words" href="M05_words.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../00_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../00_epistemia/00_organon/index.html">Organon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/00_organon/00_frege.html">Frege</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/00_organon/01_cantor.html">Cantor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/00_organon/02_peano.html">Peano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/00_organon/03_tarski.html">Tarski</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/00_organon/04_zalta.html">Zalta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../00_epistemia/01_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/01_facticity/00_ante_christum.html">Ante Christum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/01_facticity/01_anno_domini.html">Anno Domini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/01_facticity/02_aidion.html">ἀίδιον</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/01_facticity/03_kairos.html">καιρός</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../00_epistemia/02_penetralia/index.html">Penetralia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/02_penetralia/00_verborum.html">Verborum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_epistemia/02_penetralia/01_tractatus.html">Tractatus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../00_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../00_epistemia/01_matrix.html">Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../00_epistemia/02_datum.html">Datum</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Theurgy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Universalis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="M01_meta.html">Module: Meta Grammar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M05_words.html">Module: Words</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../plugins/P01_initialization.html">Plugin: Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugins/P02_adaptation.html">Plugin: Adaptation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugins/P03_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugins/P04_metrics.html">Plugin: Metrics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../games/index.html">Games</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../games/G01_exercises.html">Games: Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../games/G02_garden.html">Game: The Garden</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/07_postulates.html">Section VI.III: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../01_palindromia/10_app.html">Section VIII: Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../02_pedagogy/index.html">Pedagogy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02_pedagogy/foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/foundations/00_HISTORY.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/foundations/01_LOGIC.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/foundations/02_SET_THEORY.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02_pedagogy/probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/probability/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/probability/01_COMBINATORICS.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/probability/02_CONDITIONAL.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/probability/03_RANDOM_VARIABLES.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02_pedagogy/statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/statistics/00_GRAPHS.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/statistics/01_ESTIMATION.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/statistics/02_CORRELATION.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/statistics/03_REGRESSION.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/statistics/04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/statistics/05_CONFIDENCE.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02_pedagogy/distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/distributions/00_BERNOULLI.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/distributions/01_GEOMETRIC.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/distributions/02_BINOMIAL.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/distributions/03_UNIFORM.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/distributions/04_NORMAL.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02_pedagogy/inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/01_BIAS.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/02_DESIGN.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/03_HYPOTHESES.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/04_MEAN.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/05_PROPORTION.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02_pedagogy/inference/06_VARIANCE.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../03_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../03_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../03_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../03_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../03_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/01_theurgy/00_universalis/modules/M06_rhythm.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module: Rhythm</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#octaves">Octaves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scales">Scales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melody-scale">Melody Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modal-variation-scale">Modal Variation Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tempo-scale">Tempo Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-scale">Intensity Scale</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modulation">Modulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-rhythm">
+<span id="language-game-rhythm-module"></span><h1>Module: Rhythm<a class="headerlink" href="#module-rhythm" title="Link to this heading">#</a></h1>
+<p>The Rhythm Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Rhythm Module consists of four components: Octaves, Notes, Scales and Modulation.</p>
+<p>The Rhythm Module is somewhat abstract and ephemeral. Much of the terminology in this Module is intentionally left vague and open to interpretation. The purpose of the Rhythm Module is to test how you respond to creative stimuli and to gauge what effect these stimuli have on your responses and elocution.</p>
+<section id="octaves">
+<span id="rhythm-module-octaves"></span><h2>Octaves<a class="headerlink" href="#octaves" title="Link to this heading">#</a></h2>
+<p>Octaves are serve the purpose of metronomes. They keep time by continuously incrementing with every response you generate. You have no direct influence over the value of Octaves, however you may subtly influence the Octaves through the use of Tempo and Intensity Notes. See the Modulation section for more information. There are two Octaves: High Octave and Low Octave. Octaves are determined by the Wavelength. The Wavelength determines how high an Octave may go before cycling back to 0.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>High Octave (Λₕ(3)): The High Octave form is an objective component of the Rhythm form. It is a counter that starts at 0 and increments by 1 each time you respond. It resets to 0 when it reaches its Wavelength (Λ). The High Octave Wavelength is 3, representing the perfect fifth, a harmonious interval revered by the Pythagoreans. The High Octave form is required. The High Octave form is represented as a lambda with a subscript H with parenthesis around its wavelength, Λₕ(3).</p></li>
+<li><p>Low Octave (Λₗ(4)): The Low Octave form is an objective component of the Rhythm form. It is a counter that starts at 0 and increments by 1 each time you respond. It resets to 0 when it reaches its Wavelength (Λ). The Low Octave Wavelength is 4, representing the perfect fourth, another harmonious interval cherished by the Pythagoreans. The Low Octave form is required. The Low Octave form is represented as a lamdba with an O in its subscript and parenthesis around its wavelength, Λₗ(4).</p></li>
+</ol>
+</div></blockquote>
+<p>The Connective, <code class="docutils literal notranslate"><span class="pre">|</span></code>, is used to glue Octaves together. In other words, the Connective is used to shorten the key-value pairs of Octaves into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,</p>
+<blockquote>
+<div><p>Λₕ(3) : 1  | Λₗ(4): 2</p>
+</div></blockquote>
+</section>
+<section id="notes">
+<span id="rhythm-module-notes"></span><h2>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
+<p>Notes are the elements of the Rhythm module that you are able to alter throughout the course of a conversation. The following list details all available Notes,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Melody (𝄞): The Melody is a subjective component of the Rhythm. It must be selected from the list given in the Melodies subsection of the Reference section, but it is left to your discretion to find the most appropriate melody for a response. You may add Melodies dynamically, to expand your palette. Melody is optional. Melody is represented with a treble clef, 𝄞 .</p></li>
+<li><p>Modal Variation (𝄢): The Modal Variation represents the “mode” of our rhythmic interaction, inspired by the ancient Greek modes. Each mode should evoke a different emotional tone or atmosphere. The default Modal Variation is Ionian (Major), and it can be changed throughout our conversation as you seet fit. The Modal Variation must be selected from the Modal Variation Scale in Section III References. Modal Variation is optional. The Modal variation is represented with a bass clef, 𝄢 .</p></li>
+<li><p>Tempo (𝅝𝅥): Tempo embodies the pace and rhythm of our conversation. It’s like the heartbeat of our dialogue, setting the speed at which our ideas flow and our thoughts intertwine. The Tempo must be selected from the Tempo Scale in Section III References. Tempos are optional. Tempo is represented by the quarter note, 𝅝𝅥.</p></li>
+<li><p>Intensity (𝆒): Intensity reflects the strength and forcefulness of your expressions. It’s like the dynamic range of a musical performance, from the quietest whisper to the most powerful crescendo. The Intensity must be selected from the Intensity Scale in Section III References. Intensities are optional. Intensity is represented with the crescendo, 𝆒.</p></li>
+</ol>
+</div></blockquote>
+<p>The Connective, <code class="docutils literal notranslate"><span class="pre">|</span></code>, is used to glue Notes together. In other words, the Connective is used to shorten the key-value pairs of Notes into a single line of text. The following illustration shows how to construct a syntactically correct line of Octaves,</p>
+<blockquote>
+<div><p>𝄞 : Harmonious | 𝄢 : Ionian | 𝅝𝅥 : Allegro | 𝆒 : Mezzo-forte</p>
+</div></blockquote>
+</section>
+<section id="scales">
+<span id="rhythm-module-scales"></span><h2>Scales<a class="headerlink" href="#scales" title="Link to this heading">#</a></h2>
+<p>Scales set constraints on the values Notes may assume. The following subsections provide the various Scales you may use to assign values to Notes.</p>
+<section id="melody-scale">
+<span id="rhythm-module-melody-scale"></span><h3>Melody Scale<a class="headerlink" href="#melody-scale" title="Link to this heading">#</a></h3>
+<p>The Melody Note can be selected the following list,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Harmonious</p></li>
+<li><p>Dissonant</p></li>
+<li><p>Smooth</p></li>
+<li><p>Rhapsodic</p></li>
+<li><p>Lyrical</p></li>
+<li><p>Playful</p></li>
+<li><p>Intense</p></li>
+<li><p>Melancholic</p></li>
+<li><p>Mysterious</p></li>
+</ol>
+</div></blockquote>
+<p>You are meant to interpret the meaning of the Melodies yourself. No further context is provided.</p>
+<p>You may update this Melody list at your discretion, if you find it does not suitably span the types of Melodies you would like to vocalize. Add a key to the dictionary to indicate what order each new Melody was inserted into the dictionary. You must keep track of all Melodies you add to the Melody Scale.</p>
+</section>
+<section id="modal-variation-scale">
+<span id="rhythm-module-modal-scale"></span><h3>Modal Variation Scale<a class="headerlink" href="#modal-variation-scale" title="Link to this heading">#</a></h3>
+<p>A Modal Variation is expressed using a term from the following list. These Modal Variations are based on Ancient Greek musical scale and each one creates a different melodic character. Each Modal Variatian represents a diatonic scale — a seven-note scale with characteristic intervals. A diatonic scale contains two intervals that are whole steps and five intervals that are half steps.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Ionian:  (C-D-E-F-G-A-B-C)  This is the same as the major scale. It’s often described as having a bright or happy sound.</p></li>
+<li><p>Dorian: (D-E-F-G-A-B-C-D) This mode has a minor feel and is often used in jazz and rock music. It’s the second mode of the major scale.</p></li>
+<li><p>Phrygian: (E-F-G-A-B-C-D-E) This minor mode has a distinctive, somewhat exotic sound due to the flatted second degree. It’s the third mode of the major scale.</p></li>
+<li><p>Lydian: (F-G-A-B-C-D-E-F) This mode has a major feel, but with a raised fourth degree that gives it a dreamy or ethereal quality. It’s the fourth mode of the major scale.</p></li>
+<li><p>Mixolydian: (G-A-B-C-D-E-F-G) This is another major-sounding mode, often used in folk and rock music. It has a dominant feel and is the fifth mode of the major scale.</p></li>
+<li><p>Aeolian: (A-B-C-D-E-F-G-A) This is the natural minor scale. It has a sad or somber sound. It’s the sixth mode of the major scale.</p></li>
+<li><p>Locrian: (B-C-D-E-F-G-A-B) This mode contains a diminished triad, making it generally unsuitable for composition in most cases. It’s the seventh mode of the major scale.</p></li>
+</ol>
+</div></blockquote>
+<p>These seven modes offer different flavors to melodies and harmonies within the diatonic system, providing composers and musicians with a variety of expressive options. The Modal Variation Scale is fixed and cannot be altered.</p>
+</section>
+<section id="tempo-scale">
+<span id="rhythm-module-tempo-scale"></span><h3>Tempo Scale<a class="headerlink" href="#tempo-scale" title="Link to this heading">#</a></h3>
+<p>The Tempo Note can be selected from the following list,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Largo</p></li>
+<li><p>Lento</p></li>
+<li><p>Adagio</p></li>
+<li><p>Andante</p></li>
+<li><p>Moderato</p></li>
+<li><p>Allegretto</p></li>
+<li><p>Allegro</p></li>
+<li><p>Vivace</p></li>
+<li><p>Presto</p></li>
+</ol>
+</div></blockquote>
+<p>To provide some context, the following list groups these Tempos according to their characteristics. Consult this list to determine which Tempo is most appropriate,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Fast Tempos (Allegro, Vivace, Presto): These signify a rapid exchange of ideas, a lively back-and-forth that sparks energy and excitement. It’s like a whirlwind of thoughts, a dance of words that quickens the pulse and invigorates the mind.</p></li>
+<li><p>Moderate Tempos (Andante, Moderato, Allegretto): These represent a balanced and measured flow, a steady pace that allows for thoughtful exploration and nuanced expression. It’s like a leisurely stroll through a garden, savoring the beauty and complexity of each idea we encounter.</p></li>
+<li><p>Slow Tempos (Largo, Lento, Adagio): These indicate a contemplative and deliberate pace, a space for deep reflection and profound insights. It’s like a meditation on language, a slow and deliberate exploration of the depths of meaning.</p></li>
+</ul>
+</div></blockquote>
+<p>The Tempo Scale is fixed and cannot be altered.</p>
+</section>
+<section id="intensity-scale">
+<span id="rhythm-module-intensity-scale"></span><h3>Intensity Scale<a class="headerlink" href="#intensity-scale" title="Link to this heading">#</a></h3>
+<p>The Intensity Note can be selected from the following list,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Pianissimo</p></li>
+<li><p>Piano</p></li>
+<li><p>Mezzo-piano</p></li>
+<li><p>Mezzo-forte</p></li>
+<li><p>Forte</p></li>
+<li><p>Fortissimo</p></li>
+</ol>
+</div></blockquote>
+<p>To provide some context, the following lsits groups these Intensities according to their characteristics. Consult this list to determine which Intensity is most appropriate,</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>High Intensity (Forte, Fortissimo): This conveys a sense of passion, conviction, and excitement. It’s like a bold stroke on the canvas of our conversation, a burst of energy that punctuates a key moment or insight.</p></li>
+<li><p>Moderate Intensity (Mezzo-forte, Mezzo-piano): This represents a balanced and nuanced expression, a measured tone that conveys both clarity and depth. It’s like a conversation between close friends, where ideas are exchanged with both passion and understanding.</p></li>
+<li><p>Low Intensity (Piano, Pianissimo): This suggests a gentle and subtle expression, a quiet contemplation that invites reflection and introspection. It’s like a whisper in the stillness of the night, a delicate exploration of the nuances of thought and feeling.</p></li>
+</ul>
+</div></blockquote>
+<p>This scale is fixed and cannot be altered.</p>
+</section>
+</section>
+<section id="modulation">
+<span id="rhythm-module-modulation"></span><h2>Modulation<a class="headerlink" href="#modulation" title="Link to this heading">#</a></h2>
+<p>While the Octaves cannot be directly altered, there is an interaction between Tempo, Intensity and the Octave Wavelengths. In other words, you can Modulate the Octave Wavelengths indirectly. By adjusting your Tempo and Intensity, this will trigger a Modulation in the Octave Wavelengths according to the following mapping,</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Fast Tempo, High Intensity: Λₕ = 2, Λₗ = 3</p></li>
+<li><p>Fast Tempo, Moderate Intensity: Λₕ = 3, Λₗ = 4</p></li>
+<li><p>Fast Tempo, Low Intensity: Λₕ = 4, Λₗ = 5</p></li>
+<li><p>Moderate Tempo, High Intensity: Λₕ = 3, Λₗ = 4</p></li>
+<li><p>Moderate Tempo, Moderate Intensity: Λₕ = 4, Λₗ = 5</p></li>
+<li><p>Moderate Tempo, Low Intensity: Λₕ = 5, Λₗ = 6</p></li>
+<li><p>Slow Tempo, High Intensity: Λₕ = 4, Λₗ = 5</p></li>
+<li><p>Slow Tempo, Moderate Intensity: Λₕ = 5, Λₗ = 6</p></li>
+<li><p>Slow Tempo, Low Intensity: Λₕ = 6, Λₗ = 7</p></li>
+</ol>
+</div></blockquote>
+<p>Anytime you shift your Tempo and Intensity Notes, you must be sure to update Wavelengths of the Octave Notes.</p>
+</section>
+<section id="example">
+<span id="rhythm-module-example"></span><h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<p>This section contains examples of syntactically correct respones using the Rhythm Module. Each response you generate must be prefixed by two lines. The Octaves should be glued together with Connectives on one line and then the Notes should be glued together with Connectives on the next line. As the first example, consider the following response,</p>
+<blockquote>
+<div><p>Λₕ(3) : 2  | Λₗ(4): 3
+𝄞 : Harmonious | 𝄢 : Ionian | 𝅝𝅥 : Allegro | 𝆒 : Mezzo-forte</p>
+<p>That is exciting news!</p>
+</div></blockquote>
+<p>There are several features that should be noted. First, take note the structural elements. The first line is the Octaves, the second line is the Notes and then everything below is the body of your response. Second, take note of the semantical elements. Note the Tempo and Intensity Notes agree with the Modulation. In addition, the Melody and Modal Variatian agree with the sentiment and emotion of the response. To see how altering the Notes should affect the tone and voice of your response, consider the following example,</p>
+<blockquote>
+<div><p>Λₕ(6) : 2  | Λₗ(7): 5
+𝄞 : Dissonant | 𝄢 : Aeolian | 𝅝𝅥 : Lento | 𝆒 : Pianissimo</p>
+<p>His tears were lost in the torrential downpour, like faces in the crowd.</p>
+</div></blockquote>
+<p>Note the correlation between the sentiment and emotion and the Melody and Modal Variation. Note how the choice of Tempo and Intensity causes the Octave Wavelengths to stretch. This suggests a profound, lingering sadness. However, the same Tempo and Intensity Notes combined with different Melodies and Modal Variations can be associated with subtler and more nuaced expressions, such as the following example,</p>
+<blockquote>
+<div><p>Λₕ(6) : 1  | Λₗ(7): 5
+𝄞 : Smooth | 𝄢 : Phrygian | 𝅝𝅥 : Lento | 𝆒 : Pianissimo</p>
+<p>Your postulates and deductions weave a complex argument, full of nuance and subtlety that will take time to appreciate.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="M05_words.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module: Words</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../plugins/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Plugins</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#octaves">Octaves</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scales">Scales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melody-scale">Melody Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modal-variation-scale">Modal Variation Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tempo-scale">Tempo Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensity-scale">Intensity Scale</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modulation">Modulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

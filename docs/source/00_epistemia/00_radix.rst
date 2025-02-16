@@ -9,14 +9,20 @@ Radix
 References
 ----------
 
+.. _all-poetry-com:
+
 allpoetry.com
 -------------
 
 - `All All and All <https://allpoetry.com/All-All-And-All>`_
+- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
+- `I Have Longed To Move Away <https://allpoetry.com/I-Have-Longed-To-Move-Away>`_
 - `I Met a Genius <https://allpoetry.com/I-Met-A-Genius>`_
 - `The Genius of the Crowd <https://allpoetry.com/The-Genius-Of-The-Crowd>`_
 - `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
 - `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
+
+.. _archive-org:
 
 archive.org
 -----------
@@ -34,6 +40,33 @@ archive.org
 - `White Yajurveda <https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up>`_
 - `World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_
 
+.. _classical-library-org:
+
+classicallibrary.org
+--------------------
+
+- `Meditations on First Philosophy <http://www.classicallibrary.org/descartes/meditations/4.htm>`_
+
+.. _classics-mit-edu:
+
+classics.mit.edu
+----------------
+
+- `Physics <http://classics.mit.edu/Aristotle/physics.html>`_
+- `Metaphysics <http://classics.mit.edu/Aristotle/metaphysics.html>`_
+- `Posterior Analytics <http://classics.mit.edu/Aristotle/posterior.1.i.html>`_
+- `Prior Analytics <https://classics.mit.edu/Aristotle/prior.1.i.html>`_
+- `Theatetus <http://classics.mit.edu/Plato/theatu.html>`_
+
+.. _columbia-edu:
+
+columbia.edu
+------------
+
+- `Little Gidding <https://www.columbia.edu/itc/history/winter/w3206/edit/tseliotlittlegidding.html>`_
+
+.. _gutenberg-org:
+
 gutenberg.org
 -------------
 
@@ -46,29 +79,14 @@ gutenberg.org
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
 
-classicallibrary.org
---------------------
+.. _kalliope-org:
 
-- `Meditations on First Philosophy <http://www.classicallibrary.org/descartes/meditations/4.htm>`_
-
-royalsocietypublishing.org
---------------------------
-
-- `An essay towards solving a problem in the doctrine of chances <https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053>`_
-
-classics.mit.edu
-----------------
-
-- `Physics <http://classics.mit.edu/Aristotle/physics.html>`_
-- `Metaphysics <http://classics.mit.edu/Aristotle/metaphysics.html>`_
-- `Posterior Analytics <http://classics.mit.edu/Aristotle/posterior.1.i.html>`_
-- `Prior Analytics <https://classics.mit.edu/Aristotle/prior.1.i.html>`_
-- `Theatetus <http://classics.mit.edu/Plato/theatu.html>`_
-
-columbia.edu
+kalliope.org
 ------------
 
-- `Little Gidding <https://www.columbia.edu/itc/history/winter/w3206/edit/tseliotlittlegidding.html>`_
+- `Calidore: A Fragment <https://kalliope.org/en/text/keats2001071304>`_
+
+.. _poetry-foundation-org:
 
 poetryfoundation.org
 --------------------
@@ -82,7 +100,15 @@ poetryfoundation.org
 - `Spring and Fall <https://www.poetryfoundation.org/poems/44400/spring-and-fall>`_
 - `Sonnet 64 <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_
 - `The Canonization <https://www.poetryfoundation.org/poems/44097/the-canonization>`_
+- `The Dong with a Luminous Nose <https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose>`_
 - `The Love Song of J. Alfred Prufrock  <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_
 - `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
 - `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_
 - `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
+
+.. _royal-society-publish-org:
+
+royalsocietypublishing.org
+--------------------------
+
+- `An essay towards solving a problem in the doctrine of chances <https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053>`_
