@@ -1,0 +1,73 @@
+digraph concepts {
+    rankdir=LR;
+    node [shape=circle];
+
+    subgraph cluster_converse {
+        label = "Converse (Conv)";
+        R1 [label = "x"];
+        R2 [label = "y"];
+        R [label = "R", shape=box];
+        ConvR [label = "Conv(R)", shape=box];
+
+        R1 -> R [label = "Rxy"];
+        R -> R2;
+
+        R2 -> ConvR [label = "Ryx"];
+        ConvR -> R1;
+    }
+
+    subgraph cluster_function {
+        label = "Function (Func)";
+        x1 [label = "x"];
+        y1 [label = "y"];
+        z1 [label = "z", style=dashed]; // Dashed to indicate potential, but must be equal to y
+        F [label = "R", shape=box];
+
+        x1 -> F [label = "Rxy"];
+        F -> y1;
+        x1 -> F [label = "Rxz", style=dashed];
+        F -> z1 [style=dashed];
+        y1 -> z1 [label = "=", dir=none, style=dashed]; // y must equal z
+    }
+
+    subgraph cluster_mapping {
+        label = "Mapping (Map)";
+        node [shape=circle];
+        
+        subgraph cluster_F {
+          label = "F";
+          x2 [label = "x"];
+          x3 [label = "x'"];
+        }
+        
+        subgraph cluster_G {
+          label = "G";
+          y2 [label = "y"];
+          y3 [label = "y'"];
+        }
+
+        M [label = "R", shape=box];
+
+        x2 -> M [label = "Rxy"];
+        M -> y2;
+        x3 -> M [label = "Rx'y'"];
+        M -> y3;
+    }
+    
+    subgraph cluster_legend{
+        node [shape=plaintext, fontsize=10];
+        key [label = <<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                          <tr><td align="right" port="i1">Relation (R):</td><td port="i2"> </td></tr>
+                          <tr><td align="right" port="i3">Domain (F):</td><td port="i4"> </td></tr>
+                          <tr><td align="right" port="i5">Range (G):</td><td port="i6"> </td></tr>
+                      </table>>];
+        key2 [label = <<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+                          <tr><td align="right" port="i1">Dashed Arrow:</td><td port="i2">Conditional/Constraint</td></tr>
+                          <tr><td align="right" port="i3">Solid Arrow:</td><td port="i4">Relation Application</td></tr>
+                      </table>>];
+
+        key:i2 -> k1 [label = "Box",arrowhead=none];
+        key:i4 -> Fset [shape=circle,label=" ", arrowhead=none];
+        key:i6 -> Gset [shape=circle,label=" ", arrowhead=none];
+    }
+}

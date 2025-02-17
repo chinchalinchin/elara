@@ -75,7 +75,7 @@ To clarify the relationship between Strings, Characters, Alphabets, Words, Langu
 
 This web of categorical relations represents the hierarchy of linguistic entities within the formal system. 
 
-.. graphviz:: ../../_static/dot/hierarchy.dot
+.. graphviz:: ../../_static/dot/palindromes/hierarchy.dot
     :caption: A diagram of the semantic hierarchy
     :alt: Semantic Hierarchy Diagram
 
@@ -159,7 +159,7 @@ The :ref:`Delimiting Algorithm <algorithm-2>` takes a Sentence *ᚠ* from a Corp
     
     8. Return W ∎
 
-.. graphviz:: ../../_static/dot/delimiting.dot
+.. graphviz:: ../../_static/dot/palindromes/delimiting.dot
     :caption: A diagram of the :ref:`Delimiting Algorithm <algorithm-2>`
     :alt: :ref:`Delimiting Algorithm <algorithm-2>` Diagram
 
@@ -529,7 +529,7 @@ Therefore,
     - :math:`(2/10/4)_{ᚠ}` (the :math:`10^{\text{th}}` Character is between the second and fourth Word)
     - etc. 
 
-.. graphviz:: ../../_static/dot/intervention.dot
+.. graphviz:: ../../_static/dot/palindromes/intervention.dot
     :caption: A diagram of the Intervention relation
     :alt: Intervention Diagram
 

@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
@@ -450,7 +450,6 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-primitives">Logical Primitives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mereology">Mereology</a></li>
 </ul>
             </nav>
         </div>
@@ -466,31 +465,39 @@
 <span id="id1"></span><h1>Tarski<a class="headerlink" href="#tarski" title="Link to this heading">#</a></h1>
 <section id="logical-primitives">
 <span id="tarski-logical-primitives"></span><h2>Logical Primitives<a class="headerlink" href="#logical-primitives" title="Link to this heading">#</a></h2>
-<p>Tarski explored the consequences of defining the logical conditions for truth in an early paper from 1923, <a href="#id2"><span class="problematic" id="id3">`On The Primitive Term of the Logistic &lt;&gt;`_</span></a>.</p>
-<p>In this formulation, the notion of “<em>truth</em>” is treated as an equivalency with syntactically tautologous expressions. In this way, Tarski tries to define the “<em>truth</em>” of language within the language used to express true proposition. In this early attempt, he had not yet fully developed the distinction between semantics and syntax, between meta-languages and object-languages.</p>
-<p>It becomes clear, as his definitions are made and theorems derived, that this meta-logical definition of “<em>truth</em>” is insufficient</p>
+<p>In one of his earlier papers, <a href="#id2"><span class="problematic" id="id3">`On the Primitive Term of Logistic &lt;&gt;`_</span></a>, Tarksi proved all logical operations in second-order logic could be defined in terms of quantification (i.e. categorical assertions) and equivalence (i.e. substitutability).</p>
+<p>In doing so, Tarksi introduced a “<em>truth</em>” predicate into the meta-language of analysis. This notion of “<em>truth</em>” differs considerably from the natural conception of truth, for it treats truth as an equivalency with syntactically tautologous expressions. It becomes clear, as his definitions are made and theorems derived, that this meta-logical definition of “<em>truth</em>” is insufficient for fully elaborating the synthetic and empirical modes of truth.</p>
 <aside class="topic">
 <p class="topic-title">Definition: Truth</p>
-<p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">is</span> <span class="pre">true</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">p</span></code> being equivalent to <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
+<p>“<em>p is true</em>” is equivalent to “<em>p</em>”” being equivalent to “<em>p</em>”.</p>
 <div class="math notranslate nohighlight">
 \[\forall p: tr(p) \equiv (p \equiv p)\]</div>
 </aside>
 <aside class="topic">
 <p class="topic-title">Definition: Assertion</p>
-<p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">is</span> <span class="pre">asserted</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">p</span></code></p>
+<p>“<em>p is asserted</em>” is equivalent to “<em>p</em>”</p>
 <div class="math notranslate nohighlight">
 \[\forall p: as(p) \equiv p\]</div>
 </aside>
 <aside class="topic">
 <p class="topic-title">Definition: Falsity</p>
-<p><code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">is</span> <span class="pre">false</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">p</span></code> being equivalent to <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">p</span></code></p>
+<p>“<em>p is false</em>” is equivalent to “<em>p</em>” being equivalent to “<em>not p</em>”</p>
 <div class="math notranslate nohighlight">
 \[\forall p: fl(p) \equiv (p \equiv \neg p)\]</div>
 </aside>
-<p>The use of the <em>predicates</em> <code class="docutils literal notranslate"><span class="pre">f(p)</span></code> in these definitions implicitly allows second-order constructs into the discourse. <code class="docutils literal notranslate"><span class="pre">f(p)</span></code>, for any <em>f</em>, is equivalent to asserting there exists an <em>F</em> such that <span class="math notranslate nohighlight">\(p \in F\)</span>, where <em>F</em> is the <em>set</em> of <em>p</em>’s that have the property <em>f</em>.</p>
-<p>Predication is a sneaky way of inserting “<em>sets</em>” and “<em>classes</em>” into a language without explicitly introducing the predicates <span class="math notranslate nohighlight">\(\in\)</span> and <span class="math notranslate nohighlight">\(\subset\)</span>.</p>
-<p>Refer to <span class="xref std std-ref">frege-law-v</span> for the ultimate consequences of abstraction.</p>
-<p>In the following commentary, the predicates “<em>truth</em>”, “<em>falsity</em>” and “<em>assertion</em>” should be understood operationally as predicates which satisfy these extensional definitions.</p>
+<p>The use of the indeterminate predicate <em>f(p)</em> in these definitions implicitly allows second-order constructs into the discourse. <em>f(p)</em>, for any <em>f</em>, is equivalent to asserting there exists an <em>F</em> such that <span class="math notranslate nohighlight">\(p \in F\)</span>, where <em>F</em> is the <em>set</em> of <em>p</em>’s that have the property <em>f</em>.</p>
+<p>Predication is a sneaky way of inserting “<em>sets</em>” and “<em>classes</em>” into a language without explicitly introducing the predicates <span class="math notranslate nohighlight">\(\in\)</span> and <span class="math notranslate nohighlight">\(\subset\)</span>. Refer to <span class="xref std std-ref">frege-law-v</span> for the ultimate consequences of abstraction.</p>
+<p>In the following commentary, the predicates “<em>truth</em>”, “<em>falsity</em>” and “<em>assertion</em>” should be understood operationally as predicates which satisfy these extensional definitions, and not as representatives of their colloquial interpretations.</p>
+<p>Tarski begins with a reference to a previously established result that shows logical negation can be defined using only quantification and equivalence,</p>
+<div class="math notranslate nohighlight">
+\[\forall p: (\neg p) \equiv (p \equiv (\forall q: q))\]</div>
+<p>Moreover, it is well-known that logical implication can be defined in terms of equivalence and conjunction,</p>
+<div class="math notranslate nohighlight">
+\[\forall p, q: (p \implies q) \equiv (p \equiv (p \and q))\]</div>
+<p>It is also well-known disjunction can be defined in terms in of implication.</p>
+<div class="math notranslate nohighlight">
+\[\forall p, q: (p \or q) \equiv (\neq p \implies q)\]</div>
+<p>Therefore, if conjunction can be defined in terms of equivalence and quantification, it can be asserted all of second-order logic is contained in the operations of equivalence and quantification, since all other operations can be syllogistically defined in terms of them. With this goal in mind, Tarksi builds up in sequence the following theorems.</p>
 <p><strong>Theorems</strong></p>
 <ol class="arabic simple">
 <li><p>All propositions are equivalent to themselves.</p></li>
@@ -514,7 +521,7 @@
 <div class="math notranslate nohighlight">
 \[\forall p: (\forall q: p \equiv tr(q)) \equiv p\]</div>
 <p>Any true proposition is equivalent to any other true proposition because they are all equivalent to tautologies. Only in this desolate landscape of pure vacuity can <em>truth</em> be defined. A tautology expresses through form what is self-evident.</p>
-<p>Truth, however, is not a mere consequence of self-evidence. It is not wholly <a class="reference internal" href="../02_penetralia/01_tractatus.html#a-priori"><span class="std std-ref">A Priori</span></a>; it is constructed out of parts tautologous and empirical, in short it is <a class="reference internal" href="../02_penetralia/01_tractatus.html#synthetic"><span class="std std-ref">Synthetic</span></a>. This realization is what led to Tarski to the insights which fueled <a href="#id4"><span class="problematic" id="id5">`Concept of Truth in Formalized Languages &lt;&gt;`_</span></a> in 1931.</p>
+<p>Truth, however, is not a mere consequence of self-evidence. It is not wholly <a class="reference internal" href="../02_penetralia/01_tractatus.html#a-priori"><span class="std std-ref">A Priori</span></a>; it is constructed out of parts tautologous and parts empirical, in short it is <a class="reference internal" href="../02_penetralia/01_tractatus.html#synthetic"><span class="std std-ref">Synthetic</span></a>. This realization is what led to Tarski to the insights which fueled <a href="#id4"><span class="problematic" id="id5">`Concept of Truth in Formalized Languages &lt;&gt;`_</span></a> in 1931.</p>
 <ol class="arabic simple" start="5">
 <li><p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the other proposition.</p></li>
 </ol>
@@ -548,78 +555,15 @@
 <div class="math notranslate nohighlight">
 \[\forall p,q: (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) ) \implies (p \and q)\]</div>
 <ol class="arabic simple" start="10">
-<li><p>Two propositions imply one proposition is equivalent to the equivalency of all equivalent properties of the other proposition,</p></li>
+<li><p>Two propositions together imply one proposition is equivalent to the equivalency of all equivalent properties of the other proposition,</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[\forall p, q, f: (p \and q) \implies (p \equiv ((\forall r: p \equiv (fr)) \equiv (\forall r: q \equiv f(r))))\]</div>
 <ol class="arabic simple" start="11">
-<li><p>The final theorem is a strengthening of the previous one,</p></li>
+<li><p>Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition,</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[\forall p,q: (p \and q) \equiv (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))))\]</div>
-<p>However, to your point about negation, Tarski starts his paper by referencing another paper by Herny Hiz that showed negation could be defined as,</p>
-<div class="math notranslate nohighlight">
-\[\forall p: (\neg p) \equiv (p \equiv (\forall q: q))\]</div>
-<p>So, it would seem, Tarski, along with Henry Hiz, have shown logic can be constructed using only quantification and equivalence. If conjunction can be reduced to these two operations, then implication can be defined,</p>
-<div class="math notranslate nohighlight">
-\[\forall p, q: (p \implies q) \equiv (p \equiv (p \and q))\]</div>
-<p>And it is straightforward to define disjunction in terms of implication, namely,</p>
-<div class="math notranslate nohighlight">
-\[\forall p, q: (p \or q) \equiv (\neq p \implies q)\]</div>
-<p>Discuss what that means. It would seem to mean that second order quantification allows the entirety of first order logic to be projected onto a single basis operation, namely, equivalence.</p>
-</section>
-<section id="mereology">
-<span id="tarski-mereology"></span><h2>Mereology<a class="headerlink" href="#mereology" title="Link to this heading">#</a></h2>
-<aside class="topic">
-<p class="topic-title">Definition: Parts</p>
-<p><span class="math notranslate nohighlight">\(\subset\)</span> (part-of relation): A binary relation that holds between two individuals when one is a part of the other.</p>
-</aside>
-<aside class="topic">
-<p class="topic-title">Definition: Disjoint</p>
-<p><span class="math notranslate nohighlight">\(\otimes\)</span> (disjoint relation): A binary relation that holds between two individuals when they have no common parts.</p>
-</aside>
-<aside class="topic">
-<p class="topic-title">Definition: Ergo Sum</p>
-<p>Every element of <em>α</em> is a part of a sum,</p>
-<div class="math notranslate nohighlight">
-\[\forall y: y \in \alpha \to y \subset \sum \alpha\]</div>
-</aside>
-<p><strong>Reflexivity</strong></p>
-<blockquote>
-<div><p>Every individual is a part of itself.</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[\forall x: x \subset x\]</div>
-<p><strong>Transivity</strong></p>
-<blockquote>
-<div><p>If x is a part of y, and y is a part of z, then x is a part of z.</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[\forall x: \forall y: \forall z: ((x \subset y) \land (y \subset z)) \to (x \subset z)\]</div>
-<p><strong>Antisymmetry</strong></p>
-<blockquote>
-<div><p>If x is a part of y, and y is a part of x, then x and y are identical.</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[\forall x: \forall y: ((x \subset y) \land (y \subset x) \to x = y)\]</div>
-<p><strong>Supplementation</strong></p>
-<blockquote>
-<div><p>If x is not a part of y, then there exists a part z of x that is disjoint from y</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[\forall x: \forall y: \neg(x \subset y) \to ((\exists z: z \subset x) \land (z \otimes y))\]</div>
-<p><strong>Summation</strong></p>
-<blockquote>
-<div><p>For any non-empty class α of individuals, there exists an individual x that is the sum of all elements of α.</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[\forall \alpha \forall x: x = \sum \alpha\]</div>
-<p><strong>Atomicity</strong></p>
-<blockquote>
-<div><p>Every non-empty class of individuals has an element that shares no parts with any other element.</p>
-</div></blockquote>
-<div class="math notranslate nohighlight">
-\[\forall \alpha: \alpha \neq \emptyset \to (\exists x: (x \in \alpha) \land (\neg \exists y:(y \in \alpha) \land (y \subset x) ))\]</div>
 </section>
 </section>
 
@@ -670,7 +614,6 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-primitives">Logical Primitives</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mereology">Mereology</a></li>
 </ul>
   </nav></div>
 

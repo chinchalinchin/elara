@@ -8,7 +8,7 @@ Tractatus
 
 - :ref:`a-posteriori`: TODO
 - :ref:`a-priori`: TODO 
-- :ref:`bedeutenung`: TODO 
+- :ref:`bedeutung`: TODO 
 - :ref:`being-in-itself`: TODO: get original french
 - :ref:`being-for-itself`: TODO: get original french
 - :ref:`dasein`: A being which is concerned with its being.
@@ -31,10 +31,10 @@ A Priori
 
 TODO 
 
-.. _bedeutenung: 
+.. _bedeutung: 
 
-Bedeutenung
------------
+Bedeutung
+---------
 
 .. _being-in-itself:
 

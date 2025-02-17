@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
   
@@ -449,10 +449,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hume-s-principle">Hume’s Principle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-as-the-cardinality-of-contradiction">Zero as the Cardinality of Contradiction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-as-the-cardinality-of-zero">One as the Cardinality of Zero</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frege-s-five-laws">Frege’s Five Laws</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grundgesetze-der-arithmetik">Grundgesetze der Arithmetik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
 </ul>
             </nav>
         </div>
@@ -466,26 +464,8 @@
                   
   <section id="frege">
 <span id="id1"></span><h1>Frege<a class="headerlink" href="#frege" title="Link to this heading">#</a></h1>
-<section id="hume-s-principle">
-<span id="humes-principle"></span><h2>Hume’s Principle<a class="headerlink" href="#hume-s-principle" title="Link to this heading">#</a></h2>
-<p>TODO</p>
-</section>
-<section id="zero-as-the-cardinality-of-contradiction">
-<span id="fregean-definition-of-zero"></span><h2>Zero as the Cardinality of Contradiction<a class="headerlink" href="#zero-as-the-cardinality-of-contradiction" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[A = \{ x \mid x \neq x \}\]</div>
-<div class="math notranslate nohighlight">
-\[n(A) = 0\]</div>
-</section>
-<section id="one-as-the-cardinality-of-zero">
-<span id="fregean-definition-of-one"></span><h2>One as the Cardinality of Zero<a class="headerlink" href="#one-as-the-cardinality-of-zero" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[B = \{ y \mid y = n(A) \}\]</div>
-<div class="math notranslate nohighlight">
-\[n(B) = 1\]</div>
-</section>
-<section id="frege-s-five-laws">
-<span id="frege-five-laws"></span><h2>Frege’s Five Laws<a class="headerlink" href="#frege-s-five-laws" title="Link to this heading">#</a></h2>
+<section id="grundgesetze-der-arithmetik">
+<span id="frege-grundgesetze"></span><h2>Grundgesetze der Arithmetik<a class="headerlink" href="#grundgesetze-der-arithmetik" title="Link to this heading">#</a></h2>
 <aside class="topic">
 <p class="topic-title">Law I</p>
 <p>TODO</p>
@@ -495,7 +475,7 @@
 <p>TODO</p>
 </aside>
 <aside class="topic">
-<p class="topic-title">Law III: The Identity of Indiscernibles</p>
+<p class="topic-title">Law III: Identity of Indiscernibles</p>
 <p>If two objects have the same properties, they are the same object.</p>
 <div class="math notranslate nohighlight">
 \[\forall a, b: (a = b) \equiv (\forall f: f(a) \equiv f(b))\]</div>
@@ -509,6 +489,44 @@
 <div class="math notranslate nohighlight">
 \[(\hat{\epsilon}f = \hat{\epsilon}g) \equiv (\forall x: f(x) \equiv g(x))\]</div>
 </aside>
+</section>
+<section id="definitions">
+<span id="frege-definitions"></span><h2>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h2>
+<aside class="topic" id="frege-converse">
+<p class="topic-title">Definition: Converse</p>
+<div class="math notranslate nohighlight">
+\[\text{Conv}_{\alpha\epsilon}(R\alpha\epsilon)(x, y) \equiv Ryx\]</div>
+</aside>
+<p>TODO</p>
+<aside class="topic" id="frege-function">
+<p class="topic-title">Definition: Function</p>
+<div class="math notranslate nohighlight">
+\[\text{Func}_{\alpha\epsilon}(R\alpha\epsilon) \equiv \forall x,y: (Rxy \implies \forall z: (Rxz \implies y = z))\]</div>
+</aside>
+<p>TODO</p>
+<aside class="topic" id="frege-mapping">
+<p class="topic-title">Definition: Mapping</p>
+<div class="math notranslate nohighlight">
+\[\text{Map}_{\alpha\epsilon\xi\eta}(R\alpha\epsilon)(F\xi, G\eta) \equiv \text{Func}_{\alpha\epsilon}(R\alpha\epsilon) \land \forall x: (Fx \implies \exists y: (Rxy \land Gy))\]</div>
+</aside>
+<p>TODO</p>
+<aside class="topic" id="frege-predecession">
+<p class="topic-title">Definition: Predecession</p>
+<div class="math notranslate nohighlight">
+\[Pmn \equiv \exists F, x: (Fx \land (n = Nz :Fz) \land (m =  Nz: (Fz \land z \neq x)))\]</div>
+</aside>
+<aside class="topic" id="frege-zero">
+<p class="topic-title">Definition: Zero</p>
+<div class="math notranslate nohighlight">
+\[0 \equiv Nx: x \neq x\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Definition: Hume’s Principle</p>
+<p>The Number belonging to the concept F is identical with the Number belonging to the concept G if the concept F is equinumerous with the concept G.</p>
+<div class="math notranslate nohighlight">
+\[(Nx: Fx = Nx: Gx) \equiv \exists R: (Map(R)(F,G) \land Map(Conv(R))(G, F))\]</div>
+</aside>
+<p>TODO</p>
 </section>
 </section>
 
@@ -558,10 +576,8 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hume-s-principle">Hume’s Principle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-as-the-cardinality-of-contradiction">Zero as the Cardinality of Contradiction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-as-the-cardinality-of-zero">One as the Cardinality of Zero</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frege-s-five-laws">Frege’s Five Laws</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grundgesetze-der-arithmetik">Grundgesetze der Arithmetik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a></li>
 </ul>
   </nav></div>
 

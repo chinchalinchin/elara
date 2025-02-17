@@ -27,8 +27,6 @@ The Curse of the Rebellious Set
 
         R = \{ x \in A \, \mid \, x \notin f(x) \}
 
-    ∎
-
 .. _rebellious-set-theorem:
 
 **Theorem** :math:`f: A \to P(A) \leftrightarrow \lvert R \rvert \geq 1`
@@ -73,5 +71,3 @@ Therefore,
 .. math::
 
     \lvert P(A) \rvert > \lvert A \rvert
-
-∎
