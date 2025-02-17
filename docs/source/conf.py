@@ -32,9 +32,8 @@ extensions = [
 templates_path = [ ]
 
 exclude_patterns = [
-    '**/_apps/**',
-    '**/_notes/**',
-    '**/_poems/**'
+    '_notes/**',
+    '_drafts/**'
 ]
 
 plot_html_show_source_link = True

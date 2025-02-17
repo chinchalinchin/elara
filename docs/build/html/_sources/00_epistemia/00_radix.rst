@@ -15,6 +15,8 @@ allpoetry.com
 -------------
 
 - `All All and All <https://allpoetry.com/All-All-And-All>`_
+- `And Death Shall Have No Dominion <https://allpoetry.com/And-Death-Shall-Have-No-Dominion>`_
+- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
 - `I Have Longed To Move Away <https://allpoetry.com/I-Have-Longed-To-Move-Away>`_
 - `I Met a Genius <https://allpoetry.com/I-Met-A-Genius>`_
 - `The Genius of the Crowd <https://allpoetry.com/The-Genius-Of-The-Crowd>`_

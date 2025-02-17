@@ -79,6 +79,12 @@ Anaphora
     
     -- `All All and All <https://allpoetry.com/All-All-And-All>`_
     
+    War on the spider and the wren! 
+
+    War on the destiny of man! 
+
+    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
+
     We are the hollow men
 
     We are the stuffed men
@@ -128,6 +134,10 @@ Aposiopesis
 Chiasmus
 --------
 
+    Break in the sun till the sun breaks down
+
+    -- `And Death Shall Have No Dominion <https://allpoetry.com/And-Death-Shall-Have-No-Dominion>`_
+
     Beauty is truth, truth beauty
 
     -- `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
@@ -144,6 +154,12 @@ Epanalepsis
     Their pleasures in a long immortal dream.
 
     -- `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
+
+    The maggot that no man can kill
+
+    And the man no rope can hang
+
+    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
 
 .. _epistrophe: 
 

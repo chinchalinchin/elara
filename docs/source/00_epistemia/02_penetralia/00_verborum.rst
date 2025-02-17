@@ -84,7 +84,7 @@ Anaphora
     War on the destiny of man! 
 
     -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
-    
+
     We are the hollow men
 
     We are the stuffed men
@@ -133,6 +133,10 @@ Aposiopesis
 
 Chiasmus
 --------
+
+    Break in the sun till the sun breaks down
+
+    -- `And Death Shall Have No Dominion <https://allpoetry.com/And-Death-Shall-Have-No-Dominion>`_
 
     Beauty is truth, truth beauty
 

@@ -1,12 +1,15 @@
 .. _zalta:
 
+-----
 Zalta
-=====
+-----
 
-.. _metaphysics:
+.. _zalta-metaphysics:
 
 Metaphysics of Abstraction
 --------------------------
+
+Zalta attempted to partition the objects of a language through those that map to being actual and those that map to being abstract. 
 
 .. topic:: Definition: Predicates 
 
