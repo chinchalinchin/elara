@@ -53,7 +53,7 @@
     <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Zalta" href="04_zalta.html" />
+    <link rel="next" title="Kolmogorov" href="04_kolmogorov.html" />
     <link rel="prev" title="Peano" href="02_peano.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -191,7 +191,8 @@
 <li class="toctree-l3"><a class="reference internal" href="01_cantor.html">Cantor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="02_peano.html">Peano</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Tarski</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_zalta.html">Zalta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_kolmogorov.html">Kolmogorov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_zalta.html">Zalta</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../01_facticity/index.html">Facticity</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,53 +486,41 @@
 <div class="math notranslate nohighlight">
 \[\forall p: fl(p) \equiv (p \equiv \neg p)\]</div>
 </aside>
-<p>The use of the indeterminate predicate <em>f(p)</em> in these definitions implicitly allows second-order constructs into the discourse. <em>f(p)</em>, for any <em>f</em>, is equivalent to asserting there exists an <em>F</em> such that <span class="math notranslate nohighlight">\(p \in F\)</span>, where <em>F</em> is the <em>set</em> of <em>p</em>’s that have the property <em>f</em>.</p>
-<p>Predication is a sneaky way of inserting “<em>sets</em>” and “<em>classes</em>” into a language without explicitly introducing the predicates <span class="math notranslate nohighlight">\(\in\)</span> and <span class="math notranslate nohighlight">\(\subset\)</span>. Refer to <span class="xref std std-ref">frege-law-v</span> for the ultimate consequences of abstraction.</p>
 <p>In the following commentary, the predicates “<em>truth</em>”, “<em>falsity</em>” and “<em>assertion</em>” should be understood operationally as predicates which satisfy these extensional definitions, and not as representatives of their colloquial interpretations.</p>
-<p>Tarski begins with a reference to a previously established result that shows logical negation can be defined using only quantification and equivalence,</p>
+<p>The use of the indeterminate predicate <em>f(p)</em> in these definitions implicitly allows second-order constructs into the discourse. <em>f(p)</em>, for any <em>f</em>, is equivalent to asserting there exists an <em>F</em> such that <span class="math notranslate nohighlight">\(p \in F\)</span>, where <em>F</em> is the <em>set</em> of <em>p</em>’s that have the property <em>f</em>. Predication is a sneaky way of inserting “<em>sets</em>” and “<em>classes</em>” into a language without explicitly introducing the predicates <span class="math notranslate nohighlight">\(\in\)</span> and <span class="math notranslate nohighlight">\(\subset\)</span>. Refer to <a class="reference internal" href="00_frege.html#frege-grundgesetze"><span class="std std-ref">Frege’s Law V</span></a> for the ultimate consequences of abstraction.</p>
+<p>Tarski begins the paper with a reference to a previously established result that shows logical negation can be defined using only quantification and equivalence,</p>
 <div class="math notranslate nohighlight">
 \[\forall p: (\neg p) \equiv (p \equiv (\forall q: q))\]</div>
+<p>Tarski uses this theorem as a starting point to show that equivalence and quantification constitute the sole primitive terms of propositional calculus.</p>
+<p>However, there is an interesting <em>implicit</em> assumption being made by asserting this theorem. The validity of this theorem rests on the contradiction of the inner expression <span class="math notranslate nohighlight">\(\forall q: q\)</span>. In other words, in order for this theorem to obtain, it must be the case that <span class="math notranslate nohighlight">\(\forall q: q\)</span> is always false. <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is indeed true, but not unconditionally, and the conditions in which it is not true are worth considering. The essence of this distinction is given in the insight the truth being expressed in the proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is of a different order than a truth that is expressed tautologically, e.g. by a pure equivalence such as <span class="math notranslate nohighlight">\((p \land (p \implies q)) \implies q\)</span>.</p>
+<p>Tautological truths are vacuous; they reveal nothing about the state of the world. A proposition such as <span class="math notranslate nohighlight">\(p \lor \neg p\)</span> is a <em>formal</em> truth that depends only on the syntax of logic. It’s truth is not a function of the language in which it is expressed; While the symbols <span class="math notranslate nohighlight">\(\lor\)</span> and <span class="math notranslate nohighlight">\(\neg\)</span> may be assigned different meanings, the resulting language will still retain an expression which expresses the fundamental logical truth given by the law of excluded middle, however cumbersome and unintuitive its symbolic representation in this hypothetical language may be.</p>
+<p>In contrast, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is not <em>necessarily</em> true in any language, where “<em>language</em>” is to be understood as the set of all propositions <em>q</em>. It is conceivable to imagine a language that only allows the expression of true statements, in which case, since all <em>q</em> are true, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span>, a <em>meta</em>-proposition <em>about</em> the language, becomes false.</p>
+<p>In addition, it is conceivable to imagine a language that expresses notions other than truth-values, in which case <em>q</em> cannot be treated as an assertion of truth and the <em>meta</em>-proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> becomes meaningless.</p>
+<p>If <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is to be true, it must be the case that language given by the set of <em>q</em> is capable of expressing false statements. In other words, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is a proposition about the semantic content of <span class="math notranslate nohighlight">\(\{ q | \forall q: q \}\)</span>, in particular, it is asserting a partition of the language into those statements which are true and those statements which are false exists, and furthermore, the partition of false propositions is non-empty.</p>
+<div class="math notranslate nohighlight">
+\[(\neg \forall q: q) \equiv (\exists q: \neg q)\]</div>
+<p>In other words, at least one false proposition exists. While this is a pragmatic and practical assumption as far as any non-trivial language is concerned, it is nevertheless not a “free” assumption, in the sense that is automatically granted if the laws of tautology are also granted. The proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> cannot be unconditionally true, and so its truth depends on the particular language that is under inspection. In other words, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is implicitly a proposition <em>about</em> propositions, namely that not all of them are true.</p>
+<p>If this assumption is granted, the other logical operations can be reduced to the operations of quantification and equivalence as follows: It is well-known disjunction can be defined in terms in of implication.</p>
+<div class="math notranslate nohighlight">
+\[\forall p, q: (p \lor q) \equiv (\neg p \implies q)\]</div>
 <p>Moreover, it is well-known that logical implication can be defined in terms of equivalence and conjunction,</p>
 <div class="math notranslate nohighlight">
-\[\forall p, q: (p \implies q) \equiv (p \equiv (p \and q))\]</div>
-<p>It is also well-known disjunction can be defined in terms in of implication.</p>
-<div class="math notranslate nohighlight">
-\[\forall p, q: (p \or q) \equiv (\neq p \implies q)\]</div>
-<p>Therefore, if conjunction can be defined in terms of equivalence and quantification, it can be asserted all of second-order logic is contained in the operations of equivalence and quantification, since all other operations can be syllogistically defined in terms of them. With this goal in mind, Tarksi builds up in sequence the following theorems.</p>
-<p><strong>Theorems</strong></p>
-<ol class="arabic simple">
-<li><p>All propositions are equivalent to themselves.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p: tr(p)\]</div>
-<ol class="arabic simple" start="2">
-<li><p>All propositions that are always true implies themselves.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p: (\forall q: p \equiv tr(q)) \implies p\]</div>
-<ol class="arabic simple" start="3">
-<li><p>All propositions imply they are equivalent to always being true.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p, q: p \implies (p \equiv tr(q))\]</div>
+\[\forall p, q: (p \implies q) \equiv (p \equiv (p \land q))\]</div>
+<p>Therefore, if conjunction can be defined in terms of equivalence and quantification, it can be asserted all of second-order logic is contained in the operations of equivalence and quantification, since all other operations can be syllogistically defined in terms of these two primitives. With this goal in mind, Tarksi builds up in sequence the following theorems.</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p: tr(p)\)</span></p>
+<p>All propositions are equivalent to themselves.</p>
+<p><strong>Theorem</strong> :math:` forall p: (forall q: p equiv tr(q)) implies p`</p>
+<p>All propositions that are always true implies themselves.</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p, q: p \implies (p \equiv tr(q))\)</span></p>
+<p>All propositions imply they are equivalent to always being true.</p>
 <p>Here is where the collapse of all true expressions into an equivalence class occurs. Truth is what aggregates the descriptive operators of language into a whole. It is what unites the propositions “2 + 2 = 4” and “Snow is white” into an equivalence. Truth, in effect, abstracts away the descriptive predicatives of a language, at least insofar as this formulation is concerned.</p>
-<ol class="arabic simple" start="4">
-<li><p>All propositions are equivalent to being equivalent to always being true.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p: (\forall q: p \equiv tr(q)) \equiv p\]</div>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p: (\forall q: p \equiv tr(q)) \equiv p\)</span></p>
+<p>All propositions are equivalent to being equivalent to always being true.</p>
 <p>Any true proposition is equivalent to any other true proposition because they are all equivalent to tautologies. Only in this desolate landscape of pure vacuity can <em>truth</em> be defined. A tautology expresses through form what is self-evident.</p>
 <p>Truth, however, is not a mere consequence of self-evidence. It is not wholly <a class="reference internal" href="../02_penetralia/01_tractatus.html#a-priori"><span class="std std-ref">A Priori</span></a>; it is constructed out of parts tautologous and parts empirical, in short it is <a class="reference internal" href="../02_penetralia/01_tractatus.html#synthetic"><span class="std std-ref">Synthetic</span></a>. This realization is what led to Tarski to the insights which fueled <a href="#id4"><span class="problematic" id="id5">`Concept of Truth in Formalized Languages &lt;&gt;`_</span></a> in 1931.</p>
-<ol class="arabic simple" start="5">
-<li><p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the other proposition.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q\]</div>
-<ol class="arabic simple" start="6">
-<li><p>The formal statement of this theorem is as follows,</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p: \neg (\forall q: p \equiv as(q))\]</div>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q\)</span></p>
+<p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the other proposition.</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p: \neg (\forall q: p \equiv as(q))\)</span></p>
 <p>To derive an English translation that avoids unnecessary convolutions, it must be tautologically re-expressed in a different form. Keeping in mind the laws of quantification,</p>
 <div class="math notranslate nohighlight">
 \[\neg \forall x: f(x) \equiv \exists x: \neg f(x)\]</div>
@@ -539,31 +528,16 @@
 <div class="math notranslate nohighlight">
 \[\forall p: \exists q: p \not\equiv as(q)\]</div>
 <p>Which provides an serviceable translation into English: There is no proposition which is equivalent to the assertion of all propositions.</p>
-<ol class="arabic simple" start="7">
-<li><p>Every assertion of all propositions is equivalent to any other assertion of all propositions.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p,q: (\forall r: p \equiv as(r)) \equiv (\forall r: q \equiv as(r))\]</div>
-<ol class="arabic simple" start="8">
-<li><p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the proposition.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p, q: (\forall f: p \equiv ((\forall r: p \equiv f(r) ) \equiv (\forall r: q \equiv f(r)))) \implies p\]</div>
-<ol class="arabic simple" start="9">
-<li><p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies both propositions.</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p,q: (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) ) \implies (p \and q)\]</div>
-<ol class="arabic simple" start="10">
-<li><p>Two propositions together imply one proposition is equivalent to the equivalency of all equivalent properties of the other proposition,</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p, q, f: (p \and q) \implies (p \equiv ((\forall r: p \equiv (fr)) \equiv (\forall r: q \equiv f(r))))\]</div>
-<ol class="arabic simple" start="11">
-<li><p>Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition,</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\forall p,q: (p \and q) \equiv (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))))\]</div>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p,q: (\forall r: p \equiv as(r)) \equiv (\forall r: q \equiv as(r))\)</span></p>
+<p>Every assertion of all propositions is equivalent to any other assertion of all propositions.</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p, q: (\forall f: p \equiv ((\forall r: p \equiv f(r) ) \equiv (\forall r: q \equiv f(r)))) \implies p\)</span></p>
+<p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the proposition.</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p,q: (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) ) \implies (p \land q)\)</span></p>
+<p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies both propositions.</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p, q, f: (p \land q) \implies (p \equiv ((\forall r: p \equiv (fr)) \equiv (\forall r: q \equiv f(r))))\)</span></p>
+<p>Two propositions together imply one proposition is equivalent to the equivalency of all equivalent properties of the other proposition,</p>
+<p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p,q: (p \land q) \equiv (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))))\)</span></p>
+<p>Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition.</p>
 </section>
 </section>
 
@@ -588,11 +562,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="04_zalta.html"
+       href="04_kolmogorov.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Zalta</p>
+        <p class="prev-next-title">Kolmogorov</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

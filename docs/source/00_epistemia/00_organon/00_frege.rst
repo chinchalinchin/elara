@@ -29,8 +29,6 @@ Grundgesetze der Arithmetik
 
     TODO
 
-.. _frege-law-v:
-
 .. topic:: Law V: Extensionality
 
     .. math::
