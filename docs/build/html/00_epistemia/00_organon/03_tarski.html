@@ -208,8 +208,7 @@
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../00_radix.html">Radix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../01_matrix.html">Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_datum.html">Datum</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../01_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -451,6 +450,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-primitives">Logical Primitives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deductive-science">Deductive Science</a></li>
 </ul>
             </nav>
         </div>
@@ -466,7 +466,7 @@
 <span id="id1"></span><h1>Tarski<a class="headerlink" href="#tarski" title="Link to this heading">#</a></h1>
 <section id="logical-primitives">
 <span id="tarski-logical-primitives"></span><h2>Logical Primitives<a class="headerlink" href="#logical-primitives" title="Link to this heading">#</a></h2>
-<p>In one of his earlier papers, <a href="#id2"><span class="problematic" id="id3">`On the Primitive Term of Logistic &lt;&gt;`_</span></a>, Tarksi proved all logical operations in second-order logic could be defined in terms of quantification (i.e. categorical assertions) and equivalence (i.e. substitutability).</p>
+<p>In one of his earlier papers published in 1923, <em>On the Primitive Term of Logistic</em>, Tarksi proved all logical operations in second-order logic could be defined in terms of quantification (i.e. categorical assertions) and equivalence (i.e. substitutability).</p>
 <p>In doing so, Tarksi introduced a “<em>truth</em>” predicate into the meta-language of analysis. This notion of “<em>truth</em>” differs considerably from the natural conception of truth, for it treats truth as an equivalency with syntactically tautologous expressions. It becomes clear, as his definitions are made and theorems derived, that this meta-logical definition of “<em>truth</em>” is insufficient for fully elaborating the synthetic and empirical modes of truth.</p>
 <aside class="topic">
 <p class="topic-title">Definition: Truth</p>
@@ -492,14 +492,14 @@
 <div class="math notranslate nohighlight">
 \[\forall p: (\neg p) \equiv (p \equiv (\forall q: q))\]</div>
 <p>Tarski uses this theorem as a starting point to show that equivalence and quantification constitute the sole primitive terms of propositional calculus.</p>
-<p>However, there is an interesting <em>implicit</em> assumption being made by asserting this theorem. The validity of this theorem rests on the contradiction of the inner expression <span class="math notranslate nohighlight">\(\forall q: q\)</span>. In other words, in order for this theorem to obtain, it must be the case that <span class="math notranslate nohighlight">\(\forall q: q\)</span> is always false. <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is indeed true, but not unconditionally, and the conditions in which it is not true are worth considering. The essence of this distinction is given in the insight the truth being expressed in the proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is of a different order than a truth that is expressed tautologically, e.g. by a pure equivalence such as <span class="math notranslate nohighlight">\((p \land (p \implies q)) \implies q\)</span>.</p>
+<p>However, there is an interesting <em>implicit</em> assumption being made by asserting this theorem. The validity of this theorem rests on the contradiction of the inner expression <span class="math notranslate nohighlight">\(\forall q: q\)</span>. In other words, in order for this theorem to obtain, it must be the case that <span class="math notranslate nohighlight">\(\forall q: q\)</span> is always false. <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is indeed true, but not unconditionally, and the conditions in which it is not true are worth considering. The essence of this distinction is given in the insight the truth being expressed in the proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is of a different order than a truth that is expressed tautologically, e.g. by a pure equivalence such as <span class="math notranslate nohighlight">\(\neg(p \lor q) \equiv (\neg p \land \neg q)\)</span>.</p>
 <p>Tautological truths are vacuous; they reveal nothing about the state of the world. A proposition such as <span class="math notranslate nohighlight">\(p \lor \neg p\)</span> is a <em>formal</em> truth that depends only on the syntax of logic. It’s truth is not a function of the language in which it is expressed; While the symbols <span class="math notranslate nohighlight">\(\lor\)</span> and <span class="math notranslate nohighlight">\(\neg\)</span> may be assigned different meanings, the resulting language will still retain an expression which expresses the fundamental logical truth given by the law of excluded middle, however cumbersome and unintuitive its symbolic representation in this hypothetical language may be.</p>
 <p>In contrast, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is not <em>necessarily</em> true in any language, where “<em>language</em>” is to be understood as the set of all propositions <em>q</em>. It is conceivable to imagine a language that only allows the expression of true statements, in which case, since all <em>q</em> are true, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span>, a <em>meta</em>-proposition <em>about</em> the language, becomes false.</p>
 <p>In addition, it is conceivable to imagine a language that expresses notions other than truth-values, in which case <em>q</em> cannot be treated as an assertion of truth and the <em>meta</em>-proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> becomes meaningless.</p>
 <p>If <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is to be true, it must be the case that language given by the set of <em>q</em> is capable of expressing false statements. In other words, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is a proposition about the semantic content of <span class="math notranslate nohighlight">\(\{ q | \forall q: q \}\)</span>, in particular, it is asserting a partition of the language into those statements which are true and those statements which are false exists, and furthermore, the partition of false propositions is non-empty.</p>
 <div class="math notranslate nohighlight">
 \[(\neg \forall q: q) \equiv (\exists q: \neg q)\]</div>
-<p>In other words, at least one false proposition exists. While this is a pragmatic and practical assumption as far as any non-trivial language is concerned, it is nevertheless not a “free” assumption, in the sense that is automatically granted if the laws of tautology are also granted. The proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> cannot be unconditionally true, and so its truth depends on the particular language that is under inspection. In other words, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is implicitly a proposition <em>about</em> propositions, namely that not all of them are true.</p>
+<p>In other words, at least one false proposition exists. While this is a pragmatic and practical assumption as far as any non-trivial language is concerned, it is nevertheless not a “free” assumption, in the sense that is automatically granted if the laws of tautology are also granted. The proposition <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> cannot be unconditionally true, and so its truth depends on the particular language that is under inspection. In other words, <span class="math notranslate nohighlight">\(\neg \forall q: q\)</span> is implicitly a proposition <em>about</em> propositions, namely that not all of them can be true.</p>
 <p>If this assumption is granted, the other logical operations can be reduced to the operations of quantification and equivalence as follows: It is well-known disjunction can be defined in terms in of implication.</p>
 <div class="math notranslate nohighlight">
 \[\forall p, q: (p \lor q) \equiv (\neg p \implies q)\]</div>
@@ -517,7 +517,7 @@
 <p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p: (\forall q: p \equiv tr(q)) \equiv p\)</span></p>
 <p>All propositions are equivalent to being equivalent to always being true.</p>
 <p>Any true proposition is equivalent to any other true proposition because they are all equivalent to tautologies. Only in this desolate landscape of pure vacuity can <em>truth</em> be defined. A tautology expresses through form what is self-evident.</p>
-<p>Truth, however, is not a mere consequence of self-evidence. It is not wholly <a class="reference internal" href="../02_penetralia/01_tractatus.html#a-priori"><span class="std std-ref">A Priori</span></a>; it is constructed out of parts tautologous and parts empirical, in short it is <a class="reference internal" href="../02_penetralia/01_tractatus.html#synthetic"><span class="std std-ref">Synthetic</span></a>. This realization is what led to Tarski to the insights which fueled <a href="#id4"><span class="problematic" id="id5">`Concept of Truth in Formalized Languages &lt;&gt;`_</span></a> in 1931.</p>
+<p>Truth, however, is not a mere consequence of self-evidence. It is not wholly <a class="reference internal" href="../02_penetralia/01_tractatus.html#a-priori"><span class="std std-ref">A Priori</span></a>; it is constructed out of parts tautologous and parts empirical, in short it is <a class="reference internal" href="../02_penetralia/01_tractatus.html#synthetic"><span class="std std-ref">Synthetic</span></a>. This realization is what led to Tarski to the insights which fueled <em>Concept of Truth in Formalized Languages</em> in 1931.</p>
 <p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q\)</span></p>
 <p>One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the other proposition.</p>
 <p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p: \neg (\forall q: p \equiv as(q))\)</span></p>
@@ -538,6 +538,61 @@
 <p>Two propositions together imply one proposition is equivalent to the equivalency of all equivalent properties of the other proposition,</p>
 <p><strong>Theorem</strong> <span class="math notranslate nohighlight">\(\forall p,q: (p \land q) \equiv (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))))\)</span></p>
 <p>Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition.</p>
+</section>
+<section id="deductive-science">
+<span id="tarski-methodology-of-deductive-sciences"></span><h2>Deductive Science<a class="headerlink" href="#deductive-science" title="Link to this heading">#</a></h2>
+<p>In his 1930 paper <em>On Fundamental Concepts of the Methodology of Deductive Sciences</em>, Tarski began to refine his notion of truth by incorporating semantics into his constructions. Or, to more accurate, he refined his notion of truth by making the semantic assignment of truth a primitive notion. In this paper, Tarski starts by assuming the sentences under analysis have already been interpretted within the semantics of a science.</p>
+<aside class="topic">
+<p class="topic-title">Definitions</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(S\)</span>: The set of all meaningful sentences in a science.</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span>: An arbitrary subset of <strong>S</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_n(A)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(E_{f(x)}[ ... ]\)</span>: The set of all values of the function <em>f</em> corresponding to those values of the argument <em>x</em> which satisfy the condition formulated in the brackets “[..]”.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{P}(A) = E_X[X \subseteq A]\)</span>: The powerset of A, i.e. the set of all subsets of A.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbb{F} = E_X[ \lvert X \rvert \leq \aleph_0]\)</span>: The set of all finite “inductive”sets.</p></li>
+</ol>
+</aside>
+<p>With these minimalistic definitions, Tarski offers up four axioms to construct a science of science,</p>
+<aside class="topic">
+<p class="topic-title">Axiom 1</p>
+<p>lvert S rvert leq aleph_0</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Axiom 2</p>
+<p>If <span class="math notranslate nohighlight">\(A \subseteq S\)</span> then <span class="math notranslate nohighlight">\(A \subseteq C_n(A) \subseteq S\)</span></p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Axiom 3</p>
+<p>If <span class="math notranslate nohighlight">\(A \subseteq S\)</span> then <span class="math notranslate nohighlight">\(C_n(C_n(A)) = C_n(A)\)</span></p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Axiom 4</p>
+<p>If <span class="math notranslate nohighlight">\(A \subseteq S\)</span> then <span class="math notranslate nohighlight">\(C_n (A) = \sum_{X \in \mathbb{P}(A) \cdot \mathbb{F}} C_n(X)\)</span></p>
+</aside>
+<p>Upon reflection, Axiom 1 and Axiom 4 may appear to be at odds. It is instructive to highlight the tension that seems to exist between these two axioms and show the way in which this apparent tension is resolved. Axiom 1 of Tarski’s deductive system asserts the set of meaningful sentences in a science is at most countably infinite. In fact, after introducing the axiom, in a brief aside, Tarski off-handedly mentions that strict equality in Axiom 1 can be assumed without comprising his results.</p>
+<p>Axiom 4, on the other hand, states the consequences of an arbitrary subset of meaningful sentences, <span class="math notranslate nohighlight">\(A\)</span>, is the sum of consequences of sets taken over finite subsets of <span class="math notranslate nohighlight">\(A\)</span>. Given that Axiom 1 states that <span class="math notranslate nohighlight">\(S\)</span> is potentially infinte and the hypothesis of Axiom 4 allows the case <span class="math notranslate nohighlight">\(A = S\)</span>, Axiom 4 appears to state the infinite set <span class="math notranslate nohighlight">\(S\)</span> is the result of a finite union. In fact, Axiom 1 and Axiom 4 taken together <em>do assert</em> an infinite set is the result of a finite union. However, it is a finite union of <em>consequences</em>, which are not necessarily finite.</p>
+<p>To understand the subtlety of Axiom 1 and Axiom 4, it suffices to consider</p>
+<div class="math notranslate nohighlight">
+\[C_n({})\]</div>
+<p>Which is to ask: what are the consequences of <em>nothing</em>? The consequences of <em>nothing</em> are exactly those propositions which are vacuously true, namely tautologies. Every tautological form generates an infinite number of tautologies through the recursive nature of the substitution principle. Take for example the law of the excluded middle, substituted into itself ad infinitum,</p>
+<div class="math notranslate nohighlight">
+\[p \lor \neg p, (p \lor \neg p) \lor \neg(p \lor \neg p), ...\]</div>
+<p>Thus, it is seen that even though Axiom 4 asserts an infinite set can be reduced to a finite number of unions, the terms of the union are not finite. In light of the recursive nature of tautologies, Tarski’s offhand assertion regarding the infinite cardinality of <span class="math notranslate nohighlight">\(S\)</span> becomes more plausible.</p>
+<p><strong>Theorem</strong> If <span class="math notranslate nohighlight">\(A \subseteq B \subseteq S\)</span>, then <span class="math notranslate nohighlight">\(C_n(A) \subseteq C_n(B)\)</span></p>
+<p>If one corpus is contained in another corpus, then the consequences of the first corpus are contained in the consequences of the second corpus. In effect, this means the consequences of a part of a deductive science cannot exceed the consequences of the whole of a deductive science.</p>
+<p>By assumption,</p>
+<div class="math notranslate nohighlight">
+\[A \subseteq B \implies P(A) \subset P(B)\]</div>
+<p>And in turn,</p>
+<div class="math notranslate nohighlight">
+\[P(A) \subseteq P(B) \implies P(A) \cdot \mathbb{F} \subset P(B) \cdot \mathbb{F}\]</div>
+<p>In other words, the indices of the sum for <span class="math notranslate nohighlight">\(C_n(A)\)</span> are included in the indices of the sum for <span class="math notranslate nohighlight">\(C_n(B)\)</span>, meaning all of the elements in <span class="math notranslate nohighlight">\(C_n(a)\)</span> are also elements of <span class="math notranslate nohighlight">\(C_n(B)\)</span> but elements in <span class="math notranslate nohighlight">\(C_n(B)\)</span> are not necessarily elements of <span class="math notranslate nohighlight">\(C_n(A)\)</span>, whereby it follows from the definition of unions and subsets,</p>
+<div class="math notranslate nohighlight">
+\[C_n(A) \subseteq C_n(B)\]</div>
+<p><strong>Theorem</strong> If <span class="math notranslate nohighlight">\(A + B \subseteq S\)</span> then the formulas <span class="math notranslate nohighlight">\(A \subseteq C_n (B)\)</span> and <span class="math notranslate nohighlight">\(C_n(A) \subseteq C_n(B)\)</span> are equivalent.</p>
+<p>TODO</p>
+<p><strong>Theorem</strong> If <span class="math notranslate nohighlight">\(A + B \subseteq S\)</span>, then <span class="math notranslate nohighlight">\(C_n(A + B) = C_n(A + C_n(B)) = C_n(C_n(A) + C_n(B))\)</span></p>
 </section>
 </section>
 
@@ -588,6 +643,7 @@
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-primitives">Logical Primitives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deductive-science">Deductive Science</a></li>
 </ul>
   </nav></div>
 

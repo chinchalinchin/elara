@@ -1,7 +1,7 @@
-.. _organon:
+.. _lyceum:
 
-Organon
-=======
+Lyceum
+======
 
 .. toctree::
   :maxdepth: 2

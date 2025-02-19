@@ -124,7 +124,7 @@ Theorems
 --------
 
 - T 1.1.1: :math:`\forall u, t \in S : l(ut) = l(u) + l(t)`
-- T 1.1.2: :math:`| S | \geq \aleph_{1}`
+- T 1.1.2: :math:`\lvert S \rvert | \geq \aleph_{1}`
 - T 1.1.3: :math:`\forall s \in S: \varepsilon \subset_{s} s`
 - T 1.2.1: :math:`\forall \alpha \in L:  \alpha \varepsilon = \varepsilon \alpha = \alpha`
 - T 1.2.2: :math:`\forall \alpha \in L : \forall i \in N_{l(\alpha)}: \alpha[i] \subset_{s} \alpha`

@@ -117,3 +117,28 @@ Cultural
 - `Spice Girls Songs <https://github.com/jacquietran/spice_girls_data/tree/main>`_
 	- :download:`Song CSV <../_static/csv/datasets/cultural/spice_girls_song_data.csv>`
 
+.. _emoji-sentitment-valence-matrix:
+
+------------------------------
+Emoji Sentiment Valence Matrix
+------------------------------
+
+.. list-table:: 
+  :header-rows: 1
+
+  * - Axis
+    - Positive Valence
+    - Neutral Valence
+    - Negative Valence
+  * - High Arousal
+    - 😂🤩🥳🥰
+    - 😲
+    - 😡😨😱😭
+  * - Moderate Arousal
+    - 😄😊🤗
+    - 😐🙄🤨🤔
+    - 😥😟😠
+  * - Low Arousal
+    - 😌🙂
+    - 😶
+    - 🙁😔

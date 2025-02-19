@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Anno Domini &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f51a50ac" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '00_epistemia/00_facticity/01_anno_domini';</script>
+    <script src="../../_static/js/custom-icons.js?v=9ae3b1b4"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ἀίδιον" href="02_aidion.html" />
+    <link rel="prev" title="Ante Christum" href="00_ante_christum.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Epistemia</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Facticity</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_ante_christum.html">Ante Christum</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Anno Domini</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_aidion.html">ἀίδιον</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_kairos.html">καιρός</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_lyceum/index.html">Lyceum</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../01_lyceum/00_frege.html">Frege</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_lyceum/01_cantor.html">Cantor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_lyceum/02_peano.html">Peano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_lyceum/03_tarski.html">Tarski</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_lyceum/04_kolmogorov.html">Kolmogorov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../01_lyceum/05_zalta.html">Zalta</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_penetralia/index.html">Penetralia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_penetralia/00_verborum.html">Verborum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_penetralia/01_tractatus.html">Tractatus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01_datum.html">Datum</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M01_meta.html">Module: Meta Grammar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/modules/M06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P01_initialization.html">Plugin: Initialization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P02_adaptation.html">Plugin: Adaptation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P03_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/plugins/P04_metrics.html">Plugin: Metrics</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../01_theurgy/00_universalis/games/index.html">Games</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/games/G01_exercises.html">Games: Exercises</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../01_theurgy/00_universalis/games/G02_garden.html">Game: The Garden</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../01_theurgy/01_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/07_postulates.html">Section VI.III: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../01_theurgy/01_palindromia/10_app.html">Section VIII: Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02_pedagogy/index.html">Pedagogy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/00_HISTORY.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/01_LOGIC.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/02_SET_THEORY.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/01_COMBINATORICS.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/02_CONDITIONAL.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/03_RANDOM_VARIABLES.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/00_GRAPHS.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/01_ESTIMATION.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/02_CORRELATION.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/03_REGRESSION.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/04_SAMPLING.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/05_CONFIDENCE.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/00_BERNOULLI.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/01_GEOMETRIC.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/02_BINOMIAL.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/03_UNIFORM.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/04_NORMAL.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/00_INTRODUCTION.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/01_BIAS.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/02_DESIGN.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/03_HYPOTHESES.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/04_MEAN.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/05_PROPORTION.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/06_VARIANCE.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../03_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/00_epistemia/00_facticity/01_anno_domini.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Anno Domini</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#th-century">17th Century</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">18th Century</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">19th Century</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">20th Century</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="anno-domini">
+<span id="id1"></span><h1>Anno Domini<a class="headerlink" href="#anno-domini" title="Link to this heading">#</a></h1>
+<section id="th-century">
+<span id="id2"></span><h2>17th Century<a class="headerlink" href="#th-century" title="Link to this heading">#</a></h2>
+<p><strong>1640s</strong></p>
+<blockquote class="epigraph">
+<div><p>All that up to the present time I have accepted as most true and certain I have learned either from the senses or through the senses; but it is sometimes proved to me that these senses are deceptive, and it is wiser not to trust entirely to anything by which we have once been deceived.</p>
+<p>But it may be that although the senses sometimes deceive us concerning things which are hardly perceptible, or very far away, there are yet many others to be met with as to which we cannot reasonably have any doubt, although we recognize them by their means. For example, there is the fact that I am here, seated by the fire, attired in a dressing gown, having this paper in my hands and other similar matters. And how could I deny that these hands and this body are mine, were it not perhaps that I compare myself to certain persons, devoid of sense, whose cerebella are so troubled and clouded by violent vapours of black bile, that they constantly assure us that they think they are kings when they are really quite poor, or that they are clothed in purple when they are really without covering, or who imagine that they have an earthernware head or are nothing but pumpkins or are made of glass. But they are mad, and I should be any the less insane were I to follow examples so extravagant.</p>
+<p>At the same time I must remember that I am a man, and that consequently I am in the habit of sleeping, and in my dreams representing to myself those same things or sometimes even less probable things, than do those who are insane in their waking moments. How often has it happened to me that in the night I dreamt that I found myself in this particular place, that I was dressed and seated near the fire, whilst in reality I was lying undressed in bed! At this moment it does indeed seem to me that it is with eyes awake that I am looking at this paper; that this head which I move is not asleep, that it is deliberately and of set purpose that I extend my hand and perceive it; what happens in sleep does not appear so clear nor so distinct as does all this. But in thinking over this I remind myself that on many occasions I have in sleep been deceived by similar illusions, and in dwelling carefully on this reflection I see so manifestly that there are no certain indications by which we may clearly distinguish wakefulness from sleep that I am lost in astonishment. And my astonishment is such that it is almost capable of persuading me that I now dream.</p>
+<p>I suppose, then, that all the things I see are false; I persuade myself that nothing has ever existed of all that my fallacious memory represents to me. I consider that I possess no senses; I imagine that body, figure, extension, movement and place are but fictions of my mind. What, then, can be esteemed as true? Perhaps nothing at all, unless that there is nothing in this world that is certain.</p>
+<p class="attribution">—<em>Meditations on First Philosophy</em>, Rene Descartes</p>
+</div></blockquote>
+<p><strong>1670s</strong></p>
+<blockquote class="epigraph">
+<div><p>To be brief, I hold as axiomatic the identical proposition which varies only in emphasis: that what is not truly one <em>being</em> is not truly <em>one</em> being either</p>
+<p class="attribution">—<em>Letters</em>, Gottfried Wilhelm Leibniz</p>
+</div></blockquote>
+</section>
+<section id="id3">
+<span id="id4"></span><h2>18th Century<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><strong>1780s</strong></p>
+<blockquote class="epigraph">
+<div><p>That all our knowledge begins with experience there can be no doubt. For how should the faculty of knowledge be called into activity, if not by objects which affect our senses and which, on the one hand, produce representations by themselves or on the other, rouse the activity of our understanding to compare, connect, or to separate them and thus to convert the raw material of our sensible impressions into knowledge of objects, which we call experience? With respect to time, therefore, no knowledge within us is antecedent to experience, but all knowledge begins with it.</p>
+<p>But though all our knowledge begins with experience, it does not follow that it all arises from experience. For it is quite possible that even our empirical knowledge is a compound of that which we perceive through impression, and of that which our own faculty of knowledge (incited by sense impressions) supplies from itself, a supplement which we do not distinguish from that raw material until long practice has rendered us capable of separating one from the other. It is therefore a question which deserves at least closer investigation and cannot be disposed of at first sight: Whether there is any knowledge independent of all experience and even of all impressions of the senses? Such knowledge is called <em>“a priori</em>”and is distinguished from empirical knowledge, which has its source “<em>a posteriori</em>”, that is, in experience…</p>
+<p class="attribution">—<em>Critique of Pure Reason</em>, Immanuel Kant</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<span id="id6"></span><h2>19th Century<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><strong>1810s</strong></p>
+<blockquote class="epigraph">
+<div><p>“The world is my representation”: this is a truth valid with reference to every living and knowing being, although man alone can bring it into reflective, abstract consciousness. If he really does so, philosophical discernment has dawned on him. It then becomes clear and certain to him that he does not know a sun and an earth, but only an eye that sees a sun, a hand that feels an earth; that the world around him is there only as representation, in other words, only in reference to another thing, namely that which represents, and this is himself. If any truth can be expressed “a priori”, it is this; for it is the statement of that form of all possible and conceivable experience, a form that is more general than all others, than time, space and causality, for all these presuppose it.</p>
+<p class="attribution">—<em>The World As Representation and Will</em>, Arthur Schopenhaur</p>
+</div></blockquote>
+<p><strong>1890s</strong></p>
+<blockquote class="epigraph">
+<div><p>I must here combat the view that, e.g. 2 + 5 and 3 + 4 are equal but not the same. This view is grounded in the same confusion of form and content, sign and thing signified. It is a though one wanted to regard the sweet-smelling violet as differing from <em>Viola odorata</em> because the names sound different. Difference of sign cannot by itself be a sufficient ground for difference of the thing signified. The only reason why in our case the matter is less obvious is that the <em>Bedeutung</em> of the numeral 17 is not anything perceptible to the senses. There is at present a very widespread tendency not to recognize as an object anything that cannot be perceived by means of the senses; this leads here to numerals’ being taken to be numbers, the proper objects of our discussion; and then, I admit, 7 and 2 + 5 would indeed be different. But such a conception is untenable, for we cannot speak of any arithmetical properties of numbers whatsoever without going back to the <em>Bedeutung</em> of the signs. For example, the property belonging to 1, of being the result of multiplying itself by itself, would be a mere myth; for no microscopical or chemical investigation, however far it was carried, could ever detect this property in the possession of the innocent character that we call a figure one. Perhaps there is talk of a definition; but no definition is creative in the sense of being able to endow a thing with properties that it has not already got – apart from the one property of expressing and signifying something in virtue of the definition. The characters we call numerals have, on the other hand, physical and chemical properties depending on the writing material. One could imagine the introduction some day of quite new numerals, just as, e.g., the Arabic numerals superseded the Roman. Nobody is seriously going to suppose that in this way we should get quite new numbers, quite new arithmetical objects, with properties still to be investigated. Thus we must distinguish between numerals and their <em>Bedeutungen</em>; and if so, we shall have to recognize that the expression “2”, “1 + 1”, “3 -1”, “6:3” all have the same <em>Bedeutung</em>, for it is quite inconceivable where the difference between them could lie. Perhaps you say: 1 + 1 is a sum, but 6:3 is a quotient. But what is 6:3? The number that when multiplied by 3 gives the result 6. We say “<em>the</em> number”, not “<em>a</em> number”; by using the definite article, we indicate that there is only a single number.</p>
+<p class="attribution">—<em>Function and Concept</em>, Gottlob Frege</p>
+</div></blockquote>
+</section>
+<section id="id7">
+<span id="id8"></span><h2>20th Century<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p><strong>1900s</strong></p>
+<blockquote class="epigraph">
+<div><p>Dear colleague,</p>
+<p>For a year and a half, I have been acquainted with your <em>The Foundations of Arithmetic</em>, but it is only now that I have been able to find the time for the thorough study I intended to make of your work. I find myself in complete agreement with you in all essentials, particularly when you reject any psychological element in logic and when you place a high value upon an ideography for the foundations of mathematics and of formal logic, which, incidentally, I find in your work discussions, distinctions, and definitions that one seeks in vain in the works of other logicians. Especially so far as function is concerned, I have been led on my own to views that are the same even in the details. There is just one point where I have encountered a difficulty. You state that a function, too, can act as the indeterminate element. This I formerly believed, but now this view seems doubtful to me because of the following contradiction. Let <em>w</em> be the predicate: to be a predicate that cannot be predicated of itself. Can <em>w</em> be predicated of itself? From each answer, its opposite follows. Therefore, we must conclude that <em>w</em> is not a predicate. Likewise there is no class (as a totality) of those classes which, each taken as a totality, do not belong to themselves. From this I conclude that under certain circumstances a definable collection does not form a totality.</p>
+<p class="attribution">—<em>Correspondence with Gottlob Frege</em>, Bertrand Russell</p>
+</div></blockquote>
+<p><strong>1910s</strong></p>
+<blockquote class="epigraph">
+<div><p>The universe consists of objects having various qualities and standing in various relations. Some of the objects which occur in the universe are complex. When an object is complex, it consists of interrelated parts. Let us consider a complex object composed of two parts <em>a</em> and <em>b</em> standing to each other in the relation <em>R</em>. The complex object <em>“a-in-the-relation-R-to-b”</em> may be capable of being <em>perceived</em>; when perceived, it is perceived as one object. Attention may show that it is complex; we then <em>judge</em> that <em>a</em> and <em>b</em> stand in the relation <em>R</em>. Such a judgement, being derived from perception by mere attention, may be called a “<em>judgement of perception</em>.” This judgement of perception, considered as an actual occurence, is a relation of four terms, namely <em>a</em> and <em>b</em> and <em>R</em> and the percipient. The percetpion, on the contrary, is a relation of two terms, namely <em>“a-in-the-relation-R-to-b”</em> and the percipient. Since an object of perception cannot be nothing, we cannot perceive “<em>a-in-the-relation-R-to-b</em>” unless <em>a</em> is in the relation <em>R</em> to <em>b</em>. Hence a judgement of perception, according to the above definition, must be true. This does not mean that, in a judgement which <em>appears</em> to us to be one of perception, we are sure of not being in error, since we may err in thinking that our judgement has really been derived merely by analysis of what was perceived. But if our judgement has been so derived, it must be true. In fact, we may define <em>truth</em>, where such judgements are concerned, as consisting in the fact that there is a complex <em>corresponding</em> to the discursive thought which is the judgement. That is, when we judge “<em>a</em> has the relation R to <em>b</em>,” our judgement is said to be <em>true</em> when there is a complex “<em>a-in-the-relation-R-to-b</em>,” and is said to be <em>false</em> when this is not the case. This is a definition of truth and falsehood in relation to judgements of this kind.</p>
+<p class="attribution">—<em>Principia Mathematica</em>, Bertrand Russell and Alfred Whitehead</p>
+</div></blockquote>
+<p id="s"><strong>1920s</strong></p>
+<blockquote class="epigraph">
+<div><p>What is the nothing? Our very first approach to this question has something unusual about it. In our asking we posit the nothing in advance as something that “is” such and such; we posit it as a being. But that is exactly what it is distinguished from. Interrogating the nothing–asking what and how it, the nothing, is–turns what is interrogated into its opposite. The question deprives itself of its own object. Accordingly, every answer to this question is also impossible from the start. For it necessarily assumes the form: the nothing “is” this or that. With regard to the nothing, question and answer alike are inherently absurd.</p>
+<p class="attribution">—<em>What Is Metaphysics?</em>, Martin Heidegger</p>
+</div></blockquote>
+<blockquote class="epigraph">
+<div><p>Whenever we attempt to express the matter of immediate experience, we find that its understanding leads us beyond itself, to its contemporaries, to its past, to its future, and to the universals in terms of which its definiteness is exhibited. But such universals, by their very character of universality, embody the potentiality of other facts with varying types of definiteness. Thus the understanding of the immediate brute fact requires its metaphysical interpretation as an item in the world with some systematic relation to it. When thought comes upon the scene, it finds the interperations as matters of practice. Philosophy does not initiate interpretations. Its search for a rationalistic scheme is the search for more adequate criticism, and for more adequate justifications of the interpretations which we perforce employ. Our habitual experience is a complex of failure and success in the enterprise of interpretation. If we desire a record of uninterpreted experience, we must ask a stone to record its autobiography. Every scientific memoir in its records of the “facts” is shot through and through with interpretation. The methodology of rational interpretation is the product of the fitful vagueness of consciounsess. Elements which shine with immediate distinctness, in some circumstances, retire into pneumbral shadow in other circumstances, and into black darkness on other occasions. And yet all occasions proclaim themselves as actualities within the flux of a solid world, demanding a unity of interpretation.</p>
+<p class="attribution">—<em>Process and Reality</em>, Alfred Whitehead</p>
+</div></blockquote>
+<blockquote class="epigraph">
+<div><p>Form is the possibility of structure.</p>
+<p class="attribution">—<em>Tractatus Logico-Philosophicus</em>, Ludwig Wittgenstein</p>
+</div></blockquote>
+<p><strong>1930s</strong></p>
+<blockquote class="epigraph">
+<div><p>There are people who are destined to taste only the poison in things, from whom any surprise is a painful surprise and any experience a new occasion for torture. If someone were to say to me that such suffering has subjective reasons, relative to the individual’s particular makeup, I would then ask: Is there an objective criterion for evaluating suffering? Who can say with precision that my neighbor suffers more than I do or that Jesus suffered more than all of us? There is no objective standard because suffering cannot be measured according to the external stimulation or local irritation of the organism, but only as it is felt and reflected in conciousness. Alas, from this point of view, any hierarchy is out of the question. Each person remains with his own suffering, which he believes absolute and unlimited. How much would we diminish our personal suffering if we were to compare it to all the world’s sufferings until now, to the most horrifying agonies and the most complicated tortues, the most cruel deaths and the most painful betrayals, all the lepers, all those burned alive or starved to death? Nobody is comforted in his sufferings by the thought that we are all mortals, nor does anybody who suffers really find comfort in the past or present suffering of others. Because in this organically insufficient and fragmentary world, the individual is set to live fully, wishing to make of his own existence an absolute. Each subjective existence is absolute to itself. For this reason each man lives as if he were the center of the universe or the center of history. Then how could his suffering fail to be absolute? I cannot understand another’s suffering in order to diminish my own. Comparisons in such cases are irrelevant, because suffering is an interior state, in which nothing external can help.</p>
+<p class="attribution">—<em>The Heights of Despair</em>, Emil Cioran</p>
+</div></blockquote>
+<p><strong>1940s</strong></p>
+<blockquote class="epigraph">
+<div><p>Presence to self, on the contrary, supposes that an impalpable fissure has slipped into being. If being is present to itself, it is because it is not wholly itself. Presence is an immediate deterioration of coincidence, for it supposes separation. But if we ask ourselves at this point “what it is” which separates the subject from himself, we are forced to admit it is “nothing”. Ordinarily what separates is a distance in space, a lapse in time, a psychological difference, or simply the individuality of two co-presents–in short, a “qualified” reality. But in the case which concerns us, ‘nothing’ can separate the consciousness of belief from belief, since belief is “nothing other” than the consciousness of belief.</p>
+<p class="attribution">—<em>Being and Nothingess</em>, Jean-Paul Sartre</p>
+</div></blockquote>
+<p><strong>1950s</strong></p>
+<blockquote class="epigraph">
+<div><p>The main source of the difficulties met with seems to lie in the following: it has not always been kept in mind that the semantical concepts have a relative character, that they must always be related to a particular language. People have not been aware that the language about which we speak need by no means coincide with the language in which we speak. They have carried out the semantics of a language in that language itself and, generally speaking, they have proceeded as though there was only one language in the world. The analysis of the antimonies mentioned shows, on the contrary, that the semantical concepts simply have no place in the language to which they relate, that the language which contains its own semantics, and within which the usual logical laws hold, must inevitably be inconsistent.</p>
+<p class="attribution">—<em>Logic, Semantics, Metamathematics</em>, Alfred Tarki</p>
+</div></blockquote>
+<blockquote class="epigraph">
+<div><p>To imagine a language is to imagine a form of life.</p>
+<p class="attribution">—<em>Philosophical Investigations</em>, Ludwig Wittgenstein</p>
+</div></blockquote>
+<p><strong>1980s</strong></p>
+<blockquote class="epigraph">
+<div><p>Naturally, because the void is indiscernible as a term (because it is not-one), its inaugural appearance is a pure act of nomination. This name cannot be specific; it cannot place the void under anything that would subsume it–this would reestablish the one. The name cannot indicate that the void is this or that. The act of nomination, being a-specific, consumes itself, indicating nothing other than the unpresentable as such. In ontology, however, the unpresentable occurs within a presentative forcing which disposes it as the nothing from which everything proceeds. The consequence is that the name of the void is a pure <em>proper name</em>, which indicates itself, which does not bestow any index of difference within what it refers to, and which auto-declares itself in the form of the multiple, despite there being <em>nothing</em> which is numbered by it.</p>
+<p class="attribution">—<em>Being and Event</em>, Alain Badiou</p>
+</div></blockquote>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_ante_christum.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Ante Christum</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_aidion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ἀίδιον</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#th-century">17th Century</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">18th Century</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">19th Century</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">20th Century</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

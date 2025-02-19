@@ -9,7 +9,7 @@ Tarski
 Logical Primitives
 ------------------
 
-In one of his earlier papers, *On the Primitive Term of Logistic*, Tarksi proved all logical operations in second-order logic could be defined in terms of quantification (i.e. categorical assertions) and equivalence (i.e. substitutability). 
+In one of his earlier papers published in 1923, *On the Primitive Term of Logistic*, Tarksi proved all logical operations in second-order logic could be defined in terms of quantification (i.e. categorical assertions) and equivalence (i.e. substitutability). 
 
 In doing so, Tarksi introduced a "*truth*" predicate into the meta-language of analysis. This notion of "*truth*" differs considerably from the natural conception of truth, for it treats truth as an equivalency with syntactically tautologous expressions. It becomes clear, as his definitions are made and theorems derived, that this meta-logical definition of "*truth*" is insufficient for fully elaborating the synthetic and empirical modes of truth. 
 
@@ -49,7 +49,7 @@ Tarski begins the paper with a reference to a previously established result that
 
 Tarski uses this theorem as a starting point to show that equivalence and quantification constitute the sole primitive terms of propositional calculus. 
 
-However, there is an interesting *implicit* assumption being made by asserting this theorem. The validity of this theorem rests on the contradiction of the inner expression :math:`\forall q: q`. In other words, in order for this theorem to obtain, it must be the case that :math:`\forall q: q` is always false. :math:`\neg \forall q: q` is indeed true, but not unconditionally, and the conditions in which it is not true are worth considering. The essence of this distinction is given in the insight the truth being expressed in the proposition :math:`\neg \forall q: q` is of a different order than a truth that is expressed tautologically, e.g. by a pure equivalence such as :math:`\neg(p \lor q) \equiv (\neg p \and \neq q)`. 
+However, there is an interesting *implicit* assumption being made by asserting this theorem. The validity of this theorem rests on the contradiction of the inner expression :math:`\forall q: q`. In other words, in order for this theorem to obtain, it must be the case that :math:`\forall q: q` is always false. :math:`\neg \forall q: q` is indeed true, but not unconditionally, and the conditions in which it is not true are worth considering. The essence of this distinction is given in the insight the truth being expressed in the proposition :math:`\neg \forall q: q` is of a different order than a truth that is expressed tautologically, e.g. by a pure equivalence such as :math:`\neg(p \lor q) \equiv (\neg p \land \neg q)`. 
 
 Tautological truths are vacuous; they reveal nothing about the state of the world. A proposition such as :math:`p \lor \neg p` is a *formal* truth that depends only on the syntax of logic. It's truth is not a function of the language in which it is expressed; While the symbols :math:`\lor` and :math:`\neg` may be assigned different meanings, the resulting language will still retain an expression which expresses the fundamental logical truth given by the law of excluded middle, however cumbersome and unintuitive its symbolic representation in this hypothetical language may be.
 
@@ -76,7 +76,6 @@ Moreover, it is well-known that logical implication can be defined in terms of e
 .. math::
 
     \forall p, q: (p \implies q) \equiv (p \equiv (p \land q))
-
 
 Therefore, if conjunction can be defined in terms of equivalence and quantification, it can be asserted all of second-order logic is contained in the operations of equivalence and quantification, since all other operations can be syllogistically defined in terms of these two primitives. With this goal in mind, Tarksi builds up in sequence the following theorems.
 
@@ -141,3 +140,83 @@ Two propositions together imply one proposition is equivalent to the equivalency
 **Theorem** :math:`\forall p,q: (p \land q) \equiv (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))))`
 
 Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition.
+
+.. _tarski-methodology-of-deductive-sciences:
+
+Deductive Science
+-----------------
+
+In his 1930 paper *On Fundamental Concepts of the Methodology of Deductive Sciences*, Tarski began to refine his notion of truth by incorporating semantics into his constructions. Or, to more accurate, he refined his notion of truth by making the semantic assignment of truth a primitive notion. In this paper, Tarski starts by assuming the sentences under analysis have already been interpretted within the semantics of a science.
+
+.. topic:: Definitions 
+
+    1. :math:`S`: The set of all meaningful sentences in a science. 
+    2. :math:`A`: An arbitrary subset of **S**.
+    3. :math:`C_n(A)`
+    4. :math:`E_{f(x)}[ ... ]`: The set of all values of the function *f* corresponding to those values of the argument *x* which satisfy the condition formulated in the brackets "[..]".
+    5. :math:`\mathbb{P}(A) = E_X[X \subseteq A]`: The powerset of A, i.e. the set of all subsets of A. 
+    6. :math:`\mathbb{F} = E_X[ \lvert X \rvert \leq \aleph_0]`: The set of all finite "inductive"sets.
+ 
+With these minimalistic definitions, Tarski offers up four axioms to construct a science of science,
+
+.. topic:: Axiom 1
+
+    \lvert S \rvert \leq \aleph_0
+
+.. topic:: Axiom 2
+
+    If :math:`A \subseteq S` then :math:`A \subseteq C_n(A) \subseteq S`
+
+.. topic:: Axiom 3
+
+    If :math:`A \subseteq S` then :math:`C_n(C_n(A)) = C_n(A)`
+
+.. topic:: Axiom 4
+
+    If :math:`A \subseteq S` then :math:`C_n (A) = \sum_{X \in \mathbb{P}(A) \cdot \mathbb{F}} C_n(X)`
+
+Upon reflection, Axiom 1 and Axiom 4 may appear to be at odds. It is instructive to highlight the tension that seems to exist between these two axioms and show the way in which this apparent tension is resolved. Axiom 1 of Tarski's deductive system asserts the set of meaningful sentences in a science is at most countably infinite. In fact, after introducing the axiom, in a brief aside, Tarski off-handedly mentions that strict equality in Axiom 1 can be assumed without comprising his results. 
+
+Axiom 4, on the other hand, states the consequences of an arbitrary subset of meaningful sentences, :math:`A`, is the sum of consequences of sets taken over finite subsets of :math:`A`. Given that Axiom 1 states that :math:`S` is potentially infinte and the hypothesis of Axiom 4 allows the case :math:`A = S`, Axiom 4 appears to state the infinite set :math:`S` is the result of a finite union. In fact, Axiom 1 and Axiom 4 taken together *do assert* an infinite set is the result of a finite union. However, it is a finite union of *consequences*, which are not necessarily finite. 
+
+To understand the subtlety of Axiom 1 and Axiom 4, it suffices to consider
+
+.. math::
+
+    C_n({})
+
+Which is to ask: what are the consequences of *nothing*? The consequences of *nothing* are exactly those propositions which are vacuously true, namely tautologies. Every tautological form generates an infinite number of tautologies through the recursive nature of the substitution principle. Take for example the law of the excluded middle, substituted into itself ad infinitum,
+
+.. math::
+
+    p \lor \neg p, (p \lor \neg p) \lor \neg(p \lor \neg p), ...
+
+Thus, it is seen that even though Axiom 4 asserts an infinite set can be reduced to a finite number of unions, the terms of the union are not finite. In light of the recursive nature of tautologies, Tarski's offhand assertion regarding the infinite cardinality of :math:`S` becomes more plausible. 
+
+**Theorem** If :math:`A \subseteq B \subseteq S`, then :math:`C_n(A) \subseteq C_n(B)`
+
+If one corpus is contained in another corpus, then the consequences of the first corpus are contained in the consequences of the second corpus. In effect, this means the consequences of a part of a deductive science cannot exceed the consequences of the whole of a deductive science. 
+
+By assumption,
+
+.. math::
+
+    A \subseteq B \implies P(A) \subset P(B)
+
+And in turn,
+
+.. math::
+
+    P(A) \subseteq P(B) \implies P(A) \cdot \mathbb{F} \subset P(B) \cdot \mathbb{F}
+
+In other words, the indices of the sum for :math:`C_n(A)` are included in the indices of the sum for :math:`C_n(B)`, meaning all of the elements in :math:`C_n(a)` are also elements of :math:`C_n(B)` but elements in :math:`C_n(B)` are not necessarily elements of :math:`C_n(A)`, whereby it follows from the definition of unions and subsets,
+
+.. math::
+
+    C_n(A) \subseteq C_n(B)
+
+**Theorem** If :math:`A + B \subseteq S` then the formulas :math:`A \subseteq C_n (B)` and :math:`C_n(A) \subseteq C_n(B)` are equivalent. 
+
+TODO
+
+**Theorem** If :math:`A + B \subseteq S`, then :math:`C_n(A + B) = C_n(A + C_n(B)) = C_n(C_n(A) + C_n(B))`

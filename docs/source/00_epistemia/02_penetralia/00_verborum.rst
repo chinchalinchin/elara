@@ -6,7 +6,7 @@ Verborum
 
 .. _devices:
 
-- :ref:`anacoluthon`: A discontinuity of expression within a sentence, a form in which there is a logical or grammatical incoherence.
+- :ref:`anacoluthon`: A discontinuity of expression within a sentence, a form in which there is logical or grammatical incoherence.
 - :ref:`anadiplosis`: When words at the end of one clause are repeated near the beginning of the following clause.
 - :ref:`anaphora`: The repetition of words at the beginning of successive clauses.
 - :ref:`anastrophe`: An inversion of the grammatical order of words or clauses. 

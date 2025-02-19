@@ -9,13 +9,12 @@ Tractatus
 - :ref:`a-posteriori`: TODO
 - :ref:`a-priori`: TODO 
 - :ref:`bedeutung`: TODO 
-- :ref:`being-in-itself`: TODO: get original french
-- :ref:`being-for-itself`: TODO: get original french
 - :ref:`dasein`: A being which is concerned with its being.
 - :ref:`noumena`: TODO
 - :ref:`phenomena`: TODO
 - :ref:`sinn`: TODO
 - :ref:`synthetic`: TODO 
+- :ref:`vorhandenheit`: TODO 
 
 .. _a-posteriori:
 
@@ -35,18 +34,6 @@ TODO
 
 Bedeutung
 ---------
-
-.. _being-in-itself:
-
-Being-in-itself
----------------
-
-TODO 
-
-.. _being-for-itself:
-
-Being-for-itself
-----------------
 
 TODO
 
@@ -84,3 +71,10 @@ Synthetic
 ---------
 
 TODO 
+
+.. _vorhandenheit:
+
+Vorhandenheit
+-------------
+
+TODO
