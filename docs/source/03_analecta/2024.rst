@@ -27,7 +27,7 @@ For instance, lingustic representations possess the property of standing for thi
 
     Let "*B*" stand for things that are blue.
 
-Here a letter, "*R*"" or "*B*"" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of "*being red*". The letter "*R*"" makes an abstraction of the elements we agree belong to it. 
+Here a letter, "*R*" or "*B*" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of "*being red*". The letter "*R*" makes an abstraction of the elements we agree belong to it. 
 
 ---
 
@@ -73,7 +73,7 @@ If the objective is to produce a certain fact, then all assumptions must be remo
 
 It is a maxim of post-Kantian philosophy that what is known must be known through the experience of "*knowing*", and thus it must be conditioned by experience. Knowledge of a thing is knowledge of the sensuous experience of the thing and what the sensuous cannot present to experience cannot be known.
 
-For any object of experience, its attributes may be abstracted away in thought, but even an indeterminate object must possess a condition of determination for being able to be an object of experience; it is this form of determination that Kant identifies as "*a prior*". If, from a thing, its manifest qualities are subtracted, one is left with the pure abstract relation that sensuous experience deploys in order to perform the ontological operation of objectification.
+For any object of experience, its attributes may be abstracted away in thought, but even an indeterminate object must possess a condition of determination for being able to be an object of experience; it is this form of determination that Kant identifies as "*a-priori*". If, from a thing, its manifest qualities are subtracted, one is left with the pure abstract relation that sensuous experience deploys in order to perform the ontological operation of objectification.
 
 The operands of the objectification are the experience for which the object is and the object thus identified by experience. This operation yields a unique index, which one is inclined to call an object's "*name*". In other words, receptivity to naming is a prerequisite for being knowable. A thing cannot be known unless it can be named.
 

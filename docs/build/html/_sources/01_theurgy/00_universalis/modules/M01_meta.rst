@@ -1,7 +1,7 @@
 .. _language-game-meta-module:
 
-Module: Meta Grammar
-====================
+Module: Meta
+============
 
 The Meta Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Meta Module consists of two component: the Monitor and Markers.
 
