@@ -101,6 +101,10 @@ Anastrophe
 
     -- `Calidore: A Fragment <https://kalliope.org/en/text/keats2001071304>`_
 
+    Observe how system into system runs
+
+    -- `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_
+
     With fruit the vines that round the thatch-eves run
 
     -- `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_

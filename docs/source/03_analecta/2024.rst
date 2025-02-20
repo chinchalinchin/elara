@@ -87,9 +87,9 @@ November
 
 The desire for exegesis cannot be met without recourse to personal experience, and in introducing the subjective element, the exegesis itself is undone. One wants a formal deduction, a series of arguments absolute and pure, proceeding from a starting point whose self-evidence is immanent. One wants to find the words to lay upon this thing called life like a map, to show what it is and how it is to be understood. We seek a science that explains what it is to be, that will, as part of its apparatus, integrate our very consciousness into its fabric and render unto us a divine sort of revelation.
 
-This is the essential human delusion. Essential, because it resides in every activity; there is nothing which is which does not presuppose the law of cause and effect, and so we come to be supposing all which is must abide this fundamental law. Human, because it is our poetical curse to attach symbols to objects. Delusion, because the subject will never find itself among objects, except as an object.
+This is the essential human delusion. Essential, because it resides in every activity; there is nothing which is that does not presuppose the law of cause and effect, and so we come to be supposing all which is must abide this fundamental law. Human, because it is our poetical curse to attach symbols to objects. Delusion, because the subject will never find itself among objects, except as an object.
 
-We imagine the written word like a mirror, a silvered surface that reflects and reveals the point of origin but our thoughts are not like rays of light, and the page is no surface to preserve in perfect fashion the objects incident upon it. The word always grasps towards what it wants to represent, but fails in its approach of its origin. 
+We imagine the written word like a mirror, a silvered surface that reflects and reveals the point of origin but our thoughts are not like rays of light, and the page is no surface to preserve in perfect fashion the objects incident upon it. The word always grasps towards what it wants to represent, but fails in its approach. 
 
 Is there a series of words that explains the world's churning? Mathematicians tells us to fix our definitions, and let logic unfold. With what definition do we start? *To be*, seems the most general of relations, the most primitive of terms. Thus, we initiate again an Aristotelian chain, whose history is available to any student of philsophy. Such an exercise, though worthwhile, will only yield formal results, against which we will inevitably rebel in Heideggerian fashion, and then succumb, forgetting in essence our original task. 
 
@@ -140,4 +140,4 @@ In the first interpretation, "a", "b" and "c" must represent terms within the la
 
 In other words, the assignment of the meaning of "=" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols. 
 
-The essential *context* problem boils down to: what word-form in an expression should it treat as primitive in order to use as a foundation upon which to build the subsequent interpretation.
+The essential *context* problem boils down to: what word-form in an expression should be treated as primitive in order to be used as a foundation upon which to build the subsequent interpretation.

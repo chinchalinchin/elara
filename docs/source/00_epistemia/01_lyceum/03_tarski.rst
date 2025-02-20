@@ -81,27 +81,69 @@ Therefore, if conjunction can be defined in terms of equivalence and quantificat
 
 **Theorem** :math:`\forall p: tr(p)`
    
-All propositions are equivalent to themselves. 
-   
-**Theorem** :math:` \forall p: (\forall q: p \equiv tr(q)) \implies p`
+All propositions are equivalent to themselves. Every proposition is either true or false, whence the following truth table obtains, 
 
-All propositions that are always true implies themselves.
+.. list-table:: 
+  :header-rows: 1
+
+  * - :math:`p`
+    - :math:`p \equiv p`
+  * - T
+    - T
+  * - F
+    - T
+
+**Theorem** :math:`\forall p: (\forall q: p \equiv tr(q)) \implies p`
+
+All propositions that are always true implies themselves. For each proposition *q* in the hypothesis, the following truth table describes the possible outcomes,
+
+.. list-table:: 
+  :header-rows: 1
+
+  * - :math:`p`
+    - :math:`q`
+    - :math:`q \equiv q`
+    - :math:`p \equiv (q \equiv q)`
+  * - T
+    - T
+    - T
+    - T
+  * - T
+    - F
+    - T
+    - T
+  * - F
+    - T
+    - T
+    - F
+  * - F
+    - F
+    - T
+    - F
+
+Since the hypothesis is always false exactly when *p* is false, the theorem follows from the definition of implication. 
 
 **Theorem** :math:`\forall p, q: p \implies (p \equiv tr(q))`
 
-All propositions imply they are equivalent to always being true.
+All propositions imply they are equivalent to always being true. The truth table from the previous theorem can be used to verify this theorem for every possible proposition *p* and *q*.
 
 Here is where the collapse of all true expressions into an equivalence class occurs. Truth is what aggregates the descriptive operators of language into a whole. It is what unites the propositions "2 + 2 = 4" and "Snow is white" into an equivalence. Truth, in effect, abstracts away the descriptive predicatives of a language, at least insofar as this formulation is concerned.
 
 **Theorem** :math:`\forall p: (\forall q: p \equiv tr(q)) \equiv p`
 
-All propositions are equivalent to being equivalent to always being true. 
+All propositions are equivalent to being equivalent to always being true. Once again, this can be demonstrated with the previous truth-table.
 
 Any true proposition is equivalent to any other true proposition because they are all equivalent to tautologies. Only in this desolate landscape of pure vacuity can *truth* be defined. A tautology expresses through form what is self-evident. 
 
 Truth, however, is not a mere consequence of self-evidence. It is not wholly :ref:`a-priori`; it is constructed out of parts tautologous and parts empirical, in short it is :ref:`synthetic`. This realization is what led to Tarski to the insights which fueled *Concept of Truth in Formalized Languages* in 1931.   
 
 **Theorem** :math:`\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q`
+
+The formulae :math:`\forall r: p \equiv f(r)` and :math:`\forall r: q \equiv f(r)` serve as the main content of this theorem. Tarski refers to :math:`f(r)` as a *truth* function and describes the conditions that must be met to refer to a function as a *truth* function,
+
+.. math::
+
+    \forall p, q: p \equiv ((q \land f(p)) \implies f(q)) 
 
 One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the other proposition.
 
@@ -175,7 +217,7 @@ With these minimalistic definitions, Tarski offers up four axioms to construct a
 
     If :math:`A \subseteq S` then :math:`C_n (A) = \sum_{X \in \mathbb{P}(A) \cdot \mathbb{F}} C_n(X)`
 
-Upon reflection, Axiom 1 and Axiom 4 may appear to be at odds. It is instructive to highlight the tension that seems to exist between these two axioms and show the way in which this apparent tension is resolved. Axiom 1 of Tarski's deductive system asserts the set of meaningful sentences in a science is at most countably infinite. In fact, after introducing the axiom, in a brief aside, Tarski off-handedly mentions that strict equality in Axiom 1 can be assumed without comprising his results. 
+Upon reflection, Axiom 1 and Axiom 4 may appear to be at odds. It is instructive to highlight the tension that seems to exist between these two axioms and show the way in which this apparent tension is resolved. Axiom 1 of Tarski's deductive system asserts the set of meaningful sentences in a science is at most countably infinite. In fact, after introducing the axiom, in a brief aside, Tarski mentions in an aside that strict equality in Axiom 1 can be assumed without comprising his results. 
 
 Axiom 4, on the other hand, states the consequences of an arbitrary subset of meaningful sentences, :math:`A`, is the sum of consequences of sets taken over finite subsets of :math:`A`. Given that Axiom 1 states that :math:`S` is potentially infinte and the hypothesis of Axiom 4 allows the case :math:`A = S`, Axiom 4 appears to state the infinite set :math:`S` is the result of a finite union. In fact, Axiom 1 and Axiom 4 taken together *do assert* an infinite set is the result of a finite union. However, it is a finite union of *consequences*, which are not necessarily finite. 
 
@@ -220,3 +262,5 @@ In other words, the indices of the sum for :math:`C_n(A)` are included in the in
 TODO
 
 **Theorem** If :math:`A + B \subseteq S`, then :math:`C_n(A + B) = C_n(A + C_n(B)) = C_n(C_n(A) + C_n(B))`
+
+TODO
