@@ -4,7 +4,7 @@
 Tractatus
 ---------
 
-.. _esoteria:
+.. _esoterica:
 
 - :ref:`a priori <a-priori-a-posteriori>`: TODO
 - :ref:`a posteriori <a-priori-a-posteriori>`: TODO
@@ -16,6 +16,7 @@ Tractatus
 - :ref:`phenomena`: TODO
 - :ref:`semantics`: TODO
 - :ref:`sinn`: TODO
+- :ref:`synthesis`: TODO
 - :ref:`truth`: Everything that is the case. 
 - :ref:`vorhandenheit`: TODO 
 
@@ -28,7 +29,7 @@ A Priori / A Posteriori
 
     That all our knowledge begins with experience there can be no doubt. For how should the faculty of knowledge be called into activity, if not by objects which affect our senses and which, on the one hand, produce representations by themselves or on the other, rouse the activity of our understanding to compare, connect, or to separate them and thus to convert the raw material of our sensible impressions into knowledge of objects, which we call experience? With respect to time, therefore, no knowledge within us is antecedent to experience, but all knowledge begins with it.
     
-    But though all our knowledge begins with experience, it does not follow that it all arises from experience. For it is quite possible that even our empirical knowledge is a compound of that which we perceive through impression, and of that which our own faculty of knowledge (incited by sense impressions) supplies from itself, a supplement which we do not distinguish from that raw material until long practice has rendered us capable of separating one from the other. It is therefore a question which deserves at least closer investigation and cannot be disposed of at first sight: Whether there is any knowledge independent of all experience and even of all impressions of the senses? Such knowledge is called ":ref:`a priori <a-priori-a-posteriori>`" and is distinguished from empirical knowledge, which has its source ":ref:`a posteriori <a-priori-a-posteriori>`*", that is, in experience...
+    But though all our knowledge begins with experience, it does not follow that it all arises from experience. For it is quite possible that even our empirical knowledge is a compound of that which we perceive through impression, and of that which our own faculty of knowledge (incited by sense impressions) supplies from itself, a supplement which we do not distinguish from that raw material until long practice has rendered us capable of separating one from the other. It is therefore a question which deserves at least closer investigation and cannot be disposed of at first sight: Whether there is any knowledge independent of all experience and even of all impressions of the senses? Such knowledge is called ":ref:`a priori <a-priori-a-posteriori>`" and is distinguished from empirical knowledge, which has its source ":ref:`a posteriori <a-priori-a-posteriori>`", that is, in experience...
 
     -- `Critique of Pure Reason <https://www.gutenberg.org/ebooks/4280>`_, Immanuel Kant, 1781 AD
 
@@ -37,21 +38,31 @@ A Priori / A Posteriori
 Being
 -----
 
-.. list-table:: 
-    
-  * - Greek (Infinitive)
-    - εἶναι
-  * - Greek (Indicative)
-    - εἰμί / εἶ / ἐστί / ἐσμέν / ἐστέ / εἰσί
-  * - Greek (Imperfect)
-    - ἦν / ἦσθα / ἦν / ἦμεν / ἦτε / ἦσαν
-  * - Greek (Future)
-    - ὦ / ᾖς / ᾖ / ὦμεν / ἦτε/ ὦσι
-  * - Greek (Participle, Masculine)
-    - ὤν / ὄντος / ὄντι / ὄντα
-  * - Greek (Participle, Feminine)
-    - οὖσα / οὔσης / οὔσῃ / οὖσαν
+**Ancient Greek** 
 
+.. list-table:: 
+
+  * - Infinitive
+    - εἶναι
+  * - Present Indicative
+    - εἰμί / εἶ / ἐστί / ἐσμέν / ἐστέ / εἰσί
+  * - Imperfect Indicative
+    - ἦν / ἦσθα / ἦν / ἦμεν / ἦτε / ἦσαν
+  * - Future Indicative
+    - ὦ / ᾖς / ᾖ / ὦμεν / ἦτε/ ὦσι
+  * - Present Subjunctive
+    - ὦ / ᾖς / ᾖ / ὦμεν / ἦτε / ὦσι
+  * - Present Optative
+    - εἴην / εἴης  / εἴη / εἶμεν  / εἶτε / εἶεν
+  * - Future Optative
+    - ἐσοίμην / ἔσοιο / ἔσοιτο / ἐσοίμεθα  /  ἔσοισθε / ἔσοιντο
+  * - Present Imperative
+    - --- / ἴσθι / ἔστω / --- /  ἔστε  / ἔστων 
+  * - Present Participle, Masculine
+    - ὤν / ὄντος / ὄντι / ὄντα
+  * - Present Participle, Feminine
+    - οὖσα / οὔσης / οὔσῃ / οὖσαν
+  
 1. τὸ ὄν: TODO
 
 2. τὰ ὄντα: TODO
@@ -59,10 +70,35 @@ Being
 3. τὸ εἶναι: TODO
 
 4. ἡ οὐσία: TODO
+  
+**German**
+
+.. list-table::
+
+  * - Infinitive
+    - sein
+  * - Present Indicative
+    - bin / bist / ist / sind / seid / sind
+  * - Past Indicative
+    - war / warst / war / waren / wart / waren
+  * - Present Subjunctive
+    - sei / seist / sei / seien/ seiet / seien 
+  * - Past Subjunctive 
+    - wäre / wärest / wäre / wären / wäret / wären
+  * - Present Particple
+    - seiend
+  * - Present Particple
+    - gewesen
+
+1. Sein: The condition for the possibility of being any entity at all. 
+
+2. das Seiende / die Seienden: The individual beings are that *are*. 
+  
+3. :ref:`dasein`: Literally "*being there*".
    
 .. epigraph::
 
-    To be brief, I hold as axiomatic the identical proposition which varies only in emphasis: that what is not truly one *being* is not truly *one* being either.
+    To be brief, I hold as axiomatic the identical proposition which varies only in emphasis: that what is not truly one :ref:`being <being>` is not truly *one* :ref:`being <being>` either.
 
     -- `Letters <https://plato.stanford.edu/entries/leibniz-mind/>`, Gottfried Wilhelm Leibniz, 1687 AD
 
@@ -144,7 +180,7 @@ Nothing
 
 .. epigraph::
 
-    What is the :ref:`nothing` ? Our very first approach to this question has something unusual about it. In our asking we posit the :ref:`nothing`in advance as something that "is" such and such; we posit it as a being. But that is exactly what it is distinguished from. Interrogating the :ref:`nothing`--asking what and how it, the :ref:`nothing`, is--turns what is interrogated into its opposite. The question deprives itself of its own object. Accordingly, every answer to this question is also impossible from the start. For it necessarily assumes the form, the nothing "is" this or that. With regard to the nothing, question and answer alike are inherently absurd.
+    What is the :ref:`nothing` ? Our very first approach to this question has something unusual about it. In our asking we posit the :ref:`nothing` in advance as something that "is" such and such; we posit it as a being. But that is exactly what it is distinguished from. Interrogating the :ref:`nothing`--asking what and how it, the :ref:`nothing`, is--turns what is interrogated into its opposite. The question deprives itself of its own object. Accordingly, every answer to this question is also impossible from the start. For it necessarily assumes the form, the nothing "is" this or that. With regard to the nothing, question and answer alike are inherently absurd.
 
     -- `What Is Metaphysics? <https://www.stephenhicks.org/wp-content/uploads/2013/03/heideggerm-what-is-metaphysics.pdf>`_, Martin Heidegger, 1929 AD
 
@@ -196,6 +232,13 @@ TODO
     To say what rules of grammar make up a propositional game would require giving the characteristics of propositions, their grammar. We are thus led to the question, What is a proposition? I shall not try to give a general definition of "proposition", as it is impossible to do so. This is no more possible than it is to give a definition of the word "game". For any line we might draw would be arbitrary. Our way of talking about propositions is always in terms of specific examples, for we cannot talk about these more generally than about specific games. We could begin by giving examples such as the proposition "There is a circle on the blackboard 2 inches from the top and 5 inches from the side". Let us represent this as "(2,5)". Now let us construct something that would be said to make no :ref:`sense <sinn>`, "(2,5,7)". This would have to be explained (and you could give it sense), or else you could say it is a mistake or a joke. But if you say it makes no :ref:`sense <sinn>`, you can explain why by explaining the game in which it has no use. Nonsense can look less and less like a sentence, less and less like a part of language. "Goodness is red" and "Mr. S came to today's redness" would be called nonsense, whereas we would never say a whistle was nonsense. An arrangement of chairs could be taken as a language, so that certain arrangements would be nonsense. Theoretically you could always say of a symbol that it makes :ref:`sense <sinn>`, but if you did so you would be called upon to explain its :ref:`sense <sinn>`, that is, to show the use you give it, how you operate with it. The words "nonsense' and ":ref:`sense <sinn>`" get their meaning only in particular cases and may vary from case to case. We can still talk of :ref:`sense <sinn>` without giving a clear meaning to ":ref:`sense <sinn>`", just as we talk of winning or losing without the meaning of our terms being absolutely clear.
 
     -- `Lectures <https://www.marxists.org/reference/subject/philosophy/works/at/wittgens.htm>`_, Ludwig Wittgenstein, 1932 AD
+
+.. _synthesis:
+
+Synthesis
+---------
+
+TODO
 
 .. _truth:
 
