@@ -32,14 +32,17 @@ archive.org
 - `Being and Time <https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n7/mode/2up>`_
 - `Ideas <https://archive.org/details/IdeasPartI>`_
 - `Introduction to Logic and the Methodology of the Deductive Sciences <https://archive.org/details/in.ernet.dli.2015.471634>`_
-- `Myth of Sisyphus, the <https://archive.org/details/mythofsisyphus0000unse/page/n5/mode/2up>`_
+- `Introduction to Symbolic Logic and Its Applications <https://archive.org/details/rudolf-carnap-introduction-to-symbolic-logic-and-its-applications>`_
+- `Naming and Necessity <https://archive.org/details/kripke-1980-naming-and-necessity>`_
 - `On Certainty <https://archive.org/details/oncertainty00witt>`_
+- `On Sense and Reference <https://archive.org/details/OnSenseAndReference>`_
 - `Philosophical Investigations <https://archive.org/details/philosophicalinv0000witt/page/n3/mode/2up>`_
 - `Principia Mathematica <https://archive.org/details/cu31924001575244>`_
 - `Process and Reality <https://archive.org/details/processrealitygi00alfr>`_
+- `The Myth of Sisyphus <https://archive.org/details/mythofsisyphus0000unse/page/n5/mode/2up>`_
+- `The World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_
 - `Tractatus Logico-Philosophicus <https://archive.org/details/dli.ministry.23985>`_
 - `White Yajurveda <https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up>`_
-- `World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_
 
 .. _classical-library-org:
 
@@ -53,6 +56,7 @@ classicallibrary.org
 classics.mit.edu
 ----------------
 
+- `Categories <https://classics.mit.edu/Aristotle/categories.1.1.html>`_
 - `Physics <http://classics.mit.edu/Aristotle/physics.html>`_
 - `Metaphysics <http://classics.mit.edu/Aristotle/metaphysics.html>`_
 - `Posterior Analytics <http://classics.mit.edu/Aristotle/posterior.1.i.html>`_

@@ -95,7 +95,9 @@ All propositions are equivalent to themselves. Every proposition is either true 
 
 **Theorem** :math:`\forall p: (\forall q: p \equiv tr(q)) \implies p`
 
-All propositions that are always true implies themselves. For each proposition *q* in the hypothesis, the following truth table describes the possible outcomes,
+All propositions that are always true implies themselves. 
+
+For each proposition *q* in the hypothesis, the following truth table describes the possible outcomes,
 
 .. list-table:: 
   :header-rows: 1
@@ -139,13 +141,46 @@ Truth, however, is not a mere consequence of self-evidence. It is not wholly :re
 
 **Theorem** :math:`\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q`
 
-The formulae :math:`\forall r: p \equiv f(r)` and :math:`\forall r: q \equiv f(r)` serve as the main content of this theorem. Tarski refers to :math:`f(r)` as a *truth* function and describes the conditions that must be met to refer to a function as a *truth* function,
+The formulae :math:`\forall r: p \equiv f(r)` and :math:`\forall r: q \equiv f(r)` serve as the main content of this theorem. Therefore, to understand the theorem, these formulae must be understood. Tarski refers to the terms :math:`f(r)` as a *truth* functions. He references the work of Russell and Whitehead in elaborating the conditions that must be met to refer to a function as a *truth* function, namely,
 
 .. math::
 
-    \forall p, q: p \equiv ((q \land f(p)) \implies f(q)) 
+    \forall p, q, f: ((p \equiv q) \land f(p)) \implies f(q) 
 
-One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the other proposition.
+In essence, this definition asserts that if two conditions are satisfied, then *f* may be regarded as truth-function. 
+
+First, it must be the case *p* and *q* are indistinguishable through their truth-value. The propositions ":math:`(5 - 2) \ cdot (5 + 2) - 21 = 0`", "*Earth has one moon*", "*George Washington was the first president*", "*The Vietnam War followed the Korean War*" must all be regarded as tokens of the same type of "*truth*", i.e. a syntactic truth that may be shunted through the laws of tautology. This is a loose constraint on what propositions are to be regarded as "equivalent". The only thing that need unite propositions into a equivalency is they be regarded as true under a particular assignment. 
+
+Second, there must be a *f* that is well-defined for *p*, e.q. :math:`x^2 \in C` ("a square is a continuous function"), "'Earth has one moon' has one subject.", "'George Washington was the first president' belongs to American History". *f* is a descriptive predicative that abstracts out of its subject a property and asserts a categorical relation with respect to it, e.g. "*All propositions of the form* ':math:`p \land q`' *are true when* :math:`p \implies q` *and* :math:`p` *are both true*" or "*Some propositions of the form* :math:`p \lor q` *are true when p is true*". 
+
+*f* is a type of *meta-tautology*, a vacuous truth of the second order, in contrast to a first order tautology such as :math:`p \lor \neg p`. It is not a tautology *in* the language, but a tautology *about* a language. To say the subject ":math:`1+4+9+16` *is a sum of squares*" is to restate through predication what is already demonstrated through the subject. The description is reflexive. This type of analysis is reminiscent of Aristotelian reciprocals,
+
+.. epigraph::
+
+    We may perhaps most easily comprehend that to which a thing is related, when a name does not exist, if, from that which has a name, we derive a new name, and apply it to that with which the first is reciprocally connected, as in the aforesaid instances, when we derived the word 'winged' from 'wing' and from 'rudder' the word 'ruddered.'  For example, suppose the correlative of 'head' were to be defined as 'animal' - this would be inept and inaccurate. For animal is the correlative of 'man' or 'ox' or other things of that kind, whereas 'head' is held to be correlative to 'that which has a head'. If, therefore, we are to discover the proper correlative of 'head', we might state it as 'headed'. If, however, there were no such word as 'headed', we should have to invent one for the purpose, just as in the instances given above where we coined the words 'winged' and 'ruddered.' For 1  'wing' is relative to 'winged' and 'rudder' to 'ruddered.'
+
+    -- `Categories <https://classics.mit.edu/Aristotle/categories.1.1.html>`_, Aristotle
+
+To see in detail what is meant by this definition, it instructive to analyze it through application, to understand how its meaning is built up through its components. Since the definition is being quantified over the domain of propositions, i.e. those objects which can be regarded as either true or false, it suffices to restrict attention to the possible assignments to these propositions, to see what conditions they impose through the definition on the form of the truth function :math:`f(p)`.
+
+If *p* is true and *q* is true, then the equivalency relation in the definition holds. By the laws of tautology,
+
+.. math:: 
+
+
+If it :math:`f(p)` is false, then any assignment to :math:`f(q)` will satisfy the definition. In short, if *p* and *q* are equivalent, then the definition is equivalent to,
+
+TODO 
+
+If *p* is false and *q* is true, or visa versa, the equivalency relation in the definition fails to obtain. If the hypothesis of the implication is false, then the consequence may be either true or false. Thus, in these cases, any assignment to :math:`f(p)` and :math:`f(q)` will satisfy the definition.
+
+If *p* is false and *q* is false, or if *p* is true and *q* is true, then the equivalency is true. Then, either :math:`f(p)` is true, or it is false. If it is true, then the implication is only true is :math:`f(q)` is also true. If it :math:`f(p)` is false, then any assignment to :math:`f(q)` will satisfy the definition. In short, if *p* and *q* are equivalent, then the definition is equivalent to,
+
+.. math::
+
+    f(p) \implies f(q)
+
+Thus, if *p* and *q* are equivalent, **and** if :math:`f(p)` expresses a true property of *p*, then :math:`f(q)` also expresses a true property of *q*.
 
 **Theorem** :math:`\forall p: \neg (\forall q: p \equiv as(q))`
 

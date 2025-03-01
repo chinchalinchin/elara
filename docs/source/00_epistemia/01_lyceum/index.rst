@@ -12,4 +12,5 @@ Lyceum
   02_peano
   03_tarski
   04_kolmogorov
-  05_zalta
+  05_carnap
+  06_zalta
