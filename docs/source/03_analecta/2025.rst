@@ -9,11 +9,11 @@
 January
 -------
 
-A perfect palindrome is symmetric, a mirror image of itself no matter which way it is written. Of the types of palindromes, they are likely the most rare, because their grammatical conditions are so stringent, at least as far as English is concerned. 
+There are two mutually exclusive categories of palindromes in any language: perfect and imperfect. 
 
-Perfect palindromes mostly hinge on invertible grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a perfect palindrome must rely on the symmetry of a central palindromic word. 
+A perfect palindrome is symmetric, by which it is meant a perfect palindrome may be reversed character-wise. Of the "species" of palindromes in any given language, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct. 
 
-In other words, the cardinality of perfect palindromes is related to the cardinality of invertible words and the cardinality of purely reflective words. 
+Perfect palindromes mostly hinge on invertible grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a perfect palindrome must rely on the symmetry of a central palindromic word. In other words, the cardinality of perfect palindromes is related to the cardinality of invertible words and the cardinality of purely reflective words. 
 
 - repel on no leper
 - dog saw raw war was god
@@ -22,7 +22,21 @@ In other words, the cardinality of perfect palindromes is related to the cardina
 - pupils did slipup
 - strips deified spirits
 
-Compare these examples to a case like "*borrow or rob*" which, while palindromic, does not preserve its semantic content under inversion.
+Imperfect palindromes, by contrast, degrade under reversal. Consider cases like "*borrow or rob*" or "*name now one man*" which, while palindromic, do not preserve semantic content when reversed. However, by dropping the delimiting character, namely the space " ", the palindromicity can be reconstructed in a degenerate alphabet, e.g. "*borroworob*" and "*namenowoneman*" are palindromic strings in an alphabet with no delimiting characters.
+
+These observations suggest an algebraic structure exists embedded within linguistics. Let :math:`\zeta` be a sentence, defined as a sequence of characters. Then, define the inverse of a sentence, :math:`inv(\zeta)`, as the reversal of :math:`\zeta`'s characters. Furthermore, define the reduction of a sentence, :math:`\varsigma(\zeta)`, as the string which results from the removal of delimiter characters from :math:`\zeta`. Then, palindromes, :math:`\zeta_p` can be defined mathematically as the sentences whose reduced forms are equal to their own inverses,
+
+.. math::
+
+    \varsigma(\zeta_p) = inv(\varsigma(\zeta_p))
+
+It can be shown that inversion and reduction, which are string operations, commute over strings, so the above equation can be extended,
+
+.. math::
+
+    \varsigma(\zeta_p) = \varsigma(inv(\zeta_p)) = inv(\varsigma(\zeta_p))
+
+In other words, palindromes, perfect and imperfect, are exactly the class of sentences which satsify this formal constraint. 
 
 .. _2025-february:
 
@@ -40,6 +54,6 @@ One stares at a blank page, trying to catch a thought. They are so many, slick a
 
 There is no direction to the soul. It is unanchored, everywhere at once. A thought is not something that happens in order, in sequential time. It curls back on itself, becomes its own source. 
 
-This is what words seek to capture. The labyrinth of self in which one is lost. To find the words, one searches in circles, placing words to mark the course you have travelled. And each word carves out its corner, whittling down the heaping mass of thoughts, until all that remains, encircled by words, is a fragment of what originally stood. Words are like a sieve, filtering out the particulars, stripping them of experience.
+This is what words seek to capture. The labyrinth of self in which one is lost. To find the words, one searches in circles, placing words to mark the course travelled. And each word carves out its corner, whittling down the heaping mass of thoughts, until all that remains, encircled by words, is a fragment of what originally stood. Words are like a sieve, filtering out the particulars, stripping them of experience.
 
 And yet, words are the only weapon we are permitted to wield in the war into which we have been drafted without consent. To speak is to breach a vault with a battering ram. A word is a revolution, a blade wielded against the isolation that defines being.

@@ -12,13 +12,12 @@ Verborum
 - :ref:`anastrophe`: An inversion of the grammatical order of words or clauses. 
 - :ref:`antimetabole`: The repetition of words in successive clauses, but in transposed order.
 - :ref:`aposiopesis`: An expression left unsatisfied or incomplete.
-- :ref:`chiasmus`: Grammatical forms repeated in reverse order.
+- :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
 - :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause 
 - :ref:`epistrophe`: The repetition of words at the end of successive clauses.
 - :ref:`hypozeuxis`: An expression whose every clause has its own independent subject and predicate.
 - :ref:`hysteron-proteron`: An expression in which what should come last is put first.
 - :ref:`symploce`: The repetition of both the words at the beginning and end of successive clauses.
-- :ref:`tmesis`: The separation of parts of a compound word by an intervening words.
 
 .. _anacoluthon:
 
@@ -79,6 +78,12 @@ Anaphora
     
     -- `All All and All <https://allpoetry.com/All-All-And-All>`_
     
+    Their lone waters, lone and dead, -- 
+
+    Their sad waters, sad and chilly
+    
+    -- `Dream Land <https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76>`_
+
     War on the spider and the wren! 
 
     War on the destiny of man! 
@@ -91,7 +96,6 @@ Anaphora
 
     -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
 
-    
 .. _anastrophe:
 
 Anastrophe
@@ -201,9 +205,8 @@ Symploce
 
     -- `The Love Song of J. Alfred Prufrock  <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_
 
-.. _tmesis:
+    Let us on by this tremulous light!
 
-Tmesis
-------
+    Let us bathe in this crystalline light!
 
-None yet found.
+    -- `Ulalume: A Ballad <https://www.poetryfoundation.org/poems/44889/to-ulalume-a-ballad>`_
