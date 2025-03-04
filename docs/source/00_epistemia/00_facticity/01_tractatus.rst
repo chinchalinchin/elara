@@ -10,10 +10,10 @@ Tractatus
 - :ref:`a posteriori <a-priori-a-posteriori>`: Knowledge that arises through experience.
 - :ref:`bedeutung`: That to which a name refers. 
 - :ref:`dasein`: A being that by being is concerned with being.
-- :ref:`form`: 
-- :ref:`language`: 
+- :ref:`form`: TODO
+- :ref:`language`: TODO
 - :ref:`noumena`: TODO
-- :ref:`nothing`: 
+- :ref:`nothing`: TODO
 - :ref:`phenomena`: TODO
 - :ref:`sinn`: TODO
 - :ref:`synthesis`: TODO

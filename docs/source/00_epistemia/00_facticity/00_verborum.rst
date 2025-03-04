@@ -6,18 +6,29 @@ Verborum
 
 .. _devices:
 
+**Syntactical Devices**
+
+
 - :ref:`anacoluthon`: A discontinuity of expression within a sentence, a form in which there is logical or grammatical incoherence.
 - :ref:`anadiplosis`: When words at the end of one clause are repeated near the beginning of the following clause.
 - :ref:`anaphora`: The repetition of words at the beginning of successive clauses.
 - :ref:`anastrophe`: An inversion of the grammatical order of words or clauses. 
-- :ref:`antimetabole`: The repetition of words in successive clauses, but in transposed order.
+- :ref:`alliteration`: TODO
 - :ref:`aposiopesis`: An expression left unsatisfied or incomplete.
+- :ref:`assonance`: TODO
+- :ref:`asyndeton`: The deliberate omission of conjunctions. 
 - :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
 - :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause 
 - :ref:`epistrophe`: The repetition of words at the end of successive clauses.
 - :ref:`hypozeuxis`: An expression whose every clause has its own independent subject and predicate.
-- :ref:`hysteron-proteron`: An expression in which what should come last is put first.
+- :ref:`parataxis`: TODO
 - :ref:`symploce`: The repetition of both the words at the beginning and end of successive clauses.
+
+**Semantical Devices**
+
+- :ref:`hysteron-proteron`: An expression in which what should come last is put first.
+- :ref:`metonymy`: A name that is derived from the attribute of the thing named. 
+- :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object. 
 
 .. _anacoluthon:
 
@@ -117,10 +128,14 @@ Anastrophe
 
     -- `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_
 
-.. _antimetabole:
-
 Antimetabole
 ------------
+
+.. math::
+
+    \text{Antimetabole} \subset \text{Chiasmus}
+
+Antimetabole is included in the category :ref:`chiasmus`.
 
 None yet found.
 
@@ -137,10 +152,27 @@ Aposiopesis
 
     -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
 
+Asyndeton
+---------
+
+.. math::
+
+    \text{Asyndeton} \supset \text{Hypozeuxis} 
+
+Asyndeton includes the categories :ref:`hypozeuxis`.
+
+None yet found. 
+
 .. _chiasmus:
 
 Chiasmus
 --------
+
+.. math::
+
+    \text{Chiasmus} \supset \text{Antimetabole}
+
+Chiasmus includes the category of :ref:`antimetabole`. 
 
     Break in the sun till the sun breaks down
 
@@ -185,6 +217,12 @@ Epistrophe
 Hypozeuxis
 ----------
 
+.. math::
+
+    \text{Hypozeuxis} \subset \text{Asyndeton}
+
+Asyndeton is included in the category of :ref:`hypozeuxis`.
+
 None yet found.
 
 .. _hysteron-proteron:
@@ -192,7 +230,31 @@ None yet found.
 Hysteron Proteron
 -----------------
 
-None yet found. 
+    *Moriamur, et in media arma ruamus* 
+
+    Let us die, and rush into the midst of the fight. 
+    
+    -- Aeneid
+
+    I will kill thee, and love thee after. 
+
+    -- Othello
+
+.. _metonymy:
+
+Metonymy
+--------
+
+None yet found.
+
+.. _parataxis:
+
+Parataxis
+---------
+
+From the Greek: παράταξις (παρά-ταξις, "beside-arrangement") 
+
+None yet found.
 
 .. _symploce:
 
@@ -210,3 +272,10 @@ Symploce
     Let us bathe in this crystalline light!
 
     -- `Ulalume: A Ballad <https://www.poetryfoundation.org/poems/44889/to-ulalume-a-ballad>`_
+
+.. _synecdoche:
+
+Synecdoche
+----------
+
+None yet found.

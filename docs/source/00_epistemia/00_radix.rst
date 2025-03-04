@@ -39,6 +39,7 @@ archive.org
 - `Philosophical Investigations <https://archive.org/details/philosophicalinv0000witt/page/n3/mode/2up>`_
 - `Principia Mathematica <https://archive.org/details/cu31924001575244>`_
 - `Process and Reality <https://archive.org/details/processrealitygi00alfr>`_
+- `The Exegesis of Philip K. Dick <https://archive.org/details/exegesisofphilip0000dick>`_
 - `The Myth of Sisyphus <https://archive.org/details/mythofsisyphus0000unse/page/n5/mode/2up>`_
 - `The World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_
 - `Tractatus Logico-Philosophicus <https://archive.org/details/dli.ministry.23985>`_
@@ -69,6 +70,13 @@ columbia.edu
 ------------
 
 - `Little Gidding <https://www.columbia.edu/itc/history/winter/w3206/edit/tseliotlittlegidding.html>`_
+
+.. _gnosis-org:
+
+gnosis.org
+----------
+
+- `On The Origin of the World <http://www.gnosis.org/naghamm/origin.html>`_
 
 .. _gutenberg-org:
 

@@ -56,4 +56,16 @@ There is no direction to the soul. It is unanchored, everywhere at once. A thoug
 
 This is what words seek to capture. The labyrinth of self in which one is lost. To find the words, one searches in circles, placing words to mark the course travelled. And each word carves out its corner, whittling down the heaping mass of thoughts, until all that remains, encircled by words, is a fragment of what originally stood. Words are like a sieve, filtering out the particulars, stripping them of experience.
 
-And yet, words are the only weapon we are permitted to wield in the war into which we have been drafted without consent. To speak is to breach a vault with a battering ram. A word is a revolution, a blade wielded against the isolation that defines being.
+And yet, words are the only weapon we are permitted to wield in the war which we have been drafted into without consent. To speak is to breach a vault with a battering ram. A word is a revolution, a blade wielded against the isolation that defines human being.
+
+---
+
+.. epigraph::
+
+    I will kill thee, and love thee after. 
+
+    -- Othello
+
+**Hysteron Proteron**: An expression in which what should come last is put first.
+
+This poetical device is unique amongst the others insofar that it is semantic. Most devices, like epistrophe or chiasmus, are syntactical and formal; while they can be employed to enhance the meaning of a sentence, they are all nevertheless defined solely by the transposition and application of grammatical rules. In contrast, a Hysteron Proteron is a form of word play that requires more than just symbol shunting. Its essence involves the interpretation of its component parts which simultaneously places them into a contradictory whole. 
