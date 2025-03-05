@@ -1,3 +1,8 @@
+Valis: Appendix
+---------------
+
+By Philip K. Dick
+
 1. One Mind there is; but under it two principles contend.
  
 2. The Mind lets in the light, then the dark, in interaction; so time is generated. At the end Mind awards victory to the light; time ceases and the Mind is complete.
