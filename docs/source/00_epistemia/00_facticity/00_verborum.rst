@@ -37,21 +37,21 @@ Anacoluthon
 
     with up so floating many bells down 
     
-    -- `anyone lived in a pretty how town <https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town>`_
+    -- `anyone lived in a pretty how town <https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town>`_, e.e. cummings
     
     In the coal fire will not wholly console them. 
 
-    -- `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
+    -- `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_, Sylvia Plath
 
     She's all states, and all princes, I,
 
     Nothing else is.
 
-    -- `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
+    -- `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_, John Donne
     
     From there are ghosts in the air 
 
-    -- `I Have Longed To Move Away <https://allpoetry.com/I-Have-Longed-To-Move-Away>`_
+    -- `I Have Longed To Move Away <https://allpoetry.com/I-Have-Longed-To-Move-Away>`_, Dylan Thomas
 
 .. _anadiplosis:
 
@@ -62,13 +62,13 @@ Anadiplosis
     
     A waste of breath the years behind
 
-    -- `An Irishman Airman Foresees His Death <https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death>`_
+    -- `An Irishman Airman Foresees His Death <https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death>`_, William Butler Years
 
     There moves what seems a fiery spark,
 
     A lonely spark with silvery rays
     
-    -- `The Dong with a Luminous Nose <https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose>`_
+    -- `The Dong with a Luminous Nose <https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose>`_, Edward Lear
 
     The eyes that fix you in a formulated phrase,
     
@@ -76,7 +76,7 @@ Anadiplosis
     
     When I am pinned and wriggling on the wall,
 
-    -- `The Love Song of J. Alfred Prufrock <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_
+    -- `The Love Song of J. Alfred Prufrock <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
 
 .. _anaphora:
 
@@ -87,25 +87,25 @@ Anaphora
     
     Fear not the flat, synthetic blood
     
-    -- `All All and All <https://allpoetry.com/All-All-And-All>`_
+    -- `All All and All <https://allpoetry.com/All-All-And-All>`_, Dylan Thomas
     
     Their lone waters, lone and dead, -- 
 
     Their sad waters, sad and chilly
     
-    -- `Dream Land <https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76>`_
+    -- `Dream Land <https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76>`_, Edgar Allen Poe
 
     War on the spider and the wren! 
 
     War on the destiny of man! 
 
-    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
+    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_, Dylan Thomas
 
     We are the hollow men
 
     We are the stuffed men
 
-    -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
+    -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_, T.S. Eliot
 
 .. _anastrophe:
 
@@ -114,19 +114,19 @@ Anastrophe
 
     The widening circles into nothing gone
 
-    -- `Calidore: A Fragment <https://kalliope.org/en/text/keats2001071304>`_
+    -- `Calidore: A Fragment <https://kalliope.org/en/text/keats2001071304>`_, John Keats
 
     Observe how system into system runs
 
-    -- `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_
+    -- `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_, Alexander Poper
 
     With fruit the vines that round the thatch-eves run
 
-    -- `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
+    -- `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_, John Keats
 
     May the last Adam's blood my soul embrace
 
-    -- `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_
+    -- `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_, John Donne
 
 Antimetabole
 ------------
@@ -137,7 +137,11 @@ Antimetabole
 
 Antimetabole is included in the category :ref:`chiasmus`.
 
-None yet found.
+    How beautiful, if sorrow had not made
+
+    Sorrow more beautiful than Beauty’s self.
+
+    -- `Hyperion <https://www.poetryfoundation.org/poems/44473/hyperion>`_, John Keats
 
 .. _aposiopesis:
 
@@ -150,7 +154,7 @@ Aposiopesis
     
     For Thine is the
 
-    -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
+    -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_, T.S. Eliot
 
 Asyndeton
 ---------
@@ -176,11 +180,11 @@ Chiasmus includes the category of :ref:`antimetabole`.
 
     Break in the sun till the sun breaks down
 
-    -- `And Death Shall Have No Dominion <https://allpoetry.com/And-Death-Shall-Have-No-Dominion>`_
+    -- `And Death Shall Have No Dominion <https://allpoetry.com/And-Death-Shall-Have-No-Dominion>`_, Dylan Thomas
 
     Beauty is truth, truth beauty
 
-    -- `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
+    -- `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_, John Keats
 
 .. _epanalepsis:
 
@@ -193,13 +197,13 @@ Epanalepsis
 
     Their pleasures in a long immortal dream.
 
-    -- `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
+    -- `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_, John Keats
 
     The maggot that no man can kill
 
     And the man no rope can hang
 
-    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
+    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_, Dylan Thomas
 
 .. _epistrophe: 
 
@@ -210,7 +214,7 @@ Epistrophe
     
     I had not thought death had undone so many.
 
-    -- `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_
+    -- `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_, T.S. Eliot
 
 .. _hypozeuxis:
 
@@ -234,11 +238,11 @@ Hysteron Proteron
 
     Let us die, and rush into the midst of the fight. 
     
-    -- Aeneid
+    -- Aeneid, Virgil, 19 BCE
 
     I will kill thee, and love thee after. 
 
-    -- Othello
+    -- Othello, William Shakespeare
 
 .. _metonymy:
 

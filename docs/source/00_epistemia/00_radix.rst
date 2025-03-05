@@ -57,6 +57,7 @@ classicallibrary.org
 classics.mit.edu
 ----------------
 
+- `Aeneid <https://classics.mit.edu/Virgil/aeneid.html>`_
 - `Categories <https://classics.mit.edu/Aristotle/categories.1.1.html>`_
 - `Physics <http://classics.mit.edu/Aristotle/physics.html>`_
 - `Metaphysics <http://classics.mit.edu/Aristotle/metaphysics.html>`_
@@ -109,6 +110,7 @@ poetryfoundation.org
 - `Do Not Go Gentle Into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>`_
 - `Dream-Land <https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76>`_
 - `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_
+- `Hyperion <https://www.poetryfoundation.org/poems/44473/hyperion>`_
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_
 - `Spring and Fall <https://www.poetryfoundation.org/poems/44400/spring-and-fall>`_

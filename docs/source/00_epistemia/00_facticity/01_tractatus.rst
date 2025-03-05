@@ -50,7 +50,7 @@ A Priori / A Posteriori
 	
 	**Socrates**: And yet in another way that he has none of them, but that he has acquired power over them, since he has brought them under his control in his own enclosure, to take them and hold them whenever he likes, by catching whichever bird he pleases, and to let them go again; and he can do this as often as he pleases.
 
-	-- `Theatetus <http://classics.mit.edu/Plato/theatu.html>`_, Plato, 300s BC
+	-- `Theatetus <http://classics.mit.edu/Plato/theatu.html>`_, Plato, 300s BCE
 
 .. epigraph::
 
@@ -133,7 +133,7 @@ Being
 
 .. epigraph::
 
-  :ref:`Dasein <being>` is an :ref:`Seiendes <being>` which does not just occur among other :Ref:`Seienden <being>`. Rather it is ontically distinguished by the fact that, in its very :ref:`Sein <being>`, that :ref:`Sein <being>` is an issue for it. But in that case, this is a constitutive state of  :ref:`Dasein <being>`'s :ref:`Sein <being>`, and this implies that :ref:`Dasein <being>`, in its :ref:`Sein <being>`, has a relationship towards that :ref:`Sein <being>`— a relationship which itself is one of :ref:`Sein <being>`. And this means further that there is some way in which  :ref:`Dasein <being>` understands itself in its Being, and that to some degree it does so explicitly. It is peculiar to this entity that with and through its :ref:`Sein <being>`, this Being is disclosed to it. Understanding of Being is itself a definite characteristic of  :ref:`Dasein's <being>` Being.  :ref:`Dasein <being>` is ontically distinctive in that it is ontological. 
+  :ref:`Dasein <being>` is an :ref:`Seiendes <being>` which does not just occur among other :Ref:`Seienden <being>`. Rather it is ontically distinguished by the fact that, in its very :ref:`Sein <being>`, that :ref:`Sein <being>` is an issue for it. But in that case, this is a constitutive state of  :ref:`Dasein <being>`'s :ref:`Sein <being>`, and this implies that :ref:`Dasein <being>`, in its :ref:`Sein <being>`, has a relationship towards that :ref:`Sein <being>`— a relationship which itself is one of :ref:`Sein <being>`. And this means further that there is some way in which  :ref:`Dasein <being>` understands itself in its :ref:`Sein <being>`,, and that to some degree it does so explicitly. It is peculiar to this entity that with and through its :ref:`Sein <being>`, this :ref:`Sein <being>`, is disclosed to it. Understanding of :ref:`Sein <being>` is itself a definite characteristic of  :ref:`Dasein's <being>` :ref:`Sein <being>`.  :ref:`Dasein <being>` is ontically distinctive in that it is ontological. 
 
   -- `Being and Time <https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n15/mode/2up>`_, Martin Heidegger, 1927 AD
 
@@ -196,7 +196,7 @@ Form
 
 .. epigraph::
 
-    Form is the possibility of structure, 
+    Form is the possibility of structure.
 
     -- `Tractatus Logico-Philosophicus <https://archive.org/details/dli.ministry.23985>`_, Ludwig Wittgenstein, 1921 AD
 
@@ -214,21 +214,21 @@ Nothing
 
 .. epigraph::
 
-    What is the :ref:`nothing` ? Our very first approach to this question has something unusual about it. In our asking we posit the :ref:`nothing` in advance as something that "is" such and such; we posit it as a being. But that is exactly what it is distinguished from. Interrogating the :ref:`nothing`--asking what and how it, the :ref:`nothing`, is--turns what is interrogated into its opposite. The question deprives itself of its own object. Accordingly, every answer to this question is also impossible from the start. For it necessarily assumes the form, the nothing "is" this or that. With regard to the nothing, question and answer alike are inherently absurd.
+  What is the :ref:`nothing` ? Our very first approach to this question has something unusual about it. In our asking we posit the :ref:`nothing` in advance as something that "is" such and such; we posit it as a being. But that is exactly what it is distinguished from. Interrogating the :ref:`nothing`--asking what and how it, the :ref:`nothing`, is--turns what is interrogated into its opposite. The question deprives itself of its own object. Accordingly, every answer to this question is also impossible from the start. For it necessarily assumes the form, the nothing "is" this or that. With regard to the nothing, question and answer alike are inherently absurd.
 
-    -- `What Is Metaphysics? <https://www.stephenhicks.org/wp-content/uploads/2013/03/heideggerm-what-is-metaphysics.pdf>`_, Martin Heidegger, 1929 AD
-
-.. epigraph::
-
-    Presence to self, on the contrary, supposes that an impalpable fissure has slipped into being. If being is present to itself, it is because it is not wholly itself. Presence is an immediate deterioration of coincidence, for it supposes separation. But if we ask ourselves at this point "what it is" which separates the subject from himself, we are forced to admit it is ":ref:`nothing`". Ordinarily what separates is a distance in space, a lapse in time, a psychological difference, or simply the individuality of two co-presents--in short, a "qualified" reality. But in the case which concerns us, ":ref:`nothing`" can separate the consciousness of belief from belief, since belief is "nothing other" than the consciousness of belief.
-    
-    -- `Being and Nothingness <https://archive.org/details/beingnothingness0000unse>`_, Jean-Paul Sartre, 1943 AD
+  -- `What Is Metaphysics? <https://www.stephenhicks.org/wp-content/uploads/2013/03/heideggerm-what-is-metaphysics.pdf>`_, Martin Heidegger, 1929 AD
 
 .. epigraph::
 
-    Naturally, because the void is indiscernible as a term (because it is not-one), its inaugural appearance is a pure act of nomination. This name cannot be specific; it cannot place the void under anything that would subsume it--this would reestablish the one. The name cannot indicate that the void is this or that. The act of nomination, being a-specific, consumes itself, indicating :ref:`nothing` other than the unpresentable as such. In ontology, however, the unpresentable occurs within a presentative forcing which disposes it as the :ref:`nothing` from which everything proceeds. The consequence is that the name of the void is a pure *proper name*, which indicates itself, which does not bestow any index of difference within what it refers to, and which auto-declares itself in the form of the multiple, despite there being :ref:`nothing` which is numbered by it.
+  Presence to self, on the contrary, supposes that an impalpable fissure has slipped into being. If being is present to itself, it is because it is not wholly itself. Presence is an immediate deterioration of coincidence, for it supposes separation. But if we ask ourselves at this point "what it is" which separates the subject from himself, we are forced to admit it is ":ref:`nothing`". Ordinarily what separates is a distance in space, a lapse in time, a psychological difference, or simply the individuality of two co-presents--in short, a "qualified" reality. But in the case which concerns us, ":ref:`nothing`" can separate the consciousness of belief from belief, since belief is "nothing other" than the consciousness of belief.
+  
+  -- `Being and Nothingness <https://archive.org/details/beingnothingness0000unse>`_, Jean-Paul Sartre, 1943 AD
 
-    -- `Being and Event <http://www.elimeyerhoff.com/books/Badiou/Badiou-Being_and_Event_Searchable.pdf>`_, Alain Badiou, 1988 AD
+.. epigraph::
+
+  Naturally, because the void is indiscernible as a term (because it is not-one), its inaugural appearance is a pure act of nomination. This name cannot be specific; it cannot place the void under anything that would subsume it--this would reestablish the one. The name cannot indicate that the void is this or that. The act of nomination, being a-specific, consumes itself, indicating :ref:`nothing` other than the unpresentable as such. In ontology, however, the unpresentable occurs within a presentative forcing which disposes it as the :ref:`nothing` from which everything proceeds. The consequence is that the name of the void is a pure *proper name*, which indicates itself, which does not bestow any index of difference within what it refers to, and which auto-declares itself in the form of the multiple, despite there being :ref:`nothing` which is numbered by it.
+
+  -- `Being and Event <http://www.elimeyerhoff.com/books/Badiou/Badiou-Being_and_Event_Searchable.pdf>`_, Alain Badiou, 1988 AD
 
 .. _phenomena:
 
@@ -348,6 +348,6 @@ World
 
 .. epigraph::
 
-    "The :ref:`world` is my representation," this is a truth valid with reference to every living and knowing being, although man alone can bring it into reflective, abstract consciousness. If he really does so, philosophical discernment has dawned on him. It then becomes clear and certain to him that he does not know a sun and an earth, but only an eye that sees a sun, a hand that feels an earth; that the :ref:`world` around him is there only as representation, in other words, only in reference to another thing, namely that which represents, and this is himself. If any truth can be expressed "a priori", it is this; for it is the statement of that :ref:`form` of all possible and conceivable experience, a form that is more general than all others, than time, space and causality, for all these presuppose it. 
+  "The :ref:`world` is my representation," this is a truth valid with reference to every living and knowing being, although man alone can bring it into reflective, abstract consciousness. If he really does so, philosophical discernment has dawned on him. It then becomes clear and certain to him that he does not know a sun and an earth, but only an eye that sees a sun, a hand that feels an earth; that the :ref:`world` around him is there only as representation, in other words, only in reference to another thing, namely that which represents, and this is himself. If any truth can be expressed "a priori", it is this; for it is the statement of that :ref:`form` of all possible and conceivable experience, a form that is more general than all others, than time, space and causality, for all these presuppose it. 
 
-    -- `The World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_, Arthur Schopenhaur, 1818 AD
+  -- `The World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_, Arthur Schopenhaur, 1818 AD
