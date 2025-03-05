@@ -9,14 +9,100 @@ Theosophy
 Creation
 --------
 
+.. _shabaka-stone:
+
+Shabaka Stone
+^^^^^^^^^^^^^
+
+**2500s BCE**
+
+.. figure:: ../../_static/img/context/historical/shabaka-stone.jpeg
+  :width: 80%
+  :alt: The Shabaka Stone
+  :align: center
+
+.. epigraph::
+
+    The gods who came into being as Ptah: Ptah upon the Great Throne . . . 
+    
+    Ptah-Nun, the father who begot Atum . . . 
+    
+    Ptah-Naunet, the mother who bore Atum . . . 
+    
+    Ptah, the Great, that is the heart and tongue of the Ennead . . .
+
+    There came into being from the heart and there came into being from the tongue [something] in the form of Atum. The mighty Great One is Ptah, who caused all gods [to live], as well as their kas, through his heart, by which Horus became Ptah, and through this tongue by which Thoth became Ptah. . .
+
+    His Ennead is before him as teeth and lips, that is, the semen and hands of Atum. The Ennead of Atum came into being by his semen and fingers; the Ennead [of Ptah], however, is the teeth and lips in this mouth, which pronounced the name of everything, and from which Shu and Tefnut came forth, the fashioner of the Ennead.
+
+    The sight of the eyes, the hearing of the ears, and the smelling of the air by the nose, they present to the heart. This is what causes every "completed [concept]" to come forth, and it is the tongue that repeats what the heart thinks.
+    
+    Thus all the gods were born and his Ennead was completed. Every word of the god ("hieroglyph"? "idea"?) came into being through what the heart thought and the tongue commanded.
+
+    -- `Lesko Translation <https://omnika.org/texts/328>`_
+
+
+.. _eridu-genesis-creation:
+
+Eridu Genesis
+^^^^^^^^^^^^^
+
+**1600s BCE**
+
+.. epigraph::
+
+    Nintur was paying attention:
+
+        *Let me bethink myself of my humankind,*
+
+        *all forgotten as they are;*
+
+        *and mindful of mine,*
+
+        *Nintur's creatures let me bring them back*
+        
+        *let me lead the people back from their trails.*
+
+        
+        *May they come and build cities and cult places,*
+
+        *that I may cool myself in their shade;*
+
+        *may they lay the bricks for the cult cities in pure spots*
+
+        *and may they found places for divination in pure spots!*
+
+
+    She gave directions for purification and cries for elemency,
+
+    the things that cool divine wrath,
+
+    perfected the divine service and the august offices,
+
+    said to the surrounding regions: "Let me institute peace there!"
+
+    When An, Enlil, Enki and Ninhursaga
+    
+    fashioned the dark-headed people
+
+    they had made the small animals that come up from out of the earth,
+    
+    come from the earth in abundance
+
+    and had let there be, as it befits it, gazelles
+
+    wild donkeys, and four-footed beasts in the desert.
+
+    -- `Jacobsen Translation <https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm>`_
+
 .. _popol-vuh-creation:
 
 Popol Vuh
----------
+^^^^^^^^^
 
 **Unknown**
 
-The creation myth contained in the *Popol Vuh* could originate from any point in time from 20:sup:`th` century BCE to 18:sup:`th` century AD, when it was finally transcribed.  
+The creation myth contained in the *Popol Vuh* could originate from any point in time starting from 20:sup:`th` century BCE to 18:sup:`th` century AD, when it was finally transcribed.  
 
 .. epigraph::
 
@@ -119,11 +205,17 @@ The creation myth contained in the *Popol Vuh* could originate from any point in
     
     These things. 
 
-    Still be it silent. 
 
-    Still be it placid. 
+    Still be it silent,
 
-    Still is is hushed,
+    Still be it placid, 
+
+    
+    It is silent, 
+    Still is is calm,
+    
+    
+    Still it is hushed,
     
     Be it empty as well its womb sky. 
 
@@ -154,7 +246,7 @@ The creation myth contained in the *Popol Vuh* could originate from any point in
 
     Meadow, 
 
-    Forest,
+    Forest.
 
 
     Merely alone sky exists,
@@ -363,6 +455,37 @@ Theogony
 
     -- `Evelyn-White Translation <https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0130%3Acard%3D104>`_
 
+.. _tao-te-ching:
+
+Tao Te Ching
+^^^^^^^^^^^^
+
+**600s - 400s BCE**
+
+.. epigraph::
+
+    道可道，非常道。名可名，非常名。無名天地之始；有名萬物之母。故常無欲，以觀其妙；常有欲，以觀其徼。此兩者，同出而異名，同謂之玄。玄之又玄，衆妙之門。
+
+    -- `Chapter 1 <https://ctext.org/dao-de-jing>`_
+
+.. epigraph::
+
+    The Tao that can be trodden is not the enduring and unchanging Tao. The name that can be named is not the enduring and unchanging name.
+
+    (Conceived of as) having no name, it is the Originator of heaven and earth; (conceived of as) having a name, it is the Mother of all things.
+
+    Always without desire we must be found,
+    
+    If its deep mystery we would sound;
+
+    But if desire always within us be,
+
+    Its outer fringe is all that we shall see.
+
+
+    Under these two aspects, it is really the same; but as development takes place, it receives the different names. Together we call them the Mystery. Where the Mystery is the deepest is the gate of all that is subtle and wonderful.
+
+    -- `Legge Translation <https://classics.mit.edu/Lao/taote.1.1.html>`_
 .. _torah-creation:
 
 Torah
@@ -454,7 +577,7 @@ Septuagint
 .. _the-metamorphoses:
 
 The Metamorphoses
------------------
+^^^^^^^^^^^^^^^^^
 
 **8 AD**
 
@@ -512,6 +635,114 @@ The Metamorphoses
     Before there was earth or sea or the sky that covers everything, Nature appeared the same throughout the whole world: what we call chaos: a raw confused mass, nothing but inert matter, badly combined discordant atoms of things, confused in the one place. There was no Titan yet, shining his light on the world, or waxing Phoebe renewing her white horns, or the earth hovering in surrounding air balanced by her own weight, or watery Amphitrite stretching out her arms along the vast shores of the world. Though there was land and sea and air, it was unstable land, unswimmable water, air needing light. Nothing retained its shape, one thing obstructed another, because in the one body, cold fought with heat, moist with dry, soft with hard, and weight with weightless things.
 
     -- `A.S Kline Translation <https://ovid.lib.virginia.edu/trans/Metamorph.htm>`_
+
+
+.. _poetic-edda-creation:
+
+Poetic Edda
+^^^^^^^^^^^
+
+**1200s AD**
+
+.. epigraph::
+
+    Hljóðs bið ek allar helgar kindir,
+
+    meiri ok minni mögu Heimdallar;
+
+    viltu, at ek, Valföðr! vel framtelja forn spjöll fíra,
+
+    þau er fremst um man.
+
+
+    Ek man jötna ár um borna,
+
+    þá er forðum mik fœdda höfðu;
+
+    níu man ek heima, níu íviði,
+
+    mjötvið mœran fyr mold neðan.
+
+
+    Ár var alda þar er Ýmir bygði,
+
+    vara sandr né sær né svalar unnir,
+    
+    jörð fannsk æva né upphiminn,
+    
+    gap var ginnunga, en gras hvergi.
+
+
+    Áðr Burs synir bjöðum um ypðu,
+
+    þeir er Miðgarð mœran skópu;
+    
+    sól skein sunnan á salar steina,
+    
+    þá var grund gróin grœnum lauki.
+
+
+    Sól varp sunnan, sinni mána,
+
+    hendi inni hœgri um himinjódyr;
+
+    sól þat ne vissi hvar hon sali átti,
+
+    máni þat ne vissi hvat hann megins átti,
+
+    stjörnur þat ne vissu hvar þær staði áttu.
+
+    -- Stanzas 1 - 5
+
+.. epigraph::
+
+    Hearing I ask | from the holy races,
+
+    From Heimdall's sons, | both high and low;
+
+    Thou wilt, Valfather, | that well I relate
+
+    Old tales I remember | of men long ago.
+
+
+    I remember yet | the giants of yore,
+
+    Who gave me bread | in the days gone by;
+
+    Nine worlds I knew, | the nine in the tree
+
+    With mighty roots | beneath the mold.
+
+
+    Of old was the age | when Ymir lived;
+
+    Sea nor cool waves | nor sand there were;
+
+    Earth had not been, | nor heaven above,
+
+    But a yawning gap, | and grass nowhere.
+
+
+    Then Bur's sons lifted | the level land,
+
+    Mithgarth the mighty | there they made;
+
+    The sun from the south | warmed the stones of earth,
+
+    And green was the ground | with growing leeks.
+
+
+    The sun, the sister | of the moon, from the south
+
+    Her right hand cast | over heaven's rim;
+
+    No knowledge she had | where her home should be,
+
+    The moon knew not | what might was his,
+
+    The stars knew not | where their stations were.
+
+    -- `Bellows Translation <https://www.voluspa.org/voluspa1-5.htm>`_
 
 .. _king-james-bible-creation:
 

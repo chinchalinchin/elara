@@ -30,6 +30,13 @@ Verborum
 - :ref:`metonymy`: A name that is derived from the attribute of the thing named. 
 - :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object. 
 
+.. _alliteration:
+
+Alliteration
+------------
+
+TODO
+
 .. _anacoluthon:
 
 Anacoluthon
@@ -128,6 +135,8 @@ Anastrophe
 
     -- `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_, John Donne
 
+.. _antimetabole:
+
 Antimetabole
 ------------
 
@@ -156,6 +165,8 @@ Aposiopesis
 
     -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_, T.S. Eliot
 
+.. _asyndeton:
+
 Asyndeton
 ---------
 
@@ -166,6 +177,14 @@ Asyndeton
 Asyndeton includes the categories :ref:`hypozeuxis`.
 
 None yet found. 
+
+.. _assonance:
+
+Assonance
+---------
+
+TODO 
+
 
 .. _chiasmus:
 
