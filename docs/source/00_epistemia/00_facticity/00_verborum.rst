@@ -15,6 +15,7 @@ Verborum
 - :ref:`anastrophe`: An inversion of the grammatical order of words or clauses. 
 - :ref:`alliteration`: TODO
 - :ref:`aposiopesis`: An expression left unsatisfied or incomplete.
+- :ref:`apostrophe`: An address to person or thing that is not present. 
 - :ref:`assonance`: TODO
 - :ref:`asyndeton`: The deliberate omission of conjunctions. 
 - :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
@@ -108,6 +109,43 @@ Anaphora
 
     -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_, Dylan Thomas
 
+
+    Why were they proud? Because their marble founts
+
+    Gush’d with more pride than do a wretch’s tears?—
+
+    Why were they proud? Because fair orange-mounts
+    
+    Were of more soft ascent than lazar stairs?—
+    
+    Why were they proud? Because red-lin’d accounts
+    
+    Were richer than the songs of Grecian years?—
+
+    Why were they proud? again we ask aloud,
+    
+    Why in the name of Glory were they proud?
+    
+    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+
+    And of thy spicy myrtles as they blow,
+
+    And of thy roses amorous of the moon,
+
+    And of thy lilies, that do paler grow
+    
+    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+
+    And she forgot the stars, the moon, and sun,
+
+    And she forgot the blue above the trees,
+
+    And she forgot the dells where waters run,
+
+    And she forgot the chilly autumn breeze;  
+
+    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+
     We are the hollow men
 
     We are the stuffed men
@@ -126,6 +164,10 @@ Anastrophe
     Observe how system into system runs
 
     -- `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_, Alexander Poper
+
+    What love Lorenzo for their sister had
+
+    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
 
     With fruit the vines that round the thatch-eves run
 
@@ -164,6 +206,21 @@ Aposiopesis
     For Thine is the
 
     -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_, T.S. Eliot
+
+.. _apostrophe:
+
+Apostrophe
+----------
+
+    O Melancholy, linger here awhile!
+    
+    O Music, Music, breathe despondingly!
+    
+    O Echo, Echo, from some sombre isle,
+
+    Unknown, Lethean, sigh to us—O sigh!
+
+    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
 
 .. _asyndeton:
 

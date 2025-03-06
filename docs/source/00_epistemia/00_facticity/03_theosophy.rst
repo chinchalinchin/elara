@@ -331,7 +331,7 @@ Rigveda
 
     There was that One then, and there was no other.
 
-    -- `Nāsadīya Sūkta <https://www.swami-krishnananda.org/vishnu/nasadiya.pdf>`
+    -- `Nāsadīya Sūkta <https://www.swami-krishnananda.org/vishnu/nasadiya.pdf>`_
 
 .. _enuma-elish:
 

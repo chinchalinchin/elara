@@ -33,6 +33,7 @@ archive.org
 - `Ideas <https://archive.org/details/IdeasPartI>`_
 - `Introduction to Logic and the Methodology of the Deductive Sciences <https://archive.org/details/in.ernet.dli.2015.471634>`_
 - `Introduction to Symbolic Logic and Its Applications <https://archive.org/details/rudolf-carnap-introduction-to-symbolic-logic-and-its-applications>`_
+- `Isabella or The Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_
 - `Naming and Necessity <https://archive.org/details/kripke-1980-naming-and-necessity>`_
 - `On Certainty <https://archive.org/details/oncertainty00witt>`_
 - `On Sense and Reference <https://archive.org/details/OnSenseAndReference>`_
@@ -87,8 +88,9 @@ gutenberg.org
 - `Critique of Pure Reason <https://www.gutenberg.org/ebooks/4280>`_
 - `Devotions Upon Emergent Occasions <https://www.gutenberg.org/files/23772/23772-h/23772-h.htm>`_
 - `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_
-- `Foundations of Arithmetic, The <https://www.gutenberg.org/ebooks/48312>`_
 - `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
+- `Paradise Lost <https://www.gutenberg.org/cache/epub/26/pg26-images.html>`_
+- `The Foundations of Arithmetic, The <https://www.gutenberg.org/ebooks/48312>`_
 - `Tractatus Logico-Philosophicus <https://www.gutenberg.org/ebooks/5740>`_
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
