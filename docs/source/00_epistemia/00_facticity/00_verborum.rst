@@ -146,6 +146,11 @@ Anaphora
 
     -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
 
+    If I were a dead leaf thou mightest bear;
+
+    If I were a swift cloud to fly with thee;
+    
+    -- `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_, Percy Blysse Shelley
     We are the hollow men
 
     We are the stuffed men

@@ -115,6 +115,7 @@ poetryfoundation.org
 - `Hyperion <https://www.poetryfoundation.org/poems/44473/hyperion>`_
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_
+- `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_
 - `Spring and Fall <https://www.poetryfoundation.org/poems/44400/spring-and-fall>`_
 - `Sonnet 64 <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_
 - `The Canonization <https://www.poetryfoundation.org/poems/44097/the-canonization>`_
