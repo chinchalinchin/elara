@@ -29,7 +29,6 @@ Measure Theory
 
         \lvert A \rvert = \text{inf}\{ \sum_{k = 1}^{\infty} l(I_k) : I_1, I_2, ... \text{are open intervals such that} A \subset \cup_{k = 1}^{\infty} I_k \}
 
-
 .. _mereology:
 
 Mereology

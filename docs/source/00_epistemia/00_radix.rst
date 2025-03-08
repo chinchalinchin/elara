@@ -23,6 +23,7 @@ allpoetry.com
 - `The Genius of the Crowd <https://allpoetry.com/The-Genius-Of-The-Crowd>`_
 - `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
 - `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
+- `Sestina <https://allpoetry.com/poem/8493577-Sestina-by-Elizabeth-Bishop>`_
 
 .. _archive-org:
 
@@ -96,7 +97,7 @@ gutenberg.org
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
 
-.. _kalhttps://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-nightliope-org:
+.. _kalliope-org:
 
 kalliope.org
 ------------
@@ -117,6 +118,7 @@ poetryfoundation.org
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_
 - `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_
+- `Sestina of the Tramp-Royal <https://www.poetryfoundation.org/poems/46775/sestina-of-the-tramp-royal>`_
 - `Spring and Fall <https://www.poetryfoundation.org/poems/44400/spring-and-fall>`_
 - `Sonnet 64 <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_
 - `The Canonization <https://www.poetryfoundation.org/poems/44097/the-canonization>`_
@@ -126,6 +128,7 @@ poetryfoundation.org
 - `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_
 - `The Waking <https://www.poetryfoundation.org/poems/43333/the-waking-56d2220f25315>`_
 - `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
+- `Tonight <https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7>`
 
 .. _royal-society-publish-org:
 
