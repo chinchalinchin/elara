@@ -19,6 +19,7 @@ allpoetry.com
 - `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_
 - `I Have Longed To Move Away <https://allpoetry.com/I-Have-Longed-To-Move-Away>`_
 - `I Met a Genius <https://allpoetry.com/I-Met-A-Genius>`_
+- `Mad Girl's Love Song <https://allpoetry.com/mad-girl's-love-song>`_
 - `The Genius of the Crowd <https://allpoetry.com/The-Genius-Of-The-Crowd>`_
 - `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
 - `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
@@ -95,7 +96,7 @@ gutenberg.org
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
 
-.. _kalliope-org:
+.. _kalhttps://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-nightliope-org:
 
 kalliope.org
 ------------
@@ -123,6 +124,7 @@ poetryfoundation.org
 - `The Love Song of J. Alfred Prufrock  <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_
 - `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
 - `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_
+- `The Waking <https://www.poetryfoundation.org/poems/43333/the-waking-56d2220f25315>`_
 - `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
 
 .. _royal-society-publish-org:

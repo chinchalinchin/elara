@@ -21,6 +21,7 @@ Verborum
 - :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
 - :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause 
 - :ref:`epistrophe`: The repetition of words at the end of successive clauses.
+- :ref:`epizeuxis`: TODO
 - :ref:`hypozeuxis`: An expression whose every clause has its own independent subject and predicate.
 - :ref:`parataxis`: TODO
 - :ref:`symploce`: The repetition of both the words at the beginning and end of successive clauses.
@@ -29,6 +30,7 @@ Verborum
 
 - :ref:`hysteron-proteron`: An expression in which what should come last is put first.
 - :ref:`metonymy`: A name that is derived from the attribute of the thing named. 
+- :ref:`paronomasia`: A play on words.
 - :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object. 
 
 .. _alliteration:
@@ -297,6 +299,13 @@ Epistrophe
 
     -- `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_, T.S. Eliot
 
+.. _epizeuxis:
+
+Epizeuxis
+---------
+
+TODO 
+
 .. _hypozeuxis:
 
 Hypozeuxis
@@ -341,6 +350,17 @@ From the Greek: παράταξις (παρά-ταξις, "beside-arrangement")
 
 None yet found.
 
+.. _paronomasia:
+
+Paronomasia
+-----------
+
+    Of whom each strives, nor knows for what he strives,
+
+    And each half lives a hundred different lives;
+
+    -- `The Scholar Gipsy <https://www.poetryfoundation.org/poems/43606/the-scholar-gipsy>`_, Matthew Arnold
+
 .. _symploce:
 
 Symploce
@@ -350,13 +370,13 @@ Symploce
     
     The yellow smoke that rubs its muzzle on the window-panes 
 
-    -- `The Love Song of J. Alfred Prufrock  <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_
+    -- `The Love Song of J. Alfred Prufrock  <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
 
     Let us on by this tremulous light!
 
     Let us bathe in this crystalline light!
 
-    -- `Ulalume: A Ballad <https://www.poetryfoundation.org/poems/44889/to-ulalume-a-ballad>`_
+    -- `Ulalume: A Ballad <https://www.poetryfoundation.org/poems/44889/to-ulalume-a-ballad>`_, Edgar Allen Poe
 
 .. _synecdoche:
 
