@@ -4,47 +4,77 @@
 Syntagmics
 ----------
 
-.. topic:: Formalism 
+**Constants**
 
-    **Terms**
+1. Uppercase English letters (A, B, C, ... ): Fixed lines.
+2. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
+3. Lowercase Greek letters (α, β, γ, ... ): Fixed words.
 
-    1. Uppercase English letters (A, B, C, ... ): A singular lines.
-    2. Lowercase English letters (a, b, c, ... ): Rhymed lines. 
-    3. Uppercase Greek letters (Α, Β, Γ, ): Syllables.
-    4. Lowercase Greek letters (α, β, γ, ... ): Words.
+**Variables**
 
-    **Variables**
+1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
+2. The English letters u, v, w, x, y and z are reserved for indeterminate lines, not necessarily rhymed. 
+3. The Greek letter λ is reserved for indetermine words.
+4. The Greek letter π is reserved for indeterminate syllables. 
+5. The Greek letter ς is reserved for indeterminate stanzas.
 
-    1. The English letters x, y and z are reserved for indeterminate lines.
-    2. The Greek letters η, θ, and λ are reserved for indetermine words,
-    3. The Greek letters μ, ξ and π are served for indeterminate syllables. 
+.. imporant::
 
-    **Notation**
+    Upper English letters are meant to denote particular lines, whereas lowercase English letters are meant to denote indeterminate lines that are related through their rhyme scheme. 
 
-    1. x.y : Successive lines.
-    2. x-y: Separated lines.
-    3. x | λ : A line ending in a word.  
+**Notation**
 
-.. topic:: Line Definitions
+1. x.y : Successive lines.
+2. x + y : Successive stanzas.
+3. x(λ) : A line ending in a word.  
+
+**Operations**
+
+1. Σ:sub:`i=1`:sup:`n` ς:sub:`i` 
+
+**Axioms**
+
+∀ς: ∃x: ς = x
+    All stanzas are made of lines. 
+
+∀p: p  = Σ:sub:`i=1`:sup:`n` ς:sub:`i` 
+    All poems are made of stanzas. 
+
+**Definitions**
+
+.. topic:: Definition: Lines
 
     - Hendecasyllable: A line consisting of eleven syllables. 
 
-.. topic:: Stanza Definitions
+.. topic:: Definitions: Stanzas
 
     - Tercet: A stanza with three lines
-    - Quadtrain: A stanza with four lines
+    - Quatrain: A stanza with four lines
     - Sestet: A stanza with six lines.
     - Octet: A stanza with eight lines.
     - Envoi: A short, concluding stanza.
+
+**Examples**
+
+a.b.a
+    A tercet where the first and third lines rhyme. 
+
+A.b.A 
+    A tercet where the first and third lines are the same. 
+
+a.b.a + a.b.a 
+    Two rhyming tercets.
 
 .. _ballad:
 
 Ballad
 ------
 
-Three octets followed by a quadtrain envoi.
+Three octets followed by a quatrain envoi.
 
-TODO 
+.. topic:: Schema 
+
+    TODO 
 
 .. _ghazal:
 
@@ -52,6 +82,8 @@ Ghazal
 ------
 
 TODO
+
+**References**
 
 - `Tongiht <https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7>`_, Agha Shahid Ali
 
@@ -80,6 +112,8 @@ TODO
   * - English
     - ode
 
+**References**
+
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_, John Keats
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_, John Keats
 - `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_, Percy Blysse Shelely
@@ -89,7 +123,15 @@ TODO
 Pantoum
 -------
 
-TODO 
+A series of quatrains where every quatrain's first and third line are the second and fourth line of the previous quatrian. 
+
+.. topic::
+
+   A.B.C.D + B.E.D.F + E.G.F.H + ...
+
+**References**
+
+- `Pantoum of the Great Depression <https://www.poetryfoundation.org/poems/58080/pantoum-of-the-great-depression>`_, Donald Justice
 
 .. _rondeau:
 
@@ -100,8 +142,12 @@ TODO
 
 .. topic:: Schema
 
-    1. A.B.a.A.a.b.A.B-c.a.A.B.a.c 
-    2. A.B.a.A.a.b.A.B-c.a.A.B.a.C
+    1. A.B.a.A.a.b.A.B + c.a.A.B.a.c 
+    2. A.B.a.A.a.b.A.B + c.a.A.B.a.C
+
+**References**
+
+None yet found.
 
 .. _sestina:
 
@@ -112,9 +158,17 @@ Six sestets followed by a tercet envoi.
 
 .. topic:: Schema
 
-    TODO: explain
+   u(α).v(β).w(γ).x(δ).y(ε).z(ζ) + 
+   u(ζ).v(α).w(ε).x(β).y(δ).z(γ) + 
+   u(γ).v(ζ).w(δ).x(α).y(β).z(ε) +
+   u(ε).v(γ).w(β).x(ζ).y(α).z(δ) +
+   u(δ).v(ε).w(α).x(γ).y(ζ).z(β) +
+   u(β).v(δ).w(ζ).x(ε).y(γ).z(α)
+
+**References**
 
 - `Sestina of the Tramp-Royal <https://www.poetryfoundation.org/poems/46775/sestina-of-the-tramp-royal>`_, Rudyard Kipling
+- `Sestina: Travel Notes <https://www.poetryfoundation.org/poetrymagazine/browse?volume=62&issue=6&page=28>`_
 
 .. _sonnet:
 
@@ -125,12 +179,12 @@ A fourteen line poem with a varible rhyme scheme.
 
 .. topic:: Schema (Petrachan)
 
-    1. a.b.b.a.a.b.b.a-c.d.e.c.d.e 
-    2. a.b.b.a.a.b.b.a-c.d.c.d.c.d
+    1. a.b.b.a.a.b.b.a + c.d.e.c.d.e 
+    2. a.b.b.a.a.b.b.a + c.d.c.d.c.d
 
 .. topic:: Schema (Shakespearan)
 
-   a.b.a.b-c.d.c.d-e.f.e.f-g.g 
+   a.b.a.b + c.d.c.d + e.f.e.f + g.g 
 
 - `Batter My Heart, Three Person'd God <https://www.poetryfoundation.org/poems/44106/holy-sonnets-batter-my-heart-three-persond-god>`_, John Donne
 - `Death Be Not Proud <https://www.poetryfoundation.org/poems/44107/holy-sonnets-death-be-not-proud>`_, John Donne
@@ -145,9 +199,9 @@ A collection of tercets with rhymes offset sequentially.
 
 .. topic:: Schema
 
-    a.b.a-b.c.b-c.d.c-d.e.d- ... 
+    a.b.a + b.c.b + c.d.c + d.e.d +  ... 
 
-TODO
+None yet found.
 
 .. _triolet:
 
@@ -172,10 +226,11 @@ Five tercets followed by a quadtrain envoi.
 
 .. topic:: Schema 
 
-    TODO: explain
+    A.b.B + a.b.A + a.b.B + a.b.A + a.b.B + a.b.A.B
 
 - `Do Not Go Gentle into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>`_, Dylan Thomas
 - `Mad Girl's Love Song <https://allpoetry.com/mad-girl's-love-song>`_, Sylvia Plath
+- `One Art <https://www.poetryfoundation.org/poems/47536/one-art>`_, Elizabeth Bishop
+- `Song <https://www.poetryfoundation.org/poems/47601/song-56d2282a6cdf5>`_
 - `The Waking <https://www.poetryfoundation.org/poems/43333/the-waking-56d2220f25315>`_, Theodore Roethke
   
-TODO

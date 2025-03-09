@@ -118,6 +118,7 @@ poetryfoundation.org
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_
 - `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_
+- `Pantoum of the Great Depression <https://www.poetryfoundation.org/poems/58080/pantoum-of-the-great-depression>`_
 - `Sestina of the Tramp-Royal <https://www.poetryfoundation.org/poems/46775/sestina-of-the-tramp-royal>`_
 - `Spring and Fall <https://www.poetryfoundation.org/poems/44400/spring-and-fall>`_
 - `Sonnet 64 <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_
