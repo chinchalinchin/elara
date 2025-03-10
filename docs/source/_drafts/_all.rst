@@ -187,7 +187,7 @@ Rondeaus
 | So he ends where he begins, from on the stoop extolled
 | The vital wages of his sin, of which virtues to uphold
 | But no one listened, cared not to hear of his conceits
-| So rambling, raving, soul-consumed, he bleat and bleat
+| So rambling, raving, soul-consumed, he brayed and bleat
 | Until from empty funeral his corpse in coffin rolled
 |                           With pockets full of paper.
 
@@ -523,6 +523,20 @@ Poems
 | upon the wooden cross
 | But in dying to be
 | raised from earthen loss.
+
+**An Induction**
+
+| If the deaf are dumb
+| And love is blind
+| It follows easy from
+| Two lovers splined
+| A terrible malady
+|
+| If the clefs are sung
+| And doves entwined
+| Then by beaten drum
+| With wings maligned
+| A terrible melody.
 
 **Kingdoms**
 
