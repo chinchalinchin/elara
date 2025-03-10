@@ -39,14 +39,14 @@ Syntagmics
 
 **Operations**
 
-1. Σ :sub:`i=1`:sup:`n` ς:sub:`i` 
+1. Σ :sub:`1`:sup:`n` ς :sub:`i` 
 
 **Propositions**
 
 ∀ς: ∃x: ς = x
     All stanzas are made of lines. 
 
-∀p: p  = Σ :sub:`i=1`:sup:`n` ς:sub:`i` 
+∀p: p  = Σ :sub:`1`:sup:`n` ς :sub:`i` 
     All poems are made of stanzas. 
 
 **Definitions**

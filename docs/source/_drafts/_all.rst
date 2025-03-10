@@ -546,7 +546,7 @@ Poems
 | I, impressed, implored impresario in inquisitive ink
 | To trade the trick to tack together three
 | Annas' absolute and alluring allegory,
-| Sculptures singing scripts so scrupulously.
+| Sculptures singing so scrupulously.
 
 **An Induction**
 
