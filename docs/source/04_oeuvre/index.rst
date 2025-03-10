@@ -11,5 +11,6 @@ Oeuvre
    triolets/index
    pantoums/index
    villanelles/index
+   rondeaus/index
    poems/index
    

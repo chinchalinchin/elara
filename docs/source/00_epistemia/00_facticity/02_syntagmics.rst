@@ -13,10 +13,11 @@ Syntagmics
 **Variables**
 
 1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
-2. The English letters u, v, w, x, y and z are reserved for indeterminate lines, not necessarily rhymed. 
-3. The Greek letter λ is reserved for indetermine words.
-4. The Greek letter π is reserved for indeterminate syllables. 
-5. The Greek letter ς is reserved for indeterminate stanzas.
+2. The lowercase English letters u, v, w, x, y and z are reserved for indeterminate lines, not necessarily rhymed. 
+3. The lowercase Greek letters φ, χ, ψ are reserved for indeterminate rhymed words.
+4. The lowercase Greek letter λ is reserved for indetermine words, not necessarily rhymed.
+5. The lowercase Greek letter Π is reserved for indeterminate syllables. 
+6. The lowercase Greek letter ς is reserved for indeterminate stanzas.
 
 .. important::
 
@@ -24,12 +25,17 @@ Syntagmics
 
 **Notation**
 
-1. x.y : Successive lines.
-2. x-y: Concatenated lines.
-3. x + y : Successive stanzas.
-4. x(λ) : A line ending in a word.  
-5. x[π]: A line ending in a syllable
-6. x.y.x | x = z: Substitute z for x in the expression "x.y.x"
+1. #x: A lengthened line. 
+2. ♭x: A shortened line.  
+3. x.y : Successive lines.
+4. x-y: Concatenated lines.
+5. x + y : Successive stanzas.
+6. x∝λ : A line containing a word. 
+7. x(λ) : A line ending in a word.  
+8. (λ)x: A line beginning with a word. 
+9. x[Π]: A line ending in a syllable.
+10. [Π]x: A line starting with a syllable
+11. x.y.x | x = z: Substitute z for x in the expression "x.y.x"
 
 **Operations**
 
@@ -105,7 +111,7 @@ TODO
 
 .. topic:: Schema
 
-    TODO
+    a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
 
 **References**
 
@@ -214,7 +220,7 @@ Note that a *Rondeau Couplet* is simply a :ref:`triolet`.
 
 The following diagrams shows the different schemata for the rondeau form duing the Renaissance. 
 
-.. figure:: ../../_static/img/context/poetical/renaissance-rondeau.svg
+.. figure:: ../../_static/img/context/poetical/renaissance-rondeaus.svg
   :width: 80%
   :alt: Diagram of Renaissance rondeaus
   :align: center
@@ -312,13 +318,20 @@ Virelai
 
 TODO 
 
-.. topic:: Schema
+.. topic:: Schema (Ancien)
     
-    TODO 
+    a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... 
+
+.. topic:: Schema (Nouveau)
+
+    A.B.
+
+    TODO
 
 **References**
 
-None yet found.
+- `July <https://www.poetrynook.com/poem/july-41>`_, Henry Austin Dobson
+- `Spring Sadness <https://www.gutenberg.org/files/45736/45736-h/45736-h.htm>`_, John Payne
 
 .. _villanelle:
 
