@@ -25,19 +25,22 @@ Syntagmics
 **Notation**
 
 1. x.y : Successive lines.
-2. x + y : Successive stanzas.
-3. x(λ) : A line ending in a word.  
+2. x-y: Concatenated lines.
+3. x + y : Successive stanzas.
+4. x(λ) : A line ending in a word.  
+5. x[π]: A line ending in a syllable
+6. x.y.x | x = z: Substitute z for x in the expression "x.y.x"
 
 **Operations**
 
-1. Σ:sub:`i=1`:sup:`n` ς:sub:`i` 
+1. Σ :sub:`i=1`:sup:`n` ς:sub:`i` 
 
 **Propositions**
 
 ∀ς: ∃x: ς = x
     All stanzas are made of lines. 
 
-∀p: p  = Σ:sub:`i=1`:sup:`n` ς:sub:`i` 
+∀p: p  = Σ :sub:`i=1`:sup:`n` ς:sub:`i` 
     All poems are made of stanzas. 
 
 **Definitions**
@@ -51,6 +54,7 @@ Syntagmics
     - Couplet: A stanza with two lines.
     - Tercet: A stanza with three lines
     - Quatrain: A stanza with four lines
+    - Cinquain: A stanza with five lines
     - Sestet: A stanza with six lines.
     - Octet: A stanza with eight lines.
     - Envoi: A short, concluding stanza.
@@ -87,6 +91,21 @@ Three octets followed by a quatrain envoi.
 .. topic:: Schema 
 
     TODO 
+
+**References**
+
+None yet found.
+
+.. _ballade: 
+
+Ballade
+-------
+
+TODO 
+
+.. topic:: Schema
+
+    TODO
 
 **References**
 
@@ -166,15 +185,50 @@ A series of quatrains where every quatrain's first and third line are the second
 Rondeau
 -------
 
-TODO
+The following diagram shows the different schemata for the rondeau form in 14th century France.
 
-.. topic:: Schema
+**Medieval Rondeaus**
 
-    TODO
+.. figure:: ../../_static/img/context/poetical/14th-century-rondeaus.svg
+  :width: 80%
+  :alt: Diagram of 14th century rondeaus
+  :align: center
+
+.. topic:: Rondeau Schema (Medieval)
+
+    1. Couplet: A.B.a.A.a.b.A.B
+    2. Tercet: A.B.B.a.b.A.B.a.b.b.A.B.B
+    3. Quatrain: A.B.B.A.a.b.A.B.a.b.b.a.A.B.B.A
+    4. Cinquain: A.A.B.B.A.a.a.b.A.A.B.a.a.b.b.a.A.A.B.B.A
+
+    This schema can be rewritten to emphasize the *refrain R* within in form using the substitution notation,
+
+    1. Couplet: R.a.A.a.b.R | R = A.B 
+    2. Tercet: R.a.b.A.B.a.b.b.R | R = A.B.B
+    3. Quatrain: R.a.b.A.B.a.b.b.a.R | R = A.B.B.A 
+    4. Cinquain: R.a.a.b.A.A.B.a.a.b.b.a.R | R = A.A.B.B.A
+
+Note that a *Rondeau Couplet* is simply a :ref:`triolet`. 
+
+**Renaissance Rondeaus**
+
+The following diagrams shows the different schemata for the rondeau form duing the Renaissance. 
+
+.. figure:: ../../_static/img/context/poetical/renaissance-rondeau.svg
+  :width: 80%
+  :alt: Diagram of Renaissance rondeaus
+  :align: center
+
+.. topic:: Rondeau Schema (Renaissance)
+
+    1. Rondel: A.B.a.b + a.b.A.B + a.b.b.a.A
+    2. Rondeau Prime: R-a.b.b.a.a.b.R + a.b.b.a.R
+    3. Rondeau: R-a.a.b.b.a.b.R + a.a.b.R + a.a.b.b.a.R
 
 **References**
 
-None yet found.
+- `In Flanders Fields <https://www.poetryfoundation.org/poems/47380/in-flanders-fields>`_, John McCrae
+- `We Wear the Mask <https://www.poetryfoundation.org/poems/44203/we-wear-the-mask>`_, Paul Laurence Dunbar
 
 .. _sestina:
 
@@ -250,6 +304,21 @@ A single octet.
 
 - `Birds at Winter Nightfall <https://allpoetry.com/poem/14327645-Birds-At-Winter-Nightfall--Triolet--by-Thomas-Hardy>`_, Thomas Hardy
 - `How Great My Grief <https://allpoetry.com/How-Great-My-Grief>`_, Thomas Hardy
+
+.. _virelai:
+
+Virelai
+-------
+
+TODO 
+
+.. topic:: Schema
+    
+    TODO 
+
+**References**
+
+None yet found.
 
 .. _villanelle:
 

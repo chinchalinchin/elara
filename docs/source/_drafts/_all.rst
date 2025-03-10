@@ -139,6 +139,9 @@ Triolets
 
 .. _pantoums:
 
+Pantoums
+--------
+
 **LeAnna's Pantoum**
 
 | To begin is to make an end,
@@ -160,6 +163,33 @@ Triolets
 | But I ask you play this game:
 | Pretty pretend, comely with grin;
 | To end is to yet begin again.
+
+.. _rondeaus:
+
+Rondeaus
+--------
+
+**A Youthful Rondeau**
+
+| With pockets full of paper, youth has made him bold
+| Stories that they tell him, myths of men grown old,
+| Fall upon his entralled ears without even a receipt
+| And in forgotten failures, every choice will repeat
+| Until in devil dealings, for a meager ounce of gold, 
+| Soul exchanged in secret for a subtler, sweeter meat 
+|                           With pockets full of paper.
+|
+| No need for prophecy when street corners all foretold
+| Every end will make its end with the necessary cold 
+| To find himself outside alone, sleeping on the street 
+|                           With pockets full of paper.
+|
+| So he ends where he begins, from on the stoop extolled
+| The vital wages of his sin, of which virtues to uphold
+| But no one listened, cared not to hear of his conceits
+| So rambling, raving, soul-consumed, he bleat and bleat
+| Until from empty funeral his corpse in coffin rolled
+|                           With pockets full of paper.
 
 .. _poems:
 
@@ -474,6 +504,25 @@ Poems
 |
 | We made you in our image,
 | So the image could make us whole.
+
+**The Sickness** 
+
+| Sick with life, the dead arose;
+| It was quite a morbid sight:
+| To be rid this web of woes
+| Yet strung again in spite.
+|
+| Sooner would they have had
+| A plague of black
+| Than cast back to the mad
+| Spinning wheel of racks
+|
+| The great sacrifice
+| Of that figure Christ
+| Was not to die
+| upon the wooden cross
+| But in dying to be
+| raised from earthen loss.
 
 **Kingdoms**
 
