@@ -1,8 +1,9 @@
-.. _poeticus:
+Triolets
+========
 
-========
-Poeticus
-========
+.. topic:: Schema 
+
+    A.B.a.A.a.b.A.B
 
 .. toctree::
    :maxdepth: 2
@@ -10,3 +11,5 @@ Poeticus
 
    00
    01
+   02
+   03

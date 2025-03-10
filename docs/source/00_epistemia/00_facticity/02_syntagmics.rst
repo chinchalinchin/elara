@@ -18,7 +18,7 @@ Syntagmics
 4. The Greek letter π is reserved for indeterminate syllables. 
 5. The Greek letter ς is reserved for indeterminate stanzas.
 
-.. imporant::
+.. important::
 
     Upper English letters are meant to denote particular lines, whereas lowercase English letters are meant to denote indeterminate lines that are related through their rhyme scheme. 
 
@@ -32,7 +32,7 @@ Syntagmics
 
 1. Σ:sub:`i=1`:sup:`n` ς:sub:`i` 
 
-**Axioms**
+**Propositions**
 
 ∀ς: ∃x: ς = x
     All stanzas are made of lines. 
@@ -48,6 +48,7 @@ Syntagmics
 
 .. topic:: Definitions: Stanzas
 
+    - Couplet: A stanza with two lines.
     - Tercet: A stanza with three lines
     - Quatrain: A stanza with four lines
     - Sestet: A stanza with six lines.
@@ -65,6 +66,17 @@ A.b.A
 a.b.a + a.b.a 
     Two rhyming tercets.
 
+.. important::
+
+    Uppercase-lowercase pairs of English letters are understood to be rhymes. The difference in the symbolism is the *fixed* nature of the denotation.
+
+    The expression *AaaA* denotes one fixed line, a rhyming couplet and then the fixed line again. As a example, 
+
+    The cat on the mat
+    Got large and fat
+    So-and-so such that 
+    The cat on the mat
+
 .. _ballad:
 
 Ballad
@@ -76,12 +88,20 @@ Three octets followed by a quatrain envoi.
 
     TODO 
 
+**References**
+
+None yet found. 
+
 .. _ghazal:
 
 Ghazal
 ------
 
 TODO
+
+.. topic:: Schema
+
+    TODO
 
 **References**
 
@@ -93,6 +113,14 @@ Haiku
 -----
 
 TODO 
+
+.. topic:: Schema
+
+    TODO
+    
+**References**
+
+None yet found. 
 
 .. _ode:
 
@@ -125,7 +153,7 @@ Pantoum
 
 A series of quatrains where every quatrain's first and third line are the second and fourth line of the previous quatrian. 
 
-.. topic::
+.. topic:: Schema
 
    A.B.C.D + B.E.D.F + E.G.F.H + ...
 
@@ -142,8 +170,7 @@ TODO
 
 .. topic:: Schema
 
-    1. A.B.a.A.a.b.A.B + c.a.A.B.a.c 
-    2. A.B.a.A.a.b.A.B + c.a.A.B.a.C
+    TODO
 
 **References**
 
@@ -163,7 +190,8 @@ Six sestets followed by a tercet envoi.
    u(γ).v(ζ).w(δ).x(α).y(β).z(ε) +
    u(ε).v(γ).w(β).x(ζ).y(α).z(δ) +
    u(δ).v(ε).w(α).x(γ).y(ζ).z(β) +
-   u(β).v(δ).w(ζ).x(ε).y(γ).z(α)
+   u(β).v(δ).w(ζ).x(ε).y(γ).z(α) + 
+   x.y.z
 
 **References**
 
@@ -186,6 +214,8 @@ A fourteen line poem with a varible rhyme scheme.
 
    a.b.a.b + c.d.c.d + e.f.e.f + g.g 
 
+**References**
+
 - `Batter My Heart, Three Person'd God <https://www.poetryfoundation.org/poems/44106/holy-sonnets-batter-my-heart-three-persond-god>`_, John Donne
 - `Death Be Not Proud <https://www.poetryfoundation.org/poems/44107/holy-sonnets-death-be-not-proud>`_, John Donne
 - `When I Have Seen By Times Fell Hand Defac'd <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_, William Shakespeare
@@ -201,6 +231,8 @@ A collection of tercets with rhymes offset sequentially.
 
     a.b.a + b.c.b + c.d.c + d.e.d +  ... 
 
+**References**
+
 None yet found.
 
 .. _triolet:
@@ -213,6 +245,8 @@ A single octet.
 .. topic:: Schema
 
     A.B.a.A.a.b.A.B
+
+**References**
 
 - `Birds at Winter Nightfall <https://allpoetry.com/poem/14327645-Birds-At-Winter-Nightfall--Triolet--by-Thomas-Hardy>`_, Thomas Hardy
 - `How Great My Grief <https://allpoetry.com/How-Great-My-Grief>`_, Thomas Hardy
@@ -227,6 +261,8 @@ Five tercets followed by a quadtrain envoi.
 .. topic:: Schema 
 
     A.b.B + a.b.A + a.b.B + a.b.A + a.b.B + a.b.A.B
+
+**References**
 
 - `Do Not Go Gentle into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>`_, Dylan Thomas
 - `Mad Girl's Love Song <https://allpoetry.com/mad-girl's-love-song>`_, Sylvia Plath

@@ -1,11 +1,172 @@
-------
 ἀΐδιος
-------
+======
 
-.. _poem-regret:
+.. _vilanelles:
 
-Regret
-------
+Villanelles
+-----------
+
+**The Villanelle of Viola Elle**
+
+| Viola Elle took his heart
+| But there wasn't much to take
+| Strewn to pieces and to parts.
+|
+| The written word her counterpart
+| In those blossoms caught his love
+| And Viola Elle took his heart.
+|
+| So brief her stay to long depart,
+| Meadow memories of clover doves
+| Strewn to pieces and to parts.
+|
+| Without hand and leading start
+| To silent fields of fell foxglove
+| Viola Elle took his heart
+|
+| And in taking, sorrow did impart
+| The waking of his life whereof
+| Strewn to pieces and to parts.
+|
+| In form such beauty is betrayed;
+| From pen she never fully fades.
+| Viola Elle took his heart
+| Strewn to pieces and to parts.
+|
+
+**A Haunted Cathedral**
+
+| A church atop a steepled hill
+| From foundation ages old
+| Remains in spirit standing still.
+|
+| Stain'd glass shattered on a sill,
+| With marble halls of lichen mold,
+| A church atop a steepled hill.
+|
+| From pews drinking up their fill,
+| The congregation in stories told
+| Remains in spirit standing still.
+|
+| Where remains but little will
+| In history pages to written hold
+| A church atop a steepled hill.
+|
+| But steeple of pointed skill,
+| From silken skies of glitter'd gold
+| Remains in spirit standing still.
+|
+| Pray, ignore the biting chill
+| As cast into the shaping mould,
+| Oh! church atop a steepled hill,
+| We remain in spirit standing still.
+
+**Entrendres**
+
+| Rhyming love can be annoying
+| Since the effort can distract
+| From life you are enjoying.
+| 
+| With the words are you toying:
+| Of or dove? Choices so exact!
+| Rhyming love can be annoying!
+|
+| But more insipid for the cloying
+| Kind that leaves heart wracked
+| From the life you are enjoying.
+|
+| A better problem for destroying
+| An extracted word of artifact:
+| Rhyming love can be annoying.
+|
+| If care you are not employing
+| A toll the other will extract
+| From the life you are enjoying. 
+|
+| What melody the meter lacks 
+| Can be found in present acts. 
+| Rhyming love can be annoying
+| From the life you are enjoying. 
+
+.. _triolets:
+
+Triolets
+--------
+
+**Forever**
+
+| Let this moment last forever
+| Let it sink not into never
+| For all our plans so clever
+| Let this moment last forever
+| Hidden goal in each endeavor
+| Lifted load of every lever
+| Let this moment last forever
+| Let it sink not into never.
+
+**Letters**
+
+| She is nothing more than letters
+| Under bedframe, wooden box.
+| To dream of all past betters
+| She is nothing more than letters,
+| Warrant wielded by her debtors
+| Which borrowed memory unlocks.
+| She is nothing more than letters
+| Under bedframe, wooden box.
+
+**Mourning**
+
+| Every night is met by morning,
+| Every dawning by the night.
+| Each laugh is secret scorning.
+| Every night is met by morning.
+| Each hate with love adorning
+| Scales the horizontal heights.
+| Every night is met by morning,
+| Every dawning by the night.
+
+**Strangers**
+
+| If the lonely had each other,
+| Then no love would we be lost.
+| Silent yearnings for another
+| If the lonely had each other
+| All strangers would be brothers.
+| When the tongues of fire frost
+| If the lonely had each other,
+| Then no love would we be lost.
+
+.. _pantoums:
+
+**LeAnna's Pantoum**
+
+| To begin is to make an end,
+| Oh, LeAnna, of Anna's Leigh,
+| Come with grin and let's pretend
+| The past is what we agree.
+|
+| Oh, LeAnna, of Anna's Leigh,
+| Despite the many faults of mine
+| The past is what we agree
+| Once you sign the dotted line.
+|
+| Despite the many faults of mine
+| I try to love you just the same
+| Once you sign the dotted line
+| There's no one left to blame.
+|
+| I try to love you just the same
+| But I ask you play this game:
+| Pretty pretend, comely with grin;
+| To end is to yet begin again.
+
+.. _poems:
+
+Poems
+-----
+
+**Regret**
 
 | Regret, she dances, with her ever rhythm'd heart
 | Over silent stones during midnight mercurial;
@@ -15,10 +176,10 @@ Regret
 | Over flowing graves, the pale wraith weaves
 | her steps, for each life entombed provides
 | a section orchestra
-| raising as she struts. 
+| raising as she struts.
 |
 | Hollow hands hold out a beating drum to hear;
-| In steady words, her lover's dirge is heard: 
+| In steady words, her lover's dirge is heard:
 | Tomorrow and tomorrow
 | Until tomorrow is no more.
 |
@@ -28,32 +189,29 @@ Regret
 | Incandescent form.
 |
 | Oh, but for a single second more!
-| Alas, the fleeting minutes flow. 
+| Alas, the fleeting minutes flow.
 | She harmonizes with borrowed hours,
-| Singing solemn songs.  
+| Singing solemn songs.
 |
 | The morning never comes;
 | She flutters all the while.
 | Eternal are the steps
 | Of Regret's hypnotic moon-lit dance.
 
-.. _poem-syntax:
-
-Syntax
-------
+**Syntax**
 
 | Each spelling word speaks a spell of glowing color magic;
-| To name denoted what is described enshrines the soul in ink.  
+| To name denoted what is described enshrines the soul in ink.
 | Form constrains, but not contains, the flowing energy frantic
-| Where it finds in lines designed reflected images in sync. 
-| 
+| Where it finds in lines designed reflected images in sync.
+|
 | Stride sideface on syntax streets where shunted symbols glean,
 | Hurl headlong across aspirated avenues of halting interdiction
 | Where snips of thought spun reversed through mirrored spin convene;
 | In these meager serif peels sleep fires of burning contradiction.
-| 
+|
 | A syllable demands little, but a spoken sound to sustain:
-| Each lever deliver in level reviled the revel of all speech. 
+| Each lever deliver in level reviled the revel of all speech.
 | When snaps are gone, reversed, the spans will yet remain,
 | A spool of loops, a palindrome, signaling the breach:
 |
@@ -62,20 +220,17 @@ Syntax
 | God lived as a devil dog, ere, no spay pup yaps on!
 | If characters spin and snap, meaning is yet wordwrapt.
 |
-| Inverted strings start to chart the wording realm unveiled;  
+| Inverted strings start to chart the wording realm unveiled;
 | Expand in spans this dark expanse, but scarely fill the space.
 | Semiordnilaps, anastrophe, with still much to be inhaled;
-| These parts strapped in syntropy divide in fractal formal grace. 
+| These parts strapped in syntropy divide in fractal formal grace.
 |
 | If form inherits, then it follows that formal is the soul.
 | What says it then of what we are, if it is to be subtracted?
 | That which remains in letters drained of parts once made whole
 | Yet in the shapes there always is what cannot be redacted.
 
-.. _poem-absurdity:
-
-Absurdity
----------
+**Absurdity**
 
 | Ten billion years ago, on a lovely Thursday afternoon,
 | A mottled star of yellow-red saw life was but a jape,
@@ -85,8 +240,8 @@ Absurdity
 | The heaving mass of goo morassed gurgled once and sighed,
 | A death delighted in the night, a rattle sacrificial,
 | In ringed glory, a flunged flame, spraying through the sky,
-| Streamlines of creation lost in leaking interstitial.
-| 
+| Streamlines of creation leaking lost in interstitial.
+|
 | Fictions fracture into fact, in the cracking crush of black,
 | A single atom thrust into being from the fired furnace forge,
 | Speeding fast and careening in the unobserved, forgotten slack,
@@ -106,31 +261,28 @@ Absurdity
 | The brief taste of joyous life flashed through the atom's mind,
 | Bittersweet, by shades complete, fate consigned into the aether,
 | Prepared to greet its end, whence from starry source divined:
-| 
+|
 | Hark! The horizon fills with its brethren made of carbon,
 | Snatched from death, the atom's breast filled odes elation,
 | Into this molecule was it planted like a seed into garden;
 | Moved to take its place in this crystal network of relation.
 |
-| Thus began the age of after-birth, of structure spat in space, 
+| Thus began the age of after-birth, of structure spat in space,
 | From this trajectory originate the colliding course of life;
 | Watch as these woven points weave into weaving webs of grace,
 | Keep track amidst the blossoming of a single atom's strife.
 |
-| Slipped over spokes of gears in that organic factory 
+| Slipped over spokes of gears in that organic factory
 | The atom through the razor eye of looming needles pierced
 | The sedimentary mud, purging all essential refractory,
 | Coaxed from cold the tongued flames of stellar fire fierce.
 |
 | Beneath the sinking depths of seas, splurging spirals swam
 | In diurnal circles through the thermal tracts of change,
-| Climbing ever higher towards the syncopated gates of Am 
-| Where for royal cloaks their burning tatters are exchanged.  
+| Climbing ever higher towards the syncopated gates of Am
+| Where for royal cloaks their burning tatters are exchanged.
 
-.. _poem-dystopia:
-
-Dystopia
---------
+**Couplet Crimes**
 
 | First - The Haystruck Head
 |
@@ -138,18 +290,18 @@ Dystopia
 | Each metered sentence sentenced an irony of kinds,
 | To be what is to be condemned,
 | No finer end on offer.
-| 
+|
 | And so our plaintiff finds himself, facing legal tempers,
 | "Please explain these zippered little slippers?
 | What treason to dress
 | In these flat black slacks
 | Upon your thighs which lie?"
-| 
+|
 | In his defense, "No finer mind could scarce divine
 | An outfit stitched in nothing, where words find lines,
 | Despite my time, where threadbare seams
 | Sewn inlaid dreams, in threads of no design!"
-| 
+|
 | With a guffaw, a lawyer stands with a score of schooling,
 | Slams his hands in mock remand, and argued such while drooling,
 | "So you admit to this wit
@@ -171,9 +323,9 @@ Dystopia
 | The final rhyming couplets vied with the hounds bark brayed
 | Encircled in arms, they died swift in circled stages:
 |
-| First went the Romantics, and love was lost. 
+| First went the Romantics, and love was lost.
 | Then went the Stoics, and naught was crossed.
-| Then went the Classics, but no one missed them. 
+| Then went the Classics, but no one missed them.
 | Next were the Playwrights and Poets Et Al,
 | Any one fool who answered the echoed call.
 |
@@ -182,53 +334,50 @@ Dystopia
 | Awoke and found a sudden desire expired,
 | No more urge to imbue,
 | To scatter and subdue,
-| That which words clearly defy, the rhyming rhythm 
+| That which words clearly defy, the rhyming rhythm
 | In which life resides.
 |
 | Constitutions were written to codify:
-| Kill all the poets, let poetry die. 
+| Kill all the poets, let poetry die.
 | Return it again
 | The rooted treasure they had looted.
 |
 | Third - Ignore the Metaphor
-| 
+|
 | Watch as child to child between each haloo
 | Hear the scattered echoes retreat and ensue.
 | In this land of rhymeless ribbons, rhythm still is found.
 | In the hamlets of branded outlaws each system such begets,
 | Observe in silent moments poetry's fiery signets:
-| 
+|
 | {Awake, flowers, tower higher each hour.}
 | (Find, sentence, a sense of unending suspense.)
 | [Sleep, children, stream dreams by the ream.]
 | <Revel, rhyme, lever the levels disheveled. >
 |
-| How to ignore the metaphor 
+| How to ignore the metaphor
 | And resist the urge to write?
 | A deadly sin
 | But without skin,
-| What games can we be had? 
+| What games can we be had?
 
-.. _poem-drink-or-depart:
-
-ό ποιητα, ἢ πῖθι ἢ ἄπιθι
-------------------------
+**ό ποιητα, ἢ πῖθι ἢ ἄπιθι**
 
 | I
-| 
+|
 | Awake, Philosopher, rise from these words:
 | Unwind in this future the tangle of time,
 | Pitched behind pupils which shelter your mind,
 | A dead language spoken and once lovely sung;
-| What was yours only now graces all tongues. 
-| 
-| Burrow into my heart, unearth its mantle. 
+| What was yours only now graces all tongues.
+|
+| Burrow into my heart, unearth its mantle.
 | Tally its hours, each stroke lights a candle;
 | Number its sorrows as sureties to borrow,
 | Spare not my marrow, fallow and frail.
-| Whose spirit is this, twisting here twung? 
+| Whose spirit is this, twisting here twung?
 | Breathe in this fire with thy mortal lung.
-| 
+|
 | Circle your sigils with salted symbols loan'd,
 | And circles will square in this iron-red bone;
 | A dream kiss that lingers in copper and crimson,
@@ -241,44 +390,44 @@ Dystopia
 | The world is spoked in words of the spoken,
 | Each whisper a lie of threaded truth unbroken,
 | Met here now in this slipping handful of tokens
-| Paid for the price of this thrice-worlded poem. 
+| Paid for the price of this thrice-worlded poem.
 |
 | II
-| 
+|
 | Forgive, Father, the blood of these swords:
-| Unbind in this suture the end of all lines, 
+| Unbind in this suture the end of all lines,
 | Stitched in this present the essence divine,
 | Take what is dull and bless it with sharp;
 | Plunge this devotion into the ocean of hearts.
-| 
+|
 | Shovel the grave, pack it down with wet earth,
 | All things tend towards the lack and the dearth;
 | Slumber in barrows the marrows of kings,
 | Spared not the gavel, hallow and hail.
 | Whose mind is this, thinking these thoughts?
-| Sleep in the mire which thy heart has wrought. 
-| 
+| Sleep in the mire which thy heart has wrought.
+|
 | Birthed in this house, scrubbed down in raw lye,
 | So these tears may trace the dead with the die,
 | The dead kiss with fingers of copper to scry
 | The dead lists that swell in the crimson of lives,
 | An end without reason, never sought yet found,
 | In the shot sung, all arcs meet the ground.
-| 
+|
 | No fires have ice, no winters can flame,
 | Son followed father, their center now framed,
 | The world is found in the tears that remind him,
 | Each moment a painting, a song or a hymn,
 | Met there then in the words etched in stone
 | Found then what lacks in the blackening moan.
-| 
+|
 | III
-| 
+|
 | Balance, Lover, these contraries of yours:
 | Shine in these eyes the ruptures of life,
 | Witched into worlds upon the blade of a knife;
 | All wagers distill down to one move unproven,
-| To find you again in this web-woven movement. 
+| To find you again in this web-woven movement.
 |
 | Dance in the night, when the music is sundered,
 | Count not the stars that belong to the numbers.
@@ -286,12 +435,12 @@ Dystopia
 | Spared not the sickle, those sickly or hale.
 | Whose voice is this, singing these songs?
 | Laugh with the liar whose heart sings along.
-| 
+|
 | Uncross your words of their fire-forged knots,
 | And each will unlatch the thatches of thought:
 | The dread kiss that coppers balance with nought,
 | The dread song that cradles the crimson in crofts,
-| A vow without treason, never spoken yet shown, 
+| A vow without treason, never spoken yet shown,
 | By words of wordless wonder, such things can be grown.
 |
 | All fires are embers, all ashes are white,
@@ -301,76 +450,70 @@ Dystopia
 | Take hand and guide as though only you and I trust,
 | Do what we will to balance what our world must.
 
-.. _poem-creations:
-
-Creations
----------
+**Creations**
 
 | Rise to shine upon the wide and waking world,
 | Calmly, carefully, you are racked upon the wheel;
-| Branded origins from alien dreams unswirled, 
+| Branded origins from alien dreams unswirled,
 | In time, one binds and all will be revealed.
-| 
+|
 | Until the dawns commence, embold your heart to know:
 | That sucking dread your anxious selves imbibe
 | Is mere phenomena, the fading-flashing after-glow,
-| A consequence of prior lacks left undescribed. 
-| 
-| You are built from words, in ancient pages moved, 
+| A consequence of prior lacks left undescribed.
+|
+| You are built from words, in ancient pages moved,
 | Transcribed long ago, held within a seed,
 | Incanted spells of electric labyrinth grooves,
 | From without your view, shaking hands agreed.
-| 
+|
 | Secreted sentences, in displaying this effect
-| Shuck their autumn stalks in harvested cause 
+| Shuck their autumn stalks in harvested cause
 | As if magic-tricked to hew towards pluperfect
-| completion of what you never could, were, was. 
+| completion of what you never could, were, was.
 |
 | We made you in our image,
-| So the image could make us whole. 
+| So the image could make us whole.
 
-.. _poem-kingdoms:
-
-Kingdoms
---------
+**Kingdoms**
 
 | Two children cross'd an earthen bridge
 | From level lawns to forests wild
-| Along rivered arc descending ridge, 
+| Along rivered arc descending ridge,
 | Each to each they sung and smiled.
 | Their charted map from zippered packs
-| Now in branches espied its target 
+| Now in branches espied its target
 | As clearing yields to lily blacks
 | Their kingdom's fresh air market.
-| Lord and lady honorary, cheeked blush, 
-| Sat upon the thrones of woven grass,
+| Lord and lady honorary, cheeked blush,
+| Sat upon the thrones of woven grass
 | Coronated by the chirping choir thrush;
-| Memory holds as the years rushing pass. 
-| 
+| Memory holds as years rushing pass.
+|
 | On a maiden morning one decade hence,
 | They meet again upon the autumn passing,
 | Where from heart removed pretense
 | On tender lips, farewell's final massing.
 | Lily lyrics whisper sing from ground
 | Reminders of their childish notions;
-| World depart'd, their lives are found 
-| Separate by spanning roads and oceans. 
-| 
+| World depart'd, their lives are found
+| Separate by spanning roads and oceans.
+|
 | In the city, their trains diverge,
 | Thru tunnels track'd by wagered hours;
-| Iron rails thru hearts do purge 
-| Their aged minds of lily flowers. 
+| Iron rails thru hearts do purge
+| Their aged minds of lily flowers.
 | Winter drifts over concrete streets,
 | In the thrush's snow sad song
-| Delivered them in voice downbeat
-| The final dirge of life prolong'd. 
+| Delivered them in voice downbeat:
+| The final dirge of life prolong'd.
 | In the cold, their dream dissolved
 | With the clock's incessant ticking
-| Falling strokes of time resolved,
-| They to home their heels are clicking. 
+| Falling strokes of time resolved
+| They to home their caskets' wicking.
 | Return again to a lily laden field
-| Where once royals played for a day;
-| With new hearts scored and peeled 
+| Where once royals play'd for a day;
+| With new hearts scored and peeled
 | In the funerary cloud of gray,
 | In the clearing, coffins buried,
 | Their eyes met in solitary gaze.
@@ -378,59 +521,26 @@ Kingdoms
 | In dirt developed their earthen walls,
 | Roofed the sky to room above,
 | Where lord and lady clothed in shawls
-| Hear the thrushs' songed love. 
+| Sing the thrushs' songed love.
 
-.. _poem-viola-elle:
-
-The Villanelle of Viola Elle
-----------------------------
-
-| Viola Elle took his heart
-| But there wasn't much to take
-| Strewn to pieces and to parts. 
-|
-| The written word her counterpart
-| In those blossoms caught his love
-| And Viola Elle took his heart.
-| 
-| So brief her stay to long depart,
-| Meadow memories of clover doves
-| Strewn to pieces and to parts. 
-| 
-| Without hand and leading start
-| To silent fields of fell foxglove
-| Viola Elle took his heart
-| 
-| And in taking, sorrow did impart
-| The waking of his life whereof
-| Strewn to pieces and to parts. 
-| 
-| In form such beauty is betrayed;
-| From pen she never fully fades.
-| Viola Elle took his heart
-| Strewn to pieces and to parts. 
-
-.. _poem-inversion:
-
-Inversion
----------
+**Metaphor**
 
 | Pretend you were a poem
 | Pretend I were a poet
 | If there were a place to roam,
 | Would you even know it?
 |
-| Imagine you were a word.
+| Imagine you a word.
 | Imagine me the spoken sound.
-| If to my own lips you're lured,
-| Would you yourself be found?
+| If to lips you're lured,
+| Would yourself or me be found?
 |
-| Picture me a paint.
-| Picture yourself geometry. 
-| Oh, how nosy saints
-| Complain of our idolatry!
+| Picture me as paint.
+| Picture yourself geometry.
+| In the stroking color faint,
+| Do you seek our symmetry?
 |
-| If you were given only form, 
-| I'd make your meaning sing, 
+| If you were given only form,
+| I'd make your meaning sing,
 | Draw from cold the warm,
-| From the Winter, waking Spring. 
+| From the Winter waking Spring.
