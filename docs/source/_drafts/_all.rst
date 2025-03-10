@@ -1,5 +1,5 @@
-ἀΐδιος
-======
+μελαγχολία
+==========
 
 .. _vilanelles:
 
@@ -45,10 +45,10 @@ Villanelles
 | A church atop a steepled hill.
 |
 | From pews drinking up their fill,
-| The congregation in stories told
+| The congregation, in stories told,
 | Remains in spirit standing still.
 |
-| Where remains but little will
+| What there remains but little will
 | In history pages to written hold
 | A church atop a steepled hill.
 |
@@ -379,17 +379,17 @@ Poems
 | In this land of rhymeless ribbons, rhythm still is found.
 | In the hamlets of branded outlaws each system such begets,
 | Observe in silent moments poetry's fiery signets:
+| 
+| (Awake, flowers, tower higher every hour.
+| Find, sentence, a sense of unending suspense.
+| Sleep, children, with dreams of subtle schemes.
+| Revel, rhymes, you are more than merely vessels.)
 |
-| {Awake, flowers, tower higher each hour.}
-| (Find, sentence, a sense of unending suspense.)
-| [Sleep, children, stream dreams by the ream.]
-| <Revel, rhyme, lever the levels disheveled. >
-|
-| How to ignore the metaphor
+| How to ignore the metaphor 
 | And resist the urge to write?
 | A deadly sin
 | But without skin,
-| What games can we be had?
+| What games can we be had? 
 
 **ό ποιητα, ἢ πῖθι ἢ ἄπιθι**
 
@@ -522,7 +522,31 @@ Poems
 | Was not to die
 | upon the wooden cross
 | But in dying to be
-| raised from earthen loss.
+| raised from earthly loss.
+
+**The Three Annas of Pygmalion**
+
+| Sweet Susanna sees sculptures standing still,
+| Lovely looks let loose like luted lilting ladies,
+| Forgotten faces formed for flocking friends.
+| Hardly harried, her hearts hinges here
+| Towards the towering testament there.
+| 
+| Dreary Diana does drammatically declare:
+| Ancient ages ago, all aesthetes acceded
+| Bedrock beauty broken before brimstone
+| Cannot contain currents coursing clearly
+| Where water wanes with wizened weary!
+|
+| Hale Hannah, how her head hurts hearing her!
+| She says: Stop such so simplicity survives!
+| Tersely tossed to thrash the thinking,
+| Everything ere enshrined echoes everything!
+|
+| I, impressed, implored impresario in inquisitive ink
+| To trade the trick to tack together three
+| Annas' absolute and alluring allegory,
+| Sculptures singing scripts so scrupulously.
 
 **An Induction**
 
