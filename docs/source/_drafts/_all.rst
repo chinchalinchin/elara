@@ -162,7 +162,7 @@ Pantoums
 | I try to love you just the same
 | But I ask you play this game:
 | Pretty pretend, comely with grin;
-| To end is to yet begin again.
+| The end is to yet begin again.
 
 .. _rondeaus:
 
