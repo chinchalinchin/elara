@@ -29,13 +29,14 @@ Syntagmics
 2. ♭x: A shortened line.  
 3. x.y : Successive lines.
 4. x-y: Concatenated lines.
-5. x + y : Successive stanzas.
-6. x∝λ : A line containing a word. 
-7. x(λ) : A line ending in a word.  
-8. (λ)x: A line beginning with a word. 
-9. x[Π]: A line ending in a syllable.
-10. [Π]x: A line starting with a syllable
-11. x.y.x | x = z: Substitute z for x in the expression "x.y.x"
+5. x ∨ y: A line that is either x or y.
+6. x + y : Successive stanzas.
+7. x∝λ : A line containing a word. 
+8. x(λ) : A line ending in a word.  
+9. (λ)x: A line beginning with a word. 
+10. x[Π]: A line ending in a syllable.
+11. [Π]x: A line starting with a syllable
+12. x.y.x | x = z: Substitute z for x in the expression "x.y.x"
 
 **Operations**
 
@@ -82,10 +83,12 @@ a.b.a + a.b.a
 
     The expression *AaaA* denotes one fixed line, a rhyming couplet and then the fixed line again. As a example, 
 
-    The cat on the mat
-    Got large and fat
-    So-and-so such that 
-    The cat on the mat
+        The cat on the mat
+        Got large and fat
+        So-and-so such that 
+        The cat on the mat
+
+The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. 
 
 .. _ballad:
 
@@ -94,13 +97,20 @@ Ballad
 
 Three octets followed by a quatrain envoi.
 
-.. topic:: Schema 
+.. topic:: Schema (Traditional)
 
-    TODO 
+    Σ :sub:`1`:sup:`n` a.b.a.b ∨ a.b.c.b
+
+.. topic:: Schema (Chant Royal)
+
+    Σ :sub:`1`:sup:`5` a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E ∨ c.c.d.d.e.d.E
 
 **References**
 
-None yet found.
+- `La Belle Dame sans Merci <https://www.poetryfoundation.org/poems/44475/la-belle-dame-sans-merci-a-ballad>`_, John Keats
+- `Lord Thomas and Annet <https://sacred-texts.com/neu/eng/child/ch073.htm>`_, Old English Ballad
+- `Ballad of the Goodly Fere <https://allpoetry.com/Ballad-Of-The-Goodly-Fere>`_, Ezra Pound
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <https://archive.org/details/bim_eighteenth-century_a-tragical-ballad-of-t_1795>`_, Frances James Child
 
 .. _ballade: 
 
@@ -209,10 +219,10 @@ The following diagram shows the different schemata for the rondeau form in 14th 
 
     This schema can be rewritten to emphasize the *refrain R* within in form using the substitution notation,
 
-    1. Couplet: R.a.A.a.b.R | R = A.B 
-    2. Tercet: R.a.b.A.B.a.b.b.R | R = A.B.B
-    3. Quatrain: R.a.b.A.B.a.b.b.a.R | R = A.B.B.A 
-    4. Cinquain: R.a.a.b.A.A.B.a.a.b.b.a.R | R = A.A.B.B.A
+    5. Couplet: R.a.A.a.b.R | R = A.B 
+    6. Tercet: R.a.b.A.B.a.b.b.R | R = A.B.B
+    7. Quatrain: R.a.b.A.B.a.b.b.a.R | R = A.B.B.A 
+    8. Cinquain: R.a.a.b.A.A.B.a.a.b.b.a.R | R = A.A.B.B.A
 
 Note that a *Rondeau Couplet* is simply a :ref:`triolet`. 
 

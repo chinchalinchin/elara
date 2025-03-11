@@ -128,6 +128,7 @@ poetryfoundation.org
 - `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_
 - `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_
 - `The Waking <https://www.poetryfoundation.org/poems/43333/the-waking-56d2220f25315>`_
+- `The Windhover <https://www.poetryfoundation.org/poems/44402/the-windhover>`_
 - `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
 - `Tonight <https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7>`
 
