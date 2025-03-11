@@ -191,6 +191,92 @@ Rondeaus
 | Until from empty funeral his corpse in coffin rolled
 |                           With pockets full of paper.
 
+.. _ballads:
+
+Ballads
+-------
+
+**Ballad of the Venus Flytrap**
+
+| In an inn of fishermen and bawdy youth,
+| Wise old Mercutio spins a lurid tale.
+| As spirits gather in the growing crowd,
+| Hear of a goddess seaborn in a gale.
+|
+| "Walk past the pearly gates of Eden,
+| To the mount which feeds her bowers
+| Where on the slopes of sovran Chaos 
+| Pricked with poison petal flowers.
+|
+| "Amid the myrtle, she lays her ruby locks.
+| Pilgrim audience flocks to gather round.
+| One by one they kneel beneath her cloak
+| To lay their gifts on the fêting ground. 
+| 
+| "From the courts of foreign suitors 
+| and the harvest fields of swains,
+| All come to tame her beauty,
+| To ask her hand in vain."
+|
+| At this, a stripling voice then wavers,
+| Declares with Bacchanalian glee,
+| "If such beauty can be found,
+| Then I shall take it all for me."
+| 
+| Old Mercutio pauses, tapping with his cane,
+| Recalling all who came before
+| Striking for the godly gloaming woods
+| Now never heard from evermore.
+|
+| "Boy, be careful with your fingers
+| When seeking out her shoulder lace
+| Lest they brush upon the bosom
+| Pressed to bodice in sweet embrace.
+| 
+| Though she look to us as human
+| As the milkman's maiden daughter
+| We are to her the fatted calf
+| Made for nothing but the slaughter."
+| 
+| But warnings calm not the thoughts
+| Now humming with medleys of the morrow;
+| Once charmed, a goddess then relents
+| To draw from him his mortal sorrows.
+|
+| In the morning, leaving hamlet by the sea
+| Eastward where the somber garden lay
+| The boy took to the floral tracts of idol
+| And plucked from roadside for her a bouquet: 
+|
+| First the dainty rose to fill his hands 
+| For he knew that, in the shades of red,
+| The gods have hidden Cupid's passion 
+| For those lovestruck by hand to spread.
+|
+| Deeper, far afield and hidden in the valley,
+| The puffed bud of myrtle white 
+| With tendril tears that whisper to the boy
+| On the winded voice so slight:
+|
+| An agonizing lullaby of rending grief
+| Which only gods and caged bird can sing 
+| Tender-throated sung by meadow maid
+| To eldritch vines around her feet in rings.
+|  
+| From the distance, the boy in secret spies
+| Moonwater sprinkled by a maid onto roots
+| Of a plant leaf'd by hungry litle mouths
+| As she sings and harvests nectarine fruits. 
+| 
+| (... in progress ...)
+|
+| "It mirrors us in thickets, don't you see?
+| Though fashioned differently in design
+| It hungers for the stuff of life
+| Just like your heart or mine."
+| 
+| (... in progress ...)
+
 .. _poems:
 
 Poems
@@ -304,7 +390,7 @@ Poems
 |
 | Slipped over spokes of gears in that organic factory
 | The atom through the razor eye of looming needles pierced
-| The sedimentary mud, purging all essential refractory,
+| The sedimentary mud, purging all essence refractory,
 | Coaxed from cold the tongued flames of stellar fire fierce.
 |
 | Beneath the sinking depths of seas, splurging spirals swam
