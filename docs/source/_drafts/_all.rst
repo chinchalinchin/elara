@@ -211,7 +211,7 @@ Ballads
 | "Amid the myrtle, she lays her ruby locks.
 | Pilgrim audience flocks to gather round.
 | One by one they kneel beneath her cloak
-| To lay their gifts on the fêting ground. 
+| To lay their gifts on fêted ground. 
 | 
 | "From the courts of foreign suitors 
 | and the harvest fields of swains,
@@ -254,19 +254,29 @@ Ballads
 | For those lovestruck by hand to spread.
 |
 | Deeper, far afield and hidden in the valley,
-| The puffed bud of myrtle white 
+| Of myrtle, puffed in bud of white
 | With tendril tears that whisper to the boy
 | On the winded voice so slight:
 |
-| An agonizing lullaby of rending grief
-| Which only gods and caged bird can sing 
+| A sober lullaby of silent spoken grief
+| Which only god and caged bird can sing 
 | Tender-throated sung by meadow maid
 | To eldritch vines around her feet in rings.
 |  
 | From the distance, the boy in secret spies
-| Moonwater sprinkled by a maid onto roots
-| Of a plant leaf'd by hungry litle mouths
-| As she sings and harvests nectarine fruits. 
+| Moonwater sprinkled by spout unto roots
+| Of a plant leaf'd by rows and rows of teeth
+| As she melodic harvests its nectarean fruits. 
+| 
+| Awestruck, the boy drinks deep liquor beauty
+| Swirl'd like curls of car'mel pour of brandy
+| Wiped from mouth his thoughts of goddess Venus
+| As she tastes the sweet Earth-nectar bandied. 
+|
+| Bold from a lack of many learned years
+| He stands and calls out to meadow maid, 
+| "Hark! Why this sad song are you singing
+| When beauty's gifts around you are arrayed?"
 | 
 | (... in progress ...)
 |
@@ -276,6 +286,7 @@ Ballads
 | Just like your heart or mine."
 | 
 | (... in progress ...)
+
 
 .. _poems:
 
