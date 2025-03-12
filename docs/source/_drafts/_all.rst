@@ -107,11 +107,11 @@ Triolets
 **Letters**
 
 | She is nothing more than letters
-| Under bedframe, wooden box.
-| To dream of all past betters
-| She is nothing more than letters,
+| Under bedframe, wooden box. 
+| In her prison locked by fetters,
+| She is nothing more than letters.
 | Warrant wielded by her debtors
-| Which borrowed memory unlocks.
+| Which vault of memory locks.
 | She is nothing more than letters
 | Under bedframe, wooden box.
 
@@ -164,6 +164,28 @@ Pantoums
 | Pretty pretend, comely with grin;
 | The end is to yet begin again.
 
+**Pantoum or Canon**
+
+| Bach is dead
+| So they said 
+| Canons fired
+| To ended day 
+|
+| So they said
+| War was here 
+| To ended day 
+| We die there
+|
+| War was here
+| In your home 
+| We die there
+| In our hands 
+|
+| In your home
+| Piano played 
+| Canons fired 
+| Bach is dead 
+
 .. _rondeaus:
 
 Rondeaus
@@ -206,7 +228,7 @@ Ballads
 | "Walk past the pearly gates of Eden,
 | To the mount which feeds her bowers
 | Where on the slopes of sovran Chaos 
-| Pricked with poison petal flowers.
+| Pricked with poison-petaled flowers.
 |
 | "Amid the myrtle, she lays her ruby locks.
 | Pilgrim audience flocks to gather round.
@@ -241,12 +263,12 @@ Ballads
 | But warnings calm not the thoughts
 | Now humming with medleys of the morrow;
 | Once charmed, a goddess then relents
-| To draw from him his mortal sorrows.
+| To draw from him his mortal sorrow.
 |
 | In the morning, leaving hamlet by the sea
 | Eastward where the somber garden lay
 | The boy took to the floral tracts of idol
-| And plucked from roadside for her a bouquet: 
+| And plucked from roadside a bouquet: 
 |
 | First the dainty rose to fill his hands 
 | For he knew that, in the shades of red,
@@ -254,13 +276,13 @@ Ballads
 | For those lovestruck by hand to spread.
 |
 | Deeper, far afield and hidden in the valley,
-| Of myrtle, puffed in bud of white
+| Myrtle puffed in bud of white
 | With tendril tears that whisper to the boy
 | On the winded voice so slight:
 |
 | A sober lullaby of silent spoken grief
 | Which only god and caged bird can sing 
-| Tender-throated sung by meadow maid
+| Tender-throated, sung by meadow maid
 | To eldritch vines around her feet in rings.
 |  
 | From the distance, the boy in secret spies
@@ -271,12 +293,22 @@ Ballads
 | Awestruck, the boy drinks deep liquor beauty
 | Swirl'd like curls of car'mel pour of brandy
 | Wiped from mouth his thoughts of goddess Venus
-| As she tastes the sweet Earth-nectar bandied. 
+| As she tastes the sweet bud-nectar bandied. 
 |
 | Bold from a lack of many learned years
 | He stands and calls out to meadow maid, 
 | "Hark! Why this sad song are you singing
 | When beauty's gifts around you are arrayed?"
+| 
+| Spun from task, she gasps, into hiding hollers,
+| "What creeping eye from rosed rows 
+| Wanders thru these dream dark fields of yore 
+| Now with questions standing grows?" 
+|
+| With rose in hand, now knee to ground,
+| He speaks with eyes lowered from her gaze,
+| "To say, madam, fate delivered me to you
+| Then no lie from my lips betrayed." 
 | 
 | (... in progress ...)
 |
@@ -286,7 +318,6 @@ Ballads
 | Just like your heart or mine."
 | 
 | (... in progress ...)
-
 
 .. _poems:
 
