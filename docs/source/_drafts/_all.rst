@@ -6,7 +6,7 @@
 Villanelles
 -----------
 
-**The Villanelle of Viola Elle**
+**I: The Villanelle of Viola Elle**
 
 | Viola Elle took his heart
 | But there wasn't much to take
@@ -34,7 +34,7 @@ Villanelles
 | Strewn to pieces and to parts.
 |
 
-**A Haunted Cathedral**
+**II: A Haunted Cathedral**
 
 | A church atop a steepled hill
 | From foundation ages old
@@ -61,7 +61,7 @@ Villanelles
 | Oh! church atop a steepled hill,
 | We remain in spirit standing still.
 
-**Entrendres**
+**III: Entrendres**
 
 | Rhyming love can be annoying
 | Since the effort can distract
@@ -93,7 +93,7 @@ Villanelles
 Triolets
 --------
 
-**Forever**
+**I: Forever**
 
 | Let this moment last forever
 | Let it sink not into never
@@ -104,7 +104,7 @@ Triolets
 | Let this moment last forever
 | Let it sink not into never.
 
-**Letters**
+**II: Letters**
 
 | She is nothing more than letters
 | Under bedframe, wooden box. 
@@ -115,7 +115,7 @@ Triolets
 | She is nothing more than letters
 | Under bedframe, wooden box.
 
-**Mourning**
+**III: Mourning**
 
 | Every night is met by morning,
 | Every dawning by the night.
@@ -126,7 +126,7 @@ Triolets
 | Every night is met by morning,
 | Every dawning by the night.
 
-**Strangers**
+**IV: Strangers**
 
 | If the lonely had each other,
 | Then no love would we be lost.
@@ -142,7 +142,7 @@ Triolets
 Pantoums
 --------
 
-**LeAnna's Pantoum**
+**I: LeAnna's Pantoum**
 
 | To begin is to make an end,
 | Oh, LeAnna, of Anna's Leigh,
@@ -164,27 +164,27 @@ Pantoums
 | Pretty pretend, comely with grin;
 | The end is to yet begin again.
 
-**Pantoum or Canon**
+**II: The Maze**
 
-| Bach is dead
-| So they said 
-| Canons fired
-| To ended day 
+| coming back to where we started
+| things don't look the same 
+| from unending maze departed
+| returned to no acclaim 
+| 
+| thing don't look the same 
+| when nothing has a name
+| returned to no acclaim
+| in home of what became
 |
-| So they said
-| War was here 
-| To ended day 
-| We die there
-|
-| War was here
-| In your home 
-| We die there
-| In our hands 
-|
-| In your home
-| Piano played 
-| Canons fired 
-| Bach is dead 
+| when nothing has a name 
+| then we are free to be 
+| in home of what became
+| of our union and decree
+| 
+| then we are free to be
+| and so in being, to flee
+| from unending maze departed
+| coming back to where we started
 
 .. _rondeaus:
 
@@ -220,12 +220,13 @@ Ballads
 
 **Ballad of the Venus Flytrap**
 
+
 | In an inn of fishermen and bawdy youth,
 | Wise old Mercutio spins a lurid tale.
 | As spirits gather in the growing crowd,
 | Hear of a goddess seaborn in a gale.
 |
-| "Walk past the pearly gates of Eden,
+| "Walk past the garden gates of Eden,
 | To the mount which feeds her bowers
 | Where on the slopes of sovran Chaos 
 | Pricked with poison-petaled flowers.
@@ -248,7 +249,7 @@ Ballads
 | Old Mercutio pauses, tapping with his cane,
 | Recalling all who came before
 | Striking for the godly gloaming woods
-| Now never heard from evermore.
+| Never heard from now evermore.
 |
 | "Boy, be careful with your fingers
 | When seeking out her shoulder lace
@@ -286,29 +287,46 @@ Ballads
 | To eldritch vines around her feet in rings.
 |  
 | From the distance, the boy in secret spies
-| Moonwater sprinkled by spout unto roots
+| Moonwater sprinkled by spout to root
 | Of a plant leaf'd by rows and rows of teeth
-| As she melodic harvests its nectarean fruits. 
+| As she melodic tends its half-rotten fruit. 
 | 
 | Awestruck, the boy drinks deep liquor beauty
 | Swirl'd like curls of car'mel pour of brandy
 | Wiped from mouth his thoughts of goddess Venus
-| As she tastes the sweet bud-nectar bandied. 
+| Replac'd with new tastes of his fancy. 
 |
 | Bold from a lack of many learned years
-| He stands and calls out to meadow maid, 
+| He stands and calls out to the meadow maid, 
 | "Hark! Why this sad song are you singing
 | When beauty's gifts around you are arrayed?"
 | 
 | Spun from task, she gasps, into hiding hollers,
-| "What creeping eye from rosed rows 
-| Wanders thru these dream dark fields of yore 
+| "What creeping spy from rosed rows 
+| Wanders thru dream dark fields of yore 
 | Now with questions standing grows?" 
 |
+| In reply, he descends in steps by shades
+| Cast from the fast-fading clove-red sky,
+| "Excuse my offense, oh, meadow maid, 
+| But in passing, you caught my eye. 
+|
+| "I admit there is no rarer sight
+| Stumbling upon a dame as fair as thee 
+| Who attends with wat'ring can and song 
+| A plant plainly made of teeth.
+|
+| "Closer as I draw, queerer still I feel
+| What manner of thing can this it be 
+| Stalked with fingers brown-Earth-green
+| Yet so different by multiplied degree?"
+|
+| (... in progress ...)
+| 
 | With rose in hand, now knee to ground,
 | He speaks with eyes lowered from her gaze,
 | "To say, madam, fate delivered me to you
-| Then no lie from my lips betrayed." 
+| Then no lie from lips betrayed." 
 | 
 | (... in progress ...)
 |
@@ -633,25 +651,6 @@ Poems
 | We made you in our image,
 | So the image could make us whole.
 
-**The Sickness** 
-
-| Sick with life, the dead arose;
-| It was quite a morbid sight:
-| To be rid this web of woes
-| Yet strung again in spite.
-|
-| Sooner would they have had
-| A plague of black
-| Than cast back to the mad
-| Spinning wheel of racks
-|
-| The great sacrifice
-| Of that figure Christ
-| Was not to die
-| upon the wooden cross
-| But in dying to be
-| raised from earthly loss.
-
 **The Three Annas of Pygmalion**
 
 | Sweet Susanna sees sculptures standing still,
@@ -675,20 +674,6 @@ Poems
 | To trade the trick to tack together three
 | Annas' absolute and alluring allegory,
 | Sculptures singing so scrupulously.
-
-**An Induction**
-
-| If the deaf are dumb
-| And love is blind
-| It follows easy from
-| Two lovers splined
-| A terrible malady
-|
-| If the clefs are sung
-| And doves entwined
-| Then by beaten drum
-| With wings maligned
-| A terrible melody.
 
 **Kingdoms**
 

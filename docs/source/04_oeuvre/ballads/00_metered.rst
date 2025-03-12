@@ -1,50 +1,55 @@
 I: Ballad of the Venus Flytrap
 ------------------------------
 
-| In an inn of fishermen and bawdy youth,
-| Wise old Mercutio spins a lurid tale.
-| As spirits gather in the growing crowd,
-| Hear of a goddess seaborn in a gale.
-|
-| "Walk past the garden gates of Eden,
-| To the mount which feeds her bowers
-| Where on the slopes of sovran Chaos 
-| Pricked with poison-petaled flowers.
-|
-| "Amid the myrtle, she lays her ruby locks.
-| Pilgrim audience flocks to gather round.
-| One by one they kneel beneath her cloak
-| To lay their gifts on fêted ground. 
+| In inn of fishermen and youth
+|       Merwyn spins his tale, 
+| Spirits hearing over glasses 
+|       Of goddess born in gale,
 | 
-| "From the courts of foreign suitors 
-| and the harvest fields of swains,
-| All come to tame her beauty,
-| To ask her hand in vain."
+| "Pass the garden gates of Eden
+|       Where mount-fed her bowers,
+| The slopes of sovran Chaos tall
+|       Poisons petaled flowers. 
 |
-| At this, a stripling voice then wavers,
-| Declares with Bacchanalian glee,
-| "If such beauty can be found,
-| Then I shall take it all for me."
+| "In beds of myrtle, ruby locks
+|       Beside her nubile form 
+| Curl round her pilgrim's offering
+|       Gifts to keep her warm. 
+|
+| "One by one, the attendants kneel
+|       Beneath her cloak and veil 
+| To lay their feted gifts at feet
+|       And fragrance to inhale. 
+|
+| "From courts of foreign suitors,
+|       Harvest fields of swains,
+| All have come to tame her beauty
+|       To ask her hand in vain."
+|
+| Oh! a stripling voice then wavers,
+|       with Bacchanalian glee,
+| "If such beauty can true be found,
+|       then take it all for me."
 | 
-| Old Mercutio pauses, tapping with his cane,
-| Recalling who came before
-| Striking for the godly gloaming woods
-| Never heard from evermore.
+| Merywn pauses, tapping cane
+|       To beat of those before
+| Struck for the eastward gloaming wood
+|       Never heard evermore,
 |
 | "Boy, be careful with your fingers
-| When seeking out her shoulder lace
+|       Seeking her shoulder lace
 | Lest they brush upon the bosom
-| Pressed to bodice in sweet embrace.
+|       Pressed in sweet embrace,
 | 
-| Though she look to us as human
-| As the milkman's maiden daughter
-| We are to her the fatted calf
-| Made for nothing but the slaughter."
-| 
-| But warnings calm not the thoughts
-| Now humming with medleys of the morrow;
-| Once charmed, a goddess then relents
-| To draw from him his mortal sorrow.
+| "Though she look to us as human
+|       Like a maiden daughter,
+| We are to her the fatted calf,
+|       Made for godly slaughter. 
+|
+| But warnings calm not the dreaming
+|       Medley of the morrow:
+| In songed charm, goddess kisses 
+|       Away mortal sorrow.
 |
 | In the morning, leaving hamlet by the sea
 | Eastward where somber gardens lay

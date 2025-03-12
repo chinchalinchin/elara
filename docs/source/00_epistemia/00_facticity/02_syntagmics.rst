@@ -4,56 +4,19 @@
 Syntagmics
 ----------
 
-**Constants**
+Formalization
+-------------
 
-1. Uppercase English letters (A, B, C, ... ): Fixed lines.
-2. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
-3. Lowercase Greek letters (α, β, γ, ... ): Fixed words.
+**Prior Definitions**
 
-**Variables**
-
-1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
-2. The lowercase English letters u, v, w, x, y and z are reserved for indeterminate lines, not necessarily rhymed. 
-3. The lowercase Greek letters φ, χ, ψ are reserved for indeterminate rhymed words.
-4. The lowercase Greek letter λ is reserved for indetermine words, not necessarily rhymed.
-5. The lowercase Greek letter Π is reserved for indeterminate syllables. 
-6. The lowercase Greek letter ς is reserved for indeterminate stanzas.
-
-.. important::
-
-    Upper English letters are meant to denote particular lines, whereas lowercase English letters are meant to denote indeterminate lines that are related through their rhyme scheme. 
-
-**Notation**
-
-1. #x: A lengthened line. 
-2. ♭x: A shortened line.  
-3. x.y : Successive lines.
-4. x-y: Concatenated lines.
-5. x ∨ y: A line that is either x or y.
-6. x + y : Successive stanzas.
-7. x∝λ : A line containing a word. 
-8. x(λ) : A line ending in a word.  
-9. (λ)x: A line beginning with a word. 
-10. x[Π]: A line ending in a syllable.
-11. [Π]x: A line starting with a syllable
-12. x.y.x | x = z: Substitute z for x in the expression "x.y.x"
-
-**Operations**
-
-1. Σ :sub:`1`:sup:`n` ς :sub:`i` 
-
-**Propositions**
-
-∀ς: ∃x: ς = x
-    All stanzas are made of lines. 
-
-∀p: p  = Σ :sub:`1`:sup:`n` ς :sub:`i` 
-    All poems are made of stanzas. 
-
-**Definitions**
+Given below are existing definitions of poetical devices. 
 
 .. topic:: Definition: Lines
 
+    - Iamb: One unstressed syllable followed by a stressed syllable.
+    - Tetrameter: A line with four iambs.
+    - Pentameter: A line with five iambs
+    - Trimeter: A line with three iambs
     - Hendecasyllable: A line consisting of eleven syllables. 
 
 .. topic:: Definitions: Stanzas
@@ -66,6 +29,99 @@ Syntagmics
     - Octet: A stanza with eight lines.
     - Envoi: A short, concluding stanza.
 
+**Constants**
+
+1. Uppercase English letters (A, B, C, ... ): Fixed lines.
+2. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
+3. Lowercase Greek letters (α, β, γ, ... ): Fixed words.
+4. The lowercase English letter n is reserved for natural numbers.
+5. The lowercase Fraktur letter 𝔦 is reserved for iambs.
+6. The lowercase Fraktur letter 𝔱 is reserved for trochees.
+7. The lowercase Fraktur letter 𝔰 is reserved for spondees. 
+8. The lowercase Fraktur letter 𝔞 is reserved for anapests.
+9. The lowercase Fraktur letter 𝔡 is reserved for dactyls.
+10. The mathematical symbol ∅ is reserved for pauses. 
+11. The ampersand & represents blank newlines. 
+   
+**Variables**
+
+1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
+2. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
+3. The lowercase Greek letters φ, χ, ψ are reserved for indeterminate rhymed words.
+4. The lowercase Greek letter λ is reserved for indetermine words, not necessarily rhymed.
+5. The lowercase Greek letters π, Π are reserved for indeterminate syllables. 
+6. The lowercase Fraktur letter 𝔵 is reserved for indeterminate meters.
+7. The lowercase Greek letter ς is reserved for indeterminate stanzas.
+8. The English letters x, y and z are reserved for global variables, i.e. syllables, lines and stanzas. 
+
+.. important::
+
+    Upper English letters are meant to denote particular lines, whereas lowercase English letters are meant to denote indeterminate lines that are related through their rhyme scheme. 
+
+.. important::
+
+    The choice of π and Π to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, π is meant to represent indeterminate unstressed syllables, whereas Π is meant to represent indeterminate stressed syllables. However, π is often used in a more general capacity, when the indeterminate syllable could be one that is either stressed or unstressed. It will be clear from context when π is employed in this manner. 
+
+The variables *x*, *y* and *z* will sometimes be referred to as *syntagmic variables*, or *signs*, to stress their range over the entire domain of poetic objects. 
+
+Uppercase-lowercase pairs of English letters are understood to be rhymes. The difference in the symbolism is the *fixed* nature of the denotation. For example, the expression *A.a.a.A* denotes one fixed line, a rhyming couplet and then the fixed line again,
+
+    The cat on the mat
+    Got large and fat
+    So-and-so such that 
+    The cat on the mat
+
+The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. For example, in the expression "*a.b.a + a.b.a*", the rhyme in "*a*" within the first stanza does not extend to the rhyme in "*a*" within the second stanza. 
+
+**Notation**
+
+1. #x: A lengthened sign. 
+2. ♭x: A shortened sign.  
+3. x.y (**Succession**): Successive signs.
+4. x-y (**Concatenation**): Concatenated signs.
+5. x:y (**Delimitation**): Delimited signs.
+6. x ∨ y (**Disjunction**): A sign that is either x or y.
+7. x + y (**Separation**): Separated signs.
+8. x∝λ : Sign line containing a word. 
+9. x(λ) : A sign ending in a word.  
+10. (λ)x: A sign beginning with a word. 
+11. x(π): A sign ending in a syllable.
+12. (π)x: A sign starting with a syllable
+13. x.y.x | x = z: Substitute z for x in the sign "x.y.x"
+
+Brackets, [], are used to group operations within expressions by precedence.
+
+To see what is meant by the distinction between *separation* and *succession*, let x = "*the fish in the dish*" and y = "*the dog on a jog*". Then x.y means,
+
+| the fish in the dish
+| the dog on a jog
+
+Where as x + y means,
+
+| the fish in the dish
+| 
+| the dog on a jog
+
+From this, it can be see the operation of *successions* inserts a new line after the first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
+
+The connotation of the "+" symbol is leveraged to extend the symbolism to the "*Σ*" symbol, i.e.,
+
+    Σ :sub:`1`:sup:`n` x :sub:`i` 
+
+Is meant to denote a series of signs separated by blank lines. 
+
+A *delimitation* is mainly used in reference to words or syllables, and can be seen as a shorthand for excessive concatenation. *Delimitation* denotes the insertion of *pauses* (delimiters) in between words,
+
+    α:β:γ = α-∅-β-∅-γ
+
+**Propositions**
+
+∀ς: ∃x: ς = x
+    All stanzas are made of lines. 
+
+∀p: p  = Σ :sub:`1`:sup:`n` ς :sub:`i` 
+    All poems are made of stanzas. 
+
 **Examples**
 
 a.b.a
@@ -77,23 +133,45 @@ A.b.A
 a.b.a + a.b.a 
     Two rhyming tercets.
 
-.. important::
+a.b.[b ∨ a]
+    A tercet where the last line rhymes with either the first line or the second line.
 
-    Uppercase-lowercase pairs of English letters are understood to be rhymes. The difference in the symbolism is the *fixed* nature of the denotation.
+𝔦 = π-Π (the definition of an **iamb**)
+    An unstressed syllable concatenated with a stressed syllable.
 
-    The expression *AaaA* denotes one fixed line, a rhyming couplet and then the fixed line again. As a example, 
+𝔱 = Π-π (the definition of a **trochee**)
+    TODO
 
-        The cat on the mat
-        Got large and fat
-        So-and-so such that 
-        The cat on the mat
+𝔰 = Π-Π (the definition of a **spondee**)
+    TODO 
 
-The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. 
+𝔡 = Π-π-π (the definition of **dactyl**)
+    TODO
+
+𝔞 = π-π-Π (the definition of a **anapest**)
+    TODO 
+
+**Meter**
+
+.. topic:: Definition: Meters
+
+    a/𝔵 :sub:`n` denotes a line in 𝔵 n-meter. 
+
+For example, 
+
+    (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
+
+Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambric trimeter. Note in this example the first and third line rhyme. 
+
+.. _schemes:
+
+Schemes
+-------
 
 .. _ballad:
 
 Ballad
-------
+^^^^^^
 
 Three octets followed by a quatrain envoi.
 
@@ -107,15 +185,17 @@ Three octets followed by a quatrain envoi.
 
 **References**
 
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <https://archive.org/details/bim_eighteenth-century_a-tragical-ballad-of-t_1795>`_, Frances James Child
+- `Ballad of the Goodly Fere <https://allpoetry.com/Ballad-Of-The-Goodly-Fere>`_, Ezra Pound
+- `Ballad of Sir Patrick Stern <https://sites.williams.edu/sirpatrickspens/ballad/293/>`_, W. Scott
 - `La Belle Dame sans Merci <https://www.poetryfoundation.org/poems/44475/la-belle-dame-sans-merci-a-ballad>`_, John Keats
 - `Lord Thomas and Annet <https://sacred-texts.com/neu/eng/child/ch073.htm>`_, Old English Ballad
-- `Ballad of the Goodly Fere <https://allpoetry.com/Ballad-Of-The-Goodly-Fere>`_, Ezra Pound
-- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <https://archive.org/details/bim_eighteenth-century_a-tragical-ballad-of-t_1795>`_, Frances James Child
+- `Tam Lin <https://tam-lin.org/versions/39A.html>`_, Old Scottish Ballad
 
 .. _ballade: 
 
 Ballade
--------
+^^^^^^^
 
 TODO 
 
@@ -127,40 +207,10 @@ TODO
 
 None yet found. 
 
-.. _ghazal:
-
-Ghazal
-------
-
-TODO
-
-.. topic:: Schema
-
-    TODO
-
-**References**
-
-- `Tongiht <https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7>`_, Agha Shahid Ali
-
-.. _haiku:
-
-Haiku
------
-
-TODO 
-
-.. topic:: Schema
-
-    TODO
-    
-**References**
-
-None yet found. 
-
 .. _ode:
 
 Ode
----
+^^^
 
 TODO 
 
@@ -184,7 +234,7 @@ TODO
 .. _pantoum:
 
 Pantoum
--------
+^^^^^^^
 
 A series of quatrains where every quatrain's first and third line are the second and fourth line of the previous quatrian. 
 
@@ -199,11 +249,11 @@ A series of quatrains where every quatrain's first and third line are the second
 .. _rondeau:
 
 Rondeau
--------
-
-The following diagram shows the different schemata for the rondeau form in 14th century France.
+^^^^^^^
 
 **Medieval Rondeaus**
+
+The following diagram shows the different schemata for the rondeau form in 14th-century France,
 
 .. figure:: ../../_static/img/context/poetical/14th-century-rondeaus.svg
   :width: 80%
@@ -217,7 +267,7 @@ The following diagram shows the different schemata for the rondeau form in 14th 
     3. Quatrain: A.B.B.A.a.b.A.B.a.b.b.a.A.B.B.A
     4. Cinquain: A.A.B.B.A.a.a.b.A.A.B.a.a.b.b.a.A.A.B.B.A
 
-    This schema can be rewritten to emphasize the *refrain R* within in form using the substitution notation,
+    This schema can be rewritten to emphasize the *refrain R* within in the form using substitution notation,
 
     5. Couplet: R.a.A.a.b.R | R = A.B 
     6. Tercet: R.a.b.A.B.a.b.b.R | R = A.B.B
@@ -228,7 +278,7 @@ Note that a *Rondeau Couplet* is simply a :ref:`triolet`.
 
 **Renaissance Rondeaus**
 
-The following diagrams shows the different schemata for the rondeau form duing the Renaissance. 
+The following diagrams shows the different schemata for the rondeau form duing the Renaissance, 
 
 .. figure:: ../../_static/img/context/poetical/renaissance-rondeaus.svg
   :width: 80%
@@ -249,7 +299,7 @@ The following diagrams shows the different schemata for the rondeau form duing t
 .. _sestina:
 
 Sestina
--------
+^^^^^^^
 
 Six sestets followed by a tercet envoi.
 
@@ -271,7 +321,7 @@ Six sestets followed by a tercet envoi.
 .. _sonnet:
 
 Sonnet
-------
+^^^^^^
 
 A fourteen line poem with a varible rhyme scheme. 
 
@@ -293,7 +343,7 @@ A fourteen line poem with a varible rhyme scheme.
 .. _terza:
 
 Terza
------
+^^^^^
 
 A collection of tercets with rhymes offset sequentially.
 
@@ -308,7 +358,7 @@ None yet found.
 .. _triolet:
 
 Triolet
--------
+^^^^^^^
 
 A single octet.
 
@@ -324,7 +374,7 @@ A single octet.
 .. _virelai:
 
 Virelai
--------
+^^^^^^^
 
 TODO 
 
@@ -346,7 +396,7 @@ TODO
 .. _villanelle:
 
 Villanelle
-----------
+^^^^^^^^^^
 
 Five tercets followed by a quadtrain envoi.
 
