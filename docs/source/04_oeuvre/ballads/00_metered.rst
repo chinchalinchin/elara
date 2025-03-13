@@ -51,60 +51,80 @@ I: Ballad of the Venus Flytrap
 | In songed charm, goddess kisses 
 |       Away mortal sorrow.
 |
-| In the morning, leaving hamlet by the sea
-| Eastward where somber gardens lay
-| The boy took to floral tracts of idle
-| And plucked from roadside a bouquet: 
+| Dawning morn, he left hamlet gone
+|       Eastward where garden lay 
+| Floral tract to mountain valley,
+|       Pluck'd roadside a bouquet.
 |
-| First the dainty rose to fill his hands 
-| For he knew that, in the shades of red,
-| The gods have hidden Cupid's passion 
-| For those lovestruck by hand to spread.
+| First dainty roses fill his hand,
+|       For in the shaded red
+| Hide the arrow-aimed passion
+|       Prun'd by hand to spread.
 |
-| Deeper, far afield and hidden in the valley,
-| Myrtle puffed in bud of white
-| With tendril tears that whisper to the boy
-| On the winded voice so slight:
+| Deeper hidden still, far afield:
+|       Myrtle, puff'd bud of white, 
+| Thru tendril whisper to the boy 
+|       On winded voice so slight: 
 |
-| A sober lullaby of silent spoken grief
-| Which only gods and caged bird can sing 
-| Tender-throated, sung by meadow maid
-| To eldritch vines around her feet in rings.
-|  
-| From the distance, the boy in secret spies
-| Moonwater sprinkled by spout to root
-| Of a plant leaf'd by rows and rows of teeth
-| As she melodic tends its half-rotten fruit. 
+| Elegy of a life unliv'd
+|       Caged bird learned sings
+| Tender throat-sung by meadow maid 
+|       Around her feet in rings:
+|
+| Queer vine of eldritch origin
+|       To her voice enthralled
+| Slowly snake as if magick move
+|       A serpent of the auld.
 | 
-| Awestruck, the boy drinks deep liquor beauty
-| Swirl'd like curls of car'mel pour of brandy
-| Wiped from mouth thoughts of goddess Venus
-| Replac'd with new tastes of his fancy. 
-|
-| Bold from a lack of many learned years
-| He stands and calls out to the meadow maid, 
-| "Hark! Why this sad song are you singing
-| When beauty's gifts around you are arrayed?"
+| From secret distance, the boy spy
+|       Moonwater sprinkled root.
+| Of a plant leaf'd by rows of teeth,
+|       She tends half-rotten fruit. 
 | 
-| Spun from task, she gasps, into hiding hollers,
-| "What creeping spy from rosed rows 
-| Wanders thru dream dark fields of yore 
-| Now with questions standing grows?" 
+| Awestruck, swilling of her liquor
+|       Car'mel swirls brandy
+| Wipes from mouth thought of goddess
+|       Replac'd taste of fancy. 
 |
-| In reply, he descends in steps by shades
-| Cast from the fast-fading clove-red sky,
-| "Excuse my offense, oh, meadow maid, 
-| But in passing, you caught my eye. 
+| Bold from lack of years accrued 
+|       He calls to meadow maid 
+| "Hark! Why this sad refrain to sing
+|       When beauty here arrays?"
 |
-| "I admit there is no rarer sight
-| Stumbling upon a dame as fair as thee 
-| Who attends with wat'ring can and song 
-| A plant plainly made of teeth.
+| Spun from task, she in take of gasp 
+|       Cuts off her melody-- 
+| The vined teeth then curling drop 
+|       As if by jealousy. 
 |
-| "Closer as I draw, queerer still I feel
-| What manner of thing can this it be 
-| Stalked with fingers brown-Earth-green
-| Yet so different by multiplied degree?"
+| Her voice now free of elegy 
+|       it tinges wrath instead,
+| "What creeping spy from rosed row
+|       Peeks his peeping head?"
+|
+| Descending steps by casted shades
+|       Of clove-red fading sky,
+| Falling feet spoke with the dust
+|       Of sodden corpses dry. 
+|
+| He approaches and bows his head
+|       To give his ego's lie,
+| "Excuse my offense, meadow maid 
+|       But passing caught my eye. 
+|
+| "I admit to no rarer sight
+|       A dame as fair as thee 
+| Attending with wat'ring can and song 
+|       A plant framed by teeth. 
+|
+| "Closer that I draw queerer still
+|       My mind descends in shock 
+| The field beyond my youth and town
+|       Keeps so strange a flock
+|
+| "What manner thing are you keeping
+|       In this patch of nursery
+| Stalked with fingers earthen brown
+|       Yet different by such degree?
 |
 | (... in progress ...)
 | 

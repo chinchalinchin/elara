@@ -1277,7 +1277,7 @@ Unless there are no Sentences in there Corpus that begin with the concatenation 
 
 .. math::
 
-  \lvert (\hat{\zeta[j]} = \zeta[j]) \cup (\hat{\zeta[j]} = \zeta[i]) \rvert \geq \lvert \hat{\zeta[j]} = \zeta[j] \rvert + \lvert \hat{\zeta[i]} = \zeta[i] \lvert
+  \lvert (\hat{\zeta[j]} = \zeta[j]) \cup (\hat{\zeta[j]} = \zeta[i]) \rvert \geq \lvert \hat{\zeta[j]} = \zeta[j] \rvert + \lvert \hat{\zeta[i]} = \zeta[i] \rvert
 
 As example of this, consider an unknown Sentence :math:`\hat{\zeta}` with fixed String Lenth :math:`l(\zeta) = 8`. The event of :math:`\hat{\zeta[5]} = \text{"w"}` shares outcomes with :math:`\hat{\zeta[6]} = \text{"o"}`. For instance, any Sentence that begin with the phrase, *"the word"* or *"the worm"* would belong to both Character events. 
  
