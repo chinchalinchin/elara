@@ -17,3 +17,18 @@ The Sickness
 | upon the wooden cross
 | But in dying to be
 | raised from earthly loss.
+
+An Induction
+------------
+
+| If the deaf are dumb
+| And love is blind
+| It follows easy from
+| Two lovers splined
+| A terrible malady.
+|
+| If the clefs are sung
+| And doves entwined
+| Then by beaten drum
+| With wings maligned
+| A terrible melody.

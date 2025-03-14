@@ -11,9 +11,16 @@ Formalization
 
 Given below are existing definitions of poetical devices. 
 
+.. topic:: Definition: Feet
+    
+    - Iamb: One unstressed syllable followed by a stressed syllable.
+    - Spondee: TODO
+    - Dactyl: TODO
+    - Trochee: TODO
+    - Anapest: TODO 
+
 .. topic:: Definition: Lines
 
-    - Iamb: One unstressed syllable followed by a stressed syllable.
     - Tetrameter: A line with four iambs.
     - Pentameter: A line with five iambs
     - Trimeter: A line with three iambs
@@ -161,7 +168,7 @@ For example,
 
     (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
 
-Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambric trimeter. Note in this example the first and third line rhyme. 
+Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. Note in this example the first and third line rhyme. 
 
 .. _schemes:
 

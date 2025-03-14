@@ -153,7 +153,7 @@ Pantoums
 Rondeaus
 --------
 
-**A Youthful Rondeau**
+**I: A Youthful Rondeau**
 
 | With pockets full of paper, youth has made him bold
 | Stories that they tell him, myths of men grown old,
@@ -180,139 +180,21 @@ Rondeaus
 Ballads
 -------
 
-**Ballad of the Venus Flytrap**
-
-| In an inn of fishermen and bawdy youth,
-| Wise old Mercutio spins a lurid tale.
-| As spirits gather in the growing crowd,
-| Hear of a goddess seaborn in a gale.
-|
-| "Walk past the garden gates of Eden,
-| To the mount which feeds her bowers
-| Where on the slopes of sovran Chaos 
-| Pricked with poison-petaled flowers.
-|
-| "Amid the myrtle, she lays her ruby locks.
-| Pilgrim audience flocks to gather round.
-| One by one they kneel beneath her cloak
-| To lay their gifts on fêted ground. 
-| 
-| "From the courts of foreign suitors 
-| and the harvest fields of swains,
-| All come to tame her beauty,
-| To ask her hand in vain."
-|
-| At this, a stripling voice then wavers,
-| Declares with Bacchanalian glee,
-| "If such beauty can be found,
-| Then I shall take it all for me."
-| 
-| Old Mercutio pauses, tapping with his cane,
-| Recalling who came before
-| Striking for the godly gloaming woods
-| Never heard from evermore.
-|
-| "Boy, be careful with your fingers
-| When seeking out her shoulder lace
-| Lest they brush upon the bosom
-| Pressed to bodice in sweet embrace.
-| 
-| Though she look to us as human
-| As the milkman's maiden daughter
-| We are to her the fatted calf
-| Made for nothing but the slaughter."
-| 
-| But warnings calm not the thoughts
-| Now humming with medleys of the morrow;
-| Once charmed, a goddess then relents
-| To draw from him his mortal sorrow.
-|
-| In the morning, leaving hamlet by the sea
-| Eastward where somber gardens lay
-| The boy took to floral tracts of idle
-| And plucked from roadside a bouquet: 
-|
-| First the dainty rose to fill his hands 
-| For he knew that, in the shades of red,
-| The gods have hidden Cupid's passion 
-| For those lovestruck by hand to spread.
-|
-| Deeper, far afield and hidden in the valley,
-| Myrtle puffed in bud of white
-| With tendril tears that whisper to the boy
-| On the winded voice so slight:
-|
-| A sober lullaby of silent spoken grief
-| Which only gods and caged bird can sing 
-| Tender-throated, sung by meadow maid
-| To eldritch vines around her feet in rings.
-|  
-| From the distance, the boy in secret spies
-| Moonwater sprinkled by spout to root
-| Of a plant leaf'd by rows and rows of teeth
-| As she melodic tends its half-rotten fruit. 
-| 
-| Awestruck, the boy drinks deep liquor beauty
-| Swirl'd like curls of car'mel pour of brandy
-| Wiped from mouth thoughts of goddess Venus
-| Replac'd with new tastes of his fancy. 
-|
-| Bold from a lack of many learned years
-| He stands and calls out to the meadow maid, 
-| "Hark! Why this sad song are you singing
-| When beauty's gifts around you are arrayed?"
-| 
-| Spun from task, she gasps, into hiding hollers,
-| "What creeping spy from rosed rows 
-| Wanders thru dream dark fields of yore 
-| Now with questions standing grows?" 
-|
-| In reply, he descends in steps by shades
-| Cast from the fast-fading clove-red sky,
-| "Excuse my offense, oh, meadow maid, 
-| But in passing, you caught my eye. 
-|
-| "I admit there is no rarer sight
-| Stumbling upon a dame as fair as thee 
-| Who attends with wat'ring can and song 
-| A plant plainly made of teeth.
-|
-| "Closer as I draw, queerer still I feel
-| What manner of thing can this it be 
-| Stalked with fingers brown-Earth-green
-| Yet so different by multiplied degree?"
-|
-| (... in progress ...)
-| 
-| With rose in hand, now knee to ground,
-| He speaks with eyes lowered from her gaze,
-| "To say, madam, fate delivered me to you
-| Then no lie from lips betrayed." 
-| 
-| (... in progress ...)
-|
-| "It mirrors us in thickets, don't you see?
-| Though fashioned differently in design
-| It hungers for the stuff of life
-| Just like your heart or mine."
-| 
-| (... in progress ...)
-
-**Ballad of the Venus Flytrap (Remetered)**
+**I: Ballad of the Venus Flytrap**
 
 | In inn of fishermen and youth
 |       Merwyn spins his tale, 
-| Spirits hearing over glasses 
+| Spirits shared o'er glasses 
 |       Of goddess born in gale,
 | 
 | "Pass the garden gates of Eden
 |       Where mount-fed her bowers,
-| The slopes of sovran Chaos tall
-|       Poisons petaled flowers. 
+| The sovran slopes of Chaos tall
+|       Poison petaled flowers. 
 |
 | "In beds of myrtle, ruby locks
 |       Beside her nubile form 
-| Curl round her pilgrim's offering
+| Curl round the pilgrim's offering
 |       Gifts to keep her warm. 
 |
 | "One by one, the attendants kneel
@@ -321,19 +203,19 @@ Ballads
 |       And fragrance to inhale. 
 |
 | "From courts of foreign suitors,
-|       Harvest fields of swains,
+|       From harvest fields of swains,
 | All have come to tame her beauty
 |       To ask her hand in vain."
 |
-| Oh! a stripling voice then wavers,
-|       with Bacchanalian glee,
+| Oh! a stripling voice then wavers
+|       With Bacchanalian glee,
 | "If such beauty can true be found,
 |       then take it all for me."
 | 
-| Merywn pauses, tapping cane
+| Merywn pauses, taps his cane
 |       To beat of those before
-| Struck for the eastward gloaming wood
-|       Never heard evermore,
+| Who struck for the eastward gloaming wood
+|       Never heard from evermore,
 |
 | "Boy, be careful with your fingers
 |       Seeking her shoulder lace
@@ -342,8 +224,8 @@ Ballads
 | 
 | "Though she look to us as human
 |       Like a maiden daughter,
-| We are to her the fatted calf,
-|       Made for godly slaughter. 
+| To her we are the fatted calf,
+|       Made for godly slaughter." 
 |
 | But warnings calm not the dreaming
 |       Medley of the morrow:
@@ -357,13 +239,13 @@ Ballads
 |
 | First dainty roses fill his hand,
 |       For in the shaded red
-| Hide the arrow-aimed passion
+| Hide a passion arrow-aimed 
 |       Prun'd by hand to spread.
 |
 | Deeper hidden still, far afield:
 |       Myrtle, puff'd bud of white, 
-| Thru tendril whisper to the boy 
-|       On winded voice so slight: 
+| Its tendril whisper to the boy 
+|       A winded voice so slight: 
 |
 | Elegy of a life unliv'd
 |       Caged bird learned sings
@@ -390,32 +272,32 @@ Ballads
 | "Hark! Why this sad refrain to sing
 |       When beauty here arrays?"
 |
-| Spun from task, she in take of gasp 
+| Spun from her task in sudden gasp 
 |       Cuts off her melody-- 
-| The vined teeth then curling drop 
+| The vined teeth, in curling, drop 
 |       As if by jealousy. 
 |
 | Her voice now free of elegy 
 |       it tinges wrath instead,
-| "What creeping spy from rosed row
+| "What creeping spy from the rose row
 |       Peeks his peeping head?"
 |
 | Descending steps by casted shades
 |       Of clove-red fading sky,
-| Falling feet spoke with the dust
+| Falling feet speak with the dust
 |       Of sodden corpses dry. 
 |
 | He approaches and bows his head
 |       To give his ego's lie,
-| "Excuse my offense, meadow maid 
-|       But passing caught my eye. 
+| "Excuse the intrusion, meadow maid 
+|       But passing caught my eye, 
 |
-| "I admit to no rarer sight
+| "I've seen no sight more rare, I swear
 |       A dame as fair as thee 
-| Attending with wat'ring can and song 
+| Who tends with watering can and song 
 |       A plant framed by teeth. 
 |
-| "Closer that I draw queerer still
+| "The closer I draw, the queerer still
 |       My mind descends in shock 
 | The field beyond my youth and town
 |       Keeps so strange a flock
@@ -423,9 +305,92 @@ Ballads
 | "What manner thing are you keeping
 |       In this patch of nursery
 | Stalked with fingers earthen brown
-|       Yet different by such degree?"
+|       Different in degree?"
+|
+| Her tone dropped to grim reply
+|       Face stricken red in rage,
+| "Boy, of manly things, what could
+|       you offer with your age?
+|
+| "Leave my demesne, return to home
+|       'Fore you folly mettle.
+| I am no lass, but lady born
+|       With a score to settle."
+|
+| In blush of red, boy bristles bold 
+|       To declare with icy cold, 
+| "If you're no maid then no boy I,
+|       I'm owed the tale you hold.
+|
+| "Of the path which led you to play
+|       Caretaker to this plant
+| And why, oh why, it seems to move
+|       To sway of soul and chant?"
+|
+| ( ... in progress ... )
+| 
+| "Twas a day not so long removed 
+|       when my form sought to flaunt
+| To every eye which cast on
+|       day of debutante."
+|
+| "They came and went, those boys of youth
+|       Each declaring his love best;
+| Made of me their myth of beauty
+|       Alike with all the rest.
+|
+| "Til one day there came a calling
+|       A suitor not for me
+|  With eyes nut brown and arms to hunt
+|       And hold the belle Marie. 
+|
+| ( ... in progress ... )
+| 
+| "That day I took her love from her
+|       in bed with me to lay
+| He strung for me his bow of hair
+|       and threw his lock away. 
+|       
+| ( ... in progress ... )
+| 
+| "In spell of curse of words of six
+|       Of love for naught thee hold
+| Till time when vine in flower
+|       Grows fruit upon the wold.
+|
+| ( ... in progress ... )
+|
+| With rose in hand now knee to ground
+|       Eyes lowered from her gaze,
+| He loosens from his heart the valve
+|       Of truth through looped maze,
+|
+| "Lady, I confess to folly
+|       Lever sprung ere the load
+| Lest the chance is lost to ask you
+|       In boy the man bestow.
+| 
+| "Into ear your story passes 
+|       To wake from dormant sleep
+| The wellspring of emotion pure
+|       Into my voice now seep."
+| 
+| (... in progress ... )
+|
+| "Tis clear now why the thorn does draw
+|       Drop with a prick of blood
+| The course of seed from stalk to stem
+|       Incomplete ere the bud.
+|
+| (... in progress ...)
+|
+| "It mirrors us in thickets, don't you see?
+| Though fashioned differently in design
+| It hungers for the stuff of life
+| Just like your heart or mine."
 | 
 | (... in progress ...)
+
 
 .. _poems:
 

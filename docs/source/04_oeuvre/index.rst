@@ -13,5 +13,5 @@ Oeuvre
    pantoums/index
    villanelles/index
    rondeaus/index
-   poems/index
+   verse/index
    

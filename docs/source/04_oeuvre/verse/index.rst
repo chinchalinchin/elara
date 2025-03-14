@@ -1,6 +1,6 @@
-.. _poems:
+.. _verse:
 
-Poems
+Verse
 =====
 
 .. toctree::
@@ -17,5 +17,4 @@ Poems
    07
    08
    09
-   10
    
