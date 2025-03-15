@@ -10,8 +10,9 @@ Oeuvre
 
    ballads/index
    odes/index
-   triolets/index
    pantoums/index
-   villanelles/index
    poems/index
+   rondeaus/index
+   triolets/index
+   villanelles/index
    
