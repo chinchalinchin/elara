@@ -1,5 +1,7 @@
-I: Ballad of the Venus Flytrap
+I: Ballad of the Venus Flytrap 
 ------------------------------
+
+(FIRST DRAFT)
 
 | In an inn of fishermen and bawdy youth,
 | Wise old Mercutio spins a lurid tale.

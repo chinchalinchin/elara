@@ -1,6 +1,6 @@
-.. _verse:
+.. _poems:
 
-Verse
+Poems
 =====
 
 .. toctree::
@@ -15,6 +15,3 @@ Verse
    05
    06
    07
-   08
-   09
-   

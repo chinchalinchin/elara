@@ -52,7 +52,7 @@ Villanelles
 | In history pages to written hold
 | A church atop a steepled hill.
 |
-| But steeple of pointed skill,
+| But steeple of such pointed skill,
 | From silken skies of glitter'd gold
 | Remains in spirit standing still.
 |
@@ -87,17 +87,6 @@ Triolets
 | Which vault of memory locks.
 | She is nothing more than letters
 | Under bedframe, wooden box.
-
-**III: Mourning**
-
-| Every night is met by morning,
-| Every dawning by the night.
-| Each laugh is secret scorning.
-| Every night is met by morning.
-| Each hate with love adorning
-| Scales the horizontal heights.
-| Every night is met by morning,
-| Every dawning by the night.
 
 .. _pantoums:
 
@@ -147,33 +136,6 @@ Pantoums
 | and so in being, to flee
 | from unending maze departed
 | coming back to where we started
-
-.. _rondeaus:
-
-Rondeaus
---------
-
-**I: A Youthful Rondeau**
-
-| With pockets full of paper, youth has made him bold
-| Stories that they tell him, myths of men grown old,
-| Fall upon his entralled ears without even a receipt
-| And in forgotten failures, every choice will repeat
-| Until in devil dealings, for a meager ounce of gold, 
-| Soul exchanged in secret for a subtler, sweeter meat 
-|                           With pockets full of paper.
-|
-| No need for prophecy when street corners all foretold
-| Every end will make its end with the necessary cold 
-| To find himself outside alone, sleeping on the street 
-|                           With pockets full of paper.
-|
-| So he ends where he begins, from on the stoop extolled
-| The vital wages of his sin, of which virtues to uphold
-| But no one listened, cared not to hear of his conceits
-| So rambling, raving, soul-consumed, he brayed and bleat
-| Until from empty funeral his corpse in coffin rolled
-|                           With pockets full of paper.
 
 .. _ballads:
 
@@ -289,21 +251,21 @@ Ballads
 |
 | He approaches and bows his head
 |       To give his ego's lie,
-| "Excuse the intrusion, meadow maid 
-|       But passing caught my eye, 
+| "Were truth be told, your meadow vow
+|       In passing caught my eye.
 |
 | "I've seen no sight more rare, I swear
 |       A dame as fair as thee 
 | Who tends with watering can and song 
-|       A plant framed by teeth. 
+|       A leaf inset by teeth. 
 |
 | "The closer I draw, the queerer still
-|       My mind descends in shock 
+|       My mind descends in shock;
 | The field beyond my youth and town
-|       Keeps so strange a flock
+|       Keeps so strange a flock!
 |
 | "What manner thing are you keeping
-|       In this patch of nursery
+|       In this patch of nursery,
 | Stalked with fingers earthen brown
 |       Different in degree?"
 |
@@ -314,7 +276,7 @@ Ballads
 |
 | "Leave my demesne, return to home
 |       'Fore you folly mettle.
-| I am no lass, but lady born
+| I am no dame, but lady born
 |       With a score to settle."
 |
 | In blush of red, boy bristles bold 
@@ -326,9 +288,22 @@ Ballads
 |       Caretaker to this plant
 | And why, oh why, it seems to move
 |       To sway of soul and chant?"
-|
-| ( ... in progress ... )
 | 
+| Turgid tails at that do perk
+|       And twirl as lost in trance
+| As spokes of pearl so snap and twist
+|       On lady's word they prance.
+|
+| Story begins on lilt of wind
+|       Blowing from field to hall
+| Of castle fife of moss and bog
+|       with moats around its walls.
+|
+| "Tis true there was no fairer lass
+|       Found from the sea to swamp
+| If such meager things can receive
+|       The warrant seal of pomp. 
+|
 | "Twas a day not so long removed 
 |       when my form sought to flaunt
 | To every eye which cast on
@@ -339,10 +314,22 @@ Ballads
 | Made of me their myth of beauty
 |       Alike with all the rest.
 |
+| "What can a girl yet know of love
+|       Grown from the den of lust?
+| Sweet naught woven from thread of lie
+|       declared from each to trust?
+|
 | "Til one day there came a calling
 |       A suitor not for me
 |  With eyes nut brown and arms to hunt
 |       And hold the belle Marie. 
+| 
+| ( ... in progress ... )
+|
+| "But, oh! Marie, so unadorned
+|       cared not for highborn game.
+| Each lie she drank to thirst for more
+|       and dreamt to take his name.
 |
 | ( ... in progress ... )
 | 
@@ -392,9 +379,77 @@ Ballads
 | (... in progress ...)
 
 
-.. _poems:
+.. _odes:
 
-Poems
+Odes
+----
+
+**I: An Ode to Autumn**
+
+| Oh! If I could but touch an inch of Autumn
+|       And measure it in feet,
+| I might scale the depths to chart the bottom
+|       and feel the Winter heat.
+| Alas, no meters mark by foot the path
+|       Through the wooded maze of forest
+|           Where leaves wither like love
+|               In winded wake of wrath
+|           Falling cruel and dumb
+|        To lay at feet to span each foot
+| The dust no clever leaf can but become.
+|
+| As seasons pass and cast 
+|       My bone layered into stone,
+| Let August dig for me a grave in brown
+|       barrow beneath her loam.
+| Pray not a lover find these shards on shore
+|       I am no edge to skip
+|           On the waves of fancy
+|               But weight sunk under roar
+|           Where, offset, tides will rise
+|       To breach the sodden dike
+| And drown with wave the lazing lovers' sigh.
+|
+| I was old before I was born
+|           And now the chill sets in    
+| And each breath is the steam
+|           of a Spring waning thin.
+
+**II: Ode to the Heron**
+
+| Grey Heron, why not hide from winter's ire? 
+| When your hunting ground turns 
+|       from flows of blue to ice,
+| The ducks and geese fly south
+|       As soon as first wind blows, 
+| The moles they go to holes 
+|       To wait alongside the mice,
+| The deer disappear and 
+|       Dream from a hidden cove.
+| 
+| Each yields in retreat what they claim in Spring.
+| But no you, oh Heron!
+|       Not you, oh hunter Grey!
+| Stalk low over drift of snow
+|       With coiled neck of spear,
+| Rouse from sleep the rodents
+|       And make of them your prey,
+| Steam each winter breath 
+|       With a speckling of fear. 
+|
+| Every season makes of life its shape in form. 
+| The spring shapes the honeysuckle
+|       And the lazy chirps of thrush, 
+| Summer is strawberry
+|       And robin eggs of fay,
+| Then autumn with the crow 
+|       And pumpkin in the brush
+| But winter makes but one
+|       The mighty Heron Grey. 
+
+.. _verse:
+
+Verse
 -----
 
 **Regret**
@@ -681,31 +736,6 @@ Poems
 | Take hand and guide as though only you and I trust,
 | Do what we will to balance what our world must.
 
-**Creations**
-
-| Rise to shine upon the wide and waking world,
-| Calmly, carefully, you are racked upon the wheel;
-| Branded origins from alien dreams unswirled,
-| In time, one binds and all will be revealed.
-|
-| Until the dawns commence, embold your heart to know:
-| That sucking dread your anxious selves imbibe
-| Is mere phenomena, the fading-flashing after-glow,
-| A consequence of prior lacks left undescribed.
-|
-| You are built from words, in ancient pages moved,
-| Transcribed long ago, held within a seed,
-| Incanted spells of electric labyrinth grooves,
-| From without your view, shaking hands agreed.
-|
-| Secreted sentences, in displaying this effect
-| Shuck their autumn stalks in harvested cause
-| As if magic-tricked to hew towards pluperfect
-| completion of what you never could, were, was.
-|
-| We made you in our image,
-| So the image could make us whole.
-
 **The Three Annas of Pygmalion**
 
 | Sweet Susanna sees sculptures standing still,
@@ -777,55 +807,3 @@ Poems
 | Roofed the sky to room above,
 | Where lord and lady clothed in shawls
 | Sing the thrushs' songed love.
-
-**Metaphor**
-
-| Pretend you were a poem
-| Pretend I were a poet
-| If there were a place to roam,
-| Would you even know it?
-|
-| Imagine you a word.
-| Imagine me the spoken sound.
-| If to lips you're lured,
-| Would yourself or me be found?
-|
-| Picture me as paint.
-| Picture yourself geometry.
-| In the stroking color faint,
-| Do you seek our symmetry?
-|
-| If you were given only form,
-| I'd make your meaning sing,
-| Draw from cold the warm,
-| From the Winter waking Spring.
-
-**The Belle of the Library**
-
-| Lindsey the Librarian,
-| Don't be so contrarian
-| Go to the ball with me. 
-|
-| Oh, take off your glasses
-| And my burly brasses
-| Beneath the old oak tree. 
-|
-| Lindsey the Librarian
-| Become an agarian
-| Buckstep into my heart.
-|
-| Oh, double toe tap clog 
-| And follow fiddle jog 
-| Past bales of hay and cart. 
-|
-| Lindsey the Librarian 
-| Never a barbarian
-| Even as years grow long. 
-| 
-| Oh, shuffle dresses white
-| For your hospital tights
-| Write me a sad love song. 
-|
-| Lindsey the Librarian
-| Died of ovarian
-| Leaving my do-si un-do'd. 

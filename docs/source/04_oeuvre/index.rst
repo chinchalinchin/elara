@@ -9,9 +9,9 @@ Oeuvre
    :caption: Contents:
 
    ballads/index
+   odes/index
    triolets/index
    pantoums/index
    villanelles/index
-   rondeaus/index
-   verse/index
+   poems/index
    

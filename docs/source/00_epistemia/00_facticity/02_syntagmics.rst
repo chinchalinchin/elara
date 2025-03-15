@@ -143,21 +143,6 @@ a.b.a + a.b.a
 a.b.[b ∨ a]
     A tercet where the last line rhymes with either the first line or the second line.
 
-𝔦 = π-Π (the definition of an **iamb**)
-    An unstressed syllable concatenated with a stressed syllable.
-
-𝔱 = Π-π (the definition of a **trochee**)
-    TODO
-
-𝔰 = Π-Π (the definition of a **spondee**)
-    TODO 
-
-𝔡 = Π-π-π (the definition of **dactyl**)
-    TODO
-
-𝔞 = π-π-Π (the definition of a **anapest**)
-    TODO 
-
 **Meter**
 
 .. topic:: Definition: Meters
@@ -169,6 +154,21 @@ For example,
     (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
 
 Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. Note in this example the first and third line rhyme. 
+
+𝔦 = π-Π (the definition of an **iamb**)
+    An unstressed syllable concatenated with a stressed syllable.
+
+𝔱 = Π-π (the definition of a **trochee**)
+    A stressed syllable concatenated with an unstressed syllable. Employed to emphasize urgency or directness.
+
+𝔰 = Π-Π (the definition of a **spondee**)
+    A stressed syllable concatenated with a stressed syllable. Employed to slow down the pace of a line.
+
+𝔡 = Π-π-π (the definition of **dactyl**)
+    A stressed syllable concatenated with two unstressed syllables. Employed to create a sense of falling or release.
+
+𝔞 = π-π-Π (the definition of a **anapest**)
+    Two unstressed syllables concatenated in sequence with a stressed syllable. Employed to propel the rhythm of a line. 
 
 .. _schemes:
 
@@ -237,6 +237,31 @@ TODO
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_, John Keats
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_, John Keats
 - `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_, Percy Blysse Shelely
+
+.. _ottava:
+
+Ottava
+------
+
+.. topic:: Schema (ottava siciliana)
+
+    a.b.a.b.a.b.a.b
+
+.. topic:: Schema (strambotto)
+
+    a.b.a.b.c.c.d.d
+
+Each line in a *ottava siciliana* or *strambotto* is a Hendecasyllable.
+
+.. topic:: Schema (ottava rima)
+
+    a.b.a.b.a.b.c.c
+
+Each line in a *ottava rima* is typically in iambic pentameter. 
+
+**References**
+
+None yet found.
 
 .. _pantoum:
 
@@ -334,9 +359,8 @@ A fourteen line poem with a varible rhyme scheme.
 
 .. topic:: Schema (Petrachan)
 
-    1. a.b.b.a.a.b.b.a + c.d.e.c.d.e 
-    2. a.b.b.a.a.b.b.a + c.d.c.d.c.d
-
+    a.b.b.a.a.b.b.a + c.d.e.c.d.e ∨ c.d.c.d.c.d
+   
 .. topic:: Schema (Shakespearan)
 
    a.b.a.b + c.d.c.d + e.f.e.f + g.g 
