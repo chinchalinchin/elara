@@ -14,9 +14,9 @@ Given below are existing definitions of poetical devices.
 .. topic:: Definition: Feet
     
     - Iamb: One unstressed syllable followed by a stressed syllable.
-    - Spondee: TODO
-    - Dactyl: TODO
-    - Trochee: TODO
+    - Spondee: A stressed syllable concatenated with a stressed syllable. Employed to slow down the pace of a line.
+    - Dactyl: A stressed syllable concatenated with two unstressed syllables. Employed to create a sense of falling or release.
+    - Trochee: A stressed syllable concatenated with an unstressed syllable. Employed to emphasize urgency or directness.
     - Anapest: TODO 
 
 .. topic:: Definition: Lines
@@ -145,6 +145,21 @@ a.b.[b ∨ a]
 
 **Meter**
 
+𝔦 = π-Π
+    The definition of an **iamb**
+
+𝔱 = Π-π
+    The definition of a **trochee**
+
+𝔰 = Π-Π
+    The definition of a **spondee**
+
+𝔡 = Π-π-π
+    The definition of **dactyl**
+
+𝔞 = π-π-Π
+    The definition of a **anapest**
+
 .. topic:: Definition: Meters
 
     a/𝔵 :sub:`n` denotes a line in 𝔵 n-meter. 
@@ -153,22 +168,17 @@ For example,
 
     (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
 
+Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. Note in this example the first and third line rhyme. For example, 
+
+    (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
+
 Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. Note in this example the first and third line rhyme. 
 
-𝔦 = π-Π (the definition of an **iamb**)
-    An unstressed syllable concatenated with a stressed syllable.
+The scope of a meter extends to everything contained in the parenthesis it marks. For example,
 
-𝔱 = Π-π (the definition of a **trochee**)
-    A stressed syllable concatenated with an unstressed syllable. Employed to emphasize urgency or directness.
+    (a.a/𝔦 :sub:`4`)
 
-𝔰 = Π-Π (the definition of a **spondee**)
-    A stressed syllable concatenated with a stressed syllable. Employed to slow down the pace of a line.
-
-𝔡 = Π-π-π (the definition of **dactyl**)
-    A stressed syllable concatenated with two unstressed syllables. Employed to create a sense of falling or release.
-
-𝔞 = π-π-Π (the definition of a **anapest**)
-    Two unstressed syllables concatenated in sequence with a stressed syllable. Employed to propel the rhythm of a line. 
+Denotes a rhyming couplet where each line is written in iambic tetrameter. 
 
 .. _schemes:
 
@@ -180,15 +190,9 @@ Schemes
 Ballad
 ^^^^^^
 
-Three octets followed by a quatrain envoi.
+.. topic:: Schema
 
-.. topic:: Schema (Traditional)
-
-    Σ :sub:`1`:sup:`n` a.b.a.b ∨ a.b.c.b
-
-.. topic:: Schema (Chant Royal)
-
-    Σ :sub:`1`:sup:`5` a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E ∨ c.c.d.d.e.d.E
+    Σ :sub:`1`:sup:`n` (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a ∨ c/𝔦 :sub:`4`).(b/𝔦 :sub:`3`)
 
 **References**
 
@@ -204,11 +208,17 @@ Three octets followed by a quatrain envoi.
 Ballade
 ^^^^^^^
 
-TODO 
-
 .. topic:: Schema
 
     a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
+
+.. topic:: Schema (Ballade Royal)
+
+    (a.b.a + b.b + c.c) ∨ (a.b.a.b + b.c.c)
+
+.. topic:: Schema (Chant Royal)
+
+    Σ :sub:`1`:sup:`5` a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E ∨ c.c.d.d.e.d.E
 
 **References**
 
@@ -219,7 +229,7 @@ None yet found.
 Ode
 ^^^
 
-TODO 
+No fixed schema.
 
 .. list-table:: 
     
@@ -267,8 +277,6 @@ None yet found.
 
 Pantoum
 ^^^^^^^
-
-A series of quatrains where every quatrain's first and third line are the second and fourth line of the previous quatrian. 
 
 .. topic:: Schema
 
@@ -355,8 +363,6 @@ Six sestets followed by a tercet envoi.
 Sonnet
 ^^^^^^
 
-A fourteen line poem with a varible rhyme scheme. 
-
 .. topic:: Schema (Petrachan)
 
     a.b.b.a.a.b.b.a + c.d.e.c.d.e ∨ c.d.c.d.c.d
@@ -376,8 +382,6 @@ A fourteen line poem with a varible rhyme scheme.
 Terza
 ^^^^^
 
-A collection of tercets with rhymes offset sequentially.
-
 .. topic:: Schema
 
     a.b.a + b.c.b + c.d.c + d.e.d +  ... 
@@ -391,11 +395,9 @@ None yet found.
 Triolet
 ^^^^^^^
 
-A single octet.
-
 .. topic:: Schema
 
-    A.B.a.A.a.b.A.B
+    (A.B.a.A.a.b.A.B/𝔦 :sub:`4`)
 
 **References**
 
@@ -407,8 +409,6 @@ A single octet.
 Virelai
 ^^^^^^^
 
-TODO 
-
 .. topic:: Schema (Ancien)
     
     a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... 
@@ -416,7 +416,7 @@ TODO
 .. topic:: Schema (Nouveau)
 
     A.B.
-
+    
     TODO
 
 **References**
@@ -428,8 +428,6 @@ TODO
 
 Villanelle
 ^^^^^^^^^^
-
-Five tercets followed by a quadtrain envoi.
 
 .. topic:: Schema 
 
