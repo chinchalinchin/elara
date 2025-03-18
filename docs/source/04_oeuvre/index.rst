@@ -13,6 +13,7 @@ Oeuvre
    pantoums/index
    poems/index
    rondeaus/index
+   sonnets/index
    triolets/index
    villanelles/index
    

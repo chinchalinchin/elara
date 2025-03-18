@@ -14,16 +14,16 @@ Given below are existing definitions of poetical devices.
 .. topic:: Definition: Feet
     
     - Iamb: One unstressed syllable followed by a stressed syllable.
-    - Spondee: A stressed syllable concatenated with a stressed syllable. Employed to slow down the pace of a line.
-    - Dactyl: A stressed syllable concatenated with two unstressed syllables. Employed to create a sense of falling or release.
-    - Trochee: A stressed syllable concatenated with an unstressed syllable. Employed to emphasize urgency or directness.
-    - Anapest: TODO 
+    - Spondee: A stressed syllable followed by a stressed syllable. Employed to slow down the pace of a line.
+    - Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.
+    - Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.
+    - Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.
 
 .. topic:: Definition: Lines
 
-    - Tetrameter: A line with four iambs.
-    - Pentameter: A line with five iambs
-    - Trimeter: A line with three iambs
+    - Tetrameter: A line with four feet.
+    - Pentameter: A line with five feet.
+    - Trimeter: A line with three feet.
     - Hendecasyllable: A line consisting of eleven syllables. 
 
 .. topic:: Definitions: Stanzas
@@ -47,7 +47,7 @@ Given below are existing definitions of poetical devices.
 7. The lowercase Fraktur letter 𝔰 is reserved for spondees. 
 8. The lowercase Fraktur letter 𝔞 is reserved for anapests.
 9. The lowercase Fraktur letter 𝔡 is reserved for dactyls.
-10. The mathematical symbol ∅ is reserved for pauses. 
+10. The mathematical symbol ∅ is reserved for the pause (caesura). 
 11. The ampersand & represents blank newlines. 
    
 **Variables**
@@ -89,7 +89,7 @@ The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. Fo
 5. x:y (**Delimitation**): Delimited signs.
 6. x ∨ y (**Disjunction**): A sign that is either x or y.
 7. x + y (**Separation**): Separated signs.
-8. x∝λ : Sign line containing a word. 
+8. x∝λ : Sign containing a word. 
 9. x(λ) : A sign ending in a word.  
 10. (λ)x: A sign beginning with a word. 
 11. x(π): A sign ending in a syllable.
@@ -165,10 +165,6 @@ a.b.[b ∨ a]
     a/𝔵 :sub:`n` denotes a line in 𝔵 n-meter. 
 
 For example, 
-
-    (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
-
-Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. Note in this example the first and third line rhyme. For example, 
 
     (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
 
@@ -261,13 +257,11 @@ Ottava
 
     a.b.a.b.c.c.d.d
 
-Each line in a *ottava siciliana* or *strambotto* is a Hendecasyllable.
+Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
 .. topic:: Schema (ottava rima)
 
-    a.b.a.b.a.b.c.c
-
-Each line in a *ottava rima* is typically in iambic pentameter. 
+    (a.b.a.b.a.b.c.c/𝔦 :sub:`5`)
 
 **References**
 
@@ -280,7 +274,7 @@ Pantoum
 
 .. topic:: Schema
 
-   A.B.C.D + B.E.D.F + E.G.F.H + ...
+   A.B.C.D + B.E.D.F + E.G.F.H + ... + x.y.C.A
 
 **References**
 
@@ -331,6 +325,12 @@ The following diagrams shows the different schemata for the rondeau form duing t
     2. Rondeau Prime: R-a.b.b.a.a.b.R + a.b.b.a.R
     3. Rondeau: R-a.a.b.b.a.b.R + a.a.b.R + a.a.b.b.a.R
 
+**Roundel**
+
+.. topic:: Roundel Schema 
+
+    a.b.a.R + b.a.b + a.b.a.R 
+
 **References**
 
 - `In Flanders Fields <https://www.poetryfoundation.org/poems/47380/in-flanders-fields>`_, John McCrae
@@ -351,7 +351,7 @@ Six sestets followed by a tercet envoi.
    u(ε).v(γ).w(β).x(ζ).y(α).z(δ) +
    u(δ).v(ε).w(α).x(γ).y(ζ).z(β) +
    u(β).v(δ).w(ζ).x(ε).y(γ).z(α) + 
-   x.y.z
+   [u∝α.v∝β.w∝γ] ∨ [u∝γ.v∝δ.w∝ε] ∨ [u∝ζ.v∝β.w∝δ]
 
 **References**
 
@@ -369,12 +369,13 @@ Sonnet
    
 .. topic:: Schema (Shakespearan)
 
-   a.b.a.b + c.d.c.d + e.f.e.f + g.g 
+   (a.b.a.b + c.d.c.d + e.f.e.f + g.g/𝔦 :sub:`5`)
 
 **References**
 
 - `Batter My Heart, Three Person'd God <https://www.poetryfoundation.org/poems/44106/holy-sonnets-batter-my-heart-three-persond-god>`_, John Donne
 - `Death Be Not Proud <https://www.poetryfoundation.org/poems/44107/holy-sonnets-death-be-not-proud>`_, John Donne
+- `On the Grasshoper and Cricket <http://keats-poems.com/on-the-grasshopper-and-cricket/>`_, John Keats
 - `When I Have Seen By Times Fell Hand Defac'd <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_, William Shakespeare
 
 .. _terza:

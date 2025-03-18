@@ -9,10 +9,11 @@ Sonnets
    
 .. topic:: Schema (Shakespearan)
 
-   a.b.a.b + c.d.c.d + e.f.e.f + g.g
-
+   (a.b.a.b + c.d.c.d + e.f.e.f + g.g/𝔦 :sub:`5`)
+   
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    00
+   01

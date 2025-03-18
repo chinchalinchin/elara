@@ -428,7 +428,7 @@ Odes
 |       Dream within hidden coves.
 | 
 | Each yields in retreat what they claim in Spring.
-| But no you, oh Heron!
+| But not you, oh Heron!
 |       Not you, oh hunter Grey!
 | Stalk low over drift of snow
 |       With coiled neck of spear,
@@ -454,8 +454,96 @@ Odes
 |       And robin eggs of fay,
 | Then autumn with the crow 
 |       And pumpkin in the brush
-| But winter makes but one
+| Yet winter makes but one
 |       The mighty Heron Grey. 
+
+**III: The Unicode Ode**
+
+| [[💃 ∪ 🕺] ∩  🎶 ] ∝ ⏳ 𝆒 #
+| 
+| [🫀 ∧ 🧠 ∧ 🫁] ↔ [💬 ∧ 💭 ∧ 💘] 
+| [🫀 ≠ 💘] ∧ [🧠 ≠ 💭] ∧ [🫁 ≠ 💬]
+| 
+| ∀ 👁️ ∈ 😍 :  Σ 👁️ =  🎯(🔥)
+| 
+| ⏳ 𝄞 🌹 🕰️ 🌹 𝄞 ⌛
+| 🌕 🎶 🌖 🎵  🌗 𝅝𝅥 🌘 ∅ 🌑
+|
+| 😨 + 🚑 → 😱 + 🩺 → 💀 + 🪦
+| 🥀 → 🌧️ + 🌱 = 😭 + 💭(💃 ∪ 🕺) + 🚪
+|
+| 🪞(🌀(🌀(🌀(🌀(🌀))))) → 🕊️(🕰️)
+
+.. _sonnets:
+
+Sonnets
+-------
+
+**I: You as a Sonnet**
+
+| Should your hand force from mine a single choice 
+| To compare our love to a tome of lore,
+| A summer day, rose, moon, or chorus voice,
+| Just one spans your width, oh, the metaphor.
+|
+| You are as the as from the like to like,
+| The circle stretching from each pole to pole.
+| You are the lack between the shriek and shrike,
+| The parts which string in thought your essence whole.
+|
+| Awake, I cannot be but to find you
+| In empty room, in meadow or in dream;
+| You are the point of every moment true,
+| Gem inlaid by plan into every scheme.
+|
+| So if this choice to me tonight you bring
+| I shall choose to make of you everything.
+
+**II: Song for the Demented**
+
+| There are but few who taste the hemlock blue,
+| Fortune finds those who swing from noose and nail;
+| With minute gone they follow through in queue,
+| Spared the with'ring touch of Time's fingers pale. 
+| 
+| If a choice it has, Time will stalk the mind, 
+| Steady quick but not so fast to spook its prey;
+| Every hunter knows fright will taint the find. 
+| Slow in step, it bides itself from day to day. 
+| 
+| Oh, Memory! Jigsaw tower of self!
+| How easily you crumble with a tap!
+| Time takes but one book from a shelf
+| And in a pile leaves you upon his lap. 
+| 
+| A stranger each face becomes through the glass,
+| Each ageless moment til you breath your last. 
+
+.. _rondeaus:
+
+Rondeaus
+--------
+
+**I: The Winter Rondeau of Cumberland**
+
+| City of the Queen, wove from ancient thread,
+| Strung with snow trails of spotted fawn and sled,
+| Drape the hillside in winter's white ermine, 
+| Pray to sleep the flock from steeple shrine,
+| Feast on the harvest, though the queen is dead 
+| Her spirit flies in death, descends to shine 
+|               On the fair City of the Queen. 
+|
+| From tower bell, rivers rose with tears shed
+| But her resting stone etched her last design
+|               for the grand City of the Queen. 
+| 
+| Where the roads of black ebb to bricks of red
+| Where hoof and rubber meet the twines of tread 
+| There along mountain tops soft trimm'd by pine
+| There grows a flower from heights of steep incline
+| Planted by tender hands unseen to spread
+|                     Into the City of the Queen.
 
 .. _verse:
 
@@ -578,85 +666,6 @@ Verse
 | Climbing ever higher towards the syncopated gates of Am
 | Where for royal cloaks their burning tatters are exchanged.
 
-**Couplet Crimes**
-
-| First - The Haystruck Head
-|
-| In a distant future, where rhyming is a crime,
-| Each metered sentence sentenced an irony of kinds,
-| To be what is to be condemned,
-| No finer end on offer.
-|
-| And so our plaintiff finds himself, facing legal tempers,
-| "Please explain these zippered little slippers?
-| What treason to dress
-| In these flat black slacks
-| Upon your thighs which lie?"
-|
-| In his defense, "No finer mind could scarce divine
-| An outfit stitched in nothing, where words find lines,
-| Despite my time, where threadbare seams
-| Sewn inlaid dreams, in threads of no design!"
-|
-| With a guffaw, a lawyer stands with a score of schooling,
-| Slams his hands in mock remand, and argued such while drooling,
-| "So you admit to this wit
-| With which your garb comports?
-| Such deviance detailed in resounding writ,
-| Seals itself in immediate retort."
-|
-| The court strikes twelve, the twelve struck dead,
-| They find in haystruck head a verdict over-muted,
-| Which lolls and gags in city courtyards putrid,
-| Teeth click-clacking like stark didacts
-| Preaching to the bricks and blackness.
-|
-| Second - Poets Et Al
-|
-| The last ones were hunted in places they waxed poetic
-| Across windswept fields, of forest clearings, in gardens copacetic,
-| Yet for all of it, the tresses dressed in such lovely roses picked.
-| The final rhyming couplets vied with the hounds bark brayed
-| Encircled in arms, they died swift in circled stages:
-|
-| First went the Romantics, and love was lost.
-| Then went the Stoics, and naught was crossed.
-| Then went the Classics, but no one missed them.
-| Next were the Playwrights and Poets Et Al,
-| Any one fool who answered the echoed call.
-|
-| Twelve nights they burned, twelve nights we wept,
-| And then dreamless dreaming through the future we slept,
-| Awoke and found a sudden desire expired,
-| No more urge to imbue,
-| To scatter and subdue,
-| That which words clearly defy, the rhyming rhythm
-| In which life resides.
-|
-| Constitutions were written to codify:
-| Kill all the poets, let poetry die.
-| Return it again
-| The rooted treasure they had looted.
-|
-| Third - Ignore the Metaphor
-|
-| Watch as child to child between each haloo
-| Hear the scattered echoes retreat and ensue.
-| In this land of rhymeless ribbons, rhythm still is found.
-| In the hamlets of branded outlaws each system such begets,
-| Observe in silent moments poetry's fiery signets:
-| 
-| (Awake, flowers, tower higher every hour.
-| Find, sentence, a sense of unending suspense.
-| Sleep, children, with dreams of subtle schemes.
-| Revel, rhymes, you are more than merely vessels.)
-|
-| How to ignore the metaphor 
-| And resist the urge to write?
-| A deadly sin
-| But without skin,
-| What games can we be had? 
-
 **ό ποιητα, ἢ πῖθι ἢ ἄπιθι**
 
 | I
@@ -745,30 +754,6 @@ Verse
 | Each fiber of moment knotted deftly in truss,
 | Take hand and guide as though only you and I trust,
 | Do what we will to balance what our world must.
-
-**The Three Annas of Pygmalion**
-
-| Sweet Susanna sees sculptures standing still,
-| Lovely looks let loose like luted lilting ladies,
-| Forgotten faces formed for flocking friends.
-| Hardly harried, her hearts hinges here
-| Towards the towering testament there.
-| 
-| Dreary Diana does drammatically declare:
-| Ancient ages ago, all aesthetes acceded
-| Bedrock beauty broken before brimstone
-| Cannot contain currents coursing clearly
-| Where water wanes with wizened weary!
-|
-| Hale Hannah, how her head hurts hearing her!
-| She says: Stop such so simplicity survives!
-| Tersely tossed to thrash the thinking,
-| Everything ere enshrined echoes everything!
-|
-| I, impressed, implored impresario in inquisitive ink
-| To trade the trick to tack together three
-| Annas' absolute and alluring allegory,
-| Sculptures singing so scrupulously.
 
 **Kingdoms**
 
