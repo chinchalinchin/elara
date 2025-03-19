@@ -459,20 +459,30 @@ Odes
 
 **III: The Unicode Ode**
 
-| [[💃 ∪ 🕺] ∩  🎶 ] ∝ ⏳ 𝆒 #
-| 
+| 🧍‍♀️ ∥ 🍀 ∥ 🎲 ∥ 🔮 ∥ 🎲 ∥ 🍀 ∥🧍‍♂️
+| 🎻-👗-👠 ≈ 😬 ≈ 👞-👔-🎻
+| 🌙 ⊥ [∞] {🌹, 🥂, 🍝,🕯️} [∞] ⊥ ✨
+| [[💃 ∪ 🕺] ∩  🎼 ] ∝ ⏳ 𝆒 #  
+|
 | [🫀 ∧ 🧠 ∧ 🫁] ↔ [💬 ∧ 💭 ∧ 💘] 
 | [🫀 ≠ 💘] ∧ [🧠 ≠ 💭] ∧ [🫁 ≠ 💬]
+| ∀ 👁️ ∈ 😍 : Σ 👁️ =  🎯(🔥)
+| ∃ 💋 ∈ 😘 : 🌍 ⊂ 💋
 | 
-| ∀ 👁️ ∈ 😍 :  Σ 👁️ =  🎯(🔥)
+| ⏳ ⊥ [𝄞] {🌹, 🕰️, 🌹} [𝄞] ⊥ ⌛
+| 🌕-🎶-🌖-🎵-🌗-𝅝𝅥-🌘-∅-🌑
+|
+| 🏃-💭-🌳 ... 🏃-💭-🏡 ... 🏃-💭-🏥 
+| 🍀(😨 + 🚑 → 😱 + 🩺 → 💀 + 🪦)
+| 🥀 → 🌧️ + 🌱 = 😭 + 💭(💃 ∪ 🕺) + 🕸️
+| 🚶-💭-🍃 ... 🚶-💭-🔔 ... 🚶-💭-⛪
 | 
-| ⏳ 𝄞 🌹 🕰️ 🌹 𝄞 ⌛
-| 🌕 🎶 🌖 🎵  🌗 𝅝𝅥 🌘 ∅ 🌑
-|
-| 😨 + 🚑 → 😱 + 🩺 → 💀 + 🪦
-| 🥀 → 🌧️ + 🌱 = 😭 + 💭(💃 ∪ 🕺) + 🚪
-|
+| 💭([💃 ∪ 🕺] - 💃  ≠  🕺)
+| 💭([💃 ∪ 🕺] - 💃 ⊂ 💃)
+| 💤(💃(🔥) → 💘(🎼))
 | 🪞(🌀(🌀(🌀(🌀(🌀))))) → 🕊️(🕰️)
+| 
+| 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 # 
 
 .. _sonnets:
 
@@ -518,6 +528,26 @@ Sonnets
 | 
 | A stranger each face becomes through the glass,
 | Each ageless moment til you breath your last. 
+
+**III: Sonnet to Cumberland**
+
+| City seams bay beside from time accrued
+| Into west rushing streams of concrete flow,
+| Rushed through forest and then skyward off flew,
+| Met on mount top a steeple cloaked in snow
+| 
+| Braced upon the Appalachian spine
+| Where Time stands in silence devoutly still,
+| Watch what sprouts in shoots through shouldered pine
+| As from houses empty crowds through street to mill
+|
+| Through hand from hand the levels rise at pace
+| To brick from brick the buildings blossom red
+| Against the westward wall in flood's embrace
+| Where in lips at last lyric words are thread!
+| 
+| Let skyline mark where tide in climb was broke:
+| Steeple, roof, needles pine and leaves of oak. 
 
 .. _rondeaus:
 
