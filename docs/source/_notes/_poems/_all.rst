@@ -531,20 +531,18 @@ Sonnets
 
 **III: Sonnet to Cumberland**
 
-| City struts by bay side from time accrue
+| City struts by bay side through time accrue
 | Into west rushing streams of concrete flow,
-| Wash through forest then skyward up in spew,
-| Meet on mount top a steeple cloaked in snow
-| 
-| Braced upon the Appalachian spine
+| Sweep the forest then skyward up in spew
+| To meet mount top a steeple cloaked in snow
+| Splashed upon the Appalachian spine
 | Where Time stands in silence devoutly still,
 | Watch what sprouts in shoots through shouldered pine
-| As from houses empty crowds through street to mill
-|
-| Through hand from hand the levels rise at pace
-| To brick from brick the buildings blossom red
+| As from houses empty crowds on street to spill
+| Through hand to hand the layers stacked from base
+| To brick by brick the building blossoms bred
 | Against the westward wall in flood's embrace
-| Where in lips at last lyric words are shed:
+| Where lips at last are wet by watershed:
 | 
 | Let skyline mark where tide in climb was broke,
 | Steeple, roof, needles pine and leaves of oak. 
