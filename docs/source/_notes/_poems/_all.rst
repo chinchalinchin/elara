@@ -494,7 +494,7 @@ Sonnets
 | Should your hand force from mine a single choice 
 | To compare our love to a tome of lore,
 | A summer day, rose, moon, or chorus voice,
-| Just one spans your width, oh, the metaphor.
+| Just one spans your width--oh! The metaphor!
 |
 | You are as the as from the like to like,
 | The circle stretching from each pole to pole.
@@ -531,10 +531,10 @@ Sonnets
 
 **III: Sonnet to Cumberland**
 
-| City seams bay beside from time accrued
+| City struts by bay side from time accrue
 | Into west rushing streams of concrete flow,
-| Rushed through forest and then skyward off flew,
-| Met on mount top a steeple cloaked in snow
+| Wash through forest then skyward up in spew,
+| Meet on mount top a steeple cloaked in snow
 | 
 | Braced upon the Appalachian spine
 | Where Time stands in silence devoutly still,
@@ -544,9 +544,9 @@ Sonnets
 | Through hand from hand the levels rise at pace
 | To brick from brick the buildings blossom red
 | Against the westward wall in flood's embrace
-| Where in lips at last lyric words are thread!
+| Where in lips at last lyric words are shed:
 | 
-| Let skyline mark where tide in climb was broke:
+| Let skyline mark where tide in climb was broke,
 | Steeple, roof, needles pine and leaves of oak. 
 
 .. _rondeaus:
