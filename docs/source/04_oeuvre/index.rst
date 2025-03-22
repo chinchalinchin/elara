@@ -9,6 +9,7 @@ Oeuvre
    :caption: Contents:
 
    ballads/index
+   lyrics/index
    odes/index
    pantoums/index
    poems/index
