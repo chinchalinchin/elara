@@ -533,19 +533,19 @@ Sonnets
 
 | Bay silt in city stone through time accrues
 | towards the western course of concrete flow
-| sweeping from plain to sky in upward spews
+| that sweeps from plain to sky in upward spews
 | as grey-white spray arcs over wave to snow
 | from heights on high to splash on mountain spine
-| where pools valleyed deep rise to drink their fill
+| where valleyed pools so rise to drink their fill
 | and shoot with sprouts through shoulders made of pine
 | the roofs that empty crowds on streets and spill
 | through hand to hand the layers stacked from base
 | to brick by brick til building lillies bred
 | against the westward wall in flood's embrace
-| where lips at last are wet in watershed:
+| where lips at last are wet in watershed;
 |
-| Let skyline mark where tide in climb was broke, 
-| Steeple, roof, needles pine and leaves of oak. 
+| Let skyline mark where tide in climb was broke:
+| Steeple, roof, needles pine and leaves of oak.
 
 .. _rondeaus:
 
@@ -572,6 +572,23 @@ Rondeaus
 | There grows a flower from heights of steep incline
 | Planted by tender hands unseen to spread
 |                     Into the City of the Queen.
+
+.. _lyrics:
+
+Lyrics
+------
+
+I: Wine
+-------
+
+| What flows is not what flows
+|     But wine from sight concealed,
+| Present spoken o'er lips
+|     From barrel cork unsealed. 
+| Agony of moments' time
+|    To pour from heart to lung,
+| Distilled to simple words
+|    In verse's twisted tongue. 
 
 .. _verse:
 
