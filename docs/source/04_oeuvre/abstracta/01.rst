@@ -1,0 +1,73 @@
+II: Schemas
+-----------
+
+.. code-block:: json
+
+    {
+        "world": {
+            "inside": {
+                "subjects": [{
+                    "id": "me",
+                    "time": "now", 
+                    "location": "here",
+                    "atrributes": [
+                        ""
+                    ]
+                },{
+                    "id": "you", 
+                    "time": "gone",
+                    "location": "unknown",
+                    "attributes": [
+                        ""
+                    ]
+                }]
+            },
+            "outside": {
+                "objects": [{
+                    "time": "was",
+                    "location": "there",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "you", 
+                            "thought": ""
+                        }, {
+                            "id": "me", 
+                            "thought": ""
+                        }]
+                    }
+                }, {
+                    "time": "is",
+                    "location": "",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "me", 
+                            "thought": ""
+                        }, {
+                            "id": "me", 
+                            "thought": ""
+                        }]
+                    }
+                }, {
+                    "name": "",
+                    "time": "will",
+                    "location": "where",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "you", 
+                            "thought": ""
+                        }]
+                    }
+                }],
+            },
+            "attributes": [{
+                "id": "",
+                "attribute": "of dualing hearts afire"
+            }, {
+                "id": "",
+                "attribute": ""
+            }]
+        }
+    }

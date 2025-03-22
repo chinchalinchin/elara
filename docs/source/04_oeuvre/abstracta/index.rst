@@ -1,7 +1,7 @@
-.. _odes:
+.. _abstracta:
 
-Odes
-====
+Abstracta
+=========
 
 .. toctree::
    :maxdepth: 2
