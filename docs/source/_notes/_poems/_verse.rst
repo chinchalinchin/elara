@@ -244,16 +244,16 @@
 **An Ode To Autumn**
 
 | Oh! If I could but touch an inch of Autumn
-|       And measure it in feet,
-| I might scale the depths to chart the bottom
+|       And measure Fall in feet,
+| I might scale its depths to chart the bottom
 |       and feel the Winter heat.
 | Alas, no meters mark by foot the path
-|       Through the wooded maze of forest
-|           Where leaves wither like love
+|       Through wooded maze of trees
+|           Where leaves like love wilt
 |               In winded wake of wrath
-|           Falling cruel and dumb
+|           In gusts blown cruel and dumb
 |        To lay at feet to span each foot
-| The dust no clever leaf can but become.
+| The dust each clever leaf here does become.
 |
 | As seasons pass and cast 
 |       My bone layered into stone,
@@ -261,7 +261,7 @@
 |       barrow beneath her loam.
 | Pray not a lover find these shards on shore
 |       I am no edge to skip
-|           On the waves of fancy
+|           Flung upon waves of fancy
 |               But weight sunk under roar
 |           Where, offset, tides will rise
 |       To breach the sodden dike
@@ -270,7 +270,7 @@
 | I was old before I was born
 |           And now the chill sets in    
 | And each breath is the steam
-|           of a Spring waning thin.
+|           of Spring that wanes now thin.
 
 **Ode to the Heron**
 
@@ -314,28 +314,6 @@
 | Yet winter makes but one
 |       The mighty Heron Grey. 
 
-
-**The Winter Rondeau of Cumberland**
-
-| City of the Queen, wove from ancient thread,
-| Strung with snow trails of spotted fawn and sled,
-| Drape the hillside in winter's white ermine, 
-| Pray to sleep the flock from steeple shrine,
-| Feast on the harvest, though the queen is dead 
-| Her spirit flies in death, descends to shine 
-|               On the fair City of the Queen. 
-|
-| From tower bell, rivers rose with tears shed
-| But her resting stone etched her last design
-|               for the grand City of the Queen. 
-| 
-| Where the roads of black ebb to bricks of red
-| Where hoof and rubber meet the twines of tread 
-| There along mountain tops soft trimm'd by pine
-| There grows a flower from heights of steep incline
-| Planted by tender hands unseen to spread
-|                     Into the City of the Queen.
-
 **Wine**
 
 | What flows is not what flows
@@ -358,6 +336,23 @@
 |    Of hint of sought intent,
 | But flavor cannot capture
 |    What truly palette meant.
+
+**Sunday Ghosts**
+
+| On Sunday morning drive forlorn
+|   To mountain cemetery,
+| From black of road there rose the mists
+|   To west where winds carry. 
+| The ghosts the ground have failed to keep
+|   Where earth lay bare through tar,
+| Where oaks and willows reach to weep
+|   But watch aghast afar. 
+| Decades through pores now poured in droves
+|   As over them I drove,
+| Their grasping tongues of fog unfurled,
+|   With craft a road they wove.
+| Until no longer did I drive but flee
+|   From lane of memory. 
 
 **You as a Sonnet**
 
