@@ -8,6 +8,7 @@ Oeuvre
    :maxdepth: 2
    :caption: Contents:
 
+   abstracta/index
    ballads/index
    lyrics/index
    odes/index
@@ -17,4 +18,3 @@ Oeuvre
    sonnets/index
    triolets/index
    villanelles/index
-   
