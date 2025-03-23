@@ -8,4 +8,3 @@ Abstracta
    :caption: Contents:
 
    00
-   01

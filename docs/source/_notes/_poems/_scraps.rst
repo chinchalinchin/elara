@@ -1,13 +1,6 @@
 Ainsley Dupree, it pains me to see
 Your talent spread thin over years
 
-
-Flower rows crossed by unending flower rows
-
-Placed upon his brow a crown of myrtle
-
-
-
 The Sickness
 ------------
 
@@ -283,3 +276,157 @@ III: Entrendres
 | Can be found in present acts. 
 | Rhyming love can be annoying
 | From the life you are enjoying. 
+
+Untitled Something
+------------------
+
+| Of timeless things beware:
+|       In time they are deployed.
+| Each time with timeless care,
+|       In time they are destroyed.
+| No emperor or clown 
+|       Hath heard this bird once sing,
+| For history had not
+|       The eyes to see its wing.
+| Engine whine deep through night,
+|      When cities haunt the stars.
+| Ahead a stretch of road 
+|      With not one sign of cars.
+| To press the gas and hear
+|      The pistons roar with rage,
+| Closer to heaven's gate
+|     Than song of bird in cage.
+
+II: Schemas
+-----------
+
+.. code-block:: json
+
+    {
+        "world": {
+            "inside": {
+                "subjects": [{
+                    "id": "me",
+                    "time": "now", 
+                    "location": "here",
+                    "atrributes": [
+                        ""
+                    ]
+                },{
+                    "id": "you", 
+                    "time": "gone",
+                    "location": "unknown",
+                    "attributes": [
+                        ""
+                    ]
+                }]
+            },
+            "outside": {
+                "objects": [{
+                    "time": "was",
+                    "location": "there",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "you", 
+                            "thought": ""
+                        }, {
+                            "id": "me", 
+                            "thought": ""
+                        }]
+                    }
+                }, {
+                    "time": "is",
+                    "location": "",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "me", 
+                            "thought": ""
+                        }, {
+                            "id": "me", 
+                            "thought": ""
+                        }]
+                    }
+                }, {
+                    "name": "",
+                    "time": "will",
+                    "location": "where",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "you", 
+                            "thought": ""
+                        }]
+                    }
+                }],
+            },
+            "attributes": [{
+                "id": "",
+                "attribute": "of dualing hearts afire"
+            }, {
+                "id": "",
+                "attribute": ""
+            }]
+        }
+    }
+
+I: A Youthful Rondeau
+---------------------
+
+| With pockets full of paper, youth has made him bold
+| Stories that they tell him, myths of men grown old,
+| Fall upon his entralled ears without even a receipt
+| And in forgotten failures, every choice will repeat
+| Until in devil dealings, for a meager ounce of gold, 
+| Soul exchanged in secret for a subtler, sweeter meat 
+|                           With pockets full of paper.
+|
+| No need for prophecy when street corners all foretold
+| Every end will make its end with the necessary cold 
+| To find himself outside alone, sleeping on the street 
+|                           With pockets full of paper.
+|
+| So he ends where he begins, from on the stoop extolled
+| The vital wages of his sin, of which virtues to uphold
+| But no one listened, cared not to hear of his conceits
+| So rambling, raving, soul-consumed, he brayed and bleat
+| Until from empty funeral his corpse in coffin rolled
+|                          With pockets full of paper.
+
+
+III: Mourning
+-------------
+
+| Every night is met by morning,
+| Every dawning by the night.
+| Each laugh is secret scorning. 
+| Every night is met by morning.
+| Each hate with love adorning
+| Scales the horizontal heights.
+| Every night is met by morning,
+| Every dawning by the night. 
+
+
+II: Pantoum or Canon
+--------------------
+
+| Bach is dead
+| So they said 
+| Canons fired
+| To ended day 
+|
+| So they said
+| War was here 
+| To ended day 
+| We die there
+|
+| War was here
+| In your home 
+| We die there
+| In our hands 
+|
+| In your home
+| Piano played 
+| Canons fired 
+| Bach is dead 
