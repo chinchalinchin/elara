@@ -8,8 +8,8 @@ Tractatus
 
 - :ref:`a priori <a-priori-a-posteriori>`: Knowledge that precedes experience.
 - :ref:`a posteriori <a-priori-a-posteriori>`: Knowledge that arises through experience.
+- :ref:`being`: What is. 
 - :ref:`bedeutung`: That to which a name refers. 
-- :ref:`dasein`: A being that by being is concerned with being.
 - :ref:`form`: TODO
 - :ref:`language`: TODO
 - :ref:`noumena`: TODO
