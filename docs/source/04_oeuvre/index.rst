@@ -10,6 +10,7 @@ Oeuvre
 
    abstracta/index
    ballads/index
+   elegies/index
    lyrics/index
    odes/index
    pantoums/index

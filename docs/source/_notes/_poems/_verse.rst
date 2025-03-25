@@ -1,4 +1,4 @@
-| Oh! If I could but touch an inch of Autumn
+| Oh! If I could touch an inch of Autumn
 |       And measure Fall in feet,
 | I might scale its depths to chart the bottom
 |       and feel the Winter heat.
@@ -16,15 +16,15 @@
 |       barrow beneath her loam.
 | Pray not a lover find these shards on shore
 |       I am no edge to skip
-|           Flung over waves of fancy
-|               But weight sunk under roar
+|           Atop the waves of fancy
+|               But under weight sunk roar
 |           Where, offset, tides will rise
 |       To breach the sodden dike
 | And drown with wave the lazing lovers' sigh.
 |
-| I was born old and grim
-|           And now the chill sets in    
-| And each breath is the steam
+| To life I came already old and grim
+|           But now the chill sets in;    
+| Each breath in gasp dispels to steam
 |           of Spring now waning thin.
 
 ---
@@ -230,11 +230,38 @@
 |    and blew the trumpet loud;
 | Who called to you from great beyond
 |    to tend this court of cloud?
+| What sight will see your silent state
+|    which spans expanse in dark?
+| What ears will hear your solid plea
+|    which leaves in naught its mark?
 | What moment did you rise to life? 
-|    What second do we praise? 
+|    What second do we praise?
 | Your source, like form, is hidden close
 |    In foggy, timeless haze. 
 | In tracing back your tangled threads
 |     they twine around and spool;
 | Each point begins with points before
 |     Always as if by rule. 
+
+---
+
+| Newspaper read by death's grey bed,
+| I told a story both green and true
+| Of city bricks stacked proud and red
+| Of silver paths the stars imbue
+| With golden hue we might have tread.
+| Your breath though blows now cold and blue.
+|
+| I spoke the words to yellow skin
+| And told of days in white to come.
+| Your mouth, with specks of purple grin,
+| And fingers stretched so pale and numb,
+| My name, you said, so clear, so thin--
+| With final grasp, in black succumbs.
+| 
+| Oh--Father, Father--bronze horns blare!
+| You string your harp with copper thread
+| And leave in me this slate despair!
+| What crystal tears in eyes now shed?
+| What pearl is formed by sightless stare?
+| What platinum found in prayers pled? 
