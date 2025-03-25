@@ -118,7 +118,7 @@ Let
     4. α = ζ{ω-}
     5. β = ζ{ω+} 
 
-By Theorem 2.2.4 (Λ(ζ) ≥ 1), step 2 and by :ref:`Definition 4.1.1 <definition-4-1-1>`1, there are two possible cases to consider,
+By Theorem 2.2.4 (Λ(ζ) ≥ 1), step 2 and by :ref:`Definition 4.1.1 <definition-4-1-1>` , there are two possible cases to consider,
 
 **Case 1**: Λ(ζ) = 1
 
@@ -154,7 +154,7 @@ By Definition 1.1.7 of Containment, a String is contained in itself (i.e. let *f
 
 **Case 2**: Λ(ζ) > 1 and ζ[ω(ζ)] = σ
 
-Using :ref:`Definition 4.1.1 <definition-4-1-1>`1, Let 
+Using :ref:`Definition 4.1.1 <definition-4-1-1>` , Let 
 
     14. ζ{ω-} = α:sub:`j`
     
@@ -199,36 +199,36 @@ Take the inverse of both sides of step 22 and apply Theorem 1.2.5 repeatedly,
 
 TODO: need some way to relate the pivots of sigma-reduction to original pivots!
 
-.. admonition:: TODO
+.. admonition:: TODO (Notes!)
 
     **Theorem: The Perfect Pivot Postulate**
 
-    ζ ∈ PP ↔ [∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:`s` α) ∧ (α ∈ R) ] ∨ (ζ[ω(ζ)] = σ)
+    ζ ∈ PP ↔ [∃ α ∈ L: (ζ[ω(ζ)] ⊂ :sub:`s` α) ∧ (α ∈ R) ] ∨ (ζ[ω(ζ)] = σ)
 
-    Proof:
+    **First Pass Notes**
 
     (→)  Assume ζ ∈ PP (ζ is a Perfect Palindrome).
 
     Word-level representation: Let W:sub:ζ = (α₁ , α₂ , ..., αₙ) be the Word-level representation of ζ, where n = Λ(ζ).
 
-    Pivot: Let ω:sub:ζ be the Pivot of ζ. There are two cases:
+    Pivot: Let ω :sub:`ζ` be the Pivot of ζ. There are two cases:
 
-    Case 1: ω:sub:ζ = σ (Delimiter Pivot). In this case, the condition (ω:sub:ζ = σ) is satisfied, and the right-hand side of the biconditional is true.
+    Case 1: ω :sub:`ζ` = σ (Delimiter Pivot). In this case, the condition (ω :sub:`ζ` = σ) is satisfied, and the right-hand side of the biconditional is true.
 
-    Case 2: ω:sub:ζ ≠ σ (Non-Delimiter Pivot).
+    Case 2: ω :sub:`ζ` ≠ σ (Non-Delimiter Pivot).
 
     In this case, the Pivot is a Character within a Word. Let k be the index such that αₖ contains ω:sub:ζ.
     Since ζ is a Perfect Palindrome, by :ref:`Definition 4.1.1 <definition-4-1-1>`, ζ = inv(ζ).
     This implies that the Word αₖ is symmetrical around the Pivot Character ω:sub:ζ.
-    Therefore, αₖ must be a Reflective Word (αₖ ∈ R), and ω:sub:ζ ⊂:sub:s αₖ.
-    This satisfies the condition [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ].
+    Therefore, αₖ must be a Reflective Word (αₖ ∈ R), and ω :sub:`ζ` ⊂ :sub:`s` αₖ.
+    This satisfies the condition [∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R) ].
     In both cases, the right-hand side of the biconditional is true.
 
-    (←) Assume [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ).
+    (←) Assume [∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R) ] ∨ (ω:sub:`ζ` = σ).
 
     Cases: There are two cases to consider:
 
-    Case 1: ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R).
+    Case 1: ∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R).
 
     This means the Pivot Character is contained within a Reflective Word α.
     Since α is Reflective, it is symmetrical around its center, which includes the Pivot Character.
@@ -242,18 +242,13 @@ TODO: need some way to relate the pivots of sigma-reduction to original pivots!
 
     Since we have proven both directions of the implication, the theorem is established:
 
-    ζ ∈ PP ↔ [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ) ∎
+    ζ ∈ PP ↔ [∃ α ∈ L: (ω :sub:`ζ` ⊂:sub:`s` α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ) ∎
 
-
-
-
-    Reformulation of the Theorem:
+    **Second Pass**
 
     Let's first slightly reformulate the theorem to make it even clearer and more precise:
 
-    Theorem 3.2.4:
-
-    ζ ∈ PP ↔ [ (∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:s α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ (inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω)) ]
+    ζ ∈ PP ↔ [ (∃ α ∈ L: (ζ[ω(ζ)] ⊂ :sub:`s` α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (inv(α :sub:`ζ` :sup:`-ω`) ⊂ :sub:`s` α :sub:`ζ` :sup:`+ω`) ∨ (inv(α :sub:`ζ` :sup:`+ω`) ⊂ :sub:`s` α :sub:`ζ`:sup:`-ω`)) ]
 
     Translation: A sentence ζ is a perfect palindrome if and only if one of the following conditions holds:
 
@@ -267,22 +262,33 @@ TODO: need some way to relate the pivots of sigma-reduction to original pivots!
     Assume ζ ∈ PP.
 
     Definition of Perfect Palindrome: By :ref:`Definition 4.1.2 <definition-4-1-2>`, ζ = inv(ζ).
+    
     Case 1: ζ[ω(ζ)] = σ:
-    If the character at the pivot is a delimiter, then by the Second Inverse Postulate , we know that ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ).
+    
+    If the character at the pivot is a delimiter, then by the Second Inverse Postulate , we know that ( inv(α:sub:ζ:sup:-ω) ⊂ :sub:`s` α :sub:`ζ` :sup:`+ω`) ∨ ( inv(α :sub:`ζ` :sup:`+ω`) ⊂ :sub:`s` α :sub:`ζ` :sup:`-ω` ).
     Case 2: ζ[ω(ζ)] ≠ σ:
+
     If the character at the pivot is not a delimiter, then it must belong to a word.
+
     By Axiom S.2, we know there's at least one word α in ζ.
+    
     Since ζ is a perfect palindrome, and the pivot character is not a delimiter, the pivot must lie within a word.
-    Let α be the word such that (x, α) ∈ W:sub:ζ, and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
+    Let α be the word such that (x, α) ∈ W :sub:`ζ`, and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
+    
     Since ζ is a perfect palindrome, α must be a reflective word (α ∈ R), because any word that spans across the pivot in a perfect palindrome must be its own inverse.
-    Also, since ω(ζ) is within the indices of α, we know that ζ[ω(ζ)] ⊂:sub:s α.
+
+    Also, since ω(ζ) is within the indices of α, we know that ζ[ω(ζ)] ⊂ :sub:`s` α.
+
     (←) Direction:
 
-    Assume [(∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:s α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω ))].
+    Assume [(∃ α ∈ L: (ζ[ω(ζ)] ⊂ :sub:`s` α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ ( inv(α :sub:`ζ` :sup:`-ω`) ⊂ :sub:`s` α :sub:`ζ` :sup:`+ω`) ∨ ( inv(α :sub:`ζ` :sup:`+ω` ) ⊂ :sub:`s` α :sub:`ζ` :sup:`-ω` ))].
 
-    Case 1: ∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:s α) ∧ (α ∈ R)
+    Case 1: ∃ α ∈ L: (ζ[ω(ζ)] ⊂ :sub:`s` α) ∧ (α ∈ R)
+
     If there exists a reflective word α in L that contains the character at the pivot, then ζ must be a perfect palindrome. This is because the presence of a reflective word spanning the pivot implies symmetry around the pivot, which is the defining characteristic of a perfect palindrome.
-    Case 2: ζ[ω(ζ)] = σ ∧ ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω )
+
+    Case 2: ζ[ω(ζ)] = σ ∧ ( inv(α :sub:`ζ` :sup:`-ω` ) ⊂ :sub:`s` α :sub:`ζ` :sup:`+ω` ) ∨ ( inv(α :sub:`ζ` :sup:`+ω` ) ⊂ :sub:`s` α :sub:`ζ`:sup:`-ω` )
+
     If the character at the pivot is a delimiter and either the inverse of the left pivot word is contained in the right pivot word or vice versa, then ζ must be a perfect palindrome. This is because the delimiter at the pivot, combined with the containment relationship between the pivot words, ensures symmetry around the pivot.
     Conclusion:
 
@@ -290,20 +296,20 @@ TODO: need some way to relate the pivots of sigma-reduction to original pivots!
 
     Therefore:
 
-    ζ ∈ PP ↔ [ (∃ α ∈ L: (ζ[ω(ζ)] ⊂:sub:s α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ ( inv(α:sub:ζ:sup:-ω) ⊂:sub:s α:sub:ζ:sup:+ω) ∨ ( inv(α:sub:ζ:sup:+ω) ⊂:sub:s α:sub:ζ:sup:-ω )) ]
+    ζ ∈ PP ↔ [ (∃ α ∈ L: (ζ[ω(ζ)] ⊂ :sub:`s` α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ ( inv(α :sub:`ζ` :sup:`-ω`) ⊂ :sub:`s` α :sub:`ζ` :sup:`+ω` ) ∨ ( inv(α :sub:`ζ` :sup:`+ω` ) ⊂ :sub:`s` α :sub:`ζ` :sup:`-ω` )) ]
 
     ∎
 
-
-
+    **Third Pass**
 
     Theorem 3.2.4:
 
-    ∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α:sub:ζ:sup:-ω ∈ I))
+    ∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α :sub:`ζ` :sup:`-ω` ∈ I))
 
     Translation: For every perfect palindrome ζ, either:
 
     There exists a word α in the language L such that the character at the pivot index ω(ζ) is contained in α, and α is a reflective word (α ∈ R), OR
+
     The character at the pivot index ω(ζ) is a delimiter (σ), and the left pivot word is invertible (α:sub:ζ:sup:-ω ∈ I).
     Proof:
 
@@ -313,70 +319,90 @@ TODO: need some way to relate the pivots of sigma-reduction to original pivots!
 
     Cases based on Parity: We have two cases to consider:
 
-    Case 1: ζ has odd length (ζ ∈ P:sup:-)
+    Case 1: ζ has odd length (ζ ∈ P :sup:`-` )
+
     By Theorem 3.2.3, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ):]). This means the pivot falls on a character, ζ[ω(ζ)].
+
     Subcase 1: ζ[ω(ζ)] ≠ σ
-    Since ζ[ω(ζ)] is not a delimiter, it must belong to a word. By Axiom S.1, there exists a word α in L such that α is contained in ζ. Since the pivot character is not a delimiter, it must be part of a word in ζ. Let α be the word such that (x, α) ∈ W:sub:ζ and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
+    
+    Since ζ[ω(ζ)] is not a delimiter, it must belong to a word. By Axiom S.1, there exists a word α in L such that α is contained in ζ. Since the pivot character is not a delimiter, it must be part of a word in ζ. Let α be the word such that (x, α) ∈ W :sub:`ζ` and ω(ζ) is within the indices of the characters of α in the character-level representation of ζ.
+
     Since ζ is a perfect palindrome, and ω(ζ) is the pivot, this word α must be reflective (α ∈ R). Otherwise, the characters in ζ would not be symmetrical around the pivot, and ζ wouldn't be a perfect palindrome.
+    
     Therefore, ∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R).
+    
     Subcase 2: ζ[ω(ζ)] = σ
-    Since the pivot character is a delimiter, by Theorem 3.2.3, we know that inv(α:sub:ζ:sup:-ω) ⊂ α:sub:ζ:sup:+ω or inv(α:sub:ζ:sup:+ω) ⊂ α:sub:ζ:sup:-ω.
+    
+    Since the pivot character is a delimiter, by Theorem 3.2.3, we know that inv(α :sub:`ζ`:sup:`-ω`) ⊂ α :sub:`ζ` :sup:`+ω` or inv(α :sub:`ζ` :sup:`+ω` ) ⊂ α :sub:`ζ` :sup:`-ω` .
+
     Since ζ is a perfect palindrome, we have ζ = inv(ζ). This means the words to the left and right of the pivot must be inverses of each other.
-    Therefore, α:sub:ζ:sup:-ω = inv(α:sub:ζ:sup:+ω).
-    Since α:sub:ζ:sup:+ω is in L, and α:sub:ζ:sup:-ω is its inverse, by definition of invertible words, α:sub:ζ:sup:-ω ∈ I.
-    Case 2: ζ has even length (ζ ∈ P:sup:+)
+
+    Therefore, α :sub:`ζ` :sup:`-ω` = inv(α :sub:`ζ` :sup:`+ω` ).
+    
+    Since α :sub:`ζ` :sup:`+ω` is in L, and α :sub:`ζ` :sup:`-ω` is its inverse, by definition of invertible words, α :sub:`ζ` :sup:`-ω` ∈ I.
+    
+    Case 2: ζ has even length (ζ ∈ P :sup:`+`)
+
     By Theorem 3.2.4, l(ζ[:ω(ζ)]) = l(ζ[ω(ζ) + 1:]) + 1. This means the pivot falls between two characters.
+
     Since ζ is a perfect palindrome, the two characters adjacent to the pivot must be identical (because ζ = inv(ζ)).
+    
     By Axiom W.1, these characters cannot be delimiters. Thus, they must belong to a word α that spans across the pivot.
+    
     Similar to Case 1, this word α must be reflective (α ∈ R) for ζ to be a perfect palindrome.
+    
     Since the two characters adjacent to the pivot are identical and belong to α, we can say that ζ[ω(ζ)] is "contained" in α in the sense that α spans across the pivot.
+    
     Therefore, ∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R).
+    
     The case where the pivot is a delimiter is covered by our definition of an even-length perfect palindrome.
+    
     Conclusion: In all cases, at least one of the two conditions holds. Since ζ was an arbitrary perfect palindrome, we can generalize:
 
-    ∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α:sub:ζ:sup:-ω ∈ I))
+    ∀ ζ ∈ PP: (∃ α ∈ L: (ζ[ω(ζ)] ⊂ α) ∧ (α ∈ R)) ∨ (ζ[ω(ζ)] = σ ∧ (α :sub:`ζ` :sup:`-ω` ∈ I))
+
     This completes the proof. ∎
 
+    **Theorem: The Perfect Parity Postulate**
 
+    **NOTE**: This is wrong as stated, but it contains the grain of something true!
 
-    **Theorem 3.2.5: The Perfect Parity Postulate**
+    ζ ∈ PP ∧ ζ ∈ P:sup:`+` ↔ ∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R)
 
-    ζ ∈ PP ∧ ζ ∈ P:sup:`+` ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R)
-
-    Theorem (Fourth Inverse Postulate): ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R)
+    Theorem (Fourth Inverse Postulate): ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R)
 
     Proof:
 
     (→) Assume ζ ∈ PP ∧ ζ ∈ P⁺ (ζ is a Perfect Palindrome and an Even Palindrome).
 
-    Even Palindrome: Since ζ ∈ P⁺, by Definition 3.2.3, ω:sub:ζ = ε (the Pivot is the Empty Character).
+    Even Palindrome: Since ζ ∈ P⁺, by Definition 3.2.3, ω :sub:`ζ` = ε (the Pivot is the Empty Character).
 
     Perfect Palindrome: Since ζ ∈ PP, by the strengthened Third Inverse Postulate, we have:
 
-    [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
+    [∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
 
     Case analysis:  We have two cases from step 2:
 
-    Case 1: ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R). This directly satisfies the right-hand side of the biconditional we're trying to prove.
+    Case 1: ∃ α ∈ L: (ω :sub:`ζ` ⊂:sub:`s` α) ∧ (α ∈ R). This directly satisfies the right-hand side of the biconditional we're trying to prove.
 
-    Case 2: ω:sub:ζ = σ. This contradicts step 1, where we established that ω:sub:ζ = ε. Therefore, this case cannot hold.
+    Case 2: ω :sub:`ζ` = σ. This contradicts step 1, where we established that ω :sub:`ζ` = ε. Therefore, this case cannot hold.
 
-    Conclusion: Only Case 1 holds, which means ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R).
+    Conclusion: Only Case 1 holds, which means ∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R).
 
-    (←) Assume ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R).
+    (←) Assume ∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R).
 
     Strengthened Third Inverse Postulate: This condition directly implies the left-hand side of the strengthened Third Inverse Postulate:
 
-    [∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ] ∨ (ω:sub:ζ = σ)
+    [∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R) ] ∨ (ω :sub:`ζ` = σ)
 
     Perfect Palindrome: By the strengthened Third Inverse Postulate, this implies that ζ ∈ PP (ζ is a Perfect Palindrome).
 
-    Non-Delimiter Pivot: Since ω:sub:ζ ⊂:sub:s α and α is a Word in the Language, by Axiom W.1 (Discovery Axiom), α cannot contain the Delimiter Character. Therefore, ω:sub:ζ ≠ σ.
+    Non-Delimiter Pivot: Since ω :sub:`ζ` ⊂ :sub:`s` α and α is a Word in the Language, by Axiom W.1 (Discovery Axiom), α cannot contain the Delimiter Character. Therefore, ω :sub:`ζ` ≠ σ.
 
-    Even Palindrome: Since ω:sub:ζ ≠ σ, by the strengthened Third Inverse Postulate, it must be the case that ω:sub:ζ = ε. By Definition 3.2.3, this means ζ ∈ P⁺ (ζ is an Even Palindrome).
+    Even Palindrome: Since ω :sub:`ζ` ≠ σ, by the strengthened Third Inverse Postulate, it must be the case that ω :sub:`ζ` = ε. By Definition 3.2.3, this means ζ ∈ P⁺ (ζ is an Even Palindrome).
 
     Conclusion: We have shown that ζ ∈ PP and ζ ∈ P⁺, which means ζ ∈ PP ∧ ζ ∈ P⁺.
 
     Since we have proven both directions of the implication, the theorem is established:
 
-    ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω:sub:ζ ⊂:sub:s α) ∧ (α ∈ R) ∎
+    ζ ∈ PP ∧ ζ ∈ P⁺ ↔ ∃ α ∈ L: (ω :sub:`ζ` ⊂ :sub:`s` α) ∧ (α ∈ R) ∎
