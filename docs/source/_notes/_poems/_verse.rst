@@ -5,8 +5,8 @@
 | Alas, no meters mark by foot the path
 |       Through wooded maze of trees
 |           Where leaves like love will wilt
-|               In winded wake of wrath,
-|           In gusts blown cruel and dumb,
+|               In winded wake of wrath
+|           In gusts blown cruel and dumb
 |        To lay at feet to span each foot
 | The dust each clever leaf here does become.
 |
@@ -122,7 +122,7 @@
 | On Sunday morning drive to your
 |   Mountain cemetery,
 | From black of road there rose the mists
-|   To west where winds carry, 
+|   To west where winds carry
 | The ghosts the ground have failed to keep
 |   Where earth lay bare through tar,
 | Where oaks and willows reach to weep
@@ -133,6 +133,28 @@
 |   With craft a road they wove,
 | Until no longer did I drive but flee
 |   From lane of memory.
+
+---
+
+| To begin is to make an end,
+| Oh, LeAnna, of Anna's Leigh,
+| Come with grin and play pretend
+| The past is what we both agree.
+|
+| Oh, LeAnna, of Anna's Leigh,
+| Despite the many faults of mine,
+| The past is what we both agree
+| Once marks are made on dotted line.
+|
+| Despite the many faults of mine,
+| I'll try to love you just the same;
+| Once marks are made on dotted line
+| There's no one left but you to blame.
+|
+| I'll try to love you just the same
+| But I implore you play this game:
+| Pretty pretend, comely with grin;
+| The end will yet begin again.
 
 ---
 
@@ -195,3 +217,24 @@
 |       The mighty Heron Grey. 
 
 ---
+
+| The shape of wind in blades of grass,
+|     Invisible heartbeat,
+| I watch your dance from windowed room
+|    In rising summer heat,
+| Your pressured pulse that skips through sky
+|     With history unseen,
+| I wonder where this prologue starts,
+|     what ancient chorus scene
+| Announced your birth on fertile Earth
+|    and blew the trumpet loud;
+| Who called to you from great beyond
+|    to tend this court of cloud?
+| What moment did you rise to life? 
+|    What second do we praise? 
+| Your source, like form, is hidden close
+|    In foggy, timeless haze. 
+| In tracing back your tangled threads
+|     they twine around and spool;
+| Each point begins with points before
+|     Always as if by rule. 
