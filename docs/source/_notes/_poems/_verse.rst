@@ -245,23 +245,30 @@
 
 ---
 
-| Newspaper read by death's grey bed,
+| The day I sat by death's grey bed,
 | I told a story both green and true
-| Of city bricks stacked proud and red
+| Of city bricks stacked proud and red,
 | Of silver paths the stars imbue
 | With golden hue we might have tread.
-| Your breath though blows now cold and blue.
+| Your breath though blew there cold and blue.
 |
 | I spoke the words to yellow skin
 | And told of days in white to come.
 | Your mouth, with specks of purple grin,
 | And fingers stretched so pale and numb,
 | My name, you said, so clear, so thin--
-| With final grasp, in black succumbs.
+| With final grasp, in black succumb.
 | 
-| Oh--Father, Father--bronze horns blare!
+| Oh--Father, Father--brass horns blare!
 | You string your harp with copper thread
 | And leave in me this slate despair!
 | What crystal tears in eyes now shed?
 | What pearl is formed by sightless stare?
 | What platinum found in prayers pled? 
+|
+| The oak around your body wraps
+| As shoots of pine through spine are grown.
+| In loam the roots will bind your scraps
+| Despite the flowers laid on stone.
+| Each time I come a stem I snap, 
+| For only Earth deserves your bone.
