@@ -247,7 +247,7 @@ No fixed schema.
 .. _ottava:
 
 Ottava
-------
+^^^^^^
 
 .. topic:: Schema (ottava siciliana)
 
