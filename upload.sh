@@ -50,23 +50,22 @@ if $BUILD; then
 fi
 
 # Construct the full path to the directory
-TARGET_DIR="$SCRIPT_DIR/$DIRECTORY"
+BUILD_DIR="$SCRIPT_DIR/$DIRECTORY"
 
-# Delete all objects in the S3 bucket
-aws s3 rm "s3://$S3_BUCKET/" --recursive
+aws s3 sync "$BUILD_DIR" "s3://$S3_BUCKET/" \
+  --delete \
+  --acl public-read
 
-# Copy the contents of the directory to the S3 bucket
-aws s3 cp "$TARGET_DIR/" "s3://$S3_BUCKET/" --recursive --exclude "*" --include "*.*"
-
-# Invalidate Cloudfront cache
-aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --invalidation-batch '{
-  "Paths": {
-    "Quantity": 1,
-    "Items": [
-      "/*"
-    ]
-  },
-  "CallerReference": "s3_upload_$(date +%s)"
-}'
+# Invalidate the CloudFront cache.
+if [ -n "DISTRIBUTION_ID" ]; then 
+    aws cloudfront create-invalidation \
+        --distribution-id "$DISTRIBUTION_ID" \
+        --paths "/*"
+    echo "CloudFront invalidation initiated."
+else
+    echo "CLOUDFRONT_DISTRIBUTION_ID not set.  Skipping CloudFront invalidation."
+fi
 
 echo "Successfully copied contents of $TARGET_DIR to s3://$S3_BUCKET/ and invalidated Cloudfront distribution $DISTRIBUTION_ID"
+
+exit 0

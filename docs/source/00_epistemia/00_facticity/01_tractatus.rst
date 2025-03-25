@@ -180,7 +180,7 @@ Bedeutung
   
   A concept - as I understand the word - is predicative^ On the other hand, a name of an object, a proper name, it quite incapable of being used as a grammatical predicate. This admittedly needs elucidation, otherwise it might appear false. Surely one can just as well assert of a thing that it is Alexander the Great, or is the number four, or is the planet Venus, as that it is green or is a mammal? If anybody thinks this, he is not distinguishing the uses of the word '*is*'. In the last two examples it serves as a copula, as a mere verbal sign of predication. As such it can sometimes be replaced by the mere personal suffix. Compare, e.g., '*Dieses Blatt ist griin*' and '*Dieses Blatt grunt*'.We are here saying that something falls under a concept, and the grammatical predicate stands for (*bedeutet*) this concept. In the first three examples, on the other hand, 'is' is used like the 'equals' sign in arithmetic, to express an equation. In the sentence '*The Morning Star is Venus*', we have two proper names, '*Morning Star*' and '*Venus*', for the same object. In the sentence '*The Morning Star is a planet*' we have a proper name, '*the Morning Star*', and a concept word, '*planet*'. So far as language goes, no more has happened than that '*Venus*' has been replaced by '*a planet*'; but really the relation has become wholly different. An equation is reversible; an object's falling under a concept is an irreversible relation. In the sentence '*The Morning Star is Venus*', '*is*' is obviously not the mere copula; its content is an essential part of the predicate, so that the word 'Venus' does not constitute the whole of the predicate. One might say instead: '*The Morning Star is no other than Venus*'; what was previously implicit in the single word 'is' is here set in four separate words, and in '*is no other than*' the word '*is*' now really is the mere copula. What is predicated here is thus not Venus but no other than Venus. These words stand for (*bedeuteri*) a concept; admitedly only one object falls under this, but such a concept must still always be distinguished from the object. We have here a word '*Venus*' that can never be a proper predicate, although it can form part of a predicate. The :ref:`bedeutung` of this word is thus something that can never incur as a concept, but only as an object.
 
-  -- `On Concept and Object  <https://fitelson.org/proseminar/frege_ocao.pdf>`_, Gottlob Frege (Peter Gleach translation), 1892 AD
+  -- `On Concept and Object  <https://fitelson.org/proseminar/frege_ocao.pdf>`_ , Gottlob Frege (Peter Gleach translation), 1892 AD
 
 .. _form:
 
@@ -198,7 +198,7 @@ Form
 
     Form is the possibility of structure.
 
-    -- `Tractatus Logico-Philosophicus <https://archive.org/details/dli.ministry.23985>`_, Ludwig Wittgenstein, 1921 AD
+    -- :ref:`Tractatus Logico-Philosophicus`, Ludwig Wittgenstein, 1921 AD
 
 .. _noumena:
 

@@ -1037,9 +1037,9 @@ In other words, the assumption in step 1 is equivalent to claiming the sum of th
 
 Expanding the integrals,
 
-    1. Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (i/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
+    1. Ω:sub:`-`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ (i/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) ⋅ (i/l(ζ))
 
-    2. Ω:sub:`+`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+    2. Ω:sub:`+`(ζ,l(ζ)) = Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ))
 
 We can rewrite the assumption as:
 
@@ -1049,173 +1049,174 @@ Divide both sides by l(ζ):
 
     7. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
 
-Notice that the left-hand side of this inequality is part of the Right-Hand Integral *Ω*:sub:`+`(*ζ,l(ζ)*), and the right-hand side is part of the Left-Hand Integral *Ω*:sub:`-`(*ζ,l(ζ)*).
+Notice that the left-hand side of this inequality is part of the Right-Hand Integral *Ω* :sub:`+` (*ζ,l(ζ)*), and the right-hand side is part of the Left-Hand Integral *Ω* :sub:`-` (*ζ,l(ζ)*).
 
 Since *l(ζ) - i + 1* > *i* for all *i ≤ m*, the weighted contribution of each Delimiter in the first half is larger in the Right-Hand Integral than in the Left-Hand Integral.
 
 In addition, for *i > m*, we have *i > l(ζ) - i + 1*, meaning the weights *i/l(ζ)* are greater in the Left-Hand Integral than the corresponding weights *(l(ζ) - i + 1)/l(ζ)* in the Right-Hand Integral. Therefore, if the weighted sum of delimiters in the first half (weighted for the Right-Hand Integral) is greater than the weighted sum of delimiters in the second half (weighted for the Left-Hand Integral), this implies that the overall Right-Hand Integral must be greater than the overall Left-Hand Integral. Thus, 
 
-    8. Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+    8. Ω :sub:`+` (ζ,l(ζ)) > Ω :sub:`-` (ζ,l(ζ))
 
 (←) Assume,
 
-    1. Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ))
+    1. Ω :sub:`+` (ζ,l(ζ)) > Ω :sub:`-` (ζ,l(ζ))
 
 By Definition A.8.1,
 
-    2. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (i/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ))
+    2. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ)) > Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ (i/l(ζ)) + Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) ⋅ (i/l(ζ))
 
 Rearranging the terms,
 
-    3. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ)) - Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (i/l(ζ)) > Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * (i/l(ζ)) - Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+    3. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ)) - Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ (i/l(ζ)) > Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) ⋅ (i/l(ζ)) - Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ))
 
 Simplifying,
 
-    4. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * ((l(ζ) - 2i + 1)/l(ζ)) > Σ:sub:`i=m+1`:sup:l(ζ)Δ(ζ[i]) * (2i - l(ζ) - 1)/l(ζ)
+    4. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ ((l(ζ) - 2i + 1)/l(ζ)) > Σ:sub:`i=m+1`:sup:l(ζ)Δ(ζ[i]) ⋅ (2i - l(ζ) - 1)/l(ζ)
 
 Since *l(ζ) - 2i + 1 > 0* for *i ≤ m* and *2i - l(ζ) - 1 > 0* for *i > m*, it can be inferred for the inequality to hold, the weighted sum of Delimiters in the first half must be greater than the weighted sum of Delimiters in the second half, where the weights are determined by their distance from the respective ends of the sentence.
 
-    5. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) * (l(ζ) - i + 1) > Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * i.
+    5. Σ:sub:`i=1`:sup:`m` Δ(ζ[i]) ⋅ (l(ζ) - i + 1) > Σ:sub:`i=m+1`:sup:`l(ζ)` Δ(ζ[i]) * i.
 
 Plugging in Definition A.8.2,
 
-    6. Σ:sub:`i=1`:sup:`m` μ:sub:`+`(ζ, i) > Σ:sub:`i=m+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i)
+    6. Σ:sub:`i=1`:sup:`m` μ:sub:`+` (ζ, i) > Σ:sub:`i=m+1`:sup:`l(ζ)` μ:sub:`-` (ζ, i)
 
 
 Since both directions of the equivalence hold and *ζ* was arbitrary, this can generalize over the Corpus,
  
-    ∀ ζ ∈ C:sub:`L``: Σ:sub:`i=1`:sup:`ω(ζ)` μ:sub:`+`(ζ, i)  > Σ:sub:`i=ω(ζ)+1`:sup:`l(ζ)` μ:sub:`-`(ζ, i) ↔ Ω:sub:`+`(ζ,l(ζ)) > Ω:sub:`-`(ζ,l(ζ)) 
+    ∀ ζ ∈ C :sub:`L``: Σ :sub:`i=1` :sup:`ω(ζ)` μ :sub:`+` (ζ, i)  > Σ :sub:`i=ω(ζ)+1` :sup:`l(ζ)` μ :sub:`-` (ζ, i) ↔ Ω :sub:`+`(ζ,l(ζ)) > Ω :sub:`-` (ζ,l(ζ)) 
   
 ∎
 
 TODO
 
-.. _theorem-5-1-6:
+.. admonition:: TODO (LATEX FORMATTING)
+  .. _theorem-5-1-6:
 
-**Theorem 5.1.6** ∀ ζ ∈ PP: ∀ i ∈ N:sub:`l(ζ)`: Ω:sub:`-`(ζ,i) = Ω:sub:`+`(ζ,i)
+  **Theorem 5.1.6** ∀ ζ ∈ PP: ∀ i ∈ N :sub:`l(ζ)`: Ω :sub:`-` (ζ,i) = Ω :sub:`+` (ζ,i)
 
-Let *ζ* be an arbitrary Perfect Palindrome in the Corpus C:sub:`L`,
+  Let *ζ* be an arbitrary Perfect Palindrome in the Corpus C:sub:`L`,
 
-    1. ζ ∈ PP
+      1. ζ ∈ PP
 
-and let *k* be a natural number such that *1 ≤ k ≤ l(ζ)*. By Definition 3.2.2, since *ζ* is a Perfect Palindrome,
+  and let *k* be a natural number such that *1 ≤ k ≤ l(ζ)*. By Definition 3.2.2, since *ζ* is a Perfect Palindrome,
 
-   2. ζ = inv(ζ)
-   
-This means that the Sentence reads the same forwards as backwards. By Definition A.8.1, the Left-Hand Integral of *ζ* up to index *k* is:
-
-   3. Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ))
-
-And the Right-Hand Integral of ζ up to index k is:
-
-   4. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))
-   
-It must be shown that,
-
-   5. Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k).
-
-Since *ζ = inv(ζ)*, by Definition 1.2.4 of String Inversion
-
-   6. ∀ i ∈ N:sub:`l(ζ)` ζ[i] = inv(ζ)[l(ζ) - i + 1]
-
-Now consider the Delimiter Count Function *Δ(ζ[:i])*. By Definition A.2.1, this function counts the number of Delimiters in the Left Partial Sentence up to index *i*. By Theorem A.2.2, the Delimiter Count is invariant under inversion. 
-
-Furthermore, since *ζ* is a Perfect Palindrome, the Left Partial Sentence up to index i is the inverse of the Right Partial Sentence starting at index l(ζ) - i + 1. In other words:
-
-   7. ζ[:i] = inv(ζ[l(ζ) - i + 1:])
-   
-Therefore,
-
-   8. Δ(ζ[:i]) = Δ(inv(ζ[l(ζ) - i + 1:])) =  Δ(ζ[l(ζ) - i + 1:])
-   
-Now consider the Right-Hand Integral,
-
-   9. Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))
-
-Make the following change of variables in the summation. Let *j = l(ζ) - i + 1*. Then, as *i* goes from 1 to *k*, *j* goes from *l(ζ)* to *l(ζ) - k + 1*,
-
-   10. Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[l(ζ) - j + 1:]) * (l(ζ[l(ζ) - j + 1:])/l(ζ))
-   
-Substituting in step 8,
-
-   11. Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ[l(ζ) - j + 1:])/l(ζ))
-   
-By Theorem 3.2.13, 
-
-   12. l(ζ[l(ζ) - j + 1:]) = l(ζ) - l(ζ[:j]) + 1. 
-
-Substituting this into step 11,
-
-   13.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - l(ζ[:j]) + 1)/l(ζ)
-   14.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - j + 1)/l(ζ)
-
-Since *ζ* is a Perfect Palindrome,
-
-   15.  Δ(ζ[:j]) = Δ(ζ[l(ζ) - j + 1:])
-
-Furthermore, from Definition 3.2.5 of Left Partial Sentences, 
-
-   16.  l(ζ[:j]) = j
-   
-Substituting step 15 in step 10,
-
-   17.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - l(ζ[:j]) + 1)/l(ζ)
-
-And then substituting step 16 into step 17,
+    2. ζ = inv(ζ)
     
-   18.  Ω:sub:`+`(ζ,k) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - j + 1)/l(ζ)
+  This means that the Sentence reads the same forwards as backwards. By Definition A.8.1, the Left-Hand Integral of *ζ* up to index *k* is:
 
-This expression is almost the same as the Left-Hand Integral, except for the summation limits. However, since the summation is over a Perfect Palindrome, by step 6, the terms from *j = k + 1* to *l(ζ)* in the Right-Hand Integral will correspond to the terms from *i = 1* to *l(ζ) - k* in the Left-Hand Integral.
+    3. Ω :sub:`-` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[:i])  (l(ζ[:i])/l(ζ))
 
-In other words, the terms "missing" in the Right-Hand Integral by summing from *l(ζ) - k + 1 to l(ζ)* are exactly the terms that are "extra" in the Left-Hand Integral by summing from *1* to *k*. Because of the symmetry of the Palindrome and the invariance of the Delimiter Count under inversion, these extra terms will cancel each other out. Formally, 
+  And the Right-Hand Integral of ζ up to index k is:
 
-    19. Σ:sub:`i=1`:sup:`k` Δ(ζ[:i]) * (l(ζ[:i])/l(ζ)) = Σ:sub:`j=l(ζ)-k+1`:sup:`l(ζ)` Δ(ζ[:j]) * (l(ζ) - j + 1)/l(ζ)
+    4. Ω :sub:`+` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[i:]) ⋅ (l(ζ[i:])/l(ζ))
+    
+  It must be shown that,
 
-Therefore,
+    5. Ω :sub:`-` (ζ,k) = Ω :sub:`+` (ζ,k).
 
-   20.  Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k)
+  Since *ζ = inv(ζ)*, by Definition 1.2.4 of String Inversion
 
-Since *ζ* and *k* were arbitrary, this can generalize over the class of Perfect Palindromes,
+    6. ∀ i ∈ N :sub:`l(ζ)` ζ[i] = inv(ζ)[l(ζ) - i + 1]
 
-   21.  ∀ ζ ∈ PP: ∀ k ∈ N:sub:`Λ(ζ)`: Ω:sub:`-`(ζ,k) = Ω:sub:`+`(ζ,k) 
+  Now consider the Delimiter Count Function *Δ(ζ[:i])*. By Definition A.2.1, this function counts the number of Delimiters in the Left Partial Sentence up to index *i*. By Theorem A.2.2, the Delimiter Count is invariant under inversion. 
 
-∎
+  Furthermore, since *ζ* is a Perfect Palindrome, the Left Partial Sentence up to index i is the inverse of the Right Partial Sentence starting at index l(ζ) - i + 1. In other words:
 
-As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be regarded as part of the class of Sentences that are *invariant* of Sentence Integrals,
+    7. ζ[:i] = inv(ζ[l(ζ) - i + 1:])
+    
+  Therefore,
 
-    Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = 0
+    8. Δ(ζ[:i]) = Δ(inv(ζ[l(ζ) - i + 1:])) =  Δ(ζ[l(ζ) - i + 1:])
+    
+  Now consider the Right-Hand Integral,
 
-In other words, Perfect Palindromes are a class of sentences that *"balance"* out Delimiter-wise. It stands to reason, given the examples that have been presented so far, and the definition of Imperfect Palindromes as those Palindromes which are *not* Perfect, the class of Imperfect Palindromes *do not* balance out their Delimiters. However, this is not the case, and the reason why this is not the case will illuminate a structural component of language that has heretofore been relegated to novelties like *Zipf's Law*. 
+    9. Ω :sub:`+` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[i:]) * (l(ζ[i:])/l(ζ))
 
-The shortcut formulae for Sentence Integrals given in Theorem 3.3.1 and Theorem 3.3.2, given below, may be viewed as measures of the *distribution* of Delimiters in a Sentence at some Character index *k*,
+  Make the following change of variables in the summation. Let *j = l(ζ) - i + 1*. Then, as *i* goes from 1 to *k*, *j* goes from *l(ζ)* to *l(ζ) - k + 1*,
 
-    Ω:sub:`-`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (i/l(ζ))
+    10. Ω :sub:`+` (ζ,k) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[l(ζ) - j + 1:]) ⋅ (l(ζ[l(ζ) - j + 1:])/l(ζ))
+    
+  Substituting in step 8,
 
-    Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * ((l(ζ) - i + 1)/l(ζ))
+    11. Ω :sub:`+` (ζ,k) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[:j]) ⋅ (l(ζ[l(ζ) - j + 1:])/l(ζ))
+    
+  By Theorem 3.2.13, 
 
-Theorem 3.3.5 shows for the highly symmetric and involutive class of Perfect Palindromes, these quantities are perfectly balanced. The Delimiter placement relative to the start of a Perfect Palindrome exactly mirrors the Delimiter placement relative to the end. When these quantities are *not* equal, it is an indication of Delimiter asymmetry in the Sentence. 
+    12. l(ζ[l(ζ) - j + 1:]) = l(ζ) - l(ζ[:j]) + 1. 
 
-However, when these quantities are equal, it cannot be said the Sentence is definitively a symmetric with respect to Delimiters. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
+  Substituting this into step 11,
 
-    Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * [i - (l(ζ) - i + 1)]/l(ζ)
+    13.  Ω :sub:`+` (ζ,k) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[:j]) ⋅ (l(ζ) - l(ζ[:j]) + 1)/l(ζ)
+    14.  Ω :sub:`+` (ζ,k) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[:j]) ⋅ (l(ζ) - j + 1)/l(ζ)
 
-Simplifying, 
+  Since *ζ* is a Perfect Palindrome,
 
-    Ω:sub:`-`(ζ,k) - Ω:sub:`+`(ζ,k) = Σ:sub:`i=1`:sup:`k` Δ(ζ[i]) * (2i - l(ζ) - 1)/l(ζ)
+    15.  Δ(ζ[:j]) = Δ(ζ[l(ζ) - j + 1:])
 
-When this quantity equals zero, it leads to a special type of linear, homogenous Diophantine equation,
+  Furthermore, from Definition 3.2.5 of Left Partial Sentences, 
 
-    Σ:sub:`i=1`:sup:`l(ζ)` Δ(ζ[i]) * (2i - l(ζ) - 1) = 0
+    16.  l(ζ[:j]) = j
+    
+  Substituting step 15 in step 10,
 
-Where the quantities *Δ(ζ[i])* may be viewed as variables that are constrained to assume the values 0 or 1. In the case of Perfect Palindromes, since every Character has a corresponding inverted Character, the Delimiter symmetry will lead to a perfect cancellation of terms.
+    17.  Ω :sub:`+` (ζ,k) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[:j]) ⋅ (l(ζ) - l(ζ[:j]) + 1)/l(ζ)
 
-It is not the case, however, that this equation only admits of symmetrical solutions. To show this is the case, it suffices to demonstrate a single asymmetrical Delimiter configuration that satisfies the homogenity condition.
+  And then substituting step 16 into step 17,
+      
+    18.  Ω :sub:`+` (ζ,k) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[:j]) ⋅ (l(ζ) - j + 1)/l(ζ)
 
-To establish the existence of asymmetrical solutions, consider the difference of Sentence Integrals over the entire String Length of the Sentence,
+  This expression is almost the same as the Left-Hand Integral, except for the summation limits. However, since the summation is over a Perfect Palindrome, by step 6, the terms from *j = k + 1* to *l(ζ)* in the Right-Hand Integral will correspond to the terms from *i = 1* to *l(ζ) - k* in the Left-Hand Integral.
 
-    Ω:sub:`-`(ζ,l(ζ)) - Ω:sub:`+`(ζ,l(ζ))
+  In other words, the terms "missing" in the Right-Hand Integral by summing from *l(ζ) - k + 1 to l(ζ)* are exactly the terms that are "extra" in the Left-Hand Integral by summing from *1* to *k*. Because of the symmetry of the Palindrome and the invariance of the Delimiter Count under inversion, these extra terms will cancel each other out. Formally, 
 
-In this case, the summation will range from (1 - l(ζ)) to (l(ζ) - 1). Furthermore, note the coefficient *(2i - l(ζ) - 1)* increases at twice the rate as the index *i* in *Δ(ζ[i]*). This means, depending on the parity of the Sentence, the equation will either consist of odd integer coefficients or even integer coefficients. 
+      19. Σ :sub:`i=1` :sup:`k` Δ(ζ[:i]) ⋅ (l(ζ[:i])/l(ζ)) = Σ :sub:`j=l(ζ)-k+1` :sup:`l(ζ)` Δ(ζ[:j]) ⋅ (l(ζ) - j + 1)/l(ζ)
+
+  Therefore,
+
+    20.  Ω :sub:`-` (ζ,k) = Ω sub:`+` (ζ,k)
+
+  Since *ζ* and *k* were arbitrary, this can generalize over the class of Perfect Palindromes,
+
+    21.  ∀ ζ ∈ PP: ∀ k ∈ N :sub:`Λ(ζ)`: Ω :sub:`-` (ζ,k) = Ω :sub:`+` (ζ,k) 
+
+  ∎
+
+  As a direct result of Theorem A.8.4, the class of Perfect Palindromes can be regarded as part of the class of Sentences that are *invariant* of Sentence Integrals,
+
+      Ω:sub:`-` (ζ,k) - Ω:sub:`+` (ζ,k) = 0
+
+  In other words, Perfect Palindromes are a class of sentences that *"balance"* out Delimiter-wise. It stands to reason, given the examples that have been presented so far, and the definition of Imperfect Palindromes as those Palindromes which are *not* Perfect, the class of Imperfect Palindromes *do not* balance out their Delimiters. However, this is not the case, and the reason why this is not the case will illuminate a structural component of language that has heretofore been relegated to novelties like *Zipf's Law*. 
+
+  The shortcut formulae for Sentence Integrals given in Theorem 3.3.1 and Theorem 3.3.2, given below, may be viewed as measures of the *distribution* of Delimiters in a Sentence at some Character index *k*,
+
+      Ω :sub:`-` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[i]) ⋅ (i/l(ζ))
+
+      Ω :sub:`+` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[i]) ⋅ ((l(ζ) - i + 1)/l(ζ))
+
+  Theorem 3.3.5 shows for the highly symmetric and involutive class of Perfect Palindromes, these quantities are perfectly balanced. The Delimiter placement relative to the start of a Perfect Palindrome exactly mirrors the Delimiter placement relative to the end. When these quantities are *not* equal, it is an indication of Delimiter asymmetry in the Sentence. 
+
+  However, when these quantities are equal, it cannot be said the Sentence is definitively a symmetric with respect to Delimiters. To see why, the *difference* of the Lefthand and Right Integral may be expressed as,
+
+      Ω :sub:`-` (ζ,k) - Ω :sub:`+` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[i]) ⋅ [i - (l(ζ) - i + 1)]/l(ζ)
+
+  Simplifying, 
+
+      Ω :sub:`-` (ζ,k) - Ω :sub:`+` (ζ,k) = Σ :sub:`i=1` :sup:`k` Δ(ζ[i]) ⋅ (2i - l(ζ) - 1)/l(ζ)
+
+  When this quantity equals zero, it leads to a special type of linear, homogenous Diophantine equation,
+
+      Σ :sub:`i=1` :sup:`l(ζ)` Δ(ζ[i]) ⋅ (2i - l(ζ) - 1) = 0
+
+  Where the quantities *Δ(ζ[i])* may be viewed as variables that are constrained to assume the values 0 or 1. In the case of Perfect Palindromes, since every Character has a corresponding inverted Character, the Delimiter symmetry will lead to a perfect cancellation of terms.
+
+  It is not the case, however, that this equation only admits of symmetrical solutions. To show this is the case, it suffices to demonstrate a single asymmetrical Delimiter configuration that satisfies the homogenity condition.
+
+  To establish the existence of asymmetrical solutions, consider the difference of Sentence Integrals over the entire String Length of the Sentence,
+
+      Ω :sub:`-` (ζ,l(ζ)) - Ω :sub:`+` (ζ,l(ζ))
+
+  In this case, the summation will range from (1 - l(ζ)) to (l(ζ) - 1). Furthermore, note the coefficient *(2i - l(ζ) - 1)* increases at twice the rate as the index *i* in *Δ(ζ[i]*). This means, depending on the parity of the Sentence, the equation will either consist of odd integer coefficients or even integer coefficients. 
 
 A pair of examples will help illustrate this. 
 

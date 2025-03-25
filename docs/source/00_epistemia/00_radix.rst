@@ -93,7 +93,7 @@ gutenberg.org
 - `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
 - `Paradise Lost <https://www.gutenberg.org/cache/epub/26/pg26-images.html>`_
 - `The Foundations of Arithmetic, The <https://www.gutenberg.org/ebooks/48312>`_
-- `Tractatus Logico-Philosophicus <https://www.gutenberg.org/ebooks/5740>`_
+- `Tractatus Logico-Philosophicus (Secondary Source) <https://www.gutenberg.org/ebooks/5740>`_
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
 
