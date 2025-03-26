@@ -33,7 +33,7 @@
 |     But wine from sight concealed,
 | Present spilling o'er lips
 |     From barrel cork unsealed. 
-| Agony! Moment's time
+| Agony! Of moment's time
 |    To pour from heart to lung,
 | Distilled to simple words
 |    In verse's twisted tongue. 
@@ -49,6 +49,33 @@
 |    Of hint of sought intent,
 | But flavor cannot capture
 |    What truly palette meant.
+
+---
+
+| Mimic, dear mate, pray hesitate!
+| Tread not upon this course!
+| What follows sweet is heart's remorse!
+|
+| Those lines afar you judged so straight
+| Are crooked yet and coarse. 
+| Mimic, dear mate, pray hesitate!
+|
+| You'll gain a head in broad divorce,
+| But find astride your gait
+| What follows sweet is heart's remorse.
+|
+| What lists like light will soon find weight
+| If drawn from me my source.
+| Mimic, dear mate, pray hesitate!
+|
+| This curse of mine for you awaits,
+| if you persist, perforce;
+| What follows sweet is heart's remorse.
+|
+| In throat my voice your lungs will break
+| To find a song so hoarse.
+| Mimic, dear mate, pray hesitate!
+| What follows sweet is heart's remorse.
 
 ---
 
@@ -193,7 +220,7 @@
 | With final grasp, in black succumb.
 | 
 | Oh--Father, Father--brass horns blare!
-| You string your harp with copper thread
+| You string your harp with diamond thread
 | And leave in me this slate despair!
 | What crystal tears in eyes now shed?
 | What pearl is formed by sightless stare?
@@ -205,3 +232,46 @@
 | Despite the flowers laid on stone.
 | Each time I come a stem I snap, 
 | For only Earth deserves your bone.
+
+---
+
+| On river shore the poor in tents are stored
+|    To keep from sight their score.
+| Above and north, the city steeples meet 
+| To speak in sermons ever indiscrete
+|     for sheep they so ignore.
+| 
+| They fight with roar, yet beaten, kiss through gore;
+| From barrel fired dream, north they look for more,
+| The city lights too far a source of heat
+|    For life on river shore. 
+|
+| In winter months they paint on skin a whore,
+| And every one despite what silence swore.
+|     In life they all must cheat,
+|     Become their own deceit,
+| To win a war for land they all abhor:
+|     Their home on river shore.
+
+---
+
+| The world that spins about its point,
+|     That spun from loom these days,
+| The one from sun that does anoint
+|     As thread from time decays.
+| I plucked a flower morning come
+|     To save its life from woe.
+| It wilted under press of thumb
+|     In dying afterglow.
+| Its soul through sweetly scented air
+|     In secret met the gloam.
+| Such poor design, so frail this share
+|     That beauty makes a home.
+| That afternoon we met at last
+|     Though I with empty hand.
+| There time removed from us amassed
+|     The knots it wove through strands.
+| Like vapor mist to sky dissolved
+|     I wept at our good-bye,
+| To see your eyes from dreams resolved
+|     With nothing to reply.  
