@@ -323,7 +323,7 @@ The following diagrams shows the different schemata for the rondeau form duing t
 
     1. Rondel: A.B.a.b + a.b.A.B + a.b.b.a.A
     2. Rondeau Prime: R-a.b.b.a.a.b.R + a.b.b.a.R
-    3. Rondeau: R-a.a.b.b.a.b.R + a.a.b.R + a.a.b.b.a.R
+    3. Rondeau: R-a.a.b.b.a + a.a.b + a.a.b.b.a.R
 
 **Roundel**
 
