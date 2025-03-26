@@ -102,7 +102,7 @@ Popol Vuh
 
 **Unknown**
 
-The creation myth contained in the *Popol Vuh* could originate from any point in time starting from 20:sup:`th` century BCE to 18:sup:`th` century AD, when it was finally transcribed.  
+The creation myth contained in the *Popol Vuh* could originate from any point in time starting from 20 :sup:`th` century BCE to 18 :sup:`th` century AD, when it was finally transcribed.  
 
 .. epigraph::
 
