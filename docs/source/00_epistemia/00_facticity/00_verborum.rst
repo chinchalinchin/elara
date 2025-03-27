@@ -31,6 +31,7 @@ Verborum
 - :ref:`hysteron-proteron`: An expression in which what should come last is put first.
 - :ref:`metonymy`: A name that is derived from the attribute of the thing named. 
 - :ref:`paronomasia`: A play on words.
+- :ref:`polyptoton`: The use of words that phonetically related but semantically distinct. 
 - :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object. 
 
 .. _alliteration:
@@ -355,11 +356,22 @@ None yet found.
 Paronomasia
 -----------
 
+TODO 
+
     Of whom each strives, nor knows for what he strives,
 
     And each half lives a hundred different lives;
 
     -- `The Scholar Gipsy <https://www.poetryfoundation.org/poems/43606/the-scholar-gipsy>`_, Matthew Arnold
+
+.. _polyptoton:
+
+Polyptoton
+----------
+
+TODO 
+
+None yet found.
 
 .. _symploce:
 
