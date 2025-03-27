@@ -434,7 +434,8 @@ TODO: research Terzanelles.
 
 .. topic:: Schema 
 
-    A.b.B + a.b.A + a.b.B + a.b.A + a.b.B + a.b.A.B
+
+    A :sub:`1`.b.A :sub:`2` + a.b.A :sub:`1` + a.b.A:sub:`2` + a.b.A :sub:`1` + a.b.A :sub:`2` + a.b.A :sub:`1` .A :sub:`2`
 
 **References**
 
