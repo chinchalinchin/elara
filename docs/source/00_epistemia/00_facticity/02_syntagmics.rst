@@ -430,6 +430,8 @@ Virelai
 Villanelle
 ^^^^^^^^^^
 
+TODO: research Terzanelles. 
+
 .. topic:: Schema 
 
     A.b.B + a.b.A + a.b.B + a.b.A + a.b.B + a.b.A.B
