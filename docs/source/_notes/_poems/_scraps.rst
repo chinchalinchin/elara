@@ -453,3 +453,22 @@ III: The Maze
 | and so in being, to flee
 | from unending maze departed
 | coming back to where we started
+
+
+----
+
+
+
+|   in divey dive where diving dove. 
+
+|   from prior pries of prying prize. 
+
+|   she said to say what saying says. 
+| We worked the work that working wrought
+|   to buy by buying by the bought.
+| We shine in sheen what shining shone,
+|   to bind what's bound in binding bone. 
+| We die the deaths the dying died
+|   To lay the lie where laying laid. 
+| I is an am that is a were.
+|   I whirled a world that whirling whirs. 
