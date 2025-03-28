@@ -429,7 +429,7 @@ Absurdity
 | Take hand and guide as though only you and I trust,
 | Do what we will to balance world's thrust.
 
-The Paronymous Polpytotons of Love 
+The Paronymous Polyptotons of Love 
 ----------------------------------
 
 | "πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται."

@@ -472,3 +472,6 @@ III: The Maze
 |   To lay the lie where laying laid. 
 | I is an am that is a were.
 |   I whirled a world that whirling whirs. 
+
+| The deaths the dying died before 
+|   were laid to lie by lying score. 
