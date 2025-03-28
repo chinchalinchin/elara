@@ -6,6 +6,7 @@ S3_BUCKET=$ELARA_BUCKET
 DISTRIBUTION_ID=$ELARA_DIST
 DIRECTORY="docs/build/html"
 BUILD=false
+INVALIDATE=false
 
 # Parse command-line arguments
 while [[ $# -gt 0 ]]; do
@@ -24,6 +25,10 @@ while [[ $# -gt 0 ]]; do
       ;;
     --build)
       BUILD=true
+      shift
+      ;;
+    --invalidate)
+      INVALIDATE=true
       shift
       ;;
     *)
@@ -56,8 +61,10 @@ aws s3 sync "$BUILD_DIR" "s3://$S3_BUCKET/" \
   --delete \
   --acl public-read
 
+echo "Successfully copied contents of $TARGET_DIR to s3://$S3_BUCKET/"
+
 # Invalidate the CloudFront cache.
-if [ -n "DISTRIBUTION_ID" ]; then 
+if [ -n "DISTRIBUTION_ID" ] && $INVALIDATE; then 
     aws cloudfront create-invalidation \
         --distribution-id "$DISTRIBUTION_ID" \
         --paths "/*"
@@ -65,7 +72,5 @@ if [ -n "DISTRIBUTION_ID" ]; then
 else
     echo "CLOUDFRONT_DISTRIBUTION_ID not set.  Skipping CloudFront invalidation."
 fi
-
-echo "Successfully copied contents of $TARGET_DIR to s3://$S3_BUCKET/ and invalidated Cloudfront distribution $DISTRIBUTION_ID"
 
 exit 0
