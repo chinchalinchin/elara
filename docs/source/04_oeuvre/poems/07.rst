@@ -1,4 +1,4 @@
-The Paronymous Polpytotons of Love 
+The Paronymous Polyptotons of Love 
 ----------------------------------
 
 | "πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται."
@@ -22,3 +22,16 @@ The Paronymous Polpytotons of Love
 |   were laid to lie by lying score. 
 | I is an am that is a were
 |  That whirled a world to whirl with her. 
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Rattle Poetry
+     - Pending

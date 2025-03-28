@@ -579,7 +579,7 @@ I: Plots
 | 
 | They stole away on sudden lark,
 | Exchanged the words from whispered lean
-| Where blades of grass were tall and streek.
+| Where blades of grass were tall and stark.
 | 
 | So happy and green, neighbors remark,
 | Yet seem is such to lose its sheen,
@@ -590,6 +590,6 @@ I: Plots
 | Where blades of grass were tall and stark.
 | 
 | In ground, their bodies disembark
-| And leave behind a hole through clean.
+| And leave behind a hole dug clean.
 | In time their plot was touched by dark,
 | Where blades of grass were tall and stark.

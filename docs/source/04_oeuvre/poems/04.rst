@@ -87,3 +87,18 @@
 | Each fiber of moment knotted deftly in truss,
 | Take hand and guide as though only you and I trust,
 | Do what we will to balance world's thrust.
+
+- February 2025
+
+**Submission History**
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - February 10, 2025
+     - Enott Pratt Poetry Contest
+     - Pending

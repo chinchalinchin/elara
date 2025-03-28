@@ -16,3 +16,19 @@ III: A Sonnet for Cumberland MD
 |
 | Let skyline mark where tide in climb was broke:
 | Steeple, roof, needles pine and leaves of oak.
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 24, 2025
+     - Allegany County Library Poetry Contest
+     - Pending
+   * - March 27, 2025
+     - Poetry Magazine
+     - Pending

@@ -23,7 +23,7 @@ Absurdity
 |
 | Solitary-born, it spoke not the language of elemental form,
 | Splashed through the surface of the hallow spinning Earth,
-| It met with water the cohesion of the alien liquid swarm,
+| It met in water the cohesion of the alien liquid swarm,
 | Converged upon the point through the distance given berth.
 |
 | In that flashing instant terror, nerve lost at once altogether,
@@ -38,7 +38,7 @@ Absurdity
 |
 | Thus began the age of after-birth, of structure spat in space, 
 | From this trajectory originate the colliding course of life;
-| Watch as these woven points weave into weaving webs of grace,
+| Watch as these woven points weave into weaving webs of lace,
 | Keep track amidst the blossoming of a single atom's strife.
 |
 | Slipped over spokes of gears in that organic factory 
@@ -50,3 +50,16 @@ Absurdity
 | In diurnal circles through the thermal tracts of change,
 | Climbing ever higher towards the syncopated gates of Am 
 | Where for royal cloaks their burning tatters are exchanged.  
+
+- February 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Rattle Poetry
+     - Pending

@@ -18,3 +18,16 @@ II: Rondeau for the River Rats
 |     Become their own deceit,
 | To win a war for land they all abhor:
 |     Their home on river shore.
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Think Journal
+     - Pending

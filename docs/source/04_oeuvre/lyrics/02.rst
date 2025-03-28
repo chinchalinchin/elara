@@ -25,3 +25,16 @@ III: On The Origin of Wind
 |     they twine around and spool;
 | Each point begins with points before
 |     Always as if by rule. 
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Think Journal
+     - Pending

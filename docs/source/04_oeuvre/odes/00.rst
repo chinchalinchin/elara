@@ -29,3 +29,16 @@ I: An Ode To Autumn
 |           But now the chill sets in;    
 | Each breath in gasp dispels to steam
 |           of Spring now waning thin.
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Think Journal
+     - Pending

@@ -30,3 +30,16 @@ Regret
 | She flutters all the while.
 | Eternal are the steps
 | Of Regret's hypnotic moon-lit dance.
+
+- February 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Rattle Poetry
+     - Pending

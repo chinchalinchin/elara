@@ -32,11 +32,24 @@ II: Ode to the Heron
 |       In cold upon your flank. 
 |
 | Each season makes of life its shape to sing. 
-| Spring shapes azalea buds
+| The spring so shapes the buds
 |       And lazy chirping thrush, 
-| In summer sweats, berry red
+| In summer, berries red 
 |       And robin eggs of fay,
-| Autumn with crows of black
+| The crows of Autumn black
 |       In pumpkin laden brush,
-| Yet winter makes but one
+| Yet winter makes but one,
 |       The mighty Heron Grey. 
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Think Journal
+     - Pending
