@@ -18,12 +18,20 @@ Given below are existing definitions of poetical devices.
     - Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.
     - Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.
     - Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.
+    - Pyrrchic: Two unstressed syllables. 
+    - Amphibrach: An unstressed syllable followed by a stressed syllable and then another unstressed syllable.
+    - Bacchius: An unstressed syllable followed by two stressed syllables. 
+    - Antibacchius: Two stressed syllables followed by an unstressed syllable.
 
 .. topic:: Definition: Lines
 
+    - Dimeter: A line with two feet.
+    - Trimeter: A line with three feet.
     - Tetrameter: A line with four feet.
     - Pentameter: A line with five feet.
-    - Trimeter: A line with three feet.
+    - Hexmeter: A line with six feet.
+    - Heptameter: A line with seven feet.
+    - Octameter: A line with eight feet. 
     - Hendecasyllable: A line consisting of eleven syllables. 
 
 .. topic:: Definitions: Stanzas
@@ -33,14 +41,17 @@ Given below are existing definitions of poetical devices.
     - Quatrain: A stanza with four lines
     - Cinquain: A stanza with five lines
     - Sestet: A stanza with six lines.
+    - Septet: A stanza with seven lines.
     - Octet: A stanza with eight lines.
+    - Nonet: A stanza with nine lines.
+    - Decastich: A stanza with ten lines.
     - Envoi: A short, concluding stanza.
 
 **Constants**
 
 1. Uppercase English letters (A, B, C, ... ): Fixed lines.
+3. Uppercase Coptic letters (Ⲁ, Ⲃ, Ⲅ , ... ): Fixed words.
 2. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
-3. Lowercase Greek letters (α, β, γ, ... ): Fixed words.
 4. The lowercase English letter n is reserved for natural numbers.
 5. The lowercase Fraktur letter 𝔦 is reserved for iambs.
 6. The lowercase Fraktur letter 𝔱 is reserved for trochees.
@@ -53,13 +64,12 @@ Given below are existing definitions of poetical devices.
 **Variables**
 
 1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
-2. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
-3. The lowercase Greek letters φ, χ, ψ are reserved for indeterminate rhymed words.
-4. The lowercase Greek letter λ is reserved for indetermine words, not necessarily rhymed.
-5. The lowercase Greek letters π, Π are reserved for indeterminate syllables. 
-6. The lowercase Fraktur letter 𝔵 is reserved for indeterminate meters.
-7. The lowercase Greek letter ς is reserved for indeterminate stanzas.
-8. The English letters x, y and z are reserved for global variables, i.e. syllables, lines and stanzas. 
+    a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
+2. The lowercase Greek letters φ, χ, ψ are reserved for indeterminate rhymed words.
+    a. The lowercase Greek letter λ is reserved for indetermine words, not necessarily rhymed.
+3. The Coptic letters ⲡ, Ⲡ are reserved for indeterminate syllables. 
+4. The lowercase Fraktur letter 𝔵 is reserved for indeterminate meters.
+5. The lowercase Greek letter ς is reserved for indeterminate stanzas.
 
 .. important::
 
@@ -92,8 +102,8 @@ The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. Fo
 8. x∝λ : Sign containing a word. 
 9. x(λ) : A sign ending in a word.  
 10. (λ)x: A sign beginning with a word. 
-11. x(π): A sign ending in a syllable.
-12. (π)x: A sign starting with a syllable
+11. x(ⲡ): A sign ending in a syllable.
+12. (ⲡ)x: A sign starting with a syllable
 13. x.y.x | x = z: Substitute z for x in the sign "x.y.x"
 
 Brackets, [], are used to group operations within expressions by precedence.
@@ -111,15 +121,18 @@ Where as x + y means,
 
 From this, it can be see the operation of *successions* inserts a new line after the first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
 
-The connotation of the "+" symbol is leveraged to extend the symbolism to the "*Σ*" symbol, i.e.,
+**Shorthand**
+
+1. Summation: The connotation of the "+" symbol is leveraged to extend the symbolism to the "*Σ*" symbol, i.e.,
 
     Σ :sub:`1`:sup:`n` x :sub:`i` 
 
 Is meant to denote a series of signs separated by blank lines. 
 
-A *delimitation* is mainly used in reference to words or syllables, and can be seen as a shorthand for excessive concatenation. *Delimitation* denotes the insertion of *pauses* (delimiters) in between words,
 
-    α:β:γ = α-∅-β-∅-γ
+2. Delimitation: A *delimitation* is mainly used in reference to words or syllables, and can be seen as a shorthand for excessive concatenation. *Delimitation* denotes the insertion of *pauses* (delimiters) in between words,
+
+    Ⲁ:Ⲃ:Ⲅ = Ⲁ-∅-Ⲃ-∅-Ⲅ
 
 **Propositions**
 
@@ -145,19 +158,19 @@ a.b.[b ∨ a]
 
 **Meter**
 
-𝔦 = π-Π
+𝔦 = ⲡ-Ⲡ
     The definition of an **iamb**
 
-𝔱 = Π-π
+𝔱 = Ⲡ-ⲡ
     The definition of a **trochee**
 
-𝔰 = Π-Π
+𝔰 = Ⲡ-Ⲡ
     The definition of a **spondee**
 
-𝔡 = Π-π-π
+𝔡 = Ⲡ-ⲡ-ⲡ
     The definition of **dactyl**
 
-𝔞 = π-π-Π
+𝔞 = ⲡ-ⲡ-Ⲡ
     The definition of a **anapest**
 
 .. topic:: Definition: Meters
@@ -168,13 +181,17 @@ For example,
 
     (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
 
-Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. Note in this example the first and third line rhyme. 
+Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. In other words,
 
+    (a/𝔦 :sub:`4`) = ⲡ :sub:`1` -Ⲡ :sub:`1` -ⲡ :sub:`2` -Ⲡ :sub:`2` -ⲡ:sub:`3` -Ⲡ:sub:`3` -ⲡ :sub:`4` -Ⲡ :sub:`4`
+
+Note in this example the first and third line rhyme. 
 The scope of a meter extends to everything contained in the parenthesis it marks. For example,
 
     (a.a/𝔦 :sub:`4`)
 
 Denotes a rhyming couplet where each line is written in iambic tetrameter. 
+
 
 .. _schemes:
 
@@ -210,7 +227,7 @@ Ballade
 
 .. topic:: Schema (Ballade Royal)
 
-    (a.b.a + b.b + c.c) ∨ (a.b.a.b + b.c.c)
+    [a.b.a + b.b + c.c] ∨ [a.b.a.b + b.c.c]
 
 .. topic:: Schema (Chant Royal)
 
@@ -219,6 +236,20 @@ Ballade
 **References**
 
 None yet found. 
+
+.. _kyrielle:
+
+Kyrielle
+^^^^^^^^
+
+.. topic:: Schema 
+
+    Σ :sub:`1`:sup:`n` [ a.a.b.B ∨ a.A.b.b ]
+
+**References**
+
+- `A lark in the mesh of the tangled vine <https://www.poemhunter.com/poem/kyrielle-2/>`_, John Payne
+- `A Lenten Hymn <https://allpoetry.com/poem/14371059-A-Lenten-Hymn-by-Thomas-Campion>`_, Thomas Campion
 
 .. _ode:
 
@@ -345,13 +376,13 @@ Six sestets followed by a tercet envoi.
 
 .. topic:: Schema
 
-   u(α).v(β).w(γ).x(δ).y(ε).z(ζ) + 
-   u(ζ).v(α).w(ε).x(β).y(δ).z(γ) + 
-   u(γ).v(ζ).w(δ).x(α).y(β).z(ε) +
-   u(ε).v(γ).w(β).x(ζ).y(α).z(δ) +
-   u(δ).v(ε).w(α).x(γ).y(ζ).z(β) +
-   u(β).v(δ).w(ζ).x(ε).y(γ).z(α) + 
-   [u∝α.v∝β.w∝γ] ∨ [u∝γ.v∝δ.w∝ε] ∨ [u∝ζ.v∝β.w∝δ]
+   u(Ⲁ).v(Ⲃ).w(Ⲅ).x(Ⲇ).y(Ⲉ).z(Ⲋ) + 
+   u(Ⲋ).v(Ⲁ).w(Ⲉ).x(Ⲃ).y(Ⲇ).z(Ⲅ) + 
+   u(Ⲅ).v(Ⲋ).w(Ⲇ).x(Ⲁ).y(Ⲃ).z(Ⲉ) +
+   u(Ⲉ).v(Ⲅ).w(Ⲃ).x(Ⲋ).y(Ⲁ).z(Ⲇ) +
+   u(Ⲇ).v(Ⲉ).w(Ⲁ).x(Ⲅ).y(Ⲋ).z(Ⲃ) +
+   u(Ⲃ).v(Ⲇ).w(Ⲋ).x(Ⲉ).y(Ⲅ).z(Ⲁ) + 
+   [u∝Ⲁ.v∝Ⲃ.w∝Ⲅ] ∨ [u∝Ⲅ.v∝Ⲇ.w∝Ⲉ] ∨ [u∝Ⲋ.v∝Ⲃ.w∝Ⲇ]
 
 **References**
 
@@ -370,6 +401,10 @@ Sonnet
 .. topic:: Schema (Shakespearan)
 
    (a.b.a.b + c.d.c.d + e.f.e.f + g.g/𝔦 :sub:`5`)
+
+.. topic:: Schema (Spenserian)
+
+    (a.b.a.b + b.c.b.c + c.d.c.d + e.e/𝔦 :sub:`5`)
 
 **References**
 
@@ -416,10 +451,8 @@ Virelai
 
 .. topic:: Schema (Nouveau)
 
-    A.B.
+    A :sub:`1` .b.b.a.A :sub:`2` + B :sub:`1`.c.c.b.B :sub:`2` +  ...
     
-    TODO
-
 **References**
 
 - `July <https://www.poetrynook.com/poem/july-41>`_, Henry Austin Dobson
@@ -433,7 +466,6 @@ Villanelle
 TODO: research Terzanelles. 
 
 .. topic:: Schema 
-
 
     A :sub:`1`.b.A :sub:`2` + a.b.A :sub:`1` + a.b.A:sub:`2` + a.b.A :sub:`1` + a.b.A :sub:`2` + a.b.A :sub:`1` .A :sub:`2`
 
