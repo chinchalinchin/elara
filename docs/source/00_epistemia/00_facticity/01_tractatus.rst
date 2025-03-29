@@ -18,8 +18,9 @@ Tractatus
 - :ref:`sinn`: TODO
 - :ref:`synthesis`: TODO
 - :ref:`truth`: Everything that is the case. 
-- :ref:`vorhandenheit`: TODO 
-- :ref:`world`: TODO
+- :ref:`vorhandenheit <vorhandenheit-zuhandenheit>`: That which is without the world.
+- :ref:`world`: Everything that is. 
+- :ref:`zuhandenheit <vorhandenheit-zuhandenheit>`: That which is within the world. 
 
 .. _a-priori-a-posteriori:
 
@@ -135,7 +136,7 @@ Being
 
   :ref:`Dasein <being>` is an :ref:`Seiendes <being>` which does not just occur among other :Ref:`Seienden <being>`. Rather it is ontically distinguished by the fact that, in its very :ref:`Sein <being>`, that :ref:`Sein <being>` is an issue for it. But in that case, this is a constitutive state of  :ref:`Dasein <being>`'s :ref:`Sein <being>`, and this implies that :ref:`Dasein <being>`, in its :ref:`Sein <being>`, has a relationship towards that :ref:`Sein <being>`— a relationship which itself is one of :ref:`Sein <being>`. And this means further that there is some way in which  :ref:`Dasein <being>` understands itself in its :ref:`Sein <being>`,, and that to some degree it does so explicitly. It is peculiar to this entity that with and through its :ref:`Sein <being>`, this :ref:`Sein <being>`, is disclosed to it. Understanding of :ref:`Sein <being>` is itself a definite characteristic of  :ref:`Dasein's <being>` :ref:`Sein <being>`.  :ref:`Dasein <being>` is ontically distinctive in that it is ontological. 
 
-  -- `Being and Time <https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n15/mode/2up>`_, Martin Heidegger, 1927 AD
+  -- `Being and Time <being-and-time>`_ , Martin Heidegger, 1927 AD
 
 .. _bedeutung: 
 
@@ -198,7 +199,7 @@ Form
 
     Form is the possibility of structure.
 
-    -- :ref:`Tractatus Logico-Philosophicus`, Ludwig Wittgenstein, 1921 AD
+    -- `Tractatus Logico-Philosophicus <tractatus-logico-philosophicus>`_ , Ludwig Wittgenstein, 1921 AD
 
 .. _noumena:
 
@@ -334,12 +335,18 @@ Truth
 
   -- `Principia Mathematica <https://lesharmoniesdelesprit.wordpress.com/wp-content/uploads/2015/11/whiteheadrussell-principiamathematicavolumei.pdf>`_, Bertrand Russell and Alfred Whitehead, 1910 AD
 
-.. _vorhandenheit:
+.. _vorhandenheit-zuhandenheit:
 
-Vorhandenheit
--------------
+Vorhandenheit / Zuhandenheit
+----------------------------
 
-TODO
+.. epigraph::
+
+  The :ref:`Wesen <being>` of this entity lies in its :ref:`Zu-sein <being>` , Its :ref:`Was-sein <being>` (*essentia*) must, so far as we can speak of it at all, be conceived in terms of its :ref:`Sein <being>` (*existentia*) . But here our ontological task is to show that when we choose to designate the :ref:`Sein <being>` of this entity as "existence" (*Existenz*), this term does not and cannot have the ontological signification of the traditional term "*existentia*" ; ontologically, existentia is tantamount to :ref:`Vorhandenheit <vorhandenheit-zuhandenheit>`, a kind of :ref:`Sein <being>` which is essentially inappropriate to entities of :ref:`Dasein <being>` 's character. To avoid getting bewildered, we shall always use the Interpretative expression " :ref:`Vorhandenheit <vorhandenheit-zuhandenheit>` " for the term "existentia", while the term "existence", as a designation of :ref:`Sein <being>`, will be allotted solely to :ref:`Dasein <being>`.
+
+  The essence of :ref:`Dasein <being>` lies in its existence. Accordingly those characteristics which can be exhibited in this entity are not 'properties' :ref:`vorhanden <vorhandenheit-zuhandenheit>` of some entity which 'looks' so and so and is itself :ref:`vorhanden <vorhandenheit-zuhandenheit>`; they are in each case possible ways for it to be, and no more than that. All the :ref:`So-sein <being>` which this entity possesses is primarily  :ref:`Sein <being>`. So when we designate this entity with the term ' :ref:`Dasein <being>` ', we are expressing not its "what" (as if it were a table, house or tree) but its :ref:`Sein <being>` .
+
+  -- `Being and Time <being-and-time>`_ , Martin Heidegger, 1927
 
 .. _world:
 

@@ -1,3 +1,6 @@
+.. _being-and-time: https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n7/mode/2up
+.. _tractatus-logico-philosophicus: https://archive.org/details/dli.ministry.23985
+
 .. _radix:
 
 Radix
@@ -31,7 +34,7 @@ archive.org
 -----------
 
 - `Being and Nothingness <https://archive.org/details/beingnothingness0000unse>`_
-- `Being and Time <https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n7/mode/2up>`_
+- `Being and Time <being-and-time>`_
 - `Ideas <https://archive.org/details/IdeasPartI>`_
 - `Introduction to Logic and the Methodology of the Deductive Sciences <https://archive.org/details/in.ernet.dli.2015.471634>`_
 - `Introduction to Symbolic Logic and Its Applications <https://archive.org/details/rudolf-carnap-introduction-to-symbolic-logic-and-its-applications>`_
@@ -45,7 +48,7 @@ archive.org
 - `The Exegesis of Philip K. Dick <https://archive.org/details/exegesisofphilip0000dick>`_
 - `The Myth of Sisyphus <https://archive.org/details/mythofsisyphus0000unse/page/n5/mode/2up>`_
 - `The World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_
-- `Tractatus Logico-Philosophicus <https://archive.org/details/dli.ministry.23985>`_
+- `Tractatus Logico-Philosophicus <tractatus-logico-philosophicus>`_
 - `White Yajurveda <https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up>`_
 
 .. _classical-library-org:
