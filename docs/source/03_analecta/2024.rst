@@ -11,7 +11,7 @@ April
 
     ":ref:`Being <being>`" is said in many ways. 
 
-    -- Categories, Aristotle
+    -- `Categories <categories>`_, Aristotle
 
 It is first of all said, and "*to be said*" requires what is said to be expressible in language. Every linguistic form is a representation. Therefore, something said is necessarily representative of some other thing. What a representation is and what it is representative of is left vague in the beginning, but the form of representation is not: language.  
 

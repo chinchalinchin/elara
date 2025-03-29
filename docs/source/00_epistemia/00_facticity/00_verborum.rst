@@ -48,21 +48,21 @@ Anacoluthon
 
     with up so floating many bells down 
     
-    -- `anyone lived in a pretty how town <https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town>`_, e.e. cummings
+    -- `anyone lived in a pretty how town <anyone-lived-in-a-pretty-how-town>`_, e.e. cummings
     
     In the coal fire will not wholly console them. 
 
-    -- `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_, Sylvia Plath
+    -- `Ouija <ouijq>`_, Sylvia Plath
 
     She's all states, and all princes, I,
 
     Nothing else is.
 
-    -- `The Sun Rising <https://www.poetryfoundation.org/poems/44129/the-sun-rising>`_, John Donne
+    -- `The Sun Rising <the-sun-rising>`_, John Donne
     
     From there are ghosts in the air 
 
-    -- `I Have Longed To Move Away <https://allpoetry.com/I-Have-Longed-To-Move-Away>`_, Dylan Thomas
+    -- `I Have Longed To Move Away <i-have-longed-to-move-away>`_, Dylan Thomas
 
 .. _anadiplosis:
 
@@ -73,13 +73,13 @@ Anadiplosis
     
     A waste of breath the years behind
 
-    -- `An Irishman Airman Foresees His Death <https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death>`_, William Butler Years
+    -- `An Irishman Airman Foresees His Death <an-irish-airman-foresees-his-death>`_, William Butler Years
 
     There moves what seems a fiery spark,
 
     A lonely spark with silvery rays
     
-    -- `The Dong with a Luminous Nose <https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose>`_, Edward Lear
+    -- `The Dong with a Luminous Nose <the-dong-with-a-luminous-nose>`_, Edward Lear
 
     The eyes that fix you in a formulated phrase,
     
@@ -87,7 +87,7 @@ Anadiplosis
     
     When I am pinned and wriggling on the wall,
 
-    -- `The Love Song of J. Alfred Prufrock <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
+    -- `The Love Song of J. Alfred Prufrock <the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
 
 .. _anaphora:
 
@@ -98,30 +98,30 @@ Anaphora
     
     Fear not the flat, synthetic blood
     
-    -- `All All and All <https://allpoetry.com/All-All-And-All>`_, Dylan Thomas
+    -- `All All and All <all-all-and-all>`_, Dylan Thomas
     
     Their lone waters, lone and dead, -- 
 
     Their sad waters, sad and chilly
     
-    -- `Dream Land <https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76>`_, Edgar Allen Poe
+    -- `Dream Land <dream-land>`_, Edgar Allen Poe
 
     War on the spider and the wren! 
 
     War on the destiny of man! 
 
-    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_, Dylan Thomas
+    -- `Find Meat On Bones <find-meat-on-bones>`_, Dylan Thomas
 
 
     Why were they proud? Because their marble founts
 
-    Gush’d with more pride than do a wretch’s tears?—
+    Gush'd with more pride than do a wretch's tears?—
 
     Why were they proud? Because fair orange-mounts
     
     Were of more soft ascent than lazar stairs?—
     
-    Why were they proud? Because red-lin’d accounts
+    Why were they proud? Because red-lin'd accounts
     
     Were richer than the songs of Grecian years?—
 
@@ -129,7 +129,7 @@ Anaphora
     
     Why in the name of Glory were they proud?
     
-    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
 
     And of thy spicy myrtles as they blow,
 
@@ -137,7 +137,7 @@ Anaphora
 
     And of thy lilies, that do paler grow
     
-    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
 
     And she forgot the stars, the moon, and sun,
 
@@ -147,7 +147,7 @@ Anaphora
 
     And she forgot the chilly autumn breeze;  
 
-    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
 
     If I were a dead leaf thou mightest bear;
 

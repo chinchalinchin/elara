@@ -1,5 +1,35 @@
+.. academic 
+.. _being-and-event: http://www.elimeyerhoff.com/books/Badiou/Badiou-Being_and_Event_Searchable.pdf
+.. _being-and-nothingness: https://archive.org/details/beingnothingness0000unse
 .. _being-and-time: https://archive.org/details/pdfy-6-meFnHxBTAbkLAv/page/n7/mode/2up
+.. _categories: https://classics.mit.edu/Aristotle/categories.1.1.html
+.. _critique-of-pure-reason: https://www.gutenberg.org/ebooks/4280
+.. _function-and-concept: https://fitelson.org/proseminar/frege_fac.pdf
+.. _meditations: http://www.classicallibrary.org/descartes/meditations/4.htm
+.. _on-concept-and-object: https://fitelson.org/proseminar/frege_ocao.pdf
+.. _on-sense-and-reference: https://archive.org/details/OnSenseAndReference
+.. _principa-mathematica: https://archive.org/details/cu31924001575244
+.. _process-and-reality: https://archive.org/details/processrealitygi00alfr
+.. _theatetus: http://classics.mit.edu/Plato/theatu.html
+.. _the-concept-of-truth: http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Tarski%20-%20The%20Concept%20of%20Truth%20in%20Formalized%20Languages.pdf
 .. _tractatus-logico-philosophicus: https://archive.org/details/dli.ministry.23985
+.. _what-is-metaphysics: https://www.stephenhicks.org/wp-content/uploads/2013/03/heideggerm-what-is-metaphysics.pdf
+.. _wittgenstein-lectures: https://www.marxists.org/reference/subject/philosophy/works/at/wittgens.htm
+.. _world-as-will-and-representation: https://archive.org/details/worldaswillrepre01scho
+
+.. poetry
+
+.. _all-all-and-all: https://allpoetry.com/All-All-And-All
+.. _an-irish-airman-foresees-his-death: https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death
+.. _anyone-lived-in-a-pretty-how-town: https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town
+.. _dream-land: https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76
+.. _find-meat-on-bones: https://allpoetry.com/Find-Meat-On-Bones
+.. _i-have-longed-to-move-away: https://allpoetry.com/I-Have-Longed-To-Move-Away
+.. _isabella-or-the-pot-of-basil: https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up
+.. _ouija: https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath
+.. _the-dong-with-a-luminous-nose: https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose
+.. _the-love-song-of-j-alfred-prufrock: https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>
+.. _the-sun-rising: https://www.poetryfoundation.org/poems/44129/the-sun-rising
 
 .. _radix:
 
@@ -33,7 +63,7 @@ allpoetry.com
 archive.org
 -----------
 
-- `Being and Nothingness <https://archive.org/details/beingnothingness0000unse>`_
+- `Being and Nothingness <being-and-nothingness>`_
 - `Being and Time <being-and-time>`_
 - `Ideas <https://archive.org/details/IdeasPartI>`_
 - `Introduction to Logic and the Methodology of the Deductive Sciences <https://archive.org/details/in.ernet.dli.2015.471634>`_
@@ -41,13 +71,13 @@ archive.org
 - `Isabella or The Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_
 - `Naming and Necessity <https://archive.org/details/kripke-1980-naming-and-necessity>`_
 - `On Certainty <https://archive.org/details/oncertainty00witt>`_
-- `On Sense and Reference <https://archive.org/details/OnSenseAndReference>`_
+- `On Sense and Reference <on-sense-and-reference>`_
 - `Philosophical Investigations <https://archive.org/details/philosophicalinv0000witt/page/n3/mode/2up>`_
-- `Principia Mathematica <https://archive.org/details/cu31924001575244>`_
-- `Process and Reality <https://archive.org/details/processrealitygi00alfr>`_
+- `Principia Mathematica <principia-mathematica>`_
+- `Process and Reality <process-and-reality>`_
 - `The Exegesis of Philip K. Dick <https://archive.org/details/exegesisofphilip0000dick>`_
 - `The Myth of Sisyphus <https://archive.org/details/mythofsisyphus0000unse/page/n5/mode/2up>`_
-- `The World as Will and Representation, The <https://archive.org/details/worldaswillrepre01scho>`_
+- `The World as Will and Representation <world-as-will-and-representation>`_
 - `Tractatus Logico-Philosophicus <tractatus-logico-philosophicus>`_
 - `White Yajurveda <https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up>`_
 
@@ -56,7 +86,7 @@ archive.org
 classicallibrary.org
 --------------------
 
-- `Meditations on First Philosophy <http://www.classicallibrary.org/descartes/meditations/4.htm>`_
+- `Meditations on First Philosophy <meditations>`_
 
 .. _classics-mit-edu:
 
@@ -64,12 +94,12 @@ classics.mit.edu
 ----------------
 
 - `Aeneid <https://classics.mit.edu/Virgil/aeneid.html>`_
-- `Categories <https://classics.mit.edu/Aristotle/categories.1.1.html>`_
+- `Categories <categories>`_
 - `Physics <http://classics.mit.edu/Aristotle/physics.html>`_
 - `Metaphysics <http://classics.mit.edu/Aristotle/metaphysics.html>`_
 - `Posterior Analytics <http://classics.mit.edu/Aristotle/posterior.1.i.html>`_
 - `Prior Analytics <https://classics.mit.edu/Aristotle/prior.1.i.html>`_
-- `Theatetus <http://classics.mit.edu/Plato/theatu.html>`_
+- `Theatetus <theatetus>`_
 
 .. _columbia-edu:
 
@@ -90,7 +120,7 @@ gnosis.org
 gutenberg.org
 -------------
 
-- `Critique of Pure Reason <https://www.gutenberg.org/ebooks/4280>`_
+- `Critique of Pure Reason <critique-of-pure-reason>`_
 - `Devotions Upon Emergent Occasions <https://www.gutenberg.org/files/23772/23772-h/23772-h.htm>`_
 - `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_
 - `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
@@ -113,7 +143,7 @@ poetryfoundation.org
 --------------------
 
 - `An Irish Airman Foresees His Death <https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death>`_
-- `Anyone Lived in a Pretty How Town <https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town>`_
+- `Anyone Lived in a Pretty How Town <anyone-lived-in-a-pretty-how-town>`_
 - `Do Not Go Gentle Into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>`_
 - `Dream-Land <https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76>`_
 - `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_
@@ -135,9 +165,16 @@ poetryfoundation.org
 - `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
 - `Tonight <https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7>`
 
-.. _royal-society-publish-org:
+.. _various:
 
-royalsocietypublishing.org
---------------------------
+Various
+-------
 
 - `An essay towards solving a problem in the doctrine of chances <https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053>`_
+- `Being and Event <being-and-event>`_
+- `Function and Concept <function-and-concept>`_
+- `On Concept and Object <on-concept-and-object>`_
+- `The Concept of Truth in Formalized Languages <the-concept-of-truth>`_
+-
+- `What Is Metaphysics? <what-is-metaphysics>`_
+- `Wittgenstein Lectures <wittgenstein-lectures>`_
