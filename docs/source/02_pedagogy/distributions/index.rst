@@ -8,8 +8,8 @@ Distributions
    :maxdepth: 2
    :caption: Contents:
 
-   00_BERNOULLI
-   01_GEOMETRIC
-   02_BINOMIAL
-   03_UNIFORM
-   04_NORMAL
+   00_bernoulli
+   01_geometric
+   02_binomial
+   03_uniform
+   04_normal

@@ -12,3 +12,4 @@ Epistemia
    01_lyceum/index
    00_radix
    01_datum
+   02_tabula
