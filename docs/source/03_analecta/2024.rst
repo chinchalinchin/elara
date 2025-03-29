@@ -9,7 +9,7 @@ April
 
 .. epigraph::
 
-    "*Being*" is said in many ways. 
+    ":ref:`Being <being>`" is said in many ways. 
 
     -- Categories, Aristotle
 
@@ -39,13 +39,13 @@ However, a crucial distinction must be drawn in these cases. The quotation marks
 
     Word is a word.
 
-This analysis hinges on the realization first proffered by Tarski that there is a consequential difference between the language in which we speak propositions of a language and the language in which we speak *about* the propositions of a language. 
+This analysis hinges on the realization first proffered by :ref:`Tarski <tarski>` that there is a consequential difference between the language in which we speak propositions of a language and the language in which we speak *about* the propositions of a language. 
 
     The language one speaks is not necessarily the language about which one speaks. 
 
-Confusion often results when the same language performs both functions. In the case of mathematics, where the proposition language is that of, say, arithmetic, and the description language that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of "*being*" in the early twentieth century.
+Confusion often results when the same language performs both functions. In the case of mathematics, where the proposition language is that of, say, arithmetic, and the description language that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of " :ref:`Being <being>` " in the early twentieth century.
 
-If the goal is to define "*being*", then one can only succeed at the level of description. A description *about* a "*being*" is incapable of saying what is meant by "*being*".
+If the goal is to define " :ref:`Being <being>` ", then one can only succeed at the level of description. A description *about* a " :ref:`Being <being>` " is incapable of saying what is meant by " :ref:`Being <being>` ".
 
 .. _2024-may:
 
@@ -73,11 +73,11 @@ If the objective is to produce a certain fact, then all assumptions must be remo
 
 It is a maxim of post-Kantian philosophy that what is known must be known through the experience of "*knowing*", and thus it must be conditioned by experience. Knowledge of a thing is knowledge of the sensuous experience of the thing and what the sensuous cannot present to experience cannot be known.
 
-For any object of experience, its attributes may be abstracted away in thought, but even an indeterminate object must possess a condition of determination for being able to be an object of experience; it is this form of determination that Kant identifies as "*a-priori*". If, from a thing, its manifest qualities are subtracted, one is left with the pure abstract relation that sensuous experience deploys in order to perform the ontological operation of objectification.
+For any object of experience, its attributes may be abstracted away in thought, but even an indeterminate object must possess a condition of determination for being able to be an object of experience; it is this form of determination that Kant identifies as " :ref:`a priori <a-priori-a-posteriori>` ". If, from a thing, its manifest qualities are subtracted, one is left with the pure abstract relation that sensuous experience deploys in order to perform the ontological operation of objectification.
 
-The operands of the objectification are the experience for which the object is and the object thus identified by experience. This operation yields a unique index, which one is inclined to call an object's "*name*". In other words, receptivity to naming is a prerequisite for being knowable. A thing cannot be known unless it can be named.
+The operands of the objectification are the experience for which the object is the object thus identified by experience. This operation yields a unique index, which one is inclined to call an object's "*name*". In other words, receptivity to naming is a prerequisite for being knowable. A thing cannot be known unless it can be named.
 
-The inverse does not follow. One cannot conclude from "*if a thing cannot be named, then it cannot be known*" that "*if a thing cannot be known, then a thing cannot be named*". If the latter were the case, then one would lack a proper name for "*nothing*".
+The inverse does not follow. One cannot conclude from "*if a thing cannot be named, then it cannot be known*" that "*if a thing cannot be known, then a thing cannot be named*". If the latter were the case, then one would lack a proper name for " :ref:`nothing <nothing>` ".
 
 .. _2024-november:
 
@@ -87,15 +87,15 @@ November
 
 The desire for exegesis cannot be met without recourse to personal experience, and in introducing the subjective element, the exegesis itself is undone. One wants a formal deduction, a series of arguments absolute and pure, proceeding from a starting point whose self-evidence is immanent. One wants to find the words to lay upon this thing called life like a map, to show what it is and how it is to be understood. We seek a science that explains what it is to be, that will, as part of its apparatus, integrate our very consciousness into its fabric and render unto us a divine sort of revelation.
 
-This is the essential human delusion. Essential, because it resides in every activity; there is nothing which is that does not presuppose the law of cause and effect, and so we come to be supposing all which is must abide this fundamental law. Human, because it is our poetical curse to attach symbols to objects. Delusion, because the subject will never find itself among objects, except as an object.
+This is the essential human delusion. Essential, because it resides in every activity; there is nothing which is that does not presuppose the law of cause and effect, and so we come to be supposing all which is must abide this fundamental law. Human, because it is our :ref:`poetical <syntagmics>` curse to attach symbols to objects. Delusion, because the subject will never find itself among objects, except as an object.
 
-We imagine the written word like a mirror, a silvered surface that reflects and reveals the point of origin but our thoughts are not like rays of light, and the page is no surface to preserve in perfect fashion the objects incident upon it. The word always grasps towards what it wants to represent, but fails in its approach. 
+We imagine the written word like a mirror, a silvered surface that reflects and reveals its point of origin through precise geometry but our thoughts are not like rays of light, and the page is no surface to preserve in perfect fashion the objects incident upon it. The word always grasps towards what it wants to represent, but fails in its approach. 
 
 Is there a series of words that explains the world's churning? Mathematicians tells us to fix our definitions, and let logic unfold. With what definition do we start? *To be*, seems the most general of relations, the most primitive of terms. Thus, we initiate again an Aristotelian chain, whose history is available to any student of philsophy. Such an exercise, though worthwhile, will only yield formal results, against which we will inevitably rebel in Heideggerian fashion, and then succumb, forgetting in essence our original task. 
 
 I want to tell you what I know, but the words that I would use to give form to my thoughts escape me. I labor in vain for quiet hours. There is structure in our experience, in our lives, underneath its surface, if only it were presented, so that it might be represented in symbolic form. 
 
-It is easy to slip into solipsism, like a Cartesian fingertrap. One must remember that language presumes the presence of another. Though the world as we know it may lack facts, it never lacks form. The existence of words is testament to the communal aspect of reality, that when we are in the world, we are in the world with someone else. The world, a veil though it may be in its appearance, is substantial, because it can be described, and a decription can only exist *for* someone. 
+It is easy to slip into solipsism, like a Cartesian fingertrap. One must remember that :ref:`language <language>` presumes the presence of another. Though the world as we know it may lack facts, it never lacks form. The existence of words is testament to the communal aspect of reality, that when we are in the :ref:`world <world>`, we are in the :ref:`world <world>` with someone else. The :ref:`world <world>`, a veil though it may be in its appearance, is substantial, because it can be described, and a decription can only exist *for* someone. 
 
 Let us start any exegesis with this simple proposition whose tautological nature is thus self evident:
 

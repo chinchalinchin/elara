@@ -1,9 +1,7 @@
 Pantoums
 ========
 
-.. topic:: Schema
-
-   A.B.C.D + B.E.D.F + E.G.F.H + ... + x.y.C.A
+:ref:`Pantoum Reference <pantoum>`
 
 .. toctree::
    :maxdepth: 2

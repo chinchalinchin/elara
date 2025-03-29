@@ -39,7 +39,7 @@ So it is with induction: the proof of induction, and therefore every proof *by* 
 July
 ----
 
-Frege uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects, 
+:ref:`Frege <frege>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects, 
 
 .. math::
 
@@ -61,7 +61,7 @@ Furthermore, the subsequent form of numbers can be expressed via recursion back 
     
     n(B) = 1
 
-Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the Fregean definition of zero: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in Frege's case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
+Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the :ref:`Fregean definition of zero <frege-zero>`: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in :ref:`Frege <frege>`'s case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
 
 ---
 

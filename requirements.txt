@@ -3,6 +3,8 @@ sphinx
 sphinx-toolbox
 sphinx-book-theme
 sphinx_design
+ 
+matplotlib-venn
 
 # Palindromes dependencies
 matplotlib

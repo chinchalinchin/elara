@@ -135,7 +135,7 @@ TODO
 Logical Redundancy
 ******************
 
-Logical implication can be expressed in terms of the other logical connectiveS introduced. Notice the range of the implication function assigns a value of `True` to three of the four value assignments. Logical disjunctions also assigns a value of `True` to three of the four possible value assignments of its constituent propositions. It is a natural question whether implication can be reduced to disjunction or visa versa.
+Logical implication can be expressed in terms of the other logical connectives introduced. Notice the range of the implication function assigns a value of `True` to three of the four value assignments. Logical disjunctions also assigns a value of `True` to three of the four possible value assignments of its constituent propositions. It is a natural question whether implication can be reduced to disjunction or visa versa.
 
 
 TODO
@@ -144,6 +144,9 @@ TODO
 
 Truth Tables
 ============
+
+
+Truth tables are the standard way of evaluating the truth of a symbolic proposition. However, when the number of terms in a compound proposition rises above 4, truth tables can quickly become cumbersome. See :ref:`carnaps-method` for an alternate way of evaluating the truth of a symbolic propositions. 
 
 Compound Propositions
 ---------------------
@@ -178,11 +181,6 @@ TODO
 	
 Contradictions
 --------------
-
-TODO
-
-Carnap's Method
----------------
 
 TODO
 

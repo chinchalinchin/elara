@@ -3,9 +3,7 @@
 Villanelles
 ===========
 
-.. topic:: Schema 
-
-    A :sub:`1`.b.A :sub:`2` + a.b.A :sub:`1` + a.b.A:sub:`2` + a.b.A :sub:`1` + a.b.A :sub:`2` + a.b.A :sub:`1` .A :sub:`2`
+:ref:`Villanelle Reference <villanelle>`
 
 .. toctree::
    :maxdepth: 2

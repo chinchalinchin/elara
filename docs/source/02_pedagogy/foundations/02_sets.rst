@@ -1,15 +1,14 @@
 .. _set-theory: 
 
-==========
 Set Theory
 ==========
 
+-----------
 Definitions
-===========
+-----------
 
 .. _domain-of-discourse:
 
--------------------
 Domain of Discourse
 -------------------
 
@@ -18,7 +17,6 @@ Definition
 
 .. _elements:
 
---------
 Elements
 --------
 
@@ -32,7 +30,6 @@ Definition
 
 .. _sets:
 
-----
 Sets
 ----
 
@@ -50,7 +47,6 @@ Definition
 
 .. _cardinality:
 
------------
 Cardinality
 -----------
 
@@ -62,7 +58,6 @@ Definition
 
 .. _universal-set:
 
--------------
 Universal Set 
 -------------
 
@@ -74,7 +69,6 @@ Definition
 
 .. _null-set:
 
---------
 Null Set
 --------
 
@@ -86,7 +80,6 @@ Definition
 
 .. _natural-numbers:
 
----------------
 Natural Numbers
 ---------------
 
@@ -98,7 +91,6 @@ Definition
 
 .. _real-numbers:
 
-------------
 Real Numbers
 ------------
 
@@ -108,12 +100,12 @@ Symbolic Expression
 Definition
     The set of all decimal numbers, :math:`1, 1.01, 1.001, ...`
 
+--------
 Notation
-========
+--------
 
 .. _list-notation:
 
--------------
 List Notation
 -------------
 
@@ -121,11 +113,10 @@ List Notation
 
     A = \{ a, b, c, ... \}
 
-In *list notation*, all of the elements that belong to **A** are *explicitly* written between a pair of brackets with commas separating each element. 
+In *list notation*, all of the elements that belong to :math:`A` are *explicitly* written between a pair of brackets with commas separating each element. 
 
 .. _quantifier-notation:
 
--------------------
 Quantifier Notation 
 -------------------
 
@@ -133,14 +124,15 @@ Quantifier Notation
     
     A = \{ \forall x: F(x) \}
 
-In *quantifier notation*, all of the elements that belong to **A** are *implicitly* written between a pair of brackets with a formula that specifies the conditions for membership.
+In *quantifier notation*, all of the elements that belong to :math:`A` are *implicitly* written between a pair of brackets with a formula that specifies the conditions for membership.
 
 *Quantifier notation* is sometimes referred to as *set builder notation*.
 
 .. _set-corollaries:
 
+-----------
 Corollaries
-===========
+-----------
 
 :math:`n(\varnothing)=0`
 
@@ -156,10 +148,11 @@ Corollaries
 
 .. _venn-diagrams:
 
+-------------
 Venn Diagrams
-=============
+-------------
 
-A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set **A** shown against the universal set **S**, 
+A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set :math:`A` shown against the universal set **S**, 
 
 .. image:: ../../_static/img/math/sets/sets-simple.jpg
 	:align: center
@@ -173,12 +166,12 @@ You will sometimes set *Venn Diagrams* with the elements of the sets written in,
 
 .. _set-relations:
 
+---------
 Relations
-=========
+---------
 
 .. _subset:
 
-------
 Subset
 ------
  
@@ -188,9 +181,9 @@ Subset
      
 		A \subseteq B
 
-**A** is a subset of **B** if all of **A**'s elements are contained in **B**. 
+:math:`A` is a subset of :math:`B` if all of :math:`A`'s elements are contained in :math:`B`. 
 
-To say the same thing in a different way, if the element *x* belongs to **A**, then the element *x* also belongs to **B**
+To say the same thing in a different way, if the element *x* belongs to :math:`A`, then the element *x* also belongs to :math:`B`
 
 .. math::
     
@@ -199,12 +192,12 @@ To say the same thing in a different way, if the element *x* belongs to **A**, t
 The relation of *subset* can be seen in the following *Venn Diagram*, 
 
 .. image:: ../../_static/img/math/sets/sets-subset.jpg
+	:align: center
 
 This diagram represents the relationship :math:`A \subseteq B`.
 
 .. _proper-subset:
 
--------------
 Proper Subset 
 -------------
 
@@ -213,7 +206,7 @@ Proper Subset
 	.. math:: 
 		A \subset B
 
-**A** is a subset of **B** and :math:`A \neq B`. To say the same thing in a different way, **A** is wholly contained in **B**.
+:math:`A` is a subset of :math:`B` and :math:`A \neq B`. To say the same thing in a different way, :math:`A` is wholly contained in :math:`B`.
 
 .. math::
     
@@ -225,11 +218,10 @@ An equivalent way of defining a *proper subset* is given by,
     
 	\forall x: x \in A \implies x \in B \text{ and } n(A) < n(B)
 
-This is an equivalent formulation because saying cthe cardinality of **A** is less than the cardinality of **B** *and* all members of **A** are members of **B**" is logically equivalent to saying "**A** is not identical to **B** *and* all members of **A** are members of **B**".
+This is an equivalent formulation because saying cthe cardinality of :math:`A` is less than the cardinality of :math:`B` *and* all members of :math:`A` are members of :math:`B`" is logically equivalent to saying ":math:`A` is not identical to :math:`B` *and* all members of :math:`A` are members of :math:`B`".
 
 .. _set-equivalence:
 
------------
 Equivalence
 -----------
 
@@ -239,7 +231,7 @@ Equivalence
     
 	        A \equiv B
     
-Two sets **A** and **B** are *equivalent* if the number of elements in **A** is equal to the number of elements **B**, i.e.,
+Two sets :math:`A` and :math:`B` are *equivalent* if the number of elements in :math:`A` is equal to the number of elements :math:`B`, i.e.,
 
 .. math:: 
 
@@ -247,7 +239,6 @@ Two sets **A** and **B** are *equivalent* if the number of elements in **A** is 
 
 .. _set-equality:
 
---------
 Equality
 --------
 
@@ -257,7 +248,7 @@ Equality
 
 		A = B
 
-Two sets **A** and **B** are *equal* if they contain the same elements. In other words, two sets are equal if they are the same set.
+Two sets :math:`A` and :math:`B` are *equal* if they contain the same elements. In other words, two sets are equal if they are the same set.
 
 .. math:: 
 
@@ -269,7 +260,7 @@ An equivalent way of defining the equality of sets is given by,
 
 	A \subseteq B \text { and } B \subseteq A 
 
-In other words, if **A** is wholly contained in **B** and **B** is wholly contained in **A**, then the only way this can occur is if :math:`A = B`.
+In other words, if :math:`A` is wholly contained in :math:`B` and :math:`B` is wholly contained in :math:`A`, then the only way this can occur is if :math:`A = B`.
 
 *Equality* is a stricter condition than *equivalence*. Two sets that are equal are equivalent, but two sets that equivalent are not necessarily equal. Consider the sets,
 
@@ -281,7 +272,7 @@ In other words, if **A** is wholly contained in **B** and **B** is wholly contai
 
     	B = \{ \text{Vietnam War}, \text{Russo-Japanese War} \}
 
-Both of these sets are equivalent because :math:`n(A) = n(B) = 2`, but they are not equal. If we add **C** to the mix,
+Both of these sets are equivalent because :math:`n(A) = n(B) = 2`, but they are not equal. If we add :math:`C` to the mix,
 
 .. math::
 
@@ -300,12 +291,12 @@ In order words, from equality we can infer equivalence, but from equivalence, we
 
 .. _set-operations:
 
+----------
 Operations
-==========
+----------
 
 .. _complement:
 
-----------
 Complement
 ----------
 
@@ -319,7 +310,7 @@ Complement
 
 		\sim  A
 
-The set containing elements that do not belong to the set **A**. 
+The set containing elements that do not belong to the set :math:`A`. 
 
 .. math:: 
 
@@ -328,6 +319,7 @@ The set containing elements that do not belong to the set **A**.
 The complement can be visualized with the following *Venn Diagram*,
 
 .. image:: ../../_static/img/math/sets/sets-complement.jpg
+	:align: center
 
 .. tip:: 
 
@@ -335,7 +327,7 @@ The complement can be visualized with the following *Venn Diagram*,
     
     **Example**
     
-	Let **S** be the set of animals and let **A** be the set of dogs. Then :math:`A^c` is the set of animals that are *not* dogs.
+	Let **S** be the set of animals and let :math:`A` be the set of dogs. Then :math:`A^c` is the set of animals that are *not* dogs.
 
 .. note::
 
@@ -357,7 +349,6 @@ The complement can be visualized with the following *Venn Diagram*,
 
 .. _union:
 
------
 Union
 -----
 
@@ -367,23 +358,23 @@ Union
 
         	A \cup B
 
-The set containing elements that belong to either the set **A** or the set **B**.
+The set containing elements that belong to either the set :math:`A` or the set :math:`B`.
 
 .. math:: 
 
 	A \cup B = \{ \forall x: x \in A \text{ or } x \in B \}
 
-We have to be careful with *Venn Diagrams* that represent unions, because the two sets **A** and **B** might have elements in common, or they may not have elements in common. 
+We have to be careful with *Venn Diagrams* that represent unions, because the two sets :math:`A` and :math:`B` might have elements in common, or they may not have elements in common. 
 
 The first case, where the two sets have no elements in common is shown below,
 
-.. image:: ../../_static/img/math/sets/sets-union-disjoint.jpg
+.. plot:: _scripts/py/plots/venns/diagram_disjoint.py
 
 The union would be represented by *both* circles. Notice the circles do not touch. Sets that have no elements in common are called *disjoint*. 
 
 The second case, where the two sets have elements in common is shown in the next diagram,
 
-.. image:: ../../_static/img/math/sets/sets-union-overlapping.jpg
+.. plot:: _scripts/py/plots/venns/diagram_overlapping.py
 
 The union would be represented by the entire area of both circles. Notice the circles share some elements in this case. Sets that have elements in common, but are not subsets in either direction (i.e. neither :math:`A \subseteq B` nor :math:`B \subseteq A`), are called *overlapping*.
 
@@ -393,7 +384,7 @@ The union would be represented by the entire area of both circles. Notice the ci
     
     **Example**
     
-	Let **A** be the set of calculators. Let **B** represent the set of *pencils*. Then :math:`A \cup B` represents the set of *calculators* or *pencils*.
+	Let :math:`A` be the set of calculators. Let :math:`B` represent the set of *pencils*. Then :math:`A \cup B` represents the set of *calculators* or *pencils*.
 
 **Example** 
 
@@ -411,7 +402,6 @@ The union would be represented by the entire area of both circles. Notice the ci
 
 .. _intersection:
 
-------------
 Intersection
 ------------
 
@@ -421,7 +411,7 @@ Intersection
         
 		A \cap B
 
-The set containing elements that to both the set **A** and the set **B**. 
+The set containing elements that to both the set :math:`A` and the set :math:`B`. 
 
 .. math:: 
 
@@ -431,7 +421,7 @@ As in the union, there are two cases we need to consider when representing the i
 
 The first case, where the two sets have elements in common is shown in the next diagram,
 
-.. image:: ../../_static/img/math/sets/sets-union-overlapping.jpg
+.. plot:: _scripts/py/plots/venns/diagram_overlapping.py
 
 The intersection is represented by where the circles meet. In the case of *overlapping* sets, this is non-empty,
 
@@ -441,7 +431,7 @@ The intersection is represented by where the circles meet. In the case of *overl
 
 The second case, where the two sets have no elements in common is shown below,
 
-.. image:: ../../_static/img/math/sets/sets-union-disjoint.jpg
+.. plot:: _scripts/py/plots/venns/diagram_disjoint.py
 
 The intersection is represented by where the circles meet. In the case of *disjoint sets*, the circles do not meet. Thus, 
 
@@ -455,9 +445,9 @@ The intersection is represented by where the circles meet. In the case of *disjo
 
 	**Example**
 	
-		Let **A** be the set of United States Senators. Let **B** the set of people over the age of 70. Then, :math:`A \cap B` represents the set of people who are both United States Senators and over the age of 70.
+		Let :math:`A` be the set of United States Senators. Let :math:`B` the set of people over the age of 70. Then, :math:`A \cap B` represents the set of people who are both United States Senators and over the age of 70.
 
-**Example **
+**Example**
 
 	.. math::
 
@@ -473,7 +463,6 @@ The intersection is represented by where the circles meet. In the case of *disjo
 
 .. _set-difference:
 
-----------
 Difference
 ----------
 
@@ -487,8 +476,9 @@ The operation of subtracting a set :math:`B` from a set :math:`A` is equivalent 
 
 .. _set-theorems:
 
+--------
 Theorems
-========
+--------
 
 All of the theorems of Set Theory can be proven in one of two ways:
 
@@ -508,14 +498,13 @@ All of the theorems of Set Theory can be proven in one of two ways:
 
 .. _basic-theorems:
 
---------------
 Basic Theorems
 --------------
 
 .. _zero-property-of-intersections:
 
 Zero Property of Intersections
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. topic:: Zero Property of Intersections
 
@@ -529,7 +518,7 @@ Zero Property of Intersections
 
 	        n(A \cap \varnothing) = n(\varnothing)
 
-The intersection of any set **A** with the empty set is the empty set. 
+The intersection of any set :math:`A` with the empty set is the empty set. 
 
 .. note:: 
 
@@ -542,7 +531,7 @@ The intersection of any set **A** with the empty set is the empty set.
 .. _zero-property-of-unions:
 
 Zero Property of Unions
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. topic:: Zero Property of Unions
 
@@ -556,7 +545,7 @@ Zero Property of Unions
 
 		n(A \cup \varnothing) = n(A)
 
-The union of any set **A** with the empty set is itself. 
+The union of any set :math:`A` with the empty set is itself. 
 
 .. note:: 
 
@@ -569,7 +558,7 @@ The union of any set **A** with the empty set is itself.
 .. _first-identity-property-of-intersections:
 
 First Identity Property of Intersections
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. topic:: Identity Property of Intersections
 
@@ -583,7 +572,7 @@ First Identity Property of Intersections
 
 		n(A \cap S) = n(A)
 
-The intersection of any set **A** with the universal set is itself.
+The intersection of any set :math:`A` with the universal set is itself.
 
 .. note:: 
 
@@ -596,19 +585,19 @@ The intersection of any set **A** with the universal set is itself.
 .. _second-identity-property-of-intersetions:
 
 Second Identity Property of Intersections
------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Symbolic Expression
     .. math:: 
 
         A \cap A = A
 
-The intersection of any set **A** with itself is itself.
+The intersection of any set :math:`A` with itself is itself.
 
 .. _first-identity-property-of-unions:
 
 First Identity Property of Unions
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. topic:: Identity Property of Unions
 
@@ -622,7 +611,7 @@ First Identity Property of Unions
 
 		n(A \cup S) = n(S)
 
-The union of any set **A** with the universal set is the universal set.
+The union of any set :math:`A` with the universal set is the universal set.
 
 .. note:: 
 
@@ -631,25 +620,24 @@ The union of any set **A** with the universal set is the universal set.
 .. _second-identity-property-of-unions:
 
 Second Identity Property of Unions
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Symbolic Expression
     .. math:: 
 
         A \cup A = A 
 
-The union of any set **A** with itself is itself. 
+The union of any set :math:`A` with itself is itself. 
 
 .. _subset-theorems:
 
----------------
 Subset Theorems
 ---------------
 
 .. _subset-theorem-one:
 
 Theorem 1
----------
+^^^^^^^^^
 
 .. math::
 
@@ -660,12 +648,12 @@ Or equivalently,
 .. math::
 	n(A \cap B) <= n(A)
 
-The intersection of **A** and **B** is a subset of **A**.
+The intersection of :math:`A` and :math:`B` is a subset of :math:`A`.
 
 .. _subset-theorem-two:
 
 Theorem 2
----------
+^^^^^^^^^
 
 .. math::
 	
@@ -676,12 +664,12 @@ Or equivalently,
 .. math::
 	n(A) <= n(A \cup B)
 
-**A** is a subset of the union of **A** and **B**.
+:math:`A` is a subset of the union of :math:`A` and :math:`B`.
 
 .. _subset-theorem-three:
 
 Theorem 3
----------
+^^^^^^^^^
 
 .. math::
 
@@ -693,12 +681,12 @@ Or equivalently,
 
 	n(A \cap B) <= n(A \cup B)
 
-The intersection of two sets **A** and **B** is a subset of the union of those same two sets.
+The intersection of two sets :math:`A` and :math:`B` is a subset of the union of those same two sets.
 
 .. _subset-theorem-four:
 
 Theorem 4
----------
+^^^^^^^^^
 
 .. math::
 
@@ -710,9 +698,9 @@ Or equivalently,
 	
 	A \subseteq B \implies n(A \cap B) = n(A)
 
-If **A** is a subset of **B**, then the intersection of **A** and **B** is equal to **A**. 
+If :math:`A` is a subset of :math:`B`, then the intersection of :math:`A` and :math:`B` is equal to :math:`A`. 
 
-The hypothesis of this theorem, that **A** is a subset of **B**, cannot be written simply in terms of cardinalities. To see why, consider the sets,
+The hypothesis of this theorem, that :math:`A` is a subset of :math:`B`, cannot be written simply in terms of cardinalities. To see why, consider the sets,
 
 .. math:: 
 
@@ -732,13 +720,13 @@ Here we have,
     
     B \subseteq A
 
-From this and the theorem taken together, we are able to infer the intersection of **B** and **A** is **B**,
+From this and the theorem taken together, we are able to infer the intersection of :math:`B` and :math:`A` is :math:`B`,
 
 .. math::
 
     B \cap A = \{ \text{red}, \text{blue} \} = B
 
-If we try to apply the same logic to **C** and **A**, we run into a problem. Namely, 
+If we try to apply the same logic to :math:`C` and :math:`A`, we run into a problem. Namely, 
 
 .. math:: 
 
@@ -779,24 +767,24 @@ The lesson here is: the relation of "*less than or equal to*" between cardinalit
 .. _subset-theorem-five:
 
 Theorem 5
----------
+^^^^^^^^^
 
 .. math::
 
 	A \subseteq B \implies A \cup B = B
 
-If **A** is a subset of **B**, then the union of **A** and **B** is equal to **B**
+If :math:`A` is a subset of :math:`B`, then the union of :math:`A` and :math:`B` is equal to :math:`B`
 
 .. _law-of-syllogism:
 
 Law of Syllogism
-----------------
+^^^^^^^^^^^^^^^^
 
 .. math:: 
 
 	A \subseteq B \text{ and } B \subset C \implies A \subseteq C
 
-If **A** is a subset of **B** and **B** is a subset of **C**, then **A** is a subset of **C**. 
+If :math:`A` is a subset of :math:`B` and :math:`B` is a subset of :math:`C`, then :math:`A` is a subset of :math:`C`. 
 
 .. note::
     
@@ -804,20 +792,19 @@ If **A** is a subset of **B** and **B** is a subset of **C**, then **A** is a su
 
 .. _complement-theorems:
 
--------------------
 Complement Theorems
 -------------------
 
 .. _law-of-double-negation:
 
 Law of Double Negation
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. math::
 
 	(A^c)^c = A 
 
-The complement of a set **A**'s complement is the set **a**. 
+The complement of a set :math:`A`'s complement is the set :math:`A`. 
 
 .. tip::
 
@@ -844,7 +831,7 @@ The complement of a set **A**'s complement is the set **a**.
 .. _law-of-excluded-middle:
 
 Law Of Excluded Middle
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. topic:: Law of Excluded Middle
 
@@ -858,7 +845,7 @@ Law Of Excluded Middle
 	
 		n(A \cup A^c) = n(S)
 
-The union of a set **A** with its complement is the universal set.
+The union of a set :math:`A` with its complement is the universal set.
 
 .. admonition:: Example 
 
@@ -881,7 +868,7 @@ The union of a set **A** with its complement is the universal set.
 .. _law-of-noncontradiction:
 
 Law of Non-Contradiction
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. topic:: Law of Non-Contradiction
 
@@ -889,7 +876,7 @@ Law of Non-Contradiction
 
         	A \cap A ^c = \varnothing
 
-The intersection of a set **A** its complement is the empty set.
+The intersection of a set :math:`A` its complement is the empty set.
 
 **Example** 
 
@@ -911,14 +898,13 @@ The intersection of a set **A** its complement is the empty set.
 
 .. _counting-theorems:
 
------------------
 Counting Theorems 
 -----------------
 
 .. _law-of-unions:
 
 Law of Unions
--------------
+^^^^^^^^^^^^^
 
 .. topic:: Law of Unions
 
@@ -926,16 +912,15 @@ Law of Unions
     
     		n(A \cup B) = n(A) + n(B) - n(A \cap B)
 
-The number of elements in **A** or **B** is equal to the number of elements in **A** plus the number of elements in **B**, minus the elements **A** and **B** have in common.
+The number of elements in :math:`A` or :math:`B` is equal to the number of elements in :math:`A` plus the number of elements in :math:`B`, minus the elements :math:`A` and :math:`B` have in common.
 
 This is another theorem most easily understood by considering the following :ref:`venn diagram <venn-diagrams>`,
 
-.. image:: ../../_static/img/math/sets/sets-union-overlapping.jpg
-	:align: center
+.. plot:: _scripts/py/plots/venns/diagram_overlapping.py
 
 The area encompassed by both circles is the union :math:`A \cup B`. The overlap in the circles is intersection :math:`A \cap B`. 
 
-Consider how we count up elements in **A** or **B**. We first count up the elements in **A**, including the elemetns in the overlap. We then count up the elements in **B**, which includes the overlap again. In other words, by calculating :math:`n(A) + n(B)`, we have counted up the elements in :math:`A \cap B` *twice*. To fix this overcount, we need to subtract the number elements of in :math:`A \cap B`. Whence we arrive at the theorem.
+Consider how we count up elements in :math:`A` or :math:`B`. We first count up the elements in :math:`A`, including the elemetns in the overlap. We then count up the elements in :math:`B`, which includes the overlap again. In other words, by calculating :math:`n(A) + n(B)`, we have counted up the elements in :math:`A \cap B` *twice*. To fix this overcount, we need to subtract the number elements of in :math:`A \cap B`. Whence we arrive at the theorem.
 
 .. admonition:: Example
 
@@ -955,7 +940,7 @@ Consider how we count up elements in **A** or **B**. We first count up the eleme
 
 		n(B) = 2
 
-    	Note, when the elements of **A** are totaled, ``apple`` is counted once. When the elements of **B** are totaled, the element ``apple`` is counted again. We have thus doubled-counted this element, which is exactly the intersection :math:`A \cap B`,
+    	Note, when the elements of :math:`A` are totaled, ``apple`` is counted once. When the elements of :math:`B` are totaled, the element ``apple`` is counted again. We have thus doubled-counted this element, which is exactly the intersection :math:`A \cap B`,
 
 	.. math::
 	
@@ -980,7 +965,7 @@ Consider how we count up elements in **A** or **B**. We first count up the eleme
 .. _law-of-complements:
 
 Law of Complements
-******************
+^^^^^^^^^^^^^^^^^^
 
 .. topic:: Law of Complements
 
@@ -988,12 +973,12 @@ Law of Complements
     
 		n(A) + n(A^c) = n(S)
 
-The number of elements in any set **A** plus the number of elements in its complement is equal to the number of elements in the univeral set.
+The number of elements in any set :math:`A` plus the number of elements in its complement is equal to the number of elements in the univeral set.
 
 This theorem follows from the :ref:`venn diagram <venn-diagrams>` of a set with its complement,
 
-.. image:: ../../_static/img/math/sets/sets-complement.jpg 
-	:align: center
+.. plot:: _scripts/py/plots/venns/diagram_complement.py
+
 
 It can proved formally as follows,
 
@@ -1121,7 +1106,7 @@ In order to show this proposition is false, it would be sufficient to show at le
 
 	Some dog is not brown.
 
-To express this symbollically, let **D** represent the set of dogs and let **B** represent the set of brown things. Then the first proposition can be represented as,
+To express this symbollically, let **D** represent the set of dogs and let :math:`B` represent the set of brown things. Then the first proposition can be represented as,
 
 .. math::
     
@@ -1159,7 +1144,7 @@ In order to negative this we must show *all* cars are *not*fast. It is *not* suf
 
 	All cars are not fast.
 
-To express this symbollically, let **C** be the set of all cars and let **F** be the set of all fast things. Then, the original proposition can be written with the :math:`\exists` symbol,
+To express this symbollically, let :math:`C` be the set of all cars and let **F** be the set of all fast things. Then, the original proposition can be written with the :math:`\exists` symbol,
 
 .. math::
 
@@ -1206,6 +1191,7 @@ The *square of opposition* is constructed by first drawing a table,
 In the entries of this table, you draw :ref:`venn-diagrams` that represent the intersection of the row and column. Putting the results together, we get the following picture,
 
 .. image:: ../../_static/img/math/sets/square-of-opposition.jpg
+	:align: center
 
 Notice the diagonals of the picture, the line that connects the top left to the bottom right and the line that connects the top right to the bottom left, form the contradictory pairs of propositions, namely,
 

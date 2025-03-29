@@ -1,9 +1,7 @@
 Triolets
 ========
 
-.. topic:: Schema 
-
-    A.B.a.A.a.b.A.B
+:ref:`Triolet Reference <triolet>`
 
 .. toctree::
    :maxdepth: 2
