@@ -154,13 +154,11 @@ Venn Diagrams
 
 A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set :math:`A` shown against the universal set **S**, 
 
-.. image:: ../../_static/img/math/sets/sets-simple.jpg
-	:align: center
+.. plot:: _scripts/py/plots/venns/diagram_set.py
 
 You will sometimes set *Venn Diagrams* with the elements of the sets written in, as in the following picture,
 
-.. image:: ../../_static/img/math/sets/sets-simple-with-elements.jpg
-	:align: center
+.. plot:: _scripts/py/plots/venns/diagram_elements.py
 
 *Venn Diagrams* are useful for visualizing :ref:`set-relations`. For this reason, we will see more complex examples of *Venn Diagrams* in the next section.
 
@@ -191,8 +189,7 @@ To say the same thing in a different way, if the element *x* belongs to :math:`A
 
 The relation of *subset* can be seen in the following *Venn Diagram*, 
 
-.. image:: ../../_static/img/math/sets/sets-subset.jpg
-	:align: center
+.. plot:: _scripts/py/plots/venns/diagram_subset.py
 
 This diagram represents the relationship :math:`A \subseteq B`.
 
@@ -318,8 +315,7 @@ The set containing elements that do not belong to the set :math:`A`.
 
 The complement can be visualized with the following *Venn Diagram*,
 
-.. image:: ../../_static/img/math/sets/sets-complement.jpg
-	:align: center
+.. plot:: _scripts/py/plots/venns/diagram_complement.py
 
 .. tip:: 
 
