@@ -68,9 +68,8 @@ if [ -n "DISTRIBUTION_ID" ] && $INVALIDATE; then
     aws cloudfront create-invalidation \
         --distribution-id "$DISTRIBUTION_ID" \
         --paths "/*"
-    echo "CloudFront invalidation initiated."
 else
-    echo "CLOUDFRONT_DISTRIBUTION_ID not set.  Skipping CloudFront invalidation."
+    echo "Skipping CloudFront invalidation."
 fi
 
 exit 0
