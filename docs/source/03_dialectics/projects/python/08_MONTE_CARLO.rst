@@ -1,4 +1,4 @@
-.. _project_eight:
+.. _project-eight:
 
 ======================
 Monte Carlo Simulation
@@ -17,9 +17,9 @@ Instructions
 ============
 
 1. Create a Python ``.py`` script named ``LASTNAME_FIRSTNAME_project_eight.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``LASTNAME`` and ``FIRSTNAME`` with your last and first name, respectively.
-3. Create a :ref:`docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_eight_background` section.
-5. Perform all exercises and answer all questions in the :ref:`project_eight_project` section. Label your script with comments as indicated in the instructions of each problem.
+3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-eight-background` section.
+5. Perform all exercises and answer all questions in the :ref:`project-eight-=project` section. Label your script with comments as indicated in the instructions of each problem.
 6. When you are done, zip your script **and** the *csv* file in a zip file named ``LASTNAME_FIRSTNAME_project_eight.zip``
 7. Upload the zip file to the Google Classroom Project Four Assignment.
 
@@ -32,7 +32,7 @@ Background
 Integration
 -----------
 
-In calculus, *integration* is a technique for finding the area under a curve :math:`f(x)`. *Monte Carlo Simulation* gives us an alternative way of approaching the same set of problems. According to the :ref:`classical_definition`,
+In calculus, *integration* is a technique for finding the area under a curve :math:`f(x)`. *Monte Carlo Simulation* gives us an alternative way of approaching the same set of problems. According to the :ref:`classical-definition`,
 
 .. math::
 
@@ -51,13 +51,13 @@ TODO
 
 Due to the Law of Large Numbers, as the number of simulations increases, the approximation of :math:`\pi` converges to its true value. 
 
-.. image:: ../../../assets/imgs/python/monte_carlo_pi_100.png
+.. image:: ../../../_static/img/python/monte-carlo-pi-100.png
     :align: center
    
-.. image:: ../../../assets/imgs/python/monte_carlo_pi_1000.png
+.. image:: ../../../_static/img/python/monte-carlo-pi-1000.png
     :align: center
     
-.. image:: ../../../assets/imgs/python/monte_carlo_pi_10000.png
+.. image:: ../../../_static/img/python/monte-carlo-pi-10000.png
     :align: center
     
 
@@ -82,7 +82,7 @@ Let us apply the technique of Monte Carlo integration to see how we can use rand
 
 TODO
 
-.. _project_eight_project:
+.. _project-eight-project:
 
 Project
 =======

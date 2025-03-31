@@ -1,4 +1,4 @@
-.. _project_three:
+.. _project-three:
 
 =========
 Normality
@@ -10,30 +10,30 @@ Normality
 	
 	-- George Box
 
-*Normality* is an important phenomenon because of its far-reaching power. Due to the **Central Limit Theorem**, the distribution of the sample mean becomes Normal as the number of experiments and the number of observations per experiment increases. Due to the **Law of Large Numbers**, as these numbers increase, the distribution of the sample mean becomes centered around the *true* population mean. Using these two facts, *normality* allows us to draw *statistical inferences* about population parameters using a sample drawn from an arbitrarily distributed population. 
+*Normality* is an important phenomenon because of its far-reaching power. Due to the :ref:`Central Limit Theorem <central-limit-theorem>`, the distribution of the sample mean becomes Normal as the number of experiments and the number of observations per experiment increases. Due to the :ref:`Law of Large Numbers <law-of-large-numbers>`, as these numbers increase, the distribution of the sample mean becomes centered around the *true* population mean. Using these two facts, *normality* allows us to draw *statistical inferences* about population parameters using a sample drawn from an arbitrarily distributed population. 
 
-The averaging effect of the **Central Limit Theorem** is more pronounced when the population being sampled is itself Normal (in mathematical terms, we say the *sample distribution converges to the population distribution* more quickly when the population is Normal); This assumption is not required, though. Any population distribution can be transformed into a Normal distribution by averaging observations drawn from its pool of outcomes. Recall the die roll simulation from class, where a uniformly distributed population became Normal when observations were averaged. 
+The averaging effect of the :ref:`Central Limit Theorem <central-limit-theorem>` is more pronounced when the population being sampled is itself Normal (in mathematical terms, we say the *sample distribution converges to the population distribution* more quickly when the population is Normal); This assumption is not required, though. Any population distribution can be transformed into a Normal distribution by averaging observations drawn from its pool of outcomes. Recall the die roll simulation from class, where a uniformly distributed population became Normal when observations were averaged. 
 
-For this reason, we are often interested in determining whether a given population is normally distributed. In this project, we will learn how to perform :ref:`normal_calculations` using **Python**. Using these techniques, we will compare theoretically determined population parameters to empirically determined sample statistics in order to see how the Normal Distribution can be used to model population distributions. 
+For this reason, we are often interested in determining whether a given population is normally distributed. In this project, we will learn how to perform :ref:`normal-calculations` using :ref:`Python <python>`. Using these techniques, we will compare theoretically determined population parameters to empirically determined sample statistics in order to see how the Normal Distribution can be used to model population distributions. 
 
 Instructions
 ============
 
-1. Download **both** *csv* datasets in the :ref:`project_three_dataset` section and place them in the ``Linux Files`` folder on your file system where you save your ``.py`` scripts.
+1. Download **both** *csv* datasets in the :ref:`project-three-dataset` section and place them in the ``Linux Files`` folder on your file system where you save your ``.py`` scripts.
 
 .. note::
 
 	If you haven't deleted anything, you will already have the Velocity of Light data in your ``Linux Files``.
 	
 2. Create a Python ``.py`` script named ``NAME_project_three.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
-3. Create a :ref:`docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_three_background` section.
-5. Load in the data from the ``.csv`` files using the technique outlined in the :ref:`project_three_loading_data` section.
-6. Perform all exercises and answer all questions in the :ref:`project_three_project` section. Label your script with comments as indicated in the instructions of each problem.
+3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-three-background` section.
+5. Load in the data from the ``.csv`` files using the technique outlined in the :ref:`project-three-loading-data` section.
+6. Perform all exercises and answer all questions in the :ref:`project-three-project` section. Label your script with comments as indicated in the instructions of each problem.
 7. When you are done, zip your script **and** the *csv* file in a zip file named ``NAME_project_three.zip``
 8. Upload the zip file to the Google Classroom Project Three Assignment.
 
-.. _project_three_background:
+.. _project-three-background:
 
 Background 
 ==========
@@ -59,7 +59,7 @@ A Normal Distribution is *parameterized* by its mean, :math:`\mu`, and its stand
 
 	\mathcal{X} \sim \mathcal{N}(\mu, \sigma)
 
-Recall a sample of data can be :ref:`transformed <data_transformations>` by applying algebraic operations to each observation. For instance, we can :ref:`standardize <z_score>` each observation :math:`x_i` into a *z-score* by subtracting the mean of the distribution and dividing by the standard deviation of the distribution,
+Recall a sample of data can be :ref:`transformed <data-transformations>` by applying algebraic operations to each observation. For instance, we can :ref:`standardize <z-score>` each observation :math:`x_i` into a *z-score* by subtracting the mean of the distribution and dividing by the standard deviation of the distribution,
 
 .. math::
 
@@ -93,7 +93,7 @@ Every well-behaved function has an inverse. The CDF of the Normal Distribution i
 	
 The CDF tells us, given a value of :math:`z`, what percent of the distribution is below :math:`z`. The inverse CDF, on the other hand, tells us, given a value of :math:`p`, what observation :math:`z` corresponds to that percentile. It is the point :math:`z` on the Normal density curve such that the shaded area below :math:`z` is equal to :math:`p`.
 
-.. _project_three_normal_objects:
+.. _project-three-normal-objects:
 
 Normal Objects
 ==============
@@ -126,9 +126,9 @@ Output:
 
 	P(X <= 106.74) = 0.75
 
-For a more comprehensive explanation of ``NormalDist()`` from the ``statistics`` package and its various uses, refer to the :ref:`Python Normal Distribution page <python_normal_distribution>`.
+For a more comprehensive explanation of ``NormalDist()`` from the ``statistics`` package and its various uses, refer to the :ref:`Python Normal Distribution page <python-normal-distribution>`.
  
-.. _project_three_ideal_plots:
+.. _project-three-ideal-plots:
 
 Ideal Plots
 -----------
@@ -185,11 +185,11 @@ The *ideal* distribution is another word for the *population* distribution. The 
 	
 The graph below displays the results of this code snippet,
 
-.. plot:: assets/plots/distributions/normal/normal_distribution_pdf.py
+.. plot:: _scripts/py/plots/distributions/normal/normal_distribution_pdf.py
 
 This gives us a way of seeing how well the Normal density curve fits the data. This can be useful for *assessing* the normality of a distribution. However, a more foolproof method of checking the normality of a sample is given in the next section.
 
-.. _project_three_qq_plots:
+.. _project-three-qq-plots:
 
 QQ Plots
 --------
@@ -198,19 +198,19 @@ A common technique for assessing the *normality* of a sample distribution is to 
 
 The exact steps for generating a QQ plot are given below,
 
-1. Find the :ref:`order statistics <order_statistics>` of the sample distribution. In other words, sort the sample in *ascending* order.
+1. Find the :ref:`order statistics <order-statistics>` of the sample distribution. In other words, sort the sample in *ascending* order.
 
 .. note::
 
 	Step 1 is equivalent to finding the :ref:`percentiles <percentile>` of the sample distribution.
 
-2. Standarize the sorted sample, i.e. find each observation's :ref:`z_score`.
+2. Standarize the sorted sample, i.e. find each observation's :ref:`z-score`.
 
 3. Find the theoretical percentiles from the Standard Normal Distribution for each ordered observation.
 
 4. Plot the actual percentiles versus the theoretical percentiles in the x-y plane.
 
-Read through the :ref:`QQ plots <qq_plots>` section for a more detailed explanation and an accompanying explanation.
+Read through the :ref:`QQ plots <qq-plots>` section for a more detailed explanation and an accompanying explanation.
 
 In short, we need to perform the following operations,
 
@@ -249,7 +249,7 @@ In short, we need to perform the following operations,
 	
 The graph below displays the results of this code snippet,
 
-.. plot:: assets/plots/other/qq_plot_example.py
+.. plot:: _scripts/py/plots/other/qq_plot_example.py
 
 .. _project_three_project:
 
@@ -309,7 +309,7 @@ f. 1 :sup:`th` percentile
 
 .. hint::
 
-	Use the :ref:`python_quantiles` function from :ref:`project_two`!
+	Use the :ref:`python-quantiles` function from :ref:`project-two`!
 
 .. hint:: 
 
@@ -344,7 +344,7 @@ f. 1 :sup:`th` percentile
 
 .. hint::
 
-	Use the :ref:`python_quantiles` function from :ref:`project_two`!
+	Use the :ref:`python-quantiles` function from :ref:`project-two`!
 
 .. hint:: 
 
@@ -397,7 +397,7 @@ Velocity of Light
 
 1. Create a QQ plot for Michelson's Velocity of Light distribution.
 
-2. In your :ref:`python_docstring`, answer the following question: Based on the QQ plot, is Michelson's distribution approximately normal? Why or why not?
+2. In your :ref:`python-docstring`, answer the following question: Based on the QQ plot, is Michelson's distribution approximately normal? Why or why not?
 
 Old Faithful
 ************
@@ -408,19 +408,19 @@ Old Faithful
 
 	We are *only* looking at the **eruption duration** variable!
 	
-2. In your :ref:`python_docstring`, answer the following question: Based on the QQ plot, is Old Faithful's eruption duration approximately normal? Why or why not?
+2. In your :ref:`python-docstring`, answer the following question: Based on the QQ plot, is Old Faithful's eruption duration approximately normal? Why or why not?
 
-.. _project_three_dataset:
+.. _project-three-dataset:
 
 Datasets
 ========
 
-.. _project_three_loading_data:
+.. _project-three-loading-data:
 
 Loading Data
 ------------
 
-The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project_two_dataset` section.
+The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project-two-dataset` section.
 
 .. code:: python 
 
@@ -445,25 +445,25 @@ Velocity of Light Data
 
 .. note::
 
-	You may already have this dataset downloaded into your *Linux Files* directory from when we did :ref:`project_two`.
+	You may already have this dataset downloaded into your *Linux Files* directory from when we did :ref:`project-two`.
 
-You can download the full dataset :download:`here <../../assets/datasets/velocity_of_light_data.csv>`.
+You can download the full dataset :download:`here <../../../_static_/csv/datasets/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../assets/datasets/previews/velocity_of_light_data_preview.csv
+   :file: ../../../_static/csv/datasets/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Old Faithful
 ------------
 
-You can download the full dataset :download:`here <../../assets/datasets/old_faithful_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/scientific/old-faithful-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Old Faithful Geyser Duration and Wait Time
-   :file: ../../../assets/datasets/previews/old_faithful_data_preview.csv
+   :file: ../../../_static/csv/datasets/previews/old-faithful-data-preview.csv
 
 The first column represents the length of the eruption in minutes. The second column represents the waiting time in minutes until the next eruption.

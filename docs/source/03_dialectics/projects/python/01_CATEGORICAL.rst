@@ -465,7 +465,7 @@ The following table is the a preview of the data you will be using for this proj
 .. csv-table:: Electric Vehicles in Washington State
    :file: ../../../_static/csv/datasets/previews/electric-vehicle-population-data-preview.csv
 
-The meaning of the columns was discussed in more detail in :ref:`project_one_background`. Refer to that section for further information on this dataset.
+The meaning of the columns was discussed in more detail in :ref:`project-one-background`. Refer to that section for further information on this dataset.
 
 References
 ==========

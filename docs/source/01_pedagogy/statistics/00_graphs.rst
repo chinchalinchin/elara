@@ -519,7 +519,7 @@ In this case, counting the frequency of each individual observation can quickly 
 When the data are continuous, *ungrouped* distributions are no longer a tenable solution. For example, consider the following dataset which represents the eruption length and period between eruptions for the famous geyser `Old Faithful <https://en.wikipedia.org/wiki/Old_Faithful>`_ at Yellowstone National Park in Wymoing.
 
 .. csv-table:: Old Faithful Eruption and Waiting Times
-   :file: ../../_static/csv/datasets/previews/old_faithful_data_preview.csv
+   :file: ../../_static/csv/datasets/previews/old-faithful-data-preview.csv
 
 Attempting to create an ungrouped distribution of this data would be a futile effort. Therefore, the standard approach with datasets like this is to create an *grouped* frequency distribution.
 
@@ -838,14 +838,14 @@ A histogram where the classes are symmetric and decreasing around a common point
 
 The line of symmetry in a perfectly symmetrical distribution is the :ref:`median`. The reason for this can seen by equating the *area* under the distribution with the proportion of the sample that belongs to that area. Since the *areas* on either side of a symmetric distribution are equal,
 
-.. image:: ../../_static/img/math/statistics/normal_distribution_graphic.jpg
+.. image:: ../../_static/img/math/statistics/normal-distribution-graphic.jpg
 
 It follows these areas both represent fifty percent of the distribution. 
 
 A *normal distribution* tells us classes closer to the :ref:`median` are more likely to be observed.
 
 Example
-    :download:`Old Faithful Data Set <../../_static/csv/datasets/scientific/old_faithful_data.csv>`.
+    :download:`Old Faithful Data Set <../../_static/csv/datasets/scientific/old-faithful-data.csv>`.
 
 *Old Faithful* is a famous hot-water geyser in Yellowstone National Park that erupts every 45 minutes to 2 hours. 
 
@@ -871,7 +871,7 @@ A histogram where two classes are more frequent than the other classes in the di
 .. plot:: _scripts/py/plots/histograms/histogram_bimodal.py
 
 Example
-    :download:`Pigeon Racing Speeds <../../_static/csv/datasets/cultural/pigeon_racing_times_data.csv>`.
+    :download:`Pigeon Racing Speeds <../../_static/csv/datasets/cultural/pigeon-racing-times-data.csv>`.
 
 Skewed
 ******

@@ -561,19 +561,19 @@ You can download the full dataset :download:`here <../../../_static/csv/datasets
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../_static/datasets/previews/velocity-of-light-data-preview.csv
+   :file: ../../../_static/csv/datasets/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Density of the Earth Data
 -------------------------
 
-You can download the full dataset :download:`here <../../../_static/datasets/scientific/earth-density-data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/scientific/earth-density-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Cavendish's Density of the Earth Data
-   :file: ../../../_static/datasets/previews/earth-density-data-preview.csv
+   :file: ../../../_static/csv/datasets/previews/earth-density-data-preview.csv
 
 The first column corresponds to the experiment number (first, second, third, etc.). The second column is the *ratio of the density of Earth to the density of water*. Recall the density of water by definition is :math:`1 \frac{g}{cm^3}`.
 

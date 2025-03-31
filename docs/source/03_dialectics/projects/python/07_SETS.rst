@@ -1,4 +1,4 @@
-.. _project_seven:
+.. _project-seven:
 
 =============
 Sample Spaces
@@ -15,9 +15,9 @@ Instructions
 ============
 
 1. Create a Python ``.py`` script named ``LASTNAME_FIRSTNAME_project_sEven.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``LASTNAME`` and ``FIRSTNAME`` with your last and first name, respectively.
-3. Create a :ref:`docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_seven_background` section.
-6. Perform all exercises and answer all questions in the :ref:`project_seven_project` section. Label your script with comments as indicated in the instructions of each problem.
+3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-seven-background` section.
+6. Perform all exercises and answer all questions in the :ref:`project-seven-project` section. Label your script with comments as indicated in the instructions of each problem.
 7. When you are done, zip your script in a zip file named ``LASTNAME_FIRSTNAME_project_seven.zip``
 8. Upload the zip file to the Google Classroom Project Seven Assignment.
 
@@ -26,7 +26,7 @@ Background
 
 TODO
 
-.. _project_seven_cartesian_product:
+.. _project-seven-cartesian-product:
 
 Cartesian Product
 -----------------
@@ -34,7 +34,7 @@ Cartesian Product
 Definition 
 **********
 
-There are other types of :ref:`set_operations` that we didn't cover in class. One of the more important operations we skipped over is the *Carteisan Product*; we will now take the time to study this operation in particular, as it is helpful for understanding certain :ref:`sample_spaces`. Several of the problems in this lab will serve as illustrative examples so you may begin to understand what is meant by this operation. 
+There are other types of :ref:`set-operations` that we didn't cover in class. One of the more important operations we skipped over is the *Carteisan Product*; we will now take the time to study this operation in particular, as it is helpful for understanding certain :ref:`sample-spaces`. Several of the problems in this lab will serve as illustrative examples so you may begin to understand what is meant by this operation. 
 
 We start with the *formal definition*. The *Cartesian Product* of two sets **A** and **B**, :math:`A x B`, is defined as,
 
@@ -73,9 +73,9 @@ The *Cartesian Product* is the set of all entries in this table,
 Python
 ******
 
-You can generate a *Cartesian Product* in **Python** by using :ref:`python_list_comprehension`. 
+You can generate a *Cartesian Product* in **Python** by using :ref:`python-list-comprehension`. 
 
-One aspect of :ref:`python_list_comprehension` we didn't touch on when we first introduced it is the ability to *chain together* generator expressions to iterate over multiple lists simultaneously. Consider the following example,
+One aspect of :ref:`python-list-comprehension` we didn't touch on when we first introduced it is the ability to *chain together* generator expressions to iterate over multiple lists simultaneously. Consider the following example,
 
 .. code:: python
 
@@ -86,7 +86,7 @@ One aspect of :ref:`python_list_comprehension` we didn't touch on when we first 
 
 Let's break this example down. 
 
-The key point is: we are *nesting* a list iteration within another list iteration. When we write ``for p in pets``, this tells **Python** to step through each element of the list ``pets``, namely the elements ``dog``, then ``cat``, then ``fish``. For each element of the ``pets`` list, we then tell **Python** to iterate over the next list with the expression ``for o in owners``. This will iterate over the elements ``cleopatra``, then ``augustus``, then ``napolean``, for *each step in the first iteration*. Then we glue the results together in an ordered pair (:ref:`python_tuples`). This whole process is described below in sequence,
+The key point is: we are *nesting* a list iteration within another list iteration. When we write ``for p in pets``, this tells **Python** to step through each element of the list ``pets``, namely the elements ``dog``, then ``cat``, then ``fish``. For each element of the ``pets`` list, we then tell **Python** to iterate over the next list with the expression ``for o in owners``. This will iterate over the elements ``cleopatra``, then ``augustus``, then ``napolean``, for *each step in the first iteration*. Then we glue the results together in an ordered pair (:ref:`python-tuples`). This whole process is described below in sequence,
 
 * Iterate over ``pets``
     * Select element ``dog``
@@ -121,12 +121,12 @@ Note that in this example, since **A** is the set of pets and **B** is the set o
 Project
 =======
 
-1. Using the :ref:`cartesian_product`, create a sample space that represents rolling two six-sided die. 
+1. Using the :ref:`cartesian-product`, create a sample space that represents rolling two six-sided die. 
     - Print the results and include them in your report. 
-    - Using the :ref:`python_length_function`, find the total number of elements in the *Cartesian Product*.
+    - Using the :ref:`python-length-function`, find the total number of elements in the *Cartesian Product*.
     - What is the probability of TODO (give 'em a hard one)
     
-2. Consider taking a two question multiple-choice pop quiz. Each question has four possible answers: *a*, *b*, *c* and *d*. Using the :ref:`cartesian_product`, create a sample space that represents all the different ways you can answer the questions on this pop-quiz.
+2. Consider taking a two question multiple-choice pop quiz. Each question has four possible answers: *a*, *b*, *c* and *d*. Using the :ref:`cartesian-product`, create a sample space that represents all the different ways you can answer the questions on this pop-quiz.
     - Print the results and include them in your report. 
     - What is the probability of getting a 100% of this quiz if you randomly guess an answer for each question? 
 

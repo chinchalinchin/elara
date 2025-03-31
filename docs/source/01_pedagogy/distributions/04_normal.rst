@@ -1,4 +1,4 @@
-.. _normal_distribution:
+.. _normal-distribution:
 
 ===================
 Normal Distribution
@@ -12,7 +12,7 @@ The **Normal Distribution** is the foundation of :ref:`inferential statistics <i
 Normality 
 =========
 
-.. _normality_introduction:
+.. _normality-introduction:
 
 Introduction
 ------------
@@ -51,7 +51,7 @@ A departure from normality can suggest several things:
 2. The observations are not *independent*.
 3. The observations are not being drawn from the exact same population.
 
-.. _normal_calculations:
+.. _normal-calculations:
 
 Normal Calculations
 -------------------
@@ -78,7 +78,7 @@ Then, the corresponding *Z distribution* can be written,
 	
 TODO
 
-.. _normal_cdf:
+.. _normal-cdf:
 
 Cumulative Distribution Function
 ********************************
@@ -95,7 +95,7 @@ Graphically, we can think of the Normal CDF at a point, :math:`\Phi(z)` as repre
 
 .. plot:: _scripts/py/plots/distributions/normal/normal_distribution_cdf.py
 
-.. _normal_inverse_cdf:
+.. _normal-inverse-cdf:
 
 Inverse Cumulative Distribution Function
 ****************************************
@@ -112,14 +112,14 @@ As an example, if we were interested in the 35 :sup:`th` percentile of the Stand
 
 .. plot:: _scripts/py/plots/distributions/normal/normal_distribution_inverse.py
 
-.. _normal_symmetry:
+.. _normal-symmetry:
 
 Symmetry
 --------
 
 TODO 
 
-.. _z_table_reference:
+.. _z-tables:
 
 Z-Tables
 ========
@@ -132,7 +132,7 @@ For example, :math:`sin(x)` is a trigonometric quantity defined as the ratio of 
 
 Similarly, the Standard Normal distribution is defined by a density curve whose area is not easily calculated without a substantial amount of math-power (like horse-power, but with math). In order to aid in calculations, statisticians of the past tabulated the values of the Standard Normal and devised a way of representing the CDF of the Standard Values through a two-way table,
 
-.. image:: ../../_static/img/math/tables/table_positive_z.png
+.. image:: ../../_static/img/math/statistics/tables/table-positive-z.png
 	:align: center
 
 This table can answers questions like,
@@ -144,17 +144,17 @@ This table can answers questions like,
 
 First, we find the row that corresponds to the two leading digits, `1.4`. 
 
-.. image:: ../../_static/img/math/tables/table_positive_z_example_step1.png
+.. image:: ../../_static/img/math/statistics/tables/table-positive-z-example-step1.png
 	:align: center
 
 Then, we find the column that corresonds to the last decimal spot, `0.05`. 
 
-.. image:: ../../_static/img/math/tables/table_positive_z_example_step2.png
+.. image:: ../../_static/img/math/statistics/tables/table-positive-z-example-step2.png
 	:align: center
 
 This tells us that `92.65%` of the Standard Normal distribution has a distance less than or equal to 1.45 standard deviations from the mean.
  
-.. _empirical_rule:
+.. _empirical-rule:
 
 Empirical Rule
 ==============
@@ -195,7 +195,7 @@ TODO
 
 The *Empirical Rule* can be visualized through the area underneath the Normal curve,
 
-.. image:: ../../_static/img/math/distributions/normal/normal_distribution_empirical_rule.png
+.. image:: ../../_static/img/math/distributions/normal/normal-distribution-empirical-rule.png
     :align: center
 
 TODO
@@ -329,7 +329,7 @@ We notice an approximately linear relationship between the observed percentiles 
 Relation To Other Distributions
 ===============================
 
-The :ref:`normal_distribution` is deeply connected with many different areas of mathematics. It pops up everywhere, from `quantum mechanics <https://en.wikipedia.org/wiki/Wave_packet>`_ to `finance <https://www.investopedia.com/articles/investing/102014/lognormal-and-normal-distribution.asp#:~:text=When%20the%20investor%20continuously%20compounds,time%20in%20a%20normal%20distribution.>`_. The reach of the *normal distribution* is far and wide.
+The :ref:`normal-distribution` is deeply connected with many different areas of mathematics. It pops up everywhere, from `quantum mechanics <https://en.wikipedia.org/wiki/Wave_packet>`_ to `finance <https://www.investopedia.com/articles/investing/102014/lognormal-and-normal-distribution.asp#:~:text=When%20the%20investor%20continuously%20compounds,time%20in%20a%20normal%20distribution.>`_. The reach of the *normal distribution* is far and wide.
 
 .. _normal-binomial-approximation:
 

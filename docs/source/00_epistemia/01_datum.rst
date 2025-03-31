@@ -15,16 +15,16 @@ Historical
 ----------
 
 - `Challenger Explosion <https://www.randomservices.org/random/data/Challenger.html>`_
-    - :download:`Challenger Damage CSV <../_static/csv/datasets/historical/challenger_damage_data.csv>`
-    - :download:`Challenger Erosion CSV <../_static/csv/datasets/historical/challenger_erosion_data.csv>`
+    - :download:`Challenger Damage CSV <../_static/csv/datasets/historical/challenger-damage-data.csv>`
+    - :download:`Challenger Erosion CSV <../_static/csv/datasets/historical/challenger-erosion-data.csv>`
 - `Plane Crashes 1908 - 2023 <https://www.kaggle.com/datasets/jogwums/air-crashes-full-data-1908-2023>`_
-	- :download:`Plane Crashes CSV <../_static/csv/datasets/historical/plane_crash_data.csv>`
+	- :download:`Plane Crashes CSV <../_static/csv/datasets/historical/plane-crash-data.csv>`
 - `Titanic Survivors <https://www.kaggle.com/datasets/brendan45774/test-file>`_
-    - :download:`Titanic Survivors CSV <../_static/csv/datasets/historical/titanic_survivors_data.csv>`
+    - :download:`Titanic Survivors CSV <../_static/csv/datasets/historical/titanic-survivors-data.csv>`
 - `Roman Emperor Reigns <https://historum.com/t/league-table-of-roman-emperors-by-length-of-reign.21418/>`_ 
-    - :download:`Roman Emperor Reigns CSV <../_static/csv/datasets/historical/roman_emperors_data.csv>`
+    - :download:`Roman Emperor Reigns CSV <../_static/csv/datasets/historical/roman-emperors-data.csv>`
 - `Vietnam Draft Lottery <https://www.randomservices.org/random/data/Draft.html>`_
-    - :download:`Vietnam Draft Lottery CSV <../_static/csv/datasets/historical/vietnam_draft_data.csv>`
+    - :download:`Vietnam Draft Lottery CSV <../_static/csv/datasets/historical/vietnam-draft-data.csv>`
 
 .. _linguistic-datasets:
 
@@ -87,15 +87,15 @@ Economic
 --------
 
 - `Avocado Prices <https://www.kaggle.com/datasets/neuromusic/avocado-prices>`_
-    - :download:`Avocado Prices CSV <../_static/csv/datasets/economic/avocado_prices_data.csv>`
+    - :download:`Avocado Prices CSV <../_static/csv/datasets/economic/avocado-prices-data.csv>`
 - `Billionaries <https://www.kaggle.com/datasets/surajjha101/forbes-billionaires-data-preprocessed>`_
-    - :download:`Billionaries CSV <../_static/csv/datasets/economic/billionaries_data.csv>`
+    - :download:`Billionaries CSV <../_static/csv/datasets/economic/billionaries-data.csv>`
 - `Electric Vehicles Registered in Washington State <https://catalog.data.gov/dataset/electric-vehicle-population-data>`_
     - :download:`Electric Vehicles in WA CSV <../_static/csv/datasets/economic/electric-vehicle-population-data.csv>`
 - `Diamonds <https://www.kaggle.com/datasets/shivam2503/diamonds>`_
-    - :download:`Diamonds CSV <../_static/csv/datasets/economic/diamonds_data.csv>`
+    - :download:`Diamonds CSV <../_static/csv/datasets/economic/diamonds-data.csv>`
 - `Mega Millions Winning Numbers in New York since 2002 <https://catalog.data.gov/dataset/lottery-mega-millions-winning-numbers-beginning-2002>`_
-	- :download:`Mega Millions CSV <../_static/csv/datasets/economic/mega_millions_data.csv>`
+	- :download:`Mega Millions CSV <../_static/csv/datasets/economic/mega-millions-data.csv>`
 
 .. _cultural-datasets:
 
@@ -103,19 +103,19 @@ Cultural
 --------
 
 - `Celebrity Twitter <https://www.kaggle.com/datasets/ahmedshahriarsakib/top-1000-twitter-celebrity-tweets-embeddings>`_
-    - :download:`Celebrity Twitter CSV <../_static/csv/datasets/cultural/celebrity_twitter_data.csv>`
+    - :download:`Celebrity Twitter CSV <../_static/csv/datasets/cultural/celebrity-twitter-data.csv>`
 - `Kentucky Derby Winning Times <https://www.kaggle.com/datasets/danbraswell/kentucky-derby-winners-18752022?resource=download>`_
-    - :download:`Kentucky Derby Winning Times CSV <../_static/csv/datasets/cultural/kentucky_derby_winners_data.csv>`
+    - :download:`Kentucky Derby Winning Times CSV <../_static/csv/datasets/cultural/kentucky-derby-winners-data.csv>`
 - `Pigeon Racing Times <https://github.com/joanby/python-ml-course/blob/master/datasets/pigeon-race/pigeon-racing.csv>`_
-    - :download:`Pigeon Racing Times CSV <../_static/csv/datasets/cultural/pigeon_racing_times_data.csv>`
+    - :download:`Pigeon Racing Times CSV <../_static/csv/datasets/cultural/pigeon-racing-times-data.csv>`
 - `Marvel Movies <https://www.kaggle.com/datasets/joebeachcapital/marvel-movies>`_
-    - :download:`Marvel Movies CSV <../_static/csv/datasets/cultural/marvel_movies_data.csv>`
+    - :download:`Marvel Movies CSV <../_static/csv/datasets/cultural/marvel-movies-data.csv>`
 - `Super Mario Kart Rainbow Road World Records <https://mkwrs.com/smk/display.php?track=Rainbow%20Road>`_
-	- :download:`Rainbow Road CSV <../_static/csv/datasets/cultural/rainbow_road_world_record_data.csv>`
+	- :download:`Rainbow Road CSV <../_static/csv/datasets/cultural/rainbow-road-world-record-data.csv>`
 - `Star Wars Movie Runtimes <https://elara.chinchalinchin.com>`_
-	- :download:`Star Wars Movie Runtimes <../_static/csv/datasets/cultural/starwars_runtimes_data.csv>`
+	- :download:`Star Wars Movie Runtimes <../_static/csv/datasets/cultural/star-wars-runtimes-data.csv>`
 - `Spice Girls Songs <https://github.com/jacquietran/spice_girls_data/tree/main>`_
-	- :download:`Song CSV <../_static/csv/datasets/cultural/spice_girls_song_data.csv>`
+	- :download:`Song CSV <../_static/csv/datasets/cultural/spice-girls-song-data.csv>`
 
 .. _emoji-sentitment-valence-matrix:
 

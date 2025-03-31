@@ -1,4 +1,4 @@
-.. _project_four:
+.. _project-four:
 
 =================
 Linear Regression
@@ -10,7 +10,7 @@ Linear Regression
 	
 	-- Henri Poincare
 
-In this project, we will take the techniques we have learned for bivariate data analysis and apply to them to three datasets from real life. We will examine and classify the correlation between variables and then use sample statistics to determine whether the relationship observed between the variables is significant. We will fit a :ref:`Linear Regression Model <linear_regression>` to the data and use the model parameters to make predictions and extrapolations.
+In this project, we will take the techniques we have learned for bivariate data analysis and apply to them to three datasets from real life. We will examine and classify the correlation between variables and then use sample statistics to determine whether the relationship observed between the variables is significant. We will fit a :ref:`Linear Regression Model <linear-regression>` to the data and use the model parameters to make predictions and extrapolations.
 
 In order to do this, as you may have guessed, we will use **Python**; **Python** provides several functions that make bivariate analysis a quick and painless process. 
 
@@ -19,16 +19,16 @@ Instructions
 
 1. Download all **three** *csv* datasets in the :ref:`project_four_dataset` section and place them in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
 2. Create a Python ``.py`` script named ``NAME_project_four.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
-3. Create a :ref:`docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_four_background` section.
-5. Read the :ref:`project_four_loading_data` section.
-6. Read the :ref:`project_four_bivariate_analysis` section.
-7. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project_four_loading_data` section.
-8. Perform all exercises and answer all questions in the :ref:`project_four_project` section. Label your script with comments as indicated in the instructions of each problem.
+3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-four-background` section.
+5. Read the :ref:`project-four-loading-data` section.
+6. Read the :ref:`project-four-bivariate-analysis` section.
+7. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project-four-loading-data` section.
+8. Perform all exercises and answer all questions in the :ref:`project-four-project` section. Label your script with comments as indicated in the instructions of each problem.
 9. When you are done, zip your script **and** the *csv* files in a zip file named ``NAME_project_four.zip``
 10. Upload the zip file to the Google Classroom Project Four Assignment.
 
-.. _project_four_background:
+.. _project-four-background:
 
 Background
 ==========
@@ -102,7 +102,7 @@ The third and final dataset in this project is the Celebrity Twitter dataset. Th
 	
 	In other words, in this project, we will be working with the *full* dataset. 
 
-.. _project_four_bivariate_analysis:
+.. _project-four-bivariate-analysis:
 
 Bivariate Analysis
 ==================
@@ -153,7 +153,7 @@ A scatterplot is a very simple and easy to understand graphical representation o
 	
 The code snippet shown above will create the following graph,
 
-.. plot:: assets/plots/scatterplots/scatterplot_example.py
+.. plot:: _scripts/py/plots/scatterplots/scatterplot_example.py
 
 Inspecting a scatterplot is often a good first step in determining whether a correlation exists between two variables. For example, the dummy data we created in the previous section has an obvious *positive*, *linear* relationship. When a linear relationship exists between variables, the correlation coefficient can be used to quantify the strength of the relationship.
 
@@ -177,9 +177,9 @@ Output:
 
 	correlation coefficient:  0.9195
 
-A correlation near 1 suggests a strong relationship. To establish statistical significance, we compare this sample and correlation coefficient against the :ref:`pearson_correlation_coefficient_table`. If the absolute value of the correlation coefficient is greater than the table value, we say there is a *statistically significant* correlation.
+A correlation near 1 suggests a strong relationship. To establish statistical significance, we compare this sample and correlation coefficient against the :ref:`pearson-correlation-coefficient-table`. If the absolute value of the correlation coefficient is greater than the table value, we say there is a *statistically significant* correlation.
 
-We will explore *why* we compare the sample correlation to the table in a later chapter, we start talking about :ref:`sampling_distributions` and :ref:`statistical_significance`.
+We will explore *why* we compare the sample correlation to the table in a later chapter, we start talking about :ref:`sampling-distributions` and :ref:`statistical-significance`.
 
 Regression Parameters
 ---------------------
@@ -201,12 +201,12 @@ Output:
 
 	beta one:  0.4706
 
-Notice the output of the ``linear_regression`` function is an ordered pair (in **Python**, ordered pairs are called :ref:`python_tuples`). The first element of the ordered pair is the ``slope`` of the *Linear Regression Model*, or symbolically :math:`\mathcal{B}_1`; the second element of the ordered pair is the ``intercept`` of the *Linear Regression Model*, or symbolically :math:`\mathcal{B}_0`.
+Notice the output of the ``linear_regression`` function is an ordered pair (in **Python**, ordered pairs are called :ref:`python-tuples`). The first element of the ordered pair is the ``slope`` of the *Linear Regression Model*, or symbolically :math:`\mathcal{B}_1`; the second element of the ordered pair is the ``intercept`` of the *Linear Regression Model*, or symbolically :math:`\mathcal{B}_0`.
 
 Line of Best Fit
 ----------------
 
-The Regression line can be plotted over top the scatter plot using the ``plot()`` function from :ref:`matplotlib`. In order to use the ``plot()`` function, we will need to create a list of data representing :math:`\hat{y}`. This can be done by iterating over the ``x_data`` list with :ref:`python_list_comprehension`,
+The Regression line can be plotted over top the scatter plot using the ``plot()`` function from :ref:`matplotlib`. In order to use the ``plot()`` function, we will need to create a list of data representing :math:`\hat{y}`. This can be done by iterating over the ``x_data`` list with :ref:`python-list-comprehension`,
 
 .. code:: python
 
@@ -232,7 +232,7 @@ Before calling,
 	
 If you are following along, you should see the following graph when you execute your module code,
 
-.. plot:: assets/plots/scatterplots/scatterplot_regression_line.py
+.. plot:: _scripts/py/plots/scatterplots/scatterplot_regression_line.py
 
 Residuals
 ---------
@@ -253,7 +253,7 @@ Once we have the list of residuals, we can create a *histogram* of their distrib
 
 	axes[1].hist(residuals, density=True)
 
-This provides a quick way of checking the *normality* of the residuals, but a better way is constructing a :ref:`QQ Plot <project_three_qq_plots>`, as we did in the previous project. Refer to the :ref:`Normality project page <project_three>` to review the logic behind the construction of a *QQ Plot*. The code is reproduced below without explanation,
+This provides a quick way of checking the *normality* of the residuals, but a better way is constructing a :ref:`QQ Plot <project-three-qq-plots>`, as we did in the previous project. Refer to the :ref:`Normality project page <project-three>` to review the logic behind the construction of a *QQ Plot*. The code is reproduced below without explanation,
 
 .. code:: python
 
@@ -275,7 +275,7 @@ After the standardized distribution and the theoretical distribution are found, 
 	
 Recall a Normal distribution should have a linear *QQ Plot*. Any departures from linearity imply the underlying distribution is not Normal.
 
-.. _project_four_project:
+.. _project-four-project:
 
 Project
 =======
@@ -288,46 +288,46 @@ Scatter Plot
 
 1. Construct a scatter plot for this dataset using the **Eruption Length** as the *predictor* variable and the **Waiting Time** as the *response* variable. Ensure the graph is labelled appropriately.
 
-2. In your :ref:`python_docstring`, describe the correlation in this dataset. Is it positive or negative? Is it strong or weak?  Is it linear or non-linear? If it is non-linear, what type of functional form could be used to model the dataset?
+2. In your :ref:`python-docstring`, describe the correlation in this dataset. Is it positive or negative? Is it strong or weak?  Is it linear or non-linear? If it is non-linear, what type of functional form could be used to model the dataset?
 
-3. In your :ref:`python_docstring`, answer the following question: Based on your answer to the previous question, would a linear regression model be a good fit for this dataset?
+3. In your :ref:`python-docstring`, answer the following question: Based on your answer to the previous question, would a linear regression model be a good fit for this dataset?
 
 Correlation
 ***********
 
-1. Using the :ref:`python_correlation` function, calculate the correlation between the **Eruption Length** and the **Waiting Time**. Label the calculation with a comment and print the correlation to screen. 
+1. Using the :ref:`python-correlation` function, calculate the correlation between the **Eruption Length** and the **Waiting Time**. Label the calculation with a comment and print the correlation to screen. 
 
-2. Calculate the total number of samples using the :ref:`python_length_function`. Label the calculation with a comment and print the number of samples to screen.
+2. Calculate the total number of samples using the :ref:`python-length-function`. Label the calculation with a comment and print the number of samples to screen.
 
-3. Consult the :ref:`pearson_correlation_coefficient_table` and determine the critical value for a statistically significant correlation. In your :ref:`python_docstring`, answer the following question: Is the correlation between the **Eruption Length** and **Waiting Time** statistically significant?
+3. Consult the :ref:`pearson-correlation-coefficient-table` and determine the critical value for a statistically significant correlation. In your :ref:`python_docstring`, answer the following question: Is the correlation between the **Eruption Length** and **Waiting Time** statistically significant?
 
 Regression
 **********
 
-1. Using the :ref:`python_linear_regression` function, calculate the model parameters for the Linear Regression Model. Label the calculations with comments and print the model coefficients to screen.
+1. Using the :ref:`python-linear-regression` function, calculate the model parameters for the Linear Regression Model. Label the calculations with comments and print the model coefficients to screen.
 
-2. In your :ref:`python_docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
+2. In your :ref:`python-docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
 
-3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python_string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
+3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
 
 .. hint::
 
 	Make sure the ``color`` of the regression line is set to something different than the color of the scatterplot points. 
 
-4. Make an *extrapolation* using the *Linear Regression Model*. Label the calculation with comments. In your :ref:`python_docstring`, write a sentence explaining the *meaning* of the calculated value.
+4. Make an *extrapolation* using the *Linear Regression Model*. Label the calculation with comments. In your :ref:`python-docstring`, write a sentence explaining the *meaning* of the calculated value.
 
 .. hint::
 
 	Recall an *extrapolation* is when the *Linear Regression Model* is used to predict a value of :math:`y` *outside of the observed range of x*.
 
-5. In your :ref:`python_docstring`, answer the following question: Based on your answer to *#3* in the previous section (the one about statistical significance), should this extrapolation be used to make a prediction? Why or why not?
+5. In your :ref:`python-docstring`, answer the following question: Based on your answer to *#3* in the previous section (the one about statistical significance), should this extrapolation be used to make a prediction? Why or why not?
 	
 Residual Analysis
 *****************
 
-1. Create a *histogram* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python_docstring`, describe the distribution residuals in a few sentence. Be sure to include descriptions of: shape, location, variation and outliers.
+1. Create a *histogram* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python-docstring`, describe the distribution residuals in a few sentence. Be sure to include descriptions of: shape, location, variation and outliers.
 
-2. Create a *QQ plot* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python_docstring`, answer the following question: does the *QQ Plot* for the residuals support or contradict the model assumption of normality?
+2. Create a *QQ plot* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python-docstring`, answer the following question: does the *QQ Plot* for the residuals support or contradict the model assumption of normality?
 
 Conclusion
 **********
@@ -342,53 +342,52 @@ Scatter Plot
 
 1. Construct a scatter plot for this dataset using the **Track Number** as the *predictor variable* and the **Song Length** as the *response* variable. Ensure the graph is labelled appropriately.
 
-2. In your :ref:`python_docstring`, describe the correlation in this dataset. Is it positive or negative? Is it strong or weak?  Is it linear or non-linear? If it is non-linear, what type of functional form could be used to model the dataset?
+2. In your :ref:`python-docstring`, describe the correlation in this dataset. Is it positive or negative? Is it strong or weak?  Is it linear or non-linear? If it is non-linear, what type of functional form could be used to model the dataset?
 
-3. In your :ref:`python_docstring`, answer the following question: Based on your answer to the previous question, would a linear regression model be a good fit for this dataset?
+3. In your :ref:`python-docstring`, answer the following question: Based on your answer to the previous question, would a linear regression model be a good fit for this dataset?
 
 Correlation
 ***********
 
-1. Using the :ref:`python_correlation` function, calculate the correlation between the **Track Number** and the **Song Length**. Label the calculation with a comment and print the correlation to screen.
+1. Using the :ref:`python-correlation` function, calculate the correlation between the **Track Number** and the **Song Length**. Label the calculation with a comment and print the correlation to screen.
 
-2. Calculate the total number of samples using the :ref:`python_length_function`. Label the calculation with a comment and print the number of samples to screen.
+2. Calculate the total number of samples using the :ref:`python-length-function`. Label the calculation with a comment and print the number of samples to screen.
 
 3. Consult the :ref:`pearson_correlation_coefficient_table` and determine the critical value for a statistically significant correlation. In your :ref:`python_docstring`, answer the following question: Is the correlation between the **Track Number** and **Song Length** statistically significant?
 
 Regression
 **********
 
-1. Using the :ref:`python_linear_regression` function, calculate the model parameters for the Linear Regression Model. Label the calculations with comments and print the model coefficients to screen.
+1. Using the :ref:`python-linear-regression` function, calculate the model parameters for the Linear Regression Model. Label the calculations with comments and print the model coefficients to screen.
 
-2. In your :ref:`python_docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
+2. In your :ref:`python-docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
 
-3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python_string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
+3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
 
 .. hint::
 
 	Make sure the ``color`` of the regression line is set to something different than the color of the scatterplot points. 
 
-4. Make an *extrapolation* using the *Linear Regression Model*. Label the calculation with comments. In your :ref:`python_docstring`, write a sentence explaining the *meaning* of the calculated value.
+4. Make an *extrapolation* using the *Linear Regression Model*. Label the calculation with comments. In your :ref:`python-docstring`, write a sentence explaining the *meaning* of the calculated value.
 
 .. hint::
 
 	Recall an *extrapolation* is when the *Linear Regression Model* is used to predict a value of :math:`y` *outside of the observed range of x*.
 	
-5. In your :ref:`python_docstring`, answer the following question: Based on your answer to *#3* in the previous section (the one about statistical significance), should this extrapolation be used to make a prediction? Why or why not?
+5. In your :ref:`python-docstring`, answer the following question: Based on your answer to *#3* in the previous section (the one about statistical significance), should this extrapolation be used to make a prediction? Why or why not?
 
 Residual Analysis
 *****************
 
-1. Create a *histogram* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python_docstring`, describe the distribution residuals in a few sentence. Be sure to include descriptions of: shape, location, variation and outliers.
+1. Create a *histogram* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python-docstring`, describe the distribution residuals in a few sentence. Be sure to include descriptions of: shape, location, variation and outliers.
 
-2. Create a *QQ plot* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python_docstring`, answer the following question: does the *QQ Plot* for the residuals support or contradict the model assumption of normality?
+2. Create a *QQ plot* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python-docstring`, answer the following question: does the *QQ Plot* for the residuals support or contradict the model assumption of normality?
 
 Conclusion
 **********
 
 1. Are the assumptions of the *Linear Regression Model* satisifed by this dataset? In other words, is the *Linear Regression Model* a good way of modelling the relationship between the two variables? Why or why not?
  
-
 Celebrity Twitter
 -----------------
 
@@ -397,46 +396,46 @@ Scatter Plot
 
 1. Construct a scatter plot for this dataset using the **Tweet Count** as the *predictor* variable and the **Follower Count** as the *response* variable. Ensure the graph is labelled appropriately.
 
-2. In your :ref:`python_docstring`, describe the correlation in this dataset. Is it positive or negative? Is it strong or weak?  Is it linear or non-linear? If it is non-linear, what type of functional form could be used to model the dataset?
+2. In your :ref:`python-docstring`, describe the correlation in this dataset. Is it positive or negative? Is it strong or weak?  Is it linear or non-linear? If it is non-linear, what type of functional form could be used to model the dataset?
 
-3. In your :ref:`python_docstring`, answer the following question: Based on your answer to the previous question, would a linear regression model be a good fit for this dataset?
+3. In your :ref:`python-docstring`, answer the following question: Based on your answer to the previous question, would a linear regression model be a good fit for this dataset?
 
 Correlation
 ***********
 
-1. Using the :ref:`python_correlation` function, calculate the correlation between the **Tweet Count** and the **Follower Count**. Label the calculation with a comment and print the correlation to screen.
+1. Using the :ref:`python-correlation` function, calculate the correlation between the **Tweet Count** and the **Follower Count**. Label the calculation with a comment and print the correlation to screen.
 
-2. Calculate the total number of samples using the :ref:`python_length_function`. Label the calculation with a comment and print the number of samples to screen.
+2. Calculate the total number of samples using the :ref:`python-length-function`. Label the calculation with a comment and print the number of samples to screen.
 
-3. Consult the :ref:`pearson_correlation_coefficient_table` and determine the critical value for a statistically significant correlation. In your :ref:`python_docstring`, answer the following question: Is the correlation between the **Tweet Count** and **Follower Count** statistically significant?
+3. Consult the :ref:`pearson-correlation-coefficient-table` and determine the critical value for a statistically significant correlation. In your :ref:`python-docstring`, answer the following question: Is the correlation between the **Tweet Count** and **Follower Count** statistically significant?
 
 Regression
 **********
 
-1. Using the :ref:`python_linear_regression` function, calculate the model parameters for the Linear Regression Model. Label the calculations with comments and print the model coefficients to screen.
+1. Using the :ref:`python-linear-regression` function, calculate the model parameters for the Linear Regression Model. Label the calculations with comments and print the model coefficients to screen.
 
-2. In your :ref:`python_docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
+2. In your :ref:`python-docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
 
-3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python_string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
+3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
 
 .. hint::
 
 	Make sure the ``color`` of the regression line is set to something different than the color of the scatterplot points. 
 
-4. Make an *extrapolation* using the *Linear Regression Model*. Label the calculation with comments. In your :ref:`python_docstring`, write a sentence explaining the *meaning* of the calculated value.
+4. Make an *extrapolation* using the *Linear Regression Model*. Label the calculation with comments. In your :ref:`python-docstring`, write a sentence explaining the *meaning* of the calculated value.
 
 .. hint::
 
 	Recall an *extrapolation* is when the *Linear Regression Model* is used to predict a value of :math:`y` *outside of the observed range of x*.
 	
-5. In your :ref:`python_docstring`, answer the following question: Based on your answer to *#3* in the previous section (the one about statistical significance), should this extrapolation be used to make a prediction? Why or why not?
+5. In your :ref:`python-docstring`, answer the following question: Based on your answer to *#3* in the previous section (the one about statistical significance), should this extrapolation be used to make a prediction? Why or why not?
 
 Residual Analysis
 *****************
 
-1. Create a *histogram* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python_docstring`, describe the distribution residuals in a few sentence. Be sure to include descriptions of: shape, location, variation and outliers.
+1. Create a *histogram* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python-docstring`, describe the distribution residuals in a few sentence. Be sure to include descriptions of: shape, location, variation and outliers.
 
-2. Create a *QQ plot* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python_docstring`, answer the following question: does the *QQ Plot* for the residuals support or contradict the model assumption of normality?
+2. Create a *QQ plot* for the distribution of residuals for the *Linear Regression Model*. In your :ref:`python-docstring`, answer the following question: does the *QQ Plot* for the residuals support or contradict the model assumption of normality?
 
 Conclusion
 **********
@@ -449,7 +448,7 @@ Conclusion
 Extra Credit: Data Transformations
 ==================================
 
-One of the three datasets we have examined in this project has a non-linear correlation. In order to fit a *Linear Regression Model* to this dataset, one of the variables must be transformed before the model parameters are estimated. In your :ref:`python_docstring`, explain which of the calculated correlations is non-linear and then answer the following question:
+One of the three datasets we have examined in this project has a non-linear correlation. In order to fit a *Linear Regression Model* to this dataset, one of the variables must be transformed before the model parameters are estimated. In your :ref:`python-docstring`, explain which of the calculated correlations is non-linear and then answer the following question:
 
 1. What type of data transformation would make the relationship between the variables linear?  
 
@@ -457,17 +456,17 @@ Then, taking the transformation you have identified, transform the indicated dat
 
 2. Compare the **mean square error** of both models. In other words, once the dataset is transformed and a model is fitted to the transformed data, what happens to the **mean square error** of the prediction? Label your calculations with comments. 
 
-.. _project_four_dataset:
+.. _project-four-dataset:
 
 Datasets
 =========
 
-.. _project_four_loading_data:
+.. _project-four-loading-data:
 
 Loading Data
 ------------
 
-The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project_two_dataset` section.
+The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project-two-dataset` section.
 
 .. code-block:: python 
 
@@ -491,36 +490,36 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Celebrity Twitter
 -----------------
 
-You can download the full dataset :download:`here <../../assets/datasets/celebrity_twitter_data.csv>`
+You can download the full dataset :download:`here <../../../_static/csv/datasets/cultural/celebrity-twitter-data.csv>`
 
 The following table is a preview of the data you will be using for this project.
 
 .. csv-table:: Celebrity Twitter Followers and Tweet Count
-    :file: ../../../assets/datasets/previews/celebrity_twitter_data_preview.csv
+    :file: ../../../_static/csv/datasets/previews/celebrity-twitter-data-preview.csv
 
 The fifth column represents the number of followers for a given Twitter user. The sixth column represents the number of tweets for a given Twitter user.
 
 Old Faithful
 ------------
 
-You can download the full dataset :download:`here <../../assets/datasets/old_faithful_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/scientific/old-faithful-data.csv>`.
 
 The following table is a preview of the data you will be using for this project. 
 
 .. csv-table:: Old Faithful Eruption and Waiting Times
-   :file: ../../../assets/datasets/previews/old_faithful_data_preview.csv
+   :file: ../../../_static/csv/datasets/previews/old-faithful-data-preview.csv
 
 The first column represents the length of the eruption in minutes. The second column represents the waiting time in minutes until the next eruption.
 
 Spice Girls Song Length
 -----------------------
 
-You can download the full dataset :download:`here <../../assets/datasets/spice_girls_song_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/cultural/spice-girls-song-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Spice Girl Song Lengths
-   :file: ../../../assets/datasets/previews/spice_girls_song_data_preview.csv
+   :file: ../../../_static/csv/datasets/previews/spice-girls-song-data-preview.csv
 
 The third column represents the song length in milliseconds. The fifth column represents the track number of the song on the studio album on which it was released.
 

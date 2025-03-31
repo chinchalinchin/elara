@@ -42,7 +42,7 @@ Controls
 
 In the example of testing the efficiency of a new type of fuel against standard gasoline, notice we are asking a question about two different populations: the population of cars that use the new type of fuel and the population of cars that use standard gasoline. Specifically, we are asking if there is a *statistically significance* difference between the efficiency of either group. 
 
-.. image:: ../../_static/img/context/statistical/fuel_efficiency_null_versus_alternate.jpg
+.. image:: ../../_static/img/context/statistical/fuel-efficiency-null-versus-alternate.jpg
     :align: center
 
 The first group is referred to as the *test* group, the sample to which a *treatment* has been applied and whose efficacy we would like to test.

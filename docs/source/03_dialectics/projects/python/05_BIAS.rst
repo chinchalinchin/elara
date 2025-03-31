@@ -1,10 +1,11 @@
-.. _project_five:
+.. _project-five:
 
 ====
 Bias
 ====
 
 .. epigraph::
+
 	There's something happening here, but what it is ain't exactly clear.
 
 	-- Buffalo Springfield
@@ -14,17 +15,17 @@ In this lab, you will perform some graphical analysis on a famously biased data 
 Instructions
 ============
 
-1. Download the *csv* dataset in the :ref:`project_five_dataset` section and place it in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
+1. Download the *csv* dataset in the :ref:`project-five-dataset` section and place it in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
 2. Create a Python ``.py`` script named ``NAME_project_five.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
-3. Create a :ref:`docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_five_background` section.
-5. Read the :ref:`project_five_loading_data` section.
-6. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project_five_loading_data` section.
-7. Perform all exercises and answer all questions in the :ref:`project_five_project` section. Label your script with comments as indicated in the instructions of each problem.
+3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-five-background` section.
+5. Read the :ref:`project-five-loading-data` section.
+6. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project-five-loading-data` section.
+7. Perform all exercises and answer all questions in the :ref:`project-five-project` section. Label your script with comments as indicated in the instructions of each problem.
 8. When you are done, zip your script **and** the *csv* file in a zip file named ``NAME_project_five.zip``
 9. Upload the zip file to the Google Classroom Project Three Assignment.
 
-.. _project_five_background:
+.. _project-five-background:
 
 Background
 ==========
@@ -46,7 +47,7 @@ In an attempt to randomize the selection, the Selective Service System held a dr
 
 Slips of paper were then selected at random and anyone of eligible age who had a birthday on the date indicated would be drafted. The important point is *individuals who shared the same birthday* would be drafted at the same time. As example, two men who had the birthdays April 5 :sup:`th`, 1946 and April 5 :sup:`th`, 1947 would both be drafted in the event the slip of paper *"April 5"* was selected.
 
-.. _project_five_python:
+.. _project-five-python:
 
 Python
 ======
@@ -54,7 +55,7 @@ Python
 Loops
 -----
 
-Loops are a :ref:`control structure <python_control_structures>` that allow us to organize the flow a program. We have actually encountered loops many times already. We are using loops whenever we write,
+Loops are a :ref:`control structure <python-control-structures>` that allow us to organize the flow a program. We have actually encountered loops many times already. We are using loops whenever we write,
 
 .. code:: python:
 
@@ -66,11 +67,11 @@ Output:
 
 	[ 0, 1, 2, 3 ]
 	
-:ref:`python_list_comprehension` is a specialized type of loop; a *list generator* like the one above uses a ``for`` loop to iterate over a dataset and apply a formula to each observation. This is one of **Python**'s many idiomatic expressions (TODO: link to idiomatic), a eccentricity unique to **Python** (i.e. you will not find novel expresions like this in other languages, except maybe Javascript, but Javascript is a dumpster fire). **Python** has a lot grammatical tricks like this that make it easy to condense a lot of logic into a single, understandable line.
+:ref:`python-list-comprehension` is a specialized type of loop; a *list generator* like the one above uses a ``for`` loop to iterate over a dataset and apply a formula to each observation. This is one of **Python**'s many idiomatic expressions (TODO: link to idiomatic), a eccentricity unique to **Python** (i.e. you will not find novel expresions like this in other languages, except maybe Javascript, but Javascript is a dumpster fire). **Python** has a lot grammatical tricks like this that make it easy to condense a lot of logic into a single, understandable line.
 
 In reality, the *list generator* in the above expression is really shorthand for following ``for`` loop,
 
-.. code:: python:
+.. code:: python
 
 	data = [ (0,1), (1,2), (2,3), (3,4) ]
 	x_var = [ ]
@@ -122,12 +123,12 @@ Output:
 	 	
 The ``enumerate()`` function allows us to *step* over each element of a list and grab the index while we do it.
  
-.. _project_five_project:
+.. _project-five-project:
 
 Project
 =======
 
-1. Discuss the following questions. Save your answer in the :ref:`docstring <python_docstring>`
+1. Discuss the following questions. Save your answer in the :ref:`docstring <python-docstring>`
    
     a. Is the selection method used for the draft random? Why or why not?
     
@@ -137,7 +138,7 @@ Project
     
     d. What are some possible sources of bias in the draft lottery? List the cases and identify the *type* of bias in each case.
 
-2. During the first year of the draft, 1969, birthdates were put into the shoebox in descending order of month. In other words, the birth dates in the month of December were first put in the bottom of the shoebox, then birth dates in November were placed on top of the December birth dates, then October birth dates were placed on top of the November birth dates, and so on up to January. The slips of paper were not mixed any further before the draft was selected. Using this new information, answer the following questions. Save your answer in the :ref:`docstring <python_docstring>`
+2. During the first year of the draft, 1969, birthdates were put into the shoebox in descending order of month. In other words, the birth dates in the month of December were first put in the bottom of the shoebox, then birth dates in November were placed on top of the December birth dates, then October birth dates were placed on top of the November birth dates, and so on up to January. The slips of paper were not mixed any further before the draft was selected. Using this new information, answer the following questions. Save your answer in the :ref:`docstring <python-docstring>`
 
     a. How does this information affect your answer to *#1a*? 
 
@@ -151,9 +152,9 @@ This selection method was later revised in 1970, 1971 and 1972, once the distrib
 
 .. note::
 
-	Read the :ref:`project_five_datasets` section carefully. You will need to clean the data before you are able to construct the histograms properly.
+	Read the :ref:`project-five-datasets` section carefully. You will need to clean the data before you are able to construct the histograms properly.
 
-4. Based on the histograms constructed, describe the distribution for each year's draft lottery. Address each of the following points in your answer. Save your answers in the :ref:`docstring <python_docstring>`. 
+4. Based on the histograms constructed, describe the distribution for each year's draft lottery. Address each of the following points in your answer. Save your answers in the :ref:`docstring <python-docstring>`. 
    
    a. Compare and contrast the distributions of data for each year of the draft. Include descriptions of the location, variation, shape and any possible outliers. 
    
@@ -163,17 +164,17 @@ This selection method was later revised in 1970, 1971 and 1972, once the distrib
    
 5. Discuss the results. Was the draft lottery fair? If not, why not? If so, why? Justify your answer with sample statistics.
 
-.. _project_five_dataset:
+.. _project-five-dataset:
 
 Dataset
 =======
 
-.. _project_five_loading_data:
+.. _project-five-loading-data:
 
 Loading Data
 ------------
 
-The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project_two_dataset` section.
+The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project-two-dataset` section.
 
 .. code-block:: python 
 
@@ -196,12 +197,12 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Vietnam Draft Lottery Data
 --------------------------
 
-You can download the full dataset :download:`here <../../assets/datasets/vietnam_draft_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/historical/vietnam-draft-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Vietnam Draft Lottery Data
-   :file: ../../../assets/datasets/previews/vietnam_draft_data_preview.csv
+   :file: ../../../_static/csv/datasets/previews/vietnam-draft-data-preview.csv
 
 The meaning of the columns is as follows.
 
