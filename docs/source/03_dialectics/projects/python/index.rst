@@ -7,13 +7,13 @@ Python Projects
    :maxdepth: 2
    :caption: Contents:
 
-   00_PYTHON
-   01_CATEGORICAL
-   02_QUANTITATIVE
-   03_NORMALITY
-   04_REGRESSION
-   05_BIAS
-   06_SIMULATION
-   07_SETS
-   08_MONTE_CARLO
-   09_BINOMIAL
+   00_python
+   01_categorical
+   02_quantative
+   03_normality
+   04_regression
+   05_bias
+   06_simulation
+   07_setse
+   08_monte_carlo
+   09_binomial

@@ -1,4 +1,4 @@
-.. _python_plotting:
+.. _python-plotting:
 
 =====
 Plots
@@ -26,6 +26,8 @@ matplotlib
 
     pip3 install matplotlib
 
+.. _tkinter:
+
 tkinter
 -------
 
@@ -37,7 +39,7 @@ tkinter
 
 Now that we have everything we need, let's take a look at the various plots we can create. 
 
-.. _python_plotting_imports:
+.. _python-plotting-imports:
 
 Importing
 =========
@@ -51,6 +53,8 @@ When you import ``matplotlib`` into your scripts, the very first thing you shoul
     matplotlib.use('tkagg')
 
 This step is not, strictly speaking, necessary as most systems will default to using this library, but if your plots aren't showing up or you experience other weird errors, this is the likely culprit. In the event something goes wrong and you can't figure why, try adjusting this setting.
+
+.. _python-plotting-axes:
 
 Creating the Axes
 =================
@@ -178,7 +182,7 @@ All graphing functions in **matplotlib** accept ``color`` and ``ec`` arguments. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../assets/imgs/python/matplotlib_colors.png
+.. image:: ../../_static/imgs/python/matplotlib_colors.png
     :align: center
 
 Gallery
@@ -186,7 +190,7 @@ Gallery
 
 You can download the scripts used to generate any of these examples by clicking on the "*source*" link in the top right corner of the image. 
 
-.. _matplotlib_boxplot:
+.. _matplotlib-boxplot:
 
 Boxplot
 -------
@@ -210,14 +214,14 @@ Boxplot
 
     Below is an example of a boxplot, unrelated to the above code snippet.
 
-.. plot:: assets/plots/boxplots/boxplot_normal.py
+.. plot:: _scripts/py/plots/boxplots/boxplot_normal.py
 
-.. _matplotlib_barchart:
+.. _matplotlib-barchart:
 
 Bar Chart
 ---------
 
-.. _matplotlib_standard_barchart:
+.. _matplotlib-standard-barchart:
 
 No Frills
 *********
@@ -249,7 +253,7 @@ The code snippet below will generate a bar chart for the following frequency dis
 
     Below is an example of a barchart, unrelated to the above code snippet. 
 
-.. plot:: assets/plots/other/bar_chart.py
+.. plot:: _scripts/py/plots/other/bar_chart.py
 
 Stacked
 *******
@@ -311,17 +315,17 @@ The following code will generate a *stacked bar chart* to visualize the *associa
 
     Below is an example of a stacked bar chart, unrelated to above code snippet.
 
-.. plot:: assets/plots/other/stacked_bar_chart.py
+.. plot:: _scripts/py/plots/other/stacked_bar_chart.py
 
 Dot Plot
 --------
 
-.. plot:: assets/plots/other/dot_plot.py
+.. plot:: _scripts/py/plots/other/dot_plot.py
 
 Pie Chart
 ---------
 
-.. plot:: assets/plots/other/pie_chart.py
+.. plot:: _scripts/py/plots/other/pie_chart.py
     
 Histogram
 ---------
@@ -329,22 +333,22 @@ Histogram
 Normal
 ******
 
-.. plot:: assets/plots/histograms/histogram_normal.py
+.. plot:: _scripts/py/plots/histograms/histogram_normal.py
 
 Relative
 ********
 
-.. plot:: assets/plots/histograms/histogram_relative.py
+.. plot:: _scripts/py/plots/histograms/histogram_relative.py
 
 Ogives
 ------
 
-.. plot:: assets/plots/ogives/ogive_normal.py
+.. plot:: _scripts/py/plots/ogives/ogive_normal.py
 
 Scatterplot
 -----------
 
-.. plot:: assets/plots/scatterplots/scatterplot_no_correlation.py
+.. plot:: _scripts/py/plots/scatterplots/scatterplot_no_correlation.py
 
 Line Of Best Fit
 ****************
@@ -359,13 +363,12 @@ TODO
 QQ Plots
 ********
 
-.. plot:: assets/plots/other/qq_plot.py
+.. plot:: _scripts/py/plots/other/qq_plot.py
     
 Time Series
 -----------
 
-.. plot:: assets/plots/timeseries/timeseries_no_trend.py
-
+.. plot:: _scripts/py/plots/timeseries/timeseries_no_trend.py
 
 References
 ==========

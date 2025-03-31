@@ -19,13 +19,13 @@ Furthermore, all of the plots across the pages of this website were generated wi
    :maxdepth: 2
    :caption: Contents:
 
-   00_SHELL
-   01_SETUP
-   02_BASIC
-   03_SETS
-   04_FUNCTIONS
-   05_PLOTS
-   06_FILES
-   07_CONTROLS
-   08_WEB
-   09_DEMOS
+   00_shell
+   01_setup
+   02_basics
+   03_sets
+   04_functions
+   05_plots
+   06_files
+   07_controls
+   08_web
+   09_demos

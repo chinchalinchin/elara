@@ -1,3 +1,5 @@
+.. _online-python-schell:
+
 ===================
 Online Python Shell
 ===================

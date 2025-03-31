@@ -99,7 +99,7 @@ Alternatively, lists can be stored into list variables using the :math:`\implies
 
 	The following command sequence will store the numbers "*1*", "*2*" and "*3*" in the :math:`L_1` list,
 	
-	- :math:`\text{BUTTON (2ND) } : \{ `
+	- :math:`\text{BUTTON (2ND) } : \{`
 	- :math:`\text{BUTTON} : \text{ 1 }`
 	- :math:`\text{BUTTON} : \text{ , }`
 	- :math:`\text{BUTTON} : \text{ 2 }`
@@ -107,7 +107,7 @@ Alternatively, lists can be stored into list variables using the :math:`\implies
 	- :math:`\text{BUTTON} : \text{ 3 }`
 	- :math:`\text{BUTTON} : \text{ , }`
 	- :math:`\text{BUTTON (2ND) } : \}`
-	- :math:`\text{BUTTON} : \implies
+	- :math:`\text{BUTTON} : \implies`
 	- :math:`\text{BUTTON} : L_1`
 	
 Entering this sequence of buttons will be shown on the main screen of the calculator as follows, 
