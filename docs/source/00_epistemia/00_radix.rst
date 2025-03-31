@@ -22,14 +22,20 @@
 .. _all-all-and-all: https://allpoetry.com/All-All-And-All
 .. _an-irish-airman-foresees-his-death: https://www.poetryfoundation.org/poems/57311/an-irish-airman-foresees-his-death
 .. _anyone-lived-in-a-pretty-how-town: https://www.poetryfoundation.org/poetrymagazine/poems/22653/anyone-lived-in-a-pretty-how-town
+.. _callidore-a-fragment: https://kalliope.org/en/text/keats2001071304
 .. _dream-land: https://www.poetryfoundation.org/poems/48631/dream-land-56d22a06bce76
+.. _essay-on-man: ttps://www.gutenberg.org/ebooks/2428
 .. _find-meat-on-bones: https://allpoetry.com/Find-Meat-On-Bones
+.. _hymn-to-god-my-god-in-my-sickness: https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness
 .. _i-have-longed-to-move-away: https://allpoetry.com/I-Have-Longed-To-Move-Away
 .. _isabella-or-the-pot-of-basil: https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up
+.. _ode-to-the-west-wind: https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind
 .. _ouija: https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath
 .. _the-dong-with-a-luminous-nose: https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose
+.. _the-hollow-men: https://allpoetry.com/the-hollow-men
 .. _the-love-song-of-j-alfred-prufrock: https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>
 .. _the-sun-rising: https://www.poetryfoundation.org/poems/44129/the-sun-rising
+.. _to-autumn: https://www.poetryfoundation.org/poems/44484/to-autumn
 
 .. _radix:
 
@@ -54,7 +60,7 @@ allpoetry.com
 - `I Met a Genius <https://allpoetry.com/I-Met-A-Genius>`_
 - `Mad Girl's Love Song <https://allpoetry.com/mad-girl's-love-song>`_
 - `The Genius of the Crowd <https://allpoetry.com/The-Genius-Of-The-Crowd>`_
-- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_
+- `The Hollow Men <the-hollow-men>`_
 - `Ouija <https://allpoetry.com/poem/8497997-Ouija-by-Sylvia-Plath>`_
 - `Sestina <https://allpoetry.com/poem/8493577-Sestina-by-Elizabeth-Bishop>`_
 
@@ -122,20 +128,13 @@ gutenberg.org
 
 - `Critique of Pure Reason <critique-of-pure-reason>`_
 - `Devotions Upon Emergent Occasions <https://www.gutenberg.org/files/23772/23772-h/23772-h.htm>`_
-- `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_
+- `Essay on Man <essay-on-man>`_
 - `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_
 - `Paradise Lost <https://www.gutenberg.org/cache/epub/26/pg26-images.html>`_
 - `The Foundations of Arithmetic, The <https://www.gutenberg.org/ebooks/48312>`_
 - `Tractatus Logico-Philosophicus (Secondary Source) <https://www.gutenberg.org/ebooks/5740>`_
 - `World as Will and Representation <https://www.gutenberg.org/ebooks/38427>`_
 - `A Budget of Paradoxes <https://www.gutenberg.org/files/23100/23100-h/23100-h.htm>`_
-
-.. _kalliope-org:
-
-kalliope.org
-------------
-
-- `Calidore: A Fragment <https://kalliope.org/en/text/keats2001071304>`_
 
 .. _poetry-foundation-org:
 
@@ -150,7 +149,7 @@ poetryfoundation.org
 - `Hyperion <https://www.poetryfoundation.org/poems/44473/hyperion>`_
 - `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_
-- `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_
+- `Ode to the West Wind <ode-to-the-west-wind>`_
 - `Pantoum of the Great Depression <https://www.poetryfoundation.org/poems/58080/pantoum-of-the-great-depression>`_
 - `Sestina of the Tramp-Royal <https://www.poetryfoundation.org/poems/46775/sestina-of-the-tramp-royal>`_
 - `Spring and Fall <https://www.poetryfoundation.org/poems/44400/spring-and-fall>`_
@@ -162,7 +161,7 @@ poetryfoundation.org
 - `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_
 - `The Waking <https://www.poetryfoundation.org/poems/43333/the-waking-56d2220f25315>`_
 - `The Windhover <https://www.poetryfoundation.org/poems/44402/the-windhover>`_
-- `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_
+- `To Autumn <to-autumn>`_
 - `Tonight <https://www.poetryfoundation.org/poems/51652/tonight-56d22f898fcd7>`
 
 .. _various:
@@ -172,9 +171,9 @@ Various
 
 - `An essay towards solving a problem in the doctrine of chances <https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053>`_
 - `Being and Event <being-and-event>`_
+- `Calidore: A Fragment <calidore-a-fragment>`_
 - `Function and Concept <function-and-concept>`_
 - `On Concept and Object <on-concept-and-object>`_
 - `The Concept of Truth in Formalized Languages <the-concept-of-truth>`_
--
 - `What Is Metaphysics? <what-is-metaphysics>`_
 - `Wittgenstein Lectures <wittgenstein-lectures>`_

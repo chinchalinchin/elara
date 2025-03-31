@@ -13,7 +13,7 @@ Domain of Discourse
 -------------------
 
 Definition
-    The *domain of discourse* is subject matter we are treating. 
+    The *domain of discourse* is subject matter that is being analyzed. 
 
 .. _elements:
 

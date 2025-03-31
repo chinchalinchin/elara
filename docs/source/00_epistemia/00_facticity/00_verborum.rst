@@ -153,12 +153,13 @@ Anaphora
 
     If I were a swift cloud to fly with thee;
     
-    -- `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_, Percy Blysse Shelley
+    -- `Ode to the West Wind <ode-to-the-west-wind>`_, Percy Blysse Shelley
+    
     We are the hollow men
 
     We are the stuffed men
 
-    -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_, T.S. Eliot
+    -- `The Hollow Men <the-hollow-men>`_, T.S. Eliot
 
 .. _anastrophe:
 
@@ -167,23 +168,23 @@ Anastrophe
 
     The widening circles into nothing gone
 
-    -- `Calidore: A Fragment <https://kalliope.org/en/text/keats2001071304>`_, John Keats
+    -- `Calidore: A Fragment <calidore-a-fragment>`_, John Keats
 
     Observe how system into system runs
 
-    -- `Essay on Man <https://www.gutenberg.org/ebooks/2428>`_, Alexander Poper
+    -- `Essay on Man <essay-on-man>`_, Alexander Poper
 
     What love Lorenzo for their sister had
 
-    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
 
     With fruit the vines that round the thatch-eves run
 
-    -- `To Autumn <https://www.poetryfoundation.org/poems/44484/to-autumn>`_, John Keats
+    -- `To Autumn <to-autumn>`_, John Keats
 
     May the last Adam's blood my soul embrace
 
-    -- `Hymn to God, My God, In Sickness <https://www.poetryfoundation.org/poems/44114/hymn-to-god-my-god-in-my-sickness>`_, John Donne
+    -- `Hymn to God, My God, In My Sickness <hymn-to-god-my-god-in-my-sickness>`_, John Donne
 
 .. _antimetabole:
 

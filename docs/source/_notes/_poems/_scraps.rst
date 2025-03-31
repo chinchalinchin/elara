@@ -458,7 +458,6 @@ III: The Maze
 ----
 
 
-
 |   in divey dive where diving dove. 
 
 |   from prior pries of prying prize. 
@@ -475,3 +474,15 @@ III: The Maze
 
 | The deaths the dying died before 
 |   were laid to lie by lying score. 
+
+---
+
+The lawyers around uptown courthouse lane,
+where apple plums through crooked fall in sync
+With paper charts that map legal terrain,
+while rotting cherries blossom into pink,
+
+---
+
+In an honest world, no soul would be free. 
+Our minds convict us every waking second.
