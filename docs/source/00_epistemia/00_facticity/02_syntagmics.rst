@@ -209,12 +209,12 @@ Ballad
 
 **References**
 
-- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <https://archive.org/details/bim_eighteenth-century_a-tragical-ballad-of-t_1795>`_, Frances James Child
-- `Ballad of the Goodly Fere <https://allpoetry.com/Ballad-Of-The-Goodly-Fere>`_, Ezra Pound
-- `Ballad of Sir Patrick Stern <https://sites.williams.edu/sirpatrickspens/ballad/293/>`_, W. Scott
-- `La Belle Dame sans Merci <https://www.poetryfoundation.org/poems/44475/la-belle-dame-sans-merci-a-ballad>`_, John Keats
-- `Lord Thomas and Annet <https://sacred-texts.com/neu/eng/child/ch073.htm>`_, Old English Ballad
-- `Tam Lin <https://tam-lin.org/versions/39A.html>`_, Old Scottish Ballad
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <the-ballad-of-lord-thomas-and-fair-eleanor>`_, Frances James Child
+- `Ballad of the Goodly Fere <the-ballad-of-the-goodly-fere>`_, Ezra Pound
+- `Ballad of Sir Patrick Stern <the-ballad-of-sir-patrick-stern>`_, W. Scott
+- `La Belle Dame sans Merci <la-belle-dame-sans-merci>`_, John Keats
+- `Lord Thomas and Annet <lord-thomas-and-annet>`_, Old English Ballad
+- `Tam Lin <tam-lin>`_, Old Scottish Ballad
 
 .. _ballade: 
 
@@ -248,8 +248,8 @@ Kyrielle
 
 **References**
 
-- `A lark in the mesh of the tangled vine <https://www.poemhunter.com/poem/kyrielle-2/>`_, John Payne
-- `A Lenten Hymn <https://allpoetry.com/poem/14371059-A-Lenten-Hymn-by-Thomas-Campion>`_, Thomas Campion
+- `A lark in the mesh of the tangled vine <a-lark-in-the-mesh>`_, John Payne
+- `A Lenten Hymn <a-lenten-hymn>`_, Thomas Campion
 
 .. _ode:
 
@@ -271,9 +271,9 @@ No fixed schema.
 
 **References**
 
-- `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_, John Keats
-- `Ode to a Nightingale <https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale>`_, John Keats
-- `Ode to the West Wind <https://www.poetryfoundation.org/poems/45134/ode-to-the-west-wind>`_, Percy Blysse Shelely
+- `Ode on a Grecian Urn <ode-on-a-grecian-urn>`_, John Keats
+- `Ode to a Nightingale <ode-to-a-nightingale>`_, John Keats
+- `Ode to the West Wind <ode-to-the-west-wind>`_, Percy Blysse Shelely
 
 .. _ottava:
 
@@ -309,7 +309,7 @@ Pantoum
 
 **References**
 
-- `Pantoum of the Great Depression <https://www.poetryfoundation.org/poems/58080/pantoum-of-the-great-depression>`_, Donald Justice
+- `Pantoum of the Great Depression <pantoum-of-the-great-depression>`_, Donald Justice
 
 .. _rondeau:
 
@@ -364,8 +364,8 @@ The following diagrams shows the different schemata for the rondeau form duing t
 
 **References**
 
-- `In Flanders Fields <https://www.poetryfoundation.org/poems/47380/in-flanders-fields>`_, John McCrae
-- `We Wear the Mask <https://www.poetryfoundation.org/poems/44203/we-wear-the-mask>`_, Paul Laurence Dunbar
+- `In Flanders Fields <in-flanders-field>`_, John McCrae
+- `We Wear the Mask <we-wear-the-mask>`_, Paul Laurence Dunbar
 
 .. _sestina:
 
@@ -386,8 +386,8 @@ Six sestets followed by a tercet envoi.
 
 **References**
 
-- `Sestina of the Tramp-Royal <https://www.poetryfoundation.org/poems/46775/sestina-of-the-tramp-royal>`_, Rudyard Kipling
-- `Sestina: Travel Notes <https://www.poetryfoundation.org/poetrymagazine/browse?volume=62&issue=6&page=28>`_
+- `Sestina of the Tramp-Royal <sestina-of-the-tramp-royal>`_, Rudyard Kipling
+- `Sestina: Travel Notes <sestina-travel-notes>`_, 
 
 .. _sonnet:
 
@@ -408,10 +408,10 @@ Sonnet
 
 **References**
 
-- `Batter My Heart, Three Person'd God <https://www.poetryfoundation.org/poems/44106/holy-sonnets-batter-my-heart-three-persond-god>`_, John Donne
-- `Death Be Not Proud <https://www.poetryfoundation.org/poems/44107/holy-sonnets-death-be-not-proud>`_, John Donne
-- `On the Grasshoper and Cricket <http://keats-poems.com/on-the-grasshopper-and-cricket/>`_, John Keats
-- `When I Have Seen By Times Fell Hand Defac'd <https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd>`_, William Shakespeare
+- `Batter My Heart, Three Person'd God <batter-my-heart-three-persond-god>`_, John Donne
+- `Death Be Not Proud <death-be-not-proud>`_, John Donne
+- `On the Grasshoper and Cricket <on-the-grasshopper-and-cricket>`_, John Keats
+- `When I Have Seen By Times Fell Hand Defac'd <sonnet-64>`_, William Shakespeare
 
 .. _terza:
 
@@ -437,8 +437,8 @@ Triolet
 
 **References**
 
-- `Birds at Winter Nightfall <https://allpoetry.com/poem/14327645-Birds-At-Winter-Nightfall--Triolet--by-Thomas-Hardy>`_, Thomas Hardy
-- `How Great My Grief <https://allpoetry.com/How-Great-My-Grief>`_, Thomas Hardy
+- `Birds at Winter Nightfall <birds-at-nightfall>`_, Thomas Hardy
+- `How Great My Grief <how-great-my-grief>`_, Thomas Hardy
 
 .. _virelai:
 
@@ -455,8 +455,8 @@ Virelai
     
 **References**
 
-- `July <https://www.poetrynook.com/poem/july-41>`_, Henry Austin Dobson
-- `Spring Sadness <https://www.gutenberg.org/files/45736/45736-h/45736-h.htm>`_, John Payne
+- `July <july>`_, Henry Austin Dobson
+- `Spring Sadness <spring-sadness>`_, John Payne
 
 .. _villanelle:
 
@@ -471,9 +471,9 @@ TODO: research Terzanelles.
 
 **References**
 
-- `Do Not Go Gentle into That Good Night <https://www.poetryfoundation.org/poems/46569/do-not-go-gentle-into-that-good-night>`_, Dylan Thomas
-- `Mad Girl's Love Song <https://allpoetry.com/mad-girl's-love-song>`_, Sylvia Plath
-- `One Art <https://www.poetryfoundation.org/poems/47536/one-art>`_, Elizabeth Bishop
-- `Song <https://www.poetryfoundation.org/poems/47601/song-56d2282a6cdf5>`_
-- `The Waking <https://www.poetryfoundation.org/poems/43333/the-waking-56d2220f25315>`_, Theodore Roethke
+- `Do Not Go Gentle into That Good Night <do-not-go-gentle-into-that-good-night>`_, Dylan Thomas
+- `Mad Girl's Love Song <mad-girls-love-song>`_, Sylvia Plath
+- `One Art <one-art>`_, Elizabeth Bishop
+- `Song <song-fuller>`_, John Fuller
+- `The Waking <the-waking>`_, Theodore Roethke
   

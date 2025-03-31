@@ -8,7 +8,7 @@ Probability
    :maxdepth: 2
    :caption: Contents:
 
-   00_INTRODUCTION
-   01_COMBINATORICS
-   02_CONDITIONAL
-   03_RANDOM_VARIABLES
+   00_introduction
+   01_combinatorics
+   02_conditional
+   03_random_variables

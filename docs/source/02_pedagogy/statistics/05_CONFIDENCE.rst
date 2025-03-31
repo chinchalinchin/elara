@@ -146,6 +146,7 @@ Margin of Error
 	.. math::
 	
 		\text{MOE} = \lvert t_{1-\frac{\alpha}{2}} \rvert \cdot s_{\bar{x}}
+		
 TODO
 
 Intervals

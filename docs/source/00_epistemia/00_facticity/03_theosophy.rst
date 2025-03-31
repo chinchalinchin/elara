@@ -486,6 +486,7 @@ Tao Te Ching
     Under these two aspects, it is really the same; but as development takes place, it receives the different names. Together we call them the Mystery. Where the Mystery is the deepest is the gate of all that is subtle and wonderful.
 
     -- `Legge Translation <https://classics.mit.edu/Lao/taote.1.1.html>`_
+    
 .. _torah-creation:
 
 Torah

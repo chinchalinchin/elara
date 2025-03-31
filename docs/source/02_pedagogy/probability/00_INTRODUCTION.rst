@@ -96,9 +96,7 @@ A symbol that represents the sum of elements :math:`x_i`.
 Definitions
 ===========
 
-.. _experiment:
-
-Experiment
+:ref:`Experiment <experiment>`
     An *uncertain* event.    
 
 .. _mutual-exclusion:

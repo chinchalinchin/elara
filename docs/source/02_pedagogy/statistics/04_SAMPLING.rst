@@ -89,6 +89,7 @@ TODO
 	.. math::
 	
 		\hat{p} \sim \mathcal{N}(p, \sqrt{\frac{p \cdot (1 - p)}{n}})
+		
 TODO
 
 Difference of Proportions
@@ -113,6 +114,7 @@ TODO
 	.. math::
 	
 		\hat{p}_{x} - \hat{p}_y \sim \mathcal{N}(p_x - p_y, \sqrt{\frac{p_x \cdot (1 - p_x)}{n_x} + \frac{p_y \cdot (1 - p_y)}{n_y}} ) 
+
 TODO
 
 .. _distribution-of-sample-mean:
@@ -159,7 +161,8 @@ TODO
 	
 	.. math::
 	
-		\frac{\bar{X} - \mu}{ \frac{\sigma}{\sqrt{n}} \sim \mathcal{N}(0, 1)  	
+		\frac{\bar{X} - \mu}{ \frac{\sigma}{\sqrt{n}} \sim \mathcal{N}(0, 1)  
+
 TODO
 
 .. _distribution-of-sample-mean-unknown-sigma:
@@ -207,5 +210,6 @@ TODO
 	.. math::
 	
 		\bar{\mathcal{X}} - \bar{\mathcal{Y}} \sim \mathcal{N}(\mu_x - \mu_y, \sqrt{ \frac{{\sigma_x}^2}{n_x} + \frac{{\sigma_y}^2}{n_y}})
+		
 TODO
 

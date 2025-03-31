@@ -13,7 +13,7 @@ There are two mutually exclusive categories of :ref:`palindromes <definition-4-1
 
 A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <definition-4-1-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <definition-4-1-1>` in any given language, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct. 
 
-:ref:`perfect palindrome <definition-4-1-2>` mostly hinge on :ref:`invertible <invertible-words>` grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a :ref:`perfect palindrome <definition-4-1-2>` must rely on the symmetry of a central :ref:`palindromic word <reflective-words>`. In other words, the cardinality of :ref:`perfect palindromes <definition-4-1-2>` is related to the cardinality of :ref:`invertible words <invertible-words>` and the cardinality of purely :ref:`reflective words <reflective-words>`. 
+:ref:`Perfect palindromes <definition-4-1-2>` mostly hinge on :ref:`invertible <invertible-words>` grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a :ref:`perfect palindromes <definition-4-1-2>` must rely on the symmetry of a central :ref:`palindromic word <reflective-words>`. In other words, the cardinality of :ref:`perfect palindromes <definition-4-1-2>` is related to the cardinality of :ref:`invertible words <invertible-words>` and the cardinality of purely :ref:`reflective words <reflective-words>`. 
 
 - repel on no leper
 - dog saw raw war was god
@@ -48,7 +48,7 @@ February
 
     I will kill thee, and love thee after. 
 
-    -- Othello
+    -- `Othello <othello>`_
 
 **Hysteron Proteron**: An expression in which what should come last is put first.
 

@@ -885,7 +885,6 @@ A *skewed* distribution has *tails*, indicating the distribution is not symmetri
 
 .. plot:: _scripts/py/plots/histograms/histogram_skewed_right.py
 
-.. c
 **Skewed Left**
 
 .. plot:: _scripts/py/plots/histograms/histogram_skewed_left.py

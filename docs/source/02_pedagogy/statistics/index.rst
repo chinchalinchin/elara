@@ -8,7 +8,7 @@ Statistics
    :maxdepth: 2
    :caption: Contents:
 
-   00_GRAPHS
+   00_graphs
    01_ESTIMATION
    02_CORRELATION
    03_REGRESSION

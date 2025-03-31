@@ -67,7 +67,7 @@ Everything imaginable is contained in, or possibly equal to, the enumeration of 
 
     If you do know that "*here is one hand*", we'll grant you all the rest.
 
-    -- On Certainty, Wittgenstein
+    -- `On Certainty <on-certainty>`, Wittgenstein
 
 If the objective is to produce a certain fact, then all assumptions must be removed and one must start from nothing. Only the production of a fact from nullity would be able to satisfy any reasonable definition of "*certainty*". If a fact derives from a prior assumption, then the fact is only as certain as its constitutive assumptions. Therefore, the question of the validity of the concept of "*certainy*" reduces to the question of whether positive knowledge can be derived from nothing. 
 

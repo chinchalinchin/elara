@@ -52,7 +52,7 @@ Anacoluthon
     
     In the coal fire will not wholly console them. 
 
-    -- `Ouija <ouijq>`_, Sylvia Plath
+    -- `Ouija <ouija>`_, Sylvia Plath
 
     She's all states, and all princes, I,
 
@@ -201,7 +201,7 @@ Antimetabole is included in the category :ref:`chiasmus`.
 
     Sorrow more beautiful than Beauty’s self.
 
-    -- `Hyperion <https://www.poetryfoundation.org/poems/44473/hyperion>`_, John Keats
+    -- `Hyperion <hyperion>`_, John Keats
 
 .. _aposiopesis:
 
@@ -214,7 +214,7 @@ Aposiopesis
     
     For Thine is the
 
-    -- `The Hollow Men <https://allpoetry.com/the-hollow-men>`_, T.S. Eliot
+    -- `The Hollow Men <the-hollow-men>`_, T.S. Eliot
 
 .. _apostrophe:
 
@@ -229,7 +229,7 @@ Apostrophe
 
     Unknown, Lethean, sigh to us—O sigh!
 
-    -- `Isabella or the Pot of Basil <https://archive.org/details/isabellaorpotofb00keat_0/page/n5/mode/2up>`_, John Keats
+    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
 
 .. _asyndeton:
 
@@ -265,11 +265,11 @@ Chiasmus includes the category of :ref:`antimetabole`.
 
     Break in the sun till the sun breaks down
 
-    -- `And Death Shall Have No Dominion <https://allpoetry.com/And-Death-Shall-Have-No-Dominion>`_, Dylan Thomas
+    -- `And Death Shall Have No Dominion <and-death-shall-have-no-dominion>`_, Dylan Thomas
 
     Beauty is truth, truth beauty
 
-    -- `Ode on a Grecian Urn <https://www.poetryfoundation.org/poems/44477/ode-on-a-grecian-urn>`_, John Keats
+    -- `Ode on a Grecian Urn <ode-on-a-grecian-urn>`_, John Keats
 
 .. _epanalepsis:
 
@@ -282,13 +282,13 @@ Epanalepsis
 
     Their pleasures in a long immortal dream.
 
-    -- `Lamia <https://www.gutenberg.org/files/2490/2490-h/2490-h.htm>`_, John Keats
+    -- `Lamia <lamia>`_, John Keats
 
     The maggot that no man can kill
 
     And the man no rope can hang
 
-    -- `Find Meat On Bones <https://allpoetry.com/Find-Meat-On-Bones>`_, Dylan Thomas
+    -- `Find Meat On Bones <find-meat-on-bone>`_, Dylan Thomas
 
 .. _epistrophe: 
 
@@ -299,7 +299,7 @@ Epistrophe
     
     I had not thought death had undone so many.
 
-    -- `The Wasteland <https://www.poetryfoundation.org/poems/47311/the-waste-land>`_, T.S. Eliot
+    -- `The Wasteland <the-wasteland>`_, T.S. Eliot
 
 .. _epizeuxis:
 
@@ -330,11 +330,11 @@ Hysteron Proteron
 
     Let us die, and rush into the midst of the fight. 
     
-    -- Aeneid, Virgil, 19 BCE
+    -- `Aeneid <aeneid>`, Virgil, 19 BCE
 
     I will kill thee, and love thee after. 
 
-    -- Othello, William Shakespeare
+    -- `Othello <othelloa>`, William Shakespeare
 
 .. _metonymy:
 
@@ -363,7 +363,7 @@ TODO
 
     And each half lives a hundred different lives;
 
-    -- `The Scholar Gipsy <https://www.poetryfoundation.org/poems/43606/the-scholar-gipsy>`_, Matthew Arnold
+    -- `The Scholar Gipsy <scholar-gipsy>`_, Matthew Arnold
 
 .. _polyptoton:
 
@@ -383,13 +383,13 @@ Symploce
     
     The yellow smoke that rubs its muzzle on the window-panes 
 
-    -- `The Love Song of J. Alfred Prufrock  <https://www.poetryfoundation.org/poetrymagazine/poems/44212/the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
+    -- `The Love Song of J. Alfred Prufrock <the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
 
     Let us on by this tremulous light!
 
     Let us bathe in this crystalline light!
 
-    -- `Ulalume: A Ballad <https://www.poetryfoundation.org/poems/44889/to-ulalume-a-ballad>`_, Edgar Allen Poe
+    -- `To Ulalume: A Ballad <to-ulalume-a-ballad>`_, Edgar Allen Poe
 
 .. _synecdoche:
 
