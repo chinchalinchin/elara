@@ -13,5 +13,4 @@ Pedagogy
    statistics/index
    distributions/index
    inference/index
-   problems/index
 

@@ -9,8 +9,8 @@ Statistics
    :caption: Contents:
 
    00_graphs
-   01_ESTIMATION
-   02_CORRELATION
-   03_REGRESSION
-   04_SAMPLING
-   05_CONFIDENCE
+   01_estimation
+   02_correlation
+   03_regression
+   04_sampling
+   05_confidence

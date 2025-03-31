@@ -7,10 +7,12 @@
    :hidden:
 
    00_epistemia/index
-   01_theurgy/index
-   02_pedagogy/index
-   03_analecta/index
-   04_oeuvre/index
+   01_pedagogy/index
+   02_praxis/index
+   03_dialectics/index
+   04_theurgy/index
+   05_analecta/index
+   06_oeuvre/index
 
 ---------------
 
