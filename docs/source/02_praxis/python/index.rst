@@ -12,7 +12,7 @@ We will use **Python** in class to quickly generate :ref:`graphical_representati
 
 Furthermore, all of the plots across the pages of this website were generated with simple **Python** scripts that can be downloaded and run on your own computer, after you perform the initial :ref:`setup <python_setup>`,
 
-.. image:: ../../assets/imgs/python/download_source.png
+.. image:: ../../_static/img/python/download_source.png
    :align: center
 
 .. toctree::

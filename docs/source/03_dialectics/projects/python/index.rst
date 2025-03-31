@@ -14,6 +14,6 @@ Python Projects
    04_regression
    05_bias
    06_simulation
-   07_setse
+   07_sets
    08_monte_carlo
    09_binomial

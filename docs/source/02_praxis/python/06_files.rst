@@ -1,10 +1,10 @@
-.. _files:
+.. _python-files:
 
 =====
 Files
 =====
 
-.. _csv_files:
+.. _python-csv-files:
 
 CSV Files
 =========

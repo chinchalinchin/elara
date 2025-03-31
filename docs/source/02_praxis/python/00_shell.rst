@@ -4,7 +4,7 @@
 Online Python Shell
 ===================
 
-Below you will find an interactive :ref:`Python Shell <python_interpretter>`. This is a fully-functional simulation of a **Python** installation; you can even upload your own scripts and run them, or download any scripts you write in it. Give it a whirl!
+Below you will find an interactive :ref:`Python Shell <python-interpretter>`. This is a fully-functional simulation of a **Python** installation; you can even upload your own scripts and run them, or download any scripts you write in it. Give it a whirl!
 
 .. raw:: html
 

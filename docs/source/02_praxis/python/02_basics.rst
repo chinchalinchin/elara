@@ -1,4 +1,4 @@
-.. _python_basics:
+.. _python-basics:
 
 ======
 Basics 
@@ -8,9 +8,9 @@ Basics
 
 .. tip:: 
 
-    As you read through this page, open an :ref:`IDLE shell<python_idle>` and try out the commands yourself.
+    As you read through this page, open an :ref:`IDLE shell<python-idle>` and try out the commands yourself.
 
-.. _python_comments:
+.. _python-comments:
 
 Comments
 ========
@@ -52,7 +52,7 @@ Comments should provide clear and precise explanations for the code it is annota
 
 When you create scripts for the projects in this class, be sure to add comments where appropriate, especially if your code is complicated. 
 
-.. _python_docstring:
+.. _python-docstring:
 
 Docstrings
 ==========
@@ -109,6 +109,8 @@ When you write a docstring for your projects, use the following format,
     x = 2 + 2
     print(x)
 
+.. _python-variables:
+
 Variables
 =========
 
@@ -123,7 +125,7 @@ The left hand side, *x*, is the *name* of the variable. The right hand side, *y*
 .. warning:: 
     The assignment operator ``=`` is not *exactly* the same as the equals signs from **Algebra**, but it is similar. With an assignment, we are not *equating* two expressions. Instead, we are *assigning* the value of the right hand side to the left hand side.
 
-.. _python_strings:
+.. _python-strings:
 
 Strings
 -------
@@ -141,7 +143,7 @@ Output:
 
     these are strings: 'hello world' & 'this is a sentence'
 
-.. _python_integers:
+.. _python-integers:
 
 Integers
 --------
@@ -159,7 +161,7 @@ Output:
 
     these are integers: 5, 15
 
-.. _python_floats:
+.. _python-floats:
 
 Floats
 ------
@@ -177,7 +179,7 @@ Output:
 
     these are floats: 100.00000001, 25.76
 
-.. _python_tuples:
+.. _python-tuples:
 
 Tuples
 ------
@@ -212,7 +214,7 @@ Output:
 
     this is the y variable in the ordered pair: 'iphone'
     
-.. _python_lists:
+.. _python-lists:
 
 Lists 
 -----
@@ -268,12 +270,14 @@ Output:
 
     length of list: 7
 
+.. _python-arithmetical-operations:
+
 Arithmetical Operations
 =======================
 
 Most of the arithmetical operations in **Python** are exactly what you would expect them to be. The only operation whose symbol may be surprising is :ref:`python_exponentiation`.
 
-.. _python_addition:
+.. _python-addition:
 
 Addition
 --------
@@ -286,7 +290,7 @@ Output:
 
     10 
 
-.. _python_subtraction:
+.. _python-subtraction:
 
 Subtraction
 -----------
@@ -305,7 +309,7 @@ Output:
 
     For this class, it is not necessary to understand *why* this doesn't *exactly* equal ``7.25``; it is only necessary to be aware of this limitation.
 
-.. _python_multiplication:
+.. _python-multiplication:
 
 Multiplication
 --------------
@@ -318,7 +322,7 @@ Output:
 
     380
 
-.. _python_division:
+.. _python-division:
 
 Division 
 --------
@@ -331,7 +335,7 @@ Output
 
     13.6
 
-.. _python_exponentiation:
+.. _python-exponentiation:
 
 Exponentiation
 --------------
@@ -344,10 +348,12 @@ Output:
 
     25
 
-.. _python_logical_operations:
+.. _python-logical-operations:
 
 Logical Operations
 ==================
+
+.. _python-equivalence:
 
 Equivalence
 -----------
@@ -379,14 +385,14 @@ Output:
 
 This example is contrived to illustrate the operator and how it works, but in practice, the *equivalence* operator will be used in conjunction with :ref:`python_list_filtering` to parse data sets. It will also pop up again once we introduce :ref:`python_control_structures`.
 
-.. _python_list_operations:
+.. _python-list-operations:
 
 List Operations
 ===============
 
 The operations in the previous section dealt with :ref:`python_floats` and :ref:`python_integers`. In other words, the operations in the last section applied to numbers. **Python** has many operations that can be applied specifically to :ref:`python_lists`.
 
-.. _python_list_slicing:
+.. _python-list-slicing:
 
 Slicing
 -------
@@ -505,7 +511,7 @@ Output
 
     [1, 3, 5, 7, 9]
 
-.. _python_list_comprehension:
+.. _python-list-comprehension:
 
 Comprehension
 -------------
@@ -530,9 +536,9 @@ Output:
 
     [ 1, 4, 9, 16, 25 ]
 
-*List comprehension* is usually used in conjunction with the :ref:`range() built-in function <python_builtin_functions>`. Hop over to that section, take a look at ``range()`` to see more examples.
+*List comprehension* is usually used in conjunction with the :ref:`range() built-in function <python-builtin-functions>`. Hop over to that section, take a look at ``range()`` to see more examples.
 
-.. _python_list_filtering:
+.. _pytho-list-filtering:
 
 Filtering
 *********
@@ -577,4 +583,5 @@ Output:
 
 References
 ==========
+
 - `docstrings <https://peps.python.org/pep-0257/>`_

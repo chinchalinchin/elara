@@ -1,10 +1,10 @@
-.. _python_sets:
+.. _python-sets:
 
 ====
 Sets
 ====
 
-.. _python_set_variables:
+.. _python-set-variables:
 
 Set Variables
 =============
@@ -27,7 +27,7 @@ A set is defined in **Python** using the familiar :math:`\{ \}` :ref:`list_notat
 
 The examples on this page will refer to the above sets.
 
-.. _python_set_operations: 
+.. _python-set-operations: 
 
 Set Operations
 ==============
@@ -35,7 +35,7 @@ Set Operations
 .. note:: 
     Before executing these commands, try working them out by hand first and see if your work agrees!
 
-.. _python_set_cardinality:
+.. _python-set-cardinality:
 
 Cardinality
 -----------
@@ -53,7 +53,7 @@ The :ref:`cardinality` of a set is found by calculating its :ref:`length <python
 
         5
 
-.. _python_set_union:
+.. _python-set-union:
 
 Union
 -----
@@ -75,7 +75,7 @@ The :ref:`union` of two sets is found by,
     
     Take note: *set operations* do **not** preserve the order of the sets. In technical terms, *sets* are not *indexed*. Notice the *order* of the set in the output is *random*. 
 
-.. _python_set_intersection:
+.. _python-set-intersection:
 
 Intersection
 ------------
@@ -93,12 +93,12 @@ The :ref:`intersection` of two sets is found by,
 
         {'dog'}
 
-.. _python_set_difference:
+.. _python-set-difference:
 
 Difference
 ----------
 
-The :ref:`set_difference` of two sets is found by,
+The :ref:`set-difference` of two sets is found by,
 
 .. code:: python
 

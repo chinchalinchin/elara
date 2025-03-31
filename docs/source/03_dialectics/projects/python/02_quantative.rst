@@ -1,4 +1,4 @@
-.. _project_two:
+.. _project-two:
 
 =======================
 Histograms and Boxplots
@@ -12,20 +12,20 @@ Histograms and Boxplots
 
 In this lab, you will get *even more* familiar with the statistical plotting features of **Python** using several famous datasets from the history of science. We will create histograms and boxplots to visualize the distributions of experimental data, and calculate sample statistics to summarize the data. 
 
-.. _project_two_instructions:
+.. _project-two-instructions:
 
 Instructions
 ============
 
-1. Download **both** *csv* datasets in the :ref:`project_two_dataset` section and place them in the ``Linux Files`` folder on your file system where you save your ``.py`` scripts.
+1. Download **both** *csv* datasets in the :ref:`project-two-dataset` section and place them in the ``Linux Files`` folder on your file system where you save your ``.py`` scripts.
 2. Create a Python ``.py`` script named ``NAME_project_two.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
-3. Create a :ref:`Python docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_two_background` section.
-5. Read the :ref:`project_two_required_imports` section. Add the required imports to you ``.py`` script.
-6. Read the :ref:`project_two_graphs` section.
-7. Read the :ref:`project_two_sample_statistics` section.
-8. Load in the data from the ``.csv`` files using the technique outlined in the :ref:`project_two_loading_data` section.
-9. Perform all exercises and answer all questions in the :ref:`project_two_project` section. Label your script with comments or include your written answers in the :ref:`python_docstring` as indicated in the *Project* section.
+3. Create a :ref:`Python docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-two-background` section.
+5. Read the :ref:`project-two-required-imports` section. Add the required imports to you ``.py`` script.
+6. Read the :ref:`project-two-graphs` section.
+7. Read the :ref:`project-two-sample-statistics` section.
+8. Load in the data from the ``.csv`` files using the technique outlined in the :ref:`project-two-loading-data` section.
+9. Perform all exercises and answer all questions in the :ref:`project-two-project` section. Label your script with comments or include your written answers in the :ref:`python-docstring` as indicated in the *Project* section.
 10. When you are done, zip your script **and** the *csv* files into a zip file named ``NAME_project_two.zip``
 11. Upload the zip file to the Google Classrom Project Two asignment.
 
@@ -59,7 +59,7 @@ If :math:`x_i` satisfies either of the following conditions, then it is consider
 
     x_i \leq Q_1 - 1.5 \cdot IQR
 
-.. _project_two_background: 
+.. _project-two-background: 
 
 Background
 ==========
@@ -71,7 +71,7 @@ The `Michelson Velocity of Light Experiment <https://www.gutenberg.org/files/117
 
 Michelson's 1879 experimental results remained one of most accurate estimations of the speed of light until modern times. Using a series of mirrors depicted below, Michelson was able to divert light rays emitting from a common source along separate paths and then measure the fractional time difference it took for the rays to reach the same location.
 
-.. image:: ../../../assets/imgs/context/michelson_experiment.png
+.. image:: ../../../_static/img/context/scientific/michelson-experiment.png
     :width: 60%
     :align: center
 
@@ -94,7 +94,7 @@ Henry Cavendish performed the first modern, scientific experiment to measure the
 
 Using the mutual gravitational attraction of two heavy metal balls attached to a `torsion balanace <https://en.wikipedia.org/wiki/Torsion_spring#Torsion_balance>`_ to twist a fiber of string, Cavendish measured the force of the tension produced. 
 
-.. image:: ../../../assets/imgs/context/cavendish_torsion_balance.png
+.. image:: ../../../_static/img/context/scientific/cavendish-torsion-balance.png
 	:width: 60%
 	:align: center
 
@@ -108,7 +108,7 @@ With `Newton's Laws of Motion <https://en.wikipedia.org/wiki/Newton%27s_laws_of_
 
 Cavendish's dataset is an excellent historical example of using statistical inference to produce new knowledge about the world around us. 
 
-.. _project_two_required_imports:
+.. _project-two-required-imports:
 
 Required Imports
 ================
@@ -121,12 +121,12 @@ You will need to import the following libraries to complete this project,
     import matplotlib.pyplot as plot
     import statistics as stats
 
-.. _project_two_graphs:
+.. _project-two-graphs:
 
 Graphical Representations
 =========================
 
-.. _project_two_histograms:
+.. _project-two-histograms:
 
 Histogram
 ---------
@@ -156,7 +156,7 @@ The following code snippet shows how to create a histogram for a simple distribu
 
     plot.show()
 
-.. plot:: assets/plots/histograms/histogram_simple.py
+.. plot:: _scripts/py/plots/histograms/histogram_simple.py
 
 Notice how easy and painless the whole process is! All we have to do is pass in a list of data to the ``hist()`` function and *matplotlib* will create a gloriously beautiful picture. 
 
@@ -164,9 +164,9 @@ That is all well and good, but often we need a little more control over the feat
 
 As another (more complex) example, the following plot is a histogram generated with :ref:`matplotlib` using *6* classes. Click on the ``source`` button in the top left corner to download the script. Read through the comments to see how it was constructed. 
 
-.. plot:: assets/plots/histograms/histogram_normal.py
+.. plot:: _scripts/py/plots/histograms/histogram_normal.py
 
-The sample in this graph was randomly generated using a combination of the :ref:`range() function <python_range_function>` and the :ref:`random() function <python_random_package>`.
+The sample in this graph was randomly generated using a combination of the :ref:`range() function <python-range-function>` and the :ref:`random() function <python-random_package>`.
 
 The line you want to pay attention in the script you just downloaded is,
 
@@ -176,7 +176,7 @@ The line you want to pay attention in the script you just downloaded is,
 
 The `hist() <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html>`_ function is :ref:`matplotlib`'s *histogram* graphing function. 
 
-Notice the first argument of this function is passed in alone, without a name (i.e. without an expression ``x = y``). The first argument of the ``hist()`` function is *always* the sample of data you wish to plot; The ``data`` argument is simply a :ref:`list <python_lists>` of data. 
+Notice the first argument of this function is passed in alone, without a name (i.e. without an expression ``x = y``). The first argument of the ``hist()`` function is *always* the sample of data you wish to plot; The ``data`` argument is simply a :ref:`list <python-lists>` of data. 
 
 The rest of the arguments are *named* (i.e. with an expression ``x = y``). The *named* arguments can be passed into the ``hist()`` function in any order. For example, this line will generate the same histogram,
 
@@ -198,7 +198,7 @@ The other arguments, ``align``, ``color`` and ``ec``, affect the *styling* of th
 
 ``align`` tells :ref:`matplotlib` where to align the histogram bar. Valid values are ``left``, ``mid`` and ``right``. ``left`` aligns the histogram bars to the lower class limit. ``mid`` centers the histogram bars over the midpoint of each class. ``right`` will align the histogram bars with the upper class limit.
 
-``color`` is the color that fills the histogram bars. We discussed this argument in the :ref:`Project One Bar Chart section <project_one_bar_charts>`. You can also find a list of all the *named* colors on the `color page of the matplotlib documentation <https://matplotlib.org/stable/gallery/color/named_colors.html>`_. Some of them are printed below for quick reference,
+``color`` is the color that fills the histogram bars. We discussed this argument in the :ref:`Project One Bar Chart section <project-one-bar-charts>`. You can also find a list of all the *named* colors on the `color page of the matplotlib documentation <https://matplotlib.org/stable/gallery/color/named_colors.html>`_. Some of them are printed below for quick reference,
 
 - maroon
 - salmon
@@ -210,7 +210,7 @@ The other arguments, ``align``, ``color`` and ``ec``, affect the *styling* of th
 
 As you can see, there are lots of options to make your graph nice and pretty.
 
-.. _project_two_cumulative_frequency_histograms:
+.. _project-two-cumulative-frequency-histograms:
 
 Cumulative Frequency Histograms
 -------------------------------
@@ -255,11 +255,11 @@ The following code snippet generates a **CDF** for a sample of data,
 
     plt.show()
 
-.. plot:: assets/plots/ogives/ogive_simple.py
+.. plot:: _scripts/py/plots/ogives/ogive_simple.py
 
 To create a **CDF**, all we have to do is pass in two extra arguments to ``hist()``, the ``cumulative`` argument and ``density`` argument. For **CDFs**, both of these arguments are set to ``True``. ``cumulative`` tells *matplotlib* to accumulate the frequencies and stack them as it graphs the frequency distribution. ``density`` tells *matplotlib** to scale the vertical axis to 1. 
 
-.. _project_two_boxplots:
+.. _project-two-boxplots:
 
 Boxplots
 --------
@@ -267,9 +267,9 @@ Boxplots
 Recall a *boxplot* is a way of visualizing the *spread*, or *variation* of a distribution. In order to create one, a boxplot requires the :ref:`five_number_summary` of the distribution. The five sample statistics that are required are as follows,
 
 1. :ref:`maximum <maximum>`
-2. :ref:`first quartile <special_percentiles>`
+2. :ref:`first quartile <special-percentiles>`
 3. :ref:`median <median>`
-4. :ref:`third quartile <special_percentiles>` 
+4. :ref:`third quartile <special-percentiles>` 
 5. :ref:`minimum <minimum>`
 
 #2-#4 represent the *box* of the boxplot. #1 and #5 represent the *whiskers* of the boxplot. 
@@ -280,11 +280,11 @@ For example, suppose we had a sample of *ordered* data,
 
     S = \{ 1, 9, 10, 11, 20, 29, 30, 31, 39 \}
 
-If we were doing this by hand, we would find all of the sample statistics in the Five Number Summary and draw the boxplot in the xy-plane (as we have many times). However, we are using :ref:`matplotlib <python_plotting>` to create statistical graphs and *matplotlib* will do a lot of heavy-lifting for us.
+If we were doing this by hand, we would find all of the sample statistics in the Five Number Summary and draw the boxplot in the xy-plane (as we have many times). However, we are using :ref:`matplotlib <python-plotting>` to create statistical graphs and *matplotlib* will do a lot of heavy-lifting for us.
 
 .. note::
 
-    We will also talk about how to make **Python** calculate all these sample statistics for us in the :ref:`project_two_sample_statistics` section down below.
+    We will also talk about how to make **Python** calculate all these sample statistics for us in the :ref:`project-two-sample-statistics` section down below.
 
 A boxplot for the example we were just discussing can be created in **Python** with the following snippet of code,
 
@@ -305,7 +305,7 @@ A boxplot for the example we were just discussing can be created in **Python** w
 
     plot.show()
 
-.. plot:: assets/plots/boxplots/boxplot_simple.py
+.. plot:: _scripts/py/plots/boxplots/boxplot_simple.py
 
 The `boxplot() <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html>`_ is, as you might have guessed, :ref:`matplotlib`'s way of generating boxplots. The first argument is the dataset we will wish to graph. 
 
@@ -313,7 +313,7 @@ The second argument is a *named* argument ``vert``. This controls the *direction
 
 The third argument, ``whis``, is an ordered pair that controls where the whiskers of the boxplot are drawn. The first number in the ordered paired is the lower percentile you wish to graph; the second number in the ordered pair is the upper percentile you wish to graph. We have passed in ```(0,100)``` to indicate the whiskers will be drawn at the 0 :sup:`th` and the 100 :sup:`th` percentile; in other words, at the minimum and maximum values of the distribution.
 
-.. _project_two_simultaneous_plots:
+.. _project-two-simultaneous-plots:
 
 Simultaneous Plots
 ------------------
@@ -342,13 +342,13 @@ The following code snippet will create a histogram and boxplot on the plot and t
 
     plot.show()
 
-.. plot:: assets/plots/other/boxplot_and_histogram.py
+.. plot:: _scripts/py/plots/other/boxplot_and_histogram.py
 
 There are several things to notice about this code. 
 
-First: We are passing in a ```1``` and a ```2``` to the ``subplots()`` function. When you pass arguments into ``subplots()``, it creates multiple *figures* and multiple *axes*. In this class, we don't care about *figures*, but because we want to create multiple axes, we still have to pass in a ```1```; *matplotlib* always interprets the first argument to the ``subplots()`` function as the number of *figures* to create. The second argument to the ``subplots()`` function is the important bit; we are passing in a ```2```, which tells *matplotlib* to create two sets of axes. It will return these axes as a :ref:`list <python_lists>`, which brings us the second important point.
+First: We are passing in a ```1``` and a ```2``` to the ``subplots()`` function. When you pass arguments into ``subplots()``, it creates multiple *figures* and multiple *axes*. In this class, we don't care about *figures*, but because we want to create multiple axes, we still have to pass in a ```1```; *matplotlib* always interprets the first argument to the ``subplots()`` function as the number of *figures* to create. The second argument to the ``subplots()`` function is the important bit; we are passing in a ```2```, which tells *matplotlib* to create two sets of axes. It will return these axes as a :ref:`list <python-lists>`, which brings us the second important point.
 
-Second: We plot the histogram on one set of axes and we plot the boxplot on another set of axes. Because we passed ```2``` into the *matplotlib* function, the ``axes`` variable is now a :ref:`list <python_lists>` of *axes*. We have to access each individual axes through its *index* and bracket notation. The line,
+Second: We plot the histogram on one set of axes and we plot the boxplot on another set of axes. Because we passed ```2``` into the *matplotlib* function, the ``axes`` variable is now a :ref:`list <python-lists>` of *axes*. We have to access each individual axes through its *index* and bracket notation. The line,
 
 .. code:: python
     
@@ -362,16 +362,16 @@ calls the ``hist()`` function on the first set of axes. The line,
 
 calls the ``boxplot()`` function on the second set of axes. 
 
-.. _project_two_sample_statistics:
+.. _project-two-sample-statistics:
 
 Sample Statistics
 =================
 
-Python has a :Ref:`python_stats_package` library that provides functions for calculating common sample statistics. Hope over to the :ref:`python_stats_package` page and read through the list of functions that can be imported into your script. 
+Python has a :Ref:`python-stats-package` library that provides functions for calculating common sample statistics. Hope over to the :ref:`python-stats-package` page and read through the list of functions that can be imported into your script. 
 
-For this lab, we will need the :ref:`python_sample_mean` function, the :ref:`python_quantiles` function` and the :ref:`python_standard_deviation` function. The rest can be ignored until later sections in the class.
+For this lab, we will need the :ref:`python-sample-mean` function, the :ref:`python-quantiles` function` and the :ref:`python-standard-deviation` function. The rest can be ignored until later sections in the class.
 
-.. _project_two_project:
+.. _project-two-project:
 
 Project
 =======
@@ -379,15 +379,15 @@ Project
 Velocity of Light
 -----------------
 
-1. Load the :ref:`Velocity of Light <project_two_dataset>` data into a :ref:`Python Script <python_scripts>` using the technique outlined in the :ref:`project_two_loading_data` section.
+1. Load the :ref:`Velocity of Light <project-two-dataset>` data into a :ref:`Python Script <python-scripts>` using the technique outlined in the :ref:`project-two-loading-data` section.
 
-2. Construct a histogram plot for this dataset using eight classes. Answer the following questions in the body of your :ref:`python_docstring`.
+2. Construct a histogram plot for this dataset using eight classes. Answer the following questions in the body of your :ref:`python-docstring`.
 
     a. What type of shape does this distribtion have? 
 
     b. Based on your answer to part *a*, how do you expect the sample mean to compare to the sample median?
 
-3. Construct a cumulative frequency histogram for this dataset *on the same graph as your histogram*. Using the CDF, answer the following questions in the body of your :ref:`python_docstring`.
+3. Construct a cumulative frequency histogram for this dataset *on the same graph as your histogram*. Using the CDF, answer the following questions in the body of your :ref:`python-docstring`.
 
     a. What is the approximate value of the third quartile? 
 
@@ -399,7 +399,7 @@ Velocity of Light
 
     e. On what intervals is the CDF steepest? On what intervals is it approximately flat? Explain what these intervals means in terms of the speed of light. 
     
-4. Construct a boxplot for this dataset *on the same graph as your histogram and CDF*. Using the boxplot, answer the following questions in the body of your :ref:`python_docstring`.
+4. Construct a boxplot for this dataset *on the same graph as your histogram and CDF*. Using the boxplot, answer the following questions in the body of your :ref:`python-docstring`.
 
     a. What is the approximate value of the third quartile?
 
@@ -411,7 +411,7 @@ Velocity of Light
     
     e. What does the boxplot tell you about the *shape* of the distribution? Express the answer in terms of the variable being measured. In other words, what does the boxplot tell you about this distribution of measurements? Is it centered? Is it skewed? 
 
-5. Using the :ref:`python_stats_package` library, calculate the following sample statistics. Label all of your calculations with comments.
+5. Using the :ref:`python-stats-package` library, calculate the following sample statistics. Label all of your calculations with comments.
 
     a. The sample mean.
 
@@ -427,7 +427,7 @@ Velocity of Light
 
     g. The coefficient of variation.
 
-6. Answer the following questions in your :ref:`python_docstring`. Label any calculations you perform to arrive at your answers with comments.
+6. Answer the following questions in your :ref:`python-docstring`. Label any calculations you perform to arrive at your answers with comments.
 
     a. How many standard deviations away from the mean is the third quartile? 
 
@@ -435,24 +435,24 @@ Velocity of Light
 
     c. Explain the results of part #b and #c. What features of the distribution cause these quantities to be approximately equal or unequal?
 
-7. Answer the following question in your :ref:`python_docstring`: Based on the IQR rule, are there any possible outliers in this dataset? 
+7. Answer the following question in your :ref:`python-docstring`: Based on the IQR rule, are there any possible outliers in this dataset? 
 
-8. Write a few sentences in your :ref:`python_docstring` describing Michelson's distribution of data. Use sample statistics to describe the center of the distribution, the shape of the distribution and the variability of the distribution. 
+8. Write a few sentences in your :ref:`python-docstring` describing Michelson's distribution of data. Use sample statistics to describe the center of the distribution, the shape of the distribution and the variability of the distribution. 
 
-9. The actual value of the speed of light, according to the best estimates we have today, is :math:`299,792,458 \frac{m}{s}`. Use this information to answer the following questions in the body of your :ref:`python_docstring`: What is the percent error of Michelson's estimate with respect to the actual value?
+9. The actual value of the speed of light, according to the best estimates we have today, is :math:`299,792,458 \frac{m}{s}`. Use this information to answer the following questions in the body of your :ref:`python-docstring`: What is the percent error of Michelson's estimate with respect to the actual value?
 
 Density of the Earth 
 --------------------
 
-1. Load the :ref:`Density of the Earth <project_two_dataset>` data into a :ref:`Python Script <python_scripts>` using the tecnique outlined in the :ref:`project_two_loading_data` section.
+1. Load the :ref:`Density of the Earth <project-two-dataset>` data into a :ref:`Python Script <python-scripts>` using the tecnique outlined in the :ref:`project_two_loading_data` section.
 
-2. Construct a histogram plot for this dataset using eight classes. Answer the following questions in the body of your :ref:`python_docstring`.
+2. Construct a histogram plot for this dataset using eight classes. Answer the following questions in the body of your :ref:`python-docstring`.
 
     a. What type of shape does this distribtion have? 
 
     b. Based on your answer to part *a*, how do you expect the sample mean to compare to the sample median?
 
-3. Construct a cumulative frequency histogram for this dataset *on the same graph as your histogram*. Using the CDF, answer the following questions in the body of your :ref:`python_docstring`.
+3. Construct a cumulative frequency histogram for this dataset *on the same graph as your histogram*. Using the CDF, answer the following questions in the body of your :ref:`python-docstring`.
 
     a. What is the approximate value of the third quartile? 
 
@@ -464,7 +464,7 @@ Density of the Earth
     
     e. On what intervals is the CDF steepest? On what intervals is it approximately flat? Explain what these intervals means in terms of the density of earth. 
 
-4. Construct a boxplot for this dataset *on the same graph as your histogram and CDF*. Using the boxplot, answer the following questions in the body of your :ref:`python_docstring`.
+4. Construct a boxplot for this dataset *on the same graph as your histogram and CDF*. Using the boxplot, answer the following questions in the body of your :ref:`python-docstring`.
 
     a. What is the approximate value of the third quartile?
 
@@ -476,7 +476,7 @@ Density of the Earth
     
      e. What does the boxplot tell you about the *shape* of the distribution? Express the answer in terms of the variable being measured. In other words, what does the boxplot tell you about this distribution of measurements? Is it centered? Is it skewed? 
 
-5. Using the :ref:`python_stats_package` library, calculate the following sample statistics. Label all of your calculations with comments.
+5. Using the :ref:`python-stats-package` library, calculate the following sample statistics. Label all of your calculations with comments.
 
     a. The sample mean.
 
@@ -492,7 +492,7 @@ Density of the Earth
 
     g. The coefficient of variation.
 
-6. Answer the following questions in your :ref:`python_docstring`. Label any calculations you perform to arrive at your answers with comments.
+6. Answer the following questions in your :ref:`python-docstring`. Label any calculations you perform to arrive at your answers with comments.
 
     a. How many standard deviations away from the mean is the third quartile? 
 
@@ -500,16 +500,16 @@ Density of the Earth
 
     c. Explain the results of part #b and #c. What features of the distribution cause these quantities to be approximately equal or unequal?
 
-7. Answer the following question in your :ref:`python_docstring`: Based on the IQR rule, are there any possible outliers in this dataset? 
+7. Answer the following question in your :ref:`python-docstring`: Based on the IQR rule, are there any possible outliers in this dataset? 
 
-8. Write a few sentences in your :ref:`python_docstring` describing Cavendish's distribution of data. Use sample statistics to describe the center of the distribution, the shape of the distribution and the variability of the distribution. 
+8. Write a few sentences in your :ref:`python-docstring` describing Cavendish's distribution of data. Use sample statistics to describe the center of the distribution, the shape of the distribution and the variability of the distribution. 
 
-9. The actual value of the density of the Earth, according to the best estimates we have today, is :math:`5.515 \frac{g}{cm^2}`. Use this information to answer the following questions in the body of your :ref:`python_docstring`: What is the percent error of Cavendish's estimate with respect to the actual value?
+9. The actual value of the density of the Earth, according to the best estimates we have today, is :math:`5.515 \frac{g}{cm^2}`. Use this information to answer the following questions in the body of your :ref:`python-docstring`: What is the percent error of Cavendish's estimate with respect to the actual value?
 
 Comparative Analysis
 --------------------
 
-1. Answer the following questions in your :ref:`python_docstring`.
+1. Answer the following questions in your :ref:`python-docstring`.
 
     a. Which experimental distribution of data has more variability? Justify your answer with sample statistics calculated in the previous two sections. 
 
@@ -519,17 +519,17 @@ Comparative Analysis
 
     d. We have encountered normal distributions in a wide array of seemingly unrelated subjects: geyser durations, wine acidity, alpha particle emissions and now: the speed of light and the density of earth. We have not yet explained why the phenomenon of normality occurs so often (so often, you might call it *normal*), but that will soon change. As a precursor of things to come, answer the following question to the best of your current ability: Based on what you have learned so far in this course, why do you think normal distributions occur so often in nature?
 
-.. _project_two_dataset:
+.. _project-two-dataset:
 
 Datasets
 ========
 
-.. _project_two_loading_data:
+.. _project-two-loading-data:
 
 Loading Data
 ------------
 
-The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project_two_dataset` section.
+The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project-two-dataset` section.
 
 .. code-block:: python 
 
@@ -551,29 +551,29 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 
 .. important::
 
-    This is *slightly* different from how we did it in the first project. **Python** reads in the *.csv* file as plain text, even the numbers. In other words, Python interprets an observation of, say, ``2`` as a string of text that says ``"2"``; this is fine and dandy when dealing with categorical data because we represent categories with :ref:`strings <python_strings>`. When we are dealing with quantitative data, we have to tell **Python** to convert the plain text to a :ref:`float <python_floats>` data type (Recall *floats* are *decimal* valued data types). The ``float()`` function in the code snippet above converts the plain text to a numeric value and stores it in a variable.
+    This is *slightly* different from how we did it in the first project. **Python** reads in the *.csv* file as plain text, even the numbers. In other words, Python interprets an observation of, say, ``2`` as a string of text that says ``"2"``; this is fine and dandy when dealing with categorical data because we represent categories with :ref:`strings <python-strings>`. When we are dealing with quantitative data, we have to tell **Python** to convert the plain text to a :ref:`float <python-floats>` data type (Recall *floats* are *decimal* valued data types). The ``float()`` function in the code snippet above converts the plain text to a numeric value and stores it in a variable.
 
 Velocity of Light Data
 ----------------------
 
-You can download the full dataset :download:`here <../../assets/datasets/velocity_of_light_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../assets/datasets/previews/velocity_of_light_data_preview.csv
+   :file: ../../../_static/datasets/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Density of the Earth Data
 -------------------------
 
-You can download the full dataset :download:`here <../../assets/datasets/earth_density_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/datasets/scientific/earth-density-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Cavendish's Density of the Earth Data
-   :file: ../../../assets/datasets/previews/earth_density_data_preview.csv
+   :file: ../../../_static/datasets/previews/earth-density-data-preview.csv
 
 The first column corresponds to the experiment number (first, second, third, etc.). The second column is the *ratio of the density of Earth to the density of water*. Recall the density of water by definition is :math:`1 \frac{g}{cm^3}`.
 

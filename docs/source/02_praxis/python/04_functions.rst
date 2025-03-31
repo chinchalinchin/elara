@@ -1,4 +1,4 @@
-.. _python_functions:
+.. _python-functions:
 
 =========
 Functions
@@ -12,12 +12,12 @@ The arguments of functions are specified between angular brackets ``<>``, with t
 
 Says the function ``my_function`` has a *required* argument named ``this_argument`` and an *optional* argument named ``that_argument``. 
 
-.. _python_builtin_functions:
+.. _python-builtin-functions:
 
 Built-In Functions
 ==================
 
-.. _python_length_function:
+.. _python-length-function:
 
 Length Function 
 ---------------
@@ -35,7 +35,7 @@ Output:
 
     5
 
-.. _python_sum_function:
+.. _python-sum-function:
 
 Sum Function
 ------------
@@ -57,7 +57,7 @@ Output:
 
     The ``sum`` function is only defined if the list contains numerical data.
 
-.. _python_max_function:
+.. _python-max-function:
 
 Max Function
 ------------
@@ -75,7 +75,7 @@ Output:
 
     89
 
-.. _python_min_function:
+.. _python-min-function:
 
 Min Function
 ------------
@@ -93,7 +93,7 @@ Output:
 
     -5
 
-.. _python_range_function:
+.. _python-range-function:
 
 Range Function
 --------------
@@ -103,7 +103,7 @@ Range Function
 
 Note only the ``stop`` argument is required. If only one argument is passed to the *range* function, then it is assumed to represent the ``stop`` argument. 
 
-The *range* function is typically used with :ref:`python_list_comprehension` to generate large lists of data quickly. For example, the following code snippet will create and print the list ``[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]``,
+The *range* function is typically used with :ref:`python-list-comprehension` to generate large lists of data quickly. For example, the following code snippet will create and print the list ``[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]``,
 
 .. code:: python
 
@@ -141,7 +141,7 @@ Output:
 
     [2, 4, 6, 8, 10, 12, 14, 16, 18]
 
-.. _python_enumerate_function: 
+.. _python-enumerate-function: 
 
 Enumerate Function 
 ------------------
@@ -174,7 +174,7 @@ Output:
 
 ``enumerate()`` pulls the index of the observation from the list and allows you to use it in the ``<expr>`` of :ref:`python_list_comprehension`. This is especially useful for time series data, as this example illustrates.
 
-.. _python_zip_function:
+.. _python-zip-function:
 
 Zip Function
 ------------
@@ -208,7 +208,7 @@ Note, the order of the elements in the ordered pair returned by ``zip()`` corres
  	
 	The ``zip()`` function will be useful when we get to bivariate data.
 
-.. _python_standard_library:
+.. _python-standard-library:
 
 Standard Library Functions
 ==========================
@@ -251,14 +251,14 @@ Ouput:
 
 We will be using two packages in particular from the *Standard Library* over and over again in this class, ``math`` and ``random``. 
 
-.. _python_math_package:
+.. _python-math-package:
 
 Math
 ----
 
 The ``math`` has all sorts of goodies in it. Unfortunately, we won't need most of them. The ones we will need are detailed below. 
 
-.. _python_square_root_function:
+.. _python-square-root-function:
 
 Square Root
 ***********
@@ -283,7 +283,7 @@ Output:
 
     the square root of 36 is : 6
 
-.. _python_e_function:
+.. _python-e-function:
 
 Natural Base e
 **************
@@ -313,7 +313,7 @@ Output:
 
     the value of e squared is: 7.38905609893065
 
-.. _python_ceiling_function:
+.. _python-ceiling-function:
 
 Ceil
 ****
@@ -341,7 +341,7 @@ Output:
 
     ceil(32.1) = 33
 
-.. _python_floor_function:
+.. _python-floor-function:
 
 Floor
 *****
@@ -369,7 +369,7 @@ Output:
 
     floor(32.1) = 32
 
-.. _python_random_package:
+.. _python-random-package:
 
 Random
 ------
@@ -388,7 +388,7 @@ The ``random`` package is very appropriately named. It is used to generate rando
 
     Due to the nature of the ``random`` package, if you are following along on your ChromeBook, you will get different output than the examples.
 
-.. _python_random_function:
+.. _python-random-function:
 
 Random Function
 ***************
@@ -413,7 +413,7 @@ Output:
     
     Be careful to distinguish the ``random`` *package* from the ``random()`` *function*. The ``random`` *package* is a `namespace <https://realpython.com/python-namespaces-scope/>`_ for *naming* functions. The ``random()`` function is an operation that produce output.
 
-.. _python_randint_function:
+.. _python-randint-function:
 
 Random Integer Function
 ***********************
@@ -421,7 +421,7 @@ Random Integer Function
 ``randint(<start: required, stop : required>)``
     ``randint`` returns a random integer between ``<start>`` and ``<stop>``, including both endpoints.
 
-The :ref:`python_random_function` will suffice for most purposes. Occassionally, we will need integer-valued random numbers instead of real-valued random numbers. To that end, we will need to use the ``randint()`` function.
+The :ref:`python-random-function` will suffice for most purposes. Occassionally, we will need integer-valued random numbers instead of real-valued random numbers. To that end, we will need to use the ``randint()`` function.
 
 The following code illustrates its use, 
 
@@ -435,7 +435,7 @@ Output:
 
     this is a random integer between 1 and 5, including 1 and 5: 2
 
-.. _python_choice_function:
+.. _python-choice-function:
 
 Random Choice Function
 **********************
@@ -482,7 +482,7 @@ Output
 
     ['c', 'b', 'd', 'a']
 
-.. _python_normal_variate_function:
+.. _python-normal-variate-function:
 
 Normal Variate
 **************
@@ -502,14 +502,14 @@ This function is *extremely important* in this class. It will return a random dr
 
 We are able to simulate draws from arbitary normally distributed populations.
 
-.. _python_stats_package:
+.. _python-stats-package:
 
 Statistics
 ----------
 
 **Python** also has a dedicated package specifically for statistical functions, named ``statistics``. 
 
-.. _python_sample_mean:
+.. _python-sample-mean:
 
 Mean
 ****
@@ -535,7 +535,7 @@ Output:
 
     99.12
 
-.. _python_sample_median:
+.. _python-sample-median:
 
 Median
 ******
@@ -561,7 +561,7 @@ Output:
 
     102.5
 
-.. _python_standard_deviation:
+.. _python-standard-deviation:
 
 Standard Deviation
 ******************
@@ -587,7 +587,7 @@ Output:
 
     13.388450703681062
 
-.. _python_quantiles: 
+.. _python-quantiles: 
 
 Quantiles
 *********
@@ -628,7 +628,7 @@ Output:
 
     The ``quantile()`` function use *interpolation*! In other words, the output may not correspond to observable values of the sample!
 
-.. _python_normal_distribution:
+.. _python-normal-distribution:
 
 Normal Distribution
 *******************
@@ -713,7 +713,7 @@ Output:
 
 	P(X <= 106.74) = 0.75
 
-.. _python_correlation:
+.. _python-correlation:
 
 Correlation
 ***********
@@ -723,7 +723,7 @@ Correlation
 	
 TODO 
 
-.. _python_linear_regression:
+.. _python-linear-regression:
 
 Linear Regression
 *****************
@@ -737,7 +737,7 @@ Linear Regression
 
 TODO 
 
-.. _python_creating_functions:
+.. _python-creating-functions:
 
 Creating Functions
 ==================
@@ -770,7 +770,7 @@ Putting all four of these pieces together, let's create a simple function.
 
 Take note of the *indentation*. **Python** is very particular about *indentation* because that is how it groups functions together. A *function* definition must be indented once (with ``TAB``). All lines within the function must be the same *indentation* level. If you do not follow this requirement, you will get errors. Errors are bad. So, always pay your indentation.
 
-We can call this function after defining it by addressing it by its name (i.e., typing its name) and passing in an argument. Create a new :ref:`IDLE Notebook <python_idle>`, copy in the following function and try executing it with ``F5``,
+We can call this function after defining it by addressing it by its name (i.e., typing its name) and passing in an argument. Create a new :ref:`IDLE Notebook <python-idle>`, copy in the following function and try executing it with ``F5``,
 
 .. code:: python
 

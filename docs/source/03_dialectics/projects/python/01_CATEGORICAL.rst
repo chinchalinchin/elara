@@ -12,22 +12,22 @@ Bar Charts
 
 In this lab, you will get familiar with the statistical plotting features of **Python** using a dataset we have already seen. We will explore the association between two categorical variables and determine if a relationship exists.
 
-.. _project_one_instructions:
+.. _project-one-instructions:
 
 Instructions
 ============
 
-1. Download the ``.csv`` dataset in the :ref:`project_one_dataset` section and place it in the ``Linux Files`` folder on your ChromeBook's file system where you save your ``.py`` scripts.
+1. Download the ``.csv`` dataset in the :ref:`project-one-dataset` section and place it in the ``Linux Files`` folder on your ChromeBook's file system where you save your ``.py`` scripts.
 2. Create a Python ``.py`` script named ``NAME_project_one.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
-3. Create a :ref:`docstring <python_docstring>` at the very top of the script file. Keep all written answers in this area of the script.
-4. Read the :ref:`project_one_installs` section. (We will do this part in class!)
-5. Read the :ref:`project_one_background` section.
-6. Read the :ref:`project_one_loading_data` section. (We will do this part in class!)
-7. Read the :ref:`project_one_bar_charts` section. Download the script files in that section onto your ChromeBook. Read through them carefully and execute them on your computer. 
-8. Read the :ref:`project_one_set_operations` section. 
-9. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project_three_loading_data` section. (We will do this part in class!)
-10. Perform all exercises and answer all questions in the :ref:`project_one_project` section. Label your script with comments as indicated in the *Project* section.
-11. Keep in mind, there is a section dedicated to :ref:`python_plotting` underneath the :ref:`References > Python > Plotting <python_reference>` on the left-hand menu of the site.
+3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
+4. Read the :ref:`project-one-installs` section. (We will do this part in class!)
+5. Read the :ref:`project-one-background` section.
+6. Read the :ref:`project-one-loading-data` section. (We will do this part in class!)
+7. Read the :ref:`project-one-bar-charts` section. Download the script files in that section onto your ChromeBook. Read through them carefully and execute them on your computer. 
+8. Read the :ref:`project-one-set-operations` section. 
+9. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project-three-loading-data` section. (We will do this part in class!)
+10. Perform all exercises and answer all questions in the :ref:`project-one-project` section. Label your script with comments as indicated in the *Project* section.
+11. Keep in mind, there is a section dedicated to :ref:`python-plotting` underneath the :ref:`References > Python > Plotting <python-reference>` on the left-hand menu of the site.
 12. When you are done, zip your script **and** your *csv* file into a file named ``NAME_project_one.zip``
 13. Upload the zip file to the Google Classroom Project One Assignment.
 
@@ -40,7 +40,7 @@ Prerequisites
 
     We will do this in class together.
 
-We installed **Python** in :ref:`our first project <project_zero>` and got familiar with some of its basic functionality, in particular :ref:`list variables <python_lists>` and the :ref:`operations that can be performed on them <python_list_operations>`, skills that will be helpful in completing this project. 
+We installed **Python** in :ref:`our first project <project-zero>` and got familiar with some of its basic functionality, in particular :ref:`list variables <python-lists>` and the :ref:`operations that can be performed on them <python-list-operations>`, skills that will be helpful in completing this project. 
 
 We also discovered our ChromeBook's **Python** installation is a bit different than a typical installation; it's missing a few essential pieces that we will now install. In order to go further with **Python** in this class, we need to do the following.
 
@@ -72,7 +72,7 @@ Type the following command into your *Linux* terminal,
 
     pip3 install matplotlib tk
 
-.. image:: ../../../assets/imgs/python/matplotlib_tk_install_done.png
+.. image:: ../../../_static/img/python/matplotlib_tk_install_done.png
     :align: center 
 
 Output:
@@ -88,14 +88,14 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../../assets/imgs/python/matplotlib_tk_install_done.png
+.. image:: ../../../_static/img/python/matplotlib_tk_install_done.png
     :align: center 
 
 You should see the packages download and install into your system.
 
 That's it! You are ready to plot some sweet statistical graphs.
 
-.. _project_one_background:
+.. _project-one-background:
 
 Background
 ==========
@@ -103,9 +103,7 @@ Background
 Electric Vehicles in Washington State 
 -------------------------------------
 
-Recall the dataset we used in :ref:`#1 From the Classwork <graphical_representations_of_data_classwork>`,
-
-    The United States Government General Services Administration maintains a huge database of public available information. One of the datasets they publish is the `Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs) that are currently registered through Washington State Department of Licensing <https://catalog.data.gov/dataset/electric-vehicle-population-data>`_
+The United States Government General Services Administration maintains a huge database of public available information. One of the datasets they publish is the `Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs) that are currently registered through Washington State Department of Licensing <https://catalog.data.gov/dataset/electric-vehicle-population-data>`_
 
 This dataset was taken from `data.gov <https://data.gov/>`_. This is an excellent resource, if you ever find yourself in need of some data. We will be using this online database quite a bit once we get fully up to speed on **Python**.
 
@@ -183,16 +181,16 @@ The **Electric Vehicle Type** variable records what *type* of electric vehicle w
 
 *BEV* electric vehicles are *fully electric*. *PHEV* use hybrid engines; when *PHEV* engines run out of power, they start using gasoline.
 
-.. _project_one_bar_charts:
+.. _project-one-bar-charts:
 
 Bar Charts
 ==========
 
 .. important::
 
-    Refer to :ref:`python_plotting` section for a more in-depth look at the various features of :ref:`matplotlib`, the library we are using to create graphs.
+    Refer to :ref:`python-plotting` section for a more in-depth look at the various features of :ref:`matplotlib`, the library we are using to create graphs.
 
-.. _project_one_standard_bar_charts:
+.. _project-one-standard-bar-charts:
 
 No Frills
 ---------
@@ -206,9 +204,9 @@ Recall a standard bar chart is a way of visually representing the marginal frequ
 	
 Up until now we have been living in the stone age, creating these graphs by hand. Welcome to the twenty-first century. Behold, the power of `matplotlib <https://matplotlib.org/>`_,
 
-.. plot:: assets/plots/other/bar_chart.py
+.. plot:: _scripts/py/plots/other/bar_chart.py
 
-Click on the ``Source Code`` button in the top left corner of the graph to download the *.py* script used to generate this graph. Examine the source code contained therein for generating a *Bar Chart* with :ref:`matplotlib <python_plotting>`. Be sure to read the comments before you execute it, as you will need to tweak a setting to get it to run on your computer. 
+Click on the ``Source Code`` button in the top left corner of the graph to download the *.py* script used to generate this graph. Examine the source code contained therein for generating a *Bar Chart* with :ref:`matplotlib <python-plotting>`. Be sure to read the comments before you execute it, as you will need to tweak a setting to get it to run on your computer. 
 
 The key line to pay attention to in this script is the following,
 
@@ -252,7 +250,7 @@ The two arguments, ``color`` and ``ec``, affect the *styling* of the bar chart. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../assets/imgs/python/matplotlib_colors.png
+.. image:: ../../../_static/img/python/matplotlib_colors.png
     :align: center
 
 Any value in this chart can be used an argument for ``color`` or ``ec``.
@@ -270,7 +268,7 @@ Recall a *stacked bar chart* is a way of visually representing a *conditional di
 
 	P(A \mid B) = \frac{n(A \cap B)}{n(B)}
 	
-.. plot:: assets/plots/other/stacked_bar_chart.py
+.. plot:: _scripts/py/plots/other/stacked_bar_chart.py
 
 This one is extremely tricky, so read through it carefully. 
 
@@ -301,7 +299,7 @@ The key lines to pay attention to in this script are the follwoing,
 
 We have to *manually* stack the bars on top of each category and then add the previous percentage to the ``bottom`` of the next bar. Note for ``RED``, we are passing in additional argument of ``bottom`` in the second line; this tells :ref:`matplotlib` to start the next bar at that height. Similarly for ``BLUE``.
 
-.. _project_one_set_operations:
+.. _project-one-set-operations:
 	
 Set Operations
 ==============
@@ -344,7 +342,7 @@ Output:
 
 	{'A', 'B', 'C', 'D'}
 
-.. _project_one_project:
+.. _project-one-project:
 
 Project
 =======
@@ -364,7 +362,7 @@ Label your calculations with comments.
 
 2. Using your answers to #1, construct a bar chart for *only* these five values of the **Make** categorical variable. Label the commands used to render the graph with comments.
 
-3. In the :ref:`python_docstring` at the top of your script, answer the following questions.
+3. In the :ref:`python-docstring` at the top of your script, answer the following questions.
 
 a. Out of these five values, what is the most frequent **Make** of *Electric Vehicle* in Washington State?
 
@@ -393,9 +391,9 @@ b. Which manufacturers produce more *Battery Electric Vehicles (BEV)* than their
 Stacked
 -------
 
-1. Before starting this part of project, answer the following in a :ref:`python_docstring`: Based on the information provided in the :ref:`project_one_background` section, how would you expect the *conditional distribution* of **Clean Alternative Fuel Vehicle (CAFV) Eligibility** given the **Electric Vehicle Type** to look? Do you expect fully electric vehicles to have greater eligibility for tax credits than hybrid vehicles? Why or why not?
+1. Before starting this part of project, answer the following in a :ref:`python_docstring`: Based on the information provided in the :ref:`project-one-background` section, how would you expect the *conditional distribution* of **Clean Alternative Fuel Vehicle (CAFV) Eligibility** given the **Electric Vehicle Type** to look? Do you expect fully electric vehicles to have greater eligibility for tax credits than hybrid vehicles? Why or why not?
    
-2. Answer the following questions. Label any commands you use to solve the problem with comments. Write your answers in the :ref:`python_docstring` at the top of the script.
+2. Answer the following questions. Label any commands you use to solve the problem with comments. Write your answers in the :ref:`python-docstring` at the top of the script.
 
 a. What percentage of *electric vehicles* in Washington State are "*Not eligible due to low battery range*" for the **Clean Alternative Fuel (CAFV) Eligibility** tax exemption?
  
@@ -423,17 +421,17 @@ e. What percentage of "*Not eligible due to low battery range*" for **Clean Alte
 
 6. Based on your answer to #4 in this section and #4 from the previous section, which manufacturers in Washington state benefit the most from the tax exemption? What does this tell you about the manufacturer with the *most* electric vehicles registered in Washington state?
 
-.. _project_one_dataset:
+.. _project-one-dataset:
 
 Datasets
 ========
 
-.. _project_one_loading_data:
+.. _project-one-loading-data:
 
 Loading Data
 ------------
 
-The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project_one_dataset` section.
+The following code snippet will load in a *CSV* spreadsheet named ``example.csv``, parse it into a list and then print it to screen, assuming that *CSV* file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in :ref:`project-one-dataset` section.
 
 .. code-block:: python 
 
@@ -460,12 +458,12 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Electric Vehicle Dataset 
 ------------------------
 
-You can download the full dataset :download:`here <../../assets/datasets/electric_vehicle_population_data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/economic/electric-vehicle-population-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Electric Vehicles in Washington State
-   :file: ../../../assets/datasets/previews/electric_vehicle_population_data_preview.csv
+   :file: ../../../_static/csv/datasets/previews/electric-vehicle-population-data-preview.csv
 
 The meaning of the columns was discussed in more detail in :ref:`project_one_background`. Refer to that section for further information on this dataset.
 

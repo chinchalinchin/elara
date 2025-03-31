@@ -32,19 +32,19 @@ Linguistic
 ----------
 
 - English Palindromes
-    - :download:`English Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/english_palindromes.csv>`
+    - :download:`English Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/english-palindromes.csv>`
 - Imperfect Palindromes
-    - :download:`Imperfect Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/imperfect_palindromes.csv>`
+    - :download:`Imperfect Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/imperfect-palindromes.csv>`
 - Latin Palindromes
-    - :download:`Latin Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/latin_palindromes.csv>`
+    - :download:`Latin Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/latin-palindromes.csv>`
 - Ambiguous Sentences
-    - :download:`Ambiguous Sentences CSV <../_static/csv/datasets/linguistic/sentences/ambiguous_sentences.csv>`
+    - :download:`Ambiguous Sentences CSV <../_static/csv/datasets/linguistic/sentences/ambiguous-sentences.csv>`
 - Ambiguous Words
-    - :download:`Ambiguous Words CSV <../_static/csv/datasets/linguistic/words/ambiguous_words.csv>`
+    - :download:`Ambiguous Words CSV <../_static/csv/datasets/linguistic/words/ambiguous-words.csv>`
 - Invertible Words
-    - :download:`Invertible Worlds CSV <../_static/csv/datasets/linguistic/words/invertible_words.csv>`
+    - :download:`Invertible Worlds CSV <../_static/csv/datasets/linguistic/words/invertible-words.csv>`
 - Reflective Words
-    - :download:`Reflective Words CSV <../_static/csv/datasets/linguistic/words/reflective_words.csv>`
+    - :download:`Reflective Words CSV <../_static/csv/datasets/linguistic/words/reflective-words.csv>`
 
 .. _scientific-datasets:
 
@@ -52,34 +52,34 @@ Scientific
 ----------
 
 - `Alpha Particle Emissions <https://www.randomservices.org/random/data/Alpha.html>`_
-    - :download:`Alpha Particle Emissions CSV <../_static/csv/datasets/scientific/alpha_particle_emissions_data.csv>`
+    - :download:`Alpha Particle Emissions CSV <../_static/csv/datasets/scientific/alpha-particle-emissions-data.csv>`
 - `Atmospheric Radiation <https://www.gmcmap.com/index.asp>`_
-    - :download:`Raw Data CSV <../_static/csv/datasets/scientific/geiger_counter_dc_data.csv>`
-    - :download:`Frequency Distribution <../_static/csv/datasets/scientific/geiger_freq_data.csv>`
+    - :download:`Raw Data CSV <../_static/csv/datasets/scientific/geiger-counter-dc-data.csv>`
+    - :download:`Frequency Distribution <../_static/csv/datasets/scientific/geiger-freq-data.csv>`
 - `Bird Collisions <https://datadryad.org/stash/dataset/doi:10.5061/dryad.8rr0498>`_
-    - :download:`Cleveland, OH Collisions <../_static/csv/datasets/scientific/bird_collision_cleveland_data.csv>`
-    - :download:`Chicago, IL Collisions <../_static/csv/datasets/scientific/bird_collision_chicago_data.csv>`
+    - :download:`Cleveland, OH Collisions <../_static/csv/datasets/scientific/bird-collision-cleveland-data.csv>`
+    - :download:`Chicago, IL Collisions <../_static/csv/datasets/scientific/bird-collision-chicago-data.csv>`
 - `Cicada Measurements <https://www.randomservices.org/random/data/Cicada.html>`_
-    - :download:`Cicada Measurements <../_static/csv/datasets/scientific/cicada_data.csv>`
+    - :download:`Cicada Measurements <../_static/csv/datasets/scientific/cicada-data.csv>`
 - `Polar Bear Measurements <https://arcticdata.io/catalog/view/doi:10.5065/D60V89XD>`_
-    - :download:`Polar Bear Measurements <../_static/csv/datasets/scientific/bear_measurements_data.csv>`
+    - :download:`Polar Bear Measurements <../_static/csv/datasets/scientific/bear-measurements-data.csv>`
 - `Density of the Earth <https://www.randomservices.org/random/data/Cavendish.html>`_
-    - :download:`Earth Density CSV <../_static/csv/datasets/scientific/earth_density_data.csv>`
+    - :download:`Earth Density CSV <../_static/csv/datasets/scientific/earth-density-data.csv>`
 - `Lettuce Growth <https://www.kaggle.com/datasets/jjayfabor/lettuce-growth-days>`_
-	- :download:`Lettuce Growth <../_static/csv/datasets/scientific/lettuce_growth_data.csv>`
+	- :download:`Lettuce Growth <../_static/csv/datasets/scientific/lettuce-growth-data.csv>`
 - `London Weather <https://www.kaggle.com/datasets/emmanuelfwerr/london-weather-data>`_
-    - :download:`London Weather CSV <../_static/csv/datasets/scientific/london_weather_data.csv>`
+    - :download:`London Weather CSV <../_static/csv/datasets/scientific/london-weather-data.csv>`
 - `Manatee Mortality <https://myfwc.com/research/manatee/rescue-mortality-response/statistics/mortality/>`_
-    - :download:`Manatee Death CSV <../_static/csv/datasets/scientific/manatee_death_data.csv>`
+    - :download:`Manatee Death CSV <../_static/csv/datasets/scientific/manatee-death-data.csv>`
 - `Meteorite Landings <https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh>`_
-    - :download:`Meteorite Landings CSV <../_static/csv/datasets/scientific/meteorite_landings_data.csv>`
+    - :download:`Meteorite Landings CSV <../_static/csv/datasets/scientific/meteorite-landings-data.csv>`
 - `Old Faithful <https://www.stat.cmu.edu/~larry/all-of-statistics/=data/faithful.dat>`_
-    - :download:`Old Faithful CSV <../_static/csv/datasets/scientific/old_faithful_data.csv>`
+    - :download:`Old Faithful CSV <../_static/csv/datasets/scientific/old-faithful-data.csv>`
 - `Velocity of Light <https://www.randomservices.org/random/data/Michelson.html>`_
-    - :download:`Velocity of Light CSV <../_static/csv/datasets/scientific/velocity_of_light_data.csv>`
+    - :download:`Velocity of Light CSV <../_static/csv/datasets/scientific/velocity-of-light-data.csv>`
 - `Wine Quality <http://www.vinhoverde.pt/en/>`_
-	- :download:`Red Wine Quality CSV <../_static/csv/datasets/scientific/wine_red_quality_data.csv>`
-	- :download:`White Wine Quality CSV <../_static/csv/datasets/scientific/wine_white_quality_data.csv>`
+	- :download:`Red Wine Quality CSV <../_static/csv/datasets/scientific/wine-red-quality-data.csv>`
+	- :download:`White Wine Quality CSV <../_static/csv/datasets/scientific/wine-white-quality-data.csv>`
 
 .. _economic-datasets:
 
@@ -91,7 +91,7 @@ Economic
 - `Billionaries <https://www.kaggle.com/datasets/surajjha101/forbes-billionaires-data-preprocessed>`_
     - :download:`Billionaries CSV <../_static/csv/datasets/economic/billionaries_data.csv>`
 - `Electric Vehicles Registered in Washington State <https://catalog.data.gov/dataset/electric-vehicle-population-data>`_
-    - :download:`Electric Vehicles in WA CSV <../_static/csv/datasets/economic/electric_vehicle_population_data.csv>`
+    - :download:`Electric Vehicles in WA CSV <../_static/csv/datasets/economic/electric-vehicle-population-data.csv>`
 - `Diamonds <https://www.kaggle.com/datasets/shivam2503/diamonds>`_
     - :download:`Diamonds CSV <../_static/csv/datasets/economic/diamonds_data.csv>`
 - `Mega Millions Winning Numbers in New York since 2002 <https://catalog.data.gov/dataset/lottery-mega-millions-winning-numbers-beginning-2002>`_

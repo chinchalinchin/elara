@@ -95,7 +95,7 @@ A *randomized block* experiment should be understood a series of identical exper
 
 A *randomized block* design is commonly encountered in *agricultural* applications. Consider a farmer who wants to test a new type of seed against his usual stock to determine if the yield is higher. In a *randomized block* experiment, he would break his plots of land into *blocks*, and then partition each block into segments, call them *A*, *B*, *C* and *D*,
 
-.. image:: ../../_static/img/math/statistics/randomized_blocks.png
+.. image:: ../../_static/img/context/statistical/randomized_blocks.png
     :align: center
 
 The type of seed would be planted in the *A* segment of each block, i.e. the *A* segment would receive a *treatment*, while the other segments would be planted with the farmer's usual stock. Data would then be collected from each block and analyzed in isolation to determine if the new type of seed has any benefits. 
@@ -147,7 +147,7 @@ Example
     Experimental data from Henri Cavendish's density of the Earth experiments. Density is expressed as a ratio of the density of water.
 
 .. csv-table:: Density of the Earth
-   :file: ../../_static/csv/datasets/previews/earth_density_data_preview.csv
+   :file: ../../_static/csv/datasets/previews/earth-density-data-preview.csv
 
 Bivariate
     :math:`\{ (x_1, y_1), (x_2, y_2), ... , (x_n, y_n)\}`
@@ -158,7 +158,7 @@ Example
     Data from the Challenger space shuttle explosion showing the atmospheric temperature versus the erosion index of the O-ring seal. The failure of the O-ring seal at lower temperatures was not accounted for prior to launch.
 
 .. csv-table:: Challenger Space Shuttle Erosion Data
-   :file: ../../_static/csv/datasets/previews/challenger_erosion_data_preview.csv
+   :file: ../../_static/csv/datasets/previews/challenger-erosion-data-preview.csv
 
 
 Multivariate 
@@ -170,7 +170,7 @@ Example
     Body measurements from a sample of grizzly bears.
 
 .. csv-table:: Bear Measurements
-    :file: ../../_static/csv/datasets/previews/bear_measurements_data_preview.csv
+    :file: ../../_static/csv/datasets/previews/bear-measurements-data-preview.csv
 
 .. _data-characteristic:
 
@@ -221,7 +221,7 @@ Example
 Scale 
 -----
 
-.. image:: ../../_static/img/math/statistics/measurement_scales.jpg
+.. image:: ../../_static/img/context/statistical/measurement-scales.jpg
     :align: center
 
 Nominal Level

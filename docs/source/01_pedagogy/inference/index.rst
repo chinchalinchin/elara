@@ -8,10 +8,10 @@ Inference
    :maxdepth: 2
    :caption: Contents:
 
-   00_INTRODUCTION
-   01_BIAS
-   02_DESIGN
-   03_HYPOTHESES
-   04_MEAN
-   05_PROPORTION
-   06_VARIANCE
+   00_introduction
+   01_bias
+   02_design
+   03_hypotheses
+   04_mean
+   05_proportion
+   06_variance

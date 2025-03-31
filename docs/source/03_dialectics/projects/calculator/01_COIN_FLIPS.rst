@@ -72,7 +72,7 @@ This will be useful in what follows! This function will be integral in the simul
 TI Basic
 --------
 
-In a previous project, we introduced `TI Basic <http://tibasicdev.wikidot.com/home>`_ and used it to write a relatively simple program for our *TI-84*s to calculate the :ref:`correlation` of two variables. 
+In a previous project, we introduced `TI Basic <http://tibasicdev.wikidot.com/home>`_ and used it to write a relatively simple program for our *TI-84s* to calculate the :ref:`correlation` of two variables. 
 
 .. topic:: New Program
 
