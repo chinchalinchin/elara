@@ -134,8 +134,8 @@ allpoetry.com
 
 - `All All and All <all-all-and-all>`_
 - `And Death Shall Have No Dominion <and-death-shall-have-no-dominion>`_
-- `Find Meat On Bones <find-meat-on-the-bones>`_
-- `How Great My Grief <https://allpoetry.com/How-Great-My-Grief>`_
+- `Find Meat On Bones <find-meat-on-bones>`_
+- `How Great My Grief <how-great-my-grief>`_
 - `I Have Longed To Move Away <i-have-longed-to-move-away>`_
 - `I Met a Genius <i-met-a-genius>`_
 - `Mad Girl's Love Song <mad-girls-love-song>`_
@@ -143,7 +143,7 @@ allpoetry.com
 - `The Hollow Men <the-hollow-men>`_
 - `Ouija <ouija>`_
 - `Sestina <sestina-bishop>`_
-- `Sestina <sestina-travel-notes>`_
+- `Sestina: Travel Notes <sestina-travel-notes>`_
 
 .. _archive-org:
 
