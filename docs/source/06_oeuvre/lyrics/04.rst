@@ -1,4 +1,3 @@
-
 V: Games of Chance
 ------------------
 
@@ -30,11 +29,11 @@ V: Games of Chance
 **As A Sonnet**
 
 | A death in six is face of die on roll,
-| A stack of chips from bet that antes all,
-| To win, or lose, a game that wagers soul
+| Like stacks of chips from pots that ante all,
+| A win, or loss, of game that wagers soul
 | Must meet on board the fates that follow call.
 |
-| A life received is hand of cards on deal,
+| A life received as hand of cards on deal,
 | Where threes are flush, but royals rarely draw 
 | And twos deceive, in bluff contrive to steal
 | What kings and queens through rule so reap by law. 
@@ -46,8 +45,8 @@ V: Games of Chance
 |
 | The world at large is made of game and rule,
 | Appears to eyes as ordered step of dance.
-| Each move, when played by hand of sage or fool,
-| Results in writs resolved tby chance. 
+| Each move, when made by foot of sage or fool,
+| Results in taps resolved to beat of chance. 
 |
 | What always fortune finds is fettered fate
 | Unlocked by strike of luck and never late. 
