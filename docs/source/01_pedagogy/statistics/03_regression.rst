@@ -1,4 +1,4 @@
-.. _linear_regression:
+.. _linear-regression:
 
 =================
 Linear Regression
@@ -22,7 +22,7 @@ This quantity will provide a metric for validating models against observed data.
 
 TODO
 
-.. _regression_model:
+.. _regression-model:
 
 Regression Model
 ================
@@ -59,7 +59,7 @@ TODO
 	
 	TODO
 	
-.. _mean_squared_error:
+.. _mean-squared-error:
 
 Mean Squared Error
 ==================

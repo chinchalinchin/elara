@@ -6,28 +6,28 @@ Probability
 
 TODO
 
-.. _calculator_normal_distribution:
+.. _calculator-normal-distribution:
 
 Normal Distribution
 ===================
 
 TODO
 
-.. _calculator_normalpdf:
+.. _calculator-normalpdf:
 
 normalpdf
 ---------
 
 TODO
 
-.. _calculator_normalcdf:
+.. _calculator-normalcdf:
 
 normalcdf
 ---------
 
 TODO
 
-.. _calculator_invnorm:
+.. _calculator-invnorm:
 
 invNorm
 -------
@@ -39,42 +39,42 @@ ShadeNorm
 
 TODO
 
-.. _calculator_binomial_distribution:
+.. _calculator-binomial-distribution:
 
 Binomial Distribution
 =====================
 
 TODO
 
-.. _calculator_binompdf:
+.. _calculator-binompdf:
 
 binompdf
 --------
 
 TODO
 
-.. _calculator_binomcdf:
+.. _calculator-binomcdf:
 
 binomcdf
 --------
 
 TODO
 
-.. _calculator_geometric_distribution:
+.. _calculator-geometric-distribution:
 
 Geometric Distribution
 ======================
 
 TODO
 
-.. _calculator_geometpdf:
+.. _calculator-geometpdf:
 
 geometpdf
 ---------
 
 TODO
 
-.. _calculator_geometcdf:
+.. _calculator-geometcdf:
 
 geometcdf
 ---------

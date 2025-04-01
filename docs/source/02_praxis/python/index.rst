@@ -1,4 +1,4 @@
-.. _python_reference:
+.. _python:
 
 ======
 Python
@@ -8,11 +8,11 @@ Python
 
 For this reason, **Python** is frequently used in statistical applications, as well as a variety of other areas (*this website was generated with Python!*).
 
-We will use **Python** in class to quickly generate :ref:`graphical_representations_of_data` and perform statistical analysis. The pages below should serve as a reference.
+We will use **Python** in class to quickly generate :ref:`graphical-representations` and perform statistical analysis. The pages below should serve as a reference.
 
-Furthermore, all of the plots across the pages of this website were generated with simple **Python** scripts that can be downloaded and run on your own computer, after you perform the initial :ref:`setup <python_setup>`,
+Furthermore, all of the plots across the pages of this website were generated with simple **Python** scripts that can be downloaded and run on your own computer, after you perform the initial :ref:`setup <python-setup>`,
 
-.. image:: ../../_static/img/python/download_source.png
+.. image:: ../../_static/img/python/download-source.png
    :align: center
 
 .. toctree::

@@ -1,4 +1,4 @@
-.. _calculator_project_two:
+.. _calculator-project-two:
 
 ==========
 Simulation
@@ -21,20 +21,17 @@ In this project, a program is created on a *TI-83/84/85* calculator that simulat
 
 The output of the program will be a sampling distribution for the number of heads obtained when flipping a coin *n* times. The sampling distribution will have *m* data points.
 
-.. _calculator_project_two_instructions:
+.. _calculator-project-two-instructions:
 
 Instructions
 ============
 
-1. Read through the :ref:`calculator_project_two_background` section.
-
-2. Read through the :ref:`calculator_project_two_project` section. As you read through this section, follow along on your own calculator. 
-
-3. Read through the :ref:`calculator_project_two_analysis`. As you read through, complete the questions in the :ref:`calculator_project_two_analysis` section in a document. When you completed the :ref:`calculator_project_two_analysis` section, upload the document to the Google Classroom assignment. 
+1. Read through the :ref:`calculator-project-two-background` section. As you read through this section, follow along on your own calculator. 
+2. Read through the :ref:`calculator-project-two-analysis`. As you read through, complete the questions in the :ref:`calculator-project-two-analysis` section in a document. When you completed the :ref:`calculator-project-two-analysis` section, upload the document to the Google Classroom assignment. 
 
 4. On the due date, bring your calculator to class and connect to the ViewSonic. Use the **TIConnect** software to export your simulation for grading. 
 	
-.. _calculator_project_two_background:
+.. _calculator-project-two-background:
 	
 Background
 ==========
@@ -235,7 +232,7 @@ Graphing
 
 TODO
 
-.. _calculator_project_two_analysis:
+.. _calculator-project-two-analysis:
 
 Analysis
 ========

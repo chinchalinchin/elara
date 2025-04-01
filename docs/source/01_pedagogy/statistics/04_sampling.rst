@@ -11,7 +11,7 @@ TODO
 Central Limit Theorem
 =====================
 
-The **Central Limit Theorem** is one of the most important theorems in statistics (if not mathematics). The **Central Limit Theorem** is what allows us to use the :ref:`Normal Distribution <normal_distribution>` to make inferences about the :ref:`population <population>`
+The **Central Limit Theorem** is one of the most important theorems in statistics (if not mathematics). The **Central Limit Theorem** is what allows us to use the :ref:`Normal Distribution <normal-distribution>` to make inferences about the :ref:`population <population>`
 
 TODO
 

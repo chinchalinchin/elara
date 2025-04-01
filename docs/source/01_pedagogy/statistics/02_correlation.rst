@@ -18,7 +18,7 @@ Bivariate Data
 :math:`S = \{ (x_1, y_1), (x_2, y_2), ... , (x_n, y_n) \}`
 	When two variables are measured on one individual, we call such data *bivariate*.
 	
-The :math:`x` variable is sometimes called the *independent* or *predictor* variable. The :math:`y` variable is sometimes called the *dependent* or *response* variable. It is important to understand this terminology is only used in the context of the :ref:`linear_regression` model introduced in the next section. Before the *statistical significance* of the relationship is established, this terminology is misleading, as it implies a relationship between the :math:`x` and `y` variable when none may exist. Correlation can be measured between variables that have no relationship whatsoever; in such instance we call the variables *uncorrelated*. 
+The :math:`x` variable is sometimes called the *independent* or *predictor* variable. The :math:`y` variable is sometimes called the *dependent* or *response* variable. It is important to understand this terminology is only used in the context of the :ref:`linear-regression` model introduced in the next section. Before the *statistical significance* of the relationship is established, this terminology is misleading, as it implies a relationship between the :math:`x` and `y` variable when none may exist. Correlation can be measured between variables that have no relationship whatsoever; in such instance we call the variables *uncorrelated*. 
 
 .. important::
 
@@ -120,26 +120,26 @@ A scatterplot with a positive correlation betwen the :math:`x` and :math:`y` var
 
 .. plot:: _scripts/py/plots/scatterplots/scatterplot_positive_correlation.py
 
-.. _negative_correlation:
+.. _negative-correlation:
 
 Negative Correlation
 ********************
 
 .. plot:: _scripts/py/plots/scatterplots/scatterplot_negative_correlation.py
 
-.. _correlation_strength:
+.. _correlation-strength:
 
 Strength
 --------
 
-.. _strong_correlation:
+.. _strong-correlation:
 
 Strong
 ******
 
 TODO
 
-.. _weak_correlation:
+.. _weak-correlation:
 
 Weak
 ****
@@ -151,21 +151,21 @@ TODO
 Linearity
 ---------
 
-.. _linear_correlation:
+.. _linear-correlation:
 
 Linear
 ******
 
 TODO 
 
-.. _nonlinear_correlation:
+.. _non-linear-correlation:
 
 Non-Linear
 **********
  
 TODO
 
-.. _time_series:
+.. _time-series:
 
 Time Series
 ===========

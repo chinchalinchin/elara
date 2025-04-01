@@ -29,7 +29,7 @@ Step 1: Update ChromeOS
 
 Ensure you are on the latest version of the ChromeOS operating system.
 
-.. image:: ../../_static/img/python/update_chrome_os.png
+.. image:: ../../_static/img/chromeos/chrome-update-os.png
     :align: center
 
 Step 2: Enable Linux Subsystem
@@ -45,7 +45,7 @@ Step 2: Enable Linux Subsystem
 
 Enable and install Linux subsystem in the Settings menu,
 
-.. image:: ../../_static/img/python/developer_mode.png
+.. image:: ../../_static/img/chromeos/chrome-developer-mode.png
     :align: center
 
 This will give you access to something called the *command line* (sometimes called a *terminal* or a *shell*). The *command line* is a direct interface to the operating system of your laptop. Let's take a look.
@@ -55,7 +55,7 @@ Step 3: Explore A Little
 
 A new world has now opened up to you, the world of *Linux*. Let's take a little while to familiarize ourselves with it before moving on to **Python**. Open Linux command line (*terminal*),
 
-.. image:: ../../_static/img/python/terminal.png
+.. image:: ../../_static/img/chromeos/chrome-terminal.png
     :align: center
 
 
@@ -63,12 +63,12 @@ A new world has now opened up to you, the world of *Linux*. Let's take a little 
 
     Pin the Linux terminal to your dock for quick access. At the bottom of the screen,
 
-    .. image:: ../../_static/img/python/dock.png
+    .. image:: ../../_static/img/chromeos/chrome-dock.png
         :align: center
 
     Right click the *terminal icon* (or whatever the equivalent of right-click is on the ChromeBook you are using) and then pin it,
 
-    .. image:: ../../_static/img/python/pin.png
+    .. image:: ../../_static/img/chromeos/chrome-pin.png
         :align: center
 
     In this image, it's already pinned. In place of ``Unpinned``, you will see ``Pinned``.
@@ -81,7 +81,7 @@ This is your *operating system*. Let's try a few commands here and see what we c
 
 Press ``ENTER`` and you shoud see the words "*Hello World*" print to screen. The ``echo`` command, as you might have guessed, simply prints the words (a *string* of text) you give it back to screen,
 
-.. image:: ../../_static/img/python/echo.png
+.. image:: ../../_static/img/linux/bash-echo.png
 
 Not very useful. Let's try something a little more interesting,
 
@@ -91,7 +91,7 @@ Not very useful. Let's try something a little more interesting,
 
 Press ``ENTER`` and you will see something along the lines of (the actual output will vary from computer to computer), 
 
-.. image:: ../../_static/img/python/df.png
+.. image:: ../../_static/img/linux/bash-df.png
     :align: center
 
 These are your computer filesystems. This is where all of the data on your computer lives. Let's not mess around with it. While you can't physically break your computer by entering commands, it is possible to break your *operating system* to the point where it will need re-installed. That is not something you want to happen. For that reason, let's move on to other, safer areas.
@@ -104,7 +104,7 @@ The *Linux* world is a hierarchy of files. Everything in *Linux* is a file, even
 
 You can imagine a tree like the following picture exists somewhere inside your computer,
 
-.. image:: ../../_static/img/python/folder_system.png
+.. image:: ../../_static/img/linux/folder-system.png
     :align: center
 
 When you open your *terminal*, you open it *in* one of the folders in this tree. The *terminal* allows you traverse the different nodes and branches of this tree. To see where you currently located in the tree, type the following command and press ``ENTER``,
@@ -113,7 +113,7 @@ When you open your *terminal*, you open it *in* one of the folders in this tree.
 
     pwd 
 
-.. image:: ../../_static/img/python/pwd.png
+.. image:: ../../_static/img/linux/bash-pwd.png
     :align: center
 
 This stands for "*present working directory*". When you type ``ENTER``, you will see a file path print to screen. This is the directory where you terminal is currently idling. You can see the contents of the *present working directory* with the command,
@@ -124,7 +124,7 @@ This stands for "*present working directory*". When you type ``ENTER``, you will
 
 This will list the contents of the directory to screen,
 
-.. image:: ../../_static/img/python/ls.png
+.. image:: ../../_static/img/linux/bash-ls.png
     :align: center
 
 You can *change directories* with the next command, 
@@ -166,7 +166,7 @@ Output:
 
     Any version of **Python** greater than *3.7* will be sufficient for the purposes of this class.
 
-.. image:: ../../_static/img/python/python_version.png
+.. image:: ../../_static/img/linux/bash-python-version.png
     :align: center
 
 If you get an error along the lines of "*bash: python command not found*", you will need to install **Python**. You can do this through the *Linux* package repository, an online library of software that you can install from the command line,
@@ -233,21 +233,21 @@ If you want to install **Python** on your home PC or laptop, you can download th
 
 1. Go to *https://www.python.org/downloads** and click the **Download** button,
 
-.. image:: ../../_static/img/python/install_step_1.png
+.. image:: ../../_static/img/chromeos/chrome-install-step-1.png
 
 2. Download the appriopriate operating system distribution,
 
-.. image:: ../../_static/img/python/install_step_2.png
+.. image:: ../../_static/img/chromeos/chrome-install-step-2.png
 
 3. Ensure the option "*Add Python to the PATH*" is checked,
 
-.. image:: ../../_static/img/python/install_step_3.png
+.. image:: ../../_static/img/chromeos/chrome-install-step-3.png
 
 4. Ensure all of the following options are checked,
 
-.. image:: ../../_static/img/python/install_step_4.png
+.. image:: ../../_static/img/chromeos/chrome-install-step-4.png
 
-5. All of the other defaults are fine. Proceed with the installation. When it is done, you will now have icons for the **Python** interpreter and :ref:`IDLE <python_idle>` in your start menu (or your app launcher, if you're one of the weird *Mac* people.)
+5. All of the other defaults are fine. Proceed with the installation. When it is done, you will now have icons for the **Python** interpreter and :ref:`IDLE <python-idle>` in your start menu (or your app launcher, if you're one of the weird *Mac* people.)
 
 .. _python-interpretter:
 
@@ -329,7 +329,7 @@ Output:
 
     4
 
-The *interpretter* allows you to experiment with **Python** and get a feel for it. However, as previously mentioned, for this class, we will almost always be writing :ref:`python_scripts`.
+The *interpretter* allows you to experiment with **Python** and get a feel for it. However, as previously mentioned, for this class, we will almost always be writing :ref:`python-scripts`.
 
 To exit the *interpretter*, type and execute,
 
@@ -342,9 +342,9 @@ To exit the *interpretter*, type and execute,
 Scripts
 =======
 
-**Python** scripts are files that have a ``.py`` extension. ``.py`` files are just files containing plain text, but anything that ends in ``.py`` will be understood by the **Python** :ref:`python_interpretter` as a set of executable instrutions, so you can't write just any text in this file. You have to write words that exist in the `Python language <https://docs.python.org/3/reference/index.html>`_. Anytime we do a lab in this class, you will be writing a *script*. 
+**Python** scripts are files that have a ``.py`` extension. ``.py`` files are just files containing plain text, but anything that ends in ``.py`` will be understood by the **Python** :ref:`python-interpretter` as a set of executable instrutions, so you can't write just any text in this file. You have to write words that exist in the `Python language <https://docs.python.org/3/reference/index.html>`_. Anytime we do a lab in this class, you will be writing a *script*. 
 
-As an example, create a new file named ``test.py`` and open it in a text editor (actually, you will want to use :ref:`IDLE <python_idle>`, but we haven't gotten to that part yet, so any old text editor will do for now)
+As an example, create a new file named ``test.py`` and open it in a text editor (actually, you will want to use :ref:`IDLE <python-idle>`, but we haven't gotten to that part yet, so any old text editor will do for now)
 
 .. code:: python
  
@@ -377,19 +377,19 @@ IDLE
 
 Open up an *IDLE* session,
 
-.. image:: ../../_static/img/python/idle_shell.png
+.. image:: ../../_static/img/python/idle-shell.png
 
 This is another version of the **Python** interpretter we encountered a few sections ago, sometimes referred to as a `shell <https://en.wikipedia.org/wiki/Shell_(computing)>`_. You can execute the exact same commands in this *shell* as in the previous section, e.g.,
 
-.. image:: ../../_static/img/python/idle_shell_command.png
+.. image:: ../../_static/img/python/idle-shell-command.png
 
 If you navigate to the ``File > New File`` menu option in the top left corner to the *IDLE* shell (you may also hit the ``CTRL + N`` keys at the same time), it will open a text editor,
 
-.. image:: ../../_static/img/python/idle_editor.png
+.. image:: ../../_static/img/python/idle-editor.png
 
 You can type commands into this editor, as pictured. You can run these commands by navigating to the ``Run > Run Module`` menu option in the top left corner (you may also hit ``F5``). It will then prompt you to save the script, if you haven't already. After saving it, the *IDLE* shell will reappear with the results of your script,
 
-.. image:: ../../_static/img/python/idle_editor_results.png
+.. image:: ../../_static/img/python/idle-editor-results.png
 
 We will sometimes call the *IDLE* text editor a *notebook*. 
 
@@ -453,7 +453,7 @@ Now that you have ``pip3``, we will need to install two additional packages for 
 
     pip3 install matplotlib tk
 
-.. image:: ../../_static/img/python/matplotlib_tk_install_done.png
+.. image:: ../../_static/img/python/matplotlib-tk-install.png
     :align: center 
 
 Output:
@@ -469,7 +469,7 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../_static/img/python/matplotlib_tk_install_done.png
+.. image:: ../../_static/img/python/matplotlib-tk-install-done.png
     :align: center 
 
 You should see the packages download and install into your system.

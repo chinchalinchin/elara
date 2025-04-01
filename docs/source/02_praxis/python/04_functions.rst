@@ -155,7 +155,7 @@ Suppose you had a sample of closing stock prices observed over one business week
 
     stock_prices = [ 101.5, 100, 105.25, 107.10, 104.56 ]
 
-If you wanted to plot this as a :ref:`time_series` to get a sense for any trends in the price, you would order the observations by day and plot the stock prices against the order in which they occured.
+If you wanted to plot this as a :ref:`time-series` to get a sense for any trends in the price, you would order the observations by day and plot the stock prices against the order in which they occured.
 
 We already have the *y-axis* of the time series; we need to generate the *x-axis*. An easy way to do this is to ``enumerate()`` the list,
 
@@ -172,7 +172,7 @@ Output:
     
     [(0, 101.5), (1, 100), (2, 105.25), (3, 107.1), (4, 104.56)]
 
-``enumerate()`` pulls the index of the observation from the list and allows you to use it in the ``<expr>`` of :ref:`python_list_comprehension`. This is especially useful for time series data, as this example illustrates.
+``enumerate()`` pulls the index of the observation from the list and allows you to use it in the ``<expr>`` of :ref:`python-list-comprehension`. This is especially useful for time series data, as this example illustrates.
 
 .. _python-zip-function:
 
@@ -466,7 +466,7 @@ Shuffle
 ``shuffle(<list : required>)``
     The *shuffle* functions randomly orders a list into a new list.
 
-The ``shuffle()`` function is the equivalent of shuffling a deck of cards, if the deck of cards were a :ref:`list <python_lists>`. 
+The ``shuffle()`` function is the equivalent of shuffling a deck of cards, if the deck of cards were a :ref:`list <python-lists>`. 
 
 The following code illustrates it use,
 
@@ -488,13 +488,13 @@ Normal Variate
 **************
 
 ``normalvariate(<mean : required>, <standard deviation : required>)``
-    The *normal variate* functions simulates a random draw from the :ref:`normal_distribution`.
+    The *normal variate* functions simulates a random draw from the :ref:`normal-distribution`.
 
 .. note:: 
 
     We will not need this function until Unit 3 or 4. 
 
-This function is *extremely important* in this class. It will return a random draw from a normally distributed population. We can use it to simulate all sorts of outcomes and samples. By solving the :ref:`z_score` for the individual :math:`x`,
+This function is *extremely important* in this class. It will return a random draw from a normally distributed population. We can use it to simulate all sorts of outcomes and samples. By solving the :ref:`z-score` for the individual :math:`x`,
 
 .. math:: 
 

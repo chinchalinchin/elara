@@ -6,7 +6,7 @@ Plots
 
 We will be using **Python** to generate graphs. Lots and lots of graphs. So many graphs, you might say it's *graphic*. 
 
-This section serves as a gallery for all the different sorts of graphs you can create with **Python**. However, before we get to that point, we need to make sure our computers are setup with graphing capabilities. If you followed along with the :ref:`python_setup` and completed all the steps on that page, you should be good to go. You may skip the next section in that case, or read through as a refresher (re-installing the graphics library won't break anything). 
+This section serves as a gallery for all the different sorts of graphs you can create with **Python**. However, before we get to that point, we need to make sure our computers are setup with graphing capabilities. If you followed along with the :ref:`python-setup` and completed all the steps on that page, you should be good to go. You may skip the next section in that case, or read through as a refresher (re-installing the graphics library won't break anything). 
 
 By default, **Python** does not have statistical graphing capabilities. You must install two addition packages to supplement this deficiency, ``matplotlib`` and ``tk``. 
 
@@ -182,7 +182,7 @@ All graphing functions in **matplotlib** accept ``color`` and ``ec`` arguments. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../_static/img/python/matplotlib_colors.png
+.. image:: ../../_static/img/python/matplotlib-colors.png
     :align: center
 
 Gallery

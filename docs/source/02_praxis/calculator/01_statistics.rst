@@ -4,56 +4,56 @@
 Statistics
 ==========
 
-.. _calculator_1var_stats:
+.. _calculator-1var-stats:
 
 1-Var Stats
 ===========
 
 TODO
 
-.. _calculator_2var_stats:
+.. _calculator-2var-stats:
 
 2-Var Stats
 ===========
 
 TODO
 
-.. _calculator_linreg:
+.. _calculator-linreg:
 
 LinReg
 ======
 
 TODO
 
-.. _calculator_diagnostics_mode:
+.. _calculator-diagnostics-mode:
 
 Diagnostics Mode
 ----------------
 
 TODO
 
-.. _calculator_ztest_stats:
+.. _calculator-ztest-stats:
 
 Z-Test
 ======
 
 TODO
 
-.. _calculator_ttest:
+.. _calculator-ttest:
 
 T-Test
 ======
 
 TODO
 
-.. _calculator_zinterval:
+.. _calculator-zinterval:
 
 ZInterval
 =========
 
 TODO
 
-.. _calculator_tinterval:
+.. _calculator-tinterval:
 
 TInteval
 ========

@@ -55,7 +55,7 @@ Sometimes lists are deleted from the calculator's memory (intentionally or other
 Lists
 =====
 
-A *list* variable is the TI-83/84 family's way of representing :ref:`sets <set_theory>`. 
+A *list* variable is the TI-83/84 family's way of representing :ref:`sets <set-theory>`. 
 
 .. warning::
 

@@ -27,11 +27,11 @@ Instructions
 8. Read the :ref:`project-one-set-operations` section. 
 9. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project-three-loading-data` section. (We will do this part in class!)
 10. Perform all exercises and answer all questions in the :ref:`project-one-project` section. Label your script with comments as indicated in the *Project* section.
-11. Keep in mind, there is a section dedicated to :ref:`python-plotting` underneath the :ref:`References > Python > Plotting <python-reference>` on the left-hand menu of the site.
+11. Keep in mind, there is a section dedicated to :ref:`python-plotting` underneath the :ref:`<python>` on the left-hand menu of the site.
 12. When you are done, zip your script **and** your *csv* file into a file named ``NAME_project_one.zip``
 13. Upload the zip file to the Google Classroom Project One Assignment.
 
-.. _project_one_installs:
+.. _project-one-installs:
 
 Prerequisites
 =============
@@ -72,7 +72,7 @@ Type the following command into your *Linux* terminal,
 
     pip3 install matplotlib tk
 
-.. image:: ../../../_static/img/python/matplotlib_tk_install_done.png
+.. image:: ../../../_static/img/python/matplotlib-tk-install.png
     :align: center 
 
 Output:
@@ -88,7 +88,7 @@ Output:
 
     Successfully installed tk-0.1.0
 
-.. image:: ../../../_static/img/python/matplotlib_tk_install_done.png
+.. image:: ../../../_static/img/python/matplotlib-tk-install-done.png
     :align: center 
 
 You should see the packages download and install into your system.
@@ -250,14 +250,14 @@ The two arguments, ``color`` and ``ec``, affect the *styling* of the bar chart. 
 
 The full list of colors available to use in :ref:`matplotlib` is detailed in the following chart,
 
-.. image:: ../../../_static/img/python/matplotlib_colors.png
+.. image:: ../../../_static/img/python/matplotlib-colors.png
     :align: center
 
 Any value in this chart can be used an argument for ``color`` or ``ec``.
 
 This script is annotated with lots of comments for you to read. Give them a peak, and then let's meet over in the next section.
 
-.. _project_one_stacked_bar_charts:
+.. _project-one-stacked-bar-charts:
 
 Stacked
 -------
@@ -310,7 +310,7 @@ A set in **Python** is defined with a pair of curly brackets ``{ }``.
 
 	emperors = { "Augustus", "Commodus", "Nero", "Hadrian" }
 	
-A :ref:`set variable <python_sets>` in **Python** is a special type of variable.  When you create a set, it won't distinguish between identical elements. In other words, *sets* do not allow duplicates. As an example,
+A :ref:`set variable <python-sets>` in **Python** is a special type of variable.  When you create a set, it won't distinguish between identical elements. In other words, *sets* do not allow duplicates. As an example,
 
 .. code:: python
 
@@ -391,7 +391,7 @@ b. Which manufacturers produce more *Battery Electric Vehicles (BEV)* than their
 Stacked
 -------
 
-1. Before starting this part of project, answer the following in a :ref:`python_docstring`: Based on the information provided in the :ref:`project-one-background` section, how would you expect the *conditional distribution* of **Clean Alternative Fuel Vehicle (CAFV) Eligibility** given the **Electric Vehicle Type** to look? Do you expect fully electric vehicles to have greater eligibility for tax credits than hybrid vehicles? Why or why not?
+1. Before starting this part of project, answer the following in a :ref:`python-docstring`: Based on the information provided in the :ref:`project-one-background` section, how would you expect the *conditional distribution* of **Clean Alternative Fuel Vehicle (CAFV) Eligibility** given the **Electric Vehicle Type** to look? Do you expect fully electric vehicles to have greater eligibility for tax credits than hybrid vehicles? Why or why not?
    
 2. Answer the following questions. Label any commands you use to solve the problem with comments. Write your answers in the :ref:`python-docstring` at the top of the script.
 
@@ -415,7 +415,7 @@ e. What percentage of "*Not eligible due to low battery range*" for **Clean Alte
 
 3. Using this information obtained in *#3* and any additional information required, create a stacked bar chart for the *conditional distribution* of the **Electric Vehicle Type** given the **Clean Alternative Fuel Vehicle (CAFV) Eligibility**.
 
-4. What does your stacked bar chart from #3 tell you about the *association* between the **Clean Alternative Fuel Vehicle (CAFV) Eligibility** and the **Electric Vehicle Type**? Write your answer in your script's :ref:`python_docstring` and label the problem.
+4. What does your stacked bar chart from #3 tell you about the *association* between the **Clean Alternative Fuel Vehicle (CAFV) Eligibility** and the **Electric Vehicle Type**? Write your answer in your script's :ref:`python-docstring` and label the problem.
 
 5. Write a few sentences explaining the results from #2 - #4. Did the result turn out the way you expected? Why or why not?
 

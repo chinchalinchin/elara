@@ -17,7 +17,7 @@ In order to do this, as you may have guessed, we will use **Python**; **Python**
 Instructions
 ============
 
-1. Download all **three** *csv* datasets in the :ref:`project_four_dataset` section and place them in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
+1. Download all **three** *csv* datasets in the :ref:`project-four-dataset` section and place them in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
 2. Create a Python ``.py`` script named ``NAME_project_four.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
 3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
 4. Read the :ref:`project-four-background` section.
@@ -107,7 +107,7 @@ The third and final dataset in this project is the Celebrity Twitter dataset. Th
 Bivariate Analysis
 ==================
 
-Before we begin, let's import all the appropriate libraries and create some dummy data to test out the bivariate functions Python's :ref:`statistics <python_stats_package>` package has available,
+Before we begin, let's import all the appropriate libraries and create some dummy data to test out the bivariate functions Python's :ref:`statistics <python-stats-package>` package has available,
 
 .. code:: python
 
@@ -177,7 +177,7 @@ Output:
 
 	correlation coefficient:  0.9195
 
-A correlation near 1 suggests a strong relationship. To establish statistical significance, we compare this sample and correlation coefficient against the :ref:`pearson-correlation-coefficient-table`. If the absolute value of the correlation coefficient is greater than the table value, we say there is a *statistically significant* correlation.
+A correlation near 1 suggests a strong relationship. To establish statistical significance, we compare this sample and correlation coefficient against the :ref:`pearson-correlation-table`. If the absolute value of the correlation coefficient is greater than the table value, we say there is a *statistically significant* correlation.
 
 We will explore *why* we compare the sample correlation to the table in a later chapter, we start talking about :ref:`sampling-distributions` and :ref:`statistical-significance`.
 
@@ -237,7 +237,7 @@ If you are following along, you should see the following graph when you execute 
 Residuals
 ---------
 
-The final step of the regression process is validating the model assumptions; in other words, we must check to make sure the distribution of residuals is approximately normal. In order to do this, we must first create a list containing the residuals. To create the list of residuals, we will use the :ref:`python_zip_function`. The ``zip()`` function allows us to iterate over two list simultaneously. The following code snippet steps over the ``predicted_y`` and ``y_data`` lists *at the same time*, grabbing elements with the same index along the way,
+The final step of the regression process is validating the model assumptions; in other words, we must check to make sure the distribution of residuals is approximately normal. In order to do this, we must first create a list containing the residuals. To create the list of residuals, we will use the :ref:`python-zip-function`. The ``zip()`` function allows us to iterate over two list simultaneously. The following code snippet steps over the ``predicted_y`` and ``y_data`` lists *at the same time*, grabbing elements with the same index along the way,
 
 .. code:: python
 
@@ -299,7 +299,7 @@ Correlation
 
 2. Calculate the total number of samples using the :ref:`python-length-function`. Label the calculation with a comment and print the number of samples to screen.
 
-3. Consult the :ref:`pearson-correlation-coefficient-table` and determine the critical value for a statistically significant correlation. In your :ref:`python_docstring`, answer the following question: Is the correlation between the **Eruption Length** and **Waiting Time** statistically significant?
+3. Consult the :ref:`pearson-correlation-table` and determine the critical value for a statistically significant correlation. In your :ref:`python-docstring`, answer the following question: Is the correlation between the **Eruption Length** and **Waiting Time** statistically significant?
 
 Regression
 **********
@@ -308,7 +308,7 @@ Regression
 
 2. In your :ref:`python-docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
 
-3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
+3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-strings` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
 
 .. hint::
 
@@ -353,7 +353,7 @@ Correlation
 
 2. Calculate the total number of samples using the :ref:`python-length-function`. Label the calculation with a comment and print the number of samples to screen.
 
-3. Consult the :ref:`pearson_correlation_coefficient_table` and determine the critical value for a statistically significant correlation. In your :ref:`python_docstring`, answer the following question: Is the correlation between the **Track Number** and **Song Length** statistically significant?
+3. Consult the :ref:`pearson-correlation-table` and determine the critical value for a statistically significant correlation. In your :ref:`python-docstring`, answer the following question: Is the correlation between the **Track Number** and **Song Length** statistically significant?
 
 Regression
 **********
@@ -362,7 +362,7 @@ Regression
 
 2. In your :ref:`python-docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
 
-3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
+3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-strings` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
 
 .. hint::
 
@@ -407,7 +407,7 @@ Correlation
 
 2. Calculate the total number of samples using the :ref:`python-length-function`. Label the calculation with a comment and print the number of samples to screen.
 
-3. Consult the :ref:`pearson-correlation-coefficient-table` and determine the critical value for a statistically significant correlation. In your :ref:`python-docstring`, answer the following question: Is the correlation between the **Tweet Count** and **Follower Count** statistically significant?
+3. Consult the :ref:`pearson-correlation-table` and determine the critical value for a statistically significant correlation. In your :ref:`python-docstring`, answer the following question: Is the correlation between the **Tweet Count** and **Follower Count** statistically significant?
 
 Regression
 **********
@@ -416,7 +416,7 @@ Regression
 
 2. In your :ref:`python-docstring`, interpret the meaning of the regression parameters in terms of the variables being observed.
 
-3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-string` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
+3. Using :ref:`matplotlib`'s ``plot()`` function, plot the regression line on top of the scatterplot. Label the line with a :ref:`python-strings` that contains the *Linear Regression Model* line of best fit. Make sure to display the legend on the graph.
 
 .. hint::
 

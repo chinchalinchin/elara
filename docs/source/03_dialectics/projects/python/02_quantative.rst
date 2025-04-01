@@ -166,7 +166,7 @@ As another (more complex) example, the following plot is a histogram generated w
 
 .. plot:: _scripts/py/plots/histograms/histogram_normal.py
 
-The sample in this graph was randomly generated using a combination of the :ref:`range() function <python-range-function>` and the :ref:`random() function <python-random_package>`.
+The sample in this graph was randomly generated using a combination of the :ref:`range() function <python-range-function>` and the :ref:`random() function <python-random-package>`.
 
 The line you want to pay attention in the script you just downloaded is,
 
@@ -264,7 +264,7 @@ To create a **CDF**, all we have to do is pass in two extra arguments to ``hist(
 Boxplots
 --------
 
-Recall a *boxplot* is a way of visualizing the *spread*, or *variation* of a distribution. In order to create one, a boxplot requires the :ref:`five_number_summary` of the distribution. The five sample statistics that are required are as follows,
+Recall a *boxplot* is a way of visualizing the *spread*, or *variation* of a distribution. In order to create one, a boxplot requires the :ref:`five-number-summary` of the distribution. The five sample statistics that are required are as follows,
 
 1. :ref:`maximum <maximum>`
 2. :ref:`first quartile <special-percentiles>`
@@ -444,7 +444,7 @@ Velocity of Light
 Density of the Earth 
 --------------------
 
-1. Load the :ref:`Density of the Earth <project-two-dataset>` data into a :ref:`Python Script <python-scripts>` using the tecnique outlined in the :ref:`project_two_loading_data` section.
+1. Load the :ref:`Density of the Earth <project-two-dataset>` data into a :ref:`Python Script <python-scripts>` using the tecnique outlined in the :ref:`project-two-loading-data` section.
 
 2. Construct a histogram plot for this dataset using eight classes. Answer the following questions in the body of your :ref:`python-docstring`.
 

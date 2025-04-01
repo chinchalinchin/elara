@@ -251,7 +251,7 @@ The graph below displays the results of this code snippet,
 
 .. plot:: _scripts/py/plots/other/qq_plot_example.py
 
-.. _project_three_project:
+.. _project-three-project:
 
 Project
 =======
@@ -447,7 +447,7 @@ Velocity of Light Data
 
 	You may already have this dataset downloaded into your *Linux Files* directory from when we did :ref:`project-two`.
 
-You can download the full dataset :download:`here <../../../_static_/csv/datasets/scientific/velocity-of-light-data.csv>`.
+You can download the full dataset :download:`here <../../../_static/csv/datasets/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 

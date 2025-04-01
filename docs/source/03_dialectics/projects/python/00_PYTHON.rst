@@ -40,7 +40,7 @@ In the last decade, **Python** has become the go-to tool for conducting data ana
 
 .. image:: ../../../_static/img/python/python-doc-search.png
 
-In addition, you can refer to the :ref:`python-reference` section on this web site, where you will find some resources dedicated to the topics in this class.
+In addition, you can refer to the :ref:`python` section on this web site, where you will find some resources dedicated to the topics in this class.
 
 .. _project-zero-project:
 

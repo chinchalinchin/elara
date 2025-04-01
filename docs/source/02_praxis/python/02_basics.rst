@@ -275,7 +275,7 @@ Output:
 Arithmetical Operations
 =======================
 
-Most of the arithmetical operations in **Python** are exactly what you would expect them to be. The only operation whose symbol may be surprising is :ref:`python_exponentiation`.
+Most of the arithmetical operations in **Python** are exactly what you would expect them to be. The only operation whose symbol may be surprising is :ref:`python-exponentiation`.
 
 .. _python-addition:
 
@@ -383,14 +383,14 @@ Output:
     
     False 
 
-This example is contrived to illustrate the operator and how it works, but in practice, the *equivalence* operator will be used in conjunction with :ref:`python_list_filtering` to parse data sets. It will also pop up again once we introduce :ref:`python_control_structures`.
+This example is contrived to illustrate the operator and how it works, but in practice, the *equivalence* operator will be used in conjunction with :ref:`python-list-comprehension` to parse data sets. It will also pop up again once we introduce :ref:`python-control-structures`.
 
 .. _python-list-operations:
 
 List Operations
 ===============
 
-The operations in the previous section dealt with :ref:`python_floats` and :ref:`python_integers`. In other words, the operations in the last section applied to numbers. **Python** has many operations that can be applied specifically to :ref:`python_lists`.
+The operations in the previous section dealt with :ref:`python-floats` and :ref:`python-integers`. In other words, the operations in the last section applied to numbers. **Python** has many operations that can be applied specifically to :ref:`python-lists`.
 
 .. _python-list-slicing:
 
@@ -425,7 +425,7 @@ The commands above will print to screen the elements starting at the second inde
 
 In other words, if you execute the given commands, you will see the list ``['b', 'c']`` print to screen. 
 
-Try to figure out what the next example will print to screen before pasting it into an :ref:`IDLE notebook <python_idle>`,
+Try to figure out what the next example will print to screen before pasting it into an :ref:`IDLE notebook <python-idle>`,
 
 .. code:: python 
 

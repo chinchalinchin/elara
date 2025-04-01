@@ -41,7 +41,7 @@ Scatter Plot of Twitter Data
 
 This script shows how to parse a CSV file and then create a scatter plot with it. To execute this script, you will need to download the Twitter dataset from :ref:`datasets` section and place it in the same folder where you download this script.
 
-This dataset is an example of :ref:`negative <negative_correlation>`, :ref:`non-linear <non_linear_correlation>` correlation. In other words, even though there is clearly a correlation in this dataset, we cannot use linear regression to fit a model.
+This dataset is an example of :ref:`negative <negative-correlation>`, :ref:`non-linear <non-linear-correlation>` correlation. In other words, even though there is clearly a correlation in this dataset, we cannot use linear regression to fit a model.
 
 :download:`Twitter Data Scatter Plot <../../_scripts/py/statistics/scatter_plot.py>`
 
@@ -50,14 +50,14 @@ Die Roll Simulation
 
 This script will simulate rolling ``m`` die ``n`` times. The outcome of the ``m`` die rolls is then summed and a frequency distribution is created for the ``n`` experiments. The frequency distribution is visualized with a histogram. 
 
-The intent is show how the random variation of :ref:`independent <independence>`, identically distributed :ref:`random variables <random_variables>` leads naturally to the normal distribution. This result is known as :ref:`central_limit_theorem`
+The intent is show how the random variation of :ref:`independent <independence>`, identically distributed :ref:`random variables <random-variables>` leads naturally to the normal distribution. This result is known as :ref:`central-limit-theorem`
 
 :download:`Die Roll Simulations <../../_scripts/py/statistics/die_rolls.py>`
 
 Normal Distribution
 -------------------
 
-This script shows how to work with the normal distribution in **Python**. It demonstrates how to calculate percentiles and probabilities. It also demonstrates how the symmetry of the :ref:`normal_distribution` manifests numerically via the :ref:`law_of_complements`.
+This script shows how to work with the normal distribution in **Python**. It demonstrates how to calculate percentiles and probabilities. It also demonstrates how the symmetry of the :ref:`normal-distribution` manifests numerically via the :ref:`law-of-complements`.
 
 :download:`Normal Distribution <../../_scripts/py/statistics/normal_probabilities.py>`
 

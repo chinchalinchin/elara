@@ -11,7 +11,7 @@ Set Variables
 
 A set is an *unordered* collection of variables. By *unordered* it is meant a set that contains *a* and *b* is considered the same as a set that contains *b* and *a*. 
 
-A set is defined in **Python** using the familiar :math:`\{ \}` :ref:`list_notation`,
+A set is defined in **Python** using the familiar :math:`\{ \}` :ref:`list-notation`,
 
 .. code:: python
 
@@ -40,7 +40,7 @@ Set Operations
 Cardinality
 -----------
 
-The :ref:`cardinality` of a set is found by calculating its :ref:`length <python_builtin_functions>`,
+The :ref:`cardinality` of a set is found by calculating its :ref:`length <python-builtin-functions>`,
 
 .. code:: python 
 

@@ -1,4 +1,4 @@
-.. _calculator_project_one:
+.. _calculator-project_one:
 
 ===========
 Correlation
@@ -10,41 +10,41 @@ Correlation
 	
 	-- Gottlob Frege, Begriffsschrift
 
-.. _calculator_project_one_instructions:
+.. _calculator-project-one-instructions:
 
 Instructions
 ============
 
-1. Read the :ref:`calculator_project_one_background` section.
+1. Read the :ref:`calculator-project-one-background` section.
 
-2. Read the :ref:`calculator_project_one_correlation_function` section. Follow along with the instructions in that section. Watch the accompanying video at the end of the section. Type each command as shown into your calculator to create the **CORREL** function. 
+2. Read the :ref:`calculator-project-one-correlation-function` section. Follow along with the instructions in that section. Watch the accompanying video at the end of the section. Type each command as shown into your calculator to create the **CORREL** function. 
 
-3. Read the :ref:`calculator_project_one_sse_function` section. Carefully read the **SSE** function requirements. Create the indicated function so that it fulfills the given requirements.
+3. Read the :ref:`calculator-project-one-sse-function` section. Carefully read the **SSE** function requirements. Create the indicated function so that it fulfills the given requirements.
 
 4. On the project due date, plug your calculator into the ViewSonic in the classroom and export your programs for grading. At the end of the project, you should have two functions **CORREL** and **SSE**. These functions must satisfy the requirements given in each of the sections below.
 
-.. _calculator_project_one_background:
+.. _calculator-project-one-background:
 
 Background
 ==========
 
 TODO
 
-.. _calculator_project_one_ti_basic:
+.. _calculator-project-one-ti-basic:
 
 TI Basic
 --------
 
 TODO
 
-.. _calculator_project_one_bivariate_statistics:
+.. _calculator-project-one-bivariate-statistics:
 
 Bivariate Statistics
 --------------------
 
 TODO
 
-.. _calculator_project_one_correlation:
+.. _calculator-project-one-correlation:
 
 Correlation
 ***********
@@ -57,7 +57,7 @@ TODO
 	
 TODO
 
-.. _calculator_project_one_sse:
+.. _calculator-project-one-sse:
 
 SSE
 ***
@@ -71,14 +71,14 @@ TODO
 TODO
 
 
-.. _calculator_project_one_correlation_function:
+.. _calculator-project-one-correlation-function:
 
 Correlation Function
 ====================
 
 TODO
 
-.. _calculator_project_one_video:
+.. _calculator-project-one-video:
 
 Video
 -----
@@ -89,7 +89,7 @@ The following video walks you through creating the **CORREL** function on your c
 	:alt: Correlation
 	:target: https://www.youtube.com/watch?v=6xtN2i2FbsQ
 
-.. _calculator_project_one_sse_function:
+.. _calculator-project-one-sse-function:
 
 SSE Function
 ============
@@ -98,7 +98,7 @@ TODO
 
 .. topic:: SSE Function Requirements
 
-	1. The function should run the :ref:`calculator_linreq` program and store the line of best fit.
+	1. The function should run the :ref:`calculator-linreg` program and store the line of best fit.
 	
 	2. The function should calculate the residuals of the stored Linear Regression model.
 	

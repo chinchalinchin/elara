@@ -230,7 +230,7 @@ Use the Binomal Probability Density Function to answer the following questions.
 	
 4. **Normal Approximation**
 
-The :ref:`normal_distribution` can be used to approximate the Binomal Distribution under certain conditions. These conditions are given below for quick reference,
+The :ref:`normal-distribution` can be used to approximate the Binomal Distribution under certain conditions. These conditions are given below for quick reference,
 
 .. topic:: Conditions for Binomial Approximation
    
@@ -408,7 +408,7 @@ Normal Distribution
 	
 4. **The Empirical Rule**
 
-Since the Z-Table is the cumulative distribution function for the Standard Normal distribution, The :ref:`empirical_rule` can be derived through a Z-table. Recall the :ref:`empirical_rule` states,
+Since the Z-Table is the cumulative distribution function for the Standard Normal distribution, The :ref:`empirical-rule` can be derived through a Z-table. Recall the :ref:`empirical-rule` states,
 
 .. topic:: Empirical Rule
 
