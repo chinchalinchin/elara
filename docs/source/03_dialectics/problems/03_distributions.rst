@@ -1,8 +1,8 @@
 .. _probability-distribution-problems:
 
----------------------------------
-Probability Distribution Problems
----------------------------------
+-------------------------
+Probability Distributions
+-------------------------
 
 .. _geometric-problems:
 

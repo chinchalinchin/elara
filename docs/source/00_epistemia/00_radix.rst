@@ -116,34 +116,29 @@
 .. _on-the-origin-of-the-world: http://www.gnosis.org/naghamm/origin.html
 .. _white-yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
 
+.. textbooks
+
+.. _libretext-fundamental-methods-of-logic: https://human.libretexts.org/Bookshelves/Philosophy/Fundamental_Methods_of_Logic_(Knachel)
+.. _openstax-contemporary-mathematics: https://openstax.org/details/books/contemporary-mathematics
+.. _openstax-introductory-statistics: https://openstax.org/details/books/introductory-statistics
+.. _openstax-statistics: https://openstax.org/details/books/statistics
+
+.. websites
+
+.. _noble-statman: https://noblestatman.com/index.html
+.. _random-services: https://www.randomservices.org/
+.. _spurious-correlations: https://www.tylervigen.com/spurious-correlations
+
 .. _radix:
 
 Radix
 =====
 
-.. _references:
+.. _archives:
 
-----------
-References
-----------
-
-.. _all-poetry-com:
-
-allpoetry.com
--------------
-
-- `All All and All <all-all-and-all>`_
-- `And Death Shall Have No Dominion <and-death-shall-have-no-dominion>`_
-- `Find Meat On Bones <find-meat-on-bones>`_
-- `How Great My Grief <how-great-my-grief>`_
-- `I Have Longed To Move Away <i-have-longed-to-move-away>`_
-- `I Met a Genius <i-met-a-genius>`_
-- `Mad Girl's Love Song <mad-girls-love-song>`_
-- `The Genius of the Crowd <the-genius-of-the-crowd>`_
-- `The Hollow Men <the-hollow-men>`_
-- `Ouija <ouija>`_
-- `Sestina <sestina-bishop>`_
-- `Sestina: Travel Notes <sestina-travel-notes>`_
+--------
+Archives
+--------
 
 .. _archive-org:
 
@@ -207,6 +202,44 @@ gutenberg.org
 - `World as Will and Representation <world-as-will-and-representation-v2>`_
 - `A Budget of Paradoxes <a-budget-of-paradoxes>`_
 
+.. _various:
+
+Various
+-------
+
+- `An essay towards solving a problem in the doctrine of chances <doctrine-of-chance>`_
+- `Being and Event <being-and-event>`_
+- `Function and Concept <function-and-concept>`_
+- `On Concept and Object <on-concept-and-object>`_
+- `On The Origin of the World <on-the-origin-of-the-world>`_
+- `The Concept of Truth in Formalized Languages <the-concept-of-truth>`_
+- `What Is Metaphysics? <what-is-metaphysics>`_
+- `Wittgenstein Lectures <wittgenstein-lectures>`_
+
+.. _poetry:
+
+------
+Poetry
+------
+
+.. _all-poetry-com:
+
+allpoetry.com
+-------------
+
+- `All All and All <all-all-and-all>`_
+- `And Death Shall Have No Dominion <and-death-shall-have-no-dominion>`_
+- `Find Meat On Bones <find-meat-on-bones>`_
+- `How Great My Grief <how-great-my-grief>`_
+- `I Have Longed To Move Away <i-have-longed-to-move-away>`_
+- `I Met a Genius <i-met-a-genius>`_
+- `Mad Girl's Love Song <mad-girls-love-song>`_
+- `The Genius of the Crowd <the-genius-of-the-crowd>`_
+- `The Hollow Men <the-hollow-men>`_
+- `Ouija <ouija>`_
+- `Sestina <sestina-bishop>`_
+- `Sestina: Travel Notes <sestina-travel-notes>`_
+
 .. _poetry-foundation-org:
 
 poetryfoundation.org
@@ -246,22 +279,41 @@ poetryfoundation.org
 - `Tonight <tonight>`_
 - `We Wear The Mask <we-wear-the-mask>`_
 
-.. _various:
-
 Various
 -------
 
-- `An essay towards solving a problem in the doctrine of chances <doctrine-of-chance>`_
-- `Being and Event <being-and-event>`_
 - `Calidore: A Fragment <calidore-a-fragment>`_
-- `Function and Concept <function-and-concept>`_
 - `July <july>`_
 - `Little Gidding <little-gidding>`_
 - `Lord Thomas and Annet <lord-thomas-and-annet>`_
-- `On Concept and Object <on-concept-and-object>`_
 - `On The Grasshopper and Cricket <on-the-grasshopper-and-cricket>`_
-- `On The Origin of the World <on-the-origin-of-the-world>`_
 - `Tam Lin <tam-lin>`_
-- `The Concept of Truth in Formalized Languages <the-concept-of-truth>`_
-- `What Is Metaphysics? <what-is-metaphysics>`_
-- `Wittgenstein Lectures <wittgenstein-lectures>`_
+
+---------
+Textbooks
+---------
+
+.. _libretext:
+
+LibreText
+---------
+
+- `Fundamental Methods of Logic <libretext-fundamental-methods-of-logic>`_
+
+.. _openstax:
+
+OpenStax
+--------
+
+- `Contemporary Mathematics, 1st Edition <openstax-contemporary-mathematics>`_
+- `Introductory Statistics Textbook, 1st Edition <openstax-introductory-statistics>`_
+- `Statistics Textbook, 1st Edition <openstax-statistics>`_
+
+.. _web_references:
+
+Websites
+========
+
+- `noblestatman.com <noble-statman>`_
+- `randomservices.com <random-services>`_
+- `tylervigen.com/spurious-correlation <spurious-correlations>`_

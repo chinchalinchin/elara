@@ -19,14 +19,14 @@ Definition
 
 TODO
 
-.. _truth_values:
+.. _truth-values:
 
 Truth Values
 ------------
 
 TODO
 
-.. _logic_operations:
+.. _logic-operations:
 
 Operations
 ==========
@@ -140,7 +140,7 @@ Logical implication can be expressed in terms of the other logical connectives i
 
 TODO
 
-.. _truth_tables:
+.. _truth-tables:
 
 Truth Tables
 ============
@@ -189,7 +189,7 @@ Quantification
 
 TODO
 
-.. _universal_quantification:
+.. _universal-quantification:
 
 Universal Quantification
 ------------------------
@@ -208,7 +208,7 @@ This type of proposition can be translated into English in the following ways,
 
 TODO
 
-.. _existential_quantification:
+.. _existential-quantification:
 
 Existential Quantification
 --------------------------
@@ -225,12 +225,12 @@ This type of proposition can be translated into English in the following ways,
 2. "for some *p*, *q*"
 3. "there is a *p* that *q*"
 
-.. _logical_inference:
+.. _logical-inference:
 
 Logical Inference
 =================
 
-.. _law_of_detachment:
+.. _law-of-detachment:
 
 Law of Detachment
 -----------------
@@ -243,7 +243,7 @@ The *Law of Detachment* is a symbolic representation of deductive logic. The tru
 	 
 TODO
 
-.. _modus_ponens:
+.. _modus-ponens:
 
 .. note::
 

@@ -93,7 +93,7 @@ The reason it is called *geometric* can be easily seen if we give ``r`` a value.
 
 Each term on the right hand side can be identified with the areas of successive squares in the following picture,
 
-.. image:: ../../_static/img/math/geometric_series.png
+.. image:: ../../_static/img/math/geometric-series.png
     :align: center
     
 .. _geometric-expectation:

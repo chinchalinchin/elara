@@ -110,7 +110,7 @@ Anaphora
 
     War on the destiny of man! 
 
-    -- `Find Meat On Bones <find-meat-on-bones>`_, Dylan Thomas
+    -- `Find Meat On Bones <find-meat-on-bones>`_ , Dylan Thomas
 
 
     Why were they proud? Because their marble founts
@@ -288,7 +288,7 @@ Epanalepsis
 
     And the man no rope can hang
 
-    -- `Find Meat On Bones <find-meat-on-bone>`_, Dylan Thomas
+    -- `Find Meat On Bones <find-meat-on-bones>`_ , Dylan Thomas
 
 .. _epistrophe: 
 

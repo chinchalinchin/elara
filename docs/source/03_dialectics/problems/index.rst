@@ -7,4 +7,7 @@ Problem Sets
    :maxdepth: 2
    :caption: Contents:
 
-   00_distributions
+   00_algebra
+   01_sets
+   02_calculus
+   03_distributions
