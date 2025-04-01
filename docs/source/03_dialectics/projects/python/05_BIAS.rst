@@ -15,7 +15,7 @@ In this lab, you will perform some graphical analysis on a famously biased data 
 Instructions
 ============
 
-1. Download the *csv* dataset in the :ref:`project-five-dataset` section and place it in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
+1. Download the *csv* dataset in the :ref:`project-five-datasets` section and place it in the ``Linux Files`` folder on your folder system where you save your ``.py`` scripts.
 2. Create a Python ``.py`` script named ``NAME_project_five.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``NAME`` with your name.
 3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
 4. Read the :ref:`project-five-background` section.
@@ -57,7 +57,7 @@ Loops
 
 Loops are a :ref:`control structure <python-control-structures>` that allow us to organize the flow a program. We have actually encountered loops many times already. We are using loops whenever we write,
 
-.. code:: python:
+.. code:: python
 
 	data = [ (0,1), (1,2), (2,3), (3,4) ]
 	x_var = [ obs[0] for obs in data ]
@@ -164,7 +164,7 @@ This selection method was later revised in 1970, 1971 and 1972, once the distrib
    
 5. Discuss the results. Was the draft lottery fair? If not, why not? If so, why? Justify your answer with sample statistics.
 
-.. _project-five-dataset:
+.. _project-five-datasets:
 
 Dataset
 =======

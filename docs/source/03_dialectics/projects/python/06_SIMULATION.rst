@@ -225,7 +225,7 @@ Project
 	e. In the :ref:`docstring <python-docstring>`, answer the following question: What happens to the variation in the simulation distribution as you increase the number of simulations?
 
 
-3. Consider the experiment of rolling 10 six-sided die. Using the techniques described in the :ref:`project_six_background` section, simulate 10 rolls of a six-sided die. Perform the simulation 500 times.
+3. Consider the experiment of rolling 10 six-sided die. Using the techniques described in the :ref:`project-six-background` section, simulate 10 rolls of a six-sided die. Perform the simulation 500 times.
 
 .. hint::
 

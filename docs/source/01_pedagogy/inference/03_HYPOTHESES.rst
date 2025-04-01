@@ -69,6 +69,13 @@ Decisions
 
 TODO
 
+.. _statistical-significance:
+
+Statistical Significance
+------------------------
+
+TODO 
+
 .. _type-i-errors:
 
 Type I Errors

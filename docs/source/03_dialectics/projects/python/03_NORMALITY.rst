@@ -14,7 +14,7 @@ Normality
 
 The averaging effect of the :ref:`Central Limit Theorem <central-limit-theorem>` is more pronounced when the population being sampled is itself Normal (in mathematical terms, we say the *sample distribution converges to the population distribution* more quickly when the population is Normal); This assumption is not required, though. Any population distribution can be transformed into a Normal distribution by averaging observations drawn from its pool of outcomes. Recall the die roll simulation from class, where a uniformly distributed population became Normal when observations were averaged. 
 
-For this reason, we are often interested in determining whether a given population is normally distributed. In this project, we will learn how to perform :ref:`normal-calculations` using :ref:`Python <python>`. Using these techniques, we will compare theoretically determined population parameters to empirically determined sample statistics in order to see how the Normal Distribution can be used to model population distributions. 
+For this reason, we are often interested in determining whether a given population is normally distributed. In this project, we will learn how to perform :ref:`normal-calculations` using :ref:`Python reference <python-reference>`. Using these techniques, we will compare theoretically determined population parameters to empirically determined sample statistics in order to see how the Normal Distribution can be used to model population distributions. 
 
 Instructions
 ============

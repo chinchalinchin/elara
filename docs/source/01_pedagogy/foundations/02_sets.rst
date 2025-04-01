@@ -470,6 +470,13 @@ The operation of subtracting a set :math:`B` from a set :math:`A` is equivalent 
 
 	A - B = A \cap B^c
 
+.. _cartesian-product:
+
+Cartesian Product
+-----------------
+
+TODO 
+
 .. _set-theorems:
 
 --------

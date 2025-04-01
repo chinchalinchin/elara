@@ -1,4 +1,4 @@
-.. _python_projects:
+.. _python-projects:
 
 Python Projects
 ===============

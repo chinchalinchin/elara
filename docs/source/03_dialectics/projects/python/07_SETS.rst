@@ -21,6 +21,8 @@ Instructions
 7. When you are done, zip your script in a zip file named ``LASTNAME_FIRSTNAME_project_seven.zip``
 8. Upload the zip file to the Google Classroom Project Seven Assignment.
 
+.. _project-seven-background:
+
 Background
 ==========
 
@@ -116,7 +118,7 @@ The key point is: we are *nesting* a list iteration within another list iteratio
         
 Note that in this example, since **A** is the set of pets and **B** is the set of owners, we can interpret :math:`A x B` as the set of all the possible :ref:`combinations` of pet owners. 
 
-.. _project_seven_project:
+.. _project-seven-project:
 
 Project
 =======

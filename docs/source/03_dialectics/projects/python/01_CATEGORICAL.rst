@@ -27,7 +27,7 @@ Instructions
 8. Read the :ref:`project-one-set-operations` section. 
 9. Load in the data from the ``.csv`` file using the technique outlined in the :ref:`project-three-loading-data` section. (We will do this part in class!)
 10. Perform all exercises and answer all questions in the :ref:`project-one-project` section. Label your script with comments as indicated in the *Project* section.
-11. Keep in mind, there is a section dedicated to :ref:`python-plotting` underneath the :ref:`<python>` on the left-hand menu of the site.
+11. Keep in mind, there is a section dedicated to :ref:`python-plotting` underneath the :ref:`python-reference` on the left-hand menu of the site.
 12. When you are done, zip your script **and** your *csv* file into a file named ``NAME_project_one.zip``
 13. Upload the zip file to the Google Classroom Project One Assignment.
 

@@ -19,12 +19,12 @@ Instructions
 1. Create a Python ``.py`` script named ``LASTNAME_FIRSTNAME_project_eight.py`` in your ``Linux Files`` folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace ``LASTNAME`` and ``FIRSTNAME`` with your last and first name, respectively.
 3. Create a :ref:`docstring <python-docstring>` at the very top of the script file. Keep all written answers in this area of the script.
 4. Read the :ref:`project-eight-background` section.
-5. Perform all exercises and answer all questions in the :ref:`project-eight-=project` section. Label your script with comments as indicated in the instructions of each problem.
+5. Perform all exercises and answer all questions in the :ref:`project-eight-project` section. Label your script with comments as indicated in the instructions of each problem.
 6. When you are done, zip your script **and** the *csv* file in a zip file named ``LASTNAME_FIRSTNAME_project_eight.zip``
 7. Upload the zip file to the Google Classroom Project Four Assignment.
 
 
-.. _project_eight_background:
+.. _project-eight-background:
 
 Background
 ==========
@@ -32,7 +32,7 @@ Background
 Integration
 -----------
 
-In calculus, *integration* is a technique for finding the area under a curve :math:`f(x)`. *Monte Carlo Simulation* gives us an alternative way of approaching the same set of problems. According to the :ref:`classical-definition`,
+In calculus, *integration* is a technique for finding the area under a curve :math:`f(x)`. *Monte Carlo Simulation* gives us an alternative way of approaching the same set of problems. According to the :ref:`classical-definition-of-probability`,
 
 .. math::
 
@@ -60,7 +60,6 @@ Due to the Law of Large Numbers, as the number of simulations increases, the app
 .. image:: ../../../_static/img/math/statistics/monte-carlo-pi-10000.png
     :align: center
     
-
 Areas Under Curves
 ******************
 
