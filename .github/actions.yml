@@ -1,6 +1,6 @@
-name: Valis Code Review
+name: Mitlon Code Review
 
-description: Have Valis review your code.
+description: Have Milton review your code.
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   valis:
-    uses: chinchalinchin/github-workflows/.github/workflows/gemini-review.yml@your_branch # Adjust with your details
+    uses: chinchalinchin/github-workflows/.github/workflows/gemini-review.yml@master
     with:
       BRANCH: ${{ github.event.pull_request.head.ref }}
       VERSION: '0.1.0' 
