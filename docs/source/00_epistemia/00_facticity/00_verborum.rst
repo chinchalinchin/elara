@@ -330,11 +330,11 @@ Hysteron Proteron
 
     Let us die, and rush into the midst of the fight. 
     
-    -- `Aeneid <aeneid>`, Virgil, 19 BCE
+    -- `Aeneid <aeneid>`_, Virgil, 19 BCE
 
     I will kill thee, and love thee after. 
 
-    -- `Othello <othelloa>`, William Shakespeare
+    -- `Othello <othello>`_, William Shakespeare
 
 .. _metonymy:
 

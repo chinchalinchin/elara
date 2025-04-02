@@ -50,8 +50,8 @@ Given below are existing definitions of poetical devices.
 **Constants**
 
 1. Uppercase English letters (A, B, C, ... ): Fixed lines.
-3. Uppercase Coptic letters (Ⲁ, Ⲃ, Ⲅ , ... ): Fixed words.
-2. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
+2. Uppercase Coptic letters (Ⲁ, Ⲃ, Ⲅ , ... ): Fixed words.
+3. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
 4. The lowercase English letter n is reserved for natural numbers.
 5. The lowercase Fraktur letter 𝔦 is reserved for iambs.
 6. The lowercase Fraktur letter 𝔱 is reserved for trochees.
@@ -75,57 +75,64 @@ Given below are existing definitions of poetical devices.
 
     Upper English letters are meant to denote particular lines, whereas lowercase English letters are meant to denote indeterminate lines that are related through their rhyme scheme. 
 
-.. important::
+.. note::
 
-    The choice of π and Π to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, π is meant to represent indeterminate unstressed syllables, whereas Π is meant to represent indeterminate stressed syllables. However, π is often used in a more general capacity, when the indeterminate syllable could be one that is either stressed or unstressed. It will be clear from context when π is employed in this manner. 
+    The choice of ⲡ and Ⲡ to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, ⲡ is meant to represent indeterminate unstressed syllables, whereas Ⲡ is meant to represent indeterminate stressed syllables. 
 
-The variables *x*, *y* and *z* will sometimes be referred to as *syntagmic variables*, or *signs*, to stress their range over the entire domain of poetic objects. 
+The variables will sometimes be referred to as *syntagmic variables*, or *signs*. 
 
 Uppercase-lowercase pairs of English letters are understood to be rhymes. The difference in the symbolism is the *fixed* nature of the denotation. For example, the expression *A.a.a.A* denotes one fixed line, a rhyming couplet and then the fixed line again,
 
-    The cat on the mat
-    Got large and fat
-    So-and-so such that 
-    The cat on the mat
+    | The cat on the mat
+    | Got large and fat
+    | So-and-so such that 
+    | The cat on the mat
 
 The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. For example, in the expression "*a.b.a + a.b.a*", the rhyme in "*a*" within the first stanza does not extend to the rhyme in "*a*" within the second stanza. 
 
 **Notation**
 
-1. #x: A lengthened sign. 
-2. ♭x: A shortened sign.  
-3. x.y (**Succession**): Successive signs.
-4. x-y (**Concatenation**): Concatenated signs.
-5. x:y (**Delimitation**): Delimited signs.
-6. x ∨ y (**Disjunction**): A sign that is either x or y.
-7. x + y (**Separation**): Separated signs.
-8. x∝λ : Sign containing a word. 
-9. x(λ) : A sign ending in a word.  
-10. (λ)x: A sign beginning with a word. 
-11. x(ⲡ): A sign ending in a syllable.
-12. (ⲡ)x: A sign starting with a syllable
-13. x.y.x | x = z: Substitute z for x in the sign "x.y.x"
+1. x.y (**Succession**): Successive signs.
+2. x-y (**Concatenation**): Concatenated signs.
+3. x:y (**Delimitation**): Delimited signs.
+4. x ∨ y (**Disjunction**): A sign that is either x or y.
+5. x + y (**Separation**): Separated signs.
+6. x∝λ : Sign containing a word. 
+7. x(λ) : A sign ending in a word.  
+8. (λ)x: A sign beginning with a word. 
+9. x(ⲡ): A sign ending in a syllable.
+10. (ⲡ)x: A sign starting with a syllable
+11. x.y.x | x = z: Substitute z for x in the sign "x.y.x"
 
 Brackets, [], are used to group operations within expressions by precedence.
 
 To see what is meant by the distinction between *separation* and *succession*, let x = "*the fish in the dish*" and y = "*the dog on a jog*". Then x.y means,
 
-| the fish in the dish
-| the dog on a jog
+    | the fish in the dish
+    | the dog on a jog
 
 Where as x + y means,
 
-| the fish in the dish
-| 
-| the dog on a jog
+    | the fish in the dish
+    | 
+    | the dog on a jog
 
 From this, it can be see the operation of *successions* inserts a new line after the first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
+
+**Provisional Notation**
+
+1. #x: A lengthened sign. 
+2. ♭x: A shortened sign.  
+
+Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs. 
 
 **Shorthand**
 
 1. Summation: The connotation of the "+" symbol is leveraged to extend the symbolism to the "*Σ*" symbol, i.e.,
 
-    Σ :sub:`1`:sup:`n` x :sub:`i` 
+.. math::
+
+    \sum_1^{n} x_i
 
 Is meant to denote a series of signs separated by blank lines. 
 
@@ -139,7 +146,7 @@ Is meant to denote a series of signs separated by blank lines.
 ∀ς: ∃x: ς = x
     All stanzas are made of lines. 
 
-∀p: p  = Σ :sub:`1`:sup:`n` ς :sub:`i` 
+∀p: ∃n: p  = :math:`\sum_1^{n} \varsigma_i`
     All poems are made of stanzas. 
 
 **Examples**
@@ -183,7 +190,7 @@ For example,
 
 Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. In other words,
 
-    (a/𝔦 :sub:`4`) = ⲡ :sub:`1` -Ⲡ :sub:`1` -ⲡ :sub:`2` -Ⲡ :sub:`2` -ⲡ:sub:`3` -Ⲡ:sub:`3` -ⲡ :sub:`4` -Ⲡ :sub:`4`
+    (a/𝔦 :sub:`4`) = ⲡ :sub:`1` -Ⲡ :sub:`1` -ⲡ :sub:`2` -Ⲡ :sub:`2` -ⲡ :sub:`3` -Ⲡ :sub:`3` -ⲡ :sub:`4` -Ⲡ :sub:`4`
 
 Note in this example the first and third line rhyme. 
 The scope of a meter extends to everything contained in the parenthesis it marks. For example,
@@ -205,7 +212,7 @@ Ballad
 
 .. topic:: Schema
 
-    Σ :sub:`1`:sup:`n` (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a ∨ c/𝔦 :sub:`4`).(b/𝔦 :sub:`3`)
+    :math:`\sum_1^{n}` (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a ∨ c/𝔦 :sub:`4`).(b/𝔦 :sub:`3`)
 
 **References**
 
@@ -231,7 +238,7 @@ Ballade
 
 .. topic:: Schema (Chant Royal)
 
-    Σ :sub:`1`:sup:`5` a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E ∨ c.c.d.d.e.d.E
+    :math:`\sum_1^{5}` a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E ∨ c.c.d.d.e.d.E
 
 **References**
 
@@ -244,7 +251,7 @@ Kyrielle
 
 .. topic:: Schema 
 
-    Σ :sub:`1`:sup:`n` [ a.a.b.B ∨ a.A.b.b ]
+    :math:`\sum_1^{n}` [ a.a.b.B ∨ a.A.b.b ]
 
 **References**
 

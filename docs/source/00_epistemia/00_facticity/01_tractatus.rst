@@ -130,7 +130,7 @@ Being
 
   To be brief, I hold as axiomatic the identical proposition which varies only in emphasis: that what is not truly one :ref:`Seiendes <being>` is not truly *one* :ref:`Seiendes <being>` either.
 
-  -- `Letters <https://plato.stanford.edu/entries/leibniz-mind/>`, Gottfried Wilhelm Leibniz, 1687 AD
+  -- `Letters <https://plato.stanford.edu/entries/leibniz-mind/>`_, Gottfried Wilhelm Leibniz, 1687 AD
 
 .. epigraph::
 

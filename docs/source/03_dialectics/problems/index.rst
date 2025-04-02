@@ -10,4 +10,5 @@ Problem Sets
    00_algebra
    01_sets
    02_calculus
-   03_distributions
+   03_probability
+   04_distributions

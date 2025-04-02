@@ -157,7 +157,7 @@ archive.org
 - `Philosophical Investigations <philosophical-investigations>`_
 - `Principia Mathematica <principia-mathematica>`_
 - `Process and Reality <process-and-reality>`_
-- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <the-ballad-of-lord-thomas-and-fair-eleanor>`
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <the-ballad-of-lord-thomas-and-fair-eleanor>`_
 - `The Ballad of the Goodly Fere <the-ballad-of-the-goodly-fere>`_
 - `The Exegesis of Philip K. Dick <the-exegesis-of-philip-k-dick>`_
 - `The Myth of Sisyphus <the-myth-of-sisyphus>`_
@@ -256,7 +256,7 @@ poetryfoundation.org
 - `Hymn to God, My God, In My Sickness <hymn-to-god-my-god-in-my-sickness>`_
 - `Hyperion <hyperion>`_
 - `In Flanders Field <in-flanders-field>`_
-- `La Belle Dame Sans Merci <la-belle-dame-sans-merci>`
+- `La Belle Dame Sans Merci <la-belle-dame-sans-merci>`_
 - `Ode on a Grecian Urn <ode-on-a-grecian-urn>`_
 - `Ode to a Nightingale <ode-to-a-nightingale>`_
 - `Ode to the West Wind <ode-to-the-west-wind>`_

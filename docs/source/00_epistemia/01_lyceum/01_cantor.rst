@@ -3,9 +3,18 @@
 Cantor
 ======
 
+.. epigraph::
+
     Je le vois, mais je ne le crois pas!
 
     -- *Correspondence with Richard Dedekind*, Georg Cantor, 1877
+
+.. _calculus-of-the-infinite:
+
+Calculus of the Infinite
+------------------------
+
+TODO
 
 .. _transfinitude: 
 

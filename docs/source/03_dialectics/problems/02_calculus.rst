@@ -1,6 +1,11 @@
+.. _calculus-problems:
+
+--------
+Calculus
+--------
+
 .. _chain-rule-problems:
 
-----------
 Chain Rule 
 ----------
 
@@ -207,7 +212,6 @@ d. Is there a number :math:`c` in the closed interval :math:`[-5, -3]` such that
 
 .. _implicit-differentiation-problems:
 
-------------------------
 Implicit Differentiation
 ------------------------
 
@@ -364,9 +368,8 @@ c. Evaluate :math:`\frac{d^2 y}{dx^2}` at the point on the curve where :math:`x 
 
 .. _graphing-problems:
 
-========
 Graphing
-========
+--------
 
 1. **2023, Free Response, #5**
 
@@ -536,7 +539,6 @@ d. Let :math:`g` be a differentiable function such that :math:`g(\frac{\pi}{2})=
 
 .. _related-rates-problems:
 
--------------
 Related Rates
 -------------
 
@@ -551,7 +553,6 @@ a. Find a formula for :math:`\frac{dV}{dt}` in terms of *t*.
 b. How quickly is the water initially draining from the tank?
 
 c. How quickly is the water draining from the tank at :math:`t = 30 \text{minutes}`?
-
 
 
 2. In the theory of electrical circuits, *Ohm's Law* describe the relationship between the voltage *V* across a resistor, the electrical current *I* passing through the resistor, and a quantity *R* known as the resistance. The law can be written as follows:
@@ -608,9 +609,8 @@ b. At a certain instant, a particle with a charge of :math:`1.5 \mu C` is 20 cen
 
 .. _optimization_classwork:
 
-============
 Optimization
-============
+------------
 
 1. Find two positive numbers whose sum is 300 and whose product is a maximum.
 
@@ -690,11 +690,10 @@ You can swim at 2 mph and walk at 3 mph. You must first swim across the river to
 
 There are 50 apple trees in an orchard. Each tree produces 800 apples. For each additional tree planted in the orchard, the output per tree drops by 10 apples. How many trees should be added to the existing orchard in order to maximize the total output of trees ?
 
-.. _theorem-problems:
+.. _calculus-theorem-problems:
 
-========
 Theorems
-========
+--------
 
 .. topic:: Intermediate Value Theorem
 
