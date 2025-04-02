@@ -265,14 +265,14 @@ Sunshine Farms wants to know whether there is a difference in consumer preferenc
 
 	c. Let X represent the number of consumers in the sample who prefer Citrus Fresh. Assuming there is no difference in consumer preference, find the probability for each possible value of X. Record the x-values and the corresponding probabilities in the table below.
 
-.. image:: ../../_static/img/problems/2006_apstats_frp_formb_06.png
+.. image:: ../../_static/img/problems/2006-apstats-frp-formb-06.png
 	:align: center
 	
 7. **2003, Free Response, #3** 
 
 Men's shirt sizes are determined by their neck sizes. Suppose that men's neck sizes are approximately normally distributed with mean 15.7 inches and standard deviation 0.7 inch. A retailer sells men's shirts in sizes S, M, L, XL, where the shirt sizes are defined in the table below.
 
-.. image:: ../../_static/img/problems/2003_apstats_frp_3.png
+.. image:: ../../_static/img/problems/2003-apstats-frp-03.png
     :align: center
 
 Use this information to answer the following questions.
@@ -287,7 +287,7 @@ Use this information to answer the following questions.
 
 The graph below displays the relative frequency distribution for X, the total number of dogs and cats owned per household, for the households in a large suburban area. For instance, 14 percent of the households own 2 of these pets.
 
-.. image:: ../../_static/img/problems/2007_apstats_frp_formb_02.png
+.. image:: ../../_static/img/problems/2007-apstats-frp-formb-02.png
 	:align: center
 
 Use this information to solve the following problems.

@@ -14,3 +14,4 @@ Problem Sets
    04_probability
    05_distributions
    06_statistics
+   07_inference
