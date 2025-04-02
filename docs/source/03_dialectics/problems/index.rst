@@ -13,3 +13,4 @@ Problem Sets
    03_calculus
    04_probability
    05_distributions
+   06_statistics

@@ -1,4 +1,4 @@
-.. _project_one:
+.. _project-one:
 
 ==========
 Bar Charts 
