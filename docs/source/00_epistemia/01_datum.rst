@@ -31,19 +31,19 @@ Historical
 Linguistic
 ----------
 
-- English Palindromes
+- :ref:`English Palindromes <palindromia>`
     - :download:`English Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/english-palindromes.csv>`
-- Imperfect Palindromes
+- :ref:`Imperfect Palindromes <palindromia>`
     - :download:`Imperfect Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/imperfect-palindromes.csv>`
-- Latin Palindromes
+- :ref:`Latin Palindromes <palindromia>`
     - :download:`Latin Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/latin-palindromes.csv>`
-- Ambiguous Sentences
+- :ref:`Ambiguous Sentences <palindromia>`
     - :download:`Ambiguous Sentences CSV <../_static/csv/datasets/linguistic/sentences/ambiguous-sentences.csv>`
-- Ambiguous Words
+- :ref:`Ambiguous Words <palindromia>`
     - :download:`Ambiguous Words CSV <../_static/csv/datasets/linguistic/words/ambiguous-words.csv>`
-- Invertible Words
+- :ref:`Invertible Words <palindromia>`
     - :download:`Invertible Worlds CSV <../_static/csv/datasets/linguistic/words/invertible-words.csv>`
-- Reflective Words
+- :ref:`Reflective Words <palindromia>`
     - :download:`Reflective Words CSV <../_static/csv/datasets/linguistic/words/reflective-words.csv>`
 
 .. _scientific-datasets:

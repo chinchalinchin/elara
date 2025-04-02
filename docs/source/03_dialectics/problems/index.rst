@@ -8,7 +8,8 @@ Problem Sets
    :caption: Contents:
 
    00_algebra
-   01_sets
-   02_calculus
-   03_probability
-   04_distributions
+   01_logic
+   02_sets
+   03_calculus
+   04_probability
+   05_distributions

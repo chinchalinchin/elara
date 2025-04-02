@@ -76,10 +76,7 @@ Solve the following problems.
 	
 	c. Refer to *#4c*. What is the expected number of times Marty and Alvie fire before stopping?
 
-A.P. Exam Practice
-^^^^^^^^^^^^^^^^^^
-
-1. **2016, Free Response, #4**
+6. **2016, Free Response, #4**
 
 A company manufactures model rockets that require igniters to launch. Once an igniter is used to launch a rocket, the igniter cannot be reused. Sometimes an igniter fails to operate correctly, and the rocket does not launch. The company estimates that the overall failure rate, defined as the percent of all igniters that fail to operate correctly, is 15 percent.
 
@@ -99,7 +96,7 @@ Step 2 is repeated until the process stops. The process stops when a super ignit
 
 	c. Given that the first 30 super igniters successfully launch rockets, is it reasonable to believe that the failure rate of the super igniters is less than 15 percent? Explain.
 
-2. **2011, Free Response, #3**
+7. **2011, Free Response, #3**
 
 .. warning::
 
@@ -246,10 +243,7 @@ Use these conditions to determine whether the following Binomial Random Variable
 	
 	c. A Boeing 767-300 aircraft has 213 seats. When someone buys a ticket for a flight there is a 0.0995 probability that the person will not show up for the flight. A ticket agent accepts 236 reservations for a flight that uses a Boeing 767-300. Find the probability that not enough seats will be available. Is this probability low enough so that overbooking is not a real concern? If not, how many tickets should be sold so that the probability is less than 10% that at least one person will not have a seat?
 	
-A.P. Exam Practice
-^^^^^^^^^^^^^^^^^^
-
-1. **2004, Free Response, #3**
+5. **2004, Free Response, #3**
 
 At an archaeological site that was an ancient swamp, the bones from 20 brontosaur skeletons have been unearthed. The bones do not show any sign of disease or malformation. It is thought that these animals wandered into a deep area of the swamp and became trapped in the swamp bottom. The 20 left femur bones (thigh bones) were located and 4 of these left femurs are to be randomly selected without replacement for DNA testing to determine gender.
 
@@ -261,7 +255,7 @@ At an archaeological site that was an ancient swamp, the bones from 20 brontosau
 
 	d. Is it reasonable to generalize your conclusion in *part c* pertaining to the group of 20 brontosaurs to the population of all brontosaurs? Explain why or why not.
 
-2. **2006, Free Response Form B, #6**
+6. **2006, Free Response Form B, #6**
 
 Sunshine Farms wants to know whether there is a difference in consumer preference for two new juice products—Citrus Fresh and Tropical Taste. In an initial blind taste test, 8 randomly selected consumers were given unmarked samples of the two juices. The product that each consumer tasted first was randomly decided by the flip of a coin. After tasting the two juices, each consumer was asked to choose which juice he or she preferred, and the results were recorded.
 
@@ -274,7 +268,7 @@ Sunshine Farms wants to know whether there is a difference in consumer preferenc
 .. image:: ../../_static/img/problems/2006_apstats_frp_formb_06.png
 	:align: center
 	
-3. **2003, Free Response, #3** 
+7. **2003, Free Response, #3** 
 
 Men's shirt sizes are determined by their neck sizes. Suppose that men's neck sizes are approximately normally distributed with mean 15.7 inches and standard deviation 0.7 inch. A retailer sells men's shirts in sizes S, M, L, XL, where the shirt sizes are defined in the table below.
 
@@ -289,7 +283,7 @@ Use this information to answer the following questions.
 
 	c. Of 12 randomly selected customers, what is the probability that exactly 4 will request size M ? Show your work.
 
-4. **2007, Free Response Form B, #2**
+8. **2007, Free Response Form B, #2**
 
 The graph below displays the relative frequency distribution for X, the total number of dogs and cats owned per household, for the households in a large suburban area. For instance, 14 percent of the households own 2 of these pets.
 
@@ -303,7 +297,7 @@ Use this information to solve the following problems.
 	b. If 10 households in this area are selected at random, what is the probability that exactly 2 of them will be in violation of this law? Show your work.
 
 
-5. **2022, Free Response, #3** 
+9. **2022, Free Response, #3** 
 
 A machine at a manufacturing company is programmed to fill shampoo bottles such that the amount of shampoo in each bottle is normally distributed with mean 0.60 liter and standard deviation 0.04 liter. Let the random variable **A** represent the amount of shampoo, in liters, that is inserted into a bottle by the filling machine.
 
@@ -317,7 +311,7 @@ A machine at a manufacturing company is programmed to fill shampoo bottles such 
 
 	c. To reduce the number of crates rejected by the beauty supply warehouse manager, the manufacturing company is considering adjusting the programming of the filling machine so that the amount of shampoo in each bottle is normally distributed with mean 0.56 liter and standard deviation 0.03 liter. Would you recommend that the manufacturing company use the original programming of the filling machine or the adjusted programming of the filling machine? Provide a statistical justification for your choice.
 
-6. **2021, Free Response, #3**
+10. **2021, Free Response, #3**
 
 To increase morale among employees, a company began a program in which one employee is randomly selected each week to receive a gift card. Each of the company's 200 employees is equally likely to be selected each week, and the same employee could be selected more than once. Each week’s selection is independent from every other week.
 
@@ -331,7 +325,7 @@ To increase morale among employees, a company began a program in which one emplo
 
 	c. Suppose that Agatha, an employee at the company, never receives a gift card for an entire 52 -week year. Based on her experience, does Agatha have a strong argument that the selection process was not truly random? Explain your answer.
 	
-7. **2010, Free Response Form B, #3**
+11. **2010, Free Response Form B, #3**
 
 A test consisting of 25 multiple-choice questions with 5 answer choices for each question is administered. For each question, there is only 1 correct answer.
 
