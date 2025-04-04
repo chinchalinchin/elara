@@ -64,7 +64,6 @@ Go to STAT > EDIT and select the formula bar for ﻿
 	.. math::
 
 		x \text{value}:  L_1
-﻿
 
 .. admonition:: Question #2
 

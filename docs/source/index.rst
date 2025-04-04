@@ -30,6 +30,15 @@
    
 --------------
 
+.. epigraph::
+   
    *ό ποιητα, ἢ πῖθι ἢ ἄπιθι*
 
    -- Inscription on an Ancient Grecian drinking vessel.
+
+--------------
+
+.. image:: _static/img/context/comical/calvin-and-hobbes-inscrutable-exhortations.jpeg
+   :width: 600px
+   :alt: Inscrutable Exhortations
+   :align: center

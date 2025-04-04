@@ -157,8 +157,6 @@ archive.org
 - `Philosophical Investigations <philosophical-investigations>`_
 - `Principia Mathematica <principia-mathematica>`_
 - `Process and Reality <process-and-reality>`_
-- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <the-ballad-of-lord-thomas-and-fair-eleanor>`_
-- `The Ballad of the Goodly Fere <the-ballad-of-the-goodly-fere>`_
 - `The Exegesis of Philip K. Dick <the-exegesis-of-philip-k-dick>`_
 - `The Myth of Sisyphus <the-myth-of-sisyphus>`_
 - `The World as Will and Representation <world-as-will-and-representation>`_
@@ -177,7 +175,6 @@ classicallibrary.org
 classics.mit.edu
 ----------------
 
-- `Aeneid <aeneid>`_
 - `Categories <categories>`_
 - `Physics <physics>`_
 - `Metaphysics <metaphysics>`_
@@ -191,12 +188,6 @@ gutenberg.org
 -------------
 
 - `Critique of Pure Reason <critique-of-pure-reason>`_
-- `Devotions Upon Emergent Occasions <devotions-upon-emergent-occasions>`_
-- `Essay on Man <essay-on-man>`_
-- `Lamia <lamia>`_
-- `Othello <othello>`_
-- `Paradise Lost <paradise-lost>`_
-- `Spring Sadness <spring-sadness>`_
 - `The Foundations of Arithmetic <foundations-of-arithmetic>`_
 - `Tractatus Logico-Philosophicus (Secondary Source) <tractatus-logico-philosophicus-v2>`_
 - `World as Will and Representation <world-as-will-and-representation-v2>`_
@@ -215,6 +206,26 @@ Various
 - `The Concept of Truth in Formalized Languages <the-concept-of-truth>`_
 - `What Is Metaphysics? <what-is-metaphysics>`_
 - `Wittgenstein Lectures <wittgenstein-lectures>`_
+
+.. _plays:
+
+-----
+Plays
+-----
+
+.. _classics-mits-plays:
+
+classics.mit.org
+----------------
+
+- `Aeneid <aeneid>`_
+
+.. _gutenberg-plays:
+
+gutenberg.org
+-------------
+
+- `Othello <othello>`_
 
 .. _poetry:
 
@@ -239,6 +250,25 @@ allpoetry.com
 - `Ouija <ouija>`_
 - `Sestina <sestina-bishop>`_
 - `Sestina: Travel Notes <sestina-travel-notes>`_
+
+.. _archive-poetry:
+
+archive.org
+-----------
+
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <the-ballad-of-lord-thomas-and-fair-eleanor>`_
+- `The Ballad of the Goodly Fere <the-ballad-of-the-goodly-fere>`_
+
+.. _gutenberg-poetry:
+
+gutenberg.org
+-------------
+
+- `Devotions Upon Emergent Occasions <devotions-upon-emergent-occasions>`_
+- `Paradise Lost <paradise-lost>`_
+- `Spring Sadness <spring-sadness>`_
+- `Essay on Man <essay-on-man>`_
+- `Lamia <lamia>`_
 
 .. _poetry-foundation-org:
 
@@ -311,8 +341,9 @@ OpenStax
 
 .. _web_references:
 
+--------
 Websites
-========
+--------
 
 - `noblestatman.com <noble-statman>`_
 - `randomservices.com <random-services>`_
