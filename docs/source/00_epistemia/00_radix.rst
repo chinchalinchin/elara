@@ -134,10 +134,10 @@
 Radix
 =====
 
-.. todo::
+.. topic:: TODO
 
     Why aren't the links working?
-    
+
 .. _archives:
 
 --------
