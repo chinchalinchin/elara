@@ -4,6 +4,13 @@
 Syntagmics
 ----------
 
+.. epigraph::
+
+    | When Ajax strives, some Rock's vast Weight to throw,
+    | The Line too labours, and the Words move slow:
+
+    -- `Essay on Man <essay-on-man>`_, Alexander Pope
+
 Formalization
 -------------
 
