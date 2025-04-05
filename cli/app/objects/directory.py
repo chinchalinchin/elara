@@ -39,7 +39,8 @@ class Directory:
     _prop_sum_lang              = properties.DirectoryProps.SUMMARY_LANGUAGE.value
     _prop_sum_name              = properties.DirectoryProps.SUMMARY_NAME.value
     ## Configuration Properties
-    _prop_sum_directives        = properties.DirectoryProps.SUMMARY_DIRECTIVES.value
+    _prop_sum_code              = properties.DirectoryProps.SUMMARY_CODE.value
+    _prop_sum_literal           = properties.DirectoryProps.SUMMARY_LITERAL.value
     _prop_sum_includes          = properties.DirectoryProps.SUMMARY_INCLUDES.value
     _prop_sum_excludes          = properties.DirectoryProps.SUMMARY_EXCLUDES.value
     _prop_sum_ext               = properties.DirectoryProps.SUMMARY_EXCLUDE_EXT.value
@@ -64,10 +65,13 @@ class Directory:
         """
         return [
             k for k in self.directory_config.get(self._prop_sum)\
-                                                .get(self._prop_sum_directives)\
+                                                .get(self._prop_sum_code)\
                                                 .keys()
         ] + self.directory_config.get(self._prop_sum)\
                                     .get(self._prop_sum_includes)\
+                                    .get(self._prop_sum_ext)\
+        + self.directory_config.get(self._prop_sum)\
+                                    .get(self._prop_sum_literal)\
                                     .get(self._prop_sum_ext)
 
     def _tree(self) -> str:
@@ -135,9 +139,13 @@ class Directory:
                                                         .get(self._prop_sum_excludes)\
                                                         .get(self._prop_sum_file)
         
-        directives              = self.directory_config.get(self._prop_sum)\
-                                                        .get(self._prop_sum_directives)\
+        blocks                  = self.directory_config.get(self._prop_sum)\
+                                                        .get(self._prop_sum_code)\
                                                         .keys()
+        
+        literals                = self.directory_config.get(self._prop_sum)\
+                                                .get(self._prop_sum_code)\
+                                                .keys()
         
         excludes_dirs           = self.directory_config.get(self._prop_sum)\
                                                         .get(self._prop_sum_excludes)\
@@ -160,14 +168,14 @@ class Directory:
                     continue
 
                 file_path       = os.path.join(root, file)
-                directive       = ext in directives
-
+                block           = ext in blocks
+                literal         = ext in literals
                 data            = loader.raw_file(file_path)
 
                 if not data:
                     continue 
                 
-                if directive:
+                if block:
                     dir_summary[self._prop_sum][self._prop_sum_files] += [{
                         self._prop_sum_type     
                                 : "code",
@@ -175,8 +183,19 @@ class Directory:
                                 : data,
                         self._prop_sum_lang
                                 : self.directory_config.get(self._prop_sum)\
-                                                        .get(self._prop_sum_directives)\
+                                                        .get(self._prop_sum_code)\
                                                         .get(ext),
+                        self._prop_sum_name
+                                : os.path.relpath(file_path, self.directory)
+                    }]
+                    continue
+
+                if literal:
+                    dir_summary[self._prop_sum][self._prop_sum_files] += [{
+                        self._prop_sum_type     
+                                : "literal",
+                        self._prop_sum_data
+                                : data,
                         self._prop_sum_name
                                 : os.path.relpath(file_path, self.directory)
                     }]

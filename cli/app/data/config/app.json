@@ -208,7 +208,7 @@
         },
         "directory": {
             "summary": {
-                "directives": {
+                "code": {
                     ".py": "python",
                     ".sh": "bash",
                     ".toml": "toml",
@@ -219,6 +219,11 @@
                     ".hcl": "hcl",
                     ".tf": "tf",
                     ".yml": "yaml"
+                },
+                "literal": {
+                    "ext": [
+                        ".csv"
+                    ]   
                 },
                 "includes": {
                     "ext": [

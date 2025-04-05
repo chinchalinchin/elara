@@ -160,7 +160,8 @@ class DirectoryProps(enum.Enum):
     SUMMARY_NAME        = "name"
     # Configuration Properties
     ## Summary Configuration Properties
-    SUMMARY_DIRECTIVES  = "directives"
+    SUMMARY_CODE        = "code"
+    SUMMARY_LITERAL     = "literal"
     SUMMARY_INCLUDES    = "includes"
     SUMMARY_EXCLUDES    = "excludes"
     SUMMARY_EXCLUDE_EXT = "ext"
