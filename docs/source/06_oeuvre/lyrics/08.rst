@@ -1,5 +1,5 @@
-IX: Librarian VI
-----------------
+IX: Designs (Librarian VI)
+--------------------------
 
 | If asked this time, design a rhyme
 | To woo your mind from book, by hook
