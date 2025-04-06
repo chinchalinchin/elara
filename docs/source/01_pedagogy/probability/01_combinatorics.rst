@@ -147,10 +147,10 @@ You are trying to figure out what to outfit to wear. In your closet, you have a 
         
             \implies n(G) = n(E) \cdot n(F)
 
+.. _replacement:
+
 Replacement
 ***********
-
-.. _with-replacement:
 
 .. topic:: With Replacement
 
@@ -159,8 +159,6 @@ Replacement
 *With replacement* means exactly what it says: *with replacement*. Suppose you are given a box filled with three red balls and three blue balls. If you select a ball from the box and then put the ball back into the box after selecting it, you have selected an objected *with replacement*.
 
 TODO
-
-.. _without-replacement:
 
 .. topic:: Without Replacement
 
@@ -287,7 +285,7 @@ Three friends, Aletheia, Bertha and Cornelius, are running a foot race to determ
             :width: 60%
             :align: center
 
-    Notice at each step of the diagram, a choice is lost, representing the selection of an individual to fill the given position along the given branch. This type of selection is called :ref:`selection without replacement <without-replacement>`.
+    Notice at each step of the diagram, a choice is lost, representing the selection of an individual to fill the given position along the given branch. This type of selection is called :ref:`selection without replacement <replacement>`.
 
     By counting up the endpoints of the graph, the answer is again found to be there are *6* ways to finish the race.
 
@@ -366,7 +364,7 @@ Formula
 
         :math:`P(X)` = (# of ways to match a 6-element sequence with 4 elements) / (# of 6-element sequences)
 
-    In order to calculate the desired probability, each calculation requires the total number of 6-element sequences, where each element of the sequence is an integer between 1 and 49. Furthermore, the selection of one element in the sequence removes it from the pool of possible selections. In other words, there can be no repetitions of any of the integers between 1 and 49 in any sequence of winning numbers. For instance the sequence ``15 15 37 42 32 27`` is not allowed, because *15* occurs twice. This is what is meant by the phrase "*pick six different integers*". This is an example of :ref:`selection without replacement <without-replacement>`.
+    In order to calculate the desired probability, each calculation requires the total number of 6-element sequences, where each element of the sequence is an integer between 1 and 49. Furthermore, the selection of one element in the sequence removes it from the pool of possible selections. In other words, there can be no repetitions of any of the integers between 1 and 49 in any sequence of winning numbers. For instance the sequence ``15 15 37 42 32 27`` is not allowed, because *15* occurs twice. This is what is meant by the phrase "*pick six different integers*". This is an example of :ref:`selection without replacement <replacement>`.
 
     TODO 
 

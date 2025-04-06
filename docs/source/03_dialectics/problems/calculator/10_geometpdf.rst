@@ -1,10 +1,4 @@
 .. _ti_geometpdf_problems:
-
-
-Try this in your .rst file:
-
-.. raw:: html
-	:file: ../../assets/js/app.js
     
 ==================================
 GEOMETPDF: Geometric Probabilities

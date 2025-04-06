@@ -9,7 +9,7 @@ Syntagmics
     | When Ajax strives, some Rock's vast Weight to throw,
     | The Line too labours, and the Words move slow:
 
-    -- `Essay on Man <essay-on-man>`_, Alexander Pope
+    -- `Essay on Man`_, Alexander Pope
 
 Formalization
 -------------
@@ -223,12 +223,12 @@ Ballad
 
 **References**
 
-- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor: together with the downfall of the brown girl <the-ballad-of-lord-thomas-and-fair-eleanor>`_, Frances James Child
-- `Ballad of the Goodly Fere <the-ballad-of-the-goodly-fere>`_, Ezra Pound
-- `Ballad of Sir Patrick Stern <the-ballad-of-sir-patrick-stern>`_, W. Scott
-- `La Belle Dame sans Merci <la-belle-dame-sans-merci>`_, John Keats
-- `Lord Thomas and Annet <lord-thomas-and-annet>`_, Old English Ballad
-- `Tam Lin <tam-lin>`_, Old Scottish Ballad
+- `A tragical ballad of the unfortunate loves of Lord Thomas and fair Eleanor`_, Frances James Child
+- `The Ballad of the Goodly Fere`_, Ezra Pound
+- `The Ballad of Sir Patrick Stern`_, W. Scott
+- `La Belle Dame sans Merci`_, John Keats
+- `Lord Thomas and Annet`_, Old English Ballad
+- `Tam Lin`_, Old Scottish Ballad
 
 .. _ballade: 
 
@@ -262,8 +262,8 @@ Kyrielle
 
 **References**
 
-- `A lark in the mesh of the tangled vine <a-lark-in-the-mesh>`_, John Payne
-- `A Lenten Hymn <a-lenten-hymn>`_, Thomas Campion
+- `A Lark in the Mesh`_, John Payne
+- `A Lenten Hymn`_, Thomas Campion
 
 .. _ode:
 
@@ -285,9 +285,9 @@ No fixed schema.
 
 **References**
 
-- `Ode on a Grecian Urn <ode-on-a-grecian-urn>`_, John Keats
-- `Ode to a Nightingale <ode-to-a-nightingale>`_, John Keats
-- `Ode to the West Wind <ode-to-the-west-wind>`_, Percy Blysse Shelely
+- `Ode on a Grecian Urn`_, John Keats
+- `Ode to a Nightingale`_, John Keats
+- `Ode to the West Wind`_, Percy Blysse Shelely
 
 .. _ottava:
 
@@ -323,7 +323,7 @@ Pantoum
 
 **References**
 
-- `Pantoum of the Great Depression <pantoum-of-the-great-depression>`_, Donald Justice
+- `Pantoum of the Great Depression`_, Donald Justice
 
 .. _rondeau:
 
@@ -378,8 +378,8 @@ The following diagrams shows the different schemata for the rondeau form duing t
 
 **References**
 
-- `In Flanders Fields <in-flanders-field>`_, John McCrae
-- `We Wear the Mask <we-wear-the-mask>`_, Paul Laurence Dunbar
+- `In Flanders Field`_, John McCrae
+- `We Wear the Mask`_, Paul Laurence Dunbar
 
 .. _sestina:
 
@@ -400,8 +400,9 @@ Six sestets followed by a tercet envoi.
 
 **References**
 
-- `Sestina of the Tramp-Royal <sestina-of-the-tramp-royal>`_, Rudyard Kipling
-- `Sestina: Travel Notes <sestina-travel-notes>`_, 
+- `Sestina (Bishop)`_, Elizabeth Bishop
+- `Sestina of the Tramp-Royal`_, Rudyard Kipling
+- `Sestina, Travel Notes`_, 
 
 .. _sonnet:
 
@@ -422,10 +423,10 @@ Sonnet
 
 **References**
 
-- `Batter My Heart, Three Person'd God <batter-my-heart-three-persond-god>`_, John Donne
-- `Death Be Not Proud <death-be-not-proud>`_, John Donne
-- `On the Grasshoper and Cricket <on-the-grasshopper-and-cricket>`_, John Keats
-- `When I Have Seen By Times Fell Hand Defac'd <sonnet-64>`_, William Shakespeare
+- `Batter My Heart, Three Person'd God`_, John Donne
+- `Death Be Not Proud`_, John Donne
+- `On the Grasshopper and Cricket`_, John Keats
+- `When I Have Seen By Times Fell Hand Defac'd`_, William Shakespeare
 
 .. _terza:
 
@@ -451,8 +452,8 @@ Triolet
 
 **References**
 
-- `Birds at Winter Nightfall <birds-at-nightfall>`_, Thomas Hardy
-- `How Great My Grief <how-great-my-grief>`_, Thomas Hardy
+- `Birds at Winter Nightfall`_, Thomas Hardy
+- `How Great My Grief`_, Thomas Hardy
 
 .. _virelai:
 
@@ -469,8 +470,8 @@ Virelai
     
 **References**
 
-- `July <july>`_, Henry Austin Dobson
-- `Spring Sadness <spring-sadness>`_, John Payne
+- `July`_, Henry Austin Dobson
+- `Spring Sadness`_, John Payne
 
 .. _villanelle:
 
@@ -485,9 +486,9 @@ TODO: research Terzanelles.
 
 **References**
 
-- `Do Not Go Gentle into That Good Night <do-not-go-gentle-into-that-good-night>`_, Dylan Thomas
-- `Mad Girl's Love Song <mad-girls-love-song>`_, Sylvia Plath
-- `One Art <one-art>`_, Elizabeth Bishop
-- `Song <song-fuller>`_, John Fuller
-- `The Waking <the-waking>`_, Theodore Roethke
+- `Do Not Go Gentle into That Good Night`_, Dylan Thomas
+- `Mad Girl's Love Song`_, Sylvia Plath
+- `One Art`_, Elizabeth Bishop
+- `Song`_, John Fuller
+- `The Waking`_, Theodore Roethke
   

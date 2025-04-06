@@ -24,6 +24,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.mathjax',
     'sphinx.ext.graphviz',
+    'sphinx.ext.extlinks',
     'sphinx_toolbox.collapse',
     'matplotlib.sphinxext.plot_directive',
     'sphinx_design'
@@ -38,13 +39,17 @@ exclude_patterns = [
 
 plot_html_show_source_link = True
 
+rst_prolog = """
+.. include:: /_static/_links.rst
+"""
 # -- Options for HTML output -------------------------------------------------
 
 html_theme = 'sphinx_book_theme'
 
 html_static_path = [ 
     '_static',
-    '_scripts'
+    '_scripts',
+    ''
 ]
 
 html_css_files = [

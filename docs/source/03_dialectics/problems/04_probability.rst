@@ -45,12 +45,12 @@ Describe the sample spaces of the following experiments with a set using :ref:`l
 
 	a. Selecting one ball at random.
 
-	b. Selecting two balls at random and :ref:`with-replacement` (i.e. putting the ball you drew back into the back after you draw it).
+	b. Selecting two balls at random and :ref:`with replacement <replacement>` (i.e. putting the ball you drew back into the back after you draw it).
 
-	c. Selecting two balls at random and :ref:`without-replacement` (i.e. *not* putting the ball back after you draw it)
+	c. Selecting two balls at random and :ref:`without replacement <replacement>` (i.e. *not* putting the ball back after you draw it)
 
 
-4. A deck of six cards consists of three black cards numbered *1*, *2*, *3* and three red cards numbered *1*, *2*, *3*. You draw two cards :ref:`without-replacement`. Let **A** be the event the second card has a larger number than the first card. Let **B** be the event the first card has a larger number than the second card.
+4. A deck of six cards consists of three black cards numbered *1*, *2*, *3* and three red cards numbered *1*, *2*, *3*. You draw two cards :ref:`without replacement <replacement>`. Let **A** be the event the second card has a larger number than the first card. Let **B** be the event the first card has a larger number than the second card.
    
 	a. Are **A** and **B** mutually exclusive?
 

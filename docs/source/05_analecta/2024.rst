@@ -11,7 +11,7 @@ April
 
     ":ref:`Being <being>`" is said in many ways. 
 
-    -- `Categories <categories>`_, Aristotle
+    -- `Categories`_, Aristotle
 
 It is first of all said, and "*to be said*" requires what is said to be expressible in language. Every linguistic form is a representation. Therefore, something said is necessarily representative of some other thing. What a representation is and what it is representative of is left vague in the beginning, but the form of representation is not: language.  
 
@@ -67,7 +67,7 @@ Everything imaginable is contained in, or possibly equal to, the enumeration of 
 
     If you do know that "*here is one hand*", we'll grant you all the rest.
 
-    -- `On Certainty <on-certainty>`, Wittgenstein
+    -- `On Certainty`_, Wittgenstein
 
 If the objective is to produce a certain fact, then all assumptions must be removed and one must start from nothing. Only the production of a fact from nullity would be able to satisfy any reasonable definition of "*certainty*". If a fact derives from a prior assumption, then the fact is only as certain as its constitutive assumptions. Therefore, the question of the validity of the concept of "*certainy*" reduces to the question of whether positive knowledge can be derived from nothing. 
 

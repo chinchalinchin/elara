@@ -48,21 +48,21 @@ Anacoluthon
 
     with up so floating many bells down 
     
-    -- `anyone lived in a pretty how town <anyone-lived-in-a-pretty-how-town>`_, e.e. cummings
+    -- `Anyone Lived in a Pretty How Town`_ , e.e. cummings
     
     In the coal fire will not wholly console them. 
 
-    -- `Ouija <ouija>`_, Sylvia Plath
+    -- `Ouija`_, Sylvia Plath
 
     She's all states, and all princes, I,
 
     Nothing else is.
 
-    -- `The Sun Rising <the-sun-rising>`_, John Donne
+    -- `The Sun Rising`_, John Donne
     
     From there are ghosts in the air 
 
-    -- `I Have Longed To Move Away <i-have-longed-to-move-away>`_, Dylan Thomas
+    -- `I Have Longed To Move Away`_ , Dylan Thomas
 
 .. _anadiplosis:
 
@@ -73,13 +73,13 @@ Anadiplosis
     
     A waste of breath the years behind
 
-    -- `An Irishman Airman Foresees His Death <an-irish-airman-foresees-his-death>`_, William Butler Years
+    -- `An Irish Airman Foresees His Death`_ , William Butler Years
 
     There moves what seems a fiery spark,
 
     A lonely spark with silvery rays
     
-    -- `The Dong with a Luminous Nose <the-dong-with-a-luminous-nose>`_, Edward Lear
+    -- `The Dong with a Luminous Nose`_, Edward Lear
 
     The eyes that fix you in a formulated phrase,
     
@@ -87,7 +87,7 @@ Anadiplosis
     
     When I am pinned and wriggling on the wall,
 
-    -- `The Love Song of J. Alfred Prufrock <the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
+    -- `The Love Song of J. Alfred Prufrock`_, T.S. Eliot
 
 .. _anaphora:
 
@@ -98,19 +98,19 @@ Anaphora
     
     Fear not the flat, synthetic blood
     
-    -- `All All and All <all-all-and-all>`_, Dylan Thomas
+    -- `All All and All`_, Dylan Thomas
     
     Their lone waters, lone and dead, -- 
 
     Their sad waters, sad and chilly
     
-    -- `Dream Land <dream-land>`_, Edgar Allen Poe
+    -- `Dream Land`_, Edgar Allen Poe
 
     War on the spider and the wren! 
 
     War on the destiny of man! 
 
-    -- `Find Meat On Bones <find-meat-on-bones>`_ , Dylan Thomas
+    -- `Find Meat On Bones`_ , Dylan Thomas
 
 
     Why were they proud? Because their marble founts
@@ -129,7 +129,7 @@ Anaphora
     
     Why in the name of Glory were they proud?
     
-    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
+    -- `Isabella or the Pot of Basil`_, John Keats
 
     And of thy spicy myrtles as they blow,
 
@@ -137,7 +137,7 @@ Anaphora
 
     And of thy lilies, that do paler grow
     
-    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
+    -- `Isabella or the Pot of Basil`_, John Keats
 
     And she forgot the stars, the moon, and sun,
 
@@ -147,19 +147,19 @@ Anaphora
 
     And she forgot the chilly autumn breeze;  
 
-    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
+    -- `Isabella or the Pot of Basil`_, John Keats
 
     If I were a dead leaf thou mightest bear;
 
     If I were a swift cloud to fly with thee;
     
-    -- `Ode to the West Wind <ode-to-the-west-wind>`_, Percy Blysse Shelley
+    -- `Ode to the West Wind`_, Percy Blysse Shelley
     
     We are the hollow men
 
     We are the stuffed men
 
-    -- `The Hollow Men <the-hollow-men>`_, T.S. Eliot
+    -- `The Hollow Men`_, T.S. Eliot
 
 .. _anastrophe:
 
@@ -168,23 +168,23 @@ Anastrophe
 
     The widening circles into nothing gone
 
-    -- `Calidore: A Fragment <calidore-a-fragment>`_, John Keats
+    -- `Calidore, A Fragment`_, John Keats
 
     Observe how system into system runs
 
-    -- `Essay on Man <essay-on-man>`_, Alexander Poper
+    -- `Essay on Man`_, Alexander Poper
 
     What love Lorenzo for their sister had
 
-    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
+    -- `Isabella or the Pot of Basil`_, John Keats
 
     With fruit the vines that round the thatch-eves run
 
-    -- `To Autumn <to-autumn>`_, John Keats
+    -- `To Autumn`_, John Keats
 
     May the last Adam's blood my soul embrace
 
-    -- `Hymn to God, My God, In My Sickness <hymn-to-god-my-god-in-my-sickness>`_, John Donne
+    -- `Hymn to God, My God, In My Sickness`_, John Donne
 
 .. _antimetabole:
 
@@ -201,7 +201,7 @@ Antimetabole is included in the category :ref:`chiasmus`.
 
     Sorrow more beautiful than Beauty’s self.
 
-    -- `Hyperion <hyperion>`_, John Keats
+    -- `Hyperion`_, John Keats
 
 .. _aposiopesis:
 
@@ -214,7 +214,7 @@ Aposiopesis
     
     For Thine is the
 
-    -- `The Hollow Men <the-hollow-men>`_, T.S. Eliot
+    -- `The Hollow Men`_, T.S. Eliot
 
 .. _apostrophe:
 
@@ -229,7 +229,7 @@ Apostrophe
 
     Unknown, Lethean, sigh to us—O sigh!
 
-    -- `Isabella or the Pot of Basil <isabella-or-the-pot-of-basil>`_, John Keats
+    -- `Isabella or the Pot of Basil`_, John Keats
 
 .. _asyndeton:
 
@@ -265,11 +265,11 @@ Chiasmus includes the category of :ref:`antimetabole`.
 
     Break in the sun till the sun breaks down
 
-    -- `And Death Shall Have No Dominion <and-death-shall-have-no-dominion>`_, Dylan Thomas
+    -- `And Death Shall Have No Dominion`_, Dylan Thomas
 
     Beauty is truth, truth beauty
 
-    -- `Ode on a Grecian Urn <ode-on-a-grecian-urn>`_, John Keats
+    -- `Ode on a Grecian Urn`_, John Keats
 
 .. _epanalepsis:
 
@@ -282,13 +282,13 @@ Epanalepsis
 
     Their pleasures in a long immortal dream.
 
-    -- `Lamia <lamia>`_, John Keats
+    -- `Lamia`_, John Keats
 
     The maggot that no man can kill
 
     And the man no rope can hang
 
-    -- `Find Meat On Bones <find-meat-on-bones>`_ , Dylan Thomas
+    -- `Find Meat On Bones`_ , Dylan Thomas
 
 .. _epistrophe: 
 
@@ -299,7 +299,7 @@ Epistrophe
     
     I had not thought death had undone so many.
 
-    -- `The Wasteland <the-wasteland>`_, T.S. Eliot
+    -- `The Wasteland`_, T.S. Eliot
 
 .. _epizeuxis:
 
@@ -330,11 +330,11 @@ Hysteron Proteron
 
     Let us die, and rush into the midst of the fight. 
     
-    -- `Aeneid <aeneid>`_, Virgil, 19 BCE
+    -- `Aeneid`_, Virgil, 19 BCE
 
     I will kill thee, and love thee after. 
 
-    -- `Othello <othello>`_, William Shakespeare
+    -- `Othello`_, William Shakespeare
 
 .. _metonymy:
 
@@ -363,7 +363,7 @@ TODO
 
     And each half lives a hundred different lives;
 
-    -- `The Scholar Gipsy <scholar-gipsy>`_, Matthew Arnold
+    -- `Scholar Gipsy`_, Matthew Arnold
 
 .. _polyptoton:
 
@@ -383,13 +383,13 @@ Symploce
     
     The yellow smoke that rubs its muzzle on the window-panes 
 
-    -- `The Love Song of J. Alfred Prufrock <the-love-song-of-j-alfred-prufrock>`_, T.S. Eliot
+    -- `The Love Song of J. Alfred Prufrock`_, T.S. Eliot
 
     Let us on by this tremulous light!
 
     Let us bathe in this crystalline light!
 
-    -- `To Ulalume: A Ballad <to-ulalume-a-ballad>`_, Edgar Allen Poe
+    -- `To Ulalume`_, Edgar Allen Poe
 
 .. _synecdoche:
 
