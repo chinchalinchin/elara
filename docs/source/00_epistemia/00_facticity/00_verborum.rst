@@ -263,6 +263,10 @@ Chiasmus
 
 Chiasmus includes the category of :ref:`antimetabole`. 
 
+    When their bones are picked clean and the clean bones gone
+
+    -- `And Death Shall Have No Dominion`_, Dylan Thomas
+    
     Break in the sun till the sun breaks down
 
     -- `And Death Shall Have No Dominion`_, Dylan Thomas
