@@ -6,6 +6,7 @@
    :caption: Contents:
    :hidden:
 
+   resume
    00_epistemia/index
    01_pedagogy/index
    02_praxis/index
