@@ -304,6 +304,34 @@ X: Bird (Librarian VII)
 | That shadows cast in offering, 
 | Would song still burst from breast in lark?
 
+XI: Landscapes
+--------------
+
+| Oh, hapless world, the butcher's block, 
+|   The sickle, scythe, harpoon, 
+| The barren fields, the culled livestock, 
+|   The blood red harvest moon. 
+|
+| The ocean deep, a darkened heart,
+|   A sore that festers cold, 
+| A slumbered age, a violent art,
+|   Into all things behold.
+|
+| The forests wild, the stalking hunt,
+|   The arrow cut from stone, 
+| The bloody rib, the brutal grunt,
+|   A death in whimpered groan. 
+|
+| The mountain peaks, a falling height,
+|   The air in sky dissolved, 
+| A winter wind, a bitter blight, 
+|   Let no sin be absolved. 
+|
+| The city streets, the graveyard paths,
+|   The linen beds of wards, 
+| The gowns of white, the final baths,
+|   The oak in coffin boards.
+
 Odes
 ====
 
