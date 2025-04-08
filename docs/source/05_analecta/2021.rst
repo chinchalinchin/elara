@@ -3,9 +3,10 @@
 2021
 ====
 
-.. _december-2021:
+.. _november-2021:
 
-December
+--------
+November
 --------
 
 The true nature of :ref:`being <being>` can be seen in its extremities, when it forced in an unsustainable mode. This is most apparent in experiences of great pain or ecstasy, when the self drains away, abstraction melts into concrete reality and we are left with the raw sensous impressions of experience itself; in these moments, the world narrows down to the immediate, to what is directly at hand and readily apparent in our senses. One need only attempt a calculus problem after shattering a femur to attest to the truth of this; It is only with tremendous effort the self can be reclaimed in moments such as these, and it is these stories we make legend, for resisting temptation in pursuit of a higher goal or ceasing to die in the face of death until your purpose is fulfilled are the highest marks a :ref:`being <being>` can attain. These themes speak to us because they return us to a primordial state, before considerations of consciousness crowd out all others, and show what the self really is: a struggle to sustain itself despite the incessant efforts of nature it to its primary state of :ref:`nothingness <nothing>`.
@@ -40,3 +41,25 @@ To put it succinctly, "*Wesan*" is the empirical "*is*", the "*is*" which refers
     Ic beo gearo sona (I **will be** ready soon)
 
     Wiga biþ strang (Warriors **are** strong)
+
+Mandarin has a similar variation in how it unpacks the relations of Being into representative form. In Mandarin, the verb "*是 (shi)*" can only be affixed to nouns, to signs representing physical objects,
+
+    wǒ **shì** lǎoshī (You are a teacher)
+
+However, "*是 (shi)*" cannot be affixed to adjectives, such as beautiful or loyal. For that, the extra verb "*很 (hen)*" is required,
+
+    Nǐ **hěn** cōngming (You are smart) 
+
+Again in  "*是 (shi)*" and "*很 (hen)*"  the distinction of meaning found in "*wesan*" and "*beon*" is encountered, that of actuality versus abstraction. Indeed, this is a common duality to be found in languages across the world. 
+
+When "*wesan*" and "*beon*" were gradually merged in modern English, two meanings came to inhabit the same word. Still, to this day, these meanings have not yet been fully integrated, perhaps due to their mutual exclusion. There are defects in the merger that can be glimpsed, when words falter slightly in their aspect and :ref:`being <being>` reveals its separate meanings. The English :ref:`being <being>` haphazardly applies the ideas of concrete and abstract reality simultaneously, thereby allowing assertions of existence to be mixed with assertions of conceptualization, as seen in the propositions "*there is love*", "*this is justice*", "*hope is eternal*", etc. The English "*is*"" is capable of asserting abstracted existence, i.e. existence that is not reducible to objective reality.
+
+.. _december-2021:
+
+--------
+December
+--------
+
+The lack of precision in discussions of :ref:`being <being>` often leads to the participants overlooking this subtle distinction between the two notions. Indeed, the course of western philosophy depended throughout most of its history on the unexamined assumption these two types of :ref:`being <being>` were essentially the same, that is to say, that both "*am*" and "*is*" imply existence in the same way. 
+
+This necessarily leads to a duality of mind and body; if the primary mode of :ref:`being <being>` of both "*am*" and "*is*" is existential, then there must be a rupture in :ref:`being <being>`; things must divide into "*res extensa*" (literally: "*the thing which is extended*"), and into "*res cogitans*", (literally: "*the thing which thinks*"). In other words, :ref:`being <being>` is necessarily split into the physical and the mental because the "*am*" and "*is*" are both derivative of *existence*.
