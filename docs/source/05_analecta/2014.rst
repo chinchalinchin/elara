@@ -9,7 +9,17 @@
 April
 -----
 
-It is impossible to symbolize the actual motions of thought. Consider the argument, "it is asserted '*p*', it is asserted '*p implies q*', therefore '*q*'." The law of modus ponens is a primitive notions in logic and it must be accepted at face value in order to go any further. If one asks why this law is so, there can be no explanation. It is simply the case and one must be satisfied at that. There is no greater ballast upon which to rest the truth of this proposition. The reason cannot be captured in symbols; the symbols which express modus ponens can only stand and present the meaning for an attentive mind to decipher. If it is not accepted, the possibility of communication has ceased. 
+It is impossible to symbolize the actual motions of thought. Consider the argument, "it is asserted '*p*', it is asserted '*p implies q*', therefore '*q*',". It may be rendered symbolically using the assertion sign :math:`\vdash` and the conclusion sign :math:`\therefore`,
+
+.. math::
+
+    \vdash p
+
+    \vdash p \implies q
+    
+    \therefore q
+
+The law of *modus ponens* is a primitive notion in logic [#april_2014_01]_ and it must be accepted at face value in order to go any further. If one asks why this law is so, there can be no explanation. It is simply the case and one must be satisfied at that. There is no greater ballast upon which to rest the truth of this proposition. The reason cannot be captured in symbols; the symbols which express *modus ponens* can only stand and present the meaning for an attentive mind to decipher. If it is not accepted, the possibility of communication has ceased. 
 
 ---
 
@@ -17,14 +27,8 @@ The human mind is not a truth machine. It is a thought machine.
 
 ---
 
-Here is a problem no computer will ever solve: Select a random number between 0 and infinity. 
+Here is a problem no computer will ever solve: Select a random number between 0 and infinity [#april_2014_02]_. 
 
-.. note::
+.. [#april_2014_01] There are other decompositions of logic that take as primitive other modes of inference besides *modus ponens*, but the essential idea here is that logic requires a "*starting point*". Logic must start with a premise. Either one accepts that premise as "*true*" or they do not, and in the latter case there is no further recourse except to point and say, "see?". -- April 2025
 
-    Dear Past Self, 
-
-    I'll raise the stakes. 
-
-    Here is a problem no computer will ever solve: Select a random number between 0 and 1. 
-
-    -- Future Self, 2025
+.. [#april_2014_02] The exact same problem can be restated in simpler terms: Select a random number between 0 and 1. In fact, the endpoints make no difference. Select a random number between *a* and *b* for any :math:`a,b \in \mathbb{R}` such that :math:`a \neq b`. All such problems form a class of problems no computer built on binary logic will ever solve. -- April 2025
