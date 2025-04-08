@@ -8,6 +8,7 @@ Tractatus
 - :ref:`a posteriori <a-priori-a-posteriori>`: Knowledge that arises through experience.
 - :ref:`being`: What is. 
 - :ref:`bedeutung`: That to which a name refers. 
+- :ref:`existence`: TODO
 - :ref:`form`: TODO
 - :ref:`language`: TODO
 - :ref:`noumena`: TODO
@@ -198,6 +199,13 @@ Form
   Form is the possibility of structure.
 
   -- `Tractatus Logico-Philosophicus`_, Ludwig Wittgenstein, 1921 AD
+
+.. _existence:
+
+Existence
+---------
+
+TODO
 
 .. _noumena:
 

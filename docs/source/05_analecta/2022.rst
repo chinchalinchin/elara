@@ -99,6 +99,32 @@ A tragedy, in three lines:
 
     **Pessimist**: and then what?
 
+.. _2022-november:
+
+--------
+November
+--------
+
+Death removes all possibility of absolute certainty.
+
+To see this, we need only note that not only is it the case that it cannot be known whether after death [#november_2022_01]_ there is an afterlife, :ref:`nothing <nothing>`, an awareness without experience, or even a perpetual waking into another reality, these events cannot even be assigned probabilities in any real sense of the term. What would a probability outside the domain of immediate experience *mean*? 
+
+Uncertainty is a state of incompleteness, where knowledge cannot be attained because it is separated from :ref:`being <being>` by a layer of possibility. We do not know if the world outside of ourselves exists as it appears to us, for it is always a possibility that we are a brain in a vat, subject to the mind probes of a **Cartesian** demon.
+
+A possibiilty is a type of a quantity that transmits uncertainty to reality by :ref:`being <being>` possible. In this sense, possibility and probability are synonyms. Just as all :ref:`probabilities <probability>` must sum to one, all possibilities must converge towards :ref:`being <being>`. 
+
+The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie*, :ref:`Cantor <cantor>`...). 
+
+In the same way, a possibility can only be known after the fact. It is entirely impossible [#november_2022_02]_ to know whether a possibility is possible until it already happened. A possibility is characterized as something that could obtain, but to know whether it could obtain, one must know it has already been obtained. [#november_2022_03]_ 
+
+Moreover, whatever :ref:`being <being>` may be, it is only what it is insofar that it is possible it might not be what it is, i.e. you might be reading these words in a dream.
+
+What happens outside of our :ref:`being <being>` in the :ref:`world <world>` is not possible, because to be possible means, first and foremost, the possibility of coming to :ref:`be <being>` in the :ref:`world <world>`.
+
+What then does the proposition "*it is possible there is an afterlife*" mean? How does something come to be outside of time and space? How does something come to be without being the consequence of something? One might as well say "*it is possible that possibility is impossible*". 
+
+Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomenon>` and :ref:`existence <existence>` itself. 
+
 .. _2022-december:
 
 --------
@@ -106,3 +132,9 @@ December
 --------
 
 When one sees a bird and says *that is blue*, does the *that* refer to the bird or the color? Is there a difference?
+
+.. [#november_2022_01] "After death" = oxymoron? -- April 2025
+
+.. [#november_2022_02] Unintentional :ref:`polyptoton`! -- April 2025
+
+.. [#november_2022_03] The essence of possibility is impossibility. -- April 2025
