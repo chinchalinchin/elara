@@ -1,5 +1,5 @@
-X: Bird (Librarian VII)
------------------------
+X: Bird
+-------
 
 | To say what's meant without the word,
 | Oh poetry, relent wherein
