@@ -4,8 +4,6 @@
 Tractatus
 ---------
 
-.. _esoterica:
-
 - :ref:`a priori <a-priori-a-posteriori>`: Knowledge that precedes experience.
 - :ref:`a posteriori <a-priori-a-posteriori>`: Knowledge that arises through experience.
 - :ref:`being`: What is. 

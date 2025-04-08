@@ -113,9 +113,7 @@ By definition,
 Expectation
 -----------
 
-TODO
-
-derive through rules of independent random variable sums
+TODO: derive through rules of independent random variable sums
 
 .. topic:: Expectation of Binomial Random Variable
 
@@ -152,6 +150,4 @@ TODO
 	
 		\sigma_{Bin(n,p)} = n \ cdot p
 		
-TODO
-
-derive through rules of independent random variable sums
+TODO: derive through rules of independent random variable sums

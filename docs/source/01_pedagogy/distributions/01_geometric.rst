@@ -96,6 +96,8 @@ Each term on the right hand side can be identified with the areas of successive 
 .. image:: ../../_static/img/math/geometric-series.png
     :align: center
     
+TODO 
+
 .. _geometric-expectation:
 
 Expectation

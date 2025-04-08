@@ -117,7 +117,7 @@ Employment
      - Cook
      - June 2007 - February 2008
    * - Banana Cafe
-     - Staff Engineer
+     - Dish Washer
      - May 2006 - September 2006
     
 .. _volunteering:
