@@ -9,7 +9,7 @@
 May
 ---
 
-While Newton was in England developing his three laws from which he would deduce a broad array of phenomenon, such as planetary motion, geometric optics, etc., work was being done in continential Europe to express physical law in terms of an extremum principle. Rather than asserting the three laws of the motion as the primitives of mechanics, Hamilton and Lagrange showed these laws were the result of a more fundamental principle, that of *least action*:
+While Newton was in England developing his three laws from which he would deduce a broad array of :ref:`phenomenon <phenomena>`, such as planetary motion, geometric optics, etc., work was being done in continential Europe to express physical law in terms of an extremum principle. Rather than asserting the three laws of the motion as the primitives of mechanics, Hamilton and Lagrange showed these laws were the result of a more fundamental principle, that of *least action*:
 
 .. admonition:: Principle of Least Action 
 
@@ -123,7 +123,7 @@ What happens outside of our :ref:`being <being>` in the :ref:`world <world>` is 
 
 What then does the proposition "*it is possible there is an afterlife*" mean? How does something come to be outside of time and space? How does something come to be without being the consequence of something? One might as well say "*it is possible that possibility is impossible*". 
 
-Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomenon>` and :ref:`existence <existence>` itself. 
+Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomena>` and :ref:`existence <existence>` itself. 
 
 .. _2022-december:
 
