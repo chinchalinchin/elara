@@ -1,0 +1,42 @@
+.. _2021:
+
+2021
+====
+
+.. _december-2021:
+
+December
+--------
+
+The true nature of :ref:`being <being>` can be seen in its extremities, when it forced in an unsustainable mode. This is most apparent in experiences of great pain or ecstasy, when the self drains away, abstraction melts into concrete reality and we are left with the raw sensous impressions of experience itself; in these moments, the world narrows down to the immediate, to what is directly at hand and readily apparent in our senses. One need only attempt a calculus problem after shattering a femur to attest to the truth of this; It is only with tremendous effort the self can be reclaimed in moments such as these, and it is these stories we make legend, for resisting temptation in pursuit of a higher goal or ceasing to die in the face of death until your purpose is fulfilled are the highest marks a :ref:`being <being>` can attain. These themes speak to us because they return us to a primordial state, before considerations of consciousness crowd out all others, and show what the self really is: a struggle to sustain itself despite the incessant efforts of nature it to its primary state of :ref:`nothingness <nothing>`.
+
+---
+
+We are asking if the conjugation of "*am*" deserves recognition as an ontological operation over and above the existential operation of "*is*" which structures language. We are asking if it is a redundancy that is already included in "*is*", merely a syntactical construct with no semantic interpretation. 
+
+If the first case obtains, "*am*" provides structure distinct from the structure of the "*is*", essentially performing the function of dimensionalizing language, and the question "*what am I?*" has been granted a necessary, but not sufficient, condition for a meaningful answer. If the latter case obtains, then the answer we seek is clearly some variation of "*I am* :ref:`nothing <nothing>`.
+
+---
+
+In modern English, :ref:`being <being>` is the marriage of two concepts that were previously distinct. Its etymology descends from the coupling of the Old English words "`beon <https://en.wiktionary.org/wiki/beon>`_" and "`wesan <https://en.wiktionary.org/wiki/wesan>`_", which can in turn be, if the theorists are to be believed, traced further back to the Proto-Indo-European roots of "*bheu*" and "*wes*", respectively. For this reason, we conjugate from the infinitive "*to be*"" two distinct varieties of words:
+
+1. **B**-root words: *be*, *been* and *being*
+2. **W**-root words: *was*, *were*. 
+
+"*Is*", a direct cognate from Old English, is the present tense conjugation of "*wesan*", revealing its hereditary from the *es*-stem roots that form the concept of :ref:`being <being>` in other Proto-Indo-European languages, such as the Spanish "*estar*" or the Italian "*essere*", and thus belongs to the latter group of conjugated verbs.  
+
+It is in the meaning of these words prior to their symbosis we find a starting point for understanding the separation of "*am*" and "*is*". The differences between the semantic function of "*beon*" and "*wesan*" is slight, but potent.
+
+"*Wesan*" is the Being of objects and nouns. It is the "*is*" of the "*this*" and "*that*", the "*the*" and the "*a*". When affixed to a name, "*wesan*" indicates existence, what is actual about its subject. "*He is here*", "*you will be arriving soon*", "*there are three of them*". These are all existential statements of particular cases, facts which can be determined true or false by reference to reality. This type of concrete Being is contained in "*Wesan*". 
+
+    **wæron** þa dura belocene (the doors **were** closed)
+
+    Her **wearð** Eadwine cing ofslagen (Here King Edward **was** slain)
+ 
+To put it succinctly, "*Wesan*" is the empirical "*is*", the "*is*" which refers to the external world. 
+
+"*Beon*", however, is the :ref:`being <being>` of the abstraction and adjectives. "*Beon*" indicates an object's [gnomic aspect](https://en.wikipedia.org/wiki/Gnomic_aspect). In the parlance of logic, a *gnomic* truth is a universal assertion, a statement of generality that applies to all things of which it speaks. While the Being of modern English does not have a direct *gnomic* form, a *gnomic* proposition can be induced by the removal of the particularizing article "*the*" in the following: *the birds are fast*. The use of  "*the* in this sentence refers to a particular group of birds, whereas the proposition "*birds are fast*" does not refer to any definite bird, but references the *gnomic aspect* of birds, i.e. the abstraction of form common to all avian entities. It is in this context that "*beon*" is conjugated in Old English.
+
+    Ic beo gearo sona (I **will be** ready soon)
+
+    Wiga biþ strang (Warriors **are** strong)

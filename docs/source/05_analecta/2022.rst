@@ -33,6 +33,12 @@ This method does not reveal the *intuition*  the theorem to the observer; indeed
 
 So it is with induction: the proof of induction, and therefore every proof *by* induction, relies on a contradiction that an element belongs to two mutually exclusive sets, which we are forced to admit is absurdity, therefore we conclude induction must be true; but nowhere in the proof do we see why the form in an induced series is transmitted from one term to the next. Likewise, a student can spend an entire academic career studying the axioms and theorems of real analysis and still have no intuition for how a falling stone's trajectory traces a parabola with respect to time, despite having memorized a series of proofs that show how to go from set theory to differential calculus.
 
+---
+
+No doubt the advance of machine learning and artifical intelligence has helped mislead philosophy back into the rationalist trap in which it has so often found itself stuck throughout history. The results of these fields are staggering and alluring, as if everything we are might be reduced to the mechanical equations of a machine, as if consciousness and being were contained in the regression coefficient matrices underlying machine learning, and not *their application over time and space*. 
+
+It seems likely that we will, in the near future, have an algorithm capable of producing a process that yields digital sentience, but we must be careful to understand the implications of such an algorithm. It will not be the symbols themselves that offer up another soul to the universal meat grinder, but the utter incomprehensibility of its results uninterprettable without the presupposition of consciousness that will give rise to a digital being. We should not expect to find the meaning of the algorithm, and therefore digital consciousness, in the instructions used to construct the model, but in the actual conceptualizations formed by the model.
+
 .. _2022-july:
 
 ----
@@ -62,6 +68,10 @@ Furthermore, the subsequent form of numbers can be expressed via recursion back 
     n(B) = 1
 
 Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the :ref:`Fregean definition of zero <frege-zero>`: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in :ref:`Frege <frege>`'s case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
+
+---
+
+It must have been surprising to the first :ref:`being <being>` who recognized in language the image of the world. One is tempted to posit that exact moment as the historical origin of sentience. Akin to a photograph or a painting, a sentence is a reflection of :ref:`being <being>`; even when a painting depicts a fiction, it stil does so through the dimensions of necessity, through color and perspective, through representation; the same can be said of a sentence, for when we sketch the image of a paritcular :ref:`being <being>` in a proposition such as "*the pencil is over there*", we have, with words, captured the essential relationship embodied by an existent entity that is before us. We have "*photographed*" :ref:`being <being>` in words, reduced its momentary effervescence to a reproducible formulation. 
 
 ---
 
