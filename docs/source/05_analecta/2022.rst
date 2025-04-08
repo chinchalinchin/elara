@@ -19,7 +19,7 @@ Where *action* is defined as the difference between the potential and kinetic en
 
 By positing the laws of motions thus, Hamilton and Lagrange displayed a formulation which represents the world as the intersection of all possibilities. It is as if the universe looked at all the possible lines that connected two points and brought into existence only the single one which satisfied the conditions of necessity.
 
-Except when we say "*universe*" in the preceding, we should be careful, for what we truly mean is the apprehensions of the subject apprehending, the :ref:`Being <being>` that reflects on its Being. Hamilton and Lagrange have expressed an opinion on an ontological primitive: balance is an immanent, self-evident form.
+Except when we say "*universe*" in the preceding, we should be careful, for what we truly mean is the apprehensions of the subject apprehending, the :ref:`Being <being>` that reflects on its Being.
 
 .. _june-2022:
 
