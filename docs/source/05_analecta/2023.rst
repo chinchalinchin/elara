@@ -36,3 +36,19 @@ There are no answers. More fundamentally, there does not even exist the possibil
 ---
 
 The problem is :ref:`truth <truth>`. It's impossible to define. More precisely: it's definition undoes its foundation. If you say: something is true if it is the case (i.e. agrees with reality), then by allowing the indeterminate sentence to be named, even with a name so innocuous as "something", you've allowed the necessary and sufficient conditions for a contradiction to emerge. Let the next sentence be called P. The sentence P is not true. Then, by our definition of truth, we see we have named an undecidable sentence.  More than that, we have annihilated the possibility of truth by demonstrating an example of something to which it cannot apply, that is, something neither true or false. Self reference is a paradox that cannot be exorcised; it's impossible to give a name to something without that name referencing the thing to be named. You cannot talk about truth without giving things names and you cannot name a thing without decimating the foundations of language. We arise from a vacuum of meaning, and blindly seek what cannot be sought. All that we know and think is built on top of a void.
+
+.. _2023-september:
+
+---------
+September
+---------
+ 
+The first act of a fool is not the presumption preceding a judgement, but the certainty that follows it. 
+
+Certainty is a curious thing. 
+
+The things of which we are most certain, e.g. the feelings and sensations that comprise our phenomenal experience, are not properties of the external world. The certainty of our desire and intentions is due to their origination from within the deepest chambers of our selves, in the privative isolation of our consciousness. We are certain of what we feel, because what we are is, entirely and exactly, what we feel. 
+
+The things of which we are least certain, e.g. the true reality of the external world, are quantifiable properties, things which can be counted and grouped into definite amounts. There is no procedure outside of perception and judgement by which external things may enter into the internal constitution of a consciousness. Things of the external world must be represented in the perception, which in turn requires the image of the thing projected onto the sense organ must be detached from the thing itself. The sensuous thing which is perceived is only an indication of the actual thing, i.e. a representation. 
+
+Certainty, then, is only absolute in the subjective sense.

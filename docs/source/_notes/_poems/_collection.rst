@@ -1155,3 +1155,32 @@ The Paronymous Polyptotons of Love
 |   To find defined a finer find. 
 | We are an are that was a were
 |  That whirled a world to whirl with her. 
+
+Spirals
+-------
+
+| There is a blackhole of poetry in my soul,
+| Like a knife plunged into my gut, 
+| An inescapable feeling that defies words,
+| It resists rhythm and rhyme, it has no meter. 
+| It wants to be known, this pain. It wants a shape. 
+| There is no metaphor that charts it structure,
+| There are no blueprints for its design,
+| If I want to pour it into words,
+| I must release my control on them.
+| The sentences become staccato sounds,
+| The words, they fail me, empty holes 
+| where meaning should be.
+| It is a pain born of isolation,
+| Lack of human contact,
+| A division of the world that is purely subjective,
+| A paroxysm that blights my organic matter.
+| I am in this world, solitary. 
+| There are no words spoken to me. 
+| Cashiers are computers. 
+| My love is a decade gone and married now besides. 
+| My father is dead. 
+| I have abandoned my friends.
+| I am an addict. 
+| I spiral towards the end
+| Where I will die alone.

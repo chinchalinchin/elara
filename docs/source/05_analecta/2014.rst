@@ -1,0 +1,30 @@
+.. _2014:
+
+2014
+====
+
+.. _april-2014:
+
+-----
+April
+-----
+
+It is impossible to symbolize the actual motions of thought. Consider the argument, "it is asserted '*p*', it is asserted '*p implies q*', therefore '*q*'." The law of modus ponens is a primitive notions in logic and it must be accepted at face value in order to go any further. If one asks why this law is so, there can be no explanation. It is simply the case and one must be satisfied at that. There is no greater ballast upon which to rest the truth of this proposition. The reason cannot be captured in symbols; the symbols which express modus ponens can only stand and present the meaning for an attentive mind to decipher. If it is not accepted, the possibility of communication has ceased. 
+
+---
+
+The human mind is not a truth machine. It is a thought machine.
+
+---
+
+Here is a problem no computer will ever solve: Select a random number between 0 and infinity. 
+
+.. note::
+
+    Dear Past Self, 
+
+    I'll raise the stakes. 
+
+    Here is a problem no computer will ever solve: Select a random number between 0 and 1. 
+
+    -- Future Self, 2025

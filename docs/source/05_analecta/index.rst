@@ -8,6 +8,9 @@ Analecta
    :maxdepth: 2
    :caption: Contents:
 
+   2014
+   2015
+   2016
    2022
    2023
    2024
