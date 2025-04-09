@@ -3,6 +3,60 @@
 2023
 ====
 
+.. _2023-january:
+
+-------
+January
+-------
+
+What is it in :ref:`being <being>` ourselves that prevents us from :ref:`being <being>` other people? Why does our :ref:`being <being>` require perspective and individuality?
+
+---
+
+Do mathematical theorems have truth outside of ourselves? To what extent is existence mathematical in the absence of our :ref:`being <being>` mathematical? Does our description of the appearance of reality ever penetrate to reality itself? What is reality outside of our description of it?
+
+We are tempted to say here: reality and its description have a mapping, that the latter represents the former.
+
+But the error of this is seen those intensely personal occurances which have no analogue in description. How does one describe anything subjective without resource to lyricism?
+
+---
+
+The :ref:`world <world>` inherently has an order, a structure that separates events through succession. Causality is manifest in time and space; things are a certain way, meaning the sequence of things that led to the current state of the world was just so and not some other way. Causality imposes a particular order on events, excluding the possibility of other orderings. Each event, by occuring, fixes the order of time as the particular circumstances that led to the current becoming of the :ref:`world`. It is a fact of symbolic logic that order relations must be anti-reflexive.
+
+A reflexive relation is one that is the same forwards as backwards, i.e. :math:`x = y` is equivalent to :math:`y = x`.
+
+An anti-reflexive relation can be seen in the relation of "*less than*", i.e. :math:`x < y` is not equivalent to :math:`y < x`. This asymmetry in the relation is what gives rises to its ordering. Because the relation cannot be reflected, the field of its values necessarily has an order, that is to say, each integer increases in magnitude, i.e. it is greater than its precedessor. 
+
+The ordering of time and space must necessarily make us ask, what is it about :ref:`being <being>` that is anti-reflexive? Where is the asymmetry in :ref:`being` to be found? Why are things always one way and not some other way? Why are things perceived in a linear fashion, that is to say, as a succession of form though time? What primitve rupture in reflection causes time to move forward, making thigns have an order?
+
+---
+
+    "I am this"
+
+    "This is me"
+
+When reflected, the "*am*" becomes an "*is*". Is this purely linguistic, an artifact of the peculiar evolution of the word ":ref:`being`"? Or is this the aforementioned rupture in the relation of :ref:`being <being>`? The English "*am*" is one-directional. It latches to its subject and severs its reflexivity. The  "*am*" reduces to "*is*" when the subject is object. 
+
+The "*is*" does not have this property.
+
+    "This is a person."
+
+    "A person is this.""
+
+"*is*", in other words, is reflexive. There is no ordering in the existential relation of Being. It is, as mentioned, an equivalency relation. 
+
+---
+
+The question, as always, is: is subjective :ref:`being <being>` the same as objective :ref:`being <being>`? And if it is, why does our linguistic representation of it bare the logical features of ordering? Why does our language allow the relation of "*am*" to operate in a non-reflexive way? 
+
+---
+
+.. topic:: Conjecture
+
+    *am* is the asymmetric *is*. 
+    
+Or, in terms of ontological relations, existential :ref:`being <being>` is an equivalency relation. Subjective :ref:`being <being>` is an ordering relation.
+
 .. _2023-february:
 
 --------
@@ -36,6 +90,38 @@ There are no answers. More fundamentally, there does not even exist the possibil
 ---
 
 The problem is :ref:`truth <truth>`. It's impossible to define. More precisely: it's definition undoes its foundation. If you say: something is true if it is the case (i.e. agrees with reality), then by allowing the indeterminate sentence to be named, even with a name so innocuous as "something", you've allowed the necessary and sufficient conditions for a contradiction to emerge. Let the next sentence be called P. The sentence P is not true. Then, by our definition of truth, we see we have named an undecidable sentence.  More than that, we have annihilated the possibility of truth by demonstrating an example of something to which it cannot apply, that is, something neither true or false. Self reference is a paradox that cannot be exorcised; it's impossible to give a name to something without that name referencing the thing to be named. You cannot talk about truth without giving things names and you cannot name a thing without decimating the foundations of language. We arise from a vacuum of meaning, and blindly seek what cannot be sought. All that we know and think is built on top of a void.
+
+---
+
+Long moments where nothing happens. Half-formed sentences grasping at incoherent thoughts. 
+
+Did the universe feel the vice grip of anxiety, were its innards churned in vexing anticipation, as it awaited us? Did the universe agonize over every solemn moment, measure every millisecond with precise stop watches, while those who might bear witness gestated in possibility? 
+
+Did it idle in indifference? Did eternities tick by unnoticed? Was there nothing that might slow the passing of time, no passing glance of introspection, no fractal blossoming out of an instant, no reason to stop and watch in awe?
+
+Was there time at all?
+
+How strange, to find yourself in a moment, with only trails of breadcrumbs fading in the horizon to tell you what came before. To traverse any of these passages only extends them indefinitely, adding more long seconds, more breadcrumbs trailing backwards from your position.
+
+How strange, to only be able to think in terms of time. Never able to ask what came *before* time. 
+
+The question invokes absurdity. Of course, you are a product of your parents, and them of their grandparents, and so on, one long chain extending back to some point in the past where it either breaks or begins. Is there always someone prior, some ancestor from which we derive our heritage, at every link in the chain? Is everything preceded by cause?  
+
+Is time infinite? Or finite? Does it exist outside of our perception? Is it merely a *form* of perception? Something revealed through the act of perception? If so, then what exists in the absence of perception? Is :being-without-us static and eternal, timeless and formless? Does it *exist* all?
+
+At what point, in tracing our anthropological origins, do we encounter the point where being becomes being-without-us? Presumably there must have been a point in time when there were no conscious entities and in the next moment, there were. How far back does the chain go? Is it possible to conceive of being-without-space? Being-without-time?
+
+Is it possible to conceive of this moment? Are we incapable of understanding what the world is if we subtracted from it?
+
+Is the ladder of causality we extend indefinitely into the past flawed in some way? Does it measure reality? Is it an artifice?
+
+Things only have causes insofar we perceive in them in a complex. We say *A* causes *B* because we perceive a temporal relation between *A* and *B*, a dependency that requires one precede the other. The causal link is only :ref:`true <truth>` insofar that we may use it to predict the occurrence of *B* given *A*. 
+
+This is, at any rate, what we mean in a scientific sense. :ref:`Truth <truth>` in this respect is a property of judgement, it is an emanation of judgement. But this definition of truth does not allow us to take its content and make them absolute. It is always relative to the perception that perceives the relation between *A* and *B*. 
+
+This definition of :ref:`truth <truth>` does not allow us to take the observations and derive from them absolute truth. We are always relegated to saying "*assuming this is the case*". But we are never able to remove all assumptions from any proposition. Always there are priors that precede everything.
+
+We cannot say with certainty *what there is outside of ourselves*. We cannot get to that hypothetical moment in time of *being-without-us* through pure understanding. We cannot even say we know there *is* a *being-without-us*.
 
 .. _2023-september:
 
