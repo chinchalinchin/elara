@@ -332,6 +332,34 @@ XI: Landscapes
 | The gowns of white, the final baths,
 |   The oak in coffin boards.
 
+XII: Lullaby
+------------
+
+| Dear child, the monsters under bed
+|   Are not just make believe.
+| They lurk in shadows overhead
+|   And offer no reprieve. 
+|
+| Dear sweetling, sleep with open eye
+|   And guard your dreams at night.
+| Ignore your mother's lullaby,
+|   With candles burning bright.
+|
+| Beware the lair that closets hide,
+|   The racks of their disguise,
+| The suits and ties, the cuffs that slide
+|   And cloak them from your eyes. 
+|
+| Fear not the slash of sharpened claws,
+|   The flashing terror brief,
+| But stamps that mark the written clause
+|   With laws of fierce belief. 
+|
+| What evil deeds those stories tell
+|   Prepare your heart to meet 
+| The formal world where heroes fell
+|   To wander incomplete.
+
 Odes
 ====
 
