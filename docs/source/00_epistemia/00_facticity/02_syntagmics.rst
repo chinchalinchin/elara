@@ -1,3 +1,5 @@
+.. TODO: research terzanelle 
+
 .. _syntagmics:
 
 ----------
@@ -77,6 +79,7 @@ Given below are existing definitions of poetical devices.
 3. The Coptic letters ⲡ, Ⲡ are reserved for indeterminate syllables. 
 4. The lowercase Fraktur letter 𝔵 is reserved for indeterminate meters.
 5. The lowercase Greek letter ς is reserved for indeterminate stanzas.
+6. The lowercase English letters p and q are reserved for indeterminate poems. 
 
 .. important::
 
@@ -95,7 +98,7 @@ Uppercase-lowercase pairs of English letters are understood to be rhymes. The di
     | So-and-so such that 
     | The cat on the mat
 
-The scope of a rhyme does not extend beyond a stanza, i.e. past the "+" sign. For example, in the expression "*a.b.a + a.b.a*", the rhyme in "*a*" within the first stanza does not extend to the rhyme in "*a*" within the second stanza. 
+The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
 
 **Notation**
 
@@ -126,6 +129,54 @@ Where as x + y means,
 
 From this, it can be see the operation of *successions* inserts a new line after the first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
 
+**Examples**
+
+a.b.a
+    A tercet where the first and third lines rhyme. 
+
+A.b.A 
+    A tercet where the first and third lines are the same. 
+
+a.b.a + a.b.a 
+    Two rhyming tercets.
+
+a.b.[b ∨ a]
+    A tercet where the last line rhymes with either the first line or the second line.
+
+**Scope**
+
+The *scope* of a rhyme is denoted with a bar. Any line variable of the same character that feels under the scope of a bar rhymes, whereas the same variable used outside of the scope of the bar is not required to rhyme with the variable under the bar. An example will help clear this up. Consider the differences that separate the two poetical propositions, :math:`p` and :math:`q`,
+
+.. math::
+
+   p = \overline{a.b.a} + \overline{a.b.a}
+
+.. math::
+
+   q = \overline{a.b.a + a.b.a}
+
+In the case of *p*, the line variable *a* in the first stanza is not required to rhyme with the line variable *a* in the second stanza. In the case of *q*, the line variable *a* in both the first and second stanza must rhyme. For example, the following values of *p* and *q* satisfy these definitions. For *p*,
+
+    | the dog is brown 
+    | the cat is green.
+    | the fish does drown. 
+    |
+    | the dog is blue. 
+    | the cat is red. 
+    | the fish eats you. 
+
+Whereas for *q*,
+
+    | the dog is brown 
+    | the cat is green 
+    | the fish does drown
+    |
+    | the dog does frown.
+    | the cat is mean. 
+    | the fish gets down. 
+
+If the bar is omitted from an expression, it is implied to extend over the entire proposition.
+
 **Provisional Notation**
 
 1. #x: A lengthened sign. 
@@ -149,26 +200,34 @@ Is meant to denote a series of signs separated by blank lines.
     Ⲁ:Ⲃ:Ⲅ = Ⲁ-∅-Ⲃ-∅-Ⲅ
 
 **Propositions**
+    
+1. All stanzas are made of lines. 
 
-∀ς: ∃x: ς = x
-    All stanzas are made of lines. 
+.. math::
+    
+    \forall \varsigma: \exists x: \varsigma = x
 
-∀p: ∃n: p  = :math:`\sum_1^{n} \varsigma_i`
-    All poems are made of stanzas. 
+.. note:: 
 
-**Examples**
+    This is not quite right. Need some way to expressing "*atleast*", i.e. there exists some lines such that a stanza has atleast that many lines. 
 
-a.b.a
-    A tercet where the first and third lines rhyme. 
+1. All poems are made of stanzas. 
 
-A.b.A 
-    A tercet where the first and third lines are the same. 
+.. math::
 
-a.b.a + a.b.a 
-    Two rhyming tercets.
+    \forall p: \exists n: p  = \sum_1^{n} \varsigma_i  
 
-a.b.[b ∨ a]
-    A tercet where the last line rhymes with either the first line or the second line.
+**Theorems**
+
+1. The scope of a poem is not equal to the scope of its stanzas. 
+
+.. math::
+
+    \forall p: \forall n: \sum_1^{n} \overline{\varsigma_i} \neq \overline{ \sum_1^{n} \varsigma_i }
+
+.. note:: 
+
+    This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas. 
 
 **Meter**
 
@@ -189,23 +248,28 @@ a.b.[b ∨ a]
 
 .. topic:: Definition: Meters
 
-    a/𝔵 :sub:`n` denotes a line in 𝔵 n-meter. 
+    :math:`a/\mathfrak{x}_n` denotes a line in :math:`\mathfrak{x}` n-meter. 
 
 For example, 
 
-    (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a/𝔦 :sub:`4`)
+.. math::
+
+    (a/\mathfrak{i}_4).(b/\mathfrak{i}_3).(a/\mathfrak{i}_4)
 
 Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. In other words,
 
-    (a/𝔦 :sub:`4`) = ⲡ :sub:`1` -Ⲡ :sub:`1` -ⲡ :sub:`2` -Ⲡ :sub:`2` -ⲡ :sub:`3` -Ⲡ :sub:`3` -ⲡ :sub:`4` -Ⲡ :sub:`4`
+.. math::
+
+    (a/\mathfrak{i}_4) = \pi_1 - \Pi_1 - \pi_2 - \Pi_2 - \pi_3 - \Pi_3 - \pi_4 - \Pi_4
 
 Note in this example the first and third line rhyme. 
 The scope of a meter extends to everything contained in the parenthesis it marks. For example,
 
-    (a.a/𝔦 :sub:`4`)
+.. math::
+
+    (a.a/\mathfrak{i}_4)
 
 Denotes a rhyming couplet where each line is written in iambic tetrameter. 
-
 
 .. _schemes:
 
@@ -219,7 +283,9 @@ Ballad
 
 .. topic:: Schema
 
-    :math:`\sum_1^{n}` (a/𝔦 :sub:`4`).(b/𝔦 :sub:`3`).(a ∨ c/𝔦 :sub:`4`).(b/𝔦 :sub:`3`)
+    .. math::
+
+        \sum_1^{n} \overline{(a/\mathfrak{i}_4).(b/\mathfrak{i}_3).(a ∨ c/\mathfrak{i}_4).(b/\mathfrak{i}_3)}
 
 **References**
 
@@ -236,16 +302,22 @@ Ballade
 ^^^^^^^
 
 .. topic:: Schema
+    
+    .. math::
 
-    a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
+        a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
 
 .. topic:: Schema (Ballade Royal)
 
-    [a.b.a + b.b + c.c] ∨ [a.b.a.b + b.c.c]
+    .. math::
+
+        [a.b.a + b.b + c.c] \lor [a.b.a.b + b.c.c]
 
 .. topic:: Schema (Chant Royal)
 
-    :math:`\sum_1^{5}` a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E ∨ c.c.d.d.e.d.E
+    .. math::
+
+        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + d.d.e.d.E \lor c.c.d.d.e.d.E}
 
 **References**
 
@@ -258,7 +330,9 @@ Kyrielle
 
 .. topic:: Schema 
 
-    :math:`\sum_1^{n}` [ a.a.b.B ∨ a.A.b.b ]
+    .. math::
+
+        \sum_1^{n} [ a.a.b.B \lor a.A.b.b ]
 
 **References**
 
@@ -296,17 +370,23 @@ Ottava
 
 .. topic:: Schema (ottava siciliana)
 
-    a.b.a.b.a.b.a.b
+    .. math::
+        
+        \overline{a.b.a.b.a.b.a.b}
 
 .. topic:: Schema (strambotto)
 
-    a.b.a.b.c.c.d.d
+    .. math::
+
+        \overline{a.b.a.b.c.c.d.d}
 
 Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
 .. topic:: Schema (ottava rima)
 
-    (a.b.a.b.a.b.c.c/𝔦 :sub:`5`)
+    .. math::
+
+        \overline{(a.b.a.b.a.b.c.c/\mathfrak{i}_5)
 
 **References**
 
@@ -319,7 +399,7 @@ Pantoum
 
 .. topic:: Schema
 
-   A.B.C.D + B.E.D.F + E.G.F.H + ... + x.y.C.A
+    A.B.C.D + B.E.D.F + E.G.F.H + ... + x.y.C.A
 
 **References**
 
@@ -415,11 +495,15 @@ Sonnet
    
 .. topic:: Schema (Shakespearan)
 
-   (a.b.a.b + c.d.c.d + e.f.e.f + g.g/𝔦 :sub:`5`)
+   .. math::
+
+        ([\sum_i^{3} \overline{a.b.a.b}] + a.a/\mathfrak{i}_5)
 
 .. topic:: Schema (Spenserian)
 
-    (a.b.a.b + b.c.b.c + c.d.c.d + e.e/𝔦 :sub:`5`)
+    .. math::
+
+        \overline{(a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)}
 
 **References**
 
@@ -435,7 +519,9 @@ Terza
 
 .. topic:: Schema
 
-    a.b.a + b.c.b + c.d.c + d.e.d +  ... 
+    .. math::
+
+        \overline{a.b.a + b.c.b + c.d.c + d.e.d +  ... }
 
 **References**
 
@@ -448,7 +534,9 @@ Triolet
 
 .. topic:: Schema
 
-    (A.B.a.A.a.b.A.B/𝔦 :sub:`4`)
+    .. math::
+
+        \overline{(A.B.a.A.a.b.A.B/\mathfrak{i}_4)}
 
 **References**
 
@@ -462,11 +550,15 @@ Virelai
 
 .. topic:: Schema (Ancien)
     
-    a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... 
+    .. math::
+        
+        \overline{a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... }
 
 .. topic:: Schema (Nouveau)
 
-    A :sub:`1` .b.b.a.A :sub:`2` + B :sub:`1`.c.c.b.B :sub:`2` +  ...
+    .. math::
+
+        \overline{A_1.b.b.a.A_2 + B_1.c.c.b.B_2 +  ... }
     
 **References**
 
@@ -477,8 +569,6 @@ Virelai
 
 Villanelle
 ^^^^^^^^^^
-
-TODO: research Terzanelles. 
 
 .. topic:: Schema 
 
