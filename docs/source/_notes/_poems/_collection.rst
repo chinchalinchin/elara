@@ -33,6 +33,20 @@ I: The Unicode Ode
 | 
 | 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 # 
 
+II: The Invocation
+------------------
+
+| Oh.muse.sing(for: this is everything -> {
+|   try:
+|       if circle == ring:
+|           sing((my heart) this)
+|       else:
+|           # TODO: fix this
+|           raise abyss 
+|       except Nothing but this:
+|           Oh.muse(please).sing
+| });
+
 Elegies
 =======
 
@@ -336,8 +350,8 @@ XI: Landscapes
 | The gowns of white, the final baths,
 |   The oak in coffin boards.
 
-XII: Lullaby
-------------
+XII: Father's Lullaby
+---------------------
 
 | Dear child, the monsters under bed
 |   Are not just make believe.
@@ -420,7 +434,7 @@ I: An Ode To Autumn
 | Oh! If I could touch an inch of Autumn
 |       And measure Fall in feet,
 | I might scale its depths to chart the bottom
-|       and feel the Winter heat.
+|       And feel the Winter heat.
 | Alas, no meters mark by foot the path
 |       Through wooded maze of trees
 |           Where leaves like love will wilt
@@ -432,7 +446,7 @@ I: An Ode To Autumn
 | As seasons pass and cast 
 |       My bone layered into stone,
 | Let August dig for me a grave in brown
-|       barrow beneath her loam.
+|       Barrow beneath her loam.
 | Pray not a lover find these shards on shore
 |       I am no edge to skip
 |           Atop the waves of fancy
@@ -444,7 +458,7 @@ I: An Ode To Autumn
 | To life I came already old and grim
 |           But now the chill sets in;    
 | Each breath in gasp dispels to steam
-|           of Spring now waning thin.
+|           Of Spring now waning thin.
 
 II: Ode to the Heron
 --------------------
@@ -495,7 +509,7 @@ Pantoums
 I: LeAnna's Pantoum
 -------------------
 
-| To begin is to make an end,
+| To begin is to make our end,
 | Oh, LeAnna, of Anna's Leigh,
 | Come with grin and play pretend
 | The past is what we both agree.
@@ -513,7 +527,7 @@ I: LeAnna's Pantoum
 | I'll try to love you just the same
 | But I implore you play this game:
 | Pretty pretend, comely with grin;
-| The end will yet begin again.
+| Our end will yet begin again.
 
 Rondeaus
 ========
@@ -591,9 +605,9 @@ II: Sonnet for the Demented
 | There are but few who taste the hemlock blue,
 | Fortune finds those who swing from noose and nail;
 | With minute gone they follow through in queue,
-| Spared the with'ring touch of Time's fingers pale. 
+| Spared the with'ring touch of Time's fingers frail. 
 | 
-| If a choice it has, Time will stalk the mind, 
+| If a choice it has, Time first stalks the mind, 
 | Steady quick but not so fast to spook its prey;
 | Every hunter knows fright will taint the find. 
 | Slow in step, it bides itself from day to day. 
@@ -604,7 +618,7 @@ II: Sonnet for the Demented
 | And in a pile leaves you upon his lap. 
 | 
 | A stranger each face becomes through the glass,
-| Each ageless moment til you breath your last.
+| Each ageless moment til you breath your last. 
 
 III: A Sonnet for Cumberland MD
 -------------------------------
@@ -849,11 +863,11 @@ Regret
 | Over flowing graves, the pale wraith weaves
 | her steps, for each life entombed provides
 | a section orchestra
-| raising as she struts. 
+| raising noise as she struts. 
 |
 | Hollow hands hold out a beating drum to hear;
 | In steady words, her lover's dirge is heard: 
-| Tomorrow and tomorrow
+| Tomorrow, tomorrow
 | Until tomorrow is no more.
 |
 | There she spins, twirling arms,
@@ -983,7 +997,7 @@ Dystopia
 | "So you admit to this wit
 | With which your garb comports?
 | Such deviance detailed in resounding writ,
-| Seals itself in immediate retort."
+| Seals itself in short retort."
 |
 | The court strikes twelve, the twelve struck dead,
 | They find in haystruck head a verdict over-muted,
@@ -997,13 +1011,13 @@ Dystopia
 | Across windswept fields, of forest clearings, in gardens copacetic,
 | Yet for all of it, the tresses dressed in such lovely roses picked.
 | The final rhyming couplets vied with the hounds bark brayed
-| Encircled in arms, they died swift in circled stages:
+| Encircled in arms, they died swift in circled stage:
 |
 | First went the Romantics, and love was lost. 
 | Then went the Stoics, and naught was crossed.
 | Then went the Classics, but no one missed them. 
 | Next were the Playwrights and Poets Et Al,
-| Any one fool who answered the haunted call.
+| Any one fool who answered the call.
 |
 | Twelve nights they burned, twelve nights we wept,
 | And then dreamless dreaming through the future we slept,
@@ -1129,11 +1143,10 @@ Dystopia
 
 Kingdoms
 --------
-
-| Two children cross'd an earthen bridge
+| Two children crossed an earthen bridge
 | From level lawns to forests wild
 | Along rivered arc descending ridge, 
-| Each to each they sung and smiled.
+| With dirty hands, they sang and smiled.
 | Their charted map from zippered packs
 | Now in branches espied its target 
 | As clearing yields to lily blacks
@@ -1149,22 +1162,22 @@ Kingdoms
 | On tender lips, farewell's final massing.
 | Lily lyrics whisper sing from ground
 | Reminders of their childish notions;
-| World depart'd, their lives are found 
+| World departed, their lives are found 
 | Separate by spanning roads and oceans. 
 | 
 | In the city, their trains diverge,
-| Thru tunnels track'd by wagered hours;
+| Thru tunnels tracked by wagered hours;
 | Iron rails thru hearts do purge 
 | Their aged minds of lily flowers. 
 | Winter drifts over concrete streets,
 | In the thrush's snow sad song
 | Delivered them in voice downbeat
-| The final dirge of life prolong'd. 
+| The final dirge of life prolonged. 
 | In the cold, their dream dissolved
 | With the clock's incessant ticking
 | Falling strokes of time resolved,
-| They to home their caskets' wicking. 
-| Return again to a lily laden field
+| They follow home a casket's wicking, 
+| Returned again to a lily laden field
 | Where once royals played for a day;
 | With new hearts scored and peeled 
 | In the funerary cloud of gray,

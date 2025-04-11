@@ -1,0 +1,15 @@
+II: The Invocation
+------------------
+
+| Oh.muse.sing(for: this is everything -> {
+|   try:
+|       if circle == ring:
+|           sing((my heart) this)
+|       else:
+|           # TODO: fix this
+|           raise abyss 
+|   except Nothing but this:
+|       Oh.muse(please).sing
+| });
+
+- April 2025
