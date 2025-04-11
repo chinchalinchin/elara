@@ -325,7 +325,7 @@ A smooth breathing mark is used to denote a feminine rhyme,
 
 .. math::
 
-    \accentset{'}{a} = a(Ⲡⲡ)
+    \smooth{a} = a(Ⲡⲡ)
 
 3. Dactylic Rhyme
 
