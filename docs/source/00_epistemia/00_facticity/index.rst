@@ -9,6 +9,4 @@ Facticity
 
   00_verborum
   01_tractatus
-  02_syntagmics
-  03_theosophy
-  04_semiotics
+  02_theosophy

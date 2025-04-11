@@ -10,3 +10,4 @@ Theurgy
    00_automata/index
    01_universalis/index
    02_palindromia/index
+   03_syntagmics/index

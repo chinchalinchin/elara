@@ -99,6 +99,11 @@ latex_preamble = r"""
 \usepackage[utf8]{inputenc} 
 \usepackage{lmodern}
 \usepackage{runic}
+\usepackage{textcomp}
+\usepackage{accents}
+
+\newcommand{\smooth}[1]{\accentset{'}{#1}}
+\newcommand{\rough}[1]{\accentset{\textrevapostrophe}{#1}}
 """
 
 latex_elements = {
@@ -130,34 +135,6 @@ def build_pdf(source_dir, output_dir, filename):
       warningiserror=False
     )
     app.build(force_all=True, filenames=[filename + '.rst'])
-
-def center_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
-    node = nodes.paragraph(text=text)
-    node['classes'].append('center')  # Add the CSS class to the <p> tag
-    return [node], []
-
-def center_directive(name, arguments, options, content, lineno,
-                       content_offset, block_text, state, state_machine):
-    # Create a paragraph node (<p>)
-    node = nodes.paragraph(text='')
-    node['classes'].append('center')
-
-    # Create a nested paragraph with the content
-    content_node = nodes.paragraph(text=''.join(content))
-    node += content_node  # Add the content node as a child of the main node
-
-    # This is the key change: remove the state_machine.view_list() call
-    return [node]  
-
-def setup(app: Sphinx):
-    directives.register_directive('center', center_directive)
-    roles.register_local_role('center', center_role)
-
-    return {
-        'version': '0.1',
-        'parallel_read_safe': True,
-        'parallel_write_safe': True,
-    }
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
