@@ -1,3 +1,31 @@
+.. TODO: 
+    Research 
+    - terzanelle 
+    - ghazal
+    - haikus
+
+.. NOTE: 
+    The following document was generated with Sphinx using the following LaTeX preamble in the ```conf.py```
+    
+        latex_preamble = r"""
+        \usepackage{babel}
+        \babelprovide[import, main]{coptic} 
+        \usepackage{amssymb}
+        \usepackage{amsmath}
+        \usepackage[utf8]{inputenc} 
+        \usepackage{lmodern}
+        \usepackage{runic}
+        \usepackage{textcomp}
+
+        \newcommand{\smooth}{\smash{\textprimstress}}
+        \newcommand{\rough}{\smash{\textdoubleprimstress}}
+        """
+
+.. _syntagmics:
+
+==========
+Syntagmics
+==========
 
 .. _syntagmics-introduction:
 
@@ -85,9 +113,10 @@ Variables
 
 1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
     a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
+    b. The lowercase English letters x and y are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
 2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
-3. The Coptic letters :math:`ⲡ, ⲣ, Ⲡ, Ⲣ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. :math:`ⲣ` is used in a more general capacity, to represent stressed or unstressed syllables.
+3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
 5. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
 6. The lowercase English letters p and q are reserved for indeterminate poems. 
@@ -98,7 +127,7 @@ Variables
 
 .. note::
 
-    The choice of :math:`ⲡ` and :math:`Ⲡ` to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, :math:`ⲡ` is meant to represent indeterminate unstressed syllables, whereas :math:`Ⲡ` is meant to represent indeterminate stressed syllables. 
+    The choice of :math:`ⲡ` and :math:`Ⲡ` to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, :math:`ⲡ` is meant to represent indeterminate unstressed syllables, whereas :math:`Ⲡ` is meant to represent indeterminate stressed syllables. :math:`ⲣ` is used in a more general capacity, to represent stressed or unstressed syllables.
 
 The variables will sometimes be referred to as *syntagmic variables*, or *signs*. 
 
@@ -120,7 +149,7 @@ All syntagmic relations are to be understood as truth values, meaning each expre
 
 1. :math:`x \subset y` (**Containment**): The sign x is contained in the sign y. 
 
-The relation of containment extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrellas as it moves up each rung of the ladder,
+The relation of containment extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
 - Words contain syllables
 - Lines contain words and syllables
@@ -138,7 +167,7 @@ All syntagmic operations are to be understood as being closed under the domain o
 3. :math:`x:y` (**Delimitation**): Delimited signs.
 4. :math:`x \lor y` (**Disjunction**): A sign that is either x or y.
 5. :math:`x + y` (**Separation**): Separated signs.
-6. :math:`x \propto λ` (**Projection**) : Sign containing a word. 
+6. :math:`x \propto y` (**Projection**) : Sign containing a sign. 
 7. :math:`x(y)` (**Appendment**): A sign ending in a word.  
 8. :math:`(y)x` (**Prependment**): A sign beginning with a word. 
 9.  :math:`x.y.x | x = z` (**Substitution**): Substitute z for x in the sign :math:`x.y.x`
@@ -249,19 +278,19 @@ If the bar is omitted from a sign, it is implied to extend over the entire propo
 Meter
 -----
 
-:math:`\mathfrak{i} = ⲡ-Ⲡ`
+:math:`\mathfrak{i} = ⲡⲠ`
     The definition of an **iamb**
 
-:math:`\mathfrak{t} = Ⲡ-ⲡ`
+:math:`\mathfrak{t} = Ⲡⲡ`
     The definition of a **trochee**
 
-:math:`\mathfrak{s} = Ⲡ-Ⲡ`
+:math:`\mathfrak{s} = ⲠⲠ`
     The definition of a **spondee**
 
-:math:`\mathfrak{d} = Ⲡ-ⲡ-ⲡ`
+:math:`\mathfrak{d} = Ⲡⲡⲡ`
     The definition of **dactyl**
 
-:math:`\mathfrak{a} = ⲡ-ⲡ-Ⲡ`
+:math:`\mathfrak{a} = ⲡⲡⲠ`
     The definition of a **anapest**
 
 .. topic:: Definition: Meters
@@ -278,7 +307,7 @@ Refers to a tercet where the first and third line are written in iambic tetramet
 
 .. math::
 
-    (a/\mathfrak{i}_4) = \pi_1 - \Pi_1 - \pi_2 - \Pi_2 - \pi_3 - \Pi_3 - \pi_4 - \Pi_4
+    (a/\mathfrak{i}_4) = {\pi_1}{\Pi_1}{\pi_2}{\Pi_2}{\pi_3}{\Pi_3}{\pi_4}{\Pi_4}
 
 Note in this example the first and third line rhyme. 
 The scope of a meter extends to everything contained in the parenthesis it marks. For example,
@@ -312,7 +341,7 @@ A prime superscript is used to denote a masculine rhyme,
 
 .. math::
 
-    \a' = a(Ⲡ)
+    a' = a(Ⲡ)
 
 2. Feminine Rhymes
    
@@ -325,7 +354,7 @@ A smooth breathing mark is used to denote a feminine rhyme,
 
 .. math::
 
-    a\smooth = a(Ⲡⲡ)
+    \smooth{a} = a(Ⲡⲡ)
 
 3. Dactylic Rhyme
 
@@ -338,7 +367,7 @@ A rough breathing mark is used to denote a dactylic rhyme,
 
 .. math::
 
-    a\rough = a(Ⲡⲡⲡ)
+    \rough{a} = a(Ⲡⲡⲡ)
 
 4. Off Rhyme
 

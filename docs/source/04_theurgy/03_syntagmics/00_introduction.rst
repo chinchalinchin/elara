@@ -85,6 +85,7 @@ Variables
 
 1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
     a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
+    b. The lowercase English letters x and y are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
 2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
@@ -138,7 +139,7 @@ All syntagmic operations are to be understood as being closed under the domain o
 3. :math:`x:y` (**Delimitation**): Delimited signs.
 4. :math:`x \lor y` (**Disjunction**): A sign that is either x or y.
 5. :math:`x + y` (**Separation**): Separated signs.
-6. :math:`x \propto λ` (**Projection**) : Sign containing a word. 
+6. :math:`x \propto y` (**Projection**) : Sign containing a sign. 
 7. :math:`x(y)` (**Appendment**): A sign ending in a word.  
 8. :math:`(y)x` (**Prependment**): A sign beginning with a word. 
 9.  :math:`x.y.x | x = z` (**Substitution**): Substitute z for x in the sign :math:`x.y.x`
@@ -249,19 +250,19 @@ If the bar is omitted from a sign, it is implied to extend over the entire propo
 Meter
 -----
 
-:math:`\mathfrak{i} = ⲡ-Ⲡ`
+:math:`\mathfrak{i} = ⲡⲠ`
     The definition of an **iamb**
 
-:math:`\mathfrak{t} = Ⲡ-ⲡ`
+:math:`\mathfrak{t} = Ⲡⲡ`
     The definition of a **trochee**
 
-:math:`\mathfrak{s} = Ⲡ-Ⲡ`
+:math:`\mathfrak{s} = ⲠⲠ`
     The definition of a **spondee**
 
-:math:`\mathfrak{d} = Ⲡ-ⲡ-ⲡ`
+:math:`\mathfrak{d} = Ⲡⲡⲡ`
     The definition of **dactyl**
 
-:math:`\mathfrak{a} = ⲡ-ⲡ-Ⲡ`
+:math:`\mathfrak{a} = ⲡⲡⲠ`
     The definition of a **anapest**
 
 .. topic:: Definition: Meters
@@ -278,7 +279,7 @@ Refers to a tercet where the first and third line are written in iambic tetramet
 
 .. math::
 
-    (a/\mathfrak{i}_4) = \pi_1 - \Pi_1 - \pi_2 - \Pi_2 - \pi_3 - \Pi_3 - \pi_4 - \Pi_4
+    (a/\mathfrak{i}_4) = {\pi_1}{\Pi_1}{\pi_2}{\Pi_2}{\pi_3}{\Pi_3}{\pi_4}{\Pi_4}
 
 Note in this example the first and third line rhyme. 
 The scope of a meter extends to everything contained in the parenthesis it marks. For example,
