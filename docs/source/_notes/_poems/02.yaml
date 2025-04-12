@@ -1,30 +1,36 @@
 world:
   meta:
     queries:
-      - key:
-        value:
-      - key:
-        value:   
+      - key: a prayer pled
+        value: in times of strain 
+      - key: a dream once slept
+        value: 
+          queries:
+            - key: a dream once slept  
+      - key: your gaze abed 
+        value: my own refrain
+      - key: what flowers wept
+        value: could not contain
     settings:
       - time: before
-        season: spring
-        where: the flocks of dove
+        season: that spring 
+        where: the flocks above
       - time: then
-        season: summer
+        season: summer sun
         where: in hidden cove
-      - time: now
+      - time: and now
         season: autumn
         where: of white foxglove 
-      - time: later
-        season: winter
-        where: the winds were wove
       - time: null
-        season: null
-        where: null 
+        season: winter hymns
+        where: the winds were wove
 
   life:
     prologue: 
       setting: before
+      queries:
+        - key: a prayer said
+        - key: a dream once slept
     exposition:
       setting: then 
     dialogue: 
