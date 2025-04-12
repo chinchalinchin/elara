@@ -33,20 +33,47 @@ I: The Unicode Ode
 | 
 | 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 # 
 
-II: The Invocation
-------------------
+II: The Invocation of Iambic Code
+---------------------------------
 
-| Oh.muse.sing(for: this is everything -> {
-|   try:
-|       if circle == ring:
-|           sing((my heart) this)
-|       else:
-|           # TODO: fix this
-|           raise abyss 
-|       except Nothing but this:
-|           Oh.muse(please).sing
-| });
+.. code-block:: python
 
+    """
+    The Invocation of Metric Code 
+    =============================
+
+    A Pythonic poem in (mostly) metric form. 
+
+    Hacks until the devs publish a fix:
+
+    - "()", "[]", ".", ":", "_",  "=", and "==" don't contribute!
+    - "pprint" = "pee-PRINT"
+  
+    """
+    # x/ x/ ...
+    import pprint
+    import invoke 
+    import this_heart
+    import provoke as smoke
+    import thy_art
+
+    invoke.set_fuse()
+    invoke.Oh.muse(
+        [ for this in smoke.of_wing:
+            try: # fingers crossed
+                if type(set(this)) == thy_art.a_ring
+                    this_heart.do_think(
+                        myself_is = this, 
+                        but = [ suffering ]
+                    )
+                else: # No! TODO: a miss!
+                    raise smoke.abyss(with_only = this)
+            except RecursionError as premiss:
+                pprint.pprint("oh, bliss! oh, bliss!")
+                invoke.Oh.muse(and please).sing(this)
+        ]
+    )
+    
 Elegies
 =======
 

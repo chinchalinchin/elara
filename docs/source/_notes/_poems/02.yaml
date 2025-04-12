@@ -1,0 +1,36 @@
+world:
+  meta:
+    queries:
+      - key:
+        value:
+      - key:
+        value:   
+    settings:
+      - time: before
+        season: spring
+        where: the flocks of dove
+      - time: then
+        season: summer
+        where: in hidden cove
+      - time: now
+        season: autumn
+        where: of white foxglove 
+      - time: later
+        season: winter
+        where: the winds were wove
+      - time: null
+        season: null
+        where: null 
+
+  life:
+    prologue: 
+      setting: before
+    exposition:
+      setting: then 
+    dialogue: 
+      setting: now
+    climax:
+      setting: now
+    resolution:
+      setting: later
+    
