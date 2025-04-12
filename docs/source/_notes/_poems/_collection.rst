@@ -69,11 +69,11 @@ II: The Invocation of Iambic Code
                 else: # No! TODO: a miss!
                     raise smoke.abyss(with_only = this)
             except RecursionError as premiss:
-                pprint.pprint("oh, bliss! oh, bliss!")
+                pprint.pprint("renew, and don't dismiss")
                 invoke.Oh.muse(and please).sing(this)
         ]
     )
-    
+
 Elegies
 =======
 
