@@ -44,35 +44,63 @@ II: The Invocation of Iambic Code
 
     A Pythonic poem in (mostly) metric form. 
 
+    .. tip::
+
+        it matters not the form of thought,
+        in verse or code, a mix of both,
+        these words command with meaning fraught
+        the rush of green through stalks of growth
+        in ground of earth or problem sought,
+        with meter found in solemn oath. 
+
     Hacks until the devs publish a fix:
 
-    - "()", "[]", ".", ":", "_",  "=", and "==" don't contribute!
-    - "pprint" = "pee-PRINT"
+    - "()", "[]", ".", ":", "_",  "=" and "==" don't contribute!
+    - Comments are part of the poem! Except this one!
+    - "pprint" = "puh-PRINT"
   
     """
-    # x/ x/ ...
-    import pprint
-    import invoke 
-    import this_heart
+    # at first, this helpful little shape
+    from re import escape
+    # and then some help for those who squint
+    import pprint # that alters tint
+    # at last, these ready words are spoke
+    import invoke # to pry and poke
+    import my_heart # but tender hold
     import provoke as smoke
-    import thy_art
+    import thy_art # to break the mold
 
-    invoke.set_fuse()
-    invoke.Oh.muse(
-        [ for this in smoke.of_wing:
-            try: # fingers crossed
-                if type(set(this)) == thy_art.a_ring
-                    this_heart.do_think(
-                        myself_is = this, 
-                        but = [ suffering ]
-                    )
-                else: # No! TODO: a miss!
-                    raise smoke.abyss(with_only = this)
-            except RecursionError as premiss:
-                pprint.pprint("renew, and don't dismiss")
-                invoke.Oh.muse(and please).sing(this)
-        ]
-    )
+    def use(this="thought", with_mode="exhaust"):
+        """
+        Where dreams become though some are lost...
+        """
+        try: # hope, but keep your fingers crossed...
+
+            if not (with_mode in [ "act", "retain"]): 
+                return "what's left of last remain"
+
+            if type(set(this)) == thy_art.a_ring:
+                return my_heart.to_spring(
+                    myself_is = this, but = ("suffering")
+                )
+
+            # TODO: Alas! Another miss!
+            raise smoke.abyss(with_only = this)
+
+        except RecursionError as remiss:
+            pprint.pprint("renew, and don't dismiss!")
+            this = set(escape(remiss))
+            return invoke.Oh.muse(" " and "please").sing(this)
+
+    # HOTFIX: Let this "==" be "is"! But only here!
+    # Oh, don't complain, just play the game! 
+    if __name__ == "__main__":
+        invoke.with_fuse()
+        invoke.Oh.muse([   
+            " " and use(this=dream, with_mode="retain")
+            for dream in smoke.of_wing
+            if dream is all(thy_art.to_bring())
+        ])
 
 Elegies
 =======
@@ -451,6 +479,22 @@ XIV: The Curse of Rain
 | And hear its name with venom hate
 | In curses made by summer's clout,
 | And so it cries at heaven's gate. 
+
+XV: Let It Simmer (Librarian VIII)
+----------------------------------
+
+| A heart too hot will lack a taste 
+| Refined. Quiet now, summer down, 
+| And stew the sauce, or let it baste. 
+| Yes, let it siot, in flavor drown
+| And only then when flame is off,
+| You taste a bit, a smidgen pinch;
+| Before your hunger drips to trough,
+| Begin to measure inch by inch
+| What boiled over side of thought.
+| Distilled to stock, the essence clean
+| Will cling in drops that drip on pot
+| To add to future meals' cuisine. 
 
 Odes
 ====
@@ -1170,6 +1214,7 @@ Dystopia
 
 Kingdoms
 --------
+
 | Two children crossed an earthen bridge
 | From level lawns to forests wild
 | Along rivered arc descending ridge, 
