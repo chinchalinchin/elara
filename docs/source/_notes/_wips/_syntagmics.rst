@@ -14,11 +14,7 @@
         \usepackage{amsmath}
         \usepackage[utf8]{inputenc} 
         \usepackage{lmodern}
-        \usepackage{runic}
         \usepackage{textcomp}
-
-        \newcommand{\smooth}{\smash{\textprimstress}}
-        \newcommand{\rough}{\smash{\textdoubleprimstress}}
         """
 
 .. _syntagmics:
@@ -26,6 +22,7 @@
 ==========
 Syntagmics
 ==========
+
 
 .. _syntagmics-introduction:
 
@@ -95,15 +92,15 @@ Constants
 ---------
 
 1. Uppercase English letters (A, B, C, ... ): Fixed lines.
-2. Uppercase Coptic letters (Ⲁ, Ⲃ, Ⲅ , ... ): Fixed words.
-3. Uppercase Greek letters (Α, Β, Γ, ): Fixed syllables.
+2. Uppercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \Gamma, ...`): Fixed words.
+3. Uppercase Coptic letters (:math:`Ⲁ, Ⲃ, Ⲅ, ...`): Fixed syllables.
 4. The lowercase English letter n is reserved for natural numbers.
-5. The lowercase Fraktur letter 𝔦 is reserved for iambs.
-6. The lowercase Fraktur letter 𝔱 is reserved for trochees.
-7. The lowercase Fraktur letter 𝔰 is reserved for spondees. 
-8. The lowercase Fraktur letter 𝔞 is reserved for anapests.
-9. The lowercase Fraktur letter 𝔡 is reserved for dactyls.
-10. The mathematical symbol ∅ is reserved for the pause (caesura). 
+5. The lowercase Fraktur letter :math:`\mathfrak{i}` is reserved for iambs.
+6. The lowercase Fraktur letter :math:`\mathfrak{t}` is reserved for trochees.
+7. The lowercase Fraktur letter :math:`\mathfrak{s}` is reserved for spondees. 
+8. The lowercase Fraktur letter :math:`\mathfrak{a}` is reserved for anapests.
+9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
+10. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
 11. The ampersand & represents blank newlines. 
 
 .. _syntagmics-variables:
@@ -114,7 +111,7 @@ Variables
 1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
     a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
     b. The lowercase English letters x and y are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
-2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
+2. The lowercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
@@ -138,7 +135,7 @@ Uppercase-lowercase pairs of English letters are understood to be rhymes. The di
     | So-and-so such that 
     | The cat on the mat
 
-The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
+The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
 
 .. _syntagmics-relations:
 
@@ -160,14 +157,16 @@ The relation of containment extends up the levels of the syntagmic hierarchy, ca
 Operations
 ----------
 
+This section introduces the primitive operations of *syntagimcs*. 
+
 All syntagmic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
 
 1. :math:`x.y` (**Succession**): Successive signs.
 2. :math:`xy` (**Concatenation**): Concatenated signs.
 3. :math:`x:y` (**Delimitation**): Delimited signs.
-4. :math:`x \lor y` (**Disjunction**): A sign that is either x or y.
+4. :math:`x \cup y` (**Disjunction**): A sign that is either x or y.
 5. :math:`x + y` (**Separation**): Separated signs.
-6. :math:`x \propto y` (**Projection**) : Sign containing a sign. 
+6. :math:`x \cdot y` (**Projection**) : Sign containing sign. 
 7. :math:`x(y)` (**Appendment**): A sign ending in a word.  
 8. :math:`(y)x` (**Prependment**): A sign beginning with a word. 
 9.  :math:`x.y.x | x = z` (**Substitution**): Substitute z for x in the sign :math:`x.y.x`
@@ -191,19 +190,25 @@ From this, it can be see the operation of *successions* inserts a new line at th
 
     The operation of *projection* is a sign. The relation of *containment* is a truth value.
 
-**Examples**
+Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. These operations are related logically to the more general operation of projection. If a sign prepends or appends another sign, it also projects that sign. 
 
-:math:`a.b.a`
-    A tercet where the first and third lines rhyme. 
+However, projection does not imply prependment or amendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or amend it. 
 
-:math:`A.b.A` 
-    A tercet where the first and third lines are the same. 
+Mathematically,
 
-:math:`a.b.a + a.b.a` 
-    Two rhyming tercets.
+.. math::
 
-:math:`a.b.[b \lor a]`
-    A tercet where the last line rhymes with either the first line or the second line.
+    x(y) \implies [x \cdot y]
+
+And,
+
+    (y)x \implies [x \cdot y]
+
+Or more succinctly,
+
+    [x(y) \lor (y)x] \implies (x \cdot y)
+    
+Importantly, the converse of this does not hold.
 
 **Provisional Notation**
 
@@ -212,9 +217,16 @@ From this, it can be see the operation of *successions* inserts a new line at th
 
 Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs. 
 
-**Shorthand**
+.. _syntagmics-shorthand:
 
-1. Summation: The connotation of the :math:`+` symbol is leveraged to extend the symbolism to the :math:`\sum` symbol. Consider,
+Shorthand
+---------
+
+Shorthand notation is introduced in this section to extend the primitive operations defined in the previous seciton.
+
+.. _syntagmics-summation:
+
+1. **Summation**: The connotation of the :math:`+` symbol is leveraged to extend the symbolism to the :math:`\sum` symbol. Consider,
 
 .. math::
 
@@ -222,7 +234,9 @@ Virelais require alternating rhymes to shorten and length across stanzas. The si
 
 This example shows how to represent a poem of arbitrary length composed of tercet stanzas where the first and third lines rhyme. 
 
-1. Serialized Concatenation: A *serialized concatenation* is used in reference to syllables. It simply means the concatenation of a patterned sequence of syllables. Consider,
+.. _syntagmics-serialization:
+
+2. **Serialization**: A *serialization* (serialized concatenation) is used in reference to syllables. It simply means the concatenation of a patterned sequence of syllables. Consider,
 
 .. math::
 
@@ -230,7 +244,33 @@ This example shows how to represent a poem of arbitrary length composed of terce
 
 This example shows how to represent a line of iambic meter, i.e. sequences of unstressed and then stressed syllables. 
 
-2. Delimitation: A *delimitation* is mainly used in reference to words or syllables, and can be seen as a shorthand for excessive concatenation. *Delimitation* denotes the insertion of *pauses* (delimiters) in between signs,
+.. _syntagmics-exponentation:
+
+3. **Exponentation**: An exponent is used as shorthand for excessive succession of rhymes. For example, consider the lines, 
+
+| the ball in the bag
+| the rip in the rag
+| the gig in the gag 
+| 
+| some dittery dots
+| some jittery jots
+| these simmering sots. 
+
+This can be represented using the operation of *succession* and the operation of *separation* with the expression, 
+
+.. math::
+
+    p = a.a.a + b.b.b
+
+*Exponentation* is used to denote iterated *succession*. The exponent of a line denotes the numbers of times the rhyme appears. The current example can be expressed,
+
+.. math::
+
+    p = a^3 + b^3
+
+.. _syntagmics-delimitation:
+
+4. **Delimitation**: A *delimitation* is mainly used in reference to words or syllables, and can be seen as a shorthand for excessive concatenation. *Delimitation* denotes the insertion of *pauses* (delimiters) in between signs,
 
 .. math::
 
@@ -272,6 +312,60 @@ Whereas for *q*,
     | the fish gets down. 
 
 If the bar is omitted from a sign, it is implied to extend over the entire proposition.
+
+Examples
+--------
+
+**Primitive Operations**
+
+:math:`a.b.a`
+    A tercet where the first and third lines rhyme. 
+
+:math:`A.b.A` 
+    A tercet where the first and third lines are the same. 
+
+:math:`a.b.a + a.b.a` 
+    Two rhyming tercets.
+
+:math:`a.b.[b \cup a]`
+    A tercet where the last line rhymes with either the first line or the second line.
+
+**Examples**
+
+To make clear how shorthand can be leveraged to concisely represent a poetic scheme, some examples are given below.
+
+
+1. Consider the following poem,
+
+| pippity pop
+| slippity slop
+|
+| yippity yap
+| kippity cap 
+
+This expression can be represented using primitive operations as,
+
+.. math::
+    
+    p = a.a + b.b
+
+Using :ref:`syntagmics-exponentiation`,
+
+.. math::
+
+    p = a^2 + b^2
+
+Keeping in mind the definition of :ref:`syntagmics-scope` and applying a :ref:`syntagmic-summation`, this can be further reduced,
+
+.. math::
+
+    p = \sum_1^2 \overline{a^2}
+
+In general, an arbitrary number of rhyming couplets can be represented,
+
+.. math::
+
+    p = \sum_1^n \overline{a^2}
 
 .. _syntagmics-meter:
 
@@ -327,7 +421,7 @@ If a sign has no accent mark, then any type of rhyme satisfies the sign.
 
 .. note::
 
-    Rhyme accents can operate one both lines *u* and words :math:`\alpha`.
+    Rhyme accents can operate one both lines *u* and words :math:`\mathrm{A}`.
 
 1. Masculine Rhymes
 
@@ -337,11 +431,11 @@ A masculine rhyme occurs when the final syllable in two words is stressed and id
 - bright, light
 - despair, compare
 
-A prime superscript is used to denote a masculine rhyme,
+A hat is used to denote a masculine rhyme,
 
 .. math::
 
-    a' = a(Ⲡ)
+    \hat{a} = a(Ⲡ)
 
 2. Feminine Rhymes
    
@@ -350,24 +444,24 @@ A feminine rhyme occurs when the final syllable in two words is unstressed and i
 - mother, another
 - flowing, going
 
-A smooth breathing mark is used to denote a feminine rhyme,
+A check is used to denote a feminine rhyme,
 
 .. math::
 
-    \smooth{a} = a(Ⲡⲡ)
+    \check{a} = a(Ⲡⲡ)
 
-3. Dactylic Rhyme
+1. Dactylic Rhyme
 
 A dactylic rhyme occurs when two words ends in identical dactyls. For example, the following pairs of words are dactylic rhymes, 
 
 - happily, snappily
 - tenderness, slenderness
 
-A rough breathing mark is used to denote a dactylic rhyme, 
+A dot is used to denote a dactylic rhyme, 
 
 .. math::
 
-    \rough{a} = a(Ⲡⲡⲡ)
+    \dot{a} = a(Ⲡⲡⲡ)
 
 4. Off Rhyme
 
@@ -383,6 +477,7 @@ A tilde is used to denote an off rhyme,
     \tilde{a} = [ ... ]
 
 Where "..." represents as yet undetermined operation.
+
 
 .. _schemes:
 
@@ -420,17 +515,35 @@ Ballade
 
         a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
 
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        \overline{[\sum_1^3 {[a.b]^2}.b.c.b.C] + b.c.b.C}
+
 .. topic:: Schema (Ballade Royal)
 
     .. math::
 
-        [a.b.a + b.b + c.c] \lor [a.b.a.b + b.c.c]
+        [a.b.a + b.b + c.c] \cup [a.b.a.b + b.c.c]
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        [a.b.a + b^2 + c^2] \cup [[a.b]^2 +b.[c^2]]
 
 .. topic:: Schema (Chant Royal)
 
     .. math::
 
-        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [ d.d.e.d.E \lor c.c.d.d.e.d.E]}
+        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [ d.d.e.d.E \cup c.c.d.d.e.d.E]}
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E \cup {c^2}{d^2}.e.d.E]
 
 **References**
 
@@ -445,7 +558,13 @@ Kyrielle
 
     .. math::
 
-        \overline{\sum_1^{n} [ a.a.b.B \lor a.A.b.b ]}
+        \overline{\sum_1^{n} [ a.a.b.B \cup a.A.b.b ]}
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        \overline{\sum_1^n [{a^2}.b.B \cup a.A.{b^2}]
 
 **References**
 
@@ -483,11 +602,27 @@ Ottava
 
 .. topic:: Schema (ottava siciliana)
 
-    a.b.a.b.a.b.a.b
+    .. math::
+
+        a.b.a.b.a.b.a.b
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        [a.b]^4
 
 .. topic:: Schema (strambotto)
 
-    a.b.a.b.c.c.d.d
+    .. math::
+
+        a.b.a.b.c.c.d.d
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+        
+        {[a.b]^2}.{c^2}.{d^2}
 
 Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
@@ -497,6 +632,12 @@ Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
         (a.b.a.b.a.b.c.c/\mathfrak{i}_5)
 
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        ({[a.b]^3}.{c^2}/\mathfrak{i}_5)
+        
 **References**
 
 None yet found.
@@ -583,15 +724,15 @@ Six sestets followed by a tercet envoi.
 
     .. math::
 
-        u(Ⲁ).v(Ⲃ).w(Ⲅ).x(Ⲇ).y(Ⲉ).z(Ⲋ) + 
-        u(Ⲋ).v(Ⲁ).w(Ⲉ).x(Ⲃ).y(Ⲇ).z(Ⲅ) + 
-        u(Ⲅ).v(Ⲋ).w(Ⲇ).x(Ⲁ).y(Ⲃ).z(Ⲉ) +
-        u(Ⲉ).v(Ⲅ).w(Ⲃ).x(Ⲋ).y(Ⲁ).z(Ⲇ) +
-        u(Ⲇ).v(Ⲉ).w(Ⲁ).x(Ⲅ).y(Ⲋ).z(Ⲃ) +
-        u(Ⲃ).v(Ⲇ).w(Ⲋ).x(Ⲉ).y(Ⲅ).z(Ⲁ) + 
-        [[u \propto Ⲁ.v \propto Ⲃ.w \propto Ⲅ] \lor 
-        [u \propto Ⲅ.v \propto Ⲇ.w \propto Ⲉ] \lor 
-        [u \propto Ⲋ.v \propto Ⲃ.w \propto Ⲇ]]
+        u(\mathrm{A}).v(\mathrm{B}).w(\Gamma).x(\Delta).y(\Epsilon).z(\Zeta) + 
+        u(\Zeta).v(\mathrm{A}).w(\Epsilon).x(\mathrm{B}).y(\Delta).z(\Gamma) + 
+        u(\Gamma).v(\Zeta).w(\Delta).x(\mathrm{A}).y(\mathrm{B}).z(\Epsilon) +
+        u(\Epsilon).v(\Gamma).w(\mathrm{B}).x(\Zeta).y(\mathrm{A}).z(\Delta) +
+        u(\Delta).v(\Epsilon).w(\mathrm{A}).x(\Gamma).y(\Zeta).z(\mathrm{B}) +
+        u(\mathrm{B}).v(\Delta).w(\Zeta).x(\Epsilon).y(\Gamma).z(\mathrm{A}) + 
+        [[u \cdot \mathrm{A}.v \cdot \mathrm{B}.w \cdot \Gamma] \cup 
+        [u \cdot \Gamma.v \cdot \Delta.w \cdot \Epsilon] \cup 
+        [u \cdot \Zeta.v \cdot \mathrm{B}.w \cdot \Delta]]
 
 **References**
 
@@ -608,8 +749,8 @@ Sonnet
 
     .. math::
     
-        a.b.b.a.a.b.b.a + c.d.e.c.d.e ∨ c.d.c.d.c.d
-   
+        a.b.b.a.a.b.b.a + c.d.e.c.d.e \cup c.d.c.d.c.d
+
 .. topic:: Schema (Shakespearan)
 
    .. math::
@@ -712,9 +853,9 @@ Axioms
 
 .. math::
     
-    \forall \varsigma: \exists ⲣ, u, \lambda: : [ⲣ \subset \lambda] \land [\lambda \subset u] \land [u \subset \varsigma]
+    \forall \varsigma, u, \lambda: \exists ⲣ: [ⲣ \subset \lambda] \land [\lambda \subset u] \land [u \subset \varsigma]
 
-1. All poems are made of stanzas. 
+2. All poems are made of stanzas. 
 
 .. math::
 
@@ -728,43 +869,4 @@ Axioms
 
 .. note:: 
 
-    This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas.  
-
-Theorems
---------
-
-.. topic:: Theorem: Cardinality of Rhyme Sets in Finite Terza Rima
-
-    Let :math:`V = \{v_1, v_2, v_3, ...\}` be an indexed set of distinct indeterminate rhyme variables (representing potential rhyme sounds, e.g., :math:`a, b, c, ...`).
-
-    Define the structure of the :math:`i`-th Terza Rima tercet stanza (:math:`i \ge 1`) using variables from :math:`V` as:
-
-    .. math::
-
-        \varsigma_i = v_i . v_{i+1} . v_i
-
-    Consider a finite Terza Rima poetic structure :math:`p_m` composed of :math:`m` such consecutive tercets (:math:`m \in \mathbb{N}, m \ge 1`), where the scope of rhyme linkage required by the schema variables is limited to each individual stanza as represented in the standard Terza Rima schema summation:
-
-    .. math::
-
-        p_m = \sum_{i=1}^{m} \overline{\varsigma_i} = \sum_{i=1}^{m} \overline{v_i . v_{i+1} . v_i}
-
-    Let :math:`R(p_m)` denote the set of all distinct indeterminate rhyme variables :math:`v_k` that appear in the formal expansion of the structure :math:`p_m`.
-
-    **Theorem:** The cardinality of the set of distinct rhyme variables required by the schema :math:`p_m` is exactly one greater than the number of tercets.
-
-    .. math::
-
-        |R(p_m)| = m + 1
-
-
-This theorem arises directly from the interlocking nature of the Terza Rima form.
-
-- The first stanza, :math:`\varsigma_1 = \overline{v_1 . v_2 . v_1}`, introduces rhyme variables :math:`v_1` and :math:`v_2`.
-- The second stanza, :math:`\varsigma_2 = \overline{v_2 . v_3 . v_2}`, reuses :math:`v_2` and introduces the new rhyme variable :math:`v_3`.
-- Each subsequent stanza :math:`\varsigma_i = \overline{v_i . v_{i+1} . v_i}` reuses the variable :math:`v_i` (which was introduced as the middle rhyme of the preceding stanza :math:`\varsigma_{i-1}`) and introduces a new variable :math:`v_{i+1}` for its middle line.
-- This continues until the final stanza in the sequence, :math:`\varsigma_m = \overline{v_m . v_{m+1} . v_m}`, which introduces the final distinct rhyme variable :math:`v_{m+1}`.
-
-Therefore, the set of all distinct rhyme variables utilized in the schema for :math:`m` tercets is :math:`R(p_m) = \{v_1, v_2, v_3, ..., v_m, v_{m+1}\}`. The number of elements in this set is :math:`m + 1`.
-
-This theorem highlights a fundamental structural property of the Terza Rima schema: the necessary proliferation of rhyme sounds (or at least schema variables) as the poem extends. While a poet might choose to reuse actual sounds (making :math:`v_k` rhyme with :math:`v_j` for :math:`k \neq j`), the abstract schema itself requires :math:`m+1` distinct variable placeholders for :math:`m` tercets.
+    This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas. 

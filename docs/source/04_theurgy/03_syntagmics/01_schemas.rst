@@ -35,17 +35,35 @@ Ballade
 
         a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
 
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        \overline{[\sum_1^3 {[a.b]^2}.b.c.b.C] + b.c.b.C}
+
 .. topic:: Schema (Ballade Royal)
 
     .. math::
 
-        [a.b.a + b.b + c.c] \lor [a.b.a.b + b.c.c]
+        [a.b.a + b.b + c.c] \cup [a.b.a.b + b.c.c]
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        [a.b.a + b^2 + c^2] \cup [[a.b]^2 +b.[c^2]]
 
 .. topic:: Schema (Chant Royal)
 
     .. math::
 
-        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [ d.d.e.d.E \lor c.c.d.d.e.d.E]}
+        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [ d.d.e.d.E \cup c.c.d.d.e.d.E]}
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E \cup {c^2}{d^2}.e.d.E]
 
 **References**
 
@@ -60,7 +78,13 @@ Kyrielle
 
     .. math::
 
-        \overline{\sum_1^{n} [ a.a.b.B \lor a.A.b.b ]}
+        \overline{\sum_1^{n} [ a.a.b.B \cup a.A.b.b ]}
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        \overline{\sum_1^n [{a^2}.b.B \cup a.A.{b^2}]
 
 **References**
 
@@ -98,11 +122,27 @@ Ottava
 
 .. topic:: Schema (ottava siciliana)
 
-    a.b.a.b.a.b.a.b
+    .. math::
+
+        a.b.a.b.a.b.a.b
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        [a.b]^4
 
 .. topic:: Schema (strambotto)
 
-    a.b.a.b.c.c.d.d
+    .. math::
+
+        a.b.a.b.c.c.d.d
+
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+        
+        {[a.b]^2}.{c^2}.{d^2}
 
 Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
@@ -112,6 +152,12 @@ Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
         (a.b.a.b.a.b.c.c/\mathfrak{i}_5)
 
+    Using :ref:`syntagmics-shorthand`,
+
+    .. math::
+
+        ({[a.b]^3}.{c^2}/\mathfrak{i}_5)
+        
 **References**
 
 None yet found.
@@ -198,15 +244,15 @@ Six sestets followed by a tercet envoi.
 
     .. math::
 
-        u(Ⲁ).v(Ⲃ).w(Ⲅ).x(Ⲇ).y(Ⲉ).z(Ⲋ) + 
-        u(Ⲋ).v(Ⲁ).w(Ⲉ).x(Ⲃ).y(Ⲇ).z(Ⲅ) + 
-        u(Ⲅ).v(Ⲋ).w(Ⲇ).x(Ⲁ).y(Ⲃ).z(Ⲉ) +
-        u(Ⲉ).v(Ⲅ).w(Ⲃ).x(Ⲋ).y(Ⲁ).z(Ⲇ) +
-        u(Ⲇ).v(Ⲉ).w(Ⲁ).x(Ⲅ).y(Ⲋ).z(Ⲃ) +
-        u(Ⲃ).v(Ⲇ).w(Ⲋ).x(Ⲉ).y(Ⲅ).z(Ⲁ) + 
-        [[u \propto Ⲁ.v \propto Ⲃ.w \propto Ⲅ] \lor 
-        [u \propto Ⲅ.v \propto Ⲇ.w \propto Ⲉ] \lor 
-        [u \propto Ⲋ.v \propto Ⲃ.w \propto Ⲇ]]
+        u(\mathrm{A}).v(\mathrm{B}).w(\Gamma).x(\Delta).y(\Epsilon).z(\Zeta) + 
+        u(\Zeta).v(\mathrm{A}).w(\Epsilon).x(\mathrm{B}).y(\Delta).z(\Gamma) + 
+        u(\Gamma).v(\Zeta).w(\Delta).x(\mathrm{A}).y(\mathrm{B}).z(\Epsilon) +
+        u(\Epsilon).v(\Gamma).w(\mathrm{B}).x(\Zeta).y(\mathrm{A}).z(\Delta) +
+        u(\Delta).v(\Epsilon).w(\mathrm{A}).x(\Gamma).y(\Zeta).z(\mathrm{B}) +
+        u(\mathrm{B}).v(\Delta).w(\Zeta).x(\Epsilon).y(\Gamma).z(\mathrm{A}) + 
+        [[u \cdot \mathrm{A}.v \cdot \mathrm{B}.w \cdot \Gamma] \cup 
+        [u \cdot \Gamma.v \cdot \Delta.w \cdot \Epsilon] \cup 
+        [u \cdot \Zeta.v \cdot \mathrm{B}.w \cdot \Delta]]
 
 **References**
 
@@ -223,8 +269,8 @@ Sonnet
 
     .. math::
     
-        a.b.b.a.a.b.b.a + c.d.e.c.d.e ∨ c.d.c.d.c.d
-   
+        a.b.b.a.a.b.b.a + c.d.e.c.d.e \cup c.d.c.d.c.d
+
 .. topic:: Schema (Shakespearan)
 
    .. math::
