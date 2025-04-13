@@ -1,3 +1,5 @@
+.. NOTE: links are loaded through `_static/rst/_links.rst`. See the `rst_prolog` property in the `conf.py` file for more detail.
+
 .. _radix:
 
 Radix
@@ -58,7 +60,6 @@ Various
 - `Being and Event`_
 - `Function and Concept`_
 - `On Concept and Object`_
-- `On The Origin of the World`_
 - `The Concept of Truth in Formalized Languages`_
 - `What Is Metaphysics?`_
 - `Wittgenstein Lectures`_
@@ -196,6 +197,7 @@ Theology
 archive.org
 -----------
 
+- `On The Origin of the World`_
 - `The Exegesis of Philip K. Dick`_
 - `White Yajurveda`_
 

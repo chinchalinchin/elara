@@ -484,12 +484,12 @@ XV: Let It Simmer (Librarian VIII)
 ----------------------------------
 
 | A heart too hot will lack a taste 
-| Refined. Quiet now, summer down, 
+| Refined. Quiet now, simmer down, 
 | And stew the sauce, or let it baste. 
-| Yes, let it siot, in flavor drown
+| Yes, let it sit, in flavor drown
 | And only then when flame is off,
 | You taste a bit, a smidgen pinch;
-| Before your hunger drips to trough,
+| Before your hunger dips to trough,
 | Begin to measure inch by inch
 | What boiled over side of thought.
 | Distilled to stock, the essence clean

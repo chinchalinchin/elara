@@ -11,16 +11,16 @@ import requests
 logger                      = logging.getLogger(__name__)
 
 
-def backoff(service: str ="github", max_retries: int = 3) -> typing.Any:
+def backoff(service: str = "github", max_retries: int = 3) -> typing.Any:
     """
     Wrap a service call in exponential backoff error handling.
 
-  :param callable: Service call function.
-  :type callable: `typing.Callable`
-  :param service: Name of the service being wrapped.
-  :type service: `str`
-  :param max_retries: Number of calls to make before failing the request. Defaults to 3.
-  :type max_retries: `int`
+    :param callable: Service call function.
+    :type callable: `typing.Callable`
+    :param service: Name of the service being wrapped.
+    :type service: `str`
+    :param max_retries: Number of calls to make before failing the request. Defaults to 3.
+    :type max_retries: `int`
     """
     def caller(func):
         def wrapper(*args, **kwargs):
