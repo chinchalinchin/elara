@@ -61,6 +61,18 @@ Given below are existing definitions of poetical devices.
 Formalization
 -------------
 
+The syntagmic hierarchy, in descending order, is given by, 
+
+1. Poems
+2. Stanzas
+3. Lines 
+4. Words
+5. Syllables
+
+Each layer is composed of elements from the layer beneath it joined together through operations (to be defined shortly). 
+
+In this formalization, English letters will be used to represent lines, Greek letters will be used to represent words and Coptic letters will be used to represent syllables. 
+
 .. _syntagmics-constants:
 
 Constants
@@ -148,6 +160,9 @@ All syntagmic operations are to be understood as being closed under the domain o
 
 Brackets, [], are used to group operations within signs by precedence.
 
+Separation vs. Succession 
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 To see what is meant by the distinction between *separation* and *succession*, let :math:`x = \text{the fish in the dish}` and :math:`y = \text{the dog on a jog}`. Then :math:`x.y` means,
 
     | the fish in the dish
@@ -161,15 +176,60 @@ Where as :math:`x + y` means,
 
 From this, it can be see the operation of *successions* inserts a new line at the end of first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
 
+Projection
+^^^^^^^^^^
+
+It is important to clarify that projection is a *sign*. It is an object *within* the syntagmic system (or more specifically, an operation which yields an object). It serves a semantic function within the system. This differents from the metalogical nature of *containment*, which is an expression *about* the system, i.e. a truth value.
+
 .. important::
 
     The operation of *projection* is a sign. The relation of *containment* is a truth value.
 
-Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. These operations are related logically to the more general operation of projection. If a sign prepends or appends another sign, it also projects that sign. 
+To state "*y projects x*", or symbolically,
 
-However, projection does not imply prependment or amendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or amend it. 
+.. math::
 
-Mathematically,
+    x = x \cdot y
+
+Can be seen as a form of "poetic factorization", where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \cdot y` will sometimes be referred to as a *factor* of :math:`x`. 
+
+The operation of projection is not commutative,
+
+.. math::
+
+    x \cdot y \neq y \cdot x 
+
+The sign on the lefthand side :math:`x` of a projection :math:`x \cdot y` is the "*larger*" sign that contains the "*smaller*" sign :math:`y` on the righthand side. In other words, logically,
+
+.. math::
+
+    [x = x \cdot y] \equiv [y \subset x]
+
+In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
+
+Projection is logically related to amendment and prependment. Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. Both :math:`z` and :math:`y` project :math:`x`, as well,
+
+.. math::
+
+    x = x \cdot y
+
+.. math::
+
+    x = x \cdot z
+
+In other words, if a sign prepends or appends another sign, it also projects that sign. Taking the previous two equations and substituting the first into the second, 
+
+.. math::
+
+    x = [x \cdot y] \cdot z
+
+The brackets are dropped for notationally convenience and it is understood a projection is to be applied starting with the rightmost sign (:math:`y`) and moving left to the next projection (:math:`z`).
+
+.. math::
+
+    x = x \cdot y \cdot z
+
+Importantly, projection does not imply prependment or amendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or amend it. In other words, amendment, prependment and projection are logically related as follows,
 
 .. math::
 
@@ -177,13 +237,23 @@ Mathematically,
 
 And,
 
+.. math::
+
     (y)x \implies [x \cdot y]
 
 Or more succinctly,
 
+.. math::
+
     [x(y) \lor (y)x] \implies (x \cdot y)
 
-Importantly, the converse of this does not hold.
+Importantly, the converse of this does not hold. 
+
+The operation of projection is *idempotent*,
+
+.. math::
+
+    [x \cdot y] \cdot y = x \cdot y = x
 
 **Provisional Notation**
 
@@ -217,13 +287,13 @@ This example shows how to represent a line of iambic meter, i.e. sequences of un
 
 3. **Exponentiation**: An exponent is used as shorthand for excessive succession of rhymes. For example, consider the lines, 
 
-| the ball in the bag
-| the rip in the rag
-| the gig in the gag 
-| 
-| some dittery dots
-| some jittery jots
-| these simmering sots. 
+    | the ball in the bag
+    | the rip in the rag
+    | the gig in the gag 
+    | 
+    | some dittery dots
+    | some jittery jots
+    | these simmering sots. 
 
 This can be represented using the operation of *succession* and the operation of *separation* with the expression, 
 
@@ -243,7 +313,7 @@ This can be represented using the operation of *succession* and the operation of
 
 .. math::
 
-    Ⲁ:Ⲃ:Ⲅ = Ⲁ∅Ⲃ∅Ⲅ
+    Ⲁ:Ⲃ:Ⲅ = Ⲁ\varnothingⲂ\varnothingⲄ
 
 .. _syntagmics-scope:
 
@@ -373,6 +443,7 @@ Refers to a tercet where the first and third line are written in iambic tetramet
     (a/\mathfrak{i}_4) = {\pi_1}{\Pi_1}{\pi_2}{\Pi_2}{\pi_3}{\Pi_3}{\pi_4}{\Pi_4}
 
 Note in this example the first and third line rhyme. 
+
 The scope of a meter extends to everything contained in the parenthesis it marks. For example,
 
 .. math::
@@ -390,7 +461,7 @@ If a sign has no accent mark, then any type of rhyme satisfies the sign.
 
 .. note::
 
-    Rhyme accents can operate one both lines *u* and words :math:`\alpha`.
+    Rhyme accents can operate one both lines :math:`a` and words :math:`\alpha`.
 
 1. Masculine Rhymes
 
@@ -408,7 +479,7 @@ A hat is used to denote a masculine rhyme,
 
 2. Feminine Rhymes
    
-A feminine rhyme occurs when the final syllable in two words is unstressed and identically phonetically. For example, the following pairs of words are feminine rhymes,
+A feminine rhyme occurs when the final syllable in two words is unstressed, and the last two syllables are identical phonetically. For example, the following pairs of words are feminine rhymes,
    
 - mother, another
 - flowing, going

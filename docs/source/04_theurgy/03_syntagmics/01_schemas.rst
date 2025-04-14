@@ -250,9 +250,9 @@ Six sestets followed by a tercet envoi.
         u(\Epsilon).v(\Gamma).w(\mathrm{B}).x(\Zeta).y(\mathrm{A}).z(\Delta) +
         u(\Delta).v(\Epsilon).w(\mathrm{A}).x(\Gamma).y(\Zeta).z(\mathrm{B}) +
         u(\mathrm{B}).v(\Delta).w(\Zeta).x(\Epsilon).y(\Gamma).z(\mathrm{A}) + 
-        [[u \cdot \mathrm{A}.v \cdot \mathrm{B}.w \cdot \Gamma] \cup 
-        [u \cdot \Gamma.v \cdot \Delta.w \cdot \Epsilon] \cup 
-        [u \cdot \Zeta.v \cdot \mathrm{B}.w \cdot \Delta]]
+        [t_1 \cup t_2] | 
+        t1 = ((u \cdot \mathrm{A}) \cdot \mathrm{B}).((v \cdot \Gamma) \cdot \Delta).((w \cdot \Epsilon) \cdot \Zeta),
+        t2 = ((u \cdot \mathrm{A}) \cdot \Delta).((v \cdot \mathrm{B}) \cdot \Epsilon).((w \cdot \Gamma) \cdot \Zeta),
 
 **References**
 

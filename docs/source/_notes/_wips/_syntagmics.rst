@@ -86,6 +86,18 @@ Given below are existing definitions of poetical devices.
 Formalization
 -------------
 
+The syntagmic hierarchy, in descending order, is given by, 
+
+1. Poems
+2. Stanzas
+3. Lines 
+4. Words
+5. Syllables
+
+Each layer is composed of elements from the layer beneath it joined together through operations (to be defined shortly). 
+
+In this formalization, English letters will be used to represent lines, Greek letters will be used to represent words and Coptic letters will be used to represent syllables. 
+
 .. _syntagmics-constants:
 
 Constants
@@ -110,13 +122,13 @@ Variables
 
 1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
     a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
-    b. The lowercase English letters x and y are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
-2. The lowercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \gamma`): Indeterminate rhymed words.
+    b. The lowercase English letters x, y and z are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
+2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
 5. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
-6. The lowercase English letters p and q are reserved for indeterminate poems. 
+6. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
 
 .. important::
 
@@ -124,7 +136,7 @@ Variables
 
 .. note::
 
-    The choice of :math:`ⲡ` and :math:`Ⲡ` to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, :math:`ⲡ` is meant to represent indeterminate unstressed syllables, whereas :math:`Ⲡ` is meant to represent indeterminate stressed syllables. :math:`ⲣ` is used in a more general capacity, to represent stressed or unstressed syllables.
+    The choice of :math:`ⲡ` and :math:`Ⲡ` to represent syllables mirrors the unstressed and stressed syllables of verse. In other words, :math:`ⲡ` is meant to represent indeterminate unstressed syllables, whereas :math:`Ⲡ` is meant to represent indeterminate stressed syllables. :math:`ⲣ` is used in a more general capacity, to represent stressed or unstressed syllables.
 
 The variables will sometimes be referred to as *syntagmic variables*, or *signs*. 
 
@@ -135,7 +147,7 @@ Uppercase-lowercase pairs of English letters are understood to be rhymes. The di
     | So-and-so such that 
     | The cat on the mat
 
-The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
+The intent behind defining :math:`p` and :math:`q` as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables and constants. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
 
 .. _syntagmics-relations:
 
@@ -173,6 +185,9 @@ All syntagmic operations are to be understood as being closed under the domain o
 
 Brackets, [], are used to group operations within signs by precedence.
 
+Separation vs. Succession 
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 To see what is meant by the distinction between *separation* and *succession*, let :math:`x = \text{the fish in the dish}` and :math:`y = \text{the dog on a jog}`. Then :math:`x.y` means,
 
     | the fish in the dish
@@ -186,15 +201,60 @@ Where as :math:`x + y` means,
 
 From this, it can be see the operation of *successions* inserts a new line at the end of first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
 
+Projection
+^^^^^^^^^^
+
+It is important to clarify that projection is a *sign*. It is an object *within* the syntagmic system (or more specifically, an operation which yields an object). It serves a semantic function within the system. This is different from the metalogical nature of *containment*, which is an expression *about* the system, i.e. a truth value.
+
 .. important::
 
     The operation of *projection* is a sign. The relation of *containment* is a truth value.
 
-Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. These operations are related logically to the more general operation of projection. If a sign prepends or appends another sign, it also projects that sign. 
+To state "*y projects x*", or symbolically,
 
-However, projection does not imply prependment or amendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or amend it. 
+.. math::
 
-Mathematically,
+    x = x \cdot y
+
+Can be seen as a form of "*poetic factorization*", where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \cdot y` will sometimes be referred to as a *factor* of :math:`x`. 
+
+The operation of projection is not commutative,
+
+.. math::
+
+    x \cdot y \neq y \cdot x 
+
+The sign on the lefthand side :math:`x` of a projection :math:`x \cdot y` is the "*larger*" sign that contains the "*smaller*" sign :math:`y` on the righthand side. In other words, logically,
+
+.. math::
+
+    [x = x \cdot y] \equiv [y \subset x]
+
+In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
+
+Projection is logically related to amendment and prependment. Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. Both :math:`z` and :math:`y` project :math:`x`, as well,
+
+.. math::
+
+    x = x \cdot y
+
+.. math::
+
+    x = x \cdot z
+
+In other words, if a sign prepends or appends another sign, it also projects that sign. Taking the previous two equations and substituting the first into the second, 
+
+.. math::
+
+    x = [x \cdot y] \cdot z
+
+The brackets are dropped for notationally convenience and it is understood a projection is to be applied starting with the rightmost sign (:math:`y`) and moving left to the next projection (:math:`z`).
+
+.. math::
+
+    x = x \cdot y \cdot z
+
+Importantly, projection does not imply prependment or amendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or amend it. In other words, amendment, prependment and projection are logically related as follows,
 
 .. math::
 
@@ -207,8 +267,14 @@ And,
 Or more succinctly,
 
     [x(y) \lor (y)x] \implies (x \cdot y)
-    
-Importantly, the converse of this does not hold.
+
+Importantly, the converse of this does not hold. 
+
+The operation of projection is *idempotent*,
+
+.. math::
+
+    [x \cdot y] \cdot y = x \cdot y = x
 
 **Provisional Notation**
 
@@ -224,8 +290,6 @@ Shorthand
 
 Shorthand notation is introduced in this section to extend the primitive operations defined in the previous seciton.
 
-.. _syntagmics-summation:
-
 1. **Summation**: The connotation of the :math:`+` symbol is leveraged to extend the symbolism to the :math:`\sum` symbol. Consider,
 
 .. math::
@@ -233,8 +297,6 @@ Shorthand notation is introduced in this section to extend the primitive operati
     \sum_1^{n} {a_i}{b_i}{a_i} = a_1.b_1.a_1 + a_2.b_2.a_2 + ... a_n.b_n.a_n 
 
 This example shows how to represent a poem of arbitrary length composed of tercet stanzas where the first and third lines rhyme. 
-
-.. _syntagmics-serialization:
 
 2. **Serialization**: A *serialization* (serialized concatenation) is used in reference to syllables. It simply means the concatenation of a patterned sequence of syllables. Consider,
 
@@ -244,9 +306,7 @@ This example shows how to represent a poem of arbitrary length composed of terce
 
 This example shows how to represent a line of iambic meter, i.e. sequences of unstressed and then stressed syllables. 
 
-.. _syntagmics-exponentation:
-
-3. **Exponentation**: An exponent is used as shorthand for excessive succession of rhymes. For example, consider the lines, 
+3. **Exponentiation**: An exponent is used as shorthand for excessive succession of rhymes. For example, consider the lines, 
 
 | the ball in the bag
 | the rip in the rag
@@ -349,13 +409,13 @@ This expression can be represented using primitive operations as,
     
     p = a.a + b.b
 
-Using :ref:`syntagmics-exponentiation`,
+Using :ref:`exponentiation <syntagmics-shorthand>`,
 
 .. math::
 
     p = a^2 + b^2
 
-Keeping in mind the definition of :ref:`syntagmics-scope` and applying a :ref:`syntagmic-summation`, this can be further reduced,
+Keeping in mind the definition of :ref:`syntagmics-scope` and applying a :ref:`summation <syntagmics-shorthand>`, this can be further reduced,
 
 .. math::
 
@@ -421,7 +481,7 @@ If a sign has no accent mark, then any type of rhyme satisfies the sign.
 
 .. note::
 
-    Rhyme accents can operate one both lines *u* and words :math:`\mathrm{A}`.
+    Rhyme accents can operate one both lines *u* and words :math:`\alpha`.
 
 1. Masculine Rhymes
 
@@ -477,6 +537,7 @@ A tilde is used to denote an off rhyme,
     \tilde{a} = [ ... ]
 
 Where "..." represents as yet undetermined operation.
+
 
 
 .. _schemes:
@@ -730,9 +791,9 @@ Six sestets followed by a tercet envoi.
         u(\Epsilon).v(\Gamma).w(\mathrm{B}).x(\Zeta).y(\mathrm{A}).z(\Delta) +
         u(\Delta).v(\Epsilon).w(\mathrm{A}).x(\Gamma).y(\Zeta).z(\mathrm{B}) +
         u(\mathrm{B}).v(\Delta).w(\Zeta).x(\Epsilon).y(\Gamma).z(\mathrm{A}) + 
-        [[u \cdot \mathrm{A}.v \cdot \mathrm{B}.w \cdot \Gamma] \cup 
-        [u \cdot \Gamma.v \cdot \Delta.w \cdot \Epsilon] \cup 
-        [u \cdot \Zeta.v \cdot \mathrm{B}.w \cdot \Delta]]
+        [t_1 \cup t_2] | 
+        t1 = ((u \cdot \mathrm{A}) \cdot \mathrm{B}).((v \cdot \Gamma) \cdot \Delta).((w \cdot \Epsilon) \cdot \Zeta),
+        t2 = ((u \cdot \mathrm{A}) \cdot \Delta).((v \cdot \mathrm{B}) \cdot \Epsilon).((w \cdot \Gamma) \cdot \Zeta),
 
 **References**
 
