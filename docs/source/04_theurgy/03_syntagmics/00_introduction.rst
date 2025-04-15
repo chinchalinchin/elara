@@ -1,8 +1,8 @@
 
 .. _syntagmics-introduction:
 
-Introduction
-============
+Section I: Introduction
+=======================
 
 .. epigraph::
 
@@ -551,6 +551,13 @@ Where "..." represents as yet undetermined operation.
 
     Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
 
+**Distributive Property**
+
+Consider the separation of two arbitrary signs :math:`\hat{x}` and :math:`\hat{y}`,
+
+.. math::
+
+    x.y 
 Logical Structure
 ^^^^^^^^^^^^^^^^^
 
@@ -593,7 +600,7 @@ If the secondary relations are defined,
 
 - :math:`\vdash`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
 - :math:`\Vdash`, Feminie Rhyme: :math:`x \Vdash y \equiv [\exists z: [x(\check{z) \land y(\check{z})]]`
-- :math:`\vVdash`, Dactylic Rhyme: :math:`x \vVdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
+- :math:`\Vvdash`, Dactylic Rhyme: :math:`x \Vvdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
 
 Then, the relation of *rhymation* can be defined precisely as, 
 
@@ -601,4 +608,4 @@ Then, the relation of *rhymation* can be defined precisely as,
 
     x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]
 
-Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \vVdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`
+Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`

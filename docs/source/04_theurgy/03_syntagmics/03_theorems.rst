@@ -1,7 +1,7 @@
-.. _syntagmics-calculsu:
+.. _syntagmics-calculus:
 
-Calculus
-========
+Section IV: Calculus
+====================
 
 .. _syntagmics-axioms:
 

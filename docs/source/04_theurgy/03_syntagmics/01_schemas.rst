@@ -1,8 +1,8 @@
 
-.. _schemes:
+.. _syntagmics-schemes:
 
-Schemes
-=======
+Section II: Schemes
+===================
 
 .. _ballad:
 

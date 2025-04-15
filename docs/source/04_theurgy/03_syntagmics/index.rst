@@ -10,9 +10,6 @@
         \usepackage{lmodern}
         \usepackage{runic}
         \usepackage{textcomp}
-
-        \newcommand{\smooth}{\smash{\textprimstress}}
-        \newcommand{\rough}{\smash{\textdoubleprimstress}}
         """
 
 .. _syntagmics:
@@ -22,7 +19,7 @@ Syntagmics
 ==========
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    00_introduction
