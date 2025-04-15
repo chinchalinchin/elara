@@ -84,7 +84,7 @@ Kyrielle
 
     .. math::
 
-        \overline{\sum_1^n [{a^2}.b.B:a.A.{b^2}]
+        \overline{\sum_1^n [{a^2}.b.B:a.A.{b^2}]}
 
 **References**
 

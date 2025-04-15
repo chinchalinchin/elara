@@ -1,9 +1,3 @@
-.. TODO: 
-    Research 
-    - terzanelle 
-    - ghazal
-    - haikus
-
 .. NOTE: 
     The following document was generated with Sphinx using the following LaTeX preamble in the ```conf.py```
     
@@ -33,4 +27,11 @@ Syntagmics
 
    00_introduction
    01_schemas
-   02_theorems
+   02_decompositions
+   03_theorems
+
+.. TODO: 
+    Research 
+    - terzanelle 
+    - ghazal
+    - haikus

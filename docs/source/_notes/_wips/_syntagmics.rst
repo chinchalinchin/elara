@@ -1,9 +1,3 @@
-.. TODO: 
-    Research 
-    - terzanelle 
-    - ghazal
-    - haikus
-
 .. NOTE: 
     The following document was generated with Sphinx using the following LaTeX preamble in the ```conf.py```
     
@@ -163,9 +157,9 @@ The relation of "contains" extends up the levels of the syntagmic hierarchy, cap
 - Lines contain words and syllables
 - Stanzas contain lines, words and syllables
  
-2. :math:`x \propto y` (**Rhymation**): The sign x rhymes with the sign y. 
+2. :math:`x \parallel y` (**Rhymation**): The sign x rhymes with the sign y. 
 
-The relation of "rhymes with", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.
+The relation of "*rhymes with*", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.
 
 .. _syntagmics-operations:
 
@@ -222,7 +216,7 @@ To state "*y projects x*", or symbolically,
 
     x = x \circ y
 
-Can be seen as a form of "*poetic factorization*", akin to an arithmetic relation :math:`9 = 3 \circ 3`, where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \circ y` will sometimes be referred to as a *factor* of :math:`x`. 
+Can be seen as a form of "*poetic factorization*", akin to an arithmetic relation :math:`9 = 3 \cdot 3`, where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \circ y` will sometimes be referred to as a *factor* of :math:`x`. 
 
 The operation of projection is not commutative,
 
@@ -575,66 +569,59 @@ Where "..." represents as yet undetermined operation.
 
     Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
 
-Relation
-^^^^^^^^
+Logical Structure
+^^^^^^^^^^^^^^^^^
 
-Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. 
+Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. Rhymation is meant to explicate the relation of "*perfect rhymes*" within the formal system being developing.
 
-It should first be noted, by :ref:`definition <syntagmics-variables>`, that all rhymed lines rhyme with themselves,
-
-.. math::
-
-    a \propto a
-
-Similarly, all rhymed words rhyme with themselves,
+It should first be noted, by :ref:`definition <syntagmics-variables>`, that all signs rhyme with themselves,
 
 .. math::
 
-    \alpha \propto \alpha
+    x \parallel x
 
-Furthermore, if line :math:`a` rhymes with line :math:`b`, then :math:`b` rhymes with :math:`a`, and visa versa,
 
-.. math::
-
-    a \propto b \equiv b \propto a
-
-Similarly,
+Furthermore, if an arbitary sign :math:`x` rhymes with the sign :math:`y`, then :math:`y` rhymes with :math:`x`, and visa versa,
 
 .. math::
 
-    \alpha \propto \beta \equiv \beta \propto \alpha
+    x \parallel y \equiv y \parallel x
 
-If two arbitrary signs end in the same masculine particle, then they rhyme,
-
-.. math::
-
-    [x(\hat{\lambda}) \land y(\hat{\lambda})] \implies x \propto y
-
-If two arbitary signs end in the same feminine particle, then they rhyme,
+If two arbitrary signs :math:`x` and :math:`y` end in the same masculine particle, :math:`z`, then they rhyme,
 
 .. math::
 
-    [x(\check{\lambda}) \land y(\check{\lambda})] \implies x \propto y
+    [x(\hat{z}) \land y(\hat{z})] \implies x \parallel y
+
+If two arbitrary signs :math:`x` and :math:`y` end in the same feminine particle, :math:`z`, then they rhyme,
+
+.. math::
+
+    [x(\check{z}) \land y(\check{z})] \implies x \parallel y
 
 If two arbitary signs end in the same dactylic particle, then they rhyme, 
 
 .. math::
 
-    [x(\dot{\lambda}) \land y(\dot{\lambda})] \implies x \propto y
+    [x(\dot{z}) \land y(\dot{z})] \implies x \parallel y
 
 However, off-rhymes do *not* imply the relation of *rhymation*.
 
 If the secondary relations are defined, 
 
-- :math:`\prec`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
-- :math:`\succ`, Feminie Rhyme: :math:`x \succ y \equiv [x(\check{\lambda}) \land y(\check{\lambda})]`
-- :math:`\precsim`, Dactylic Rhyme: :math:`x \precsim y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
+- :math:`\vdash`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
+- :math:`\Vdash`, Feminie Rhyme: :math:`x \Vdash y \equiv [\exists z: [x(\check{z) \land y(\check{z})]]`
+- :math:`\vVdash`, Dactylic Rhyme: :math:`x \vVdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
 
 Then, the relation of *rhymation* can be defined precisely as, 
 
 .. math::
 
-    x R y \equiv [x \prec y \lor x \succ y \lor x \precsim y]
+    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]
+
+Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \vVdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`
+
+
 
 .. _schemes:
 
@@ -721,7 +708,7 @@ Kyrielle
 
     .. math::
 
-        \overline{\sum_1^n [{a^2}.b.B:a.A.{b^2}]
+        \overline{\sum_1^n [{a^2}.b.B:a.A.{b^2}]}
 
 **References**
 
@@ -854,8 +841,8 @@ The following diagrams shows the different schemata for the rondeau form duing t
 .. topic:: Rondeau Schema (Renaissance)
 
     1. Rondel: A.B.a.b + a.b.A.B + a.b.b.a.A
-    2. Rondeau Prime: R-a.b.b.a.a.b.R + a.b.b.a.R
-    3. Rondeau: R-a.a.b.b.a + a.a.b + a.a.b.b.a.R
+    2. Rondeau Prime: (R)a.b.b.a.a.b.R + a.b.b.a.R
+    3. Rondeau: (R)a.a.b.b.a + a.a.b + a.a.b.b.a.R
 
 **Roundel**
 
@@ -891,9 +878,6 @@ Six sestets followed by a tercet envoi.
         t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \Epsilon) \circ \Zeta),
         t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \Epsilon).((w \circ \Gamma) \circ \Zeta),
 
-.. TODO: I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think 
-        caesures will satisfy this schema!
-        
 **References**
 
 - `Sestina (Bishop)`_, Elizabeth Bishop
@@ -935,10 +919,6 @@ Sonnet
     .. math::
 
         (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
-
-.. TODO: need some way of representing the interlocking rhyme scheme. 
-..      Some way of recursive defining the index of the sum!
-..      This would be useful for pantoums and terzas as well!
 
 **References**
 
@@ -1018,34 +998,29 @@ Villanelle
 - `One Art`_, Elizabeth Bishop
 - `Song`_, John Fuller
 - `The Waking`_, Theodore Roethke
-  
-.. _syntagmics-calculsu:
 
-Calculus
-========
+.. PROMPT: Use this formal system to perform a case study on Mad Girl's Love Song by Sylvia Plath, given below. Convert her famous poem into a formal representation using the operations and variables that have been defined. Try to capture as much detail as possible, i.e. meter, category of rhyme, etc.
+    I shut my eyes and all the world drops dead;
+    I lift my lids and all is born again.
+    (I think I made you up inside my head.)
 
-.. _syntagmics-axioms:
+    The stars go waltzing out in blue and red,
+    And arbitrary blackness gallops in:
+    I shut my eyes and all the world drops dead.
 
-Axioms
-------
+    I dreamed that you bewitched me into bed
+    And sung me moon-struck, kissed me quite insane.
+    (I think I made you up inside my head.)
 
-1. All words are made of syllables, all lines are made of words, all stanzas are made of lines. 
+    God topples from the sky, hell's fires fade:
+    Exit seraphim and Satan's men:
+    I shut my eyes and all the world drops dead.
 
-.. math::
-    
-    \forall \varsigma, u, \lambda: \exists ⲣ: [ⲣ \subset \lambda] \land [\lambda \subset u] \land [u \subset \varsigma]
+    I fancied you'd return the way you said,
+    But I grow old and I forget your name.
+    (I think I made you up inside my head.)
 
-2. All poems are made of stanzas. 
-
-.. math::
-
-    \forall p: \exists n: p  = \sum_1^{n} \varsigma_i  
-
-3. The scope of a poem is not equal to the scope of its stanzas. 
-
-.. math::
-
-    \forall p: \forall n: \sum_1^{n} \overline{\varsigma_i} \neq \overline{ \sum_1^{n} \varsigma_i }
-
-.. TODO:
-    This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas.
+    I should have loved a thunderbird instead;
+    At least when spring comes they roar back again.
+    I shut my eyes and all the world drops dead.
+    (I think I made you up inside my head.)

@@ -139,7 +139,7 @@ The relation of "contains" extends up the levels of the syntagmic hierarchy, cap
 - Lines contain words and syllables
 - Stanzas contain lines, words and syllables
  
-2. :math:`x \propto y` (**Rhymation**): The sign x rhymes with the sign y. 
+2. :math:`x \parallel y` (**Rhymation**): The sign x rhymes with the sign y. 
 
 The relation of "*rhymes with*", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.
 
@@ -198,7 +198,7 @@ To state "*y projects x*", or symbolically,
 
     x = x \circ y
 
-Can be seen as a form of "*poetic factorization*", akin to an arithmetic relation :math:`9 = 3 \circ 3`, where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \circ y` will sometimes be referred to as a *factor* of :math:`x`. 
+Can be seen as a form of "*poetic factorization*", akin to an arithmetic relation :math:`9 = 3 \cdot 3`, where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \circ y` will sometimes be referred to as a *factor* of :math:`x`. 
 
 The operation of projection is not commutative,
 
@@ -551,63 +551,54 @@ Where "..." represents as yet undetermined operation.
 
     Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
 
-Relation
-^^^^^^^^
+Logical Structure
+^^^^^^^^^^^^^^^^^
 
-Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. 
+Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. Rhymation is meant to explicate the relation of "*perfect rhymes*" within the formal system being developing.
 
-It should first be noted, by :ref:`definition <syntagmics-variables>`, that all rhymed lines rhyme with themselves,
-
-.. math::
-
-    a \propto a
-
-Similarly, all rhymed words rhyme with themselves,
+It should first be noted, by :ref:`definition <syntagmics-variables>`, that all signs rhyme with themselves,
 
 .. math::
 
-    \alpha \propto \alpha
+    x \parallel x
 
-Furthermore, if line :math:`a` rhymes with line :math:`b`, then :math:`b` rhymes with :math:`a`, and visa versa,
 
-.. math::
-
-    a \propto b \equiv b \propto a
-
-Similarly,
+Furthermore, if an arbitary sign :math:`x` rhymes with the sign :math:`y`, then :math:`y` rhymes with :math:`x`, and visa versa,
 
 .. math::
 
-    \alpha \propto \beta \equiv \beta \propto \alpha
+    x \parallel y \equiv y \parallel x
 
-If two arbitrary signs end in the same masculine particle, then they rhyme,
-
-.. math::
-
-    [x(\hat{\lambda}) \land y(\hat{\lambda})] \implies x \propto y
-
-If two arbitary signs end in the same feminine particle, then they rhyme,
+If two arbitrary signs :math:`x` and :math:`y` end in the same masculine particle, :math:`z`, then they rhyme,
 
 .. math::
 
-    [x(\check{\lambda}) \land y(\check{\lambda})] \implies x \propto y
+    [x(\hat{z}) \land y(\hat{z})] \implies x \parallel y
+
+If two arbitrary signs :math:`x` and :math:`y` end in the same feminine particle, :math:`z`, then they rhyme,
+
+.. math::
+
+    [x(\check{z}) \land y(\check{z})] \implies x \parallel y
 
 If two arbitary signs end in the same dactylic particle, then they rhyme, 
 
 .. math::
 
-    [x(\dot{\lambda}) \land y(\dot{\lambda})] \implies x \propto y
+    [x(\dot{z}) \land y(\dot{z})] \implies x \parallel y
 
 However, off-rhymes do *not* imply the relation of *rhymation*.
 
 If the secondary relations are defined, 
 
-- :math:`\prec`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
-- :math:`\succ`, Feminie Rhyme: :math:`x \succ y \equiv [x(\check{\lambda}) \land y(\check{\lambda})]`
-- :math:`\precsim`, Dactylic Rhyme: :math:`x \precsim y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
+- :math:`\vdash`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
+- :math:`\Vdash`, Feminie Rhyme: :math:`x \Vdash y \equiv [\exists z: [x(\check{z) \land y(\check{z})]]`
+- :math:`\vVdash`, Dactylic Rhyme: :math:`x \vVdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
 
 Then, the relation of *rhymation* can be defined precisely as, 
 
 .. math::
 
-    x R y \equiv [x \prec y \lor x \succ y \lor x \precsim y]
+    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]
+
+Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \vVdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`
