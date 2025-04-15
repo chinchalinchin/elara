@@ -13,7 +13,7 @@ Ballad
 
     .. math::
 
-        \sum_1^{n} \overline{(a/\mathfrak{i}_4).(b/\mathfrak{i}_3).(a ∨ c/\mathfrak{i}_4).(b/\mathfrak{i}_3)}
+        \sum_1^{n} \overline{(a/\mathfrak{i}_4).(b/\mathfrak{i}_3).(a:c/\mathfrak{i}_4).(b/\mathfrak{i}_3)}
 
 **References**
 
@@ -35,7 +35,7 @@ Ballade
 
         a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
 
-    Using :ref:`syntagmics-shorthand`,
+    :ref:`Reducing <syntagmics-shorthand>`,
 
     .. math::
 
@@ -45,25 +45,25 @@ Ballade
 
     .. math::
 
-        [a.b.a + b.b + c.c] \cup [a.b.a.b + b.c.c]
+        [a.b.a + b.b + c.c]:[a.b.a.b + b.c.c]
 
-    Using :ref:`syntagmics-shorthand`,
-
+    :ref:`Reducing <syntagmics-shorthand>`,
+    
     .. math::
 
-        [a.b.a + b^2 + c^2] \cup [[a.b]^2 +b.[c^2]]
+        [a.b.a + b^2 + c^2]:[[a.b]^2 +b.{c^2}]
 
 .. topic:: Schema (Chant Royal)
 
     .. math::
 
-        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [ d.d.e.d.E \cup c.c.d.d.e.d.E]}
+        \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [d.d.e.d.E:c.c.d.d.e.d.E]}
 
-    Using :ref:`syntagmics-shorthand`,
+    :ref:`Reducing <syntagmics-shorthand>`,
 
     .. math::
 
-        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E \cup {c^2}{d^2}.e.d.E]
+        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E:{c^2}{d^2}.e.d.E]
 
 **References**
 
@@ -78,13 +78,13 @@ Kyrielle
 
     .. math::
 
-        \overline{\sum_1^{n} [ a.a.b.B \cup a.A.b.b ]}
+        \overline{\sum_1^{n} [a.a.b.B:a.A.b.b]}
 
-    Using :ref:`syntagmics-shorthand`,
+    :ref:`Reducing <syntagmics-shorthand>`,
 
     .. math::
 
-        \overline{\sum_1^n [{a^2}.b.B \cup a.A.{b^2}]
+        \overline{\sum_1^n [{a^2}.b.B:a.A.{b^2}]
 
 **References**
 
@@ -126,7 +126,7 @@ Ottava
 
         a.b.a.b.a.b.a.b
 
-    Using :ref:`syntagmics-shorthand`,
+    :ref:`Reducing <syntagmics-shorthand>`,
 
     .. math::
 
@@ -138,8 +138,8 @@ Ottava
 
         a.b.a.b.c.c.d.d
 
-    Using :ref:`syntagmics-shorthand`,
-
+    :ref:`Reducing <syntagmics-shorthand>`,
+    
     .. math::
         
         {[a.b]^2}.{c^2}.{d^2}
@@ -152,7 +152,7 @@ Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
         (a.b.a.b.a.b.c.c/\mathfrak{i}_5)
 
-    Using :ref:`syntagmics-shorthand`,
+    :ref:`Reducing <syntagmics-shorthand>`,
 
     .. math::
 
@@ -217,8 +217,8 @@ The following diagrams shows the different schemata for the rondeau form duing t
 .. topic:: Rondeau Schema (Renaissance)
 
     1. Rondel: A.B.a.b + a.b.A.B + a.b.b.a.A
-    2. Rondeau Prime: R-a.b.b.a.a.b.R + a.b.b.a.R
-    3. Rondeau: R-a.a.b.b.a + a.a.b + a.a.b.b.a.R
+    2. Rondeau Prime: (R)a.b.b.a.a.b.R + a.b.b.a.R
+    3. Rondeau: (R)a.a.b.b.a + a.a.b + a.a.b.b.a.R
 
 **Roundel**
 
@@ -250,9 +250,12 @@ Six sestets followed by a tercet envoi.
         u(\Epsilon).v(\Gamma).w(\mathrm{B}).x(\Zeta).y(\mathrm{A}).z(\Delta) +
         u(\Delta).v(\Epsilon).w(\mathrm{A}).x(\Gamma).y(\Zeta).z(\mathrm{B}) +
         u(\mathrm{B}).v(\Delta).w(\Zeta).x(\Epsilon).y(\Gamma).z(\mathrm{A}) + 
-        [t_1 \cup t_2] | 
-        t1 = ((u \cdot \mathrm{A}) \cdot \mathrm{B}).((v \cdot \Gamma) \cdot \Delta).((w \cdot \Epsilon) \cdot \Zeta),
-        t2 = ((u \cdot \mathrm{A}) \cdot \Delta).((v \cdot \mathrm{B}) \cdot \Epsilon).((w \cdot \Gamma) \cdot \Zeta),
+        [t_1:t_2] | 
+        t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \Epsilon) \circ \Zeta),
+        t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \Epsilon).((w \circ \Gamma) \circ \Zeta),
+
+.. TODO: I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think 
+        caesures will satisfy this schema!
 
 **References**
 
@@ -269,19 +272,36 @@ Sonnet
 
     .. math::
     
-        a.b.b.a.a.b.b.a + c.d.e.c.d.e \cup c.d.c.d.c.d
+        a.b.b.a.a.b.b.a + c.d.e.c.d.e:c.d.c.d.c.d
+
+    :ref:`Reducing <syntagmics-shorthand>`,
+
+    .. math::
+
+        a.b.b.{a^2}.{b^2}.a + c.d.e.c.d.e:{[c.d]^3}
 
 .. topic:: Schema (Shakespearan)
 
-   .. math::
+    .. math::
 
         ([\sum_i^{3} \overline{a.b.a.b}] + a.a/\mathfrak{i}_5)
+
+    :ref:`Reducing <syntagmics-shorthand>`,
+
+    .. math::
+
+        ([\sum_i^{3} \overline{{a.b}^2}] + a^2/\mathfrak{i}_5)
+
 
 .. topic:: Schema (Spenserian)
 
     .. math::
 
         (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
+
+.. TODO: need some way of representing the interlocking rhyme scheme. 
+..      Some way of recursive defining the index of the sum!
+..      This would be useful for pantoums and terzas as well!
 
 **References**
 

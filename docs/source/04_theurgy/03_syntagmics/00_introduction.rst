@@ -133,12 +133,16 @@ All syntagmic relations are to be understood as truth values, meaning each expre
 
 1. :math:`x \subset y` (**Containment**): The sign x is contained in the sign y. 
 
-The relation of containment extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
+The relation of "contains" extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
 - Words contain syllables
 - Lines contain words and syllables
 - Stanzas contain lines, words and syllables
  
+2. :math:`x \propto y` (**Rhymation**): The sign x rhymes with the sign y. 
+
+The relation of "*rhymes with*", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.
+
 .. _syntagmics-operations:
 
 Operations
@@ -146,19 +150,22 @@ Operations
 
 This section introduces the primitive operations of *syntagimcs*. 
 
-All syntagmic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
+.. important::
+
+    These are the verbs of the system. They are used to express syntagmic proposition *within the system*.
+
+In other words, all operations defined in this section are to be understood as *object* level constructs, in contradistinction to :ref:`relations <syntagmics-relations>` like containment or rhymation which are predicated of objects and yield judgements as a result. All syntagmic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
 
 1. :math:`x.y` (**Succession**): Successive signs.
 2. :math:`xy` (**Concatenation**): Concatenated signs.
-3. :math:`x:y` (**Delimitation**): Delimited signs.
-4. :math:`x \cup y` (**Disjunction**): A sign that is either x or y.
-5. :math:`x + y` (**Separation**): Separated signs.
-6. :math:`x \cdot y` (**Projection**) : Sign containing sign. 
-7. :math:`x(y)` (**Appendment**): A sign ending in a word.  
-8. :math:`(y)x` (**Prependment**): A sign beginning with a word. 
-9.  :math:`x.y.x | x = z` (**Substitution**): Substitute z for x in the sign :math:`x.y.x`
+3. :math:`x:y` (**Disjunction**): A sign that is either x or y.
+4. :math:`x + y` (**Separation**): Separated signs.
+5. :math:`x \circ y` (**Projection**) : Sign containing another sign. 
+6. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
+7. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
+8.  :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset x`.
 
-Brackets, [], are used to group operations within signs by precedence.
+Brackets, :math:`[]`, are used to group operations within signs by precedence.
 
 Separation vs. Succession 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -174,7 +181,7 @@ Where as :math:`x + y` means,
     | 
     | the dog on a jog
 
-From this, it can be see the operation of *successions* inserts a new line at the end of first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines. 
+From this, it can be see the operation of *successions* inserts a new line at the end of first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines within stanzas. 
 
 Projection
 ^^^^^^^^^^
@@ -189,71 +196,94 @@ To state "*y projects x*", or symbolically,
 
 .. math::
 
-    x = x \cdot y
+    x = x \circ y
 
-Can be seen as a form of "poetic factorization", where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \cdot y` will sometimes be referred to as a *factor* of :math:`x`. 
+Can be seen as a form of "*poetic factorization*", akin to an arithmetic relation :math:`9 = 3 \circ 3`, where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \circ y` will sometimes be referred to as a *factor* of :math:`x`. 
 
 The operation of projection is not commutative,
 
 .. math::
 
-    x \cdot y \neq y \cdot x 
+    x \circ y \neq y \circ x 
 
-The sign on the lefthand side :math:`x` of a projection :math:`x \cdot y` is the "*larger*" sign that contains the "*smaller*" sign :math:`y` on the righthand side. In other words, logically,
+The sign on the lefthand side :math:`x` of a projection :math:`x \circ y` is the "*larger*" sign that contains the "*smaller*" sign :math:`y` on the righthand side. In other words, logically, if :math:`x` contains :math:`y`,
+
+.. math::
+    
+    [y \subset x] \implies [x \circ y = x]
+
+However, if :math:`x` does not contain :math:`y`, then :math:`x \circ y` is defined to be a caesura, :math:`\varnothing`, i.e. the absence of a syntagmic variable. 
 
 .. math::
 
-    [x = x \cdot y] \equiv [y \subset x]
+    [\neg y \subset x] \implies [x \circ y = \varnothing]
+
+For this reason, :math:`x \circ y` can be thought of an indicator variable that returns the first operand if it contains the second operand, and nothing if the first operand does not contain the second operand. 
+
+.. math::
+
+    [[y \subset x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
 
 In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
 
-Projection is logically related to amendment and prependment. Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. Both :math:`z` and :math:`y` project :math:`x`, as well,
+Projection is logically related to appendment and prependment. Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. Both :math:`z` and :math:`y` project :math:`x`, as well,
 
 .. math::
 
-    x = x \cdot y
+    x = x \circ y
 
 .. math::
 
-    x = x \cdot z
+    x = x \circ z
 
 In other words, if a sign prepends or appends another sign, it also projects that sign. Taking the previous two equations and substituting the first into the second, 
 
 .. math::
 
-    x = [x \cdot y] \cdot z
+    x = [x \circ y] \circ z
 
-The brackets are dropped for notationally convenience and it is understood a projection is to be applied starting with the rightmost sign (:math:`y`) and moving left to the next projection (:math:`z`).
-
-.. math::
-
-    x = x \cdot y \cdot z
-
-Importantly, projection does not imply prependment or amendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or amend it. In other words, amendment, prependment and projection are logically related as follows,
+The brackets are dropped for notationally convenience and it is understood a projection is to be applied starting with the leftmost sign (:math:`y`) and moving right to the next projection operand (:math:`z`).
 
 .. math::
 
-    x(y) \implies [x \cdot y]
+    x = x \circ y \circ z
+
+Importantly, projection does not imply prependment or appendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or append it. In other words, appendment, prependment and projection are logically related as follows,
+
+.. math::
+
+    x(y) \implies [x \circ y]
 
 And,
 
 .. math::
 
-    (y)x \implies [x \cdot y]
+    (y)x \implies [x \circ y]
 
 Or more succinctly,
 
 .. math::
 
-    [x(y) \lor (y)x] \implies (x \cdot y)
+    [x(y) \lor (y)x] \implies (x \circ y)
 
-Importantly, the converse of this does not hold. 
 
-The operation of projection is *idempotent*,
+.. important::
+    
+    The converse of this does not hold. 
+
+The "zero" property of projection is given by noting that caesuras cannot contain anything but themselves,
 
 .. math::
 
-    [x \cdot y] \cdot y = x \cdot y = x
+    [\varnothing \cdot y] = \varnothing
+
+Which aligns with the definition. In addition, the operation of projection is *idempotent*,
+
+.. math::
+
+    [x \circ y] \circ y = x \circ y
+
+The inner term, :math:`x \circ y` is guaranteed to be a sign that is either empty or contains :math:`y`. If it is empty (caesura), then, as noted, projecting it any number times will always result in a caesura. If it contains :math:`y`, then it will return the very sign that contains :math:`y`, ensuring :math:`[x \cdot y]` is well defined.
 
 **Provisional Notation**
 
@@ -307,14 +337,6 @@ This can be represented using the operation of *succession* and the operation of
 
     p = a^3 + b^3
 
-.. _syntagmics-delimitation:
-
-4. **Delimitation**: A *delimitation* is mainly used in reference to words or syllables, and can be seen as a shorthand for excessive concatenation. *Delimitation* denotes the insertion of *pauses* (delimiters) in between signs,
-
-.. math::
-
-    Ⲁ:Ⲃ:Ⲅ = Ⲁ\varnothingⲂ\varnothingⲄ
-
 .. _syntagmics-scope:
 
 Scope
@@ -366,7 +388,7 @@ Examples
 :math:`a.b.a + a.b.a` 
     Two rhyming tercets.
 
-:math:`a.b.[b \cup a]`
+:math:`a.b.[b:a]`
     A tercet where the last line rhymes with either the first line or the second line.
 
 **Examples**
@@ -376,11 +398,11 @@ To make clear how shorthand can be leveraged to concisely represent a poetic sch
 
 1. Consider the following poem,
 
-| pippity pop
-| slippity slop
-|
-| yippity yap
-| kippity cap 
+    | pippity pop
+    | slippity slop
+    |
+    | yippity yap
+    | kippity cap 
 
 This expression can be represented using primitive operations as,
 
@@ -452,18 +474,25 @@ The scope of a meter extends to everything contained in the parenthesis it marks
 
 Denotes a rhyming couplet where each line is written in iambic tetrameter. 
 
-Rhyme
------
+.. _syntagmics-rhymation:
 
-In order to express the different categories of rhymes that may be used to aggregates lines into a scheme, notation is introduced to *accent* sign. 
+Rhymation
+---------
 
-If a sign has no accent mark, then any type of rhyme satisfies the sign.
+Ending Stress
+^^^^^^^^^^^^^
+
+In order to express the different categories of rhymes that may be used to aggregates lines into a scheme, notation is introduced to *accent* a sign to indicate its ending stress. 
+
+If a sign has no accent mark, then any type of stress satisfies the sign.
 
 .. note::
 
-    Rhyme accents can operate one both lines :math:`a` and words :math:`\alpha`.
+    Stress accents can affix both lines :math:`u` and words :math:`\lambda`. They do *not* operate on syllables. 
 
-1. Masculine Rhymes
+The accented sign will be referred to as a *rhyme particle*. For instance, :math:`\hat{x}` (to be defined immediately) is a *rhyme particle*. In and of itself, it does not denote a rhyme. It is only in the context of a poetical proposition that it can be said to bear the meaning of a "*rhyme*". By writing :math:`\hat{x}`, all that has been stated is the syllabic form of the sign. In effect, the hat encodes the syllabic form and the vartiable encodes the rhyme scheme. 
+
+1. Masculine Stress
 
 A masculine rhyme occurs when the final syllable in two words is stressed and identical phonetically. For example, the following pairs of words are masculine rhymes, 
 
@@ -471,49 +500,114 @@ A masculine rhyme occurs when the final syllable in two words is stressed and id
 - bright, light
 - despair, compare
 
-A hat is used to denote a masculine rhyme,
+A hat is used to denote a masculine ending stress,
 
 .. math::
 
-    \hat{a} = a(Ⲡ)
+    \hat{x} = x(Ⲡ)
 
-2. Feminine Rhymes
+2. Feminine Stress
    
 A feminine rhyme occurs when the final syllable in two words is unstressed, and the last two syllables are identical phonetically. For example, the following pairs of words are feminine rhymes,
    
 - mother, another
 - flowing, going
 
-A check is used to denote a feminine rhyme,
+A check is used to denote a feminine ending stress,
 
 .. math::
 
-    \check{a} = a(Ⲡⲡ)
+    \check{x} = x(Ⲡⲡ)
 
-1. Dactylic Rhyme
+3. Dactylic Stress
 
 A dactylic rhyme occurs when two words ends in identical dactyls. For example, the following pairs of words are dactylic rhymes, 
 
 - happily, snappily
 - tenderness, slenderness
 
-A dot is used to denote a dactylic rhyme, 
+A dot is used to denote a dactylic ending stress, 
 
 .. math::
 
-    \dot{a} = a(Ⲡⲡⲡ)
+    \dot{x} = x(Ⲡ{ⲡ_1}{ⲡ_2})
 
-4. Off Rhyme
+4. Off Stress
 
 An off rhyme involves imperfect sound correspondence (assonance, consonance, etc.). For example, the following pairs are off rhymes, 
 
 - bottle, fiddle (syllabic rhyme)
 - hammer, carpenter (weak rhyme)
 
-A tilde is used to denote an off rhyme, 
+A tilde is used to denote an off stress, 
 
 .. math::
 
-    \tilde{a} = [ ... ]
+    \tilde{x} = [ ... ]
 
 Where "..." represents as yet undetermined operation.
+
+.. note:: 
+
+    Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
+
+Relation
+^^^^^^^^
+
+Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. 
+
+It should first be noted, by :ref:`definition <syntagmics-variables>`, that all rhymed lines rhyme with themselves,
+
+.. math::
+
+    a \propto a
+
+Similarly, all rhymed words rhyme with themselves,
+
+.. math::
+
+    \alpha \propto \alpha
+
+Furthermore, if line :math:`a` rhymes with line :math:`b`, then :math:`b` rhymes with :math:`a`, and visa versa,
+
+.. math::
+
+    a \propto b \equiv b \propto a
+
+Similarly,
+
+.. math::
+
+    \alpha \propto \beta \equiv \beta \propto \alpha
+
+If two arbitrary signs end in the same masculine particle, then they rhyme,
+
+.. math::
+
+    [x(\hat{\lambda}) \land y(\hat{\lambda})] \implies x \propto y
+
+If two arbitary signs end in the same feminine particle, then they rhyme,
+
+.. math::
+
+    [x(\check{\lambda}) \land y(\check{\lambda})] \implies x \propto y
+
+If two arbitary signs end in the same dactylic particle, then they rhyme, 
+
+.. math::
+
+    [x(\dot{\lambda}) \land y(\dot{\lambda})] \implies x \propto y
+
+However, off-rhymes do *not* imply the relation of *rhymation*.
+
+If the secondary relations are defined, 
+
+- :math:`\prec`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
+- :math:`\succ`, Feminie Rhyme: :math:`x \succ y \equiv [x(\check{\lambda}) \land y(\check{\lambda})]`
+- :math:`\precsim`, Dactylic Rhyme: :math:`x \precsim y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
+
+Then, the relation of *rhymation* can be defined precisely as, 
+
+.. math::
+
+    x R y \equiv [x \prec y \lor x \succ y \lor x \precsim y]
