@@ -114,15 +114,15 @@ Constants
 Variables
 ---------
 
-1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
-    a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
-    b. The lowercase English letters x and y are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
+1. Lowercase English letters (:math:`a, b, c, ...` ): Indeterminate rhymed lines.
+    a. The lowercase English letters :math:`u, v, w` are reserved for indeterminate lines, not necessarily rhymed. 
+    b. The lowercase English letters :math:`x, y, z` are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
 2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
 5. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
-6. The lowercase English letters p and q are reserved for indeterminate poems. 
+6. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
 
 .. important::
 
@@ -141,9 +141,9 @@ Uppercase-lowercase pairs of English letters are understood to be rhymes. The di
     | So-and-so such that 
     | The cat on the mat
 
-Note that both :math:`A` and :math:`a` rhyme in this example. The rhyme structure of a stanza is encoded through different cases of the same letter. In other words, preemptively using the notation from the next :ref:`section <syntagmic-relations>`, :math:`A \parallel a`, :math:`B \parallel b`, etc.
+Note that both :math:`A` and both instances of :math:`a` rhyme in this example. The rhyme structure of a composite sign is encoded through the case of constants and variables. In other words, preemptively using the notation from the next :ref:`section <syntagmics-relations>`, :math:`A \parallel a`, :math:`B \parallel b`, etc.
 
-The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
+The intent behind defining :math:`p` and :math:`q` as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables and constants. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
 
 .. _syntagmics-relations:
 
@@ -152,7 +152,7 @@ Relations
 
 All syntagmic relations are to be understood as truth values, meaning each expression results in a judgement of truth or falsity. 
 
-1. :math:`x \subset y` (**Containment**): The sign x is contained in the sign y. 
+1. :math:`y \subset x` (**Containment**): The sign y is contained in the sign x. 
 
 The relation of "contains" extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
@@ -160,6 +160,24 @@ The relation of "contains" extends up the levels of the syntagmic hierarchy, cap
 - Lines contain words and syllables
 - Stanzas contain lines, words and syllables
  
+Consider the line from `Spring and Fall`_ by Gerard Manley Hopkins, 
+
+.. math::
+
+    x = \text{Though worlds of wanwood leafmeal lie}
+
+Then for each word :math:`\lambda` in :math:`\{ \text{Though}, \text{worlds}, ..., \text{lie} \}`,
+
+.. math::
+
+    \lambda \subset x
+
+Similarly, for each syllable :math:`\rho` in :math:`\{ \text{Though}, ... \text{wan}, \text{wood}, ... \text{lie} \}`,
+
+.. math::
+
+    \rho \subset x
+
 2. :math:`x \parallel y` (**Rhymation**): The sign x rhymes with the sign y. 
 
 The relation of "*rhymes with*", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.

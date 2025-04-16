@@ -1,4 +1,3 @@
-
 .. _syntagmics-introduction:
 
 Section I: Introduction
@@ -73,12 +72,17 @@ Each layer is composed of elements from the layer beneath it joined together thr
 
 In this formalization, English letters will be used to represent lines, Greek letters will be used to represent words and Coptic letters will be used to represent syllables. 
 
+.. note::
+
+    All symbolic terms will be typeset differently to distinguish them from the level of analysis and definition, and to indicate their nature as "*sentences*" in the language of syntagmics. 
+
 .. _syntagmics-constants:
 
 Constants
 ---------
 
-1. Uppercase English letters (A, B, C, ... ): Fixed lines.
+1. Uppercase English letters (:math:`A, B, C, ...` ): Fixed lines.
+    a. The uppercase English letter :math:`S` is reserved for sets.
 2. Uppercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \Gamma, ...`): Fixed words.
 3. Uppercase Coptic letters (:math:`Ⲁ, Ⲃ, Ⲅ, ...`): Fixed syllables.
 4. The lowercase English letter n is reserved for natural numbers.
@@ -88,22 +92,22 @@ Constants
 8. The lowercase Fraktur letter :math:`\mathfrak{a}` is reserved for anapests.
 9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
 10. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
-11. The ampersand & represents blank newlines. 
+11. The ampersand :math:`\text{&}` represents blank newlines. 
 
 .. _syntagmics-variables:
 
 Variables
 ---------
 
-1. Lowercase English letters (a, b, c, ... ): Indeterminate rhymed lines.
-    a. The lowercase English letters u, v, w are reserved for indeterminate lines, not necessarily rhymed. 
-    b. The lowercase English letters x and y are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
+1. Lowercase English letters (:math:`a, b, c, ...` ): Indeterminate rhymed lines.
+    a. The lowercase English letters :math:`u, v, w` are reserved for indeterminate lines, not necessarily rhymed. 
+    b. The lowercase English letters :math:`x, y, z` are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)
 2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
 5. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
-6. The lowercase English letters p and q are reserved for indeterminate poems. 
+6. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
 
 .. important::
 
@@ -122,9 +126,9 @@ Uppercase-lowercase pairs of English letters are understood to be rhymes. The di
     | So-and-so such that 
     | The cat on the mat
 
-Note that both :math:`A` and :math:`a` rhyme in this example. The rhyme structure of a stanza is encoded through different cases of the same letter. In other words, preemptively using the notation from the next :ref:`section <syntagmic-relations>`, :math:`A \parallel a`, :math:`B \parallel b`, etc.
+Note that both :math:`A` and both instances of :math:`a` rhyme in this example. The rhyme structure of a composite sign is encoded through the case of constants and variables. In other words, preemptively using the notation from the next :ref:`section <syntagmics-relations>`, :math:`A \parallel a`, :math:`B \parallel b`, etc.
 
-The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
+The intent behind defining :math:`p` and :math:`q` as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables and constants. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
 
 .. _syntagmics-relations:
 
@@ -133,7 +137,11 @@ Relations
 
 All syntagmic relations are to be understood as truth values, meaning each expression results in a judgement of truth or falsity. 
 
-1. :math:`x \subset y` (**Containment**): The sign x is contained in the sign y. 
+1. :math:`y \subset_p x` (**Containment**): The sign y is contained in the sign x. 
+
+.. important::
+
+    The subscript *p* is used to differentiate containment from the set relation of "*subset*".
 
 The relation of "contains" extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
@@ -141,6 +149,24 @@ The relation of "contains" extends up the levels of the syntagmic hierarchy, cap
 - Lines contain words and syllables
 - Stanzas contain lines, words and syllables
  
+Consider the line from `Spring and Fall`_ by Gerard Manley Hopkins, 
+
+.. math::
+
+    x = \text{Though worlds of wanwood leafmeal lie}
+
+Then for each word :math:`\lambda` in :math:`\{ \text{Though}, \text{worlds}, ..., \text{lie} \}`,
+
+.. math::
+
+    \lambda \subset_p x
+
+Similarly, for each syllable :math:`\rho` in :math:`\{ \text{Though}, ... \text{wan}, \text{wood}, ... \text{lie} \}`,
+
+.. math::
+
+    \rho \subset_p x
+
 2. :math:`x \parallel y` (**Rhymation**): The sign x rhymes with the sign y. 
 
 The relation of "*rhymes with*", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.
@@ -165,7 +191,7 @@ In other words, all operations defined in this section are to be understood as *
 5. :math:`x \circ y` (**Projection**) : Sign containing another sign. 
 6. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
 7. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
-8.  :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset x`.
+8.  :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset_p x`.
 
 Brackets, :math:`[]`, are used to group operations within signs by precedence.
 
@@ -212,19 +238,19 @@ The sign on the lefthand side :math:`x` of a projection :math:`x \circ y` is the
 
 .. math::
     
-    [y \subset x] \implies [x \circ y = x]
+    [y \subset_p x] \implies [x \circ y = x]
 
 However, if :math:`x` does not contain :math:`y`, then :math:`x \circ y` is defined to be a caesura, :math:`\varnothing`, i.e. the absence of a syntagmic variable. 
 
 .. math::
 
-    [\neg y \subset x] \implies [x \circ y = \varnothing]
+    [\neg y \subset_p x] \implies [x \circ y = \varnothing]
 
 For this reason, :math:`x \circ y` can be thought of an indicator variable that returns the first operand if it contains the second operand, and nothing if the first operand does not contain the second operand. 
 
 .. math::
 
-    [[y \subset x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
+    [[y \subset_p x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
 
 In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
 
@@ -621,4 +647,101 @@ Then, the relation of *rhymation* can be defined precisely as,
 
     x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]
 
-Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`
+Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
+
+Cardinalities
+-------------
+
+A poetic sign has four levels of cardinality. In this section, they are defined. In later sections, the interactions between these cardinalities and the phenomenon of meter will be more fully elaborated. 
+
+.. TODO 
+    This assumes no sign can repeat, i.e. it won't count duplicate words, lines, etc. Villanelles, and many other poetic forms, require duplication, though. Need to encode position into the set representation through ordered pairs!
+
+Stanzas 
+^^^^^^^
+
+.. topic:: Stanza Set Representation
+
+    A poem :math:`p` can be represented as a set of stanzas, :math:`\varsigma`, using the following definition,
+
+    .. math::
+
+        \bold{S}_{\varsigma} = \{ \varsigma \mid \varsigma \subset_p p \}
+
+.. TODO
+    .. math::
+
+        \bold{S}_{\varsigma} = \{ (i, \varsigma_i) \mid 1 \leq i \leq l(p) \}
+
+    However, this would require defining the nothing of poetic length l(p). 
+
+    It seems the formal system will need to define what is meant by the following:
+        1. stanza length
+        2. line length
+        3. word length
+        4. syllable length 
+
+.. topic:: Stanza Cardinality
+
+    The stanza cardinality of a poem is denoted,
+
+    .. math::
+
+       \lvert S_{\varsigma} \rvert
+     
+Lines
+^^^^^
+
+.. topic:: Line Set Representation
+
+    A poem :math:`p` can be represented as a set of lines, :math:`u`, using the following definition, 
+
+    .. math::
+
+        \bold{S}_{u} = \{ u \mid u \subset_p \varsigma \} 
+
+.. topic:: Line Cardinality
+
+    The line cardinality of a poem is denoted,
+
+    .. math::
+
+       \lvert S_{u} \rvert
+
+Words
+^^^^^
+
+.. topic:: Word Set Representation
+
+    A poem :math:`p` can be represented as a set of lines, :math:`u`, using the following definition, 
+
+    .. math::
+
+        \bold{S}_{\lambda} = \{ \lambda \mid \lambda \subset_p \varsigma \} 
+
+.. topic:: Word Cardinality
+
+    The word cardinality of a poem is denoted,
+
+    .. math::
+
+       \lvert S_{\lambda} \rvert
+
+Syllables
+^^^^^^^^^
+
+.. topic:: Syllable Set Representation
+
+    A poem :math:`p` can be represented as a set of lines, :math:`u`, using the following definition, 
+
+    .. math::
+
+        \bold{S}_{\rho} = \{ \rho \mid \rho \subset_p \varsigma \} 
+
+.. topic:: Syllable Cardinality
+
+    The syllable cardinality of a poem is denoted,
+
+    .. math::
+
+       \lvert S_{\rho} \rvert
