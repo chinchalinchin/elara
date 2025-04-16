@@ -191,9 +191,12 @@ In other words, all operations defined in this section are to be understood as *
 5. :math:`x \circ y` (**Projection**) : Sign containing another sign. 
 6. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
 7. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
-8.  :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset_p x`.
+8. :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset_p x`.
 
 Brackets, :math:`[]`, are used to group operations within signs by precedence.
+
+.. TODO: Substitution and Bracketing
+    Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
 
 Separation vs. Succession 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -608,7 +611,6 @@ It should first be noted, by :ref:`definition <syntagmics-variables>`, that all 
 
     x \parallel x
 
-
 Furthermore, if an arbitary sign :math:`x` rhymes with the sign :math:`y`, then :math:`y` rhymes with :math:`x`, and visa versa,
 
 .. math::
@@ -649,99 +651,78 @@ Then, the relation of *rhymation* can be defined precisely as,
 
 Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
 
-Cardinalities
--------------
+.. _syntagmics-definitions:
 
-A poetic sign has four levels of cardinality. In this section, they are defined. In later sections, the interactions between these cardinalities and the phenomenon of meter will be more fully elaborated. 
+-----------
+Definitions 
+-----------
 
-.. TODO 
-    This assumes no sign can repeat, i.e. it won't count duplicate words, lines, etc. Villanelles, and many other poetic forms, require duplication, though. Need to encode position into the set representation through ordered pairs!
+With the primitive foundations of *syntagmics* laid, definitions are now given for quantities of 
 
-Stanzas 
-^^^^^^^
+Lengths
+-------
 
-.. topic:: Stanza Set Representation
+A poetic sign has many different notions of "*length*" beyond the purely linguistic lengths of a sentence. A sentence, as it is conceived in the fields of formal linguistic, can be broken into sequences of characters, words or phonemes (among other categorizations). A poetic sign possesses these notions of length as a result of its embodiment in the medium of language, but it also possesses dimensions of length over and above the lengths prescribed by syntax, semantics and pragmatics. These concepts of length are derived from the structure of poetic signs and represent a space orthogonal to conventional formal linguistics where the semantics of poems are encoded. 
 
-    A poem :math:`p` can be represented as a set of stanzas, :math:`\varsigma`, using the following definition,
+.. topic:: Stanza Length of a Poem
 
-    .. math::
-
-        \bold{S}_{\varsigma} = \{ \varsigma \mid \varsigma \subset_p p \}
-
-.. TODO
-    .. math::
-
-        \bold{S}_{\varsigma} = \{ (i, \varsigma_i) \mid 1 \leq i \leq l(p) \}
-
-    However, this would require defining the nothing of poetic length l(p). 
-
-    It seems the formal system will need to define what is meant by the following:
-        1. stanza length
-        2. line length
-        3. word length
-        4. syllable length 
-
-.. topic:: Stanza Cardinality
-
-    The stanza cardinality of a poem is denoted,
+    Let :math:`p` be an arbitrary poem with stanzas :math:`\varsigma_i`. The stanza length of poem :math:`p`, denoted :math:`l(p \mid \varsigma)`, is the natural number :math:`n` that satisfies, 
 
     .. math::
 
-       \lvert S_{\varsigma} \rvert
-     
-Lines
-^^^^^
+        l_{\varsigma}(p) = n \equiv p = \sum_1^n \varsigma_i
 
-.. topic:: Line Set Representation
+.. topic:: Line Length of a Stanza
 
-    A poem :math:`p` can be represented as a set of lines, :math:`u`, using the following definition, 
+    Let :math:`\varsigma` be an arbitrary stanza with lines :math:`u_i`. The line length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid u)`, is the natural number :math:`n` that satisfies, 
 
     .. math::
 
-        \bold{S}_{u} = \{ u \mid u \subset_p \varsigma \} 
+        l(\varsigma \mid u) = n  \equiv \varsigma = u^n
 
-.. topic:: Line Cardinality
+.. topic:: Syllable Length of a Line
 
-    The line cardinality of a poem is denoted,
-
-    .. math::
-
-       \lvert S_{u} \rvert
-
-Words
-^^^^^
-
-.. topic:: Word Set Representation
-
-    A poem :math:`p` can be represented as a set of lines, :math:`u`, using the following definition, 
+    Let :math:`u` be an arbitrary line with syllables :math:`\rho_i`. The syllable length of :math:`u`, denoted :math:`l(u \mid \rho)`, is the natural number :math:`n` that satisfies, 
 
     .. math::
 
-        \bold{S}_{\lambda} = \{ \lambda \mid \lambda \subset_p \varsigma \} 
+        l(u \mid \rho) = n \equiv u = \prod_1^n \rho_i
 
-.. topic:: Word Cardinality
+In effect, the stanza length of a poem is defined as the number times the operation of separation has been applied to stanzas to create a poem, the line length of a stanza is defined as the number of times succession has been applied to lines to construct a stanza, the syllable length is the number of times concatenation has been applied to the syllables to construct a line.
 
-    The word cardinality of a poem is denoted,
+.. note::
 
-    .. math::
+    The definition of a length in a level of the syntagmic hierarchy is given in terms of the level directly below it. 
 
-       \lvert S_{\lambda} \rvert
+The notation, :math:`l(p \mid \varsigma)`, :math:`l(\varsigma \mid u)` and :math:`l(u \mid \rho)` is meant to invoke the concept of "*conditioning*" from Bayesian analysis. Each type of length is relative to the particular formal term within a syntagmic sign that falls to the right the :math:`\mid` marker. 
 
-Syllables
-^^^^^^^^^
+There are several other concepts of length that are derived directly from these definitions, illustrating how these "*basic*" units of syntagmic length interconnect to form more abstract notions of length. 
 
-.. topic:: Syllable Set Representation
+.. topic:: Line Length of a Poem 
 
-    A poem :math:`p` can be represented as a set of lines, :math:`u`, using the following definition, 
-
-    .. math::
-
-        \bold{S}_{\rho} = \{ \rho \mid \rho \subset_p \varsigma \} 
-
-.. topic:: Syllable Cardinality
-
-    The syllable cardinality of a poem is denoted,
+    Let :math:`p` be an arbitrary poem with stanzas :math:`\varsigma_i`. Let each :math:`\varsigma_i` have lines :math:`u_j`. The line length of :math:`p`, denoted :math:`l(p \mid u)` is defined as,
 
     .. math::
 
-       \lvert S_{\rho} \rvert
+        l(p \mid u) = \sum_1^{l(p \mid \varsigma)} l(\varsigma \mid u)
+
+    .. TODO: This
+        Wait. You've confused your own notation. This is meant to be taken as a literal sum, but a sum has been defined to mean iterated separation. This is essentially saying to create stanzas of natural numbers that correspond to the line length of each stanza. Arithmetic isn't defined in the system itself...So, is this meta-poetic theorem?
+
+.. topic:: Syllable Length of a Stanza 
+
+    .. math::
+
+        l(\varsigma \mid \rho) = ...
+
+    .. TODO: This
+        Work out line length of a poem first.
+
+.. topic:: Syllable Length of a Poem
+
+    .. math::
+
+        l(p \mid \rho) = ... 
+
+    .. TODO: This
+        Work out the syllable length of a stanza first.

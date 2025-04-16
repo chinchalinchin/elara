@@ -254,8 +254,8 @@ Six sestets followed by a tercet envoi.
         t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \Epsilon) \circ \Zeta),
         t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \Epsilon).((w \circ \Gamma) \circ \Zeta),
 
-.. TODO: I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think 
-        caesures will satisfy this schema!
+.. TODO: Projection Bug
+    I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think caesures will satisfy this schema!
 
 **References**
 
@@ -299,9 +299,8 @@ Sonnet
 
         (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
 
-.. TODO: need some way of representing the interlocking rhyme scheme. 
-..      Some way of recursive defining the index of the sum!
-..      This would be useful for pantoums and terzas as well!
+.. TODO: Interlocking Specification
+    need some way of representing the interlocking rhyme scheme. Some way of recursive defining the index of the sum! This would be useful for pantoums and terzas as well!
 
 **References**
 

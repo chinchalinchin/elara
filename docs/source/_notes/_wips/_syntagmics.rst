@@ -16,8 +16,6 @@
 ==========
 Syntagmics
 ==========
-
-
 .. _syntagmics-introduction:
 
 Section I: Introduction
@@ -92,12 +90,17 @@ Each layer is composed of elements from the layer beneath it joined together thr
 
 In this formalization, English letters will be used to represent lines, Greek letters will be used to represent words and Coptic letters will be used to represent syllables. 
 
+.. note::
+
+    All symbolic terms will be typeset differently to distinguish them from the level of analysis and definition, and to indicate their nature as "*sentences*" in the language of syntagmics. 
+
 .. _syntagmics-constants:
 
 Constants
 ---------
 
-1. Uppercase English letters (A, B, C, ... ): Fixed lines.
+1. Uppercase English letters (:math:`A, B, C, ...` ): Fixed lines.
+    a. The uppercase English letter :math:`S` is reserved for sets.
 2. Uppercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \Gamma, ...`): Fixed words.
 3. Uppercase Coptic letters (:math:`Ⲁ, Ⲃ, Ⲅ, ...`): Fixed syllables.
 4. The lowercase English letter n is reserved for natural numbers.
@@ -107,7 +110,7 @@ Constants
 8. The lowercase Fraktur letter :math:`\mathfrak{a}` is reserved for anapests.
 9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
 10. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
-11. The ampersand & represents blank newlines. 
+11. The ampersand :math:`\text{&}` represents blank newlines. 
 
 .. _syntagmics-variables:
 
@@ -152,7 +155,11 @@ Relations
 
 All syntagmic relations are to be understood as truth values, meaning each expression results in a judgement of truth or falsity. 
 
-1. :math:`y \subset x` (**Containment**): The sign y is contained in the sign x. 
+1. :math:`y \subset_p x` (**Containment**): The sign y is contained in the sign x. 
+
+.. important::
+
+    The subscript *p* is used to differentiate containment from the set relation of "*subset*".
 
 The relation of "contains" extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
@@ -170,13 +177,13 @@ Then for each word :math:`\lambda` in :math:`\{ \text{Though}, \text{worlds}, ..
 
 .. math::
 
-    \lambda \subset x
+    \lambda \subset_p x
 
 Similarly, for each syllable :math:`\rho` in :math:`\{ \text{Though}, ... \text{wan}, \text{wood}, ... \text{lie} \}`,
 
 .. math::
 
-    \rho \subset x
+    \rho \subset_p x
 
 2. :math:`x \parallel y` (**Rhymation**): The sign x rhymes with the sign y. 
 
@@ -202,9 +209,12 @@ In other words, all operations defined in this section are to be understood as *
 5. :math:`x \circ y` (**Projection**) : Sign containing another sign. 
 6. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
 7. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
-8.  :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset x`.
+8. :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset_p x`.
 
 Brackets, :math:`[]`, are used to group operations within signs by precedence.
+
+.. TODO 
+    Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
 
 Separation vs. Succession 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -249,19 +259,19 @@ The sign on the lefthand side :math:`x` of a projection :math:`x \circ y` is the
 
 .. math::
     
-    [y \subset x] \implies [x \circ y = x]
+    [y \subset_p x] \implies [x \circ y = x]
 
 However, if :math:`x` does not contain :math:`y`, then :math:`x \circ y` is defined to be a caesura, :math:`\varnothing`, i.e. the absence of a syntagmic variable. 
 
 .. math::
 
-    [\neg y \subset x] \implies [x \circ y = \varnothing]
+    [\neg y \subset_p x] \implies [x \circ y = \varnothing]
 
 For this reason, :math:`x \circ y` can be thought of an indicator variable that returns the first operand if it contains the second operand, and nothing if the first operand does not contain the second operand. 
 
 .. math::
 
-    [[y \subset x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
+    [[y \subset_p x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
 
 In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
 
@@ -619,7 +629,6 @@ It should first be noted, by :ref:`definition <syntagmics-variables>`, that all 
 
     x \parallel x
 
-
 Furthermore, if an arbitary sign :math:`x` rhymes with the sign :math:`y`, then :math:`y` rhymes with :math:`x`, and visa versa,
 
 .. math::
@@ -659,6 +668,82 @@ Then, the relation of *rhymation* can be defined precisely as,
     x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]
 
 Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
+
+.. _syntagmics-definitions:
+
+-----------
+Definitions 
+-----------
+
+With the primitive foundations of *syntagmics* laid, definitions are now given for quantities of 
+
+Lengths
+-------
+
+A poetic sign has many different notions of "*length*" beyond the purely linguistic lengths of a sentence. A sentence, as it is conceived in the fields of formal linguistic, can be broken into sequences of characters, words or phonemes (among other categorizations). A poetic sign possesses these notions of length as a result of its embodiment in the medium of language, but it also possesses dimensions of length over and above the lengths prescribed by syntax, semantics and pragmatics. These concepts of length are derived from the structure of poetic signs and represent a space orthogonal to conventional formal linguistics where the semantics of poems are encoded. 
+
+.. topic:: Stanza Length of a Poem
+
+    Let :math:`p` be an arbitrary poem with stanzas :math:`\varsigma_i`. The stanza length of poem :math:`p`, denoted :math:`l(p \mid \varsigma)`, is the natural number :math:`n` that satisfies, 
+
+    .. math::
+
+        l_{\varsigma}(p) = n \equiv p = \sum_1^n \varsigma_i
+
+.. topic:: Line Length of a Stanza
+
+    Let :math:`\varsigma` be an arbitrary stanza with lines :math:`u_i`. The line length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid u)`, is the natural number :math:`n` that satisfies, 
+
+    .. math::
+
+        l(\varsigma \mid u) = n + 1 \equiv \varsigma = u^n
+
+.. topic:: Syllable Length of a Line
+
+    Let :math:`u` be an arbitrary line with syllables :math:`\rho_i`. The syllable length of :math:`u`, denoted :math:`l(u \mid \rho)`, is the natural number :math:`n` that satisfies, 
+
+    .. math::
+
+        l(u \mid \rho) = n \equiv u = \prod_1^n \rho_i
+
+In effect, the stanza length of a poem is defined as the number times the operation of separation has been applied to stanzas to create a poem, the line length of a stanza is defined as the number of times succession has been applied to lines to construct a stanza, the syllable length is the number of times concatenation has been applied to the syllables to construct a line.
+
+.. note::
+
+    The definition of a length in a level of the syntagmic hierarchy is given in terms of the level directly below it. 
+
+The notation, :math:`l(p \mid \varsigma)`, :math:`l(\varsigma \mid u)` and :math:`l(u \mid \rho)` is meant to invoke the concept of "*conditioning*" from Bayesian analysis. Each type of length is relative to the particular formal term within a syntagmic sign that falls to the right the :math:`\mid` marker. 
+
+There are several other concepts of length that are derived directly from these definitions, illustrating how these "*basic*" units of syntagmic length interconnect to form more abstract notions of length. 
+
+.. topic:: Line Length of a Poem 
+
+    Let :math:`p` be an arbitrary poem with stanzas :math:`\varsigma_i`. Let each :math:`\varsigma_i` have lines :math:`u_j`. The line length of :math:`p`, denoted :math:`l(p \mid u)` is defined as,
+
+    .. math::
+
+        l(p \mid u) = \sum_1^{l(p \mid \varsigma)} l(\varsigma \mid u)
+
+    .. TODO
+        Wait. You've confused your own notation. This is meant to be taken as a literal sum, but a sum has been defined to mean iterated separation. This is essentially saying to create stanzas of natural numbers that correspond to the line length of each stanza. Arithmetic isn't defined in the system itself...So, is this meta-poetic theorem?
+
+.. topic:: Syllable Length of a Stanza 
+
+    .. math::
+
+        l(\varsigma \mid \rho) = ...
+
+    .. TODO
+        Work out line length of a poem first.
+
+.. topic:: Syllable Length of a Poem
+
+    .. math::
+
+        l(p \mid \rho) = ... 
+
+    .. TODO
+        Work out the syllable length of a stanza first.
 
 
 .. _syntagmics-schemes:
@@ -916,8 +1001,8 @@ Six sestets followed by a tercet envoi.
         t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \Epsilon) \circ \Zeta),
         t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \Epsilon).((w \circ \Gamma) \circ \Zeta),
 
-.. NOTE: I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think 
-        caesures will satisfy this schema!
+.. TODO: Projection Bug
+    I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think caesures will satisfy this schema!
 
 **References**
 
@@ -961,9 +1046,8 @@ Sonnet
 
         (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
 
-.. NOTE: need some way of representing the interlocking rhyme scheme. 
-        Some way of recursive defining the index of the sum!
-        This would be useful for pantoums and terzas as well!
+.. TODO: Interlocking Specification
+    Need some way of representing the interlocking rhyme scheme. Some way of recursive defining the index of the sum. This would be useful for pantoums and terzas as well!
 
 **References**
 
@@ -1220,5 +1304,9 @@ Axioms
 
     \forall p: \forall n: \sum_1^{n} \overline{\varsigma_i} \neq \overline{ \sum_1^{n} \varsigma_i }
 
-.. NOTE:
+.. TODO: Axiom 3
     This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas. 
+
+.. TODO: Possible Theorems
+    1. If meter is n-iambic, then syllable length has to be congruent modulo 2n. Similar theorems for other meters.
+    2. Define the idea of permissible structures. Then based on constraints like number of lines, number of syllables, only certain poetic forms are permissable. For example, if l(p | u) = 2, then the only structures possible are x.y and x+y. If l(p | u) = 3, then x.y.z, x.y + z, x+y.z, x+y+z, etc. There is some sort of combinatorial relationship between the line length of a poem the possible structures that can manifested.
