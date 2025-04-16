@@ -29,6 +29,8 @@ Axioms
 .. TODO: Axiom 3
     This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas. 
 
-.. TODO: Possible Theorems
-    1. If meter is n-iambic, then syllable length has to be congruent modulo 2n. Similar theorems for other meters.
-    2. Define the idea of permissible structures. Then based on constraints like number of lines, number of syllables, only certain poetic forms are permissable. For example, if l(p | u) = 2, then the only structures possible are x.y and x+y. If l(p | u) = 3, then x.y.z, x.y + z, x+y.z, x+y+z, etc. There is some sort of combinatorial relationship between the line length of a poem and the possible structures that can manifested.
+Theorems
+--------
+
+1. TODO: if meter is n-iambic, then syllable length has to be congruent modulo 2n. Similarly for other meters. Therefore, depending on the syllable length of a poem, only certain meters can be satsified. Map it out and prove.
+2. TODO: Define the idea of permissible structures. Then based on constraints like number of lines, number of syllables, only certain poetic forms are permissable. For example, if :math:`l(p \mid u) = 2`, then the only structures possible are :math:`x.y` and :math:`x+y`. If :math:`l(p | u) = 3`, then :math:`x.y.z`, :math:`x.y + z`, :math:`x+y.z`, :math:`x+y+z`, etc. There is some sort of combinatorial relationship between the line length of a poem and the possible structures that can manifested.

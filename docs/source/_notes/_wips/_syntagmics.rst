@@ -16,6 +16,7 @@
 ==========
 Syntagmics
 ==========
+
 .. _syntagmics-introduction:
 
 Section I: Introduction
@@ -33,6 +34,20 @@ Section I: Introduction
 -----------------
 Prior Definitions
 -----------------
+
+Mathematics 
+-----------
+
+The sum :math:`\sum` symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the :math:`\sum` in its mathematical capacity. It will be the convention of the formal system being developed to *overload* the arguments of the :sum:`\sum` operation to be defined on numbers as well as syntagmic variables. For that reason, the meaning of the symbol,
+
+.. math::
+
+    \sum_i^n x_i 
+
+Should be attended with the utmost care. When :math:`\x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`\x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
+
+Poetical
+--------
 
 Given below are existing definitions of poetical devices. 
 
@@ -211,10 +226,12 @@ In other words, all operations defined in this section are to be understood as *
 7. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
 8. :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset_p x`.
 
-Brackets, :math:`[]`, are used to group operations within signs by precedence.
+.. topic:: Provisional Notation 
 
-.. TODO 
-    Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
+   1. #x: A lengthened sign. 
+   2. ♭x: A shortened sign.  
+
+   Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs. 
 
 Separation vs. Succession 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -231,6 +248,14 @@ Where as :math:`x + y` means,
     | the dog on a jog
 
 From this, it can be see the operation of *successions* inserts a new line at the end of first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines within stanzas. 
+
+Brackets
+^^^^^^^^
+
+Brackets, :math:`[]`, are used to group operations within signs by precedence.
+
+.. TODO: Substitution and Bracketing
+    Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
 
 Projection
 ^^^^^^^^^^
@@ -333,13 +358,6 @@ Which aligns with the definition. In addition, the operation of projection is *i
     [x \circ y] \circ y = x \circ y
 
 The inner term, :math:`x \circ y` is guaranteed to be a sign that is either empty or contains :math:`y`. If it is empty (caesura), then, as noted, projecting it any number times will always result in a caesura. If it contains :math:`y`, then it will return the very sign that contains :math:`y`, ensuring :math:`[x \cdot y]` is well defined.
-
-**Provisional Notation**
-
-1. #x: A lengthened sign. 
-2. ♭x: A shortened sign.  
-
-Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs. 
 
 .. _syntagmics-shorthand:
 
@@ -680,7 +698,19 @@ With the primitive foundations of *syntagmics* laid, definitions are now given f
 Lengths
 -------
 
-A poetic sign has many different notions of "*length*" beyond the purely linguistic lengths of a sentence. A sentence, as it is conceived in the fields of formal linguistic, can be broken into sequences of characters, words or phonemes (among other categorizations). A poetic sign possesses these notions of length as a result of its embodiment in the medium of language, but it also possesses dimensions of length over and above the lengths prescribed by syntax, semantics and pragmatics. These concepts of length are derived from the structure of poetic signs and represent a space orthogonal to conventional formal linguistics where the semantics of poems are encoded. 
+A poetic sign has many different notions of "*length*" beyond the purely linguistic lengths of a sentence. A sentence, as it is conceived in the fields of formal linguistic, can be broken into sequences of characters, words or phonemes (among other categorizations). A poetic sign possesses these notions of length as a result of its embodiment in the medium of language, but it also possesses dimensions of length over and above the lengths prescribed by syntax, semantics and pragmatics. These concepts of length are derived from the structure of poetic signs and represent a space orthogonal to conventional formal linguistics where the semantics of poems are encoded. These different, but interrelated notions of length, are listed directly below and then defined,
+
+- Stanza Length of a Poem 
+- Line Length of a Poem
+- Line Length of a Stanza
+- Syllable Length of a Line
+- Syllable Length of a Stanza
+- Syllable Length of a Poem
+
+Primitive Lengths
+^^^^^^^^^^^^^^^^^
+
+"*Primitive*" lengths are the immediately measureable quantities of a poem. 
 
 .. topic:: Stanza Length of a Poem
 
@@ -696,7 +726,7 @@ A poetic sign has many different notions of "*length*" beyond the purely linguis
 
     .. math::
 
-        l(\varsigma \mid u) = n + 1 \equiv \varsigma = u^n
+        l(\varsigma \mid u) = n  \equiv \varsigma = u^n
 
 .. topic:: Syllable Length of a Line
 
@@ -714,6 +744,9 @@ In effect, the stanza length of a poem is defined as the number times the operat
 
 The notation, :math:`l(p \mid \varsigma)`, :math:`l(\varsigma \mid u)` and :math:`l(u \mid \rho)` is meant to invoke the concept of "*conditioning*" from Bayesian analysis. Each type of length is relative to the particular formal term within a syntagmic sign that falls to the right the :math:`\mid` marker. 
 
+Derivative Lengths
+^^^^^^^^^^^^^^^^^^
+
 There are several other concepts of length that are derived directly from these definitions, illustrating how these "*basic*" units of syntagmic length interconnect to form more abstract notions of length. 
 
 .. topic:: Line Length of a Poem 
@@ -724,28 +757,33 @@ There are several other concepts of length that are derived directly from these 
 
         l(p \mid u) = \sum_1^{l(p \mid \varsigma)} l(\varsigma \mid u)
 
-    .. TODO
-        Wait. You've confused your own notation. This is meant to be taken as a literal sum, but a sum has been defined to mean iterated separation. This is essentially saying to create stanzas of natural numbers that correspond to the line length of each stanza. Arithmetic isn't defined in the system itself...So, is this meta-poetic theorem?
+.. important::
+
+    :math:`l(\varsigma \mid u)` is a number! Therefore, the :math:`\sum` that appears in the previous definition is an *arithmetical* sum. Recall the :math:`\sum` symbol is overloaded. It may be benefit the reader to treat the preceding as a definition in the metalanguage of syntagmics, rather than its object language, where the :math:`\sum` symbol is used as a semantic construct. 
+
+This definition captures the common sense notion that the number of lines in a poem is equal to the sum of the number of lines in each stanza. 
 
 .. topic:: Syllable Length of a Stanza 
 
+    Let :math:`\varsigma` be an arbitrary stanza. Let each :math:`\varsigma` have lines :math:`u_i`. Let each line :math:`u_i` have syllables :math:`\rho_j`. The syllable length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid \rho)` is defined as,
+
     .. math::
 
-        l(\varsigma \mid \rho) = ...
+        l(\varsigma \mid \rho) = \sum_1^{l(\varsigma \mid u)} l(u_j \mid \rho)
 
-    .. TODO
-        Work out line length of a poem first.
+Once again, this captures the idea the number of syllables in a stanza is equal to the sum of the number of syllables in each line of the stanza.
+
+There are two ways to define the syllable length of a poem. It can either be defined using the line length of a poem and syllable length of a line, or it can be defined using the stanza length of a poem and the syllable length of a stanza. Whichever definition is selected, the alternative not selected will become a theorem of the formal system as a consequence of the definitions of length. For the current purposes, the first alternative is selected.
 
 .. topic:: Syllable Length of a Poem
 
+    Let :math:`p` be an arbitrary poem with stanzas :math:`\varsigma_i`. Let each :math:`\varsigma_i` have lines :math:`u_j`.  Let each line :math:`u_j` have syllables :math:`\rho_k` The syllable length of :math:`p`, denoted :math:`l(p \mid \rho)` is defined as,
+
     .. math::
 
-        l(p \mid \rho) = ... 
+        l(p \mid \rho) = \sum_1^{l(p \mid u)} l(u)
 
-    .. TODO
-        Work out the syllable length of a stanza first.
-
-
+In the previous three definition, the "*condition*" of the summation limit becomes the summand's length. This is directly analogous to dimensional analysis in physics, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a "*poetic dimensional analysis*".
 .. _syntagmics-schemes:
 
 Section II: Schemes
