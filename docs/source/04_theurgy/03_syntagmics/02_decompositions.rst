@@ -102,7 +102,9 @@ Ode to a Nightingale
 
 .. topic:: Formalization 
 
-    p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
+    .. math::
+
+        p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
     
 ------------
 Slyvia Plath
@@ -142,4 +144,4 @@ Mad Girl's Love Song
 
     .. math::
 
-        p = (\hat{A}_1.\hat{b}.\hat{A}_2 + \hat{a}.\hat{b}.\hat{A}_1 + \hat{a}.\hat{b}.\hat{A}_2 + \hat{a}.\hat{b}.\hat{A}_1 + \hat{a}.\hat{b}.\hat{A}_2 + \hat{a}.\hat{b}.\hat{A}_1.\hat{A}_2 \, / \, \mathfrak{i}_5)
+        p = (\hat{A_1.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1.A_2}/\mathfrak{i}_5)

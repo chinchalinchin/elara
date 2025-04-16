@@ -122,6 +122,8 @@ Uppercase-lowercase pairs of English letters are understood to be rhymes. The di
     | So-and-so such that 
     | The cat on the mat
 
+Note that both :math:`A` and :math:`a` rhyme in this example. The rhyme structure of a stanza is encoded through different cases of the same letter. In other words, preemptively using the notation from the next :ref:`section <syntagmic-relations>`, :math:`A \parallel a`, :math:`B \parallel b`, etc.
+
 The intent behind defining p and q as "*poetic*" variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables. "*Poetic*" variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.
 
 .. _syntagmics-relations:
@@ -551,13 +553,24 @@ Where "..." represents as yet undetermined operation.
 
     Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
 
-**Distributive Property**
+**Shorthand**
 
-Consider the separation of two arbitrary signs :math:`\hat{x}` and :math:`\hat{y}`,
+To avoid unnecessary complexity, the following notations are defined. In the case of masculine rhyme particles,
 
 .. math::
 
-    x.y 
+    \hat{x.y} = \hat{x}.\hat{y} 
+
+.. math::
+
+    \hat{x + y} = \hat{x} + \hat{y}
+
+.. math::
+
+    \hat{x:y} = \hat{x}:\hat{y}
+
+Similarly for the other types of rhyme particles. 
+
 Logical Structure
 ^^^^^^^^^^^^^^^^^
 
