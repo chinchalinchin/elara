@@ -1,15 +1,17 @@
+.. MODE: TODO
+
 .. NOTE: 
     The following document was generated with Sphinx using the following LaTeX preamble in the ```conf.py```
     
-        latex_preamble = r"""
-        \usepackage{babel}
-        \babelprovide[import, main]{coptic} 
-        \usepackage{amssymb}
-        \usepackage{amsmath}
-        \usepackage[utf8]{inputenc} 
-        \usepackage{lmodern}
-        \usepackage{textcomp}
-        """
+    latex_preamble = r"""
+    \usepackage{babel}
+    \babelprovide[import, main]{coptic} 
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage[utf8]{inputenc} 
+    \usepackage{lmodern}
+    \usepackage{textcomp}
+    """
 
 .. _syntagmics:
 
@@ -38,16 +40,16 @@ Prior Definitions
 Mathematics 
 -----------
 
-The sum :math:`\sum` symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the :math:`\sum` in its mathematical capacity. It will be the convention of the formal system being developed to *overload* the arguments of the :sum:`\sum` operation to be defined on numbers as well as syntagmic variables. For that reason, the meaning of the symbol,
+The sum :math:`\sum` symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the :math:`\sum` in its mathematical capacity. It will be the convention of the formal system being developed to *overload* the arguments of the :math:`\sum` operation to be defined on numbers as well as syntagmic variables. For that reason, the meaning of the symbol,
 
 .. math::
 
     \sum_i^n x_i 
 
-Should be attended with the utmost care. When :math:`\x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`\x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
+Should be attended with the utmost care. When :math:`x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
 
-Poetical
---------
+Poetics
+-------
 
 Given below are existing definitions of poetical devices. 
 
@@ -58,7 +60,7 @@ Given below are existing definitions of poetical devices.
     - Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.
     - Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.
     - Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.
-    - Pyrrchic: Two unstressed syllables. 
+    - Pyrrchic (Dibrachs): Two unstressed syllables. 
     - Amphibrach: An unstressed syllable followed by a stressed syllable and then another unstressed syllable.
     - Bacchius: An unstressed syllable followed by two stressed syllables. 
     - Antibacchius: Two stressed syllables followed by an unstressed syllable.
@@ -124,8 +126,9 @@ Constants
 7. The lowercase Fraktur letter :math:`\mathfrak{s}` is reserved for spondees. 
 8. The lowercase Fraktur letter :math:`\mathfrak{a}` is reserved for anapests.
 9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
-10. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
-11. The ampersand :math:`\text{&}` represents blank newlines. 
+10. The lowercase Fraktur letter :math:`\mathfrak{p}` is reserved for pyrrchis (dibrachs)
+11. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
+12. The ampersand :math:`\text{&}` represents blank newlines. 
 
 .. _syntagmics-variables:
 
@@ -139,8 +142,9 @@ Variables
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
-5. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
-6. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
+5. The lowercase Fraktur letter :math:`\mathfrak{u}` is reserved for indeterminate speeds.
+6. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
+7. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
 
 .. important::
 
@@ -253,9 +257,6 @@ Brackets
 ^^^^^^^^
 
 Brackets, :math:`[]`, are used to group operations within signs by precedence.
-
-.. TODO: Substitution and Bracketing
-    Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
 
 Projection
 ^^^^^^^^^^
@@ -509,6 +510,9 @@ Meter
 :math:`\mathfrak{s} = ⲠⲠ`
     The definition of a **spondee**
 
+:math:`\mathfrak{p} = ⲡⲡ`
+    The definition of a **pyrrhic**
+    
 :math:`\mathfrak{d} = Ⲡⲡⲡ`
     The definition of **dactyl**
 
@@ -722,7 +726,7 @@ Primitive Lengths
 
 .. topic:: Line Length of a Stanza
 
-    Let :math:`\varsigma` be an arbitrary stanza with lines :math:`u_i`. The line length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid u)`, is the natural number :math:`n` that satisfies, 
+    Let :math:`\varsigma` be an arbitrary stanza with lines :math:`u`. The line length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid u)`, is the natural number :math:`n` that satisfies, 
 
     .. math::
 
@@ -783,7 +787,36 @@ There are two ways to define the syllable length of a poem. It can either be def
 
         l(p \mid \rho) = \sum_1^{l(p \mid u)} l(u)
 
-In the previous three definition, the "*condition*" of the summation limit becomes the summand's length. This is directly analogous to dimensional analysis in physics, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a "*poetic dimensional analysis*".
+In the previous three definition, the "*condition*" of the summation limit becomes the summand's length, while the "*condition*" of the summand becomes the "*condition*" of the result. This is directly analogous to dimensional analysis in fields of science, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a "*poetic dimensional analysis*".
+
+Speed
+-----
+
+This document opened with a quote by Alexander Pope that illustrates a phonological phenomenon that is often employed poetically for effect: sentences with clusters of stressed syllables in sequence have the psychological effect of appearing "*slow*", as opposed to anapestic or dactylic rhythms which are often associated with "*galloping*" or "*rapid*" paces. In other words, there is a correlation between the perceived "*speed*" of a poem and its use syllabic stresses. 
+
+The notion of *syntagmic speed* is intended to explicate the psychological phenomenon illustrated by Pope and make it conducive to analysis. In making this definition, an important tool for the statistical analysis of poems will be introduced as a result.
+
+First note that syllables are either stressed or unstressed, but not both. Therefore, the total number of syllables in a sign :math:`x` is equal to the number of unstressed syllables :math:`ⲡ` in :math:`x` plus the number of stressed syllables :math:`Ⲡ` in :math:`x`. Introducing the following notation,
+
+- :math:`l(x \mid Ⲡ)`: The number of stressed syllables in sign :math:`x`
+- :math:`l(x \mid ⲡ)`: The number of unstressed syllables in sign :math:`x`
+
+It follows logically from the definitions of syllabic length,
+
+.. math::
+
+    l(x \mid \rho) = l(x \mid Ⲡ) + l(x \mid ⲡ)
+
+With this in mind, the notion of "*poetic speed*" is formally defined as the "*density*" of stressed syllables in a sign.
+
+.. topic:: Speed
+
+    Let :math:`x` be a syntagmic sign such that :math:`l(x \mid \rho) > 0`. The speed of :math:`x`, denoted :math:`\mathfrak{u}(x)`, is defined as,
+
+    .. math::
+
+        \mathfrak{u}(x) = \frac{l(x \mid Ⲡ)}{l(x \mid \rho)}
+
 .. _syntagmics-schemes:
 
 Section II: Schemes
@@ -1039,9 +1072,6 @@ Six sestets followed by a tercet envoi.
         t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \Epsilon) \circ \Zeta),
         t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \Epsilon).((w \circ \Gamma) \circ \Zeta),
 
-.. TODO: Projection Bug
-    I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think caesures will satisfy this schema!
-
 **References**
 
 - `Sestina (Bishop)`_, Elizabeth Bishop
@@ -1083,9 +1113,6 @@ Sonnet
     .. math::
 
         (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
-
-.. TODO: Interlocking Specification
-    Need some way of representing the interlocking rhyme scheme. Some way of recursive defining the index of the sum. This would be useful for pantoums and terzas as well!
 
 **References**
 
@@ -1178,17 +1205,110 @@ John Keats
 Ode to a Nightingale
 --------------------
 
+- Source: `Ode to a Nightingale`_, John Keats
+
+Stanza 1
+^^^^^^^^
+
+**Line 1**
+
 | My heart aches, and a drowsy numbness pains
-|    My sense, as though of hemlock I had drunk,
+
+``my heart | aches and | a drow- | sy numb- | ness pain``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 2** 
+
+|   My sense, as though of hemlock I had drunk,
+
+``my sense | as though | of hem- | lock I | had drunk``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 3**
+
 | Or emptied some dull opiate to the drains
-|    One minute past, and Lethe-wards had sunk:
+
+``Or emp- | tied some | dull o- | pi-ate | to the drains ``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲡⲡⲡⲠ`
+
+.. note:: 
+
+    "*opiate*" is a dactyl (:math:`Ⲡⲡⲡ`) and "*to the drains*" is an anapest (:math:`ⲡⲡⲠ`).
+
+**Line 4**
+
+|   One minute past, and Lethe-wards had sunk:
+
+``one min- | ute past | and Le- | the wards | had sunk: ``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 5**
+
 | 'Tis not through envy of thy happy lot,
+
+``Tis not | through en- | vy of | thy hap- | py lot``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 6**
+
 |   But being too happy in thine happiness,—
+
+``But be- | too hap- | py in | thine hap- | pi-ness``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ`
+
+**Line 7**
+
 |       That thou, light-winged Dryad of the trees
+
+``That thou | light-wing- | ed Dry- | ad of | the tree``
+
+:math:`ⲡⲠⲠⲠⲡⲠⲡⲠⲡⲠ`
+
+**Line 8** 
+
 |                   In some melodious plot
+
+``In some | me-lo | di-ous plot``
+
+:math:`ⲡⲠⲡⲠⲡⲡⲠ`
+
+**Line 9**
+
 |   Of beechen green, and shadows numberless,
+
+``Of beech- | en green | and sha- | dows num- | ber-less``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ`
+
+**Line 10**
+
 |       Singest of summer in full-throated ease.
-| 
+
+``Sing-est | of sum- | mer in | full-throat- | ed ease``
+
+:math:`ⲠⲡⲡⲠⲡⲠⲠⲠⲡⲠ`
+
+Stanza 2
+^^^^^^^^
+
+.. TODO: Please complete the decomposition of John Keat's Ode to the Nightingale in the same format!
+    The goal is to start gathering some statistics on the concepts of "poetic speed", so we can get 
+    a baseline for further statistical analysis. 
+
 | O, for a draught of vintage! that hath been
 |   Cool'd a long age in the deep-delved earth,
 | Tasting of Flora and the country green,
@@ -1266,14 +1386,16 @@ Ode to a Nightingale
 |   Was it a vision, or a waking dream?
 |       Fled is that music:—Do I wake or sleep?
 
-- `Ode to a Nightingale`_, John Keats
-
 .. topic:: Formalization 
 
     .. math::
 
         p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
-    
+
+.. topic:: Metrics
+
+    Speed: TODO 
+
 ------------
 Slyvia Plath
 ------------
@@ -1314,7 +1436,6 @@ Mad Girl's Love Song
 
         p = (\hat{A_1.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1.A_2}/\mathfrak{i}_5)
 
-.. _syntagmics-calculus:
 
 Section IV: Calculus
 ====================
@@ -1342,9 +1463,9 @@ Axioms
 
     \forall p: \forall n: \sum_1^{n} \overline{\varsigma_i} \neq \overline{ \sum_1^{n} \varsigma_i }
 
-.. TODO: Axiom 3
-    This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas. 
+Theorems
+--------
 
-.. TODO: Possible Theorems
-    1. If meter is n-iambic, then syllable length has to be congruent modulo 2n. Similar theorems for other meters.
-    2. Define the idea of permissible structures. Then based on constraints like number of lines, number of syllables, only certain poetic forms are permissable. For example, if l(p | u) = 2, then the only structures possible are x.y and x+y. If l(p | u) = 3, then x.y.z, x.y + z, x+y.z, x+y+z, etc. There is some sort of combinatorial relationship between the line length of a poem the possible structures that can manifested.
+.. NOTES: General Thoughts on Some Things That Could Be Proven
+    - if meter is n-iambic, then syllable length has to be congruent modulo 2n. Similarly for other meters. Therefore, depending on the syllable length of a poem, only certain meters can be satsified. Map it out and prove.
+    - Define the idea of permissible structures. Then based on constraints like number of lines, number of syllables, only certain poetic forms are permissable. For example, if :math:`l(p \mid u) = 2`, then the only structures possible are :math:`x.y` and :math:`x+y`. If :math:`l(p | u) = 3`, then :math:`x.y.z`, :math:`x.y + z`, :math:`x+y.z`, :math:`x+y+z`, etc. There is some sort of combinatorial relationship between the line length of a poem and the possible structures that can manifested.

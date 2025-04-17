@@ -19,16 +19,16 @@ Prior Definitions
 Mathematics 
 -----------
 
-The sum :math:`\sum` symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the :math:`\sum` in its mathematical capacity. It will be the convention of the formal system being developed to *overload* the arguments of the :sum:`\sum` operation to be defined on numbers as well as syntagmic variables. For that reason, the meaning of the symbol,
+The sum :math:`\sum` symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the :math:`\sum` in its mathematical capacity. It will be the convention of the formal system being developed to *overload* the arguments of the :math:`\sum` operation to be defined on numbers as well as syntagmic variables. For that reason, the meaning of the symbol,
 
 .. math::
 
     \sum_i^n x_i 
 
-Should be attended with the utmost care. When :math:`\x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`\x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
+Should be attended with the utmost care. When :math:`x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
 
-Poetical
---------
+Poetics
+-------
 
 Given below are existing definitions of poetical devices. 
 
@@ -39,7 +39,7 @@ Given below are existing definitions of poetical devices.
     - Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.
     - Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.
     - Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.
-    - Pyrrchic: Two unstressed syllables. 
+    - Pyrrchic (Dibrachs): Two unstressed syllables. 
     - Amphibrach: An unstressed syllable followed by a stressed syllable and then another unstressed syllable.
     - Bacchius: An unstressed syllable followed by two stressed syllables. 
     - Antibacchius: Two stressed syllables followed by an unstressed syllable.
@@ -105,8 +105,9 @@ Constants
 7. The lowercase Fraktur letter :math:`\mathfrak{s}` is reserved for spondees. 
 8. The lowercase Fraktur letter :math:`\mathfrak{a}` is reserved for anapests.
 9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
-10. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
-11. The ampersand :math:`\text{&}` represents blank newlines. 
+10. The lowercase Fraktur letter :math:`\mathfrak{p}` is reserved for pyrrchis (dibrachs)
+11. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
+12. The ampersand :math:`\text{&}` represents blank newlines. 
 
 .. _syntagmics-variables:
 
@@ -120,8 +121,9 @@ Variables
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
 4. The lowercase Fraktur letter :math:`\mathfrak{x}` is reserved for indeterminate meters.
-5. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
-6. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
+5. The lowercase Fraktur letter :math:`\mathfrak{u}` is reserved for indeterminate speeds.
+6. The lowercase Greek letter :math:`\varsigma` is reserved for indeterminate stanzas.
+7. The lowercase English letters :math:`p` and :math:`q` are reserved for indeterminate poems. 
 
 .. important::
 
@@ -490,6 +492,9 @@ Meter
 :math:`\mathfrak{s} = ⲠⲠ`
     The definition of a **spondee**
 
+:math:`\mathfrak{p} = ⲡⲡ`
+    The definition of a **pyrrhic**
+    
 :math:`\mathfrak{d} = Ⲡⲡⲡ`
     The definition of **dactyl**
 
@@ -703,7 +708,7 @@ Primitive Lengths
 
 .. topic:: Line Length of a Stanza
 
-    Let :math:`\varsigma` be an arbitrary stanza with lines :math:`u_i`. The line length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid u)`, is the natural number :math:`n` that satisfies, 
+    Let :math:`\varsigma` be an arbitrary stanza with lines :math:`u`. The line length of :math:`\varsigma`, denoted :math:`l(\varsigma \mid u)`, is the natural number :math:`n` that satisfies, 
 
     .. math::
 
@@ -764,4 +769,32 @@ There are two ways to define the syllable length of a poem. It can either be def
 
         l(p \mid \rho) = \sum_1^{l(p \mid u)} l(u)
 
-In the previous three definition, the "*condition*" of the summation limit becomes the summand's length. This is directly analogous to dimensional analysis in physics, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a "*poetic dimensional analysis*".
+In the previous three definition, the "*condition*" of the summation limit becomes the summand's length, while the "*condition*" of the summand becomes the "*condition*" of the result. This is directly analogous to dimensional analysis in fields of science, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a "*poetic dimensional analysis*".
+
+Speed
+-----
+
+This document opened with a quote by Alexander Pope that illustrates a phonological phenomenon that is often employed poetically for effect: sentences with clusters of stressed syllables in sequence have the psychological effect of appearing "*slow*", as opposed to anapestic or dactylic rhythms which are often associated with "*galloping*" or "*rapid*" paces. In other words, there is a correlation between the perceived "*speed*" of a poem and its use syllabic stresses. 
+
+The notion of *syntagmic speed* is intended to explicate the psychological phenomenon illustrated by Pope and make it conducive to analysis. In making this definition, an important tool for the statistical analysis of poems will be introduced as a result.
+
+First note that syllables are either stressed or unstressed, but not both. Therefore, the total number of syllables in a sign :math:`x` is equal to the number of unstressed syllables :math:`ⲡ` in :math:`x` plus the number of stressed syllables :math:`Ⲡ` in :math:`x`. Introducing the following notation,
+
+- :math:`l(x \mid Ⲡ)`: The number of stressed syllables in sign :math:`x`
+- :math:`l(x \mid ⲡ)`: The number of unstressed syllables in sign :math:`x`
+
+It follows logically from the definitions of syllabic length,
+
+.. math::
+
+    l(x \mid \rho) = l(x \mid Ⲡ) + l(x \mid ⲡ)
+
+With this in mind, the notion of "*poetic speed*" is formally defined as the "*density*" of stressed syllables in a sign.
+
+.. topic:: Speed
+
+    Let :math:`x` be a syntagmic sign such that :math:`l(x \mid \rho) > 0`. The speed of :math:`x`, denoted :math:`\mathfrak{u}(x)`, is defined as,
+
+    .. math::
+
+        \mathfrak{u}(x) = \frac{l(x \mid Ⲡ)}{l(x \mid \rho)}

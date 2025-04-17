@@ -10,17 +10,106 @@ John Keats
 Ode to a Nightingale
 --------------------
 
+- Source: `Ode to a Nightingale`_, John Keats
+
+Stanza 1
+^^^^^^^^
+
+**Line 1**
+
 | My heart aches, and a drowsy numbness pains
-|    My sense, as though of hemlock I had drunk,
+
+``my heart | aches and | a drow- | sy numb- | ness pain``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 2** 
+
+|   My sense, as though of hemlock I had drunk,
+
+``my sense | as though | of hem- | lock I | had drunk``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 3**
+
 | Or emptied some dull opiate to the drains
-|    One minute past, and Lethe-wards had sunk:
+
+``Or emp- | tied some | dull o- | pi-ate | to the drains ``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲡⲡⲡⲠ`
+
+.. note:: 
+
+    "*opiate*" is a dactyl (:math:`Ⲡⲡⲡ`) and "*to the drains*" is an anapest (:math:`ⲡⲡⲠ`).
+
+**Line 4**
+
+|   One minute past, and Lethe-wards had sunk:
+
+``one min- | ute past | and Le- | the wards | had sunk: ``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 5**
+
 | 'Tis not through envy of thy happy lot,
+
+``Tis not | through en- | vy of | thy hap- | py lot``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ`
+
+- Iambic pentameter: :math:`\prod_1^5 ⲡⲠ`
+
+**Line 6**
+
 |   But being too happy in thine happiness,—
+
+``But be- | too hap- | py in | thine hap- | pi-ness``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ`
+
+**Line 7**
+
 |       That thou, light-winged Dryad of the trees
+
+``That thou | light-wing- | ed Dry- | ad of | the tree``
+
+:math:`ⲡⲠⲠⲠⲡⲠⲡⲠⲡⲠ`
+
+**Line 8** 
+
 |                   In some melodious plot
+
+``In some | me-lo | di-ous plot``
+
+:math:`ⲡⲠⲡⲠⲡⲡⲠ`
+
+**Line 9**
+
 |   Of beechen green, and shadows numberless,
+
+``Of beech- | en green | and sha- | dows num- | ber-less``
+
+:math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ`
+
+**Line 10**
+
 |       Singest of summer in full-throated ease.
-| 
+
+``Sing-est | of sum- | mer in | full-throat- | ed ease``
+
+:math:`ⲠⲡⲡⲠⲡⲠⲠⲠⲡⲠ`
+
+Stanza 2
+^^^^^^^^
+
 | O, for a draught of vintage! that hath been
 |   Cool'd a long age in the deep-delved earth,
 | Tasting of Flora and the country green,
@@ -98,14 +187,16 @@ Ode to a Nightingale
 |   Was it a vision, or a waking dream?
 |       Fled is that music:—Do I wake or sleep?
 
-- `Ode to a Nightingale`_, John Keats
-
 .. topic:: Formalization 
 
     .. math::
 
         p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
     
+.. topic:: Metrics
+
+    Speed: TODO 
+
 ------------
 Slyvia Plath
 ------------
@@ -145,3 +236,7 @@ Mad Girl's Love Song
     .. math::
 
         p = (\hat{A_1.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1.A_2}/\mathfrak{i}_5)
+
+.. topic:: Metrics
+
+    Speed: TODO 
