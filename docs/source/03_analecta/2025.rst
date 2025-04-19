@@ -94,3 +94,67 @@ We imagine language to behave like objects, because it manifests through objects
 |    That language has a form,
 | But form besides what's centered now, 
 |   Behind collects in swarm.
+
+---
+
+What is language? Did it emerge gradually or all at once? Is there a point in time where no language existed and the next it did? 
+
+Does the distinction between *metalanguage* and *object language* exist in actuality? Is there a language *about* language, where its conditions can be precisely specified? What are the necessary and sufficient conditions for language? Can language be described in aggregate? 
+
+The nature of language is elusive. It begs an unending chain of questions and offers little in the way of answers. It resists definition, for definitions occur within it. It resists analysis, for analysis occurs within it. Language is a vicuous circle. Language is inescapable and intractable. One might attempt to formalize language, but every attempt hitherto has failed. There are always aspects of language that exceed any container we construct for it. Indeed, there appear to be certain syntactical constraints that can be placed on the general science of language:
+
+1. Language is a hierarchy of ordered sequences. Words are ordered sequences of characters. Sentences are ordered sequences of words. 
+
+This seems fundamental. If there is a purely logical and formal principle underlying language, surely this is it.  Almost every language conforms to this model. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this axiom fails to span the entire breadth of the phenomenon of language. 
+
+To start, the concept of declension immediately challenges this hierarchical model of language. In languages like Greek or Latin, the suffixes appended to words denote its part of speech.  Consider the three Latin sentences,
+
+- Puella canem videt. (Girl dog sees)
+- Canem puella videt. (Dog girl sees)
+- Videt puella canem. (Sees girl dog)
+
+Each sentence, in essence, expresses a similar proposition, showing that sentences are not necessarily constrained to be ordered. The order of the declined words is not *meaningless* in this example, as order in declined language often denotes emphasis, but importantly, it is not the *primary* bearer of meaning. However, the spirit of the model can be recovered by adjusting structure of hierarchy, perhaps by adding a layer above sentence for "*tokens*", of which each of the previous sentences is an instance. 
+
+However, there is a more fundamental challenge to the hierarchical model of language. Similar to declension, agglutinative languages "accumulate" meaning through prefixes and suffixes. "*Sentences*" in an agglutinative languages are often indistinguishable from its "*words*".
+
+In the Native America language of Central Alaskan Yup'ik,
+
+    tuntussuqatarniksaitengqiggtuq
+
+Translates roughly to "*He had not yet said again that he was going to hunt reindeer.*" Describing this linguistic entity as a "*word*" does not fully elucidate its role in Yup'ik language. The "*words*" of the "*sentence*" are not delimited by blank characters or other marks, so that it appears to an Indo-European speaker to be a single word. However, the "*sentence-word*" is formed by stacking morphemes into a single word,
+
+1. ``tuntu-``: reindeer
+2. ``-ssur-``: to hunt
+3. ``-qatar-``: will be going
+4. ``-ni-``: to say that
+5. ``-ksaite-`` : not yet
+6. ``-ngqiggte-`` : again
+7. ``-uq``: third person indicative mood
+
+.. note::
+
+    This is a very approximate mapping to English. Take it with a grain of salt.
+
+
+nother Example: Turkish (European Agglutinative Language)
+
+Turkish is a well-known agglutinative language spoken partly in Europe. While generally not considered polysynthetic (it doesn't typically incorporate nouns into verbs like Yup'ik), it demonstrates extensive suffixation. Consider this famous, though somewhat constructed, example:
+
+Word (Level B): Çekoslovakyalılaştıramadıklarımızdanmışsınız
+
+Sentence (Level A Meaning): Roughly, "You are reportedly/apparently one of those whom we could not make Czechoslovakian."
+
+Breakdown into Morphemes (Level C = sequence of morphemes):
+(Showing the sequential addition and function. Note that Turkish exhibits vowel harmony, so suffix vowels change to match the preceding vowel, but I'll list the base function.)
+
+Çekoslovakya (Root): Czechoslovakia (Noun)
++ -lı : 'person from/related to' -> Çekoslovakyalı (Czechoslovakian person/adj.)
++ -laş : 'become' (verb-forming) -> Çekoslovakyalılaş (To become Czechoslovakian)
++ -tır : 'cause to' (causative verb-forming) -> Çekoslovakyalılaştır (To make someone become Czechoslovakian)
++ -ama : 'not able to' (negated potential) -> Çekoslovakyalılaştırama (To be unable to make Czechoslovakian)
++ -dık : Nominalizer (forms participle/noun describing the action/result related to the agent) -> Çekoslovakyalılaştıramadık (The one(s) whom [someone] was unable to make Czechoslovakian / The act of being unable...)
++ -lar : Plural -> Çekoslovakyalılaştıramadıklar (Those whom...)
++ -ımız : 'our' (1st person plural possessive - indicates 'we' were the ones unable) -> Çekoslovakyalılaştıramadıklarımız (Those whom we were unable to make Czechoslovakian)
++ -dan : 'from / of / among' (ablative case) -> Çekoslovakyalılaştıramadıklarımızdan (From/of those whom we were unable...)
++ -mış : 'reportedly / apparently' (evidential past tense/inference) -> Çekoslovakyalılaştıramadıklarımızdanmış (It is reported/apparent that [someone] is from/of those whom...)
++ -sınız : 'you are' (2nd person plural predicate suffix) -> Çekoslovakyalılaştıramadıklarımızdanmışsınız (You are apparently from/of those whom we were unable...)
