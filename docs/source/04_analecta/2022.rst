@@ -27,6 +27,19 @@ Except when we say "*universe*" in the preceding, we should be careful, for what
 June
 ----
 
+.. topic:: First Principle of Finite Induction 
+
+    Let :math:`S` be a set of positive integers with the following properties.
+
+    1. :math:`1 \in S` 
+    2. :math:`k \in S \implies (k+1) \in S` 
+   
+    Then :math:`S` is the set of all positive integers.
+
+    **Proof** 
+    
+    Let :math:`T` be the set of all positive integers not in :math:`S`. Assume :math:`T` is non-empty. By the Well-Ordering Principle, :math:`T` has a least element, denoted :math:`a`. Because :math:`1 \in S`, certainly :math:`a > 1` and so, :math:`0 < a - 1 < a`. The choice of :math:`a` as the smallest positive integer in :math:`T` implies that :math:`a-1` is not a member of :math:`T`, or equivalently, :math:`(a-1) \in S`. By hypothesis, :math:`(a - 1 + 1) = a`, which is also in :math:`S`, contradicting the assumption that :math:`a \in T`. Therefore, by contradiction, the set :math:`T` must be empty and as a consequence, :math:`\forall n \in \mathbb{N}\{:} n in S`.
+
 The great workhorse of mathematics is proof by contradiction. An assumption is made, an absurdity is shown to result from the assumption, therefore the assumption is shown to be false. In this way was modern mathematics constructed, by outlining the truth and demarcating its boundary with falsity. Anyone who has studied higher mathematics will attest to the way most mathematical proofs work by letting the truth "`in through the back door <world-as-will-and-representation>`_", that is to say, they work by showing what cannot be the case in order to prove the opposite must be so, but this gets us no closer to *why* it is so.
 
 This method does not reveal the *intuition*  the theorem to the observer; indeed one can comprehend a proof without understanding anything about what it trying to say and in the converse direction, one may understand a concept without being able to grasp its proof in the slightest.

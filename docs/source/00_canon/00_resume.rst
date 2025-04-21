@@ -1,16 +1,12 @@
-.. _canon:
+.. _resume:
 
-=====
-Canon
-=====
-
-.. image:: _static/img/personal/fractal-me.jpg
-    :alt: MATH 201, Calculus
-    :align: center
+======
+Resume
+======
 
 .. topic:: Contact Information
 
-  Email: <chinchalinchin@gmail.com>
+  Email: chinchalinchin@gmail.com
 
 .. _education:
 
@@ -155,49 +151,49 @@ Certifications
     - Badge
   * - AWS
     - Developer Associate
-    - .. image:: _static/img/personal/aws-certified-developer-associate.png
+    - .. image:: _static/img/personal/resume/aws-certified-developer-associate.png
         :alt: AWS Developer Associate
         :height: 50px
         :align: center
   * - AWS
     - DevOps Professional
-    - .. image:: _static/img/personal/aws-certified-devops-engineer-professional.png
+    - .. image:: _static/img/personal/resume/aws-certified-devops-engineer-professional.png
         :alt: AWS DevOps Professional
         :height: 50px
         :align: center
   * - IBM
     - Docker Essentials
-    - .. image:: _static/img/personal/ibm-docker-introduction.png
+    - .. image:: _static/img/personal/resume/ibm-docker-introduction.png
         :alt: IBM Docker Essentials
         :height: 50px
         :align: center
   * - IBM
     - Enterprise Design
-    - .. image:: _static/img/personal/ibm-enterprise-design.png
+    - .. image:: _static/img/personal/resume/ibm-enterprise-design.png
         :alt: IBM Enterprise Design
         :height: 50px
         :align: center
   * - MTA
     - Database Administration
-    - .. image:: _static/img/personal/mta-database-fundamentals-certified-2018.png
+    - .. image:: _static/img/personal/resume/mta-database-fundamentals-certified-2018.png
         :alt: MTA Database Fundamentals
         :height: 50px
         :align: center
   * - MTA
     - Python Programming
-    - .. image:: _static/img/personal/mta-introduction-to-programming-using-python-certified-2018.png
+    - .. image:: _static/img/personal/resume/mta-introduction-to-programming-using-python-certified-2018.png
         :alt: MTA Python Programming
         :height: 50px
         :align: center
   * - MTA
     - Java Programming
-    - .. image:: _static/img/personal/mta-introduction-to-programming-using-java-certified-2018.png
+    - .. image:: _static/img/personal/resume/mta-introduction-to-programming-using-java-certified-2018.png
         :alt: MTA Java Programming
         :height: 50px
         :align: center
   * - MTA
     - Software Development Fundamentals
-    - .. image:: _static/img/personal/mta-software-development-fundamentals-certified-2018.png
+    - .. image:: _static/img/personal/resume/mta-software-development-fundamentals-certified-2018.png
         :alt: MTA Software Development Fundamentals
         :height: 50px
         :align: center
@@ -207,12 +203,12 @@ Certifications
 Testimonials
 ============
 
-.. image:: _static/img/personal/testimonial-math-201.jpg
+.. image:: _static/img/personal/resume/testimonial-math-201.jpg
   :alt: MATH 201, Calculus
   :align: center
 
 ---
 
-.. image:: _static/img/personal/testimonial-phys-215.jpg
+.. image:: _static/img/personal/resume/testimonial-phys-215.jpg
   :alt: PHYS 215, Physics
   :align: center

@@ -27,7 +27,16 @@ The human mind is not a truth machine. It is a thought machine.
 
 ---
 
-Here is a problem no computer will ever solve: Select a random number between 0 and infinity [#april_2014_02]_. 
+Here is a problem no computer will ever solve: Select a random number between 0 and infinity [#april_2014_02]_. The computation intractability of this problem is twofold: 
+
+1. No computer can represent a continuum. It must always represent the space of numbers discretely. 
+2. No computer can generate truly random numbers, except through its malfunction. 
+
+The second point is subtle, because much of our everyday understanding of probability is interwined with the intuition acquired through the digital representation of randomness. It is through pseudo-random numbers that abstractions like the "*Law of Large Numbers*" or "*Sample Spaces*" become conceptually realized in modern day classrooms. However, this intuition tacitly assumes the number returned by a random number generator is actually a representative of the class "*random things*". In reality, pseudo-random numbers are the result of intricate recursive formulae of modular arithmetic. Every random number generator implemented through pure logic is an *approximation* of randomness.
+
+"*Approximate randomness*". The phrase itself is almost nonsense. *Randomness* is not something that is *approximated*, but is what causes the phenomenon of *approximation*. Randomness is exactly the reason that precise measurement cannot be ascertained. Approximation is the physical act of engaging with randomness. 
+
+The idea that randomness has a formula is absurd. The idea that randomness can be generated through formal representation is antithetical to its very conception. 
 
 .. [#april_2014_01] There are other decompositions of logic that take as primitive other modes of inference besides *modus ponens*, but the essential idea here is that logic requires a "*starting point*". Logic must start with a premise. Either one accepts that premise as "*true*" or they do not, and in the latter case there is no further recourse except to point and say, "see?". -- April 2025
 

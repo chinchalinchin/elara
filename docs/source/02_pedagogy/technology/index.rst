@@ -1,8 +1,8 @@
-.. _praxis:
+.. _technology:
 
-======
-Praxis
-======
+==========
+Technology
+==========
 
 .. toctree::
    :maxdepth: 2

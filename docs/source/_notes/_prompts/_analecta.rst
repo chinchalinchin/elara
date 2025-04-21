@@ -33,7 +33,16 @@ The human mind is not a truth machine. It is a thought machine.
 
 ---
 
-Here is a problem no computer will ever solve: Select a random number between 0 and infinity [#april_2014_02]_. 
+Here is a problem no computer will ever solve: Select a random number between 0 and infinity [#april_2014_02]_. The computation intractability of this problem is twofold: 
+
+1. No computer can represent a continuum. It must always represent the space of numbers discretely. 
+2. No computer can generate truly random numbers, except through its malfunction. 
+
+The second point is subtle, because much of our everyday understanding of probability is interwined with the intuition acquired through the digital representation of randomness. It is through pseudo-random numbers that abstractions like the "*Law of Large Numbers*" or "*Sample Spaces*" become conceptually realized in modern day classrooms. However, this intuition tacitly assumes the number returned by a random number generator is actually a representative of the class "*random things*". In reality, pseudo-random numbers are the result of intricate recursive formulae of modular arithmetic. Every random number generator implemented through pure logic is an *approximation* of randomness.
+
+"*Approximate randomness*". The phrase itself is almost nonsense. *Randomness* is not something that is *approximated*, but is what causes the phenomenon of *approximation*. Randomness is exactly the reason that precise measurement cannot be ascertained. Approximation is the physical act of engaging with randomness. 
+
+The idea that randomness has a formula is absurd. The idea that randomness can be generated through formal representation is antithetical to its very conception. 
 
 .. [#april_2014_01] There are other decompositions of logic that take as primitive other modes of inference besides *modus ponens*, but the essential idea here is that logic requires a "*starting point*". Logic must start with a premise. Either one accepts that premise as "*true*" or they do not, and in the latter case there is no further recourse except to point and say, "see?". -- April 2025
 
@@ -200,6 +209,19 @@ Except when we say "*universe*" in the preceding, we should be careful, for what
 ----
 June
 ----
+
+.. topic:: First Principle of Finite Induction 
+
+    Let :math:`S` be a set of positive integers with the following properties.
+
+    1. :math:`1 \in S` 
+    2. :math:`k \in S \implies (k+1) \in S` 
+   
+    Then :math:`S` is the set of all positive integers.
+
+    **Proof** 
+    
+    Let :math:`T` be the set of all positive integers not in :math:`S`. Assume :math:`T` is non-empty. By the Well-Ordering Principle, :math:`T` has a least element, denoted :math:`a`. Because :math:`1 \in S`, certainly :math:`a > 1` and so, :math:`0 < a - 1 < a`. The choice of :math:`a` as the smallest positive integer in :math:`T` implies that :math:`a-1` is not a member of :math:`T`, or equivalently, :math:`(a-1) \in S`. By hypothesis, :math:`(a - 1 + 1) = a`, which is also in :math:`S`, contradicting the assumption that :math:`a \in T`. Therefore, by contradiction, the set :math:`T` must be empty and as a consequence, :math:`\forall n \in \mathbb{N}\{:} n in S`.
 
 The great workhorse of mathematics is proof by contradiction. An assumption is made, an absurdity is shown to result from the assumption, therefore the assumption is shown to be false. In this way was modern mathematics constructed, by outlining the truth and demarcating its boundary with falsity. Anyone who has studied higher mathematics will attest to the way most mathematical proofs work by letting the truth "`in through the back door <world-as-will-and-representation>`_", that is to say, they work by showing what cannot be the case in order to prove the opposite must be so, but this gets us no closer to *why* it is so.
 
