@@ -6,12 +6,12 @@
    :caption: Contents:
    :hidden:
 
-   resume
-   00_epistemia/index
-   01_pedagogy/index
-   02_theurgy/index
-   03_analecta/index
-   04_oeuvre/index
+   00_canon/index
+   01_epistemia/index
+   02_pedagogy/index
+   03_theurgy/index
+   04_analecta/index
+   05_oeuvre/index
 
 ---------------
 

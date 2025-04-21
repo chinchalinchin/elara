@@ -9,3 +9,4 @@ Canon
    :caption: Contents:
 
    00_resume
+   01_gallery
