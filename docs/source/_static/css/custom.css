@@ -1,3 +1,11 @@
 .center {
     text-align: center;
 }
+
+.hover {
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.hover:hover {
+    color: var(--pst-color-link-hover);
+}

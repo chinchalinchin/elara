@@ -21,6 +21,7 @@ make html
 - [Sphinx Book Theme](https://sphinx-book-theme.readthedocs.io/en/stable/index.html)
 - [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/index.html)
 - [Sphinx Design](https://sphinx-design.readthedocs.io/en/pydata-theme/index.html)
+- [Sphinx Toolbox](https://sphinx-toolbox.readthedocs.io/en/stable/index.html)
 
 ### Reference
 
