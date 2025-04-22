@@ -1,5 +1,5 @@
-Syntax
-------
+II: Syntax
+----------
 
 | Each spelling word speaks a spell of glowing color magic;
 | To name denoted what is described enshrines the soul in ink.  
