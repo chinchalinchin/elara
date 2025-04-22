@@ -1,29 +1,40 @@
-III: Mimic
-----------
+IV: Plots
+---------
 
-| Mimic, dear mate, pray hesitate!
-| Tread not upon this course!
-| What follows sweet is heart's remorse!
-|
-| Those lines afar you judged so straight
-| Are crooked yet and coarse. 
-| Mimic, dear mate, pray hesitate!
-|
-| You'll gain a head in broad divorce,
-| But find astride your gait
-| What follows sweet is heart's remorse.
-|
-| What lists like light will soon find weight
-| If drawn from me my source.
-| Mimic, dear mate, pray hesitate!
-|
-| This curse of mine for you awaits
-| if you persist, perforce;
-| What follows sweet is heart's remorse.
-|
-| In throat my voice your lungs will break
-| To find a song so hoarse.
-| Mimic, dear mate, pray hesitate!
-| What follows sweet is heart's remorse.
+| In time their plot was touched by dark.
+| Began the page this meadow scene
+| where blades of grass were tall and stark.
+| 
+| A tired arc, they met in park
+| To kiss beneath the twilight queen;
+| In time their plot was touched by dark.
+| 
+| They stole away on sudden lark,
+| Exchanged the words from whispered lean
+| Where blades of grass were tall and stark.
+| 
+| So happy and green, neighbors remark,
+| Yet seem is such to lose its sheen,
+| In time their plot was touched by dark. 
+| 
+| Yet faded years ignored their spark
+| In death they died forever seen
+| Where blades of grass were tall and stark.
+| 
+| In ground, their bodies disembark
+| And leave behind a hole dug clean.
+| In time their plot was touched by dark,
+| Where blades of grass were tall and stark.
 
 - March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Poetry Magazine
+     - Pending

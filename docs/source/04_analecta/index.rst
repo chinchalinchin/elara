@@ -8,6 +8,7 @@ Analecta
    :maxdepth: 2
    :caption: Contents:
 
+   1996
    2014
    2015
    2016
