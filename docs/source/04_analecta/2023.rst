@@ -91,7 +91,11 @@ There are no answers. More fundamentally, there does not even exist the possibil
 
 The problem is :ref:`truth <truth>`. It's impossible to define. More precisely: it's definition undoes its foundation. If you say: something is true if it is the case (i.e. agrees with reality), then by allowing the indeterminate sentence to be named, even with a name so innocuous as "something", you've allowed the necessary and sufficient conditions for a contradiction to emerge. Let the next sentence be called P. The sentence P is not true. Then, by our definition of truth, we see we have named an undecidable sentence.  More than that, we have annihilated the possibility of truth by demonstrating an example of something to which it cannot apply, that is, something neither true or false. Self reference is a paradox that cannot be exorcised; it's impossible to give a name to something without that name referencing the thing to be named. You cannot talk about truth without giving things names and you cannot name a thing without decimating the foundations of language. We arise from a vacuum of meaning, and blindly seek what cannot be sought. All that we know and think is built on top of a void.
 
----
+.. _february-2023:
+
+--------
+February
+--------
 
 Long moments where nothing happens. Half-formed sentences grasping at incoherent thoughts. 
 
@@ -123,7 +127,25 @@ This definition of :ref:`truth <truth>` does not allow us to take the observatio
 
 We cannot say with certainty *what there is outside of ourselves*. We cannot get to that hypothetical moment in time of *being-without-us* through pure understanding. We cannot even say we know there *is* a *being-without-us*.
 
-.. _2023-september:
+---
+
+To some extent, the question whether or not life is worth living is answered merely by asking it. If one truly believed in the negative, there would be no one left to ask the question.
+
+.. _march-2023:
+
+-----
+March
+-----
+
+We never know from where, precisely, a feeling emanates. A feeling is not something that can be encountered in tangible form, but is rather encountered *through* form. This had led us to suppose all *feelings* are representative of the same category of "*thing*"
+
+We are misled by the primacy and immediacy of experience in this matter. When we feel pain, for instance, we feel it *in* a location; indeed, in the modern world, we now know of the nervous system and the way external stimuli excite impulses along its circuits, leading us to suppose the stimuli is more than the *cause* of the pain, but in some way, *is* the pain. We burn our hand and say the pain is *there*, *in* my hand. 
+
+Yet, we feel in another respect, in a way that reveals the mutually excluded origins of disjoint phenomenon we refer to as "*feelings*". We say we feel when something gives us joy or causes us despair, i.e. "*I enjoy the music of Chopin*"" or "*Her death caused me great pain*". However, when we seek the origin of these propositions in material reality, we immediately collide with the impenetrability of their explanations: because we love, because we care. There is no finer increment to resolve down into; there is no map from these *things* to the encounterable world-substance, to observable reality. There is no nervous system for the propagation of love; love does not act on a point; love does not impinge on the senses through mechanisms of causality. Love is the possession of our :ref:`being <being>`; it is only understood by :ref:`being <being>`, through :ref:`being <being>`; it is a way of becoming, irreducible to the :ref:`beings <being>` which in the process become. 
+
+The fallacy arises when suppose *pain* and *love* are different "*grades*" of phenomenal experience. We assume *feeling* is a spectrum and that all the things we *feel* must necessarily have something in common. In reality, every *feeling* moves within its own dimensions. 
+
+.. _september-2023:
 
 ---------
 September
@@ -138,3 +160,25 @@ The things of which we are most certain, e.g. the feelings and sensations that c
 The things of which we are least certain, e.g. the true reality of the external world, are quantifiable properties, things which can be counted and grouped into definite amounts. There is no procedure outside of perception and judgement by which external things may enter into the internal constitution of a consciousness. Things of the external world must be represented in the perception, which in turn requires the image of the thing projected onto the sense organ must be detached from the thing itself. The sensuous thing which is perceived is only an indication of the actual thing, i.e. a representation. 
 
 Certainty, then, is only absolute in the subjective sense.
+
+.. _november-2023:
+
+-------------
+November 2023
+-------------
+
+Tears of nothingness. Silent agony, for the subject alone. Tell me this is a chemical reaction, tell me this is nothing but physics. That all I feel is just the result of a trillion of microscopic collisions. The burden of proof is on you.  It is you who must argue from outside of experience, who must make this pain disppear into computation.
+
+---
+
+Ultimate, we are alone. We are separate from the world, and that means we are separate from one another.
+
+We all have a hole in our hearts. That hole is exactly equal in shape and size to the world. That hole is our reflected outline, all the things which we are not and can never be.
+
+All we seek is this: to not be separate, to love and be loved so much the distinction loses meaning. We seek the dissolution of alienation, which is to say, we seek the annihiliation of self.
+
+For self is fundamentallty an alienation, an alienation of the :ref:`world <world>` from itself. What we are is separateness, in pure and unadulterated form. We are always *beside* ourselves, never *in* ourselves. 
+
+What we are *essentially* is the :ref:`world <world>`, for it is through us worldhood is attained. But it is attained in such a way that severs us from the totality thus conceived. 
+
+What we are *fundamentally* is a lacking. We lack a connection to the :ref:`world <world>` that is brought into Being by our inhabiting of it, the :ref:`world <world>` that is severed from us as it becomes from us. We are relegated to our bodies, these containers of separateness. The :ref:`world <world>` we create is forever and always outside of ourselves.

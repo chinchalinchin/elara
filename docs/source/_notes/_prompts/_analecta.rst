@@ -4,6 +4,20 @@
 Analecta
 ========
 
+.. _1996:
+
+1996
+====
+
+.. image:: ../_static/img/personal/dream.jpg
+    :alt: Dream
+    :align: center
+    :width: 80%
+
+.. epigraph::
+
+    Once I dreamed I could breath under water. I mint some fish I wish they could talk but they can't. I swim for hours trying to find land I found a shark it was asleep it almost woke up. Then I woke up. I wonder if I am still under water. The end. 
+
 .. _2014:
 
 2014
@@ -120,6 +134,32 @@ The inherent paradox of self-awareness is connected to our fear of death; It doe
 2021
 ====
 
+.. _august-2021:
+
+------
+August
+------
+
+When the intellect attempts to grasp the concept of :ref:`nothing <nothing>`, it does so along these lines: it subtracts things away from their places until all that is left is pure emptiness. But in doing so, the intellect falters in its purpose, because the emptiness thus abstracted is conceived within the intellect and exists *for* the intellect, as a thing that can be conceived. A true :ref:`nothing <nothing>` would consist of neither emptiness or the intellect which conceives it. A true :ref:`nothing <nothing>` is a :ref:`world <world>` without us.
+
+---
+
+Every philosopher who has ever pronounced an :ref:`a priori <a-priori-a-posteriori>` principle or constructed a metaphysics to explain the complexities of the world should be hunted for sport, and if they survive and still hold to their previous declarations, then at least we will know they believe what they are saying. 
+
+.. _september-2021:
+
+---------
+September
+---------
+
+If it is the case that our :ref:`being <being>`, in its primary essence, is contained in the laws of physics and mathematics, then there will come a day when a (un)lucky physicist is solving his equations and recognizes in their computation himself and not merely his image, but himself embodied in the equations themselves, as an extension of his own :ref:`being <being>`; for that is the conclusion of rationalism: that we must be reducible to priors. If that is so, then we are already in the representations which represent us, for our :ref:`being <being>` cannot be anything but what it is, by definition. And so if our :ref:`being <being>` is mathematical, upon our discovery of its theoretic structure, we will have found outside ourselves a quanta of experience, an experience of our own outside of our own experience; The end result of rationalism, any and all rationalist schemes no matter their form and procedure, is to find yourself in two distinct places at the same time, which any rationalist would admit is absurd. Rationalism is undone ipso facto by rationalism itself. 
+
+---
+
+Death, in its inestimatible way, has unique a logical property. It is always with us in the form of possibility. This is not like other possibilities, which only emerge when we comport ourselves in a specific way within the :ref:`world <world>`. In other words, a thing is possible insofar that its conditions for possibility can be met. It is *possible* to go over a mountain only if a person puts themselves in front of the mountain and expends sufficient energy to ascend to its summit. In order to climb a mountain, a choice to *engage* with the *possibility* of climbing mountain must be made.
+
+There is, however, one possibility that does not obey this rule. Death is the only possibility that has no contingency on history, on the subject's so-called "*facticity*". It haunts every moment, irrespective of where, how or when we find ourselves. 
+
 .. _november-2021:
 
 --------
@@ -180,6 +220,12 @@ December
 The lack of precision in discussions of :ref:`being <being>` often leads to the participants overlooking this subtle distinction between the two notions. Indeed, the course of western philosophy depended throughout most of its history on the unexamined assumption these two types of :ref:`being <being>` were essentially the same, that is to say, that both "*am*" and "*is*" imply existence in the same way. 
 
 This necessarily leads to a duality of mind and body; if the primary mode of :ref:`being <being>` of both "*am*" and "*is*" is existential, then there must be a rupture in :ref:`being <being>`; things must divide into "*res extensa*" (literally: "*the thing which is extended*"), and into "*res cogitans*", (literally: "*the thing which thinks*"). In other words, :ref:`being <being>` is necessarily split into the physical and the mental because the "*am*" and "*is*" are both derivative of *existence*.
+
+---
+
+Is it enough that we have this brief moment where we are capable of creating and sharing, of love and tenderness, even though it is fated to mean :ref:`nothing <nothing>` forever after? That all we sow we shall never know, that we plant trees for generations that will never know our names, this is all that can be granted as the best possible outcome. Rarely do we give voice to the silent thought which outlines the worst possible outcome, lest it in fact be case: that once we die it will be as if :ref:`nothing <nothing>` ever was and all our acts, intentions and feelings will retroactively come undone, never to have been because :ref:`nothing <nothing>` was all that ever was in the first place.
+
+Is it cause for despair that we will never understand what we are, no matter how hard we try? That we must admit there is no answer to any of life's fundamental questions is itself without question, undisputed in its integrity. You cannot answer the quedstion, "*What am I?*" , in any satisfactory sense. The writer of these words invites the reader to try; he will gladly read the five hundred page dissertation that results, even though he already knows its conclusion: certainty does not extend into the realm of death.
 
 .. _2022:
 
@@ -294,6 +340,14 @@ A tragedy, in three lines:
     **Optimist**: the best of all possible worlds.
 
     **Pessimist**: and then what?
+
+---
+
+Death as a subject is repellant to individual understanding. Its very definition presupposes the limit of the knower; That is to say, death is inherently unknowable. Death can only be understood through the mechanisms of analogy and metaphor, via the circuituous and torturous route of empty symbolism, for when we turn our attention directly to the object of death it reveals itself as something which is not to be found in our :ref:`world <world>`. 
+
+We can be aware that we will eventually die, we can perceive others passing from this world, we can even in unique circumstances perceive the manner of our own death, but none of this gets us any closer to the experience of death, none of this allows us to see what it is like to die. Our experience and awareness of experience will never be extended into death itself. We never see death for what it is, because it is :ref:`nothing <nothing>`, the absence of our :ref:`being <being>`. Death is the point where experience and awareness stops.
+
+To ask questions about a subject that perpetually recedes from all attempts to know it necessarily entails the admission up front that no answers can ever be found. The inevitable end result will be to arrive where we started, back in the here and now, having gained nothing, except perhaps an understanding of what it means to be futile, which will anyway evaporate when we die; If any proposition can lay claim to human nature, this is it. 
 
 .. _2022-november:
 
@@ -428,7 +482,11 @@ There are no answers. More fundamentally, there does not even exist the possibil
 
 The problem is :ref:`truth <truth>`. It's impossible to define. More precisely: it's definition undoes its foundation. If you say: something is true if it is the case (i.e. agrees with reality), then by allowing the indeterminate sentence to be named, even with a name so innocuous as "something", you've allowed the necessary and sufficient conditions for a contradiction to emerge. Let the next sentence be called P. The sentence P is not true. Then, by our definition of truth, we see we have named an undecidable sentence.  More than that, we have annihilated the possibility of truth by demonstrating an example of something to which it cannot apply, that is, something neither true or false. Self reference is a paradox that cannot be exorcised; it's impossible to give a name to something without that name referencing the thing to be named. You cannot talk about truth without giving things names and you cannot name a thing without decimating the foundations of language. We arise from a vacuum of meaning, and blindly seek what cannot be sought. All that we know and think is built on top of a void.
 
----
+.. _february-2023:
+
+--------
+February
+--------
 
 Long moments where nothing happens. Half-formed sentences grasping at incoherent thoughts. 
 
@@ -460,7 +518,25 @@ This definition of :ref:`truth <truth>` does not allow us to take the observatio
 
 We cannot say with certainty *what there is outside of ourselves*. We cannot get to that hypothetical moment in time of *being-without-us* through pure understanding. We cannot even say we know there *is* a *being-without-us*.
 
-.. _2023-september:
+---
+
+To some extent, the question whether or not life is worth living is answered merely by asking it. If one truly believed in the negative, there would be no one left to ask the question.
+
+.. _march-2023:
+
+-----
+March
+-----
+
+We never know from where, precisely, a feeling emanates. A feeling is not something that can be encountered in tangible form, but is rather encountered *through* form. This had led us to suppose all *feelings* are representative of the same category of "*thing*"
+
+We are misled by the primacy and immediacy of experience in this matter. When we feel pain, for instance, we feel it *in* a location; indeed, in the modern world, we now know of the nervous system and the way external stimuli excite impulses along its circuits, leading us to suppose the stimuli is more than the *cause* of the pain, but in some way, *is* the pain. We burn our hand and say the pain is *there*, *in* my hand. 
+
+Yet, we feel in another respect, in a way that reveals the mutually excluded origins of disjoint phenomenon we refer to as "*feelings*". We say we feel when something gives us joy or causes us despair, i.e. "*I enjoy the music of Chopin*"" or "*Her death caused me great pain*". However, when we seek the origin of these propositions in material reality, we immediately collide with the impenetrability of their explanations: because we love, because we care. There is no finer increment to resolve down into; there is no map from these *things* to the encounterable world-substance, to observable reality. There is no nervous system for the propagation of love; love does not act on a point; love does not impinge on the senses through mechanisms of causality. Love is the possession of our :ref:`being <being>`; it is only understood by :ref:`being <being>`, through :ref:`being <being>`; it is a way of becoming, irreducible to the :ref:`beings <being>` which in the process become. 
+
+The fallacy arises when suppose *pain* and *love* are different "*grades*" of phenomenal experience. We assume *feeling* is a spectrum and that all the things we *feel* must necessarily have something in common. In reality, every *feeling* moves within its own dimensions. 
+
+.. _september-2023:
 
 ---------
 September
@@ -475,6 +551,28 @@ The things of which we are most certain, e.g. the feelings and sensations that c
 The things of which we are least certain, e.g. the true reality of the external world, are quantifiable properties, things which can be counted and grouped into definite amounts. There is no procedure outside of perception and judgement by which external things may enter into the internal constitution of a consciousness. Things of the external world must be represented in the perception, which in turn requires the image of the thing projected onto the sense organ must be detached from the thing itself. The sensuous thing which is perceived is only an indication of the actual thing, i.e. a representation. 
 
 Certainty, then, is only absolute in the subjective sense.
+
+.. _november-2023:
+
+-------------
+November 2023
+-------------
+
+Tears of nothingness. Silent agony, for the subject alone. Tell me this is a chemical reaction, tell me this is nothing but physics. That all I feel is just the result of a trillion of microscopic collisions. The burden of proof is on you.  It is you who must argue from outside of experience, who must make this pain disppear into computation.
+
+---
+
+Ultimate, we are alone. We are separate from the world, and that means we are separate from one another.
+
+We all have a hole in our hearts. That hole is exactly equal in shape and size to the world. That hole is our reflected outline, all the things which we are not and can never be.
+
+All we seek is this: to not be separate, to love and be loved so much the distinction loses meaning. We seek the dissolution of alienation, which is to say, we seek the annihiliation of self.
+
+For self is fundamentallty an alienation, an alienation of the :ref:`world <world>` from itself. What we are is separateness, in pure and unadulterated form. We are always *beside* ourselves, never *in* ourselves. 
+
+What we are *essentially* is the :ref:`world <world>`, for it is through us worldhood is attained. But it is attained in such a way that severs us from the totality thus conceived. 
+
+What we are *fundamentally* is a lacking. We lack a connection to the :ref:`world <world>` that is brought into Being by our inhabiting of it, the :ref:`world <world>` that is severed from us as it becomes from us. We are relegated to our bodies, these containers of separateness. The :ref:`world <world>` we create is forever and always outside of ourselves.
 
 2024
 ====
