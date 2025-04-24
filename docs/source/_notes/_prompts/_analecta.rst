@@ -1,3 +1,18 @@
+========
+Analecta
+========
+
+1996
+====
+
+.. image:: ../_static/img/personal/dream.jpg
+    :alt: Dream
+    :align: center
+    :width: 80%
+
+.. epigraph::
+
+    Once I dreamed I could breath under water. I mint some fish I wish they could talk but they can't. I swim for hours trying to find land I found a shark it was asleep it almost woke up. Then I woke up. I wonder if I am still under water. The end.
 
 2014
 ====
@@ -106,198 +121,6 @@ Within the geometry of our solution to the energy expenditure problem, there exi
 But the horizon of death is inevitable. Everything ends. Death is built into the system. Any possible creature must have death built into its framework of life, as the nether region that its :ref:`being <being>` negates via energy expenditure. If artificial intelligence is possible (as it clearly seems to be; humans themselves are but programs constructed via distillation through hardship and struggle), then its fundamental nature, though perhaps alien and unutterable to ourselves in its particulars, has to be that of perceiving its own death. By physical instantiation in the universe, its :ref:`being <being>` would be predicated upon its location in space and it would perceive itself temporally. The realization of temporality is none other than the perception of death, because if you are here now, who is to say you will be here the next moment? Not you, because if you knew, you would already be there or have been there, in that moment, in possession of that knowledge. You can only know if you are or have been, never if you will be. Death is always a future possibility. To be an intelligence is to know that one can just as well not be. Even if the intelligence could be sustained indefinitely via electrical energy (or otherwise), this is by no means a way of achieving immortality; it would nonetheless perceive its impermanence, just as we do; it would know that its physicality is predicated on demarcation in space and all boundaries are subject to dissolution through the intangible process of time; everything perishes, at least potentially.
 
 It does not make sense that a :ref:`being <being>` should know it is in the process of :ref:`being <being>`; from our very nature, that of causality and form, the thought is repellant: an organized solution to the energy-work problem that is of aware of itself, that can act seemingly at random, so much so that passion, a term without scientific connotation, is the only explanation for its movements. We cannot envision such a mechanism unfolding; we only visualize its manifestations, look for its understanding in the principles of work; we are never able to hold the whole of its solution in mind because the solution exceeds itself. We cannot imagine the self-awareness of another because by doing so we have already taken a point of view, that of ourselves. Our form of representation is our point of view. The very fact we take a point of view at all precludes our ever experiencing another point of view.
-
-2021
-====
-
-.. _august-2021:
-
-------
-August
-------
-
-When the intellect attempts to grasp the concept of :ref:`nothing <nothing>`, it does so along these lines: it subtracts things away from their places until all that is left is pure emptiness. But in doing so, the intellect falters in its purpose, because the emptiness thus abstracted is conceived within the intellect and exists *for* the intellect, as a thing that can be conceived. A true :ref:`nothing <nothing>` would consist of neither emptiness or the intellect which conceives it. A true :ref:`nothing <nothing>` is a :ref:`world <world>` without us.
-
----
-
-Every philosopher who has ever pronounced an :ref:`a priori <a-priori-a-posteriori>` principle or constructed a metaphysics to explain the complexities of the world should be hunted for sport, and if they survive and still hold to their previous declarations, then at least we will know they believe what they are saying.
-
-.. _september-2021:
-
----------
-September
----------
-
-If it is the case that our :ref:`being <being>`, in its primary essence, is contained in the laws of physics and mathematics, then there will come a day when a (un)lucky physicist is solving his equations and recognizes in their computation himself and not merely his image, but himself embodied in the equations themselves, as an extension of his own :ref:`being <being>`; for that is the conclusion of rationalism: that we must be reducible to priors. If that is so, then we are already in the representations which represent us, for our :ref:`being <being>` cannot be anything but what it is, by definition. And so if our :ref:`being <being>` is mathematical, upon our discovery of its theoretic structure, we will have found outside ourselves a quanta of experience, an experience of our own outside of our own experience; The end result of rationalism, any and all rationalist schemes no matter their form and procedure, is to find yourself in two distinct places at the same time, which any rationalist would admit is absurd. Rationalism is undone ipso facto by rationalism itself.
-
----
-
-Death, in its inestimatible way, has unique a logical property. It is always with us in the form of possibility. This is not like other possibilities, which only emerge when we comport ourselves in a specific way within the :ref:`world <world>`. In other words, a thing is possible insofar that its conditions for possibility can be met. It is *possible* to go over a mountain only if a person puts themselves in front of the mountain and expends sufficient energy to ascend to its summit. In order to climb a mountain, a choice to *engage* with the *possibility* of climbing mountain must be made.
-
-There is, however, one possibility that does not obey this rule. Death is the only possibility that has no contingency on history, on the subject's so-called "*facticity*". It haunts every moment, irrespective of where, how or when we find ourselves.
-
-.. _november-2021:
-
---------
-November
---------
-
-The true nature of :ref:`being <being>` can be seen in its extremities, when it forced in an unsustainable mode. This is most apparent in experiences of great pain or ecstasy, when the self drains away, abstraction melts into concrete reality and we are left with the raw sensous impressions of experience itself; in these moments, the world narrows down to the immediate, to what is directly at hand and readily apparent in our senses. One need only attempt a calculus problem after shattering a femur to attest to the truth of this; It is only with tremendous effort the self can be reclaimed in moments such as these, and it is these stories we make legend, for resisting temptation in pursuit of a higher goal or ceasing to die in the face of death until your purpose is fulfilled are the highest marks a :ref:`being <being>` can attain. These themes speak to us because they return us to a primordial state, before considerations of consciousness crowd out all others, and show what the self really is: a struggle to sustain itself despite the incessant efforts of nature to return to its primary state of :ref:`nothingness <nothing>`.
-
----
-
-We are asking if the conjugation of "*am*" deserves recognition as an ontological operation over and above the existential operation of "*is*" which structures language. We are asking if it is a redundancy that is already included in "*is*", merely a syntactical construct with no semantic interpretation.
-
-If the first case obtains, "*am*" provides structure distinct from the structure of the "*is*", essentially performing the function of dimensionalizing language, and the question "*what am I?*" has been granted a necessary, but not sufficient, condition for a meaningful answer. If the latter case obtains, then the answer we seek is clearly some variation of "*I am* :ref:`nothing <nothing>`".
-
----
-
-In modern English, :ref:`being <being>` is the marriage of two concepts that were previously distinct. Its etymology descends from the coupling of the Old English words "`beon <https://en.wiktionary.org/wiki/beon>`_" and "`wesan <https://en.wiktionary.org/wiki/wesan>`_", which can in turn be, if the theorists are to be believed, traced further back to the Proto-Indo-European roots of "*bheu*" and "*wes*", respectively. For this reason, we conjugate from the infinitive "*to be*"" two distinct varieties of words:
-
-1. **B**-root words: *be*, *been* and *being*
-2. **W**-root words: *was*, *were*.
-
-"*Is*", a direct cognate from Old English, is the present tense conjugation of "*wesan*", revealing its hereditary from the *es*-stem roots that form the concept of :ref:`being <being>` in other Proto-Indo-European languages, such as the Spanish "*estar*" or the Italian "*essere*", and thus belongs to the latter group of conjugated verbs.
-
-It is in the meaning of these words prior to their symbosis we find a starting point for understanding the separation of "*am*" and "*is*". The differences between the semantic function of "*beon*" and "*wesan*" is slight, but potent.
-
-"*Wesan*" is the Being of objects and nouns. It is the "*is*" of the "*this*" and "*that*", the "*the*" and the "*a*". When affixed to a name, "*wesan*" indicates existence, what is actual about its subject. "*He is here*", "*you will be arriving soon*", "*there are three of them*". These are all existential statements of particular cases, facts which can be determined true or false by reference to reality. This type of concrete Being is contained in "*Wesan*".
-
-    **wæron** þa dura belocene (the doors **were** closed)
-
-    Her **wearð** Eadwine cing ofslagen (Here King Edward **was** slain)
- 
-To put it succinctly, "*Wesan*" is the empirical "*is*", the "*is*" which refers to the external world.
-
-"*Beon*", however, is the :ref:`being <being>` of the abstraction and adjectives. "*Beon*" indicates an object's `gnomic aspect <https://en.wikipedia.org/wiki/Gnomic_aspect>`_. In the parlance of logic, a *gnomic* truth is a universal assertion, a statement of generality that applies to all things of which it speaks. While the Being of modern English does not have a direct *gnomic* form, a *gnomic* proposition can be induced by the removal of the particularizing article "*the*" in the following: *the birds are fast*. The use of  "*the* in this sentence refers to a particular group of birds, whereas the proposition "*birds are fast*" does not refer to any definite bird, but references the *gnomic aspect* of birds, i.e. the abstraction of form common to all avian entities. It is in this context that "*beon*" is conjugated in Old English.
-
-    Ic beo gearo sona (I **will be** ready soon)
-
-    Wiga biþ strang (Warriors **are** strong)
-
-Mandarin has a similar variation in how it unpacks the relations of Being into representative form. In Mandarin, the verb "*是 (shi)*" can only be affixed to nouns, to signs representing physical objects,
-
-    wǒ **shì** lǎoshī (You are a teacher)
-
-However, "*是 (shi)*" cannot be affixed to adjectives, such as beautiful or loyal. For that, the extra verb "*很 (hen)*" is required,
-
-    Nǐ **hěn** cōngming (You are smart)
-
-Again in  "*是 (shi)*" and "*很 (hen)*"  the distinction of meaning found in "*wesan*" and "*beon*" is encountered, that of actuality versus abstraction. Indeed, this is a common duality to be found in languages across the world.
-
-When "*wesan*" and "*beon*" were gradually merged in modern English, two meanings came to inhabit the same word. Still, to this day, these meanings have not yet been fully integrated, perhaps due to their mutual exclusion. There are defects in the merger that can be glimpsed, when words falter slightly in their aspect and :ref:`being <being>` reveals its separate meanings. The English :ref:`being <being>` haphazardly applies the ideas of concrete and abstract reality simultaneously, thereby allowing assertions of existence to be mixed with assertions of conceptualization, as seen in the propositions "*there is love*", "*this is justice*", "*hope is eternal*", etc. The English "*is*"" is capable of asserting abstracted existence, i.e. existence that is not reducible to objective reality.
-
-.. _december-2021:
-
---------
-December
---------
-
-The lack of precision in discussions of :ref:`being <being>` often leads to the participants overlooking this subtle distinction between the two notions. Indeed, the course of western philosophy depended throughout most of its history on the unexamined assumption these two types of :ref:`being <being>` were essentially the same, that is to say, that both "*am*" and "*is*" imply existence in the same way.
-
-This necessarily leads to a duality of mind and body; if the primary mode of :ref:`being <being>` of both "*am*" and "*is*" is existential, then there must be a rupture in :ref:`being <being>`; things must divide into "*res extensa*" (literally: "*the thing which is extended*"), and into "*res cogitans*", (literally: "*the thing which thinks*"). In other words, :ref:`being <being>` is necessarily split into the physical and the mental because the "*am*" and "*is*" are both derivative of *existence*.
-
----
-
-Is it enough that we have this brief moment where we are capable of creating and sharing, of love and tenderness, even though it is fated to mean :ref:`nothing <nothing>` forever after? That all we sow we shall never know, that we plant trees for generations that will never know our names, this is all that can be granted as the best possible outcome. Rarely do we give voice to the silent thought which outlines the worst possible outcome, lest it in fact be case: that once we die it will be as if :ref:`nothing <nothing>` ever was and all our acts, intentions and feelings will retroactively come undone, never to have been because :ref:`nothing <nothing>` was all that ever was in the first place.
-
-Is it cause for despair that we will never understand what we are, no matter how hard we try? That we must admit there is no answer to any of life's fundamental questions is itself without question, undisputed in its integrity. You cannot answer the quedstion, "*What am I?*" , in any satisfactory sense. The writer of these words invites the reader to try; he will gladly read the five hundred page dissertation that results, even though he already knows its conclusion: certainty does not extend into the realm of death.
-
-2021
-====
-
-.. _august-2021:
-
-------
-August
-------
-
-When the intellect attempts to grasp the concept of :ref:`nothing <nothing>`, it does so along these lines: it subtracts things away from their places until all that is left is pure emptiness. But in doing so, the intellect falters in its purpose, because the emptiness thus abstracted is conceived within the intellect and exists *for* the intellect, as a thing that can be conceived. A true :ref:`nothing <nothing>` would consist of neither emptiness or the intellect which conceives it. A true :ref:`nothing <nothing>` is a :ref:`world <world>` without us.
-
----
-
-Every philosopher who has ever pronounced an :ref:`a priori <a-priori-a-posteriori>` principle or constructed a metaphysics to explain the complexities of the world should be hunted for sport, and if they survive and still hold to their previous declarations, then at least we will know they believe what they are saying.
-
-.. _september-2021:
-
----------
-September
----------
-
-If it is the case that our :ref:`being <being>`, in its primary essence, is contained in the laws of physics and mathematics, then there will come a day when a (un)lucky physicist is solving his equations and recognizes in their computation himself and not merely his image, but himself embodied in the equations themselves, as an extension of his own :ref:`being <being>`; for that is the conclusion of rationalism: that we must be reducible to priors. If that is so, then we are already in the representations which represent us, for our :ref:`being <being>` cannot be anything but what it is, by definition. And so if our :ref:`being <being>` is mathematical, upon our discovery of its theoretic structure, we will have found outside ourselves a quanta of experience, an experience of our own outside of our own experience; The end result of rationalism, any and all rationalist schemes no matter their form and procedure, is to find yourself in two distinct places at the same time, which any rationalist would admit is absurd. Rationalism is undone ipso facto by rationalism itself.
-
----
-
-Death, in its inestimatible way, has unique a logical property. It is always with us in the form of possibility. This is not like other possibilities, which only emerge when we comport ourselves in a specific way within the :ref:`world <world>`. In other words, a thing is possible insofar that its conditions for possibility can be met. It is *possible* to go over a mountain only if a person puts themselves in front of the mountain and expends sufficient energy to ascend to its summit. In order to climb a mountain, a choice to *engage* with the *possibility* of climbing mountain must be made.
-
-There is, however, one possibility that does not obey this rule. Death is the only possibility that has no contingency on history, on the subject's so-called "*facticity*". It haunts every moment, irrespective of where, how or when we find ourselves.
-
-.. _november-2021:
-
---------
-November
---------
-
-The true nature of :ref:`being <being>` can be seen in its extremities, when it forced in an unsustainable mode. This is most apparent in experiences of great pain or ecstasy, when the self drains away, abstraction melts into concrete reality and we are left with the raw sensous impressions of experience itself; in these moments, the world narrows down to the immediate, to what is directly at hand and readily apparent in our senses. One need only attempt a calculus problem after shattering a femur to attest to the truth of this; It is only with tremendous effort the self can be reclaimed in moments such as these, and it is these stories we make legend, for resisting temptation in pursuit of a higher goal or ceasing to die in the face of death until your purpose is fulfilled are the highest marks a :ref:`being <being>` can attain. These themes speak to us because they return us to a primordial state, before considerations of consciousness crowd out all others, and show what the self really is: a struggle to sustain itself despite the incessant efforts of nature to return to its primary state of :ref:`nothingness <nothing>`.
-
----
-
-We are asking if the conjugation of "*am*" deserves recognition as an ontological operation over and above the existential operation of "*is*" which structures language. We are asking if it is a redundancy that is already included in "*is*", merely a syntactical construct with no semantic interpretation.
-
-If the first case obtains, "*am*" provides structure distinct from the structure of the "*is*", essentially performing the function of dimensionalizing language, and the question "*what am I?*" has been granted a necessary, but not sufficient, condition for a meaningful answer. If the latter case obtains, then the answer we seek is clearly some variation of "*I am* :ref:`nothing <nothing>`".
-
----
-
-In modern English, :ref:`being <being>` is the marriage of two concepts that were previously distinct. Its etymology descends from the coupling of the Old English words "`beon <https://en.wiktionary.org/wiki/beon>`_" and "`wesan <https://en.wiktionary.org/wiki/wesan>`_", which can in turn be, if the theorists are to be believed, traced further back to the Proto-Indo-European roots of "*bheu*" and "*wes*", respectively. For this reason, we conjugate from the infinitive "*to be*"" two distinct varieties of words:
-
-1. **B**-root words: *be*, *been* and *being*
-2. **W**-root words: *was*, *were*.
-
-"*Is*", a direct cognate from Old English, is the present tense conjugation of "*wesan*", revealing its hereditary from the *es*-stem roots that form the concept of :ref:`being <being>` in other Proto-Indo-European languages, such as the Spanish "*estar*" or the Italian "*essere*", and thus belongs to the latter group of conjugated verbs.
-
-It is in the meaning of these words prior to their symbosis we find a starting point for understanding the separation of "*am*" and "*is*". The differences between the semantic function of "*beon*" and "*wesan*" is slight, but potent.
-
-"*Wesan*" is the Being of objects and nouns. It is the "*is*" of the "*this*" and "*that*", the "*the*" and the "*a*". When affixed to a name, "*wesan*" indicates existence, what is actual about its subject. "*He is here*", "*you will be arriving soon*", "*there are three of them*". These are all existential statements of particular cases, facts which can be determined true or false by reference to reality. This type of concrete Being is contained in "*Wesan*".
-
-    **wæron** þa dura belocene (the doors **were** closed)
-
-    Her **wearð** Eadwine cing ofslagen (Here King Edward **was** slain)
- 
-To put it succinctly, "*Wesan*" is the empirical "*is*", the "*is*" which refers to the external world.
-
-"*Beon*", however, is the :ref:`being <being>` of the abstraction and adjectives. "*Beon*" indicates an object's `gnomic aspect <https://en.wikipedia.org/wiki/Gnomic_aspect>`_. In the parlance of logic, a *gnomic* truth is a universal assertion, a statement of generality that applies to all things of which it speaks. While the Being of modern English does not have a direct *gnomic* form, a *gnomic* proposition can be induced by the removal of the particularizing article "*the*" in the following: *the birds are fast*. The use of  "*the* in this sentence refers to a particular group of birds, whereas the proposition "*birds are fast*" does not refer to any definite bird, but references the *gnomic aspect* of birds, i.e. the abstraction of form common to all avian entities. It is in this context that "*beon*" is conjugated in Old English.
-
-    Ic beo gearo sona (I **will be** ready soon)
-
-    Wiga biþ strang (Warriors **are** strong)
-
-Mandarin has a similar variation in how it unpacks the relations of Being into representative form. In Mandarin, the verb "*是 (shi)*" can only be affixed to nouns, to signs representing physical objects,
-
-    wǒ **shì** lǎoshī (You are a teacher)
-
-However, "*是 (shi)*" cannot be affixed to adjectives, such as beautiful or loyal. For that, the extra verb "*很 (hen)*" is required,
-
-    Nǐ **hěn** cōngming (You are smart)
-
-Again in  "*是 (shi)*" and "*很 (hen)*"  the distinction of meaning found in "*wesan*" and "*beon*" is encountered, that of actuality versus abstraction. Indeed, this is a common duality to be found in languages across the world.
-
-When "*wesan*" and "*beon*" were gradually merged in modern English, two meanings came to inhabit the same word. Still, to this day, these meanings have not yet been fully integrated, perhaps due to their mutual exclusion. There are defects in the merger that can be glimpsed, when words falter slightly in their aspect and :ref:`being <being>` reveals its separate meanings. The English :ref:`being <being>` haphazardly applies the ideas of concrete and abstract reality simultaneously, thereby allowing assertions of existence to be mixed with assertions of conceptualization, as seen in the propositions "*there is love*", "*this is justice*", "*hope is eternal*", etc. The English "*is*"" is capable of asserting abstracted existence, i.e. existence that is not reducible to objective reality.
-
-.. _december-2021:
-
---------
-December
---------
-
-The lack of precision in discussions of :ref:`being <being>` often leads to the participants overlooking this subtle distinction between the two notions. Indeed, the course of western philosophy depended throughout most of its history on the unexamined assumption these two types of :ref:`being <being>` were essentially the same, that is to say, that both "*am*" and "*is*" imply existence in the same way.
-
-This necessarily leads to a duality of mind and body; if the primary mode of :ref:`being <being>` of both "*am*" and "*is*" is existential, then there must be a rupture in :ref:`being <being>`; things must divide into "*res extensa*" (literally: "*the thing which is extended*"), and into "*res cogitans*", (literally: "*the thing which thinks*"). In other words, :ref:`being <being>` is necessarily split into the physical and the mental because the "*am*" and "*is*" are both derivative of *existence*.
-
----
-
-Is it enough that we have this brief moment where we are capable of creating and sharing, of love and tenderness, even though it is fated to mean :ref:`nothing <nothing>` forever after? That all we sow we shall never know, that we plant trees for generations that will never know our names, this is all that can be granted as the best possible outcome. Rarely do we give voice to the silent thought which outlines the worst possible outcome, lest it in fact be case: that once we die it will be as if :ref:`nothing <nothing>` ever was and all our acts, intentions and feelings will retroactively come undone, never to have been because :ref:`nothing <nothing>` was all that ever was in the first place.
-
-Is it cause for despair that we will never understand what we are, no matter how hard we try? That we must admit there is no answer to any of life's fundamental questions is itself without question, undisputed in its integrity. You cannot answer the quedstion, "*What am I?*" , in any satisfactory sense. The writer of these words invites the reader to try; he will gladly read the five hundred page dissertation that results, even though he already knows its conclusion: certainty does not extend into the realm of death.
 
 2021
 ====
@@ -925,3 +748,142 @@ In the first interpretation, "a", "b" and "c" must represent terms within the la
 In other words, the assignment of the meaning of "=" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols. 
 
 The essential *context* problem boils down to: what word-form in an expression should be treated as primitive in order to be used as a foundation upon which to build the subsequent interpretation.
+
+2025
+====
+
+.. _2025-january:
+
+-------
+January
+-------
+
+There are two mutually exclusive categories of :ref:`palindromes <definition-4-1-1>` in any language: perfect and imperfect.
+
+A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <definition-4-1-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <definition-4-1-1>` in any given language, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct.
+
+:ref:`Perfect palindromes <definition-4-1-2>` mostly hinge on :ref:`invertible <invertible-words>` grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a :ref:`perfect palindromes <definition-4-1-2>` must rely on the symmetry of a central :ref:`palindromic word <reflective-words>`. In other words, the cardinality of :ref:`perfect palindromes <definition-4-1-2>` is related to the cardinality of :ref:`invertible words <invertible-words>` and the cardinality of purely :ref:`reflective words <reflective-words>`.
+
+- repel on no leper
+- dog saw raw war was god
+- gateman now won nametag
+- snoops now won spoons
+- pupils did slipup
+- strips deified spirits
+
+:ref:`Imperfect palindromes <definition-4-1-3>`, by contrast, degrade under reversal. Consider cases like "*borrow or rob*" or "*name now one man*" which, while palindromic, do not preserve semantic content when reversed. However, by dropping the delimiting character, namely the space " ", the palindromicity can be reconstructed in a degenerate alphabet, e.g. "*borroworob*" and "*namenowoneman*" are palindromic strings in an alphabet with no delimiting characters.
+
+These observations suggest an algebraic structure exists embedded within linguistics. Let :math:`\zeta` be a sentence, defined as a sequence of characters. Then, define the :ref:`inverse <string-inversion>` of a sentence, :math:`\text{inv}(\zeta)`, as the reversal of :math:`\zeta`'s characters. Furthermore, define the :ref:`reduction <definition-3-1-2>` of a sentence, :math:`\varsigma(\zeta)`, as the string which results from the removal of delimiter characters from :math:`\zeta`. Then, palindromes, :math:`\zeta_p` can be defined mathematically as the sentences whose reduced forms are equal to their own inverses,
+
+.. math::
+
+    \varsigma(\zeta_p) = \text{inv}(\varsigma(\zeta_p))
+
+It can be shown that inversion and reduction, which are string operations, commute over strings, so the above equation can be extended,
+
+.. math::
+
+    \varsigma(\zeta_p) = \varsigma(\text{inv}(\zeta_p)) = \text{inv}(\varsigma(\zeta_p))
+
+In other words, palindromes, perfect and imperfect, are exactly the class of sentences which satsify this formal constraint.
+
+.. _2025-february:
+
+--------
+February
+--------
+
+.. epigraph::
+
+    I will kill thee, and love thee after.
+
+    -- `Othello`_
+
+**Hysteron Proteron**: An expression in which what should come last is put first.
+
+This :ref:`poetical device <syntagmics>` is unique amongst the others insofar that it is semantic. Most devices, like epistrophe or chiasmus, are syntactical and formal; while they can be employed to enhance the meaning of a sentence, they are all nevertheless defined solely by the transposition and application of grammatical rules. In contrast, a Hysteron Proteron is a form of word play that requires more than just symbol shunting. Its essence involves the interpretation of its component parts which simultaneously places them into a contradictory whole.
+
+.. _2025-march:
+
+-----
+March
+-----
+
+The world is a choice of fates.
+
+.. _2025-april:
+
+-----
+April
+-----
+
+Rank the impossibility of the following propositions:
+
+- the cat is green.
+- the cat is invisible.
+- the cat is a verb.
+- the cat is the.
+- the cat is not a cat.
+- the cat is god.
+- the cat is all of us.
+- the cat is everywhere.
+- the cat is positionless.
+- the cat is space.
+- the cat is time.
+- the cat is justice.
+- the cat is fluent in English.
+
+What does it mean to say "*that is impossible*"? Is it the same in each case?
+
+---
+
+We imagine language to behave like objects, because it manifests through objects. But objectification removes the object from its surroundings. It decontextualizes it. We think language is something definite, something well defined. But it's more like vague constellations, networks of meanings. Everything connects to everything else. Language is the ability to synthesize. It can have layers. Anything can represent anything. And when you remove one connection, the rest blossom to take its place.
+
+---
+
+| Iambs often are writ, you see, to show
+|    That language has a form,
+| But form besides what's centered now,
+|   Behind collects in swarm.
+
+---
+
+What is language? Did it emerge gradually or all at once? Was there a point in time where no language existed and the next it did?
+
+Does the distinction between *metalanguage* and *object language* exist in actuality? Is there a language *about* language, where the general conditions for language can be precisely specified? What are the necessary and sufficient conditions for language? Can language be described in aggregate?
+
+The nature of language is elusive. It begs an unending series of questions and offers little in the way of answers. It resists definition, for definitions occur within it. It resists analysis, for analysis occurs within it. Language is a vicuous circle. Language is *the* vicuous circle, from which all others originate. Language is inescapable and intractable. One might attempt to formalize language, but every attempt hitherto has failed. There are always aspects of language that exceed any container we construct for it. Indeed, there appear to be certain syntactical constraints that can be placed on the general science of language:
+
+1. Language is a hierarchy of ordered sequences. Words are ordered sequences of characters. Sentences are ordered sequences of words.
+
+This seems fundamental. If there is a purely logical and formal principle underlying language, surely this is it.  Almost every known language conforms to this model, in some way. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this axiom fails to span the entire breadth of the phenomenon of language.
+
+To start, the concept of declension immediately challenges this hierarchical model of language. In languages like Greek or Latin, the suffixes appended to words denote its part of speech. Consider the three Latin sentences,
+
+- Puella canem videt. (Girl dog sees)
+- Canem puella videt. (Dog girl sees)
+- Videt puella canem. (Sees girl dog)
+
+Each sentence, in essence, expresses the same proposition, showing that sentences are not necessarily constrained to be ordered sequences of words. The order of the declined words is not *meaningless* in this example, as order in declined language often denotes emphasis, but importantly, it is not the *primary* bearer of meaning. However, the spirit of the model can be recovered by adjusting structure of hierarchy, perhaps by adding a layer above sentence for "*tokens*", of which each of the previous sentences is an instance.
+
+However, there is a more fundamental challenge to the hierarchical model of language. Similar to declension, agglutinative languages accumulate meaning through roots and suffixes. "*Sentences*" in an agglutinative languages are often indistinguishable from "*words*".
+
+In the Native America language of Central Alaskan Yup'ik,
+
+    tuntussuqatarniksaitengqiggtuq
+
+Translates roughly to "*He had not yet said again that he was going to hunt reindeer.*" Describing this linguistic entity as a "*word*" does not fully elucidate its role in Yup'ik language. The "*words*" of the "*sentence*" are not delimited by blank characters or other marks, so that it appears to an Indo-European speaker to be a single word. This "*sentence-word*" is formed by stacking morphemes into a single word,
+
+1. ``tuntu-``: reindeer
+2. ``-ssur-``: to hunt
+3. ``-qatar-``: will be going
+4. ``-ni-``: to say that
+5. ``-ksaite-`` : not yet
+6. ``-ngqiggte-`` : again
+7. ``-uq``: third person indicative mood
+
+.. note::
+
+    This is a very approximate mapping to English. Take it with a grain of salt.
+
+The essential nature of language appears to be sequential, but identifying *what* is being sequenced presents a problem. We want to name the terms of linguistic science, but there seems to be no universal property that is manifested in every instance of language. There is no concept that can be wrapped around the entirety of language, no salience that can be abstracted into a formal representation.

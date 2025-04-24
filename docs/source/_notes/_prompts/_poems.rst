@@ -136,6 +136,30 @@ I: Elemental Elegy
 | Each time I come a stem I snap, 
 | For only Earth deserves your bone.
 
+Haikus
+======
+
+I: Geese
+--------
+
+| scattered geese of spring
+| underneath an ancient bridge
+| crooked necks grazing
+
+II: Flotsam
+-----------
+
+| flotsam of mirrors
+| rushing river of evening
+| sunset over city
+
+III: Tower Hill
+---------------
+
+| lonely tower hill
+| distance marked by summer fog
+| the birds roost on you
+
 Lyrics
 ======
 
