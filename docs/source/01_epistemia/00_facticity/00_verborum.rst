@@ -12,14 +12,14 @@ Verborum
 - :ref:`anacoluthon`: A discontinuity of expression within a sentence, a form in which there is logical or grammatical incoherence.
 - :ref:`anadiplosis`: When words at the end of one clause are repeated near the beginning of the following clause.
 - :ref:`anaphora`: The repetition of words at the beginning of successive clauses.
-- :ref:`anastrophe`: An inversion of the grammatical order of words or clauses. 
+- :ref:`anastrophe`: An inversion of the grammatical order of words or clauses.
 - :ref:`alliteration`: TODO
 - :ref:`aposiopesis`: An expression left unsatisfied or incomplete.
-- :ref:`apostrophe`: An address to person or thing that is not present. 
+- :ref:`apostrophe`: An address to person or thing that is not present.
 - :ref:`assonance`: TODO
-- :ref:`asyndeton`: The deliberate omission of conjunctions. 
+- :ref:`asyndeton`: The deliberate omission of conjunctions.
 - :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
-- :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause 
+- :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause.
 - :ref:`epistrophe`: The repetition of words at the end of successive clauses.
 - :ref:`epizeuxis`: TODO
 - :ref:`hypozeuxis`: An expression whose every clause has its own independent subject and predicate.
@@ -29,10 +29,10 @@ Verborum
 **Semantical Devices**
 
 - :ref:`hysteron-proteron`: An expression in which what should come last is put first.
-- :ref:`metonymy`: A name that is derived from the attribute of the thing named. 
+- :ref:`metonymy`: A name that is derived from the attribute of the thing named.
 - :ref:`paronomasia`: A play on words.
-- :ref:`polyptoton`: The use of words that phonetically related but semantically distinct. 
-- :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object. 
+- :ref:`polyptoton`: The use of words that phonetically related but semantically distinct.
+- :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object.
 
 .. _alliteration:
 

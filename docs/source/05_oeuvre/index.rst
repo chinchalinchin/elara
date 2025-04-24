@@ -1,5 +1,3 @@
-.. _oeuvre:
-
 ======
 Oeuvre
 ======
@@ -10,6 +8,7 @@ Oeuvre
 
    abstracta/index
    elegies/index
+   haikus/index
    lyrics/index
    odes/index
    pantoums/index
