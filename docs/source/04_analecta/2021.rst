@@ -74,9 +74,9 @@ Mandarin has a similar variation in how it unpacks the relations of Being into r
 
 However, "*是 (shi)*" cannot be affixed to adjectives, such as beautiful or loyal. For that, the extra verb "*很 (hen)*" is required,
 
-    Nǐ **hěn** cōngming (You are smart) 
+    Nǐ **hěn** cōngming (You are smart)
 
-Again in  "*是 (shi)*" and "*很 (hen)*"  the distinction of meaning found in "*wesan*" and "*beon*" is encountered, that of actuality versus abstraction. Indeed, this is a common duality to be found in languages across the world. 
+Again in  "*是 (shi)*" and "*很 (hen)*"  the distinction of meaning found in "*wesan*" and "*beon*" is encountered, that of actuality versus abstraction. Indeed, this is a common duality to be found in languages across the world.
 
 When "*wesan*" and "*beon*" were gradually merged in modern English, two meanings came to inhabit the same word. Still, to this day, these meanings have not yet been fully integrated, perhaps due to their mutual exclusion. There are defects in the merger that can be glimpsed, when words falter slightly in their aspect and :ref:`being <being>` reveals its separate meanings. The English :ref:`being <being>` haphazardly applies the ideas of concrete and abstract reality simultaneously, thereby allowing assertions of existence to be mixed with assertions of conceptualization, as seen in the propositions "*there is love*", "*this is justice*", "*hope is eternal*", etc. The English "*is*"" is capable of asserting abstracted existence, i.e. existence that is not reducible to objective reality.
 
@@ -86,7 +86,7 @@ When "*wesan*" and "*beon*" were gradually merged in modern English, two meaning
 December
 --------
 
-The lack of precision in discussions of :ref:`being <being>` often leads to the participants overlooking this subtle distinction between the two notions. Indeed, the course of western philosophy depended throughout most of its history on the unexamined assumption these two types of :ref:`being <being>` were essentially the same, that is to say, that both "*am*" and "*is*" imply existence in the same way. 
+The lack of precision in discussions of :ref:`being <being>` often leads to the participants overlooking this subtle distinction between the two notions. Indeed, the course of western philosophy depended throughout most of its history on the unexamined assumption these two types of :ref:`being <being>` were essentially the same, that is to say, that both "*am*" and "*is*" imply existence in the same way.
 
 This necessarily leads to a duality of mind and body; if the primary mode of :ref:`being <being>` of both "*am*" and "*is*" is existential, then there must be a rupture in :ref:`being <being>`; things must divide into "*res extensa*" (literally: "*the thing which is extended*"), and into "*res cogitans*", (literally: "*the thing which thinks*"). In other words, :ref:`being <being>` is necessarily split into the physical and the mental because the "*am*" and "*is*" are both derivative of *existence*.
 

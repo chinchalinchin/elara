@@ -11,17 +11,17 @@ I: The Unicode Ode
 | 🧍‍♀️ ∥ 🍀 ∥ 🎲 ∥ 🔮 ∥ 🎲 ∥ 🍀 ∥🧍‍♂️
 | 🎻-👗-👠 ≈ 😬 ≈ 👞-👔-🎻
 | 🌙 ⊥ [∞] {🌹, 🥂, 🍝,🕯️} [∞] ⊥ ✨
-| [[💃 ∪ 🕺] ∩  🎼 ] ∝ ⏳ 𝆒 #  
+| [[💃 ∪ 🕺] ∩  🎼 ] ∝ ⏳ 𝆒 #
 |
-| [🫀 ∧ 🧠 ∧ 🫁] ↔ [💬 ∧ 💭 ∧ 💘] 
+| [🫀 ∧ 🧠 ∧ 🫁] ↔ [💬 ∧ 💭 ∧ 💘]
 | [🫀 ≠ 💘] ∧ [🧠 ≠ 💭] ∧ [🫁 ≠ 💬]
 | ∀ 👁️ ∈ 😍 : Σ 👁️ =  🎯(🔥)
 | ∃ 💋 ∈ 😘 : 🌍 ⊂ 💋
-| 
+|
 | ⏳ ⊥ [𝄞] {🌹, 🕰️, 🌹} [𝄞] ⊥ ⌛
 | 🌕-🎶-🌖-🎵-🌗-𝅝𝅥-🌘-∅-🌑
 |
-| 🏃-💭-🌳 ... 🏃-💭-🏡 ... 🏃-💭-🏥 
+| 🏃-💭-🌳 ... 🏃-💭-🏡 ... 🏃-💭-🏥
 | 🍀(😨 + 🚑 → 😱 + 🩺 → 💀 + 🪦)
 | 🥀 → 🌧️ + 🌱 = 😭 + 💭(💃 ∪ 🕺) + 🕸️
 | 🚶-💭-🍃 ... 🚶-💭-🔔 ... 🚶-💭-⛪
@@ -31,7 +31,7 @@ I: The Unicode Ode
 | 💤(💃(🔥) → 💘(🎼))
 | 🪞(🌀(🌀(🌀(🌀(🌀))))) → 🕊️(🕰️)
 | 
-| 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 # 
+| 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 #
 
 II: The Invocation of Iambic Code
 ---------------------------------
@@ -39,10 +39,10 @@ II: The Invocation of Iambic Code
 .. code-block:: python
 
     """
-    The Invocation of Metric Code 
+    The Invocation of Metric Code
     =============================
 
-    A Pythonic poem in (mostly) metric form. 
+    A Pythonic poem in (mostly) metric form.
 
     .. tip::
 
@@ -51,14 +51,14 @@ II: The Invocation of Iambic Code
         these words command with meaning fraught
         the rush of green through stalks of growth
         in ground of earth or problem sought,
-        with meter found in solemn oath. 
+        with meter found in solemn oath.
 
     Hacks until the devs publish a fix:
 
     - "()", "[]", ".", ":", "_",  "=" and "==" don't contribute!
     - Comments are part of the poem! Except this one!
     - "pprint" = "puh-PRINT"
-  
+
     """
     # at first, this helpful little shape
     from re import escape
@@ -76,7 +76,7 @@ II: The Invocation of Iambic Code
         """
         try: # hope, but keep your fingers crossed...
 
-            if not (with_mode in [ "act", "retain"]): 
+            if not (with_mode in [ "act", "retain"]):
                 return "what's left of last remain"
 
             if type(set(this)) == thy_art.a_ring:
@@ -93,10 +93,10 @@ II: The Invocation of Iambic Code
             return invoke.Oh.muse(" " and "please").sing(this)
 
     # HOTFIX: Let this "==" be "is"! But only here!
-    # Oh, don't complain, just play the game! 
+    # Oh, don't complain, just play the game!
     if __name__ == "__main__":
         invoke.with_fuse()
-        invoke.Oh.muse([   
+        invoke.Oh.muse([
             " " and use(this=dream, with_mode="retain")
             for dream in smoke.of_wing
             if dream is all(thy_art.to_bring())
@@ -121,13 +121,13 @@ I: Elemental Elegy
 | And fingers stretched so pale and numb,
 | My name, you said, so clear, so thin--
 | With final grasp, in black succumb.
-| 
+|
 | Oh--Father, Father--brass horns blare!
 | You string your harp with diamond thread
 | And leave in me this slate despair!
 | What crystal tears in eyes now shed?
 | What pearl is formed by sightless stare?
-| What platinum found in prayers pled? 
+| What platinum found in prayers pled?
 |
 | The oak around your body wraps
 | As shoots of pine through spine are grown.
@@ -426,10 +426,10 @@ XII: Father's Lullaby
 | Fear not the slash of sharpened claws,
 |   The flashing terror brief,
 | But stamps that mark the written clause
-|   With laws of fierce belief. 
+|   With laws of fierce belief.
 |
 | What evil deeds those stories tell
-|   Prepare your heart to meet 
+|   Prepare your heart to meet
 | The formal world where heroes fell
 |   To wander incomplete.
 
@@ -447,7 +447,7 @@ XIII: Photographs of Autumn
 | Yet even still, though claimed by dust,
 |    I keep them hung upon my wall,
 | For memory you did entrust
-|    Of walk with you through golden Fall. 
+|    Of walk with you through golden Fall.
 
 XIV: The Curse of Rain
 ----------------------
@@ -457,17 +457,17 @@ XIV: The Curse of Rain
 | And mock the sky with lazy sleep,
 | While clouds so white with dreams of gray,
 | With sun they soak and whirling sweep
-| In hidden furies' winded spray. 
+| In hidden furies' winded spray.
 |
 | Each time it rains, the rivers splay,
-| And surge with purging currents swift, 
+| And surge with purging currents swift,
 | What lays on shore is swept away
 | Through undertow then set adrift
-| To reach again where edge gives way 
-| To core laid bare through ancient rift. 
+| To reach again where edge gives way
+| To core laid bare through ancient rift.
 |
 | The heat was shaped with holy bliss,
-| While cold finds form in shattered fall, 
+| While cold finds form in shattered fall,
 | The tracks of arcs that never miss,
 | The purpose found in roaring squall,
 | To hurl in spite of stolen kiss,
@@ -478,14 +478,14 @@ XIV: The Curse of Rain
 | To craft and make then cease the drought,
 | And hear its name with venom hate
 | In curses made by summer's clout,
-| And so it cries at heaven's gate. 
+| And so it cries at heaven's gate.
 
 XV: Let It Simmer (Librarian VIII)
 ----------------------------------
 
-| A heart too hot will lack a taste 
-| Refined. Quiet now, simmer down, 
-| And stew the sauce, or let it baste. 
+| A heart too hot will lack a taste
+| Refined. Quiet now, simmer down,
+| And stew the sauce, or let it baste.
 | Yes, let it sit, in flavor drown
 | And only then when flame is off,
 | You taste a bit, a smidgen pinch;
@@ -494,7 +494,7 @@ XV: Let It Simmer (Librarian VIII)
 | What boiled over side of thought.
 | Distilled to stock, the essence clean
 | Will cling in drops that drip on pot
-| To add to future meals' cuisine. 
+| To add to future meals' cuisine.
 
 Odes
 ====
@@ -514,7 +514,7 @@ I: An Ode To Autumn
 |        To lay at feet to span each foot
 | The dust each clever leaf here does become.
 |
-| As seasons pass and cast 
+| As seasons pass and cast
 |       My bone layered into stone,
 | Let August dig for me a grave in brown
 |       Barrow beneath her loam.
@@ -861,56 +861,28 @@ II: The Haunted Cathedral
 |
 | Pray, ignore the biting chill
 | As cast into the shaping mould,
-| Oh! church atop a steepled hill, 
-| We remain in spirit standing still. 
+| Oh! church atop a steepled hill,
+| We remain in spirit standing still.
 
-III: Mimic
+III: Plots
 ----------
-
-| Mimic, dear mate, pray hesitate!
-| Tread not upon this course!
-| What follows sweet is heart's remorse!
-|
-| Those lines afar you judged so straight
-| Are crooked yet and coarse. 
-| Mimic, dear mate, pray hesitate!
-|
-| You'll gain a head in broad divorce,
-| But find astride your gait
-| What follows sweet is heart's remorse.
-|
-| What lists like light will soon find weight
-| If drawn from me my source.
-| Mimic, dear mate, pray hesitate!
-|
-| This curse of mine for you awaits
-| if you persist, perforce;
-| What follows sweet is heart's remorse.
-|
-| In throat my voice your lungs will break
-| To find a song so hoarse.
-| Mimic, dear mate, pray hesitate!
-| What follows sweet is heart's remorse.
-
-IV: Plots
----------
 
 | In time their plot was touched by dark.
 | Began the page this meadow scene
 | where blades of grass were tall and stark.
-| 
+|
 | A tired arc, they met in park
 | To kiss beneath the twilight queen;
 | In time their plot was touched by dark.
-| 
+|
 | They stole away on sudden lark,
 | Exchanged the words from whispered lean
 | Where blades of grass were tall and stark.
-| 
+|
 | So happy and green, neighbors remark,
 | Yet seem is such to lose its sheen,
-| In time their plot was touched by dark. 
-| 
+| In time their plot was touched by dark.
+|
 | Yet faded years ignored their spark
 | In death they died forever seen
 | Where blades of grass were tall and stark.
@@ -923,8 +895,8 @@ IV: Plots
 Poems
 =====
 
-Regret
-------
+I: Regret
+---------
 
 | Regret, she dances, with her ever rhythm'd heart
 | Over silent stones during midnight mercurial;
@@ -956,8 +928,8 @@ Regret
 | Eternal are the steps
 | Of Regret's hypnotic moon-lit dance.
 
-Syntax
-------
+II: Syntax
+----------
 
 | Each spelling word speaks a spell of glowing color magic;
 | To name denoted what is described enshrines the soul in ink.  
@@ -989,8 +961,8 @@ Syntax
 | That which remains in letters drained of parts once made whole
 | Yet in the shapes there always is what cannot be redacted.
 
-Absurdity
----------
+III: Absurdity
+--------------
 
 | Ten billion years ago, on a lovely Thursday afternoon,
 | A mottled star of yellow-red saw life was but a jape,
@@ -1042,8 +1014,8 @@ Absurdity
 | Climbing ever higher towards the syncopated gates of Am 
 | Where for royal cloaks their burning tatters are exchanged.  
 
-Dystopia
---------
+IV: Dystopia
+------------
 
 | First - The Haystruck Head
 |
@@ -1122,24 +1094,24 @@ Dystopia
 | But without skin,
 | What games can we be had? 
 
-ό ποιητα, ἢ πῖθι ἢ ἄπιθι
-------------------------
+V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι
+---------------------------
 
 | I
-| 
+|
 | Awake, Philosopher, rise from these words:
 | Unwind in this future the tangle of time,
 | Pitched behind pupils which shelter your mind,
 | A dead language spoken and once lovely sung;
-| What was yours only now graces all tongues. 
-| 
-| Burrow into my heart, unearth its mantle. 
+| What was yours only now graces all tongues.
+|
+| Burrow into my heart, unearth its mantle.
 | Tally its hours, each stroke lights a candle;
 | Number its sorrows as sureties to borrow,
 | Spare not my marrow, fallow and frail.
-| Whose spirit is this, twisting here twung? 
+| Whose spirit is this, twisting here twung?
 | Breathe in this fire with thy mortal lung.
-| 
+|
 | Circle your sigils with salted symbols loan'd,
 | And circles will square in this iron-red bone;
 | A dream kiss that lingers in copper and crimson,
@@ -1152,44 +1124,44 @@ Dystopia
 | The world is spoked in words of the spoken,
 | Each whisper a lie of threaded truth unbroken,
 | Met here now in this slipping handful of tokens
-| Paid for the price of this thrice-worlded poem. 
+| Paid for the price of this thrice-worlded poem.
 |
 | II
-| 
+|
 | Forgive, Father, the blood of these swords:
-| Unbind in this suture the end of all lines, 
+| Unbind in this suture the end of all lines,
 | Stitched in this present the essence divine,
 | Take what is dull and bless it with sharp;
 | Plunge this devotion into the ocean of hearts.
-| 
+|
 | Shovel the grave, pack it down with wet earth,
 | All things tend towards the lack and the dearth;
 | Slumber in barrows the marrows of kings,
 | Spared not the gavel, hallow and hail.
 | Whose mind is this, thinking these thoughts?
-| Sleep in the mire which thy heart has wrought. 
-| 
+| Sleep in the mire which thy heart has wrought.
+|
 | Birthed in this house, scrubbed down in raw lye,
 | So these tears may trace the dead with the die,
 | The dead kiss with fingers of copper to scry
 | The dead lists that swell in the crimson of lives,
 | An end without reason, never sought yet found,
 | In the shot sung, all arcs meet the ground.
-| 
+|
 | No fires have ice, no winters can flame,
 | Son followed father, their center now framed,
 | The world is found in the tears that remind him,
 | Each moment a painting, a song or a hymn,
 | Met there then in the words etched in stone
 | Found then what lacks in the blackening moan.
-| 
+|
 | III
-| 
+|
 | Balance, Lover, these contraries of yours:
 | Shine in these eyes the ruptures of life,
 | Witched into worlds upon the blade of a knife;
 | All wagers distill down to one move unproven,
-| To find you again in this web-woven movement. 
+| To find you again in this web-woven movement.
 |
 | Dance in the night, when the music is sundered,
 | Count not the stars that belong to the numbers.
@@ -1197,12 +1169,12 @@ Dystopia
 | Spared not the sickle, those sickly or hale.
 | Whose voice is this, singing these songs?
 | Laugh with the liar whose heart sings along.
-| 
+|
 | Uncross your words of their fire-forged knots,
 | And each will unlatch the thatches of thought:
 | The dread kiss that coppers balance with nought,
 | The dread song that cradles the crimson in crofts,
-| A vow without treason, never spoken yet shown, 
+| A vow without treason, never spoken yet shown,
 | By words of wordless wonder, such things can be grown.
 |
 | All fires are embers, all ashes are white,
@@ -1212,46 +1184,46 @@ Dystopia
 | Take hand and guide as though only you and I trust,
 | Do what we will to balance world's thrust.
 
-Kingdoms
---------
+VI: Kingdoms
+------------
 
 | Two children crossed an earthen bridge
 | From level lawns to forests wild
-| Along rivered arc descending ridge, 
+| Along rivered arc descending ridge,
 | With dirty hands, they sang and smiled.
 | Their charted map from zippered packs
-| Now in branches espied its target 
+| Now in branches espied its target
 | As clearing yields to lily blacks
 | Their kingdom's fresh air market.
-| Lord and lady honorary, cheeked blush, 
+| Lord and lady honorary, cheeked blush,
 | Sat upon the thrones of woven grass,
 | Coronated by the chirping choir thrush;
-| Memory holds as years rushing pass. 
-| 
+| Memory holds as years rushing pass.
+|
 | On a maiden morning one decade hence,
 | They meet again upon the autumn passing,
 | Where from heart removed pretense
 | On tender lips, farewell's final massing.
 | Lily lyrics whisper sing from ground
 | Reminders of their childish notions;
-| World departed, their lives are found 
-| Separate by spanning roads and oceans. 
-| 
+| World departed, their lives are found
+| Separate by spanning roads and oceans.
+|
 | In the city, their trains diverge,
 | Thru tunnels tracked by wagered hours;
-| Iron rails thru hearts do purge 
-| Their aged minds of lily flowers. 
+| Iron rails thru hearts do purge
+| Their aged minds of lily flowers.
 | Winter drifts over concrete streets,
 | In the thrush's snow sad song
 | Delivered them in voice downbeat
-| The final dirge of life prolonged. 
+| The final dirge of life prolonged.
 | In the cold, their dream dissolved
 | With the clock's incessant ticking
 | Falling strokes of time resolved,
-| They follow home a casket's wicking, 
+| They follow home a casket's wicking,
 | Returned again to a lily laden field
 | Where once royals played for a day;
-| With new hearts scored and peeled 
+| With new hearts scored and peeled
 | In the funerary cloud of gray,
 | In the clearing, coffins buried,
 | Their eyes met in solitary gaze.
@@ -1259,42 +1231,17 @@ Kingdoms
 | In dirt developed their earthen walls,
 | Roofed the sky to room above,
 | Where lord and lady clothed in shawls
-| Sing the thrushs' songed love. 
+| Sing the thrushs' songed love.
 
-The Three Annas of Pygmalion
-----------------------------
-
-| Sweet Susanna sees sculptures standing still,
-| Lovely looks let loose like luted lilting ladies,
-| Forgotten faces formed for flocking friends.
-| Hardly harried, her hearts hinges here
-| Towards the towering testament there.
-| 
-| Dreary Diana does drammatically declare:
-| Ancient ages ago, all aesthetes acceded
-| Bedrock beauty broken before brimstone
-| Cannot contain currents coursing clearly
-| Where water wanes with wizened weary!
-|
-| Hale Hannah, how her head hurts hearing her!
-| She says: Stop such so simplicity survives!
-| Tersely tossed to thrash the thinking,
-| Everything ere enshrined echoes everything!
-|
-| I, impressed, implored impresario in inquisitive ink
-| To trade the trick to tack together three
-| Annas' absolute and alluring allegory,
-| Sculptures singing so scrupulously.
-
-The Paronymous Polyptotons of Love 
-----------------------------------
+VII: The Paronymous Polyptotons of Love
+---------------------------------------
 
 | "πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται."
 |    - `Categories`_, 7.15, Aristotle
 |
 | I am an am that was an is,
 |   a life those lives through living live,
-| The song that sang what singers sung 
+| The song that sang what singers sung
 |   When strings from stringed lutes were strung,
 | Where cloven clefts with leaves of clove
 |   The weft of weave with warp so wove.
@@ -1309,13 +1256,52 @@ The Paronymous Polyptotons of Love
 | At last her lashes lashed to mine,
 |   a tale, though old, retold in time,
 | What sooth to say through spoken sound
-|   but growths of green from growing ground? 
+|   but growths of green from growing ground?
 | In fleeing flight we fled in flood
 |   and bled so bleeding blends our blood.
-| 
+|
 | The rote of rite has written soul
 |   That hides in whole the hidden hole.
 | We wound our wounds for winds unwind
-|   To find defined a finer find. 
+|   To find defined a finer find.
 | We are an are that was a were
-|  That whirled a world to whirl with her. 
+|  That whirled a world to whirl with her.
+
+VIII: Walls
+-----------
+
+| the husks of walls that city shucks
+| accumulate, conglomerate
+| around like rings in ancient trunks
+| where measured age with circles gate
+| the spiraled line accrued through time,
+| deposits buried in subtrate.
+|
+| at summit crest, the joints are thick
+| and licking tongues of moss ascend
+| the darkened stone from quarry hauled
+| on shouldered back, in arms suspend
+| the garden court where crowds took root
+| and grew their plans of walls to tend.
+|
+| then moving out, the bricks of red
+| in crooked rows descend to meet
+| the lanes of carriage tracts now black
+| and scorched with tar in shapes of street
+| where crimson dust from crumbled walls
+| in dancing twirls across concrete.
+|
+| next grey cement of molded squares
+| in towers stacked to portal sky
+| with wires fused and humming signs;
+| they arc and rise, on edges vie
+| like vines entwined in rushing growth
+| that splits and frays as nuclei.
+|
+| at last the stable struts of steel
+| designed as straight as rays of light
+| reflected back on silver glass
+| the lattice links both left and right
+| the course of time in circled sweep,
+| constricts the city sphere so tight.
+

@@ -1,5 +1,5 @@
-Abstracta
-=========
+Haikus
+======
 
 .. toctree::
    :maxdepth: 2
