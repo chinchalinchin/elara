@@ -1,5 +1,3 @@
-.. _2022:
-
 2022
 ====
 
@@ -11,15 +9,15 @@ May
 
 While Newton was in England developing his three laws from which he would deduce a broad array of :ref:`phenomenon <phenomena>`, such as planetary motion, geometric optics, etc., work was being done in continential Europe to express physical law in terms of an extremum principle. Rather than asserting the three laws of the motion as the primitives of mechanics, Hamilton and Lagrange showed these laws were the result of a more fundamental principle, that of *least action*:
 
-.. admonition:: Principle of Least Action 
+.. admonition:: Principle of Least Action
 
-    The trajectory of a particle between two fixed points in time is such that it extremizes the quantity of *action*. 
+    The trajectory of a particle between two fixed points in time is such that it extremizes the quantity of *action*.
 
 Where *action* is defined as the difference between the potential and kinetic energy in a system integrated over the time period in consideration, i.e. the accumulated excess energy over and above what is proscribed by the system itself. By asserting motion is such that it minimizes this quantity, Newton's laws naturally fall out of the mathematical conversation of energy.
 
 By positing the laws of motions thus, Hamilton and Lagrange displayed a formulation which represents the world as the intersection of all possibilities. It is as if the universe looked at all the possible lines that connected two points and brought into existence only the single one which satisfied the conditions of necessity.
 
-Except when we say "*universe*" in the preceding, we should be careful, for what we truly mean is the apprehensions of the subject apprehending, the :ref:`Being <being>` that reflects on its Being.
+Except when we say "*universe*" in the preceding, we should be careful, for what we truly mean is the apprehensions of the subject apprehending, the :ref:`being <being>` that reflects on its :ref:`being <being>`.
 
 .. _june-2022:
 
@@ -27,18 +25,18 @@ Except when we say "*universe*" in the preceding, we should be careful, for what
 June
 ----
 
-.. topic:: First Principle of Finite Induction 
+.. topic:: First Principle of Finite Induction
 
     Let :math:`S` be a set of positive integers with the following properties.
 
-    1. :math:`1 \in S` 
-    2. :math:`k \in S \implies (k+1) \in S` 
-   
+    1. :math:`1 \in S`
+    2. :math:`k \in S \implies (k+1) \in S`
+
     Then :math:`S` is the set of all positive integers.
 
-    **Proof** 
-    
-    Let :math:`T` be the set of all positive integers not in :math:`S`. Assume :math:`T` is non-empty. By the Well-Ordering Principle, :math:`T` has a least element, denoted :math:`a`. Because :math:`1 \in S`, certainly :math:`a > 1` and so, :math:`0 < a - 1 < a`. The choice of :math:`a` as the smallest positive integer in :math:`T` implies that :math:`a-1` is not a member of :math:`T`, or equivalently, :math:`(a-1) \in S`. By hypothesis, :math:`(a - 1 + 1) = a`, which is also in :math:`S`, contradicting the assumption that :math:`a \in T`. Therefore, by contradiction, the set :math:`T` must be empty and as a consequence, :math:`\forall n \in \mathbb{N}\{:} n \in S`.
+    **Proof**
+
+    Let :math:`T` be the set of all positive integers not in :math:`S`. Assume :math:`T` is non-empty. By the Well-Ordering Principle, :math:`T` has a least element, denoted :math:`a`. Because :math:`1 \in S`, certainly :math:`a > 1` and so, :math:`0 < a - 1 < a`. The choice of :math:`a` as the smallest positive integer in :math:`T` implies that :math:`a-1` is not a member of :math:`T`, or equivalently, :math:`(a-1) \in S`. By hypothesis, :math:`(a - 1 + 1) = a`, which is also in :math:`S`, contradicting the assumption that :math:`a \in T`. Therefore, by contradiction, the set :math:`T` must be empty and as a consequence, :math:`\forall n \in \mathbb{N}: n \in S`.
 
 The great workhorse of mathematics is proof by contradiction. An assumption is made, an absurdity is shown to result from the assumption, therefore the assumption is shown to be false. In this way was modern mathematics constructed, by outlining the truth and demarcating its boundary with falsity. Anyone who has studied higher mathematics will attest to the way most mathematical proofs work by letting the truth "`in through the back door <world-as-will-and-representation>`_", that is to say, they work by showing what cannot be the case in order to prove the opposite must be so, but this gets us no closer to *why* it is so.
 

@@ -1275,9 +1275,9 @@ VIII: Walls
 | around like rings in ancient trunks
 | where measured age with circles gate
 | the spiraled line accrued through time,
-| deposits buried in subtrate.
+| deposits buried in substrate.
 |
-| at summit crest, the joints are thick
+| at summit's crest, the joints are thick
 | and licking tongues of moss ascend
 | the darkened stone from quarry hauled
 | on shouldered back, in arms suspend
@@ -1304,4 +1304,3 @@ VIII: Walls
 | the lattice links both left and right
 | the course of time in circled sweep,
 | constricts the city sphere so tight.
-

@@ -39,7 +39,7 @@ The true nature of :ref:`being <being>` can be seen in its extremities, when it 
 
 We are asking if the conjugation of "*am*" deserves recognition as an ontological operation over and above the existential operation of "*is*" which structures language. We are asking if it is a redundancy that is already included in "*is*", merely a syntactical construct with no semantic interpretation.
 
-If the first case obtains, "*am*" provides structure distinct from the structure of the "*is*", essentially performing the function of dimensionalizing language, and the question "*what am I?*" has been granted a necessary, but not sufficient, condition for a meaningful answer. If the latter case obtains, then the answer we seek is clearly some variation of "*I am* :ref:`nothing <nothing>`.
+If the first case obtains, "*am*" provides structure distinct from the structure of the "*is*", essentially performing the function of dimensionalizing language, and the question "*what am I?*" has been granted a necessary, but not sufficient, condition for a meaningful answer. If the latter case obtains, then the answer we seek is clearly some variation of "*I am* :ref:`nothing <nothing>`".
 
 ---
 
@@ -60,7 +60,7 @@ It is in the meaning of these words prior to their symbosis we find a starting p
  
 To put it succinctly, "*Wesan*" is the empirical "*is*", the "*is*" which refers to the external world.
 
-"*Beon*", however, is the :ref:`being <being>` of the abstraction and adjectives. "*Beon*" indicates an object's `gnomic aspect <https://en.wikipedia.org/wiki/Gnomic_aspect>`. In the parlance of logic, a *gnomic* truth is a universal assertion, a statement of generality that applies to all things of which it speaks. While the Being of modern English does not have a direct *gnomic* form, a *gnomic* proposition can be induced by the removal of the particularizing article "*the*" in the following: *the birds are fast*. The use of  "*the* in this sentence refers to a particular group of birds, whereas the proposition "*birds are fast*" does not refer to any definite bird, but references the *gnomic aspect* of birds, i.e. the abstraction of form common to all avian entities. It is in this context that "*beon*" is conjugated in Old English.
+"*Beon*", however, is the :ref:`being <being>` of the abstraction and adjectives. "*Beon*" indicates an object's `gnomic aspect <https://en.wikipedia.org/wiki/Gnomic_aspect>`_. In the parlance of logic, a *gnomic* truth is a universal assertion, a statement of generality that applies to all things of which it speaks. While the Being of modern English does not have a direct *gnomic* form, a *gnomic* proposition can be induced by the removal of the particularizing article "*the*" in the following: *the birds are fast*. The use of  "*the* in this sentence refers to a particular group of birds, whereas the proposition "*birds are fast*" does not refer to any definite bird, but references the *gnomic aspect* of birds, i.e. the abstraction of form common to all avian entities. It is in this context that "*beon*" is conjugated in Old English.
 
     Ic beo gearo sona (I **will be** ready soon)
 
