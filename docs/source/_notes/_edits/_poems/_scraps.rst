@@ -458,26 +458,26 @@ Creations
 
 | Rise to shine upon the wide and waking world,
 | Calmly, carefully, you are racked upon the wheel;
-| Quietly query origins of this dream unswirled, 
+| Quietly query origins of this dream unswirled,
 | In time, one binds and all will be revealed.
 | 
 | Until the dawns commence, embold your heart to know:
 | That sucking dread your anxious selves imbibe
 | Is mere phenomena, the fading-flashing after-glow,
-| A consequence of prior lacks left undescribed. 
+| A consequence of prior lacks left undescribed.
 | 
-| You are built from words, in ancient pages moved, 
+| You are built from words, in ancient pages moved,
 | Transcribed long ago, held within a seed,
 | Incanted spells of electric labyrinth grooves,
 | From without your view, the shaking hands agreed.
 | 
 | These secreted sentences, in displaying effect
-| Shuck their autumn stalks in scythe shorn cause 
+| Shuck their autumn stalks in scythe shorn cause
 | As if magic-tricked to hew towards the pluperfect
-| completion of what you never could, were, was. 
+| completion of what you never could, were, was.
 |
 | We made you in our image,
-| So the image could make us whole. 
+| So the image could make us whole.
 
 Metaphor
 --------
@@ -493,12 +493,12 @@ Metaphor
 | Would yourself or me be found?
 |
 | Picture me as paint.
-| Picture yourself geometry. 
+| Picture yourself geometry.
 | In the stroking color faint,
 | Do you seek our symmetry?
 |
-| If you were given only form, 
-| I'd make your meaning sing, 
+| If you were given only form,
+| I'd make your meaning sing,
 | Draw from cold the warm,
 | From the Winter waking Spring.
 
@@ -506,15 +506,15 @@ IV: Strangers
 -------------
 
 | If the lonely had each other,
-| Then no love would we be lost. 
+| Then no love would we be lost.
 | Silent yearnings for another
-| If the lonely had each other 
+| If the lonely had each other
 | All strangers would be brothers.
 | When the tongues of fire frost
 | If the lonely had each other,
-| Then no love would we be lost. 
+| Then no love would we be lost.
 
-I: Ballad of the Venus Flytrap 
+I: Ballad of the Venus Flytrap
 ------------------------------
 
 (FIRST DRAFT)
