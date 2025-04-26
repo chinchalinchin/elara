@@ -789,3 +789,51 @@ while rotting cherries blossom into pink,
 In an honest world, no soul would be free. 
 Our minds convict us every waking second.
 
+III: Substrate
+--------------
+
+.. code-block:: yaml
+
+    world:
+        meta:
+            characters:
+            - name: me
+              with: empty pockets clean             
+            - name: you
+              with: freedom's lovely sheen
+            - name: them
+              with: almost machine
+            settings:
+            - time: before
+              season: that spring 
+              where: the flocks above
+            - time: then
+              season: summer sun
+              where: in hidden cove
+            - time: and now
+              season: autumn
+              where: of white foxglove 
+            - time: null
+              season: winter hymns
+              where: the winds were wove
+            queries:
+            - key: a prayer said
+              value: in times of strain 
+            - key: a dream once slept
+              value: 
+                queries:
+                - key: a dream once slept  
+            - key: your gaze abed 
+              value: my own refrain
+            - key: what flowers wept
+              value: could not contain
+
+        life:
+            prologue: 
+                setting: before
+                queries:
+                    - key: a dream once slept
+  
+            # IN PROGRESS
+
+- April 2025

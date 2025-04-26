@@ -7,4 +7,3 @@ Abstracta
 
    00
    01
-   02
