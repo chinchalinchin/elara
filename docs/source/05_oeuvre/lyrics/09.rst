@@ -1,37 +1,29 @@
-X: Bird
--------
+X: Father's Lullaby
+-------------------
 
-| To say what's meant without the word,
-| Oh poetry, relent wherein
-| I yield to you all things deferred,
-| In baptism, repent my sin.
+| Dear child, the monsters under bed
+|   Are not just make believe.
+| They lurk in shadows overhead
+|   And offer no reprieve.
 |
-| I found a bird, that sings so soft,
-| Her song aloft in heart by choice. 
-| To field of hers I pass so oft
-| To sit in grass and drink her voice.
+| Dear sweetling, sleep with open eye
+|   And guard your dreams at night.
+| Ignore your mother's lullaby,
+|   With candles burning bright.
 |
-| With chirping dive she plunged so deep
-| And pierced the weary veil that hides 
-| The ghosts of dreams that haunt my sleep;
-| She sang such hopeful lullabies. 
+| Beware the lair that closets hide,
+|   The racks of their disguise,
+| The suits and ties, the cuffs that slide
+|   And cloak them from your eyes.
 |
-| Oh bird, oh bird, with glee you sing,
-| If you could know the depths of dark 
-| That shadows cast in offering, 
-| Would song still burst from breast in lark?
+| Fear not the slash of sharpened claws,
+|   The flashing terror brief,
+| But stamps that mark the written clause
+|   With laws of fierce belief.
+|
+| What evil deeds those stories tell
+|   Prepare your heart to meet
+| The formal world where heroes fell
+|   To wander incomplete.
 
 - April 2025
-
-**Submission History**
-
-.. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
-
-   * - Date
-     - Publication
-     - Status
-   * - April 7, 2025
-     - Paris Review
-     - Pending

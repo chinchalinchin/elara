@@ -23,12 +23,12 @@ Shabaka Stone
 
 .. epigraph::
 
-    The gods who came into being as Ptah: Ptah upon the Great Throne . . . 
-    
-    Ptah-Nun, the father who begot Atum . . . 
-    
-    Ptah-Naunet, the mother who bore Atum . . . 
-    
+    The gods who came into being as Ptah: Ptah upon the Great Throne . . .
+
+    Ptah-Nun, the father who begot Atum . . .
+
+    Ptah-Naunet, the mother who bore Atum . . .
+
     Ptah, the Great, that is the heart and tongue of the Ennead . . .
 
     There came into being from the heart and there came into being from the tongue [something] in the form of Atum. The mighty Great One is Ptah, who caused all gods [to live], as well as their kas, through his heart, by which Horus became Ptah, and through this tongue by which Thoth became Ptah. . .
@@ -36,7 +36,7 @@ Shabaka Stone
     His Ennead is before him as teeth and lips, that is, the semen and hands of Atum. The Ennead of Atum came into being by his semen and fingers; the Ennead [of Ptah], however, is the teeth and lips in this mouth, which pronounced the name of everything, and from which Shu and Tefnut came forth, the fashioner of the Ennead.
 
     The sight of the eyes, the hearing of the ears, and the smelling of the air by the nose, they present to the heart. This is what causes every "completed [concept]" to come forth, and it is the tongue that repeats what the heart thinks.
-    
+
     Thus all the gods were born and his Ennead was completed. Every word of the god ("hieroglyph"? "idea"?) came into being through what the heart thought and the tongue commanded.
 
     -- `Lesko Translation <https://omnika.org/texts/328>`_
@@ -60,10 +60,9 @@ Eridu Genesis
         *and mindful of mine,*
 
         *Nintur's creatures let me bring them back*
-        
+
         *let me lead the people back from their trails.*
 
-        
         *May they come and build cities and cult places,*
 
         *that I may cool myself in their shade;*
@@ -71,7 +70,6 @@ Eridu Genesis
         *may they lay the bricks for the cult cities in pure spots*
 
         *and may they found places for divination in pure spots!*
-
 
     She gave directions for purification and cries for elemency,
 
@@ -82,11 +80,11 @@ Eridu Genesis
     said to the surrounding regions: "Let me institute peace there!"
 
     When An, Enlil, Enki and Ninhursaga
-    
+
     fashioned the dark-headed people
 
     they had made the small animals that come up from out of the earth,
-    
+
     come from the earth in abundance
 
     and had let there be, as it befits it, gazelles
@@ -102,7 +100,7 @@ Popol Vuh
 
 **Unknown**
 
-The creation myth contained in the *Popol Vuh* could originate from any point in time starting from 20 :sup:`th` century BCE to 18 :sup:`th` century AD, when it was finally transcribed.  
+The creation myth contained in the *Popol Vuh* could originate from any point in time starting from 20 :sup:`th` century BCE to 18 :sup:`th` century AD, when it was finally transcribed.
 
 .. epigraph::
 
@@ -141,16 +139,16 @@ The creation myth contained in the *Popol Vuh* could originate from any point in
     Kar,
 
     Tap,
-    
-    Che', 
+
+    Che',
 
     Ab'aj,
 
-    Jul, 
+    Jul,
 
-    Siwan, 
+    Siwan,
 
-    K'im, 
+    K'im,
 
     K'eche'laj
 
@@ -202,30 +200,30 @@ The creation myth contained in the *Popol Vuh* could originate from any point in
 .. epigraph::
 
     This its account
-    
-    These things. 
+
+    These things.
 
 
     Still be it silent,
 
-    Still be it placid, 
+    Still be it placid,
 
-    
-    It is silent, 
+
+    It is silent,
     Still is is calm,
-    
-    
-    Still it is hushed,
-    
-    Be it empty as well its womb sky. 
 
-    
+
+    Still it is hushed,
+
+    Be it empty as well its womb sky.
+
+
     These therefore are first words,
-    
+
     First speech.
 
 
-    There is not yet one person, 
+    There is not yet one person,
 
     One animal,
 
@@ -305,9 +303,9 @@ Rigveda
 
     nāsad āsīn no sad āsīt tadānīṁ nāsīd rajo no vyomā paro yat
 
-    kim āvarīvaḥ kuha kasya śarmann ambhaḥ kim āsīd gahanaṁ gabhīram 
+    kim āvarīvaḥ kuha kasya śarmann ambhaḥ kim āsīd gahanaṁ gabhīram
 
-    na mṛtyur āsīd amṛtaṁ na tarhi na rātryā ahna āsīt praketaḥ 
+    na mṛtyur āsīd amṛtaṁ na tarhi na rātryā ahna āsīt praketaḥ
 
     ānīd avātaṁ svadhayā tad ekaṁ tasmād dhānyan na paraḥ kiṁ canāsa
 
@@ -321,10 +319,10 @@ Rigveda
 
     What covered it? Where was it? In whose keeping
 
-    Was there then cosmic water, in depths unfathomed? 
+    Was there then cosmic water, in depths unfathomed?
 
     Then there was neither death nor immortality
-    
+
     Nor was there then the torch of night and day.
 
     The One breathed windlessly and self-sustaining.
@@ -361,7 +359,7 @@ Enūma Eliš
     Then were created the gods in the midst of heaven,
 
     Lahmu and Lahamu were called into being...
-    
+
     -- `L.W. King Translation <https://sacred-texts.com/ane/enuma.htm>`_
 
 .. _theogony-creation:
@@ -374,27 +372,27 @@ Theogony
 .. epigraph::
 
     χαίρετε, τέκνα Διός, δότε δ᾽ ἱμερόεσσαν ἀοιδήν.
-    
+
     κλείετε δ᾽ ἀθανάτων ἱερὸν γένος αἰὲν ἐόντων,
-    
+
     οἳ Γῆς τ᾽ ἐξεγένοντο καὶ Οὐρανοῦ ἀστερόεντος,
-    
+
     Νυκτός τε δνοφερῆς, οὕς θ᾽ ἁλμυρὸς ἔτρεφε Πόντος.
-    
+
     εἴπατε δ᾽, ὡς τὰ πρῶτα θεοὶ καὶ γαῖα γένοντο
-    
+
     καὶ ποταμοὶ καὶ πόντος ἀπείριτος, οἴδματι θυίων,
-    
+
     ἄστρα τε λαμπετόωντα καὶ οὐρανὸς εὐρὺς ὕπερθεν
-    
+
     οἵ τ᾽ ἐκ τῶν ἐγένοντο θεοί, δωτῆρες ἐάων
-    
+
     ὥς τ᾽ ἄφενος δάσσαντο καὶ ὡς τιμὰς διέλοντο
-    
+
     ἠδὲ καὶ ὡς τὰ πρῶτα πολύπτυχον ἔσχον Ὄλυμπον.
-    
+
     ταῦτά μοι ἔσπετε Μοῦσαι, Ὀλύμπια δώματ᾽ ἔχουσαι
-    
+
     ἐξ ἀρχῆς, καὶ εἴπαθ᾽, ὅ τι πρῶτον γένετ᾽ αὐτῶν.
 
 
@@ -449,7 +447,7 @@ Theogony
 
 .. epigraph::
 
-    Hail, children of Zeus! Grant lovely song and celebrate the holy race of the deathless gods who are for ever, those that were born of Earth and starry Heaven and gloomy Night and them that briny Sea did rear. Tell how at the first gods and earth came to be, and rivers, and the boundless sea with its raging swell, and the gleaming stars, and the wide heaven above, and the gods who were born of them, givers of good things, and how they divided their wealth, and how they shared their honors amongst them, and also how at the first they took many-folded Olympus. These things declare to me from the beginning, you Muses who dwell in the house of Olympus, and tell me which of them first came to be. 
+    Hail, children of Zeus! Grant lovely song and celebrate the holy race of the deathless gods who are for ever, those that were born of Earth and starry Heaven and gloomy Night and them that briny Sea did rear. Tell how at the first gods and earth came to be, and rivers, and the boundless sea with its raging swell, and the gleaming stars, and the wide heaven above, and the gods who were born of them, givers of good things, and how they divided their wealth, and how they shared their honors amongst them, and also how at the first they took many-folded Olympus. These things declare to me from the beginning, you Muses who dwell in the house of Olympus, and tell me which of them first came to be.
     
     In truth at first Chaos came to be, but next wide-bosomed Earth, the ever-sure foundation of all the deathless ones who hold the peaks of snowy Olympus, and dim Tartarus in the depth of the wide-pathed Earth, and Eros, fairest among the deathless gods, who unnerves the limbs and overcomes the mind and wise counsels of all gods and all men within them. From Chaos came forth Erebus and black Night; but of Night were born Aether and Day, whom she conceived and bore from union in love with Erebus. And Earth first bore starry Heaven, equal to herself, to cover her on every side, and to be an ever-sure abiding-place for the blessed gods. And she brought forth long hills, graceful haunts of the goddess Nymphs who dwell amongst the glens of the hills. She bore also the fruitless deep with his raging swell, Pontus, without sweet union of love. But afterwards she lay with Heaven and bore deep-swirling Oceanus, Coeus and Crius and Hyperion and Iapetus, Theia and Rhea, Themis and Mnemosyne and gold-crowned Phoebe and lovely Tethys. After them was born Cronos the wily, youngest and most terrible of her children, and he hated his lusty sire.
 

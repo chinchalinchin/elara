@@ -1,3 +1,4 @@
+
 ========
 Analecta
 ========
@@ -887,3 +888,117 @@ Translates roughly to "*He had not yet said again that he was going to hunt rein
     This is a very approximate mapping to English. Take it with a grain of salt.
 
 The essential nature of language appears to be sequential, but identifying *what* is being sequenced presents a problem. We want to name the terms of linguistic science, but there seems to be no universal property that is manifested in every instance of language. There is no concept that can be wrapped around the entirety of language, no salience that can be abstracted into a formal representation.
+
+---
+
+.. epigraph::
+
+    There came into being from the heart and there came into being from the tongue [something] in the form of Atum. The mighty Great One is Ptah, who caused all gods [to live], as well as their kas, through his heart, by which Horus became Ptah, and through this tongue by which Thoth became Ptah.
+
+    -- `Shabaka Stone (Lesko Translation), 2500s BCE <https://omnika.org/texts/328>`_
+
+.. epigraph::
+
+    This its account
+
+    These things.
+
+
+    Still be it silent,
+
+    Still be it placid,
+
+
+    It is silent,
+
+    Still is is calm,
+
+
+    Still it is hushed,
+
+    Be it empty as well its womb sky.
+
+
+    These therefore are first words,
+
+    First speech.
+
+    -- `Popul Vuh (Jacobsen Translation), 2000s (?) BCE <https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm>`_
+
+.. epigraph::
+
+    Then even nothingness was not, nor existence,
+
+    There was no air then, nor the heavens beyond it.
+
+
+    What covered it? Where was it? In whose keeping
+
+    Was there then cosmic water, in depths unfathomed?
+
+
+    Then there was neither death nor immortality
+
+    Nor was there then the torch of night and day.
+
+
+    The One breathed windlessly and self-sustaining.
+
+    There was that One then, and there was no other.
+
+    -- `Rigveda, Nāsadīya Sūkta, 1400s BCE <https://www.swami-krishnananda.org/vishnu/nasadiya.pdf>`_
+
+.. epigraph::
+
+    When of the gods none had been called into being,
+
+    And none bore a name, and no destinies were ordained;
+
+    Then were created the gods in the midst of heaven,
+
+    Lahmu and Lahamu were called into being...
+
+    -- `L.W. King Translation, 1300s BCE <https://sacred-texts.com/ane/enuma.htm>`_
+
+.. epigraph::
+
+    The Tao that can be trodden is not the enduring and unchanging Tao. The name that can be named is not the enduring and unchanging name.
+
+    (Conceived of as) having no name, it is the Originator of heaven and earth; (conceived of as) having a name, it is the Mother of all things
+
+    -- `Tao Te Ching (Legge Translation), 500s BCE <https://classics.mit.edu/Lao/taote.1.1.html>`_
+
+.. epigraph::
+
+    When God began to create heaven and earth--
+
+    the earth being unformed and void, with darkness over the surface of the deep and a wind from God sweeping over the water--
+
+    God said, "There there be light"; and there was light.
+
+    -- `The Torah (New Jewish Publication Society Translation), 500s BCE <https://www.sefaria.org/Genesis.1.1?lang=bi&vside=Tanakh:_The_Holy_Scriptures,_published_by_JPS|en&with=Translation%20Open&lang2=en>`_
+
+A universal motif of creation myths is the prominence of *speaking* and *naming*. Almost every myth that attempts to elucidate the origins of existence describes a process where the very act of speech induces creation. The world is portrayed as *formless* and *void*, a sea of primordial chaos; it is :ref:`language <language>` itself that give structure to the penumbral shadow, pulling it into light and forming it into :ref:`beings <being>`. The ubiquity of this theme across different historical eras and disparate geographic areas suggests it is not random or circumstantial, but rather requires an explanation.
+
+Any assertions about the origin and historical development of language must remain speculation, but nonetheless, there are general features of history of language that feel safe to assume. The earliest forms of written language of which there is evidence, such as Ancient Egyptian or Sumerian, are pictographic in nature, meaning there tends to be a direct correspondence between the symbol and the object it represents, e.g. a sun is represented by a starburst or a fish by crisscrossed curves that form its shape. The grammar of a purely pictographic language is necessarily extensional, meaning it does not have the syntactic glue to bind its presented concepts into complex relation except through their mere presentation. A pictogram of an axe juxtaposed with a pictogram of tree implies a certain action, but it does not contain complex modalities like motive, temporality or setting. Its possible interpretations are limited to simple utterances, "* tree cut down*"; there are no syntactic markers upon which to hang the semantics of *why* and *how*.
+
+As language evolves, its nature appears to become more abstract. The correspondence between what is represented and the representation itself is nearly severed; Language is no longer a direct mapping between object and sign. The `following diagram <https://www.britannica.com/topic/writing/Sumerian-writing>`_ shows the evolution of cunieform, from simple pictograms to abstract symbols,
+
+.. image:: ../_static/img/context/anthropological/cuneiform-evolution.jpg
+   :width: 600px
+   :alt: Encyclopedia Britannica Cuneiform Table
+   :align: center
+
+The lefthand column pictograms are clearly direct representations of the underlying concept, "*photographs*" of existence. The grammar of such a system cannot help being analogical by mimicking the perceived the relations of reality through their direct image in writing. There is no other way to represent relations except spatially, i.e. by placing the symbol for "*foot*" next to the symbol for "*road*" to indicate the action of "*walking*". Actions, that is to say, the motive that animates objects, is reduced to the aggregation of objects which constitute the action.
+
+This type of representation implicitly denies a faculty for internalization. There is no way to conceive of "*self*" in a pictographical system, because a "*self*" cannot be represented graphically. In other words, the "*self*" never sees itself because it is the thing that *sees*. The conceptualization of "*self*" requires semantic features this form of language does not possess.
+
+.. topic:: Conjecture
+
+    Early creation myths are the residue of the initial transformation of language from the purely visual and analogical to the abstract and metaphorical. Creation myths are literal linguistic artifacts of early humans attempting to describe the transformation they were undergoing, from vaguely aware animals to self aware, abstract entities.
+
+It is easy to be fooled by the apparent continuity of our "*self*"" through time and space that consciousness is a single thing, everywhere equivalent in its multiplicity. We assume our consciousness is in every way identical to every other, except for its particular circumstances, that we might substitute our "*self*" into another's without alteration. That no one remembers their birth or early youth except in fragments is dismissed because however blurry the memory, we remember our self ":ref:`being there <being>`". We don't account for the role that language plays in the development of our "*self*". Humans are essentially vessels for language.
+
+.. topic:: Conjecture
+
+    Early humans weren't self aware until language had evolved to the point where abstraction, complex predication and metaphor was possible.

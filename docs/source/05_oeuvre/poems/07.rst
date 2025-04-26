@@ -15,7 +15,7 @@ VIII: Walls
 | the garden court where crowds took root
 | and grew their plans of walls to tend.
 |
-| frm center peak the wooden slats
+| from center peak the wooden slats
 | erect the map with tangled fence
 | to trace a grid of patchwork yards,
 | these charts of dreams in ground commence
@@ -48,6 +48,6 @@ VIII: Walls
 | the human shell that forms in turn
 | the arches bend, the steepled chime,
 | that wilts and sheds, but fossils kept
-| in burrows born their salt and lime.
+| in barrows born their salt and lime.
 
 - April 2025

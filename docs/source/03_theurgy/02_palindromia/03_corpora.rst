@@ -264,8 +264,8 @@ Let *ζ* be a Sentence in a **C**:sub:`L`. Let :math:`W_{\zeta}` be the Word-lev
 
 .. math::
 
-    \Lambda(\zeta) = | W_{\zeta} | 
-    
+    \Lambda(\zeta) = | W_{\zeta} |
+
 ∎
 
 **Example**
@@ -721,22 +721,22 @@ But String Lengths are integers, and by the laws of arithmetic, there cannot exi
 
     8. \quad i \neq j.
 
-With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized over the Corpus, 
+With both directions of the equivalence proven, since *ζ*, *i*, and *j* were arbitrary, this can be generalized over the Corpus,
 
 .. math::
 
-    9. \quad \forall \zeta \in C_L: \forall i, j \in N_{\Lambda(zeta)}: i \neq j ↔ \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta} 
-    
+    9. \quad \forall \zeta \in C_L: \forall i, j \in N_{\Lambda(zeta)}: i \neq j ↔ \exists n \in N_{l(\zeta)}: (i/n/j)_{\zeta}
+
 ∎
 
 .. _section-ii-ii:
 
-Section II.II: Axioms 
-----------------------
+Section II.II: Axioms
+---------------------
 
 In :ref:`Section I <section-i>`, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.
 
-Note the Discovery Axiom has been revised to employ Character Index notation. 
+Note the Discovery Axiom has been revised to employ Character Index notation.
 
 .. _axiom-c0-2:
 
@@ -749,10 +749,10 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 .. math::
 
     2. \quad \forall \iota, \nu \in \Sigma: \iota = \nu ↔ \nu = \iota
-    
+
 .. math::
 
-    3. \quad \forall \iota, \nu, \omicron \in \Sigma: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicron) 
+    3. \quad \forall \iota, \nu, \omicron \in \Sigma: (\iota = \nu \land \nu = \omicron) \to (\iota = \omicron)
 
 ∎
 
@@ -762,18 +762,18 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 
 .. math::
 
-    \forall \iota \in \Sigma: \iota \in S 
-    
+    \forall \iota \in \Sigma: \iota \in S
+
 ∎
 
 .. _axiom-w1-2:
 
-**Axiom W.1: The Discovery Axiom** 
+**Axiom W.1: The Discovery Axiom**
 
 .. math::
 
-    \forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ] 
-    
+    \forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]
+
 ∎
 
 .. _axiom-s1:
@@ -782,8 +782,8 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 
 .. math::
 
-    ( \forall \alpha \in L: \exists \zeta \in C_L: \alpha \subset_s \zeta ) ∧ ( \forall \zeta \in C_L: \exists \alpha \in L: \alpha \subset_s \zeta ) 
-    
+    ( \forall \alpha \in L: \exists \zeta \in C_L: \alpha \subset_s \zeta ) ∧ ( \forall \zeta \in C_L: \exists \alpha \in L: \alpha \subset_s \zeta )
+
 ∎
 
 .. _axiom-s2:
@@ -792,13 +792,13 @@ Note the Discovery Axiom has been revised to employ Character Index notation.
 
 .. math::
 
-    \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L 
-    
+    \forall \zeta \in C_L: \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L
+
 ∎
 
-Two new axioms, the :ref:`Duality Axiom S.1 <axiom-s1>` and the :ref:`Extraction Axiom S.2 <axiom-s2>`, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language). 
+Two new axioms, the :ref:`Duality Axiom S.1 <axiom-s1>` and the :ref:`Extraction Axiom S.2 <axiom-s2>`, have been added to the formal system to finalize its core assumptions. It is worth taking the time to analyze the structure, however minimal, these axioms imply must exist in any Language. It should be re-iterated that no assumptions have been made regarding the semantic content of a Language or its Corpus, so any insight that arises from these axioms is due to inherent linguistic structures (assuming these axioms capture the nature of real language).
 
-To briefly summarize the axioms previously introduced: The system *"initializes"* with the assumption of an equality relation and the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. To re-iterate, a Language and Corpus are fixed on top of the domain of all Strings outside of the system. 
+To briefly summarize the axioms previously introduced: The system *"initializes"* with the assumption of an equality relation and the selection of an Alphabet **Σ**. The Character Axiom ensures the domain of all Strings is populated. The Discovery Axiom ensures Words only traverse the set of Strings which do not contain Delimiters. With these axioms, still nothing has been said about *what* a Word is, except that it possesses a semantic character. To re-iterate, a Language and Corpus are fixed on top of the domain of all Strings outside of the system.
 
 The new axioms introduced in the formal system begin to characterize the syntactical properties of the next level in the lingustic hierarchy, while still maintaining their ambivalence on the semantic content contained within their respective categories.
 
@@ -808,21 +808,21 @@ The :ref:`Duality Axiom S.1 <axiom-s1>` bares a striking resemblance to the idea
 
     \forall y \in Y: \exists x \in X : f(x) = y
 
-Meaning, every element in the co-domain is mapped to at least one element in the domain. 
+Meaning, every element in the co-domain is mapped to at least one element in the domain.
 
-In a sense, the :ref:`Duality Axiom S.1 <axiom-s1>` asserts a type of *"double-surjectivity"* exists between the domain of Words and the co-domain of Sentences.  In plain language, the :ref:`Duality Axiom <axiom-s1>` asserts for every Word *α* in the Language **L**, there exists a sentence *ζ* in the Corpus **C**:sub:`L` such that *α* is contained in *ζ*, and for every Sentence *ζ* in the corpus **C**:sub:`L`, there exists a word *α* in the language **L** such that *α* is contained in *ζ*. 
+In a sense, the :ref:`Duality Axiom S.1 <axiom-s1>` asserts a type of *"double-surjectivity"* exists between the domain of Words and the co-domain of Sentences.  In plain language, the :ref:`Duality Axiom <axiom-s1>` asserts for every Word *α* in the Language **L**, there exists a sentence *ζ* in the Corpus **C**:sub:`L` such that *α* is contained in *ζ*, and for every Sentence *ζ* in the corpus **C**:sub:`L`, there exists a word *α* in the language **L** such that *α* is contained in *ζ*.
 
-However, there is a key difference between the notion of *surjection* in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By :ref:`Definition 1.1.6 <definition-1-1-6>` and :ref:`Definition 1.1.7 <definition-1-1-7>`, containment reduces to the existence of a mapping between Characters in different Strings. Due to the :ref:`Discovery Axiom W.1 <axiom-w1>`, with the exception of Sentences consisting of a Single Word, a Word is contained in a Sentence but a Sentence is not contained in a Word. 
+However, there is a key difference between the notion of *surjection* in real analysis and the notion captured in the Duality Axiom S.1. Containment is not a strict equality relation. By :ref:`Definition 1.1.6 <definition-1-1-6>` and :ref:`Definition 1.1.7 <definition-1-1-7>`, containment reduces to the existence of a mapping between Characters in different Strings. Due to the :ref:`Discovery Axiom W.1 <axiom-w1>`, with the exception of Sentences consisting of a Single Word, a Word is contained in a Sentence but a Sentence is not contained in a Word.
 
-More plainly, the :ref:`Duality Axiom S.1 <axiom-s1>` states a Word cannot exist in a Language without being included in a Sentence of the Corpus, and a Sentence cannot exist in a Corpus without including a Word from the Language. This Axiom captures an inextricable duality between the metamathematical concepts of Sentence and Word, and the concepts of Language and Corpus: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation. A Language and its Corpus require one another. 
+More plainly, the :ref:`Duality Axiom S.1 <axiom-s1>` states a Word cannot exist in a Language without being included in a Sentence of the Corpus, and a Sentence cannot exist in a Corpus without including a Word from the Language. This Axiom captures an inextricable duality between the metamathematical concepts of Sentence and Word, and the concepts of Language and Corpus: one cannot exist without implying the existence of the other. Words and Sentences do not exist in isolation. A Language and its Corpus require one another.
 
-The :ref:`Extraction Axiom S.2 <axiom-s2>` further strengthens the relationship that exists between a Corpus and Language. It states every Word in the Sentence of a Corpus must be included in a Language. This idea of being able *extract* the Words of a Language from a Sentence is captured in the terminology introduced in :ref:`Definition 2.2.1 <definition-2-2-1>` directly below. 
- 
+The :ref:`Extraction Axiom S.2 <axiom-s2>` further strengthens the relationship that exists between a Corpus and Language. It states every Word in the Sentence of a Corpus must be included in a Language. This idea of being able *extract* the Words of a Language from a Sentence is captured in the terminology introduced in :ref:`Definition 2.2.1 <definition-2-2-1>` directly below.
+
 .. _definition-2-2-1:
 
-**Definition 2.2.1: Semantic Coherence** 
+**Definition 2.2.1: Semantic Coherence**
 
-A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if **W**:sub:`ᚠ` only contains words from Language **L**. 
+A Sentence *ᚠ* is *semantically coherent* in a Language **L** if and only if **W**:sub:`ᚠ` only contains words from Language **L**.
 
 A Corpus :math:`C_L` is *semantically coherent* in a Language **L** if and only if the Word-level set representation of all its Sentences are semantically coherent. ∎
 
