@@ -45,7 +45,7 @@ This analysis hinges on the realization first proffered by :ref:`Tarski <tarski>
 
 Confusion often results when the same :ref:`language <language>` performs both functions. In the case of mathematics, where the proposition :ref:`language <language>` is that of, say, arithmetic, and the description :ref:`language <language>` that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of " :ref:`Being <being>` " in the early twentieth century.
 
-If the goal is to define " :ref:`Being <being>` ", then one can only succeed at the level of description. A description *about* a " :ref:`Being <being>` " is incapable of saying what is meant by " :ref:`Being <being>` ".
+If the goal is to define ":ref:`being <being>`", then one can only succeed at the level of description. A description *about* a " :ref:`Being <being>` " is incapable of saying what is meant by " :ref:`being <being>` ".
 
 .. _2024-may:
 
@@ -97,9 +97,9 @@ To say the same thing in a different way,
 
 Apparently tautological in form, the exact meaning of the Liebniz's proposition can only be understood through the emphasis placed on its constituent words, which in turn immediately enriches its otherwise vacuous content. In this way, the words in Leibniz's proposition have semantic content that is not contained in their letters, if by "*letters*" it is meant "*characters of the alphabet*". This is obvious in :ref:`languages <language>` with aspirated breathing marks, where the operation of emphasis possesses a symbol within the :ref:`language <language>`, but English can be deceptive in this regard, for italicization or boldening are not normally considered a linguistic symbol, even though they possess no warrant to belong to any other classification.
 
-Leibniz's emphasis is a form of naming that would more naturally be represented with quotation marks. The lefthand side of the proposition selects the name of being, "*being*", preparing it for the operation of definition. The selection is then equated through the copula of being to the righthand side, which defines the named being as the being of the name of the article through which it is selected for naming. A "*being*" is nothing more than an index attached to a being.
+Leibniz's emphasis is a form of naming that would more naturally be represented with quotation marks. The lefthand side of the proposition selects the name of :ref:`being <being>`, ":ref:`being <being>`", preparing it for the operation of definition. The selection is then equated through the copula of being to the righthand side, which defines the named :ref:`being <being>` as the being of the name of the article through which it is selected for naming. A ":ref:`being <being>`" is nothing more than an index attached to a :ref:`being <being>`.
 
-The operation of naming can be understood in terms of pure direction. A rule is given that picks a name from the domain of names and assigns to it an object in the domain of objects. In the preceding sentence, "*object*" is not necessarily equivalent to "*thing*", and might be more precisely described as "*an indeterminate being*".
+The operation of naming can be understood in terms of pure direction. A rule is given that picks a name from the domain of names and assigns to it an object in the domain of objects. In the preceding sentence, "*object*" is not necessarily equivalent to "*thing*", and might be more precisely described as "*an indeterminate* :ref:`being <being>`".
 
 ---
 
@@ -121,7 +121,7 @@ Frege was the first to recognize the mathematical function as possessing the for
 
 ---
 
-Language cannot provide content; :ref:`language <language>` is only capable of resolving content into formal structures.
+:ref:`Language <language>` cannot provide content; :ref:`language <language>` is only capable of resolving content into formal structures.
 
 .. _2024-november:
 

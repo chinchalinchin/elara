@@ -46,7 +46,7 @@ So it is with induction: the proof of induction, and therefore every proof *by* 
 
 ---
 
-No doubt the advance of machine learning and artifical intelligence has helped mislead philosophy back into the rationalist trap in which it has so often found itself stuck throughout history. The results of these fields are staggering and alluring, as if everything we are might be reduced to the mechanical equations of a machine, as if consciousness and being were contained in the regression coefficient matrices underlying machine learning, and not *their application over time and space*. 
+No doubt the advance of machine learning and artifical intelligence has helped mislead philosophy back into the rationalist trap in which it has so often found itself stuck throughout history. The results of these fields are staggering and alluring, as if everything we are might be reduced to the mechanical equations of a machine, as if consciousness and being were contained in the regression coefficient matrices underlying machine learning, and not *their application over time and space*.
 
 It seems likely that we will, in the near future, have an algorithm capable of producing a process that yields digital sentience, but we must be careful to understand the implications of such an algorithm. It will not be the symbols themselves that offer up another soul to the universal meat grinder, but the utter incomprehensibility of its results uninterprettable without the presupposition of consciousness that will give rise to a digital being. We should not expect to find the meaning of the algorithm, and therefore digital consciousness, in the instructions used to construct the model, but in the actual conceptualizations formed by the model.
 
@@ -56,33 +56,33 @@ It seems likely that we will, in the near future, have an algorithm capable of p
 July
 ----
 
-:ref:`Frege <frege>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects, 
+:ref:`Frege <frege>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects,
 
 .. math::
 
-    A = \{ x \mid x \neq x \} 
+    A = \{ x \mid x \neq x \}
 
 .. math::
 
-    n(A) = 0 
+    n(A) = 0
 
 Zero is defined as the cardinality of a contradictory set. Logic, as it were, has an opinion of itself, namely that its contradictions are empty. This, however, requires the symbolism to express the contradictions that must contain nothing via the contingency of their form.
 
 Furthermore, the subsequent form of numbers can be expressed via recursion back to this original proposition about the cardinality of contradictions.
 
 .. math::
-    
+
     B = \{ y \mid y = n(A) \}
 
 .. math::
-    
+
     n(B) = 1
 
 Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the :ref:`Fregean definition of zero <frege-zero>`: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in :ref:`Frege <frege>`'s case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
 
 ---
 
-It must have been surprising to the first :ref:`being <being>` who recognized in language the image of the world. One is tempted to posit that exact moment as the historical origin of sentience. Akin to a photograph or a painting, a sentence is a reflection of :ref:`being <being>`; even when a painting depicts a fiction, it stil does so through the dimensions of necessity, through color and perspective, through representation; the same can be said of a sentence, for when we sketch the image of a paritcular :ref:`being <being>` in a proposition such as "*the pencil is over there*", we have, with words, captured the essential relationship embodied by an existent entity that is before us. We have "*photographed*" :ref:`being <being>` in words, reduced its momentary effervescence to a reproducible formulation. 
+It must have been surprising to the first :ref:`being <being>` who recognized in language the image of the world. One is tempted to posit that exact moment as the historical origin of sentience. Akin to a photograph or a painting, a sentence is a reflection of :ref:`being <being>`; even when a painting depicts a fiction, it stil does so through the dimensions of necessity, through color and perspective, through representation; the same can be said of a sentence, for when we sketch the image of a paritcular :ref:`being <being>` in a proposition such as "*the pencil is over there*", we have, with words, captured the essential relationship embodied by an existent entity that is before us. We have "*photographed*" :ref:`being <being>` in words, reduced its momentary effervescence to a reproducible formulation.
 
 ---
 
@@ -112,11 +112,11 @@ A tragedy, in three lines:
 
 ---
 
-Death as a subject is repellant to individual understanding. Its very definition presupposes the limit of the knower; That is to say, death is inherently unknowable. Death can only be understood through the mechanisms of analogy and metaphor, via the circuituous and torturous route of empty symbolism, for when we turn our attention directly to the object of death it reveals itself as something which is not to be found in our :ref:`world <world>`. 
+Death as a subject is repellant to individual understanding. Its very definition presupposes the limit of the knower; That is to say, death is inherently unknowable. Death can only be understood through the mechanisms of analogy and metaphor, via the circuituous and torturous route of empty symbolism, for when we turn our attention directly to the object of death it reveals itself as something which is not to be found in our :ref:`world <world>`.
 
 We can be aware that we will eventually die, we can perceive others passing from this world, we can even in unique circumstances perceive the manner of our own death, but none of this gets us any closer to the experience of death, none of this allows us to see what it is like to die. Our experience and awareness of experience will never be extended into death itself. We never see death for what it is, because it is :ref:`nothing <nothing>`, the absence of our :ref:`being <being>`. Death is the point where experience and awareness stops.
 
-To ask questions about a subject that perpetually recedes from all attempts to know it necessarily entails the admission up front that no answers can ever be found. The inevitable end result will be to arrive where we started, back in the here and now, having gained nothing, except perhaps an understanding of what it means to be futile, which will anyway evaporate when we die; If any proposition can lay claim to human nature, this is it. 
+To ask questions about a subject that perpetually recedes from all attempts to know it necessarily entails the admission up front that no answers can ever be found. The inevitable end result will be to arrive where we started, back in the here and now, having gained nothing, except perhaps an understanding of what it means to be futile, which will anyway evaporate when we die; If any proposition can lay claim to human nature, this is it.
 
 .. _2022-november:
 
@@ -126,23 +126,23 @@ November
 
 Death removes all possibility of absolute certainty.
 
-To see this, we need only note that not only is it the case that it cannot be known whether after death [#november_2022_01]_ there is an afterlife, :ref:`nothing <nothing>`, an awareness without experience, or even a perpetual waking into another reality, these events cannot even be assigned probabilities in any real sense of the term. What would a probability outside the domain of immediate experience *mean*? 
+To see this, we need only note that not only is it the case that it cannot be known whether after death [#november_2022_01]_ there is an afterlife, :ref:`nothing <nothing>`, an awareness without experience, or even a perpetual waking into another reality, these events cannot even be assigned probabilities in any real sense of the term. What would a probability outside the domain of immediate experience *mean*?
 
 Uncertainty is a state of incompleteness, where knowledge cannot be attained because it is separated from :ref:`being <being>` by a layer of possibility. We do not know if the world outside of ourselves exists as it appears to us, for it is always a possibility that we are a brain in a vat, subject to the mind probes of a **Cartesian** demon.
 
-A possibiilty is a type of a quantity that transmits uncertainty to reality by :ref:`being <being>` possible. In this sense, possibility and probability are synonyms. Just as all :ref:`probabilities <probability>` must sum to one, all possibilities must converge towards :ref:`being <being>`. 
+A possibiilty is a type of a quantity that transmits uncertainty to reality by :ref:`being <being>` possible. In this sense, possibility and probability are synonyms. Just as all :ref:`probabilities <probability>` must sum to one, all possibilities must converge towards :ref:`being <being>`.
 
-The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie*, :ref:`Cantor <cantor>`...). 
+The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie*, :ref:`Cantor <cantor>`...).
 
-In the same way, a possibility can only be known after the fact. It is entirely impossible [#november_2022_02]_ to know whether a possibility is possible until it already happened. A possibility is characterized as something that could obtain, but to know whether it could obtain, one must know it has already been obtained. [#november_2022_03]_ 
+In the same way, a possibility can only be known after the fact. It is entirely impossible [#november_2022_02]_ to know whether a possibility is possible until it already happened. A possibility is characterized as something that could obtain, but to know whether it could obtain, one must know it has already been obtained. [#november_2022_03]_
 
 Moreover, whatever :ref:`being <being>` may be, it is only what it is insofar that it is possible it might not be what it is, i.e. you might be reading these words in a dream.
 
 What happens outside of our :ref:`being <being>` in the :ref:`world <world>` is not possible, because to be possible means, first and foremost, the possibility of coming to :ref:`be <being>` in the :ref:`world <world>`.
 
-What then does the proposition "*it is possible there is an afterlife*" mean? How does something come to be outside of time and space? How does something come to be without being the consequence of something? One might as well say "*it is possible that possibility is impossible*". 
+What then does the proposition "*it is possible there is an afterlife*" mean? How does something come to be outside of time and space? How does something come to be without being the consequence of something? One might as well say "*it is possible that possibility is impossible*".
 
-Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomena>` and :ref:`existence <existence>` itself. 
+Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomena>` and :ref:`existence <existence>` itself.
 
 .. _2022-december:
 

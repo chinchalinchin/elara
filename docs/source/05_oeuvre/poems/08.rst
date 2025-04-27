@@ -1,24 +1,37 @@
-IX: Designs
------------
+IX: Bird
+--------
 
-| If asked this time, design a rhyme
-| To woo your mind from book, by hook
-| I'll thread this line up steep incline
-| While looking back to meadowbrook
-| Reclined your arms in sun shook shine,
-| In paper pages overtook
-| Your gaze from mine, hidden through pine
-| I spied your beauty's lounging look.
+| To say what's meant without the word,
+| Oh poetry, relent wherein
+| I yield to you all things deferred,
+| In baptism, repent my sin.
 |
-| The joy of snaps and clicking lock
-| Which ticking clocks with clapping hands
-| So slap the sand and quickly block
-| The falling grains, in wick expands
-| To flame the brand that marks the spot
-| Where stopped my heart its lonely gland
-| At sight of you and tamed my thought
-| And swapped unplanned in place to stand
-| Where lace with liquid grace ties knots
-| Between the space your face commands.
+| I found a bird, that sings so soft,
+| Her song aloft in heart by choice.
+| To field of hers I pass so oft
+| To sit in grass and drink her voice.
+|
+| With chirping dive she plunged so deep
+| And pierced the weary veil that hides
+| The ghosts of dreams that haunt my sleep;
+| She sang such hopeful lullabies.
+|
+| Oh bird, oh bird, with glee you sing,
+| If you could know the depths of dark
+| That shadows cast in offering,
+| Would song still burst from breast in lark?
 
 - April 2025
+
+**Submission History**
+
+.. list-table:: Submission History
+   :widths: 15 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - April 7, 2025
+     - Paris Review
+     - Pending

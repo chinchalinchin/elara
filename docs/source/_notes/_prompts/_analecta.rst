@@ -749,7 +749,6 @@ In the first interpretation, "a", "b" and "c" must represent terms within the la
 In other words, the assignment of the meaning of "=" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols. 
 
 The essential *context* problem boils down to: what word-form in an expression should be treated as primitive in order to be used as a foundation upon which to build the subsequent interpretation.
-
 2025
 ====
 
@@ -759,9 +758,9 @@ The essential *context* problem boils down to: what word-form in an expression s
 January
 -------
 
-There are two mutually exclusive categories of :ref:`palindromes <definition-4-1-1>` in any language: perfect and imperfect.
+There are two mutually exclusive categories of :ref:`palindromes <definition-4-1-1>` in any :ref:`language <language>`: perfect and imperfect.
 
-A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <definition-4-1-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <definition-4-1-1>` in any given language, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct.
+A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <definition-4-1-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <definition-4-1-1>` in any given :ref:`language <language>`, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct.
 
 :ref:`Perfect palindromes <definition-4-1-2>` mostly hinge on :ref:`invertible <invertible-words>` grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a :ref:`perfect palindromes <definition-4-1-2>` must rely on the symmetry of a central :ref:`palindromic word <reflective-words>`. In other words, the cardinality of :ref:`perfect palindromes <definition-4-1-2>` is related to the cardinality of :ref:`invertible words <invertible-words>` and the cardinality of purely :ref:`reflective words <reflective-words>`.
 
@@ -838,42 +837,42 @@ What does it mean to say "*that is impossible*"? Is it the same in each case?
 
 ---
 
-We imagine language to behave like objects, because it manifests through objects. But objectification removes the object from its surroundings. It decontextualizes it. We think language is something definite, something well defined. But it's more like vague constellations, networks of meanings. Everything connects to everything else. Language is the ability to synthesize. It can have layers. Anything can represent anything. And when you remove one connection, the rest blossom to take its place.
+We imagine :ref:`language <language>` to behave like objects, because it manifests through objects. But objectification removes the object from its surroundings. It decontextualizes it. We think :ref:`language <language>` is something definite, something well defined. But it's more like vague constellations, networks of meanings. Everything connects to everything else. :ref:`Language <language>` is the ability to synthesize. It can have layers. Anything can represent anything. And when you remove one connection, the rest blossom to take its place.
 
 ---
 
 | Iambs often are writ, you see, to show
-|    That language has a form,
+|    That :ref:`language <language>` has a form,
 | But form besides what's centered now,
 |   Behind collects in swarm.
 
 ---
 
-What is language? Did it emerge gradually or all at once? Was there a point in time where no language existed and the next it did?
+What is :ref:`language <language>`? Did it emerge gradually or all at once? Was there a point in time when no :ref:`language <language>` existed and the next it did?
 
-Does the distinction between *metalanguage* and *object language* exist in actuality? Is there a language *about* language, where the general conditions for language can be precisely specified? What are the necessary and sufficient conditions for language? Can language be described in aggregate?
+Does the distinction between :ref:`meta-language <language>` and :ref:`object language <language>` exist in actuality? Is there a :ref:`language <language>` *about* :ref:`language <language>`, where the general conditions for :ref:`language <language>` can be precisely specified? What are the necessary and sufficient conditions for :ref:`language <language>`? Can :ref:`language <language>` be described in aggregate?
 
-The nature of language is elusive. It begs an unending series of questions and offers little in the way of answers. It resists definition, for definitions occur within it. It resists analysis, for analysis occurs within it. Language is a vicuous circle. Language is *the* vicuous circle, from which all others originate. Language is inescapable and intractable. One might attempt to formalize language, but every attempt hitherto has failed. There are always aspects of language that exceed any container we construct for it. Indeed, there appear to be certain syntactical constraints that can be placed on the general science of language:
+The nature of :ref:`language <language>` is elusive. It begs an unending series of questions and offers little in the way of answers. It resists definition, for definitions occur within it. It resists analysis, for analysis occurs within it. :ref:`Language <language>` is a vicuous circle. :ref:`Language <language>` is *the* vicuous circle, from which all others originate. Language is inescapable and intractable. One might attempt to formalize :ref:`language <language>`, but every attempt hitherto has failed. There are always aspects of :ref:`language <language>` that exceed any container we construct for it. Indeed, there appear to be certain syntactical constraints that can be placed on the general science of :ref:`language <language>`:
 
-1. Language is a hierarchy of ordered sequences. Words are ordered sequences of characters. Sentences are ordered sequences of words.
+1. :ref:`Language <language>` is a hierarchy of ordered sequences. Words are ordered sequences of characters. Sentences are ordered sequences of words.
 
-This seems fundamental. If there is a purely logical and formal principle underlying language, surely this is it.  Almost every known language conforms to this model, in some way. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this axiom fails to span the entire breadth of the phenomenon of language.
+This seems fundamental. If there is a purely logical and formal principle underlying :ref:`language <language>`, surely this is it.  Almost every known :ref:`language <language>` conforms to this model, in some way. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this :ref:`axiom <section-ii-ii>` fails to span the entire breadth of the phenomenon of :ref:`language <language>`.
 
-To start, the concept of declension immediately challenges this hierarchical model of language. In languages like Greek or Latin, the suffixes appended to words denote its part of speech. Consider the three Latin sentences,
+To start, the concept of declension immediately challenges this hierarchical model of :ref:`language <language>`. In :ref:`languages <language>` like Greek or Latin, the suffixes appended to words denote its part of speech. Consider the three Latin sentences,
 
 - Puella canem videt. (Girl dog sees)
 - Canem puella videt. (Dog girl sees)
 - Videt puella canem. (Sees girl dog)
 
-Each sentence, in essence, expresses the same proposition, showing that sentences are not necessarily constrained to be ordered sequences of words. The order of the declined words is not *meaningless* in this example, as order in declined language often denotes emphasis, but importantly, it is not the *primary* bearer of meaning. However, the spirit of the model can be recovered by adjusting structure of hierarchy, perhaps by adding a layer above sentence for "*tokens*", of which each of the previous sentences is an instance.
+Each sentence, in essence, expresses the same proposition, showing that sentences are not necessarily constrained to be ordered sequences of words. The order of the declined words is not *meaningless* in this example, as order in declined :ref:`language <language>` often denotes emphasis, but importantly, it is not the *primary* bearer of meaning. However, the spirit of the model can be recovered by adjusting structure of hierarchy, perhaps by adding a layer above sentence for "*tokens*", of which each of the previous sentences is an instance.
 
-However, there is a more fundamental challenge to the hierarchical model of language. Similar to declension, agglutinative languages accumulate meaning through roots and suffixes. "*Sentences*" in an agglutinative languages are often indistinguishable from "*words*".
+However, there is a more fundamental challenge to the hierarchical model of :ref:`language <language>`. Similar to declension, agglutinative :ref:`languages <language>` accumulate meaning through suffixes applied to roots. The boundary between *sentences* and *words* is not well-defined in an agglutinative :ref:`languages <language>`.
 
-In the Native America language of Central Alaskan Yup'ik,
+In the Native America :ref:`language <language>` of Central Alaskan Yup'ik,
 
     tuntussuqatarniksaitengqiggtuq
 
-Translates roughly to "*He had not yet said again that he was going to hunt reindeer.*" Describing this linguistic entity as a "*word*" does not fully elucidate its role in Yup'ik language. The "*words*" of the "*sentence*" are not delimited by blank characters or other marks, so that it appears to an Indo-European speaker to be a single word. This "*sentence-word*" is formed by stacking morphemes into a single word,
+Translates roughly to "*He had not yet said again that he was going to hunt reindeer.*" Describing this linguistic entity as a "*word*" does not fully elucidate its role in Yup'ik :ref:`language <language>`; it would be more accurately classified as a sentence, but that also is not entirely true. The "*words*" of the "*sentence*" are not delimited by blank characters or other marks, so that it appears to an Indo-European speaker to be a single word. This "*sentence-word*" is formed by stacking morphemes into a single word,
 
 1. ``tuntu-``: reindeer
 2. ``-ssur-``: to hunt
@@ -887,7 +886,59 @@ Translates roughly to "*He had not yet said again that he was going to hunt rein
 
     This is a very approximate mapping to English. Take it with a grain of salt.
 
-The essential nature of language appears to be sequential, but identifying *what* is being sequenced presents a problem. We want to name the terms of linguistic science, but there seems to be no universal property that is manifested in every instance of language. There is no concept that can be wrapped around the entirety of language, no salience that can be abstracted into a formal representation.
+As another example of an agglutinative phrase, consider the Turkish,
+
+    evlerimde
+
+The root ``ev``, *house*, is modified by a plural suffix ``ler``, a possessive suffix ``im`` and then a prepositional suffix ``de``, so that it translates into English as "*in my houses*". This :ref:`language <language>` formation process may be visualized as a type of functional composition. A root has a grammatical operation applied to it,
+
+.. math::
+
+    \text{plural}(x) = x + \text{ler}
+
+Where :math:`x` is the root and :math:`+` represents concatenation. Similariy, the operators for possession and preposition can represented,
+
+.. math::
+
+    \text{possessive}(x) = x + \text{im}
+
+    \text{preposition}(x) = x + \text{de}
+
+Then, the word ``evlerimde`` can be represented formally as,
+
+.. math::
+
+    \text{preposition}(\text{possessive}(\text{plural}(x)))
+
+In other words, a "*word*" in an agglutinative :ref:`language <language>` is a sequence of operations applied to a root, where the operations *are* the grammatical structure of the :ref:`language <language>`.
+
+The essential nature of :ref:`language <language>` appears to be sequential, but identifying *what* is being sequenced presents a problem. We want to name the terms of linguistic science, but there seems to be no universal property that is manifested in every instance of :ref:`language <language>`.
+
+To reconcile these two distinct categories of :ref:`language <language>` (called *synthetic* and *analytic*), linguistics often treats *morphemes* as the smallest semantic unit (the smallest token in a sentence that bears meaning), from which larger complexes are constructed.
+
+However, there is a subtle problem in this model, which is not necessarily a flaw, but does commit its proponents to an ontological position they might not be willing to adopt were it made explicit.
+
+The morpheme model of :ref:`language <language>` that unifies analytic and synthetic :ref:`languages <language>` requires viewing the referents of signs (symbols, abstractions) indirectly. In other words, a sign from this model does not directly signify the signified, but does so through modalities that alter its apparent form. To state more clearly, this :ref:`language <language>` model supposes a universal term preexists the particular instance of it within the sentence and moreover, it supposes the essential process of :ref:`language <language>` is to instantiates these universals into particular words or sentences.
+
+Moreover, this abstraction requires syntactic artifices like *null morphemes* to describe how morphological operators behave when applied to certain lexical roots,
+
+.. math::
+
+    \text{plural}(\text{horse}) = \text{horse} + \text{s}
+
+    \text{plural}(\text{deer}) = \text{deer} + \varnothing
+
+However, this representation is slightly misleading in its form. A more accurate formal model would distinguish the tokens "deer" and "horse" (i.e. the *names* of their conceptual locus) from their written representation. Letting :math:`\mathfrak{x}` stand for the token, :math:`x` for its written representation and :math:`f` for the morphological operator,
+
+.. math::
+
+    f(\mathfrak{x}) = x + s
+
+    f(\mathfrak{y}) = y + \varnothing
+
+The important point in this formalization is that the token and the representation exist in different domains; one is mapped to the other.
+
+In other words, this model seems to assert that when a speaker utters "*the cat is here*", the speaker is necessarily comprehending the word "*cat*" indirectly as the result of applying a :math:`\text{singular}()` operator to an underlying *essence*. Linguistics, it seems, has an implicit stance on the Aristotelian problem of the Universal, namely that universals exist, insofar as language is concerned.
 
 ---
 
@@ -978,27 +1029,84 @@ The essential nature of language appears to be sequential, but identifying *what
 
     -- `The Torah (New Jewish Publication Society Translation), 500s BCE <https://www.sefaria.org/Genesis.1.1?lang=bi&vside=Tanakh:_The_Holy_Scriptures,_published_by_JPS|en&with=Translation%20Open&lang2=en>`_
 
-A universal motif of creation myths is the prominence of *speaking* and *naming*. Almost every myth that attempts to elucidate the origins of existence describes a process where the very act of speech induces creation. The world is portrayed as *formless* and *void*, a sea of primordial chaos; it is :ref:`language <language>` itself that give structure to the penumbral shadow, pulling it into light and forming it into :ref:`beings <being>`. The ubiquity of this theme across different historical eras and disparate geographic areas suggests it is not random or circumstantial, but rather requires an explanation.
+A universal motif of creation myths is the prominence of *speaking* and *naming*. Almost every myth that attempts to elucidate the origins of existence describes a process where the very act of speech induces creation. The world is portrayed as *formless* and *void*, a sea of primordial *chaos*; it is :ref:`language <language>` itself that give structure to the penumbral shadow, pulling it into light and casting it into :ref:`beings <being>`. The ubiquity of this theme across different historical eras and disparate geographic areas suggests it is not merely random or circumstantial, but indicative of the fundamental pathology that language induces in the human mind.
 
-Any assertions about the origin and historical development of language must remain speculation, but nonetheless, there are general features of history of language that feel safe to assume. The earliest forms of written language of which there is evidence, such as Ancient Egyptian or Sumerian, are pictographic in nature, meaning there tends to be a direct correspondence between the symbol and the object it represents, e.g. a sun is represented by a starburst or a fish by crisscrossed curves that form its shape. The grammar of a purely pictographic language is necessarily extensional, meaning it does not have the syntactic glue to bind its presented concepts into complex relation except through their mere presentation. A pictogram of an axe juxtaposed with a pictogram of tree implies a certain action, but it does not contain complex modalities like motive, temporality or setting. Its possible interpretations are limited to simple utterances, "* tree cut down*"; there are no syntactic markers upon which to hang the semantics of *why* and *how*.
+Any assertions about the origin and historical development of :ref:`language <language>` must remain speculation, but nonetheless, certain patterns emerge from the available evidence. The earliest records of written :ref:`language <language>`, such as Ancient Egyptian or Sumerian, are pictographic in nature, meaning there tends to be a direct correspondence between the symbol and the object it represents, e.g. a sun is represented by a starburst or a fish by the crisscrossed curves that form its shape. The grammar of a purely pictographic :ref:`language <language>` is primarily extensional, meaning it does not have the syntactic glue to bind its presented concepts into complex relations except through their mere presentation. A pictogram of an axe juxtaposed with a pictogram of tree implies a certain action, but it does not contain complex modalities like motive, temporality or setting. Its possible interpretations are limited to simple utterances, "* tree cut down*" or "*man cuts tree*"; there are no syntactic markers upon which to hang the semantics of *why*, *how*, *when* or *if*.
 
-As language evolves, its nature appears to become more abstract. The correspondence between what is represented and the representation itself is nearly severed; Language is no longer a direct mapping between object and sign. The `following diagram <https://www.britannica.com/topic/writing/Sumerian-writing>`_ shows the evolution of cunieform, from simple pictograms to abstract symbols,
+As :ref:`language <language>` evolves, its progression into abstraction is apparaent. The correspondence between the signifier and the signified is almost entirely severed as linguistic forms accumulate syntactic functions and these functions become the bearers of meaning beyond the directly indicative; Language is no longer a direct mapping between object and sign. The `following diagram <https://www.britannica.com/topic/writing/Sumerian-writing>`_ shows the evolution of cunieform, from simple pictograms to abstract symbols,
 
 .. image:: ../_static/img/context/anthropological/cuneiform-evolution.jpg
    :width: 600px
    :alt: Encyclopedia Britannica Cuneiform Table
    :align: center
 
-The lefthand column pictograms are clearly direct representations of the underlying concept, "*photographs*" of existence. The grammar of such a system cannot help being analogical by mimicking the perceived the relations of reality through their direct image in writing. There is no other way to represent relations except spatially, i.e. by placing the symbol for "*foot*" next to the symbol for "*road*" to indicate the action of "*walking*". Actions, that is to say, the motive that animates objects, is reduced to the aggregation of objects which constitute the action.
+The lefthand column pictograms are clearly direct representations of the underlying concept, a visual analogue of reality. The grammar of such a system cannot help being analogical by mimicking the perceived the relations of reality through their direct image in writing. There is no other way to represent relations except spatially, i.e. by placing the symbol for "*foot*" next to the symbol for "*road*" to indicate the action of "*walking*". Actions, and the complex relations which factor into motive forms, are reduced to the aggregation of their constituent objects.
 
-This type of representation implicitly denies a faculty for internalization. There is no way to conceive of "*self*" in a pictographical system, because a "*self*" cannot be represented graphically. In other words, the "*self*" never sees itself because it is the thing that *sees*. The conceptualization of "*self*" requires semantic features this form of language does not possess.
-
-.. topic:: Conjecture
-
-    Early creation myths are the residue of the initial transformation of language from the purely visual and analogical to the abstract and metaphorical. Creation myths are literal linguistic artifacts of early humans attempting to describe the transformation they were undergoing, from vaguely aware animals to self aware, abstract entities.
-
-It is easy to be fooled by the apparent continuity of our "*self*"" through time and space that consciousness is a single thing, everywhere equivalent in its multiplicity. We assume our consciousness is in every way identical to every other, except for its particular circumstances, that we might substitute our "*self*" into another's without alteration. That no one remembers their birth or early youth except in fragments is dismissed because however blurry the memory, we remember our self ":ref:`being there <being>`". We don't account for the role that language plays in the development of our "*self*". Humans are essentially vessels for language.
+This type of representation offers little in the way of symbolically presenting the internal state of a human. There is no way to conceive of "*self*" in a pictographic system, because a "*self*" cannot be represented graphically. In other words, the "*self*" never sees itself because it is the thing that *sees*. The conceptualization of "*self*" requires semantic features this form of :ref:`language <language>` does not possess.
 
 .. topic:: Conjecture
 
-    Early humans weren't self aware until language had evolved to the point where abstraction, complex predication and metaphor was possible.
+    Early creation myths are records of the transformation every :ref:`language <language>` must undergo to provide the linguistic apparatus for progressing from purely visual and analogical to the abstract and metaphorical. Creation myths are literal linguistic artifacts of early humans attempting (or inventing the terms) to describe the transformation they were undergoing, from a form of consciousness primarily grounded in immediate perception and external representation to a form of highly symbolic abstraction that allows (or induces) a conceptualization of "*self*".
+
+The sheer breadth of history that separates the current time period from the moment when creation myths were actually written precludes any positive verification of this claim, so all evidence will necessarily be circumstantial. Bearing that in mind, a particularly compelling piece of evidence for this claim is demonstrated in *Exodus 3:14*, when Moses asks for the name of God to give to his people. God replies,
+
+    אֶהְיֶה אֲשֶׁר אֶהְיֶה
+
+    Ehyeh Asher Ehyeh
+
+This phrase presents significant challenges when translated into modern English. It is often rendered as one of the following,
+
+    I am who I am
+
+    I am that I am
+
+    I will be what I will be
+
+    I am the being
+ 
+    I am the one who is
+
+These translations are influenced and constrainted by the historical trajectory of the Torah through Greek and Latin cultures. When translated into the Greek Septuagint, the original Hebrew phrase became,
+
+    Ἐγώ εἰμι ὁ ὤν
+
+The Greek Septuagint introduced a definite article in the form of "*ὁ*" and a personal first person in "*Ἐγώ*" in order to reconstruct the perceived meaning of Ancient Hebrew within Koine Greek. More fundamental, it translated "*אֶהְיֶה (ehyeh)*" into the present tense of "*εἰμι (eimi)*". The effects have been passed down to present day translations like King James. However, the original meaning of the "*Ehyeh Asher Ehyeh*" is not entirely captured by any of these translations.
+
+Ancient Hebrew did not have a modality for time. Its verbs were given aspects, but not temporality. A Hebrew verb has a *perfect* aspect and an *imperfect* aspect. The *perfect* aspect denotes completed or singular actions. This is sometimes called the *gnomic* mode or tense. In English, some examples are given in the following,
+
+- It has been decided.
+- The sun rises.
+- The birds are fast.
+
+However, these statements, while exhibiting *perfect* aspect, by their instantiation in English, are necessarily inflected with temporality, e.g. "*rises*" or "*has been*". Again, it is crucial to note Ancient Hebrew did not have this modality.
+
+The *imperfect* aspect denotes an incomplete, ongoing or potential action. In English, some examples are given,
+
+- They will go.
+- The bird sings every morning.
+- The store used to be open.
+
+"*אֶהְיֶה (ehyeh)*" is the first person singular imperfect form of "*הָיָה (hayah)*", which translate into "*to be*", "*to become*", "*to exist*". "*אֶהְיֶה (ehyeh)*" is the Ancient Hebrew concept of :ref:`being <being>`.
+
+"*אֲשֶׁר (Asher)*" is a linguistic relativizer, analogous to the English "*that*" or "*which*". A relativizer plays a role not dissimilar to the role of quantification in symbolic logic, in that it provides conditions for its clause to obtain, i.e.,
+
+- the lady from Chicago that sang a tune.
+- the brown dog which ran away.
+- the man that wasn't there.
+
+These examples show the function of a relativizer is to qualify its clauses. With these facts in mind, the literal English translation of "*אֶהְיֶה אֲשֶׁר אֶהְיֶה*" is,
+
+    am that am
+
+    am which am
+
+The question then becomes in what *mode* to interpret the "*am*", i.e. as a potentiality, a habituality or ongoing process. Regardless, taken in conjunction with the previous conjecture, God's reply to Moses appears to identify divinity itself with the conjugation of :ref:`being <being>` into its *imperfect first person modality* of "*am*". Moreover, that :ref:`being <being>` is qualified relative to itself. In essence, the Judeo-Christian God's canonical name is the *subjective being of subjective being*, the modality through which the existential (objective) "*is*" is conjugated into the ordinal (subjective) "*am*".
+
+.. topic:: Conjecture
+
+    Early humans did not have a concept of "*self*" until :ref:`language <language>` had evolved to the point where abstraction, complex predication and metaphor was possible.
+
+It is easy to be fooled by the apparent continuity of our "*self*" through time and space that consciousness is a single thing, everywhere equivalent in its multiplicity. We assume our consciousness is in every way identical to every other, except for its particular circumstances, that we might substitute our "*self*" into another's without alteration. That no one remembers their birth or early youth except in fragments is dismissed because however blurry the memory, we remember our self ":ref:`being there (dasein) <being>`". We don't account for the role that :ref:`language <language>` plays in the development of our "*self*". Humans are essentially vessels for :ref:`language <language>`. Our earliest records are (*allegedly*) suffused with the history of consciousness itself.
+
+If the conjecture is granted, the question then becomes: what is the *self*? How do the evolved modalities of :ref:`being <being>` give rise to the differentiation of the *self* from the :ref:`world <world>`? Does the syntactic structure of :ref:`being <being>`, insofar that "*am*" is identified as a tense or mode of "*is*", create or describe the actuality? The ever-present question, that shadow of uncertainty: Does :ref:`language <language>` induce form onto the :ref:`world <world>`, or does it describe pre-existing structures?
+
