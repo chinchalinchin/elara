@@ -27,3 +27,15 @@ X: Father's Lullaby
 |   To wander incomplete.
 
 - April 2025
+
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Writer's Digest Competition
+    - Pending

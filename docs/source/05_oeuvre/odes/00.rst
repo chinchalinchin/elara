@@ -13,7 +13,7 @@ I: An Ode To Autumn
 |        To lay at feet to span each foot
 | The dust each clever leaf here does become.
 |
-| As seasons pass and cast 
+| As seasons pass and cast
 |       My bone layered into stone,
 | Let August dig for me a grave in brown
 |       Barrow beneath her loam.
@@ -26,7 +26,7 @@ I: An Ode To Autumn
 | And drown with wave the lazing lovers' sigh.
 |
 | To life I came already old and grim
-|           But now the chill sets in;    
+|           But now the chill sets in;
 | Each breath in gasp dispels to steam
 |           of Spring now waning thin.
 
@@ -41,4 +41,7 @@ I: An Ode To Autumn
      - Status
    * - March 27, 2025
      - Think Journal
+     - Pending
+   * - April 27, 2025
+     - Frontier Poetry
      - Pending

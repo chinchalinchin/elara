@@ -3,41 +3,41 @@ VI: Kingdoms
 
 | Two children crossed an earthen bridge
 | From level lawns to forests wild
-| Along rivered arc descending ridge, 
+| Along rivered arc descending ridge,
 | With dirty hands, they sang and smiled.
 | Their charted map from zippered packs
-| Now in branches espied its target 
+| Now in branches espied its target
 | As clearing yields to lily blacks
 | Their kingdom's fresh air market.
-| Lord and lady honorary, cheeked blush, 
+| Lord and lady honorary, cheeked blush,
 | Sat upon the thrones of woven grass,
 | Coronated by the chirping choir thrush;
-| Memory holds as years rushing pass. 
-| 
+| Memory holds as years rushing pass.
+|
 | On a maiden morning one decade hence,
 | They meet again upon the autumn passing,
 | Where from heart removed pretense
 | On tender lips, farewell's final massing.
 | Lily lyrics whisper sing from ground
 | Reminders of their childish notions;
-| World departed, their lives are found 
-| Separate by spanning roads and oceans. 
-| 
+| World departed, their lives are found
+| Separate by spanning roads and oceans.
+|
 | In the city, their trains diverge,
 | Thru tunnels tracked by wagered hours;
-| Iron rails thru hearts do purge 
-| Their aged minds of lily flowers. 
+| Iron rails thru hearts do purge
+| Their aged minds of lily flowers.
 | Winter drifts over concrete streets,
 | In the thrush's snow sad song
 | Delivered them in voice downbeat
-| The final dirge of life prolonged. 
+| The final dirge of life prolonged.
 | In the cold, their dream dissolved
 | With the clock's incessant ticking
 | Falling strokes of time resolved,
-| They follow home a casket's wicking, 
+| They follow home a casket's wicking,
 | Returned again to a lily laden field
 | Where once royals played for a day;
-| With new hearts scored and peeled 
+| With new hearts scored and peeled
 | In the funerary cloud of gray,
 | In the clearing, coffins buried,
 | Their eyes met in solitary gaze.
@@ -45,11 +45,9 @@ VI: Kingdoms
 | In dirt developed their earthen walls,
 | Roofed the sky to room above,
 | Where lord and lady clothed in shawls
-| Sing the thrushs' songed love. 
+| Sing the thrushs' songed love.
 
 - March 2025
-
-**Submission History**
 
 .. list-table:: Submission History
    :widths: 15 15 15

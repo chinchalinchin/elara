@@ -7,9 +7,9 @@ IV: Chance
 | Must meet on board the fates that follow call.
 |
 | A life received as hand of cards on deal,
-| Where threes are flush, but royals rarely draw 
+| Where threes are flush, but royals rarely draw
 | And twos deceive, in bluff contrive to steal
-| What kings and queens through rule so reap by law. 
+| What kings and queens through rule so reap by law.
 |
 | A love is tracked by loops of racing course,
 | Through hoop and holler, bookies taking bets,
@@ -19,14 +19,12 @@ IV: Chance
 | The world at large is made of game and rule,
 | Appears to eyes as ordered step of dance.
 | Each move, when made by foot of sage or fool,
-| Results in taps resolved to beat of chance. 
+| Results in taps resolved to beat of chance.
 |
 | What always fortune finds is fettered fate
-| Unlocked by strike of luck and never late. 
+| Unlocked by strike of luck and never late.
 
 - April 2025
-
-**Submission History**
 
 .. list-table:: Submission History
    :widths: 15 15 15
