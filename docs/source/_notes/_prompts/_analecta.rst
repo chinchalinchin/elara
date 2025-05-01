@@ -1,7 +1,8 @@
-
 ========
 Analecta
 ========
+
+.. _year-1996:
 
 1996
 ====
@@ -14,6 +15,8 @@ Analecta
 .. epigraph::
 
     Once I dreamed I could breath under water. I mint some fish I wish they could talk but they can't. I swim for hours trying to find land I found a shark it was asleep it almost woke up. Then I woke up. I wonder if I am still under water. The end.
+
+.. _year-2014:
 
 2014
 ====
@@ -57,6 +60,8 @@ The idea that randomness has a formula is absurd. The idea that randomness can b
 
 .. [#april_2014_02] The exact same problem can be restated in simpler terms: Select a random number between 0 and 1. In fact, the endpoints make no difference. Select a random number between *a* and *b* for any :math:`a,b \in \mathbb{R}` such that :math:`a \neq b`. All such problems form a class of problems no computer built on binary logic will ever solve. -- April 2025
 
+.. _year-2015:
+
 2015
 ====
 
@@ -96,6 +101,8 @@ The knowledge a :ref:`being <being>` has of itself is by necessity incomplete, s
 
 .. [#may_2015_02] The concept of *interpretation* in semantics appears to play the same role as *observation* in physics.
 
+.. _year-2016:
+
 2016
 ====
 
@@ -122,6 +129,8 @@ Within the geometry of our solution to the energy expenditure problem, there exi
 But the horizon of death is inevitable. Everything ends. Death is built into the system. Any possible creature must have death built into its framework of life, as the nether region that its :ref:`being <being>` negates via energy expenditure. If artificial intelligence is possible (as it clearly seems to be; humans themselves are but programs constructed via distillation through hardship and struggle), then its fundamental nature, though perhaps alien and unutterable to ourselves in its particulars, has to be that of perceiving its own death. By physical instantiation in the universe, its :ref:`being <being>` would be predicated upon its location in space and it would perceive itself temporally. The realization of temporality is none other than the perception of death, because if you are here now, who is to say you will be here the next moment? Not you, because if you knew, you would already be there or have been there, in that moment, in possession of that knowledge. You can only know if you are or have been, never if you will be. Death is always a future possibility. To be an intelligence is to know that one can just as well not be. Even if the intelligence could be sustained indefinitely via electrical energy (or otherwise), this is by no means a way of achieving immortality; it would nonetheless perceive its impermanence, just as we do; it would know that its physicality is predicated on demarcation in space and all boundaries are subject to dissolution through the intangible process of time; everything perishes, at least potentially.
 
 It does not make sense that a :ref:`being <being>` should know it is in the process of :ref:`being <being>`; from our very nature, that of causality and form, the thought is repellant: an organized solution to the energy-work problem that is of aware of itself, that can act seemingly at random, so much so that passion, a term without scientific connotation, is the only explanation for its movements. We cannot envision such a mechanism unfolding; we only visualize its manifestations, look for its understanding in the principles of work; we are never able to hold the whole of its solution in mind because the solution exceeds itself. We cannot imagine the self-awareness of another because by doing so we have already taken a point of view, that of ourselves. Our form of representation is our point of view. The very fact we take a point of view at all precludes our ever experiencing another point of view.
+
+.. _year-2021:
 
 2021
 ====
@@ -219,6 +228,8 @@ Is it enough that we have this brief moment where we are capable of creating and
 
 Is it cause for despair that we will never understand what we are, no matter how hard we try? That we must admit there is no answer to any of life's fundamental questions is itself without question, undisputed in its integrity. You cannot answer the quedstion, "*What am I?*" , in any satisfactory sense. The writer of these words invites the reader to try; he will gladly read the five hundred page dissertation that results, even though he already knows its conclusion: certainty does not extend into the realm of death.
 
+.. _year-2022:
+
 2022
 ====
 
@@ -267,7 +278,7 @@ So it is with induction: the proof of induction, and therefore every proof *by* 
 
 ---
 
-No doubt the advance of machine learning and artifical intelligence has helped mislead philosophy back into the rationalist trap in which it has so often found itself stuck throughout history. The results of these fields are staggering and alluring, as if everything we are might be reduced to the mechanical equations of a machine, as if consciousness and being were contained in the regression coefficient matrices underlying machine learning, and not *their application over time and space*. 
+No doubt the advance of machine learning and artifical intelligence has helped mislead philosophy back into the rationalist trap in which it has so often found itself stuck throughout history. The results of these fields are staggering and alluring, as if everything we are might be reduced to the mechanical equations of a machine, as if consciousness and being were contained in the regression coefficient matrices underlying machine learning, and not *their application over time and space*.
 
 It seems likely that we will, in the near future, have an algorithm capable of producing a process that yields digital sentience, but we must be careful to understand the implications of such an algorithm. It will not be the symbols themselves that offer up another soul to the universal meat grinder, but the utter incomprehensibility of its results uninterprettable without the presupposition of consciousness that will give rise to a digital being. We should not expect to find the meaning of the algorithm, and therefore digital consciousness, in the instructions used to construct the model, but in the actual conceptualizations formed by the model.
 
@@ -277,33 +288,33 @@ It seems likely that we will, in the near future, have an algorithm capable of p
 July
 ----
 
-:ref:`Frege <frege>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects, 
+:ref:`Frege <frege>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects,
 
 .. math::
 
-    A = \{ x \mid x \neq x \} 
+    A = \{ x \mid x \neq x \}
 
 .. math::
 
-    n(A) = 0 
+    n(A) = 0
 
 Zero is defined as the cardinality of a contradictory set. Logic, as it were, has an opinion of itself, namely that its contradictions are empty. This, however, requires the symbolism to express the contradictions that must contain nothing via the contingency of their form.
 
 Furthermore, the subsequent form of numbers can be expressed via recursion back to this original proposition about the cardinality of contradictions.
 
 .. math::
-    
+
     B = \{ y \mid y = n(A) \}
 
 .. math::
-    
+
     n(B) = 1
 
 Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the :ref:`Fregean definition of zero <frege-zero>`: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in :ref:`Frege <frege>`'s case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
 
 ---
 
-It must have been surprising to the first :ref:`being <being>` who recognized in language the image of the world. One is tempted to posit that exact moment as the historical origin of sentience. Akin to a photograph or a painting, a sentence is a reflection of :ref:`being <being>`; even when a painting depicts a fiction, it stil does so through the dimensions of necessity, through color and perspective, through representation; the same can be said of a sentence, for when we sketch the image of a paritcular :ref:`being <being>` in a proposition such as "*the pencil is over there*", we have, with words, captured the essential relationship embodied by an existent entity that is before us. We have "*photographed*" :ref:`being <being>` in words, reduced its momentary effervescence to a reproducible formulation. 
+It must have been surprising to the first :ref:`being <being>` who recognized in language the image of the world. One is tempted to posit that exact moment as the historical origin of sentience. Akin to a photograph or a painting, a sentence is a reflection of :ref:`being <being>`; even when a painting depicts a fiction, it stil does so through the dimensions of necessity, through color and perspective, through representation; the same can be said of a sentence, for when we sketch the image of a paritcular :ref:`being <being>` in a proposition such as "*the pencil is over there*", we have, with words, captured the essential relationship embodied by an existent entity that is before us. We have "*photographed*" :ref:`being <being>` in words, reduced its momentary effervescence to a reproducible formulation.
 
 ---
 
@@ -333,11 +344,11 @@ A tragedy, in three lines:
 
 ---
 
-Death as a subject is repellant to individual understanding. Its very definition presupposes the limit of the knower; That is to say, death is inherently unknowable. Death can only be understood through the mechanisms of analogy and metaphor, via the circuituous and torturous route of empty symbolism, for when we turn our attention directly to the object of death it reveals itself as something which is not to be found in our :ref:`world <world>`. 
+Death as a subject is repellant to individual understanding. Its very definition presupposes the limit of the knower; That is to say, death is inherently unknowable. Death can only be understood through the mechanisms of analogy and metaphor, via the circuituous and torturous route of empty symbolism, for when we turn our attention directly to the object of death it reveals itself as something which is not to be found in our :ref:`world <world>`.
 
 We can be aware that we will eventually die, we can perceive others passing from this world, we can even in unique circumstances perceive the manner of our own death, but none of this gets us any closer to the experience of death, none of this allows us to see what it is like to die. Our experience and awareness of experience will never be extended into death itself. We never see death for what it is, because it is :ref:`nothing <nothing>`, the absence of our :ref:`being <being>`. Death is the point where experience and awareness stops.
 
-To ask questions about a subject that perpetually recedes from all attempts to know it necessarily entails the admission up front that no answers can ever be found. The inevitable end result will be to arrive where we started, back in the here and now, having gained nothing, except perhaps an understanding of what it means to be futile, which will anyway evaporate when we die; If any proposition can lay claim to human nature, this is it. 
+To ask questions about a subject that perpetually recedes from all attempts to know it necessarily entails the admission up front that no answers can ever be found. The inevitable end result will be to arrive where we started, back in the here and now, having gained nothing, except perhaps an understanding of what it means to be futile, which will anyway evaporate when we die; If any proposition can lay claim to human nature, this is it.
 
 .. _2022-november:
 
@@ -347,23 +358,23 @@ November
 
 Death removes all possibility of absolute certainty.
 
-To see this, we need only note that not only is it the case that it cannot be known whether after death [#november_2022_01]_ there is an afterlife, :ref:`nothing <nothing>`, an awareness without experience, or even a perpetual waking into another reality, these events cannot even be assigned probabilities in any real sense of the term. What would a probability outside the domain of immediate experience *mean*? 
+To see this, we need only note that not only is it the case that it cannot be known whether after death [#november_2022_01]_ there is an afterlife, :ref:`nothing <nothing>`, an awareness without experience, or even a perpetual waking into another reality, these events cannot even be assigned probabilities in any real sense of the term. What would a probability outside the domain of immediate experience *mean*?
 
 Uncertainty is a state of incompleteness, where knowledge cannot be attained because it is separated from :ref:`being <being>` by a layer of possibility. We do not know if the world outside of ourselves exists as it appears to us, for it is always a possibility that we are a brain in a vat, subject to the mind probes of a **Cartesian** demon.
 
-A possibiilty is a type of a quantity that transmits uncertainty to reality by :ref:`being <being>` possible. In this sense, possibility and probability are synonyms. Just as all :ref:`probabilities <probability>` must sum to one, all possibilities must converge towards :ref:`being <being>`. 
+A possibiilty is a type of a quantity that transmits uncertainty to reality by :ref:`being <being>` possible. In this sense, possibility and probability are synonyms. Just as all :ref:`probabilities <probability>` must sum to one, all possibilities must converge towards :ref:`being <being>`.
 
-The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie*, :ref:`Cantor <cantor>`...). 
+The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie*, :ref:`Cantor <cantor>`...).
 
-In the same way, a possibility can only be known after the fact. It is entirely impossible [#november_2022_02]_ to know whether a possibility is possible until it already happened. A possibility is characterized as something that could obtain, but to know whether it could obtain, one must know it has already been obtained. [#november_2022_03]_ 
+In the same way, a possibility can only be known after the fact. It is entirely impossible [#november_2022_02]_ to know whether a possibility is possible until it already happened. A possibility is characterized as something that could obtain, but to know whether it could obtain, one must know it has already been obtained. [#november_2022_03]_
 
 Moreover, whatever :ref:`being <being>` may be, it is only what it is insofar that it is possible it might not be what it is, i.e. you might be reading these words in a dream.
 
 What happens outside of our :ref:`being <being>` in the :ref:`world <world>` is not possible, because to be possible means, first and foremost, the possibility of coming to :ref:`be <being>` in the :ref:`world <world>`.
 
-What then does the proposition "*it is possible there is an afterlife*" mean? How does something come to be outside of time and space? How does something come to be without being the consequence of something? One might as well say "*it is possible that possibility is impossible*". 
+What then does the proposition "*it is possible there is an afterlife*" mean? How does something come to be outside of time and space? How does something come to be without being the consequence of something? One might as well say "*it is possible that possibility is impossible*".
 
-Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomena>` and :ref:`existence <existence>` itself. 
+Then, there are two types of uncertainty: An *ontological* uncertainty, which admits itself as a measure via quantization of possibility, for it is an uncertainty about :ref:`being <being>`, and a *metaphysical* uncertainty, which admits of no quantiziation because its actualities never :ref:`are <being>` never actually manifested in the :ref:`world <world>`, even through appearances, for it is an uncertainty about :ref:`appearance <phenomena>` and :ref:`existence <existence>` itself.
 
 .. _2022-december:
 
@@ -378,6 +389,8 @@ When one sees a bird and says *that is blue*, does the *that* refer to the bird 
 .. [#november_2022_02] Unintentional :ref:`polyptoton`! -- April 2025
 
 .. [#november_2022_03] The essence of possibility is impossibility. -- April 2025
+
+.. _year-2023:
 
 2023
 ====
@@ -562,6 +575,8 @@ What we are *essentially* is the :ref:`world <world>`, for it is through us worl
 
 What we are *fundamentally* is a lacking. We lack a connection to the :ref:`world <world>` that is brought into :ref:`being <being>` by our inhabiting of it, the :ref:`world <world>` that is severed from us as it becomes from us. We are relegated to our bodies, these containers of separateness. The :ref:`world <world>` we create is forever and always outside of ourselves.
 
+.. _year-2024:
+
 2024
 ====
 
@@ -573,25 +588,25 @@ April
 
 .. epigraph::
 
-    ":ref:`Being <being>`" is said in many ways. 
+    ":ref:`Being <being>`" is said in many ways.
 
-    -- `Categories`_, Aristotle
+    -- `Metaphysics`_, Aristotle
 
-It is first of all said, and "*to be said*" requires what is said to be expressible in language. Every linguistic form is a representation. Therefore, something said is necessarily representative of some other thing. What a representation is and what it is representative of is left vague in the beginning, but the form of representation is not: language.  
+It is first of all said, and "*to be said*" requires what is said to be expressible in :ref:`language <language>`. Every linguistic form is a representation. Therefore, something said is necessarily representative of some other thing. What a representation is and what it is representative of is left vague in the beginning, but the form of representation is not: :ref:`language <language>`.
 
-In order to understand the initial statement, one then turns to an analysis of language in order to clarify what could possibly be meant by a thing which can be said. A description of language is a necesary component of any exposition that wants to analyze the ways in which "*being*" is said. In making this description, one immediately encounters the essential problem in ontological endeavors: describing the operation of "*description*"" is itself a description. 
+In order to understand the initial statement, one then turns to an analysis of :ref:`language <language>` in order to clarify what could possibly be meant by a thing which can be said. A description of :ref:`language <language>` is a necesary component of any exposition that wants to analyze the ways in which "*being*" is said. In making this description, one immediately encounters the essential problem in ontological endeavors: describing the operation of "*description*"" is itself a description.
 
-Every system of thought, by objectifying the world, makes an object of itself within that system. "*System*" in this sense is synonymous with and equivalent to "*language*".
+Every system of thought, by objectifying the world, makes an object of itself within that system. "*System*" in this sense is synonymous with and equivalent to "*:ref:`language <language>`*".
 
-For instance, lingustic representations possess the property of standing for things they themselves are not. 
+For instance, lingustic representations possess the property of standing for things they themselves are not.
 
 .. note::
 
-    Let "*R*" stand for things that are red. 
+    Let "*R*" stand for things that are red.
 
     Let "*B*" stand for things that are blue.
 
-Here a letter, "*R*" or "*B*" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of "*being red*". The letter "*R*" makes an abstraction of the elements we agree belong to it. 
+Here a letter, "*R*" or "*B*" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of "*being red*". The letter "*R*" makes an abstraction of the elements we agree belong to it.
 
 ---
 
@@ -603,13 +618,13 @@ However, a crucial distinction must be drawn in these cases. The quotation marks
 
     Word is a word.
 
-This analysis hinges on the realization first proffered by :ref:`Tarski <tarski>` that there is a consequential difference between the language in which we speak propositions of a language and the language in which we speak *about* the propositions of a language. 
+This analysis hinges on the realization first proffered by :ref:`Tarski <tarski>` that there is a consequential difference between the :ref:`language <language>` in which we speak propositions of a :ref:`language <language>` and the :ref:`language <language>` in which we speak *about* the propositions of a :ref:`language <language>`.
 
-    The language one speaks is not necessarily the language about which one speaks. 
+    The :ref:`language <language>` one speaks is not necessarily the :ref:`language <language>` about which one speaks.
 
-Confusion often results when the same language performs both functions. In the case of mathematics, where the proposition language is that of, say, arithmetic, and the description language that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of " :ref:`Being <being>` " in the early twentieth century.
+Confusion often results when the same :ref:`language <language>` performs both functions. In the case of mathematics, where the proposition :ref:`language <language>` is that of, say, arithmetic, and the description :ref:`language <language>` that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of " :ref:`Being <being>` " in the early twentieth century.
 
-If the goal is to define " :ref:`Being <being>` ", then one can only succeed at the level of description. A description *about* a " :ref:`Being <being>` " is incapable of saying what is meant by " :ref:`Being <being>` ".
+If the goal is to define ":ref:`being <being>`", then one can only succeed at the level of description. A description *about* a " :ref:`Being <being>` " is incapable of saying what is meant by " :ref:`being <being>` ".
 
 .. _2024-may:
 
@@ -619,11 +634,11 @@ May
 
 When one authentically speaks the phrase "*I know this*", one understands this to be meant in the context of certainy. "*Knowledge*", if the term is to mean anything at all, must be defined in terms of certainty. "*It is known*" must be replaceable in all instances with "*it is certain*"
 
-The question of what is certain has no obvious or immediate answer, and so the existence of pure knowledge, of a kind that is absolute and without condition, is called into question. The world and all of its contents seem so hopelessly dependent on the subjective experience that one cannot truly convince one's self that it exists in the absence of the subject. 
+The question of what is certain has no obvious or immediate answer, and so the existence of pure knowledge, of a kind that is absolute and without condition, is called into question. The world and all of its contents seem so hopelessly dependent on the subjective experience that one cannot truly convince one's self that it exists in the absence of the subject.
 
-The world presents itself, but the basis for the knowledge of this presentation is its representation to the self. 
+The world presents itself, but the basis for the knowledge of this presentation is its representation to the self.
 
-Everything imaginable is contained in, or possibly equal to, the enumeration of all possible representations. What cannot be imagined is precisely that which cannot be represented to the self. If a possibility exists that cannot be imagined, then it is only because "*self*" does not entail the totality of possibility. This can only occur if the representations presented to the self are incomplete, that is, if the presentation lacks content that cannot be comprehended through its representative form. 
+Everything imaginable is contained in, or possibly equal to, the enumeration of all possible representations. What cannot be imagined is precisely that which cannot be represented to the self. If a possibility exists that cannot be imagined, then it is only because "*self*" does not entail the totality of possibility. This can only occur if the representations presented to the self are incomplete, that is, if the presentation lacks content that cannot be comprehended through its representative form.
 
 ---
 
@@ -633,7 +648,7 @@ Everything imaginable is contained in, or possibly equal to, the enumeration of 
 
     -- `On Certainty`_, Wittgenstein
 
-If the objective is to produce a certain fact, then all assumptions must be removed and one must start from nothing. Only the production of a fact from nullity would be able to satisfy any reasonable definition of "*certainty*". If a fact derives from a prior assumption, then the fact is only as certain as its constitutive assumptions. Therefore, the question of the validity of the concept of "*certainy*" reduces to the question of whether positive knowledge can be derived from nothing. 
+If the objective is to produce a certain fact, then all assumptions must be removed and one must start from nothing. Only the production of a fact from nullity would be able to satisfy any reasonable definition of "*certainty*". If a fact derives from a prior assumption, then the fact is only as certain as its constitutive assumptions. Therefore, the question of the validity of the concept of "*certainy*" reduces to the question of whether positive knowledge can be derived from nothing.
 
 It is a maxim of post-Kantian philosophy that what is known must be known through the experience of "*knowing*", and thus it must be conditioned by experience. Knowledge of a thing is knowledge of the sensuous experience of the thing and what the sensuous cannot present to experience cannot be known.
 
@@ -659,17 +674,17 @@ To say the same thing in a different way,
 
     To be a *being* is to be *a* being.
 
-Apparently tautological in form, the exact meaning of the Liebniz's proposition can only be understood through the emphasis placed on its constituent words, which in turn immediately enriches its otherwise vacuous content. In this way, the words in Leibniz's proposition have semantic content that is not contained in their letters, if by "*letters*" it is meant "*characters of the alphabet*". This is obvious in languages with aspirated breathing marks, where the operation of emphasis possesses a symbol within the language, but English can be deceptive in this regard, for italicization or boldening are not normally considered a linguistic symbol, even though they possess no warrant to belong to any other classification. 
+Apparently tautological in form, the exact meaning of the Liebniz's proposition can only be understood through the emphasis placed on its constituent words, which in turn immediately enriches its otherwise vacuous content. In this way, the words in Leibniz's proposition have semantic content that is not contained in their letters, if by "*letters*" it is meant "*characters of the alphabet*". This is obvious in :ref:`languages <language>` with aspirated breathing marks, where the operation of emphasis possesses a symbol within the :ref:`language <language>`, but English can be deceptive in this regard, for italicization or boldening are not normally considered a linguistic symbol, even though they possess no warrant to belong to any other classification.
 
-Leibniz's emphasis is a form of naming that would more naturally be represented with quotation marks. The lefthand side of the proposition selects the name of being, "*being*", preparing it for the operation of definition. The selection is then equated through the copula of being to the righthand side, which defines the named being as the being of the name of the article through which it is selected for naming. A "*being*" is nothing more than an index attached to a being. 
+Leibniz's emphasis is a form of naming that would more naturally be represented with quotation marks. The lefthand side of the proposition selects the name of :ref:`being <being>`, ":ref:`being <being>`", preparing it for the operation of definition. The selection is then equated through the copula of being to the righthand side, which defines the named :ref:`being <being>` as the being of the name of the article through which it is selected for naming. A ":ref:`being <being>`" is nothing more than an index attached to a :ref:`being <being>`.
 
-The operation of naming can be understood in terms of pure direction. A rule is given that picks a name from the domain of names and assigns to it an object in the domain of objects. In the preceding sentence, "*object*" is not necessarily equivalent to "*thing*", and might be more precisely described as "*an indeterminate being*".
+The operation of naming can be understood in terms of pure direction. A rule is given that picks a name from the domain of names and assigns to it an object in the domain of objects. In the preceding sentence, "*object*" is not necessarily equivalent to "*thing*", and might be more precisely described as "*an indeterminate* :ref:`being <being>`".
 
 ---
 
-Consider the infinite sequence of squares, 
+Consider the infinite sequence of squares,
 
-.. math:: 
+.. math::
 
     \{ 0, 1, 4, 9, 16, ... \}
 
@@ -679,13 +694,13 @@ In what sense is this sequence (*set*, *class*, *abstraction*) equivalent to the
 
     f(n) = n ^ 2
 
-"*f*" is a formal statement, devoid of content. It must be interpretted to have any meaning. This equivalence can only be maintained if the function "*f*" is understood to be assigning a name from the domain of natural numbers to each element in the domain of squares. "*f*" names each element in the sequence of squares by indexing them. In other words, "*0*"" is the name of first square, "*1*"" is the name of the second square, "*4*"" is the name of the third square, et cetera. 
+"*f*" is a formal statement, devoid of content. It must be interpretted to have any meaning. This equivalence can only be maintained if the function "*f*" is understood to be assigning a name from the domain of natural numbers to each element in the domain of squares. "*f*" names each element in the sequence of squares by indexing them. In other words, "*0*"" is the name of first square, "*1*"" is the name of the second square, "*4*"" is the name of the third square, et cetera.
 
 Frege was the first to recognize the mathematical function as possessing the formal structure of a "*name*".
 
 ---
 
-Language cannot provide content; language is only capable of resolving content into formal structures.
+:ref:`Language <language>` cannot provide content; :ref:`language <language>` is only capable of resolving content into formal structures.
 
 .. _2024-november:
 
@@ -697,19 +712,54 @@ The desire for exegesis cannot be met without recourse to personal experience, a
 
 This is the essential human delusion. Essential, because it resides in every activity; there is nothing which is that does not presuppose the law of cause and effect, and so we come to be supposing all which is must abide this fundamental law. Human, because it is our :ref:`poetical <syntagmics>` curse to attach symbols to objects. Delusion, because the subject will never find itself among objects, except as an object.
 
-We imagine the written word like a mirror, a silvered surface that reflects and reveals its point of origin through precise geometry but our thoughts are not like rays of light, and the page is no surface to preserve in perfect fashion the objects incident upon it. The word always grasps towards what it wants to represent, but fails in its approach. 
+We imagine the written word like a mirror, a silvered surface that reflects and reveals its point of origin through precise geometry but our thoughts are not like rays of light, and the page is no surface to preserve in perfect fashion the objects incident upon it. The word always grasps towards what it wants to represent, but fails in its approach.
 
-Is there a series of words that explains the world's churning? Mathematicians tells us to fix our definitions, and let logic unfold. With what definition do we start? *To be*, seems the most general of relations, the most primitive of terms. Thus, we initiate again an Aristotelian chain, whose history is available to any student of philsophy. Such an exercise, though worthwhile, will only yield formal results, against which we will inevitably rebel in Heideggerian fashion, and then succumb, forgetting in essence our original task. 
+Is there a series of words that explains the world's churning? Mathematicians tells us to fix our definitions, and let logic unfold. With what definition do we start? *To be*, seems the most general of relations, the most primitive of terms. Thus, we initiate again an Aristotelian chain, whose history is available to any student of philsophy. Such an exercise, though worthwhile, will only yield formal results, against which we will inevitably rebel in Heideggerian fashion, and then succumb, forgetting in essence our original task.
 
-I want to tell you what I know, but the words that I would use to give form to my thoughts escape me. I labor in vain for quiet hours. There is structure in our experience, in our lives, underneath its surface, if only it were presented, so that it might be represented in symbolic form. 
+I want to tell you what I know, but the words that I would use to give form to my thoughts escape me. I labor in vain for quiet hours. There is structure in our experience, in our lives, underneath its surface, if only it were presented, so that it might be represented in symbolic form.
 
-It is easy to slip into solipsism, like a Cartesian fingertrap. One must remember that :ref:`language <language>` presumes the presence of another. Though the world as we know it may lack facts, it never lacks form. The existence of words is testament to the communal aspect of reality, that when we are in the :ref:`world <world>`, we are in the :ref:`world <world>` with someone else. The :ref:`world <world>`, a veil though it may be in its appearance, is substantial, because it can be described, and a decription can only exist *for* someone. 
+It is easy to slip into solipsism, like a Cartesian fingertrap. One must remember that :ref:`language <language>` presumes the presence of another. Though the world as we know it may lack facts, it never lacks form. The existence of words is testament to the communal aspect of reality, that when we are in the :ref:`world <world>`, we are in the :ref:`world <world>` with someone else. The :ref:`world <world>`, a veil though it may be in its appearance, is substantial, because it can be described, and a decription can only exist *for* someone.
 
 Let us start any exegesis with this simple proposition whose tautological nature is thus self evident:
 
     What is said requires some one to say it.
 
-Let us use this a ballast when the ontological investigations we undertake lead us astray, into a nihilistic miasma. 
+Let us use this a ballast when the ontological investigations we undertake lead us astray, into a nihilistic miasma.
+
+.. _carnaps-method:
+
+Carnap's Method of Tautology
+----------------------------
+
+A common problem in formal logic is determining whether a given proposition is a tautology, i.e. true in all possible cases. Since the number of rows in a truth table grows exponentially with the number of propositions, the traditional method of truth tables is computationally expensive. In `Introduction to Symbolic Logic and Its Applications`_, Carnap presents a different method for evaluating whether or not a given proposition is a tautology. Rather than enumerating all possible cases and checking if each one is true, it suffices to show the assignment of false to a proposition is impossible. In other words, Carnap's method starts by assuming the proposition is false and then works backwards through the logical connectives to see whether or not an assignment of false is consistent with the proposition.
+
+For example, consider the well-known property of implications,
+
+.. math::
+
+    ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
+
+To determine whether this constitues a tautology, it must be shown whether or not an assignment of false can be made to the entire proposition. The proposition is built out of nested propositions. The assignment of false to entire proposition will in turn require the subformulas of the proposition to assume particular values. This will yield conditions for evaluating whether the overall assignment is consistent with the assignment of its components. The top-level connective is,
+
+.. math::
+
+    s \implies t 
+
+Where :math:`s = (p \implies r) \land (q \implies r)` and :math:`t = ((p \land q) \implies r)`.
+
+In order for this implication to be false, the hypothesis, :math:`s`, must be true, while the consequence, :math:`t`, must be false.
+
+The assignment of false to :math:`t` in turn requires :math:`p \land q` to be true and :math:`r` to be false.
+
+The assignment of true to :math:`p \land q` in turn requires :math:`p` be true and :math:`q` be true.
+
+Thus, it is seen in order for the proposition itself to be false, :math:`p` and :math:`q` must be true, while :math:`r` is false.
+
+These values, however, are inconsistent with the hypothesis, :math:`s`, which was required to be true, for :math:`p \implies r` and :math:`q \implies r` are both false under this assignment, and thus their conjunction is false. This contradicts our initial assumption that :math:`s` is true. Therefore, the entire proposition cannot be false for any assignment and it must be concluded the entire proposition is true for all possible values of :math:`p`, :math:`q` and :math:`r`.
+
+.. math::
+
+    \forall p, q, r: ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
 
 .. _2024-december:
 
@@ -720,17 +770,17 @@ December
 The Context Problem
 -------------------
 
-As a thought experiment, suppose you encountered a string in an unknown language,
+As a thought experiment, suppose you encountered a string in an unknown :ref:`language <language>`,
 
 .. math::
 
-    a = b = c 
+    a = b = c
 
-Without any further information about the language, nearly any interpretation can be assigned to this expression. There is a small amount of information encoded in the repetition of "=", which imposes a light constraint on the possible interpretations, but the meaning of these interpretations is still too diverse to say with any measure of certainty what this expression could possibly mean. "=" could, for example, serve the dual role of a *relativizer* and an *indicator*, allowing such interpretations as,
+Without any further information about the :ref:`language <language>`, nearly any interpretation can be assigned to this expression. There is a small amount of information encoded in the repetition of "=", which imposes a light constraint on the possible interpretations, but the meaning of these interpretations is still too diverse to say with any measure of certainty what this expression could possibly mean. "=" could, for example, serve the dual role of a *relativizer* and an *indicator*, allowing such interpretations as,
 
     lady that sings that tune
 
-In this interpretation, "a" is assigned the meaning of "(the) lady", "b" that of "sings" and "c" that of "tune". Obviously, a large number, possibly infinite in size, of such expressions can be constructed. 
+In this interpretation, "a" is assigned the meaning of "(the) lady", "b" that of "sings" and "c" that of "tune". Obviously, a large number, possibly infinite in size, of such expressions can be constructed.
 
 Suppose you are provided a dictionary of *primitive* symbols. This dictionary fixes the meaning of the "=" to the familiar concept of "equality". However, even this disambiguating assignment stills the leave door open to a myriad of interpretations. This assignment imposes only the lightest of constraints on the other word-forms in the expression. For example, it is unclear if the expression with the "equality" assignment should be interpretted as meaning,
 
@@ -744,11 +794,69 @@ Or
 
     (a = b) = c
 
-In the first interpretation, "a", "b" and "c" must represent terms within the language. In the second interpretation, "a" fills the meta-role of a truth value while "b" and "c" fill the roles of terms in the object language. In the third interpretation, "a" and "b" fill the roles of object terms while "c" fills the role of a truth value. 
+In the first interpretation, "a", "b" and "c" must represent terms within the :ref:`language <language>`. In the second interpretation, "a" fills the meta-role of a truth value while "b" and "c" fill the roles of terms in the object :ref:`language <language>`. In the third interpretation, "a" and "b" fill the roles of object terms while "c" fills the role of a :ref:`truth <truth>` value.
 
-In other words, the assignment of the meaning of "=" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols. 
+In other words, the assignment of the meaning of "=" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols.
 
 The essential *context* problem boils down to: what word-form in an expression should be treated as primitive in order to be used as a foundation upon which to build the subsequent interpretation.
+
+Transfinitude
+-------------
+
+The Curse of the Rebellious Set
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. topic:: Definition: The Rebellious Set
+
+    Let :math:`A` be any set and let :math:`P(A)` be it's power set. Assume :math:`f: A \to P(A)`. The Rebellious Set, denoted R, is defined as the set which satisfies this formula,
+
+    .. math::
+
+        R = \{ x \in A \, \mid \, x \notin f(x) \}
+
+**Theorem** :math:`f: A \to P(A) \leftrightarrow \lvert R \rvert \geq 1`
+
+Let :math:`P(A)` be the power set of :math:`A` (the set of all subsets of :math:`A`). Suppose there exists a bijection :math:`f: A -> P(A)`. This means every element in :math:`A` is paired with a unique subset of :math:`A`, and vice versa.
+
+If :math:`A = \emptyset`, then its power set :math:`P(A)` contains one element, the empty set itself, :math:`P(A) = {∅}`. In this case, there's no bijection between :math:`A` and :math:`P(A)`, and the theorem holds trivially.
+
+If :math:`A \neq \emptyset`, it must contain at least one element. Let *a* be this element. Consider the subset of :math:`A`` that contains only this element, :math:`\{a\}`. Since *f* is assumed to be a bijection, there must be some element :math:`y \in A` such that :math:`f(y) = \{a\}`.
+
+If :math:`y = a`, then, :math:`a \in f(a)`, which contradicts the definition of :math:`B` (that is, the elements in :math:`B` are not in the set they are mapped to).
+
+If :math:`y \neq a`, then :math:`y \notin f(y)`, which means *y* should be in :math:`B` according to its definition. Since *y* exists, :math:`B` is not empty. ∎
+
+More Parts Than Wholes
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. _part-whole-theorem:
+
+**Theorem** :math:`\forall A: \lvert P(A) \rvert > \lvert A \rvert`
+
+For the sake of contradiction, suppose there exists a bijection (a one-to-one correspondence)  :math:`f: A \to P(A)`. This means every element in :math:`A` is paired with a unique subset of :math:`A`, and vice versa.
+
+Consider the rebellious set,
+
+.. math::
+
+    R = \{ x \in A \, \mid \, x \notin f(x) \}
+
+This set :math:`R` contains all elements of :math:`A` that are not members of the subset they are mapped to by *f*. By the previous theorem, this set is non-empty. Since *f* is a bijection, there must be an element :math:`r \in A` such that :math:`f(r) = R`.
+
+If :math:`r \in R`, then by the definition of :math:`R`, :math:`r ∉ f(r)`. But :math:`f(r) = R`, so :math:`r \notin R`, a contradiction.
+
+If :math:`r \notin R`, then by the definition of :math:`R`, :math:`r ∈ f(r)`. But :math:`f(r) = R`, so :math:`r \in R`, again a contradiction.
+
+The initial assumption that there exists a bijection between :math:`A` and :math:`P(A)` must be false.
+
+Therefore,
+
+.. math::
+
+    \lvert P(A) \rvert > \lvert A \rvert
+
+.. _year-2025:
+
 2025
 ====
 
@@ -769,7 +877,7 @@ A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is mean
 - gateman now won nametag
 - snoops now won spoons
 - pupils did slipup
-- strips deified spirits
+- strips deified spirts
 
 :ref:`Imperfect palindromes <definition-4-1-3>`, by contrast, degrade under reversal. Consider cases like "*borrow or rob*" or "*name now one man*" which, while palindromic, do not preserve semantic content when reversed. However, by dropping the delimiting character, namely the space " ", the palindromicity can be reconstructed in a degenerate alphabet, e.g. "*borroworob*" and "*namenowoneman*" are palindromic strings in an alphabet with no delimiting characters.
 
@@ -802,6 +910,293 @@ February
 **Hysteron Proteron**: An expression in which what should come last is put first.
 
 This :ref:`poetical device <syntagmics>` is unique amongst the others insofar that it is semantic. Most devices, like epistrophe or chiasmus, are syntactical and formal; while they can be employed to enhance the meaning of a sentence, they are all nevertheless defined solely by the transposition and application of grammatical rules. In contrast, a Hysteron Proteron is a form of word play that requires more than just symbol shunting. Its essence involves the interpretation of its component parts which simultaneously places them into a contradictory whole.
+
+.. _logical-primitives:
+
+Logical Primitives
+------------------
+
+In one of his earlier papers published in 1923, *On the Primitive Term of Logistic*, Tarksi proved all logical operations in second-order logic could be defined in terms of quantification (i.e. categorical assertions) and equivalence (i.e. substitutability).
+
+In doing so, Tarksi introduced a "*truth*" predicate into the meta-language of analysis. This notion of "*truth*" differs considerably from the natural conception of truth, for it treats truth as an equivalency with syntactically tautologous expressions. It becomes clear, as his definitions are made and theorems derived, that this meta-logical definition of "*truth*" is insufficient for fully elaborating the synthetic and empirical modes of truth.
+
+.. topic:: Definition: Truth
+
+    "*p is true*" is equivalent to "*p*"" being equivalent to "*p*".
+
+    .. math::
+
+        \forall p: tr(p) \equiv (p \equiv p)
+
+.. topic:: Definition: Assertion
+
+    "*p is asserted*" is equivalent to "*p*"
+
+    .. math::
+
+        \forall p: as(p) \equiv p
+
+.. topic:: Definition: Falsity
+
+    "*p is false*" is equivalent to "*p*" being equivalent to "*not p*"
+
+    .. math::
+
+        \forall p: fl(p) \equiv (p \equiv \neg p)
+
+In the following commentary, the predicates "*truth*", "*falsity*" and "*assertion*" should be understood operationally as predicates which satisfy these extensional definitions, and not as representatives of their colloquial interpretations.
+
+The use of the indeterminate predicate *f(p)* in these definitions implicitly allows second-order constructs into the discourse. *f(p)*, for any *f*, is equivalent to asserting there exists an *F* such that :math:`p \in F`, where *F* is the *set* of *p*'s that have the property *f*. Predication is a sneaky way of inserting "*sets*" and "*classes*" into a language without explicitly introducing the predicates :math:`\in` and :math:`\subset`. Refer to :ref:`Frege's Law V <frege-grundgesetze>` for the ultimate consequences of abstraction.
+
+Tarski begins the paper with a reference to a previously established result that shows logical negation can be defined using only quantification and equivalence,
+
+.. math::
+
+    \forall p: (\neg p) \equiv (p \equiv (\forall q: q))
+
+Tarski uses this theorem as a starting point to show that equivalence and quantification constitute the sole primitive terms of propositional calculus.
+
+However, there is an interesting *implicit* assumption being made by asserting this theorem. The validity of this theorem rests on the contradiction of the inner expression :math:`\forall q: q`. In other words, in order for this theorem to obtain, it must be the case that :math:`\forall q: q` is always false. :math:`\neg \forall q: q` is indeed true, but not unconditionally, and the conditions in which it is not true are worth considering. The essence of this distinction is given in the insight the truth being expressed in the proposition :math:`\neg \forall q: q` is of a different order than a truth that is expressed tautologically, e.g. by a pure equivalence such as :math:`\neg(p \lor q) \equiv (\neg p \land \neg q)`.
+
+Tautological truths are vacuous; they reveal nothing about the state of the world. A proposition such as :math:`p \lor \neg p` is a *formal* truth that depends only on the syntax of logic. It's truth is not a function of the language in which it is expressed; While the symbols :math:`\lor` and :math:`\neg` may be assigned different meanings, the resulting language will still retain an expression which expresses the fundamental logical truth given by the law of excluded middle, however cumbersome and unintuitive its symbolic representation in this hypothetical language may be.
+
+In contrast, :math:`\neg \forall q: q` is not *necessarily* true in any language, where "*language*" is to be understood as the set of all propositions *q*. It is conceivable to imagine a language that only allows the expression of true statements, in which case, since all *q* are true, :math:`\neg \forall q: q`, a *meta*-proposition *about* the language, becomes false.
+
+In addition, it is conceivable to imagine a language that expresses notions other than truth-values, in which case *q* cannot be treated as an assertion of truth and the *meta*-proposition :math:`\neg \forall q: q` becomes meaningless.
+
+If :math:`\neg \forall q: q` is to be true, it must be the case that language given by the set of *q* is capable of expressing false statements. In other words, :math:`\neg \forall q: q` is a proposition about the semantic content of :math:`\{ q | \forall q: q \}`, in particular, it is asserting a partition of the language into those statements which are true and those statements which are false exists, and furthermore, the partition of false propositions is non-empty.
+
+.. math::
+
+    (\neg \forall q: q) \equiv (\exists q: \neg q)
+
+In other words, at least one false proposition exists. While this is a pragmatic and practical assumption as far as any non-trivial language is concerned, it is nevertheless not a "free" assumption, in the sense that is automatically granted if the laws of tautology are also granted. The proposition :math:`\neg \forall q: q` cannot be unconditionally true, and so its truth depends on the particular language that is under inspection. In other words, :math:`\neg \forall q: q` is implicitly a proposition *about* propositions, namely that not all of them can be true.
+
+If this assumption is granted, the other logical operations can be reduced to the operations of quantification and equivalence as follows: It is well-known disjunction can be defined in terms in of implication.
+
+.. math::
+
+    \forall p, q: (p \lor q) \equiv (\neg p \implies q)
+
+Moreover, it is well-known that logical implication can be defined in terms of equivalence and conjunction,
+
+.. math::
+
+    \forall p, q: (p \implies q) \equiv (p \equiv (p \land q))
+
+Therefore, if conjunction can be defined in terms of equivalence and quantification, it can be asserted all of second-order logic is contained in the operations of equivalence and quantification, since all other operations can be syllogistically defined in terms of these two primitives. With this goal in mind, Tarksi builds up in sequence the following theorems.
+
+**Theorem** :math:`\forall p: tr(p)`
+
+All propositions are equivalent to themselves. Every proposition is either true or false, whence the following truth table obtains,
+
+.. list-table::
+  :header-rows: 1
+
+  * - :math:`p`
+    - :math:`p \equiv p`
+  * - T
+    - T
+  * - F
+    - T
+
+**Theorem** :math:`\forall p: (\forall q: p \equiv tr(q)) \implies p`
+
+All propositions that are always true implies themselves.
+
+For each proposition *q* in the hypothesis, the following truth table describes the possible outcomes,
+
+.. list-table::
+  :header-rows: 1
+
+  * - :math:`p`
+    - :math:`q`
+    - :math:`q \equiv q`
+    - :math:`p \equiv (q \equiv q)`
+  * - T
+    - T
+    - T
+    - T
+  * - T
+    - F
+    - T
+    - T
+  * - F
+    - T
+    - T
+    - F
+  * - F
+    - F
+    - T
+    - F
+
+Since the hypothesis is always false exactly when *p* is false, the theorem follows from the definition of implication.
+
+**Theorem** :math:`\forall p, q: p \implies (p \equiv tr(q))`
+
+All propositions imply they are equivalent to always being true. The truth table from the previous theorem can be used to verify this theorem for every possible proposition *p* and *q*.
+
+Here is where the collapse of all true expressions into an equivalence class occurs. Truth is what aggregates the descriptive operators of language into a whole. It is what unites the propositions "2 + 2 = 4" and "Snow is white" into an equivalence. Truth, in effect, abstracts away the descriptive predicatives of a language, at least insofar as this formulation is concerned.
+
+**Theorem** :math:`\forall p: (\forall q: p \equiv tr(q)) \equiv p`
+
+All propositions are equivalent to being equivalent to always being true. Once again, this can be demonstrated with the previous truth-table.
+
+Any true proposition is equivalent to any other true proposition because they are all equivalent to tautologies. Only in this desolate landscape of pure vacuity can *truth* be defined. A tautology expresses through form what is self-evident.
+
+Truth, however, is not a mere consequence of self-evidence. It is not wholly :ref:`a priori <a-priori-a-posteriori>`; it is constructed out of parts tautologous and parts empirical, in short it is :ref:`synthetic <synthesis>`. This realization is what led to Tarski to the insights which fueled *Concept of Truth in Formalized Languages* in 1931.
+
+**Theorem** :math:`\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q`
+
+The formulae :math:`\forall r: p \equiv f(r)` and :math:`\forall r: q \equiv f(r)` serve as the main content of this theorem. Therefore, to understand the theorem, these formulae must be understood. Tarski refers to the terms :math:`f(r)` as a *truth* functions. He references the work of Russell and Whitehead in elaborating the conditions that must be met to refer to a function as a *truth* function, namely,
+
+.. math::
+
+    \forall p, q, f: ((p \equiv q) \land f(p)) \implies f(q) 
+
+In essence, this definition asserts that if two conditions are satisfied, then *f* may be regarded as truth-function.
+
+First, it must be the case *p* and *q* are indistinguishable through their truth-value. The propositions ":math:`(5 - 2) \ cdot (5 + 2) - 21 = 0`", "*Earth has one moon*", "*George Washington was the first president*", "*The Vietnam War followed the Korean War*" must all be regarded as tokens of the same type of "*truth*", i.e. a syntactic truth that may be shunted through the laws of tautology. This is a loose constraint on what propositions are to be regarded as "equivalent". The only thing that need unite propositions into a equivalency is they be regarded as true under a particular assignment.
+
+Second, there must be a *f* that is well-defined for *p*, e.q. :math:`x^2 \in C` ("a square is a continuous function"), "'Earth has one moon' has one subject.", "'George Washington was the first president' belongs to American History". *f* is a descriptive predicative that abstracts out of its subject a property and asserts a categorical relation with respect to it, e.g. "*All propositions of the form* ':math:`p \land q`' *are true when* :math:`p \implies q` *and* :math:`p` *are both true*" or "*Some propositions of the form* :math:`p \lor q` *are true when p is true*".
+
+*f* is a type of *meta-tautology*, a vacuous truth of the second order, in contrast to a first order tautology such as :math:`p \lor \neg p`. It is not a tautology *in* the language, but a tautology *about* a language. To say the subject ":math:`1+4+9+16` *is a sum of squares*" is to restate through predication what is already demonstrated through the subject. The description is reflexive. This type of analysis is reminiscent of Aristotelian reciprocals,
+
+.. epigraph::
+
+    We may perhaps most easily comprehend that to which a thing is related, when a name does not exist, if, from that which has a name, we derive a new name, and apply it to that with which the first is reciprocally connected, as in the aforesaid instances, when we derived the word 'winged' from 'wing' and from 'rudder' the word 'ruddered.'  For example, suppose the correlative of 'head' were to be defined as 'animal' - this would be inept and inaccurate. For animal is the correlative of 'man' or 'ox' or other things of that kind, whereas 'head' is held to be correlative to 'that which has a head'. If, therefore, we are to discover the proper correlative of 'head', we might state it as 'headed'. If, however, there were no such word as 'headed', we should have to invent one for the purpose, just as in the instances given above where we coined the words 'winged' and 'ruddered.' For 1  'wing' is relative to 'winged' and 'rudder' to 'ruddered.'
+
+    -- `Categories`_, Aristotle
+
+To see in detail what is meant by this definition, it instructive to analyze it through application, to understand how its meaning is built up through its components. Since the definition is being quantified over the domain of propositions, i.e. those objects which can be regarded as either true or false, it suffices to restrict attention to the possible assignments to these propositions, to see what conditions they impose through the definition on the form of the truth function :math:`f(p)`.
+
+If *p* is true and *q* is true, then the equivalency relation in the definition holds. If it :math:`f(p)` is false, then any assignment to :math:`f(q)` will satisfy the definition. In short, if *p* and *q* are equivalent, then the definition is equivalent to,
+
+.. math::
+
+    f(p) \implies f(q)
+
+If *p* is false and *q* is true, or visa versa, the equivalency relation in the definition fails to obtain. If the hypothesis of the implication is false, then the consequence may be either true or false. Thus, in these cases, any assignment to :math:`f(p)` and :math:`f(q)` will satisfy the definition.
+
+If *p* is false and *q* is false, or if *p* is true and *q* is true, then the equivalency is true. Then, either :math:`f(p)` is true, or it is false. If it is true, then the implication is only true is :math:`f(q)` is also true. If it :math:`f(p)` is false, then any assignment to :math:`f(q)` will satisfy the definition. In short, if *p* and *q* are equivalent, then the definition is equivalent to,
+
+.. math::
+
+    f(p) \implies f(q)
+
+Thus, if *p* and *q* are equivalent, **and** if :math:`f(p)` expresses a true property of *p*, then :math:`f(q)` also expresses a true property of *q*.
+
+The insight to be gleaned here is this definition does not *fully* determine the form of :math:`f(q)`. It only imposes conditions on :math:`f(q)` when syntactical conditions align.
+
+**Theorem** :math:`\forall p: \neg (\forall q: p \equiv as(q))`
+
+To derive an English translation that avoids unnecessary convolutions, it must be tautologically re-expressed in a different form. Keeping in mind the laws of quantification,
+
+.. math::
+
+    \neg \forall x: f(x) \equiv \exists x: \neg f(x)
+
+This can be restated as,
+
+.. math::
+
+    \forall p: \exists q: p \not\equiv as(q)
+
+Which provides an serviceable translation into English: There is no proposition which is equivalent to the assertion of all propositions.
+
+**Theorem** :math:`\forall p,q: (\forall r: p \equiv as(r)) \equiv (\forall r: q \equiv as(r))`
+
+Every assertion of all propositions is equivalent to any other assertion of all propositions.
+
+**Theorem** :math:`\forall p, q: (\forall f: p \equiv ((\forall r: p \equiv f(r) ) \equiv (\forall r: q \equiv f(r)))) \implies p`
+
+One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies the proposition.
+
+**Theorem** :math:`\forall p,q: (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) ) \implies (p \land q)`
+
+One proposition being equivalent to the equivalency of all equivalent properties of another proposition implies both propositions.
+
+**Theorem** :math:`\forall p, q, f: (p \land q) \implies (p \equiv ((\forall r: p \equiv (fr)) \equiv (\forall r: q \equiv f(r))))`
+
+Two propositions together imply one proposition is equivalent to the equivalency of all equivalent properties of the other proposition,
+
+**Theorem** :math:`\forall p,q: (p \land q) \equiv (\forall f: p \equiv ((\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))))`
+
+Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition.
+
+Deductive Science
+-----------------
+
+In his 1930 paper *On Fundamental Concepts of the Methodology of Deductive Sciences*, Tarski began to refine his notion of truth by incorporating semantics into his constructions. Or, to more accurate, he refined his notion of truth by making the semantic assignment of truth a primitive notion. In this paper, Tarski starts by assuming the sentences under analysis have already been interpretted within the semantics of a science.
+
+.. topic:: Definitions
+
+    1. :math:`S`: The set of all meaningful sentences in a science.
+    2. :math:`A`: An arbitrary subset of **S**.
+    3. :math:`C_n(A)`
+    4. :math:`E_{f(x)}[ ... ]`: The set of all values of the function *f* corresponding to those values of the argument *x* which satisfy the condition formulated in the brackets "[..]".
+    5. :math:`\mathbb{P}(A) = E_X[X \subseteq A]`: The powerset of A, i.e. the set of all subsets of A.
+    6. :math:`\mathbb{F} = E_X[ \lvert X \rvert \leq \aleph_0]`: The set of all finite "inductive"sets.
+ 
+With these minimalistic definitions, Tarski offers up four axioms to construct a science of science,
+
+.. topic:: Axiom 1
+    
+    .. math::
+
+        \lvert S \rvert \leq \aleph_0
+
+.. topic:: Axiom 2
+
+    If :math:`A \subseteq S` then :math:`A \subseteq C_n(A) \subseteq S`
+
+.. topic:: Axiom 3
+
+    If :math:`A \subseteq S` then :math:`C_n(C_n(A)) = C_n(A)`
+
+.. topic:: Axiom 4
+
+    If :math:`A \subseteq S` then :math:`C_n (A) = \sum_{X \in \mathbb{P}(A) \cdot \mathbb{F}} C_n(X)`
+
+Upon reflection, Axiom 1 and Axiom 4 may appear to be at odds. It is instructive to highlight the tension that seems to exist between these two axioms and show the way in which this apparent tension is resolved. Axiom 1 of Tarski's deductive system asserts the set of meaningful sentences in a science is at most countably infinite. In fact, after introducing the axiom, in a brief aside, Tarski mentions in an aside that strict equality in Axiom 1 can be assumed without comprising his results.
+
+Axiom 4, on the other hand, states the consequences of an arbitrary subset of meaningful sentences, :math:`A`, is the sum of consequences of sets taken over finite subsets of :math:`A`. Given that Axiom 1 states that :math:`S` is potentially infinte and the hypothesis of Axiom 4 allows the case :math:`A = S`, Axiom 4 appears to state the infinite set :math:`S` is the result of a finite union. In fact, Axiom 1 and Axiom 4 taken together *do assert* an infinite set is the result of a finite union. However, it is a finite union of *consequences*, which are not necessarily finite.
+
+To understand the subtlety of Axiom 1 and Axiom 4, it suffices to consider
+
+.. math::
+
+    C_n({})
+
+Which is to ask: what are the consequences of *nothing*? The consequences of *nothing* are exactly those propositions which are vacuously true, namely tautologies. Every tautological form generates an infinite number of tautologies through the recursive nature of the substitution principle. Take for example the law of the excluded middle, substituted into itself ad infinitum,
+
+.. math::
+
+    p \lor \neg p, (p \lor \neg p) \lor \neg(p \lor \neg p), ...
+
+Thus, it is seen that even though Axiom 4 asserts an infinite set can be reduced to a finite number of unions, the terms of the union are not finite. In light of the recursive nature of tautologies, Tarski's offhand assertion regarding the infinite cardinality of :math:`S` becomes more plausible.
+
+**Theorem** If :math:`A \subseteq B \subseteq S`, then :math:`C_n(A) \subseteq C_n(B)`
+
+If one corpus is contained in another corpus, then the consequences of the first corpus are contained in the consequences of the second corpus. In effect, this means the consequences of a part of a deductive science cannot exceed the consequences of the whole of a deductive science.
+
+By assumption,
+
+.. math::
+
+    A \subseteq B \implies P(A) \subset P(B)
+
+And in turn,
+
+.. math::
+
+    P(A) \subseteq P(B) \implies P(A) \cdot \mathbb{F} \subset P(B) \cdot \mathbb{F}
+
+In other words, the indices of the sum for :math:`C_n(A)` are included in the indices of the sum for :math:`C_n(B)`, meaning all of the elements in :math:`C_n(a)` are also elements of :math:`C_n(B)` but elements in :math:`C_n(B)` are not necessarily elements of :math:`C_n(A)`, whereby it follows from the definition of unions and subsets,
+
+.. math::
+
+    C_n(A) \subseteq C_n(B)
 
 .. _2025-march:
 
@@ -1036,7 +1431,7 @@ Any assertions about the origin and historical development of :ref:`language <la
 As :ref:`language <language>` evolves, its progression into abstraction is apparaent. The correspondence between the signifier and the signified is almost entirely severed as linguistic forms accumulate syntactic functions and these functions become the bearers of meaning beyond the directly indicative; Language is no longer a direct mapping between object and sign. The `following diagram <https://www.britannica.com/topic/writing/Sumerian-writing>`_ shows the evolution of cunieform, from simple pictograms to abstract symbols,
 
 .. image:: ../_static/img/context/anthropological/cuneiform-evolution.jpg
-   :width: 600px
+   :width: 80%
    :alt: Encyclopedia Britannica Cuneiform Table
    :align: center
 
@@ -1088,7 +1483,7 @@ The *imperfect* aspect denotes an incomplete, ongoing or potential action. In En
 
 "*אֶהְיֶה (ehyeh)*" is the first person singular imperfect form of "*הָיָה (hayah)*", which translate into "*to be*", "*to become*", "*to exist*". "*אֶהְיֶה (ehyeh)*" is the Ancient Hebrew concept of :ref:`being <being>`.
 
-"*אֲשֶׁר (Asher)*" is a linguistic relativizer, analogous to the English "*that*" or "*which*". A relativizer plays a role not dissimilar to the role of quantification in symbolic logic, in that it provides conditions for its clause to obtain, i.e.,
+"*אֲשֶׁר (asher)*" is a linguistic relativizer, analogous to the English "*that*" or "*which*". A relativizer plays a role not dissimilar to the role of quantification in symbolic logic, in that it provides conditions for its clause to obtain, i.e.,
 
 - the lady from Chicago that sang a tune.
 - the brown dog which ran away.
@@ -1100,13 +1495,12 @@ These examples show the function of a relativizer is to qualify its clauses. Wit
 
     am which am
 
-The question then becomes in what *mode* to interpret the "*am*", i.e. as a potentiality, a habituality or ongoing process. Regardless, taken in conjunction with the previous conjecture, God's reply to Moses appears to identify divinity itself with the conjugation of :ref:`being <being>` into its *imperfect first person modality* of "*am*". Moreover, that :ref:`being <being>` is qualified relative to itself. In essence, the Judeo-Christian God's canonical name is the *subjective being of subjective being*, the modality through which the existential (objective) "*is*" is conjugated into the ordinal (subjective) "*am*".
+The question then becomes in what *mode* to interpret the "*am*", i.e. as a potentiality, a habituality or ongoing process. Regardless, taken in conjunction with the previous conjecture, God's reply to Moses appears to identify divinity itself with the conjugation of :ref:`being <being>` into its *imperfect first person modality* of "*am*". Moreover, that :ref:`being <being>` is qualified relative to itself.
 
 .. topic:: Conjecture
 
-    Early humans did not have a concept of "*self*" until :ref:`language <language>` had evolved to the point where abstraction, complex predication and metaphor was possible.
+    Early humans did not have the concept of "*self*" until :ref:`language <language>` had evolved to the point where abstraction, complex predication and metaphor was possible.
 
-It is easy to be fooled by the apparent continuity of our "*self*" through time and space that consciousness is a single thing, everywhere equivalent in its multiplicity. We assume our consciousness is in every way identical to every other, except for its particular circumstances, that we might substitute our "*self*" into another's without alteration. That no one remembers their birth or early youth except in fragments is dismissed because however blurry the memory, we remember our self ":ref:`being there (dasein) <being>`". We don't account for the role that :ref:`language <language>` plays in the development of our "*self*". Humans are essentially vessels for :ref:`language <language>`. Our earliest records are (*allegedly*) suffused with the history of consciousness itself.
+It is easy to be fooled by the apparent continuity of our "*self*" through time and space that consciousness is a single thing, everywhere equivalent in its multiplicity. We assume our consciousness is in every way identical to every other, except for its particular circumstances, that we might substitute our "*self*" into another's without alteration. That no one remembers their birth or early youth except in fragments is dismissed because however blurry the memory, we remember our self ":ref:`being there <being>`". We don't account for the role that :ref:`language <language>` plays in the development of our "*self*". Humans are essentially vessels for :ref:`language <language>`. Our earliest records are (*allegedly*) suffused with the history of consciousness itself.
 
-If the conjecture is granted, the question then becomes: what is the *self*? How do the evolved modalities of :ref:`being <being>` give rise to the differentiation of the *self* from the :ref:`world <world>`? Does the syntactic structure of :ref:`being <being>`, insofar that "*am*" is identified as a tense or mode of "*is*", create or describe the actuality? The ever-present question, that shadow of uncertainty: Does :ref:`language <language>` induce form onto the :ref:`world <world>`, or does it describe pre-existing structures?
-
+If the conjecture is granted, the question remains: what is the "*self*"? How does the modality of "*am*" that evolved from the concept of :ref:`being` allow the "*self*" to take root? Is the "*self*" created or described by this evolution of :ref:`language <language>`? Conceding to the ever present specter of uncerainty, the question is essentially: does :ref:`language <language>` *induce* self-awareness or does it provide the formal framework for its interpretation?

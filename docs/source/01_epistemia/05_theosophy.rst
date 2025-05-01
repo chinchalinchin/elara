@@ -16,7 +16,7 @@ Shabaka Stone
 
 **2500s BCE**
 
-.. figure:: ../../_static/img/context/historical/shabaka-stone.jpeg
+.. figure:: ../_static/img/context/historical/shabaka-stone.jpeg
   :width: 80%
   :alt: The Shabaka Stone
   :align: center
@@ -756,7 +756,7 @@ King James Bible
 
     [2] And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters.
 
-    [3] And God said, Let there be light: and there was light. 
+    [3] And God said, Let there be light: and there was light.
 
     [4] And God saw the light, that it was good: and God divided the ligth from the darkness.
 

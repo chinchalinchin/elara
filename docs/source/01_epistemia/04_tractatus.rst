@@ -1,5 +1,3 @@
-.. _tractatus:
-
 ---------
 Tractatus
 ---------
@@ -65,9 +63,7 @@ A Priori / A Posteriori
 Being
 -----
 
-**Ancient Greek**
-
-.. list-table::
+.. list-table:: Koine Greek
 
   * - Infinitive
     - εἶναι
@@ -96,9 +92,7 @@ Being
 
 3. ἡ οὐσία: Feminine present participle. The *being-nature*, the *being-essence*, the *being-substance*.
 
-**German**
-
-.. list-table::
+.. list-table:: Modern German
 
   * - Infinitive
     - sein
@@ -142,16 +136,12 @@ Being
 Bedeutung
 ---------
 
-**Ancient Greek**
-
-.. list-table::
+.. list-table:: Koine Greek
 
   * - Greek
     - σῆμα / σημασία
 
-**Latin**
-
-.. list-table::
+.. list-table:: Latin
 
   * - Latin
     - significatio / signum
@@ -195,6 +185,7 @@ Form
     - forma / species / idea / figura / essentia
 
 .. epigraph::
+  :class: tractatus
 
   Form is the possibility of structure.
 
@@ -242,11 +233,7 @@ Nothing
 Phenomena
 ---------
 
-**Ancient Greek**
-
-*Noun* 
-
-.. list-table::
+.. list-table:: Koine Greek, Noun
 
   * - Nominative
     - φαινόμενον/φαινόμενα
@@ -259,9 +246,7 @@ Phenomena
   * - Vocative
     - φαινόμενον/φαινόμενα
 
-*Verb*
-
-.. list-table::
+.. list-table:: Koine Greek, Verb
 
   * - Infinitive
     -  φαίνειν
@@ -338,9 +323,9 @@ TODO
 
 .. epigraph::
 
-    To say what rules of grammar make up a propositional game would require giving the characteristics of propositions, their grammar. We are thus led to the question, What is a proposition? I shall not try to give a general definition of "proposition", as it is impossible to do so. This is no more possible than it is to give a definition of the word "game". For any line we might draw would be arbitrary. Our way of talking about propositions is always in terms of specific examples, for we cannot talk about these more generally than about specific games. We could begin by giving examples such as the proposition "There is a circle on the blackboard 2 inches from the top and 5 inches from the side". Let us represent this as "(2,5)". Now let us construct something that would be said to make no :ref:`sense <sinn>`, "(2,5,7)". This would have to be explained (and you could give it sense), or else you could say it is a mistake or a joke. But if you say it makes no :ref:`sense <sinn>`, you can explain why by explaining the game in which it has no use. Nonsense can look less and less like a sentence, less and less like a part of language. "Goodness is red" and "Mr. S came to today's redness" would be called nonsense, whereas we would never say a whistle was nonsense. An arrangement of chairs could be taken as a language, so that certain arrangements would be nonsense. Theoretically you could always say of a symbol that it makes :ref:`sense <sinn>`, but if you did so you would be called upon to explain its :ref:`sense <sinn>`, that is, to show the use you give it, how you operate with it. The words "nonsense' and ":ref:`sense <sinn>`" get their meaning only in particular cases and may vary from case to case. We can still talk of :ref:`sense <sinn>` without giving a clear meaning to ":ref:`sense <sinn>`", just as we talk of winning or losing without the meaning of our terms being absolutely clear.
+  To say what rules of grammar make up a propositional game would require giving the characteristics of propositions, their grammar. We are thus led to the question, What is a proposition? I shall not try to give a general definition of "proposition", as it is impossible to do so. This is no more possible than it is to give a definition of the word "game". For any line we might draw would be arbitrary. Our way of talking about propositions is always in terms of specific examples, for we cannot talk about these more generally than about specific games. We could begin by giving examples such as the proposition "There is a circle on the blackboard 2 inches from the top and 5 inches from the side". Let us represent this as "(2,5)". Now let us construct something that would be said to make no :ref:`sense <sinn>`, "(2,5,7)". This would have to be explained (and you could give it sense), or else you could say it is a mistake or a joke. But if you say it makes no :ref:`sense <sinn>`, you can explain why by explaining the game in which it has no use. Nonsense can look less and less like a sentence, less and less like a part of language. "Goodness is red" and "Mr. S came to today's redness" would be called nonsense, whereas we would never say a whistle was nonsense. An arrangement of chairs could be taken as a language, so that certain arrangements would be nonsense. Theoretically you could always say of a symbol that it makes :ref:`sense <sinn>`, but if you did so you would be called upon to explain its :ref:`sense <sinn>`, that is, to show the use you give it, how you operate with it. The words "nonsense' and ":ref:`sense <sinn>`" get their meaning only in particular cases and may vary from case to case. We can still talk of :ref:`sense <sinn>` without giving a clear meaning to ":ref:`sense <sinn>`", just as we talk of winning or losing without the meaning of our terms being absolutely clear.
 
-    -- `Wittgenstein Lectures`_, Ludwig Wittgenstein, 1932 AD
+  -- `Wittgenstein Lectures`_, Ludwig Wittgenstein, 1932 AD
 
 .. _synthesis:
 

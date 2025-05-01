@@ -9,3 +9,10 @@
 .hover:hover {
     color: var(--pst-color-link-hover);
 }
+
+#tractatus, 
+#theosophy,
+[id^="year"]
+.epigraph {
+    font-size: 0.75em !important;
+}

@@ -46,11 +46,11 @@ TODO
 Anacoluthon
 -----------
 
-    with up so floating many bells down 
-    
+    with up so floating many bells down
+
     -- `Anyone Lived in a Pretty How Town`_ , e.e. cummings
-    
-    In the coal fire will not wholly console them. 
+
+    In the coal fire will not wholly console them.
 
     -- `Ouija`_, Sylvia Plath
 
@@ -59,8 +59,8 @@ Anacoluthon
     Nothing else is.
 
     -- `The Sun Rising`_, John Donne
-    
-    From there are ghosts in the air 
+
+    From there are ghosts in the air
 
     -- `I Have Longed To Move Away`_ , Dylan Thomas
 
@@ -69,8 +69,8 @@ Anacoluthon
 Anadiplosis
 -----------
 
-    The years to come seemed waste of breath, 
-    
+    The years to come seemed waste of breath,
+
     A waste of breath the years behind
 
     -- `An Irish Airman Foresees His Death`_ , William Butler Years
@@ -78,13 +78,13 @@ Anadiplosis
     There moves what seems a fiery spark,
 
     A lonely spark with silvery rays
-    
+
     -- `The Dong with a Luminous Nose`_, Edward Lear
 
     The eyes that fix you in a formulated phrase,
-    
+
     And when I am formulated, sprawling on a pin,
-    
+
     When I am pinned and wriggling on the wall,
 
     -- `The Love Song of J. Alfred Prufrock`_, T.S. Eliot
@@ -94,21 +94,21 @@ Anadiplosis
 Anaphora
 --------
 
-    Fear not the waking world, my mortal, 
-    
+    Fear not the waking world, my mortal,
+
     Fear not the flat, synthetic blood
-    
+
     -- `All All and All`_, Dylan Thomas
-    
-    Their lone waters, lone and dead, -- 
+
+    Their lone waters, lone and dead, --
 
     Their sad waters, sad and chilly
-    
+
     -- `Dream Land`_, Edgar Allen Poe
 
-    War on the spider and the wren! 
+    War on the spider and the wren!
 
-    War on the destiny of man! 
+    War on the destiny of man!
 
     -- `Find Meat On Bones`_ , Dylan Thomas
 
@@ -118,17 +118,17 @@ Anaphora
     Gush'd with more pride than do a wretch's tears?—
 
     Why were they proud? Because fair orange-mounts
-    
+
     Were of more soft ascent than lazar stairs?—
-    
+
     Why were they proud? Because red-lin'd accounts
-    
+
     Were richer than the songs of Grecian years?—
 
     Why were they proud? again we ask aloud,
-    
+
     Why in the name of Glory were they proud?
-    
+
     -- `Isabella or the Pot of Basil`_, John Keats
 
     And of thy spicy myrtles as they blow,
@@ -136,7 +136,7 @@ Anaphora
     And of thy roses amorous of the moon,
 
     And of thy lilies, that do paler grow
-    
+
     -- `Isabella or the Pot of Basil`_, John Keats
 
     And she forgot the stars, the moon, and sun,
@@ -152,9 +152,9 @@ Anaphora
     If I were a dead leaf thou mightest bear;
 
     If I were a swift cloud to fly with thee;
-    
+
     -- `Ode to the West Wind`_, Percy Blysse Shelley
-    
+
     We are the hollow men
 
     We are the stuffed men
@@ -199,7 +199,7 @@ Antimetabole is included in the category :ref:`chiasmus`.
 
     How beautiful, if sorrow had not made
 
-    Sorrow more beautiful than Beauty’s self.
+    Sorrow more beautiful than Beauty's self.
 
     -- `Hyperion`_, John Keats
 
@@ -211,7 +211,7 @@ Aposiopesis
     For Thine is
 
     Life is
-    
+
     For Thine is the
 
     -- `The Hollow Men`_, T.S. Eliot
@@ -222,9 +222,9 @@ Apostrophe
 ----------
 
     O Melancholy, linger here awhile!
-    
+
     O Music, Music, breathe despondingly!
-    
+
     O Echo, Echo, from some sombre isle,
 
     Unknown, Lethean, sigh to us—O sigh!
@@ -261,12 +261,12 @@ Chiasmus
 
     \text{Chiasmus} \supset \text{Antimetabole}
 
-Chiasmus includes the category of :ref:`antimetabole`. 
+Chiasmus includes the category of :ref:`antimetabole`.
 
     When their bones are picked clean and the clean bones gone
 
     -- `And Death Shall Have No Dominion`_, Dylan Thomas
-    
+
     Break in the sun till the sun breaks down
 
     -- `And Death Shall Have No Dominion`_, Dylan Thomas
@@ -282,7 +282,7 @@ Epanalepsis
 
     It was no dream; or say a dream it was
 
-    Real are the dreams of Gods, and smoothly pass 
+    Real are the dreams of Gods, and smoothly pass
 
     Their pleasures in a long immortal dream.
 
@@ -300,7 +300,7 @@ Epistrophe
 ----------
 
     A crowd flowed over London Bridge, so many,
-    
+
     I had not thought death had undone so many.
 
     -- `The Wasteland`_, T.S. Eliot
@@ -332,11 +332,11 @@ Hysteron Proteron
 
     *Moriamur, et in media arma ruamus* 
 
-    Let us die, and rush into the midst of the fight. 
-    
+    Let us die, and rush into the midst of the fight.
+
     -- `Aeneid`_, Virgil, 19 BCE
 
-    I will kill thee, and love thee after. 
+    I will kill thee, and love thee after.
 
     -- `Othello`_, William Shakespeare
 
