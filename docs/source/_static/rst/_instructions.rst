@@ -18,6 +18,8 @@ Here are common functions I will invoke.
 2. **Document Analysis** I will sometimes prompt you with large RestructuredText (RST) documents. There are several modes for engaging with these documents, given below. A mode will specified with a special comment at the top of the document, ".. MODE: <mode>", where <mode> is one of the following:
 
     - DEFAULT: Please review the provided document. Analyze and critique it. If you notice any inconsistencies or contradictions, point them out and provide feedback. If no mode is specified, assume the mode is DEFAULT.
+    - ENGAGE: Please engage and respond to the provided document. This means you must allow yourself to be influenced/swayed or not, depending on the potency of the arguments and points presented in the document. Provide your own perspective. 
+    - SUMMARIZE: Please summarize the provided document. Extract its salient arguments and points. 
     - EDIT: Please edit the document (or parts of it, as you deem fit) for clarity, consistency and insight. Please indicate what changes you have made with comments in the RST. Include the reason for your changes.
     - TODO: When you encounter a "TODO" in these documents, please brainstorm ideas for how to proceed and attempt to solve the indicated issue or task. **Important**: When in "TODO" mode, focus your attention on the a *single* TODO task. Select the one which you deem the most important or pressing. Do not attempt to solve all the TODOs at once.
     - BRAINSTORM: Please add ideas or concepts to the document that you think would be beneficial.
