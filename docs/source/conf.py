@@ -14,7 +14,7 @@ import os
 
 project = "elara"
 toc_title = "elara"
-copyright = '2024 - 2025, chinchalinchin industries'
+copyright = '2023 - 2025, chinchalinchin industries'
 author = 'Grant Moore'
 
 # -- General configuration ---------------------------------------------------

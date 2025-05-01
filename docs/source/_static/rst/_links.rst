@@ -9,7 +9,7 @@
 .. _On Sense and Reference: https://archive.org/details/OnSenseAndReference
 .. _Introduction to Logic and the Methodology of the Deductive Sciences: https://archive.org/details/in.ernet.dli.2015.471634
 .. _Introduction to Symbolic Logic and Its Applications: https://archive.org/details/rudolf-carnap-introduction-to-symbolic-logic-and-its-applications
-.. _Principia Mathematica: https://archive.org/details/cu31924001575244
+.. _Principia Mathematica: https://archive.org/details/dli.ernet.247278/page/n29/mode/2up
 .. _The Concept of Truth in Formalized Languages: http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Tarski%20-%20The%20Concept%20of%20Truth%20in%20Formalized%20Languages.pdf
 
 .. philosophy
@@ -24,7 +24,7 @@
 .. _Metaphysics: http://classics.mit.edu/Aristotle/metaphysics.html
 .. _Naming and Necessity: https://archive.org/details/kripke-1980-naming-and-necessity
 .. _On Certainty: https://archive.org/details/oncertainty00witt
-.. _Philosophical Investigations: https://archive.org/details/philosophicalinv0000witt/page/n3/mode/2up
+.. _Philosophical Investigations: https://archive.org/details/philosophicalinvestigations_201911/page/n7/mode/2up
 .. _Physics: http://classics.mit.edu/Aristotle/physics.html
 .. _Posterior Analytics: http://classics.mit.edu/Aristotle/posterior.1.i.html
 .. _Prior Analytics: https://classics.mit.edu/Aristotle/prior.1.i.htm

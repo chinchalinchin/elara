@@ -13,24 +13,22 @@
    04_analecta/index
    05_oeuvre/index
 
----------------
-
 | Part on seined flow
-|                 murdrum 
+|                 murdrum
 |                   nun
 |                    Wolf denies no trap
 
 --------------
 
 .. image:: _static/img/context/philosophical/wittgenstein-rabbit-duck.svg
-   :width: 600px
+   :width: 80%
    :alt: the eye of the beholder
    :align: center
-   
+
 --------------
 
 .. epigraph::
-   
+
    *ό ποιητα, ἢ πῖθι ἢ ἄπιθι*
 
    -- Inscription on an Ancient Grecian drinking vessel.
@@ -38,6 +36,6 @@
 --------------
 
 .. image:: _static/img/context/comical/calvin-and-hobbes-inscrutable-exhortations.jpeg
-   :width: 600px
+   :width: 80%
    :alt: Inscrutable Exhortations
    :align: center
