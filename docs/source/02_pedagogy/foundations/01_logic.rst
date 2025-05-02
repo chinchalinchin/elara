@@ -4,10 +4,16 @@
 Logic
 =====
 
+.. _propositional-logic:
+
+Propositional Logic
+===================
+
 .. _proposition:
 
+------------
 Propositions
-============
+------------
 
 Symbolic Expression
     :math:`p, q, r`
@@ -17,8 +23,9 @@ Definition
 
 .. _truth-tables:
 
+------------
 Truth Tables
-============
+------------
 
 Truth tables are the standard way of evaluating the truth of a symbolic proposition. However, when the number of terms in a compound proposition rises above 4, truth tables can quickly become cumbersome. See :ref:`carnaps-method` for an alternate way of evaluating the truth of a symbolic propositions.
 
@@ -30,7 +37,6 @@ Truth tables are the standard way of evaluating the truth of a symbolic proposit
 
 .. _value-assignment:
 
-----------------
 Value Assignment
 ----------------
 
@@ -61,12 +67,12 @@ Each row details a different *state* of the world. The list is exhaustive becaus
 
 .. _logical-operations:
 
+----------
 Operations
-==========
+----------
 
 .. _logical-negation:
 
---------
 Negation
 --------
 
@@ -85,7 +91,6 @@ Symbolic Expression
 
 .. _logical-conjunction:
 
------------
 Conjunction
 -----------
 
@@ -113,7 +118,6 @@ Symbolic Expression
 
 .. _logical-disjunction:
 
------------
 Disjunction
 -----------
 
@@ -141,7 +145,6 @@ Symbolic Expression
 
 .. _logical-equivalence:
 
------------
 Equivalence
 -----------
 
@@ -169,7 +172,6 @@ Symbolic Expression
 
 .. _logical-implication:
 
------------
 Implication
 -----------
 
@@ -208,7 +210,7 @@ The :ref:`truth table <truth-tables>` for logical implication is given below,
     - T
 
 Logical Redundancy
-------------------
+^^^^^^^^^^^^^^^^^^
 
 Logical implication can be expressed in terms of the other logical connectives introduced. Notice the range of the implication connective assigns a value of ``True`` in three cases of the four possible value assignments to its constituent propositions (i.e. three rows of the :ref:`truth table <truth-tables>` are ``True``). Logical disjunctions also assigns a value of ``True`` to three of its four possible value assignments. It is a natural question whether implication can be reduced to disjunction or visa versa.
 
@@ -218,12 +220,12 @@ It can be shown that all second-order logic can be reduced to :ref:`universal qu
 
 .. _logical-inference:
 
+---------
 Inference
-=========
+---------
 
 .. _modus-ponens:
 
------------------
 Law of Detachment
 -----------------
 
@@ -237,7 +239,6 @@ The *Law of Detachment* is a symbolic expression for the process of deductive lo
 
     The *Law of Detachment* is often known by its Latin name, *modus ponens*.
 
-------------------
 Symbolic Arguments
 ------------------
 
@@ -246,14 +247,14 @@ TODO
 .. _tautologies:
 
 Tautologies
------------
+^^^^^^^^^^^
 
 TODO
 
 .. _contradictions:
 
 Contradictions
---------------
+^^^^^^^^^^^^^^
 
 TODO
 
@@ -291,8 +292,96 @@ The sentences **AaB** and **AeB** are called *universal assertions* since they e
   1. **AaB** is the contradictory of **AoB**
   2. **AiB** is the contradictory of **AeB**
 
+.. _aristotelian-conversions:
+
 Conversions
 -----------
+
+1. **AeB** → **BeA**
+
+TODO
+
+2. **BiA** → **AiB**
+
+TODO
+
+3. **AaB** → **AiB**
+
+TODO
+
+.. _aristotelian-figures:
+
+Figures
+-------
+
+.. note::
+
+  The traditional medieval pneumonic devices are included beside each deductive figure. The order of the vowels in the Latin name corresponds to the order of relations in symbolic argument.
+
+First Figure
+^^^^^^^^^^^^
+
+1. (*Barbara*) **AaB**, **BaC** ⊢ **AaC**
+
+TODO
+
+2. (*Celarent*) **AeB**, **BaC** ⊢ **AeC**
+
+TODO
+
+3. (*Darii*) **AaB**, **BiC** ⊢ **AiC**
+
+TODO
+
+4. (*Ferio*) **AeB**, **BiC** ⊢ **AoC**
+
+Second Figure
+^^^^^^^^^^^^^
+
+1. (*Camestres*) **MaN**, **MeX** ⊢ **NeX**
+
+TODO
+
+2. (*Cesare*) **MeN**, **MaX** ⊢ **NeX**
+
+TODO
+
+3. (*Festino*) **MeN**, **MiX** ⊢ **NoX**
+
+TODO
+
+4. (*Baroco*) **MaN**, **MoX** ⊢ **NoX**
+
+TODO
+
+Third Figure
+^^^^^^^^^^^^
+
+1. (*Darapti*) **PaS**, **RaS** ⊢ **PiR**
+
+.. note::
+
+  This one could be strengthened in a system with more expressive power to "all P that are S are also R".
+
+TODO
+
+2. (*Felapton*) **PeS**, **RaS** ⊢ **PoR**
+
+TODO
+
+3. (*Datisi*) **PaS**, **RiS** ⊢ **PiR**
+
+TODO
+
+4. (*Disamis*) **PiS**, **RaS** ⊢ **PiR**
+
+TODO
+
+5. (*Bocardo*) **PoS**, **RaS** ⊢ **PoR**
+
+TODO
+
+6. (*Ferison*) **PeS**, **RiS** ⊢ **PoR**
 
 TODO
 
