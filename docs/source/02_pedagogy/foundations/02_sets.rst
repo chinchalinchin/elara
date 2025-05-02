@@ -374,7 +374,7 @@ The second case, where the two sets have elements in common is shown in the next
 
 The union would be represented by the entire area of both circles. Notice the circles share some elements in this case. Sets that have elements in common, but are not subsets in either direction (i.e. neither :math:`A \subseteq B` nor :math:`B \subseteq A`), are called *overlapping*.
 
-.. tip:: 
+.. tip::
     
     The union of two sets corresponds to the English "*or*". 
     
@@ -421,7 +421,7 @@ The first case, where the two sets have elements in common is shown in the next 
 
 The intersection is represented by where the circles meet. In the case of *overlapping* sets, this is non-empty,
 
-.. math:: 
+.. math::
 
 	A \cap B \neq \varnothing
 
@@ -429,7 +429,7 @@ The second case, where the two sets have no elements in common is shown below,
 
 .. plot:: _scripts/py/plots/venns/diagram_disjoint.py
 
-The intersection is represented by where the circles meet. In the case of *disjoint sets*, the circles do not meet. Thus, 
+The intersection is represented by where the circles meet. In the case of *disjoint sets*, the circles do not meet. Thus,
 
 .. math:: 
 
@@ -466,7 +466,7 @@ TODO
 
 The operation of subtracting a set :math:`B` from a set :math:`A` is equivalent to taking the intersection the sets :math:`A` and :math:`B^c`,
 
-.. math:: 
+.. math::
 
 	A - B = A \cap B^c
 
@@ -487,16 +487,16 @@ All of the theorems of Set Theory can be proven in one of two ways:
 
 1. By drawing a :ref:`Venn Diagram <venn-diagrams>` of the sets in question and working out the relations between them graphically.
 
-2. Writing example sets in :ref:`list-notation` and then applying the definitions of :ref:`set-operations` to both sides of the equation. 
+2. Writing example sets in :ref:`list-notation` and then applying the definitions of :ref:`set-operations` to both sides of the equation.
 
-.. note:: 
+.. note::
 
-	Most of the set theorems can be phrased in terms of sets, or in terms of cardinalities. We can do this because all of the following theorems are theorems about *equality* of sets. Recall that from equality we can infer equivalence, 
+	Most of the set theorems can be phrased in terms of sets, or in terms of cardinalities. We can do this because all of the following theorems are theorems about *equality* of sets. Recall that from equality we can infer equivalence,
 
 	.. math::
 
 		A = B \implies A \equiv B
-    
+
 	This will be important when we apply these ideas to :ref:`probability`. For this reason, we will give two versions of each theorem, when possible. One version will be phrased in terms of sets and the other version will be phrased in terms of cardinalities.
 
 .. _basic-theorems:
@@ -511,24 +511,24 @@ Zero Property of Intersections
 
 .. topic:: Zero Property of Intersections
 
-	.. math:: 
+	.. math::
 
 		A \cap \varnothing = \varnothing
 
-	Or equivalently, 
+	Or equivalently,
 
-	.. math:: 
+	.. math::
 
 	        n(A \cap \varnothing) = n(\varnothing)
 
-The intersection of any set :math:`A` with the empty set is the empty set. 
+The intersection of any set :math:`A` with the empty set is the empty set.
 
-.. note:: 
+.. note::
 
 	Notice the resemblance to *zero property of multiplication*,
 
-	.. math:: 
-        
+	.. math::
+
 		a \cdot 0 = 0
 
 .. _zero-property-of-unions:
@@ -538,19 +538,19 @@ Zero Property of Unions
 
 .. topic:: Zero Property of Unions
 
-	.. math:: 
+	.. math::
 
 		A \cup \varnothing = A
 
-	Or equivalently, 
+	Or equivalently,
 
 	.. math::
 
 		n(A \cup \varnothing) = n(A)
 
-The union of any set :math:`A` with the empty set is itself. 
+The union of any set :math:`A` with the empty set is itself.
 
-.. note:: 
+.. note::
 
 	Notice the resembalnce to the *identity property of addition*,
 
@@ -604,11 +604,11 @@ First Identity Property of Unions
 
 .. topic:: Identity Property of Unions
 
-    	.. math:: 
+	.. math:: 
 
 		A \cup S = S 
 
-	Or equivalently, 
+	Or equivalently,
 
 	.. math::
 
@@ -618,7 +618,7 @@ The union of any set :math:`A` with the universal set is the universal set.
 
 .. note:: 
 
-	This theorem does not have an analogous algebraic property. This is where *set theory* starts to diverge from ordinary algebra. 
+	This theorem does not have an analogous algebraic property. This is where *set theory* starts to diverge from ordinary algebra.
 
 .. _second-identity-property-of-unions:
 
@@ -630,7 +630,7 @@ Symbolic Expression
 
         A \cup A = A 
 
-The union of any set :math:`A` with itself is itself. 
+The union of any set :math:`A` with itself is itself.
 
 .. _subset-theorems:
 
@@ -1037,8 +1037,9 @@ It can proved formally as follows,
 
 .. _square-of-opposition:
 
+--------------------------------
 Aristotle's Square of Opposition
-================================
+--------------------------------
 
 The *square of opposition* is a famous logical device for remembering how different propositions involving sets are related to one another. To be more specific, the *square of opposition* shows how negation affects sets. Before we show you the *square of opposition*, let us take a look at the logic behidn it.
 
@@ -1052,21 +1053,20 @@ Can be found by inserting the word "*not*",
 
 However, when we are talking about sets, it is more complicated, because we must *quantify* over which elements in the set proposition is true.
 
-----------
 Derivation
 ----------
 
 Consider the algebraic proposition,
 
-.. math:: 
+.. math::
 
 	2 \cdot x = x + x
 
 This type of statement is obviously true no matter what we insert for *x*. Whatever number we plug into the equation, a true statement will always result. Symbolically, we can express this idea with the :math:`\forall` symbol,
 
-.. math:: 
+.. math::
 
-	\forall x \in \mathbb{R}: 2 \cdot x = x + x 
+	\forall x \in \mathbb{R}: 2 \cdot x = x + x
 
 We read this is as, "for all x, doubling x is equal to adding x twice".
 
@@ -1080,7 +1080,7 @@ We are not free to plug just any value of *x* into this equation. Only a *partic
 
 .. math::
 
-	exists x \in \mathbb{R}: 2x + 1 = 5
+	\exists x \in \mathbb{R}: 2x + 1 = 5
 
 We read this as, "there exists an *x* such that :math:`2x +1 = 5`" or "some *x* satisifies :math:`2x + 1 = 5`.
 
@@ -1099,7 +1099,7 @@ For universal propositions: In the *positive* case, we take a universal proposit
 For existential propositions: In the *positive* case, we take an exisential proposition that asserts something of some element in a set. In the *negative* case, we take an existential proposition that denies something of some element in a set.
 
 Universal Positive Case
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Consider the proposition
 
@@ -1112,7 +1112,7 @@ In order to show this proposition is false, it would be sufficient to show at le
 To express this symbollically, let **D** represent the set of dogs and let :math:`B` represent the set of brown things. Then the first proposition can be represented as,
 
 .. math::
-    
+
 	\forall x \in D: x \in B
 
 .. note::
@@ -1129,15 +1129,14 @@ In order to negate this, we must show there is some element in D that is *not* i
 
 	\exists x \in D: x \notin B
 
-
 Thus, we arrive at the formal definition of the negativion of a universal affirmative proposition,
 
 .. math::
 
-	( \text{ not } \forall x \in A: x \in B) \equiv (\exists x \in A: x \notin B)
+	(\text{ not } \forall x \in A: x \in B) \equiv (\exists x \in A: x \notin B)
 
 Universal Negative Case
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Consider the proposition,
 
@@ -1166,20 +1165,20 @@ Thus, we arrive at the formal definition of the negation of a *universal negativ
 	(\exists x \in C: x \in F) \equiv (\text {not} \forall x \in C: \notin F)
 
 Existential Positive Case
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TODO 
+TODO
 
 Existential Negative Case
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TODO 
+TODO
 
 --------------------
 Square of Opposition
 --------------------
 
-Finally, we come to the *square of opposition*, a visual device for remembering everything that has been covered in this section. 
+Finally, we come to the *square of opposition*, a visual device for remembering everything that has been covered in this section.
 
 The *square of opposition* is constructed by first drawing a table,
 
