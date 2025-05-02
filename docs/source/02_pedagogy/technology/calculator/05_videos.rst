@@ -1,10 +1,10 @@
-.. _ti84:
+.. _ti84-videos:
 
-=====
-TI-84
-=====
+======
+Videos
+======
 
-.. _ti84_basic_operations:
+.. _ti84-basic-operations:
 
 Basic Operations
 ================
@@ -16,7 +16,7 @@ Creating Lists
     :alt: Creating Lists
     :target: https://www.youtube.com/watch?v=RUGIsQ8Xluk
 
-.. _ti84_statistics:
+.. _ti84-statistics:
 
 Calculus
 ========
@@ -31,7 +31,7 @@ Tangent Lines
 Statistics
 ==========
 
-.. _ti84_histograms:
+.. _ti84-histograms:
 
 Histograms (Discrete)
 ----------------------
@@ -40,7 +40,7 @@ Histograms (Discrete)
     :alt: Histograms (Discrete)
     :target: https://www.youtube.com/watch?v=AzsK0wnPfAg
 
-.. _ti84_ogives:
+.. _ti84-ogives:
 
 Ogives
 ------
@@ -49,7 +49,7 @@ Ogives
     :alt: Sample Percentiles
     :target: https://www.youtube.com/watch?v=KH0b0OL_82Q
 
-.. _ti84_sample_percentiles:
+.. _ti84-sample-percentiles:
 
 Sample Percentiles
 ------------------
@@ -67,8 +67,8 @@ Part 2
 .. image:: https://img.youtube.com/vi/zrfFdfODW7k/maxresdefault.jpg
     :alt: Sample Percentiles Redux
     :target: https://www.youtube.com/watch?v=zrfFdfODW7k
-    
-.. _ti84_central_limit_theorem:
+
+.. _ti84-central-limit-theorem:
 
 Central Limit Theorem
 ---------------------
@@ -76,17 +76,17 @@ Central Limit Theorem
 .. image:: https://img.youtube.com/vi/PUiOgwlS_fM/maxresdefault.jpg
     :alt: Central Limit Theorem
     :target: https://www.youtube.com/watch?v=PUiOgwlS_fM
-   
-.. _ti84_monte_carlo_simulation:
- 
+
+.. _ti84-monte-carlo-simulation:
+
 Monte Carlo Simulation
 ----------------------
 
 .. image:: https://img.youtube.com/vi/gLaFSwyoGHU/maxresdefault.jpg
     :alt: Monte Carlo Simulation
     :target: https://www.youtube.com/watch?v=gLaFSwyoGHU
-    
-.. _ti84_population_distributions:
+
+.. _ti84-population-distributions:
 
 Population Distributions
 ------------------------
@@ -94,14 +94,14 @@ Population Distributions
 .. image:: https://img.youtube.com/vi/lDnkKUqA4nk/maxresdefault.jpg
     :alt: Monte Carlo Simulation
     :target: https://www.youtube.com/watch?v=lDnkKUqA4nk
-	
+
 QQ Plots
 --------
 
 .. image:: https://img.youtube.com/vi/EylKq7hdO78/maxresdefault.jpg
-	:alt: QQ Plots
+    :alt: QQ Plots
 	:target: https://www.youtube.com/watch?v=EylKq7hdO78
-	
+
 Projects
 ========
 
@@ -109,9 +109,9 @@ Correlation
 -----------
 
 .. image:: https://img.youtube.com/vi/6xtN2i2FbsQ/maxresdefault.jpg
-	:alt: Correlation
-	:target: https://www.youtube.com/watch?v=6xtN2i2FbsQ
-	
+    :alt: Correlation
+    :target: https://www.youtube.com/watch?v=6xtN2i2FbsQ
+
 Estimating Pi
 -------------
 
@@ -119,15 +119,14 @@ Part 1
 ******
 
 .. image:: https://img.youtube.com/vi/qSR0jIKeMmU/maxresdefault.jpg
-	:alt: Estimating Pi With Simulation 1/3
-	:target: https://www.youtube.com/watch?v=qSR0jIKeMmU
+    :alt: Estimating Pi With Simulation 1/3
+    :target: https://www.youtube.com/watch?v=qSR0jIKeMmU
 
 Part 2
 ******
 
 .. image:: https://img.youtube.com/vi/J9ILZhPYds4/maxresdefault.jpg
-	:alt: Estimating Pi With Simulation 2/3
-	:target: https://www.youtube.com/watch?v=J9ILZhPYds4
+    :alt: Estimating Pi With Simulation 2/3
+    :target: https://www.youtube.com/watch?v=J9ILZhPYds4
 
-	
 
