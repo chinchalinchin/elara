@@ -721,3 +721,9 @@ Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their
     To imagine a :ref:`language <language>` is to imagine a form of life.
 
     -- `Philosophical Investigations`_, Ludwig Wittgenstein
+
+---
+
+In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta :ref:`language <language>`, *not* the object :ref:`language <language>`. When the :ref:`assignment <value-assignment>` of values to the terms of the object :ref:`language <language>` satisfies a :ref:`proposition <proposition>` of the meta :ref:`language <language>` for all possible :ref:`assignments <value-assignment>`, then the result is said "*to be true*". Tarski defines :ref:`truth <truth>` relative to the combinatorial totality of value assignments. :ref:`Truth <truth>` is the semantic locus point of *syntactic satisfaction* across all possible interpretations.
+
+---

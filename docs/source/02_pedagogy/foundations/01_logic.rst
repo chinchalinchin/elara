@@ -276,7 +276,22 @@ Aristotelian logic differs from propositional logic. In (first order) propositio
   1. Uppercase Letters (**A**, **B**, **C**): Terms.
   2. Lowercase Letters (**a**, **i**, **o**, **e**): Categorical Relations
 
-A "*term*" in Aristotelian logic is not quite a :ref:`set <sets>` and it is not quite a :ref:`proposition <proposition>`. A "*term*" is a grammatical object that denotes both the *subject* and the *predicate*. To truly understand the distinction that is made in Aristotelian logic by the definition of a "*term*", one must study the philosophy of Aristotle in detail. In short, a *term* is the "*οὐσία*", the substance and essence of a *thing*.
+A "*term*" in Aristotelian logic is not quite a :ref:`set <sets>` and it is not quite a :ref:`proposition <proposition>`. A "*term*" is a grammatical object that denotes both the *subject* and the *predicate*. In short, a *term* can be understood, roughly, as Aristotle's "*οὐσία*", the substance and essence of a *thing*.
+
+The ontological status of a "*term*" in Aristotelian logic is substantially more complex than the preceding implies. To fully elucidate its natures requires a nuanced discussion on the `Categories`_ of Aristotle. To be brief, Aristotle considers thought of :ref:`language <language>` as being composed of ten categories,
+
+1. Substance (οὐσία): What something fundamentally is.
+2. Quantity (ποσόν): How much or how many of the subtance exists.
+3. Quality (ποιόν): What kind or sort of thing a substance is.
+4. Relation (πρός τι): How a substance stands in reference to another substance.
+5. Place (ποῦ): Where the substance is located.
+6. Time (πότε): When the substance exists.
+7. Position/Posture (κεῖσθαι): The physical arrangement of the substance's parts.
+8. State (ἔχειν): The condition or state of having something.
+9. Action (ποιεῖν): What the substance is actively doing.
+10. Passion (πάσχειν): What is being done to the substance.
+
+The ultimate subject of a sentence in Aristotelian logic must reduce to a "*substantial* :ref:`being <being>`" of reality.
 
 .. topic:: Definitions
 
@@ -287,10 +302,38 @@ A "*term*" in Aristotelian logic is not quite a :ref:`set <sets>` and it is not 
 
 The sentences **AaB** and **AeB** are called *universal assertions* since they express relations of the whole. The sentences **AiB** and **AoB** are called *particular assertions* since they express relations between the parts.
 
+A sentence *p* is the *contradictory* of another sentence *q* if the :ref:`truth <truth>` of *p* implies the falsity of the *q* and the falsity of *p* implies the :ref:`truth <truth>` of *q*. For example, if all **B** are **A** is true, then it must be the case that some **B** are not **A** is false (i.e., some **B** *are* A). In the opposite direction, if all **B** are **A** is false, then it must be the case the some **B** are not **A** is true
+
 .. topic:: Contradictories
 
   1. **AaB** is the contradictory of **AoB**
   2. **AiB** is the contradictory of **AeB**
+
+A sentence *p* is the *contrary* of *q* if the :ref:`truth <truth>` of *p* implies the falsity of *q*, but the falsity of *p* does not imply the falsity of *q*. For example, if **AaB** is true, then it must be the case that **AeB** is false. However, if **AaB** is false, then **AeB** is not necessarily true, since it may be the case **AiB**.
+
+.. topic:: Contraries
+
+  1. **AaB** is the contrary of **AeB**
+  2. **AeB** is the contray of **AaB**
+
+A sentence *p* is the *subcontrary* of *q* is the falsity of *p* implies the :ref:`truth <truth>` of *q*, but the :ref:`truth <truth>` of *p* does not imply the falsity of *q*. For example, if **AiB** is false, then it must be the case **AoB**. However, from the truth of **AiB**, nothing regarding **AoB** can be deduced.
+
+.. topic:: Subcontraries
+
+  1. **AiB** is *subcontrary* of **AoB**
+  2. **AoB** is the *subcontray* of **AiB**
+
+A sentence *p* is the *subalternation* of *q* if the :ref:`truth <truth>` of *q* implies the :ref:`truth <truth>` of *p*. For example, if **AaB**, it must be the case **AiB**.
+
+.. topic:: Subalternations
+
+  1. **AiB** is the subalternation of **AaB**
+  2. **AoB** is the subalternation of **AeB**
+
+.. topic:: Superalternations
+
+  1. **AaB** is the superalternation of **AiB**
+  2. **AeB** is the superalternation of **AoB**
 
 .. _aristotelian-conversions:
 
