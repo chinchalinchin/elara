@@ -1,8 +1,6 @@
-.. _work:
-
-====
-Work
-====
+===========
+Assignments
+===========
 
 .. toctree::
    :maxdepth: 2

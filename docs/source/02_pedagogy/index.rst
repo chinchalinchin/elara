@@ -8,7 +8,7 @@ Pedagogy
    :maxdepth: 2
    :caption: Contents:
 
-   homework/index
+   assignments/index
    technology/index
    foundations/index
    probability/index
