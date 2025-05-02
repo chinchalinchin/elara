@@ -191,7 +191,7 @@ The :ref:`truth table <truth-tables>` for logical implication is given below,
 
   * - :math:`p`
     - :math:`q`
-    - :math:`p \imples q`
+    - :math:`p \implies q`
   * - T
     - T
     - T
@@ -241,22 +241,56 @@ Symbolic Arguments
 
 TODO
 
+.. _tautologies:
+
 Tautologies
 -----------
 
 TODO
+
+.. _contradictions:
 
 Contradictions
 --------------
 
 TODO
 
+.. _categorical-logic:
+
 Categorical Logic
 =================
+
+.. _aristotelian-logic:
 
 ------------------
 Aristotelian Logic
 ------------------
+
+Aristotelian logic differs from propositional logic. In (first order) propositional logic, the proposition being expressed is reduced to a single truth value and this value is what enables its syntactic calculus through symbolic arguments. Aristotle, however, viewed the proposition as being decomposed into *terms* which then had categorical relations asserted between them. In other words, The Aristotelian model of logic is the study of sentences that express *categorical relations* between *terms*.
+
+.. topic:: Definition
+
+  1. Uppercase Letters (**A**, **B**, **C**): Terms.
+  2. Lowercase Letters (**a**, **i**, **o**, **e**): Categorical Relations
+
+A "*term*" in Aristotelian logic is not quite a :ref:`set <sets>` and it is not quite a :ref:`proposition <proposition>`. A "*term*" is a grammatical object that denotes both the *subject* and the *predicate*. To truly understand the distinction that is made in Aristotelian logic by the definition of a "*term*", one must study the philosophy of Aristotle in detail. In short, a *term* is the "*οὐσία*", the substance and essence of a *thing*.
+
+.. topic:: Definitions
+
+  1. **AaB**: All **B** are **A**.
+  2. **AiB**: Some **B** are **A**.
+  3. **AoB**: Some **B** are not **A**
+  4. **AeB**: No **B** are **A**
+
+The sentences **AaB** and **AeB** are called *universal assertions* since they express relations of the whole. The sentences **AiB** and **AoB** are called *particular assertions* since they express relations between the parts.
+
+.. topic:: Contradictories
+
+  1. **AaB** is the contradictory of **AoB**
+  2. **AiB** is the contradictory of **AeB**
+
+Conversions
+-----------
 
 TODO
 

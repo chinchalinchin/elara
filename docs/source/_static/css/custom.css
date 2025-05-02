@@ -10,6 +10,7 @@
     color: var(--pst-color-link-hover);
 }
 
+section#knowledge .epigraph,
 section#tractatus .epigraph, 
 section#theosophy .epigraph,
 section[id^="year"] .epigraph {

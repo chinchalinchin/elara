@@ -8,7 +8,7 @@ Knowledge
 
     -- Socrates 
 
-How do we know things? To put a finer point on it, how do we know *that* we know things? What exactly does *knowing a thing* entail, anyway? The goal of this course is to provide, if not an exact answer, then at least a *probable* answer to this question. Make no mistake, the question is not easily answered, even in a *probable* way. In trying to uncover the answer, you will be required to think about concepts you have likely never encountered prior to this class. 
+How do we know things? To put a finer point on it, how do we know *that* we know things? What exactly does *knowing a thing* entail, anyway? The goal of this course is to provide, if not an exact answer, then at least a *probable* answer to this question. Make no mistake, the question is not easily answered, even in a *probable* way. In trying to uncover the answer, you will be required to think about concepts you have likely never encountered prior to this class.
 
 Before we begin to untangle the answer, let us take a step back and see what put us in this pickle in the first place.
 
