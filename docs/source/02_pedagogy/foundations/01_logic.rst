@@ -371,6 +371,8 @@ A sentence *p* is the *subalternation* of *q* if the :ref:`truth <truth>` of *q*
   1. **AiB** is the subalternation of **AaB**
   2. **AoB** is the subalternation of **AeB**
 
+A sentence *p* is the *superalternation* of *q* if the falsity of *q* implies the falsity of *p*. For example, if **AiB** is false, then **AaB** must also be false.
+
 .. topic:: Superalternations
 
   1. **AaB** is the superalternation of **AiB**
