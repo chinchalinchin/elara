@@ -1,5 +1,4 @@
-.. _foundations:
-
+===========
 Foundations
 ===========
 

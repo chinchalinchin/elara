@@ -19,7 +19,7 @@ It is impossible to symbolize the actual mechanics of thought. Consider the argu
 
     \therefore q
 
-The law of *modus ponens* is a primitive notion in logic [#april_2014_01]_ and it must be accepted at face value in order to go any further. If one asks why this law is so, there can be no explanation. It is simply the case and one must be satisfied at that. There is no greater ballast upon which to rest the truth of this proposition. The reason cannot be captured in symbols; the symbols which express *modus ponens* can only stand and present the meaning for an attentive mind to decipher. If it is not accepted, the possibility of communication has ceased.
+The law of :ref:`modus ponens <modus-ponens>` is a primitive notion in logic [#april_2014_01]_ and it must be accepted at face value in order to go any further. If one asks why this law is so, there can be no explanation. It is simply the case and one must be satisfied at that. There is no greater ballast upon which to rest the truth of this proposition. The reason cannot be captured in symbols; the symbols which express *modus ponens* can only stand and present the meaning for an attentive mind to decipher. If it is not accepted, the possibility of communication has ceased.
 
 ---
 

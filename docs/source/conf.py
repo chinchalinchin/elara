@@ -6,8 +6,6 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-from docutils import nodes
-from docutils.parsers.rst import roles, directives
 from sphinx.application import Sphinx
 import argparse
 import os
@@ -48,8 +46,7 @@ html_theme = 'sphinx_book_theme'
 
 html_static_path = [ 
     '_static',
-    '_scripts',
-    ''
+    '_scripts'
 ]
 
 html_css_files = [
@@ -61,6 +58,9 @@ html_js_files = [
 ]
 
 html_theme_options = {
+    "analytics": {
+        "google_analytics_id": "G-BRG311ZM0P"
+    },
     "icon_links": [
         {
             "name": "Docker",
@@ -101,9 +101,6 @@ latex_preamble = r"""
 \usepackage{runic}
 \usepackage{textcomp}
 \usepackage{accents}
-
-\newcommand{\smooth}[1]{\accentset{'}{#1}}
-\newcommand{\rough}[1]{\accentset{\textrevapostrophe}{#1}}
 """
 
 latex_elements = {

@@ -58,7 +58,7 @@ It seems likely that we will, in the near future, have an algorithm capable of p
 July
 ----
 
-:ref:`Frege <frege>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects,
+:ref:`Frege <frege-axioms>` uncovers an interesting contingency in the logical form in his definitions of primitive Number. In modern symbolism, he is defining 0 and 1 respectively in terms of the cardinality of sets, i.e. in terms of the enumeration of objects,
 
 .. math::
 
@@ -80,7 +80,7 @@ Furthermore, the subsequent form of numbers can be expressed via recursion back 
 
     n(B) = 1
 
-Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the :ref:`Fregean definition of zero <frege-zero>`: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in :ref:`Frege <frege>`'s case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
+Take note, the form of the contradiction is irrrelevant. We could as well define zero as the cardinality of the negation of the excluded middle, but there is nevertheless an inherent property to any form we substitute into the :ref:`Fregean definition of zero <frege-axioms>`: the expression will always involve an indeterminate x and a relation that cannot possibly result in a judgement of truth even in its indeterminacy, exemplified in :ref:`Frege <frege-axioms>`'s case as the inabilty of thing to not be itself. The foundation of Frege's arithmetic philosophy rests on the ontological equivalence of contradiction and nullity.
 
 ---
 
@@ -100,7 +100,7 @@ September
 
 Where is the evidence to be found for the assertion *I am not this*?
 
-If the *this* is, while *I* am, where is the coincidence? If the *this* has being through *is*, then what does *I* have through *am*? 
+If the *this* is, while *I* am, where is the coincidence? If the *this* has being through *is*, then what does *I* have through *am*?
 
 ---
 
@@ -134,7 +134,7 @@ Uncertainty is a state of incompleteness, where knowledge cannot be attained bec
 
 A possibiilty is a type of a quantity that transmits uncertainty to reality by :ref:`being <being>` possible. In this sense, possibility and probability are synonyms. Just as all :ref:`probabilities <probability>` must sum to one, all possibilities must converge towards :ref:`being <being>`.
 
-The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie*, :ref:`Cantor <cantor>`...).
+The isomorphism is nearly perfect: the distribution of an event's :ref:`probability <probability>` cannot be known without previous measurement so that before an event occurs any prior assumption about its nature can only be a completely random guess; Moreover, our knowledge of the distribution can only approach towards its true shape asymptotically as we accumulate a larger and larger sample, never actually transcending uncertainty (*cie la vie, Cantor...*).
 
 In the same way, a possibility can only be known after the fact. It is entirely impossible [#november_2022_02]_ to know whether a possibility is possible until it already happened. A possibility is characterized as something that could obtain, but to know whether it could obtain, one must know it has already been obtained. [#november_2022_03]_
 

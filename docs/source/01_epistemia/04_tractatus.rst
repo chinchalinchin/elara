@@ -2,8 +2,8 @@
 Tractatus
 ---------
 
-- :ref:`a priori <a-priori-a-posteriori>`: Knowledge that precedes experience.
-- :ref:`a posteriori <a-priori-a-posteriori>`: Knowledge that arises through experience.
+- :ref:`A Priori <a-priori-a-posteriori>`: Knowledge that precedes experience.
+- :ref:`A Posteriori <a-priori-a-posteriori>`: Knowledge that arises through experience.
 - :ref:`being`: What is.
 - :ref:`bedeutung`: That to which a name refers.
 - :ref:`existence`: TODO
@@ -15,9 +15,9 @@ Tractatus
 - :ref:`sinn`: The means by which a name refers.
 - :ref:`synthesis`: TODO
 - :ref:`truth`: Everything that is the case.
-- :ref:`vorhandenheit <vorhandenheit-zuhandenheit>`: That which is without the world.
+- :ref:`Vorhandenheit <vorhandenheit-zuhandenheit>`: That which is without the world.
 - :ref:`world`: Everything that is.
-- :ref:`zuhandenheit <vorhandenheit-zuhandenheit>`: That which is within the world.
+- :ref:`Zuhandenheit <vorhandenheit-zuhandenheit>`: That which is within the world.
 
 .. _a-priori-a-posteriori:
 
@@ -25,7 +25,7 @@ A Priori / A Posteriori
 -----------------------
 
 .. epigraph::
-
+  
   **Socrates**: Have you heard what they say nowadays that knowing is?
 
   **Theatetus**: Perhaps; however, I do not remember just at this moment.

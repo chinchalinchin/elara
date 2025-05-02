@@ -31,8 +31,6 @@ For instance, lingustic representations possess the property of standing for thi
 
 Here a letter, "*R*" or "*B*" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of "*being red*". The letter "*R*" makes an abstraction of the elements we agree belong to it.
 
----
-
 On the other hand, there are sometimes classes of words that stand for themselves, or at least include themselves in that for which they stand. For example, the word "*word*" is a word that stands for the thing which it is,
 
     "*Word*" is a word.
@@ -41,13 +39,13 @@ However, a crucial distinction must be drawn in these cases. The quotation marks
 
     Word is a word.
 
-This analysis hinges on the realization first proffered by :ref:`Tarski <tarski>` that there is a consequential difference between the :ref:`language <language>` in which we speak propositions of a :ref:`language <language>` and the :ref:`language <language>` in which we speak *about* the propositions of a :ref:`language <language>`.
+This analysis hinges on the realization first proffered by Tarski that there is a consequential difference between the :ref:`language <language>` in which we speak propositions of a :ref:`language <language>` and the :ref:`language <language>` in which we speak *about* the propositions of a :ref:`language <language>`.
 
     The :ref:`language <language>` one speaks is not necessarily the :ref:`language <language>` about which one speaks.
 
-Confusion often results when the same :ref:`language <language>` performs both functions. In the case of mathematics, where the proposition :ref:`language <language>` is that of, say, arithmetic, and the description :ref:`language <language>` that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of " :ref:`Being <being>` " in the early twentieth century.
+Confusion often results when the same :ref:`language <language>` performs both functions. In the case of mathematics, where the proposition :ref:`language <language>` is that of, say, arithmetic, and the description :ref:`language <language>` that of logic, the distinction is easier to maintain. When doing philosophy, the different levels of speech often waver and blur together, leading to confusion. For the purposes of clarity, quotation marks serve the function of referring to the name of the concept addressed whereas a unquoted word expresses what is meant by the concept. This lack of clarity throughout history is one of the root causes of Martin Heidegger's deconstruction of ":ref:`being <being>`" in the early twentieth century.
 
-If the goal is to define ":ref:`being <being>`", then one can only succeed at the level of description. A description *about* a " :ref:`Being <being>` " is incapable of saying what is meant by " :ref:`being <being>` ".
+If the goal is to define ":ref:`being <being>`", then one can only succeed at the level of description. A description *about* a " :ref:`being <being>` " is incapable of saying what is meant by ":ref:`being <being>`".
 
 .. _2024-may:
 
@@ -166,7 +164,7 @@ To determine whether this constitues a tautology, it must be shown whether or no
 
 .. math::
 
-    s \implies t 
+    s \implies t
 
 Where :math:`s = (p \implies r) \land (q \implies r)` and :math:`t = ((p \land q) \implies r)`.
 

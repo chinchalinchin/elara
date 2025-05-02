@@ -10,9 +10,8 @@
     color: var(--pst-color-link-hover);
 }
 
-#tractatus, 
-#theosophy,
-[id^="year"]
-.epigraph {
+section#tractatus .epigraph, 
+section#theosophy .epigraph,
+section[id^="year"] .epigraph {
     font-size: 0.75em !important;
 }
