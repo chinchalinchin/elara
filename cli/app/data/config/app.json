@@ -240,7 +240,8 @@
                         ".pyc",
                         ".zip",
                         ".gz",
-                        ".log"
+                        ".log",
+                        ".csv"
                     ],
                     "file": [
                         "poems.json",
@@ -265,7 +266,10 @@
                         ".settings",
                         "node_modules",
                         "venv",
-                        ".venv"
+                        ".venv",
+                        "build",
+                        "_notes",
+                        "_static"
                     ]
                 },
                 "template": "summary"

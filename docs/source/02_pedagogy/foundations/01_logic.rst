@@ -15,6 +15,12 @@ Propositional Logic
 Propositions
 ------------
 
+.. epigraph::
+
+  I shall not try to give a general definition of "proposition", as it is impossible to do so.
+
+  -- `Wittgenstein Lectures`_, Ludwig Wittgenstein
+
 Symbolic Expression
     :math:`p, q, r`
 
@@ -27,7 +33,7 @@ Definition
 Truth Tables
 ------------
 
-Truth tables are the standard way of evaluating the truth of a symbolic proposition. However, when the number of terms in a compound proposition rises above 4, truth tables can quickly become cumbersome. See :ref:`carnaps-method` for an alternate way of evaluating the truth of a symbolic propositions.
+:ref:`Truth tables <truth-tables>` are the standard way of evaluating the :ref:`truth <truth>` of a symbolic proposition. However, when the number of terms in a compound proposition rises above 4, :ref:`truth tables <truth>` can quickly become cumbersome. See :ref:`carnaps-method` for an alternate way of evaluating the truth of a symbolic propositions.
 
 .. _truth-values:
 
@@ -40,7 +46,7 @@ Truth tables are the standard way of evaluating the truth of a symbolic proposit
 Value Assignment
 ----------------
 
-Each row of a *Truth Table* represents a different *value assignment* to the constituent propositions involved in the compound proposition. For example, in the case of *"p or q"*, the compound symbolic proposition is :math:`p \lor q`. A truth table is constructed by listing every possible combination of truth value for ``p`` and ``q``,
+Each row of a :ref:`truth table <truth-tables>` represents a different *value assignment* to the constituent propositions involved in the compound proposition. For example, in the case of *"p or q"*, the compound symbolic proposition is :math:`p \lor q`. A :ref:`truth table <truth-tables>` is constructed by listing every possible combination of truth value for ``p`` and ``q``,
 
 .. list-table::
   :header-rows: 1
@@ -257,6 +263,41 @@ Contradictions
 ^^^^^^^^^^^^^^
 
 TODO
+
+.. _carnaps-method:
+
+Carnap's Method of Tautology
+----------------------------
+
+A common problem in formal :ref:`logic <logic>` is determining whether a given proposition is a :ref:`tautology <tautologies>`, i.e. :ref:`true <truth>` in all possible cases. Since the number of rows in a :ref:`truth table <truth-tables>` grows exponentially with the number of :ref:`propositions <proposition>`, the traditional method of :ref:`truth tables <truth-tables>` is computationally expensive. In `Introduction to Symbolic Logic and Its Applications`_, Carnap presents a different method for evaluating whether or not a given :ref:`proposition <proposition>` is a :ref:`tautology <tautologies>`. Rather than enumerating all possible cases and checking if each one is true, it suffices to show the assignment of false to a :ref:`proposition <proposition>` is impossible. In other words, Carnap's method starts by assuming the :ref:`proposition <proposition>` is false and then works backwards through the logical connectives to see whether or not an :ref:`assignment <value-assignment>` of false is consistent with the :ref:`proposition <proposition>`.
+
+For example, consider the well-known property of implications,
+
+.. math::
+
+    ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
+
+To determine whether this constitues a :ref:`tautology <tautologies>`, it must be shown whether or not an :ref:`assignment <value-assignment>` of false can be made to the entire :ref:`proposition <proposition>`. The :ref:`proposition <proposition>` is built out of nested propositions. The :ref:`assignment <value-assignment>` of false to entire :ref:`proposition <proposition>` will in turn require the subformulas of the :ref:`proposition <proposition>` to assume particular values. This will yield conditions for evaluating whether the overall :ref:`assignment <value-assignment>` is consistent with the :ref:`assignment <value-assignment>` of its components. The top-level connective is,
+
+.. math::
+
+    s \implies t
+
+Where :math:`s = (p \implies r) \land (q \implies r)` and :math:`t = ((p \land q) \implies r)`.
+
+In order for this :ref:`implication <logical-implication>` to be false, the hypothesis, :math:`s`, must be :ref:`true <truth>`, while the consequence, :math:`t`, must be false.
+
+The :ref:`assignment <value-assignment>` of false to :math:`t` in turn requires :math:`p \land q` to be true and :math:`r` to be false.
+
+The :ref:`assignment <value-assignment>` of :ref:`true <truth>` to :math:`p \land q` in turn requires :math:`p` be true and :math:`q` be :ref:`true <truth>`.
+
+Thus, it is seen in order for the :ref:`proposition <proposition>` itself to be false, :math:`p` and :math:`q` must be true, while :math:`r` is false.
+
+These values, however, are inconsistent with the hypothesis, :math:`s`, which was required to be :ref:`true <truth>`, for :math:`p \implies r` and :math:`q \implies r` are both false under this :ref:`assignment <value-assignment>`, and thus their :ref:`conjunction <logical-conjunction>` is false. This :ref:`contradicts <contradictions>` our initial assumption that :math:`s` is :ref:`true <truth>`. Therefore, the entire :ref:`proposition <proposition>` cannot be false for any assignment and it must be concluded the entire :ref:`proposition <proposition>` is :ref:`true <truth>` for all possible values of :math:`p`, :math:`q` and :math:`r`.
+
+.. math::
+
+    \forall p, q, r: ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
 
 .. _categorical-logic:
 

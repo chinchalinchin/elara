@@ -15,3 +15,4 @@ Epistemia
    04_tractatus
    05_theosophy
    06_axiomata
+   07_probatum
