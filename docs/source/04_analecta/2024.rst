@@ -17,9 +17,9 @@ April
 
 It is first of all said, and "*to be said*" requires what is said to be expressible in :ref:`language <language>`. Every linguistic form is a representation. Therefore, something said is necessarily representative of some other thing. What a representation is and what it is representative of is left vague in the beginning, but the form of representation is not: :ref:`language <language>`.
 
-In order to understand the initial statement, one then turns to an analysis of :ref:`language <language>` in order to clarify what could possibly be meant by a thing which can be said. A description of :ref:`language <language>` is a necesary component of any exposition that wants to analyze the ways in which "*being*" is said. In making this description, one immediately encounters the essential problem in ontological endeavors: describing the operation of "*description*"" is itself a description.
+In order to understand the initial statement, one then turns to an analysis of :ref:`language <language>` in order to clarify what could possibly be meant by a thing which can be said. A description of :ref:`language <language>` is a necesary component of any exposition that wants to analyze the ways in which ":ref:`being <being>`" is said. In making this description, one immediately encounters the essential problem in ontological endeavors: describing the operation of "*description*"" is itself a description.
 
-Every system of thought, by objectifying the world, makes an object of itself within that system. "*System*" in this sense is synonymous with and equivalent to "*:ref:`language <language>`*".
+Every system of thought, by objectifying the world, makes an object of itself within that system. "*System*" in this sense is synonymous with and equivalent to ":ref:`language <language>`".
 
 For instance, lingustic representations possess the property of standing for things they themselves are not.
 
@@ -29,7 +29,7 @@ For instance, lingustic representations possess the property of standing for thi
 
     Let "*B*" stand for things that are blue.
 
-Here a letter, "*R*" or "*B*" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of "*being red*". The letter "*R*" makes an abstraction of the elements we agree belong to it.
+Here a letter, "*R*" or "*B*" , stands in place of something else. These letters are *representations*. Note the letter "*R*"" is not a thing that is red, except in circumstances where it is printed in red ink. Rather, it symbolizes the conjunction in thought of elements that possess the attribute of ":ref:`being <being>` *red*". The letter "*R*" makes an abstraction of the elements we agree belong to it.
 
 On the other hand, there are sometimes classes of words that stand for themselves, or at least include themselves in that for which they stand. For example, the word "*word*" is a word that stands for the thing which it is,
 
@@ -95,9 +95,9 @@ To say the same thing in a different way,
 
     To be a *being* is to be *a* being.
 
-Apparently tautological in form, the exact meaning of the Liebniz's proposition can only be understood through the emphasis placed on its constituent words, which in turn immediately enriches its otherwise vacuous content. In this way, the words in Leibniz's proposition have semantic content that is not contained in their letters, if by "*letters*" it is meant "*characters of the alphabet*". This is obvious in :ref:`languages <language>` with aspirated breathing marks, where the operation of emphasis possesses a symbol within the :ref:`language <language>`, but English can be deceptive in this regard, for italicization or boldening are not normally considered a linguistic symbol, even though they possess no warrant to belong to any other classification.
+Apparently :ref:`tautological <tautologies>` in form, the exact meaning of the Liebniz's :ref:`proposition <proposition>` can only be understood through the emphasis placed on its constituent words, which in turn immediately enriches its otherwise vacuous content. In this way, the words in Leibniz's :ref:`proposition <proposition>` have semantic content that is not contained in their letters, if by "*letters*" it is meant "*characters of the alphabet*". This is obvious in :ref:`languages <language>` with aspirated breathing marks, where the operation of emphasis possesses a symbol within the :ref:`language <language>`, but English can be deceptive in this regard, for italicization or boldening are not normally considered a linguistic symbol, even though they possess no warrant to belong to any other classification.
 
-Leibniz's emphasis is a form of naming that would more naturally be represented with quotation marks. The lefthand side of the proposition selects the name of :ref:`being <being>`, ":ref:`being <being>`", preparing it for the operation of definition. The selection is then equated through the copula of being to the righthand side, which defines the named :ref:`being <being>` as the being of the name of the article through which it is selected for naming. A ":ref:`being <being>`" is nothing more than an index attached to a :ref:`being <being>`.
+Leibniz's emphasis is a form of naming that would more naturally be represented with quotation marks. The lefthand side of the :ref:`proposition <proposition>` selects the name of :ref:`being <being>`, ":ref:`being <being>`", preparing it for the operation of definition. The selection is then equated through the copula of :ref:`being <being>` to the righthand side, which defines the named :ref:`being <being>` as the :ref:`being <being>` of the name of the article through which it is selected for naming. A ":ref:`being <being>`" is nothing more than an index attached to a :ref:`being <being>`.
 
 The operation of naming can be understood in terms of pure direction. A rule is given that picks a name from the domain of names and assigns to it an object in the domain of objects. In the preceding sentence, "*object*" is not necessarily equivalent to "*thing*", and might be more precisely described as "*an indeterminate* :ref:`being <being>`".
 
@@ -129,7 +129,7 @@ Frege was the first to recognize the mathematical function as possessing the for
 November 
 --------
 
-The desire for exegesis cannot be met without recourse to personal experience, and in introducing the subjective element, the exegesis itself is undone. One wants a formal deduction, a series of arguments absolute and pure, proceeding from a starting point whose self-evidence is immanent. One wants to find the words to lay upon this thing called life like a map, to show what it is and how it is to be understood. We seek a science that explains what it is to be, that will, as part of its apparatus, integrate our very consciousness into its fabric and render unto us a divine sort of revelation.
+The desire for exegesis cannot be met without recourse to personal experience, and in introducing the subjective element, the exegesis itself is undone. One wants a formal deduction, a series of arguments absolute and pure, proceeding from a starting point whose self-evidence is immanent. One wants to find the words to lay upon this thing called life like a map, to show what it is and how it is to be understood. We seek a science that explains what it is :ref:`to be <being>`, that will, as part of its apparatus, integrate our very consciousness into its fabric and render unto us a divine sort of revelation.
 
 This is the essential human delusion. Essential, because it resides in every activity; there is nothing which is that does not presuppose the law of cause and effect, and so we come to be supposing all which is must abide this fundamental law. Human, because it is our :ref:`poetical <syntagmics>` curse to attach symbols to objects. Delusion, because the subject will never find itself among objects, except as an object.
 
@@ -152,7 +152,7 @@ Let us use this a ballast when the ontological investigations we undertake lead 
 Carnap's Method of Tautology
 ----------------------------
 
-A common problem in formal logic is determining whether a given proposition is a tautology, i.e. true in all possible cases. Since the number of rows in a truth table grows exponentially with the number of propositions, the traditional method of truth tables is computationally expensive. In `Introduction to Symbolic Logic and Its Applications`_, Carnap presents a different method for evaluating whether or not a given proposition is a tautology. Rather than enumerating all possible cases and checking if each one is true, it suffices to show the assignment of false to a proposition is impossible. In other words, Carnap's method starts by assuming the proposition is false and then works backwards through the logical connectives to see whether or not an assignment of false is consistent with the proposition.
+A common problem in formal :ref:`logic <logic>` is determining whether a given proposition is a :ref:`tautology <tautologies>`, i.e. :ref:`true <truth>` in all possible cases. Since the number of rows in a :ref:`truth table <truth-tables>` grows exponentially with the number of :ref:`propositions <proposition>`, the traditional method of :ref:`truth tables <truth-tables>` is computationally expensive. In `Introduction to Symbolic Logic and Its Applications`_, Carnap presents a different method for evaluating whether or not a given :ref:`proposition <proposition>` is a :ref:`tautology <tautologies>`. Rather than enumerating all possible cases and checking if each one is true, it suffices to show the assignment of false to a :ref:`proposition <proposition>` is impossible. In other words, Carnap's method starts by assuming the :ref:`proposition <proposition>` is false and then works backwards through the logical connectives to see whether or not an :ref:`assignment <value-assignment>` of false is consistent with the :ref:`proposition <proposition>`.
 
 For example, consider the well-known property of implications,
 
@@ -160,7 +160,7 @@ For example, consider the well-known property of implications,
 
     ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
 
-To determine whether this constitues a tautology, it must be shown whether or not an assignment of false can be made to the entire proposition. The proposition is built out of nested propositions. The assignment of false to entire proposition will in turn require the subformulas of the proposition to assume particular values. This will yield conditions for evaluating whether the overall assignment is consistent with the assignment of its components. The top-level connective is,
+To determine whether this constitues a :ref:`tautology <tautologies>`, it must be shown whether or not an :ref:`assignment <value-assignment>` of false can be made to the entire :ref:`proposition <proposition>`. The :ref:`proposition <proposition>` is built out of nested propositions. The :ref:`assignment <value-assignment>` of false to entire :ref:`proposition <proposition>` will in turn require the subformulas of the :ref:`proposition <proposition>` to assume particular values. This will yield conditions for evaluating whether the overall :ref:`assignment <value-assignment>` is consistent with the :ref:`assignment <value-assignment>` of its components. The top-level connective is,
 
 .. math::
 
@@ -168,15 +168,15 @@ To determine whether this constitues a tautology, it must be shown whether or no
 
 Where :math:`s = (p \implies r) \land (q \implies r)` and :math:`t = ((p \land q) \implies r)`.
 
-In order for this implication to be false, the hypothesis, :math:`s`, must be true, while the consequence, :math:`t`, must be false.
+In order for this :ref:`implication <logical-implication>` to be false, the hypothesis, :math:`s`, must be :ref:`true <truth>`, while the consequence, :math:`t`, must be false.
 
-The assignment of false to :math:`t` in turn requires :math:`p \land q` to be true and :math:`r` to be false.
+The :ref:`assignment <value-assignment>` of false to :math:`t` in turn requires :math:`p \land q` to be true and :math:`r` to be false.
 
-The assignment of true to :math:`p \land q` in turn requires :math:`p` be true and :math:`q` be true.
+The :ref:`assignment <value-assignment>` of :ref:`true <truth>` to :math:`p \land q` in turn requires :math:`p` be true and :math:`q` be :ref:`true <truth>`.
 
-Thus, it is seen in order for the proposition itself to be false, :math:`p` and :math:`q` must be true, while :math:`r` is false.
+Thus, it is seen in order for the :ref:`proposition <proposition>` itself to be false, :math:`p` and :math:`q` must be true, while :math:`r` is false.
 
-These values, however, are inconsistent with the hypothesis, :math:`s`, which was required to be true, for :math:`p \implies r` and :math:`q \implies r` are both false under this assignment, and thus their conjunction is false. This contradicts our initial assumption that :math:`s` is true. Therefore, the entire proposition cannot be false for any assignment and it must be concluded the entire proposition is true for all possible values of :math:`p`, :math:`q` and :math:`r`.
+These values, however, are inconsistent with the hypothesis, :math:`s`, which was required to be :ref:`true <truth>`, for :math:`p \implies r` and :math:`q \implies r` are both false under this :ref:`assignment <value-assignment>`, and thus their :ref:`conjunction <logical-conjunction>` is false. This :ref:`contradicts <contradictions>` our initial assumption that :math:`s` is :ref:`true <truth>`. Therefore, the entire :ref:`proposition <proposition>` cannot be false for any assignment and it must be concluded the entire :ref:`proposition <proposition>` is :ref:`true <truth>` for all possible values of :math:`p`, :math:`q` and :math:`r`.
 
 .. math::
 
@@ -187,6 +187,8 @@ These values, however, are inconsistent with the hypothesis, :math:`s`, which wa
 --------
 December
 --------
+
+.. _context-problem:
 
 The Context Problem
 -------------------
@@ -201,9 +203,9 @@ Without any further information about the :ref:`language <language>`, nearly any
 
     lady that sings that tune
 
-In this interpretation, "a" is assigned the meaning of "(the) lady", "b" that of "sings" and "c" that of "tune". Obviously, a large number, possibly infinite in size, of such expressions can be constructed.
+In this interpretation, "*a*" is assigned the meaning of "*(the) lady*", "*b*" that of "*sings*" and "*c*" that of "*tune*". Obviously, a large number, possibly infinite in size, of such expressions can be constructed.
 
-Suppose you are provided a dictionary of *primitive* symbols. This dictionary fixes the meaning of the "=" to the familiar concept of "equality". However, even this disambiguating assignment stills the leave door open to a myriad of interpretations. This assignment imposes only the lightest of constraints on the other word-forms in the expression. For example, it is unclear if the expression with the "equality" assignment should be interpretted as meaning,
+Suppose you are provided a dictionary of *primitive* symbols. This dictionary fixes the meaning of the "*=*" to the familiar concept of equality. However, even this disambiguating assignment stills the leave door open to a myriad of interpretations. This assignment imposes only the lightest of constraints on the other word-forms in the expression. For example, it is unclear if the expression with the "equality" assignment should be interpretted as meaning,
 
     "a = b" and "b = c"
 
@@ -215,9 +217,9 @@ Or
 
     (a = b) = c
 
-In the first interpretation, "a", "b" and "c" must represent terms within the :ref:`language <language>`. In the second interpretation, "a" fills the meta-role of a truth value while "b" and "c" fill the roles of terms in the object :ref:`language <language>`. In the third interpretation, "a" and "b" fill the roles of object terms while "c" fills the role of a :ref:`truth <truth>` value.
+In the first interpretation, "*a*", "*b*" and "*c*" must represent terms within the :ref:`language <language>`. In the second interpretation, "*a*" fills the meta-role of a :ref:`truth value <truth-values>` while "*b*" and "*c*" fill the roles of terms in the object :ref:`language <language>`. In the third interpretation, "*a*" and "*b*" fill the roles of object terms while "*c*" fills the role of a :ref:`truth <truth>` value.
 
-In other words, the assignment of the meaning of "=" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols.
+In other words, the :ref:`assignment <value-assignment>` of the meaning of "*=*" imposes certain constraints on the values the other word-forms in the expression may range over, but ambiguity still remains. Indeed, it may argued a quanta of ambiguity is always present in any interpretation assigned to a string of symbols.
 
 The essential *context* problem boils down to: what word-form in an expression should be treated as primitive in order to be used as a foundation upon which to build the subsequent interpretation.
 
@@ -237,7 +239,7 @@ The Curse of the Rebellious Set
 
 **Theorem** :math:`f: A \to P(A) \leftrightarrow \lvert R \rvert \geq 1`
 
-Let :math:`P(A)` be the power set of :math:`A` (the set of all subsets of :math:`A`). Suppose there exists a bijection :math:`f: A -> P(A)`. This means every element in :math:`A` is paired with a unique subset of :math:`A`, and vice versa.
+Let :math:`P(A)` be the power set of :math:`A` (the set of all subsets of :math:`A`). Suppose there exists a bijection :math:`f: A \to P(A)`. This means every element in :math:`A` is paired with a unique subset of :math:`A`, and vice versa.
 
 If :math:`A = \emptyset`, then its power set :math:`P(A)` contains one element, the empty set itself, :math:`P(A) = {∅}`. In this case, there's no bijection between :math:`A` and :math:`P(A)`, and the theorem holds trivially.
 
@@ -264,9 +266,9 @@ Consider the rebellious set,
 
 This set :math:`R` contains all elements of :math:`A` that are not members of the subset they are mapped to by *f*. By the previous theorem, this set is non-empty. Since *f* is a bijection, there must be an element :math:`r \in A` such that :math:`f(r) = R`.
 
-If :math:`r \in R`, then by the definition of :math:`R`, :math:`r ∉ f(r)`. But :math:`f(r) = R`, so :math:`r \notin R`, a contradiction.
+If :math:`r \in R`, then by the definition of :math:`R`, :math:`r \notin f(r)`. But :math:`f(r) = R`, so :math:`r \notin R`, a contradiction.
 
-If :math:`r \notin R`, then by the definition of :math:`R`, :math:`r ∈ f(r)`. But :math:`f(r) = R`, so :math:`r \in R`, again a contradiction.
+If :math:`r \notin R`, then by the definition of :math:`R`, :math:`r \in f(r)`. But :math:`f(r) = R`, so :math:`r \in R`, again a contradiction.
 
 The initial assumption that there exists a bijection between :math:`A` and :math:`P(A)` must be false.
 
