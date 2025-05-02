@@ -375,7 +375,7 @@ The second case, where the two sets have elements in common is shown in the next
 The union would be represented by the entire area of both circles. Notice the circles share some elements in this case. Sets that have elements in common, but are not subsets in either direction (i.e. neither :math:`A \subseteq B` nor :math:`B \subseteq A`), are called *overlapping*.
 
 .. tip::
-    
+
     The union of two sets corresponds to the English "*or*". 
     
     **Example**

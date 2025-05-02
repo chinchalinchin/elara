@@ -292,6 +292,8 @@ Two propositions together imply one proposition is equivalent to the equivalency
 
 Two propositions together is equivalent to one proposition being equivalent to the equivalency of all equivalent properties of the other proposition.
 
+.. _deductive-science:
+
 Deductive Science
 -----------------
 

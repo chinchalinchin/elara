@@ -327,7 +327,7 @@ The ontological status of a "*term*" in Aristotelian logic is substantially more
 4. Relation (πρός τι): How a substance stands in reference to another substance.
 5. Place (ποῦ): Where the substance is located.
 6. Time (πότε): When the substance exists.
-7. Position/Posture (κεῖσθαι): The physical arrangement of the substance's parts.
+7. Position (κεῖσθαι): The physical arrangement of the substance's parts.
 8. State (ἔχειν): The condition or state of having something.
 9. Action (ποιεῖν): What the substance is actively doing.
 10. Passion (πάσχειν): What is being done to the substance.

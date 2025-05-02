@@ -440,3 +440,22 @@ Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their
 In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta :ref:`language <language>`, *not* the object :ref:`language <language>`. When the :ref:`assignment <value-assignment>` of values to the terms of the object :ref:`language <language>` satisfies a :ref:`proposition <proposition>` of the meta :ref:`language <language>` for all possible :ref:`assignments <value-assignment>`, then the result is said "*to be true*". Tarski defines :ref:`truth <truth>` relative to the combinatorial totality of value assignments. :ref:`Truth <truth>` is the semantic locus point of *syntactic satisfaction* across all possible interpretations.
 
 ---
+
+:ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon.
+
+Aristotle regarded a :ref:`proposition <proposition>` as a representation of :ref:`being <being>`, and thought of the syntax of :ref:`propositions <proposition>` as manifestations of the different *categories* of :ref:`being <being>`. Aristotle's ontology regarded :ref:`being <being>` AS a relationship of predication that ultimately resolved to a category predicated of the primitive subject, termed the "*οὐσία*" (often translated as *substance* [#may_2025_01]_). Aristotle defined the nature of the predicative relations in `Categories`_, summarized below,
+
+1. Substance (*οὐσία*): What something fundamentally is.
+2. Quantity (*ποσόν*): How much or how many of the subtance exists.
+3. Quality (*ποιόν*): What kind or sort of thing a substance is.
+4. Relation (*πρός τι*): How a substance stands in reference to another substance.
+5. Place (*ποῦ*): Where the substance is located.
+6. Time (*πότε*): When the substance exists.
+7. Position (*κεῖσθαι*): The physical arrangement of the substance's parts.
+8. State (*ἔχειν*): The condition or state of having something.
+9. Action (*ποιεῖν*): What the substance is actively doing.
+10. Passion (*πάσχειν*): What is being done to the substance.
+
+Aristotle viewed the predication of a category as applying to either the entire *οὐσία*, a part of the *οὐσία* or none of the *οὐσία*. Modern :ref:`logic <logic>` tends to view this as the equivalent of :ref:`quantification <logical-quantification>`, but as Adelbard pointed out (see below) this type *Aristotelian* :ref:`quantification <logical-quantification>` has important differences that are not present in its modern descendant.
+
+.. [#may_2025_01] Heidegger would call this translation *latinized*, and point out the linguistic network that underlies the meaning of *οὐσία*. *οὐσία* is derived from the feminine present participle of *εἶναι* (*to be*), *οὖσα*, but it is also etymologically related to *παρουσία* (*being-at, present*). Heidegger would likely contend the translation of *οὐσία* is better served by the term "*presence*".
