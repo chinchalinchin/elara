@@ -403,7 +403,7 @@ From this, Tarski concludes that "*colloquial* :ref:`language <language>`" is ho
 
 In other words, the notion of "*truth*" requires a bifurcation of :ref:`language <language>`. If we want the discourse to include predicates of "*is true*" or "*is false*", :ref:`language <language>` cannot be treated as one cohesive unit, where these assertions are carried out in the same :ref:`language <language>` in which what is being asserted *is asserted*. This idea is only strange if :ref:`language <language>` is regarded as something fixed and determinate. However, it is more apt to think of :ref:`language <language>` as a *continuous process that accumulates components of orthogonal meaning over time*. Each syntactic construct allows new semantic meaning to be encoded into the artifice of :ref:`language <language>`, and each new semantic concept integrated into the fabric of :ref:`language <language>` alters what is demarcated by its boundaries. In other words, :ref:`language <language>` can only be conceived of as a whole at certain points in time, when its definitions are fixed by their factical origin in the world. But the cross section of :ref:`language <language>` at any given moment does not capture its dynamic nature across time; in fact, this nontemporal model of :ref:`language <language>` fails to represent in any capacity beyond the formal the essential nature of :ref:`language <language>`.
 
-Tarski's parsimony of meta and object :ref:`language <language>` shows that ":ref:`truth <truth>`" represents one of these transformative concepts that alters the very constitution of :ref:`language <language>` through its introduction and analysis. In essence, the concept of "*truth*", through its rigorous integration into the corpus of :ref:`language <language>`, creates a schism in :ref:`language <language>`. If we allow ourselves to accept ":ref:`truth <truth>`" as a meaningful construct, then we must accept this molecular division of :ref:`language <language>` into separate, but related, domains.
+Tarski's parsimony of meta and object :ref:`language <language>` shows that ":ref:`truth <truth>`" represents one of these transformative concepts that alters the very constitution of :ref:`language <language>` through its introduction and analysis. In essence, the concept of ":ref:`truth <truth>`", through its rigorous integration into the corpus of :ref:`language <language>`, creates a schism in :ref:`language <language>`. If we allow ourselves to accept ":ref:`truth <truth>`" as a meaningful construct, then we must accept this molecular division of :ref:`language <language>` into separate, but related, domains.
 
 .. important::
 
@@ -427,7 +427,7 @@ We say, "*this word is* :ref:`language <language>`" or "*this sentence is* :ref:
 
 Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their inclusion in :ref:`language <language>`? All three serve distinct linguistic functions, that of identity, disjunction and categorical assertion respectively. They are employed a certain way, to encode meaning a certain way. They have no commonality beyond being :ref:`language <language>`. To call "*these words*" :ref:`language <language>` is directly analogous to collecting an abacus, a paint brush and a hammer under the header of a single concept. The way an abacus is engaged in action and the meaning of its movements, is vastly and materially different than the action and movement of a hammer or paintbrush.
 
-:ref:`Language <language>`, if it can be defined at all, is the indeterminate totality which, by never containing itself, nessitates its progressive advance into novelty.
+:ref:`Language <language>`, if it can be defined at all, is the indeterminate totality which, by never containing itself (or existing), nessitates its progressive advance into novelty.
 
 .. epigraph::
 
@@ -443,7 +443,11 @@ In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta
 
 :ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon.
 
-Aristotle regarded a :ref:`proposition <proposition>` as a representation of :ref:`being <being>`, and thought of the syntax of :ref:`propositions <proposition>` as manifestations of the different *categories* of :ref:`being <being>`. Aristotle's ontology regarded :ref:`being <being>` AS a relationship of predication that ultimately resolved to a category predicated of the primitive subject, termed the "*οὐσία*" (often translated as *substance* [#may_2025_01]_). Aristotle defined the nature of the predicative relations in `Categories`_, summarized below,
+.. sidebar::
+
+    Heidegger would call this translation *latinized*, and point out the components underlying the meaning of *οὐσία*. *οὐσία* is derived from the feminine present participle of *εἶναι* (*to be*), *οὖσα*, but it is also etymologically related to *παρουσία* (*being-at, present*). Heidegger would likely contend the translation of *οὐσία* is better served by the term "*presence*".
+
+Aristotle regarded a :ref:`proposition <proposition>` as a representation of :ref:`being <being>`, and thought of the syntax of :ref:`propositions <proposition>` as manifestations of the different *categories* of :ref:`being <being>`. Aristotle's ontology regarded :ref:`being <being>` AS a relationship of predication that ultimately resolved to a category predicated of the primitive subject, termed the "*οὐσία*" (often translated as *substance*). Aristotle defined the nature of the predicative relations in `Categories`_, summarized below,
 
 1. Substance (*οὐσία*): What something fundamentally is.
 2. Quantity (*ποσόν*): How much or how many of the subtance exists.
@@ -456,6 +460,48 @@ Aristotle regarded a :ref:`proposition <proposition>` as a representation of :re
 9. Action (*ποιεῖν*): What the substance is actively doing.
 10. Passion (*πάσχειν*): What is being done to the substance.
 
-Aristotle viewed the predication of a category as applying to either the entire *οὐσία*, a part of the *οὐσία* or none of the *οὐσία*. Modern :ref:`logic <logic>` tends to view this as the equivalent of :ref:`quantification <logical-quantification>`, but as Adelbard pointed out (see below) this type *Aristotelian* :ref:`quantification <logical-quantification>` has important differences that are not present in its modern descendant.
+Aristotle viewed the predication of a category as applying to either the entire *οὐσία*, a part of the *οὐσία* or none of the *οὐσία*. Modern :ref:`logic <logic>` tends to view this as the equivalent of :ref:`quantification <logical-quantification>`, but as Peter Adelbard pointed out (see below) this type *Aristotelian* :ref:`quantification <logical-quantification>` has important differences that are not present in its modern descendant. These differences are themselves rooted in the *lack* of material difference in the ancient concepts of :ref:`logic <logic>` and ontology; when Aristotle is expounding his logic in `Prior Analytics`_, he is not making formal (*syntactic*, :ref:`tautological <tautologies>`) arguments, he is making ontological (*semantic*, *interpretative*) arguments. 
 
-.. [#may_2025_01] Heidegger would call this translation *latinized*, and point out the linguistic network that underlies the meaning of *οὐσία*. *οὐσία* is derived from the feminine present participle of *εἶναι* (*to be*), *οὖσα*, but it is also etymologically related to *παρουσία* (*being-at, present*). Heidegger would likely contend the translation of *οὐσία* is better served by the term "*presence*".
+The division of :ref:`logic <logic>` and ontology into separate domains of discourse did not occur until much later, its beginnings emerging approximately in parallel with the Renaisannce era, when figures like Boole became to probe and map the formal properties of :ref:`logic <logic>`, eventually leading to successive revolutions of Frege, Russell, Godel and Tarski, which effectively isolated :ref:`logic <logic>` from ontology by reducing the subject's presence in the science to the role of interpretation. 
+
+.. sidebar::
+
+    Badiou's pronouncement, `mathematics is ontology <Being and Event>`_ is an attempt to return ontology to formal discourse.
+
+In the modern conception of :ref:`logic <logic>`, the subject's role lies in finding a real world model that *satifies* the syntactical properties of the formal model under assignment of empirical objects to the symbolic terms of the :ref:`language <language>`. The formal model has no responsibility to comport itself towards :ref:`being` real; it is the one interpretting the model that must find its coherent interpretation in reality. A significant portion of modern mathematics is nothing more than the production of formal theorems unanchored by empirical reality, often justified by appeal to other instances of theoretical constructs finding unintended interpretations, e.g. the axioms of probability in geometric proportions, imaginary numbers in engineering applications, etc. The *intension* of :ref:`Aristotelian logic <aristotelian-logic>`, however, is to explicitly elaborate the structure of :ref:`being <being>`, first and foremost.
+
+However, within the :ref:`logic <logic>` of Aristotle, there is a subtle flaw which betokens why :ref:`logic <logic>` and :ref:`language <language>` must remain separate from :ref:`being <being>`. In `Prior Analytics`_, Aristotle often uses what he termed a "*positive conversion*" from a universally affirmed premise to particular premise,
+
+.. epigraph::
+
+    The positive premise necessarily converts, thought not universally but in part. For instance, if every pleasure is a good, then some good will be a pleasure.
+
+    -- `Prior Analytics`_, Aristotle
+
+If the statement "*all B are A*" is rendered as :math:`AaB` and "*some B are A*" as :math:`AiB`, a positive conversion of a premise can be formalized as, 
+
+.. math::
+    
+    AaB \to AiB
+
+Aristotle viewed a deduction (*συλλογισμός*) as a ontological rule where two categorical premises implied a categorical conclusion. The classic *Barbara* deduction is formalized as, 
+
+.. math::
+
+    AaB, BaC \vdash AaC
+
+Which is rendered into English as, 
+
+    If all B are A and all C are B, then all C are A.
+
+Where :math:`A`, :math:`B` and :math:`C` represent *genera* and *species* of *οὐσία*, for example, *animal*, *man* and *husband*. Aristotle often proves these "*figures*" of deduction by invoking the positive universal conversion, as in his proof of the *Darapti* deduction, 
+
+.. math::
+    
+    PaS, RaS \vdash PiS
+
+.. epigraph::
+
+    When both P and R belong to every S, it results of necessity that P will belong to some R. For since the positive premise converts, S will belong to some R; consequently, since P belongs to every S and S to some R, it is necessary for P to belong to some R (for a deduction through the first figure comes about).
+
+    -- `Prior Analytics`_, Aristotle

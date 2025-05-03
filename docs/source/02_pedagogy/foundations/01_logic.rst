@@ -22,10 +22,10 @@ Propositions
   -- `Wittgenstein Lectures`_, Ludwig Wittgenstein
 
 Symbolic Expression
-    :math:`p, q, r`
+  :math:`p, q, r`
 
 Definition
-    A sentence that can be judged either *true* or *false*.
+  A sentence that can be judged either *true* or *false*.
 
 .. _truth-tables:
 
@@ -39,7 +39,7 @@ Truth Tables
 
 .. topic:: Truth Values
 
-    TODO
+  TODO
 
 .. _value-assignment:
 

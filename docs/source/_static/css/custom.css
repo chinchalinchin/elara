@@ -16,3 +16,7 @@ section#theosophy .epigraph,
 section[id^="year"] .epigraph {
     font-size: 0.75em !important;
 }
+
+section[id^="year"] .sidebar {
+    font-size: 0.8em !important;
+}

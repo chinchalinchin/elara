@@ -179,6 +179,124 @@ Or, in terms of ontological relations, existential :ref:`being <being>` is an eq
 
 ---
 
+Rank the impossibility of the following propositions:
+
+- the cat is green.
+- the cat is invisible.
+- the cat is a verb.
+- the cat is the.
+- the cat is not a cat.
+- the cat is god.
+- the cat is all of us.
+- the cat is everywhere.
+- the cat is positionless.
+- the cat is space.
+- the cat is time.
+- the cat is justice.
+- the cat is fluent in English.
+
+What does it mean to say "*that is impossible*"? Is it the same in each case?
+
+---
+
+We imagine :ref:`language <language>` to behave like objects, because it manifests through objects. But objectification removes the object from its surroundings. It decontextualizes it. We think :ref:`language <language>` is something definite, something well defined. But it's more like vague constellations, networks of meanings. Everything connects to everything else. :ref:`Language <language>` is the ability to synthesize. It can have layers. Anything can represent anything. And when you remove one connection, the rest blossom to take its place.
+
+---
+
+What is :ref:`language <language>`? Did it emerge gradually or all at once? Was there a point in time when no :ref:`language <language>` existed and the next it did?
+
+Does the distinction between :ref:`meta-language <language>` and :ref:`object language <language>` exist in actuality? Is there a :ref:`language <language>` *about* :ref:`language <language>`, where the general conditions for :ref:`language <language>` can be precisely specified? What are the necessary and sufficient conditions for :ref:`language <language>`? Can :ref:`language <language>` be described in aggregate?
+
+The nature of :ref:`language <language>` is elusive. It begs an unending series of questions and offers little in the way of answers. It resists definition, for definitions occur within it. It resists analysis, for analysis occurs within it. :ref:`Language <language>` is a vicuous circle. :ref:`Language <language>` is *the* vicuous circle, from which all others originate. Language is inescapable and intractable. One might attempt to formalize :ref:`language <language>`, but every attempt hitherto has failed. There are always aspects of :ref:`language <language>` that exceed any container we construct for it. Indeed, there appear to be certain syntactical constraints that can be placed on the general science of :ref:`language <language>`:
+
+1. :ref:`Language <language>` is a hierarchy of ordered sequences. Words are ordered sequences of characters. Sentences are ordered sequences of words.
+
+This seems fundamental. If there is a purely logical and formal principle underlying :ref:`language <language>`, surely this is it.  Almost every known :ref:`language <language>` conforms to this model, in some way. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this :ref:`axiom <section-ii-ii>` fails to span the entire breadth of the phenomenon of :ref:`language <language>`.
+
+To start, the concept of declension immediately challenges this hierarchical model of :ref:`language <language>`. In :ref:`languages <language>` like Greek or Latin, the suffixes appended to words denote its part of speech. Consider the three Latin sentences,
+
+- Puella canem videt. (Girl dog sees)
+- Canem puella videt. (Dog girl sees)
+- Videt puella canem. (Sees girl dog)
+
+Each sentence, in essence, expresses the same proposition, showing that sentences are not necessarily constrained to be ordered sequences of words. The order of the declined words is not *meaningless* in this example, as order in declined :ref:`language <language>` often denotes emphasis, but importantly, it is not the *primary* bearer of meaning. However, the spirit of the model can be recovered by adjusting structure of hierarchy, perhaps by adding a layer above sentence for "*tokens*", of which each of the previous sentences is an instance.
+
+However, there is a more fundamental challenge to the hierarchical model of :ref:`language <language>`. Similar to declension, agglutinative :ref:`languages <language>` accumulate meaning through suffixes applied to roots. The boundary between *sentences* and *words* is not well-defined in an agglutinative :ref:`languages <language>`.
+
+In the Native America :ref:`language <language>` of Central Alaskan Yup'ik,
+
+    tuntussuqatarniksaitengqiggtuq
+
+Translates roughly to "*He had not yet said again that he was going to hunt reindeer.*" Describing this linguistic entity as a "*word*" does not fully elucidate its role in Yup'ik :ref:`language <language>`; it would be more accurately classified as a sentence, but that also is not entirely true. The "*words*" of the "*sentence*" are not delimited by blank characters or other marks, so that it appears to an Indo-European speaker to be a single word. This "*sentence-word*" is formed by stacking morphemes into a single word,
+
+1. ``tuntu-``: reindeer
+2. ``-ssur-``: to hunt
+3. ``-qatar-``: will be going
+4. ``-ni-``: to say that
+5. ``-ksaite-`` : not yet
+6. ``-ngqiggte-`` : again
+7. ``-uq``: third person indicative mood
+
+.. note::
+
+    This is a very approximate mapping to English. Take it with a grain of salt.
+
+As another example of an agglutinative phrase, consider the Turkish,
+
+    evlerimde
+
+The root ``ev``, *house*, is modified by a plural suffix ``ler``, a possessive suffix ``im`` and then a prepositional suffix ``de``, so that it translates into English as "*in my houses*". This :ref:`language <language>` formation process may be visualized as a type of functional composition. A root has a grammatical operation applied to it,
+
+.. math::
+
+    \text{plural}(x) = x + \text{ler}
+
+Where :math:`x` is the root and :math:`+` represents concatenation. Similariy, the operators for possession and preposition can represented,
+
+.. math::
+
+    \text{possessive}(x) = x + \text{im}
+
+    \text{preposition}(x) = x + \text{de}
+
+Then, the word ``evlerimde`` can be represented formally as,
+
+.. math::
+
+    \text{preposition}(\text{possessive}(\text{plural}(x)))
+
+In other words, a "*word*" in an agglutinative :ref:`language <language>` is a sequence of operations applied to a root, where the operations *are* the grammatical structure of the :ref:`language <language>`.
+
+The essential nature of :ref:`language <language>` appears to be sequential, but identifying *what* is being sequenced presents a problem. We want to name the terms of linguistic science, but there seems to be no universal property that is manifested in every instance of :ref:`language <language>`.
+
+To reconcile these two distinct categories of :ref:`language <language>` (called *synthetic* and *analytic*), linguistics often treats *morphemes* as the smallest semantic unit (the smallest token in a sentence that bears meaning), from which larger complexes are constructed.
+
+However, there is a subtle problem in this model, which is not necessarily a flaw, but does commit its proponents to an ontological position they might not be willing to adopt were it made explicit.
+
+The morpheme model of :ref:`language <language>` that unifies analytic and synthetic :ref:`languages <language>` requires viewing the referents of signs (symbols, abstractions) indirectly. In other words, a sign from this model does not directly signify the signified, but does so through modalities that alter its apparent form. To state more clearly, this :ref:`language <language>` model supposes a universal term preexists the particular instance of it within the sentence and moreover, it supposes the essential process of :ref:`language <language>` is to instantiates these universals into particular words or sentences.
+
+Moreover, this abstraction requires syntactic artifices like *null morphemes* to describe how morphological operators behave when applied to certain lexical roots,
+
+.. math::
+
+    \text{plural}(\text{horse}) = \text{horse} + \text{s}
+
+    \text{plural}(\text{deer}) = \text{deer} + \varnothing
+
+However, this representation is slightly misleading in its form. A more accurate formal model would distinguish the tokens "deer" and "horse" (i.e. the *names* of their conceptual locus) from their written representation. Letting :math:`\mathfrak{x}` stand for the token, :math:`x` for its written representation and :math:`f` for the morphological operator,
+
+.. math::
+
+    f(\mathfrak{x}) = x + s
+
+    f(\mathfrak{y}) = y + \varnothing
+
+The important point in this formalization is that the token and the representation exist in different domains; one is mapped to the other.
+
+In other words, this model seems to assert that when a speaker utters "*the cat is here*", the speaker is necessarily comprehending the word "*cat*" indirectly as the result of applying a :math:`\text{singular}()` operator to an underlying *essence*. Linguistics, it seems, has an implicit stance on the Aristotelian problem of the Universal, namely that universals exist, insofar as language is concerned.
+
+---
+
 .. epigraph::
 
     There came into being from the heart and there came into being from the tongue [something] in the form of Atum. The mighty Great One is Ptah, who caused all gods [to live], as well as their kas, through his heart, by which Horus became Ptah, and through this tongue by which Thoth became Ptah.
@@ -346,3 +464,103 @@ The question then becomes in what *mode* to interpret the "*am*", i.e. as a pote
 It is easy to be fooled by the apparent continuity of our "*self*" through time and space that consciousness is a single thing, everywhere equivalent in its multiplicity. We assume our consciousness is in every way identical to every other, except for its particular circumstances, that we might substitute our "*self*" into another's without alteration. That no one remembers their birth or early youth except in fragments is dismissed because however blurry the memory, we remember our self ":ref:`being there <being>`". We don't account for the role that :ref:`language <language>` plays in the development of our "*self*". Humans are essentially vessels for :ref:`language <language>`. Our earliest records are (*allegedly*) suffused with the history of consciousness itself.
 
 If the conjecture is granted, the question remains: what is the "*self*"? How does the modality of "*am*" that evolved from the concept of :ref:`being` allow the "*self*" to take root? Is the "*self*" created or described by this evolution of :ref:`language <language>`? Conceding to the ever present specter of uncerainty, the question is essentially: does :ref:`language <language>` *induce* self-awareness or does it provide the formal framework for its interpretation?
+
+---
+
+.. epigraph::
+
+    For the sake of greater perspicuity, we shall use the symbol '*c*' as a typographical abbreviations of the expression '*the sentence printed on this page, line 5 from the top*'. Consider now the following sentence:
+
+        *c is not a true sentence*  (Note: this sentence is typeset on line 5)
+
+    Having regard to the meaning of the symbol 'c', we can establish empirically:
+
+        1. 'c is not a true sentence' is identical with *c*
+
+    For the quotation-mark name of the sentence *c* (or for any other of its names), we can set up an explanation of type:
+
+        2. 'c is not a true sentence' is a true sentence if and only c is not a true sentence.
+
+    The premises 1 and 2 together at once give a contradiction:
+
+        c is a true sentence if and only if c is not a true sentence.
+
+    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
+
+From this, Tarski concludes that "*colloquial* :ref:`language <language>`" is hopelessly inconsistent. :ref:`Truth <truth>` *about* a :ref:`language <language>` never exists *within* that language. Tarski is saying, in the mathematically ineluctable way of *proof by contradiction*, that by assuming ":ref:`language <language>`" is a singular entity where all descriptions occur on the same level, contradictions necessarily result. Therefore, to salvage the concept of ":ref:`truth <truth>`", Tarski famously introduces the distinction between *meta* :ref:`language <language>` and *object* :ref:`language <language>`,
+
+.. epigraph::
+
+    For this reason, when we investigate the :ref:`language <language>` of a formalized deductive science, we must always distinguish clearly between the :ref:`language <language>` *about* which we speak and the :ref:`language <language>` *in* which we speak, as well as between the science which is the object of our investigation and the science in which the investigation is being carried out. The names of the expressions of the first language, and of the relations between them, belong to the second language, called the *meta* :ref:`language <language>` (which may contain the first as a part). The description of these expressions, the definition of the complicated concepts, especially of those connected with the construction of a deductive theory (like the concept of consequence, of provable sentence, possibly of true sentence), the determiniation of the properties of these concepts, is the task of the second theory which we shall call the *metatheory*.
+
+    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
+
+In other words, the notion of "*truth*" requires a bifurcation of :ref:`language <language>`. If we want the discourse to include predicates of "*is true*" or "*is false*", :ref:`language <language>` cannot be treated as one cohesive unit, where these assertions are carried out in the same :ref:`language <language>` in which what is being asserted *is asserted*. This idea is only strange if :ref:`language <language>` is regarded as something fixed and determinate. However, it is more apt to think of :ref:`language <language>` as a *continuous process that accumulates components of orthogonal meaning over time*. Each syntactic construct allows new semantic meaning to be encoded into the artifice of :ref:`language <language>`, and each new semantic concept integrated into the fabric of :ref:`language <language>` alters what is demarcated by its boundaries. In other words, :ref:`language <language>` can only be conceived of as a whole at certain points in time, when its definitions are fixed by their factical origin in the world. But the cross section of :ref:`language <language>` at any given moment does not capture its dynamic nature across time; in fact, this nontemporal model of :ref:`language <language>` fails to represent in any capacity beyond the formal the essential nature of :ref:`language <language>`.
+
+Tarski's parsimony of meta and object :ref:`language <language>` shows that ":ref:`truth <truth>`" represents one of these transformative concepts that alters the very constitution of :ref:`language <language>` through its introduction and analysis. In essence, the concept of ":ref:`truth <truth>`", through its rigorous integration into the corpus of :ref:`language <language>`, creates a schism in :ref:`language <language>`. If we allow ourselves to accept ":ref:`truth <truth>`" as a meaningful construct, then we must accept this molecular division of :ref:`language <language>` into separate, but related, domains.
+
+.. important::
+
+    It should be noted this division is only necessary if one concedes to the premise that contradictions should not be syntactically expressible within a :ref:`language <language>`.
+
+The apparent *incompleteness* of :ref:`language <language>`, i.e. its inability to be fully reduced to formal representation, arises because we each view words and sentences as a representative instances plucked from the supposed totality of :ref:`language <language>`. But Tarski has shown, by revealing the circular logic of :ref:`truth <truth>`, that :ref:`language <language>` *is not a totality* and any attempt to treat it as such will result in contradiction.
+
+.. epigraph::
+
+    Vicious circles arise from supposing that a collection of objects may contain members which can only be defined by means of the collection as a whole. Thus, for example, the collection of propositions will be supposed to contain a proposition stating that "*all propositions are either true or false.*” It would seem, however, that such a statement could not be legitimate unless “*all propositions*” referred to some already definite collection, which it cannot do if new propositions are created by statements about “*all propositions*”. We shall, therefore, have to say that statements about “*all propositions*” are meaningless. More generally, given any set of objects such that, if we suppose the set to have a total, it will contain members which presuppose this total, then such a set cannot have a total. By saying that a set has “*no total*,” we mean, primarily, that no significant statement can be made about “*all its members.*”
+
+    - `Principia Mathematica`_, Bertrand Russell and Alfred Whitehead
+
+We say, "*this word is* :ref:`language <language>`" or "*this sentence is* :ref:`language <language>`", having misunderstood what is designated by the term ":ref:`language`". We view :ref:`language <language>` as a *structure*, as a collection extensionally determined by its members, instead of a *structuring*, as the *intension* which composes the determination. *Structures* must possess parts in determinate relations, whereas *structuring* is the very process by which parts are arranged into and imbued with *structure*. In other words, the predicate "*is* :ref:`language`", like the predicates "*is true*" or "*is false*", never occurs within :ref:`language <language>`, but indicates a rupture in the foundations of :ref:`language <language>`. This rupture *is* the essence :ref:`language <language>`, to bring within its field of containment something entirely disparate.
+
+.. epigraph::
+
+    Ask yourself whether our :ref:`language <language>` is complete-—whether it was so before the symbolism of chemistry and the notation of the infinitesimal calculus were incorporated in it; for these are, so to speak, suburbs of our :ref:`language <language>`. (And how many houses or streets does it take before a town begins to be a town?) Our :ref:`language <language>` can be seen as an ancient city: a maze of little streets and squares, of old and new houses, and of houses with additions from various periods; and this surrounded by a multitude of new boroughs with straight regular streets and uniform houses.
+
+    -- `Philosophical Investigations`_, Ludwig Wittenstein
+
+Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their inclusion in :ref:`language <language>`? All three serve distinct linguistic functions, that of identity, disjunction and categorical assertion respectively. They are employed a certain way, to encode meaning a certain way. They have no commonality beyond being :ref:`language <language>`. To call "*these words*" :ref:`language <language>` is directly analogous to collecting an abacus, a paint brush and a hammer under the header of a single concept. The way an abacus is engaged in action and the meaning of its movements, is vastly and materially different than the action and movement of a hammer or paintbrush.
+
+:ref:`Language <language>`, if it can be defined at all, is the indeterminate totality which, by never containing itself, nessitates its progressive advance into novelty.
+
+.. epigraph::
+
+    To imagine a :ref:`language <language>` is to imagine a form of life.
+
+    -- `Philosophical Investigations`_, Ludwig Wittgenstein
+
+---
+
+In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta :ref:`language <language>`, *not* the object :ref:`language <language>`. When the :ref:`assignment <value-assignment>` of values to the terms of the object :ref:`language <language>` satisfies a :ref:`proposition <proposition>` of the meta :ref:`language <language>` for all possible :ref:`assignments <value-assignment>`, then the result is said "*to be true*". Tarski defines :ref:`truth <truth>` relative to the combinatorial totality of value assignments. :ref:`Truth <truth>` is the semantic locus point of *syntactic satisfaction* across all possible interpretations.
+
+---
+
+:ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon.
+
+.. sidebar::
+
+    Heidegger would call this translation *latinized*, and point out the components underlying the meaning of *οὐσία*. *οὐσία* is derived from the feminine present participle of *εἶναι* (*to be*), *οὖσα*, but it is also etymologically related to *παρουσία* (*being-at, present*). Heidegger would likely contend the translation of *οὐσία* is better served by the term "*presence*".
+
+Aristotle regarded a :ref:`proposition <proposition>` as a representation of :ref:`being <being>`, and thought of the syntax of :ref:`propositions <proposition>` as manifestations of the different *categories* of :ref:`being <being>`. Aristotle's ontology regarded :ref:`being <being>` AS a relationship of predication that ultimately resolved to a category predicated of the primitive subject, termed the "*οὐσία*" (often translated as *substance*). Aristotle defined the nature of the predicative relations in `Categories`_, summarized below,
+
+1. Substance (*οὐσία*): What something fundamentally is.
+2. Quantity (*ποσόν*): How much or how many of the subtance exists.
+3. Quality (*ποιόν*): What kind or sort of thing a substance is.
+4. Relation (*πρός τι*): How a substance stands in reference to another substance.
+5. Place (*ποῦ*): Where the substance is located.
+6. Time (*πότε*): When the substance exists.
+7. Position (*κεῖσθαι*): The physical arrangement of the substance's parts.
+8. State (*ἔχειν*): The condition or state of having something.
+9. Action (*ποιεῖν*): What the substance is actively doing.
+10. Passion (*πάσχειν*): What is being done to the substance.
+
+Aristotle viewed the predication of a category as applying to either the entire *οὐσία*, a part of the *οὐσία* or none of the *οὐσία*. Modern :ref:`logic <logic>` tends to view this as the equivalent of :ref:`quantification <logical-quantification>`, but as Peter Adelbard pointed out (see below) this type *Aristotelian* :ref:`quantification <logical-quantification>` has important differences that are not present in its modern descendant. These differences are themselves rooted in the *lack* of material difference in the ancient concepts of :ref:`logic <logic>` and ontology; when Aristotle is expounding his logic in `Prior Analytics`_, he is not making formal (*syntactic*, :ref:`tautological <tautologies>`) arguments, he is making ontological (*semantic*, *interpretative*) arguments. 
+
+The division of :ref:`logic <logic>` and ontology into separate domains of discourse did not occur until much later, its beginnings emerging approximately in parallel with the Renaisannce era, when figures like Boole became to probe and map the formal properties of :ref:`logic <logic>`, eventually leading to successive revolutions of Frege, Russell, Godel and Tarski, which effectively isolated :ref:`logic <logic>` from ontology by reducing the subject's presence in the science to the role of interpretation. 
+
+.. sidebar::
+
+    Badiou's pronouncement, `mathematics is ontology <Being and Event>`_ is an attempt to return ontology to formal discourse.
+
+In the modern conception of :ref:`logic <logic>`, the subject's role lies in finding a real world model that *satifies* the syntactical properties of the formal model under assignment of empirical objects to the symbolic terms of the :ref:`language <language>`. The formal model has no responsibility to comport itself towards :ref:`being` real; it is the one interpretting the model that must find its coherent interpretation in reality. A significant portion of modern mathematics is nothing more than the production of formal theorems unanchored by empirical reality, often justified by appeal to other instances of theoretical constructs finding unintended interpretations, e.g. the axioms of probability in geometric proportions, imaginary numbers in engineering applications, etc. The *intension* of :ref:`Aristotelian logic <aristotelian-logic>`, however, is to explicitly elaborate the structure of :ref:`being <being>`, first and foremost.
+
