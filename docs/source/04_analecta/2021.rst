@@ -13,7 +13,7 @@ When the intellect attempts to grasp the concept of :ref:`nothing <nothing>`, it
 
 ---
 
-Every philosopher who has ever pronounced an :ref:`a priori <a-priori-a-posteriori>` principle or constructed a metaphysics to explain the complexities of the world should be hunted for sport, and if they survive and still hold to their previous declarations, then at least we will know they believe what they are saying.
+Every philosopher who has ever pronounced an :ref:`a priori <a-priori>` principle or constructed a metaphysics to explain the complexities of the world should be hunted for sport, and if they survive and still hold to their previous declarations, then at least we will know they believe what they are saying.
 
 .. _september-2021:
 

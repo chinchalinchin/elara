@@ -41,7 +41,7 @@ I: An Ode To Autumn
      - Status
    * - March 27, 2025
      - Think Journal
-     - Pending
+     - Rejected
    * - April 27, 2025
      - Frontier Poetry
      - Pending

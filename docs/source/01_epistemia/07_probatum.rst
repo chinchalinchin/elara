@@ -212,7 +212,7 @@ All propositions are equivalent to being equivalent to always being :ref:`true <
 
 Any :ref:`true <truth>` proposition is equivalent to any other :ref:`true <truth>` proposition because they are all equivalent to tautologies. Only in this desolate landscape of pure vacuity can :ref:`truth <truth>` be defined. A tautology expresses through form what is self-evident.
 
-:ref:`Truth <truth>`, however, is not a mere consequence of self-evidence. It is not wholly :ref:`a priori <a-priori-a-posteriori>`; it is constructed out of parts tautologous and parts empirical, in short it is :ref:`synthetic <synthesis>`. This realization is what led to Tarski to the insights which fueled `The Concept of Truth in Formalized Languages`_ in 1931.
+:ref:`Truth <truth>`, however, is not a mere consequence of self-evidence. It is not wholly :ref:`a priori <a-priori>`; it is constructed out of parts tautologous and parts empirical, in short it is :ref:`synthetic <synthesis>`. This realization is what led to Tarski to the insights which fueled `The Concept of Truth in Formalized Languages`_ in 1931.
 
 **Theorem** :math:`\forall p,q: (\forall f: p \equiv (\forall r: p \equiv f(r)) \equiv (\forall r: q \equiv f(r))) \implies q`
 

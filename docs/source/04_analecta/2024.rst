@@ -73,7 +73,7 @@ If the objective is to produce a certain fact, then all assumptions must be remo
 
 It is a maxim of post-Kantian philosophy that what is known must be known through the experience of "*knowing*", and thus it must be conditioned by experience. Knowledge of a thing is knowledge of the sensuous experience of the thing and what the sensuous cannot present to experience cannot be known.
 
-For any object of experience, its attributes may be abstracted away in thought, but even an indeterminate object must possess a condition of determination for being able to be an object of experience; it is this form of determination that Kant identifies as " :ref:`a priori <a-priori-a-posteriori>` ". If, from a thing, its manifest qualities are subtracted, one is left with the pure abstract relation that sensuous experience deploys in order to perform the ontological operation of objectification.
+For any object of experience, its attributes may be abstracted away in thought, but even an indeterminate object must possess a condition of determination for being able to be an object of experience; it is this form of determination that Kant identifies as " :ref:`a priori <a-priori>` ". If, from a thing, its manifest qualities are subtracted, one is left with the pure abstract relation that sensuous experience deploys in order to perform the ontological operation of objectification.
 
 The operands of the objectification are the experience for which the object is the object thus identified by experience. This operation yields a unique index, which one is inclined to call an object's "*name*". In other words, receptivity to naming is a prerequisite for being knowable. A thing cannot be known unless it can be named.
 

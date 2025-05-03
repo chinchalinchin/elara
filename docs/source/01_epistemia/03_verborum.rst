@@ -1,8 +1,7 @@
 .. _verborum:
 
---------
 Verborum
---------
+========
 
 .. _devices:
 
@@ -36,6 +35,7 @@ Verborum
 
 .. _alliteration:
 
+------------
 Alliteration
 ------------
 
@@ -43,6 +43,7 @@ TODO
 
 .. _anacoluthon:
 
+-----------
 Anacoluthon
 -----------
 
@@ -66,6 +67,7 @@ Anacoluthon
 
 .. _anadiplosis:
 
+-----------
 Anadiplosis
 -----------
 
@@ -91,6 +93,7 @@ Anadiplosis
 
 .. _anaphora:
 
+--------
 Anaphora
 --------
 
@@ -163,6 +166,7 @@ Anaphora
 
 .. _anastrophe:
 
+----------
 Anastrophe
 ----------
 
@@ -188,6 +192,7 @@ Anastrophe
 
 .. _antimetabole:
 
+------------
 Antimetabole
 ------------
 
@@ -205,6 +210,7 @@ Antimetabole is included in the category :ref:`chiasmus`.
 
 .. _aposiopesis:
 
+-----------
 Aposiopesis
 -----------
 
@@ -218,6 +224,7 @@ Aposiopesis
 
 .. _apostrophe:
 
+----------
 Apostrophe
 ----------
 
@@ -233,6 +240,7 @@ Apostrophe
 
 .. _asyndeton:
 
+---------
 Asyndeton
 ---------
 
@@ -246,6 +254,7 @@ None yet found.
 
 .. _assonance:
 
+---------
 Assonance
 ---------
 
@@ -254,6 +263,7 @@ TODO
 
 .. _chiasmus:
 
+--------
 Chiasmus
 --------
 
@@ -277,6 +287,7 @@ Chiasmus includes the category of :ref:`antimetabole`.
 
 .. _epanalepsis:
 
+-----------
 Epanalepsis
 -----------
 
@@ -296,6 +307,7 @@ Epanalepsis
 
 .. _epistrophe: 
 
+----------
 Epistrophe
 ----------
 
@@ -307,6 +319,7 @@ Epistrophe
 
 .. _epizeuxis:
 
+---------
 Epizeuxis
 ---------
 
@@ -314,6 +327,7 @@ TODO
 
 .. _hypozeuxis:
 
+----------
 Hypozeuxis
 ----------
 
@@ -327,6 +341,7 @@ None yet found.
 
 .. _hysteron-proteron:
 
+-----------------
 Hysteron Proteron
 -----------------
 
@@ -342,6 +357,7 @@ Hysteron Proteron
 
 .. _metonymy:
 
+--------
 Metonymy
 --------
 
@@ -349,19 +365,19 @@ None yet found.
 
 .. _parataxis:
 
+---------
 Parataxis
 ---------
 
-From the Greek: παράταξις (παρά-ταξις, "beside-arrangement") 
+From the Greek: *παράταξις* (*παρά-ταξις*, "beside-arrangement") 
 
 None yet found.
 
 .. _paronomasia:
 
+-----------
 Paronomasia
 -----------
-
-TODO 
 
     Of whom each strives, nor knows for what he strives,
 
@@ -371,15 +387,15 @@ TODO
 
 .. _polyptoton:
 
+----------
 Polyptoton
 ----------
-
-TODO 
 
 None yet found.
 
 .. _symploce:
 
+--------
 Symploce
 --------
 
@@ -397,6 +413,7 @@ Symploce
 
 .. _synecdoche:
 
+----------
 Synecdoche
 ----------
 
