@@ -22,6 +22,8 @@ make html
 - [PyData Sphinx Theme](https://pydata-sphinx-theme.readthedocs.io/en/latest/index.html)
 - [Sphinx Design](https://sphinx-design.readthedocs.io/en/pydata-theme/index.html)
 - [Sphinx Toolbox](https://sphinx-toolbox.readthedocs.io/en/stable/index.html)
+- [RSTCheck Config](https://github.com/rstcheck/rstcheck/blob/main/docs/source/usage/config.rst#configuration-file)
+- [Doc8 Config](https://github.com/PyCQA/doc8)
 
 ### Reference
 
