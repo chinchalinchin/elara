@@ -1,3 +1,5 @@
+.. MODE: ENGAGE
+
 ========
 Analecta
 ========
@@ -1639,10 +1641,14 @@ In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta
 
 .. _abstract-contradictions:
 
-Abstract Contradictions
------------------------
+Abstract Contradictions: A History of Propositions
+--------------------------------------------------
 
-:ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon.
+.. START @ENGAGE
+
+:ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon. :ref:`Axiomatic set theory <sets>`, in its various formulations, represents the purely symbolic and syntactic limit of categorical logic, the maximum extent to which language can be shaped by formal considerations. In doing so, it must restrict itself to the *metalogical* layer, never penetrating below the surface of description. 
+
+It is instructive to consider the history of the *proposition*, for the *proposition* is at once a sentence and a unit of mathematics, a :ref:`truth value <truth-values>`. The proposition is a both a *meaningful* thing and a *formal* thing. The history of philosophy and mathematics is, by and large, an analysis and gradual unveiling of the relations that bind *form* to *meaning*, *syntax* to *semantics*. 
 
 .. sidebar::
 
@@ -1661,17 +1667,17 @@ Aristotle regarded a :ref:`proposition <proposition>` as a representation of :re
 9. Action (*ποιεῖν*): What the substance is actively doing.
 10. Passion (*πάσχειν*): What is being done to the substance.
 
-Aristotle viewed the predication of a category as applying to either the entire *οὐσία*, a part of the *οὐσία* or none of the *οὐσία*. Modern :ref:`logic <logic>` tends to view this as the equivalent of :ref:`quantification <logical-quantification>`, but as Peter Abelard pointed out (see below) this type *Aristotelian* :ref:`quantification <logical-quantification>` has important differences that are not present in its modern descendant. These differences are themselves rooted in the *lack* of material difference in the ancient concepts of :ref:`logic <logic>` and ontology; when Aristotle is expounding his logic in `Prior Analytics`_, he is not making formal (*syntactic*, :ref:`tautological <tautologies>`) arguments, he is making ontological (*semantic*, *interpretative*) arguments. 
+Aristotle viewed the predication of a category as applying to either the entire *οὐσία*, a part of the *οὐσία* or none of the *οὐσία*. Modern :ref:`logic <logic>` tends to view this as the equivalent of :ref:`quantification <logical-quantification>`, but as Peter Abelard pointed out (see below) this type *Aristotelian* :ref:`quantification <logical-quantification>` has important differences that are not present in its modern descendant. These differences are themselves rooted in the *lack* of material difference in the ancient concepts of :ref:`logic <logic>` and ontology; when Aristotle is expounding his :ref:`logic <logic>` in `Prior Analytics`_, he is not making formal (*syntactic*, :ref:`tautological <tautologies>`) arguments, he is making ontological (*semantic*, *interpretative*) arguments. This becomes clear when he "*proves*" his syllogistic figures by appeal to ordered triplets of *things*.
 
-The division of :ref:`logic <logic>` and ontology into separate domains of discourse did not occur until much later, its beginnings emerging approximately in parallel with the Renaisannce era, when figures like Boole became to probe and map the formal properties of :ref:`logic <logic>`, eventually leading to successive revolutions of Frege, Russell, Godel and Tarski, which effectively isolated :ref:`logic <logic>` from ontology by reducing the subject's presence in the science to the role of interpretation. 
+The division of :ref:`logic <logic>` and ontology into separate domains of discourse did not occur until much later, its beginnings emerging approximately in parallel with the Renaisannce era, when figures like Boole began to probe and map the formal properties of :ref:`logic <logic>`, eventually leading to successive revolutions of Frege, Russell, Gödel and Tarski, which effectively isolated :ref:`logic <logic>` from ontology by reducing the subject's presence in the ancient science to the role of interpretation. 
 
 .. sidebar::
 
-    Badiou's pronouncement, `mathematics is ontology <Being and Event>`_ is an attempt to return ontology to formal discourse.
+    Badiou's pronouncement, `mathematics is ontology <Being and Event>`_ is an attempt to return ontology to formal discourse. However, as this essay will argue, his pronouncement is *essentially* incorrect. Mathematics is *metaphysics*, or atleast as close as a subject can get without thereby becoming it. 
 
-In the modern conception of :ref:`logic <logic>`, the subject's role lies in finding a real world model that *satifies* the syntactical properties of the formal model under assignment of empirical objects to the symbolic terms of the :ref:`language <language>`. The formal model has no responsibility to comport itself towards :ref:`being` real; it is the one interpretting the model that must find its coherent interpretation in reality. A significant portion of modern mathematics is nothing more than the production of formal theorems unanchored by empirical reality, often justified by appeal to other instances of theoretical constructs finding unintended interpretations, e.g. the axioms of probability in geometric proportions, imaginary numbers in engineering applications, etc. The *intension* of :ref:`Aristotelian logic <aristotelian-logic>`, however, is to explicitly elaborate the structure of :ref:`being <being>`, first and foremost.
+In the modern conception of :ref:`logic <logic>`, the subject's role lies in finding a real world model that *satifies* the syntactical properties of the formal model under the assignment (indexing) of empirical objects to the symbolic terms of the :ref:`language <language>`. The formal model has no responsibility to comport itself towards :ref:`being <being>` real; the one interpretting the model must find its coherent interpretation in reality. A significant portion of modern mathematics is nothing more than the production of formal theorems unanchored by empirical reality, often justified by appeal to other instances of theoretical constructs finding unintended interpretations, e.g. the axioms of probability in geometric proportions, imaginary numbers in engineering applications, etc. The *intension* of :ref:`Aristotelian logic <aristotelian-logic>`, however, is to explicitly elaborate the structure of :ref:`being <being>`, first and foremost.
 
-However, within the :ref:`logic <logic>` of Aristotle, there is a subtle flaw which betokens why :ref:`logic <logic>` and :ref:`language <language>` must remain separate from :ref:`being <being>`. In `Prior Analytics`_, Aristotle often uses what he termed a "*positive conversion*" from a universally affirmed premise to particular premise,
+However, within the :ref:`logic <logic>` of Aristotle, there is a subtle flaw which betokens why :ref:`logic <logic>` and :ref:`language <language>` must remain isolated from an equivalency with :ref:`being <being>`. In `Prior Analytics`_, Aristotle often uses what he termed a "*positive conversion*" from a universally affirmed premise to particular premise,
 
 .. epigraph::
 
@@ -1701,7 +1707,7 @@ Which is rendered into English as,
 
     If all B are A and all C are B, then all C are A.
 
-Where :math:`A`, :math:`B` and :math:`C` represent *genera* and *species* of *οὐσία*, for example, *animal*, *man* and *husband*. Aristotle often proves these "*figures*" of deduction by invoking the positive universal conversion, as in his proof of the *Darapti* deduction, 
+Where :math:`A`, :math:`B` and :math:`C` represent *genera* and *species* of *οὐσία*, for example, *animal*, *man* and *husband*. Aristotle often proves these "*figures*" of deduction by applying a positive universal conversion, as in his proof of the *Darapti* deduction, 
 
 .. math::
     
@@ -1717,19 +1723,25 @@ The deduction rule :math:`AaB \to AiB` is often termed a deduction of *existenti
 
 .. epigraph::
 
-    If 'every stone-man is a stone' is true, also its conversion per accidens is true ('some stones are stone-men'). But no stone is a stone-man, because neither this man nor that man etc. is a stone. But also this 'a certain stone-man is not a stone' is false by necessity, since it is impossible to suppose it is true.
+    If '*every stone-man is a stone*' is true, also its conversion per accidens is true ('*some stones are stone-men*'). But no stone is a stone-man, because neither this man nor that man etc. is a stone. But also this '*a certain stone-man is not a stone*' is false by necessity, since it is impossible to suppose it is true.
 
     -- Dialectica, Abelard
 
-What Abelard is pointing out is a notion that would not be formalized for another millenia in the strictures of set theory: unrestricted comprehension of an abstraction principle necessarily leads to contradiction. The proposition, "*all stone men are stone*", can be true, syntactically speaking, when no objects exist in the domain that is being quantified, namely "*stone men*". As a consequence, because "*all stone men are stone*" can be true without referring to any actual :ref:`beings <being>`, it is too much to grant a deduction to a particular instance of a "*stone man*". In other words, "*all*" does not imply "*some*" if nothing exists to satisfy "*all*"; indeed, "*all*" must be conditioned on a presupposed existent *thing*. 
+What Abelard is pointing out is a notion that would not be formalized for another millenia in the strictures of set theory: unrestricted comprehension of an abstraction principle necessarily leads to contradiction. The proposition, "*all stone men are stone*", can be true, syntactically speaking, when no objects exist in the domain that is being quantified, namely "*stone men*". As a consequence, because "*all stone men are stone*" can be true without referring to any actual :ref:`beings <being>`, it is too much to grant a deduction from the universal assertion to a particular instance of a "*stone man*". In other words, "*all*" does not imply "*some*" if nothing exists to satisfy "*all*"; indeed, "*all*" must be conditioned on a presupposed existent *thing*. 
 
-The problem of *existential import* bears similarity to the problem that plagued Frege's `Grundgesetze Der Arithmetik`_ . In contrast (though obviously influenced by) Aristotle's categorical formulation, Frege thought of a proposition as expressing the relation of "*belonging*" between an object :math:`x` and a (*value-range or extension of a*) concept :math:`\hat{\epsilon}f`. Frege asserted, for all objects :math:`x`, the property :math:`f` being equal to the property :math:`g` is equivalent to saying the concept :math:`\hat{\epsilon}f` and the concept :math:`\hat{\epsilon}g` are the same concept,
+The problem of *existential import* bears similarity to the problem that plagued Frege's `Grundgesetze Der Arithmetik`_ . To see how the conundrum of existence ruptures Frege's :ref:`logic <logic>` from the inside out, one must understand how Frege departed from the Aristotelian model of :ref:`logic <logic>` Frege conceived of a proposition *extensionally*, as opposed to *categorically*. To Frege, a proposition is a formula that is *satisfied* by certain objects. For example, ":math:`x` *is even*" is a proposition *satisfied* by the series of numbers :math:`0, 2, 4, ...`; Frege thought of each proposition as implicitly expressing the relation of "*belonging*" between an object :math:`x` and a (*value-range or extension of a*) concept :math:`\hat{\epsilon}f`, where the relation is manifested through a property predicated of each object abstracted into a "*collection*". In other words, Frege saw *predication* as being equivalent to *abstraction*.
+
+For example, to say, "*this pen belongs to the concept of Black*" is equivalent to saying "*this pen is a black object*". Note in these examples the division between the near-Platonic formal nature of "*Black*" and the near-Aristotelian predication of "*black*". The use of capitalization is intentional, for Frege would call "*Black*" a proper name and "*black*" a description. According to Frege, "*Black*" is the abstract concept common to all instances of black things. In other words, Frege has committed himself to a stance on the problem of universals, namely that they exist. 
+
+Moreover, Fregean concepts exist as *terms* in the language from which they arose as abstractions. Frege asserted, for all objects :math:`x`, the property :math:`f` being equal to the property :math:`g` is equivalent to saying the concept :math:`\hat{\epsilon}f` and the concept :math:`\hat{\epsilon}g` are the same concept,
 
 .. math::
 
     (\forall x: f(x) \equiv g(x)) \equiv (\hat{\epsilon}f = \hat{\epsilon}g)
 
-This :ref:`axiom <frege-axioms>` was called *Law V* by Frege. Note this formulation is symmetrical and complementary with the logical law, first posited by Leibniz and adopted by Frege in his `Grundgesetze Der Arithmetik`_, that if two objects have the same properties, they are identical (often known as the Law of Indiscernibles),
+The righthand side of this equivalency treats the concepts  :math:`\hat{\epsilon}f` and :math:`\hat{\epsilon}g` as operands in an equality relation, which to say, it treats concepts *as objects in the language of* `Grundgesetze der Arithmetik`_. This :ref:`axiom <frege-axioms>` was called *Law V* by Frege. 
+
+Note this formulation is symmetrical and complementary with the logical law, first posited by Leibniz and adopted by Frege in his `Grundgesetze Der Arithmetik`_, that if two objects have the same properties, they are identical (often known as the Law of Indiscernibles),
 
 .. math::
 
@@ -1751,9 +1763,7 @@ That is, asserting :math:`x` *belongs* :math:`\hat{\epsilon}f` is equivalent to 
 
     x \frown \hat{\epsilon}f \equiv f(x)
 
-Which is to say, the assertion of :math:`x` belonging to a concept :math:`\hat{\epsilon}f` is equivalent to the assertion :math:`x` has property :math:`f`. For example, to say, "*this pen belongs to the concept of Black*" is equivalent to saying "*this pen is black*". Note in this translation the division between the near-Platonic formal nature of "*Black*" and the near-Aristotelian predication of "*black*". The use of capitalization is intentional, for Frege would call "*Black*" a proper name and "*black*" a description.
-
-From here, it is a simple matter of letting :math:`f` be the property of not belonging to concept :math:`\hat{\epsilon}f`,
+Which is to say, the assertion of :math:`x` belonging to a concept :math:`\hat{\epsilon}f` is equivalent to the assertion :math:`x` has property :math:`f`. From here, it is a simple matter of letting :math:`f` be the property of not belonging to concept :math:`\hat{\epsilon}f`,
 
 .. math::
 
@@ -1788,6 +1798,8 @@ The key step is passing from the universal equality of concepts, an assertion of
 .. [#may_2025_03] Frege believed all (coherent) semantic concepts in a language, such as "*belonging*", could be derived from definitions made clearly with the formal laws of logic. His `Grundgesetze Der Arithmetik`_ is an attempt to reduce the mathematical language of arithmetic to a logical calculus, through the use of prior assumptions (:ref:`axioms <frege-axioms>`) and definitions such as the one given directly after this footnote,
 
 .. [#may_2025_04] It is often hard to translate Frege's formalism into everyday language, as if Frege's semantics are essentially alien to the actual mechanics of language. Frege is expressing insight in a language that bears only the faintest similarity to natural language.
+
+.. END @ENGAGE
 
 ---
 

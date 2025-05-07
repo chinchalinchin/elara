@@ -532,7 +532,7 @@ Moreover, Fregean concepts exist as *terms* in the language from which they aros
 
     (\forall x: f(x) \equiv g(x)) \equiv (\hat{\epsilon}f = \hat{\epsilon}g)
 
-The righthand side of this equivalency treats the concepts  :math:`\hat{\epsilon}f` and :math:`\hat{\epsilon}g` as operands in an equality relation, which to say, it treats concepts *as objects in the language of* :ref:`Grundgesetze der Arithmetik`_. This :ref:`axiom <frege-axioms>` was called *Law V* by Frege. 
+The righthand side of this equivalency treats the concepts  :math:`\hat{\epsilon}f` and :math:`\hat{\epsilon}g` as operands in an equality relation, which to say, it treats concepts *as objects in the language of* `Grundgesetze der Arithmetik`_. This :ref:`axiom <frege-axioms>` was called *Law V* by Frege. 
 
 Note this formulation is symmetrical and complementary with the logical law, first posited by Leibniz and adopted by Frege in his `Grundgesetze Der Arithmetik`_, that if two objects have the same properties, they are identical (often known as the Law of Indiscernibles),
 
