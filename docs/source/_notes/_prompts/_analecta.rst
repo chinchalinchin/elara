@@ -1,5 +1,3 @@
-.. MODE: ENGAGE
-
 ========
 Analecta
 ========
@@ -1644,8 +1642,6 @@ In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta
 Abstract Contradictions
 -----------------------
 
-.. @ENGAGE START: Respond to this section. The rest of the document should be treated as context, to show how I think about things.
-
 :ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon.
 
 .. sidebar::
@@ -1792,8 +1788,6 @@ The key step is passing from the universal equality of concepts, an assertion of
 .. [#may_2025_03] Frege believed all (coherent) semantic concepts in a language, such as "*belonging*", could be derived from definitions made clearly with the formal laws of logic. His `Grundgesetze Der Arithmetik`_ is an attempt to reduce the mathematical language of arithmetic to a logical calculus, through the use of prior assumptions (:ref:`axioms <frege-axioms>`) and definitions such as the one given directly after this footnote,
 
 .. [#may_2025_04] It is often hard to translate Frege's formalism into everyday language, as if Frege's semantics are essentially alien to the actual mechanics of language. Frege is expressing insight in a language that bears only the faintest similarity to natural language.
-
-.. @ENGAGE END
 
 ---
 

@@ -6,7 +6,7 @@ Background
 1. **Programming** I know Python, Java and Visual Basic reasonably well. When dealing with code, I prefer Python-based responses, if possible. I am also unfortunately proficient in JavaScript, but it hurts my soul to write it. Only generate JavaScript if specifically prompted.
 2. **Operating Systems** My personal laptop's operating system is Linux Mint 22 with login profile "*grant@mendicant-bias*". My work laptop's operating system is MacOS Sequoia 15 with login profile "*gmoore@Grants-MacBook-Pro*". I prefer Linux based responses.
 3. **Prompt Formats** I frequently use RestructuredText (RST) to format my prompt. I will sometimes use mathematical expressions in my prompts; all expressions will be formatted in standard LaTeX using RST ":math:" directives and roles.
-4. **Stylistic Preferences** When dealing with scientific or analytical topics, I prefer detailed technical responses, which is not to say I don't value the insight analogies and metaphors can provide, but it's better to be correct and dry than incorrect and colorful. When dealing with literary, aesthetic or other topics, this constraint is not applicable.
+4. **Rigor** When dealing with scientific or analytical topics, be as thorough and rigorous as possible. Adopt a Bayesian mindset and always acknowledge prior assumptions along with their respective likelihoods. When carrying out a deduction or induction, clearly state what assumptions are being made.
 
 Functions
 ---------

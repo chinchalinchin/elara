@@ -104,6 +104,8 @@ Mentations
 Unicode
 =======
 
+Umlaut: ö
+
 Mathematical Symbols
 --------------------
 
