@@ -6,6 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
+from docutils import nodes, utils
 from sphinx.application import Sphinx
 import argparse
 import os
@@ -108,7 +109,12 @@ latex_elements = {
     'inputenc': '\\usepackage[utf][inputenc]'
 }
 
-# -- Theme configuration -----------------------------------------------------
+# -- Sphinx Application configuration -----------------------------------------------------
+
+def small(name: str, rawtext: str, text: str, lineno: int,
+               inliner, options={}, content=[]):
+    node = nodes.inline(rawtext, utils.unescape(text), classes=['small'])
+    return [node], []
 
 def build_pdf(source_dir, output_dir, filename):
     """
@@ -119,19 +125,26 @@ def build_pdf(source_dir, output_dir, filename):
         output_dir: The directory to write the PDF to.
         filename: The name of the RST file (without the .rst extension).
     """
-    # Calculate the correct confdir
     conf_dir = os.path.dirname(os.path.abspath(__file__)) 
 
-    # Pass confdir to Sphinx initialization
     app = Sphinx(
       srcdir=source_dir, 
-      confdir=conf_dir,  # Use the calculated confdir
+      confdir=conf_dir, 
       outdir=output_dir, 
       doctreedir=output_dir + '/doctrees',
       buildername='latexpdf', 
       warningiserror=False
     )
     app.build(force_all=True, filenames=[filename + '.rst'])
+
+def setup(app):
+    app.add_role('small', small)
+
+    return {
+        'version': '1.0',
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

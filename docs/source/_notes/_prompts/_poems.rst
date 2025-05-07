@@ -1,12 +1,13 @@
-==========
-Collection
-==========
+Poems
+=====
 
+---------
 Abstracta
-=========
+---------
 
 I: The Unicode Ode
 ------------------
+
 
 | 🧍‍♀️ ∥ 🍀 ∥ 🎲 ∥ 🔮 ∥ 🎲 ∥ 🍀 ∥🧍‍♂️
 | 🎻-👗-👠 ≈ 😬 ≈ 👞-👔-🎻
@@ -25,15 +26,15 @@ I: The Unicode Ode
 | 🍀(😨 + 🚑 → 😱 + 🩺 → 💀 + 🪦)
 | 🥀 → 🌧️ + 🌱 = 😭 + 💭(💃 ∪ 🕺) + 🕸️
 | 🚶-💭-🍃 ... 🚶-💭-🔔 ... 🚶-💭-⛪
-| 
+|
 | 💭([💃 ∪ 🕺] - 💃  ≠  🕺)
 | 💭([💃 ∪ 🕺] - 💃 ⊂ 💃)
 | 💤(💃(🔥) → 💘(🎼))
 | 🪞(🌀(🌀(🌀(🌀(🌀))))) → 🕊️(🕰️)
-| 
+|
 | 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 #
 
-II: The Invocation of Iambic Code
+II: The Invocation of Metric Code
 ---------------------------------
 
 .. code-block:: python
@@ -102,8 +103,9 @@ II: The Invocation of Iambic Code
             if dream is all(thy_art.to_bring())
         ])
 
+-------
 Elegies
-=======
+-------
 
 I: Elemental Elegy
 ------------------
@@ -133,11 +135,12 @@ I: Elemental Elegy
 | As shoots of pine through spine are grown.
 | In loam the roots will bind your scraps
 | Despite the flowers laid on stone.
-| Each time I come a stem I snap, 
+| Each time I come a stem I snap,
 | For only Earth deserves your bone.
 
+------
 Haikus
-======
+------
 
 I: Geese
 --------
@@ -157,11 +160,12 @@ III: Tower Hill
 ---------------
 
 | lonely tower hill
-| distance marked by summer fog
+| distance marked by blueish fog
 | the birds roost on you
 
+------
 Lyrics
-======
+------
 
 I: Wine
 -------
@@ -169,18 +173,18 @@ I: Wine
 | What flows is not what flows
 |     But wine from sight concealed,
 | Present spilling o'er lips
-|     From barrel cork unsealed. 
+|     From barrel cork unsealed.
 | Agony! Of moment's time
 |    To pour from heart to lung,
 | Distilled to simple words
-|    In verse's twisted tongue. 
+|    In verse's twisted tongue.
 | Of vine and light that grew
 |    the fruit of form to fill,
 | There lingers aftertaste
 |    but lacks a certain frill.
-| In drip of character 
+| In drip of character
 |    glasses tipped to brim,
-| Imbibed from ear to ear 
+| Imbibed from ear to ear
 |    where thoughts attempt to swim,
 | The meaning drowns in drink
 |    Of hint of sought intent,
@@ -224,14 +228,14 @@ III: On The Origin of Wind
 |    which spans expanse in dark?
 | What ears will hear your solid plea
 |    which leaves in naught its mark?
-| What moment did you rise to life? 
+| What moment did you rise to life?
 |    What second do we praise?
 | Your source, like form, is hidden close
-|    In foggy, timeless haze. 
+|    In foggy, timeless haze.
 | In tracing back your tangled threads
 |     they twine around and spool;
 | Each point begins with points before
-|     Always as if by rule. 
+|     Always as if by rule.
 
 IV: The World That Spins
 ------------------------
@@ -255,7 +259,7 @@ IV: The World That Spins
 | Like vapor mist to sky dissolved
 |     I wept at our good-bye,
 | To see your eyes from dreams resolved
-|     With nothing to reply.  
+|     With nothing to reply.
 
 V: Games of Chance
 ------------------
@@ -269,7 +273,7 @@ V: Games of Chance
 |   Where royals rarely draw.
 | The twos in bluff contrive to steal
 |   What aces reap by law.
-| 
+
 | A love is tracked by racing course,
 |   With bookies taking bets,
 | Where hopes distill to choice of horse
@@ -281,20 +285,20 @@ V: Games of Chance
 |   Results in whims of chance.
 |
 | What fortune finds is fettered fate,
-| Unlocked by luck and never late. 
+| Unlocked by luck and never late.
 
-VI: Ink (Librarian I)
----------------------
+VI: Ink
+-------
 
 | With ink of jet, she shapes her world
 |    With written, colored line,
 | So contrary, she laughs and twirls
 |     In library of mine.
-| 
+|
 | Around her arm, the ink in coil
 |    Will paint the scene to set.
 | Her skin is seared with burning oil
-|    Where art in flame is met. 
+|    Where art in flame is met.
 |
 | Then up her neck, through nest of hair,
 |    Where color threads are knit,
@@ -303,14 +307,14 @@ VI: Ink (Librarian I)
 |
 | She flocks the books across the shelves
 |    And tends her paper field,
-| Her mind through story page so delves  
+| Her mind through story page so delves
 |    As word to ink will yield.
 |
 | Library belle, my heart is smear and blot;
-| It lacks but ink to find its way through plot.  
+| It lacks but ink to find its way through plot.
 
-VII: Silver Gifts (Librarian II)
---------------------------------
+VII: Silver Gifts
+-----------------
 
 | Of silver gifts that might inspire
 |   What burns in me in red,
@@ -320,122 +324,76 @@ VII: Silver Gifts (Librarian II)
 | A coin from mint, with shine and glint,
 |   Will catch the eye like you.
 | But pockets empty money spent
-|   While you in time accrue. 
+|   While you in time accrue.
 |
 | A spoon or fork, a candlestick,
 |   Much closer still to life,
 | These things, like you, are what we pick
-|   In times of joy or strife. 
+|   In times of joy or strife.
 |
 | A ring is fine, but circles lack
-|   Geometry divine. 
+|   Geometry divine.
 | What shapes are made to trace and track
-|   What forms around you twine? 
+|   What forms around you twine?
 |
 | Of silver gifts but one remains:
 |   A mirror held to face.
-| For only there in glass contains 
-|   What sets my heart apace. 
+| For only there in glass contains
+|   What sets my heart apace.
 
-VIII: Eternally (Librarian III)
--------------------------------
+VIII: Eternally
+---------------
 
-| What thoughts are these that think of you 
-|   Through hours alone by nights? 
-| The ones in sleep through dreams ensue 
+| What thoughts are these that think of you
+|   Through hours alone by nights?
+| The ones in sleep through dreams ensue
 |   In verse awake incites.
 |
 | Asleep I fall to land at feet
 |   And praise what fortune hands.
-| Awake I jump to fly with beat 
-|   As wing in flight expands. 
+| Awake I jump to fly with beat
+|   As wing in flight expands.
 |
 | If woven words could win your gaze,
-|   A poem latch turn key,
-| Then cast to depths with me ablaze 
+|   A poem latch turnkey,
+| Then cast to depths with me ablaze
 |   To write eternally.
 
-IX: Designs (Librarian VI)
---------------------------
-
-| If asked this time, design a rhyme
-| To woo your mind from book, by hook
-| I'll thread this line up steep incline
-| While looking back to meadowbrook 
-| Reclined your arms in sun shook shine,
-| In paper pages overtook
-| Your gaze from mine, hidden through pine
-| I spied your beauty's lounging look.
-|
-| The joy of snaps and clicking lock
-| Which ticking clocks with clapping hands
-| So slap the sand and quickly block 
-| The falling grains, in wick expands
-| To flame the brand that marks the spot
-| Where stopped my heart its lonely gland
-| At sight of you and tamed my thought 
-| And swapped unplanned in place to stand
-| Where lace with liquid grace ties knots 
-| Between the space your face commands. 
-
-X: Bird (Librarian VII)
------------------------
-
-| To say what's meant without the word,
-| Oh poetry, relent wherein
-| I yield to you all things deferred,
-| In baptism, repent my sin.
-|
-| I found a bird, that sings so soft,
-| Her song aloft in heart by choice. 
-| To field of hers I pass so oft
-| To sit in grass and drink her voice.
-|
-| With chirping dive she plunged so deep
-| And pierced the weary veil that hides 
-| The ghosts of dreams that haunt my sleep;
-| She sang such hopeful lullabies. 
-|
-| Oh bird, oh bird, with glee you sing,
-| If you could knew the depths of dark 
-| That shadows cast in offering, 
-| Would song still burst from breast in lark?
-
-XI: Landscapes
+IX: Landscapes
 --------------
 
-| Oh, hapless world, the butcher's block, 
-|   The sickle, scythe, harpoon, 
-| The barren fields, the culled livestock, 
-|   The blood red harvest moon. 
+| Oh, hapless world, the butcher's block,
+|   The sickle, scythe, harpoon,
+| The barren fields, the culled livestock,
+|   The blood red harvest moon.
 |
 | The ocean deep, a darkened heart,
-|   A sore that festers cold, 
+|   A sore that festers cold,
 | A slumbered age, a violent art,
 |   Into all things behold.
 |
 | The forests wild, the stalking hunt,
-|   The arrow cut from stone, 
+|   The arrow cut from stone,
 | The bloody rib, the brutal grunt,
-|   A death in whimpered groan. 
+|   A death in whimpered groan.
 |
 | The mountain peaks, a falling height,
-|   The air in sky dissolved, 
-| A winter wind, a bitter blight, 
-|   Let no sin be absolved. 
+|   The air in sky dissolved,
+| A winter wind, a bitter blight,
+|   Let no sin be absolved.
 |
 | The city streets, the graveyard paths,
-|   The linen beds of wards, 
+|   The linen beds of wards,
 | The gowns of white, the final baths,
 |   The oak in coffin boards.
 
-XII: Father's Lullaby
----------------------
+X: Father's Lullaby
+-------------------
 
 | Dear child, the monsters under bed
 |   Are not just make believe.
 | They lurk in shadows overhead
-|   And offer no reprieve. 
+|   And offer no reprieve.
 |
 | Dear sweetling, sleep with open eye
 |   And guard your dreams at night.
@@ -445,7 +403,7 @@ XII: Father's Lullaby
 | Beware the lair that closets hide,
 |   The racks of their disguise,
 | The suits and ties, the cuffs that slide
-|   And cloak them from your eyes. 
+|   And cloak them from your eyes.
 |
 | Fear not the slash of sharpened claws,
 |   The flashing terror brief,
@@ -457,71 +415,9 @@ XII: Father's Lullaby
 | The formal world where heroes fell
 |   To wander incomplete.
 
-XIII: Photographs of Autumn
----------------------------
-
-| These photographs are brittle leaves
-|    That fell from trees, that we once caught.
-| I press them tender into sleeves
-|    Of glass to halt the course of rot.
-| Though kept well fed with water shed,
-|    They wilt to brown as colors fade.
-| No leaf can live beside the bed,
-|    Without sunlight that makes the shade.
-| Yet even still, though claimed by dust,
-|    I keep them hung upon my wall,
-| For memory you did entrust
-|    Of walk with you through golden Fall.
-
-XIV: The Curse of Rain
-----------------------
-
-| The rainy days, so slandered, weep
-| As haughty summer lovers lay
-| And mock the sky with lazy sleep,
-| While clouds so white with dreams of gray,
-| With sun they soak and whirling sweep
-| In hidden furies' winded spray.
-|
-| Each time it rains, the rivers splay,
-| And surge with purging currents swift,
-| What lays on shore is swept away
-| Through undertow then set adrift
-| To reach again where edge gives way
-| To core laid bare through ancient rift.
-|
-| The heat was shaped with holy bliss,
-| While cold finds form in shattered fall,
-| The tracks of arcs that never miss,
-| The purpose found in roaring squall,
-| To hurl in spite of stolen kiss,
-| To seed with life this earthen sprawl.
-|
-| No forest sprite nor sun born sprout,
-| Can know the course of water's fate,
-| To craft and make then cease the drought,
-| And hear its name with venom hate
-| In curses made by summer's clout,
-| And so it cries at heaven's gate.
-
-XV: Let It Simmer (Librarian VIII)
-----------------------------------
-
-| A heart too hot will lack a taste
-| Refined. Quiet now, simmer down,
-| And stew the sauce, or let it baste.
-| Yes, let it sit, in flavor drown
-| And only then when flame is off,
-| You taste a bit, a smidgen pinch;
-| Before your hunger dips to trough,
-| Begin to measure inch by inch
-| What boiled over side of thought.
-| Distilled to stock, the essence clean
-| Will cling in drops that drip on pot
-| To add to future meals' cuisine.
-
+----
 Odes
-====
+----
 
 I: An Ode To Autumn
 -------------------
@@ -551,23 +447,23 @@ I: An Ode To Autumn
 | And drown with wave the lazing lovers' sigh.
 |
 | To life I came already old and grim
-|           But now the chill sets in;    
+|           But now the chill sets in;
 | Each breath in gasp dispels to steam
-|           Of Spring now waning thin.
+|           of Spring now waning thin.
 
 II: Ode to the Heron
 --------------------
 
-| Grey Heron, why not hide from winter's sting? 
-| When hunting ground then turns 
-|       from flows of blue to ice,
+| Grey Heron, why not hide from winter's sting?
+| When hunting ground then turns
+|       From flows of blue to ice,
 | The geese and ducks go south
-|       As wind begins to blow, 
-| Then moles will burrow down 
+|       As wind begins to blow,
+| Then moles will burrow down
 |       To wait beside the mice,
 | The deer though disappear,
-|       their dreams in hidden coves.
-| 
+|       Their dreams in hidden coves.
+|
 | All retreat and yield what they claim in Spring.
 | Oh! Heron! All but one!
 |       Not you, oh hunter Grey!
@@ -575,8 +471,8 @@ II: Ode to the Heron
 |       With coiled neck of spear,
 | To rouse the sleeping rats
 |       And feast upon your prey,
-| To steam their gasping breath 
-|       With scream of speckled fear. 
+| To steam their gasping breath
+|       With scream of speckled fear.
 |
 | As seasons switch yet winter lifts your wing.
 | In flocks and song most birds
@@ -586,20 +482,21 @@ II: Ode to the Heron
 | Your song is sung in swoop
 |       With fire from beating chest,
 | The selfsame flame that rises
-|       In cold upon your flank. 
+|       In cold upon your flank.
 |
-| Each season makes of life its shape to sing. 
+| Each season makes of life its shape to sing.
 | The Spring so shapes the buds
-|       And lazy chirping thrush, 
+|       And lazy chirping thrush,
 | The summer, berry red
 |       And robin eggs of fay,
 | Then Autumn crows of black
 |       In pumpkin laden brush,
 | Yet winter makes but one,
-|       The mighty Heron Grey. 
+|       The mighty Heron Grey.
 
+--------
 Pantoums
-========
+--------
 
 I: LeAnna's Pantoum
 -------------------
@@ -624,300 +521,9 @@ I: LeAnna's Pantoum
 | Pretty pretend, comely with grin;
 | Our end will yet begin again.
 
-Rondeaus
-========
-
-I: The Winter Rondeau of Cumberland
------------------------------------
-
-| City of the Queen, wove from ancient thread,
-| Strung with snow trails of spotted fawn and sled,
-| Drape the hillside in winter's white ermine, 
-| Pray to sleep the flock from steeple shrine,
-| Feast on the harvest, though the queen is dead 
-| Her spirit flies in death, descends to shine 
-|               On the fair City of the Queen. 
-|
-| From tower bell, rivers rose with tears shed
-| But her resting stone etched her last design
-|               for the grand City of the Queen. 
-| 
-| Where the roads of black ebb to bricks of red
-| Where hoof and rubber meet the twines of tread 
-| There along mountain tops soft trimm'd by pine
-| There grows a flower from heights of steep incline
-| Planted by tender hands unseen to spread
-|                     Into the City of the Queen.
-
-II: Rondeau for the River Rats
-------------------------------
-
-| On river shore the poor in tents are stored
-|    To keep from sight their score.
-| Above and north, the city steeples meet 
-| To speak in sermons ever indiscrete
-|     for sheep they so ignore.
-| 
-| They fight with roar, yet beaten, kiss through gore;
-| From barrel fired dream, north they look for more,
-| The city lights too far a source of heat
-|    For life on river shore. 
-|
-| In winter months they paint on skin a whore,
-| And every one despite what silence swore.
-|     In life they all must cheat,
-|     Become their own deceit,
-| To win a war for land they all abhor:
-|     Their home on river shore.
-
-Sonnets
-=======
-
-I: You as a Sonnet
-------------------
-
-| Should your hand force from mine a single choice 
-| To compare our love to a tome of lore,
-| A summer day, rose, moon, or chorus voice,
-| Just one spans your width, oh, the metaphor.
-|
-| You are as the as from the like to like,
-| The circle stretching from each pole to pole.
-| You are the lack between the shriek and shrike,
-| The parts which string in thought your essence whole.
-|
-| Awake, I cannot be but to find you
-| In empty room, in meadow or in dream;
-| You are the point of every moment true,
-| Gem inlaid by plan into every scheme.
-|
-| So if this choice to me tonight you bring
-| I shall choose to make of you everything.
-
-II: Sonnet for the Demented
----------------------------
-
-| There are but few who taste the hemlock blue,
-| Fortune finds those who swing from noose and nail;
-| With minute gone they follow through in queue,
-| Spared the with'ring touch of Time's fingers frail. 
-| 
-| If a choice it has, Time first stalks the mind, 
-| Steady quick but not so fast to spook its prey;
-| Every hunter knows fright will taint the find. 
-| Slow in step, it bides itself from day to day. 
-| 
-| Oh, Memory! Jigsaw tower of self!
-| How easily you crumble with a tap!
-| Time takes but one book from a shelf
-| And in a pile leaves you upon his lap. 
-| 
-| A stranger each face becomes through the glass,
-| Each ageless moment til you breath your last. 
-
-III: A Sonnet for Cumberland MD
--------------------------------
-
-| Bay silt in city stone through time accrues
-| to-wards the western course of concrete flow
-| that sweeps from plain to sky in upward spews
-| as grey-white spray arcs over wave to snow
-| from heights on high to splash on mountain spine
-| where valleyed pools so rise to drink their fill
-| and shoot with sprouts through shoulders made of pine
-| the roofs that empty crowds on streets and spill
-| through hand to hand the layers stack'd from base
-| to brick by brick til building lillies bred
-| against the westward wall in flood's embrace
-| where lips at last are wet in watershed;
-|
-| Let skyline mark where tide in climb was broke:
-| Steeple, roof, needles pine and leaves of oak.
-
-IV: Chance
-----------
-
-| A death in six is face of die on roll,
-| Like stacks of chips from pots that ante all,
-| A win, or loss, of game that wagers soul
-| Must meet on board the fates that follow call.
-|
-| A life received as hand of cards on deal,
-| Where threes are flush, but royals rarely draw 
-| And twos deceive, in bluff contrive to steal
-| What kings and queens through rule so reap by law. 
-|
-| A love is tracked by loops of racing course,
-| Through hoop and holler, bookies taking bets,
-| Where hopes in coin distill to choice of horse
-| And ticker tape leaves the crowd with debts.
-|
-| The world at large is made of game and rule,
-| Appears to eyes as ordered step of dance.
-| Each move, when made by foot of sage or fool,
-| Results in taps resolved to beat of chance. 
-|
-| What always fortune finds is fettered fate
-| Unlocked by strike of luck and never late. 
-
-V: Stranded (Librarian IV)
---------------------------
-
-| A hundred days would need a hundred more
-| Before exhaust began to tame my heart.
-| The wizened waves to rock decay the shore
-| In time it takes for maps of you to chart. 
-|
-| Yet minutes gone to ground will go too quick,
-| Where sand in wind so whips you brief away,
-| Each moment past with you now seems a trick,
-| As staggered feet through surf are lost in spray. 
-| 
-| This isle I find myself at night marooned,
-| Where thoughtless sleep is but a dream once held,
-| Alone these times with fire I have communed,
-| In cants of memories with you I dwell. 
-|
-| Though lost at sea, amid unending storm,
-| A thought, perhaps to be, with you and warm. 
-
-VI: Poisoned (Librarian V)
---------------------------
-
-| Before we met by chance, your heart was claimed,
-| What wasted years I spent alone in trance,
-| When arrows knocked on string were freely aimed,
-| I lost my chance to ask your hand in dance. 
-|
-| That life should teach me meaning bittersweet,
-| To see what honey bees in hive partake,
-| To watch the flight of doves from grounded feet,
-| I knew then not what pain in heart would ache.
-| 
-| My poison petals in your soul would bloom,
-| If fate had played its hand another way,
-| In sideways future spun by time's dread loom,
-| Your life, your love, would fall to me as prey. 
-|
-| If solace cursed I am to trek this mile,
-| I only ask your love should make you smile. 
-
-Triolets
-========
-
-I: Forever
-----------
-
-| Let this moment last forever
-| Let it sink not into never
-| For all our plans so clever
-| Let this moment last forever 
-| Hidden goal in each endeavor
-| Lifted load of every lever
-| Let this moment last forever
-| Let it sink not into never.
-
-II: Letters
------------
-
-| She is nothing more than letters
-| Under bedframe, wooden box. 
-| In her prison locked by fetters,
-| She is nothing more than letters.
-| Warrant wielded by her debtors
-| Which vault of memory locks.
-| She is nothing more than letters
-| Under bedframe, wooden box.
-
-Villanelles 
-===========
-
-I: The Villanelle of Viola Elle
--------------------------------
-
-| Viola Elle took his heart
-| But there wasn't much to take
-| Strewn to pieces and to parts. 
-|
-| The written word her counterpart
-| In those blossoms caught his love
-| And Viola Elle took his heart.
-| 
-| So brief her stay to long depart,
-| Meadow memories of clover doves
-| Strewn to pieces and to parts. 
-| 
-| Without hand and leading start
-| To silent fields of fell foxglove
-| Viola Elle took his heart
-| 
-| And in taking, sorrow did impart
-| The waking of his life whereof
-| Strewn to pieces and to parts. 
-| 
-| In form such beauty is betrayed;
-| From pen she never fully fades.
-| Viola Elle took his heart
-| Strewn to pieces and to parts. 
-
-II: The Haunted Cathedral
--------------------------
-
-| A church atop a steepled hill
-| From foundation ages old 
-| Remains in spirit standing still.
-| 
-| Stain'd glass shattered on a sill,
-| With marble halls of lichen mold,
-| A church atop a steepled hill. 
-|
-| From pews drinking up their fill,
-| The congregation in stories told
-| Remains in spirit standing still.
-|
-| What there remains but little will
-| In history pages to written hold
-| A church atop a steepled hill.
-|
-| But steeple of such pointed skill,
-| From silken skies of glitter'd gold
-| Remains in spirit standing still. 
-|
-| Pray, ignore the biting chill
-| As cast into the shaping mould,
-| Oh! church atop a steepled hill,
-| We remain in spirit standing still.
-
-III: Plots
-----------
-
-| In time their plot was touched by dark.
-| Began the page this meadow scene
-| where blades of grass were tall and stark.
-|
-| A tired arc, they met in park
-| To kiss beneath the twilight queen;
-| In time their plot was touched by dark.
-|
-| They stole away on sudden lark,
-| Exchanged the words from whispered lean
-| Where blades of grass were tall and stark.
-|
-| So happy and green, neighbors remark,
-| Yet seem is such to lose its sheen,
-| In time their plot was touched by dark.
-|
-| Yet faded years ignored their spark
-| In death they died forever seen
-| Where blades of grass were tall and stark.
-| 
-| In ground, their bodies disembark
-| And leave behind a hole dug clean.
-| In time their plot was touched by dark,
-| Where blades of grass were tall and stark.
-
+-----
 Poems
-=====
+-----
 
 I: Regret
 ---------
@@ -971,12 +577,12 @@ II: Syntax
 | A spool of loops, a palindrome, signaling the breach:
 |
 | I met a system I, madam, nuts is as selfless as I stun;
-| Part on seined flow, murdrum nun, wolf denies no trap;
+| Part on seined flow, deified nun, wolf denies no trap;
 | God lived as a devil dog, ere, no spay pup yaps on!
 | If characters spin and snap, meaning is yet wordwrapt.
 |
 | Inverted strings start to chart the wording realm unveiled;  
-| Expand in spans this dark expanse, but scarcely fill the space.
+| Expand in spans through vast expanse, but scarcely fill the space.
 | Semiordnilaps, anastrophe, with still much to be inhaled;
 | These parts strapped in syntropy divide in fractal formal grace. 
 |
@@ -1213,20 +819,20 @@ VI: Kingdoms
 
 | Two children crossed an earthen bridge
 | From level lawns to forests wild
-| Along rivered arc descending ridge,
+| Along the rivered arc descending ridge.
 | With dirty hands, they sang and smiled.
 | Their charted map from zippered packs
 | Now in branches espied its target
 | As clearing yields to lily blacks
 | Their kingdom's fresh air market.
 | Lord and lady honorary, cheeked blush,
-| Sat upon the thrones of woven grass,
-| Coronated by the chirping choir thrush;
-| Memory holds as years rushing pass.
+| Sat upon thrones of woven grass,
+| Coronated by chirping choir thrush;
+| A falling grain in hour glass. 
 |
-| On a maiden morning one decade hence,
+| On a maiden morning moments hence,
 | They meet again upon the autumn passing,
-| Where from heart removed pretense
+| Where from heart's removed pretense
 | On tender lips, farewell's final massing.
 | Lily lyrics whisper sing from ground
 | Reminders of their childish notions;
@@ -1234,7 +840,7 @@ VI: Kingdoms
 | Separate by spanning roads and oceans.
 |
 | In the city, their trains diverge,
-| Thru tunnels tracked by wagered hours;
+| Through tunnels tracked by wagered hours;
 | Iron rails thru hearts do purge
 | Their aged minds of lily flowers.
 | Winter drifts over concrete streets,
@@ -1245,7 +851,7 @@ VI: Kingdoms
 | With the clock's incessant ticking
 | Falling strokes of time resolved,
 | They follow home a casket's wicking,
-| Returned again to a lily laden field
+| Returned again to a lily covered field
 | Where once royals played for a day;
 | With new hearts scored and peeled
 | In the funerary cloud of gray,
@@ -1285,28 +891,145 @@ VII: The Paronymous Polyptotons of Love
 |   and bled so bleeding blends our blood.
 |
 | The rote of rite has written soul
-|   That hides in whole the hidden hole.
+|   That hides in hole the hidden whole.
 | We wound our wounds for winds unwind
 |   To find defined a finer find.
 | We are an are that was a were
 |  That whirled a world to whirl with her.
 
-VIII: Walls
+VII: Designs
+------------
+
+| If asked this time, design a rhyme
+| To woo your mind from book, by hook
+| I'll thread this line up steep incline
+| While looking back to meadowbrook
+| Reclined your arms in sun shook shine,
+| In paper pages overtook
+| Your gaze from mine, hidden through pine
+| I spied your beauty's lounging look.
+|
+| The joy of snaps and clicking lock
+| Which ticking clocks with clapping hands
+| So slap the sand and quickly block
+| The falling grains, in wick expands
+| To flame the brand that marks the spot
+| Where stopped my heart its lonely gland
+| At sight of you and tamed my thought
+| And swapped unplanned in place to stand
+| Where lace with liquid grace ties knots
+| Between the space your face commands.
+
+IX: Bird
+--------
+
+| To say what's meant without the word,
+| Oh poetry, relent wherein
+| I yield to you all things deferred,
+| In baptism, repent my sin.
+|
+| I found a bird, that sings so soft,
+| Her song aloft in heart by choice.
+| To field of hers I pass so oft
+| To sit in grass and drink her voice.
+|
+| With chirping dive she plunged so deep
+| And pierced the weary veil that hides
+| The ghosts of dreams that haunt my sleep;
+| She sang such hopeful lullabies.
+|
+| Oh bird, oh bird, with glee you sing,
+| If you could know the depths of dark
+| That shadows cast in offering,
+| Would song still burst from breast in lark?
+
+X: Photographs of Autumn
+------------------------
+
+| These photographs are brittle leaves
+|    That fell from trees, that we once caught.
+| I press them tender into sleeves
+|    Of glass to halt the course of rot.
+| Though kept well fed with water shed,
+|    They wilt to brown as colors fade.
+| No leaf can live beside the bed,
+|    Without sunlight that makes the shade.
+| Yet even still, though claimed by dust,
+|    I keep them hung upon my wall,
+| For memory you did entrust
+|    Of walk with you through golden Fall.
+
+XI: The Curse of Rain
+---------------------
+
+| The rainy days, so slandered, weep
+| As haughty summer lovers lay
+| And mock the sky with lazy sleep,
+| While clouds so white with dreams of gray,
+| With sun they soak and whirling sweep
+| In hidden furies' winded spray.
+|
+| Each time it rains, the rivers splay,
+| And surge with purging currents swift,
+| What lays on shore is swept away
+| Through undertow then set adrift
+| To reach again where edge gives way
+| To core laid bare through ancient rift.
+|
+| The heat was shaped with holy bliss,
+| While cold finds form in shattered fall,
+| The tracks of arcs that never miss,
+| The purpose found in roaring squall,
+| To hurl in spite of stolen kiss,
+| To seed with life this earthen sprawl.
+|
+| No forest sprite nor sun born sprout,
+| Can know the course of water's fate,
+| To craft and make then cease the drought,
+| And hear its name with venom hate
+| In curses made by summer's clout,
+| And so it cries at heaven's gate.
+
+XII: Let It Simmer
+------------------
+
+| A heart too hot will lack a taste
+| Refined. Quiet now, simmer down,
+| And stew the sauce, or let it baste.
+| Yes, let it sit, in flavor drown
+| And only then when flame is off,
+| You taste a bit, a smidgen pinch;
+| Before your hunger dips to trough,
+| Begin to measure inch by inch
+| What boiled over side of thought.
+| Distilled to stock, the essence clean
+| Will cling in drops that drip on pot
+| To add to future meals' cuisine.
+
+XIII: Walls
 -----------
 
-| the husks of walls that city shucks
-| accumulate, conglomerate
+
+| the husk of walls that city shucks
+| accumulates and concentrates
 | around like rings in ancient trunks
-| where measured age with circles gate
-| the spiraled line accrued through time,
-| deposits buried in substrate.
+| where measured age with circle gates
+| the spiraled line amassed through time,
+| deposits buried down substrates.
 |
 | at summit's crest, the joints are thick
 | and licking tongues of moss ascend
-| the darkened stone from quarry hauled
-| on shouldered back, in arms suspend
+| the darkened blocks from quarry hauled
+| on buttressed back, in stone suspend
 | the garden court where crowds took root
 | and grew their plans of walls to tend.
+|
+| from center peak the wooden slats
+| erect the map with tangled fence
+| to trace a grid of patchwork yards,
+| these charts of dreams in ground commence
+| the flattened course of borough life
+| where burgs and burbs did once condense.
 |
 | then moving out, the bricks of red
 | in crooked rows descend to meet
@@ -1319,12 +1042,368 @@ VIII: Walls
 | in towers stacked to portal sky
 | with wires fused and humming signs;
 | they arc and rise, on edges vie
-| like vines entwined in rushing growth
-| that splits and frays as nuclei.
+| the vines entwined in rushing growth
+| to split in spine, like nuclei.
 |
 | at last the stable struts of steel
 | designed as straight as rays of light
 | reflected back on silver glass
-| the lattice links both left and right
-| the course of time in circled sweep,
+| the lattice links both left and right;
+| the history in circled sweep
 | constricts the city sphere so tight.
+|
+| through sections cross the avenue
+| from point to point and time to time
+| the human shell that forms in turn
+| the arches bend, the steepled chime,
+| that wilts and sheds, but fossils kept
+| in barrows born their salt and lime.
+
+XIV: Turkey Vultures
+--------------------
+
+| the wakes of Turkey Vultures soar
+| then perch across the steepled sky.
+| they rest on totems tall and pure,
+| in silence feathers multiply.
+| their talons clutch where crosses meet
+| the stolen spear of destined make.
+| no heaven sent their wings of fleet,
+| no stomach filled will hunger slake.
+| the shapes of black in swarming plunged
+| upon the carcass freshly brought.
+| they feast on sins from gods expunged,
+| but left for them as afterthought.
+| bewitched to death, returned to Earth,
+| from cage released, the specters hunt
+| the ones who wear the curse of birth,
+| they all must bear the brutal brunt.
+
+XV: Faustus
+-----------
+
+| crooked cross on steeple slants
+| behind the clouds on axis bound.
+| cocoon the storm, these winded cants,
+| this spell from depths of godless sound.
+|
+| let dirge be purged through broken bell,
+| through hollow dell with surging wind,
+| unearthed remains returned from hell,
+| the bones decayed now gardens tend.
+|
+| oh, name that hides in shattered ring,
+| that brings the rain, becomes the night
+| of lightless thunder, shriven sing
+| the drops of dark through wicked flight.
+|
+| by dripping altar, prayers fled
+| through clasping fingers splayed in maze,
+| communed with spirits past and dead,
+| before my eyes, a sightless gaze.
+|
+| the paint of statues leeched in stains,
+| with weeping ink of saint's remorse,
+| deformed by time and bearing chains,
+| condemned to hear my voice grown hoarse.
+|
+| profane my soul and twist it loose
+| with iron pincers red with sin.
+| let drain my blood, my veins to sluice,
+| replace my eyes and rise wihin.
+
+--------
+Rondeaus
+--------
+
+I: The Winter Rondeau of Cumberland
+-----------------------------------
+
+| City of the Queen, wove from ancient thread,
+| Strung with snow trails of spotted fawn and sled,
+| Drape the hillside in winter's white ermine,
+| Pray to sleep the flock from steeple shrine,
+| Feast on the harvest, though the queen is dead
+| Her spirit flies in death, descends to shine
+|               On the fair City of the Queen.
+|
+| From tower bell, rivers rose with tears shed
+| But her resting stone etched her last design
+|               for the grand City of the Queen.
+|
+| Where the roads of black ebb to bricks of red
+| Where hoof and rubber meet the twines of tread
+| There along mountain tops soft trimm'd by pine
+| There grows a flower from heights of steep incline
+| Planted by tender hands unseen to spread
+|                     Into the City of the Queen.
+
+II: Rondeau for the River Rats
+------------------------------
+
+| On river shore the poor in tents are stored
+|    To keep from sight their score.
+| Above and north, the city steeples meet
+| To speak in sermons ever indiscrete
+|     for sheep they so ignore.
+|
+| They fight with roar, yet beaten, kiss through gore;
+| From barrel fired dream, north they look for more,
+| The city lights too far a source of heat
+|    For life on river shore.
+|
+| In winter months they paint on skin a whore,
+| And every one despite what silence swore.
+|     In life they all must cheat,
+|     Become their own conceit,
+| To win a war for land they all abhor:
+|     Their home on river shore.
+
+-------
+Sonnets
+-------
+
+I: You as a Sonnet
+------------------
+
+| Should your hand force from mine a single choice
+| To compare our love to a tome of lore,
+| A summer day, rose, moon, or chorus voice,
+| Just one spans your width, oh, the metaphor.
+|
+| You are as the as from the like to like,
+| The circle stretching from each pole to pole.
+| You are the lack between the shriek and shrike,
+| The parts which string in thought your essence whole.
+|
+| Awake, I cannot be but to find you
+| In empty room, in meadow or in dream;
+| You are the point of every moment true,
+| Gem inlaid by plan into every scheme.
+|
+| So if this choice to me tonight you bring
+| I shall choose to make of you everything.
+
+II: Sonnet for the Demented
+---------------------------
+
+| There are but few who taste the hemlock blue,
+| Fortune finds those who swing from noose and nail;
+| With minute gone they follow through in queue,
+| Spared the with'ring touch of Time's fingers frail.
+|
+| If a choice it has, Time first stalks the mind,
+| Steady quick but not so fast to spook its prey;
+| Every hunter knows fright will taint the find.
+| Slow in step, it bides itself from day to day.
+|
+| Oh, Memory! Jigsaw tower of self!
+| How easily you crumble with a tap!
+| Time takes but one book from a shelf
+| And in a pile leaves you upon his lap.
+|
+| A stranger each face becomes through the glass,
+| Each ageless moment til you breath your last.
+
+III: A Sonnet for Cumberland MD
+-------------------------------
+
+| Bay silt in city stone through time accrues
+| along the western course of concrete flow
+| that sweeps from plain to sky in upward spews
+| as grey-white spray arcs over wave to snow
+| from heights on high to splash on mountain spine
+| where valleyed pools in rising drink their fill
+| and shoot with sprouts through shoulders made of pine
+| the roofs that empty crowds on streets and spill
+| through hand to hand the layers stacked from base
+| to bickered brick til building lillies bred
+| against the westward wall in flood's embrace
+| where lips at last are wet in watershed;
+|
+| Let skyline mark where tide in climb was broke:
+| Steeple, roof, needles pine and leaves of oak.
+
+IV: Chance
+----------
+
+| A death in six is face of die on roll,
+| Like stacks of chips from pots that ante all,
+| A win, or loss, of game that wagers soul
+| Must meet on board the fates that follow call.
+|
+| A life received as hand of cards on deal,
+| Where threes are flush, but royals rarely draw
+| And twos deceive, in bluff contrive to steal
+| What kings and queens through rule so reap by law.
+|
+| A love is tracked by loops of racing course,
+| Through hoop and holler, bookies taking bets,
+| Where hopes in coin distill to choice of horse
+| And ticker tape leaves the crowd with debts.
+|
+| The world at large is made of game and rule,
+| Appears to eyes as ordered step of dance.
+| Each move, when made by foot of sage or fool,
+| Results in taps resolved to beat of chance.
+|
+| What always fortune finds is fettered fate
+| Unlocked by strike of luck and never late.
+
+V: Stranded
+-----------
+
+| A hundred days would need a hundred more
+| Before exhaust began to tame my heart.
+| The wizened waves to rock decay the shore
+| In time it takes for maps of you to chart.
+|
+| Yet minutes gone to ground will go too quick,
+| Where sand in wind so whips you brief away,
+| Each moment past with you now seems a trick,
+| As staggered feet through surf are lost in spray.
+|
+| This isle I find myself at night marooned,
+| Where thoughtless sleep is but a dream once held,
+| Alone these times with fire I have communed,
+| In cants of memories with you I dwell.
+|
+| Though lost at sea, amid unending storm,
+| A thought, perhaps to be, with you and warm.
+
+VI: Poisoned
+------------
+
+| Before we met by chance, your heart was claimed,
+| What wasted years I spent alone in trance,
+| When arrows knocked on string were freely aimed,
+| I lost my chance to ask your hand in dance.
+|
+| That life should teach me meaning bittersweet,
+| To see what honey bees in hive partake,
+| To watch the flight of doves from grounded feet,
+| I knew then not what pain in heart would ache.
+| 
+| My poison petals in your soul would bloom,
+| If fate had played its hand another way,
+| In sideways future spun by time's dread loom,
+| Your life, your love, would fall to me as prey.
+|
+| If solace cursed I am to trek this mile,
+| I only ask your love should make you smile.
+
+--------
+Triolets
+--------
+
+I: Forever
+----------
+
+| Let this moment last forever
+| Let it sink not into never
+| For all our plans so clever
+| Let this moment last forever
+| Hidden goal in each endeavor
+| Lifted load of every lever
+| Let this moment last forever
+| Let it sink not into never.
+
+II: Letters
+-----------
+
+| She is nothing more than letters
+| Under bedframe, wooden box.
+| In her prison locked by fetters,
+| She is nothing more than letters.
+| Warrant wielded by her debtors
+| Which vault of memory locks.
+| She is nothing more than letters
+| Under bedframe, wooden box.
+
+-----------
+Villanelles
+-----------
+
+I: The Villanelle of Viola Elle
+-------------------------------
+
+| Viola Elle took his heart
+| But there wasn't much to take
+| Strewn to pieces and to parts.
+|
+| The written word her counterpart
+| In those blossoms caught his love
+| And Viola Elle took his heart.
+|
+| So brief her stay to long depart,
+| Meadow memories of clover doves
+| Strewn to pieces and to parts.
+|
+| Without hand and leading start
+| To silent fields of fell foxglove
+| Viola Elle took his heart
+|
+| And in taking, sorrow did impart
+| The waking of his life whereof
+| Strewn to pieces and to parts.
+|
+| In form such beauty is betrayed;
+| From pen she never fully fades.
+| Viola Elle took his heart
+| Strewn to pieces and to parts.
+
+II: The Haunted Cathedral
+-------------------------
+
+| A church atop a steepled hill
+| From foundation ages old
+| Remains in spirit standing still.
+| 
+| Stain'd glass shattered on a sill,
+| With marble halls of lichen mold,
+| A church atop a steepled hill.
+|
+| From pews drinking up their fill,
+| The congregation in stories told
+| Remains in spirit standing still.
+|
+| What there remains but little will
+| In history pages to written hold
+| A church atop a steepled hill.
+|
+| But steeple of such pointed skill,
+| From silken skies of glitter'd gold
+| Remains in spirit standing still.
+|
+| Pray, ignore the biting chill
+| As cast into the shaping mould,
+| Oh! church atop a steepled hill,
+| We remain in spirit standing still.
+
+III: Plots
+----------
+
+| In time their plot was touched by dark.
+| Began the page this meadow scene
+| where blades of grass were tall and stark.
+|
+| A tired arc, they met in park
+| To kiss beneath the twilight queen;
+| In time their plot was touched by dark.
+|
+| They stole away on sudden lark,
+| Exchanged the words from whispered lean
+| Where blades of grass were tall and stark.
+|
+| So happy and green, neighbors remark,
+| Yet seem is such to lose its sheen,
+| In time their plot was touched by dark.
+|
+| Yet faded years ignored their spark
+| In death they died forever seen
+| Where blades of grass were tall and stark.
+|
+| In ground, their bodies disembark
+| And leave behind a hole dug clean.
+| In time their plot was touched by dark,
+| Where blades of grass were tall and stark.

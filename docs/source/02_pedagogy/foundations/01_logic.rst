@@ -83,13 +83,13 @@ Negation
 --------
 
 Symbolic Expression
-    :math:`\neq p`
+    :math:`\neg p`
 
 .. list-table::
   :header-rows: 1
 
   * - :math:`p`
-    - :math:`\neq p`
+    - :math:`\neg p`
   * - T
     - F
   * - F
@@ -297,7 +297,7 @@ These values, however, are inconsistent with the hypothesis, :math:`s`, which wa
 
 .. math::
 
-    \forall p, q, r: ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
+  ((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)
 
 .. _categorical-logic:
 

@@ -1,5 +1,9 @@
+.. _florilegum:
+
 Florilegium
 ===========
+
+.. _ante-christum:
 
 -------------
 Ante Christum
@@ -57,9 +61,25 @@ Ante Christum
 
         -- `Prior Analytics`_, Aristotle, 300s BC
 
+.. _anno-domini:
+
 -----------
 Anno Domini
 -----------
+
+.. collapse:: 1100s 
+
+    .. epigraph::
+
+        If '*every stone-man is a stone*' is :ref:`true <truth>`, also its conversion per accidens is :ref:`true <truth>` ('*some stones are stone-men*'). But no stone is a stone-man, because neither this man nor that man etc. is a stone. But also this '*a certain stone-man is not a stone*' is false by necessity, since it is impossible to suppose it is true
+
+        -- Dialectica, Peter Abelard, 1115 AD
+
+    .. epigraph::
+
+        There seem to be two necessities of consequences, one in a larger sense, if namely that what is maintained in the antecedent cannot be the case without that what is maintained in the consequent; the other in a narrower sense, if namely not only the antecedent cannot be true without the consequent, but if also the antecedent by itself requires the consequent.
+
+        -- Dialectica, Peter Abelard, 1115 AD
 
 .. collapse:: 1600s 
 
@@ -127,6 +147,15 @@ Anno Domini
 
         -- `On Concept and Object`_, Gottlob Frege (Peter Gleach translation), 1892 AD
 
+    .. epigraph::
+
+        Dear colleague, 
+        
+        For a year and a half, I have been acquainted with your *The Foundations of Arithmetic*, but it is only now that I have been able to find the time for the thorough study I intended to make of your work. I find myself in complete agreement with you in all essentials, particularly when you reject any psychological element in logic and when you place a high value upon an ideography for the foundations of mathematics and of formal logic, which, incidentally, I find in your work discussions, distinctions, and definitions that one seeks in vain in the works of other logicians. Especially so far as function is concerned, I have been led on my own to views that are the same even in the details. There is just one point where I have encountered a difficulty. You state that a function, too, can act as the indeterminate element. This I formerly believed, but now this view seems doubtful to me because of the following contradiction. Let *w* be the predicate: to be a predicate that cannot be predicated of itself. Can *w* be predicated of itself? From each answer, its opposite follows. Therefore, we must conclude that *w* is not a predicate. Likewise there is no class (as a totality) of those classes which, each taken as a totality, do not belong to themselves. From this I conclude that under certain circumstances a definable collection does not form a totality.
+
+        -- Correspond with Gottlob Frege, Bertrand Russell
+
+
 .. collapse:: 1900s 
 
     .. epigraph::
@@ -155,7 +184,7 @@ Anno Domini
 
     .. epigraph::
 
-        :ref:`Dasein <being>` is an :ref:`seiendes <being>` which does not just occur among other :Ref:`seienden <being>`. Rather it is ontically distinguished by the fact that, in its very :ref:`Sein <being>`, that :ref:`Sein <being>` is an issue for it. But in that case, this is a constitutive state of  :ref:`Dasein <being>`'s :ref:`Sein <being>`, and this implies that :ref:`Dasein <being>`, in its :ref:`Sein <being>`, has a relationship towards that :ref:`Sein <being>`— a relationship which itself is one of :ref:`Sein <being>`. And this means further that there is some way in which  :ref:`Dasein <being>` understands itself in its :ref:`Sein <being>`,, and that to some degree it does so explicitly. It is peculiar to this entity that with and through its :ref:`Sein <being>`, this :ref:`Sein <being>`, is disclosed to it. Understanding of :ref:`Sein <being>` is itself a definite characteristic of  :ref:`Dasein's <being>` :ref:`Sein <being>`.  :ref:`Dasein <being>` is ontically distinctive in that it is ontological.
+        :ref:`Dasein <being>` is an :ref:`Seiendes <being>` which does not just occur among other :Ref:`Seienden <being>`. Rather it is ontically distinguished by the fact that, in its very :ref:`Sein <being>`, that :ref:`Sein <being>` is an issue for it. But in that case, this is a constitutive state of  :ref:`Dasein <being>`'s :ref:`Sein <being>`, and this implies that :ref:`Dasein <being>`, in its :ref:`Sein <being>`, has a relationship towards that :ref:`Sein <being>`— a relationship which itself is one of :ref:`Sein <being>`. And this means further that there is some way in which  :ref:`Dasein <being>` understands itself in its :ref:`Sein <being>`,, and that to some degree it does so explicitly. It is peculiar to this entity that with and through its :ref:`Sein <being>`, this :ref:`Sein <being>`, is disclosed to it. Understanding of :ref:`Sein <being>` is itself a definite characteristic of  :ref:`Dasein's <being>` :ref:`Sein <being>`.  :ref:`Dasein <being>` is ontically distinctive in that it is ontological.
 
         -- `Being and Time`_ , Martin Heidegger, 1927
 

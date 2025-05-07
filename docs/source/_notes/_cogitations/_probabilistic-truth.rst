@@ -1,3 +1,8 @@
+
+
+Probabilistic Truth
+-------------------
+
 Before we attempt to introduce interpretations, let's refine the primitive notions of this emergent explication of the notion of "*truth*". I think your line of thought about equating samples spaces with interpretations is along the right lines, but before making that jump, let's set a strong foundation. I propose the following (slight) modification of Kolmogrov's axioms of probability,
 
 .. topic:: Definitions 
@@ -51,8 +56,6 @@ With these assumptions, the following explication of the truth predicate is pres
 
         p \equiv ((p = a \in A) \equiv P(A) = 1)
 
-
-
 Let's think about how we analyze a simple example in classical probability. A coin is flipped and has two outcomes *h* and *t*. We say the outcome is heads by defining the events of "getting a head" and "getting a tail" as :math:`H` and :math:`H^c`
 
 .. math::
@@ -76,7 +79,6 @@ In order to talk about the outcomes, i.e. the source of randomness, they must fi
 But this is a vast over-simplification. It is not clear in Kolmogrov's formulation of probability what an *elementary event* is, only that measureable events should be sets of them. There does not appear to be room to talk about the "coin" in this formulation; i.e. the object being measured has been split into a multiplicity of elementary events. It is not that the "coin" is one object two sides, but that the "coin" is really two things simultaneously.
 
 In other words, "the coins is heads" is not a proposition in the language of Kolmogrov's probability. Rather, the "the token of an outcome belongs to a measurable event" is all that is being asserted with Kolmogrov's probability predicate. 
-
 
 .. math::
 

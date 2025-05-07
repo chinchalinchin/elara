@@ -10,14 +10,18 @@
     color: var(--pst-color-link-hover);
 }
 
-section#knowledge .epigraph,
-section#florilegium .epigraph,
-section#tractatus .epigraph, 
-section#theosophy .epigraph,
-section[id^="year"] .epigraph {
+.small {
+    font-size: 0.5em;
+}
+
+.footnote {
+    font-size: 0.7em !important;
+}
+
+.epigraph {
     font-size: 0.75em !important;
 }
 
-section[id^="year"] .sidebar {
+.sidebar {
     font-size: 0.8em !important;
 }

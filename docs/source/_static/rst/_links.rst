@@ -12,6 +12,10 @@
 .. _Principia Mathematica: https://archive.org/details/dli.ernet.247278/page/n29/mode/2up
 .. _The Concept of Truth in Formalized Languages: http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Tarski%20-%20The%20Concept%20of%20Truth%20in%20Formalized%20Languages.pdf
 
+.. academic, original language
+
+.. _Grundgesetze Der Arithmetik: https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
+
 .. philosophy
 
 .. _Being and Event: http://www.elimeyerhoff.com/books/Badiou/Badiou-Being_and_Event_Searchable.pdf

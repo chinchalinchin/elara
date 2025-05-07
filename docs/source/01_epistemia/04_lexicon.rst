@@ -45,28 +45,93 @@ TODO
 Being
 -----
 
-.. list-table:: Koine Greek
+.. list-table:: εἶναι (verb), Koine Greek
+  :header-rows: 1
 
-  * - Infinitive
-    - εἶναι
+  * - Tense
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural 
   * - Present Indicative
-    - εἰμί / εἶ / ἐστί / ἐσμέν / ἐστέ / εἰσί
+    - εἰμί 
+    - εἶ
+    - ἐστί
+    - ἐσμέν 
+    - ἐστέ
+    - εἰσί
   * - Imperfect Indicative
-    - ἦν / ἦσθα / ἦν / ἦμεν / ἦτε / ἦσαν
+    - ἦν
+    - ἦσθα
+    - ἦν 
+    - ἦμεν 
+    - ἦτε
+    - ἦσαν
   * - Future Indicative
-    - ὦ / ᾖς / ᾖ / ὦμεν / ἦτε/ ὦσι
+    - ὦ 
+    - ᾖς
+    - ᾖ
+    - ὦμεν
+    - ἦτε
+    - ὦσι
   * - Present Subjunctive
-    - ὦ / ᾖς / ᾖ / ὦμεν / ἦτε / ὦσι
+    - ὦ
+    - ᾖς
+    - ᾖ
+    - ὦμεν
+    - ἦτε
+    - ὦσι
   * - Present Optative
-    - εἴην / εἴης  / εἴη / εἶμεν  / εἶτε / εἶεν
+    - εἴην
+    - εἴης
+    - εἴη
+    - εἶμεν
+    - εἶτε
+    - εἶεν
   * - Future Optative
-    - ἐσοίμην / ἔσοιο / ἔσοιτο / ἐσοίμεθα  /  ἔσοισθε / ἔσοιντο
+    - ἐσοίμην
+    - ἔσοιο
+    - ἔσοιτο
+    - ἐσοίμεθα 
+    - ἔσοισθε
+    - ἔσοιντο
   * - Present Imperative
-    - --- / ἴσθι / ἔστω / --- /  ἔστε  / ἔστων
-  * - Present Participle, Masculine
-    - ὤν (ὄν) / ὄντος / ὄντι / ὄντα
-  * - Present Participle, Feminine
-    - οὖσα / οὔσης / οὔσῃ / οὖσαν
+    - ---
+    - ἴσθι
+    - ἔστω
+    - ---
+    - ἔστε
+    - ἔστων
+  
+.. list-table:: εἶναι (participle), Koine Greek
+  :header-rows: 1
+
+  * - Aspect, Gender
+    - Nominative 
+    - Genitive 
+    - Dative
+    - Accusative
+    - Vocative
+  * - Present, Masculine
+    - ὤν/ὄντες 
+    - ὄντος/ὄντων
+    - ὄντι/οὖσι
+    - ὄντα/ὄντας
+    - ὤν/ὄντες
+  * - Present, Feminine
+    - οὖσα/οὖσαι
+    - οὔσης/οὐσῶν
+    - οὔσῃ/οὔσαις
+    - οὖσαν/οὔσας
+    - οὖσα/οὖσαι
+  * - Present, Neuter
+    - ὄν/ὄντα
+    - ὄντος/ὄντων
+    - ὄντι/οὖσι
+    - ὄν/ὄντα
+    - ὄν/ὄντα
 
 1. τὸ ὄν: Neuter singluar present participle. The *what-is*, the *that-which-is*, the *being*, etc.
 
@@ -74,22 +139,57 @@ Being
 
 3. ἡ οὐσία: Feminine present participle. The *being-nature*, the *being-essence*, the *being-substance*.
 
-.. list-table:: Modern German
+.. list-table:: sein (verb), Modern German
+  :header-rows: 1
 
-  * - Infinitive
-    - sein
+  * - Tense 
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural
   * - Present Indicative
-    - bin / bist / ist / sind / seid / sind
+    - bin
+    - bist
+    - ist
+    - sind
+    - seid
+    - sind
   * - Past Indicative
-    - war / warst / war / waren / wart / waren
+    - war
+    - warst
+    - war
+    - waren
+    - wart
+    - waren
   * - Present Subjunctive
-    - sei / seist / sei / seien/ seiet / seien
+    - sei
+    - seist
+    - sei
+    - seien
+    - seiet
+    - seien
   * - Past Subjunctive
-    - wäre / wärest / wäre / wären / wäret / wären
-  * - Present Particple
-    - seiend
-  * - Present Particple
+    - wäre
+    - wärest
+    - wäre
+    - wären
+    - wäret
+    - wären
+
+.. list-table:: sein (participle), Modern German
+  :header-rows: 1
+
+  * - Aspect
+    - Singular 
+    - Plural
+  * - Present
+    - seiende
+    - seienden
+  * - Past
     - gewesen
+    - gewesenen
 
 1. Sein: Infintive. The *is*, the *being*.
 
@@ -107,16 +207,37 @@ Being
 Bedeutung
 ---------
 
-.. list-table:: Modern German
+.. list-table:: bedeuten (verb), Modern German
+  :header-rows: 1
 
-  * - Infinitive
+  * - Tense 
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural
+  * - Present
+    - bedeute
+    - bedeutest
+    - bedeutet
     - bedeuten
-  * - Present Tense
-    - bedeute / bedeutest / bedeutet / bedeuten / bedeutet / bedeuten
-  * - Past Tense
-    - bedeutete / bedeutetest / bedeutete / bedeuteten / bedeutetet / bedeuteten
-  * - Present Perfect Tense
-    - habe bedeutet / hast bedeutet / hat bedeutet / haben bedeutet / habt bedeutet / haben bedeutet
+    - bedeutet
+    - bedeuten
+  * - Past
+    - bedeutete
+    - bedeutetest
+    - bedeutete
+    - bedeuteten
+    - bedeutetet
+    - bedeuteten
+  * - Present Perfect
+    - habe bedeutet
+    - hast bedeutet
+    - hat bedeutet
+    - haben bedeutet
+    - habt bedeutet
+    - haben bedeutet
 
 - *be*: Prefix denoting direct or transitive action.
 - *deuten*: To point, to indicate, to interpret.
@@ -178,40 +299,88 @@ TODO
 Phenomena
 ---------
 
-.. list-table:: Koine Greek, Noun
+.. list-table:: φαινόμενον (noun), Koine Greek
+  :header-rows: 1
 
+  * - Case 
+    - Singular
+    - Plural
   * - Nominative
-    - φαινόμενον/φαινόμενα
+    - φαινόμενον
+    - φαινόμενα
   * - Genitive
-    - φαινομένου/φαινομένων
+    - φαινομένου
+    - φαινομένων
   * - Dative
-    - φαινομένῳ/φαινομένοις
+    - φαινομένῳ
+    - φαινομένοις
   * - Accusative
-    - φαινόμενον/φαινόμενα
+    - φαινόμενον
+    - φαινόμενα
   * - Vocative
-    - φαινόμενον/φαινόμενα
+    - φαινόμενον
+    - φαινόμενα
 
-.. list-table:: Koine Greek, Verb
+.. list-table:: φαίνειν (verb), Koine Greek
 
-  * - Infinitive
-    -  φαίνειν
+  * - Tense
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural
   * - Present Indicative
-    - φαίνω / φαίνεις / φαίνει / φαίνομεν / φαίνετε / φαίνουσι
+    - φαίνω
+    - φαίνεις
+    - φαίνει
+    - φαίνομεν
+    - φαίνετε
+    - φαίνουσι
   * - Present Subjunctive
-    - φαίνω / φαίνῃς / φαίνῃ / φαίνωμεν / φαίνητε / φαίνωσι
+    - φαίνω
+    - φαίνῃς
+    - φαίνῃ
+    - φαίνωμεν
+    - φαίνητε
+    - φαίνωσι
   * - Present Optative
-    - φαίνοιμι / φαίνοις / φαίνοι / φαίνοιμεν / φαίνοιτε / φαίνοιεν
+    - φαίνοιμι
+    - φαίνοις
+    - φαίνοι
+    - φαίνοιμεν
+    - φαίνοιτε
+    - φαίνοιεν
   * - Future Indicative
-    - φανῶ / φανεῖς / φανεῖ / φανοῦμεν  / φανεῖτε / φανοῦσι
+    - φανῶ
+    - φανεῖς
+    - φανεῖ
+    - φανοῦμεν
+    - φανεῖτε
+    - φανοῦσι
   * - Present Imperative
-    - --- / φαῖνε / φαινέτω / --- / φαίνετε / φαινόντων
-  * - Present Participle, Masculine
-    - φαίνων /  φαίνοντος
-  * - Present Participle, Feminine
-    - φαίνουσα / φαινούσης
-  * - Present Participle, Neuter
-    - φαῖνον / φαίνοντος
+    - ---
+    - φαῖνε
+    - φαινέτω
+    - ---
+    - φαίνετε
+    - φαινόντων
 
+.. list-table:: φαίνειν (participle), Koine Greek
+
+  * - Aspect, Gender
+    - Singular
+    - Plural
+  * - Present, Masculine
+    - φαίνων
+    - φαίνοντος
+  * - Present, Feminine
+    - φαίνουσα
+    - φαινούσης
+  * - Present, Neuter
+    - φαῖνον
+    - φαίνοντος
+  
 .. _language:
 
 --------
@@ -238,10 +407,14 @@ Verbs
 Psyche
 ------
 
-.. list-table::
+.. list-table:: ψυχή (noun), Koine Greek
 
-  * - Koine Greek
+  * - Case
+    - Singular
+    - Plural
+  * - Nominative
     - ψυχή
+    - ...
 
 .. _semantics:
 
@@ -249,10 +422,15 @@ Psyche
 Semantics
 ---------
 
-.. list-table:: Koine Greek
+.. list-table:: σῆμα (noun), Koine Greek
+  :header-rows: 1
 
-  * - Koine Greek
-    - σῆμα / σημασία
+  * - Case
+    - Singular
+    - Plural
+  * - Nominative
+    - σῆμα
+    - σημασία
 
 .. list-table:: Latin
 
