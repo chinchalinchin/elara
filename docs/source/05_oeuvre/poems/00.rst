@@ -42,4 +42,4 @@ I: Regret
      - Status
    * - March 27, 2025
      - Rattle Poetry
-     - Pending
+     - Rejected
