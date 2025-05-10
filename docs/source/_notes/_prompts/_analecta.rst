@@ -1,5 +1,3 @@
-.. MODE: ENGAGE
-
 ========
 Analecta
 ========
@@ -1644,8 +1642,6 @@ In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta
 Abstract Contradictions: A History of Propositions
 --------------------------------------------------
 
-.. START @ENGAGE
-
 :ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon. :ref:`Axiomatic set theory <sets>`, in its various formulations, represents the purely symbolic and syntactic limit of categorical logic, the maximum extent to which language can be shaped by formal considerations. In doing so, it must restrict itself to the *metalogical* layer, never penetrating below the surface of description. 
 
 It is instructive to consider the history of the *proposition*, for the *proposition* is at once a sentence and a unit of mathematics, a :ref:`truth value <truth-values>`. The proposition is a both a *meaningful* thing and a *formal* thing. The history of philosophy and mathematics is, by and large, an analysis and gradual unveiling of the relations that bind *form* to *meaning*, *syntax* to *semantics*. 
@@ -1798,8 +1794,6 @@ The key step is passing from the universal equality of concepts, an assertion of
 .. [#may_2025_03] Frege believed all (coherent) semantic concepts in a language, such as "*belonging*", could be derived from definitions made clearly with the formal laws of logic. His `Grundgesetze Der Arithmetik`_ is an attempt to reduce the mathematical language of arithmetic to a logical calculus, through the use of prior assumptions (:ref:`axioms <frege-axioms>`) and definitions such as the one given directly after this footnote,
 
 .. [#may_2025_04] It is often hard to translate Frege's formalism into everyday language, as if Frege's semantics are essentially alien to the actual mechanics of language. Frege is expressing insight in a language that bears only the faintest similarity to natural language.
-
-.. END @ENGAGE
 
 ---
 

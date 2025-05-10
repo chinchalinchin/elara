@@ -26,7 +26,8 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx_toolbox.collapse',
     'matplotlib.sphinxext.plot_directive',
-    'sphinx_design'
+    'sphinx_design',
+    'sphinx_sitemap'
 ]
 
 templates_path = [ ]
@@ -42,6 +43,8 @@ rst_prolog = """
 .. include:: /_static/rst/_links.rst
 """
 # -- Options for HTML output -------------------------------------------------
+
+html_baseurl = 'https://elara.chinchalinchin.com'
 
 html_theme = 'sphinx_book_theme'
 
