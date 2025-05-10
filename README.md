@@ -27,8 +27,11 @@ make html
 - [Doc8 Config](https://github.com/PyCQA/doc8)
 - [Pandoc](https://pandoc.org)
 
-TODO: https://ablog.readthedocs.io/en/stable/
+### TODOS
 
+- [ablog extension](https://ablog.readthedocs.io/en/stable/)
+
+See if 
 ### Reference
 
 Language Game
