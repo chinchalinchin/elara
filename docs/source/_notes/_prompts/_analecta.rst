@@ -854,6 +854,7 @@ Therefore,
 .. math::
 
     \lvert P(A) \rvert > \lvert A \rvert
+    
 .. _year-2025:
 
 2025
@@ -1516,66 +1517,6 @@ If the conjecture is granted, the question remains: what is the "*self*"? How do
 May
 ---
 
-.. epigraph::
-
-    For the sake of greater perspicuity, we shall use the symbol '*c*' as a typographical abbreviations of the expression '*the sentence printed on this page, line 5 from the top*'. Consider now the following sentence:
-
-        *c is not a true sentence*  (Note: this sentence is typeset on line 5)
-
-    Having regard to the meaning of the symbol 'c', we can establish empirically:
-
-        1. 'c is not a true sentence' is identical with *c*
-
-    For the quotation-mark name of the sentence *c* (or for any other of its names), we can set up an explanation of type:
-
-        2. 'c is not a true sentence' is a true sentence if and only c is not a true sentence.
-
-    The premises 1 and 2 together at once give a contradiction:
-
-        c is a true sentence if and only if c is not a true sentence.
-
-    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
-
-From this, Tarski concludes that "*colloquial* :ref:`language <language>`" is hopelessly inconsistent. :ref:`Truth <truth>` *about* a :ref:`language <language>` never exists *within* that language. Tarski is saying, in the mathematically ineluctable way of *proof by contradiction*, that by assuming ":ref:`language <language>`" is a singular entity where all descriptions occur on the same level, contradictions necessarily result. Therefore, to salvage the concept of ":ref:`truth <truth>`", Tarski famously introduces the distinction between *meta* :ref:`language <language>` and *object* :ref:`language <language>`,
-
-.. epigraph::
-
-    For this reason, when we investigate the :ref:`language <language>` of a formalized deductive science, we must always distinguish clearly between the :ref:`language <language>` *about* which we speak and the :ref:`language <language>` *in* which we speak, as well as between the science which is the object of our investigation and the science in which the investigation is being carried out. The names of the expressions of the first language, and of the relations between them, belong to the second language, called the *meta* :ref:`language <language>` (which may contain the first as a part). The description of these expressions, the definition of the complicated concepts, especially of those connected with the construction of a deductive theory (like the concept of consequence, of provable sentence, possibly of true sentence), the determiniation of the properties of these concepts, is the task of the second theory which we shall call the *metatheory*.
-
-    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
-
-In other words, the notion of "*truth*" requires a bifurcation of :ref:`language <language>`. If we want the discourse to include predicates of "*is true*" or "*is false*", :ref:`language <language>` cannot be treated as one cohesive unit, where these assertions are carried out in the same :ref:`language <language>` in which what is being asserted *is asserted*. This idea is only strange if :ref:`language <language>` is regarded as something fixed and determinate. However, it is more apt to think of :ref:`language <language>` as a *continuous process that accumulates components of orthogonal meaning over time*. Each syntactic construct allows new semantic meaning to be encoded into the artifice of :ref:`language <language>`, and each new semantic concept integrated into the fabric of :ref:`language <language>` alters what is demarcated by its boundaries. In other words, :ref:`language <language>` can only be conceived of as a whole at certain points in time, when its definitions are fixed by their factical origin in the world. But the cross section of :ref:`language <language>` at any given moment does not capture its dynamic nature across time; in fact, this nontemporal model of :ref:`language <language>` fails to represent in any capacity beyond the formal the essential nature of :ref:`language <language>`.
-
-Tarski's parsimony of meta and object :ref:`language <language>` shows that ":ref:`truth <truth>`" represents one of these transformative concepts that alters the very constitution of :ref:`language <language>` through its introduction and analysis. In essence, the concept of "*truth*", through its rigorous integration into the corpus of :ref:`language <language>`, creates a schism in :ref:`language <language>`. If we allow ourselves to accept ":ref:`truth <truth>`" as a meaningful construct, then we must accept this molecular division of :ref:`language <language>` into separate, but related, domains.
-
-.. important::
-
-    It should be noted this division is only necessary if one concedes to the premise that contradictions should not be syntactically expressible within a :ref:`language <language>`.
-
-The apparent *incompleteness* of :ref:`language <language>`, i.e. its inability to be fully reduced to formal representation, arises because we each view words and sentences as a representative instances plucked from the supposed totality of :ref:`language <language>`. But Tarski has shown, by revealing the circular logic of :ref:`truth <truth>`, that :ref:`language <language>` *is not a totality* and any attempt to treat it as such will result in contradiction.
-
-.. epigraph::
-
-    Vicious circles arise from supposing that a collection of objects may contain members which can only be defined by means of the collection as a whole. Thus, for example, the collection of propositions will be supposed to contain a proposition stating that "*all propositions are either true or false.*” It would seem, however, that such a statement could not be legitimate unless “*all propositions*” referred to some already definite collection, which it cannot do if new propositions are created by statements about “*all propositions*”. We shall, therefore, have to say that statements about “*all propositions*” are meaningless. More generally, given any set of objects such that, if we suppose the set to have a total, it will contain members which presuppose this total, then such a set cannot have a total. By saying that a set has “*no total*,” we mean, primarily, that no significant statement can be made about “*all its members.*”
-
-    - `Principia Mathematica`_, Bertrand Russell and Alfred Whitehead
-
-We say, "*this word is* :ref:`language <language>`" or "*this sentence is* :ref:`language <language>`", having misunderstood what is designated by the term ":ref:`language`". We view :ref:`language <language>` as a *structure*, as a collection extensionally determined by its members, instead of a *structuring*, as the *intension* which composes the determination. *Structures* must possess parts in determinate relations, whereas *structuring* is the very process by which parts are arranged into and imbued with *structure*. In other words, the predicate "*is* :ref:`language`", like the predicates "*is true*" or "*is false*", never occurs within :ref:`language <language>`, but indicates a rupture in the foundations of :ref:`language <language>`. This rupture *is* the essence :ref:`language <language>`, to bring within its field of containment something entirely disparate.
-
-.. epigraph::
-
-    Ask yourself whether our :ref:`language <language>` is complete-—whether it was so before the symbolism of chemistry and the notation of the infinitesimal calculus were incorporated in it; for these are, so to speak, suburbs of our :ref:`language <language>`. (And how many houses or streets does it take before a town begins to be a town?) Our :ref:`language <language>` can be seen as an ancient city: a maze of little streets and squares, of old and new houses, and of houses with additions from various periods; and this surrounded by a multitude of new boroughs with straight regular streets and uniform houses.
-
-    -- `Philosophical Investigations`_, Ludwig Wittenstein
-
-Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their inclusion in :ref:`language <language>`? All three serve distinct linguistic functions, that of identity, disjunction and categorical assertion respectively. They are employed a certain way, to encode meaning a certain way. They have no commonality beyond being :ref:`language <language>`. To call "*these words*" :ref:`language <language>` is directly analogous to collecting an abacus, a paint brush and a hammer under the header of a single concept. The way an abacus is engaged in action and the meaning of its movements, is vastly and materially different than the action and movement of a hammer or paintbrush.
-
-.. _2025-may:
-
----
-May
----
-
 .. _truth-abstractions:
 
 Truth Abstractions
@@ -1809,4 +1750,46 @@ All of these concepts accumulated through history, flowing into our heads throug
 
 In the murky factical origins of language, nothing is certain, but somethings are more certain than others. One cannot imagine a world without community. The self implies a multiplicity of selves. We must be bootstrapped with language, taught through ostension the ways in which things can relate to another, before the self as a concept may emerge as a relata within a relation, and this cannot happen without someone to draw attention to the ways in which symbols may represent that latent potential lurking. The "*self*" must be taught to us; it is an evolution of abstraction transmitted through language that manifests in our phenomenological life, in a directly analogous fashion to the way chains of DNA manifest phenotypes. The "*syntax*" of amino acids encodes the potentialites of life; the raw struggle of existence dictates which potentialities are activated, i.e. the "*semantics*" of DNA are determined by the ways in which the phenotypes interact with the existent world. 
 
-It is hard to imagine how a newborn infant could contain the potential for language, except through the possibility of absorbing it from another human. Language is only innate to the extent that is a potential of the human mind (and only then, at crucial periods during the development of the organism, as the case of feral children implies)
+It is hard to imagine how a newborn infant could contain the potential for language, except through the possibility of absorbing it from another human. Language is only innate to the extent that is a potential of the human mind (and only then, at crucial periods during the development of the organism, as the case of feral children implies).
+
+---
+
+The world contrives, in its myriad ways, to convince you that you are not part of it. Every historical struggle reduces to this primordial human conflict, in some way. War is only possible in the presence of difference. To participate in conflict, there must be a "*them*" and an "*us*", or more fundamentally, an "*other*" and an "*I*". This psychological :ref:`tautology <tautologies>` is precipitated in its pronouncement by the ontological foundations which allow it to manifest. To speak of tension and energetic relations, there must be external forces contending with internal forces in a quest for equilibrium. In order to cancel out, forces must be opposed. Conversely, all force can be decomposed into opposites.
+
+The law of the excluded middle is a :ref:`logical <logic>` artifact of the separation that divides things in their physical origin. Violence is a consequence of our nature, but an essential consequence (or at least, an essential possibility), one that follows syllogistically from the differentiation of the self from the world. The "*self*" is a name to identify particular thing. Every thing that is named is named insofar that it constitutes a singular thing; however multifoliate its presentation, through naming it is unified across its modes into a thing. A name is a record of separation, a symbol that bestows upon its recipient identity. 
+
+It is easy to take for granted the power of a name. We are given a name as soon as we enter the world, often well before. It is not inaccurate to say: each one of us is born *into* a name as much as we are born into a body. There is no difference, for our names indicate who we are, in all of its potentialities, physical or otherwise. This is the meaning of Kripke's criticism of the "*Fregean theory of names*". A name is not merely a *designation* or *description*, but a *baptism*. To name a thing is to inaugurate it into the possibilities of the world, as another item among the collection with the possiblity of :ref:`being <being>`. 
+
+It is even easier to take for granted there is *no inherent reason* we should have names. We could as well not have names; In fact, it almost certain that humans at some point in history do not have the concept of "*name*". One might posit the emergence of "*names*" even further back in the mammalian lineage of humans, but regardless the point stands: *naming* is a privilege afforded by a particular evolutionary history. So many questions could be answered if we only had precise knowledge of the history that preceded our births, if we could somehow reconstruct the conditions of our ancestors who discovered they could *name* one another. What preceded and necessitated the discovery of *names*? Was it pure happenstance? Was a singular thing nominated to be named, or were several things simultaneously given names? Was there a point in history where only *one* name existed? Did humans realize immediately the sheer breadth of things that could named? 
+
+---
+
+Consider the two substantially different questions: Who was the first human to be named? What was their name? Now consider that, whatever the answer to these questions might be, the literal answer (i.e. the series of characters) is the same each case, but what is denoted by the answer is not. 
+
+In the first case, the answer to the question refers to the bearer of the name. In the second, it refers to the name itself. In other words, a name enables (formal) identity, but a name is *not* the same as (formal) identity. Or to be a finer linguistic point on it: a name is not identical to identity. 
+
+Tarski tells us names do not exist on the same logical level as the :ref:`language <language>` in which the named things are used. A name is not an object; The name of a thing is a different type of thing than the thing itself. 
+
+Obviously, the name itself does not matter, as any symbol whatsoever can stand in place of a thing. In Tarski's view, "*A contains B*" is the name of the sentence: A contains B. But this is only a matter of convention, albeit a deceptive convention that masks the nature of naming. We can as well agree to call the symbol :math:`ᛉ` the name of the sentence: A contains B. Tarski, instead of assigning arbitrary symbols to a name, expressed the name of a symbolic proposition with another symbolic proposition,
+
+    ":math:`B \subset A`" if and only if A contains B. 
+
+This process of naming has no limit,
+
+    "":math:`B \subset A`" if and only if A contains B." if and only if ":math:`B \subset A`" if and only if A contains B. 
+
+Language does not seem possible without admitting that it's nature is inextricably tied to the phenomenon of naming, and naming is not a coherent phenomenon unless language is allowed an infinite regress, forever synthesizing names and names of names and names of names of names and ... 
+
+---
+
+**Plato**: A name is an essence.
+
+**Aristotle**: A name is a substance. 
+
+**Frege**: A name is a sense.
+
+**Russell**: A name is a description.
+
+**Tarski**: A name is a satisfaction.
+
+**Kripke**: A name is a baptism. 

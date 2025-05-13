@@ -8,6 +8,7 @@ Theurgy
    :maxdepth: 1
    :caption: Contents:
 
+   00_generations/index
    01_universalis/index
    02_palindromia/index
    03_syntagmics/index
