@@ -313,13 +313,13 @@ The sheer breadth of history that separates the current time period from the mom
 
 This phrase presents significant challenges when translated into modern English. It is often rendered as one of the following,
 
-    I am who I am
+    I am who (I) am
 
-    I am that I am
+    I am that (I) am
 
-    I will be what I will be
+    I will be what (I) will be
 
-    I am the being
+    I am the being that is
  
     I am the one who is
 
@@ -343,7 +343,7 @@ The *imperfect* aspect denotes an incomplete, ongoing or potential action. In En
 - The bird sings every morning.
 - The store used to be open.
 
-"*אֶהְיֶה (ehyeh)*" is the first person singular imperfect form of "*הָיָה (hayah)*", which translate into "*to be*", "*to become*", "*to exist*". "*אֶהְיֶה (ehyeh)*" is the Ancient Hebrew concept of :ref:`being <being>`.
+"*אֶהְיֶה (ehyeh)*" is the first person singular imperfect form of "*הָיָה (hayah)*", which translates into "*to be*", "*to become*", "*to exist*". "*אֶהְיֶה (ehyeh)*" is the Ancient Hebrew concept of subjective :ref:`being <being>`.
 
 "*אֲשֶׁר (asher)*" is a linguistic relativizer, analogous to the English "*that*" or "*which*". A relativizer plays a role not dissimilar to the role of quantification in symbolic logic, in that it provides conditions for its clause to obtain, i.e.,
 
@@ -522,25 +522,25 @@ The deduction rule :math:`AaB \to AiB` is often termed a deduction of *existenti
 
 What Abelard is pointing out is a notion that would not be formalized for another millenia in the strictures of set theory: unrestricted comprehension of an abstraction principle necessarily leads to contradiction. The proposition, "*all stone men are stone*", can be true, syntactically speaking, when no objects exist in the domain that is being quantified, namely "*stone men*". As a consequence, because "*all stone men are stone*" can be true without referring to any actual :ref:`beings <being>`, it is too much to grant a deduction from the universal assertion to a particular instance of a "*stone man*". In other words, "*all*" does not imply "*some*" if nothing exists to satisfy "*all*"; indeed, "*all*" must be conditioned on a presupposed existent *thing*. 
 
-The problem of *existential import* bears similarity to the problem that plagued Frege's `Grundgesetze Der Arithmetik`_ . To see how the conundrum of existence ruptures Frege's :ref:`logic <logic>` from the inside out, one must understand how Frege departed from the Aristotelian model of :ref:`logic <logic>` Frege conceived of a proposition *extensionally*, as opposed to *categorically*. To Frege, a proposition is a formula that is *satisfied* by certain objects. For example, ":math:`x` *is even*" is a proposition *satisfied* by the series of numbers :math:`0, 2, 4, ...`; Frege thought of each proposition as implicitly expressing the relation of "*belonging*" between an object :math:`x` and a (*value-range or extension of a*) concept :math:`\hat{\epsilon}f`, where the relation is manifested through a property predicated of each object abstracted into a "*collection*". In other words, Frege saw *predication* as being equivalent to *abstraction*.
+The problem of *existential import* bears similarity to the problem that plagued Frege's `Grundgesetze Der Arithmetik`_ . To see how the conundrum of existence ruptures Frege's :ref:`logic <logic>` from the inside out, one must understand how Frege departed from the Aristotelian model of :ref:`logic <logic>`. Frege conceived of a proposition *extensionally*, as opposed to *categorically*. To Frege, a proposition is a formula that is *satisfied* by certain objects. For example, ":math:`x` *is even*" is a proposition *satisfied* by the series of numbers :math:`0, 2, 4, ...`; Frege thought of each proposition as implicitly expressing the relation of "*belonging*" between an object :math:`x` and a (*value-range or extension of a*) concept :math:`\hat{\epsilon}f`, where the relation is manifested through a property predicated of each object abstracted into a "*collection*". In other words, Frege saw *predication* as being equivalent to *abstraction* or *conceptualization*.
 
 For example, to say, "*this pen belongs to the concept of Black*" is equivalent to saying "*this pen is a black object*". Note in these examples the division between the near-Platonic formal nature of "*Black*" and the near-Aristotelian predication of "*black*". The use of capitalization is intentional, for Frege would call "*Black*" a proper name and "*black*" a description. According to Frege, "*Black*" is the abstract concept common to all instances of black things. In other words, Frege has committed himself to a stance on the problem of universals, namely that they exist. 
 
-Moreover, Fregean concepts exist as *terms* in the language from which they arose as abstractions. Frege asserted, for all objects :math:`x`, the property :math:`f` being equal to the property :math:`g` is equivalent to saying the concept :math:`\hat{\epsilon}f` and the concept :math:`\hat{\epsilon}g` are the same concept,
+Moreover, Fregean concepts exist as *terms* in the language from which they arose as abstractions. Frege asserted, for all objects :math:`x`, the property :math:`f` being equal to the property :math:`g` is equivalent to saying the concept :math:`\hat{\epsilon}f` formed by abstracting the property :math:`f` out of all objects that bear it and the concept :math:`\hat{\epsilon}g` formed by abstracting the property :math:`g` out of all objects that bear it are the same concept,
 
 .. math::
 
     (\forall x: f(x) \equiv g(x)) \equiv (\hat{\epsilon}f = \hat{\epsilon}g)
 
-The righthand side of this equivalency treats the concepts  :math:`\hat{\epsilon}f` and :math:`\hat{\epsilon}g` as operands in an equality relation, which to say, it treats concepts *as objects in the language of* `Grundgesetze der Arithmetik`_. This :ref:`axiom <frege-axioms>` was called *Law V* by Frege. 
+The righthand side of this equivalency treats the concepts  :math:`\hat{\epsilon}f` and :math:`\hat{\epsilon}g` as operands in an equality relation, which to say, it treats concepts *as objects in the language of* `Grundgesetze der Arithmetik`_. Concepts (:small:`abstractions, extensions`) and objects are granted equivalent ontological status in Frege's system. This :ref:`axiom <frege-axioms>` was called *Law V* by Frege. 
 
 Note this formulation is symmetrical and complementary with the logical law, first posited by Leibniz and adopted by Frege in his `Grundgesetze Der Arithmetik`_, that if two objects have the same properties, they are identical (often known as the Law of Indiscernibles),
 
 .. math::
 
-    \forall a, b: (\forall f: f(a) \equiv f(b)) \equiv (a = b) 
+    (\forall f: f(a) \equiv f(b)) \equiv (a = b) 
 
-However, instead of quantifying over objects and passing into conceptuality, the Law of Indiscernibles passes into objectivity by quantifying over properties (i.e. abstractions). In other words, the Law of Indiscernible states for all possible properties that can be asserted of two objects, if and only if the objects are the same will all of the asserted properties of those objects be equivalent [#may_2025_02]_. On the other hand, Frege's Law V states, for *all objects*, if and only if the (*extensions of*) concepts are the same will the asserted properties to those concepts be equivalent.
+However, instead of quantifying over objects and passing into conceptuality, the Law of Indiscernibles passes into objectivity by quantifying over properties (i.e. abstractions). In other words, the Law of Indiscernible states for all possible properties that can be asserted of two objects, if and only if the objects are the same will all of the asserted properties of those objects be equivalent [#may_2025_02]_. On the other hand, Frege's Law V states, for *all objects*, if and only if two (*extensions of*) concepts are the same will the property thus conceptualized be asserted of objects.
 
 The Law of Indiscernibles qualifies abstractions in their totality and passes into an assertion of equality between the objects which originate the abstraction, whereas Frege's Law V qualifies objects in their totality and then passes into an assertion of equality between their abstractions. Crucially, the Law of Indiscernibles can be *vacuously true*, as in the case of :math:`f` representing such properties as the predicate of "*being impredicable*". However, the quantification in Frege's Law V is *existentially* important for all but the *null* domain; Frege's Law V *assumes the existence of the object being quantified*.
 
@@ -648,4 +648,12 @@ Language does not seem possible without admitting that it's nature is inextricab
 
 **Tarski**: A name is a satisfaction.
 
-**Kripke**: A name is a baptism. 
+**Kripke**: A name is a baptism.
+
+---
+
+My thoughts are a circle. They always return to the point where they started, never having gained any further insight. The same questions remain, except more complex and daunting for the depths that have been revealed. The same thoughts repeat and repeat. The recursion never ceases.
+
+The world is an constantly shifting ocean of contradiction upon contradiction, absurdity upon absurdity. It is a never-ending deluge of senseless impressions, a flood of utter desolation, bereft of meaning but nonetheless tidal in its pull. No structure remains standing in its wake. 
+
+Sing to me this brief moment. How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have any meaning, unassailable in its foundations, then the world ipso facto must be inexplicable. If the world meant anything beyond the meaning we give it, then the meaning we find in the world would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that it should be the case a thought we think is not already ours. 

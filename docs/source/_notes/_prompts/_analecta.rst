@@ -1,3 +1,6 @@
+.. MODE: ENGAGE
+..      Argue against any point you think is wrong or misleading.
+
 ========
 Analecta
 ========
@@ -1792,4 +1795,12 @@ Language does not seem possible without admitting that it's nature is inextricab
 
 **Tarski**: A name is a satisfaction.
 
-**Kripke**: A name is a baptism. 
+**Kripke**: A name is a baptism.
+
+---
+
+My thoughts are a circle. They always return to the point where they started, never having gained any further insight. The same questions remain, except more complex and daunting for their depths that have been revealed. The same thoughts repeat and repeat. The recursion never ceases.
+
+The world is contradiction upon contradiction, absurdity upon absurdity. It is a never-ending deluge of senseless impressions, a flood of utter desolation, bereft of meaning but nonetheless tidal in its pull. No structure remains standing in its wake. 
+
+Sing to me this brief moment. How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the world ipso facto must be inexplicable. If the world meant anything beyond the meaning we give it, then the meaning we find in the world would not be ours. But all meaning we find is by necessity *ours*, for we would not find it if we had not already integrated it is our lexicon.

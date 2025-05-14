@@ -3,7 +3,7 @@
 Section III: Structures
 =======================
 
-The foundation of the formal system has now been laid. Mathematical machinery capable of describing linguistic hierarchies has been constructed. The purpose of this formal system is to analyze the structures embedded in Palindromes. While the formal system possesses flexibility and applicability (as demonstrated by its ability to generate theorems like :ref:`Theorem 2.3.9 <theorem-2-3-9>` which are empirically verifiable), it does not yet have the necessary tools for describing palindromic structures.
+The foundation of the formal system has now been laid and the mathematical machinery capable of describing linguistic hierarchies has been constructed. The purpose of this formal system is to analyze the structures embedded in Palindromes. While the formal system possesses flexibility and applicability with respect to certain classes of linguistic entities (as demonstrated by its ability to generate theorems like :ref:`Theorem 2.3.9 <theorem-2-3-9>` which are empirically verifiable), it does not yet have a complete toolset for describing palindromic structures.
 
 Inversion, while a key component of the apparatus necessary for understanding the dynamics of Palindromes, is not the only linguistic operation involved in the formation of Palindromes. The pure involutive property of Palindromes (e.g., :math:`\zeta = \text{inv}(\zeta))` only manifests in a rare class of Sentences known as Perfect Palindrome (:ref:`Definition 4.1.2 <definition-4-1-2>`).
 
@@ -19,43 +19,45 @@ However, the vast majority of Palindromes in any language are not pure involutio
 
 In order to properly understand the nature of a Palindrome, the formal system under construction must have a method of quantifying the distribution of Delimiters in a Sentence and making claims about the nature of that Distribution. Furthermore, the system requires a method of removing the *"impurities"* in semantic content that are introduced through inversion.
 
-This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of *σ-reduction* and the *Delimiter Count* function.
+This section of the work is dedicated to introducing several novel concepts for analyzing Delimiters distributions: the operation of :math:`\sigma`-*reduction* and the *Delimiter Count* function.
 
 .. _section-iii-i:
 
-Section III.I: σ-Reductions
----------------------------
+Section III.I: :math:`\sigma`-Reductions
+----------------------------------------
 
-The mathematical definition of Palindromes (:ref:`Definition 4.1.1 <definition-4-1-1>` in the next section) will revolve around a novel linguistic operation, termed a *σ*-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.
+The mathematical definition of Palindromes (:ref:`Definition 4.1.1 <definition-4-1-1>` in the next section) will revolve around a novel linguistic operation, termed a :math:`σ`-reduction. This operation will allow the semantic content of a Palindrome to be projected onto an Alphabet that preserves the order of its Characters under String Inversion, allowing for a precise specification of palindromic inversion in an Alphabet where symmetry is preserved.
 
 .. _reduction-definitions:
 
 Definitions
 ^^^^^^^^^^^
 
-Before defining a *σ*-reduction, the preliminary concept of a *σ-reduced Alphabet* must be introduced. The following definition serves as the basis for constructing the operation of *σ*-reduction.
+Before defining a :math:`\sigma`-reduction, the preliminary concept of a :math:`\sigma`-*reduced Alphabet* must be introduced. 
 
-As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. *"bor ro worrob"*, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of resorting the Delimiter characters. This invariance of the Character order, while the Word order is scrambled by Delimiters, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
+As has been seen with examples of Imperfect Palindromes like *"borrow or rob"*, a palindromic structure can have its Delimiter Character scrambled in the inversion of its form, i.e. *"bor ro worrob"*, making it lose semantic coherence. Imperfect Palindromes must be rearranged Delimter-wise to retrieve the original form of the Sentence. However, String Inversion preserves the relative order of the non-Delimiter Characters in a palindromic String, so the process of reconstitution is only a matter of reordering the Delimiter characters to match the uninverted order. This invariance of the Character order, while the Word order is scrambled by Delimiters, suggests palindromes might be more easily defined without the obstacle of the Delimiter.
+
+The following definition serves as the basis for constructing the operation of :math:`\sigma`-reduction.
 
 .. _definition-3-1-1:
 
-**Definition 3.1.1: σ-Reduced Alphabet**
+**Definition 3.1.1: ** :math:`\sigma`-**Reduced Alphabet**
 
-A *σ-reduced Alphabet* is an Alphabet Σ that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A *σ*-reduced Alphabet is denoted Σ:sub:`σ`. Formally,
+A :math:`\sigma`-*reduced Alphabet* is an Alphabet :math:`\Sigma` that has had its Delimiter character removed, so that it only consists of non-Delimiter characters. A :math:`\sigma`-reduced Alphabet is denoted :math:`\Sigma_\sigma`. Formally,
 
 .. math::
 
     \Sigma_\sigma = \Sigma - \{ \sigma \} 
-    
+ 
 ∎
 
-In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of *σ-reduction*.
+In order to define palindromes in all of their varieties, perfect or imperfect, the semantic incoherence that is introduced by the inversion of Imperfect Palindromes must be removed. This is accomplished through the introduction of the operation of :math:`\sigma`-*reduction*.
 
 .. _definition-3-1-2:
 
-**Definition 3.1.2: σ-Reduction**
+**Definition 3.1.2: ** :math:`\sigma` **-Reduction**
 
-Let *t* be a String with length *l(t)* and Character-level representation 
+Let :math:`t` be a String with length :math:`l(t)` and Character-level representation 
 
 .. math::
 
@@ -65,7 +67,7 @@ Let *t* be a String with length *l(t)* and Character-level representation
 
     2. \quad \mathfrak{a}_i \in \Sigma.
 
-The *σ*-reduction of *t*, denoted by the lowercase Greek final Sigma, *ς(t)*, maps the String *t* to a new String *u* in the *σ*-reduced alphabet **Σ**:sub:`σ` by removing all occurrences of the Delimiter Character. Formally, *ς(t)* is defined and constructed using the :ref:`Reduction Algorithm <algorithm-3>`,
+The :math:`\sigma`-reduction of :math:`t`, denoted by the lowercase Greek final Sigma, :math:`\varsigma(t)`, maps the String :math:`t` to a new String :math:`u` in the :math:`\sigma`-reduced alphabet :math:`\Sigma_\sigma` by removing all occurrences of the Delimiter Character. Formally, :math:`\varsigma(t)` is defined and constructed using the :ref:`Reduction Algorithm <algorithm-3>`,
 
 .. _algorithm-3:
 
@@ -75,45 +77,45 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
 
 .. topic:: Algorithm Reduce(t: String)
 
-    # Input: A String t
+    # Input: A String :math:`t`
 
-    # Output: A String s that represents the σ-reduction of t
+    # Output: A String s that represents the :math:`\sigma`-reduction of :math:`t`
 
     # Initialization
     
-    ## Character-level representation of s
+    ## Character-level representation of :math:`s`
     
-    1. s ← Empty(s)
+    1. :math:`s \leftarrow \text{Empty}(s)`
     
     ## Index to iterate over input String
     
-    2. i ← 1
+    2. :math:`i \leftarrow 1`
     
-    ## Empty string to store σ-reduced String
+    ## Empty string to store :math:`\sigma`-reduced String
     
-    3. t ← ε            
+    3. :math:`t \leftarrow \varepsilon`          
 
     # Iteration
     
-    4. While i ≤ l(s):
+    4. While :math:`i \leq l(s) :`
         
-        a. If s[i] ≠ σ:
+        a. If :math:`s[i] \neq \sigma`:
             
-            i. t ← (t)(s[i])
+            i. :math:`t \leftarrow (t)(s[i])`
         
-        c. i ← i + 1
+        c. :math:`i \leftarrow i + 1`
 
     # Finalization
     
-    5. If l(t) > 0:
+    5. If :math:`l(t) > 0`:
         
-        a. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to t
+        a. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to :math:`t`
     
-    6. Return t 
+    6. Return :math:`t` 
 
 ∎
 
-Note the String *s* which is initialized to hold the *σ*-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the :ref:`Reduction Algorithm <algorithm-3>`, if the input string contained at least one non-Empty Character. Otherwise, the :ref:`Reduction Algorithm <algorithm-3>` returns an Empty Character. From this, it is clear if a String only contains Delimiters,
+Note the String :math:`s` which is initialized to hold the :math:`\sigma`-reduced String is set equal to the value of the Empty Character. The conditional application of the Basis Clause of Concatenation in step 1 of the Finalization Block ensures this Character is removed from the output of the :ref:`Reduction Algorithm <algorithm-3>`, if the input string contained at least one non-Empty Character. Otherwise, the :ref:`Reduction Algorithm <algorithm-3>` returns an Empty Character. From this, it is clear if a String only contains Delimiters,
 
 .. math::
 
@@ -137,21 +139,21 @@ Again, from :ref:`Definition 1.1.3 <definition-1-1-3>`, the String Length of a r
 
     l(\varsigma(\alpha)) = l(\alpha)
 
-A subtlety of the :ref:`Reduction Algorithm <algorithm-3>` should be noted. While :math:`\varsigma(\sigma) = \varepsilon` and :math:`\varsigma(\alpha) = \alpha`, it does not follow the *σ*-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
+A subtlety of the :ref:`Reduction Algorithm <algorithm-3>` should be noted. While :math:`\varsigma(\sigma) = \varepsilon` and :math:`\varsigma(\alpha) = \alpha`, it does not follow the :math:`\sigma`-reduction of a Word concatenated with the Delimiter is the concatenation of that Word with the Empty Character. In other words, the following holds,
 
 .. math::
 
     \varsigma(\alpha\sigma) ≠ \alpha\varepsilon
 
-Except insofar that the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` defines the concatenation of *αε* to equal *α*.
+Except insofar that the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` defines the concatenation of :math:`\alpha\varepsilon` to equal :math:`\alpha`.
 
-This is because of the condition *(j > 1)* in the Finalization Block of the Reduction ensures Empty Characters are stripped from *t* when the input String contains atleast one non-Empty Character that has been concatenated into the *σ*-reduction String. 
+This is because of the condition :math:`(j > 1)` in the Finalization Block of the Reduction ensures Empty Characters are stripped from :math:`t` when the input String contains atleast one non-Empty Character that has been concatenated into the :math:`\sigma`-reduction String. 
 
-The more complicated properties of *σ*-reductions are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the :ref:`Reduction Algorithm <algorithm-3>` to construct the *σ*-reduction of a String.
+The more complicated properties of :math:`\sigma`-reductions are proved in the theorems that follow. Before moving onto the proofs, the following example shows how to apply the :ref:`Reduction Algorithm <algorithm-3>` to construct the :math:`\sigma`-reduction of a String.
 
 **Example**
 
-Let *s = "a b c"* be a String from the Alphabet 
+Let :math:`s = \text{"a b c"}` be a String from the Alphabet 
 
 .. math::
 
@@ -179,7 +181,7 @@ Note in this example :math:`\sigma = \text{" "}` and :math:`l(s) = 5`. The value
 
     5. \quad i = 5, t = \text{"abc"}
         
-The result of the *σ*-reduction of *s* is thus given by,
+The result of the :math:`\sigma`-reduction of :math:`s` is thus given by,
 
 .. math::
 

@@ -2,11 +2,11 @@
     text-align: center;
 }
 
-.hover {
+details[class*="summary"]{
     transition: transform 0.3s ease, color 0.3s ease; 
 }
 
-.hover:hover {
+details[class*="summary"]:hover {
     color: var(--pst-color-link-hover);
 }
 

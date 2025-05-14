@@ -1,0 +1,10 @@
+I want you to create the SVG markup for an animation that will illustrate the symmetry of a palindrome. I will explain the animation in detail and what it should achieve.
+
+1. Fade in the text: "not a ton". Each letter should be a separate element, as it will need be animated separately from the others. Each letter should have a box around it with a primary color. The box around the letter "a" should be darker than the rest. Hold the state for a 1 second before proceeding to next. Let numbers represent the character at that index including delimiters (spaces), starting at 1, i.e. 1 = "n", 2="o", 3="t", 4=" ", etc, for the context of explaining the rest of the animation.
+2. Draw circular arcs coming from the top of 1 to the top of 9, from the top of 2 to the top of 8, from the top of 3 to the top of 7,  from the top of 4 to the top of  6. Simultaneously, draw circulars arcs from the bottom of 9 to the bottom of 1, from the bottom of 8 to the bottom of 2, from the bottom of 3 to the bottom of 7 and from the bottom of 4 to the bottom of 6. These circular arcs should be colored with the secondary color. The upper circular arcs should be lighter than the bottom. Once the arcs are animated to their end state, hold the animation for a second.
+3. The text elements 1, 2, 3 and 4 should move along the upper circular arcs while the text elements 6,7, 8, 9 should move along the bottom circular arcs. While they move along the arc, the text should stay level. The animation should end with the elements switching place, i.e. 1 will take the place of 9, 2 will take the place of 8, etc. Once the elements switch place the animation should hold.
+4. The circular arcs should fade out. Then the animation holds for a 1 second and loops back to the start.
+
+Constraints:
+1. Choose a Material design blue-gray palette. All primary colors should be selected from this color scale. 
+2. Choose a Material design palette to complement the blue-gray. All secondary color should be selected from this color scale.

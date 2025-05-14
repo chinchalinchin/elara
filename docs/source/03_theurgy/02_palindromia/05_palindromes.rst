@@ -1535,7 +1535,7 @@ Now that the two partitioning of Palindromes, aspect and parity, have been preci
 
 **Definition 4.2.7: Pivot Words**
 
-Let *ζ* be a sentence in C:sub:`L` with length *Λ(ζ)*, word-level representation W:sub:`ζ`, and pivot *ω(ζ)*. The left Pivot Word, denoted *ζ{ω-}*, and the right Pivot Word, denoted *ζ{ω+}*, are defined as follows:
+Let *ζ* be a sentence in C:sub:`L` with length :math:`\Lambda(\zeta)`, word-level representation :math:`W_\zeta`, and pivot :math:`\omega(\zeta)`. The left Pivot Word, denoted :math:`\zeta\{\omega-\}`, and the right Pivot Word, denoted :math:`\zeta\{\omega+\}`, are defined as follows:
 
 **Case 1**: :math:`\Lambda(\zeta) = 1`
 
@@ -1552,39 +1552,39 @@ Let *ζ* be a sentence in C:sub:`L` with length *Λ(ζ)*, word-level representat
 
     - :math:`\zeta\{\omega-\} = \zeta\{\omega+\} = \alpha_j` such that :math:`(j, \alpha_j) \in W_{\zeta}` and :math:`\alpha_j` contains the character at position ω(ζ). 
   
-  ∎
+∎
 
 The meaning of Pivot Words can be clarified with a few examples. 
 
 **Example**
 
-1. Let *ᚠ = "a b c"*
+1. Let :math:`ᚠ = \text{"a b c"}`
    
-    - l(ᚠ) = 5, ω(ᚠ) = 3, ᚠ[3] = b
-    - W:sub:`ᚠ` = {(1, "a"), (2, "b"), (3, "c")}
-    - ᚠ{ω-} = "b"
-    - ᚠ{ω+} = "B"
+    - :math:`l(ᚠ) = 5`, :math:`\omega(ᚠ) = 3`, :math:`ᚠ[3] = \text{"b"}`
+    - :math:`W_ᚠ = \{(1, \text{"a"}), (2, \text{"b"}), (3, \text{"c"})\}`
+    - :math:`ᚠ\{\omega-\} = \text{"b"}`
+    - :math:`ᚠ\{\omega+\} = \text{"b"}`
 
-2. Let *ᚠ = "abc def"*
+2. Let :math:`ᚠ = \text{"abc def"}`
 
-    - l(ζ) = 7, ω(ζ) = 4, ζ[4] = σ
-    - W:sub:`ζ` = {(1, "abc"), (2, "def")}
-    - ζ{ω-} = "abc" <definition-4-1-1>`0
-    - ζ{ω+} = "def"
+    - :math:`l(\zeta) = 7`, :math:`\omega(\zeta) = 4`, :math:`\zeta[4] = \sigma`
+    - :math:`W_\zeta = \{(1, \text{"abc"}), (2, \text{"def"})\}`
+    - :math:`\zeta\{\omega-\} = \text{"abc"}`
+    - :math:`\zeta\{\omega+\} = \text{"def"}`
 
-3. Let *ᚠ = "a bc de fg h"*
+3. Let :math:`ᚠ = \text{"a bc de fg h"}`
 
-    - l(ζ) = 12, ω(ζ) = 6, ζ[6] = d
-    - W:sub:ζ = {(1, "a"), (2, "bc"), (3, "de"), (4,"fg"), (5, "h")}
-    - ζ{ω-} = "de"
-    - ζ{ω+} = "de" 
+    - :math:`l(\zeta) = 12`, :math:`\omega(\zeta) = 6`, :math:`\zeta[6] = \text{"d"}`
+    - :math:`W_\zeta = \{(1, \text{"a"}), (2, \text{"bc"}), (3, \text{"de"}), (4,\text{"fg"}), (5, \text{"h"})\}`
+    - :math:`\zeta\{\omega-\} = \text{"de"}`
+    - :math:`\zeta\{\oemga+\} = \text{"de"}`
 
-4. Let *ᚠ = "ab cde fg hij"*
+4. Let :math:`ᚠ = \text{"ab cde fg hij"}`
 
-    - l(ζ) = 13, ω(ζ) = 7, ζ[6] = σ
-    - W:sub:ζ = {(1, "ab"), (2, "cde"), (3, "fg"), (4,"hij")}
-    - ζ{ω-} = "dce"
-    - ζ{ω+} = "fg"
+    - :math:`l(\zeta) = 13`, :math:`\omega(\zeta) = 7`, :math:`\zeta[6] = \sigma`
+    - :math:`W_\zeta = \{(1, \text{"ab"}), (2, \text{"cde"}), (3, \text{"fg"}), (4,\text{"hij"})\}`
+    - :math:`\zeta{\omega-} = \text{"dce"}`
+    - :math:`\zeta\{\oemga+\} = \text{"fg"}`
 
 ∎
 

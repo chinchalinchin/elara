@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #F5F5F5; /* Light grey background for the page */
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #37474F; /* Blue Grey 800 */
+            margin-bottom: 20px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Palindrome Symmetry: "not a ton"</h1>
+        <svg id="rootSvg" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <rect id="letterBoxTemplate" x="-27" y="-37" width="54" height="74" rx="6" ry="6" stroke-width="2.5"/>
+                
+                <style type="text/css"><![CDATA[
+                    .charText { 
+                        font-family: 'Roboto Mono', monospace; 
+                        font-size: 26px; 
+                        text-anchor: middle; 
+                        dominant-baseline: central; 
+                        fill: #263238; /* Blue Grey 900 */
+                    }
+                    .arc { 
+                        stroke-width: 2.5; 
+                        fill: none; 
+                        stroke-linecap: round; 
+                    }
+                ]]></style>
+
+                <path id="mpath_1_9" d="M 0,0 A 240,70 0 0 1 480,0" />  
+                <path id="mpath_2_8" d="M 0,0 A 180,60 0 0 1 360,0" />  
+                <path id="mpath_3_7" d="M 0,0 A 120,50 0 0 1 240,0" />  
+                <path id="mpath_4_6" d="M 0,0 A 60,40 0 0 1 120,0" />   
+                <path id="mpath_9_1" d="M 0,0 A 240,70 0 0 0 -480,0" /> 
+                <path id="mpath_8_2" d="M 0,0 A 180,60 0 0 0 -360,0" /> 
+                <path id="mpath_7_3" d="M 0,0 A 120,50 0 0 0 -240,0" /> 
+                <path id="mpath_6_4" d="M 0,0 A 60,40 0 0 0 -120,0" />  
+            </defs>
+
+            <animateTransform 
+                xlink:href="#rootSvg" 
+                id="animLoop"
+                attributeName="transform" 
+                type="rotate" 
+                from="0" 
+                to="0" 
+                dur="9s" 
+                begin="0s" 
+                repeatCount="indefinite"/>
+
+            <rect width="100%" height="100%" fill="#ECEFF1"/> {/* Blue Grey 50 */}
+
+            <path id="visArc1_9" class="arc" stroke="#4DB6AC" d="M 55,108 A 240,70 0 0 1 535,108" />
+            <path id="visArc2_8" class="arc" stroke="#4DB6AC" d="M 115,108 A 180,60 0 0 1 475,108" />
+            <path id="visArc3_7" class="arc" stroke="#4DB6AC" d="M 175,108 A 120,50 0 0 1 415,108" />
+            <path id="visArc4_6" class="arc" stroke="#4DB6AC" d="M 235,108 A 60,40 0 0 1 355,108" />
+
+            <script type="text/javascript"><![CDATA[
+                const visualArcIds = ["visArc1_9", "visArc2_8", "visArc3_7", "visArc4_6"];
+                const T_DRAW_ARCS_START = "2s"; 
+                const T_DRAW_ARCS_DUR = "1s";
+                const T_FADE_OUT_ARCS_START = "7s"; 
+                const T_FADE_OUT_ARCS_DUR = "1s";
+                const T_FADE_OUT_ARCS_END = "8s"; 
+                const STROKE_PATH_LENGTH = "700"; 
+
+                visualArcIds.forEach(id => {
+                    const arcElement = document.getElementById(id);
+                    if (!arcElement) return;
+
+                    // Reset arc to undrawn and invisible at the start of each loop
+                    const resetArcOpacity = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    resetArcOpacity.setAttribute("attributeName", "opacity");
+                    resetArcOpacity.setAttribute("to", "0");
+                    resetArcOpacity.setAttribute("dur", "0.01s"); // Make it a very short animation
+                    resetArcOpacity.setAttribute("begin", "animLoop.begin");
+                    resetArcOpacity.setAttribute("fill", "freeze");
+                    arcElement.appendChild(resetArcOpacity);
+
+                    const resetArcDasharray = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    resetArcDasharray.setAttribute("attributeName", "stroke-dasharray");
+                    resetArcDasharray.setAttribute("to", "0," + STROKE_PATH_LENGTH);
+                    resetArcDasharray.setAttribute("dur", "0.01s"); // Make it a very short animation
+                    resetArcDasharray.setAttribute("begin", "animLoop.begin");
+                    resetArcDasharray.setAttribute("fill", "freeze");
+                    arcElement.appendChild(resetArcDasharray);
+                    
+                    // Make visible just before drawing (overrides the reset opacity)
+                    const setDrawOpacity = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    setDrawOpacity.setAttribute("attributeName", "opacity");
+                    setDrawOpacity.setAttribute("from", "0"); // Explicitly start from 0
+                    setDrawOpacity.setAttribute("to", "1");
+                    setDrawOpacity.setAttribute("dur", "0.01s"); // Make it effectively a set
+                    setDrawOpacity.setAttribute("begin", "animLoop.begin + " + T_DRAW_ARCS_START);
+                    setDrawOpacity.setAttribute("fill", "freeze");
+                    arcElement.appendChild(setDrawOpacity);
+
+                    // Animate drawing of the arc
+                    const animateDraw = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    animateDraw.setAttribute("attributeName", "stroke-dasharray");
+                    animateDraw.setAttribute("from", "0," + STROKE_PATH_LENGTH);
+                    animateDraw.setAttribute("to", STROKE_PATH_LENGTH + ",0"); 
+                    animateDraw.setAttribute("dur", T_DRAW_ARCS_DUR);
+                    animateDraw.setAttribute("begin", "animLoop.begin + " + T_DRAW_ARCS_START); // Starts with setDrawOpacity
+                    animateDraw.setAttribute("fill", "freeze");
+                    arcElement.appendChild(animateDraw);
+
+                    // Animate fading out of the arc
+                    const animateFadeOut = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    animateFadeOut.setAttribute("attributeName", "opacity");
+                    animateFadeOut.setAttribute("from", "1");
+                    animateFadeOut.setAttribute("to", "0");
+                    animateFadeOut.setAttribute("dur", T_FADE_OUT_ARCS_DUR);
+                    animateFadeOut.setAttribute("begin", "animLoop.begin + " + T_FADE_OUT_ARCS_START);
+                    animateFadeOut.setAttribute("fill", "freeze");
+                    arcElement.appendChild(animateFadeOut);
+                });
+            ]]></script>
+
+            <g id="g1"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText">n</text></g>
+            <g id="g2"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText">o</text></g>
+            <g id="g3"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText">t</text></g>
+            <g id="g4"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText"> </text></g>
+            <g id="g5"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#90A4AE"/><text class="charText">a</text></g>
+            <g id="g6"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText"> </text></g>
+            <g id="g7"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText">t</text></g>
+            <g id="g8"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText">o</text></g>
+            <g id="g9"><use xlink:href="#letterBoxTemplate" stroke="#607D8B" fill="#CFD8DC"/><text class="charText">n</text></g>
+
+            <script type="text/javascript"><![CDATA[
+                const charData = [
+                    { id: "g1", initialX: 55, mpathId: "#mpath_1_9" }, 
+                    { id: "g2", initialX: 115, mpathId: "#mpath_2_8" },
+                    { id: "g3", initialX: 175, mpathId: "#mpath_3_7" },
+                    { id: "g4", initialX: 235, mpathId: "#mpath_4_6" }, 
+                    { id: "g5", initialX: 295 }, 
+                    { id: "g6", initialX: 355, mpathId: "#mpath_6_4" }, 
+                    { id: "g7", initialX: 415, mpathId: "#mpath_7_3" }, 
+                    { id: "g8", initialX: 475, mpathId: "#mpath_8_2" }, 
+                    { id: "g9", initialX: 535, mpathId: "#mpath_9_1" }  
+                ];
+                const CHAR_CENTER_Y = 150; 
+                const T_FADE_IN_TEXT_START = "0s";
+                const T_FADE_IN_TEXT_DUR = "1s";
+                const T_MOVE_TEXT_START = "4s"; 
+                const T_MOVE_TEXT_DUR = "2s";
+
+                charData.forEach(data => {
+                    const groupElement = document.getElementById(data.id);
+                    if (!groupElement) return;
+
+                    // Reset to initial opacity (0) at the start of each loop
+                    const resetOpacity = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    resetOpacity.setAttribute("attributeName", "opacity");
+                    resetOpacity.setAttribute("to", "0");
+                    resetOpacity.setAttribute("dur", "0.01s"); // Make it a very short animation
+                    resetOpacity.setAttribute("begin", "animLoop.begin");
+                    resetOpacity.setAttribute("fill", "freeze");
+                    groupElement.appendChild(resetOpacity);
+
+                    // Reset to initial transform (position) at the start of each loop
+                    const resetTransform = document.createElementNS("http://www.w3.org/2000/svg", "animateTransform");
+                    resetTransform.setAttribute("attributeName", "transform");
+                    resetTransform.setAttribute("type", "translate");
+                    resetTransform.setAttribute("to", `${data.initialX} ${CHAR_CENTER_Y}`);
+                    resetTransform.setAttribute("dur", "0.01s"); // Make it a very short animation
+                    resetTransform.setAttribute("begin", "animLoop.begin");
+                    resetTransform.setAttribute("fill", "freeze");
+                    groupElement.appendChild(resetTransform);
+                    
+                    // 1. Fade In Text (overrides the resetOpacity)
+                    const animateFadeIn = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+                    animateFadeIn.setAttribute("attributeName", "opacity");
+                    animateFadeIn.setAttribute("from", "0"); // Start from the reset value
+                    animateFadeIn.setAttribute("to", "1");
+                    animateFadeIn.setAttribute("dur", T_FADE_IN_TEXT_DUR);
+                    animateFadeIn.setAttribute("begin", "animLoop.begin + " + T_FADE_IN_TEXT_START);
+                    animateFadeIn.setAttribute("fill", "freeze"); 
+                    groupElement.appendChild(animateFadeIn);
+
+                    // 3. Move Text along the arc (if mpathId is defined)
+                    if (data.mpathId) {
+                        const animateMove = document.createElementNS("http://www.w3.org/2000/svg", "animateMotion");
+                        animateMove.setAttribute("dur", T_MOVE_TEXT_DUR);
+                        animateMove.setAttribute("begin", "animLoop.begin + " + T_MOVE_TEXT_START);
+                        animateMove.setAttribute("rotate", "0"); 
+                        animateMove.setAttribute("fill", "freeze"); 
+                        
+                        const mpathElement = document.createElementNS("http://www.w3.org/2000/svg", "mpath");
+                        mpathElement.setAttributeNS("http://www.w3.org/1999/xlink", "href", data.mpathId);
+                        animateMove.appendChild(mpathElement);
+                        groupElement.appendChild(animateMove);
+                    }
+                });
+            ]]></script>
+        </svg>
+    </div>
+</body>
+</html>
