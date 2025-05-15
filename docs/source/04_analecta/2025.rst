@@ -373,75 +373,10 @@ If the conjecture is granted, the question remains: what is the "*self*"? How do
 May
 ---
 
-.. _truth-abstractions:
+Contradiction: A History of Propositions
+----------------------------------------
 
-Truth Abstractions
-------------------
-
-.. epigraph::
-
-    For the sake of greater perspicuity, we shall use the symbol '*c*' as a typographical abbreviations of the expression '*the sentence printed on this page, line 5 from the top*'. Consider now the following sentence:
-
-        *c is not a true sentence*  (Note: this sentence is typeset on line 5)
-
-    Having regard to the meaning of the symbol 'c', we can establish empirically:
-
-        1. 'c is not a true sentence' is identical with *c*
-
-    For the quotation-mark name of the sentence *c* (or for any other of its names), we can set up an explanation of type:
-
-        2. 'c is not a true sentence' is a true sentence if and only c is not a true sentence.
-
-    The premises 1 and 2 together at once give a contradiction:
-
-        c is a true sentence if and only if c is not a true sentence.
-
-    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
-
-From this, Tarski concludes that "*colloquial* :ref:`language <language>`" is hopelessly inconsistent. :ref:`Truth <truth>` *about* a :ref:`language <language>` never exists *within* that language. Tarski is saying, in the mathematically ineluctable way of *proof by contradiction*, that by assuming ":ref:`language <language>`" is a singular entity where all descriptions occur on the same level, contradictions necessarily result. Therefore, to salvage the concept of ":ref:`truth <truth>`", Tarski famously introduces the distinction between *meta* :ref:`language <language>` and *object* :ref:`language <language>`,
-
-.. epigraph::
-
-    For this reason, when we investigate the :ref:`language <language>` of a formalized deductive science, we must always distinguish clearly between the :ref:`language <language>` *about* which we speak and the :ref:`language <language>` *in* which we speak, as well as between the science which is the object of our investigation and the science in which the investigation is being carried out. The names of the expressions of the first language, and of the relations between them, belong to the second language, called the *meta* :ref:`language <language>` (which may contain the first as a part). The description of these expressions, the definition of the complicated concepts, especially of those connected with the construction of a deductive theory (like the concept of consequence, of provable sentence, possibly of true sentence), the determiniation of the properties of these concepts, is the task of the second theory which we shall call the *metatheory*.
-
-    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
-
-In other words, the notion of "*truth*" requires a bifurcation of :ref:`language <language>`. If we want the discourse to include predicates of "*is true*" or "*is false*", :ref:`language <language>` cannot be treated as one cohesive unit, where these assertions are carried out in the same :ref:`language <language>` in which what is being asserted *is asserted*. This idea is only strange if :ref:`language <language>` is regarded as something fixed and determinate. However, it is more apt to think of :ref:`language <language>` as a *continuous process that accumulates components of orthogonal meaning over time*. Each syntactic construct allows new semantic meaning to be encoded into the artifice of :ref:`language <language>`, and each new semantic concept integrated into the fabric of :ref:`language <language>` alters what is demarcated by its boundaries. In other words, :ref:`language <language>` can only be conceived of as a whole at certain points in time, when its definitions are fixed by their factical origin in the world. But the cross section of :ref:`language <language>` at any given moment does not capture its dynamic nature across time; in fact, this nontemporal model of :ref:`language <language>` fails to represent in any capacity beyond the formal the essential nature of :ref:`language <language>`.
-
-Tarski's parsimony of meta and object :ref:`language <language>` shows that ":ref:`truth <truth>`" represents one of these transformative concepts that alters the very constitution of :ref:`language <language>` through its introduction and analysis. In essence, the concept of ":ref:`truth <truth>`", through its rigorous integration into the corpus of :ref:`language <language>`, creates a schism in :ref:`language <language>`. If we allow ourselves to accept ":ref:`truth <truth>`" as a meaningful construct, then we must accept this molecular division of :ref:`language <language>` into separate, but related, domains.
-
-.. important::
-
-    It should be noted this division is only necessary if one concedes to the premise that contradictions should not be syntactically expressible within a :ref:`language <language>`.
-
-The apparent *incompleteness* of :ref:`language <language>`, i.e. its inability to be fully reduced to formal representation, arises because we each view words and sentences as a representative instances plucked from the supposed totality of :ref:`language <language>`. But Tarski has shown, by revealing the circular logic of :ref:`truth <truth>`, that :ref:`language <language>` *is not a totality* and any attempt to treat it as such will result in contradiction.
-
-.. epigraph::
-
-    Vicious circles arise from supposing that a collection of objects may contain members which can only be defined by means of the collection as a whole. Thus, for example, the collection of propositions will be supposed to contain a proposition stating that "*all propositions are either true or false.*” It would seem, however, that such a statement could not be legitimate unless “*all propositions*” referred to some already definite collection, which it cannot do if new propositions are created by statements about “*all propositions*”. We shall, therefore, have to say that statements about “*all propositions*” are meaningless. More generally, given any set of objects such that, if we suppose the set to have a total, it will contain members which presuppose this total, then such a set cannot have a total. By saying that a set has “*no total*,” we mean, primarily, that no significant statement can be made about “*all its members.*”
-
-    - `Principia Mathematica`_, Bertrand Russell and Alfred Whitehead
-
-We say, "*this word is* :ref:`language <language>`" or "*this sentence is* :ref:`language <language>`", having misunderstood what is designated by the term ":ref:`language`". We view :ref:`language <language>` as a *structure*, as a collection extensionally determined by its members, instead of a *structuring*, as the *intension* which composes the determination. *Structures* must possess parts in determinate relations, whereas *structuring* is the very process by which parts are arranged into and imbued with *structure*. In other words, the predicate "*is* :ref:`language`", like the predicates "*is true*" or "*is false*", never occurs within :ref:`language <language>`, but indicates a rupture in the foundations of :ref:`language <language>`. This rupture *is* the essence of :ref:`language <language>`, to bring within its field of containment something entirely disparate from its other elements.
-
-.. epigraph::
-
-    Ask yourself whether our :ref:`language <language>` is complete-—whether it was so before the symbolism of chemistry and the notation of the infinitesimal calculus were incorporated in it; for these are, so to speak, suburbs of our :ref:`language <language>`. (And how many houses or streets does it take before a town begins to be a town?) Our :ref:`language <language>` can be seen as an ancient city: a maze of little streets and squares, of old and new houses, and of houses with additions from various periods; and this surrounded by a multitude of new boroughs with straight regular streets and uniform houses.
-
-    -- `Philosophical Investigations`_, Ludwig Wittenstein
-
-Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their inclusion in :ref:`language <language>`? All three serve distinct linguistic functions, that of identity, disjunction and categorical assertion respectively. They are employed a certain way, to encode meaning a certain way. They have no commonality beyond being :ref:`language <language>`. To call "*these words*" :ref:`language <language>` is directly analogous to collecting an abacus, a paint brush and a hammer under the header of a single concept. The way an abacus is engaged in action and the meaning of its movements, is vastly and materially different than the action and movement of a hammer or paintbrush.
-
-In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta :ref:`language <language>`, *not* the object :ref:`language <language>`. When the :ref:`assignment <value-assignment>` of values to the terms of the object :ref:`language <language>` satisfies a :ref:`proposition <proposition>` of the meta :ref:`language <language>` for all possible :ref:`assignments <value-assignment>`, then the result is said "*to be true*". Tarski defines :ref:`truth <truth>` relative to the combinatorial totality of value assignments. :ref:`Truth <truth>` is the semantic locus point of *syntactic satisfaction* across all possible interpretations.
-
-.. _abstract-contradictions:
-
-Abstract Contradictions: A History of Propositions
---------------------------------------------------
-
-:ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon. :ref:`Axiomatic set theory <sets>`, in its various formulations, represents the purely symbolic and syntactic limit of categorical logic, the maximum extent to which language can be shaped by formal considerations. In doing so, it must restrict itself to the *metalogical* layer, never penetrating below the surface of description. 
-
-It is instructive to consider the history of the *proposition*, for the *proposition* is at once a sentence and a unit of mathematics, a :ref:`truth value <truth-values>`. The proposition is a both a *meaningful* thing and a *formal* thing. The history of philosophy and mathematics is, by and large, an analysis and gradual unveiling of the relations that bind *form* to *meaning*, *syntax* to *semantics*. 
+It is instructive to consider the history of the *proposition*, for the *proposition* is at once a sentence and a unit of mathematics, a :ref:`truth value <truth-values>`. The proposition is a both a *meaningful* thing and a *formal* thing. The history of philosophy and mathematics is, by and large, an analysis and gradual unveiling of the relations that bind *form* to *meaning*, *syntax* to *semantics*. It is therefore, fundamentally, a history of contradiction and paradox.
 
 .. sidebar::
 
@@ -522,9 +457,22 @@ The deduction rule :math:`AaB \to AiB` is often termed a deduction of *existenti
 
 What Abelard is pointing out is a notion that would not be formalized for another millenia in the strictures of set theory: unrestricted comprehension of an abstraction principle necessarily leads to contradiction. The proposition, "*all stone men are stone*", can be true, syntactically speaking, when no objects exist in the domain that is being quantified, namely "*stone men*". As a consequence, because "*all stone men are stone*" can be true without referring to any actual :ref:`beings <being>`, it is too much to grant a deduction from the universal assertion to a particular instance of a "*stone man*". In other words, "*all*" does not imply "*some*" if nothing exists to satisfy "*all*"; indeed, "*all*" must be conditioned on a presupposed existent *thing*. 
 
-The problem of *existential import* bears similarity to the problem that plagued Frege's `Grundgesetze Der Arithmetik`_ . To see how the conundrum of existence ruptures Frege's :ref:`logic <logic>` from the inside out, one must understand how Frege departed from the Aristotelian model of :ref:`logic <logic>` Frege conceived of a proposition *extensionally*, as opposed to *categorically*. To Frege, a proposition is a formula that is *satisfied* by certain objects. For example, ":math:`x` *is even*" is a proposition *satisfied* by the series of numbers :math:`0, 2, 4, ...`; Frege thought of each proposition as implicitly expressing the relation of "*belonging*" between an object :math:`x` and a (*value-range or extension of a*) concept :math:`\hat{\epsilon}f`, where the relation is manifested through a property predicated of each object abstracted into a "*collection*". In other words, Frege saw *predication* as being equivalent to *abstraction*.
+The essential fallacy committed by Aristotle is supposing :ref:`language <language>` can represent reality with perfect fidelity. The crux of Abelard's criticism is found in how Aristotle transforms an argument into symbolic abstractions, manipulates the abstractions through an algebra and then transforms the result back into the original :ref:`language <language>` to obtain the conclusion. Aristotle supposes one can assign symbols to things and then map the actual relations that obtain between the things onto the syntactic rules that connect the symbols. Once this assignment is made, he supposes the result obtained through symbolic deduction is equivalent to the actual conclusion, where each application of a rule (e.g. a conversion) in the deductive chain corresponds to some actual thought process that would occur were it (the thought process) to consider the argument on its own terms.  
 
-For example, to say, "*this pen belongs to the concept of Black*" is equivalent to saying "*this pen is a black object*". Note in these examples the division between the near-Platonic formal nature of "*Black*" and the near-Aristotelian predication of "*black*". The use of capitalization is intentional, for Frege would call "*Black*" a proper name and "*black*" a description. According to Frege, "*Black*" is the abstract concept common to all instances of black things. In other words, Frege has committed himself to a stance on the problem of universals, namely that they exist. 
+The inability of :ref:`language <language>` to penetrate :ref:`being <being>` is the millenial problem of philosophy. Again and again, age after age, it is supposed the nature of :ref:`being <being>` can be reduced to words. The history of logic and the proposition is the history of this losing war. Each time, armies are raised, cloaked in ever more complex machinery. The battles become more sophiscated and harder to follow, but the outcome is always the same. The human mind falters in its approach and discovers another layer of contradiction encircling its thoughts. 
+
+In the late nineteenth century, the most sustained and protracted campaigns of this war, up to that point in history, was waged by Frege's `Grundgesetze Der Arithmetik`_ . In this sprawling and dense work, Frege target was the language of arithmetic, which contains such statement as "*all numbers have a successor*" or symbollically in modern notation,
+
+.. math::
+    
+    a \in \mathbb{N} \implies a + 1 \in \mathbb{N}
+
+His goal was to show this :ref:`language <language>` was derived from the more fundamental :ref:`language <language>` of :ref:`logic <logic>` through definition and deduction. In effect, Frege sought to show, using precise :ref:`language <language>` lacking any ambiguity, the essential nature of numbers was logical. 
+
+To see how the conundrum of existence and :ref:`language <language>` ruptures Frege's :ref:`logic <logic>` from the inside out, one must understand how 
+Frege departed from the Aristotelian model of :ref:`logic <logic>`. Frege conceived of a proposition *extensionally*, as opposed to *categorically*. To Frege, a proposition is a formula that is *satisfied* by certain objects. For example, ":math:`x` *is even*" is a proposition *satisfied* by the series of numbers :math:`0, 2, 4, ...`; Frege thought of each proposition as implicitly expressing the relation of "*belonging*" between an object :math:`x` and a (*value-range or extension of a*) concept :math:`\hat{\epsilon}f`, where the relation is manifested through a property predicated of each object that belongs to the concept. In other words, Frege saw *predication* as being equivalent to *abstraction*.
+
+For example, to say in Fregean terms, "*this pen belongs to the concept of Black*" is equivalent to saying "*this pen is a black object*". Note in these examples the division between the near-Platonic formal nature of "*Black*" and the near-Aristotelian predication of "*black*". The use of capitalization is intentional, for Frege would call "*Black*" a proper name and "*black*" a description. According to Frege, *Black* is the abstract concept common to all instances of *black* things. In other words, Frege has committed himself to a stance on the problem of universals, namely that they exist. 
 
 Moreover, Fregean concepts exist as *terms* in the language from which they arose as abstractions. Frege asserted, for all objects :math:`x`, the property :math:`f` being equal to the property :math:`g` is equivalent to saying the concept :math:`\hat{\epsilon}f` and the concept :math:`\hat{\epsilon}g` are the same concept,
 
@@ -583,6 +531,68 @@ The question, often known as the *Caesar Problem*, is how does one re-identify t
 Therefore, if :math:`x \frown \hat{\epsilon}f`, then :math:`f(x)`.
 
 The key step is passing from the universal equality of concepts, an assertion of categorical relation, to an *instance* of the property denoted by the concept. Frege makes the same mistake as Aristotle (:small:`good company to keep`) in assuming a universal relation implies an existential relation.
+
+
+
+
+.. epigraph::
+
+    For the sake of greater perspicuity, we shall use the symbol '*c*' as a typographical abbreviations of the expression '*the sentence printed on this page, line 5 from the top*'. Consider now the following sentence:
+
+        *c is not a true sentence*  (Note: this sentence is typeset on line 5)
+
+    Having regard to the meaning of the symbol 'c', we can establish empirically:
+
+        1. 'c is not a true sentence' is identical with *c*
+
+    For the quotation-mark name of the sentence *c* (or for any other of its names), we can set up an explanation of type:
+
+        2. 'c is not a true sentence' is a true sentence if and only c is not a true sentence.
+
+    The premises 1 and 2 together at once give a contradiction:
+
+        c is a true sentence if and only if c is not a true sentence.
+
+    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
+
+From this, Tarski concludes that "*colloquial* :ref:`language <language>`" is hopelessly inconsistent. :ref:`Truth <truth>` *about* a :ref:`language <language>` never exists *within* that language. Tarski is saying, in the mathematically ineluctable way of *proof by contradiction*, that by assuming ":ref:`language <language>`" is a singular entity where all descriptions occur on the same level, contradictions necessarily result. Therefore, to salvage the concept of ":ref:`truth <truth>`", Tarski famously introduces the distinction between *meta* :ref:`language <language>` and *object* :ref:`language <language>`,
+
+.. epigraph::
+
+    For this reason, when we investigate the :ref:`language <language>` of a formalized deductive science, we must always distinguish clearly between the :ref:`language <language>` *about* which we speak and the :ref:`language <language>` *in* which we speak, as well as between the science which is the object of our investigation and the science in which the investigation is being carried out. The names of the expressions of the first language, and of the relations between them, belong to the second language, called the *meta* :ref:`language <language>` (which may contain the first as a part). The description of these expressions, the definition of the complicated concepts, especially of those connected with the construction of a deductive theory (like the concept of consequence, of provable sentence, possibly of true sentence), the determiniation of the properties of these concepts, is the task of the second theory which we shall call the *metatheory*.
+
+    - `The Concept of Truth in Formalized Languages`_, Alfred Tarski
+
+In other words, the notion of "*truth*" requires a bifurcation of :ref:`language <language>`. If we want the discourse to include predicates of "*is true*" or "*is false*", :ref:`language <language>` cannot be treated as one cohesive unit, where these assertions are carried out in the same :ref:`language <language>` in which what is being asserted *is asserted*. This idea is only strange if :ref:`language <language>` is regarded as something fixed and determinate. However, it is more apt to think of :ref:`language <language>` as a *continuous process that accumulates components of orthogonal meaning over time*. Each syntactic construct allows new semantic meaning to be encoded into the artifice of :ref:`language <language>`, and each new semantic concept integrated into the fabric of :ref:`language <language>` alters what is demarcated by its boundaries. In other words, :ref:`language <language>` can only be conceived of as a whole at certain points in time, when its definitions are fixed by their factical origin in the world. But the cross section of :ref:`language <language>` at any given moment does not capture its dynamic nature across time; in fact, this nontemporal model of :ref:`language <language>` fails to represent in any capacity beyond the formal the essential nature of :ref:`language <language>`.
+
+Tarski's parsimony of meta and object :ref:`language <language>` shows that ":ref:`truth <truth>`" represents one of these transformative concepts that alters the very constitution of :ref:`language <language>` through its introduction and analysis. In essence, the concept of ":ref:`truth <truth>`", through its rigorous integration into the corpus of :ref:`language <language>`, creates a schism in :ref:`language <language>`. If we allow ourselves to accept ":ref:`truth <truth>`" as a meaningful construct, then we must accept this molecular division of :ref:`language <language>` into separate, but related, domains.
+
+.. important::
+
+    It should be noted this division is only necessary if one concedes to the premise that contradictions should not be syntactically expressible within a :ref:`language <language>`.
+
+The apparent *incompleteness* of :ref:`language <language>`, i.e. its inability to be fully reduced to formal representation, arises because we each view words and sentences as a representative instances plucked from the supposed totality of :ref:`language <language>`. But Tarski has shown, by revealing the circular logic of :ref:`truth <truth>`, that :ref:`language <language>` *is not a totality* and any attempt to treat it as such will result in contradiction.
+
+.. epigraph::
+
+    Vicious circles arise from supposing that a collection of objects may contain members which can only be defined by means of the collection as a whole. Thus, for example, the collection of propositions will be supposed to contain a proposition stating that "*all propositions are either true or false.*” It would seem, however, that such a statement could not be legitimate unless “*all propositions*” referred to some already definite collection, which it cannot do if new propositions are created by statements about “*all propositions*”. We shall, therefore, have to say that statements about “*all propositions*” are meaningless. More generally, given any set of objects such that, if we suppose the set to have a total, it will contain members which presuppose this total, then such a set cannot have a total. By saying that a set has “*no total*,” we mean, primarily, that no significant statement can be made about “*all its members.*”
+
+    - `Principia Mathematica`_, Bertrand Russell and Alfred Whitehead
+
+We say, "*this word is* :ref:`language <language>`" or "*this sentence is* :ref:`language <language>`", having misunderstood what is designated by the term ":ref:`language`". We view :ref:`language <language>` as a *structure*, as a collection extensionally determined by its members, instead of a *structuring*, as the *intension* which composes the determination. *Structures* must possess parts in determinate relations, whereas *structuring* is the very process by which parts are arranged into and imbued with *structure*. In other words, the predicate "*is* :ref:`language`", like the predicates "*is true*" or "*is false*", never occurs within :ref:`language <language>`, but indicates a rupture in the foundations of :ref:`language <language>`. This rupture *is* the essence of :ref:`language <language>`, to bring within its field of containment something entirely disparate from its other elements.
+
+.. epigraph::
+
+    Ask yourself whether our :ref:`language <language>` is complete-—whether it was so before the symbolism of chemistry and the notation of the infinitesimal calculus were incorporated in it; for these are, so to speak, suburbs of our :ref:`language <language>`. (And how many houses or streets does it take before a town begins to be a town?) Our :ref:`language <language>` can be seen as an ancient city: a maze of little streets and squares, of old and new houses, and of houses with additions from various periods; and this surrounded by a multitude of new boroughs with straight regular streets and uniform houses.
+
+    -- `Philosophical Investigations`_, Ludwig Wittenstein
+
+Ask yourself: What do "*equals*", "*or*" and "*all*" have in common beyond their inclusion in :ref:`language <language>`? All three serve distinct linguistic functions, that of identity, disjunction and categorical assertion respectively. They are employed a certain way, to encode meaning a certain way. They have no commonality beyond being :ref:`language <language>`. To call "*these words*" :ref:`language <language>` is directly analogous to collecting an abacus, a paint brush and a hammer under the header of a single concept. The way an abacus is engaged in action and the meaning of its movements, is vastly and materially different than the action and movement of a hammer or paintbrush.
+
+In Tarski's conception, :ref:`truth <truth>` is a property expressed in the meta :ref:`language <language>`, *not* the object :ref:`language <language>`. When the :ref:`assignment <value-assignment>` of values to the terms of the object :ref:`language <language>` satisfies a :ref:`proposition <proposition>` of the meta :ref:`language <language>` for all possible :ref:`assignments <value-assignment>`, then the result is said "*to be true*". Tarski defines :ref:`truth <truth>` relative to the combinatorial totality of value assignments. :ref:`Truth <truth>` is the semantic locus point of *syntactic satisfaction* across all possible interpretations.
+
+:ref:`Set theory <sets>` is a formal system that is often used as a meta :ref:`language <language>` in mathematics to specify the conditions of object :ref:`languages <language>`, e.g. differential and integral calculus, real and complex analysis, etc. In many ways, :ref:`set theory <sets>` is the formal crystallization of the logical dialectic initiated by Aristotle in the Organon. :ref:`Axiomatic set theory <sets>`, in its various formulations, represents the purely symbolic and syntactic limit of categorical logic, the maximum extent to which language can be shaped by formal considerations. In doing so, it must restrict itself to the *metalogical* layer, never penetrating below the surface of description. 
+
 
 .. [#may_2025_01] Aristotle has a third conversion rule, :math:`AeB \to BeA`, but it is not mentioned here since it is not relevant to Abelard's critique of *existential import*.
 
@@ -649,3 +659,19 @@ Language does not seem possible without admitting that it's nature is inextricab
 **Tarski**: A name is a satisfaction.
 
 **Kripke**: A name is a baptism. 
+
+---
+
+.. epigraph::
+
+    Where but to think is to be full of sorrow.
+
+    -- `Ode to a Nightingale`_, John Keats
+
+My thoughts are an endless circle. They always return to the point where they started, never having gained any further insight, never having accomplished anything. The same questions remain, except more complex and daunting for the depths that have been revealed. The same thoughts repeat and repeat, each time more muddled and lacking even more clarity. The recursion never ceases.
+
+The :ref:`world <world>` is an ocean of contradiction upon contradiction, absurdity upon absurdity. It is a never-ending deluge of senselessness, a flood of utter desolation, tidal in its pull. It sinks all meaning beneath its surface. No structure remains standing in its wake. 
+
+The world will defy every expectation, slip every knot and dissolve in front of your eyes. Give it a name and it will immediately exceed that name, for now the totality of the world is now what was plus what has been named. :ref:`Being <being>` refuses to be abstracted out of the :ref:`world <world>`, for the abstraction cannot help but become part of the :ref:`world <world>`. 
+
+How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise. 
