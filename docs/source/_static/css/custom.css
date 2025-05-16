@@ -14,6 +14,10 @@
     font-size: 0.5em;
 }
 
+.tiny {
+    font-size: 0.25em;
+}
+
 .footnote {
     font-size: 0.7em !important;
 }
@@ -24,4 +28,17 @@
 
 .sidebar {
     font-size: 0.8em !important;
+}
+
+.scbs-carousel{
+    width: 70%;
+    margin: auto;
+}
+
+.scbs-carousel-item {
+    max-height: 375px;
+}
+
+.scbs-carousel p {
+    font-size: 0.85em !important;
 }

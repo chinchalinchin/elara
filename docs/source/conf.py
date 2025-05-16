@@ -27,7 +27,9 @@ extensions = [
     'sphinx_toolbox.collapse',
     'matplotlib.sphinxext.plot_directive',
     'sphinx_design',
-    'sphinx_sitemap'
+    'sphinx_sitemap',
+    "sphinx_carousel.carousel",
+
 ]
 
 templates_path = [ ]
@@ -119,6 +121,11 @@ def small(name: str, rawtext: str, text: str, lineno: int,
     node = nodes.inline(rawtext, utils.unescape(text), classes=['small'])
     return [node], []
 
+def tiny(name: str, rawtext: str, text: str, lineno: int,
+               inliner, options={}, content=[]):
+    node = nodes.inline(rawtext, utils.unescape(text), classes=['tiny'])
+    return [node], []
+
 def build_pdf(source_dir, output_dir, filename):
     """
     Builds a PDF from a single RST file using Sphinx.
@@ -142,6 +149,7 @@ def build_pdf(source_dir, output_dir, filename):
 
 def setup(app):
     app.add_role('small', small)
+    app.add_role('tiny', tiny)
 
     return {
         'version': '1.0',
