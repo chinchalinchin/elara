@@ -1,5 +1,5 @@
-Pantoums
-========
+Ballads
+=======
 
 .. toctree::
    :maxdepth: 2
