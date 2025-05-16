@@ -1,0 +1,113 @@
+<svg id="setTheoryAnimation" width="400px" height="380px" viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="font-family: Arial, sans-serif;">
+
+  <defs>
+    <filter id="circleShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+
+    <clipPath id="clipOuterCircleArea">
+      <circle cx="150" cy="150" r="60" />
+    </clipPath>
+  </defs>
+
+  <rect id="backgroundRect" x="0" y="0" width="100%" height="100%" fill="#FFFFFF">
+    <animate id="animBgToLightBlue" attributeName="fill"
+             from="#FFFFFF" to="#BBDEFB" dur="2s"  begin="animInnerCxTo285.end + 3s" fill="freeze" />
+    <animate id="resetBgToWhite" attributeName="fill"
+             to="#FFFFFF" dur="0.01s"
+             begin="fadeOutAnim.end" fill="freeze" />
+  </rect>
+
+  <animate id="fadeInAnim" xlink:href="#setTheoryAnimation" attributeName="opacity"
+           from="0" to="1" dur="1s" begin="0s;fadeOutAnim.end" fill="freeze" />
+  <animate id="fadeOutAnim" xlink:href="#setTheoryAnimation" attributeName="opacity"
+           from="1" to="0" dur="1s" begin="jiggleText1d.end + 3s" fill="freeze" />
+
+
+  <circle id="outerCircle" cx="150" cy="150" r="60" fill="#F44336" filter="url(#circleShadow)" />
+
+  <circle id="innerCircleBlue" cx="150" cy="150" r="30" fill="#2196F3" filter="url(#circleShadow)">
+    <animate id="resetInnerRadiusBlue" attributeName="r" to="30" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+    <animate id="resetInnerCxBlue" attributeName="cx" to="150" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+    <animate id="resetInnerFillBlue" attributeName="fill" to="#2196F3" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" /> <animate id="resetInnerShadowBlue" attributeName="filter" to="url(#circleShadow)" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+
+    <animate id="animInnerRadiusTo60" attributeName="r"
+             from="30" to="60" dur="2s"
+             begin="fadeInAnim.end + 3s" fill="freeze" />
+    <animate id="animInnerCxTo210" attributeName="cx"
+             from="150" to="210" dur="2s"
+             begin="fadeInAnim.end + 3s" fill="freeze" />
+
+    <animate id="animInnerCxTo285" attributeName="cx"
+             from="210" to="285" dur="2s"
+             begin="animInnerRadiusTo60.end + 3s" fill="freeze" />
+
+    <animate id="animCircleToLightBlue" attributeName="fill"
+             from="#2196F3" to="#BBDEFB" dur="2s" begin="animBgToLightBlue.begin" fill="freeze" />
+    <animate id="animCircleShadowNone" attributeName="filter"
+             from="url(#circleShadow)" to="none" dur="2s"
+             begin="animBgToLightBlue.begin" fill="freeze" />
+  </circle>
+
+  <circle id="intersectionCirclePurple" cx="150" cy="150" r="30" fill="#9C27B0" clip-path="url(#clipOuterCircleArea)" filter="url(#circleShadow)">
+    <animate id="resetIntersectionRadiusPurple" attributeName="r" to="30" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+    <animate id="resetIntersectionCxPurple" attributeName="cx" to="150" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+    <animate id="resetIntersectionFillPurple" attributeName="fill" to="#9C27B0" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+    <animate id="resetIntersectionShadowPurple" attributeName="filter" to="url(#circleShadow)" dur="0.01s" begin="fadeOutAnim.end" fill="freeze" />
+
+
+    <animate attributeName="r"
+             from="30" to="60" dur="2s"
+             begin="fadeInAnim.end + 3s" fill="freeze" />
+    <animate attributeName="cx"
+             from="150" to="210" dur="2s"
+             begin="fadeInAnim.end + 3s" fill="freeze" />
+
+    <animate attributeName="cx"
+             from="210" to="285" dur="2s"
+             begin="animInnerRadiusTo60.end + 3s" fill="freeze" />
+
+    <animate attributeName="fill"
+             from="#9C27B0" to="#BBDEFB" dur="2s" begin="animBgToLightBlue.begin" fill="freeze" />
+    <animate attributeName="filter"
+             from="url(#circleShadow)" to="none" dur="2s"
+             begin="animBgToLightBlue.begin" fill="freeze" />
+  </circle>
+
+  <text id="text1a" x="200" y="280" text-anchor="middle" font-size="18" fill="#212121" font-weight="normal">
+    A &#x2282; B
+    <animate id="boldText1a" attributeName="font-weight" from="normal" to="bold" dur="0.1s" begin="fadeInAnim.end" fill="freeze" />
+    <animate attributeName="font-weight" from="bold" to="normal" dur="0.1s" begin="animInnerRadiusTo60.begin" fill="freeze" />
+    <animateTransform id="jiggleText1a" attributeName="transform" type="translate"
+                      values="0 0; 0 -2; 0 2; 0 -2; 0 0" keyTimes="0; 0.25; 0.5; 0.75; 1"
+                      dur="0.5s" begin="boldText1a.begin" additive="sum" repeatCount="2" />
+  </text>
+
+  <text id="text1b" x="200" y="305" text-anchor="middle" font-size="18" fill="#212121" font-weight="normal">
+    A &#x2229; B &#x2260; &#x2205; 
+    <animate id="boldText1b" attributeName="font-weight" from="normal" to="bold" dur="0.1s" begin="animInnerRadiusTo60.end" fill="freeze" />
+    <animate attributeName="font-weight" from="bold" to="normal" dur="0.1s" begin="animInnerCxTo285.begin" fill="freeze" />
+    <animateTransform id="jiggleText1b" attributeName="transform" type="translate"
+                      values="0 0; 0 -2; 0 2; 0 -2; 0 0" keyTimes="0; 0.25; 0.5; 0.75; 1"
+                      dur="0.5s" begin="boldText1b.begin" additive="sum" repeatCount="2" />
+  </text>
+
+  <text id="text1c" x="200" y="330" text-anchor="middle" font-size="18" fill="#212121" font-weight="normal">
+    A &#x2229; B = &#x2205; 
+    <animate id="boldText1c" attributeName="font-weight" from="normal" to="bold" dur="0.1s" begin="animInnerCxTo285.end" fill="freeze" />
+    <animate attributeName="font-weight" from="bold" to="normal" dur="0.1s" begin="animBgToLightBlue.begin" fill="freeze" />
+    <animateTransform id="jiggleText1c" attributeName="transform" type="translate"
+                      values="0 0; 0 -2; 0 2; 0 -2; 0 0" keyTimes="0; 0.25; 0.5; 0.75; 1"
+                      dur="0.5s" begin="boldText1c.begin" additive="sum" repeatCount="2" />
+  </text>
+
+  <text id="text1d" x="200" y="355" text-anchor="middle" font-size="18" fill="#212121" font-weight="normal">
+    A &#x222A; B = S 
+    <animate id="boldText1d" attributeName="font-weight" from="normal" to="bold" dur="0.1s" begin="animBgToLightBlue.end" fill="freeze" />
+    <animate attributeName="font-weight" from="bold" to="normal" dur="0.1s" begin="fadeOutAnim.end" fill="freeze" />
+    <animateTransform id="jiggleText1d" attributeName="transform" type="translate"
+                      values="0 0; 0 -2; 0 2; 0 -2; 0 0" keyTimes="0; 0.25; 0.5; 0.75; 1"
+                      dur="0.5s" begin="boldText1d.begin" additive="sum" repeatCount="2" />
+  </text>
+
+</svg>

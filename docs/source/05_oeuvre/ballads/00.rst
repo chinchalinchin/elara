@@ -1,15 +1,24 @@
+.. _the-ballad-of-the-isle:
+
 The Ballad of the Isle
 ----------------------
+
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle-01.png
+    :align: left
+    :alt: The Ballad of the Isle
+    :width: 50%
+
+    Image by Imagen 3.0 v002
 
 | the island formed where rivers meet,
 | where silt in vortex fords.
 | the place emerged, the brokered seat, 
 | the land of met accords.
 | 
-| amassed a mound that breached the air 
-| with fare to reach the ear
+| amassed a mount that breached the air 
+| with flair to reach the ear
 | of kingdoms come to loyal swear
-| an oath that all adhere. 
+| an oath all must adhere. 
 | 
 | the sky, the sea, the mountain crags
 | that vie on fronts opposed,
@@ -26,15 +35,15 @@ The Ballad of the Isle
 | where mudded flanks of fish cyclone
 | the scaly studded ranks. 
 | 
-| then stake the trees foundations firm,
-| cement the broken free, 
+| the trees then stake foundations firm,
+| cement what's broken free, 
 | confirm the fluke to bring to term
 | the squawking newborn plea.
 |
 | at last the summer yields to life
 | and summons forth its words
 | to open market pastures rife
-| with bounty born for birds.
+| with bounty born by birds.
 |
 | the jubilee of june, july
 | through fallow leas by moon,
@@ -57,8 +66,8 @@ The Ballad of the Isle
 | to swirling depths of sleep.
 | 
 | yet down below, the stones make schemes
-| in skipping, streaming chunks.
-| inlaid the sunken trees with seams
+| through skipping, streaming chunks
+| inlaid by sunken trees these seams
 | as ballast for their trunks.
 | 
 | arise the turret towers stark
@@ -71,12 +80,21 @@ The Ballad of the Isle
 | atop the castle walls in swarm,
 | the borough made to glow.
 |
-| when winter freeze with crystal glass
-| beholds submerged the fast,
+| let winter freeze, with crystal glass,
+| behold submerged the fast,
 | alive with dancing ghosts en masse
 | retreading paths now past. 
-
+|
 | when spring returns the tides recede,
 | but hollow urns are filled. 
+| the ashes spurned by snaking weed
+| take root when fields are tilled. 
+
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle-02.png
+    :align: left
+    :alt: The Ballad of the Isle
+    :width: 50%
+
+    Image by Imagen 3.0 v002
 
 - May 2025
