@@ -7,6 +7,7 @@ Oeuvre
    :caption: Contents:
 
    abstracta/index
+   ballads/index
    elegies/index
    haikus/index
    lyrics/index
