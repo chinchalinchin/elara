@@ -532,8 +532,7 @@ Therefore, if :math:`x \frown \hat{\epsilon}f`, then :math:`f(x)`.
 
 The key step is passing from the universal equality of concepts, an assertion of categorical relation, to an *instance* of the property denoted by the concept. Frege makes the same mistake as Aristotle (:small:`good company to keep`) in assuming a universal relation implies an existential relation.
 
-
-
+TODO 
 
 .. epigraph::
 
