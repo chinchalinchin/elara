@@ -22,8 +22,8 @@ Spring
 | The place emerged, the brokered seat, 
 |   this land of met accords.
 | 
-| Amassed a mount that breached the air 
-|   with fare to reach the ear
+| Amassed a mount that, breaching air, 
+|   declared to reaching ear
 | of kingdoms come to loyal swear
 |   an oath all must adhere. 
 | 
@@ -49,7 +49,7 @@ Spring
 |
 | A birth announced to kneeling crowds
 |   on consecrated Earth,
-| A seal pronounced beneath the clouds
+| a seal pronounced beneath the clouds
 |   to celebrate with mirth.
 
 Summer
@@ -70,20 +70,35 @@ Summer
 | to open market pastures rife
 |   with bounty born by birds.
 |
-| Through shallows deer appear to graze
-|   beside the fays that drape
-| the rays with incandescent haze,
-|   their hallow swaying shape.
+| In shallows deer appear to graze
+|   beside the lazing drapes
+| of rays, through incandescent haze
+|   that veils their swaying shapes.
 |
 | Then maiden buds unfold to bees 
-|   the sweetly nectared heat,
-| unladened, drowsy, through the breeze
+|   the sweetly nectared heat;
+| unladened, drowsy through the breeze,
 |   the teasing fumes secrete. 
+|
+| Along the flowing inlet streams 
+|   the festival begins.
+| Caressing music tinges dreams
+|   with cricket violins.
+|
+| The gondolas of lillies' bud
+|   that carry courting toads
+| through bogs to ports of mud
+|   release their tadpole loads.
 |
 | Oh! Jubilee of June, July
 |   through fallow leas by moon,
 | when rodents swoon in cups of rye 
 |   and fall to bed too soon.
+|
+| Amid the revelry a kiss
+|   to memory's delight,
+| two larks alight in fading bliss
+|   fulfill this final night. 
 
 Autumn
 ------
@@ -105,7 +120,7 @@ Autumn
 |
 | The thunder heralds sundered age 
 |   besieged by droplets fat 
-| with blood of prior plundered wage, 
+| with blood of yearly plundered wage, 
 |   enraged what Spring begat.  
 |
 | What muddy lanes then sluice the drowned
@@ -148,10 +163,10 @@ Winter
 
 | A timeless age begins to blow
 |   above where worlds still thrive.
-| Descending sickles diving slow,
-|    the primal gods arrive.
+| Descending sickles diving slow
+|   as primal ends arrive.
 |
-| Let Winter freeze, with crystal glass,
+| Let Winter lens of crystal glass
 |   behold submerged the fast,
 | alive with dancing ghosts en masse
 |   retreading paths now past. 
@@ -161,9 +176,18 @@ Winter
 | They turn to ice, encased expand
 |   beyond the skinned decay. 
 |
+| What moments held in spells now spent
+|   impels the course of freeze.
+| The towers brought to knees repent,
+|   befelled by Time's decrees.
+|
 | When Spring returns the tides recede,
 |   but hollow urns are filled. 
 | The ashes spurned through snaking weed
 |   take root when fields are tilled. 
 
+.. | 
+.. | What form remains recast in shells 
+
 - May 2025
+
