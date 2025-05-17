@@ -83,6 +83,16 @@ html_theme_options = {
             "url": "https://pypi.org/user/chinchalinchin/",
             "type": "fontawesome",
             "icon": "fa-custom fa-pypi"
+        },{
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/grant-moore-674677353/",
+            "type": "fontawesome",
+            "icon": "fa-custom fa-linkedin"
+        },{
+            "name": "Facebook",
+            "url": "https://www.facebook.com/grant.moore.125836/",
+            "type": "fontawesome",
+            "icon": "fa-custom fa-facebook"
         }
    ]
 }

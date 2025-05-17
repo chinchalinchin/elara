@@ -1,17 +1,24 @@
 .. _the-ballad-of-the-isle:
 
-The Ballad of the Isle
-----------------------
+-------------------------
+I: The Ballad of the Isle
+-------------------------
 
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/bookend-01.png
-    :align: left
-    :alt: The Ballad of the Isle
+Spring
+------
+
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-03.jpeg
+    :align: center
+    :alt: The Accord
+    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-03.jpeg
     :width: 70%
-
-    Image by Imagen 3.0 v002
+    
+    The Accord
+    
+    :small:`Image by Gemini Flash 2.0`
 
 | The island formed where rivers meet,
-|   where silt in vortex fords.
+|   where silt through vortex fords.
 | The place emerged, the brokered seat, 
 |   this land of met accords.
 | 
@@ -24,50 +31,9 @@ The Ballad of the Isle
 |   that vie on fronts opposed,
 | beneath the fountain planted flags 
 |   agreed to plans proposed.
-
-.. carousel::
-    :show_controls:
-    :show_indicators:
-    :show_fade:
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-01.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Accord I
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-01.jpeg
-
-        I 
-        
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-02.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Accord II
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-02.jpeg
-
-        II 
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-03.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Accord III
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-03.jpeg
-
-        III
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-04.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Accord IV
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-04.jpeg
-        
-        IV
-
-        Image by Gemini Flash 2.0
-
+|
 | A barren hump, the sodden deal
-|   where flocking birds will plow
+|   for flocking birds to plow
 | their gullet seed, to letters leal
 |   the court of wings their vow. 
 | 
@@ -81,62 +47,57 @@ The Ballad of the Isle
 | confirm the seed to bring to term
 |   the squawking newborn plea.
 |
+| A birth announced to kneeling crowds
+|   on consecrated Earth,
+| A seal pronounced beneath the clouds
+|   to celebrate with mirth.
+
+Summer
+------
+
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-01.jpeg
+    :align: left
+    :alt: The Jubilee
+    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-01.jpeg
+    :width: 70%
+
+    The Jubilee
+
+    :small:`Image by Gemini Flash 2.0`
+
 | At last the Summer yields to life
-|   and summons forth its words
+|   and summons forth its herds
 | to open market pastures rife
 |   with bounty born by birds.
 |
-| The maiden buds unfold to bees
+| Through shallows deer appear to graze
+|   beside the fays that drape
+| the rays with incandescent haze,
+|   their hallow swaying shape.
+|
+| Then maiden buds unfold to bees 
 |   the sweetly nectared heat,
 | unladened, drowsy, through the breeze
-|   the pleasing fumes secrete. 
-
-.. carousel::
-    :show_controls:
-    :show_indicators:
-    :show_fade:
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-01.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Jubilee I
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-01.jpeg
-
-        I 
-        
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-02.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Jubilee II
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-02.jpeg
-
-        II 
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-03.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Jubilee III
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-03.jpeg
-
-        III
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-04.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, The Jubilee IV
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-04.jpeg
-
-        IV
-
-        Image by Gemini Flash 2.0
-
+|   the teasing fumes secrete. 
+|
 | Oh! Jubilee of June, July
 |   through fallow leas by moon,
 | when rodents swoon in cups of rye 
 |   and fall to bed too soon.
-|
+
+Autumn
+------
+
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
+    :align: left
+    :alt: Autumnal Flooding
+    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
+    :width: 70%
+
+    The Flood
+
+    :small:`Image by Gemini Flash 2.0`
+
 | For Autumn comes with heavy rain 
 |   to test the borders drawn.
 | The water drained from level plain
@@ -146,48 +107,7 @@ The Ballad of the Isle
 |   besieged by droplets fat 
 | with blood of prior plundered wage, 
 |   enraged what Spring begat.  
-
-.. carousel::
-    :show_controls:
-    :show_indicators:
-    :show_fade:
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Autumnal Flooding I
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
-
-        I 
-        
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-02.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Autumnal Flooding II
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-02.jpeg
-
-        II 
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-03.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Autumnal Flooding III
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-03.jpeg
-
-        III
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-04.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Autumnal Flooding IV
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-04.jpeg
-
-        IV
-
-        Image by Gemini Flash 2.0
-
+|
 | What muddy lanes then sluice the drowned
 |   debris and sweep from field
 | the tumbling tumult, turned aground
@@ -213,47 +133,24 @@ The Ballad of the Isle
 | atop the castle walls in swarm,
 |   the borough glade aglow.
 
-.. carousel::
-    :show_controls:
-    :show_indicators:
-    :show_fade:
+Winter
+------
 
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-01.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Afterlife I
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-01.jpeg
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
+    :align: left
+    :alt: Afterlife
+    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
+    :width: 70%
 
-        I 
-        
-        Image by Gemini Flash 2.0
+    The Afterlife
+    
+    :small:`Image by Gemini Flash 2.0`
 
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-02.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Afterlife II
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-02.jpeg
-
-        II 
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Afterlife III
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
-
-        III
-
-        Image by Gemini Flash 2.0
-
-    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-04.jpeg
-        :align: left
-        :alt: The Ballad of the Isle, Afterlife IV
-        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-04.jpeg
-        
-        IV
-
-        Image by Gemini Flash 2.0
-
+| A timeless age begins to blow
+|   above where worlds still thrive.
+| Descending sickles diving slow,
+|    the primal gods arrive.
+|
 | Let Winter freeze, with crystal glass,
 |   behold submerged the fast,
 | alive with dancing ghosts en masse
@@ -268,12 +165,5 @@ The Ballad of the Isle
 |   but hollow urns are filled. 
 | The ashes spurned through snaking weed
 |   take root when fields are tilled. 
-
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/bookend-02.png
-    :align: left
-    :alt: The Ballad of the Isle
-    :width: 50%
-
-    Image by Imagen 3.0 v002
 
 - May 2025

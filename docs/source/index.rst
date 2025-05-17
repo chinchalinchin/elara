@@ -13,10 +13,14 @@
    04_analecta/index
    05_oeuvre/index
 
-| Part on seined flow
-|                 deified
-|                   nun
-|                    Wolf denies no trap
+.. raw:: html
+
+   <div class="text-container">
+      <div class="center-line">Part on seined flow</div>
+      <div class="center-line">deified</div>
+      <div class="center-line">nun</div>
+      <div class="center-line">wolf denies no trap.</div>
+   </div>
 
 --------------
 
