@@ -677,19 +677,25 @@ How could it be otherwise? Would the questions have meaning if their answers wer
 
 ---
 
-Those who question or deny the validity of faith outright often do so incorrectly. The argument of most atheists almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human morality or that suffering serves no purpose. 
+Those who question or outright deny the validity of faith often do so incorrectly. The argument of the atheist almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human morality or that suffering serves no purpose. 
 
-To truly make the atheistic argument, one must understand what is meant by *faith*. The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. These notions would later be formalized into the notion of equivalence, which provides a visual cue for understanding their exact meaning,
+To truly make the atheistic argument, one must understand what is meant by *faith*. One cannot argue in *good faith* against something they do not understand, so the true atheist must seek what the believer finds in the corridors of faith in order to demonstrate why it is not so. 
+
+The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. The meaning of this statement is not immediately obvious and will require elaboration of these terms, "*necessity*" and "*sufficiency*". Afer Hume, these notions would later be formalized more precisely into the logical notion of equivalence, which also provides a visual and symbolic cue for understanding their exact meaning. Therefore, the meaning of these terms will be most easily approached by unpacking their formal definitions. Formally, *sufficiency* can be defined as,
 
     **Sufficiency** :math:`p \implies q` : :math:`p` is sufficent for :math:`q`. 
 
-If :math:`q` is known, then :math:`p` is also known. However, a logical implication does not imply a material implication. It may be the case :math:`p` is false and :math:`q` is true. Knowing :math:`p` has *not* occurred is not *sufficient* for knowing :math:`q` has *not* occurred. In other words, *sufficiency* is positive knowledge. Knowing :math:`p` is true yields more knowledge, but knowing :math:`p` is false provides nothing. This is what is meant by *sufficiency*.
+If :math:`q` is known, then :math:`p` is also known. However, a logical implication does not imply a material implication. It may be the case :math:`p` is false and :math:`q` is true. Knowing :math:`p` has *not* occurred is not *sufficient* for knowing :math:`q` has *not* occurred. In other words, *sufficiency* is positive knowledge. Knowing :math:`p` is true yields a deduction, but knowing :math:`p` is false provides nothing. This is what is meant by *sufficiency*.
 
 For example, if one knows it is raining, that implies it is cloudy. But knowing it is cloudy does not imply it is raining. Therefore, the knowledge that it is raining is sufficient, but not necessary, for the knowledge that it is cloudy. 
 
     **Necessity** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
 
-If the knowledge that :math:`p` is false 
+By contrast, *necessity* is negative knowledge. If an implication is *necessary*, the knowledge its consequence is false immediately leads to the knowledge its hypothesis is false. This is often reexpressed using the law of contraposition (i.e. :math:`q \implies p`, but this conversion hides the essential *negative* nature of necessity. Knowledge of *necessity* arises by observing the non-occurence of two events. 
+
+One must be careful in the interpretation of these concepts. They should be understood in a Bayesian sense, insofar that the relation of implication between :math:`p` and :math:`q` is never known :ref:`a priori <a-priori>`. This point is important, yet extremely subtle so it bears closer analysis.
+
+... 
 
 Sufficiency contains the idea that every event must be preceded by an event. Necessity contains the ideas the every event must produce an event. 
 
