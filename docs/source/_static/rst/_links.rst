@@ -122,7 +122,7 @@
 .. _On The Origin of the World: http://www.gnosis.org/naghamm/origin.html
 .. _Nāsadīya Sūkta: https://www.swami-krishnananda.org/vishnu/nasadiya.pdf
 .. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
-.. _The Book Of The Law: https://sacred-texts.com/oto/engccxx.htm
+.. _The Book of the Law: https://sacred-texts.com/oto/engccxx.htm
 .. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
 .. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
 .. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328

@@ -532,7 +532,7 @@ Therefore, if :math:`x \frown \hat{\epsilon}f`, then :math:`f(x)`.
 
 The key step is passing from the universal equality of concepts, an assertion of categorical relation, to an *instance* of the property denoted by the concept. Frege makes the same mistake as Aristotle (:small:`good company to keep`) in assuming a universal relation implies an existential relation.
 
-TODO 
+---
 
 .. epigraph::
 
@@ -687,7 +687,7 @@ If :math:`q` is known, then :math:`p` is also known. However, a logical implicat
 
 For example, if one knows it is raining, that implies it is cloudy. But knowing it is cloudy does not imply it is raining. Therefore, the knowledge that it is raining is sufficient, but not necessary, for the knowledge that it is cloudy. 
 
-    **Necessirty** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
+    **Necessity** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
 
 If the knowledge that :math:`p` is false 
 
@@ -697,4 +697,4 @@ Sufficiency contains the idea that every event must be preceded by an event. Nec
 
     There is great danger in me; for who doth not understand these runes shall make a great miss. He shall fall down into the pit called Because, and there he shall perish with the dogs of Reason.
 
-    -- The 
+    -- `The Book of the Law`_, Aleister Crowley
