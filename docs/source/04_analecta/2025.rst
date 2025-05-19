@@ -673,4 +673,28 @@ The :ref:`world <world>` is an ocean of contradiction upon contradiction, absurd
 
 The world will defy every expectation, slip every knot and dissolve in front of your eyes. Give it a name and it will immediately exceed that name, for now the totality of the world is now what was plus what has been named. :ref:`Being <being>` refuses to be abstracted out of the :ref:`world <world>`, for the abstraction cannot help but become part of the :ref:`world <world>`. 
 
-How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise. 
+How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise.
+
+---
+
+Those who question or deny the validity of faith outright often do so incorrectly. The argument of the atheist almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human mortality or that suffering serves no purpose. 
+
+To truly make the atheistic argument, one must understand what is meant by *faith*. The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. These notions would later be formalized into the notion of equivalence, which provides a visual cue for understanding their exact meaning,
+
+    **Sufficiency** :math:`p \implies q` : :math:`p` is sufficent for :math:`q`. 
+
+If :math:`q` is known, then :math:`p` is also known. However, a logical implication does not imply a material implication. It may be the case :math:`p` is false and :math:`q` is true. Knowing :math:`p` has *not* occurred is not *sufficient* for knowing :math:`q` has *not* occurred. In other words, *sufficiency* is positive knowledge. Knowing :math:`p` is true yields more knowledge, but knowing :math:`p` is false provides nothing. This is what is meant by *sufficiency*.
+
+For example, if one knows it is raining, that implies it is cloudy. But knowing it is cloudy does not imply it is raining. Therefore, the knowledge that it is raining is sufficient, but not necessary, for the knowledge that it is cloudy. 
+
+    **Necessirty** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
+
+If the knowledge that :math:`p` is false 
+
+Sufficiency contains the idea that every event must be preceded by an event. Necessity contains the ideas the every event must produce an event. 
+
+.. epigraph::
+
+    There is great danger in me; for who doth not understand these runes shall make a great miss. He shall fall down into the pit called Because, and there he shall perish with the dogs of Reason.
+
+    -- The 

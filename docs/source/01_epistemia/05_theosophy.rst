@@ -39,7 +39,7 @@ Shabaka Stone
 
     Thus all the gods were born and his Ennead was completed. Every word of the god ("hieroglyph"? "idea"?) came into being through what the heart thought and the tongue commanded.
 
-    -- `Lesko Translation <https://omnika.org/texts/328>`_
+    -- `Shabaka Stone, Lesko Translation`_
 
 
 .. _eridu-genesis-creation:
@@ -91,7 +91,7 @@ Eridu Genesis
 
     wild donkeys, and four-footed beasts in the desert.
 
-    -- `Jacobsen Translation <https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm>`_
+    -- `Eridu Genesis, Jacobsen Translation`_
 
 .. _popol-vuh-creation:
 
@@ -195,7 +195,7 @@ The creation myth contained in the *Popol Vuh* could originate from any point in
 
     Chi aq'ab'.
 
-    -- `Lines 97 - 136 <https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf>`_
+    -- `Lines 97 - 136 <Popol Vuh, Christenson Translation>`_
 
 .. epigraph::
 
@@ -290,7 +290,7 @@ The creation myth contained in the *Popol Vuh* could originate from any point in
 
     In night.
 
-    -- `Christenson Translation <https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf>`_
+    -- `Popol Vuh, Christenson Translation`_
 
 .. _rigveda-creation:
 
@@ -329,7 +329,7 @@ Rigveda
 
     There was that One then, and there was no other.
 
-    -- `Nāsadīya Sūkta <https://www.swami-krishnananda.org/vishnu/nasadiya.pdf>`_
+    -- `Nāsadīya Sūkta`_
 
 .. _enuma-elish:
 
@@ -360,7 +360,7 @@ Enūma Eliš
 
     Lahmu and Lahamu were called into being...
 
-    -- `L.W. King Translation <https://sacred-texts.com/ane/enuma.htm>`_
+    -- `Enūma Eliš, L.W. King Translation`_
 
 .. _theogony-creation:
 

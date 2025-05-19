@@ -111,11 +111,21 @@
 .. _We Wear the Mask: https://www.poetryfoundation.org/poems/44203/we-wear-the-mask
 .. _When I Have Seen By Times Fell Hand Defac'd: https://www.poetryfoundation.org/poems/45096/sonnet-64-when-i-have-seen-by-times-fell-hand-defacd
 
+.. prose
+
+.. _On the Heights of Despair: https://archive.org/details/on-the-heights-of-despair
+
 .. spiritual
 
+.. _Enūma Eliš, L.W. King Translation: https://sacred-texts.com/ane/enuma.htm
+.. _Eridu Genesis, Jacobsen Translation: https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm
 .. _On The Origin of the World: http://www.gnosis.org/naghamm/origin.html
+.. _Nāsadīya Sūkta: https://www.swami-krishnananda.org/vishnu/nasadiya.pdf
+.. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
+.. _The Book Of The Law: https://sacred-texts.com/oto/engccxx.htm
 .. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
 .. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
+.. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328
 
 .. textbooks
 
