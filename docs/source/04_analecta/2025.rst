@@ -677,9 +677,11 @@ How could it be otherwise? Would the questions have meaning if their answers wer
 
 ---
 
-Those who question or deny the validity of faith outright often do so incorrectly. The argument of the atheist almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human mortality or that suffering serves no purpose. 
+Those who question or outright deny the validity of faith often do so incorrectly. The argument of the atheist almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human mortality or that suffering serves no purpose. 
 
-To truly make the atheistic argument, one must understand what is meant by *faith*. The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. These notions would later be formalized into the notion of equivalence, which provides a visual cue for understanding their exact meaning,
+To truly make the atheistic argument, one must understand what is meant by *faith*. One can argue against something they do not understand, so the true atheist must seek what the believer finds in the corridors of faith in order to demonstrate why it is not so. 
+
+The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. The meaning of this statement is not immediately obvious and will require elaboration on the meaning of these terms, "*necessity*" and "*sufficiency*". These notions would later be formalized into the logical notion of equivalence, which provides a visual and symbolic cue for understanding their exact meaning. Formally, *sufficiency* can be defined as,
 
     **Sufficiency** :math:`p \implies q` : :math:`p` is sufficent for :math:`q`. 
 
@@ -690,6 +692,8 @@ For example, if one knows it is raining, that implies it is cloudy. But knowing 
     **Necessity** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
 
 If the knowledge that :math:`p` is false 
+
+... 
 
 Sufficiency contains the idea that every event must be preceded by an event. Necessity contains the ideas the every event must produce an event. 
 
