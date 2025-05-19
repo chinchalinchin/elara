@@ -532,7 +532,7 @@ Therefore, if :math:`x \frown \hat{\epsilon}f`, then :math:`f(x)`.
 
 The key step is passing from the universal equality of concepts, an assertion of categorical relation, to an *instance* of the property denoted by the concept. Frege makes the same mistake as Aristotle (:small:`good company to keep`) in assuming a universal relation implies an existential relation.
 
-TODO 
+---
 
 .. epigraph::
 
@@ -673,4 +673,36 @@ The :ref:`world <world>` is an ocean of contradiction upon contradiction, absurd
 
 The world will defy every expectation, slip every knot and dissolve in front of your eyes. Give it a name and it will immediately exceed that name, for now the totality of the world is now what was plus what has been named. :ref:`Being <being>` refuses to be abstracted out of the :ref:`world <world>`, for the abstraction cannot help but become part of the :ref:`world <world>`. 
 
-How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise. 
+How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise.
+
+---
+
+Hume divided causality into *necessity* and *sufficiency*. 
+
+:math:`p \implies q`: :math:`p` is sufficient for :math:`q`. Knowing :math:`p` is enough to conclude :math:`q`.
+
+:math:`\neg p \imples \neg q`: :math:`p` is necessary for :math:`q`. Knowing :math:`q` is enough to conclude :math:`p` (by the law of contraposition.)
+
+---
+
+The concept of *God* is *sufficient*, but not *necessary*. 
+
+If the premise is granted, then existence will follow logically. 
+
+However, from the mere fact of existence, it does not follow one obtains certain knowledge of God. There are a myriad of other reasons: whimsy, absurdity, no reason at all. 
+
+Therefore *God* is *sufficient*, but not *necessary*. 
+
+Faith requires reason to be abandoned. The opposing vantages offered by either outlet are mutually exclusive. In supposing otherwise, i.e. that reason and faith are complementary, Pascal was incorrect.
+
+Pascal sought so very hard to unify faith and reason. Pascal was correct in stating that humans are weak, corrupt and sinful creatures. He was also correct that life without a divine ballast is a desolate landscape of hedonism and vanity. Again, he was correct that humans are only happy when they have faith in a creator. In the absence of a universal metric, humans descend into relativistism and nihilism. The only possible result of a godless world is a charnel house of horrors.
+
+Pascal's wager is not an ontological argument as so much as an metaphysical wish: *please let this be true*. 
+
+---
+
+Ultimately, one has to face the fact all history is human. There is no divine knowledge. No human has ever talked to God. No holy spirit ever possessed the hands that penned gospels. These are childish stories we tell children. No honest person of modest intelligence believes them.
+
+---
+
+Does the institution of religion serve some deeply human function? Or is it an artifice, like government or corporations, that has attached itself like a psychic parasite to the mass of humanity?
