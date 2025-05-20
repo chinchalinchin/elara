@@ -1,6 +1,3 @@
-.. MODE: ENGAGE
-..      Construct a psychological profile of the author. Infer as much demographic and historical information as you can. 
-
 ========
 Analecta
 ========
@@ -1798,15 +1795,78 @@ Language does not seem possible without admitting that it's nature is inextricab
 **Kripke**: A name is a baptism. 
 
 ---
-
 .. epigraph::
 
     Where but to think is to be full of sorrow.
 
     -- `Ode to a Nightingale`_, John Keats
 
-My thoughts are an endless circle. They always return to the point where they started, never having gained any further insight, never having accomplished anything. The same questions remain, except more complex and daunting for the depths that have been revealed. The same thoughts repeat and repeat, each time more muddled and lacking clarity. The recursion never ceases.
+My thoughts are an endless circle. They always return to the point where they started, never having gained any further insight, never having accomplished anything. The same questions remain, except more complex and daunting for the depths that have been revealed. The same thoughts repeat and repeat, each time more muddled and lacking even more clarity. The recursion never ceases.
 
-The :ref:`world <world>` is contradiction upon contradiction, absurdity upon absurdity. It is a never-ending deluge of senselessness, a flood of utter desolation, bereft of meaning but nonetheless tidal in its pull. No structure remains standing in its wake.
+The :ref:`world <world>` is an ocean of contradiction upon contradiction, absurdity upon absurdity. It is a never-ending deluge of senselessness, a flood of utter desolation, tidal in its pull. It sinks all meaning beneath its surface. No structure remains standing in its wake. 
 
-Sing to me this brief moment. How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity ours, for we would not find it if we had not already integrated it is our lexicon.
+The world will defy every expectation, slip every knot and dissolve in front of your eyes. Give it a name and it will immediately exceed that name, for now the totality of the world is now what was plus what has been named. :ref:`Being <being>` refuses to be abstracted out of the :ref:`world <world>`, for the abstraction cannot help but become part of the :ref:`world <world>`. 
+
+How could it be otherwise? Would the questions have meaning if their answers were immediately rendered simply by asking? If our lives are to have meaning, unassailable in its foundations, then the :ref:`world <world>` ipso facto must be inexplicable. If the :ref:`world <world>` meant anything beyond the meaning we give it, then the meaning we find in the :ref:`world <world>` would not be ours. But all meaning we find is by necessity *ours*, for it is impossible that a thought we think should be otherwise.
+
+---
+
+Those who question or outright deny the validity of faith often do so incorrectly. The argument of the atheist almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human morality or that suffering serves no purpose. 
+
+To truly make the atheistic argument, one must understand what is meant by *faith*. One cannot argue in *good faith* against something they do not understand, so the true atheist must seek what the believer finds in the before the altar in order to demonstrate why it is not so. 
+
+The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. The meaning of this statement is not immediately obvious and will require elaboration of these terms, "*necessity*" and "*sufficiency*". Afer Hume, these notions would later be formalized more precisely into the logical notion of equivalence, which also provides a visual and symbolic cue for understanding the exact meaning. Therefore, the meaning of these terms will be most easily approached by unpacking their formal definitions. Formally, *sufficiency* can be defined as,
+
+    **Sufficiency** :math:`p \implies q` : :math:`p` is sufficent for :math:`q`. 
+
+If :math:`q` is known, then :math:`p` is also known. However, a logical implication does not imply a material implication. It may be the case :math:`p` is false and :math:`q` is true. Knowing :math:`p` has *not* occurred is not *sufficient* for knowing :math:`q` has *not* occurred. In other words, *sufficiency* is positive knowledge. Knowing :math:`p` is true yields a deduction, but knowing :math:`p` is false provides nothing. This is what is meant by *sufficiency*.
+
+For example, if one knows it is raining, that implies it is cloudy. But knowing it is cloudy does not imply it is raining. Therefore, the knowledge that it is raining is sufficient, but not necessary, for the knowledge that it is cloudy. 
+
+    **Necessity** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
+
+By contrast, *necessity* is negative knowledge. If an implication is *necessary*, the knowledge its consequence is false immediately leads to the knowledge its hypothesis is false. This is often reexpressed using the law of contraposition (i.e. :math:`q \implies p`), but this conversion into a positive expression hides the essential *negative* nature of necessity. Knowledge of necessity arises by observing the non-occurence of two events. 
+
+One must be careful in the interpretation of these concepts, necessity and sufficiency. They should be understood in a Bayesian sense, insofar that the relation of implication between :math:`p` and :math:`q` is never known :ref:`a priori <a-priori>` and can only be established through observation. This point is important, yet extremely subtle so it bears closer analysis.
+
+Furthermore, one must keep in mind the formal defintions of these terms are *syntactical* in nature. They express the *form* any causal relation must satisfy in :ref:`language <language>`, but they are silent on the content thus expressed. For example, the following propositions satisfy the formal definitions given above,
+
+.. math::
+
+    p = \text{"the net force on the mass is non-zero"}
+
+    q = \text{"the acceleration of the mass is non-zero"}
+
+If we know a mass is accelerating, then we know the net force acting on it is non-zero (*sufficiency*). If the net-force on a mass is zero, then we know its acceleration is also zero (*necessity*). Therefore, we conclude the force on a mass is necessary and sufficient for knowing the fact of its acceleration. Furthermore, while we may not be able to say precisely which is the cause of the other, it is nevertheless clear the relationship between these two descriptions can be labeled "*causal*", meaning the knowledge of one event meaningfully affects the knowledge of the other event. 
+
+However, unfortunately, the formal definitions of sufficiency and necessity do not exclude *non-causal* relations from their satisfaction. For example, these propositions also satisfy the definition, 
+
+.. math::
+
+    p = \text{"the length measures one foot"}
+
+    q = \text{"the length measures twelve inches"}
+
+As another example,
+
+.. math::
+
+    p = \text{"the color is red or not red"}
+
+    q = \text{"the color is never both red and not red"}
+
+In both cases, one would hardly say :math:`p` is the *cause* of :math:`q`, or visa versa. In other words, syntax alone is unable to determine which propositions constitute expressions of *causal* relations, for causality does not reside within the domain of formalism. The root of the causal problem lies in the insurmountable tension between intension and extension; this tension can be seen by noting the implication "*if 2 + 2 = 5, then Paris is the capital of France*" is a logically true proposition, and yet offers no meaningful knowledge for consumpation. Syntax (logic) can partition along the dimensions of *possible* and *coherent*, but is incapable of partitioning along the dimensions of *actual* and *meaningful*, except insofar that what is *actual* must also be *possible* and what is *meaningful* must also be *coherent*.  
+
+---
+
+.. epigraph::
+
+    There is great danger in me; for who doth not understand these runes shall make a great miss. He shall fall down into the pit called Because, and there he shall perish with the dogs of Reason.
+
+    -- `The Book of the Law`_, Aleister Crowley
+
+---
+
+The problem of *faith* cast into the :ref:`language <language>` of necessity and sufficiency is thus: God is sufficient for existence, but not necessarily necessary. Thus, the concept of God cannot be comprehended syntactically (logically) as a *cause* unless one consents to the clause: God is necessary for existence. 
+
+The crux of faith, the essential leap into the unknown, boils down to whether one can imagine a world without God and whether doubts in the affirmative direction can be exorcised from the mind.

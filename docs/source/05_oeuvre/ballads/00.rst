@@ -76,8 +76,8 @@ Summer
 |   that veil their swaying shapes.
 |
 | Then maiden buds unfold to bees 
-|   the sweetly nectared heat;
-| unladened, drowsy through the breeze,
+|   their sweetly nectared heat;
+| unladened, drowsy, through the breeze,
 |   the teasing fumes secrete. 
 |
 | Along the flowing inlet streams 
@@ -87,7 +87,7 @@ Summer
 |
 | The gondolas of lillies' bud
 |   that carry courting toads
-| through bogs to ports of mud
+| through swampy bogs to ports of mud
 |   release their tadpole loads.
 |
 | Oh! Jubilee of June, July
@@ -161,7 +161,7 @@ Winter
     
     :small:`Image by Gemini Flash 2.0`
 
-| A wending gale begins to blow
+| A rending gale begins to blow
 |   above where worlds still thrive.
 | Descending sickles diving slow
 |   as primal ends arrive.
@@ -173,14 +173,19 @@ Winter
 |
 | The stasis holds in cold command 
 |   the surface wraiths at play. 
-| They turn to ice, encased expand
+| They turn to gems, encased expand
 |   beyond the skinned decay. 
+|
+| Through sieging vortices of shard
+|    the kingdom yard is cleaved.
+| Bombarding sheets of ice discard
+|    in circles ruins sieved.
 |
 | What moments held in spells now spent
 |   impels the course of freeze.
 | The towers brought to knees repent,
 |   now felled by Time's disease.
-|
+|  
 | The afterlife morassed in cracks
 |   of marrow twisted blue
 | and white imbues the zodiacs
@@ -190,9 +195,6 @@ Winter
 |   but hollow urns are filled. 
 | The ashes spurned through snaking weed
 |   take root when fields are tilled. 
-
-.. | 
-.. | What form remains recast in shells 
 
 - May 2025
 
