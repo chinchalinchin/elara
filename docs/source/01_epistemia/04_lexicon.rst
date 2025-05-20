@@ -45,7 +45,65 @@ TODO
 Being
 -----
 
-.. list-table:: εἶναι (verb), Koine Greek
+Ancient Hebrew
+--------------
+
+.. important::
+
+  Transliterations are given in parenthesis for languages that do not use a Latin alphabet.
+
+.. list-table:: הָיָה (verb)
+  :header-rows: 1
+
+  * - Aspect, Gender
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural
+  * - Perfect, Masculine
+    - הָיִיתִי (hāyîṯî)
+    - הָיִיתָ (hāyîṯā)
+    - הָיָה (hāyâ)
+    - הָיִינוּ (hāyînû)
+    - הֱיִיתֶם (hĕyîṯem)
+    - הָיוּ (hāyû)	
+  * - Perfect, Feminine
+    - הָיִיתִי (hāyîṯî)
+    - הָיִית (hāyîṯ)
+    - הָיְתָה (hāyǝṯâ)
+    - הָיִינוּ (hāyînû)
+    - הֱיִיתֶן (hĕyîṯen)
+    - הָיוּ (hāyû)	
+  * - Imperfect, Masculine
+    - אֶהְיֶה (’ehyeh)
+    - תִּהְיֶה (tihyeh)
+    - יִהְיֶה (yihyeh)
+    - נִהְיֶה (nihyeh)
+    - תִּהְיוּ (tihyû)
+    - יִהְיוּ (yihyû)
+  * - Imperfect, Feminine
+    - אֶהְיֶה (’ehyeh)
+    - תִּהְיִי (tihyî)
+    - תִּהְיֶה (tihyeh)
+    - נִהְיֶה (nihyeh)
+    - תִּהְיֶינָה (tihyeynâ)
+    - תִּהְיֶינָה (tihyeynâ)
+
+.. note::
+
+  Ancient Hebrew does not possess a direct tense modality.
+
+**Particles**
+
+1. **יֵשׁ (yēš)**: "*there is* ...", "*there are* ..."
+2. **אַיִן (’ayin)**: "*there is not* ...", "*there are not* ..."
+
+Koine Greek
+-----------
+
+.. list-table:: εἶναι (verb)
   :header-rows: 1
 
   * - Tense
