@@ -625,7 +625,7 @@ The law of the excluded middle is a :ref:`logical <logic>` artifact of the separ
 
 It is easy to take for granted the power of a name. We are given a name as soon as we enter the world, often well before. It is not inaccurate to say: each one of us is born *into* a name as much as we are born into a body. There is no difference, for our names indicate who we are, in all of its potentialities, physical or otherwise. This is the meaning of Kripke's criticism of the "*Fregean theory of names*". A name is not merely a *designation* or *description*, but a *baptism*. To name a thing is to inaugurate it into the possibilities of the world, as another item among the collection with the possiblity of :ref:`being <being>`. 
 
-It is even easier to take for granted there is *no inherent reason* we should have names. We could as well not have names; In fact, it almost certain that humans at some point in history do not have the concept of "*name*". One might posit the emergence of "*names*" even further back in the mammalian lineage of humans, but regardless the point stands: *naming* is a privilege afforded by a particular evolutionary history. So many questions could be answered if we only had precise knowledge of the history that preceded our births, if we could somehow reconstruct the conditions of our ancestors who discovered they could *name* one another. What preceded and necessitated the discovery of *names*? Was it pure happenstance? Was a singular thing nominated to be named, or were several things simultaneously given names? Was there a point in history where only *one* name existed? Did humans realize immediately the sheer breadth of things that could named? 
+It is even easier to take for granted there is *no inherent reason* we should have names. We could as well not have names; In fact, it almost certain that humans at some point in history did not have the concept of "*name*". One might posit the emergence of "*names*" even further back in the mammalian lineage of humans, but regardless the point stands: *naming* is a privilege afforded by a particular evolutionary history. So many questions could be answered if we only had precise knowledge of the history that preceded our births, if we could somehow reconstruct the conditions of our ancestors who discovered they could *name* one another. What preceded and necessitated the discovery of *names*? Was it pure happenstance? Was a singular thing nominated to be named, or were several things simultaneously given names? Was there a point in history where only *one* name existed? Did humans realize immediately the sheer breadth of things that could named? 
 
 ---
 
@@ -679,23 +679,25 @@ How could it be otherwise? Would the questions have meaning if their answers wer
 
 Those who question or outright deny the validity of faith often do so incorrectly. The argument of the atheist almost invariably reduces to: why is there suffering? This, however, is no argument at all, for it is riddled with unspoken assumptions and fallacies, such as assuming a divine nature must comport to human morality or that suffering serves no purpose. 
 
-To truly make the atheistic argument, one must understand what is meant by *faith*. One cannot argue in *good faith* against something they do not understand, so the true atheist must seek what the believer finds in the before the altar in order to demonstrate why it is not so. 
+To truly make the atheistic argument, one must understand what is meant by *faith*. One cannot argue in *good faith* against something they do not understand, so the true atheist must seek the nature of belief in God in order to demonstrate why it is not so. 
 
-The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. The meaning of this statement is not immediately obvious and will require elaboration of these terms, "*necessity*" and "*sufficiency*". Afer Hume, these notions would later be formalized more precisely into the logical notion of equivalence, which also provides a visual and symbolic cue for understanding the exact meaning. Therefore, the meaning of these terms will be most easily approached by unpacking their formal definitions. Formally, *sufficiency* can be defined as,
+The nature of faith is mostly precisely comprehended in Hume's division of causality into necessity and sufficiency. The meaning of this statement is not immediately obvious and will require elaboration of these terms, "*necessity*" and "*sufficiency*". Centuries after Hume, these notions would be formalized more precisely into the logical notion of equivalence, which also provides a visual and symbolic cue for understanding the exact meaning. Therefore, the meaning of these terms will be most easily approached by unpacking their modern formal definitions. Formally, *sufficiency* can be defined as,
 
-    **Sufficiency** :math:`p \implies q` : :math:`p` is sufficent for :math:`q`. 
+.. topic:: Sufficiency
 
-If :math:`q` is known, then :math:`p` is also known. However, a logical implication does not imply a material implication. It may be the case :math:`p` is false and :math:`q` is true. Knowing :math:`p` has *not* occurred is not *sufficient* for knowing :math:`q` has *not* occurred. In other words, *sufficiency* is positive knowledge. Knowing :math:`p` is true yields a deduction, but knowing :math:`p` is false provides nothing. This is what is meant by *sufficiency*.
+    :math:`p` is sufficent for :math:`q` if and only if :math:`p \implies q`  
+
+If :math:`q` is known, then :math:`p` is also known. However, a logical implication does not imply a causal implication. It may be the case :math:`p` is false and :math:`q` is true. Knowing :math:`p` has *not* occurred is not *sufficient* for knowing :math:`q` has *not* occurred. In other words, *sufficiency* is positive knowledge. Knowing :math:`p` is true yields a deduction, but knowing :math:`p` is false yields nothing. This is what is meant by *sufficiency*.
 
 For example, if one knows it is raining, that implies it is cloudy. But knowing it is cloudy does not imply it is raining. Therefore, the knowledge that it is raining is sufficient, but not necessary, for the knowledge that it is cloudy. 
 
-    **Necessity** :math:`\neg p \implies \neg q`: :math:`p` is necessary for :math:`q`.
+.. topic:: Necessity
 
-By contrast, *necessity* is negative knowledge. If an implication is *necessary*, the knowledge its consequence is false immediately leads to the knowledge its hypothesis is false. This is often reexpressed using the law of contraposition (i.e. :math:`q \implies p`), but this conversion into a positive expression hides the essential *negative* nature of necessity. Knowledge of necessity arises by observing the non-occurence of two events. 
+    :math:`p` is necessary for :math:`q` if and only if :math:`\neg p \implies \neg q`
+    
+By contrast with sufficiency, *necessity* is negative knowledge. If an implication is *necessary*, the knowledge its consequence is false immediately leads to the knowledge its hypothesis is false. This is often reexpressed using the law of contraposition (i.e. :math:`q \implies p`), but this conversion into a positive expression hides the essential *negative* nature of necessity. Knowledge of necessity arises by observing the non-occurence of two events. 
 
-One must be careful in the interpretation of these concepts, necessity and sufficiency. They should be understood in a Bayesian sense, insofar that the relation of implication between :math:`p` and :math:`q` is never known :ref:`a priori <a-priori>` and can only be established through observation. This point is important, yet extremely subtle so it bears closer analysis.
-
-Furthermore, one must keep in mind the formal defintions of these terms are *syntactical* in nature. They express the *form* any causal relation must satisfy in :ref:`language <language>`, but they are silent on the content thus expressed. For example, the following propositions satisfy the formal definitions given above,
+One must keep in mind the formal defintions of these terms are *syntactical* in nature. They express the *form* any causal relation must satisfy in :ref:`language <language>`, but they are silent on the content thus expressed. For example, the following propositions satisfy the formal definitions given above,
 
 .. math::
 
@@ -722,6 +724,12 @@ As another example,
     q = \text{"the color is never both red and not red"}
 
 In both cases, one would hardly say :math:`p` is the *cause* of :math:`q`, or visa versa. In other words, syntax alone is unable to determine which propositions constitute expressions of *causal* relations, for causality does not reside within the domain of formalism. The root of the causal problem lies in the insurmountable tension between intension and extension; this tension can be seen by noting the implication "*if 2 + 2 = 5, then Paris is the capital of France*" is a logically true proposition, and yet offers no meaningful knowledge for consumpation. Syntax (logic) can partition along the dimensions of *possible* and *coherent*, but is incapable of partitioning along the dimensions of *actual* and *meaningful*, except insofar that what is *actual* must also be *possible* and what is *meaningful* must also be *coherent*.  
+
+Beyond the syntactical considerations, one must be careful in the interpretation of these concepts, necessity and sufficiency. They should be understood in a Bayesian sense, insofar that the relation of implication between :math:`p` and :math:`q` is never known :ref:`a priori <a-priori>` and can only be established through observation. This point is important, yet extremely subtle so it bears closer analysis. 
+
+Hume argued that causality of events is inferred through the correlation of events, but is never definitively established. Implicit in this formulation is the idea that causal events are correlated, but correlated events are not *necessarily* causal [#may_2025_05]_. 
+
+.. [#may_2025_05] Jung argued the correlations of non-causal events constituted an orthogonal modality of ordering he termed *synchronicity*. He posited this modality as essential to the formation of the human psyche and its *archetypes*. 
 
 ---
 
