@@ -1,9 +1,3 @@
-.. ?
-.. overarching goal and constraint.
-..       4 sections (seasons), 3 subsections (months) per section = 12 subsections (months)
-..       4 stanzas (weeks) per subsection (months) = 12 stanzas (weeks) per section (season)
-..       14 feet per stanza. 14/7 days per week = 2 feet per week, approximately.
-
 .. _the-ballad-of-the-isle:
 
 -------------------------
@@ -88,7 +82,6 @@ Summer
 June
 ####
 
-
 | Dispersing plumes of pheromone
 |   converge at silent points.
 | Diverging tracts from season grown 
@@ -142,8 +135,8 @@ August
 |
 | Of August lines that empire grew,
 |   once cloaked in ermine garbs,
-| unkempt and molting flaked sinew,
-|   the branches wreathed in barbs.
+| unkempt and molting, flaked sinew,
+|   their branches wreathed in barbs.
 |
 | Though riches hide in golden limb,
 |   the leaves dissolve to dust,
@@ -151,7 +144,7 @@ August
 |   what wealth remains in gust. 
 |
 | This secret cloaked from time, of Fall's
-|   forgetting mind decline
+|   forgetting reign decline
 | through spectrums brown and yellow balls
 |   gone red in setting shine. 
 
@@ -161,6 +154,11 @@ Autumn
 September
 #########
 
+| September storms suspend the skies
+|   resplendent morning pinks
+| above the waking window eyes
+|   despairing foregone winks. 
+| 
 | Now Autumn comes with heavy rain 
 |   to test the borders drawn.
 | The water drained from level plain
@@ -175,8 +173,6 @@ September
 |   debris and sweep from field
 | the tumbling tumult, turned aground
 |   and heaped by waves to wield.
-
-TODO 
 
 October
 #######
