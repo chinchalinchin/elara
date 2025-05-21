@@ -2,7 +2,7 @@
 .. overarching goal and constraint.
 ..       4 sections (seasons), 3 subsections (months) per section = 12 subsections (months)
 ..       4 stanzas (weeks) per subsection (months) = 12 stanzas (weeks) per section (season)
-..       28 feet per stanza. 28/7 days per week = 4 feet per week, approximately.
+..       14 feet per stanza. 14/7 days per week = 2 feet per week, approximately.
 
 .. _the-ballad-of-the-isle:
 
@@ -77,7 +77,7 @@ May
 | confirm the seed to bring to term
 |   the squawking newborn plea.
 |
-| A birth announced to kneeling crowds
+| May birth announced to kneeling crowds
 |   on consecrated Earth,
 | a seal pronounced beneath the clouds
 |   with celebrated mirth.
