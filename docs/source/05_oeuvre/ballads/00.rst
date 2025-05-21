@@ -34,7 +34,7 @@ March
 | Behold the treaties signed in ink,
 |   the scrolls in future's brine,
 | the sutures binding those in sync
-|   with island's hallow shrine.
+|   to island's hallow shrine.
 
 April
 #####
@@ -93,6 +93,11 @@ June
 | to open market pastures rife
 |   with bounty born by birds.
 |
+| Dispersing plumes of pheromone
+|   converge at silent points.
+| Diverging tracts from season grown 
+|   lead back to June hitched joints. 
+|  
 | In shallows deer appear to graze
 |   beside the lazing drapes
 | of rays of incandescent haze
@@ -102,8 +107,6 @@ June
 |   their sweetly nectared heat;
 | unladened, drowsy, through the breeze,
 |   the teasing fumes secrete. 
-
-TODO
 
 July
 ####
@@ -118,7 +121,7 @@ July
 | through swampy bogs to ports of mud
 |   release their tadpole loads.
 |
-| Oh! Jubilee of June, July
+| Oh! Jubilee, this boon, July
 |   through fallow leas by moon,
 | when rodents swoon in cups of rye 
 |   and fall to bed too soon.
@@ -130,6 +133,24 @@ July
 
 August
 ######
+
+| What bittersweet perfumes release
+|   in looming throes of age,
+| when isle matures through orange cerise, 
+|   engulfed in scents of sage.
+|
+| Though riches hide in golden limb,
+|   the leaves dissolve to dust,
+| consoled in flight to hushing skim
+|   what wealth remains in gust. 
+|
+| This secret cloaked from time, of Fall's
+|   forgetting mind decline
+| through spectrums brown and yellow balls
+|   gone red in setting shine. 
+|  
+
+TODO
 
 Autumn
 ------
@@ -151,6 +172,8 @@ September
 |   debris and sweep from field
 | the tumbling tumult, turned aground
 |   and heaped by waves to wield.
+
+TODO 
 
 October
 #######
