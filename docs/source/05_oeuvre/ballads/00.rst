@@ -128,6 +128,8 @@ July
 August
 ######
 
+.. too many releases
+
 | What bittersweet perfumes release
 |   in looming throes of age,
 | when isle matures through orange cerise, 
@@ -135,7 +137,7 @@ August
 |
 | Of August lines that empire grew,
 |   once cloaked in ermine garbs,
-| unkempt and molting, flaked sinew,
+| unkempt and molting, flake sinew,
 |   their branches wreathed in barbs.
 |
 | Though riches hide in golden limb,
@@ -161,7 +163,7 @@ September
 | 
 | Now Autumn comes with heavy rain 
 |   to test the borders drawn.
-| The water drained from level plain
+| The water drained from level plain;
 |   in flooding rose the dawn.
 |
 | The thunder heralds sundered age 
@@ -177,15 +179,23 @@ September
 October
 #######
 
-| October chopping peak to trough
+| October chopping peak to troughs
 |   through interlocking weeks
-| depletes 
+| depletes reserves that Summer doffs
+|   to balking vassal shrieks. 
+|
+| Retreating columns sally forth
+|   deserting homes and kin, 
+| the fleeing wash through rapids north
+|   in water steeped in sin.
+|
 | So inch by inch the tides reclaim
 |   the island kingdom keep
 | and cast it down without a name
 |   to swirling depths of sleep.
+|
 
-TODO 
+TODO
 
 November
 ########
@@ -205,8 +215,10 @@ November
 | atop the castle walls in swarm,
 |   the borough glade aglow.
 |
-
-TODO 
+| November's embers burn a while
+|   between the exiled graves,
+| remembered nocturnes sung beguile
+|   the damned, forgottten knaves. 
 
 Winter
 ------
@@ -246,7 +258,7 @@ January
 |  
 | The afterlife morassed in cracks
 |   of marrow twisted blue
-| and white imbuses the zodiacs
+| and white imbues the zodiacs
 |   of death with ghastly hue.
 
 TODO
