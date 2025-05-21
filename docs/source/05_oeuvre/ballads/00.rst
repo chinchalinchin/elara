@@ -1,3 +1,9 @@
+.. ?
+.. overarching goal and constraint.
+..       4 sections (seasons), 3 subsections (months) per section = 12 subsections (months)
+..       4 stanzas (weeks) per subsection (months) = 12 stanzas (weeks) per section (season)
+..       28 feet per stanza. 28/7 days per week = 4 feet per week, approximately.
+
 .. _the-ballad-of-the-isle:
 
 -------------------------
@@ -7,15 +13,8 @@ I: The Ballad of the Isle
 Spring
 ------
 
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-03.jpeg
-    :align: center
-    :alt: The Accord
-    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/accord-03.jpeg
-    :width: 70%
-    
-    The Accord
-    
-    :small:`Image by Gemini Flash 2.0`
+March 
+#####
 
 | The island formed where rivers meet,
 |   where silt through vortex fords.
@@ -24,19 +23,50 @@ Spring
 | 
 | Amassed a mount that, breaching air, 
 |   declared to reaching ear
-| of kingdoms come to loyal swear
-|   an oath all must adhere. 
+| of kingdoms: come and loyal swear
+|   the oath all must adhere. 
+|
+| So March the army sorties cease,
+|   embarking east and west 
+| to mark the center arch with peace,
+|   obeisance paid and blessed.
 | 
+| Behold the treaties signed in ink,
+|   the scrolls in future's brine,
+| the sutures binding those in sync
+|   with island's hallow shrine.
+
+April
+#####
+
+| Let Spring not linger such affairs,
+|   for sight betrays its songs. 
+| A web of compromise ensnares
+|   the spidered plotting throngs. 
+|  
+| The April session clauses creep
+|   so wolves with sharpened claws,
+| deceived by strategems of sheep,
+|   retract their motioned laws.  
+|
+| Yet galleries of gulls install
+|   the rabble squalls of wind
+| with wisdom born of current's drawl
+|   so steel resolve will bend. 
+|
 | The Sky, the Sea, the Mountain crags
 |   that vie on fronts opposed,
 | beneath the fountain planted flags 
 |   agreed to plans proposed.
-|
+
+May
+###
+
 | A barren hump, the sodden deal
 |   for flocking birds to plow
 | their gullet seed, to letters leal
 |   the court of wings their vow. 
-| 
+|
 | The shoots are sunk and water sewn
 |   through roots of flooded banks
 | where mudded flanks of fish cyclone
@@ -50,20 +80,13 @@ Spring
 | A birth announced to kneeling crowds
 |   on consecrated Earth,
 | a seal pronounced beneath the clouds
-|   to celebrate with mirth.
+|   with celebrated mirth.
 
 Summer
 ------
 
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-01.jpeg
-    :align: left
-    :alt: The Jubilee
-    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/jubilee-01.jpeg
-    :width: 70%
-
-    The Jubilee
-
-    :small:`Image by Gemini Flash 2.0`
+June
+####
 
 | At last the Summer yields to life
 |   and summons forth its herds
@@ -79,7 +102,12 @@ Summer
 |   their sweetly nectared heat;
 | unladened, drowsy, through the breeze,
 |   the teasing fumes secrete. 
-|
+
+TODO
+
+July
+####
+
 | Along the flowing inlet streams 
 |   the festival begins.
 | Caressing music tinges dreams
@@ -100,20 +128,16 @@ Summer
 | two larks alight in fading bliss
 |   fulfill this final night. 
 
+August
+######
+
 Autumn
 ------
 
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
-    :align: left
-    :alt: Autumnal Flooding
-    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
-    :width: 70%
+September
+#########
 
-    The Flood
-
-    :small:`Image by Gemini Flash 2.0`
-
-| For Autumn comes with heavy rain 
+| Now Autumn comes with august rain 
 |   to test the borders drawn.
 | The water drained from level plain
 |   in flooding rose the dawn.
@@ -127,12 +151,20 @@ Autumn
 |   debris and sweep from field
 | the tumbling tumult, turned aground
 |   and heaped by waves to wield.
-|
+
+October
+#######
+
 | So inch by inch the tides reclaim
 |   the island kingdom keep
 | and cast it down without a name
 |   to swirling depths of sleep.
-| 
+
+TODO 
+
+November
+########
+
 | Yet down below, the stones make schemes
 |   through skipping, streaming chunks
 | inlaid by sunken trees these seams
@@ -147,19 +179,15 @@ Autumn
 |   as shades of algae grow
 | atop the castle walls in swarm,
 |   the borough glade aglow.
+|
+
+TODO 
 
 Winter
 ------
 
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
-    :align: left
-    :alt: Afterlife
-    :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
-    :width: 70%
-
-    The Afterlife
-    
-    :small:`Image by Gemini Flash 2.0`
+December
+########
 
 | A rending gale begins to blow
 |   above where worlds still thrive.
@@ -175,7 +203,12 @@ Winter
 |   the surface wraiths at play. 
 | They turn to gems, encased expand
 |   beyond the skinned decay. 
-|
+
+TODO
+
+January
+#######
+
 | Through sieging vortices of shard
 |    the kingdom yard is cleaved.
 | Bombarding sheets of ice discard
@@ -188,13 +221,17 @@ Winter
 |  
 | The afterlife morassed in cracks
 |   of marrow twisted blue
-| and white imbues the zodiacs
+| and white imbuses the zodiacs
 |   of death with ghastly hue.
-|
+
+TODO
+
+Feburary
+########
+
 | When Spring returns the tides recede,
 |   but hollow urns are filled. 
 | The ashes spurned through snaking weed
 |   take root when fields are tilled. 
 
-- May 2025
-
+TODO

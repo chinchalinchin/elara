@@ -50,7 +50,7 @@ Ancient Hebrew
 
 .. important::
 
-  Transliterations are given in parenthesis for languages that do not use a Latin alphabet.
+  Transliterations are given in parenthesis.
 
 .. list-table:: הָיָה (verb)
   :header-rows: 1
@@ -93,12 +93,11 @@ Ancient Hebrew
 
 .. note::
 
-  Ancient Hebrew does not possess a direct tense modality.
+  Ancient Hebrew does not possess a temporal tense modality.
 
-**Particles**
 
-1. **יֵשׁ (yēš)**: "*there is* ...", "*there are* ..."
-2. **אַיִן (’ayin)**: "*there is not* ...", "*there are not* ..."
+1. *יֵשׁ (yēš)*: The affirmative existential particle, e.g. "*there is* ...", "*there are* ...", etc.
+2. *אַיִן (’ayin)*: The negative existential particle, e.g. "*there is not* ...", "*there are not* ...", etc.
 
 Koine Greek
 -----------
@@ -106,56 +105,56 @@ Koine Greek
 .. list-table:: εἶναι (verb)
   :header-rows: 1
 
-  * - Tense
+  * - Tense, Mood
     - First Person Singular
     - Second Person Singular
     - Third Person Singular
     - First Person Plural
     - Second Person Plural
     - Third Person Plural 
-  * - Present Indicative
+  * - Present, Indicative
     - εἰμί 
     - εἶ
     - ἐστί
     - ἐσμέν 
     - ἐστέ
     - εἰσί
-  * - Imperfect Indicative
+  * - Imperfect, Indicative
     - ἦν
     - ἦσθα
     - ἦν 
     - ἦμεν 
     - ἦτε
     - ἦσαν
-  * - Future Indicative
+  * - Future, Indicative
     - ὦ 
     - ᾖς
     - ᾖ
     - ὦμεν
     - ἦτε
     - ὦσι
-  * - Present Subjunctive
+  * - Present, Subjunctive
     - ὦ
     - ᾖς
     - ᾖ
     - ὦμεν
     - ἦτε
     - ὦσι
-  * - Present Optative
+  * - Present, Optative
     - εἴην
     - εἴης
     - εἴη
     - εἶμεν
     - εἶτε
     - εἶεν
-  * - Future Optative
+  * - Future, Optative
     - ἐσοίμην
     - ἔσοιο
     - ἔσοιτο
     - ἐσοίμεθα 
     - ἔσοισθε
     - ἔσοιντο
-  * - Present Imperative
+  * - Present, Imperative
     - ---
     - ἴσθι
     - ἔστω
@@ -163,7 +162,7 @@ Koine Greek
     - ἔστε
     - ἔστων
   
-.. list-table:: εἶναι (participle), Koine Greek
+.. list-table:: εἶναι (participle)
   :header-rows: 1
 
   * - Aspect, Gender
@@ -191,13 +190,97 @@ Koine Greek
     - ὄν/ὄντα
     - ὄν/ὄντα
 
-1. τὸ ὄν: Neuter singluar present participle. The *what-is*, the *that-which-is*, the *being*, etc.
+1. *τὸ ὄν*: Neuter singluar present participle. The *what-is*, the *that-which-is*, the *being*, etc.
 
-2. τὰ ὄντα: Neuter plural present participle. The *things-that-are*, the *being-things*, etc.
+2. *τὰ ὄντα*: Neuter plural present participle. The *things-that-are*, the *being-things*, etc.
 
-3. ἡ οὐσία: Feminine present participle. The *being-nature*, the *being-essence*, the *being-substance*.
+3. *ἡ οὐσία*: Feminine present participle. The *being-nature*, the *being-essence*, the *being-substance*.
 
-.. list-table:: sein (verb), Modern German
+Old English
+-----------
+
+
+.. list-table:: eom (verb)
+  :header-rows: 1
+
+  * - Tense, Mood
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural 
+  * - Present Indicative
+    - eom
+    - eart
+    - is
+    - sind / sindon / sint
+    - sind / sindon / sint
+    - sind / sindon / sint
+  * - Present, Subjunctive
+    - sīe
+    - sīe
+    - sīe
+    - sīen
+    - sīen
+    - sīen
+
+.. list-table:: bēon (verb)
+  :header-rows: 1
+
+  * - Tense, Mood
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural 
+  * - Present, Indicative
+    - bēo
+    - bist
+    - biþ
+    - bēoþ
+    - bēoþ
+    - bēoþ
+  * - Present, Subjunctive
+    - bēo
+    - bēo
+    - bēo
+    - bēon
+    - bēon
+    - bēon
+    
+.. list-table:: wesan (verb)
+  :header-rows: 1
+
+  * - Tense, Mood
+    - First Person Singular
+    - Second Person Singular
+    - Third Person Singular
+    - First Person Plural
+    - Second Person Plural
+    - Third Person Plural 
+  * - Past, Indicative
+    - wæs
+    - wǣre
+    - wæs
+    - wǣron
+    - wǣron
+    - wǣron
+  * - Past, Subjunctive
+    - wǣre
+    - wǣre
+    - wǣre
+    - wǣron
+    - wǣron
+    - wǣron
+
+1. *wesende*: "being"
+
+Modern German
+-------------
+
+.. list-table:: sein (verb)
   :header-rows: 1
 
   * - Tense 
@@ -236,7 +319,7 @@ Koine Greek
     - wäret
     - wären
 
-.. list-table:: sein (participle), Modern German
+.. list-table:: sein (participle)
   :header-rows: 1
 
   * - Aspect
@@ -249,15 +332,15 @@ Koine Greek
     - gewesen
     - gewesenen
 
-1. Sein: Infintive. The *is*, the *being*.
+1. *Sein*: Infintive. The *is*, the *being*.
 
-2. das Seiende: Singular neuter present participle. The *thing-that-is*, the *being-thing*, etc.
+2. *das Seiende*: Singular neuter present participle. The *thing-that-is*, the *being-thing*, etc.
 
-3. die Seienden: Plural neuter present participle. The *things-which-are*, the *being-things*.
+3. *die Seienden*: Plural neuter present participle. The *things-which-are*, the *being-things*.
 
-4. Wesen: The *essence*, the *nature*, the *whatness*.
+4. *Wesen*: The *essence*, the *nature*, the *whatness*.
  
-5. Dasein: The *being-there*, the *being-in-the-world*.
+5. *Dasein*: The *being-there*, the *being-in-the-world*.
 
 .. _bedeutung:
 
