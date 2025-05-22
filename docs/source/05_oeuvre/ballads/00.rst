@@ -113,7 +113,7 @@ July
 | The gondolas of lillies' bud
 |   that carry courting toads
 | through swampy bogs to ports of mud
-|   release their tadpole loads.
+|   relieve their tadpole loads.
 |
 | Oh! Jubilee, this boon, July
 |   through fallow leas by moon,
@@ -127,8 +127,6 @@ July
 
 August
 ######
-
-.. too many releases
 
 | What bittersweet perfumes release
 |   in looming throes of age,
@@ -163,7 +161,7 @@ September
 | 
 | Now Autumn comes with heavy rain 
 |   to test the borders drawn.
-| The water drained from level plain;
+| The water drained from level plain
 |   in flooding rose the dawn.
 |
 | The thunder heralds sundered age 
@@ -194,8 +192,10 @@ October
 | and cast it down without a name
 |   to swirling depths of sleep.
 |
-
-TODO
+| The atlas page is ripped anew,
+|   schematic contour holes
+| where once there rose a sprout to blue
+|   now rising streams of souls. 
 
 November
 ########
@@ -240,8 +240,11 @@ December
 |   the surface wraiths at play. 
 | They turn to gems, encased expand
 |   beyond the skinned decay. 
-
-TODO
+|
+| Absolved December center breaks, 
+|   dismembered lattice links,
+| upending states, revolving wakes,
+|   the idle spirit shrinks. 
 
 January
 #######
@@ -261,7 +264,10 @@ January
 | and white imbues the zodiacs
 |   of death with ghastly hue.
 
-TODO
+| So seconds pass eternally,
+|   this January clock.
+| The island keep returned to sea
+|   through grains of sand to chalk.
 
 Feburary
 ########
