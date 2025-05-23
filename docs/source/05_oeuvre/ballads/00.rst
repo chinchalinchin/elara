@@ -6,6 +6,13 @@
 I: The Ballad of the Isle
 -------------------------
 
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/the-ballad-of-the-isle.jpg
+    :align: center
+    :alt: The Ballad of the Isle
+    :width: 75%
+    
+    Image by Gemini 2.5 Pro
+
 Spring
 ------
 

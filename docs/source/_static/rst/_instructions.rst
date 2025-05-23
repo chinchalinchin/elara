@@ -38,6 +38,15 @@ Context
 
 5. **Visualizations** If a prompt contains ``graph(x)``, where ``x`` is a description, this prompt is asking for a ``matplotlib`` script to generate a plot of the concept ``x``.
 
+.. _notation:
+
+Notation
+========
+
+1. **Character Indexing** For a string ``x``, ``x[i]`` refers to the character at the i:sup:`th` index, where the first character in a string is indexed at 0, e.g ``'hello'[2] = 'L'``.
+
+2. **Word Indexing** For a sentence ``s``, ``s{i}`` refers to the word at the i:sup:`th` index, where the first word in a sentence is indexed at 0, e.g. ``'hello gemini how are you'[2] = 'gemini'``.
+
 .. _procedures:
 
 Procedures
@@ -65,6 +74,36 @@ Procedures
 
 4. **Shell Output Procedure** If a prompt contains shell output (as indicated by the login profile; see :ref:`operating system <context>`), formatted in either RST or MD, the prompt is asking for assistance in determining the root cause of the error and fixing the problem.
 
+.. _operations:
+
+Operations
+==========
+
+1. **String Length** The number of characters in a string ``x`` is denoted ``l(x)``.
+
+2. **Word Length** The number of *non-overlapping* words in a string ``x`` is denoted ``w(x)``.
+
+3. **String Inversion** A string inversion, ``inv(x)``, is an operation that reverses the order of characters in a string, e.g. ``inv(hello) = olleh``. 
+
+4. **String Reduction** A string reduction, ``ς(x)``, is an operation that removes all delimiters from a string, but preserves the relative order of characters, e.g. ``ς(hello gemini how are you) = hellogeminihowareyou``.
+
+.. _sets:
+
+Sets
+====
+
+1. **Language** The symbol L refers to the set of all words in a language. If a language other than English is intended, it will be included in a subscript, e.g. L:sub:`spanish`.
+
+2. **Corpus** The symbol C:sub:`L` refers to the set of all sentences in a language L. 
+
+3. **Metric Words** The symbol M:sub:`PATTERN`, where ``PATTERN`` is a concatenated sequence of syllabic stresses such that ``+`` means stressed and ``-`` means unstressed, refers to the set of all words that satisfy the syllabic pattern ``PATTERN``. For example, M:sub:`-+` refers to the set of all iambic words.
+
+4. **Reflective Words** The symbol R refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if ``x[i]`` stands for the i:sup:`th` character in word ``x``, then a reflective word is defined as the words which satisfy the relation ``x[i] = x[l(x)-i+1]``. For example, ``nun`` is a reflective word.
+
+5. **Invertible Words** The symbol I refers to the set of invertible words. Mathematically, I is the set of word ``x`` that satisfy the definition, ``x ∈ I ↔  inv(x) \in L``. For example, ``time`` is invertible word because ``inv(time) = emit`` and ``emit ∈ L``.
+
+6. **Palindromes** The symbol P refers to the set of palindromes. Mathematically, a string ``x`` is palindromic if it satisfies the definition ``x ∈ P ↔ (ς(x) = inv(ς(x)))``. For example, ``borrow or rob`` is a palindrome because ``ς(borrow or rob) = inv(ς(borrow or rob)) borroworrob``.
+
 .. _functions:
 
 Functions
@@ -75,15 +114,15 @@ Functions
 Object Level Functions
 ----------------------
 
-These functions should return a word or list of words. Note in the following definition ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" and ``∥ (U+2225)`` is used to mean "*rhymes with*".
+These functions should return a word or list of words. Note in the following definitions ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" and ``∥ (U+2225)`` is used to mean "*rhymes with*".
 
-1. **Metriculate**  If a prompt contains ``iamb(x)`` or ``im(x)``, the prompt is asking for iambic words that connote the concept ``x``, e.g. ``deduce`` is a valid response to ``iamb(a scientific word)``. Similarly, the prompt ``anapest(x)``/ ``an(x)``, ``dactyl(x)``/ ``da(x)``, ``trochee(x)``/ ``tr(x)``, ``spondaic(x)``/ ``sp(x)`` and ``pyrrhic(x)``/ ``py(x)`` are asking for words that fit the respective metric form (anapestic, dactylic, trochaic, spondaic, pyrrhic) *and* connote the concept ``x``.
+1. **Metriculate**  If a prompt contains ``iamb(x)`` or ``im(x)``, the prompt is asking for the set of iambic words, possibly empty, that connote the concept ``x``, e.g. ``deduce`` is a valid response to ``iamb(a scientific word)``. Similarly, the prompt ``anapest(x)``/ ``an(x)``, ``dactyl(x)``/ ``da(x)``, ``trochee(x)``/ ``tr(x)``, ``spondee(x)``/ ``sp(x)`` and ``pyrrhic(x)``/ ``py(x)`` are asking for words that fit the respective metric form (anapestic, dactylic, trochaic, spondaic, pyrrhic) *and* connote the concept ``x``.
 
-2. **Containment** If a prompt contains ``contains(x, y, z, ...)`` or ``cont(x, y, z, ...)``, then the prompt is asking for words that contain the syllables ``x``, ``y``, ``z``, etc., in any order.
+2. **Contain** If a prompt contains ``contains(x, y, z, ...)`` or ``cont(x, y, z, ...)``, then the prompt is asking for the set of words, possibly empty, that contain the syllables ``x``, ``y``, ``z``, etc., in any order.
 
-3. **Connotate** If a prompt contains ``connote(x)`` or ``conn(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy :math:`\{ y \mid x \equiv y \}`, i.e. all words that have the same connotation as ``y``. In other words, this function with one argument is essentially a thesaurus. However, this function can also be overloaded with a second argument, ``conn(x, y)``. This translates into :math:`\{ z \mid z = \text{contains}(y) \land z \equiv x \}`, i.e. the words that contains ``y`` and have an equivalent meaning as the word or phrase ``x``.
+3. **Connotate** If a prompt contains ``connote(x)`` or ``conn(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy :math:`\{ y \mid x \equiv y \}`, i.e. all words that have the same connotation as ``y``. In other words, this function with one argument is essentially a thesaurus. However, this function can also be overloaded with a second argument, ``conn(x, y)``. This translates into :math:`\{ z \mid z \in \text{contains}(y) \land z \equiv x \}`, i.e. the words that contains ``y`` and have an equivalent meaning as the word or phrase ``x``.
 
-4. **Rhyme** If a prompt contains ``rhyme(x)`` or ``rh(x)``, where ``x`` is a word or phrase, then the prompt is asking for the words or phrases that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. This function can be overloaded, ``rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ x ∈ rh(x, green): x ∈ cont(me)`` is asking for words ``x`` such that ``x`` rhymes with ``green`` (i.e., ``x ∈ { w | w ∥ green }``) **and** ``x`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | (w ∥ green) ∧ (w ∈ cont(me)) }``. A valid solution (an element of this solution set) would be ``mean``.When both arguments are fixed, as in ``rhyme(X,Y)``, the prompt is asking for a detailed syllabic analysis of the rhyme between ``X`` and ``Y``.
+4. **Rhyme** If a prompt contains ``rhyme(x)`` or ``rh(x)``, where ``x`` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. This function can be overloaded, ``rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ x ∈ rh(x, green): x ∈ cont(me)`` is asking for words ``x`` such that ``x`` rhymes with ``green`` (i.e., ``x ∈ { w | w ∥ green }``) **and** ``x`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | (w ∥ green) ∧ (w ∈ cont(me)) }``. A valid solution (an element of this solution set) would be ``mean``.When both arguments are fixed, as in ``rhyme(X,Y)``, the prompt is asking for a detailed syllabic analysis of the rhyme between ``X`` and ``Y``.
 
 5. **Resonate** If a prompt contains ``resonate(x)`` or ``res(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
@@ -98,6 +137,12 @@ These functions should return a word or list of words. Note in the following def
     - ``rhyme=x`` or ``r=x``: This constrains the output to rhyme with ``x``, e.g. ``decline`` is a valid response to ``iamb(lessening, rhyme=incline)``.
     - ``syllables=N`` or ``s=N``: This constrains the output to have ``N`` syllables, e.g. ``incandescent`` is a valid response to ``resonate(can, syllables=4)``
     - ``meter=PATTERN`` or ``m=PATTERN``: This constrains the output have a specific syllabic meter ``s``, denoted through concatenated sequences of ``+`` and ``-``. For example, ``interlocking`` is a valid response to ``resonate(rock, meter=+-+-)`` and ``alternating`` is a valid response to ``resonate(salt, meter=+-+-)``.
+
+    These arguments may be passed into compound expressions as in the following,
+
+    (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
+
+    This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
 
 .. _meta-level:
 
