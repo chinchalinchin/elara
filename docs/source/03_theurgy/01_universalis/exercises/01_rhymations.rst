@@ -15,3 +15,5 @@ These are problems for LLMs to solve that use the functions defined in :ref:`lin
 3. trochee((connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone)))
 
 4. x ∈ (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone)) ∧ stress(x) = +
+
+5. trochee(connote(birds) ∩ connote(toiling in a field))
