@@ -1,17 +1,13 @@
 .. _games:
 
-Games: Exercises
-================
+Mini Games
+==========
 
 Free Association
 ----------------
 
 The prompter will supply the game token "(Start)" and a string, e.g. "(Start) Fire". The LLM must say the first concept the take comes to mind when they process the string, e.g. "Warmth". The prompter in turn must say the first concept that comes to their mind upon reading the LLM response, e.g. "Blanket". The game continues until one of the participants says "(Stop)". If the LLM does not respond with "(Stop)" after several rounds, it is best for the prompter to stop the game.
 
-Tokenization
-------------
-
-TODO
 
 Permutations 
 ------------

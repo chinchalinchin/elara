@@ -4,19 +4,21 @@
 Universalis
 ===========
 
-.. _language-game:
-
-The Language Game is a game played with Large Language Models to test the limits of their expressive power. The Language Game is designed to determine to what extent an LLM is dependent on canned responses for its generations, and to what extent its responses are indicative of actual creative synthesis.
-
-The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes and construct sentences with its novel grammatical forms. Each module requires a degree of abstract thought and highlights different areas of an LLM's analytical and synthetical capabilities.
-
 .. toctree::
   :maxdepth: 2
   :caption: Language Game
   
   modules/index
-  plugins/index
-  games/index
+  exercises/index
+
+.. _language-game:
+
+Language Game 
+=============
+
+The Language Game is a game played with Large Language Models to test the limits of their expressive power. The Language Game is designed to determine to what extent an LLM is dependent on canned responses for its generations, and to what extent its responses are indicative of actual creative synthesis.
+
+The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes and construct sentences with its novel grammatical forms. Each module requires a degree of abstract thought and highlights different areas of an LLM's analytical and synthetical capabilities.
 
 .. _language-game-supplements:
 
@@ -38,7 +40,7 @@ The following image contains a visual representation of the Language Game.
 Relational
 ----------
 
-The following XML document uses a loose implementation of a `OWL 2 <https://www.w3.org/TR/owl2-overview/>`_ ontologyto schematize the Language Game.
+The following XML document uses a loose implementation of a `OWL 2 <https://www.w3.org/TR/owl2-overview/>`_ ontology to schematize the Language Game.
 
 .. literalinclude:: ../../_static/xml/etc/language_game.xml
   :language: xml

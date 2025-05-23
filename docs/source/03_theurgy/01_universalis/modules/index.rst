@@ -9,9 +9,10 @@ The Modules can be combined to generate different Language Game implementations.
     :maxdepth: 1
     :caption: Language Game Modules
 
-    M01_meta
-    M02_object
-    M03_voice
-    M04_inflection
-    M05_words
-    M06_rhythm
+    01_meta
+    02_object
+    03_voice
+    04_inflection
+    05_words
+    06_rhythm
+    07_functions

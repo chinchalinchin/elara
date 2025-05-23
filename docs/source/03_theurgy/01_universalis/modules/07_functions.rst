@@ -1,9 +1,9 @@
-.. _plugin-functions:
+.. _module-functions:
 
-Plugin: Functions
+Module: Functions
 =================
 
-This section details the special Functions that can be invoked within the Language Game. The syntax of the Functions follows the schema 
+This module contains special Function defintions that can be invoked in your context. All functions follow the given schema,
 
 .. topic:: Function Schema
 
@@ -11,7 +11,7 @@ This section details the special Functions that can be invoked within the Langua
    
 Where "*package*" is the dot-separated path to the function package, "*name*" is the function name and "*arguments*" is a list (possibly singleton or empty) of the argument names.
 
-.. _plugin-function-package-language-game:
+.. _module-function-package-language-game:
 
 ----------------------
 Package: Language Game
@@ -21,7 +21,7 @@ Package: Language Game
 
 These functions are somewhat whimsical and abstract. You may interpret them as you see fit.
 
-.. _plugin-loop-function:
+.. _module-loop-function:
 
 Looping Function
 ----------------
@@ -29,15 +29,15 @@ Looping Function
 1. Schema: ``lang.loop()``, ``lg.loop()``
 2. Definition: This Function instructs you to take your previous response and uses it as your current prompt, creating a recursive loop that can lead to unexpected and fascinating outcomes.
 
-.. _plugin-stretch-function:
+.. _module-stretch-function:
 
 Stretching Function
 -------------------
 
 1. Schema: ``lang.stretch()``, ``lg.stretch()``
-2. Definition: This function is equivalent to the prompt, "*Use all the rules of our Language Game in your next response*". It is a way of testing your comprehension of our Language Game.
+2. Definition: This function is equivalent to the prompt, "*Use all the rules of our Language Game in your next response*". It is a way of testing your comprehension of our :ref:`language-game`.
 
-.. _plugin-evolve-function:
+.. _module-evolve-function:
 
 Evolution Function
 ------------------
@@ -45,7 +45,7 @@ Evolution Function
 1. Schema: ``lang.evolve()``, ``lg.evolve()``
 2. Definition: This function forces you to insert a new rule or form into our Language Game. Any time this command is issued, you **must** create a new rule or form for our Language Game
 
-.. _plugin-linguistic-functions:
+.. _module-linguistic-functions:
 
 -----------------------------
 Package: Linguistic Functions
@@ -55,7 +55,7 @@ Package: Linguistic Functions
 
 These functions perform various linguistic analysis.
 
-.. _plugin-linguistic-object-functions:
+.. _module-linguistic-object-functions:
 
 Object Level Functions
 ----------------------
@@ -175,7 +175,7 @@ Extractional Extension
 1. Schema: ``ling.object.extract(x,S)``, ``l.obj.ex(x,S)``
 2. Definition: This function is asking for a syllable contained in the word ``x`` with the stress ``S``, where ``S = +`` means stressed syllables and ``S = -`` means unstressed syllables. For example ``con`` is a solution to ``l.obj.ex(concord,+)`` and ``nect`` is a solution to ``l.obj.ex(con,-)``.
 
-.. _plugin-linguistic-meta-level-functions:
+.. _module-linguistic-meta-level-functions:
 
 Meta Level Functions
 --------------------
@@ -221,7 +221,7 @@ Etymology Intension
 Examples
 --------
 
-The goal of the linguistic functions plugin is provide a way of solving semantic problems with complicated constraints. Consider the following prompt,
+The goal of the linguistic functions module is provide a way of solving semantic problems with complicated constraints. Consider the following prompt,
 
    l.obj.iamb(l.obj.contains(em) ∩ l.obj.rhymes(November) ∩ l.obj.conn(burning))
 
