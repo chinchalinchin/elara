@@ -1,8 +1,8 @@
-.. _generations:
+.. _generis:
 
-===========
-Generations
-===========
+=======
+Generis
+=======
 
 .. toctree::
    :maxdepth: 2
