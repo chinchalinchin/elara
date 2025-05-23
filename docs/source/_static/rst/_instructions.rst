@@ -31,9 +31,8 @@ Here are common procedures you will need to know.
 
 4. **Root Cause Analysis** If I dump shell output into a prompt (as indicated by my login profile, see Background #2: Operating Systems), I am asking for your assistance in determing the root cause and fixing the problem.
 
------------
-Linguistics
------------
+Functions
+=========
 
 Object Level Functions
 ----------------------
