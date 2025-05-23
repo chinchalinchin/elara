@@ -164,86 +164,130 @@ Flood
 ^^^^^
 
 .. carousel::
-  :show_controls:
-  :show_indicators:
-  :show_fade:
+    :show_controls:
+    :show_indicators:
+    :show_fade:
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Autumnal Flooding I
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Autumnal Flooding I
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-01.jpeg
 
-      I 
-      
-      Image by Gemini Flash 2.0
+        I 
+        
+        Image by Gemini Flash 2.0
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-02.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Autumnal Flooding II
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-02.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-02.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Autumnal Flooding II
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-02.jpeg
 
-      II 
+        II 
 
-      Image by Gemini Flash 2.0
+        Image by Gemini Flash 2.0
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-03.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Autumnal Flooding III
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-03.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-03.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Autumnal Flooding III
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-03.jpeg
 
-      III
+        III
 
-      Image by Gemini Flash 2.0
+        Image by Gemini Flash 2.0
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-04.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Autumnal Flooding IV
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-04.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-04.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Autumnal Flooding IV
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/flood-04.jpeg
 
-      IV
+        IV
 
-      Image by Gemini Flash 2.0
+        Image by Gemini Flash 2.0
 
 Afterlife
 ^^^^^^^^^
 
 .. carousel::
-  :show_controls:
-  :show_indicators:
-  :show_fade:
+    :show_controls:
+    :show_indicators:
+    :show_fade:
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-01.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Afterlife I
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-01.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-01.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Afterlife I
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-01.jpeg
 
-      I 
-      
-      Image by Gemini Flash 2.0
+        I 
+        
+        Image by Gemini Flash 2.0
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-02.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Afterlife II
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-02.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-02.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Afterlife II
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-02.jpeg
 
-      II 
+        II 
 
-      Image by Gemini Flash 2.0
+        Image by Gemini Flash 2.0
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Afterlife III
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Afterlife III
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
 
-      III
+        III
 
-      Image by Gemini Flash 2.0
+        Image by Gemini Flash 2.0
 
-  .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-04.jpeg
-      :align: left
-      :alt: The Ballad of the Isle, Afterlife IV
-      :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-04.jpeg
-      
-      IV
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-04.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Afterlife IV
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-04.jpeg
+        
+        IV
 
-      Image by Gemini Flash 2.0
+        Image by Gemini Flash 2.0
+
+Winter
+^^^^^^
+
+.. carousel::
+    :show_controls:
+    :show_indicators:
+    :show_fade:
+
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-01.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Winter I
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-01.jpeg
+
+        I 
+        
+        Image by Gemini Flash 2.0
+
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-02.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Winter II
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-02.jpeg
+
+        II 
+
+        Image by Gemini Flash 2.0
+
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/afterlife-03.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Winter III
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-03.jpeg
+
+        III
+
+        Image by Gemini Flash 2.0
+
+    .. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-04.jpeg
+        :align: left
+        :alt: The Ballad of the Isle, Winter IV
+        :target: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/winter-04.jpeg
+        
+        IV
+
+        Image by Gemini Flash 2.0
