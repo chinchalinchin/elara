@@ -293,3 +293,16 @@ February
 |   the dirt in streaking aisle.
 | The cycle arcs in sharp reprise:
 |   the ballad of the isle.
+
+- May 2025
+
+.. list-table:: Submission History
+    :widths: 15 15 15
+    :header-rows: 1
+
+    * - Date
+      - Publication
+      - Status
+    * - May 23, 2025
+      - THINK Journal
+      - Pending
