@@ -3,29 +3,47 @@ Rhymations
 
 These are problems for LLMs to solve that use the functions defined in :ref:`linguistic functions submodule of the Functions module <module-linguistic-functions>` of the :ref:`language-game`.
 
-.. topic:: Character Palette 
+.. topic:: Palette 
 
-    **Constants** 
-    - σ
+    **Constants**
+
+    - Characters: σ
+    - Sets: L, C, I, R, M:sub:`S`, P
+
     **Variables**
-    - π: syllable, ι: character, α: word, ζ: sentence
+
+    - x: general
+    - π: syllable
+    - ι: character
+    - α: word
+    - ζ: sentence
+
     **Relations**
+    
     - Linguistic: ∥ 
-    - Sets: ∈ ∉ ∪ ∩ ⊂
+    - Set: ∈ ∉ ∪ ∩ ⊂
     - Logic: ∧ ∨ ∀ ∃ ≡
+    
     **Operators**
-    - [λx: f(x)], ς(x), inv(x), l(x), w(x)
+    
+    - [λx: f(x)]: string
+    - ς(x: string): string, inv(x: string): string
+    - l(x: string): number, w(x: string): number
 
-.. topic:: Function Palette
+    **Functions: Extensional**
 
-    - accent(x: word, s: stress): word
-    - anapest(x: concept): set(word)
+    - accent(x: syllable, s: stress): set(word)
     - connote(x: concept, y: syllable): set(word)
     - contains(x: syllable, y: syllable, z: syllable): set(word)
     - extract(x: word, s: stress): syllable
+    - line(x: concept): sentence
+    - resonate(x: word): set(word)
+
+    **Functions: Metric** 
+
+    - anapest(x: concept): set(word)
     - dactyl(x: concept): set(word)
     - iamb(x: concept): set(word)
-    - resonate(x: word): set(word)
     - rhyme(x: word, y: word): set(word)
     - spondee(x: concept): set(word)
     - trocheee(x : concept): set(word)
@@ -35,6 +53,9 @@ These are problems for LLMs to solve that use the functions defined in :ref:`lin
     - (syllables = N: number)
     - (meter = S: string)
     - (rhyme = x: string)
+
+Expressions
+-----------
 
 1. iamb(resonate(peak) ∩ connote(reserves ∨ harvest stores))
 

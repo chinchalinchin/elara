@@ -5,17 +5,28 @@ Verborum
 
 .. _devices:
 
-**Syntactical Devices**
+**Semantic Devices**
 
+- :ref:`hysteron-proteron`: An expression in which what should come last is put first.
+- :ref:`metonymy`: A name that is derived from the attribute of the thing named.
+- :ref:`paronomasia`: A play on words.
+- :ref:`polyptoton`: The use of words that phonetically related but semantically distinct.
+- :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object.
+
+**Sonic Devices**
+
+- :ref:`alliteration`: TODO
+- :ref:`assonance`: TODO
+- :ref:`consonance`: TODO
+
+**Syntactic Devices**
 
 - :ref:`anacoluthon`: A discontinuity of expression within a sentence, a form in which there is logical or grammatical incoherence.
 - :ref:`anadiplosis`: When words at the end of one clause are repeated near the beginning of the following clause.
 - :ref:`anaphora`: The repetition of words at the beginning of successive clauses.
 - :ref:`anastrophe`: An inversion of the grammatical order of words or clauses.
-- :ref:`alliteration`: TODO
 - :ref:`aposiopesis`: An expression left unsatisfied or incomplete.
 - :ref:`apostrophe`: An address to person or thing that is not present.
-- :ref:`assonance`: TODO
 - :ref:`asyndeton`: The deliberate omission of conjunctions.
 - :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
 - :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause.
@@ -25,25 +36,107 @@ Verborum
 - :ref:`parataxis`: TODO
 - :ref:`symploce`: The repetition of both the words at the beginning and end of successive clauses.
 
-**Semantical Devices**
+.. _semantic_devices:
 
-- :ref:`hysteron-proteron`: An expression in which what should come last is put first.
-- :ref:`metonymy`: A name that is derived from the attribute of the thing named.
-- :ref:`paronomasia`: A play on words.
-- :ref:`polyptoton`: The use of words that phonetically related but semantically distinct.
-- :ref:`synecdoche`: An expression where a part of an object is used to represent the whole of the object.
+----------------
+Semantic Devices
+----------------
+
+.. _hysteron-proteron:
+
+Hysteron Proteron
+-----------------
+
+    *Moriamur, et in media arma ruamus* 
+
+    Let us die, and rush into the midst of the fight.
+
+    -- `Aeneid`_, Virgil, 19 BCE
+
+    I will kill thee, and love thee after.
+
+    -- `Othello`_, William Shakespeare
+
+.. _metonymy:
+
+Metonymy
+--------
+
+None yet found.
+
+.. _parataxis:
+
+Parataxis
+---------
+
+From the Greek: *παράταξις* (*παρά-ταξις*, "beside-arrangement") 
+
+None yet found.
+
+.. _paronomasia:
+
+Paronomasia
+-----------
+
+    Of whom each strives, nor knows for what he strives,
+
+    And each half lives a hundred different lives;
+
+    -- `Scholar Gipsy`_, Matthew Arnold
+
+.. _polyptoton:
+
+Polyptoton
+----------
+
+    πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται
+
+    (The winged is winged by the wing)
+
+    -- `Categories`_, 7.15, Aristotle
+
+.. _synecdoche:
+
+Synecdoche
+----------
+
+None yet found.
+
+.. _sonic-devices:
+
+-------------
+Sonic Devices
+-------------
 
 .. _alliteration:
 
-------------
 Alliteration
 ------------
 
-TODO
+None yet found.
+
+.. _assonance:
+
+Assonance
+---------
+
+None yet found.
+
+.. _consonance:
+
+Consonance
+----------
+
+None yet found.
+
+.. _syntactic-devices:
+
+-----------------
+Syntactic Devices
+-----------------
 
 .. _anacoluthon:
 
------------
 Anacoluthon
 -----------
 
@@ -67,7 +160,6 @@ Anacoluthon
 
 .. _anadiplosis:
 
------------
 Anadiplosis
 -----------
 
@@ -93,7 +185,6 @@ Anadiplosis
 
 .. _anaphora:
 
---------
 Anaphora
 --------
 
@@ -166,7 +257,6 @@ Anaphora
 
 .. _anastrophe:
 
-----------
 Anastrophe
 ----------
 
@@ -192,7 +282,6 @@ Anastrophe
 
 .. _antimetabole:
 
-------------
 Antimetabole
 ------------
 
@@ -210,7 +299,6 @@ Antimetabole is included in the category :ref:`chiasmus`.
 
 .. _aposiopesis:
 
------------
 Aposiopesis
 -----------
 
@@ -224,7 +312,6 @@ Aposiopesis
 
 .. _apostrophe:
 
-----------
 Apostrophe
 ----------
 
@@ -240,7 +327,6 @@ Apostrophe
 
 .. _asyndeton:
 
----------
 Asyndeton
 ---------
 
@@ -252,18 +338,9 @@ Asyndeton includes the categories :ref:`hypozeuxis`.
 
 None yet found. 
 
-.. _assonance:
-
----------
-Assonance
----------
-
-TODO 
-
 
 .. _chiasmus:
 
---------
 Chiasmus
 --------
 
@@ -287,7 +364,6 @@ Chiasmus includes the category of :ref:`antimetabole`.
 
 .. _epanalepsis:
 
------------
 Epanalepsis
 -----------
 
@@ -307,7 +383,6 @@ Epanalepsis
 
 .. _epistrophe: 
 
-----------
 Epistrophe
 ----------
 
@@ -319,15 +394,13 @@ Epistrophe
 
 .. _epizeuxis:
 
----------
 Epizeuxis
 ---------
 
-TODO 
+None yet found.
 
 .. _hypozeuxis:
 
-----------
 Hypozeuxis
 ----------
 
@@ -339,63 +412,8 @@ Asyndeton is included in the category of :ref:`hypozeuxis`.
 
 None yet found.
 
-.. _hysteron-proteron:
-
------------------
-Hysteron Proteron
------------------
-
-    *Moriamur, et in media arma ruamus* 
-
-    Let us die, and rush into the midst of the fight.
-
-    -- `Aeneid`_, Virgil, 19 BCE
-
-    I will kill thee, and love thee after.
-
-    -- `Othello`_, William Shakespeare
-
-.. _metonymy:
-
---------
-Metonymy
---------
-
-None yet found.
-
-.. _parataxis:
-
----------
-Parataxis
----------
-
-From the Greek: *παράταξις* (*παρά-ταξις*, "beside-arrangement") 
-
-None yet found.
-
-.. _paronomasia:
-
------------
-Paronomasia
------------
-
-    Of whom each strives, nor knows for what he strives,
-
-    And each half lives a hundred different lives;
-
-    -- `Scholar Gipsy`_, Matthew Arnold
-
-.. _polyptoton:
-
-----------
-Polyptoton
-----------
-
-None yet found.
-
 .. _symploce:
 
---------
 Symploce
 --------
 
@@ -410,11 +428,3 @@ Symploce
     Let us bathe in this crystalline light!
 
     -- `To Ulalume`_, Edgar Allen Poe
-
-.. _synecdoche:
-
-----------
-Synecdoche
-----------
-
-None yet found.
