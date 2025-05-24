@@ -8,6 +8,5 @@ Exercises
     :caption: Language Exercises
     
     01_rhymations
-    02_minigames
-    03_garden
-    
+    02_garden
+    03_minigames    

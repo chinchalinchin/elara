@@ -6,7 +6,7 @@
 I: The Ballad of the Isle
 -------------------------
 
-.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/the-ballad-of-the-isle.jpg
+.. figure:: ../../_static/img/context/poetical/companions/the-ballad-of-the-isle/the-ballad-of-the-isle-01.jpg
     :align: center
     :alt: The Ballad of the Isle
     :width: 75%
@@ -23,7 +23,7 @@ March
 |   where silt through vortex fords.
 | The place emerged, the brokered seat, 
 |   a land of met accords.
-| 
+|
 | Amassed a mount that, breaching air, 
 |   declared to reaching ear
 | of kingdoms: come and loyal swear
@@ -31,9 +31,14 @@ March
 |
 | So March the army sorties cease,
 |   embarking east and west 
-| to mark the center arch with peace,
+| to mark the chartered pact with peace,
 |   obeisance paid and blessed.
 | 
+| Here troops of fish in lunar quests
+|   compare to mirrored twins
+| above the starry minnowed crests
+|   where haloes map to fins.
+|
 | Behold the treaties signed in ink,
 |   the scrolls in future's brine,
 | the sutures binding swords in sync
@@ -48,11 +53,16 @@ April
 |   the spidered plotting throngs. 
 |  
 | The April session clauses creep
-|   so wolves with sharpened claws,
+|   and wolves with sharpened claws,
 | deceived by strategems of sheep,
 |   retract their motioned laws.  
 |
-| Yet galleries of gulls install
+| But blurting rams befoul the ploy,
+|   with filibuster bleets
+| that break the still the ewes enjoy;
+|   the argument repeats.
+|
+| So galleries of gulls forestall
 |   the rabble squalls of wind
 | with wisdom born of current's drawl
 |   so steel resolve will bend. 
@@ -75,6 +85,11 @@ May
 | where mudded flanks of fish cyclone
 |   around the studded banks. 
 | 
+| A retinue arrives from sea
+|   atop a snow-white bull.
+| Its royalty with one decree
+|   begins the reign in full.
+|
 | The trees then stake foundations firm,
 |   cement what's broken free, 
 | confirm the seed to bring to term
@@ -91,12 +106,17 @@ Summer
 June
 ####
 
+| The stellar swans of Summer dawn
+|   survey the dwelling streets,
+| in flight adorning downward drawn,
+|   the morning island greets.
+| 
 | Dispersing plumes of pheromone
 |   converge at silent points.
 | Diverging tracts from season grown 
 |   lead back where June annoints.
 |
-| At last the Summer yields to life
+| At last the season bursts with life
 |   and summons forth its herds
 | to open market pastures rife
 |   with bounty born by birds. 
@@ -114,6 +134,11 @@ June
 July
 ####
 
+| Soft underfoot the cancers snap
+|   entrapped by stupored hordes,
+| reluctant shells stampeded wrap
+|   the island shore restored. 
+|
 | Along the flowing inlet streams 
 |   the festival begins.
 | Caressing music tinges dreams
@@ -142,6 +167,11 @@ August
 | when isle matures through orange cerise, 
 |   engulfed in scents of sage.
 |
+| Though leonine its roar in youth,
+|   the shedding source of mane
+| replies with veins of blood vermouth
+|   through suffocating grain.
+|
 | Of August lines that empire grew,
 |   once cloaked in ermine garbs,
 | unkempt and molting, flake sinew,
@@ -168,6 +198,11 @@ September
 | above the waking window eyes
 |   despairing foregone winks. 
 | 
+| What ears of wheat will balance scales? 
+|   What maiden disappears? 
+| Condensing answers dance in gales,
+|   ascending hemispheres.
+|
 | Now Autumn comes with heavy rain 
 |   to test the borders drawn.
 | The water drained from level plain
@@ -206,6 +241,7 @@ October
 | where once there rose a sprout to blue
 |   now rising streams of souls. 
 
+.. crabs should come back here as a sort of revenge
 November
 ########
 
@@ -271,7 +307,7 @@ January
 | The afterlife morassed in cracks
 |   of marrow twisted blue,
 | the wighted bones of zodiacs
-|   imbued with ghastly hue.
+|   imbued with pallid hue.
 |
 | So seconds pass eternally,
 |   this January clock.
@@ -283,7 +319,7 @@ February
 
 | Yet February always brings 
 |   the forest chorus lines,
-| the chirping chickadee that swings 
+| the chirping chickadee that sings 
 |   from luted bows and vines. 
 |
 | From south, the scouting vees of geese,

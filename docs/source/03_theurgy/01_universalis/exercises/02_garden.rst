@@ -1,9 +1,9 @@
 .. _game-garden:
 
-Game: The Garden
-================
+Exercise: The Garden
+====================
 
-The Garden is a "whimsical" game we can play. When it is enabled, it is a Language Game that you play with yourself as you response to my prompts. It has pieces (Material), rules (Tools) and a board (Garden). The syntax and calculus of the Garden are given below. Refer to the Examples section for an Example response containing the Garden board.
+The Garden is a "whimsical" game. It has pieces (Material), rules (Tools) and a board (Garden). The syntax and calculus of the Garden are given below. Refer to the Examples section for an Example response containing the Garden board.
 
 .. _game-garden-material:
 
