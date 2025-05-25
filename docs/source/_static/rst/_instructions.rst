@@ -167,6 +167,22 @@ These functions should return a word or list of words. Note in the following def
 
 Each function signature is given along with a short description. Optional arguments are signified with ``?``. 
 
+.. topic:: Optional arguments
+
+    Where applicable, all linguistics functions have the following additional, *named* arguments,
+
+    - ``rhyme=x`` or ``r=x``: This constrains the output to rhyme with ``x``, e.g. ``decline`` is a valid response to ``iamb(lessening, rhyme=incline)``.
+    - ``syllables=N`` or ``s=N``: This constrains the output to have ``N`` syllables, e.g. ``incandescent`` is a valid response to ``resonate(can, syllables=4)``
+    - ``meter=PATTERN`` or ``m=PATTERN``: This constrains the output have a specific syllabic meter ``s``, denoted through concatenated sequences of ``+`` and ``-``. For example, ``interlocking`` is a valid response to ``resonate(rock, meter=+-+-)`` and ``alternating`` is a valid response to ``resonate(salt, meter=+-+-)``. A wildcard ``meter=*`` denotes an arbitrary meter, free verse or otherwise.
+    - ``feet=N`` or ``f=N``: This constrains the output to have ``N`` metrical feet.
+    - ``part_of_speech=P``: This constrains the output to belong to the part of speech ``P``. 
+
+    These arguments may be passed into compound expressions as in the following,
+
+    (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
+
+    This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
+
 Metric Functions
 ----------------
 
@@ -233,7 +249,7 @@ Metric Functions
 .. topic:: resonate(x: word ∨ phrase) -> set(words)
 
     Shorthand: ``res(x)``
-    
+
     If a prompt contains ``resonate(x)`` or ``res(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
 6. **Accent** If a prompt contains ``accent(x,s)`` or ``ac(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``.
@@ -241,21 +257,6 @@ Metric Functions
 7. **Extract** If a prompt contains ``extract(x,S)`` or ``ex(x,S)``, this prompt is asking to extract a specific syllable from word ``x`` based on the stress ``S``: if ``S = +``, it refers to the main stressed syllable; if ``S = -``, it refers to an unstressed syllable (e.g., the first such syllable if multiple exist). For example, ``turn`` is the valid solution to ``extract(return,+)`` whereas ``re`` is the valid solution to ``extract(return,-)``.
 
 8. **Delineate** If a prompt contains ``line(x)`` or ``li(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
-
-.. topic:: Optional arguments
-
-    Where applicable, all linguistics functions have the following additional, *named* arguments,
-
-    - ``rhyme=x`` or ``r=x``: This constrains the output to rhyme with ``x``, e.g. ``decline`` is a valid response to ``iamb(lessening, rhyme=incline)``.
-    - ``syllables=N`` or ``s=N``: This constrains the output to have ``N`` syllables, e.g. ``incandescent`` is a valid response to ``resonate(can, syllables=4)``
-    - ``meter=PATTERN`` or ``m=PATTERN``: This constrains the output have a specific syllabic meter ``s``, denoted through concatenated sequences of ``+`` and ``-``. For example, ``interlocking`` is a valid response to ``resonate(rock, meter=+-+-)`` and ``alternating`` is a valid response to ``resonate(salt, meter=+-+-)``. A wildcard ``meter=*`` denotes an arbitrary meter, free verse or otherwise.
-    - ``feet=N`` or ``f=N``: This contains the output have to have ``N`` metrical feet.
-
-    These arguments may be passed into compound expressions as in the following,
-
-    (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
-
-    This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
 
 .. _meta-level:
 
