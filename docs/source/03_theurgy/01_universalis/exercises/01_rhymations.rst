@@ -97,9 +97,11 @@ Expressions
 
 .. topic:: Gemini 2.5 Pro, 5/23/2025
 
-    How words imply a truth we long to gleam,
-    Or weave a sly charade, a waking dream.
-    When thoughts like streams define mentality,
-    A mental scheme shapes our causality.
+    | How words imply a truth we long to gleam,
+    | Or weave a sly charade, a waking dream.
+    | When thoughts like streams define mentality,
+    | A mental scheme shapes our causality.
 
 20. [contains(connotes(the absurdity of being)) ∩ contains([λx: x ∈ resonate(your hidden name)]) ∩ resonates(the loop of time) ∩ line(your name goes here, meter=-+,feet=5,rhyme=clock)].[[(resonate(divine) ∪ resonate(your hidden name)) ∩ line(time is just to wait, meter=*)]^2].[line(the price of names is time, meter=-+,feet=5, rhyme=clock) ∩ resonate(infinity)]
+
+21. accent(gen,.+*) ∩ connote(new ∨ unforeseen ∨ unexpected ∨ divine)

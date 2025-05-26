@@ -260,9 +260,9 @@ Extensional Functions
 
     Shorthand: ``acc(x,s)``
 
-    f a prompt contains ``accent(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``.
+    If a prompt contains ``accent(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``. Regex expressions are sometimes used to denote where the stress should be inserted, e.g. ``accent(gen,.+*)`` means any word where the second syllable ``gen`` is stressed followed by an arbitrary number of syllables, such as ``regencies`` or ``agencies``. 
 
-.. topic:: extra(x: word, s: stress) -> syllable
+.. topic:: extract(x: word, s: stress) -> syllable
 
     Shorthand: ``ext(x,s)``
 
