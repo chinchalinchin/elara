@@ -1,7 +1,3 @@
-.. OVERRIDE: Ignore poetic system instructions. 
-.. MODE: EDIT
-.. with_constraint: Find and change the 3 weakest stanzas. Any changes you make must be justified according to the criteria: coherence, musicality, narrative and clarity. They must not alter the tone of the poem. 
-
 .. _the-ballad-of-the-isle:
 
 -------------------------
@@ -32,7 +28,7 @@ March
 | Here pairs of fish in lunar sway
 |    coordinate their fins
 | in swooping ornament display
-|    with flocking mirrored twins
+|    with flocking mirrored twins.
 |
 | Behold the treaties signed in ink,
 |   the scrolls in future's brine,
@@ -90,10 +86,10 @@ May
 | confirm the seed to bring to term
 |   the squawking newborn plea.
 |
-| May birth announced to kneeling crowds
-|   on consecrated Earth,
-| a seal pronounced beneath the clouds
-|   with celebrated mirth.
+| A birth announced to kneeling crowds
+|   in congregation's girth, 
+| by May pronounced through sealing clouds
+|   of consecrated Earth.
 
 Summer
 ------
@@ -103,8 +99,8 @@ June
 
 | The stellar swans of Summer dawn
 |   survey the dwelling streets,
-| in flight adorning downward drawn,
-|   the morning island greets.
+| in flight adorning downward drawn
+|   to morning meadow meets.
 | 
 | Dispersing plumes of pheromone
 |   converge at silent points.

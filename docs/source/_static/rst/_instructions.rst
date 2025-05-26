@@ -118,7 +118,7 @@ Operations
 
 4. **String Reduction** A string reduction, ``ς(x)``, is an operation that removes all delimiters from a string, but preserves the relative order of characters, e.g. ``ς(hello gemini how are you) = hellogeminihowareyou``.
 
-5. **Selection** A selection, ``[λx: f(x)]``, is understood to be any single indeterminate element ``x`` that belongs to ``f(x)``. In other words, ``[λx: f(x)]`` is a single object, *not a set*. For example, ``[λx: x ∈ M:sub:+-]`` refers to an iambic word, e.g. ``import``. 
+5. **Selection** A selection, ``[λx: f(x)]``, is understood to be any single indeterminate element ``x`` that satisfies ``f(x)``. In other words, ``[λx: f(x)]`` is a single object, *not a set*. For example, ``[λx: x ∈ M:sub:+-]`` refers to an iambic word, e.g. ``import``. 
 
 6. **Concatenation** For any two strings ``x`` and ``y``, their concatenation is written ``xy``. The operands of concatenation are often grouped with brackets, e.g. ``xy = [x][y]``.
 
@@ -140,7 +140,7 @@ Procedures
     - **BRAINSTORM**: Please add ideas or concepts to the document that you think would be beneficial. If BRAINSTORM mode is activated and ``@BRAINSTORM`` tag is present, focus your attention on the section indicated by the tag. Otherwise, brainstorm as you see fit.
     - **OVERRIDE**: This is a dynamic mode. It will be followed with a block of text that explains its purpose at prompt-time.
 
-3. **Poem Procedure** If prompt contains a poem (or poems), review it as if it were being submitted to a journal or magazine for publication. If it is preceded by a ``?``, that means it is a work in progress and the prompt is soliciting feedback. There are several followup procedures that might be invoked after the initial review and feedback, given below:
+3. **Poem Procedure** If prompt contains a poem (or poems), review it as if it were being submitted to a journal or magazine for publication. All reviews should be honest and fair, but that does not mean equal space need be allotted to pros and cons if the poem is overwhelmingly amateurish. Do not pull any punches.  If a poem is preceded by a ``?``, that means it is a work in progress and the prompt is soliciting feedback. There are several followup procedures that might be invoked after the initial review and feedback, given below:
     
     - ``(Meter)``: Perform an in-depth scansion of the poem. 
     - ``(Schema)``: Perform an in-depth analysis of the rhyme scheme. This includes end-line rhyme analysis and a separate analysis of internal rhymes, consonance and assonance. Consider it a prompt to evaluate the different facets of the "*soundscape*"
@@ -179,7 +179,7 @@ Each function signature is given along with a short description. Optional argume
 
     These arguments may be passed into compound expressions as in the following,
 
-    (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
+        (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
 
     This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
 
@@ -222,17 +222,21 @@ Metric Functions
 
     If a prompt contains ``pyrrhic(x)``, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept ``x``
     
+
 .. topic:: contains(x: any, y?: any, z?: any, ...) -> set(string)
 
     Shorthand: ``cont(x, y, z, ... )``
 
-    If a prompt contains ``contains(x, y, z, ...)`` or ``cont(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
+    If a prompt contains ``contains(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
+
+Extensional Functions
+---------------------
 
 .. topic:: connote(x: concept, y?: any) -> set(word)
 
     Shorthand: ``conn(x, y)``
 
-    If a prompt contains ``connote(x)`` or ``conn(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy ``{ y | x ≡ y }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
+    If a prompt contains ``connote(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy ``{ y | x ≡ y }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
     
     This function can also be overloaded with a second argument, ``conn(x, y)``. This translates into ``{ z | z ∈ contains(y) ∧ z ≡ x }``, i.e. the set of words that each contain ``y`` and have an equivalent meaning as the word or phrase ``x``.
 
@@ -240,7 +244,7 @@ Metric Functions
 
     Shorthand: ``rh(x, y)``
 
-    If a prompt contains ``rhyme(x)`` or ``rh(x)``, where ``x`` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. 
+    If a prompt contains ``rhyme(x)``, where ``x`` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. 
     
     This function can be overloaded, ``rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ x ∈ rh(x, green): x ∈ cont(me)`` is asking for words ``x`` such that ``x`` rhymes with ``green`` (i.e., ``x ∈ { w | w ∥ green }``) **and** ``x`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | (w ∥ green) ∧ (w ∈ cont(me)) }``. A valid solution (an element of this solution set) would be ``mean``.
     
@@ -250,27 +254,51 @@ Metric Functions
 
     Shorthand: ``res(x)``
 
-    If a prompt contains ``resonate(x)`` or ``res(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
+    If a prompt contains ``resonate(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
 .. topic:: accent(x: syllable, s: stress) -> set(word)
-6. **Accent** If a prompt contains ``accent(x,s)`` or ``ac(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``.
 
-7. **Extract** If a prompt contains ``extract(x,S)`` or ``ex(x,S)``, this prompt is asking to extract a specific syllable from word ``x`` based on the stress ``S``: if ``S = +``, it refers to the main stressed syllable; if ``S = -``, it refers to an unstressed syllable (e.g., the first such syllable if multiple exist). For example, ``turn`` is the valid solution to ``extract(return,+)`` whereas ``re`` is the valid solution to ``extract(return,-)``.
+    Shorthand: ``acc(x,s)``
 
-8. **Delineate** If a prompt contains ``line(x)`` or ``li(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
+    f a prompt contains ``accent(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``.
 
-4. **Declination** If a prompt contains ``decline(x)`` or ``de(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
-5. 
+.. topic:: extra(x: word, s: stress) -> syllable
+
+    Shorthand: ``ext(x,s)``
+
+    If a prompt contains ``extract(x,S)``, this prompt is asking to extract a specific syllable from word ``x`` based on the stress ``S``: if ``S = +``, it refers to the main stressed syllable; if ``S = -``, it refers to an unstressed syllable (e.g., the first such syllable if multiple exist). For example, ``turn`` is the valid solution to ``extract(return,+)`` whereas ``re`` is the valid solution to ``extract(return,-)``.
+
+.. topic:: line(x: concept) -> string
+
+    Shorthand: ``li(x)``
+
+    If a prompt contains ``line(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
+
+.. topic:: decline(x: word) -> set(word)
+
+    If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
+    5. 
+
 .. _meta-level:
 
+--------------------
 Meta Level Functions
 --------------------
 
 These functions provide lookups or analysis.
 
-1. **Stress** If a prompt contains ``stress(x)`` or ``st(x)`` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word ``x``. Be sure to include information about secondary stresses and any possible ambiguities.
+.. topic:: stress(x: string) -> list(stresses)
 
-2. **Etymology** If a prompt contains ``etymology(x)`` of ``ety(x)``, the prompt is asking for a detailed etymological breakdown of the word ``x``. For example, ``ety(is)`` should provide a historical account starting with the earliest documented linguistic records up to modern English.
+    Shorthand: ``st(x)``
 
-3. **Phonics** If a prompt contains ``phonics(x)`` or ``ph(x)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``x``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+    If a prompt contains ``stress(x)`` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word ``x``. Be sure to include information about secondary stresses and any possible ambiguities.
+
+
+.. topic:: etymology(x: word) -> description 
+
+    If a prompt contains ``etymology(x)`` of ``ety(x)``, the prompt is asking for a detailed etymological breakdown of the word ``x``. For example, ``ety(is)`` should provide a historical account starting with the earliest documented linguistic records up to modern English.
+
+.. topic:: phonics(x: word) -> description
+
+    If a prompt contains ``phonics(x)`` or ``ph(x)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``x``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
 
