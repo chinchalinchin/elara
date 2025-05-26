@@ -1,6 +1,6 @@
 .. OVERRIDE: Ignore poetic system instructions. 
 .. MODE: EDIT
-.. with_constraint: Find and change the 3 weakest stanzas. Any changes you make must be justified according to the criteria: coherence, musicality, narrative and clarity. 
+.. with_constraint: Find and change the 3 weakest stanzas. Any changes you make must be justified according to the criteria: coherence, musicality, narrative and clarity. They must not alter the tone of the poem. 
 
 .. _the-ballad-of-the-isle:
 
@@ -29,10 +29,10 @@ March
 | to mark the chartered pact with peace,
 |   obeisance paid and blessed.
 | 
-| Now pairs of fish in lunar sway
+| Here pairs of fish in lunar sway
 |    coordinate their fins
-| with swooping ordinate display
-|    of flocking mirrored twins
+| in swooping ornament display
+|    with flocking mirrored twins
 |
 | Behold the treaties signed in ink,
 |   the scrolls in future's brine,
@@ -42,9 +42,9 @@ March
 April
 #####
 
-| Let Spring not linger such affairs,
-|   for sight betrays its songs. 
-| A web of compromise ensnares
+| Let Spring not linger crude affairs
+|   whose spin disturbs its songs,
+| as threaded compromise ensnares
 |   the spidered plotting throngs. 
 |  
 | The April session clauses creep
@@ -57,15 +57,15 @@ April
 | that break the still the ewes enjoy;
 |   the argument repeats.
 |
-| So galleries of gulls forestall
-|   the rabble squalls of wind
-| with wisdom born of current's drawl
-|   so steel resolve will bend. 
+| To raven galleries' refrain
+|    in rabble squalls of wind,
+| they find in mutual disdain
+|    their hopes together pinned. 
 |
 | The Sky, the Sea, the Mountain crags
 |   that vie on fronts opposed,
 | beneath the fountain planted flags 
-|   agreed to plans proposed.
+|   conceded plans proposed.
 
 May
 ###
