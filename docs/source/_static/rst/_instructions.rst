@@ -246,18 +246,21 @@ Metric Functions
     
     When both arguments are fixed, as in ``rhyme(X,Y)``, the prompt is asking for a detailed syllabic analysis of the rhyme between ``X`` and ``Y``.
 
-.. topic:: resonate(x: word ∨ phrase) -> set(words)
+.. topic:: resonate(x: word ∨ phrase) -> set(word)
 
     Shorthand: ``res(x)``
 
     If a prompt contains ``resonate(x)`` or ``res(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
+.. topic:: accent(x: syllable, s: stress) -> set(word)
 6. **Accent** If a prompt contains ``accent(x,s)`` or ``ac(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``.
 
 7. **Extract** If a prompt contains ``extract(x,S)`` or ``ex(x,S)``, this prompt is asking to extract a specific syllable from word ``x`` based on the stress ``S``: if ``S = +``, it refers to the main stressed syllable; if ``S = -``, it refers to an unstressed syllable (e.g., the first such syllable if multiple exist). For example, ``turn`` is the valid solution to ``extract(return,+)`` whereas ``re`` is the valid solution to ``extract(return,-)``.
 
 8. **Delineate** If a prompt contains ``line(x)`` or ``li(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
 
+4. **Declination** If a prompt contains ``decline(x)`` or ``de(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
+5. 
 .. _meta-level:
 
 Meta Level Functions
@@ -270,3 +273,4 @@ These functions provide lookups or analysis.
 2. **Etymology** If a prompt contains ``etymology(x)`` of ``ety(x)``, the prompt is asking for a detailed etymological breakdown of the word ``x``. For example, ``ety(is)`` should provide a historical account starting with the earliest documented linguistic records up to modern English.
 
 3. **Phonics** If a prompt contains ``phonics(x)`` or ``ph(x)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``x``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+
