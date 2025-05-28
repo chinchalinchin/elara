@@ -134,13 +134,16 @@ Expressions
 
 27. A Poetic Formula
 
-⊢ A = rhyme(``*oise``)
-⊢ B = rhyme(``*ess``)
-⊢ X = connote(tension)
-⊢ Y = connote(balance)
+# Initial Values
+⊢ (π:sub:`1` = ``ion``) ∧ (π:sub:`2` = ``oise``) ∧ (π:sub:`3` = ``ess``
+⊢ (x ≢ y) ∧(u ≢ v)
+⊢ (u ∈ accent(π:sub:`1`, .*-)) ∧ (v ∈ accent(π:sub:`1`, .*-)) ∧ (u ≢ v)
+⊢ (s, t ∈ connote(colors)) ∧ (s ≢ t)
+⊢ (A = rhyme(``oise``)) ∧ (B = rhyme(``ess``))
+⊢ (X = connote(x)) ∧ (Y = connote(y))
 ⊢ Suc = connote(succumb)
-⊢ Com = connote(compression)
-⊢ Ex = connote(expansion)
+⊢ U = connote(u)
+⊢ V = connote(v)
 ⊢ Wh = contains(decline(white))
 ⊢ Bl = resonate(black) 
 ⊢ Z:sub:`1` = line(X ∩ Y ∩ Bl ∩ A)(meter=-+, feet=4)
