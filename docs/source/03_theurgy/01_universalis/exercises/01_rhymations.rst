@@ -150,7 +150,7 @@ Expressions
     | All whitened hope contracts with jarring noise.
     | Life surges out, a new largesse.
 
-28. A Chiasmatic Ballad
+28. Chiasmatic Structures
 
 # Input
 ## Syllables
@@ -217,5 +217,5 @@ Expressions
     | A voice finds waning, though creation will not pass.
     | Confess we must, a vivid truth it yields, perhaps.
     | That spirit choice gives order from the mass.
-    
+
 29. { x | ∃y ∈ L: ∃n ∈ ℕ: x = line(y)(meter=-+, feet=n)} ∩ P
