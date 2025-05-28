@@ -133,6 +133,8 @@ Operations
 
 7. **Succession** For any two strings ``x`` and ``y``, their succession, denoted, ``x.y`` is to mean the literal transcription of the strings on separate new lines. Exponents are used as shorthand for denoting multiple successions, e.g. ``line(x).line(x) = line(x)^2``
 
+8. **Separation** For any two strings ``x`` and ``y``, their separation, denoated ``x + y`` is to meant the literal transcriptions of the strings on separate new lines with a blank line in between them (i.e., *separation* creates stanzas). Summations are used as shorthand for denoting multiple separations, ``Σ:sub:`1`:sup`n` x.y`` denotes ``n`` stanzas of couplets (two lines). 
+
 .. _procedures:
 
 Procedures

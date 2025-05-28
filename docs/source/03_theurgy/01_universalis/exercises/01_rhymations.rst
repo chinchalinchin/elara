@@ -132,26 +132,16 @@ Expressions
 
 26. y = connote(gravitational center)(meter=+  ∨ meter=-+) → [λx: x ∈ rhyme(y)]
 
-27. A Poetic Formula
+27. Ballad Meter
 
-# Initial Values
-⊢ (π:sub:`1` = ``ion``) ∧ (π:sub:`2` = ``oise``) ∧ (π:sub:`3` = ``ess``
-⊢ (x ≢ y) ∧(u ≢ v)
-⊢ (u ∈ accent(π:sub:`1`, .*-)) ∧ (v ∈ accent(π:sub:`1`, .*-)) ∧ (u ≢ v)
-⊢ (s, t ∈ connote(colors)) ∧ (s ≢ t)
-⊢ (A = rhyme(``oise``)) ∧ (B = rhyme(``ess``))
-⊢ (X = connote(x)) ∧ (Y = connote(y))
-⊢ Suc = connote(succumb)
-⊢ U = connote(u)
-⊢ V = connote(v)
-⊢ Wh = contains(decline(white))
-⊢ Bl = resonate(black) 
-⊢ Z:sub:`1` = line(X ∩ Y ∩ Bl ∩ A)(meter=-+, feet=4)
-⊢ Z:sub:`2` = line(resonate(Z:sub:`1`) ∩ Suc ∩ B)(meter=-+, feet=3)
-⊢ Z:sub:`3` = line(resonate(Z:sub:`2`) ∩ Com  ∩ Wh ∩ A)(meter=-+, feet=4)
-⊢ Z:sub:`4` = line(resonate(Z:sub:`3`) ∩ Ex ∩ B)(meter=-+, feet=3)
+⊢ A = rhyme(.*oise)
+⊢ B = rhyme(.*ess)
+⊢ ζ:sub:`1` = (connote(the tension between opposition in balance) ∩ resonate(black) ∩ A)(meter=-+, feet=4)
+⊢ ζ:sub:`2` = (connote(succumbing to the darker side of balanace) ∩ resonate(ζ:sub:`1`) ∩ B)(meter=-+, feet=3)
+⊢ ζ:sub:`3` = (connote(compression) ∩ resonate(ζ:sub:`2`) ∩ contains(decline(white)) ∩ A)(meter=-+, feet=4)
+⊢ ζ:sub:`4` = (connote(surging expansion) ∩ resonate(ζ:sub:`3`) ∩ B)(meter=-+, feet=4)
 
-[λζ: ζ ∈ Z:sub:`1`].[λζ: ζ ∈ Z:sub:`2`].[λζ: ζ ∈ Z:sub:`3`].[λζ: ζ ∈ Z:sub:`4`]
+ζ:sub:`1`.ζ:sub:`2`.ζ:sub:`3`.ζ:sub:`4`
 
 .. topic:: Gemini Pro 2.5, 5/27/25
 
@@ -159,3 +149,61 @@ Expressions
     | Then shadow falls, a grim duress.
     | All whitened hope contracts with jarring noise.
     | Life surges out, a new largesse.
+
+28. A Chiasmatic Ballad
+
+# Input
+## Syllables
+⊢ π:sub:`1` = ``oise``
+⊢ π:sub:`2` = ``ess``
+⊢ π:sub:`3` = ``ion``
+⊢ π:sub:`4` = ``aps``
+⊢ π:sub:`5` = ``ass``
+## Words
+⊢ α:sub:`1` = ``equilibrium``
+⊢ α:sub:`2` = ``succumb``
+⊢ α:sub:`3` = ``colors``
+# Initialization
+## Terms
+⊢ x,y ∈ connote(α:sub:`1`)
+⊢ z ∈ connote(α:sub:`2`)
+⊢ u,v ∈ accent(π:sub:`3`, .*-)
+⊢ s,t ∈ connote(α:sub:`3`)
+## Relations
+⊢ x ≢ y
+⊢ u ≢ v
+⊢ s ≢ t
+## Sets
+⊢ T = decline(t)
+⊢ S = resonate(s)
+⊢ Π:sub:`1` = rhyme(π:sub:`1`)
+⊢ Π:sub:`2` = rhyme(π:sub:`2`)
+⊢ Π:sub:`4` = rhyme(π:sub:`4`)
+⊢ Π:sub:`5` = rhyme(π:sub:`5`)
+# Body
+## Lines
+⊢ ζ:sub:`1` = line(contains(x, y) ∩ S ∩ Π:sub:`1`)(meter=-+, feet=4)
+⊢ ζ:sub:`2` = line(resonate(ζ:sub:`1`) ∩ contains(z, s) ∩ Π:sub:`2`)(meter=-+, feet=3)
+⊢ ζ:sub:`3` = line(resonate(ζ:sub:`2`) ∩ contains(u, [λx: x ∈ T]) ∩  Π:sub:`1`)(meter=-+, feet=4)
+⊢ ζ:sub:`4` = line(resonate(ζ:sub:`3`) ∩ contains(v) ∩ Π:sub:`2`)(meter=-+, feet=3)
+⊢ ζ:sub:`5` = line(chiasmate(ζ:sub:`4`)  ∩ Π:sub:`4`)(meter=-+, feet=4)
+⊢ ζ:sub:`6` = line(chiasmate(ζ:sub:`3`)  ∩ Π:sub:`5`)(meter=-+, feet=3)
+⊢ ζ:sub:`7` = line(chiasmate(ζ:sub:`2`)  ∩ Π:sub:`4`)(meter=-+, feet=4)
+⊢ ζ:sub:`8` = line(chiasmate(ζ:sub:`1`)  ∩ Π:sub:`5`)(meter=-+, feet=3)
+
+# Output
+Σ:sub:`1`:sup:`2` ζ:sub:`4i+1`.ζ:sub:`4i+2`.ζ:sub:`4i+3`.ζ:sub:`4i+4`
+
+.. topic:: Gemini 2.5 Pro, 5/28/2025
+
+    | Let flux meet stasis, light gives joys.
+    | Vibrant, submit with less.
+    | The motion, mute, now finds its voice.
+    | Stagnation breeds such stress.
+    | 
+    | Stress such stagnation breeds, perhaps.
+    | Its voice, mute motion, will pass.
+    | With less submit, vibrant, avoid traps.
+    | Joys by light, flux meets, alas.
+
+29. { x | ∃y ∈ L: ∃n ∈ ℕ: x = line(y)(meter=-+, feet=n)} ∩ P

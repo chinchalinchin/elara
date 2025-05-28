@@ -744,3 +744,33 @@ Hume argued that causality of events is inferred through the correlation of even
 The problem of *faith* cast into the :ref:`language <language>` of necessity and sufficiency is thus: God is sufficient for existence, but not necessarily necessary. Thus, the concept of God cannot be comprehended syntactically (logically) as a *cause* unless one consents to the clause: God is necessary for existence. 
 
 The crux of faith, the essential leap into the unknown, boils down to whether one can imagine a world without God and whether doubts in the affirmative direction can be exorcised from the mind.
+
+.. _2025-june:
+
+----
+June
+----
+
+Let :math:`l(α)` be the character length of a word :math:`α`. 
+
+.. topic:: Reflective Words
+
+    The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if :math:`α[i]` stands for the i:sup:`th` character in word :math:`α`, then a reflective word is defined as the words which satisfy the relation :math:`α[i] = α[l(α)-i-1]`. For example, ``nun`` is a reflective word.
+
+.. topic:: Metric Words
+
+    The symbol :math:`M_\mathfrak{s}` refers to the set of all words that satisfy the syllabic pattern :math:`\mathfrak{s}`, where :math:`\mathfrak{s}` is a concatenated sequence of syllabic stresses such that ``+`` means stressed and ``-`` means unstressed. For example, :math:`M_{-+}` refers to the set of all iambic words.
+
+A linguistically true statement that cannot be formally proven: 
+
+.. math::
+
+    \forall R, M_{-+} \subset L: \mid R \mid \leq \mid M_{-+} \mid
+
+In other words,
+
+    There are more iambic words in a language than there are reflective words. 
+
+Where the language :math:`L` is understood to be a stress-timed language.
+
+The issue lies in how membership is determined. In the case of reflective words, the membership constraint is purely syntactic, whereas in the case of iambic words, the membership constraint is purely phonetic. Phonetics does not possess syntactic rules, in the sense that one cannot uniquely determine a phonetic pronouncation from the inscription of the word alone. For example, "*concord*" may be pronounced "*con-CORD*" or "*CON-cord*" depending on the context in which "*concord*" is embedded.
