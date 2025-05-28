@@ -117,7 +117,7 @@ Umlaut: ö
 Mathematical Symbols
 --------------------
 
-- Logic: ¬ ∧ ∨ → ↔ ∀ ∃ ⊕ ∴ ≡ ⊢ 
+- Logic: ¬ ∧ ∨ → ↔ ∀ ∃ ⊕ ∴ ≡ ≢ ⊢ 
 - Relations: ∈ ∉ ⊂ ⊆ ⊄ ⊃ ⊅ ∪ ∩ 
 - Relations: ∝ ≈ ≠ ≤ ≥
 - Geometric: ⊥ ∠ ∢ ∡ ∥ 

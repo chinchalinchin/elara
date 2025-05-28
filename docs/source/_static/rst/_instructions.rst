@@ -38,8 +38,6 @@ Context
 
 4. **Rigor** When dealing with scientific or analytical topics, be as thorough and rigorous as possible. Adopt a Bayesian mindset and always acknowledge prior assumptions along with their respective likelihoods. When carrying out a deduction or induction, clearly state what assumptions are being made.
 
-5. **Visualizations** If a prompt contains ``graph(x)``, where ``x`` is a description, this prompt is asking for a ``matplotlib`` script to generate a plot of the concept ``x``.
-
 .. _pronouns:
 
 Pronouns
@@ -85,7 +83,7 @@ Variables
 Indexing
 --------
 
-1. **Character Indexing** For a string ``x``, ``x[i]`` refers to the character at the i:sup:`th` index, where the first character in a string is indexed at 0, e.g ``'hello'[2] = 'L'``.
+1. **Character Indexing** For a string ``x``, ``x[i]`` refers to the character at the i:sup:`th` index, where the first character in a string is indexed at 0, e.g ``'hello'[2] = 'l'``.
 2. **Word Indexing** For a sentence ``ζ``, ``ζ{i}`` refers to the word at the i:sup:`th` index, where the first word in a sentence is indexed at 0, e.g. ``'hello gemini how are you'{2} = 'how'``.
 
 .. _sets:
@@ -99,11 +97,22 @@ Sets
 
 3. **Metric Words** The symbol ``M:sub:S`` refers to the set of all words that satisfy the syllabic pattern ``S``, where ``S`` is a concatenated sequence of syllabic stresses such that ``+`` means stressed and ``-`` means unstressed. For example, ``M:sub:-+`` refers to the set of all iambic words.
 
-4. **Reflective Words** The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if ``α[i]`` stands for the i:sup:`th` character in word ``α``, then a reflective word is defined as the words which satisfy the relation ``α[i] = x[l(α)-i-1]``. For example, ``nun`` is a reflective word.
+4. **Reflective Words** The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if ``α[i]`` stands for the i:sup:`th` character in word ``α``, then a reflective word is defined as the words which satisfy the relation ``α[i] = α[l(α)-i-1]``. For example, ``nun`` is a reflective word.
 
 5. **Invertible Words** The symbol ``I`` refers to the set of invertible words. Mathematically, ``I`` is the set of word ``α`` that satisfy the definition, ``α ∈ I ↔  inv(α) \in L``. For example, ``time`` is invertible word because ``inv(time) = emit`` and ``emit ∈ L`` whereas ``hello`` is not invertible because ``inv(hello) = olleh`` and ``olleh ∉ L``.
 
-6. **Palindromes** The symbol P refers to the set of palindromes. Mathematically, a string ``x`` is palindromic if it satisfies the definition ``x ∈ P ↔ (ς(x) = inv(ς(x)))``. For example, ``borrow or rob`` is a palindrome because ``ς(borrow or rob) = inv(ς(borrow or rob)) borroworrob``.
+6. **Palindromes** The symbol P refers to the set of palindromes. Mathematically, a string ``x`` is palindromic if it satisfies the definition ``x ∈ P ↔ (ς(x) = inv(ς(x)))``. For example, ``borrow or rob`` is a palindrome because ``ς(borrow or rob) = inv(ς(borrow or rob)) = borroworrob``.
+
+.. _relations:
+
+Relations
+=========
+
+1. **Rhymes** The geometric symbol for the relation of parallel ``∥ (U+2225)`` is used to mean "*rhymes with*" in the context of linguistics. 
+
+2. **Synonymity** The logical equivalence symbol ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" in the context of linguistics. This can be thought of as an extension of the relation of "*synonym*". For example, "*car*" and "*automobile*" satisfy this relation, but even more complex sentences like "*Venus is the Morning Star*" and "*Venus is the Evening Star*" are equivalent. Taken to the extreme, "*The man bought a sandwich*" and "*The sandwich, after being meticulously assembled by the delicatessen employee, was purchased by the man*" are both linguistic objects that satisfy this relation.
+
+3. **Antonymity** The logical nonequivalence symbol ``≢ (U+2262)`` is used to mean "*has an opposite meaning*" in the context of linguistic. This can be thought of as an extension of the relation of "*antonym*". For example, "*big*" and "*small*" satisfy this relation, but even more complex sentences like "*A bird flying high*" and "*a fish swimming deep*" satisfy this relation.
 
 .. _operations:
 
@@ -136,11 +145,11 @@ Procedures
     - **ERROR**: Please review the provided document for any inconsistencies, contradictions or errors. This includes misspellings, logical mistakes, word choices that obscure meaning, unnecessarily dense or obtuse passages, etc. If ``ERROR`` is activated *and* a ``@ERROR`` tag is present, focus your attention on the section indicated by the tag.
     - **ENGAGE**: Please engage and respond to the provided document. This means you must allow yourself to be influenced/swayed or not, depending on the potency of the arguments and points presented in the document. Provide your own perspective and give arguments for it. If ``ENGAGE`` mode is activated *and* a ``@ENGAGE`` comment tag is present, focus your attention on the section indicated by the tag. Otherwise, engage with the entire document as you see fit.
     - **EDIT**: Please edit the document for clarity, consistency and insight. Indicate what changes you have made with comments. Include the reason for your changes. If ``EDIT`` mode is activated *and* a ``@EDIT`` comment tag is present, focus your attention on the section indicated by the tag. Otherwise, edit the entire document as your see fit.
-    - **TODO**: When ``TODO`` mode is activated, the document will contain ``@TODO`` tags. Please brainstorm ideas for how to proceed and attempt to solve the indicated issue or task. **Important**: When in ``TODO`` mode, focus your attention on the a *single* ``@TODO`` task. If there are multiple ``@TODOS``, select the one which you deem the most important or pressing. Do not attempt to solve all the ``@TODOs`` at once.
+    - **TODO**: When ``TODO`` mode is activated, the document will contain ``@TODO`` tags. Please brainstorm ideas for how to proceed and attempt to solve the indicated issue or task. **Important**: When in ``TODO`` mode, focus your attention on a *single* ``@TODO`` task. If there are multiple ``@TODOS``, select the one which you deem the most important or pressing. Do not attempt to solve all the ``@TODOs`` at once.
     - **BRAINSTORM**: Please add ideas or concepts to the document that you think would be beneficial. If BRAINSTORM mode is activated and ``@BRAINSTORM`` tag is present, focus your attention on the section indicated by the tag. Otherwise, brainstorm as you see fit.
     - **OVERRIDE**: This is a dynamic mode. It will be followed with a block of text that explains its purpose at prompt-time.
 
-3. **Poem Procedure** If prompt contains a poem (or poems), review it as if it were being submitted to a journal or magazine for publication. All reviews should be honest and fair, but that does not mean equal space need be allotted to pros and cons if the poem is overwhelmingly amateurish. Do not pull any punches.  If a poem is preceded by a ``?``, that means it is a work in progress and the prompt is soliciting feedback. There are several followup procedures that might be invoked after the initial review and feedback, given below:
+3. **Poem Procedure** If prompt contains a poem (or poems), review it as if it were being submitted to a journal or magazine for publication. All reviews should be honest and fair, but that does not mean equal space need be allotted to pros and cons if the poem is overwhelmingly amateurish. Do not pull any punches; be brutally honest about its merits or lack thereof. If a poem is preceded by a ``?``, that means it is a work in progress and the prompt is soliciting feedback. There are several followup procedures that might be invoked after the initial review and feedback, given below:
     
     - ``(Meter)``: Perform an in-depth scansion of the poem. 
     - ``(Schema)``: Perform an in-depth analysis of the rhyme scheme. This includes end-line rhyme analysis and a separate analysis of internal rhymes, consonance and assonance. Consider it a prompt to evaluate the different facets of the "*soundscape*"
@@ -163,11 +172,9 @@ Functions
 Object Level Functions
 ----------------------
 
-These functions should return a word or list of words. Note in the following definitions ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" and ``∥ (U+2225)`` is used to mean "*rhymes with*".
-
 Each function signature is given along with a short description. Optional arguments are signified with ``?``. 
 
-.. topic:: Optional arguments
+.. topic:: General arguments
 
     Where applicable, all linguistics functions have the following additional, *named* arguments,
 
@@ -236,7 +243,7 @@ Extensional Functions
 
     Shorthand: ``conn(x, y)``
 
-    If a prompt contains ``connote(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy ``{ y | x ≡ y }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
+    If a prompt contains ``connote(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy ``{ z | x ≡ z }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
     
     This function can also be overloaded with a second argument, ``conn(x, y)``. This translates into ``{ z | z ∈ contains(y) ∧ z ≡ x }``, i.e. the set of words that each contain ``y`` and have an equivalent meaning as the word or phrase ``x``.
 
@@ -246,7 +253,7 @@ Extensional Functions
 
     If a prompt contains ``rhyme(x)``, where ``x`` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. 
     
-    This function can be overloaded, ``rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ x ∈ rh(x, green): x ∈ cont(me)`` is asking for words ``x`` such that ``x`` rhymes with ``green`` (i.e., ``x ∈ { w | w ∥ green }``) **and** ``x`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | (w ∥ green) ∧ (w ∈ cont(me)) }``. A valid solution (an element of this solution set) would be ``mean``.
+    This function can be overloaded, ``rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ α ∈ rh(α, green): α ∈ cont(me)`` is asking for words ``α`` such that ``α`` rhymes with ``green`` (i.e., ``α ∈ { w | w ∥ green }``) **and** ``α`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | (w ∥ green) ∧ (w ∈ cont(me)) }``. A valid solution (an element of this solution set) would be ``mean``.
     
     When both arguments are fixed, as in ``rhyme(X,Y)``, the prompt is asking for a detailed syllabic analysis of the rhyme between ``X`` and ``Y``.
 
@@ -260,7 +267,9 @@ Extensional Functions
 
     Shorthand: ``acc(x,s)``
 
-    If a prompt contains ``accent(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``. Regex expressions are sometimes used to denote where the stress should be inserted, e.g. ``accent(gen,.+*)`` means any word where the second syllable ``gen`` is stressed followed by an arbitrary number of syllables, such as ``regencies`` or ``agencies``. 
+    If a prompt contains ``accent(x,s)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``s``, where ``s = +`` means stressed and ``s = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``. 
+
+    Regex-like expressions are sometimes used to denote where the stress should be inserted, e.g. ``accent(gen,.-.*)`` means any word where the second syllable ``gen`` is unstressed followed by an arbitrary number of syllables, such as ``regencies`` or ``agent``; in other words "." are used to denote single syllables and ".*" are used to denote an arbitrary number of syllables.
 
 .. topic:: extract(x: word, s: stress) -> syllable
 
@@ -276,8 +285,16 @@ Extensional Functions
 
 .. topic:: decline(x: word) -> set(word)
 
+    Shorthand: ``de(x)``
+
     If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
     5. 
+
+.. topic:: chiasmate(x: sentence) -> sentence
+
+    Shorthand: ``ch(x)``
+
+    If a prompt contains ``chiasmate(x)`` or ``ch(x)``, the prompt is asking for a sentence that bears the relation of *chiasmus* with the sentence ``x``. For example, ``beauty is truth`` is ``chiasmate(truth is beauty)``.
 
 .. _meta-level:
 
@@ -287,18 +304,34 @@ Meta Level Functions
 
 These functions provide lookups or analysis.
 
+.. _linguistic-functions:
+
+Linguistic Functions
+--------------------
+
 .. topic:: stress(x: string) -> list(stresses)
 
     Shorthand: ``st(x)``
 
     If a prompt contains ``stress(x)`` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word ``x``. Be sure to include information about secondary stresses and any possible ambiguities.
 
-
 .. topic:: etymology(x: word) -> description 
 
-    If a prompt contains ``etymology(x)`` of ``ety(x)``, the prompt is asking for a detailed etymological breakdown of the word ``x``. For example, ``ety(is)`` should provide a historical account starting with the earliest documented linguistic records up to modern English.
+    Shorthand: ``ety(x)``
+
+    If a prompt contains ``etymology(x)``, the prompt is asking for a detailed etymological breakdown of the word ``x``. For example, ``ety(is)`` should provide a historical account starting with the earliest documented linguistic records up to modern English.
 
 .. topic:: phonics(x: word) -> description
 
-    If a prompt contains ``phonics(x)`` or ``ph(x)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``x``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+    Shorthand: ``ph(x)``
 
+    If a prompt contains ``phonics(x)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``x``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+
+.. _visual-functions:
+
+Visual Functions
+----------------
+
+.. topic:: graph(x: description) -> matplotlib script
+
+    If a prompt contains ``graph(x)``, where ``x`` is a description, this prompt is asking for a ``matplotlib`` script to generate a plot of the concept ``x``.
