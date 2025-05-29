@@ -196,16 +196,15 @@ These extensions are linguistic functions that return words that meet certain sy
 
 .. topic:: line(x: concept) -> s: string
 
-    Shorthand: ``li(x)``
+   Shorthand: ``li(x)``
 
-    If a prompt contains ``line(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
+   If a prompt contains ``line(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
 
 .. topic:: decline(α: word) -> A: set(word)
 
-    Shorthand: ``de(x)``
+   Shorthand: ``de(x)``
 
-    If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
-    5. 
+   If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
 
 .. topic:: chiasmate(ζ: sentence) -> ζ: sentence
 
@@ -245,18 +244,26 @@ Textual Intensions
 
 .. topic:: phonics(α: word) -> description
 
-    Shorthand: ``ph(α)``
+   Full Path: ``ling.meta.phonics(α)``
 
-    If a prompt contains ``phonics(α)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``α``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+   Shorthand: ``ph(α)``
+
+   If a prompt contains ``phonics(α)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``α``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
 
 .. _plugin-functions-linguistic-meta-visual-intensions:
 
 Visual Intensions
 #################
 
+.. todo: this should probably go somewhere else.
+
 .. topic:: graph(s: description) -> matplotlib script
 
-    If a prompt contains ``graph(x)``, where ``s`` is a description, this prompt is asking for a ``matplotlib`` script to generate a plot of the concept ``s``.
+   Full Path: ``ling.meta.visual(x)``
+
+   Shorthand: ``vi(s)``
+
+   If a prompt contains ``graph(s)``, where ``s`` is a description, this prompt is asking for a ``matplotlib`` script to generate a plot of the description ``s``.
 
 Examples
 --------
