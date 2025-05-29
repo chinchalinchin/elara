@@ -1,18 +1,13 @@
-.. _language-game-modules:
+.. _language-game-plugins:
 
-Modules
+Plugins
 =======
 
-The Modules can be combined to generate different Language Game implementations. They are designed to be independent Modules that can be stacked together into different configurations to produce a variety of results.
 
 .. toctree::
     :maxdepth: 1
-    :caption: Language Game Modules
+    :caption: Language Game Plugins
 
-    01_meta
-    02_object
-    03_voice
-    04_inflection
-    05_words
-    06_rhythm
-    07_functions
+    01_lexicon
+    02_functions
+    03_procedures

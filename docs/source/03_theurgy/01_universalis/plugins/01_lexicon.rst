@@ -23,7 +23,7 @@ Variables
 These are general guidelines.
 
 1. ``x``, ``y`` and ``z`` are general variables.
-2. ``π `` is used to represent indeterminate syllables, i.e. syllabe variables. 
+2. ``π`` is used to represent indeterminate syllables, i.e. syllabe variables. 
 3. ``ι`` is used to represent indeterminate characters, i.e. character variables. 
 4. ``α`` is used to represent indeterminate words, i.e. word variables.. 
 5. ``ζ`` is used to represent indeterminant sentences, i.e. sentence variables. 

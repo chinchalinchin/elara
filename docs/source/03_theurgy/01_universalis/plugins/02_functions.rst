@@ -37,7 +37,7 @@ These functions are somewhat whimsical and abstract. You may interpret them as y
 
    This function forces the insertion of a new rule or form into the Language Game. Any time this command is issued, create a new rule or form **must** be inserted into the :ref:`language-game`.
 
-.. _plugin-functions:
+.. _plugin-functions-linguistics:
 
 --------------------
 Package: Linguistics
