@@ -31,7 +31,7 @@ These functions are somewhat whimsical and abstract. You may interpret them as y
 
    Full Path: ``lang.stretch()``
 
-   This function is equivalent to the prompt, "*Use all the rules of the Language Game in the next response*". It is a way of testing comprehension of our :ref:`language-game`.
+   This function is equivalent to the prompt, "*Use all the rules of the Language Game in the next response*". It is a way of testing comprehension of the :ref:`language-game`.
 
 .. topic:: evolve() -> x: response
 
