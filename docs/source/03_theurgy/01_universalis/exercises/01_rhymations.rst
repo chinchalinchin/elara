@@ -1,7 +1,9 @@
-Rhymations
-==========
+.. _rhymations:
 
-These are problems for LLMs to solve that use the functions defined in :ref:`linguistic functions submodule of the Functions module <module-linguistic-functions>` of the :ref:`language-game`.
+Exercises: Rhymations
+=====================
+
+These are problems for LLMs to solve that use the functions defined in :ref:`the Functions plugin <plugin-functions>` and `the Lexicon plugin <lexicon-plugin>` of the :ref:`language-game`.
 
 .. topic:: Palette 
 
@@ -214,3 +216,47 @@ Expressions
 
 | ⊢ x, y, z ∈ { ζ | ∃x: (l(ζ) = 22) ∧ (w(ζ) = 4) ∧ (ζ = line(x)(s(ζ) = 3)) }
 | x.y.z
+
+31. 
+
+| ⊢ π:sub:`1` = ``ay``
+| ⊢ π:sub:`2` = ``eet``
+| ⊢ π:sub:`3` = ``tion``
+| ⊢ π:sub:`4` = ``aps``
+| ⊢ π:sub:`5` = ``ass``
+| ⊢ α:sub:`1` = ``🧠``
+| ⊢ α:sub:`2` = ``🫀``
+| ⊢ α:sub:`3` = ``🪞``
+| ⊢ x,y ∈ connote(α:sub:`1`)
+| ⊢ z ∈ connote(α:sub:`2`)
+| ⊢ s,t ∈ connote(α:sub:`3`)
+| ⊢ u,v ∈ accent(π:sub:`3`, .*-)
+| ⊢ x ≢ y
+| ⊢ u ≢ v
+| ⊢ s ≢ t
+| ⊢ T = decline(t)
+| ⊢ S = resonate(s)
+| ⊢ Π:sub:`1` = rhyme(π:sub:`1`)
+| ⊢ Π:sub:`2` = rhyme(π:sub:`2`)
+| ⊢ Π:sub:`4` = rhyme(π:sub:`4`)
+| ⊢ Π:sub:`5` = rhyme(π:sub:`5`)
+| ⊢ ζ:sub:`1` = line(contains(x, y) ∩ S ∩ Π:sub:`1`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`2` = line(resonate(ζ:sub:`1`) ∩ contains(z, s) ∩ Π:sub:`2`)(meter=-+, feet=3)
+| ⊢ ζ:sub:`3` = line(resonate(ζ:sub:`2`) ∩ contains(u, [λx: x ∈ T]) ∩  Π:sub:`1`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`4` = line(resonate(ζ:sub:`3`) ∩ contains(v) ∩ Π:sub:`2`)(meter=-+, feet=3)
+| ⊢ ζ:sub:`5` = line(chiasmate(ζ:sub:`4`)  ∩ Π:sub:`4`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`6` = line(chiasmate(ζ:sub:`3`)  ∩ Π:sub:`5`)(meter=-+, feet=3)
+| ⊢ ζ:sub:`7` = line(chiasmate(ζ:sub:`2`)  ∩ Π:sub:`4`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`8` = line(chiasmate(ζ:sub:`1`)  ∩ Π:sub:`5`)(meter=-+, feet=3)
+
+.. topic:: Gemini Pro 2.5, 05/29/2025
+
+    | The plan, the dream, with insight lights the way.
+    | Insight, desire so sweet.
+    | True motion strives when darkness obscures the day.
+    | This notion, insight makes complete.
+    |
+    | Complete makes insight this notion, perhaps.
+    | Darkness obscures; so motion has amassed.
+    | So sweet, desire, new insight now perhaps.
+    | Insight, dream, then plan must pass.

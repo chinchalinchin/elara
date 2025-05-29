@@ -230,17 +230,16 @@ Metric Functions
     Shorthand: ``py(x)``
 
     If a prompt contains ``pyrrhic(x)``, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept ``x``
-    
+
+Extensional Functions
+---------------------
 
 .. topic:: contains(x: any, y?: any, z?: any, ...) -> set(string)
 
     Shorthand: ``cont(x, y, z, ... )``
 
     If a prompt contains ``contains(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
-
-Extensional Functions
----------------------
-
+    
 .. topic:: connote(x: concept, y?: any) -> set(word)
 
     Shorthand: ``conn(x, y)``

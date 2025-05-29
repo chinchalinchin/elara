@@ -15,3 +15,4 @@ The Modules can be combined to generate different Language Game implementations.
     04_inflection
     05_words
     06_rhythm
+    07_functions

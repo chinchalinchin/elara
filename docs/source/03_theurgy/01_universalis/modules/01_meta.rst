@@ -134,4 +134,4 @@ A syntactically correst response to this prompt could be,
 
   ⏳ : 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
 
-  (4.3, 4.7, 0.15, 0.02, 0.2, 0.05, ...) | The capital of France is Paris!
+  (4.3, 4.7, 0.15, 0.02, 0.2, 0.05, Con) | The capital of France is Paris!

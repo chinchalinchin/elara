@@ -864,10 +864,11 @@ Therefore,
 
 .. _2025-january:
 
+.. @ENGAGE with the Language Game
+
 -------
 January
 -------
-
 There are two mutually exclusive categories of :ref:`palindromes <definition-4-1-1>` in any :ref:`language <language>`: perfect and imperfect.
 
 A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <definition-4-1-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <definition-4-1-1>` in any given :ref:`language <language>`, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct.
@@ -1245,6 +1246,8 @@ We imagine :ref:`language <language>` to behave like objects, because it manifes
 
 .. _linguistic-structures:
 
+.. @ENGAGE with the Language Game
+
 Linguistic Structures
 ---------------------
 
@@ -1341,6 +1344,8 @@ The important point in this formalization is that the token and the representati
 In other words, this model seems to assert that when a speaker utters "*the cat is here*", the speaker is necessarily comprehending the word "*cat*" indirectly as the result of applying a :math:`\text{singular}()` operator to an underlying *essence*. Linguistics, it seems, has an implicit stance on the Aristotelian problem of the Universal, namely that universals exist, insofar as language is concerned.
 
 .. _creation-myths:
+
+.. @ENGAGE with the Language Game
 
 Creation Myths
 --------------
@@ -1879,7 +1884,7 @@ The crux of faith, the essential leap into the unknown, boils down to whether on
 June
 ----
 
-.. @ENGAGE
+.. @ENGAGE with the Language Game
 
 Let :math:`c(α)` be the character length of a word :math:`α`.
 
@@ -1954,7 +1959,7 @@ Consider selecting a random word with :math:`M` characters. If the event of each
 
 .. math::
 
-    P(R) = \frac{N^{\lceil M/2 \rceil}}{M^N} = \frac{1}{N^{\lfloor M/2 \rfloor}}
+    P(R) = \frac{N^{\lceil M/2 \rceil}}{N^M} = \frac{1}{N^{\lfloor M/2 \rfloor}}
 
 
 This shows, as the number of characters in a word increases, the probability of it being reflective drops exponentially. In other words, there is a combinatorial reason for reflective words occuring more frequently within the intersection of monosyllabic words. Monosyllabic words, by their nature, cannot be iambic. Moreover, monosyllabic words are finite, if it assumed every language has some upper bound for its syllabic lengths, e.g. the longest syllable in English is typically cited as 9 ("scrunched"). Once the monosyllabic words of a language have been assigned meanings, the possibility of randomly generating new reflective words diminishes rapidly. Therefore, as the number of words in a language increases, the probability of :math:`P(R | M_{-+})` decreases. 

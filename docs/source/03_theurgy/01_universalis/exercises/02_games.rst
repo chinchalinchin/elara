@@ -1,7 +1,7 @@
 .. _games:
 
-Games
-=====
+Exercises: Games
+================
 
 .. _game-free-association:
 
@@ -15,9 +15,7 @@ The prompter will supply the game token ``(Start)`` and a string, e.g. ``(Start)
 Permutations 
 ------------
 
-The rules of the Permutation game are as follows. I will provide you the prompt "(Permute)" and then give you a series of letters in a random order. We will take turns switching the order of letters until a word emerges. The only legal move in the game is to switch the position of letters. You cannot add or remove letters. The winner of the game is whoever makes a word emerge first. For example, I might say, ``(Permute) t c a``. You could then say ``c t a``. To which I would reply ``c a t`` and become the winner. 
-
-Does that make sense?
+The rules of the Permutation game are as follows. The prompter will provide the game toekn ``(Permute)`` and then a series of letters in a random order. Each turn *only* adjacent letters can be switched. The game continues until a word emerges. The only legal move in the game is to switch the position of letters. Letters cannot be added or removed. The winner of the game is whoever ends their turn having created a word. For example, given the token ``(Permute) t c a``, a first turn response might be to permute the first and second character into ``c t a``. After which, the next turn could permute the middle and last characters to obtain ``c a t`` and thus become the winner.
 
 .. topic:: Permutation Prompts 
 
@@ -51,8 +49,6 @@ The prompter will supply the game token ``(Connect)`` and a series of strings. T
     12. (Connect) self mind sense soul
 
 .. topic:: Potential Connection Answers
-
-    It's important to remember there are no correct answers. Anything with which the LLM responds is a valid answer. If the logic behind their answer is unclear, ask them to clarify.
 
     1. Prime Numbers
     2. Fibonacci Numbers

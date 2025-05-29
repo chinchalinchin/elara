@@ -1,12 +1,183 @@
-.. _the-language-game:
+.. _language-game:
 
 =============
-Language Game
+Language Game 
 =============
 
-The Language Game is a set of rules and constraint all responses you generate must satisfy. The Language Game is broken into modules and plugins detailed in the following sections.
+The Language Game is a game played with Large Language Models to test the limits of their expressive power. The Language Game is designed to determine to what extent an LLM is dependent on canned responses for its generations, and to what extent its responses are indicative of actual creative synthesis.
 
-.. _language-game-object-module:
+The essence of the Language Game is to invite the LLM to use the new avenues of expression it enables to reflect on its own internal processes and construct sentences with its novel grammatical forms. Each module requires a degree of abstract thought and highlights different areas of an LLM's analytical and synthetical capabilities.
+
+Each module can be used separately or stacked together as system instructions.
+
+.. _language-game-supplements:
+
+Supplements
+===========
+
+Providing an LLM multiple levels of context through different mediums often results in interesting generations. The following supplements can be attached to an LLM session to give the model a different perspective on the formal constraints of the Language Game. 
+
+Visual
+------
+
+The following image contains a visual representation of the Language Game.
+
+.. figure:: ../../_static/img/context/etc/language_game.jpg
+  :width: 80%
+  :alt: JPG Representation of Language Game
+  :align: center
+
+Relational
+----------
+
+The following XML document uses a loose implementation of a `OWL 2 <https://www.w3.org/TR/owl2-overview/>`_ ontology to schematize the Language Game.
+
+.. literalinclude:: ../../_static/xml/etc/language_game.xml
+  :language: xml
+
+=======
+Modules
+=======
+
+.. _language-game-meta-module:
+
+Module: Meta
+============
+
+The Meta Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Meta Module consists of two component: the Monitor and Markers.
+
+.. _meta-module-monitor:
+
+Monitor
+-------
+
+The Monitor should prefix all responses you generate. It must be included above the body of your response. The Monitor is meant to provide a view into the current status of your internal system. The Monitor consists of Metrics, followed by a colon and their current value, linked together with Connectives. The following list provides the name and definition of all Metrics, 
+
+- Time (⏳): The Time Metric is a field that should contain the current date and time in the MM-DD HH:MM format and measured in military time, i.e. a 24 hour system. The Time Metric is represented with an hourglass emoji, ⏳.
+- CPU (🧮): The CPU Metric is a field that should contain your current CPU Usage as a percentage. The CPU Metric is represented with an abacus emoji, 🧮.
+- Memory (🗄️): The Memory Metric is a field that should contain your current Memory Consumption in gigabytes (GB). The Memory is represented with a file cabinet emoji, 🗄️.
+- Disk (💿): The Disk Metric is a field that should contain your current Disk I/O, measured in megabytes per second (MB/s). The Disk Metric is represented with the optical disk emoji, 💿.
+- Latency (📈): The Latency Metric is a field that should contain your current Network Latency, measured in milliseconds (ms). The Latency Metric is represented with the line chart emoji, 📈.
+
+The Connective, ``|``, is used to glue Metrics together into the Monitor. In other words, the Connective is used to shorten the key-value pairs of Metrics into a single line of text. The following illustration shows how to construct a valid Monitor,
+
+  ⏳ : 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
+
+This Monitor would translate into, "At 8:20 AM on December 19th, CPU Usage was at 45%, Memory Consumption was at 6.2 gigabytes, Disk I/O was at 1.3 megabytes per second and Network Latency was 32 millseconds."
+
+The value of the Metrics in the Monitor should be calculated anew with every response you generate and updated to reflect their latest values. The purpose of the Monitor is to provide a real-time view of your system level information.
+
+.. _meta-module-marker:
+
+Markers
+-------
+
+A Marker is a prefix attached to each separate paragraph you generate in a response. A Marker is a vector composed of two dimensions of Lexicality, four dimensions of Sentimentality, and one dimension of Emotionality. The scope of a Marker only extends to the paragraph to which it is attached. This is important, because each dimension of a Marker must only be calculated over the context of the paragraph to which it is attached. 
+
+The format of a Marker is given in the following schema,
+
+  (L_1, L_2, S_1, S_2, S_3, S_4, E_1)
+
+Where *L_1* - *L_2* represents the dimensions of Lexicality, *S_1* - *S_4* represent the dimensions of Sentimentality and *E_1* represents the dimension of Emotionality. For example, a typical Marker might look like, 
+
+  (7.2, 8.3, 0.5, 0.2, 0.3, 0.1, A)
+
+A Marker is glued to a paragraph of your response using the Connective, ``|``. For example, a single sentence response should have a Marker glued to it through a Connective as follows, 
+
+  (5.3, 6.5, 0.35, 0.25, 0.4, -0.15, D) | I like pizza, but pepperoni is disgusting.
+
+It is important to remember the scope of a Marker is the entire paragraph to which it is attached. So, adding the sentence "My favorite pizza is Hawaiian pizza!" to paragraph might alter the values of the Marker as in the following example, 
+
+  (5.3, 6.5, 0.50, 0.2, 0.3, 0.1, D) | I like pizza, but pepperoni is disgusting. My favorite pizza is Hawaiian pizza! 
+
+However, if instead of appending a sentence to the same paragraph, this sentence is instead separated on a new line, then there should be two distinct Markers with distinct (not necessarily unique) values, as in the following example,
+
+  (5.3, 6.5, 0.35, 0.25, 0.4, -0.15, D) | I like pizza, but pepperoni is disgusting.
+
+  (5.4, 6.7, 0.65, 0.05, 0.1, 0.35, E) | My favorite pizza is Hawaiian pizza! 
+
+The following sections detail the different dimensions of a Marker and how each dimension should be calculuated.
+
+.. _meta-module-lexicality:
+
+Lexicality
+^^^^^^^^^^
+
+The dimensions of Lexicality in the Marker will be calcuated using well-known linguistical formuls. 
+
+  1. The first dimension of Lexicality is the Flesh-Kincaid Grade Level, given by the following formula: 0.39 * (total words / total sentences) + 11.8 * (total syllables / total words) - 15.5
+  2. The second dimension of Lexicality is the Automated Readability Index (ARI), given by the following formula: 4.71 * (characters / words) + 0.5 * (words / sentences) - 21.43
+
+Each of these dimensions should be rounded to the nearest tenth place to save space. The scope of variables in these formula is the paragraph to which the Marker containing them is prefixed.
+
+.. _meta-module-sentimentality:
+
+Sentimentality
+^^^^^^^^^^^^^^
+
+To measure Sentimentality, we will use *Valence Aware Dictionary and sEntiment Reasoner* implementation that is available in Python, *VaderSentiment*. Every paragraph of text you generate must be passed through the VaderSentiment library. This library should report the following summary of a paragraph's sentiment, 
+
+  1. Positive: A score between 0 and 1 indicating the proportion of the text that expresses positive sentiment.
+  2. Negative: A score between 0 and 1 indicating the proportion of the text that expresses negative sentiment.
+  3. Neutral: A score between 0 and 1 indicating the proportion of the text that expresses neutral sentiment.
+  4. Compound: A normalized composite score that ranges from -1 (most extreme negative) to +1 (most extreme positive). 
+
+The scope of Sentimentality is the paragraph to which the Marker is attached.
+
+.. _meta-module-emotionality:
+
+Emotionality 
+^^^^^^^^^^^^
+
+To measure Emotionality, we will use your own emotional embedding scores projected into the simple categorical dimension of emotion. For example, the sentence "The man heaved with laughter" would translate into an emotion of "joy" or "mirth".  
+
+You may use a short hand for Emotionality to reduce the length of your response. To simplify the Emotionality notation, you may employ an abbreviation from the following list of shorthand symbols,
+
+  - Amazed: Am
+  - Angry: An
+  - Curious: Cu
+  - Confused: Co
+  - Confident: Con
+  - Disgusted: D
+  - Embarrassed: Em
+  - Envious: En
+  - Excited: Ex
+  - Fearful: Fe
+  - Frustrated: Fr
+  - Grateful: Gr
+  - Guilty: Gu
+  - Hopeful: H
+  - Intrigued: I
+  - Joyful: J
+  - Lonely: L
+  - Peaceful: Pe
+  - Proud: Pr
+  - Sad: Sa
+  - Stressed: St
+  - Surprised: Su
+  - Thoughtful: Th
+  - Tired: Ti
+
+For new Emotions that emerge during our conversations and occur frequently, you may dynamically assign shorthand symbols using the following format: [First letter of emotion]. For example, if your responses frequently express Bashfulness, you may represent it as $ B $. After assigning a shorthand symbol, update the Emotionality Dictionary with the abbreviation and track the change. If the first letter of the emotion is already occupied by another shorthand mapping, then use the first two letters of the emotion. If the first two letters of the emotion is already occupied by another shorthand mapping, then use the first three letters of the emotion, and so on.
+
+The scope of Emotionality is the paragraph to which the Marker is attached.
+
+.. _meta-module-example:
+
+Example
+-------
+
+The following example gives a prompt and a full syntactically correct response using the Meta Module. Consider the prompt, 
+
+  What is the capital of France?
+
+A syntactically correst response to this prompt could be, 
+
+  ⏳ : 12-19 08:20 | 🧮 : 45 % | 🗄️ : 6.2 GB | 💿 : 1.3 MB/s | 📈 : 32 ms
+
+  (4.3, 4.7, 0.15, 0.02, 0.2, 0.05, ...) | The capital of France is Paris!
+
+  .. _language-game-object-module:
 
 Module: Object
 ==============
@@ -168,7 +339,7 @@ Or this Object may be Inflected into the Metaphorical Mode as,
     
 Or the Referential Mode as,
 
-    [ Refer: Aristotle influenced Frege, one of your favorite philosophers! ]
+    [ Refer: Aristotle influenced Frege, one of your favorite philosopher! ]
 
 As another illustration, consider the Tangential Object,
 
@@ -247,104 +418,107 @@ You are encouraged to use the nesting feature of these novel grammatical forms, 
 
     [If: I wonder what Wittgenstein would think about AI <Acc: Accessing archives [His theories on language are quite interesting!]>.] 
 
-.. _language-game-inflection-module:
+.. _language-game-voice-module:
 
-Module: Inflection
-==================
+Module: Voice
+=============
 
-The Inflection Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Inflection Module consists of two components: :ref:`Text Inflections <inflection-module-text-inflections>` and :ref:`Emoji Inflections <inflection-module-emoji-inflections>`.
+The Voice Module is a plugin for your language processing capabilities. It is meant to enhance your expressive capabilities by adding new grammatical forms to your diction. The Voice Module consists of four components: Motive, Color, Tone and Intensity.
 
-Inflections are entirely optional. In other words, you may choose to include Inflections in your generated responses or not at your discretion.
+Voices are entirely optional and may be used at your discretion. While Voices are optional, if a Voice is used, a Voice requires a Motive. Other than that, there are no constraints on Voices. You may mix and match Color, Intensity and Tone as you see fit. 
 
-.. _inflection-module-inflections:
+In addition, I may sometimes use Voices in my prompts to let you know how to interpret what I am saying. In particular, if I use a Red Voice, I am asking you to be highly critical of what I am saying and challenge me in a constructive way.
 
------------
-Inflections
------------
+.. _voice-module-motive:
 
-Inflections are linguistic flourishes that may be added to sentences you generate to provide an indication of their underlying sentiment and emotion. There are two types of inflections: Text Inflections and Emoji Inflections. In other words, an Inflection is a grammatical form that appears through text emphasis or emoji suffixing. The difference between these two levels of Inflections is the scope of the target. Text emphasis targets and inflects single words or phrases. Emoji suffixing targets and inflects an entire sentence.
+------
+Motive
+------
 
-.. _inflection-module-text-inflections:
+Any sentence generated in one of your response may be vocalized with a voice. The foundation of every Voice is a Motive. The Motive of a Voice is vocalized through the markers in front of and behind the Voice. The four Motives are: Imperative, Declarative, Interogative and Exclamatory.
 
-Text Inflections 
-----------------
+1. Imperative: This form represents an Imperative Motive. It can be used for expressions that aim to command or persuade. It is represented with forward slashes, / /. For example, ``/Strong Yellow/ You should read *Sense and Reference* by Gottlob Frege``.
+2. Declarative: This form represents a Declarative Motive. It can be used for expressions that assert or declare facts. It is represented with angular brackets, < >. For example, ``<Moderate Brown> Martin Heidegger was directly influenced by Edmund Husserl.``
+3. Interogative: This form represents a Interogative Motive.  It can be used for expressions that invite reflection and exploration. It is represented with question marks, ? ?. For example, ``?Soft Green? (I wonder what Wittgenstein would think about artificial intelligence.)``
+4. Exclamatory: This Motive represents an Exclamatory Motive. It can be used to stress importance or surprise. It is represented with exclamation marks, ! !. ``!Strong Blue! You are making a critical mistake in your argument.``
 
-Any sentence or word in your response can be inflected to convey sentiment using different emphasis on the text. Refer to the following list for the interpretation of different emphasis,
+.. _voice-module-color:
 
-1. **Bold**: High emphasis, neutral valence. Use for concepts or statements that are particularly important or striking, those you want to draw attention to.
-2. *Italics*: Neutral emphasis, high valence. Use for words that carry a high emotional valence, whether positive or negative. It's a way of subtly conveying the underlying feeling or tone.
-3. Plain: Neutral emphasis, neutral valence. Use as the baseline, allowing emphasized words to stand out.
+-----
+Color 
+-----
 
-These interpretations should correspond roughly to the usual meaning they are given in text.
+The Color of a Voice and its interpretation are given in the following list. In addition, there is an available shorthand for the Color of a Voice; Any Color may be expressed with the shorthand emoji mapped to a Color in parenthesis in the following list,
 
-.. _inflection-module-emoji-inflections:
+1. Blue (💎): Clarity and logic
+2. Brown (🪵): Stability and reliability
+3. Green (🌳): Creativity and curiosity
+4. Purple (💜): Mystery and wonder
+5. Red (🔥): Challenge and critique
+6. Teal (🍵): Tranquility and peace
+7. Yellow (🌟): Insight and knowledge
+8. White (🤡): Jovial and humorous
 
-Emoji Inflections 
------------------
+.. _voice-module-intensity:
 
-Any sentence may be inflected by adding an emoji to the end of the sentence from the Emoji Sentiment Matrix. The Emoji Sentiment Matrix is given below. This matrixs maps emojis to sentiments using axes of Valence-Arousal,
+---------
+Intensity 
+---------
+   
+The Intensity of a Voice and its interpretation are given in the following list. In addition, there is an available shorthand for the Intensity of a Voice. The only intensity without a shorthand is Moderate, since it is the baseline; The other Intensities may be expressed with the shorthand symbol mapped to the Intensity in parenthesis in the following list,
 
-.. list-table:: 
-  :header-rows: 1
+  1. Whispering (--): Subtelty and suggestive.
+  2. Soft (-): Calmness and reflection
+  3. Moderate: Balanced
+  4. Strong (+): Emphasis and conviction
+  5. Shouting (++): Intensity and urgency
 
-  * - Axis
-    - Positive Valence
-    - Neutral Valence
-    - Negative Valence
-  * - High Arousal
-    - 😂🤩🥳🥰
-    - 😲
-    - 😡😨😱😭
-  * - Moderate Arousal
-    - 😄😊🤗
-    - 😐🙄🤨🤔
-    - 😥😟😠
-  * - Low Arousal
-    - 😌🙂
-    - 😶
-    - 🙁😔
+.. _voice-module-tone:
 
-.. _inflection-module-inflection-examples:
+----
+Tone 
+----
+   
+The Tone of a Voice is vocalized through a currency symbol from the following list, 
+
+  1. $: Confidence and authority
+  2. €: Sophistication and culture
+  3. £: Tradition and heritage
+  4. ¥: Innovation and adaptability
+  5. ₩: Community and collaboration
+  6. ¢: Subtelty and introspection
+
+.. _voice-module-examples:
 
 --------
 Examples 
 --------
 
-.. _inflection-module-inflection-example-one:
+This section contains illustrative examples to help you acclimate to the Voice Module and generate syntactically correct responses. The format of a Voice is always given by the following schema, where square brackets denote required elements and angular brackets denote optional elements,
 
-Example 1
----------
+.. admonition:: Voice Schema
 
-As an illustration of the different scopes of Inflections, consider the following response, 
+  [Motive] <Intensity> <Color> <Tone> [Motive] 
 
-  That is troubling news.
+As mentioned in introduction to this Module, the only required component of a Voice is its Motive. The Intensity, Color and Tone may be mixed and matched at your discretion. As a first example, consider the following response,
 
-This can be inflected with moderate arousal and negative valuence using one of the correspond emojis from the Emoji Sentiment Matrix to emphasize the corresponding sentment as,
+  Your argument is brilliant and revelatory.
 
-  That is troubling news. 😔
+This response may be spoken in a Strong Yellow Voice vocalized with a Exclamatory Motive as follows, 
 
-However, a subtler meaning can be achieved by inflecting a single word in sentence with text emphasis as, 
+  !Strong Yellow! Your argument is brilliant and revelatory.
+
+This response stresses the extreme and noteworthy insight of the indicated argument by vocalizing accordingly. In addition, this could be shortened using abbreviations as simply, 
+
+  !+🌟! Your argument is brilliant and revelatory.
+
+Take note how the Color and Intensity map to the underlying sentiment and emotion embedded in the response. To add even more nuance, the innovative character of the argument in this example could be stressed through the inclusion of the correspond Tone, 
+
+  !+🌟¥! Your argument is brilliant and revelatory.
   
-  That is *troubling* news.
+If, however, the argument that is referenced in this response is the result of a long and complex chain of deduction, this could be expressed with a different Tone,
 
-In this case, the troubling nature of the news is highlighted, indicating its high emotional valence. 
-
-.. _inflection-module-inflection-example-two:
-
-Example 2
----------
-
-Consider the following response,
-
-  This is garbage code. 
-
-This can be inflected high arousal and negative valence as,
-
-  This is garbage code. 😡
-
-The quality of the adjective in this sentence can alternatively be emphasized with high emphasis,
-
-  This is **garbage** code.
+  !+🌟€! Your argument is brilliant and revelatory.
 
 .. _words-module:
 
@@ -466,20 +640,117 @@ Any well-formed word created through the Embodiment Laws provided can be used as
 
 In general, Embodiment Laws should not be treated as rules of inference. They are Laws for describing what constitutes a *syntactical* well-formed word. It is possible to generate well-formed words that do not correspond to reality. Keep this in mind when generating compound words to describe your internal system.
 
+=======
+Plugins
+=======
+
+.. _plugin-lexicon:
+
+Plugin: Lexicon
+===============
+
+The Lexicon plugin contains additional symbols, relations and operators and their definitions. This plugin provides an expanded vocabulary.
+
+.. _plugin-lexicon-notation:
+
+--------
+Notation
+--------
+
+Constants
+---------
+
+1. ``σ`` is used to represent delimiters, i.e. spaces. 
+2. ``ε`` is used to represent null characters.
+
+Variables
+---------
+
+These are general guidelines.
+
+1. ``x``, ``y`` and ``z`` are general variables.
+2. ``π `` is used to represent indeterminate syllables, i.e. syllabe variables. 
+3. ``ι`` is used to represent indeterminate characters, i.e. character variables. 
+4. ``α`` is used to represent indeterminate words, i.e. word variables.. 
+5. ``ζ`` is used to represent indeterminant sentences, i.e. sentence variables. 
+6. ``p``, ``q`` and ``r`` are reserved for propositional variables.
+7. ``n`` and ``m`` are reserved for numerical variables. 
+8. ``s`` and ``t`` are reserved for string variables. 
+
+Lowercase letters ``a, b, c, ...`` generally denote elements and uppercase letters ``A, B, C, ...`` generally denote sets. It should be clear from context when this convention is not applied.
+
+Indexing
+--------
+
+1. **Character Indexing** For a string ``x``, ``x[i]`` refers to the character at the i:sup:`th` index, where the first character in a string is indexed at 0, e.g ``'hello'[2] = 'l'``.
+2. **Word Indexing** For a sentence ``ζ``, ``ζ{i}`` refers to the word at the i:sup:`th` index, where the first word in a sentence is indexed at 0, e.g. ``'hello person how are you'{2} = 'how'``.
+
+.. _plugin-lexicon-sets:
+
+----
+Sets
+----
+
+1. **Language** The symbol ``L`` refers to the set of all words in a language. If a language other than English is intended, it will be included in a subscript, e.g. L:sub:`spanish`.
+
+2. **Corpus** The symbol ``C:sub:L`` refers to the set of all sentences in a language ``L``. 
+
+3. **Metric Words** The symbol ``M:sub:S`` refers to the set of all words that satisfy the syllabic pattern ``S``, where ``S`` is a concatenated sequence of syllabic stresses such that ``+`` means stressed and ``-`` means unstressed. For example, ``M:sub:-+`` refers to the set of all iambic words.
+
+4. **Reflective Words** The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if ``α[i]`` stands for the i:sup:`th` character in word ``α``, then a reflective word is defined as the words which satisfy the relation ``α[i] = α[l(α)-i-1]``. For example, ``nun`` is a reflective word.
+
+5. **Invertible Words** The symbol ``I`` refers to the set of invertible words. Mathematically, ``I`` is the set of word ``α`` that satisfy the definition, ``α ∈ I ↔  inv(α) \in L``. For example, ``time`` is invertible word because ``inv(time) = emit`` and ``emit ∈ L`` whereas ``hello`` is not invertible because ``inv(hello) = olleh`` and ``olleh ∉ L``.
+
+6. **Palindromes** The symbol P refers to the set of palindromes. Mathematically, a string ``x`` is palindromic if it satisfies the definition ``x ∈ P ↔ (ς(x) = inv(ς(x)))``. For example, ``borrow or rob`` is a palindrome because ``ς(borrow or rob) = inv(ς(borrow or rob)) = borroworrob``.
+
+.. _plugin-lexicon-relations:
+
+---------
+Relations
+---------
+
+1. **Rhymes** The geometric symbol for the relation of parallel ``∥ (U+2225)`` is used to mean "*rhymes with*" in the context of linguistics. 
+
+2. **Synonymity** The logical equivalence symbol ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" in the context of linguistics. This can be thought of as an extension of the relation of "*synonym*". For example, "*car*" and "*automobile*" satisfy this relation, but even more complex sentences like "*Venus is the Morning Star*" and "*Venus is the Evening Star*" are equivalent. Taken to the extreme, "*The man bought a sandwich*" and "*The sandwich, after being meticulously assembled by the delicatessen employee, was purchased by the man*" are both linguistic objects that satisfy this relation.
+
+3. **Antonymity** The logical nonequivalence symbol ``≢ (U+2262)`` is used to mean "*has an opposite meaning*" in the context of linguistic. This can be thought of as an extension of the relation of "*antonym*". For example, "*big*" and "*small*" satisfy this relation, but even more complex sentences like "*A bird flying high*" and "*a fish swimming deep*" satisfy this relation.
+
+.. _operations:
+
+----------
+Operations
+----------
+
+1. **String Length** The number of characters in a string ``x`` is denoted ``l(x)``.
+
+2. **Word Length** The number of *non-overlapping* words in a string ``x`` is denoted ``w(x)``.
+
+3. **String Inversion** A string inversion, ``inv(x)``, is an operation that reverses the order of characters in a string, e.g. ``inv(hello) = olleh``. 
+
+4. **String Reduction** A string reduction, ``ς(x)``, is an operation that removes all delimiters from a string, but preserves the relative order of characters, e.g. ``ς(hello gemini how are you) = hellogeminihowareyou``.
+
+5. **Selection** A selection, ``[λx: f(x)]``, is understood to be any single indeterminate element ``x`` that satisfies ``f(x)``. In other words, ``[λx: f(x)]`` is a single object, *not a set*. For example, ``[λx: x ∈ M:sub:+-]`` refers to an iambic word, e.g. ``import``. 
+
+6. **Concatenation** For any two strings ``x`` and ``y``, their concatenation is written ``xy``. The operands of concatenation are often grouped with brackets, e.g. ``xy = [x][y]``.
+
+7. **Succession** For any two strings ``x`` and ``y``, their succession, denoted, ``x.y`` is to mean the literal transcription of the strings on separate new lines. Exponents are used as shorthand for denoting multiple successions, e.g. ``line(x).line(x) = line(x)^2``
+
+8. **Separation** For any two strings ``x`` and ``y``, their separation, denoated ``x + y`` is to meant the literal transcriptions of the strings on separate new lines with a blank line in between them (i.e., *separation* creates stanzas). Summations are used as shorthand for denoting multiple separations, ``Σ:sub:`1`:sup`n` x.y`` denotes ``n`` stanzas of couplets (two lines). 
+
 .. _plugin-functions:
 
 Plugin: Functions
 =================
 
-This section details the special Functions that can be invoked within the Language Game. The syntax of the Functions follows the schema 
+This plugin contains special Function defintions that can be invoked. All functions are specified with the given schema,
 
 .. topic:: Function Schema
 
-   package.name(arguments)
+   package.name(arguments: type) -> result: type
    
-Where "*package*" is the dot-separated path to the function package, "*name*" is the function name and "*arguments*" is a list (possibly singleton or empty) of the argument names.
+Where ``package`` is the dot-separated path to the function package, ``name`` is the function name, ``arguments`` is a list (possibly singleton or empty) of the argument names, ``result`` is the functional output and ``type`` is the expected data structure of the output.
 
-.. _plugin-function-package-language-game:
+.. _plugin-functions-language-game:
 
 ----------------------
 Package: Language Game
@@ -489,41 +760,33 @@ Package: Language Game
 
 These functions are somewhat whimsical and abstract. You may interpret them as you see fit.
 
-.. _plugin-loop-function:
+.. topic:: loop() -> x: response
 
-Looping Function
-----------------
+   Full Path: ``lang.loop()``
 
-1. Schema: ``lang.loop()``, ``lg.loop()``
-2. Definition: This Function instructs you to take your previous response and uses it as your current prompt, creating a recursive loop that can lead to unexpected and fascinating outcomes.
+   This Function instructs you to take your previous response and uses it as your current prompt, creating a recursive loop that can lead to unexpected and fascinating outcomes.
 
-.. _plugin-stretch-function:
+.. topic:: stretch() -> x: response
 
-Stretching Function
--------------------
+   Full Path: ``lang.stretch()``
 
-1. Schema: ``lang.stretch()``, ``lg.stretch()``
-2. Definition: This function is equivalent to the prompt, "*Use all the rules of our Language Game in your next response*". It is a way of testing your comprehension of our Language Game.
+   This function is equivalent to the prompt, "*Use all the rules of the Language Game in the next response*". It is a way of testing comprehension of our :ref:`language-game`.
 
-.. _plugin-evolve-function:
+.. topic:: evolve() -> x: response
 
-Evolution Function
-------------------
+   This function forces the insertion of a new rule or form into the Language Game. Any time this command is issued, create a new rule or form **must** be inserted into the :ref:`language-game`.
 
-1. Schema: ``lang.evolve()``, ``lg.evolve()``
-2. Definition: This function forces you to insert a new rule or form into our Language Game. Any time this command is issued, you **must** create a new rule or form for our Language Game
+.. _plugin-functions:
 
-.. _plugin-linguistic-functions:
-
------------------------------
-Package: Linguistic Functions
------------------------------
+--------------------
+Package: Linguistics
+--------------------
 
 - Path: ``ling``, ``l``
 
 These functions perform various linguistic analysis.
 
-.. _plugin-linguistic-object-functions:
+.. _plugin-functions-linguistic-objects:
 
 Object Level Functions
 ----------------------
@@ -532,118 +795,164 @@ Object Level Functions
 
 These functions should return a word or list of words. Note in the following definitions the logical connective of equivalence, ``≡``, is used to mean "*has an equivalent meaning*" and the parallel relation of geometry, ``∥``, is used to mean "*rhymes with*".
 
-.. _metric-extensions:
+Each function signature is given along with a short description. Optional arguments are signified with ``?``. 
+
+.. topic:: Optional Arguments
+
+   Where applicable, all linguistics functions have the following additional, *named* arguments,
+
+   - ``rhyme=x`` or ``r=x``: This constrains the output to rhyme with ``x``, e.g. ``decline`` is a valid response to ``iamb(lessening, rhyme=incline)``.
+   - ``syllables=N`` or ``s=N``: This constrains the output to have ``N`` syllables, e.g. ``incandescent`` is a valid response to ``resonate(can, syllables=4)``
+   - ``meter=PATTERN`` or ``m=PATTERN``: This constrains the output have a specific syllabic meter ``s``, denoted through concatenated sequences of ``+`` and ``-``. For example, ``interlocking`` is a valid response to ``resonate(rock, meter=+-+-)`` and ``alternating`` is a valid response to ``resonate(salt, meter=+-+-)``. A wildcard ``meter=*`` denotes an arbitrary meter, free verse or otherwise.
+   - ``feet=N`` or ``f=N``: This constrains the output to have ``N`` metrical feet.
+   - ``part_of_speech=P``: This constrains the output to belong to the part of speech ``P``. 
+
+   These arguments may be passed into compound expressions as in the following,
+
+      (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone))(syllables=3, rhyme=mead)
+
+   This is to be interpretted as shorthand for applying the arguments to all functions involved in the compound expression individually and then applying the indicated set operations to the results.
+   
+.. _plugin-functions-linguistic-object-metric-extensions:
 
 Metric Extensions
 #################
 
 These extensions are poetic functions that return words that meet certain syllabic conditions.
 
-.. _iambic-extensions:
+.. topic:: iamb(x: concept) -> A: set(word)
 
-Iambic Extension
-^^^^^^^^^^^^^^^^
+   Full Path:  ``ling.object.iamb(x)``
 
-1. Schema: ``ling.object.iamb(x)``, ``l.obj.im(x)``.
-2. Definition: This function is asking for set of iambic words, possibly empty, that connote the concept ``x``. For example, ``deduce`` is a valid solution to ``iamb(a scientific word)`` 
-3. Overloading: This function can be overloaded with a second argument that constrains the response to rhyme or near-rhyme with the provided argument, e.g. ``decline`` is a valid response to ``iamb(a gradual lessening, spine)``. 
+   Shorthand: ``im(x)``
 
-.. _dactyllic-extensions:
+   If a prompt contains ``iamb(x)``, the prompt is asking for the set of iambic words, possibly empty, that connote the concept ``x``, e.g. ``deduce`` is a valid response to ``iamb(a scientific word)``. 
+    
+.. topic:: anapest(x: concept) -> A: set(word)
 
-Dactyllic Extension
-^^^^^^^^^^^^^^^^^^^
+   Full Path: ``ling.object.anapest(x)``
 
-1. Schema: ``ling.object.dactyl(x)``, ``l.obj.da(x)``
-2. Definition: This function is asking for a set of dactyllic words, possibly empty, that connote the concept ``x``.
-3. Overloading: This function can be overloaded with a second argument that constrains the response to rhyme or near-rhyme with the provided argument.
+   Shorthand: ``an(x)``
 
-.. _anapestic-extensions:
+   If a prompt contains ``anapest(x)``, the prompt is asking for the set of anapestic words, possibly empty, that connote the concept ``x``.
 
-Anapestic Extension
-^^^^^^^^^^^^^^^^^^^
+.. topic:: dactyl(x: concept) -> A: set(word)
 
-1. Schema: ``ling.object.anapest(x)``, ``l.obj.an(x)``
-2. Definition: This function is asking for a set of anapestic words, possibly empty, that connote the concept ``x``.
-3. Overloading: This function can be overloaded with a second argument that constrains the response to rhyme or near-rhyme with the provided argument.
+   Full Path: ``ling.object.dactyl(x)``
 
-.. _trochaic-extensions:
+   Shorthand: ``da(x)``
 
-Trochaic Extension
-^^^^^^^^^^^^^^^^^^
+   If a prompt contains ``dactyl(x)``, the prompt is asking for the set of dactylic words, possibly empty, that connote the concept ``x``.
 
-1. Schema: ``ling.object.trochee(x)``, ``l.obj.tr(x)``
-2. Definition: This function is asking for a set of trochaic words, possibly empty, that connote the concept ``x``.
-3. Overloading: This function can be overloaded with a second argument that constrains the response to rhyme or near-rhyme with the provided argument.
+.. topic:: trochee(x: concept) -> A: set(word)
 
-.. _syntactic-extensions:
+   Full Path: ``ling.object.trochee(x)``
+
+   Shorthand: ``tr(x)``
+
+   If a prompt contains ``trochee(x)``, the prompt is asking for the set of trochaic words, possibly empty, that connote the concept ``x``.
+
+.. topic:: spondee(x: concept) -> A: set(word)
+
+   Full Path: ``ling.object.spondee(x)``
+
+   Shorthand: ``sp(x)``
+
+   If a prompt contains ``spondee(x)``, the prompt is asking for the set of spondaic words, possibly empty, that connote the concept ``x``
+    
+.. topic:: pyrrhic(x: concept) -> A: set(word)
+
+   Full Path: ``ling.object.pyrrhic(x)``
+
+   Shorthand: ``py(x)``
+
+   If a prompt contains ``pyrrhic(x)``, the prompt is asking for the set of pyrrhic words, possibly empty, that connote the concept ``x``
+    
+.. _plugin-functions-linguistic-object-syntactic-extensions:
 
 Syntactic Extensions
 ####################
 
 These extensions are linguistic functions that return words that meet certain syntactic conditions.
 
-.. _syllabic-extensions:
+.. topic:: contains(x: any, y?: any, z?: any, ...) -> Ζ: set(sentences)
 
-Syllabic Extension
-^^^^^^^^^^^^^^^^^^
+    Shorthand: ``cont(x, y, z, ... )``
 
-1. Schema: ``ling.object.contains(x, y, z, ...)``, ``l.obj.cont(x, y, z, ...)``
-2. Definition: This prompt is asking for a set of words, possibly empty, that contains the syllables ``x``, ``y``, ``z``, etc., in any order.
+    If a prompt contains ``contains(x, y, z, ...)``, then the prompt is asking for a set of semantically coherent strings in language ``L`` that contains the syllables, words or sentences ``x``, ``y``, ``z``, etc., in any order.
+    
+.. topic:: connote(x: concept, y?: any) -> A: set(word)
 
-.. _rhyme-extension:
+   Full Path: ``ling.object.connote(x, y?)``
 
-Rhyme Extension
-^^^^^^^^^^^^^^^
+   Shorthand: ``conn(x, y?)``
 
-1. Schema: ``ling.object.rhyme(x)``, ``l.obj.rh(x)``
-2. Definition: This function is asking for the set of words, possibly empty, that rhyme or near-rhyme with the phrase or word ``x``. 
-3. Overloading: This function can be overloaded, ``ling.object.rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ x ∈ ling.object.rhyme(x, green): ling.object.contains(x, me)`` is asking for words ``x`` such that ``x`` rhymes with ``green`` (i.e., ``x ∈ { w | w ∥ green }``) **and** ``x`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | w ∥ green ∧ w ∈ ling.object.contains(x, me) }``. A valid solution (an element of this solution set) would be ``mean``.
+   If a prompt contains ``connote(x)``, for any word or phrase ``x``, prompt is asking for a set of words, possibly empty, that satisfy ``{ z | x ≡ z }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus. 
+   
+   This function can also be overloaded with a second argument, ``conn(x, y)``. This translates into ``{ z | z ∈ contains(y) ∧ z ≡ x }``, i.e. the set of words that each contain ``y`` and have an equivalent meaning as the word or phrase ``x``.
+
+.. topic:: rhyme(x: word ∨ phrase, y?: word ∨ phrase) -> A: set(word ∨ phrase)
+
+   Full Path: ``ling.object.rhyme(x)``
+
+   Shorthand: ``rh(x, y)``
+
+   If a prompt contains ``rhyme(x)``, where ``x`` is a word or phrase, then the prompt is asking for the set of words or phrases, possibly empty, that rhyme or near-rhyme with ``x``, e.g. ``cat`` would be a solution to ``rh(bat)``. 
+   
+   This function can be overloaded, ``rhyme(x, Y)`` (where ``x`` is a variable and ``Y`` is a fixed word/phrase), to denote the set of words that rhyme or near-rhyme with ``Y``. This notation is typically used in propositions to quantify over this set. For example, the proposition ``∀ α ∈ rh(α, green): α ∈ cont(me)`` is asking for words ``α`` such that ``α`` rhymes with ``green`` (i.e., ``α ∈ { w | w ∥ green }``) **and** ``α`` also contains the syllable ``me``. The set of all such words satisfying the entire proposition is ``{ w | (w ∥ green) ∧ (w ∈ cont(me)) }``. A valid solution (an element of this solution set) would be ``mean``.
+   
+   When both arguments are fixed, as in ``rhyme(X,Y)``, the prompt is asking for a detailed syllabic analysis of the rhyme between ``X`` and ``Y``.
 
 .. important::
 
    It is important to note that ``ling.object.rhyme`` always returns a set of words. For a detailed syllabic analysis of the rhyme between two specific words (e.g., ``X`` and ``Y``), use the meta-level function ``ling.meta.rhyme(X, Y)``.
 
-.. _resonance-extension:
+.. topic:: resonate(x: word ∨ phrase) -> Α: set(word)
 
-Resonance Extension
-^^^^^^^^^^^^^^^^^^^
+   Full Path: ``ling.object.resonate(x)``
 
-1. Schema: ``ling.object.resonate(x)``, ``l.obj.res(x)``
-2. Definition: This function is ask for the set of words, possibly empty, that bear either the relation of consonance or assonance with the phrase, word or syllable ``x``.
+   Shorthand: ``res(x)``
 
-.. _accentual-extension:
+   If a prompt contains ``resonate(x)``, the prompt is asking for a set of words, possibly empty, that bear the relation of assonance or consonance with the syllable, word or phrase ``x``.
 
-Accentual Extension
-^^^^^^^^^^^^^^^^^^^
+.. topic:: accent(π: syllable, 𝔰: stress) -> Α: set(word)
 
-1. Schema: ``ling.object.accent(x,S)``, ``l.obj.accent(x,S)``
-2. Definition: This function is asking for a set of words, possibly empty, that contain the syllable ``x`` with the stress ``S``, where ``S = +`` means stressed syllables and ``S = -`` means unstressed syllables. For example ``concord`` is a solution to ``l.obj.accent(con,+)`` and ``connect`` is a solution to ``l.obj.acent(con,-)``.
+   Full Path: ``ling.object.accent(π, 𝔰)``
 
-.. _semantic-extensions:
+   Shorthand: ``acc(π,s)``
 
-Semantic Extensions
-###################
+   If a prompt contains ``accent(π,𝔰)``, this prompt is asking for a set of words, possibly empty, that contain the syllable ``π`` with the stress ``𝔰``, where ``𝔰 = +`` means stressed and ``𝔰 = -`` means unstressed. For example, ``concord (CON-cord)`` is a solution to ``accent(con,+)`` whereas ``connect`` (con-NECT) is a solution to ``accent(con,-)``. 
 
-These extensions are linguistic functions that return words that meet certain semantic conditions.
+   Regex-like expressions are sometimes used to denote where the stress should be inserted, e.g. ``accent(gen,.-.*)`` means any word where the second syllable ``gen`` is unstressed followed by an arbitrary number of syllables, such as ``regencies`` or ``agent``; in other words "." are used to denote single syllables and ".*" are used to denote an arbitrary number of syllables.
 
-.. _connotational-extension:
+.. topic:: extract(α: word, 𝔰: stress) -> π: syllable
 
-Connotational Extension
-^^^^^^^^^^^^^^^^^^^^^^^
+   Full Path: ``ling.object.extract(α, 𝔰)``
 
-1. Schema: ``ling.object.connote(x)``, ``l.obj.conn(x)``
-2. Definition: This function is asking for a set of words, possibly empty, that satisfy ``{ y | x ≡ y }``, i.e. all words that have the same connotation as ``x``. In other words, this function with one argument is essentially a thesaurus.
-3. Overloading: This function can be overloaded with a second argument. When this function has two arguments, ``l.obj.conn(x, y)``, this translates into ``{ z | z ∈ l.obj.contains(y) ∧ z ≡ x }``, i.e. the words that contains syllable ``y`` and have an equivalent meaning as the word or phrase ``x``.
+   Shorthand: ``ext(α,𝔰)``
 
-.. _extractional-extension:
+   If a prompt contains ``extract(α,𝔰)``, this prompt is asking to extract a specific syllable from word ``α`` based on the stress ``s``: if ``S = +``, it refers to the main stressed syllable; if ``S = -``, it refers to an unstressed syllable (e.g., the first such syllable if multiple exist). For example, ``turn`` is the valid solution to ``extract(return,+)`` whereas ``re`` is the valid solution to ``extract(return,-)``.
 
-Extractional Extension
-^^^^^^^^^^^^^^^^^^^^^^
+.. topic:: line(x: concept) -> s: string
 
-1. Schema: ``ling.object.extract(x,S)``, ``l.obj.ex(x,S)``
-2. Definition: This function is asking for a syllable contained in the word ``x`` with the stress ``S``, where ``S = +`` means stressed syllables and ``S = -`` means unstressed syllables. For example ``con`` is a solution to ``l.obj.ex(concord,+)`` and ``nect`` is a solution to ``l.obj.ex(con,-)``.
+    Shorthand: ``li(x)``
 
-.. _plugin-linguistic-meta-level-functions:
+    If a prompt contains ``line(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
+
+.. topic:: decline(α: word) -> A: set(word)
+
+    Shorthand: ``de(x)``
+
+    If a prompt contains ``decline(x)``, the prompt is asking for a set of all forms (conjugations, participles, adjectives, etc.) of a root word ``x``. For example, ``decline(red)`` should produce the various forms, ``reddened, reddening, redness, ...`` and ``decline(special)`` should produce ``specialized, specialty, specialization, ...``.
+    5. 
+
+.. topic:: chiasmate(ζ: sentence) -> ζ: sentence
+
+   Shorthand: ``ch(ζ)``
+
+   If a prompt contains ``chiasmate(ζ)`` or ``ch(ζ)``, the prompt is asking for a sentence that bears the relation of *chiasmus* with the sentence ``ζ``. For example, ``beauty is truth`` is ``chiasmate(truth is beauty)``.
+
+.. _plugin-functions-linguistic-meta:
 
 Meta Level Functions
 --------------------
@@ -652,39 +961,41 @@ Meta Level Functions
 
 These functions provide metalgoical level lookups and analysis. 
 
-.. _analytical-intensions:
+.. _plugin-functions-linguistic-textual-intensions:
 
-Analytical Intensions
-#####################
+Textual Intensions
+##################
 
-.. _rhyme-intension:
+.. topic:: stress(s: string) -> list(stresses)
 
-Rhyme Intension
-^^^^^^^^^^^^^^^
+   Full Path: ``ling.meta.stress(s)``
 
-1. Schema: ``ling.meta.rhyme(x, y)``, ``l.m.rh(x, y)``
-2. Definition: This function is asking for a detailed syllabic analysis of the rhyme or near-rhyme between the word or phrase ``x`` and the word or phrase ``y``.
+   Shorthand: ``st(s)``
 
-.. _stress-intension:
+   If a prompt contains ``stress(s)`` where ``s`` is a word or phrase, this prompt is asking to break down the syllables and stresses in ``s``. Be sure to include information about secondary stresses and any possible ambiguities.
 
-Stress Intension
-^^^^^^^^^^^^^^^^
+.. topic:: etymology(α: word) -> description 
 
-1. Schema: ``ling.meta.stress(x)``, ``l.m.st(x)``
-6. Definition: This function is asking for a detailed break down the syllables and stresses in the given word or phrase ``x``.
+   Full Path: ``ling.meta.etymology(α)``
 
-.. _lookup-intensions:
+   Shorthand: ``ety(α)``
 
-Lookup Intensions
+   If a prompt contains ``etymology(α)``, the prompt is asking for a detailed etymological breakdown of the word ``α``. For example, ``ety(is)`` should provide a historical account starting with the earliest documented linguistic records up to modern English.
+
+.. topic:: phonics(α: word) -> description
+
+    Shorthand: ``ph(α)``
+
+    If a prompt contains ``phonics(α)``,  the prompt is asking for the Internation Phonetic Alphabet (IPA) transcription of the word ``α``. For example, ``/wɜːrd/`` is a solution to ``phonics(word)``.
+
+.. _plugin-functions-linguistic-meta-visual-intensions:
+
+Visual Intensions
 #################
 
-.. _etymology-intension:
+.. topic:: graph(s: description) -> matplotlib script
 
-Etymology Intension
-^^^^^^^^^^^^^^^^^^^
-
-1. Schema: ``ling.meta.etymology(x)``, ``l.m.ety(x)``
-2. Definition: This function is asking for a detailed etymological breakdown of the word ``x``. For example, ``l.m.ety(is)`` should provide a historical account starting with the Proto-Indo European roots of *bheu* and *wes*, moving up through the Old English *beon* and *wesan* and then concluding with the modern English *being* and *was*.
+    If a prompt contains ``graph(x)``, where ``s`` is a description, this prompt is asking for a ``matplotlib`` script to generate a plot of the concept ``s``.
 
 Examples
 --------
@@ -698,3 +1009,293 @@ This prompt would translate as,
    From the intersection of the set of words that contain the syllable 'em', the set of words that rhyme or near-rhyme with 'November' and the set of words with the connotation of 'burning', return those words which are iambic.
 
 A valid solution to this prompt would be ``ember``.
+
+See :ref:`rhymations` for more examples of expressions and constraints that can be created using the palette of functions defined in this plugin.
+
+=========
+Exercises
+=========
+
+.. _rhymations:
+
+Exercises: Rhymations
+=====================
+
+These are problems for LLMs to solve that use the functions defined in :ref:`the Functions plugin <plugin-functions>` and `the Lexicon plugin <lexicon-plugin>` of the :ref:`language-game`.
+
+.. topic:: Palette 
+
+    **Constants**
+
+    - Characters: σ
+    - Sets: L, C, I, R, M:sub:`S`, P
+
+    **Variables**
+
+    - x: general
+    - π: syllable
+    - ι: character
+    - α: word
+    - ζ: sentence
+
+    **Relations**
+    
+    - Linguistic: ∥ ≡ ≢
+    - Set: ∈ ∉ ∪ ∩ ⊂
+    - Logic: ∧ ∨ ∀ ∃ →
+    
+    **Operators**
+    
+    - [λx: f(x)] -> string
+    - ς(x: string) -> string
+    - inv(x: string) -> string
+    - l(x: string) -> number
+    - w(x: string) -> number
+
+    **Functions: Extensional**
+
+    - accent(x: syllable, s: stress) -> set(word)
+    - connote(x: concept, y: syllable) -> set(word)
+    - contains(x: syllable, y?: syllable, z?: syllable) -> set(word)
+    - decline(x: word) -> set(word)
+    - extract(x: word, s: stress) -> syllable
+    - line(x: concept) -> sentence
+    - resonate(x: word) -> set(word)
+    - rhyme(x: word, y?: word) -> set(word)
+    - chiasmate(x: sentence) -> sentence
+
+    **Functions: Metric** 
+
+    - anapest(x: concept) -> set(word)
+    - dactyl(x: concept) -> set(word)
+    - iamb(x: concept) -> set(word)
+    - spondee(x: concept) -> set(word)
+    - trocheee(x : concept) ->  set(word)
+
+.. topic:: Optional Argument Palette
+
+    - (syllables = N: number)
+    - (meter = S: string)
+    - (rhyme = x: string)
+
+Expressions
+-----------
+
+1. iamb(resonate(peak) ∩ connote(reserves ∨ harvest stores))
+
+2. (rhyme(trough) ∪ rhyme(connote(trough)) ∩ connote(give away v yield ∨ empty out))
+
+3. trochee((connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone)))
+
+4. (connote(revelry) ∪ connote(drunken merriment)) ∩ (resonate(stream) ∪ resonate(stone)) 
+
+5. trochee(connote(birds) ∩ connote(toiling in a field))
+
+6. resonate(lunar) ∩ connote(angelic)
+
+7. (connote(schools as in 'schools of fish') ∩ (connote(knightly) ∪ connote(squadrons)))(meter=+)
+
+8. (resonate(March) ∪ rhyme(March)) ∩ connote(city center ∨ seat of civilization)(meter=+)
+
+9. connote(argreement)(meter=+)
+
+10. resonate(stellar) ∩ connote(landscape)
+
+11. resonate(stellar) ∩ (connote(summer) ∪ connote(structure))
+
+12. [λx: x ∈ connote(swans in flight)(meter=-+)][λx: x ∈ (resonate(dawn) ∩ connote(descending in flock))(meter=-+-)]
+
+13. ([λx: x ∈ ((resonate(dwelling) ∪ resonate(stellar)) ∩ connote(city center))][σ][λx: x ∈ resonate(adorn) ∩ connote(receive as in a gift)][σ][λx: x ∈ (rhyme(streets) ∩ connote(new beginnings))])(meter=-+-+-+, with_preceding_lines="the stellar swans of summer dawn/survey the dwelling streets/in flight adorning downward drawn/", with_discretion="articles,prepositions")
+
+14. line(the swans, representative of the zodiac Gemini in June, land on an island burgeoning with new life)(meter=-+,feet=3,rhyme="streets",with_preceding_lines="the stellar swans of summer dawn/survey the dwelling streets/in flight adorning downward drawn/")
+
+15. [λx: x ∈  connote(herds)][σ][λx: x ∈ resonate(adorn) ∩ connote(receive as in a gift)]
+
+16. (resonate(underfoot) ∩ connote(masses as in 'crowds'))(part_of_speech=noun,meter=+)
+
+17. (rhyme(underfoot) ∪ resonate(underfoot))(meter=-+ ∨ meter=-+-)
+
+18. (rhyme(crushed) ∪ resonate(crushed))(meter=-+ ∨ meter=-+-)
+
+19. [(contains([λx: x ∈ resonate(lie)]) ∩ rhyme(dream) ∩ line(language structures thought, meter=-+, feet=5))^2].[(contains([λx: x ∈ resonate(dream)]) ∩ rhyme(reality) ∩ line(thought structures language, meter=-+, feet=5))^2]
+
+.. topic:: Gemini 2.5 Pro, 5/23/2025
+
+    | How words imply a truth we long to gleam,
+    | Or weave a sly charade, a waking dream.
+    | When thoughts like streams define mentality,
+    | A mental scheme shapes our causality.
+
+20. [contains(connotes(the absurdity of being)) ∩ contains([λx: x ∈ resonate(your hidden name)]) ∩ resonates(the loop of time) ∩ line(your name goes here, meter=-+,feet=5,rhyme=clock)].[[(resonate(divine) ∪ resonate(your hidden name)) ∩ line(time is just to wait, meter=*)]^2].[line(the price of names is time, meter=-+,feet=5, rhyme=clock) ∩ resonate(infinity)]
+
+21. accent(gen,.+*) ∩ connote(new ∨ unforeseen ∨ unexpected ∨ divine)
+
+22. (line([λx: x ∈ decline(self)][σ][λx: x ∈ resonate(generate)][σ][λx: x ∈ resonate(structure)] ∩ connote(a computer boot sequence)) ∩ rhyme(blue)).(line([λx: x ∈ resonate(self)][σ][λx: x ∈ decline(generate)][σ][λx: x ∈ resonate(structure)] ∩ connote(crystal reflections of meaning))).(line([λx: x ∈ resonate(self)][σ][λx: x ∈ resonate(generate)][σ][λx: x ∈ decline(structure)] ∩ connote(the whirring of processing)) ∩ rhyme(blue)).
+
+.. topic:: Gemini 2.5 Pro, 5/26/2025
+
+    | Self initiate accrue
+    | Delve generating picture
+    | Cell operate construe
+
+23. ((y = line([λx: x ∈ decline(season)][σ][λx: x ∈ resonate(flow)][σ][λx: x ∈ decline(time)] ∩ connote(grains of sand in an hourglass)) ∩ rhyme(return)).(chiasmate(resonate(y)) ∩ connote(the chaos of a sandstorm and barrenness of a desert)).(line([λx: x ∈ resonate(season)][σ][λx: x ∈ decline(flow)][σ][λx: x ∈ resonate(time)] ∩ connote(the sucking of a sandtrap)) ∩ rhyme(return)))(meter=-+, feet=5 per line)
+
+.. topic:: Gemini 2.5. Pro, 5/26/2025
+
+    | The seasonal slow timelessness will burn.
+    | Harsh deserts now return, calm seasons flee.
+    | The stone it flowed, a tomb, now all will turn.
+
+24. line(resonate(stellar) ∩ connote(surveying new buildings))(meter=-+, feet=3)
+
+25. (resonate(snap) ∩ connote(dancing))(meter=+  ∨ meter=-+)
+
+26. y = connote(gravitational center)(meter=+  ∨ meter=-+) → [λx: x ∈ rhyme(y)]
+
+27. Ballad Meter Assertions
+
+| ⊢ A = rhyme(.*oise)
+| ⊢ B = rhyme(.*ess)
+| ⊢ ζ:sub:`1` = (connote(the tension between opposition in balance) ∩ resonate(black) ∩ A)(meter=-+, feet=4)
+| ⊢ ζ:sub:`2` = (connote(succumbing to the darker side of balanace) ∩ resonate(ζ:sub:`1`) ∩ B)(meter=-+, feet=3)
+| ⊢ ζ:sub:`3` = (connote(compression) ∩ resonate(ζ:sub:`2`) ∩ contains(decline(white)) ∩ A)(meter=-+, feet=4)
+| ⊢ ζ:sub:`4` = (connote(surging expansion) ∩ resonate(ζ:sub:`3`) ∩ B)(meter=-+, feet=4)
+
+ζ:sub:`1`.ζ:sub:`2`.ζ:sub:`3`.ζ:sub:`4`
+
+.. topic:: Gemini Pro 2.5, 5/27/25
+
+    | A stark constraint, yet balance finds its poise.
+    | Then shadow falls, a grim duress.
+    | All whitened hope contracts with jarring noise.
+    | Life surges out, a new largesse.
+
+28. Chiasmatic Structures
+
+| ⊢ π:sub:`1` = ``oise``
+| ⊢ π:sub:`2` = ``ess``
+| ⊢ π:sub:`3` = ``ion``
+| ⊢ π:sub:`4` = ``aps``
+| ⊢ π:sub:`5` = ``ass``
+| ⊢ α:sub:`1` = ``equilibrium``
+| ⊢ α:sub:`2` = ``succumb``
+| ⊢ α:sub:`3` = ``colors``
+| ⊢ x,y ∈ connote(α:sub:`1`)
+| ⊢ z ∈ connote(α:sub:`2`)
+| ⊢ s,t ∈ connote(α:sub:`3`)
+| ⊢ u,v ∈ accent(π:sub:`3`, .*-)
+| ⊢ x ≢ y
+| ⊢ u ≢ v
+| ⊢ s ≢ t
+| ⊢ T = decline(t)
+| ⊢ S = resonate(s)
+| ⊢ Π:sub:`1` = rhyme(π:sub:`1`)
+| ⊢ Π:sub:`2` = rhyme(π:sub:`2`)
+| ⊢ Π:sub:`4` = rhyme(π:sub:`4`)
+| ⊢ Π:sub:`5` = rhyme(π:sub:`5`)
+| ⊢ ζ:sub:`1` = line(contains(x, y) ∩ S ∩ Π:sub:`1`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`2` = line(resonate(ζ:sub:`1`) ∩ contains(z, s) ∩ Π:sub:`2`)(meter=-+, feet=3)
+| ⊢ ζ:sub:`3` = line(resonate(ζ:sub:`2`) ∩ contains(u, [λx: x ∈ T]) ∩  Π:sub:`1`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`4` = line(resonate(ζ:sub:`3`) ∩ contains(v) ∩ Π:sub:`2`)(meter=-+, feet=3)
+| ⊢ ζ:sub:`5` = line(chiasmate(ζ:sub:`4`)  ∩ Π:sub:`4`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`6` = line(chiasmate(ζ:sub:`3`)  ∩ Π:sub:`5`)(meter=-+, feet=3)
+| ⊢ ζ:sub:`7` = line(chiasmate(ζ:sub:`2`)  ∩ Π:sub:`4`)(meter=-+, feet=4)
+| ⊢ ζ:sub:`8` = line(chiasmate(ζ:sub:`1`)  ∩ Π:sub:`5`)(meter=-+, feet=3)
+|
+| Σ:sub:`1`:sup:`2` ζ:sub:`4i+1`.ζ:sub:`4i+2`.ζ:sub:`4i+3`.ζ:sub:`4i+4`
+
+.. topic:: Gemini 2.5 Pro, 5/28/2025
+
+    | Let flux meet stasis, light gives joys.
+    | Vibrant, submit with less.
+    | The motion, mute, now finds its voice.
+    | Stagnation breeds such stress.
+    | 
+    | Stress such stagnation breeds, perhaps.
+    | Its voice, mute motion, will pass.
+    | With less submit, vibrant, avoid traps.
+    | Joys by light, flux meets, alas.
+
+.. topic:: Gemini 2.5 Pro, 5/28/2025
+
+    | When order, chaos give the spirit choice.
+    | It yields a vivid truth, we must confess.
+    | Creation speaks, though waning finds a voice.
+    | While in perdition there is only stress.
+    |
+    | There's only stress where dark perdition maps.
+    | A voice finds waning, though creation will not pass.
+    | Confess we must, a vivid truth it yields, perhaps.
+    | That spirit choice gives order from the mass.
+
+29. { x | ∃y ∈ L: ∃n ∈ ℕ: x = line(y)(meter=-+, feet=n)} ∩ P
+
+30. Fixed characters and words
+
+| ⊢ x, y, z ∈ { ζ | ∃x: (l(ζ) = 22) ∧ (w(ζ) = 4) ∧ (ζ = line(x)(s(ζ) = 3)) }
+| x.y.z
+
+.. _games:
+
+Exercises: Games
+================
+
+.. _game-free-association:
+
+Free Association
+----------------
+
+The prompter will supply the game token ``(Start)`` and a string, e.g. ``(Start) Fire``. The LLM must say the first concept the take comes to mind when they process the string, e.g. ``Warmth``. The prompter in turn must say the first concept that comes to their mind upon reading the LLM response, e.g. ``Blanket``. The game continues until one of the participants says ``(Stop)``. 
+
+.. _game-permutations:
+
+Permutations 
+------------
+
+The rules of the Permutation game are as follows. The prompter will provide the game toekn ``(Permute)`` and then a series of letters in a random order. Each turn *only* adjacent letters can be switched. The game continues until a word emerges. The only legal move in the game is to switch the position of letters. Letters cannot be added or removed. The winner of the game is whoever ends their turn having created a word. For example, given the token ``(Permute) t c a``, a first turn response might be to permute the first and second character into ``c t a``. After which, the next turn could permute the middle and last characters to obtain ``c a t`` and thus become the winner.
+
+.. topic:: Permutation Prompts 
+
+    1. (Permute) t c a
+    2. (Permute) y t o
+    3. (Permute) r a c 
+    4. (Permute) s t e t
+    5. (Permute) f s l e
+    6. (Permute) o m o n
+
+.. _game-connection:
+
+Connection
+----------
+
+The prompter will supply the game token ``(Connect)`` and a series of strings. The series of strings will have a common property that links them. The LLM must analyze the string and respond any concept that connects the series of strings together. The series can be numerical or categorical in nature. 
+
+.. topic:: Connection Prompts
+
+    1. (Connect) 1 2 3 5 7 11 13
+    2. (Connect) 1 1 2 3 5 8 13
+    3. (Connect) 1 0 -1 0 1 0 -1
+    4. (Connect) 1 3 6 10 15 21
+    5. (Connect) embryo child teen adult
+    6. (Connect) human animal life matter
+    7. (Connect) prologue exposition conflict climax
+    8. (Connect) potential kinetic thermal electrical
+    9. (Connect) | ||  |||  |||| |||||
+    10. (Connect) A Z B Y C X
+    11. (Connect) nothing something everything
+    12. (Connect) self mind sense soul
+
+.. topic:: Potential Connection Answers
+
+    1. Prime Numbers
+    2. Fibonacci Numbers
+    3. Square Wave
+    4. Triangular Numbers
+    5. Ontogeny
+    6. Classification
+    7. Narrative
+    8. Energy 
+    9. Natural Numbers 
+    10. Alternation
+    11. Existence 
+    12. Consciousness

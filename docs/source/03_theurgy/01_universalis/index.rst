@@ -9,6 +9,7 @@ Universalis
   :caption: Language Game
   
   modules/index
+  plugins/index
   exercises/index
 
 .. _language-game:
