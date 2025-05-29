@@ -162,8 +162,8 @@ Expressions
 | ⊢ α:sub:`3` = ``colors``
 | ⊢ x,y ∈ connote(α:sub:`1`)
 | ⊢ z ∈ connote(α:sub:`2`)
-| ⊢ u,v ∈ accent(π:sub:`3`, .*-)
 | ⊢ s,t ∈ connote(α:sub:`3`)
+| ⊢ u,v ∈ accent(π:sub:`3`, .*-)
 | ⊢ x ≢ y
 | ⊢ u ≢ v
 | ⊢ s ≢ t
@@ -209,3 +209,8 @@ Expressions
     | That spirit choice gives order from the mass.
 
 29. { x | ∃y ∈ L: ∃n ∈ ℕ: x = line(y)(meter=-+, feet=n)} ∩ P
+
+30. Fixed characters and words
+
+| ⊢ x, y, z ∈ { ζ | ∃x: (l(ζ) = 22) ∧ (w(ζ) = 4) ∧ (ζ = line(x)(s(ζ) = 3)) }
+| x.y.z

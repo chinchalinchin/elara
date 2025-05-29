@@ -8,4 +8,4 @@ Exercises
     :caption: Language Exercises
     
     01_rhymations
-    02_games  
+    02_games

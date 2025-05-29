@@ -1,3 +1,5 @@
+.. MODE: ENGAGE
+
 ========
 Analecta
 ========
@@ -1236,7 +1238,7 @@ We imagine :ref:`language <language>` to behave like objects, because it manifes
 
 ---
 
-| Iambs often are writ, you see, to show
+| Iambs are often writ, you see, to show
 |    That :ref:`language <language>` has a form,
 | But form besides what's centered now,
 |   Behind collects in swarm.
@@ -1870,3 +1872,89 @@ In both cases, one would hardly say :math:`p` is the *cause* of :math:`q`, or vi
 The problem of *faith* cast into the :ref:`language <language>` of necessity and sufficiency is thus: God is sufficient for existence, but not necessarily necessary. Thus, the concept of God cannot be comprehended syntactically (logically) as a *cause* unless one consents to the clause: God is necessary for existence. 
 
 The crux of faith, the essential leap into the unknown, boils down to whether one can imagine a world without God and whether doubts in the affirmative direction can be exorcised from the mind.
+
+.. _2025-june:
+
+----
+June
+----
+
+.. @ENGAGE
+
+Let :math:`c(α)` be the character length of a word :math:`α`.
+
+.. topic:: Reflective Words
+
+    The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if :math:`α[i]` stands for the i:sup:`th` character in word :math:`α`, then a reflective word is defined as the words which satisfy the relation :math:`α[i] = α[c(α)-i-1]`. For example, ``nun`` is a reflective word.
+
+.. topic:: Metric Words
+
+    The symbol :math:`M_\mathfrak{s}` refers to the set of all words that satisfy the syllabic pattern :math:`\mathfrak{s}`, where :math:`\mathfrak{s}` is a concatenated sequence of syllabic stresses such that ``+`` means stressed and ``-`` means unstressed. For example, :math:`M_{-+}` refers to the set of all iambic words.
+
+Note :math:`R, M_{-+} \subset L`, i.e. both sets are subsets of a language :math:`L`. A linguistically true statement that cannot be formally proven: 
+
+.. math::
+
+    \mid R \mid \leq \mid M_{-+} \mid
+
+In other words,
+
+    There are more iambic words in a language than there are reflective words. 
+
+Where the language :math:`L` is understood to be a stress-timed language.
+
+The issue lies in how membership is determined. In the case of reflective words, the membership constraint is purely syntactic, whereas in the case of iambic words, the membership constraint is purely phonetic. Phonetics does not possess syntactic rules, in the sense that one cannot uniquely determine a phonetic pronouncation from the inscription of the word alone. For example, "*concord*" may be pronounced "*con-CORD*" or "*CON-cord*" depending on the context in which "*concord*" is embedded.
+
+Here is a fact whose entire essence is :ref:`a posteriori <a-posteriori>`. It is not *necessary* for there to be more iambic words than reflective words in a given language. There is no *reason* for the two quantities to bear any sort of relation, except through sheer coincidence or accident. The direction of the relation cannot be proven, if by "*proven*" it is meant a logical argument that shows how, starting with the definition of reflective words and the definition of iambic words, their relative cardinality can be established. In other words, there is no formal deduction that links these two concepts together. The claim of their relative cardinality can only be understood by appeal to a dictionary and empirical evidence.
+
+This example shows :ref:`language <language>` possesses mutually independent dimensions, where scaling along one dimension need not affect how the language is expressed in another dimension. Furthermore, from this it follows a string from a :ref:`language <language>` inherently possesses several dimensions of length. 
+
+As an example of the preceding, consider the sentence,
+
+    deduce the theorem now.
+
+In terms of purely transcriptional dimensions, this sentence has a character length of 22 (including delimiters) and a word length of 4. Given the :ref:`correct axiomatization <section-ii-ii>` of :ref:`language <language>`, it can be shown the character length of a string is bounded from below by the string's word length, i.e. since every word must contain atleast one character, there must always be more characters in a sentence than words. This is an example of the sort of relative cardinalities that can be established when two concepts are categorically related.
+
+However, the sentence may also be parsed along a phonetic dimension,
+
+    de-DUCE the THEO-rem NOW
+
+Which makes clear this sentence has a stressed syllable length of 3 and an unstressed syllable length of 3, leading to a total syllable count of 6. 
+
+The following sentences have the same measurements,
+
+    a dream awaits tonight / a DREAM a-WAITS to-NIGHT
+
+    the stars above appear / the STARS a-BOVE a-PPEAR
+
+    no path betrays escape / no PATH be-TRAYS es-CAPE
+
+However, one can alter the character length and word length while leaving the syllabic lengths unaltered, as in, 
+
+    the wolf with sharpened claws / the WOLF with SHARP-ened CLAWS
+
+Which has a character length of 29, a word length of 5 and a syllable length of 6. Note that syllable length is bounded from below by the word length for the same reason as character length. Similarly, since every syllable must contain at least one character, the character length is always bounded from below by syllable length. Letting :math:`s(x)` represent the syllable length of a string :math:`x`, the hierarchy of linguistic lengths is given as, 
+
+.. math::
+
+    w(x) \leq s(x) \leq c(x)
+
+It is important to realize both :math:`M_{-+}` and :math:`R` are formally well-defined. Given a word, the conditions for its membership into either set can be precisely specified and determined. However, the sets exist in different domains of discourse. The properties which determine inclusion in one set do not (directly) affect the properties which determine inclusion in the other set. To say the same thing a different way, the predicates of "*words*" have different modes. 
+
+One wants to say here: To know a word is iambic gives you no information whatsoever about whether or not it is reflective. Or to put it in conditional probabilistic terms: if one selects a random word from a corpus, the probability of it being iambic given no information about its syntactic structure is equal to the probability of it being iambic given the fact it is reflective.
+
+However, this is not true. Indeed, while there is no *formal* argument that leads to the conclusion there are more iambic words than reflective, there is a *statistically* :ref:`a priori <a-priori>` argument that does not require direct observation of a corpus to demonstrate there is a compelling reason to believe that any language that contains enough words will almost assuredly contain more iambic words than reflective words. 
+
+The motivation for this argument can be seen by noting that an overwhelming amount of reflective word are monosyllabic, e.g. *eye*, *aha*, *nun*, *bob*, *pip*, *tot*, *sis*, *wow*, *sees*, *noon*, *stats*, etc. As the number of syllables in a word increases, the frequency of reflectivity decreases. A heuristic argument can be formulated along the following lines:
+
+- For an alphabet with N characters (including delimiters) and a word with :math:`M`` characters, there are potentially :math:`M^N` possible word-forms to use. 
+- Out of these :math:`M^N` word-forms, (using combinatorial arguments), there are :math:`M^{\lceil N/2 \rceil}` possible reflective word-forms. 
+
+Consider selecting a random word with :math:`N` characters. If the event of each character selection is treated as independent and identically distributed, then the probability of selecting a reflective word with :math:`N` characters is approximately, 
+
+.. math::
+
+    P(R) = \frac{M^{\lceil N/2 \rceil}}{M^N} = \frac{1}{M^{\lfloor N/2 \rfloor}}
+
+
+This shows, as the number of characters in a word increases, the probability of it being reflective drops exponentially. In other words, there is a combinatorial reason for reflective words occuring more frequently within the intersection of monosyllabic words. Monosyllabic words, by their nature, cannot be iambic. Moreover, monosyllabic words are finite, if it assumed every language has some upper bound for its syllabic lengths, e.g. the longest syllable in English is typically cited as 9 ("scrunched"). Once the monosyllabic words of a language have been assigned meanings, the possibility of randomly generating new reflective words diminishes rapidly. Therefore, as the number of words in a language increases, the probability of :math:`P(R | I)` decreases. 
