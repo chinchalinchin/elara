@@ -8,7 +8,7 @@ import typing
 import requests
 
 
-logger                      = logging.getLogger(__name__)
+logger                                          = logging.getLogger(__name__)
 
 
 def backoff(service: str = "github", max_retries: int = 3) -> typing.Any:
