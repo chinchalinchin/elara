@@ -35,6 +35,8 @@ These functions are somewhat whimsical and abstract. You may interpret them as y
 
 .. topic:: evolve() -> x: response
 
+   Full Path: ``lang.evolve()``
+
    This function forces the insertion of a new rule or form into the Language Game. Any time this command is issued, create a new rule or form **must** be inserted into the :ref:`language-game`.
 
 .. _plugin-functions-linguistics:
@@ -196,11 +198,15 @@ These extensions are linguistic functions that return words that meet certain sy
 
 .. topic:: line(x: concept) -> s: string
 
+   Full Path: ``ling.object.line(x)``
+
    Shorthand: ``li(x)``
 
    If a prompt contains ``line(x)``, for any string ``x``, this prompt is asking for a line that implements the description given in ``x``. This function is often used with optional arguments ``meter`` and ``feet``. 
 
 .. topic:: decline(α: word) -> A: set(word)
+
+   Full Path: ``ling.object.decline(α)``
 
    Shorthand: ``de(x)``
 
@@ -208,6 +214,8 @@ These extensions are linguistic functions that return words that meet certain sy
 
 .. topic:: chiasmate(ζ: sentence) -> ζ: sentence
 
+   Full Path: ``ling.object.chiasmate(ζ)``
+   
    Shorthand: ``ch(ζ)``
 
    If a prompt contains ``chiasmate(ζ)`` or ``ch(ζ)``, the prompt is asking for a sentence that bears the relation of *chiasmus* with the sentence ``ζ``. For example, ``beauty is truth`` is ``chiasmate(truth is beauty)``.

@@ -65,10 +65,9 @@ Relations
 
 1. **Rhymes** The geometric symbol for the relation of parallel ``∥ (U+2225)`` is used to mean "*rhymes with*" in the context of linguistics. 
 
-2. **Synonymity** The logical equivalence symbol ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" in the context of linguistics. This can be thought of as an extension of the relation of "*synonym*". For example, "*car*" and "*automobile*" satisfy this relation, but even more complex sentences like "*Venus is the Morning Star*" and "*Venus is the Evening Star*" are equivalent. Taken to the extreme, "*The man bought a sandwich*" and "*The sandwich, after being meticulously assembled by the delicatessen employee, was purchased by the man*" are both linguistic objects that satisfy this relation.
+2. **Synonymity and Antonymity** The logical equivalence symbol ``≡ (U+2261)`` is used to mean "*has an equivalent meaning*" in the context of linguistics. The logical nonequivalence symbol ``≢ (U+2262)`` is used to mean "*has an opposite meaning*" in the context of linguistic. ``≡`` can be thought of as an extension of the relation of "*synonym*". For example, "*car*" and "*automobile*" satisfy this relation, but even more complex sentences like "*Venus is the Morning Star*" and "*Venus is the Evening Star*" are equivalent. Taken to the extreme, "*The man bought a sandwich*" and "*The sandwich, after being meticulously assembled by the delicatessen employee, was purchased by the man*" are both linguistic objects that satisfy this relation. ``≢`` can be thought of as an extension of the relation of "*antonym*". For example, "*big*" and "*small*" satisfy this relation, but even more complex sentences like "*A bird flying high*" and "*a fish swimming deep*" satisfy this relation.
 
-3. **Antonymity** The logical nonequivalence symbol ``≢ (U+2262)`` is used to mean "*has an opposite meaning*" in the context of linguistic. This can be thought of as an extension of the relation of "*antonym*". For example, "*big*" and "*small*" satisfy this relation, but even more complex sentences like "*A bird flying high*" and "*a fish swimming deep*" satisfy this relation.
-
+4. **Hypernymity and Hyponymity** The left bowtie symbol ``⋉ (U+22C9)`` is used to represent the relation of *hyponymity* and the right bowtie symbol is used to represent the relation of *hypernymity* ``⋊ (U+22CA)``. For example, ``man ⋉ animal`` and ``motion ⋊ running``. Note that the relations of *hyponymity* and *hypernymity* are converses of one another, i.e. ``x ⋉ y`` if and only if ``y ⋊ x``.
 
 .. _operations:
 
