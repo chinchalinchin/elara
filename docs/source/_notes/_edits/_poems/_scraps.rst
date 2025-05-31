@@ -837,3 +837,37 @@ III: Substrate
             # IN PROGRESS
 
 - April 2025
+
+4 - Constant
+
+all things 
+accede 
+to steel
+dictates 
+of change. 
+
+
+10 - Linear
+
+of growth,
+so many kinds,
+like straight and narrow lines, 
+or burgeoning of densities,
+each propensity to infinity.
+
+: Parabolic
+-----------
+
+1 each type
+4 unique, conceals a charm beneath,
+9 enwreathed 
+16
+25
+
+: Exponential
+-------------
+
+some even rhyme
+
+: Sinusoidal
+-----------
