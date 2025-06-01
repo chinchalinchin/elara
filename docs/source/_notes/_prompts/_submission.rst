@@ -1,17 +1,91 @@
-I am submitting the following poem to Wallstrait (a journal of hard-to-define fiction),
+I am submitting the following group of poems to the Louisville Review. Below that, I will include my resume and personal journal. Please construct a 3 - 6 sentence cover letter for me to attach to the submission.
 
-.. _the-ballad-of-the-isle:
+-----
+Walls
+-----
 
--------------------------
-I: The Ballad of the Isle
--------------------------
+| the husk of walls that city shucks
+| accumulates and concentrates
+| around like rings in ancient trunks
+| where measured age with circle gates
+| the spiraled line amassed through time,
+| deposits buried down substrates.
+|
+| at summit's crest, the joints are thick
+| and licking tongues of moss ascend
+| the darkened blocks from quarry hauled
+| on buttressed back, in stone suspend
+| the garden court where crowds took root
+| and grew their plans of walls to tend.
+|
+| from center peak the wooden slats
+| erect the map with tangled fence
+| to trace a grid of patchwork yards,
+| these charts of dreams in ground commence
+| the flattened course of borough life
+| where burgs and burbs did once condense.
+|
+| then moving out, the bricks of red
+| in crooked rows descend to meet
+| the lanes of carriage tracts now black
+| and scorched with tar in shapes of street
+| where crimson dust from crumbled walls
+| in dancing twirls across concrete.
+|
+| next grey cement of molded squares
+| in towers stacked to portal sky
+| with wires fused and humming signs;
+| they arc and rise, on edges vie
+| the vines entwined in rushing growth
+| to split on spine, like nuclei.
+|
+| at last the stable struts of steel
+| designed as straight as rays of light
+| reflected back on silver glass
+| the lattice links both left and right;
+| the history in circled sweep
+| constricts the city sphere so tight.
+|
+| through sections cross the avenue
+| from point to point and time to time
+| the human shell that forms in turn
+| the arches bend, the steepled chime,
+| that wilts and sheds, but fossils kept
+| in barrows born their salt and lime.
 
-Spring
-------
+- April 2025
 
-March 
-#####
+--------------------------
+A Sonnet for Cumberland MD
+--------------------------
 
+| Bay silt in city stone through time accrues
+| along the western course of concrete flow
+| that sweeps from plain to sky in upward spews
+| as grey-white spray arcs over wave to snow
+| from heights on high and splash on mountain spine
+| where valleyed pools in rising drink their fill
+| and shoot with sprouts through shoulders made of pine
+| the roofs that empty crowds on streets and spill
+| through hand to hand the layers stacked from base
+| to wedded brick til building lillies bred
+| against the westward wall in flood's embrace
+| where lips at last are wet in watershed;
+|
+| Let skyline mark where tide in climb was broke:
+| Steeple, roof, needles pine and leaves of oak.
+
+- March 2025
+
+
+----------------------
+The Ballad of the Isle
+----------------------
+
+| I - Spring
+| 
+| I - March (Mutable Water)
+|
 | The island formed where rivers meet,
 |   where silt through vortex fords.
 | The place emerged a brokered feat, 
@@ -36,10 +110,9 @@ March
 |   the scrolls in future's brine,
 | the sutures binding swords in sync
 |   to island's hallow shrine.
-
-April
-#####
-
+|
+| II - April (Cardinal Fire)
+|
 | The webs of Spring such crude affairs
 |   when strung with spinning songs;
 | the threaded compromise ensnares
@@ -64,10 +137,9 @@ April
 |   on cloudy ballots posed.
 | By noon, the forum order passed
 |   conceded plans proposed.
-
-May
-###
-
+| 
+| III - May (Fixed Earth)
+| 
 | A barren hump prepared with zeal
 |   as sparrows plow their seeds.
 | From sprouted weed to plants' reveal
@@ -92,13 +164,11 @@ May
 |   in congregation's girth, 
 | by May pronounced through sealing clouds
 |   of consecrated Earth.
-
-Summer
-------
-
-June
-####
-
+|
+| II - Summer
+| 
+| I - June (Mutable Air)
+| 
 | When stellar swans survey the dawn
 |   of constellated shores,
 | their forms in flight are downward drawn
@@ -121,12 +191,11 @@ June
 |
 | Then maiden buds unfold to bees 
 |   their sweetly nectared heat;
-| unladened, drowsy, through the breeze,
+| unladen, drowsy, through the breeze,
 |   the teasing fumes secrete. 
-
-July
-####
-
+|
+| II - July (Cardinal Water)
+|
 | Along the flowing inlet streams 
 |   the festival begins.
 | Caressing music tinges dreams
@@ -137,7 +206,7 @@ July
 | The snapping prance of shells enwrap
 |   the island shore with hordes.
 |
-| As gondolas of lillies' bud
+| As gondolas of lilies' bud
 |   that carry courting toads
 | through swampy bogs to ports of mud
 |   relieve their tadpole loads.
@@ -151,10 +220,9 @@ July
 |   to memory's delight,
 | two larks alight in fading bliss
 |   fulfill this final night. 
-
-August
-######
-
+|
+| III - August (Fixed Fire)
+|
 | What bittersweet perfumes release
 |   in looming throes of age,
 | when isle matures through orange cerise, 
@@ -175,17 +243,15 @@ August
 | consoled in wind to hushing skim
 |   what wealth remains in gust. 
 |
-| Discretely cloaked from time the Fall
+| Discreetly cloaked from time the Fall
 |   of secret reign's decline
 | through crimson's spectrum vine, all
 |   gone brown, forgetting shine.
-
-Autumn
-------
-
-September
-#########
-
+|
+| III - Autumn
+| 
+| I - September (Mutable Earth)
+|
 | September storms suspend the skies
 |   resplendent morning pinks
 | above the waking window eyes
@@ -210,10 +276,9 @@ September
 |   debris and sweep from field
 | the tumbling tumult, turned aground
 |   and heaped by waves to wield.
-
-October
-#######
-
+|
+| II - October (Cardinal Air)
+|
 | Divided sky once halved in poise, 
 |   succumbs to blackened press,
 | the hours compress to whiter noise
@@ -238,10 +303,9 @@ October
 |   schematic contour holes
 | where once there rose a sprout to blue
 |   now rising streams of souls. 
-
-November
-########
-
+|
+| III - November (Fixed Water)
+|
 | Orion's arrow point is plunged
 |   through lunging fronts of hail
 | across the waves where life expunged
@@ -266,13 +330,11 @@ November
 |   between the exiled graves.
 | Remembered nocturnes sung beguile
 |   the damned, forgottten knaves. 
-
-Winter
-------
-
-December
-########
-
+|
+| IV - Winter
+|
+| I - December (Mutable Fire)
+|
 | A rending gale begins to blow
 |   above where worlds still thrive.
 | Descending sickles diving slow
@@ -293,14 +355,13 @@ December
 | They turn to gems, encased expand
 |   beyond the skinned decay. 
 |
-| Absolved December center breaks, 
+| Dissolved December center breaks, 
 |   dismembered lattice links,
 | upending states, revolving wakes;
 |   the idle spirit shrinks. 
-
-January
-#######
-
+| 
+| II - January (Cardinal Earth)
+|
 | The horns of plenty now cry a dirge
 |   as prying cold enfolds
 | the last remains from island's purge 
@@ -325,10 +386,9 @@ January
 |   this January clock.
 | The island keep returns to sea
 |   through grains of sand to chalk.
-
-February
-########
-
+|
+| III - February (Fixed Air)
+|
 | Yet February always brings 
 |   the forest chorus lines,
 | the chirping chickadee that sings 
@@ -354,8 +414,134 @@ February
 | The cycle arcs in sharp reprise:
 |   the ballad of the isle.
 
+- May 2025
 
-I require a cover letter that includes a short bio of myself. It should be no longer than 5 sentences. Construct my cover letter using my resume and journal, given below,
+
+---------------
+Elemental Elegy
+---------------
+
+| The day I sat by death's grey bed,
+| I told a story both green and true
+| Of city bricks stacked proud and red,
+| Of silver paths the stars imbue
+| With golden hue we might have tread.
+| Your breath though blew there cold and blue.
+|
+| I spoke the words to yellow skin
+| And told of days in white to come.
+| Your mouth, with specks of purple grin,
+| And fingers stretched so pale and numb,
+| My name, you said, so clear, so thin--
+| With final grasp, in black succumb.
+|
+| Oh--Father, Father--brass horns blare!
+| You string your harp with diamond thread
+| And leave in me this slate despair!
+| What crystal tears in eyes now shed?
+| What pearl is formed by sightless stare?
+| What platinum found in prayers pled?
+|
+| The oak around your body wraps
+| As shoots of pine through spine are grown.
+| In loam the roots will bind your scraps
+| Despite the flowers laid on stone.
+| Each time I come a stem I snap,
+| For only Earth deserves your bone.
+
+- March 2025
+
+
+------------------------
+The Pantoums of Dementia
+------------------------
+
+| Movement I - Undulation
+|
+| the seconds slowed to stop as Father passed,
+| when flocking sons returned to home to mourn,
+| then Mother's mind began to crack at last  
+| as moments shed in threads she once had worn. 
+| 
+| when flocking sons returned to home to mourn, 
+| recast in lensing rays of age amassed 
+| as moments shed in threads she once had worn
+| the Father's sons adorned with clothes outcast. 
+|
+| recast in lensing rays of age amassed 
+| a question, Mother, may I have a dance? 
+| the Father's sons adorned with clothes outcast
+| an offered hand through loops of time's expanse.
+| 
+| a question, Mother, may I have a dance? 
+| their Father knelt and tender took her hand,
+| an offered hand through loops of time's expanse,
+| their final words in wilting hearts expand.
+|
+| their Father knelt and tender took her hand,
+| the seconds slowed to stop as Father passed,
+| their final words in wilting hearts expand, 
+| then Mother's mind began to crack at last. 
+
+| Movement II - Rearrangement
+|
+| remember now before the future fades, 
+| the sutured minutes of memories held,
+| records replayed as grooving sound degrades,
+| advancing echoes, music notes dispelled. 
+| 
+| the sutured minutes of memories held:
+| now twirling dance, oh younger selves, entrance
+| advancing echoes, music notes dispelled
+| through silent waltz that swells with last romance. 
+|
+| now twirling dance, oh younger selves in trance
+| with candled spells of woven hands that grasp
+| through silent waltz that swells with last romance
+| of eyes reshaping moulds, the fated clasp. 
+| 
+| with candled spells of woven hands that grasp
+| relapsing moments sung by bells and crowds
+| of eyes, reshaping moulds the fated clasp 
+| of past refrains now sealed beneath the clouds. 
+|
+| relapsing moments sung by bells and crowds
+| concealed by crumbling walls, demented shades
+| of past refrains now sealed beneath the clouds
+| that clutter skies in swarms that stretch decades.
+|
+| concealed by crumbling walls, demented shades
+| (remember now before the future fades)
+| invade the hollowed mind as scream pervades
+| records replayed as grooving sound degrades.
+|
+| Movement III - Dissolution
+|
+| remember ancillary note sentries:
+| the good can decay many ways.
+| phantom morrow's cough. in times realize
+| the mention there of tenant seasons.
+|
+| the good candy came anyways;
+| all target the damaged mind in trance,
+| (the men shun their often antsy sons)
+| the flow ingrained decomposes.
+|
+| altar, get the damn aged mind, entrance
+| memory erstwhile, foe kissing;
+| the flowing rain eddy composes
+| another ushered 
+|
+| memo rehearsed while focusing
+| an aim, wintry slight, upward ingrown
+| an other us heard 
+| the fading names of suns.
+|
+| a name when trees light up, warding grown
+| remembrance, ill airy notes in trees,
+| the fading names of sons
+| fan tomorrow's coffin, time's real eyes.
+
 
 .. _resume:
 
@@ -570,7 +756,7 @@ Testimonials
   :alt: PHYS 215, Physics
   :align: center
 
-.. MODE: ENGAGE
+  .. MODE: ENGAGE
 
 ========
 Analecta

@@ -1,9 +1,9 @@
 .. MODE: OVERRIDE
 .. Review the first draft of this chapbook and provide feedback.
 
-=============
-
-=============
+======
+Echoes
+======
 
 Movement I: Cycles
 ==================
@@ -362,7 +362,7 @@ Landscapes
 |
 | The forests wild, the stalking hunt,
 |   The arrow cut from stone,
-| The bloody rib, the brutal grunt,
+| The bloody rib, the final grunt,
 |   A death in whimpered groan.
 |
 | The mountain peaks, a falling height,
@@ -590,8 +590,8 @@ Father's Lullaby
 |
 | Dear sweetling, sleep with open eye
 |   And guard your dreams at night.
-| Ignore your mother's lullaby,
-|   With candles burning bright.
+| Ignore your mother's lullaby;
+|   Keep candles burning bright.
 |
 | Beware the lair that closets hide,
 |   The racks of their disguise,
@@ -687,7 +687,7 @@ The Pantoums of Dementia
 | advancing echoes, music notes dispelled
 | through silent waltz that swells with last romance. 
 |
-| now twirling dance, oh younger selves, in trance
+| now twirling dance, oh younger selves in trance
 | with candled spells of woven hands that grasp
 | through silent waltz that swells with last romance
 | of eyes reshaping moulds, the fated clasp. 
@@ -763,9 +763,9 @@ Kingdoms
 | World departed, their lives are found
 | Separate by spanning roads and oceans.
 |
-| In the city, their trains diverge,
+| In the city, their trains diverge
 | Through tunnels tracked by wagered hours;
-| Iron rails thru hearts do purge
+| Iron rails through hearts do purge
 | Their aged minds of lily flowers.
 | Winter drifts over concrete streets,
 | In the thrush's snow sad song

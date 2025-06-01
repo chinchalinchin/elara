@@ -367,3 +367,6 @@ February
     * - May 30, 2025
       - Wallstrait
       - Pending
+    * - June 1, 2025
+      - The Louisville Review
+      - Pending

@@ -89,3 +89,17 @@ II: The Pantoums of Dementia
 | fan tomorrow's coffin, time's real eyes.
 
 - June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 1, 2025
+    - Tabula Rasa
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
