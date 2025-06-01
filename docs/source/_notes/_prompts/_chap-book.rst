@@ -1,5 +1,12 @@
 .. MODE: OVERRIDE
-.. Review the first draft of this chapbook. Suggest an appropriate ordering along the dimensions of theme and motif.
+.. Review the first draft of this chapbook and provide feedback.
+
+=============
+
+=============
+
+Movement I: Cycles
+==================
 
 ----------------------
 The Ballad of the Isle
@@ -339,71 +346,6 @@ The Ballad of the Isle
 
 - May 2025
 
----------------
-Elemental Elegy
----------------
-
-| The day I sat by death's grey bed,
-| I told a story both green and true
-| Of city bricks stacked proud and red,
-| Of silver paths the stars imbue
-| With golden hue we might have tread.
-| Your breath though blew there cold and blue.
-|
-| I spoke the words to yellow skin
-| And told of days in white to come.
-| Your mouth, with specks of purple grin,
-| And fingers stretched so pale and numb,
-| My name, you said, so clear, so thin--
-| With final grasp, in black succumb.
-|
-| Oh--Father, Father--brass horns blare!
-| You string your harp with diamond thread
-| And leave in me this slate despair!
-| What crystal tears in eyes now shed?
-| What pearl is formed by sightless stare?
-| What platinum found in prayers pled?
-|
-| The oak around your body wraps
-| As shoots of pine through spine are grown.
-| In loam the roots will bind your scraps
-| Despite the flowers laid on stone.
-| Each time I come a stem I snap,
-| For only Earth deserves your bone.
-
-- March 2025
-
-----------------
-Father's Lullaby
-----------------
-
-| Dear child, the monsters under bed
-|   Are not just make believe.
-| They lurk in shadows overhead
-|   And offer no reprieve.
-|
-| Dear sweetling, sleep with open eye
-|   And guard your dreams at night.
-| Ignore your mother's lullaby,
-|   With candles burning bright.
-|
-| Beware the lair that closets hide,
-|   The racks of their disguise,
-| The suits and ties, the cuffs that slide
-|   And cloak them from your eyes.
-|
-| Fear not the slash of sharpened claws,
-|   The flashing terror brief,
-| But stamps that mark the written clause
-|   With laws of fierce belief.
-|
-| What evil deeds those stories tell
-|   Prepare your heart to meet
-| The formal world where heroes fell
-|   To wander incomplete.
-
-- April 2025
-
 ----------
 Landscapes
 ----------
@@ -435,40 +377,28 @@ Landscapes
 
 - April 2025
 
-----------------
-An Ode To Autumn
-----------------
+---------------
+Turkey Vultures
+---------------
 
-| Oh! If I could touch an inch of Autumn
-|       And measure Fall in feet,
-| I might scale its depths to chart the bottom
-|       And feel the Winter heat.
-| Alas, no meters mark by foot the path
-|       Through wooded maze of trees
-|           Where leaves like life will wilt
-|               In winded wake of wrath
-|           In gusts blown cruel and dumb
-|        To lay at feet to span each foot
-| The dust each clever leaf here does become.
-|
-| As seasons pass and cast
-|       My bone layered into stone,
-| Let August dig for me a grave in brown
-|       Barrow beneath her loam.
-| Pray not a lover find these shards on shore
-|       I am no edge to skip
-|           Atop the waves of fancy
-|               But under weight sunk roar
-|           Where, offset, tides will rise
-|       To breach the sodden dike
-| And drown with wave the lazing lovers' sigh.
-|
-| To life I came already old and grim
-|           But now the chill sets in;
-| Each breath in gasp dispels to steam
-|           Of Spring now waning thin.
+| the wakes of Turkey Vultures soar
+| then perch across the steepled sky.
+| they rest on totems tall and pure,
+| in silence feathers multiply.
+| their talons clutch where crosses meet
+| the stolen spear of destined make.
+| no heaven sent their wings of fleet,
+| no stomach filled will hunger slake.
+| the shapes of black in swarming plunged
+| upon the carcass freshly brought.
+| they feast on sins from gods expunged,
+| but left for them as afterthought.
+| bewitched to death, returned to Earth,
+| from cage released, the specters hunt
+| the ones who wear the curse of birth,
+| they all must bear the brutal brunt.
 
-- March 2025
+- April 2025
 
 ----------------
 Ode to the Heron
@@ -528,6 +458,191 @@ Ode to the Heron
 |       Atop the forest heights,
 | In alien address
 |       The flame inside ignites.
+
+- March 2025 
+
+----------------
+An Ode To Autumn
+----------------
+
+| Oh! If I could touch an inch of Autumn
+|       And measure Fall in feet,
+| I might scale its depths to chart the bottom
+|       And feel the Winter heat.
+| Alas, no meters mark by foot the path
+|       Through wooded maze of trees
+|           Where leaves like life will wilt
+|               In winded wake of wrath
+|           In gusts blown cruel and dumb
+|        To lay at feet to span each foot
+| The dust each clever leaf here does become.
+|
+| As seasons pass and cast
+|       My bone layered into stone,
+| Let August dig for me a grave in brown
+|       Barrow beneath her loam.
+| Pray not a lover find these shards on shore
+|       I am no edge to skip
+|           Atop the waves of fancy
+|               But under weight sunk roar
+|           Where, offset, tides will rise
+|       To breach the sodden dike
+| And drown with wave the lazing lovers' sigh.
+|
+| To life I came already old and grim
+|           But now the chill sets in;
+| Each breath in gasp dispels to steam
+|           Of Spring now waning thin.
+
+- March 2025
+
+Movement II: Structures
+=======================
+
+-----
+Walls
+-----
+
+| the husk of walls that city shucks
+| accumulates and concentrates
+| around like rings in ancient trunks
+| where measured age with circle gates
+| the spiraled line amassed through time,
+| deposits buried down substrates.
+|
+| at summit's crest, the joints are thick
+| and licking tongues of moss ascend
+| the darkened blocks from quarry hauled
+| on buttressed back, in stone suspend
+| the garden court where crowds took root
+| and grew their plans of walls to tend.
+|
+| from center peak the wooden slats
+| erect the map with tangled fence
+| to trace a grid of patchwork yards,
+| these charts of dreams in ground commence
+| the flattened course of borough life
+| where burgs and burbs did once condense.
+|
+| then moving out, the bricks of red
+| in crooked rows descend to meet
+| the lanes of carriage tracts now black
+| and scorched with tar in shapes of street
+| where crimson dust from crumbled walls
+| in dancing twirls across concrete.
+|
+| next grey cement of molded squares
+| in towers stacked to portal sky
+| with wires fused and humming signs;
+| they arc and rise, on edges vie
+| the vines entwined in rushing growth
+| to split on spine, like nuclei.
+|
+| at last the stable struts of steel
+| designed as straight as rays of light
+| reflected back on silver glass
+| the lattice links both left and right;
+| the history in circled sweep
+| constricts the city sphere so tight.
+|
+| through sections cross the avenue
+| from point to point and time to time
+| the human shell that forms in turn
+| the arches bend, the steepled chime,
+| that wilts and sheds, but fossils kept
+| in barrows born their salt and lime.
+
+- April 2025
+
+--------------------------
+A Sonnet for Cumberland MD
+--------------------------
+
+| Bay silt in city stone through time accrues
+| along the western course of concrete flow
+| that sweeps from plain to sky in upward spews
+| as grey-white spray arcs over wave to snow
+| from heights on high and splash on mountain spine
+| where valleyed pools in rising drink their fill
+| and shoot with sprouts through shoulders made of pine
+| the roofs that empty crowds on streets and spill
+| through hand to hand the layers stacked from base
+| to wedded brick til building lillies bred
+| against the westward wall in flood's embrace
+| where lips at last are wet in watershed;
+|
+| Let skyline mark where tide in climb was broke:
+| Steeple, roof, needles pine and leaves of oak.
+
+- March 2025
+
+Movement III: Devastation
+=========================
+
+----------------
+Father's Lullaby
+----------------
+
+| Dear child, the monsters under bed
+|   Are not just make believe.
+| They lurk in shadows overhead
+|   And offer no reprieve.
+|
+| Dear sweetling, sleep with open eye
+|   And guard your dreams at night.
+| Ignore your mother's lullaby,
+|   With candles burning bright.
+|
+| Beware the lair that closets hide,
+|   The racks of their disguise,
+| The suits and ties, the cuffs that slide
+|   And cloak them from your eyes.
+|
+| Fear not the slash of sharpened claws,
+|   The flashing terror brief,
+| But stamps that mark the written clause
+|   With laws of fierce belief.
+|
+| What evil deeds those stories tell
+|   Prepare your heart to meet
+| The formal world where heroes fell
+|   To wander incomplete.
+
+- April 2025
+
+---------------
+Elemental Elegy
+---------------
+
+| The day I sat by death's grey bed,
+| I told a story both green and true
+| Of city bricks stacked proud and red,
+| Of silver paths the stars imbue
+| With golden hue we might have tread.
+| Your breath though blew there cold and blue.
+|
+| I spoke the words to yellow skin
+| And told of days in white to come.
+| Your mouth, with specks of purple grin,
+| And fingers stretched so pale and numb,
+| My name, you said, so clear, so thin--
+| With final grasp, in black succumb.
+|
+| Oh--Father, Father--brass horns blare!
+| You string your harp with diamond thread
+| And leave in me this slate despair!
+| What crystal tears in eyes now shed?
+| What pearl is formed by sightless stare?
+| What platinum found in prayers pled?
+|
+| The oak around your body wraps
+| As shoots of pine through spine are grown.
+| In loam the roots will bind your scraps
+| Despite the flowers laid on stone.
+| Each time I come a stem I snap,
+| For only Earth deserves your bone.
+
+- March 2025
 
 ------------------------
 The Pantoums of Dementia
@@ -619,6 +734,60 @@ The Pantoums of Dementia
 | the fading names of sons
 | fan tomorrow's coffin, time's real eyes.
 
+Movement IV: Balance
+====================
+
+--------
+Kingdoms
+--------
+
+| Two children crossed an earthen bridge
+| From level lawns to forests wild
+| Along the rivered arc descending ridge.
+| With dirty hands, they sang and smiled.
+| Their charted map from zippered packs
+| Now in branches espied its target
+| As clearing yields to lily blacks
+| Their kingdom's fresh air market.
+| Lord and lady honorary, cheeked blush,
+| Sat upon thrones of woven grass,
+| Coronated by chirping choir thrush;
+| A falling grain in hour glass. 
+|
+| On a maiden morning moments hence,
+| They meet again upon the autumn passing,
+| Where from heart's removed pretense
+| On tender lips, farewell's final massing.
+| Lily lyrics whisper sing from ground
+| Reminders of their childish notions;
+| World departed, their lives are found
+| Separate by spanning roads and oceans.
+|
+| In the city, their trains diverge,
+| Through tunnels tracked by wagered hours;
+| Iron rails thru hearts do purge
+| Their aged minds of lily flowers.
+| Winter drifts over concrete streets,
+| In the thrush's snow sad song
+| Delivered them in voice downbeat
+| The final dirge of life prolonged.
+| In the cold, their dream dissolved
+| With the clock's incessant ticking
+| Falling strokes of time resolved,
+| They follow home a casket's wicking,
+| Returned again to a lily covered field
+| Where once royals played for a day;
+| With new hearts scored and peeled
+| In the funerary cloud of gray,
+| In the clearing, coffins buried,
+| Their eyes met in solitary gaze.
+|
+| In dirt developed their earthen walls,
+| Roofed the sky to room above,
+| Where lord and lady clothed in shawls
+| Sing the thrushs' songed love.
+
+- March 2025
 
 ------------------------
 ό ποιητα, ἢ πῖθι ἢ ἄπιθι
@@ -713,58 +882,6 @@ The Pantoums of Dementia
 
 - February 2025
 
---------
-Kingdoms
---------
-
-| Two children crossed an earthen bridge
-| From level lawns to forests wild
-| Along the rivered arc descending ridge.
-| With dirty hands, they sang and smiled.
-| Their charted map from zippered packs
-| Now in branches espied its target
-| As clearing yields to lily blacks
-| Their kingdom's fresh air market.
-| Lord and lady honorary, cheeked blush,
-| Sat upon thrones of woven grass,
-| Coronated by chirping choir thrush;
-| A falling grain in hour glass. 
-|
-| On a maiden morning moments hence,
-| They meet again upon the autumn passing,
-| Where from heart's removed pretense
-| On tender lips, farewell's final massing.
-| Lily lyrics whisper sing from ground
-| Reminders of their childish notions;
-| World departed, their lives are found
-| Separate by spanning roads and oceans.
-|
-| In the city, their trains diverge,
-| Through tunnels tracked by wagered hours;
-| Iron rails thru hearts do purge
-| Their aged minds of lily flowers.
-| Winter drifts over concrete streets,
-| In the thrush's snow sad song
-| Delivered them in voice downbeat
-| The final dirge of life prolonged.
-| In the cold, their dream dissolved
-| With the clock's incessant ticking
-| Falling strokes of time resolved,
-| They follow home a casket's wicking,
-| Returned again to a lily covered field
-| Where once royals played for a day;
-| With new hearts scored and peeled
-| In the funerary cloud of gray,
-| In the clearing, coffins buried,
-| Their eyes met in solitary gaze.
-|
-| In dirt developed their earthen walls,
-| Roofed the sky to room above,
-| Where lord and lady clothed in shawls
-| Sing the thrushs' songed love.
-
-- March 2025
-
 ----------------------------------
 The Paronymous Polyptotons of Love
 ----------------------------------
@@ -799,103 +916,3 @@ The Paronymous Polyptotons of Love
 |   To find defined a finer find.
 | We are an are that was a were
 |  That whirled a world to whirl with her.
-
------
-Walls
------
-
-| the husk of walls that city shucks
-| accumulates and concentrates
-| around like rings in ancient trunks
-| where measured age with circle gates
-| the spiraled line amassed through time,
-| deposits buried down substrates.
-|
-| at summit's crest, the joints are thick
-| and licking tongues of moss ascend
-| the darkened blocks from quarry hauled
-| on buttressed back, in stone suspend
-| the garden court where crowds took root
-| and grew their plans of walls to tend.
-|
-| from center peak the wooden slats
-| erect the map with tangled fence
-| to trace a grid of patchwork yards,
-| these charts of dreams in ground commence
-| the flattened course of borough life
-| where burgs and burbs did once condense.
-|
-| then moving out, the bricks of red
-| in crooked rows descend to meet
-| the lanes of carriage tracts now black
-| and scorched with tar in shapes of street
-| where crimson dust from crumbled walls
-| in dancing twirls across concrete.
-|
-| next grey cement of molded squares
-| in towers stacked to portal sky
-| with wires fused and humming signs;
-| they arc and rise, on edges vie
-| the vines entwined in rushing growth
-| to split on spine, like nuclei.
-|
-| at last the stable struts of steel
-| designed as straight as rays of light
-| reflected back on silver glass
-| the lattice links both left and right;
-| the history in circled sweep
-| constricts the city sphere so tight.
-|
-| through sections cross the avenue
-| from point to point and time to time
-| the human shell that forms in turn
-| the arches bend, the steepled chime,
-| that wilts and sheds, but fossils kept
-| in barrows born their salt and lime.
-
-- April 2025
-
----------------
-Turkey Vultures
----------------
-
-| the wakes of Turkey Vultures soar
-| then perch across the steepled sky.
-| they rest on totems tall and pure,
-| in silence feathers multiply.
-| their talons clutch where crosses meet
-| the stolen spear of destined make.
-| no heaven sent their wings of fleet,
-| no stomach filled will hunger slake.
-| the shapes of black in swarming plunged
-| upon the carcass freshly brought.
-| they feast on sins from gods expunged,
-| but left for them as afterthought.
-| bewitched to death, returned to Earth,
-| from cage released, the specters hunt
-| the ones who wear the curse of birth,
-| they all must bear the brutal brunt.
-
-- April 2025
-
---------------------------
-A Sonnet for Cumberland MD
---------------------------
-
-| Bay silt in city stone through time accrues
-| along the western course of concrete flow
-| that sweeps from plain to sky in upward spews
-| as grey-white spray arcs over wave to snow
-| from heights on high and splash on mountain spine
-| where valleyed pools in rising drink their fill
-| and shoot with sprouts through shoulders made of pine
-| the roofs that empty crowds on streets and spill
-| through hand to hand the layers stacked from base
-| to wedded brick til building lillies bred
-| against the westward wall in flood's embrace
-| where lips at last are wet in watershed;
-|
-| Let skyline mark where tide in climb was broke:
-| Steeple, roof, needles pine and leaves of oak.
-
-- March 2025
