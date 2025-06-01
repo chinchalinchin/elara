@@ -1352,6 +1352,8 @@ IX: Landscapes
 | The gowns of white, the final baths,
 |   The oak in coffin boards.
 
+- April 2025
+
 -------------------
 X: Father's Lullaby
 -------------------
@@ -1570,7 +1572,7 @@ II: The Pantoums of Dementia
 |
 | relapsing moments sung by bells and crowds
 | concealed by crumbling walls, demented shades
-| of past refrains now sealed beneath clouds
+| of past refrains now sealed beneath the clouds
 | that clutter skies in swarms that stretch decades.
 |
 | concealed by crumbling walls, demented shades
