@@ -1,3 +1,4 @@
+-----------
 XIII: Walls
 -----------
 
@@ -51,7 +52,6 @@ XIII: Walls
 | in barrows born their salt and lime.
 
 - April 2025
-
 
 .. list-table:: Submission History
    :widths: 15 15 15

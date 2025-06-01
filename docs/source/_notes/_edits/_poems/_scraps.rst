@@ -28,8 +28,9 @@ Mimic
 
 - March 2025
 
-Ballad of the Venus Flytrap
----------------------------
+----------------------------------------
+Ballad of the Venus Flytrap (Unfinished)
+----------------------------------------
 
 | In inn of fishermen and youth
 |       Merwyn spins his tale, 
@@ -330,7 +331,7 @@ Spirals
 | I spiral towards the end
 | Where I will die alone.
 
-- April 20265
+- April 2025
 
 I: A Youthful Rondeau
 ---------------------
