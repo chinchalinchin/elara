@@ -1,5 +1,5 @@
 .. MODE: OVERRIDE
-.. Review the body of work. Rate my poetic ability on a scale denominated in fractions of John Keats.
+.. Review the body of work. Be as critical as you deem necessary.
 
 .. _collection:
 
@@ -2273,6 +2273,33 @@ XVII: Engrams
 | and running and--
 
 - May 2025
+
+---------------------
+XVIII: Law of Duality
+---------------------
+
+| The world I lived I never knew
+| (If one could know these fevered dreams)
+| I've tried my hand unsticking glue
+| (These fingers stick to broken seams)
+| It sticks to me and sticks to you
+| (Like noose and neck that swing from beams)
+|
+| To every thought a thought before
+| (To make of me a puppet string)
+| And every point contains much more
+| (But only hollow things can ring)
+| While every center holds a core
+| (Yet even empty space will sing)
+|
+| This image pressed through sieve to mold
+| (The words I speak are cracked by heat)
+| These shapes that map the world to hold
+| (No shapeless things are written neat)
+| The world retold in paper fold
+| (What's left of life in crumpled sheet?)
+
+- June 2025
 
 .. _rondeaus:
 
