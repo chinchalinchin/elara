@@ -45,6 +45,8 @@ Linguistic
     - :download:`Invertible Worlds CSV <../_static/csv/datasets/linguistic/words/invertible-words.csv>`
 - :ref:`Reflective Words <palindromia>`
     - :download:`Reflective Words CSV <../_static/csv/datasets/linguistic/words/reflective-words.csv>`
+- Oronyms
+    - :download:`Oronyms CSV <../_static/csv/datasets/linguistic/sentences/oronyms.csv>`
 
 .. _scientific-datasets:
 

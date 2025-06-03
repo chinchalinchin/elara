@@ -25,7 +25,7 @@
 --------------
 
 .. image:: _static/img/context/philosophical/wittgenstein-rabbit-duck.svg
-   :width: 80%
+   :width: 70%
    :alt: the eye of the beholder
    :align: center
 
