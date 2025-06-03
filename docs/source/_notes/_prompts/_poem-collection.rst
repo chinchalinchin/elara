@@ -2020,6 +2020,13 @@ XVIII: The Law of Duality
 | While every center holds a core
 | (Yet even empty space can sing)
 |
+| A million words and more to come
+| (I'd weep to know a single fact)
+| These humming beats through syntax thrum
+| (Where waves reflect their heights subtract)
+| In hopes they might in worlds succumb
+| (Refracted rays are always cracked)
+|
 | This image pressed through sieve to mold
 | (The words I speak are cracked by heat)
 | These holes that craft the shapes to hold
