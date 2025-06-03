@@ -422,12 +422,10 @@ Ballad of the Venus Flytrap (Unfinished)
 II: The Ballad of the Isle
 --------------------------
 
-Spring
-------
-
-March 
-#####
-
+| I - Spring
+| 
+| I - March (Mutable Water)
+|
 | The island formed where rivers meet,
 |   where silt through vortex fords.
 | The place emerged a brokered feat, 
@@ -452,10 +450,9 @@ March
 |   the scrolls in future's brine,
 | the sutures binding swords in sync
 |   to island's hallow shrine.
-
-April
-#####
-
+|
+| II - April (Cardinal Fire)
+|
 | The webs of Spring such crude affairs
 |   when strung with spinning songs;
 | the threaded compromise ensnares
@@ -480,10 +477,9 @@ April
 |   on cloudy ballots posed.
 | By noon, the forum order passed
 |   conceded plans proposed.
-
-May
-###
-
+| 
+| III - May (Fixed Earth)
+| 
 | A barren hump prepared with zeal
 |   as sparrows plow their seeds.
 | From sprouted weed to plants' reveal
@@ -508,13 +504,11 @@ May
 |   in congregation's girth, 
 | by May pronounced through sealing clouds
 |   of consecrated Earth.
-
-Summer
-------
-
-June
-####
-
+|
+| II - Summer
+| 
+| I - June (Mutable Air)
+| 
 | When stellar swans survey the dawn
 |   of constellated shores,
 | their forms in flight are downward drawn
@@ -539,10 +533,9 @@ June
 |   their sweetly nectared heat;
 | unladen, drowsy, through the breeze,
 |   the teasing fumes secrete. 
-
-July
-####
-
+|
+| II - July (Cardinal Water)
+|
 | Along the flowing inlet streams 
 |   the festival begins.
 | Caressing music tinges dreams
@@ -567,10 +560,9 @@ July
 |   to memory's delight,
 | two larks alight in fading bliss
 |   fulfill this final night. 
-
-August
-######
-
+|
+| III - August (Fixed Fire)
+|
 | What bittersweet perfumes release
 |   in looming throes of age,
 | when isle matures through orange cerise, 
@@ -595,13 +587,11 @@ August
 |   of secret reign's decline
 | through crimson's spectrum vine, all
 |   gone brown, forgetting shine.
-
-Autumn
-------
-
-September
-#########
-
+|
+| III - Autumn
+| 
+| I - September (Mutable Earth)
+|
 | September storms suspend the skies
 |   resplendent morning pinks
 | above the waking window eyes
@@ -626,10 +616,9 @@ September
 |   debris and sweep from field
 | the tumbling tumult, turned aground
 |   and heaped by waves to wield.
-
-October
-#######
-
+|
+| II - October (Cardinal Air)
+|
 | Divided sky once halved in poise, 
 |   succumbs to blackened press,
 | the hours compress to whiter noise
@@ -654,10 +643,9 @@ October
 |   schematic contour holes
 | where once there rose a sprout to blue
 |   now rising streams of souls. 
-
-November
-########
-
+|
+| III - November (Fixed Water)
+|
 | Orion's arrow point is plunged
 |   through lunging fronts of hail
 | across the waves where life expunged
@@ -682,13 +670,11 @@ November
 |   between the exiled graves.
 | Remembered nocturnes sung beguile
 |   the damned, forgottten knaves. 
-
-Winter
-------
-
-December
-########
-
+|
+| IV - Winter
+|
+| I - December (Mutable Fire)
+|
 | A rending gale begins to blow
 |   above where worlds still thrive.
 | Descending sickles diving slow
@@ -713,10 +699,9 @@ December
 |   dismembered lattice links,
 | upending states, revolving wakes;
 |   the idle spirit shrinks. 
-
-January
-#######
-
+| 
+| II - January (Cardinal Earth)
+|
 | The horns of plenty now cry a dirge
 |   as prying cold enfolds
 | the last remains from island's purge 
@@ -741,10 +726,9 @@ January
 |   this January clock.
 | The island keep returns to sea
 |   through grains of sand to chalk.
-
-February
-########
-
+|
+| III - February (Fixed Air)
+|
 | Yet February always brings 
 |   the forest chorus lines,
 | the chirping chickadee that sings 
