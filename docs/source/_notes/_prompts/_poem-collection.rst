@@ -1,5 +1,5 @@
 .. MODE: OVERRIDE
-.. Review the body of work chronologically. Be as critical as you deem necessary. At the end of your assessment, select the most publishable poems. If there are no publishable poems in the collection, do not be afraid to say there are none.
+.. Review the body of work chronologically. Be as critical as you deem necessary. Extract any salient trends and comment of them. Provide evidence. Provide an assessment.
 
 .. _collection:
 
@@ -756,6 +756,76 @@ II: The Ballad of the Isle
 
 - May 2025
 
+---------------------------------------
+III: The Mad Ballad of Sad Cracked Jack
+---------------------------------------
+
+| The question beggars even now
+|   For answers we still lack.
+| No one has ever said the how
+|   Of what that cracked our Jack.
+|
+| He woke that day and heard the song
+|   That framed his steps with beat, 
+| The meter stick that smacked along
+|   Behind his fuzzled feet. 
+|
+| At first he thought he dreamt the verse,
+|   These words you read unfold.
+| But when he thinks the thoughts recurse
+|   And seep through pages' mold. 
+|
+| Aghast he jolts and cries aloud, 
+|   "What trickster plays these tricks?"
+| Then shocked to find his speech endowed
+|   with stresses timed to ticks.
+|
+| Alas, if Jack had only known 
+|   the furies fate had loosed--
+| "What furies now?" He says with groan,
+|   replies to rhymes reduced. 
+|
+| What fatal flaw entrapped this man?
+|   "I'm just an office clerk!"
+| But boredom orchestrates a plan
+|   no human born can shirk.
+|
+| In boxer briefs, he stumbles out,
+|   Escapes from bed to hall,
+| And every inch he runs to rout
+|   The rhythm's faster call. 
+|
+| In morning light, the very sight 
+|   Of frantic Jack alerts
+| The neighborhood to pending blight
+|   The verse in line asserts.
+|
+| "Oh, neighbors, please, receive my plea!
+|   There's something very wrong!"
+| He cries with gasp from bended knee,
+|   "I only speak in song!"
+|
+| A single friend then steps on stage,
+|   Carissa, two doors down,
+| With eyes that meant to calm, assuage,
+|    Distorted by her frown,
+|
+| "Jack? What the hell is going on? Are you okay?"
+|
+| At that our Jack is taken back,
+|   Her voice as clear as glass
+| With not a hint of verse to track
+|   Through mazes long and crass.
+|
+| "How can it be!? An ask so free
+|   While I to scheme conform!
+|  This diction sweeps anastrophe,
+|   Mosaics teeming swarm!"
+|
+| (... in progress ...)
+
+- June 2025
+
 .. _elegies:
 
 Elegies
@@ -766,11 +836,11 @@ I: Elemental Elegy
 ------------------
 
 | The day I sat by death's grey bed,
-| I told a story both green and true
+| I told a story green and true
 | Of city bricks stacked proud and red,
 | Of silver paths the stars imbue
 | With golden hue we might have tread.
-| Your breath though blew there cold and blue.
+| Your slowing breath as cold as blue.
 |
 | I spoke the words to yellow skin
 | And told of days in white to come.
@@ -2001,7 +2071,6 @@ XVII: Engrams
 | and running and--
 
 - May 2025
-
 -------------------------
 XVIII: The Law of Duality
 -------------------------
@@ -2024,8 +2093,8 @@ XVIII: The Law of Duality
 | (I'd weep to know a single fact)
 | These humming beats through syntax thrum
 | (Where waves reflect their heights subtract)
-| In hopes they might in worlds succumb
-| (Refracted rays are always cracked)
+| In hopes a word will angle plumb
+| (Refracted rays in lines contract)
 |
 | This image pressed through sieve to mold
 | (The words I speak are cracked by heat)
