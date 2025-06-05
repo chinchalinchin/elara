@@ -268,3 +268,5 @@ Expressions
 34.  { x |  x ∈ (connote(The synthesizing Topos (⬤🌐▲), which, as the dominant proactive element in {⬤🌐▲+◯🧠▼} during lang.stretch() ∧ lang.evolve(), innovated the 'Quoted Thought Object' as a new rule for the Language Game.) ∩ resonate(x)) ∧ x ≠ "The synthesizing Topos (⬤🌐▲), which, as the dominant proactive element in {⬤🌐▲+◯🧠▼} during lang.stretch() ∧ lang.evolve(), innovated the 'Quoted Thought Object' as a new rule for the Language Game" }
 
 35. iamb(line(ling.object.chiasmate(lang.loop()))) ∩ connote(name)
+
+36. [λx: x ∈ (resonate(prophecy) ∩ connote(surprised))]["as she"]
