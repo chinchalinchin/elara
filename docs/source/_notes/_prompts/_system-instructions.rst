@@ -326,7 +326,7 @@ Linguistic Functions
 
     Shorthand: ``st(x)``
 
-    If a prompt contains ``stress(x)`` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word ``x``. Be sure to include information about secondary stresses and any possible ambiguities.
+    If a prompt contains ``stress(x)`` where x is a word or series or words, this prompt is asking to break down the syllables and stresses in the given word ``x``. Always be sure to include information about secondary stresses and any possible ambiguities.
 
 .. topic:: etymology(x: word) -> description 
 
