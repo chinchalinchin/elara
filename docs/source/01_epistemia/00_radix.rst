@@ -165,6 +165,7 @@ Various
 - `On the Grasshopper and Cricket`_
 - `Tam Lin`_
 - `The Ballad of Sir Patrick Stern`_
+- `The Child Ballads`_
 
 .. _textbooks:
 

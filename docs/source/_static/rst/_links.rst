@@ -95,6 +95,7 @@
 .. _Song: https://www.poetryfoundation.org/poems/47601/song-56d2282a6cdf5
 .. _The Ballad of Sir Patrick Stern: https://sites.williams.edu/sirpatrickspens/ballad/293/
 .. _The Ballad of the Goodly Fere: https://allpoetry.com/Ballad-Of-The-Goodly-Fere
+.. _The Child Ballads: https://www.sacred-texts.com/neu/eng/child/index.htm
 .. _The Canonization: https://www.poetryfoundation.org/poems/44097/the-canonization
 .. _The Dong with a Luminous Nose: https://www.poetryfoundation.org/poems/44603/the-dong-with-a-luminous-nose
 .. _The Genius of the Crowd: https://allpoetry.com/The-Genius-Of-The-Crowd
