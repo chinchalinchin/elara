@@ -760,6 +760,8 @@ II: The Ballad of the Isle
 III: The Mad Ballad of Sad Cracked Jack
 ---------------------------------------
 
+| Part I - Thalia
+| 
 | The question beggars even now
 |   For answers we still lack.
 | No one has ever said the how
@@ -773,7 +775,7 @@ III: The Mad Ballad of Sad Cracked Jack
 | At first he thought he dreamt the verse,
 |   These words you read unfold.
 | But when he thinks the thoughts recurse
-|   And seep through pages' mold. 
+|   And seep through pages' mould. 
 |
 | Aghast he jolts and cries aloud, 
 |   "What trickster plays these tricks?"
@@ -783,11 +785,11 @@ III: The Mad Ballad of Sad Cracked Jack
 | Alas, if Jack had only known 
 |   the furies fate had loosed--
 | "What furies now?" He says with groan,
-|   replies to rhymes reduced. 
+|   to rhymes replies reduced. 
 |
 | What fatal flaw entrapped this man?
 |   "I'm just an office clerk!"
-| But boredom orchestrates a plan
+| But forces orchestrate a plan
 |   no human born can shirk.
 |
 | In boxer briefs, he stumbles out,
@@ -798,7 +800,7 @@ III: The Mad Ballad of Sad Cracked Jack
 | In morning light, the very sight 
 |   Of frantic Jack alerts
 | The neighborhood to pending blight
-|   The verse in line asserts.
+|   Of curse this line asserts.
 |
 | "Oh, neighbors, please, receive my plea!
 |   There's something very wrong!"
@@ -806,10 +808,10 @@ III: The Mad Ballad of Sad Cracked Jack
 |   "I only speak in song!"
 |
 | A single friend then steps on stage,
-|   Carissa, two doors down,
-| With eyes that meant to calm, assuage,
-|    Distorted by her frown,
-|
+|   So named to fit the bill,
+| For names are fate and fettered wage,
+|   They called her lovely Jill. 
+| 
 | "Jack? What the hell is going on? Are you okay?"
 |
 | At that our Jack is taken back,
@@ -818,11 +820,258 @@ III: The Mad Ballad of Sad Cracked Jack
 |   Through mazes long and crass.
 |
 | "How can it be!? An ask so free
-|   While I to scheme conform!
-|  This diction sweeps anastrophe,
-|   Mosaics teeming swarm!"
+|   While I to scheme conform!"
+| His diction sweeps anastrophe,
+|   Mosaics teeming swarm.
+|
+| She kneels to him and whispers soft,
+|   A voice as kind as cane,
+| The type that beats, not sweet but loft
+|   To strike the skin with pain. 
+|
+| "Are you on drugs or something else?"
+|
+| Now Jill, this dame, the missus made
+|   To fill the damsel role,
+| The unsuspecting victim played
+|   To ballad's very goal.
+|
+| These words are met with wide-eyed stare
+|   As Jack realized his plight;
+| He hears the lines designs prepare,
+|   the ending rhymes invite. 
+|
+| "Oh, listen, Jill, and listen well!"
+|   He takes her hand in his, 
+| "These words that flow are not a spell,
+|   They simply are what is! 
+|
+| "I hear the force that cracks the shape
+|   incessant stresses bind!"
+| He cries as crowds surround to gape
+|   at madness here enshrined. 
+| 
+| "I see," She nods, but doesn't see, 
+|   and picks him up to walk,
+| "Perhaps," She says, "It's time to flee,"
+|   and hauls our Jack in shock.
+| 
+| By hand he's led while thoughts digress,
+|   absurdity in tow. 
+| And spanned by doubt the thoughts obsess
+|   unheard except below: 
+|
+| A million monkeys strapped approach
+|   The works of bards in time,
+| A sonnet thus beyond reproach
+|   Returned from carriage chime.
+|
+| A trillion atoms bound through force
+|   Will likewise fill a void;
+| For given time, all lines outsource
+|   To stories once enjoyed.
+|
+| Did verse annoint this story first,
+|   Or simply find a way
+| To organize the parts dispersed 
+|   Through space's disarray?
+|
+| Or simpler yet, had he just snapped,
+|   insane beyond repair?
+| The razor tip that Occam tapped
+|   declared the latter fair.
+|
+| As doors are slammed, the cats are scrammed
+|   from cushions where they sat,
+| And leaning in as Jill enjambed,
+|   "We need to have a chat
+|
+| About the--fact--" she stops mid-sound, 
+|   and measures out her tone,
+| as slowly wound on axis bound,
+|   her speech is ground and thrown,
+|
+| "About the fact you seem irate,"
+|   She says while tongue contorts
+| Around retorts that resonate
+|   with words this verse consorts,
+|
+| "And not to mention halfway nude,"
+|    She says with glance that proved,
+| "Let's find you something more subdued,"
+|    But Jack cannot be moved. 
+|  
+| "Why do you rhyme? You're part of it!"
+|   In anger, Jack explodes. 
+| "This horrid crime," His words are spit,
+|   "Explain what fate unloads!"
+|
+| Beneath her brow, her eyes express
+|   concern through gems of blue,
+| "You're clearly broken by some stress,
+|   Now tell it to me true!"
+|
+| Attacked by cackles, Jack, he laughs,
+|   "Yes! Stress! The very pest!
+| The force that binds these epigraphs
+|   And leaves me most distressed!"
+| 
+| "Your speech is weird and most perturbed,"
+|   Her tone now wavers weak,
+| "The implication is disturbed,"
+|   As rhymes begin to leak. 
+|
+| "Disturbed is just the word I'd pick
+|   describing my disease. 
+| It strickens me a lunatic 
+|   and swings me by trapeze.
+|
+| Despair becomes the one sole choice,"
+|   Laments a weary Jack,
+| "Unfairly drummed by cunning voice,
+|   alone and left to crack."
+|
+| This lonely lack, unpacked by Jill,
+|   now spurs her senseless heart,
+| "Oh Jack, what's wrong? For me distill
+|   what ails your world through art?"
+|
+| Oh Jack, Oh Jack, this foolish track
+|   Will lead to Jill's demise.
+| By now he knows, there's no way back,
+|   But still defiant sighs, 
+|
+| "I woke today and found the world
+|   explained by verse unheard
+| By anyone but me," Unfurled
+|   his words to heights absurd.
+|
+| Confusion swirls her face anew, 
+|   perplexing facts askew,
+| "And does it speak of me and you?
+|   What ends that might ensue?"
+|
+| "It does! It says that you are next,
+|   that fate has bound our names,
+| If cursed I am, then curse has vexed
+|   us both to play its games." 
+|
+| "If that's the case, then if I play--"
+|   She pauses, lost in thought,
+| "It's hard to pick a word to say--"
+|   And thoughtless finds the spot.
+|
+| And now the players number two,
+|   For two the game is made.
+| And now the stacks they anted grew
+|   Against the pair they played.
+|
+| A pairing told in pages' fold
+|   of arcs that never miss--
+| Her voice remarks through mutters rolled, 
+|   "--the flying fuck is this?"
+|   
+| "You hear it too?" As shocked as she, 
+|   "The lyric ghost that haunts
+| our wretched lives with prophecy,
+|   As if their words are taunts?"
+|
+| A beat, then two, she hears it too,
+|   But heard is not the word
+| An ear would say, this residue
+|   inferred through meaning blurred,
+|
+| "Juh--Jack," She hacks, "Is this a joke?"
+|   But jokes are soaked in mirth;
+| This line will punch, though falling stroke
+|   will bury dead in Earth.      
+|
+| She asks, "What's that supposed to mean?"
+|    He shrugs, "Your guess is mine."
+| "Is this--" her stutter opaline,
+|    intoned benign, "--a sign?"
+|
+| A sign, of course, but pointing where? 
+|    Aligned to what or who? 
+| The human mind, a dull affair,
+|   So apt to misconstrue.
+|
+| The secret sunk in guarded chest
+|   Of synchronicity
+| Is found in warps of arcs possessed
+|   Of eccentricity. 
+|
+| And even as these words are sewn,
+|   and in their heads unstitched,
+| she threads the fraying edges shown
+|   and falls enthralled bewitched
+|
+| As lighting up, a dawning norm, 
+|   recalled from days of youth,
+| There Jill exclaims, "So uniform,
+|   I've heard before in truth!
+|
+| This meter fits a ballad sung 
+|   in feet of four and three!"
+| And springing up, his hand are wrung,
+|   "What's that mean for you and me?"
+|
+| "It's hard to say, but what is clear,
+|   There's meaning here conceived,"
+| Declared in certain words austere,
+|   one almost dare believed.
+|
+| "This useless English Arts degree
+|   I never thought to use,
+| It's purpose clear, we both agree,
+|   Was always to deduce
+|
+| The curse of verse that flirts with us
+|   And save us from its worst
+| But first I need the tools to suss
+|   The course to be reversed,"
+|
+| Abrupt she stands with coat in hand, 
+|   "The library!" She cries, 
+| "We need some Keats, that Ginsberg banned,
+|   The lessons they advise!"
+|
+| The lights resurge behind Jack's eyes,
+|   as hopeless purged, he rants,
+| "Our paths converge and plans revise,
+|   But first I need some pants!"
+|
+| Part II - Melpomene
+|
+| With morning socks arrayed with boots,
+|   Rotated masks arranged
+| the comic interchanged its chutes
+|   for tragedy exchanged. 
+|
+| Then Jack and Jill, with ending near,
+|   as senseless plan persists
+| To seek in vain a meaning here,
+|   expecting clever twists.
+| 
+| (... in progress ...)
+|
+| The structure seethes, a wreath of webs
+|   Where meaning sticks to die,
+| The mind entwined will find in ebbs
+|   The flow that strings the why. 
+|   
+| This thread is laid through curling maze,
+|   Convincing paths deceive
+| That reason's plan has drawn the ways 
+|   But madness hides in weave. 
+|
+| They sought to know, but knowing lied,
+|   unknown to them its ends
+| that brought to sow the death she died,
+|   a body Jack now tends. 
 |
 | (... in progress ...)
+| 
 
 - June 2025
 

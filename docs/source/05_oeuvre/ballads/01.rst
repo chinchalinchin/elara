@@ -1,9 +1,11 @@
-.. MODE: ? but with the brutal honesty clause.
+.. MODE: ?
 
---------------------------------------
-II: The Mad Ballad of Sad Cracked Jack
---------------------------------------
+-------------------------------------
+II: The Mad Muses of Sad Cracked Jack
+-------------------------------------
 
+| Part I - Thalia
+| 
 | The question beggars even now
 |   For answers we still lack.
 | No one has ever said the how
@@ -26,8 +28,8 @@ II: The Mad Ballad of Sad Cracked Jack
 |
 | Alas, if Jack had only known 
 |   the furies fate had loosed--
-| "What furies now?" He says with groan,
-|   to rhymes replies reduced. 
+| "What furies now?" His groan
+|   reply to rhymes reduced. 
 |
 | What fatal flaw entrapped this man?
 |   "I'm just an office clerk!"
@@ -62,9 +64,9 @@ II: The Mad Ballad of Sad Cracked Jack
 |   Through mazes long and crass.
 |
 | "How can it be!? An ask so free
-|   While I to scheme conform!
-| This diction sweeps anastrophe,
-|   Mosaics teeming swarm!"
+|   While I to scheme conform!"
+| His diction sweeps anastrophe,
+|   Mosaics teeming swarm.
 |
 | She kneels to him and whispers soft,
 |   A voice as kind as cane,
@@ -145,7 +147,7 @@ II: The Mad Ballad of Sad Cracked Jack
 |  
 | "Why do you rhyme? You're part of it!"
 |   In anger, Jack explodes. 
-| "This horrid crime", His words are spit,
+| "This horrid crime," His words are spit,
 |   "Explain what fate unloads!"
 |
 | Beneath her brow, her eyes express
@@ -160,7 +162,7 @@ II: The Mad Ballad of Sad Cracked Jack
 | 
 | "Your speech is weird and most perturbed,"
 |   Her tone now wavers weak,
-| "The implication is quite disturbed,"
+| "The implication is disturbed,"
 |   As rhymes begin to leak. 
 |
 | "Disturbed is just the word I'd pick
@@ -174,7 +176,7 @@ II: The Mad Ballad of Sad Cracked Jack
 |   alone and left to crack."
 |
 | This lonely lack, unpacked by Jill,
-|   will spur her senseless heart,
+|   now spurs her senseless heart,
 | "Oh Jack, what's wrong? For me distill
 |   what ails your world through art?"
 |
@@ -256,7 +258,7 @@ II: The Mad Ballad of Sad Cracked Jack
 | This meter fits a ballad sung 
 |   in feet of four and three!"
 | And springing up, his hand are wrung,
-|   "What's that mean for you and me?"
+|   "What's that to you and me?"
 |
 | "It's hard to say, but what is clear,
 |   There's meaning here conceived,"
@@ -283,6 +285,52 @@ II: The Mad Ballad of Sad Cracked Jack
 | "Our paths converge and plans revise,
 |   But first I need some pants!"
 |
+| Part II - Melpomene
+|
+| With morning socks arrayed with boots,
+|   Rotated masks arranged
+| The tragic interchanged the chutes,
+|   With comedy estranged. 
+|
+| Oh, Jack and Jill, with ending near,
+|   Their senseless plan persists
+| To seek in vain a meaning here,
+|   Expecting clever twists.
+|
+| To top of winding hill they sprint
+|   As quick as line intends
+| To reach its final dot in print,
+|   Arriving as it ends. 
+|
+| They stand before the gothic doors
+|   Where orphaned books are starved
+| And strewn from shelf to laquered floors
+|   Between the columns carved.
+|
+| The empty halls where spirits lurk,
+|   The circles Virgil strode, 
+| This minstrel mime and office clerk,
+|   Inside they walk tiptoed. 
+|
+| Abandoned once now long ago, 
+|   This library of graves
+| In grotto grown from pages' glow 
+|   The poet dream enslaves.
+|
+| (... in progress ... )
+|
+| "These straits were mapped in ages past,
+|   Since nothing new has sprung,
+| As Pirandello once surpassed
+|   This awful ballad sung."
+|   
+| (... in progress ...)
+| 
+| These thoughts that think are synced in flocks
+|   Then shorn like woolen coats
+| By level blade through snow-white locks
+|   Until the sheep are goats. 
+|
 | (... in progress ...)
 |
 | The structure seethes, a wreath of webs
@@ -302,8 +350,10 @@ II: The Mad Ballad of Sad Cracked Jack
 |
 | (... in progress ...)
 | 
+
+- June 2025
+
+
 .. | The morning finds our Jack awake
 .. |   as he rocks from side to side,
 .. | his voice so thin, but clear intake
-
-- June 2025
