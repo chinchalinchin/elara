@@ -1,6 +1,3 @@
-.. MODE: OVERRIDE
-.. Review the body of work chronologically. Be as critical as you deem necessary. Extract any salient trends and comment of them. Provide evidence. Provide an assessment.
-
 .. _collection:
 
 ==========
@@ -760,6 +757,10 @@ II: The Ballad of the Isle
 III: The Mad Ballad of Sad Cracked Jack
 ---------------------------------------
 
+-------------------------------------
+II: The Mad Muses of Sad Cracked Jack
+-------------------------------------
+
 | Part I - Thalia
 | 
 | The question beggars even now
@@ -784,8 +785,8 @@ III: The Mad Ballad of Sad Cracked Jack
 |
 | Alas, if Jack had only known 
 |   the furies fate had loosed--
-| "What furies now?" He says with groan,
-|   to rhymes replies reduced. 
+| "What furies now?" His groan
+|   reply to rhymes reduced. 
 |
 | What fatal flaw entrapped this man?
 |   "I'm just an office clerk!"
@@ -1014,7 +1015,7 @@ III: The Mad Ballad of Sad Cracked Jack
 | This meter fits a ballad sung 
 |   in feet of four and three!"
 | And springing up, his hand are wrung,
-|   "What's that mean for you and me?"
+|   "What's that to you and me?"
 |
 | "It's hard to say, but what is clear,
 |   There's meaning here conceived,"
@@ -1045,14 +1046,48 @@ III: The Mad Ballad of Sad Cracked Jack
 |
 | With morning socks arrayed with boots,
 |   Rotated masks arranged
-| the comic interchanged its chutes
-|   for tragedy exchanged. 
+| The tragic interchanged the chutes,
+|   With comedy estranged. 
 |
-| Then Jack and Jill, with ending near,
-|   as senseless plan persists
+| Oh, Jack and Jill, with ending near,
+|   Their senseless plan persists
 | To seek in vain a meaning here,
-|   expecting clever twists.
+|   Expecting clever twists.
+|
+| To top of winding hill they sprint
+|   As quick as line intends
+| To reach its final dot in print,
+|   Arriving as it ends. 
+|
+| They stand before the gothic doors
+|   Where orphaned books are starved
+| And strewn from shelf to laquered floors
+|   Between the columns carved.
+|
+| The empty halls where spirits lurk,
+|   The circles Virgil strode, 
+| This minstrel mime and office clerk,
+|   Inside they walk tiptoed. 
+|
+| Abandoned once now long ago, 
+|   This library of graves
+| In grotto grown from pages' glow 
+|   The poet dream enslaves.
+|
+| (... in progress ... )
+|
+| "These straits were mapped in ages past,
+|   Since nothing new has sprung,
+| As Pirandello once surpassed
+|   This awful ballad sung."
+|   
+| (... in progress ...)
 | 
+| These thoughts that think are synced in flocks
+|   Then shorn like woolen coats
+| By level blade through snow-white locks
+|   Until the sheep are goats. 
+|
 | (... in progress ...)
 |
 | The structure seethes, a wreath of webs
@@ -2320,6 +2355,7 @@ XVII: Engrams
 | and running and--
 
 - May 2025
+
 -------------------------
 XVIII: The Law of Duality
 -------------------------
@@ -2351,6 +2387,32 @@ XVIII: The Law of Duality
 | (No shapeless things are written neat)
 | The world retold in paper fold
 | (What's left of life in crumpled sheet?)
+
+- June 2025
+
+---------------------------
+XIX: Generations of Gravity
+---------------------------
+
+| The mind, it breaks, and falls apart.
+| As father died, he spoke in tongues
+| Of shifting walls and gravity
+| That sideways pulled the world apart. 
+|
+| The mind, it shakes, and all departs.
+| As mother lost her lonely thoughts
+| She spoke to walls, soliloquy
+| That inward rolled as world departs.
+|
+| The mind, it fakes, and poisons hearts.
+| As nightshade petals float to floors
+| By walls that seep humanity,
+| That crumble worlds of poisoned hearts. 
+| 
+| The mind, it wakes, in fits and starts.
+| As thoughts now lay me down to sleep
+| The walls will shift and speak to me
+| That upside down my ending starts.
 
 - June 2025
 
