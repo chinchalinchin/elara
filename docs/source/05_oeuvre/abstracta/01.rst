@@ -70,8 +70,6 @@ II: The Invocation of Metric Code
 
 - April 2025
 
-**Submission History**
-
 .. list-table:: Submission History
    :widths: 15 15 15
    :header-rows: 1

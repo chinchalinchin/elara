@@ -26,12 +26,12 @@ I: LeAnna's Pantoum
 - February 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - March 27, 2025
-     - Poetry Magazine
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Poetry Magazine
+    - Pending

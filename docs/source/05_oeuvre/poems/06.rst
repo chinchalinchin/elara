@@ -36,18 +36,18 @@ VII: The Paronymous Polyptotons of Love
 - March 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - March 27, 2025
-     - Rattle Poetry
-     - Rejected
-   * - April 7, 2025
-     - Paris Review
-     - Pending
-   * - April 27, 2025
-     - Frontier Misfit Competition
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+  * - April 27, 2025
+    - Frontier Misfit Competition
+    - Pending

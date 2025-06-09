@@ -1,3 +1,6 @@
+.. MODE: OVERRIDE
+.. Assign a probability to all pending submissions, given the rejected submissions.
+
 .. _collection:
 
 ==========
@@ -40,6 +43,17 @@ I: The Unicode Ode
 | 🧔 + 🎹 = 🎶(💃) ∝ ⏳ 𝆒 #
 
 - March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Misfit Competition
+    - Pending
 
 ---------------------------------
 II: The Invocation of Metric Code
@@ -113,6 +127,17 @@ II: The Invocation of Metric Code
 
 - April 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Misfit Competition
+    - Pending
+    
 ---------------------------
 III: Substrate (Unfinished)
 ---------------------------
@@ -753,13 +778,29 @@ II: The Ballad of the Isle
 
 - May 2025
 
----------------------------------------
-III: The Mad Ballad of Sad Cracked Jack
----------------------------------------
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
 
--------------------------------------
-II: The Mad Muses of Sad Cracked Jack
--------------------------------------
+  * - Date
+    - Publication
+    - Status
+  * - May 23, 2025
+    - THINK Journal
+    - Pending
+  * - May 30, 2025
+    - Wallstrait
+    - Rejected
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+
+--------------------------------------
+III: The Mad Muses of Sad Cracked Jack
+--------------------------------------
 
 | Part I - Thalia
 | 
@@ -1149,6 +1190,32 @@ I: Elemental Elegy
 
 - March 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Poetry Magazine
+    - Pending
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
+  * - June 3, 2025
+    - Frontier Poetry
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+  * - June 6, 2025
+    - Boulevard Magazine
+    - Pending
+    
 .. _haikus:
 
 Haikus
@@ -1237,6 +1304,17 @@ II: Sunday Ghosts
 
 - March 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
+
 --------------------------
 III: On The Origin of Wind
 --------------------------
@@ -1267,6 +1345,17 @@ III: On The Origin of Wind
 |     Always as if by rule.
 
 - March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
 
 ------------------------
 IV: The World That Spins
@@ -1384,6 +1473,17 @@ VII: Silver Gifts (Librarian II)
 
 - April 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Writer's Digest Competition
+    - Pending
+
 -------------------------------
 VIII: Eternally (Librarian III)
 -------------------------------
@@ -1436,6 +1536,26 @@ IX: Landscapes
 
 - April 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+
 -------------------
 X: Father's Lullaby
 -------------------
@@ -1466,6 +1586,20 @@ X: Father's Lullaby
 |   To wander incomplete.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Writer's Digest Competition
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
 
 .. _odes: 
 
@@ -1506,6 +1640,23 @@ I: An Ode To Autumn
 |           Of Spring now waning thin.
 
 - March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
 
 --------------------
 II: Ode to the Heron
@@ -1568,6 +1719,29 @@ II: Ode to the Heron
 
 - March 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+  * - June 3, 2025
+    - Frontier Poetry
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+  * - June 6, 2025
+    - Boulevard Magazine
+    - Pending
+
 .. _pantoums:
 
 Pantoums
@@ -1598,6 +1772,17 @@ I: LeAnna's Pantoum
 | When you come with grin and play pretend.
 
 - February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Poetry Magazine
+    - Pending
 
 ----------------------------
 II: The Pantoums of Dementia
@@ -1691,6 +1876,29 @@ II: The Pantoums of Dementia
 
 - June 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 1, 2025
+    - Tabula Rasa
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
+  * - June 3, 2025
+    - Frontier Poetry
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+  * - June 6, 2025
+    - Boulevard Magazine
+    - Pending
+
 .. _poems:
 
 Poems
@@ -1732,6 +1940,17 @@ I: Regret
 
 - February 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+
 ----------
 II: Syntax
 ----------
@@ -1767,6 +1986,17 @@ II: Syntax
 | Yet in the shapes there always is what cannot be redacted.
 
 - February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
 
 --------------
 III: Absurdity
@@ -1823,6 +2053,17 @@ III: Absurdity
 | Where for royal cloaks their burning tatters are exchanged.  
 
 - February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
 
 ------------
 IV: Dystopia
@@ -2000,6 +2241,20 @@ V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι
 
 - February 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - February 10, 2025
+    - Enott Pratt Poetry Contest
+    - Rejected
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+
 ------------
 VI: Kingdoms
 ------------
@@ -2052,6 +2307,17 @@ VI: Kingdoms
 
 - March 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+
 ---------------------------------------
 VII: The Paronymous Polyptotons of Love
 ---------------------------------------
@@ -2088,6 +2354,23 @@ VII: The Paronymous Polyptotons of Love
 |  That whirled a world to whirl with her.
 
 - March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+  * - April 27, 2025
+    - Frontier Misfit Competition
+    - Pending
 
 ---------------------------
 VII: Designs (Librarian IV)
@@ -2141,6 +2424,18 @@ IX: Bird (Librarian V)
 
 - April 2025
 
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+
 ------------------------
 X: Photographs of Autumn
 ------------------------
@@ -2193,6 +2488,20 @@ XI: The Curse of Rain
 | And so it cries at heaven's gate.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
 
 ------------------
 XII: Let It Simmer
@@ -2268,6 +2577,23 @@ XIII: Walls
 
 - April 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
+
 --------------------
 XIV: Turkey Vultures
 --------------------
@@ -2290,6 +2616,17 @@ XIV: Turkey Vultures
 | they all must bear the brutal brunt.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending
 
 -----------
 XV: Faustus
@@ -2326,6 +2663,17 @@ XV: Faustus
 | replace my eyes and rise within.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending
 
 --------------
 XVI: Recursion
@@ -2389,6 +2737,17 @@ XVIII: The Law of Duality
 | (What's left of life in crumpled sheet?)
 
 - June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
 
 ---------------------------
 XIX: Generations of Gravity
@@ -2471,6 +2830,17 @@ II: The Winter Rondeau of Cumberland
 |                     Into the City of the Queen.
 
 - March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
 
 ------------------------------
 II: Rondeau for the River Rats
@@ -2571,6 +2941,27 @@ III: A Sonnet for Cumberland MD
 
 - March 2025
 
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 24, 2025
+    - Allegany County Library Poetry Contest
+    - Rejected
+  * - March 27, 2025
+    - Poetry Magazine
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
+
 ----------
 IV: Chance
 ----------
@@ -2600,6 +2991,18 @@ IV: Chance
 
 - April 2025
 
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+
 -----------
 V: Stranded
 -----------
@@ -2623,6 +3026,17 @@ V: Stranded
 | A thought, perhaps to be, with you and warm.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
 
 ------------
 VI: Poisoned
@@ -2682,6 +3096,17 @@ II: Forever
 | Let it sink not into never.
 
 - February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
 
 ------------
 III: Letters
@@ -2796,3 +3221,13 @@ III: Plots
 
 - March 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Poetry Magazine
+    - Pending

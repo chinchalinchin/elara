@@ -31,3 +31,14 @@ XVIII: The Law of Duality
 | (What's left of life in crumpled sheet?)
 
 - June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending

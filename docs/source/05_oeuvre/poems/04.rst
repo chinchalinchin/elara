@@ -92,15 +92,15 @@ V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι
 - February 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - February 10, 2025
-     - Enott Pratt Poetry Contest
-     - Rejected
-   * - April 7, 2025
-     - Paris Review
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - February 10, 2025
+    - Enott Pratt Poetry Contest
+    - Rejected
+  * - April 7, 2025
+    - Paris Review
+    - Pending

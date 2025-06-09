@@ -340,18 +340,21 @@ I: The Ballad of the Isle
 - May 2025
 
 .. list-table:: Submission History
-    :widths: 15 15 15
-    :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-    * - Date
-      - Publication
-      - Status
-    * - May 23, 2025
-      - THINK Journal
-      - Pending
-    * - May 30, 2025
-      - Wallstrait
-      - Pending
-    * - June 1, 2025
-      - The Louisville Review
-      - Pending
+  * - Date
+    - Publication
+    - Status
+  * - May 23, 2025
+    - THINK Journal
+    - Pending
+  * - May 30, 2025
+    - Wallstrait
+    - Rejected
+  * - June 1, 2025
+    - The Louisville Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending

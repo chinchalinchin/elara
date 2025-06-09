@@ -29,21 +29,22 @@ IX: Landscapes
 
 - April 2025
 
-**Submission History**
-
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - April 7, 2025
-     - Paris Review
-     - Pending
-   * - April 7, 2025
-     - The New Yorker
-     - Pending
-   * - May 10, 2025
-     - North Appalachia Review
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending

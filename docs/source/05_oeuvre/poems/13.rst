@@ -22,12 +22,12 @@ XIV: Turkey Vultures
 - April 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - April 27, 2025
-     - Frontier Poetry
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending

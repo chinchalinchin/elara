@@ -34,18 +34,18 @@ I: An Ode To Autumn
 - March 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - March 27, 2025
-     - Think Journal
-     - Rejected
-   * - April 27, 2025
-     - Frontier Poetry
-     - Pending
-   * - May 10, 2025
-     - North Appalachia Review
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
+  * - April 27, 2025
+    - Frontier Poetry
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending

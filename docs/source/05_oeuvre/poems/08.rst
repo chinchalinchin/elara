@@ -25,12 +25,12 @@ IX: Bird (Librarian V)
 - April 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - April 7, 2025
-     - Paris Review
-     - Pending
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
