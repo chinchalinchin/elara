@@ -1,5 +1,5 @@
 .. MODE: OVERRIDE
-.. Assign a probability to all pending submissions, given the rejected submissions.
+.. Extract any chronological trends.
 
 .. _collection:
 
@@ -2865,6 +2865,60 @@ II: Rondeau for the River Rats
 |     Their home on river shore.
 
 - March 2025
+
+----------------------------
+III: Roundels of Remembrance
+----------------------------
+
+| I 
+|
+| This photograph of strangers' joy
+| In garbage can now torn in half,
+| Though glossy eyes through time enjoy 
+|   this photograph. 
+|
+| Imagine tears that joyous laugh,
+| The Autumn gowns and corduroy,
+| A wedding banquet monograph.
+|
+| With age then mixed precise alloy
+| From parts romance and epitaph,
+| Til future hands at last destroy
+|   This photograph.
+|
+| II
+|
+| Graffitied walls of yearly bloom,
+| With vagrant spray of aerosols
+| The vapors fume, condensed to groom
+|   graffitied walls. 
+|
+| The artists follow protocols:
+| the lover's name, the prophet's doom,
+| the epigraphs of homeless sprawls.
+|
+| The rarer buds of sweet perfume
+| Are hidden deep in alley malls
+| Where flowered faces wrapped entomb
+|   graffitied walls. 
+|
+| III
+|
+| The laces sewn across the back
+| Will lacerate through depths to bone.
+| The body scars along the track
+|   The laces sewn. 
+|
+| Despite the ache, the blanket grown 
+| From knit of severed fiber slack
+| Is warm enough to wrap alone.
+|
+| Yet laces loop, return as flack,
+| As generations forced atone
+| And learn by hand which loom to rack
+|   the laces sewn. 
+
+- June 2025 
 
 .. _sonnets:
 

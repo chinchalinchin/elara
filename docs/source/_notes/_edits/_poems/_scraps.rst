@@ -872,3 +872,29 @@ some even rhyme
 
 : Sinusoidal
 -----------
+
+
+
+
+| So lily white, the petal crowds,
+| Though dressed in mourning black as night,
+| They stood beneath the morning clouds
+|   so lily white. 
+|
+| As coffin lowered out of sight,
+| The body wrapped in linen shrouds,
+| The mind remained in final rite.
+
+| Through words they spoke the last invite
+| For fading friend the haze enshrouds
+| 
+
+| So lily white the petaled flock,
+| Though dressed in mourning black as night,
+| They gather round a face of chalk 
+|   So lily white. 
+|
+| As coffin lowered out of sight,
+| 
+
+| The morning clouds 
