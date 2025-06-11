@@ -6,5 +6,3 @@ Haikus
    :caption: Contents:
 
    00
-   01
-   02

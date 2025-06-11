@@ -1,12 +1,11 @@
-Renaissance
+Renaissance 15 Lines
+--------------------
 
 | R - a
 | a
 | b
 | b 
 | a
-| b
-|      R
 | 
 | a
 | a
@@ -19,3 +18,20 @@ Renaissance
 | b
 | a
 |      R  
+
+Roundel
+-------
+
+| R - A 
+| B ∥ R 
+| A 
+| R 
+|
+| B
+| A 
+| B 
+|
+| A 
+| B
+| A 
+| R
