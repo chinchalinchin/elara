@@ -1,5 +1,5 @@
 .. MODE: OVERRIDE
-.. Pick the five most publishable poems and find journals/magazines/platforms you would think would be good targets.
+.. Analyze the collection chronologically. Extract any salient trends and present them.
 
 .. _collection:
 
@@ -1903,6 +1903,173 @@ II: The Pantoums of Dementia
 
 Poems
 =====
+
+------------
+-VIII: Truth
+------------
+
+| Some things are beautiful.
+| Some things are not.
+| 
+| Some people are crazy.
+| And the others are too.
+| 
+| I lost my mind a while ago, myself. 
+| Now I talk to myself.
+| Write notes to myself.
+| Here are few:
+| 
+| I'm lonely.
+| 
+| You're dying.
+| 
+| There's nothing left.
+| 
+| I'm obsessed with things
+| that I'm not very good at.
+| 
+| I fail and I fail. 
+| I never learn.
+| 
+| The bums know the truth.
+| The cold and the bench.
+| 
+| I'm here, drinking for you.
+
+- 2009
+
+-------------------
+-VII: Clouds of Fear
+-------------------
+
+| I think, man said, therefore I disappear
+| into clouds of atoms, quarks and fear.
+
+- 2009
+
+-------------
+-VI: Halloween 
+-------------
+
+| A man in a pink bunny suit crosses the street
+| Drunk and reeling with flat footed feet.
+| An undead city rises in reverse
+| According to a long ritualized curse.
+
+- 2009
+
+----------------------
+-V: Parallel Universes
+----------------------
+
+| Every life is a parallel universe.
+| Walking down the sidewalk lets me peer through portals
+| into other dimensions, where I might be a computer scientist
+| or a skinny woman wrapped in a fur coat
+| or a successful hedge fund manager.
+| More to the point, somewhere I am a poisonous tree frog.
+| Somewhere, I am the vibrating air,
+| the seductive undulations of music.
+| Somewhere else I am the dirt.
+| Regardless of form, everywhere I am.
+
+- 2009
+
+----------
+-IV: Dreams 
+----------
+
+| I dream of waves and tides
+| of slippery skin and sand
+| seashells like the shingles
+| of some great underground structure
+| whose columns support the ground
+| and whose foundation holds tight 
+| the heart of the Earth.
+| 
+| In my sleep, I wake
+| from my sleep
+| from the long thought
+| thought by tall people
+| thinking short thoughts.
+| I stretch my muscles
+| and crack my neck,
+| touch my toes
+| and run into the water.
+
+- 2009
+
+---------------------
+-III: The Age of Poetry
+---------------------
+
+| The age of poetry will destroy the world
+| in a flash of fumbling beauty
+| stanzas like atom bombs
+| and rhymes like lines
+| of soldiers keeping time
+| to beating barrels 
+| of the front line.  
+| Art (like the mind)
+| cannot comprehend its glory.
+
+- 2009
+
+-------------------------
+-II: The Mid-Winter March
+-------------------------
+
+| At twelve when I woke up, the ground was dry.
+| Around one, it started snowing.
+| By four, the roads were slush
+| and the town was hushed.
+| When I went to the liquor store at 7:12,
+| the streets were filled like store shelves
+| Waning silhouettes 
+| limping like zombies
+| towards the liquor store.
+| The mid-winter march
+| of alcoholism
+| like the stalwart journey
+| of the emperor penguins
+| in the freezing wastelands
+| of Antarctica.
+| I go inside and
+| get my fifth of vodka
+| pack of cigarettes
+| bag of peanuts
+| and say my prayers
+| at the counter of clerks.
+|
+| The sky
+| falls to the ground
+| in the muted silence of
+| a winter's night.
+
+- 2009
+
+-----------
+-I: The End
+-----------
+
+| The pavement tide recedes
+| and the brick and mortar beaches 
+| expose the fault lines of the City. 
+|
+| This town will one day sink into the ground
+| and Nature will reclaim its property. 
+| We will pluck berries from vines 
+| growing up the sides of office complexes
+| and erect deerskin tents on the shattered blacktop.
+| We will dance around bonfires,
+| chanting songs sung to the soul of everything
+| and tell stories about the formation of stars,
+| the teardrops of goddesses frozen in the sky.
+| The forest will whistle with wind
+| and billboards will be painted over with the faces of totems,
+| the ink distilled from the buds of flowers.
+
+- 2009
 
 ---------
 I: Regret
