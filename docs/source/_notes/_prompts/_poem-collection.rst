@@ -1,5 +1,5 @@
 .. MODE: OVERRIDE
-.. Extract any chronological trends.
+.. Pick the five most publishable poems and find journals/magazines/platforms you would think would be good targets.
 
 .. _collection:
 
@@ -2753,10 +2753,10 @@ XVIII: The Law of Duality
 XIX: Generations of Gravity
 ---------------------------
 
-| The mind, it breaks, and falls apart.
+| The mind, it breaks, and falls to parts.
 | As father died, he spoke in tongues
 | Of shifting walls and gravity
-| That sideways pulled the world apart. 
+| That sideways pulled the world to parts. 
 |
 | The mind, it shakes, and all departs.
 | As mother lost her lonely thoughts
