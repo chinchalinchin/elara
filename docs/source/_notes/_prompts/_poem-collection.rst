@@ -1904,9 +1904,9 @@ II: The Pantoums of Dementia
 Poems
 =====
 
-------------
--VIII: Truth
-------------
+---------
+-X: Truth
+---------
 
 | Some things are beautiful.
 | Some things are not.
@@ -1939,7 +1939,7 @@ Poems
 - 2009
 
 -------------------
--VII: Clouds of Fear
+-IX: Clouds of Fear
 -------------------
 
 | I think, man said, therefore I disappear
@@ -1947,9 +1947,9 @@ Poems
 
 - 2009
 
--------------
--VI: Halloween 
--------------
+----------------
+-VIII: Halloween 
+----------------
 
 | A man in a pink bunny suit crosses the street
 | Drunk and reeling with flat footed feet.
@@ -1958,9 +1958,9 @@ Poems
 
 - 2009
 
-----------------------
--V: Parallel Universes
-----------------------
+------------------------
+-VII: Parallel Universes
+------------------------
 
 | Every life is a parallel universe.
 | Walking down the sidewalk lets me peer through portals
@@ -1975,9 +1975,9 @@ Poems
 
 - 2009
 
-----------
--IV: Dreams 
-----------
+-----------
+-VI: Dreams 
+-----------
 
 | I dream of waves and tides
 | of slippery skin and sand
@@ -2000,7 +2000,7 @@ Poems
 - 2009
 
 ---------------------
--III: The Age of Poetry
+-V: The Age of Poetry
 ---------------------
 
 | The age of poetry will destroy the world
@@ -2016,7 +2016,7 @@ Poems
 - 2009
 
 -------------------------
--II: The Mid-Winter March
+-IV: The Mid-Winter March
 -------------------------
 
 | At twelve when I woke up, the ground was dry.
@@ -2048,9 +2048,9 @@ Poems
 
 - 2009
 
------------
--I: The End
------------
+-------------
+-III: The End
+-------------
 
 | The pavement tide recedes
 | and the brick and mortar beaches 
@@ -2070,6 +2070,92 @@ Poems
 | the ink distilled from the buds of flowers.
 
 - 2009
+
+------------
+-II: Process
+------------
+
+| It is a story of becoming.
+| The father becomes the son. The endless replication of worlds. 
+| 
+| Each iteration is slightly better, slightly worse.
+| 
+| Each universe born from another. A never ending hallway of mirrors, bouncing around time; each mirror distorted, each distortion mirrored. Patterns unfold through the process. 
+|	Mimicry and divestiture. 	
+|	Individual branches bound to the trunks and each trunk bound to the soil.
+
+- 2015
+
+--------------------
+-I: Mephisto and God
+--------------------
+
+| Mephisto
+| 
+|	All of these mysteries that you claim to keep,
+|	the learned below spurn to regard so little;
+|	Whose outline yet drapes the wide world entire
+|	enforcing a silence before their tongues inquire. 
+|
+|	The faithful doth put their heads to sleep,
+|	rest assured in dreams of their souls' acquittal. 
+|	Trembling and awed, even the learned agree:
+|	Life has a price, because it's not given for free. 
+|
+|	In moments of agony and madness unique,
+|	Even the heart of the heathen cries out your sickle.
+|	For every human heart has a lack that you built,
+|	One that you filled with bottomless guilt. 	
+|
+|	I, Mephisto, am not cowed by your mystique.
+|	Your promises ring hollow, your words always brittle.
+|	I am your equal and I know the truth
+|	Though it requires not even a sleuth. 
+|
+|	I'd wager all there is a greater leap,
+|	a question that for all you are is still a riddle;
+|	That when You created Man, You rolled the dice,
+|	Cut from His rib and then rolled it twice.
+|
+| God
+| 
+| 	The question you pose is one of chance.
+|	Whether I, being God, act in ways uncertain?
+|	What saith you when my answer breaks tooth?
+|	Would you believe it then or need further proof?
+|
+|
+| Mephisto
+|
+|	So my argument you doth admit and advance!
+|	Let us climax this play now towards its curtain:
+|	Tell me true here now there is no plan
+|	All is chaos for a width without span.
+|
+|
+| God 
+|
+|	You march on ahead without my question sated. 
+|	I ask you again: what proof you require?
+|	The price of this knowledge is paid full in faith,
+|	not a theorem of words strung to show so you saith. 
+|
+|
+| Mephisto
+|
+|	In circles, you talk! Oh, how I hate it! 
+|	Instead of answers, you endlessly suspire!
+|	If you seek to confound, so that I might falter and cease
+|	Then you've misplaced another bet on my unfounded caprice! 
+|
+| God
+|
+|	Free will was a gift not lightly bestowed.
+|	The answers you seek would ruin the surprise. 
+|	A light that illumines always a shadow destroys
+|	So what was in the darkness, in light avoids.
+
+- 2022
 
 ---------
 I: Regret
