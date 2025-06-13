@@ -16,3 +16,14 @@ X: Photographs of Autumn
 |    Of walk with you through golden Fall.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Pending

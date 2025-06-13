@@ -23,3 +23,17 @@ XIX: Generations of Gravity
 | That upside down my ending starts.
 
 - June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 12, 2025
+    - American Poetry Journal
+    - Pending
+  * - June 12, 2025
+    - TrashLight
+    - Pending

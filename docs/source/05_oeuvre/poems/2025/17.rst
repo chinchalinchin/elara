@@ -10,7 +10,7 @@ XVIII: The Law of Duality
 | (Like noose and neck that swing from beams)
 | 
 | To every thought a thought before
-| (You make of me a puppet string)
+| (To make of me a puppet string)
 | And every point contains much more
 | (But only hollow things can ring)
 | While every center holds a core
@@ -41,4 +41,7 @@ XVIII: The Law of Duality
     - Status
   * - June 4, 2025
     - Swan Scyth Press
+    - Pending
+  * - June 12, 2025
+    - Merion West
     - Pending

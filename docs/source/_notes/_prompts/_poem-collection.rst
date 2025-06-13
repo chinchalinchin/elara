@@ -1,5 +1,338 @@
 .. MODE: OVERRIDE
-.. Analyze the collection chronologically. Extract any salient trends and present them.
+..
+.. This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal. The goal is to find the most likely poems to be published in the given solicitation. Use the context to create a taste profile of the journal. Select poems from the collection below that meet the this profile. If there are none, say so. If a submission is possible, create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission.
+..
+.. The collection also contains submission histories. Use this data to influence your decision, i.e. take into account the number of rejections and allow it to update your posterior probabilities about the likelihood of getting published. 
+..
+..
+.. # SOLICITATION: TRASHLIGHT
+.. 
+.. We publish raw, feral, genre-bending work twice a week on our website. We also release seasonal issues with themed calls for submissions (keep reading to see what’s on the horizon).
+.. 
+.. TrashLight Press is a lit mag for the feral, the rejected, the too-much-to-handle. We’re a home for weirdos and wordsmiths, the ones who never want to stay within the lines. The pieces we publish don’t play it safe – the scream, crawl, glow, and bleed.
+..
+.. We aren’t here to be quiet. We aren’t here to be clean cut. We aren’t interested in impressing the workshop and appeasing the algorithm.
+.. 
+.. We are here to scream, scribble, tear, and build altars out of ash. We believe in stories with teeth. Poetry that doesn’t ask forgiveness. Art that oozes sweat and dream smoke.
+.. 
+.. We are for the ones who’ve been rejected for being too weird, too raw, too political, too real. We are for the people who only feel alive when they’re creating something messy and holy.
+.. 
+.. TrashLight isn’t interested in your pedigree and credentials. Instead, we want your nightmare, your roadside revelations, your half-feral truths, your phantom limbs.
+..
+.. Bring us –
+.. 
+.. Stories that burn like a busted neon sign.
+.. Poems that sound like breaking glass
+.. Art that shouldn’t be hanging anywhere
+.. The right to make beautiful things from garbage
+.. The right to be loud, unedited, and unforgettable.
+.. TrashLight is the flicker in the alley, the glow from the ruins.
+.. 
+.. We are the lit mag for the unlit and we will never apologize for burning bright.
+..
+.. # RANDOM POEMS FROM THEIR ISSUES
+.. 
+.. Taking the Bus From Salisbury to Baltimore
+.. by Harrison Weber
+..
+.. He is drawing
+.. a vaguely pornographic wolf
+.. on a school-issued tablet.
+.. 
+.. His is fragile, thin–
+.. his wrist small and cold
+.. as a sparrow’s ankle.
+.. Above the screen,
+.. his hand moves —anxious,
+.. a trembling snowflake.
+.. 
+.. The smell of unwashed days,
+.. of lonely chatroom nights.
+.. Sick blue screenshadow pooling
+.. beneath his young old man eyes.
+.. 
+.. Slouched fetal against
+.. his plastic chair,
+.. He breathes,
+.. open-mouthed.
+.. 
+.. The headpiece
+.. of his wolf costume
+.. (worn polyester, fraying
+.. like a child’s blanket)
+.. lolls its pink tongue
+.. carelessly between his feet.
+.. 
+.. The bus hums over a swamp.
+.. Outside the windows, spring—
+.. rosemallow sprouting,
+.. crimsoneyed, redolent.
+.. A heron rises from the mud,
+.. slicing through pink water lilies,
+.. then vanishes behind the trees.
+.. 
+.. He studies his drawing
+..
+.. Hubbub
+.. by Bart Edelman
+..
+.. Always partial to life’s hubbub.
+.. An uproar in the making.
+.. Each din on every street.
+.. Strange situations gone awry.
+.. The latest tragic brouhaha—
+.. A stir of such commotion,
+.. It’s simply higgledy-piggledy,
+.. Before the authorities arrive.
+.. Yes, grant me what turmoil
+.. Threatens the status quo.
+.. Heap a clatter upon my plate,
+.. Whenever it’s utterly clear,
+.. There’s too much peace and quiet
+.. To pass around the kitchen table,
+.. Because ruckus and fuss
+.. Forgot why they were summoned
+.. As guests, in the first place.
+.. I’m a wreck and a half,
+.. Where silence is concerned.
+.. Can’t gauge the empty space,
+.. And what it has to offer,
+.. If there’s not a racket about.
+.. No, give me the next kerfuffle,
+.. Or even a ballyhoo would be swell.
+.. Just keep me occupied with noise,
+.. Lest I turn frightfully mad.
+..
+.. Existential Crisis on the 440 Run
+.. by Megan Cartwright and Edward Michael Supranowicz
+..
+.. Dead-eyed insouciance, the metal creature  
+.. skims the curb. An elder god 
+.. indifferent to we ants – our tiny minds  
+.. plagued by the imaginary – begging passage. 
+.. 
+.. On eyelash legs we mark time, ink symbols 
+.. on timelines. Tabling our fictions we 
+.. face the relentless pursuit of tomorrow 
+.. (and tomorrow, and tomorrow). 
+.. 
+.. The ancients, barnacled and clinical,  
+.. note the position of the sun, absorb 
+.. truths found in the depths of melatonin; 
+.. victuals when the light is gone. 
+
+.. _resume:
+
+======
+Resume
+======
+
+.. image:: ../_static/img/personal/fractal-me.jpg
+    :alt: Fractal Me
+    :align: center
+
+.. topic:: Contact Information
+
+  Email: chinchalinchin@gmail.com
+
+.. _education:
+
+Education
+=========
+
+.. list-table:: Education
+  :widths: 15 15 15 15
+  :header-rows: 1
+
+  * - School
+    - Degree
+    - Field of Study
+    - Graduation
+  * - Towson University
+    - Master of Science
+    - Mathematics
+    - 2013
+  * - Frostburg State University
+    - Bachelor of Science
+    - Physics
+    - 2010
+
+.. _experience:
+
+Experience
+==========
+
+.. _employment:
+
+Employment
+----------
+
+.. list-table:: Employment
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Employer
+    - Roles
+    - Dates
+  * - ProvisionIAM
+    - Senior Site Reliability Engineer
+    - March 2025 - Current
+  * - MDThink
+    - DevOps Lead
+    - June 2024 - December 2024
+  * - Bishop Walsh
+    - Math Teacher
+    - September 2023 - March 2024
+  * - IHS Markit
+    - Software Engineer
+    - October 2022 - March 2023
+  * - Booz Allen Hamilton
+    - Staff Engineer
+    - June 2022 - December 2023
+  * - Makpar
+    - DevOps Engineer
+    - October 2021 - May 2022
+  * - IBM
+    - Full Stack Developer
+    - June 2019 - April 2021
+  * - Front Range Community College
+    - Mathematics Professor
+    - January 2018 - December 2018
+  * - University of Cincinnati
+    - Adjunct Professor
+    - August 2017 - December 2017
+  * - YTI Career Institute
+    - Math Instructor
+    - August 2015 - December 2015
+  * - Frostburg State University
+    - Adjunct Professor
+    - August 2015 - May 2017
+  * - Allegany College of Maryland
+    - Adjunct Professor
+    - January 2015 - December 2015
+  * - Hamilton Relay
+    - Relay Operator
+    - April 2014 - December 2014
+  * - IBM
+    - Conversion Worker
+    - November 2013 - April 2014
+  * - Walmart
+    - Cashier
+    - November 2011 - September 2012
+  * - Active Network
+    - Reservation Specialist
+    - January 2011 - August 2011
+  * - Savage River Lodge
+    - Maintenance
+    - June 2010 - November 2010
+  * - Burger King
+    - Slave
+    - March 2009 - August 2009
+  * - Fox's Pizza
+    - Delivery Driver
+    - February 2009 - January 2010
+  * - Ruby Tuesday
+    - Cook
+    - April 2008 - January 2009
+  * - Denny's
+    - Cook
+    - June 2007 - February 2008
+  * - Banana Cafe
+    - Dish Washer
+    - May 2006 - September 2006
+    
+.. _volunteering:
+
+Volunteering
+------------
+
+.. list-table:: Volunteering
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Organization
+    - Roles
+    - Dates
+  * - AmeriCorps
+    - Mathematics Tutor
+    - August 2014 - August 2016
+
+.. _certifications:
+
+Certifications
+--------------
+
+.. list-table:: Certifications
+  :header-rows: 1
+  :widths: 20 40 40
+  :stub-columns: 1
+
+  * - Organization
+    - Certification
+    - Badge
+  * - AWS
+    - Developer Associate
+    - .. image:: ../_static/img/personal/resume/aws-certified-developer-associate.png
+        :alt: AWS Developer Associate
+        :height: 50px
+        :align: center
+  * - AWS
+    - DevOps Professional
+    - .. image:: ../_static/img/personal/resume/aws-certified-devops-engineer-professional.png
+        :alt: AWS DevOps Professional
+        :height: 50px
+        :align: center
+  * - IBM
+    - Docker Essentials
+    - .. image:: ../_static/img/personal/resume/ibm-docker-introduction.png
+        :alt: IBM Docker Essentials
+        :height: 50px
+        :align: center
+  * - IBM
+    - Enterprise Design
+    - .. image:: ../_static/img/personal/resume/ibm-enterprise-design.png
+        :alt: IBM Enterprise Design
+        :height: 50px
+        :align: center
+  * - MTA
+    - Database Administration
+    - .. image:: ../_static/img/personal/resume/mta-database-fundamentals-certified-2018.png
+        :alt: MTA Database Fundamentals
+        :height: 50px
+        :align: center
+  * - MTA
+    - Python Programming
+    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-python-certified-2018.png
+        :alt: MTA Python Programming
+        :height: 50px
+        :align: center
+  * - MTA
+    - Java Programming
+    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-java-certified-2018.png
+        :alt: MTA Java Programming
+        :height: 50px
+        :align: center
+  * - MTA
+    - Software Development Fundamentals
+    - .. image:: ../_static/img/personal/resume/mta-software-development-fundamentals-certified-2018.png
+        :alt: MTA Software Development Fundamentals
+        :height: 50px
+        :align: center
+
+.. _testimonials:
+
+Testimonials
+============
+
+.. image:: ../_static/img/personal/resume/testimonial-math-201.jpg
+  :alt: MATH 201, Calculus
+  :align: center
+
+----
+
+.. image:: ../_static/img/personal/resume/testimonial-phys-215.jpg
+  :alt: PHYS 215, Physics
+  :align: center
 
 .. _collection:
 
@@ -137,7 +470,10 @@ II: The Invocation of Metric Code
   * - April 27, 2025
     - Frontier Misfit Competition
     - Pending
-    
+  * - June 12, 2025
+    - Merion West
+    - Pending
+
 ---------------------------
 III: Substrate (Unfinished)
 ---------------------------
@@ -1741,6 +2077,9 @@ II: Ode to the Heron
   * - June 6, 2025
     - Boulevard Magazine
     - Pending
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Pending
 
 .. _pantoums:
 
@@ -1897,6 +2236,9 @@ II: The Pantoums of Dementia
     - Pending
   * - June 6, 2025
     - Boulevard Magazine
+    - Pending
+  * - June 12, 2025
+    - Merion West
     - Pending
 
 .. _poems:
@@ -2570,6 +2912,9 @@ VI: Kingdoms
   * - April 7, 2025
     - The New Yorker
     - Pending
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Pending
 
 ---------------------------------------
 VII: The Paronymous Polyptotons of Love
@@ -2708,6 +3053,17 @@ X: Photographs of Autumn
 
 - April 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Pending
+
 ---------------------
 XI: The Curse of Rain
 ---------------------
@@ -2845,6 +3201,9 @@ XIII: Walls
     - Pending
   * - June 1, 2025
     - The Louisville Review
+    - Pending
+  * - June 12, 2025
+    - Merion West
     - Pending
 
 --------------------
@@ -3001,6 +3360,9 @@ XVIII: The Law of Duality
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
+  * - June 12, 2025
+    - Merion West
+    - Pending
 
 ---------------------------
 XIX: Generations of Gravity
@@ -3027,6 +3389,19 @@ XIX: Generations of Gravity
 | That upside down my ending starts.
 
 - June 2025
+
+- June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 12, 2025
+    - American Poetry Journal
+    - Pending
 
 .. _rondeaus:
 

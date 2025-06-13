@@ -28,7 +28,7 @@ II: The Pantoums of Dementia
 | the seconds slowed to stop as Father passed,
 | their final words in wilting hearts expand, 
 | then Mother's mind began to crack at last. 
-
+|
 | Movement II - Rearrangement
 |
 | remember now before the future fades, 
@@ -111,4 +111,7 @@ II: The Pantoums of Dementia
     - Pending
   * - June 6, 2025
     - Boulevard Magazine
+    - Pending
+  * - June 12, 2025
+    - Merion West
     - Pending

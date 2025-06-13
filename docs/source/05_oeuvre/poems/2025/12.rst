@@ -69,3 +69,6 @@ XIII: Walls
   * - June 1, 2025
     - The Louisville Review
     - Pending
+  * - June 12, 2025
+    - Merion West
+    - Pending
