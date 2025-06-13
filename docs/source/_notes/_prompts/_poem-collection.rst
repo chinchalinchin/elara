@@ -387,6 +387,9 @@ I: The Unicode Ode
   * - April 27, 2025
     - Frontier Misfit Competition
     - Pending
+  * - June 12, 2025
+    - TrashLight
+    - Pending
 
 ---------------------------------
 II: The Invocation of Metric Code
@@ -3286,6 +3289,9 @@ XV: Faustus
   * - April 27, 2025
     - Frontier Poetry
     - Pending
+  * - June 12, 2025
+    - TrashLight
+    - Pending
 
 --------------
 XVI: Recursion
@@ -3401,6 +3407,9 @@ XIX: Generations of Gravity
     - Status
   * - June 12, 2025
     - American Poetry Journal
+    - Pending
+  * - June 12, 2025
+    - TrashLight
     - Pending
 
 .. _rondeaus:
