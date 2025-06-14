@@ -15,7 +15,7 @@ Myself
         :align: center
         :width: 80%
 
-.. collapse:: Booz Allen Employment Badges, 2022
+.. collapse:: Booz Allen Employment Badge, 2022
     :class: hover
 
     .. image:: ../_static/img/personal/employment-badge-me.jpg
