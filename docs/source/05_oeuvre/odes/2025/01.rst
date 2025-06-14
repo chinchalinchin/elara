@@ -1,3 +1,4 @@
+--------------------
 II: Ode to the Heron
 --------------------
 
@@ -82,4 +83,7 @@ II: Ode to the Heron
     - Pending
   * - June 12, 2025
     - Macrame Literary Journal
+    - Pending
+  * - June 13, 2025
+    - New Verse Review
     - Pending

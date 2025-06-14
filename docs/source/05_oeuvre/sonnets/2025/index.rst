@@ -1,8 +1,13 @@
-Abstracta
-=========
+2025
+====
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   2025/index
+   00
+   01
+   02
+   03
+   04
+   05

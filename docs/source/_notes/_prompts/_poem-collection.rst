@@ -5,121 +5,126 @@
 .. The collection also contains submission histories. Use this data to influence your decision, i.e. take into account the number of rejections and allow it to update your posterior probabilities about the likelihood of getting published. 
 ..
 ..
-.. # SOLICITATION: TRASHLIGHT
+.. # SOLICITATION: New Verse Review
 .. 
-.. We publish raw, feral, genre-bending work twice a week on our website. We also release seasonal issues with themed calls for submissions (keep reading to see what’s on the horizon).
+.. New Verse Review: A Journal of Lyric and Narrative Poetry features work that renews the ancient affinities among poetry, song, and story.
 .. 
-.. TrashLight Press is a lit mag for the feral, the rejected, the too-much-to-handle. We’re a home for weirdos and wordsmiths, the ones who never want to stay within the lines. The pieces we publish don’t play it safe – the scream, crawl, glow, and bleed.
+.. While open to well-crafted free verse, NVR is especially interested in lyric and narrative poetry written in meter. Some journals advise submitters to stay away from meter, rhyme, and even alliteration. NVR welcomes them. That said, the journal is interested in living form with a healthy pulse, not the mummified.
+.. 
+.. NVR consists of a weekly (sometimes twice weekly) substack newsletter, which publishes reviews, essays, interviews, and a monthly links round-up, and a companion website, which hosts issues of the poetry journal.
+.. 
+.. Two full issues are published each year, one in summer and one in winter, with occasional special mini-issues.
 ..
-.. We aren’t here to be quiet. We aren’t here to be clean cut. We aren’t interested in impressing the workshop and appeasing the algorithm.
-.. 
-.. We are here to scream, scribble, tear, and build altars out of ash. We believe in stories with teeth. Poetry that doesn’t ask forgiveness. Art that oozes sweat and dream smoke.
-.. 
-.. We are for the ones who’ve been rejected for being too weird, too raw, too political, too real. We are for the people who only feel alive when they’re creating something messy and holy.
-.. 
-.. TrashLight isn’t interested in your pedigree and credentials. Instead, we want your nightmare, your roadside revelations, your half-feral truths, your phantom limbs.
+.. New Verse Review: A Journal of Lyric and Narrative Poetry features work that renews the ancient affinities among poetry, song, and story.
 ..
-.. Bring us –
+.. NVR consists of a weekly (sometimes twice weekly) substack newsletter, which publishes reviews, essays, interviews, and a monthly links round-up, and a companion website, which hosts issues of the poetry journal.
+..
+.. Two full issues are published each year, one in summer and one in winter, with occasional special mini-issues.
+..
+.. Who are some of the editor’s favorites in the poetic pantheon from the mid-nineteenth through the early twentieth centuries? Henry Wadsworth Longfellow, Emily Dickinson, Robert and Elizabeth Barrett Browning, Gerard Manley Hopkins, Robert Frost, Claude McKay, Edna St. Vincent Millay, Robinson Jeffers, Anne Spencer, H.D., Patrick Kavanagh, Robert Penn Warren, Robert Lowell, Elizabeth Bishop, W.H. Auden, Kathleen Raine, Robert Hayden, James Dickey, N. Scott Momaday, Jane Kenyon, Donald Hall, Derek Walcott, Richard Wilbur, Anthony Hecht, Denise Levertov, Les Murray, Fred Chappell, and Wilmer Mills.
+..
+.. New Verse Review is edited by Steven Knepper, who is the Bruce C. Gottwald, Jr. ’81 Chair for Academic Excellence in the Department of English, Rhetoric, and Humanistic Studies at Virginia Military Institute. NVR is a personal endeavor of Knepper’s, though, and is not affiliated with VMI. Nor are the members of the advisory board responsible for editorial decisions.
+..
+.. NEW VERSE REVIEW IS CURRENTLY OPEN FOR POETRY SUBMISSIONS
 .. 
-.. Stories that burn like a busted neon sign.
-.. Poems that sound like breaking glass
-.. Art that shouldn’t be hanging anywhere
-.. The right to make beautiful things from garbage
-.. The right to be loud, unedited, and unforgettable.
-.. TrashLight is the flicker in the alley, the glow from the ruins.
+.. Updated 6/1/2025
+..
+.. Book Reviews, Essays, Interviews: New Verse Review is always open to pitches for relevant book reviews, essays, and interviews. Email the editor at submissions@newversereview.com.
+..
+.. Poetry Submissions: NEW VERSE REVIEW is an online poetry journal. It is open for poetry submissions twice a year. Submissions to the summer issue will be considered from June 1 through June 23. Submissions to the winter issue will be considered from November 1 through November 25.
+..
+.. While open to well-crafted free verse, NVR is especially interested in lyric and narrative poetry written in meter. Some journals advise submitters to stay away from meter, rhyme, and even alliteration. NVR welcomes them. That said, the journal is interested in living form with a healthy pulse, not the mummified.
+..
+.. Any and all poets are welcome to submit.
+..
+.. Raw and gritty are fine (the editor has an affinity for the gothic), but do not be hateful or gratuitous.
+..
+.. NVR no longer accepts email submissions. Please submit via Duosuma.
+..
+.. Guidelines
+..
+.. During the submission window, submit up to five poems (no more than five total pages) as a .doc attachment via NVR’s Duosuma account. There is no reading fee for submissions, but tips are always welcome!
+..
+.. Simultaneous submissions are welcome, but please send a prompt follow-up message if a submitted poem is accepted elsewhere.
+..
+.. We are not interested in AI forgeries of human poems. AI should not be used in any way in the writing of poems submitted to NVR.
+..
+.. If you had work accepted in our last open submission window, please wait at least one submission period before submitting again.
+..
+.. Poems are not eligible if they have appeared or are forthcoming in another journal. Posting a draft on social media or a personal blog, however, does not disqualify a poem from consideration at NVR. See Rattle editor Timothy Green’s thoughtful piece for Lit Mag News that distinguishes between published and curated poems.
+..
+.. Feel free to query after two months if you have not received a response.
 .. 
-.. We are the lit mag for the unlit and we will never apologize for burning bright.
+.. Rights return to authors upon first publication in NVR, though NVR does retain the right to reprint work across its media and platforms.
+..
+.. NVR will consider translated poems, as long as the original is in the public domain or the translator has secured permission to publish the translation from the original’s copyright holder. In your cover letter, note who owns the copyright to the original and whether permission to publish the translation has been obtained.
+..
+.. Submitters are encouraged to sign up for a free or paid subscription to New Verse Review. Social media reposting is always welcome. In short, please help spread the word!
 ..
 .. # RANDOM POEMS FROM THEIR ISSUES
 .. 
-.. Taking the Bus From Salisbury to Baltimore
-.. by Harrison Weber
+.. To Outer Space and Back
+.. By Robert Crawford
 ..
-.. He is drawing
-.. a vaguely pornographic wolf
-.. on a school-issued tablet.
-.. 
-.. His is fragile, thin–
-.. his wrist small and cold
-.. as a sparrow’s ankle.
-.. Above the screen,
-.. his hand moves —anxious,
-.. a trembling snowflake.
-.. 
-.. The smell of unwashed days,
-.. of lonely chatroom nights.
-.. Sick blue screenshadow pooling
-.. beneath his young old man eyes.
-.. 
-.. Slouched fetal against
-.. his plastic chair,
-.. He breathes,
-.. open-mouthed.
-.. 
-.. The headpiece
-.. of his wolf costume
-.. (worn polyester, fraying
-.. like a child’s blanket)
-.. lolls its pink tongue
-.. carelessly between his feet.
-.. 
-.. The bus hums over a swamp.
-.. Outside the windows, spring—
-.. rosemallow sprouting,
-.. crimsoneyed, redolent.
-.. A heron rises from the mud,
-.. slicing through pink water lilies,
-.. then vanishes behind the trees.
-.. 
-.. He studies his drawing
+.. We’ve traveled by the moon,
+.. Past Mars and all the rest.
+.. We’ve shared a cosmic view
+.. In stellar destinations.
+.. Yet, I still think the best
+.. Is to lie in our field with you,
+.. Listen for the loon,
+.. And trace the constellations
 ..
-.. Hubbub
-.. by Bart Edelman
+.. Not Atoms
+.. By Aaron Poochigian
 ..
-.. Always partial to life’s hubbub.
-.. An uproar in the making.
-.. Each din on every street.
-.. Strange situations gone awry.
-.. The latest tragic brouhaha—
-.. A stir of such commotion,
-.. It’s simply higgledy-piggledy,
-.. Before the authorities arrive.
-.. Yes, grant me what turmoil
-.. Threatens the status quo.
-.. Heap a clatter upon my plate,
-.. Whenever it’s utterly clear,
-.. There’s too much peace and quiet
-.. To pass around the kitchen table,
-.. Because ruckus and fuss
-.. Forgot why they were summoned
-.. As guests, in the first place.
-.. I’m a wreck and a half,
-.. Where silence is concerned.
-.. Can’t gauge the empty space,
-.. And what it has to offer,
-.. If there’s not a racket about.
-.. No, give me the next kerfuffle,
-.. Or even a ballyhoo would be swell.
-.. Just keep me occupied with noise,
-.. Lest I turn frightfully mad.
+.. When, strolling through the Village, I discover
+.. one lonesome shoe, a jeweled but dogless collar,
+.. the crushed rose of a hitman or a lover,
+.. barf like an offering, a half-burnt dollar,
+.. “Scream” masks holding traffic-light-top vigil,
+.. loose lab rats among the morning glories
+.. or Elmo trapped inside a witch’s sigil,
 ..
-.. Existential Crisis on the 440 Run
-.. by Megan Cartwright and Edward Michael Supranowicz
-..
-.. Dead-eyed insouciance, the metal creature  
-.. skims the curb. An elder god 
-.. indifferent to we ants – our tiny minds  
-.. plagued by the imaginary – begging passage. 
+.. I love the universe because it’s made of stories.
 .. 
-.. On eyelash legs we mark time, ink symbols 
-.. on timelines. Tabling our fictions we 
-.. face the relentless pursuit of tomorrow 
-.. (and tomorrow, and tomorrow). 
+.. Still Seventeen
+.. By Claudia Gary
+..
+.. Or so you wish—but if your deepest need
+.. is everlasting youth, let’s crank the handle
+.. still further back and watch your mother feed
+.. you cake with one bright candle.
 .. 
-.. The ancients, barnacled and clinical,  
-.. note the position of the sun, absorb 
-.. truths found in the depths of melatonin; 
-.. victuals when the light is gone. 
+.. Instead, in this last chapter of your novel,
+.. you ask if you and I might run away.
+.. Away to where, and what would that unravel?
+.. I used to hope someday
+..
+.. we two might listen to the night together.
+.. Did you think that would mean you’d fall apart?
+.. Well, yes, you will, unless you keep your tether
+.. to reason, and your tender heart,
+.. 
+.. rather than drown yourself in a martini
+.. and turn curmudgeon, fantasist, Houdini.
+.. 
+.. The Nikon
+.. By Fr. Ryan Sliwa
+..
+.. Wonder of a machine!
+.. More dials and buttons
+.. than a cockpit.
+.. Triggered and heavy to hand,
+.. like the action
+.. of dad’s deer-killing .308.
+.. 
+.. This eye of mirrors, prisms,
+.. and light-soaking silver;
+.. an heirloom all memory.
+.. The thing tells
+.. what the sun sees once,
+.. but free of the burden of words.
 
 .. _resume:
 

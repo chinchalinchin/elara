@@ -9,6 +9,4 @@ Villanelles
    :maxdepth: 2
    :caption: Contents:
 
-   00
-   01
-   02
+   2025/index

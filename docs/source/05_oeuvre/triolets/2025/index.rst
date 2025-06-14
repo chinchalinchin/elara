@@ -1,5 +1,5 @@
-Triolets
-========
+2025
+====
 
 :ref:`Triolet Reference <triolet>`
 
@@ -7,4 +7,5 @@ Triolets
    :maxdepth: 2
    :caption: Contents:
 
-   2025/index
+   00
+   01

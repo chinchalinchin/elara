@@ -10,7 +10,7 @@ X: Father's Lullaby
 | Dear sweetling, sleep with open eye
 |   And guard your dreams at night.
 | Ignore your mother's lullaby,
-|   With candles burning bright.
+|   Keep candles burning bright.
 |
 | Beware the lair that closets hide,
 |   The racks of their disguise,
@@ -42,4 +42,7 @@ X: Father's Lullaby
     - Pending
   * - June 4, 2025
     - Swan Scyth Press
+    - Pending
+  * - June 13, 2025
+    - New Verse Review
     - Pending

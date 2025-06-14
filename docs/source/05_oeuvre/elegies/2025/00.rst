@@ -57,3 +57,6 @@ I: Elemental Elegy
   * - June 6, 2025
     - Boulevard Magazine
     - Pending
+  * - June 13, 2025
+    - New Verse Review
+    - Pending
