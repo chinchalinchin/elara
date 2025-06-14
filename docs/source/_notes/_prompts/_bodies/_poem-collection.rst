@@ -3227,7 +3227,7 @@ III: Roundels of Remembrance
 | 
 | The fragrant air which wavers here
 | in heat like harps of golden hair
-| that sweep from shoulder length to clear
+| that sweep their shoulder length to clear
 |   the fragrant air.
 |
 | The lily sermons whisper where
@@ -3254,6 +3254,22 @@ III: Roundels of Remembrance
 | I watch our dance as bodies sink,
 | a final gasp of life exhales 
 |   in fading ink.
+|
+| VI - Seats
+|
+| The vinyl seats of classic cars,
+| the plastic smell their thread secretes,
+| this cherry burn on cover mars 
+|   the vinyl seats.
+|
+| When Father stooped to sew the sheets,
+| his needles stacked in columned jars,
+| his fingers folded rows of pleats.
+|
+| My fingers trace the wells of scars
+| as driving down the city streets
+| the last remain in leaving chars
+|   the vinyl seats.
 
 - June 2025 
 
