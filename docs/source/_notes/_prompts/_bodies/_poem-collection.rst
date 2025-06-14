@@ -1,343 +1,6 @@
 .. MODE: OVERRIDE
 ..
-.. This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal. The goal is to find the most likely poems to be published in the given solicitation. Use the context to create a taste profile of the journal. Select poems from the collection below that meet the this profile. If there are none, say so. If a submission is possible, create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission.
-..
-.. The collection also contains submission histories. Use this data to influence your decision, i.e. take into account the number of rejections and allow it to update your posterior probabilities about the likelihood of getting published. 
-..
-..
-.. # SOLICITATION: New Verse Review
-.. 
-.. New Verse Review: A Journal of Lyric and Narrative Poetry features work that renews the ancient affinities among poetry, song, and story.
-.. 
-.. While open to well-crafted free verse, NVR is especially interested in lyric and narrative poetry written in meter. Some journals advise submitters to stay away from meter, rhyme, and even alliteration. NVR welcomes them. That said, the journal is interested in living form with a healthy pulse, not the mummified.
-.. 
-.. NVR consists of a weekly (sometimes twice weekly) substack newsletter, which publishes reviews, essays, interviews, and a monthly links round-up, and a companion website, which hosts issues of the poetry journal.
-.. 
-.. Two full issues are published each year, one in summer and one in winter, with occasional special mini-issues.
-..
-.. New Verse Review: A Journal of Lyric and Narrative Poetry features work that renews the ancient affinities among poetry, song, and story.
-..
-.. NVR consists of a weekly (sometimes twice weekly) substack newsletter, which publishes reviews, essays, interviews, and a monthly links round-up, and a companion website, which hosts issues of the poetry journal.
-..
-.. Two full issues are published each year, one in summer and one in winter, with occasional special mini-issues.
-..
-.. Who are some of the editor’s favorites in the poetic pantheon from the mid-nineteenth through the early twentieth centuries? Henry Wadsworth Longfellow, Emily Dickinson, Robert and Elizabeth Barrett Browning, Gerard Manley Hopkins, Robert Frost, Claude McKay, Edna St. Vincent Millay, Robinson Jeffers, Anne Spencer, H.D., Patrick Kavanagh, Robert Penn Warren, Robert Lowell, Elizabeth Bishop, W.H. Auden, Kathleen Raine, Robert Hayden, James Dickey, N. Scott Momaday, Jane Kenyon, Donald Hall, Derek Walcott, Richard Wilbur, Anthony Hecht, Denise Levertov, Les Murray, Fred Chappell, and Wilmer Mills.
-..
-.. New Verse Review is edited by Steven Knepper, who is the Bruce C. Gottwald, Jr. ’81 Chair for Academic Excellence in the Department of English, Rhetoric, and Humanistic Studies at Virginia Military Institute. NVR is a personal endeavor of Knepper’s, though, and is not affiliated with VMI. Nor are the members of the advisory board responsible for editorial decisions.
-..
-.. NEW VERSE REVIEW IS CURRENTLY OPEN FOR POETRY SUBMISSIONS
-.. 
-.. Updated 6/1/2025
-..
-.. Book Reviews, Essays, Interviews: New Verse Review is always open to pitches for relevant book reviews, essays, and interviews. Email the editor at submissions@newversereview.com.
-..
-.. Poetry Submissions: NEW VERSE REVIEW is an online poetry journal. It is open for poetry submissions twice a year. Submissions to the summer issue will be considered from June 1 through June 23. Submissions to the winter issue will be considered from November 1 through November 25.
-..
-.. While open to well-crafted free verse, NVR is especially interested in lyric and narrative poetry written in meter. Some journals advise submitters to stay away from meter, rhyme, and even alliteration. NVR welcomes them. That said, the journal is interested in living form with a healthy pulse, not the mummified.
-..
-.. Any and all poets are welcome to submit.
-..
-.. Raw and gritty are fine (the editor has an affinity for the gothic), but do not be hateful or gratuitous.
-..
-.. NVR no longer accepts email submissions. Please submit via Duosuma.
-..
-.. Guidelines
-..
-.. During the submission window, submit up to five poems (no more than five total pages) as a .doc attachment via NVR’s Duosuma account. There is no reading fee for submissions, but tips are always welcome!
-..
-.. Simultaneous submissions are welcome, but please send a prompt follow-up message if a submitted poem is accepted elsewhere.
-..
-.. We are not interested in AI forgeries of human poems. AI should not be used in any way in the writing of poems submitted to NVR.
-..
-.. If you had work accepted in our last open submission window, please wait at least one submission period before submitting again.
-..
-.. Poems are not eligible if they have appeared or are forthcoming in another journal. Posting a draft on social media or a personal blog, however, does not disqualify a poem from consideration at NVR. See Rattle editor Timothy Green’s thoughtful piece for Lit Mag News that distinguishes between published and curated poems.
-..
-.. Feel free to query after two months if you have not received a response.
-.. 
-.. Rights return to authors upon first publication in NVR, though NVR does retain the right to reprint work across its media and platforms.
-..
-.. NVR will consider translated poems, as long as the original is in the public domain or the translator has secured permission to publish the translation from the original’s copyright holder. In your cover letter, note who owns the copyright to the original and whether permission to publish the translation has been obtained.
-..
-.. Submitters are encouraged to sign up for a free or paid subscription to New Verse Review. Social media reposting is always welcome. In short, please help spread the word!
-..
-.. # RANDOM POEMS FROM THEIR ISSUES
-.. 
-.. To Outer Space and Back
-.. By Robert Crawford
-..
-.. We’ve traveled by the moon,
-.. Past Mars and all the rest.
-.. We’ve shared a cosmic view
-.. In stellar destinations.
-.. Yet, I still think the best
-.. Is to lie in our field with you,
-.. Listen for the loon,
-.. And trace the constellations
-..
-.. Not Atoms
-.. By Aaron Poochigian
-..
-.. When, strolling through the Village, I discover
-.. one lonesome shoe, a jeweled but dogless collar,
-.. the crushed rose of a hitman or a lover,
-.. barf like an offering, a half-burnt dollar,
-.. “Scream” masks holding traffic-light-top vigil,
-.. loose lab rats among the morning glories
-.. or Elmo trapped inside a witch’s sigil,
-..
-.. I love the universe because it’s made of stories.
-.. 
-.. Still Seventeen
-.. By Claudia Gary
-..
-.. Or so you wish—but if your deepest need
-.. is everlasting youth, let’s crank the handle
-.. still further back and watch your mother feed
-.. you cake with one bright candle.
-.. 
-.. Instead, in this last chapter of your novel,
-.. you ask if you and I might run away.
-.. Away to where, and what would that unravel?
-.. I used to hope someday
-..
-.. we two might listen to the night together.
-.. Did you think that would mean you’d fall apart?
-.. Well, yes, you will, unless you keep your tether
-.. to reason, and your tender heart,
-.. 
-.. rather than drown yourself in a martini
-.. and turn curmudgeon, fantasist, Houdini.
-.. 
-.. The Nikon
-.. By Fr. Ryan Sliwa
-..
-.. Wonder of a machine!
-.. More dials and buttons
-.. than a cockpit.
-.. Triggered and heavy to hand,
-.. like the action
-.. of dad’s deer-killing .308.
-.. 
-.. This eye of mirrors, prisms,
-.. and light-soaking silver;
-.. an heirloom all memory.
-.. The thing tells
-.. what the sun sees once,
-.. but free of the burden of words.
-
-.. _resume:
-
-======
-Resume
-======
-
-.. image:: ../_static/img/personal/fractal-me.jpg
-    :alt: Fractal Me
-    :align: center
-
-.. topic:: Contact Information
-
-  Email: chinchalinchin@gmail.com
-
-.. _education:
-
-Education
-=========
-
-.. list-table:: Education
-  :widths: 15 15 15 15
-  :header-rows: 1
-
-  * - School
-    - Degree
-    - Field of Study
-    - Graduation
-  * - Towson University
-    - Master of Science
-    - Mathematics
-    - 2013
-  * - Frostburg State University
-    - Bachelor of Science
-    - Physics
-    - 2010
-
-.. _experience:
-
-Experience
-==========
-
-.. _employment:
-
-Employment
-----------
-
-.. list-table:: Employment
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Employer
-    - Roles
-    - Dates
-  * - ProvisionIAM
-    - Senior Site Reliability Engineer
-    - March 2025 - Current
-  * - MDThink
-    - DevOps Lead
-    - June 2024 - December 2024
-  * - Bishop Walsh
-    - Math Teacher
-    - September 2023 - March 2024
-  * - IHS Markit
-    - Software Engineer
-    - October 2022 - March 2023
-  * - Booz Allen Hamilton
-    - Staff Engineer
-    - June 2022 - December 2023
-  * - Makpar
-    - DevOps Engineer
-    - October 2021 - May 2022
-  * - IBM
-    - Full Stack Developer
-    - June 2019 - April 2021
-  * - Front Range Community College
-    - Mathematics Professor
-    - January 2018 - December 2018
-  * - University of Cincinnati
-    - Adjunct Professor
-    - August 2017 - December 2017
-  * - YTI Career Institute
-    - Math Instructor
-    - August 2015 - December 2015
-  * - Frostburg State University
-    - Adjunct Professor
-    - August 2015 - May 2017
-  * - Allegany College of Maryland
-    - Adjunct Professor
-    - January 2015 - December 2015
-  * - Hamilton Relay
-    - Relay Operator
-    - April 2014 - December 2014
-  * - IBM
-    - Conversion Worker
-    - November 2013 - April 2014
-  * - Walmart
-    - Cashier
-    - November 2011 - September 2012
-  * - Active Network
-    - Reservation Specialist
-    - January 2011 - August 2011
-  * - Savage River Lodge
-    - Maintenance
-    - June 2010 - November 2010
-  * - Burger King
-    - Slave
-    - March 2009 - August 2009
-  * - Fox's Pizza
-    - Delivery Driver
-    - February 2009 - January 2010
-  * - Ruby Tuesday
-    - Cook
-    - April 2008 - January 2009
-  * - Denny's
-    - Cook
-    - June 2007 - February 2008
-  * - Banana Cafe
-    - Dish Washer
-    - May 2006 - September 2006
-    
-.. _volunteering:
-
-Volunteering
-------------
-
-.. list-table:: Volunteering
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Organization
-    - Roles
-    - Dates
-  * - AmeriCorps
-    - Mathematics Tutor
-    - August 2014 - August 2016
-
-.. _certifications:
-
-Certifications
---------------
-
-.. list-table:: Certifications
-  :header-rows: 1
-  :widths: 20 40 40
-  :stub-columns: 1
-
-  * - Organization
-    - Certification
-    - Badge
-  * - AWS
-    - Developer Associate
-    - .. image:: ../_static/img/personal/resume/aws-certified-developer-associate.png
-        :alt: AWS Developer Associate
-        :height: 50px
-        :align: center
-  * - AWS
-    - DevOps Professional
-    - .. image:: ../_static/img/personal/resume/aws-certified-devops-engineer-professional.png
-        :alt: AWS DevOps Professional
-        :height: 50px
-        :align: center
-  * - IBM
-    - Docker Essentials
-    - .. image:: ../_static/img/personal/resume/ibm-docker-introduction.png
-        :alt: IBM Docker Essentials
-        :height: 50px
-        :align: center
-  * - IBM
-    - Enterprise Design
-    - .. image:: ../_static/img/personal/resume/ibm-enterprise-design.png
-        :alt: IBM Enterprise Design
-        :height: 50px
-        :align: center
-  * - MTA
-    - Database Administration
-    - .. image:: ../_static/img/personal/resume/mta-database-fundamentals-certified-2018.png
-        :alt: MTA Database Fundamentals
-        :height: 50px
-        :align: center
-  * - MTA
-    - Python Programming
-    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-python-certified-2018.png
-        :alt: MTA Python Programming
-        :height: 50px
-        :align: center
-  * - MTA
-    - Java Programming
-    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-java-certified-2018.png
-        :alt: MTA Java Programming
-        :height: 50px
-        :align: center
-  * - MTA
-    - Software Development Fundamentals
-    - .. image:: ../_static/img/personal/resume/mta-software-development-fundamentals-certified-2018.png
-        :alt: MTA Software Development Fundamentals
-        :height: 50px
-        :align: center
-
-.. _testimonials:
-
-Testimonials
-============
-
-.. image:: ../_static/img/personal/resume/testimonial-math-201.jpg
-  :alt: MATH 201, Calculus
-  :align: center
-
-----
-
-.. image:: ../_static/img/personal/resume/testimonial-phys-215.jpg
-  :alt: PHYS 215, Physics
-  :align: center
+.. Analyze the collection chronologically and extract any salient trends. Look for any patterns in the data. Examine how language and form changes over time. Detail the ways in which the voice changes and the ways in which it stays the same. Assess the poetic ability of the author and its trajectory.
 
 .. _collection:
 
@@ -3512,11 +3175,11 @@ II: Rondeau for the River Rats
 III: Roundels of Remembrance
 ----------------------------
 
-| I 
+| I - Photographs
 |
-| This photograph of strangers' joy
-| In garbage can now torn in half,
-| Though glossy eyes through time enjoy 
+| This photograph of strangers' joy,
+| In garbage can, though torn in half,
+| Its glossy eyes through time enjoy 
 |   this photograph. 
 |
 | Imagine tears that joyous laugh,
@@ -3528,11 +3191,11 @@ III: Roundels of Remembrance
 | Til future hands at last destroy
 |   This photograph.
 |
-| II
+| II - Walls
 |
 | Graffitied walls of yearly bloom,
 | With vagrant spray of aerosols
-| The vapors fume, condensed to groom
+| The vapors fume, condense to groom
 |   graffitied walls. 
 |
 | The artists follow protocols:
@@ -3544,7 +3207,7 @@ III: Roundels of Remembrance
 | Where flowered faces wrapped entomb
 |   graffitied walls. 
 |
-| III
+| III - Laces
 |
 | The laces sewn across the back
 | Will lacerate through depths to bone.
@@ -3555,13 +3218,56 @@ III: Roundels of Remembrance
 | From knit of severed fiber slack
 | Is warm enough to wrap alone.
 |
-| Yet laces loop, return as flack,
+| Yet laces loop, return to tack,
 | As generations forced atone
 | And learn by hand which loom to rack
 |   the laces sewn. 
+|
+| IV - Air
+| 
+| The fragrant air which wavers here
+| in heat like harps of golden hair
+| that sweep from shoulder length to clear
+|   the fragrant air.
+|
+| The lily sermons whisper where
+| I heard your blood through skin by ear,
+| A moment made in silent stare. 
+|
+| The scent remains, you disappear,
+| as wind now speaks your name in prayer,
+| in razor gusts that whip and shear
+|   the fragrant air.
+| 
+| V - Ink
+| 
+| In fading ink, her fine details
+| like curly cues and shades of pink,
+| the shadowed lines that leak through trails
+|   in fading ink.
+|
+| A paper mind she wrote to think, 
+| so words replace what breath inhales
+| and find my thoughts with hers in sync. 
+|
+| In letters light as chapel veils,
+| I watch our dance as bodies sink,
+| a final gasp of life exhales 
+|   in fading ink.
 
 - June 2025 
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 13, 2025
+    - New Verse Review
+    - Pending
+    
 .. _sonnets:
 
 Sonnets
