@@ -1,7 +1,7 @@
 
-.. _syntagmics-schemes:
+.. _syntagmics-schemas:
 
-Section II: Schemes
+Section II: Schemas
 ===================
 
 .. _ballad:
@@ -244,15 +244,15 @@ Six sestets followed by a tercet envoi.
 
     .. math::
 
-        u(\mathrm{A}).v(\mathrm{B}).w(\Gamma).x(\Delta).y(\Epsilon).z(\Zeta) + 
-        u(\Zeta).v(\mathrm{A}).w(\Epsilon).x(\mathrm{B}).y(\Delta).z(\Gamma) + 
-        u(\Gamma).v(\Zeta).w(\Delta).x(\mathrm{A}).y(\mathrm{B}).z(\Epsilon) +
-        u(\Epsilon).v(\Gamma).w(\mathrm{B}).x(\Zeta).y(\mathrm{A}).z(\Delta) +
-        u(\Delta).v(\Epsilon).w(\mathrm{A}).x(\Gamma).y(\Zeta).z(\mathrm{B}) +
-        u(\mathrm{B}).v(\Delta).w(\Zeta).x(\Epsilon).y(\Gamma).z(\mathrm{A}) + 
+        u(\mathrm{A}).v(\mathrm{B}).w(\Gamma).x(\Delta).y(\mathcal{E}).z(\mathcal{Z}) + 
+        u(\mathcal{Z}).v(\mathrm{A}).w(\mathcal{E}).x(\mathrm{B}).y(\Delta).z(\Gamma) + 
+        u(\Gamma).v(\mathcal{Z}).w(\Delta).x(\mathrm{A}).y(\mathrm{B}).z(\mathcal{E}) +
+        u(\mathcal{E}).v(\Gamma).w(\mathrm{B}).x(\mathcal{Z}).y(\mathrm{A}).z(\Delta) +
+        u(\Delta).v(\mathcal{E}).w(\mathrm{A}).x(\Gamma).y(\mathcal{Z}).z(\mathrm{B}) +
+        u(\mathrm{B}).v(\Delta).w(\mathcal{Z}).x(\mathcal{E}).y(\Gamma).z(\mathrm{A}) + 
         [t_1:t_2] | 
-        t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \Epsilon) \circ \Zeta),
-        t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \Epsilon).((w \circ \Gamma) \circ \Zeta),
+        t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \mathcal{E}) \circ \mathcal{Z}),
+        t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \mathcal{E}).((w \circ \Gamma) \circ \mathcal{Z}),
 
 .. TODO: Projection Bug
     I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think caesures will satisfy this schema!

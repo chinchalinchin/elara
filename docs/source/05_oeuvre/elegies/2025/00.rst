@@ -60,3 +60,6 @@ I: Elemental Elegy
   * - June 13, 2025
     - New Verse Review
     - Pending
+  * - June 14, 2025
+    - Grand Little Things
+    - Pending

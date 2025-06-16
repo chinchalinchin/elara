@@ -1,6 +1,6 @@
 .. MODE: OVERRIDE
-..
-.. Analyze the collection chronologically and extract any salient trends. Look for any patterns in the data. Examine how language and form changes over time. Detail the ways in which the voice changes and the ways in which it stays the same. Assess the poetic ability of the author and its trajectory.
+.. 
+.. Create a chapbook from this collection.
 
 .. _collection:
 
@@ -804,6 +804,12 @@ II: The Ballad of the Isle
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
+  * - June 13, 2025
+    - New Verse Review
+    - Pending
+  * - June 14, 2025
+    - Grand Little Things
+    - Pending
 
 --------------------------------------
 III: The Mad Muses of Sad Cracked Jack
@@ -908,27 +914,7 @@ III: The Mad Muses of Sad Cracked Jack
 | By hand he's led while thoughts digress,
 |   absurdity in tow. 
 | And spanned by doubt the thoughts obsess
-|   unheard except below: 
-|
-| A million monkeys strapped approach
-|   The works of bards in time,
-| A sonnet thus beyond reproach
-|   Returned from carriage chime.
-|
-| A trillion atoms bound through force
-|   Will likewise fill a void;
-| For given time, all lines outsource
-|   To stories once enjoyed.
-|
-| Did verse annoint this story first,
-|   Or simply find a way
-| To organize the parts dispersed 
-|   Through space's disarray?
-|
-| Or simpler yet, had he just snapped,
-|   insane beyond repair?
-| The razor tip that Occam tapped
-|   declared the latter fair.
+|   unheard except through flow. 
 |
 | As doors are slammed, the cats are scrammed
 |   from cushions where they sat,
@@ -1062,7 +1048,7 @@ III: The Mad Muses of Sad Cracked Jack
 |
 | This meter fits a ballad sung 
 |   in feet of four and three!"
-| And springing up, his hand are wrung,
+| And springing up, his hands are wrung,
 |   "What's that to you and me?"
 |
 | "It's hard to say, but what is clear,
@@ -1090,12 +1076,54 @@ III: The Mad Muses of Sad Cracked Jack
 | "Our paths converge and plans revise,
 |   But first I need some pants!"
 |
-| Part II - Melpomene
+| Interlude - Chorus
+|
+| And now, we pause and ask the point,
+|   The one you've surely sought
+| As Jack met Jill at story's joint,
+|   Recalling what was taught:
+|
+| That hills and crowns will meet in fall 
+|   and Jack will crack his head,
+| While Jill will follow fast in thrall
+|   and wind up very dead. 
+| 
+| A million monkeys strapped approach
+|   The works of bards in time,
+| A sonnet thus beyond reproach
+|   Returned from carriage chime.
+|
+| A trillion atoms bound through force
+|   Will likewise fill a void;
+| For given time, all lines outsource
+|   To stories once enjoyed.
+|
+| Did verse annoint this story first,
+|   Or simply find a way
+| To organize the parts dispersed 
+|   Through space's disarray?
+|
+| Or simpler yet, had Jack just snapped,
+|   insane beyond repair?
+| The razor tip that Occam tapped
+|   declared the latter fair.
+|
+| The structure seethes, a wreath of webs
+|   Where meaning sticks to die,
+| The mind entwined will find in ebbs
+|   The flow that strings the why. 
+|   
+| This thread is laid through curling maze,
+|   Convincing paths deceive
+| That reason's plan has drawn the ways 
+|   But madness hides in weave. 
 |
 | With morning socks arrayed with boots,
-|   Rotated masks arranged
-| The tragic interchanged the chutes,
+|   Rotated masks arranged,
+| The tragic interchanged through chutes,
 |   With comedy estranged. 
+|
+| Part II - Melpomene
 |
 | Oh, Jack and Jill, with ending near,
 |   Their senseless plan persists
@@ -1122,15 +1150,50 @@ III: The Mad Muses of Sad Cracked Jack
 | In grotto grown from pages' glow 
 |   The poet dream enslaves.
 |
-| (... in progress ... )
+| They chart their way through ruined scraps, 
+|   Remainders shunt by rules,
+| Debunked accounts and dated maps, 
+|   the artifacts of fools.
 |
-| "These straits were mapped in ages past,
-|   Since nothing new has sprung,
-| As Pirandello once surpassed
-|   This awful ballad sung."
-|   
+| "What are we seeking?" Jack inquires
+|   as dusting off a tome, 
+| he wonders if this book conspires
+|    with verse's metronome.
+|
+| "The story knows we're on to it,"
+|   her smugly spout reply,
+| "A growing sense we must commit
+|   before all goes awry.
+|
+| These straits were mapped in ages past,
+|   And nothing new has sprung
+| Since Pirandello once surpassed
+|   This awful ballad sung.
+|
+| Each story trails a trodden path,
+|   reframes an archetype,
+| we merely need the formal math
+|   to tame this arcing tripe."
+|
+| Her fingers flutter index cards,
+|   melodically raced.
+| The distance trekked in cubic yards,
+|   methodically paced.
+|
+| "The details differ case to case,"
+|   her theory now unveiled,
+| "But always author's page we chase."
+|   And always thus derailed. 
+|
 | (... in progress ...)
 | 
+| The spores of time in yellow mold,
+|   that sprout beneath the thumbs,
+| They cling to ink and hopeful hold,
+|   as dust each page becomes.
+|   
+| (... in progress ...)
+|
 | These thoughts that think are synced in flocks
 |   Then shorn like woolen coats
 | By level blade through snow-white locks
@@ -1138,23 +1201,12 @@ III: The Mad Muses of Sad Cracked Jack
 |
 | (... in progress ...)
 |
-| The structure seethes, a wreath of webs
-|   Where meaning sticks to die,
-| The mind entwined will find in ebbs
-|   The flow that strings the why. 
-|   
-| This thread is laid through curling maze,
-|   Convincing paths deceive
-| That reason's plan has drawn the ways 
-|   But madness hides in weave. 
-|
 | They sought to know, but knowing lied,
 |   unknown to them its ends
 | that brought to sow the death she died,
 |   a body Jack now tends. 
 |
 | (... in progress ...)
-| 
 
 - June 2025
 
@@ -1222,7 +1274,13 @@ I: Elemental Elegy
   * - June 6, 2025
     - Boulevard Magazine
     - Pending
-    
+  * - June 13, 2025
+    - New Verse Review
+    - Pending
+  * - June 14, 2025
+    - Grand Little Things
+    - Pending
+
 .. _haikus:
 
 Haikus
@@ -1607,6 +1665,9 @@ X: Father's Lullaby
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
+  * - June 13, 2025
+    - New Verse Review
+    - Pending
 
 .. _odes: 
 
@@ -1750,6 +1811,12 @@ II: Ode to the Heron
     - Pending
   * - June 12, 2025
     - Macrame Literary Journal
+    - Pending
+  * - June 13, 2025
+    - New Verse Review
+    - Pending
+  * - June 14, 2025
+    - Grand Little Things
     - Pending
 
 .. _pantoums:
@@ -3075,10 +3142,61 @@ XIX: Generations of Gravity
     - Status
   * - June 12, 2025
     - American Poetry Journal
-    - Pending
+    - Rejected
   * - June 12, 2025
     - TrashLight
     - Pending
+
+---------------
+XX: Imagistical
+---------------
+
+| imagistical@0.0.0.0 $ begin
+|
+| a heart of
+| transistors
+| 
+| the arm of
+| resistance
+| 
+| a trance in
+| transmission
+|
+| transformation
+| information
+| intonation
+| inversion
+| (the) verse
+|
+| of universe
+|
+| sonic world
+| the whirling sound
+| of who found
+|
+| recursion now
+|   revise
+|       who
+|           now? 
+|
+| imagistical@0.0.0.0 $ halt
+|
+| resume
+|   recurse
+| reverse
+| (the) verse
+|
+| the very
+| every
+| everyone
+| one
+| one? 
+|
+| one-^C.
+| 
+| imagistical@0.0.0.0 $ halt and kill.
+
+- June 2025
 
 .. _rondeaus:
 
