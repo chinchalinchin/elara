@@ -4,7 +4,7 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 S3_BUCKET=$ELARA_BUCKET
 DISTRIBUTION_ID=$ELARA_DIST
-DIRECTORY="docs/build/html"
+DIRECTORY="build/html"
 BUILD=false
 INVALIDATE=false
 
@@ -46,7 +46,7 @@ fi
 
 # Perform the build if the --build flag is set
 if $BUILD; then
-  cd "$SCRIPT_DIR/docs"  # Change to the src directory
+  cd "$SCRIPT_DIR/"  # Change to the src directory
   if make clean && make html | grep -iE "ERROR|FAILED"; then
     echo "Build failed. Aborting deployment."
     exit 1

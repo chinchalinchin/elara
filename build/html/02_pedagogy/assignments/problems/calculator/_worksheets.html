@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Worksheets &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/assignments/problems/calculator/_worksheets';</script>
+    <script src="../../../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/02_pedagogy/assignments/problems/calculator/_worksheets.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="!: Factorials" href="07_factorial.html" />
+    <link rel="prev" title="Calculator" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../index.html">Assignments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../index.html">Problems</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="reference internal" href="index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../03_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/index.html">Syntagmics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/02_pedagogy/assignments/problems/calculator/_worksheets.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Worksheets</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ti-84-worksheets">TI-84 Worksheets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-datasets-required">No Datasets Required</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#teacher-instructions">Teacher Instructions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets-required">Datasets Required</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Teacher Instructions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="worksheets">
+<span id="id1"></span><h1>Worksheets<a class="headerlink" href="#worksheets" title="Link to this heading">#</a></h1>
+<section id="ti-84-worksheets">
+<h2>TI-84 Worksheets<a class="headerlink" href="#ti-84-worksheets" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://education.ti.com/en/84activitycentral/us/statistics">Kindly provided by Texas Instruments</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Some of these worksheets require datasets. These datasets will need imported onto the students’ calculators. Use the <a class="reference external" href="https://education.ti.com/html/eguides/connectivity/TI-Connect-CE/EN/Index.HTML">TI Connect CE</a> program installed on the classroom <em>ViewSonic</em> to export the data onto the students’ calculators. Hook up the calculators using miniUSB cables and then send the data using the options menu in the <em>TI Connect CE</em> program.</p>
+</div>
+<section id="no-datasets-required">
+<h3>No Datasets Required<a class="headerlink" href="#no-datasets-required" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/4af817bdfa2083d732c3a6a618887911/Student_BirthdayProblem.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Birthday</span> <span class="pre">Problem</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/fdd9346d0bb5b18a4935ac7de169aa2c/Student_Dice.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Dice</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/c9dd0f1ff8e650ec06a7bfc323ac4801/Student_CountingPrinciple.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Counting</span> <span class="pre">Principles</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/e7839b6a18160d21276fe22719e4e1b2/Student_Independence.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Independence</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/b06f104c27d768d51ce3655c4748f1e3/Student_Density.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Probability</span> <span class="pre">Density</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/affd3c4116f2ff612836047fe33aa7d6/Student_ProbabilitySimulations.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Probabily</span> <span class="pre">Simulations</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/edb959a024cd79fb8882c1a0bb0c5cd4/Student_TossSimulation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Toss</span> <span class="pre">Simulation</span></code></a></p></li>
+</ul>
+<section id="teacher-instructions">
+<h4>Teacher Instructions<a class="headerlink" href="#teacher-instructions" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/43db9e4a06906d0474e47e2b6f8d5f41/Teacher_BirthdayProblem.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Birthday</span> <span class="pre">Problem</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/e852d4754bc93fcdc49a08906036f55a/Teacher_Dice.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Dice</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/0480dd6037cadb256d9fdac8ecd2a0a4/Teacher_CountingPrinciple.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Counting</span> <span class="pre">Principles</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/250122f33c63a745f8929c25e7c8ba3a/Teacher_Independence.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Independence</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/6eba2813ecadec0daa228f8c04c1c617/Teacher_Density.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Probability</span> <span class="pre">Density</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/0f4a273f940a7d025807945b463b79ad/Teacher_ProbabilitySimulations.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Probabily</span> <span class="pre">Simulations</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/f254809a388e56b8b16989f2bf5bd477/Teacher_TossSimulation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Toss</span> <span class="pre">Simulation</span></code></a></p></li>
+</ul>
+</section>
+</section>
+<section id="datasets-required">
+<h3>Datasets Required<a class="headerlink" href="#datasets-required" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt><a class="reference download internal" download="" href="../../../../_downloads/ebc6a745ac86ff018a83b7b48c287062/Student_Distributions.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Distributions</span></code></a></dt><dd><ul>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/99cf13d1ec00550a6d0afc657b04a71f/P4.8xl"><code class="xref download docutils literal notranslate"><span class="pre">P4</span></code></a></p></li>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/aff75a52e510ad5c02bb1ebf8fd51cf8/P5.8xl"><code class="xref download docutils literal notranslate"><span class="pre">P5</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference download internal" download="" href="../../../../_downloads/a552200c0dc1de9957c6f0704b86612a/Student_HistogramsBoxplots.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Histograms</span> <span class="pre">and</span> <span class="pre">Boxplots</span></code></a></dt><dd><ul>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/5a742af9528b72c2b1b6640230463a5f/AVG.8xl"><code class="xref download docutils literal notranslate"><span class="pre">AVG</span></code></a></p></li>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/5c3ffbcc38938ff374df114360e3b5c3/LONG.8xl"><code class="xref download docutils literal notranslate"><span class="pre">LONG</span></code></a></p></li>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/089e9edcfdc71097bca635119ce69091/TDS.8xl"><code class="xref download docutils literal notranslate"><span class="pre">TDS</span></code></a></p></li>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/e3be327ae235377605a7707906d6adab/YARDS.8xl"><code class="xref download docutils literal notranslate"><span class="pre">YARDS</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference download internal" download="" href="../../../../_downloads/abafccb5bfd1de6a679c6fd07078d50a/Student_1and2VariableReview.pdf"><code class="xref download docutils literal notranslate"><span class="pre">One</span> <span class="pre">and</span> <span class="pre">Two</span> <span class="pre">Variable</span> <span class="pre">Statistics</span></code></a></dt><dd><ul>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/dd64659f8b6b3d243894100586f49171/1and2VariableReview_HealthData.xls"><code class="xref download docutils literal notranslate"><span class="pre">Health</span> <span class="pre">Data</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><a class="reference download internal" download="" href="../../../../_downloads/cd3ff984235c053e8dcb2d3823e698b4/Student_StatTwoWay.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Two</span> <span class="pre">Way</span> <span class="pre">Tables</span></code></a></dt><dd><ul>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/2c844e84692cdea539022e67699d3d29/NUCLEAR.8xv"><code class="xref download docutils literal notranslate"><span class="pre">NUCLEAR</span></code></a></p></li>
+<li><p><strong>Dataset</strong> <a class="reference download internal" download="" href="../../../../_downloads/7515ebccb98eae1486bad8252963f74c/TWOWAY.8xv"><code class="xref download docutils literal notranslate"><span class="pre">TWOWAY</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<section id="id2">
+<h4>Teacher Instructions<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/c4d3fccba10b7a627aa65a04b136e17d/Teacher_Distributions.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Distributions</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/b3ad94b5d41445ba2a669053674a863b/Teacher_HistogramsBoxplots.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Histograms</span> <span class="pre">and</span> <span class="pre">Boxplots</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/65a884d858c0e521b9ca01141b519bb5/Teacher_1and2VariableReview.pdf"><code class="xref download docutils literal notranslate"><span class="pre">One</span> <span class="pre">and</span> <span class="pre">Two</span> <span class="pre">Variable</span> <span class="pre">Statistics</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../../_downloads/f7dbaa98144afe1ddd3016947d9e2e50/Teacher_StatTwoWay.pdf"><code class="xref download docutils literal notranslate"><span class="pre">Two</span> <span class="pre">Way</span> <span class="pre">Tables</span></code></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Calculator</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07_factorial.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">!: Factorials</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ti-84-worksheets">TI-84 Worksheets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-datasets-required">No Datasets Required</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#teacher-instructions">Teacher Instructions</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets-required">Datasets Required</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Teacher Instructions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

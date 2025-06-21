@@ -1,0 +1,1255 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Plots &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/technology/python/05_plots';</script>
+    <script src="../../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/02_pedagogy/technology/python/05_plots.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Files" href="06_files.html" />
+    <link rel="prev" title="Functions" href="04_functions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../assignments/index.html">Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../assignments/problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../assignments/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../assignments/projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Technology</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="index.html">Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="04_functions.html">Functions</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../03_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../03_theurgy/01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../03_theurgy/01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../03_theurgy/01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../03_theurgy/01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../03_theurgy/02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../03_theurgy/03_syntagmics/index.html">Syntagmics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/03_syntagmics/00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/03_syntagmics/01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/03_syntagmics/02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../03_theurgy/03_syntagmics/03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/02_pedagogy/technology/python/05_plots.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Plots</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">matplotlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">tkinter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing">Importing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-axes">Creating the Axes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling">Labelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#titles">Titles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subtitles">Subtitles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#axes">Axes</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-graphs">Multiple Graphs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-the-plot">Showing The Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-the-graph">Styling The Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gallery">Gallery</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplot">Boxplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-chart">Bar Chart</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#no-frills">No Frills</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked">Stacked</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-plot">Dot Plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pie-chart">Pie Chart</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram">Histogram</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normal">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relative">Relative</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ogives">Ogives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot">Scatterplot</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-of-best-fit">Line Of Best Fit</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-bars">Error Bars</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plots">QQ Plots</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series">Time Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="plots">
+<span id="python-plotting"></span><h1>Plots<a class="headerlink" href="#plots" title="Link to this heading">#</a></h1>
+<p>We will be using <strong>Python</strong> to generate graphs. Lots and lots of graphs. So many graphs, you might say it’s <em>graphic</em>.</p>
+<p>This section serves as a gallery for all the different sorts of graphs you can create with <strong>Python</strong>. However, before we get to that point, we need to make sure our computers are setup with graphing capabilities. If you followed along with the <a class="reference internal" href="01_setup.html#python-setup"><span class="std std-ref">Python Setup</span></a> and completed all the steps on that page, you should be good to go. You may skip the next section in that case, or read through as a refresher (re-installing the graphics library won’t break anything).</p>
+<p>By default, <strong>Python</strong> does not have statistical graphing capabilities. You must install two addition packages to supplement this deficiency, <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">tk</span></code>.</p>
+<section id="prerequisites">
+<span id="python-plotting-prerequisites"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<section id="matplotlib">
+<span id="id1"></span><h3>matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> is a versatile library for generating just about any sort of mathematical graph you can imagine. To install it, open up the Linux Terminal on your ChromeBook and type,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>matplotlib
+</pre></div>
+</div>
+</section>
+<section id="tkinter">
+<span id="id2"></span><h3>tkinter<a class="headerlink" href="#tkinter" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">tkinter</span></code>, or just <code class="docutils literal notranslate"><span class="pre">tk</span></code>, is a library for processing the results of <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> into pretty JPEGs and PNGs. You can also install it through the Linux terminal,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>tk
+</pre></div>
+</div>
+<p>Now that we have everything we need, let’s take a look at the various plots we can create.</p>
+</section>
+</section>
+<section id="importing">
+<span id="python-plotting-imports"></span><h2>Importing<a class="headerlink" href="#importing" title="Link to this heading">#</a></h2>
+<p>When you import <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> into your scripts, the very first thing you should do is <em>tell it to use the</em> <code class="docutils literal notranslate"><span class="pre">tk</span></code> <em>library</em> to create graphs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;tkagg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This step is not, strictly speaking, necessary as most systems will default to using this library, but if your plots aren’t showing up or you experience other weird errors, this is the likely culprit. In the event something goes wrong and you can’t figure why, try adjusting this setting.</p>
+</section>
+<section id="creating-the-axes">
+<span id="python-plotting-axes"></span><h2>Creating the Axes<a class="headerlink" href="#creating-the-axes" title="Link to this heading">#</a></h2>
+<p>To create a plot, we use the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library within <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> package. The <code class="docutils literal notranslate"><span class="pre">subplots()</span></code> function within the <code class="docutils literal notranslate"><span class="pre">pyplot</span></code> library will generate an <em>x-y</em> plane canvas, called the <em>axes</em>.</p>
+<p>The following code will create a <em>figure</em> and a set of <em>axes</em> on which we can graph.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># note: the `as` gives the library a short-cut name we can use.</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">fig</span></code>, which stands for <em>figure</em>, is for drawing directly onto a 2D image using pixels. We will not use <em>figures</em> in this class to generate images. We are only interested in the <code class="docutils literal notranslate"><span class="pre">axes</span></code>, which allow us to graph things in the <em>x-y</em> plane.</p>
+</div>
+<section id="labelling">
+<h3>Labelling<a class="headerlink" href="#labelling" title="Link to this heading">#</a></h3>
+<section id="titles">
+<h4>Titles<a class="headerlink" href="#titles" title="Link to this heading">#</a></h4>
+<p>The following code adds a title to a plot,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;This is the Main Title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="subtitles">
+<h4>Subtitles<a class="headerlink" href="#subtitles" title="Link to this heading">#</a></h4>
+<p>The following code adds a subtitle to a plot,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;This is the Sub Title&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="axes">
+<h4>Axes<a class="headerlink" href="#axes" title="Link to this heading">#</a></h4>
+<p>The following code labels both the <em>x</em> and <em>y</em> axes in a plot,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x units&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;y units&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="multiple-graphs">
+<h3>Multiple Graphs<a class="headerlink" href="#multiple-graphs" title="Link to this heading">#</a></h3>
+<p>You can add multiple graphs to the same image by creating additional axes. You can create more axes by passing an argument into the <code class="docutils literal notranslate"><span class="pre">subplots()</span></code> function.</p>
+<p>When you pass in arguments to <code class="docutils literal notranslate"><span class="pre">subplots</span></code>, it will return a <em>list</em> of axes. You can then access the individual axes by using their <em>index</em>,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="c1"># create two sets of axes</span>
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># plot the ordered pairs (4, 10) and (5, 11) on the first set of axes</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">])</span>
+<span class="c1"># plot the ordered pairs (-1, 5) and (2, -2) on the second set of axes</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The number of <em>axes</em> is the <em>second</em> argument of the <code class="docutils literal notranslate"><span class="pre">subplots()</span></code> function. We have to pass in a <code class="docutils literal notranslate"><span class="pre">1</span></code> first because <strong>matplotlib.pyplot</strong> always interprets the first argument as the number of <em>figures</em>.</p>
+</div>
+</section>
+</section>
+<section id="showing-the-plot">
+<h2>Showing The Plot<a class="headerlink" href="#showing-the-plot" title="Link to this heading">#</a></h2>
+<p>Once you have plotted something on the <code class="docutils literal notranslate"><span class="pre">axes</span></code>, you can display the plot with the <code class="docutils literal notranslate"><span class="pre">show()</span></code> function.</p>
+<p>This example will plot the ordered pairs <span class="math notranslate nohighlight">\((1, 8), (2, 9), (3, 7)\)</span></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ordered Pairs&quot;</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;X units&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Y units&quot;</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="styling-the-graph">
+<h2>Styling The Graph<a class="headerlink" href="#styling-the-graph" title="Link to this heading">#</a></h2>
+<p>All graphing functions in <strong>matplotlib</strong> accept <code class="docutils literal notranslate"><span class="pre">color</span></code> and <code class="docutils literal notranslate"><span class="pre">ec</span></code> arguments. These arguments will determine the fill color and outline color of the graph, respectively. For instance, the following code will generate a histogram with light blue bars outlined in red,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># generate some random data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="p">]</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The full list of colors available to use in <a class="reference internal" href="#matplotlib"><span class="std std-ref">matplotlib</span></a> is detailed in the following chart,</p>
+<img alt="../../../_images/matplotlib-colors.png" class="align-center" src="../../../_images/matplotlib-colors.png" />
+</section>
+<section id="gallery">
+<h2>Gallery<a class="headerlink" href="#gallery" title="Link to this heading">#</a></h2>
+<p>You can download the scripts used to generate any of these examples by clicking on the “<em>source</em>” link in the top right corner of the image.</p>
+<section id="boxplot">
+<span id="matplotlib-boxplot"></span><h3>Boxplot<a class="headerlink" href="#boxplot" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">plot.boxplot()</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># generate some random data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span> <span class="p">)</span> <span class="p">]</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<aside class="topic">
+<p class="topic-title">Boxplot Example</p>
+<p>Below is an example of a boxplot, unrelated to the above code snippet.</p>
+</aside>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/a2596a54f0fbfb006433513db85189d5/boxplot_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/a2f58fbdb0fa3c5f6586149573a45593/boxplot_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/1aa272e718e7d1a9b450363d6a1d9b30/boxplot_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/30da364bbd1e91606bdc0a45092cb7b3/boxplot_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/boxplot_normal.png" class="plot-directive" src="../../../_images/boxplot_normal.png" />
+</figure>
+</section>
+<section id="bar-chart">
+<span id="matplotlib-barchart"></span><h3>Bar Chart<a class="headerlink" href="#bar-chart" title="Link to this heading">#</a></h3>
+<section id="no-frills">
+<span id="matplotlib-standard-barchart"></span><h4>No Frills<a class="headerlink" href="#no-frills" title="Link to this heading">#</a></h4>
+<p>The code snippet below will generate a bar chart for the following frequency distribution,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>f(x)</p></td>
+</tr>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>12</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>
+<span class="n">frequencies</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<aside class="topic">
+<p class="topic-title">Barchart Example</p>
+<p>Below is an example of a barchart, unrelated to the above code snippet.</p>
+</aside>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/526e60b417716c744eabcbcbf130fdd0/bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/e3f0868d190a66dc3a1488165f0cd8d3/bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/1a8bf92d1863d77236175a2cc9f6be6b/bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/33b4864fdb2fbec83a6b99ed0fec6b03/bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/bar_chart.png" class="plot-directive" src="../../../_images/bar_chart.png" />
+</figure>
+</section>
+<section id="stacked">
+<h4>Stacked<a class="headerlink" href="#stacked" title="Link to this heading">#</a></h4>
+<p>Suppose we have a sample of <em>bivarate categorical data</em>,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ (x_i, y_i) \}\]</div>
+<div class="math notranslate nohighlight">
+\[i = 1, 2, ..., n\]</div>
+<p>where <em>x</em> can take on the values <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> and <em>y</em> can take on the values <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">D</span></code>.</p>
+<p>Suppose further we have the <em>conditional distributions</em> for the variable <em>x</em> conditioned on the other variable <em>y</em>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p><span class="math notranslate nohighlight">\(P(x \mid C)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>0.3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p><span class="math notranslate nohighlight">\(P(x \mid D)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>A</p></td>
+<td><p>0.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>0.4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The following code will generate a <em>stacked bar chart</em> to visualize the <em>association</em> between these two conditional distributions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">conditional_frequencies_of_x_given_C</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.3</span> <span class="p">]</span>
+<span class="n">conditional_frequencies_of_x_given_D</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.4</span> <span class="p">]</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">conditional_frequencies_of_x_given_C</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightcyan&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">relative_frequencies_A</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bottom</span><span class="o">=</span><span class="n">conditional_frequencies_of_x_given_C</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gold&quot;</span><span class="p">)</span>
+
+<span class="c1"># don&#39;t label the second distribution, or you will get two legends on the graph</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">conditional_frequencies_of_x_given_D</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightcyan&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">relative_frequencies_A</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bottom</span><span class="o">=</span><span class="n">conditional_frequencies_of_x_given_D</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gold&quot;</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<aside class="topic">
+<p class="topic-title">Stacked Bar Chart Example</p>
+<p>Below is an example of a stacked bar chart, unrelated to above code snippet.</p>
+</aside>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/3876d09c245f53bc9f7a7fab15be8c1b/stacked_bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/aeffde20930d1bf3c8034a6f6c678b39/stacked_bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/4238c92ad5e8f1b1ad3dc3cc1d20f964/stacked_bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/59deb6bf7ef2debb65ab5d931419a250/stacked_bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/stacked_bar_chart.png" class="plot-directive" src="../../../_images/stacked_bar_chart.png" />
+</figure>
+</section>
+</section>
+<section id="dot-plot">
+<h3>Dot Plot<a class="headerlink" href="#dot-plot" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/9b49e2c50b4296e3df288e3a2f0e3eca/dot_plot.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/dc14a1abed162cd588da631fdd7039b7/dot_plot.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/0ff9c7d0ea476fe72eb171f11b1afd4c/dot_plot.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/5a67a714f6dac2aee90362a685b2dd66/dot_plot.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/dot_plot.png" class="plot-directive" src="../../../_images/dot_plot.png" />
+</figure>
+</section>
+<section id="pie-chart">
+<h3>Pie Chart<a class="headerlink" href="#pie-chart" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/3e0f1e9e8980e1efb89dc04e1d84dc0d/pie_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/d5b086734c2cd8ce02d1b90907b47e5a/pie_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/3bc338d0cba1489655c7dda46bed2ab5/pie_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/b034e570f569c874a2356cd46c063b3b/pie_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/pie_chart.png" class="plot-directive" src="../../../_images/pie_chart.png" />
+</figure>
+</section>
+<section id="histogram">
+<h3>Histogram<a class="headerlink" href="#histogram" title="Link to this heading">#</a></h3>
+<section id="normal">
+<h4>Normal<a class="headerlink" href="#normal" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/7b0c3e5f0f733ab0dd7f2a0aafef4593/histogram_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/d21e66ed5826775ed9c6d468510ad6c4/histogram_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/6439622930238a391bedb78005569866/histogram_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/7530e71137c09a86a178e9909d1dc451/histogram_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/histogram_normal.png" class="plot-directive" src="../../../_images/histogram_normal.png" />
+</figure>
+</section>
+<section id="relative">
+<h4>Relative<a class="headerlink" href="#relative" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/48f50b43274c2dd9ed3b52e66d4488f9/histogram_relative.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/a6670a67d70d09152312d88a39237611/histogram_relative.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/3e4a1e7e35882ccc26f04d51c91aa311/histogram_relative.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/46cb1ad4b3b744f6b0a73fc76bc113e5/histogram_relative.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/histogram_relative.png" class="plot-directive" src="../../../_images/histogram_relative.png" />
+</figure>
+</section>
+</section>
+<section id="ogives">
+<h3>Ogives<a class="headerlink" href="#ogives" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/e5db9120256cef8478beb2f32af4a663/ogive_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/d7c1e2bba8a3baa63b589d74a7faa187/ogive_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/533a8f36b4747b4bfb480de3c66318ad/ogive_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/02d919241e67ffea661b65ad4752f635/ogive_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/ogive_normal.png" class="plot-directive" src="../../../_images/ogive_normal.png" />
+</figure>
+</section>
+<section id="scatterplot">
+<h3>Scatterplot<a class="headerlink" href="#scatterplot" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/59892d0fd44d581db2b6321b24458ea8/scatterplot_no_correlation.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/2867a27e86cfa40a034748a7257c067a/scatterplot_no_correlation.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/e2bf44508bee3c690ee07a5c45f024a5/scatterplot_no_correlation.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/a07f944569af68cf1c635196db4754b1/scatterplot_no_correlation.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/scatterplot_no_correlation.png" class="plot-directive" src="../../../_images/scatterplot_no_correlation.png" />
+</figure>
+<section id="line-of-best-fit">
+<h4>Line Of Best Fit<a class="headerlink" href="#line-of-best-fit" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
+<section id="error-bars">
+<h4>Error Bars<a class="headerlink" href="#error-bars" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+</section>
+<section id="qq-plots">
+<h4>QQ Plots<a class="headerlink" href="#qq-plots" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/48d528a2d7feaa62474390f5ab1c6b2b/qq_plot.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/2ffd93822792a841b9989c3064183549/qq_plot.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/d14acada6c5dfd47b515513a8f7474b0/qq_plot.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/3d86bcc667c5128f1cf14a2252f5f9e1/qq_plot.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/qq_plot.png" class="plot-directive" src="../../../_images/qq_plot.png" />
+</figure>
+</section>
+</section>
+<section id="time-series">
+<h3>Time Series<a class="headerlink" href="#time-series" title="Link to this heading">#</a></h3>
+<p>(<a class="reference download internal" download="" href="../../../_downloads/53f58ef3250b12787d3bade6a96ad174/timeseries_no_trend.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/e116404f0d751313fe60f3ad1dde7e41/timeseries_no_trend.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/6758fb34bbeee0d96a8e013e10ce0f5e/timeseries_no_trend.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../_downloads/319ff082ae08197047a07a4e84319b56/timeseries_no_trend.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../_images/timeseries_no_trend.png" class="plot-directive" src="../../../_images/timeseries_no_trend.png" />
+</figure>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/">matplotlib documentation</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/index">matplotlib examples</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/statistics/index.html">matplotlib statistics examples</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/statistics/hist.html#sphx-glr-gallery-statistics-hist-py">matplotlib histogram examples</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/statistics/histogram_cumulative.html#sphx-glr-gallery-statistics-histogram-cumulative-py">matplotlib ogive (cumulative distribution) examples</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/statistics/errorbar.html#sphx-glr-gallery-statistics-errorbar-py">matplotlib error bar examples</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/statistics/boxplot_demo.html#sphx-glr-gallery-statistics-boxplot-demo-py">matplotlib boxplot examples</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="04_functions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Functions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_files.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Files</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib">matplotlib</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tkinter">tkinter</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importing">Importing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-axes">Creating the Axes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labelling">Labelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#titles">Titles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subtitles">Subtitles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#axes">Axes</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-graphs">Multiple Graphs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#showing-the-plot">Showing The Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#styling-the-graph">Styling The Graph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gallery">Gallery</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplot">Boxplot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bar-chart">Bar Chart</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#no-frills">No Frills</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked">Stacked</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-plot">Dot Plot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pie-chart">Pie Chart</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#histogram">Histogram</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normal">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relative">Relative</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ogives">Ogives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scatterplot">Scatterplot</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-of-best-fit">Line Of Best Fit</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#error-bars">Error Bars</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#qq-plots">QQ Plots</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-series">Time Series</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

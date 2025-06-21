@@ -1,0 +1,40 @@
+.. _year-2015:
+
+2015
+====
+
+.. _may-2015:
+
+---
+May
+---
+
+If the lessons of statistics and the scientific method have been adequately learned then it is not hard to conclude absolute :ref:`truth <truth>` is an impossibility. Absolute falsity is easily established by counter-example, but absolute :ref:`truth <truth>` remains beyond the realms of inference. We merely glimpse the outlines of :ref:`truth <truth>` in what it has been shown not to be.
+
+If the lessons of logic and set theory have been adequately learned, then it also follows readily that total :ref:`truth <truth>` is an impossibility, which is to say, assuming one can even grasp a single :ref:`truth <truth>`, it is impossible to enumerate all of the things which are true. Certain propositions are always beyond the pale.
+
+Against this backdrop of utter uncertainty, it then remains a question whether :ref:`truth <truth>` is essential to the constitution of reality or derivative of the human condition. That is, whether a thing can be true or not in the absence of humans, or if :ref:`truth <truth>` is a uniquely human abstraction without application in a world without humans. We might surmise a thing, whatever that thing might be qualified as (a table, a tree, a particle), is either in a location or it is not (relative to a frame of reference [#may_2015_01]_ ), so that we might conclude if :ref:`truth <truth>` is not inherent in the universe, then at least an analog of :ref:`truth <truth>` presents itself in the binary state of any point in the universe either being filled by a thing or not. It is then not much of a leap to suggest a mapping of :ref:`truth <truth>` onto this mechanical aspect of the universe as the binding which gives rise to the human notion of :ref:`truth <truth>`.
+
+But then we consider our best attempts as a species at understanding the universe around us and come up against the Uncertainty Principle: that a thing does not have location until it is observed, and that location is an event of chance. In other words, it is impossible to say where a thing is exactly before observing it, only it's probable location. If a thing can not be identified with a position :ref:`a priori <a-priori>`, that is to say if location cannot in some respect determine a thing, then we have a problem. This is not the problem of continuity that puzzled mathematicians and physicists at the turn of the twentieth century; for a problem of continuity is merely a question as to the particular description of the universe, how it is that things are. This is a problem of epistemology: we have here a crack in the foundation of classical :ref:`truth <truth>`.
+
+The Uncertainy Principle seems to be saying: :ref:`truth` cannot in any way be identified as spatial, :ref:`truth <truth>` is not part of the physical order of things. If location is not a judgeable property of a thing beforehand, as demonstrated by the Uncertainty Principle, then the concept of :ref:`truth <truth>` does not spring from the locomotion of a thing from one place to another, as :ref:`truth <truth>` is not conditional on observation (does a proposition need to be observed to be true? Or is its :ref:`truth <truth>` value something *essential*? [#may_2015_02]_); In an uncertain world, :ref:`truth <truth>` is no longer bound to presence in the physical world. Each point in space cannot be thought of as binary trigger, denoting occupation or not. There is no (direct) map between the motion of the universe and the logic of :ref:`truth <truth>`.
+
+This is an important point, as the basis of all modern computing depends on the notion of location containing information. A transistor either has a positive or negative voltage. That is, electrons flow in one direction or the other through the transistor. The transistor contains things. In this way, we are able to map the state of things in a transistor to logical statements: a transistor contains this and that thing, a transistor contains this or that thing, a transistor does not contain that thing.
+
+We see in this model how our notion of :ref:`truth <truth>` as it exists today is interwoven with presence in space. We must at the same time admit the great power of this model, as it has completely transformed human life. By identifying :ref:`truth <truth>` with location, we have undergone an astonishing revolution in information. But if it is not fundamentally possible for location to contain information, given the nature of the laws of physics and the properties of :ref:`truth <truth>` so far discussed, we must question what is really going on here.
+
+Perhaps it is the case that information and :ref:`truth <truth>` are not so closely linked as previously thought. Can information exist that is not true? Certainly, at a human level, it is possible to say things such as, "*the purple cow gave an eloquent speech on the motorway*". But, on a more fundamental level, is it possible for the universe to *lie*, to *deceive*? Can a structure of things in existence refer to something that is not? It seems a silly proposition, but why? Because a thing is a thing, and it can only indicate itself, one might reply. But how does a thing indicate? Doesn't the notion of "*indication*"" imply a thing becoming that which it is not?
+
+A street sign indicates an abstract instruction, but this is an artifice deployed in a human world. What does a flower indicate? Can an object that is not constructed to have meaning :ref:`a priori <a-priori>` by an intelligent being have the same kind of meaning as the constructions? Or is the meaning of a street sign bound in some way to its use in the human world?
+
+.. _july-2015:
+
+----
+July
+----
+
+The knowledge a :ref:`being <being>` has of itself is by necessity incomplete, since its knowledge will necessarily involve reference to itself as the bearer of said knowledge (the knowledge you have implicitly contains the knowledge you have this knowledge) and in trying to encapsulate the sum total of its knowledge, it will also try to encapsulate itself within that framework, triggering fractal feedback. Being is in this respect effervescent; knowing is a process that cannot be completed. When the human mind tries to understand itself, it faces the disintegration of the subject into its constituent objects. If the subject is the object of attention, this disintegration reveals the subject is not contained in the inspected objects. A subject is known through objects, because objects can have meaning that is not part of their presence in physical space; objects can indicate some other than themselves, they can be symptoms of a :ref:`phenomenon <phenomena>` that does not have physicality in the scientific sense.
+
+.. [#may_2015_01] As if a frame of reference existed without a subject to occupy it...
+
+.. [#may_2015_02] The concept of *interpretation* in semantics appears to play the same role as *observation* in physics.

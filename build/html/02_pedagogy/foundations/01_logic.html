@@ -1,0 +1,1391 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Logic &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/foundations/01_logic';</script>
+    <script src="../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/02_pedagogy/foundations/01_logic.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Set Theory" href="02_sets.html" />
+    <link rel="prev" title="Knowledge" href="00_history.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../assignments/index.html">Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../assignments/problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../assignments/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Foundations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_history.html">Knowledge</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/03_syntagmics/index.html">Syntagmics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/02_pedagogy/foundations/01_logic.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Logic</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propositional-logic">Propositional Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propositions">Propositions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#truth-tables">Truth Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#value-assignment">Value Assignment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negation">Negation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conjunction">Conjunction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disjunction">Disjunction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence">Equivalence</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#implication">Implication</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-redundancy">Logical Redundancy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference">Inference</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-detachment">Law of Detachment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-arguments">Symbolic Arguments</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tautologies">Tautologies</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#contradictions">Contradictions</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#carnap-s-method-of-tautology">Carnap’s Method of Tautology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-logic">Categorical Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aristotelian-logic">Aristotelian Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conversions">Conversions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#first-figure">First Figure</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#second-figure">Second Figure</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#third-figure">Third Figure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantification">Quantification</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-quantification">Universal Quantification</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#existential-quantification">Existential Quantification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="logic">
+<span id="id1"></span><h1>Logic<a class="headerlink" href="#logic" title="Link to this heading">#</a></h1>
+<section id="propositional-logic">
+<span id="id2"></span><h2>Propositional Logic<a class="headerlink" href="#propositional-logic" title="Link to this heading">#</a></h2>
+<section id="propositions">
+<span id="proposition"></span><h3>Propositions<a class="headerlink" href="#propositions" title="Link to this heading">#</a></h3>
+<blockquote class="epigraph">
+<div><p>I shall not try to give a general definition of “proposition”, as it is impossible to do so.</p>
+<p class="attribution">—<a class="reference external" href="https://www.marxists.org/reference/subject/philosophy/works/at/wittgens.htm">Wittgenstein Lectures</a>, Ludwig Wittgenstein</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(p, q, r\)</span></p>
+</dd>
+<dt>Definition</dt><dd><p>A sentence that can be judged either <em>true</em> or <em>false</em>.</p>
+</dd>
+</dl>
+</section>
+<section id="truth-tables">
+<span id="id3"></span><h3>Truth Tables<a class="headerlink" href="#truth-tables" title="Link to this heading">#</a></h3>
+<p><a class="reference internal" href="#truth-tables"><span class="std std-ref">Truth tables</span></a> are the standard way of evaluating the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of a symbolic proposition. However, when the number of terms in a compound proposition rises above 4, <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth tables</span></a> can quickly become cumbersome. See <a class="reference internal" href="#carnaps-method"><span class="std std-ref">Carnap’s Method of Tautology</span></a> for an alternate way of evaluating the truth of a symbolic propositions.</p>
+<aside class="topic" id="truth-values">
+<p class="topic-title">Truth Values</p>
+<p>TODO</p>
+</aside>
+<section id="value-assignment">
+<span id="id4"></span><h4>Value Assignment<a class="headerlink" href="#value-assignment" title="Link to this heading">#</a></h4>
+<p>Each row of a <a class="reference internal" href="#truth-tables"><span class="std std-ref">truth table</span></a> represents a different <em>value assignment</em> to the constituent propositions involved in the compound proposition. For example, in the case of <em>“p or q”</em>, the compound symbolic proposition is <span class="math notranslate nohighlight">\(p \lor q\)</span>. A <a class="reference internal" href="#truth-tables"><span class="std std-ref">truth table</span></a> is constructed by listing every possible combination of truth value for <code class="docutils literal notranslate"><span class="pre">p</span></code> and <code class="docutils literal notranslate"><span class="pre">q</span></code>,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p \lor q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The first two columns represent the <em>input</em> propositions and their respective truth-values. The third column represents the <em>output</em> proposition and the truth-value that results from that particular value assignment.</p>
+<p>Each row details a different <em>state</em> of the world. The list is exhaustive because every possible combination is contained in the table. Therefore, by looking at the table, we know in which cases we can correctly say <span class="math notranslate nohighlight">\(p \lor q\)</span>.</p>
+</section>
+</section>
+<section id="operations">
+<span id="logical-operations"></span><h3>Operations<a class="headerlink" href="#operations" title="Link to this heading">#</a></h3>
+<section id="negation">
+<span id="logical-negation"></span><h4>Negation<a class="headerlink" href="#negation" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(\neg p\)</span></p>
+</dd>
+</dl>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\neg p\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="conjunction">
+<span id="logical-conjunction"></span><h4>Conjunction<a class="headerlink" href="#conjunction" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(p \land q\)</span></p>
+</dd>
+</dl>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p \land q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="disjunction">
+<span id="logical-disjunction"></span><h4>Disjunction<a class="headerlink" href="#disjunction" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(p \lor q\)</span></p>
+</dd>
+</dl>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p \lor q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="equivalence">
+<span id="logical-equivalence"></span><h4>Equivalence<a class="headerlink" href="#equivalence" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(p \equiv q\)</span></p>
+</dd>
+</dl>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p \equiv q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="implication">
+<span id="logical-implication"></span><h4>Implication<a class="headerlink" href="#implication" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(p \implies q\)</span></p>
+</dd>
+<dt>Definition</dt><dd><p>A symbolic representation of a <em>conditional</em> (if-then) relationship between two <em>propositions</em>.</p>
+</dd>
+</dl>
+<p>This type of proposition can be translated into English in the following ways,</p>
+<ol class="arabic simple">
+<li><p>“if <em>p</em>, then <em>q</em>”</p></li>
+<li><p>“whenever <em>p</em>, then <em>q</em>”</p></li>
+<li><p>“<em>p</em> implies <em>q</em>”</p></li>
+<li><p>“<em>q</em> follows from <em>p</em>”</p></li>
+</ol>
+<p>The <a class="reference internal" href="#truth-tables"><span class="std std-ref">truth table</span></a> for logical implication is given below,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(p\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(q\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(p \implies q\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>T</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>F</p></td>
+<td><p>F</p></td>
+</tr>
+<tr class="row-even"><td><p>F</p></td>
+<td><p>T</p></td>
+<td><p>T</p></td>
+</tr>
+<tr class="row-odd"><td><p>F</p></td>
+<td><p>F</p></td>
+<td><p>T</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="logical-redundancy">
+<h5>Logical Redundancy<a class="headerlink" href="#logical-redundancy" title="Link to this heading">#</a></h5>
+<p>Logical implication can be expressed in terms of the other logical connectives introduced. Notice the range of the implication connective assigns a value of <code class="docutils literal notranslate"><span class="pre">True</span></code> in three cases of the four possible value assignments to its constituent propositions (i.e. three rows of the <a class="reference internal" href="#truth-tables"><span class="std std-ref">truth table</span></a> are <code class="docutils literal notranslate"><span class="pre">True</span></code>). Logical disjunctions also assigns a value of <code class="docutils literal notranslate"><span class="pre">True</span></code> to three of its four possible value assignments. It is a natural question whether implication can be reduced to disjunction or visa versa.</p>
+<p>TODO</p>
+<p>It can be shown that all second-order logic can be reduced to <a class="reference internal" href="#universal-quantification"><span class="std std-ref">universal quantification</span></a> and <a class="reference internal" href="#logical-equivalence"><span class="std std-ref">logical equivalence</span></a>. See <a class="reference internal" href="../../01_epistemia/07_probatum.html#logical-primitives"><span class="std std-ref">Logical Primitives</span></a> for more information regarding the number of necessarily primitive logical connectives.</p>
+</section>
+</section>
+</section>
+<section id="inference">
+<span id="logical-inference"></span><h3>Inference<a class="headerlink" href="#inference" title="Link to this heading">#</a></h3>
+<section id="law-of-detachment">
+<span id="modus-ponens"></span><h4>Law of Detachment<a class="headerlink" href="#law-of-detachment" title="Link to this heading">#</a></h4>
+<p>The <em>Law of Detachment</em> is a symbolic expression for the process of deductive logic. The truth of an implication is asserted in conjunction with the truth of its hypothesis, which leads to the truth of the implication’s consequence. Symbolically,</p>
+<div class="math notranslate nohighlight">
+\[( (p \implies q) \land p ) \implies q\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>Law of Detachment</em> is often known by its Latin name, <em>modus ponens</em>.</p>
+</div>
+</section>
+<section id="symbolic-arguments">
+<h4>Symbolic Arguments<a class="headerlink" href="#symbolic-arguments" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+<section id="tautologies">
+<span id="id5"></span><h5>Tautologies<a class="headerlink" href="#tautologies" title="Link to this heading">#</a></h5>
+<p>TODO</p>
+</section>
+<section id="contradictions">
+<span id="id6"></span><h5>Contradictions<a class="headerlink" href="#contradictions" title="Link to this heading">#</a></h5>
+<p>TODO</p>
+</section>
+</section>
+<section id="carnap-s-method-of-tautology">
+<span id="carnaps-method"></span><h4>Carnap’s Method of Tautology<a class="headerlink" href="#carnap-s-method-of-tautology" title="Link to this heading">#</a></h4>
+<p>A common problem in formal <a class="reference internal" href="#logic"><span class="std std-ref">logic</span></a> is determining whether a given proposition is a <a class="reference internal" href="#tautologies"><span class="std std-ref">tautology</span></a>, i.e. <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a> in all possible cases. Since the number of rows in a <a class="reference internal" href="#truth-tables"><span class="std std-ref">truth table</span></a> grows exponentially with the number of <a class="reference internal" href="#proposition"><span class="std std-ref">propositions</span></a>, the traditional method of <a class="reference internal" href="#truth-tables"><span class="std std-ref">truth tables</span></a> is computationally expensive. In <a class="reference external" href="https://archive.org/details/rudolf-carnap-introduction-to-symbolic-logic-and-its-applications">Introduction to Symbolic Logic and Its Applications</a>, Carnap presents a different method for evaluating whether or not a given <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> is a <a class="reference internal" href="#tautologies"><span class="std std-ref">tautology</span></a>. Rather than enumerating all possible cases and checking if each one is true, it suffices to show the assignment of false to a <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> is impossible. In other words, Carnap’s method starts by assuming the <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> is false and then works backwards through the logical connectives to see whether or not an <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> of false is consistent with the <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a>.</p>
+<p>For example, consider the well-known property of implications,</p>
+<div class="math notranslate nohighlight">
+\[((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)\]</div>
+<p>To determine whether this constitues a <a class="reference internal" href="#tautologies"><span class="std std-ref">tautology</span></a>, it must be shown whether or not an <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> of false can be made to the entire <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a>. The <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> is built out of nested propositions. The <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> of false to entire <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> will in turn require the subformulas of the <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> to assume particular values. This will yield conditions for evaluating whether the overall <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> is consistent with the <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> of its components. The top-level connective is,</p>
+<div class="math notranslate nohighlight">
+\[s \implies t\]</div>
+<p>Where <span class="math notranslate nohighlight">\(s = (p \implies r) \land (q \implies r)\)</span> and <span class="math notranslate nohighlight">\(t = ((p \land q) \implies r)\)</span>.</p>
+<p>In order for this <a class="reference internal" href="#logical-implication"><span class="std std-ref">implication</span></a> to be false, the hypothesis, <span class="math notranslate nohighlight">\(s\)</span>, must be <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a>, while the consequence, <span class="math notranslate nohighlight">\(t\)</span>, must be false.</p>
+<p>The <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> of false to <span class="math notranslate nohighlight">\(t\)</span> in turn requires <span class="math notranslate nohighlight">\(p \land q\)</span> to be true and <span class="math notranslate nohighlight">\(r\)</span> to be false.</p>
+<p>The <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a> of <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a> to <span class="math notranslate nohighlight">\(p \land q\)</span> in turn requires <span class="math notranslate nohighlight">\(p\)</span> be true and <span class="math notranslate nohighlight">\(q\)</span> be <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a>.</p>
+<p>Thus, it is seen in order for the <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> itself to be false, <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> must be true, while <span class="math notranslate nohighlight">\(r\)</span> is false.</p>
+<p>These values, however, are inconsistent with the hypothesis, <span class="math notranslate nohighlight">\(s\)</span>, which was required to be <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a>, for <span class="math notranslate nohighlight">\(p \implies r\)</span> and <span class="math notranslate nohighlight">\(q \implies r\)</span> are both false under this <a class="reference internal" href="#value-assignment"><span class="std std-ref">assignment</span></a>, and thus their <a class="reference internal" href="#logical-conjunction"><span class="std std-ref">conjunction</span></a> is false. This <a class="reference internal" href="#contradictions"><span class="std std-ref">contradicts</span></a> our initial assumption that <span class="math notranslate nohighlight">\(s\)</span> is <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a>. Therefore, the entire <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> cannot be false for any assignment and it must be concluded the entire <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a> is <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">true</span></a> for all possible values of <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(q\)</span> and <span class="math notranslate nohighlight">\(r\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[((p \implies r) \land (q \implies r)) \implies ((p \land q) \implies r)\]</div>
+</section>
+</section>
+</section>
+<section id="categorical-logic">
+<span id="id7"></span><h2>Categorical Logic<a class="headerlink" href="#categorical-logic" title="Link to this heading">#</a></h2>
+<section id="aristotelian-logic">
+<span id="id8"></span><h3>Aristotelian Logic<a class="headerlink" href="#aristotelian-logic" title="Link to this heading">#</a></h3>
+<p>Aristotelian logic differs from propositional logic. In (first order) propositional logic, the proposition being expressed is reduced to a single truth value and this value is what enables its syntactic calculus through symbolic arguments. Aristotle, however, viewed the proposition as being decomposed into <em>terms</em> which then had categorical relations asserted between them. In other words, The Aristotelian model of logic is the study of sentences that express <em>categorical relations</em> between <em>terms</em>.</p>
+<aside class="topic">
+<p class="topic-title">Definition</p>
+<ol class="arabic simple">
+<li><p>Uppercase Letters (<strong>A</strong>, <strong>B</strong>, <strong>C</strong>): Terms.</p></li>
+<li><p>Lowercase Letters (<strong>a</strong>, <strong>i</strong>, <strong>o</strong>, <strong>e</strong>): Categorical Relations</p></li>
+</ol>
+</aside>
+<p>A “<em>term</em>” in Aristotelian logic is not quite a <a class="reference internal" href="02_sets.html#sets"><span class="std std-ref">set</span></a> and it is not quite a <a class="reference internal" href="#proposition"><span class="std std-ref">proposition</span></a>. A “<em>term</em>” is a grammatical object that denotes both the <em>subject</em> and the <em>predicate</em>. In short, a <em>term</em> can be understood, roughly, as Aristotle’s “<em>οὐσία</em>”, the substance and essence of a <em>thing</em>.</p>
+<p>The ontological status of a “<em>term</em>” in Aristotelian logic is substantially more complex than the preceding implies. To fully elucidate its natures requires a nuanced discussion on the <a class="reference external" href="https://classics.mit.edu/Aristotle/categories.1.1.html">Categories</a> of Aristotle. To be brief, Aristotle considers thought of <a class="reference internal" href="../../01_epistemia/04_lexicon.html#language"><span class="std std-ref">language</span></a> as being composed of ten categories,</p>
+<ol class="arabic simple">
+<li><p>Substance (οὐσία): What something fundamentally is.</p></li>
+<li><p>Quantity (ποσόν): How much or how many of the subtance exists.</p></li>
+<li><p>Quality (ποιόν): What kind or sort of thing a substance is.</p></li>
+<li><p>Relation (πρός τι): How a substance stands in reference to another substance.</p></li>
+<li><p>Place (ποῦ): Where the substance is located.</p></li>
+<li><p>Time (πότε): When the substance exists.</p></li>
+<li><p>Position (κεῖσθαι): The physical arrangement of the substance’s parts.</p></li>
+<li><p>State (ἔχειν): The condition or state of having something.</p></li>
+<li><p>Action (ποιεῖν): What the substance is actively doing.</p></li>
+<li><p>Passion (πάσχειν): What is being done to the substance.</p></li>
+</ol>
+<p>The ultimate subject of a sentence in Aristotelian logic must reduce to a “<em>substantial</em> <a class="reference internal" href="../../01_epistemia/04_lexicon.html#being"><span class="std std-ref">being</span></a>” of reality.</p>
+<aside class="topic">
+<p class="topic-title">Definitions</p>
+<ol class="arabic simple">
+<li><p><strong>AaB</strong>: All <strong>B</strong> are <strong>A</strong>.</p></li>
+<li><p><strong>AiB</strong>: Some <strong>B</strong> are <strong>A</strong>.</p></li>
+<li><p><strong>AoB</strong>: Some <strong>B</strong> are not <strong>A</strong></p></li>
+<li><p><strong>AeB</strong>: No <strong>B</strong> are <strong>A</strong></p></li>
+</ol>
+</aside>
+<p>The sentences <strong>AaB</strong> and <strong>AeB</strong> are called <em>universal assertions</em> since they express relations of the whole. The sentences <strong>AiB</strong> and <strong>AoB</strong> are called <em>particular assertions</em> since they express relations between the parts.</p>
+<p>A sentence <em>p</em> is the <em>contradictory</em> of another sentence <em>q</em> if the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>p</em> implies the falsity of the <em>q</em> and the falsity of <em>p</em> implies the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>q</em>. For example, if all <strong>B</strong> are <strong>A</strong> is true, then it must be the case that some <strong>B</strong> are not <strong>A</strong> is false (i.e., some <strong>B</strong> <em>are</em> A). In the opposite direction, if all <strong>B</strong> are <strong>A</strong> is false, then it must be the case the some <strong>B</strong> are not <strong>A</strong> is true</p>
+<aside class="topic">
+<p class="topic-title">Contradictories</p>
+<ol class="arabic simple">
+<li><p><strong>AaB</strong> is the contradictory of <strong>AoB</strong></p></li>
+<li><p><strong>AiB</strong> is the contradictory of <strong>AeB</strong></p></li>
+</ol>
+</aside>
+<p>A sentence <em>p</em> is the <em>contrary</em> of <em>q</em> if the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>p</em> implies the falsity of <em>q</em>, but the falsity of <em>p</em> does not imply the falsity of <em>q</em>. For example, if <strong>AaB</strong> is true, then it must be the case that <strong>AeB</strong> is false. However, if <strong>AaB</strong> is false, then <strong>AeB</strong> is not necessarily true, since it may be the case <strong>AiB</strong>.</p>
+<aside class="topic">
+<p class="topic-title">Contraries</p>
+<ol class="arabic simple">
+<li><p><strong>AaB</strong> is the contrary of <strong>AeB</strong></p></li>
+<li><p><strong>AeB</strong> is the contray of <strong>AaB</strong></p></li>
+</ol>
+</aside>
+<p>A sentence <em>p</em> is the <em>subcontrary</em> of <em>q</em> is the falsity of <em>p</em> implies the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>q</em>, but the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>p</em> does not imply the falsity of <em>q</em>. For example, if <strong>AiB</strong> is false, then it must be the case <strong>AoB</strong>. However, from the truth of <strong>AiB</strong>, nothing regarding <strong>AoB</strong> can be deduced.</p>
+<aside class="topic">
+<p class="topic-title">Subcontraries</p>
+<ol class="arabic simple">
+<li><p><strong>AiB</strong> is <em>subcontrary</em> of <strong>AoB</strong></p></li>
+<li><p><strong>AoB</strong> is the <em>subcontray</em> of <strong>AiB</strong></p></li>
+</ol>
+</aside>
+<p>A sentence <em>p</em> is the <em>subalternation</em> of <em>q</em> if the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>q</em> implies the <a class="reference internal" href="../../01_epistemia/04_lexicon.html#truth"><span class="std std-ref">truth</span></a> of <em>p</em>. For example, if <strong>AaB</strong>, it must be the case <strong>AiB</strong>.</p>
+<aside class="topic">
+<p class="topic-title">Subalternations</p>
+<ol class="arabic simple">
+<li><p><strong>AiB</strong> is the subalternation of <strong>AaB</strong></p></li>
+<li><p><strong>AoB</strong> is the subalternation of <strong>AeB</strong></p></li>
+</ol>
+</aside>
+<p>A sentence <em>p</em> is the <em>superalternation</em> of <em>q</em> if the falsity of <em>q</em> implies the falsity of <em>p</em>. For example, if <strong>AiB</strong> is false, then <strong>AaB</strong> must also be false.</p>
+<aside class="topic">
+<p class="topic-title">Superalternations</p>
+<ol class="arabic simple">
+<li><p><strong>AaB</strong> is the superalternation of <strong>AiB</strong></p></li>
+<li><p><strong>AeB</strong> is the superalternation of <strong>AoB</strong></p></li>
+</ol>
+</aside>
+<section id="conversions">
+<span id="aristotelian-conversions"></span><h4>Conversions<a class="headerlink" href="#conversions" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>AeB</strong> → <strong>BeA</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>BiA</strong> → <strong>AiB</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>AaB</strong> → <strong>AiB</strong></p></li>
+</ol>
+<p>TODO</p>
+</section>
+<section id="figures">
+<span id="aristotelian-figures"></span><h4>Figures<a class="headerlink" href="#figures" title="Link to this heading">#</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The traditional medieval pneumonic devices are included beside each deductive figure. The order of the vowels in the Latin name corresponds to the order of relations in symbolic argument.</p>
+</div>
+<section id="first-figure">
+<h5>First Figure<a class="headerlink" href="#first-figure" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>(<em>Barbara</em>) <strong>AaB</strong>, <strong>BaC</strong> ⊢ <strong>AaC</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="2">
+<li><p>(<em>Celarent</em>) <strong>AeB</strong>, <strong>BaC</strong> ⊢ <strong>AeC</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="3">
+<li><p>(<em>Darii</em>) <strong>AaB</strong>, <strong>BiC</strong> ⊢ <strong>AiC</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="4">
+<li><p>(<em>Ferio</em>) <strong>AeB</strong>, <strong>BiC</strong> ⊢ <strong>AoC</strong></p></li>
+</ol>
+</section>
+<section id="second-figure">
+<h5>Second Figure<a class="headerlink" href="#second-figure" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>(<em>Camestres</em>) <strong>MaN</strong>, <strong>MeX</strong> ⊢ <strong>NeX</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="2">
+<li><p>(<em>Cesare</em>) <strong>MeN</strong>, <strong>MaX</strong> ⊢ <strong>NeX</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="3">
+<li><p>(<em>Festino</em>) <strong>MeN</strong>, <strong>MiX</strong> ⊢ <strong>NoX</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="4">
+<li><p>(<em>Baroco</em>) <strong>MaN</strong>, <strong>MoX</strong> ⊢ <strong>NoX</strong></p></li>
+</ol>
+<p>TODO</p>
+</section>
+<section id="third-figure">
+<h5>Third Figure<a class="headerlink" href="#third-figure" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>(<em>Darapti</em>) <strong>PaS</strong>, <strong>RaS</strong> ⊢ <strong>PiR</strong></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This one could be strengthened in a system with more expressive power to “all P that are S are also R”.</p>
+</div>
+<p>TODO</p>
+<ol class="arabic simple" start="2">
+<li><p>(<em>Felapton</em>) <strong>PeS</strong>, <strong>RaS</strong> ⊢ <strong>PoR</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="3">
+<li><p>(<em>Datisi</em>) <strong>PaS</strong>, <strong>RiS</strong> ⊢ <strong>PiR</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="4">
+<li><p>(<em>Disamis</em>) <strong>PiS</strong>, <strong>RaS</strong> ⊢ <strong>PiR</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="5">
+<li><p>(<em>Bocardo</em>) <strong>PoS</strong>, <strong>RaS</strong> ⊢ <strong>PoR</strong></p></li>
+</ol>
+<p>TODO</p>
+<ol class="arabic simple" start="6">
+<li><p>(<em>Ferison</em>) <strong>PeS</strong>, <strong>RiS</strong> ⊢ <strong>PoR</strong></p></li>
+</ol>
+<p>TODO</p>
+</section>
+</section>
+</section>
+<section id="quantification">
+<span id="logical-quantification"></span><h3>Quantification<a class="headerlink" href="#quantification" title="Link to this heading">#</a></h3>
+<p>TODO</p>
+<section id="universal-quantification">
+<span id="id9"></span><h4>Universal Quantification<a class="headerlink" href="#universal-quantification" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(\forall p: q\)</span></p>
+</dd>
+<dt>Definition</dt><dd><p>A symbolic expression for a universal proposition.</p>
+</dd>
+</dl>
+<p>This type of proposition can be translated into English in the following ways,</p>
+<ol class="arabic simple">
+<li><p>“for all <em>p</em>, <em>q</em>”</p></li>
+<li><p>“for every <em>p</em>, <em>q</em>”</p></li>
+<li><p>“for each <em>p</em>, <em>q</em>”</p></li>
+</ol>
+</section>
+<section id="existential-quantification">
+<span id="id10"></span><h4>Existential Quantification<a class="headerlink" href="#existential-quantification" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Symbolic Expression</dt><dd><p><span class="math notranslate nohighlight">\(\exists p: q\)</span></p>
+</dd>
+<dt>Definition</dt><dd><p>A symbolic representation of an existential proposition.</p>
+</dd>
+</dl>
+<p>This type of proposition can be translated into English in the following ways,</p>
+<ol class="arabic simple">
+<li><p>“there exists a <em>p</em> such that <em>q</em>”</p></li>
+<li><p>“for some <em>p</em>, <em>q</em>”</p></li>
+<li><p>“there is a <em>p</em> that <em>q</em>”</p></li>
+</ol>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_history.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Knowledge</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_sets.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Set Theory</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propositional-logic">Propositional Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#propositions">Propositions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#truth-tables">Truth Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#value-assignment">Value Assignment</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#negation">Negation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conjunction">Conjunction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disjunction">Disjunction</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence">Equivalence</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#implication">Implication</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-redundancy">Logical Redundancy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inference">Inference</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-detachment">Law of Detachment</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#symbolic-arguments">Symbolic Arguments</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#tautologies">Tautologies</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#contradictions">Contradictions</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#carnap-s-method-of-tautology">Carnap’s Method of Tautology</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#categorical-logic">Categorical Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aristotelian-logic">Aristotelian Logic</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conversions">Conversions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#first-figure">First Figure</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#second-figure">Second Figure</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#third-figure">Third Figure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantification">Quantification</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#universal-quantification">Universal Quantification</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#existential-quantification">Existential Quantification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

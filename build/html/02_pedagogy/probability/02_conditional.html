@@ -1,0 +1,1154 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Conditional Probability &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/probability/02_conditional';</script>
+    <script src="../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/02_pedagogy/probability/02_conditional.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Random Variables" href="03_random_variables.html" />
+    <link rel="prev" title="Combinatorics" href="01_combinatorics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../assignments/index.html">Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../assignments/problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../assignments/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Probability</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/03_syntagmics/index.html">Syntagmics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/02_pedagogy/probability/02_conditional.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Conditional Probability</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condtional-probability-formula">Condtional Probability Formula</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-of-sample-space">Reduction of Sample Space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formula">Formula</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monty-hall-problem">Monty Hall Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-tables-revisited">Probability Tables Revisited</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-laws">Bayes’ Laws</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-law">Multiplication Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-total-probability">Law of Total Probability</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complementary-intersections">Complementary Intersections</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-probability">Total Probability</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-formula">Bayes’ Formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-diagrams">Tree Diagrams</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independence-multiplication-law">Multiplication Law</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="conditional-probability">
+<span id="id1"></span><h1>Conditional Probability<a class="headerlink" href="#conditional-probability" title="Link to this heading">#</a></h1>
+<p>Probability is merely a guess. It is based on whatever currently available information we have. If new information about the outcomes in the sample space becomes available, the probability assigned to the remaining events must be updated to take into account the new state of the world (or more accurately, <a class="reference internal" href="../foundations/00_history.html#knowledge"><span class="std std-ref">knowledge</span></a> of the new state of the world). <em>Conditional probability</em> is the tool for incorporating <em>new</em> information into probability calculations.</p>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
+<aside class="topic">
+<p class="topic-title">Example</p>
+<p>Suppose three red balls numbered 1 - 3 and four green balls numbered 1 - 4 are placed into a box. A friend selects a ball at random from the box without showing you what she selected.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>What is the probability the ball she selected has the number 2 written on it?</p></li>
+<li><p>If she now tells you the ball she selected is red, how does this affect the probability in part 1?</p></li>
+</ol>
+</div></blockquote>
+</aside>
+<p>Let <strong>A</strong> represent the event of selecting a ball numbered 2. Let <strong>B</strong> represent the event of selecting a red ball. Then <span class="math notranslate nohighlight">\(n(A) = 2\)</span>, <span class="math notranslate nohighlight">\(n(B)=3\)</span> and <span class="math notranslate nohighlight">\(n(S) = 7\)</span> (Why?) Without taking into account the second part of the problem yet, the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> yields the probability the ball she selected has the number 2 written it,</p>
+<div class="math notranslate nohighlight">
+\[P(A) = \frac{2}{7} \approx 0.286\]</div>
+<p>This number represents the probability of <strong>A</strong> <em>without any further information</em> provided about the sample space.</p>
+<p>If the friend now informs us the ball she selected was red, then this new information affects the probability. Certain outcomes have been <em>removed</em> from the sample space and are no longer possible. Because your friend revealed the color of the ball, we can discount all outcomes that involve the four green balls numbered 1 - 4. This type of <a class="reference internal" href="#reduction-of-the-sample-space"><span class="std std-ref">Reduction of Sample Space</span></a> is called <em>conditioning on the event</em> <strong>B</strong>. The event of <strong>A</strong> given <strong>B</strong> is denoted <span class="math notranslate nohighlight">\(A \mid B\)</span></p>
+<p>Applying the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> to this <em>reduced</em> sample space, we get the <em>probability of selecting a ball with the number 2, given the ball is red</em>,</p>
+<div class="math notranslate nohighlight">
+\[P(A \mid B) = \frac{1}{3} \approx 0.333\]</div>
+<p>In other words, knowing the event a red ball was selected has <em>increased</em> the probability the ball has the number 2 written onit. Taking a look at the original sample space, this should be intuitive. There are less red balls than green balls, so more probability is “concentrated” in the red number 2 ball when the green balls are removed from the sample space.</p>
+<p>In order to further understand what is going, return to the point in time when your friend has not yet revealed the color she has selected, i.e. before the information the ball is red has become available. Before you know the ball is red, the probability of it being red is given by,</p>
+<div class="math notranslate nohighlight">
+\[P(B) = \frac{3}{7}\]</div>
+<p>The probability of it being <em>red and having the number 2 written on it</em> is the probability of the <a class="reference internal" href="../foundations/02_sets.html#intersection"><span class="std std-ref">Intersection</span></a> of <strong>A</strong> and <strong>B</strong>. Noting <span class="math notranslate nohighlight">\(A \cap B\)</span> has only outcome in it (Why?), the outcome of a red ball with the number 2 has a probability,</p>
+<div class="math notranslate nohighlight">
+\[P(A \cap B) = \frac{1}{7}\]</div>
+<p>If the event <strong>B</strong> has occurred, then the only way the event <strong>A</strong> can now occur is through the event <span class="math notranslate nohighlight">\(A /cap B\)</span>. The <em>conditional</em> probability of <strong>A</strong> given the occurrence of <strong>B</strong> is the ratio of ways <strong>A</strong> and <strong>B</strong> can occur to the ways <strong>B</strong> alone can occur,</p>
+<div class="math notranslate nohighlight">
+\[P(A \mid B) = \frac{\frac{1}{7}}{\frac{3}{7}} = \frac{1}{3} \approx 0.333\]</div>
+</section>
+<section id="condtional-probability-formula">
+<span id="conditional-probability-formula"></span><h2>Condtional Probability Formula<a class="headerlink" href="#condtional-probability-formula" title="Link to this heading">#</a></h2>
+<p>Abstracting from the details from the previous example, the <em>conditional probability</em> of an event <strong>A</strong> given the occurrence of an event <strong>B</strong> is defined by the following formula,</p>
+<div class="math notranslate nohighlight">
+\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}\]</div>
+<p>An equivalent formula is given in terms of the <a class="reference internal" href="../foundations/02_sets.html#cardinality"><span class="std std-ref">Cardinality</span></a> of the sets <span class="math notranslate nohighlight">\(A \cap B\)</span> and <strong>B</strong>,</p>
+<div class="math notranslate nohighlight">
+\[P(A \mid B) = \frac{n(A \cap B)}{n(B)}\]</div>
+<aside class="topic">
+<p class="topic-title">Example</p>
+<p>TODO</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Solution</p>
+<p>TODO</p>
+</aside>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is important to keep in mind that conditional probability is a <em>definition</em>. It is not an <a class="reference internal" href="00_introduction.html#axioms-of-probability"><span class="std std-ref">axiom of probability</span></a>.</p>
+<p>In mathematics, <em>axioms</em> represent the necessary assumptions for deriving a corpus of knowledge through syntactical rules: the initial <em>starting points</em> from which theorems are deduced.</p>
+<p>A <em>definition</em> is <em>semantical</em> in nature, insofar that it expresses the opinion of the definer that the thing being defined is deserving of special notice, for it delineates a special concept that (hopefully) corresponds in some way to the observer’s intuitive notions about reality.</p>
+</div>
+</section>
+<section id="reduction-of-sample-space">
+<span id="reduction-of-the-sample-space"></span><h2>Reduction of Sample Space<a class="headerlink" href="#reduction-of-sample-space" title="Link to this heading">#</a></h2>
+<p>TODO</p>
+<section id="formula">
+<h3>Formula<a class="headerlink" href="#formula" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[P(A \mid B) = \frac{n(A \mid B)}{n(S \mid B)}\]</div>
+<p>The following example and its accompanying solutions serve to illustrate how conditional probability and the reduction of the sample space can be used to solve problems involving probability. Either method yields the correct answer.</p>
+<aside class="topic">
+<p class="topic-title">Example</p>
+<p>A fair, two-sided coin with heads and tails on either side is placed into a box alongside a double-sided coin that has heads on both sides. You select a coin at random from the box and, without looking at which coin you picked, flip it. If the coin lands on heads, what is the probability you selected the two-sided coin?</p>
+</aside>
+<aside class="topic">
+<p class="topic-title">Solution #1: Application of Conditional Probability Formula</p>
+<p>Before solving the problem, first define the <a class="reference internal" href="00_introduction.html#sample-space"><span class="std std-ref">sample space</span></a> and identify the events that correspond to its various outcomes.</p>
+<p>Let <span class="math notranslate nohighlight">\((x, y)\)</span> represent the ordered pair of outcomes, where <span class="math notranslate nohighlight">\(x\)</span> represents the face of the coin observed and <span class="math notranslate nohighlight">\(y\)</span> represents the type of coin selected. The following table illustrates what is meant by this assignment,</p>
+<p>+————————-+—————————————–|
+| Symbolic Representation |          Interpretation                 |
++————————-+—————————————–|
+|       <span class="math notranslate nohighlight">\((h, f)\)</span>    |    outcome of heads with fair coin      |
++————————-+—————————————–|
+|       <span class="math notranslate nohighlight">\((t,f)\)</span>     |    outcome of tails with fair coin      |
++————————-+—————————————–|
+|       <span class="math notranslate nohighlight">\((h_1, d)\)</span>  | outcome of heads with double-sided coin |
++————————-+—————————————–|
+|       <span class="math notranslate nohighlight">\((h_2, d)\)</span>  | outcome of heads with double-sided coin |
++————————-+—————————————–|</p>
+<p>Note the two heads on the double-sided coin are distinguished with subscripts. With this notation, the sample space of the experiment is given by,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ (h,f), (t,f), (h_1, d), (h_2, d) \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(S) = 4\]</div>
+<p>The event of selecting the fair coin, <span class="math notranslate nohighlight">\(F\)</span>, contains the outcomes,</p>
+<div class="math notranslate nohighlight">
+\[F = \{ (h,f), (t,f) \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(F) = 2\]</div>
+<p>Likewise, the event of selecting the double-sided coin, <span class="math notranslate nohighlight">\(D\)</span>, contains the outcomes,</p>
+<div class="math notranslate nohighlight">
+\[D = \{ (h_1, d), (h_2, d) \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(D) = 2\]</div>
+<p>The event of getting a head, <span class="math notranslate nohighlight">\(H\)</span>, contains the outcomes,</p>
+<div class="math notranslate nohighlight">
+\[H = \{ (h, f), (h_1, d), (h_2, d) \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(H) = 3\]</div>
+<p>Note in this formulation the event of getting a head <span class="math notranslate nohighlight">\(H\)</span> is an abstraction, a logical grouping of possible outcomes, whereas the outcomes “<span class="math notranslate nohighlight">\(h\)</span>”, “<span class="math notranslate nohighlight">\(h_1\)</span>” and “<span class="math notranslate nohighlight">\(h_2\)</span>” are the actual things being abstracted, the symbols we use to represent the <em>physical</em> occurrence of a possibility.</p>
+<p>The problem can then be expressed in terms of the <a class="reference internal" href="#conditional-probability-formula"><span class="std std-ref">Condtional Probability Formula</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[P(D \mid H) = \frac{P(D \cap H)}{P(H)}\]</div>
+<p>The denominator of this expression can be found by straight-forward application of the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[P(H) = \frac{3}{4}\]</div>
+<p>Whereas the numerator first requires calculating the intersection of <strong>D</strong> and <strong>H</strong>,</p>
+<div class="math notranslate nohighlight">
+\[D \cap H = \{ (h_1, d), (h_2,d) \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(D \cap H) = 2\]</div>
+<p>Whereupon the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> can be applied again,</p>
+<div class="math notranslate nohighlight">
+\[P(D \cap H) = \frac{2}{4} = \frac{1}{2}\]</div>
+<p>The conditional probability of <strong>D</strong> given the occurrence of <strong>H</strong> is then calculated from the previously mentioned <a class="reference internal" href="#conditional-probability-formula"><span class="std std-ref">Condtional Probability Formula</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[P(D \mid H) = \frac{\frac{1}{2}}{\frac{3}{4}} = \frac{1}{2} \cdot \frac{4}{3} = \frac{2}{3}\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Solution #2: Reduction of Sample Space Formula</p>
+<p>There is another way of looking at this problem. The fact that it is known the outcome of the coin flip was heads effectively <em>reduces</em> the sample space <strong>S</strong> from,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ (h,f), (t,f), (h_1, d), (h_2, d) \}\]</div>
+<p>To a truncated set :math:S mid H, the sample space <em>given the occurence of event</em> <strong>H</strong>,</p>
+<div class="math notranslate nohighlight">
+\[S \mid H = \{ (h,f), (h_1, d), (h_2, d) \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(S \mid H) = 3\]</div>
+<p>In other words, the outcome of tails is removed as a possibility by the additional information a head has been obtained. Then, the event <span class="math notranslate nohighlight">\(D\)</span> of selecting the two-sided coin conditioned on the event of getting a head remains,</p>
+<div class="math notranslate nohighlight">
+\[D \mid H= \{ (h_1, d), (h_2, d)  \}\]</div>
+<div class="math notranslate nohighlight">
+\[n(D \mid H) = 2\]</div>
+<p>Therefore, by the <em>reduction of sample space</em> formula,</p>
+<div class="math notranslate nohighlight">
+\[P(D \mid H) = \frac{n(D \mid H)}{n(S \mid H)}\]</div>
+<div class="math notranslate nohighlight">
+\[P(D \mid H) = \frac{2}{3}\]</div>
+</aside>
+</section>
+<section id="monty-hall-problem">
+<span id="id2"></span><h3>Monty Hall Problem<a class="headerlink" href="#monty-hall-problem" title="Link to this heading">#</a></h3>
+<p>TODO</p>
+</section>
+<section id="probability-tables-revisited">
+<span id="probability-tables-revisted"></span><h3>Probability Tables Revisited<a class="headerlink" href="#probability-tables-revisited" title="Link to this heading">#</a></h3>
+<p>TODO</p>
+</section>
+</section>
+<section id="bayes-laws">
+<span id="id3"></span><h2>Bayes’ Laws<a class="headerlink" href="#bayes-laws" title="Link to this heading">#</a></h2>
+<p>The most important theorems regarding conditional probability are known collectively as <em>Bayes’ Laws</em>.</p>
+<section id="multiplication-law">
+<span id="bayes-multiplication-law"></span><h3>Multiplication Law<a class="headerlink" href="#multiplication-law" title="Link to this heading">#</a></h3>
+<p>The <em>conditional probability</em> formula can be rearranged with the aid of some simple algebra,</p>
+<aside class="topic">
+<p class="topic-title">Bayes’ Multiplication Law</p>
+<div class="math notranslate nohighlight">
+\[P(A \cap B) = P(B \mid A) \cdot P(A)\]</div>
+</aside>
+<p>This version of the <em>conditional probability</em> formula along with the technique of <a class="reference internal" href="#reduction-of-the-sample-space"><span class="std std-ref">Reduction of Sample Space</span></a> give us an alternate approach for understanding certain probability problems. Often, we need to know the probability of a complicated <a class="reference internal" href="00_introduction.html#compound-events"><span class="std std-ref">compound event</span></a>, which usually involves cumbersome combinatorial analysis. <em>Conditional probability</em> can be used to sidestep these calculations.</p>
+<p>The following example illustrates the simplification affected by the introduction of <em>conditional probability</em> into combinatorial problems. This example can be solved in one of two ways. The first solution uses the techniques from the <a class="reference internal" href="01_combinatorics.html#combinatorics"><span class="std std-ref">Combinatorics section</span></a>. The second solution uses the techniques of the <em>Multiplication Rule</em> and <em>Reduction of the Sample Space</em> just discussed. The reader will observe, while both methods yield the same answer, the second method is substantially easier, both from a calculation perpsective and from a conceptual perspective (i.e., it’s easier to understand).</p>
+<aside class="topic">
+<p class="topic-title">Example</p>
+<p>Two cards are drawn without replacement from a standard deck of 52 playing cards. What is the probability both cards are red?</p>
+</aside>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Solution #1: Combinatorics</p>
+<p>The total number of two-card hands dealt from a deck of 52 cards is equal to the number of combinations of 52 distinct objects taken 2 at a time. To find the total number of such combinations, the <a class="reference internal" href="01_combinatorics.html#combination-formula"><span class="std std-ref">Formula</span></a> is used,</p>
+<div class="math notranslate nohighlight">
+\[C_2^{52} = \frac{52!}{2! \cdot 50!} = \frac{52 \cdot 51}{2} = 1326\]</div>
+<p>Therefore, there are a total of <em>1326</em> hands that can be dealt.</p>
+<p>The same logic can be used to find the number of ways to pick two red cards. Note there are <span class="math notranslate nohighlight">\(\frac{52}/{2}=26\)</span> red cards in a standard deck of playing cards. Therefore, the number of combinations of 26 distinct objects taken 2 at a time is,</p>
+<div class="math notranslate nohighlight">
+\[C_2^{26} = \frac{26!}{2! \cdot 24!} = \frac{26 \cdot 25}{2} = 325\]</div>
+<p>Therefore, the desired probability can be found using the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[P(&quot;two red cards&quot;) = \frac{325}{1326} \approx 0.2451\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Solution #2: Conditional Probability</p>
+<p>Let <strong>R</strong> <sub>1</sub> represent the event the first card drawn is red. Let <strong>R</strong> <sub>2</sub> represent the event the second card drawn is red. Then the event <span class="math notranslate nohighlight">\(R_1 \cap R_2\)</span> represents the event the first card is red <em>and</em> the second card is red. The <em>Multiplication Rule</em> states the probability of an intersection can be expressed as,</p>
+<div class="math notranslate nohighlight">
+\[P(R_1 \cap R_2) = P(R_2 \mid R_1 ) \cdot P(R_1)\]</div>
+<p>The term <span class="math notranslate nohighlight">\(P(R_1)\)</span> is the probability of selecting a red card on the first draw. This can be calculated easily with the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[P(R_1) = \frac{26}{52}\]</div>
+<p>The term <span class="math notranslate nohighlight">\(P(R_2 \mid R_1)\)</span> can likewise be quickly decomposed by noticing the event <strong>R</strong> <sub>1</sub> <em>reduces the sample space</em> to <em>51</em> cards, <em>25</em> of which are red. Using the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> once again, the conditional probability of <strong>R</strong> <sub>2</sub> given the occurrence of <strong>R</strong> <sub>1</sub> is,</p>
+<div class="math notranslate nohighlight">
+\[P(R_2 \mid R_1) = \frac{25}{51}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[P(R_1 \cap R_2) = \frac{26}{52} \cdot \frac{25}{51} = \frac{26 \cdot 25}{52 \cdot 51}\]</div>
+<div class="math notranslate nohighlight">
+\[P(R_1 \cap R_2) = \frac{650}{2652} \approx 0.2451\]</div>
+</div>
+</section>
+<section id="law-of-total-probability">
+<span id="id4"></span><h3>Law of Total Probability<a class="headerlink" href="#law-of-total-probability" title="Link to this heading">#</a></h3>
+<p>Before stating the <em>Law of Total Probability</em>, a corrollary is required.</p>
+<section id="complementary-intersections">
+<h4>Complementary Intersections<a class="headerlink" href="#complementary-intersections" title="Link to this heading">#</a></h4>
+<aside class="topic">
+<p class="topic-title">Complementary Intersections</p>
+<p>For any events <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[P(A) = P(A \cap B) + P (A \cap B^c)\]</div>
+</aside>
+<p>In order to prove this corrollary, consider the following identity,</p>
+<div class="math notranslate nohighlight">
+\[A = (A \cap B) \cup (A \cap B^c)\]</div>
+<p>Now, by definition, <span class="math notranslate nohighlight">\(A \cap B\)</span> and <span class="math notranslate nohighlight">\(A \cap B^c\)</span> are <a class="reference internal" href="00_introduction.html#mutual-exclusion"><span class="std std-ref">mutually exclusive</span></a>. Therefore, it follows from the <a class="reference internal" href="../foundations/02_sets.html#counting-theorems"><span class="std std-ref">Counting Theorems</span></a> of set theory,</p>
+<div class="math notranslate nohighlight">
+\[n(A) = n(A \cap B) + n(A \cap B^c)\]</div>
+<p>An application of the <a class="reference internal" href="00_introduction.html#classical-definition-of-probability"><span class="std std-ref">Classical Definition of Probability</span></a> leads directly to the result of the corrollary,</p>
+<div class="math notranslate nohighlight">
+\[P(A) = P(A \cap B) + P(A \cap B^c)\]</div>
+</section>
+<section id="total-probability">
+<h4>Total Probability<a class="headerlink" href="#total-probability" title="Link to this heading">#</a></h4>
+<p>Taking the <em>Complementary Intersection</em> corrollary from the previous section and applying the concepts of conditional probability to it, each term on the right hand side can be decomposed Bayes’ Multiplication Law,</p>
+<div class="math notranslate nohighlight">
+\[P(A \cap B) = P(A \mid B) \cdot P(B)\]</div>
+<div class="math notranslate nohighlight">
+\[P(A \cap B^c) = P(A \mid B^c) \cdot P(B^c)\]</div>
+<p>Plugging these definitions into the <em>Complementary Intersection</em> corrollary transforms the proposition into the Law of Total Probability,</p>
+<aside class="topic">
+<p class="topic-title">Law of Total Probability</p>
+<div class="math notranslate nohighlight">
+\[P(A) = P(A \mid B) \cdot P(B) + P(A \mid B^c) \cdot P(B^c)\]</div>
+</aside>
+<p>The following example illustrates an application of the <em>Law of Total Probability</em>,</p>
+<aside class="topic">
+<p class="topic-title">Example</p>
+<p>TODO</p>
+</aside>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Solution</p>
+<p>TODO</p>
+</div>
+</section>
+</section>
+<section id="bayes-formula">
+<h3>Bayes’ Formula<a class="headerlink" href="#bayes-formula" title="Link to this heading">#</a></h3>
+<p>TODO</p>
+<section id="tree-diagrams">
+<h4>Tree Diagrams<a class="headerlink" href="#tree-diagrams" title="Link to this heading">#</a></h4>
+<p>TODO</p>
+<p>DO FALSE POSITIVE EXAMPLE, THOSE ARE ALWAYS FUN</p>
+</section>
+</section>
+</section>
+<section id="independence">
+<span id="id5"></span><h2>Independence<a class="headerlink" href="#independence" title="Link to this heading">#</a></h2>
+<section id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Link to this heading">#</a></h3>
+<p>Conditional probability allows the precise definition of <em>independence</em> and <em>independent events</em>. Intuitively, <em>independent events</em> are understood as events whose outcomes do not affect one another. If you flip a coin and then roll a dice, the outcome of the coin flip in no way determines the outcome of the die roll. In other words, the <em>probability of one event does not alter the probability of the other event</em>. Mathematically, this can be stated as follows,</p>
+<div class="math notranslate nohighlight">
+\[\text{ A and B are independent events } \equiv P(B | A) = P(B)\]</div>
+<p>The knowledge that <strong>A</strong> has happened does not change the probability of <strong>B</strong>. The designation of <strong>A</strong> and <strong>B</strong> are arbitrary, so this also implies,</p>
+<div class="math notranslate nohighlight">
+\[\text{ A and B are independent events } \equiv P(A | B) = P(A)\]</div>
+</section>
+<section id="independence-multiplication-law">
+<span id="id6"></span><h3>Multiplication Law<a class="headerlink" href="#independence-multiplication-law" title="Link to this heading">#</a></h3>
+<p>The definition of <em>independence</em> leads to an important consequence. Bayes’ Multiplication Law states,</p>
+<div class="math notranslate nohighlight">
+\[P(B \cap A) = P(B \mid A) \cdot P(A)\]</div>
+<p>But if <strong>A</strong> and <strong>B</strong> are independent, then by definition <span class="math notranslate nohighlight">\(P(B \mid A) = P(B)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[P(B \cap A) = P(B) \cdot P(A)\]</div>
+<p>This result is summarized in the following theorem,</p>
+<aside class="topic">
+<p class="topic-title">Independence Multiplication Law</p>
+<p>If <strong>A</strong> and <strong>B</strong> are independent events, then</p>
+<div class="math notranslate nohighlight">
+\[P(A \cap B) = P(A) \cdot P(B)\]</div>
+</aside>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_combinatorics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Combinatorics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_random_variables.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Random Variables</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#condtional-probability-formula">Condtional Probability Formula</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reduction-of-sample-space">Reduction of Sample Space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formula">Formula</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monty-hall-problem">Monty Hall Problem</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-tables-revisited">Probability Tables Revisited</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-laws">Bayes’ Laws</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplication-law">Multiplication Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#law-of-total-probability">Law of Total Probability</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#complementary-intersections">Complementary Intersections</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-probability">Total Probability</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-formula">Bayes’ Formula</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tree-diagrams">Tree Diagrams</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independence">Independence</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">Definition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independence-multiplication-law">Multiplication Law</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

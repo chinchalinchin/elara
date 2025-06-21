@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /_sources/
+Disallow: /_static/
+Disallow: /_templates/
+Disallow: /_sphinx_design_static/
+Disallow: /_images/
+Disallow: /_downloads/
+
+Sitemap: https://elara.chinchalinchin.com/sitemap.xml

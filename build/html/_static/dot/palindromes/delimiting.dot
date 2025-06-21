@@ -1,0 +1,85 @@
+digraph Delimiting_Algorithm {
+  rankdir=TB;
+  node [shape=box, style=filled, fillcolor=lightblue];
+
+  // Input String (using HTML entities)
+  Input [label="Input Sentence (&#7320;): \"the &epsilon;&sigma;cat&sigma;meows\"", fillcolor=lightgreen];
+
+  // Algorithm Steps (using HTML entities)
+  Step1 [label="1. &#7320; &larr; Empty(&#7320;)"];
+  Step2 [label="2. Initialize W<sub>&#7320;</sub> = &empty;, j = 1, i = 1, t = &epsilon;"];
+  Step3 [label="3. While i &le; l(&#7320;):"];
+  Step4 [label="&nbsp;&nbsp;&nbsp;a. If &#7320;[i] &ne; &sigma;:"];
+  Step5 [label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. t &larr; (t)(&#7320;[i])"];
+  Step6 [label="&nbsp;&nbsp;&nbsp;b. Else:"];
+  Step7 [label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i. If l(t) > 0:"];
+  Step8 [label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Apply Basis Clause of Definition 1.1.1 to t"];
+  Step9 [label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. W<sub>&#7320;</sub> &larr; W<sub>&#7320;</sub> &cup; { (j, t) }"];
+  Step10 [label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. j &larr; j + 1"];
+  Step11 [label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ii. t &larr; &epsilon;"];
+  Step12 [label="&nbsp;&nbsp;&nbsp;c. i &larr; i + 1"];
+  Step13 [label="4. If l(t) > 0:"];
+  Step14 [label="&nbsp;&nbsp;&nbsp;a. W<sub>&#7320;</sub> &larr; W<sub>&#7320;</sub> &cup; { (j, t) }"];
+  Step15 [label="&nbsp;&nbsp;&nbsp;b. j &larr; j + 1"];
+  Step16 [label="5. Return W<sub>&#7320;</sub>"];
+
+  // Output (using HTML entities)
+  Output [label="Output (W<sub>&#7320;</sub>): {(1, the), (2, cat), (3, meows)}", fillcolor=lightgreen];
+
+  // Connections
+  Input -> Step1;
+  Step1 -> Step2;
+  Step2 -> Step3;
+  Step3 -> Step4 [label="Yes"];
+  Step4 -> Step5 [label="&#7320;[i] &ne; &sigma;"];
+  Step5 -> Step12;
+  Step4 -> Step6 [label="&#7320;[i] = &sigma;"];
+  Step6 -> Step7;
+  Step7 -> Step8 [label="l(t) > 0"];
+  Step8 -> Step9;
+  Step9 -> Step10;
+  Step10 -> Step11;
+  Step7 -> Step11 [label="l(t) = 0"];
+  Step11 -> Step12;
+  Step12 -> Step3;
+  Step3 -> Step13 [label="No"];
+  Step13 -> Step14 [label="l(t) > 0"];
+  Step14 -> Step15;
+  Step15 -> Step16;
+  Step13 -> Step16 [label="l(t) = 0"];
+  Step16 -> Output;
+
+  // Intermediate Values (Optional)
+  subgraph cluster_Intermediate {
+    label="Intermediate Values";
+    style=dashed;
+    //node [shape=record]; // Remove this
+
+    IV1 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0">i: 1</td><td port="f1">j: 1</td><td port="f2">t: &epsilon;</td><td port="f3">W<sub>&#7320;</sub>: &empty;</td></tr>
+      </table>
+    >];
+    IV2 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0">i: 4</td><td port="f1">j: 2</td><td port="f2">t: &epsilon;</td><td port="f3">W<sub>&#7320;</sub>: {(1, the)}</td></tr>
+      </table>
+    >];
+    IV3 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0">i: 7</td><td port="f1">j: 3</td><td port="f2">t: &epsilon;</td><td port="f3">W<sub>&#7320;</sub>: {(1, the), (2, cat)}</td></tr>
+      </table>
+    >];
+    IV4 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0">i: 12</td><td port="f1">j: 4</td><td port="f2">t: &epsilon;</td><td port="f3">W<sub>&#7320;</sub>: {(1, the), (2, cat), (3, meows)}</td></tr>
+      </table>
+    >];
+  }
+
+  // Connect steps to intermediate values (Optional)
+  Step2 -> IV1;
+  Step10 -> IV2 [constraint=false, label="i=4"];
+  Step10 -> IV3 [constraint=false, label="i=7"];
+  Step15 -> IV4 [constraint=false, label="i=12"];
+}

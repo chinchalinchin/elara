@@ -1,0 +1,2298 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Section III: Decompositions &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03_theurgy/03_syntagmics/02_decompositions';</script>
+    <script src="../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/03_theurgy/03_syntagmics/02_decompositions.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section IV: Calculus" href="03_theorems.html" />
+    <link rel="prev" title="Section II: Schemas" href="01_schemas.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02_pedagogy/index.html">Pedagogy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/assignments/index.html">Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/assignments/problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/assignments/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Theurgy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Syntagmics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/03_theurgy/03_syntagmics/02_decompositions.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Section III: Decompositions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#john-keats">John Keats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ode to a Nightingale</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-1">Stanza 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-2">Stanza 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-3">Stanza 3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-4">Stanza 4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-5">Stanza 5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-6">Stanza 6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-7">Stanza 7</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-8">Stanza 8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slyvia-plath">Slyvia Plath</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Mad Girl’s Love Song</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="section-iii-decompositions">
+<span id="syntagmics-decompositions"></span><h1>Section III: Decompositions<a class="headerlink" href="#section-iii-decompositions" title="Link to this heading">#</a></h1>
+<section id="john-keats">
+<h2>John Keats<a class="headerlink" href="#john-keats" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Ode to a Nightingale<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Source: <a class="reference external" href="https://www.poetryfoundation.org/poems/44479/ode-to-a-nightingale">Ode to a Nightingale</a>, John Keats</p></li>
+</ul>
+<aside class="topic">
+<p class="topic-title">Formalization</p>
+<div class="math notranslate nohighlight">
+\[p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)\]</div>
+</aside>
+<section id="stanza-1">
+<h4>Stanza 1<a class="headerlink" href="#stanza-1" title="Link to this heading">#</a></h4>
+<p><strong>Line 1</strong></p>
+<div class="line-block">
+<div class="line">My heart aches, and a drowsy numbness pains</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">my</span> <span class="pre">heart</span> <span class="pre">|</span> <span class="pre">aches</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">drow-</span> <span class="pre">|</span> <span class="pre">sy</span> <span class="pre">numb-</span> <span class="pre">|</span> <span class="pre">ness</span> <span class="pre">pain</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 2</strong></p>
+<div class="line-block">
+<div class="line">My sense, as though of hemlock I had drunk,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">my</span> <span class="pre">sense</span> <span class="pre">|</span> <span class="pre">as</span> <span class="pre">though</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">hem-</span> <span class="pre">|</span> <span class="pre">lock</span> <span class="pre">I</span> <span class="pre">|</span> <span class="pre">had</span> <span class="pre">drunk</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 3</strong></p>
+<div class="line-block">
+<div class="line">Or emptied some dull opiate to the drains</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Or</span> <span class="pre">emp-</span> <span class="pre">|</span> <span class="pre">tied</span> <span class="pre">some</span> <span class="pre">|</span> <span class="pre">dull</span> <span class="pre">o-</span> <span class="pre">|</span> <span class="pre">pi-ate</span> <span class="pre">|</span> <span class="pre">to</span> <span class="pre">the</span> <span class="pre">drains</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲡⲡⲡⲠ\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“<em>opiate</em>” is a dactyl (<span class="math notranslate nohighlight">\(Ⲡⲡⲡ\)</span>) and “<em>to the drains</em>” is an anapest (<span class="math notranslate nohighlight">\(ⲡⲡⲠ\)</span>).</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲡⲡⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>30</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.467</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 4</strong></p>
+<div class="line-block">
+<div class="line">One minute past, and Lethe-wards had sunk:</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">one</span> <span class="pre">min-</span> <span class="pre">|</span> <span class="pre">ute</span> <span class="pre">past</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">Le-</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">wards</span> <span class="pre">|</span> <span class="pre">had</span> <span class="pre">sunk:</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>19</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>40</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.475</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 5</strong></p>
+<div class="line-block">
+<div class="line">‘Tis not through envy of thy happy lot,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Tis</span> <span class="pre">not</span> <span class="pre">|</span> <span class="pre">through</span> <span class="pre">en-</span> <span class="pre">|</span> <span class="pre">vy</span> <span class="pre">of</span> <span class="pre">|</span> <span class="pre">thy</span> <span class="pre">hap-</span> <span class="pre">|</span> <span class="pre">py</span> <span class="pre">lot</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>24</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>50</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.48</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 6</strong></p>
+<div class="line-block">
+<div class="line">But being too happy in thine happiness,—</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">But</span> <span class="pre">be-</span> <span class="pre">|</span> <span class="pre">too</span> <span class="pre">hap-</span> <span class="pre">|</span> <span class="pre">py</span> <span class="pre">in</span> <span class="pre">|</span> <span class="pre">thine</span> <span class="pre">hap-</span> <span class="pre">|</span> <span class="pre">pi-ness</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>28</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>60</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.467</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 7</strong></p>
+<div class="line-block">
+<div class="line">That thou, light-winged Dryad of the trees</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">That</span> <span class="pre">thou</span> <span class="pre">|</span> <span class="pre">light-wing-</span> <span class="pre">|</span> <span class="pre">ed</span> <span class="pre">Dry-</span> <span class="pre">|</span> <span class="pre">ad</span> <span class="pre">of</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">tree</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲠⲠⲡⲠⲡⲠⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>34</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>70</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.486</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 8</strong></p>
+<div class="line-block">
+<div class="line">In some melodious plot</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">some</span> <span class="pre">|</span> <span class="pre">me-lo</span> <span class="pre">|</span> <span class="pre">di-ous</span> <span class="pre">plot</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.429</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>37</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>77</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.481</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 9</strong></p>
+<div class="line-block">
+<div class="line">Of beechen green, and shadows numberless,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Of</span> <span class="pre">beech-</span> <span class="pre">|</span> <span class="pre">en</span> <span class="pre">green</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">sha-</span> <span class="pre">|</span> <span class="pre">dows</span> <span class="pre">num-</span> <span class="pre">|</span> <span class="pre">ber-less</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲡ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>41</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>87</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.471</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 10</strong></p>
+<div class="line-block">
+<div class="line">Singest of summer in full-throated ease.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Sing-est</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">sum-</span> <span class="pre">|</span> <span class="pre">mer</span> <span class="pre">in</span> <span class="pre">|</span> <span class="pre">full-throat-</span> <span class="pre">|</span> <span class="pre">ed</span> <span class="pre">ease</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲠⲠⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>47</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>97</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.485</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="stanza-2">
+<h4>Stanza 2<a class="headerlink" href="#stanza-2" title="Link to this heading">#</a></h4>
+<p><strong>Line 1</strong></p>
+<div class="line-block">
+<div class="line">O, for a draught of vintage! that hath been</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">O,</span> <span class="pre">for</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">draught</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">vin-</span> <span class="pre">|</span> <span class="pre">tage!</span> <span class="pre">that</span> <span class="pre">|</span> <span class="pre">hath</span> <span class="pre">been</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>52</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>107</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.486</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 2</strong></p>
+<div class="line-block">
+<div class="line">Cool’d a long age in the deep-delved earth,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Cool'd</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">long</span> <span class="pre">age</span> <span class="pre">|</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">deep-delvd</span> <span class="pre">|</span> <span class="pre">earth,</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲠⲡⲠⲠⲡⲡⲠⲠⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>58</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>117</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.496</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 3</strong></p>
+<div class="line-block">
+<div class="line">Tasting of Flora and the country green,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Tast-ing</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">Flo-</span> <span class="pre">|</span> <span class="pre">ra</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">coun-</span> <span class="pre">|</span> <span class="pre">try</span> <span class="pre">green,</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>63</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>127</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.496</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 4</strong></p>
+<div class="line-block">
+<div class="line">Dance, and Provençal song, and sunburnt mirth!</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Dance,</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">Pro-ven-</span> <span class="pre">|</span> <span class="pre">çal</span> <span class="pre">song,</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">sun-</span> <span class="pre">|</span> <span class="pre">burnt</span> <span class="pre">mirth!</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This line presents several difficulties in metering. In particular “Provençal” and “sunburnt mirth” are ambiguous when it comes to stresses. It really depends on how the poem is read. Alternative readings of this line might result in <span class="math notranslate nohighlight">\(ⲠⲠⲡⲡⲠⲠⲡⲡⲠⲠ\)</span> or <span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲠⲠⲡⲠⲠⲠ\)</span>. Since the poem is predominantly iambic, the closet iambic interpretation has been adopted.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>68</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>137</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.496</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 5</strong></p>
+<div class="line-block">
+<div class="line">O for a beaker full of the warm South,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">O</span> <span class="pre">for</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">bea-</span> <span class="pre">|</span> <span class="pre">ker</span> <span class="pre">full</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">warm</span> <span class="pre">South,</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲡⲠⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>73</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>147</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>0.497</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 6</strong></p>
+<div class="line-block">
+<div class="line">Full of the true, the blushful Hippocrene,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Full</span> <span class="pre">of</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">true,</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">blush-</span> <span class="pre">|</span> <span class="pre">ful</span> <span class="pre">Hip-</span> <span class="pre">|</span> <span class="pre">po-crene,</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Trochee start, then iambs (allowing elision/compression).</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ = Ⲡⲡ[\prod_1^4 ⲡⲠ]\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 7</strong></p>
+<div class="line-block">
+<div class="line">With beaded bubbles winking at the brim,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">With</span> <span class="pre">bead-</span> <span class="pre">|</span> <span class="pre">ed</span> <span class="pre">bub-</span> <span class="pre">|</span> <span class="pre">bles</span> <span class="pre">wink-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">at</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">brim,</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Formal Expression</p></td>
+<td><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 8</strong></p>
+<div class="line-block">
+<div class="line">And purple-stained mouth;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">pur-</span> <span class="pre">|</span> <span class="pre">ple-stain-</span> <span class="pre">|</span> <span class="pre">ed</span> <span class="pre">mouth;</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠ = \prod_1^3 ⲡⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 9</strong></p>
+<div class="line-block">
+<div class="line">That I might drink, and leave the world unseen,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">That</span> <span class="pre">I</span> <span class="pre">|</span> <span class="pre">might</span> <span class="pre">drink,</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">leave</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">world</span> <span class="pre">|</span> <span class="pre">un-seen,</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 10</strong></p>
+<div class="line-block">
+<div class="line">And with thee fade away into the forest dim:</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">with</span> <span class="pre">|</span> <span class="pre">thee</span> <span class="pre">fade</span> <span class="pre">|</span> <span class="pre">a-way</span> <span class="pre">|</span> <span class="pre">in-to</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">for-</span> <span class="pre">|</span> <span class="pre">est</span> <span class="pre">dim:</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^6 ⲡⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="stanza-3">
+<h4>Stanza 3<a class="headerlink" href="#stanza-3" title="Link to this heading">#</a></h4>
+<p><strong>Line 1</strong></p>
+<div class="line-block">
+<div class="line">Fade far away, dissolve, and quite forget</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Fade</span> <span class="pre">far</span> <span class="pre">|</span> <span class="pre">a-way,</span> <span class="pre">|</span> <span class="pre">dis-solve,</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">quite</span> <span class="pre">|</span> <span class="pre">for-get</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Spondee start and then iambs.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲠⲡⲠ = ⲠⲠ[\prod_1^4 ⲡⲠ]\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 2</strong></p>
+<div class="line-block">
+<div class="line">What thou among the leaves hast never known,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">thou</span> <span class="pre">|</span> <span class="pre">a-mong</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">leaves</span> <span class="pre">|</span> <span class="pre">hast</span> <span class="pre">nev-</span> <span class="pre">|</span> <span class="pre">er</span> <span class="pre">known,</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 3</strong></p>
+<div class="line-block">
+<div class="line">The weariness, the fever, and the fret</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">wear-</span> <span class="pre">|</span> <span class="pre">i-ness,</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">fe-</span> <span class="pre">|</span> <span class="pre">ver,</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">fret</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲡⲡⲠⲡⲠⲡⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 4</strong></p>
+<div class="line-block">
+<div class="line">Here, where men sit and hear each other groan;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Here,</span> <span class="pre">where</span> <span class="pre">|</span> <span class="pre">men</span> <span class="pre">sit</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">hear</span> <span class="pre">|</span> <span class="pre">each</span> <span class="pre">oth-</span> <span class="pre">|</span> <span class="pre">er</span> <span class="pre">groan;</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Spondee start and then iambs.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲠⲡⲠ = ⲠⲠ[\prod_1^4 ⲡⲠ]\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 5</strong></p>
+<div class="line-block">
+<div class="line">Where palsy shakes a few, sad, last gray hairs,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Where</span> <span class="pre">pal-</span> <span class="pre">|</span> <span class="pre">sy</span> <span class="pre">shakes</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">few,</span> <span class="pre">|</span> <span class="pre">sad,</span> <span class="pre">last</span> <span class="pre">|</span> <span class="pre">gray</span> <span class="pre">hairs,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲠⲠⲠⲠ\)</span></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲠⲠⲠⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 6</strong></p>
+<div class="line-block">
+<div class="line">Where youth grows pale, and spectre-thin, and dies;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Where</span> <span class="pre">youth</span> <span class="pre">|</span> <span class="pre">grows</span> <span class="pre">pale,</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">spec-</span> <span class="pre">|</span> <span class="pre">tre-thin,</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">dies;</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Second foot is a spondee.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲠⲠⲡⲠⲡⲠⲡⲠ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 7</strong></p>
+<div class="line-block">
+<div class="line">Where but to think is to be full of sorrow</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Where</span> <span class="pre">but</span> <span class="pre">|</span> <span class="pre">to</span> <span class="pre">think</span> <span class="pre">|</span> <span class="pre">is</span> <span class="pre">to</span> <span class="pre">|</span> <span class="pre">be</span> <span class="pre">full</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">sor-</span> <span class="pre">|</span> <span class="pre">row</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠⲡ\)</span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Feminine ending.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Formal Expression</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠⲡ = (\prod_1^5 ⲡⲠ)ⲡ\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Line Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Line Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Line Speed</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Stresses</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-even"><td><p>Cumulative Total</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cumulative Speed</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Line 28</strong></p>
+<div class="line-block">
+<div class="line">And leaden-eyed despairs,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">lead-</span> <span class="pre">|</span> <span class="pre">en-eyed</span> <span class="pre">|</span> <span class="pre">de-spairs,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic trimeter: <span class="math notranslate nohighlight">\(\prod_1^3 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 29</strong></p>
+<div class="line-block">
+<div class="line">Where Beauty cannot keep her lustrous eyes,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Where</span> <span class="pre">Beau-</span> <span class="pre">|</span> <span class="pre">ty</span> <span class="pre">can-</span> <span class="pre">|</span> <span class="pre">not</span> <span class="pre">keep</span> <span class="pre">|</span> <span class="pre">her</span> <span class="pre">lus-</span> <span class="pre">|</span> <span class="pre">trous</span> <span class="pre">eyes,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 30</strong></p>
+<div class="line-block">
+<div class="line">Or new Love pine at them beyond to-morrow.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Or</span> <span class="pre">new</span> <span class="pre">|</span> <span class="pre">Love</span> <span class="pre">pine</span> <span class="pre">|</span> <span class="pre">at</span> <span class="pre">them</span> <span class="pre">|</span> <span class="pre">be-yond</span> <span class="pre">|</span> <span class="pre">to-mor-</span> <span class="pre">|</span> <span class="pre">row.</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠⲡ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter with feminine ending: <span class="math notranslate nohighlight">\((\prod_1^5 ⲡⲠ)ⲡ\)</span></p></li>
+</ul>
+</section>
+<section id="stanza-4">
+<h4>Stanza 4<a class="headerlink" href="#stanza-4" title="Link to this heading">#</a></h4>
+<p><strong>Line 31</strong></p>
+<div class="line-block">
+<div class="line">Away! away! for I will fly to thee,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">A-way!</span> <span class="pre">|</span> <span class="pre">a-way!</span> <span class="pre">|</span> <span class="pre">for</span> <span class="pre">I</span> <span class="pre">|</span> <span class="pre">will</span> <span class="pre">fly</span> <span class="pre">|</span> <span class="pre">to</span> <span class="pre">thee,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 32</strong></p>
+<div class="line-block">
+<div class="line">Not charioted by Bacchus and his pards,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">char-</span> <span class="pre">|</span> <span class="pre">i-ot-</span> <span class="pre">|</span> <span class="pre">ed</span> <span class="pre">by</span> <span class="pre">|</span> <span class="pre">Bac-chus</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">his</span> <span class="pre">pards,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲡⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter (treating “charioted” as trisyllabic, “Bacchus” as disyllabic): <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 33</strong></p>
+<div class="line-block">
+<div class="line">But on the viewless wings of Poesy,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">But</span> <span class="pre">on</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">view-</span> <span class="pre">|</span> <span class="pre">less</span> <span class="pre">wings</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">Po-</span> <span class="pre">|</span> <span class="pre">e-sy,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 34</strong></p>
+<div class="line-block">
+<div class="line">Though the dull brain perplexes and retards:</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Though</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">dull</span> <span class="pre">brain</span> <span class="pre">|</span> <span class="pre">per-plex-</span> <span class="pre">|</span> <span class="pre">es</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">re-tards:</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲡⲠⲠⲡⲠⲡⲡⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Pyrrhic, spondee, iamb, pyrrhic, iamb: <span class="math notranslate nohighlight">\(ⲡⲡ.ⲠⲠ.ⲡⲠ.ⲡⲡ.ⲡⲠ\)</span> (highly varied)</p></li>
+</ul>
+<p><strong>Line 35</strong></p>
+<div class="line-block">
+<div class="line">Already with thee! tender is the night,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Al-read-</span> <span class="pre">|</span> <span class="pre">y</span> <span class="pre">with</span> <span class="pre">|</span> <span class="pre">thee!</span> <span class="pre">ten-</span> <span class="pre">|</span> <span class="pre">der</span> <span class="pre">is</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">night,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter (treating “Already” as <span class="math notranslate nohighlight">\(ⲡⲠ\)</span>, “tender” as <span class="math notranslate nohighlight">\(Ⲡⲡ\)</span>): <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 36</strong></p>
+<div class="line-block">
+<div class="line">And haply the Queen-Moon is on her throne,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">hap-</span> <span class="pre">|</span> <span class="pre">ly</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">Queen-Moon</span> <span class="pre">|</span> <span class="pre">is</span> <span class="pre">on</span> <span class="pre">|</span> <span class="pre">her</span> <span class="pre">throne,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲡⲠⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, third foot spondee: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲡⲠ.ⲠⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 37</strong></p>
+<div class="line-block">
+<div class="line">Cluster’d around by all her starry Fays;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Clus-ter'd</span> <span class="pre">|</span> <span class="pre">a-round</span> <span class="pre">|</span> <span class="pre">by</span> <span class="pre">all</span> <span class="pre">|</span> <span class="pre">her</span> <span class="pre">star-</span> <span class="pre">|</span> <span class="pre">ry</span> <span class="pre">Fays;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Trochaic start, then iambs: <span class="math notranslate nohighlight">\(Ⲡⲡ.(\prod_1^4 ⲡⲠ)\)</span></p></li>
+</ul>
+<p><strong>Line 38</strong></p>
+<div class="line-block">
+<div class="line">But here there is no light,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">But</span> <span class="pre">here</span> <span class="pre">|</span> <span class="pre">there</span> <span class="pre">is</span> <span class="pre">|</span> <span class="pre">no</span> <span class="pre">light,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic trimeter: <span class="math notranslate nohighlight">\(\prod_1^3 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 39</strong></p>
+<div class="line-block">
+<div class="line">Save what from heaven is with the breezes blown</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">what</span> <span class="pre">|</span> <span class="pre">from</span> <span class="pre">heav'n</span> <span class="pre">|</span> <span class="pre">is</span> <span class="pre">with</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">breez-</span> <span class="pre">|</span> <span class="pre">es</span> <span class="pre">blown</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 40</strong></p>
+<div class="line-block">
+<div class="line">Through verdurous glooms and winding mossy ways.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Through</span> <span class="pre">ver-</span> <span class="pre">|</span> <span class="pre">du-rous</span> <span class="pre">|</span> <span class="pre">glooms</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">wind-ing</span> <span class="pre">|</span> <span class="pre">mos-sy</span> <span class="pre">ways.</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee, pyrrhic, iamb, iamb, iamb: <span class="math notranslate nohighlight">\(ⲠⲠ.ⲡⲡ.ⲡⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+</section>
+<section id="stanza-5">
+<h4>Stanza 5<a class="headerlink" href="#stanza-5" title="Link to this heading">#</a></h4>
+<p><strong>Line 41</strong></p>
+<div class="line-block">
+<div class="line">I cannot see what flowers are at my feet,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">can-</span> <span class="pre">|</span> <span class="pre">not</span> <span class="pre">see</span> <span class="pre">|</span> <span class="pre">what</span> <span class="pre">flow'rs</span> <span class="pre">|</span> <span class="pre">are</span> <span class="pre">at</span> <span class="pre">|</span> <span class="pre">my</span> <span class="pre">feet,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 42</strong></p>
+<div class="line-block">
+<div class="line">Nor what soft incense hangs upon the boughs,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Nor</span> <span class="pre">what</span> <span class="pre">|</span> <span class="pre">soft</span> <span class="pre">in-</span> <span class="pre">|</span> <span class="pre">cense</span> <span class="pre">hangs</span> <span class="pre">|</span> <span class="pre">up-on</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">boughs,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲠⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, second foot spondee: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲠⲠ.ⲡⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 43</strong></p>
+<div class="line-block">
+<div class="line">But, in embalmed darkness, guess each sweet</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">But,</span> <span class="pre">in</span> <span class="pre">|</span> <span class="pre">em-balm-</span> <span class="pre">|</span> <span class="pre">ed</span> <span class="pre">dark-</span> <span class="pre">|</span> <span class="pre">ness,</span> <span class="pre">guess</span> <span class="pre">|</span> <span class="pre">each</span> <span class="pre">sweet</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 44</strong></p>
+<div class="line-block">
+<div class="line">Wherewith the seasonable month endows</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Where-with</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">sea-</span> <span class="pre">|</span> <span class="pre">son-a-</span> <span class="pre">|</span> <span class="pre">ble</span> <span class="pre">month</span> <span class="pre">|</span> <span class="pre">en-dows</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲡⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter (treating “seasonable” as trisyllabic <span class="math notranslate nohighlight">\(Ⲡⲡⲡ\)</span> or similar): <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 45</strong></p>
+<div class="line-block">
+<div class="line">The grass, the thicket, and the fruit-tree wild;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">grass,</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">thick-</span> <span class="pre">|</span> <span class="pre">et,</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">fruit-</span> <span class="pre">|</span> <span class="pre">tree</span> <span class="pre">wild;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲠⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, final foot spondee: <span class="math notranslate nohighlight">\((\prod_1^4 ⲡⲠ).ⲠⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 46</strong></p>
+<div class="line-block">
+<div class="line">White hawthorn, and the pastoral eglantine;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">White</span> <span class="pre">haw-</span> <span class="pre">|</span> <span class="pre">thorn,</span> <span class="pre">and</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">pas-</span> <span class="pre">|</span> <span class="pre">tor-al</span> <span class="pre">|</span> <span class="pre">eg-lan-tine;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲡⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee start, iamb, iamb, pyrrhic, iamb: <span class="math notranslate nohighlight">\(ⲠⲠ.ⲡⲠ.ⲡⲠ.ⲡⲡ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 47</strong></p>
+<div class="line-block">
+<div class="line">Fast fading violets cover’d up in leaves;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Fast</span> <span class="pre">fad-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">vi-</span> <span class="pre">|</span> <span class="pre">o-lets</span> <span class="pre">|</span> <span class="pre">cov-er'd</span> <span class="pre">|</span> <span class="pre">up</span> <span class="pre">in</span> <span class="pre">leaves;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲡⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee, iamb, pyrrhic, iamb, iamb: <span class="math notranslate nohighlight">\(ⲠⲠ.ⲡⲠ.ⲡⲡ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 48</strong></p>
+<div class="line-block">
+<div class="line">And mid-May’s eldest child,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">And</span> <span class="pre">mid-</span> <span class="pre">|</span> <span class="pre">May's</span> <span class="pre">el-</span> <span class="pre">|</span> <span class="pre">dest</span> <span class="pre">child,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲠⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iamb, spondee, iamb: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲠⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 49</strong></p>
+<div class="line-block">
+<div class="line">The coming musk-rose, full of dewy wine,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">com-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">musk-</span> <span class="pre">|</span> <span class="pre">rose,</span> <span class="pre">full</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">dew-</span> <span class="pre">|</span> <span class="pre">y</span> <span class="pre">wine,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲠⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, third foot spondee: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲡⲠ.ⲠⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 50</strong></p>
+<div class="line-block">
+<div class="line">The murmurous haunt of flies on summer eves.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">mur-</span> <span class="pre">|</span> <span class="pre">mur-ous</span> <span class="pre">|</span> <span class="pre">haunt</span> <span class="pre">of</span> <span class="pre">|</span> <span class="pre">flies</span> <span class="pre">on</span> <span class="pre">|</span> <span class="pre">sum-mer</span> <span class="pre">eves.</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+</section>
+<section id="stanza-6">
+<h4>Stanza 6<a class="headerlink" href="#stanza-6" title="Link to this heading">#</a></h4>
+<p><strong>Line 51</strong></p>
+<div class="line-block">
+<div class="line">Darkling I listen; and, for many a time</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Dark-ling</span> <span class="pre">|</span> <span class="pre">I</span> <span class="pre">lis-</span> <span class="pre">|</span> <span class="pre">ten;</span> <span class="pre">and,</span> <span class="pre">|</span> <span class="pre">for</span> <span class="pre">man-</span> <span class="pre">|</span> <span class="pre">y</span> <span class="pre">a</span> <span class="pre">time</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Trochaic start, then iambs: <span class="math notranslate nohighlight">\(Ⲡⲡ.(\prod_1^4 ⲡⲠ)\)</span></p></li>
+</ul>
+<p><strong>Line 52</strong></p>
+<div class="line-block">
+<div class="line">I have been half in love with easeful Death,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">have</span> <span class="pre">|</span> <span class="pre">been</span> <span class="pre">half</span> <span class="pre">|</span> <span class="pre">in</span> <span class="pre">love</span> <span class="pre">|</span> <span class="pre">with</span> <span class="pre">ease-</span> <span class="pre">|</span> <span class="pre">ful</span> <span class="pre">Death,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 53</strong></p>
+<div class="line-block">
+<div class="line">Call’d him soft names in many a mused rhyme,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Call'd</span> <span class="pre">him</span> <span class="pre">|</span> <span class="pre">soft</span> <span class="pre">names</span> <span class="pre">|</span> <span class="pre">in</span> <span class="pre">man-</span> <span class="pre">|</span> <span class="pre">y</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">mus-ed</span> <span class="pre">rhyme,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲡⲠⲠⲡⲠⲡⲡⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Trochee, spondee, iamb, pyrrhic, iamb: <span class="math notranslate nohighlight">\(Ⲡⲡ.ⲠⲠ.ⲡⲠ.ⲡⲡ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 54</strong></p>
+<div class="line-block">
+<div class="line">To take into the air my quiet breath;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">take</span> <span class="pre">|</span> <span class="pre">in-to</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">air</span> <span class="pre">|</span> <span class="pre">my</span> <span class="pre">qui-</span> <span class="pre">|</span> <span class="pre">et</span> <span class="pre">breath;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 55</strong></p>
+<div class="line-block">
+<div class="line">Now more than ever seems it rich to die,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Now</span> <span class="pre">more</span> <span class="pre">|</span> <span class="pre">than</span> <span class="pre">ev-</span> <span class="pre">|</span> <span class="pre">er</span> <span class="pre">seems</span> <span class="pre">|</span> <span class="pre">it</span> <span class="pre">rich</span> <span class="pre">|</span> <span class="pre">to</span> <span class="pre">die,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee start, then iambs: <span class="math notranslate nohighlight">\(ⲠⲠ.(\prod_1^4 ⲡⲠ)\)</span></p></li>
+</ul>
+<p><strong>Line 56</strong></p>
+<div class="line-block">
+<div class="line">To cease upon the midnight with no pain,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">cease</span> <span class="pre">|</span> <span class="pre">up-on</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">mid-</span> <span class="pre">|</span> <span class="pre">night</span> <span class="pre">with</span> <span class="pre">|</span> <span class="pre">no</span> <span class="pre">pain,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 57</strong></p>
+<div class="line-block">
+<div class="line">While thou art pouring forth thy soul abroad</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">While</span> <span class="pre">thou</span> <span class="pre">|</span> <span class="pre">art</span> <span class="pre">pour-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">forth</span> <span class="pre">|</span> <span class="pre">thy</span> <span class="pre">soul</span> <span class="pre">|</span> <span class="pre">a-broad</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee start, then iambs: <span class="math notranslate nohighlight">\(ⲠⲠ.(\prod_1^4 ⲡⲠ)\)</span></p></li>
+</ul>
+<p><strong>Line 58</strong></p>
+<div class="line-block">
+<div class="line">In such an ecstasy!</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">such</span> <span class="pre">|</span> <span class="pre">an</span> <span class="pre">ec-</span> <span class="pre">|</span> <span class="pre">sta-sy!</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic trimeter: <span class="math notranslate nohighlight">\(\prod_1^3 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 59</strong></p>
+<div class="line-block">
+<div class="line">Still wouldst thou sing, and I have ears in vain—</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Still</span> <span class="pre">wouldst</span> <span class="pre">|</span> <span class="pre">thou</span> <span class="pre">sing,</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">I</span> <span class="pre">|</span> <span class="pre">have</span> <span class="pre">ears</span> <span class="pre">|</span> <span class="pre">in</span> <span class="pre">vain—</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee start, then iambs: <span class="math notranslate nohighlight">\(ⲠⲠ.(\prod_1^4 ⲡⲠ)\)</span></p></li>
+</ul>
+<p><strong>Line 60</strong></p>
+<div class="line-block">
+<div class="line">To thy high requiem become a sod.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">thy</span> <span class="pre">|</span> <span class="pre">high</span> <span class="pre">req-</span> <span class="pre">|</span> <span class="pre">ui-em</span> <span class="pre">|</span> <span class="pre">be-come</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">sod.</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲠⲠⲡⲡⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, spondee second foot, pyrrhic third: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲠⲠ.ⲡⲡ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+</section>
+<section id="stanza-7">
+<h4>Stanza 7<a class="headerlink" href="#stanza-7" title="Link to this heading">#</a></h4>
+<p><strong>Line 61</strong></p>
+<div class="line-block">
+<div class="line">Thou wast not born for death, immortal Bird!</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Thou</span> <span class="pre">wast</span> <span class="pre">|</span> <span class="pre">not</span> <span class="pre">born</span> <span class="pre">|</span> <span class="pre">for</span> <span class="pre">death,</span> <span class="pre">|</span> <span class="pre">im-mor-</span> <span class="pre">|</span> <span class="pre">tal</span> <span class="pre">Bird!</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 62</strong></p>
+<div class="line-block">
+<div class="line">No hungry generations tread thee down;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">hun-</span> <span class="pre">|</span> <span class="pre">gry</span> <span class="pre">gen-</span> <span class="pre">|</span> <span class="pre">e-ra-</span> <span class="pre">|</span> <span class="pre">tions</span> <span class="pre">tread</span> <span class="pre">|</span> <span class="pre">thee</span> <span class="pre">down;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲡⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 63</strong></p>
+<div class="line-block">
+<div class="line">The voice I hear this passing night was heard</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">voice</span> <span class="pre">|</span> <span class="pre">I</span> <span class="pre">hear</span> <span class="pre">|</span> <span class="pre">this</span> <span class="pre">pass-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">night</span> <span class="pre">|</span> <span class="pre">was</span> <span class="pre">heard</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 64</strong></p>
+<div class="line-block">
+<div class="line">In ancient days by emperor and clown:</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">an-</span> <span class="pre">|</span> <span class="pre">cient</span> <span class="pre">days</span> <span class="pre">|</span> <span class="pre">by</span> <span class="pre">em-</span> <span class="pre">|</span> <span class="pre">per-or</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">clown:</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲡⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, pyrrhic variation: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲡⲠ.ⲡⲠ.ⲡⲡ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 65</strong></p>
+<div class="line-block">
+<div class="line">Perhaps the self-same song that found a path</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Per-haps</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">self-</span> <span class="pre">|</span> <span class="pre">same</span> <span class="pre">song</span> <span class="pre">|</span> <span class="pre">that</span> <span class="pre">found</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">path</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲠⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic base, third foot spondee: <span class="math notranslate nohighlight">\(ⲡⲠ.ⲡⲠ.ⲠⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 66</strong></p>
+<div class="line-block">
+<div class="line">Through the sad heart of Ruth, when, sick for home,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Through</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">sad</span> <span class="pre">heart</span> <span class="pre">|</span> <span class="pre">of</span> <span class="pre">Ruth,</span> <span class="pre">|</span> <span class="pre">when,</span> <span class="pre">sick</span> <span class="pre">|</span> <span class="pre">for</span> <span class="pre">home,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲡⲠⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Pyrrhic, spondee, then iambs: <span class="math notranslate nohighlight">\(ⲡⲡ.ⲠⲠ.(\prod_1^3 ⲡⲠ)\)</span></p></li>
+</ul>
+<p><strong>Line 67</strong></p>
+<div class="line-block">
+<div class="line">She stood in tears amid the alien corn;</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">She</span> <span class="pre">stood</span> <span class="pre">|</span> <span class="pre">in</span> <span class="pre">tears</span> <span class="pre">|</span> <span class="pre">a-mid</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">a-</span> <span class="pre">|</span> <span class="pre">lien</span> <span class="pre">corn;</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 68</strong></p>
+<div class="line-block">
+<div class="line">The same that oft-times hath</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">same</span> <span class="pre">|</span> <span class="pre">that</span> <span class="pre">oft-</span> <span class="pre">|</span> <span class="pre">times</span> <span class="pre">hath</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic trimeter: <span class="math notranslate nohighlight">\(\prod_1^3 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 69</strong></p>
+<div class="line-block">
+<div class="line">Charm’d magic casements, opening on the foam</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Charm'd</span> <span class="pre">mag-</span> <span class="pre">|</span> <span class="pre">ic</span> <span class="pre">case-</span> <span class="pre">|</span> <span class="pre">ments,</span> <span class="pre">op'-</span> <span class="pre">|</span> <span class="pre">ning</span> <span class="pre">on</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">foam</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲠⲡⲠⲡⲠⲡⲡⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Spondee, iamb, iamb, pyrrhic, iamb: <span class="math notranslate nohighlight">\(ⲠⲠ.ⲡⲠ.ⲡⲠ.ⲡⲡ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 70</strong></p>
+<div class="line-block">
+<div class="line">Of perilous seas, in faery lands forlorn.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Of</span> <span class="pre">per-</span> <span class="pre">|</span> <span class="pre">i-lous</span> <span class="pre">|</span> <span class="pre">seas,</span> <span class="pre">in</span> <span class="pre">|</span> <span class="pre">faer-y</span> <span class="pre">|</span> <span class="pre">lands</span> <span class="pre">for-lorn.</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+</section>
+<section id="stanza-8">
+<h4>Stanza 8<a class="headerlink" href="#stanza-8" title="Link to this heading">#</a></h4>
+<p><strong>Line 71</strong></p>
+<div class="line-block">
+<div class="line">Forlorn! the very word is like a bell</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">For-lorn!</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">ver-</span> <span class="pre">|</span> <span class="pre">y</span> <span class="pre">word</span> <span class="pre">|</span> <span class="pre">is</span> <span class="pre">like</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">bell</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 72</strong></p>
+<div class="line-block">
+<div class="line">To toll me back from thee to my sole self!</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">To</span> <span class="pre">toll</span> <span class="pre">|</span> <span class="pre">me</span> <span class="pre">back</span> <span class="pre">|</span> <span class="pre">from</span> <span class="pre">thee</span> <span class="pre">|</span> <span class="pre">to</span> <span class="pre">my</span> <span class="pre">|</span> <span class="pre">sole</span> <span class="pre">self!</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 73</strong></p>
+<div class="line-block">
+<div class="line">Adieu! the fancy cannot cheat so well</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">A-dieu!</span> <span class="pre">|</span> <span class="pre">the</span> <span class="pre">fan-</span> <span class="pre">|</span> <span class="pre">cy</span> <span class="pre">can-</span> <span class="pre">|</span> <span class="pre">not</span> <span class="pre">cheat</span> <span class="pre">|</span> <span class="pre">so</span> <span class="pre">well</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 74</strong></p>
+<div class="line-block">
+<div class="line">As she is fam’d to do, deceiving elf.</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">As</span> <span class="pre">she</span> <span class="pre">|</span> <span class="pre">is</span> <span class="pre">fam'd</span> <span class="pre">|</span> <span class="pre">to</span> <span class="pre">do,</span> <span class="pre">|</span> <span class="pre">de-ceiv-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">elf.</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 75</strong></p>
+<div class="line-block">
+<div class="line">Adieu! adieu! thy plaintive anthem fades</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">A-dieu!</span> <span class="pre">|</span> <span class="pre">a-dieu!</span> <span class="pre">|</span> <span class="pre">thy</span> <span class="pre">plain-</span> <span class="pre">|</span> <span class="pre">tive</span> <span class="pre">an-</span> <span class="pre">|</span> <span class="pre">them</span> <span class="pre">fades</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 76</strong></p>
+<div class="line-block">
+<div class="line">Past the near meadows, over the still stream,</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Past</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">near</span> <span class="pre">mead-</span> <span class="pre">|</span> <span class="pre">ows,</span> <span class="pre">o-</span> <span class="pre">|</span> <span class="pre">ver</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">still</span> <span class="pre">stream,</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲡⲠⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Mostly iambic, first foot trochee or spondee: <span class="math notranslate nohighlight">\((Ⲡ/Ⲡ)Ⲡ.ⲡⲠ.ⲡⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 77</strong></p>
+<div class="line-block">
+<div class="line">Up the hill-side; and now ‘tis buried deep</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Up</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">hill-side;</span> <span class="pre">|</span> <span class="pre">and</span> <span class="pre">now</span> <span class="pre">|</span> <span class="pre">'tis</span> <span class="pre">bur-</span> <span class="pre">|</span> <span class="pre">ied</span> <span class="pre">deep</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲡⲠⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Mostly iambic, first foot trochee or spondee: <span class="math notranslate nohighlight">\((Ⲡ/Ⲡ)Ⲡ.ⲡⲠ.ⲡⲠ.ⲡⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 78</strong></p>
+<div class="line-block">
+<div class="line">In the next valley-glades:</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">the</span> <span class="pre">|</span> <span class="pre">next</span> <span class="pre">val-</span> <span class="pre">|</span> <span class="pre">ley-glades:</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲡⲠⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Pyrrhic, spondee, iamb: <span class="math notranslate nohighlight">\(ⲡⲡ.ⲠⲠ.ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 79</strong></p>
+<div class="line-block">
+<div class="line">Was it a vision, or a waking dream?</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Was</span> <span class="pre">it</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">vis-</span> <span class="pre">|</span> <span class="pre">ion,</span> <span class="pre">or</span> <span class="pre">|</span> <span class="pre">a</span> <span class="pre">wak-</span> <span class="pre">|</span> <span class="pre">ing</span> <span class="pre">dream?</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<ul class="simple">
+<li><p>Iambic pentameter: <span class="math notranslate nohighlight">\(\prod_1^5 ⲡⲠ\)</span></p></li>
+</ul>
+<p><strong>Line 80</strong></p>
+<div class="line-block">
+<div class="line">Fled is that music:—Do I wake or sleep?</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Fled</span> <span class="pre">is</span> <span class="pre">|</span> <span class="pre">that</span> <span class="pre">mu-</span> <span class="pre">|</span> <span class="pre">sic:—Do</span> <span class="pre">|</span> <span class="pre">I</span> <span class="pre">wake</span> <span class="pre">|</span> <span class="pre">or</span> <span class="pre">sleep?</span></code></p>
+<p><span class="math notranslate nohighlight">\(ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ\)</span></p>
+<aside class="topic">
+<p class="topic-title">Formalization</p>
+<div class="math notranslate nohighlight">
+\[p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)\]</div>
+</aside>
+</section>
+</section>
+</section>
+<section id="slyvia-plath">
+<h2>Slyvia Plath<a class="headerlink" href="#slyvia-plath" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Mad Girl’s Love Song<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<aside class="topic">
+<p class="topic-title">Formalization</p>
+<div class="math notranslate nohighlight">
+\[p = (\hat{A_1.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1 + a.b.A_2 + a.b.A_1.A_2}/\mathfrak{i}_5)\]</div>
+</aside>
+<div class="line-block">
+<div class="line">I shut my eyes and all the world drops dead;</div>
+<div class="line">I lift my lids and all is born again.</div>
+<div class="line">(I think I made you up inside my head.)</div>
+<div class="line"><br /></div>
+<div class="line">The stars go waltzing out in blue and red,</div>
+<div class="line">And arbitrary blackness gallops in:</div>
+<div class="line">I shut my eyes and all the world drops dead.</div>
+<div class="line"><br /></div>
+<div class="line">I dreamed that you bewitched me into bed</div>
+<div class="line">And sung me moon-struck, kissed me quite insane.</div>
+<div class="line">(I think I made you up inside my head.)</div>
+<div class="line"><br /></div>
+<div class="line">God topples from the sky, hell’s fires fade:</div>
+<div class="line">Exit seraphim and Satan’s men:</div>
+<div class="line">I shut my eyes and all the world drops dead.</div>
+<div class="line"><br /></div>
+<div class="line">I fancied you’d return the way you said,</div>
+<div class="line">But I grow old and I forget your name.</div>
+<div class="line">(I think I made you up inside my head.)</div>
+<div class="line"><br /></div>
+<div class="line">I should have loved a thunderbird instead;</div>
+<div class="line">At least when spring comes they roar back again.</div>
+<div class="line">I shut my eyes and all the world drops dead.</div>
+<div class="line">(I think I made you up inside my head.)</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://allpoetry.com/mad-girl's-love-song">Mad Girl’s Love Song</a>, Sylvia Plath</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01_schemas.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Section II: Schemas</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03_theorems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Section IV: Calculus</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#john-keats">John Keats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ode to a Nightingale</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-1">Stanza 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-2">Stanza 2</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-3">Stanza 3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-4">Stanza 4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-5">Stanza 5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-6">Stanza 6</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-7">Stanza 7</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stanza-8">Stanza 8</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slyvia-plath">Slyvia Plath</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Mad Girl’s Love Song</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

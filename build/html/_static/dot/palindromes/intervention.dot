@@ -1,0 +1,45 @@
+digraph Intervention {
+  rankdir=TB;
+  node [shape=box];
+
+  // Sentence
+  Sentence [label="ᚠ:repaidσaσregalσleper", style=filled, fillcolor=lightgreen];
+
+  // Words
+  Word1 [label="ᚠ{2}: a"];
+  Word2 [label="ᚠ{4}: leper"];
+
+  // Intervening Characters
+  InterveningChars [label="Intervening Characters: σ, r, e, g, a, l, σ", style=filled, fillcolor=lightblue];
+
+  // Indices
+  Indices [label="k: 9, 10, 11, 12, 13, 14, 15", shape=plaintext];
+
+  // Connections
+  Sentence -> Word1;
+  Sentence -> InterveningChars;
+  Sentence -> Word2;
+  InterveningChars -> Indices;
+
+  // Delimitations (Optional - for more detailed illustration)
+  subgraph cluster_Delimitations {
+    label="Delimitations";
+    style=dashed;
+    //node [shape=record]; // Remove this line
+
+    Delim1 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0"> DΠ<sub>x=1</sub><sup>2</sup> ᚠ(x): </td><td port="f1"> repaid σ a </td></tr>
+      </table>
+    >];
+    Delim2 [shape=none, label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td port="f0"> DΠ<sub>x=1</sub><sup>1</sup> inv(ᚠ)(x): </td><td port="f1"> repel </td></tr>
+      </table>
+    >];
+  }
+
+  // Connect to delimitations (Optional)
+  Word1 -> Delim1 [style=dashed];
+  Word2 -> Delim2 [style=dashed];
+}

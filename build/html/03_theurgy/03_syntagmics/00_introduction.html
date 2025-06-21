@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Section I: Introduction &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '03_theurgy/03_syntagmics/00_introduction';</script>
+    <script src="../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/03_theurgy/03_syntagmics/00_introduction.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Section II: Schemas" href="01_schemas.html" />
+    <link rel="prev" title="Syntagmics" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../02_pedagogy/index.html">Pedagogy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/assignments/index.html">Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/assignments/problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/assignments/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/assignments/projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../02_pedagogy/technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../02_pedagogy/technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02_pedagogy/inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02_pedagogy/inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Theurgy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Syntagmics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/03_theurgy/03_syntagmics/00_introduction.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Section I: Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-definitions">Prior Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics">Mathematics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poetics">Poetics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalization">Formalization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constants">Constants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relations">Relations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-vs-succession">Separation vs. Succession</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brackets">Brackets</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#projection">Projection</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shorthand">Shorthand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meter">Meter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rhymation">Rhymation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ending-stress">Ending Stress</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-structure">Logical Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lengths">Lengths</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-lengths">Primitive Lengths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-lengths">Derivative Lengths</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#speed">Speed</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="section-i-introduction">
+<span id="syntagmics-introduction"></span><h1>Section I: Introduction<a class="headerlink" href="#section-i-introduction" title="Link to this heading">#</a></h1>
+<blockquote class="epigraph">
+<div><div class="line-block">
+<div class="line">When Ajax strives, some Rock’s vast Weight to throw,</div>
+<div class="line">The Line too labours, and the Words move slow:</div>
+</div>
+<p class="attribution">—<a class="reference external" href="ttps://www.gutenberg.org/ebooks/2428">Essay on Man</a>, Alexander Pope</p>
+</div></blockquote>
+<section id="prior-definitions">
+<span id="syntagmics-prior-definitions"></span><h2>Prior Definitions<a class="headerlink" href="#prior-definitions" title="Link to this heading">#</a></h2>
+<section id="mathematics">
+<h3>Mathematics<a class="headerlink" href="#mathematics" title="Link to this heading">#</a></h3>
+<p>The sum <span class="math notranslate nohighlight">\(\sum\)</span> symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the <span class="math notranslate nohighlight">\(\sum\)</span> in its mathematical capacity. It will be the convention of the formal system being developed to <em>overload</em> the arguments of the <span class="math notranslate nohighlight">\(\sum\)</span> operation to be defined on numbers as well as syntagmic variables. For that reason, the meaning of the symbol,</p>
+<div class="math notranslate nohighlight">
+\[\sum_i^n x_i\]</div>
+<p>Should be attended with the utmost care. When <span class="math notranslate nohighlight">\(x_i\)</span> is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If <span class="math notranslate nohighlight">\(x_i\)</span> is a number, then the summation will be understood in its usual arithemtical sense.</p>
+</section>
+<section id="poetics">
+<h3>Poetics<a class="headerlink" href="#poetics" title="Link to this heading">#</a></h3>
+<p>Given below are existing definitions of poetical devices.</p>
+<aside class="topic">
+<p class="topic-title">Definition: Feet</p>
+<ul class="simple">
+<li><p>Iamb: One unstressed syllable followed by a stressed syllable.</p></li>
+<li><p>Spondee: A stressed syllable followed by a stressed syllable. Employed to slow down the pace of a line.</p></li>
+<li><p>Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.</p></li>
+<li><p>Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.</p></li>
+<li><p>Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.</p></li>
+<li><p>Pyrrchic (Dibrachs): Two unstressed syllables.</p></li>
+<li><p>Amphibrach: An unstressed syllable followed by a stressed syllable and then another unstressed syllable.</p></li>
+<li><p>Bacchius: An unstressed syllable followed by two stressed syllables.</p></li>
+<li><p>Antibacchius: Two stressed syllables followed by an unstressed syllable.</p></li>
+</ul>
+</aside>
+<aside class="topic">
+<p class="topic-title">Definition: Lines</p>
+<ul class="simple">
+<li><p>Dimeter: A line with two feet.</p></li>
+<li><p>Trimeter: A line with three feet.</p></li>
+<li><p>Tetrameter: A line with four feet.</p></li>
+<li><p>Pentameter: A line with five feet.</p></li>
+<li><p>Hexmeter: A line with six feet.</p></li>
+<li><p>Heptameter: A line with seven feet.</p></li>
+<li><p>Octameter: A line with eight feet.</p></li>
+<li><p>Hendecasyllable: A line consisting of eleven syllables.</p></li>
+</ul>
+</aside>
+<aside class="topic">
+<p class="topic-title">Definitions: Stanzas</p>
+<ul class="simple">
+<li><p>Couplet: A stanza with two lines.</p></li>
+<li><p>Tercet: A stanza with three lines</p></li>
+<li><p>Quatrain: A stanza with four lines</p></li>
+<li><p>Cinquain: A stanza with five lines</p></li>
+<li><p>Sestet: A stanza with six lines.</p></li>
+<li><p>Septet: A stanza with seven lines.</p></li>
+<li><p>Octet: A stanza with eight lines.</p></li>
+<li><p>Nonet: A stanza with nine lines.</p></li>
+<li><p>Decastich: A stanza with ten lines.</p></li>
+<li><p>Envoi: A short, concluding stanza.</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="formalization">
+<span id="syntagmics-formalization"></span><h2>Formalization<a class="headerlink" href="#formalization" title="Link to this heading">#</a></h2>
+<p>The syntagmic hierarchy, in descending order, is given by,</p>
+<ol class="arabic simple">
+<li><p>Poems</p></li>
+<li><p>Stanzas</p></li>
+<li><p>Lines</p></li>
+<li><p>Words</p></li>
+<li><p>Syllables</p></li>
+</ol>
+<p>Each layer is composed of elements from the layer beneath it joined together through operations (to be defined shortly).</p>
+<p>In this formalization, English letters will be used to represent lines, Greek letters will be used to represent words and Coptic letters will be used to represent syllables.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All symbolic terms will be typeset differently to distinguish them from the level of analysis and definition, and to indicate their nature as “<em>sentences</em>” in the language of syntagmics.</p>
+</div>
+<section id="constants">
+<span id="syntagmics-constants"></span><h3>Constants<a class="headerlink" href="#constants" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Uppercase English letters (<span class="math notranslate nohighlight">\(A, B, C, ...\)</span> ): Fixed lines.</dt><dd><ol class="loweralpha simple">
+<li><p>The uppercase English letter <span class="math notranslate nohighlight">\(S\)</span> is reserved for sets.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Uppercase Greek letters (<span class="math notranslate nohighlight">\(\mathrm{A}, \mathrm{B}, \Gamma, ...\)</span>): Fixed words.</p></li>
+<li><p>Uppercase Coptic letters (<span class="math notranslate nohighlight">\(Ⲁ, Ⲃ, Ⲅ, ...\)</span>): Fixed syllables.</p></li>
+<li><p>The lowercase English letter n is reserved for natural numbers.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{i}\)</span> is reserved for iambs.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{t}\)</span> is reserved for trochees.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{s}\)</span> is reserved for spondees.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{a}\)</span> is reserved for anapests.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{d}\)</span> is reserved for dactyls.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{p}\)</span> is reserved for pyrrchis (dibrachs)</p></li>
+<li><p>The empty set <span class="math notranslate nohighlight">\(\varnothing\)</span> is reserved for the pause (caesura).</p></li>
+<li><p>The ampersand <span class="math notranslate nohighlight">\(\text{&amp;}\)</span> represents blank newlines.</p></li>
+</ol>
+</section>
+<section id="variables">
+<span id="syntagmics-variables"></span><h3>Variables<a class="headerlink" href="#variables" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Lowercase English letters (<span class="math notranslate nohighlight">\(a, b, c, ...\)</span> ): Indeterminate rhymed lines.</dt><dd><ol class="loweralpha simple">
+<li><p>The lowercase English letters <span class="math notranslate nohighlight">\(u, v, w\)</span> are reserved for indeterminate lines, not necessarily rhymed.</p></li>
+<li><p>The lowercase English letters <span class="math notranslate nohighlight">\(x, y, z\)</span> are reserved for general syntagmic variables (syllables, words, lines, stanzas and poems)</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The lowercase Greek letters (<span class="math notranslate nohighlight">\(\alpha, \beta, \gamma\)</span>): Indeterminate rhymed words.</dt><dd><ol class="loweralpha simple">
+<li><p>The lowercase Greek letter <span class="math notranslate nohighlight">\(\kappa, \lambda, \mu\)</span> are reserved for indetermine words, not necessarily rhymed.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>The Coptic letters <span class="math notranslate nohighlight">\(ⲣ, ⲡ, Ⲡ\)</span> are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{x}\)</span> is reserved for indeterminate meters.</p></li>
+<li><p>The lowercase Fraktur letter <span class="math notranslate nohighlight">\(\mathfrak{u}\)</span> is reserved for indeterminate speeds.</p></li>
+<li><p>The lowercase Greek letter <span class="math notranslate nohighlight">\(\varsigma\)</span> is reserved for indeterminate stanzas.</p></li>
+<li><p>The lowercase English letters <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are reserved for indeterminate poems.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Upper English letters are meant to denote particular lines, whereas lowercase English letters are meant to denote indeterminate lines that are related through their rhyme scheme.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The choice of <span class="math notranslate nohighlight">\(ⲡ\)</span> and <span class="math notranslate nohighlight">\(Ⲡ\)</span> to represent syllables mirrors the unstressed and stressed syllables of verses. In other words, <span class="math notranslate nohighlight">\(ⲡ\)</span> is meant to represent indeterminate unstressed syllables, whereas <span class="math notranslate nohighlight">\(Ⲡ\)</span> is meant to represent indeterminate stressed syllables. <span class="math notranslate nohighlight">\(ⲣ\)</span> is used in a more general capacity, to represent stressed or unstressed syllables.</p>
+</div>
+<p>The variables will sometimes be referred to as <em>syntagmic variables</em>, or <em>signs</em>.</p>
+<p>Uppercase-lowercase pairs of English letters are understood to be rhymes. The difference in the symbolism is the <em>fixed</em> nature of the denotation. For example, the sign <span class="math notranslate nohighlight">\(A.a.a.A\)</span> denotes one fixed line, a rhyming couplet and then the fixed line again,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">The cat on the mat</div>
+<div class="line">Got large and fat</div>
+<div class="line">So-and-so such that</div>
+<div class="line">The cat on the mat</div>
+</div>
+</div></blockquote>
+<p>Note that both <span class="math notranslate nohighlight">\(A\)</span> and both instances of <span class="math notranslate nohighlight">\(a\)</span> rhyme in this example. The rhyme structure of a composite sign is encoded through the case of constants and variables. In other words, preemptively using the notation from the next <a class="reference internal" href="#syntagmics-relations"><span class="std std-ref">section</span></a>, <span class="math notranslate nohighlight">\(A \parallel a\)</span>, <span class="math notranslate nohighlight">\(B \parallel b\)</span>, etc.</p>
+<p>The intent behind defining <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> as “<em>poetic</em>” variables is to formalize the schema of a certain fixed poetic forms through operations performed on line, word and syllabic variables and constants. “<em>Poetic</em>” variables can be seen as the well-formed formulae that emerge through the calculus that governs the lower levels of the syntagmic hierarchy.</p>
+</section>
+<section id="relations">
+<span id="syntagmics-relations"></span><h3>Relations<a class="headerlink" href="#relations" title="Link to this heading">#</a></h3>
+<p>All syntagmic relations are to be understood as truth values, meaning each expression results in a judgement of truth or falsity.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(y \subset_p x\)</span> (<strong>Containment</strong>): The sign y is contained in the sign x.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The subscript <em>p</em> is used to differentiate containment from the set relation of “<em>subset</em>”.</p>
+</div>
+<p>The relation of “contains” extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,</p>
+<ul class="simple">
+<li><p>Words contain syllables</p></li>
+<li><p>Lines contain words and syllables</p></li>
+<li><p>Stanzas contain lines, words and syllables</p></li>
+</ul>
+<p>Consider the line from <a class="reference external" href="https://www.poetryfoundation.org/poems/44400/spring-and-fall">Spring and Fall</a> by Gerard Manley Hopkins,</p>
+<div class="math notranslate nohighlight">
+\[x = \text{Though worlds of wanwood leafmeal lie}\]</div>
+<p>Then for each word <span class="math notranslate nohighlight">\(\lambda\)</span> in <span class="math notranslate nohighlight">\(\{ \text{Though}, \text{worlds}, ..., \text{lie} \}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\lambda \subset_p x\]</div>
+<p>Similarly, for each syllable <span class="math notranslate nohighlight">\(\rho\)</span> in <span class="math notranslate nohighlight">\(\{ \text{Though}, ... \text{wan}, \text{wood}, ... \text{lie} \}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\rho \subset_p x\]</div>
+<ol class="arabic simple" start="2">
+<li><p><span class="math notranslate nohighlight">\(x \parallel y\)</span> (<strong>Rhymation</strong>): The sign x rhymes with the sign y.</p></li>
+</ol>
+<p>The relation of “<em>rhymes with</em>”, or <em>rhymation</em>, is defined more precisely in <a class="reference internal" href="#syntagmics-rhymation"><span class="std std-ref">Rhymation</span></a> section.</p>
+</section>
+<section id="operations">
+<span id="syntagmics-operations"></span><h3>Operations<a class="headerlink" href="#operations" title="Link to this heading">#</a></h3>
+<p>This section introduces the primitive operations of <em>syntagimcs</em>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>These are the verbs of the system. They are used to express syntagmic proposition <em>within the system</em>.</p>
+</div>
+<p>In other words, all operations defined in this section are to be understood as <em>object</em> level constructs, in contradistinction to <a class="reference internal" href="#syntagmics-relations"><span class="std std-ref">relations</span></a> like containment or rhymation which are predicated of objects and yield judgements as a result. All syntagmic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(x.y\)</span> (<strong>Succession</strong>): Successive signs.</p></li>
+<li><p><span class="math notranslate nohighlight">\(xy\)</span> (<strong>Concatenation</strong>): Concatenated signs.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x:y\)</span> (<strong>Disjunction</strong>): A sign that is either x or y.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x + y\)</span> (<strong>Separation</strong>): Separated signs.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x \circ y\)</span> (<strong>Projection</strong>) : Sign containing another sign.</p></li>
+<li><p><span class="math notranslate nohighlight">\(x(y)\)</span> (<strong>Appendment</strong>): A sign ending in another sign.</p></li>
+<li><p><span class="math notranslate nohighlight">\((y)x\)</span> (<strong>Prependment</strong>): A sign beginning with another sign</p></li>
+<li><p><span class="math notranslate nohighlight">\(x \circ y \,|\, y = z\)</span> (<strong>Substitution</strong>): Substitute <span class="math notranslate nohighlight">\(z\)</span> for <span class="math notranslate nohighlight">\(y\)</span> in the sign <span class="math notranslate nohighlight">\(x\)</span>, where <span class="math notranslate nohighlight">\(x\)</span> contains <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(y \subset_p x\)</span>.</p></li>
+</ol>
+<aside class="topic">
+<p class="topic-title">Provisional Notation</p>
+<ol class="arabic simple">
+<li><p>#x: A lengthened sign.</p></li>
+<li><p>♭x: A shortened sign.</p></li>
+</ol>
+<p>Virelais require alternating rhymes to shorten and length across stanzas. The signs “#x” and “♭x” are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs.</p>
+</aside>
+<section id="separation-vs-succession">
+<h4>Separation vs. Succession<a class="headerlink" href="#separation-vs-succession" title="Link to this heading">#</a></h4>
+<p>To see what is meant by the distinction between <em>separation</em> and <em>succession</em>, let <span class="math notranslate nohighlight">\(x = \text{the fish in the dish}\)</span> and <span class="math notranslate nohighlight">\(y = \text{the dog on a jog}\)</span>. Then <span class="math notranslate nohighlight">\(x.y\)</span> means,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">the fish in the dish</div>
+<div class="line">the dog on a jog</div>
+</div>
+</div></blockquote>
+<p>Where as <span class="math notranslate nohighlight">\(x + y\)</span> means,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">the fish in the dish</div>
+<div class="line"><br /></div>
+<div class="line">the dog on a jog</div>
+</div>
+</div></blockquote>
+<p>From this, it can be see the operation of <em>successions</em> inserts a new line at the end of first line, whereas the operation of <em>separation</em> inserts a new line after the first line <em>and</em> before the second line, to create a blank line between them. In effect, the operation of <em>separation</em> creates stanzas, whereas the operation of <em>succession</em> creates lines within stanzas.</p>
+</section>
+<section id="brackets">
+<h4>Brackets<a class="headerlink" href="#brackets" title="Link to this heading">#</a></h4>
+<p>Brackets, <span class="math notranslate nohighlight">\([]\)</span>, are used to group operations within signs by precedence.</p>
+</section>
+<section id="projection">
+<h4>Projection<a class="headerlink" href="#projection" title="Link to this heading">#</a></h4>
+<p>It is important to clarify that projection is a <em>sign</em>. It is an object <em>within</em> the syntagmic system (or more specifically, an operation which yields an object). It serves a semantic function within the system. This differents from the metalogical nature of <em>containment</em>, which is an expression <em>about</em> the system, i.e. a truth value.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The operation of <em>projection</em> is a sign. The relation of <em>containment</em> is a truth value.</p>
+</div>
+<p>To state “<em>y projects x</em>”, or symbolically,</p>
+<div class="math notranslate nohighlight">
+\[x = x \circ y\]</div>
+<p>Can be seen as a form of “<em>poetic factorization</em>”, akin to an arithmetic relation <span class="math notranslate nohighlight">\(9 = 3 \cdot 3\)</span>, where one sign is identified as a constituent (or <em>factor</em>) of another. The <span class="math notranslate nohighlight">\(y\)</span> in <span class="math notranslate nohighlight">\(x \circ y\)</span> will sometimes be referred to as a <em>factor</em> of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>The operation of projection is not commutative,</p>
+<div class="math notranslate nohighlight">
+\[x \circ y \neq y \circ x\]</div>
+<p>The sign on the lefthand side <span class="math notranslate nohighlight">\(x\)</span> of a projection <span class="math notranslate nohighlight">\(x \circ y\)</span> is the “<em>larger</em>” sign that contains the “<em>smaller</em>” sign <span class="math notranslate nohighlight">\(y\)</span> on the righthand side. In other words, logically, if <span class="math notranslate nohighlight">\(x\)</span> contains <span class="math notranslate nohighlight">\(y\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[[y \subset_p x] \implies [x \circ y = x]\]</div>
+<p>However, if <span class="math notranslate nohighlight">\(x\)</span> does not contain <span class="math notranslate nohighlight">\(y\)</span>, then <span class="math notranslate nohighlight">\(x \circ y\)</span> is defined to be a caesura, <span class="math notranslate nohighlight">\(\varnothing\)</span>, i.e. the absence of a syntagmic variable.</p>
+<div class="math notranslate nohighlight">
+\[[\neg y \subset_p x] \implies [x \circ y = \varnothing]\]</div>
+<p>For this reason, <span class="math notranslate nohighlight">\(x \circ y\)</span> can be thought of an indicator variable that returns the first operand if it contains the second operand, and nothing if the first operand does not contain the second operand.</p>
+<div class="math notranslate nohighlight">
+\[[[y \subset_p x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]\]</div>
+<p>In fact, the prior expression can be seen as the <em>logical definition</em> of a <em>factor</em>. To be more precise, a factor <span class="math notranslate nohighlight">\(y\)</span> of a fixed <span class="math notranslate nohighlight">\(x\)</span> is defined as any syntagmic sign that satsifies the open formula given above.</p>
+<p>Projection is logically related to appendment and prependment. Note <span class="math notranslate nohighlight">\(y = \text{cat}\)</span> prepends <span class="math notranslate nohighlight">\(x = \text{cat on a mat}\)</span>, where as <span class="math notranslate nohighlight">\(z = \text{mat}\)</span> appends <span class="math notranslate nohighlight">\(x\)</span>. Both <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(y\)</span> project <span class="math notranslate nohighlight">\(x\)</span>, as well,</p>
+<div class="math notranslate nohighlight">
+\[x = x \circ y\]</div>
+<div class="math notranslate nohighlight">
+\[x = x \circ z\]</div>
+<p>In other words, if a sign prepends or appends another sign, it also projects that sign. Taking the previous two equations and substituting the first into the second,</p>
+<div class="math notranslate nohighlight">
+\[x = [x \circ y] \circ z\]</div>
+<p>The brackets are dropped for notationally convenience and it is understood a projection is to be applied starting with the leftmost sign (<span class="math notranslate nohighlight">\(y\)</span>) and moving right to the next projection operand (<span class="math notranslate nohighlight">\(z\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[x = x \circ y \circ z\]</div>
+<p>Importantly, projection does not imply prependment or appendment. For example <span class="math notranslate nohighlight">\(t = \text{on}\)</span> projects <span class="math notranslate nohighlight">\(x\)</span>, but it does not prepend or append it. In other words, appendment, prependment and projection are logically related as follows,</p>
+<div class="math notranslate nohighlight">
+\[x(y) \implies [x \circ y]\]</div>
+<p>And,</p>
+<div class="math notranslate nohighlight">
+\[(y)x \implies [x \circ y]\]</div>
+<p>Or more succinctly,</p>
+<div class="math notranslate nohighlight">
+\[[x(y) \lor (y)x] \implies (x \circ y)\]</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The converse of this does not hold.</p>
+</div>
+<p>The “zero” property of projection is given by noting that caesuras cannot contain anything but themselves,</p>
+<div class="math notranslate nohighlight">
+\[[\varnothing \cdot y] = \varnothing\]</div>
+<p>Which aligns with the definition. In addition, the operation of projection is <em>idempotent</em>,</p>
+<div class="math notranslate nohighlight">
+\[[x \circ y] \circ y = x \circ y\]</div>
+<p>The inner term, <span class="math notranslate nohighlight">\(x \circ y\)</span> is guaranteed to be a sign that is either empty or contains <span class="math notranslate nohighlight">\(y\)</span>. If it is empty (caesura), then, as noted, projecting it any number times will always result in a caesura. If it contains <span class="math notranslate nohighlight">\(y\)</span>, then it will return the very sign that contains <span class="math notranslate nohighlight">\(y\)</span>, ensuring <span class="math notranslate nohighlight">\([x \cdot y]\)</span> is well defined.</p>
+</section>
+</section>
+<section id="shorthand">
+<span id="syntagmics-shorthand"></span><h3>Shorthand<a class="headerlink" href="#shorthand" title="Link to this heading">#</a></h3>
+<p>Shorthand notation is introduced in this section to extend the primitive operations defined in the previous seciton.</p>
+<ol class="arabic simple">
+<li><p><strong>Summation</strong>: The connotation of the <span class="math notranslate nohighlight">\(+\)</span> symbol is leveraged to extend the symbolism to the <span class="math notranslate nohighlight">\(\sum\)</span> symbol. Consider,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\sum_1^{n} {a_i}{b_i}{a_i} = a_1.b_1.a_1 + a_2.b_2.a_2 + ... a_n.b_n.a_n\]</div>
+<p>This example shows how to represent a poem of arbitrary length composed of tercet stanzas where the first and third lines rhyme.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Serialization</strong>: A <em>serialization</em> (serialized concatenation) is used in reference to syllables. It simply means the concatenation of a patterned sequence of syllables. Consider,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\prod_{i=1}^{n} {ⲡ_i}{Ⲡ_i} = {ⲡ_i}{Ⲡ_i}{ⲡ_i}{Ⲡ_i} ... {ⲡ_n}{Ⲡ_n}\]</div>
+<p>This example shows how to represent a line of iambic meter, i.e. sequences of unstressed and then stressed syllables.</p>
+<ol class="arabic" start="3">
+<li><p><strong>Exponentiation</strong>: An exponent is used as shorthand for excessive succession of rhymes. For example, consider the lines,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">the ball in the bag</div>
+<div class="line">the rip in the rag</div>
+<div class="line">the gig in the gag</div>
+<div class="line"><br /></div>
+<div class="line">some dittery dots</div>
+<div class="line">some jittery jots</div>
+<div class="line">these simmering sots.</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>This can be represented using the operation of <em>succession</em> and the operation of <em>separation</em> with the expression,</p>
+<div class="math notranslate nohighlight">
+\[p = a.a.a + b.b.b\]</div>
+<p><em>Exponentation</em> is used to denote iterated <em>succession</em>. The exponent of a line denotes the numbers of times the rhyme appears. The current example can be expressed,</p>
+<div class="math notranslate nohighlight">
+\[p = a^3 + b^3\]</div>
+</section>
+<section id="scope">
+<span id="syntagmics-scope"></span><h3>Scope<a class="headerlink" href="#scope" title="Link to this heading">#</a></h3>
+<p>The <em>scope</em> of a rhyme is denoted with a bar. Any line variable of the same character that feels under the scope of a bar rhymes, whereas the same variable used outside of the scope of the bar is not required to rhyme with the variable under the bar. An example will help clear this up. Consider the differences that separate the two poetical propositions, <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[p = \overline{a.b.a} + \overline{a.b.a}\]</div>
+<div class="math notranslate nohighlight">
+\[q = \overline{a.b.a + a.b.a}\]</div>
+<p>In the case of <em>p</em>, the line variable <em>a</em> in the first stanza is not required to rhyme with the line variable <em>a</em> in the second stanza. In the case of <em>q</em>, the line variable <em>a</em> in both the first and second stanza must rhyme. For example, the following values of <em>p</em> and <em>q</em> satisfy these definitions. For <em>p</em>,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">the dog is brown</div>
+<div class="line">the cat is green.</div>
+<div class="line">the fish does drown.</div>
+<div class="line"><br /></div>
+<div class="line">the dog is blue.</div>
+<div class="line">the cat is red.</div>
+<div class="line">the fish eats you.</div>
+</div>
+</div></blockquote>
+<p>Whereas for <em>q</em>,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">the dog is brown</div>
+<div class="line">the cat is green</div>
+<div class="line">the fish does drown</div>
+<div class="line"><br /></div>
+<div class="line">the dog does frown.</div>
+<div class="line">the cat is mean.</div>
+<div class="line">the fish gets down.</div>
+</div>
+</div></blockquote>
+<p>If the bar is omitted from a sign, it is implied to extend over the entire proposition.</p>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
+<p><strong>Primitive Operations</strong></p>
+<dl class="simple">
+<dt><span class="math notranslate nohighlight">\(a.b.a\)</span></dt><dd><p>A tercet where the first and third lines rhyme.</p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(A.b.A\)</span></dt><dd><p>A tercet where the first and third lines are the same.</p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(a.b.a + a.b.a\)</span></dt><dd><p>Two rhyming tercets.</p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(a.b.[b:a]\)</span></dt><dd><p>A tercet where the last line rhymes with either the first line or the second line.</p>
+</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<p>To make clear how shorthand can be leveraged to concisely represent a poetic scheme, some examples are given below.</p>
+<ol class="arabic">
+<li><p>Consider the following poem,</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">pippity pop</div>
+<div class="line">slippity slop</div>
+<div class="line"><br /></div>
+<div class="line">yippity yap</div>
+<div class="line">kippity cap</div>
+</div>
+</div></blockquote>
+</li>
+</ol>
+<p>This expression can be represented using primitive operations as,</p>
+<div class="math notranslate nohighlight">
+\[p = a.a + b.b\]</div>
+<p>Using <a class="reference internal" href="#syntagmics-shorthand"><span class="std std-ref">exponentiation</span></a>,</p>
+<div class="math notranslate nohighlight">
+\[p = a^2 + b^2\]</div>
+<p>Keeping in mind the definition of <a class="reference internal" href="#syntagmics-scope"><span class="std std-ref">Scope</span></a> and applying a <a class="reference internal" href="#syntagmics-shorthand"><span class="std std-ref">summation</span></a>, this can be further reduced,</p>
+<div class="math notranslate nohighlight">
+\[p = \sum_1^2 \overline{a^2}\]</div>
+<p>In general, an arbitrary number of rhyming couplets can be represented,</p>
+<div class="math notranslate nohighlight">
+\[p = \sum_1^n \overline{a^2}\]</div>
+</section>
+<section id="meter">
+<span id="syntagmics-meter"></span><h3>Meter<a class="headerlink" href="#meter" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><span class="math notranslate nohighlight">\(\mathfrak{i} = ⲡⲠ\)</span></dt><dd><p>The definition of an <strong>iamb</strong></p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(\mathfrak{t} = Ⲡⲡ\)</span></dt><dd><p>The definition of a <strong>trochee</strong></p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(\mathfrak{s} = ⲠⲠ\)</span></dt><dd><p>The definition of a <strong>spondee</strong></p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(\mathfrak{p} = ⲡⲡ\)</span></dt><dd><p>The definition of a <strong>pyrrhic</strong></p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(\mathfrak{d} = Ⲡⲡⲡ\)</span></dt><dd><p>The definition of <strong>dactyl</strong></p>
+</dd>
+<dt><span class="math notranslate nohighlight">\(\mathfrak{a} = ⲡⲡⲠ\)</span></dt><dd><p>The definition of a <strong>anapest</strong></p>
+</dd>
+</dl>
+<aside class="topic">
+<p class="topic-title">Definition: Meters</p>
+<p><span class="math notranslate nohighlight">\(a/\mathfrak{x}_n\)</span> denotes a line in <span class="math notranslate nohighlight">\(\mathfrak{x}\)</span> n-meter.</p>
+</aside>
+<p>For example,</p>
+<div class="math notranslate nohighlight">
+\[(a/\mathfrak{i}_4).(b/\mathfrak{i}_3).(a/\mathfrak{i}_4)\]</div>
+<p>Refers to a tercet where the first and third line are written in iambic tetrameter, whereas the second line is written in iambic trimeter. In other words,</p>
+<div class="math notranslate nohighlight">
+\[(a/\mathfrak{i}_4) = {\pi_1}{\Pi_1}{\pi_2}{\Pi_2}{\pi_3}{\Pi_3}{\pi_4}{\Pi_4}\]</div>
+<p>Note in this example the first and third line rhyme.</p>
+<p>The scope of a meter extends to everything contained in the parenthesis it marks. For example,</p>
+<div class="math notranslate nohighlight">
+\[(a.a/\mathfrak{i}_4)\]</div>
+<p>Denotes a rhyming couplet where each line is written in iambic tetrameter.</p>
+</section>
+<section id="rhymation">
+<span id="syntagmics-rhymation"></span><h3>Rhymation<a class="headerlink" href="#rhymation" title="Link to this heading">#</a></h3>
+<section id="ending-stress">
+<h4>Ending Stress<a class="headerlink" href="#ending-stress" title="Link to this heading">#</a></h4>
+<p>In order to express the different categories of rhymes that may be used to aggregates lines into a scheme, notation is introduced to <em>accent</em> a sign to indicate its ending stress.</p>
+<p>If a sign has no accent mark, then any type of stress satisfies the sign.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stress accents can affix both lines <span class="math notranslate nohighlight">\(u\)</span> and words <span class="math notranslate nohighlight">\(\lambda\)</span>. They do <em>not</em> operate on syllables.</p>
+</div>
+<p>The accented sign will be referred to as a <em>rhyme particle</em>. For instance, <span class="math notranslate nohighlight">\(\hat{x}\)</span> (to be defined immediately) is a <em>rhyme particle</em>. In and of itself, it does not denote a rhyme. It is only in the context of a poetical proposition that it can be said to bear the meaning of a “<em>rhyme</em>”. By writing <span class="math notranslate nohighlight">\(\hat{x}\)</span>, all that has been stated is the syllabic form of the sign. In effect, the hat encodes the syllabic form and the vartiable encodes the rhyme scheme.</p>
+<ol class="arabic simple">
+<li><p>Masculine Stress</p></li>
+</ol>
+<p>A masculine rhyme occurs when the final syllable in two words is stressed and identical phonetically. For example, the following pairs of words are masculine rhymes,</p>
+<ul class="simple">
+<li><p>cat, hat</p></li>
+<li><p>bright, light</p></li>
+<li><p>despair, compare</p></li>
+</ul>
+<p>A hat is used to denote a masculine ending stress,</p>
+<div class="math notranslate nohighlight">
+\[\hat{x} = x(Ⲡ)\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Feminine Stress</p></li>
+</ol>
+<p>A feminine rhyme occurs when the final syllable in two words is unstressed, and the last two syllables are identical phonetically. For example, the following pairs of words are feminine rhymes,</p>
+<ul class="simple">
+<li><p>mother, another</p></li>
+<li><p>flowing, going</p></li>
+</ul>
+<p>A check is used to denote a feminine ending stress,</p>
+<div class="math notranslate nohighlight">
+\[\check{x} = x(Ⲡⲡ)\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Dactylic Stress</p></li>
+</ol>
+<p>A dactylic rhyme occurs when two words ends in identical dactyls. For example, the following pairs of words are dactylic rhymes,</p>
+<ul class="simple">
+<li><p>happily, snappily</p></li>
+<li><p>tenderness, slenderness</p></li>
+</ul>
+<p>A dot is used to denote a dactylic ending stress,</p>
+<div class="math notranslate nohighlight">
+\[\dot{x} = x(Ⲡ{ⲡ_1}{ⲡ_2})\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Off Stress</p></li>
+</ol>
+<p>An off rhyme involves imperfect sound correspondence (assonance, consonance, etc.). For example, the following pairs are off rhymes,</p>
+<ul class="simple">
+<li><p>bottle, fiddle (syllabic rhyme)</p></li>
+<li><p>hammer, carpenter (weak rhyme)</p></li>
+</ul>
+<p>A tilde is used to denote an off stress,</p>
+<div class="math notranslate nohighlight">
+\[\tilde{x} = [ ... ]\]</div>
+<p>Where “…” represents as yet undetermined operation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because off-rhymes do not (yet) have a syllabic representation, they are only used <em>within</em> poetical proposition to denote a rhyme. Writing <span class="math notranslate nohighlight">\(\tilde{x}\)</span> has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress.</p>
+</div>
+<p><strong>Shorthand</strong></p>
+<p>To avoid unnecessary complexity, the following notations are defined. In the case of masculine rhyme particles,</p>
+<div class="math notranslate nohighlight">
+\[\hat{x.y} = \hat{x}.\hat{y}\]</div>
+<div class="math notranslate nohighlight">
+\[\hat{x + y} = \hat{x} + \hat{y}\]</div>
+<div class="math notranslate nohighlight">
+\[\hat{x:y} = \hat{x}:\hat{y}\]</div>
+<p>Similarly for the other types of rhyme particles.</p>
+</section>
+<section id="logical-structure">
+<h4>Logical Structure<a class="headerlink" href="#logical-structure" title="Link to this heading">#</a></h4>
+<p>Now that notation has been introduced to formalize rhyme structure in a poem, the relation of <em>rhymation</em> can be clarified. Rhymation is meant to explicate the relation of “<em>perfect rhymes</em>” within the formal system being developing.</p>
+<p>It should first be noted, by <a class="reference internal" href="#syntagmics-variables"><span class="std std-ref">definition</span></a>, that all signs rhyme with themselves,</p>
+<div class="math notranslate nohighlight">
+\[x \parallel x\]</div>
+<p>Furthermore, if an arbitary sign <span class="math notranslate nohighlight">\(x\)</span> rhymes with the sign <span class="math notranslate nohighlight">\(y\)</span>, then <span class="math notranslate nohighlight">\(y\)</span> rhymes with <span class="math notranslate nohighlight">\(x\)</span>, and visa versa,</p>
+<div class="math notranslate nohighlight">
+\[x \parallel y \equiv y \parallel x\]</div>
+<p>If two arbitrary signs <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> end in the same masculine particle, <span class="math notranslate nohighlight">\(z\)</span>, then they rhyme,</p>
+<div class="math notranslate nohighlight">
+\[[x(\hat{z}) \land y(\hat{z})] \implies x \parallel y\]</div>
+<p>If two arbitrary signs <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> end in the same feminine particle, <span class="math notranslate nohighlight">\(z\)</span>, then they rhyme,</p>
+<div class="math notranslate nohighlight">
+\[[x(\check{z}) \land y(\check{z})] \implies x \parallel y\]</div>
+<p>If two arbitary signs end in the same dactylic particle, then they rhyme,</p>
+<div class="math notranslate nohighlight">
+\[[x(\dot{z}) \land y(\dot{z})] \implies x \parallel y\]</div>
+<p>However, off-rhymes do <em>not</em> imply the relation of <em>rhymation</em>.</p>
+<p>If the secondary relations are defined,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vdash\)</span>, Masculine Rhyme: <span class="math notranslate nohighlight">\(x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Vdash\)</span>, Feminie Rhyme: <span class="math notranslate nohighlight">\(x \Vdash y \equiv [\exists z: [x(\check{z) \land y(\check{z})]]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Vvdash\)</span>, Dactylic Rhyme: <span class="math notranslate nohighlight">\(x \Vvdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]\)</span></p></li>
+</ul>
+<p>Then, the relation of <em>rhymation</em> can be defined precisely as,</p>
+<div class="math notranslate nohighlight">
+\[x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]\]</div>
+<p>Where the righthand logical sum, <span class="math notranslate nohighlight">\([ \vdash \lor \Vdash  \lor \Vvdash ]\)</span>, is shorthand for one of the three relations obtaining between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="definitions">
+<span id="syntagmics-definitions"></span><h2>Definitions<a class="headerlink" href="#definitions" title="Link to this heading">#</a></h2>
+<p>With the primitive foundations of <em>syntagmics</em> laid, definitions are now given for quantities of</p>
+<section id="lengths">
+<h3>Lengths<a class="headerlink" href="#lengths" title="Link to this heading">#</a></h3>
+<p>A poetic sign has many different notions of “<em>length</em>” beyond the purely linguistic lengths of a sentence. A sentence, as it is conceived in the fields of formal linguistic, can be broken into sequences of characters, words or phonemes (among other categorizations). A poetic sign possesses these notions of length as a result of its embodiment in the medium of language, but it also possesses dimensions of length over and above the lengths prescribed by syntax, semantics and pragmatics. These concepts of length are derived from the structure of poetic signs and represent a space orthogonal to conventional formal linguistics where the semantics of poems are encoded. These different, but interrelated notions of length, are listed directly below and then defined,</p>
+<ul class="simple">
+<li><p>Stanza Length of a Poem</p></li>
+<li><p>Line Length of a Poem</p></li>
+<li><p>Line Length of a Stanza</p></li>
+<li><p>Syllable Length of a Line</p></li>
+<li><p>Syllable Length of a Stanza</p></li>
+<li><p>Syllable Length of a Poem</p></li>
+</ul>
+<section id="primitive-lengths">
+<h4>Primitive Lengths<a class="headerlink" href="#primitive-lengths" title="Link to this heading">#</a></h4>
+<p>“<em>Primitive</em>” lengths are the immediately measureable quantities of a poem.</p>
+<aside class="topic">
+<p class="topic-title">Stanza Length of a Poem</p>
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be an arbitrary poem with stanzas <span class="math notranslate nohighlight">\(\varsigma_i\)</span>. The stanza length of poem <span class="math notranslate nohighlight">\(p\)</span>, denoted <span class="math notranslate nohighlight">\(l(p \mid \varsigma)\)</span>, is the natural number <span class="math notranslate nohighlight">\(n\)</span> that satisfies,</p>
+<div class="math notranslate nohighlight">
+\[l_{\varsigma}(p) = n \equiv p = \sum_1^n \varsigma_i\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Line Length of a Stanza</p>
+<p>Let <span class="math notranslate nohighlight">\(\varsigma\)</span> be an arbitrary stanza with lines <span class="math notranslate nohighlight">\(u\)</span>. The line length of <span class="math notranslate nohighlight">\(\varsigma\)</span>, denoted <span class="math notranslate nohighlight">\(l(\varsigma \mid u)\)</span>, is the natural number <span class="math notranslate nohighlight">\(n\)</span> that satisfies,</p>
+<div class="math notranslate nohighlight">
+\[l(\varsigma \mid u) = n  \equiv \varsigma = u^n\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Syllable Length of a Line</p>
+<p>Let <span class="math notranslate nohighlight">\(u\)</span> be an arbitrary line with syllables <span class="math notranslate nohighlight">\(\rho_i\)</span>. The syllable length of <span class="math notranslate nohighlight">\(u\)</span>, denoted <span class="math notranslate nohighlight">\(l(u \mid \rho)\)</span>, is the natural number <span class="math notranslate nohighlight">\(n\)</span> that satisfies,</p>
+<div class="math notranslate nohighlight">
+\[l(u \mid \rho) = n \equiv u = \prod_1^n \rho_i\]</div>
+</aside>
+<p>In effect, the stanza length of a poem is defined as the number times the operation of separation has been applied to stanzas to create a poem, the line length of a stanza is defined as the number of times succession has been applied to lines to construct a stanza, the syllable length is the number of times concatenation has been applied to the syllables to construct a line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The definition of a length in a level of the syntagmic hierarchy is given in terms of the level directly below it.</p>
+</div>
+<p>The notation, <span class="math notranslate nohighlight">\(l(p \mid \varsigma)\)</span>, <span class="math notranslate nohighlight">\(l(\varsigma \mid u)\)</span> and <span class="math notranslate nohighlight">\(l(u \mid \rho)\)</span> is meant to invoke the concept of “<em>conditioning</em>” from Bayesian analysis. Each type of length is relative to the particular formal term within a syntagmic sign that falls to the right the <span class="math notranslate nohighlight">\(\mid\)</span> marker.</p>
+</section>
+<section id="derivative-lengths">
+<h4>Derivative Lengths<a class="headerlink" href="#derivative-lengths" title="Link to this heading">#</a></h4>
+<p>There are several other concepts of length that are derived directly from these definitions, illustrating how these “<em>basic</em>” units of syntagmic length interconnect to form more abstract notions of length.</p>
+<aside class="topic">
+<p class="topic-title">Line Length of a Poem</p>
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be an arbitrary poem with stanzas <span class="math notranslate nohighlight">\(\varsigma_i\)</span>. Let each <span class="math notranslate nohighlight">\(\varsigma_i\)</span> have lines <span class="math notranslate nohighlight">\(u_j\)</span>. The line length of <span class="math notranslate nohighlight">\(p\)</span>, denoted <span class="math notranslate nohighlight">\(l(p \mid u)\)</span> is defined as,</p>
+<div class="math notranslate nohighlight">
+\[l(p \mid u) = \sum_1^{l(p \mid \varsigma)} l(\varsigma \mid u)\]</div>
+</aside>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><span class="math notranslate nohighlight">\(l(\varsigma \mid u)\)</span> is a number! Therefore, the <span class="math notranslate nohighlight">\(\sum\)</span> that appears in the previous definition is an <em>arithmetical</em> sum. Recall the <span class="math notranslate nohighlight">\(\sum\)</span> symbol is overloaded. It may be benefit the reader to treat the preceding as a definition in the metalanguage of syntagmics, rather than its object language, where the <span class="math notranslate nohighlight">\(\sum\)</span> symbol is used as a semantic construct.</p>
+</div>
+<p>This definition captures the common sense notion that the number of lines in a poem is equal to the sum of the number of lines in each stanza.</p>
+<aside class="topic">
+<p class="topic-title">Syllable Length of a Stanza</p>
+<p>Let <span class="math notranslate nohighlight">\(\varsigma\)</span> be an arbitrary stanza. Let each <span class="math notranslate nohighlight">\(\varsigma\)</span> have lines <span class="math notranslate nohighlight">\(u_i\)</span>. Let each line <span class="math notranslate nohighlight">\(u_i\)</span> have syllables <span class="math notranslate nohighlight">\(\rho_j\)</span>. The syllable length of <span class="math notranslate nohighlight">\(\varsigma\)</span>, denoted <span class="math notranslate nohighlight">\(l(\varsigma \mid \rho)\)</span> is defined as,</p>
+<div class="math notranslate nohighlight">
+\[l(\varsigma \mid \rho) = \sum_1^{l(\varsigma \mid u)} l(u_j \mid \rho)\]</div>
+</aside>
+<p>Once again, this captures the idea the number of syllables in a stanza is equal to the sum of the number of syllables in each line of the stanza.</p>
+<p>There are two ways to define the syllable length of a poem. It can either be defined using the line length of a poem and syllable length of a line, or it can be defined using the stanza length of a poem and the syllable length of a stanza. Whichever definition is selected, the alternative not selected will become a theorem of the formal system as a consequence of the definitions of length. For the current purposes, the first alternative is selected.</p>
+<aside class="topic">
+<p class="topic-title">Syllable Length of a Poem</p>
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be an arbitrary poem with stanzas <span class="math notranslate nohighlight">\(\varsigma_i\)</span>. Let each <span class="math notranslate nohighlight">\(\varsigma_i\)</span> have lines <span class="math notranslate nohighlight">\(u_j\)</span>.  Let each line <span class="math notranslate nohighlight">\(u_j\)</span> have syllables <span class="math notranslate nohighlight">\(\rho_k\)</span> The syllable length of <span class="math notranslate nohighlight">\(p\)</span>, denoted <span class="math notranslate nohighlight">\(l(p \mid \rho)\)</span> is defined as,</p>
+<div class="math notranslate nohighlight">
+\[l(p \mid \rho) = \sum_1^{l(p \mid u)} l(u \mid \rho)\]</div>
+</aside>
+<p>In the previous three definition, the “<em>condition</em>” of the summation limit becomes the summand’s length, while the “<em>condition</em>” of the summand becomes the “<em>condition</em>” of the result. This is directly analogous to dimensional analysis in fields of science, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a “<em>poetic dimensional analysis</em>”.</p>
+</section>
+</section>
+<section id="speed">
+<h3>Speed<a class="headerlink" href="#speed" title="Link to this heading">#</a></h3>
+<p>This document opened with a quote by Alexander Pope that illustrates a phonological phenomenon that is often employed poetically for effect: sentences with clusters of stressed syllables in sequence have the psychological effect of appearing “<em>slow</em>”, as opposed to anapestic or dactylic rhythms which are often associated with “<em>galloping</em>” or “<em>rapid</em>” paces. In other words, there is a correlation between the perceived “<em>speed</em>” of a poem and its use syllabic stresses.</p>
+<p>The notion of <em>syntagmic speed</em> is intended to explicate the psychological phenomenon illustrated by Pope and make it conducive to analysis. In making this definition, an important tool for the statistical analysis of poems will be introduced as a result.</p>
+<p>First note that syllables are either stressed or unstressed, but not both. Therefore, the total number of syllables in a sign <span class="math notranslate nohighlight">\(x\)</span> is equal to the number of unstressed syllables <span class="math notranslate nohighlight">\(ⲡ\)</span> in <span class="math notranslate nohighlight">\(x\)</span> plus the number of stressed syllables <span class="math notranslate nohighlight">\(Ⲡ\)</span> in <span class="math notranslate nohighlight">\(x\)</span>. Introducing the following notation,</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(l(x \mid Ⲡ)\)</span>: The number of stressed syllables in sign <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(l(x \mid ⲡ)\)</span>: The number of unstressed syllables in sign <span class="math notranslate nohighlight">\(x\)</span></p></li>
+</ul>
+<p>It follows logically from the definitions of syllabic length,</p>
+<div class="math notranslate nohighlight">
+\[l(x \mid \rho) = l(x \mid Ⲡ) + l(x \mid ⲡ)\]</div>
+<p>With this in mind, the notion of “<em>poetic speed</em>” is formally defined as the “<em>density</em>” of stressed syllables in a sign.</p>
+<aside class="topic">
+<p class="topic-title">Speed</p>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> be a syntagmic sign such that <span class="math notranslate nohighlight">\(l(x \mid \rho) &gt; 0\)</span>. The speed of <span class="math notranslate nohighlight">\(x\)</span>, denoted <span class="math notranslate nohighlight">\(\mathfrak{u}(x)\)</span>, is defined as,</p>
+<div class="math notranslate nohighlight">
+\[\mathfrak{u}(x) = \frac{l(x \mid Ⲡ)}{l(x \mid \rho)}\]</div>
+</aside>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Syntagmics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01_schemas.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Section II: Schemas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prior-definitions">Prior Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics">Mathematics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poetics">Poetics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formalization">Formalization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constants">Constants</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relations">Relations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-vs-succession">Separation vs. Succession</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#brackets">Brackets</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#projection">Projection</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shorthand">Shorthand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meter">Meter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rhymation">Rhymation</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ending-stress">Ending Stress</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-structure">Logical Structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions">Definitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lengths">Lengths</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-lengths">Primitive Lengths</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-lengths">Derivative Lengths</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#speed">Speed</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

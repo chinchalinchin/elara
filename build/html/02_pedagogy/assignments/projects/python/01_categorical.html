@@ -1,0 +1,1342 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bar Charts &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/assignments/projects/python/01_categorical';</script>
+    <script src="../../../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/02_pedagogy/assignments/projects/python/01_categorical.html" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Histograms and Boxplots" href="02_quantative.html" />
+    <link rel="prev" title="Python" href="00_python.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../../index.html">Assignments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../index.html">Projects</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="reference internal" href="index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../statistics/index.html">Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/00_graphs.html">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../statistics/05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../03_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../03_theurgy/01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../03_theurgy/01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/index.html">Syntagmics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../03_theurgy/03_syntagmics/03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/02_pedagogy/assignments/projects/python/01_categorical.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bar Charts</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-vehicles-in-washington-state">Electric Vehicles in Washington State</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make">Make</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-alternative-fuel-vehicle-cafv-eligibility">Clean Alternative Fuel Vehicle (CAFV) Eligibility</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-vehicle-type">Electric Vehicle Type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-one-bar-charts">Bar Charts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-frills">No Frills</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked">Stacked</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-operations">Set Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">No Frills</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Stacked</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-data">Loading Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-vehicle-dataset">Electric Vehicle Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bar-charts">
+<span id="project-one"></span><h1>Bar Charts<a class="headerlink" href="#bar-charts" title="Link to this heading">#</a></h1>
+<blockquote class="epigraph">
+<div><p>The picture is a model of reality.</p>
+<p class="attribution">—Ludwig Wittgenstein</p>
+</div></blockquote>
+<p>In this lab, you will get familiar with the statistical plotting features of <strong>Python</strong> using a dataset we have already seen. We will explore the association between two categorical variables and determine if a relationship exists.</p>
+<section id="instructions">
+<span id="project-one-instructions"></span><h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> dataset in the <a class="reference internal" href="#project-one-dataset"><span class="std std-ref">Datasets</span></a> section and place it in the <code class="docutils literal notranslate"><span class="pre">Linux</span> <span class="pre">Files</span></code> folder on your ChromeBook’s file system where you save your <code class="docutils literal notranslate"><span class="pre">.py</span></code> scripts.</p></li>
+<li><p>Create a Python <code class="docutils literal notranslate"><span class="pre">.py</span></code> script named <code class="docutils literal notranslate"><span class="pre">NAME_project_one.py</span></code> in your <code class="docutils literal notranslate"><span class="pre">Linux</span> <span class="pre">Files</span></code> folder on your file system. You can do this by opening an IDLE session, creating a new file and then saving it. Replace <code class="docutils literal notranslate"><span class="pre">NAME</span></code> with your name.</p></li>
+<li><p>Create a <a class="reference internal" href="../../../technology/python/02_basics.html#python-docstring"><span class="std std-ref">docstring</span></a> at the very top of the script file. Keep all written answers in this area of the script.</p></li>
+<li><p>Read the <a class="reference internal" href="#project-one-installs"><span class="std std-ref">Prerequisites</span></a> section. (We will do this part in class!)</p></li>
+<li><p>Read the <a class="reference internal" href="#project-one-background"><span class="std std-ref">Background</span></a> section.</p></li>
+<li><p>Read the <a class="reference internal" href="#project-one-loading-data"><span class="std std-ref">Loading Data</span></a> section. (We will do this part in class!)</p></li>
+<li><p>Read the <a class="reference internal" href="#project-one-bar-charts"><span class="std std-ref">Bar Charts</span></a> section. Download the script files in that section onto your ChromeBook. Read through them carefully and execute them on your computer.</p></li>
+<li><p>Read the <a class="reference internal" href="#project-one-set-operations"><span class="std std-ref">Set Operations</span></a> section.</p></li>
+<li><p>Load in the data from the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file using the technique outlined in the <a class="reference internal" href="03_normality.html#project-three-loading-data"><span class="std std-ref">Loading Data</span></a> section. (We will do this part in class!)</p></li>
+<li><p>Perform all exercises and answer all questions in the <a class="reference internal" href="#project-one-project"><span class="std std-ref">Project</span></a> section. Label your script with comments as indicated in the <em>Project</em> section.</p></li>
+<li><p>Keep in mind, there is a section dedicated to <a class="reference internal" href="../../../technology/python/05_plots.html#python-plotting"><span class="std std-ref">Plots</span></a> underneath the <a class="reference internal" href="../../../technology/python/index.html#python-reference"><span class="std std-ref">Python</span></a> on the left-hand menu of the site.</p></li>
+<li><p>When you are done, zip your script <strong>and</strong> your <em>csv</em> file into a file named <code class="docutils literal notranslate"><span class="pre">NAME_project_one.zip</span></code></p></li>
+<li><p>Upload the zip file to the Google Classroom Project One Assignment.</p></li>
+</ol>
+</section>
+<section id="prerequisites">
+<span id="project-one-installs"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will do this in class together.</p>
+</div>
+<p>We installed <strong>Python</strong> in <a class="reference internal" href="00_python.html#project-zero"><span class="std std-ref">our first project</span></a> and got familiar with some of its basic functionality, in particular <a class="reference internal" href="../../../technology/python/02_basics.html#python-lists"><span class="std std-ref">list variables</span></a> and the <a class="reference internal" href="../../../technology/python/02_basics.html#python-list-operations"><span class="std std-ref">operations that can be performed on them</span></a>, skills that will be helpful in completing this project.</p>
+<p>We also discovered our ChromeBook’s <strong>Python</strong> installation is a bit different than a typical installation; it’s missing a few essential pieces that we will now install. In order to go further with <strong>Python</strong> in this class, we need to do the following.</p>
+<p>Open up a <em>Linux</em> terminal and type the command,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python3-pip
+</pre></div>
+</div>
+<p>This command will install the <strong>Python Package Manager</strong> onto your computer. The <strong>Python Package Manager</strong>, or <code class="docutils literal notranslate"><span class="pre">pip</span></code> for short, allows us to install <strong>Python</strong> extensions. And that is exactly what we are going to do. Once the previous command completes, verify the installation with,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>You should see something along the lines of,</p>
+<blockquote>
+<div><p>pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)</p>
+</div></blockquote>
+<p>Your version may not match exactly. You should be fine as long as your <strong>Python</strong> version is above <em>3.7</em>.</p>
+<p>Now that <code class="docutils literal notranslate"><span class="pre">pip</span></code> is installed, let’s plug in the final pieces we need into our <strong>Python</strong> installation.</p>
+<p><a class="reference external" href="https://matplotlib.org/">matplotlib</a> will be used to generate graphical representations of data. <a class="reference external" href="https://docs.python.org/3/library/tkinter.html">tkinter</a> will be used to render the output of <a class="reference external" href="https://matplotlib.org/">matplotlib</a> into JPEG and PNG images. These packages can be installed through the command line.</p>
+<p>Type the following command into your <em>Linux</em> terminal,</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>matplotlib<span class="w"> </span>tk
+</pre></div>
+</div>
+<img alt="../../../../_images/matplotlib-tk-install.png" class="align-center" src="../../../../_images/matplotlib-tk-install.png" />
+<p>Output:</p>
+<blockquote>
+<div><p>Defaulting to user installation because normal site-packages is not writeable</p>
+<dl class="simple">
+<dt>Collecting tk</dt><dd><p>Downloading tk-0.1.0-py3-none-any.whl (3.9 kB)</p>
+</dd>
+</dl>
+<p>…</p>
+<p>Installing collected packages: tk</p>
+<p>Successfully installed tk-0.1.0</p>
+</div></blockquote>
+<img alt="../../../../_images/matplotlib-tk-install-done.png" class="align-center" src="../../../../_images/matplotlib-tk-install-done.png" />
+<p>You should see the packages download and install into your system.</p>
+<p>That’s it! You are ready to plot some sweet statistical graphs.</p>
+</section>
+<section id="background">
+<span id="project-one-background"></span><h2>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
+<section id="electric-vehicles-in-washington-state">
+<h3>Electric Vehicles in Washington State<a class="headerlink" href="#electric-vehicles-in-washington-state" title="Link to this heading">#</a></h3>
+<p>The United States Government General Services Administration maintains a huge database of public available information. One of the datasets they publish is the <a class="reference external" href="https://catalog.data.gov/dataset/electric-vehicle-population-data">Battery Electric Vehicles (BEVs) and Plug-in Hybrid Electric Vehicles (PHEVs) that are currently registered through Washington State Department of Licensing</a></p>
+<p>This dataset was taken from <a class="reference external" href="https://data.gov/">data.gov</a>. This is an excellent resource, if you ever find yourself in need of some data. We will be using this online database quite a bit once we get fully up to speed on <strong>Python</strong>.</p>
+<p>We examined the <em>electric vehicle</em> dataset a little bit in class on the first week. We are now prepared to do a little more in-depth analysis.</p>
+<p>First, let’s take a look at some of the variables being observed in this dataset.</p>
+<section id="make">
+<h4>Make<a class="headerlink" href="#make" title="Link to this heading">#</a></h4>
+<p>The <strong>Make</strong> variable represents the manufacturer of the car. The possible values for this variable are listed below,</p>
+<ul class="simple">
+<li><p>FIAT</p></li>
+<li><p>MINI</p></li>
+<li><p>LEXUS</p></li>
+<li><p>CHRYSLER</p></li>
+<li><p>LINCOLN</p></li>
+<li><p>ALFA ROMEO</p></li>
+<li><p>RIVIAN</p></li>
+<li><p>TOYOTA</p></li>
+<li><p>AZURE DYNAMICS</p></li>
+<li><p>GENESIS</p></li>
+<li><p>VOLKSWAGEN</p></li>
+<li><p>JEEP</p></li>
+<li><p>PORSCHE</p></li>
+<li><p>MERCEDES-BENZ</p></li>
+<li><p>CADILLAC</p></li>
+<li><p>KIA</p></li>
+<li><p>JAGUAR</p></li>
+<li><p>POLESTAR</p></li>
+<li><p>FISKER</p></li>
+<li><p>FORD</p></li>
+<li><p>TESLA</p></li>
+<li><p>SMART</p></li>
+<li><p>HYUNDAI</p></li>
+<li><p>BENTLEY</p></li>
+<li><p>NISSAN</p></li>
+<li><p>MITSUBISHI</p></li>
+<li><p>TH!NK</p></li>
+<li><p>VOLVO</p></li>
+<li><p>LUCID</p></li>
+<li><p>CHEVROLET</p></li>
+<li><p>WHEEGO ELECTRIC CARS</p></li>
+<li><p>HONDA</p></li>
+<li><p>LAND ROVER</p></li>
+<li><p>SUBARU</p></li>
+<li><p>AUDI</p></li>
+<li><p>MAZDA</p></li>
+<li><p>BMW</p></li>
+</ul>
+</section>
+<section id="clean-alternative-fuel-vehicle-cafv-eligibility">
+<h4>Clean Alternative Fuel Vehicle (CAFV) Eligibility<a class="headerlink" href="#clean-alternative-fuel-vehicle-cafv-eligibility" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="https://www.dol.wa.gov/vehicles-and-boats/taxes-fuel-tax-and-other-fees/tax-exemptions-alternative-fuel-vehicles-and-plug-hybrids">The state of Washington offers many incentives for vehicle owners to invest in an electric vehicle</a>,</p>
+<blockquote>
+<div><p>In 2019, Washington State reinstated the sales and use tax exemption for the sales of vehicles powered by a clean alternative fuel and certain plug-in hybrids.</p>
+</div></blockquote>
+<p>However, not all cars are eligible for this tax exemption. The exemption depends on the battery range of the electric vehicle. If your electric vehicle does not have a large enough range, your vehicle is deemed ineligible for a tax exemption.</p>
+<p>The <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> variable in this dataset records whether or not an individual car is eligible. The possible values of this variable are:</p>
+<ul class="simple">
+<li><p>Not eligible due to low battery range</p></li>
+<li><p>Eligibility unknown as battery range has not been researched</p></li>
+<li><p>Clean Alternative Fuel Vehicle Eligible</p></li>
+</ul>
+</section>
+<section id="electric-vehicle-type">
+<h4>Electric Vehicle Type<a class="headerlink" href="#electric-vehicle-type" title="Link to this heading">#</a></h4>
+<p>Electric vehicles come in two varieties: vehicles that are fully electric and hybrid vehicles that revert to a gasoline engine when they run out of electric power. This <a class="reference external" href="https://www.pcmag.com/how-to/ev-vs-hev-vs-phev-what-are-the-types-of-electric-vehicles">article from PC Magazine goes into greater detail about the differences between these two types of electric vehicles</a></p>
+<p>The <strong>Electric Vehicle Type</strong> variable records what <em>type</em> of electric vehicle was registered with Washington State. The possible values of this variable are:</p>
+<ul class="simple">
+<li><p>Battery Electric Vehicle (BEV)</p></li>
+<li><p>Plug-in Hybrid Electric Vehicle (PHEV)</p></li>
+</ul>
+<p><em>BEV</em> electric vehicles are <em>fully electric</em>. <em>PHEV</em> use hybrid engines; when <em>PHEV</em> engines run out of power, they start using gasoline.</p>
+</section>
+</section>
+</section>
+<section id="project-one-bar-charts">
+<span id="id2"></span><h2>Bar Charts<a class="headerlink" href="#project-one-bar-charts" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Refer to <a class="reference internal" href="../../../technology/python/05_plots.html#python-plotting"><span class="std std-ref">Plots</span></a> section for a more in-depth look at the various features of <a class="reference internal" href="../../../technology/python/05_plots.html#matplotlib"><span class="std std-ref">matplotlib</span></a>, the library we are using to create graphs.</p>
+</div>
+<section id="no-frills">
+<span id="project-one-standard-bar-charts"></span><h3>No Frills<a class="headerlink" href="#no-frills" title="Link to this heading">#</a></h3>
+<p>Recall a standard bar chart is a way of visually representing the marginal frequency distribution for a sample of categorical data,</p>
+<div class="math notranslate nohighlight">
+\[P(A) = \frac{n(A)}{n(S)}\]</div>
+<p>Up until now we have been living in the stone age, creating these graphs by hand. Welcome to the twenty-first century. Behold, the power of <a class="reference external" href="https://matplotlib.org/">matplotlib</a>,</p>
+<p>(<a class="reference download internal" download="" href="../../../../_downloads/526e60b417716c744eabcbcbf130fdd0/bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../../_downloads/e3f0868d190a66dc3a1488165f0cd8d3/bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../../_downloads/1a8bf92d1863d77236175a2cc9f6be6b/bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../../_downloads/33b4864fdb2fbec83a6b99ed0fec6b03/bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../../_images/bar_chart.png" class="plot-directive" src="../../../../_images/bar_chart.png" />
+</figure>
+<p>Click on the <code class="docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code> button in the top left corner of the graph to download the <em>.py</em> script used to generate this graph. Examine the source code contained therein for generating a <em>Bar Chart</em> with <a class="reference internal" href="../../../technology/python/05_plots.html#python-plotting"><span class="std std-ref">matplotlib</span></a>. Be sure to read the comments before you execute it, as you will need to tweak a setting to get it to run on your computer.</p>
+<p>The key line to pay attention to in this script is the following,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">relative_freq</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">relative_freq</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html">bar()</a> function is <a class="reference internal" href="../../../technology/python/05_plots.html#matplotlib"><span class="std std-ref">matplotlib</span></a>’s <em>bar chart</em> graphing function.</p>
+<p>The first argument of the <code class="docutils literal notranslate"><span class="pre">bar()</span></code> function is the values of the categorical variable you wish to plot. The second argument is the frequencies of each of the values. The <em>order</em> of each list that is passed in must be the same. For example, if we have a sample of data,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ A, A, A, A, A, B, B, B, B, B, B, B \}\]</div>
+<p>We would graph its <em>frequency</em> distribution using the following code,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plot</span>
+
+<span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span><span class="p">)</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]</span>
+<span class="n">frequencies</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span> <span class="p">]</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">frequencies</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Categories&quot;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Frequency&quot;</span><span class="p">)</span>
+
+<span class="n">plot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This code will create a bar chart with two values of a categorical variable on the <code class="docutils literal notranslate"><span class="pre">x</span></code> axis, <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code>. It will plot their respective frequencies, <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">7</span></code>, on the y-axis.</p>
+<p>The two arguments, <code class="docutils literal notranslate"><span class="pre">color</span></code> and <code class="docutils literal notranslate"><span class="pre">ec</span></code>, affect the <em>styling</em> of the bar chart. <code class="docutils literal notranslate"><span class="pre">color</span></code> determines the fill color of the bars and <code class="docutils literal notranslate"><span class="pre">ec</span></code> determines the outline color.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">ec</span></code> stands for “<em>edge color</em>”</p>
+</div>
+<p>The full list of colors available to use in <a class="reference internal" href="../../../technology/python/05_plots.html#matplotlib"><span class="std std-ref">matplotlib</span></a> is detailed in the following chart,</p>
+<img alt="../../../../_images/matplotlib-colors.png" class="align-center" src="../../../../_images/matplotlib-colors.png" />
+<p>Any value in this chart can be used an argument for <code class="docutils literal notranslate"><span class="pre">color</span></code> or <code class="docutils literal notranslate"><span class="pre">ec</span></code>.</p>
+<p>This script is annotated with lots of comments for you to read. Give them a peak, and then let’s meet over in the next section.</p>
+</section>
+<section id="stacked">
+<span id="project-one-stacked-bar-charts"></span><h3>Stacked<a class="headerlink" href="#stacked" title="Link to this heading">#</a></h3>
+<p>Recall a <em>stacked bar chart</em> is a way of visually representing a <em>conditional distribution</em> of one categorical variable with respect to another,</p>
+<div class="math notranslate nohighlight">
+\[P(A \mid B) = \frac{n(A \cap B)}{n(B)}\]</div>
+<p>(<a class="reference download internal" download="" href="../../../../_downloads/3876d09c245f53bc9f7a7fab15be8c1b/stacked_bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../../../_downloads/aeffde20930d1bf3c8034a6f6c678b39/stacked_bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../../../_downloads/4238c92ad5e8f1b1ad3dc3cc1d20f964/stacked_bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../../../_downloads/59deb6bf7ef2debb65ab5d931419a250/stacked_bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../../../_images/stacked_bar_chart.png" class="plot-directive" src="../../../../_images/stacked_bar_chart.png" />
+</figure>
+<p>This one is extremely tricky, so read through it carefully.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We are performing the same calculations in this script that we performed in class on Thursday, September 7 <sup>th</sup> with the simulated distribution of shapes and colors. You should have your calculations saved in a file named <code class="docutils literal notranslate"><span class="pre">stacked_bar_chart.py</span></code> in your <code class="docutils literal notranslate"><span class="pre">Linux</span> <span class="pre">Files</span></code> folder on your ChromeBook.</p>
+</div>
+<p><a class="reference external" href="https://matplotlib.org/">matplotlib</a> does not have a nice way of making stacked bar charts; Unforunately, the twenty-first century isn’t all it’s cracked up to be. In this timeline, you have to “stack” your bar charts yourself. Make sure to download this one and go through it step by step. The script has been well commented; every step has been detailed.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Your script comments should look like the ones in the scripts you just downloaded.</p>
+</div>
+<p>The key lines to pay attention to in this script are the follwoing,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stack Conditional Distribution of Shape Given Red</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="s2">&quot;RED&quot;</span><span class="p">,</span> <span class="n">percent_of_red_that_are_balls</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;BALL&quot;</span><span class="p">)</span>
+<span class="c1"># add the previous percent to the `bottom` to stack</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="s2">&quot;RED&quot;</span><span class="p">,</span> <span class="n">percent_of_red_that_are_ducks</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">percent_of_red_that_are_balls</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>  <span class="n">label</span><span class="o">=</span><span class="s2">&quot;DUCK&quot;</span><span class="p">)</span>
+
+<span class="c1"># Stack Conditional Distribution of Shape Given Blue</span>
+<span class="c1"># NOTE: don&#39;t label this group, or else you&#39;ll get two legends</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="s2">&quot;BLUE&quot;</span><span class="p">,</span> <span class="n">percent_of_blue_that_are_balls</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="c1"># add the previous percent to the `bottom` to stack</span>
+<span class="n">axs</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="s2">&quot;BLUE&quot;</span><span class="p">,</span> <span class="n">percent_of_blue_that_are_ducks</span><span class="p">,</span>  <span class="n">bottom</span><span class="o">=</span><span class="n">percent_of_blue_that_are_balls</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>We have to <em>manually</em> stack the bars on top of each category and then add the previous percentage to the <code class="docutils literal notranslate"><span class="pre">bottom</span></code> of the next bar. Note for <code class="docutils literal notranslate"><span class="pre">RED</span></code>, we are passing in additional argument of <code class="docutils literal notranslate"><span class="pre">bottom</span></code> in the second line; this tells <a class="reference internal" href="../../../technology/python/05_plots.html#matplotlib"><span class="std std-ref">matplotlib</span></a> to start the next bar at that height. Similarly for <code class="docutils literal notranslate"><span class="pre">BLUE</span></code>.</p>
+</section>
+</section>
+<section id="set-operations">
+<span id="project-one-set-operations"></span><h2>Set Operations<a class="headerlink" href="#set-operations" title="Link to this heading">#</a></h2>
+<p>A set in <strong>Python</strong> is defined with a pair of curly brackets <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">emperors</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;Augustus&quot;</span><span class="p">,</span> <span class="s2">&quot;Commodus&quot;</span><span class="p">,</span> <span class="s2">&quot;Nero&quot;</span><span class="p">,</span> <span class="s2">&quot;Hadrian&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>A <a class="reference internal" href="../../../technology/python/03_sets.html#python-sets"><span class="std std-ref">set variable</span></a> in <strong>Python</strong> is a special type of variable.  When you create a set, it won’t distinguish between identical elements. In other words, <em>sets</em> do not allow duplicates. As an example,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">set_of_dupes</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">set_of_dupes</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<blockquote>
+<div><p>{‘a’, ‘b’}</p>
+</div></blockquote>
+<p>Notice the repetitions of <em>a</em> and <em>b</em> are ignored. This property of <em>sets</em> is extremely useful for categorical data.</p>
+<p>Suppose you have a list of categorical data such as,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_list</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span> <span class="p">]</span>
+</pre></div>
+</div>
+<p>Suppose, further, you didn’t know how many values the categorical variable took on. In this particular case, it’s easy to see what the values are just by looking at the list (i.e. <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">B</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">D</span></code>), but in real world datasets, you could have <em>thousands of individual observations</em> to sort through to determine exactly how many values a categorical variable can assume.</p>
+<p>Rather than trying to determine what the <em>distinct</em> values are by hand, let <strong>Python</strong> do the hard work for you by converting the <em>list</em> into a <em>set</em>,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">some_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<blockquote>
+<div><p>{‘A’, ‘B’, ‘C’, ‘D’}</p>
+</div></blockquote>
+</section>
+<section id="project">
+<span id="project-one-project"></span><h2>Project<a class="headerlink" href="#project" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>No Frills<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Calculate the relative frequency of the following <strong>Makes</strong> of <em>Electric Vehicles</em>,</p></li>
+</ol>
+<ul class="simple">
+<li><p>TESLA</p></li>
+<li><p>CHEVROLET</p></li>
+<li><p>NISSAN</p></li>
+<li><p>TOYOTA</p></li>
+<li><p>VOLKSWAGEN</p></li>
+</ul>
+<p>Label your calculations with comments.</p>
+<ol class="arabic simple" start="2">
+<li><p>Using your answers to #1, construct a bar chart for <em>only</em> these five values of the <strong>Make</strong> categorical variable. Label the commands used to render the graph with comments.</p></li>
+<li><p>In the <a class="reference internal" href="../../../technology/python/02_basics.html#python-docstring"><span class="std std-ref">Docstrings</span></a> at the top of your script, answer the following questions.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p>Out of these five values, what is the most frequent <strong>Make</strong> of <em>Electric Vehicle</em> in Washington State?</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Find the <em>joint frequency distribution</em> of <strong>Make</strong> and <strong>Electric Vehicle Type</strong> for the same <strong>Makes</strong> as in <em>#1</em> and <em>#2</em>. In other words, fill out the following table,</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td></td>
+<td><p>Battery Electric Vehicle (BEV)</p></td>
+<td><p>Plug-in Hybrid Electric Vehicle (PHEV)</p></td>
+</tr>
+<tr class="row-even"><td><p>TESLA</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+</tr>
+<tr class="row-odd"><td><p>CHEVROLET</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+</tr>
+<tr class="row-even"><td><p>NISSAN</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+</tr>
+<tr class="row-odd"><td><p>TOYOTA</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+</tr>
+<tr class="row-even"><td><p>VOLKSWAGEN</p></td>
+<td><p>?</p></td>
+<td><p>?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ol class="loweralpha simple">
+<li><p>Which manufacturers produce more <em>Battery Electric Vehicles (BEV)</em> than <em>Plug-in Hybrid Eletric Vehicles (PHEV)</em>? In other words, what does the <em>conditional distribution</em> for the <strong>Electric Vehicle Type</strong> given the <strong>Make</strong> tell you about the manufacturers of <em>electric vehicles</em>? Which manufacturers are more likely to produce fully electric cars versus hybrid cars and visa versa?</p></li>
+<li><p>Which manufacturers produce more <em>Battery Electric Vehicles (BEV)</em> than their competitors? Which manufacturers produce more <em>Plug-in Hybrid Electric Vehicles (PHEV)</em> than their competitors? In other words, what does the <em>conditional distribution</em> for the <strong>Make</strong> given the <strong>Electric Vehicle Type</strong> tell you about the market for electric cars in Washington state?</p></li>
+</ol>
+</section>
+<section id="id6">
+<h3>Stacked<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Before starting this part of project, answer the following in a <a class="reference internal" href="../../../technology/python/02_basics.html#python-docstring"><span class="std std-ref">Docstrings</span></a>: Based on the information provided in the <a class="reference internal" href="#project-one-background"><span class="std std-ref">Background</span></a> section, how would you expect the <em>conditional distribution</em> of <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> given the <strong>Electric Vehicle Type</strong> to look? Do you expect fully electric vehicles to have greater eligibility for tax credits than hybrid vehicles? Why or why not?</p></li>
+<li><p>Answer the following questions. Label any commands you use to solve the problem with comments. Write your answers in the <a class="reference internal" href="../../../technology/python/02_basics.html#python-docstring"><span class="std std-ref">Docstrings</span></a> at the top of the script.</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p>What percentage of <em>electric vehicles</em> in Washington State are “<em>Not eligible due to low battery range</em>” for the <strong>Clean Alternative Fuel (CAFV) Eligibility</strong> tax exemption?</p></li>
+<li><p>What percentage of <em>electric vehicles</em> in Washington State are <em>Battery Electric Vehicles (BEV)</em>?</p></li>
+<li><p>What percentage of <em>electric vehicles</em> in Washington State are <em>Plug-in Hybrid Electric Vehicle (PHEV)</em>?</p></li>
+<li><p>What percentage of <em>electric vehicles</em> in Washington State are both <em>Battery Electric Vehicles (BEV)</em> and “<em>Not eligible due to low battery range</em>” for <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> tax exemption?</p></li>
+<li><p>What percentage of <em>electric vehicles</em> in Washington State are both <em>Plug-in Hybrid Electric Vehicle (PHEV)</em> and “<em>Not eligible due to low battery range</em>” for <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> tax exemption?</p></li>
+<li><p>What percentage of <em>Battery Electric Vehicles (BEV)</em> are “<em>Not eligible due to low battery range</em>” for <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> tax exemption?</p></li>
+</ol>
+<ol class="loweralpha simple" start="4">
+<li><p>What percentage of <em>Plug-in Hybrid Electric Vehicle (PHEV)</em> are “<em>Not eligible due to low battery range</em>” for <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> tax exemption?</p></li>
+<li><p>What percentage of “<em>Not eligible due to low battery range</em>” for <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> vehicles are <em>Battery Electric Vehicles (BEV)</em>?</p></li>
+</ol>
+<ol class="loweralpha simple" start="5">
+<li><p>What percentage of “<em>Not eligible due to low battery range</em>” for <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> vehicles are <em>Plug-in Hybrid Electric Vehicle (PHEV)</em>?</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>Using this information obtained in <em>#3</em> and any additional information required, create a stacked bar chart for the <em>conditional distribution</em> of the <strong>Electric Vehicle Type</strong> given the <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong>.</p></li>
+<li><p>What does your stacked bar chart from #3 tell you about the <em>association</em> between the <strong>Clean Alternative Fuel Vehicle (CAFV) Eligibility</strong> and the <strong>Electric Vehicle Type</strong>? Write your answer in your script’s <a class="reference internal" href="../../../technology/python/02_basics.html#python-docstring"><span class="std std-ref">Docstrings</span></a> and label the problem.</p></li>
+<li><p>Write a few sentences explaining the results from #2 - #4. Did the result turn out the way you expected? Why or why not?</p></li>
+<li><p>Based on your answer to #4 in this section and #4 from the previous section, which manufacturers in Washington state benefit the most from the tax exemption? What does this tell you about the manufacturer with the <em>most</em> electric vehicles registered in Washington state?</p></li>
+</ol>
+</section>
+</section>
+<section id="datasets">
+<span id="project-one-dataset"></span><h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">#</a></h2>
+<section id="loading-data">
+<span id="project-one-loading-data"></span><h3>Loading Data<a class="headerlink" href="#loading-data" title="Link to this heading">#</a></h3>
+<p>The following code snippet will load in a <em>CSV</em> spreadsheet named <code class="docutils literal notranslate"><span class="pre">example.csv</span></code>, parse it into a list and then print it to screen, assuming that <em>CSV</em> file is saved in the same folder as your script. Modify this code snippet to fit the datasets in this lab and then use it to load in the provided datasets in <a class="reference internal" href="#project-one-dataset"><span class="std std-ref">Datasets</span></a> section.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+
+<span class="c1"># read in data</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;example.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csv_file</span><span class="p">:</span>
+    <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">)</span>
+    <span class="n">raw_data</span> <span class="o">=</span> <span class="p">[</span> <span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span> <span class="p">]</span>
+
+<span class="c1"># separate headers from data</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="n">raw_data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="c1"># grab first column from csv file</span>
+<span class="n">column_1</span> <span class="o">=</span> <span class="p">[</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">columns</span> <span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">column_1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will do this part in class together.</p>
+</div>
+</section>
+<section id="electric-vehicle-dataset">
+<h3>Electric Vehicle Dataset<a class="headerlink" href="#electric-vehicle-dataset" title="Link to this heading">#</a></h3>
+<p>You can download the full dataset <a class="reference download internal" download="" href="../../../../_downloads/d66ceb75fc01dc7db3930a7b9e4c88a8/electric-vehicle-population-data.csv"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
+<p>The following table is the a preview of the data you will be using for this project.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id7">
+<caption><span class="caption-text">Electric Vehicles in Washington State</span><a class="headerlink" href="#id7" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>VIN (1-10)</p></td>
+<td><p>County</p></td>
+<td><p>City</p></td>
+<td><p>State</p></td>
+<td><p>Postal Code</p></td>
+<td><p>Model Year</p></td>
+<td><p>Make</p></td>
+<td><p>Model</p></td>
+<td><p>Electric Vehicle Type</p></td>
+<td><p>Clean Alternative Fuel Vehicle (CAFV) Eligibility</p></td>
+<td><p>Electric Range</p></td>
+<td><p>Base MSRP</p></td>
+<td><p>Legislative District</p></td>
+<td><p>DOL Vehicle ID</p></td>
+<td><p>Vehicle Location</p></td>
+<td><p>Electric Utility</p></td>
+<td><p>2020 Census Tract</p></td>
+</tr>
+<tr class="row-even"><td><p>5UXTA6C03P</p></td>
+<td><p>King</p></td>
+<td><p>Seattle</p></td>
+<td><p>WA</p></td>
+<td><p>98177</p></td>
+<td><p>2023</p></td>
+<td><p>BMW</p></td>
+<td><p>X5</p></td>
+<td><p>Plug-in Hybrid Electric Vehicle (PHEV)</p></td>
+<td><p>Clean Alternative Fuel Vehicle Eligible</p></td>
+<td><p>30</p></td>
+<td><p>0</p></td>
+<td><p>36</p></td>
+<td><p>218985539</p></td>
+<td><p>POINT (-122.38242499999996 47.77279000000004)</p></td>
+<td><p>CITY OF SEATTLE - (WA)|CITY OF TACOMA - (WA)</p></td>
+<td><p>53033001600</p></td>
+</tr>
+<tr class="row-odd"><td><p>1FMCU0EZXN</p></td>
+<td><p>Yakima</p></td>
+<td><p>Moxee</p></td>
+<td><p>WA</p></td>
+<td><p>98936</p></td>
+<td><p>2022</p></td>
+<td><p>FORD</p></td>
+<td><p>ESCAPE</p></td>
+<td><p>Plug-in Hybrid Electric Vehicle (PHEV)</p></td>
+<td><p>Clean Alternative Fuel Vehicle Eligible</p></td>
+<td><p>38</p></td>
+<td><p>0</p></td>
+<td><p>15</p></td>
+<td><p>197264322</p></td>
+<td><p>POINT (-120.37951169999997 46.55609000000004)</p></td>
+<td><p>PACIFICORP</p></td>
+<td><p>53077001702</p></td>
+</tr>
+<tr class="row-even"><td><p>1G1FW6S03J</p></td>
+<td><p>King</p></td>
+<td><p>Seattle</p></td>
+<td><p>WA</p></td>
+<td><p>98117</p></td>
+<td><p>2018</p></td>
+<td><p>CHEVROLET</p></td>
+<td><p>BOLT EV</p></td>
+<td><p>Battery Electric Vehicle (BEV)</p></td>
+<td><p>Clean Alternative Fuel Vehicle Eligible</p></td>
+<td><p>238</p></td>
+<td><p>0</p></td>
+<td><p>36</p></td>
+<td><p>168549727</p></td>
+<td><p>POINT (-122.37275999999997 47.689685000000054)</p></td>
+<td><p>CITY OF SEATTLE - (WA)|CITY OF TACOMA - (WA)</p></td>
+<td><p>53033003000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The meaning of the columns was discussed in more detail in <a class="reference internal" href="#project-one-background"><span class="std std-ref">Background</span></a>. Refer to that section for further information on this dataset.</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html">matplotlib bar charts</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/gallery/color/named_colors.html">matplotlib colors</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">python dictionaries</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals">python string templating</a></p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_python.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_quantative.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Histograms and Boxplots</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instructions">Instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-vehicles-in-washington-state">Electric Vehicles in Washington State</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make">Make</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#clean-alternative-fuel-vehicle-cafv-eligibility">Clean Alternative Fuel Vehicle (CAFV) Eligibility</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-vehicle-type">Electric Vehicle Type</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-one-bar-charts">Bar Charts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-frills">No Frills</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked">Stacked</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-operations">Set Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">No Frills</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Stacked</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datasets">Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loading-data">Loading Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-vehicle-dataset">Electric Vehicle Dataset</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1909 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="dark">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Graphical Representations &#8212; elara</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "dark";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=7f0c073e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-BRG311ZM0P"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-BRG311ZM0P');
+            </script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_pedagogy/statistics/00_graphs';</script>
+    <script src="../../_static/js/custom-icons.js?v=30552003"></script>
+    <link rel="canonical" href="https://elara.chinchalinchin.com/02_pedagogy/statistics/00_graphs.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Point Estimation" href="01_estimation.html" />
+    <link rel="prev" title="Statistics" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="dark">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">elara</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://hub.docker.com/u/chinchalinchin" title="Docker" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-docker fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Docker</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/chinchalinchin/" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/user/chinchalinchin/" title="PyPi" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-pypi fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">PyPi</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/grant-moore-674677353/" title="LinkedIn" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.facebook.com/grant.moore.125836/" title="Facebook" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-custom fa-facebook fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../00_canon/index.html">Canon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/00_resume.html">Resume</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../00_canon/01_gallery.html">Gallery</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../00_canon/00_automata/index.html">Automata</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../00_canon/00_automata/00_mathematical.html">Mathematical</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../01_epistemia/index.html">Epistemia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/00_radix.html">Radix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/01_datum.html">Datum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/02_tabula.html">Tabula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/03_verborum.html">Verborum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/04_lexicon.html">Lexicon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/05_theosophy.html">Theosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/06_axiomata.html">Axiomata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/07_probatum.html">Probatum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/08_florilegium.html">Florilegium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../01_epistemia/09_menagerie.html">Menagerie</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Pedagogy</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../assignments/index.html">Assignments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../assignments/problems/index.html">Problems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/calculator/index.html">Calculator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/00_algebra.html">Alegbra</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/01_logic.html">Logic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/02_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/03_calculus.html">Calculus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/04_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/05_distributions.html">Distributions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/06_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/problems/07_inference.html">Inference</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../assignments/projects/index.html">Projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/projects/python/index.html">Python Projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../assignments/projects/calculator/index.html">Calculator Projects</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../technology/index.html">Technology</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../technology/calculator/index.html">TI-84 Calculator</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/00_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/01_statistics.html">Statistics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/02_probability.html">Probability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/03_graphic.html">Graphing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/04_program.html">Programs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/05_videos.html">Videos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/calculator/06_references.html">Calculator References</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../technology/python/index.html">Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/00_shell.html">Online Python Shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/01_setup.html">Python Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/02_basics.html">Basics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/03_sets.html">Sets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/04_functions.html">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/05_plots.html">Plots</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/06_files.html">Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/07_controls.html">Control Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/08_web.html">The Internet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../technology/python/09_demos.html">Demonstrations</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../foundations/index.html">Foundations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/00_history.html">Knowledge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/01_logic.html">Logic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../foundations/02_sets.html">Set Theory</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../probability/index.html">Probability</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../probability/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/01_combinatorics.html">Combinatorics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/02_conditional.html">Conditional Probability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probability/03_random_variables.html">Random Variables</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Statistics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Graphical Representations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_estimation.html">Point Estimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_correlation.html">Correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_regression.html">Linear Regression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_sampling.html">Sampling Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_confidence.html">Confidence Intervals</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../distributions/index.html">Distributions</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/00_bernoulli.html">Bernoulli Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/01_geometric.html">Geometric Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/02_binomial.html">Binomial Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/03_uniform.html">Uniform Distribution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distributions/04_normal.html">Normal Distribution</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../inference/index.html">Inference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../inference/00_introduction.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/01_bias.html">Statistical Bias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/02_design.html">Experimental Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/03_hypotheses.html">Hypothesis Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/04_mean.html">Population Mean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/05_proportion.html">Population Proportion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../inference/06_variance.html">Population Standard Deviation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../03_theurgy/index.html">Theurgy</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/index.html">Universalis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/index.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/01_meta.html">Module: Meta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/02_object.html">Module: Object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/03_voice.html">Module: Voice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/04_inflection.html">Module: Inflection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/05_words.html">Module: Words</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/modules/06_rhythm.html">Module: Rhythm</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/index.html">Plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/01_lexicon.html">Plugin: Lexicon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/02_functions.html">Plugin: Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/plugins/03_procedures.html">Plugin: Procedures</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/index.html">Exercises</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/01_rhymations.html">Exercises: Rhymations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../03_theurgy/01_universalis/exercises/02_games.html">Exercises: Games</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/02_palindromia/index.html">Palindromia</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/00_glossary.html">Glossary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/01_introduction.html">Palindromic Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/02_language.html">Section I: Language</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/03_corpora.html">Section II: Corpora</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/04_structures.html">Section III: Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/05_palindromes.html">Section IV: Palindromes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/06_analysis.html">Section V: Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/07_postulates.html">Section VI: Postulates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/08_appendix.html">Section VII: Appendix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/09_data.html">Section VIII: Data</a></li>
+
+
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/02_palindromia/10_app.html">Section IX: Code</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03_theurgy/03_syntagmics/index.html">Syntagmics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/00_introduction.html">Section I: Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/01_schemas.html">Section II: Schemas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/02_decompositions.html">Section III: Decompositions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03_theurgy/03_syntagmics/03_theorems.html">Section IV: Calculus</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../04_analecta/index.html">Analecta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/1996.html">1996</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2014.html">2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2015.html">2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2016.html">2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2021.html">2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2022.html">2022</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2023.html">2023</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2024.html">2024</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../04_analecta/2025.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../05_oeuvre/index.html">Oeuvre</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/index.html">Abstracta</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/00.html">I: The Unicode Ode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/abstracta/2025/01.html">II: The Invocation of Metric Code</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/index.html">Ballads</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/ballads/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/00.html">I: The Ballad of the Isle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/ballads/2025/01.html">II: The Mad Muses of Sad Cracked Jack</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/index.html">Elegies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/elegies/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/elegies/2025/00.html">I: Elemental Elegy</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/haikus/index.html">Haikus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../05_oeuvre/haikus/00.html">2025</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/index.html">Lyrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/00.html">I: Wine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/01.html">II: Sunday Ghosts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/02.html">III: On The Origin of Wind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/03.html">IV: The World That Spins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/04.html">V: Games of Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/05.html">VI: Ink (Librarian I)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/06.html">VII: Silver Gifts (Librarian II)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/07.html">VIII: Eternally (Librarian III)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/08.html">IX: Landscapes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/lyrics/2025/09.html">X: Father’s Lullaby</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/odes/index.html">Odes</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/odes/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/00.html">I: An Ode To Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/odes/2025/01.html">II: Ode to the Heron</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/index.html">Pantoums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/00.html">I: LeAnna’s Pantoum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/pantoums/2025/01.html">II: The Pantoums of Dementia</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/poems/index.html">Poems</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2009/index.html">2009</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/00.html">I: The Age of Poetry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/01.html">II: The Mid-Winter March</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/02.html">III: The End</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/03.html">IV: Dreams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/04.html">V: Parallel Universes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/05.html">VI: Halloween</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/06.html">VII: Clouds of Fear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2009/07.html">VIII: Truth</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2015/index.html">2015</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2015/00.html">I: Is</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2022/index.html">2022</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2022/00.html">I: Mephisto and God</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/poems/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/00.html">I: Regret</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/01.html">II: Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/02.html">III: Absurdity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/03.html">IV: Dystopia</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/04.html">V: ό ποιητα, ἢ πῖθι ἢ ἄπιθι</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/05.html">VI: Kingdoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/06.html">VII: The Paronymous Polyptotons of Love</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/07.html">VII: Designs (Librarian IV)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/08.html">IX: Bird (Librarian V)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/09.html">X: Photographs of Autumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/10.html">XI: The Curse of Rain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/11.html">XII: Let It Simmer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/12.html">XIII: Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/13.html">XIV: Turkey Vultures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/14.html">XV: Faustus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/15.html">XVI: Recursion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/16.html">XVII: Engrams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/17.html">XVIII: The Law of Duality</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/18.html">XIX: Generations of Gravity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/poems/2025/19.html">XX: Imagistical 5000</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/index.html">Rondeaus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/00.html">I: The Winter Rondeau of Cumberland</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/01.html">II: Rondeau for the River Rats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/rondeaus/2025/02.html">III: Roundels of Remembrance</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/index.html">Sonnets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/00.html">I: You as a Sonnet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/01.html">II: Sonnet for the Demented</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/02.html">III: A Sonnet for Cumberland MD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/03.html">IV: Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/04.html">V: Stranded</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/sonnets/2025/05.html">VI: Poisoned</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/index.html">Triolets</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/triolets/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/00.html">I: Forever</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/triolets/2025/01.html">II: Letters</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/index.html">Villanelles</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/index.html">2025</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/00.html">I: The Villanelle of Viola Elle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/01.html">II: The Haunted Cathedral</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../05_oeuvre/villanelles/2025/02.html">III: Plots</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/02_pedagogy/statistics/00_graphs.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Graphical Representations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-distributions">Frequency Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ungrouped-distributions">Ungrouped Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-way-tables">Two Way Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#joint-frequency-distribution">Joint Frequency Distribution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-frequency-distribution">Marginal Frequency Distribution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-frequency-distribution">Conditional Frequency Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouped-distributions">Grouped Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variations">Variations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-plots">Dot Plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stem-leaf-plots">Stem-Leaf Plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-frequency-plots">Relative Frequency Plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pie-charts">Pie Charts</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-shapes">Distribution Shapes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform">Uniform</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normal">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bimodal">Bimodal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#skewed">Skewed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ogives">Ogives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Distribution Shapes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Uniform</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Bimodal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Skewed</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Variations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked-bar-chart">Stacked Bar Chart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots">Boxplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construction">Construction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#five-number-summary">Five Number Summary</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Distribution Shapes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Skewed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="graphical-representations">
+<span id="id1"></span><h1>Graphical Representations<a class="headerlink" href="#graphical-representations" title="Link to this heading">#</a></h1>
+<p>In this section we study various ways of representing data graphically.</p>
+<section id="frequency-distributions">
+<span id="id2"></span><h2>Frequency Distributions<a class="headerlink" href="#frequency-distributions" title="Link to this heading">#</a></h2>
+<p>A <em>frequency distribution</em> is the foundation of most statistical graphs. In order to interpret graphs like histograms or pie charts, you must first understand what a <em>frequency distribution</em> represents.</p>
+<p>A <em>frequency distribution</em> is a tabular summary (table) of a sample of data. It tells us how often each observation occurs.</p>
+<section id="ungrouped-distributions">
+<span id="ungrouped-frequency-distributions"></span><h3>Ungrouped Distributions<a class="headerlink" href="#ungrouped-distributions" title="Link to this heading">#</a></h3>
+<p>The concept of an <em>ungrouped distribution</em> is intuitive and best seen by example.</p>
+<dl>
+<dt>Example</dt><dd><p>Suppose you ask 10 people their favorite color and the following data set represents their answers,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ r, b, g, g, r, r, y, o, r, b \}\]</div>
+<p>Where</p>
+<blockquote>
+<div><p><em>b</em> = response of “blue”</p>
+<p><em>g</em> = response of “green”</p>
+<p><em>o</em> = response of “orange”</p>
+<p><em>r</em> = response of “red”</p>
+<p><em>y</em> = response of “yellow “</p>
+</div></blockquote>
+<p>Describe the <em>distribution</em> of this sample with a an ungrouped frequency distribution.</p>
+</dd>
+</dl>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>In this example, the individual would be the person being surveyed, while the variable being observed is their favorite color. The variable in this instance is <em>categorical</em>.</p>
+</div>
+<p>An <em>ungrouped frequency distribtion</em> is simply a table where each entry represents the <a class="reference internal" href="01_estimation.html#frequency"><span class="std std-ref">Frequency</span></a> of every possible observation,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(x_i\)</span></p></th>
+<th class="head"><p>f(x)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>b</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>g</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>o</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>r</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>y</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Notice the sum of the right hand column totals to the number of observations in the sample, <span class="math notranslate nohighlight">\(n = 10\)</span>. We summarize this result below,</p>
+<div class="math notranslate nohighlight">
+\[n = \sum_{x_i \in S} f(x_i)\]</div>
+<p>Take note of the index in this sum. The <span class="math notranslate nohighlight">\(x_i \in S\)</span> symbol can be read as “<em>for every</em> <span class="math notranslate nohighlight">\(x_i\)</span> <em>in S</em>”. This notation is used to take into account observations that may have the same value, as in this example where the observations <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code> and <code class="docutils literal notranslate"><span class="pre">r</span></code> occur multiple times. In other words, each term <span class="math notranslate nohighlight">\(x_i\)</span> of the sum is a <em>unique value</em>. Its multiplicity derives from the frequency <span class="math notranslate nohighlight">\(f(x_i)\)</span> by which it is multiplied.</p>
+<p>Contrast this against the notation employed in the <a class="reference internal" href="01_estimation.html#sample-mean-formula"><span class="std std-ref">sample mean formula</span></a></p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{ \sum^n_{i=1} x_i }{n}\]</div>
+<p>In the <a class="reference internal" href="01_estimation.html#sample-mean-formula"><span class="std std-ref">sample_mean_formula</span></a>, the index is over the observation order, i.e. from <span class="math notranslate nohighlight">\(i = 1, 2, 3 ..., n\)</span>. In this case, it may happen that <span class="math notranslate nohighlight">\(x_i = x_j\)</span> for some <span class="math notranslate nohighlight">\(i \neq j\)</span>. In other words, in the sample mean formula, it is possible for terms in the summation to <em>repeat</em>.</p>
+</section>
+<section id="two-way-tables">
+<span id="id3"></span><h3>Two Way Tables<a class="headerlink" href="#two-way-tables" title="Link to this heading">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This section includes a lot of terminology that will be covered in upcoming <a class="reference internal" href="../probability/index.html#probability"><span class="std std-ref">Probability</span></a> and <a class="reference internal" href="../foundations/02_sets.html#set-theory"><span class="std std-ref">Set Theory</span></a> sections.</p>
+</div>
+<p>Often times, you are observing more than one <em>categorical variable</em> on a single individual. If each observation in the sample has two <em>attributes</em> (<em>dimensions</em>, <em>properties</em>), we call such data <em>bivariate</em>. A <em>bivariate</em> data set is represent with a set of <em>ordered pairs</em> <span class="math notranslate nohighlight">\((x_i, y_i)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ (x_1, y_1), (x_2, y_2), ... , (x_n, y_n) \}\]</div>
+<p>For example, suppose we asked a sample of people the following questions:</p>
+<blockquote>
+<div><p>Have you seen the <em>Empire Strikes Back</em>?</p>
+<p>Have you seen the <em>The Two Towers</em>?</p>
+</div></blockquote>
+<p>We may represent their response to the first question as <span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span> and <span class="math notranslate nohighlight">\(\text{no}_{e}\)</span>, i.e. “yes, I have seen the <em>Empire Strikes Back</em>” and “no, I have not seen the <em>Empire Strikes Back</em>”.</p>
+<p>In a similar fashion, we may represent their response to the second question as <span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span> and <span class="math notranslate nohighlight">\(\text{no}_{t}\)</span>, i.e. “yes, I have seen <em>The Two Towers</em>” and “no, I have not seen <em>The Two Towers</em>”.</p>
+<p>Suppose we sampled a group of ten people and asked them these questions. Then we might represent their responses with the following sample <code class="docutils literal notranslate"><span class="pre">S</span></code>, where the <em>x</em> variable is their response to the first question and the <em>y</em> variable is their response to the second question,</p>
+<div class="math notranslate nohighlight">
+\[S = { (\text{yes}_{e}, \text{yes}_{t}), (\text{no}_{e}, \text{yes}_{t}), (\text{no}_{e}, \text{yes}_{t}), (\text{yes}_{e}, \text{no}_{t}), (\text{yes}_{e}, \text{yes}_{t}), (\text{yes}_{e}, \text{no}_{t}),(\text{yes}_{e}, \text{no}_{t}),(\text{yes}_{e}, \text{yes}_{t}), (\text{no}_{e}, \text{no}_{t}), (\text{yes}_{e}, \text{no}_{t})}\]</div>
+<p>Even with a small sample of <em>10</em>, this is a lot of information to process. A useful way to summarize this data into a more readable format is with a <em>two-way</em> table,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>outcomes</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{no}_{e}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{no}_{t}\)</span></p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <a class="reference internal" href="../foundations/02_sets.html#intersection"><span class="std std-ref">Intersection</span></a> of each row and column represents the simultaneous occurance of two <em>events</em>.</p>
+<aside class="topic">
+<p class="topic-title">Intersection</p>
+<p>The intersection of two events <strong>A</strong> and <strong>B</strong> is denoted <span class="math notranslate nohighlight">\(A \cap B\)</span>.</p>
+<p>This can be read as “<em>A</em> <strong>and</strong> <em>B</em>”. We will talk much more about <a class="reference internal" href="../foundations/02_sets.html#intersection"><span class="std std-ref">intersections</span></a> in later sections.</p>
+</aside>
+<p>There are four <em>events</em> here, but two of them are related to the others.</p>
+<p>To see this, let us define <strong>E</strong> to be the event of seeing the <em>Empire Strikes Back</em> and <strong>T</strong> to be the event of seeing <em>The Two Towers</em>.</p>
+<p>The complement of event is its <em>negation</em>.</p>
+<aside class="topic">
+<p class="topic-title">Complement</p>
+<p>The complement of an event <strong>A</strong> is denoted <span class="math notranslate nohighlight">\(A^c\)</span></p>
+<p>This can be read as “<strong>not</strong> <em>A</em>”. We will take more about <a class="reference internal" href="../foundations/02_sets.html#complement"><span class="std std-ref">complements</span></a> in later sections.</p>
+</aside>
+<p>If <strong>E</strong> is the event of seeing the <em>Empire Strikes Back</em>, then <span class="math notranslate nohighlight">\(E^c\)</span> is the event of <strong>not</strong> seeing the <em>Empire Strikes Back</em>. We call <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(E^c\)</span> <em>complementary events</em>.</p>
+<p>Similarly, if <strong>T</strong> is the event of seeing the <em>Two Towers</em>, then <span class="math notranslate nohighlight">\(T^c\)</span> is the event of <strong>not</strong> seeing the <em>Two Towers</em>. We call <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(T^c\)</span> <em>complementary events</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(E^c\)</span> <em>partition</em> the sample.</p>
+<p><span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(T^c\)</span> <em>partition</em> the sample.</p>
+<p><em>Complementary events</em> are a type of <em>partition</em>.</p>
+</div>
+<p>We can compose the events and their complements with the <em>operation</em> of <em>intersection</em>,</p>
+<aside class="topic">
+<p class="topic-title">Belonging</p>
+<p>The symbol <span class="math notranslate nohighlight">\(\in\)</span> is the Greek letter <em>epsilon</em>. It represents the <em>relation of belonging</em>. We say <em>outcomes belong to events</em>.</p>
+</aside>
+<div class="admonition-math-text-yes-e-text-yes-t-in-e-cap-t admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\((\text{yes}_{e}, \text{yes}_{t}) \in E \cap T\)</span></p>
+<p>The event of seeing both movies.</p>
+<p>In other words, seeing <em>Empire Strikes Back</em> <strong>and</strong> seeing <em>The Two Towers</em>.</p>
+</div>
+<div class="admonition-math-text-yes-e-text-no-t-in-e-cap-t-c admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\((\text{yes}_{e}, \text{no}_{t}) \in E \cap T^c\)</span></p>
+<p>The event of seeing the <em>Empire Strikes Back</em> but not <em>The Two Towers</em>.</p>
+<p>In other words, seeing the <em>Empire Strikes Back</em> <strong>and</strong> not seeing the <em>Two Towers</em>.</p>
+</div>
+<div class="admonition-math-text-no-e-text-yes-t-in-e-c-cap-t admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\((\text{no}_{e}, \text{yes}_{t}) \in E^c \cap T\)</span></p>
+<p>The event of not seeing the <em>Empire Strikes Back</em>, but seeing the <em>Two Towers</em>.</p>
+<p>In other words, not seeing the <em>Empire Strikes Back</em> <strong>and</strong> seeing the <em>Two Towers</em>.</p>
+</div>
+<div class="admonition-math-text-no-e-text-no-t-in-e-c-cap-t-c admonition">
+<p class="admonition-title"><span class="math notranslate nohighlight">\((\text{no}_{e}, \text{no}_{t}) \in E^c \cap T^c\)</span></p>
+<p>The event of seeing neither movie.</p>
+<p>In other words, not seeing the <em>Empire Strikes Back</em> <strong>and</strong> not seeing the <em>Two Towers</em>.</p>
+</div>
+<p>Notice, just like the pair of events <span class="math notranslate nohighlight">\(E\)</span> and <span class="math notranslate nohighlight">\(E^c\)</span> and the pair of events <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(T^c\)</span>, the four events</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E \cap T\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(E \cap T^c\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(E^c \cap T\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(E^c \cap T^c\)</span></p></li>
+</ul>
+<p>form a <em>partition of the sample</em>. By this, we mean all of these events aggregated together comprise the <em>entire</em> sample <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>With these definitions in hand, we can think of the table being filled like so,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>events</p></td>
+<td><p><span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E^c\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E \cap T\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E^c \cap T\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T^c\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E \cap T^c\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(E^c \cap T^c\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Events</em> are composed of <em>outcomes</em>. Or, as we phrased it above, <em>outcomes</em> belong to <em>events</em>. <em>Outcomes</em> represent the <em>values</em> the observable variables assumes; <em>Events</em> represent ways of “<em>parsing</em>” or “<em>grouping</em>” the outcomes into abstractions, otherwise known as <a class="reference internal" href="../foundations/02_sets.html#set-theory"><span class="std std-ref">sets</span></a>.</p>
+<p>In symbols,</p>
+<div class="math notranslate nohighlight">
+\[(\text{yes}_{t}, \text{yes}_{e}) \in E \cap T\]</div>
+<p>We read this as,</p>
+<blockquote>
+<div><p>the outcome of <span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span> and <span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span> is <em>in</em> the event <span class="math notranslate nohighlight">\(E \cap T\)</span>.</p>
+</div></blockquote>
+</div>
+<p>The <em>joint probability</em> (<em>percentage</em>) of two <em>events</em> occuring is given by <a class="reference internal" href="../probability/00_introduction.html#classical-definition-of-probability"><span class="std std-ref">classical definition of probability</span></a>. For example, the percentage of people who have seen the <em>Empire Strkes Back</em> and the <em>Two Towers</em>,</p>
+<div class="math notranslate nohighlight">
+\[P(E \cap T) = \frac{n(E \cap T)}{n(S)}\]</div>
+<p>In this case, <span class="math notranslate nohighlight">\(n(S)=10\)</span>. To find <span class="math notranslate nohighlight">\(n(E \cap T)\)</span>, we count up all the <em>outcomes</em> that satisfy the condition of seeing both movines, or in symbols,</p>
+<div class="math notranslate nohighlight">
+\[(\text{yes}_{t}, \text{yes}_{e}) \in E \cap T\]</div>
+<p>And similarly for the rest of the events.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>outcomes</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{no}_{e}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span></p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{no}_{t}\)</span></p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[P(E \cap T) = \frac{3}{10} = 0.30\]</div>
+<p>In plain English, “<em>30 percent of people in this sample have seen both movies</em>”.</p>
+<p>There are many things a table like this tells us. In the next few sections we will take a look at a few of the important facts it is telling us.</p>
+<p>As we study this table, keep in mind the following question,</p>
+<div class="admonition-think-about-it admonition">
+<p class="admonition-title">Think About It</p>
+<p>In what ways does this table add up to 100%?</p>
+</div>
+<p>Whenever we encounter something that sums to 100%, it is a fair guess it represents a type of <em>distribution</em>.</p>
+<section id="joint-frequency-distribution">
+<span id="id4"></span><h4>Joint Frequency Distribution<a class="headerlink" href="#joint-frequency-distribution" title="Link to this heading">#</a></h4>
+<p>The most obvious to make this table equal <em>100%</em> is through its <em>joint frequency distribution</em>. Each entry in the table must sum to the total number of observations,</p>
+<div class="math notranslate nohighlight">
+\[n(E \cap T) + n(E \cap T^c) + n(E^c \cap T) + n(E^c \cap T^c) = n\]</div>
+<p>Where <span class="math notranslate nohighlight">\(n\)</span> is the total number. In this case, we have,</p>
+<div class="math notranslate nohighlight">
+\[3 + 4 + 2 + 1 = 10\]</div>
+<p>We may also express this in terms of <em>relative joint frequency</em>, by dividing through by the total number of observations, 10,</p>
+<div class="math notranslate nohighlight">
+\[P(E \cap T) + P(E \cap T^c) + P(E^c \cap T) + P(E^c \cap T^c) = 1\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{3}{10} + \frac{4}{10} + \frac{2}{10} + \frac{1}{10} = 1\]</div>
+<p>Take note: each event, <span class="math notranslate nohighlight">\(E \cap T\)</span>, <span class="math notranslate nohighlight">\(E \cap T^c\)</span>, <span class="math notranslate nohighlight">\(E^c \cap T\)</span> and <span class="math notranslate nohighlight">\(E^c \cap T^c\)</span>, taken together divided the entire sample <span class="math notranslate nohighlight">\(S\)</span> in groups that share no outcomes. In other words, each event is <em>mutually exclusive</em> with every other event. More than that, the events compass the <em>entire</em> sample space.</p>
+<p>We call events that divide the <em>entire</em> sample into mutually exclusive groups a <em>partition</em> of the sample.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Think of an <em>event</em> as a <em>group</em> of outcomes. Or, more precisely, a <a class="reference internal" href="../foundations/02_sets.html#set-theory"><span class="std std-ref">set</span></a>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Any time a set of events <em>partition</em> an <em>entire</em> sample into sets of <em>mutually exclusive</em> outcomes, then those events form a <em>distribution</em>.</p>
+</div>
+</section>
+<section id="marginal-frequency-distribution">
+<span id="id5"></span><h4>Marginal Frequency Distribution<a class="headerlink" href="#marginal-frequency-distribution" title="Link to this heading">#</a></h4>
+<p>In the previous section, we observed both values of the categorical variable simultaneously. We may choose, for whatever reason, to ignore one of the variable. For example, if instead of asking every person in our example if they had seen the <em>Empire Strikes Back</em> <strong>and</strong> the <em>Two Towers</em>, we had only asked each individual the only first question, then we would have an ordinary frequency distribution. In others, ignoring the <em>y</em> variable, we can get the following distribution,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{no}_{e}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Notice this row represents the sum of each column in the original <em>joint frequency</em> distribution.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can think of this distribution being attached to the bottom <em>margin</em> of the joint frequency distribution as a row of <em>totals</em>,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>outcomes</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{no}_{e}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span></p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{no}_{t}\)</span></p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Totals</p></td>
+<td><p>7</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Moreover, it must also total to <em>n</em>,</p>
+<div class="math notranslate nohighlight">
+\[n(E) + n(E^c) = n\]</div>
+<p>This may also be expressed in terms of percentages as,</p>
+<div class="math notranslate nohighlight">
+\[P(E) + P(E^c) = 1\]</div>
+<p>Similarly, if we had restricted our attention to only the question of whether people in the sample had seen the <em>Two Towers</em>, we would have,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>x_i</p></td>
+<td><p>f(x_i)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span></p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{no}_{t}\)</span></p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Notice this column represents the sum of each row in the original <em>joint frequency</em> distribution.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can think of this table being attached to the right <em>margin</em> of the <em>joint frequency distribution</em> as a column of <em>totals</em>,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>outcomes</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{yes}_{e}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{no}_{e}\)</span></p></td>
+<td><p>Total</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\text{yes}_{t}\)</span></p></td>
+<td><p>3</p></td>
+<td><p>2</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{no}_{t}\)</span></p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Morever, it must also total to <em>n</em>,</p>
+<div class="math notranslate nohighlight">
+\[n(T) + n(T^c) = n\]</div>
+<p>Or, expressed in terms of percentages,</p>
+<div class="math notranslate nohighlight">
+\[P(T) + P(T^c) = 1\]</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The equation,</p>
+<div class="math notranslate nohighlight">
+\[P(A) + P(A^c) = 1\]</div>
+<p>is known as the <a class="reference internal" href="../foundations/02_sets.html#law-of-complements"><span class="std std-ref">Law of Complements</span></a>.</p>
+</div>
+<p>When one variable is ignored entirely, i.e. if only one variable is observed for each individual, the distribution formed by the <em>partition</em> is known as a <em>marginal frequency distribution</em>.</p>
+</section>
+<section id="conditional-frequency-distribution">
+<span id="id6"></span><h4>Conditional Frequency Distribution<a class="headerlink" href="#conditional-frequency-distribution" title="Link to this heading">#</a></h4>
+<p>Yet another way to make this table equal <em>100%</em> is through its <em>conditional frequency distribution</em>. A <em>conditional frequency distribution</em> can be understood as the distribution of one variable <em>given the value of the other variable</em>.</p>
+<p>A more precise definition of a <em>conditional frequency</em> of <span class="math notranslate nohighlight">\(x_i\)</span> given <span class="math notranslate nohighlight">\(y_i\)</span> might go,</p>
+<blockquote>
+<div><p>The <em>conditional frequency</em> is proportion of times the outcomes <span class="math notranslate nohighlight">\(x_i\)</span> <strong>and</strong> <span class="math notranslate nohighlight">\(y_i\)</span> are observed simultaneously as compared to the number of times the outcome <span class="math notranslate nohighlight">\(y_i\)</span> is observed alone.</p>
+</div></blockquote>
+<p>We can state this definition mathematically,</p>
+<div class="math notranslate nohighlight">
+\[P(A | B) = \frac{n(A \cap B)}{n(B)}\]</div>
+<p>Where <strong>A</strong> is defined as the event of the variable <span class="math notranslate nohighlight">\(x_i\)</span> being observed to be a particular value and <strong>B</strong> is defined as the event of the variable <span class="math notranslate nohighlight">\(y_i\)</span> being observed to be a particular value.</p>
+<p>In other words, in the context of our example, where each variable may assume two values,</p>
+<div class="math notranslate nohighlight">
+\[x = \text{yes}_e, \text{no}_e\]</div>
+<div class="math notranslate nohighlight">
+\[y = \text{yes}_t, \text{no}_t\]</div>
+<p>We have the following outcomes that belong to <strong>E</strong>, the event of seeing the <em>Empire Strikes Back</em>,</p>
+<div class="math notranslate nohighlight">
+\[(\text{yes}_e, \text{yes}_t) \in E\]</div>
+<div class="math notranslate nohighlight">
+\[(\text{yes}_e, \text{no}_t) \in E\]</div>
+<p>And, likewise, we have the following outcomes that belong to <strong>T</strong>, the event of seeing the <em>Two Towers</em>,</p>
+<div class="math notranslate nohighlight">
+\[(\text{yes}_e, \text{yes}_t) \in T\]</div>
+<div class="math notranslate nohighlight">
+\[(\text{no}_e, \text{yes}_t) \in T\]</div>
+<p>The <em>conditional distribution</em> of either variable with respect to the other can be understood as follows:</p>
+<p>The <em>conditional distribution of people who have seen the Empire Strikes Back</em> answers the following question:</p>
+<ul class="simple">
+<li><p>What percent of the people who have seen <em>Empire Strikes Back</em> have seen the <em>Two Towers</em>?</p></li>
+<li><p>What percent of the people who have seen <em>Empire Strike Back</em> have <em>not</em> seen the <em>Two Towers</em>?</p></li>
+</ul>
+<p>In other words, <em>given</em> a person has seen <em>Empire Strikes Back</em>, the conditional distribution will tell you what <em>percent</em> of the <strong>reduced</strong> sample has seen or not seen the <em>Two Towers</em>.</p>
+<p>In this case, we are conditioning on the <span class="math notranslate nohighlight">\(x\)</span> variable, the variable which measures whether or not someone has <em>Empire Strikes Back</em>. We may also <em>condition</em> on the <span class="math notranslate nohighlight">\(y\)</span> variable, to get the <em>conditional distribution of people who have seen the Two Towers</em>. This distribution will answer the following questions,</p>
+<ul class="simple">
+<li><p>What percent of the people who have seen <em>Two Towers</em> have seen the <em>Empire Strikes Back</em>?</p></li>
+<li><p>What percent of the people who have seen <em>Two Towers</em> have <em>not</em> seen the <em>Empire Strikes Back</em>?</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The questions:</p>
+<ul class="simple">
+<li><p>What percent of the people who have seen <em>Empire Strikes Back</em> have seen the <em>Two Towers</em>?</p></li>
+<li><p>What percent of the people who have seen <em>Two Towers</em> have seen the <em>Empire Strikes Back</em>?</p></li>
+</ul>
+<p>are not asking the same question. The difference is subtle, but huge!</p>
+</div>
+<p>In the first case, we are narrowing our attention down to <em>only</em> those people who have seen the <em>Empire Strikes Back</em> and asking what percent of them have seen the <em>Two Towers</em>. Therefore, to calculate the conditional frequency of <em>Two Towers</em> viewership given <em>Empire Strikes Back</em> viewership ,</p>
+<div class="math notranslate nohighlight">
+\[P(T | E) = \frac{n(T \cap E)}{n(E)} = \frac{3}{7}\]</div>
+<p>Whereas in the second case, we are narrowing our attention down to <em>only</em> those people who have seen <em>Two Towers</em> and asking what percent of them have seen the <em>Empire Strikes Back</em>. Therefore, to calculate the conditional frequency of <em>Empire Strikes Back</em> viewership given <em>Two Towers</em> viewership,</p>
+<div class="math notranslate nohighlight">
+\[P(E | T) = \frac{n(T \cap E)}{n(T)} = \frac{3}{5}\]</div>
+<p>In other words, a higher percentage of <em>Two Towers</em> viewers have also seen <em>Empire Strikes Back</em> than the percentage of <em>Empire Strikes Back</em> viewers who have also seen the <em>Two Towers</em>.</p>
+</section>
+</section>
+<section id="grouped-distributions">
+<span id="grouped-frequency-distributions"></span><h3>Grouped Distributions<a class="headerlink" href="#grouped-distributions" title="Link to this heading">#</a></h3>
+<p>Up to this point, we have been dealing with <em>categorical</em> data. An <em>ungrouped</em> distribution is very easily extracted from <em>categorical</em> data. When we consider <em>quantitative</em> data, the situation becomes more complicated.</p>
+<p><em>Quantitative</em> data comes in two forms:</p>
+<ul class="simple">
+<li><p>Discrete</p></li>
+<li><p>Continuous</p></li>
+</ul>
+<aside class="topic">
+<p class="topic-title">Discrete Data</p>
+<p>Discrete data are <em>countable</em>.</p>
+<dl class="simple">
+<dt>Examples</dt><dd><ul class="simple">
+<li><p>Number of passengers on a train</p></li>
+<li><p>Number of goals scored in a soccer game</p></li>
+<li><p>Number of defective batteries in a sample of 100.</p></li>
+</ul>
+</dd>
+</dl>
+</aside>
+<aside class="topic">
+<p class="topic-title">Continuous Data</p>
+<p>Continuous data are <em>uncountable</em>.</p>
+<dl class="simple">
+<dt>Examples</dt><dd><ul class="simple">
+<li><p>Temperature on a summer day</p></li>
+<li><p>Mass of a body</p></li>
+<li><p>The charge of an electron</p></li>
+</ul>
+</dd>
+</dl>
+</aside>
+<p>When the data are <em>discrete</em>, it <em>may</em> be possible to get by with an <em>ungrouped</em> distirbution, however <em>ungrouped</em> distributions can get cumbersome when the <a class="reference internal" href="01_estimation.html#range"><span class="std std-ref">Range</span></a> of the data is very large. Consider a sample of data composed of the first 100 random natural numbers</p>
+<div class="math notranslate nohighlight">
+\[S = \{ 97, 52, 93, ..., 10 \}\]</div>
+<p>In this case, counting the frequency of each individual observation can quickly become tedious.</p>
+<p>When the data are continuous, <em>ungrouped</em> distributions are no longer a tenable solution. For example, consider the following dataset which represents the eruption length and period between eruptions for the famous geyser <a class="reference external" href="https://en.wikipedia.org/wiki/Old_Faithful">Old Faithful</a> at Yellowstone National Park in Wymoing.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="id25">
+<caption><span class="caption-text">Old Faithful Eruption and Waiting Times</span><a class="headerlink" href="#id25" title="Link to this table">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>eruptions</p></td>
+<td><p>waiting</p></td>
+</tr>
+<tr class="row-even"><td><p>3.6</p></td>
+<td><p>79</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.8</p></td>
+<td><p>54</p></td>
+</tr>
+<tr class="row-even"><td><p>3.333</p></td>
+<td><p>74</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.283</p></td>
+<td><p>62</p></td>
+</tr>
+<tr class="row-even"><td><p>4.533</p></td>
+<td><p>85</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.883</p></td>
+<td><p>55</p></td>
+</tr>
+<tr class="row-even"><td><p>4.7</p></td>
+<td><p>88</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.6</p></td>
+<td><p>85</p></td>
+</tr>
+<tr class="row-even"><td><p>1.95</p></td>
+<td><p>51</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.35</p></td>
+<td><p>85</p></td>
+</tr>
+<tr class="row-even"><td><p>1.833</p></td>
+<td><p>54</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.917</p></td>
+<td><p>84</p></td>
+</tr>
+<tr class="row-even"><td><p>4.2</p></td>
+<td><p>78</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.75</p></td>
+<td><p>47</p></td>
+</tr>
+<tr class="row-even"><td><p>4.7</p></td>
+<td><p>83</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.167</p></td>
+<td><p>52</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Attempting to create an ungrouped distribution of this data would be a futile effort. Therefore, the standard approach with datasets like this is to create an <em>grouped</em> frequency distribution.</p>
+<section id="steps">
+<h4>Steps<a class="headerlink" href="#steps" title="Link to this heading">#</a></h4>
+<p>If you are given a sample of <em>n</em> data points <span class="math notranslate nohighlight">\(S = \{ x_1, x_2, ... , x_n \}\)</span>, then the steps for finding a <em>grouped</em> frequency distribution are as follows,</p>
+<ol class="arabic simple">
+<li><p>Find the range of the data set.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[R = max(S) - min(S)\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Choose a number of classes. Typically between 5  and 20, depending on the size and type of data.</p></li>
+<li><p>Find the class width. Round up, if necessary.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[w = \frac{R}{n}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using the <a class="reference internal" href="01_estimation.html#ceiling-function"><span class="std std-ref">Ceiling Function</span></a> from a future section, we could simply write,</p>
+<div class="math notranslate nohighlight">
+\[w = \lceil \frac{R}{n} \rceil\]</div>
+<p>And the <em>rounding</em> would be implied.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Find the lower and upper class limits <strong>LL</strong><sub>i</sub> and <strong>UL</strong><sub>i</sub>, for each <em>i</em> up to <em>n</em>, i.e. for each class, by adding multiples of the class width to the sample minimum.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[LL_i = min(S) + (i-1) \cdot w\]</div>
+<div class="math notranslate nohighlight">
+\[UL_i = min(S) + i \cdot w\]</div>
+<div class="math notranslate nohighlight">
+\[i = 1, 2, ... , n\]</div>
+<ol class="arabic simple" start="5">
+<li><p>Sort the data set into classes and tally up the frequency of each class.</p></li>
+</ol>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Class Limits</p></td>
+<td><p>f(x)</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(LL_1 \leq x &lt; UL_1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(LL_1 \leq x &lt; UL_1)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(LL_2 \leq x &lt; UL_2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(LL_2 \leq x &lt; UL_2)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(LL_n \leq x \leq UL_n\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(LL_n \leq x &lt; UL_n)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Note each class is inclusive, <span class="math notranslate nohighlight">\(\leq\)</span>, with respect to the <em>lower limit</em>, while it is strictly exclusive, <span class="math notranslate nohighlight">\(&lt;\)</span>, with respect to the <em>upper limit</em>. This is so the classes are <em>mutually exclusive</em>, or to the say the same thing in a different way, a single observation cannot be assigned to two different classes; Every individual can belong to <em>only</em> one class.</p>
+<p>This applies to every class except the last, which must include the <em>upper limit</em>. Otherwise, the distribution would be missing a single value: the maximum value of the sample.</p>
+</div>
+<dl>
+<dt>Example</dt><dd><p>Suppose you measure the height of everyone in your class and get the following sample of data, where each observation in the data set is measured in feet,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ 5.7, 5.8, 5.5, 5.7, 5.9, 6.3, 5.3, 5.5, 5.4, 5.3, 5.7, 5.9 \}\]</div>
+<p>Find the grouped frequency distribution for this sample of data using <span class="math notranslate nohighlight">\(n = 5\)</span> classes.</p>
+</dd>
+</dl>
+<p>First we find the sample range,</p>
+<div class="math notranslate nohighlight">
+\[R = max(S) - min(S) = 6.3 - 5.3 = 1.0\]</div>
+<p>We divide this interval into 5 sub-intervals, called <em>classes</em>,</p>
+<div class="math notranslate nohighlight">
+\[w = \frac{1.0}{5} = 0.20\]</div>
+<p>Then the lower class limits and upper class limits are found by adding successive multiples of the class width to the minimum value of the sample.</p>
+<p>The limits of the first class are given by,</p>
+<div class="math notranslate nohighlight">
+\[LL_1 = 5.3 + 0 \cdot 0.20 = 5.3\]</div>
+<div class="math notranslate nohighlight">
+\[UL_1 = 5.3 + 1 \cdot 0.20 = 5.5\]</div>
+<p>The limits of the second class are given by,</p>
+<div class="math notranslate nohighlight">
+\[LL_2 = 5.3 + 1 \cdot 0.20 = 5.5\]</div>
+<div class="math notranslate nohighlight">
+\[UL_2 = 5.3 + 2 \cdot 0.2 = 5.7\]</div>
+<p>The limits of the third class are given by,</p>
+<div class="math notranslate nohighlight">
+\[LL_3 = 5.3 + 2 \cdot 0.20 = 5.7\]</div>
+<div class="math notranslate nohighlight">
+\[UL_3 = 5.3 + 3 \cdot 0.2 = 5.9\]</div>
+<p>The limits of fourth class are given by,</p>
+<div class="math notranslate nohighlight">
+\[LL_4 = 5.3 + 3 \cdot 0.20 = 5.9\]</div>
+<div class="math notranslate nohighlight">
+\[UL_4 = 5.3 + 4 \cdot 0.2 = 6.1\]</div>
+<p>The limits of the fifth class are given by,</p>
+<div class="math notranslate nohighlight">
+\[LL_5 = 5.3 + 4 \cdot 0.20 = 6.1\]</div>
+<div class="math notranslate nohighlight">
+\[UL_5 = 5.3 + 5 \cdot 0.2 = 6.3\]</div>
+<p>Using this limits, we can construct the table,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Class Limits</p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x_i)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(5.3 \leq x_i &lt; 5.5\)</span></p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(5.5 \leq x &lt; 5.7\)</span></p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(5.7 \leq x &lt; 5.9\)</span></p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(5.9 \leq x &lt; 6.1\)</span></p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(6.1 \leq x \leq 6.3\)</span></p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>A quick check to verify the <em>grouped frequency distribution</em> has been constructed correctly is to sum the frequencies and ensure they total up to the number of samples.</p>
+<p>In this case, the total number of samples is 12 and,</p>
+<div class="math notranslate nohighlight">
+\[12 = 3 + 2 + 4 + 2 + 1\]</div>
+</div>
+</section>
+</section>
+</section>
+<section id="histograms">
+<span id="id7"></span><h2>Histograms<a class="headerlink" href="#histograms" title="Link to this heading">#</a></h2>
+<p>A <em>histogram</em> is a graphical representation of a <a class="reference internal" href="#frequency-distributions"><span class="std std-ref">frequency distribution</span></a>. The <em>classes</em> or <em>bins</em> are plotted on the <em>x-axis</em> against the frequency of each <em>class</em> on the <em>y-axis</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/eae08e3b224d7296651aa5af1168314b/histogram_random.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4e489d83b1680daa1fb7509ab33c47f7/histogram_random.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/19ff50ebdbf6067ae2a08f24a9ed9442/histogram_random.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/810aae0d48fb4af83f00b3043922a668/histogram_random.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_random.png" class="plot-directive" src="../../_images/histogram_random.png" />
+</figure>
+<p>The <em>width</em> of the bars is normalized so that the bars of the histogram meet.</p>
+<section id="variations">
+<span id="histogram-variatians"></span><h3>Variations<a class="headerlink" href="#variations" title="Link to this heading">#</a></h3>
+<p>A basic <em>histogram</em> can be modified to accomodate a variety of scenarios, depending on the specifics of the problem. In each case below, the sample’s frequency distribution is used as the basis for constructing the graph.</p>
+<section id="dot-plots">
+<span id="id8"></span><h4>Dot Plots<a class="headerlink" href="#dot-plots" title="Link to this heading">#</a></h4>
+<p>Instead bars with differing heights, <em>dot plots</em> use <em>stacked dots</em> to represent the number of times each observation occurs, i.e. its frequency.</p>
+<p>Suppose a quiz with nine questions was administered to an A.P. Statistics course. The following sample represents the number of questions answered correctly by each student in this class,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ 3, 3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 7, 7, 9 \}\]</div>
+<p>Then the dot plot is constructed by drawing a number of dots above a point on the number line that corresponds to the <em>frequency</em> of that observation.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/9b49e2c50b4296e3df288e3a2f0e3eca/dot_plot.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/dc14a1abed162cd588da631fdd7039b7/dot_plot.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/0ff9c7d0ea476fe72eb171f11b1afd4c/dot_plot.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5a67a714f6dac2aee90362a685b2dd66/dot_plot.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/dot_plot.png" class="plot-directive" src="../../_images/dot_plot.png" />
+</figure>
+<p><em>Dot plots</em> are a quick and easy to represent a sample of data graphically. When in doubt, throw together a dot plot to see if it gives you any clues about the distribution.</p>
+</section>
+<section id="stem-leaf-plots">
+<span id="id9"></span><h4>Stem-Leaf Plots<a class="headerlink" href="#stem-leaf-plots" title="Link to this heading">#</a></h4>
+<p>A <em>stem-leaf</em> plot is a type of histogram where the classes are determined by the leading digits of the observation values.</p>
+<p>For example, you measured the average annual rainfall in inches for Maryland over the course of 20 years and arrived at the following sample,</p>
+<div class="math notranslate nohighlight">
+\[S = \{ 46 \text{ in}, 52 \text{ in},  33 \text{ in}, 42 \text{ in}, 43 \text{ in}, 51 \text{ in}, 31 \text{ in}, 27 \text{ in}, 49 \text{ in}, 47 \text{ in}, 37 \text{ in}, 50 \text{ in}, 42 \text{ in}, 46 \text{ in}, 61 \text{ in}, 37 \text{ in}, 46 \text{ in}, 47 \text{ in}, 51 \text{ in}, 33 \text{ in} \}\]</div>
+<p>A <em>stem-and-leaf</em> plot is a <em>tabular summary</em> (table) where the first column, called the <em>stem</em> column, is the leading digits that occurs in the sample, in this case <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">6</span></code>. The digits after the leading digit after tallied up and written in ascending order in the second column, called the <em>leaf</em> column,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Stem</p></td>
+<td><p>Leaf</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>3, 3, 7,</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>2, 2, 3, 6, 6, 6, 9, 7, 7</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>0, 1, 1, 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>1,1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Stem-and-leaf</em> plots are convenient for finding the <a class="reference internal" href="01_estimation.html#mode"><span class="std std-ref">Mode</span></a> of a distribution; the <a class="reference internal" href="01_estimation.html#mode"><span class="std std-ref">Mode</span></a> is simply the observation with the most number of leaves, in this case, <code class="docutils literal notranslate"><span class="pre">46</span></code> inches.</p>
+</section>
+<section id="relative-frequency-plots">
+<span id="id10"></span><h4>Relative Frequency Plots<a class="headerlink" href="#relative-frequency-plots" title="Link to this heading">#</a></h4>
+<p><em>Relative frequency</em> histograms express the frequency of each class as a <em>percentage</em> of the total observations in the sample,</p>
+<div class="math notranslate nohighlight">
+\[r(x_i) = \frac{f(x_i)}{n}\]</div>
+<p>Recall that the sum of frequencies is <em>n</em>,</p>
+<div class="math notranslate nohighlight">
+\[n = \sum_{x_i \in S} f(x_i)\]</div>
+<p>Therefore, the sum of <em>relative frequencies</em> is,</p>
+<div class="math notranslate nohighlight">
+\[\sum_{x_i \in S} r(x_i) = \sum_{x_i \in S} \frac{f(x_i)}{n}\]</div>
+<p>Since the sum does not depend on <em>n</em>, we can factor <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> out of the denominator,</p>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{n} \cdot \sum_{x_i \in S} f(x_i)\]</div>
+<p>Whence, we apply the <em>Frequency Equation</em> to get,</p>
+<div class="math notranslate nohighlight">
+\[= \frac{1}{n} \cdot n = 1\]</div>
+<p>In other words, the sum of <em>relative frequencies</em> is equal to 1,</p>
+<div class="math notranslate nohighlight">
+\[\sum_{x_i \in S} r(x_i) = 1\]</div>
+<p>This intuitive result simply means the distribution must total to <em>100%</em>.</p>
+<p>In other words, <em>relative frequency</em> histograms do not change the shape of the distribution; they scale (<em>normalize</em>) the distribution so that the sum of class frequencies is <em>100%</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/48f50b43274c2dd9ed3b52e66d4488f9/histogram_relative.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a6670a67d70d09152312d88a39237611/histogram_relative.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3e4a1e7e35882ccc26f04d51c91aa311/histogram_relative.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/46cb1ad4b3b744f6b0a73fc76bc113e5/histogram_relative.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_relative.png" class="plot-directive" src="../../_images/histogram_relative.png" />
+</figure>
+</section>
+<section id="pie-charts">
+<h4>Pie Charts<a class="headerlink" href="#pie-charts" title="Link to this heading">#</a></h4>
+<p><em>Pie charts</em> are a special type of relative frequency histogram. Since the relative frequencies sum to 1, we can represent the distribution as <em>one</em> circle and then express the proportion the distribtion that belongs to class by the proportion of area in a circular sector.</p>
+<p>In other words, the size of each slice of the pie represents the relative frequency of that class.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3e0f1e9e8980e1efb89dc04e1d84dc0d/pie_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d5b086734c2cd8ce02d1b90907b47e5a/pie_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/3bc338d0cba1489655c7dda46bed2ab5/pie_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b034e570f569c874a2356cd46c063b3b/pie_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/pie_chart.png" class="plot-directive" src="../../_images/pie_chart.png" />
+</figure>
+</section>
+</section>
+<section id="distribution-shapes">
+<span id="id11"></span><h3>Distribution Shapes<a class="headerlink" href="#distribution-shapes" title="Link to this heading">#</a></h3>
+<p>The shape of the histogram tells a story about the distribution of the sample.</p>
+<section id="uniform">
+<span id="uniform-shape"></span><h4>Uniform<a class="headerlink" href="#uniform" title="Link to this heading">#</a></h4>
+<p>A histogram where each class is approximately level with every other class is known as a <em>uniform</em> distribution.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/34bd822861f4b034051e9b9f92f94b8a/histogram_uniform.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/155f17f82d3b54009c68098bc91e74fc/histogram_uniform.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4312ca8bf96e4d6cf575c0f3e425d765/histogram_uniform.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/024005d81a34d100f1704ae4f144c82a/histogram_uniform.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_uniform.png" class="plot-directive" src="../../_images/histogram_uniform.png" />
+</figure>
+<p>A <em>uniform distribution</em> tells us each class is <em>equally likely</em>. In other words, if we were to randomly select an individual from this sample, there is an equal chance the selected individual will come from each class.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p>Find yourself a die and roll it 30 or so times, keeping track of each outcome. Once you have a large enough sample, create and graph a frequency distribution. The resulting display will approximate a <em>uniform</em> distribution.</p>
+</dd>
+</dl>
+</section>
+<section id="normal">
+<h4>Normal<a class="headerlink" href="#normal" title="Link to this heading">#</a></h4>
+<p>A histogram where the classes are symmetric and decreasing around a common point is known as <em>normal</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/7b0c3e5f0f733ab0dd7f2a0aafef4593/histogram_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d21e66ed5826775ed9c6d468510ad6c4/histogram_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/6439622930238a391bedb78005569866/histogram_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7530e71137c09a86a178e9909d1dc451/histogram_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_normal.png" class="plot-directive" src="../../_images/histogram_normal.png" />
+</figure>
+<p>The line of symmetry in a perfectly symmetrical distribution is the <a class="reference internal" href="01_estimation.html#median"><span class="std std-ref">Median</span></a>. The reason for this can seen by equating the <em>area</em> under the distribution with the proportion of the sample that belongs to that area. Since the <em>areas</em> on either side of a symmetric distribution are equal,</p>
+<img alt="../../_images/normal-distribution-graphic.jpg" src="../../_images/normal-distribution-graphic.jpg" />
+<p>It follows these areas both represent fifty percent of the distribution.</p>
+<p>A <em>normal distribution</em> tells us classes closer to the <a class="reference internal" href="01_estimation.html#median"><span class="std std-ref">Median</span></a> are more likely to be observed.</p>
+<dl class="simple">
+<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/66be0b05b39ebd122fc510aa5655f58b/old-faithful-data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Old</span> <span class="pre">Faithful</span> <span class="pre">Data</span> <span class="pre">Set</span></code></a>.</p>
+</dd>
+</dl>
+<p><em>Old Faithful</em> is a famous hot-water geyser in Yellowstone National Park that erupts every 45 minutes to 2 hours.</p>
+<a class="reference internal image-reference" href="../../_images/old-faithful.jpg"><img alt="../../_images/old-faithful.jpg" class="align-center" src="../../_images/old-faithful.jpg" style="width: 200px;" />
+</a>
+<p>The first column of this dataset represents the <em>length of an eruption in minutes</em> while the second column represents the <em>waiting time in minutes</em> until the next eruption.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will construct the histogram for this dataset in class using <strong>Python3</strong> using the <em>length of an eruption in minutes</em>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will also look at this dataset again when we get to <a class="reference internal" href="02_correlation.html#correlation"><span class="std std-ref">Correlation</span></a> and <a class="reference internal" href="02_correlation.html#scatter-plots"><span class="std std-ref">Scatter Plots</span></a>.</p>
+</div>
+</section>
+<section id="bimodal">
+<h4>Bimodal<a class="headerlink" href="#bimodal" title="Link to this heading">#</a></h4>
+<p>A histogram where two classes are more frequent than the other classes in the distribution is known as <em>bimodal</em>.</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/437c50920addc38f3befac3ebc31d87d/histogram_bimodal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1b402f33d6ecd1a5d511ac5ff452dfcb/histogram_bimodal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/5dada81b031ca868de0473e405fad598/histogram_bimodal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1a257af810022e29730663405a9117d1/histogram_bimodal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_bimodal.png" class="plot-directive" src="../../_images/histogram_bimodal.png" />
+</figure>
+<dl class="simple">
+<dt>Example</dt><dd><p><a class="reference download internal" download="" href="../../_downloads/ee248ffbd5cf26a5b94ebe33ced2ec0f/pigeon-racing-times-data.csv"><code class="xref download docutils literal notranslate"><span class="pre">Pigeon</span> <span class="pre">Racing</span> <span class="pre">Speeds</span></code></a>.</p>
+</dd>
+</dl>
+</section>
+<section id="skewed">
+<h4>Skewed<a class="headerlink" href="#skewed" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>Definition</dt><dd><p>A <em>skew</em> is a feature of sample where more data is <em>clustered</em> on one side of the sample than the other. We say such data are “<em>skewed</em>”, or that it exhibits “<em>skewness</em>”.</p>
+</dd>
+</dl>
+<p>A <em>skewed</em> distribution has <em>tails</em>, indicating the distribution is not symmetric (or, <em>asymmetric</em>). Individuals drawn from a <em>skewed</em> distribution are more likely to have extreme values. By “<em>extreme</em>” we mean values outside of the intervals where the majority of the distribution lies.</p>
+<p><strong>Skewed Right</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/bd1d0cc4e27a7d5d55d682552b602ef2/histogram_skewed_right.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d1f2006164cbdc715637be413d0ddbe5/histogram_skewed_right.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/db0ea51224881b5e512f360a24a6b803/histogram_skewed_right.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/70637a1c2f76f343579aa69b535eddfa/histogram_skewed_right.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_skewed_right.png" class="plot-directive" src="../../_images/histogram_skewed_right.png" />
+</figure>
+<p><strong>Skewed Left</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/7e04873a715f999fa62530385d1ca6a0/histogram_skewed_left.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/107833c4aed8971eda446b790d4f38c5/histogram_skewed_left.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1704193efbc54516d0273d6411e54710/histogram_skewed_left.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/314794d4c36758dffa7b1aaf8e19d42d/histogram_skewed_left.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_skewed_left.png" class="plot-directive" src="../../_images/histogram_skewed_left.png" />
+</figure>
+</section>
+</section>
+</section>
+<section id="ogives">
+<span id="id12"></span><h2>Ogives<a class="headerlink" href="#ogives" title="Link to this heading">#</a></h2>
+<p>An <em>ogive</em> is a histogram of the <em>cumulative frequency</em>. The difference between <em>frequency</em> and <em>cumulative frequency</em> is slight, but potent.</p>
+<dl>
+<dt>Frequency</dt><dd><p><span class="math notranslate nohighlight">\(f(x_i)\)</span></p>
+<p>The number of times an observation <span class="math notranslate nohighlight">\(x_i\)</span> occurs in a sample.</p>
+</dd>
+<dt>Cumulative Frequency</dt><dd><p><span class="math notranslate nohighlight">\(F(x_i)\)</span></p>
+<p>The number of times an observation <em>less than or equal to</em> <span class="math notranslate nohighlight">\(x_i\)</span> occurs in a sample.</p>
+</dd>
+</dl>
+<p>Notice, by definition,</p>
+<div class="math notranslate nohighlight">
+\[F(x_i) = \sum^{i}_{j = 1} f(x_j)\]</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be mindful of the <em>indices</em> in the summation. This summation says “<em>add up all the frequencies up to a certain observation</em> <span class="math notranslate nohighlight">\(x_i\)</span>”.</p>
+</div>
+<p>In order to construct an <em>ogive</em> or a <em>cumulative frequency histogram</em>, we first have to find the <em>cumulative frequency distribution</em>.</p>
+<p>Recall the <em>frequency distribution</em> created in the <a class="reference internal" href="#ungrouped-frequency-distributions"><span class="std std-ref">Ungrouped Distributions</span></a> section. The <em>cumulative frequency</em> of this distribution can be found by adding another column <span class="math notranslate nohighlight">\(F(x_i)\)</span> that sums up the the individual frequencies of all the classes up to that class,</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<tbody>
+<tr class="row-odd"><td><p>Class Limits</p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x_i)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(F(x_i)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(5.3 \leq  x_i &lt; 5.5\)</span></p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(5.5 \leq x &lt; 5.7\)</span></p></td>
+<td><p>2</p></td>
+<td><p>5 = 2 + 3</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(5.7 \leq x &lt; 5.9\)</span></p></td>
+<td><p>4</p></td>
+<td><p>9 = 4 + 2 + 3</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(5.9 \leq x &lt; 6.1\)</span></p></td>
+<td><p>2</p></td>
+<td><p>11 = 2 + 4 + 2 + 3</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(6.1 \leq x \leq 6.3\)</span></p></td>
+<td><p>1</p></td>
+<td><p>12 = 1 + 2 + 4 + 2 + 3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>(<a class="reference download internal" download="" href="../../_downloads/35033ee64e51eb9e4f7710f2daf20d00/histogram_and_ogive.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d5e8e329d964f881e6370335355f6c5d/histogram_and_ogive.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/e020c90185bdaeb3c89ccc3964ece47f/histogram_and_ogive.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/34ca8b5d9cde97cc22dcfa8c991eacfe/histogram_and_ogive.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/histogram_and_ogive.png" class="plot-directive" src="../../_images/histogram_and_ogive.png" />
+</figure>
+<section id="id13">
+<h3>Distribution Shapes<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>All <em>cumulative frequency histograms</em> (<em>ogives</em>) are <em>monotonic</em>. A <em>monotonic</em> functions is <em>non-decreasing</em>. Another way of saying <em>non-decreasing</em> is to say “<em>always increases or stays the same</em>”. The reason for this should be clear: we are always adding quantities to the cumulative frequency as <span class="math notranslate nohighlight">\(x_i\)</span> increases. The <em>cumulative frequency</em> never <em>decreases</em>.</p>
+<p>Thus, it can sometimes be difficult to discern any features of the distribution from the cumulative frequency histogram. Nevertheless, closer inspection reveals a few things we can infer.</p>
+<section id="id14">
+<h4>Uniform<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/fb02db42fc3cb171ea3db4141c4cebb2/ogive_uniform.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/037aa330c2f095a769792a2c2dff8d33/ogive_uniform.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d2179a95892bb3373f4f93936479cffe/ogive_uniform.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/411702e57e68f8b48839133afc5ca05f/ogive_uniform.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_uniform.png" class="plot-directive" src="../../_images/ogive_uniform.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice each step in the ogive increase by roughly the same amount. This is because frequencies in a uniform distribution are roughly equal.</p>
+</div>
+</section>
+<section id="id15">
+<h4>Normal<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/e5db9120256cef8478beb2f32af4a663/ogive_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d7c1e2bba8a3baa63b589d74a7faa187/ogive_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/533a8f36b4747b4bfb480de3c66318ad/ogive_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/02d919241e67ffea661b65ad4752f635/ogive_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_normal.png" class="plot-directive" src="../../_images/ogive_normal.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice the steps in the graph increase in size up to the center and then decrease in size until the ogive levels off. This is because normal distributions are centered around the mean and drop off in frequency as distance from the mean increases.</p>
+</div>
+</section>
+<section id="id16">
+<h4>Bimodal<a class="headerlink" href="#id16" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/e540b25feddd772890f454247b1da815/ogive_bimodal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1ec0f296d364105fc5b0d1e99e8d9d77/ogive_bimodal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/43cea834ac25228696166e8d44e0aedd/ogive_bimodal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/29332ac0f3af8890439f7245775c009b/ogive_bimodal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_bimodal.png" class="plot-directive" src="../../_images/ogive_bimodal.png" />
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice there are two steps in the graph larger than the rest, due to the large frequencies of the modes in a bimodal distribution.</p>
+</div>
+</section>
+<section id="id17">
+<h4>Skewed<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<dl>
+<dt>Skewed Right</dt><dd><p>(<a class="reference download internal" download="" href="../../_downloads/e11408e13d27ccdf40afa077ebbe4e9f/ogive_skewed_right.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/01f45180e062a981941e03e2e458f52b/ogive_skewed_right.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/994fc68fd1f787efab892e1a69542bb5/ogive_skewed_right.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7023b01f3af7664e2d86f3f48b54e03d/ogive_skewed_right.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_skewed_right.png" class="plot-directive" src="../../_images/ogive_skewed_right.png" />
+</figure>
+</dd>
+<dt>Skewed Left</dt><dd><p>(<a class="reference download internal" download="" href="../../_downloads/d884b34158d64634a104cb8993757c9b/ogive_skewed_left.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/bf34a21edc16d1f63d9b1dd84b2059ed/ogive_skewed_left.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/0addfee48cf23ab749987f8045351fc5/ogive_skewed_left.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/7dd4d989cab6ec394e262bd3bcaf5847/ogive_skewed_left.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/ogive_skewed_left.png" class="plot-directive" src="../../_images/ogive_skewed_left.png" />
+</figure>
+</dd>
+</dl>
+</section>
+</section>
+<section id="id18">
+<h3>Variations<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<section id="stacked-bar-chart">
+<h4>Stacked Bar Chart<a class="headerlink" href="#stacked-bar-chart" title="Link to this heading">#</a></h4>
+<p>A <em>stacked bar chart</em> is a type of <em>ogive</em> that is used specifically for <em>categorical data</em>. In particular, it is meant to visualize the <a class="reference internal" href="#conditional-frequency-distribution"><span class="std std-ref">Conditional Frequency Distribution</span></a> of one categorical variable with respect to all the other values of the other categorical variable.</p>
+<p>With a <em>stacked bar chart</em>, the sample is broken up into non-overlapping (<a class="reference internal" href="../probability/00_introduction.html#mutual-exclusion"><span class="std std-ref">mutual exclusive</span></a>) groups. The <em>conditional distribution</em> of each group is plotted as a vertical bar that totals to 100%,</p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3876d09c245f53bc9f7a7fab15be8c1b/stacked_bar_chart.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/aeffde20930d1bf3c8034a6f6c678b39/stacked_bar_chart.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/4238c92ad5e8f1b1ad3dc3cc1d20f964/stacked_bar_chart.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/59deb6bf7ef2debb65ab5d931419a250/stacked_bar_chart.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/stacked_bar_chart.png" class="plot-directive" src="../../_images/stacked_bar_chart.png" />
+</figure>
+<p>Each bar of the graph is <em>conditioned</em> on one variable. In this example, the <em>condition</em> is the event of a red object or a blue object. <em>Given</em> a blue object has been selected from the groups on the horizontal axis, the <em>conditional distribution</em> of shape (i.e., duck or ball) is plotted on the vertical axis.</p>
+<p>In this example, the <em>red</em> group is broken down into a distribution of <em>ducks</em> and <em>balls</em> according to the formulae,</p>
+<div class="math notranslate nohighlight">
+\[P( \text{Duck} \mid \text{Red}) = \frac{n( \text{Duck and Red} ) }{n( \text{Red})}\]</div>
+<div class="math notranslate nohighlight">
+\[P( \text{Ball} \mid \text{Red}) = \frac{n( \text{Ball and Red} ) }{n( \text{Red})}\]</div>
+<p>Where as the <em>blue</em> group is broken down into a distribution of <em>ducks</em> and <em>balls</em> according to the formulae,</p>
+<div class="math notranslate nohighlight">
+\[P( \text{Duck} \mid \text{Blue}) = \frac{n( \text{Duck and Blue} ) }{n( \text{Blue})}\]</div>
+<div class="math notranslate nohighlight">
+\[P( \text{Ball} \mid \text{Blue}) = \frac{n( \text{Ball and Blue} ) }{n( \text{Blue})}\]</div>
+</section>
+</section>
+</section>
+<section id="boxplots">
+<span id="id19"></span><h2>Boxplots<a class="headerlink" href="#boxplots" title="Link to this heading">#</a></h2>
+<p>While <a class="reference internal" href="#histograms"><span class="std std-ref">Histograms</span></a> and <a class="reference internal" href="#ogives"><span class="std std-ref">Ogives</span></a> provide a wealth of information about the sample distribution, they do not give us the whole picture. A <em>boxplot</em> can help fill in the blind spots, providing deeper insight in the nature of the distribution you are analyzing.</p>
+<section id="construction">
+<span id="boxplot-construction"></span><h3>Construction<a class="headerlink" href="#construction" title="Link to this heading">#</a></h3>
+<p>Every <em>boxplot</em> requires five numbers. It may surprise you to find out (but probably not) these numbers are referred to as a <em>Five Number Summary</em>.</p>
+<section id="five-number-summary">
+<span id="id20"></span><h4>Five Number Summary<a class="headerlink" href="#five-number-summary" title="Link to this heading">#</a></h4>
+<p>To construct a boxplot, you must find the following:</p>
+<ol class="arabic simple">
+<li><p>Find the maximum observation.</p></li>
+<li><p>Find the 75 <sup>th</sup> percentile (<em>third quartile</em>)</p></li>
+<li><p>Find the 50 <sup>th</sup> percentile (<em>median</em>)</p></li>
+<li><p>Find the 25 <sup>th</sup> percentile (<em>first quartile</em>)</p></li>
+<li><p>Find the minimum observation.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These terms (minimum, percentile and maximum) are defined in the <a class="reference internal" href="01_estimation.html#point-estimation"><span class="std std-ref">Point Estimation</span></a> section.</p>
+</div>
+<p>The middle three numbers, i.e. the third quartile, the median and the first quartile, form the <em>box</em> of the <em>boxplot</em>. The numbers on the ends, i.e. the maximum and minimum, are sometimes known as the <em>whiskers</em>.</p>
+<p>By definition, the <em>box</em> of the <em>boxplot</em> will show you where 50% of the distribution is centered. In other words, between the third quartile and the first quartile, you will find 50% of all observations in a sample.</p>
+</section>
+</section>
+<section id="id21">
+<span id="id22"></span><h3>Distribution Shapes<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>A boxplot provides another window into a distribution by revealing the characteristic features of important distribution <em>shapes</em>.</p>
+<p>The comparative lengths of the boxplot <em>whiskers</em> show us in what direction the distribution is being pulled by <a class="reference internal" href="01_estimation.html#outliers"><span class="std std-ref">Outliers</span></a>.</p>
+<p>For this last reason, <em>boxplots</em> are often useful graphical tools for quickly identifying <em>outliers</em>. We will talk more about how to use <em>boxplots</em> to identify outlying observations when we get to the <a class="reference internal" href="01_estimation.html#interquartile-range"><span class="std std-ref">Interquartile Range</span></a> descriptive statistic in the next section.</p>
+<p>For now, we present various boxplots in order to exhibit how the distribution shape is manifested in the relative lengths of the whisker.</p>
+<section id="id23">
+<h4>Normal<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
+<p>(<a class="reference download internal" download="" href="../../_downloads/a2596a54f0fbfb006433513db85189d5/boxplot_normal.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/a2f58fbdb0fa3c5f6586149573a45593/boxplot_normal.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/1aa272e718e7d1a9b450363d6a1d9b30/boxplot_normal.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/30da364bbd1e91606bdc0a45092cb7b3/boxplot_normal.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/boxplot_normal.png" class="plot-directive" src="../../_images/boxplot_normal.png" />
+</figure>
+<p>A <em>normal</em> boxplot has a <em>box</em> that sits evenly between its <em>whiskers</em>. The length of the left <em>whisker</em> is roughly equal to the length of the right <em>whisker</em>. There are no <em>outlying observations</em> to skew the whiskers.</p>
+<p>Notice the red line that represents the <em>median</em> is roughly centered within the <em>box</em>.</p>
+</section>
+<section id="id24">
+<h4>Skewed<a class="headerlink" href="#id24" title="Link to this heading">#</a></h4>
+<p><strong>Skewed Right</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3b4871b77a6f16b8fe0d121c59e7b99e/boxplot_skewed_right.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2270cc87aebc9d2848445f18c116001a/boxplot_skewed_right.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2afa6a4a2f13fdbf1c286d12babb1d5b/boxplot_skewed_right.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/233b9bc3e4b5ed1df54b1d61a49a3aff/boxplot_skewed_right.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/boxplot_skewed_right.png" class="plot-directive" src="../../_images/boxplot_skewed_right.png" />
+</figure>
+<p>A <em>skewed right</em> boxplot has a <em>box</em> with lopsided <em>whiskers</em>. Its right <em>whisker</em> is pulled in the direction of the skew, i.e. towards the right. The presence of outlying observations on the right causes the distribution to <em>stretch</em> towards them.</p>
+<p>Notice the red line that represents the median sits close to the left side of the <em>box</em>, where the majority of the distribution lies.</p>
+<p><strong>Skewed Left</strong></p>
+<p>(<a class="reference download internal" download="" href="../../_downloads/b406415ccdc5cc911d4ab54a5a06e0d9/boxplot_skewed_left.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/d9636e60d888c278ff26b058e1270ca8/boxplot_skewed_left.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/bd80982d88c8e3ef78c6079cad4f0567/boxplot_skewed_left.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/f6f9401301388b04384fb964f0bb397c/boxplot_skewed_left.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/boxplot_skewed_left.png" class="plot-directive" src="../../_images/boxplot_skewed_left.png" />
+</figure>
+<p>A skewed left boxplot has a <em>box</em> with lopsided <em>whiskers</em>. Its left <em>whisker</em> is pulled in the direction of the skew, i.e towards the left. The presence of outlying observations on the left causes the distribution to <em>stretch</em> towards them.</p>
+<p>Notice the red line that represents the median sits close to the right side of the <em>box</em>, where the majority of the distribution lies.</p>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Statistics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="01_estimation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Point Estimation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequency-distributions">Frequency Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ungrouped-distributions">Ungrouped Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#two-way-tables">Two Way Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#joint-frequency-distribution">Joint Frequency Distribution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#marginal-frequency-distribution">Marginal Frequency Distribution</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-frequency-distribution">Conditional Frequency Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grouped-distributions">Grouped Distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#histograms">Histograms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variations">Variations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dot-plots">Dot Plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stem-leaf-plots">Stem-Leaf Plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#relative-frequency-plots">Relative Frequency Plots</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pie-charts">Pie Charts</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-shapes">Distribution Shapes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform">Uniform</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#normal">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bimodal">Bimodal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#skewed">Skewed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ogives">Ogives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Distribution Shapes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Uniform</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Bimodal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Skewed</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Variations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stacked-bar-chart">Stacked Bar Chart</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boxplots">Boxplots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#construction">Construction</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#five-number-summary">Five Number Summary</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Distribution Shapes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">Normal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Skewed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Grant Moore
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023 - 2025, chinchalinchin industries.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
