@@ -33,7 +33,7 @@ III: Roundels of Remembrance
 |
 | The rarer buds of sweet perfume
 | Are hidden deep in alley malls
-| Where flowered faces wrapped entomb
+| Where flowered faces sprung consume
 |   graffitied walls. 
 |
 | III - Laces
@@ -112,6 +112,9 @@ III: Roundels of Remembrance
   * - June 13, 2025
     - New Verse Review
     - Rejected
+  * - June 22, 2025
+    - Backbone Mountain Review (II, IV, VI)
+    - Pending
 
 .. | R - A 
 .. | B ∥ R 

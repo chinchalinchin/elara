@@ -1,6 +1,6 @@
 .. MODE: OVERRIDE
 .. 
-.. Create a chapbook from this collection.
+.. I miscalculated. I have to get rid of the Odes to Heron as well. It's too long. I now have A Sonnet for Cumberland MD, Elemental Elegy and the aforementioned Roundels. Select two more poems from my collection to submit to Backbone Mountain Review, keeping in mind their taste profile. 
 
 .. _collection:
 
@@ -812,8 +812,8 @@ II: The Ballad of the Isle
     - Pending
 
 --------------------------------------
-III: The Mad Muses of Sad Cracked Jack
---------------------------------------
+III:  The Mad Muses of Sad Cracked Jack
+-------------------------------------
 
 | Part I - Thalia
 | 
@@ -1132,7 +1132,7 @@ III: The Mad Muses of Sad Cracked Jack
 |
 | To top of winding hill they sprint
 |   As quick as line intends
-| To reach its final dot in print,
+| To reach its final point in print,
 |   Arriving as it ends. 
 |
 | They stand before the gothic doors
@@ -1185,6 +1185,26 @@ III: The Mad Muses of Sad Cracked Jack
 | "But always author's page we chase."
 |   And always thus derailed. 
 |
+| She laughs, "And now afraid of us,
+|   resorts to tired jokes."
+| As if these words superfluous,
+|   and not what fate provokes.
+| 
+| A vein of fear, pulsations queer,
+|   These systems Jill concocts
+| Though seeming true and most sincere,
+|   her madness here unlocks.
+|
+| "But Jill," The hapless Jack reacts,
+|   "Perhaps we're crazed and sick,
+| And in a loop that interacts
+|   with spirals spinning quick."
+|
+| "Just listen close to words you choose,
+|   And note their stilted place.
+| The forms we fit while sense eschews,
+|   this verse our thoughts deface. 
+|
 | (... in progress ...)
 | 
 | The spores of time in yellow mold,
@@ -1201,10 +1221,32 @@ III: The Mad Muses of Sad Cracked Jack
 |
 | (... in progress ...)
 |
+| But what are words? The question stands
+|   In empty shelves replete 
+| With rows of books, the operands 
+|   Of signs through time repeat. 
+| 
+| So Jill, she climbs as ladders creak 
+|   With helpless Jack agape, 
+| As antique wheels on railing squeak
+|   And speak with tongues that scrape. 
+| 
+| "It must be here!" Declaring loud, 
+|   She plucks a grimoire loose,
+| And in her pride, her voice so proud,
+|   "I've found our Mother Goose!"
+| 
+| But gravity now overtook 
+|   As fingers lose their grip
+| She shifts to catching the falling book
+|   And heedless starts to slip. 
+|
+| ( ... in progress ... )
+|
 | They sought to know, but knowing lied,
-|   unknown to them its ends
-| that brought to sow the death she died,
-|   a body Jack now tends. 
+|   Unknown to them its ends
+| That brought to sow the death she died,
+|   A body Jack now tends. 
 |
 | (... in progress ...)
 
@@ -1732,6 +1774,7 @@ II: Ode to the Heron
 
 | Grey Heron, sing the song the winds will bring.
 | Who lingers longer than the Winter king?  
+|
 | When hunting ground returns
 |       Through fronts of blue to ice,
 | The moles in burrowed urns
@@ -1739,10 +1782,11 @@ II: Ode to the Heron
 | As grunting geese will veer
 |       Where churning warmth is drove,
 | The deer all disappear
-|       In dreary dreaming cove.
+|       Through dreary dreaming cove.
 |
 | All yield, retreat and leave their claims till Spring.
 | Through fields, what muffled name on streams will ring?
+|
 | The answer sweeps from east--
 |       Oh! Heron! Hunter Grey! 
 | Cry! Rouse the sleeping beast
@@ -1754,6 +1798,7 @@ II: Ode to the Heron
 |
 | The weather warms, yet Winter lifts your wing.
 | The feathers swarm, but lone to cold you cling.
+|
 | In flocking song most birds
 |       Find mate to take to nest;
 | Let chorus part the herds
@@ -1765,6 +1810,7 @@ II: Ode to the Heron
 |
 | Each season makes of life a shape to wring.
 | Each reason born in strife escapes to sing. 
+|
 | The Spring first strings the thread
 |       Of lazy chirping thrush,
 | The Summer, berry red
@@ -1776,6 +1822,7 @@ II: Ode to the Heron
 |
 | When night descends, take stock of everything.
 | What hidden home should find you nuzzling?
+|
 | What branches bear your weight?
 |       Whose feathers stroke your beak?
 | No human eyes await
@@ -3322,7 +3369,7 @@ III: Roundels of Remembrance
 |
 | The rarer buds of sweet perfume
 | Are hidden deep in alley malls
-| Where flowered faces wrapped entomb
+| Where flowered faces sprung consume
 |   graffitied walls. 
 |
 | III - Laces
@@ -3391,6 +3438,8 @@ III: Roundels of Remembrance
 
 - June 2025 
 
+- June 2025 
+
 .. list-table:: Submission History
   :widths: 15 15 15
   :header-rows: 1
@@ -3436,21 +3485,21 @@ II: Sonnet for the Demented
 ---------------------------
 
 | There are but few who taste the hemlock blue,
-| Fortune finds those who swing from noose and nail;
-| With minute gone they follow through in queue,
-| Spared the with'ring touch of Time's fingers frail.
+| While fortune swings like necks from noose and nail;
+| A minute gone they follow through in queue,
+| So spared the withered touch of Time gone frail.
 |
-| If a choice it has, Time first stalks the mind,
-| Steady quick but not so fast to spook its prey;
-| Every hunter knows fright will taint the find.
-| Slow in step, it bides itself from day to day.
+| If choosing first, then Time will stalk the mind,
+| And steady quick yet slow concealed from prey;
+| As hunters know to never scare the find,
+| So slow in step, it bides itself from day to day.
 |
-| Oh, Memory! Jigsaw tower of self!
-| How easily you crumble with a tap!
-| Time takes but one book from a shelf
-| And in a pile leaves you upon his lap.
+| Oh, Memory! The jigsawed tower self!
+| How easily you crumble from a tap!
+| A single book that Time removes from shelf,
+| And into piles left upon his lap.
 |
-| A stranger each face becomes through the glass,
+| Through glass, reflects a stranger mirror cast,
 | Each ageless moment til you breath your last.
 
 - March 2025
@@ -3473,7 +3522,7 @@ III: A Sonnet for Cumberland MD
 | where lips at last are wet in watershed;
 |
 | Let skyline mark where tide in climb was broke:
-| Steeple, roof, needles pine and leaves of oak.
+| The steepled roof, the needled pine through oak.
 
 - March 2025
 

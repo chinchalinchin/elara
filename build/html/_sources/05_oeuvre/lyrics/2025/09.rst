@@ -46,3 +46,6 @@ X: Father's Lullaby
   * - June 13, 2025
     - New Verse Review
     - Rejected
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Pending

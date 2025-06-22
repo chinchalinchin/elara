@@ -52,7 +52,7 @@ Employment
     - Roles
     - Dates
   * - ProvisionIAM
-    - Senior Site Reliability Engineer
+    - Senior DevOps Engineer
     - March 2025 - Current
   * - MDThink
     - DevOps Lead

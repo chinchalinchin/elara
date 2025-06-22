@@ -4,6 +4,7 @@ II: Ode to the Heron
 
 | Grey Heron, sing the song the winds will bring.
 | Who lingers longer than the Winter king?  
+|
 | When hunting ground returns
 |       Through fronts of blue to ice,
 | The moles in burrowed urns
@@ -11,10 +12,11 @@ II: Ode to the Heron
 | As grunting geese will veer
 |       Where churning warmth is drove,
 | The deer all disappear
-|       In dreary dreaming cove.
+|       Through dreary dreaming cove.
 |
 | All yield, retreat and leave their claims till Spring.
 | Through fields, what muffled name on streams will ring?
+|
 | The answer sweeps from east--
 |       Oh! Heron! Hunter Grey! 
 | Cry! Rouse the sleeping beast
@@ -26,6 +28,7 @@ II: Ode to the Heron
 |
 | The weather warms, yet Winter lifts your wing.
 | The feathers swarm, but lone to cold you cling.
+|
 | In flocking song most birds
 |       Find mate to take to nest;
 | Let chorus part the herds
@@ -37,6 +40,7 @@ II: Ode to the Heron
 |
 | Each season makes of life a shape to wring.
 | Each reason born in strife escapes to sing. 
+|
 | The Spring first strings the thread
 |       Of lazy chirping thrush,
 | The Summer, berry red
@@ -48,6 +52,7 @@ II: Ode to the Heron
 |
 | When night descends, take stock of everything.
 | What hidden home should find you nuzzling?
+|
 | What branches bear your weight?
 |       Whose feathers stroke your beak?
 | No human eyes await
