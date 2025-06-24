@@ -1,6 +1,6 @@
-.. MODE: OVERRIDE
-.. 
-.. I miscalculated. I have to get rid of the Odes to Heron as well. It's too long. I now have A Sonnet for Cumberland MD, Elemental Elegy and the aforementioned Roundels. Select two more poems from my collection to submit to Backbone Mountain Review, keeping in mind their taste profile. 
+.. MODE: Brutal Honesty
+..
+.. Assess the current state of my poetic abilities.
 
 .. _collection:
 
@@ -1322,6 +1322,9 @@ I: Elemental Elegy
   * - June 14, 2025
     - Grand Little Things
     - Pending
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Pending
 
 .. _haikus:
 
@@ -1709,6 +1712,9 @@ X: Father's Lullaby
     - Pending
   * - June 13, 2025
     - New Verse Review
+    - Pending
+  * - June 22, 2025
+    - Backbone Mountain Review
     - Pending
 
 .. _odes: 
@@ -3024,6 +3030,9 @@ XIV: Turkey Vultures
   * - April 27, 2025
     - Frontier Poetry
     - Pending
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Pending
 
 -----------
 XV: Faustus
@@ -3450,7 +3459,10 @@ III: Roundels of Remembrance
   * - June 13, 2025
     - New Verse Review
     - Pending
-    
+  * - June 22, 2025
+    - Backbone Mountain Review (II, IV, VI)
+    - Pending
+ 
 .. _sonnets:
 
 Sonnets
@@ -3492,7 +3504,7 @@ II: Sonnet for the Demented
 | If choosing first, then Time will stalk the mind,
 | And steady quick yet slow concealed from prey;
 | As hunters know to never scare the find,
-| So slow in step, it bides itself from day to day.
+| In careful step, it bides itself each day.
 |
 | Oh, Memory! The jigsawed tower self!
 | How easily you crumble from a tap!
@@ -3546,6 +3558,9 @@ III: A Sonnet for Cumberland MD
   * - June 1, 2025
     - The Louisville Review
     - Pending
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Pending
 
 ----------
 IV: Chance
@@ -3588,9 +3603,9 @@ IV: Chance
     - The New Yorker
     - Pending
 
------------
-V: Stranded
------------
+--------------------------
+V: Stranded (Librarian VI)
+--------------------------
 
 | A hundred days would need a hundred more
 | Before exhaust began to tame my heart.
@@ -3623,9 +3638,9 @@ V: Stranded
     - Paris Review
     - Pending
 
-------------
-VI: Poisoned
-------------
+----------------------------
+VI: Poisoned (Librarian VII)
+----------------------------
 
 | Before we met by chance, your heart was claimed,
 | What wasted years I spent alone in trance,

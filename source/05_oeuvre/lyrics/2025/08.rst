@@ -1,33 +1,34 @@
---------------
-IX: Landscapes
---------------
+-------------------
+X: Father's Lullaby
+-------------------
 
-| Oh, hapless world, the butcher's block,
-|   The sickle, scythe, harpoon,
-| The barren fields, the culled livestock,
-|   The blood red harvest moon.
+| Dear child, the monsters under bed
+|   Are not just make believe.
+| They lurk in shadows overhead
+|   And offer no reprieve.
 |
-| The ocean deep, a darkened heart,
-|   A sore that festers cold,
-| A slumbered age, a violent art,
-|   Into all things behold:
+| Dear sweetling, sleep with open eye
+|   And guard your dreams at night.
+| Ignore your mother's lullaby,
+|   Keep candles burning bright.
 |
-| The forests wild, the stalking hunt,
-|   The arrow cut from stone,
-| The bloody rib, the final grunt,
-|   A death in whimpered groan.
+| Beware the lair that closets hide,
+|   The racks of their disguise,
+| The suits and ties, the cuffs that slide
+|   And cloak them from your eyes.
 |
-| The mountain peaks, a falling height,
-|   The air in sky dissolved,
-| A winter wind, a bitter blight,
-|   Let no sin be absolved.
+| Fear not the slash of sharpened claws,
+|   The flashing terror brief,
+| But stamps that mark the written clause
+|   With laws of fierce belief.
 |
-| The city streets, the graveyard paths,
-|   The linen beds of wards,
-| The gowns of white, the final baths,
-|   The oak in coffin boards.
+| What evil deeds those stories tell
+|   Prepare your heart to meet
+| The formal world where heroes fell
+|   To wander incomplete.
 
 - April 2025
+
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -36,15 +37,15 @@ IX: Landscapes
   * - Date
     - Publication
     - Status
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - May 10, 2025
-    - North Appalachia Review
+  * - April 27, 2025
+    - Writer's Digest Competition
     - Pending
   * - June 4, 2025
     - Swan Scyth Press
+    - Pending
+  * - June 13, 2025
+    - New Verse Review
+    - Rejected
+  * - June 22, 2025
+    - Backbone Mountain Review
     - Pending

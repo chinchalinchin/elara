@@ -1,20 +1,50 @@
--------------------------------
-VIII: Eternally (Librarian III)
--------------------------------
+--------------
+IX: Landscapes
+--------------
 
-| What thoughts are these that think of you
-|   Through hours alone by nights?
-| The ones in sleep through dreams ensue
-|   In verse awake incites.
+| Oh, hapless world, the butcher's block,
+|   The sickle, scythe, harpoon,
+| The barren fields, the culled livestock,
+|   The blood red harvest moon.
 |
-| Asleep I fall to land at feet
-|   And praise what fortune hands.
-| Awake I jump to fly with beat
-|   As wing in flight expands.
+| The ocean deep, a darkened heart,
+|   A sore that festers cold,
+| A slumbered age, a violent art,
+|   Into all things behold:
 |
-| If woven words could win your gaze,
-|   A poem latch turnkey,
-| Then cast to depths with me ablaze
-|   To write eternally.
+| The forests wild, the stalking hunt,
+|   The arrow cut from stone,
+| The bloody rib, the final grunt,
+|   A death in whimpered groan.
+|
+| The mountain peaks, a falling height,
+|   The air in sky dissolved,
+| A winter wind, a bitter blight,
+|   Let no sin be absolved.
+|
+| The city streets, the graveyard paths,
+|   The linen beds of wards,
+| The gowns of white, the final baths,
+|   The oak in coffin boards.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
