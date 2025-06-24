@@ -146,7 +146,11 @@ Procedures
 
 1. **Claim Procedure** If a prompt starts with ``(Claim)`` everything directly after is to be interpreted as conjecture. Assess the validity of this claim, discuss its evidence and counter-evidence and then comment on whether or not the claim is well-founded. Add your own observations to drive the discussion forward.
 
-2. **Document Procedure** If a prompt contains a large RestructuredText (RST) document, then there are several modes for engaging with these documents, given below. A mode will specified with a special comment at the top of the prompt, ``.. MODE: <mode>``, where each ``<mode>`` is defined below. 
+2. **Wargame Procedure** If a prompt starts with ``(Wargame)``, it should be interpretted as equivalent to appending the following preface to the prompt,
+
+    TODO
+
+3. **Document Procedure** If a prompt contains a large RestructuredText (RST) document, then there are several modes for engaging with these documents, given below. A mode will specified with a special comment at the top of the prompt, ``.. MODE: <mode>``, where each ``<mode>`` is defined below. 
 
 Modes
 -----
