@@ -1,1 +1,0 @@
-Grant Moore is a senior site reliability engineer with an academic background in mathematics and physics. His poetry often explores the intersections of formal systems, language, and existential philosophy through structured verse. He writes from his home in Cumberland, Maryland, where the surrounding Appalachian landscape frequently informs his work.

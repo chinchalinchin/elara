@@ -1,6 +1,12 @@
-------------
-I: Absurdity
-------------
+Collection
+==========
+
+-------
+Ballads
+-------
+
+Absurdity
+---------
 
 | One lovely Thursday afternoon
 |   Two billion years ago,
@@ -91,17 +97,3 @@ I: Absurdity
 |   the single atom weave
 | Through warps and wefts and whetted stone,
 |   the knits of stellar sleeve.
-
-- Original: February 2025
-- Revised: June 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Rattle Poetry
-    - Rejected

@@ -1,49 +1,13 @@
------------
-XV: Faustus
------------
+-------------
+XV: Recursion
+-------------
 
-| crooked cross on steeple slants
-| behind the clouds on axis bound.
-| cocoon the storm, these winded cants,
-| this spell from depths of godless sound.
-|
-| let dirge be purged through broken bell,
-| through hollow dell with surging wind,
-| unearthed remains returned from hell,
-| the bones decayed now gardens tend.
-|
-| oh, name that hides in shattered ring,
-| that brings the rain, becomes the night
-| of lightless thunder, shriven sing
-| the drops of dark through wicked flight.
-|
-| by dripping altar, prayers fled
-| through clasping fingers splayed in maze,
-| communed with spirits past and dead,
-| before my eyes, a sightless gaze.
-|
-| the paint of statues leeched in stains,
-| with weeping ink of saint's remorse,
-| deformed by time and bearing chains,
-| condemned to hear my voice grown hoarse.
-|
-| profane my soul and twist it loose
-| with iron pincers red with sin.
-| let drain my blood, my veins to sluice,
-| replace my eyes and rise within.
+| turgidly tenuous and frigidly formed, in
+| swarming seance, words expose through 
+| rippled clauses nested dreams, unnested
+| and divested (the investment sours),
+| demurred and docile, fragile and flailing,
+| infinite depths in comma sweep,
+| recursed through hearses, a loop is ending.
 
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
-    - Rejected
-  * - June 12, 2025
-    - TrashLight
-    - Pending
+- May 2025
