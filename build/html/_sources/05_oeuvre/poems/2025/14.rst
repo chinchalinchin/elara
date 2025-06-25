@@ -43,7 +43,7 @@ XV: Faustus
     - Status
   * - April 27, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - June 12, 2025
     - TrashLight
     - Pending

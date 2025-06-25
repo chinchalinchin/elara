@@ -1,3 +1,71 @@
+The Cumberland Sonnet
+---------------------
+
+| Bay silt in city stone through time accrues
+| along the western course of concrete flow
+| that sweeps from plain to sky in upward spews
+| as grey-white spray arcs over wave to snow
+| from heights on high and splash on mountain spine
+| where valleyed pools in rising drink their fill
+| and shoot with sprouts through shoulders made of pine
+| the roofs that empty crowds on streets and spill
+| through hand to hand the layers stacked from base
+| to wedded brick til building lillies bred
+| against the westward wall in flood's embrace
+| where lips at last are wet in watershed;
+|
+| Let skyline mark where tide in climb was broke:
+| The steepled roof, the needled pine through oak.
+
+Cathedral
+---------
+
+| A church atop a steepled hill,
+| Foundation layers ages old,
+| Remains in spirit standing still.
+| 
+| The shattered stains on window sill,
+| With marble halls of lichen mold,
+| A church atop a steepled hill.
+|
+| Decrepit pews of souls fulfill
+| What congregation left untold,
+| Remains in spirit standing still.
+|
+| The circled streets possess no will
+| Except the signs that staked and sold
+| A church atop a steepled hill.
+|
+| But tower high such pointed skill,
+| Through silken skies of glittered gold,
+| Remains in spirit standing still.
+|
+| Ignore the wind, the biting chill,
+| And cast your final gaze, behold:
+| A church atop a steepled hill 
+| Remains in spirit standing still.
+
+River Rats
+----------
+
+| On river shore the poor in tents will store
+|    their nightly weeping sore.
+| Above and north, the city steeples meet
+| To speak in sermons ever incomplete
+|     for sheep they so ignore.
+|
+| They fight with roar, yet beaten, kiss through gore;
+| Their barrel fire northward dreams of more,
+| The city lights too far a source of heat
+|    For life on river shore.
+|
+| In winter months they paint on skin a whore,
+| And every one despite what silence swore.
+|     These cycles now repeat
+|     While steeples chime upbeat.
+| A yearly war for land they all abhor:
+|     Their home on river shore.
+
 Father's Lullaby
 ----------------
 
@@ -217,6 +285,37 @@ Generations of Gravity
 | As thoughts now lay me down to sleep
 | The walls will shift and speak to me
 | That upside down my ending starts.
+
+The Law of Duality
+------------------
+
+| The world I lived I never knew
+| (If one could know these fevered dreams)
+| I've tried my hand unsticking glue 
+| (These fingers stick to broken seams)
+| It sticks to me and sticks to you
+| (Like noose and neck that swing from beams)
+| 
+| To every thought a thought before
+| (To make of me a puppet string)
+| And every point contains much more
+| (But only hollow things can ring)
+| While every center holds a core
+| (Yet even empty space can sing)
+|
+| A million words and more to come
+| (I'd weep to know a single fact)
+| These humming beats through syntax thrum
+| (Where waves reflect their heights subtract)
+| In hopes a word will angle plumb
+| (Refracted rays in lines contract)
+|
+| This image pressed through sieve to mold
+| (The words I speak are cracked by heat)
+| These holes that craft the shapes to hold
+| (No shapeless things are written neat)
+| The world retold in paper fold
+| (What's left of life in crumpled sheet?)
 
 Roundels of Remembrance
 -----------------------

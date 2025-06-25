@@ -898,3 +898,155 @@ some even rhyme
 | 
 
 | The morning clouds 
+
+
+I: The Winter Rondeau of Cumberland
+-----------------------------------
+
+| City of the Queen, wove from ancient thread,
+| Strung with snow trails of spotted fawn and sled,
+| Drape the hillside in winter's white ermine,
+| Pray to sleep the flock from steeple shrine,
+| Feast on the harvest, though the queen is dead
+| Her spirit flies in death, descends to shine
+|               On the fair City of the Queen.
+|
+| From tower bell, rivers rose with tears shed
+| But her resting stone etched her last design
+|               for the grand City of the Queen.
+|
+| Where the roads of black ebb to bricks of red
+| Where hoof and rubber meet the twines of tread
+| There along mountain tops soft trimm'd by pine
+| There grows a flower from heights of steep incline
+| Planted by tender hands unseen to spread
+|                     Into the City of the Queen.
+
+- March 2025
+
+
+----------
+IV: Chance
+----------
+
+| A death in six is face of die on roll,
+| Like stacks of chips from pots that ante all,
+| A win, or loss, of game that wagers soul
+| Must meet on board the fates that follow call.
+|
+| A life received as hand of cards on deal,
+| Where threes are flush, but royals rarely draw
+| And twos deceive, in bluff contrive to steal
+| What kings and queens through rule so reap by law.
+|
+| A love is tracked by loops of racing course,
+| Through hoop and holler, bookies taking bets,
+| Where hopes in coin distill to choice of horse
+| And ticker tape leaves the crowd with debts.
+|
+| The world at large is made of game and rule,
+| Appears to eyes as ordered step of dance.
+| Each move, when made by foot of sage or fool,
+| Results in taps resolved to beat of chance.
+|
+| What always fortune finds is fettered fate
+| Unlocked by strike of luck and never late.
+
+- April 2025
+
+.. list-table:: Submission History
+   :widths: 15 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - April 7, 2025
+     - The New Yorker
+     - Pending
+
+------------------
+V: Games of Chance
+------------------
+
+| A death is face of die on roll,
+|   A stack that antes all.
+| To win requires a wagered soul
+|   To meet and make the call.
+|
+| A life is hand of cards on deal,
+|   Where royals rarely draw.
+| The twos in bluff contrive to steal
+|   What aces reap by law.
+
+| A love is tracked by racing course,
+|   With bookies taking bets,
+| Where hopes distill to choice of horse
+|   And leave the crowds with debts.
+|
+| The world is framed by game and rule,
+|   As if an ordered dance.
+| Each move, though played by sage or fool,
+|   Results in whims of chance.
+|
+| What fortune finds is fettered fate,
+| Unlocked by luck and never late.
+
+- April 2025
+
+------------
+VI: Poisoned
+------------
+
+| Before we met by chance, your heart was claimed,
+| What wasted years I spent alone in trance,
+| When arrows knocked on string were freely aimed,
+| I lost my chance to ask your hand in dance.
+|
+| That life should teach me meaning bittersweet,
+| To see what honey bees in hive partake,
+| To watch the flight of doves from grounded feet,
+| I knew then not what pain in heart would ache.
+| 
+| My poison petals in your soul would bloom,
+| If fate had played its hand another way,
+| In sideways future spun by time's dread loom,
+| Your life, your love, would fall to me as prey.
+|
+| If solace cursed I am to trek this mile,
+| I only ask your love should make you smile.
+
+- April 2025
+
+
+-------------------------------
+I: The Villanelle of Viola Elle
+-------------------------------
+
+| Viola Elle took his heart
+| But there wasn't much to take
+| Strewn to pieces and to parts.
+|
+| The written word her counterpart
+| In those blossoms caught his love
+| And Viola Elle took his heart.
+|
+| So brief her stay to long depart,
+| Meadow memories of clover doves
+| Strewn to pieces and to parts.
+|
+| Without hand and leading start
+| To silent fields of fell foxglove
+| Viola Elle took his heart
+|
+| And in taking, sorrow did impart
+| The waking of his life whereof
+| Strewn to pieces and to parts.
+|
+| In form such beauty is betrayed;
+| From pen she never fully fades.
+| Viola Elle took his heart
+| Strewn to pieces and to parts.
+
+- February 2025
+

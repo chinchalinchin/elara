@@ -66,3 +66,6 @@ I: Elemental Elegy
   * - June 22, 2025
     - Backbone Mountain Review
     - Pending
+  * - June 25, 2025
+    - The Aftershock Review
+    - Pending

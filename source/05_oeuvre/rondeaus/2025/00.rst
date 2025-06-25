@@ -1,23 +1,34 @@
-I: The Winter Rondeau of Cumberland
------------------------------------
+-------------
+I: River Rats
+-------------
 
-| City of the Queen, wove from ancient thread,
-| Strung with snow trails of spotted fawn and sled,
-| Drape the hillside in winter's white ermine,
-| Pray to sleep the flock from steeple shrine,
-| Feast on the harvest, though the queen is dead
-| Her spirit flies in death, descends to shine
-|               On the fair City of the Queen.
+| On river shore the poor in tents will store
+|    their nightly weeping sore.
+| Above and north, the city steeples meet
+| To speak in sermons ever incomplete
+|     for sheep they so ignore.
 |
-| From tower bell, rivers rose with tears shed
-| But her resting stone etched her last design
-|               for the grand City of the Queen.
+| They fight with roar, yet beaten, kiss through gore;
+| Their barrel fire northward dreams of more,
+| The city lights too far a source of heat
+|    For life on river shore.
 |
-| Where the roads of black ebb to bricks of red
-| Where hoof and rubber meet the twines of tread
-| There along mountain tops soft trimm'd by pine
-| There grows a flower from heights of steep incline
-| Planted by tender hands unseen to spread
-|                     Into the City of the Queen.
+| In winter months they paint on skin a whore,
+| And every one despite what silence swore.
+|     These cycles now repeat
+|     While steeples chime upbeat.
+| A yearly war for land they all abhor:
+|     Their home on river shore.
 
 - March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected

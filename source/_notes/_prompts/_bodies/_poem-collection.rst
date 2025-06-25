@@ -54,7 +54,7 @@ I: The Unicode Ode
     - Status
   * - April 27, 2025
     - Frontier Misfit Competition
-    - Pending
+    - Rejected
   * - June 12, 2025
     - TrashLight
     - Pending
@@ -140,7 +140,7 @@ II: The Invocation of Metric Code
     - Status
   * - April 27, 2025
     - Frontier Misfit Competition
-    - Pending
+    - Rejected
   * - June 12, 2025
     - Merion West
     - Pending
@@ -1309,7 +1309,7 @@ I: Elemental Elegy
     - Pending
   * - June 3, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
@@ -1318,7 +1318,7 @@ I: Elemental Elegy
     - Pending
   * - June 13, 2025
     - New Verse Review
-    - Pending
+    - Rejected
   * - June 14, 2025
     - Grand Little Things
     - Pending
@@ -1769,7 +1769,7 @@ I: An Ode To Autumn
     - Rejected
   * - April 27, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - May 10, 2025
     - North Appalachia Review
     - Pending
@@ -1855,7 +1855,7 @@ II: Ode to the Heron
     - Pending
   * - June 3, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
@@ -1867,7 +1867,7 @@ II: Ode to the Heron
     - Pending
   * - June 13, 2025
     - New Verse Review
-    - Pending
+    - Rejected
   * - June 14, 2025
     - Grand Little Things
     - Pending
@@ -2021,7 +2021,7 @@ II: The Pantoums of Dementia
     - Pending
   * - June 3, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
@@ -2759,7 +2759,7 @@ VII: The Paronymous Polyptotons of Love
     - Pending
   * - April 27, 2025
     - Frontier Misfit Competition
-    - Pending
+    - Rejected
 
 ---------------------------
 VII: Designs (Librarian IV)
@@ -2898,7 +2898,7 @@ XI: The Curse of Rain
     - Status
   * - April 27, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - May 10, 2025
     - North Appalachia Review
     - Pending
@@ -2986,7 +2986,7 @@ XIII: Walls
     - Status
   * - April 27, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - May 10, 2025
     - North Appalachia Review
     - Pending
@@ -3029,7 +3029,7 @@ XIV: Turkey Vultures
     - Status
   * - April 27, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - June 22, 2025
     - Backbone Mountain Review
     - Pending
@@ -3079,7 +3079,7 @@ XV: Faustus
     - Status
   * - April 27, 2025
     - Frontier Poetry
-    - Pending
+    - Rejected
   * - June 12, 2025
     - TrashLight
     - Pending

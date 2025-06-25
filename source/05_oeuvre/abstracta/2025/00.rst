@@ -39,7 +39,7 @@ I: The Unicode Ode
     - Status
   * - April 27, 2025
     - Frontier Misfit Competition
-    - Pending
+    - Rejected
   * - June 12, 2025
     - TrashLight
     - Pending

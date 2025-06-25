@@ -1,30 +1,41 @@
--------------------------
-II: The Haunted Cathedral
--------------------------
+---------
+II: Plots
+---------
 
-| A church atop a steepled hill
-| From foundation ages old
-| Remains in spirit standing still.
-| 
-| Stain'd glass shattered on a sill,
-| With marble halls of lichen mold,
-| A church atop a steepled hill.
+| In time their plot was touched by dark.
+| Began the page this meadow scene
+| where blades of grass were tall and stark.
 |
-| From pews drinking up their fill,
-| The congregation in stories told
-| Remains in spirit standing still.
+| A tired arc, they met in park
+| To kiss beneath the twilight queen;
+| In time their plot was touched by dark.
 |
-| What there remains but little will
-| In history pages to written hold
-| A church atop a steepled hill.
+| They stole away on sudden lark,
+| Exchanged the words from whispered lean
+| Where blades of grass were tall and stark.
 |
-| But steeple of such pointed skill,
-| From silken skies of glitter'd gold
-| Remains in spirit standing still.
+| So happy now, neighbors remark,
+| Yet seem is such to lose its sheen,
+| In time their plot was touched by dark.
 |
-| Pray, ignore the biting chill
-| As cast into the shaping mould,
-| Oh! church atop a steepled hill,
-| We remain in spirit standing still.
+| Yet faded years ignored their spark
+| In life they lived forever seen
+| Where blades of grass were tall and stark.
+|
+| In ground, their bodies disembark
+| And leave behind a hole dug clean.
+| In time their plot was touched by dark,
+| Where blades of grass were tall and stark.
 
 - March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Poetry Magazine
+     - Pending
