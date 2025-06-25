@@ -3,7 +3,7 @@
 **/.terraform
 **/.terrraform/** 
 **/*.terraform.lock.hcl
-docs/build/**
+build/**
 venv/**
 !/venv/.gitkeep
 **/pyvenv.cfg
