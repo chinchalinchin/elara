@@ -27,4 +27,19 @@ I: Cathedral
 | A church atop a steepled hill 
 | Remains in spirit standing still.
 
-- March 2025
+- Original: March 2025
+- Revised: June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
+  * - June 25, 2025
+    - Apus Journal
+    - Pending
