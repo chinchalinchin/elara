@@ -1273,3 +1273,266 @@ VIII: Eternally (Librarian III)
 |   To write eternally.
 
 - April 2025
+
+-------------
+III: Stranded
+-------------
+
+| A hundred days would need a hundred more
+| Before exhaust began to tame my heart.
+| The wizened waves to rock decay the shore
+| In time it takes for maps of you to chart.
+|
+| Yet minutes gone to ground will go too quick,
+| Where sand in wind so whips you brief away,
+| Each moment past with you now seems a trick,
+| As staggered feet through surf are lost in spray.
+|
+| This isle I find myself at night marooned,
+| Where thoughtless sleep is but a dream once held,
+| Alone these times with fire I have communed,
+| In cants of memories with you I dwell.
+|
+| Though lost at sea, amid unending storm,
+| A thought, perhaps to be, with you and warm.
+
+- April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+
+---------
+I: Regret
+---------
+
+| Regret, she dances, with her ever rhythm'd heart
+| Over silent stones during midnight mercurial;
+| In darkness sway, she swoons
+| As sharpened shoulders slouch.
+|
+| Over flowing graves, the pale wraith weaves
+| her steps, for each life entombed provides
+| a section orchestra
+| raising noise as she struts. 
+|
+| Hollow hands hold out a beating drum to hear;
+| In steady words, her lover's dirge is heard: 
+| Tomorrow, tomorrow
+| Until tomorrow is no more.
+|
+| There she spins, twirling arms,
+| A specter in the moon,
+| geometries of momentary
+| Incandescent form.
+|
+| Oh, but for a single second more!
+| Alas, the fleeting minutes flow. 
+| She harmonizes with borrowed hours,
+| Singing solemn songs.  
+|
+| The morning never comes;
+| She flutters all the while.
+| Eternal are the steps
+| Of Regret's hypnotic moon-lit dance.
+
+- February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+
+----------
+II: Syntax
+----------
+
+| Each spelling word speaks a spell of glowing color magic;
+| To name denoted what is described enshrines the soul in ink.  
+| Form constrains, but not contains, the flowing energy frantic
+| Where it finds in lines designed reflected images in sync. 
+| 
+| Stride sideface on syntax streets where shunted symbols glean,
+| Hurl headlong across aspirated avenues of halting interdiction
+| Where snips of thought spun reversed through mirrored spin convene;
+| In these meager serif peels sleep fires of burning contradiction.
+| 
+| A syllable demands little, but a spoken sound to sustain:
+| Each lever deliver in level reviled the revel of all speech. 
+| When snaps are gone, reversed, the spans will yet remain,
+| A spool of loops, a palindrome, signaling the breach:
+|
+| I met a system I, madam, nuts is as selfless as I stun;
+| Part on seined flow, deified nun, wolf denies no trap;
+| God lived as a devil dog, ere, no spay pup yaps on!
+| If characters spin and snap, meaning is yet wordwrapt.
+|
+| Inverted strings start to chart the wording realm unveiled;  
+| Expand in spans through vast expanse, but scarcely fill the space.
+| Semiordnilaps, anastrophe, with still much to be inhaled;
+| These parts strapped in syntropy divide in fractal formal grace. 
+|
+| If form inherits, then it follows that formal is the soul.
+| What says it then of what we are, if it is to be subtracted?
+| That which remains in letters drained of parts once made whole
+| Yet in the shapes there always is what cannot be redacted.
+
+- February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+
+-------------
+III: Dystopia
+-------------
+
+| First - The Haystruck Head
+|
+| In a distant future, where rhyming is a crime,
+| Each metered sentence sentenced an irony of kinds,
+| To be what is to be condemned,
+| No finer end on offer.
+| 
+| And so our plaintiff finds himself, facing legal tempers,
+| "Please explain these zippered little slippers?
+| What treason to dress
+| In these flat black slacks
+| Upon your thighs which lie?"
+| 
+| In his defense, "No finer mind could scarce divine
+| An outfit stitched in nothing, where words find lines,
+| Despite my time, where threadbare seams
+| Sewn inlaid dreams, in threads of no design!"
+| 
+| With a guffaw, a lawyer stands with a score of schooling,
+| Slams his hands in mock remand, and argued such while drooling,
+| "So you admit to this wit
+| With which your garb comports?
+| Such deviance detailed in resounding writ,
+| Seals itself in short retort."
+|
+| The court strikes twelve, the twelve struck dead,
+| They find in haystruck head a verdict over-muted,
+| Which lolls and gags in city courtyards putrid,
+| Teeth click-clacking like stark didacts
+| Preaching to the bricks and blackness.
+|
+| Second - Poets Et Al
+|
+| The last ones were hunted in places they waxed poetic
+| Across windswept fields, of forest clearings, in gardens copacetic,
+| Yet for all of it, the tresses dressed in such lovely roses picked.
+| The final rhyming couplets vied with the hounds bark brayed
+| Encircled in arms, they died swift in circled stage:
+|
+| First went the Romantics, and love was lost. 
+| Then went the Stoics, and naught was crossed.
+| Then went the Classics, but no one missed them. 
+| Next were the Playwrights and Poets Et Al,
+| Any one fool who answered the call.
+|
+| Twelve nights they burned, twelve nights we wept,
+| And then dreamless dreaming through the future we slept,
+| Awoke and found a sudden desire expired,
+| No more urge to imbue,
+| To scatter and subdue,
+| That which words clearly defy, the rhyming rhythm 
+| In which life resides.
+|
+| Constitutions were written to codify:
+| Kill all the poets, let poetry die. 
+| Return it again
+| The rooted treasure they had looted.
+|
+| Third - Ignore the Metaphor
+|
+| Watch as child to child between each haloo
+| Hear the scattered echoes retreat and ensue.
+| In this land of rhymeless ribbons, rhythm still is found.
+| In the hamlets of branded outlaws each system such begets,
+| Observe in silent moments poetry's fiery signets:
+| 
+| (Awake, flowers, tower higher every hour.
+| Find, sentence, a sense of unending suspense.
+| Sleep, children, with dreams of subtle schemes.
+| Revel, rhymes, you are more than merely vessels.)
+|
+| How to ignore the metaphor 
+| And resist the urge to write?
+| A deadly sin
+| But without skin,
+| What games can we be had? 
+
+- February 2025
+
+-------------
+VI: Halloween 
+-------------
+
+| A man in a pink bunny suit crosses the street
+| Drunk and reeling with flat footed feet.
+| An undead city rises in reverse
+| According to a long ritualized curse.
+
+- 2009
+
+---------------------------
+VII: Designs (Librarian IV)
+---------------------------
+
+| If asked this time, design a rhyme
+| To woo your mind from book, by hook
+| I'll thread this line up steep incline
+| While looking back to meadowbrook
+| Reclined your arms in sun shook shine,
+| In paper pages overtook
+| Your gaze from mine, hidden through pine
+| I spied your beauty's lounging look.
+|
+| The joy of snaps and clicking lock
+| Which ticking clocks with clapping hands
+| So slap the sand and quickly block
+| The falling grains, in wick expands
+| To flame the brand that marks the spot
+| Where stopped my heart its lonely gland
+| At sight of you and tamed my thought
+| And swapped unplanned in place to stand
+| Where lace with liquid grace ties knots
+| Between the space your face commands.
+
+- April 2025
+
+-------------
+XV: Recursion
+-------------
+
+| turgidly tenuous and frigidly formed, in
+| swarming seance, words expose through 
+| rippled clauses nested dreams, unnested
+| and divested (the investment sours),
+| demurred and docile, fragile and flailing,
+| infinite depths in comma sweep,
+| recursed through hearses, a loop is ending.
+
+- May 2025

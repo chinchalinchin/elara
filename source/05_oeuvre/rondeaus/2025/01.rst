@@ -85,8 +85,8 @@ II: Roundels of Remembrance
 | VI - Seats
 |
 | The vinyl seats of classic cars,
-| the plastic smell their thread secretes,
-| this cherry burn on cover mars 
+| The plastic smell their thread secretes,
+| This cherry burn on cover mars 
 |   the vinyl seats.
 |
 | When Father stooped to sew the sheets,
@@ -94,9 +94,9 @@ II: Roundels of Remembrance
 | his fingers folded rows of pleats.
 |
 | My fingers trace the wells of scars
-| as driving down the city streets
-| the last remain in leaving chars
-|   the vinyl seats.
+| As driving down the city streets
+| My careless dropped reminder chars
+|   The vinyl seats.
 
 - June 2025 
 
@@ -113,17 +113,6 @@ II: Roundels of Remembrance
   * - June 22, 2025
     - Backbone Mountain Review (II, IV, VI)
     - Pending
-
-.. | R - A 
-.. | B ∥ R 
-.. | A 
-.. | R 
-.. |
-.. | B
-.. | A 
-.. | B 
-.. |
-.. | A 
-.. | B
-.. | A 
-.. | R
+  * - June 25, 2025
+    - St. Katherine Review
+    - Pending
