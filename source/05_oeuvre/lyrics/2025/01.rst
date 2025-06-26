@@ -1,31 +1,50 @@
------------------
-II: Sunday Ghosts
------------------
+--------------
+II: Landscapes
+--------------
 
-| On Sunday morning drive to your
-|   Mountain cemetery,
-| From black of road there rose the mists
-|   To west where winds carry
-| The ghosts the ground have failed to keep
-|   Where earth lay bare through tar,
-| Where oaks and willows reach to weep
-|   But watch aghast afar,
-| Decades through pores now poured in droves
-|   As over them I drove,
-| Their grasping tongues of fog unfurled,
-|   With craft a road they wove,
-| Until no longer did I drive but flee
-|   From lane of memory.
+| Oh, hapless world, the butcher's block,
+|   The sickle, scythe, harpoon,
+| The barren fields, the culled livestock,
+|   The blood red harvest moon.
+|
+| The ocean deep, a darkened heart,
+|   A sore that festers cold,
+| A slumbered age, a violent art,
+|   Into all things behold:
+|
+| The forests wild, the stalking hunt,
+|   The arrow cut from stone,
+| The bloody rib, the final grunt,
+|   A death in whimpered groan.
+|
+| The mountain peaks, a falling height,
+|   The air in sky dissolved,
+| A winter wind, a bitter blight,
+|   Let no sin be absolved.
+|
+| The city streets, the graveyard paths,
+|   The linen beds of wards,
+| The gowns of white, the final baths,
+|   The oak in coffin boards.
 
-- March 2025
+- April 2025
 
 .. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-   * - Date
-     - Publication
-     - Status
-   * - March 27, 2025
-     - Think Journal
-     - Rejected
+  * - Date
+    - Publication
+    - Status
+  * - April 7, 2025
+    - Paris Review
+    - Pending
+  * - April 7, 2025
+    - The New Yorker
+    - Pending
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending

@@ -1120,3 +1120,156 @@ XVII: Engrams
 | and running and--
 
 - May 2025
+
+
+-------
+I: Wine
+-------
+
+| What flows is not what flows
+|     But wine from sight concealed,
+| Present spilling o'er lips
+|     From barrel cork unsealed.
+| Agony! Of moment's time
+|    To pour from heart to lung,
+| Distilled to simple words
+|    In verse's twisted tongue.
+| Of vine and light that grew
+|    the fruit of form to fill,
+| There lingers aftertaste
+|    but lacks a certain frill.
+| In drip of character
+|    glasses tipped to brim,
+| Imbibed from ear to ear
+|    where thoughts attempt to swim,
+| The meaning drowns in drink
+|    Of hint of sought intent,
+| But flavor cannot capture
+|    What truly palette meant.
+
+- March 2025
+
+
+-----------------
+II: Sunday Ghosts
+-----------------
+
+| On Sunday morning drive to your
+|   Mountain cemetery,
+| From black of road there rose the mists
+|   To west where winds carry
+| The ghosts the ground have failed to keep
+|   Where earth lay bare through tar,
+| Where oaks and willows reach to weep
+|   But watch aghast afar,
+| Decades through pores now poured in droves
+|   As over them I drove,
+| Their grasping tongues of fog unfurled,
+|   With craft a road they wove,
+| Until no longer did I drive but flee
+|   From lane of memory.
+
+- March 2025
+
+.. list-table:: Submission History
+   :widths: 15 15 15
+   :header-rows: 1
+
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Think Journal
+     - Rejected
+
+--------------------------
+III: On The Origin of Wind
+--------------------------
+
+| The shape of wind in blades of grass,
+|     Invisible heartbeat,
+| I watch your dance from windowed room
+|    In rising summer heat,
+| Your pressured pulse that skips through sky
+|     With history unseen,
+| I wonder where this prologue starts,
+|     what ancient chorus scene
+| Announced your birth on fertile Earth
+|    and blew the trumpet loud;
+| Who called to you from great beyond
+|    to tend this court of cloud?
+| What sight will see your silent state
+|    which spans expanse in dark?
+| What ears will hear your solid plea
+|    which leaves in naught its mark?
+| What moment did you rise to life?
+|    What second do we praise?
+| Your source, like form, is hidden close
+|    In foggy, timeless haze.
+| In tracing back your tangled threads
+|     they twine around and spool;
+| Each point begins with points before
+|     Always as if by rule.
+
+- March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Think Journal
+    - Rejected
+
+---------------------
+V: Ink (Librarian I)
+---------------------
+
+| With ink of jet, she shapes her world
+|    With written, colored line,
+| So contrary, she laughs and twirls
+|     In library of mine.
+|
+| Around her arm, the ink in coil
+|    Will paint the scene to set.
+| Her skin is seared with burning oil
+|    Where art in flame is met.
+|
+| Then up her neck, through nest of hair,
+|    Where color threads are knit,
+| The ink will bind in dye its share
+|    Of strands she formed by writ.
+|
+| She flocks the books across the shelves
+|    And tends her paper field,
+| Her mind through story page so delves
+|    As word to ink will yield.
+|
+| Library belle, my heart is smear and blot;
+| It lacks but ink to find its way through plot.
+
+- April 2025
+
+-------------------------------
+VIII: Eternally (Librarian III)
+-------------------------------
+
+| What thoughts are these that think of you
+|   Through hours alone by nights?
+| The ones in sleep through dreams ensue
+|   In verse awake incites.
+|
+| Asleep I fall to land at feet
+|   And praise what fortune hands.
+| Awake I jump to fly with beat
+|   As wing in flight expands.
+|
+| If woven words could win your gaze,
+|   A poem latch turnkey,
+| Then cast to depths with me ablaze
+|   To write eternally.
+
+- April 2025

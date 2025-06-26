@@ -92,8 +92,8 @@ I: Absurdity
 | Through warps and wefts and whetted stone,
 |   the knits of stellar sleeve.
 
-- Original: February 2025
-- Revised: June 2025
+- *Original*: February 2025
+- *Revised*: June 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15

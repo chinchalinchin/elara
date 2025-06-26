@@ -1,30 +1,46 @@
--------------------------------
-I: The Villanelle of Viola Elle
--------------------------------
+---------
+I: Regret
+---------
 
-| Viola Elle took his heart
-| But there wasn't much to take
-| Strewn to pieces and to parts.
+| Regret, she dances, with her ever rhythm'd heart
+| Over silent stones during midnight mercurial;
+| In darkness sway, she swoons
+| As sharpened shoulders slouch.
 |
-| The written word her counterpart
-| In those blossoms caught his love
-| And Viola Elle took his heart.
+| Over flowing graves, the pale wraith weaves
+| her steps, for each life entombed provides
+| a section orchestra
+| raising noise as she struts. 
 |
-| So brief her stay to long depart,
-| Meadow memories of clover doves
-| Strewn to pieces and to parts.
+| Hollow hands hold out a beating drum to hear;
+| In steady words, her lover's dirge is heard: 
+| Tomorrow, tomorrow
+| Until tomorrow is no more.
 |
-| Without hand and leading start
-| To silent fields of fell foxglove
-| Viola Elle took his heart
+| There she spins, twirling arms,
+| A specter in the moon,
+| geometries of momentary
+| Incandescent form.
 |
-| And in taking, sorrow did impart
-| The waking of his life whereof
-| Strewn to pieces and to parts.
+| Oh, but for a single second more!
+| Alas, the fleeting minutes flow. 
+| She harmonizes with borrowed hours,
+| Singing solemn songs.  
 |
-| In form such beauty is betrayed;
-| From pen she never fully fades.
-| Viola Elle took his heart
-| Strewn to pieces and to parts.
+| The morning never comes;
+| She flutters all the while.
+| Eternal are the steps
+| Of Regret's hypnotic moon-lit dance.
 
 - February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
