@@ -1,6 +1,6 @@
------------
-XIII: Sight
------------
+--------
+I: Sight
+--------
 
 | the true nature 
 | of sight 
@@ -19,7 +19,9 @@ XIII: Sight
 | outer nothing
 | met in perfect 
 | equilibrium
-| in the muted dark. 
+| stabilized in secret
+| through the muted 
+| dark. 
 |
 | then
 |

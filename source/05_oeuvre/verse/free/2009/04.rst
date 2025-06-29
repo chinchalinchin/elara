@@ -1,6 +1,6 @@
-----------
-VII: Truth
-----------
+--------
+V: Truth
+--------
 
 | Some things are beautiful.
 | Some things are not.

@@ -1,7 +1,5 @@
-Lyrics
+Formal
 ======
-
-Lyrics are defined as verse written in common meter.
 
 .. toctree::
    :maxdepth: 2

@@ -13,8 +13,8 @@ Oeuvre
    lyrics/index
    odes/index
    pantoums/index
-   poems/index
    rondeaus/index
    sonnets/index
    triolets/index
+   verse/index
    villanelles/index
