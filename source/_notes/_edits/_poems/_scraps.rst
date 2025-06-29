@@ -1497,6 +1497,71 @@ VI: Halloween
 
 - 2009
 
+
+-------------
+XV: Recursion
+-------------
+
+| turgidly tenuous and frigidly formed, in
+| swarming seance, words expose through 
+| rippled clauses nested dreams, unnested
+| and divested (the investment sours),
+| demurred and docile, fragile and flailing,
+| infinite depths in comma sweep,
+| recursed through hearses, a loop is ending.
+
+- May 2025
+
+
+---------
+I: Regret
+---------
+
+| Regret, she dances, with her ever rhythm'd heart
+| Over silent stones during midnight mercurial;
+| In darkness sway, she swoons
+| As sharpened shoulders slouch.
+|
+| Over flowing graves, the pale wraith weaves
+| her steps, for each life entombed provides
+| a section orchestra
+| raising noise as she struts. 
+|
+| Hollow hands hold out a beating drum to hear;
+| In steady words, her lover's dirge is heard: 
+| Tomorrow, tomorrow
+| Until tomorrow is no more.
+|
+| There she spins, twirling arms,
+| A specter in the moon,
+| geometries of momentary
+| Incandescent form.
+|
+| Oh, but for a single second more!
+| Alas, the fleeting minutes flow. 
+| She harmonizes with borrowed hours,
+| Singing solemn songs.  
+|
+| The morning never comes;
+| She flutters all the while.
+| Eternal are the steps
+| Of Regret's hypnotic moon-lit dance.
+
+- February 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+
+
+
 ---------------------------
 VII: Designs (Librarian IV)
 ---------------------------
@@ -1523,16 +1588,186 @@ VII: Designs (Librarian IV)
 
 - April 2025
 
--------------
-XV: Recursion
--------------
+---------------------
+V: Parallel Universes
+---------------------
 
-| turgidly tenuous and frigidly formed, in
-| swarming seance, words expose through 
-| rippled clauses nested dreams, unnested
-| and divested (the investment sours),
-| demurred and docile, fragile and flailing,
-| infinite depths in comma sweep,
-| recursed through hearses, a loop is ending.
+| Every life is a parallel universe.
+| Walking down the sidewalk lets me peer through portals
+| into other dimensions, where I might be a computer scientist
+| or a skinny woman wrapped in a fur coat
+| or a successful hedge fund manager.
+| More to the point, somewhere I am a poisonous tree frog.
+| Somewhere, I am the vibrating air,
+| the seductive undulations of music.
+| Somewhere else I am the dirt.
+| Regardless of form, everywhere I am.
 
-- May 2025
+- 2009
+
+
+------------
+II: Nihilism 
+------------
+
+| the weight of guilt
+| as dense as stars
+| with burning cores
+| that fuse their parts.
+| 
+| where did it start?
+| the thread comes loose
+| and eats its tail.
+| a endless loop
+| that leads to now
+|
+|    i watched my father die in blinding pain
+|    and then my mother lost her mind.
+|
+| then switches back
+| through stitches sewn
+| in younger years
+|
+|    my friends are gone.
+|    abandoned, why? 
+|
+| the senseless acts
+| strangers perform 
+| with your own hands.
+|
+| a leaden heart
+| that sinks below
+| the surface waves
+| to depths that stretch
+| around the world
+| and wish it were 
+| another way.
+| 
+| my empty heart 
+| that once felt love.
+| her laugh was like
+| a perfect song,
+| a single sound
+| enough to hold
+| a moment's peace
+| before it fades.
+|
+|    she left and never said good bye. 
+| 
+| my mind is shot
+| with burning holes
+| that leak a thought
+| of molten make:
+|
+| your life is done.
+| your words are through.
+| you had your chance.
+|
+|    it all is gone.
+
+- June 2025
+
+
+-------------------
+I: Mephisto and God
+-------------------
+
+| Mephisto
+| 
+|	All of these mysteries that you claim to keep,
+|	the learned below spurn to regard so little;
+|	Whose outline yet drapes the wide world entire
+|	enforcing a silence before their tongues inquire. 
+|
+|	The faithful doth put their heads to sleep,
+|	rest assured in dreams of their souls' acquittal. 
+|	Trembling and awed, even the learned agree:
+|	Life has a price, because it's not given for free. 
+|
+|	In moments of agony and madness unique,
+|	Even the heart of the heathen cries out your sickle.
+|	For every human heart has a lack that you built,
+|	One that you filled with bottomless guilt. 	
+|
+|	I, Mephisto, am not cowed by your mystique.
+|	Your promises ring hollow, your words always brittle.
+|	I am your equal and I know the truth
+|	Though it requires not even a sleuth. 
+|
+|	I'd wager all there is a greater leap,
+|	a question that for all you are is still a riddle;
+|	That when You created Man, You rolled the dice,
+|	Cut from His rib and then rolled it twice.
+|
+| God
+| 
+| 	The question you pose is one of chance.
+|	Whether I, being God, act in ways uncertain?
+|	What saith you when my answer breaks tooth?
+|	Would you believe it then or need further proof?
+|
+|
+| Mephisto
+|
+|	So my argument you doth admit and advance!
+|	Let us climax this play now towards its curtain:
+|	Tell me true here now there is no plan
+|	All is chaos for a width without span.
+|
+|
+| God 
+|
+|	You march on ahead without my question sated. 
+|	I ask you again: what proof you require?
+|	The price of this knowledge is paid full in faith,
+|	not a theorem of words strung to show so you saith. 
+|
+|
+| Mephisto
+|
+|	In circles, you talk! Oh, how I hate it! 
+|	Instead of answers, you endlessly suspire!
+|	If you seek to confound, so that I might falter and cease
+|	Then you've misplaced another bet on my unfounded caprice! 
+|
+| God
+|
+|	Free will was a gift not lightly bestowed.
+|	The answers you seek would ruin the surprise. 
+|	A light that illumines always a shadow destroys
+|	So what was in the darkness, in light avoids.
+
+- 2022
+
+
+| but idling, the fumes accrue,
+| no longer burnt away,
+| the nauseous thoughts 
+| that churn in knots
+| around my neck a cloud
+| of  
+
+
+
+
+
+|
+| my babel thoughts of floods foretold,
+| the levels rising upside down. 
+|
+| the tides that rush from up above
+| to chase me down again.
+| 
+| i reignite
+| beneath the shadow
+| heavens cast.
+
+
+| the rapture thought 
+| exactly made, contained 
+| within what hallow breath and fire mix.
+|  
+| not to fade away
+| but fade within
+| to thinning wind,
+| dissolved into the sky. 
