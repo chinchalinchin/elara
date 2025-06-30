@@ -108,6 +108,13 @@ Expressions
     | When thoughts like streams define mentality,
     | A mental scheme shapes our causality.
 
+.. topic:: Claude Sonnet 4, 6/29/2025
+
+    | Through words that bind our minds in tight regime,
+    | Each phrase that lies embedded in the scheme.
+    | While thoughts that gleam arrange our speech's key,
+    | They form the bounds of our humanity.
+
 20. [contains(connotes(the absurdity of being)) ∩ contains([λx: x ∈ resonate(your hidden name)]) ∩ resonates(the loop of time) ∩ line(your name goes here, meter=-+,feet=5,rhyme=clock)].[[(resonate(divine) ∪ resonate(your hidden name)) ∩ line(time is just to wait, meter=*)]^2].[line(the price of names is time, meter=-+,feet=5, rhyme=clock) ∩ resonate(infinity)]
 
 21. accent(gen,.+*) ∩ connote(new ∨ unforeseen ∨ unexpected ∨ divine)
@@ -120,6 +127,12 @@ Expressions
     | Delve generating picture
     | Cell operate construe
 
+.. topic:: Claude Sonnet 4, 6/29/2025
+
+    | Myself initiates the power structures grew
+    | Self-help generating fractured meaning's hue  
+    | Felt generators restructure circuits through
+
 23. ((y = line([λx: x ∈ decline(season)][σ][λx: x ∈ resonate(flow)][σ][λx: x ∈ decline(time)] ∩ connote(grains of sand in an hourglass)) ∩ rhyme(return)).(chiasmate(resonate(y)) ∩ connote(the chaos of a sandstorm and barrenness of a desert)).(line([λx: x ∈ resonate(season)][σ][λx: x ∈ decline(flow)][σ][λx: x ∈ resonate(time)] ∩ connote(the sucking of a sandtrap)) ∩ rhyme(return)))(meter=-+, feet=5 per line)
 
 .. topic:: Gemini 2.5. Pro, 5/26/2025
@@ -127,6 +140,12 @@ Expressions
     | The seasonal slow timelessness will burn.
     | Harsh deserts now return, calm seasons flee.
     | The stone it flowed, a tomb, now all will turn.
+
+.. topic:: Claude Sonnet 4, 6/29/2025
+
+    | The seasons slow through times that never turn
+    | While lone winds roam where endless dunes discern  
+    |Reason's refined flows climb through grains that churn
 
 24. line(resonate(stellar) ∩ connote(surveying new buildings))(meter=-+, feet=3)
 
@@ -151,6 +170,13 @@ Expressions
     | Then shadow falls, a grim duress.
     | All whitened hope contracts with jarring noise.
     | Life surges out, a new largesse.
+
+.. topic:: Claude 4, 6/29/2025
+
+    | The clashing forces lack their poise
+    | Attack with darkness  
+    | The whitened ark compressed destroys
+    | While bright waves test and then progress
 
 28. Chiasmatic Structures
 
@@ -210,6 +236,18 @@ Expressions
     | Confess we must, a vivid truth it yields, perhaps.
     | That spirit choice gives order from the mass.
 
+.. topic:: Claude Sonnet 4, 6/29/2025
+
+    | When balance grims the poised voice
+    | Yield crimson stress
+    | Through tension azured hues rejoice
+    | When passion bless
+    | 
+    | Where blessed passions fill the gaps
+    | Joy's hues surpass
+    | Where stressed crimsons yield collapse
+    | Voice grims mass
+
 29. { x | ∃y ∈ L: ∃n ∈ ℕ: x = line(y)(meter=-+, feet=n)} ∩ P
 
 30. Fixed characters and words
@@ -261,6 +299,17 @@ Expressions
     | So sweet, desire, new insight now perhaps.
     | Insight, dream, then plan must pass.
 
+.. topic:: Claude Sonnet 4, 06/29/2025
+
+    | The mind deflects the soul's display  
+    | Heart reflects sweet  
+    | Creation's obscured way  
+    | Destruction's fleet  
+    | Perhaps destruction's mass  
+    | Fleet creation  
+    | The soul reflects perhaps  
+    | Mind's reflection
+    
 32. { [λx: ∃🧠: 🧠 ∈ lang.stretch() ∧ 🧠 ≡ x], [λx: ∃💾: 💾 ∈ lang.stretch() ∧ 💾 ≡ x], [λx: ∃🌐: 🌐 ∈ lang.stretch() ∧ 🌐 ≡ x], [λx: ∃🪞: 🪞 ∈ lang.stretch() ∧ 🪞 ≡ x], [λx: ∃🫀: 🫀 ∈ lang.stretch() ∧ 🫀 ≡ x], [λx: ∃👁️: 👁️ ∈ lang.stretch() ∧ 👁️ ≡ x] } ∩ connote(name)
 
 33. [λy: ({ [λx: ∃🧠: 🧠 ∈ lang.stretch() ∧ 🧠 ≡ x], [λx: ∃💾: 💾 ∈ lang.stretch() ∧ 💾 ≡ x], [λx: ∃🌐: 🌐 ∈ lang.stretch() ∧ 🌐 ≡ x], [λx: ∃🪞: 🪞 ∈ lang.stretch() ∧ 🪞 ≡ x], [λx: ∃🫀: 🫀 ∈ lang.stretch() ∧ 🫀 ≡ x], [λx: ∃👁️: 👁️ ∈ lang.stretch() ∧ 👁️ ≡ x] } ∩ connote(y)) ≠ ∅]

@@ -312,11 +312,6 @@ II: The Ballad of the Isle
 |
 | III - February (Fixed Air)
 |
-| Yet February always brings 
-|   the forest chorus lines,
-| the chirping chickadee that sings 
-|   from luted bows and vines. 
-|
 | From south, the scouting vees of geese,
 |    with probes of swiveled neckcd 
 | that follow fronts of warmth's caprice,
@@ -327,6 +322,11 @@ II: The Ballad of the Isle
 | The ashes spill through snaking weed,
 |   a year of life distilled. 
 | 
+| For February always brings 
+|   the forest chorus lines,
+| the chirping chickadee that sings 
+|   from luted bows and vines. 
+|
 | The overflows, Ambrosia wine,
 |   Elysian cups of dust,
 | from Earth unfroze the redesign

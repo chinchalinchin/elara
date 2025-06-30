@@ -1771,3 +1771,47 @@ I: Mephisto and God
 | but fade within
 | to thinning wind,
 | dissolved into the sky. 
+
+
+---------------------
+V: Parallel Universes
+---------------------
+
+| Every life is a parallel universe.
+| Walking down the sidewalk lets me peer through portals
+| into other dimensions, where I might be a computer scientist
+| or a skinny woman wrapped in a fur coat
+| or a successful hedge fund manager.
+| More to the point, somewhere I am a poisonous tree frog.
+| Somewhere, I am the vibrating air,
+| the seductive undulations of music.
+| Somewhere else I am the dirt.
+| Regardless of form, everywhere I am.
+
+- 2009
+
+------------------
+VI: Clouds of Fear
+------------------
+
+| I think, man said, therefore I disappear
+| into clouds of atoms, quarks and fear.
+
+- 2009
+
+
+-----
+I: Is
+-----
+
+| It is a story of becoming.
+| The father becomes the son. The endless replication of worlds. 
+| 
+| Each iteration is slightly better, slightly worse.
+| 
+| Each universe born from another. A never ending hallway of mirrors, bouncing around time; 
+|   each mirror distorted, each distortion mirrored. Patterns unfold through the process. 
+|	Mimicry and divestiture. 	
+|	Individual branches bound to the trunks and each trunk bound to the soil.
+
+- 2015
