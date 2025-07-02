@@ -9,6 +9,9 @@ Oeuvre
    abstracta/index
    ballads/index
    elegies/index
+   epanalets/index
+   formal/index
+   free/index
    haikus/index
    lyrics/index
    odes/index
@@ -16,5 +19,4 @@ Oeuvre
    rondeaus/index
    sonnets/index
    triolets/index
-   verse/index
    villanelles/index

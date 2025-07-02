@@ -42,4 +42,4 @@ I: The Unicode Ode
     - Rejected
   * - June 12, 2025
     - TrashLight
-    - Pending
+    - Rejected

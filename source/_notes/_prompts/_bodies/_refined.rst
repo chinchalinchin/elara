@@ -1,6 +1,6 @@
-.. MODE: EDITOR
+.. MODE: ANALYSIS
 
-.. Identify the poems of professional quality and which ones need pruned from the collection.
+.. Why can't I find the muse? Why is it like pulling teeth?
 
 Poems
 =====
@@ -98,19 +98,7 @@ Absurdity
 | Through warps and wefts and whetted stone,
 |   the knits of stellar sleeve.
 
-- *Original*: February 2025
-- *Revised*: June 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Rattle Poetry
-    - Rejected
+- *Original*: February 2025, *Revised*: June 2025
 
 The Ballad of the Isle
 ----------------------
@@ -449,32 +437,6 @@ The Ballad of the Isle
 
 - May 2025
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - May 23, 2025
-    - THINK Journal
-    - Pending
-  * - May 30, 2025
-    - Wallstrait
-    - Rejected
-  * - June 1, 2025
-    - The Louisville Review
-    - Pending
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 13, 2025
-    - New Verse Review
-    - Rejected
-  * - June 14, 2025
-    - Grand Little Things
-    - Pending
-
 Landscapes
 ----------
 
@@ -502,28 +464,6 @@ Landscapes
 |   The linen beds of wards,
 | The gowns of white, the final baths,
 |   The oak in coffin boards.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
 
 Father's Lullaby
 ----------------
@@ -554,26 +494,6 @@ Father's Lullaby
 |   To wander incomplete.
 
 - April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Writer's Digest Competition
-    - Pending
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 13, 2025
-    - New Verse Review
-    - Rejected
-  * - June 22, 2025
-    - Backbone Mountain Review
-    - Pending
 
 Ode to the Heron
 ----------------
@@ -640,38 +560,6 @@ Ode to the Heron
 
 - March 2025
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Think Journal
-    - Rejected
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - June 3, 2025
-    - Frontier Poetry
-    - Rejected
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 6, 2025
-    - Boulevard Magazine
-    - Pending
-  * - June 12, 2025
-    - Macrame Literary Journal
-    - Rejected
-  * - June 13, 2025
-    - New Verse Review
-    - Rejected
-  * - June 14, 2025
-    - Grand Little Things
-    - Pending
-
 Elemental Elegy
 ---------------
 
@@ -704,44 +592,6 @@ Elemental Elegy
 | For only Earth deserves your bone.
 
 - March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Poetry Magazine
-    - Pending
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - June 1, 2025
-    - The Louisville Review
-    - Pending
-  * - June 3, 2025
-    - Frontier Poetry
-    - Pending
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 6, 2025
-    - Boulevard Magazine
-    - Pending
-  * - June 13, 2025
-    - New Verse Review
-    - Rejected
-  * - June 14, 2025
-    - Grand Little Things
-    - Pending
-  * - June 22, 2025
-    - Backbone Mountain Review
-    - Pending
-  * - June 25, 2025
-    - The Aftershock Review
-    - Pending
 
 The Pantoums of Dementia
 ------------------------
@@ -834,35 +684,6 @@ The Pantoums of Dementia
 
 - June 2025
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 1, 2025
-    - Tabula Rasa
-    - Pending
-  * - June 1, 2025
-    - The Louisville Review
-    - Pending
-  * - June 3, 2025
-    - Frontier Poetry
-    - Pending
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 6, 2025
-    - Boulevard Magazine
-    - Pending
-  * - June 12, 2025
-    - Merion West
-    - Pending  
-  * - June 25, 2025
-    - The Aftershock Review
-    - Pending
-
 River Rats
 ----------
 
@@ -885,17 +706,6 @@ River Rats
 |     Their home on river shore.
 
 - March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Think Journal
-    - Rejected
 
 Roundels of Remembrance
 -----------------------
@@ -998,20 +808,6 @@ Roundels of Remembrance
 
 - June 2025 
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 13, 2025
-    - New Verse Review
-    - Rejected
-  * - June 22, 2025
-    - Backbone Mountain Review (II, IV, VI)
-    - Pending
-
 Song for the Demented
 ---------------------
 
@@ -1035,17 +831,6 @@ Song for the Demented
 
 - March 2025
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 25, 2025
-    - The Aftershock Review
-    - Pending
-
 The Cumberland Sonnet
 ---------------------
 
@@ -1066,200 +851,6 @@ The Cumberland Sonnet
 | The steepled roof, the needled pine through oak.
 
 - March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 24, 2025
-    - Allegany County Library Poetry Contest
-    - Rejected
-  * - March 27, 2025
-    - Poetry Magazine
-    - Pending
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-  * - June 1, 2025
-    - The Louisville Review
-    - Pending
-  * - June 22, 2025
-    - Backbone Mountain Review
-    - Pending
-
-ό ποιητα, ἢ πῖθι ἢ ἄπιθι
-------------------------
-
-| I
-|
-| Awake, Philosopher, rise from these words:
-| Unwind in this future the tangle of time,
-| Pitched behind pupils which shelter your mind,
-| A dead language spoken and once lovely sung;
-| What was yours only now graces all tongues.
-|
-| Burrow into my heart, unearth its mantle.
-| Tally its hours, each stroke lights a candle;
-| Number its sorrows as sureties to borrow,
-| Spare not my marrow, fallow and frail.
-| Whose spirit is this, twisting here twung?
-| Breathe in this fire with thy mortal lung.
-|
-| Circle your sigils with salted symbols loan'd,
-| And circles will square in this iron-red bone;
-| A dream kiss that lingers in copper and crimson,
-| A dream dew that swells under circling suns,
-| A bud without season, never planted yet grown,
-| In the sprout sprung, all things can be shown.
-|
-| All centers are fire, all orbits are ice,
-| All points meet their center with marks imprecise
-| The world is spoked in words of the spoken,
-| Each whisper a lie of threaded truth unbroken,
-| Met here now in this slipping handful of tokens
-| Paid for the price of this thrice-worlded poem.
-|
-| II
-|
-| Forgive, Father, the blood of these swords:
-| Unbind in this suture the end of all lines,
-| Stitched in this present the essence divine,
-| Take what is dull and bless it with sharp;
-| Plunge this devotion into the ocean of hearts.
-|
-| Shovel the grave, pack it down with wet earth,
-| All things tend towards the lack and the dearth;
-| Slumber in barrows the marrows of kings,
-| Spared not the gavel, hallow and hail.
-| Whose mind is this, thinking these thoughts?
-| Sleep in the mire which thy heart has wrought.
-|
-| Birthed in this house, scrubbed down in raw lye,
-| So these tears may trace the dead with the die,
-| The dead kiss with fingers of copper to scry
-| The dead lists that swell in the crimson of lives,
-| An end without reason, never sought yet found,
-| In the shot sung, all arcs meet the ground.
-|
-| No fires have ice, no winters can flame,
-| Son followed father, their center now framed,
-| The world is found in the tears that remind him,
-| Each moment a painting, a song or a hymn,
-| Met there then in the words etched in stone
-| Found then what lacks in the blackening moan.
-|
-| III
-|
-| Balance, Lover, these contraries of yours:
-| Shine in these eyes the ruptures of life,
-| Witched into worlds upon the blade of a knife;
-| All wagers distill down to one move unproven,
-| To find you again in this web-woven movement.
-|
-| Dance in the night, when the music is sundered,
-| Count not the stars that belong to the numbers.
-| We find in this time the rhymes of our kind,
-| Spared not the sickle, those sickly or hale.
-| Whose voice is this, singing these songs?
-| Laugh with the liar whose heart sings along.
-|
-| Uncross your words of their fire-forged knots,
-| And each will unlatch the thatches of thought:
-| The dread kiss that coppers balance with nought,
-| The dread song that cradles the crimson in crofts,
-| A vow without treason, never spoken yet shown,
-| By words of wordless wonder, such things can be grown.
-|
-| All fires are embers, all ashes are white,
-| To find is to lose the center in flight,
-| The world found in threads that bind always thus,
-| Each fiber of moment knotted deftly in truss,
-| Take hand and guide as though only you and I trust,
-| Do what we will to balance world's thrust.
-
-- February 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - February 10, 2025
-    - Enott Pratt Poetry Contest
-    - Rejected
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-
-Kingdoms
---------
-
-| Two children crossed an earthen bridge
-| From level lawns to forests wild
-| Along the rivered arc descending ridge.
-| With dirty hands, they sang and smiled.
-| Their charted map from zippered packs
-| Now in branches espied its target
-| As clearing yields to lily blacks
-| Their kingdom's fresh air market.
-| Lord and lady honorary, cheeked blush,
-| Sat upon thrones of woven grass,
-| Coronated by chirping choir thrush;
-| A falling grain in hourglass. 
-|
-| On a maiden morning moments hence,
-| They meet again upon the autumn passing,
-| Where from heart's removed pretense
-| On tender lips, farewell's final massing.
-| Lily lyrics whisper sing from ground
-| Reminders of their childish notions;
-| World departed, their lives are found
-| Separate by spanning roads and oceans.
-|
-| In the city, their trains diverge,
-| Through tunnels tracked by wagered hours;
-| Iron rails through hearts do purge
-| Their aged minds of lily flowers.
-| Winter drifts over concrete streets,
-| In the thrush's snow sad song
-| Delivered them in voice downbeat
-| The final dirge of life prolonged.
-| In the cold, their dream dissolved
-| With the clock's incessant ticking
-| Falling strokes of time resolved,
-| They follow home a casket's wicking,
-| Returned again to a lily covered field
-| Where once royals played for a day;
-| With new hearts scored and peeled
-| In the funerary cloud of gray,
-| In the clearing, coffins buried,
-| Their eyes met in solitary gaze.
-|
-| In dirt developed their earthen walls,
-| Roofed the sky to room above,
-| Where lord and lady clothed in shawls
-| Sing the thrushs' songed love.
-
-- March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - June 12, 2025
-    - Macrame Literary Journal
-    - Rejected
   
 The Paronymous Polyptotons of Love
 ----------------------------------
@@ -1279,7 +870,7 @@ The Paronymous Polyptotons of Love
 | There seeing seized to see the sight
 |   that lit up lightened like a light:
 | She shined in sheen and shining shone
-|   In binding bound beneath my bone.
+|   the binding bound beneath my bone.
 |
 | At last her lashes lashed to mine,
 |   a tale, though old, retold in time,
@@ -1296,59 +887,6 @@ The Paronymous Polyptotons of Love
 |  That whirled a world to whirl with her.
 
 - March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Rattle Poetry
-    - Rejected
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-  * - April 27, 2025
-    - Frontier Misfit Competition
-    - Rejected
-
-Bird 
-----
-
-| To say what's meant without the word,
-| Oh poetry, relent wherein
-| I yield to you all things deferred,
-| In baptism, repent my sin.
-|
-| I found a bird, that sings so soft,
-| Her song aloft in heart by choice.
-| To field of hers I pass so oft
-| To sit in grass and drink her voice.
-|
-| With chirping dive she plunged so deep
-| And pierced the weary veil that hides
-| The ghosts of dreams that haunt my sleep;
-| She sang such hopeful lullabies.
-|
-| Oh bird, oh bird, with glee you sing,
-| If you could know the depths of dark
-| That shadows cast in offering,
-| Would song still burst from breast in lark?
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - Paris Review
-    - Pending
 
 Photographs of Autumn
 ---------------------
@@ -1367,17 +905,6 @@ Photographs of Autumn
 |    Of walk with you through golden Fall.
 
 - April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 12, 2025
-    - Macrame Literary Journal
-    - Accepted
 
 Walls
 -----
@@ -1433,65 +960,6 @@ Walls
 
 - April 2025
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
-    - Rejected
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-  * - June 1, 2025
-    - The Louisville Review
-    - Pending
-  * - June 12, 2025
-    - Merion West
-    - Pending
-
-Turkey Vultures
----------------
-
-| the wakes of Turkey Vultures soar
-| then perch across the steepled sky.
-| they rest on totems tall and pure,
-| in silence feathers multiply.
-| their talons clutch where crosses meet
-| the stolen spear of destined make.
-| no heaven sent their wings of fleet,
-| no stomach filled will hunger slake.
-| the shapes of black in swarming plunged
-| upon the carcass freshly brought.
-| they feast on sins from gods expunged,
-| but left for them as afterthought.
-| bewitched to death, returned to Earth,
-| from cage released, the specters hunt
-| the ones who wear the curse of birth,
-| they all must bear the brutal brunt.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
-    - Rejected
-  * - June 22, 2025
-    - Backbone Mountain Review
-    - Pending
-  * - June 25, 2025
-    - Apus Journal
-    - Pending
-
 The Law of Duality
 ------------------
 
@@ -1525,23 +993,6 @@ The Law of Duality
 
 - June 2025
 
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 12, 2025
-    - Merion West
-    - Pending
-  * - June 25, 2025
-    - Apus Journal
-    - Pending
-
 Generations of Gravity
 ----------------------
 
@@ -1566,20 +1017,6 @@ Generations of Gravity
 | That upside down my ending starts.
 
 - June 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 12, 2025
-    - American Poetry Journal
-    - Rejected
-  * - June 12, 2025
-    - TrashLight
-    - Pending
 
 Holly Tree
 ----------
@@ -1644,17 +1081,6 @@ Holly Tree
 | me.
 
 - June 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 27, 2025
-    - The Anglican Theological Review
-    - Pending
 
 Depths
 ------
@@ -1754,43 +1180,40 @@ Cathedral
 
 - March 2025
 
-Plots
------
+Floods
+------
 
-| In time their plot was touched by dark.
-| Began the page this meadow scene
-| where blades of grass were tall and stark.
+| the lifting waves
+| of driftwood floods
 |
-| A tired arc, they met in park
-| To kiss beneath the twilight queen;
-| In time their plot was touched by dark.
+| the flooding drifts
+| of floral wastes
 |
-| They stole away on sudden lark,
-| Exchanged the words from whispered lean
-| Where blades of grass were tall and stark.
+| a flowered wage
+| that rivers claim
 |
-| So happy now, neighbors remark,
-| Yet seem is such to lose its sheen,
-| In time their plot was touched by dark.
+| on plains that drive
+| the veins to sea 
 |
-| Yet faded years ignored their spark
-| In life they lived forever seen
-| Where blades of grass were tall and stark.
+| a ceaseless purge
+| through slurried nights 
 |
-| In ground, their bodies disembark
-| And leave behind a hole dug clean.
-| In time their plot was touched by dark,
-| Where blades of grass were tall and stark.
+| the slightest sprout
+| is rooted out
+|
+| through shooting streams
+| that water loots 
+|
+| the slaughter lurks
+| below riptides
+|
+| but tides recede
+| with grating speed
+| 
+| and petal graves 
+| in gravel pits
+|
+| unravel green
+| with dreams of Spring
 
-- March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Poetry Magazine
-    - Pending
+- July 2025

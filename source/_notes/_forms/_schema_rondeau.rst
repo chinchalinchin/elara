@@ -19,6 +19,23 @@ Renaissance 15 Lines
 | a
 |      R  
 
+Rondeau Prime (12 line)
+-----------------------
+
+| R - a
+| b
+| b
+| a
+| a 
+| b 
+|   R
+|
+| a
+| b
+| b
+| a 
+|   R
+
 Roundel
 -------
 

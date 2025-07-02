@@ -1815,3 +1815,28 @@ I: Is
 |	Individual branches bound to the trunks and each trunk bound to the soil.
 
 - 2015
+
+
+| the weeping floods 
+| of mountain woods. 
+| the sewer greets
+| through metal grates. 
+
+
+a rope constricting tight will leave a mark,
+a fiber threaded rash of red on glands,
+or crease of skin that cuts a streak of dark
+across the fleshy underside of hands.
+
+each touch a sickly stain my thoughts debut,
+they stick to sides and won't unglue themselves,
+though decades fade, they still remain like new
+unknown dreams into which this stranger delves.
+
+my father died in blinding pain for weeks.
+while holding onto paper skin i cried 
+and felt the marks that time had left in shrieks
+now marking me instead as father died. 
+
+i sit and rub the spot he touched me last,
+and wonder who would take them if i passed.

@@ -145,7 +145,7 @@ Expressions
 
     | The seasons slow through times that never turn
     | While lone winds roam where endless dunes discern  
-    |Reason's refined flows climb through grains that churn
+    | Reason's refined flows climb through grains that churn
 
 24. line(resonate(stellar) ∩ connote(surveying new buildings))(meter=-+, feet=3)
 
@@ -319,3 +319,5 @@ Expressions
 35. iamb(line(ling.object.chiasmate(lang.loop()))) ∩ connote(name)
 
 36. [λx: x ∈ (resonate(prophecy) ∩ connote(surprised))]["as she"]
+
+37. resonate(water)(meter=-+ ∨ meter=-+- ∨ meter = +-)
