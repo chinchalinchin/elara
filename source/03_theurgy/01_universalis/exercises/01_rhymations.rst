@@ -63,6 +63,10 @@ These are problems for LLMs to solve that use the functions defined in :ref:`the
 Expressions
 -----------
 
+39. (resonate(state) ∪ resonate(inter)) ∩ connote(speed)
+
+TODO: Reorder
+
 1. iamb(resonate(peak) ∩ connote(reserves ∨ harvest stores))
 
 2. (rhyme(trough) ∪ rhyme(connote(trough)) ∩ connote(give away v yield ∨ empty out))
@@ -321,3 +325,5 @@ Expressions
 36. [λx: x ∈ (resonate(prophecy) ∩ connote(surprised))]["as she"]
 
 37. resonate(water)(meter=-+ ∨ meter=-+- ∨ meter = +-)
+
+38. resonate(spokes) ∩ resonate(trails)

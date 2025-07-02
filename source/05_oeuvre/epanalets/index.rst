@@ -9,5 +9,4 @@ Epanalets
    :maxdepth: 2
    :caption: Contents:
 
-   00
-   01
+   2025/index
