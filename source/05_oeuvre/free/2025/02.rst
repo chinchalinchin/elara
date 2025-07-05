@@ -28,3 +28,17 @@ III: Depths
 | my blood. 
 
 - June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Pending

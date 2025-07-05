@@ -1,5 +1,5 @@
-Formal Verse
-============
+Verse, Formal
+=============
 
 .. toctree::
    :maxdepth: 2

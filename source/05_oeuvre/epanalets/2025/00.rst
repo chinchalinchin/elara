@@ -36,3 +36,14 @@ I: Floods
 | with dreams of Spring
 
 - June 2025 
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 01, 2025
+    - New Feathers Anthology
+    - Pending

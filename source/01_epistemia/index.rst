@@ -17,4 +17,3 @@ Epistemia
    06_axiomata
    07_probatum
    08_florilegium
-   09_menagerie

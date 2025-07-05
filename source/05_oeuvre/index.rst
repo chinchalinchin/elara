@@ -10,13 +10,14 @@ Oeuvre
    ballads/index
    elegies/index
    epanalets/index
-   formal/index
-   free/index
    haikus/index
    lyrics/index
    odes/index
    pantoums/index
+   prose/index
    rondeaus/index
    sonnets/index
    triolets/index
+   formal/index
+   free/index
    villanelles/index

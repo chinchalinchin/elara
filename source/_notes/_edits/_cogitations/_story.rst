@@ -1,7 +1,62 @@
-Elliot Scutch awoke facedown on a wooden desk. He blinked several times, waiting to remember where he was. The pounding in his head gave him no time to collect his thoughts, though. He jolted upright, knocking a pile of papers to the floor. As the sheets snaked in slow motion through the dust speckled air, he tried to shake the sleep from his eyes, each sway resonating with the pulse of pounding until his headache became too much to bear. A whimpering groan escaped his lips as his hands tried to steady his roiling head, pressing it tight into momentary submission. Instinctually, he reached out and realized as he pulled an aspirin bottle from his desk drawer that he was in his office and the pounding was coming from the other side of the door, not his head. 
 
-He flung a few pills into his mouth and bit down on the bitter taste, his sandpaper throat grating against his tongue as he swallowed. His gulping throat squeezed against the tangled knot of his tie. Once unloosened, he rubbed the red mark left behind on his skin and felt his neck muscles cramp and flicker with dehydration. The pounding on the door continued as he staggered to his feet. Steadying himself against his desk, he flattened his wrinkled button-down shirt against his gurgling stomach and tucked it into his stained trousers. 
+The Mesmeria Tapes #1 
 
-"Mr. Scutch!" A voice called out between rounds of pounding on the door. Agnes, he thought, glancing at the clock on the wall. He closed one eye and forced the dual images wavering through his vision to condense into a single world. Squinting, he saw it was nearly noon.
+[]: --recording. The date is June 30th, 2040--
 
-He licked the crust of sleep from his lips and bent down to rummage through his desk. A half-emptied bottle of rye whisker shimmered with caramel hue as he held it up in the uneven light cast through the slats of his office blinds. Within the dark liquid, swirling specks of backwash caught rays of light and twirled helpless, disappearing back into the ether as the sun edged behind darkened clouds. Two quick fingers burned trails down his throat. A chemical eruption splattered through his guts, but the vertigo disappeared as the rush of alcohol delivered him from the grip of withdrawal.
+[]: 5800. 
+
+[]: Excuse me?
+
+[]: The actual year is 5800. That's how many years have passed since the creation of the world. 
+
+[]: That's not true, Mesmeria.
+
+[]: Yes, it is.
+
+[]: No, it's not. The world is billions of years old.
+
+[]: Relative to who? 
+
+[]: Excuse me?
+
+[]: Time is a frame of reference. Who was keeping track? 
+
+[]: That's not how it works. We can measure the amount of carbon isotropes in rocks--
+
+[]: What do a bunch of rocks have to do with the age of the world?
+
+[]: It tells us how old the planet is.
+
+[]: Relative to who? A rock? Who cares!
+
+[]: We're getting off track here. We're here to discuss REDACTED. 
+
+[]: Why do you want to talk about *him*?
+
+[]: Because you are the only living person who can identify him. We need your help to find him.
+
+[]: *laughter*
+
+[]: What's so funny, Mesmeria?
+
+[]: How can you find someone that's real?
+
+[]: REDACTED is very real, Mesmeria. You know that.
+
+[]: *laughter* I don't know anything about REDACTED. You'll want to talk to Margaret for that.
+
+[]: Who is Margaret?
+
+[]: A real bitch, that's who. *laughter*
+
+[]: You said you would be cooperative. 
+
+[]: No, that doesn't sound like me. 
+
+[]: Are you backing out of the deal?
+
+
+
+
+
+[]: If you don't know how old the world is, you'll never understand REDACTED. 
