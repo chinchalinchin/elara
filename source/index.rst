@@ -16,10 +16,8 @@
 .. raw:: html
 
    <div class="text-container">
-      <div class="center-line">Part on seined flow</div>
-      <div class="center-line">deified</div>
-      <div class="center-line">nun</div>
-      <div class="center-line">wolf denies no trap.</div>
+      <div class="center-line">On serif peels</div>
+      <div class="center-line">sleep fires, no?</div>
    </div>
 
 --------------
