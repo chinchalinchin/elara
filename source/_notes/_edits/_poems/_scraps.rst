@@ -1307,7 +1307,7 @@ III: Stranded
     - Status
   * - April 7, 2025
     - Paris Review
-    - Pending
+    - Rejected
 
 ---------
 I: Regret

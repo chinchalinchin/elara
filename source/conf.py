@@ -36,7 +36,8 @@ templates_path = [ ]
 
 exclude_patterns = [
     '_notes/**',
-    '_drafts/**'
+    '_drafts/**',
+    '_prompts/**'
 ]
 
 plot_html_show_source_link = True

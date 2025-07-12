@@ -32,5 +32,5 @@ IV: Bird
     - Publication
     - Status
   * - April 7, 2025
-    - Paris Review
+    - Rejected
     - Pending

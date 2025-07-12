@@ -21,4 +21,4 @@ I: Forever
     - Status
   * - April 7, 2025
     - Paris Review
-    - Pending
+    - Rejected

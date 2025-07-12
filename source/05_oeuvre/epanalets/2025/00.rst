@@ -46,4 +46,4 @@ I: Floods
     - Status
   * - July 01, 2025
     - New Feathers Anthology
-    - Pending
+    - Rejected
