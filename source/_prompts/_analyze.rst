@@ -1,3 +1,6 @@
+.. MODE: ANALYZE
+.. Use the rejection letter to assess the probability of the remaining submissions coming back as rejections.
+
 ----------------------------
 II: The Pantoums of Dementia
 ----------------------------
@@ -119,23 +122,21 @@ II: The Pantoums of Dementia
     - The Aftershock Review
     - Pending
 
-Rejection Letters 
------------------
+Rejection Letter
+----------------
 
-.. epigraph::
+This rejection is in regards to "The Pantoums of Dementia." We're so sorry we could not bring you better news; we know firsthand how difficult it is to put yourself and your writing out there.
 
-  This rejection is in regards to "The Pantoums of Dementia." We're so sorry we could not bring you better news; we know firsthand how difficult it is to put yourself and your writing out there.
+These were some of the critiques that our team had for “The Pantoums of Dementia”:
 
-  These were some of the critiques that our team had for “The Pantoums of Dementia”:
+“While I love this collection, their meanings, and their structures, I do not feel the average reader will connect strongly with these pieces. The lines are a little convoluted, which is evidently intentional, but I feel the audience will grow frustrated with it, rather than engage further.”
 
-  “While I love this collection, their meanings, and their structures, I do not feel the average reader will connect strongly with these pieces. The lines are a little convoluted, which is evidently intentional, but I feel the audience will grow frustrated with it, rather than engage further.”
+“This is a really interesting approach, and I got chills at the end of the first poem. I'm not sure the third is as strong, but I also think the disjunct nature/images and change in voice/word choice are very fitting when you consider the subject. I think that viewed as a whole, this is a powerful piece.”
 
-  “This is a really interesting approach, and I got chills at the end of the first poem. I'm not sure the third is as strong, but I also think the disjunct nature/images and change in voice/word choice are very fitting when you consider the subject. I think that viewed as a whole, this is a powerful piece.”
+“The language used does not appeal to me nor makes this easy to digest for the common reader. I love the concept of this poem and find it unique, but it does not fully immerse me.”
 
-  “The language used does not appeal to me nor makes this easy to digest for the common reader. I love the concept of this poem and find it unique, but it does not fully immerse me.”
+“I like the pantoum form, but it's very tricky to do well and not get frustrated with the repetition. Dementia is a clever way to use repetition, but the elevated vocabulary matched with formal structure distances the emotion of the poem. I'd recommend trying a more colloquial tone in the pantoum form.”
 
-  “I like the pantoum form, but it's very tricky to do well and not get frustrated with the repetition. Dementia is a clever way to use repetition, but the elevated vocabulary matched with formal structure distances the emotion of the poem. I'd recommend trying a more colloquial tone in the pantoum form.”
+Overall, we did enjoy your submission and encourage you to submit again!
 
-  Overall, we did enjoy your submission and encourage you to submit again!
-
-  -- The Editorial Team at Tabula Rasa Review
+- The Editorial Team at Tabula Rasa Review

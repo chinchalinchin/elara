@@ -12,9 +12,11 @@
 .. _Principia Mathematica: https://archive.org/details/dli.ernet.247278/page/n29/mode/2up
 .. _The Concept of Truth in Formalized Languages: http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Tarski%20-%20The%20Concept%20of%20Truth%20in%20Formalized%20Languages.pdf
 
-.. academic, original language
+.. original language
 
 .. _Grundgesetze Der Arithmetik: https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
+.. _The Histories: https://sacred-texts.com/cla/hh/hh1130.htm
+.. _Timaeus: https://www.ellopos.net/elpenor/physis/plato-timaeus/atlantis-athens.asp?pg=5
 
 .. philosophy
 
@@ -119,15 +121,24 @@
 
 .. spiritual
 
-.. _Corpus Hermeticum, G.R.S. Mead Translation: http://www.gnosis.org/library/grs-mead/TGH-v2/th202.html
+.. _Avesta: https://www.avesta.org/yasna/yasna.htm#y28
+.. _Confessio Fraternitias: https://www.alchemywebsite.com/confessi.html
 .. _Enūma Eliš, L.W. King Translation: https://sacred-texts.com/ane/enuma.htm
 .. _Eridu Genesis, Jacobsen Translation: https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm
 .. _On The Origin of the World: http://www.gnosis.org/naghamm/origin.html
 .. _Nāsadīya Sūkta: https://www.swami-krishnananda.org/vishnu/nasadiya.pdf
 .. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
+.. _Poemandres, the Shepherd of Men: http://www.gnosis.org/library/hermes1.html
+.. _The Amalanth Workings: https://www.sacred-texts.com/oto/lib97.txt
+.. _The Book of the Dead: https://sacred-texts.com/egy/ebod/index.htm
 .. _The Book of the Law: https://sacred-texts.com/oto/engccxx.htm
+.. _The Book of Lies: https://sacred-texts.com/oto/lib333.htm
+.. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
 .. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
+.. _The Tanakh: https://www.sefaria.org/texts/Tanakh
 .. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
+.. _Sefer ha-Bahir: https://www.sefaria.org/Sefer_HaBahir
+.. _Sefer Yezirah: https://www.sefaria.org/Sefer_Yetzirah?tab=contents
 .. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328
 
 .. textbooks
@@ -142,7 +153,4 @@
 .. _noblestatman.com: https://noblestatman.com/index.html
 .. _randomservices.com: https://www.randomservices.org/
 .. _tylervigen.com/spurious-correlation: https://www.tylervigen.com/spurious-correlations
-
-.. foreign language
-
-.. _Poimandres: https://www.w66.eu/elib/html/poimandres.html
+.. _timecube.com: https://web.archive.org/web/20150506055228/http://www.timecube.com/index.html
