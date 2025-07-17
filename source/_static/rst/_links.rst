@@ -4,6 +4,7 @@
 .. _An essay towards solving a problem in the doctrine of chances : https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053
 .. _Foundations of Arithmetic: https://www.gutenberg.org/ebooks/48312
 .. _Function and Concept: https://fitelson.org/proseminar/frege_fac.pdf
+.. _Grundgesetze Der Arithmetik: https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
 .. _Leibniz Letters: <https://plato.stanford.edu/entries/leibniz-mind/>
 .. _On Concept and Object: https://fitelson.org/proseminar/frege_ocao.pdf
 .. _On Sense and Reference: https://archive.org/details/OnSenseAndReference
@@ -12,11 +13,10 @@
 .. _Principia Mathematica: https://archive.org/details/dli.ernet.247278/page/n29/mode/2up
 .. _The Concept of Truth in Formalized Languages: http://www.thatmarcusfamily.org/philosophy/Course_Websites/Readings/Tarski%20-%20The%20Concept%20of%20Truth%20in%20Formalized%20Languages.pdf
 
-.. original language
+.. historical:
 
-.. _Grundgesetze Der Arithmetik: https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
 .. _The Histories: https://sacred-texts.com/cla/hh/hh1130.htm
-.. _Timaeus: https://www.ellopos.net/elpenor/physis/plato-timaeus/atlantis-athens.asp?pg=5
+.. _The Bashaw of Merryland, The Sixth Baron Baltimore and the Dervises of Pera: https://www.jstor.org/stable/26810310
 
 .. philosophy
 
@@ -36,6 +36,7 @@
 .. _Prior Analytics: https://classics.mit.edu/Aristotle/prior.1.i.htm
 .. _Process and Reality: https://archive.org/details/processrealitygi00alfr
 .. _Theatetus: http://classics.mit.edu/Plato/theatu.html
+.. _Timaeus: https://www.ellopos.net/elpenor/physis/plato-timaeus/atlantis-athens.asp?pg=5
 .. _The Myth of Sisyphus: https://archive.org/details/mythofsisyphus0000unse/page/n5/mode/2up
 .. _Tractatus Logico-Philosophicus: https://archive.org/details/dli.ministry.23985
 .. _Tractatus Logico-Philosophicus (Secondary Source): https://www.gutenberg.org/ebooks/5740
@@ -121,24 +122,34 @@
 
 .. spiritual
 
-.. _Avesta: https://www.avesta.org/yasna/yasna.htm#y28
+.. _Amalanth Workings: https://www.sacred-texts.com/oto/lib97.txt
+.. _Avesta: https://www.avesta.org/yasna/yasna.htm
+.. _Book of Enoch: https://archive.org/details/MILIKEnochInAramaicQumranCave4
+.. _Book of Lies: https://sacred-texts.com/oto/lib333.htm
+.. _Book of the Dead: https://sacred-texts.com/egy/ebod/index.htm
+.. _Book of the Law: https://sacred-texts.com/oto/engccxx.htm
+.. _Cipher Manuscripts: https://hermetic.com/gdlibrary/cipher/index
+.. _Codex Sinaiticus: https://codexsinaiticus.org/
 .. _Confessio Fraternitias: https://www.alchemywebsite.com/confessi.html
-.. _Enūma Eliš, L.W. King Translation: https://sacred-texts.com/ane/enuma.htm
-.. _Eridu Genesis, Jacobsen Translation: https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm
+.. _Enūma Eliš: https://communio-templorum.github.io/cuneiform-text-corpus/#!/enuma-elish
+.. _Enūma Eliš (W.G. Lambert Translation): https://etana.org/node/581
+.. _Enūma Eliš (L.W. King Translation): https://sacred-texts.com/ane/enuma.htm
+.. _Epic of Gilgamesh (Kovacs Translation): http://www.ancienttexts.org/library/mesopotamian/gilgamesh/
+.. _Epic of Gilgamesh: https://www.soas.ac.uk/baplar/recordings/epic-gilgames-standard-version-tablet-xi-lines-1-163-read-karl-hecker
+.. _Eridu Genesis (Jacobsen Translation): https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm
 .. _On The Origin of the World: http://www.gnosis.org/naghamm/origin.html
 .. _Nāsadīya Sūkta: https://www.swami-krishnananda.org/vishnu/nasadiya.pdf
 .. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
 .. _Poemandres, the Shepherd of Men: http://www.gnosis.org/library/hermes1.html
-.. _The Amalanth Workings: https://www.sacred-texts.com/oto/lib97.txt
-.. _The Book of the Dead: https://sacred-texts.com/egy/ebod/index.htm
-.. _The Book of the Law: https://sacred-texts.com/oto/engccxx.htm
-.. _The Book of Lies: https://sacred-texts.com/oto/lib333.htm
+.. _Poemandres (Greek): https://www.themathesontrust.org/library/poimandres-corpus-hermeticum-i
+.. _Tanakh: https://www.sefaria.org/texts/Tanakh
 .. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
 .. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
-.. _The Tanakh: https://www.sefaria.org/texts/Tanakh
+.. _Vulgate: https://vulgate.org/
 .. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
 .. _Sefer ha-Bahir: https://www.sefaria.org/Sefer_HaBahir
 .. _Sefer Yezirah: https://www.sefaria.org/Sefer_Yetzirah?tab=contents
+.. _Septuagint: https://www.septuagint.bible/home
 .. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328
 
 .. textbooks
@@ -154,3 +165,19 @@
 .. _randomservices.com: https://www.randomservices.org/
 .. _tylervigen.com/spurious-correlation: https://www.tylervigen.com/spurious-correlations
 .. _timecube.com: https://web.archive.org/web/20150506055228/http://www.timecube.com/index.html
+
+.. masonry
+
+.. _Grand Lodge of A.F & A.M. of Maryland: https://mdmasons.org/
+.. _Mountain Lodge No. 99: https://mountainlodge99.org/index.html
+.. _Perry Hall Lodge No. 235: https://perryhalllodge235.org
+.. _The Cumberland Scottish Rite: https://www.cumberlandscottishrite.org/
+.. _The Maryland Orient: https://www.mdscottishrite.org/
+.. _The Maryland Scottish Rite: https://www.mdscottishrite.org/organization/
+.. _York Rite of Maryland: https://yorkritemaryland.org/
+
+.. organizations
+
+.. _Communio Templorum: https://communio-templorum.github.io/cuneiform-text-corpus/#!/
+.. _Golden Dawn Library Project: https://hermetic.com/gdlibrary/index
+.. _Society of the Ark and the Dove: https://socarkdove.org/ 
