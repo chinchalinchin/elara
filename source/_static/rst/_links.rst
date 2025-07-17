@@ -142,15 +142,17 @@
 .. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
 .. _Poemandres, the Shepherd of Men: http://www.gnosis.org/library/hermes1.html
 .. _Poemandres (Greek): https://www.themathesontrust.org/library/poimandres-corpus-hermeticum-i
-.. _Tanakh: https://www.sefaria.org/texts/Tanakh
-.. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
-.. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
-.. _Vulgate: https://vulgate.org/
-.. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
 .. _Sefer ha-Bahir: https://www.sefaria.org/Sefer_HaBahir
 .. _Sefer Yezirah: https://www.sefaria.org/Sefer_Yetzirah?tab=contents
 .. _Septuagint: https://www.septuagint.bible/home
 .. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328
+.. _Tanakh: https://www.sefaria.org/texts/Tanakh
+.. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
+.. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
+.. _Tyndale: https://en.wikisource.org/wiki/Bible_(Tyndale)
+.. _Vulgate: https://vulgate.org/
+.. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
+.. _Wycliffe: https://en.wikisource.org/wiki/Bible_(Wycliffe)
 
 .. textbooks
 
