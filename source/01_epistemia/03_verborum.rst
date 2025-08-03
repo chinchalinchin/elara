@@ -3,6 +3,7 @@
 Verborum
 ========
 
+
 .. _devices:
 
 **Semantic Devices**
@@ -15,9 +16,9 @@ Verborum
 
 **Sonic Devices**
 
-- :ref:`alliteration`: TODO
-- :ref:`assonance`: TODO
-- :ref:`consonance`: TODO
+- :ref:`alliteration`: The repetition of the same sound at the beginning of words or in stressed syllables.
+- :ref:`assonance`: The repetition of vowel sounds within nearby words.
+- :ref:`consonance`: The repetition of consonant sounds within or at the end of words.
 
 **Syntactic Devices**
 
@@ -31,9 +32,9 @@ Verborum
 - :ref:`chiasmus`: The reversal of the grammatical forms from one clause to the next clause .
 - :ref:`epanalepsis`: The same words used at the end of a clause are used at the beginning of a preceding clause.
 - :ref:`epistrophe`: The repetition of words at the end of successive clauses.
-- :ref:`epizeuxis`: TODO
+- :ref:`epizeuxis`: The repetition of a word or phrase in immediate succession for emphasis.
 - :ref:`hypozeuxis`: An expression whose every clause has its own independent subject and predicate.
-- :ref:`parataxis`: TODO
+- :ref:`parataxis`: The placing of clauses one after another without coordinating conjunctions.
 - :ref:`symploce`: The repetition of both the words at the beginning and end of successive clauses.
 
 .. _semantic_devices:
@@ -69,7 +70,9 @@ None yet found.
 Parataxis
 ---------
 
-From the Greek: *παράταξις* (*παρά-ταξις*, "beside-arrangement") 
+.. note::
+
+    From the Greek: *παράταξις* (*παρά-ταξις*, "beside-arrangement") 
 
 None yet found.
 
@@ -77,6 +80,8 @@ None yet found.
 
 Paronomasia
 -----------
+
+.. epigraph::
 
     Of whom each strives, nor knows for what he strives,
 
@@ -88,6 +93,8 @@ Paronomasia
 
 Polyptoton
 ----------
+
+.. epigraph::
 
     πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται
 
@@ -140,19 +147,27 @@ Syntactic Devices
 Anacoluthon
 -----------
 
+.. epigraph::
+
     with up so floating many bells down
 
     -- `Anyone Lived in a Pretty How Town`_ , e.e. cummings
 
+.. epigraph::
+
     In the coal fire will not wholly console them.
 
     -- `Ouija`_, Sylvia Plath
+
+.. epigraph::
 
     She's all states, and all princes, I,
 
     Nothing else is.
 
     -- `The Sun Rising`_, John Donne
+
+.. epigraph::
 
     From there are ghosts in the air
 
@@ -162,6 +177,8 @@ Anacoluthon
 
 Anadiplosis
 -----------
+
+.. epigraph::
 
     The years to come seemed waste of breath,
 

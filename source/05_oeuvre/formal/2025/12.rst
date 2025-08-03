@@ -43,6 +43,17 @@ XIII: A Series of Reflections
 
 - July 2025
 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 04, 2025
+    - wildscape. literary journal
+    - Rejected
+
 .. | Sometimes 
 .. | mere circumstance 
 .. | swings the sentence

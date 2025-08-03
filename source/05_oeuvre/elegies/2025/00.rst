@@ -47,7 +47,7 @@ I: Elemental Elegy
     - Pending
   * - June 1, 2025
     - The Louisville Review
-    - Pending
+    - Rejected
   * - June 3, 2025
     - Frontier Poetry
     - Pending
@@ -68,4 +68,7 @@ I: Elemental Elegy
     - Pending
   * - June 25, 2025
     - The Aftershock Review
+    - Pending
+  * - July 10, 2025
+    - The Metaworker
     - Pending

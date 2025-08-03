@@ -81,7 +81,13 @@ II: Holly Tree
     - Rejected
   * - July 02, 2025
     - Mangrove Review
-    - Pending
+    - Rejected
   * - July 03, 2025
     - Cypress Review
+    - Pending
+  * - July 04, 2025
+    - wildscape. literary journal
+    - Rejected
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
     - Pending

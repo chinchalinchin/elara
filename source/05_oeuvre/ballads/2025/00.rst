@@ -105,3 +105,6 @@ I: Absurdity
   * - March 27, 2025
     - Rattle Poetry
     - Rejected
+  * - July 15, 2025
+    - Space and Time
+    - Pending

@@ -23,18 +23,18 @@ II: Rails
 - July 2025
 
 .. list-table:: Submission History
-    :widths: 15 15 15
-    :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-    * - Date
-      - Publication
-      - Status
-    * - July 02, 2025
-      - January House Literary Journal
-      - Rejected
-    * - July 02, 2025
-      - Mangrove Review
-      - Pending
-    * - July 03, 2025
-      - Cypress Review
-      - Pending
+  * - Date
+    - Publication
+    - Status
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - July 03, 2025
+    - Cypress Review
+    - Pending

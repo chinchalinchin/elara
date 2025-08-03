@@ -47,3 +47,6 @@ I: Floods
   * - July 01, 2025
     - New Feathers Anthology
     - Rejected
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
+    - Pending
