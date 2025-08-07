@@ -4,7 +4,7 @@
 .. _An essay towards solving a problem in the doctrine of chances : https://royalsocietypublishing.org/doi/10.1098/rstl.1763.0053
 .. _Foundations of Arithmetic: https://www.gutenberg.org/ebooks/48312
 .. _Function and Concept: https://fitelson.org/proseminar/frege_fac.pdf
-.. _Grundgesetze Der Arithmetik: https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
+.. _Grundgesetze Der Arithmetik (German): https://archive.org/details/bub_gb_LZ5tAAAAMAAJ/mode/2up
 .. _Leibniz Letters: <https://plato.stanford.edu/entries/leibniz-mind/>
 .. _On Concept and Object: https://fitelson.org/proseminar/frege_ocao.pdf
 .. _On Sense and Reference: https://archive.org/details/OnSenseAndReference
@@ -15,6 +15,7 @@
 
 .. historical:
 
+.. _The Chinon Parchment: https://www.theknightstemplar.org/chinon-parchment/
 .. _The Histories: https://sacred-texts.com/cla/hh/hh1130.htm
 .. _The Bashaw of Merryland, The Sixth Baron Baltimore and the Dervises of Pera: https://www.jstor.org/stable/26810310
 
@@ -118,11 +119,13 @@
 
 .. prose
 
-.. _On the Heights of Despair: https://archive.org/details/on-the-heights-of-despair
+.. _On The Heights of Despair: https://archive.org/details/on-the-heights-of-despair
+.. _Fasti IV: https://www.theoi.com/Text/OvidFasti4.html
 
 .. spiritual
 
 .. _Amalanth Workings: https://www.sacred-texts.com/oto/lib97.txt
+.. _Atrahasis: https://genius.com/Stephanie-dalley-the-atrahasis-epic-annotated
 .. _Avesta: https://www.avesta.org/yasna/yasna.htm
 .. _Book of Enoch: https://archive.org/details/MILIKEnochInAramaicQumranCave4
 .. _Book of Lies: https://sacred-texts.com/oto/lib333.htm
@@ -137,22 +140,22 @@
 .. _Epic of Gilgamesh (Kovacs Translation): http://www.ancienttexts.org/library/mesopotamian/gilgamesh/
 .. _Epic of Gilgamesh: https://www.soas.ac.uk/baplar/recordings/epic-gilgames-standard-version-tablet-xi-lines-1-163-read-karl-hecker
 .. _Eridu Genesis (Jacobsen Translation): https://www.gatewaystobabylon.com/myths/texts/enki/eridugen.htm
+.. _Liber 49: https://sacred-texts.com/oto/lib49.htm
 .. _On The Origin of the World: http://www.gnosis.org/naghamm/origin.html
+.. _Morals & Dogma: https://sacred-texts.com/mas/md/index.htm
 .. _Nāsadīya Sūkta: https://www.swami-krishnananda.org/vishnu/nasadiya.pdf
 .. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
 .. _Poemandres, the Shepherd of Men: http://www.gnosis.org/library/hermes1.html
 .. _Poemandres (Greek): https://www.themathesontrust.org/library/poimandres-corpus-hermeticum-i
+.. _Tanakh: https://www.sefaria.org/texts/Tanakh
+.. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
+.. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
+.. _Vulgate: https://vulgate.org/
+.. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
 .. _Sefer ha-Bahir: https://www.sefaria.org/Sefer_HaBahir
 .. _Sefer Yezirah: https://www.sefaria.org/Sefer_Yetzirah?tab=contents
 .. _Septuagint: https://www.septuagint.bible/home
 .. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328
-.. _Tanakh: https://www.sefaria.org/texts/Tanakh
-.. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
-.. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
-.. _Tyndale: https://en.wikisource.org/wiki/Bible_(Tyndale)
-.. _Vulgate: https://vulgate.org/
-.. _White Yajurveda: https://archive.org/details/textswhiteyajur00grifgoog/page/n326/mode/2up
-.. _Wycliffe: https://en.wikisource.org/wiki/Bible_(Wycliffe)
 
 .. textbooks
 

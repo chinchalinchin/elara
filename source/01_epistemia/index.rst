@@ -13,7 +13,5 @@ Epistemia
    02_tabula
    03_verborum
    04_lexicon
-   05_theosophy
-   06_axiomata
-   07_probatum
-   08_florilegium
+   05_axiomata
+   06_probatum

@@ -1,5 +1,8 @@
-One Misty Morn
---------------
+.. NOTE: This is a roundel.
+
+-------------------
+III: One Misty Morn
+-------------------
 
 | One misty morn of summer days
 | when clouds collected futures sworn.
