@@ -4,10 +4,10 @@ II: Roundels of Remembrance
 
 | I - Photographs
 |
-| This photograph of strangers' joy,
-| In garbage can, though torn in half,
-| Its glossy eyes through time enjoy 
-|   this photograph. 
+| A photograph of strangers' joy
+| Atop the garbage, torn in half.
+| Though lost, these ghosts in gloss deploy
+|   a photograph. 
 |
 | Imagine tears that joyous laugh,
 | The Autumn gowns and corduroy,
@@ -16,13 +16,13 @@ II: Roundels of Remembrance
 | With age then mixed precise alloy
 | From parts romance and epitaph,
 | Til future hands at last destroy
-|   This photograph.
+|   a photograph.
 |
 | II - Walls
 |
-| Graffitied walls of yearly bloom,
-| With vagrant spray of aerosols
-| The vapors fume, condense to groom
+| Graffitied walls of yearly bloom
+| With vagrant spray of aerosols;
+| The vapors fume, condense and groom
 |   graffitied walls. 
 |
 | The artists follow protocols:
@@ -115,7 +115,7 @@ II: Roundels of Remembrance
     - Pending
   * - June 25, 2025
     - St. Katherine Review
-    - Pending
+    - Rejected
   * - July 01, 2025
     - New Feathers Anthology
     - Rejected
