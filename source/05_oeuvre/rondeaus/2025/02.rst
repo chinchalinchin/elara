@@ -1,5 +1,3 @@
-.. NOTE: This is a roundel.
-
 -------------------
 III: One Misty Morn
 -------------------
