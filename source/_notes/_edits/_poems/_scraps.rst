@@ -963,7 +963,7 @@ IV: Chance
      - Status
    * - April 7, 2025
      - The New Yorker
-     - Pending
+     - Rejected
 
 ------------------
 V: Games of Chance
@@ -1840,3 +1840,77 @@ now marking me instead as father died.
 
 i sit and rub the spot he touched me last,
 and wonder who would take them if i passed.
+
+----------
+At Last
+----------
+
+| my love, at last, we're back ashore,
+| let's stay here til tomorrow's past.
+| we'll lay here still, our sorrows sore,
+|    my love, at last.
+|
+| the world out there is wide and vast,
+| horizons left yet to explore, 
+| just sit with me, let time go fast. 
+|
+| if winds are slow, i'll be your oar. 
+| when winds are sharp, you'll be my mast.
+| so hold me now, just like you swore,
+|       oh, my love, at last. 
+
+- August 2025
+
+
+the shape of leaves in gusts of wind
+
+
+
+the shape that leaves will make on wind
+will swarm behind your feet like thieves
+attend
+the shape that leaves.
+
+
+
+
+
+in tracing wind, 
+will swarm behind your feet like thieves
+
+
+will sneak behind your feat like thieves
+
+    the shape that leaves
+
+let's make believe and play pretend
+
+
+cicada forests sing in evening swarms
+along the hidden trails of river banks 
+that skirt the city edge with thunderstorms
+
+
+
+
+
+
+everything is ending, nothing will come back. 
+
+
+| III - Laces
+|
+| The laces sewn across the back
+| Will lacerate through depths to bone.
+| The body scars along the track
+|   The laces sewn. 
+|
+| Despite the ache, the blanket grown 
+| From knit of severed fiber slack
+| Is warm enough to wrap alone.
+|
+| Yet laces loop, return to tack,
+| As generations forced atone
+| And learn by hand which loom to rack
+|   the laces sewn. 
+|
