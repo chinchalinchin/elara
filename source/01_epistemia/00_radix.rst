@@ -19,6 +19,7 @@ archive.org
 - `Ideas`_
 - `Introduction to Logic and the Methodology of the Deductive Sciences`_
 - `Introduction to Symbolic Logic and Its Applications`_
+- `Grundgesetze Der Arithmetik (German)`_
 - `Naming and Necessity`_
 - `On Certainty`_
 - `On Sense and Reference`_
@@ -168,6 +169,17 @@ Various
 - `The Ballad of Sir Patrick Stern`_
 - `The Child Ballads`_
 
+.. _prose:
+
+-----
+Prose
+-----
+
+archive.org
+-----------
+
+- `On The Heights of Despair`_
+
 .. _textbooks:
 
 ---------
@@ -199,11 +211,53 @@ Theology
 archive.org
 -----------
 
+- `Book of Enoch`_
 - `On The Origin of the World`_
 - `The Exegesis of Philip K. Dick`_
 - `White Yajurveda`_
 
-.. _web_references:
+gnosis.org
+----------
+
+- `On The Origin of the World`_
+- `Poemandres, the Shepherd of Men`_
+
+sacred-texts.com
+----------------
+
+- `Amalanth Workings`_
+- `Book of Lies`_
+- `Book of the Dead`_
+- `Book of the Law`_
+- `Enūma Eliš (L.W. King Translation)`_
+- `Liber 49`_
+- `Morals & Dogma`_
+- `The Emerald Tablet of Hermes`_
+
+Other
+-----
+
+- `Atrahasis`_
+- `Avesta`_
+- `Cipher Manuscripts`_
+- `Codex Sinaiticus`_
+- `Confessio Fraternitias`_
+- `Enūma Eliš`_
+- `Enūma Eliš (W.G. Lambert Translation)`_
+- `Epic of Gilgamesh`_
+- `Epic of Gilgamesh (Kovacs Translation)`_
+- `Eridu Genesis (Jacobsen Translation)`_
+- `Nāsadīya Sūkta`_
+- `Popol Vuh (Christenson Translation)`_
+- `Poemandres, the Shepherd of Men (Greek)`_
+- `Tanakh`_
+- `Vulgate`_
+- `Sefer ha-Bahir`_
+- `Sefer Yezirah`_
+- `Septuagint`_
+- `Shabaka Stone (Lesko Translation)`_
+
+.. _web-references:
 
 --------
 Websites

@@ -144,9 +144,9 @@
 .. _On The Origin of the World: http://www.gnosis.org/naghamm/origin.html
 .. _Morals & Dogma: https://sacred-texts.com/mas/md/index.htm
 .. _Nāsadīya Sūkta: https://www.swami-krishnananda.org/vishnu/nasadiya.pdf
-.. _Popol Vuh, Christenson Translation: https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
+.. _Popol Vuh (Christenson Translation): https://www.mesoweb.com/publications/Christenson/PV-Literal.pdf
 .. _Poemandres, the Shepherd of Men: http://www.gnosis.org/library/hermes1.html
-.. _Poemandres (Greek): https://www.themathesontrust.org/library/poimandres-corpus-hermeticum-i
+.. _Poemandres, the Shepherd of Men (Greek): https://www.themathesontrust.org/library/poimandres-corpus-hermeticum-i
 .. _Tanakh: https://www.sefaria.org/texts/Tanakh
 .. _The Emerald Tablet of Hermes: https://sacred-texts.com/alc/emerald.htm
 .. _The Exegesis of Philip K. Dick: https://archive.org/details/exegesisofphilip0000dick
@@ -155,7 +155,7 @@
 .. _Sefer ha-Bahir: https://www.sefaria.org/Sefer_HaBahir
 .. _Sefer Yezirah: https://www.sefaria.org/Sefer_Yetzirah?tab=contents
 .. _Septuagint: https://www.septuagint.bible/home
-.. _Shabaka Stone, Lesko Translation: https://omnika.org/texts/328
+.. _Shabaka Stone (Lesko Translation): https://omnika.org/texts/328
 
 .. textbooks
 

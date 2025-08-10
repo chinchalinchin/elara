@@ -2,10 +2,6 @@ Records of my foray into generative AI.
 
 [elara.chinchalinchin.com](https://elara.chinchalinchin.com)
 
-### Table of Contents
-
-- [Elara CLI](./src/source/_apps/elara/README.md)
-
 ### Quickstart
 
 ```bash
@@ -24,15 +20,7 @@ make html
 - [Sphinx Toolbox](https://sphinx-toolbox.readthedocs.io/en/stable/index.html)
 - [Sphinx Sitemap](https://sphinx-sitemap.readthedocs.io/en/latest/getting-started.html)
 - [Sphinx Carousel](https://sphinx-carousel.readthedocs.io/en/1.2.0/index.html)
-- [RSTCheck Config](https://github.com/rstcheck/rstcheck/blob/main/docs/source/usage/config.rst#configuration-file)
-- [Doc8 Config](https://github.com/PyCQA/doc8)
-- [Pandoc](https://pandoc.org)
 
-### TODOS
-
-- [ablog extension](https://ablog.readthedocs.io/en/stable/)
-
-See if 
 ### Reference
 
 Language Game
