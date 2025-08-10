@@ -9,3 +9,4 @@ Automata
   :caption: Contents:
 
   00_mathematical
+  01_mechanical

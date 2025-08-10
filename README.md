@@ -1,5 +1,3 @@
-Records of my foray into generative AI.
-
 [elara.chinchalinchin.com](https://elara.chinchalinchin.com)
 
 ### Quickstart
