@@ -3,33 +3,33 @@ I: Absurdity
 ------------
 
 | One lovely Thursday afternoon
-|   Two billion years ago,
-| A star embraced by arcs of moon,
-|   Conceived despair and woe. 
+|   two billion years ago,
+| A star encased by arcs of moon,
+|   embraced despair and woe. 
 | 
-| A sordid joke of yellow-red,
-|    Ribald and mocking jape:
-| To burn with heat in circles dead
+| This sordid joke of yellow-red,
+|    This sneering, mocking jape:
+| To burn with heat, on axis sped
 |    with no hope of escape.
 |
 | So solace cursed upon a point,
-|    it drew a mighty plan
+|    it drew its final plan
 | As spinning round its lock and joint
 |    its ending now began.
 | 
 | The heaving mass of goo morassed
 |    then gurgled once and sighed;
 | A rattle scream of flames harassed
-|    what silent void denied. 
+|    what silent void belied. 
 | 
 | The sacrificial rings were flung
 |   in sprays across the sky;
 | The interstitial threads then wrung
-|   as ropes they bound untie. 
+|   as ropes once bound untie. 
 |
 | And in these fictions fracture facts:
 |    A single atom forged
-| And bellow blown through heaven's tracts
+| and bellow blown through heaven's tracts
 |    to find itself disgorged. 
 | 
 | The crush of black, once unobserved,
@@ -38,8 +38,8 @@ I: Absurdity
 |    in sailing stream of flight. 
 | 
 | Without a frame, it screamed in vain
-|    Through paralactic curves
-| That weave the sieves with cluttered skein
+|    through parallactic curves
+| that weave the sieves with cluttered skein
 |    Of dark galactic nerves. 
 |
 | Commotion drowned, it gazed about
@@ -49,7 +49,7 @@ I: Absurdity
 | 
 | It wept to see a brilliant Earth,
 |    the fate bestowed by chance,
-| And in its cackles rose a mirth
+| and in its cackles rose a mirth
 |    expressed in photon's dance. 
 |
 | It splashed the surface spinning fast,
@@ -67,14 +67,14 @@ I: Absurdity
 | now disappeared before its start 
 |   beneath the wetted knife. 
 |
-| So bittersweet, by shades complete, 
+| So bittersweet and incomplete, 
 |   resigned into the black,
-| the atom braced its end to meet 
+| the atom braced for ends to meet 
 |   in swirling last attack.
 |
 | But fortune finds where will converged,
 |   as snatched from death it gasped
-| And saw from depths the land emerged,
+| and saw from depths the land emerged,
 |   where brethren all were clasped.
 |
 | A molecule of carbon made
@@ -107,4 +107,7 @@ I: Absurdity
     - Rejected
   * - July 15, 2025
     - Space and Time
+    - Pending
+  * - August 11, 2025
+    - The Genre Society
     - Pending

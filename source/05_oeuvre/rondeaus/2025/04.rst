@@ -17,3 +17,14 @@ V: Little Sprout
 |       oh little sprout.
 
 - August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - August 12, 2025
+    - Poet's Choice
+    - Pending

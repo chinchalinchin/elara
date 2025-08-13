@@ -3,29 +3,29 @@ III: Father's Lullaby
 ---------------------
 
 | Dear child, the monsters under bed
-|   Are not just make believe.
+|   are not just make believe.
 | They lurk in shadows overhead
-|   And offer no reprieve.
+|   and offer no reprieve.
 |
 | Dear sweetling, sleep with open eye
-|   And guard your dreams at night.
+|   and guard your dreams at night.
 | Ignore your mother's lullaby,
-|   Keep candles burning bright.
+|   keep candles burning bright.
 |
 | Beware the lair that closets hide,
-|   The racks of their disguise,
-| The suits and ties, the cuffs that slide
-|   And cloak them from your eyes.
+|   Tthe racks of their disguise,
+| the suits and ties, the cuffs that slide
+|   and cloak them from your eyes.
 |
 | Fear not the slash of sharpened claws,
-|   The flashing terror brief,
-| But stamps that mark the written clause
-|   With laws of fierce belief.
+|   the flashing terror brief,
+| but stamps that mark the written clause
+|   with laws of fierce belief.
 |
 | What evil deeds those stories tell
-|   Prepare your heart to meet
-| The formal world where heroes fell
-|   To wander incomplete.
+|   prepare your heart to meet
+| the formal world where heroes fell
+|   to wander incomplete.
 
 - April 2025
 
@@ -55,3 +55,6 @@ III: Father's Lullaby
   * - July 02, 2025
     - Mangrove Review
     - Rejected
+  * - August 12, 2025
+    - Poet's Choice
+    - Pending
