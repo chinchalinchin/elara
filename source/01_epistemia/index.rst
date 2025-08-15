@@ -15,3 +15,4 @@ Epistemia
    04_lexicon
    05_axiomata
    06_probatum
+   07_commentariat

@@ -817,14 +817,14 @@ However, this is not true. Indeed, while there is no *formal* argument that lead
 
 The motivation for this argument can be seen by noting that an overwhelming amount of reflective word are monosyllabic, e.g. *eye*, *aha*, *nun*, *bob*, *pip*, *tot*, *sis*, *wow*, *sees*, *noon*, *stats*, etc. As the number of syllables in a word increases, the frequency of reflectivity decreases. A heuristic argument can be formulate along the following lines:
 
-- For an alphabet with N characters (including delimiters) and a word with :math:`M` characters, there are potentially :math:`N^M` possible word-forms to use. 
-- Out of these :math:`N^M` word-forms, (using combinatorial arguments), there are :math:`N^{\lceil M/2 \rceil}` possible reflective word-forms. 
+- For an alphabet with N characters (including delimiters) and a word with :math:`M` characters, there are potentially :math:`M^N` possible word-forms to use. 
+- Out of these :math:`M^N` word-forms, (using combinatorial arguments), there are :math:`M^{\lceil N/2 \rceil}` possible reflective word-forms. 
 
 Consider selecting a random word with :math:`M` characters. If the event of each character selection is treated as independent and identically distributed, then the probability of selecting a reflective word with :math:`M` characters is approximately, 
 
 .. math::
 
-    P(R) = \frac{N^{\lceil M/2 \rceil}}{N^M} = \frac{1}{N^{\lfloor M/2 \rfloor}}
+    P(R) = \frac{M^{\lceil N/2 \rceil}}{M^N} = \frac{1}{M^{\lfloor N/2 \rfloor}}
 
 
 This shows, as the number of characters in a word increases, the probability of it being reflective drops exponentially. In other words, there is a combinatorial reason for reflective words occuring more frequently within the intersection of monosyllabic words. Monosyllabic words, by their nature, cannot be iambic. Moreover, monosyllabic words are finite, if it assumed every language has some upper bound for its syllabic lengths, e.g. the longest syllable in English is typically cited as 9 ("scrunched"). Once the monosyllabic words of a language have been assigned meanings, the possibility of randomly generating new reflective words diminishes rapidly. Therefore, as the number of words in a language increases, the probability of :math:`P(R | M_{-+})` decreases. 

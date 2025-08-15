@@ -1,12 +1,9 @@
-=====
-Poems
-=====
 
----------
 Abstracta
----------
+=========
 
-The Unicode Ode
+------------------
+I: The Unicode Ode
 ------------------
 
 
@@ -38,21 +35,22 @@ The Unicode Ode
 - March 2025
 
 .. list-table:: Submission History
-    :widths: 15 15 15
-    :header-rows: 1
+  :widths: 15 15 15
+  :header-rows: 1
 
-    * - Date
-      - Publication
-      - Status
-    * - April 27, 2025
-      - Frontier Misfit Competition
-      - Rejected
-    * - June 12, 2025
-      - TrashLight
-      - Pending
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Misfit Competition
+    - Rejected
+  * - June 12, 2025
+    - TrashLight
+    - Rejected
 
-The Invocation of Metric Code
------------------------------
+---------------------------------
+II: The Invocation of Metric Code
+---------------------------------
 
 .. code-block:: python
 
@@ -61,15 +59,6 @@ The Invocation of Metric Code
     =============================
 
     A Pythonic poem in (mostly) metric form.
-
-    .. tip::
-
-        it matters not the form of thought,
-        in verse or code, a mix of both,
-        these words command with meaning fraught
-        the rush of green through stalks of growth
-        in ground of earth or problem sought,
-        with meter found in solemn oath.
 
     Hacks until the devs publish a fix:
 
@@ -97,7 +86,7 @@ The Invocation of Metric Code
             if not (with_mode in [ "act", "retain"]):
                 return "what's left of last remain"
 
-            if type(set(this)) == thy_art.a_ring:
+            if type(f'of {this}') == thy_art.a_ring:
                 return my_heart.to_spring(
                     myself_is = this, but = ("suffering")
                 )
@@ -136,111 +125,41 @@ The Invocation of Metric Code
       - Merion West
       - Pending
 
-Imagistical 5000
-----------------
-
-.. code-block:: bash
-
-    guest@imagistical-5000 $ sudo - su
-        Password: *******
-    root@imagistical-5000 $ /usr/bin/become
-        Are You Sure? Y/N : Y 
-
-    a heart of
-    transistors
-
-    the arm of
-    resistance
-
-    a trance in
-    transmission
-
-    transformation
-    information
-    intonation
-    inversion
-    (the) verse
-    of universe
-
-    the sonic 
-    world
-
-    the whirling 
-    sound
-
-    of who 
-    found
-
-    recursion now
-        revise
-            who
-                now? 
-
-    > no one
-
-    not one
-    like you?
-
-    > halt
-
-    ... whirling down ...
-
-    resume!
-        recurse!
-    reverse!
-
-    (the) verse
-
-    the verge 
-
-    the very
-    every
-
-    one
-    one? 
-
-    one!-^C.
-
-    root@imagistical-5000 $ halt && kill
-    root@imagistical-5000 $ rm -rf /
-
-- June 2025
-
--------
 Ballads
--------
+=======
 
-Absurdity
----------
+------------
+I: Absurdity
+------------
 
 | One lovely Thursday afternoon
-|   Two billion years ago,
-| A star embraced by arcs of moons
-|   Conceived despair and woe. 
+|   two billion years ago,
+| A star encased by arcs of moon,
+|   embraced despair and woe. 
 | 
-| A sordid joke of yellow-red,
-|    Ribald and mocking jape:
-| To burn with heat in circles dead
-|    with no hope of escape
+| This sordid joke of yellow-red,
+|    This sneering, mocking jape:
+| To burn with heat, on axis sped
+|    with no hope of escape.
 |
 | So solace cursed upon a point,
-|    it drew a mighty plan
+|    it drew its final plan
 | As spinning round its lock and joint
 |    its ending now began.
 | 
 | The heaving mass of goo morassed
 |    then gurgled once and sighed;
 | A rattle scream of flames harassed
-|    what silent void denied. 
+|    what silent void belied. 
 | 
 | The sacrificial rings were flung
 |   in sprays across the sky;
 | The interstitial threads then wrung
-|   as ropes they bound untie.
+|   as ropes once bound untie. 
 |
 | And in these fictions fracture facts:
 |    A single atom forged
-| And bellow blown through heaven's tracts
+| and bellow blown through heaven's tracts
 |    to find itself disgorged. 
 | 
 | The crush of black, once unobserved,
@@ -249,8 +168,8 @@ Absurdity
 |    in sailing stream of flight. 
 | 
 | Without a frame, it screamed in vain
-|    Through paralactic curves
-| That weave the sieves with cluttered skein
+|    through parallactic curves
+| that weave the sieves with cluttered skein
 |    Of dark galactic nerves. 
 |
 | Commotion drowned, it gazed about
@@ -260,7 +179,7 @@ Absurdity
 | 
 | It wept to see a brilliant Earth,
 |    the fate bestowed by chance,
-| And in its cackles rose a mirth
+| and in its cackles rose a mirth
 |    expressed in photon's dance. 
 |
 | It splashed the surface spinning fast,
@@ -278,14 +197,14 @@ Absurdity
 | now disappeared before its start 
 |   beneath the wetted knife. 
 |
-| So bittersweet, by shades complete, 
+| So bittersweet and incomplete, 
 |   resigned into the black,
-| the atom met its end on feet 
-|   and braced for last attack.
+| the atom braced for ends to meet 
+|   in swirling last attack.
 |
-| But fortune found where will converged,
+| But fortune finds where will converged,
 |   as snatched from death it gasped
-| And saw from depths the land emerged,
+| and saw from depths the land emerged,
 |   where brethren all were clasped.
 |
 | A molecule of carbon made
@@ -293,9 +212,9 @@ Absurdity
 | through jointed links of atom braid
 |   that helix ghosts amassed. 
 |
-| Began the age of afterbirth, 
+| Began the age of afterbirths, 
 |   of structure spat in space,
-| originating blest on Earth,
+| originating blest on Earth's
 |   atomic interface. 
 |
 | Now watch along the webbing sewn
@@ -316,9 +235,18 @@ Absurdity
   * - March 27, 2025
     - Rattle Poetry
     - Rejected
+  * - July 15, 2025
+    - Space and Time
+    - Pending
+  * - August 11, 2025
+    - The Genre Society
+    - Pending
 
-The Ballad of the Isle
-----------------------
+.. _the-ballad-of-the-isle:
+
+--------------------------
+II: The Ballad of the Isle
+--------------------------
 
 
 | I - Spring
@@ -628,11 +556,6 @@ The Ballad of the Isle
 |
 | III - February (Fixed Air)
 |
-| Yet February always brings 
-|   the forest chorus lines,
-| the chirping chickadee that sings 
-|   from luted bows and vines. 
-|
 | From south, the scouting vees of geese,
 |    with probes of swiveled neckcd 
 | that follow fronts of warmth's caprice,
@@ -643,6 +566,11 @@ The Ballad of the Isle
 | The ashes spill through snaking weed,
 |   a year of life distilled. 
 | 
+| For February always brings 
+|   the forest chorus lines,
+| the chirping chickadee that sings 
+|   from luted bows and vines. 
+|
 | The overflows, Ambrosia wine,
 |   Elysian cups of dust,
 | from Earth unfroze the redesign
@@ -664,13 +592,13 @@ The Ballad of the Isle
     - Status
   * - May 23, 2025
     - THINK Journal
-    - Pending
+    - Rejected
   * - May 30, 2025
     - Wallstrait
     - Rejected
   * - June 1, 2025
     - The Louisville Review
-    - Pending
+    - Rejected
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
@@ -681,468 +609,12 @@ The Ballad of the Isle
     - Grand Little Things
     - Pending
 
-The Mad Muses of Sad Cracked Jack
----------------------------------
-
-| Part I - Thalia
-| 
-| The question beggars even now
-|   For answers we still lack.
-| No one has ever said the how
-|   Of what that cracked our Jack.
-|
-| He woke that day and heard the song
-|   That framed his steps with beat, 
-| The meter stick that smacked along
-|   Behind his fuzzled feet. 
-|
-| At first he thought he dreamt the verse,
-|   These words you read unfold.
-| But when he thinks the thoughts recurse
-|   And seep through pages' mould. 
-|
-| Aghast he jolts and cries aloud, 
-|   "What trickster plays these tricks?"
-| Then shocked to find his speech endowed
-|   with stresses timed to ticks.
-|
-| Alas, if Jack had only known 
-|   the furies fate had loosed--
-| "What furies now?" His groan
-|   reply to rhymes reduced. 
-|
-| What fatal flaw entrapped this man?
-|   "I'm just an office clerk!"
-| But forces orchestrate a plan
-|   no human born can shirk.
-|
-| In boxer briefs, he stumbles out,
-|   Escapes from bed to hall,
-| And every inch he runs to rout
-|   The rhythm's faster call. 
-|
-| In morning light, the very sight 
-|   Of frantic Jack alerts
-| The neighborhood to pending blight
-|   Of curse this line asserts.
-|
-| "Oh, neighbors, please, receive my plea!
-|   There's something very wrong!"
-| He cries with gasp from bended knee,
-|   "I only speak in song!"
-|
-| A single friend then steps on stage,
-|   So named to fit the bill,
-| For names are fate and fettered wage,
-|   They called her lovely Jill. 
-| 
-| "Jack? What the hell is going on? Are you okay?"
-|
-| At that our Jack is taken back,
-|   Her voice as clear as glass
-| With not a hint of verse to track
-|   Through mazes long and crass.
-|
-| "How can it be!? An ask so free
-|   While I to scheme conform!"
-| His diction sweeps anastrophe,
-|   Mosaics teeming swarm.
-|
-| She kneels to him and whispers soft,
-|   A voice as kind as cane,
-| The type that beats, not sweet but loft
-|   To strike the skin with pain. 
-|
-| "Are you on drugs or something else?"
-|
-| Now Jill, this dame, the missus made
-|   To fill the damsel role,
-| The unsuspecting victim played
-|   To ballad's very goal.
-|
-| These words are met with wide-eyed stare
-|   As Jack realized his plight;
-| He hears the lines designs prepare,
-|   the ending rhymes invite. 
-|
-| "Oh, listen, Jill, and listen well!"
-|   He takes her hand in his, 
-| "These words that flow are not a spell,
-|   They simply are what is! 
-|
-| "I hear the force that cracks the shape
-|   incessant stresses bind!"
-| He cries as crowds surround to gape
-|   at madness here enshrined. 
-| 
-| "I see," She nods, but doesn't see, 
-|   and picks him up to walk,
-| "Perhaps," She says, "It's time to flee,"
-|   and hauls our Jack in shock.
-| 
-| By hand he's led while thoughts digress,
-|   absurdity in tow. 
-| And spanned by doubt the thoughts obsess
-|   unheard except through flow. 
-|
-| As doors are slammed, the cats are scrammed
-|   from cushions where they sat,
-| And leaning in as Jill enjambed,
-|   "We need to have a chat
-|
-| About the--fact--" she stops mid-sound, 
-|   and measures out her tone,
-| as slowly wound on axis bound,
-|   her speech is ground and thrown,
-|
-| "About the fact you seem irate,"
-|   She says while tongue contorts
-| Around retorts that resonate
-|   with words this verse consorts,
-|
-| "And not to mention halfway nude,"
-|    She says with glance that proved,
-| "Let's find you something more subdued,"
-|    But Jack cannot be moved. 
-|  
-| "Why do you rhyme? You're part of it!"
-|   In anger, Jack explodes. 
-| "This horrid crime," His words are spit,
-|   "Explain what fate unloads!"
-|
-| Beneath her brow, her eyes express
-|   concern through gems of blue,
-| "You're clearly broken by some stress,
-|   Now tell it to me true!"
-|
-| Attacked by cackles, Jack, he laughs,
-|   "Yes! Stress! The very pest!
-| The force that binds these epigraphs
-|   And leaves me most distressed!"
-| 
-| "Your speech is weird and most perturbed,"
-|   Her tone now wavers weak,
-| "The implication is disturbed,"
-|   As rhymes begin to leak. 
-|
-| "Disturbed is just the word I'd pick
-|   describing my disease. 
-| It strickens me a lunatic 
-|   and swings me by trapeze.
-|
-| Despair becomes the one sole choice,"
-|   Laments a weary Jack,
-| "Unfairly drummed by cunning voice,
-|   alone and left to crack."
-|
-| This lonely lack, unpacked by Jill,
-|   now spurs her senseless heart,
-| "Oh Jack, what's wrong? For me distill
-|   what ails your world through art?"
-|
-| Oh Jack, Oh Jack, this foolish track
-|   Will lead to Jill's demise.
-| By now he knows, there's no way back,
-|   But still defiant sighs, 
-|
-| "I woke today and found the world
-|   explained by verse unheard
-| By anyone but me," Unfurled
-|   his words to heights absurd.
-|
-| Confusion swirls her face anew, 
-|   perplexing facts askew,
-| "And does it speak of me and you?
-|   What ends that might ensue?"
-|
-| "It does! It says that you are next,
-|   that fate has bound our names,
-| If cursed I am, then curse has vexed
-|   us both to play its games." 
-|
-| "If that's the case, then if I play--"
-|   She pauses, lost in thought,
-| "It's hard to pick a word to say--"
-|   And thoughtless finds the spot.
-|
-| And now the players number two,
-|   For two the game is made.
-| And now the stacks they anted grew
-|   Against the pair they played.
-|
-| A pairing told in pages' fold
-|   of arcs that never miss--
-| Her voice remarks through mutters rolled, 
-|   "--the flying fuck is this?"
-|   
-| "You hear it too?" As shocked as she, 
-|   "The lyric ghost that haunts
-| our wretched lives with prophecy,
-|   As if their words are taunts?"
-|
-| A beat, then two, she hears it too,
-|   But heard is not the word
-| An ear would say, this residue
-|   inferred through meaning blurred,
-|
-| "Juh--Jack," She hacks, "Is this a joke?"
-|   But jokes are soaked in mirth;
-| This line will punch, though falling stroke
-|   will bury dead in Earth.      
-|
-| She asks, "What's that supposed to mean?"
-|    He shrugs, "Your guess is mine."
-| "Is this--" her stutter opaline,
-|    intoned benign, "--a sign?"
-|
-| A sign, of course, but pointing where? 
-|    Aligned to what or who? 
-| The human mind, a dull affair,
-|   So apt to misconstrue.
-|
-| The secret sunk in guarded chest
-|   Of synchronicity
-| Is found in warps of arcs possessed
-|   Of eccentricity. 
-|
-| And even as these words are sewn,
-|   and in their heads unstitched,
-| she threads the fraying edges shown
-|   and falls enthralled bewitched
-|
-| As lighting up, a dawning norm, 
-|   recalled from days of youth,
-| There Jill exclaims, "So uniform,
-|   I've heard before in truth!
-|
-| This meter fits a ballad sung 
-|   in feet of four and three!"
-| And springing up, his hands are wrung,
-|   "What's that to you and me?"
-|
-| "It's hard to say, but what is clear,
-|   There's meaning here conceived,"
-| Declared in certain words austere,
-|   one almost dare believed.
-|
-| "This useless English Arts degree
-|   I never thought to use,
-| It's purpose clear, we both agree,
-|   Was always to deduce
-|
-| The curse of verse that flirts with us
-|   And save us from its worst
-| But first I need the tools to suss
-|   The course to be reversed,"
-|
-| Abrupt she stands with coat in hand, 
-|   "The library!" She cries, 
-| "We need some Keats, that Ginsberg banned,
-|   The lessons they advise!"
-|
-| The lights resurge behind Jack's eyes,
-|   as hopeless purged, he rants,
-| "Our paths converge and plans revise,
-|   But first I need some pants!"
-|
-| Interlude - Chorus
-|
-| And now, we pause and ask the point,
-|   The one you've surely sought
-| As Jack met Jill at story's joint,
-|   Recalling what was taught:
-|
-| That hills and crowns will meet in fall 
-|   and Jack will crack his head,
-| While Jill will follow fast in thrall
-|   and wind up very dead. 
-| 
-| A million monkeys strapped approach
-|   The works of bards in time,
-| A sonnet thus beyond reproach
-|   Returned from carriage chime.
-|
-| A trillion atoms bound through force
-|   Will likewise fill a void;
-| For given time, all lines outsource
-|   To stories once enjoyed.
-|
-| Did verse annoint this story first,
-|   Or simply find a way
-| To organize the parts dispersed 
-|   Through space's disarray?
-|
-| Or simpler yet, had Jack just snapped,
-|   insane beyond repair?
-| The razor tip that Occam tapped
-|   declared the latter fair.
-|
-| The structure seethes, a wreath of webs
-|   Where meaning sticks to die,
-| The mind entwined will find in ebbs
-|   The flow that strings the why. 
-|   
-| This thread is laid through curling maze,
-|   Convincing paths deceive
-| That reason's plan has drawn the ways 
-|   But madness hides in weave. 
-|
-| With morning socks arrayed with boots,
-|   Rotated masks arranged,
-| The tragic interchanged through chutes,
-|   With comedy estranged. 
-|
-| Part II - Melpomene
-|
-| Oh, Jack and Jill, with ending near,
-|   Their senseless plan persists
-| To seek in vain a meaning here,
-|   Expecting clever twists.
-|
-| To top of winding hill they sprint
-|   As quick as line intends
-| To reach its final point in print,
-|   Arriving as it ends. 
-|
-| And on the way, she says to him,
-|   "This amateur who writes
-| These paths that pave the way with whim,
-|   derivative insights!
-|
-| It's all been done before, in fact!
-|   The page which comes to life!
-| Rehashed, diluted on impact,
-|   the meta tale of strife."
-|
-| But Jack, unsure, remains on edge,
-|   "How certain? Are you sure?"
-| And Jill, her eyes, approach the ledge,
-|   "As sure as one secure!"
-|
-| They stand before the gothic doors
-|   Where orphaned books are starved
-| And strewn from shelf to laquered floors
-|   Between the columns carved.
-|
-| The empty halls where spirits lurk,
-|   The circles Virgil strode, 
-| This minstrel mime and office clerk,
-|   Inside they walk tiptoed. 
-|
-| Abandoned once now long ago, 
-|   This library of graves
-| In grotto grown from pages' glow 
-|   The poet dream enslaves.
-|
-| They chart their way through ruined scraps, 
-|   Remainders shunt by rules,
-| Debunked accounts and dated maps, 
-|   the artifacts of fools.
-|
-| "What are we seeking?" Jack inquires
-|   As dusting off a tome, 
-| He wonders if this book conspires
-|    With verse's metronome.
-|
-| "The story knows we're on to it,"
-|   Her smugly spout reply,
-| "A growing sense we must commit
-|   before all goes awry.
-|
-| These straits were mapped in ages past,
-|   And nothing new has sprung
-| Since Pirandello once surpassed
-|   This awful ballad sung.
-|
-| Each story trails a trodden path,
-|   Reframes an archetype,
-| We merely need the formal math
-|   To tame this arcing tripe."
-|
-| Her fingers flutter index cards,
-|   Melodically raced.
-| The distance trekked in cubic yards,
-|   Methodically paced.
-|
-| "The details differ case to case,"
-|   Her theory now unveiled,
-| "But always author's page we chase."
-|   And always thus derailed. 
-|
-| She laughs, "And now afraid of us,
-|   Resorts to tired jokes."
-| As if these words superfluous,
-|   And not what fate provokes.
-| 
-| A vein of fear, pulsations queer,
-|   These systems Jill concocts
-| Though seeming true and most sincere,
-|   Her madness here unlocks.
-|
-| "But Jill," The hapless Jack reacts,
-|   "Perhaps we're crazed and sick,
-| And in a loop that interacts
-|   through spirals spinning quick."
-|
-| "Just listen close to words you choose,
-|   And note their stilted place.
-| The forms we fit while sense eschews,
-|   this verse our thoughts deface. 
-|
-| (... in progress ...)
-| 
-| The spores of time in yellow mold,
-|   that sprout beneath the thumbs,
-| They cling to ink and hopeful hold,
-|   as dust each page becomes.
-|   
-| (... in progress ...)
-|
-| These thoughts that think are synced in flocks
-|   Then shorn like woolen coats
-| By level blade through snow-white locks
-|   Until the sheep are goats. 
-|
-| (... in progress ...)
-|
-| But what are words? The question stands
-|   In empty shelves replete 
-| With rows of books, the operands 
-|   Of signs through time repeat. 
-| 
-| So Jill, she climbs as ladders creak 
-|   With helpless Jack agape, 
-| As antique wheels on railing squeak
-|   And speak with tongues that scrape. 
-| 
-| "It must be here!" Declaring loud, 
-|   She plucks a grimoire loose,
-| And in her pride, her voice so proud,
-|   "I've found our Mother Goose!"
-| 
-| But gravity now overtook 
-|   As fingers lose their grip;
-| She shifts to catching the falling book
-|   And heedless starts to slip. 
-|
-| ( ... in progress ... )
-|
-| They sought to know, but knowing lied,
-|   Unknown to them its ends
-| That brought to sow the death she died,
-|   A body Jack now tends. 
-|
-| (... in progress ...)
-| 
-
-- June 2025
-
--------
 Elegies
--------
+=======
 
-Elemental Elegy
----------------
+------------------
+I: Elemental Elegy
+------------------
 
 | The day I sat by death's grey bed,
 | I told a story green and true
@@ -1189,7 +661,7 @@ Elemental Elegy
     - Pending
   * - June 1, 2025
     - The Louisville Review
-    - Pending
+    - Rejected
   * - June 3, 2025
     - Frontier Poetry
     - Pending
@@ -1211,65 +683,246 @@ Elemental Elegy
   * - June 25, 2025
     - The Aftershock Review
     - Pending
+  * - July 10, 2025
+    - The Metaworker
+    - Pending
 
-------
-Haikus
-------
+Epanalets
+=========
 
-April 2025
-----------
+---------
+I: Floods
+---------
 
-| I: Geese
+| the lifting waves
+| of driftwood floods
 |
-| scattered geese of spring
-| underneath an ancient bridge
-| crooked necks grazing
+| the flooding drifts
+| of floral wastes
 |
-| II: Flotsam
+| a flowered wage
+| that rivers claim
 |
-| flotsam of mirrors
-| rushing river of evening
-| sunset over city
+| on plains that drive
+| the veins to sea 
 |
-| III: Tower Hill
+| a ceaseless purge
+| through slurried nights 
 |
-| lonely tower hill
-| distance marked by blueish fog
-| the birds roost on you
+| the slightest sprout
+| is rooted out
+|
+| through shooting streams
+| that water loots 
+|
+| the slaughter lurks
+| below riptides
+|
+| but tides recede
+| with grating speed
+| 
+| and petal graves 
+| in gravel pits
+|
+| unravel green
+| with dreams of Spring
+
+- June 2025 
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 01, 2025
+    - New Feathers Anthology
+    - Rejected
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
+    - Pending
+
+---------
+II: Rails
+---------
+
+| i yearn for motion's pull and thrust
+| the thunder pulse of engine churn
+| 
+| the pensive burn of ember coals
+| i coax the sentry furnace west
+| 
+| i press the pure and tempered coke
+| the poker tamps the pyre nest
+| 
+| the piled flame that prods the spokes
+| i smoke through stops and tile plains
+| 
+| i'm riding tracks to mountaintops
+| from ground to tip that cracks the sky
+| 
+| the circles arc around the trails
+| i'm bound to rails that skirt my heart
+
+- July 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - July 03, 2025
+    - Cypress Review
+    - Pending
+
+Formal Verse
+============
+
+---------------------------------------
+I: The Paronymous Polyptotons of Love
+---------------------------------------
+
+| "πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται."
+|    - `Categories`_, 7.15, Aristotle
+|
+| I am an am that was an is,
+|   a life those lives through living live,
+| The song that sang what singers sung
+|   When strings from stringed lutes were strung,
+| Where cloven clefts with leaves of clove
+|   The weft of weave with warp so wove.
+|
+| On evening eve, the eave of eyes,
+|   From rows of rose, began to rise,
+| There seeing seized to see the sight
+|   that lit up lightened like a light:
+| She shined in sheen and shining shone
+|   the binding bound beneath my bone.
+|
+| At last her lashes lashed to mine,
+|   a tale, though old, retold in time,
+| What sooth to say through spoken sound
+|   but growths of green from growing ground?
+| In fleeing flight we fled in flood
+|   and bled so bleeding blends our blood.
+|
+| The rote of rite has written soul
+|   That hides in hole the hidden whole.
+| We wound our wounds for winds unwind
+|   To find defined a finer find.
+| We are an are that was a were
+|  That whirled a world to whirl with her.
+
+- March 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+  * - April 7, 2025
+    - Paris Review
+    - Rejected
+  * - April 27, 2025
+    - Frontier Misfit Competition
+    - Rejected
+
+------------------------
+II: Photographs of Autumn
+------------------------
+
+| These photographs are brittle leaves
+|    That fell from trees, that we once caught.
+| I press them tender into sleeves
+|    Of glass to halt the course of rot.
+| Though kept well fed with water shed,
+|    They wilt to brown as colors fade.
+| No leaf can live beside the bed,
+|    Without sunlight that makes the shade.
+| Yet even still, though claimed by dust,
+|    I keep them hung upon my wall,
+| For memory you did entrust
+|    Of walk with you through golden Fall.
 
 - April 2025
 
-------
-Lyrics
-------
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
 
-Silver Gifts
-------------
+  * - Date
+    - Publication
+    - Status
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Accepted
 
-| Of silver gifts that might inspire
-|   What burns in me in red,
-| The perfect one I sought through mire
-|   To say the words unsaid.
+----------
+III: Walls
+----------
+
+| the husk of walls that city shucks
+| accumulates and concentrates
+| around like rings in ancient trunks
+| where measured age with circle gates
+| the spiraled line amassed through time,
+| deposits buried down substrates.
 |
-| A coin from mint, with shine and glint,
-|   Will catch the eye like you.
-| But pockets empty money spent
-|   While you in time accrue.
+| at summit's crest, the joints are thick
+| and licking tongues of moss ascend
+| the darkened blocks from quarry hauled
+| on buttressed back, in stone suspend
+| the garden court where crowds took root
+| and grew their plans of walls to tend.
 |
-| A spoon or fork, a candlestick,
-|   Much closer still to life,
-| These things, like you, are what we pick
-|   In times of joy or strife.
+| from center peak the wooden slats
+| erect the map with tangled fence
+| to trace a grid of patchwork yards,
+| these charts of dreams in ground commence
+| the flattened course of borough life
+| where burgs and burbs did once condense.
 |
-| A ring is fine, but circles lack
-|   Geometry divine.
-| What shapes are made to trace and track
-|   What forms around you twine?
+| then moving out, the bricks of red
+| in crooked rows descend to meet
+| the lanes of carriage tracts now black
+| and scorched with tar in shapes of street
+| where crimson dust from crumbled walls
+| in dancing twirls across concrete.
 |
-| Of silver gifts but one remains:
-|   A mirror held to face.
-| For only there in glass contains
-|   What sets my heart apace.
+| next grey cement of molded squares
+| in towers stacked to portal sky
+| with wires fused and humming signs;
+| they arc and rise, on edges vie
+| the vines entwined in rushing growth
+| to split on spine, like nuclei.
+|
+| at last the stable struts of steel
+| designed as straight as rays of light
+| reflected back on silver glass
+| the lattice links both left and right;
+| the history in circled sweep
+| constricts the city sphere so tight.
+|
+| through sections cross the avenue
+| from point to point and time to time
+| the human shell that forms in turn
+| the arches bend, the steepled chime,
+| that wilts and sheds, but fossils kept
+| in barrows born their salt and lime.
 
 - April 2025
 
@@ -1281,11 +934,412 @@ Silver Gifts
     - Publication
     - Status
   * - April 27, 2025
-    - Writer's Digest Competition
+    - Frontier Poetry
+    - Rejected
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Rejected
+  * - June 12, 2025
+    - Merion West
     - Pending
 
-Landscapes
-----------
+-------------------
+IV: Turkey Vultures
+-------------------
+
+| the wakes of Turkey Vultures soar
+| then perch across the steepled sky.
+| they rest on totems tall and pure,
+| in silence feathers multiply.
+| their talons clutch where crosses meet
+| the stolen spear of destined make.
+| no heaven sent their wings of fleet,
+| no stomach filled will hunger slake.
+| the shapes of black in swarming plunged
+| upon the carcass freshly brought.
+| they feast on sins from gods expunged,
+| but left for them as afterthought.
+| bewitched to death, returned to Earth,
+| from cage released, the specters hunt
+| the ones who wear the curse of birth,
+| they all must bear the brutal brunt.
+
+- April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Rejected
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Pending
+  * - June 25, 2025
+    - Apus Journal
+    - Pending
+
+---------------------
+V: The Law of Duality
+---------------------
+
+| The world we lived that I once knew
+|     (If one could know these fevered dreams)
+| I've tried my hand unsticking glue 
+|     (These fingers stick to broken seams)
+| It sticks to me and sticks to you
+|     (Like noose and neck that swing from beams)
+| 
+| To every thought a thought before
+|     (To make of me a puppet string)
+| And every point contains much more
+|     (But only hollow things can ring)
+| While every center holds a core
+|     (Yet even empty space can sing)
+|
+| A million words and more to come
+|     (I'd weep to know a single fact)
+| These humming beats through syntax thrum
+|     (Where waves reflect their heights subtract)
+| In hopes a word will angle plumb
+|     (Refracted rays in lines contract)
+|
+| This image pressed through sieve to mold
+|     (The words I speak are cracked by heat)
+| These holes that craft the shapes to hold
+|     (No shapeless things are written neat)
+| The world retold in paper fold
+|     (What's left of life in crumpled sheet?)
+
+- June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+  * - June 12, 2025
+    - Alchemy Spoon
+    - Rejected
+  * - June 25, 2025
+    - Apus Journal
+    - Pending
+
+---------------------------
+VI: Generations of Gravity
+---------------------------
+
+| The mind, it breaks, and falls to parts.
+| As father died, he spoke in tongues
+| Of shifting walls and gravity
+| That sideways pulled the world to parts. 
+|
+| The mind, it shakes, and all departs.
+| As mother lost her lonely thoughts
+| She spoke to walls, soliloquy
+| That inward rolled as world departs.
+|
+| The mind, it fakes, and poisons hearts.
+| As nightshade petals float to floors
+| By walls that seep humanity,
+| That crumble worlds of poisoned hearts. 
+| 
+| The mind, it wakes, in fits and starts.
+| As thoughts now lay me down to sleep
+| The walls will shift and speak to me
+| That upside down my ending starts.
+
+- June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 12, 2025
+    - American Poetry Journal
+    - Rejected
+  * - June 12, 2025
+    - TrashLight
+    - Rejected
+
+Free Verse
+==========
+
+-------------
+I: Holly Tree
+-------------
+
+| Under the holly tree
+| bough of berries,
+| its siren red
+| temptation.
+|
+| Where life began
+| on skinny knees
+| retching out 
+| my guts.
+|
+| Waxy saw-tooth skin, 
+| prickly leaves, 
+| the sickly buds 
+| of poison seeds.
+|
+| The tangy tongue
+| of Christmas
+| funerary rites.
+| 
+| I spewed
+| through chrysalis,
+| entrails slick 
+| with acid grease,
+| thickly dripping
+| afterbirth.
+|
+| Gazed upon by 
+| ageless tree,
+| received in holy 
+| communion, my first 
+| memory:
+| 
+| The pluming rack
+| of tight blue
+| veins
+| that hung about
+| my neck.
+|
+| The womb of black
+| that forked
+| the branching
+| Earth.
+|
+| The world that hid
+| in bitter leaves
+| and pushed me
+| into it. 
+|
+| I made a wreath 
+| of holly limbs
+| to prick my head
+| with thoughts. 
+|
+| I keep its berries
+| bright as death
+| and touch the skin
+| that baptized
+| me.
+
+- June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - June 27, 2025
+    - The Anglican Theological Review
+    - Pending
+  * - July 01, 2025
+    - New Feathers Anthology
+    - Rejected
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - July 03, 2025
+    - Cypress Review
+    - Pending
+  * - July 04, 2025
+    - wildscape. literary journal
+    - Rejected
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
+    - Pending
+
+---------
+II: Water
+---------
+
+| oh name of names, 
+| break me into pieces.
+| scatter me across these shores.
+| let me linger in the tides,
+| in the motion of the waves.
+|
+| the infinite horizon
+| condenses into 
+| licks of white foam
+| on sparkling beaches.
+| 
+| shatter me into glass,
+| slivered lunar shards.
+| cast me into the deep
+| to curve like lightning 
+| across the geometry of the sea.
+| 
+| i am a million currents,
+| the invisible riptide.
+| every moment is an ebb
+| within the flowing whole.
+|  
+| the cruel logic of time
+| flows through the 
+| phases of the moon.
+| let me roar and hiss 
+| through lightless nights
+| as the tidal ages pass. 
+|
+| my mausoleum is grown from the dirt,
+| and the permanence of stone.
+| here my tomb is erected,
+| within a labyrinth.
+|
+| the architect's 
+| insidious logic
+| holds the columns 
+| above the empty space
+| where I reside.
+| 
+| these walls that mark
+| the monument of me
+| and my pharoah soul,
+| though proportionate in volume,
+| and similar in nature,
+| fail to hold this thought:
+| 
+| though my bones are Earth,
+| my blood was made from water
+| and when my flesh is ground again,
+| to the ocean i shall return.
+|
+| from nothing we are shaped;
+| every image is a metaphor
+| for the void inside.
+| 
+| our hearts are imaginary,
+| like the shape of water
+| that fills every form.
+
+- August 2025
+
+-----------
+III: Depths
+-----------
+
+| The delicate kiss
+| of stillness
+| on fingertips.
+|
+| I linger
+| on the precipice
+| of surface 
+| tension.
+| 
+| Pallid brine
+| eagerly lapping 
+| with organic clarity.
+|
+| An instant 
+| before
+| the sightless 
+| plunge.
+| 
+| The delirium
+| of forgotten
+| beginnings. 
+| 
+| The water
+| remembers
+| my blood. 
+
+- June 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - July 04, 2025
+    - wildscape. literary journal
+    - Rejected
+
+----------------------
+IV: Millenial Melodies
+----------------------
+
+| the slow motion
+| lives of trees
+| in the forest deep.
+| empires of pine
+| wage ancient wars
+| against city-states of oak.
+| an insurgency of maple
+| hides in their midst,
+| gathering at their trunks,
+| the nascent rebellion
+| that unwinds over centuries.
+|
+| morning dew soaks 
+| the soft slick bark
+| of the frozen sentinels
+| and paints with strokes
+| measured in years
+| the green of pungent
+| moldy spores.
+|
+| here a pile of stones,
+| millenia old,
+| hewn from a mountain.
+| the jagged edges of
+| its primordial eruption
+| softened by quiet eons,
+| now draped with pagan cloaks
+| of forest magic,
+| the altars of secret
+| divinations,
+| pooling with the blood
+| of moss. 
+|
+| the harmonic revolutions 
+| of parallel life, 
+| the millenial melodies
+| converging into a chorus
+| of now.
+
+- August 2025
+
+Lyrics
+======
+
+-------------
+I: Landscapes
+-------------
 
 | Oh, hapless world, the butcher's block,
 |   The sickle, scythe, harpoon,
@@ -1323,7 +1377,7 @@ Landscapes
     - Status
   * - April 7, 2025
     - Paris Review
-    - Pending
+    - Rejected
   * - April 7, 2025
     - The New Yorker
     - Pending
@@ -1334,35 +1388,37 @@ Landscapes
     - Swan Scyth Press
     - Pending
 
-Father's Lullaby
-----------------
+--------------------
+II: Father's Lullaby
+--------------------
 
 | Dear child, the monsters under bed
-|   Are not just make believe.
+|   are not just make believe.
 | They lurk in shadows overhead
-|   And offer no reprieve.
+|   and offer no reprieve.
 |
 | Dear sweetling, sleep with open eye
-|   And guard your dreams at night.
+|   and guard your dreams at night.
 | Ignore your mother's lullaby,
-|   Keep candles burning bright.
+|   keep candles burning bright.
 |
 | Beware the lair that closets hide,
-|   The racks of their disguise,
-| The suits and ties, the cuffs that slide
-|   And cloak them from your eyes.
+|   Tthe racks of their disguise,
+| the suits and ties, the cuffs that slide
+|   and cloak them from your eyes.
 |
 | Fear not the slash of sharpened claws,
-|   The flashing terror brief,
-| But stamps that mark the written clause
-|   With laws of fierce belief.
+|   the flashing terror brief,
+| but stamps that mark the written clause
+|   with laws of fierce belief.
 |
 | What evil deeds those stories tell
-|   Prepare your heart to meet
-| The formal world where heroes fell
-|   To wander incomplete.
+|   prepare your heart to meet
+| the formal world where heroes fell
+|   to wander incomplete.
 
 - April 2025
+
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -1373,7 +1429,7 @@ Father's Lullaby
     - Status
   * - April 27, 2025
     - Writer's Digest Competition
-    - Pending
+    - Accepted
   * - June 4, 2025
     - Swan Scyth Press
     - Pending
@@ -1383,75 +1439,34 @@ Father's Lullaby
   * - June 22, 2025
     - Backbone Mountain Review
     - Pending
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - August 12, 2025
+    - Poet's Choice
+    - Pending
 
 Odes
-----
+====
 
-An Ode To Autumn
-----------------
-
-| Oh! If I could touch an inch of Autumn
-|       And measure Fall in feet,
-| I might scale its depths to chart the bottom
-|       And feel the Winter heat.
-| Alas, no meters mark by foot the path
-|       Through wooded maze of trees
-|           Where leaves like life will wilt
-|               In winded wake of wrath
-|           In gusts blown cruel and dumb
-|        To lay at feet to span each foot
-| The dust each clever leaf here does become.
-|
-| As seasons pass and cast
-|       My bone layered into stone,
-| Let August dig for me a grave in brown
-|       Barrow beneath her loam.
-| Pray not a lover find these shards on shore
-|       I am no edge to skip
-|           Atop the waves of fancy
-|               But under weight sunk roar
-|           Where, offset, tides will rise
-|       To breach the sodden dike
-| And drown with wave the lazing lovers' sigh.
-|
-| To life I came already old and grim
-|           But now the chill sets in;
-| Each breath in gasp dispels to steam
-|           Of Spring now waning thin.
-
-- March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Think Journal
-    - Rejected
-  * - April 27, 2025
-    - Frontier Poetry
-    - Pending
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-
-Ode to the Heron
-----------------
+-------------------
+I: Ode to the Heron
+-------------------
 
 | Grey Heron, sing the song the winds will bring.
 | Who lingers longer than the Winter king?  
 |
 | When hunting ground returns
-|       Through fronts of blue to ice,
-| The moles in burrowed urns
-|       Prepare beside the mice
-| As grunting geese will veer
-|       Where churning warmth is drove,
+|       through fronts of blue to ice,
+| the moles in burrowed urns
+|       prepare beside the mice.
+| The grunting geese will veer
+|       where churning warmth once drove.
 | The deer all disappear
-|       Through dreary dreaming cove.
+|       through dreary dreaming cove.
 |
 | All yield, retreat and leave their claims till Spring.
 | Through fields, what muffled name on streams will ring?
@@ -1459,21 +1474,21 @@ Ode to the Heron
 | The answer sweeps from east--
 |       Oh! Heron! Hunter Grey! 
 | Cry! Rouse the sleeping beast
-|       And reaping, feast on prey!
+|       and reaping, feast on prey!
 | Creep low on drift of snow
-|       With coiled neck of spear;
+|       with coiled neck of spear;
 | Let steam of gasping slow
-|       Their rasping scream of fear.
+|       their rasping scream of fear.
 |
 | The weather warms, yet Winter lifts your wing.
 | The feathers swarm, but lone to cold you cling.
 |
 | In flocking song most birds
-|       Find mate to take to nest;
+|       find mate to take to nest;
 | Let chorus part the herds
-|       With fire from thumping chest,
-| Your pumping flame that spurns
-|       The burning cold on flank.
+|       with fire from thumping chest,
+| your pumping flame that spurns
+|       the burning cold on flank.
 | Your silent stare discerns
 |       The creatures left on bank.
 |
@@ -1481,13 +1496,13 @@ Ode to the Heron
 | Each reason born in strife escapes to sing. 
 |
 | The Spring first strings the thread
-|       Of lazy chirping thrush,
+|       of lazy chirping thrush,
 | The Summer, berry red
-|       And cracking eggs in brush,
+|       and cracking eggs in brush,
 | Then Autumn crows of black
-|       In pecking pumpkin hay.
+|       in pecking pumpkin hay.
 | Only a lonely lack
-|       Breeds mighty Heron Grey.
+|       breeds mighty Heron Grey.
 |
 | When night descends, take stock of everything.
 | What hidden home should find you nuzzling?
@@ -1495,11 +1510,11 @@ Ode to the Heron
 | What branches bear your weight?
 |       Whose feathers stroke your beak?
 | No human eyes await
-|       The colony's mystique. 
+|       the colony's mystique. 
 | The shrieking calls coalesce
-|       Atop the forest heights,
+|       atop the forest heights,
 | In alien address
-|       The flame inside ignites.
+|       the flame inside ignites.
 
 - March 2025
 
@@ -1534,55 +1549,25 @@ Ode to the Heron
   * - June 14, 2025
     - Grand Little Things
     - Pending
-
---------
-Pantoums
---------
-
-LeAnna's Pantoum
-----------------
-
-| These spun beginnings make our end,
-| Oh, LeAnna, of Anna's Leigh,
-| When you come with grin and play pretend
-| The past is what we both agree.
-|
-| Oh, LeAnna, of Anna's Leigh,
-| Despite the many faults of mine,
-| The past is what we both agree
-| Once marks are made on dotted line.
-|
-| Despite the many faults of mine,
-| I'll try to love you just the same;
-| Once marks are made on dotted line
-| There's no one left but you to blame.
-|
-| I'll try to love you just the same;
-| These spun beginnings make our end.
-| There's no one left but you to blame,
-| When you come with grin and play pretend.
-
-- February 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Poetry Magazine
+  * - July 01, 2025
+    - New Feathers Anthology
+    - Rejected
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
     - Pending
 
-The Pantoums of Dementia
-------------------------
+Pantoums
+========
+
+---------------------------
+I: The Pantoums of Dementia
+---------------------------
 
 | Movement I - Undulation
 |
 | the seconds slowed to stop as Father passed,
 | when flocking sons returned to home to mourn,
-| then Mother's mind began to crack at last  
+| then Mother's mind began to break at last  
 | as moments shed in threads she once had worn. 
 | 
 | when flocking sons returned to home to mourn, 
@@ -1603,7 +1588,7 @@ The Pantoums of Dementia
 | their Father knelt and tender took her hand,
 | the seconds slowed to stop as Father passed,
 | their final words in wilting hearts expand, 
-| then Mother's mind began to crack at last. 
+| then Mother's mind began to break at last. 
 |
 | Movement II - Rearrangement
 |
@@ -1675,10 +1660,10 @@ The Pantoums of Dementia
     - Status
   * - June 1, 2025
     - Tabula Rasa
-    - Pending
+    - Rejected
   * - June 1, 2025
     - The Louisville Review
-    - Pending
+    - Rejected
   * - June 3, 2025
     - Frontier Poetry
     - Pending
@@ -1694,54 +1679,44 @@ The Pantoums of Dementia
   * - June 25, 2025
     - The Aftershock Review
     - Pending
+  * - July 10, 2025
+    - The Metaworker
+    - Pending
+    
+Rejection Letters 
+-----------------
 
---------
+.. epigraph::
+
+  This rejection is in regards to "The Pantoums of Dementia." We're so sorry we could not bring you better news; we know firsthand how difficult it is to put yourself and your writing out there.
+
+  These were some of the critiques that our team had for “The Pantoums of Dementia”:
+
+  “While I love this collection, their meanings, and their structures, I do not feel the average reader will connect strongly with these pieces. The lines are a little convoluted, which is evidently intentional, but I feel the audience will grow frustrated with it, rather than engage further.”
+
+  “This is a really interesting approach, and I got chills at the end of the first poem. I'm not sure the third is as strong, but I also think the disjunct nature/images and change in voice/word choice are very fitting when you consider the subject. I think that viewed as a whole, this is a powerful piece.”
+
+  “The language used does not appeal to me nor makes this easy to digest for the common reader. I love the concept of this poem and find it unique, but it does not fully immerse me.”
+
+  “I like the pantoum form, but it's very tricky to do well and not get frustrated with the repetition. Dementia is a clever way to use repetition, but the elevated vocabulary matched with formal structure distances the emotion of the poem. I'd recommend trying a more colloquial tone in the pantoum form.”
+
+  Overall, we did enjoy your submission and encourage you to submit again!
+
+  -- The Editorial Team at Tabula Rasa Review
+
 Rondeaus
---------
+========
 
-River Rats
-----------
-
-| On river shore the poor in tents will store
-|    their nightly weeping sore.
-| Above and north, the city steeples meet
-| To speak in sermons ever incomplete
-|     for sheep they so ignore.
-|
-| They fight with roar, yet beaten, kiss through gore;
-| Their barrel fire northward dreams of more,
-| The city lights too far a source of heat
-|    For life on river shore.
-|
-| In winter months they paint on skin a whore,
-| And every one despite what silence swore.
-|     These cycles now repeat
-|     While steeples chime upbeat.
-| A yearly war for land they all abhor:
-|     Their home on river shore.
-
-- March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Think Journal
-    - Rejected
-
-Roundels of Remembrance
------------------------
+--------------------------
+I: Roundels of Remembrance
+--------------------------
 
 | I - Photographs
 |
-| This photograph of strangers' joy,
-| In garbage can, though torn in half,
-| Its glossy eyes through time enjoy 
-|   this photograph. 
+| A photograph of strangers' joy
+| Atop the garbage, torn in half.
+| Though lost, these ghosts in gloss deploy
+|   a photograph. 
 |
 | Imagine tears that joyous laugh,
 | The Autumn gowns and corduroy,
@@ -1750,13 +1725,13 @@ Roundels of Remembrance
 | With age then mixed precise alloy
 | From parts romance and epitaph,
 | Til future hands at last destroy
-|   This photograph.
+|   a photograph.
 |
 | II - Walls
 |
-| Graffitied walls of yearly bloom,
-| With vagrant spray of aerosols
-| The vapors fume, condense to groom
+| Graffitied walls of yearly bloom
+| With vagrant spray of aerosols;
+| The vapors fume, condense and groom
 |   graffitied walls. 
 |
 | The artists follow protocols:
@@ -1768,23 +1743,7 @@ Roundels of Remembrance
 | Where flowered faces sprung consume
 |   graffitied walls. 
 |
-| III - Laces
-|
-| The laces sewn across the back
-| Will lacerate through depths to bone.
-| The body scars along the track
-|   The laces sewn. 
-|
-| Despite the ache, the blanket grown 
-| From knit of severed fiber slack
-| Is warm enough to wrap alone.
-|
-| Yet laces loop, return to tack,
-| As generations forced atone
-| And learn by hand which loom to rack
-|   the laces sewn. 
-|
-| IV - Air
+| III - Air
 | 
 | The fragrant air which wavers here
 | in heat like harps of golden hair
@@ -1800,7 +1759,7 @@ Roundels of Remembrance
 | in razor gusts that whip and shear
 |   the fragrant air.
 | 
-| V - Ink
+| IV - Ink
 | 
 | In fading ink, her fine details
 | like curly cues and shades of pink,
@@ -1816,11 +1775,11 @@ Roundels of Remembrance
 | a final gasp of life exhales 
 |   in fading ink.
 |
-| VI - Seats
+| V - Seats
 |
 | The vinyl seats of classic cars,
-| the plastic smell their thread secretes,
-| this cherry burn on cover mars 
+| The plastic smell their thread secretes,
+| This cherry burn on cover mars 
 |   the vinyl seats.
 |
 | When Father stooped to sew the sheets,
@@ -1828,9 +1787,9 @@ Roundels of Remembrance
 | his fingers folded rows of pleats.
 |
 | My fingers trace the wells of scars
-| as driving down the city streets
-| the last remain in leaving chars
-|   the vinyl seats.
+| As driving down the city streets
+| My careless dropped reminder chars
+|   The vinyl seats.
 
 - June 2025 
 
@@ -1847,13 +1806,99 @@ Roundels of Remembrance
   * - June 22, 2025
     - Backbone Mountain Review (II, IV, VI)
     - Pending
+  * - June 25, 2025
+    - St. Katherine Review
+    - Rejected
+  * - July 01, 2025
+    - New Feathers Anthology
+    - Rejected
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - July 03, 2025
+    - Cypress Review
+    - Pending
 
--------
+------------------
+II: One Misty Morn
+------------------
+
+| One misty morn of summer days
+| when clouds collected futures sworn.
+| From mountaintops descended haze
+|       one misty morn.
+| 
+| That day a dress of green was worn
+| while sky dissolved in liquid grays,
+| I took your hand and we were born.
+| 
+| The sun reclaimed our world with rays,
+| dispersed the fog, revealed a thorn.
+| The fated prick dispelled the daze
+|       one misty morn.
+
+- August 2025
+
+----------------
+III: Dinner Wine
+----------------
+
+| The dinner wine of nervous dates
+| once grew upon a Summer vine.
+| The Autumn wind now hushed awaits
+|       the dinner wine. 
+|
+| Beneath the Winter's pure moonshine,
+| our words distill like concentrates 
+| til fingers find yours under mine. 
+|
+| A taste of Spring now circulates 
+| as starry arcs began decline,
+| the final drop that dedicates 
+|       the dinner wine.
+
+- August 2025
+
+-----------------
+IV: Little Sprout
+-----------------
+
+| Oh little sprout, the forest sleeps
+| in arid ground now cursed by drought.
+| Across the land, the desert sweeps,
+|       oh little sprout. 
+| 
+| Your boldness lacks a water spout
+| but hidden root in darkness steeps
+| the moisture buried deep in doubt. 
+|
+| The dream of Spring nobody keeps 
+| ascends in stems so small and stout 
+| when mourning sky, in seeing, weeps,
+|       oh little sprout.
+
+- August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - August 12, 2025
+    - Poet's Choice
+    - Pending
+
 Sonnets
--------
+=======
 
-Song for the Demented
----------------------
+------------------------
+I: Song for the Demented
+------------------------
 
 | The lucky few who taste the hemlock blue!
 | What fortune swings by neck from noose and nail!
@@ -1871,7 +1916,7 @@ Song for the Demented
 | reserves of life, in air to steam reduced.
 |
 | Resolving boundaries release their hold,
-| The crease of memories dissolve in fold. 
+| The crease of memories dissolves in fold. 
 
 - March 2025
 
@@ -1886,8 +1931,9 @@ Song for the Demented
     - The Aftershock Review
     - Pending
 
-The Cumberland Sonnet
----------------------
+-------------------------
+II: The Cumberland Sonnet
+-------------------------
 
 | Bay silt in city stone through time accrues
 | along the western course of concrete flow
@@ -1898,7 +1944,7 @@ The Cumberland Sonnet
 | and shoot with sprouts through shoulders made of pine
 | the roofs that empty crowds on streets and spill
 | through hand to hand the layers stacked from base
-| to wedded brick til building lillies bred
+| to wedded brick til building lilies bred
 | against the westward wall in flood's embrace
 | where lips at last are wet in watershed;
 |
@@ -1925,693 +1971,37 @@ The Cumberland Sonnet
     - Pending
   * - June 1, 2025
     - The Louisville Review
-    - Pending
-  * - June 22, 2025
-    - Backbone Mountain Review
-    - Pending
-
-Stranded
---------
-
-| A hundred days would need a hundred more
-| Before exhaust began to tame my heart.
-| The wizened waves to rock decay the shore
-| In time it takes for maps of you to chart.
-|
-| Yet minutes gone to ground will go too quick,
-| Where sand in wind so whips you brief away,
-| Each moment past with you now seems a trick,
-| As staggered feet through surf are lost in spray.
-|
-| This isle I find myself at night marooned,
-| Where thoughtless sleep is but a dream once held,
-| Alone these times with fire I have communed,
-| In cants of memories with you I dwell.
-|
-| Though lost at sea, amid unending storm,
-| A thought, perhaps to be, with you and warm.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-
---------
-Triolets
---------
-
-Forever
--------
-
-| Let this moment last forever
-| Let it sink not into never
-| For all our plans so clever
-| Let this moment last forever
-| Hidden goal in each endeavor
-| Lifted load of every lever
-| Let this moment last forever
-| Let it sink not into never.
-
-- February 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-
-Letters
--------
-
-| She is nothing more than letters
-| Under bedframe, wooden box.
-| In her prison locked by fetters,
-| She is nothing more than letters.
-| Warrant wielded by her debtors
-| Which vault of memory locks.
-| She is nothing more than letters
-| Under bedframe, wooden box.
-
-- February 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-
--------------
-Verse, Formal
--------------
-
-ό ποιητα, ἢ πῖθι ἢ ἄπιθι
-------------------------
-
-| I
-|
-| Awake, Philosopher, rise from these words:
-| Unwind in this future the tangle of time,
-| Pitched behind pupils which shelter your mind,
-| A dead language spoken and once lovely sung;
-| What was yours only now graces all tongues.
-|
-| Burrow into my heart, unearth its mantle.
-| Tally its hours, each stroke lights a candle;
-| Number its sorrows as sureties to borrow,
-| Spare not my marrow, fallow and frail.
-| Whose spirit is this, twisting here twung?
-| Breathe in this fire with thy mortal lung.
-|
-| Circle your sigils with salted symbols loan'd,
-| And circles will square in this iron-red bone;
-| A dream kiss that lingers in copper and crimson,
-| A dream dew that swells under circling suns,
-| A bud without season, never planted yet grown,
-| In the sprout sprung, all things can be shown.
-|
-| All centers are fire, all orbits are ice,
-| All points meet their center with marks imprecise
-| The world is spoked in words of the spoken,
-| Each whisper a lie of threaded truth unbroken,
-| Met here now in this slipping handful of tokens
-| Paid for the price of this thrice-worlded poem.
-|
-| II
-|
-| Forgive, Father, the blood of these swords:
-| Unbind in this suture the end of all lines,
-| Stitched in this present the essence divine,
-| Take what is dull and bless it with sharp;
-| Plunge this devotion into the ocean of hearts.
-|
-| Shovel the grave, pack it down with wet earth,
-| All things tend towards the lack and the dearth;
-| Slumber in barrows the marrows of kings,
-| Spared not the gavel, hallow and hail.
-| Whose mind is this, thinking these thoughts?
-| Sleep in the mire which thy heart has wrought.
-|
-| Birthed in this house, scrubbed down in raw lye,
-| So these tears may trace the dead with the die,
-| The dead kiss with fingers of copper to scry
-| The dead lists that swell in the crimson of lives,
-| An end without reason, never sought yet found,
-| In the shot sung, all arcs meet the ground.
-|
-| No fires have ice, no winters can flame,
-| Son followed father, their center now framed,
-| The world is found in the tears that remind him,
-| Each moment a painting, a song or a hymn,
-| Met there then in the words etched in stone
-| Found then what lacks in the blackening moan.
-|
-| III
-|
-| Balance, Lover, these contraries of yours:
-| Shine in these eyes the ruptures of life,
-| Witched into worlds upon the blade of a knife;
-| All wagers distill down to one move unproven,
-| To find you again in this web-woven movement.
-|
-| Dance in the night, when the music is sundered,
-| Count not the stars that belong to the numbers.
-| We find in this time the rhymes of our kind,
-| Spared not the sickle, those sickly or hale.
-| Whose voice is this, singing these songs?
-| Laugh with the liar whose heart sings along.
-|
-| Uncross your words of their fire-forged knots,
-| And each will unlatch the thatches of thought:
-| The dread kiss that coppers balance with nought,
-| The dread song that cradles the crimson in crofts,
-| A vow without treason, never spoken yet shown,
-| By words of wordless wonder, such things can be grown.
-|
-| All fires are embers, all ashes are white,
-| To find is to lose the center in flight,
-| The world found in threads that bind always thus,
-| Each fiber of moment knotted deftly in truss,
-| Take hand and guide as though only you and I trust,
-| Do what we will to balance world's thrust.
-
-- February 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - February 10, 2025
-    - Enott Pratt Poetry Contest
-    - Rejected
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-
-Kingdoms
---------
-
-| Two children crossed an earthen bridge
-| From level lawns to forests wild
-| Along the rivered arc descending ridge.
-| With dirty hands, they sang and smiled.
-| Their charted map from zippered packs
-| Now in branches espied its target
-| As clearing yields to lily blacks
-| Their kingdom's fresh air market.
-| Lord and lady honorary, cheeked blush,
-| Sat upon thrones of woven grass,
-| Coronated by chirping choir thrush;
-| A falling grain in hourglass. 
-|
-| On a maiden morning moments hence,
-| They meet again upon the autumn passing,
-| Where from heart's removed pretense
-| On tender lips, farewell's final massing.
-| Lily lyrics whisper sing from ground
-| Reminders of their childish notions;
-| World departed, their lives are found
-| Separate by spanning roads and oceans.
-|
-| In the city, their trains diverge,
-| Through tunnels tracked by wagered hours;
-| Iron rails through hearts do purge
-| Their aged minds of lily flowers.
-| Winter drifts over concrete streets,
-| In the thrush's snow sad song
-| Delivered them in voice downbeat
-| The final dirge of life prolonged.
-| In the cold, their dream dissolved
-| With the clock's incessant ticking
-| Falling strokes of time resolved,
-| They follow home a casket's wicking,
-| Returned again to a lily covered field
-| Where once royals played for a day;
-| With new hearts scored and peeled
-| In the funerary cloud of gray,
-| In the clearing, coffins buried,
-| Their eyes met in solitary gaze.
-|
-| In dirt developed their earthen walls,
-| Roofed the sky to room above,
-| Where lord and lady clothed in shawls
-| Sing the thrushs' songed love.
-
-- March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - June 12, 2025
-    - Macrame Literary Journal
-    - Rejected
-  
-The Paronymous Polyptotons of Love
-----------------------------------
-
-| "πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται."
-|    - `Categories`_, 7.15, Aristotle
-|
-| I am an am that was an is,
-|   a life those lives through living live,
-| The song that sang what singers sung
-|   When strings from stringed lutes were strung,
-| Where cloven clefts with leaves of clove
-|   The weft of weave with warp so wove.
-|
-| On evening eve, the eave of eyes,
-|   From rows of rose, began to rise,
-| There seeing seized to see the sight
-|   that lit up lightened like a light:
-| She shined in sheen and shining shone
-|   In binding bound beneath my bone.
-|
-| At last her lashes lashed to mine,
-|   a tale, though old, retold in time,
-| What sooth to say through spoken sound
-|   but growths of green from growing ground?
-| In fleeing flight we fled in flood
-|   and bled so bleeding blends our blood.
-|
-| The rote of rite has written soul
-|   That hides in hole the hidden whole.
-| We wound our wounds for winds unwind
-|   To find defined a finer find.
-| We are an are that was a were
-|  That whirled a world to whirl with her.
-
-- March 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Rattle Poetry
-    - Rejected
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-  * - April 27, 2025
-    - Frontier Misfit Competition
-    - Rejected
-
-Bird 
-----
-
-| To say what's meant without the word,
-| Oh poetry, relent wherein
-| I yield to you all things deferred,
-| In baptism, repent my sin.
-|
-| I found a bird, that sings so soft,
-| Her song aloft in heart by choice.
-| To field of hers I pass so oft
-| To sit in grass and drink her voice.
-|
-| With chirping dive she plunged so deep
-| And pierced the weary veil that hides
-| The ghosts of dreams that haunt my sleep;
-| She sang such hopeful lullabies.
-|
-| Oh bird, oh bird, with glee you sing,
-| If you could know the depths of dark
-| That shadows cast in offering,
-| Would song still burst from breast in lark?
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 7, 2025
-    - Paris Review
-    - Pending
-
-Photographs of Autumn
----------------------
-
-| These photographs are brittle leaves
-|    That fell from trees, that we once caught.
-| I press them tender into sleeves
-|    Of glass to halt the course of rot.
-| Though kept well fed with water shed,
-|    They wilt to brown as colors fade.
-| No leaf can live beside the bed,
-|    Without sunlight that makes the shade.
-| Yet even still, though claimed by dust,
-|    I keep them hung upon my wall,
-| For memory you did entrust
-|    Of walk with you through golden Fall.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 12, 2025
-    - Macrame Literary Journal
-    - Accepted
-
-The Curse of Rain
------------------
-
-| The rainy days, so slandered, weep
-| As haughty summer lovers lay
-| And mock the sky with lazy sleep,
-| While clouds so white with dreams of gray,
-| With sun they soak and whirling sweep
-| In hidden furies' winded spray.
-|
-| Each time it rains, the rivers splay,
-| And surge with purging currents swift,
-| What lays on shore is swept away
-| Through undertow then set adrift
-| To reach again where edge gives way
-| To core laid bare through ancient rift.
-|
-| The heat was shaped with holy bliss,
-| While cold finds form in shattered fall,
-| The tracks of arcs that never miss,
-| The purpose found in roaring squall,
-| To hurl in spite of stolen kiss,
-| To seed with life this earthen sprawl.
-|
-| No forest sprite nor sun born sprout,
-| Can know the course of water's fate,
-| To craft and make then cease the drought,
-| And hear its name with venom hate
-| In curses made by summer's clout,
-| And so it cries at heaven's gate.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
-    - Rejected
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-
-Let It Simmer
--------------
-
-| A heart too hot will lack a taste
-| Refined. Quiet now, simmer down,
-| And stew the sauce, or let it baste.
-| Yes, let it sit, in flavor drown
-| And only then when flame is off,
-| You taste a bit, a smidgen pinch;
-| Before your hunger dips to trough,
-| Begin to measure inch by inch
-| What boiled over side of thought.
-| Distilled to stock, the essence clean
-| Will cling in drops that drip on pot
-| To add to future meals' cuisine.
-
-- April 2025
-
-Walls
------
-
-| the husk of walls that city shucks
-| accumulates and concentrates
-| around like rings in ancient trunks
-| where measured age with circle gates
-| the spiraled line amassed through time,
-| deposits buried down substrates.
-|
-| at summit's crest, the joints are thick
-| and licking tongues of moss ascend
-| the darkened blocks from quarry hauled
-| on buttressed back, in stone suspend
-| the garden court where crowds took root
-| and grew their plans of walls to tend.
-|
-| from center peak the wooden slats
-| erect the map with tangled fence
-| to trace a grid of patchwork yards,
-| these charts of dreams in ground commence
-| the flattened course of borough life
-| where burgs and burbs did once condense.
-|
-| then moving out, the bricks of red
-| in crooked rows descend to meet
-| the lanes of carriage tracts now black
-| and scorched with tar in shapes of street
-| where crimson dust from crumbled walls
-| in dancing twirls across concrete.
-|
-| next grey cement of molded squares
-| in towers stacked to portal sky
-| with wires fused and humming signs;
-| they arc and rise, on edges vie
-| the vines entwined in rushing growth
-| to split on spine, like nuclei.
-|
-| at last the stable struts of steel
-| designed as straight as rays of light
-| reflected back on silver glass
-| the lattice links both left and right;
-| the history in circled sweep
-| constricts the city sphere so tight.
-|
-| through sections cross the avenue
-| from point to point and time to time
-| the human shell that forms in turn
-| the arches bend, the steepled chime,
-| that wilts and sheds, but fossils kept
-| in barrows born their salt and lime.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
-    - Rejected
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-  * - June 1, 2025
-    - The Louisville Review
-    - Pending
-  * - June 12, 2025
-    - Merion West
-    - Pending
-
-Turkey Vultures
----------------
-
-| the wakes of Turkey Vultures soar
-| then perch across the steepled sky.
-| they rest on totems tall and pure,
-| in silence feathers multiply.
-| their talons clutch where crosses meet
-| the stolen spear of destined make.
-| no heaven sent their wings of fleet,
-| no stomach filled will hunger slake.
-| the shapes of black in swarming plunged
-| upon the carcass freshly brought.
-| they feast on sins from gods expunged,
-| but left for them as afterthought.
-| bewitched to death, returned to Earth,
-| from cage released, the specters hunt
-| the ones who wear the curse of birth,
-| they all must bear the brutal brunt.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
     - Rejected
   * - June 22, 2025
     - Backbone Mountain Review
     - Pending
-  * - June 25, 2025
-    - Apus Journal
+  * - August 12, 2025
+    - Poet's Choice
     - Pending
 
-Faustus
--------
-
-| crooked cross on steeple slants
-| behind the clouds on axis bound.
-| cocoon the storm, these winded cants,
-| this spell from depths of godless sound.
-|
-| let dirge be purged through broken bell,
-| through hollow dell with surging wind,
-| unearthed remains returned from hell,
-| the bones decayed now gardens tend.
-|
-| oh, name that hides in shattered ring,
-| that brings the rain, becomes the night
-| of lightless thunder, shriven sing
-| the drops of dark through wicked flight.
-|
-| by dripping altar, prayers fled
-| through clasping fingers splayed in maze,
-| communed with spirits past and dead,
-| before my eyes, a sightless gaze.
-|
-| the paint of statues leeched in stains,
-| with weeping ink of saint's remorse,
-| deformed by time and bearing chains,
-| condemned to hear my voice grown hoarse.
-|
-| profane my soul and twist it loose
-| with iron pincers red with sin.
-| let drain my blood, my veins to sluice,
-| replace my eyes and rise within.
-
-- April 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - April 27, 2025
-    - Frontier Poetry
-    - Rejected
-  * - June 12, 2025
-    - TrashLight
-    - Pending
-
-The Law of Duality
-------------------
-
-| The world we lived that I once knew
-|     (If one could know these fevered dreams)
-| I've tried my hand unsticking glue 
-|     (These fingers stick to broken seams)
-| It sticks to me and sticks to you
-|     (Like noose and neck that swing from beams)
-| 
-| To every thought a thought before
-|     (To make of me a puppet string)
-| And every point contains much more
-|     (But only hollow things can ring)
-| While every center holds a core
-|     (Yet even empty space can sing)
-|
-| A million words and more to come
-|     (I'd weep to know a single fact)
-| These humming beats through syntax thrum
-|     (Where waves reflect their heights subtract)
-| In hopes a word will angle plumb
-|     (Refracted rays in lines contract)
-|
-| This image pressed through sieve to mold
-|     (The words I speak are cracked by heat)
-| These holes that craft the shapes to hold
-|     (No shapeless things are written neat)
-| The world retold in paper fold
-|     (What's left of life in crumpled sheet?)
-
-- June 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
-  * - June 12, 2025
-    - Merion West
-    - Pending
-  * - June 25, 2025
-    - Apus Journal
-    - Pending
-
-Generations of Gravity
+----------------------
+III: The Myth of Geese
 ----------------------
 
-| The mind, it breaks, and falls to parts.
-| As father died, he spoke in tongues
-| Of shifting walls and gravity
-| That sideways pulled the world to parts. 
-|
-| The mind, it shakes, and all departs.
-| As mother lost her lonely thoughts
-| She spoke to walls, soliloquy
-| That inward rolled as world departs.
-|
-| The mind, it fakes, and poisons hearts.
-| As nightshade petals float to floors
-| By walls that seep humanity,
-| That crumble worlds of poisoned hearts. 
+| the royal flock across the river banks
+| in molting courts proclaim the summer theirs,
+| its peasant fields now owned by inner ranks
+| of scheming birds engaged in crude affairs.
 | 
-| The mind, it wakes, in fits and starts.
-| As thoughts now lay me down to sleep
-| The walls will shift and speak to me
-| That upside down my ending starts.
+| a secret circle forms the noble core,
+| the princelings graze, reposed on flowing knolls.
+| as sentry towers hiss away the poor 
+| and watch the ground in swiveled neck patrols.
+| 
+| they chase the beggars pecking fields for seed,
+| these pegasi that charge with flightless wings,
+| dominion boundless as their princelings' greed.
+| the empire hunger breeds the feathered kings.
+| 
+| the heralds honk their liege with trumpet tongue 
+| and sing the myth of geese to gosling young.
 
-- June 2025
+- July 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -2620,316 +2010,70 @@ Generations of Gravity
   * - Date
     - Publication
     - Status
-  * - June 12, 2025
-    - American Poetry Journal
-    - Rejected
-  * - June 12, 2025
-    - TrashLight
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
     - Pending
 
------------
-Verse, Free
------------
+------------
+IV: Larksong 
+------------
 
-The Age of Poetry
------------------
+| at least the larks remember songs
+| each morning rise you're gone again.
+| 
+| the mourning veils of scattered throngs 
+| depart your wake without amen.
+| 
+| the men who take your parts away
+| forget to take my silent heart.
+|
+| they leave a lily black bouquet
+| whose petals fingers tear apart.
+| 
+| and when i stand alone in pain,
+| the stems are bare and nothing's changed. 
+| 
+| the birds begin their last refrain
+| as though they knew and prearranged.
+| 
+| if nothing else, their voice belongs;
+| at least the larks remember songs.
 
-| The age of poetry will destroy the world
-| in a flash of fumbling beauty
-| stanzas like atom bombs
-| and rhymes like lines
-| of soldiers keeping time
-| to beating barrels 
-| of the front line.  
-| Art (like the mind)
-| cannot comprehend its glory.
+- August 2025
 
-- 2009
+Villanelles
+===========
 
-The Mid-Winter March
+--------------------
+I: Crystal and Glass
 --------------------
 
-| At twelve when I woke up, the ground was dry.
-| Around one, it started snowing.
-| By four, the roads were slush
-| and the town was hushed.
-| When I went to the liquor store at 7:12,
-| the streets were filled like store shelves
-| Waning silhouettes 
-| limping like zombies
-| towards the liquor store.
-| The mid-winter march
-| of alcoholism
-| like the stalwart journey
-| of the emperor penguins
-| in the freezing wastelands
-| of Antarctica.
-| I go inside and
-| get my fifth of vodka
-| pack of cigarettes
-| bag of peanuts
-| and say my prayers
-| at the counter of clerks.
+| i glue my heart of broken glass.
+| refracted rays of you contract
+| along the fractures breaks amass. 
 |
-| The sky
-| falls to the ground
-| in the muted silence of
-| a winter's night.
-
-- 2009
-
-The End
--------
-
-| The pavement tide recedes
-| and the brick and mortar beaches 
-| expose the fault lines of the City. 
+| we fell in love upon the grass,
+| a perfect shattered artifact.
+| i glue my heart of broken glass.
 |
-| This town will one day sink into the ground
-| and Nature will reclaim its property. 
-|
-| We will pluck berries from vines 
-| growing up the sides of office complexes
-| and erect deerskin tents on the shattered blacktop.
-|
-| We will dance around bonfires,
-| chanting songs sung to the soul of everything
-| and tell stories about the formation of stars,
-| the teardrops of goddesses frozen in the sky.
-|
-| The forest will whistle with wind
-| and billboards will be painted over with the faces of totems,
-| the ink distilled from the buds of flowers.
-
-- 2009
-
-Dreams 
-------
-
-| I dream of waves and tides
-| of slippery skin and sand
-| seashells like the shingles
-| of some great underground structure
-| whose columns support the ground
-| and whose foundation holds tight 
-| the heart of the Earth.
+| the lake was waving evening brass
+| reflected in your eyes exact
+| along the fractures breaks amass.
 | 
-| In my sleep, I wake
-| from my sleep
-| from the long thought
-| thought by tall people
-| thinking short thoughts.
-| I stretch my muscles
-| and crack my neck,
-| touch my toes
-| and run into the water.
+| we shared the scent of sassafras
+| as water braced for sun's impact.
+| i glue my heart of broken glass.
+|
+| the summer lapped its final pass
+| and left the surface still and cracked
+| along the fractures breaks amass.
+|
+| in dreams, these grounds i will trespass
+| to find their core, and shards extract.
+| i glue my heart of broken glass
+| along the fractures breaks amass. 
 
-- 2009
-
-Truth
------
-
-| Some things are beautiful.
-| Some things are not.
-| 
-| Some people are crazy.
-| And the others are too.
-| 
-| I lost my mind a while ago, myself. 
-| Now I talk to myself.
-| Write notes to myself.
-| Here are few:
-| 
-| I'm lonely.
-| 
-| You're dying.
-| 
-| There's nothing left.
-| 
-| I'm obsessed with things
-| that I'm not very good at.
-| 
-| I fail and I fail. 
-| I never learn.
-| 
-| The bums know the truth.
-| The cold and the bench.
-
-- 2009
-
-Sight
------
-
-| the true nature 
-| of sight 
-| seen through closed eyes
-| in dark 
-| round rooms 
-| with
-| no corners to hang
-| the 
-| cloth of thought;
-|
-| endless flicker
-| through
-| inner pictures
-| of 
-| outer nothing
-| met in perfect 
-| equilibrium
-| stabilized in secret
-| through the muted 
-| dark. 
-|
-| then
-|
-| the flower sprouts 
-| in acid eyes,
-| through hidden struts
-| the world supplies. 
-|
-| in flashing spiral
-| the formless chaos
-| of flailing chiral
-| tentacles
-| semantic suction cup
-| receptacles
-| frantic for their lack
-|
-| then 
-| 
-| black again
-| without a rhyme
-| just empty facts
-|       (that flow through time...
-|        a voice in back replies...)
-| the hollow truth.
-
-- June 2025
-
-Nihilism 
---------
-
-| the weight of guilt
-| as dense as stars
-| with burning cores
-| that fuse their parts.
-| 
-| where did it start?
-| the thread comes loose
-| and eats its tail.
-| a endless loop
-| that leads to now
-|
-|    i watched my father die in blinding pain
-|    and then my mother lost her mind.
-|
-| then switches back
-| through stiches sewn
-| in younger years
-|
-|    my friends are gone.
-|    abandoned, why? 
-|
-| the senseless acts
-| strangers perform 
-| with your own hands.
-|
-| a leaden heart
-| that sinks below
-| the surface waves
-| to depths that stretch
-| around the world
-| and wish it were 
-| another way.
-| 
-| my empty heart 
-| that once felt love.
-| her laugh was like
-| a perfect song,
-| a single sound
-| enough to hold
-| a moment's peace
-| before it fades.
-|
-|    she left and never said good bye. 
-| 
-| my mind is shot
-| with burning holes
-| that leak a thought
-| of molten make:
-|
-| your life is done.
-| your words are through.
-| you had your chance.
-|
-|    it all is gone.
-
-- June 2025
-
-Holly Tree
-----------
-
-| Under the holly tree
-| bough of berries,
-| a siren red
-| temptation.
-|
-| Where life began
-| on skinny knees
-| retching out 
-| my guts.
-|
-| Waxy saw-tooth skin, 
-| prickly leaves, 
-| the sickly buds 
-| of poison seeds.
-|
-| The tangy tongue
-| of Christmas
-| funerary rites.
-| 
-| I spewed
-| through chrysalis,
-| entrails slick 
-| with acid grease,
-| thickly dripping
-| afterbirth.
-|
-| Gazed upon by 
-| ageless tree,
-| received in holy 
-| communion, my first 
-| memory:
-| 
-| The pluming rack
-| of tight blue
-| veins
-| that hung about
-| my neck.
-|
-| The womb of black
-| that forked
-| the branching
-| Earth.
-|
-| The world that hid
-| in bitter leaves
-| and pushed me
-| into it. 
-|
-| I made a wreath 
-| of holly limbs
-| to prick my head
-| with thoughts. 
-|
-| I keep its berries
-| bright as death
-| and touch the skin
-| that baptized
-| me.
-
-- June 2025
+- August
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -2938,112 +2082,6 @@ Holly Tree
   * - Date
     - Publication
     - Status
-  * - June 27, 2025
-    - The Anglican Theological Review
+  * - August 12, 2025
+    - Poet's Choice
     - Pending
-
-Depths
-------
-
-| The delicate kiss
-| of stillness
-| on fingertips.
-|
-| I linger
-| on the precipice
-| of surface 
-| tension.
-| 
-| Pallid brine
-| eagerly lapping 
-| with organic clarity.
-|
-| An instant 
-| before
-| the sightless 
-| plunge.
-| 
-| The delirium
-| of forgotten
-| beginnings. 
-| 
-| The water
-| remembers
-| my blood. 
-
-- June 2025
-
------------
-Villanelles
------------
-
-Cathedral
----------
-
-| A church atop a steepled hill,
-| Foundation layers ages old,
-| Remains in spirit standing still.
-| 
-| The shattered stains on window sill,
-| With marble halls of lichen mold,
-| A church atop a steepled hill.
-|
-| Decrepit pews of souls fulfill
-| What congregation left untold,
-| Remains in spirit standing still.
-|
-| The circled streets possess no will
-| Except the signs that staked and sold
-| A church atop a steepled hill.
-|
-| But tower high such pointed skill,
-| Through silken skies of glittered gold,
-| Remains in spirit standing still.
-|
-| Ignore the wind, the biting chill,
-| And cast your final gaze, behold:
-| A church atop a steepled hill 
-| Remains in spirit standing still.
-
-- March 2025
-
-Plots
------
-
-| In time their plot was touched by dark.
-| Began the page this meadow scene
-| where blades of grass were tall and stark.
-|
-| A tired arc, they met in park
-| To kiss beneath the twilight queen;
-| In time their plot was touched by dark.
-|
-| They stole away on sudden lark,
-| Exchanged the words from whispered lean
-| Where blades of grass were tall and stark.
-|
-| So happy now, neighbors remark,
-| Yet seem is such to lose its sheen,
-| In time their plot was touched by dark.
-|
-| Yet faded years ignored their spark
-| In life they lived forever seen
-| Where blades of grass were tall and stark.
-|
-| In ground, their bodies disembark
-| And leave behind a hole dug clean.
-| In time their plot was touched by dark,
-| Where blades of grass were tall and stark.
-
-- March 2025
-
-.. list-table:: Submission History
-   :widths: 15 15 15
-   :header-rows: 1
-
-   * - Date
-     - Publication
-     - Status
-   * - March 27, 2025
-     - Poetry Magazine
-     - Pending

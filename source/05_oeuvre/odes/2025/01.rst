@@ -36,16 +36,16 @@ II: Ode to the Heron
 | your pumping flame that spurns
 |       the burning cold on flank.
 | Your silent stare discerns
-|       The creatures left on bank.
+|       the creatures left on bank.
 |
 | Each season makes of life a shape to wring.
 | Each reason born in strife escapes to sing. 
 |
 | The Spring first strings the thread
 |       of lazy chirping thrush,
-| The Summer, berry red
+| the Summer, berry red
 |       and cracking eggs in brush,
-| Then Autumn crows of black
+| then Autumn crows of black
 |       in pecking pumpkin hay.
 | Only a lonely lack
 |       breeds mighty Heron Grey.
@@ -59,10 +59,11 @@ II: Ode to the Heron
 |       the colony's mystique. 
 | The shrieking calls coalesce
 |       atop the forest heights,
-| In alien address
+| in alien address
 |       the flame inside ignites.
 
-- March 2025
+- *Original* March 2025
+- *Revised* June 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -100,4 +101,7 @@ II: Ode to the Heron
     - Rejected
   * - July 22, 2025
     - Earth Amulet Poetry Competition
+    - Pending
+  * - August 16, 2025
+    - Lochraven Review
     - Pending

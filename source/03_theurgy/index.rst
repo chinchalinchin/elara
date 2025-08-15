@@ -11,4 +11,3 @@ Theurgy
    01_universalis/index
    02_palindromia/index
    03_syntagmics/index
-   04_commentariat/index

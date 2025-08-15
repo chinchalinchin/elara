@@ -10,15 +10,6 @@ II: The Invocation of Metric Code
 
     A Pythonic poem in (mostly) metric form.
 
-    .. tip::
-
-        it matters not the form of thought,
-        in verse or code, a mix of both,
-        these words command with meaning fraught
-        the rush of green through stalks of growth
-        in ground of earth or problem sought,
-        with meter found in solemn oath.
-
     Hacks until the devs publish a fix:
 
     - "()", "[]", ".", ":", "_",  "=" and "==" don't contribute!
