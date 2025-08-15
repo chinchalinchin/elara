@@ -1,47 +1,34 @@
------------------------------
-XIII: A Series of Reflections
------------------------------
+----------------------
+XIII: Father's Lullaby
+----------------------
 
-| sagas!
+| Dear child, the monsters under bed
+|   are not just make believe.
+| They lurk in shadows overhead
+|   and offer no reprieve.
 |
-| level after level,
-| the noon pets a pup.
-| tenet after tenet,
-| a flow step to wolf.
+| Dear sweetling, sleep with open eye
+|   and guard your dreams at night.
+| Ignore your mother's lullaby,
+|   keep candles burning bright.
 |
-| deified!
+| Beware the lair that closets hide,
+|   the racks of their disguise,
+| the suits and ties, the cuffs that slide
+|   and cloak them from your eyes.
 |
-| the animal parts,
-| the lamina strap,
-| the devil paws,
-| through swap it lived.
+| Fear not the slash of sharpened claws,
+|   the flashing terror brief,
+| but stamps that mark the written clause
+|   with laws of fierce belief.
 |
-| refer!
-|
-| a peep or deed,
-| the tips that it spat,
-| the taps that it spit,
-| the pals to slap.
-| 
-| rotor!
-|
-| lever with revel! 
-| spin the nips!
-| a spool of loops!
-|
-| plug the eye!
-| gulp the gag!
-|
-| deliver reviled
-| aibohphobia!
-|
-| a tool we loot,
-| when maps are spam.
-|
-| on serif peels 
-| sleep fires, no? 
+| What evil deeds those stories tell
+|   prepare your heart to meet
+| the formal world where heroes fell
+|   to wander incomplete.
 
-- July 2025
+- April 2025
+
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -50,56 +37,24 @@ XIII: A Series of Reflections
   * - Date
     - Publication
     - Status
-  * - July 04, 2025
-    - wildscape. literary journal
+  * - April 27, 2025
+    - Writer's Digest Competition
+    - Accepted
+  * - June 4, 2025
+    - Swan Scyth Press
+    - Pending
+  * - June 13, 2025
+    - New Verse Review
     - Rejected
-
-.. | Sometimes 
-.. | mere circumstance 
-.. | swings the sentence
-.. | lever with revel
-.. |
-.. | Sometimes 
-.. | such happenstance
-.. | causes syntax 
-.. | nips to spin
-.. | 
-.. | Sometimes 
-.. | pure random chance
-.. | is a rotor,
-.. | spool of loops
-.. |
-.. | Often 
-.. | we commandeer 
-.. | the stolen 
-.. | tool we loot.
-.. |
-.. | Often 
-.. | we persevere 
-.. | when charted
-.. | maps are spam.
-.. | 
-.. | Often 
-.. | we engineer 
-.. | the missing 
-.. | parts to strap.
-.. |
-.. | Always 
-.. | the flowing quells
-.. | deep-span
-.. | nap-speed.
-.. |
-.. | Always
-.. | the growing bells
-.. | deliver reviled
-.. | aibohphobia.
-.. | 
-.. | Always 
-.. | the glowing spells
-.. | on serif peels 
-.. | sleep fires, no? 
-.. 
-.. | peep a ton
-.. | or 
-.. | not a peep, 
-.. | oh pupil, 
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Pending
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - August 12, 2025
+    - Poet's Choice
+    - Pending

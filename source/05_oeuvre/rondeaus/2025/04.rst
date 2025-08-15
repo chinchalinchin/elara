@@ -2,10 +2,10 @@
 V: Little Sprout
 ----------------
 
-| Oh little sprout, the forest sleeps
+| Oh, little sprout, the forest sleeps
 | in arid ground now cursed by drought.
 | Across the land, the desert sweeps,
-|       oh little sprout. 
+|       oh, little sprout. 
 | 
 | Your boldness lacks a water spout
 | but hidden root in darkness steeps
@@ -14,7 +14,7 @@ V: Little Sprout
 | The dream of Spring nobody keeps 
 | ascends in stems so small and stout 
 | when mourning sky, in seeing, weeps,
-|       oh little sprout.
+|       oh, little sprout.
 
 - August 2025
 
@@ -30,4 +30,7 @@ V: Little Sprout
     - Pending
   * - August 12, 2025
     - Poet's Choice
+    - Pending
+  * - August 15, 2025
+    - Baltimore Review
     - Pending

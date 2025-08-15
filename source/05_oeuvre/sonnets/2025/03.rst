@@ -32,9 +32,12 @@ IV: Larksong
   * - Date
     - Publication
     - Status
-  * - August 16, 2025
+  * - August 13, 2025
     - Tabula Rasa
     - Pending
-  * - August 16, 2025
+  * - August 13, 2025
     - Lochraven Review
+    - Pending
+  * - August 15, 2025
+    - Baltimore Review
     - Pending

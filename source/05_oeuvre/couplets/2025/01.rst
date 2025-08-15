@@ -2,6 +2,10 @@
 II: Rails
 ---------
 
+.. topic:: Epanalets
+
+    An epanalet is a type of poetic structure where each line is a sonic chiasmus of the line preceding it.
+    
 | i yearn for motion's pull and thrust
 | the thunder pulse of engine churn
 | 

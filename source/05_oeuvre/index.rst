@@ -8,13 +8,11 @@ Oeuvre
 
    abstracta/index
    ballads/index
+   couplets/index
    elegies/index
-   epanalets/index
    haikus/index
-   lyrics/index
    odes/index
    pantoums/index
-   prose/index
    rondeaus/index
    sonnets/index
    triolets/index

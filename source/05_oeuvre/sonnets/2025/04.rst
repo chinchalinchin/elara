@@ -24,3 +24,14 @@ V: Eulogy
 | honor your father, drink of his heat.
 
 - August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - August 15, 2025
+    - Baltimore Review
+    - Pending
