@@ -9,8 +9,8 @@ II: Ode to the Heron
 |       through fronts of blue to ice,
 | the moles in burrowed urns
 |       prepare beside the mice.
-| The grunting geese will veer
-|       where churning warmth once drove.
+| The grunting geese then veer
+|       where churning warmth is drove.
 | The deer all disappear
 |       through dreary dreaming cove.
 |
@@ -104,4 +104,7 @@ II: Ode to the Heron
     - Pending
   * - August 15, 2025
     - Lochraven Review
+    - Pending
+  * - August 16, 2025
+    - Missouri Review
     - Pending
