@@ -7,39 +7,116 @@
 Solicitation
 ============
 
-The Loch Raven Review is a Maryland-based Literary Journal, ISSN: 1557-7627.
+WE ARE OPEN! We’ll be taking until September 15th, or until we reach our submissions cap of 200 submissions*. We will review submissions as they come in. (*We may extend our open period, but this is to be determined. We’re brand-new and want to be sure everything is working smoothly for the team.)
 
-“Art is not what you see, but what you make others see.”  Edgar Degas
+Submit to Rat Bag Lit
 
-The mission of the Loch Raven Review is to showcase the poetry, short fiction, creative nonfiction, essays, and translations of both well-known and emerging writers who demonstrate excellence in their work.
+Send us YOUR WEIRDEST FICTION
+Fiction that crosses genres and blurs the lines between literary and genre. Work that keeps us up at night, stories that make us laugh, and the strangest dreams that pop out of your odd little noggin. Bold ideas, tight prose, snappy dialogue, speculative elements. Something we haven’t seen and, hell, maybe something we’ll wish we hadn’t. Mysterious, haunted mansions, crackling campfires, electric space stations, lonely abandoned farmhouses. That story that you hold close to your heart but has been rejected a billion times, but you keep sending it out because you believe in it, damnit? Yeah. Send us that one.
 
-Published twice a year online, the Loch Raven Review also publishes an annual print volume of the work published online.  Copies of the Loch Raven Review’s print editions are available here: https://thelochravenreview.net/loch-raven-press-books/
+Yes to aliens, alternate worlds, apocalyptic game shows, bigfoot, blue collar, cats, cemeteries, coming-of-age, cosmic, cryptids, cults, cursed objects, dark, dating fails, dystopian, elder millennials, embarrassing moments, female narrators, food service, gen x, ghosts, girl power, gothic, grim reapers, grumpy unicorns, fairytale revamps, found family, haunted mansions, hidden worlds, horror, humor, liminal spaces, mermaids, modern-day wizards, mythology revamps, occult, ordinary people finding portals, paranormal, post-apocalyptic, sad robots, secret societies, squishy soft science fiction, shitty roommates, snark, social commentary, silly, steampunk, stoners, swapped gender roles, supernatural, talking animals with bad attitudes, teenagers, time travel, tongue-in-cheek, underdogs, unreliable narrators, urban fantasy, weirdos, witchcraft
 
-SUBMISSIONS: lochravenreviewsubmissions@gmail.com 
+Probably no to action / adventure, all vibes no story, boring stories, children’s stories, celebrities, cliches, cozy, dead wife/husband/parent/partner, emotional manipulation, espionage, excessively purple prose, hate of any kind, historical fiction, humor that denigrates, kids with cancer, military fiction, modern politics, mystery, political satire, rage bait, religious fanaticism, sappy romance, sword & sorcery, thriller, tired tropes, tragedy, werewolves, vampires, zombies
 
-Editors: lochravenrevieweditors@gmail.com
+We don’t want:
 
-Submissions Guidelines:
+No AI-generated stories. If it didn’t come from the depths of your own weird brain, we don’t want to read it. We will not consider stories written, co-written, created, or assisted by AI and machine-learning languages such as ChatGPT. We do not use AI-generated images.
 
-Volume 21 No.2 will be published in November 2025. Poetry submissions will be accepted starting August 1, 2025 and ending August 31, 2025. Fiction and Creative Non-fiction will be accepted now and end on October 15, 2025.
+No hate speech. We aren’t interested in your bigotry, homophobia, racism, sexism, or transphobia, or anything along those lines. We are an inclusive publisher.
 
-Please send us your best work: up to four poems, or one short story, creative non-fiction piece, or essay during each reading period. Books for review should be queried first. Please send the author’s name and the title of the book to our editors’ email.
+No fan fiction. We won’t publish anything that violates someone else’s copyright. We’d prefer you come up with your own characters and worlds. The exception to this being mythological fiction, in which case, make it modern and interesting as you breathe new life into old (public domain) tales.
 
-The Loch Raven Review accepts only previously unpublished work. Simultaneous submissions are acceptable, but please let us know immediately if work has been accepted elsewhere for publication.
+No hard-core erotica. I mean, if you send us something hot, we’ll read it, but if you make Ratty blush, we probably can’t publish it. That being said, we are not prudes. If you can walk the line without crossing it, by all means, send it in if you think it fits our vibe.
 
-Poetry can be any length or style, but only four or fewer poems are accepted for consideration during each reading period.
+No hard-core violence and gore. We don’t want to read it, even with a trigger warning. Keep it off-page please.
 
-Prose, fiction, and non-fiction, of up to 3,500 words will be considered.  Double-space all submissions in an easily readable font, such as Times New Roman.
+don’t self reject
+If you love your story and think it fits our vibes, why not take a shot and send it our way? Worst case, you’ll get another rejection to add to your pile, and maybe we’ll love it. We are an inclusive publisher and welcome submissions from writers of all demographics. We especially want to hear from underrepresented voices
 
-All submissions must include the author’s name, mailing address, phone number, and email address.
+PLANNED PUBLICATION SCHEDULE
 
-Email submissions only. In the subject of your email please specify the genre: poetry, fiction, or non-fiction, with the author’s last name. We will accept no more than one submission in each genre. We do not open email attachments. Please paste your submission into the body of an email if you want us to consider it for publication and send it to lochravenreviewsubmissions@gmail.com.
+We’re brand-new so the schedule may change a bit, but we hope to publish digitally monthly and in print twice a year. We hope to have our first digital content published on October 15th. Our first print publication will have a scheduled release date of March 15, 2026, but this date is subject to change. We will post any updates to our publication schedule here and on our social media.
 
-Please include an author’s bio that is no longer than 75 words.
+We accept unsolicited submissions written in English and have a limited number of free submissions each submission cycle. We offer editorial feedback with submissions for an optional charge. We appreciate your tip jar submissions.
 
-The Loch Raven Review tries to respond to all submissions within a reasonable period of time.  If a writer has not heard back from us in six weeks or longer, you may query us at lochravenrevieweditors@gmail.com. If the submission has been processed and the writer notified, please wait until the next reading period before resubmitting new work.
+We do not charge our authors any fees for publication beyond the optional fees listed above. If free submissions are closed and paying a submission fee presents a financial hardship to you, email us for assistance.
 
-Thank you for reading and considering the Loch Raven Review for your work.
+Check back soon for current openings.
+
+We are a paying market
+The pay is shit, but it’s better than nothing, right?
+
+We don’t believe in using author’s work without compensation*. If your work wasn’t a part of this project, this project wouldn’t exist. Right now, we offer token payments as detailed below. We recognize it’s not what your work is surely worth, but it’s the best we can offer on our shoestring budget. This is a labor of love..
+
+We accept fiction, creative non-fiction, and poetry in the following categories:
+
+Drabbles – monthly themes, exactly 100 words, no more, no less, with a maximum 15 word title. We will select a maximum 10 each month for digital publication – pays $1. No reprints
+
+Micros – maximum 300 words. We will select a maximum of 10 each month for digital publication – pays $3. No reprints
+
+Flash – between 301 – 1000 words maximum. Pays a penny a word for print/digital publication, up to a maximum of $10. No reprints.
+
+Creative Non-Fiction – 500-1000 words maximum. Pays a penny a word for print/digital publication, up to a maximum of $10. No reprints.
+
+Short Story – 1001 words up to a maximum of 3500 words. Print/digital publication, Pays $20, Reprints $10.
+
+Poetry – We’ll be honest, we aren’t super familiar with poetry, but we’re willing to take a look at what you’ve got. Experimental, non-rhyming, non-traditional… Sure, why not? We won’t know any better. Make it weird, keep it short, maximum 500 words. Pays $5 for print/digital publication. No reprints
+
+Payments will be made via PayPal.
+
+Submit only one story / poem per category at a time, except for Drabbles, which may include two in the same file.
+
+Yes, you can submit in multiple categories, up to a maximum of one story per category. 
+
+Yes, you can submit again if your story is rejected and we’re still open. Please wait for a response before submitting in the same category again.
+
+Yes to simultaneous submissions. Just let us know if your piece is picked up elsewhere.
+
+Yes, we accept reprints. We can only publish stories if your rights have reverted to the author. Please include the original publisher and date of publication in your cover letter when submitting a reprint story. We only accept reprints in the Short Story category at this time and prefer to only accept reprints that are not currently available online.
+
+If your story is rejected, please do not resubmit it, even after revisions, unless we specifically invite you to do so in your rejection letter.
+
+Don’t stress over your cover letter. Please include your name, contact information, the title of your story / poem, up to three previous publications, if any, and any other information relevant to your submission. Feel free to tell us (briefly) about something weird that happened to you this week or a bizarre-but-true fact about yourself, but we won’t judge you if you keep it strictly professional. 
+
+Please also include a 50-word maximum bio statement that will be included with your submission if selected for publication. This can include links to your personal website and social media. Links won’t be included in print, but will be available on the website. (You will be asked if you’d like to provide a profile picture upon acceptance.)
+
+Work should be submitted in Shunn Modern Manuscript Format, or something close to it. (We aren’t going to reject a good story for bad formatting.) We read anonymous submissions — please remove your name and contact information from the document before you submit. Please send your file as an attachment in .docx format.
+
+Response Times
+
+We will answer as quickly as possible. We’ll do our best to respond within 30 days for drabbles and micros, but longer submission may take as many as 60 days to get a response. Pieces held for further consideration will take longer. We are easily distracted, so if you don’t hear from us within 60 days, please feel free to query. We don’t bite. Usually. We will occasionally provide personalized feedback, but most rejections will be form. We know, we hate it, too.
+
+Payment
+
+All payments are made using PayPal at this time. We may explore other payment methods in the future, especially for international submissions. If using PayPal presents a hardship, we’ll figure out a different way to pay you, if necessary. We will send a contract upon acceptance. Authors will be paid upon publication.
+
+Legal
+
+Rat Bag Literary pays for first worldwide electric and print rights and for non-exclusive reprint rights on original stories. For reprints, we ask for non-exclusive archival reprint rights.
+
+By submitting a story / poem to Rat Bag, you understand and agree with the following:
+
+You are the original creator of the story / poem / art you are submitting
+
+You did not use generative AI in the creation of this work
+
+You are the copyright holder of the work you are submitting.
+
+You are eighteen years of age or older. (We may consider submissions from younger authors with parental/guardian approval.)
+
+All information you’ve submitted is accurate and truthful.
+
+You accept full and sole responsibility for any false statement made and any rights that might be infringed upon by the publication of your work.
+
+You have not published this work elsewhere, or the rights have reverted to you, the author, at the time of submission and you have indicated it in your cover letter. You are not prohibited via any prior agreement from transferring the rights of your work to Rat Bag Literary Magazine.
+
+Once your story / poem is published by Rat Bag Literary, we ask for 90 days (3 months) exclusive rights on your work. This means your story / poem cannot appear anywhere else online for 90 days after it appears in Rat Bag. After 90 days, rights revert to the author, with the exception of the non-exclusive archival digital rights.
+
+Your work will be lightly line-edited as needed before publication. You will work with the editor and approve all edits to ensure the copy that goes to print / digital publication is the best it can be.
+
+NOTE: We are a small endeavor with a shoestring budget. This means we will have to reject stories that are excellent, so please do not take a rejection as a reflection of your work or your abilities as a writer. Rejections sucks, we get that, so we’ll be nice about it, promise.
+
+(Speaking of wanting to pay authors more, have you checked out our merch?)
 
 .. _resume:
 
@@ -258,179 +335,116 @@ Testimonials
 Submission
 ==========
 
-Larksong 
-========
+------------
+I: Absurdity
+------------
 
-| at least the larks remember songs
-| each morning rise you're gone again.
+| One lovely Thursday afternoon
+|   two billion years ago,
+| A star encased by arcs of moon,
+|   embraced despair and woe. 
 | 
-| the mourning veils of scattered throngs 
-| depart your wake without amen.
-| 
-| the men who take your parts away
-| forget to take my silent heart.
+| This sordid joke of yellow-red,
+|    This sneering, mocking jape:
+| To burn with heat, on axis sped
+|    with no hope of escape.
 |
-| they leave a lily black bouquet
-| whose petals fingers tear apart.
+| So solace cursed upon a point,
+|    it drew its final plan
+| As spinning round its lock and joint
+|    its ending now began.
 | 
-| and when i stand alone in pain,
-| the stems are bare and nothing's changed. 
+| The heaving mass of goo morassed
+|    then gurgled once and sighed;
+| A rattle scream of flames harassed
+|    what silent void belied. 
 | 
-| the birds begin their last refrain
-| as though they knew and prearranged.
+| The sacrificial rings were flung
+|   in sprays across the sky;
+| The interstitial threads then wrung
+|   as ropes once bound untie. 
+|
+| And in these fictions fracture facts:
+|    A single atom forged
+| and bellow blown through heaven's tracts
+|    to find itself disgorged. 
 | 
-| if nothing else, their voice belongs;
-| at least the larks remember songs.
+| The crush of black, once unobserved,
+|    in fire found its sight.
+| The atom woke from dreams unnerved
+|    in sailing stream of flight. 
+| 
+| Without a frame, it screamed in vain
+|    through parallactic curves
+| that weave the sieves with cluttered skein
+|    Of dark galactic nerves. 
+|
+| Commotion drowned, it gazed about
+|    along the ends it aimed:
+| The bluest gem beyond a doubt
+|    the cosmos ever named. 
+| 
+| It wept to see a brilliant Earth,
+|    the fate bestowed by chance,
+| and in its cackles rose a mirth
+|    expressed in photon's dance. 
+|
+| It splashed the surface spinning fast,
+|    now lost amid the sea. 
+| The water rose at what trespassed,
+|    mistook it for debris.
+|
+| The liquid swarm convened in waves,
+|    to flood the tiny core.
+| They stripped and pried, as hunger craves
+|    and always wants for more. 
+|
+| The terror flashed, as pulled apart,
+|   its briefly tasted life
+| now disappeared before its start 
+|   beneath the wetted knife. 
+|
+| So bittersweet and incomplete, 
+|   resigned into the black,
+| the atom braced for ends to meet 
+|   in swirling last attack.
+|
+| But fortune finds where will converged,
+|   as snatched from death it gasped
+| and saw from depths the land emerged,
+|   where brethren all were clasped.
+|
+| A molecule of carbon made
+|   from crystal network cast
+| through jointed links of atom braid
+|   that helix ghosts amassed. 
+|
+| Began the age of afterbirths, 
+|   of structure spat in space,
+| originating blest on Earth's
+|   atomic interface. 
+|
+| Now watch along the webbing sewn
+|   the single atom weave
+| Through warps and wefts and whetted stone,
+|   the knits of stellar sleeve.
 
-Crystal and Glass
-=================
+- *Original*: February 2025
+- *Revised*: June 2025
 
-| i glue my heart of broken glass.
-| refracted rays of you contract
-| along the fractures breaks amass. 
-|
-| we fell in love upon the grass,
-| a perfect shattered artifact.
-| i glue my heart of broken glass.
-|
-| the lake was waving evening brass
-| reflected in your eyes exact
-| along the fractures breaks amass.
-| 
-| we shared the scent of sassafras
-| as water braced for sun's impact.
-| i glue my heart of broken glass.
-|
-| the summer lapped its final pass
-| and left the surface still and cracked
-| along the fractures breaks amass.
-|
-| in dreams, these grounds i will trespass
-| to find their core, and shards extract.
-| i glue my heart of broken glass
-| along the fractures breaks amass. 
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
 
-Ode to the Heron
-================
-
-| Grey Heron, sing the song the winds will bring.
-| Who lingers longer than the Winter king?  
-|
-| When hunting ground returns
-|       through fronts of blue to ice,
-| the moles in burrowed urns
-|       prepare beside the mice.
-| The grunting geese will veer
-|       where churning warmth once drove.
-| The deer all disappear
-|       through dreary dreaming cove.
-|
-| All yield, retreat and leave their claims till Spring.
-| Through fields, what muffled name on streams will ring?
-|
-| The answer sweeps from east--
-|       Oh! Heron! Hunter Grey! 
-| Cry! Rouse the sleeping beast
-|       and reaping, feast on prey!
-| Creep low on drift of snow
-|       with coiled neck of spear;
-| Let steam of gasping slow
-|       their rasping scream of fear.
-|
-| The weather warms, yet Winter lifts your wing.
-| The feathers swarm, but lone to cold you cling.
-|
-| In flocking song most birds
-|       find mate to take to nest;
-| Let chorus part the herds
-|       with fire from thumping chest,
-| your pumping flame that spurns
-|       the burning cold on flank.
-| Your silent stare discerns
-|       The creatures left on bank.
-|
-| Each season makes of life a shape to wring.
-| Each reason born in strife escapes to sing. 
-|
-| The Spring first strings the thread
-|       of lazy chirping thrush,
-| The Summer, berry red
-|       and cracking eggs in brush,
-| Then Autumn crows of black
-|       in pecking pumpkin hay.
-| Only a lonely lack
-|       breeds mighty Heron Grey.
-|
-| When night descends, take stock of everything.
-| What hidden home should find you nuzzling?
-|
-| What branches bear your weight?
-|       Whose feathers stroke your beak?
-| No human eyes await
-|       the colony's mystique. 
-| The shrieking calls coalesce
-|       atop the forest heights,
-| In alien address
-|       the flame inside ignites.
-
-Holly Tree
-==========
-
-| Under the holly tree
-| bough of berries,
-| its siren red
-| temptation.
-|
-| Where life began
-| on skinny knees
-| retching out 
-| my guts.
-|
-| Waxy saw-tooth skin, 
-| prickly leaves, 
-| the sickly buds 
-| of poison seeds.
-|
-| The tangy tongue
-| of Christmas
-| funerary rites.
-| 
-| I spewed
-| through chrysalis,
-| entrails slick 
-| with acid grease,
-| thickly dripping
-| afterbirth.
-|
-| Gazed upon by 
-| ageless tree,
-| received in holy 
-| communion, my first 
-| memory:
-| 
-| The pluming rack
-| of tight blue
-| veins
-| that hung about
-| my neck.
-|
-| The womb of black
-| that forked
-| the branching
-| Earth.
-|
-| The world that hid
-| in bitter leaves
-| and pushed me
-| into it. 
-|
-| I made a wreath 
-| of holly limbs
-| to prick my head
-| with thoughts. 
-|
-| I keep its berries
-| bright as death
-| and touch the skin
-| that baptized
-| me.
+  * - Date
+    - Publication
+    - Status
+  * - March 27, 2025
+    - Rattle Poetry
+    - Rejected
+  * - July 15, 2025
+    - Space and Time
+    - Pending
+  * - August 11, 2025
+    - The Genre Society
+    - Pending

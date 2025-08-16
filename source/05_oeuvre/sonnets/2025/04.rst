@@ -35,3 +35,6 @@ V: Eulogy
   * - August 15, 2025
     - Baltimore Review
     - Pending
+  * - August 16, 2025
+    - American Poetry Review
+    - Pending

@@ -5,23 +5,23 @@ II: Roundels of Remembrance
 | I - Photographs
 |
 | A photograph of strangers' joy
-| Atop the garbage, torn in half.
-| Though lost, these ghosts in gloss deploy
+| atop the garbage, torn in half.
+| though lost, these ghosts in gloss deploy
 |   a photograph. 
 |
 | Imagine tears that joyous laugh,
-| The Autumn gowns and corduroy,
-| A wedding banquet monograph.
+| the Autumn gowns and corduroy,
+| a wedding banquet monograph.
 |
 | With age then mixed precise alloy
-| From parts romance and epitaph,
-| Til future hands at last destroy
+| from parts romance and epitaph,
+| til future hands at last destroy
 |   a photograph.
 |
 | II - Walls
 |
 | Graffitied walls of yearly bloom
-| With vagrant spray of aerosols;
+| with vagrant spray of aerosols;
 | The vapors fume, condense and groom
 |   graffitied walls. 
 |
@@ -30,8 +30,8 @@ II: Roundels of Remembrance
 | the epigraphs of homeless sprawls.
 |
 | The rarer buds of sweet perfume
-| Are hidden deep in alley malls
-| Where flowered faces sprung consume
+| are hidden deep in alley malls
+| where flowered faces sprung consume
 |   graffitied walls. 
 |
 | III - Air
@@ -43,7 +43,7 @@ II: Roundels of Remembrance
 |
 | The lily sermons whisper where
 | I heard your blood through skin by ear,
-| A moment made in silent stare. 
+| a moment made in silent stare. 
 |
 | The scent remains, you disappear,
 | as wind now speaks your name in prayer,
@@ -69,8 +69,8 @@ II: Roundels of Remembrance
 | V - Seats
 |
 | The vinyl seats of classic cars,
-| The plastic smell their thread secretes,
-| This cherry burn on cover mars 
+| the plastic smell their thread secretes,
+| this cherry burn on cover mars 
 |   the vinyl seats.
 |
 | When Father stooped to sew the sheets,
@@ -78,9 +78,9 @@ II: Roundels of Remembrance
 | his fingers folded rows of pleats.
 |
 | My fingers trace the wells of scars
-| As driving down the city streets
-| My careless dropped reminder chars
-|   The vinyl seats.
+| as driving down the city streets
+| my careless dropped reminder chars
+|   the vinyl seats.
 
 - June 2025 
 
@@ -111,4 +111,10 @@ II: Roundels of Remembrance
     - Rejected
   * - July 03, 2025
     - Cypress Review
+    - Pending
+  * - August 15, 2025
+    - Smartish Pace
+    - Pending
+  * - August 16, 2025
+    - American Poetry Review
     - Pending

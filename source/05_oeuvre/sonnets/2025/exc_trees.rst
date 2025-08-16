@@ -5,7 +5,7 @@
 | and hardens into plates of bark.
 | 
 | in silent columns, the years accrue 
-| to ashen hosts that span the field. 
+| the ashen hosts that span the field. 
 | 
 | 
 |
