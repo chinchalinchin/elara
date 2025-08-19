@@ -7,20 +7,21 @@
 Solicitation
 ============
 
-Our Story Unfolded
+Island of Wak-Wak publishes novels, chapbooks, anthologies, gamebooks, and the speculative poetry journal Sublimation. We intend publish 5–10 books (full collections and chapbooks) each year. Each book will be professionally typeset using Latex. Using Amazon’s and Books on Demand’s print-on-demand services are ideal for low-volume works like poetry books. If you get published by us, your work should remain in print for years, instead of having a one-time run of 100 or 200 copies.
 
-Neon & Smoke is a home for bold, voice-driven fiction with emotional weight and narrative fire.
+Island of Wak-Wak is run by TS S. Fulk, M.A. (English Literature).  You can find out more about them and their writing by visiting their website. 
 
-We publish stories that don’t sit quietly—tales where the plot might thrill, chill, or make you laugh, but always reveals something deeper. We crave characters who leap off the page, language that crackles, and stories that blur the line between genre and literary not for the sake of novelty, but it’s the most honest way to tell the truth.  
+.. topic:: SUBMISSION THEME
 
-We want poems that make ritual burn on the page. Sacred or profane, tender or destructive — show us traditions, habits, obsessions, or cycles that bind, break, or transform. Surprise us with what counts as ritual in your world. All voices welcome.
+  Don’t Look Under the Bed
 
-Feel free to submit up to two pieces - 60 lines or 600 words.
 
-.. note::
+Formatting and Submitting Poetry
 
-  Need cover letter and submission title.
-  
+Submit 1–5 poems uploaded to Duosuma. If your work requires complex formatting, inform us in the cover letter and upload a PDF file. Include a brief cover letter (optional) and an author bio of max 100 words.
+
+
+
 .. _resume:
 
 ======
@@ -238,162 +239,74 @@ Testimonials
 Submission
 ==========
 
+Father's Lullaby
+----------------
 
-**Holly Tree**
-
-Under the holly tree
-bough of berries,
-its siren red
-temptation.
-
-Where life began
-on skinny knees
-retching out
-my guts.
-
-Waxy saw-tooth skin,
-prickly leaves,
-the sickly buds
-of poison seeds.
-
-The tangy tongue
-of Christmas
-funerary rites.
-
-I spewed
-through chrysalis,
-entrails slick
-with acid grease,
-thickly dripping
-afterbirth.
-
-Gazed upon by
-ageless tree,
-received in holy
-communion, my first
-memory:
-
-The pluming rack
-of tight blue
-veins
-that hung about
-my neck.
-
-The womb of black
-that forked
-the branching
-Earth.
-
-The world that hid
-in bitter leaves
-and pushed me
-into it.
-
-I made a wreath
-of holly limbs
-to prick my head
-with thoughts.
-
-I keep its berries
-bright as death
-and touch the skin
-that baptized
-me.
-Holly Tree
+| Dear child, the monsters under bed
+|   are not just make believe.
+| They lurk in shadows overhead
+|   and offer no reprieve.
+|
+| Dear sweetling, sleep with open eye
+|   and guard your dreams at night.
+| Ignore your mother's lullaby,
+|   keep candles burning bright.
+|
+| Beware the lair that closets hide,
+|   the racks of their disguise,
+| the suits and ties, the cuffs that slide
+|   and cloak them from your eyes.
+|
+| Fear not the slash of sharpened claws,
+|   the flashing terror brief,
+| but stamps that mark the written clause
+|   with laws of fierce belief.
+|
+| What evil deeds those stories tell
+|   prepare your heart to meet
+| the formal world where heroes fell
+|   to wander incomplete.
 
 
-Under the holly tree
-bough of berries,
-its siren red
-temptation.
+The Origin of Lies
+------------------
 
-
-Where life began
-on skinny knees
-retching out
-my guts.
-
-Waxy saw-tooth skin,
-prickly leaves,
-the sickly buds
-of poison seeds.
-
-The tangy tongue
-of Christmas
-funerary rites.
-
-I spewed
-through chrysalis,
-entrails slick
-with acid grease,
-thickly dripping
-afterbirth.
-
-Gazed upon by
-ageless tree,
-received in holy
-communion, my first
-memory:
-
-The pluming rack
-of tight blue
-veins
-that hung about
-my neck.
-
-
-
-The womb of black
-that forked
-the branching
-Earth.
-
-The world that hid
-in bitter leaves
-and pushed me
-into it.
-
-I made a wreath
-of holly limbs
-to prick my head
-with thoughts.
-
-I keep its berries
-bright as death
-and touch the skin
-that baptized
-me.
-
-
-**Faustus**
-
-
-crooked cross on steeple slants
-behind the clouds on axis bound.
-cocoon the storm, these winded cants,
-this spell from depths of godless sound.
-
-let dirge be purged through broken bell,
-through hollow dell with surging wind,
-unearthed remains returned from hell,
-the bones decayed now gardens tend.
-
-oh, name that hides in shattered ring,
-that brings the rain, becomes the night
-of lightless thunder, shriven sing
-the drops of dark through wicked flight.
-
-by dripping altar, prayers fled
-through clasping fingers splayed in maze,
-communed with spirits past and dead,
-before my eyes, a sightless gaze.
-
-the paint of statues leeched in stains,
-with weeping ink of saint’s remorse,
-deformed by time and bearing chains,
-condemned to hear my voice grown hoarse.
-
-profane my soul and twist it loose
-with iron pincers red with sin.
-let drain my blood, my veins to sluice,
-replace my eyes and rise within.
+| Oh, Ila, don't be weeping,
+|    my dear, you misconstrue;
+| The sun is only sleeping
+|    before it rises new.
+|
+| I'll wait with you til morning,
+|    and tell you of the stars,
+| the memories adorning
+|    the empty night with scars. 
+|
+| This love that's learned by lacking,
+|    whose vastness has no chart,
+| in silent orbits tracking
+|    the shaping of your heart. 
+|
+| Please trust that nothing passes,
+|    we only change our form.
+| Your tears transmute to gasses 
+|    when sun returns to warm.
+|
+| Child, listen, though you're growing,
+|    some things cannot be known
+| until you've grown up knowing
+|    out here you're all alone.
+|
+| I'll be with you forever,
+|    these words will be a lie.
+| If I could but this deliver:
+|    To live until you die.
+|
+| So while you're small, keep holding
+|    my hand as though it soothes,
+| The world will keep unfolding
+|   each wrinkle that it smoothes.
+|
+| Believe me when I'm saying:
+|    Oh, Ila, darling dear,
+| No matter what I'm staying,
+|    I'll always be right here.
