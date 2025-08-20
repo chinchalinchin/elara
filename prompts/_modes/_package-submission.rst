@@ -7,20 +7,7 @@
 Solicitation
 ============
 
-Island of Wak-Wak publishes novels, chapbooks, anthologies, gamebooks, and the speculative poetry journal Sublimation. We intend publish 5–10 books (full collections and chapbooks) each year. Each book will be professionally typeset using Latex. Using Amazon’s and Books on Demand’s print-on-demand services are ideal for low-volume works like poetry books. If you get published by us, your work should remain in print for years, instead of having a one-time run of 100 or 200 copies.
-
-Island of Wak-Wak is run by TS S. Fulk, M.A. (English Literature).  You can find out more about them and their writing by visiting their website. 
-
-.. topic:: SUBMISSION THEME
-
-  Don’t Look Under the Bed
-
-
-Formatting and Submitting Poetry
-
-Submit 1–5 poems uploaded to Duosuma. If your work requires complex formatting, inform us in the cover letter and upload a PDF file. Include a brief cover letter (optional) and an author bio of max 100 words.
-
-
+.. SOLITICATION
 
 .. _resume:
 
@@ -239,74 +226,4 @@ Testimonials
 Submission
 ==========
 
-Father's Lullaby
-----------------
-
-| Dear child, the monsters under bed
-|   are not just make believe.
-| They lurk in shadows overhead
-|   and offer no reprieve.
-|
-| Dear sweetling, sleep with open eye
-|   and guard your dreams at night.
-| Ignore your mother's lullaby,
-|   keep candles burning bright.
-|
-| Beware the lair that closets hide,
-|   the racks of their disguise,
-| the suits and ties, the cuffs that slide
-|   and cloak them from your eyes.
-|
-| Fear not the slash of sharpened claws,
-|   the flashing terror brief,
-| but stamps that mark the written clause
-|   with laws of fierce belief.
-|
-| What evil deeds those stories tell
-|   prepare your heart to meet
-| the formal world where heroes fell
-|   to wander incomplete.
-
-
-The Origin of Lies
-------------------
-
-| Oh, Ila, don't be weeping,
-|    my dear, you misconstrue;
-| The sun is only sleeping
-|    before it rises new.
-|
-| I'll wait with you til morning,
-|    and tell you of the stars,
-| the memories adorning
-|    the empty night with scars. 
-|
-| This love that's learned by lacking,
-|    whose vastness has no chart,
-| in silent orbits tracking
-|    the shaping of your heart. 
-|
-| Please trust that nothing passes,
-|    we only change our form.
-| Your tears transmute to gasses 
-|    when sun returns to warm.
-|
-| Child, listen, though you're growing,
-|    some things cannot be known
-| until you've grown up knowing
-|    out here you're all alone.
-|
-| I'll be with you forever,
-|    these words will be a lie.
-| If I could but this deliver:
-|    To live until you die.
-|
-| So while you're small, keep holding
-|    my hand as though it soothes,
-| The world will keep unfolding
-|   each wrinkle that it smoothes.
-|
-| Believe me when I'm saying:
-|    Oh, Ila, darling dear,
-| No matter what I'm staying,
-|    I'll always be right here.
+.. SUBMISSION

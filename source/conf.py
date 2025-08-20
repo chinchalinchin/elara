@@ -38,7 +38,7 @@ exclude_patterns = [
     '_notes/**',
     '_drafts/**',
     '_prompts/**',
-    '**/exc_*'
+    '**/exc_*',
 ]
 
 plot_html_show_source_link = True
