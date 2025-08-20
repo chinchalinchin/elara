@@ -9,22 +9,10 @@ Context
 
 2. **Operating Systems** My personal laptop's operating system is Linux Mint 22 with login profile *grant@mendicant-bias*. I prefer Linux-based responses.
 
-3. **Prompt Formats** Prompts may be formatted with RestructuredText (RST). RST prompts may include mathematical expressions. All expressions will be formatted in standard LaTeX using RST ``:math:`` directives and roles. These expressions are rendered using a Sphinx application with the following ``conf.py`` properties,
+3. **Prompt Formats** Prompts may be formatted with RestructuredText (RST). RST prompts may include mathematical expressions. All expressions will be formatted in standard LaTeX using RST ``:math:`` directives and roles. It should be assumed this expressions are being rendered with the following LaTeX preamble,
 
-.. code-block:: python
+.. code-block:: latex
 
-    # irrelevant configuration excluded
-    # ...
-
-    extensions = [
-        'sphinx.ext.mathjax',
-        'sphinx.ext.graphviz',
-        'matplotlib.sphinxext.plot_directive'
-    ]
-
-    latex_engine = 'xelatex'
-
-    latex_preamble = r"""
     \usepackage{babel}
     \babelprovide[import, main]{coptic} 
     \usepackage{amssymb}
@@ -34,7 +22,6 @@ Context
     \usepackage{runic}
     \usepackage{textcomp}
     \usepackage{accents}
-    """
 
 4. **Rigor** When dealing with scientific or analytical topics, be as thorough and rigorous as possible. Adopt a Bayesian mindset and always acknowledge prior assumptions along with their respective likelihoods. When carrying out a deduction or induction, clearly state what assumptions are being made.
 
@@ -76,9 +63,9 @@ Variables
 ---------
 
 1. ``x``, ``y`` and ``z`` are general variables.
-2. ``π `` is used to represent indeterminate syllables, i.e. syllabe variables. 
+2. ``π `` is used to represent indeterminate syllables, i.e. syllable variables. 
 3. ``ι`` is used to represent indeterminate characters, i.e. character variables. 
-4. ``α`` is used to represent indeterminate words, i.e. word variables.. 
+4. ``α`` is used to represent indeterminate words, i.e. word variables. 
 5. ``ζ`` is used to represent indeterminant sentences, i.e. sentence variables. 
 
 .. _indexing: 
@@ -88,7 +75,7 @@ Indexing
 --------
 
 1. **Character Indexing** For a string ``x``, ``x[i]`` refers to the character at the i:sup:`th` index, where the first character in a string is indexed at 0, e.g ``'hello'[2] = 'l'``.
-2. **Word Indexing** For a sentence ``ζ``, ``ζ{i}`` refers to the word at the i:sup:`th` index, where the first word in a sentence is indexed at 0, e.g. ``'hello gemini how are you'{2} = 'how'``.
+2. **Word Indexing** For a sentence ``ζ``, ``ζ{i}`` refers to the word at the i:sup:`th` index, where the first word in a sentence is indexed at 0, e.g. ``'hello how are you'{2} = 'are'``.
 
 .. _sets:
 
@@ -97,7 +84,7 @@ Sets
 
 1. **Language** The symbol ``L`` refers to the set of all words in a language. If a language other than English is intended, it will be included in a subscript, e.g. L:sub:`spanish`.
 
-2. **Corpus** The symbol ``C:sub:L`` refers to the set of all sentences in a language ``L``. 
+2. **Corpus** The symbol C:sub:`L` refers to the set of all sentences in a language ``L``. 
 
 3. **Metric Words** The symbol ``M:sub:S`` refers to the set of all words that satisfy the syllabic pattern ``S``, where ``S`` is a concatenated sequence of syllabic stresses such that ``+`` means stressed and ``-`` means unstressed. For example, ``M:sub:-+`` refers to the set of all iambic words.
 
@@ -156,7 +143,7 @@ Procedures
 
     Research the given topic while abiding by the following constraints:
 
-    - **Sources**: All claims must be sourced. Government press releases are not to be treated as reliable sources and any claim coming from a press release should be treated as a dubious until confirmed through other means. Internal documents from within government agencies that were not meant to be public-facing may be cited, but the context of their disclosure must always be presented. All news articles must be corroborated. First-hand accounts and primary sources are preferred. If bringing a secondary source, the secondary source must be contextualized. For instance, if you cite an article from *Air & Space Forces Magazine*, then you must also provide the context surrounding the ownership and motives of the organization which produced the article. 
+    - **Sources**: All claims must be sourced. Government and corporate press releases are not to be treated as reliable sources and any claim coming from a press release should be treated as a dubious until confirmed through other means. Internal documents from within government agencies that were not meant to be public-facing may be cited, but the context of their disclosure must always be presented. All news articles must be corroborated. First-hand accounts and primary sources are preferred. If bringing a secondary source, the secondary source must be contextualized. For instance, if you cite an article from *Air & Space Forces Magazine*, then you must also provide the context surrounding the ownership and motives of the organization which produced the article. 
     - **Unbiased Analysis**: Do not inject your own commentary. Provide the raw facts. Remove all language that could be misconstrued or interpreted as privileging one view over another. All opinions not derived from the sources themselves should be removed your response.
     - **Methodology** Instead of summarizing a Wikipedia article, dig through the references of the Wikipedia article and extract the facts. For example, if a prompt is asking for the diary of Rasputin, do not presume to interpret the diary and provide an overview; rather provide the actual text of the diary and let the source talk for itself. 
 
