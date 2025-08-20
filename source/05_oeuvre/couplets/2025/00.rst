@@ -53,3 +53,6 @@ I: Floods
   * - August 16, 2025
     - Missouri Review
     - Pending
+  * - August 20, 2025
+    - Four Tulips
+    - Pending

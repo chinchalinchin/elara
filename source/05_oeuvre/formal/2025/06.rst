@@ -1,18 +1,74 @@
-------------------
-VII: Let It Simmer
-------------------
+---------
+VI: Walls
+---------
 
-| A heart too hot will lack a taste
-| Refined. Quiet now, simmer down,
-| And stew the sauce, or let it baste.
-| Yes, let it sit, in flavor drown
-| And only then when flame is off,
-| You taste a bit, a smidgen pinch;
-| Before your hunger dips to trough,
-| Begin to measure inch by inch
-| What boiled over side of thought.
-| Distilled to stock, the essence clean
-| Will cling in drops that drip on pot
-| To add to future meals' cuisine.
+| the husk of walls that city shucks
+| accumulates and concentrates
+| around like rings in ancient trunks
+| where measured age with circle gates
+| the spiraled line amassed through time,
+| deposits buried down substrates.
+|
+| at summit's crest, the joints are thick
+| and licking tongues of moss ascend
+| the darkened blocks from quarry hauled
+| on buttressed back, in stone suspend
+| the garden court where crowds took root
+| and grew their plans of walls to tend.
+|
+| from center peak the wooden slats
+| erect the map with tangled fence
+| to trace a grid of patchwork yards,
+| these charts of dreams in ground commence
+| the flattened course of borough life
+| where burgs and burbs did once condense.
+|
+| then moving out, the bricks of red
+| in crooked rows descend to meet
+| the lanes of carriage tracts now black
+| and scorched with tar in shapes of street
+| where crimson dust from crumbled walls
+| in dancing twirls across concrete.
+|
+| next grey cement of molded squares
+| in towers stacked to portal sky
+| with wires fused and humming signs;
+| they arc and rise, on edges vie
+| the vines entwined in rushing growth
+| to split on spine, like nuclei.
+|
+| at last the stable struts of steel
+| designed as straight as rays of light
+| reflected back on silver glass
+| the lattice links both left and right;
+| the history in circled sweep
+| constricts the city sphere so tight.
+|
+| through sections cross the avenue
+| from point to point and time to time
+| the human shell that forms in turn
+| the arches bend, the steepled chime,
+| that wilts and sheds, but fossils kept
+| in barrows born their salt and lime.
 
 - April 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - April 27, 2025
+    - Frontier Poetry
+    - Rejected
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 1, 2025
+    - The Louisville Review
+    - Rejected
+  * - June 12, 2025
+    - Merion West
+    - Pending

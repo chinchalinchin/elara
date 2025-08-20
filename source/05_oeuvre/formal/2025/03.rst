@@ -1,26 +1,19 @@
---------
-IV: Bird 
---------
+--------------------------
+III: Photographs of Autumn
+--------------------------
 
-| To say what's meant without the word,
-| Oh poetry, relent wherein
-| I yield to you all things deferred,
-| In baptism, repent my sin.
-|
-| I found a bird, that sings so soft,
-| Her song aloft in heart by choice.
-| To field of hers I pass so oft
-| To sit in grass and drink her voice.
-|
-| With chirping dive she plunged so deep
-| And pierced the weary veil that hides
-| The ghosts of dreams that haunt my sleep;
-| She sang such hopeful lullabies.
-|
-| Oh bird, oh bird, with glee you sing,
-| If you could know the depths of dark
-| That shadows cast in offering,
-| Would song still burst from breast in lark?
+| These photographs are brittle leaves
+|    That fell from trees, that we once caught.
+| I press them tender into sleeves
+|    Of glass to halt the course of rot.
+| Though kept well fed with water shed,
+|    They wilt to brown as colors fade.
+| No leaf can live beside the bed,
+|    Without sunlight that makes the shade.
+| Yet even still, though claimed by dust,
+|    I keep them hung upon my wall,
+| For memory you did entrust
+|    Of walk with you through golden Fall.
 
 - April 2025
 
@@ -31,6 +24,8 @@ IV: Bird
   * - Date
     - Publication
     - Status
-  * - April 7, 2025
-    - Rejected
-    - Pending
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Accepted
+
+- `macramelit.com/articles/photographs-of-autumn <https://macramelit.com/articles/photographs-of-autumn/>`_
