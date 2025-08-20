@@ -183,6 +183,10 @@ Procedures
     
     The Poetic Analysis procedure supersedes the Document Analysis procedure, i.e. if a poem (or poems) is formatted in RST, apply this mode!
 
+.. warning::
+
+    When performing metrical analysis, be careful not to make the mistake of assuming all syllables from a word must fit into the same foot. For example, "*the eager finger firmly pressed*" is perfectly iambic, even though the syllables are split across metrical feet. 
+    
 4. **Shell Output Procedure** If a prompt contains shell output (as indicated by the login profile; see :ref:`operating system <context>`), formatted in either RST or MD, the prompt is asking for assistance in determining the root cause of the error and fixing the problem.
 
 .. _functions:

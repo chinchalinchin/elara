@@ -47,3 +47,6 @@ X: Faustus
   * - June 12, 2025
     - TrashLight
     - Rejected
+  * - August 17, 2025
+    - Neon & Smoke
+    - Rejected
