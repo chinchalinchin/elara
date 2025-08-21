@@ -1,33 +1,28 @@
----------------
-XII: Landscapes
----------------
+-----------
+XI: Gravity
+-----------
 
-| Oh, hapless world, the butcher's block,
-|   The sickle, scythe, harpoon,
-| The barren fields, the culled livestock,
-|   The blood red harvest moon.
+| The mind, it breaks, and falls to parts.
+| As father died, he spoke in tongues
+| of shifting walls and gravity
+| that sideways pulled the world to parts. 
 |
-| The ocean deep, a darkened heart,
-|   A sore that festers cold,
-| A slumbered age, a violent art,
-|   Into all things behold:
+| The mind, it shakes, and all departs.
+| As mother lost her lonely thoughts
+| she spoke to walls, soliloquy
+| that inward rolled as world departs.
 |
-| The forests wild, the stalking hunt,
-|   The arrow cut from stone,
-| The bloody rib, the final grunt,
-|   A death in whimpered groan.
-|
-| The mountain peaks, a falling height,
-|   The air in sky dissolved,
-| A winter wind, a bitter blight,
-|   Let no sin be absolved.
-|
-| The city streets, the graveyard paths,
-|   The linen beds of wards,
-| The gowns of white, the final baths,
-|   The oak in coffin boards.
+| The mind, it's fakeness poisons hearts.
+| As nightshade petals float to floors
+| by walls that seep humanity,
+| the crumbled worlds of poisoned hearts. 
+| 
+| The mind, it wakes, in fits and starts.
+| As thoughts now lay me down to sleep
+| the walls will shift and speak to me
+| that upside down my ending starts.
 
-- April 2025
+- June 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -36,15 +31,9 @@ XII: Landscapes
   * - Date
     - Publication
     - Status
-  * - April 7, 2025
-    - Paris Review
+  * - June 12, 2025
+    - American Poetry Journal
     - Rejected
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-  * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
+  * - June 12, 2025
+    - TrashLight
+    - Rejected
