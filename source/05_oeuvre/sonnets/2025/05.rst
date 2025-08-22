@@ -29,3 +29,14 @@ VI: Windfall
 .. the silent rain begins to tell our tale.
 
 - August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - August 22, 2025
+    - Willows Wept Review
+    - Pending

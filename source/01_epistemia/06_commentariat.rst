@@ -34,10 +34,6 @@ Chapter I
     *   - Tyndale
         - In the begynnynge God created heaven and erth.
 
-**Commentary**
-
-TODO
-
 .. list-table:: Verse 2
     :widths: 15 15
     :header-rows: 1
@@ -54,10 +50,6 @@ TODO
         - Forsothe the erthe was idel and voide, and derknessis weren on the face of depthe; and the Spiryt of the Lord was borun on the watris.
     *   - Tyndale
         - The erth was voyde and emptie ad darcknesse was vpon the depe and the spirite of god moved vpon the water
-
-**Commentary**
-
-TODO
 
 .. list-table:: Verse 3
     :widths: 15 15
@@ -76,10 +68,6 @@ TODO
     *   - Tyndale
         - Than God sayd: let there be lyghte and there was lyghte.
 
-**Commentary**
-
-TODO
-
 .. list-table:: Verse 4
     :widths: 15 15
     :header-rows: 1
@@ -96,10 +84,6 @@ TODO
         - And God seiy the liyt, that it was good, and he departide the liyt fro derknessis,
     *   - Tyndale
         - And God sawe the lyghte that it was good: and devyded the lyghte from the darcknesse
-
-**Commentary**
-
-TODO
 
 .. list-table:: Verse 5
     :widths: 15 15
@@ -118,10 +102,6 @@ TODO
     *   - Tyndale
         - and called the lyghte daye and the darcknesse nyghte: and so of the evenynge and mornynge was made the fyrst daye
 
-**Commentary**
-
-TODO
-
 .. list-table:: Verse 6
     :widths: 15 15
     :header-rows: 1
@@ -138,10 +118,6 @@ TODO
         - And God seide, The firmament be maad in the myddis of watris, and departe watris fro watris.
     *   - Tyndale
         - And God sayd: let there be a fyrmament betwene the waters ad let it devyde the waters a sonder.
-
-**Commentary**
-
-TODO
 
 .. list-table:: Verse 7
     :widths: 15 15
@@ -160,9 +136,6 @@ TODO
     *   - Tyndale
         - Than God made the fyrmament and parted the waters which were vnder the fyrmament from the waters that were above the fyrmament: And it was so.
 
-**Commentary**
-
-TODO
 
 .. list-table:: Verse 8
     :widths: 15 15
@@ -180,7 +153,3 @@ TODO
         - And God clepide the firmament, heuene. And the euentid and morwetid was maad, the secounde dai.
     *   - Tyndale
         - And God called the fyrmament heaven And so of the evenynge and morninge was made the seconde daye
-
-**Commentary**
-
-TODO

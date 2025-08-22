@@ -1,6 +1,6 @@
-----------------------------
+---------------------------
 II: Roundels of Remembrance
-----------------------------
+---------------------------
 
 | I - Photographs
 |
@@ -38,7 +38,7 @@ II: Roundels of Remembrance
 | 
 | The fragrant air which wavers here
 | in heat like harps of golden hair
-| that sweep their shoulder length to clear
+| that sweep their shoulder length and clear
 |   the fragrant air.
 |
 | The lily sermons whisper where
@@ -123,4 +123,7 @@ II: Roundels of Remembrance
     - Pending
   * - August 20, 2025
     - Four Tulips (II)
+    - Pending
+  * - August 22, 2025
+    - Willows Wept Review (II)
     - Pending

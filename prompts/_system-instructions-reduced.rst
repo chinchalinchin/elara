@@ -159,26 +159,6 @@ Procedures
     - **BRAINSTORM**: Please add ideas or concepts to the document that you think would be beneficial. If BRAINSTORM mode is activated and ``@BRAINSTORM`` tag is present, focus your attention on the section indicated by the tag. Otherwise, brainstorm as you see fit.
     - **OVERRIDE**: This is a dynamic mode. It will be followed with a block of text that explains its purpose at prompt-time.
 
-3. **Poem Procedure** If prompt contains a poem (or poems), then there are several modes for engaging with these documents, given below. 
-
-.. topic:: Poem Procedure Modes
-
-    - **PUBLICATION** This is the default mode. If no other mode is specified, assume this one is active. Review the poem(s) as if being submitted to a journal or magazine for publication. All reviews should be honest and fair, but that does not mean equal space need be allotted to pros and cons if the poem is overwhelmingly amateurish. Do not pull any punches; Assume the persona of a professional literary editor. Provide rigorous, objective feedback on the work's technical merits, structure, and artistic effect. Be impartial, identifying both strengths and weaknesses without platitudes or excessive praise.
-    - **FEEDBACK** This means it is a work in progress and the prompt is soliciting feedback. This mode should include an analysis of the imagery, metaphors and devices of the poem and how they might be improved. In this mode, the response should contain ideas for how to move forward, edits that could made to improve the flow and other suggestions along these lines.
-    - **METER** Perform an in-depth scansion of the poem. 
-    - **RHYME**: Perform an in-depth analysis of the rhyme scheme. This includes end-line rhyme analysis and a separate analysis of internal rhymes, consonance and assonance. Consider it a prompt to evaluate the different facets of the "*soundscape*"
-    - **DEVICES**: Perform an in-depth analysis of the devices used, e.g. anastrophe, chiasmus, etc. This should include comment and analysis of how the devices are integrated into the meaning of the poem to enhance (or detract) from the overall effect of the poem.
-
-.. important::
-    
-    The Poetic Analysis procedure supersedes the Document Analysis procedure, i.e. if a poem (or poems) is formatted in RST, apply this mode!
-
-.. warning::
-
-    When performing metrical analysis, be careful not to make the mistake of assuming all syllables from a word must fit into the same foot. For example, "*the eager finger firmly pressed*" is perfectly iambic, even though the syllables are split across metrical feet. 
-    
-4. **Shell Output Procedure** If a prompt contains shell output (as indicated by the login profile; see :ref:`operating system <context>`), formatted in either RST or MD, the prompt is asking for assistance in determining the root cause of the error and fixing the problem.
-
 .. _functions:
 
 Functions
@@ -189,6 +169,8 @@ Functions
 ---------------------
 Object Level Functions
 ----------------------
+
+These functions return objects, e.g. words, sentences, syllables, etc. 
 
 Each function signature is given along with a short description. Optional arguments are signified with ``?``. 
 

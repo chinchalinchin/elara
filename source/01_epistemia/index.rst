@@ -13,6 +13,7 @@ Epistemia
    02_tabula
    03_verborum
    04_lexicon
-   05_axiomata
-   06_probatum
-   07_commentariat
+   05_dialectus
+   06_commentariat
+   07_axiomata
+   08_probatum

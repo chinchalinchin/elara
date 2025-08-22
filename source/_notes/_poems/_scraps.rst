@@ -2803,114 +2803,25 @@ language is cloak and dagger. it can neither confirm nor deny. it can only repre
 
 - July 2025
 
-
------------------------------
-XVI: A Series of Reflections
------------------------------
-
-| sagas!
+| observe the birch and how it grows,
+| the twisted course of skyward arc.
 |
-| level after level,
-| the noon pets a pup.
-| tenet after tenet,
-| a flow step to wolf.
-|
-| deified!
-|
-| the animal parts,
-| the lamina strap,
-| the devil paws,
-| through swap it lived.
-|
-| refer!
-|
-| a peep or deed,
-| the tips that it spat,
-| the taps that it spit,
-| the pals to slap.
+| its roots secrete a sap that flows
+| and hardens into plates of bark.
 | 
-| rotor!
+| in silent columns, the years accrue 
+| the ashen hosts that span the field. 
+| 
+| 
 |
-| lever with revel! 
-| spin the nips!
-| a spool of loops!
-|
-| plug the eye!
-| gulp the gag!
-|
-| deliver reviled
-| aibohphobia!
-|
-| a tool we loot,
-| when maps are spam.
-|
-| on serif peels 
-| sleep fires, no? 
-
-- July 2025
-
-.. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
-
-  * - Date
-    - Publication
-    - Status
-  * - July 04, 2025
-    - wildscape. literary journal
-    - Rejected
-
-.. | Sometimes 
-.. | mere circumstance 
-.. | swings the sentence
-.. | lever with revel
-.. |
-.. | Sometimes 
-.. | such happenstance
-.. | causes syntax 
-.. | nips to spin
-.. | 
-.. | Sometimes 
-.. | pure random chance
-.. | is a rotor,
-.. | spool of loops
-.. |
-.. | Often 
-.. | we commandeer 
-.. | the stolen 
-.. | tool we loot.
-.. |
-.. | Often 
-.. | we persevere 
-.. | when charted
-.. | maps are spam.
-.. | 
-.. | Often 
-.. | we engineer 
-.. | the missing 
-.. | parts to strap.
-.. |
-.. | Always 
-.. | the flowing quells
-.. | deep-span
-.. | nap-speed.
-.. |
-.. | Always
-.. | the growing bells
-.. | deliver reviled
-.. | aibohphobia.
-.. | 
-.. | Always 
-.. | the glowing spells
-.. | on serif peels 
-.. | sleep fires, no? 
-.. 
-.. | peep a ton
-.. | or 
-.. | not a peep, 
-.. | oh pupil, 
+| my blood ascends through webs of veins
+| to reach my fingers catching sun.
+| 
+| its warmth is spread, but none remains
+| when blood returns, its circuit done. 
 
 
+- August 2025
 
 
 --------

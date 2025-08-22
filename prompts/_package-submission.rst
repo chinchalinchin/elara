@@ -7,7 +7,54 @@
 Solicitation
 ============
 
-.. SOLITICATION
+Willows Wept Review
+Founded online by Molly Gaudry in 2008, Willows Wept Review is a quarterly literary journal that publishes writing that explores, celebrates, interrogates, and/or problematizes the relationship between human beings and the natural world.
+
+WWR has featured poetry, creative nonfiction, and short fiction by Richard Garcia, Christopher Kennedy, William Doreski, Shane Jones, Kim Chinquee, J. C. Hallman, Donora Hillard, Darby Larson, Scott Owens, Sasha Fletcher, and many others.
+
+In June 2010, after editing the first seven issues, Molly stepped down and passed editorial responsibilities to Troy Urquhart, and Kathleen Kraft served as associate editor from 2011 to 2013. Beginning with Issue Twelve, the journal has included both print and digital formats.
+
+The journal closed in 2013 and reopened in late 2019.
+
+Submissions
+Willows Wept Review seeks writing that explores, celebrates, interrogates, and/or problematizes the relationship between human beings and the natural world.
+
+Simultaneous Submissions
+Simultaneous submissions are welcome, but please notify the editors as soon as possible if your work has been accepted elsewhere.
+
+Reprints
+On rare occasion, we publish reprints of work that was published in a print journal at least one year ago. Please indicate the journal and all other relevant information, including the issue number and date, in your submission. We do not publish reprints of work published online. (We do not consider work included on personal websites to be “published online.”)
+
+Response Times
+Response times vary but are usually no longer than two months.
+
+Authorship
+We do not accept submissions of work with evidence of partial or complete AI authorship. Although we recognize that the role of AI is complex, there remain significant questions about issues of copyright and responsibility associated with AI-generated materials, so we will automatically decline all work with evidence of partial or complete AI authorship.
+
+Rights
+When we publish work, we ask that writers grant us exclusive publication rights for forty-five days from the date of publication. After that, we ask for non-exclusive publication rights so that we can maintain an archive of our issues online and so that we can continue to sell back issues of the print version of the journal. We also ask for rights to include work in possible later Best of or Annual editions, either online or in print.
+
+In all cases, we ask that writers acknowledge Willows Wept Review in the event that their work is later reprinted elsewhere.
+
+Payment
+If everything in the world worked the way we liked, we’d offer you truckloads of money upon publication of your work. Or we’d offer you a world in which truckloads of money didn’t matter. But things being what they are, we can’t offer you payment for your work. Only gratitude and admiration.
+
+Masthead
+Editor
+Troy Urquhart is the author of Springtime Sea Bathing (Greying Ghost Press, 2010) and has edited Willows Wept Review since 2010. His work has appeared in publications such as PANK, Twentieth-Century Literature, The Inflectionist Review, >kill author, and English Journal. He lives in central Florida.
+
+[Posts • Email • Website]
+Founding Editor
+Molly Gaudry founded Willows Wept Review in 2008. Molly is also the founder of Lit Pub and the author of We Take Me Apart, which was a finalist for the Asian American Literary Award and shortlisted for the PEN/Osterweil.
+
+[Website]
+Associate Editor, 2011-2013
+Kathleen Kraft’s work has appeared or is forthcoming in Five Points, Yemassee, Gargoyle, Sugar House Review, The Satirist, and other journals. Her poems have been nominated for the Pushcart Prize three times, and her chapbook Fairview Road was published by Finishing Line Press in 2015. She lives in Pittsfield, MA, where she teaches yoga and works as a freelance editor.
+
+[Website]
+Previous Contributors
+Previous contributors to Willows Wept Review’s blog include Amy Bartlow, Eric Dieterle, Chris Lutz, and Murali Sivaramakrishnan.
+
 
 .. _resume:
 
@@ -227,3 +274,5 @@ Submission
 ==========
 
 .. SUBMISSION
+
+See attached PDF.
