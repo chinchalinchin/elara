@@ -44,3 +44,6 @@ V: Eulogy
   * - August 22, 2025
     - Palette Poetry
     - Pending
+  * - August 22, 2025
+    - Willows Wept Review
+    - Pending
