@@ -39,7 +39,7 @@ The Mesmeria Tapes #1
 
 []: What's so funny, Mesmeria?
 
-[]: How can you find someone that's real?
+[]: How can you find someone that's not real?
 
 []: REDACTED is very real, Mesmeria. You know that.
 
@@ -54,9 +54,5 @@ The Mesmeria Tapes #1
 []: No, that doesn't sound like me. 
 
 []: Are you backing out of the deal?
-
-
-
-
 
 []: If you don't know how old the world is, you'll never understand REDACTED. 
