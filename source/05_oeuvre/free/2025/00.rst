@@ -112,7 +112,10 @@ I: Holly Tree
   * - August 17, 2025
     - Neon & Smoke
     - Rejected
-
+  * - August 22, 2025
+    - Glass
+    - Pending
+    
 .. epigraph::
   
   Grant,
