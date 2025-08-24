@@ -7,21 +7,10 @@
 Solicitation
 ============
 
-Founded in Toledo, Ohio, the Glass City, by Holly Burnside and Anthony Frame, Glass: A Journal of Poetry (ISSN 1941-4137) was published online twice a year (June and December) from 2008 until 2014 by Glass Poetry Press. In 2016, it published a single poem each week (and occasionally published double features). From 2017 until 2020, the journal published monthly issues of around ten poems. Beginning in 2021, the journal moved to a quarterly schedule. Interviews and reviews are also published on a rolling schedule.
-
-We are interested in poetry that enacts the artistic and creative precision of glass. We are not bound by any specific aesthetic; our only mission is to publish high quality poetry. All styles, forms and schools of poetry are welcome, though easy rhymes and "light" verse are less likely to inspire us. We like poems that show a careful understanding of language, music, passion and creativity. The best way to get to know our tastes is to purchase a copy of one (or more) of our chapbooks or to read the Glass: A Journal of Poetry archives.
-
-Our mission is to engage with the wider literary community. To do this, we are committed to publishing a variety of new, emerging and established voices. Further, we are committed to inclusion and equity in publishing. We highly encourage submissions from underrepresented voices including, but not limited to, women poets, poets of color, LGBTQ poets, poets living with poverty, and incarcerated poets.
-
 .. _resume:
 
-======
 Resume
 ======
-
-.. image:: ../_static/img/personal/fractal-me.jpg
-    :alt: Fractal Me
-    :align: center
 
 .. topic:: Contact Information
 
@@ -29,8 +18,9 @@ Resume
 
 .. _education:
 
+---------
 Education
-=========
+---------
 
 .. list-table:: Education
   :widths: 15 15 15 15
@@ -51,8 +41,9 @@ Education
 
 .. _experience:
 
+----------
 Experience
-==========
+----------
 
 .. _employment:
 
@@ -164,69 +155,21 @@ Certifications
     - Badge
   * - AWS
     - Developer Associate
-    - .. image:: ../_static/img/personal/resume/aws-certified-developer-associate.png
-        :alt: AWS Developer Associate
-        :height: 50px
-        :align: center
   * - AWS
     - DevOps Professional
-    - .. image:: ../_static/img/personal/resume/aws-certified-devops-engineer-professional.png
-        :alt: AWS DevOps Professional
-        :height: 50px
-        :align: center
   * - IBM
     - Docker Essentials
-    - .. image:: ../_static/img/personal/resume/ibm-docker-introduction.png
-        :alt: IBM Docker Essentials
-        :height: 50px
-        :align: center
   * - IBM
     - Enterprise Design
-    - .. image:: ../_static/img/personal/resume/ibm-enterprise-design.png
-        :alt: IBM Enterprise Design
-        :height: 50px
-        :align: center
   * - MTA
     - Database Administration
-    - .. image:: ../_static/img/personal/resume/mta-database-fundamentals-certified-2018.png
-        :alt: MTA Database Fundamentals
-        :height: 50px
-        :align: center
   * - MTA
     - Python Programming
-    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-python-certified-2018.png
-        :alt: MTA Python Programming
-        :height: 50px
-        :align: center
   * - MTA
     - Java Programming
-    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-java-certified-2018.png
-        :alt: MTA Java Programming
-        :height: 50px
-        :align: center
   * - MTA
     - Software Development Fundamentals
-    - .. image:: ../_static/img/personal/resume/mta-software-development-fundamentals-certified-2018.png
-        :alt: MTA Software Development Fundamentals
-        :height: 50px
-        :align: center
 
-.. _testimonials:
-
-Testimonials
-============
-
-.. image:: ../_static/img/personal/resume/testimonial-math-201.jpg
-  :alt: MATH 201, Calculus
-  :align: center
-
-----
-
-.. image:: ../_static/img/personal/resume/testimonial-phys-215.jpg
-  :alt: PHYS 215, Physics
-  :align: center
-
-==========
 Submission
 ==========
 

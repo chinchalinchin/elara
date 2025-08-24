@@ -1,4 +1,3 @@
-
 .. MODE: OVERRIDE (SUBMISSION PACKAGE)
 ..
 .. This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal.  Use the context to create a taste profile of the journal. Then create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission tailored to the taste profile.
@@ -7,17 +6,10 @@
 Solicitation
 ============
 
-.. SOLITICATION
-
 .. _resume:
 
-======
 Resume
 ======
-
-.. image:: ../_static/img/personal/fractal-me.jpg
-    :alt: Fractal Me
-    :align: center
 
 .. topic:: Contact Information
 
@@ -25,8 +17,9 @@ Resume
 
 .. _education:
 
+---------
 Education
-=========
+---------
 
 .. list-table:: Education
   :widths: 15 15 15 15
@@ -47,8 +40,9 @@ Education
 
 .. _experience:
 
+----------
 Experience
-==========
+----------
 
 .. _employment:
 
@@ -160,70 +154,22 @@ Certifications
     - Badge
   * - AWS
     - Developer Associate
-    - .. image:: ../_static/img/personal/resume/aws-certified-developer-associate.png
-        :alt: AWS Developer Associate
-        :height: 50px
-        :align: center
   * - AWS
     - DevOps Professional
-    - .. image:: ../_static/img/personal/resume/aws-certified-devops-engineer-professional.png
-        :alt: AWS DevOps Professional
-        :height: 50px
-        :align: center
   * - IBM
     - Docker Essentials
-    - .. image:: ../_static/img/personal/resume/ibm-docker-introduction.png
-        :alt: IBM Docker Essentials
-        :height: 50px
-        :align: center
   * - IBM
     - Enterprise Design
-    - .. image:: ../_static/img/personal/resume/ibm-enterprise-design.png
-        :alt: IBM Enterprise Design
-        :height: 50px
-        :align: center
   * - MTA
     - Database Administration
-    - .. image:: ../_static/img/personal/resume/mta-database-fundamentals-certified-2018.png
-        :alt: MTA Database Fundamentals
-        :height: 50px
-        :align: center
   * - MTA
     - Python Programming
-    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-python-certified-2018.png
-        :alt: MTA Python Programming
-        :height: 50px
-        :align: center
   * - MTA
     - Java Programming
-    - .. image:: ../_static/img/personal/resume/mta-introduction-to-programming-using-java-certified-2018.png
-        :alt: MTA Java Programming
-        :height: 50px
-        :align: center
   * - MTA
     - Software Development Fundamentals
-    - .. image:: ../_static/img/personal/resume/mta-software-development-fundamentals-certified-2018.png
-        :alt: MTA Software Development Fundamentals
-        :height: 50px
-        :align: center
 
-.. _testimonials:
-
-Testimonials
-============
-
-.. image:: ../_static/img/personal/resume/testimonial-math-201.jpg
-  :alt: MATH 201, Calculus
-  :align: center
-
-----
-
-.. image:: ../_static/img/personal/resume/testimonial-phys-215.jpg
-  :alt: PHYS 215, Physics
-  :align: center
-
-==========
 Submission
 ==========
 
-.. SUBMISSION
+See attached PDF.
