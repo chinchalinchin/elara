@@ -115,6 +115,15 @@ I: Holly Tree
   * - August 22, 2025
     - Glass
     - Pending
+  * - August 25, 2025
+    - Oxford Poetry Prize
+    - Pending
+  * - August 25, 2025
+    - Plougshares
+    - Pending
+  * - August 25, 2025
+    - The Celestial Glossry
+    - Pending
     
 .. epigraph::
   

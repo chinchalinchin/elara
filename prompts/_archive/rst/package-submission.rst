@@ -3,9 +3,21 @@
 ..
 .. This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal.  Use the context to create a taste profile of the journal. Then create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission tailored to the taste profile.
 
+.. _solitication:
+
 ============
 Solicitation
 ============
+
+The Celestial Glossary is the Literary Magazine from Estrella House Publishing. It publishes twice yearly. There are no genre restrictions, and authors are encouraged to submit whatever is nearest to their hearts.
+
+We prefer work that is challenging, thoughtful, and inventive. We will happily accept work in any genre, though we do not prefer sci-fi or mystery. Sending works in this genre will make it more difficult to be accepted.
+
+We are excited to pay our authors. Estrella House utilizes a revenue share system where authors get a portion of ad revenue generated from views to their work and a portion of submission fees. Because we are a new publication, we cannot yet guarantee any flat rates.
+
+.. note::
+
+  Need cover letter.
 
 .. _resume:
 
@@ -170,7 +182,7 @@ Certifications
   * - MTA
     - Software Development Fundamentals
 
-Submission
-==========
+Submissions
+===========
 
 See attached PDF.
