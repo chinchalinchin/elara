@@ -62,3 +62,6 @@ V: Eulogy
   * - August 25, 2025
     - Midsummer Dream House Context
     - Pending
+  * - August 26, 2025
+    - Gavialidae
+    - Pending

@@ -122,7 +122,10 @@ I: Holly Tree
     - Plougshares
     - Pending
   * - August 25, 2025
-    - The Celestial Glossry
+    - The Celestial Glossary
+    - Pending
+  * - August 26, 2025
+    - Gavialidae
     - Pending
     
 .. epigraph::

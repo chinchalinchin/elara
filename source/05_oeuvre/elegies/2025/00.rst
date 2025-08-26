@@ -75,3 +75,6 @@ I: Elemental Elegy
   * - August 16, 2025
     - Missouri Review
     - Pending
+  * - August 26, 2025
+    - Gavialidae
+    - Pending

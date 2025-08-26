@@ -62,3 +62,9 @@ IV: Larksong
   * - August 25, 2025
     - The Celestial Glossary
     - Pending
+  * - August 26, 2025
+    - The Plentitudes
+    - Pending
+  * - August 26, 2025
+    - Gavialidae
+    - Pending
