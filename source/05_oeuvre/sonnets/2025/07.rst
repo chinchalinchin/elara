@@ -21,6 +21,17 @@ VIII: The Lives of Kites
 | as cotton clouds of seed were flung and shed.
 |
 | the kite's remains reclaimed their place on high
-| as slivers shimmered sweetly through the sky 
+| as slivers shimmered sweetly through the sky.
 
 - August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - August 27, 2025
+    - Sligo Creek Publishing
+    - Pending

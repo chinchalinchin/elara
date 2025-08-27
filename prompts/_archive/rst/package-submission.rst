@@ -9,11 +9,55 @@
 Solicitation
 ============
 
-The Celestial Glossary is the Literary Magazine from Estrella House Publishing. It publishes twice yearly. There are no genre restrictions, and authors are encouraged to submit whatever is nearest to their hearts.
+Why we need to write
+“A poem cannot stop a bullet. A novel cannot defuse a bomb. But we are not helpless. We can   sing the truth and name the liars.”  ~Salman Rushdie
 
-We prefer work that is challenging, thoughtful, and inventive. We will happily accept work in any genre, though we do not prefer sci-fi or mystery. Sending works in this genre will make it more difficult to be accepted.
+The mission of Sligo Creek Publishing is to give voice to those who believe in fundamental human rights, who understand that diversity is the font of creativity;  above all, to those who celebrate the power of love.  
 
-We are excited to pay our authors. Estrella House utilizes a revenue share system where authors get a portion of ad revenue generated from views to their work and a portion of submission fees. Because we are a new publication, we cannot yet guarantee any flat rates.
+We aspire to publish the ones who, in the spirit of Jack Kerouac’s vision, are “mad to live, mad to write,” mad to explore the boundless potential of stories. They are the storytellers who never settle for the commonplace, but instead burn, burn, burn with an insatiable hunger to share their truth.
+
+At Sligo Creek Publishing, we celebrate the art and craft of writing in all its forms. We believe a great story is inherently poetic, and a great poem tells a story that resonates deeply. Both should paint vivid pictures and possess a musicality that is as powerful when read aloud as it is on the page. 
+
+Our focus also extends to the vibrant voices of the Washington, DC area—a region alive with passion, creativity, and stories waiting to be told.
+
+BEARING WITNESS 2025: Poems for Troubled Times
+
+As Salman Rushdie has noted, a poem cannot stop a bullet. Nor can a chapbook shoot a rifle. No, in troubled times–like these–the poet’s job is not to soldier, but to bear witness.
+
+This is the nature of our call for submissions: poems of witness to the troubled events we’ve been experiencing in the recent past. There’s been enough trouble to encompass a wide range of topics.
+
+So send your best poems–no more than five–on what you’ve witnessed. Any length, any form. We don’t care if the poems have already been published, as long as you have retained the copyright. Submissions will be capped after 100 entries.
+
+Send your poems in .doc or .docx, formatted in 11pt Times New Roman, single spaced. Keep in mind that if your lines are longer than +/-70 characters and spaces they will break and continue on the next line.
+
+Entries will be read blind. Do not include your name on your file. A brief bio and mention of prior publication is optional.
+
+The winning poems will be featured in an anthology, BEARING WITNESS 2025. The best three will receive the following prizes:
+
+First place, $100.00
+Second place, $50.00
+Third place, $25.00
+
+Free copies of the anthology will be sent to all whose poems are included.
+
+There will be a $15.00 reading fee, to defray the costs of publication and awards.
+
+(NOTE: If you are unable to pay the fee, contact alan@sligocreekpublishing.com)
+
+What we do not want are abusive rants. We are still proudly woke at Sligo Creek Publishing.
+
+What We Are About
+Sligo Creek Publishing was founded by Alan Abrams, shortly before his 75th birthday, fueled by his frustration with the gatekeeping of powerhouse journals and submission platforms like Submittable. This press was created to provide a different path—a place where every submission receives the attention it deserves.
+
+As a boutique publishing house, we keep our calls for submissions highly targeted and prioritize poets and writers from the DC metropolitan area. This region pulses with outstanding poetry and storytelling, both written and spoken, and Sligo Creek Publishing takes an active role in supporting this thriving literary scene. We’re proud to champion local voices and support independent bookstores and organizations such as Day Eight.
+
+We aim to stay small but impactful, dedicated to curating and publishing exceptional works that set hearts and minds alight.
+
+ABOUT ALAN ABRAMS
+
+After leaving art school, Alan embarked on a cross-country journey, riding a cobbled-together BMW motorcycle and working in motorcycle shops and construction sites along the way. His career later evolved into building design, where he earned recognition as a Fellow of the American Institute of Building Design.
+
+Now, Alan lives a quieter life in Silver Spring, Maryland, with Janet Kinzer, drawing inspiration from his experiences and the world around him.
 
 .. note::
 
