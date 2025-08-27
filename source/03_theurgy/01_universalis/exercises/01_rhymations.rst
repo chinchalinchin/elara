@@ -63,6 +63,8 @@ These are problems for LLMs to solve that use the functions defined in :ref:`the
 Expressions
 -----------
 
+40. connote(type of tree)(meter=+-, part_of_spech = noun ∨ adjective)
+
 39. (resonate(state) ∪ resonate(inter)) ∩ connote(speed)
 
 TODO: Reorder
