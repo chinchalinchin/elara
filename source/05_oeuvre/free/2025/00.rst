@@ -127,6 +127,9 @@ I: Holly Tree
   * - August 26, 2025
     - Gavialidae
     - Pending
+  * - August 27, 2025
+    - La Piccioletta Barca
+    - Pending
     
 .. epigraph::
   

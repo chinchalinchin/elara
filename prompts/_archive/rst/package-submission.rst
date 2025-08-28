@@ -9,55 +9,34 @@
 Solicitation
 ============
 
-Why we need to write
-“A poem cannot stop a bullet. A novel cannot defuse a bomb. But we are not helpless. We can   sing the truth and name the liars.”  ~Salman Rushdie
+Submission Guidelines:
 
-The mission of Sligo Creek Publishing is to give voice to those who believe in fundamental human rights, who understand that diversity is the font of creativity;  above all, to those who celebrate the power of love.  
+Submit a maximum of 5 poems in a single file. Please ensure that each poem starts on a new page, and that there is no identifying information in your files. Poems should not exceed 100 lines each.
+We also accept work authored by multiple writers. There is no need to submit a piece more than once however, in the cover letter of the submission please include all relevant bios of those responsible for creating it.
+Submissions and are reviewed on a rolling monthly basis. Due to the amount of pieces we publish, we do not accept corrections to pieces after they have been submitted, so please double-check your submission before you send it to us!
+Due to the high volume of submissions we receive, we regret that we are unable to provide individualised feedback to each submission.
+For any further queries, please contact us at: piccioletta.barca.editors@gmail.com. Contributors retain all rights to their pieces.
 
-We aspire to publish the ones who, in the spirit of Jack Kerouac’s vision, are “mad to live, mad to write,” mad to explore the boundless potential of stories. They are the storytellers who never settle for the commonplace, but instead burn, burn, burn with an insatiable hunger to share their truth.
+MISSION STATEMENT
+A bedroom, abandoned on the last day of school. Flags on the wall, postcards of places visited over a long weekend, and old tickets from cinema outings. The sketch of a river before the blue is painted in, old sheet music from concerts where a friend played the cello. Scratches on the walls from stuff stuck on, taken off. 
 
-At Sligo Creek Publishing, we celebrate the art and craft of writing in all its forms. We believe a great story is inherently poetic, and a great poem tells a story that resonates deeply. Both should paint vivid pictures and possess a musicality that is as powerful when read aloud as it is on the page. 
+‍This being the sixth mission statement, La Piccioletta Barca continues to evolve. What began as an aggregation of writing and art slowly morphed into a large residence, whose rooms its inhabitants began to eclectically decorate. After three years of monthly issues, hundreds of independent contributors, multiple editors, and a dozen or so columns, exploration and evolution encapsulate the essence of La Piccioletta Barca. We accept that our motivations are constantly changing, as are the standards that guide them. 
 
-Our focus also extends to the vibrant voices of the Washington, DC area—a region alive with passion, creativity, and stories waiting to be told.
+We now look to the future and the new possibilities it might bring. Previous mission statements were united by the phrase ‘Art for Art’s Sake,’ and while the slightly cryptic quip rolled off the tongue well, it failed to capture the character of our search. Now our investigation of that statement leads us to asking other questions: how for art’s sake? and art for what’s sake, for whose sake? We haven’t yet landed on an answer, perhaps we never will. Though the specificity of those questions seem to be taking us somewhere closer.
+‍
 
-BEARING WITNESS 2025: Poems for Troubled Times
+A kitchen. Someone in a too-large T-shirt stirs butter into flour that flies onto a cutting board where another chops an onion. As the scent of paprika bubbles in the pan, a knife falls to the floor, silencing an argument. Then it begins again, ‘where did you put the salt?’ A fridge opens, a new song on the radio begins, everyone groans, ‘change it, change it’ and someone stirring yells, ‘close the door softly,’ ‘SOFTLY’ after the fridge door rebounds to slam on a cabinet. Short interactions turn into late night conversations as we all look for something to feed our appetites.
 
-As Salman Rushdie has noted, a poem cannot stop a bullet. Nor can a chapbook shoot a rifle. No, in troubled times–like these–the poet’s job is not to soldier, but to bear witness.
+‍If art, and by extension writing, can rupture our experience of the present, how can we use language to wrestle with the everyday? Our present seems filtered through artifice, in pursuit of generating ‘content’ for the sake of mass consumption. The forms and mediums they’re transmitted through encourage ephemerality and noise over presence, experience, the feeling of being alive. 
 
-This is the nature of our call for submissions: poems of witness to the troubled events we’ve been experiencing in the recent past. There’s been enough trouble to encompass a wide range of topics.
+The virtual nature of the magazine requires that we abide by the terms of an algorithm. If the experience of our present is controlled by a set of letters and numbers, arranged in order to meet desires we didn’t even know we had, surely reckoning with it must prioritise meaning over signals. Our work now turns towards exploring how art can be the mediator, an alleyway. The corridor to transport ourselves somewhere where we define the code.
 
-So send your best poems–no more than five–on what you’ve witnessed. Any length, any form. We don’t care if the poems have already been published, as long as you have retained the copyright. Submissions will be capped after 100 entries.
+A room furnished with sofas and chairs, coffee and side tables around its edge. A fireplace sits in the centre, nearby old lampshades by the edges, the furniture. The room is circular, with desks and easels and tripods and mats framing the flame, illuminating faces and sketches and letters, erased and recreated, stolen and shared with each other. There are paintings of landscapes, drafts of ideas, on the flower-wallpaper walls.
 
-Send your poems in .doc or .docx, formatted in 11pt Times New Roman, single spaced. Keep in mind that if your lines are longer than +/-70 characters and spaces they will break and continue on the next line.
+Art and literature are often portrayed as lonely pursuits. Writers sit at their desks, surrounded by stacks of books. Painters stand before their canvases, paintbrush in hand and runaway paint on the floor. In conversation with matter around them, only occasionally in the company of others. That’s maybe why some poets sit in cafes; Julio Cortázar in the London City on the corner of the Avenida de Mayo in Buenos Aires, Georges Bataille, Robert Desnos and Raymond Queneau in the Cafe de Flore in Paris, and Albert Camus, Simone de Beauvoir and Jean-Paul Sartre in the rivalling Les Deux Magots. Though there are other ways of gathering, we believe, that can encourage conversation and art to overlap.
 
-Entries will be read blind. Do not include your name on your file. A brief bio and mention of prior publication is optional.
-
-The winning poems will be featured in an anthology, BEARING WITNESS 2025. The best three will receive the following prizes:
-
-First place, $100.00
-Second place, $50.00
-Third place, $25.00
-
-Free copies of the anthology will be sent to all whose poems are included.
-
-There will be a $15.00 reading fee, to defray the costs of publication and awards.
-
-(NOTE: If you are unable to pay the fee, contact alan@sligocreekpublishing.com)
-
-What we do not want are abusive rants. We are still proudly woke at Sligo Creek Publishing.
-
-What We Are About
-Sligo Creek Publishing was founded by Alan Abrams, shortly before his 75th birthday, fueled by his frustration with the gatekeeping of powerhouse journals and submission platforms like Submittable. This press was created to provide a different path—a place where every submission receives the attention it deserves.
-
-As a boutique publishing house, we keep our calls for submissions highly targeted and prioritize poets and writers from the DC metropolitan area. This region pulses with outstanding poetry and storytelling, both written and spoken, and Sligo Creek Publishing takes an active role in supporting this thriving literary scene. We’re proud to champion local voices and support independent bookstores and organizations such as Day Eight.
-
-We aim to stay small but impactful, dedicated to curating and publishing exceptional works that set hearts and minds alight.
-
-ABOUT ALAN ABRAMS
-
-After leaving art school, Alan embarked on a cross-country journey, riding a cobbled-together BMW motorcycle and working in motorcycle shops and construction sites along the way. His career later evolved into building design, where he earned recognition as a Fellow of the American Institute of Building Design.
-
-Now, Alan lives a quieter life in Silver Spring, Maryland, with Janet Kinzer, drawing inspiration from his experiences and the world around him.
+We’re interested in moving beyond the myth of the artist as sole creator. Art like an acrobatic formation, where the foundation is as important as the decoration, the binding as much as the drafts disregarded along the way. Let’s share work in progress, discuss what we’re making, what we want to make, and respond to what we hear and learn from each other. The previous structure of our collective was united by columns with a set of constraints to follow, explore, resist. Before that, within the monthly issues, framed by a prompt, or theme. That archive will remain available on the website. Our new attire may now appear less dissimilar to traditional literary magazines: we’ve widened the categories on our website, allowing artists to broaden the horizons of the exploration of their relationship with artmaking. La Piccioletta Barca is committed to our little boat’s longevity, through the continuous reconfiguration of our dance with art.
+‍
 
 .. note::
 

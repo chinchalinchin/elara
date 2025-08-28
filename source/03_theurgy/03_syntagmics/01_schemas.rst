@@ -98,6 +98,10 @@ Ode
 
 No fixed schema.
 
+.. topic:: Horatian Ode
+
+    \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
+    
 .. list-table:: 
     
   * - Greek

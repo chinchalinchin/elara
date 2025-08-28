@@ -3055,3 +3055,38 @@ I: Sight
 | the hollow truth.
 
 - June 2025
+
+-------------------
+I: An Ode To Autumn
+-------------------
+
+| Oh! If I could touch an inch of Autumn
+|       And measure Fall in feet,
+| I might scale its depths to chart the bottom
+|       And feel the Winter heat.
+| Alas, no meters mark by foot the path
+|       Through wooded maze of trees
+|           Where leaves like life will wilt
+|               In winded wake of wrath
+|           In gusts blown cruel and dumb
+|        To lay at feet to span each foot
+| The dust each clever leaf here does become.
+|
+| As seasons pass and cast
+|       My bone layered into stone,
+| Let August dig for me a grave in brown
+|       Barrow beneath her loam.
+| Pray not a lover find these shards on shore
+|       I am no edge to skip
+|           Atop the waves of fancy
+|               But under weight sunk roar
+|           Where, offset, tides will rise
+|       To breach the sodden dike
+| And drown with wave the lazing lovers' sigh.
+|
+| To life I came already old and grim
+|           But now the chill sets in;
+| Each breath in gasp dispels to steam
+|           Of Spring now waning thin.
+
+- March 2025s
