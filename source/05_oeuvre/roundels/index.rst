@@ -1,5 +1,5 @@
-Abstracta
-=========
+Roundels
+========
 
 .. toctree::
    :maxdepth: 2
@@ -7,3 +7,4 @@ Abstracta
 
    00
    01
+   02

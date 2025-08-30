@@ -8,14 +8,11 @@ Oeuvre
 
    abstracta/index
    ballads/index
-   couplets/index
    elegies/index
-   haikus/index
+   imagistic/index
    odes/index
    pantoums/index
-   rondeaus/index
+   roundels/index
    sonnets/index
-   triolets/index
-   formal/index
-   free/index
+   verse/index
    villanelles/index

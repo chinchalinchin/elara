@@ -9,38 +9,66 @@
 Solicitation
 ============
 
-Submission Guidelines:
+Submit
+Thanks for your interest in submitting to Dogwood.  You are invited to submit to Dogwood’s annual contest, which awards $1,000 each for the best essay, story, and poem submitted during the reading period.  Finalists are chosen by the editorial staff and accepted for publication; winners are then chosen from the finalist pool by a guest judge.  All steps of the consideration process are anonymous.  If you are not interested in entering the contest but would like your work considered by Dogwood, please see the “non-contest submissions” below.
 
-Submit a maximum of 5 poems in a single file. Please ensure that each poem starts on a new page, and that there is no identifying information in your files. Poems should not exceed 100 lines each.
-We also accept work authored by multiple writers. There is no need to submit a piece more than once however, in the cover letter of the submission please include all relevant bios of those responsible for creating it.
-Submissions and are reviewed on a rolling monthly basis. Due to the amount of pieces we publish, we do not accept corrections to pieces after they have been submitted, so please double-check your submission before you send it to us!
-Due to the high volume of submissions we receive, we regret that we are unable to provide individualised feedback to each submission.
-For any further queries, please contact us at: piccioletta.barca.editors@gmail.com. Contributors retain all rights to their pieces.
+Simultaneous Submissions
 
-MISSION STATEMENT
-A bedroom, abandoned on the last day of school. Flags on the wall, postcards of places visited over a long weekend, and old tickets from cinema outings. The sketch of a river before the blue is painted in, old sheet music from concerts where a friend played the cello. Scratches on the walls from stuff stuck on, taken off. 
+Simultaneous submissions are fine; if a work is taken by a journal, just let us know. If you want to withdrawn a piece, please do so in Submittable. We are an annual teaching journal with labor provided by undergraduates, so we are slower than journals with full-time staff. We judge work in two stages, first with acceptances and then with prize money for the top in each genre. If you are entering only because you hope to win the prize, we understand–but this contest may not be for you. We’ve had instances recently of work we accepted being pulled after acceptance not because it was accepted by another journal but because the author hopes to publish somewhere else. We would like to respectfully ask you to submit to Dogwood ONLY if you actually want to be published in the journal and if you would be happy with an acceptance.
 
-‍This being the sixth mission statement, La Piccioletta Barca continues to evolve. What began as an aggregation of writing and art slowly morphed into a large residence, whose rooms its inhabitants began to eclectically decorate. After three years of monthly issues, hundreds of independent contributors, multiple editors, and a dozen or so columns, exploration and evolution encapsulate the essence of La Piccioletta Barca. We accept that our motivations are constantly changing, as are the standards that guide them. 
+Timeframe
 
-We now look to the future and the new possibilities it might bring. Previous mission statements were united by the phrase ‘Art for Art’s Sake,’ and while the slightly cryptic quip rolled off the tongue well, it failed to capture the character of our search. Now our investigation of that statement leads us to asking other questions: how for art’s sake? and art for what’s sake, for whose sake? We haven’t yet landed on an answer, perhaps we never will. Though the specificity of those questions seem to be taking us somewhere closer.
-‍
+The annual reading period for Dogwood is  July 1-September 5. During this period, we accept contest submissions through our online submission manager run by Submittable and non-contest submissions (for free) by mail. We try to get back to you within 4 months of our contest deadline of Sept. 5, which is when we begin reading. If you have waited 4 months after Sept. 5 and have not heard from us, feel free to give us a nudge via email and we will be happy to give you an update. You should receive an automatically generated email to acknowledge that your submission has been loaded into the system. You can then sign into Submittable at any point to see the status of your submission. It might not say “in process” for a few weeks because we have not yet assigned it to an editor. A recent change to Submittable causes a piece to be classified as “New” or “Unread” even if several staff members have looked at it, so our advice is to email us if you have any questions. If you are not comfortable with this timeframe, another journal might be better for your work.
 
-A kitchen. Someone in a too-large T-shirt stirs butter into flour that flies onto a cutting board where another chops an onion. As the scent of paprika bubbles in the pan, a knife falls to the floor, silencing an argument. Then it begins again, ‘where did you put the salt?’ A fridge opens, a new song on the radio begins, everyone groans, ‘change it, change it’ and someone stirring yells, ‘close the door softly,’ ‘SOFTLY’ after the fridge door rebounds to slam on a cabinet. Short interactions turn into late night conversations as we all look for something to feed our appetites.
+Please note: Dogwood is a teaching journal, which means that graduate and undergraduate students are reading alongside the editor, who reads every submission and discusses each with students before rendering her decision. This means that our consideration process takes a little longer. All contest entrants will be notified of our decision by January 15, at which time the editor notifies finalists of their status, offers publication to them, and forwards a finalist pile to the final judge, who chooses a single winner.
 
-‍If art, and by extension writing, can rupture our experience of the present, how can we use language to wrestle with the everyday? Our present seems filtered through artifice, in pursuit of generating ‘content’ for the sake of mass consumption. The forms and mediums they’re transmitted through encourage ephemerality and noise over presence, experience, the feeling of being alive. 
+Incarcerated Writers
 
-The virtual nature of the magazine requires that we abide by the terms of an algorithm. If the experience of our present is controlled by a set of letters and numbers, arranged in order to meet desires we didn’t even know we had, surely reckoning with it must prioritise meaning over signals. Our work now turns towards exploring how art can be the mediator, an alleyway. The corridor to transport ourselves somewhere where we define the code.
+Writers who are incarcerated may enter the contest by mail, by email to dogwoodliterary@gmail.com, or by CorrLinks (please send your communication requests to shuber@fairfield.edu). Submission fees are waived, and we accept submissions from incarcerated writers year-round. Sonya Huber, Editor, Dogwood, Department of English, Fairfield University, 1073 N. Benson Road, Fairfield CT 06824
 
-A room furnished with sofas and chairs, coffee and side tables around its edge. A fireplace sits in the centre, nearby old lampshades by the edges, the furniture. The room is circular, with desks and easels and tripods and mats framing the flame, illuminating faces and sketches and letters, erased and recreated, stolen and shared with each other. There are paintings of landscapes, drafts of ideas, on the flower-wallpaper walls.
+Anonymous
 
-Art and literature are often portrayed as lonely pursuits. Writers sit at their desks, surrounded by stacks of books. Painters stand before their canvases, paintbrush in hand and runaway paint on the floor. In conversation with matter around them, only occasionally in the company of others. That’s maybe why some poets sit in cafes; Julio Cortázar in the London City on the corner of the Avenida de Mayo in Buenos Aires, Georges Bataille, Robert Desnos and Raymond Queneau in the Cafe de Flore in Paris, and Albert Camus, Simone de Beauvoir and Jean-Paul Sartre in the rivalling Les Deux Magots. Though there are other ways of gathering, we believe, that can encourage conversation and art to overlap.
+All of our submissions are considered anonymously; if your name remains on the manuscript, you’ll get a note from us saying we can’t consider your work until it is rendered anonymous (see contest guidelines for assistance with that). Current and former employees and students of Fairfield University are ineligible for publication. In addition, please don’t submit if you happen to be a current or former student of the editor.
 
-We’re interested in moving beyond the myth of the artist as sole creator. Art like an acrobatic formation, where the foundation is as important as the decoration, the binding as much as the drafts disregarded along the way. Let’s share work in progress, discuss what we’re making, what we want to make, and respond to what we hear and learn from each other. The previous structure of our collective was united by columns with a set of constraints to follow, explore, resist. Before that, within the monthly issues, framed by a prompt, or theme. That archive will remain available on the website. Our new attire may now appear less dissimilar to traditional literary magazines: we’ve widened the categories on our website, allowing artists to broaden the horizons of the exploration of their relationship with artmaking. La Piccioletta Barca is committed to our little boat’s longevity, through the continuous reconfiguration of our dance with art.
-‍
+To Submit
+
+Use the button below to enter your work through Submittable. We understand that the database may not be accessible for all screen readers, so if the site is difficult for you to use, we accept direct submissions via email. Please follow the guidelines listed below and email your submission to dogwoodliterary@gmail.com. Please mention the issue of accessibility in your cover letter. Writers who are incarcerated may enter the contest by mail or by email to dogwoodliterary@gmail.com, and submission fees are waived.
+
+Non-Contest Submissions
+
+Writers who seek publication but do not want to be considered for the contest may submit on-contest submissions for free by sending them directly to the Editor at the following address: Sonya Huber, Editor, Dogwood, Department of English, Fairfield University, 1073 N. Benson Road, Fairfield CT 06824. Our non-contest submissions are notified only of acceptance. If you have not heard from us by early in the year, we have declined your non-contest submission.
+
+
+submit
+
+When you click on the link, you will be taken to an online database run by Submittable where you can upload your submission along with a very short cover letter.
+
+Contest Submission Guidelines
+
+Fiction and Nonfiction Submission Guidelines
+
+Submit fiction or nonfiction up to 22 pages using this online submission manager.
+Please title your submission with the title of your piece.
+Please double space and use 12-point font.
+Include a brief bio with contact information in the cover letter field on the submission manager, but no name should appear on the mss.
+Simultaneous submissions allowed if Dogwood is notified of acceptance elsewhere.
+Previously published work is not eligible.
+Poetry Submission Guidelines
+
+Submit one, two, or three poems (max ten pages)
+Please include all poems in one document.
+Please single space and use 12-point font.
+In the submission manager, please include the titles of all poems in your submission title (rather than “Three Poems”).
+Include a brief bio with contact information in the cover letter field on the submission manager, but no name should appear on the mss.
+Simultaneous submissions allowed if Dogwood is notified of acceptance elsewhere.
+Previously published work is not eligible.
+Deadline: September 5
+
+Work not meeting the above guidelines will not be considered for publication. All contest entries meeting these requirements will be considered for publication in the next issue of Dogwood along with selected non-contest submissions. For more information, please email shuber (at) fairfield.edu.
 
 .. note::
 
-  Need cover letter.
+  Need cover letter and title.
 
 .. _resume:
 
