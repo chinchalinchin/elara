@@ -5,7 +5,7 @@ Ode to Death
 | if i am doomed to die, to fade away,
 | then let the Summer dig for me a grave
 | so deep beneath her depths of supple clay
-| to reach the slate my roots in dying crave
+| to reach the slate my roots in dying crave,
 | so seasons pass and cast 
 |   my bone to hidden stone
 |     through layers moistened brown,
@@ -91,4 +91,7 @@ Ode to Death
     - Pending
   * - August 29, 2025
     - Thirteen Bridges Review
+    - Pending
+  * - August 29, 2025
+    - Marcus Morton Memorial Poetry Contest
     - Pending

@@ -11,9 +11,9 @@ Epistemia
    00_radix
    01_datum
    02_tabula
-   03_verborum
-   04_lexicon
-   05_dialectus
+   03_lexicon
+   04_dialectus
+   05_verborum
    06_commentariat
    07_axiomata
    08_probatum

@@ -39,7 +39,7 @@ Given below are existing definitions of poetical devices.
     - Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.
     - Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.
     - Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.
-    - Pyrrchic (Dibrachs): Two unstressed syllables. 
+    - Pyrrhic (Dibrachs): Two unstressed syllables. 
     - Amphibrach: An unstressed syllable followed by a stressed syllable and then another unstressed syllable.
     - Bacchius: An unstressed syllable followed by two stressed syllables. 
     - Antibacchius: Two stressed syllables followed by an unstressed syllable.
@@ -204,17 +204,16 @@ In other words, all operations defined in this section are to be understood as *
 2. :math:`xy` (**Concatenation**): Concatenated signs.
 3. :math:`x:y` (**Disjunction**): A sign that is either x or y.
 4. :math:`x + y` (**Separation**): Separated signs.
-5. :math:`x \circ y` (**Projection**) : Sign containing another sign. 
-6. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
-7. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
-8. :math:`x \circ y \,|\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`x` contains :math:`y`, :math:`y \subset_p x`.
+5. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
+6. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
+7. :math:`f(y) |\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`f(x)` is a poetic propositional funciton of :math:`y` [#substitution]_.
 
 .. topic:: Provisional Notation 
 
    1. #x: A lengthened sign. 
    2. ♭x: A shortened sign.  
 
-   Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs. 
+   Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs.
 
 Separation vs. Succession 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -239,108 +238,6 @@ Brackets, :math:`[]`, are used to group operations within signs by precedence.
 
 .. TODO: Substitution and Bracketing
     Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
-
-Projection
-^^^^^^^^^^
-
-It is important to clarify that projection is a *sign*. It is an object *within* the syntagmic system (or more specifically, an operation which yields an object). It serves a semantic function within the system. This differents from the metalogical nature of *containment*, which is an expression *about* the system, i.e. a truth value.
-
-.. important::
-
-    The operation of *projection* is a sign. The relation of *containment* is a truth value.
-
-To state "*y projects x*", or symbolically,
-
-.. math::
-
-    x = x \circ y
-
-Can be seen as a form of "*poetic factorization*", akin to an arithmetic relation :math:`9 = 3 \cdot 3`, where one sign is identified as a constituent (or *factor*) of another. The :math:`y` in :math:`x \circ y` will sometimes be referred to as a *factor* of :math:`x`. 
-
-The operation of projection is not commutative,
-
-.. math::
-
-    x \circ y \neq y \circ x 
-
-The sign on the lefthand side :math:`x` of a projection :math:`x \circ y` is the "*larger*" sign that contains the "*smaller*" sign :math:`y` on the righthand side. In other words, logically, if :math:`x` contains :math:`y`,
-
-.. math::
-    
-    [y \subset_p x] \implies [x \circ y = x]
-
-However, if :math:`x` does not contain :math:`y`, then :math:`x \circ y` is defined to be a caesura, :math:`\varnothing`, i.e. the absence of a syntagmic variable. 
-
-.. math::
-
-    [\neg y \subset_p x] \implies [x \circ y = \varnothing]
-
-For this reason, :math:`x \circ y` can be thought of an indicator variable that returns the first operand if it contains the second operand, and nothing if the first operand does not contain the second operand. 
-
-.. math::
-
-    [[y \subset_p x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
-
-In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
-
-Projection is logically related to appendment and prependment. Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. Both :math:`z` and :math:`y` project :math:`x`, as well,
-
-.. math::
-
-    x = x \circ y
-
-.. math::
-
-    x = x \circ z
-
-In other words, if a sign prepends or appends another sign, it also projects that sign. Taking the previous two equations and substituting the first into the second, 
-
-.. math::
-
-    x = [x \circ y] \circ z
-
-The brackets are dropped for notationally convenience and it is understood a projection is to be applied starting with the leftmost sign (:math:`y`) and moving right to the next projection operand (:math:`z`).
-
-.. math::
-
-    x = x \circ y \circ z
-
-Importantly, projection does not imply prependment or appendment. For example :math:`t = \text{on}` projects :math:`x`, but it does not prepend or append it. In other words, appendment, prependment and projection are logically related as follows,
-
-.. math::
-
-    x(y) \implies [x \circ y]
-
-And,
-
-.. math::
-
-    (y)x \implies [x \circ y]
-
-Or more succinctly,
-
-.. math::
-
-    [x(y) \lor (y)x] \implies (x \circ y)
-
-
-.. important::
-    
-    The converse of this does not hold. 
-
-The "zero" property of projection is given by noting that caesuras cannot contain anything but themselves,
-
-.. math::
-
-    [\varnothing \cdot y] = \varnothing
-
-Which aligns with the definition. In addition, the operation of projection is *idempotent*,
-
-.. math::
-
-    [x \circ y] \circ y = x \circ y
-
-The inner term, :math:`x \circ y` is guaranteed to be a sign that is either empty or contains :math:`y`. If it is empty (caesura), then, as noted, projecting it any number times will always result in a caesura. If it contains :math:`y`, then it will return the very sign that contains :math:`y`, ensuring :math:`[x \cdot y]` is well defined.
 
 .. _syntagmics-shorthand:
 
@@ -389,8 +286,8 @@ This can be represented using the operation of *succession* and the operation of
 
 .. _syntagmics-scope:
 
-Scope
------
+Rhyme Scope
+-----------
 
 The *scope* of a rhyme is denoted with a bar. Any line variable of the same character that feels under the scope of a bar rhymes, whereas the same variable used outside of the scope of the bar is not required to rhyme with the variable under the bar. An example will help clear this up. Consider the differences that separate the two poetical propositions, :math:`p` and :math:`q`,
 
@@ -547,7 +444,7 @@ The accented sign will be referred to as a *rhyme particle*. For instance, :math
 
 1. Masculine Stress
 
-A masculine rhyme occurs when the final syllable in two words is stressed and identical phonetically. For example, the following pairs of words are masculine rhymes, 
+A masculine rhyme occurs when the final syllable in two words is stressed and phonetically identical. For example, the following pairs of words are masculine rhymes, 
 
 - cat, hat
 - bright, light
@@ -561,7 +458,7 @@ A hat is used to denote a masculine ending stress,
 
 2. Feminine Stress
    
-A feminine rhyme occurs when the final syllable in two words is unstressed, and the last two syllables are identical phonetically. For example, the following pairs of words are feminine rhymes,
+A feminine rhyme occurs when the final syllable in two words is unstressed and phonetically identical. For example, the following pairs of words are feminine rhymes,
    
 - mother, another
 - flowing, going
@@ -661,7 +558,7 @@ However, off-rhymes do *not* imply the relation of *rhymation*.
 
 If the secondary relations are defined, 
 
-- :math:`\vdash`, Masculine Rhyme: :math:`x \prec y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
+- :math:`\vdash`, Masculine Rhyme: :math:`x \vdash y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
 - :math:`\Vdash`, Feminie Rhyme: :math:`x \Vdash y \equiv [\exists z: [x(\check{z) \land y(\check{z})]]`
 - :math:`\Vvdash`, Dactylic Rhyme: :math:`x \Vvdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
 
@@ -669,7 +566,7 @@ Then, the relation of *rhymation* can be defined precisely as,
 
 .. math::
 
-    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \vVdash ] y]
+    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \Vvdash ] y]
 
 Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
 
@@ -704,7 +601,7 @@ Primitive Lengths
 
     .. math::
 
-        l_{\varsigma}(p) = n \equiv p = \sum_1^n \varsigma_i
+        l(p \mid \varsigma) = n \equiv p = \sum_1^n \varsigma_i
 
 .. topic:: Line Length of a Stanza
 
@@ -801,3 +698,5 @@ With this in mind, the notion of "*poetic speed*" is formally defined as the "*d
 
 .. NOTE: 
     Should probably define speed as the *reciprocal* of this, so increasing the number of stresses "slows" the poem down.
+
+.. [#substitution] A precise definition of a *poetic propositional function* has not yet been given, but it is to be understood in the sense of a truth function, e.g. :math:`\forall p, q, f: ((p \equiv q) \land f(p)) \implies f(q)`

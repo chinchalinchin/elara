@@ -378,7 +378,6 @@ Canon Pantoum
 | Canons fired 
 | Bach is dead 
 
-
 The Maze
 --------
 
@@ -401,7 +400,6 @@ The Maze
 | and so in being, to flee
 | from unending maze departed
 | coming back to where we started
-
 
 The Sickness
 ------------
@@ -918,6 +916,34 @@ Ballad of the Venus Flytrap (Unfinished)
 | 
 | (... in progress ...)
 
+Entrendes
+---------
+
+| Rhyming love can be annoying
+| Since the effort can distract
+| From life you are enjoying.
+| 
+| With the words are you toying:
+| Of or dove? Choices so exact!
+| Rhyming love can be annoying!
+|
+| But more insipid for the cloying
+| Kind that leaves heart wracked
+| From the life you are enjoying.
+|
+| A better problem for destroying
+| An extracted word of artifact:
+| Rhyming love can be annoying.
+|
+| If care you are not employing
+| A toll the other will extract
+| From the life you are enjoying. 
+|
+| What melody the meter lacks 
+| Can be found in present acts. 
+| Rhyming love can be annoying
+| From the life you are enjoying. 
+
 Cathedral
 ---------
 
@@ -1354,8 +1380,148 @@ On The Origin of Wind
 | Each point begins with points before
 |     Always as if by rule.
 
+Untitled Something
+------------------
+
+| Of timeless things beware:
+|       In time they are deployed.
+| Each time with timeless care,
+|       In time they are destroyed.
+| No emperor or clown 
+|       Hath heard this bird once sing,
+| For history had not
+|       The eyes to see its wing.
+| Engine whine deep through night,
+|      When cities haunt the stars.
+| Ahead a stretch of road 
+|      With not one sign of cars.
+| To press the gas and hear
+|      The pistons roar with rage,
+| Closer to heaven's gate
+|     Than song of bird in cage.
+
+Schemas
+-------
+
+.. code-block:: json
+
+    {
+        "world": {
+            "inside": {
+                "subjects": [{
+                    "id": "me",
+                    "time": "now", 
+                    "location": "here",
+                    "atrributes": [
+                        ""
+                    ]
+                },{
+                    "id": "you", 
+                    "time": "gone",
+                    "location": "unknown",
+                    "attributes": [
+                        ""
+                    ]
+                }]
+            },
+            "outside": {
+                "objects": [{
+                    "time": "was",
+                    "location": "there",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "you", 
+                            "thought": ""
+                        }, {
+                            "id": "me", 
+                            "thought": ""
+                        }]
+                    }
+                }, {
+                    "time": "is",
+                    "location": "",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "me", 
+                            "thought": ""
+                        }, {
+                            "id": "me", 
+                            "thought": ""
+                        }]
+                    }
+                }, {
+                    "name": "",
+                    "time": "will",
+                    "location": "where",
+                    "metadata": {
+                        "description": "",
+                        "thoughts": [{
+                            "id": "you", 
+                            "thought": ""
+                        }]
+                    }
+                }],
+            },
+            "attributes": [{
+                "id": "",
+                "attribute": "of dualing hearts afire"
+            }, {
+                "id": "",
+                "attribute": ""
+            }]
+        }
+    }
+
+
 April
 =====
+
+Substrate
+---------
+
+.. code-block:: yaml
+
+    world:
+        meta:
+            characters:
+            - name: me
+              with: empty pockets clean             
+            - name: you
+              with: freedom's lovely sheen
+            - name: them
+              with: almost machine
+            settings:
+            - time: before
+              season: that spring 
+              where: the flocks above
+            - time: then
+              season: summer sun
+              where: in hidden cove
+            - time: and now
+              season: autumn
+              where: of white foxglove 
+            - time: null
+              season: winter hymns
+              where: the winds were wove
+            queries:
+            - key: a prayer said
+              value: in times of strain 
+            - key: a dream once slept
+              value: 
+                queries:
+                - key: a dream once slept  
+            - key: your gaze abed 
+              value: my own refrain
+            - key: what flowers wept
+              value: could not contain
+
+        life:
+            prologue: 
+                setting: before
+                queries:
+                    - key: a dream once slept
 
 April 2025
 ----------
@@ -1853,6 +2019,27 @@ Librarian IV
 |
 | Though lost at sea, amid unending storm,
 | A thought, perhaps to be, with you and warm.
+
+Librarian V
+-----------
+
+| Before we met by chance, your heart was claimed,
+| What wasted years I spent alone in trance,
+| When arrows knocked on string were freely aimed,
+| I lost my chance to ask your hand in dance.
+|
+| That life should teach me meaning bittersweet,
+| To see what honey bees in hive partake,
+| To watch the flight of doves from grounded feet,
+| I knew then not what pain in heart would ache.
+| 
+| My poison petals in your soul would bloom,
+| If fate had played its hand another way,
+| In sideways future spun by time's dread loom,
+| Your life, your love, would fall to me as prey.
+|
+| If solace cursed I am to trek this mile,
+| I only ask your love should make you smile.
 
 May
 ===
@@ -3392,7 +3579,7 @@ The Mad Muses of Sad Cracked Jack
 |   A body Jack now tends. 
 |
 | (... in progress ...)
-| 
+
 July
 ====
 
@@ -3494,7 +3681,64 @@ The Myth of Geese
 | and sing the myth of geese to gosling young.
 
 A Series of Reflections
------------------------------
+-----------------------
+
+
+First Draft
+-----------
+
+| Sometimes 
+| mere circumstance 
+| swings the sentence
+| lever with revel
+|
+| Sometimes 
+| such happenstance
+| causes syntax 
+| nips to spin
+| 
+| Sometimes 
+| pure random chance
+| is a rotor,
+| spool of loops
+|
+| Often 
+| we commandeer 
+| the stolen 
+| tool we loot.
+|
+| Often 
+| we persevere 
+| when charted
+| maps are spam.
+| 
+| Often 
+| we engineer 
+| the missing 
+| parts to strap.
+|
+| Always 
+| the flowing quells
+| deep-span
+| nap-speed.
+|
+| Always
+| the growing bells
+| deliver reviled
+| aibohphobia.
+| 
+| Always 
+| the glowing spells
+| on serif peels 
+| sleep fires, no? 
+|
+| peep a ton
+| or 
+| not a peep, 
+| oh pupil, 
+
+Second Draft
+------------
 
 | sagas!
 |
@@ -4013,3 +4257,74 @@ Snowflake Obsidian
 |
 | and waited longer under bed 
 | until i gave to you its thread.
+
+The Lives of Kites
+------------------
+
+| some years ago there came an errant kite
+| from heights unknown, descending breeze with glee.
+| 
+| in drifting down, it veered off course in flight
+| and snagged upon the tallest poplar tree.
+|
+| despite the frantic pull of frightened wind,
+| the kite was lost and stranded far astray.  
+|
+| each time i passed, its color waned and thinned
+| from red to pink, from pink to ghastly gray.
+|
+| it languished there upon its poplar perch
+| until its silk dissolved to drooping thread
+|
+| and then one day there came a sudden lurch
+| as cotton clouds of seed were flung and shed.
+|
+| the kite's remains reclaimed their place on high
+| as slivers shimmered sweetly through the sky.
+
+Ode to Death 
+------------
+
+| if i am doomed to die, to fade away,
+| then let the Summer dig for me a grave
+| so deep beneath her depths of supple clay
+| to reach the slate my roots in dying crave
+| so seasons pass and cast 
+|   my bone to hidden stone
+|     through layers moistened brown,
+| the loam of ages past
+|   from gilded breezes blown
+|     that ancient storms brought down.
+| 
+| in time, my stones will seep through Autumn seams,
+| the teeth of grinding Earth that gnash the dead,
+| returning flesh to banks of violent streams
+| where fallen leaves revive in bloody red 
+| remaining veins encased
+|   in amber pebble tombs,
+|     each waiting turns to die,
+| depart this world erased
+|   and face the end that looms
+|     in dust of covered sky. 
+|
+| so keep these shards on sheltered shores and guard
+| the song of raving larks and restless gaze;
+| let nothing chance upon my resting yard
+| as sorrow sheds its form, at last, decays;
+| i have no edge to skip 
+|   but only weight to sink,
+|     so rising tides return
+| in floods the currents whip
+|   to Winter's very brink,
+|     my stirring final churn.
+|
+| and when my ripples flatten back to glass
+| remember once again the scent of Spring, 
+| perfumed with wasted youth and sassafras,
+| regret dissolved to tempest underwing,
+| ascending cloudless heights 
+|   through heaven's darkest spheres,
+|     diluting down to air,
+| returning now as lights,
+|   this starry nest appears
+|     to mark my vast despair.
