@@ -1,7 +1,6 @@
 .. NOTE: 
-    The following document was generated with Sphinx using the following LaTeX preamble in the ```conf.py```
-    
-        latex_preamble = r"""
+    .. The following document contains LaTeX that was generated with the following preamble,
+
         \usepackage{babel}
         \babelprovide[import, main]{coptic} 
         \usepackage{amssymb}
@@ -10,7 +9,6 @@
         \usepackage{lmodern}
         \usepackage{runic}
         \usepackage{textcomp}
-        """
 
 .. _syntagmics:
 
@@ -26,6 +24,7 @@ Syntagmics
    01_schemas
    02_decompositions
    03_theorems
+   04_appendix
 
 .. TODO: 
     Research 

@@ -29,8 +29,8 @@ Axioms
 .. TODO: Axiom 3
     This is also not quite right. Need some way of expressing "*necessarily*". The scope of rhymes over the entire poem isn't *necessarily* equivalent to the scope of the rhymes within the stanzas. 
 
-Theorems
---------
+.. Theorems
+.. --------
 
 .. TODO: Theorems
     - The speed of iambic and trochaic meter is 1/2. The speed of dactylic and anapestic meter is 1/3. The speed of spondaic meter is 1. The speed of pyrrhic meter is 0. 

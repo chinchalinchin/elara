@@ -63,7 +63,7 @@ Ballade
 
     .. math::
 
-        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E:{c^2}{d^2}.e.d.E]
+        \sum_1^5 \overline{{[a.b]^2}.{c^2}.{d^2}.e.d.E + [{d^2}.e.d.E:{c^2}{d^2}.e.d.E]}
 
 **References**
 
@@ -100,7 +100,9 @@ No fixed schema.
 
 .. topic:: Horatian Ode
 
-    \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
+    .. math::
+
+        \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
     
 .. list-table:: 
     
@@ -249,23 +251,48 @@ Six sestets followed by a tercet envoi.
     .. math::
 
         u(\mathrm{A}).v(\mathrm{B}).w(\Gamma).x(\Delta).y(\mathcal{E}).z(\mathcal{Z}) + 
+    
+    .. math::
+
         u(\mathcal{Z}).v(\mathrm{A}).w(\mathcal{E}).x(\mathrm{B}).y(\Delta).z(\Gamma) + 
+        
+    .. math::
+
         u(\Gamma).v(\mathcal{Z}).w(\Delta).x(\mathrm{A}).y(\mathrm{B}).z(\mathcal{E}) +
+        
+    .. math::
+
         u(\mathcal{E}).v(\Gamma).w(\mathrm{B}).x(\mathcal{Z}).y(\mathrm{A}).z(\Delta) +
+        
+    .. math::
+
         u(\Delta).v(\mathcal{E}).w(\mathrm{A}).x(\Gamma).y(\mathcal{Z}).z(\mathrm{B}) +
+        
+    .. math::
+
         u(\mathrm{B}).v(\Delta).w(\mathcal{Z}).x(\mathcal{E}).y(\Gamma).z(\mathrm{A}) + 
         [t_1:t_2] | 
+    
+    .. math::
+
         t1 = ((u \circ \mathrm{A}) \circ \mathrm{B}).((v \circ \Gamma) \circ \Delta).((w \circ \mathcal{E}) \circ \mathcal{Z}),
+    
+    .. math::
+
         t2 = ((u \circ \mathrm{A}) \circ \Delta).((v \circ \mathrm{B}) \circ \mathcal{E}).((w \circ \Gamma) \circ \mathcal{Z}),
 
 .. TODO: Projection Bug
     I don't think the current definition of projection will ensure `t_1` and `t_2` aren't empty, i.e. I think caesures will satisfy this schema!
 
+.. important::
+
+    Refer to the :ref:`Appendix <syntagmics-appendix>` for a provisional definition of :ref:`projection <syntagmics-projection>`.
+    
 **References**
 
 - `Sestina (Bishop)`_, Elizabeth Bishop
 - `Sestina of the Tramp-Royal`_, Rudyard Kipling
-- `Sestina, Travel Notes`_, 
+- `Sestina, Travel Notes`_, Weldon Kees
 
 .. _sonnet:
 
