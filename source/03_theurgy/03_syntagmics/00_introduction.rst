@@ -12,10 +12,10 @@ Section I: Introduction
 
 .. _syntagmics-prior-definitions:
 
------------------
-Prior Definitions
------------------
+Praeparatio
+-----------
 
+-----------
 Mathematics 
 -----------
 
@@ -27,6 +27,7 @@ The sum :math:`\sum` symbol will be borrowed from mathematics and extended over 
 
 Should be attended with the utmost care. When :math:`x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
 
+-------
 Poetics
 -------
 
@@ -70,7 +71,6 @@ Given below are existing definitions of poetical devices.
 
 .. _syntagmics-formalization:
 
--------------
 Formalization
 -------------
 
@@ -92,6 +92,7 @@ In this formalization, English letters will be used to represent lines, Greek le
 
 .. _syntagmics-constants:
 
+---------
 Constants
 ---------
 
@@ -107,10 +108,12 @@ Constants
 9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
 10. The lowercase Fraktur letter :math:`\mathfrak{p}` is reserved for pyrrchis (dibrachs)
 11. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
-12. The ampersand :math:`\text{&}` represents blank newlines. 
+
+The caesura deserves special mention. In poetics, a caesura represents a dramatic or structural pause.
 
 .. _syntagmics-variables:
 
+---------
 Variables
 ---------
 
@@ -148,18 +151,23 @@ The intent behind defining :math:`p` and :math:`q` as "*poetic*" variables is to
 
 .. _syntagmics-relations:
 
+---------
 Relations
 ---------
 
 All syntagmic relations are to be understood as truth values, meaning each expression results in a judgement of truth or falsity. 
 
-1. :math:`y \subset_p x` (**Containment**): The sign y is contained in the sign x. 
+.. topic:: Containment
+
+    .. math::
+
+        y \subset_p x
 
 .. important::
 
     The subscript *p* is used to differentiate containment from the set relation of "*subset*".
 
-The relation of "contains" extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
+If :math:`y subset_p x`, then the sign :math:`y` is said to be "*contained*" in the sign :math:`x`. The relation of "*contains*" extends up the levels of the syntagmic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
 - Words contain syllables
 - Lines contain words and syllables
@@ -183,30 +191,38 @@ Similarly, for each syllable :math:`\rho` in :math:`\{ \text{Though}, ... \text{
 
     \rho \subset_p x
 
-2. :math:`x \parallel y` (**Rhymation**): The sign x rhymes with the sign y. 
+The relations of *pendment* can be defined through containment and concatenation,
 
-The relation of "*rhymes with*", or *rhymation*, is defined more precisely in :ref:`syntagmics-rhymation` section.
+.. topic:: Pendment
+
+    x \sim y \equiv [y \subset_p x] \land [\exists w: x = wy]
+
+If :math:`x \sim y`, :math:`y` is said to *append* :math:`x`, or inversely, :math:`x` is said to *prepend* :math:`y`.
+
+The relation of *pendment* will be important when rhymation is defined more thoroughly in :ref:`syntagmics-rhymes` sectoin. For now, this section will close by introducing the symbolic relation of rhymation,
+
+.. topic:: Rhymation
+
+    The sign :math:`x` rhymes with the sign :math:`y`,
+
+    .. math::
+
+        x \parallel y
 
 .. _syntagmics-operations:
 
+----------
 Operations
 ----------
 
-This section introduces the primitive operations of *syntagimcs*. 
+This section introduces the operations of *syntagmics*. These are the verbs of the system. They are used to express syntagmic proposition *within the system*.
 
-.. important::
+In other words, all operations defined in this section are to be understood as *object* level constructs, in contradistinction to :ref:`relations <syntagmics-relations>` like containment or rhymation which are predicated of objects and yield truth-values as a result. All syntagmic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
 
-    These are the verbs of the system. They are used to express syntagmic proposition *within the system*.
-
-In other words, all operations defined in this section are to be understood as *object* level constructs, in contradistinction to :ref:`relations <syntagmics-relations>` like containment or rhymation which are predicated of objects and yield judgements as a result. All syntagmic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
-
-1. :math:`x.y` (**Succession**): Successive signs.
-2. :math:`xy` (**Concatenation**): Concatenated signs.
-3. :math:`x:y` (**Disjunction**): A sign that is either x or y.
-4. :math:`x + y` (**Separation**): Separated signs.
-5. :math:`x(y)` (**Appendment**): A sign ending in another sign.  
-6. :math:`(y)x` (**Prependment**): A sign beginning with another sign 
-7. :math:`f(y) |\, y = z` (**Substitution**): Substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`f(x)` is a poetic propositional funciton of :math:`y` [#substitution]_.
+1. **Concatenation** :math:`xy`
+2. **Succession** :math:`x.y`
+3. **Disjunction** :math:`x:y`
+4. **Separation** :math:`x + y`
 
 .. topic:: Provisional Notation 
 
@@ -231,18 +247,55 @@ Where as :math:`x + y` means,
 
 From this, it can be see the operation of *successions* inserts a new line at the end of first line, whereas the operation of *separation* inserts a new line after the first line *and* before the second line, to create a blank line between them. In effect, the operation of *separation* creates stanzas, whereas the operation of *succession* creates lines within stanzas. 
 
-Brackets
-^^^^^^^^
+Substitution
+^^^^^^^^^^^^
 
-Brackets, :math:`[]`, are used to group operations within signs by precedence.
+.. topic:: Substitution
 
-.. TODO: Substitution and Bracketing
-    Substitution needs to be clarified with respect to how it operates with brackets. Currently, the meaning of a.[b+c] would be equivalent to a.b + c, meaning succession doesn't distribute. This isn't necessarily a problem, but it should be commented on and discussed. There is ambiguity here.
+    :math:`f(y) |\, y = z` 
+    
+This is to indicate one should substitute :math:`z` for :math:`y` in the sign :math:`x`, where :math:`f(x)` is a poetic propositional funciton of :math:`y` [#substitution]_.
+
+Algebraic Properties
+^^^^^^^^^^^^^^^^^^^^
+
+Brackets, :math:`[]`, are used to group operations within signs by precedence. However, before adopting their use, several properties of the operations of succession and separationg need to be clarified. 
+
+The major difference of syntagmics over other formal language theories is the introduction of separation and succession, which encapsulate aesthetic functions employed by poetical constructions, i.e. the artistic insertion of new lines to create a certain rhythym, prosody or physical appearance. These operations allow a broad scope of poetic phenomena to be formalized. In other words, while the semantic content of the sign is unaltered by these operations, the *poetic*, or *syntagmic*, content of the sign is dramatically affected. 
+
+Syntagmics is based on *noncommutativity*. None of its operations commute, e.g. :math:`x.y \neq y.x` and :math:`x + y \neq y + x`. However, this does not mean a syntagmic algebra cannot be constructed. The following relationship between separation and succession is a direct result of their definition as operations that insert new lines,
+
+.. math::
+
+    x.\varnothing.y = x + y
+
+In essence, placing a caesura between a succession is equivalent to separating those two signs into stanzas. For this reason, either separation or succession may be regarded individually as primitive and the other may be defined in the terms of the one. 
+
+This identity allows the analogue of the *distributive* property of syntagmics to be expressed in terms of the *associative* property of succession,
+
+.. math::
+        
+    x.[y + z] = x.[y.\varnothing.z]
+
+In other words, in a syntagmic system one can either have *associativity* of succession, i.e. :math:`x.[y.z] = [x.y].z`, or the *distributivity* of succession over separation, i.e. :math:`x.[y + z] = x.y + x.z`, but *not both*. The current system prioritizes the associativity of succession, i.e.
+
+.. math::
+
+    x.[y.z] = [x.y].z
+
+To make this concrete, let :math:`x = \text{cat}`, :math:`y = \text{rat}` and :math:`z = \text{hat}`. Consider the expression :math:`x.[y + z]`. To preserve the associativity of succession, the operation of separation inside of the brackets must be applied first, resulting in the composite sign,
+
+| cat
+| rat 
+| 
+| hat
+
+.. TODO: The caesura may be accumulating too much responsibility here. I am not sure it should be used to represent blank lines.
 
 .. _syntagmics-shorthand:
 
 Shorthand
----------
+^^^^^^^^^
 
 Shorthand notation is introduced in this section to extend the primitive operations defined in the previous seciton.
 
@@ -284,47 +337,10 @@ This can be represented using the operation of *succession* and the operation of
 
     p = a^3 + b^3
 
-.. _syntagmics-scope:
-
-Rhyme Scope
------------
-
-The *scope* of a rhyme is denoted with a bar. Any line variable of the same character that feels under the scope of a bar rhymes, whereas the same variable used outside of the scope of the bar is not required to rhyme with the variable under the bar. An example will help clear this up. Consider the differences that separate the two poetical propositions, :math:`p` and :math:`q`,
-
-.. math::
-
-   p = \overline{a.b.a} + \overline{a.b.a}
-
-.. math::
-
-   q = \overline{a.b.a + a.b.a}
-
-In the case of *p*, the line variable *a* in the first stanza is not required to rhyme with the line variable *a* in the second stanza. In the case of *q*, the line variable *a* in both the first and second stanza must rhyme. For example, the following values of *p* and *q* satisfy these definitions. For *p*,
-
-    | the dog is brown 
-    | the cat is green.
-    | the fish does drown. 
-    |
-    | the dog is blue. 
-    | the cat is red. 
-    | the fish eats you. 
-
-Whereas for *q*,
-
-    | the dog is brown 
-    | the cat is green 
-    | the fish does drown
-    |
-    | the dog does frown.
-    | the cat is mean. 
-    | the fish gets down. 
-
-If the bar is omitted from a sign, it is implied to extend over the entire proposition.
-
 Examples
---------
+^^^^^^^^
 
-**Primitive Operations**
+**Poetic Expressions**
 
 :math:`a.b.a`
     A tercet where the first and third lines rhyme. 
@@ -375,8 +391,193 @@ In general, an arbitrary number of rhyming couplets can be represented,
 
     p = \sum_1^n \overline{a^2}
 
+.. _syntagmics-rhymes:
+
+------
+Rhymes
+------
+
+.. _syntagmics-scope: 
+
+Scope
+^^^^^
+
+The *scope* of a rhyme is denoted with a bar. Any line variable of the same character that feels under the scope of a bar rhymes, whereas the same variable used outside of the scope of the bar is not required to rhyme with the variable under the bar. An example will help clear this up. Consider the differences that separate the two poetical propositions, :math:`p` and :math:`q`,
+
+.. math::
+
+   p = \overline{a.b.a} + \overline{a.b.a}
+
+.. math::
+
+   q = \overline{a.b.a + a.b.a}
+
+In the case of *p*, the line variable *a* in the first stanza is not required to rhyme with the line variable *a* in the second stanza. In the case of *q*, the line variable *a* in both the first and second stanza must rhyme. For example, the following values of *p* and *q* satisfy these definitions. For *p*,
+
+    | the dog is brown 
+    | the cat is green.
+    | the fish does drown. 
+    |
+    | the dog is blue. 
+    | the cat is red. 
+    | the fish eats you. 
+
+Whereas for *q*,
+
+    | the dog is brown 
+    | the cat is green 
+    | the fish does drown
+    |
+    | the dog does frown.
+    | the cat is mean. 
+    | the fish gets down. 
+
+If the bar is omitted from a sign, it is implied to extend over the entire proposition.
+
+Stress
+^^^^^^
+
+In order to express the different categories of rhymes that may be used to aggregates lines into a scheme, notation is introduced to *accent* a sign to indicate its ending stress. 
+
+If a sign has no accent mark, then any type of stress satisfies the sign.
+
+.. note::
+
+    Stress accents can affix both lines :math:`u` and words :math:`\lambda`. They do *not* operate on syllables. 
+
+The accented sign will be referred to as a *rhyme particle*. For instance, :math:`\hat{x}` (to be defined immediately) is a *rhyme particle*. In and of itself, it does not denote a rhyme. It is only in the context of a poetical proposition that it can be said to bear the meaning of a "*rhyme*". By writing :math:`\hat{x}`, all that has been stated is the syllabic form of the sign. In effect, the hat encodes the syllabic form and the vartiable encodes the rhyme scheme. 
+
+1. Masculine Stress
+
+A masculine rhyme occurs when the final syllable in two words is stressed and phonetically identical. For example, the following pairs of words are masculine rhymes, 
+
+- cat, hat
+- bright, light
+- despair, compare
+
+A hat is used to denote a masculine ending stress,
+
+.. math::
+
+    \hat{x} \equiv \exists Ⲡ: x \sim Ⲡ
+
+2. Feminine Stress
+   
+A feminine rhyme occurs when the final syllable in two words is unstressed and phonetically identical. For example, the following pairs of words are feminine rhymes,
+   
+- mother, another
+- flowing, going
+
+A check is used to denote a feminine ending stress,
+
+.. math::
+
+    \check{x} \equiv \exists Ⲡ,ⲡ: x \sim Ⲡⲡ
+
+3. Dactylic Stress
+
+A dactylic rhyme occurs when two words ends in identical dactyls. For example, the following pairs of words are dactylic rhymes, 
+
+- happily, snappily
+- tenderness, slenderness
+
+A dot is used to denote a dactylic ending stress, 
+
+.. math::
+
+    \dot{x} \equiv \exists Ⲡ, {ⲡ_1}, {ⲡ_2}: x \sim Ⲡ{ⲡ_1}{ⲡ_2}
+
+4. Off Stress
+
+An off rhyme involves imperfect sound correspondence (assonance, consonance, etc.). For example, the following pairs are off rhymes, 
+
+- bottle, fiddle (syllabic rhyme)
+- hammer, carpenter (weak rhyme)
+
+A tilde is used to denote an off stress, 
+
+.. math::
+
+    \tilde{x} \equiv [ ... ]
+
+Where "..." represents as yet undetermined operation.
+
+.. note:: 
+
+    Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
+
+**Shorthand**
+
+To avoid unnecessary complexity, the following notations are defined. In the case of masculine rhyme particles,
+
+.. math::
+
+    \hat{x.y} = \hat{x}.\hat{y} 
+
+.. math::
+
+    \hat{x + y} = \hat{x} + \hat{y}
+
+.. math::
+
+    \hat{x:y} = \hat{x}:\hat{y}
+
+Similarly for the other types of rhyme particles. 
+
+Logical Structure
+^^^^^^^^^^^^^^^^^
+
+Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. Rhymation is meant to explicate the relation of "*perfect rhymes*" within the formal system being developing.
+
+It should first be noted, by :ref:`definition <syntagmics-variables>`, that all signs rhyme with themselves,
+
+.. math::
+
+    x \parallel x
+
+Furthermore, if an arbitary sign :math:`x` rhymes with the sign :math:`y`, then :math:`y` rhymes with :math:`x`, and visa versa,
+
+.. math::
+
+    x \parallel y \equiv y \parallel x
+
+If two arbitrary signs :math:`x` and :math:`y` end in the same masculine particle, :math:`z`, then they rhyme,
+
+.. math::
+
+    [[x \sim \hat{z}] \land [y \sim \hat{z}]] \implies x \parallel y
+
+If two arbitrary signs :math:`x` and :math:`y` end in the same feminine particle, :math:`z`, then they rhyme,
+
+.. math::
+
+    [[x \sim \check{z}] \land [y \sim \check{z}]] \implies x \parallel y
+
+If two arbitary signs end in the same dactylic particle, then they rhyme, 
+
+.. math::
+
+    [[x \sim \dot{z}] \land [y \sim \dot{z}]] \implies x \parallel y
+
+However, off-rhymes do *not* imply the relation of *rhymation*.
+
+If the secondary relations are defined, 
+
+- :math:`\vdash`, Masculine Rhyme: :math:`x \vdash y \equiv [[x \sim \hat{z}] \land [y \sim \hat{z}]]`
+- :math:`\Vdash`, Feminine Rhyme: :math:`x \Vdash y \equiv [[x \sim \check{z}] \land [y \sim \check{z}]]`
+- :math:`\Vvdash`, Dactylic Rhyme: :math:`x \Vvdash y \equiv  [[x \sim \dot{z}] \land [y \sim \dot{z}]]`
+
+Then, the relation of *rhymation* can be defined precisely as, 
+
+.. math::
+
+    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \Vvdash ] y]
+
+Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
+
 .. _syntagmics-meter:
 
+-----
 Meter
 -----
 
@@ -424,162 +625,8 @@ The scope of a meter extends to everything contained in the parenthesis it marks
 
 Denotes a rhyming couplet where each line is written in iambic tetrameter. 
 
-.. _syntagmics-rhymation:
-
-Rhymation
----------
-
-Ending Stress
-^^^^^^^^^^^^^
-
-In order to express the different categories of rhymes that may be used to aggregates lines into a scheme, notation is introduced to *accent* a sign to indicate its ending stress. 
-
-If a sign has no accent mark, then any type of stress satisfies the sign.
-
-.. note::
-
-    Stress accents can affix both lines :math:`u` and words :math:`\lambda`. They do *not* operate on syllables. 
-
-The accented sign will be referred to as a *rhyme particle*. For instance, :math:`\hat{x}` (to be defined immediately) is a *rhyme particle*. In and of itself, it does not denote a rhyme. It is only in the context of a poetical proposition that it can be said to bear the meaning of a "*rhyme*". By writing :math:`\hat{x}`, all that has been stated is the syllabic form of the sign. In effect, the hat encodes the syllabic form and the vartiable encodes the rhyme scheme. 
-
-1. Masculine Stress
-
-A masculine rhyme occurs when the final syllable in two words is stressed and phonetically identical. For example, the following pairs of words are masculine rhymes, 
-
-- cat, hat
-- bright, light
-- despair, compare
-
-A hat is used to denote a masculine ending stress,
-
-.. math::
-
-    \hat{x} = x(Ⲡ)
-
-2. Feminine Stress
-   
-A feminine rhyme occurs when the final syllable in two words is unstressed and phonetically identical. For example, the following pairs of words are feminine rhymes,
-   
-- mother, another
-- flowing, going
-
-A check is used to denote a feminine ending stress,
-
-.. math::
-
-    \check{x} = x(Ⲡⲡ)
-
-3. Dactylic Stress
-
-A dactylic rhyme occurs when two words ends in identical dactyls. For example, the following pairs of words are dactylic rhymes, 
-
-- happily, snappily
-- tenderness, slenderness
-
-A dot is used to denote a dactylic ending stress, 
-
-.. math::
-
-    \dot{x} = x(Ⲡ{ⲡ_1}{ⲡ_2})
-
-4. Off Stress
-
-An off rhyme involves imperfect sound correspondence (assonance, consonance, etc.). For example, the following pairs are off rhymes, 
-
-- bottle, fiddle (syllabic rhyme)
-- hammer, carpenter (weak rhyme)
-
-A tilde is used to denote an off stress, 
-
-.. math::
-
-    \tilde{x} = [ ... ]
-
-Where "..." represents as yet undetermined operation.
-
-.. note:: 
-
-    Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
-
-**Shorthand**
-
-To avoid unnecessary complexity, the following notations are defined. In the case of masculine rhyme particles,
-
-.. math::
-
-    \hat{x.y} = \hat{x}.\hat{y} 
-
-.. math::
-
-    \hat{x + y} = \hat{x} + \hat{y}
-
-.. math::
-
-    \hat{x:y} = \hat{x}:\hat{y}
-
-Similarly for the other types of rhyme particles. 
-
-Logical Structure
-^^^^^^^^^^^^^^^^^
-
-Now that notation has been introduced to formalize rhyme structure in a poem, the relation of *rhymation* can be clarified. Rhymation is meant to explicate the relation of "*perfect rhymes*" within the formal system being developing.
-
-It should first be noted, by :ref:`definition <syntagmics-variables>`, that all signs rhyme with themselves,
-
-.. math::
-
-    x \parallel x
-
-Furthermore, if an arbitary sign :math:`x` rhymes with the sign :math:`y`, then :math:`y` rhymes with :math:`x`, and visa versa,
-
-.. math::
-
-    x \parallel y \equiv y \parallel x
-
-If two arbitrary signs :math:`x` and :math:`y` end in the same masculine particle, :math:`z`, then they rhyme,
-
-.. math::
-
-    [x(\hat{z}) \land y(\hat{z})] \implies x \parallel y
-
-If two arbitrary signs :math:`x` and :math:`y` end in the same feminine particle, :math:`z`, then they rhyme,
-
-.. math::
-
-    [x(\check{z}) \land y(\check{z})] \implies x \parallel y
-
-If two arbitary signs end in the same dactylic particle, then they rhyme, 
-
-.. math::
-
-    [x(\dot{z}) \land y(\dot{z})] \implies x \parallel y
-
-However, off-rhymes do *not* imply the relation of *rhymation*.
-
-If the secondary relations are defined, 
-
-- :math:`\vdash`, Masculine Rhyme: :math:`x \vdash y \equiv [x(\hat{\lambda}) \land y(\hat{\lambda})]`
-- :math:`\Vdash`, Feminie Rhyme: :math:`x \Vdash y \equiv [\exists z: [x(\check{z) \land y(\check{z})]]`
-- :math:`\Vvdash`, Dactylic Rhyme: :math:`x \Vvdash y \equiv  [x(\dot{\lambda}) \land y(\dot{\lambda})]`
-
-Then, the relation of *rhymation* can be defined precisely as, 
-
-.. math::
-
-    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \Vvdash ] y]
-
-Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
-
-.. _syntagmics-definitions:
-
------------
-Definitions 
------------
-
-With the primitive foundations of *syntagmics* laid, definitions are now given for quantities of 
-
 Lengths
--------
+^^^^^^^
 
 A poetic sign has many different notions of "*length*" beyond the purely linguistic lengths of a sentence. A sentence, as it is conceived in the fields of formal linguistic, can be broken into sequences of characters, words or phonemes (among other categorizations). A poetic sign possesses these notions of length as a result of its embodiment in the medium of language, but it also possesses dimensions of length over and above the lengths prescribed by syntax, semantics and pragmatics. These concepts of length are derived from the structure of poetic signs and represent a space orthogonal to conventional formal linguistics where the semantics of poems are encoded. These different, but interrelated notions of length, are listed directly below and then defined,
 
@@ -590,8 +637,7 @@ A poetic sign has many different notions of "*length*" beyond the purely linguis
 - Syllable Length of a Stanza
 - Syllable Length of a Poem
 
-Primitive Lengths
-^^^^^^^^^^^^^^^^^
+**Primitive Lengths**
 
 "*Primitive*" lengths are the immediately measureable quantities of a poem. 
 
@@ -627,8 +673,7 @@ In effect, the stanza length of a poem is defined as the number times the operat
 
 The notation, :math:`l(p \mid \varsigma)`, :math:`l(\varsigma \mid u)` and :math:`l(u \mid \rho)` is meant to invoke the concept of "*conditioning*" from Bayesian analysis. Each type of length is relative to the particular formal term within a syntagmic sign that falls to the right the :math:`\mid` marker. 
 
-Derivative Lengths
-^^^^^^^^^^^^^^^^^^
+**Derivative Lengths**
 
 There are several other concepts of length that are derived directly from these definitions, illustrating how these "*basic*" units of syntagmic length interconnect to form more abstract notions of length. 
 
@@ -669,7 +714,7 @@ There are two ways to define the syllable length of a poem. It can either be def
 In the previous three definition, the "*condition*" of the summation limit becomes the summand's length, while the "*condition*" of the summand becomes the "*condition*" of the result. This is directly analogous to dimensional analysis in fields of science, where the units of two quantities must cancel out in order for the result to be unitless. This can be viewed a type of a "*poetic dimensional analysis*".
 
 Speed
------
+^^^^^
 
 This document opened with a quote by Alexander Pope that illustrates a phonological phenomenon that is often employed poetically for effect: sentences with clusters of stressed syllables in sequence have the psychological effect of appearing "*slow*", as opposed to anapestic or dactylic rhythms which are often associated with "*galloping*" or "*rapid*" paces. In other words, there is a correlation between the perceived "*speed*" of a poem and its use syllabic stresses. 
 
@@ -694,9 +739,8 @@ With this in mind, the notion of "*poetic speed*" is formally defined as the "*d
 
     .. math::
 
-        \mathfrak{u}(x) = \frac{l(x \mid Ⲡ)}{l(x \mid \rho)}
+        \mathfrak{u}(x) = \frac{l(x \mid \rho)}{l(x \mid Ⲡ)}
 
-.. NOTE: 
-    Should probably define speed as the *reciprocal* of this, so increasing the number of stresses "slows" the poem down.
+.. TODO: This definition assumes all lines must possess at least one stressed syllable. Before refining this definition, however, it would probably be beneficial to elaborate on how the stress of a caesura is to be interpretted in the system.
 
 .. [#substitution] A precise definition of a *poetic propositional function* has not yet been given, but it is to be understood in the sense of a truth function, e.g. :math:`\forall p, q, f: ((p \equiv q) \land f(p)) \implies f(q)`

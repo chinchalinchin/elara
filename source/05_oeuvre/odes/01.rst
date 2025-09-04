@@ -114,3 +114,6 @@ Ode to the Heron
   * - August 26, 2025
     - Gavialidae
     - Pending
+  * - September 3, 2025
+    - Hopkins Review
+    - Pending

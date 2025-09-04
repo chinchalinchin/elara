@@ -4,7 +4,7 @@
     
 .. MODE: TREND ANALYSIS
 .. 
-.. This a collection of poetry over time. Extract any relevant trends displayed in the author's writing style, grammar, themes, tones, style, writing evolution, etc.
+.. This a collection of poetry over time. Extract any relevant trends displayed in the author's writing style, grammar, themes, tones, style, writing evolution, etc. Project the trajectory of the next few months.
 
 Feburary
 ========
@@ -1227,7 +1227,7 @@ The Paronymous Polyptotons of Love
 ----------------------------------
 
 | "πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται."
-|    - `Categories`_, 7.15, Aristotle
+|    - Categories, 7.15, Aristotle
 |
 | I am an am that was an is,
 |   a life those lives through living live,
@@ -1618,7 +1618,7 @@ Chance
 | Unlocked by strike of luck and never late.
 
 Chance (Revision)
-----------------
+-----------------
 
 | A death is face of die on roll,
 |   A stack that antes all.
@@ -4328,3 +4328,53 @@ Ode to Death
 | returning now as lights,
 |   this starry nest appears
 |     to mark my vast despair.
+
+September 
+=========
+
+Ode to the Absent
+-----------------
+
+| the Sunday mornings hang in clouds of smoke
+| above my head where thoughts of you reside
+| recalling times my clumsy fingers broke
+| some stitch or knot your fingers deftly tied,
+| or when you'd measure out your thread
+|    to fix the errors made
+|        and sew it back anew,
+| i knew when watching as you spread
+|    the fiber that i frayed,
+|        i never would be you.
+|
+| what cluttered racks of vinyl rolls to stack
+| against the walls where once you puffed your pipe,
+| the only imitation i could crack
+| now burning in my teeth, a cherry ripe
+| as molten metal cast in molds
+|    before the water chills
+|        and shapes the studs with steam
+| to snaps you press through sheets and folds
+|    of layered woven twills,
+|        to hide the lonely seam.
+|
+| the intersecting threads of me through strands
+| of silken plumes, they needle past my lips
+| from dying gears that spin beneath your hands
+| and weave the pattern drawn by fingertips
+| upon the fabric draping down
+|    in wrinkled folds of cloth
+|        unrolled in hazy rooms,
+| the one you sketched with focused frown
+|    and cut to clear the swath
+|        of me that burns and fumes.
+|
+| these empty rooms of tools you left behind,
+| as if one day i'd understand their use,
+| instead infected specks of rust i grind
+| with oiled stones on spinning spokes that loose 
+| eroded flakes of showered flames
+|    and spray the ground with red,
+|        the dust of wasted time,
+| each careful pass of sparks reclaims
+|    the last remains you shed, 
+|        the gleam that hides in grime.

@@ -9,62 +9,30 @@
 Solicitation
 ============
 
-Submit
-Thanks for your interest in submitting to Dogwood.  You are invited to submit to Dogwood’s annual contest, which awards $1,000 each for the best essay, story, and poem submitted during the reading period.  Finalists are chosen by the editorial staff and accepted for publication; winners are then chosen from the finalist pool by a guest judge.  All steps of the consideration process are anonymous.  If you are not interested in entering the contest but would like your work considered by Dogwood, please see the “non-contest submissions” below.
+Our Mission
+The mission of The Hopkins Review is to publish today’s vital voices and visions in literature, culture, criticism, public-facing scholarship, and the arts. In 2022, we celebrated our 15th year of continuous publishing with a commitment to creative excellence and its dynamic, diverse, and inclusive present and future. The Hopkins Review is a partnership between two venerable literary entities, the Writing Seminars at Johns Hopkins University (the country’s second-oldest degree-granting creative writing program, est. 1947) and the Johns Hopkins University Press (the country’s oldest continuously running university press, est. 1878). Curated by editor in chief Dora Malech, fiction editor Danielle Evans, and an editorial staff of talented emerging writers honing their own craft in the Writing Seminars, The Hopkins Review endeavors to feature a unique blend of tradition and innovation reflective of both its deep roots and vibrant intergenerational team. We strive to bring the international, national, and local together under one cover, contributing to Johns Hopkins University’s broader mission of “knowledge for the world” by engaging international voices and conversations alongside our nation’s most exciting established and emerging writers and platforming the rich artistic and literary community of our home city of Baltimore on that same global stage. We believe in building a local, national, and international community of readers that connects and coheres around a shared love of literature and culture. Thank you for being a part of The Hopkins Review community.
 
-Simultaneous Submissions
+Our History
 
-Simultaneous submissions are fine; if a work is taken by a journal, just let us know. If you want to withdrawn a piece, please do so in Submittable. We are an annual teaching journal with labor provided by undergraduates, so we are slower than journals with full-time staff. We judge work in two stages, first with acceptances and then with prize money for the top in each genre. If you are entering only because you hope to win the prize, we understand–but this contest may not be for you. We’ve had instances recently of work we accepted being pulled after acceptance not because it was accepted by another journal but because the author hopes to publish somewhere else. We would like to respectfully ask you to submit to Dogwood ONLY if you actually want to be published in the journal and if you would be happy with an acceptance.
+When Professor Elliott Coleman established the Writing Seminars (first called the Department of Writing, Speech, and Drama) in 1947, it was only the second program of its kind in the country. Coleman saw publishing as part of his fledgling department’s mission and launched the first issue of The Hopkins Review that same year under his own editorship, making it the first university literary journal published by a degree-granting creative writing department. From 1947 to 1953, the journal featured creative titans like poet e. e. cummings and fiction writer John Barth (a 1951 Writing Seminars alumnus and later faculty member), whose first published short story appeared in the pages of The Hopkins Review. Despite its auspicious beginning, however, the journal ceased production in 1953, its great promise cut short by a simple lack of funding and full-time faculty. 
 
-Timeframe
+Dormant but not forgotten for over half a century, The Hopkins Review was revived by John T. Irwin, Decker Professor in The Writing Seminars, who announced in 2007 that he was reinstating a “New Series” of the journal—this time, as a joint venture between two of the university’s literary powerhouses, the Writing Seminars and the Johns Hopkins University Press. Since its founding in 1878 (just two years after the founding of the university itself), the JHU Press had served as a champion of the literary arts and public-facing humanities. Daniel Coit Gilman, the first president of Johns Hopkins University, saw publishing as integral to the university’s mission, averring, “It is one of the noblest duties of a university to advance knowledge and to diffuse it not merely among those who can attend the daily lectures but far and wide.” Sixty years after the founding of both the Writing Seminars department and its original literary journal, The Hopkins Review (New Series) would once again publicly showcase Johns Hopkins University’s long-standing and forward-thinking commitment to the creation and appreciation of great literature through a partnership between the nation’s oldest university press and one of its first creative writing programs. 
 
-The annual reading period for Dogwood is  July 1-September 5. During this period, we accept contest submissions through our online submission manager run by Submittable and non-contest submissions (for free) by mail. We try to get back to you within 4 months of our contest deadline of Sept. 5, which is when we begin reading. If you have waited 4 months after Sept. 5 and have not heard from us, feel free to give us a nudge via email and we will be happy to give you an update. You should receive an automatically generated email to acknowledge that your submission has been loaded into the system. You can then sign into Submittable at any point to see the status of your submission. It might not say “in process” for a few weeks because we have not yet assigned it to an editor. A recent change to Submittable causes a piece to be classified as “New” or “Unread” even if several staff members have looked at it, so our advice is to email us if you have any questions. If you are not comfortable with this timeframe, another journal might be better for your work.
+Despite their temporal distance, the new and old incarnations of The Hopkins Review share a mission of excellence in contemporary letters. Professor Emeritus John Barth bridged the 20th century Hopkins Review and the 21st, contributing to both the first and second issues of The Hopkins Review (New Series)in 2008, as he had contributed to the original journal decades earlier as an emerging writer. Other contributors to The Hopkins Review (New Series) have included literary and scholarly luminaries such as Donald Barthelme, Harold Bloom, Erica Dawson, Stephen Dixon, Denis Donoghue, Claudia Emerson, Tony Eprile, Marilyn Hacker, Vanessa Hua, Millard Kaufman, Frank Kermode, Richard A. Macksey, Jill McCorkle, Shane McCrae, Alice McDermott, Natalie Shapero, A. E. Stallings, Colm Tóibín, Helen Vendler, Claire Vaye Watkins, C. Dale Young, and many others. Recent and forthcoming issues include Stephanie Burt, Terrance Hayes, Heather McHugh, Paul Muldoon, Carl Phillips, Claudia Rankine, Adrienne Su, Afaa M. Weaver, and Alejandro Varela, among many other vital voices.
 
-Please note: Dogwood is a teaching journal, which means that graduate and undergraduate students are reading alongside the editor, who reads every submission and discusses each with students before rendering her decision. This means that our consideration process takes a little longer. All contest entrants will be notified of our decision by January 15, at which time the editor notifies finalists of their status, offers publication to them, and forwards a finalist pile to the final judge, who chooses a single winner.
+Announcing the relaunch of The Hopkins Review in 2007, Irwin said that he believed that a “top-ranking writing program needed . . . a literary quarterly.” True to his vision, The Hopkins Review is a quarterly review publishing fiction, poetry, and memoir; essays on literature, drama, film, the visual arts, music, and dance; interviews, folios of visual art, and translations; as well as reviews of books, performances, and exhibits. Susan McCallum-Smith of WYPR and Urbanite magazine called The Hopkins Review “a postmodern blend of intellectual heft and Vaudeville.” The Hopkins Review is a print publication that is also archived electronically in perpetuity through Project MUSE.  
 
-Incarcerated Writers
+New Series founding editor Professor John T. Irwin was succeeded by Professor David Yezzi as editor in 2015, and Associate Professor Dora Malech became the editor in chief in 2022. Irwin passed away in 2019, but his vision for The Hopkins Review endures. Of original department and journal founder Elliott Coleman, Professor Emeritus John Barth said, “I have admired Elliott Coleman’s short poems and his long poems; most of all I admire his longest-running poem: the Johns Hopkins Writing Seminars, over which his benignant spirit still very much presides.” In this sense, The Hopkins Review is Irwin’s poem, and Coleman’s too: an ongoing creative work.
 
-Writers who are incarcerated may enter the contest by mail, by email to dogwoodliterary@gmail.com, or by CorrLinks (please send your communication requests to shuber@fairfield.edu). Submission fees are waived, and we accept submissions from incarcerated writers year-round. Sonya Huber, Editor, Dogwood, Department of English, Fairfield University, 1073 N. Benson Road, Fairfield CT 06824
+The Council of Editors of Learned Journals honored The Hopkins Review’s 15th anniversary redesign with a Phoenix Award for Significant Editorial and Design Achievement, and individual works published in THR have been selected for or received special mention in anthologies that include Best American Poetry, Best American Short Stories, the Pushcart Prize anthology, Best Spiritual Literature, and Best Literary Translation. 
 
-Anonymous
+Submit up to five poems (no more than ten pages total). We also welcome poetry in translation; however, it is the translator's responsibility to have secured all necessary permissions, and any associated permissions fees are the responsibility of the translator. We do not consider previously published poetry. Translated poetry can be previously published in its original language or by other translators, but your submitted translation should be previously unpublished. 
 
-All of our submissions are considered anonymously; if your name remains on the manuscript, you’ll get a note from us saying we can’t consider your work until it is rendered anonymous (see contest guidelines for assistance with that). Current and former employees and students of Fairfield University are ineligible for publication. In addition, please don’t submit if you happen to be a current or former student of the editor.
+Our submission fee is waived for subscribers. If you are interested in taking out a subscription to the Review, click here. If you subscribe, please email thehopkinsreview@gmail.com and request a fee-waived link for subscribers.  
 
-To Submit
+If you have not yet published a debut book of poetry, please note that in your cover letter, so we can consider it for nomination for the Best New Poets anthology, if accepted. If you would be eligible for other specific post-publication awards, we encourage you to note your eligibility in your cover letter.  
 
-Use the button below to enter your work through Submittable. We understand that the database may not be accessible for all screen readers, so if the site is difficult for you to use, we accept direct submissions via email. Please follow the guidelines listed below and email your submission to dogwoodliterary@gmail.com. Please mention the issue of accessibility in your cover letter. Writers who are incarcerated may enter the contest by mail or by email to dogwoodliterary@gmail.com, and submission fees are waived.
-
-Non-Contest Submissions
-
-Writers who seek publication but do not want to be considered for the contest may submit on-contest submissions for free by sending them directly to the Editor at the following address: Sonya Huber, Editor, Dogwood, Department of English, Fairfield University, 1073 N. Benson Road, Fairfield CT 06824. Our non-contest submissions are notified only of acceptance. If you have not heard from us by early in the year, we have declined your non-contest submission.
-
-
-submit
-
-When you click on the link, you will be taken to an online database run by Submittable where you can upload your submission along with a very short cover letter.
-
-Contest Submission Guidelines
-
-Fiction and Nonfiction Submission Guidelines
-
-Submit fiction or nonfiction up to 22 pages using this online submission manager.
-Please title your submission with the title of your piece.
-Please double space and use 12-point font.
-Include a brief bio with contact information in the cover letter field on the submission manager, but no name should appear on the mss.
-Simultaneous submissions allowed if Dogwood is notified of acceptance elsewhere.
-Previously published work is not eligible.
-Poetry Submission Guidelines
-
-Submit one, two, or three poems (max ten pages)
-Please include all poems in one document.
-Please single space and use 12-point font.
-In the submission manager, please include the titles of all poems in your submission title (rather than “Three Poems”).
-Include a brief bio with contact information in the cover letter field on the submission manager, but no name should appear on the mss.
-Simultaneous submissions allowed if Dogwood is notified of acceptance elsewhere.
-Previously published work is not eligible.
-Deadline: September 5
-
-Work not meeting the above guidelines will not be considered for publication. All contest entries meeting these requirements will be considered for publication in the next issue of Dogwood along with selected non-contest submissions. For more information, please email shuber (at) fairfield.edu.
+For a sense of what we publish, we encourage you to subscribe, buy an issue, check out our open-access web features, or take a look at the year's sample print issue on Project MUSE. 
 
 .. note::
 

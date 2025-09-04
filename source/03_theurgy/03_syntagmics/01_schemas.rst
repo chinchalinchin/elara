@@ -181,6 +181,27 @@ Pantoum
 
 - `Pantoum of the Great Depression`_, Donald Justice
 
+.. _rime-royal:
+
+Rime Royal
+----------
+
+.. topic:: Schema
+
+    .. math::
+
+        ([a.b.a + b.b + c.c]:[a.b.a.b + b.c.c]/\mathfrak{i}_5)
+
+    :ref:`Reducing <syntagmics-shorthand>`,
+
+    .. math::
+
+        ([a.b.a + b^2 + c^2]:[[a.b]^2 + b.c^2]/\mathfrak{i}_5)
+
+**References**
+
+None yet found.
+
 .. _rondeau:
 
 Rondeau

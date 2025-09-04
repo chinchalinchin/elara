@@ -396,15 +396,15 @@ Stanza 2
   * - Formal Expression
     - :math:`ⲠⲡⲡⲠⲡⲠⲡⲠⲡⲠ = Ⲡⲡ[\prod_1^4 ⲡⲠ]`
   * - Line Stresses
-    - ...
+    - 5
   * - Line Total
-    - ...
+    - 10
   * - Line Speed
-    - ...
+    - 0.5
   * - Cumulative Stresses
-    - ...
+    - 78
   * - Cumulative Total
-    - ...
+    - 157
   * - Cumulative Speed
     - ...
 
@@ -419,15 +419,15 @@ Stanza 2
   * - Formal Expression
     - :math:`ⲡⲠⲡⲠⲡⲠⲡⲠⲡⲠ = \prod_1^5 ⲡⲠ`
   * - Line Stresses
-    - ...
+    - 5
   * - Line Total
-    - ...
+    - 10
   * - Line Speed
-    - ...
+    - 0.5
   * - Cumulative Stresses
-    - ...
+    - 83
   * - Cumulative Total
-    - ...
+    - 167
   * - Cumulative Speed
     - ...
 
