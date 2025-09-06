@@ -1,9 +1,9 @@
-.. _syntagmics-calculus:
+.. _poetics-calculus:
 
 Section IV: Calculus
 ====================
 
-.. _syntagmics-axioms:
+.. _poetics-axioms:
 
 Axioms
 ------

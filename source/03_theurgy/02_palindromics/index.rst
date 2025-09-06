@@ -1,8 +1,8 @@
-.. _palindromia:
+.. _palindromics:
 
-===========
-Palindromia
-===========
+============
+Palindromics
+============
 
 .. toctree::
    :maxdepth: 2

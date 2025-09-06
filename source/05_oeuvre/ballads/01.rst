@@ -1,14 +1,13 @@
-.. _the-ballad-of-the-isle:
-
 ----------------------
 The Ballad of the Isle
 ----------------------
 
 
-| I - Spring
-| 
-| I - March (Mutable Water)
+I - Spring
+----------
 
+| I - March (Mutable Water)
+|
 | The island formed where rivers meet,
 |   where silt through vortex fords.
 | The place emerged a brokered feat, 
@@ -87,9 +86,10 @@ The Ballad of the Isle
 |   in congregation's girth, 
 | by May pronounced through sealing clouds
 |   of consecrated Earth.
-|
-| II - Summer
-| 
+
+II - Summer
+-----------
+
 | I - June (Mutable Air)
 | 
 | When stellar swans survey the dawn
@@ -170,9 +170,10 @@ The Ballad of the Isle
 |   of secret reign's decline
 | through crimson's spectrum vine, all
 |   gone brown, forgetting shine.
-|
-| III - Autumn
-| 
+
+III - Autumn
+------------
+
 | I - September (Mutable Earth)
 |
 | September storms suspend the skies
@@ -253,9 +254,10 @@ The Ballad of the Isle
 |   between the exiled graves.
 | Remembered nocturnes sung beguile
 |   the damned, forgottten knaves. 
-|
-| IV - Winter
-|
+
+IV - Winter
+-----------
+
 | I - December (Mutable Fire)
 |
 | A rending gale begins to blow

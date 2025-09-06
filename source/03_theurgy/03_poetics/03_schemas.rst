@@ -1,5 +1,5 @@
 
-.. _syntagmics-schemas:
+.. _poetics-schemas:
 
 Section II: Schemas
 ===================
@@ -35,7 +35,7 @@ Ballade
 
         a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + a.b.a.b.b.c.b.C + b.c.b.C
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -47,7 +47,7 @@ Ballade
 
         [a.b.a + b.b + c.c]:[a.b.a.b + b.c.c]
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
     
     .. math::
 
@@ -59,7 +59,7 @@ Ballade
 
         \sum_1^{5} \overline{a.b.a.b.c.c.d.d.e.d.E + [d.d.e.d.E:c.c.d.d.e.d.E]}
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -69,6 +69,37 @@ Ballade
 
 None yet found. 
 
+.. _ghazal:
+
+Ghazal
+------
+
+.. topic:: Schema
+
+    .. math::
+
+        p = aA.aA + b.aA + c.aA + ... + x.aA
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        p = [aA]^2 + \sum_{i=1}^{n}[x_i.[aA]]
+
+- The *Matla* (مطلع): The opening couplet.
+- The *Maqta* (مطلع): The final couplet. 
+- The *Qafiya* (قافية): The rhyme.
+- The *Radif* (ردیف): The refrain.
+
+.. note::
+
+    In the formalization,
+
+    1. :math:`\text{Matla} = [aA]^2`
+    2. :math:`\text{Maqta} = x_{n}.[aA]`
+    3. :math:`\text{Qafiya} = a`
+    4. :math:`\text{Radif} = A`
+    
 .. _kyrielle:
 
 Kyrielle
@@ -80,7 +111,7 @@ Kyrielle
 
         \overline{\sum_1^{n} [a.a.b.B:a.A.b.b]}
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -132,7 +163,7 @@ Ottava
 
         a.b.a.b.a.b.a.b
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -144,7 +175,7 @@ Ottava
 
         a.b.a.b.c.c.d.d
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
     
     .. math::
         
@@ -158,7 +189,7 @@ Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
         (a.b.a.b.a.b.c.c/\mathfrak{i}_5)
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -192,7 +223,7 @@ Rime Royal
 
         ([a.b.a + b.b + c.c]:[a.b.a.b + b.c.c]/\mathfrak{i}_5)
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -307,7 +338,7 @@ Six sestets followed by a tercet envoi.
 
 .. important::
 
-    Refer to the :ref:`Appendix <syntagmics-appendix>` for a provisional definition of :ref:`projection <syntagmics-projection>`.
+    Refer to the :ref:`Appendix <poetics-appendix>` for a provisional definition of :ref:`projection <poetics-projection>`.
     
 **References**
 
@@ -326,7 +357,7 @@ Sonnet
     
         a.b.b.a.a.b.b.a + c.d.e.c.d.e:c.d.c.d.c.d
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
@@ -338,7 +369,7 @@ Sonnet
 
         ([\sum_i^{3} \overline{a.b.a.b}] + a.a/\mathfrak{i}_5)
 
-    :ref:`Reducing <syntagmics-shorthand>`,
+    :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 

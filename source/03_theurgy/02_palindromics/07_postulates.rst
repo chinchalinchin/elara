@@ -1,7 +1,7 @@
 .. _section-vi:
 
 Section VI: Postulates
-----------------------
+======================
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
 

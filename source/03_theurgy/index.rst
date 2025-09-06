@@ -9,5 +9,5 @@ Theurgy
    :caption: Contents:
 
    01_universalis/index
-   02_palindromia/index
-   03_syntagmics/index
+   02_palindromics/index
+   03_poetics/index

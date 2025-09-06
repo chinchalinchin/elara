@@ -5,8 +5,8 @@ Section VII: Appendix
 
 This section contains notes and ideas that do not serve to establish the main results of the work, but the author believes may nevertheless prove useful in extending the formal theory into other epistemological domains.
 
-Table of Contents
-^^^^^^^^^^^^^^^^^
+**Table of Contents**
+
 - Section A.I: Compound Words
 - Section A.II: Palindromic Pairs
 - Section A.III: Categories
@@ -679,8 +679,6 @@ These insights lead to a formal definition of a *σ*-induction.
 
     |σ_induce(s, m, S)| = C(k, j) = C((n-1)/2, (m-1)/2)
     This completes the proof. ∎
-
-
 
 Section A.V: Reflective Structures
 -----------------------------------

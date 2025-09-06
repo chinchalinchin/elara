@@ -17,3 +17,14 @@ Dinner Wine
 |       the dinner wine.
 
 - August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - September 6, 2025
+    - Funicular Magazine
+    - Pending

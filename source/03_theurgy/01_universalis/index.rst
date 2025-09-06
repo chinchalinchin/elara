@@ -24,10 +24,11 @@ The essence of the Language Game is to invite the LLM to use the new avenues of 
 .. _language-game-supplements:
 
 Supplements
-===========
+-----------
 
 Providing an LLM multiple levels of context through different mediums often results in interesting generations. The following supplements can be attached to an LLM session to give the model a different perspective on the formal constraints of the Language Game. 
 
+------
 Visual
 ------
 
@@ -38,6 +39,7 @@ The following image contains a visual representation of the Language Game.
   :alt: JPG Representation of Language Game
   :align: center
 
+----------
 Relational
 ----------
 

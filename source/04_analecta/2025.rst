@@ -52,7 +52,7 @@ February
 
 **Hysteron Proteron**: An expression in which what should come last is put first.
 
-This :ref:`poetical device <syntagmics>` is unique amongst the others insofar that it is semantic. Most devices, like epistrophe or chiasmus, are syntactical and formal; while they can be employed to enhance the meaning of a sentence, they are all nevertheless defined solely by the transposition and application of grammatical rules. In contrast, a :ref:`Hysteron Proteron <hysteron-proteron>` is a form of word play that requires more than just symbol shunting. Its essence involves the interpretation of its component parts which simultaneously places them into a contradictory whole.
+This :ref:`poetical device <hysteron-proteron>` is unique amongst the others insofar that it is semantic. Most devices, like epistrophe or chiasmus, are syntactical and formal; while they can be employed to enhance the meaning of a sentence, they are all nevertheless defined solely by the transposition and application of grammatical rules. In contrast, a :ref:`Hysteron Proteron <hysteron-proteron>` is a form of word play that requires more than just symbol shunting. Its essence involves the interpretation of its component parts which simultaneously places them into a contradictory whole.
 
 .. _2025-march:
 

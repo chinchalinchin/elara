@@ -142,6 +142,9 @@ Holly Tree
   * - August 29, 2025
     - Dogwood Poetry Contest
     - Pending
+  * - September 5, 2025
+    - Amethyst Review
+    - Pending
     
 .. epigraph::
   

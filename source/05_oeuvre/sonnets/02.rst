@@ -73,4 +73,7 @@ Eulogy
     - Pending
   * - August 29, 2025
     - Banyan Review Poetry Contest
+    - Pending'
+  * - September 5, 2025
+    - Amethyst Review
     - Pending

@@ -31,19 +31,19 @@ Historical
 Linguistic
 ----------
 
-- :ref:`English Palindromes <palindromia>`
+- :ref:`English Palindromes <palindromics>`
     - :download:`English Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/english-palindromes.csv>`
-- :ref:`Imperfect Palindromes <palindromia>`
+- :ref:`Imperfect Palindromes <palindromics>`
     - :download:`Imperfect Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/imperfect-palindromes.csv>`
-- :ref:`Latin Palindromes <palindromia>`
+- :ref:`Latin Palindromes <palindromics>`
     - :download:`Latin Palindromes CSV <../_static/csv/datasets/linguistic/palindromes/latin-palindromes.csv>`
-- :ref:`Ambiguous Sentences <palindromia>`
+- :ref:`Ambiguous Sentences <palindromics>`
     - :download:`Ambiguous Sentences CSV <../_static/csv/datasets/linguistic/sentences/ambiguous-sentences.csv>`
-- :ref:`Ambiguous Words <palindromia>`
+- :ref:`Ambiguous Words <palindromics>`
     - :download:`Ambiguous Words CSV <../_static/csv/datasets/linguistic/words/ambiguous-words.csv>`
-- :ref:`Invertible Words <palindromia>`
+- :ref:`Invertible Words <palindromics>`
     - :download:`Invertible Worlds CSV <../_static/csv/datasets/linguistic/words/invertible-words.csv>`
-- :ref:`Reflective Words <palindromia>`
+- :ref:`Reflective Words <palindromics>`
     - :download:`Reflective Words CSV <../_static/csv/datasets/linguistic/words/reflective-words.csv>`
 - Oronyms
     - :download:`Oronyms CSV <../_static/csv/datasets/linguistic/sentences/oronyms.csv>`

@@ -1,24 +1,31 @@
-.. _syntagmics-appendix:
+.. _poetics-appendix:
 
-Appendix
-========
+Appendix 1: Provisional Ideas
+=============================
 
-.. _syntagmics-projection:
+.. topic:: Provisional Notation 
+
+   1. #x: A lengthened sign. 
+   2. ♭x: A shortened sign.  
+
+   Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs.
+
+.. _poetics-projection:
 
 Projection
 ----------
 
 The formalization of sestinas requires a method of composing signs through other signs. The operation of *projection* is an attempt to define a composition operation that will serve this purpose. The author recognizes several flaws with the current approach and for that reason has relegated it to the appendix of this work.
 
----------
-Defintion
----------
+----------
+Definition
+----------
 
 .. math::
 
     x \circ y
 
-It is important to clarify that projection is a *sign*. It is an object *within* the syntagmic system (or more specifically, an operation which yields an object). It serves a semantic function within the system. This differents from the metalogical nature of *containment*, which is an expression *about* the system, i.e. a truth value.
+It is important to clarify that projection is a *sign*. It is an object *within* the poetic system (or more specifically, an operation which yields an object). It serves a semantic function within the system. This differents from the metalogical nature of *containment*, which is an expression *about* the system, i.e. a truth value.
 
 .. important::
 
@@ -44,7 +51,7 @@ The sign on the lefthand side :math:`x` of a projection :math:`x \circ y` is the
     
     [y \subset_p x] \implies [x \circ y = x]
 
-However, if :math:`x` does not contain :math:`y`, then :math:`x \circ y` is defined to be a caesura, :math:`\varnothing`, i.e. the absence of a syntagmic variable. 
+However, if :math:`x` does not contain :math:`y`, then :math:`x \circ y` is defined to be a caesura, :math:`\varnothing`, i.e. the absence of a poetic variable. 
 
 .. math::
 
@@ -56,7 +63,7 @@ For this reason, :math:`x \circ y` can be thought of an indicator variable that 
 
     [[y \subset_p x] \implies [x = x \circ y]] \lor [x \circ y = \varnothing]
 
-In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any syntagmic sign that satsifies the open formula given above. 
+In fact, the prior expression can be seen as the *logical definition* of a *factor*. To be more precise, a factor :math:`y` of a fixed :math:`x` is defined as any poetic sign that satsifies the open formula given above. 
 
 Projection is logically related to appendment and prependment. Note :math:`y = \text{cat}` prepends :math:`x = \text{cat on a mat}`, where as :math:`z = \text{mat}` appends :math:`x`. Both :math:`z` and :math:`y` project :math:`x`, as well,
 

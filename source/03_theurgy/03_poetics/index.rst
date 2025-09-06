@@ -10,24 +10,25 @@
         \usepackage{runic}
         \usepackage{textcomp}
 
-.. _syntagmics:
+.. _Poetics:
 
-==========
-Syntagmics
-==========
+=======
+Poetics
+=======
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Contents:
+    :maxdepth: 1
+    :caption: Contents:
 
-   00_introduction
-   01_schemas
-   02_decompositions
-   03_theorems
-   04_appendix
+    00_introduction
+    01_rhymation
+    02_metrics
+    03_schemas
+    04_calculus
+    A0_provisional
+    A1_applications
 
 .. TODO: 
     Research 
     - terzanelle 
-    - ghazal
     - haikus

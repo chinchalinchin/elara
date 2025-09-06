@@ -1,12 +1,12 @@
-.. _syntagmics-decompositions:
+.. _poetics-decompositions:
 
-Section III: Decompositions
-===========================
+Appendix II: Applications
+=========================
 
-----------
-John Keats
-----------
+Metrical Analysis
+-----------------
 
+--------------------
 Ode to a Nightingale
 --------------------
 
@@ -1244,10 +1244,7 @@ Stanza 8
 
         p = \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
     
-------------
-Slyvia Plath
-------------
-
+--------------------
 Mad Girl's Love Song
 --------------------
 

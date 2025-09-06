@@ -9,34 +9,40 @@
 Solicitation
 ============
 
-Our Mission
-The mission of The Hopkins Review is to publish today’s vital voices and visions in literature, culture, criticism, public-facing scholarship, and the arts. In 2022, we celebrated our 15th year of continuous publishing with a commitment to creative excellence and its dynamic, diverse, and inclusive present and future. The Hopkins Review is a partnership between two venerable literary entities, the Writing Seminars at Johns Hopkins University (the country’s second-oldest degree-granting creative writing program, est. 1947) and the Johns Hopkins University Press (the country’s oldest continuously running university press, est. 1878). Curated by editor in chief Dora Malech, fiction editor Danielle Evans, and an editorial staff of talented emerging writers honing their own craft in the Writing Seminars, The Hopkins Review endeavors to feature a unique blend of tradition and innovation reflective of both its deep roots and vibrant intergenerational team. We strive to bring the international, national, and local together under one cover, contributing to Johns Hopkins University’s broader mission of “knowledge for the world” by engaging international voices and conversations alongside our nation’s most exciting established and emerging writers and platforming the rich artistic and literary community of our home city of Baltimore on that same global stage. We believe in building a local, national, and international community of readers that connects and coheres around a shared love of literature and culture. Thank you for being a part of The Hopkins Review community.
+How’d we get started?
+Funicular Magazine was founded by Jeremy Bibaud and Jason Lee Norman. The idea simultaneously, independently, and cosmically, came to the minds of its editors over a pint in 2018. We saw a literary fiction-sized hole in Edmonton, Alberta. Sure, at the time our arch-nemesis Glass Buffalo had cornered the market on this genre by winning award after award for their perfect and beautiful magazine, but in the famous words of Shania Twain—that don’t impress me much. Besides, one of our editors is a MacEwan University alum (Go Griffins or whatever!) so we can only go so far in our praise of a magazine published by Edmonton’s other university. We published our first issue in 2019 and we’ve been doing it three times a year since.
 
-Our History
+where’d We get that name?
+Funicular was a placeholder until we thought of something better. In the end, we didn’t. Not because we’re lazy, but because the word is so damn fun to say. It felt appropriate too, as both editors have fond memories or ancestral ties to Lisbon, Portugal, where funiculars are as common as F-150s in Alberta. Coincidentally, Edmonton eventually built its very own funicular which made the name even more fitting.
 
-When Professor Elliott Coleman established the Writing Seminars (first called the Department of Writing, Speech, and Drama) in 1947, it was only the second program of its kind in the country. Coleman saw publishing as part of his fledgling department’s mission and launched the first issue of The Hopkins Review that same year under his own editorship, making it the first university literary journal published by a degree-granting creative writing department. From 1947 to 1953, the journal featured creative titans like poet e. e. cummings and fiction writer John Barth (a 1951 Writing Seminars alumnus and later faculty member), whose first published short story appeared in the pages of The Hopkins Review. Despite its auspicious beginning, however, the journal ceased production in 1953, its great promise cut short by a simple lack of funding and full-time faculty. 
+Why are you always talking about knocking people out?
+It’s just a tagline! Julio Cortázar said “the novel wins by points, the short story by knockout.” Our goal is to find fiction and poetry that lives up to this. If you don’t feel like you just had your bell rung after a short story or got punched in the gut after a poem, what’s the point? 
 
-Dormant but not forgotten for over half a century, The Hopkins Review was revived by John T. Irwin, Decker Professor in The Writing Seminars, who announced in 2007 that he was reinstating a “New Series” of the journal—this time, as a joint venture between two of the university’s literary powerhouses, the Writing Seminars and the Johns Hopkins University Press. Since its founding in 1878 (just two years after the founding of the university itself), the JHU Press had served as a champion of the literary arts and public-facing humanities. Daniel Coit Gilman, the first president of Johns Hopkins University, saw publishing as integral to the university’s mission, averring, “It is one of the noblest duties of a university to advance knowledge and to diffuse it not merely among those who can attend the daily lectures but far and wide.” Sixty years after the founding of both the Writing Seminars department and its original literary journal, The Hopkins Review (New Series) would once again publicly showcase Johns Hopkins University’s long-standing and forward-thinking commitment to the creation and appreciation of great literature through a partnership between the nation’s oldest university press and one of its first creative writing programs. 
+Up to 5 poems
 
-Despite their temporal distance, the new and old incarnations of The Hopkins Review share a mission of excellence in contemporary letters. Professor Emeritus John Barth bridged the 20th century Hopkins Review and the 21st, contributing to both the first and second issues of The Hopkins Review (New Series)in 2008, as he had contributed to the original journal decades earlier as an emerging writer. Other contributors to The Hopkins Review (New Series) have included literary and scholarly luminaries such as Donald Barthelme, Harold Bloom, Erica Dawson, Stephen Dixon, Denis Donoghue, Claudia Emerson, Tony Eprile, Marilyn Hacker, Vanessa Hua, Millard Kaufman, Frank Kermode, Richard A. Macksey, Jill McCorkle, Shane McCrae, Alice McDermott, Natalie Shapero, A. E. Stallings, Colm Tóibín, Helen Vendler, Claire Vaye Watkins, C. Dale Young, and many others. Recent and forthcoming issues include Stephanie Burt, Terrance Hayes, Heather McHugh, Paul Muldoon, Carl Phillips, Claudia Rankine, Adrienne Su, Afaa M. Weaver, and Alejandro Varela, among many other vital voices.
+General Guidelines
 
-Announcing the relaunch of The Hopkins Review in 2007, Irwin said that he believed that a “top-ranking writing program needed . . . a literary quarterly.” True to his vision, The Hopkins Review is a quarterly review publishing fiction, poetry, and memoir; essays on literature, drama, film, the visual arts, music, and dance; interviews, folios of visual art, and translations; as well as reviews of books, performances, and exhibits. Susan McCallum-Smith of WYPR and Urbanite magazine called The Hopkins Review “a postmodern blend of intellectual heft and Vaudeville.” The Hopkins Review is a print publication that is also archived electronically in perpetuity through Project MUSE.  
+Font: We don't care, just make sure we can read it or, y'know, we won't
 
-New Series founding editor Professor John T. Irwin was succeeded by Professor David Yezzi as editor in 2015, and Associate Professor Dora Malech became the editor in chief in 2022. Irwin passed away in 2019, but his vision for The Hopkins Review endures. Of original department and journal founder Elliott Coleman, Professor Emeritus John Barth said, “I have admired Elliott Coleman’s short poems and his long poems; most of all I admire his longest-running poem: the Johns Hopkins Writing Seminars, over which his benignant spirit still very much presides.” In this sense, The Hopkins Review is Irwin’s poem, and Coleman’s too: an ongoing creative work.
+File Type: PDF, Word, Text file
 
-The Council of Editors of Learned Journals honored The Hopkins Review’s 15th anniversary redesign with a Phoenix Award for Significant Editorial and Design Achievement, and individual works published in THR have been selected for or received special mention in anthologies that include Best American Poetry, Best American Short Stories, the Pushcart Prize anthology, Best Spiritual Literature, and Best Literary Translation. 
+Simultaneous Submissions (please withdraw your piece if it is being published elsewhere)
 
-Submit up to five poems (no more than ten pages total). We also welcome poetry in translation; however, it is the translator's responsibility to have secured all necessary permissions, and any associated permissions fees are the responsibility of the translator. We do not consider previously published poetry. Translated poetry can be previously published in its original language or by other translators, but your submitted translation should be previously unpublished. 
+Multiple Submissions (see specific submission limits below)
 
-Our submission fee is waived for subscribers. If you are interested in taking out a subscription to the Review, click here. If you subscribe, please email thehopkinsreview@gmail.com and request a fee-waived link for subscribers.  
+No previously published stories (in print or online). Self-published is fine.
 
-If you have not yet published a debut book of poetry, please note that in your cover letter, so we can consider it for nomination for the Best New Poets anthology, if accepted. If you would be eligible for other specific post-publication awards, we encourage you to note your eligibility in your cover letter.  
+No genre fiction. There are places for genre fiction. One of those places is not here.
 
-For a sense of what we publish, we encourage you to subscribe, buy an issue, check out our open-access web features, or take a look at the year's sample print issue on Project MUSE. 
+Do not put your name anywhere in the document or filename.
+
+We read submissions blind. What We Want If we like your work, we will ask for online and/or serial publication rights.
+
+Flash Fiction Submissions Allowed Per Entry: 3 What is Flash? Nobody knows for sure. Flash is brilliant. Flash is short. Flash doesn't have time to mess around. Flash can surprise. Flash can pulverize. Do whatever you want but make sure you make it count and make it short. Short fiction under 1000 words is the general rule for flash fiction.
 
 .. note::
 
-  Need cover letter and title.
+  Need cover letter.
 
 .. _resume:
 
@@ -204,4 +210,137 @@ Certifications
 Submissions
 ===========
 
-See attached PDF.
+Dinner Wine
+-----------
+
+| The dinner wine of nervous dates
+| once grew upon a Summer vine.
+| The Autumn wind now hushed awaits
+|       the dinner wine. 
+|
+| Beneath the Winter's pure moonshine,
+| our words distill like concentrates 
+| til fingers find yours under mine. 
+|
+| A taste of Spring now circulates 
+| as starry arcs began decline,
+| the final drop that dedicates 
+|       the dinner wine.
+
+Little Sprout
+-------------
+
+| Oh, little sprout, the forest sleeps
+| in arid ground now cursed by drought.
+| Across the land, the desert sweeps,
+|       oh, little sprout. 
+| 
+| Your boldness lacks a water spout
+| but hidden root in darkness steeps
+| the moisture buried deep in doubt. 
+|
+| The dream of Spring nobody keeps 
+| ascends in stems so small and stout 
+| when mourning sky beholding weeps,
+|       oh, little sprout.
+
+The Origin of Lies
+------------------
+
+| Oh, Ila, don't be weeping,
+|    my dear, you misconstrue;
+| The sun is only sleeping
+|    before it rises new.
+|
+| I'll wait with you til morning,
+|    and tell you of the stars,
+| the memories adorning
+|    the empty night with scars. 
+|
+| This love that's learned by lacking,
+|    whose vastness has no chart,
+| in silent orbits tracking
+|    the shaping of your heart. 
+|
+| Please trust that nothing passes,
+|    we only change our form.
+| The morning dew amasses
+|    on leaves the sun can't warm.
+|
+| Child, listen, though you're growing,
+|    some things cannot be known
+| until you've grown up knowing
+|    out here you're all alone.
+|
+| I'll be with you forever,
+|    these words will be a lie.
+| If I could but this deliver:
+|    To live until you die.
+|
+| So while you're small, keep holding
+|    my hand as though it soothes,
+| The world will keep unfolding
+|   each wrinkle that it smoothes.
+|
+| Believe me when I'm saying:
+|    Oh, Ila, darling dear,
+| No matter what I'm staying,
+|    I'll always be right here. 
+
+Ode to Upholstery
+-----------------
+
+| the Sunday mornings hang in clouds of smoke
+| above my head where thoughts of you reside
+| recalling times my clumsy fingers broke
+| some stitch or knit your fingers deftly tied,
+| or when you'd measure out your thread
+|       to fix the errors made
+|           and sew it back anew,
+| i knew when watching as you spread
+|       the fiber that i frayed,
+|           i never would be you.
+|
+| a box of decades stored in bobbin spools
+| unwind within my open palm their loops,
+| reversing ages into circled pools;
+| a single tangled knot erupts and droops,
+| undone so quick and dripping thick
+|       through winding yards of years
+|           you spun around the drum
+| before the plunging needle prick,
+|       this moment reappears
+|           along the lengths i thumb.
+|
+| what cluttered racks of vinyl rolls to stack
+| against the walls where once you puffed your pipe,
+| the only imitation i could crack
+| now burning in my teeth, a cherry ripe
+| as molten metal cast in molds
+|       before the water chills
+|           and shapes the studs with steam
+| to snaps you press through sheets and folds
+|       of layered woven twills,
+|           to hide the lonely seam.
+|
+| the intersecting threads of me through strands
+| of silken plumes, they needle past my lips
+| from dying gears that spin beneath your hands
+| to weave the pattern drawn by fingertips
+| upon the fabric draping down
+|       in wrinkled folds of cloth
+|           unrolled in hazy rooms,
+| like ones you sketched with focused frown
+|       and cut to clear the swath
+|           of me that burns and fumes.
+|
+| these empty rooms of tools you left behind,
+| as if some day i'd understand their use,
+| instead infected specks of rust i grind
+| with oiled stones on spinning spokes that loose 
+| eroded flakes of showered flames
+|       and spray the ground with red,
+|           the dust of wasted time,
+| each careful pass of sparks reclaims
+|       the last remains you shed, 
+|           the gleam that hides in grime.
