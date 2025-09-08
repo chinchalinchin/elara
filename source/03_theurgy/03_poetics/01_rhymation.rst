@@ -1,5 +1,5 @@
 
-.. _poetics-rhymes:
+.. _poetics-rhymation:
 
 Section II: Rhymation
 =====================
@@ -40,6 +40,8 @@ Whereas for *q*,
     | the fish gets down. 
 
 If the bar is omitted from a sign, it is implied to extend over the entire proposition.
+
+.. _poetics-stress:
 
 Stress
 ------
@@ -113,6 +115,8 @@ Where "..." represents as yet undetermined operation.
 
     Because off-rhymes do not (yet) have a syllabic representation, they are only used *within* poetical proposition to denote a rhyme. Writing :math:`\tilde{x}` has no meaning outside of the poetical proposition, unlike the other forms of rhymes which represent definite syllabic configurations of ending stress. 
 
+.. _poetics-logical-structure:
+
 Logical Structure
 -----------------
 
@@ -152,9 +156,9 @@ However, off-rhymes do *not* imply the relation of *rhymation*.
 
 If the secondary relations are defined, 
 
-- :math:`\vdash`, Masculine Rhyme: :math:`x \vdash y \equiv [[x \sim \hat{z}] \land [y \sim \hat{z}]]`
-- :math:`\Vdash`, Feminine Rhyme: :math:`x \Vdash y \equiv [[x \sim \check{z}] \land [y \sim \check{z}]]`
-- :math:`\Vvdash`, Dactylic Rhyme: :math:`x \Vvdash y \equiv  [[x \sim \dot{z}] \land [y \sim \dot{z}]]`
+- :math:`\vdash`, Masculine Rhyme: :math:`x \vdash y \equiv [[x \sim z] \land [y \sim z] \land \hat{z}]`
+- :math:`\Vdash`, Feminine Rhyme: :math:`x \Vdash y \equiv [[x \sim z] \land [y \sim z] \land \check{z}]`
+- :math:`\Vvdash`, Dactylic Rhyme: :math:`x \Vvdash y \equiv  [[x \sim z] \land [y \sim z] \land \dot{z}]`
 
 Then, the relation of *rhymation* can be defined precisely as, 
 

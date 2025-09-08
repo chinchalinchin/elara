@@ -1,7 +1,7 @@
 
 .. _poetics-schemas:
 
-Section II: Schemas
+Section IV: Schemas
 ===================
 
 .. _ballad:
@@ -13,7 +13,7 @@ Ballad
 
     .. math::
 
-        \sum_1^{n} \overline{(a/\mathfrak{i}_4).(b/\mathfrak{i}_3).(a:c/\mathfrak{i}_4).(b/\mathfrak{i}_3)}
+        \sum_1^{n} \overline{(a \div \mathfrak{i}_4).(b \div \mathfrak{i}_3).(a:c \div \mathfrak{i}_4).(b \div \mathfrak{i}_3)}
 
 **References**
 
@@ -109,13 +109,13 @@ Kyrielle
 
     .. math::
 
-        \overline{\sum_1^{n} [a.a.b.B:a.A.b.b]}
+        \sum_1^{n} \overline{[a.a.b.B]:[a.A.b.b]}
 
     :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
-        \overline{\sum_1^n [{a^2}.b.B:a.A.{b^2}]}
+        \sum_1^n \overline{[{a^2}.b.B]:[a.A.{b^2}]}
 
 **References**
 
@@ -129,22 +129,11 @@ Ode
 
 No fixed schema.
 
-.. topic:: Horatian Ode
+.. topic:: Horatian Ode (Keatsian Variant)
 
     .. math::
 
-        \sum_1^8 ({[a.b]^2}.c.d.e/\mathfrak{i}_5).(c/\mathfrak{i}_3).(d.e/\mathfrak{i}_5)
-    
-.. list-table:: 
-    
-  * - Greek
-    - ᾠδή
-  * - Latin
-    - oda
-  * - French
-    - ode
-  * - English
-    - ode
+        \sum_1^8 [{[a.b]^2}.c.d.e \div \mathfrak{i}_5].[c \div \mathfrak{i}_3].[d.e \div \mathfrak{i}_5]
 
 **References**
 
@@ -187,13 +176,13 @@ Each line in a *ottava siciliana* or *strambotto* is a hendecasyllable.
 
     .. math::
 
-        (a.b.a.b.a.b.c.c/\mathfrak{i}_5)
+        [a.b.a.b.a.b.c.c \div \mathfrak{i}_5]
 
     :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
-        ({[a.b]^3}.{c^2}/\mathfrak{i}_5)
+        [{[a.b]^3}.{c^2} \div \mathfrak{i}_5]
         
 **References**
 
@@ -221,13 +210,13 @@ Rime Royal
 
     .. math::
 
-        ([a.b.a + b.b + c.c]:[a.b.a.b + b.c.c]/\mathfrak{i}_5)
+        [[a.b.a + b.b + c.c]:[a.b.a.b + b.c.c] \div \mathfrak{i}_5]
 
     :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
-        ([a.b.a + b^2 + c^2]:[[a.b]^2 + b.c^2]/\mathfrak{i}_5)
+        [[a.b.a + b^2 + c^2]:[[a.b]^2 + b.c^2] \div \mathfrak{i}_5]
 
 **References**
 
@@ -249,17 +238,24 @@ The following diagram shows the different schemata for the rondeau form in 14th-
 
 .. topic:: Rondeau Schema (Medieval)
 
-    1. Couplet: A.B.a.A.a.b.A.B
-    2. Tercet: A.B.B.a.b.A.B.a.b.b.A.B.B
-    3. Quatrain: A.B.B.A.a.b.A.B.a.b.b.a.A.B.B.A
-    4. Cinquain: A.A.B.B.A.a.a.b.A.A.B.a.a.b.b.a.A.A.B.B.A
+    1. Couplet: :math:`A.B.a.A.a.b.A.B`
+    2. Tercet: :math:`A.B.B.a.b.A.B.a.b.b.A.B.B`
+    3. Quatrain: :math:`A.B.B.A.a.b.A.B.a.b.b.a.A.B.B.A`
+    4. Cinquain: :math:`A.A.B.B.A.a.a.b.A.A.B.a.a.b.b.a.A.A.B.B.A`
 
     This schema can be rewritten to emphasize the *refrain R* within in the form using substitution notation,
 
-    5. Couplet: R.a.A.a.b.R | R = A.B 
-    6. Tercet: R.a.b.A.B.a.b.b.R | R = A.B.B
-    7. Quatrain: R.a.b.A.B.a.b.b.a.R | R = A.B.B.A 
-    8. Cinquain: R.a.a.b.A.A.B.a.a.b.b.a.R | R = A.A.B.B.A
+    1. Couplet: :math:`R.a.A.a.b.R \mid R = A.B`
+    2. Tercet: :math:`R.a.b.A.B.a.b.b.R \mid R = A.B.B`
+    3. Quatrain: :math:`R.a.b.A.B.a.b.b.a.R \mid R = A.B.B.A`
+    4. Cinquain: :math:`R.a.a.b.A.A.B.a.a.b.b.a.R \mid R = A.A.B.B.A`
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    1. Couplet: :math:`R.a.A.a.b.R \mid R = A.B`
+    2. Tercet: :math:`R.a.b.A.B.a.b^2.R \mid R = A.B^2`
+    3. Quatrain: :math:`R.a.b.A.B.a.b^2.a.R \mid R = A.B^2.A`
+    4. Cinquain: :math:`R.a^2.b.A^2.B.a^2.b^2.a.R \mid R = A^2.B^2.A`
 
 Note that a *Rondeau Couplet* is simply a :ref:`triolet`. 
 
@@ -274,9 +270,9 @@ The following diagrams shows the different schemata for the rondeau form duing t
 
 .. topic:: Rondeau Schema (Renaissance)
 
-    1. Rondel: A.B.a.b + a.b.A.B + a.b.b.a.A
-    2. Rondeau Prime: (R)a.b.b.a.a.b.R + a.b.b.a.R
-    3. Rondeau: (R)a.a.b.b.a + a.a.b + a.a.b.b.a.R
+    1. Rondel: :math:`A.B.a.b + a.b.A.B + a.b.b.a.A`
+    2. Rondeau Prime: :math:`(R)a.b.b.a.a.b.R + a.b.b.a.R`
+    3. Rondeau: :math:`(R)a.a.b.b.a + a.a.b + a.a.b.b.a.R`
 
 **Roundel**
 
@@ -284,7 +280,9 @@ The following diagrams shows the different schemata for the rondeau form duing t
 
     .. math::
     
-        a.b.a.R + b.a.b + a.b.a.R 
+        A.b.a.R + b.a.b + a.b.a.R 
+
+    Where :math:`R \parallel b` and :math:`A \sim R`.
 
 **References**
 
@@ -361,19 +359,19 @@ Sonnet
 
     .. math::
 
-        a.b.b.{a^2}.{b^2}.a + c.d.e.c.d.e:{[c.d]^3}
+        [a.b^2.a]^2 + [{[c.d.e]^2}:{[c.d]^3}]
 
 .. topic:: Schema (Shakespearan)
 
     .. math::
 
-        ([\sum_i^{3} \overline{a.b.a.b}] + a.a/\mathfrak{i}_5)
+        (\sum_i^{3} \overline{a.b.a.b} + a.a/\mathfrak{i}_5)
 
     :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
-        ([\sum_i^{3} \overline{{a.b}^2}] + a^2/\mathfrak{i}_5)
+        (\sum_i^{3} \overline{[a.b]^2} + a^2/\mathfrak{i}_5)
 
 
 .. topic:: Schema (Spenserian)
@@ -381,6 +379,12 @@ Sonnet
     .. math::
 
         (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+
+        ([a.b]^2 + [b.c]^2 + [c.d]^2 + e^2/\mathfrak{i}_5)
 
 .. TODO: Interlocking Specification
     need some way of representing the interlocking rhyme scheme. Some way of recursive defining the index of the sum! This would be useful for pantoums and terzas as well!
@@ -401,7 +405,7 @@ Terza
 
     .. math::
 
-        \overline{a.b.a + b.c.b + c.d.c + d.e.d +  ... }
+        a.b.a + b.c.b + c.d.c + d.e.d +  ...
 
 **References**
 
@@ -416,7 +420,7 @@ Triolet
 
     .. math::
 
-        \overline{(A.B.a.A.a.b.A.B/\mathfrak{i}_4)}
+        (A.B.a.A.a.b.A.B/\mathfrak{i}_n)
 
 **References**
 
@@ -432,13 +436,19 @@ Virelai
     
     .. math::
         
-        \overline{a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... }
+        a.a.♭b.a.a.♭b.a.a.♭b + b.b.♭c.b.b.♭c.b.b.♭c + ... 
+
+    :ref:`Reducing <poetics-shorthand>`,
+
+    .. math::
+        
+        [a^2.♭b]^3 + [b^2.♭c]^3 + ... 
 
 .. topic:: Schema (Nouveau)
 
     .. math::
 
-        \overline{A_1.b.b.a.A_2 + B_1.c.c.b.B_2 +  ... }
+        A_1.b.b.a.A_2 + B_1.c.c.b.B_2 +  ...
     
 **References**
 

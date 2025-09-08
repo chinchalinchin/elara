@@ -33,7 +33,6 @@ Axioms
 .. --------
 
 .. TODO: Theorems
-    - The speed of iambic and trochaic meter is 1/2. The speed of dactylic and anapestic meter is 1/3. The speed of spondaic meter is 1. The speed of pyrrhic meter is 0. 
-    - The speed of a poem is a real number in the interval [0, 1]
-    - NOTE: probably need to take the inverse of the current definition to allow the quantity to correlate with the psychological perception of slowness! 
+    - The speed of iambic and trochaic meter is 2. The speed of dactylic and anapestic meter is 3. The speed of spondaic meter is 1. The speed of pyrrhic meter is (defined to be) 0. 
+    - The speed of a poem is a real number in the interval [0, infinity)
     - Define the idea of permissible structures. Then based on constraints like number of lines, number of syllables, only certain poetic forms are permissable. For example, if :math:`l(p \mid u) = 2`, then the only structures possible are :math:`x.y` and :math:`x+y`. If :math:`l(p | u) = 3`, then :math:`x.y.z`, :math:`x.y + z`, :math:`x+y.z`, :math:`x+y+z`, etc. There is some sort of combinatorial relationship between the line length of a poem and the possible structures that can manifested.

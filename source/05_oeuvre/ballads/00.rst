@@ -110,7 +110,7 @@ Absurdity
     - Pending
   * - August 11, 2025
     - The Genre Society
-    - Pending
+    - Accepted
   * - August 16, 2025
     - Rat Bag Lit
     - Rejected
@@ -143,3 +143,13 @@ Absurdity
 
   -- Rat Bag Lit
   
+.. epigraph::
+
+  Grant A Moore,
+
+  We were impressed with your work and would love to feature it in our upcoming issue.
+
+  Thanks again for submitting and we look forward to publishing this piece!
+
+  -Whitney M.
+  Managing Editor

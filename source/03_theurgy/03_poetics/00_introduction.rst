@@ -10,13 +10,9 @@ Section I: Introduction
 
     -- `Essay on Man`_, Alexander Pope
 
-.. _poetics-prior-definitions:
+.. _poetics-praeparatio:
 
 Praeparatio
------------
-
------------
-Mathematics 
 -----------
 
 The sum :math:`\sum` symbol will be borrowed from mathematics and extended over the domain of poetic objects. This would not present a problem if it were not sometimes necessary to use the :math:`\sum` in its mathematical capacity. It will be the convention of the formal system being developed to *overload* the arguments of the :math:`\sum` operation to be defined on numbers as well as poetic variables. For that reason, the meaning of the symbol,
@@ -26,49 +22,6 @@ The sum :math:`\sum` symbol will be borrowed from mathematics and extended over 
     \sum_i^n x_i 
 
 Should be attended with the utmost care. When :math:`x_i` is a poetic sign, then the summation will be understood to be the aggregation of signs into a poem. If :math:`x_i` is a number, then the summation will be understood in its usual arithemtical sense. 
-
--------
-Poetics
--------
-
-Given below are existing definitions of poetical devices. 
-
-.. topic:: Definitions: Feet
-    
-    - Iamb: One unstressed syllable followed by a stressed syllable.
-    - Spondee: A stressed syllable followed by a stressed syllable. Employed to slow down the pace of a line.
-    - Dactyl: A stressed syllable followed by two unstressed syllables. Employed to create a sense of falling or release.
-    - Trochee: A stressed syllable folowed by an unstressed syllable. Employed to emphasize urgency or directness.
-    - Anapest: Two unstressed syllables followed by a stressed syllable. Employed to create a sense of building momentum.
-    - Cretic (Amphimacer): A stressed syllable, followed by an unstressed syllable, followed by a stressed syllable.
-    - Pyrrhic (Dibrachs): Two unstressed syllables. 
-    - Amphibrach: An unstressed syllable followed by a stressed syllable and then another unstressed syllable.
-    - Bacchius: An unstressed syllable followed by two stressed syllables. 
-    - Antibacchius: Two stressed syllables followed by an unstressed syllable.
-
-.. topic:: Definitions: Lines
-
-    - Dimeter: A line with two feet.
-    - Trimeter: A line with three feet.
-    - Tetrameter: A line with four feet.
-    - Pentameter: A line with five feet.
-    - Hexmeter: A line with six feet.
-    - Heptameter: A line with seven feet.
-    - Octameter: A line with eight feet. 
-    - Hendecasyllable: A line consisting of eleven syllables. 
-
-.. topic:: Definitions: Stanzas
-
-    - Couplet: A stanza with two lines.
-    - Tercet: A stanza with three lines
-    - Quatrain: A stanza with four lines
-    - Cinquain: A stanza with five lines
-    - Sestet: A stanza with six lines.
-    - Septet: A stanza with seven lines.
-    - Octet: A stanza with eight lines.
-    - Nonet: A stanza with nine lines.
-    - Decastich: A stanza with ten lines.
-    - Envoi: A short, concluding stanza.
 
 .. _poetics-formalization:
 
@@ -98,15 +51,8 @@ Constants
 2. Uppercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \Gamma, ...`): Fixed words.
 3. Uppercase Coptic letters (:math:`Ⲁ, Ⲃ, Ⲅ, ...`): Fixed syllables.
 4. The lowercase English letter n is reserved for natural numbers.
-5. The lowercase Fraktur letter :math:`\mathfrak{i}` is reserved for iambs.
-6. The lowercase Fraktur letter :math:`\mathfrak{t}` is reserved for trochees.
-7. The lowercase Fraktur letter :math:`\mathfrak{s}` is reserved for spondees. 
-8. The lowercase Fraktur letter :math:`\mathfrak{a}` is reserved for anapests.
-9.  The lowercase Fraktur letter :math:`\mathfrak{d}` is reserved for dactyls.
-10. The lowercase Fraktur letter :math:`\mathfrak{p}` is reserved for pyrrchics (dibrachs)
-11. The lowercase Fraktur letter :math:`\mathfrak{m}` is reserved for amphibrachs 
-12. Th lowercase Frakture letter :math:`\mathfrak{c}` is reserved for cretics (amphimacers)
-13. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
+5. The lowercase Fraktur letters are reserved for meters.
+6. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
 
 .. _poetics-variables:
 
@@ -154,6 +100,9 @@ Relations
 
 All poetic relations are to be understood as truth values, meaning each expression results in a judgement of truth or falsity. 
 
+Containment
+^^^^^^^^^^^
+
 .. topic:: Containment
 
     .. math::
@@ -164,7 +113,7 @@ All poetic relations are to be understood as truth values, meaning each expressi
 
     The subscript *p* is used to differentiate containment from the set relation of "*subset*".
 
-If :math:`y subset_p x`, then the sign :math:`y` is said to be "*contained*" in the sign :math:`x`. The relation of "*contains*" extends up the levels of the poetic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
+If :math:`y \subset_p x`, then the sign :math:`y` is said to be "*contained*" in the sign :math:`x`. The relation of "*contains*" extends up the levels of the poetic hierarchy, capturing each successive level under its umbrella as it moves up each rung of the ladder,
  
 - Words contain syllables
 - Lines contain words and syllables
@@ -188,6 +137,9 @@ Similarly, for each syllable :math:`\rho` in :math:`\{ \text{Though}, ... \text{
 
     \rho \subset_p x
 
+Pendment
+^^^^^^^^
+
 The relations of *pendment* can be defined through containment and concatenation,
 
 .. topic:: Pendment
@@ -198,7 +150,12 @@ The relations of *pendment* can be defined through containment and concatenation
 
 If :math:`x \sim y`, :math:`y` is said to *append* :math:`x`, or inversely, :math:`x` is said to *prepend* :math:`y`.
 
-The relation of *pendment* will be important when rhymation is defined more thoroughly in :ref:`poetics-rhymes` sectoin. For now, this section will close by introducing the symbolic relation of rhymation,
+The relation of *pendment* will be important when rhymation is defined more thoroughly in :ref:`poetics-rhymation`. 
+
+Rhymation
+^^^^^^^^^
+
+Refer to :ref:`Rhymation <poetics-rhymation>` for a more thorough definition of *rhymation*.
 
 .. topic:: Rhymation
 
@@ -208,20 +165,34 @@ The relation of *pendment* will be important when rhymation is defined more thor
 
         x \parallel y
 
+Chirality
+^^^^^^^^^
+
+Refer to :ref:`poetics-chirality` for a more thorough definition of *chirality*.
+
+.. topic:: Chirality
+    
+    The sign :math:`x` is the chiamus of sign :math:`y`,
+
+    .. math::
+
+        x \bowtie y
+
 .. _poetics-operations:
 
 ----------
 Operations
 ----------
 
-This section introduces the operations of *poetics*. These are the verbs of the system. They are used to express poetic proposition *within the system*.
+This section introduces the operations of *poetics*. These are the "*verbs*" of the system. They are used to express poetic proposition *within the system*.
 
-In other words, all operations defined in this section are to be understood as *object* level constructs, in contradistinction to :ref:`relations <poetics-relations>` like containment or rhymation which are predicated of objects and yield truth-values as a result. All poetic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
+In other words, all operations defined in this section are to be understood as *object* level constructs, in contradistinction to :ref:`relations <poetics-relations>` like containment or rhymation, which are predicated of objects and yield truth-values as a result. All poetic operations are to be understood as being closed under the domain of signs, meaning each operation will always yield a sign as a result.
 
 1. **Concatenation** :math:`xy`
 2. **Succession** :math:`x.y`
-3. **Disjunction** :math:`x:y`
-4. **Separation** :math:`x + y`
+3. **Separation** :math:`x + y`
+
+*Concatenation* is the familiar string operation known in computer science, the theory of automata and regular expressions, as well as formal langauge theory. *Succession* and *separation* are new operations peculiar to the field of *poetics* (though not unknown in computer science) that deal with the formation of *new lines*.
 
 Separation vs. Succession 
 ^^^^^^^^^^^^^^^^^^^^^^^^^

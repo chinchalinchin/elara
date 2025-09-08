@@ -1,15 +1,19 @@
 .. _poetics-appendix:
 
-Appendix 1: Provisional Ideas
+Appendix I: Provisional Ideas
 =============================
 
 .. topic:: Provisional Notation 
 
-   1. #x: A lengthened sign. 
-   2. ♭x: A shortened sign.  
+   - :math:`#x` A lengthened sign. 
+   - :math:`♭x` A shortened sign.  
 
    Virelais require alternating rhymes to shorten and length across stanzas. The signs "#x" and "♭x" are here provisionally offered as a symbolic way of capturing this form. However, further research needs to be done on the exact syntactical rules of these signs.
 
+    - :math:`x:y`
+
+    Disjunction is used to indicate a *branch* within a poem, where a choice between two alternatives is to be made by the poet.
+    
 .. _poetics-projection:
 
 Projection

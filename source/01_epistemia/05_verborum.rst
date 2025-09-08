@@ -48,13 +48,13 @@ Semantic Devices
 Hysteron Proteron
 -----------------
 
-    *Moriamur, et in media arma ruamus* 
-
-    Let us die, and rush into the midst of the fight.
+    | *Moriamur, et in media arma ruamus* 
+    |
+    | Let us die, and rush into the midst of the fight.
 
     -- `Aeneid`_, Virgil, 19 BCE
 
-    I will kill thee, and love thee after.
+    | I will kill thee, and love thee after.
 
     -- `Othello`_, William Shakespeare
 
@@ -83,9 +83,8 @@ Paronomasia
 
 .. epigraph::
 
-    Of whom each strives, nor knows for what he strives,
-
-    And each half lives a hundred different lives;
+    | Of whom each strives, nor knows for what he strives,
+    | And each half lives a hundred different lives;
 
     -- `Scholar Gipsy`_, Matthew Arnold
 
@@ -149,27 +148,26 @@ Anacoluthon
 
 .. epigraph::
 
-    with up so floating many bells down
+    | with up so floating many bells down
 
     -- `Anyone Lived in a Pretty How Town`_ , e.e. cummings
 
 .. epigraph::
 
-    In the coal fire will not wholly console them.
+    | In the coal fire will not wholly console them.
 
     -- `Ouija`_, Sylvia Plath
 
 .. epigraph::
 
-    She's all states, and all princes, I,
-
-    Nothing else is.
+    | She's all states, and all princes, I,
+    | Nothing else is.
 
     -- `The Sun Rising`_, John Donne
 
 .. epigraph::
 
-    From there are ghosts in the air
+    | From there are ghosts in the air
 
     -- `I Have Longed To Move Away`_ , Dylan Thomas
 
@@ -180,23 +178,23 @@ Anadiplosis
 
 .. epigraph::
 
-    The years to come seemed waste of breath,
-
-    A waste of breath the years behind
+    | The years to come seemed waste of breath,
+    | A waste of breath the years behind
 
     -- `An Irish Airman Foresees His Death`_ , William Butler Years
 
-    There moves what seems a fiery spark,
+.. epigraph::
 
-    A lonely spark with silvery rays
+    | There moves what seems a fiery spark,
+    | A lonely spark with silvery rays
 
     -- `The Dong with a Luminous Nose`_, Edward Lear
 
-    The eyes that fix you in a formulated phrase,
+.. epigraph::
 
-    And when I am formulated, sprawling on a pin,
-
-    When I am pinned and wriggling on the wall,
+    | The eyes that fix you in a formulated phrase,
+    | And when I am formulated, sprawling on a pin,
+    | When I am pinned and wriggling on the wall,
 
     -- `The Love Song of J. Alfred Prufrock`_, T.S. Eliot
 
@@ -205,70 +203,68 @@ Anadiplosis
 Anaphora
 --------
 
-    Fear not the waking world, my mortal,
+.. epigraph::
 
-    Fear not the flat, synthetic blood
+    | Fear not the waking world, my mortal,
+    | Fear not the flat, synthetic blood
 
     -- `All All and All`_, Dylan Thomas
 
-    Their lone waters, lone and dead, --
+.. epigraph::
 
-    Their sad waters, sad and chilly
+    | Their lone waters, lone and dead, --
+    | Their sad waters, sad and chilly
 
     -- `Dream Land`_, Edgar Allen Poe
 
-    War on the spider and the wren!
+.. epigraph::
 
-    War on the destiny of man!
+    | War on the spider and the wren!
+    | War on the destiny of man!
 
     -- `Find Meat On Bones`_ , Dylan Thomas
 
+.. epigraph::
 
-    Why were they proud? Because their marble founts
-
-    Gush'd with more pride than do a wretch's tears?—
-
-    Why were they proud? Because fair orange-mounts
-
-    Were of more soft ascent than lazar stairs?—
-
-    Why were they proud? Because red-lin'd accounts
-
-    Were richer than the songs of Grecian years?—
-
-    Why were they proud? again we ask aloud,
-
-    Why in the name of Glory were they proud?
+    | Why were they proud? Because their marble founts
+    | Gush'd with more pride than do a wretch's tears?—
+    | Why were they proud? Because fair orange-mounts
+    | Were of more soft ascent than lazar stairs?—
+    | Why were they proud? Because red-lin'd accounts
+    | Were richer than the songs of Grecian years?—
+    | Why were they proud? again we ask aloud,
+    | Why in the name of Glory were they proud?
 
     -- `Isabella or the Pot of Basil`_, John Keats
 
-    And of thy spicy myrtles as they blow,
+.. epigraph::
 
-    And of thy roses amorous of the moon,
+    | And of thy spicy myrtles as they blow,
+    | And of thy roses amorous of the moon,
+    | And of thy lilies, that do paler grow
+    
+    -- `Isabella or the Pot of Basil`_, John Keats
 
-    And of thy lilies, that do paler grow
+.. epigraph::
+
+    | And she forgot the stars, the moon, and sun,
+    | And she forgot the blue above the trees,
+    | And she forgot the dells where waters run,
+    | And she forgot the chilly autumn breeze;  
 
     -- `Isabella or the Pot of Basil`_, John Keats
 
-    And she forgot the stars, the moon, and sun,
+.. epigraph::
 
-    And she forgot the blue above the trees,
-
-    And she forgot the dells where waters run,
-
-    And she forgot the chilly autumn breeze;  
-
-    -- `Isabella or the Pot of Basil`_, John Keats
-
-    If I were a dead leaf thou mightest bear;
-
-    If I were a swift cloud to fly with thee;
+    | If I were a dead leaf thou mightest bear;
+    | If I were a swift cloud to fly with thee;
 
     -- `Ode to the West Wind`_, Percy Blysse Shelley
 
-    We are the hollow men
+.. epigraph::
 
-    We are the stuffed men
+    | We are the hollow men
+    | We are the stuffed men
 
     -- `The Hollow Men`_, T.S. Eliot
 
@@ -277,23 +273,33 @@ Anaphora
 Anastrophe
 ----------
 
-    The widening circles into nothing gone
+.. epigraph::
+
+    | The widening circles into nothing gone
 
     -- `Calidore, A Fragment`_, John Keats
 
-    Observe how system into system runs
+.. epigraph::
+
+    | Observe how system into system runs
 
     -- `Essay on Man`_, Alexander Poper
 
-    What love Lorenzo for their sister had
+.. epigraph::
+
+    | What love Lorenzo for their sister had
 
     -- `Isabella or the Pot of Basil`_, John Keats
 
-    With fruit the vines that round the thatch-eves run
+.. epigraph::
+
+    | With fruit the vines that round the thatch-eves run
 
     -- `To Autumn`_, John Keats
 
-    May the last Adam's blood my soul embrace
+.. epigraph::
+
+    | May the last Adam's blood my soul embrace
 
     -- `Hymn to God, My God, In My Sickness`_, John Donne
 
@@ -308,22 +314,60 @@ Antimetabole
 
 Antimetabole is included in the category :ref:`chiasmus`.
 
-    How beautiful, if sorrow had not made
+.. epigraph::
 
-    Sorrow more beautiful than Beauty's self.
+    | When their bones are picked clean and the clean bones gone
+
+    -- `And Death Shall Have No Dominion`_, Dylan Thomas
+
+.. epigraph::
+
+    | Break in the sun till the sun breaks down
+
+    -- `And Death Shall Have No Dominion`_, Dylan Thomas
+    
+.. epigraph::
+
+    | Pleasure's a sin, and sometimes sin's a pleasure.
+
+    -- Don Jaun, Lord Byron
+    
+.. epigraph::
+
+    | How beautiful, if sorrow had not made
+    | Sorrow more beautiful than Beauty's self.
 
     -- `Hyperion`_, John Keats
+
+.. epigraph::
+
+    | Fair is foul, and foul is fair. 
+
+    -- Macbeth, William Shakespeare
+
+.. epigraph::
+
+    | The mind is its own place, and in itself
+    | Can make a Heav'n of Hell, a Hell of Heav'n.
+
+    -- Paradise Lost, John Milton
+
+.. epigraph::
+
+    | Beauty is truth, truth beauty
+
+    -- `Ode on a Grecian Urn`_, John Keats
 
 .. _aposiopesis:
 
 Aposiopesis
 -----------
 
-    For Thine is
+.. epigraph::
 
-    Life is
-
-    For Thine is the
+    | For Thine is
+    | Life is
+    | For Thine is the
 
     -- `The Hollow Men`_, T.S. Eliot
 
@@ -332,13 +376,12 @@ Aposiopesis
 Apostrophe
 ----------
 
-    O Melancholy, linger here awhile!
+.. epigraph::
 
-    O Music, Music, breathe despondingly!
-
-    O Echo, Echo, from some sombre isle,
-
-    Unknown, Lethean, sigh to us—O sigh!
+    | O Melancholy, linger here awhile!
+    | O Music, Music, breathe despondingly!
+    | O Echo, Echo, from some sombre isle,
+    | Unknown, Lethean, sigh to us—O sigh!
 
     -- `Isabella or the Pot of Basil`_, John Keats
 
@@ -367,34 +410,29 @@ Chiasmus
 
 Chiasmus includes the category of :ref:`antimetabole`.
 
-    When their bones are picked clean and the clean bones gone
+.. epigraph::
 
-    -- `And Death Shall Have No Dominion`_, Dylan Thomas
+    | Works without show, and without pomp presides.
 
-    Break in the sun till the sun breaks down
-
-    -- `And Death Shall Have No Dominion`_, Dylan Thomas
-
-    Beauty is truth, truth beauty
-
-    -- `Ode on a Grecian Urn`_, John Keats
+    -- An Essay On Criticism, Alexander Pope
 
 .. _epanalepsis:
 
 Epanalepsis
 -----------
 
-    It was no dream; or say a dream it was
+.. epigraph::
 
-    Real are the dreams of Gods, and smoothly pass
-
-    Their pleasures in a long immortal dream.
+    | It was no dream; or say a dream it was
+    | Real are the dreams of Gods, and smoothly pass
+    | Their pleasures in a long immortal dream.
 
     -- `Lamia`_, John Keats
 
-    The maggot that no man can kill
+.. epigraph::
 
-    And the man no rope can hang
+    | The maggot that no man can kill
+    | And the man no rope can hang
 
     -- `Find Meat On Bones`_ , Dylan Thomas
 
@@ -403,9 +441,10 @@ Epanalepsis
 Epistrophe
 ----------
 
-    A crowd flowed over London Bridge, so many,
+.. epigraph::
 
-    I had not thought death had undone so many.
+    | A crowd flowed over London Bridge, so many,
+    | I had not thought death had undone so many.
 
     -- `The Wasteland`_, T.S. Eliot
 
@@ -434,14 +473,16 @@ None yet found.
 Symploce
 --------
 
-    The yellow fog that rubs its back upon the window-panes,
-    
-    The yellow smoke that rubs its muzzle on the window-panes 
+.. epigraph::
+
+    | The yellow fog that rubs its back upon the window-panes,
+    | The yellow smoke that rubs its muzzle on the window-panes 
 
     -- `The Love Song of J. Alfred Prufrock`_, T.S. Eliot
 
-    Let us on by this tremulous light!
+.. epigraph::
 
-    Let us bathe in this crystalline light!
+    | Let us on by this tremulous light!
+    | Let us bathe in this crystalline light!
 
     -- `To Ulalume`_, Edgar Allen Poe

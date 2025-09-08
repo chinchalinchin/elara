@@ -34,6 +34,14 @@ Education
     - Physics
     - 2010
 
+.. _publications::
+
+Publications
+============
+
+- *Photographs of Autumn*, Macrame Literary Journal, Summer 2025 Issue
+- *Absurdity*, The Genre Society, Fall 2025 Issue (Forthcoming)
+
 .. _experience:
 
 Experience
