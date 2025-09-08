@@ -164,6 +164,4 @@ Then, the relation of *rhymation* can be defined precisely as,
 
 .. math::
 
-    x \parallel y \equiv [x [ \vdash \lor \Vdash  \lor \Vvdash ] y]
-
-Where the righthand logical sum, :math:`[ \vdash \lor \Vdash  \lor \Vvdash ]`, is shorthand for one of the three relations obtaining between :math:`x` and :math:`y`.
+    x \parallel y \equiv [[x \vdash y] \lor [x \Vdash y] \lor [x \Vvdash y]]

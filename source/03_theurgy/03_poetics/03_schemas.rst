@@ -100,6 +100,10 @@ Ghazal
     3. :math:`\text{Qafiya} = a`
     4. :math:`\text{Radif} = A`
     
+**References**
+
+- `Tonight`_, Agha Shahid Ali
+
 .. _kyrielle:
 
 Kyrielle

@@ -50,9 +50,8 @@ Constants
     a. The uppercase English letter :math:`S` is reserved for sets.
 2. Uppercase Greek letters (:math:`\mathrm{A}, \mathrm{B}, \Gamma, ...`): Fixed words.
 3. Uppercase Coptic letters (:math:`Ⲁ, Ⲃ, Ⲅ, ...`): Fixed syllables.
-4. The lowercase English letter n is reserved for natural numbers.
-5. The lowercase Fraktur letters are reserved for meters.
-6. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
+4. The lowercase Fraktur letters (:math:`\mathfrak{a}, \mathfrak{b}, \mathfrak{c}, ...`) are reserved for meters.
+5. The empty set :math:`\varnothing` is reserved for the pause (caesura). 
 
 .. _poetics-variables:
 
@@ -63,6 +62,7 @@ Variables
 1. Lowercase English letters (:math:`a, b, c, ...` ): Indeterminate rhymed lines.
     a. The lowercase English letters :math:`u, v, w` are reserved for indeterminate lines, not necessarily rhymed. 
     b. The lowercase English letters :math:`x, y, z` are reserved for general poetic variables (syllables, words, lines, stanzas and poems)
+    c. The lowercase English letter :math:`i, j, k, n, m` are reserved for natural numbers.
 2. The lowercase Greek letters (:math:`\alpha, \beta, \gamma`): Indeterminate rhymed words.
     a. The lowercase Greek letter :math:`\kappa, \lambda, \mu` are reserved for indetermine words, not necessarily rhymed.
 3. The Coptic letters :math:`ⲣ, ⲡ, Ⲡ` are reserved for indeterminate syllables. Subscripts are often used with syllabic variables to denote different syllables. 
@@ -140,13 +140,13 @@ Similarly, for each syllable :math:`\rho` in :math:`\{ \text{Though}, ... \text{
 Pendment
 ^^^^^^^^
 
-The relations of *pendment* can be defined through containment and concatenation,
+The relations of *pendment* can be defined through concatenation,
 
 .. topic:: Pendment
 
     .. math::
 
-        x \sim y \equiv [y \subset_p x] \land [\exists w: x = wy]
+        x \sim y \equiv \exists w: x = wy
 
 If :math:`x \sim y`, :math:`y` is said to *append* :math:`x`, or inversely, :math:`x` is said to *prepend* :math:`y`.
 

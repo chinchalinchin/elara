@@ -209,11 +209,11 @@ there are a total of :math:`n-1` possible positions for delimiters to be inserte
 
 .. topic:: Structure Definitions
 
-    1. Pure Structure: A line :math:`\mathfrak{x}_i` with no syllabic delimiting.
-    2. Perfect Structure: A line :math:`\mathfrak{x}_i` where each word :math:`\lambda` is :math:`\lambda/\mathfrak{x}_1`.
-    3. Compound Perfect Structure: A line :math:`\mathfrak{x}_i` where each word :math:`\lambda` is :math:`\lambda/\mathfrak{x}_k` for some :math:`1 < k < i`. 
-    4. Semi Perfect Structure: A line :math:`\mathfrak{x}_i` where each word :math:`\lambda` is :math:`\lambda/\mathfrak{x}_k` for some :math:`1 < k < i` or :math:`\lambda = ⲣ`.
-    5. Monotone Structure: A line :math:`\mathfrak{x}_i` where each word :math:`\lambda = p`
+    1. **Pure Structure**: A line :math:`\mathfrak{x}_i` with no syllabic delimiting.
+    2. **Perfect Structure**: A line :math:`\mathfrak{x}_i` where each word :math:`\lambda \div \mathfrak{x}_1`.
+    3. **Compound Perfect Structure**: A line :math:`\mathfrak{x}_i` where each word is :math:`\lambda \div \mathfrak{x}_k` for some :math:`1 < k < i`. 
+    4. **Semi Perfect Structure**: A line :math:`\mathfrak{x}_i` where each word is :math:`\lambda \div \mathfrak{x}_k` for some :math:`1 < k < i` or :math:`\lambda = ⲣ`.
+    5. **Monotone Structure**: A line :math:`\mathfrak{x}_i` where each word :math:`\lambda = p`
 
 A *perfect* structure is a metric line where each word in the line is written in the same meter as the line itself. For example, the following line is *perfect* iambic tetrameter,
 
@@ -276,65 +276,104 @@ Due to the combinatorial explosion, listing out the possible syllabic forms of a
 
 **Diambic Structures** 
 
-- Possible Delimiters: :math:`2 \cdot l(\mathfrak{i}_1| ⲣ) - 1 = 4 - 1 = 3` 
+- Possible Delimiters: :math:`n = 2 \cdot l(\mathfrak{i}_1| ⲣ) - 1 = 4 - 1 = 3` 
 
 1. Form 1: Delimiters = 0 
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4}` (**Pure**)
+    a. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4}` (**Pure**)
+        - Example: ``intimidate``
 2. Form 2: Delimiters = 1
-    - :math:`ⲡ_1 \mid {Ⲡ_2}{ⲡ_3}{Ⲡ_4}`
-    - :math:`{ⲡ_1}{Ⲡ_2} \mid {ⲡ_3}{Ⲡ_4}` (**Perfect**)
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} \mid Ⲡ_4`
+    a. :math:`ⲡ_1 \mid {Ⲡ_2}{ⲡ_3}{Ⲡ_4}`
+        - Example: ``they intersect``
+    b. :math:`{ⲡ_1}{Ⲡ_2} \mid {ⲡ_3}{Ⲡ_4}` (**Perfect**)
+        - Example:  ``reversed insight``
+    c. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} \mid Ⲡ_4`
+        - Example: ``absurdly dressed``
 3. Form 3: Delimiters = 2
-    - :math:`ⲡ_1 \mid Ⲡ_2 \mid {ⲡ_3}{Ⲡ_4}` (**Semi Perfect**)
-    - :math:`ⲡ_1 \mid {Ⲡ_2}{ⲡ_3} \mid Ⲡ_4`
-    - :math:`{ⲡ_1}{Ⲡ_2} \mid ⲡ_3 \mid Ⲡ_4` (**Semi Perfect**)
+    a. :math:`ⲡ_1 \mid Ⲡ_2 \mid {ⲡ_3}{Ⲡ_4}` (**Semi Perfect**)
+        - Example: ``the boys deceive``
+    b. :math:`ⲡ_1 \mid {Ⲡ_2}{ⲡ_3} \mid Ⲡ_4`
+        - Example: ``a waking dream``
+    c. :math:`{ⲡ_1}{Ⲡ_2} \mid ⲡ_3 \mid Ⲡ_4` (**Semi Perfect**)
+        - Example: ``deceive the man``
 4. Form 4: Delimiters = 3
-    - :math:`ⲡ_1 \mid Ⲡ_2 \mid ⲡ_3 \mid Ⲡ_4` (**Monotone**)
+    a. :math:`ⲡ_1 \mid Ⲡ_2 \mid ⲡ_3 \mid Ⲡ_4` (**Monotone**)
+        - Example: ``the rain that falls``
 
 **Triambic Structures**
 
-- Possible Delimiters: :math:`3 \cdot l(\mathfrak{x}_1| ⲣ) - 1 = 6 - 1 = 5`
+- Possible Delimiters: :math:`n = 3 \cdot l(\mathfrak{x}_1| ⲣ) - 1 = 6 - 1 = 5`
 
 1. Form 1: Delimiters = 0
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}` (**Pure**)
+    a. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}` (**Pure**)
+        - Example: None exist.
 2. Form 2: Delimiters = 1
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
-    - :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}` (**Compound Perfect**)
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}` (**Compound Perfect**)
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+    a. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    b. :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}` (**Compound Perfect**)
+        - Example: 
+    c. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
+        - Example: ``returning anything``
+    d. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}` (**Compound Perfect**)
+        - Example: ``articulate again``
+    e. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: ``amalgamations grow``
 3. Form 3: Delimiters = 2
-    - :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}`
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
-    - :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}` (**Perfect**)
-    - :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}`
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6`
+    a. :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    b. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    c. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    d. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    e. :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    f. :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}` (**Perfect**)
+        - Example: 
+    g. :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    h. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    i. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    j. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6`
 4. Form 4: Delimiters = 3
-    - :math:`ⲡ_1 | Ⲡ_2 | ⲡ_3 | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
-    - :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}` (**Semi Perfect**)
-    - :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}`
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6`
-    - :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}` (**Semi Perfect**)
-    - :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6` (**Semi Perfect**)
-    - :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | Ⲡ_4 | ⲡ_5 | Ⲡ_6`
+    a. :math:`ⲡ_1 | Ⲡ_2 | ⲡ_3 | {Ⲡ_4}{ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    b. :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4} | {ⲡ_5}{Ⲡ_6}` (**Semi Perfect**)
+        - Example: 
+    c. :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    d. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}`
+        - Example: 
+    e. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    f. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6`
+        - Example: 
+    g. :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}` (**Semi Perfect**)
+        - Example: 
+    h. :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    i. :math:`{ⲡ_1}{Ⲡ_2} | {ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6` (**Semi Perfect**)
+        - Example: 
+    j. :math:`{ⲡ_1}{Ⲡ_2}{ⲡ_3} | Ⲡ_4 | ⲡ_5 | Ⲡ_6`
+        - Example: 
 5. Form 5: Delimiters = 4
-    - :math:`ⲡ_1 | Ⲡ_2 | ⲡ_3 | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}` (**Semi Perfect**)
-    - :math:`ⲡ_1 | Ⲡ_2 | ⲡ_3 | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
-    - :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6` (**Semi Perfect**)
-    - :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | Ⲡ_4 | ⲡ_5 | Ⲡ_6`
-    - :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | Ⲡ_4 | ⲡ_5 | Ⲡ_6` (**Semi Perfect**)
+    a. :math:`ⲡ_1 | Ⲡ_2 | ⲡ_3 | Ⲡ_4 | {ⲡ_5}{Ⲡ_6}` (**Semi Perfect**)
+        - Example: 
+    b. :math:`ⲡ_1 | Ⲡ_2 | ⲡ_3 | {Ⲡ_4}{ⲡ_5} | Ⲡ_6`
+        - Example: 
+    c. :math:`ⲡ_1 | Ⲡ_2 | {ⲡ_3}{Ⲡ_4} | ⲡ_5 | Ⲡ_6` (**Semi Perfect**)
+        - Example: 
+    d. :math:`ⲡ_1 | {Ⲡ_2}{ⲡ_3} | Ⲡ_4 | ⲡ_5 | Ⲡ_6`
+        - Example: 
+    e. :math:`{ⲡ_1}{Ⲡ_2} | ⲡ_3 | Ⲡ_4 | ⲡ_5 | Ⲡ_6` (**Semi Perfect**)
+        - Example: 
 6. Form 6: Delimiters = 5
-    - :math:`ⲡ_1 \mid Ⲡ_2 \mid ⲡ_3 \mid Ⲡ_4 \mid ⲡ_5 \mid Ⲡ_6` (**Monotone**)
+    a. :math:`ⲡ_1 \mid Ⲡ_2 \mid ⲡ_3 \mid Ⲡ_4 \mid ⲡ_5 \mid Ⲡ_6` (**Monotone**)
+        - Example: 
 
-From these examples, it should be clear each meter has exactly one *pure* form, one *perfect* and one *monotone*. The number of *semi perfect* and *compound perfect* is dependent on the number of delimiters
+From these examples, it should be clear each meter has exactly one *pure* form, one *perfect* and one *monotone*. The number of *semi perfect* and *compound perfect* is dependent on the number of delimiters.
 
 .. _poetics-chirality:
 
@@ -353,76 +392,13 @@ Chirality
 
     .. math::
 
-        \exists \chi_1, \chi_2: [x = {z_1}{\chi_1}{z_2}{\chi_2}{z_3}]  \land [w = {z_4}{\chi_2}{z_5}{\chi_1}{z_6}]
+        \exists \chi_1, \chi_2: [x = [{z_1}][{\chi_1}][{z_2}][{\chi_2}][{z_3}]]  \land [w = [{z_4}][{\chi_2}][{z_5}][{\chi_1}][{z_6}]]
 
     Where :math:`\chi_1, \chi_2` are the *chiral pivots*.
 
 .. _poetics-chirality-examples:
 
---------
-Examples
---------
-
-.. epigraph::
-
-    | When their bones are picked clean and the clean bones gone
-
-    -- `And Death Shall Have No Dominion`_, Dylan Thomas
-
-- **Syllabification**:
-- **Chiral Pivots**: :math:`\chi_1 = ...`, :math:`\chi_2 = ...`
-- **Chirality**: 
-
-.. epigraph::
-
-    | Break in the sun till the sun breaks down
-
-    -- `And Death Shall Have No Dominion`_, Dylan Thomas
-
-- **Syllabification**:
-- **Chiral Pivots**: :math:`\chi_1 = ...`, :math:`\chi_2 = ...`
-- **Chirality**: 
- 
-.. epigraph::
-
-    | Pleasure's a sin, and sometimes sin's a pleasure.
-
-    -- Don Jaun, Lord Byron
-
-- **Syllabification**:
-- **Chiral Pivots**: :math:`\chi_1 = ...`, :math:`\chi_2 = ...`
-- **Chirality**: 
-
-.. epigraph::
-
-    | How beautiful, if sorrow had not made
-    | Sorrow more beautiful than Beauty's self.
-
-    -- `Hyperion`_, John Keats
-
-- **Syllabification**:
-- **Chiral Pivots**: :math:`\chi_1 = ...`, :math:`\chi_2 = ...`
-- **Chirality**: 
-
-.. epigraph::
-
-    | Fair is foul, and foul is fair. 
-
-    -- Macbeth, William Shakespeare
-
-- **Syllabification**:
-- **Chiral Pivots**: :math:`\chi_1 = ...`, :math:`\chi_2 = ...`
-- **Chirality**: 
-
-.. epigraph::
-
-    | Can make a Heav'n of Hell, a Hell of Heav'n.
-
-    -- Paradise Lost, John Milton
-
-- **Syllabification**: :math:`{ⲡ_1} {Ⲡ_1}`
-- **Chiral Pivots**: :math:`\chi_1 = ...`, :math:`\chi_2 = ...`
-- **Chirality**: 
+**Example**
 
 .. epigraph::
 
@@ -431,5 +407,5 @@ Examples
     -- `Ode on a Grecian Urn`_, John Keats
 
 - **Syllabification**: :math:`{Ⲡ_1}{ⲡ_2} \mid {ⲡ_3} \mid {Ⲡ_4} \mid {Ⲡ_4} \mid {Ⲡ_1}{ⲡ_2}`
-- **Chiral Pivots**: :math:`\chi_1 = {Ⲡ_1}{ⲡ_2}`, :math:`\chi_2 = Ⲡ_4`
+- **Chiral Pivots**: :math:`\chi_1 = {Ⲡ_1}{ⲡ_2}` and :math:`\chi_2 = Ⲡ_4`
 - **Chirality**: :math:`{Ⲡ_1}{ⲡ_2} \mid {ⲡ_3} \mid {Ⲡ_4} \bowtie {Ⲡ_4} \mid {Ⲡ_1}{ⲡ_2}`
