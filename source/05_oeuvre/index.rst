@@ -9,6 +9,7 @@ Oeuvre
    abstracta/index
    ballads/index
    elegies/index
+   ghazals/index
    imagistic/index
    odes/index
    pantoums/index

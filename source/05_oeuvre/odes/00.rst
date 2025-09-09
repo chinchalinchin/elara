@@ -79,7 +79,7 @@ Ode to Death
     - Pending
   * - August 29, 2025
     - AC DC: Journal for the Bent
-    - Pending
+    - Rejected
   * - August 29, 2025
     - Banyan Review Poetry Contest
     - Pending
@@ -100,4 +100,7 @@ Ode to Death
     - Pending
   * - September 5, 2025
     - Amethyst Review
+    - Pending
+  * - September 9, 2025
+    - Garfield Lake Review
     - Pending

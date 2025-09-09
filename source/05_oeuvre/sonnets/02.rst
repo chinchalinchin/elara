@@ -77,3 +77,6 @@ Eulogy
   * - September 5, 2025
     - Amethyst Review
     - Pending
+  * - September 9, 2025
+    - Garfield Lake Review
+    - Pending
