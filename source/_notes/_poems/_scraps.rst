@@ -483,3 +483,62 @@
 | the silent rain in lines begins to flail
 | the silent rain in puddles tells our tale.
 | the silent rain begins to tell our tale.
+
+---
+
+| the grain of folds within your clenching fist
+| reveal the tangled web that veins your hand.
+|
+| the grain  your palm are tangled thick
+| the folds within your palm of tangled skein
+| the 
+| veins your hand. 
+|
+| Dispersed like ranging echoes from their source,
+| across the world a storm contains your hand. 
+| restrains your hand. 
+|
+| Dispersed like ranging echoes from their source,
+| across the void a voice contains your hand. 
+|
+| not even restrains your hand. 
+| despite  restrains your hand
+| from panes, your hand.
+| restrains your hand
+| nothing done regains your hand.
+|
+| Please grant me this: a blameless moment more
+| where touching me no longer stains your hand.
+|
+| Dispersed like ranging echoes from their source, 
+| the ghost of music played ordains your hand. 
+|
+| Refrains that play their notes in keys of me, 
+| the medley of that man profanes your hand.
+|
+| mundanely, evening serenades a hymn,
+| the same that sang 
+| in hopes its music entertains your hand.
+|
+| a tired 
+| a song we sung 
+| Your dream domain is strangely lacking me. 
+| music trains your hand.
+| and soon my hand no longer stains your hand. 
+| tonight I'll soak with tears what stains your hand. 
+|
+| this grant you gave to hold 
+| explains your hand?
+|
+| no matter what, your hand remains your hand.
+|
+| contains your hand
+| entertains your hand.
+| maintains your hand.
+| obtains your hand. 
+| regains your hand.
+| retrains your hand.
+| sprains your hand.
+| stains your hand. 
+| reins your hand.
+| reigns your hand. 
