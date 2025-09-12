@@ -1,10 +1,8 @@
 .. note:: 
 
-    This prompt is formatted in RestructuredText (RST)
+    This prompt is formatted in RestructuredText (RST).
     
-.. MODE: TREND ANALYSIS
-.. 
-.. This a collection of poetry over time. Extract any relevant trends displayed in the author's writing style, grammar, themes, tones, style, writing evolution, etc. Project the trajectory of the next few months.
+{% include '_mode_advice.rst' %}
 
 Feburary
 ========
@@ -4016,8 +4014,8 @@ Imaginary Vessels
 | like the shape of water
 | that fills every vessel.
 
-Millenial Melodies
-------------------
+Millenia
+--------
 
 | the slow motion
 | lives of trees
@@ -4078,8 +4076,8 @@ The Origin of Lies
 |
 | Please trust that nothing passes,
 |    we only change our form.
-| Your tears transmute to gasses 
-|    when sun returns to warm.
+| The morning dew amasses
+|    on leaves the sun can't warm.
 |
 | Child, listen, though you're growing,
 |    some things cannot be known
@@ -4332,49 +4330,183 @@ Ode to Death
 September 
 =========
 
-Ode to the Absent
+Ode to Upholstery
 -----------------
 
 | the Sunday mornings hang in clouds of smoke
 | above my head where thoughts of you reside
 | recalling times my clumsy fingers broke
-| some stitch or knot your fingers deftly tied,
+| some stitch or knit your fingers deftly tied,
 | or when you'd measure out your thread
-|    to fix the errors made
-|        and sew it back anew,
+|       to fix the errors made
+|           and sew it back anew,
 | i knew when watching as you spread
-|    the fiber that i frayed,
-|        i never would be you.
+|       the fiber that i frayed,
+|           i never would be you.
+|
+| a box of decades stored in bobbin spools
+| unwind within my open palm their loops,
+| reversing ages into circled pools;
+| a single tangled knot erupts and droops,
+| undone so quick and dripping thick
+|       through winding yards of years
+|           you spun around the drum
+| before the plunging needle prick,
+|       this moment reappears
+|           along the lengths i thumb.
 |
 | what cluttered racks of vinyl rolls to stack
 | against the walls where once you puffed your pipe,
 | the only imitation i could crack
 | now burning in my teeth, a cherry ripe
 | as molten metal cast in molds
-|    before the water chills
-|        and shapes the studs with steam
+|       before the water chills
+|           and shapes the studs with steam
 | to snaps you press through sheets and folds
-|    of layered woven twills,
-|        to hide the lonely seam.
+|       of layered woven twills,
+|           to hide the lonely seam.
 |
 | the intersecting threads of me through strands
 | of silken plumes, they needle past my lips
 | from dying gears that spin beneath your hands
-| and weave the pattern drawn by fingertips
+| to weave the pattern drawn by fingertips
 | upon the fabric draping down
-|    in wrinkled folds of cloth
-|        unrolled in hazy rooms,
-| the one you sketched with focused frown
-|    and cut to clear the swath
-|        of me that burns and fumes.
+|       in wrinkled folds of cloth
+|           unrolled in hazy rooms,
+| like ones you sketched with focused frown
+|       and cut to clear the swath
+|           of me that burns and fumes.
 |
 | these empty rooms of tools you left behind,
-| as if one day i'd understand their use,
+| as if some day i'd understand their use,
 | instead infected specks of rust i grind
 | with oiled stones on spinning spokes that loose 
 | eroded flakes of showered flames
-|    and spray the ground with red,
-|        the dust of wasted time,
+|       and spray the ground with red,
+|           the dust of wasted time,
 | each careful pass of sparks reclaims
-|    the last remains you shed, 
-|        the gleam that hides in grime.
+|       the last remains you shed, 
+|           the gleam that hides in grime.
+
+Dystopia (Revision)
+-------------------
+
+| The snow descends upon a place
+|       sequestered on a crown,
+| a hidden place the heights embrace
+|       to shield from view a town.
+| 
+| The world below forgot to look,
+|       erased its name from maps,
+| and soon its people undertook
+|       a course that brings collapse. 
+|
+| This town atop a mountain peak
+|       where councils once convened,
+| rebuked all art in harsh critique,
+|       declared its aims demeaned. 
+| 
+| This place had placed a clause in laws
+|       to cause a pause to rhymes,
+| for rhymes were crimes within the claws
+|       of lawful paradigms.
+|
+| So this defendant stands to rise
+|       as bailiffs introduce
+| the honored judge whose beady eyes
+|       reflect a swinging noose.
+|
+| The gavel bangs, a lawyer bows
+|       with empty head and face,
+| "Your honor, please, if court allows,
+|       I'd like to start the case."
+|
+| With arms behind and nose upturned,
+|       the lawyer paces slow, 
+| "This felon here has doubtless earned
+|       a sentence down below.
+|
+| Denials come, but don't be tricked,
+|       inspect his very clothes!"
+| The accusations flung depict
+|       a derelict of oaths,
+|
+| "A man with slacks of shaded blacks,
+|       with mittens knitted neat,
+| and zippered teeth that grip in tracks
+|       around his slippered feet!
+|
+| A costume of provocateurs!
+|       Temptations made to chime!
+| These words once said, the clock assures,
+|       will synchronize in time!"
+|  
+| The benches gasp, the jury faints,
+|       their understanding whet;
+| such disregard for law's constraints
+|       had left his garb a threat.
+|
+| The lawyer stalks the hallowed hall, 
+|       tirade ablaze on lips,
+| "If that won't do, then please recall
+|       the journal found in strips!
+|
+| This man right here, his notes betray
+|       a poet's smitten soul!"
+| He hoists a page, "Exhibit A!
+|       The proof he lacks control:
+|
+| 'My heart is like a metaphor
+|       that layers cannot hide,
+| a part that looks much better for
+|       the points that coincide'!"
+|   
+| A silence falls across the crowd.
+|       The traitor sits accused,
+| his echoed crimes relived aloud
+|       as faces sneer bemused.         
+|
+| The lawyer shouts in sharp remand, 
+|       "This thug must pay the price!"
+| Then adding more, a stark demand,
+|       "A hanging would suffice!"
+|
+| And so the prosecution rests
+|       while hangmen tie their knots.
+| Indictment looms; the man ingests
+|       the end his charge allots. 
+|
+| ... in progress ... 
+
+Your Hand
+---------
+
+| My overflowing palm retains your hand,
+| my soundless searching grip constrains your hand.
+|
+| Campaigns were waged behind our dinner plates
+| so in my weakened state now reigns your hand. 
+|
+| Champagne on lips recalls our lightning strike, 
+| its faded charge at least sustains your hand.
+|
+| Your face betrays unknown terrains of thought,
+| I ask, what other vision gains your hand?
+|
+| Today's performance wanes around your eyes,
+| the last remaining fragment feigns your hand.
+|
+| Though yesterday what we ingrained was real,
+| it's only habit now that trains your hand. 
+|
+| Our anthem drains its notes on evening wind,
+| not even beating rhythm reins your hand. 
+|
+| The grain of folds within your clenching fist 
+| reveals the tangled web that veins your hand.
+|
+| My fingers trace disdain beneath a strand
+| of silver thread. What bracelet chains your hand? 
+|
+| Bewitched, your straining wrist displays a charm, 
+| another's secret heart ordains your hand. 

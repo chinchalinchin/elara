@@ -34,7 +34,7 @@ Education
     - Physics
     - 2010
 
-.. _publications::
+.. _publications:
 
 Publications
 ============

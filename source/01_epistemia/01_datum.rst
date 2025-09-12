@@ -47,6 +47,8 @@ Linguistic
     - :download:`Reflective Words CSV <../_static/csv/datasets/linguistic/words/reflective-words.csv>`
 - Oronyms
     - :download:`Oronyms CSV <../_static/csv/datasets/linguistic/sentences/oronyms.csv>`
+- :ref:`Masculine Rhymes <poetics-stress>`
+    - :download:`Oronyms CSV <../_static/csv/datasets/linguistic/words/masculine-rhymes.csv>`
 
 .. _scientific-datasets:
 

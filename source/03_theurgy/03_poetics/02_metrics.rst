@@ -9,18 +9,18 @@ Section III: Metrics
 Feet
 ----
 
-1. **Iamb**: :math:`\mathfrak{i} = ⲡⲠ`
-2. **Trochee**: :math:`\mathfrak{t} = Ⲡⲡ`
-3. **Spondee** :math:`\mathfrak{s} = ⲠⲠ`
-4. **Pyrrhic** :math:`\mathfrak{p} = ⲡⲡ`   
-5. **Dactyl** :math:`\mathfrak{d} = Ⲡⲡⲡ`
-6. **Anapest**: :math:`\mathfrak{a} = ⲡⲡⲠ`
-7. **Amphibrach**: :math:`\mathfrak{m} = ⲡⲠⲡ`
-8. **Amphimacer**: :math:`\mathfrak{c} = ⲠⲡⲠ`
-9. **Bacchius**: :math:`\mathfrak{b} = ⲡⲠⲠ`
-10. **Antibacchius**: :math:`\mathfrak{h} = ⲠⲠⲡ`
-11. **Molossus**: :math:`\mathfrak{l} = ⲠⲠⲠ`
-12. **Tribrach**: :math:`\mathfrak{t} = ⲡⲡⲡ`
+1. **Iamb**: :math:`\mathfrak{i} = {ⲡ_1}{Ⲡ_2}`
+2. **Trochee**: :math:`\mathfrak{t} = {Ⲡ_1}{ⲡ_2}`
+3. **Spondee** :math:`\mathfrak{s} = {Ⲡ_1}{Ⲡ_2}`
+4. **Pyrrhic** :math:`\mathfrak{p} = {ⲡ_1}{ⲡ_2}`   
+5. **Dactyl** :math:`\mathfrak{d} = {Ⲡ_1}{ⲡ_2}{ⲡ_3}`
+6. **Anapest**: :math:`\mathfrak{a} = {ⲡ_1}{ⲡ_2}{Ⲡ_3}`
+7. **Amphibrach**: :math:`\mathfrak{m} = {ⲡ_1}{Ⲡ_2}{ⲡ_3}`
+8. **Amphimacer**: :math:`\mathfrak{c} = {Ⲡ_1}{ⲡ_2}{Ⲡ_3}`
+9. **Bacchius**: :math:`\mathfrak{b} = {ⲡ_1}{Ⲡ_2}{Ⲡ_3}`
+10. **Antibacchius**: :math:`\mathfrak{h} = {Ⲡ_1}{Ⲡ_2}{ⲡ_3}`
+11. **Molossus**: :math:`\mathfrak{l} = {Ⲡ_1}{Ⲡ_2}{Ⲡ_3}`
+12. **Tribrach**: :math:`\mathfrak{t} = {ⲡ_1}{ⲡ_2}{ⲡ_3}`
 
 .. topic:: Definition: Meters
 
@@ -40,7 +40,7 @@ Refers to a tercet where the first and third line are written in iambic tetramet
 
 Note in this example the first and third line rhyme. 
 
-The scope of a meter extends to everything contained in the parenthesis it marks. For example,
+The scope of a meter extends to everything contained in the brackets in which it is operating. For example,
 
 .. math::
 
@@ -48,7 +48,7 @@ The scope of a meter extends to everything contained in the parenthesis it marks
 
 Denotes a rhyming couplet where each line is written in iambic tetrameter. 
 
-Often, when refering to a single line, :math:`a \div \mathfrak{x}_i`, the :math:`a \div ` will be dropped and the line will be represented simply as :math:`\mathfrak{x}_i`.
+Often, when refering to a single line, :math:`a \div \mathfrak{x}_i`, the prefix will be dropped and the line will be represented simply as :math:`\mathfrak{x}_i`.
 
 .. _poetics-lengths:
 

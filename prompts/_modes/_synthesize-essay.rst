@@ -1,3 +1,0 @@
-.. MODE: EDITOR
-..
-.. Find passages from this journal that are linked by their thematic cohesion and could be parsed into a workable essay to submit to philosophical and literary journals. Edit these passages into a whole, but do not add any content. Leave the work written as it currently is, simply remove any cruft and reorganize it for clarity. Leave TODOs in the document that indicate content needs to be added to link the ideas being presented into a more cohesive whole.

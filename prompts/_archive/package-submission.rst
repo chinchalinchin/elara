@@ -1,13 +1,22 @@
+
 .. MODE: OVERRIDE (SUBMISSION PACKAGE)
 ..
 .. This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal.  Use the context to create a taste profile of the journal. Then create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission tailored to the taste profile.
+
+.. _solitication:
 
 ============
 Solicitation
 ============
 
+{{ solicitation }}
+.. note::
+
+  Need cover letter.
+  
 .. _resume:
 
+======
 Resume
 ======
 
@@ -17,9 +26,8 @@ Resume
 
 .. _education:
 
----------
 Education
----------
+=========
 
 .. list-table:: Education
   :widths: 15 15 15 15
@@ -38,11 +46,18 @@ Education
     - Physics
     - 2010
 
+.. _publications::
+
+Publications
+============
+
+- *Photographs of Autumn*, Macrame Literary Journal, Summer 2025 Issue
+- *Absurdity*, The Genre Society, Fall 2025 Issue (Forthcoming)
+
 .. _experience:
 
-----------
 Experience
-----------
+==========
 
 .. _employment:
 
@@ -151,7 +166,6 @@ Certifications
 
   * - Organization
     - Certification
-    - Badge
   * - AWS
     - Developer Associate
   * - AWS
@@ -169,7 +183,7 @@ Certifications
   * - MTA
     - Software Development Fundamentals
 
-Submission
-==========
+Submissions
+===========
 
 See attached PDF.

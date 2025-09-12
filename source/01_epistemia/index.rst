@@ -14,6 +14,7 @@ Epistemia
    03_lexicon
    04_dialectus
    05_verborum
-   06_commentariat
-   07_axiomata
-   08_probatum
+   06_consonantia
+   07_commentariat
+   08_axiomata
+   09_probatum

@@ -3,7 +3,6 @@
 Verborum
 ========
 
-
 .. _devices:
 
 **Semantic Devices**
