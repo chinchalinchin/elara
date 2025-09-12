@@ -34,39 +34,62 @@ Rhyme Families
 
 .. topic:: Latin Branch, Other Roots
 
-   **Latin**: *combinare*
+   **Latin**: *signare* (verb)
+      to mark, to seal
+      
+   - ``assign``, ``reassign``, ``design``
+
+   **Latin**: *combinare* (verb)
       to yoke together
 
    - ``combine``, ``recombine``
 
-   **Latin**: *assignare*/*designare*
+   **Latin**: *declinare* (verb)
+      to slope downward
 
-   - ``assign``, ``reassign``, ``design``
+   - ``decline`` 
 
-   **Latin**: *declinare*/*inclinare*
+   **Latin**: *inclinare* (verb)
+      to tilt, to tip
 
-   - ``decline``, ``incline``
+   - ``incline``
 
-   **Latin**: 
+   **Latin**: *vinum* (noun)
+      wine
+
+   - ``wine``
+
+   **Latin**: *pinus* (noun)
+      pine
+   
+   - ``pine``
 
 .. topic:: Germanic Branch, Roots
 
    **Old English** *brȳne* (noun)
       salt liquor
 
+   - ``brine``
+
    **Old English** *scīnan* (verb)
       to shine, be resplendent
 
+   - ``shine``
+   
    **Old English** *swīn* (noun)
       pig, hog
+
+   - ``swine``
 
    **Old English** *twīn* (noun)
       double thread
    
+   - ``twine``
+
    **Old English** *hwīnan* (verb)
       to whistle through the air
 
-   - ``brine``, ``shine``, ``spline``, ``swine``, ``twine``, ``whine``
+   - ``whine``
 
 .. topic:: Greek Branch, roots
 
@@ -76,6 +99,7 @@ Rhyme Families
    - ``anodyne``
 
    **Greek**: *κρυστάλλινος* (Adjective)
+      of crystal
 
    - ``crystalline``
 
@@ -88,6 +112,109 @@ Rhyme Families
 
    - ``benign``, ``divine``, ``equine``, ``feline``, ``leonine``, ``lupine``, ``saturnine``, ``serpentine``
 
+------------
+/ɛkt/ Family
+------------
+
+.. csv-table:: /ɛkt/ Rhymes
+   :header-rows: 1
+   :file: ../_static/csv/datasets/linguistic/words/rhymes/ekt-rhymes.csv
+
+**Roots**
+
+.. topic:: Latin Branch, Legere Root
+
+   **Latin**: *legere* (verb)
+      to choose, to select, to appoint
+
+   - ``collect``, ``elect``, ``neglect``, ``select``, ``intellect``
+
+.. topic:: Latin Branch, Specere Root
+
+   **Latin**: *specere* (verb)
+      to look at, to see
+
+   - ``aspect``, ``expect``, ``inspect``, ``respect``, ``retrospect``
+
+.. topic:: Latin Branch, Facere Root
+
+   **Latin**: *facere* (verb)
+      to do, to make, to produce
+
+   - ``affect``, ``effect``, ``perfect``, ``infect``
+
+.. topic:: Latin Branch, Regere Root
+
+   **Latin**: *regere* (verb)
+      to rule, to guide, to keep straight
+
+   - ``correct``, ``direct``, ``erect``, ``resurrect``
+
+.. topic:: Latin Branch, Iacere Root
+
+   **Latin**: *iacere* (verb)
+      to throw
+
+   - ``eject``, ``inject``, ``reject``, ``subject``
+
+.. topic:: Latin Branch, Other Roots
+
+   **Latin**: *secare* (verb)
+      to cut
+
+   - ``bisect``, ``insect``, ``intersect``
+
+   **Latin**: *flectere* (verb)
+      to bend
+
+   - ``deflect``, ``reflect``
+
+   **Latin**: *nectere* (verb)
+      to bind
+
+   - ``connect``
+
+   **Latin**: *tegere* (verb)
+      to cover
+
+   - ``protect``
+
+.. topic:: Greek Branch, Roots
+
+   **Greek**: *ἀρχιτέκτων* (noun)
+      architect
+
+   - ``architect``
+
+.. topic:: French Branch, roots
+
+   **French**: *eschequier* (verb)
+      to play chess
+
+   - ``checked``
+
+.. topic:: Germanic Branch, roots
+
+   **Dutch** *dekken* (verb)
+      to cover
+
+   - ``decked``
+
+   **Dutch** *trekken* (verb)
+      to trek
+
+   - ``trecked``
+
+   **Norse** *flekka* (verb)
+      to spot, to stain
+
+   - ``flecked``
+
+   **Norse** *rek* (adjective)
+      driven, pushed
+
+   - ``wrecked``
+   
 ------------
 /ɛnd/ Family
 ------------
