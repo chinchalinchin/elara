@@ -118,7 +118,7 @@ Rhyme Families
 
 .. csv-table:: /ɛkt/ Rhymes
    :header-rows: 1
-   :file: ../_static/csv/datasets/linguistic/words/rhymes/ekt-rhymes.csv
+   :file: ../_static/csv/datasets/linguistic/words/rhymes/ect-rhymes.csv
 
 **Roots**
 
@@ -214,7 +214,7 @@ Rhyme Families
       driven, pushed
 
    - ``wrecked``
-   
+
 ------------
 /ɛnd/ Family
 ------------

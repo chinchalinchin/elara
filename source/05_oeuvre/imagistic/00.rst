@@ -144,7 +144,7 @@ Holly Tree
     - Pending
   * - September 5, 2025
     - Amethyst Review
-    - Pending
+    - Rejected
     
 .. epigraph::
   

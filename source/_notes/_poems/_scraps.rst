@@ -542,3 +542,20 @@
 | stains your hand. 
 | reins your hand.
 | reigns your hand. 
+
+---
+
+| provide the last remains of thought,
+| the snaking veins that spread like breaks
+| upon the verdant glass of years,
+| the growth of grass that blooms in voids,
+| the poison leaves i fall through free 
+| and leave this city waning thin.
+
+
+| that heaven sent, unlike the roads'
+| infernal maze, eroded sprawl
+| that spans expanse in secret green
+| as intersecting aimless arcs,
+| reverbing curves, diverge in dirt
+| and lead me further out away.
