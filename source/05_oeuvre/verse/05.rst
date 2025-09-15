@@ -35,7 +35,7 @@ The Origin of Lies
 | So while you're small, keep holding
 |    my hand as though it soothes;
 | The world will keep unfolding
-|   each wrinkle that it smoothes.
+|   each wrinkle that it smooths.
 |
 | Believe me when I'm saying:
 |    Oh, Ila, darling dear,
@@ -110,4 +110,7 @@ The Origin of Lies
     - Pending
   * - September 9, 2025
     - Garfield Lake Review
+    - Pending
+  * - September 14, 2025
+    - Princemere Poetry Prize
     - Pending

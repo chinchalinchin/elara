@@ -4510,3 +4510,40 @@ Your Hand
 |
 | Bewitched, your straining wrist displays a charm, 
 | another's secret heart ordains your hand. 
+
+-----------
+Anniversary
+-----------
+
+| the city edge, its concrete knife
+| divides the Earth, creates a cliff
+| the shifting gears engage to dive,
+| a morning drive becomes a trek
+| along the etching mountainside,
+| the tips of which all signals die;
+| ascending poles of cable lines,
+| the crooked rubber vines that test
+| the forest depth infested heights  
+| with swarming trails of valleyed years
+| much older than minutes here,
+| forgotten since and gone to ground,
+| to gravel found upon the paths 
+| unravelled round the bend today,
+| today a day the years return,
+| it turns around to me again,
+| repeated now, but far removed
+| by twisted roads that have no end,
+| where maps pretend to know the way
+| through swaying wilds of ancient pine
+| inclined on slants of slated shelves,
+| that delve the dark of cratered holes
+| around reverbing curves that skirt 
+| the skids my spinning makes in dirt;
+| the thinning miles, the barren miles,
+| as humans fade, the tree empires
+| expanding spans of secret green,
+| and losing me, i find the top,
+| the spot we used, the place you said
+| you'd always be, but all remains
+| decayed, reclaimed, reversed, undone, 
+| embedded in the layered lime.

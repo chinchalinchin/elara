@@ -8,13 +8,6 @@ Epistemia
    :maxdepth: 1
    :caption: Contents:
 
-   00_radix
-   01_datum
-   02_tabula
-   03_lexicon
-   04_dialectus
-   05_verborum
-   06_consonantia
-   07_commentariat
-   08_axiomata
-   09_probatum
+   00_empiricus/index
+   01_linguisticus/index
+   02_metaphysicus/index

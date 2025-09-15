@@ -28,3 +28,6 @@ Dinner Wine
   * - September 6, 2025
     - Funicular Magazine
     - Pending
+  * - September 14, 2025
+    - Passionfruit Review
+    - Pending

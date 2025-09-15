@@ -9,7 +9,7 @@ Tabula
 Random Digits
 -------------
 
-.. image:: ../_static/img/math/statistics/tables/table-random-digits.png
+.. image:: ../../_static/img/math/statistics/tables/table-random-digits.png
     :align: center
     :alt: Random Digits Table
 
@@ -22,14 +22,14 @@ Z Table
 Negative Z Values
 -----------------
 
-.. image:: ../_static/img/math/statistics/tables/table-negative-z.png
+.. image:: ../../_static/img/math/statistics/tables/table-negative-z.png
     :align: center
     :alt: Negative Z Table
 
 Postive Z Values 
 ----------------
 
-.. image:: ../_static/img/math/statistics/tables/table-positive-z.png
+.. image:: ../../_static/img/math/statistics/tables/table-positive-z.png
     :align: center
     :alt: Positive Z Table
 
@@ -39,7 +39,7 @@ Postive Z Values
 :math:`\chi^2` Table 
 --------------------
 
-.. image:: ../_static/img/math/statistics/tables/table-chi-squared.jpg
+.. image:: ../../_static/img/math/statistics/tables/table-chi-squared.jpg
     :align: center
     :alt: Chi-Squared Table
 
@@ -49,7 +49,7 @@ Postive Z Values
 T Table
 -------
 
-.. image:: ../_static/img/math/statistics/tables/table-t.jpg
+.. image:: ../../_static/img/math/statistics/tables/table-t.jpg
     :align: center
     :alt: Student's T Table
 
@@ -59,6 +59,6 @@ T Table
 Pearson Correlation Coefficient Table
 -------------------------------------
 
-.. image:: ../_static/img/math/statistics/tables/table-pearson-correlation.png
+.. image:: ../../_static/img/math/statistics/tables/table-pearson-correlation.png
     :align: center
     :alt: Pearson Correlation Coefficient Table

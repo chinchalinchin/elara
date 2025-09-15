@@ -10,4 +10,3 @@ Canon
 
    00_resume
    01_gallery
-   00_automata/index

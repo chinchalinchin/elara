@@ -458,12 +458,12 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Electric Vehicle Dataset 
 ------------------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/datasets/economic/electric-vehicle-population-data.csv>`.
+You can download the full dataset :download:`here <../../../../_static/csv/economic/electric-vehicle-population-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Electric Vehicles in Washington State
-   :file: ../../../../_static/csv/datasets/previews/electric-vehicle-population-data-preview.csv
+   :file: ../../../../_static/csv/previews/electric-vehicle-population-data-preview.csv
 
 The meaning of the columns was discussed in more detail in :ref:`project-one-background`. Refer to that section for further information on this dataset.
 

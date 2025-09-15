@@ -10,11 +10,17 @@ from docutils import nodes, utils
 from sphinx.application import Sphinx
 import argparse
 import os
+import sys 
 
 project = "elara"
 toc_title = "elara"
 copyright = '2023 - 2025, chinchalinchin industries'
 author = 'Grant Moore'
+
+# -- Path setup --------------------------------------------------------------
+
+sys.path.insert(0, os.path.abspath('./_extensions/_roles'))
+sys.path.insert(0, os.path.abspath('./_extensions/_directives'))
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -29,7 +35,15 @@ extensions = [
     'sphinx_design',
     'sphinx_sitemap',
     "sphinx_carousel.carousel",
-
+      # Custom Directives Extensions
+    'share',
+    'map',
+    'rss',
+    # Custom Roles Extensions
+    'back',
+    'redacted',
+    'small',
+    'tiny',
 ]
 
 templates_path = [ ]
@@ -49,6 +63,8 @@ rst_prolog = """
 # -- Options for HTML output -------------------------------------------------
 
 html_baseurl = 'https://elara.chinchalinchin.com'
+
+html_favicon = '_static/favicon.ico'
 
 html_extra_path = ['robots.txt']
 
@@ -130,16 +146,6 @@ latex_elements = {
 
 # -- Sphinx Application configuration -----------------------------------------------------
 
-def small(name: str, rawtext: str, text: str, lineno: int,
-               inliner, options={}, content=[]):
-    node = nodes.inline(rawtext, utils.unescape(text), classes=['small'])
-    return [node], []
-
-def tiny(name: str, rawtext: str, text: str, lineno: int,
-               inliner, options={}, content=[]):
-    node = nodes.inline(rawtext, utils.unescape(text), classes=['tiny'])
-    return [node], []
-
 def build_pdf(source_dir, output_dir, filename):
     """
     Builds a PDF from a single RST file using Sphinx.
@@ -160,16 +166,6 @@ def build_pdf(source_dir, output_dir, filename):
       warningiserror=False
     )
     app.build(force_all=True, filenames=[filename + '.rst'])
-
-def setup(app):
-    app.add_role('small', small)
-    app.add_role('tiny', tiny)
-
-    return {
-        'version': '1.0',
-        'parallel_read_safe': True,
-        'parallel_write_safe': True,
-    }
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

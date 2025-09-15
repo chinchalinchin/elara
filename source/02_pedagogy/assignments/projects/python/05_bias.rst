@@ -197,12 +197,12 @@ The following code snippet will load in a *CSV* spreadsheet named ``example.csv`
 Vietnam Draft Lottery Data
 --------------------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/datasets/historical/vietnam-draft-data.csv>`.
+You can download the full dataset :download:`here <../../../../_static/csv/historical/vietnam-draft-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Vietnam Draft Lottery Data
-   :file: ../../../../_static/csv/datasets/previews/vietnam-draft-data-preview.csv
+   :file: ../../../../_static/csv/previews/vietnam-draft-data-preview.csv
 
 The meaning of the columns is as follows.
 

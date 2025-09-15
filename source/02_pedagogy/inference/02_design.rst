@@ -147,7 +147,7 @@ Example
     Experimental data from Henri Cavendish's density of the Earth experiments. Density is expressed as a ratio of the density of water.
 
 .. csv-table:: Density of the Earth
-   :file: ../../_static/csv/datasets/previews/earth-density-data-preview.csv
+   :file: ../../_static/csv/previews/earth-density-data-preview.csv
 
 Bivariate
     :math:`\{ (x_1, y_1), (x_2, y_2), ... , (x_n, y_n)\}`
@@ -158,7 +158,7 @@ Example
     Data from the Challenger space shuttle explosion showing the atmospheric temperature versus the erosion index of the O-ring seal. The failure of the O-ring seal at lower temperatures was not accounted for prior to launch.
 
 .. csv-table:: Challenger Space Shuttle Erosion Data
-   :file: ../../_static/csv/datasets/previews/challenger-erosion-data-preview.csv
+   :file: ../../_static/csv/previews/challenger-erosion-data-preview.csv
 
 
 Multivariate 
@@ -170,7 +170,7 @@ Example
     Body measurements from a sample of grizzly bears.
 
 .. csv-table:: Bear Measurements
-    :file: ../../_static/csv/datasets/previews/bear-measurements-data-preview.csv
+    :file: ../../_static/csv/previews/bear-measurements-data-preview.csv
 
 .. _data-characteristic:
 

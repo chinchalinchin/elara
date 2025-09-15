@@ -1,7 +1,8 @@
-
-.. MODE: OVERRIDE (SUBMISSION PACKAGE)
+.. IMPORTANT: This document is formatted in RestructuredText (RST)
 ..
-.. This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal.  Use the context to create a taste profile of the journal. Then create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission tailored to the taste profile.
+.. MODE: OVERRIDE (PACKAGE SUBMISSION)
+.. 
+.. INSTRUCTIONS: This document contains a collection of poetry and my resume. This comment contains a solitication from a journal and some context surrounding the journal.  Use the context to create a taste profile of the journal. Then create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission tailored to the taste profile.
 
 .. _solitication:
 
@@ -9,7 +10,34 @@
 Solicitation
 ============
 
-{{ solicitation }}
+Our general submissions are always open, always free, and always about love: the romantic, the familial, the platonic, the intimate, the lost, the young, the wretched. Above all, Passionfruit seeks to be a home for that which illuminates something of the human spirit – pieces that explore what love is (or isn’t, or might be), when we love, how we love, what we love, and why we love.     Our focus is on poetry, but there are no restrictions on genre, type, or style. We also consider poetry, prose, and visual art for each issue.     Take a look at some of our recent issues to get a feel for the journal before you submit - they are all freely available.  
+
+POETRY
+
+Submit no more than three poems at a time
+There are no set restrictions on length for poetry submissions, but we will be looking for writing which shows meticulousness in its use of language, whether across 2 lines or 200.
+PROSE
+
+We consider prose submissions (prose poetry, flash fiction, creative non-fiction are all welcome) of up to 1000 words.
+VISUAL ART
+
+Submit up to three pieces for consideration.
+All rights to the work remain with the artist – we only ask permission to publish your piece as cover art for the journal and to feature it in promotional materials. 
+ 
+
+GENERAL GUIDELINES
+
+We welcome submissions from anywhere in the world, from anyone over the age of 18.
+Simultaneous submissions are welcome – just let us know promptly via the submissions managaer if any of your pieces are accepted elsewhere.
+No multiple submissions to our general reading windows, please! If your submission is declined, please wait until the following month before submitting again.
+Only previously unpublished work will be considered. Authors retain all rights, we simply ask that you allow Passionfruit first publication and credit this in any later iterations of your piece.
+Strong language is fine – abusive or discriminatory language is not.
+Response time will not usually exceed 2-3 months. If you would like to hear back sooner, we offer the option of an expedited (3-5 day) response for a £6 fee.
+Please note that – while we are always grateful for donations – no preferential treatment is given to paid submissions.
+ 
+
+See our submissions page for more information (including an up-to-date reading schedule).
+
 .. note::
 
   Need cover letter.

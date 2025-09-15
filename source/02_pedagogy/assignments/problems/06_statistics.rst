@@ -39,7 +39,7 @@ Twitter by Tweets and Followers
 
     The data will be downloaded directly onto the your calculator in class via a cable link. 
 
-    If you want to try out the dataset in **Python** at any point, you can download the full dataset `here <../../_static/csv/datasets/cultural/celebrity-twitter-data.csv>`_
+    If you want to try out the dataset in **Python** at any point, you can download the full dataset `here <../../_static/csv/cultural/celebrity-twitter-data.csv>`_
 
 The following table lists the top 20 **Twitter** users by follower count (as of 2022).
 

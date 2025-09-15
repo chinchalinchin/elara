@@ -33,3 +33,14 @@ Your Hand
 | another's secret heart ordains your hand. 
 
 - September 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - September 14, 2025
+    - Passionfruit Review
+    - Pending

@@ -14,7 +14,7 @@ Rhyme Families
 
 .. csv-table:: /ɛnd/ Rhymes
    :header-rows: 1
-   :file: ../_static/csv/datasets/linguistic/words/rhymes/ine-rhymes.csv
+   :file: ../../_static/csv/linguistic/words/rhymes/ine-rhymes.csv
 
 **Roots**
 
@@ -118,7 +118,7 @@ Rhyme Families
 
 .. csv-table:: /ɛkt/ Rhymes
    :header-rows: 1
-   :file: ../_static/csv/datasets/linguistic/words/rhymes/ect-rhymes.csv
+   :file: ../../_static/csv/linguistic/words/rhymes/ect-rhymes.csv
 
 **Roots**
 
@@ -221,7 +221,7 @@ Rhyme Families
 
 .. csv-table:: /ɛnd/ Rhymes
    :header-rows: 1
-   :file: ../_static/csv/datasets/linguistic/words/rhymes/end-rhymes.csv
+   :file: ../../_static/csv/linguistic/words/rhymes/end-rhymes.csv
 
 **Roots**
 

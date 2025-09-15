@@ -447,23 +447,23 @@ Velocity of Light Data
 
 	You may already have this dataset downloaded into your *Linux Files* directory from when we did :ref:`project-two`.
 
-You can download the full dataset :download:`here <../../../../_static/csv/datasets/scientific/velocity-of-light-data.csv>`.
+You can download the full dataset :download:`here <../../../../_static/csv/scientific/velocity-of-light-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Michelson's Velocity of Light Data
-   :file: ../../../../_static/csv/datasets/previews/velocity-of-light-data-preview.csv
+   :file: ../../../../_static/csv/previews/velocity-of-light-data-preview.csv
 
 The meaning of the column is clear from the column header: each observation measures the speed of light in meters per second, :math:`\frac{km}{s}`.
 
 Old Faithful
 ------------
 
-You can download the full dataset :download:`here <../../../../_static/csv/datasets/scientific/old-faithful-data.csv>`.
+You can download the full dataset :download:`here <../../../../_static/csv/scientific/old-faithful-data.csv>`.
 
 The following table is the a preview of the data you will be using for this project. 
 
 .. csv-table:: Old Faithful Geyser Duration and Wait Time
-   :file: ../../../../_static/csv/datasets/previews/old-faithful-data-preview.csv
+   :file: ../../../../_static/csv/previews/old-faithful-data-preview.csv
 
 The first column represents the length of the eruption in minutes. The second column represents the waiting time in minutes until the next eruption.

@@ -369,26 +369,26 @@ Sonnet
 
     .. math::
 
-        (\sum_i^{3} \overline{a.b.a.b} + a.a/\mathfrak{i}_5)
+        [\sum_i^{3} \overline{a.b.a.b} + a.a \div \mathfrak{i}_5]
 
     :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
-        (\sum_i^{3} \overline{[a.b]^2} + a^2/\mathfrak{i}_5)
+        [\sum_i^{3} \overline{[a.b]^2} + a^2 \div \mathfrak{i}_5]
 
 
 .. topic:: Schema (Spenserian)
 
     .. math::
 
-        (a.b.a.b + b.c.b.c + c.d.c.d + e.e/\mathfrak{i}_5)
+        [a.b.a.b + b.c.b.c + c.d.c.d + e.e \div \mathfrak{i}_5]
 
     :ref:`Reducing <poetics-shorthand>`,
 
     .. math::
 
-        ([a.b]^2 + [b.c]^2 + [c.d]^2 + e^2/\mathfrak{i}_5)
+        [[a.b]^2 + [b.c]^2 + [c.d]^2 + e^2 \div \mathfrak{i}_5]
 
 .. TODO: Interlocking Specification
     need some way of representing the interlocking rhyme scheme. Some way of recursive defining the index of the sum! This would be useful for pantoums and terzas as well!
@@ -424,7 +424,7 @@ Triolet
 
     .. math::
 
-        (A.B.a.A.a.b.A.B/\mathfrak{i}_n)
+        [A.B.a.A.a.b.A.B \div \mathfrak{i}_n]
 
 **References**
 

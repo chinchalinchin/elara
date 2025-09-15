@@ -11,13 +11,13 @@ Anniversary
 | ascending poles of cable lines,
 | the crooked rubber vines that test
 | the forest depth infested heights  
-| with swarming trails, ingressed for years
-| but long before the minutes here,
+| with swarming trails of valleyed years
+| much older than the minutes here,
 | forgotten since and gone to ground,
 | to gravel found upon the paths 
 | unravelled round the bend today,
-| today a day the years return 
-| around in turns to me again,
+| today a day the years return,
+| it turns around to me again,
 | repeated now, but far removed
 | by twisted roads that have no end,
 | where maps pretend to know the way
@@ -36,3 +36,14 @@ Anniversary
 | embedded in the layered lime.
 
 - September 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - September 14, 2025
+    - Princemere Poetry Prize
+    - Pending

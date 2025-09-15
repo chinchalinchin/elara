@@ -38,14 +38,16 @@ Verborum
 
 .. _semantic_devices:
 
-----------------
 Semantic Devices
 ----------------
 
 .. _hysteron-proteron:
 
+-----------------
 Hysteron Proteron
 -----------------
+
+.. epigraph::
 
     | *Moriamur, et in media arma ruamus* 
     |
@@ -53,6 +55,8 @@ Hysteron Proteron
 
     -- `Aeneid`_, Virgil, 19 BCE
 
+.. epigraph::
+    
     | I will kill thee, and love thee after.
 
     -- `Othello`_, William Shakespeare
