@@ -1,13 +1,15 @@
 .. _palindromics-section-i:
 
-Section I: Language
-===================
+Section I: Languages & Corpora
+==============================
 
-The goal of Section I and II is to establish the hierarchy of logical relations that govern Strings, Characters, Alphabets, Words, Languages, Sentences and Corpora. As each of these entities is introduced and defined, a new level of relations will be revealed and codified. Palindromic symmetries will manifest on each level, in slightly different but related forms. Each type of symmetry will involve, in some form or another, the concept of :ref:`String Inversion <palindromics-string-inversion>`, to be defined shortly. The essence of a Palindrome lies in binding together the syntactical symmetries at every linguistic layer into a semantic whole. Indeed, it will be seen the symmetrical structure required by Palindromes in turn requires these linguistic layers to have explicit relations and specific synactical properties, regardless of their semantic interpretation.
+The goal of Section I is to establish the hierarchy of logical relations that govern Strings, Characters, Alphabets, Words, Languages, Sentences and Corpora. As each of these entities is introduced and defined, a new level of relations will be revealed and codified. Palindromic symmetries will manifest on each level, in slightly different but related forms. Each type of symmetry will involve, in some form or another, the concept of :ref:`String Inversion <palindromics-string-inversion>`, to be defined shortly. The essence of a Palindrome lies in binding together the syntactical symmetries at every linguistic layer into a semantic whole. Indeed, it will be seen the symmetrical structure required by Palindromes in turn requires these linguistic layers to have explicit relations and specific synactical properties, regardless of their semantic interpretation.
 
-A *Word* will be considered a *type* of String. Colloquially, a Word can be understood as a String with semantic content, but as this formal system will establish, a Word is not distinguished solely by its semantic content, and in fact, it's semantic interpretation is dependent on prior syntactical conditions that differentiate Words from Strings; This fact is often not made explicit in formal treatmeants of language, but the study of palindromes makes this distinction critical.
+A *Word* will be considered a *type* of String. Colloquially, a Word can be understood as a String with semantic content, but as this formal system will establish, a Word is not distinguished solely by its semantic content, and in fact, it's semantic interpretation is dependent on prior syntactical conditions that differentiate Words from Strings; This fact is often not made explicit in formal treatmeants of language, but the study of palindromes makes this distinction critical. In the current work, Words will be treated as linguistic entities that are distinguishable by their non-zero length and lack of Delimiters.
 
 Section I will elaborate the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to it through colloquial use. In other words, this section seeks to formally disentangle the syntactical functions of Words and Strings. 
+
+.. .................. SECTION I.I ....................
 
 .. _palindromics-section-i-i:
 
@@ -65,12 +67,15 @@ Terms
 -----
 
 .. topic:: Term: Strings
-
     **Strings**
-        :math:`s, t, u, v, w, x, y, z`
         :math:`s_1, s_2, s_3, ...`
+
+    The lowercase English letter :math:`s` with subscripts will be used to represent Strings.
+
+    **String Variables**
+        :math:`s, t, u, v, w, x, y, z`
     
-    The lowercase English letters :math:`s, t, u, v, w` will represent Strings. Subscripts will occasionally be used in conjunction with lowercase English letters to denote Strings.
+    The lowercase English letters :math:`s, t, u, v, w` will represent Strings Variables, i.e indeterminate Strings. 
 
 .. topic:: Term: Characters
     
@@ -169,7 +174,7 @@ Sets
     **Language**
         :math:`L`
 
-    The aggregate of all Words is called a *Language*.
+    The aggregate of all Words is called a *Language*. Subscripts may be used to indicate a particular Language, e.g. :math:`L_{\text{english}}`
 
 .. topic:: Set: Corpus
 
@@ -177,6 +182,8 @@ Sets
         :math:`C`
 
     The aggregate of all Sentences is called a *Corpus*.
+
+.. .................. SECTION I.II ...................
 
 .. _palindromics-development:
 
@@ -238,11 +245,11 @@ Concatenation
 
 Many of the results of regular expressions and automata theory are taken as given and will not be proved, such as the closure of concatenation over :math:`S` (i.e., concatenating two Strings will always yield a String).
 
-**Example** Let :math:`s = \mathfrak{abc}` and :math:`t = \mathfrak{def}`. The concatenation of these two Strings :math:`st` is written,
+**Example** Let :math:`s_1 = \mathfrak{abc}` and :math:`s_2 = \mathfrak{def}`. The concatenation of these two Strings :math:`{s_1}{s_2}` is written,
 
 .. math::
 
-    st = (\mathfrak{abc})(\mathfrak{def}) 
+    {s_1}{s_2} = (\mathfrak{abc})(\mathfrak{def}) 
     
 Using the Inductive Clause, this concatenation can be grouped into simpler concatenations as follows,    
     
@@ -252,7 +259,7 @@ Using the Inductive Clause, this concatenation can be grouped into simpler conca
 
 By :ref:`Character Axiom <palindromics-axiom-c-2>`, all Characters are Strings and concatenation is closed under :math:`S`, therefore, :math:`\mathfrak{ef} \in S`. As each nested concatenation is evaluated, the Induction clause in :ref:`palindromics-definition-1-2-1` ensures the next level of concatenation is a String. 
 
-As a result, :math:`st = \mathfrak{abcdef}` and :math:`st \in S` 
+As a result, :math:`{s_1}{s_2} = \mathfrak{abcdef}` and :math:`{s_1}{s_2} \in S` 
 
 ∎
 
@@ -276,7 +283,7 @@ The length of a String is defined as its number of non-Empty Characters.
         - :math:`v = \varepsilon \implies l(s) = l(u)`
         - :math:`v \neq \varepsilon \implies l(s) = l(u) + 1`
 
-**Example** Let :math:`s = \mathfrak{abc}\varepsilon\mathfrak{def}`. Using the :ref:`definition of concatenation <palindromics-definition-1-2-1>`, this can be grouped as :math:`s = (\mathfrak{abc}\varepsilon\mathfrak{de})(\mathfrak{f})`.
+**Example** Let :math:`s_1 = \mathfrak{abc}\varepsilon\mathfrak{def}`. Using the :ref:`definition of concatenation <palindromics-definition-1-2-1>`, this can be grouped as :math:`s_1 = (\mathfrak{abc}\varepsilon\mathfrak{de})(\mathfrak{f})`.
 
 Applying the :ref:`definition of String Length <palindromics-definition-1-2-2>` to :math:`\mathfrak{f}` where :math:`u = \mathfrak{f}` and :math:`v = \varepsilon`,
 
@@ -308,7 +315,7 @@ Continuing in this fashion, the result is essentially calculated,
 
 .. math::
 
-    l(s) = 6
+    l(s_1) = 6
 
 ∎
 
@@ -332,17 +339,17 @@ The definition of String length allows an important shorthand to be defined. Thi
 
 The following example shows how the definition of Character indexing "*skips*" over the physical index of Empty Characters and assigns a logical index to any non-Empty Characters in a String.
 
-**Example** Let :math:`s = \mathfrak{ab}\varepsilon\mathfrak{c}`. By :ref:`the definition of String Length <palindromics-definition-1-2-2>`, :math:`l(s) = 3`. 
+**Example** Let :math:`s_1 = \mathfrak{ab}\varepsilon\mathfrak{c}`. By :ref:`the definition of String Length <palindromics-definition-1-2-2>`, :math:`l(s_1) = 3`. 
 
-Consider :math:`s[3]`. Apply :ref:`the definition of Character Index Notation <palindromics-definition-1-2-3>` with :math:`u_1 =\mathfrak{ab}\varepsilon` and :math:`v_1 = \mathfrak{c}`. :math:`i = l(s)` and :math:`v_1 \neq \varepsilon`, therefore, by the Induction clause, :math:`s[3] = \mathfrak{c}`.
+Consider :math:`s_1[3]`. Apply :ref:`the definition of Character Index Notation <palindromics-definition-1-2-3>` with :math:`u_1 =\mathfrak{ab}\varepsilon` and :math:`v_1 = \mathfrak{c}`. :math:`i = l(s_1)` and :math:`v_1 \neq \varepsilon`, therefore, by the Induction clause, :math:`s[3] = \mathfrak{c}`.
 
-Consider :math:`s[2]`. Apply :ref:`the definition of Character Index Notation <palindromics-definition-1-2-3>` with :math:`u_1 =\mathfrak{ab}\varepsilon` and :math:`v_1 = \mathfrak{c}`. At this step, :math:`v_1 \neq \varepsilon` but :math:`i \neq l(s)`, so the :math:`s[i] = u_1[i]`. Note :math:`l(u_1) = 2`.
+Consider :math:`s_1[2]`. Apply :ref:`the definition of Character Index Notation <palindromics-definition-1-2-3>` with :math:`u_1 =\mathfrak{ab}\varepsilon` and :math:`v_1 = \mathfrak{c}`. At this step, :math:`v_1 \neq \varepsilon` but :math:`i \neq l(s_1)`, so the :math:`s_1[i] = u_1[i]`. Note :math:`l(u_1) = 2`.
 
 To find :math:`u_1[i]`, let :math:`u_1 = {u_2}{v_2}` where :math:`u_2 = \mathfrak{ab}` and :math:`v_2 = \varepsilon`. At this step, :math:`i = l(u_1)`, but :math:`v_2 = \varepsilon`, therefore :math:`u_1[i] = u_2[i]`. Note :math:`l(u_2) = 2`.
 
 To find :math:`u_2[i]`, let :math:`u_2 = {u_3}{v_3}` where :math:`u_3 = \mathfrak{a}` and :math:`v_3 = \mathfrak{b}`. At this step, :math:`i = l(u_2)` and :math:`v_3 \neq \varepsilon`, therefore :math:`u_2[i] = v_3 = \mathfrak{b}`.
 
-From this, it follows, :math:`s[2] = u_1[2] = u_2[2] = v_3 = \mathfrak{b}`.
+From this, it follows, :math:`s_1[2] = u_1[2] = u_2[2] = v_3 = \mathfrak{b}`.
 
 ∎
 
@@ -447,27 +454,27 @@ Two Strings are said to be equal if they have the same length and their correspo
     - :math:`l(s) = l(t) = n`
     - :math:`\forall i \in N_n: s[i] = t[i]`
 
-**Example** Let :math:`s = \mathfrak{ab}` and :math:`t = \mathfrak{a}\varepsilon\mathfrak{b}`. By :ref:`the definition of String Length <palindromics-definition-1-2-2>`,
+**Example** Let :math:`s_1 = \mathfrak{ab}` and :math:`s_2 = \mathfrak{a}\varepsilon\mathfrak{b}`. By :ref:`the definition of String Length <palindromics-definition-1-2-2>`,
 
 .. math::
 
-    l(s) = l(t) = 2 = n
+    l(s_1) = l(s_2) = 2 = n
 
 Now, :math:`N_n = { 1, 2 }`. By the :ref:`definition of Character Indices <palindromics-1-2-3>`,
 
 .. math::
 
-    s[1] = t[1] = \mathfrak{a}
+    s_1[1] = s_2[1] = \mathfrak{a}
 
 .. math::
 
-    s[2] = t[2] = \mathfrak{b}
+    s_1[2] = s_2[2] = \mathfrak{b}
 
-Therefore, :math:`\forall i \in N_n: s[i] = t[1]`. It follows from these facts and application of :ref:`the definition of String Equality <palindromics-definition-1-2-4>`,
+Therefore, :math:`\forall i \in N_n: s_1[i] = s_2[1]`. It follows from these facts and application of :ref:`the definition of String Equality <palindromics-definition-1-2-4>`,
 
 .. math::
 
-    s = t
+    s_1 = s_2
 
 ∎
 
@@ -490,11 +497,11 @@ The notion of *containment* is the formal explication of the colloquial relation
         u \subset_s v \equiv \exists w_1, w_2 \in S: v = {w_1}u{w_2}
 
 
-**Example** Let :math:`t = \mathfrak{abcdef}`. Then the truth of the following propositions can be verified using the given values of :math:`w_1` and :math:`w_2` in :math:`the definition of containment <palindromics-definition-1-2-5>`.
+**Example** Let :math:`s_1 = \mathfrak{abcdef}`. Then the truth of the following propositions can be verified using the given values of :math:`w_1` and :math:`w_2` in :math:`the definition of containment <palindromics-definition-1-2-5>`.
 
-- :math:`\mathfrak{ab} \subset_s t`, where :math:`w_1 = \varepsilon` and :math:`w_2 = \mathfrak{cdef}`.
-- :math:`\mathfrak{cde} \subset_s t`, where :math:`w_1 = \mathfrak{ab}` and :math:`w_2 = \mathfrak{f}`.
-- :math:`\not (\mathfrak{g} \subset_s t)`, for any :math:`w_1, w_2`
+- :math:`\mathfrak{ab} \subset_s s_1`, where :math:`w_1 = \varepsilon` and :math:`w_2 = \mathfrak{cdef}`.
+- :math:`\mathfrak{cde} \subset_s s_1`, where :math:`w_1 = \mathfrak{ab}` and :math:`w_2 = \mathfrak{f}`.
+- :math:`\not (\mathfrak{g} \subset_s s_1)`, for any :math:`w_1, w_2`
 
 ∎
 
@@ -541,19 +548,19 @@ String Inversion
     - :math:`l(s) = l(t) = n`
     - :math:`\forall i \in N: t[i] = s[n - i + 1]`
 
-**Example** Let :math:`s = \mathfrak{abc}`. Let :math:`t = s^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`the definition of String Inversion <palindromics-definition-1-2-6>`,
+**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`the definition of String Inversion <palindromics-definition-1-2-6>`,
 
 .. math::
 
-    t[1] = s[3 - 1 + 1] = s[3] = \mathfrak{c}
+    s_2[1] = s_1[3 - 1 + 1] = s_1[3] = \mathfrak{c}
 
 .. math::
 
-    t[2] = s[3 - 2 + 1] = s[2] = \mathfrak{b}
+    s_2[2] = s_1[3 - 2 + 1] = s_1[2] = \mathfrak{b}
 
 .. math::
 
-    t[3] = s[3 - 3 + 1] = s[1] = \mathfrak{c}
+    s_2[3] = s_1[3 - 3 + 1] = s_1[1] = \mathfrak{c}
 
 ∎
 
@@ -748,6 +755,8 @@ In both cases, the theorem is proved. Summarizing and generalizing,
     \forall s,t \in S: (st)^{-1} = (t^{-1})(s^{-1})
 
 ∎
+
+.. .................. SECTION I.III ..................
 
 .. _palindromics-section-i-iii:
 
@@ -1038,13 +1047,13 @@ Limitations
 
     P_3 = (\text{"mother"}, \text{"may"}, \text{"I"})
 
-Apply :ref:`Definition 1.2.7 <definition-1-2-7>` to construct the Delimitation of **P**:sub:`3`. The Basis Step yields,
+Apply the Basis clause :ref:`of the definition of Delimitations <palindromics-definition-1-3-5>` ,
 
 .. math::
 
     n = 1: \bar{\Pi}_{i=1}^{1} \alpha_i = \text{"mother"} 
 
-And then the Delimitation can be built up recursively using the Recursive Step repeatedly,
+The Delimitation can then be built up recursively using the Induction clause,
 
 .. math::
 
@@ -1054,13 +1063,13 @@ And then the Delimitation can be built up recursively using the Recursive Step r
 
     n = 3: \bar{\Pi}_{i=1}^{3} \alpha_i = (\bar{\Pi}_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}\sigma\text{"may"})(\sigma\text{"I"}) = \text{"mother"}\sigma\text{"may"}\sigma\text{"I"}
 
-So the Delimitation of the Phrase is given by,
+So the Delimitation of the Phrase is shown to be,
 
 .. math::
 
-    D\Pi_{i=1}^{3} \alpha_i = \text{"mother may I"} 
+    \bar{\Pi}_{i=1}^{3} \alpha_i = \text{"mother may I"} 
 
-Similarly, the Limitation can be constructed recursive from the same Basis Step using :ref:`Definition 1.2.8 <definition-1-2-8>`,
+Similarly, the Limitation can be constructed using the Basis and Induction clause of :ref:`the definition of Limitations <definition-1-3-5>`,
 
 .. math::
 
@@ -1072,6 +1081,160 @@ Similarly, the Limitation can be constructed recursive from the same Basis Step 
 
 .. important::
 
-    The result of a Delimitation or a Limitation is a String.
+    The result of a Delimitation or a Limitation is a String. Since Delimitation and Limitation are shorthand for different sequences of concatenation, their closure over :math:`S` is guaranteed by the closure of concatenation over :math:`S`
 
 ∎
+
+.. .................. SECTION I.IV ...................
+
+.. _palindromics-sentences:
+
+Section I.IV: Sentences
+-----------------------
+
+A Sentence is a Delimitation of Words over a Phrase in the Language's Lexicon for any value of :math:`n \geq 1`. 
+
+.. warning::
+
+    This statement should not be interpretted as a schema for generating grammatical sentences. In general, Delimitations are *not* grammatical. However, all grammatical sentences *are* Delimitations.
+    
+    In other words, this statement should be interpretted as a necessary syntactic pre-condition a Sentence must satisfy before it may be assigned semantic content.
+
+A Corpus is the aggregate of all Sentences.
+
+.. math::
+
+    \forall \zeta in C: \exists n: \zeta = \bar{\Pi}_i^{n} p(i)
+
+.. note::
+
+    The value of :math:`n` in the preceding equation will be further specified after several definitions and theorems. It will be shown to be directly and necessarily related to the Word structure of :math:`\zeta`.
+
+The full semantic hierarchy has now been formalized. The hierarchy is summarized in the following diagram,
+
+.. graphviz:: ../../_static/dot/palindromes/hierarchy.dot
+    :caption: A diagram of the semantic hierarchy
+    :alt: Semantic Hierarchy Diagram
+
+The following lists group the objects of the formal system by type,
+
+1. Strings: :math:`\iota, \alpha, \zeta`
+2. Sets: :math:`\Sigma, L, C`
+3. Character Membership: :math:`\iota \in \Sigma`
+4. Word Membership: :math:`\alpha \in L`
+5. Sentence Membership: :math:`\zeta \in C`
+
+These observations can be translated into English as follows,
+
+1. All Characters, Words and Sentences are Strings.
+2. All Alphabets, Languages and Corpuses are sets of Strings.
+3. All non-Empty Characters belong to an Alphabet.
+4. All Words belong to a Language.
+5. All Sentences belong to a Corpus.
+
+.. _palindromics-word-length:
+
+-----------
+Word Length
+-----------
+
+.. _palindromics-definition-1-4-1:
+
+.. topic:: Definition 1.4.1: Word Length
+
+    Let :math:`s \in S` and :math:`n \in N` such that :math:`\zeta = \bar{\Pi}_{i=1}^n p(i)`. The Word Length of :math:`zeta`, denoted :math:`\Lambda(\zeta)`, is defined inductively through the following schema,
+
+    - Basis: If :math:`\neq(\sigma \subset_s s)`,
+        - If :math:`s = \varepsilon` or :math:`s \notin L`, :math:`\Lambda(s) = 0`
+        - If :math:`s \in L`, :math:`\Lambda(s) = 1`
+    - Induction: 
+        - If :math:`s = {\sigma}{v}`, or if :math:`s = {u}{\sigma}{v}` and :math:`u \notin L`, then :math:`\Lambda(s) = \Lambda(v)`
+        - If :math:`s = {u}{\sigma}{v}` and :math:`u \in L`, then :math:`\Lambda(s) = \Lambda(v) + 1`
+
+.. important::
+
+    The Induction clause of Word Length relies on the :ref:`Discovery Axiom <palindromics-axiom-w-2>` and the :ref:`Measureable Axiom <palindromics-axiom-w-1>` to ensure for any Strings :math:`u \in L`, :math:`\neg(\sigma \subset_s u)` and :math:`u \neq \varepsilon`.
+
+**Example** Let :math:`ᚠ = \text{"truth is beauty"}`.
+
+Let :math:`u_1 = \text{"truth"}` and :math:`v_1 = \text{"is beauty"}`. Then :math:`u_1 \in L_{\text{english}}` and :math:`ᚠ = (u_1)(\varsigma)(v_1)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(ᚠ) = \Lambda(v_1) + 1
+
+Let :math:`u_2 = \text{"is"}` and :math:`\v_2 = \text{"beauty"}`. 
+
+.. important::
+
+    A selection of :math:`u_2 = \text{"i"}` or :math:`u_2 = \text{"is be"}` would not satisfy the condition :math:`s = {u}{\sigma}{v}` in the Induction clause, which requires :math:`u` and :math:`v` to be delimited with :math:`\varsigma`.
+
+Then :math:`u_2 \in L_{\text{english}}` and :math:`v_1 = (u_2)(\varsigma)(v_2)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(v_1) = \Lambda(v_2) + 1
+
+Finally, note :math:`v_2 \in L_{\text{english}}` and apply the Basis clause to :math:`v_2`,
+
+.. math::
+
+    \Lambda(v_2) = 1
+
+Putting the recursion together,
+
+.. math::
+
+    \Lambda(ᚠ) = (1 + 1) + 1 = 3
+
+∎
+
+**Example** Let :math:`ᚠ = \text{"palindromes thht semiordinlap"}`
+
+Let :math:`u_1 = \text{"palindromes"}` and :math:`v_1 = \text{"thht semiordinlap"}`. Then :math:`u_1 \in L_{\text{english}}` and :math:`ᚠ = (u_1)(\varsigma)(v_1)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(ᚠ) = \Lambda(v_1) + 1
+
+Let :math:`u_2 = \text{"thht"}` and :math:`\v_2 = \text{"semiordinlap"}`. Then :math:`u_2 \notin L_{\text{english}}` and :math:`v_1 = (u_2)(\varsigma)(v_2)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(v_1) = \Lambda(v_2)
+
+Finally, note :math:`v_2 \in L_{\text{english}}` and apply the Basis clause to :math:`v_2`,
+
+.. math::
+
+    \Lambda(v_2) = 1
+
+Putting the recursion together,
+
+.. math::
+
+    \Lambda(ᚠ) = (1 + 1) = 2
+
+∎
+
+.. important::
+
+    As these examples demonstrate, the Word Length of a String is always *relative* to a given a Language. A subscript will be used to denote whether a Word Length is relative to a particular language, 
+    
+    .. math::
+        
+        \Lambda_{\text{english}}(\text{"closing sale"}) = 2
+
+    Whereas,
+
+    .. math::
+
+        \Lambda_{\text{italian}}(\text{"closing sale"}) = 1
+
+.. _palindromics-definition-1-4-2:
+
+.. topic:: Definition 1.4.2: Word Index Notation
+
+    TODO
+
+**Example** Let :math:`ᚠ = \text{"observe how system into system runs"}`.

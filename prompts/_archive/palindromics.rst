@@ -5,6 +5,7 @@
 ..  I.I: Formalization
 ..  I.II: Development
 ..  I.III: Words
+.. I
 .. Section II: Corpora 
 ..  II.I: Definitions
 ..  II.II: Axioms
