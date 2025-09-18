@@ -1,15 +1,16 @@
-.. _section-viii:
+.. _palindromics-appendix-ii:
 
-Section VIII: Data
-==================
+Appendix II: Data
+=================
 
-.. _english-data:
+.. _palindromics-appendix-ii-i:
 
-English 
-=======
+Appendix II.I: English Data
+---------------------------
 
 .. _reflective-words-data:
 
+----------------
 Reflective Words
 ----------------
 
@@ -20,6 +21,7 @@ The following spreadsheet contains a sample of reflective words in English.
 
 .. _invertible-words-data:
 
+----------------
 Invertible Words
 ----------------
 
@@ -30,6 +32,7 @@ The following spreadsheet contains a sampe of invertible words (minus reflective
 
 .. _ambiguous-words-data:
 
+---------------
 Ambiguous Words
 ---------------
 
@@ -40,21 +43,23 @@ The following spreadsheet contains a sample of ambiguous words in English.
 
 .. _palindrome-data:
 
+-----------
 Palindromes
-------------
+-----------
 
 The following spreadsheet contains the results of palindromic analysis conducted on a sample of English palindromes. 
 
 .. csv-table:: English Palindrome Analysis
    :file: ../../_static/csv/linguistic/palindromes/english-palindromes.csv
 
-.. _latin-data:
+.. _palindromics-appendix-ii-ii:
 
-Latin
-=====
+Appendix II.II: Latin Data
+--------------------------
 
 .. _latin-palindrome-data:
 
+-----------
 Palindromes
 -----------
 

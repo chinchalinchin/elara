@@ -9,7 +9,9 @@ A *Word* will be considered a *type* of String. Colloquially, a Word can be unde
 
 Section I will elaborate the necessary syntactic conditions for a String to be considered a formal Word, without taking into account the semantic content that is assigned to it through colloquial use. In other words, this section seeks to formally disentangle the syntactical functions of Words and Strings. 
 
+.. ...................................................
 .. .................. SECTION I.I ....................
+.. ...................................................
 
 .. _palindromics-section-i-i:
 
@@ -183,12 +185,14 @@ Sets
 
     The aggregate of all Sentences is called a *Corpus*.
 
+.. ...................................................
 .. .................. SECTION I.II ...................
+.. ...................................................
 
-.. _palindromics-development:
+.. _palindromics-strings:
 
-Section I.II: Development
--------------------------
+Section I.II: Strings
+---------------------
 
 All non-Empty Characters belong to the Alphabet,
 
@@ -756,7 +760,9 @@ In both cases, the theorem is proved. Summarizing and generalizing,
 
 ∎
 
+.. ...................................................
 .. .................. SECTION I.III ..................
+.. ...................................................
 
 .. _palindromics-section-i-iii:
 
@@ -1085,9 +1091,11 @@ Similarly, the Limitation can be constructed using the Basis and Induction claus
 
 ∎
 
+.. ...................................................
 .. .................. SECTION I.IV ...................
+.. ...................................................
 
-.. _palindromics-sentences:
+.. _palindromics-section-i-iv:
 
 Section I.IV: Sentences
 -----------------------
@@ -1189,15 +1197,15 @@ Putting the recursion together,
 
 ∎
 
-**Example** Let :math:`ᚠ = \text{"palindromes thht semiordinlap"}`
+**Example** Let :math:`ᚠ = \text{"palindromes vorpal semiordinlap"}`
 
-Let :math:`u_1 = \text{"palindromes"}` and :math:`v_1 = \text{"thht semiordinlap"}`. Then :math:`u_1 \in L_{\text{english}}` and :math:`ᚠ = (u_1)(\varsigma)(v_1)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+Let :math:`u_1 = \text{"palindromes"}` and :math:`v_1 = \text{"vorpal semiordinlap"}`. Then :math:`u_1 \in L_{\text{english}}` and :math:`ᚠ = (u_1)(\varsigma)(v_1)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
 
 .. math::
 
     \Lambda(ᚠ) = \Lambda(v_1) + 1
 
-Let :math:`u_2 = \text{"thht"}` and :math:`\v_2 = \text{"semiordinlap"}`. Then :math:`u_2 \notin L_{\text{english}}` and :math:`v_1 = (u_2)(\varsigma)(v_2)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+Let :math:`u_2 = \text{"vorpal"}` and :math:`\v_2 = \text{"semiordinlap"}`. Then :math:`u_2 \notin L_{\text{english}}` and :math:`v_1 = (u_2)(\varsigma)(v_2)`. Apply the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
 
 .. math::
 
@@ -1235,6 +1243,209 @@ Putting the recursion together,
 
 .. topic:: Definition 1.4.2: Word Index Notation
 
+    The Word at index :math:`i` in a String :math:`s \in S`, denoted :math:`s[[1]]`, is defined inductively using the following schema,
+
+    - Basis: 
+        - :math:`s[[i]] = s` if and only if :math:`i = 1` and :math:`s \in L`
+        - Otherwise, :math:`s[[i]]` is undefined.
+    - Induction:
+        - If :math:`s = {\sigma}{v}`, or if :math:`s = {u}{\sigma}{v}` and :math:`u \notin L`, then :math:`s[[i]] = v[[i]]`
+        - If :math:`s = {u}{\sigma}{v}`, :math:`u \in L` and :math:`i = 1`, then :math:`s[[i]] = u`
+        - If :math:`s = {u}{\sigma}{v}`, :math:`u \in L` and :math:`i > 1`, then :math:`s[[i]] = v[[i-1]]`
+
+**Example** Let :math:`ᚠ = \text{"observe how system into system runs"}`. Consider :math:`ᚠ[[3]]`.
+
+Let :math:`u_1 = \text{"observe"}` and :math:`v_1 = \text{"how system into system runs"}`. Then :math:`ᚠ = {u_1}\varsigma{v_1}`, :math:`u_1 \in L` and :math:`3 > 1`. Therefore, by the Induction clause of :ref:`the definition of Word Indices <palindromics-definition-1-4-2>`,
+
+.. math::
+
+    ᚠ[[3]] = v_1[[3-1]] = v_1[[2]]
+
+At the next step, let :math:`u_2 = \text{"how"}` and :math:`v_2 = \text{"system into system runs"}`. Then :math:`v_1 = {u_2}\varsigma{v_2}`, :math:`u_2 \in L` and :math:`2 > 1`,
+
+.. math::
+
+    v_1[[2]] = v_2[[1]]
+
+At the next step, let :math:`u_3 = \text{"system"}` and :math:`v_3 = \text{"into system runs"}`. Then :math:`v_2 = {u_3}\varsigma{v_3}`, :math:`u_3 \in L` but :math:`1 = 1`, therefore,
+
+.. math::
+
+    ᚠ[[3]] = v_1[[2]] = v_2[[1]] = u_3 = \text{"system"}
+
+∎
+
+**Example** Let :math:`ᚠ = \text{"the gobberwarts with my blurglecruncheon"}`. Consider :math:`ᚠ[2]`.
+
+Let :math:`u_1 = \text{"the"}` and :math:`v_1 = \text{"gobberwarts with my blurglecruncheon"}`. Then :math:`ᚠ = {u_1}\varsigma{v_1}`, :math:`u_1 \in L` and :math:`2 > 1`. Therefore, by the Induction clause of :ref:`the definition of Word Indices <palindromics-definition-1-4-2>`,
+
+.. math::
+
+    ᚠ[[2]] = v_1[[2-1]] = v_1[[1]]
+
+At the next step, let :math:`u_2 = \text{"gobberwarts"}` and :math:`v_2 = \text{"with my blurglecruncheon"}`. Then :math:`v_1 = {u_2}\varsigma{v_2}` but :math:`u_2 \notin L` and :math:`1 = 1`, so by the first condition of the Induction clause,
+
+.. math::
+
+    v_1[[1]] = v_2[[1]]
+
+At the next step, let :math:`u_3 = \text{"with"}` and :math:`v_3 = \text{"my blurglecruncheon"}`. Then :math:`v_2 = {u_3}\varsigma{v_3}`, :math:`u_3 \in L` and :math:`1 = 1`. So, the second condition of the Induction clause,
+
+.. math::
+
+    ᚠ[[2]] = v_1[[1]] = v_2[[1]] = u_3 = \text{"with"}
+
+∎
+
+The next theorems that will not be required for the final postulates are given next, but they are given to indicate the type of results that may be established regarding the concept of Word Length. The results will be stated without proof. For the curious reader, the details can be found in :ref:`Appendix I.II: Omitted Proofs <palindromics-appendix-i-ii>`.
+
+.. _palindromics-theorem-1-4-1:
+
+.. topic:: Theorem 1.4.1
+
+    The sum of the String Lengths of the Words in a Sentence is atleast as great as the Word Length of the Sentence.
+
+    .. math::
+
+        \forall \zeta in C: \sum_{j=1}^{\Lambda(\zeta)} l(\zeta[[j]]) \geq \Lambda(\zeta)
+
+.. _palindromics-theorem-1-4-2:
+
+.. topic:: Theorem 1.4.2
+
+    The Word Length of the concatenation of two Sentences is no more than the sum of their individual Word Lengths.
+
+    .. math::
+
+        \forall \zeta, \xi \in C: \Lamdba(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)
+
+.. note::
+
+    The edge case of compound Words (e.g. "*daylight*") makes the proof :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` particularly interesting, demonstrating Word Length is fundamentally different than String Length with respect to the operation of concatenation. In :ref:`Theorem 1.2.1 <palindromics-theorem-1-1-1>`, it was shown String Length sums over concatenation. :ref:`Theorem 1.4.1 <theorem-1-4-1>` demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the potential destruction of semantic content upon concatenation.
+
+.. _palindromics-sentence-axioms:
+
+---------------
+Sentence Axioms
+---------------
+
+.. _palindromics-axiom-s-1:
+
+.. topic:: Axiom S.1: Sentence Duality Axiom
+
+    For every Word in the Language, there exists a Sentence in the Corpus that contains it.
+
+    .. math::
+
+        \forall \alpha \in L: \exists \zeta \in C: \alpha \subset_s \zeta 
+
+.. _palindromics-axiom-s-2:
+
+.. topic:: Axiom S.2: Word Duality Axiom
+
+    For every Sentence in the Corpus, there exists a Word in the Language which is contained in it.
+
+    .. math::
+
+        \forall \zeta \in C: \exists \alpha \in L: \alpha \subset_s \zeta
+
+.. note::
+
+    The Duality Axioms are reminiscent of the relation of surjectivity in real analysis. However, containment is not a strict equality relation so this resemblance should not be taken too far. 
+
+.. _palindromics-axiom-s-3:
+
+.. topic:: Axiom S.3: Comprehension Axiom
+
+    Every Word in a Sentence of the Corpus belongs to the Language.
+
+    .. math::
+
+        \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in L
+
+The following theorem is proved in :ref:`Appendix I.II: Omitted Proofs <palindromics-appendix-i-ii>`, as it is not required for the results in :ref:`Section IV <palindromics-section-iv>`. This theorem demonstrates the relationship between a Delimitation and Word Length that was pointed out in the introduction of this subsection.
+
+.. _palindromics-theorem-1-4-3:
+
+.. topic:: Theorem 1.4.3
+
+    .. math::
+
+        \forall \zeta \in C: \zeta = \bar{\Pi}_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
+
+.. _palindromics-sentence-classes:
+
+----------------
+Sentence Classes
+----------------
+
+.. _palindromics-definition-1-4-3:
+
+.. topic:: Definition 1.4.3: Admissible Sentences
+
     TODO
 
-**Example** Let :math:`ᚠ = \text{"observe how system into system runs"}`.
+**Example** Let :math:`ᚠ = \text{"strap on a ton"}`.
+
+TODO
+
+.. _palindromics-theorem-1-4-4:
+
+.. topic:: Theorem 1.4.4
+
+    All Admissible Sentences of a given Word Length belongs to the Corpus,
+
+    .. math::
+
+        A_n \subset C
+
+**Proof** TODO
+
+.. _palindromics-definition-1-4-4:
+
+.. topic:: Definition 1.4.4
+
+    Let :math:`\zeta \in C`. Then the set of Invertible Sentences, denoted :math:`K`, is defined as the set which satisfy the following open formula,
+
+    .. math::
+
+        \zeta \in \K \equiv {\zeta}^{-1} \in C
+
+    A Sentence that belongs to :math:`K` will be referred to as "*invertible*".
+
+.. _palindromics-theorem-1-4-5:
+
+.. topic:: Theorem 1.4.5
+
+    A Sentence is invertible if and only if its inverse is invertible.
+
+    .. math::
+
+        \forall \zeta in C: \zeta \in K \equiv {\zeta}^{-1} \in K
+
+**Proof** TODO
+
+
+.. _palindromics-theorem-1-4-6:
+
+.. topic:: Theorem 1.4.7
+
+    If a Sentence in the Corpus is invertible, then all of the Words are also invertible.
+
+    .. math::
+
+        \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
+
+**Proof** TODO
+
+.. _palindromics-theorem-1-4-7:
+
+.. topic:: Theorem 1.4.7
+
+    If a Sentence is invertible, then the :math:`i^{\text{th}}` Word in its inverse Sentence is equal to the inverse of the :math:`i^{\text{th}}`-to-last Word in the Sentence.
+
+    .. math::
+
+        \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[i]])^{-1}
+
+**Proof** TODO

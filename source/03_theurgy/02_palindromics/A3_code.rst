@@ -1,6 +1,6 @@
-.. _section_viii:
+.. _palindromics-appendix-iii:
 
-Section IX: Code
+Appendix III: Code
 ==================
 
 Main

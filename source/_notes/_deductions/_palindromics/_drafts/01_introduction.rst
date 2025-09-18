@@ -43,4 +43,37 @@ This restriction to *aspect* and *parity* may appear restrictive; Indeed, it may
 
 A note on the terminology introduced in this work is in order. When a semantic term is capitalized, e.g. Word or Sentence, this will mean it is referred to in its capacity as a formal entity. While the formal system was designed to model the actual syntax of Characters, Words and Sentences, this should not be taken to mean the formal entities that emerge from this system are necessarily representative of actual linguistic entities. While the formal entities in this system may not map *one-to-one* with their empirical counterparts, it will be seen their characteristics nevertheless provide insight into the nature of their empirical counterparts.
 
-As the thrust of the main results in Section VI is sufficiently novel, the author has gone to great lengths to make its foundation as rigorous as possible. Many of the initial theorems are proofs of common-sense notions relating to words and sentences. The banality of Section I and parts of Section II is in part an effort to ensure the applicability across natural languages regarding the results shown in Section II.III and Section VI. The core theorems of Section VI could be proved in a degenerate form in a system with less notationally complexity by assuming a specific language, but the depth of insight would be lost in the vagueness of definitions.
+Table Of Contents
+=================
+
+- Introduciton
+    - Table of Contents
+- Section I: Languages & Corpora
+    - I.I: Formalization
+    - I.II: Developments
+    
+.. Introduction
+.. Section I: Language
+..  I.I: Formalization
+..  I.II: Development
+..  I.III: Words
+.. I
+.. Section II: Corpora 
+..  II.I: Definitions
+..  II.II: Axioms
+..  II.III: Sentence Classes
+.. Section III: Structures
+..  III.I: σ-Reductions
+..  III.II: Delimiter Count Function
+.. Section IV: Palindromes
+..  IV.I: Aspect
+..  IV.II: Parity
+.. Section V: Analysis
+..  V.I: Sentence Integrals
+..  V.II: Probability
+.. Section VI: Postulates
+..  VI.I: Prior Results
+..  VI.II: Inverse Postulates
+.. Section VII: Appendix
+.. Section VIII: Data 
+.. Section IX: Code

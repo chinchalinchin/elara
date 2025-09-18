@@ -1,4 +1,4 @@
-.. _palindromics:
+.. _palindromics-index:
 
 ============
 Palindromics
@@ -8,14 +8,11 @@ Palindromics
    :maxdepth: 2
    :caption: Contents:
 
-   00_glossary
-   01_introduction
-   02_language
-   03_corpora
-   04_structures
-   05_palindromes
-   06_analysis
-   07_postulates
-   08_appendix
-   09_data
-   10_app
+   00_introduction
+   01_language
+   02_structure
+   03_postulates
+   04_analysis
+   A1_appendix
+   A2_data
+   A3_app
