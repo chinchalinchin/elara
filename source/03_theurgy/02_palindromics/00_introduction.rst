@@ -54,16 +54,20 @@ Table Of Contents
     - :ref:`I.I: Formalization <palindromics-section-i-i>`
     - :ref:`I.II: Strings <palindromics-section-i-ii>`
     - :ref:`I.III: Words <palindromics-section-i-iii>`
-    - I.IV: :ref:`Sentences <palindromics-section-i-iv>`
+    - :ref:`I.IV: Sentences <palindromics-section-i-iv>`
+    - :ref:`I.V: Summary <palindromics-section-i-v>`
 - :ref:`Section II: Structures <palindromics-section-ii>`
     - :ref:`II.I: σ-Reductions <palindromics-section-ii-i>`
-    - :ref:`II.II: Palindromes <palindromics-ii-iii>`
+    - :ref:`II.II: Palindromes <palindromics-ii-ii>`
+    - :ref:`II.III: Summary <palindromics-ii-iii>`
 - :ref:`Section III: Postulates <palindromics-section-iii>`
     - :ref:`III.I: Prior Results <palindromics-section-iii-i>`
     - :ref:`III.II: Inverse Postulates <palindromics-section-iii-ii>`
+    - :ref:`III.III: Summary <palindromics-section-iii-iii>`
 - :ref:`Section IV: Analysis <palindromics-section-iv>`
     - :ref:`IV.I: Sentence Integrals <palindromics-section-iv-i>`
     - :ref:`IV.II: Probability <palindromics-section-iv-ii>`
+    - :ref:`IV.III: Summary <palindromics-section-iv-iii>`
 - :ref:`Appendix I: Addendums <palindromics-appendix-i>`
     - :ref:`AI.I: Delimiter Count Function <palindromics-appendix-i-i>`
     - :ref:`AI.II: Omitted Proofs <palindromics-appendix-i-ii>`

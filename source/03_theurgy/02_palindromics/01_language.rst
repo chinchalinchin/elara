@@ -1091,6 +1091,58 @@ Similarly, the Limitation can be constructed using the Basis and Induction claus
 
 ∎
 
+.. _palindromics-theorem-1-3-3:
+
+.. topic:: Theorem 1.3.3
+
+    All Delimitations are unique.
+
+    .. math::
+
+        \forall n \in \mathbb{N}: \forall p \in L_n: \exists! s \in S: s = \bar{\Pi}_{i=1}^{n} p(i)
+
+.. NOTE: I think this needs to be restricted to all Strings that do not contains the Empty Character, since infinitely many Empty Characters can be concatenated into s in this theorem without changing the Delimitation.
+
+**Proof** Let :math:`n \in \mathbb{N}` and :math:`p \in L_n` such that,
+
+.. math::
+
+    p = (\alpha_1, \alpha_2, ..., \alpha_n)
+
+The theorem will be proven through induction on :math:`n`
+
+:underline:`Basis`: Assume :math:`n = 1`. By Basis clause of :ref:`the definition of Delimitation <palindromics-definition-1-3-6>`,
+
+.. math::
+
+    \bar{\Pi}_{i=1}^{1} p(i) = \alpha_1
+
+:underline:`Induction`: Assume for :math:`k \geq 1`, these exists a unique String :math:`s_k` such that,
+
+.. math::
+
+    s_k = \bar{\Pi}_{i=1}^{k} p(i)
+
+By Induction clause of :ref:`the definition of Delimitation <palindromics-definition-1-3-6>`,
+
+.. math::
+
+    \bar{\Pi}_{i=1}^{k+1} p(i) = (\bar{\Pi}_{i=1}^{k} p(i))(\varsigma)(\alpha_{k+1})
+
+By inductive hypothesis,
+
+.. math::
+
+    s_{k+1} = \bar{\Pi}_{i=1}^{k+1} p(i) = ({s_k})(\varsigma)(\alpha_{k+1})
+
+Therefore, by induction,
+
+.. math::
+
+    \forall n \in \mathbb{N}: \forall p \in L_n: \exists! s \in S: s = \bar{\Pi}_{i=1}^{n} p(i)
+
+∎
+
 .. ...................................................
 .. .................. SECTION I.IV ...................
 .. ...................................................
@@ -1297,7 +1349,7 @@ At the next step, let :math:`u_3 = \text{"with"}` and :math:`v_3 = \text{"my blu
 
 ∎
 
-The next theorems that will not be required for the final postulates are given next, but they are given to indicate the type of results that may be established regarding the concept of Word Length. The results will be stated without proof. For the curious reader, the details can be found in :ref:`Appendix I.II: Omitted Proofs <palindromics-appendix-i-ii>`.
+The next theorems will not be required for the final postulates, but they are given to indicate the type of results that may be established regarding the concept of Word Length. For the curious reader, the details can be found in :ref:`Appendix I.II: Omitted Proofs <palindromics-appendix-i-ii>`.
 
 .. _palindromics-theorem-1-4-1:
 
@@ -1321,7 +1373,9 @@ The next theorems that will not be required for the final postulates are given n
 
 .. note::
 
-    The edge case of compound Words (e.g. "*daylight*") makes the proof :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` particularly interesting, demonstrating Word Length is fundamentally different than String Length with respect to the operation of concatenation. In :ref:`Theorem 1.2.1 <palindromics-theorem-1-1-1>`, it was shown String Length sums over concatenation. :ref:`Theorem 1.4.1 <theorem-1-4-1>` demonstrates the corresponding property is not necessarily true for Word Length. This is an artifact of the potential destruction of semantic content upon concatenation.
+    :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>` and :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` demonstrate Word Length is fundamentally different than String Length with respect to the operation of concatenation. In :ref:`Theorem 1.2.1 <palindromics-theorem-1-1-1>`, it was shown String Length sums over concatenation. :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>` shows the corresponding property is not necessarily true for Word Length. This is an artifact of the potential destruction of semantic content that may occur upon concatenation.
+
+    The edge case of compound Words (e.g. "*daylight*") makes the proof :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` particularly interesting.
 
 .. _palindromics-sentence-axioms:
 
@@ -1373,33 +1427,23 @@ The following theorem is proved in :ref:`Appendix I.II: Omitted Proofs <palindro
 
         \forall \zeta \in C: \zeta = \bar{\Pi}_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
 
+.. _palindromics-theorem-1-4-4:
+
+.. topic:: Theorem 1.4.4
+
+    The inverse of a Delimitation is the Delimitation of inverses.
+
+    .. math::
+
+        \forall \zeta \in C: (\bar{\Pi}_{i=1}^{\Lambda(\zeta)})^{-1} \zeta[[i]] = \bar{\Pi}_{i=1}^{\Lambda(\zeta)} (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+
+**Proof** TODO
+
 .. _palindromics-sentence-classes:
 
 ----------------
 Sentence Classes
 ----------------
-
-.. _palindromics-definition-1-4-3:
-
-.. topic:: Definition 1.4.3: Admissible Sentences
-
-    TODO
-
-**Example** Let :math:`ᚠ = \text{"strap on a ton"}`.
-
-TODO
-
-.. _palindromics-theorem-1-4-4:
-
-.. topic:: Theorem 1.4.4
-
-    All Admissible Sentences of a given Word Length belongs to the Corpus,
-
-    .. math::
-
-        A_n \subset C
-
-**Proof** TODO
 
 .. _palindromics-definition-1-4-4:
 
@@ -1423,12 +1467,43 @@ TODO
 
         \forall \zeta in C: \zeta \in K \equiv {\zeta}^{-1} \in K
 
-**Proof** TODO
+**Proof** Let :math:`\zeta in C`.
 
+(:math:`\rightarrow`) Assume :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    {\zeta}^{-1} \in C
+
+By :ref:` <palindromics-theorem-1-2-3>`,
+
+.. math::
+
+    ({\zeta}^{-1})^{-1} = \zeta
+
+By assumption, :math:`\zeta \in C`, therefore, by the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    {\zeta}^{-1} \in K
+
+(:math:`\leftarrow`) Assume :math:`{\zeta}^{-1} \in K`, which implies :math:`{\zeta}^{-1} \in C`. By assumption :math:`\zeta \in C`. Therefore, :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    \zeta \in K
+
+Summarizing and generalizing,
+
+.. math::
+
+    \forall \zeta in C: \zeta \in K \equiv {\zeta}^{-1} \in K
+
+∎
 
 .. _palindromics-theorem-1-4-6:
 
-.. topic:: Theorem 1.4.7
+.. topic:: Theorem 1.4.6
 
     If a Sentence in the Corpus is invertible, then all of the Words are also invertible.
 
@@ -1436,7 +1511,31 @@ TODO
 
         \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
-**Proof** TODO
+**Proof** Let :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    {\zeta}^{-1} \in C
+
+By the :ref:`Comprehension Axiom <palindromics-axiom-s-3>`,
+
+.. math::
+
+    \forall i \in N_{\Lambda(\zeta)}: {{\zeta}^{-1}}[[i]] \in L
+
+By :ref:`the definition of Invertible Words <palindromics-definition-1-3-2>`, the inverse of a Word can only belong to a Language if and only if the Word is invertible,
+
+.. math::
+
+    \forall i \in N_{\Lambda(\zeta)}: {{\zeta}^{-1}}[[i]] \in I
+
+Summarizing and generalizing,
+
+.. math::
+
+    \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] \in I
+
+∎
 
 .. _palindromics-theorem-1-4-7:
 
@@ -1446,6 +1545,59 @@ TODO
 
     .. math::
 
-        \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[i]])^{-1}
+        \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
 
-**Proof** TODO
+**Proof** Let :math:`\zeta \in K`, let :math:`n = \Lambda(\zeta)` and let :math:`i \in N_n`.
+
+By :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>` and assumption,
+
+.. math::
+
+    \forall i \in N_n: \zeta[[i]] \in I
+
+By :ref:`Theorem 1.3.1 <palindromics-theorem-1-3-1>`,
+
+.. math::
+
+    \forall i \in N_n: (\zeta[[i]])^{-1} \in I
+
+Consider,
+
+.. math::
+
+   \bar{\Pi}_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
+
+By :ref:`Theorem 1.4.4 <palindromics-theorem-1-4-4>`,
+
+.. math::
+
+    (\bar{\Pi}_{i=1}^{n} \zeta[[i]])^{-1}
+
+And by definition of Sentences and :ref:`the definition of Delimitations <palindromics-definition-1-3-6>`,
+
+.. math::
+
+    \zeta = \bar{\Pi}_{i=1}^{n} \zeta[[i]]
+
+Therefore,
+
+.. math::
+
+    (\zeta)^{-1} = \bar{\Pi}_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
+
+By :ref:`Theorem 1.3.3 <palindromics-theorem-1-3-3>`, Delimitations are unique, thus the only way this can occur is when,
+
+.. math::
+
+    {{\zeta}^{-1}}[[i]] = (\zeta[[n - i + 1]])^{-1}
+
+Summarizing and generalizing,
+
+.. math::
+
+    \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+
+.. _palindromics-section-i-v:
+
+Section I.V: Summary
+====================
