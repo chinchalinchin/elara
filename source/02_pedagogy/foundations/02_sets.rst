@@ -152,7 +152,7 @@ Corollaries
 Venn Diagrams
 -------------
 
-A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set :math:`A` shown against the universal set **S**, 
+A *Venn Diagram* is a visual representation of sets and the relations between them. The universal set is represent as rectangle and sets are represented as circles within this rectangle. The simplest *Venn Diagram* is a graphic of a single set :math:`A` shown against the universal set :math:`S`, 
 
 .. plot:: _scripts/py/plots/venns/diagram_set.py
 
@@ -323,7 +323,7 @@ The complement can be visualized with the following *Venn Diagram*,
     
     **Example**
     
-	Let **S** be the set of animals and let :math:`A` be the set of dogs. Then :math:`A^c` is the set of animals that are *not* dogs.
+	Let :math:`S` be the set of animals and let :math:`A` be the set of dogs. Then :math:`A^c` is the set of animals that are *not* dogs.
 
 .. note::
 

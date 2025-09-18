@@ -302,7 +302,7 @@ In his 1930 paper *On Fundamental Concepts of the Methodology of Deductive Scien
 .. topic:: Definitions
 
     1. :math:`S`: The set of all meaningful sentences in a science.
-    2. :math:`A`: An arbitrary subset of **S**.
+    2. :math:`A`: An arbitrary subset of :math:`S`.
     3. :math:`C_n(A)`
     4. :math:`E_{f(x)}[ ... ]`: The set of all values of the function *f* corresponding to those values of the argument *x* which satisfy the condition formulated in the brackets "[..]".
     5. :math:`\mathbb{P}(A) = E_X[X \subseteq A]`: The powerset of A, i.e. the set of all subsets of A.

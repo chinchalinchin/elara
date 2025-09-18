@@ -113,7 +113,7 @@ Axioms
 ------
 
 - Character Axiom C.1: :math:`\forall \iota \in \Sigma: \iota \in S`
-- Discover Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
+- Discovery Axiom W.1: :math:`\forall \alpha \in L: [ (l(\alpha) \neq 0) \land (\forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma) ]`
 - Duality Axiom S.1: :math:`( \forall \alpha \in L: \exists \zeta \in C_{L}: \alpha \subset_{s} \zeta ) \land ( \forall \zeta \in C_{L}: \exists \alpha \in L: \alpha \subset_{s} \zeta )`
 - Extraction Axiom S.2: :math:`\forall \zeta \in C_{L} : \forall i \in N_{\Lambda(\zeta)}: \zeta\{i\} \in L`
 - Finite Axiom S.3: :math:`\exists N \in \mathbb{N}: \forall \zeta \in C_L: l(\zeta) \leq N`
@@ -206,10 +206,9 @@ Theorems
 - T 5.1.2: :math:`\forall \zeta \in C_L: \forall i \in N_{l(\zeta)}: \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot (l(\zeta[i:])/l(\zeta)) = \Sigma_{i=1}^{k} \Delta(\zeta[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
 - T 5.1.3: :math:`\forall \zeta \in C_L: \Sigma_{i=1}^{\Phi(\zeta)} \mu_{+}(\zeta, i) > \Sigma_{i=\Phi(\zeta)+1}^{l(\zeta)} \mu_{-}(\zeta, i) \leftrightarrow \Phi_{+}(\zeta,l(\zeta)) > \Phi_{-}(\zeta,l(\zeta))`
 - T 5.2.1: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\zeta, k) \geq 0 \land \Phi_{+}(\zeta,) \geq 0`
-- T 5.2.2: :math:`\forall \zeta in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\varsigma(\zeta), k) = \Phi_{+}(\varsigma(\zeta), k) = 0`
+- T 5.2.2: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\varsigma(\zeta), k) = \Phi_{+}(\varsigma(\zeta), k) = 0`
 - T 5.2.3: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{-}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot (i/l(\zeta))`
 - T 5.2.4: :math:`\forall \zeta \in C_L: \forall k \in N_{l(\zeta)}: \Phi_{+}(\text{inv}(\zeta), k) = \Sigma_{i=1}^{k} \Delta(\text{inv}(\zeta)[i]) \cdot ((l(\zeta) - i + 1)/l(\zeta))`
-- T 5.2.5: :math:``
 - T 5.2.6; :math:`\forall \zeta \in PP: \forall i \in N_{l(\zeta)}: \Phi_{-}(\zeta,i) = \Phi_{+}(\zeta,i)`
 - T A.1.1: :math:`\forall \zeta \in C_L: L_\zeta \subset L`
 - T A.2.1: :math:`\forall \alpha \in L: \alpha \in L_\sigma \leftrightarrow [ \exists \zeta \in C_L: \exists i \in N_{\Lambda(\zeta)}: \zeta\{i\} \subset_s \alpha ]`

@@ -5,24 +5,96 @@ Section VI: Postulates
 
 The following theorems serve as the main result of the current formal system that has been constructed to describe the syntactical structures of Palindromes in any Language. 
 
-**Theorem 3.3.1: The Inverse Postulate** [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ]
+.. _section-vi-i:
 
-Assume *ζ* is an arbitrary Sentence in the Corpus **C**:sub:`L` such that it is a Palindrome,
+Section VI.I: Prior Results
+---------------------------
 
-    1. ζ ∈ P
+In the study of context-free grammar, it can be shown the following recursive construction can be used to construct the set of palindromic strings, 
+
+.. math::
+
+    P \to \epsilon \mid a \mid b \mid aPa \mid bPb
+
+Where :math:`a, b \in S`. The equivalent theorem will now be proven in the current formal system.
+
+.. _palindromics-theorem-6-1-1:
+
+**Theorem 6.1.1** :math:`\forall \zeta_1, \zeta_2 \in P: {\zeta_1}{\zeta_2}{\zeta_1} \in A(\Lambda(\zeta_1) + \Lambda(\zeta_2) + \Lambda(\zeta_1)) \to {\zeta_1}{\zeta_2}{\zeta_1} \in P`
+
+Assume :math:`\zeta_1, \zeta_2` are arbitrary Palindrome,
+
+    1. :math:`\zeta_1, \zeta_2 \in P`
+
+By :ref:`Definition 4.1.1 <definition-4-1-1>`,
+
+    2. :math:`\varsigma(\zeta_1) = \text{inv}(\varsigma(\zeta_1))`
+
+    3. :math:`\varsigma(\zeta_2) = \text{inv}(\varsigma(\zeta_2))`
+
+Assume :math:`{\zeta_1}{\zeta_2}{\zeta_1}` is an Admissible Sentence. By :ref:`Definition 2.3.1 <definition-2-3-1>`,
+
+    4. :math:`{\zeta_1}{\zeta_2}{\zeta_1} \in C_L`
+
+It must be shown this quantity is a Palindrome. To show this, it must in turn be shown,
+
+    5. :math:`\varsigma({\zeta_1}{\zeta_2}{\zeta_1}) = \text{inv}(\varsigma{\zeta_1}{\zeta_2}{\zeta_1})`
+
+Consider the right hand side of Step 6. Applying :ref:`Theorem 3.1.1. <theorem-3-1-1>`, this side becomes,
+
+    6. :math:`\varsigma(\text{inv}({\zeta_1}{\zeta_2}{\zeta_1}))`
+
+Consider :math:`\text{inv}({\zeta_1}{\zeta_2}{\zeta_1})` and apply :ref:`Theorem 1.2.5 <theorem-1-2-5>` twice,
+
+    7. :math:`\varsigma(\text{inv}(\zeta_1)\text{inv}(\zeta_2)\text{inv}(\zeta_1))`
+
+By :ref:`Theorem 3.1.2 <theorem-3-1-2>`,
+
+    8. :math:`\varsigma(\text{inv}(\zeta_1))\varsigma(\text{inv}(\zeta_2))\varsigma(\text{inv}(\zeta_1))`
+
+From Step 2 and 3, this becomes,
+
+    9. :math:`\varsigma(\zeta_1)\varsigma(\zeta_2)\varsigma(\zeta_1)`
+
+Then, applying :ref:`Theorem 3.1.2 <theorem-3-1-2>` again, but in the opposite direction,
+
+    10. :math:`\varsigma({\zeta_1}{\zeta_2}{\zeta_1})`
+
+But this is exactly the left hand side of Step 5. From this, it can be concluded the equality in Step 5 holds. Therefore, it follows, 
+
+    11. :math:`{\zeta_1}{\zeta_2}{\zeta_1} \in P`
+
+Putting everything together and generalizing,
+
+    12. :math:`\forall \zeta_1, \zeta_2 \in P: ({\zeta_1}{\zeta_2}{\zeta_1}) \in A(2*\Lambda(\zeta_1) + \Lambda(\zeta_2)) \to {\zeta_1}{\zeta_2}{\zeta_1} \in P`
+
+∎
+
+This shows the results of context-free grammar theory (with respect to palindromes) are embedded within the axioms of the current system.
+
+.. _section-vi-ii:
+
+Section VI.II: Inverse Postulates
+---------------------------------
+
+**Theorem 6.2.1: The Inverse Postulate** :math:`\forall \zeta \in P: [ (\text{inv}(\zeta\{1\}) \subset_s \zeta\{\Lambda(\zeta)\}) \lor (\text{inv}(\zeta\{\lambda(\zeta)}) \subset_s \zeta\{1\}) ] \land [ (\zeta{1} \subset_s \text{inv}(\zeta\{\Lambda(\zeta)\})) \lor (\zeta\{\Lambda(\zeta)\} \subset_s \text{inv}(\zeta{1})) ]`
+
+Assume :math:`\zeta` is an arbitrary Palindrome,
+
+    1. :math:`\zeta \in P`
     
 By :ref:`Definition 4.1.1 <definition-4-1-1>`,
 
-    2. ς(ζ) = inv(ς(ζ))
+    2. :math:`\varsigma(\zeta) = \text{inv}(\varsigma(\zeta))`
 
 By Definition 1.1.4,
 
-    3. l(ς(ζ)) = l(inv(ς(ζ)))
+    3. :math:`l(\varsigma(\zeta)) = l(\text{inv}(\varsigma(\zeta)))`
 
 Let,
     
-    4. α = ζ{1}
-    5. β = ζ{Λ(ζ)} 
+    4. :math:`\alpha = \zeta\{1\}`
+    5. :math:`\beta = \zeta{\Lambda(\zeta)\}` 
 
 By Discovery Axiom W.1, Words do not contain Delimiters, so the *σ*-Reduction of *ζ*, *ς(ζ)*, can be represented as a concatenation of the *σ*-reduced words of *ζ*, with Theorem 3.1.8 and Definition 1.2.8 of Limitations,
 
@@ -98,7 +170,9 @@ In all cases, the follow propositions obtain,
 
 Since *ζ* was an arbitrary Palindrome, this can be generalized using the definitions of *α* and *β* from step 4 and step 5.
 
-    27. ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ] ∎
+    27. ∀ ζ ∈ P: [ (inv(ζ{1}) ⊂:sub:s ζ{Λ(ζ)}) ∨ (inv(ζ{Λ(ζ)}) ⊂:sub:s ζ{1}) ] ∧ [ (ζ{1} ⊂:sub:s inv(ζ{Λ(ζ)})) ∨ (ζ{Λ(ζ)} ⊂:sub:s inv(ζ{1})) ] 
+    
+∎
 
 **Theorem 3.2.2: The Pivot Postulate** ∀ ζ ∈ P: (ζ[ω(ζ)] = σ) → ( (inv(ζ{ω-}) ⊂:sub:`s` ζ{ω+}) ∨ (inv(ζ{ω+}) ⊂:sub:`s` ζ{ω-}))
 

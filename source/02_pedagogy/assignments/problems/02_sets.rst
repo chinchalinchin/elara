@@ -29,7 +29,7 @@ For the problems #1 -9, you are given,
 
     D = \{ 31, 50 \}
 
-Where **S** is the universal set and **A**, **B**, **C** and **D** are subsets of **S**.
+Where :math:`S` is the universal set and **A**, **B**, **C** and **D** are subsets of :math:`S`.
 
 Defintions
 ----------

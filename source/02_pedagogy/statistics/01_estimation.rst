@@ -307,7 +307,7 @@ Then the sample arithmetic mean can be calculated with the formula,
 This is known as the *sample mean formula* for the arithmetic mean.
 
 Example
-    Suppose you survey 10 people and ask them how many of the 11 full-length, major motion picture *Star Wars* movies they have seen. Suppose the sample **S** of their responses is given below,
+    Suppose you survey 10 people and ask them how many of the 11 full-length, major motion picture *Star Wars* movies they have seen. Suppose the sample :math:`S` of their responses is given below,
 
     .. math::
     
@@ -330,11 +330,11 @@ Applying the *sample mean formula*,
 Interlude
 *********
 
-Suppose in a sample of data **S**, some of the observations have identical values, such as in the following dataset that represents the age in years of an A.P Statistics student,
+Suppose in a sample of data :math:`S`, some of the observations have identical values, such as in the following dataset that represents the age in years of an A.P Statistics student,
 
     S = \{ 16, 16, 17, 18, 16, 17, 17, 17 \}
 
-Before moving on to calculate the sample mean, let us represent this sample **S** in an equivalent way using a table,
+Before moving on to calculate the sample mean, let us represent this sample :math:`S` in an equivalent way using a table,
 
 +--------------+----------------+
 |  :math:`x_i` | :math:`f(x_i)` |
@@ -528,7 +528,7 @@ Formula
 
 	We are dropping the *A* subscript from the sample mean formula in this section to provide a confusion of superscripts and subscripts. Keep in mind, even though it is not explicitly written, the sample means in this section refer to the *arithmetic* sample mean.
 	
-Suppose a sample of data **S** with *n* observations has been broken up into *m* groups, 
+Suppose a sample of data :math:`S` with *n* observations has been broken up into *m* groups, 
 
 .. math::
 
@@ -544,7 +544,7 @@ For :math:`j = 0, 1, 2, ..., m`. Note, by definition,
 
 	Pay careful attention to the indices of the summation here. We are summing over the number of *groups*, **not** the number of observations. 
 	
-If these conditions are met, then we can calculate the sample mean of **S** as the weighted sum of each sub-sample :math:`S_j`,
+If these conditions are met, then we can calculate the sample mean of :math:`S` as the weighted sum of each sub-sample :math:`S_j`,
 
 .. math:: 
 
@@ -1381,7 +1381,7 @@ Variance
 Motivation
 **********
 
-Let us consider a rather contrived example that is nevertheless instructive. Suppose **S** a sample of data represents 
+Let us consider a rather contrived example that is nevertheless instructive. Suppose :math:`S` a sample of data represents 
 
 TODO
 

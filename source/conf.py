@@ -44,6 +44,7 @@ extensions = [
     'redacted',
     'small',
     'tiny',
+    'underline',
 ]
 
 templates_path = [ ]

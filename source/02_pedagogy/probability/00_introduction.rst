@@ -157,7 +157,7 @@ Motivation
 .. note:: 
     By "*fair*", we mean the probability of all outcomes are *equally likely*.
 
-Consider flipping a fair, two-sided coin. The only possible outcomes to this experiment are heads or tails. If we let *h* represent the outcome of a head for a single flip and *t* represent the outcome of a tail for a single flip, then the sample space is given by the set **S**,
+Consider flipping a fair, two-sided coin. The only possible outcomes to this experiment are heads or tails. If we let *h* represent the outcome of a head for a single flip and *t* represent the outcome of a tail for a single flip, then the sample space is given by the set :math:`S`,
 
 .. math:: 
     S = \{ h, t \}
@@ -247,11 +247,11 @@ A natural way to define probability of an event is as the ratio of the cardinali
 
 In plain English,
 
-    The probability of an event **A** is the ratio of the number ways **A** can occur to the number of ways all the outcomes in the sample space **S** can occur.
+    The probability of an event **A** is the ratio of the number ways **A** can occur to the number of ways all the outcomes in the sample space :math:`S` can occur.
 
 Another way of saying the same thing,
 
-    The probability of an event **A** is the ratio of the cardinalities of the set **A** and the sample space **S**.
+    The probability of an event **A** is the ratio of the cardinalities of the set **A** and the sample space :math:`S`.
 
 This is called the *classical definition of probability*.
 
@@ -306,7 +306,7 @@ Axiom 2
 -------
 
 :math:`P(S)=1`
-    The probability of *some* outcome from the sample space **S** occuring is equal to 1.
+    The probability of *some* outcome from the sample space :math:`S` occuring is equal to 1.
 
 .. _probability-axiom-3:
 
@@ -314,7 +314,7 @@ Axiom 3
 -------
 
 :math:`\forall i \neq j: A_i \cap A_j = \varnothing \implies P(\bigcup\limits_{i=1}^{n} A_i) = \sum_{i=1}^n P(A_i)`
-    If each event :sub:`i` **A** in the sample space **S** is *mutually exclusive* with every other event :math:`\forall i \neq j: A_i`, then the probability of the union of all of these events is equal to the sum of the probabilities of each individual event.
+    If each event :sub:`i` **A** in the sample space :math:`S` is *mutually exclusive* with every other event :math:`\forall i \neq j: A_i`, then the probability of the union of all of these events is equal to the sum of the probabilities of each individual event.
 
 :ref:`probability-axiom-1` and :ref:`probability-axiom-2` are fairly intuitive and straight-forward in their meaning, while :ref:`probability-axiom-3` takes a bit of study to fully appreciate. To help in that endeavor, consider the following example.
 
@@ -331,7 +331,7 @@ Example
     
     Find the probability of :math:`P(A \cup B)`. 
     
-The sample space **S** of this experiment was given by,
+The sample space :math:`S` of this experiment was given by,
 
 .. math::
     S = \{ hh, ht, th, tt \}
@@ -445,7 +445,7 @@ This corollary should be intuitively obvious, considering the Venn Diagramm of c
 .. image:: ../../_static/img/math/sets/sets-complement.jpg
     :align: center
 
-If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space **S**, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
+If the entire rectangle encompassing set **A** in the above diagram is identified as the sample space :math:`S`, then the theorem follows immediately from Axiom 2, namely, :math:`P(S)=1`. 
 
 .. warning:: 
 

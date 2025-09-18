@@ -17,7 +17,7 @@ The next level of the semantic hierarchy will now be constructed. Many of the de
 Corpus
 ^^^^^^
 
-The entire system so far constructed relies on the domain of **S**, the set of all Strings that can be formed from an Alphabet of Characters :math:`\Sigma`. Attention has been confined to those entities that satisfy the :ref:`Discovery Axiom W.1 <axiom-w1>`.
+The entire system so far constructed relies on the domain of :math:`S`, the set of all Strings that can be formed from an Alphabet of Characters :math:`\Sigma`. Attention has been confined to those entities that satisfy the :ref:`Discovery Axiom W.1 <axiom-w1>`.
 
 In other words, the definitions and theorems so far introduced deal with linguistics entities that do not possess a Delimiter Character. Delimiters will be of central importance in describing palindromic structures, because Delimiters play a central role in the definition of the linguistic entity that will ultimately allow a palindrome to be rigorously defined, a *Sentence*. With that in mind, the concepts and definitions that pave the way to an explication of *Sentence* start with the definition of a *Corpus*.
 
@@ -25,13 +25,13 @@ In other words, the definitions and theorems so far introduced deal with linguis
 
 **Definition 2.1.1: Corpus** The Corpus of Language **L** is denoted by **C**:sub:`L`. The Corpus set represents a collection of grammatically valid and semantically meaningful Strings. ∎
 
-From the definition, it can easily be seen the Corpus of a Language is a subset of the set of all possible Strings, **S**
+From the definition, it can easily be seen the Corpus of a Language is a subset of the set of all possible Strings, :math:`S`
 
 .. math::
 
    C_L \subset S 
 
-This aligns with the idea that the domain of entities in this formal system is defined either as a type of *element* of **S** or a type of *subset* of **S**.
+This aligns with the idea that the domain of entities in this formal system is defined either as a type of *element* of :math:`S` or a type of *subset* of :math:`S`.
 
 .. _sentence:
 
@@ -84,7 +84,7 @@ This web of categorical relations represents the hierarchy of linguistic entitie
 Notation
 ^^^^^^^^
 
-In :ref:`Section I.I <section-i-i>`, notation was introduced for representing Strings a a sets of ordered Characters. This form of representation provided a formal method for specifying various syntactical conditions and properties of Strings and Words. In particular, this method allowed a formal definition of String Length.  
+In :ref:`Section I.I <palindromics-section-i-i>`, notation was introduced for representing Strings a a sets of ordered Characters. This form of representation provided a formal method for specifying various syntactical conditions and properties of Strings and Words. In particular, this method allowed a formal definition of String Length.  
 
 In a similar way, a method of representing Sentences as sets will now be constructed to enrich the symbolic form given to a Sentence in this formal system. Since all Sentences are Strings, all Sentences have Character-level set or sequence representations, by the Emptying Algorithm. The Discovery Axiom W.1 allows the definition of an algorithm to parse the Words of a Sentence based purely on the presence of Delimiters. 
 
@@ -142,7 +142,7 @@ The :ref:`Delimiting Algorithm <algorithm-2>` takes a Sentence *ᚠ* from a Corp
 
             i. If l(t) > 0:
 
-                1. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to t.
+                1. Apply Basis Clause of :ref:`Definition 1.1.1 <palindromics-definition-1-1-1>` to t.
                 2. W ← W ∪ { (j, t) }
                 3. j ← j + 1
    
@@ -250,7 +250,7 @@ This example does not invalidate the analysis, but it does introduce subtlety th
 Word Length
 ^^^^^^^^^^^
 
-The notion of String Length *l(s)* was introduced in :ref:`Section I.I <section-i-i>` as a way of measuring the number of non-Empty Characters in a String *s*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different *"spatial"* dimension in the domain of a Language and its Corpus: *Word Length*.
+The notion of String Length *l(s)* was introduced in :ref:`Section I.I <palindromics-section-i-i>` as a way of measuring the number of non-Empty Characters in a String *s*. In order to describe palindromic structures, a new notion of length will need introduced to accomodate a different *"spatial"* dimension in the domain of a Language and its Corpus: *Word Length*.
 
 Intuitively, the length of a Sentence is the number of Words it contains. Since there is no analogue of :ref:`Discovery Axiom W.1 <axiom-w1>` for Sentences (nor should there be), this means Sentences may contain Delimiter Characters. The Words of a Language are separated by Delimiters in the Sentences of its Corpus. 
 
@@ -734,7 +734,7 @@ With both directions of the equivalence proven, since *ζ*, *i*, and *j* were ar
 Section II.II: Axioms
 ---------------------
 
-In :ref:`Section I <section-i>`, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.
+In :ref:`Section I <palindromics-section-i>`, the first three axioms of the formal system were introduced. Now that definitions and notations have been introduced for Sentence and Corpus, the axioms may be expanded to further refine the character of the system being built. The Equality, Character and Discovery Axiom are reprinted below, so they may be considered in sequence with the other axioms.
 
 Note the Discovery Axiom has been revised to employ Character Index notation.
 
@@ -985,7 +985,7 @@ Assume
 
     1. \quad ζ \in C_L
 
-By :ref:`Definition 2.1.3 <definition-1-2-3>`,
+By :ref:`Definition 2.1.3 <palindromics-definition-1-2-3>`,
 
 .. math::
 
@@ -1304,7 +1304,7 @@ By :ref:`Definition 2.1.1 <definition-2-1-1>`,
 
     4. \quad \zeta \in S
 
-Where **S** is the set of all Strings. Therefore, it follows, 
+Where :math:`S` is the set of all Strings. Therefore, it follows, 
 
 .. math::
 

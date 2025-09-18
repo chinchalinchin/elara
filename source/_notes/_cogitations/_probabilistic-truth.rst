@@ -9,7 +9,7 @@ Before we attempt to introduce interpretations, let's refine the primitive notio
 
     1. Elementary Events: Lowercase letters from the beginning of the alphabet denote elementary events, *a*, *b*, *c*, etc.
     2. Abstract Events: Uppercase letters denote random events, **A**, **B**, **C**, etc. 
-    3. Sample Space: The capital letter, **S**.
+    3. Sample Space: The capital letter, :math:`S`.
     4. Propositions: Lowercase letters from the middle of the alphabet denote propositions, *p*, *q*, *r*, etc. 
    
 The sample space is the aggregation of elementary events. Abstract events are taken from the power-set (field) of the sample space. Furthermore, a simplified version of Kolmogrov's axiom will be adopted. 

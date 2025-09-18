@@ -448,7 +448,7 @@ Therefore, *inv(ζ)[:i]* and *ζ[l(ζ) - i + 1:]* have the same Characters in th
 
     8. \quad l(\zeta[l(\zeta) - i + 1:]) = l(\zeta) - (l(\zeta) - i + 1) + 1 = i
 
-Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>` means they are equivalent as Strings,
+Therefore, by :ref:`Definition 1.1.4 <palindromics-definition-1-1-4>` means they are equivalent as Strings,
 
 .. math::
 

@@ -107,7 +107,7 @@ The Reduction Algorithm takes in a String *t* as input. It initializes the value
     
     5. If l(t) > 0:
         
-        a. Apply Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` to t
+        a. Apply Basis Clause of :ref:`Definition 1.1.1 <palindromics-definition-1-1-1>` to t
     
     6. Return t 
 
@@ -143,7 +143,7 @@ A subtlety of the :ref:`Reduction Algorithm <algorithm-3>` should be noted. Whil
 
     \varsigma(\alpha\sigma) ≠ \alpha\varepsilon
 
-Except insofar that the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>` defines the concatenation of *αε* to equal *α*.
+Except insofar that the Basis Clause of :ref:`Definition 1.1.1 <palindromics-definition-1-1-1>` defines the concatenation of *αε* to equal *α*.
 
 This is because of the condition *(j > 1)* in the Finalization Block of the Reduction ensures Empty Characters are stripped from *t* when the input String contains atleast one non-Empty Character that has been concatenated into the *σ*-reduction String. 
 
@@ -236,7 +236,7 @@ Since *s* contains only the non-Delimiter characters of *ζ* in their original o
 
 Similarly, since *u* is the reverse sequence of Characters in *ζ*, and *v* is obtained by removing Delimiters from *u*, *v* also contains only the non-Delimiter characters of *ζ* in the reversed order.
 
-Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* and *v* must be the same String, as they both contain the same Characters in the same order. Since :math:`t = v`, 
+Therefore, by :ref:`Definition 1.1.4 <palindromics-definition-1-1-4>`, *t* and *v* must be the same String, as they both contain the same Characters in the same order. Since :math:`t = v`, 
 
 .. math::
 
@@ -300,7 +300,7 @@ Since *σ*-reduction only removes Delimiters and doesn't change the order of non
 
 The non-Delimiter characters in *v*, the concatenation of *ς(ζ)* and *ς(ξ)*, are also the non-Delimiter characters in *ζ* followed by the non-delimiter characters in *ξ*.
 
-Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since :math:`s = v`, 
+Therefore, by :ref:`Definition 1.1.4 <palindromics-definition-1-1-4>`, *s* and *v* must be the same String, as they both contain the same Characters in the same order (the non-Delimiter Characters of *ζ* followed by the non-Delimiter characters of *ξ*). Since :math:`s = v`, 
 
 .. math::
 
@@ -336,7 +336,7 @@ Let *t* be the *σ*-reduction of *s*,
 
 Since *s* is the result of applying a *σ*-reduction to *ζ*, it contains no Delimiter Characters (*σ*).
 
-When *s* is *σ*-reduced (to get *t*), the :ref:`Reduction Algorithm <algorithm-3>` in :ref:`Definition 3.1.2 <definition-3-1-2>` iterates through the Characters of *s*. Since s has no Delimiters, the condition if :math:`s[i] \neq \sigma` in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by :ref:`Definition 1.1.4 <definition-1-1-4>`, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
+When *s* is *σ*-reduced (to get *t*), the :ref:`Reduction Algorithm <algorithm-3>` in :ref:`Definition 3.1.2 <definition-3-1-2>` iterates through the Characters of *s*. Since s has no Delimiters, the condition if :math:`s[i] \neq \sigma` in the algorithm will always be true, and every character of *s* will be concatenated to the initially empty string *t*. Therefore, by :ref:`Definition 1.1.4 <palindromics-definition-1-1-4>`, *t* will be identical to *s*, as it contains the same Characters in the same order. Thus,
 
 .. math::
 
@@ -406,7 +406,7 @@ Since *ζ* was an arbitrary Sentence, this can be generalized over the Corpus,
 
 This theorem can be stated in natural language as follows: For any two Strings *u* and *t*, *u* is contained in *t* if and only if the *σ*-reduction of *u* is contained in the *σ*-reduction of *t*.
 
-Let *u* and *t* be arbitrary strings in **S**.
+Let *u* and *t* be arbitrary strings in :math:`S`.
 
 (→) Assume 
 
@@ -708,7 +708,7 @@ Since
 
     7. \quad \varsigma(\sigma) = \varepsilon
 
-This can be rewritten with the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>`,
+This can be rewritten with the Basis Clause of :ref:`Definition 1.1.1 <palindromics-definition-1-1-1>`,
 
 .. math::
 
@@ -772,7 +772,7 @@ By :ref:`Definition 1.2.7 <definition-1-2-7>`,
 
     3. \quad D\Pi_{i=1}^{n} p(i) = (\alpha_1)(\sigma)(\alpha_2)(\sigma) ... (\sigma)(\alpha_n)
 
-Applying :ref:`Definition 3.1.2 <definition-3-1-2>` of *σ*-reduction to the Delimitation and applying the Basis Clause of :ref:`Definition 1.1.1 <definition-1-1-1>`,
+Applying :ref:`Definition 3.1.2 <definition-3-1-2>` of *σ*-reduction to the Delimitation and applying the Basis Clause of :ref:`Definition 1.1.1 <palindromics-definition-1-1-1>`,
 
 .. math::
 
@@ -796,7 +796,7 @@ By repeated application of :ref:`Theorem 1.1.1 <theorem-1-1-1>` to step 5,
 
     7. \quad l((\alpha_1)(\alpha_2)... (\alpha_n)) = \sum_{i=1}^{n} l(\alpha_i)
 
-Comparing step 6 to step 7 and noting the *α*:sub:`i` is in the same position the same for all :math:`1 \leq i \leq n`, it follows by :ref:`Definition 1.1.4 <definition-1-1-4>` of String Equality, 
+Comparing step 6 to step 7 and noting the *α*:sub:`i` is in the same position the same for all :math:`1 \leq i \leq n`, it follows by :ref:`Definition 1.1.4 <palindromics-definition-1-1-4>` of String Equality, 
 
 .. math::
 
@@ -866,7 +866,7 @@ The order of the Characters in the Inverse of an Imperfect Palindrome is preserv
 
 The study of Delimiter Characters in a Sentence bears study beyond its application to palindromic structures, though. The following section of the Appendix introduces this function for quantifying the number of Delimiters in a sentence. Various properties about this function are then proved, in particular how the function interacts with other linguistic operations and functions that have been defined in the main body of the work. 
 
-Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings **S**. The following definition will serve that purpose.
+Since every Sentence is a String, it will suffice to define the *Delimiter Count Function* over the set of all possible Strings :math:`S`. The following definition will serve that purpose.
 
 .. _definition-3-2-1:
 
@@ -1374,7 +1374,7 @@ Since *u* and *t* were arbitrary strings, this can be generalized over the set o
 
 This theorem can be stated in natural language as follows: For any String, the Delimiter Count of its *σ*-Reduction is 0.
 
-Let t be an arbitrary string in **S**,
+Let t be an arbitrary string in :math:`S`,
 
 .. math::
 
@@ -1400,7 +1400,7 @@ Since *t* was an arbitrary String, this can be generalized over the set of all S
 
 Translation: For any String, its String Length is equal to the String Length of its σ-reduction plus its Delimiter Count.
 
-Let *t* be an arbitrary String in **S**,
+Let *t* be an arbitrary String in :math:`S`,
 
 .. math::
 

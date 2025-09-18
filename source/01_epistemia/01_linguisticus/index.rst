@@ -12,4 +12,5 @@ Linguisticus
    01_dialectus
    02_verborum
    03_consonantia
-   04_commentariat
+   04_palindromos
+   05_commentariat

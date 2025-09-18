@@ -18,6 +18,10 @@
     font-size: 0.25em;
 }
 
+.underline{
+    text-decoration: underline;
+}
+
 .footnote {
     font-size: 0.7em !important;
 }
@@ -28,6 +32,10 @@
 
 .sidebar {
     font-size: 0.8em !important;
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .scbs-carousel{

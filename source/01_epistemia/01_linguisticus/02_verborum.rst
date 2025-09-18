@@ -56,7 +56,7 @@ Hysteron Proteron
     -- `Aeneid`_, Virgil, 19 BCE
 
 .. epigraph::
-    
+
     | I will kill thee, and love thee after.
 
     -- `Othello`_, William Shakespeare
@@ -98,10 +98,10 @@ Polyptoton
 
 .. epigraph::
 
-    πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται
-
-    (The winged is winged by the wing)
-
+    | πτερωτὸν τῷ πτερῷ πτερωτὸν ῥηθήσεται
+    |
+    | (The winged is winged by the wing)
+    
     -- `Categories`_, 7.15, Aristotle
 
 .. _synecdoche:

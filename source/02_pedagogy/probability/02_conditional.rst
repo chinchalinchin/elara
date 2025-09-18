@@ -206,7 +206,7 @@ The following example and its accompanying solutions serve to illustrate how con
 
 .. topic:: Solution #2: Reduction of Sample Space Formula
 
-	There is another way of looking at this problem. The fact that it is known the outcome of the coin flip was heads effectively *reduces* the sample space **S** from,
+	There is another way of looking at this problem. The fact that it is known the outcome of the coin flip was heads effectively *reduces* the sample space :math:`S` from,
 
 	.. math::
 	
