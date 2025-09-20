@@ -1,7 +1,7 @@
 .. _palindromics-section-iv:
 
 Section IV: Analysis
-===================
+====================
 
 .. _palindromics-section-iv-i:
 
@@ -14,5 +14,12 @@ TODO
 
 Section IV.II: Probability
 --------------------------
+
+TODO
+
+.. _palindromics-section-iv-iii:
+
+Section IV.III: Summary
+-----------------------
 
 TODO

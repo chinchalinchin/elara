@@ -1,4 +1,4 @@
-.. _palindromics-index:
+.. _palindromics:
 
 ============
 Palindromics
@@ -10,9 +10,9 @@ Palindromics
 
    00_introduction
    01_language
-   02_structure
+   02_structures
    03_postulates
    04_analysis
    A1_appendix
    A2_data
-   A3_app
+   A3_code

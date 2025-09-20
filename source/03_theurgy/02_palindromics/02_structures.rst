@@ -110,7 +110,7 @@ Putting the recursion together,
 
     \zeta = \Pi_{i=1}^{n} \zeta[[i]]
 
-By :ref:`the definition of Limitations <definition-1-3-5>`,
+By :ref:`the definition of Limitations <palindromics-definition-1-3-5>`,
 
 .. math::
 
@@ -132,7 +132,7 @@ Let :math:`m = l(\zeta[[1]])`. By the :ref:`Discovery Axiom <palindromics-axiom-
 
     \forall i \in N_m: (\zeta[[1]])[i] \neq \sigma
 
-By the :ref:`definition of Containment <palindromics-definition-1-2-4>`,
+By the :ref:`definition of Containment <palindromics-definition-1-2-5>`,
 
 .. math::
 
@@ -152,7 +152,7 @@ Therefore,
 
 :underline:`Induction`: Let :math:`\Lambda(\zeta) = n` for some :math:`n \geq 1`. Assume :math:`\Lambda(\zeta) = \Delta(\zeta) + 1` 
 
-Let :math:`\xi \in C` such that :math:`Lambda(\xi) = n + 1`. Therefore, :math:`\sigma \subset_s \xi`. By :ref:`definition of Containment <palindromics-definition-1-2-4>`,
+Let :math:`\xi \in C` such that :math:`Lambda(\xi) = n + 1`. Therefore, :math:`\sigma \subset_s \xi`. By :ref:`definition of Containment <palindromics-definition-1-2-5>`,
 
 .. math::
 
@@ -165,12 +165,12 @@ Choose :math:`u = \xi[[1]]` so that :math:`\neg(\varsigma \subset_s u)`.
 .. ........... TODO 
 .. ................
 
-.. _palindromics-section-ii-i:
+.. _palindromics-section-ii-ii:
 
 Section II.II: Reductions
 -------------------------
 
-.. _palindromics-definition-2-2-2:
+.. _palindromics-definition-2-2-1:
 
 .. topic:: Definition 2.2.1: σ-Reduction
 
@@ -186,7 +186,7 @@ Section II.II: Reductions
 
 **Example** :math:`ᚠ = \text{"the widening circles into nothing gone"}`. Consider :math:`\varsigma(ᚠ)`
 
-Let :math:`u_1 = \text{"the"}` and :math:`v_1 = \text{"widening circles into nothing gone"}`. Let :math:`w_1 = (u_1)(v_1)`. Then, :math:`ᚠ = (u_1)(\varsigma)(v_1)`. By the Induction clause :ref:`of σ-Reduction <palindromices-definition-2-2-2>`,
+Let :math:`u_1 = \text{"the"}` and :math:`v_1 = \text{"widening circles into nothing gone"}`. Let :math:`w_1 = (u_1)(v_1)`. Then, :math:`ᚠ = (u_1)(\varsigma)(v_1)`. By the Induction clause :ref:`of σ-Reduction <palindromics-definition-2-2-1>`,
 
 .. math::
 
@@ -236,7 +236,7 @@ Working back up through the recursion, the original reduction is found,
 Elementary Properties
 ---------------------
 
-1. From the Basis clause of :ref:`σ-Reduction <palindromics-definition-2-2-2>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`,
+1. From the Basis clause of :ref:`σ-Reduction <palindromics-definition-2-2-1>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`,
 
 .. math::
 
@@ -244,7 +244,7 @@ Elementary Properties
 
 ∎
 
-2. From the Basis clause of :ref:`σ-Reduction <palindromics-definition-2-2-2>` and the :ref:`Discovery Axiom <palindromics-axiom-w-2>`,
+2. From the Basis clause of :ref:`σ-Reduction <palindromics-definition-2-2-1>` and the :ref:`Discovery Axiom <palindromics-axiom-w-2>`,
 
 .. math::
 
@@ -252,7 +252,7 @@ Elementary Properties
 
 ∎
 
-3. From the Basis clause of :ref:`σ-Reduction <palindromics-definition-2-2-2>`, the :ref:`Discovery Axiom <palindromics-axiom-w-2>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`
+3. From the Basis clause of :ref:`σ-Reduction <palindromics-definition-2-2-1>`, the :ref:`Discovery Axiom <palindromics-axiom-w-2>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`
 
 .. math::
 
@@ -260,7 +260,7 @@ Elementary Properties
 
 ∎
 
-4. From the Induction clause of :ref:`σ-Reduction <palindromics-definition-2-2-2>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`,
+4. From the Induction clause of :ref:`σ-Reduction <palindromics-definition-2-2-1>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`,
 
 .. math::
 
@@ -268,7 +268,7 @@ Elementary Properties
 
 ∎
 
-5. From the :ref:`definition of Concatenation <palindromics-definition-1-2-1>` and :ref:`the definition of σ-Reduction <palindromics-definition-2-2-2>`, all σ-Reductions are Strings,
+5. From the :ref:`definition of Concatenation <palindromics-definition-1-2-1>` and :ref:`the definition of σ-Reduction <palindromics-definition-2-2-1>`, all σ-Reductions are Strings,
 
 .. math::
 
@@ -302,7 +302,7 @@ Theorems
 
     \neg(\sigma \subset_s s) \equiv \neg(\sigma subset_s s^{-1})
 
-Consider :math:`(\varsigma(s))^{-1}`. By the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-2>`,
+Consider :math:`(\varsigma(s))^{-1}`. By the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`,
 
 .. math::
 
@@ -314,7 +314,7 @@ Therefore,
 
     (\varsigma(s))^{-1} = s^{-1}
 
-Consider :math:`\varsigma(s^{-1})`. By :math:`\neg (\sigma \subset_s s^{-1})` and the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-2>`, 
+Consider :math:`\varsigma(s^{-1})`. By :math:`\neg (\sigma \subset_s s^{-1})` and the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`, 
 
 .. math::
 
@@ -329,7 +329,7 @@ Let :math:`u \in S` such that :math:`u` has :math:`k+1` Delimiters. Let :math:`u
 
 
 
-Then, by the :ref:`definition of Containment <definition-1-2-4>`, for some :math:`u,v`, possibly Empty,
+Then, by the :ref:`definition of Containment <palindromics-definition-1-2-5>`, for some :math:`u,v`, possibly Empty,
 
 .. math::
 
@@ -347,13 +347,13 @@ By the :ref:`definition of String Inversion <palindromics-definition-1-2-5>` and
 
     s^{-1} = (v^{-1})(\sigma)(u^{-1})
 
-Consider :math:`\varsigma(s^{-1})`. Apply the Induction clause of :ref:`the Reduction definition <palindromics-definition-2-2-2>`, 
+Consider :math:`\varsigma(s^{-1})`. Apply the Induction clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`, 
 
 .. math::
 
     \varsigma(s^{-1}) = \varsigma((v^{-1})(u^{-1}))
 
-Consider :math:`\varsigma(s)`. By the Induction clause of :ref:`the Reduction definition <palindromics-definition-2-2-2>`, 
+Consider :math:`\varsigma(s)`. By the Induction clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`, 
 
 .. math::
 
@@ -370,9 +370,17 @@ By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
 .. .............. TODO ...........
 .. ...............................
 
-.. _palindromics-section-iii-ii:
+.. _palindromics-section-ii-iii:
 
-Section III.II: Palindromes 
+Section II.III: Palindromes 
 ---------------------------
 
 TODO
+
+.. _palindromics-section-ii-iv:
+
+Section II.IV: Summary
+----------------------
+
+TODO
+

@@ -1028,3 +1028,57 @@ To account for the dimension of *case*, the link between uppercase and lowercase
 (TODO: comment on possibility of interesting recursions, i.e. what happens when the Alphabet of this formal system is assigned the symbols of the formal system itself?)
 
 (TODO: comment on completeness, i.e. what does this formal model of language say about the completeness of language, or its lack thereof?)
+
+
+
+
+
+
+
+
+
+**Proof** Let :math:`\zeta, \xi \in S`. The proof proceeds by induction on Word Length. 
+
+:underline:`Basis`: Let :math:`\alpha \in L` and assume :math:`\zeta = \alpha`, the existence of which is guaranteed by :math:`Density Axiom <palindromics-axiom-s-3>`.
+
+By the :ref:`Discovery Axiom <palindromics-axiom-w-2>`, :math:`\neg(\sigma \subset_s \alpha)`. By the Basis clause :ref:`the Word Length definition <palindromics-definition-1-4-1>`, :math:`\Lambda(s) = 1`.
+
+Consider :math:`(\alpha)(\varsigma)(\xi)`. By the Basis clause :ref:`the Word Length definition <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda((\alpha)(\varsigma)(\xi)) = \Lambda(\alpha) + 1
+
+.. math::
+
+    = \Lambda(\alpha) + \Lambda(\xi)
+
+.. math::
+
+    = \Lambda(\zeta) + \Lambda(\xi)
+
+:underline:`Induction`. Assume that for every :math:`\zeta in C` with :math:`\Lambda(\zeta) = n` for some :math:`n \geq 1`, the inductive hypothesis :math:`\Lambda((\zeta)(\varsigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)` holds for any :math:`\xi \in C`. 
+
+Let :math:`\zeta_1 \in S` such that :math:`\Lambda(\zeta_1) = n + 1`, the existence of which is guaranteed by the :math:`Density Axiom <palindromics-axiom-s-3>`. Let :math:`\alpha = \zeta_1[[1]]`. Clearly, :math:`\Lambda(\alpha) = 1`. Let :math:`t \in S` such that,
+
+.. math::
+
+    t = \Pi_{i=1}^{n-1} \zeta_1[[i+1]]
+
+Then,
+
+.. math::
+
+    \zeta_1 = (\alpha)(\varsigma)(t)
+
+From the Induction clause of :ref:`the definition of Word of Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(\zeta_1) = \Lambda(\alpha) + \Lambda(t)
+
+Since :math:`\Lambda(\zeta_1) = n + 1` by assumption and :math:`\Lambda(\alpha) = 1` by definition, it follows,
+
+.. math::
+
+    \Lambda(t) = n

@@ -1,25 +1,21 @@
-.. _palindromics:
 
-============
-Palindromics
-============
 
 .. _palindromics-introduction:
 
 Introduction
 ============
 
-The goal of this work is to formalize the constraints the palindromes of *any* language and corpus must satisfy independently of the semantic interpretation of their constituent words and sentences. These formal constraints will in turn lead to the identification of the main structural elements of palindromes. After a language is assumed and a class of words identified, these structural elements can be used as a basis for further semantical and statistical analysis of the assumed language. 
+The goal of this work is to formalize the constraints the palindromes of *any* language and corpus must satisfy independently of the semantic interpretation of their constituent words and sentences. These formal constraints will in turn lead to the identification of the main structural elements of palindromes. After a language is assumed and a class of words identified, these structural elements can be used as a basis for further empirical and statistical analysis of the assumed language. 
 
-At the outset, it must be stated the complexity of pursuing a complete theory of palindromes is beyond the scope of the current analysis. Palindromes are a rich and diverse linguistic species, appearing in many different shapes and sizes. Some of these guises are more amenable to analysis than others. 
+At the outset, it must be stated the complexity of pursuing a complete theory of palindromes is beyond the scope of the current work Palindromes are a rich and diverse linguistic phenomenon, appearing in many different shapes and sizes. Some of these forms are more amenable to analysis than others. 
 
 This work will introduce the notions of a palindrome's core attributes: *aspect*, *parity*, *punctuality* and *case*. The first two attributes are within the scope of formal analysis. The third and fourth attributes, however, presents certain difficulties that will be more fully appreciated after the theory to describe the first two attributes has been solidifed. Suffice to say, it is the author's opinion these second two attributes of palindromes cannot be given an account unless semantic assumptions are introduced into the formal model.
 
 To provide a overview of the theory of palindromic structures and give a general notion of what is meant by these attributes of a palindrome, consider three well-known examples,
 
-- No devil lived on.
-- Not on.
-- Don't nod.
+- no devil lived on
+- not on
+- don't nod
 
 The first example is what will be termed a *perfect palindrome*. This sentence, ignoring case and punctuation, is a perfect mirror image of itself. The reversal of *"no devil lived on"* reads the same forwards as backwards. 
 
@@ -33,7 +29,7 @@ The *parity* of a palindrome is related to its *palindromic pivot*, or its point
 
 As it will turn out, this example of parity is oversimplified, due to the complications introduced by the aspect of a palindrome. The pivot of a palindrome cannot be rigorously defined until the semantic content of a palindrome's *imperfection* is reconstituted somehow.
 
-The third example of "*Don't nod*" demonstrates the deepening ambiguity of introducing punctuation to palindromes. The reversal of this sentence is the opaque *"don t'nod"*. Now, in addition to the scrambling of the spaces, the reversed string must also have its punctuation re-sorted. There is no formal method known to the author for dealing with these types of ambiguities that depend entirely on the semantic interpretation of the language under consideration, such as the rules of contractions. The *punctuality* of a palindrome can only be described by introducing semantics into the theory.
+The third example of "*don't nod*" demonstrates the deepening ambiguity of introducing punctuation to palindromes. The reversal of this sentence is the opaque *"don t'nod"*. Now, in addition to the scrambling of the spaces, the reversed string must also have its punctuation re-sorted. There is no formal method known to the author for dealing with these types of ambiguities that depend entirely on the semantic interpretation of the language under consideration, such as the rules of contractions. The *punctuality* of a palindrome can only be described by introducing semantics into the theory.
 
 Similarly, the fourth attribute of palindromes, *case*, is a semantic construct that possesses no unifying syntactical properties across languages (as far as the author knows). *Case* is a semantic relationship that identifies characters in an alphabet as different manifestations of the same underlying semantic entity, i.e. *"a"* and *"A"* are regarded as different *"modes"* of the same letter. This information is not present in the syntax of a language and is an extra assumption that must be modeled accordingly.
 
@@ -60,8 +56,8 @@ Table Of Contents
 - :ref:`Section II: Structures <palindromics-section-ii>`
     - :ref:`II.I: Delimiter Count <palindromics-section-ii-i>`
     - :ref:`II.II: Reductions <palindromics-section-ii-ii>`
-    - :ref:`II.III: Palindromes <palindromics-ii-iii>`
-    - :ref:`II.IV: Summary <palindromics-ii-iv>`
+    - :ref:`II.III: Palindromes <palindromics-section-ii-iii>`
+    - :ref:`II.IV: Summary <palindromics-section-ii-iv>`
 - :ref:`Section III: Postulates <palindromics-section-iii>`
     - :ref:`III.I: Prior Results <palindromics-section-iii-i>`
     - :ref:`III.II: Inverse Postulates <palindromics-section-iii-ii>`
@@ -71,9 +67,8 @@ Table Of Contents
     - :ref:`IV.II: Probability <palindromics-section-iv-ii>`
     - :ref:`IV.III: Summary <palindromics-section-iv-iii>`
 - :ref:`Appendix I: Addendums <palindromics-appendix-i>`
-    - :ref:`AI.I: Delimiter Count Function <palindromics-appendix-i-i>`
-    - :ref:`AI.II: Omitted Axioms <palindromics-appendix-i-ii>`
-    - :ref:`AI.III: Omitted Proofs <palindromics-appendix-i-iii>`
+    - :ref:`AI.I: Omitted Axioms <palindromics-appendix-i-i>`
+    - :ref:`AI.II: Omitted Proofs <palindromics-appendix-i-ii>`
 - :ref:`Appendix II: Data <palindromics-appendix-ii>`
     - :ref:`AII.I: English Data <palindromics-appendix-ii-i>`
     - :ref:`AII.II: Latin Data <palindromics-appendix-ii-ii>`
@@ -95,19 +90,22 @@ Definitions
 - :ref:`Definition 1.2.1: Concatenation <palindromics-definition-1-2-1>`: :math:`st`
 - :ref:`Definition 1.2.2: String Length <palindromics-definition-1-2-2>`: :math:`l(s)`
 - :ref:`Definition 1.2.3: Character Index Notation <palindromics-definition-1-2-3>`: :math:`s[i]`
-- :ref:`Definition 1.2.4: Containment <palindromics-definition-1-2-4>`: :math:`t \subset_s s`
-- :ref:`Definition 1.2.5: String Inversion <palindromics-definition-1-2-5>`: :math:`s^{-1}`
+- :ref:`Definition 1.2.4: String Equality <palindromics-definition-1-2-4>`: :math:`s = t`
+- :ref:`Definition 1.2.5: Containment <palindromics-definition-1-2-5>`: :math:`t \subset_s s`
+- :ref:`Definition 1.2.6: String Inversion <palindromics-definition-1-2-6>`: :math:`s^{-1}`
 - :ref:`Definition 1.3.1: Reflective Words <palindromics-definition-1-3-1>`: :math:`\alpha in R \equiv \alpha = {\alpha}^{-1}`
 - :ref:`Definition 1.3.2: Invertible Words <palindromics-definition-1-3-2>` :math:`\alpha in I \equiv {\alpha}^{-1} \in L`
 - :ref:`Definition 1.3.3: Phrases <palindromics-definition-1-3-3>`: :math:`P_n = (p(1), ..., p(n))`
 - :ref:`Definition 1.3.4: Lexicons <palindromics-definition-1-3-4>`: :math:`L_n = \{ p \mid \forall p: p = P_n \}`
 - :ref:`Definition 1.3.5: Limitation <palindromics-definition-1-3-5>`: :math:`\Pi_{i=1}^{n} p(i)`
-- :ref:`Definition 1.3.6: Dialect <palindromics-definition-1-3-6>`: :math:`D = \bigcup_{i=1}^{\infty} \{ s \in S \mid \exists p \in L_i: s = \Pi_{j=1}^{i} p(j) \}`
+- :ref:`Definition 1.3.6: Canonization <palindromics-definition-1-3-6>`: :math:`\pi(s)`
+- :ref:`Definition 1.3.7: Canon <palindromics-definition-1-3-7>`: :math:`\mathbb{S} = \{ \pi(s) \mid \forall s \in S \}` 
+- :ref:`Definition 1.3.8: Dialect <palindromics-definition-1-3-6>`: :math:`D = \bigcup_{i=1}^{\infty} \{ s \in S \mid \exists p \in L_i: s = \Pi_{j=1}^{i} p(j) \}`
 - :ref:`Definition 1.4.1: Word Length <palindromics-definition-1-4-1>`: :math:`\Lambda(\zeta)`
 - :ref:`Definition 1.4.2: Word Indices <palindromics-definition-1-4-2>`: :math:`\zeta[[i]]`
 - :ref:`Definition 1.4.3: Invertible Sentences <palindromics-definition-1-4-3>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in C`
-- :ref:`Definition 2.1.1: Delimiter Count`: :math:`\Delta(s)`
-- :ref:`Definition 2.1.1: σ-Reduction`: :math:`\varsigma(s)`
+- :ref:`Definition 2.1.1: Delimiter Count <palindromics-definition-2-1-1>`: :math:`\Delta(s)`
+- :ref:`Definition 2.2.1: σ-Reduction <palindromics-definition-2-2-1>`: :math:`\varsigma(s)`
 
 .. _palindromics-axioms:
 
@@ -121,7 +119,6 @@ Axioms
 - :ref:`Axiom W.2: Discovery Axiom <palindromics-axiom-w-2>`: :math:`\alpha[i] \neq \sigma`
 - :ref:`Axiom S.1: Word Comprehension Axiom <palindromics-axiom-s-1>`: :math:`\zeta[[i]] \in L`
 - :ref:`Axiom S.2: Duality Axiom <palindromics-axiom-s-2>`: :math:`\exists \alpha: \alpha \subset_s \zeta`
-- :ref:`Axiom S.3: Corpus Density Axiom <palindromics-axiom-s-3>`: :math:`\exists i < n: \Lambda(\zeta) = i`
 
 .. _palindromices-theorems:
 
@@ -143,7 +140,8 @@ Theorems
 - :ref:`Theorem 1.4.4 <palindromics-theorem-1-4-4>`: :math:`(\Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]])^{-1} = \Pi_{i=1}^{\Lambda(\zeta)} (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
 - :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`: :math:`\Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)`
 - :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>`: :math:`C \subseteq D`
-- :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-5>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
-- :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-6>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
+- :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`Lambda((\zeta)(\varsigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)`
+- :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
+- :ref:`Theorem 1.4.9 <palindromics-theorem-1-4-9>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
 - :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`\zeta \in K \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
 - :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`: :math:`\Lambda(\zeta) = \Delta(\zeta) + 1`
