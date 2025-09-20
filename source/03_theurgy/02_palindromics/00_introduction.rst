@@ -50,6 +50,7 @@ Table Of Contents
 
 - Introduction
     - Table of Contents
+    - Glossary
 - :ref:`Section I: Languages & Corpora <palindromics-section-i>`
     - :ref:`I.I: Formalization <palindromics-section-i-i>`
     - :ref:`I.II: Strings <palindromics-section-i-ii>`
@@ -57,9 +58,10 @@ Table Of Contents
     - :ref:`I.IV: Sentences <palindromics-section-i-iv>`
     - :ref:`I.V: Summary <palindromics-section-i-v>`
 - :ref:`Section II: Structures <palindromics-section-ii>`
-    - :ref:`II.I: σ-Reductions <palindromics-section-ii-i>`
-    - :ref:`II.II: Palindromes <palindromics-ii-ii>`
-    - :ref:`II.III: Summary <palindromics-ii-iii>`
+    - :ref:`II.I: Delimiter Count <palindromics-section-ii-i>`
+    - :ref:`II.II: Reductions <palindromics-section-ii-ii>`
+    - :ref:`II.III: Palindromes <palindromics-ii-iii>`
+    - :ref:`II.IV: Summary <palindromics-ii-iv>`
 - :ref:`Section III: Postulates <palindromics-section-iii>`
     - :ref:`III.I: Prior Results <palindromics-section-iii-i>`
     - :ref:`III.II: Inverse Postulates <palindromics-section-iii-ii>`
@@ -70,8 +72,78 @@ Table Of Contents
     - :ref:`IV.III: Summary <palindromics-section-iv-iii>`
 - :ref:`Appendix I: Addendums <palindromics-appendix-i>`
     - :ref:`AI.I: Delimiter Count Function <palindromics-appendix-i-i>`
-    - :ref:`AI.II: Omitted Proofs <palindromics-appendix-i-ii>`
+    - :ref:`AI.II: Omitted Axioms <palindromics-appendix-i-ii>`
+    - :ref:`AI.III: Omitted Proofs <palindromics-appendix-i-iii>`
 - :ref:`Appendix II: Data <palindromics-appendix-ii>`
     - :ref:`AII.I: English Data <palindromics-appendix-ii-i>`
     - :ref:`AII.II: Latin Data <palindromics-appendix-ii-ii>`
 - :ref:`Appendix III: Code <palindromics-appendix-iii>`
+
+.. _palindromices-glossary:
+
+Glossary
+--------
+
+.. NOTE: Glossary isn't done yet.
+
+.. _palindromics-definitions:
+
+-----------
+Definitions
+-----------
+
+- :ref:`Definition 1.2.1: Concatenation <palindromics-definition-1-2-1>`: :math:`st`
+- :ref:`Definition 1.2.2: String Length <palindromics-definition-1-2-2>`: :math:`l(s)`
+- :ref:`Definition 1.2.3: Character Index Notation <palindromics-definition-1-2-3>`: :math:`s[i]`
+- :ref:`Definition 1.2.4: Containment <palindromics-definition-1-2-4>`: :math:`t \subset_s s`
+- :ref:`Definition 1.2.5: String Inversion <palindromics-definition-1-2-5>`: :math:`s^{-1}`
+- :ref:`Definition 1.3.1: Reflective Words <palindromics-definition-1-3-1>`: :math:`\alpha in R \equiv \alpha = {\alpha}^{-1}`
+- :ref:`Definition 1.3.2: Invertible Words <palindromics-definition-1-3-2>` :math:`\alpha in I \equiv {\alpha}^{-1} \in L`
+- :ref:`Definition 1.3.3: Phrases <palindromics-definition-1-3-3>`: :math:`P_n = (p(1), ..., p(n))`
+- :ref:`Definition 1.3.4: Lexicons <palindromics-definition-1-3-4>`: :math:`L_n = \{ p \mid \forall p: p = P_n \}`
+- :ref:`Definition 1.3.5: Limitation <palindromics-definition-1-3-5>`: :math:`\Pi_{i=1}^{n} p(i)`
+- :ref:`Definition 1.3.6: Dialect <palindromics-definition-1-3-6>`: :math:`D = \bigcup_{i=1}^{\infty} \{ s \in S \mid \exists p \in L_i: s = \Pi_{j=1}^{i} p(j) \}`
+- :ref:`Definition 1.4.1: Word Length <palindromics-definition-1-4-1>`: :math:`\Lambda(\zeta)`
+- :ref:`Definition 1.4.2: Word Indices <palindromics-definition-1-4-2>`: :math:`\zeta[[i]]`
+- :ref:`Definition 1.4.3: Invertible Sentences <palindromics-definition-1-4-3>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in C`
+- :ref:`Definition 2.1.1: Delimiter Count`: :math:`\Delta(s)`
+- :ref:`Definition 2.1.1: σ-Reduction`: :math:`\varsigma(s)`
+
+.. _palindromics-axioms:
+
+------
+Axioms
+------
+
+- :ref:`Axiom C.1: Delimiter Axiom <palindromics-axiom-c-1>`: :math:`\sigma \in \Sigma`
+- :ref:`Axiom C.2: Character Comprehension Axiom <palindromics-axiom-c-2>`: :math:`\iota \in S`
+- :ref:`Axiom W.1: Measure Axiom <palindromics-axiom-s-1>`: :math:`l(\alpha) \neq 0`
+- :ref:`Axiom W.2: Discovery Axiom <palindromics-axiom-w-2>`: :math:`\alpha[i] \neq \sigma`
+- :ref:`Axiom S.1: Word Comprehension Axiom <palindromics-axiom-s-1>`: :math:`\zeta[[i]] \in L`
+- :ref:`Axiom S.2: Duality Axiom <palindromics-axiom-s-2>`: :math:`\exists \alpha: \alpha \subset_s \zeta`
+- :ref:`Axiom S.3: Corpus Density Axiom <palindromics-axiom-s-3>`: :math:`\exists i < n: \Lambda(\zeta) = i`
+
+.. _palindromices-theorems:
+
+--------
+Theorems
+--------
+
+- :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`: :math:`l(st) = l(s) + l(t)`
+- :ref:`Theorem 1.2.2 <palindromics-theorem-1-2-2>`: :math:`\varepsilon \subset_s s`
+- :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`: :math:`{s^{-1}}^{-1} = s`
+- :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`: :math:`(st)^{-1} = (t^{-1})(s^{-1})`
+- :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`: :math:`u \subset_s v \equiv u^{-1} subset_s v^{-1}`
+- :ref:`Theorem 1.3.1 <palindromics-theorem-1-3-1>`: :math:`\alpha \in I \equiv {\alpha}^{-1} \in I`
+- :ref:`Theorem 1.3.2 <palindromics-theorem-1-3-2>`: :math:`R \subset I`
+- :ref:`Theorem 1.3.3 <palindromics-theorem-1-3-1>`: :math:`s = \Pi_{i=1}^{n} p(i)` 
+- :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>`: :math:`\sum_{j=1}^{\Lambda(\zeta)} l(\zeta[[j]]) \geq \Lambda(\zeta)`
+- :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>`: :math:`\Lamdba(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)` 
+- :ref:`Theorem 1.4.3 <palindromics-theorem-1-4-3>`: :math:`\zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]`
+- :ref:`Theorem 1.4.4 <palindromics-theorem-1-4-4>`: :math:`(\Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]])^{-1} = \Pi_{i=1}^{\Lambda(\zeta)} (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
+- :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`: :math:`\Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)`
+- :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>`: :math:`C \subseteq D`
+- :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-5>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
+- :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-6>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
+- :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`\zeta \in K \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
+- :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`: :math:`\Lambda(\zeta) = \Delta(\zeta) + 1`

@@ -169,14 +169,40 @@ Sets
     **Alphabet**
         :math: `\Sigma`
 
-    The aggregate of all non-Empty Characters is called an *Alphabet*.
+    The aggregate of all non-Empty Characters is called the *Alphabet*.
+
+    **Total Alphabet**
+        :math:`\Sigma_e`
+
+    The aggregate of all Characters is called the *Total Alphabet*
 
 .. topic:: Set: Language
 
     **Language**
         :math:`L`
 
-    The aggregate of all Words is called a *Language*. Subscripts may be used to indicate a particular Language, e.g. :math:`L_{\text{english}}`
+    The aggregate of all Words is called the *Language*. Subscripts may be used to indicate a particular Language, e.g. :math:`L_{\text{english}}`
+
+.. topic:: Set: Phrase
+
+    **Phrase**
+        :math:`P_n`, :math:`n \in \mathbb{N}`
+
+    An ordered set of Words is called a *Phrase*. The subscript :math:`n` is a natural number denoting the number Words in the Phrase.
+
+.. topic:: Set: Lexicon
+
+    **Lexicon**
+        :math:`L_n`, :math:`n \in \mathbb{N}`
+
+    The aggregate of all Phrases of Word Length n is called a *Lexicon*. The subscript :math:`n` is a natural number denoting the number of Words in each Phrase of the Lexicon.
+
+.. topic:: Set: Dialect
+
+    **Dialect**
+        :math:`D`
+
+    The aggregate of all Limitations is a Dialect.
 
 .. topic:: Set: Corpus
 
@@ -220,7 +246,7 @@ In addition, it is assumed all elements of the Total Alphabet are Strings.
 
 .. _palindromics-axiom-c-2:
 
-.. topic:: Axiom C.2: Character Axiom 
+.. topic:: Axiom C.2: Character Comprehension Axiom 
 
     .. math::
         
@@ -261,7 +287,7 @@ Using the Inductive Clause, this concatenation can be grouped into simpler conca
 
     \mathfrak{a}(\mathfrak{b}(\mathfrak{c}(\mathfrak{d}(\mathfrak{ef})))) = (((((\mathfrak{ab})\mathfrak{c})\mathfrak{d})\mathfrak{e})\mathfrak{f}) = \mathfrak{abcdef}
 
-By :ref:`Character Axiom <palindromics-axiom-c-2>`, all Characters are Strings and concatenation is closed under :math:`S`, therefore, :math:`\mathfrak{ef} \in S`. As each nested concatenation is evaluated, the Induction clause in :ref:`palindromics-definition-1-2-1` ensures the next level of concatenation is a String. 
+By :ref:`Character Comprehension Axiom <palindromics-axiom-c-2>`, all Characters are Strings and concatenation is closed under :math:`S`, therefore, :math:`\mathfrak{ef} \in S`. As each nested concatenation is evaluated, the Induction clause in :ref:`palindromics-definition-1-2-1` ensures the next level of concatenation is a String. 
 
 As a result, :math:`{s_1}{s_2} = \mathfrak{abcdef}` and :math:`{s_1}{s_2} \in S` 
 
@@ -327,7 +353,7 @@ The definition of String length allows an important shorthand to be defined. Thi
 
 .. _palindromics-definition-1-2-3:
 
-.. topic:: Definition 1.2.3: Character Index Notation
+.. topic:: Definition 1.2.3: Character Indices
 
     Let :math:`s \in S`. Let :math:`i \in \mathbb{N}` such that :math:`1 \leq i \leq l(s)`. The Character at index :math:`i` in :math:`s`, denoted :math:`s[i]`, is defined inductively using the schema, 
 
@@ -509,6 +535,8 @@ The notion of *containment* is the formal explication of the colloquial relation
 
 ∎
 
+.. _palindromics-theorem-1-2-2:
+
 .. topic:: Theorem 1.2.2
 
     The Empty Character is contained in every String.
@@ -543,16 +571,16 @@ Let :math:`w_1 = \varepsilon` and :math:`w_2 = s`. Then, :math:`s = {w_1}\vareps
 String Inversion
 ----------------
 
-.. _palindromics-definition-1-2-6:
+.. _palindromics-definition-1-2-5:
 
-.. topic:: Definition 1.2.6: String Inversion
+.. topic:: Definition 1.2.5: String Inversion
 
     Let :math:`s, t \in S`. Let :math:`n \in \mathbb{N}`:math:`t` is called the *inverse* of :math:`s`, denoted `s^{-1}` if the following conditions hold,
 
     - :math:`l(s) = l(t) = n`
     - :math:`\forall i \in N: t[i] = s[n - i + 1]`
 
-**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`the definition of String Inversion <palindromics-definition-1-2-6>`,
+**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`the definition of String Inversion <palindromics-definition-1-2-5>`,
 
 .. math::
 
@@ -578,7 +606,7 @@ String Inversion
 
         \forall s \in S: (s^{-1})^{-1} = s
 
-**Proof** Let :math:`s \in S`. Let :math:`t = s^{-1}`. Let :math:`n = l(s)`. By the :ref:`definition of String Inversion <palindromics-definition-1-2-6>`,
+**Proof** Let :math:`s \in S`. Let :math:`t = s^{-1}`. Let :math:`n = l(s)`. By the :ref:`definition of String Inversion <palindromics-definition-1-2-5>`,
 
 .. math:: 
 
@@ -588,7 +616,7 @@ String Inversion
 
     \forall i \in N_n: t[i] = s[n - i + 1] \quad \text{ (2) }
 
-Let :math:`u = t^{-1}`. Applying :ref:`definition of String Inversion <palindromics-definition-1-2-6>` again,
+Let :math:`u = t^{-1}`. Applying :ref:`definition of String Inversion <palindromics-definition-1-2-5>` again,
 
 .. math::
 
@@ -624,6 +652,8 @@ Therefore,
 
 ∎
 
+.. _palindromics-theorem-1-2-4:
+
 .. topic:: Theorem 1.2.4
 
     The inverse of a concatenation of two String is the concatenation of their inverses in the reversed order.
@@ -638,7 +668,7 @@ Therefore,
 
     l(u) = l(st) = l(s) + l(t) = m + n
 
-Let :math:`v = u^{-1} = (st)^{-1}`. Let :math:`w = (t)^{-1}(s)^{-1}`.  By repeated application of :ref:`definition of String Inversion <palindromics-definition-1-2-6>`,
+Let :math:`v = u^{-1} = (st)^{-1}`. Let :math:`w = (t)^{-1}(s)^{-1}`.  By repeated application of :ref:`definition of String Inversion <palindromics-definition-1-2-5>`,
 
 .. math::
 
@@ -670,7 +700,7 @@ Let :math:`i \in N_{m+n}`.
 
 :underline:`Case 1`: :math:`i \leq i \leq n`
 
-By :ref:`definition of String Inversion <palindromics-definition-1-2-6>`,
+By :ref:`definition of String Inversion <palindromics-definition-1-2-5>`,
 
     v[i] = u[m + n - i + 1]
 
@@ -692,7 +722,7 @@ From this, :math:`u = st` and :math:`l(s) = m`, it follows that :math:`u[m + n -
 
     v[i] = t[n - i + 1] \quad \text{ (4) }
 
-Consider :math:`w[i]`. Since :math:`l((t)^{-1}) = n` and :math:`i \leq n`, it follows that :math:`w[i] = (t^{-1})[i]`. By :ref:`definition of String Inversion <palindromics-definition-1-2-6>`,
+Consider :math:`w[i]`. Since :math:`l((t)^{-1}) = n` and :math:`i \leq n`, it follows that :math:`w[i] = (t^{-1})[i]`. By :ref:`definition of String Inversion <palindromics-definition-1-2-5>`,
 
 .. math::
 
@@ -714,7 +744,7 @@ Applying the :ref:`definition of String Equality <palindromics-definition-1-2-3>
 
 :underline:`Case 2`: :math:`n + 1 \leq i \leq m + n`
 
-By :ref:`definition of String Inversion <palindromics-definition-1-2-6>`,
+By :ref:`definition of String Inversion <palindromics-definition-1-2-5>`,
 
     v[i] = u[m + n - i + 1]
 
@@ -730,7 +760,7 @@ From this, :math:`u = st` and :math:`l(s) = m`, it follows that :math:`u[m + n -
 
     v[i] = s[m + n - i + 1] \quad \text{ (7) } 
 
-Consider :math:`w[i]`. Since :math:`l((t)^{-1}) = n` and :math:`i \geq n`, it follows that :math:`w[i] = (s^{-1})[i - n]`. By :ref:`definition of String Inversion <palindromics-definition-1-2-6>`,
+Consider :math:`w[i]`. Since :math:`l((t)^{-1}) = n` and :math:`i \geq n`, it follows that :math:`w[i] = (s^{-1})[i - n]`. By :ref:`definition of String Inversion <palindromics-definition-1-2-5>`,
 
 .. math::
 
@@ -760,6 +790,46 @@ In both cases, the theorem is proved. Summarizing and generalizing,
 
 ∎
 
+.. _palindromics-theorem-1-2-5:
+
+.. topic:: Theorem 1.2.5
+
+    a String :math:`s` contains another a String :math:`s` if and only if the inverse of :math:`s` contains the inverse of :math:`t`.
+
+    .. math::
+
+        \forall s,t \in S: t \subset_s s \equiv t^{-1} \subset_s s^{-1}
+
+**Proof** Let :math:`s,t \in S`.
+
+(:math:`\rightarrow`) Assume :math:`t \subset_s s`. Then by the :ref:`definition of Containment <palindromics-definition-1-2-5>`, there exists :math:`w_1, w_2 \in S` such that, 
+
+.. math::
+
+    s = (w_1)(t)(w_2)
+
+Consider :math:`s^{-1}`. Applying :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>` twice, this becomes,
+
+.. math::
+
+    s^{-1} = (w_2)^{-1}(t)^{-1}(w_1)^{-1}
+
+Therefore, there exists :math:`u_1 = {w_2}^{-1}` and :math:`u_2 = {w_1}^{-1}` such that :math:`s^{-1} = (u_1)(t^{-1})(u_2)` and :ref:`definition of Containment <palindromics-definition-1-2-5>`,
+
+.. math::
+
+    t^{-1} \subset_s s^{-1}
+
+(:math:`\leftarrow`) The proof is identical to (:math:`\rightarrow`).
+
+Therefore, 
+
+.. math::
+
+    \forall s,t \in S: t \subset_s s \equiv t^{-1} \subset_s s^{-1}
+
+∎
+ 
 .. ...................................................
 .. .................. SECTION I.III ..................
 .. ...................................................
@@ -789,7 +859,7 @@ It is assumed Words cannot have a String Length of 0.
 
 .. _palindromics-axiom-w-1:
 
-.. topic:: Axiom W.1: Measureable Axiom
+.. topic:: Axiom W.1: Measure Axiom
 
     .. math::
 
@@ -891,6 +961,8 @@ Word Classes
 
     Invertible Words are often called *semiordnilaps* in other fields of study.
 
+.. _palindromics-theorem-1-3-1:
+
 .. topic:: Theorem 1.3.1
 
     A Word is invertible if and only if its inverse is invertible.
@@ -951,7 +1023,7 @@ Summarizing and generalizing,
 
 ∎
 
-.. _palidromics-theorem-1-3-2:
+.. _palindromics-theorem-1-3-2:
 
 .. topic:: Theorem 1.3.2
 
@@ -1031,21 +1103,13 @@ Limitations
 
     - Empty: :math:`\Pi_{i=1}^{0} p(i) = \varepsilon`
     - Basis: :math:`\Pi_{i=1}^{1} p(i) = \alpha_1`
-    - Induction: :math:`\Pi_{i=1}^{n} p(i) = (\Pi_{i=1}^{n-1} p(i))\alpha_n`
+    - Induction: :math:`\Pi_{i=1}^{n} p(i) = (\Pi_{i=1}^{n-1} p(i))(\sigma)(\alpha_n)`
 
-.. _palindromics-definition-1-3-6:
-
-.. topic:: Definition 1.3.6: Delimitation
-
-    Let :math: `p \in L_n`. The Delimitation of :math:`p`, denoted :math:`\bar{\Pi}_{i=1}^{n} p(i)` is defined inductively using the following schema,
-
-    - Empty: :math:`\bar{\Pi}_{i=1}^{0} p(i) = \varepsilon`
-    - Basis: :math:`\bar{\Pi}_{i=1}^{1} p(i) = \alpha_1`
-    - Induction: :math:`\bar{\Pi}_{i=1}^{n} p(i) = (\Pi_{i=1}^{n-1} p(i))\sigma\alpha_n`
+    The process of Limitation, :math:`\Pi_{i=1}^{n} p(i)`, will be referred to as "*delimiting*" a Phrase or Words.
 
 .. note::
 
-    The key difference between a :ref:`Limitation <palindromics-definition-1-3-5>` and a :ref:`Delimitation <palindromics-definition-1-3-6>` is the presence of the Delimiter in the Induction clause. In other words, a Limitation is shorthand for iterated concatenation of Words, whereas Delimitation inserts Delimiters inbetween each Word is the Lexicon.
+    A :ref:`Limitation <paindromics-definition-1-3-5>`, though notationally complex, can be understood as shorthand for the iterated concatenation of words and Delimiters. is the presence of the Delimiter in the Induction clause. In other words, a Limitation inserts Delimiters inbetween each Word in the Lexicon over which the index is ranging.
 
 **Example** Let
 
@@ -1053,55 +1117,45 @@ Limitations
 
     P_3 = (\text{"mother"}, \text{"may"}, \text{"I"})
 
-Apply the Basis clause :ref:`of the definition of Delimitations <palindromics-definition-1-3-5>` ,
+Apply the Basis clause :ref:`of the definition of Limitations <palindromics-definition-1-3-5>` ,
 
 .. math::
 
-    n = 1: \bar{\Pi}_{i=1}^{1} \alpha_i = \text{"mother"} 
+    n = 1: \Pi_{i=1}^{1} \alpha_i = \text{"mother"} 
 
-The Delimitation can then be built up recursively using the Induction clause,
+The Limitation can then be built up recursively using the Induction clause,
 
 .. math::
 
-    n = 2: \bar{\Pi}_{i=1}^{2} \alpha_i = (\bar{\Pi}_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
+    n = 2: \Pi_{i=1}^{2} \alpha_i = (\Pi_{i=1}^{1} \alpha_i)(\sigma)(\text{"may"})= (\text{"mother"})(\sigma\text{"may"}) = \text{"mother"}\sigma\text{"may"}
     
 .. math::
 
-    n = 3: \bar{\Pi}_{i=1}^{3} \alpha_i = (\bar{\Pi}_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}\sigma\text{"may"})(\sigma\text{"I"}) = \text{"mother"}\sigma\text{"may"}\sigma\text{"I"}
+    n = 3: \Pi_{i=1}^{3} \alpha_i = (\Pi_{i=1}^{2} \alpha_i)(\sigma)(\text{"I"}) = (\text{"mother"}\sigma\text{"may"})(\sigma\text{"I"}) = \text{"mother"}\sigma\text{"may"}\sigma\text{"I"}
 
-So the Delimitation of the Phrase is shown to be,
-
-.. math::
-
-    \bar{\Pi}_{i=1}^{3} \alpha_i = \text{"mother may I"} 
-
-Similarly, the Limitation can be constructed using the Basis and Induction clause of :ref:`the definition of Limitations <definition-1-3-5>`,
+So the Limitation of the Phrase is shown to be,
 
 .. math::
 
-    n = 2: \Pi_{i=1}^{2} \alpha_i = (\Pi_{i=1}^{1} \alpha_i)(\text{"may"})= (\text{"mother"})(\text{"may"}) = \text{"mothermay"}
-   
-.. math::
-
-    n = 3: \Pi_{i=1}^{3} \alpha_i = (\Pi_{i=1}^{2} \alpha_i)(\text{"I"}) = (\text{"mothermay"})(\text{"I"}) = \text{"mothermayI"} 
+    \Pi_{i=1}^{3} \alpha_i = \text{"mother may I"} 
 
 .. important::
 
-    The result of a Delimitation or a Limitation is a String. Since Delimitation and Limitation are shorthand for different sequences of concatenation, their closure over :math:`S` is guaranteed by the closure of concatenation over :math:`S`
+    The result of a Limitation is a String. Since Limitation and Limitation are shorthand for different sequences of concatenation, their closure over :math:`S` is guaranteed by the closure of concatenation over :math:`S`
 
 ∎
 
-.. _palindromics-theorem-1-3-3:
+.. _palindromics-definition-1-3-3:
 
 .. topic:: Theorem 1.3.3
 
-    All Delimitations are unique.
+    All Limitations are unique.
 
     .. math::
 
-        \forall n \in \mathbb{N}: \forall p \in L_n: \exists! s \in S: s = \bar{\Pi}_{i=1}^{n} p(i)
+        \forall n \in \mathbb{N}: \forall p \in L_n: \exists! s \in S: s = \Pi_{i=1}^{n} p(i)
 
-.. NOTE: I think this needs to be restricted to all Strings that do not contains the Empty Character, since infinitely many Empty Characters can be concatenated into s in this theorem without changing the Delimitation.
+.. NOTE: I think this needs to be restricted to all Strings that do not contains the Empty Character, since infinitely many Empty Characters can be concatenated into s in this theorem without changing the Limitation. Could quantify over the closure of the Alphabet.
 
 **Proof** Let :math:`n \in \mathbb{N}` and :math:`p \in L_n` such that,
 
@@ -1111,35 +1165,78 @@ Similarly, the Limitation can be constructed using the Basis and Induction claus
 
 The theorem will be proven through induction on :math:`n`
 
-:underline:`Basis`: Assume :math:`n = 1`. By Basis clause of :ref:`the definition of Delimitation <palindromics-definition-1-3-6>`,
+:underline:`Basis`: Assume :math:`n = 1`. By Basis clause of :ref:`the definition of Limitation <paindromics-definition-1-3-5>`,
 
 .. math::
 
-    \bar{\Pi}_{i=1}^{1} p(i) = \alpha_1
+    \Pi_{i=1}^{1} p(i) = \alpha_1
 
 :underline:`Induction`: Assume for :math:`k \geq 1`, these exists a unique String :math:`s_k` such that,
 
 .. math::
 
-    s_k = \bar{\Pi}_{i=1}^{k} p(i)
+    s_k = \Pi_{i=1}^{k} p(i)
 
-By Induction clause of :ref:`the definition of Delimitation <palindromics-definition-1-3-6>`,
+By Induction clause of :ref:`the definition of Limitation <paindromics-definition-1-3-5>`,
 
 .. math::
 
-    \bar{\Pi}_{i=1}^{k+1} p(i) = (\bar{\Pi}_{i=1}^{k} p(i))(\varsigma)(\alpha_{k+1})
+    \Pi_{i=1}^{k+1} p(i) = (\Pi_{i=1}^{k} p(i))(\varsigma)(\alpha_{k+1})
 
 By inductive hypothesis,
 
 .. math::
 
-    s_{k+1} = \bar{\Pi}_{i=1}^{k+1} p(i) = ({s_k})(\varsigma)(\alpha_{k+1})
+    s_{k+1} = \Pi_{i=1}^{k+1} p(i) = ({s_k})(\varsigma)(\alpha_{k+1})
 
 Therefore, by induction,
 
 .. math::
 
-    \forall n \in \mathbb{N}: \forall p \in L_n: \exists! s \in S: s = \bar{\Pi}_{i=1}^{n} p(i)
+    \forall n \in \mathbb{N}: \forall p \in L_n: \exists! s \in S: s = \Pi_{i=1}^{n} p(i)
+
+∎
+
+This subsection closes with a definition that will be used to quantify a theorem regarding Word Length. 
+
+.. _palindromics-definition-1-3-6:
+
+.. topic:: Definition 1.3.6: Dialect 
+
+    Let :math:`L_i` be the :math:`i^{\text{th}}` Lexicon of Language :math:`L`. The Language's Dialect, denoted :math:`D`, is defined as the set,
+
+    .. math::
+
+        D = \bigcup_{i=1}^{\infty} \{ s \in S \mid \exists p \in L_i: s = \Pi_{j=1}^{i} p(j) \}
+
+.. warning::
+
+    The *type* of each set defined in this section should be carefully analyzed. 
+    
+    - A Phrase is an ordered set of Words. 
+    - A Lexicon is the set of all Phrases of a fixed Word Length. 
+    - A Dialect is the set of Strings formed by delimiting every Phrase in every Lexicon of a Language.
+
+**Example** Let :math:`L = \{ \text{"hakuna"}, \text{"matata"} \}`. Then, the first few Lexicons are given below,
+
+.. math::
+
+    L_1 = \{ \{ (1, \text{"hakuna"}) \}, \{ (1, \text{"matata"}) \} \}
+
+.. math::
+
+    L_2 = \{ \{ (1, \text{"hakuna"}), (2, \text{"hakuna"}) \}
+            \{ (1, \text{"hakuna"}), (2, \text{"matata"}) \}, 
+            \{ (1, \text{"matata"}), (2, \text{"hakuna}) \} 
+            \{ (1, \text{"matata"}), (2, \text{"matata"}) \} \}
+
+The Dialect is the union of all delimited Phrases in all Lexicons of  the Language,
+
+.. math::
+
+    D = \{ \text{"hakuna"}, \text{"matata"}, \text{"hakuna hakuna"}
+            \text{"hakuna matata"}, \text{"matata hakuna"}, 
+            \text{"matata matata"}, ... \} 
 
 ∎
 
@@ -1152,11 +1249,11 @@ Therefore, by induction,
 Section I.IV: Sentences
 -----------------------
 
-A Sentence is a Delimitation of Words over a Phrase in the Language's Lexicon for any value of :math:`n \geq 1`. 
+A Sentence is a Limitation of Words over a Phrase in the Language's Lexicon for any value of :math:`n \geq 1`. 
 
 .. warning::
 
-    This statement should not be interpretted as a schema for generating grammatical sentences. In general, Delimitations are *not* grammatical. However, all grammatical sentences *are* Delimitations.
+    This statement should not be interpretted as a schema for generating grammatical sentences. In general, Limitations are *not* grammatical. However, all grammatical sentences *are* Limitations.
     
     In other words, this statement should be interpretted as a necessary syntactic pre-condition a Sentence must satisfy before it may be assigned semantic content.
 
@@ -1164,7 +1261,7 @@ A Corpus is the aggregate of all Sentences.
 
 .. math::
 
-    \forall \zeta in C: \exists n: \zeta = \bar{\Pi}_i^{n} p(i)
+    \forall \zeta in C: \exists n: \zeta = \Pi_i^{n} p(i)
 
 .. note::
 
@@ -1202,7 +1299,7 @@ Word Length
 
 .. topic:: Definition 1.4.1: Word Length
 
-    Let :math:`s \in S` and :math:`n \in N` such that :math:`\zeta = \bar{\Pi}_{i=1}^n p(i)`. The Word Length of :math:`zeta`, denoted :math:`\Lambda(\zeta)`, is defined inductively through the following schema,
+    Let :math:`s \in S` and :math:`n \in N` such that :math:`\zeta = \Pi_{i=1}^n p(i)`. The Word Length of :math:`zeta`, denoted :math:`\Lambda(\zeta)`, is defined inductively through the following schema,
 
     - Basis: If :math:`\neq(\sigma \subset_s s)`,
         - If :math:`s = \varepsilon` or :math:`s \notin L`, :math:`\Lambda(s) = 0`
@@ -1214,6 +1311,10 @@ Word Length
 .. important::
 
     The Induction clause of Word Length relies on the :ref:`Discovery Axiom <palindromics-axiom-w-2>` and the :ref:`Measureable Axiom <palindromics-axiom-w-1>` to ensure for any Strings :math:`u \in L`, :math:`\neg(\sigma \subset_s u)` and :math:`u \neq \varepsilon`.
+
+.. important::
+
+    While Word Length will be primarily used on :math:`\zeta \in C`, it is important to note the definition is defined over all :math:`s \in S`. In other words, Word Length is a property of *Strings*, as can be seen in the example, "*blargafaful buttons*". 
 
 **Example** Let :math:`ᚠ = \text{"truth is beauty"}`.
 
@@ -1293,7 +1394,7 @@ Putting the recursion together,
 
 .. _palindromics-definition-1-4-2:
 
-.. topic:: Definition 1.4.2: Word Index Notation
+.. topic:: Definition 1.4.2: Word Indices
 
     The Word at index :math:`i` in a String :math:`s \in S`, denoted :math:`s[[1]]`, is defined inductively using the following schema,
 
@@ -1385,17 +1486,17 @@ Sentence Axioms
 
 .. _palindromics-axiom-s-1:
 
-.. topic:: Axiom S.1: Sentence Duality Axiom
+.. topic:: Axiom S.1: Word Comprehension Axiom
 
-    For every Word in the Language, there exists a Sentence in the Corpus that contains it.
+    Every Word in a Sentence of the Corpus belongs to the Language.
 
     .. math::
 
-        \forall \alpha \in L: \exists \zeta \in C: \alpha \subset_s \zeta 
+        \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in L
 
 .. _palindromics-axiom-s-2:
 
-.. topic:: Axiom S.2: Word Duality Axiom
+.. topic:: Axiom S.2: Duality Axiom
 
     For every Sentence in the Corpus, there exists a Word in the Language which is contained in it.
 
@@ -1405,19 +1506,9 @@ Sentence Axioms
 
 .. note::
 
-    The Duality Axioms are reminiscent of the relation of surjectivity in real analysis. However, containment is not a strict equality relation so this resemblance should not be taken too far. 
-
-.. _palindromics-axiom-s-3:
-
-.. topic:: Axiom S.3: Comprehension Axiom
-
-    Every Word in a Sentence of the Corpus belongs to the Language.
-
-    .. math::
-
-        \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in L
-
-The following theorem is proved in :ref:`Appendix I.II: Omitted Proofs <palindromics-appendix-i-ii>`, as it is not required for the results in :ref:`Section IV <palindromics-section-iv>`. This theorem demonstrates the relationship between a Delimitation and Word Length that was pointed out in the introduction of this subsection.
+    The Duality Axiom is reminiscent of the relation of surjectivity in real analysis. However, containment is not a strict equality relation so this resemblance should not be taken too far.
+     
+The following theorem is proved in :ref:`Appendix I.II: Omitted Proofs <palindromics-appendix-i-ii>`, as it is not required for the results in :ref:`Section IV <palindromics-section-iv>`. This theorem demonstrates the relationship between a Limitation and Word Length that was pointed out in the introduction of this subsection.
 
 .. _palindromics-theorem-1-4-3:
 
@@ -1425,19 +1516,181 @@ The following theorem is proved in :ref:`Appendix I.II: Omitted Proofs <palindro
 
     .. math::
 
-        \forall \zeta \in C: \zeta = \bar{\Pi}_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
+        \forall \zeta \in C: \zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
+
+.. note::
+
+    The next theorem can be seen as a specialiation of :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>` for the subdomain of the Corpus.
 
 .. _palindromics-theorem-1-4-4:
 
 .. topic:: Theorem 1.4.4
 
-    The inverse of a Delimitation is the Delimitation of inverses.
+    The inverse of a Limitation is the Limitation of inverses.
 
     .. math::
 
-        \forall \zeta \in C: (\bar{\Pi}_{i=1}^{\Lambda(\zeta)})^{-1} \zeta[[i]] = \bar{\Pi}_{i=1}^{\Lambda(\zeta)} (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+        \forall \zeta \in C: (\Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]])^{-1} = \Pi_{i=1}^{\Lambda(\zeta)} (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
 
-**Proof** TODO
+**Proof** Let :math:`\zeta \in C`. Let :math:`n = \Lambda(\zeta)`. Let :math:`s`,
+
+.. math::
+
+    s = \Pi_{i=1}^{n} \zeta[[i]] \quad \text{ (1) }
+
+.. math::
+
+    = (\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\varsigma)(\zeta[[n]])
+
+Consider :math:`s^{-1}`,
+
+.. math::
+
+    s^{-1} = ((\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\varsigma)(\zeta[[n]]))^{-1}
+
+From the :ref:`definition of String Inversion <palindromics-definition-1-2-5>` and the fact :math:`l(\varsigma) = 1`, it follows :math:`\sigma^{-1} = \sigma`. Using this fact, the application of :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>` :math:`n` times yields,
+
+.. math::
+
+    s^{-1} = ({\zeta}^{-1}[[n]])(\sigma)({\zeta}^{-1}[[n-1]]) ... (\varsigma)({\zeta}^{-1}[[1]])
+
+Reindex the terms on the RHS to match :ref:`the definition of Limitations <paindromics-definition-1-3-5>` with :math:`j = n - i + 1`. Then, as :math:`i` goes from :math:`1 \to n`, :math:`j` goes :math:`n \to 1` and visa versa,
+
+.. math::
+
+    = \Pi_{i=1}^{n} {\zeta[[n - i + 1]]}^{-1} \quad \text{ (2) }
+
+Combining (1) and (2) and generalizing,
+
+.. math::
+
+    \forall \zeta in C: \Pi_{i=1}^{n} \zeta[[i]] = \Pi_{i=1}^{n} {\zeta[[n - i + 1]]}^{-1}
+
+∎
+
+.. _palindromics-theorem-1-4-5:
+
+.. topic:: Theorem 1.4.5
+
+    For any two Strings in the Dialect, the Word Length of their Limitation is the sum of their individual Word Lengths.
+
+    .. math::
+
+        \forall s,t \in D: \Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)
+
+**Proof** Let :math:`s, t \in D`. That is, assume, for some :math:`n, m \in mathbb{N}`,
+
+.. math::
+
+    s = \Pi_{i=1}^{n} p(i)
+
+.. math::
+
+    t = \Pi_{i=1}^{m} q(i)
+
+where :math:`n = \Lambda(s)` and :math:`m = \Lambda(t)`.
+
+The proof proceeds by induction on :math:`n`.
+
+:underline:`Basis`: Assume :math:`n = 1`. 
+
+Then, by the Basis clause of :ref:`the definition of Limitations <palindromics-definition-1-3-5>`, :math:`s = \alpha` for some :math:`\alpha \in L`. By the :ref:`Discovery Axiom <palindromics-axiom-w-2>`, :math:`\neg(\sigma \subset_s \alpha)`. 
+
+Consider :math:`u = (\alpha)(\varsigma)(t)`. By the Basis clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(u) = \Lambda(\alpha) + \Lambda(t)
+
+.. math::
+
+    \Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)
+
+:underline:`Induction` Assume for any :math:`u \in D` with :math:`\Lambda(u) = n`,
+
+.. math::
+
+    \Lambda((u)(\varsigma)(t)) = \Lambda(u) + \Lambda(t)
+
+Let :math:`s \in D` such that :math:`\Lambda(s) = n + 1`. By the Induction clause of the :ref:`definition of Dialects <palindromics-definition-1-3-6>` and :ref:`the definition of Limitations <palindromics-definition-1-3-5>`,
+
+.. math::
+
+    s = (\alpha)(\var)(v)
+
+By the Induction clause of :ref:`the definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(s) = \Lambda(\alpha) + \Lambda(v)
+
+.. math::
+
+    \Lambda(s) = 1 + \Lambda(v) \quad \text{ (1) }
+
+From this and :math:`\Lambda(s) = n + 1`, it is concluded :math:`\Lambda(v) = n` and therefore satisfies the inductive hypothesis.
+
+Consider :math:`\Lambda((s)(\varsigma)(t))`.
+
+.. math::
+
+    \Lambda((s)(\varsigma)(t)) = \Lambda((\alpha)(\varsigma)(v)(\varsigma)(t))
+
+.. math::
+
+    = \Lambda(\alpha) + \Lambda((v)(\varsigma)(t))
+
+.. math::
+
+    = 1 + \Lambda(v) + \Lambda(t)
+
+But from (1), this reduces to,
+
+.. math::
+
+    = \Lambda(s) + \Lambda(t)
+
+Therefore, putting everything together, the Induction is complete,
+
+.. math::
+
+    \Lambda((s)(\varsigma)(t)) =  \Lambda(s) + \Lambda(t)
+
+Summarizing and generalizing,
+
+.. math::
+
+    \forall s,t \in D: \Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)
+
+∎
+
+.. important::
+
+    Theorem 1.4.5 *only* applies to Strings quantified over the Dialect. If the theorem were quantified over the Corpus, i.e. semantic Sentences, then the inductive hypothesis would fail at the step where the induced String is decomposed,
+
+    .. math::
+
+        s = (\alpha)(\varsigma)(u)
+    
+    When a Sentence has it's first Word partitioned from it, there is no guarantee the resultant will also be a semantic Sentence, e.g. "*We are the stuffed men*" is a Sentence, but "*are the stuffed men*" is not a Sentence. Therefore, the theorem must be induced over the Dialect. 
+
+    This may seem a strong restriction, but as the next theorem establishes, this result still applies to the Corpus.
+
+.. _palindromics-theorem-1-4-6:
+
+.. topic:: Theorem 1.4.6
+
+    The Corpus is a subset of the Dialect.
+
+    .. math::
+
+        C \subseteq D
+
+**Proof** 
+
+.. ...............................
+.. .............. TODO ...........
+.. ...............................
 
 .. _palindromics-sentence-classes:
 
@@ -1445,21 +1698,21 @@ The following theorem is proved in :ref:`Appendix I.II: Omitted Proofs <palindro
 Sentence Classes
 ----------------
 
-.. _palindromics-definition-1-4-4:
+.. _palindromics-definition-1-4-3:
 
-.. topic:: Definition 1.4.4
+.. topic:: Definition 1.4.3: Invertible Sentences
 
     Let :math:`\zeta \in C`. Then the set of Invertible Sentences, denoted :math:`K`, is defined as the set which satisfy the following open formula,
 
     .. math::
 
-        \zeta \in \K \equiv {\zeta}^{-1} \in C
+        \zeta \in K \equiv {\zeta}^{-1} \in C
 
     A Sentence that belongs to :math:`K` will be referred to as "*invertible*".
 
-.. _palindromics-theorem-1-4-5:
+.. _palindromics-theorem-1-4-7:
 
-.. topic:: Theorem 1.4.5
+.. topic:: Theorem 1.4.6
 
     A Sentence is invertible if and only if its inverse is invertible.
 
@@ -1469,7 +1722,7 @@ Sentence Classes
 
 **Proof** Let :math:`\zeta in C`.
 
-(:math:`\rightarrow`) Assume :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+(:math:`\rightarrow`) Assume :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
@@ -1481,13 +1734,13 @@ By :ref:` <palindromics-theorem-1-2-3>`,
 
     ({\zeta}^{-1})^{-1} = \zeta
 
-By assumption, :math:`\zeta \in C`, therefore, by the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+By assumption, :math:`\zeta \in C`, therefore, by the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
     {\zeta}^{-1} \in K
 
-(:math:`\leftarrow`) Assume :math:`{\zeta}^{-1} \in K`, which implies :math:`{\zeta}^{-1} \in C`. By assumption :math:`\zeta \in C`. Therefore, :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+(:math:`\leftarrow`) Assume :math:`{\zeta}^{-1} \in K`, which implies :math:`{\zeta}^{-1} \in C`. By assumption :math:`\zeta \in C`. Therefore, :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
@@ -1501,9 +1754,9 @@ Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-1-4-6:
+.. _palindromics-theorem-1-4-8:
 
-.. topic:: Theorem 1.4.6
+.. topic:: Theorem 1.4.7
 
     If a Sentence in the Corpus is invertible, then all of the Words are also invertible.
 
@@ -1511,35 +1764,61 @@ Summarizing and generalizing,
 
         \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
-**Proof** Let :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-4>`,
+**Proof** Let :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
     {\zeta}^{-1} \in C
 
-By the :ref:`Comprehension Axiom <palindromics-axiom-s-3>`,
+By :ref:`Theorem 1.4.4 <palindromics-theorem-1-4-4>`, this can be written,
+
+.. math::
+
+    {\zeta}^{-1} = \Pi_{i=1}^{n} p(i)
+
+where, 
+
+.. math::
+
+    p = ( {\zeta[[n]]}^{-1}, {\zeta[[n-1]]}^{-1}, ... , {\zeta[[1]]}^{-1} )
+
+By the :ref:`Word Comprehension Axiom <palindromics-axiom-s-1>`,
 
 .. math::
 
     \forall i \in N_{\Lambda(\zeta)}: {{\zeta}^{-1}}[[i]] \in L
 
-By :ref:`the definition of Invertible Words <palindromics-definition-1-3-2>`, the inverse of a Word can only belong to a Language if and only if the Word is invertible,
+From this, it can be concluded every :math:`{\zeta[[i]]}^{-1}` in :math:`p` must belong to :math:`L`, and each of those Words has an inverse that is also in :math:`L`.
+
+By :ref:`the definition of Invertible Words <palindromics-definition-1-3-2>`, the inverse of a Word can only belong to a Language if and only if the Word is invertible.
 
 .. math::
 
     \forall i \in N_{\Lambda(\zeta)}: {{\zeta}^{-1}}[[i]] \in I
 
-Summarizing and generalizing,
+Therefore,
 
 .. math::
 
-    \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] \in I
+    \forall i \in N_{\Lambda(\zeta)}: {\zeta[[i]]}^{-1} \in I
+
+By :ref:`Theorem 1.3.1`, 
+
+.. math::
+
+    \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
+
+Generalizing,
+
+.. math::
+
+    \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
 ∎
 
-.. _palindromics-theorem-1-4-7:
+.. _palindromics-theorem-1-4-9:
 
-.. topic:: Theorem 1.4.7
+.. topic:: Theorem 1.4.9
 
     If a Sentence is invertible, then the :math:`i^{\text{th}}` Word in its inverse Sentence is equal to the inverse of the :math:`i^{\text{th}}`-to-last Word in the Sentence.
 
@@ -1547,15 +1826,17 @@ Summarizing and generalizing,
 
         \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
 
+.. NOTE: Pay close attention to this proof. Something about it doesn't sit quite right with me.
+
 **Proof** Let :math:`\zeta \in K`, let :math:`n = \Lambda(\zeta)` and let :math:`i \in N_n`.
 
-By :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>` and assumption,
+By :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-8>` and assumption,
 
 .. math::
 
     \forall i \in N_n: \zeta[[i]] \in I
 
-By :ref:`Theorem 1.3.1 <palindromics-theorem-1-3-1>`,
+By :ref:`Theorem 1.3.1 <palindromics-definition-1-3-3>`,
 
 .. math::
 
@@ -1565,27 +1846,27 @@ Consider,
 
 .. math::
 
-   \bar{\Pi}_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
+   \Pi_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
 
 By :ref:`Theorem 1.4.4 <palindromics-theorem-1-4-4>`,
 
 .. math::
 
-    (\bar{\Pi}_{i=1}^{n} \zeta[[i]])^{-1}
+    (\Pi_{i=1}^{n} \zeta[[i]])^{-1}
 
-And by definition of Sentences and :ref:`the definition of Delimitations <palindromics-definition-1-3-6>`,
+And by definition of Sentences and :ref:`the definition of Limitations <paindromics-definition-1-3-5>`,
 
 .. math::
 
-    \zeta = \bar{\Pi}_{i=1}^{n} \zeta[[i]]
+    \zeta = \Pi_{i=1}^{n} \zeta[[i]]
 
 Therefore,
 
 .. math::
 
-    (\zeta)^{-1} = \bar{\Pi}_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
+    (\zeta)^{-1} = \Pi_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
 
-By :ref:`Theorem 1.3.3 <palindromics-theorem-1-3-3>`, Delimitations are unique, thus the only way this can occur is when,
+By :ref:`Theorem 1.3.3 <palindromics-definition-1-3-3>`, Limitations are unique, thus the only way this can occur is when,
 
 .. math::
 
@@ -1601,3 +1882,46 @@ Summarizing and generalizing,
 
 Section I.V: Summary
 ====================
+
+The analysis requires one more piece of formal machinery before it can codify the phenomenon of palindromes. However, even without the later results, :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>` and :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>` are particularly compelling results that demonstrate the efficacy of the current formal system and its ability to generate novel, if intuitively obvious, theorems. 
+
+The deductive path from :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>` to :ref:`Theorem 1.4.8 <palindromics-definition-1-4-8>` follows a "*propagation of inversion*" up the semantic hierarchy, from Characters to Words to Sentences. 
+
+First, :ref:`String Inversion <palindromics-definition-1-2-5>` was defined as a operation performed on the Characters within a String,
+
+.. math::
+
+    s[i] = t[l(s) - i + 1]
+
+Where :math:`t` is the inverse of :math:`s`, :math:`t^{-1} = s`. This in turn defined an equivalence class over involutive Words in :ref:`Reflective Words <palindromics-theorem-1-3-1>`, 
+
+    \alpha \in R \equiv \alpha = {\alpha}^{-1}
+
+Moreover, it created a semi-group in :ref:`Invertible Words <palindromics-definition-1-3-2>`,
+
+.. math::
+
+    \alpha \in I \equiv {\alpha}^{-1} \in I
+
+This inversion makes its way to the top layer of the semantic hierarchy with :ref:`Invertible Sentences <palindromics-definition-1-4-3>`,
+
+.. math::
+
+    \zeta \in K \equiv {\zeta}^{-1} \in C
+
+The class :math:`K` then imposes a condition on all Sentences that belong to it, namely that :ref:`its Words must be also invertible <palindromics-theorem-1-4-8>`,
+
+.. math::
+
+    \zeta[[i]] \in I
+
+The inversion then "*propagates*" up a level in the semantic hierarchy and results in a directly analogous :ref:`condition on the Word-level <palindromics-1-4-7>` to the Character-level symmetry,
+
+.. math::
+
+    {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+
+.. important::
+
+    The direction of implication in :ref:`Theorem 1.4.6 <palindromics-definition-1-4-6>` and :ref:`Theorem 1.4.7 <palindromics-definition-1-4-7>` is unidirectional. In other words, while invertibility implies the previous two equations, invertibility cannot be concluded on the basis of the previous two equations. This is an artifact of the formal system's inability to formalize the grammar of Sentences.
+
