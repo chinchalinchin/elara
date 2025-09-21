@@ -99,7 +99,7 @@ Definitions
 - :ref:`Definition 1.3.4: Lexicons <palindromics-definition-1-3-4>`: :math:`L_n = \{ p \mid \forall p: p = P_n \}`
 - :ref:`Definition 1.3.5: Limitation <palindromics-definition-1-3-5>`: :math:`\Pi_{i=1}^{n} p(i)`
 - :ref:`Definition 1.3.6: Canonization <palindromics-definition-1-3-6>`: :math:`\pi(s)`
-- :ref:`Definition 1.3.7: Canon <palindromics-definition-1-3-7>`: :math:`\mathbb{S} = \{ \pi(s) \mid \forall s \in S \}` 
+- :ref:`Definition 1.3.7: Canon <palindromics-definition-1-3-7>`: :math:`\mathbb{S} = \{ \pi(s) \mid s \in S \}` 
 - :ref:`Definition 1.3.8: Dialect <palindromics-definition-1-3-6>`: :math:`D = \bigcup_{i=1}^{\infty} \{ s \in S \mid \exists p \in L_i: s = \Pi_{j=1}^{i} p(j) \}`
 - :ref:`Definition 1.4.1: Word Length <palindromics-definition-1-4-1>`: :math:`\Lambda(\zeta)`
 - :ref:`Definition 1.4.2: Word Indices <palindromics-definition-1-4-2>`: :math:`\zeta[[i]]`
@@ -113,10 +113,10 @@ Definitions
 Axioms
 ------
 
-- :ref:`Axiom C.1: Delimiter Axiom <palindromics-axiom-c-1>`: :math:`\sigma \in \Sigma`
-- :ref:`Axiom C.2: Character Comprehension Axiom <palindromics-axiom-c-2>`: :math:`\iota \in S`
+- :ref:`Axiom C.1: Character Comprehension Axiom <palindromics-axiom-c-1>`: :math:`\iota \in S`
 - :ref:`Axiom W.1: Measure Axiom <palindromics-axiom-s-1>`: :math:`l(\alpha) \neq 0`
 - :ref:`Axiom W.2: Discovery Axiom <palindromics-axiom-w-2>`: :math:`\alpha[i] \neq \sigma`
+- :ref:`Axiom W.3: Canonization Axiom <palindromics-axiom-w-3>`: :math:`\alpha \in \mathbb{S}`
 - :ref:`Axiom S.1: Word Comprehension Axiom <palindromics-axiom-s-1>`: :math:`\zeta[[i]] \in L`
 - :ref:`Axiom S.2: Duality Axiom <palindromics-axiom-s-2>`: :math:`\exists \alpha: \alpha \subset_s \zeta`
 
@@ -133,7 +133,8 @@ Theorems
 - :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`: :math:`u \subset_s v \equiv u^{-1} subset_s v^{-1}`
 - :ref:`Theorem 1.3.1 <palindromics-theorem-1-3-1>`: :math:`\alpha \in I \equiv {\alpha}^{-1} \in I`
 - :ref:`Theorem 1.3.2 <palindromics-theorem-1-3-2>`: :math:`R \subset I`
-- :ref:`Theorem 1.3.3 <palindromics-theorem-1-3-1>`: :math:`s = \Pi_{i=1}^{n} p(i)` 
+- :ref:`Theorem 1.3.3 <palindromics-theorem-1-3-3>`: :math:`\exists! s: s = \Pi_{i=1}^{n} p(i)` 
+- :ref:`Theorem 1.3.4 <palindromics-theorem-1-3-4>`: :math:`st \in mathbb{S}`
 - :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>`: :math:`\sum_{j=1}^{\Lambda(\zeta)} l(\zeta[[j]]) \geq \Lambda(\zeta)`
 - :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>`: :math:`\Lamdba(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)` 
 - :ref:`Theorem 1.4.3 <palindromics-theorem-1-4-3>`: :math:`\zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]`
@@ -141,7 +142,8 @@ Theorems
 - :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`: :math:`\Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)`
 - :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>`: :math:`C \subseteq D`
 - :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`Lambda((\zeta)(\varsigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)`
-- :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
-- :ref:`Theorem 1.4.9 <palindromics-theorem-1-4-9>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
-- :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`\zeta \in K \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
+- :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>`: :math:`C \subset \mathbb{S}`
+- :ref:`Theorem 1.4.9 <palindromics-theorem-1-4-9>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
+- :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
+- :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`: :math:`\zeta \in K \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
 - :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`: :math:`\Lambda(\zeta) = \Delta(\zeta) + 1`
