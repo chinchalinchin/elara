@@ -5,6 +5,7 @@ sphinx-book-theme
 sphinx_design
 sphinx-sitemap
 sphinx-carousel
+sphinx-autobuild
 
 matplotlib-venn
 

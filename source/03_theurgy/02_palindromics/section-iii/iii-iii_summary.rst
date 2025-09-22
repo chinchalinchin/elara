@@ -1,0 +1,6 @@
+.. _palindromics-section-iii-iii:
+
+Section III.III: Summary
+========================
+
+TODO
