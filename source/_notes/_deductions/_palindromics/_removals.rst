@@ -1076,3 +1076,86 @@ Therefore, :math:`\forall i \in N_n: s_1[i] = s_2[1]`. It follows from these fac
     s_1 = s_2
 
 ∎
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. _palindromics-theorem-1-2-7:
+
+.. topic:: Theorem 1.2.7
+
+    Two Strings are equal if and only if their String Lengths are equal and if all of their Characters are equal index-wise.
+
+    .. math::
+
+        \forall s,t \in S: ((l(s) = l(t)) \land (\forall i \in N_n: s[i] = t[i])) \equiv (s = t)
+
+**Proof** Let :math:`s,t \in S`.
+
+(:math:`\rightarrow`) Assume :math:`l(s) = l(t) = n` and :math:`\forall i in N_n: s[i] = t[i]`. 
+
+By the properties of :ref:`Canonization <palindromics-definition-1-2-6>`, this implies :math:`l(\pi(s)) = l(\pi(t))` and :math:`\pi(s)[i] = \pi(t)[i]` for all :math:`i`.
+
+Since :math:`\pi(s), \pi(t) \in mathbb{S}` by :ref:`definition of Canon <palindromics-definition-1-2-7>`, from :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, it can be concluded,
+
+.. math::
+
+    \pi(s) = \pi(t)
+
+By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`, 
+
+.. math::
+
+    s = t
+
+(:math:`\leftarrow`) Assume :math:`s = t`. By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`,
+
+.. math::
+
+    \pi(s) = s \quad \text{ (1) }
+
+.. math::
+
+    \pi(t) = t \quad \text{ (2) }
+
+Therefore, by assumption, :math:`\pi(s) = \pi(t)`. Let :math:`n = l(\pi(s))`. By the definition and properties of :math:`Canonization <palindromics-definition-1-2-6>`, 
+
+.. math::
+
+    l(\pi(s)) = l(\pi(t)) = n
+
+.. math::
+
+    \forall i \in N_n: (\pi(s))[i] = (\pi(t))[i]
+
+From (1) and (2),
+
+.. math::
+
+    l(s) = l(t)
+
+.. math::
+
+    \forall i \in N_n: s[i] = t[i]
+
+Therefore, the equivalence is established. Summarizing and generalizing,
+
+.. math::
+
+    \forall s,t \in S: ((l(s) = l(t)) \land (\forall i \in N_n: s[i] = t[i])) \equiv (s = t)
+
+∎
+
+
+It is important to understand that :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-6>` is a *logical* implication, not a *physical* equivalence. In the current system, :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is logically equivalent to :math:`\mathfrak{ab}`. The inscription :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is to be undertsood as an instruction to perform the indicated concatenation, not as the *physical inscription of the String*. In other words, :math:`\varepsilon` plays the logical role of identity. In the same way :math:`1 + 0` is an arithmetical expression that is the literal value of one, :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is a String expression that is the literal value of two concatenated Characters, represented formally by :math:`\mathfrak{a}` and :math:`\mathfrak{b}`. 
+
+    This is an extremely subtle point. The formal theory of Strings intersects with the primitive foundation of logic in this regard, and it must be kept in mind when interpretting this theorem the metamathematical separation between object-level langauge and meta-level language. The symbolic representation of concatenation is a literal concatenation of Characters, e.g. :math:`st`, an expression representing the result of a Concatenation, is a literal Concatenation of the Characters in English :math:`s` and :math:`t`. Thus, one must be careful not to confuse the symbol :math:`\mathfrak{a}\varepsilon\mathfrak{b}` for the String it represents.

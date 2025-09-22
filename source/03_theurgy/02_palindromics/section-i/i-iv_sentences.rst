@@ -548,7 +548,7 @@ Sentence Classes
 
     {\zeta}^{-1} \in C
 
-By :ref:` <palindromics-theorem-1-2-8>`,
+By :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`,
 
 .. math::
 

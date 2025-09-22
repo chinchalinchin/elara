@@ -595,81 +595,7 @@ Thus, the induction holds. Summarizing and generalizing,
 
 .. note::
 
-    :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>` could be strengthen to an equivalence, but the next theorem only requires a unidirectional implication and furthermore, its result will supersede the preceding in its scope. 
-
-.. _palindromics-theorem-1-2-7:
-
-.. topic:: Theorem 1.2.7
-
-    Two Strings are equal if and only if their String Lengths are equal and if all of their Characters are equal index-wise.
-
-    .. math::
-
-        \forall s,t \in S: ((l(s) = l(t)) \land (\forall i \in N_n: s[i] = t[i])) \equiv (s = t)
-
-**Proof** Let :math:`s,t \in S`.
-
-(:math:`\rightarrow`) Assume :math:`l(s) = l(t) = n` and :math:`\forall i in N_n: s[i] = t[i]`. 
-
-By the properties of :ref:`Canonization <palindromics-definition-1-2-6>`, this implies :math:`l(\pi(s)) = l(\pi(t))` and :math:`\pi(s)[i] = \pi(t)[i]` for all :math:`i`.
-
-Since :math:`\pi(s), \pi(t) \in mathbb{S}` by :ref:`definition of Canon <palindromics-definition-1-2-7>`, from :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, it can be concluded,
-
-.. math::
-
-    \pi(s) = \pi(t)
-
-By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`, 
-
-.. math::
-
-    s = t
-
-(:math:`\leftarrow`) Assume :math:`s = t`. By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`,
-
-.. math::
-
-    \pi(s) = s \quad \text{ (1) }
-
-.. math::
-
-    \pi(t) = t \quad \text{ (2) }
-
-Therefore, by assumption, :math:`\pi(s) = \pi(t)`. Let :math:`n = l(\pi(s))`. By the definition and properties of :math:`Canonization <palindromics-definition-1-2-6>`, 
-
-.. math::
-
-    l(\pi(s)) = l(\pi(t)) = n
-
-.. math::
-
-    \forall i \in N_n: (\pi(s))[i] = (\pi(t))[i]
-
-From (1) and (2),
-
-.. math::
-
-    l(s) = l(t)
-
-.. math::
-
-    \forall i \in N_n: s[i] = t[i]
-
-Therefore, the equivalence is established. Summarizing and generalizing,
-
-.. math::
-
-    \forall s,t \in S: ((l(s) = l(t)) \land (\forall i \in N_n: s[i] = t[i])) \equiv (s = t)
-
-∎
-
-.. note::
-
-    :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-7>` shows how the abstract and primitive concept of "*string equality*" is reducible to physical properties of a String's canonical form, namely its logical length (String Length) and its logical (non-Empty) Characters.
-
-    It is important to understand that :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-7>` is a *logical* equivalence, not a *physical* equivalence. In the current system, :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is logically equivalent to :math:`\mathfrak{ab}`. The inscription :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is to be undertsood as an instruction to perform the indicated concatenation, not as the *physical inscription of the String*. In other words, :math:`\varepsilon` plays the logical role of identity. In the same way :math:`1 + 0` is an arithmetical expression that is the literal value of one, :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is a String expression that is the literal value of two concatenated Characters, represented formally by :math:`\mathfrak{a}` and :math:`\mathfrak{b}`. 
-
-    This is an extremely subtle point. The formal theory of Strings intersects with the primitive foundation of logic in this regard, and it must be kept in mind when interpretting this theorem the metamathematical separation between object-level langauge and meta-level language. The symbolic representation of concatenation is a literal concatenation of Characters, e.g. :math:`st`, an expression representing the result of a Concatenation, is a literal Concatenation of the Characters in English :math:`s` and :math:`t`. Thus, one must be careful not to confuse the symbol :math:`\mathfrak{a}\varepsilon\mathfrak{b}` for the String it represents.
+    :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>` shows how the logical properties of a String's canonical form, namely its logical length (String Length) and its logical (non-Empty) Characters reduce to the abstract and primitive concept of "*string equality*".
 
 The formal system under construction assumes the process of Canonization precedes the formation of Language. Empty Characters possess no semantic content, and therefore must be exlcuded from the domain before Language is possible. This will be explicitly formalized in the :ref:`Canonization Axiom <palindromics-axiom-vi>`.
 
@@ -680,28 +606,22 @@ String Inversion
 
 .. important::
     
-    This formal takes an extreme stance on String Inversion that deserves special note. 
-    
-    From a logical perspective, String Inversion is fundamentally dependent on concatenation and equality. Equality must be taken as primitive and concatenation then precede the definition of inversion. In the standard formal theory of Strings, inversion involves a recursive step,
-
-    .. math::
-
-        ((\iota)t)^{R} = ((t)^{R})(\iota)
-
-    Which illustrates that inversion is simply an instruction to concatenate its input in a certain order. The Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`, a standard definition, implicitly involves stripping a String of its Empty Characters through the Basis Clause :math:`{\varepsilon}{s} = s`.
-
-    Therefore, rather than adopting the standard recursive definition of inversion, the notation involving logical properties of the String will be utilized.
+    This formal takes an extreme stance on String Inversion that deserves special note. See :ref:`palindromics-motivation` for more information.
 
 .. _palindromics-definition-1-2-8:
 
 .. topic:: Definition 1.2.8: String Inversion
 
-    Let :math:`s, t \in S`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}` if the following conditions hold,
+    Let :math:`s, t \in \mathbb{S}`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}` if the following conditions hold,
 
     - :math:`l(s) = l(t) = n`
     - :math:`\forall i \in N: t[i] = s[n - i + 1]`
 
-**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2-6>`,
+.. important::
+
+    Inversion is defined on the domain of *canonical* Strings. 
+    
+**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2->`,
 
 .. math::
 
@@ -731,9 +651,9 @@ Concatenating the results,
 
     .. math::
 
-        \forall s \in S: (s^{-1})^{-1} = s
+        \forall s \in \mathbb{S}: (s^{-1})^{-1} = s
 
-**Proof** Let :math:`s \in S`. Let :math:`t = s^{-1}`. Let :math:`n = l(s)`. From :ref:`String Inversion <palindromics-definition-1-2-8>`,
+**Proof** Let :math:`s \in \mathbb{S}`. Let :math:`t = s^{-1}`. Let :math:`n = l(s)`. From :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
 .. math:: 
 
@@ -775,7 +695,7 @@ Therefore,
 
 .. math:: 
 
-    \forall s: (s^{-1})^{-1} = s
+    \forall s \in \mathbb{S}: (s^{-1})^{-1} = s
 
 ∎
 
@@ -787,9 +707,9 @@ Therefore,
 
     .. math::
 
-        \forall s,t \in S: (st)^{-1} = (t^{-1})(s^{-1})
+        \forall s,t \in \mathbb{S}: (st)^{-1} = (t^{-1})(s^{-1})
 
-**Proof** Let :math:`s,t \in S`. Let :math:`u = st`. Let :math:`m = l(s)` and :math:`n = l(t)`. Let :math:`u = st`. By :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`,
+**Proof** Let :math:`s,t \in \mathbb{S}`. Let :math:`u = st`. Let :math:`m = l(s)` and :math:`n = l(t)`. Let :math:`u = st`. By :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`,
 
 .. math::
 
@@ -863,7 +783,7 @@ Combining (4) and (5),
 
     v[i] = w[i] \quad \text{ (6) }
 
-Applying :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-7>`, (3) and (6) imply,
+Applying :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (3) and (6) imply,
 
 .. math::
 
@@ -873,7 +793,7 @@ Applying :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-7>`, (3) and (6) imply,
 
 :underline:`Case 2`: :math:`n + 1 \leq i \leq m + n`
 
-By :ref:`String Inversion <palindromics-definition-1-2-6>`,
+By :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
     v[i] = u[m + n - i + 1]
 
@@ -889,7 +809,7 @@ From this, :math:`u = st` and :math:`l(s) = m`, it follows that :math:`u[m + n -
 
     v[i] = s[m + n - i + 1] \quad \text{ (7) } 
 
-Consider :math:`w[i]`. Since :math:`l((t)^{-1}) = n` and :math:`i \geq n`, it follows that :math:`w[i] = (s^{-1})[i - n]`. By :ref:`String Inversion <palindromics-definition-1-2-6>`,
+Consider :math:`w[i]`. Since :math:`l((t)^{-1}) = n` and :math:`i \geq n`, it follows that :math:`w[i] = (s^{-1})[i - n]`. By :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
 .. math::
 
@@ -905,7 +825,7 @@ Combining (7) and (8),
 
     v[i] = w[i] \quad \text{ (9) }
 
-Applying :ref:`String Equality <palindromics-definition-1-2-3>`, (3) and (6) imply,
+Applying :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (3) and (6) imply,
 
 .. math::
 
@@ -937,7 +857,7 @@ In both cases, the theorem is proved. Summarizing and generalizing,
 
     s = (w_1)(t)(w_2)
 
-Consider :math:`s^{-1}`. Applying :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>` twice, this becomes,
+Consider :math:`s^{-1}`. Applying :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>` twice, this becomes,
 
 .. math::
 
