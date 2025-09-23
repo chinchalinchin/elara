@@ -361,7 +361,7 @@ By the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`, thi
 
         \mathbb{S} = \{ \pi(s) \mid s \in S \}
 
-Canonization provides a method of "*cleaning*" :math:`S` of troublesome Strings, such as :math:`\mathfrak{a}\varepsilon\mathkfrak{b}` that prevent the assertion of uniqueness within the semantic domains that will be shortly introduced. The Canon provides a domain within :math:`S` where the uniqueness of certain semantic properties can be established. 
+Canonization provides a method of "*cleaning*" :math:`S` of troublesome Strings, such as :math:`\mathfrak{a}\varepsilon\mathfrak{b}`, that prevent the assertion of uniqueness within the semantic domains that will be shortly introduced. The Canon provides a domain within :math:`S` where the uniqueness of certain semantic properties can be established. 
 
 .. _palindromics-theorem-1-2-3:
 
@@ -417,7 +417,7 @@ Therefore, by inductive hypothesis,
 
 .. CASE II
 
-:underline:`Case II` :math:`iota \neq \varepsilon`
+:underline:`Case II` :math:`\iota \neq \varepsilon`
 
 By the Induction clause of :ref:`Canonization <palindromics-definition-1-2-6>`, 
 

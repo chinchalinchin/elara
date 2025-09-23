@@ -51,9 +51,8 @@ Or equivalently,
 
 .. _palindromics-word-classes:
 
-------------
-Word Classes 
-------------
+Classes 
+-------
 
 .. _palindromics-definition-1-3-1:
 
@@ -238,7 +237,6 @@ But this is exactly the definition of the subset relation in set theory, therefo
 
 .. _palindromics-limitations:
 
------------
 Limitations
 -----------
 

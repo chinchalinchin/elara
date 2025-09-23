@@ -93,7 +93,7 @@ Axioms
 5. :ref:`Axiom V: Discovery Axiom <palindromics-axiom-v>`: :math:`\alpha[i] \neq \sigma`
 6. :ref:`Axiom VI: Canonization Axiom <palindromics-axiom-vi>`: :math:`\alpha \in \mathbb{S}`
 
-.. _palindromices-theorems:
+.. _palindromics-theorems:
 
 --------
 Theorems
@@ -123,3 +123,7 @@ Theorems
 22. :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
 23. :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`: :math:`\zeta \in K \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
 24. :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`: :math:`\Lambda(\zeta) = \Delta(\zeta) + 1`
+25. :ref:`Theorem 2.1.2 <palindromics-theorem-2-1-1>`: :math:`\Delta(s) = \Delta(s^{-1})`
+26. :ref:`Theorem 2.1.3 <palindromics-theorem-2-1-3>`: :math:`l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta[[i]])`
+27. :ref:`Theorem 2.1.4 <palindromics-theorem-2-1-4>`: :math:`\Delta(st) = \Delta(s) + \Delta(t)`
+28. :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`: :math:`((\Delta(s) = 2n +1) \land (s = s^{-1})) \implies (s[\frac{l(s)+1}{2}] = \sigma)`

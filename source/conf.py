@@ -138,6 +138,8 @@ latex_preamble = r"""
 \usepackage{runic}
 \usepackage{textcomp}
 \usepackage{accents}
+\usepackage[american]{babel}
+\usepackage{csquotes}
 """
 
 latex_elements = {

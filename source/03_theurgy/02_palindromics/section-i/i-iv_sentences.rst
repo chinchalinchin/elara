@@ -11,7 +11,7 @@ A Sentence is a Limitation of Words over a Phrase in the Language's Lexicon for 
     
     In other words, this statement should be interpretted as a necessary syntactic pre-condition a Sentence must satisfy before it may be assigned semantic content.
 
-A Corpus is the aggregate of all Sentences.
+The Corpus is the aggregate of all Sentences.
 
 .. math::
 
@@ -48,7 +48,7 @@ Word Length
 
     Let :math:`s \in S` and :math:`n \in N` such that :math:`\zeta = \Pi_{i=1}^n p(i)`. The Word Length of :math:`\zeta`, denoted :math:`\Lambda(\zeta)`, is defined inductively through the following schema,
 
-    - Basis: If :math:`\neq(\sigma \subset_s s)`,
+    - Basis: If :math:`\neg(\sigma \subset_s s)`,
         - If :math:`s = \varepsilon` or :math:`s \notin L`, :math:`\Lambda(s) = 0`
         - If :math:`s \in L`, :math:`\Lambda(s) = 1`
     - Induction: 
@@ -106,7 +106,7 @@ Let :math:`u_1 = \text{palindromes}` and :math:`v_1 = \text{vorpal semiordinlap}
 
     \Lambda(ᚠ) = \Lambda(v_1) + 1
 
-Let :math:`u_2 = \text{vorpal}` and :math:`\v_2 = \text{semiordinlap}`. Then :math:`u_2 \notin L_{\text{english}}` and :math:`v_1 = (u_2)(\sigma)(v_2)`. Apply the Induction clause of :ref:`Word Length <palindromics-definition-1-4-1>`,
+Let :math:`u_2 = \text{vorpal}` and :math:`v_2 = \text{semiordinlap}`. Then :math:`u_2 \notin L_{\text{english}}` and :math:`v_1 = (u_2)(\sigma)(v_2)`. Apply the Induction clause of :ref:`Word Length <palindromics-definition-1-4-1>`,
 
 .. math::
 
@@ -140,12 +140,11 @@ Putting the recursion together,
 
         \Lambda_{\text{italian}}(\text{closing sale}) = 1
 
-
 .. _palindromics-definition-1-4-2:
 
 .. topic:: Definition 1.4.2: Word Indices
 
-    The Word at index :math:`i` in a String :math:`s \in S`, denoted :math:`s[[1]]`, is defined inductively using the following schema,
+    The Word at index :math:`i` in a String :math:`s \in S`, denoted :math:`s[[i]]`, is defined inductively using the following schema,
 
     - Basis: 
         - :math:`s[[i]] = s` if and only if :math:`i = 1` and :math:`s \in L`
@@ -212,7 +211,7 @@ At the next step, let :math:`u_3 = \text{with}` and :math:`v_3 = \text{my blurgl
 
     .. math::
 
-        \forall \zeta in C: \sum_{j=1}^{\Lambda(\zeta)} l(\zeta[[j]]) \geq \Lambda(\zeta)
+        \forall \zeta \in C: \sum_{j=1}^{\Lambda(\zeta)} l(\zeta[[j]]) \geq \Lambda(\zeta)
 
 .. _palindromics-theorem-1-4-2:
 
@@ -231,24 +230,12 @@ At the next step, let :math:`u_3 = \text{with}` and :math:`v_3 = \text{my blurgl
     The edge case of compound Words (e.g. *daylight*) makes the proof :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` particularly interesting.
 
 
-.. _palindromics-sentence-axioms-theorems:
+.. _palindromics-sentence-theorems:
 
---------------------------
-Sentence Axioms & Theorems
---------------------------
+Theorems
+--------
 
-.. _palindromics-axiom-s-1:
-
-.. topic:: Axiom S.1: Word Comprehension Axiom
-
-    Every Word in a Sentence of the Corpus belongs to the Language.
-
-    .. math::
-
-        \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in L
-     
-The following theorem is proved in :ref:`Appendix I.II, Omitted Proofs <palindromics-appendix-i-ii>`, as it is not required for the results in :ref:`Section III <palindromics-section-iv>`. This theorem demonstrates the relationship between a Limitation and Word Length that was pointed out in the introduction of this subsection.
-
+The first theorem demonstrates the relationship between a Limitation and Word Length that was pointed out in the introduction of this subsection.
 
 .. _palindromics-theorem-1-4-3:
 
@@ -257,6 +244,60 @@ The following theorem is proved in :ref:`Appendix I.II, Omitted Proofs <palindro
     .. math::
 
         \forall \zeta \in C: \zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
+
+**Proof** Let :math:`\zeta \in C`. By definition of a Sentence, there exists :math:`n \in \mathbb{N}` and :math:`p \in L_n` such that
+
+.. math::
+
+    p = (\alpha_1, \alpha_2, ... , \alpha_n)
+
+.. math::
+
+    \zeta = \Pi_{i=1}^{n} p(i)
+
+So that, applying the :ref:`definition of Limitations <palindromics-definition-1-3-5>`,
+
+.. math::
+
+    \zeta = (\alpha_1)(\sigma)(\alpha_2)(\sigma)...(\sigma)(\alpha_n) \quad \text{ (1) }
+    
+By the :ref:`definition of Word Length <palindromics-definition-1-4-1>`, with :math:`u = \alpha_1` and :math:`v = \Pi_{i=1}^{n-1} \alpha_{i+1}`
+
+.. math::
+
+    \Lambda(\zeta) = \Lambda(\Pi_{i=1}^{n-1} \alpha_{i+1}) + 1
+
+Since there are :math:`n` words in :math:`p`, it follows the :ref:`definition of Word Length <palindromics-definition-1-4-1>` will be applied :math:`n` times, resulting in,
+
+.. math::
+
+    \Lambda(\zeta) = n
+
+Now, apply the :ref:`definition of Word Indices <palindromics-definition-1-4-2>` to (1). The Basis clause yields,
+
+.. math::
+
+    \zeta[[1]] = \alpha_1
+
+Using the Induction clause with :math:`u = \alpha_1` and :math:`v = \Pi_{i=1}^{n-1} \alpha_{i+1}`,
+
+.. math::
+
+    \zeta[[2]] = v[[1]] = \alpha_2
+
+Where the last equality follows from the Basis clause applied to :math:`v`. Continuing this process, it is found,
+
+.. math::
+
+    \forall i \in N_n: \zeta[[i]] = \alpha_i
+
+Therefore, since the Words in the Sentence correspond index by index to the Words in the Phrase, and the Word Length of the Sentence is equal to the Word Length of the Phrase, it follows, 
+
+.. math::
+
+    \forall \zeta \in C: \zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
+
+∎
 
 .. note::
 
@@ -281,19 +322,19 @@ The following theorem is proved in :ref:`Appendix I.II, Omitted Proofs <palindro
 
 .. math::
 
-    = (\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\varsigma)(\zeta[[n]])
+    = (\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\sigma)(\zeta[[n]])
 
 Consider :math:`s^{-1}`,
 
 .. math::
 
-    s^{-1} = ((\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\varsigma)(\zeta[[n]]))^{-1}
+    s^{-1} = ((\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\sigma)(\zeta[[n]]))^{-1}
 
-From :ref:`String Inversion <palindromics-definition-1-2-8>` and the fact :math:`l(\varsigma) = 1`, it follows :math:`\sigma^{-1} = \sigma`. Using this fact, the application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>` :math:`n` times yields,
+From :ref:`String Inversion <palindromics-definition-1-2-8>` and the fact :math:`l(\sigma) = 1`, it follows :math:`\sigma^{-1} = \sigma`. Using this fact, the application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>` :math:`n` times yields,
 
 .. math::
 
-    s^{-1} = ({\zeta}^{-1}[[n]])(\sigma)({\zeta}^{-1}[[n-1]]) ... (\varsigma)({\zeta}^{-1}[[1]])
+    s^{-1} = ({\zeta}^{-1}[[n]])(\sigma)({\zeta}^{-1}[[n-1]]) ... (\sigma)({\zeta}^{-1}[[1]])
 
 Reindex the terms on the RHS to match :ref:`Limitation <palindromics-definition-1-3-5>` with :math:`j = n - i + 1`. Then, as :math:`i` goes from :math:`1 \to n`, :math:`j` goes :math:`n \to 1` and visa versa,
 
@@ -433,7 +474,7 @@ Summarizing and generalizing,
 
 .. math::
 
-    \zeta = \Pi_{i=1}^{\Lambda(\zeta) \zeta[[i]]
+    \zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
 
 By the :ref:`definition of a Dialect <palindromics-definition-1-3-6>`, :math:`\zeta \in D`.
 
@@ -466,7 +507,9 @@ By :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>`, :math:`C \subseteq D`. By 
 
 Therefore, by :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`,
 
-    \forall \zeta, \xi \in C: \Lamdbda((\zeta)(\sigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)
+.. math::
+
+    \forall \zeta, \xi \in C: \Lambda((\zeta)(\sigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)
 
 ∎
 
@@ -480,7 +523,7 @@ Therefore, by :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`,
 
         C \subset \mathbb{S}
 
-**Proof** Let :math:`\zeta in C`. By :ref:`Theorem 1.4.3 <palindromics-theorem-1-4-3>`,
+**Proof** Let :math:`\zeta \in C`. By :ref:`Theorem 1.4.3 <palindromics-theorem-1-4-3>`,
 
 .. math::
 
@@ -514,9 +557,8 @@ This is exactly the definition of subsets,
 
 .. _palindromics-sentence-classes:
 
-----------------
-Sentence Classes
-----------------
+Classes
+-------
 
 .. _palindromics-definition-1-4-3:
 
@@ -538,9 +580,9 @@ Sentence Classes
 
     .. math::
 
-        \forall \zeta in C: \zeta \in K \equiv {\zeta}^{-1} \in K
+        \forall \zeta \in C: \zeta \in K \equiv {\zeta}^{-1} \in K
 
-**Proof** Let :math:`\zeta in C`.
+**Proof** Let :math:`\zeta \in C`.
 
 (:math:`\rightarrow`) Assume :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
@@ -570,7 +612,7 @@ Summarizing and generalizing,
 
 .. math::
 
-    \forall \zeta in C: \zeta \in K \equiv {\zeta}^{-1} \in K
+    \forall \zeta \in C: \zeta \in K \equiv {\zeta}^{-1} \in K
 
 ∎
 
@@ -582,7 +624,7 @@ Summarizing and generalizing,
 
     .. math::
 
-        \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
+        \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
 **Proof** Let :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
@@ -632,7 +674,7 @@ Generalizing,
 
 .. math::
 
-    \forall \zeta in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
+    \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
 ∎
 
@@ -684,7 +726,7 @@ Therefore,
 
     (\zeta)^{-1} = \Pi_{i=1}^{n} (\zeta[[n - i + 1]])^{-1}
 
-By the :math:`Theoreom 1.4.8 <palindromics-theorem-1-4-8>`, :math:`C \subset \mathbb{S}`. By :ref:`Theorem 1.3.3 <palindromics-definition-1-3-3>`, Limitations are unique over the Canon, thus the only way two Limitations that belong to the Corpus can be equal to :math:`\zeta^{-1}` is when,
+By the :ref:`Theoreom 1.4.8 <palindromics-theorem-1-4-8>`, :math:`C \subset \mathbb{S}`. By :ref:`Theorem 1.3.3 <palindromics-definition-1-3-3>`, Limitations are unique over the Canon, thus the only way two Limitations that belong to the Corpus can be equal to :math:`\zeta^{-1}` is when,
 
 .. math::
 

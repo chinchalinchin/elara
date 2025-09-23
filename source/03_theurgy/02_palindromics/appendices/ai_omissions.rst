@@ -10,9 +10,9 @@ Appendix I.I: Omitted Axioms
 
 This section of the Appendix contains Axioms the author considered at various points during the formalization, but as they did not ultimately seem necessary to establish the main results of the work, they have been placed here.
 
-.. _palindromics-axiom-s-2:
+.. _palindromics-axiom-ai:
 
-.. topic:: Axiom S.2: Duality Axiom I
+.. topic:: Axiom AI: Duality Axiom I
 
     For every Sentence in the Corpus, there exists a Word in the Language which is contained in it.
 
@@ -20,9 +20,9 @@ This section of the Appendix contains Axioms the author considered at various po
 
         \forall \zeta \in C: \exists \alpha \in L: \alpha \subset_s \zeta
 
-.. _palindromics-axiom-s-3:
+.. _palindromics-axiom-aii:
 
-.. topic:: Axiom S.3: Duality Axiom II
+.. topic:: Axiom AII: Duality Axiom II
 
     For every Word in the Language, there exists a Sentence in the Corpus that contains it.
 
@@ -34,9 +34,9 @@ This section of the Appendix contains Axioms the author considered at various po
 
     The Duality Axioms are reminiscent of the relation of surjectivity in real analysis. However, containment is not a strict equality relation so this resemblance should not be taken too far.
 
-.. _palindromics-axiom-s-4:
+.. _palindromics-axiom-aiii:
 
-.. topic:: Axiom S.4: Density Axiom
+.. topic:: Axiom AIII: Density Axiom
 
     There exists a natural number such that for all numbers less than it there exists a Sentence in the Corpus with that Word Length.
 
@@ -44,6 +44,15 @@ This section of the Appendix contains Axioms the author considered at various po
 
 This Axiom is required to induce proofs about Word Length. Without it, there is no formal way to accomplish an induction over Word Length. However, it may be (justifiably) argued there is no reason a natural language should obey this rule. It is possible to conceive of a natural language that does not have sentences with, say, exactly :math:`n = 13` words, perhaps due to an eccentricity in its grammar. In natural languages such as these, the results that depend on the following theorem are only valid in a truncated Corpus where all sentences with :math:`\Lambda(\zeta) > 12` are ignored. 
 
+.. _palindromics-axiom-aiv:
+
+.. topic:: Axiom AIV: Word Comprehension Axiom
+
+    Every Word in a Sentence of the Corpus belongs to the Language.
+
+    .. math::
+
+        \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in L
 
 .. _palindromics-appendix-i-ii:
 
