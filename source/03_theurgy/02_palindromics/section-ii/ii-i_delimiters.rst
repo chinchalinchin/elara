@@ -225,7 +225,7 @@ This ability to switch between the formal expression :math:`\Delta(s) = n` and t
     
         \forall s \in \mathbb{S}: \Delta(s) = \Delta(s^{-1})
 
-**Proof** Let :math:`s, t \in mathbb{S}` such that :math:`t = s^{-1}`. Let :math:`n = l(s)`. By :ref:`String Inversion <palindromics-definition-1-2-8>`, 
+**Proof** Let :math:`s, t \in \mathbb{S}` such that :math:`t = s^{-1}`. Let :math:`n = l(s)`. By :ref:`String Inversion <palindromics-definition-1-2-8>`, 
 
 .. math::
 
@@ -239,7 +239,7 @@ Therefore, since inversion does not insert or delete Characters, i.e. the number
 
 .. math::
 
-    \forall s,t \in mathbb{S}: \Delta(s) = \Delta(s^{-1})
+    \forall s,t \in \mathbb{S}: \Delta(s) = \Delta(s^{-1})
 
 ∎
 
@@ -251,7 +251,7 @@ Therefore, since inversion does not insert or delete Characters, i.e. the number
 
     .. math::
 
-        \forall \zeta in C: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta[[i]])
+        \forall \zeta \in C: l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta[[i]])
 
 **Proof** Let :math:`\zeta \in C`. 
 
@@ -269,6 +269,8 @@ Thus, putting everything together,
 
 ∎
 
+.. _palindromics-theorem-2-1-4:
+
 .. topic:: Theorem 2.1.4
     
     The number of Delimiters in two concatenated Strings is equal to the sum of the number of Delimiters in each individual String.
@@ -283,6 +285,8 @@ Let :math:`s,t \in S`. Then, by :ref:`Concatenation <palindromics-definition-1-2
 
 The next theorem establishes an important property of palindromes. 
 
+.. _palindromics-theorem-2-1-5:
+
 .. topic:: Theorem 2.1.5
 
     If a canonical String is equal to its own inverse and has an odd Delimiter Count, then its central Character is a Delimiter. 
@@ -291,9 +295,7 @@ The next theorem establishes an important property of palindromes.
 
         \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n +1 ) \land (s = s^{-1})) \implies s[\frac{l(s)+1}{2}] = \sigma
 
-**Proof** Let :math:`s,t \in \mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}`. Let :math:`m = l(s)`
-
-Let :math:`P` be the set of Delimiter indices in :math:`s`
+**Proof** Let :math:`s,t \in \mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
 
 .. math::
 
@@ -307,7 +309,7 @@ By :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
     t[i] = s[m - i + 1]
 
-In other words, every Delimiter in :math:`s` at :math:`i` must have a symmetric pair at :math:`m - i + 1` and visa vera. Since :math:`\lvert P \rvert` is odd, there must be one element of :math:`P` that is its own symmetric pair. This element must satisfy the condition,
+In other words, every Delimiter in :math:`s` at :math:`i` must have a symmetric pair at :math:`m - i + 1` and visa versa. Since :math:`\lvert P \rvert` is odd, there must be one element of :math:`P` that is its own symmetric pair. This element must satisfy the condition,
 
 .. math::
 

@@ -8,7 +8,21 @@ Section I.II: Strings
 
     The formal development of this section largely agrees with standard treatments found in the theory of strings and concatenation. Many of the proofs are relegated to the Appendix when they do not diverge significantly from prior established results. Proofs of standard theorems that involve new formalizations will be highlighted.
 
-All non-Empty Characters belong to the Alphabet,
+.. _palindromics-axiom-0:
+
+.. topic:: Axiom 0: Empty
+
+    An Empty Character exists.
+
+    .. math::
+
+        \exists s \in S: s = \varepsilon 
+
+.. note::
+
+    This assumption is crucial to establish the existence of an element in the domain that acts as the identity element for formal expressions. All of the recursive definitions will implicitly rely on :ref:`Empty Axiom <palindromics-axiom-0>`.
+
+If a Characters is non-Empty, it belong to the Alphabet,
 
 .. math::
 
@@ -21,6 +35,10 @@ All non-Empty Characters belong to the Alphabet,
     .. math::
 
         \sigma \in \Sigma
+
+.. warning::
+
+    The work will proceed as if the :math:`\Sigma \neq \varnothing`, but it should be noted at this stage :math:`\Sigma = \varnothing` trivially satisifies all of the axioms that will be presented by annihiliating the domain of discourse. 
 
 The aggregate of the Alphabet and the Empty Character is referred to as the *Total Alphabet* and is denoted,
 
@@ -74,7 +92,7 @@ Concatenation
 
 .. note::
 
-    The :ref:`Equality Axiom <palindromics-axiom-ii>` is a necessary assumption to ensure the Basis and Induction clauses of :ref:`Concatenation <palindromics-definition-1-2-1>` are well-defined. 
+    The :ref:`Empty Axiom <palindromics-axiom-0>` and the :ref:`Equality Axiom <palindromics-axiom-ii>` are necessary assumptions to ensure the Basis and Induction clauses of :ref:`Concatenation <palindromics-definition-1-2-1>` are well-defined. 
 
 .. _palindromics-axiom-iii:
 

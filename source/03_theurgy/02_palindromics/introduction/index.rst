@@ -86,12 +86,13 @@ Definitions
 Axioms
 ------
 
-1. :ref:`Axiom I: Comprehension Axiom <palindromics-axiom-i>`: :math:`\iota \in S`
-2. :ref:`Axiom II: Equality Axiom <palindromics-axiom-ii>`: :math:`s = t`
-3. :ref:`Axiom III: Closure Axiom <palindromics-axiom-iii>`: :math:`st \in S`
-4. :ref:`Axiom IV: Measure Axiom <palindromics-axiom-iv>`: :math:`l(\alpha) \neq 0`
-5. :ref:`Axiom V: Discovery Axiom <palindromics-axiom-v>`: :math:`\alpha[i] \neq \sigma`
-6. :ref:`Axiom VI: Canonization Axiom <palindromics-axiom-vi>`: :math:`\alpha \in \mathbb{S}`
+1. :ref:`Axiom 0: Empty Axiom <palindromics-axiom-0>`: :math:`\exists \varepsilon`
+2. :ref:`Axiom I: Comprehension Axiom <palindromics-axiom-i>`: :math:`\iota \in S`
+3. :ref:`Axiom II: Equality Axiom <palindromics-axiom-ii>`: :math:`s = t`
+4. :ref:`Axiom III: Closure Axiom <palindromics-axiom-iii>`: :math:`st \in S`
+5. :ref:`Axiom IV: Measure Axiom <palindromics-axiom-iv>`: :math:`l(\alpha) \neq 0`
+6. :ref:`Axiom V: Discovery Axiom <palindromics-axiom-v>`: :math:`\alpha[i] \neq \sigma`
+7. :ref:`Axiom VI: Canonization Axiom <palindromics-axiom-vi>`: :math:`\alpha \in \mathbb{S}`
 
 .. _palindromics-theorems:
 

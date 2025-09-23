@@ -644,7 +644,7 @@ where,
 
     p = ( {\zeta[[n]]}^{-1}, {\zeta[[n-1]]}^{-1}, ... , {\zeta[[1]]}^{-1} )
 
-By definition of a Sentence,
+By definition of a Sentence and :math:`{\zeta}^{-1} \in C`,
 
 .. math::
 
