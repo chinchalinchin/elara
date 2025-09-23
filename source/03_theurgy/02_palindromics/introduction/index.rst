@@ -68,8 +68,8 @@ Definitions
 5. :ref:`Definition 1.2.6: Canonization <palindromics-definition-1-2-6>`: :math:`\pi(s)`
 6. :ref:`Definition 1.2.7: Canon <palindromics-definition-1-2-7>`: :math:`\mathbb{S} = \{ \pi(s) \mid s \in S \}` 
 7. :ref:`Definition 1.2.8: String Inversion <palindromics-definition-1-2-8>`: :math:`s^{-1}`
-8. :ref:`Definition 1.3.1: Reflective Words <palindromics-definition-1-3-1>`: :math:`\alpha in R \equiv \alpha = {\alpha}^{-1}`
-9. :ref:`Definition 1.3.2: Invertible Words <palindromics-definition-1-3-2>` :math:`\alpha in I \equiv {\alpha}^{-1} \in L`
+8. :ref:`Definition 1.3.1: Reflective Words <palindromics-definition-1-3-1>`: :math:`\alpha \in R \equiv \alpha = {\alpha}^{-1}`
+9. :ref:`Definition 1.3.2: Invertible Words <palindromics-definition-1-3-2>` :math:`\alpha \in I \equiv {\alpha}^{-1} \in L`
 10. :ref:`Definition 1.3.3: Phrases <palindromics-definition-1-3-3>`: :math:`P_n = (p(1), ..., p(n))`
 11. :ref:`Definition 1.3.4: Lexicons <palindromics-definition-1-3-4>`: :math:`L_n = \{ p \mid \forall p: p = P_n \}`
 12. :ref:`Definition 1.3.5: Limitation <palindromics-definition-1-3-5>`: :math:`\Pi_{i=1}^{n} p(i)`
@@ -102,8 +102,8 @@ Theorems
 1. :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`: :math:`l(st) = l(s) + l(t)`
 2. :ref:`Theorem 1.2.2 <palindromics-theorem-1-2-2>`: :math:`\varepsilon \subset_s s`
 3. :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`: :math:`\pi(\pi(s)) = \pi(s)`
-4. :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`: :math:`s \in mathbb{S} \equiv \pi(s) = s`
-5. :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`: :math:`s,t \in \mathbb{S} \implies st \in mathbb{S}`
+4. :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`: :math:`s \in \mathbb{S} \equiv \pi(s) = s`
+5. :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`: :math:`s,t \in \mathbb{S} \implies st \in \mathbb{S}`
 6. :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`: :math:`((l(s) = l(t)) \land (\forall i \in N_{l(t)}: s[i] = t[i])) \implies (s = t)`
 7. :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`: :math:`{s^{-1}}^{-1} = s`
 8. :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-4>`: :math:`(st)^{-1} = (t^{-1})(s^{-1})`
@@ -112,12 +112,12 @@ Theorems
 11. :ref:`Theorem 1.3.2 <palindromics-theorem-1-3-2>`: :math:`R \subset I`
 12. :ref:`Theorem 1.3.3 <palindromics-theorem-1-3-3>`: :math:`\exists! s: s = \Pi_{i=1}^{n} p(i)` 
 13. :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>`: :math:`\sum_{j=1}^{\Lambda(\zeta)} l(\zeta[[j]]) \geq \Lambda(\zeta)`
-14. :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>`: :math:`\Lamdba(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)` 
+14. :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>`: :math:`\Lambda(\zeta\xi) \leq \Lambda(\zeta) + \Lambda(\xi)` 
 15. :ref:`Theorem 1.4.3 <palindromics-theorem-1-4-3>`: :math:`\zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]`
 16. :ref:`Theorem 1.4.4 <palindromics-theorem-1-4-4>`: :math:`(\Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]])^{-1} = \Pi_{i=1}^{\Lambda(\zeta)} (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
-17. :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`: :math:`\Lambda((s)(\varsigma)(t)) = \Lambda(s) + \Lambda(t)`
+17. :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`: :math:`\Lambda((s)(\sigma)(t)) = \Lambda(s) + \Lambda(t)`
 18. :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>`: :math:`C \subseteq D`
-19. :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`Lambda((\zeta)(\varsigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)`
+19. :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`\Lambda((\zeta)(\sigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)`
 20. :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>`: :math:`C \subset \mathbb{S}`
 21. :ref:`Theorem 1.4.9 <palindromics-theorem-1-4-9>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
 22. :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`

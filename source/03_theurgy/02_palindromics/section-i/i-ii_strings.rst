@@ -313,7 +313,7 @@ Let :math:`u_1 = (\mathfrak{a})(\varepsilon)` and :math:`v_1 = \mathfrak{b}`. No
 
 .. math::
 
-    \pi(s_1) = (\pi(u_1))(\v_1)
+    \pi(s_1) = (\pi(u_1))(v_1)
 
 Let :math:`u_2 = \mathfrak{a}` and :math:`v_2 = \varepsilon`. Note :math:`u_1 = (u_2)(v_2)`. By the Induction clause,
 
@@ -337,7 +337,7 @@ Putting the recursion together,
 
 .. math::
 
-    \pi(s_1) = ((\varepsilon)(v_3))(\v_1)
+    \pi(s_1) = ((\varepsilon)(v_3))(v_1)
 
 .. math::
 
@@ -361,7 +361,7 @@ By the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`, thi
 
         \mathbb{S} = \{ \pi(s) \mid s \in S \}
 
-Canonization provides a method of "*cleaning*" :math:`S` of troublesome Strings, such as :math:`\mathfrak{a}\varepsilon\mathkfra{b}` that prevent the assertion of uniqueness within the semantic domains that will be shortly introduced. The Canon provides a domain within :math:`S` where the uniqueness of certain semantic properties can be established. 
+Canonization provides a method of "*cleaning*" :math:`S` of troublesome Strings, such as :math:`\mathfrak{a}\varepsilon\mathkfrak{b}` that prevent the assertion of uniqueness within the semantic domains that will be shortly introduced. The Canon provides a domain within :math:`S` where the uniqueness of certain semantic properties can be established. 
 
 .. _palindromics-theorem-1-2-3:
 
@@ -495,9 +495,9 @@ Therefore, the equivalence is established.
 
 .. BASIS
 
-:underline:`Basis`: Let :math:`s \in \mathbb{S}`. Let :math:`t = \varepsilon`. By the Basis clause of :ref:`Canonization <palindromics-definition-1-2-6>` and the definition of :math:`Canon <palindromics-definition-1-2-7>`, :math:`t \in \mathbb{S}`
+:underline:`Basis`: Let :math:`s \in \mathbb{S}`. Let :math:`t = \varepsilon`. By the Basis clause of :ref:`Canonization <palindromics-definition-1-2-6>` and the definition of :ref:`Canon <palindromics-definition-1-2-7>`, :math:`t \in \mathbb{S}`
 
-Consider :math:`st`. By the Basis clause of :math:`Concatenation <palindromics-definition-1-2-1>`, :math:`st = s\varepsilon = s`. But :math:`s \in mathbb{S}` by assumption, thus :math:`st \in mathbb{S}`.
+Consider :math:`st`. By the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`, :math:`st = s\varepsilon = s`. But :math:`s \in \mathbb{S}` by assumption, thus :math:`st \in \mathbb{S}`.
 
 .. INDUCTION
 
@@ -513,7 +513,7 @@ Let :math:`t = (u)(\iota)` where :math:`\iota \in \Sigma`. Consider :math:`st`,
 
     st = (s)(u)(\iota) = (su)(\iota) \quad (2)
 
-Where the last equality follows from the associativity of concatenation. By inductive hypothesis, :math:`su \in \mathbb{S}`. Moreover, :math:`\iota \in \mathbb{S}` since :math:`\pi(\iota) = \iota`. Therefore, by definition of :math:`Canonization <palindromics-definition-1-2-6>`
+Where the last equality follows from the associativity of concatenation. By inductive hypothesis, :math:`su \in \mathbb{S}`. Moreover, :math:`\iota \in \mathbb{S}` since :math:`\pi(\iota) = \iota`. Therefore, by definition of :ref:`Canonization <palindromics-definition-1-2-6>`
 
 .. math::
 
@@ -612,7 +612,7 @@ String Inversion
 
 .. topic:: Definition 1.2.8: String Inversion
 
-    Let :math:`s, t \in \mathbb{S}`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}` if the following conditions hold,
+    Let :math:`s, t \in \mathbb{S}`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}`, if the following conditions hold,
 
     - :math:`l(s) = l(t) = n`
     - :math:`\forall i \in N: t[i] = s[n - i + 1]`
@@ -621,7 +621,7 @@ String Inversion
 
     Inversion is defined on the domain of *canonical* Strings. 
     
-**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2->`,
+**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
 .. math::
 
@@ -685,7 +685,7 @@ Moreover, from (1) and (3), it follows,
 
     l(s) = l(u) \quad \text{ (6) }
 
-By the :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-7>`, (5) and (6) together imply,
+By the :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (5) and (6) together imply,
 
 .. math::
 
@@ -743,9 +743,9 @@ From (1) and (2), it follows,
 
 Let :math:`i \in N_{m+n}`.
 
-.. CASE 1
+.. CASE I
 
-:underline:`Case 1`: :math:`i \leq i \leq n`
+:underline:`Case I`: :math:`i \leq i \leq n`
 
 By :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
@@ -789,11 +789,13 @@ Applying :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (3) and (6) imply,
 
     v = w
 
-.. CASE 2
+.. CASE II
 
-:underline:`Case 2`: :math:`n + 1 \leq i \leq m + n`
+:underline:`Case II`: :math:`n + 1 \leq i \leq m + n`
 
 By :ref:`String Inversion <palindromics-definition-1-2-8>`,
+
+.. math::
 
     v[i] = u[m + n - i + 1]
 

@@ -145,7 +145,7 @@ Sets
 .. topic:: Set: Alphabet
 
     **Alphabet**
-        - :math: `\Sigma`
+        - :math:`\Sigma`
 
     The aggregate of all non-Empty Characters is called the *Alphabet*.
 

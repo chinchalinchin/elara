@@ -37,7 +37,7 @@ Or equivalently,
 
     .. math::
 
-       \forall \alpha in L: \forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma
+       \forall \alpha \in L: \forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma
 
 .. _palindromics-axiom-vi:
 
@@ -47,7 +47,7 @@ Or equivalently,
 
     .. math::
 
-        \forall \alpha in L: \alpha \in \mathbb{S}
+        \forall \alpha \in L: \alpha \in \mathbb{S}
 
 .. _palindromics-word-classes:
 
@@ -402,18 +402,33 @@ This subsection closes with a definition that will be used to quantify a theorem
 
 .. math::
 
-    L_1 = \{ \{ (1, \text{hakuna}) \}, \{ (1, \text{matata}) \} \}
+    L_1 = \{ \{ (1, \text{hakuna}) \}, \\
+             \{ (1, \text{matata}) \} \}
 
 .. math::
 
-    L_2 = \{ \{ (1, \text{hakuna}), (2, \text{hakuna}) \}
-            \{ (1, \text{hakuna}), (2, \text{matata}) \}, 
-            \{ (1, \text{matata}), (2, \text{hakuna}) \} 
-            \{ (1, \text{matata}), (2, \text{matata}) \} \}
+    L_2 = \{ \{ (1, \text{hakuna}), (2, \text{hakuna}) \}, \\
+             \{ (1, \text{hakuna}), (2, \text{matata}) \},  \\
+             \{ (1, \text{matata}), (2, \text{hakuna}) \}, \\ 
+             \{ (1, \text{matata}), (2, \text{matata}) \} \}
+
+.. TODO: fix the permutations here and stop being lazy
 
 .. math::
 
-    \text{"..."}
+    L_3 = \{ \{ (1, \text{hakuna}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\
+             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \},  \\
+             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\ 
+             \{ (1, \text{matata}), (2, \text{matata}), (3, \text{hakuna}) \}, \\
+             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \},  \\
+             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\ 
+             \{ (1, \text{matata}), (2, \text{matata}), (3, \text{hakuna}) \}, \\
+             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \},  \\
+             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \} \}
+             
+.. math::
+
+    \text{...}
 
 The Dialect is the union of all delimited Phrases in all Lexicons of the Language,
 
