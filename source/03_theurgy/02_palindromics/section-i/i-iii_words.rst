@@ -432,7 +432,7 @@ The Dialect is the union of all delimited Phrases in all Lexicons of the Languag
 
 .. math::
 
-    D = \{ \text{hakuna}, \text{matata}, \text{hakuna hakuna}
+    D = \{ \text{hakuna}, \text{matata}, \text{hakuna hakuna},
             \text{hakuna matata}, \text{matata hakuna}, 
             \text{matata matata}, ... \} 
 

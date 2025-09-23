@@ -283,7 +283,7 @@ Let :math:`s,t \in S`. Then, by :ref:`Concatenation <palindromics-definition-1-2
 
 ∎
 
-The next theorem establishes an important property of palindromes. 
+The next theorem establishes an important property that will manifest in the study of palindromics pivots.
 
 .. _palindromics-theorem-2-1-5:
 
