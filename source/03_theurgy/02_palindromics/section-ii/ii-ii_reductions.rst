@@ -11,8 +11,8 @@ Section II.II: Reductions
     Let :math:`s \in S`. The σ-Reduction of :math:`s`, denoted :math:`\varsigma(s)`, is defined inductively with the following schema,
 
     - Basis: 
-        - :math:`\varsigma(\sigma) = \varespilon`
-        - If :math:`neg(\sigma \subset_s s)`, then :math:`\varsigma(s) = s`
+        - :math:`\varsigma(\sigma) = \varepsilon`
+        - If :math:`\neg(\sigma \subset_s s)`, then :math:`\varsigma(s) = s`
     - Induction:
         - If :math:`s = (u)(\sigma)(v)` for any :math:`u, v \in S` where :math:`\neg(\sigma \subset_s u)`, :math:`\varsigma(s) = \varsigma(uv)`
 
@@ -36,7 +36,7 @@ Let :math:`u_3 = \text{thewideningcircles}` and :math:`v_3 = \text{into nothing 
 
 .. math::
 
-    \varsigma(w_2) = \varsigmna((u_3)(v_3)) = \varsigma(w_3)
+    \varsigma(w_2) = \varsigma((u_3)(v_3)) = \varsigma(w_3)
 
 Let :math:`u_4 = \text{thewideningcirclesinto}` and :math:`v_4 = \text{nothing gone}`. Let :math:`w_4 = (u_4)(v_4)`. Then :math:`w_3 = (u_4)(\sigma)(v_4)`. By the Induction clause,
 
@@ -48,7 +48,7 @@ Let :math:`u_5 = \text{thewideningcirclesintonothing}` and :math:`v_5 = \text{go
 
 .. math::
 
-    \varsigma(w_4) = \varsigmna((u_5)(v_5)) = \varsigma(w_5)
+    \varsigma(w_4) = \varsigma((u_5)(v_5)) = \varsigma(w_5)
 
 But :math:`neg(\sigma \subset_s w_5)`, therefore by the Basis clause,
 
@@ -189,7 +189,7 @@ By the Induction clause :ref:`Reduction <palindromics-definition-2-2-1>`,
 
 .. math::
 
-    \varsigma(st) = \varsigma((s)(u)(\varsigma)(v)) = (su)\varsigma(v)
+    \varsigma(st) = \varsigma((s)(u)(\sigma)(v)) = (su)\varsigma(v)
 
 .. math::
 
@@ -215,7 +215,7 @@ Thus all three cases are established. Summarizing and generalizing,
 
     .. math::
 
-       \forall s in S: \Delta(s) = 0 \equiv \varsigma(s) = s
+       \forall s \in S: \Delta(s) = 0 \equiv \varsigma(s) = s
 
 **Proof** Let :math:`s \in S`.
 
@@ -269,11 +269,11 @@ Thus equivalence is established. Summarizing and generalizing,
 
 .. BASIS 
 
-:underline:`Basis` Let :math:`\neg(\sigma \subset_s s)`; that is, assume there are no Delimiters in :math:`s` (:math:`\Delta(s) = 0``). By :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>` and the fact :math:`\sigma^{-1} = \sigma`,
+:underline:`Basis` Let :math:`\neg(\sigma \subset_s s)`; that is, assume there are no Delimiters in :math:`s` (:math:`\Delta(s) = 0`). By :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>` and the fact :math:`\sigma^{-1} = \sigma`,
 
 .. math::
 
-    \neg(\sigma \subset_s s) \equiv \neg(\sigma subset_s s^{-1})
+    \neg(\sigma \subset_s s) \equiv \neg(\sigma \subset_s s^{-1})
 
 Consider :math:`(\varsigma(s))^{-1}`. By the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>` and the Basis assumption,
 
@@ -357,7 +357,7 @@ From which it follows,
 
     \varsigma(v^{-1}) = (\varsigma(v))^{-1} \quad \text{ (5) }
 
-(3) and (5) taken together with (1) and (2) imply,
+Now, (3) and (5) taken together with (1) and (2) imply,
 
 .. math::
 
@@ -472,7 +472,7 @@ Therefore,
 
 .. math::
 
-    \zeta[[i]] \subset_S \varsigma(\zeta)
+    \zeta[[i]] \subset_s \varsigma(\zeta)
 
 Summarizing and generalizing,
 

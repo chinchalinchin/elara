@@ -15,7 +15,7 @@ The Corpus is the aggregate of all Sentences.
 
 .. math::
 
-    \forall \zeta \in C: \exists n: \zeta = \Pi_i^{n} p(i)
+    \forall \zeta \in C: \exists n \in \mathbb{N}: \zeta = \Pi_i^{n} p(i)
 
 .. note::
 

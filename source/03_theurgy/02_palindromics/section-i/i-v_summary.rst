@@ -16,6 +16,8 @@ First, :ref:`String Inversion <palindromics-definition-1-2-6>` was defined as a 
 
 Where :math:`t` is the inverse of :math:`s`, :math:`t^{-1} = s`. This in turn defined an equivalence class over involutive Words in :ref:`Reflective Words <palindromics-theorem-1-3-1>`, 
 
+.. math::
+    
     \alpha \in R \equiv \alpha = {\alpha}^{-1}
 
 Moreover, it created a semi-group in :ref:`Invertible Words <palindromics-definition-1-3-2>`,

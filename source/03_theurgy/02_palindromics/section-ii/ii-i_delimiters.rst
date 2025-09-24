@@ -17,7 +17,6 @@ Definition & Examples
     - Basis: 
         - If :math:`\neg(\sigma \subset_s s)`, then :math:`\Delta(s) = 0`
         - If :math:`s = \varepsilon`, then :math:`\Delta(s) = 0`
-        - If :math:`s = \sigma`, then :math:`\Delta(s) = 1`
     - Induction:
         - If :math:`s = (u)(\sigma)(v)` for any :math:`u,v \in S` where :math:`\neg(\sigma \subset_s u)`, :math:`\Delta(s) = \Delta(v) + 1`
 
@@ -166,7 +165,7 @@ Let :math:`\xi \in C` such that :math:`\Lambda(\xi) = n + 1`. Therefore, :math:`
 
 .. math::
 
-    \exists u,v \xi = (u)(\sigma)(v)
+    \exists u,v \in S: \xi = (u)(\sigma)(v)
 
 Choose :math:`u = \xi[[1]]` so that :math:`\neg(\sigma \subset_s u)`. Then, by :ref:`definition of Word Length <palindromics-definition-1-4-1>`, :math:`\Lambda(v) = n`. Then, by the Induction clause of the :ref:`Delimiter Counts <palindromics-definition-2-1-1>`
 
@@ -338,7 +337,7 @@ Therefore, the Character at :math:`j` in :math:`s` must be a Delimiter. Summariz
 
 .. note::
 
-    An interesting corollary to :math:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` is established in the next theorem. This shows the parity of a Canonical String can be inferred from its invertibility and the parity of its Delimter Count.
+    An interesting corollary to :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` is established in the next theorem. This shows the parity of a Canonical String can be inferred from its invertibility and the parity of its Delimter Count.
 
 .. _palindromics-theorem-2-1-6:
 
@@ -456,15 +455,17 @@ Thus, since :math:`l(ᚠ)= 26` is even,
 
 .. topic:: Theorem 2.1.7
 
+    If a Canonical String has an odd number of Delimiter Characters and is equal to its own Inverse, then its Left and Right Pivot Characters are equal.
+
     .. math::
     
         \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
 
-**Proof**: Let :math:`s \in mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in mathbb{N}` and :math:`s = s^{-1}`. Then, by :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`,
+**Proof**: Let :math:`s \in \mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`s = s^{-1}`. Then, by :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`,
 
 .. math::
 
-    \exists i: l(s) = 2i - 1
+    \exists i \in N_{l(t)}: l(s) = 2i - 1
 
 Therefore, :math:`l(s)` is odd. By :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`,
 
@@ -494,11 +495,13 @@ Summarizing and generalizing,
 
 .. topic:: Theorem 2.1.8
 
+    If a String in the Dialect has an even String Length and is equal to its own inverse, then its Left and Right Pivot Characters cannot be Delimiters.
+
     .. math::
 
-        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies ((\overrightarrow{\omega_s} \neq \sigma) \land  (\overleftarrow{\omega_s} \neq \sigma))
+        \forall s \in D: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies ((\overrightarrow{\omega_s} \neq \sigma) \land  (\overleftarrow{\omega_s} \neq \sigma))
 
-**Proof** The proof is similar to :ref:`Theoreom 2.1.5 <palindromics-theorem-2-1-5>`. Let :math:`s,t \in D` such that :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
+**Proof** The proof is similar to :ref:`Theoreom 2.1.5 <palindromics-theorem-2-1-5>`. Let :math:`s,t \in D` such that :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}` with :math:`s = t`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
 
 .. math::
 
@@ -642,7 +645,7 @@ Now, consider what has been shown of :math:`uv`. :math:`\Delta(uv) = 2n - 1` and
 
 .. math::
 
-    \exists j: l(uv) = 2j - 1
+    \exists j \in N_{l(uv)}: l(uv) = 2j - 1
 
 But this contradicts (2), which states :math:`l(uv)` is even, which in turn followed directly from the assumption :math:`l(s)` is odd. Therefore, the only possibility is :math:`\omega_s \neq \sigma`. Therefore, from (1),
 
@@ -666,8 +669,79 @@ But this contradicts (2), which states :math:`l(uv)` is even, which in turn foll
 
     .. math::
 
-        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow(\omega_s)
+        \forall s \in D: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
 
+**Proof** Let :math:`s \in D` such that :math:`s = s^{-1}`. Let :math:`t \in D` such :math:`t = s^{-1}` and :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
+
+.. math::
+
+    P = \{ i \mid s[i] = \sigma \}
+
+Then :math:`\lvert P \rvert = \Delta(s) = 2n` by assumption.
+
+By :ref:`String Inversion <palindromics-definition-1-2-8>`,
+
+.. math::
+
+    t[i] = s[m - i + 1]
+
+There are two cases to consider, :math:`l(s)` is even or :math:`l(s)` is odd.
+
+.. EVEN CASE 
+
+:underline:`Case I`: :math:`l(s) = m` is even.
+
+By :ref:`Definition of Pivot Words <palindromics-definition-2-1-2>`,
+
+.. math::
+
+    \overrightarrow{i} = \frac{l(s)}{2} = \frac{m}{2} \quad \text{ (1) }
+
+.. math::
+
+    \overleftarrow{i} = \frac{l(s)}{2} + 1  = \frac{m}{2} + 1 \quad \text{ (2) }
+
+Therefore, the Pivot Characters must be consecutive Characters. 
+
+Since :math:`\lvert P \rvert`, each index :math:`i` has a symmetric pair given by the inversion :math:`m - i + 1`,
+
+.. math::
+
+    \overrightarrow{i}_{\text{pair}} = m - \overrightarrow{i} + 1 = \frac{m}{2} + 1 \quad \text{ (3) }
+
+.. math:: 
+
+    \overleftarrow{i}_{\text{pair}} = m - \overleftarrow{i} + 1 = \frac{m}{2} \quad \text{ (4) }
+
+Therefore, from (1) and (4) the Left Pivot index pairs with the Right Pivot index, and from (2) and (3) the Right Pivot index pairs with Left Pivot index,
+
+.. math::
+
+    \overrightarrow{i}_{\text{pair}} = \overleftarrow{i}
+
+.. math::
+
+    \overleftarrow{i}_{\text{pair}} = \overrightarrow{i}
+
+By :ref:`definition of String Inversion <palindromics-definition-1-2-8>`,
+
+.. math::
+
+    t[\overrightarrow{i}] = s[\overrightarrow{i}_{\text{pair}}] = s[\overleftarrow{i}]
+
+.. math::
+
+    t[\overleftarrow{i}] = s[\overleftarrow{i}_{\text{pair}}] = s[\overrightarrow{i}]
+
+Plugging in values,
+
+.. math::
+
+    t[\frac{m}{2}] = s[\frac{m}{2} + 1]
+
+.. math::
+
+    t[\frac{m}{2} +1] = s[\frac{m}{2}]
 
 .. NOTE: BE EXCEEDINGLY CAREFUL WITH QUANTIFICATIONS IN NEXT THEOREMS.
 

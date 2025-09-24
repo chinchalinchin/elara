@@ -248,7 +248,7 @@ Limitations
 
     .. math::
 
-        P_n = \{ (i, \alpha_i) \mid i \in N_n \land \alpha \in L \} 
+        P_n = \{ (i, \alpha_i) \mid (i \in N_n) \land (\alpha \in L) \} 
 
     .. math::
 
@@ -292,7 +292,7 @@ Limitations
 
     A :ref:`Limitation <palindromics-definition-1-3-5>`, though notationally complex, can be understood as shorthand for the iterated concatenation of words and Delimiters. is the presence of the Delimiter in the Induction clause. In other words, a Limitation inserts Delimiters inbetween each Word in the Lexicon over which the index is ranging.
 
-**Example** Let :math:`L = L_english`. Consider calculating the Limitation of the following Phrase,
+**Example** Let :math:`L = L_{\text{english}}`. Consider calculating the Limitation of the following Phrase,
 
 .. math::
 
@@ -410,19 +410,17 @@ This subsection closes with a definition that will be used to quantify a theorem
              \{ (1, \text{matata}), (2, \text{hakuna}) \}, \\ 
              \{ (1, \text{matata}), (2, \text{matata}) \} \}
 
-.. TODO: fix the permutations here and stop being lazy
 
 .. math::
 
     L_3 = \{ \{ (1, \text{hakuna}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\
-             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \},  \\
-             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\ 
-             \{ (1, \text{matata}), (2, \text{matata}), (3, \text{hakuna}) \}, \\
-             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \},  \\
-             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\ 
-             \{ (1, \text{matata}), (2, \text{matata}), (3, \text{hakuna}) \}, \\
-             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \},  \\
-             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \} \}
+             \{ (1, \text{hakuna}), (2, \text{hakuna}), (3, \text{matata}) \},  \\
+             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{hakuna}) \}, \\ 
+             \{ (1, \text{hakuna}), (2, \text{matata}), (3, \text{matata}) \},  \\
+             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{hakuna}) \}, \\
+             \{ (1, \text{matata}), (2, \text{hakuna}), (3, \text{matata}) \},  \\
+             \{ (1, \text{matata}), (2, \text{matata}), (3, \text{hakuna}) \}, \\ 
+             \{ (1, \text{matata}), (2, \text{matata}), (3, \text{matata}) \} \}
              
 .. math::
 

@@ -10,11 +10,11 @@ However, the vast majority of Palindromes in any language are not pure involutio
 
 .. math::
 
-    \zeta = \text{"now sir a war is won"}
+    \zeta = \text{now sir a war is won}
 
 .. math::
 
-    {\zeta}^{-1} = \text{"now si raw a ris won"}
+    {\zeta}^{-1} = \text{now si raw a ris won}
 
 In order to properly understand the nature of a Palindrome, the system requires a method of quantifying the distribution of Delimiters in a Sentence and making claims about the structure of that distribution. Furthermore, it must have a method of removing the "*impurities*" in Delimiter distributions that are introduced through inversion.
 

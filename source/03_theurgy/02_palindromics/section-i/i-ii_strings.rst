@@ -345,7 +345,7 @@ Canonization
 
 .. topic:: Definition 1.2.6: Canonization
 
-    Let :math:`s \in S` such that :math:`s = uv` with :math:`u \in S` and `v \in \Sigma_e`. The Canonization of :math:`s`, denoted :math:`\pi(s)`, is defined inductively using the following schema,
+    Let :math:`s \in S` such that :math:`s = uv` with :math:`u \in S` and :math:`v \in \Sigma_e`. The Canonization of :math:`s`, denoted :math:`\pi(s)`, is defined inductively using the following schema,
 
     - Basis:
         - :math:`\pi(\varepsilon) = \varepsilon`
@@ -687,7 +687,7 @@ Concatenating the results,
 
 .. math::
 
-    s2 = {s_1}^{-1} = \mathfrak{cba}
+    s_2 = {s_1}^{-1} = \mathfrak{cba}
 
 ∎
 
