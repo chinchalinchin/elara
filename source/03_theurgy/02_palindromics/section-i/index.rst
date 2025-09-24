@@ -1,8 +1,8 @@
 .. _palindromics-section-i:
 
-===============================
-Section I: Language and Corpora
-===============================
+=============================
+Section I: Language & Corpora
+=============================
 
 The goal of Section I is to establish the hierarchy of logical relations that govern Strings, Characters, Alphabets, Words, Languages, Sentences and Corpora. As each of these entities is introduced and defined, a new level of relations will be revealed and codified. Palindromic symmetries will manifest on each level, in slightly different but related forms. Each type of symmetry will involve, in some form or another, the concept of :ref:`String Inversion <palindromics-string-inversion>`, to be defined shortly. 
 

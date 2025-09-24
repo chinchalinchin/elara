@@ -41,7 +41,7 @@ However, due to the inescapable circle of having to represent the operation of c
 
 In the course of :ref:`Section I <palindromics-section-i>`, the operation of canonization, ":math:`\pi(s)`", will be discussed in detail. For the current purposes, it suffices to think of ":math:`\pi(s)`" as function that strips *the name of the string* of empty characters and produces the *canonical* form of a string. The set of all canonical strings is then isomorphic to the *physical* strings it represents. 
 
-The metamathematical properties of canonical strings are therefore *physical* properties of the strings they represent. For this reason, the formalization and the objectification intersect. The properties of canonical strings in a formal system are exactly the properties exhibited by strings in the model which satisfies the formalization.
+The metamathematical properties of canonical strings are therefore *physical* properties of the strings they represent. For this reason, the formalization and the objectification intersect. The properties of canonical strings in a formal system are exactly the properties exhibited by strings in the model which satisfies the formalization. [#3]_
 
 Consider how the process of *identifying* physical strings as inverses actually occurs in the instances of "*emit*" and "*time*". One starts by recognizing "*e*" in "*emit*" and "*e*" in "*time*" occupy mirror positions in their respective sequence of characters, that is,
 
@@ -63,7 +63,7 @@ This can be seen from another angle. From a logical perspective, inversion is fu
 
     ((\iota)t)^{R} = ((t)^{R})(\iota)
 
-Which illustrates that inversion is simply an instruction to concatenate its input in a certain order. The basis clause of concatenation, ":math:`s = {\varepsilon}{s}`", a standard definition, implicitly involves stripping as string of its empty characters, meaning once the output of concatenation has been assigned it no longer bares any ":math:`\varepsilon`", i.e. has property ":math:`\varepsilon`-free". It is this property that allows expressions such as ":math:`s = {\varepsilon}{s}`", for the right hand side is simply a *name* of the left hand side. [#3]_
+Which illustrates that inversion is simply an instruction to concatenate its input in a certain order. The basis clause of concatenation, ":math:`s = {\varepsilon}{s}`", a standard definition, implicitly involves stripping as string of its empty characters, meaning once the output of concatenation has been assigned it no longer bares any ":math:`\varepsilon`", i.e. has property ":math:`\varepsilon`-free". It is this property that allows expressions such as ":math:`s = {\varepsilon}{s}`", for the right hand side is simply a *name* of the left hand side. [#4]_
 
 The expression
 
@@ -73,9 +73,8 @@ The expression
 
 must therefore be attended to with careful scrutiny. The inversion is **not** being applied to the literal string ":math:`\mathfrak{ab}\varepsilon`", for this quantity is a formal entity, as evidenced by the presence of ":math:`\varepsilon`" within it. The inversion does not operate on *formal entities*, it operates on the *objects* to which they refer. Therefore, inversion does **not** apply to the domain ":math:`S`". 
 
-The typical recursive definition of inversion, while rigorous and correct, obscures this fact by seeming to imply through its basis clause the result of an inversion may be an empty string. However, execution of the algorithm reveals it is hiding the removal of ":math:`\varepsilon`" through concatenation.
+The typical recursive definition of inversion, while rigorous and correct, obscures this fact by seeming to imply through its definition that it *operates* on strings containing empty characters. However, execution of the algorithm reveals it is hiding the removal of ":math:`\varepsilon`" through concatenation.
 
-.. No, not quite. the standard definition implies through the induction clause and concatenation that it does not operate on empty strings, because the concatenation implicitly removes it before it gets to the inversion "function call".
 
 Consider ":math:`\mathfrak{a}^{-1}`". By the induction hypothesis, it is required to express this string as a concatenation, :math:`s = ({a}{\varepsilon})`, so the definition may recursively call the basis clause to end its "function call". Indeed,
 
@@ -89,7 +88,7 @@ And the quantity ":math:`\varepsilon^{-1}`" ends the recursion by yielding ":mat
 
     \mathfrak{a}
 
-However, it should be noted this is a purely formal process. It describes the structural and metamathematical properties of strings. It is the *bookkeeping* mechanism that formalizes the object-level operation of inversion. 
+However, it should be noted this is a purely formal process. It describes the structural and metamathematical properties of strings. It is a *bookkeeping* mechanism used to formalize the object-level operation of inversion. The ":math:`\varepsilon`" that migrates through the concatenation is the formal syntax of inversion, not a physical component of the inverted string.
 
 .. IN PROGRESS
 
@@ -97,4 +96,6 @@ However, it should be noted this is a purely formal process. It describes the st
 
 .. [#2] It should go without saying this is an artifact of the decimal representation of numbers. A different base would correspond to different addition rules, e.g. ":math:`5 + 5 = A`" in hexidecimal notation. However, the structural feature of ":math:`0`" exists in all bases, e.g. ":math:`\exists 0: x + 0 = x`" is true regardless of the physical and literal form of the algebraic abstraction ":math:`x`". This is roughly analogous to ":math:`\varepsilon`" and ":math:`\mathfrak{a}`"; the former represent a structural feature of concatenated sequences whereas the latter corresponds to a physical character within the alphabet, i.e. the "base" of the system of concatenation. Regardless of the language and alphabet, the logical structure of concatenated expressions requires a metamathematical term to play the role of identity, e.g. ":math:`\varepsilon`", whereas the characters, e.g. ":math:`\frak{a}`", are symbolic representations of physical entities.
 
-.. [#3] One should **not** conclude from this the left hand side is a literal string and this expression has the form of a definition, i.e. "*name = definition*". In fact, ":math:`s`" is also a *name*; it the *canonical* name of the string on the right hand-side. ":math:`s = {\varepsilon}{s}`" is an expression that identifies two different *names* (*references*) as pointing to the same *object* (*referent*).
+.. [#3] One is tempted here to draw an analogy to the natural and real numbers. One never *perceives* the domain :math:`S`, only the inscribed elements of it image :math:`\mathbb{S}`, the set of canonical strings. In the same way, one never perceives the domain :math:`\mathbb{R}`, instead encountering numbers through physically distinct instances that are united by their being the same (or *possessing a common property*).  
+
+.. [#4] One should **not** conclude from this the left hand side is a literal string and this expression has the form of a definition, i.e. "*name = definition*". In fact, ":math:`s`" is also a *name*; it the *canonical* name of the string on the right hand-side. ":math:`s = {\varepsilon}{s}`" is an expression that identifies two different *names* (*references*) as pointing to the same *object* (*referent*).

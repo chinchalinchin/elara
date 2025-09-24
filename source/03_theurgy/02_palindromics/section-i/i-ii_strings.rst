@@ -12,11 +12,11 @@ Section I.II: Strings
 
 .. topic:: Axiom 0: Empty
 
-    An Empty Character exists.
+    The Empty Character exists.
 
     .. math::
 
-        \exists s \in S: s = \varepsilon 
+        \exists! s \in S: s = \varepsilon 
 
 .. note::
 
@@ -300,9 +300,39 @@ Containment
 
         \forall s \in S: \varepsilon \subset_s s
 
-.. note::
+**Proof** Follows directly from the definition of :ref:`Concatenation <palindromics-definition-1-2-1>` and the definition of :ref:`Containment <palindromics-definition-1-2-5>` with :math:`u = \varepsilon` and :math:`v = \varepsilon`.
 
-    This is another standard theorem in formal theory of strings. See :ref:`Appendix, Omitted Proofs <palindromics-appendix-i-ii>` for a proof.
+∎
+
+.. NOTE: had to insert these theorems. Everything needs renumbered around them.
+
+.. _palindromics-theorem-x-x-x:
+
+.. topic:: Theorem x.x.x
+
+    If any Character :math:`\iota` is contained in :math:`uv`, then :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`.
+
+    .. math::
+
+        \forall \iota \in \Sigma_e: \forall u, v \in S: (\iota \subset_s uv) \implies (s \subset_s u) \lor (s \subset_s v)
+
+**Proof** Let :math:`\iota \in \Sigma_e`: Let :math:`u,v \in S`. Since :math:`uv` is a non-overlapping sequence of Characters and :math:`\iota \subset_s uv`, it follows from the laws of logic that it must be the case that either :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`. 
+
+∎
+
+.. _palindromics-theorem-x-x-y:
+
+.. topic:: Theorem x.x.y
+
+    If any Character :math:`\iota` is not contained in :math:`u` and :math:`iota` is not contained in :math:`v`, then :math:`\iota` is not contained in :math:`uv`.
+
+    .. math::
+
+        \forall \iota \in \Sigma_e: \forall u, v \in S: (\neg(\iota \subset_s u) \land \neg(\iota \subset_s v)) \implies \neg(\iota \subset_s uv)
+
+**Proof** Follows directly from :ref:`Theorem x.x.x <palindromics-theorem-x-x-x>` by the law of contraposition.
+
+∎
 
 .. _palindromics-canonization:
 

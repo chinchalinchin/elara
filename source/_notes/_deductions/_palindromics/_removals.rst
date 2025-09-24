@@ -1159,3 +1159,45 @@ Therefore, the equivalence is established. Summarizing and generalizing,
 It is important to understand that :ref:`Theorem 1.2.7 <palindromics-theorem-1-2-6>` is a *logical* implication, not a *physical* equivalence. In the current system, :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is logically equivalent to :math:`\mathfrak{ab}`. The inscription :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is to be undertsood as an instruction to perform the indicated concatenation, not as the *physical inscription of the String*. In other words, :math:`\varepsilon` plays the logical role of identity. In the same way :math:`1 + 0` is an arithmetical expression that is the literal value of one, :math:`\mathfrak{a}\varepsilon\mathfrak{b}` is a String expression that is the literal value of two concatenated Characters, represented formally by :math:`\mathfrak{a}` and :math:`\mathfrak{b}`. 
 
     This is an extremely subtle point. The formal theory of Strings intersects with the primitive foundation of logic in this regard, and it must be kept in mind when interpretting this theorem the metamathematical separation between object-level langauge and meta-level language. The symbolic representation of concatenation is a literal concatenation of Characters, e.g. :math:`st`, an expression representing the result of a Concatenation, is a literal Concatenation of the Characters in English :math:`s` and :math:`t`. Thus, one must be careful not to confuse the symbol :math:`\mathfrak{a}\varepsilon\mathfrak{b}` for the String it represents.
+
+
+
+
+
+
+
+Then, by the :ref:`definition of Containment <palindromics-definition-1-2-5>`, for some :math:`u,v`, possibly Empty,
+
+.. math::
+
+    s = (u)(\sigma)(v)
+
+By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
+
+.. math::
+
+    s^{-1} = (v^{-1})(\sigma^{-1})(u^{-1})
+
+By the :ref:`definition of String Inversion <palindromics-definition-1-2-5>` and the fact :math:`l(\sigma) = 1`, it follows :math:`\sigma^{-1} = \sigma`. Therefore,
+
+.. math::
+
+    s^{-1} = (v^{-1})(\sigma)(u^{-1})
+
+Consider :math:`\varsigma(s^{-1})`. Apply the Induction clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`, 
+
+.. math::
+
+    \varsigma(s^{-1}) = \varsigma((v^{-1})(u^{-1}))
+
+Consider :math:`\varsigma(s)`. By the Induction clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`, 
+
+.. math::
+
+    \varsigma(s) = \varsigma(uv)
+
+By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
+
+.. math::
+
+    (\varsigma(s))^{-1} = (\varsigma(uv))^{-1}

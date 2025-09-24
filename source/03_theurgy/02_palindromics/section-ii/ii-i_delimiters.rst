@@ -84,11 +84,18 @@ Putting the recursion together,
 Properties
 ----------
 
-All of these properties follow from the :ref:`definition of Delimiter Counts <palindromics-definition-2-1-1>` and the indicated axioms.
+.. note::
+
+    All of these properties follow from the :ref:`definition of Delimiter Counts <palindromics-definition-2-1-1>` and the indicated axioms, and they are quantified over their respective domains.
 
 1. From the definition itself: :math:`\Delta(\sigma) = 1`
-2. From the :ref:`Discovery Axiom <palindromics-axiom-iv>`: :math:`\forall \alpha \in L: \Delta(\alpha) = 0`
-3. From the :ref:`definition of Canonization <palindromics-definition-1-2-6>`: :math:`\forall s \in S: \Delta(\pi(s)) = \Delta(s)`
+2. From the :ref:`Discovery Axiom <palindromics-axiom-iv>`: :math:`\Delta(\alpha) = 0`
+3. From the :ref:`definition of Canonization <palindromics-definition-1-2-6>`: :math:`\Delta(\pi(s)) = \Delta(s)`
+4. From the :ref:`definition of Containment <palindromics-definition-1-2-5>` :math:`\Delta(s) = 0 \equiv \neg(\sigma \subset_s s)`
+
+.. note::
+
+    Due to property #4, the formal system now has two equivalent ways of expressing the property "*has no Delimiters*". See the passage directly after :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>` for a more detailed discussion.
 
 .. _palindromics-delimiter-count-theorems:
 
@@ -273,7 +280,7 @@ Thus, putting everything together,
 
 .. topic:: Theorem 2.1.4
     
-    The number of Delimiters in two concatenated Strings is equal to the sum of the number of Delimiters in each individual String.
+    The number of Delimiters in two Concatenated Strings is equal to the sum of the number of Delimiters in each individual String.
 
     .. math::
 
@@ -283,13 +290,13 @@ Let :math:`s,t \in S`. Then, by :ref:`Concatenation <palindromics-definition-1-2
 
 ∎
 
-The next theorem establishes an important property that will manifest in the study of palindromics pivots.
+The next theorem establishes an important property that will be essential in the study of palindromic parity.
 
 .. _palindromics-theorem-2-1-5:
 
 .. topic:: Theorem 2.1.5
 
-    If a canonical String is equal to its own inverse and has an odd Delimiter Count, then its central Character is a Delimiter. 
+    If a Canonical String is equal to its own Inverse and has an odd Delimiter Count, then its central Character is a Delimiter. 
 
     .. math::
 
@@ -328,3 +335,356 @@ Therefore, the Character at :math:`j` in :math:`s` must be a Delimiter. Summariz
     \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n +1 ) \land (s = s^{-1})) \implies s[\frac{l(s)+1}{2}] = \sigma
 
 ∎
+
+.. note::
+
+    An interesting corollary to :math:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` is established in the next theorem. This shows the parity of a Canonical String can be inferred from its invertibility and the parity of its Delimter Count.
+
+.. _palindromics-theorem-2-1-6:
+
+.. topic:: Theorem 2.1.6 
+
+    If a Canonical String is equal to its own Inverse and has an odd number of Delimiters, then its String Length must be odd.
+
+    .. math::
+
+        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\exists i \in N_{l(s)}: l(s) = 2i - 1)
+
+**Proof** Let :math:`s \in \mathbb{S}`. Assume :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}`. Assume :math:`s = s^{-1}`. By :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`,
+
+.. math::
+
+    s[\frac{l(s)+1}{2}] = \sigma
+
+Therefore, 
+
+.. math::
+
+    \exists i \in N_{l(s)}: i = \frac{l(s) + 1}{2}
+
+Which is equivalent to,
+
+.. math::
+
+    \exists i \in N_{l(s)}: l(s) = 2i - 1
+
+∎
+
+.. note::
+
+    As will be shown over the course of the next theorems, the parity of the Delimter Count of a String is a *sufficient*, but not *necessary*, condition for the parity of its String Length.
+
+    In other words, knowing an Invertible String has an odd number of Delimiters is sufficient for concluding its String Length is odd. However, an Invertible String which has an odd String Length does not necessarily have an odd number of Delimiters.
+
+    In fact, this logic generalizes to *any* Alphabetic Character. If *any* Alphabetic Character occurs within a invertible Canonical String an odd number of times, then that is sufficient for concluding the String has an odd String Length.
+
+.. important::
+
+    :ref:`Theorem 2.1.5 <palindromics-theorem-1-2-5>` and :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>` apply to *all* Strings in :math:`S`. However, the analogue for even Delimiter counts must be restricted to a special subdomain of :math:`S` where the Delimiter structure is regular, i.e. the *Dialect* of a Language, :math:`D`. 
+
+    Moreover, the direct analogue of :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` requires the introduction of a key palindromic structural element, the *Pivot Character*, and the formal proof of a few of its key properties.
+
+.. _palindromics-pivots:
+
+Pivots
+------
+
+.. _palindromics-definition-2-1-2:
+
+.. topic:: Definition 2.1.2: Pivot Characters
+
+    Let :math:`s \in S`.
+
+    The Left Pivot Character of :math:`s`, denoted :math:`\overrightarrow{\omega_s}`, is defined as the Character :math:`s[\overrightarrow{i}]`, where :math:`\overrightarrow{i}` is called the *Left Pivot Index*, which satisies the following conditions,
+
+    1. If :math:`l(s)` is odd, then :math:`\overrightarrow{i} = \frac{l(s) + 1}{2}`
+    2. If :math:`l(s)` is even, then :math:`\overrightarrow{i} = \frac{l(s)}{2}` 
+
+    The Right Pivot, denoted :math:`\overleftarrow{\omega_s}`, is defined as the Character :math:`s[\overleftarrow{i}]`, where :math:`\overleftarrow{i}` is called the *Right Pivot Index*, which satisfies the following conditions,
+
+    1. If :math:`l(s)` is odd, then :math:`\overleftarrow{i} = \frac{l(s) + 1}{2}`
+    2. If :math:`l(s)` is even, then :math:`\overleftarrow{i} = \frac{l(s) + 2}{2}` 
+
+    The *Pivot*, denoted :math:`\omega_s`, is defined as the Character which satisfies the following conditions,
+
+    1. If :math:`\overleftarrow{\omega_s} = \overrightarrow{\omega_s}`, then :math:`\omega_s = \overleftarrow{\omega_s} = \overrightarrow{\omega_s}`
+    2. If :math:`\overleftarrow{\omega_s} \neq \overrightarrow{\omega_s}`, then :math:`\omega_s = \varepsilon`
+
+**Example** Let :math:`ᚠ = \text{strap on no parts}`. Then :math:`l(ᚠ) = 17`.
+
+Thus, since :math:`l(ᚠ) = 17` is odd,
+
+- *Left Pivot Index*: :math:`\overrightarrow{i} = \frac{17 + 1}{2} = 9`
+- *Right Pivot Index*: :math:`\overleftarrow{i} = \frac{17 + 1}{2} = 9`
+- *Left Pivot Character*: :math:`\overrightarrow{\omega_{ᚠ}} = ᚠ[9] = \sigma`
+- *Right Pivot Character*: :math:`\overleftarrow{\omega_{ᚠ}} = ᚠ[9] = \sigma`
+- *Pivot*: :math:`\omega_{ᚠ} =  ᚠ[9] = \sigma`
+
+∎
+
+**Example** Let :math:`ᚠ = \text{no noon on}`. Then `l(ᚠ)= 10`.
+
+Thus, since :math:`l(ᚠ)= 10` is even,
+
+- *Left Pivot Index*: :math:`\overrightarrow{i} = \frac{10}{2} = 5`
+- *Right Pivot Index*: :math:`\overleftarrow{i} = \frac{10 + 2}{2} = 6`
+- *Left Pivot Character*: :math:`\overrightarrow{\omega_{ᚠ}} = ᚠ[5] = \text{o}`
+- *Right Pivot Character*: :math:`\overleftarrow{\omega_{ᚠ}} = ᚠ[6] = \text{o}`
+- *Pivot*: :math:`\omega_{ᚠ} = \text{o}`
+
+∎
+
+**Example** Let :math:`ᚠ = \text{draw no dray a yard onward}`. Then `l(ᚠ)= 26`.
+
+Thus, since :math:`l(ᚠ)= 26` is even,
+
+- *Left Pivot Index*: :math:`\overrightarrow{i} = \frac{26}{2} = 13`
+- *Right Pivot Index*: :math:`\overleftarrow{i} = \frac{26 + 2}{2} = 14`
+- *Left Pivot Character*: :math:`\overrightarrow{\omega_{ᚠ}} = ᚠ[13] = \sigma`
+- *Right Pivot Character*: :math:`\overleftarrow{\omega_{ᚠ}} = ᚠ[14] = \text{a}`
+- *Pivot*: :math:`\omega_{ᚠ} = \varepsilon`
+
+∎
+
+.. note::
+
+    From the previous examples, it should be clear a Pivot of a String is a Empty Character if and only if its String Length is even. However, if a Pivot is a non-Empty Character, then it cannot be concluded whether the String Length is odd or even.
+
+    However, it should be clear that if a Pivot is non-Empty, it imposes certain structural constraints on the String. These structural constraints will be more fully elaborated in the next series of theorems.
+
+.. _palindromics-theorem-2-1-7:
+
+.. topic:: Theorem 2.1.7
+
+    .. math::
+    
+        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
+
+**Proof**: Let :math:`s \in mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in mathbb{N}` and :math:`s = s^{-1}`. Then, by :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`,
+
+.. math::
+
+    \exists i: l(s) = 2i - 1
+
+Therefore, :math:`l(s)` is odd. By :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`,
+
+.. math::
+
+    \overrightarrow{\omega_s} = s[\frac{l(s) + 1}{2}]
+
+.. math::
+
+    \overleftarrow{\omega_s} = s[\frac{l(s) + 1}{2}]
+
+Thus,
+
+.. math::
+
+    \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+
+Summarizing and generalizing,
+
+.. math::
+
+    \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1)) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
+
+∎
+
+.. _palindromics-theorem-2-1-8:
+
+.. topic:: Theorem 2.1.8
+
+    .. math::
+
+        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies ((\overrightarrow{\omega_s} \neq \sigma) \land  (\overleftarrow{\omega_s} \neq \sigma))
+
+**Proof** The proof is similar to :ref:`Theoreom 2.1.5 <palindromics-theorem-2-1-5>`. Let :math:`s,t \in D` such that :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
+
+.. math::
+
+    P = \{ i \mid s[i] = \sigma \}
+
+Then :math:`\lvert P \rvert = \Delta(s) = 2n` by assumption.
+
+By :ref:`String Inversion <palindromics-definition-1-2-8>`,
+
+.. math::
+
+    t[i] = s[m - i + 1]
+
+There are two cases to consider, :math:`l(s)` is even or :math:`l(s)` is odd.
+
+.. EVEN CASE 
+
+:underline:`Case I`: :math:`l(s) = m` is even.
+
+Assume, for the sake of contradiction, :math:`s[\frac{l(s)}{2}] = s[\frac{m}{2}]= \sigma`. Then, every Delimiter must have a symmetric pair in :math:`P`.
+
+.. math::
+
+    t[i] = s[m - i  + 1]
+
+So, using :math:`i = \frac{m}{2}`
+
+.. math::
+
+    t[\frac{m}{2}] = s[\frac{m}{2} + 1]
+
+Therefore, 
+
+.. math::
+
+    s[\frac{m}{2}] = \sigma
+
+.. math::
+
+    s[\frac{m}{2} + 1] = \sigma
+
+That is, two consecutive Characters in :math:`s` are Delimiters. But this is impossible if :math:`s \in D`. Therefore, it must be the case :math:`s[\frac{l(s)}{2}] \neq \sigma`. Likewise, :math:`s[\frac{l(s)}{2} + 1] \neq \sigma`. Since :math:`l(s)` is even, by :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`,
+
+.. math::
+
+    s[\frac{l(s) + 1}{s}] = \overleftarrow{\omega_s}
+
+.. math::
+
+    s[\frac{l(s)}{2}] = \overrightarrow{\omega_s}
+
+It follows from this,
+
+.. math::
+
+    (\overleftarrow{\omega_s} \neq \sigma) \land (\overrightarrow{\omega_s} \neq \sigma)
+
+.. ODD CASE 
+
+:underline:`Case II`: :math:`l(s) = m` is odd. 
+
+By :ref:`Theorem 2.1.7 <palindromics-theorem-2-1-7>`,
+
+.. math::
+
+    \overrightarrow{\omega_s} = \overleftarrow{\omega_s} \quad \text{ (1) }
+
+Where, by :ref:`definition of Pivots <palindromics-definition-2-1-2>`,
+
+.. math::
+    
+    \omega_s = \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+
+.. math::
+
+    \omega_s = s[\frac{l(s) + 1}{2}]
+
+Assume, for the sake of contradiction, :math:`\omega_s = \sigma`. Then, by :ref:`Containment <palindromics-definition-1-2-5>`
+
+.. math::
+
+    s = (u)(\sigma)(v)
+
+From the :ref:`definition of Delimiter Count <palindromics-definition-2-1-1>`,
+
+.. math::
+
+    \Delta(s) = \Delta(u) + \Delta(v) + 1 = \Delta(uv) + 1
+
+Where the last equality follows from :ref:`Theorem 2.1.4 <palindromics-theorem-2-1-4>`. Thus, since :math:`\Delta(s)` is even, the number of Delimiters in :math:`uv` is odd,
+
+.. math::
+
+    \Delta(uv) = 2n - 1
+
+Furthermore, by repeated application of :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`
+
+.. math::
+
+    l(s) = l(u) + l(\sigma) + l(v) = l(u) + l(v) + 1 = l(uv) + 1
+
+Thus,
+
+.. math::
+    
+    l(uv) = l(s) - 1 = m - 1 \quad \text{ (2) }
+ 
+From which it follows :math:`l(uv)` is even.
+
+By repeated application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`
+
+.. math::
+
+    s^{-1} = ((u)(\sigma)(v))^{-1} = (v^{-1})(\sigma^{-1})(u^{-1})
+
+By assumption, :math:`s = s^{-1}`. Using :math:`\sigma^{-1} = \sigma`, the previous equation becomes,
+
+.. math::
+
+    (u)(\sigma)(v) = (v^{-1})(\sigma)(u^{-1})
+
+Note :math:`\sigma` in :math:`(u)(\sigma)(v)` occupies the same Character Index as the :math:`\sigma` in :math:`(v^{-1})(\sigma)(u^{-1})`, since :math:`\omega_s = s[\frac{l(s) + 1}{2}] = \sigma` and :math:`\omega_{s^{-1}} = s[\frac{l(s) + 1}{2}] = \sigma`. By the Left and Right Cancellation property of :ref:`Equality Axiom <palindromics-axiom-ii>`, it follows,
+
+.. math::
+
+    u = v^{-1}
+
+And 
+
+.. math::
+
+    v = u^{-1}
+
+Therefore,
+
+.. math::
+
+    uv = (v^{-1})(u^{-1}) = (uv)^{-1}
+
+Now, consider what has been shown of :math:`uv`. :math:`\Delta(uv) = 2n - 1` and :math:`uv = (uv)^{-1}`. By :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`, this implies 
+
+.. math::
+
+    \exists j: l(uv) = 2j - 1
+
+But this contradicts (2), which states :math:`l(uv)` is even, which in turn followed directly from the assumption :math:`l(s)` is odd. Therefore, the only possibility is :math:`\omega_s \neq \sigma`. Therefore, from (1),
+
+.. math::
+
+    \overleftarrow{\omega_s} \neq \sigma
+
+.. math::
+
+    \overrightarrow{\omega_s} \neq \sigma
+
+∎
+
+.. .......................... IN PROGRESS ...................................
+.. ..........................................................................
+.. ..........................................................................
+
+.. _palindromics-theorem-2-1-9:
+
+.. topic:: Theorem 2.1.9
+
+    .. math::
+
+        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow(\omega_s)
+
+
+.. NOTE: BE EXCEEDINGLY CAREFUL WITH QUANTIFICATIONS IN NEXT THEOREMS.
+
+.. THEOREM
+
+.. (s = s^{-1})) \implies (\overleftarrow{\omega_s} = \overrightarrow{\omega_s})
+
+.. Either :math:`Delta(s)` is odd or it is even. If it is odd, by Theorem (), conclusion follows. If it is even, then by Theorem (), conclusion follows.
+
+.. THEOREM
+
+.. (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
+
+.. By previous theorem and definition of pivots.
+
+.. THEOREM
+
+.. \omega_s = \varepsilon \implies s \neq s^{-1}
+
+.. By contraposition of previous theorem.
