@@ -78,7 +78,7 @@ Definitions
 15. :ref:`Definition 1.4.2: Word Indices <palindromics-definition-1-4-2>`: :math:`\zeta[[i]]`
 16. :ref:`Definition 1.4.3: Invertible Sentences <palindromics-definition-1-4-3>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in C`
 17. :ref:`Definition 2.1.1: Delimiter Count <palindromics-definition-2-1-1>`: :math:`\Delta(s)`
-18. :ref:`Definition 2.1.2: Pivot Characters <palindromics-definition-2-1-2>`: :math:`\overleftarrow(\omega_s), \overrightarrow(\omega_s)`
+18. :ref:`Definition 2.1.2: Pivot Characters <palindromics-definition-2-1-2>`: :math:`\overleftarrow{\omega_s}, \overrightarrow{\omega_s}, \omega_s`
 19. :ref:`Definition 2.2.1: σ-Reduction <palindromics-definition-2-2-1>`: :math:`\varsigma(s)`
 
 .. _palindromics-axioms:
@@ -122,7 +122,7 @@ Theorems
 19. :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`: :math:`\Lambda((s)(\sigma)(t)) = \Lambda(s) + \Lambda(t)`
 20. :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-6>`: :math:`C \subseteq D`
 21. :ref:`Theorem 1.4.7 <palindromics-theorem-1-4-7>`: :math:`\Lambda((\zeta)(\sigma)(\xi)) = \Lambda(\zeta) + \Lambda(\xi)`
-22. :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>`: :math:`C \subset \mathbb{S}`
+22. :ref:`Theorem 1.4.8 <palindromics-theorem-1-4-8>`: :math:`C \subseteq \mathbb{S}`
 23. :ref:`Theorem 1.4.9 <palindromics-theorem-1-4-9>`: :math:`\zeta \in K \equiv {\zeta}^{-1} \in K`
 24. :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
 25. :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`: :math:`\zeta \in K \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
@@ -133,11 +133,13 @@ Theorems
 30. :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`: :math:`((\Delta(s) = 2n +1) \land (s = s^{-1})) \implies (s[\frac{l(s)+1}{2}] = \sigma)`
 31. :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`: :math:`((\Delta(s) = 2n + 1) \land (s = s^{-1})) \implies \exists i: l(s) = 2i - 1`
 32. :ref:`Theorem 2.1.7 <palindromics-theorem-2-1-7>`: :math:`((\Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})`
-33. :ref:`Theorem 2.1.8 <palindromics-theorem-2-1-8>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies ((\overrightarrow{\omega_s} \neq \sigma) \land (\overleftarrow(\omega_s) \neq \sigma))`
-34. :ref:`Theorem 2.1.9 <palindromics-theorem-2-1-9>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow(\omega_s)`
-35. :ref:`Theorem 2.2.1 <palindromics-theorem-2-2-1>`: :math:`\varsigma(st) = (\varsigma(s))(\varsigma(t))`
-36. :ref:`Theorem 2.2.2 <palindromics-theorem-2-2-2>`: :math:`\Delta(s) = 0 \equiv \varsigma(s) = s`
-37. :ref:`Theorem 2.2.3 <palindromics-theorem-2-2-3>`: :math:`(\varsigma(s))^{-1} = \varsigma(s^{-1})`
-38. :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`: :math:`\varsigma(\varsigma(s)) = \varsigma(s)`
-39. :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`: :math:`s \subset_s t \equiv \varsigma(s) \subset_s \varsigma(t)`
-40. :ref:`Theorem 2.2.6 <palindromics-theorem-2-2-6>`: :math:`\zeta[[i]] \subset_s \varsigma(\zeta)`
+33. :ref:`Theorem 2.1.8 <palindromics-theorem-2-1-8>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies ((\overrightarrow{\omega_s} \neq \sigma) \land (\overleftarrow{\omega_s} \neq \sigma))`
+34. :ref:`Theorem 2.1.9 <palindromics-theorem-2-1-9>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}`
+35. :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>`: :math:`(s = s^{-1}) \implies (\omega_s \neq \varepsilon)`
+36. :ref:`Theorem 2.1.11 <palindromics-theorem-2-1-11>`: :math:`(\omega_s = \varepsilon) \implies (s \neq s^{-1})`
+37. :ref:`Theorem 2.2.1 <palindromics-theorem-2-2-1>`: :math:`\varsigma(st) = (\varsigma(s))(\varsigma(t))`
+38. :ref:`Theorem 2.2.2 <palindromics-theorem-2-2-2>`: :math:`\Delta(s) = 0 \equiv \varsigma(s) = s`
+39. :ref:`Theorem 2.2.3 <palindromics-theorem-2-2-3>`: :math:`(\varsigma(s))^{-1} = \varsigma(s^{-1})`
+40. :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`: :math:`\varsigma(\varsigma(s)) = \varsigma(s)`
+41. :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`: :math:`s \subset_s t \equiv \varsigma(s) \subset_s \varsigma(t)`
+42. :ref:`Theorem 2.2.6 <palindromics-theorem-2-2-6>`: :math:`\zeta[[i]] \subset_s \varsigma(\zeta)`

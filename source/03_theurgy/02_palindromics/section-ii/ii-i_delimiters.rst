@@ -547,7 +547,7 @@ That is, two consecutive Characters in :math:`s` are Delimiters. But this is imp
 
 .. math::
 
-    s[\frac{l(s) + 1}{s}] = \overleftarrow{\omega_s}
+    s[\frac{l(s) + 2}{2}] = \overleftarrow{\omega_s}
 
 .. math::
 
@@ -659,19 +659,15 @@ But this contradicts (2), which states :math:`l(uv)` is even, which in turn foll
 
 ∎
 
-.. .......................... IN PROGRESS ...................................
-.. ..........................................................................
-.. ..........................................................................
-
 .. _palindromics-theorem-2-1-9:
 
 .. topic:: Theorem 2.1.9
 
     .. math::
 
-        \forall s \in D: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
 
-**Proof** Let :math:`s \in D` such that :math:`s = s^{-1}`. Let :math:`t \in D` such :math:`t = s^{-1}` and :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
+**Proof** Let :math:`s \in \mathbb{S}` such that :math:`s = s^{-1}`. Let :math:`t \in D` such :math:`t = s^{-1}` and :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
 
 .. math::
 
@@ -743,22 +739,78 @@ Plugging in values,
 
     t[\frac{m}{2} +1] = s[\frac{m}{2}]
 
-.. NOTE: BE EXCEEDINGLY CAREFUL WITH QUANTIFICATIONS IN NEXT THEOREMS.
+Using the assumption :math:`s = t`, it follows,
 
-.. THEOREM
+.. math::
 
-.. (s = s^{-1})) \implies (\overleftarrow{\omega_s} = \overrightarrow{\omega_s})
+    s[\frac{m}{2} + 1] = s[\frac{m}{2}]
 
-.. Either :math:`Delta(s)` is odd or it is even. If it is odd, by Theorem (), conclusion follows. If it is even, then by Theorem (), conclusion follows.
+Therefore,
 
-.. THEOREM
+.. math::
 
-.. (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
+    \overleftarrow{\omega_s} = \overrightarrow{\omega_}
 
-.. By previous theorem and definition of pivots.
+.. ODD CASE 
 
-.. THEOREM
+:underline:`Case I`: :math:`l(s) = m` is odd.
 
-.. \omega_s = \varepsilon \implies s \neq s^{-1}
+This follows directly from the :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`. Therefore, both cases are established. Summarizing and generalizing,
 
-.. By contraposition of previous theorem.
+.. math::
+
+    \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+
+∎
+
+.. _palindromics-theorem-2-1-10:
+
+.. topic:: Theorem 2.1.10 
+
+    If a Canonical String is equal to its own Inverse, then its Pivot is non-empty.
+    
+    .. math::
+
+        \forall s \in \mathbb{S}: (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
+
+**Proof** Let :math:`s \in \mathbb{S}` such that :math:`s = s^{-1}`. 
+
+By the laws of arithmetic, either :math:`\Delta(s)` is odd or it is even. 
+
+If :math:`\Delta(s)` is odd, then by :ref:`Theorem 2.1.7 <palindromics-theorem-2-1-7>`, 
+
+.. math::
+
+    \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+
+If :math:`\Delta(s)` is even, then by :ref:`Theorem 2.1.9 <palindromics-theorem-2-1-7>`,
+
+.. math::
+
+    \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+
+In either case, the conclusion follows. Thus, summarizing and generalizing,
+
+.. math::
+
+    \forall s \in \mathbb{S}: (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
+
+∎
+
+.. note::
+
+    :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` establishes that all invertible Strings in the Canon have a non-Empty Pivot. As an immediate corollary to this theorem, if a canonical String has an Empty Pivot, then it cannot be invertible.
+ 
+.. _palindromics-theorem-2-1-11:
+
+.. topic:: Theorem 2.1.11
+
+    If the Pivot of a Canonical String is Empty, then the String is not invertible.
+
+    .. math::
+
+        \forall s \in \mathbb{S}: \omega_s = \varepsilon \implies (s \neq s^{-1})
+
+**Proof** Follows immediately from :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` by the law of contraposition.
+
+∎

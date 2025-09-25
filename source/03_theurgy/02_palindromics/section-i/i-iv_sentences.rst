@@ -521,7 +521,7 @@ Therefore, by :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`,
 
     .. math::
 
-        C \subset \mathbb{S}
+        C \subseteq \mathbb{S}
 
 **Proof** Let :math:`\zeta \in C`. By :ref:`Theorem 1.4.3 <palindromics-theorem-1-4-3>`,
 
@@ -551,7 +551,7 @@ This is exactly the definition of subsets,
 
 .. math::
 
-    C \subset \mathbb{S}
+    C \subseteq \mathbb{S}
 
 ∎
 
