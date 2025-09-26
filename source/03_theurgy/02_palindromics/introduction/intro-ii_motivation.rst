@@ -7,11 +7,49 @@ Motivation
 
     The contents of this section are more for the author's benefit than the reader's. The nature of the formal system being constructed has forced the author to confront some of the basic notions that underlie the modern theory of strings and analyze them from a philsophical point of view. This section represents the author's attempt to provide an epistemological justification for the assumptions adopted within the system.
 
+    This part of the work is an attempt to explicate and clarify the mathematical foundations of the formal entity known as *strings*.
+
 Concatenation is unique within the domain of mathematics. Formal logic, as a method of inquiry, is wholly dependent on the ability to concatenate symbols in sequence to express complex and abstract logical relations. One cannot formalize concatenation without engaging in the act of "concatenating". This does not mean concatenation cannot be formalized, as evidenced by the mature fields of regular expressions and formal language theory. However, it *does* mean the formalization often obscures what is being formalized, as the formalization is itself an instance of the formalized.
+
+The work often slips into treating the formal entities within the system as the literal strings. Often, one operates as if ":math:`\mathfrak{a}`" were both the symbolic representation of a linguistic unit and the linguistic unit being symbolized, i.e. the first letter of the English alphabet. In other words, it is easy to leave unappreciated the fact ":math:`\mathfrak{a}`" and the physical inscription *a* are materially different in their purpose and use. This imprecision in terminology is at the heart of classical antimonies like `Richard's Paradox <http://en.wikipedia.org/wiki/Richard%27s_paradox>`_ and `Berry's Paradox <https://en.wikipedia.org/wiki/Berry_paradox>`_. 
+
+However, unlike the solution to these paradoxes which involve clearly separating metamathematics and mathematics into distinct domains, in the field of formal strings, there is an unavoidable circularity, since it is impossible for a string not to possess the property of representing itself. A string, as a concatenated series of character, is a representation of a concatenated series of characters. The very properties that imbue strings with their representative capacity are the subject of the formal theory of strings. Thus a string's representative capacity must be represented by its representative capacity, i.e. an sequence of characters "a", "b", "c" is represented as the literal sequence "abc".
+
+In an effort to avoid ambiguity and precisely elaborate , When a term in this section is denoted with a hat, e.g. :math:`\hat{\mathfrak{a}}`, this should be understood as the value assignment of the symbol. In other words, the hat serves the purpose of quotation marks.
+
+For instance, under the interpretation :math:`\hat{L} = L_{\text{English}}`, 
+
+.. math::
+
+    \hat{mathfrak{a}} = \text{a} 
+
+.. math::
+
+    \hat{mathfrak{b}} = \text{b}
+
+.. math::
+
+    ...
+
+.. math::
+
+    \hat{\varepsilon} = \varepsilon
+
+:math:`\hat{\varepsilon}` is the *name* of Empty Character within the formal system, i.e. the Empty Character. This may be replaced in all cases with :math:`\hat{\varepsilon}`. 
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
 
 What is meant by the formal expression ":math:`\mathfrak{a}\varepsilon\mathfrak{b}`"? And in what ways does this expression differ from the formal expression ":math:`\mathfrak{ab}`"? [#1]_ More fundamentally, what is meant by the singular formal entity, ":math:`\mathfrak{a}`" and what relation does it bear to the physical inscription *a*? 
 
-Often, one operates as if ":math:`\mathfrak{a}`" were both the symbolic representation of a linguistic unit and the linguistic unit being symbolized, i.e. the first letter of the English alphabet. In other words, it is easy to leave unappreciated the fact ":math:`\mathfrak{a}`" and the physical inscription *a* are materially different in their purpose and use. 
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
 
 This problem is reminiscent of the indefinablity of truth, discussed by Alfred Tarski in his landmark *On The Concept of Truth in Formalized Languages* published in 1933, where his examinations of the antimony
 
@@ -20,6 +58,15 @@ This problem is reminiscent of the indefinablity of truth, discussed by Alfred T
 led him to rigorously elaborate a structural definition of logical sentences, in which expressions about a language could be asserted and proven. Like Tarski advised in his construction, it is important to distinguish between the *name* of entity within a formal system, and the *entity* itself. Likewise, as the current formal system is developed, it important to keep the following in mind,
 
     ":math:`\mathfrak{a}`" is the name of *a*
+
+    :math:`\hat{\mathfrak{a}}` is the name of :math:`\mathfrak{a}`
+
+.. .................................................................................
+
+
+TODO
+
+.. .................................................................................
 
 The symbol ":math:`\mathfrak{a}`" is the logical abstraction assigned to the physical entity *a* **within the formal system**. It is a metamathematical object. Expressions within which it occurs do not occur within the same language about which it is making assertions.
 
@@ -90,7 +137,21 @@ And the quantity ":math:`\varepsilon^{-1}`" ends the recursion by yielding ":mat
 
 However, it should be noted this is a purely formal process. It describes the structural and metamathematical properties of strings. It is a *bookkeeping* mechanism used to formalize the object-level operation of inversion. The ":math:`\varepsilon`" that migrates through the concatenation is the formal syntax of inversion, not a physical component of the inverted string.
 
-.. IN PROGRESS
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
+
+In a perfectly rigorous development of a formal theory, no symbol can be introduced without being taken as primitive, or as a definition formed from simpler primitives. Formal string theory takes as its primitive symbol the Empty Character, :math:`\hat{\varepsilon}`, and as its primitive relation is equality, :math:`\hat{s} = \hat{t}`. The latter is a logical relation with two arguments that gives meaning to a class of expressions.
+
+Concatenation then uses equality to extends its meaning over a wider class of expressions. It gives meaning to the three place relation, :math:`\hat{s} = \hat{t}\hat{u}` for all possible values of :math:`t` and :math:`u` in the domain.
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
 
 .. [#1] Or :math:`\varepsilon\mathfrak{ab}`, or :math:`\mathfrak{ab}\varepsilon\varepsilon`, etc.? 
 

@@ -4,6 +4,11 @@
 Section II.II: Reductions
 =========================
 
+.. _palindromics-reduction-definition:
+
+Definition & Examples
+---------------------
+
 .. _palindromics-definition-2-2-1:
 
 .. topic:: Definition 2.2.1: σ-Reduction
@@ -255,9 +260,15 @@ Thus equivalence is established. Summarizing and generalizing,
     
     The next theorem is quantified over the :math:`\mathbb{S}`, **not** :math:`S`.
 
-.. _palindromics-theorem-2-2-3:
 
-.. topic:: Theorem 2.2.3
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+.. _palindromics-theorem-2-2-4:
+
+.. topic:: Theorem 2.2.4
 
     The Inverse of a Reduction is the Reduction of the Inverse. 
 
@@ -371,9 +382,9 @@ Thus, the induction is established. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-2-2-4:
+.. _palindromics-theorem-2-2-5:
 
-.. topic:: Theorem 2.2.4
+.. topic:: Theorem 2.2.5
 
     σ-Reductions are idempotent.
 
@@ -389,9 +400,9 @@ Thus, the induction is established. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-2-2-5:
+.. _palindromics-theorem-2-2-6:
 
-.. topic:: Theorem 2.2.5
+.. topic:: Theorem 2.2.6
 
     One String is contained in another if and only if their σ-Reductions are contained in one another.
 
@@ -421,7 +432,7 @@ Since :math:`\varsigma(u)` and :math:`\varsigma(v)` by the closure :ref:`propert
 
 .. important::
 
-    :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>` is a unidirectional implication, *not* an equivalence. Consider,
+    :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-6>` is a unidirectional implication, *not* an equivalence. Consider,
 
     .. math::
 
@@ -445,9 +456,9 @@ Since :math:`\varsigma(u)` and :math:`\varsigma(v)` by the closure :ref:`propert
 
 ◼︎
 
-.. _palindromics-theorem-2-2-6:
+.. _palindromics-theorem-2-2-7:
 
-.. topic:: Theorem 2.2.6
+.. topic:: Theorem 2.2.7
 
     Every Word in a Sentence is contained in its σ-Reduction.
 
@@ -455,7 +466,7 @@ Since :math:`\varsigma(u)` and :math:`\varsigma(v)` by the closure :ref:`propert
 
         \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \subset_s \varsigma(\zeta)
 
-**Proof** Let :math:`\zeta \in C`. Clearly :math:`\zeta[[i]] \subset_s \zeta` for any :math:`i \in N_{\Lambda(\zeta)}`. From this and :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`, it can be concluded,
+**Proof** Let :math:`\zeta \in C`. Clearly :math:`\zeta[[i]] \subset_s \zeta` for any :math:`i \in N_{\Lambda(\zeta)}`. From this and :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-6>`, it can be concluded,
 
 .. math::
 
@@ -481,3 +492,17 @@ Summarizing and generalizing,
     \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \subset_s \varsigma(\zeta)
 
 ◼︎
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+.. All Reductions are Canonical
+
+.. \forall s \in S: \varsigma(s) \in \mathbb{S}
+
+.. OR
+
+.. The Canon is closed under Reduction.
+
+.. \forall s \in \mathbb{S}: \varsigma(s) \in \mathbb{S}

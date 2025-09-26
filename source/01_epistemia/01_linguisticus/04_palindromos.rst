@@ -13,7 +13,7 @@ Palindromos
 
 .. note::
 
-    See :ref:`Palindromics, Section IV Palindromes <section-iv>` for a more detail discussion regarding the logical properties of palindromes and their classification.
+    See :ref:`Palindromics <palindromics>` for a more detail discussion regarding the logical properties of palindromes and their classification.
 
 .. note::
 
@@ -39,7 +39,7 @@ English
 
 .. important::
 
-    This is a heuristic definition of pivots. See :ref:`Palindromics, Section IV Palindromes, Subsection II Parity <section-iv-ii>` for a more rigorous treatment.
+    This is a heuristic definition of pivots. See :ref:`Palindromics <palindromics>` for a more rigorous treatment.
 
 .. _perfect-english-palindromes:
 
@@ -325,6 +325,10 @@ Punctured
 
 .. epigraph::
 
+    | Tacit, I hate gas, (aroma of evil), a nut, sleep, no melons, drawers, bards, Eta Delta, ebon, a hare, macaroni, stone raps, id, a lass lion, apses, ore, lines, a loner, war--oh, bait I hate!-- jam, ugh; cabs, warts too, spas, Odin, roes. I revile dope, naps, a wagon--add a sob--oh, damn it (so do dodos, ahem)--lepers? mark up a love sips, editors, tops, rime, denim, repose (alas, simoleons), loops, rats, gals, a tar bag and a maniac Cain, a mad nag, a brat , a slag star, spools, Noel -- O Miss Al Aesop, ermined emirs, pots, rot I despise; Volapuk, rams repel me (ha! so do dodos), tin, mad hobos, add a nog, a wasp, an epode, liver. I scorn "I do," sap, soot, straws, Bach, gum - a jet? ah, it I abhor a wren? O la! senile roses, pan oils, salad; I spare not sin or a camera (ha! no Beatle), dates, drabs, rewards, no lemon peels, tuna, live foam or a sage Tahiti cat.
+
+.. epigraph::
+
     was it a bar i saw?
 
 .. epigraph::
@@ -353,4 +357,4 @@ Punctured
     
 .. epigraph::
 
-    was it a rat i saw? 
+    was it a rat i saw?

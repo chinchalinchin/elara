@@ -564,13 +564,13 @@ Classes
 
 .. topic:: Definition 1.4.3: Invertible Sentences
 
-    Let :math:`\zeta \in C`. Then the set of Invertible Sentences, denoted :math:`K`, is defined as the set of Sentences which satisfy the following open formula,
+    Let :math:`\zeta \in C`. Then the set of Invertible Sentences, denoted :math:`J`, is defined as the set of Sentences which satisfy the following open formula,
 
     .. math::
 
-        \zeta \in K \equiv {\zeta}^{-1} \in C
+        \zeta \in J \equiv {\zeta}^{-1} \in C
 
-    A Sentence that belongs to :math:`K` will be referred to as "*invertible*".
+    A Sentence that belongs to :math:`J` will be referred to as "*invertible*".
 
 .. _palindromics-theorem-1-4-9:
 
@@ -580,11 +580,11 @@ Classes
 
     .. math::
 
-        \forall \zeta \in C: \zeta \in K \equiv {\zeta}^{-1} \in K
+        \forall \zeta \in C: \zeta \in J \equiv {\zeta}^{-1} \in J
 
 **Proof** Let :math:`\zeta \in C`.
 
-(:math:`\rightarrow`) Assume :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
+(:math:`\rightarrow`) Assume :math:`\zeta \in J`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
@@ -600,19 +600,19 @@ By assumption, :math:`\zeta \in C`, therefore, by the :ref:`definition of Invert
 
 .. math::
 
-    {\zeta}^{-1} \in K
+    {\zeta}^{-1} \in J
 
-(:math:`\leftarrow`) Assume :math:`{\zeta}^{-1} \in K`, which implies :math:`{\zeta}^{-1} \in C`. By assumption :math:`\zeta \in C`. Therefore, :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
+(:math:`\leftarrow`) Assume :math:`{\zeta}^{-1} \in J`, which implies :math:`{\zeta}^{-1} \in C`. By assumption :math:`\zeta \in C`. Therefore, :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
-    \zeta \in K
+    \zeta \in J
 
 Summarizing and generalizing,
 
 .. math::
 
-    \forall \zeta \in C: \zeta \in K \equiv {\zeta}^{-1} \in K
+    \forall \zeta \in C: \zeta \in J \equiv {\zeta}^{-1} \in J
 
 ∎
 
@@ -624,9 +624,9 @@ Summarizing and generalizing,
 
     .. math::
 
-        \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
+        \forall \zeta \in J: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
-**Proof** Let :math:`\zeta \in K`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
+**Proof** Let :math:`\zeta \in J`. By the :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`,
 
 .. math::
 
@@ -674,7 +674,7 @@ Generalizing,
 
 .. math::
 
-    \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
+    \forall \zeta \in J: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
 ∎
 
@@ -686,9 +686,9 @@ Generalizing,
 
     .. math::
 
-        \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+        \forall \zeta \in J: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
 
-**Proof** Let :math:`\zeta \in K`, let :math:`n = \Lambda(\zeta)` and let :math:`i \in N_n`.
+**Proof** Let :math:`\zeta \in J`, let :math:`n = \Lambda(\zeta)` and let :math:`i \in N_n`.
 
 By :ref:`Theorem 1.4.6 <palindromics-theorem-1-4-8>` and assumption,
 
@@ -736,4 +736,45 @@ Summarizing and generalizing,
 
 .. math::
 
-    \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+    \forall \zeta \in J: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+
+.. _palindromics-partial-sentences:
+
+Partial Sentences
+-----------------
+
+.. _palindromics-definition-1-4-4:
+
+.. topic:: Definition 1.4.4: Partial Sentence
+
+    Let :math:`\zeta \in C` with :math:`n = l(\zeta)`. Let :math:`i \in N_n`.
+
+    **Left Partial Sentence** :math:`\zeta[i:]`
+
+    - Basis: :math:`\zeta[n:] = \zeta[n]`
+    - Induction: :math:`\zeta[i:] = \zeta[i]\zeta[n+1:]`
+
+    **Right Partial Sentence** :math:`\zeta[:i]`
+
+    - Basis: :math:`\zeta[:1] = \zeta[1]`
+    - Induction: :math:`\zeta[:i] = \zeta[:i-1]\zeta[]`
+
+**Example** Let :math:`ᚠ = \text{form is the possibility of structure}`. Then :math:`l(ᚠ) = 36`.
+
+Consider :math:`ᚠ[:4]`
+
+TODO 
+
+Thus :math:`ᚠ[:4] = \text{form}`.
+
+Consider :math:`ᚠ[10:]`
+
+TODO 
+
+Thus :math:`ᚠ[10:] = \text{he possibility of structure}` 
+
+∎
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................

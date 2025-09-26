@@ -27,6 +27,8 @@ General conventions adopted throughout the course of this work are  given below.
 
 4. The terms "*set*" and "*class*" are used interchangeably. 
 
+5. The Capital Gothic letters :math:`\mathfrak{F}, \mathfrak{G}` are reserved for functions. Functions will be written :math:`\mathfrak{F}: \mathbb{D} \to \mathbb{R}`, where :math:`\mathbb{D}` is the domain of the function and :math:`\mathbb{R}` is the co-domain of the function.
+
 .. _palindromics-constants:
 
 Constants

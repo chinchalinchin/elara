@@ -86,7 +86,7 @@ Concatenation
     The result of concatenating any two Strings :math:`s` and :math:`t` is denoted :math:`st`. To make the operands clear, parenthesis will sometimes be used, e.g. :math:`s(t) = (s)t = st`. Concatenation is defined inductively through the following schema,
 
     1. Basis: 
-        - If :math:`s = \varepsilon`, :math:`st = t`
+        - If :math:`s = \varepsilon`, :math:`st = ts = t`
     2. Induction: 
         - If :math:`s \neq \varepsilon`, then write :math:`s = (\iota)u` where :math:`\iota \in \Sigma` and :math:`u \in S`. Then :math:`st = ({\iota}u)t = \iota(ut)`
 
@@ -154,11 +154,14 @@ But the recursion together,
 
     Many of the results of the formal theory of strings are taken as given and are not proven. The following list details the properties of concatenation that will be assumed.
 
-    1. Identity Property;: :math:`\varepsilon{s} = s\varepsilon = s`
-    2. Associativity: :math:`(s)(ut) = (su)t`
-    3. Non-commutative: :math:`st \neq ts`
-    4. Left-cancellation: :math:`st = su \implies t = u`
-    5. Right-cancellation: :math:`ts = us \implies t = u`
+    1. Associativity: :math:`(s)(ut) = (su)t`
+    2. Non-commutative: :math:`st \neq ts`
+    3. Left-cancellation: :math:`st = su \implies t = u`
+    4. Right-cancellation: :math:`ts = us \implies t = u`
+
+.. note::
+
+    Refer to :ref:`palindromics-motivation` for a more in-depth discussion of the nature of concatenation.
 
 .. _palindromics-string-length:
 
@@ -647,6 +650,69 @@ Thus, the induction holds. Summarizing and generalizing,
 
 The formal system under construction assumes the process of Canonization precedes the formation of Language. Empty Characters possess no semantic content, and therefore must be exlcuded from the domain before Language is possible. This will be explicitly formalized in the :ref:`Canonization Axiom <palindromics-axiom-vi>`.
 
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+**Example** Let :math:`s = \mathfrak{a}\varepsilon` and :math:`t = \mathfrak{b}`. 
+
+By :ref:`Canonization <palindromics-definition-1-2-6>`,
+
+.. math::
+
+    \pi(s) = \mathfrak{a}
+
+.. math::
+
+    \pi(t) = \mathfrak{b}
+
+By :ref:`Concatenation <palindromics-definition-1-2-1>`, 
+
+.. math::
+
+    \pi(s)\pi(t) = \mathfrak{ab}
+
+Now, apply :ref:`Concatenation <palindromics-definition-1-2-1>` to :math:`st` with :math:`s = (\mathfrak{a})\varepsilon`, then 
+
+.. math::
+
+    st = \mathfrak{a}({\varepsilon}{t})
+
+.. important::
+
+    The :math:`\varepsilon` "*moves*" inside of the parenthesis and thus, "*triggers*" another recursive call to concatenation.
+
+.. math::
+
+    {\varepsilon}t = t = \mathfrak{b}
+
+So that, 
+
+.. math::
+
+    st = \mathfrak{ab}
+
+∎
+
+.. important::
+
+    The previous example suggests an important, often overlooked fact, *Concatenation always yields a Canonical String*. In other words, Concatenation can be regarded as :math:`\mathfrak{F}: S \mapsto \mathbb{S}`
+
+
+.. THEOREM
+
+.. All Concatenations are Canonical
+
+.. \forall s,t \in S: st \in \mathbb{S}
+
+
+.. THEOREM
+
+.. Concatenation is closed under the Canon
+
+.. \forall s,t \in \mathbb{S}: st \in \mathbb{S}
+
+.. Follows directly from previous theorem.
 .. _palindromics-string-inversion:
 
 String Inversion

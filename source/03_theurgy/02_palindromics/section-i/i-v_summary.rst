@@ -30,9 +30,9 @@ This inversion makes its way to the top layer of the semantic hierarchy with :re
 
 .. math::
 
-    \zeta \in K \equiv {\zeta}^{-1} \in C
+    \zeta \in J \equiv {\zeta}^{-1} \in C
 
-The class :math:`K` then imposes a condition on all Sentences that belong to it, namely that :ref:`its Words must be also invertible <palindromics-theorem-1-4-10>`,
+The class :math:`J` then imposes a condition on all Sentences that belong to it, namely that :ref:`its Words must be also invertible <palindromics-theorem-1-4-10>`,
 
 .. math::
 
