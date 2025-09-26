@@ -18,10 +18,67 @@ Pivot Postulates
 
     A Perfect Palindrome has a Delimiter Pivot Character if and only if a Perfect Palindrome has Odd Parity.
 
+    .. math::
+
+        \forall \zeta \in J: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
+
+**Proof** Let :math:`\zeta \in J`. Note
+
+.. math::
+
+    J \subseteq C \subseteq D
+
+Then by :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`.
+
+(:math:`\rightarrow`) Assume :math:`\omega_{\zeta} = \sigma`. Assume, for the sake of contradiction, :math:`\zeta \notin P_{-}`. Then, since,
+
+.. math::
+
+    P_{+} \cup P_{-} = P
+
+And,
+
+.. math::
+
+    P_{+} \cap P_{-} = \varnothing 
+
+It follows that it must be the case, :math:`\zeta \in P_{+}`. Therefore, :math:`\exists i \in mathbb{N}: l(\zeta) = 2i`. Then, by :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`, 
+
+.. math::
+
+    \overrrightarrow{\omega_s} = \omegaleftarrow{\omega_s} = \sigma
+
+Where the last equality follows by assumption. Then,
+
+.. math::
+
+    \zeta[\frac{l(s) + 2}{2}] = \zeta[\frac{l(2)}{2}] = \sigma
+
+In other words, two consecutive Characters are Delimiter. But this is impossible if :math:`\zeta \in D`. Therefore, it must be case,
+
+.. math::
+
+    \zeta[\frac{l(2)}{2}] \neq \sigma
+
+And 
+
+.. math::
+
+    \zeta[\frac{l(s) + 2}{2}] \neq \sigma
+
+(:math:`\leftarrow`) Assume :math:`\zeta \in P_{-}`. By :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`, it follows immediately,
+
+.. math::
+
+    \omega_{\zeta} = \sigma
+
+Thus the equivalence is established. Summarizing and generalizing, 
+
+.. math::
+
     \forall \zeta \in J: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
-
-**Proof** Let :math:`\zeta \in J`
-
+    
+∎
 .. .................................................................................
 
 TODO

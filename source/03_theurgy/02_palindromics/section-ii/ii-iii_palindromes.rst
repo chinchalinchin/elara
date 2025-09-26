@@ -171,3 +171,30 @@ TODO
 TODO
 
 .. .................................................................................
+
+.. _palindromics-definition-2-3-3:
+
+.. topic:: Definition 2.3.3: Imperfect Palindromes
+
+    TODO 
+
+.. _palindromics-parity:
+
+Parity
+------
+
+.. _palindromics-definition-2-3-4:
+
+.. topic:: Definition 2.3.4: Parity
+
+    The set of Odd Palindromes, denoted :math:`P_{-}`, is defined as the set of Sentences which satisfy the open formula,
+    
+    .. math::
+
+        \zeta \in P_{-} \equiv ((\zeta \in P) \land (\exists n \in \mathbb{N}: l(\zeta) = 2i + 1))
+
+    The set of Even Palindromes, denoted :math:`P_{+}`, is defined as the set of Sentences which satisfy the open formula,
+
+    .. math::
+
+        \zeta \in P_{+} \equiv (\zeta \in P) \land (\exists n \in \mathbb{N}: l(\zeta) = 2i)

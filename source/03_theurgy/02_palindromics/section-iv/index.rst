@@ -74,7 +74,7 @@ As can be seen from the shape of the histograms, the Delimiter index distributio
 
 .. math::
 
-  P(\Delta(\hat{\zeta}[k]) = n | l(\zeta) = \lambda) \propto \frac{1}{\lambda}
+  P(\Delta(\hat{\zeta}[k]) = 1 | l(\zeta) = \lambda) \propto \frac{1}{\lambda}
 
 Where :math:`P()` represents the probability of an event, :math:`\hat{\zeta[k]}` represents a random varaible and :math:`\lambda` represents a fixed String Length. However alluring, there is a subtle, but important assumption going into the generation of these histograms that prevents the acceptance of this conclusion.
 
@@ -82,17 +82,19 @@ When Sentences are reduced to Delimiter indices and plotted in aggregate, inform
 
 .. math::
 
-  P(\Delta(\hat{zeta}[k]) = n | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
+  P(\Delta(\hat{zeta}[k]) = 1 | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
+
+where each :math:`\delta_k` is  :math:`1` or :math:`0`.
 
 To provide a more concrete example, consider the Sentences, 
 
 .. math::
 
-  ᚢ = \text{"the dog runs across the field"}
+  ᚢ = \text{the dog runs across the field}
 
 .. math::
   
-  ᚦ = \text{"the child laughs at the joke"}
+  ᚦ = \text{the child laughs at the joke}
 
 In each case,
 
