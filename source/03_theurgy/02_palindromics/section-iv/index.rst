@@ -44,13 +44,13 @@ Define the following set as the set of Delimiter indices,
 
 .. math::
 
-   D_{\zeta} = { i \mid \zeta[i] = \sigma
+   D_{\zeta} = \{ i \mid \zeta[i] = \sigma \}
 
 Consider taking Sentences from a Corpus and for each one, calculating and returning the Delimiter indices, as in the following,
 
 .. math::
 
-  ᚠ = \text{"error is the price we pay for progress"}
+  ᚠ = \text{error is the price we pay for progress}
 
 .. math::
 
@@ -74,7 +74,7 @@ As can be seen from the shape of the histograms, the Delimiter index distributio
 
 .. math::
 
-  P(\Delta(\hat{\zeta}[k]) | l(\zeta) = \lambda) = \frac{1}{\lambda}
+  P(\Delta(\hat{\zeta}[k]) = n | l(\zeta) = \lambda) \propto \frac{1}{\lambda}
 
 Where :math:`P()` represents the probability of an event, :math:`\hat{\zeta[k]}` represents a random varaible and :math:`\lambda` represents a fixed String Length. However alluring, there is a subtle, but important assumption going into the generation of these histograms that prevents the acceptance of this conclusion.
 
@@ -82,7 +82,7 @@ When Sentences are reduced to Delimiter indices and plotted in aggregate, inform
 
 .. math::
 
-  P(\Delta(\hat{zeta}[k]) | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
+  P(\Delta(\hat{zeta}[k]) = n | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
 
 To provide a more concrete example, consider the Sentences, 
 
