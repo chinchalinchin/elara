@@ -394,17 +394,17 @@ Pivots
 
     Let :math:`s \in S`.
 
-    The Left Pivot Character of :math:`s`, denoted :math:`\overrightarrow{\omega_s}`, is defined as the Character :math:`s[\overrightarrow{i}]`, where :math:`\overrightarrow{i}` is called the *Left Pivot Index*, which satisies the following conditions,
+    The Left Pivot Character of :math:`s`, denoted :math:`\overrightarrow{\omega_s}`, is defined as the Character :math:`s[\overrightarrow{i}]`, where :math:`\overrightarrow{i}` is called the *Left Pivot Character Index*, which satisies the following conditions,
 
     1. If :math:`l(s)` is odd, then :math:`\overrightarrow{i} = \frac{l(s) + 1}{2}`
     2. If :math:`l(s)` is even, then :math:`\overrightarrow{i} = \frac{l(s)}{2}` 
 
-    The Right Pivot, denoted :math:`\overleftarrow{\omega_s}`, is defined as the Character :math:`s[\overleftarrow{i}]`, where :math:`\overleftarrow{i}` is called the *Right Pivot Index*, which satisfies the following conditions,
+    The Right Pivot, denoted :math:`\overleftarrow{\omega_s}`, is defined as the Character :math:`s[\overleftarrow{i}]`, where :math:`\overleftarrow{i}` is called the *Right Pivot Character Index*, which satisfies the following conditions,
 
     1. If :math:`l(s)` is odd, then :math:`\overleftarrow{i} = \frac{l(s) + 1}{2}`
     2. If :math:`l(s)` is even, then :math:`\overleftarrow{i} = \frac{l(s) + 2}{2}` 
 
-    The *Pivot*, denoted :math:`\omega_s`, is defined as the Character which satisfies the following conditions,
+    The *Pivot Character*, denoted :math:`\omega_s`, is defined as the Character which satisfies the following conditions,
 
     1. If :math:`\overleftarrow{\omega_s} = \overrightarrow{\omega_s}`, then :math:`\omega_s = \overleftarrow{\omega_s} = \overrightarrow{\omega_s}`
     2. If :math:`\overleftarrow{\omega_s} \neq \overrightarrow{\omega_s}`, then :math:`\omega_s = \varepsilon`
@@ -413,11 +413,11 @@ Pivots
 
 Thus, since :math:`l(ᚠ) = 17` is odd,
 
-- *Left Pivot Index*: :math:`\overrightarrow{i} = \frac{17 + 1}{2} = 9`
-- *Right Pivot Index*: :math:`\overleftarrow{i} = \frac{17 + 1}{2} = 9`
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{17 + 1}{2} = 9`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{17 + 1}{2} = 9`
 - *Left Pivot Character*: :math:`\overrightarrow{\omega_{ᚠ}} = ᚠ[9] = \sigma`
 - *Right Pivot Character*: :math:`\overleftarrow{\omega_{ᚠ}} = ᚠ[9] = \sigma`
-- *Pivot*: :math:`\omega_{ᚠ} =  ᚠ[9] = \sigma`
+- *Pivot Character*: :math:`\omega_{ᚠ} =  ᚠ[9] = \sigma`
 
 ∎
 
@@ -425,11 +425,11 @@ Thus, since :math:`l(ᚠ) = 17` is odd,
 
 Thus, since :math:`l(ᚠ)= 10` is even,
 
-- *Left Pivot Index*: :math:`\overrightarrow{i} = \frac{10}{2} = 5`
-- *Right Pivot Index*: :math:`\overleftarrow{i} = \frac{10 + 2}{2} = 6`
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{10}{2} = 5`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{10 + 2}{2} = 6`
 - *Left Pivot Character*: :math:`\overrightarrow{\omega_{ᚠ}} = ᚠ[5] = \text{o}`
 - *Right Pivot Character*: :math:`\overleftarrow{\omega_{ᚠ}} = ᚠ[6] = \text{o}`
-- *Pivot*: :math:`\omega_{ᚠ} = \text{o}`
+- *Pivot Character*: :math:`\omega_{ᚠ} = \text{o}`
 
 ∎
 
@@ -437,19 +437,19 @@ Thus, since :math:`l(ᚠ)= 10` is even,
 
 Thus, since :math:`l(ᚠ)= 26` is even,
 
-- *Left Pivot Index*: :math:`\overrightarrow{i} = \frac{26}{2} = 13`
-- *Right Pivot Index*: :math:`\overleftarrow{i} = \frac{26 + 2}{2} = 14`
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{26}{2} = 13`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{26 + 2}{2} = 14`
 - *Left Pivot Character*: :math:`\overrightarrow{\omega_{ᚠ}} = ᚠ[13] = \sigma`
 - *Right Pivot Character*: :math:`\overleftarrow{\omega_{ᚠ}} = ᚠ[14] = \text{a}`
-- *Pivot*: :math:`\omega_{ᚠ} = \varepsilon`
+- *Pivot Character*: :math:`\omega_{ᚠ} = \varepsilon`
 
 ∎
 
 .. note::
 
-    From the previous examples, it should be clear a Pivot of a String is a Empty Character if and only if its String Length is even. However, if a Pivot is a non-Empty Character, then it cannot be concluded whether the String Length is odd or even.
+    From the previous examples, it should be clear a Pivot Character of a String is a Empty Character if and only if its String Length is even. However, if a Pivot Characteris a non-Empty Character, then it cannot be concluded whether the String Length is odd or even.
 
-    However, it should be clear that if a Pivot is non-Empty, it imposes certain structural constraints on the String. These structural constraints will be more fully elaborated in the next series of theorems.
+    However, it should be clear that if a Pivot Character is non-Empty, it imposes certain structural constraints on the String. These structural constraints will be more fully elaborated in the next series of theorems.
 
 .. _palindromics-theorem-2-1-7:
 
@@ -569,7 +569,7 @@ By :ref:`Theorem 2.1.7 <palindromics-theorem-2-1-7>`,
 
     \overrightarrow{\omega_s} = \overleftarrow{\omega_s} \quad \text{ (1) }
 
-Where, by :ref:`definition of Pivots <palindromics-definition-2-1-2>`,
+Where, by :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`,
 
 .. math::
     
@@ -687,7 +687,7 @@ There are two cases to consider, :math:`l(s)` is even or :math:`l(s)` is odd.
 
 :underline:`Case I`: :math:`l(s) = m` is even.
 
-By :ref:`Definition of Pivot Words <palindromics-definition-2-1-2>`,
+By :ref:`Definition of Pivot Characters <palindromics-definition-2-1-2>`,
 
 .. math::
 
@@ -709,7 +709,7 @@ Since :math:`\lvert P \rvert`, each index :math:`i` has a symmetric pair given b
 
     \overleftarrow{i}_{\text{pair}} = m - \overleftarrow{i} + 1 = \frac{m}{2} \quad \text{ (4) }
 
-Therefore, from (1) and (4) the Left Pivot index pairs with the Right Pivot index, and from (2) and (3) the Right Pivot index pairs with Left Pivot index,
+Therefore, from (1) and (4) the Left Pivot Character Index pairs with the Right Pivot Character Index, and from (2) and (3) the Right Pivot Character Index pairs with Left Pivot Character Index,
 
 .. math::
 
@@ -767,7 +767,7 @@ This follows directly from the :ref:`definition of Pivot Characters <palindromic
 
 .. topic:: Theorem 2.1.10 
 
-    If a Canonical String is equal to its own Inverse, then its Pivot is non-empty.
+    If a Canonical String is equal to its own Inverse, then its Pivot Character is non-empty.
     
     .. math::
 
@@ -799,13 +799,13 @@ In either case, the conclusion follows. Thus, summarizing and generalizing,
 
 .. note::
 
-    :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` establishes that all invertible Strings in the Canon have a non-Empty Pivot. As an immediate corollary to this theorem, if a canonical String has an Empty Pivot, then it cannot be invertible.
+    :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` establishes that all invertible Strings in the Canon have a non-Empty Pivot Character. As an immediate corollary to this theorem, if a canonical String has an Empty Pivot Character, then it cannot be invertible.
  
 .. _palindromics-theorem-2-1-11:
 
 .. topic:: Theorem 2.1.11
 
-    If the Pivot of a Canonical String is Empty, then the String is not invertible.
+    If the Pivot Character of a Canonical String is Empty, then the String is not invertible.
 
     .. math::
 
@@ -814,3 +814,30 @@ In either case, the conclusion follows. Thus, summarizing and generalizing,
 **Proof** Follows immediately from :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` by the law of contraposition.
 
 ∎
+
+.. _palindromics-definition-2-1-3:
+
+.. topic:: Definition 2.1.3: Pivot Word
+
+    Let :math:`\zeta \in C`.
+
+    The Left Pivot Word of :math:`\zeta`, denoted :math:`\overrightarrow{\Omega_{\zeta}}`, is defined as the Word :math:`\zeta[[\overrightarrow{j}]]`, where :math:`\overrightarrow{j}` is called the *Left Pivot Word Index*, which satisies the following conditions,
+
+    1. If :math:`\Lambda(\zeta)` is odd, then :math:`\overrightarrow{j} = \frac{\Lambda(\zeta) + 1}{2}`
+    2. If :math:`\Lambda(\zeta)` is even, then :math:`\overrightarrow{j} = \frac{\Lambda(\zeta)}{2}` 
+
+    The Right Pivot Word, denoted :math:`\overleftarrow{\Omega_{\zeta}}`, is defined as the Word :math:`\zeta[[\overleftarrow{j}]]`, where :math:`\overleftarrow{j}` is called the *Right Pivot Word Index*, which satisfies the following conditions,
+
+    1. If :math:`\Lambda(\zeta)` is odd, then :math:`\overleftarrow{j} = \frac{\Lambda(\zeta) + 1}{2}`
+    2. If :math:`\Lambda(\zeta)` is even, then :math:`\overleftarrow{i} = \frac{\Lambda(\zeta) + 2}{2}` 
+
+    The *Pivot Word*, denoted :math:`\Omega_s`, is defined as the Character which satisfies the following conditions,
+
+    1. If :math:`\overleftarrow{\Omega_s} = \overrightarrow{\Omega_s}`, then :math:`\Omega_s = \overleftarrow{\Omega_s} = \overrightarrow{\Omega_s}`
+    2. If :math:`\overleftarrow{\Omega_s} \neq \overrightarrow{\Omega_s}`, then :math:`\Omega_s = \varepsilon`
+
+**Example** TODO
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................

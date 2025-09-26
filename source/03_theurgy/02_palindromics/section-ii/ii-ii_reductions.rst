@@ -260,8 +260,6 @@ Thus equivalence is established. Summarizing and generalizing,
     
     The next theorem is quantified over the :math:`\mathbb{S}`, **not** :math:`S`.
 
-
-
 .. ..............................................................................
 .. ................................. TODO .......................................
 .. ..............................................................................
@@ -497,11 +495,15 @@ Summarizing and generalizing,
 .. ................................. TODO .......................................
 .. ..............................................................................
 
+.. Need to clarify concatenation as a \mathfrak{F}: S \mapsto \mathbb{S} before attempting this.
+
+.. THEOREM
+
 .. All Reductions are Canonical
 
 .. \forall s \in S: \varsigma(s) \in \mathbb{S}
 
-.. OR
+.. THEOREM
 
 .. The Canon is closed under Reduction.
 

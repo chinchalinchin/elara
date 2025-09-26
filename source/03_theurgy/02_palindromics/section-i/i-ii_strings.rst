@@ -698,13 +698,17 @@ So that,
 
     The previous example suggests an important, often overlooked fact, *Concatenation always yields a Canonical String*. In other words, Concatenation can be regarded as :math:`\mathfrak{F}: S \mapsto \mathbb{S}`
 
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+.. Need to clarify thoughts on how to prove this, because it's impossible to define to a function that counts the number of Empty characters in a string. The clause :math:`\neg(\varepsilon \subset_s s)` would never be true, so recursion would never halt. 
 
 .. THEOREM
 
 .. All Concatenations are Canonical
 
 .. \forall s,t \in S: st \in \mathbb{S}
-
 
 .. THEOREM
 
@@ -713,6 +717,7 @@ So that,
 .. \forall s,t \in \mathbb{S}: st \in \mathbb{S}
 
 .. Follows directly from previous theorem.
+
 .. _palindromics-string-inversion:
 
 String Inversion

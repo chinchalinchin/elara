@@ -137,3 +137,37 @@ TODO
 TODO
 
 .. .................................................................................
+
+.. _palindromics-theorem-2-3-5:
+
+.. topic:: Theorem 2.3.5
+
+    \forall \zeta in J: \omega_s \neq \varepsilon
+
+**Proof** Let :math:`\zeta \in J`.
+
+By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`. 
+
+By definition of natural numbers, either :math:`\Delta(\zeta)` is odd or even. 
+
+.. CASE I
+
+:underline:`Case I` :math:`\Delta(\zeta)` is odd. 
+
+Then, it follows immediately by :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`, 
+
+.. math::
+
+    \omega_s = \sigma
+
+.. CASE II
+
+:underline:`Case II` :math:`\Delta(\zeta)` is even.
+
+TODO
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................

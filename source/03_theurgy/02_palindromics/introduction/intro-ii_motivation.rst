@@ -153,6 +153,42 @@ TODO
 
 .. .................................................................................
 
+In :ref:`Section II.I <palindromics-section-ii-i>`, the delimiter count function will be defined recursively. The function :math:`\Delta(s) = n` will turn out to be equivalent to the predicate "has n Delimiters". The logic used to develop the delimiter count is not exclusive to the delimiter, meaning it can be used to define a function which counts other character names in a string. However, not *all* characters can be counted by defining a recursive function.
+
+The example after :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>` shows concatenation implicitly strips empty characters through recursive calls to its basis clause. This suggests concatenation should be viewed as a mapping :math:`S \mapsto \math{S}`.
+
+
+
+The set :math:`S - \mathbb{S}` is of great epistemological interest, because the question arises: *where does it come from*? If concatenation implicitly produces a canonical string through its application, how does one go about forming a string such as, 
+
+.. math::
+
+    {\varepsilon}{\varepsilon}{\varepsilon}{\varepsilon} 
+
+According to the definition of concatenation, this string collapses into :math:`\varepsilon` if evaluated, keeping in mind the above is shorthand for the more formal expression,
+
+.. math::
+
+    ( ( (\varepsilon) (\varepsilon) ) (\varepsilon) ) (\varepsilon)
+
+But, and this is an essential point, while concatenation may yield a well defined result for this expression, it cannot produce this string in the same concatenation can yield a string :math:`\mathfrak{abc}`. To reiterate, there is no way to start with only an alphabet :math:`\Sigma` and :math:`\varepsilon`, and produce the string given above. Consider starting with,
+
+.. math::
+
+    \varepsilon
+
+From this, an infinite number of concrete, physical inscriptions can be produced by concatenating into this string, from the left or right, a letter of the alphabet, e.g.
+
+.. math::
+
+    (\varepsilon)(\mathfrak{a}) = \mathfrak{a}
+
+Where concatenation from the right follows immediately from the definition of concatenation. Concatenation from the left requires several intermediary steps (according to the :ref:`definition of concatenation <palindromics-definition-1-2-1>` adopted in this work; other formalizations differ in the particular mechanics of their definitions, but the result will be the same),
+
+.. math::
+
+    (\mathfrak{a})(\varepsilon)
+
 .. [#1] Or :math:`\varepsilon\mathfrak{ab}`, or :math:`\mathfrak{ab}\varepsilon\varepsilon`, etc.? 
 
 .. [#2] It should go without saying this is an artifact of the decimal representation of numbers. A different base would correspond to different addition rules, e.g. ":math:`5 + 5 = A`" in hexidecimal notation. However, the structural feature of ":math:`0`" exists in all bases, e.g. ":math:`\exists 0: x + 0 = x`" is true regardless of the physical and literal form of the algebraic abstraction ":math:`x`". This is roughly analogous to ":math:`\varepsilon`" and ":math:`\mathfrak{a}`"; the former represent a structural feature of concatenated sequences whereas the latter corresponds to a physical character within the alphabet, i.e. the "base" of the system of concatenation. Regardless of the language and alphabet, the logical structure of concatenated expressions requires a metamathematical term to play the role of identity, e.g. ":math:`\varepsilon`", whereas the characters, e.g. ":math:`\frak{a}`", are symbolic representations of physical entities.

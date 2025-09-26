@@ -1201,3 +1201,22 @@ By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
 .. math::
 
     (\varsigma(s))^{-1} = (\varsigma(uv))^{-1}
+
+
+
+
+
+
+
+
+
+.. topic:: Definition 2.1.4: Palindromic Pivot
+
+    Let :math:`\zeta \in C`. The Palindromic Pivot of :math:`\zeta`, denoted :math:`\Omega_{\zeta}`, is defined by the following conditions
+
+    - If :math:`\omega_s = \varepsilon` or :math:`\omega = \sigma`, :math:`\Omega_{\zeta} = \varepsilon`
+    - If :math:`\omega_s \neq \varepsilon` and :math:`\omega_s \neq \sigma`, :math:`\Omega_{\zeta} = \zeta[[\frac{\Lambda(\zeta) + 1 }{2}]]`
+
+.. note::
+
+    :ref:`Pivot Words <palindromics-definition-2-1-3>` only apply to :math:`C`.
