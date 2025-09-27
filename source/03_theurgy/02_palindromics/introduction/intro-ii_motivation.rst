@@ -21,11 +21,11 @@ For instance, under the interpretation :math:`\hat{L} = L_{\text{English}}`,
 
 .. math::
 
-    \hat{mathfrak{a}} = \text{a} 
+    \hat{\mathfrak{a}} = \text{a} 
 
 .. math::
 
-    \hat{mathfrak{b}} = \text{b}
+    \hat{\mathfrak{b}} = \text{b}
 
 .. math::
 
@@ -155,7 +155,7 @@ TODO
 
 In :ref:`Section II.I <palindromics-section-ii-i>`, the delimiter count function will be defined recursively. The function :math:`\Delta(s) = n` will turn out to be equivalent to the predicate "has n Delimiters". The logic used to develop the delimiter count is not exclusive to the delimiter, meaning it can be used to define a function which counts other character names in a string. However, not *all* characters can be counted by defining a recursive function.
 
-The example after :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>` shows concatenation implicitly strips empty characters through recursive calls to its basis clause. This suggests concatenation should be viewed as a mapping :math:`S \mapsto \math{S}`.
+The example after :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>` shows concatenation implicitly strips empty characters through recursive calls to its basis clause. This suggests concatenation should be viewed as a mapping :math:`S \mapsto \mathbb{S}`.
 
 
 

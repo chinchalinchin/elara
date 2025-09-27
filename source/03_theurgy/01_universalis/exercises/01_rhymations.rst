@@ -10,7 +10,7 @@ These are problems for LLMs to solve that use the functions defined in :ref:`the
     **Constants**
 
     - Characters: σ
-    - Sets: L, C, I, R, M:sub:`S`, P
+    - Sets: L, C, I, R, M :sub:`S`, P
 
     **Variables**
 

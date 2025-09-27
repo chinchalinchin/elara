@@ -182,7 +182,7 @@ But this is exactly the definition of subsets,
     
     .. math::
 
-        \forall \zeta in J: \omega_{\zeta} \neq \varepsilon
+        \forall \zeta \in J: \omega_{\zeta} \neq \varepsilon
 
 **Proof** Let :math:`\zeta \in J`.
 
@@ -192,7 +192,7 @@ By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :m
 
     \omega_{\zeta} \neq \varepsilon
 
-◼︎
+◼
 
 .. _palindromics-definition-2-3-3:
 

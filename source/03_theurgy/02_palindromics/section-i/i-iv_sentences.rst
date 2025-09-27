@@ -752,28 +752,36 @@ Partial Sentences
     **Left Partial Sentence** :math:`\zeta[i:]`
 
     - Basis: :math:`\zeta[n:] = \zeta[n]`
-    - Induction: :math:`\zeta[i:] = \zeta[i]\zeta[n+1:]`
+    - Induction: :math:`\zeta[i:] = (\zeta[i])\zeta[n+1:]`
 
     **Right Partial Sentence** :math:`\zeta[:i]`
 
     - Basis: :math:`\zeta[:1] = \zeta[1]`
-    - Induction: :math:`\zeta[:i] = \zeta[:i-1]\zeta[]`
+    - Induction: :math:`\zeta[:i] = (\zeta[:i-1])\zeta[i]`
 
 **Example** Let :math:`ᚠ = \text{form is the possibility of structure}`. Then :math:`l(ᚠ) = 36`.
 
-Consider :math:`ᚠ[:4]`
+Consider :math:`ᚠ[:4]`. Applying the :ref:`definition of Partial Sentences <palindromics-definition-1-4-4>`,
 
-TODO 
+.. math::
+
+    ᚠ[:4] = (ᚠ[:3])ᚠ[4] = ((ᚠ[:2])ᚠ[3])ᚠ[4]=((ᚠ[:1](ᚠ[2]))ᚠ[3])ᚠ[4] = ((ᚠ[1](ᚠ[2]))ᚠ[3])ᚠ[4]
 
 Thus :math:`ᚠ[:4] = \text{form}`.
 
 Consider :math:`ᚠ[10:]`
 
-TODO 
+.. math::
+
+    ᚠ[10:] = ᚠ[10]ᚠ[11:] = ᚠ[10]ᚠ[11]ᚠ[12:] = ... = ᚠ[10]ᚠ[11]...ᚠ[36]
 
 Thus :math:`ᚠ[10:] = \text{he possibility of structure}` 
 
 ∎
+
+.. important::
+
+    Note Partial Sentences are **not** part of the Corpus.
 
 .. ..............................................................................
 .. ................................. TODO .......................................

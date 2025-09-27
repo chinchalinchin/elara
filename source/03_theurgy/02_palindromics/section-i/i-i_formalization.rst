@@ -34,6 +34,8 @@ General conventions adopted throughout the course of this work are  given below.
 Constants
 ---------
 
+.. _palindromics-empty-character:
+
 .. topic:: Constant: Empty Character
 
     **Empty Character**
@@ -41,7 +43,12 @@ Constants
 
     The *Empty Character* is a null Character, or a Character that lacks content.
 
-    In English, the Empty Character corresponds to an empty quote, "".
+.. warning::
+
+    It is **incorrect** to treat the empty quotation marks "" as the English "*Empty Character*". Empty Characters **do not exist** in Language.
+
+
+.. _palindromics-delimiter-character:
 
 .. topic:: Constant: Delimiter Character
 
@@ -57,6 +64,8 @@ Constants
 Terms
 -----
 
+.. _palindromics-strings:
+
 .. topic:: Term: Strings
 
     **Strings**
@@ -68,6 +77,8 @@ Terms
         - :math:`s, t, u, v, w`
     
     The lowercase English letters :math:`s, t, u, v, w` will represent Strings Variables, i.e indeterminate Strings. 
+
+.. _palindromics-characters:
 
 .. topic:: Term: Characters
     
@@ -91,6 +102,8 @@ Terms
     
     Moreover, the range of a Character Variable is understood to be the Alphabet :math:`\Sigma` from which it is being drawn.
 
+.. _palindromics-words:
+
 .. topic:: Term: Words
 
     **Words**
@@ -105,6 +118,8 @@ Terms
 
     The Lowercase Greek letters Alpha, Beta and Gamma will represent variable Words, i.e. indeterminate Words. Subscripts will occasionally be used to denote Word Variables.
 
+.. _palindromics-phrases:
+
 .. topic:: Term: Phrases
 
     **Phrase Variables**
@@ -112,6 +127,8 @@ Terms
         - :math:`p_1, p_2, p_3, ...`
 
     The lowercase English letters :math:`p, q, r` are reserved for Phrase variables, i.e. indeterminate Phrases. Subscripts will occasionally be used to denote Phrase Variables.
+
+.. _palindromics-sentences:
 
 .. topic:: Term: Sentences
     
@@ -132,6 +149,8 @@ Terms
 Sets
 ----
 
+.. _palindromics-finite-strings:
+
 .. topic:: Set: Finite Strings
 
     **Finite Strings** 
@@ -143,6 +162,8 @@ Sets
         - :math:`\mathbb{S}`
 
     The *Canon* is the image of :math:`S` under Canonization.
+
+.. _palindromics-alphabet:
 
 .. topic:: Set: Alphabet
 
@@ -156,12 +177,16 @@ Sets
 
     The aggregate of all Characters is called the *Total Alphabet*
 
+.. _palindromics-language:
+
 .. topic:: Set: Language
 
     **Language**
         - :math:`L`
 
     The aggregate of all Words is called the *Language*. Subscripts may be used to indicate a particular Language, e.g. :math:`L_{\text{english}}`
+
+.. _palindromics-phrase-set:
 
 .. topic:: Set: Phrase
 
@@ -170,6 +195,8 @@ Sets
 
     An ordered set of Words is called a *Phrase*. The subscript :math:`n` is a natural number denoting the number Words in the Phrase.
 
+.. _palindromics-lexicon:
+
 .. topic:: Set: Lexicon
 
     **Lexicon**
@@ -177,12 +204,16 @@ Sets
 
     The aggregate of all Phrases of Word Length n is called a *Lexicon*. The subscript :math:`n` is a natural number denoting the number of Words in each Phrase of the Lexicon.
 
+.. _palindromics-dialect:
+
 .. topic:: Set: Dialect
 
     **Dialect**
         - :math:`D`
 
     The aggregate of all Limitations is a Dialect.
+
+.. _palindromics-corpus:
 
 .. topic:: Set: Corpus
 

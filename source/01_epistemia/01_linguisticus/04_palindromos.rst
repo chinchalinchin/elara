@@ -49,6 +49,10 @@ Perfect
 
 .. epigraph::
 
+    emit naps noon span time
+
+.. epigraph::
+
     god lived on no devil dog
 
 .. epigraph::
@@ -74,6 +78,10 @@ Perfect
 .. epigraph::
 
     no devil lived on
+
+.. epigraph::
+
+    no radar on
 
 .. epigraph::
 
@@ -290,6 +298,10 @@ Punctured
 .. epigraph::
 
     lager, sir, is regal
+
+.. epigraph::
+
+    no melon, no lemon
 
 .. epigraph::
 

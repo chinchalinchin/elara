@@ -133,6 +133,7 @@ latex_preamble = r"""
 \babelprovide[import, main]{coptic} 
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{cancel}
 \usepackage[utf8]{inputenc} 
 \usepackage{lmodern}
 \usepackage{runic}

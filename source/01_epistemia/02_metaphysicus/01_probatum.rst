@@ -348,7 +348,7 @@ Thus, it is seen that even though Axiom 4 asserts an infinite set can be reduced
 
 **Theorem** If :math:`A \subseteq B \subseteq S`, then :math:`C_n(A) \subseteq C_n(B)`
 
-If one :ref:`corpus <corpus>` is contained in another :ref:`corpus <corpus>`, then the consequences of the first :ref:`corpus <corpus>` are contained in the consequences of the second :ref:`corpus <corpus>`. In effect, this means the consequences of a part of a deductive science cannot exceed the consequences of the whole of a deductive science.
+If one :ref:`corpus <palindromics-corpus>` is contained in another :ref:`corpus <palindromics-corpus>`, then the consequences of the first :ref:`corpus <palindromics-corpus>` are contained in the consequences of the second :ref:`corpus <palindromics-corpus>`. In effect, this means the consequences of a part of a deductive science cannot exceed the consequences of the whole of a deductive science.
 
 By assumption,
 

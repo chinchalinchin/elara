@@ -127,7 +127,7 @@ TODO
 
 .. topic:: Theorem 3.2.x+1 
 
-    Either the last Word of a Palindrome is contained in the last word of its Inverse, or the last word of its Inverse is contained in the last word of the Palidnrome. 
+    Either the last Word of a Palindrome is contained in the last word of its Inverse, or the last word of its Inverse is contained in the last word of the Palindrome. 
 
     .. math::
 

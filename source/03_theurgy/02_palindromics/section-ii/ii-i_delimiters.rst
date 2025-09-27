@@ -807,6 +807,8 @@ In either case, the conclusion follows. Thus, summarizing and generalizing,
 
     :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` establishes that all invertible Strings in the Canon have a non-Empty Pivot Character. As an immediate corollary to this theorem, if a canonical String has an Empty Pivot Character, then it cannot be invertible.
 
+    Furthemore, the contrapositive establishes a sufficient condition for *non-invertibiility*. In other words, if :math:`\omega_s = \varepsilon` it can be concluded :math:`s` is uninvertible. 
+
 .. _palindromics-pivot-words:
 
 -----------
@@ -834,7 +836,15 @@ Pivot Words
     1. If :math:`\overleftarrow{\Omega_{\zeta}} = \overrightarrow{\Omega_{\zeta}}`, then :math:`\Omega_{\zeta} = \overleftarrow{\Omega_{\zeta}} = \overrightarrow{\Omega_{\zeta}}`
     2. If :math:`\overleftarrow{\Omega_{\zeta}} \neq \overrightarrow{\Omega_{\zeta}}`, then :math:`\Omega_{\zeta} = \varepsilon`
 
-**Example** Let `ᚠ_1 = \text{a crowd flowed over london bridge}`. Note :math:`\Lambda(ᚠ_1) = 6`.
+.. note::
+
+    In essence, the existence of a Pivot Character or Pivot Word in a Sentence is a property of a String's *self-invertibility*, i.e. :math:`s = s^{-1}`. All self-invertible Strings possess the property "*has a Pivot Character and Word*", but having this propery is not a *sufficient* for establishing self-invertibility.
+
+    The existence of a Pivot Character and Pivot Word in a Sentence define a class of Sentences in the Corpus. However, the relationship between Pivot Characters and Pivot Words is deceptively subtle, as these next examples illustrate. 
+
+**Example** Let `ᚠ_1 = \text{a crowd flowed over london bridge}`. Note :math:`\Lambda(ᚠ_1) = 6` and :math:`l(ᚠ_1) = 33`
+
+The Pivot Word calculations proceed as follows,
 
 - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{6}{2} = 3`
 - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{8}{2} = 4`
@@ -842,13 +852,85 @@ Pivot Words
 - *Right Pivot Word*: :math:`ᚠ_1[[4]] = \overleftarrow{\Omega_{ᚠ_1}} = \text{over}`
 - *Pivot Word*: :math:`\Omega_{ᚠ_1} = \varepsilon`
 
-Let :math:`ᚠ_2 = \text{i had not thought death had undone so many}`. Note :math:`\Lambda(ᚠ_2) = 9`.
+The Pivot Character calculations proceed as follows,
+
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{34}{2} = 17`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{34}{2} = 17`
+- *Left Pivot Character*: :math:`ᚠ_1[17]= \text{v}`
+- *Right Pivot Character*: :math:`ᚠ_1[17]= \text{v}`
+- *Pivot Character*: :math:`\omega_{ᚠ_1} = \text{v}`
+
+Let :math:`ᚠ_2 = \text{i had not thought death had undone so many}`. Note :math:`\Lambda(ᚠ_2) = 9` and :math:`l(ᚠ_2) =  42`
+
+The Pivot Word calculations proceed as follows,
 
 - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{10}{2} = 5`
 - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{10}{2} = 5`
 - *Left Pivot Word*: :math:`ᚠ_2[[3]] = \overrightarrow{\Omega_{ᚠ_2}} = \text{death}`
 - *Right Pivot Word*: :math:`ᚠ_2[[4]] = \overleftarrow{\Omega_{ᚠ_2}} = \text{death}`
 - *Pivot Word*: :math:`\Omega_{ᚠ_2} = \text{death}`
+
+The Pivot Character calculations proceed as follows,
+
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{42}{2} = 21`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{44}{2} = 22`
+- *Left Pivot Character*: :math:`ᚠ_2[21]= \text{a}`
+- *Right Pivot Character*: :math:`ᚠ_2[22]= \text{t}`
+- *Pivot Character*: :math:`\omega_{ᚠ_2} = \varepsilon`
+
+Let :math:`ᚠ_3 = \text{no radar on}`. Note :math:`\Lambda(ᚠ_3) = 3` and :math:`l(ᚠ_3) = 11`
+
+The Pivot Word calculations proceed as follows,
+
+- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
+- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
+- *Left Pivot Word*: :math:`ᚠ_3[[2]] = \overrightarrow{\Omega_{ᚠ_3}} = \text{radar}`
+- *Right Pivot Word*: :math:`ᚠ_3[[4]] = \overleftarrow{\Omega_{ᚠ_3}} = \text{radar}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_3} = \text{radar}`
+
+The Pivot Character calculations proceed as follows,
+
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{12}{2} = 6`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{12}{2} = 6`
+- *Left Pivot Character*: :math:`ᚠ_3[6]= \text{d}`
+- *Right Pivot Character*: :math:`ᚠ_3[6]= \text{d}`
+- *Pivot Character*: :math:`\omega_{ᚠ_3} = \text{d}`
+
+Let :math:`ᚠ_4 = \text{tell me stories}`. Note :math:`\Lambda(ᚠ_4) = 3` and :math:`l(ᚠ_4) = 15`
+
+The Pivot Word calculations proceed as follows,
+
+- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
+- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
+- *Left Pivot Word*: :math:`ᚠ_4[[2]] = \overrightarrow{\Omega_{ᚠ_4}} = \text{me}`
+- *Right Pivot Word*: :math:`ᚠ_4[[4]] = \overleftarrow{\Omega_{ᚠ_4}} = \text{me}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_4} = \text{radar}`
+
+The Pivot Character calculations proceed as follows,
+
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{16}{2} = 8`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{16}{2} = 8`
+- *Left Pivot Character*: :math:`ᚠ_4[6]= \sigma`
+- *Right Pivot Character*: :math:`ᚠ_4[6]= \sigma`
+- *Pivot Character*: :math:`\omega_{ᚠ_4} = \sigma`
+
+Let :math:`ᚠ_5 = \text{emit naps noon span time}`. Note :math:`\Lambda(ᚠ_5) = 5` and :math:`l(ᚠ_5) = 24`.
+
+The Pivot Word calculations proceed as follows,
+
+- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{6}{2} = 3`
+- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
+- *Left Pivot Word*: :math:`ᚠ_5[[2]] = \overrightarrow{\Omega_{ᚠ_5}} = \text{noon}`
+- *Right Pivot Word*: :math:`ᚠ_5[[4]] = \overleftarrow{\Omega_{ᚠ_5}} = \text{noon}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_5} = \text{noon}`
+
+The Pivot Character calculations proceed as follows,
+
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{24}{2} = 12`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{26}{2} = 13`
+- *Left Pivot Character*: :math:`ᚠ_5[12]= \text{o}`
+- *Right Pivot Character*: :math:`ᚠ_5[6]= \text{o}`
+- *Pivot Character*: :math:`\omega_{ᚠ_5} = \text{o}`
 
 ∎
 
@@ -940,7 +1022,7 @@ TODO
 
     \Omega_{\zeta} \neq \varepsilon
 
-Where the Pivot Word occurs at the Word Index, :math:`k = \frac{\Lambda(\zeta) + 1}{2}`i.e. 
+Where the Pivot Word occurs at the Word Index, :math:`k = \frac{\Lambda(\zeta) + 1}{2}`, i.e. 
 
 .. math:: 
 
@@ -975,3 +1057,13 @@ Since :math:`\Lambda(\zeta^{-1}) = \Lambda(\zeta)`, i.e. their Pivot Word Indice
 TODO
 
 .. .................................................................................
+
+.. _palindromics-definition-2-1-4:
+
+.. topic:: Definition 2.1.4: Subvertible Sentences
+
+    The set of Subvertible Sentences, denoted :math:`\cancel{J}`, is defined as the set of Sentences which satisfy the open formula,
+
+    .. math::
+
+        \zeta \in \cancel{J} \equiv ((\Omega_\zeta \neq \varepsilon) \land (\omega_\zeta \neq \varepsilon))

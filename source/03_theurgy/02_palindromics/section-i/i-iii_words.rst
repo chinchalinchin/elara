@@ -440,7 +440,7 @@ The Dialect is the union of all delimited Phrases in all Lexicons of the Languag
 
 .. topic:: Theorem 1.3.4
 
-    \forall s \in D: \notexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
+    \forall s \in D: \nexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
 
 **Proof** Let :math:`s \in D`. Then by :ref:`definition of the Dialect <palindromics-definition-1-3-6>`, for some :math:`i \in mathbb{N}` and :math:`p \in L_i`, 
 
@@ -476,13 +476,13 @@ Therefore,
 
 .. math::
 
-    \notexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
+    \nexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
 
 :underline:`Induction`. Assume for all :math:`t \in D` with :math:`p \in L_i` and some fixed :math:`i`.
 
 .. math::
 
-    \notexists j \in N_{l(t)}: (t[j+1] = \sigma) \land (t[j] = \sigma)
+    \nexists j \in N_{l(t)}: (t[j+1] = \sigma) \land (t[j] = \sigma)
 
 where 
 
@@ -520,4 +520,4 @@ The induction is thus established. Summarizing and generalizing,
 
 .. math::
 
-    \forall s \in D: \notexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
+    \forall s \in D: \nexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)

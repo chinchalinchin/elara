@@ -9,11 +9,11 @@
 January
 -------
 
-There are two mutually exclusive categories of :ref:`palindromes <definition-4-1-1>` in any :ref:`language <language>`: perfect and imperfect.
+There are two mutually exclusive categories of :ref:`palindromes <palindromics-definition-2-3-1>` in any :ref:`language <language>`: perfect and imperfect.
 
-A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <definition-4-1-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <definition-4-1-1>` in any given :ref:`language <language>`, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct.
+A :ref:`perfect palindrome <palindromics-definition-2-3-2>` is symmetric, by which it is meant a :ref:`perfect palindrome <palindromics-definition-2-3-2>` may be reversed character-wise. Of the "species" of :ref:`palindromes <palindromics-definition-2-3-1>` in any given :ref:`language <language>`, they are the most rare, because their grammatical conditions are so stringent (at least as far as English is concerned). Counter-intuitively, this makes them the easiest to construct.
 
-:ref:`Perfect palindromes <definition-4-1-2>` mostly hinge on :ref:`invertible <invertible-words>` grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a :ref:`perfect palindromes <definition-4-1-2>` must rely on the symmetry of a central :ref:`palindromic word <reflective-words>`. In other words, the cardinality of :ref:`perfect palindromes <definition-4-1-2>` is related to the cardinality of :ref:`invertible words <invertible-words>` and the cardinality of purely :ref:`reflective words <reflective-words>`.
+:ref:`Perfect palindromes <palindromics-definition-2-3-2>` mostly hinge on :ref:`invertible <palindromics-definition-1-3-2>` grammatical structures embodied in the "*on-no*", "*now-won*" and "*saw-was*" invertible pairs. Without these invertible pivot points, a :ref:`perfect palindromes <palindromics-definition-2-3-2>` must rely on the symmetry of a central :ref:`palindromic word <palindromics-definition-1-3-1>`. In other words, the cardinality of :ref:`perfect palindromes <palindromics-definition-2-3-2>` is related to the cardinality of :ref:`invertible words <palindromics-definition-1-3-2>` and the cardinality of purely :ref:`reflective words <palindromics-definition-1-3-1>`.
 
 - repel on no leper
 - dog saw raw war was god
@@ -22,19 +22,19 @@ A :ref:`perfect palindrome <definition-4-1-2>` is symmetric, by which it is mean
 - pupils did slipup
 - strips deified spirts
 
-:ref:`Imperfect palindromes <definition-4-1-3>`, by contrast, degrade under reversal. Consider cases like "*borrow or rob*" or "*name now one man*" which, while palindromic, do not preserve semantic content when reversed. However, by dropping the delimiting character, namely the space " ", the palindromicity can be reconstructed in a degenerate alphabet, e.g. "*borroworob*" and "*namenowoneman*" are palindromic strings in an alphabet with no delimiting characters.
+:ref:`Imperfect palindromes <palindromics-definition-2-3-3>`, by contrast, degrade under reversal. Consider cases like "*borrow or rob*" or "*name now one man*" which, while palindromic, do not preserve semantic content when reversed. However, by dropping the delimiting character, namely the space " ", the palindromicity can be reconstructed in a degenerate alphabet, e.g. "*borroworob*" and "*namenowoneman*" are palindromic strings in an alphabet with no delimiting characters.
 
-These observations suggest an algebraic structure exists embedded within linguistics. Let :math:`\zeta` be a sentence, defined as a sequence of characters. Then, define the :ref:`inverse <palindromics-string-inversion>` of a sentence, :math:`\text{inv}(\zeta)`, as the reversal of :math:`\zeta`'s characters. Furthermore, define the :ref:`reduction <definition-3-1-2>` of a sentence, :math:`\varsigma(\zeta)`, as the string which results from the removal of delimiter characters from :math:`\zeta`. Then, palindromes, :math:`\zeta_p` can be defined mathematically as the sentences whose reduced forms are equal to their own inverses,
+These observations suggest an algebraic structure exists embedded within linguistics. Let :math:`\zeta` be a sentence, defined as a sequence of characters. Then, define the :ref:`inverse <palindromics-string-inversion>` of a sentence, :math:`\zeta^{-1}`, as the reversal of :math:`\zeta`'s characters. Furthermore, define the :ref:`reduction <palindromics-definition-2-2-1>` of a sentence, :math:`\varsigma(\zeta)`, as the string which results from the removal of delimiter characters from :math:`\zeta`. Then, palindromes, :math:`\zeta_p` can be defined mathematically as the sentences whose reduced forms are equal to their own inverses,
 
 .. math::
 
-    \varsigma(\zeta_p) = \text{inv}(\varsigma(\zeta_p))
+    \varsigma(\zeta_p) = (\varsigma(\zeta_p))^{-1}
 
 It can be shown that inversion and reduction, which are string operations, commute over strings, so the above equation can be extended,
 
 .. math::
 
-    \varsigma(\zeta_p) = \varsigma(\text{inv}(\zeta_p)) = \text{inv}(\varsigma(\zeta_p))
+    \varsigma(\zeta_p) = \varsigma((\zeta_p)^{-1}) = (\varsigma(\zeta_p))^{-1}
 
 In other words, palindromes, perfect and imperfect, are exactly the class of sentences which satsify this formal constraint.
 
@@ -110,7 +110,7 @@ The nature of :ref:`language <language>` is elusive. It begs an unending series 
 
 1. :ref:`Language <language>` is a hierarchy of ordered sequences. Words are ordered sequences of characters. Sentences are ordered sequences of words.
 
-This seems fundamental. If there is a purely logical and formal principle underlying :ref:`language <language>`, surely this is it.  Almost every known :ref:`language <language>` conforms to this model, in some way. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this :ref:`axiom <section-ii-ii>` fails to span the entire breadth of the phenomenon of :ref:`language <language>`.
+This seems fundamental. If there is a purely logical and formal principle underlying :ref:`language <language>`, surely this is it.  Almost every known :ref:`language <language>` conforms to this model, in some way. However, even with this meager claim, the most miniscule of structural propositions (that structure *exists*), counter-examples can be produced that show this :ref:`axiom <palindromics-section-i-ii>` fails to span the entire breadth of the phenomenon of :ref:`language <language>`.
 
 To start, the concept of declension immediately challenges this hierarchical model of :ref:`language <language>`. In :ref:`languages <language>` like Greek or Latin, the suffixes appended to words denote its part of speech. Consider the three Latin sentences,
 
@@ -783,7 +783,7 @@ As an example of the preceding, consider the sentence,
 
     deduce the theorem now.
 
-In terms of purely transcriptional dimensions, this sentence has a character length of 22 (including delimiters) and a word length of 4. Given the :ref:`correct axiomatization <section-ii-ii>` of :ref:`language <language>`, it can be shown the character length of a string is bounded from below by the string's word length, i.e. since every word must contain atleast one character, there must always be more characters in a sentence than words. This is an example of the sort of relative cardinalities that can be established when two concepts are categorically related.
+In terms of purely transcriptional dimensions, this sentence has a character length of 22 (including delimiters) and a word length of 4. Given the :ref:`correct axiomatization <palindromics-section-i-ii>` of :ref:`language <language>`, it can be shown the character length of a string is bounded from below by the string's word length, i.e. since every word must contain atleast one character, there must always be more characters in a sentence than words. This is an example of the sort of relative cardinalities that can be established when two concepts are categorically related.
 
 However, the sentence may also be parsed along a phonetic dimension,
 
