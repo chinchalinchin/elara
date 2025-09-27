@@ -339,3 +339,5 @@ TODO: Reorder
 37. resonate(water)(meter=-+ ∨ meter=-+- ∨ meter = +-)
 
 38. resonate(spokes) ∩ resonate(trails)
+
+39. { [λx: ∃🧠: 🧠 ∈ lang.stretch() ∧ 🧠 ≡ x]  [λx: ∃💾: 💾 ∈ lang.stretch() ∧ 💾 ≡ x], [λx: ∃🌐: 🌐 ∈ lang.stretch() ∧ 🌐 ≡ x], [λx: ∃🪞: 🪞 ∈ lang.stretch() ∧ 🪞 ≡ x], [λx: ∃🫀: 🫀 ∈ lang.stretch() ∧ 🫀 ≡ x], [λx: ∃👁️: 👁️ ∈ lang.stretch() ∧ 👁️ ≡ x] } ∩ connote(name)

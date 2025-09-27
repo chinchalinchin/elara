@@ -93,7 +93,7 @@ Holly Tree
     - Pending
   * - August 13, 2025
     - Tabula Rasa
-    - Pending
+    - Rejected
   * - August 13, 2025
     - Lochraven Review
     - Pending
@@ -129,7 +129,7 @@ Holly Tree
     - Pending
   * - August 27, 2025
     - La Piccioletta Barca
-    - Pending
+    - Rejected
   * - August 29, 2025
     - Raleigh Review
     - Pending

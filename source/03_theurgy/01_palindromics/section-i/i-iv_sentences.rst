@@ -738,6 +738,8 @@ Summarizing and generalizing,
 
     \forall \zeta \in J: \forall i \in N_{\Lambda(\zeta)}: {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
 
+∎
+
 .. _palindromics-partial-sentences:
 
 Partial Sentences
@@ -745,23 +747,25 @@ Partial Sentences
 
 .. _palindromics-definition-1-4-4:
 
-.. topic:: Definition 1.4.4: Partial Sentence
+.. topic:: Definition 1.4.4: Partial String
 
-    Let :math:`\zeta \in C` with :math:`n = l(\zeta)`. Let :math:`i \in N_n`.
+    Let :math:`s \in S` with :math:`n = l(s)`. Let :math:`i \in N_n`.
 
-    **Left Partial Sentence** :math:`\zeta[i:]`
+    **Right Partial String** :math:`s[i:]`
 
-    - Basis: :math:`\zeta[n:] = \zeta[n]`
-    - Induction: :math:`\zeta[i:] = (\zeta[i])\zeta[n+1:]`
+    - Basis: :math:`s[n:] = s[n]`
+    - Induction: :math:`s[i:] = (s[i])s[n+1:]`
 
-    **Right Partial Sentence** :math:`\zeta[:i]`
+    **Left Partial String** :math:`s[:i]`
 
-    - Basis: :math:`\zeta[:1] = \zeta[1]`
-    - Induction: :math:`\zeta[:i] = (\zeta[:i-1])\zeta[i]`
+    - Basis: :math:`s[:1] = s[1]`
+    - Induction: :math:`s[:i] = (s[:i-1])s[i]`
+
+    When :math:`s \in C`, :math:`s[i:]` and `s[:i]` are called Partial Sentences.
 
 **Example** Let :math:`ᚠ = \text{form is the possibility of structure}`. Then :math:`l(ᚠ) = 36`.
 
-Consider :math:`ᚠ[:4]`. Applying the :ref:`definition of Partial Sentences <palindromics-definition-1-4-4>`,
+Consider :math:`ᚠ[:4]`. Applying the :ref:`definition of Partial String <palindromics-definition-1-4-4>`, the Left Partial Sentence is given by, 
 
 .. math::
 
@@ -769,7 +773,7 @@ Consider :math:`ᚠ[:4]`. Applying the :ref:`definition of Partial Sentences <pa
 
 Thus :math:`ᚠ[:4] = \text{form}`.
 
-Consider :math:`ᚠ[10:]`
+Consider :math:`ᚠ[10:]`. The Right Partial Sentence is given by,
 
 .. math::
 
@@ -783,6 +787,18 @@ Thus :math:`ᚠ[10:] = \text{he possibility of structure}`
 
     Note Partial Sentences are **not** part of the Corpus.
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
+.. topic:: Theorem 1.4.12
+
+    The Concatenation of a Left Partial String with its Right Partial String is the String. 
+
+    .. math::
+
+        \forall s \in S: \forall i \in N_{l(s) - 1}: s = (s[:i])(s[i+1:])
+
+**Proof** Let :math:`s \in S` with :math:`n = l(s)`. 
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................

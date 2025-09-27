@@ -1,12 +1,12 @@
-.. _theurgy:
+.. _Machina:
 
 =======
-Theurgy
+Machina 
 =======
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   01_palindromics/index
-   02_poetics/index
+   01_universalis/index
+   02_simulacrum/index

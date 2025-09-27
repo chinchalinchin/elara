@@ -34,7 +34,7 @@ Larksong
     - Status
   * - August 13, 2025
     - Tabula Rasa
-    - Pending
+    - Rejected
   * - August 13, 2025
     - Lochraven Review
     - Pending

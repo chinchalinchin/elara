@@ -12,6 +12,7 @@
    03_theurgy/index
    04_analecta/index
    05_oeuvre/index
+   06_machina/index
 
 .. raw:: html
 

@@ -535,8 +535,8 @@ The Law of Duality
     - Publication
     - Status
   * - June 4, 2025
-    - Swan Scyth Press
-    - Pending
+    - Swan Scythe Press
+    - Rejected
   * - June 12, 2025
     - Alchemy Spoon
     - Rejected

@@ -1067,3 +1067,33 @@ TODO
     .. math::
 
         \zeta \in \cancel{J} \equiv ((\Omega_\zeta \neq \varepsilon) \land (\omega_\zeta \neq \varepsilon))
+
+**Example** The following table lists some Subvertible Sentences in :math:`L_\text{english}`
+
+.. list-table:: 
+    :widths: 50 50 50
+    :header-rows: 1
+    
+    * - Subvertible Sentence
+      - Pivot Character
+      - Pivot Word
+    * - the moon was
+      - o
+      - moon
+    * - they seem nice
+      - e
+      - seem
+    * - what tomorrow holds
+      - r
+      - tomorrow
+    * - i am driven
+      - r
+      - am
+    * - overwhelmingly preposterous subvertible strings amuse
+      - u
+      - subvertible
+    * - he became a very very old man today 
+      - v
+      - very
+
+∎
