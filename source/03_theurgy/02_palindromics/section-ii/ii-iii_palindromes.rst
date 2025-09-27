@@ -21,39 +21,39 @@ Definition & Examples
 
 **Example** 
 
-Let :math:`ᚠ_1 = never odd or even`. Then, 
+Let :math:`ᚠ_1 = \text{never odd or even}`. Then, 
 
 .. math::
 
-    \varsigma(ᚠ_1) = neveroddoreven
+    \varsigma(ᚠ_1) = \text{neveroddoreven}
 
 .. math::
 
-    (\varsigma(ᚠ_1))^{-1} = neveroddoreven
+    (\varsigma(ᚠ_1))^{-1} = \text{neveroddoreven}
 
 Therefore, :math:`ᚠ_1 \in P`.
 
-Let :math:`ᚠ_2 = not a ton`. Then,
+Let :math:`ᚠ_2 = \text{not a ton}`. Then,
 
 .. math::
 
-    \varsigma(ᚠ_2) = notaton
+    \varsigma(ᚠ_2) = \text{notaton}
 
 .. math::
 
-    (\varsigma(ᚠ_2))^{-1} = notaton
+    (\varsigma(ᚠ_2))^{-1} = \text{notaton}
 
 Therefore, :math:`ᚠ_2 \in P`
 
-Let :math:`ᚠ_2 = fair is foul and foul is fair`. Then,
+Let :math:`ᚠ_2 = \text{fair is foul and foul is fair}`. Then,
 
 .. math::
 
-    \varsigma(ᚠ_3) = fairisfoulandfoulisfair
+    \varsigma(ᚠ_3) = \text{fairisfoulandfoulisfair}
 
 .. math::
 
-    (\varsigma(ᚠ_3))^{-1} = riafsiluofdnaluofsiriaf
+    (\varsigma(ᚠ_3))^{-1} = \text{riafsiluofdnaluofsiriaf}
 
 Therefore, :math:`ᚠ_3 \notin P`
 
@@ -94,11 +94,19 @@ Aspect
 
     \zeta = \zeta^{-1}
 
-.. .................................................................................
+Therefore, since :math:`\zeta \in C`, :math:`\zeta^{-1} \in C`. By :ref:`definition of Invertible Sentences <palindromics-definition-1-3-2>`, :math:`\zeta \in J`. Therefore,
 
-TODO
+.. math::
 
-.. .................................................................................
+    \zeta \in K \implies \zeta \in J
+
+But this is exactly the definition of a subset. Therefore,
+
+.. math::
+
+    K \subseteq J
+
+◼︎
 
 .. note::
 
@@ -112,6 +120,8 @@ TODO
 
         \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \in I
 
+◼︎
+
 .. _palindromics-theorem-2-3-3:
 
 .. topic:: Theorem 2.3.3 
@@ -119,6 +129,8 @@ TODO
     .. math::
 
         \forall \zeta \in K: \forall i \in N_{\Lambda(\zeta)}: \zeta^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+
+◼︎
 
 .. _palindromics-theorem-2-3-4:
 
@@ -130,53 +142,69 @@ TODO
 
         J \subseteq P 
 
-**Proof** Let :math:`\zeta \in J`.
+**Proof** Let :math:`\zeta \in J`. By :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`, 
 
-.. .................................................................................
+.. math::
 
-TODO
+    \zeta = \zeta^{-1}
 
-.. .................................................................................
+:ref:`Reducing <palindromics-definition-2-2-1>` both sides,
+
+.. math::
+
+    \varsigma(\zeta) = \varsigma(\zeta^{-1})
+
+By :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`,
+
+.. math::
+
+    \varsigma(\zeta) = (\varsigma(\zeta))^{-1}
+
+Therefore, by :ref:`definition of Palindromes <palindromics-definition-2-3-1>`,
+
+.. math::
+
+    \zeta \in J \implies \zeta \in P
+
+But this is exactly the definition of subsets, 
+
+.. math::
+
+    J \subseteq P
+
+◼︎
 
 .. _palindromics-theorem-2-3-5:
 
 .. topic:: Theorem 2.3.5
 
-    \forall \zeta in J: \omega_s \neq \varepsilon
+    The Pivot Character of all Perfect Palindromes is non-Empty.
+    
+    .. math::
+
+        \forall \zeta in J: \omega_{\zeta} \neq \varepsilon
 
 **Proof** Let :math:`\zeta \in J`.
 
-By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`. 
-
-By definition of natural numbers, either :math:`\Delta(\zeta)` is odd or even. 
-
-.. CASE I
-
-:underline:`Case I` :math:`\Delta(\zeta)` is odd. 
-
-Then, it follows immediately by :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`, 
+By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`.  By :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>`,
 
 .. math::
 
-    \omega_s = \sigma
+    \omega_{\zeta} \neq \varepsilon
 
-.. CASE II
-
-:underline:`Case II` :math:`\Delta(\zeta)` is even.
-
-TODO
-
-.. .................................................................................
-
-TODO
-
-.. .................................................................................
+◼︎
 
 .. _palindromics-definition-2-3-3:
 
 .. topic:: Definition 2.3.3: Imperfect Palindromes
 
     TODO 
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
 
 .. _palindromics-parity:
 

@@ -46,7 +46,7 @@ It follows that it must be the case, :math:`\zeta \in P_{+}`. Therefore, :math:`
 
 .. math::
 
-    \overrrightarrow{\omega_s} = \omegaleftarrow{\omega_s} = \sigma
+    \overrightarrow{\omega_s} = \overleftarrow{\omega_s} = \sigma
 
 Where the last equality follows by assumption. Then,
 
@@ -58,13 +58,7 @@ In other words, two consecutive Characters are Delimiter. But this is impossible
 
 .. math::
 
-    \zeta[\frac{l(2)}{2}] \neq \sigma
-
-And 
-
-.. math::
-
-    \zeta[\frac{l(s) + 2}{2}] \neq \sigma
+    \zeta \in P_{-}
 
 (:math:`\leftarrow`) Assume :math:`\zeta \in P_{-}`. By :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`, it follows immediately,
 
@@ -79,19 +73,34 @@ Thus the equivalence is established. Summarizing and generalizing,
     \forall \zeta \in J: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
     
 ∎
+
+.. _palindromics-theorem-3-2-2:
+
+.. topic:: Theorem 3.2.2
+
+    The Pivot Character of a Perfect Palindrome is not a Delimtier if and only if its Pivot Word is Reflective.
+
+    .. math::
+
+        \forall \zeta \in J: (\omega_{\zeta} \neq \sigma) \equiv (\Omega_{\zeta} \in R)
+
+**Proof** Let :math:`\zeta \in J`. 
+
 .. .................................................................................
 
 TODO
 
 .. .................................................................................
 
-.. _palindromics-theorem-3-2-2:
+.. _palindromics-theorem-3-2-3:
 
-.. topic:: Theorem 3.2.2
+.. topic:: Theorem 3.2.3
 
-    \forall \zeta \in J: (\omega_{\zeta} \neq \sigma) \equiv (\Omega_{\zeta} \in R)
+    The Pivot Character of a Perfect Palindrome is not a Delimiter if and only if its Pivot Character is the Pivot Character of its Pivot Word.
 
-**Proof** Let :math:`\zeta \in J`. 
+    .. math::
+
+        \forall \zeta \in J: (\omega_{\zeta} \neq \sigma) \equiv (\omega_{\Omega_{\zeta}} = \omega_{\zeta} )
 
 .. .................................................................................
 
@@ -108,7 +117,13 @@ Inverse Postulates
 
     .. math::
 
-        \forall \zeta in P: (\zeta[[1]] \subset_s \zeta^{-1}[[1]]) \lor (\zeta^{-1}[[1]] \subset_s \zeta[[1]])
+        \forall \zeta \in P: (\zeta[[1]] \subset_s \zeta^{-1}[[1]]) \lor (\zeta^{-1}[[1]] \subset_s \zeta[[1]])
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
 
 .. topic:: Theorem 3.2.x+1 
 
@@ -116,4 +131,10 @@ Inverse Postulates
 
     .. math::
 
-        \forall \zeta in P:  (\zeta[[\Lambda(\zeta)]] \subset_s \zeta^{-1}[[\Lambda(\zeta)]]) \lor (\zeta^{-1}[[\Lambda(\zeta)]] \subset_s \zeta[[\Lambda(\zeta)]])
+        \forall \zeta \in P:  (\zeta[[\Lambda(\zeta)]] \subset_s \zeta^{-1}[[\Lambda(\zeta)]]) \lor (\zeta^{-1}[[\Lambda(\zeta)]] \subset_s \zeta[[\Lambda(\zeta)]])
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................

@@ -12,12 +12,14 @@ The study of Palindromes leads directly into the study of Delimiter distribution
 Since, by :ref:`Definition 2.3.2 <palindromics-definition-2-3-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters for these examples. Note the horizontal axes are scaled to the Sentence String Length,
 
 .. image:: ../../../_static/img/results/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
-  :width: 400
+  :align: center
   :alt: Delimiter Indices, Perfect Palindrome, Example #1
+  :width: 70%
 
 .. image:: ../../../_static/img/results/sentences/palindromes/delimiter_indices_perfect_palindrome_2.png
-  :width: 400
+  :align: center
   :alt: Delimiter Indices, Perfect Palindrome, Example #2
+  :width: 70%
 
 Notice the Delimiter indices are symmetrical about the center. Now consider the pair of Imperfect Palindromes, 
 
@@ -27,12 +29,14 @@ Notice the Delimiter indices are symmetrical about the center. Now consider the 
 According to :ref:`Definition 2.3.1 <palindromics-definition-2-3-1>`, Imperfect Palindromes must first be reduced to restore their symmetry. An examination of the corresponding barcharts for these examples show why,
 
 .. image:: ../../../_static/img/results/sentences/palindromes/delimiter_indices_imperfect_palindrome_1.png
-  :width: 400
+  :align: center
   :alt: Delimiter Indices, Imperfect Palindrome, Example #1
+  :width: 70%
 
 .. image:: ../../../_static/img/results/sentences/palindromes/delimiter_indices_imperfect_palindrome_2.png
-  :width: 400
+  :align: center
   :alt: Delimiter Indices, Imperfect Palindrome, Example #2
+  :width: 70%
 
 Imperfect Palindromes are exactly those class of Palindromes which do not have symmetrical Delimiter distributions. 
 
@@ -59,16 +63,19 @@ Consider taking Sentences from a Corpus and for each one, calculating and return
 If a large Corpus is analyzed so that each Sentence is reduced to a set of Delimiter indices, and then the frequency of Delimiter Counts is plotted, an interesting, but potentially misleading result is obtained. The following histograms show the result of this technique for Sentences of various fixed lengths. 
 
 .. image:: ../../../_static/img/results/sentences/english/delimiter_distribution_n50.png
-  :width: 400
+  :align: center
   :alt: Delimiter Distribution, Sentence String Length = 50
+  :width: 70%
 
 .. image:: ../../../_static/img/results/sentences/english/delimiter_distribution_n100.png
-  :width: 400
+  :align: center
   :alt: Delimiter Distribution, Sentence String Length = 100
+  :width: 70%
 
 .. image:: ../../../_static/img/results/sentences/english/delimiter_distribution_n200.png
-  :width: 400
+  :align: center
   :alt: Delimiter Distribution, Sentence String Length = 200
+  :width: 70%
 
 As can be seen from the shape of the histograms, the Delimiter index distribution for Sentences of fixed length is roughly uniform (with a potentially significant spike in the far left tail of each distribution). These graphs suggest the Delimiter Count of a single Character, :math:`\zeta[k]`, can be approximated by a discrete, uniform random variable, conditional on the Sentence String Length,
 
@@ -82,7 +89,7 @@ When Sentences are reduced to Delimiter indices and plotted in aggregate, inform
 
 .. math::
 
-  P(\Delta(\hat{zeta}[k]) = 1 | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
+  P(\Delta(\hat{\zeta}[k]) = 1 | \Delta(\zeta[k-1]) = \delta_{k-1}, \Delta(\zeta[k-2]) = \delta_{k-2}, ... , \Delta(\zeta[1]) = \delta_1 ) = P(\Delta(\zeta[k]))
 
 where each :math:`\delta_k` is  :math:`1` or :math:`0`.
 
@@ -106,7 +113,7 @@ The presence of the Delimiter after the article *"the"* affects the subsequent a
 
 .. math::
 
-  P(\Delta(\hat{zeta}[k]) \mid \Delta(\zeta[k-1]) = 1 ) = 0
+  P(\Delta(\hat{\zeta}[k]) \mid \Delta(\zeta[k-1]) = 1 ) = 0
 
 In summary, it cannot be discounted that knowing where a single Delimiter occurs in a Sentence influences the possible locations where other Delimiters in the same Sentence might occur. However, accounting for this contingency presents computational challenges. A Sentence with 100 Characters will have :math:`2^100` possible Delimiter configurations, by the Fundamental Counting Principle. Tracking the Delimiter distribution across different Sentence String Lengths becomes impossible. Enumerating and tallying these outcomes is a prohibitively expensive task, if abstraction is not employed to summarize the Delimiter *"mass"* of a Sentence. 
 

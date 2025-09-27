@@ -309,9 +309,9 @@ Containment
 
 .. NOTE: had to insert these theorems. Everything needs renumbered around them.
 
-.. _palindromics-theorem-x-x-x:
+.. _palindromics-theorem-1-2-3:
 
-.. topic:: Theorem x.x.x
+.. topic:: Theorem 1.2.3
 
     If any Character :math:`\iota` is contained in :math:`uv`, then :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`.
 
@@ -320,20 +320,6 @@ Containment
         \forall \iota \in \Sigma_e: \forall u, v \in S: (\iota \subset_s uv) \implies (s \subset_s u) \lor (s \subset_s v)
 
 **Proof** Let :math:`\iota \in \Sigma_e`: Let :math:`u,v \in S`. Since :math:`uv` is a non-overlapping sequence of Characters and :math:`\iota \subset_s uv`, it follows from the laws of logic that it must be the case that either :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`. 
-
-∎
-
-.. _palindromics-theorem-x-x-y:
-
-.. topic:: Theorem x.x.y
-
-    If any Character :math:`\iota` is not contained in :math:`u` and :math:`iota` is not contained in :math:`v`, then :math:`\iota` is not contained in :math:`uv`.
-
-    .. math::
-
-        \forall \iota \in \Sigma_e: \forall u, v \in S: (\neg(\iota \subset_s u) \land \neg(\iota \subset_s v)) \implies \neg(\iota \subset_s uv)
-
-**Proof** Follows directly from :ref:`Theorem x.x.x <palindromics-theorem-x-x-x>` by the law of contraposition.
 
 ∎
 
@@ -414,9 +400,9 @@ By the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`, thi
 
 Canonization provides a method of "*cleaning*" :math:`S` of troublesome Strings, such as :math:`\mathfrak{a}\varepsilon\mathfrak{b}`, that prevent the assertion of uniqueness within the semantic domains that will be shortly introduced. The Canon provides a domain within :math:`S` where the uniqueness of certain semantic properties can be established. 
 
-.. _palindromics-theorem-1-2-3:
+.. _palindromics-theorem-1-2-4:
 
-.. topic:: Theorem 1.2.3
+.. topic:: Theorem 1.2.4
 
     Canonization is idempotent.
 
@@ -502,9 +488,9 @@ And the induction is established. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-1-2-4:
+.. _palindromics-theorem-1-2-5:
 
-.. topic:: Theorem 1.2.4
+.. topic:: Theorem 1.2.5
 
     A String is canonical if and only if it is equal to its own Canonization. 
 
@@ -516,7 +502,7 @@ And the induction is established. Summarizing and generalizing,
 
 (:math:`\leftarrow`) Assume :math:`s = \pi(s)`. By the definition of :ref:`Canon <palindromics-definition-1-2-7>`, any String that is the result of Canonization belongs to the Canon, therefore :math:`s \in \mathbb{S}`.
 
-(:math:`\rightarrow`) Assume :math:`s \in \mathbb{S}`. By the definition of :ref:`Canon <palindromics-definition-1-2-6>`, there must exist a :math:`t \in S` such that :math:`\pi(t) = s`. Consider :math:`\pi(\pi(t))`. By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
+(:math:`\rightarrow`) Assume :math:`s \in \mathbb{S}`. By the definition of :ref:`Canon <palindromics-definition-1-2-6>`, there must exist a :math:`t \in S` such that :math:`\pi(t) = s`. Consider :math:`\pi(\pi(t))`. By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`,
 
 .. math::
 
@@ -532,9 +518,9 @@ Therefore, the equivalence is established.
 
 ∎
 
-.. _palindromics-theorem-1-2-5:
+.. _palindromics-theorem-1-2-6:
 
-.. topic:: Theorem 1.2.5
+.. topic:: Theorem 1.2.6
 
     Canonization is closed under Concatenation.
 
@@ -552,7 +538,7 @@ Consider :math:`st`. By the Basis clause of :ref:`Concatenation <palindromics-de
 
 .. INDUCTION
 
-:underline:`Induction`. Assume :math:`u \in \mathbb{S}` such that :math:`su \in \mathbb{S}`. By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`,
+:underline:`Induction`. Assume :math:`u \in \mathbb{S}` such that :math:`su \in \mathbb{S}`. By :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`,
 
 .. math::
 
@@ -576,7 +562,7 @@ Substituting in (1) and (2)
 
     \pi(st) = (su)\iota = st
 
-By :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`,
+By :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`,
 
 .. math::
 
@@ -590,7 +576,7 @@ Thus, the induction is complete. Summarizing and generalizing,
 
 ∎
 
-Canonization is an important operation in the study of the logical relations that govern semantic Strings. The Canon provides an abstraction over the domain of all finite Strings where logical properties and physical properties of a String coincide, as in the following list shows. Each of these properties is a direct result :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`.
+Canonization is an important operation in the study of the logical relations that govern semantic Strings. The Canon provides an abstraction over the domain of all finite Strings where logical properties and physical properties of a String coincide, as in the following list shows. Each of these properties is a direct result :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`.
 
 1. The logical length (String Length) of a String is the physical length of the String's canonical form: :math:`l(s) = l(\pi(s))`
 2. The logical Characters of a String are the physical Characters of the String's canonical form: :math:`s[i] = (\pi(s))[i] = \pi(s)[i]`, where the last equality is shorthand. 
@@ -598,9 +584,9 @@ Canonization is an important operation in the study of the logical relations tha
 
 The next two theorems will be extremely important in establishing the equality of certain classes of Strings.
 
-.. _palindromics-theorem-1-2-6:
+.. _palindromics-theorem-1-2-8:
 
-.. topic:: Theorem 1.2.6
+.. topic:: Theorem 1.2.8
 
     If two canonical Strings have the same String Length and all of their Characters equal index-wise, then those Strings are equal.
 
@@ -646,7 +632,7 @@ Thus, the induction holds. Summarizing and generalizing,
 
 .. note::
 
-    :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>` shows how the logical properties of a String's canonical form, namely its logical length (String Length) and its logical (non-Empty) Characters reduce to the abstract and primitive concept of "*string equality*".
+    :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>` shows how the logical properties of a String's canonical form, namely its logical length (String Length) and its logical (non-Empty) Characters reduce to the abstract and primitive concept of "*string equality*".
 
 The formal system under construction assumes the process of Canonization precedes the formation of Language. Empty Characters possess no semantic content, and therefore must be exlcuded from the domain before Language is possible. This will be explicitly formalized in the :ref:`Canonization Axiom <palindromics-axiom-vi>`.
 
@@ -762,9 +748,9 @@ Concatenating the results,
 
 ∎
 
-.. _palindromics-theorem-1-2-8:
+.. _palindromics-theorem-1-2-9:
 
-.. topic:: Theorem 1.2.8
+.. topic:: Theorem 1.2.9
 
     The inverse of an inverse is the original String. 
 
@@ -804,7 +790,7 @@ Moreover, from (1) and (3), it follows,
 
     l(s) = l(u) \quad \text{ (6) }
 
-By the :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (5) and (6) together imply,
+By the :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`, (5) and (6) together imply,
 
 .. math::
 
@@ -818,9 +804,9 @@ Therefore,
 
 ∎
 
-.. _palindromics-theorem-1-2-9:
+.. _palindromics-theorem-1-2-10:
 
-.. topic:: Theorem 1.2.9
+.. topic:: Theorem 1.2.10
 
     The inverse of a concatenation of two String is the concatenation of their inverses in the reversed order.
 
@@ -902,7 +888,7 @@ Combining (4) and (5),
 
     v[i] = w[i] \quad \text{ (6) }
 
-Applying :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (3) and (6) imply,
+Applying :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`, (3) and (6) imply,
 
 .. math::
 
@@ -946,7 +932,7 @@ Combining (7) and (8),
 
     v[i] = w[i] \quad \text{ (9) }
 
-Applying :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, (3) and (6) imply,
+Applying :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`, (3) and (6) imply,
 
 .. math::
 
@@ -960,9 +946,9 @@ In both cases, the theorem is proved. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-1-2-10:
+.. _palindromics-theorem-1-2-11:
 
-.. topic:: Theorem 1.2.10
+.. topic:: Theorem 1.2.11
 
     a String :math:`s` contains another a String :math:`s` if and only if the inverse of :math:`s` contains the inverse of :math:`t`.
 
@@ -978,7 +964,7 @@ In both cases, the theorem is proved. Summarizing and generalizing,
 
     s = (w_1)(t)(w_2)
 
-Consider :math:`s^{-1}`. Applying :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>` twice, this becomes,
+Consider :math:`s^{-1}`. Applying :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>` twice, this becomes,
 
 .. math::
 

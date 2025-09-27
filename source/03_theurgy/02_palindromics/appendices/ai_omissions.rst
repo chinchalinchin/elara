@@ -61,9 +61,9 @@ Appendix I.II: Omitted Proofs
 
 .. _palindromics-omitted-proofs-section-i-ii:
 
------------
-Section I.I
------------
+------------
+Section I.II
+------------
 
 .. topic:: Theorem 1.2.1
     
@@ -170,5 +170,40 @@ Let :math:`w_1 = \varepsilon` and :math:`w_2 = s`. Then, :math:`s = {w_1}\vareps
 .. math::
 
     \varepsilon \subset_s s
+
+∎
+
+.. _palindromics-theorem-1-2-x:
+
+.. topic:: Theorem 1.2.x
+
+    If any Character :math:`\iota` is not contained in :math:`u` and :math:`iota` is not contained in :math:`v`, then :math:`\iota` is not contained in :math:`uv`.
+
+    .. math::
+
+        \forall \iota \in \Sigma_e: \forall u, v \in S: (\neg(\iota \subset_s u) \land \neg(\iota \subset_s v)) \implies \neg(\iota \subset_s uv)
+
+**Proof** Follows directly from :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>` by the law of contraposition.
+
+∎
+
+
+.. _palindromics-omitted-proofs-section-ii-i:
+
+------------
+Section II.I
+------------
+
+.. _palindromics-theorem-2-1-11:
+
+.. topic:: Theorem 2.1.11
+
+    If the Pivot Character of a Canonical String is Empty, then the String is not invertible.
+
+    .. math::
+
+        \forall s \in \mathbb{S}: \omega_s = \varepsilon \implies (s \neq s^{-1})
+
+**Proof** Follows immediately from :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` by the law of contraposition.
 
 ∎

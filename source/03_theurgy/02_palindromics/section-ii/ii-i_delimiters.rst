@@ -388,6 +388,12 @@ Which is equivalent to,
 Pivots
 ------
 
+.. _palindromics-pivot-characters:
+
+----------------
+Pivot Characters
+----------------
+
 .. _palindromics-definition-2-1-2:
 
 .. topic:: Definition 2.1.2: Pivot Characters
@@ -611,7 +617,7 @@ Thus,
  
 From which it follows :math:`l(uv)` is even.
 
-By repeated application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`
+By repeated application of :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>`
 
 .. math::
 
@@ -749,7 +755,7 @@ Therefore,
 
 .. math::
 
-    \overleftarrow{\omega_s} = \overrightarrow{\omega_}
+    \overleftarrow{\omega_s} = \overrightarrow{\omega_s}
 
 .. ODD CASE 
 
@@ -800,20 +806,12 @@ In either case, the conclusion follows. Thus, summarizing and generalizing,
 .. note::
 
     :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` establishes that all invertible Strings in the Canon have a non-Empty Pivot Character. As an immediate corollary to this theorem, if a canonical String has an Empty Pivot Character, then it cannot be invertible.
- 
-.. _palindromics-theorem-2-1-11:
 
-.. topic:: Theorem 2.1.11
+.. _palindromics-pivot-words:
 
-    If the Pivot Character of a Canonical String is Empty, then the String is not invertible.
-
-    .. math::
-
-        \forall s \in \mathbb{S}: \omega_s = \varepsilon \implies (s \neq s^{-1})
-
-**Proof** Follows immediately from :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` by the law of contraposition.
-
-∎
+-----------
+Pivot Words
+-----------
 
 .. _palindromics-definition-2-1-3:
 
@@ -831,13 +829,149 @@ In either case, the conclusion follows. Thus, summarizing and generalizing,
     1. If :math:`\Lambda(\zeta)` is odd, then :math:`\overleftarrow{j} = \frac{\Lambda(\zeta) + 1}{2}`
     2. If :math:`\Lambda(\zeta)` is even, then :math:`\overleftarrow{i} = \frac{\Lambda(\zeta) + 2}{2}` 
 
-    The *Pivot Word*, denoted :math:`\Omega_s`, is defined as the Character which satisfies the following conditions,
+    The *Pivot Word*, denoted :math:`\Omega_{\zeta}`, is defined as the Character which satisfies the following conditions,
 
-    1. If :math:`\overleftarrow{\Omega_s} = \overrightarrow{\Omega_s}`, then :math:`\Omega_s = \overleftarrow{\Omega_s} = \overrightarrow{\Omega_s}`
-    2. If :math:`\overleftarrow{\Omega_s} \neq \overrightarrow{\Omega_s}`, then :math:`\Omega_s = \varepsilon`
+    1. If :math:`\overleftarrow{\Omega_{\zeta}} = \overrightarrow{\Omega_{\zeta}}`, then :math:`\Omega_{\zeta} = \overleftarrow{\Omega_{\zeta}} = \overrightarrow{\Omega_{\zeta}}`
+    2. If :math:`\overleftarrow{\Omega_{\zeta}} \neq \overrightarrow{\Omega_{\zeta}}`, then :math:`\Omega_{\zeta} = \varepsilon`
 
-**Example** TODO
+**Example** Let `ᚠ_1 = \text{a crowd flowed over london bridge}`. Note :math:`\Lambda(ᚠ_1) = 6`.
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
+- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{6}{2} = 3`
+- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{8}{2} = 4`
+- *Left Pivot Word*: :math:`ᚠ_1[[3]] = \overrightarrow{\Omega_{ᚠ_1}} = \text{flowed}`
+- *Right Pivot Word*: :math:`ᚠ_1[[4]] = \overleftarrow{\Omega_{ᚠ_1}} = \text{over}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_1} = \varepsilon`
+
+Let :math:`ᚠ_2 = \text{i had not thought death had undone so many}`. Note :math:`\Lambda(ᚠ_2) = 9`.
+
+- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{10}{2} = 5`
+- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{10}{2} = 5`
+- *Left Pivot Word*: :math:`ᚠ_2[[3]] = \overrightarrow{\Omega_{ᚠ_2}} = \text{death}`
+- *Right Pivot Word*: :math:`ᚠ_2[[4]] = \overleftarrow{\Omega_{ᚠ_2}} = \text{death}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_2} = \text{death}`
+
+∎
+
+.. _palindromics-theorem-2-1-11:
+
+.. topic:: Theorem 2.1.11
+
+    .. math::
+
+        \forall \zeta \in C: (\exists i \in \mathbb{N}: \Delta(\zeta) = 2i) \implies (\Omega_{\zeta} \neq \varepsilon)
+
+**Proof** Let :math:`\zeta \in C`. Assume :math:`\Delta(\zeta) = 2i` for some :math:`i \in \mathbb{N}`. Then, by :ref:`Theroem 2.1.1 <palindromics-theorem-2-1-1>`,
+
+.. math::
+
+    \Lambda(\zeta) = 2i + 1.
+
+Thus, :math:`\Lambda(\zeta)` is odd. By the :ref:`definition of Pivot Words <palindromics-definition-2-1-3>`,
+
+.. math::
+
+    \overrightarrow{j} = \frac{\Lambda(\zeta) + 1}{2}
+
+.. math::
+
+    \overleftarrow{j} = \frac{\Lambda(\zeta) + 1}{2}`
+
+Thus, 
+
+.. math::
+
+    \overrightarrow{\Omega_{\zeta}} = \overleftarrow{\Omega_{\zeta}}
+
+.. math::
+
+    \Omega_{\zeta} \neq \varepsilon
+
+Therefore, summarizing and generalizing,
+
+.. math::
+
+    \forall \zeta \in C: (\exists i \in \mathbb{N}: \Delta(\zeta) = 2i) \implies (\Omega_{\zeta} \neq \varepsilon)
+
+∎
+
+.. _palindromics-theorem-2-1-12:
+
+.. topic:: Theorem 2.1.12
+
+    .. math::
+
+        \forall \zeta \in C: (\exists i \in \mathbb{N}: \Delta(\zeta) = 2i + 1) \land (\zeta = \zeta^{-1}) \implies (\overrightarrow{\Omega_{\zeta}} = \overleftarrow{\Omega_{\zeta}}^{-1})
+
+**Proof** Let :math:`\zeta \in C`. Assume :math:`\zeta = \zeta^{-1}` with :math:`\Delta(\zeta) = 2i + 1` for some :math:`i \in \mathbb{N}`.
+
+Since :math:`\zeta = \zeta^{-1}`, it follows :math:`\zeta^{-1} \in C`. By :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`, it follows :math:`\zeta \in K`. By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
+
+.. math::
+
+    {\zeta}^{-1}[[j]] = (\zeta[[\Lambda(\zeta) - j + 1]])^{-1}
+
+For all :math:`j \in N_{\Lambda(\zeta)}`. 
+
+Furthermore, since :math:`\Delta(\zeta)` is odd and :math:`\zeta = \zeta^{-1}`, it follows from :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` and the :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`,
+
+.. math::
+
+    \omega_{\zeta} = \sigma
+
+.. Going to need partial sentences here, I think.
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
+
+.. _palindromics-theorem-2-1-13:
+
+.. topic:: Theorem 2.1.13
+
+    .. math::
+
+        \forall \zeta \in C: (\exists i \in \mathbb{N}: \Delta(\zeta) = 2i) \land (\zeta = \zeta^{-1}) \implies (\Omega_{\zeta^{-1}} = {\Omega_{\zeta}}^{-1})
+
+**Proof** Let :math:`\zeta \in C`. Assume :math:`\Delta(\zeta) = 2i` for some :math:`i \in \mathbb{N}`. Then, by :ref:`Theroem 2.1.11 <palindromics-theorem-2-1-1>`,
+
+.. math::
+
+    \Omega_{\zeta} \neq \varepsilon
+
+Where the Pivot Word occurs at the Word Index, :math:`k = \frac{\Lambda(\zeta) + 1}{2}`i.e. 
+
+.. math:: 
+
+    \Omega_{\zeta} = \zeta[[\frac{\Lambda(\zeta) + 1}{2}]]
+
+Since :math:`\zeta = \zeta^{-1}`, it follows :math:`\zeta^{-1} \in C`. By :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`, it follows :math:`\zeta \in K`. By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
+
+.. math::
+
+    {\zeta}^{-1}[[j]] = (\zeta[[\Lambda(\zeta) - j + 1]])^{-1}
+
+For all :math:`j \in N_{\Lambda(\zeta)}`, including the Pivot Word Index. Substituting in the Pivot Word Index, the expression for the index on the RHS simplifies to,
+
+.. math::
+
+    \Lambda(\zeta) - \frac{\Lambda(\zeta) + 1}{2} + 1  = \frac{\Lambda(\zeta) + 1}{2}
+
+Thus, 
+
+.. math::
+
+    {\zeta}^{-1}[[\frac{\Lambda(\zeta)+1}{2}]] = (\zeta[[\frac{\Lambda(\zeta) + 1}{2}]])^{-1}
+
+Since :math:`\Lambda(\zeta^{-1}) = \Lambda(\zeta)`, i.e. their Pivot Word Indices are equal, this means the Inverse of the Pivot Word is the Pivot Word of the Inverse Sentence,
+
+.. math::
+
+    \Omega_{\zeta^{-1}} = {\Omega_{\zeta}}^{-1}
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................

@@ -1220,3 +1220,32 @@ By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
 .. note::
 
     :ref:`Pivot Words <palindromics-definition-2-1-3>` only apply to :math:`C`.
+
+
+
+
+.. _palindromics-theorem-2-1-12:
+
+.. topic:: Theorem 2.1.12
+
+    .. math::
+
+        \forall \zeta \in C: (\exists i \in \mathbb{N}: \Delta(\zeta) = 2i - 1) \implies ((\Omega_{\zeta} = \varepsilon) \lor (\overrightarrow{\Omega_{\zeta}} = \overleftarrow{\Omega_{\zeta}}))
+
+**Proof** Let :math:`\zeta \in C`. Let :math:`\zeta \in C`. Assume :math:`\Delta(\zeta) = 2i - 1` for some :math:`i \in \mathbb{N}`. Then, by :ref:`Theroem 2.1.1 <palindromics-theorem-2-1-1>`,
+
+.. math::
+
+    \Lambda(\zeta) = 2i.
+
+Thus, :math:`\Lambda(\zeta)` is even. By the :ref:`definition of Pivot Words <palindromics-definition-2-1-3>`,
+
+.. math::
+
+    \overrightarrow{j} = \frac{\Lambda(\zeta)}{2}
+
+.. math::
+
+    \overleftarrow{j} = \frac{\Lambda(\zeta) + 2}{2}`
+
+Thus, the implication follows directly from the definition.

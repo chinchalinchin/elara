@@ -102,7 +102,7 @@ Theorems
 
 **Proof** Let :math:`s,t \in S`.
 
-By :ref:`Theorem x.x.x <palindromics-theorem-x-x-x>`, there are only three cases to consider.
+By :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`, there are only three cases to consider.
 
 - Case I: :math:`\neg(\sigma \subset_s st)`
 - Case II: :math:`\neg(\sigma \subset_s s) \land (\sigma \subset_s t)`
@@ -114,7 +114,7 @@ Note :math:`(\sigma \subset_s st)` is included in the disjunction of Case II and
 
 :underline:`Case I`: :math:`\neg(\sigma \subset_s st)`
 
-By :ref:`Theorem x.x.y <palindromics-theorem-x-x-y>`,
+By the contrapositive of :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
 
 .. math::
 
@@ -164,7 +164,7 @@ Now, consider :math:`st`
 
     st = (s)(u)(\sigma)(v)
 
-By :ref:`Theorem x.x.y <palindromics-theorem-x-x-y>`, 
+By the contrapositive of :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`, 
 
 .. math::
 
@@ -278,7 +278,7 @@ Thus equivalence is established. Summarizing and generalizing,
 
 .. BASIS 
 
-:underline:`Basis` Let :math:`\neg(\sigma \subset_s s)`; that is, assume there are no Delimiters in :math:`s` (:math:`\Delta(s) = 0`). By :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>` and the fact :math:`\sigma^{-1} = \sigma`,
+:underline:`Basis` Let :math:`\neg(\sigma \subset_s s)`; that is, assume there are no Delimiters in :math:`s` (:math:`\Delta(s) = 0`). By :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-11>` and the fact :math:`\sigma^{-1} = \sigma`,
 
 .. math::
 
@@ -312,13 +312,13 @@ Let :math:`u \in S` such that :math:`\Delta(u) = k + 1`. Let :math:`u = (v)(\sig
 
     \varsigma(u) = \varsigma(vw) = \varsigma(v)\varsigma(w)
 
-Where the last equality follows from :ref:`Theorem 2.2.1 <palindromics-theorem-2-2-1>`. Consider :math:`(\varsigma(u))^{-1}`.By application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`,
+Where the last equality follows from :ref:`Theorem 2.2.1 <palindromics-theorem-2-2-1>`. Consider :math:`(\varsigma(u))^{-1}`.By application of :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>`,
 
 .. math::
 
     (\varsigma(u))^{-1} = (\varsigma(w))^{-1}(\varsigma(v))^{-1} \quad \text{ (1) }
 
-Consider :math:`u^{-1}`. By application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`,
+Consider :math:`u^{-1}`. By application of :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>`,
 
 .. math::
 

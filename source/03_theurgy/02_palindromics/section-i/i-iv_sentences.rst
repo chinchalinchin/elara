@@ -301,7 +301,7 @@ Therefore, since the Words in the Sentence correspond index by index to the Word
 
 .. note::
 
-    The next theorem can be seen as a specialiation of :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>` for the subdomain of the Corpus.
+    The next theorem can be seen as a specialiation of :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>` for the subdomain of the Corpus.
 
 .. _palindromics-theorem-1-4-4:
 
@@ -330,7 +330,7 @@ Consider :math:`s^{-1}`,
 
     s^{-1} = ((\zeta[[1]])(\sigma)(\zeta[[2]]) ... (\sigma)(\zeta[[n]]))^{-1}
 
-From :ref:`String Inversion <palindromics-definition-1-2-8>` and the fact :math:`l(\sigma) = 1`, it follows :math:`\sigma^{-1} = \sigma`. Using this fact, the application of :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>` :math:`n` times yields,
+From :ref:`String Inversion <palindromics-definition-1-2-8>` and the fact :math:`l(\sigma) = 1`, it follows :math:`\sigma^{-1} = \sigma`. Using this fact, the application of :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>` :math:`n` times yields,
 
 .. math::
 
@@ -541,7 +541,7 @@ By the :ref:`definition of Canonization <palindromics-definition-1-3-6>`,
 
     \pi(\sigma) = \sigma
 
-By the :ref:`definition of Limitation <palindromics-definition-1-3-5>`, :math:`\Pi` produces Strings through Concatenation. By :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`, the Canon is closed over Concatenation. From this, it must be the case :math:`\zeta \in \mathbb{S}`. Therefore,
+By the :ref:`definition of Limitation <palindromics-definition-1-3-5>`, :math:`\Pi` produces Strings through Concatenation. By :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`, the Canon is closed over Concatenation. From this, it must be the case :math:`\zeta \in \mathbb{S}`. Therefore,
 
 .. math::
 
@@ -590,7 +590,7 @@ Classes
 
     {\zeta}^{-1} \in C
 
-By :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`,
+By :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`,
 
 .. math::
 

@@ -161,7 +161,7 @@ Classes
 
     {\alpha}^{-1} \in L
 
-By :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`,
+By :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`,
 
 .. math::
 
@@ -185,7 +185,7 @@ By :ref:`the definition of invertible Words <palindromics-definition-1-3-2>`,
 
     ({\alpha}^{-1})^{-1} \in L
 
-By :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`,
+By :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`,
 
 .. math::
 
@@ -435,3 +435,89 @@ The Dialect is the union of all delimited Phrases in all Lexicons of the Languag
             \text{matata matata}, ... \} 
 
 ∎
+
+.. _palindromics-theorem-1-3-4: 
+
+.. topic:: Theorem 1.3.4
+
+    \forall s \in D: \notexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
+
+**Proof** Let :math:`s \in D`. Then by :ref:`definition of the Dialect <palindromics-definition-1-3-6>`, for some :math:`i \in mathbb{N}` and :math:`p \in L_i`, 
+
+.. math::
+
+    s = \Pi_{j=1}^{i} p(j) 
+
+Where, 
+
+.. math::
+
+    p = (\alpha_1, \alpha_2, ... , \alpha_i)
+
+With :math:`\alpha_j \in L` for :math:`1 \leq j \leq i`
+
+The proof proceeds by induction on the Word Length of the Lexicon, i.e. :math:`i`.
+
+:underline:`Basis` Assume :math:`i = 1`
+
+Then by the :ref:`definition of Limitations <palindromics-definition-1-3-5>`,
+
+.. math::
+
+    s = \alpha_1
+
+By :ref:`Discovery Axiom <palindromics-axiom-v>`, 
+
+.. math::
+
+    \forall j \in N_{l(\alpha_1)}: \alpha_1[j] \neq \sigma
+
+Therefore, 
+
+.. math::
+
+    \notexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
+
+:underline:`Induction`. Assume for all :math:`t \in D` with :math:`p \in L_i` and some fixed :math:`i`.
+
+.. math::
+
+    \notexists j \in N_{l(t)}: (t[j+1] = \sigma) \land (t[j] = \sigma)
+
+where 
+
+.. math::
+
+    t = \Pi_{j=1}^{i} \alpha_j
+
+Consider :math:`s \in D` where :math:`p \in L_{i+1}`. Then, by :ref:`definition of the Dialect <palindromics-definition-1-3-6>`,
+
+.. math::
+
+    s = \Pi_{j=1}^{i+1} \alpha_j
+
+By the Induction clause of the :ref:`definition of Limitations <palindromics-definition-1-3-5>`,
+
+.. math::
+
+    s = (\Pi_{j=1}^{i} \alpha_j)(\sigma)(\alpha_{i+1})
+
+But, by inductive hypothesis, the quantity :math:`\Pi_{j=1}^{i} \alpha_j` does not have consecutive Delimiters. Moreover, by the Induction clause of :ref:`Limitations <palindromics-definition-1-3-5>`, this term can be rewritten
+
+.. math::
+    
+    \Pi_{j=1}^{i} \alpha_j = (\Pi_{j=1}^{i-1} \alpha_j)(\sigma)(\alpha_i) 
+    
+to show it must end in a Word. Therefore, by the :ref:`Discovery Axiom <palindromics-axiom-v>`, the quantity,
+
+.. math::
+
+    (\Pi_{j=1}^{i} \alpha_j)(\sigma)(\alpha_i)
+
+cannot contain consecutive Delimiters.
+
+The induction is thus established. Summarizing and generalizing, 
+
+.. math::
+
+    \forall s \in D: \notexists j \in N_{l(s)}: (s[j+1] = \sigma) \land (s[j] = \sigma)
