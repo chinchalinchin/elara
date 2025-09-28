@@ -140,9 +140,9 @@ But this is exactly the definition of a subset. Therefore,
 
     .. math::
 
-        J \subseteq P 
+        K \subseteq P 
 
-**Proof** Let :math:`\zeta \in J`. By :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`, 
+**Proof** Let :math:`\zeta \in K`. By :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`, 
 
 .. math::
 
@@ -170,7 +170,7 @@ But this is exactly the definition of subsets,
 
 .. math::
 
-    J \subseteq P
+    K \subseteq P
 
 ◼︎
 
@@ -182,9 +182,9 @@ But this is exactly the definition of subsets,
     
     .. math::
 
-        \forall \zeta \in J: \omega_{\zeta} \neq \varepsilon
+        \forall \zeta \in K: \omega_{\zeta} \neq \varepsilon
 
-**Proof** Let :math:`\zeta \in J`.
+**Proof** Let :math:`\zeta \in K`.
 
 By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`.  By :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>`,
 

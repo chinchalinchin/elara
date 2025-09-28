@@ -833,8 +833,10 @@ Pivot Words
 
     The *Pivot Word*, denoted :math:`\Omega_{\zeta}`, is defined as the Character which satisfies the following conditions,
 
-    1. If :math:`\overleftarrow{\Omega_{\zeta}} = \overrightarrow{\Omega_{\zeta}}`, then :math:`\Omega_{\zeta} = \overleftarrow{\Omega_{\zeta}} = \overrightarrow{\Omega_{\zeta}}`
-    2. If :math:`\overleftarrow{\Omega_{\zeta}} \neq \overrightarrow{\Omega_{\zeta}}`, then :math:`\Omega_{\zeta} = \varepsilon`
+    1. If :math:`\overrightarrow{\Omega_{\zeta}} = (\overleftarrow{\Omega_{\zeta}})^{-1}`, then :math:` \overrightarrow{\Omega_{\zeta}} = (\overleftarrow{\Omega_{\zeta}})^{-1} = \Omega_{\zeta}`
+    2. If :math:`\overrightarrow{\Omega_{\zeta}} \neq (\overleftarrow{\Omega_{\zeta}})^{-1}`, then :math:`\Omega_{\zeta} = \varepsilon`
+
+.. TODO: should be \overleftarrow{\Omega_{\zeta}}^{-1} = \overrightarrow{\Omega_{\zeta}} for Pivot Word condition to make them "palindromic"
 
 .. note::
 
@@ -842,7 +844,9 @@ Pivot Words
 
     The existence of a Pivot Character and Pivot Word in a Sentence define a class of Sentences in the Corpus. However, the relationship between Pivot Characters and Pivot Words is deceptively subtle, as these next examples illustrate. 
 
-**Example** Let `ᚠ_1 = \text{a crowd flowed over london bridge}`. Note :math:`\Lambda(ᚠ_1) = 6` and :math:`l(ᚠ_1) = 33`
+**Example** 
+
+1. Let `ᚠ_1 = \text{a crowd flowed over london bridge}`. Note :math:`\Lambda(ᚠ_1) = 6` and :math:`l(ᚠ_1) = 33`.
 
 The Pivot Word calculations proceed as follows,
 
@@ -860,7 +864,7 @@ The Pivot Character calculations proceed as follows,
 - *Right Pivot Character*: :math:`ᚠ_1[17]= \text{v}`
 - *Pivot Character*: :math:`\omega_{ᚠ_1} = \text{v}`
 
-Let :math:`ᚠ_2 = \text{i had not thought death had undone so many}`. Note :math:`\Lambda(ᚠ_2) = 9` and :math:`l(ᚠ_2) =  42`
+2. Let :math:`ᚠ_2 = \text{i had not thought death had undone so many}`. Note :math:`\Lambda(ᚠ_2) = 9` and :math:`l(ᚠ_2) =  42`.
 
 The Pivot Word calculations proceed as follows,
 
@@ -878,7 +882,7 @@ The Pivot Character calculations proceed as follows,
 - *Right Pivot Character*: :math:`ᚠ_2[22]= \text{t}`
 - *Pivot Character*: :math:`\omega_{ᚠ_2} = \varepsilon`
 
-Let :math:`ᚠ_3 = \text{no radar on}`. Note :math:`\Lambda(ᚠ_3) = 3` and :math:`l(ᚠ_3) = 11`
+3. Let :math:`ᚠ_3 = \text{no radar on}`. Note :math:`\Lambda(ᚠ_3) = 3` and :math:`l(ᚠ_3) = 11`
 
 The Pivot Word calculations proceed as follows,
 
@@ -896,7 +900,7 @@ The Pivot Character calculations proceed as follows,
 - *Right Pivot Character*: :math:`ᚠ_3[6]= \text{d}`
 - *Pivot Character*: :math:`\omega_{ᚠ_3} = \text{d}`
 
-Let :math:`ᚠ_4 = \text{tell me stories}`. Note :math:`\Lambda(ᚠ_4) = 3` and :math:`l(ᚠ_4) = 15`
+4. Let :math:`ᚠ_4 = \text{tell me stories}`. Note :math:`\Lambda(ᚠ_4) = 3` and :math:`l(ᚠ_4) = 15`
 
 The Pivot Word calculations proceed as follows,
 
@@ -904,7 +908,7 @@ The Pivot Word calculations proceed as follows,
 - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
 - *Left Pivot Word*: :math:`ᚠ_4[[2]] = \overrightarrow{\Omega_{ᚠ_4}} = \text{me}`
 - *Right Pivot Word*: :math:`ᚠ_4[[4]] = \overleftarrow{\Omega_{ᚠ_4}} = \text{me}`
-- *Pivot Word*: :math:`\Omega_{ᚠ_4} = \text{radar}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_4} = \varepsilon`
 
 The Pivot Character calculations proceed as follows,
 
@@ -914,14 +918,14 @@ The Pivot Character calculations proceed as follows,
 - *Right Pivot Character*: :math:`ᚠ_4[6]= \sigma`
 - *Pivot Character*: :math:`\omega_{ᚠ_4} = \sigma`
 
-Let :math:`ᚠ_5 = \text{emit naps noon span time}`. Note :math:`\Lambda(ᚠ_5) = 5` and :math:`l(ᚠ_5) = 24`.
+5. Let :math:`ᚠ_5 = \text{emit naps noon span time}`. Note :math:`\Lambda(ᚠ_5) = 5` and :math:`l(ᚠ_5) = 24`.
 
 The Pivot Word calculations proceed as follows,
 
 - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{6}{2} = 3`
 - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
-- *Left Pivot Word*: :math:`ᚠ_5[[2]] = \overrightarrow{\Omega_{ᚠ_5}} = \text{noon}`
-- *Right Pivot Word*: :math:`ᚠ_5[[4]] = \overleftarrow{\Omega_{ᚠ_5}} = \text{noon}`
+- *Left Pivot Word*: :math:`ᚠ_5[[3]] = \overrightarrow{\Omega_{ᚠ_5}} = \text{noon}`
+- *Right Pivot Word*: :math:`ᚠ_5[[3]] = \overleftarrow{\Omega_{ᚠ_5}} = \text{noon}`
 - *Pivot Word*: :math:`\Omega_{ᚠ_5} = \text{noon}`
 
 The Pivot Character calculations proceed as follows,
@@ -931,6 +935,24 @@ The Pivot Character calculations proceed as follows,
 - *Left Pivot Character*: :math:`ᚠ_5[12]= \text{o}`
 - *Right Pivot Character*: :math:`ᚠ_5[6]= \text{o}`
 - *Pivot Character*: :math:`\omega_{ᚠ_5} = \text{o}`
+
+6. Let :math:`ᚠ_6 = \text{the naps span now}`. Note :math:`\Lambda(ᚠ_6) = 4` and :math:`l(ᚠ_6) = 17`.
+
+The Pivot Word calculations proceed as follows,
+
+- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
+- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
+- *Left Pivot Word*: :math:`ᚠ_6[[2]] = \overrightarrow{\Omega_{ᚠ_6}} = \text{naps}`
+- *Right Pivot Word*: :math:`ᚠ_6[[3]] = \overleftarrow{\Omega_{ᚠ_6}} = \text{span}`
+- *Pivot Word*: :math:`\Omega_{ᚠ_6} = \text{naps}`
+
+The Pivot Character calculations proceed as follows,
+
+- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{18}{2} = 9`
+- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{18}{2} = 9`
+- *Left Pivot Character*: :math:`ᚠ_6[9]= \sigma`
+- *Right Pivot Character*: :math:`ᚠ_6[9]= \sigma`
+- *Pivot Character*: :math:`\omega_{ᚠ_6} = \sigma`
 
 ∎
 
@@ -1097,3 +1119,43 @@ TODO
       - very
 
 ∎
+
+.. ..................................................................................................
+
+.. topic:: Theorem 2.1.15 
+
+    .. math::
+
+        J \subset \cancel{J}
+
+    .. TODO: this isn't true, "emit time", invertible but not subvertible.
+
+**Proof** Let :math:`\zeta \in J`. Let :math:`n = Lambda(\zeta)` and :math:`m = l(\zeta)`. Then, by :ref:`Theorem 1.4.11`, for all :math:`i \in N_n`,`
+
+.. math::
+
+    {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
+
+.. CASE I: Word Length Even
+
+:underline:`Case I`: :math:`n = 2i`
+
+.. CASE I.I: Word Length Even, String Length Even
+
+:underline:`Case I.I`: :math:`m = 2j`
+
+.. CASE I.II: Word Length Even, String Length Odd
+
+:underline:`Case I.II`: :math:`m = 2j + 1`
+
+.. CASE II: Word Length Odd
+
+:underline:`Case II` :math:`n = 2i + 1`
+
+.. CASE II.I: Word Length Odd, String Length Even
+
+:underline:`Case II.I`: :math:`m = 2j`
+
+.. CASE II.II: Word Length Odd, String Length Odd
+
+:underline:`Case II.II`: :math:`m = 2j + 1`

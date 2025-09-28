@@ -132,6 +132,7 @@ Theorems
 23. :ref:`Theorem 1.4.9 <palindromics-theorem-1-4-9>`: :math:`\zeta \in J \equiv {\zeta}^{-1} \in J`
 24. :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`: :math:`\zeta \in J \implies \zeta[[i]] \in I`
 25. :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`: :math:`\zeta \in J \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
+26. :ref:`Theorem 1.4.12 <palindromics-theorem-1-4-12>`: :math:`s = (s[:i])(s[i+1:])`
 26. :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`: :math:`\Lambda(\zeta) = \Delta(\zeta) + 1`
 27. :ref:`Theorem 2.1.2 <palindromics-theorem-2-1-1>`: :math:`\Delta(s) = \Delta(s^{-1})`
 28. :ref:`Theorem 2.1.3 <palindromics-theorem-2-1-3>`: :math:`l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta[[i]])`
@@ -140,7 +141,7 @@ Theorems
 31. :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`: :math:`((\Delta(s) = 2n + 1) \land (s = s^{-1})) \implies \exists i: l(s) = 2i - 1`
 32. :ref:`Theorem 2.1.7 <palindromics-theorem-2-1-7>`: :math:`((\Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})`
 33. :ref:`Theorem 2.1.8 <palindromics-theorem-2-1-8>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies ((\overrightarrow{\omega_s} \neq \sigma) \land (\overleftarrow{\omega_s} \neq \sigma))`
-34. :ref:`Theorem 2.1.9 <palindromics-theorem-2-1-9>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}`
+34. :ref:`Theorem 2.1.9 <palindromics-theorem-2-1-9>`: :math:`((\Delta(s) = 2n) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})`
 35. :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>`: :math:`(s = s^{-1}) \implies (\omega_s \neq \varepsilon)`
 36. :ref:`Theorem 2.1.11 <palindromics-theorem-2-1-11>`: :math:`(\Delta(\zeta) = 2i) \implies (\Omega_{\zeta} \neq \varepsilon)`
 37. :ref:`Theorem 2.1.12 <palindromics-theorem-2-1-12>`: :math:`((\exists i \in \mathbb{N}: \Delta(\zeta) = 2i + 1) \land (\zeta = \zeta^{-1})) \implies (\overrightarrow{\Omega_{\zeta}} = \overleftarrow{\Omega_{\zeta}}^{-1})`
