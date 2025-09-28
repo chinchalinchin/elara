@@ -681,15 +681,43 @@ Summarizing and generalizing,
         \forall \zeta \in J: {\Omega_{\zeta}}^{-1} = \Omega_{\zeta^{-1}}
 
 
-**Proof** Let :math:`\zeta \in J` with :math:`m = \Lambda(\zeta)`
+**Proof** Let :math:`\zeta \in J` with :math:`m = \Lambda(\zeta)`. 
+
+By :ref:`Theorem 1.4.12 <palindromics-theorem-1-4-12>`, :math:`\Lambda(\zeta^{-1}) = m`
+
+By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`, 
+
+.. math::
+
+    {\zeta}^{-1}[[i]] = (\zeta[[m - i + 1]])^{-1}
+
+.. TODO: need to establish Pivot Word is non-Empoty.
 
 .. CASE I
 
 :underline:`Case I`: :math:`m = 2i`.
 
+By :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`, :math:`Delta(\zeta)` is odd.
+
 TODO
 
 :underline:`Case II`: :math:`2i + 1`
+
+Since :math:`m` is odd, there must be an inverse index which is equal to its original index,
+
+    i = m - i + 1 
+
+.. math::
+
+    i = \frac{m+ 1}{2}.
+
+By :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`, :math:`Delta(\zeta)` is even. 
+
+TODO 
+
+.. The next line only follows if it is established Pivot Word is non-empty. 
+
+By :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`, :math:`\Omega_{\zeta} \in R`.
 
 TODO
 
@@ -784,7 +812,7 @@ Subvertible Sentences
 
     .. math::
 
-        \forall \zeta \in J: (\nexist \alpha \in R: \alpha \subset_s \zeta) \equiv (\cancel{J} \cap J = \varnothing)
+        \forall \zeta \in J: (\nexists \alpha \in R: \alpha \subset_s \zeta) \equiv (\cancel{J} \cap J = \varnothing)
 
 **Proof** Let :math:`\zeta \in K`. Let :math:`n = Lambda(\zeta)` and :math:`m = l(\zeta)`. Then, by :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`, for all :math:`i \in N_n`,`
 

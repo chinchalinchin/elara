@@ -755,7 +755,7 @@ Summarizing and generalizing,
 
         \forall \zeta \in J: \Lambda(\zeta) = \Lambda(\zeta^{-1})
 
-**Proof** Let :math:`\zeta in J` with :math:`n = \Lambda(\zeta)`
+**Proof** Let :math:`\zeta \in J` with :math:`n = \Lambda(\zeta)`
 
 By :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`,
 
@@ -810,7 +810,7 @@ Partial Sentences
     - Basis: :math:`s[:1] = s[1]`
     - Induction: :math:`s[:i] = (s[:i-1])s[i]`
 
-    When :math:`s \in C`, :math:`s[i:]` and `s[:i]` are called Partial Sentences.
+    When :math:`s \in C`, :math:`s[i:]` and :math:`s[:i]` are called Partial Sentences.
 
 **Example** Let :math:`ᚠ = \text{form is the possibility of structure}`. Then :math:`l(ᚠ) = 36`.
 

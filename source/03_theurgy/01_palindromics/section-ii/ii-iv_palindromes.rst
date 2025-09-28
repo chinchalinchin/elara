@@ -344,7 +344,7 @@ Therefore, by :ref:`definition of Subvertible Sentences <palindromics-definition
 
     \zeta \in \cancel{J}
 
-Thus, :math:`\zeta \in K \imples \zeta \in J`. But this is exactly the definition of a subset,
+Thus, :math:`\zeta \in K \implies \zeta \in J`. But this is exactly the definition of a subset,
 
 .. math::
 
