@@ -1,17 +1,17 @@
 
-.. _palindromics-section-ii-ii:
+.. _palindromics-section-ii-iii:
 
-Section II.II: Reductions
-=========================
+Section II.III: Reductions
+==========================
 
 .. _palindromics-reduction-definition:
 
 Definition & Examples
 ---------------------
 
-.. _palindromics-definition-2-2-1:
+.. _palindromics-definition-2-3-1:
 
-.. topic:: Definition 2.2.1: σ-Reduction
+.. topic:: Definition 2.3.1: σ-Reduction
 
     Let :math:`s \in S`. The σ-Reduction of :math:`s`, denoted :math:`\varsigma(s)`, is defined inductively with the following schema,
 
@@ -25,7 +25,7 @@ Definition & Examples
 
 **Example** :math:`ᚠ = \text{the widening circles into nothing gone}`. Consider :math:`\varsigma(ᚠ)`
 
-Let :math:`u_1 = \text{the}` and :math:`v_1 = \text{widening circles into nothing gone}`. Let :math:`w_1 = (u_1)(v_1)`. Then, :math:`ᚠ = (u_1)(\sigma)(v_1)`. By the Induction clause :ref:`of σ-Reduction <palindromics-definition-2-2-1>`,
+Let :math:`u_1 = \text{the}` and :math:`v_1 = \text{widening circles into nothing gone}`. Let :math:`w_1 = (u_1)(v_1)`. Then, :math:`ᚠ = (u_1)(\sigma)(v_1)`. By the Induction clause :ref:`of σ-Reduction <palindromics-definition-2-3-1>`,
 
 .. math::
 
@@ -76,7 +76,7 @@ Properties
 
 .. note::
 
-    All of these properties follow from the definition of :ref:`σ-Reduction <palindromics-definition-2-2-1>` and the indicated axiom or theorem, and they are all understood to be quantified over :math:`S`.
+    All of these properties follow from the definition of :ref:`σ-Reduction <palindromics-definition-2-3-1>` and the indicated axiom or theorem, and they are all understood to be quantified over :math:`S`.
 
 1. From the :ref:`definition of String Length <palindromics-definition-1-2-2>`: :math:`l(\varsigma(\sigma)) = l(\varepsilon) = 0`
 2. From the :ref:`Discovery Axiom <palindromics-axiom-v>`: :math:`\varsigma(\alpha) = \alpha`
@@ -90,9 +90,9 @@ Properties
 Theorems
 --------
 
-.. _palindromics-theorem-2-2-1:
+.. _palindromics-theorem-2-3-1:
 
-.. topic:: Theorem 2.2.1
+.. topic:: Theorem 2.3.1
 
     The Reduction of Concatenations is the Concatenation of Reductions.
 
@@ -122,7 +122,7 @@ By the contrapositive of :ref:`Theorem 1.2.3 <palindromics-theorem-1-2-3>`,
 
 Thus, by assumption, :math:`\neg(\sigma \subset_s s)` and :math:`\neg(\sigma \subset_s t)` are true.
 
-From this and the :ref:`definition of Reductions <palindromics-definition-2-2-1>`, it follows,
+From this and the :ref:`definition of Reductions <palindromics-definition-2-3-1>`, it follows,
 
 .. math::
 
@@ -152,7 +152,7 @@ By assumption and :ref:`Containment <palindromics-definition-1-2-5>`, for some :
 
     t = (u)(\sigma)(v)
 
-By the Induction clause of :ref:`Reduction <palindromics-definition-2-2-1>`,
+By the Induction clause of :ref:`Reduction <palindromics-definition-2-3-1>`,
 
 .. math::
 
@@ -190,7 +190,7 @@ Putting these three equalities together,
 
     \varsigma(su) = (\varsigma(s))(\varsigma(u))
 
-By the Induction clause :ref:`Reduction <palindromics-definition-2-2-1>`,
+By the Induction clause :ref:`Reduction <palindromics-definition-2-3-1>`,
 
 .. math::
 
@@ -212,9 +212,9 @@ Thus all three cases are established. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-2-2-2:
+.. _palindromics-theorem-2-3-2:
 
-.. topic:: Theorem 2.2.2
+.. topic:: Theorem 2.3.2
 
     There are no Delimiters in a String if and only if it is equal to its own Reduction.
 
@@ -230,7 +230,7 @@ Thus all three cases are established. Summarizing and generalizing,
 
     \neg(\sigma \subset_s s)
 
-Therefore, by the Basis clause of :ref:`Reduction <palindromics-definition-2-2-1>`,
+Therefore, by the Basis clause of :ref:`Reduction <palindromics-definition-2-3-1>`,
 
 .. math::
 
@@ -260,13 +260,15 @@ Thus equivalence is established. Summarizing and generalizing,
     
     The next theorem is quantified over the :math:`\mathbb{S}`, **not** :math:`S`.
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
+.. .................................................................................
 
-.. _palindromics-theorem-2-2-4:
+TODO
 
-.. topic:: Theorem 2.2.4
+.. .................................................................................
+
+.. _palindromics-theorem-2-3-4:
+
+.. topic:: Theorem 2.3.4
 
     The Inverse of a Reduction is the Reduction of the Inverse. 
 
@@ -284,7 +286,7 @@ Thus equivalence is established. Summarizing and generalizing,
 
     \neg(\sigma \subset_s s) \equiv \neg(\sigma \subset_s s^{-1})
 
-Consider :math:`(\varsigma(s))^{-1}`. By the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>` and the Basis assumption,
+Consider :math:`(\varsigma(s))^{-1}`. By the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-3-1>` and the Basis assumption,
 
 .. math::
 
@@ -296,7 +298,7 @@ Therefore,
 
     (\varsigma(s))^{-1} = s^{-1}
 
-Consider :math:`\varsigma(s^{-1})`. By :math:`\neg (\sigma \subset_s s^{-1})` and the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-2-1>`, 
+Consider :math:`\varsigma(s^{-1})`. By :math:`\neg (\sigma \subset_s s^{-1})` and the Basis clause of :ref:`the Reduction definition <palindromics-definition-2-3-1>`, 
 
 .. math::
 
@@ -306,13 +308,13 @@ Consider :math:`\varsigma(s^{-1})`. By :math:`\neg (\sigma \subset_s s^{-1})` an
 
 :underline:`Induction` Assume for any :math:`s` with :math:`\Delta(s) = k` for some :math:`k \geq 1` that :math:`(\varsigma(s))^{-1} = \varsigma(s^{-1})`. 
 
-Let :math:`u \in S` such that :math:`\Delta(u) = k + 1`. Let :math:`u = (v)(\sigma)(w)`, where :math:`\Delta(v) = 0` and :math:`\Delta(w) = k`. By Induction clause of :ref:`Reduction <palindromics-definition-2-2-1>`,
+Let :math:`u \in S` such that :math:`\Delta(u) = k + 1`. Let :math:`u = (v)(\sigma)(w)`, where :math:`\Delta(v) = 0` and :math:`\Delta(w) = k`. By Induction clause of :ref:`Reduction <palindromics-definition-2-3-1>`,
 
 .. math::
 
     \varsigma(u) = \varsigma(vw) = \varsigma(v)\varsigma(w)
 
-Where the last equality follows from :ref:`Theorem 2.2.1 <palindromics-theorem-2-2-1>`. Consider :math:`(\varsigma(u))^{-1}`.By application of :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>`,
+Where the last equality follows from :ref:`Theorem 2.2.1 <palindromics-theorem-2-3-1>`. Consider :math:`(\varsigma(u))^{-1}`.By application of :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>`,
 
 .. math::
 
@@ -324,13 +326,13 @@ Consider :math:`u^{-1}`. By application of :ref:`Theorem 1.2.10 <palindromics-th
 
     u^{-1} = (w^{-1})(\sigma^{-1})(v^{-1})
 
-By Induction clause of :ref:`Reduction <palindromics-definition-2-2-1>`,
+By Induction clause of :ref:`Reduction <palindromics-definition-2-3-1>`,
 
 .. math::
 
     \varsigma(u^{-1}) = \varsigma((w^{-1})(v^{-1}))
 
-From :ref:`Theorem 2.2.1 <palindromics-theorem-2-2-1>`
+From :ref:`Theorem 2.2.1 <palindromics-theorem-2-3-1>`
 
 .. math::
 
@@ -342,7 +344,7 @@ Since :math:`\Delta(w) = k` satisfies the inductive hypothesis,
 
     \varsigma(w^{-1}) = \varsigma(w)^{-1} \quad \text{ (3) }
 
-Consider :math:`\varsigma(v)`. :math:`\Delta(v) = 0` by construction, thus by :ref:`Theorem 2.2.2 <palindromics-theorem-2-2-2>`,
+Consider :math:`\varsigma(v)`. :math:`\Delta(v) = 0` by construction, thus by :ref:`Theorem 2.2.2 <palindromics-theorem-2-3-2>`,
 
 .. math::
 
@@ -380,9 +382,9 @@ Thus, the induction is established. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-2-2-5:
+.. _palindromics-theorem-2-3-5:
 
-.. topic:: Theorem 2.2.5
+.. topic:: Theorem 2.3.5
 
     σ-Reductions are idempotent.
 
@@ -390,7 +392,7 @@ Thus, the induction is established. Summarizing and generalizing,
 
         \forall s \in S: \varsigma(\varsigma(s)) = \varsigma(s)
 
-**Proof** Let :math:`s, t \in S` such that :math:`t = \varsigma(s)`. By THE :ref:`properties of Reductions <palindromics-reduction-properties>`, :math:`\Delta(t) = 0`. Therefore, by :ref:`Theorem 2.2.2 <palindromics-theorem-2-2-2>`, :math:`\varsigma(t) = t`. Thus, substituting in :math:`t`, :math:`\varsigma(\varsigma(s)) = \varsigma(s)`. Summarizing and generalizing, 
+**Proof** Let :math:`s, t \in S` such that :math:`t = \varsigma(s)`. By THE :ref:`properties of Reductions <palindromics-reduction-properties>`, :math:`\Delta(t) = 0`. Therefore, by :ref:`Theorem 2.2.2 <palindromics-theorem-2-3-2>`, :math:`\varsigma(t) = t`. Thus, substituting in :math:`t`, :math:`\varsigma(\varsigma(s)) = \varsigma(s)`. Summarizing and generalizing, 
 
 .. math::
 
@@ -398,9 +400,9 @@ Thus, the induction is established. Summarizing and generalizing,
 
 ∎
 
-.. _palindromics-theorem-2-2-6:
+.. _palindromics-theorem-2-3-6:
 
-.. topic:: Theorem 2.2.6
+.. topic:: Theorem 2.3.6
 
     One String is contained in another if and only if their σ-Reductions are contained in one another.
 
@@ -430,7 +432,7 @@ Since :math:`\varsigma(u)` and :math:`\varsigma(v)` by the closure :ref:`propert
 
 .. important::
 
-    :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-6>` is a unidirectional implication, *not* an equivalence. Consider,
+    :ref:`Theorem 2.2.5 <palindromics-theorem-2-3-6>` is a unidirectional implication, *not* an equivalence. Consider,
 
     .. math::
 
@@ -452,11 +454,9 @@ Since :math:`\varsigma(u)` and :math:`\varsigma(v)` by the closure :ref:`propert
 
     So, :math:`\varsigma(a) \subset_s \varsigma(ᚠ)`.
 
-◼︎
+.. _palindromics-theorem-2-3-7:
 
-.. _palindromics-theorem-2-2-7:
-
-.. topic:: Theorem 2.2.7
+.. topic:: Theorem 2.3.7
 
     Every Word in a Sentence is contained in its σ-Reduction.
 
@@ -464,7 +464,7 @@ Since :math:`\varsigma(u)` and :math:`\varsigma(v)` by the closure :ref:`propert
 
         \forall \zeta \in C: \forall i \in N_{\Lambda(\zeta)}: \zeta[[i]] \subset_s \varsigma(\zeta)
 
-**Proof** Let :math:`\zeta \in C`. Clearly :math:`\zeta[[i]] \subset_s \zeta` for any :math:`i \in N_{\Lambda(\zeta)}`. From this and :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-6>`, it can be concluded,
+**Proof** Let :math:`\zeta \in C`. Clearly :math:`\zeta[[i]] \subset_s \zeta` for any :math:`i \in N_{\Lambda(\zeta)}`. From this and :ref:`Theorem 2.2.5 <palindromics-theorem-2-3-6>`, it can be concluded,
 
 .. math::
 

@@ -23,6 +23,7 @@ In order to properly understand the nature of a Palindrome, the system requires 
    :caption: Contents:
 
    ii-i_delimiters
-   ii-ii_reductions
-   ii-iii_palindromes
-   ii-iv_summary
+   ii-ii_pivots
+   ii-iii_reductions
+   ii-iv_palindromes
+   ii-v_summary

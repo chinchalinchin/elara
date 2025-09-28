@@ -20,15 +20,15 @@ Pivot Postulates
 
     .. math::
 
-        \forall \zeta \in J: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
+        \forall \zeta \in K: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
 
-**Proof** Let :math:`\zeta \in J`. Note
+**Proof** Let :math:`\zeta \in K`. Note
 
 .. math::
 
-    J \subseteq C \subseteq D
+    K \subseteq C \subseteq D
 
-Then by :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`.
+Then by :ref:`definition of Perfect Palindromes <palindromics-definition-2-4-2>`, :math:`\zeta = \zeta^{-1}`.
 
 (:math:`\rightarrow`) Assume :math:`\omega_{\zeta} = \sigma`. Assume, for the sake of contradiction, :math:`\zeta \notin P_{-}`. Then, since,
 
@@ -42,7 +42,7 @@ And,
 
     P_{+} \cap P_{-} = \varnothing 
 
-It follows that it must be the case, :math:`\zeta \in P_{+}`. Therefore, :math:`\exists i \in mathbb{N}: l(\zeta) = 2i`. Then, by :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`, 
+It follows that it must be the case, :math:`\zeta \in P_{+}`. Therefore, :math:`\exists i \in mathbb{N}: l(\zeta) = 2i`. Then, by :ref:`definition of Pivot Characters <palindromics-definition-2-2-1>`, 
 
 .. math::
 
@@ -70,7 +70,7 @@ Thus the equivalence is established. Summarizing and generalizing,
 
 .. math::
 
-    \forall \zeta \in J: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
+    \forall \zeta \in K: (\omega_{\zeta} = \sigma) \equiv \zeta \in P_{-}
     
 ∎
 
@@ -82,9 +82,9 @@ Thus the equivalence is established. Summarizing and generalizing,
 
     .. math::
 
-        \forall \zeta \in J: (\omega_{\zeta} \neq \sigma) \equiv (\Omega_{\zeta} \in R)
+        \forall \zeta \in K: (\omega_{\zeta} \neq \sigma) \equiv (\Omega_{\zeta} \in R)
 
-**Proof** Let :math:`\zeta \in J`. 
+**Proof** Let :math:`\zeta \in K`. 
 
 .. .................................................................................
 
@@ -100,7 +100,7 @@ TODO
 
     .. math::
 
-        \forall \zeta \in J: (\omega_{\zeta} \neq \sigma) \equiv (\omega_{\Omega_{\zeta}} = \omega_{\zeta} )
+        \forall \zeta \in K: (\omega_{\zeta} \neq \sigma) \equiv (\omega_{\Omega_{\zeta}} = \omega_{\zeta} )
 
 .. .................................................................................
 

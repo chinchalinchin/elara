@@ -1,7 +1,7 @@
 
-.. _palindromics-section-ii-iii:
+.. _palindromics-section-ii-iv:
 
-Section II.III: Palindromes
+Section II.IV: Palindromes
 ===========================
 
 .. _palindromics-palindrome-definition:
@@ -9,9 +9,9 @@ Section II.III: Palindromes
 Definition & Examples
 ---------------------
 
-.. _palindromics-definition-2-3-1:
+.. _palindromics-definition-2-4-1:
 
-.. topic:: Definition 2.3.1: Palindromes
+.. topic:: Definition 2.4.1: Palindromes
 
     The class of Palindromes, denoted :math:`P`, is defined as the Sentences that satisfy the following formula,
 
@@ -64,9 +64,9 @@ Therefore, :math:`ᚠ_3 \notin P`
 Aspect
 ------
 
-.. _palindromics-definition-2-3-2:
+.. _palindromics-definition-2-4-2:
 
-.. topic:: Definition 2.3.2: Perfect Palindromes
+.. topic:: Definition 2.4.2: Perfect Palindromes
 
     The class of Perfect Palindromes, denoted :math:`J`, is defined the Sentences that satisfy the following formula, 
 
@@ -76,11 +76,11 @@ Aspect
 
 .. note::
 
-    The name, *Perfect Palindromes*, is premature, as it must be shown this definition satisfies :ref:`Definition 2.3.1 <palindromics-definition-2-3-1>` before concluding membership in :math:`K` implies membership in :math:`P`. This will be established in :ref:`Theorem 2.3.4 <palindromics-theorem-2-3-4>`.
+    The name, *Perfect Palindromes*, is premature, as it must be shown this definition satisfies :ref:`Definition 2.3.1 <palindromics-definition-2-4-1>` before concluding membership in :math:`K` implies membership in :math:`P`. This will be established in :ref:`Theorem 2.3.4 <palindromics-theorem-2-3-4>`.
 
-.. _palindromics-theorem-2-3-1:
+.. _palindromics-theorem-2-4-1:
 
-.. topic:: Theorem 2.3.1
+.. topic:: Theorem 2.4.1
 
     Perfect Palindromes are Invertible Setences.
 
@@ -88,7 +88,7 @@ Aspect
 
         K \subseteq J
 
-**Proof** Let :math:`\zeta \in K`. Then by :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`,
+**Proof** Let :math:`\zeta \in K`. Then by :ref:`definition of Perfect Palindromes <palindromics-definition-2-4-2>`,
 
 .. math::
 
@@ -110,11 +110,11 @@ But this is exactly the definition of a subset. Therefore,
 
 .. note::
 
-    :ref:`Theroem 2.3.2 <palindromics-theorem-2-3-2>` and :ref:`Theorem 2.3.3 <palindromics-theorem-2-3-3>` follow directly from :ref:`Theorem 2.3.1 <palindromics-theorem-2-3-1>` and :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>` and :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`.
+    :ref:`Theroem 2.4.2 <palindromics-theorem-2-4-2>` and :ref:`Theorem 2.4.3 <palindromics-theorem-2-4-3>` follow directly from :ref:`Theorem 2.4.1 <palindromics-theorem-2-4-1>` and :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>` and :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`.
 
-.. _palindromics-theorem-2-3-2:
+.. _palindromics-theorem-2-4-2:
 
-.. topic:: Theorem 2.3.2
+.. topic:: Theorem 2.4.2
 
     .. math::
 
@@ -122,9 +122,9 @@ But this is exactly the definition of a subset. Therefore,
 
 ◼︎
 
-.. _palindromics-theorem-2-3-3:
+.. _palindromics-theorem-2-4-3:
 
-.. topic:: Theorem 2.3.3 
+.. topic:: Theorem 2.4.3 
 
     .. math::
 
@@ -132,9 +132,9 @@ But this is exactly the definition of a subset. Therefore,
 
 ◼︎
 
-.. _palindromics-theorem-2-3-4:
+.. _palindromics-theorem-2-4-4:
 
-.. topic:: Theorem 2.3.4
+.. topic:: Theorem 2.4.4
 
     Perfect Palindromes are Palindromes.
 
@@ -142,7 +142,7 @@ But this is exactly the definition of a subset. Therefore,
 
         K \subseteq P 
 
-**Proof** Let :math:`\zeta \in K`. By :ref:`definition of Perfect Palindromes <palindromics-definition-2-3-2>`, 
+**Proof** Let :math:`\zeta \in K`. By :ref:`definition of Perfect Palindromes <palindromics-definition-2-4-2>`, 
 
 .. math::
 
@@ -160,7 +160,7 @@ By :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`,
 
     \varsigma(\zeta) = (\varsigma(\zeta))^{-1}
 
-Therefore, by :ref:`definition of Palindromes <palindromics-definition-2-3-1>`,
+Therefore, by :ref:`definition of Palindromes <palindromics-definition-2-4-1>`,
 
 .. math::
 
@@ -174,9 +174,9 @@ But this is exactly the definition of subsets,
 
 ◼︎
 
-.. _palindromics-theorem-2-3-5:
+.. _palindromics-theorem-2-4-5:
 
-.. topic:: Theorem 2.3.5
+.. topic:: Theorem 2.4.5
 
     The Pivot Character of all Perfect Palindromes is non-Empty.
     
@@ -186,7 +186,7 @@ But this is exactly the definition of subsets,
 
 **Proof** Let :math:`\zeta \in K`.
 
-By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :math:`\zeta = \zeta^{-1}`.  By :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>`,
+By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-4-2>`, :math:`\zeta = \zeta^{-1}`.  By :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`,
 
 .. math::
 
@@ -194,9 +194,9 @@ By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-3-2>`, :m
 
 ◼
 
-.. _palindromics-definition-2-3-3:
+.. _palindromics-definition-2-4-3:
 
-.. topic:: Definition 2.3.3: Imperfect Palindromes
+.. topic:: Definition 2.4.3: Imperfect Palindromes
 
     TODO 
 
@@ -211,9 +211,9 @@ TODO
 Parity
 ------
 
-.. _palindromics-definition-2-3-4:
+.. _palindromics-definition-2-4-4:
 
-.. topic:: Definition 2.3.4: Parity
+.. topic:: Definition 2.4.4: Parity
 
     The set of Odd Palindromes, denoted :math:`P_{-}`, is defined as the set of Sentences which satisfy the open formula,
     

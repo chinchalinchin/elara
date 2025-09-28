@@ -225,10 +225,15 @@ At the next step, let :math:`u_3 = \text{with}` and :math:`v_3 = \text{my blurgl
 
 .. note::
 
-    :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>` and :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` demonstrate Word Length is fundamentally different than String Length with respect to the operation of concatenation. In :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`, it was shown String Length sums over concatenation. :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>` shows the corresponding property is not necessarily true for Word Length. This is an artifact of the potential destruction of semantic content that may occur upon concatenation.
+    :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>` and :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` demonstrate Word Length is fundamentally different than String Length with respect to the operation of concatenation. In :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`, it was shown String Length sums over concatenation. :ref:`Theorem 1.4.1 <palindromics-theorem-1-4-1>` shows the corresponding property is not necessarily true for Word Length. This is an artifact of the potential destruction of semantic content that may occur upon concatenation. (The edge case of compound Words (e.g. *daylight*) makes the proof :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` particularly interesting.)
 
-    The edge case of compound Words (e.g. *daylight*) makes the proof :ref:`Theorem 1.4.2 <palindromics-theorem-1-4-2>` particularly interesting.
+    Indeed, most algebraic properties of *String Length* do not extend up the semantic hierarchy. For example, it is easily seen, in general, 
 
+    .. math::
+
+        \Lambda(\zeta^{-1}) \neq \Lambda(\zeta)
+
+    However, there is a special class of sentences where this property does hold, as will be seen in :ref:`Theorem 1.4.12 <palindromics-theorem-1-4-12>`.
 
 .. _palindromics-sentence-theorems:
 
@@ -740,6 +745,50 @@ Summarizing and generalizing,
 
 ∎
 
+.. _palindromics-theorem-1-4-12:
+
+.. topic:: Theorem 1.4.12:
+
+    The Word Length of every Invertible Sentence is equal to the Word Length of its Inverse.
+
+    .. math::
+
+        \forall \zeta \in J: \Lambda(\zeta) = \Lambda(\zeta^{-1})
+
+**Proof** Let :math:`\zeta in J` with :math:`n = \Lambda(\zeta)`
+
+By :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`,
+
+.. math::
+
+    \forall i \in N_n: \zeta[[i]] \in I
+
+By :ref:`definition of Invertible Words <palindromics-definition-1-3-2>`,
+
+.. math::
+
+    \forall i \in N_n: (\zeta[[i]])^{-1} \in L
+
+By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
+
+.. math::
+
+    \forall i \in N_n: {{\zeta}^{-1}}[[n - i + 1]] \in L
+
+Note for :math:`1 \leq i \leq n`, :math:`n - i + 1` is a decreasing, consecutive function that goes :math:`n \to 1`. Therefore, every Word of the Inverse belongs to the Language and by :ref:`by definition of Word Length <palindromics-definition-1-4-1>`,
+
+.. math::
+
+    \Lambda(\zeta) = \Lambda(\zeta^{-1})
+
+Summarizing and generalizing, 
+
+.. math::
+
+    \forall \zeta \in J: \Lambda(\zeta) = \Lambda(\zeta^{-1})
+
+∎
+
 .. _palindromics-partial-sentences:
 
 Partial Sentences
@@ -787,7 +836,9 @@ Thus :math:`ᚠ[10:] = \text{he possibility of structure}`
 
     Note Partial Sentences are **not** part of the Corpus.
 
-.. topic:: Theorem 1.4.12
+.. _palindromics-theorem-1-4-13:
+
+.. topic:: Theorem 1.4.13
 
     The Concatenation of a Left Partial String with its Right Partial String is the String. 
 

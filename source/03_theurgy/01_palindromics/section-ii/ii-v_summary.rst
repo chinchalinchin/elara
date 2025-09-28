@@ -1,8 +1,8 @@
 
-.. _palindromics-section-ii-iv:
+.. _palindromics-section-ii-v:
 
-Section II.IV: Summary
-======================
+Section II.V: Summary
+=====================
 
 .. .................................................................................
 

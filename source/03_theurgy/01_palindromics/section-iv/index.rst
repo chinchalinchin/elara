@@ -9,7 +9,7 @@ The study of Palindromes leads directly into the study of Delimiter distribution
 - god lived on no devil dog
 - i am civic am i
 
-Since, by :ref:`Definition 2.3.2 <palindromics-definition-2-3-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters for these examples. Note the horizontal axes are scaled to the Sentence String Length,
+Since, by :ref:`Definition 2.4.2 <palindromics-definition-2-4-2>`, Perfect Palindromes are exactly the class of Sentences that are equal to their own Inverses, the Delimiters in a Perfect Palindrome display symmetry. The following barcharts show the Character indices of Delimiters for these examples. Note the horizontal axes are scaled to the Sentence String Length,
 
 .. image:: ../../../_static/img/results/sentences/palindromes/delimiter_indices_perfect_palindrome_1.png
   :align: center

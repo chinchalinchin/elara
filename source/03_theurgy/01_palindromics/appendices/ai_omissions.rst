@@ -59,6 +59,10 @@ This Axiom is required to induce proofs about Word Length. Without it, there is 
 Appendix I.II: Omitted Proofs
 -----------------------------
 
+.. note::
+
+    Numbered theorems in this appendix are directly referenced in the main. An ``x`` in the theorem title indicates the theorem does not fit into the natural flow of the paper.
+
 .. _palindromics-omitted-proofs-section-i-ii:
 
 ------------
@@ -196,7 +200,7 @@ Section II.I
 
 .. _palindromics-theorem-2-1-11:
 
-.. topic:: Theorem 2.1.11
+.. topic:: Theorem 2.1.x
 
     If the Pivot Character of a Canonical String is Empty, then the String is not invertible.
 
@@ -204,6 +208,6 @@ Section II.I
 
         \forall s \in \mathbb{S}: \omega_s = \varepsilon \implies (s \neq s^{-1})
 
-**Proof** Follows immediately from :ref:`Theorem 2.1.10 <palindromics-theorem-2-1-10>` by the law of contraposition.
+**Proof** Follows immediately from :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>` by the law of contraposition.
 
 ∎

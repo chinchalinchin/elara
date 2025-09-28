@@ -1249,3 +1249,59 @@ Thus, :math:`\Lambda(\zeta)` is even. By the :ref:`definition of Pivot Words <pa
     \overleftarrow{j} = \frac{\Lambda(\zeta) + 2}{2}`
 
 Thus, the implication follows directly from the definition.
+
+
+
+Since :math:`\zeta = \zeta^{-1}`, it follows :math:`\zeta^{-1} \in C`. By :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`, it follows :math:`\zeta \in K`. By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
+
+.. math::
+
+    {\zeta}^{-1}[[j]] = (\zeta[[\Lambda(\zeta) - j + 1]])^{-1}
+
+For all :math:`j \in N_{\Lambda(\zeta)}`. 
+
+Furthermore, since :math:`\Delta(\zeta)` is odd and :math:`\zeta = \zeta^{-1}`, it follows from :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>` and the :ref:`definition of Pivot Characters <palindromics-definition-2-1-2>`,
+
+.. math::
+
+    \omega_{\zeta} = \sigma
+
+.. Going to need partial sentences here, I think.
+
+
+
+**Proof** Let :math:`\zeta \in C`. Assume :math:`\Delta(\zeta) = 2i` for some :math:`i \in \mathbb{N}`. Then, by :ref:`Theroem 2.1.11 <palindromics-theorem-2-1-1>`,
+
+.. math::
+
+    \Omega_{\zeta} \neq \varepsilon
+
+Where the Pivot Word occurs at the Word Index, :math:`k = \frac{\Lambda(\zeta) + 1}{2}`, i.e. 
+
+.. math:: 
+
+    \Omega_{\zeta} = \zeta[[\frac{\Lambda(\zeta) + 1}{2}]]
+
+Since :math:`\zeta = \zeta^{-1}`, it follows :math:`\zeta^{-1} \in C`. By :ref:`definition of Invertible Sentences <palindromics-definition-1-4-3>`, it follows :math:`\zeta \in K`. By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
+
+.. math::
+
+    {\zeta}^{-1}[[j]] = (\zeta[[\Lambda(\zeta) - j + 1]])^{-1}
+
+For all :math:`j \in N_{\Lambda(\zeta)}`, including the Pivot Word Index. Substituting in the Pivot Word Index, the expression for the index on the RHS simplifies to,
+
+.. math::
+
+    \Lambda(\zeta) - \frac{\Lambda(\zeta) + 1}{2} + 1  = \frac{\Lambda(\zeta) + 1}{2}
+
+Thus, 
+
+.. math::
+
+    {\zeta}^{-1}[[\frac{\Lambda(\zeta)+1}{2}]] = (\zeta[[\frac{\Lambda(\zeta) + 1}{2}]])^{-1}
+
+Since :math:`\Lambda(\zeta^{-1}) = \Lambda(\zeta)`, i.e. their Pivot Word Indices are equal, this means the Inverse of the Pivot Word is the Pivot Word of the Inverse Sentence,
+
+.. math::
+
+    \Omega_{\zeta^{-1}} = {\Omega_{\zeta}}^{-1}
