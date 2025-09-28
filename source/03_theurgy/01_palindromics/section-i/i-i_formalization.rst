@@ -23,7 +23,7 @@ General conventions adopted throughout the course of this work are  given below.
 
 2. The cardinality of a set :math:`A` will be denoted :math:`\lvert A \rvert`
 
-3. ∎ will be used to denote the ending of all definitions, examples and proofs. 
+3. ∎ will be used to denote the ending of all examples and proofs. 
 
 4. The terms "*set*" and "*class*" are used interchangeably. 
 

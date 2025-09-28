@@ -147,18 +147,22 @@ Theorems
 37. :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`: :math:`(s = s^{-1}) \implies (\omega_s \neq \varepsilon)`
 38. :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`: :math:`((\Delta(\zeta) = 2i) \land (\Omega_{\zeta} \neq \varepsilon)) \implies (\Omega_{\zeta} \in R)`
 39. :ref:`Theorem 2.2.6 <palindromics-theorem-2-2-6>`: :math:`((\Delta(\zeta) = 2i + 1) \land (\Omega_{\zeta} \neq \varepsilon)) \implies (\Omega_{\zeta} \in I)`
-40. :ref:`Theorem 2.2.7 <palindromics-theorem-2-2-7>`: :math:`\zeta \in J \implies \Omega_{\zeta} \neq \varepsilon`
-41. :ref:`Theorem 2.3.1 <palindromics-theorem-2-3-1>`: :math:`\varsigma(st) = (\varsigma(s))(\varsigma(t))`
-42. :ref:`Theorem 2.3.2 <palindromics-theorem-2-3-2>`: :math:`\Delta(s) = 0 \equiv \varsigma(s) = s`
-43. :ref:`Theorem 2.3.4 <palindromics-theorem-2-3-4>`: :math:`(\varsigma(s))^{-1} = \varsigma(s^{-1})`
-44. :ref:`Theorem 2.3.5 <palindromics-theorem-2-3-5>`: :math:`\varsigma(\varsigma(s)) = \varsigma(s)`
-45. :ref:`Theorem 2.3.6 <palindromics-theorem-2-3-6>`: :math:`s \subset_s t \equiv \varsigma(s) \subset_s \varsigma(t)`
-46. :ref:`Theorem 2.3.7 <palindromics-theorem-2-3-7>`: :math:`\zeta[[i]] \subset_s \varsigma(\zeta)`
-47. :ref:`Theorem 2.4.1 <palindromics-theorem-2-3-1>`: :math:`K \subseteq J`
-48. :ref:`Theorem 2.4.2 <palindromics-theorem-2-4-2>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
-49. :ref:`Theorem 2.4.3 <palindromics-theorem-2-4-3>`: :math:`\zeta \in K \implies \zeta^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - 1 +1]])^{-1}`
-50. :ref:`Theorem 2.4.4 <palindromics-theorem-2-4-4>`: :math:`K \subseteq P`
-51. :ref:`Theorem 2.4.5 <palindromics-theorem-2-4-5>`: :math:`\zeta \in K \implies (\omega_{\zeta} \neq \varepsilon)`
-52. :ref:`Theorem 3.2.1 <palindromics-theorem-3-2-1>`: :math:`\zeta \in K \implies ((\omega_{\zeta} = \sigma) \equiv (\zeta \in P_{-}))`
-53. :ref:`Theorem 3.2.2 <palindromics-theorem-3-2-2>`: :math:`\zeta \in K \implies ((\omega_{\zeta} \neq \sigma) \equiv (\Omega_{\zeta} \in R))`
-54. :ref:`Theorem 3.2.3 <palindromics-theorem-3-2-3>`: :math:`\zeta \in K \implies ((\omega_{\zeta} \neq \sigma) \equiv (\omega_{\Omega_{\zeta}} = \omega_{\zeta}))`
+40. :ref:`Theorem 2.2.7 <palindromics-theorem-2-2-7>`:
+41. :ref:`Theorem 2.2.8 <palindromics-theorem-2-2-8>`:
+42. :ref:`Theorem 2.3.1 <palindromics-theorem-2-3-1>`: :math:`\varsigma(st) = (\varsigma(s))(\varsigma(t))`
+43. :ref:`Theorem 2.3.2 <palindromics-theorem-2-3-2>`: :math:`\Delta(s) = 0 \equiv \varsigma(s) = s`
+44. :ref:`Theorem 2.3.4 <palindromics-theorem-2-3-4>`: :math:`(\varsigma(s))^{-1} = \varsigma(s^{-1})`
+45. :ref:`Theorem 2.3.5 <palindromics-theorem-2-3-5>`: :math:`\varsigma(\varsigma(s)) = \varsigma(s)`
+46. :ref:`Theorem 2.3.6 <palindromics-theorem-2-3-6>`: :math:`s \subset_s t \equiv \varsigma(s) \subset_s \varsigma(t)`
+47. :ref:`Theorem 2.3.7 <palindromics-theorem-2-3-7>`: :math:`\zeta[[i]] \subset_s \varsigma(\zeta)`
+48. :ref:`Theorem 2.4.1 <palindromics-theorem-2-3-1>`: :math:`K \subseteq J`
+49. :ref:`Theorem 2.4.2 <palindromics-theorem-2-4-2>`: :math:`\zeta \in K \implies \zeta[[i]] \in I`
+50. :ref:`Theorem 2.4.3 <palindromics-theorem-2-4-3>`: :math:`\zeta \in K \implies \zeta^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - 1 +1]])^{-1}`
+51. :ref:`Theorem 2.4.4 <palindromics-theorem-2-4-4>`: :math:`\zeta \in K \imples \Lambda(zeta) = \Lambda(zeta^{-1})`
+52. :ref:`Theorem 2.4.5 <palindromics-theorem-2-4-5>`: :math:`K \subseteq P`
+53. :ref:`Theorem 2.4.6 <palindromics-theorem-2-4-6>`: :math:`\zeta \in K \implies (\omega_{\zeta} \neq \varepsilon)`
+54. :ref:`Theorem 2.4.7 <palindromics-theorem-2-4-7>`: :math:`\zeta \in K \imples (\Omega_{\zeta} \neq \varepsilon)`
+55. :ref:`Theorem 2.4.8 <palindromics-theorem-2-4-8>`: :math:`K \subseteq \cancel{J}`
+56. :ref:`Theorem 3.2.1 <palindromics-theorem-3-2-1>`: :math:`\zeta \in K \implies ((\omega_{\zeta} = \sigma) \equiv (\zeta \in P_{-}))`
+57. :ref:`Theorem 3.2.2 <palindromics-theorem-3-2-2>`: :math:`\zeta \in K \implies ((\omega_{\zeta} \neq \sigma) \equiv (\Omega_{\zeta} \in R))`
+58. :ref:`Theorem 3.2.3 <palindromics-theorem-3-2-3>`: :math:`\zeta \in K \implies ((\omega_{\zeta} \neq \sigma) \equiv (\omega_{\Omega_{\zeta}} = \omega_{\zeta}))`

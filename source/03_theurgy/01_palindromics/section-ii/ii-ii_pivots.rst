@@ -68,7 +68,7 @@ Thus, since :math:`l(ᚠ)= 26` is even,
 
 .. note::
 
-    From the previous examples, it should be clear a Pivot Character of a String is a Empty Character if and only if its String Length is even. However, if a Pivot Characteris a non-Empty Character, then it cannot be concluded whether the String Length is odd or even.
+    From the previous examples, it should be clear a Pivot Character of a String is a Empty Character then the String Length is even. However, if a Pivot Characteris a non-Empty Character, then it cannot be concluded whether the String Length is odd or even.
 
     However, it should be clear that if a Pivot Character is non-Empty, it imposes certain structural constraints on the String. These structural constraints will be more fully elaborated in the next series of theorems.
 
@@ -80,9 +80,9 @@ Thus, since :math:`l(ᚠ)= 26` is even,
 
     .. math::
     
-        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
+        \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
 
-**Proof**: Let :math:`s \in \mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`s = s^{-1}`. Then, by :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`,
+**Proof**: Let :math:`s \in S` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`s = s^{-1}`. Then, by :ref:`Theorem 2.1.6 <palindromics-theorem-2-1-6>`,
 
 .. math::
 
@@ -108,7 +108,7 @@ Summarizing and generalizing,
 
 .. math::
 
-    \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1)) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
+    \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1)) \implies (\overrightarrow{\omega_s} = \overleftarrow{\omega_s})
 
 ∎
 
@@ -286,9 +286,9 @@ But this contradicts (2), which states :math:`l(uv)` is even, which in turn foll
 
     .. math::
 
-        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+        \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
 
-**Proof** Let :math:`s \in \mathbb{S}` such that :math:`s = s^{-1}`. Let :math:`t \in D` such :math:`t = s^{-1}` and :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
+**Proof** Let :math:`s \in S` such that :math:`s = s^{-1}`. Let :math:`t \in D` such :math:`t = s^{-1}` and :math:`\Delta(s) = 2n` for some :math:`n \in \mathbb{N}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
 
 .. math::
 
@@ -380,7 +380,7 @@ This follows directly from the :ref:`definition of Pivot Characters <palindromic
 
 .. math::
 
-    \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
+    \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n) \land (s = s^{-1})) \implies \overrightarrow{\omega_s} = \overleftarrow{\omega_s}
 
 ∎
 
@@ -388,13 +388,13 @@ This follows directly from the :ref:`definition of Pivot Characters <palindromic
 
 .. topic:: Theorem 2.2.4
 
-    If a Canonical String is equal to its own Inverse, then its Pivot Character is non-empty.
+    If a String is equal to its own Inverse, then its Pivot Character is non-empty.
     
     .. math::
 
-        \forall s \in \mathbb{S}: (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
+        \forall s \in S: (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
 
-**Proof** Let :math:`s \in \mathbb{S}` such that :math:`s = s^{-1}`. 
+**Proof** Let :math:`s \in S` such that :math:`s = s^{-1}`. 
 
 By the laws of arithmetic, either :math:`\Delta(s)` is odd or it is even. 
 
@@ -414,7 +414,7 @@ In either case, the conclusion follows. Thus, summarizing and generalizing,
 
 .. math::
 
-    \forall s \in \mathbb{S}: (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
+    \forall s \in S: (s = s^{-1}) \implies (\omega_s \neq \varepsilon)
 
 ∎
 
@@ -447,7 +447,7 @@ Pivot Words
 
     The *Pivot Word*, denoted :math:`\Omega_{\zeta}`, is defined as the Character which satisfies the following conditions,
 
-    1. If :math:`\overrightarrow{\Omega_{\zeta}} = (\overleftarrow{\Omega_{\zeta}})^{-1}`, then :math:` \overrightarrow{\Omega_{\zeta}} = (\overleftarrow{\Omega_{\zeta}})^{-1} = \Omega_{\zeta}`
+    1. If :math:`\overrightarrow{\Omega_{\zeta}} = (\overleftarrow{\Omega_{\zeta}})^{-1}`, then :math:`\overrightarrow{\Omega_{\zeta}} = (\overleftarrow{\Omega_{\zeta}})^{-1} = \Omega_{\zeta}`
     2. If :math:`\overrightarrow{\Omega_{\zeta}} \neq (\overleftarrow{\Omega_{\zeta}})^{-1}`, then :math:`\Omega_{\zeta} = \varepsilon`
 
 .. note::
@@ -460,93 +460,93 @@ Pivot Words
 
 1. Let :math:`ᚠ_1 = \text{i had not thought death had undone so many}`. Note :math:`\Lambda(ᚠ_1) = 9` and :math:`l(ᚠ_1) =  42`.
 
-The Pivot Word calculations proceed as follows,
+    The Pivot Word calculations proceed as follows,
 
-- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{10}{2} = 5`
-- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{10}{2} = 5`
-- *Left Pivot Word*: :math:`ᚠ_1[[3]] = \overrightarrow{\Omega_{ᚠ_1}} = \text{death}`
-- *Right Pivot Word*: :math:`ᚠ_1[[4]] = \overleftarrow{\Omega_{ᚠ_1}} = \text{death}`
-- *Pivot Word*: :math:`\Omega_{ᚠ_1} = \varepsilon`
+    - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{10}{2} = 5`
+    - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{10}{2} = 5`
+    - *Left Pivot Word*: :math:`ᚠ_1[[3]] = \overrightarrow{\Omega_{ᚠ_1}} = \text{death}`
+    - *Right Pivot Word*: :math:`ᚠ_1[[4]] = \overleftarrow{\Omega_{ᚠ_1}} = \text{death}`
+    - *Pivot Word*: :math:`\Omega_{ᚠ_1} = \varepsilon`
 
-The Pivot Character calculations proceed as follows,
+    The Pivot Character calculations proceed as follows,
 
-- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{42}{2} = 21`
-- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{44}{2} = 22`
-- *Left Pivot Character*: :math:`ᚠ_1[21]= \text{a}`
-- *Right Pivot Character*: :math:`ᚠ_1[22]= \text{t}`
-- *Pivot Character*: :math:`\omega_{ᚠ_1} = \varepsilon`
+    - *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{42}{2} = 21`
+    - *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{44}{2} = 22`
+    - *Left Pivot Character*: :math:`ᚠ_1[21]= \text{a}`
+    - *Right Pivot Character*: :math:`ᚠ_1[22]= \text{t}`
+    - *Pivot Character*: :math:`\omega_{ᚠ_1} = \varepsilon`
 
 2. Let :math:`ᚠ_2 = \text{no radar on}`. Note :math:`\Lambda(ᚠ_2) = 3` and :math:`l(ᚠ_2) = 11`
 
-The Pivot Word calculations proceed as follows,
+    The Pivot Word calculations proceed as follows,
 
-- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
-- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
-- *Left Pivot Word*: :math:`ᚠ_2[[2]] = \overrightarrow{\Omega_{ᚠ_2}} = \text{radar}`
-- *Right Pivot Word*: :math:`ᚠ_2[[4]] = \overleftarrow{\Omega_{ᚠ_2}} = \text{radar}`
-- *Pivot Word*: :math:`\Omega_{ᚠ_2} = \overrightarrow{\Omega_{ᚠ_2}} = \overleftarrow{\Omega_{ᚠ_2}}^{-1} = \text{radar}`
+    - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
+    - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
+    - *Left Pivot Word*: :math:`ᚠ_2[[2]] = \overrightarrow{\Omega_{ᚠ_2}} = \text{radar}`
+    - *Right Pivot Word*: :math:`ᚠ_2[[4]] = \overleftarrow{\Omega_{ᚠ_2}} = \text{radar}`
+    - *Pivot Word*: :math:`\Omega_{ᚠ_2} = \overrightarrow{\Omega_{ᚠ_2}} = (\overleftarrow{\Omega_{ᚠ_2}})^{-1} = \text{radar}`
 
-The Pivot Character calculations proceed as follows,
+    The Pivot Character calculations proceed as follows,
 
-- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{12}{2} = 6`
-- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{12}{2} = 6`
-- *Left Pivot Character*: :math:`ᚠ_2[6]= \text{d}`
-- *Right Pivot Character*: :math:`ᚠ_2[6]= \text{d}`
-- *Pivot Character*: :math:`\omega_{ᚠ_2} = \text{d}`
+    - *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{12}{2} = 6`
+    - *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{12}{2} = 6`
+    - *Left Pivot Character*: :math:`ᚠ_2[6]= \text{d}`
+    - *Right Pivot Character*: :math:`ᚠ_2[6]= \text{d}`
+    - *Pivot Character*: :math:`\omega_{ᚠ_2} = \text{d}`
 
 3. Let :math:`ᚠ_3 = \text{tell me stories}`. Note :math:`\Lambda(ᚠ_3) = 3` and :math:`l(ᚠ_3) = 15`
 
-The Pivot Word calculations proceed as follows,
+    The Pivot Word calculations proceed as follows,
 
-- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
-- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
-- *Left Pivot Word*: :math:`ᚠ_3[[2]] = \overrightarrow{\Omega_{ᚠ_3}} = \text{me}`
-- *Right Pivot Word*: :math:`ᚠ_3[[4]] = \overleftarrow{\Omega_{ᚠ_3}} = \text{me}`
-- *Pivot Word*: :math:`\Omega_{ᚠ_3} = \varepsilon`
+    - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
+    - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{4}{2} = 2`
+    - *Left Pivot Word*: :math:`ᚠ_3[[2]] = \overrightarrow{\Omega_{ᚠ_3}} = \text{me}`
+    - *Right Pivot Word*: :math:`ᚠ_3[[4]] = \overleftarrow{\Omega_{ᚠ_3}} = \text{me}`
+    - *Pivot Word*: :math:`\Omega_{ᚠ_3} = \varepsilon`
 
-The Pivot Character calculations proceed as follows,
+    The Pivot Character calculations proceed as follows,
 
-- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{16}{2} = 8`
-- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{16}{2} = 8`
-- *Left Pivot Character*: :math:`ᚠ_4[6]= \sigma`
-- *Right Pivot Character*: :math:`ᚠ_4[6]= \sigma`
-- *Pivot Character*: :math:`\omega_{ᚠ_4} = \sigma`
+    - *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{16}{2} = 8`
+    - *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{16}{2} = 8`
+    - *Left Pivot Character*: :math:`ᚠ_4[6]= \sigma`
+    - *Right Pivot Character*: :math:`ᚠ_4[6]= \sigma`
+    - *Pivot Character*: :math:`\omega_{ᚠ_4} = \sigma`
 
 4. Let :math:`ᚠ_5 = \text{emit naps noon span time}`. Note :math:`\Lambda(ᚠ_4) = 5` and :math:`l(ᚠ_4) = 24`.
 
-The Pivot Word calculations proceed as follows,
+    The Pivot Word calculations proceed as follows,
 
-- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{6}{2} = 3`
-- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
-- *Left Pivot Word*: :math:`ᚠ_4[[3]] = \overrightarrow{\Omega_{ᚠ_4}} = \text{noon}`
-- *Right Pivot Word*: :math:`ᚠ_4[[3]] = \overleftarrow{\Omega_{ᚠ_4}} = \text{noon}`
-- *Pivot Word*: :math:`\Omega_{ᚠ_4} = \overrightarrow{\Omega_{ᚠ_4}} = \overleftarrow{\Omega_{ᚠ_5}}^{-1} = \text{noon}`
+    - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{6}{2} = 3`
+    - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
+    - *Left Pivot Word*: :math:`ᚠ_4[[3]] = \overrightarrow{\Omega_{ᚠ_4}} = \text{noon}`
+    - *Right Pivot Word*: :math:`ᚠ_4[[3]] = \overleftarrow{\Omega_{ᚠ_4}} = \text{noon}`
+    - *Pivot Word*: :math:`\Omega_{ᚠ_4} = \overrightarrow{\Omega_{ᚠ_4}} = (\overleftarrow{\Omega_{ᚠ_5}})^{-1} = \text{noon}`
 
-The Pivot Character calculations proceed as follows,
+    The Pivot Character calculations proceed as follows,
 
-- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{24}{2} = 12`
-- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{26}{2} = 13`
-- *Left Pivot Character*: :math:`ᚠ_4[12]= \text{o}`
-- *Right Pivot Character*: :math:`ᚠ_4[6]= \text{o}`
-- *Pivot Character*: :math:`\omega_{ᚠ_4} = \text{o}`
+    - *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{24}{2} = 12`
+    - *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{26}{2} = 13`
+    - *Left Pivot Character*: :math:`ᚠ_4[12]= \text{o}`
+    - *Right Pivot Character*: :math:`ᚠ_4[6]= \text{o}`
+    - *Pivot Character*: :math:`\omega_{ᚠ_4} = \text{o}`
 
 5. Let :math:`ᚠ_5 = \text{the naps span now}`. Note :math:`\Lambda(ᚠ_5) = 4` and :math:`l(ᚠ_5) = 17`.
 
-The Pivot Word calculations proceed as follows,
+    The Pivot Word calculations proceed as follows,
 
-- *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
-- *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
-- *Left Pivot Word*: :math:`ᚠ_5[[2]] = \overrightarrow{\Omega_{ᚠ_5}} = \text{naps}`
-- *Right Pivot Word*: :math:`ᚠ_5[[3]] = \overleftarrow{\Omega_{ᚠ_5}} = \text{span}`
-- *Pivot Word*: :math:`\Omega_{ᚠ_5} = \overrightarrow{\Omega_{ᚠ_5}} = \overleftarrow{\Omega_{ᚠ_5}}^{-1}\text{naps}`
+    - *Left Pivot Word Index*: :math:`\overrightarrow{j} = \frac{4}{2} = 2`
+    - *Right Pivot Word Index*: :math:`\overleftarrow{j} = \frac{6}{2} = 3`
+    - *Left Pivot Word*: :math:`ᚠ_5[[2]] = \overrightarrow{\Omega_{ᚠ_5}} = \text{naps}`
+    - *Right Pivot Word*: :math:`ᚠ_5[[3]] = \overleftarrow{\Omega_{ᚠ_5}} = \text{span}`
+    - *Pivot Word*: :math:`\Omega_{ᚠ_5} = \overrightarrow{\Omega_{ᚠ_5}} = (\overleftarrow{\Omega_{ᚠ_5}})^{-1} = \text{naps}`
 
-The Pivot Character calculations proceed as follows,
+    The Pivot Character calculations proceed as follows,
 
-- *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{18}{2} = 9`
-- *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{18}{2} = 9`
-- *Left Pivot Character*: :math:`ᚠ_5[9]= \sigma`
-- *Right Pivot Character*: :math:`ᚠ_5[9]= \sigma`
-- *Pivot Character*: :math:`\omega_{ᚠ_5} = \sigma`
+    - *Left Pivot Character Index*: :math:`\overrightarrow{i} = \frac{18}{2} = 9`
+    - *Right Pivot Character Index*: :math:`\overleftarrow{i} = \frac{18}{2} = 9`
+    - *Left Pivot Character*: :math:`ᚠ_5[9]= \sigma`
+    - *Right Pivot Character*: :math:`ᚠ_5[9]= \sigma`
+    - *Pivot Character*: :math:`\omega_{ᚠ_5} = \sigma`
 
 ∎
 
@@ -574,7 +574,7 @@ Thus, :math:`\Lambda(\zeta)` is odd. By the :ref:`definition of Pivot Words <pal
 
 .. math::
 
-    \overleftarrow{j} = \frac{\Lambda(\zeta) + 1}{2}`
+    \overleftarrow{j} = \frac{\Lambda(\zeta) + 1}{2}
 
 Thus, 
 
@@ -586,7 +586,7 @@ If :math:`\Omega_{\zeta} \neq \varepsilon`, then by :ref:`definition of Pivot Wo
 
 .. math::
 
-    \Omega_{\zeta} = \overrightarrow{\Omega_{\zeta}} = {\overleftarrow{\Omega_{\zeta}}}^{-1}
+    \Omega_{\zeta} = \overrightarrow{\Omega_{\zeta}} = ({\overleftarrow{\Omega_{\zeta}}})^{-1}
 
 Thus, since the Pivot Words are the same Word,
 
@@ -604,7 +604,7 @@ Therefore, summarizing and generalizing,
 
 .. math::
 
-    \forall \zeta \in C: ((\exists i \in \mathbb{N}: \Delta(\zeta) = 2i) \land (\Omega_{\zeta} \neq \varepsilon)) \implies (\Ometa_{\zeta} \in R)
+    \forall \zeta \in C: ((\exists i \in \mathbb{N}: \Delta(\zeta) = 2i) \land (\Omega_{\zeta} \neq \varepsilon)) \implies (\Omega_{\zeta} \in R)
 
 ∎
 
@@ -628,13 +628,13 @@ Let :math:`m = \Lambda(\zeta)`. Therefore, by :ref:`definition of Pivot Words <p
 
 .. math::
     
-    \overrightarrow{\Ometa_{\zeta}} = \zeta[[\frac{m}{2}]]
+    \overrightarrow{\Omega_{\zeta}} = \zeta[[\frac{m}{2}]]
 
 .. math::
 
-    \overleftarrow{\Ometa_{\zeta}} = \zeta[[\frac{m + 2}{2}]]
+    \overleftarrow{\Omega_{\zeta}} = \zeta[[\frac{m + 2}{2}]]
 
-Let :math:`\alpha_1 = \zeta[[\frac{m}{2}]] = \overrightarrow{\Ometa_{\zeta}}` and :math:`\alpha_2 = \zeta[[\frac{m+2}{2}]] = \overleftarrow{\Ometa_{\zeta}}`. By definition of a Sentence,
+Let :math:`\alpha_1 = \zeta[[\frac{m}{2}]] = \overrightarrow{\Omega_{\zeta}}` and :math:`\alpha_2 = \zeta[[\frac{m+2}{2}]] = \overleftarrow{\Omega_{\zeta}}`. By definition of a Sentence,
 
 .. math::
 
@@ -674,73 +674,35 @@ Summarizing and generalizing,
 
 .. topic:: Theorem 2.2.7
 
-    All Invertible Sentences have a non-Empty Pivot Word
-
-    \forall \zeta \in J: \Omega_{\zeta} \neq \varepsilon
-
-**Proof** Let :math:`\zeta \in J` and :math:`n = \Lambda(\zeta)`. 
-
-By :ref:`definition of String Inversion <palindromics-definition-1-2-8>`,
-
-.. math::
-
-    l(\zeta) = l(\zeta^{-1})
-
-.. NEED TO PROVE THE EQUIVALENT PROPERTY FOR WORD LENGTH: \Lambda(\zeta) = \Lamdbda(\zeta^{-1})
-.. ONLY APPLIES TO INVERTIBLE SENTENCES!
-
-By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
-
-.. math::
-
-    {\zeta}^{-1}[[i]] = (\zeta[[n - i + 1]])^{-1}
-
-.. CASE I 
-
-:underline:`Case I`: :math:`n = 2i` for some :math:`i \in \mathbb{N}`.
-
-By the :ref:`definition of Pivot Words <palindromics-definition-2-2-2>`,
-
-.. math::
-
-    \overrightarrow{\Omega_{\zeta}} = \zeta[[\frac{n}{2}]]
-
-.. math::
-
-    \overrightarrow{\Omega_{\zeta}} = \zeta[[\frac{n + 2}{2}]]
-
-.. CASE II 
-
-:underline:`Case II`: :math:`n = 2i + 1` for some :math:`i \in \mathbb{N}`
-
-.. .................................................................................
-
-TODO
-
-.. .................................................................................
-
-∎
-
-.. _palindromics-theorem-2-2-8:
-
-.. topic:: Theorem 2.2.8
-
-    The Pivot Word of an Invertible Sentence is the Pivot Word of its Inverse.
+    The Inverse Pivot Word of an Invertible Sentence is the Pivot Word of its Inverse.
 
     .. math::
 
-        \forall \zeta \in J: (\Omega_{\zeta^{-1}} = {\Omega_{\zeta}}^{-1})
+        \forall \zeta \in J: {\Omega_{\zeta}}^{-1} = \Omega_{\zeta^{-1}}
 
 
-**Proof** 
+**Proof** Let :math:`\zeta \in J` with :math:`m = \Lambda(\zeta)`
 
-.. .................................................................................
+.. CASE I
+
+:underline:`Case I`: :math:`m = 2i`.
 
 TODO
 
-.. .................................................................................
+:underline:`Case II`: :math:`2i + 1`
+
+TODO
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
 
 ∎
+
+.. _palindromics-subvertible-sentences:
+
+Subvertible Sentences
+---------------------
 
 .. _palindromics-definition-2-2-3:
 
@@ -751,6 +713,8 @@ TODO
     .. math::
 
         \zeta \in \cancel{J} \equiv ((\Omega_\zeta \neq \varepsilon) \land (\omega_\zeta \neq \varepsilon))
+
+    A Sentence is called *Subvertible* if it belongs to the class :math:`\cancel{J}`
 
 **Example** The following table lists some Subvertible Sentences in :math:`L_\text{english}`
 
@@ -782,40 +746,58 @@ TODO
 
 ∎
 
-.. ..................................................................................................
+.. note::
 
-.. topic:: Theorem 2.1.15 
+    As the previous example demonstrates, Invertible and Subvertible Sentences form a pair of overlapping sets. In other words, all Sentences can be classified according to one of the following cases,
+
+    - Invertible and Subvertible: :math:`J \cap \cancel{J}` 
+    - Invertible and Not Subvertible: :math:`J \cap \cancel{J}^{c}`
+    - Not Invertible and Subvertible: :math:`J^{c} \cap \cancel{J}`
+    - Not Invertible and Not Subvertible: :math:`J^{c} \cap \cancel{J}^{c}`
+
+    As example of a :math:`ᚠ \in J_{\text{english}} \cap \cancel{J}^{c}_{\text{english}`,
 
     .. math::
 
-        J \subset \cancel{J}
+        ᚠ = \text{emit naps} 
 
-**Proof** Let :math:`\zeta \in J`. Let :math:`n = Lambda(\zeta)` and :math:`m = l(\zeta)`. Then, by :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`, for all :math:`i \in N_n`,`
+    .. math::
+
+        ᚠ^{-1} = \text{span time}
+
+    But,
+
+    .. math::
+
+        \Omega_{ᚠ} = \varepsilon
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+
+.. _palindromics-theorem-2-2-8:
+
+.. topic:: Theorem 2.2.8
+
+    All Invertible Sentences do not contain a Reflective Word if and only if the intersection of Invertible and Subvertible Sentences is null.
+
+    .. math::
+
+        \forall \zeta \in J: (\nexist \alpha \in R: \alpha \subset_s \zeta) \equiv (\cancel{J} \cap J = \varnothing)
+
+**Proof** Let :math:`\zeta \in K`. Let :math:`n = Lambda(\zeta)` and :math:`m = l(\zeta)`. Then, by :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`, for all :math:`i \in N_n`,`
 
 .. math::
 
     {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}
 
-.. CASE I: Word Length Even
+(:math:`\rightarrow`) Assume :math:`\forall \alpha \in R: \neg(\alpha \subset_s \zeta)`.
 
-:underline:`Case I`: :math:`n = 2i`
+TODO 
 
-.. CASE I.I: Word Length Even, String Length Even
+(:math:`\leftarrow`) Assume :math:`(J \cap \cancel{J} \neq \varnothing)`
 
-:underline:`Case I.I`: :math:`m = 2j`
+TODO
 
-.. CASE I.II: Word Length Even, String Length Odd
-
-:underline:`Case I.II`: :math:`m = 2j + 1`
-
-.. CASE II: Word Length Odd
-
-:underline:`Case II` :math:`n = 2i + 1`
-
-.. CASE II.I: Word Length Odd, String Length Even
-
-:underline:`Case II.I`: :math:`m = 2j`
-
-.. CASE II.II: Word Length Odd, String Length Odd
-
-:underline:`Case II.II`: :math:`m = 2j + 1`
+.. 

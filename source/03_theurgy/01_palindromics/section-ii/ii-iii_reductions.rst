@@ -256,15 +256,9 @@ Thus equivalence is established. Summarizing and generalizing,
 
 ∎
 
-.. warning::
-    
-    The next theorem is quantified over the :math:`\mathbb{S}`, **not** :math:`S`.
-
-.. .................................................................................
-
-TODO
-
-.. .................................................................................
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
 
 .. _palindromics-theorem-2-3-4:
 
@@ -274,9 +268,9 @@ TODO
 
     .. math::
 
-        \forall s \in \mathbb{S}: (\varsigma(s))^{-1} = \varsigma(s^{-1})
+        \forall s \in S: (\varsigma(s))^{-1} = \varsigma(s^{-1})
 
-**Proof** Let :math:`s \in \mathbb{S}`. The proof proceeds by induction on the number of Delimiters in :math:`s`.
+**Proof** Let :math:`s \in S`. The proof proceeds by induction on the number of Delimiters in :math:`s`.
 
 .. BASIS 
 

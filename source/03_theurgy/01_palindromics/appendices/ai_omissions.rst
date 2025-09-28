@@ -211,3 +211,49 @@ Section II.I
 **Proof** Follows immediately from :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>` by the law of contraposition.
 
 ∎
+
+.. _palindromics-omitted-proofs-section-ii-iv:
+
+-------------
+Section II.IV
+-------------
+
+
+.. topic:: Theorem 2.4.x
+
+    All Perfect Palindromes are Invertible and Subvertible.
+
+    .. math::
+
+        K \subseteq (J \cap \cancel{J})
+
+**Proof** Follow directly from :ref:`Theorem 2-4-1 <palindromics-theorem-2-4-1>`,
+
+.. math::
+
+    \zeta \in J
+
+By :ref:`Theorem 2.4.8 <palindromics-theorem-2-4-8>`,
+
+.. math::
+
+    \zeta \in \cancel{J}
+
+Thus,
+
+.. math::
+
+    \zeta \in J \land \zeta \in \cancel{J}
+
+But this is exactly the definition of set intersections. Therefore, 
+
+.. math::
+
+    \zeta \in K \implies (\zeta \in J \cap \cancel{J})
+
+But this is exactly the definition of subsets,
+
+.. math::
+
+    K \subseteq (J \cap \cancel{J})
+    

@@ -636,10 +636,6 @@ Thus, the induction holds. Summarizing and generalizing,
 
 The formal system under construction assumes the process of Canonization precedes the formation of Language. Empty Characters possess no semantic content, and therefore must be exlcuded from the domain before Language is possible. This will be explicitly formalized in the :ref:`Canonization Axiom <palindromics-axiom-vi>`.
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
-
 **Example** Let :math:`s = \mathfrak{a}\varepsilon` and :math:`t = \mathfrak{b}`. 
 
 By :ref:`Canonization <palindromics-definition-1-2-6>`,
@@ -717,16 +713,13 @@ String Inversion
 
 .. topic:: Definition 1.2.8: String Inversion
 
-    Let :math:`s, t \in \mathbb{S}`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}`, if the following conditions hold,
+    Let :math:`s, t \in S`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}`, if the following conditions hold,
 
     - :math:`l(s) = l(t) = n`
-    - :math:`\forall i \in N: t[i] = s[n - i + 1]`
+    - :math:`\forall i \in N_n: t[i] = s[n - i + 1]`
 
-.. important::
-
-    Inversion is defined on the domain of *canonical* Strings. 
     
-**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2-8>`,
+**Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The Inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
 .. math::
 
@@ -756,9 +749,9 @@ Concatenating the results,
 
     .. math::
 
-        \forall s \in \mathbb{S}: (s^{-1})^{-1} = s
+        \forall s \in S: (s^{-1})^{-1} = s
 
-**Proof** Let :math:`s \in \mathbb{S}`. Let :math:`t = s^{-1}`. Let :math:`n = l(s)`. From :ref:`String Inversion <palindromics-definition-1-2-8>`,
+**Proof** Let :math:`s \in S`. Let :math:`t = s^{-1}`. Let :math:`n = l(s)`. From :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
 .. math:: 
 
@@ -800,7 +793,7 @@ Therefore,
 
 .. math:: 
 
-    \forall s \in \mathbb{S}: (s^{-1})^{-1} = s
+    \forall s \in S: (s^{-1})^{-1} = s
 
 ∎
 
@@ -808,13 +801,13 @@ Therefore,
 
 .. topic:: Theorem 1.2.10
 
-    The inverse of a concatenation of two String is the concatenation of their inverses in the reversed order.
+    The Inverse of a Concatenation of two Strings is the Concatenation of their Inverses in the reversed order.
 
     .. math::
 
-        \forall s,t \in \mathbb{S}: (st)^{-1} = (t^{-1})(s^{-1})
+        \forall s,t \in S: (st)^{-1} = (t^{-1})(s^{-1})
 
-**Proof** Let :math:`s,t \in \mathbb{S}`. Let :math:`u = st`. Let :math:`m = l(s)` and :math:`n = l(t)`. Let :math:`u = st`. By :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`,
+**Proof** Let :math:`s,t \in S`. Let :math:`u = st`. Let :math:`m = l(s)` and :math:`n = l(t)`. Let :math:`u = st`. By :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>`,
 
 .. math::
 
@@ -950,7 +943,7 @@ In both cases, the theorem is proved. Summarizing and generalizing,
 
 .. topic:: Theorem 1.2.11
 
-    a String :math:`s` contains another a String :math:`s` if and only if the inverse of :math:`s` contains the inverse of :math:`t`.
+    A String :math:`s` contains another a String :math:`s` if and only if the inverse of :math:`s` contains the inverse of :math:`t`.
 
     .. math::
 
@@ -985,3 +978,19 @@ Therefore,
     \forall s,t \in S: t \subset_s s \equiv t^{-1} \subset_s s^{-1}
 
 ∎
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+.. THEOREM
+
+.. All Inverses are Canonical.
+
+.. \forall s \in S: s^{-1} \in mathbb{S}
+
+.. THEOREM
+
+.. The Canon is closed over Inversion
+
+.. \forall s \in \mathbb{S}: s^{-1} \in \mathbb{S}

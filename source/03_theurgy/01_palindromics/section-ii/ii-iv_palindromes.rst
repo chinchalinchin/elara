@@ -64,6 +64,12 @@ Therefore, :math:`ᚠ_3 \notin P`
 Aspect
 ------
 
+.. _palindromics-perfect-palindromes:
+
+-------------------
+Perfect Palindromes 
+-------------------
+
 .. _palindromics-definition-2-4-2:
 
 .. topic:: Definition 2.4.2: Perfect Palindromes
@@ -110,7 +116,7 @@ But this is exactly the definition of a subset. Therefore,
 
 .. note::
 
-    :ref:`Theroem 2.4.2 <palindromics-theorem-2-4-2>` and :ref:`Theorem 2.4.3 <palindromics-theorem-2-4-3>` follow directly from :ref:`Theorem 2.4.1 <palindromics-theorem-2-4-1>` and :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>` and :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`.
+    :ref:`Theroem 2.4.2 <palindromics-theorem-2-4-2>` through :ref:`Theorem 2.4.4 <palindromics-theorem-2-4-3>` follow directly from :ref:`Theorem 2.4.1 <palindromics-theorem-2-4-1>` and :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>` through :ref:`Theorem 1.4.12 <palindromics-theorem-1-4-11>`.
 
 .. _palindromics-theorem-2-4-2:
 
@@ -135,6 +141,16 @@ But this is exactly the definition of a subset. Therefore,
 .. _palindromics-theorem-2-4-4:
 
 .. topic:: Theorem 2.4.4
+
+    .. math::
+
+        \forall \zeta \in K: \Lambda(\zeta) = \Lambda(\zeta^{-1})
+
+◼︎
+
+.. _palindromics-theorem-2-4-5:
+
+.. topic:: Theorem 2.4.5
 
     Perfect Palindromes are Palindromes.
 
@@ -174,11 +190,11 @@ But this is exactly the definition of subsets,
 
 ◼︎
 
-.. _palindromics-theorem-2-4-5:
+.. _palindromics-theorem-2-4-6:
 
-.. topic:: Theorem 2.4.5
+.. topic:: Theorem 2.4.6
 
-    The Pivot Character of all Perfect Palindromes is non-Empty.
+    All Perfect Palindromes have a non-Empty Pivot Character.
     
     .. math::
 
@@ -194,17 +210,171 @@ By :ref:`definition of a Perfect Palindrome <palindromics-definition-2-4-2>`, :m
 
 ◼
 
+.. _palindromics-theorem-2-4-7:
+
+.. topic:: Theorem 2.4.7
+
+    All Perfect Palindromes have a non-Empty Pivot Word
+
+    .. math::
+
+        \forall \zeta \in K: \Omega_{\zeta} \neq \varepsilon
+
+**Proof** Let :math:`\zeta \in K` and :math:`n = \Lambda(\zeta)`. 
+
+By :ref:`definition of String Inversion <palindromics-definition-1-2-8>`,
+
+.. math::
+
+    l(\zeta) = l(\zeta^{-1}) \quad \text{ (1) }
+
+By :ref:`Theorem 2.4.3 <palindromics-theorem-2-4-3>`,
+
+.. math::
+
+    {\zeta}^{-1}[[i]] = (\zeta[[n - i + 1]])^{-1} \quad \text{ (2) }
+
+By :ref:`Theorem 1.4.12 <palindromics-theorem-1-4-12>` and :math:`K \subseteq J` (by :ref:`Theorem 2.4.1 <palindromics-theorem-2-4-1>`),
+
+.. math::
+
+    \Lambda(\zeta) = \Lambda(\zeta^{-1}) \quad \text{ (3) }
+
+.. CASE I 
+
+:underline:`Case I`: :math:`n = 2i` for some :math:`i \in \mathbb{N}`.
+
+By the :ref:`definition of Pivot Words <palindromics-definition-2-2-2>`,
+
+.. math::
+
+    \overrightarrow{\Omega_{\zeta}} = \zeta[[\frac{n}{2}]]
+
+.. math::
+
+    \overleftarrow{\Omega_{\zeta}} = \zeta[[\frac{n + 2}{2}]]
+
+By (2),
+
+.. math::
+
+    (\zeta[[\frac{n}{2}]])^{-1} = \zeta^{-1}[[\frac{n + 2}{2}]]
+
+Therefore,
+
+.. math::
+
+    \overleftarrow{\Omega_{\zeta}} =  (\zeta^{-1}[[\frac{n}{2}]])^{-1}
+
+But since :math:`\zeta \in K` and :math:`\zeta = \zeta^{-1}` by :ref:`definition of Perfect Palindromes <palindromics-definition-2-4-2>`,
+
+.. math::
+
+    \overleftarrow{\Omega_{\zeta}} = (\zeta[[\frac{n}{2}]])^{-1} = (\overrightarrow(\Omega_{\zeta}))^{-1}
+
+Therefore, by :ref:`definition of Pivot Words <palindromics-definition-2-2-2>`,
+
+.. math::
+
+    \Omega_{\zeta} \neq \varepsilon
+
+.. CASE II 
+
+:underline:`Case II`: :math:`n = 2i + 1` for some :math:`i \in \mathbb{N}`
+
+By the :ref:`definition of Pivot Words <palindromics-definition-2-2-2>`,
+
+.. math::
+
+    \overleftarrow{\Omega_{\zeta}} = \zeta[[\frac{n + 1}{2}]]
+
+.. math::
+
+    \overrightarrow{\Omega_{\zeta}} = \zeta[[\frac{n + 1}{2}]]
+
+By (2),
+
+.. math::
+
+    (\zeta[[\frac{n + 1}{2}]])^{-1} = \zeta^{-1}[[n - \frac{n + 1}{2} + 1]] = \zeta{-1}[[\frac{n+1}{2}]]
+
+But :math:`\zeta = \zeta^{-1}` by assumption. Therefore,
+
+.. math::
+
+    (\overrightarrow{\Omega_{\zeta}})^{-1} =(\zeta[[\frac{n + 1}{2}]])^{-1} = \zeta[[\frac{n+1}{2}]] = \overleftarrow{\Omega_{\zeta}}
+
+Therefore, by :ref:`definition of Pivot Words <palindromics-definition-2-2-2>`,
+
+.. math::
+
+    \Omega_{\zeta} \neq \varepsilon
+
+Summarizing and generalizing, 
+
+.. math::
+
+    \forall \zeta \in K: \Omega_{\zeta} \neq \varepsilon
+
+◼
+
+.. _palindromics-theorem-2-4-8:
+
+.. topic:: Theorem 2.4.8
+
+    All Perfect Palindromes are Subvertible.
+
+    .. math::
+
+        K \subseteq \cancel{J}
+
+**Proof** Let :math:`\zeta \in K`. Then, by :ref:`Theorem 2.4.7 <palindromics-theorem-2-4-7>` and :ref:`Theorem 2.4.8 <palindromics-theorem-2-4-8>`,
+
+.. math::
+
+    \omega_{\zeta} \neq \varepsilon
+
+.. math::
+
+    \Omega_{\zeta} \neq \varepsilon
+
+Therefore, by :ref:`definition of Subvertible Sentences <palindromics-definition-2-2-3>`,
+
+.. math::
+
+    \zeta \in \cancel{J}
+
+Thus, :math:`\zeta \in K \imples \zeta \in J`. But this is exactly the definition of a subset,
+
+.. math::
+
+    K \subseteq \cancel{J}
+
+◼
+
+.. note::
+
+    It follows directly from :ref:`Theorem 2.4.1 <palindromics-theorem-2-4-1>` and :ref:`Theorem 2.4.8 <palindromics-theorem-2-4-8>` that all Perfect Palindromes are Invertible and Subvertible.
+
+    .. math::
+
+        K \subseteq (J \cap \cancel{J})
+
+.. _palindromics-imperfect-palindromes:
+
+---------------------
+Imperfect Palindromes
+---------------------
+
 .. _palindromics-definition-2-4-3:
 
 .. topic:: Definition 2.4.3: Imperfect Palindromes
 
     TODO 
 
-.. .................................................................................
-
-TODO
-
-.. .................................................................................
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
 
 .. _palindromics-parity:
 
@@ -226,3 +396,35 @@ Parity
     .. math::
 
         \zeta \in P_{+} \equiv (\zeta \in P) \land (\exists n \in \mathbb{N}: l(\zeta) = 2i)
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+.. _palindromics-theorem-2-4-x:
+
+.. topic:: Theorem 2.4.x
+
+    The Pivot Word of all Even Perfect Palindromes is Reflective. 
+
+    .. math::
+    
+        \forall \zeta \in (K \cap P_{-}): \Omega_{\zeta} \in R
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................
+
+.. _palindromics-theorem-2-4-x+1:
+
+.. topic:: Theorem 2.4.x+1
+
+    The Pivot Character of all Odd Perfect Palindromes is a Delimiter
+
+    .. math::
+
+        \forall \zeta \in (K \cap P_{+}): \omega_{\zeta} = \sigma
+
+.. ..............................................................................
+.. ................................. TODO .......................................
+.. ..............................................................................

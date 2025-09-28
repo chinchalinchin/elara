@@ -229,9 +229,9 @@ This ability to switch between the formal expression :math:`\Delta(s) = n` and t
 
     .. math::
     
-        \forall s \in \mathbb{S}: \Delta(s) = \Delta(s^{-1})
+        \forall s \in S: \Delta(s) = \Delta(s^{-1})
 
-**Proof** Let :math:`s, t \in \mathbb{S}` such that :math:`t = s^{-1}`. Let :math:`n = l(s)`. By :ref:`String Inversion <palindromics-definition-1-2-8>`, 
+**Proof** Let :math:`s, t \in S` such that :math:`t = s^{-1}`. Let :math:`n = l(s)`. By :ref:`String Inversion <palindromics-definition-1-2-8>`, 
 
 .. math::
 
@@ -245,7 +245,7 @@ Therefore, since inversion does not insert or delete Characters, i.e. the number
 
 .. math::
 
-    \forall s,t \in \mathbb{S}: \Delta(s) = \Delta(s^{-1})
+    \forall s,t \in S: \Delta(s) = \Delta(s^{-1})
 
 ∎
 
@@ -299,13 +299,13 @@ The next theorem establishes an important property that will be essential in the
 
 .. topic:: Theorem 2.1.5
 
-    If a Canonical String is equal to its own Inverse and has an odd Delimiter Count, then its central Character is a Delimiter. 
+    If a String is equal to its own Inverse and has an odd Delimiter Count, then its central Character is a Delimiter. 
 
     .. math::
 
-        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n +1 ) \land (s = s^{-1})) \implies s[\frac{l(s)+1}{2}] = \sigma
+        \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n +1 ) \land (s = s^{-1})) \implies s[\frac{l(s)+1}{2}] = \sigma
 
-**Proof** Let :math:`s,t \in \mathbb{S}` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
+**Proof** Let :math:`s,t \in S` such that :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}` and :math:`t = s^{-1}`. Let :math:`m = l(s)`. Let :math:`P` be the set of Delimiter indices in :math:`s`,
 
 .. math::
 
@@ -335,7 +335,7 @@ Therefore, the Character at :math:`j` in :math:`s` must be a Delimiter. Summariz
 
 .. math::
 
-    \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n +1 ) \land (s = s^{-1})) \implies s[\frac{l(s)+1}{2}] = \sigma
+    \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n +1 ) \land (s = s^{-1})) \implies s[\frac{l(s)+1}{2}] = \sigma
 
 ∎
 
@@ -347,13 +347,13 @@ Therefore, the Character at :math:`j` in :math:`s` must be a Delimiter. Summariz
 
 .. topic:: Theorem 2.1.6 
 
-    If a Canonical String is equal to its own Inverse and has an odd number of Delimiters, then its String Length must be odd.
+    If a String is equal to its own Inverse and has an odd number of Delimiters, then its String Length must be odd.
 
     .. math::
 
-        \forall s \in \mathbb{S}: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\exists i \in N_{l(s)}: l(s) = 2i - 1)
+        \forall s \in S: ((\exists n \in \mathbb{N}: \Delta(s) = 2n + 1) \land (s = s^{-1})) \implies (\exists i \in N_{l(s)}: l(s) = 2i - 1)
 
-**Proof** Let :math:`s \in \mathbb{S}`. Assume :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}`. Assume :math:`s = s^{-1}`. By :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`,
+**Proof** Let :math:`s \in S`. Assume :math:`\Delta(s) = 2n + 1` for some :math:`n \in \mathbb{N}`. Assume :math:`s = s^{-1}`. By :ref:`Theorem 2.1.5 <palindromics-theorem-2-1-5>`,
 
 .. math::
 
