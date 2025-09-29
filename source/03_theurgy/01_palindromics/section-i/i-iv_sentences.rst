@@ -579,7 +579,7 @@ Classes
 
 .. note::
 
-    Invertible Words are sometimes called *semiordinalps* in other fields of study. However, the term "*semiordinalip*" will be given a more precise and formal explication with the introducion and :ref:`definition of Subvertible Sentences <palindromics-2-2-3>` in the next section.
+    Invertible Words are sometimes called *semiordinalps* in other fields of study. However, the term "*semiordinalip*" will be given a more precise and formal explication with the introducion and :ref:`definition of Subvertible Sentences <palindromics-definition-2-2-3>` in the next section.
 
 .. _palindromics-theorem-1-4-9:
 
@@ -945,7 +945,7 @@ From which follows,
 
     2 < i \leq n
 
-Therefore, :math:`s[i-1:]` is defined. By the Induction clause :ref:`Right Partial Strings <palindromics-definition-1-4-4>`,
+Therefore, :math:`s[i-1:]` is defined. By the Induction clause of :ref:`Right Partial Strings <palindromics-definition-1-4-4>`,
 
 .. math::
 
@@ -965,6 +965,8 @@ The first term on the RHS is :math:`l(s) - i + 1` by inductive hypothesis,
     
 Rewriting to make the induction obvious,
 
+.. math::
+
     l(s[i-1:]) = l(s) -  (i - 1) + 1
 
 The induction is established. Summarizing and generalizing,
@@ -975,9 +977,33 @@ The induction is established. Summarizing and generalizing,
 
 ∎
 
+.. note::
+
+    The proofs of :ref:`Theorem 1.4.15 <palindromics-theorem-1-4-15>` and :ref:`Theorem 1.4.16 <palindromics-theorem-1-4-16>` are similar to the proofs of :ref:`Theorem 1.4.13 <palindromics-theorem-1-4-13>` and :ref:`Theorem 1.4.14`. The proofs are omitted and can be found in :ref:`Appendix I.II, Omitted Proofs<palindromics-omitted-proofs-i-iv>`.
+
 .. _palindromics-theorem-1-4-15:
 
 .. topic:: Theorem 1.4.15
+
+    .. math::
+
+        \forall s \in S: s[:l(s)] = s 
+
+∎
+
+.. _palindromics-theorem-1-4-16:
+
+.. topic:: Theorem 1.4.16
+
+    .. math::
+
+        \forall s \in S: s[1:] = s
+
+∎
+
+.. _palindromics-theorem-1-4-17:
+
+.. topic:: Theorem 1.4.17
 
     The Concatenation of a Left Partial String with its Right Partial String is the String. 
 
@@ -986,6 +1012,34 @@ The induction is established. Summarizing and generalizing,
         \forall s \in S: \forall i \in N_{l(s) - 1}: s = (s[:i])(s[i+1:])
 
 **Proof** Let :math:`s \in S` with :math:`n = l(s)`. 
+
+If :math:`n = 1`, then :math:`s[i+1:]` is undefined, so the proof proceeds by induction on String Length, starting at :math:`l(s) = 2`.
+
+:underline:`Basis`: :math:`n = 2`. Then, by :ref:`definition of Character Indices <palindromics-definition-1-2-3>`, 
+
+.. math::
+    
+    s = (s[1])(s[2])
+    
+By :ref:`definition of Partial Strings <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    s[:1] = s[1]
+
+.. math::
+
+    s[2:] = s[2]
+
+Thus, 
+
+.. math::
+
+    s = (s[:1])(s[2:])
+
+:underline:`Induction`: Assume for all :math:`i` and all :math:`s \in S`, :math:`s = (s[:i])(s[i+1:])` for some fixed :math:`l(s) = m`,
+
+Let :math:`t \in S` such that :math:`l(t) = m + 1`. 
 
 .. TODO: ........................................................................
 

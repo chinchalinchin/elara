@@ -177,8 +177,6 @@ Let :math:`w_1 = \varepsilon` and :math:`w_2 = s`. Then, :math:`s = {w_1}\vareps
 
 ∎
 
-.. _palindromics-theorem-1-2-x:
-
 .. topic:: Theorem 1.2.x
 
     If any Character :math:`\iota` is not contained in :math:`u` and :math:`iota` is not contained in :math:`v`, then :math:`\iota` is not contained in :math:`uv`.
@@ -191,6 +189,64 @@ Let :math:`w_1 = \varepsilon` and :math:`w_2 = s`. Then, :math:`s = {w_1}\vareps
 
 ∎
 
+.. _palindromics-omitted-proofs-i-iv:
+
+------------
+Section I.IV 
+------------
+
+.. topic:: Theorem 1.4.15
+
+    .. math::
+
+        \forall s \in S: s[:l(s)] = s 
+
+**Proof** Let :math:`s \in S`. Let :math:`n = l(s)`. Let :math:`i \in N_n`. The proof proceeds by induction on :math:`i`.
+
+.. BASIS 
+
+:underline:`Basis`: :math:`i = 1`
+
+By :ref:`definition of Left Partial Strings <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    s[:1] = s[i]
+
+.. TODO: ........................................................................
+
+.. INDUCTION
+
+:underline:`Induction`:
+
+.. TODO: ........................................................................
+
+.. topic:: Theorem 1.4.16
+    
+    .. math::
+
+        \forall s \in S: s[1:] = s
+
+
+**Proof** Let :math:`s \in S`. Let :math:`n = l(s)`. Consider :math:`s[i:]` with :math:`i \in N_n`. Let 
+
+.. math::
+    
+    j = n - i + 1
+    
+Then :math:`j \in N_n`, since :math:`i = 1 \implies j = n` and :math:`i = n \implies j = 1`. The proof proceeds by induction on :math:`j`.
+
+.. BASIS
+
+:underline:`Basis`
+
+.. TODO: ........................................................................
+
+.. INDUCTION
+
+:underline:`Induction`
+
+.. TODO: ........................................................................
 
 .. _palindromics-omitted-proofs-section-ii-i:
 
