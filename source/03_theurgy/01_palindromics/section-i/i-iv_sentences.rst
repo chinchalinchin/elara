@@ -577,6 +577,10 @@ Classes
 
     A Sentence that belongs to :math:`J` will be referred to as "*invertible*".
 
+.. note::
+
+    Invertible Words are sometimes called *semiordinalps* in other fields of study. However, the term "*semiordinalip*" will be given a more precise and formal explication with the introducion and :ref:`definition of Subvertible Sentences <palindromics-2-2-3>` in the next section.
+
 .. _palindromics-theorem-1-4-9:
 
 .. topic:: Theorem 1.4.9
