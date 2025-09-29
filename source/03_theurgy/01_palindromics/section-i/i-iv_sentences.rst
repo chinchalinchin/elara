@@ -979,7 +979,7 @@ The induction is established. Summarizing and generalizing,
 
 .. note::
 
-    The proofs of :ref:`Theorem 1.4.15 <palindromics-theorem-1-4-15>` and :ref:`Theorem 1.4.16 <palindromics-theorem-1-4-16>` are similar to the proofs of :ref:`Theorem 1.4.13 <palindromics-theorem-1-4-13>` and :ref:`Theorem 1.4.14`. The proofs are omitted and can be found in :ref:`Appendix I.II, Omitted Proofs<palindromics-omitted-proofs-i-iv>`.
+    The proofs of :ref:`Theorem 1.4.15 <palindromics-theorem-1-4-15>` and :ref:`Theorem 1.4.16 <palindromics-theorem-1-4-16>` are similar to the proofs of :ref:`Theorem 1.4.13 <palindromics-theorem-1-4-13>` and :ref:`Theorem 1.4.14 <palindromics-theorem-1-4-14>`. The proofs are omitted and can be found in :ref:`Appendix I.II, Omitted Proofs<palindromics-omitted-proofs-i-iv>`.
 
 .. _palindromics-theorem-1-4-15:
 
