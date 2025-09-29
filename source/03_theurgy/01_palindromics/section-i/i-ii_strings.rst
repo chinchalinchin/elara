@@ -1,4 +1,3 @@
-
 .. _palindromics-section-i-ii:
 
 Section I.II: Strings
@@ -86,7 +85,7 @@ Concatenation
     The result of concatenating any two Strings :math:`s` and :math:`t` is denoted :math:`st`. To make the operands clear, parenthesis will sometimes be used, e.g. :math:`s(t) = (s)t = st`. Concatenation is defined inductively through the following schema,
 
     1. Basis: 
-        - If :math:`s = \varepsilon`, :math:`st = ts = t`
+        - If :math:`s = \varepsilon`, :math:`st = t`
     2. Induction: 
         - If :math:`s \neq \varepsilon`, then write :math:`s = (\iota)u` where :math:`\iota \in \Sigma` and :math:`u \in S`. Then :math:`st = ({\iota}u)t = \iota(ut)`
 
@@ -498,6 +497,12 @@ And the induction is established. Summarizing and generalizing,
 
         s \in \mathbb{S} \equiv s = \pi(s)
 
+.. TODO: ........................................................................
+.. This is NOT true.
+.. The relation `s = \pi(s)` is always true, even for non-canonical strings, 
+..  \mathfrak{ab} = \varepsilon\mathfrak{ab}
+.. ...............................................................................
+
 **Proof** Let :math:`s \in S`.
 
 (:math:`\leftarrow`) Assume :math:`s = \pi(s)`. By the definition of :ref:`Canon <palindromics-definition-1-2-7>`, any String that is the result of Canonization belongs to the Canon, therefore :math:`s \in \mathbb{S}`.
@@ -680,25 +685,33 @@ So that,
 
     The previous example suggests an important, often overlooked fact, *Concatenation always yields a Canonical String*. In other words, Concatenation can be regarded as :math:`\mathfrak{F}: S \mapsto \mathbb{S}`
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
-
-.. Need to clarify thoughts on how to prove this, because it's impossible to define to a function that counts the number of Empty characters in a string. The clause :math:`\neg(\varepsilon \subset_s s)` would never be true, so recursion would never halt. 
-
+.. TODO: ........................................................................
+..
+.. Need to clarify thoughts on how to prove this, because it's impossible to define 
+.. to a function that counts the number of Empty characters in a string. The clause 
+.. :math:`\neg(\varepsilon \subset_s s)` would never be true, so recursion would never halt. 
+..
+.. Seems like it would be a metamathematical theorem, where alphabet is assigned with 
+.. :math:`\hat{varepsilon}` that represents the "name of the Empty Character". Then can count 
+.. the meta-character and induce a structural induction on the number of empty characters. 
+..
 .. THEOREM
-
+..
 .. All Concatenations are Canonical
-
+..
 .. \forall s,t \in S: st \in \mathbb{S}
-
+..
+.. NOT TRUE. From "if s = \varepsilon, then st=t", it does not follow that t \in \mathbb{S}. What if t = \varepsilon?
+..
 .. THEOREM
-
+..
 .. Concatenation is closed under the Canon
-
+..
 .. \forall s,t \in \mathbb{S}: st \in \mathbb{S}
-
+..
 .. Follows directly from previous theorem.
+..
+.. .................................................................................
 
 .. _palindromics-string-inversion:
 
@@ -979,18 +992,16 @@ Therefore,
 
 ∎
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
-
+.. TODO: ........................................................................
 .. THEOREM
-
+..
 .. All Inverses are Canonical.
-
+..
 .. \forall s \in S: s^{-1} \in mathbb{S}
-
+..
 .. THEOREM
-
+..
 .. The Canon is closed over Inversion
-
+..
 .. \forall s \in \mathbb{S}: s^{-1} \in \mathbb{S}
+.. ...............................................................................

@@ -134,7 +134,9 @@ Theorems
 24. :ref:`Theorem 1.4.10 <palindromics-theorem-1-4-10>`: :math:`\zeta \in J \implies \zeta[[i]] \in I`
 25. :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`: :math:`\zeta \in J \implies {\zeta}^{-1}[[i]] = (\zeta[[\Lambda(\zeta) - i + 1]])^{-1}`
 26. :ref:`Theorem 1.4.12 <palindromics-theorem-1-4-12>`: :math:`\zeta \in J \implies (\Lambda(\zeta) = \Lamdab(\zeta^{-1}))`
-27. :ref:`Theorem 1.4.13 <palindromics-theorem-1-4-13>`: :math:`s = (s[:i])(s[i+1:])`
+27. :ref:`Theorem 1.4.13 <palindromics-theorem-1-4-13>`: :math:`l(s[:i]) = i`
+28. :ref:`Theorem 1.4.14 <palindromics-theorem-1-4-14>`: :math:`l(s[i:]) = l(s) - i + 1`
+27. :ref:`Theorem 1.4.15 <palindromics-theorem-1-4-15>`: :math:`s = (s[:i])(s[i+1:])`
 28. :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`: :math:`\Lambda(\zeta) = \Delta(\zeta) + 1`
 29. :ref:`Theorem 2.1.2 <palindromics-theorem-2-1-1>`: :math:`\Delta(s) = \Delta(s^{-1})`
 30. :ref:`Theorem 2.1.3 <palindromics-theorem-2-1-3>`: :math:`l(\zeta) = \Delta(\zeta) + \sum_{i=1}^{\Lambda(\zeta)} l(\zeta[[i]])`
@@ -147,8 +149,8 @@ Theorems
 37. :ref:`Theorem 2.2.4 <palindromics-theorem-2-2-4>`: :math:`(s = s^{-1}) \implies (\omega_s \neq \varepsilon)`
 38. :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`: :math:`((\Delta(\zeta) = 2i) \land (\Omega_{\zeta} \neq \varepsilon)) \implies (\Omega_{\zeta} \in R)`
 39. :ref:`Theorem 2.2.6 <palindromics-theorem-2-2-6>`: :math:`((\Delta(\zeta) = 2i + 1) \land (\Omega_{\zeta} \neq \varepsilon)) \implies (\Omega_{\zeta} \in I)`
-40. :ref:`Theorem 2.2.7 <palindromics-theorem-2-2-7>`:
-41. :ref:`Theorem 2.2.8 <palindromics-theorem-2-2-8>`:
+40. :ref:`Theorem 2.2.7 <palindromics-theorem-2-2-7>`: IN PROGRESS
+41. :ref:`Theorem 2.2.8 <palindromics-theorem-2-2-8>`: IN PROGRESS
 42. :ref:`Theorem 2.3.1 <palindromics-theorem-2-3-1>`: :math:`\varsigma(st) = (\varsigma(s))(\varsigma(t))`
 43. :ref:`Theorem 2.3.2 <palindromics-theorem-2-3-2>`: :math:`\Delta(s) = 0 \equiv \varsigma(s) = s`
 44. :ref:`Theorem 2.3.4 <palindromics-theorem-2-3-4>`: :math:`(\varsigma(s))^{-1} = \varsigma(s^{-1})`

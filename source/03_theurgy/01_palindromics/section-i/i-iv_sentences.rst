@@ -807,7 +807,7 @@ Partial Sentences
     **Right Partial String** :math:`s[i:]`
 
     - Basis: :math:`s[n:] = s[n]`
-    - Induction: :math:`s[i:] = (s[i])s[n+1:]`
+    - Induction: :math:`s[i:] = (s[i])s[i+1:]`
 
     **Left Partial String** :math:`s[:i]`
 
@@ -842,7 +842,142 @@ Thus :math:`ᚠ[10:] = \text{he possibility of structure}`
 
 .. _palindromics-theorem-1-4-13:
 
-.. topic:: Theorem 1.4.13
+.. topic:: Theorem 1.4.13 
+
+    The String Length of a Left Partial Right :math:`s[:i]` is :math:`i`.
+
+    .. math::
+
+        \forall s \in S: \forall i \in N_{l(s)}: l(s[:i]) = i
+
+**Proof** Let :math:`s \in S`. Let :math:`n = l(s)`. Let :math:`i \in N_n`. The proof proceeds by induction on :math:`i`.
+
+.. BASIS 
+
+:underline:`Basis`: :math:`i = 1`
+
+By :ref:`definition of Left Partial Strings <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    s[:1] = s[i]
+
+Since :math:`s[i]` is a single Character, it follows from the :ref:`definition of String Length <palindromics-definition-1-2-2>`,
+
+.. math::
+
+    l(s[1]) = 1
+
+.. INDUCTION
+
+:underline:`Induction`: Assume for a fixed :math:`1 < i \leq n - 1`, :math:`l(s[:i]) = i`.
+
+Since :math:`i` is at most :math:`n - 1`, :math:`i + 1` is at most :math:`n`. Therefore, :math:`s[:i+1]` is defined. By the Induction clause :ref:`Left Partial Strings <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    s[:i+1] = s[:i]s[i+1]
+
+By :ref:`Thoerem 1.2.1 <palindromics-theorem-2-2-1>`,
+
+.. math::
+
+    l(s[:i+1]) = l(s[:i]) + l(s[i+1])
+
+The first term on the RHS is :math:`i` by inductive hypothesis and the second term is :math:`1` by :ref:`definition of String Length <palindromics-definition-1-2-2>`,
+
+.. math::
+
+    l(s[:i+1]) = i + 1
+
+The Induction is thus established for :math:`i \in N_n`. Summarizing and generalizing,
+
+.. math::
+
+    \forall S: \forall i \in N_n: l(s[:i]) = i
+
+∎
+
+.. _palindromics-theorem-1-4-14:
+
+.. topic:: Theorem 1.4.14
+
+    The String Length of a Right Partial String :math:`s[i:]` is equal :math:`l(s) - i + 1`
+    
+    .. math::
+
+        \forall s \in S: l(s[i:]) = l(s) - i + 1
+
+**Proof** Let :math:`s \in S`. Let :math:`n = l(s)`. Consider :math:`s[i:]` with :math:`i \in N_n`. Let 
+
+.. math::
+    
+    j = n - i + 1
+    
+Then :math:`j \in N_n`, since :math:`i = 1 \implies j = n` and :math:`i = n \implies j = 1`. The proof proceeds by induction on :math:`j`.
+ 
+.. BASIS
+
+:underline:`Basis`: :math:`j = 1`. Then :math:`i = n`. 
+
+.. math::
+
+    s[n:] = s[n]
+
+.. math::
+
+    l(s[n:]) = 1 = n - n + 1
+
+.. INDUCTION
+
+:underline:`Induction`: Assume for a fixed :math:`1 < j \leq n - 1`, :math:`l(s[i:]) = l(s) - i + 1`.
+
+Now, 
+
+.. math::
+
+
+    1 < j \leq n - 1 \equiv 1 < n - i + 1 \leq n - 1 
+
+From which follows,
+
+.. math::
+
+    2 < i \leq n
+
+Therefore, :math:`s[i-1:]` is defined. By the Induction clause :ref:`Right Partial Strings <palindromics-definition-1-4-4>`,
+
+.. math::
+
+    s[i-1:] = s[i-1]s[i:]
+
+Therefore, 
+
+.. math::
+
+    l(s[i-1:]) = l(s[i-1]) + l(s[i:]) = l(s[i:]) + 1
+
+The first term on the RHS is :math:`l(s) - i + 1` by inductive hypothesis,
+
+.. math::
+
+    l(s[i-1:]) = l(s) - i + 1 + 1 
+    
+Rewriting to make the induction obvious,
+
+    l(s[i-1:]) = l(s) -  (i - 1) + 1
+
+The induction is established. Summarizing and generalizing,
+
+.. math::
+
+    \forall s \in S: l(s[i:]) = l(s) - i + 1
+
+∎
+
+.. _palindromics-theorem-1-4-15:
+
+.. topic:: Theorem 1.4.15
 
     The Concatenation of a Left Partial String with its Right Partial String is the String. 
 
@@ -852,8 +987,6 @@ Thus :math:`ᚠ[10:] = \text{he possibility of structure}`
 
 **Proof** Let :math:`s \in S` with :math:`n = l(s)`. 
 
-.. .................................................................................
+.. TODO: ........................................................................
 
-TODO
-
-.. .................................................................................
+∎

@@ -15,7 +15,7 @@ The work often slips into treating the formal entities within the system as the 
 
 However, unlike the solution to these paradoxes which involve clearly separating metamathematics and mathematics into distinct domains, in the field of formal strings, there is an unavoidable circularity, since it is impossible for a string not to possess the property of representing itself. A string, as a concatenated series of character, is a representation of a concatenated series of characters. The very properties that imbue strings with their representative capacity are the subject of the formal theory of strings. Thus a string's representative capacity must be represented by its representative capacity, i.e. an sequence of characters "a", "b", "c" is represented as the literal sequence "abc".
 
-In an effort to avoid ambiguity and precisely elaborate , When a term in this section is denoted with a hat, e.g. :math:`\hat{\mathfrak{a}}`, this should be understood as the value assignment of the symbol. In other words, the hat serves the purpose of quotation marks.
+In an effort to avoid ambiguity and precisely elaborate, when a term in this section is denoted with a hat, e.g. :math:`\hat{\mathfrak{a}}`, this should be understood as the value assignment of the symbol.
 
 For instance, under the interpretation :math:`\hat{L} = L_{\text{English}}`, 
 
@@ -35,7 +35,7 @@ For instance, under the interpretation :math:`\hat{L} = L_{\text{English}}`,
 
     \hat{\varepsilon} = \varepsilon
 
-:math:`\hat{\varepsilon}` is the *name* of Empty Character within the formal system, i.e. the Empty Character. This may be replaced in all cases with :math:`\hat{\varepsilon}`. 
+:math:`\hat{\varepsilon}` is the *name* of the Empty Character within the formal system. It is **not** part of a value assignment. An interpretation involves the assignment of :math:`\Sigma`, :math:`L` and :math:`C`, but the Empty Character is an artifact of the system itself. This Character exists in the *abstract* space of :math:`S`, not within the *physical* space of :math:`\mathbb{S}` 
 
 .. .................................................................................
 
@@ -118,7 +118,7 @@ The expression
 
     (\mathfrak{ab}\varepsilon)^{-1}
 
-must therefore be attended to with careful scrutiny. The inversion is **not** being applied to the literal string ":math:`\mathfrak{ab}\varepsilon`", for this quantity is a formal entity, as evidenced by the presence of ":math:`\varepsilon`" within it. The inversion does not operate on *formal entities*, it operates on the *objects* to which they refer. Therefore, inversion does **not** apply to the domain ":math:`S`". 
+must therefore be attended to with careful scrutiny. The inversion is **not** being applied to the literal string ":math:`\mathfrak{ab}\varepsilon`", for this quantity is a formal entity, as evidenced by the presence of ":math:`\varepsilon`" within it. The inversion does not operate on *formal entities*, it operates on the *objects* to which they refer. Therefore, inversion, like concatenation, should be regarded as mapping from the domain ":math:`S`" to the domain ":math:`\mathbb{S}`. 
 
 The typical recursive definition of inversion, while rigorous and correct, obscures this fact by seeming to imply through its definition that it *operates* on strings containing empty characters. However, execution of the algorithm reveals it is hiding the removal of ":math:`\varepsilon`" through concatenation.
 
@@ -157,7 +157,11 @@ In :ref:`Section II.I <palindromics-section-ii-i>`, the delimiter count function
 
 The example after :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>` shows concatenation implicitly strips empty characters through recursive calls to its basis clause. This suggests concatenation should be viewed as a mapping :math:`S \mapsto \mathbb{S}`.
 
+.. .................................................................................
 
+TODO
+
+.. .................................................................................
 
 The set :math:`S - \mathbb{S}` is of great epistemological interest, because the question arises: *where does it come from*? If concatenation implicitly produces a canonical string through its application, how does one go about forming a string such as, 
 
@@ -188,6 +192,12 @@ Where concatenation from the right follows immediately from the definition of co
 .. math::
 
     (\mathfrak{a})(\varepsilon)
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
 
 .. [#1] Or :math:`\varepsilon\mathfrak{ab}`, or :math:`\mathfrak{ab}\varepsilon\varepsilon`, etc.? 
 

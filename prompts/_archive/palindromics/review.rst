@@ -7,3 +7,5 @@
 .. Please do not render a judgement until you've seen the entire paper. Focus on consistency, logical errors and clarity until the last section is presented. 
 
 .. Again, to reiterate, this is a draft and once I get up to a point where I am actively working, I may pause the presentation of the paper to ask for help.
+
+.. In addition, you will encounter many TODOs within the document. Do your best to provide suggestions for these areas.

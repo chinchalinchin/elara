@@ -256,10 +256,6 @@ Thus equivalence is established. Summarizing and generalizing,
 
 ∎
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
-
 .. _palindromics-theorem-2-3-4:
 
 .. topic:: Theorem 2.3.4
@@ -485,20 +481,18 @@ Summarizing and generalizing,
 
 ◼︎
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
-
+.. TODO: ........................................................................
+..
 .. Need to clarify concatenation as a \mathfrak{F}: S \mapsto \mathbb{S} before attempting this.
-
+..
 .. THEOREM
-
+..
 .. All Reductions are Canonical
-
+..
 .. \forall s \in S: \varsigma(s) \in \mathbb{S}
-
+..
 .. THEOREM
-
+..
 .. The Canon is closed under Reduction.
-
+..
 .. \forall s \in \mathbb{S}: \varsigma(s) \in \mathbb{S}

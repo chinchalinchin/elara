@@ -762,11 +762,6 @@ Thus, :math:`ᚠ_1 \in (\cancel{J} \cap J)`.
 
 ∎
 
-.. ..............................................................................
-.. ................................. TODO .......................................
-.. ..............................................................................
-
-
 .. _palindromics-theorem-2-2-7:
 
 .. topic:: Theorem 2.2.7
@@ -777,6 +772,7 @@ Thus, :math:`ᚠ_1 \in (\cancel{J} \cap J)`.
 
         \forall \zeta \in (\cancel{J} \cap J) : {\Omega_{\zeta}}^{-1} = \Omega_{\zeta^{-1}}
 
+.. TODO: ........................................................................
 
 **Proof** Let :math:`\zeta \in J` with :math:`m = \Lambda(\zeta)`. 
 
@@ -788,7 +784,6 @@ By :ref:`Theorem 1.4.11 <palindromics-theorem-1-4-11>`,
 
     {\zeta}^{-1}[[i]] = (\zeta[[m - i + 1]])^{-1}
 
-By 
 .. TODO: need to establish Pivot Word is non-Empoty.
 
 .. CASE I
@@ -813,7 +808,7 @@ The Left Pivot Index, :math:`\frac{m}{2}`,
 
 By :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`, :math:`Delta(\zeta)` is odd.
 
-TODO
+.. IN PROGRESS
 
 :underline:`Case II`: :math:`2i + 1`
 
@@ -827,14 +822,17 @@ Since :math:`m` is odd, there must be an inverse index which is equal to its ori
 
 By :ref:`Theorem 2.1.1 <palindromics-theorem-2-1-1>`, :math:`Delta(\zeta)` is even. 
 
-TODO 
+.. IN PROGRESS
 
 .. The next line only follows if it is established Pivot Word is non-empty. 
 
 By :ref:`Theorem 2.2.5 <palindromics-theorem-2-2-5>`, :math:`\Omega_{\zeta} \in R`.
 
-TODO
+.. IN PROGRESS
 
+.. TODO: ........................................................................
+..
+.. Not sure about this one. I think it is true, but might need rephrased.
 
 .. _palindromics-theorem-2-2-8:
 
@@ -854,10 +852,8 @@ TODO
 
 (:math:`\rightarrow`) Assume :math:`\forall \alpha \in R: \neg(\alpha \subset_s \zeta)`.
 
-TODO 
+.. IN PROGRESS
 
 (:math:`\leftarrow`) Assume :math:`(J \cap \cancel{J} \neq \varnothing)`
 
-TODO
-
-.. 
+.. IN PROGRESS
