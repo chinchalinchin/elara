@@ -1,3 +1,4 @@
+
 .. This document is formatted in RestructuredText (RST). It is a draft of a work. Technically, it is the third draft. The previous two drafts were dramatically different. This version has had its definitions refactored to lean on recursion, which has produced cleaner results. In other words, during the course of the presentation, I may pause the presentation to ask you various questions and dive into the subject deeper.
 
 .. The subsection (or subsections) of each section will be provided in separate prompts in sequential order, to allow you to focus on a section at a time.

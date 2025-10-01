@@ -45,7 +45,7 @@ Constants
 
 .. warning::
 
-    It is **incorrect** to treat the empty quotation marks "" as the English "*Empty Character*". Empty Characters **do not exist** in Language.
+    It is **incorrect** to treat the empty quotation marks "" as the English "*Empty Character*". Empty Characters **do not exist** in Language. In other words, :math:`\varepsilon` does not get assigned a value under an interpretation (model), unless :math:`\varepsilon` itself is being treated as a symbol. In such cases, :math:`\hat{\varepsilon}` will be used to refer to the *physical inscription* of the Character assigned to represent the Empty Character.
 
 
 .. _palindromics-delimiter-character:
@@ -57,7 +57,7 @@ Constants
     
     The *Delimiter Character* (or just *the Delimiter*) is a Character used to separate the occurrence of Words in a String. This Character will play a central role in the development of palindromic structures. 
     
-    In English, the Delimiter corresponds to an space " ".
+    Under the assignment :math:`L = L_{\text{english}}`, the Delimiter corresponds to an space " ".
 
 .. _palindromics-terms:
 

@@ -1305,3 +1305,52 @@ Since :math:`\Lambda(\zeta^{-1}) = \Lambda(\zeta)`, i.e. their Pivot Word Indice
 .. math::
 
     \Omega_{\zeta^{-1}} = {\Omega_{\zeta}}^{-1}
+
+
+
+
+In an effort to avoid ambiguity and precisely elaborate, when a term in this section is denoted with a hat, e.g. :math:`\hat{\mathfrak{a}}`, this should be understood as the value assignment of the symbol.
+
+For instance, under the interpretation :math:`\hat{L} = L_{\text{English}}`, 
+
+.. math::
+
+    \hat{\mathfrak{a}} = \text{a} 
+
+.. math::
+
+    \hat{\mathfrak{b}} = \text{b}
+
+.. math::
+
+    ...
+
+.. math::
+
+    \hat{\varepsilon} = \varepsilon
+
+:math:`\hat{\varepsilon}` is the *name* of the Empty Character within the formal system. It is **not** part of a value assignment. An interpretation involves the assignment of :math:`\Sigma`, :math:`L` and :math:`C`, but the Empty Character is an artifact of the system itself. This Character exists in the *abstract* space of :math:`S`, not within the *physical* space of :math:`\mathbb{S}` 
+
+
+
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
+
+In a perfectly rigorous development of a formal theory, no symbol can be introduced without being taken as primitive, or as a definition formed from simpler primitives. Formal string theory takes as its primitive symbol the Empty Character, :math:`\hat{\varepsilon}`, and as its primitive relation is equality, :math:`\hat{s} = \hat{t}`. The latter is a logical relation with two arguments that gives meaning to a class of expressions.
+
+Concatenation then uses equality to extends its meaning over a wider class of expressions. It gives meaning to the three place relation, :math:`\hat{s} = \hat{t}\hat{u}` for all possible values of :math:`t` and :math:`u` in the domain.
+
+
+There is a necessary order of axioms and definitions in order a formal theory of Strings. The ultimate goal is to give meaning to a wide array of formal expressions, such as :math:`\varsigma((s^{-1})(t))`. To achieve this goal, one starts with expressions 
+
+.. .................................................................................
+
+TODO
+
+.. .................................................................................
+
+From this point of view, one would like to view the equation :math:`s = t` as simply stating "abc = abc". However, if this were the case, not much would be gained by formalizing string theory. 

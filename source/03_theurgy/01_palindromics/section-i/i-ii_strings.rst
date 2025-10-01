@@ -5,7 +5,7 @@ Section I.II: Strings
 
 .. note::
 
-    The formal development of this section largely agrees with standard treatments found in the theory of strings and concatenation. Many of the proofs are relegated to the Appendix when they do not diverge significantly from prior established results. Proofs of standard theorems that involve new formalizations will be highlighted.
+    The formal development of this section largely agrees with standard treatments found in the theory of strings and concatenation.
 
 .. _palindromics-axiom-0:
 
@@ -73,6 +73,7 @@ In order to construct more complicated Strings through the sequencing of Charact
         2. :math:`\forall s, t \in S: s = t \leftrightarrow t = s`
         3. :math:`\forall s, t, u \in S: ((s = t) \land (t = u)) \implies (s = u)`
 
+    
 .. _palindromics-concatenation:
 
 Concatenation
@@ -82,12 +83,19 @@ Concatenation
 
 .. topic:: Definition 1.2.1: Concatenation
 
-    The result of concatenating any two Strings :math:`s` and :math:`t` is denoted :math:`st`. To make the operands clear, parenthesis will sometimes be used, e.g. :math:`s(t) = (s)t = st`. Concatenation is defined inductively through the following schema,
+    The result of concatenating any two Strings :math:`s` and :math:`t` is denoted :math:`st`. To make the operands clear, parenthesis will sometimes be used, e.g. :math:`s(t) = (s)t = (s)(t) = st`. 
+    
+    Concatenation is defined inductively through the following schema,
 
     1. Basis: 
         - If :math:`s = \varepsilon`, :math:`st = t`
     2. Induction: 
-        - If :math:`s \neq \varepsilon`, then write :math:`s = (\iota)u` where :math:`\iota \in \Sigma` and :math:`u \in S`. Then :math:`st = ({\iota}u)t = \iota(ut)`
+        - If :math:`s \neq \varepsilon`, then write :math:`s = {\iota}u` where :math:`\iota \in \Sigma_e` and :math:`u \in S`. Then :math:`st = ({\iota}u)t = \iota(ut)`
+
+    .. ALTERNATIVE
+
+    .. If s \in S and t = \varepsilon, st = s
+    .. If s \in S and t \in S, let s = (\iota)u where \iota \in \Sigma_e. Then, st = ({\iota}u)t = \iota(ut)
 
 .. note::
 
@@ -261,10 +269,77 @@ From this, it follows, :math:`s_1[2] = u_1[2] = u_2[2] = v_3 = \mathfrak{b}`.
         
         \forall s,t \in S: l(st) = l(s) + l(t)
 
-.. note::
+**Proof** The proof proceeds by induction on :math:`t`.
 
-    The proof of :ref:`Theorem 1.2.1 <palindromics-theorem-1-2-1>` by induction is presented in :ref:`Appendix I, Omitted Proofs <palindromics-appendix-i-ii>`.
+:underline:`Basis`: Let :math:`t = \varepsilon` and :math:`s \in S`. Consider :math:`st = s\varepsilon`.
 
+By the :ref:`basis clause of concatenation <palindromics-definition-1-2-1>`, :math:`s\varepsilon = s`. By the :ref:`basis clause of String Length <palindromics-definition-1-2-2>`, :math:`l(\varepsilon) = 0`. It follows from the basic laws of arithmetic,
+
+.. math::
+
+    l(s\varepsilon) = l(s)  = l(s) + 0 
+
+.. math::
+
+    = l(s) + l(\varepsilon) = l(s) + l(t)
+
+Therefore, the base case, :math:`l(st) = l(s) + l(t)`, holds.
+
+:underline:`Induction`: Let :math:`s, t \in S` and `u \in \Sigma_{e}`. Assume :math:`l(st) = l(s) + l(t)`. Let :math:`v = tu` and consider,
+
+.. math::
+
+    l(sv) = l(s(tu)) = l((st)u)
+
+If :math:`u = \varepsilon`, then applying the argument of the base case,
+
+.. math::
+
+    l(sv) = l((st)u) = l(st) + l(\varepsilon) 
+
+.. math::
+
+    = l(st) = l(s) + l(t)
+
+Where the last equality follows from the inductive hypothesis. Note :math:`t = t\varepsilon = tu = v` by the :ref:`basis clause of concatenation <palindromics-definition-1-2-1>`. From this, it follows the inductive step is established for :math:`u = \varepsilon`,
+
+.. math::
+
+    l(sv) = l(s) + l(v)
+
+If :math:`u \neq \varepsilon`, then it follows from the :ref:`induction clause of String Length <palindromics-definition-1-2-2>`,
+
+.. math::
+
+    l((st)u) = l(st) + 1 = l(s) + l(t) + 1 \quad \text{ (1) }
+
+Where the last equality follows from the inductive hypothesis. Consider the quantity :math:`l(tu)`. By the :ref:`induction clause of String Length <palindromics-definition-1-2-2>`,
+
+.. math::
+
+    l(tu) = l(t) + 1
+
+Adding :math:`l(s)` to both sides,
+
+.. math::
+
+    l(s) + l(tu) = l(s) + l(t) + 1 \quad \text{ (2) }
+
+Comparing the RHS of (1) and (2), it follows the LHS are equal,
+
+.. math::
+
+    l(stu) = l(s) + l(tu)
+
+Summarizing, if :math:`l(st) = l(s) + l(t)` and :math:`u \in \Sigma_{e}`, then :math:`l(stu) = l(s) + l(tu)`. Therefore, the inductive step is established. 
+
+Since the basis case and inductive step have both been established, it follows from the principle of finite induction,
+
+.. math::
+
+    \forall s,t \in S: l(st) = l(s) + l(t)
+
+∎
 .. _palindromics-containment:
 
 Containment
@@ -306,7 +381,9 @@ Containment
 
 ∎
 
-.. NOTE: had to insert these theorems. Everything needs renumbered around them.
+.. note::
+
+    See :ref:`Appendx I.II, Omitted Proofs <palindromics-appendix-i-ii>` for a constructionist proof of :ref:`Theorem 1.2.2 <palindromics-theorem-1-2-2>`.
 
 .. _palindromics-theorem-1-2-3:
 
@@ -498,9 +575,13 @@ And the induction is established. Summarizing and generalizing,
         s \in \mathbb{S} \equiv s = \pi(s)
 
 .. TODO: ........................................................................
-.. This is NOT true.
+.. This is NOT true, or atleast one needs be careful WHERE it is true!
 .. The relation `s = \pi(s)` is always true, even for non-canonical strings, 
 ..  \mathfrak{ab} = \varepsilon\mathfrak{ab}
+.. this is a problem of "syntactical" versus "logical" equality.
+.. this theorem is about *syntactical* equality, not *logical* equality.
+.. this should be a theorem *about* the formal system, not a theorem *in* the
+.. formal system, where the equality relation is between metamathematical objects.
 .. ...............................................................................
 
 **Proof** Let :math:`s \in S`.
@@ -720,18 +801,28 @@ String Inversion
 
 .. important::
     
-    This formal takes an extreme stance on String Inversion that deserves special note. See :ref:`palindromics-motivation` for more information.
+    See :ref:`palindromics-motivation` for a detailed epistemological explication of the proceedings.
+
+Two definitions of String Inversion will be given, a definition using induction and a definition using logical properties. It will be shown immediately these definitions are equivalent.
+
+.. _palindromics-definition-1-2-8-inductive:
+
+.. topic:: Definition 1.2.8: String Inversion (Inductive)
+
+    Let :math:`s, t \in S`. Let :math:`n \in \mathbb{N}`. The inverse of :math:`s`, denoted :math:`s^{-1}`, is defined inductively with the following schema,
+
+    - Basis: If :math:`s = \varepsilon`, then :math:`s^{-1} = \varepsilon`
+    - Induction: If :math:`s = (\iota)(t)` where :math:`\iota \in \Sigma` and :math:`t \in S`, then :math:`((\iota)(t))^{-1} = (t^{-1})(\iota)`
 
 .. _palindromics-definition-1-2-8:
 
-.. topic:: Definition 1.2.8: String Inversion
+.. topic:: Definition 1.2.8: String Inversion (Descriptive)
 
     Let :math:`s, t \in S`. Let :math:`n \in \mathbb{N}`. :math:`t` is called the inverse of :math:`s`, denoted :math:`s^{-1}`, if the following conditions hold,
 
     - :math:`l(s) = l(t) = n`
     - :math:`\forall i \in N_n: t[i] = s[n - i + 1]`
 
-    
 **Example** Let :math:`s_1 = \mathfrak{abc}`. Let :math:`s_2 = {s_1}^{-1}`. The Inverse can be constructed through its Character Indices by applying :ref:`String Inversion <palindromics-definition-1-2-8>`,
 
 .. math::
@@ -753,6 +844,16 @@ Concatenating the results,
     s_2 = {s_1}^{-1} = \mathfrak{cba}
 
 ∎
+
+.. TODO: ......................................................................................
+
+The equivalence of these definitions can be established through structural induction. Let :math:`t = s^{-1}`. 
+
+:underline:`Basis`: If :math:`l(s) = 1`, that is, if :math:`s \in \Sigma`, then :math:`l(t) = 1`. By the :ref:`Inductive definition of Inversion <palindromics-definition-1-2-8-inductive>`, :math:`t = s^{-1} = (s\varepsilon)^{-1} = (\varepsilon)^{-1}(s) = \varepsilon(s) = s`. 
+
+:underline:`Induction` Assume :math:`t = s^{-1}` for a fixed :math:`l(s) = n` such that :math:`\forall i \in N_n: t[i] = s[n - i + 1]` and :math:`l(t) = l(s)`. Consider :math:`u \in S` with :math:`l(u) = n + 1`. Then, :math:`u` can be written :math:`u = \iota(v)` for some :math:`\iota \in \Sigma` and :math:`v \in S` with :math:`l(v) = n`. Note :math:`s[1] = \iota`. By the :ref:`Inductive definition of Inversion <palindromics-definition-1-2-8-inductive>`, :math:`(\iota(v))^{-1} = (v^{-1})\iota`. Thus :math:`t` is a String that ends in :math:`\iota`, :math:`t[n+1] = \iota = s[1]`. 
+
+.. TODO: ......................................................................................
 
 .. _palindromics-theorem-1-2-9:
 

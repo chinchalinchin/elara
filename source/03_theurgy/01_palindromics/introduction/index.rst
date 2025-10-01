@@ -86,7 +86,7 @@ Definitions
 22. :ref:`Definition 2.3.1: σ-Reduction <palindromics-definition-2-3-1>`: :math:`\varsigma(s)`
 23. :ref:`Definition 2.4.1: Palindromes <palindromics-definition-2-4-1>`: :math:`\zeta \in P \equiv ((\varsigma(s)) = \varsigma(s)^{-1})`
 24. :ref:`Definition 2.4.2: Perfect Palindromes <palindromics-definition-2-4-2>`: :math:`\zeta \in K \equiv (\zeta = \zeta^{-1})`
-25. :ref:`Definition 2.4.3: Imperfect Palindromes <palindromics-definition-2-4-3>`
+25. :ref:`Definition 2.4.3: Imperfect Palindromes <palindromics-definition-2-4-3>`: 
 
 .. _palindromics-axioms:
 
@@ -114,7 +114,7 @@ Theorems
 4. :ref:`Theorem 1.2.4 <palindromics-theorem-1-2-4>`: :math:`\pi(\pi(s)) = \pi(s)`
 5. :ref:`Theorem 1.2.5 <palindromics-theorem-1-2-5>`: :math:`s \in \mathbb{S} \equiv \pi(s) = s`
 6. :ref:`Theorem 1.2.6 <palindromics-theorem-1-2-6>`: :math:`s,t \in \mathbb{S} \implies st \in \mathbb{S}`
-7. :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`: :math:`((l(s) = l(t)) \land (\forall i \in N_{l(t)}: s[i] = t[i])) \implies (s = t)`
+7. :ref:`Theorem 1.2.8 <palindromics-theorem-1-2-8>`: :math:`\forall s \in \mathbb{S}: ((l(s) = l(t)) \land (\forall i \in N_{l(t)}: s[i] = t[i])) \implies (s = t)`
 8. :ref:`Theorem 1.2.9 <palindromics-theorem-1-2-9>`: :math:`(s^{-1})^{-1} = s`
 9. :ref:`Theorem 1.2.10 <palindromics-theorem-1-2-10>`: :math:`(st)^{-1} = (t^{-1})(s^{-1})`
 10. :ref:`Theorem 1.2.11 <palindromics-theorem-1-2-11>`: :math:`u \subset_s v \equiv u^{-1} \subset_s v^{-1}`
