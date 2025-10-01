@@ -15,7 +15,7 @@ Concatenation is unique within the domain of mathematics. Formal logic, as a met
 
 In examining the work that follows, it is easy to slip into treating the formal entities within the system as the literal strings they represent. Often, one operates as if :math:`\mathfrak{a}` were both the symbolic representation of a linguistic unit and the linguistic unit being symbolized, i.e. the first letter of the English alphabet. In other words, it is easy to leave unappreciated the fact :math:`\mathfrak{a}` and the physical inscription *a* are materially different in their purpose and use. This imprecision in terminology is at the heart of classical antimonies like `Richard's Paradox <http://en.wikipedia.org/wiki/Richard%27s_paradox>`_ and `Berry's Paradox <https://en.wikipedia.org/wiki/Berry_paradox>`_. 
 
-However, unlike the solution to these paradoxes which involve clearly separating metamathematics and mathematics into distinct domains, in the field of formal strings, there is an unavoidable circularity, since it is impossible for a string not to possess the property of representing itself. A string, as a concatenated series of character, is a representation of a concatenated series of characters. The very properties that imbue strings with their representative capacity are the subject of the formal theory of strings. Thus a string's representative capacity must be represented by its representative capacity, i.e. an sequence of characters "a", "b", "c" is represented as the literal sequence "abc".
+However, unlike the solution to these paradoxes which involve clearly separating metamathematics and mathematics into distinct domains, in the field of formal strings, there is an unavoidable circularity, since it is impossible for a string not to possess the property of representing itself. A string, as a concatenated series of character, is a representation of a concatenated series of characters. The very properties that imbue strings with their representative capacity are the subject of the formal theory of strings. Thus a string's representative capacity must be represented by its representative capacity, i.e. a sequence of characters "a", "b", "c" is represented as the literal sequence "abc".
 
 This way of viewing strings is sufficient for developing an intuitive understanding of their algebraic properties, but it reaches its limit when confronted with expressions such as :math:`\varepsilon\mathfrak{a}` or :math:`\mathfrak{a}\varepsilon`. 
 
@@ -31,7 +31,7 @@ led him to rigorously elaborate a structural definition of logical sentences, in
 
 The symbol :math:`\mathfrak{a}` is the logical abstraction assigned to the physical entity *a* **within the formal system**. It is a metamathematical object. Expressions within which it occurs do not occur within the same language about which it is making assertions.
 
-For this reason :math:`\varepsilon\mathfrak{ab}` should not be treated as a literal string, no more than the arithmetical expression :math:`1 + 0` should be taken as the literal number which it represents, e.g. :math:`1`. Arithmetical expressions are logical abstractions of the numbers they represent; In Fregean terms, they are *references*, not *referents*. To borrow even more Fregean terminology, an expression like :math:`\varepsilon\mathfrak{ab}` conveys a different *sense* of the object denoted by :math:`\mathfrak{ab}`.
+For this reason :math:`\varepsilon\mathfrak{ab}` should not be treated as a literal string, no more than the arithmetical expression :math:`1 + 0` should be taken as the literal number which it represents, e.g. the object denoted by :math:`1`. Arithmetical expressions are logical abstractions of the numbers they represent; In Fregean terms, they are *references*, not *referents*. To borrow even more Fregean terminology, an expression like :math:`\varepsilon\mathfrak{ab}` conveys a different *sense* of the object denoted by :math:`\mathfrak{ab}`.
 
 :math:`\varepsilon` is not a literal string, unless one has interpretted :math:`\varepsilon` as non-empty. There are no literal strings to be found in natural language that are formed by sequencing an empty character with other characters, let alone a string composed of nothing but the empty character. The formal strings
 
@@ -69,7 +69,7 @@ This can be seen from another angle. From a logical perspective, inversion is fu
 
     ((\iota)t)^{R} = ((t)^{R})(\iota)
 
-Which illustrates that inversion is simply an instruction to concatenate its input in a certain order. The basis clause of concatenation, ":math:`s = {\varepsilon}{s}`", a standard definition, implicitly involves stripping as string of its empty characters, meaning once the output of concatenation has been assigned it no longer bares any ":math:`\varepsilon`", i.e. has property ":math:`\varepsilon`-free". It is this property that allows expressions such as ":math:`s = {\varepsilon}{s}`", for the right hand side is simply a *name* of the left hand side. [#4]_
+Which illustrates that inversion is simply an instruction to concatenate its input in a certain order. The basis clause of concatenation, :math:`s = {\varepsilon}{s}`, a standard definition, implicitly involves stripping a string of its empty characters (see :ref:`Example after Theorem 1.2.8 <palindromics-theorem-1-2-8>` for a more concrete example), meaning once the output of concatenation has been assigned it no longer bares any :math:`\varepsilon`, i.e. has property ":math:`\varepsilon`-free". It is this property that allows expressions such as :math:`s = {\varepsilon}{s}`, for the right hand side is simply a *name* of the left hand side. [#4]_
 
 The expression
 
@@ -77,17 +77,17 @@ The expression
 
     (\mathfrak{ab}\varepsilon)^{-1}
 
-must therefore be attended to with careful scrutiny. The inversion is **not** being applied to the literal string ":math:`\mathfrak{ab}\varepsilon`", for this quantity is a formal entity, as evidenced by the presence of ":math:`\varepsilon`" within it. The inversion does not operate on *formal entities*, it operates on the *objects* to which they refer. Therefore, inversion, like concatenation, should be regarded as mapping from the domain ":math:`S`" to the domain ":math:`\mathbb{S}`. 
+must therefore be attended to with careful scrutiny. The inversion is **not** being applied to the literal string :math:`\mathfrak{ab}\varepsilon`, for this quantity is a formal entity, as evidenced by the presence of :math:`\varepsilon` within it. The inversion does not operate on *formal entities*, it operates on the *objects* to which they refer. Therefore, inversion, like concatenation, should be regarded as mapping from the domain :math:`S` to the domain :math:`\mathbb{S}`. 
 
-The typical recursive definition of inversion, while rigorous and correct, obscures this fact by seeming to imply through its definition that it *operates* on strings containing empty characters. However, execution of the algorithm reveals it is hiding the removal of ":math:`\varepsilon`" through concatenation.
+The typical recursive definition of inversion, while rigorous and correct, obscures this fact by seeming to imply through its definition that it *operates* on strings containing empty characters. However, execution of the algorithm reveals it is hiding the removal of :math:`\varepsilon` through concatenation.
 
-Consider ":math:`\mathfrak{a}^{-1}`". By the induction hypothesis, it is required to express this string as a concatenation, :math:`s = ({a}{\varepsilon})`, so the definition may recursively call the basis clause to end its "function call". Indeed,
+Consider :math:`\mathfrak{a}^{-1}`. By the induction hypothesis, it is required to express this string as a concatenation, :math:`s = ({a}{\varepsilon})`, so the definition may recursively call the basis clause to end its "function call". Indeed,
 
 .. math::
 
     \mathfrak{a}^{-1} = (\mathfrak{a}\varepsilon)^{-1} = (\varepsilon^{-1})(\mathfrak{a})
 
-And the quantity ":math:`\varepsilon^{-1}`" ends the recursion by yielding ":math:`\varepsilon`", which is then concatenated into the result to yield, 
+And the quantity :math:`\varepsilon^{-1}` ends the recursion by yielding :math:`\varepsilon`, which is then concatenated into the result to yield, 
 
 .. math::
 
@@ -125,11 +125,11 @@ Where concatenation from the right follows immediately from the definition of co
 
     (\iota)(\varepsilon)
 
-The answer lies in regarding :math:`\varepsilon\iota` and similar formal entities as instances of strings that satisfy the formal model where the physical symbol :math:`\varepsilon` is assigned a non-empty character, call it :math:`\hat{\varepsilon}`, and each :math:`\mathfrak{a}_i` is assigned :math:`\hat{\mathfrak{a}_i}`. [#5]_ Then the equality that obtains :math:`\varepsilon\mathfrak{\iota} = \mathfrak{\iota}` becomes a structural property of the interpretation, i.e. canonically equal strings are equivalent to a class of strings that can be specified as *preserving order*, e.g.
+The answer lies in regarding :math:`\varepsilon\iota` and similar formal entities as instances of strings that satisfy the formal model where the physical symbol :math:`\varepsilon` is assigned a non-empty character, call it :math:`\hat{\varepsilon}`, and each :math:`\mathfrak{a}_i` is assigned :math:`\hat{\mathfrak{a}_i}`. [#5]_ Then the equality that obtains :math:`\varepsilon\hat{\iota} = \hat{\iota}` becomes a structural property of the interpretation, i.e. canonically equal strings are equivalent to a class of strings that can be specified as *preserving order*, e.g.
 
 .. math::
 
-    \hat{s} = \hat{mathfrak{a}_1}\hat{\varepsilon}\hat{\mathfrak{a}_2}
+    \hat{s} = \hat{\mathfrak{a}_1}\hat{\varepsilon}\hat{\mathfrak{a}_2}
 
 .. math:: 
 
@@ -143,16 +143,16 @@ In other words, the meta-metamathematical specification of :math:`S` is given by
 
     \varepsilon\mathfrak{a} = \mathfrak{a}
 
-Namely, :math:`\hat{\varepsilon}\hat{\mathfrak{a}_i}, \hat{\varepsilon}\hat{\varepsilon}\hat{mathfrak{a}_i}, ...`.
+Namely, :math:`\hat{\varepsilon}\hat{\mathfrak{a}_i}, \hat{\varepsilon}\hat{\varepsilon}\hat{\mathfrak{a}_i}, ...`.
 
 In fact, the structural properties that determine whether a meta-string belongs to the equivalence class are exactly the logical properties that determine its *canonical length* and *canonical character index*. 
 
 .. [#1] Or :math:`\varepsilon\mathfrak{ab}`, or :math:`\mathfrak{ab}\varepsilon\varepsilon`, etc.? 
 
-.. [#2] It should go without saying this is an artifact of the decimal representation of numbers. A different base would correspond to different addition rules, e.g. ":math:`5 + 5 = A`" in hexidecimal notation. However, the structural feature of ":math:`0`" exists in all bases, e.g. ":math:`\exists 0: x + 0 = x`" is true regardless of the physical and literal form of the algebraic abstraction ":math:`x`". This is roughly analogous to ":math:`\varepsilon`" and ":math:`\mathfrak{a}`"; the former represent a structural feature of concatenated sequences whereas the latter corresponds to a physical character within the alphabet, i.e. the "base" of the system of concatenation. Regardless of the language and alphabet, the logical structure of concatenated expressions requires a metamathematical term to play the role of identity, e.g. ":math:`\varepsilon`", whereas the characters, e.g. ":math:`\frak{a}`", are symbolic representations of physical entities.
+.. [#2] It should go without saying this is an artifact of the decimal representation of numbers. A different base would correspond to different addition rules, e.g. :math:`5 + 5 = A` in hexidecimal notation. However, the structural feature of :math:`0` exists in all bases, e.g. :math:`\exists 0: x + 0 = x` is true regardless of the physical and literal form of the algebraic abstraction :math:`x`. This is roughly analogous to :math:`\varepsilon` and :math:`\mathfrak{a}`; the former represent a structural feature of concatenated sequences whereas the latter corresponds to a physical character within the alphabet, i.e. the "base" of the system of concatenation. Regardless of the language and alphabet, the logical structure of concatenated expressions requires a metamathematical term to play the role of identity, e.g. :math:`\varepsilon`, whereas the characters, e.g. :math:`\frak{a}`, are symbolic representations of physical entities.
 
 .. [#3] One is tempted here to draw an analogy to the natural and real numbers. One never *perceives* the domain :math:`S`, only the inscribed elements of it image :math:`\mathbb{S}`, the set of canonical strings. In the same way, one never perceives the domain :math:`\mathbb{R}`, instead encountering numbers through physically distinct instances that are united by their being the same (or *possessing a common property*).  
 
-.. [#4] One should **not** conclude from this the left hand side is a literal string and this expression has the form of a definition, i.e. "*name = definition*". In fact, ":math:`s`" is also a *name*; it the *canonical* name of the string on the right hand-side. ":math:`s = {\varepsilon}{s}`" is an expression that identifies two different *names* (*references*) as pointing to the same *object* (*referent*).
+.. [#4] One should **not** conclude from this the left hand side is a literal string and this expression has the form of a definition, i.e. "*name = definition*". In fact, :math:`s` is also a *name*; it the *canonical* name of the string on the right hand-side. :math:`s = {\varepsilon}{s}` is an expression that identifies two different *names* (*references*) as pointing to the same *object* (*referent*).
 
 .. [#5] Under this interpretation, the expression :math:`\varepsilon\hat{\varepsilon}\mathfrak{a} = \hat{\varepsilon}\mathfrak{a}`, but no further. This reinforces the view that :math:`\varepsilon` is a *formal* entity. It *cannot* be assigned a value in an interpretation without thereby becoming non-empty. 
