@@ -16,7 +16,6 @@ Definition & Examples
 
     - Basis: 
         - If :math:`\neg(\sigma \subset_s s)`, then :math:`\Delta(s) = 0`
-        - If :math:`s = \varepsilon`, then :math:`\Delta(s) = 0`
     - Induction:
         - If :math:`s = (u)(\sigma)(v)` for any :math:`u,v \in S` where :math:`\neg(\sigma \subset_s u)`, :math:`\Delta(s) = \Delta(v) + 1`
 
@@ -88,7 +87,7 @@ Properties
     All of these properties follow from the :ref:`definition of Delimiter Counts <palindromics-definition-2-1-1>` and the indicated axioms, and they are quantified over their respective domains.
 
 1. From the definition itself: :math:`\Delta(\sigma) = 1`
-2. From the :ref:`Discovery Axiom <palindromics-axiom-iv>`: :math:`\Delta(\alpha) = 0`
+2. From the :ref:`Discovery Axiom <palindromics-axiom-vi>`: :math:`\Delta(\alpha) = 0`
 3. From the :ref:`definition of Canonization <palindromics-definition-1-2-6>`: :math:`\Delta(\pi(s)) = \Delta(s)`
 4. From the :ref:`definition of Containment <palindromics-definition-1-2-5>` :math:`\Delta(s) = 0 \equiv \neg(\sigma \subset_s s)`
 
@@ -133,7 +132,7 @@ The proof proceeds by induction on Word Length.
 
     \zeta = \zeta[[1]]
 
-Let :math:`m = l(\zeta[[1]])`. By the :ref:`Discovery Axiom <palindromics-axiom-v>`,
+Let :math:`m = l(\zeta[[1]])`. By the :ref:`Discovery Axiom <palindromics-axiom-vi>`,
 
 .. math::
 

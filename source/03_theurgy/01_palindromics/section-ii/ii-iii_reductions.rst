@@ -79,10 +79,10 @@ Properties
     All of these properties follow from the definition of :ref:`σ-Reduction <palindromics-definition-2-3-1>` and the indicated axiom or theorem, and they are all understood to be quantified over :math:`S`.
 
 1. From the :ref:`definition of String Length <palindromics-definition-1-2-2>`: :math:`l(\varsigma(\sigma)) = l(\varepsilon) = 0`
-2. From the :ref:`Discovery Axiom <palindromics-axiom-v>`: :math:`\varsigma(\alpha) = \alpha`
-3. From the :ref:`Discovery Axiom <palindromics-axiom-v>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`: :math:`l(\varsigma(\alpha)) = l(\alpha)`
+2. From the :ref:`Discovery Axiom <palindromics-axiom-vi>`: :math:`\varsigma(\alpha) = \alpha`
+3. From the :ref:`Discovery Axiom <palindromics-axiom-vi>` and the :ref:`definition of String Length <palindromics-definition-1-2-2>`: :math:`l(\varsigma(\alpha)) = l(\alpha)`
 4. From the :ref:`definition of String Length <palindromics-definition-1-2-2>`: :math:`l(\varsigma(s)) \leq l(s)`
-5. From the :ref:`definition of Concatenation <palindromics-definition-1-2-1>` and the :ref:`Closure Axiom <palindromics-axiom-iii>`: :math:`\varsigma(s) \in S`
+5. From the :ref:`definition of Concatenation <palindromics-definition-1-2-1>` and the :ref:`Closure Axiom <palindromics-axiom-iv>`: :math:`\varsigma(s) \in S`
 6. From the :ref:`definition of the Delimiter Count <palindromics-definition-2-1-1>`: :math:`\Delta(\varsigma(s)) = 0`
 
 .. _palindromics-reduction-theorems:

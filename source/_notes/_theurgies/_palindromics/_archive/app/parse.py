@@ -33,7 +33,8 @@ def _clean_corpus(language, min_length, max_length):
         cleaned_sentences = []
         for sentence in tokenized_sentences:
             cleaned_sentence = "".join(
-                c for c in sentence if c not in string.punctuation or c == ' '
+                c for c in sentence 
+                if c not in string.punctuation or c == ' '
             )
             cleaned_sentence = " ".join(cleaned_sentence.split()).lower()
             if min_length <= len(cleaned_sentence) <= max_length:
@@ -87,3 +88,5 @@ def words(length, language = CORPORA.ENGLISH):
           in brown.words() 
           if len(word) == length and word.isalpha() 
         ]
+    
+init()

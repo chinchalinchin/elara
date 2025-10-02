@@ -19,9 +19,9 @@ Or equivalently,
 
     L \subset S
 
-.. _palindromics-axiom-iv:
+.. _palindromics-axiom-v:
 
-.. topic:: Axiom IV: Measure
+.. topic:: Axiom V: Measure
 
     No Words have a String Length of 0.
 
@@ -29,9 +29,9 @@ Or equivalently,
 
         \forall \alpha \in L: l(\alpha) \neq 0
 
-.. _palindromics-axiom-v:
+.. _palindromics-axiom-vi:
 
-.. topic:: Axiom V: Discovery
+.. topic:: Axiom VI: Discovery
 
     No Character in a Word can be a Delimiter. 
 
@@ -39,9 +39,9 @@ Or equivalently,
 
        \forall \alpha \in L: \forall i \in N_{l(\alpha)}: \alpha[i] \neq \sigma
 
-.. _palindromics-axiom-vi:
+.. _palindromics-axiom-vii:
 
-.. topic:: Axiom VI: Canonization
+.. topic:: Axiom VII: Canonization
 
     All Words are canonical.
 
@@ -466,7 +466,7 @@ Then by the :ref:`definition of Limitations <palindromics-definition-1-3-5>`,
 
     s = \alpha_1
 
-By :ref:`Discovery Axiom <palindromics-axiom-v>`, 
+By :ref:`Discovery Axiom <palindromics-axiom-vi>`, 
 
 .. math::
 
@@ -508,7 +508,7 @@ But, by inductive hypothesis, the quantity :math:`\Pi_{j=1}^{i} \alpha_j` does n
     
     \Pi_{j=1}^{i} \alpha_j = (\Pi_{j=1}^{i-1} \alpha_j)(\sigma)(\alpha_i) 
     
-to show it must end in a Word. Therefore, by the :ref:`Discovery Axiom <palindromics-axiom-v>`, the quantity,
+to show it must end in a Word. Therefore, by the :ref:`Discovery Axiom <palindromics-axiom-vi>`, the quantity,
 
 .. math::
 

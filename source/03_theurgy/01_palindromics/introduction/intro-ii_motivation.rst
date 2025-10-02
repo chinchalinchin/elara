@@ -125,6 +125,8 @@ Where concatenation from the right follows immediately from the definition of co
 
     (\iota)(\varepsilon)
 
+Yet there is no way to take :math:`\varepsilon` into :math:`\varepsilon\varepsilon`. So, from whence do these strings originate?
+
 The answer lies in regarding :math:`\varepsilon\iota` and similar formal entities as instances of strings that satisfy the formal model where the physical symbol :math:`\varepsilon` is assigned a non-empty character, call it :math:`\hat{\varepsilon}`, and each :math:`\mathfrak{a}_i` is assigned :math:`\hat{\mathfrak{a}_i}`. [#5]_ Then the equality that obtains :math:`\varepsilon\hat{\iota} = \hat{\iota}` becomes a structural property of the interpretation, i.e. canonically equal strings are equivalent to a class of strings that can be specified as *preserving order*, e.g.
 
 .. math::
@@ -146,6 +148,8 @@ In other words, the meta-metamathematical specification of :math:`S` is given by
 Namely, :math:`\hat{\varepsilon}\hat{\mathfrak{a}_i}, \hat{\varepsilon}\hat{\varepsilon}\hat{\mathfrak{a}_i}, ...`.
 
 In fact, the structural properties that determine whether a meta-string belongs to the equivalence class are exactly the logical properties that determine its *canonical length* and *canonical character index*. 
+
+.. Wouldn't this mean \lvert S \rvert = \lvert \mathbb{S} \rvert? 
 
 .. [#1] Or :math:`\varepsilon\mathfrak{ab}`, or :math:`\mathfrak{ab}\varepsilon\varepsilon`, etc.? 
 

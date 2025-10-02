@@ -57,7 +57,7 @@ Word Length
 
 .. important::
 
-    The Induction clause of Word Length relies on the :ref:`Discovery Axiom <palindromics-axiom-v>` and the :ref:`Measureable Axiom <palindromics-axiom-iv>` to ensure for any Strings :math:`u \in L`, :math:`\neg(\sigma \subset_s u)` and :math:`u \neq \varepsilon`.
+    The Induction clause of Word Length relies on the :ref:`Discovery Axiom <palindromics-axiom-vi>` and the :ref:`Measureable Axiom <palindromics-axiom-v>` to ensure for any Strings :math:`u \in L`, :math:`\neg(\sigma \subset_s u)` and :math:`u \neq \varepsilon`.
 
 .. important::
 
@@ -381,7 +381,7 @@ The proof proceeds by induction on :math:`n`.
 
 :underline:`Basis`: Assume :math:`n = 1`. 
 
-Then, by the Basis clause of :ref:`Limitations <palindromics-definition-1-3-5>`, :math:`s = \alpha` for some :math:`\alpha \in L`. By the :ref:`Discovery Axiom <palindromics-axiom-v>`, :math:`\neg(\sigma \subset_s \alpha)`. 
+Then, by the Basis clause of :ref:`Limitations <palindromics-definition-1-3-5>`, :math:`s = \alpha` for some :math:`\alpha \in L`. By the :ref:`Discovery Axiom <palindromics-axiom-vi>`, :math:`\neg(\sigma \subset_s \alpha)`. 
 
 Consider :math:`u = (\alpha)(\sigma)(t)`. By the Basis clause of :ref:`Word Length <palindromics-definition-1-4-1>`,
 
@@ -534,7 +534,7 @@ Therefore, by :ref:`Theorem 1.4.5 <palindromics-theorem-1-4-5>`,
 
     \zeta = \Pi_{i=1}^{\Lambda(\zeta)} \zeta[[i]]
 
-By the definition of Sentences and :ref:`Canonization Axiom <palindromics-axiom-vi>`,
+By the definition of Sentences and :ref:`Canonization Axiom <palindromics-axiom-vii>`,
 
 .. math::
 
@@ -792,6 +792,11 @@ Summarizing and generalizing,
     \forall \zeta \in J: \Lambda(\zeta) = \Lambda(\zeta^{-1})
 
 ∎
+
+.. implies the existence of \zeta \in \bar{J} \equiv \forall i in N_{\Lambda(\zeta)}: \zeta^{[[i]] \in L
+.. i.e., a class of inverse sentences that do not necessarily belong to the corpus, but whose words belong to the language.
+.. e.g. smug dad stops sleep, peels spots dad 
+.. call them "transvertible"
 
 .. _palindromics-partial-sentences:
 

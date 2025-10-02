@@ -70,8 +70,11 @@ Terms
 
     **Strings**
         - :math:`s_1, s_2, s_3, ...`
+        - :math:`t_1, t_2, t_3, ...`
+        - :math:`u_1, u_2, u_3, ...`
+        - :math:`v_1, v_2, v_3, ...`
 
-    The lowercase English letter :math:`s` with subscripts will be used to represent Strings.
+    The lowercase English letter :math:`s, t, u, v, w` with subscripts will be used to represent literal Strings.
 
     **String Variables**
         - :math:`s, t, u, v, w`
@@ -86,7 +89,7 @@ Terms
         - :math:`\mathfrak{a}, \mathfrak{b},  \mathfrak{c}, ...`
         - :math:`\mathfrak{a}_1, \mathfrak{a}_2, \mathfrak{a}_3, ...`
     
-    Lowercase Fraktur letters represent Characters. Subscripts will occasionally be used in conjunction with Fraktur letters to denote Characters at specific positions within Strings. 
+    Lowercase Fraktur letters represent literal Characters. Subscripts will occasionally be used in conjunction with Fraktur letters to denote Characters at specific positions within Strings. 
 
     **Character Variables**
         - :math:`\iota, \nu, \omicron, \rho`
@@ -96,7 +99,7 @@ Terms
 
 .. important::
 
-    The exact meaning of these symbols should be attended with care. :math:`\mathfrak{a}, \mathfrak{b},  \mathfrak{c}, ...` represent Characters of the Alphabet and thus are all unique, each one representing a different linguistic element. When Character symbols are used with subscripts, :math:`\mathfrak{a}_1, \mathfrak{a}_2, \mathfrak{a}_3, ...`, they are being referenced in their capacity to be ordered within a String. With this notation, it is not necessarily implied :math:`\mathfrak{a}_1` and :math:`\mathfrak{a}_2` are unequal Character-wise, but that they are differentiated only by their relative order in a String.
+    The exact meaning of these symbols should be attended with care. :math:`\mathfrak{a}, \mathfrak{b},  \mathfrak{c}, ...` represent *literal* Characters of the Alphabet and thus are all unique, each one representing a different linguistic element. When Character symbols are used with subscripts, :math:`\mathfrak{a}_1, \mathfrak{a}_2, \mathfrak{a}_3, ...`, they are being referenced in their capacity to be ordered within a String. With this notation, it is not necessarily implied :math:`\mathfrak{a}_1` and :math:`\mathfrak{a}_2` are unequal Character-wise, but that they are differentiated only by their relative order in a String.
 
     Likewise, when Character Variables are used with subscripts, it is meant to refer to the capacity of a Character Variable to be indeterminate at a *determinate position* within a String. 
     
