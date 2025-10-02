@@ -105,11 +105,15 @@ The notion of Concatenation is immediately followed by several assumptions that 
 
 .. topic:: Axiom III: Decomposition 
 
-    A String is non-Empty if and only if a String can be decomposed into a Concatenation of a single Character and a String.
+    A String is non-Empty if and only if a String can be decomposed into a Concatenation of a single Character and a String, in either direction.
 
     .. math::
 
         \forall s \in S: (s \neq \varepsilon) \implies (\exists \iota \in \Sigma_e, u \in S: s = (\iota)(u) )
+
+    .. math::
+
+        \forall s \in S: (s \neq \varepsilon) \implies (\exists \iota \in \Sigma_e, u \in S: s = (u)(\iota) ) 
 
 .. note::
 
@@ -118,6 +122,10 @@ The notion of Concatenation is immediately followed by several assumptions that 
 .. note::
 
     In the event :math:`\Sigma = \varnothing`, nothing exists in the domain to satisfy the inequality :math:`s \neq \varepsilon`, so the :ref:`Decomposition Axiom <palindromics-axiom-iii>` is vacuously true.
+
+.. note::
+
+    The :math:`\iota` in the :ref:`Decomposition Axiom <palindromics-axiom-iii>` is always satisfied by atleast :math:`\varepsilon`.
 
 The direction of implication :ref:`Decomposition Axiom <palindromics-axiom-iii>` cannot be extended into an equivalence without admitting a class of expressions, such as :math:`s = \varepsilon\varepsilon`, :math:`s = \varepsilon\varepsilon`, etc., as possible solutions to the inequality :math:`s \neq \varepsilon`, which would invalidate the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`.
 
@@ -133,9 +141,7 @@ In other words, the unidirectional implication of the :ref:`Decomposition Axiom 
 
         \forall s,t \in S: st \in S
 
-.. note::
-
-    The :ref:`Closure Axiom <palindromics-axiom-iv>` is well-known enough that it is does not require much in the way of explanation. Suffice to say, this axiom ensures Concatenation will never yield a non-String object. 
+Closure and Decomposition form different poles of a categorical equivalence. The :ref:`Closure Axiom <palindromics-axiom-iv>` ensures all Concatenations are Strings (possibly Empty), whereas the :ref:`Decomposition Axiom <palindromics-axiom-iii>` ensure all Strings are Concatenations (of possibly Empty Characters).
 
 .. warning::
 
@@ -214,7 +220,7 @@ Keep in mind, in the preceding example, the equation :math:`\mathfrak{bcd} = (\m
 
     "*bcd*"" is the concatenation of *b* and *cd*
 
-It is only incidental the name "*bcd*" in this translation is the literal concatenation of the names "*cd*" and "*b*". It is not logically necessary to represent a sequence with the literal terms that compose it, but such a decision would be akin to a numeral system where the number one is represented with ``||``, the number two is represented with ``|``, the number three with ``||||`` and so on. Formally, such constructions can be accomplished, but nothing would be gained by doing this.
+It is only incidental the name "*bcd*" in this translation is the literal concatenation of the names "*b*" and "*cd*". It is not logically necessary to represent a sequence with the literal terms that compose it, but such a decision would be akin to a numeral system where the number one is represented with ``||``, the number two is represented with ``|``, the number three with ``||||`` and so on. Formally, such constructions can be accomplished, but nothing but confusion would be gained by doing this.
 
 .. note::
 
@@ -236,8 +242,8 @@ The length of a String is defined as its number of non-Empty Characters.
     1. Basis: 
         - If :math:`s = \varepsilon`, :math:`l(s) = 0`
     2. Induction:  
-        - If :math:`s \neq \varepsilon` and :math:`s = \nu(u)` with :math:`\nu \in \Sigma` and :math:`u \in S`, then :math:`l(s) = l(u) + 1`
-        - If :math:`s \neq \varepsilon` and :math:`s = \nu(u)` with :math:`\nu = \varepsilon` and :math:`u \in S`, then :math:`l(s) = l(u)`
+        - If :math:`s \neq \varepsilon` and :math:`s = (\nu)(u)` with :math:`\nu \in \Sigma` and :math:`u \in S`, then :math:`l(s) = l(u) + 1`
+        - If :math:`s \neq \varepsilon` and :math:`s = (\nu)(u)` with :math:`\nu = \varepsilon` and :math:`u \in S`, then :math:`l(s) = l(u)`
 
 .. note::
 
@@ -297,7 +303,7 @@ Putting the recursion together,
 
 ∎
 
-The definition of String length allows an important shorthand to be defined. This notation introduces nothing new into the system, but significantly improves the readability of proofs.
+The definition of :ref:`String Length <palindromics-definition-1-2-2>` allows an important shorthand to be defined. This notation introduces nothing new into the system, but significantly improves the readability of proofs.
 
 .. _palindromics-definition-1-2-3:
 
@@ -306,11 +312,11 @@ The definition of String length allows an important shorthand to be defined. Thi
     Let :math:`s \in S`. Let :math:`i \in \mathbb{N}` such that :math:`1 \leq i \leq l(s)`. The Character at index :math:`i` in :math:`s`, denoted :math:`s[i]`, is defined inductively using the schema, 
 
     1. Basis:
-        - If :math:`s = \varepsilon`, :math:`s[i]` is not defined.
-    2. Induction: Let :math:`s = uv` where :math:`v \in \Sigma_{e}`.
-        - If :math:`i = l(s)` and :math:`v \neq \varepsilon`, :math:`s[i] = v`
-        - If :math:`i \neq l(s)` or :math:`v = \varepsilon`, then :math:`s[i] = u[i]`
-
+        - If :math:`s = \varepsilon`, :math:`s[i]` is undefined.
+    2. Induction: If :math:`s \neq \varepsilon`, then :math:`s = u(\iota)` for some :math:`\iota \in \Sigma_e` and :math:`u \in S`.
+        - If :math:`i = l(s)` and :math:`\iota \neq \varepsilon`, :math:`s[1] = \iota`
+        - If :math:`i \neq l(s)` or :math:`\iota = \varepsilon`, then :math:`s[i] = u[i]`
+    
 .. note::
 
     The notation :math:`s[i]` is borrowed directly from string slicing in computer science.
@@ -363,7 +369,7 @@ Therefore, the base case, :math:`l(st) = l(s) + l(t)`, holds.
 
 :underline:`Induction`: Assume :math:`l(su) = l(s) + l(u)` for any :math:`s \in S` and any :math:`u \in S` of some fixed length.  
 
-Let `\iota \in \Sigma_{e}`. Let :math:`t = u\iota` and consider,
+Let :math:`\iota \in \Sigma_{e}`. Let :math:`t = u\iota` and consider,
 
 .. math::
 

@@ -5,6 +5,8 @@ Motivation
 
 .. IN PROGRESS
 
+.. Author's Note: Despite the didactic presentation, do not take this as gospel. This is merely a repository of my thoughts, not of all which are guaranteed to be coherent, much less consistent.
+
 .. note::
 
     The contents of this section are more for the author's benefit than the reader's. The nature of the formal system being constructed has forced the author to confront some of the basic notions that underlie the modern theory of strings and analyze them from a philsophical point of view. This section represents the author's attempt to provide an epistemological justification for the assumptions adopted within the system.
