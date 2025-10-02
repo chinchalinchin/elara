@@ -15,8 +15,7 @@ Section I.II: Strings
 
         \exists! s \in S: s = \varepsilon 
 
-
-This assumption is crucial to establish the existence of an element in the domain that acts as the identity element for formal expressions. All of the recursive definitions that follow will implicitly rely on the :ref:`Empty Axiom <palindromics-axiom-0>`.
+This assumption is crucial to establish the existence of an element in the domain that acts as the identity element for formal expressions and allows recursions to halt. All of the recursive definitions that follow will implicitly rely on the :ref:`Empty Axiom <palindromics-axiom-0>`.
 
 If a Characters is non-Empty, it belong to the Alphabet,
 
@@ -24,9 +23,7 @@ If a Characters is non-Empty, it belong to the Alphabet,
 
     \Sigma = \{ \mathfrak{a}, \mathfrak{b}, \mathfrak{c}, ... \}
 
-.. important::
-
-    The Delimiter belongs to the Alphabet.
+In particular, the Delimiter belongs to the Alphabet.
 
     .. math::
 
@@ -56,20 +53,6 @@ A String is regarded as a linguistic artifact or inscription that is defined ent
 
 In order to construct more complicated Strings through the sequencing of Characters, the operation of Concatenation must be defined, but defining Concatenation requires a well-defined notion of *equality*. 
 
-.. important::
-
-    The order of dependence in the logical notions that underlie formal string theory is nearly unavoidable. In this hierarchy,
-
-    :math:`\text{Equality} \to \text{Concatenation} \to \text{Length}`
-
-    Equality must be assumed to give meaning to the Concatenated expression, :math:`s = ut`. Next, concatenation must be defined to give meaning to :math:`l(s)`. 
-    
-    There are feasible constructions that bend the order of dependence slightly, but they tend lack the simplicity of the proposed order. For example, it is possible to build a formal theory of strings by assuming a primitive notion of *character equality* and then defining string equality in terms of string length and character equality, but systems built on these artifices tend to require prosaic constructions that obscure the subject matter with unnecessary formal machinery. 
-
-.. note::
-
-    The following axiom is technically a conjunction of axioms.
-
 .. _palindromics-axiom-ii:
 
 .. topic:: Axiom II: Equality
@@ -80,7 +63,20 @@ In order to construct more complicated Strings through the sequencing of Charact
         2. :math:`\forall s, t \in S: s = t \leftrightarrow t = s`
         3. :math:`\forall s, t, u \in S: ((s = t) \land (t = u)) \implies (s = u)`
 
+.. note::
+
+    The :ref:`Equality Axiom <palindromics-axiom-ii>` is technically a conjunction of axioms.
+
+.. important::
+
+    The order of dependence in the logical notions that underlie formal string theory is nearly unavoidable. In this hierarchy,
+
+    :math:`\text{Equality} \to \text{Concatenation} \to \text{Length}`
+
+    Equality must be assumed to give meaning to the Concatenated expression, :math:`s = ut`. Next, concatenation must be defined to give meaning to :math:`l(s)`. 
     
+    There are feasible constructions that bend the order of dependence slightly, but they tend to lack the simplicity of the proposed order. For example, it is possible to build a formal theory of strings by assuming a primitive notion of *character equality* and then defining string equality in terms of string length and character equality, but systems built on these artifices tend to require prosaic constructions that obscure the subject matter with unnecessary formal machinery. 
+
 .. _palindromics-concatenation:
 
 Concatenation
@@ -90,7 +86,7 @@ Concatenation
 
 .. topic:: Definition 1.2.1: Concatenation
 
-    The Concatenation of any two Strings :math:`s` and :math:`t` is denoted :math:`st`. Concatenation is defined inductively through the following schema,
+    The Concatenation of any Strings :math:`s, t \in S` and is denoted :math:`st`. Concatenation is defined inductively through the following schema,
 
     1. Basis: 
         - If :math:`s = \varepsilon`, :math:`st = t`
@@ -113,22 +109,20 @@ The notion of Concatenation is immediately followed by several assumptions that 
 
     .. math::
 
-        \forall s \in S: (s \neq \varepsilon) \implies (\exists \iota \in \Sigma_e, u \in S: s = {\iota}{u} )
+        \forall s \in S: (s \neq \varepsilon) \implies (\exists \iota \in \Sigma_e, u \in S: s = (\iota)(u) )
 
 .. note::
 
     The :ref:`Decomposition Axiom <palindromics-axiom-iii>` is implicitly used by the Induction clause of :ref:`Concatenation <palindromics-definition-1-2-1>` to ensure the decomposition :math:`s = {\iota}{u}` exists.
 
-.. important::
+.. note::
 
-    :math:`\Sigma_e \neq \varnothing`, even if :math:`\Sigma = \varnothing`, for the Total Alphabet will always contain :math:`\varepsilon`, which by the :ref:`Empty Axiom <palindromics-axiom-0>` is guaranteed to exist. This ensures :ref:`Decomposition Axiom <palindromics-axiom-iii>` is never vacuously true.
+    In the event :math:`\Sigma = \varnothing`, nothing exists in the domain to satisfy the inequality :math:`s \neq \varepsilon`, so the :ref:`Decomposition Axiom <palindromics-axiom-iii>` is vacuously true.
 
-.. important::
+The direction of implication :ref:`Decomposition Axiom <palindromics-axiom-iii>` cannot be extended into an equivalence without admitting a class of expressions, such as :math:`s = \varepsilon\varepsilon`, :math:`s = \varepsilon\varepsilon`, etc., as possible solutions to the inequality :math:`s \neq \varepsilon`, which would invalidate the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`.
 
-    The direction of implication :ref:`Decomposition Axiom <palindromics-axiom-iii>` can not be extended into an equivalence without admitting a class of expressions, such as :math:`s = \varepsilon\varepsilon\varepsilon`, as possible solutions to the equation :math:`s \neq \varepsilon`
-    
-    In other words, the unidirectional implication of the :ref:`Decomposition Axiom <palindromics-axiom-iii>` ensures every non-Empty String can be "extended" indefinitely, e.g. :math:`{s}{\varepsilon}{\varepsilon}`, a necessary condition for Concatenation, but it also ensures :math:`\varepsilon\varepsilon = \varepsilon`.
-    
+In other words, the unidirectional implication of the :ref:`Decomposition Axiom <palindromics-axiom-iii>` ensures every non-Empty String can be "extended" indefinitely, e.g. :math:`s = (s)(\varepsilon) = ((s)(\varepsilon))(\varepsilon)`, etc., a necessary condition for Concatenation, but it also allows for the identities :math:`\varepsilon\varepsilon = \varepsilon`, :math:`\varepsilon\varepsilon\varepsilon = \varepsilon`, etc.
+
 .. _palindromics-axiom-iv:
 
 .. topic:: Axiom IV: Closure
@@ -151,7 +145,7 @@ The notion of Concatenation is immediately followed by several assumptions that 
 
     Carefully consider the distinction between these meanings illustrated in the following example.
 
-**Example** Let :math:`s, t \in S` for some Characters :math:`\iota, \nu, \omicron, \rho \in \Sigma` such that :math:`s = \iota\nu = (\iota)(\nu)` and :math:`t = (\omicron)(\rho)`. 
+**Example** Let :math:`s, t \in S` for some Characters :math:`\iota, \nu, \omicron, \rho \in \Sigma` such that :math:`s = \iota\nu = (\iota)(\nu)` and :math:`t = \omicron\rho = (\omicron)(\rho)`. 
 
 Consider, 
 
@@ -166,7 +160,7 @@ Apply the Induction clause of :ref:`Concatenation <palindromics-definition-1-2-1
     st = \iota((\nu)((\omicron)(\rho)))
 
 
-By the :ref:`Comprehension Axiom <palindromics-axiom-i>` and :ref:`Decomposition Axiom <palindromics-axiom-iii>`, :math:`\nu = \nu\varepsilon = (\nu)(\varepsilon)`, 
+By the :ref:`Comprehension Axiom <palindromics-axiom-i>` (all Characters are Strings) and :ref:`Decomposition Axiom <palindromics-axiom-iii>` (all non-Empty Strings can be decomposed), :math:`\nu = \nu\varepsilon = (\nu)(\varepsilon)`, 
 
 .. math::
 
@@ -188,7 +182,7 @@ By the :ref:`Comprehension Axiom <palindromics-axiom-i>` and :ref:`Decomposition
 
     st = \iota(\nu(\omicron(\rho)))
 
-Let :math:`s = \mathfrak{ab}` and :math:`t = \mathfrak{cd}`. The previous equation shows the Concatenation of these literal Strings is accomplished through the sequential Concatenations,
+Let :math:`\iota = \mathfrak{a}, \nu = \mathfrak{b}, \omicron = \mathfrak{c}, \rho = \mathfrak{d}`. Then :math:`s = (\mathfrak{a})(\mathfrak{b}) = \mathfrak{ab}` and :math:`t = (\mathfrak{c})(\mathfrak{d}) = \mathfrak{cd}`. The previous equation shows the Concatenation of these literal Strings is accomplished through the sequential Concatenations,
 
 .. math::
 
@@ -199,6 +193,7 @@ Let :math:`s = \mathfrak{ab}` and :math:`t = \mathfrak{cd}`. The previous equati
     = \mathfrak{a}(\mathfrak{bcd}) = \mathfrak{abcd}
 
 The general logic of this example can be extended to Strings composed of an arbitrary number of Characters.
+
 
 ∎
 
@@ -215,6 +210,12 @@ The general logic of this example can be extended to Strings composed of an arbi
     3. Left-cancellation: :math:`st = su \implies t = u`
     4. Right-cancellation: :math:`ts = us \implies t = u`
 
+Keep in mind, in the preceding example, the equation :math:`\mathfrak{bcd} = (\mathfrak{b})(\mathfrak{cd}) = \mathfrak{b}(\mathfrak{cd})` is a relation between three literal Strings. A translation of the example into English would read as follows,
+
+    "*bcd*"" is the concatenation of *b* and *cd*
+
+It is only incidental the name "*bcd*" in this translation is the literal concatenation of the names "*cd*" and "*b*". It is not logically necessary to represent a sequence with the literal terms that compose it, but such a decision would be akin to a numeral system where the number one is represented with ``||``, the number two is represented with ``|``, the number three with ``||||`` and so on. Formally, such constructions can be accomplished, but nothing would be gained by doing this.
+
 .. note::
 
     Refer to :ref:`palindromics-motivation` for a more in-depth discussion of the nature of concatenation.
@@ -230,51 +231,69 @@ The length of a String is defined as its number of non-Empty Characters.
 
 .. topic:: Definition 1.2.2: String Length
 
-    Let :math:`s = uv` such that :math:`u \in S` and :math:`v \in \Sigma_{e}`. The String Length of :math:`s`, denoted :math:`l(s)`, is defined inductively using the following schema,
+    Let :math:`s \in S`. The String Length of :math:`s`, denoted :math:`l(s)`, is defined inductively using the following schema,
 
     1. Basis: 
-        - :math:`l(\varepsilon) = 0`
-    2. Induction: 
-        - :math:`v = \varepsilon \implies l(s) = l(u)`
-        - :math:`v \neq \varepsilon \implies l(s) = l(u) + 1`
-
-**Example** Let :math:`s_1 = \mathfrak{abc}\varepsilon\mathfrak{def}`. 
-
-.. TODO: fix usage
-
-Using :ref:`Concatenation <palindromics-definition-1-2-1>`, this can be grouped as :math:`s_1 = (\mathfrak{abc}\varepsilon\mathfrak{de})(\mathfrak{f})`.
-
-Applying :ref:`String Length <palindromics-definition-1-2-2>` to :math:`\mathfrak{f}` where :math:`u = \mathfrak{f}` and :math:`v = \varepsilon`,
-
-.. math::
-
-    l(\mathfrak{f}) = l(\varepsilon) + 1 = 0 + 1 = 1
+        - If :math:`s = \varepsilon`, :math:`l(s) = 0`
+    2. Induction:  
+        - If :math:`s \neq \varepsilon` and :math:`s = \nu(u)` with :math:`\nu \in \Sigma` and :math:`u \in S`, then :math:`l(s) = l(u) + 1`
+        - If :math:`s \neq \varepsilon` and :math:`s = \nu(u)` with :math:`\nu = \varepsilon` and :math:`u \in S`, then :math:`l(s) = l(u)`
 
 .. note::
-    
-    This same logic generalizes to all Alphabetic Characters,
 
-    .. math::
+    The :ref:`Empty Axiom <palindromics-axiom-0>` in conjunction with :ref:`String Length <palindromics-definition-1-2-2>` ensures there is exactly one String in :math:`S` such that :math:`l(s) = 0`.
 
-        \forall \iota \in \Sigma: l(\iota) = 1
+.. note::
 
-Applying :ref:`String Length <palindromics-definition-1-2-2>` with :math:`u = \mathfrak{abc}\varepsilon\mathfrak{de}` and :math:`v = \mathfrak{f}`,
+    The :ref:`Decomposition Axiom <palindromics-axiom-iii>` is used in the Induction clause of :ref:`String Length <palindromics-definition-1-2-2>` to ensure the existence of the String's decomposition. 
 
-.. math::
+**Example** Let :math:`s = {\iota_1}{\iota_2}\varepsilon{\iota_3}{\iota_4}`. 
 
-    l(\mathfrak{abc}\varepsilon\mathfrak{def}) = l(\mathfrak{abc}\varepsilon\mathfrak{de}) + 1
-
-The first term on the righthand side can be evaluated by applying :ref:`String Length <palindromics-definition-1-2-2>` with :math:`u = \mathfrak{abc}\varepsilon\mathfrak{d}` and :math:`v = \mathfrak{e}`,
+Applying the Induction Clause of :ref:`String Length <palindromics-definition-1-2-2>` with :math:`\nu = \iota_1` and :math:`u = u_1 = {\iota_2}\varepsilon{\iota_3}{\iota_4}`,
 
 .. math::
 
-    l(\mathfrak{abc}\varepsilon\mathfrak{def}) = (l(\mathfrak{abc}\varepsilon\mathfrak{d}) + 1) + 1
+    l(s) = l(u_1) + 1
 
-Continuing in this fashion, the result is calculated,
+Applying the Induction Clause of :ref:`String Length <palindromics-definition-1-2-2>` with :math:`\nu = \iota_2` and :math:`u = u_2 = \varepsilon{\iota_3}{\iota_4}`,
 
 .. math::
 
-    l(s_1) = 6
+    l(u_1) = l(u_2) + 1
+
+Applying the Induction Clause of :ref:`String Length <palindromics-definition-1-2-2>` with :math:`\nu = \varepsilon` and :math:`u = u_3 = {\iota_3}{\iota_4}`,
+
+.. math::
+
+    l(u_2) = l(u_3)
+
+Applying the Induction Clause of :ref:`String Length <palindromics-definition-1-2-2>` with :math:`\nu = \iota_3` and :math:`u = u_4 = \iota_4`,
+
+.. math::
+
+    l(u_3) = l(u_4) + 1 
+
+Applying the Induction Clause of :ref:`String Length <palindromics-definition-1-2-2>` with :math:`\nu = \iota_4` and :math:`u = u_5 = \varepsilon`, which is guaranteed to exist by the :ref:`Decomposition Axiom <palindromics-axiom-iii>`,
+
+.. math::
+
+    l(u_4) = l(u_5) + 1 
+
+Applying the Basis cluase of :ref:`String Length <palindromics-definition-1-2-2>` to :math:`u_5 = \varepsilon`,
+
+.. math::
+
+    l(u_5) = 0
+
+.. note::
+
+    The Empty Character, :math:`\varepsilon`, serves to *terminate* the recursion.
+
+Putting the recursion together,
+
+.. math::
+
+    l(s) = (((0) + 1) + 1 + 1) + 1 = 4
 
 ∎
 
