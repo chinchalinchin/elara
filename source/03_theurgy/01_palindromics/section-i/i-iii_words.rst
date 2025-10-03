@@ -3,6 +3,11 @@
 Section I.III: Words
 ====================
 
+.. _palindromics-word-axioms:
+
+Word Axioms
+-----------
+
 .. important::
 
     To reiterate the introduction to this section, the current formal system does not seek to describe a generative grammar. Its theorems cannot be used as schema for generating grammatical sentences. The intent of this analysis is to treat Words as interpretted constructs embedded in a syntactical structure that is independent of their specific interpretations.

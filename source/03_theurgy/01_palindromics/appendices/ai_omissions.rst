@@ -69,34 +69,6 @@ Appendix I.II: Omitted Proofs
 Section I.II
 ------------
 
-.. topic:: Theorem 1.2.2
-
-    The Empty Character is contained in every String.
-
-    .. math::
-
-        \forall s \in S: \varepsilon \subset_s s
-
-**Proof** Let :math:`s \in S`. By the Basis clause of :ref:`Concatenation <palindromics-definition-1-2-1>`, 
-
-.. math::
-
-    \varepsilon = \varepsilon\varepsilon
-
-Therefore,
-
-.. math::
-
-    s = {\varepsilon}s = {\varepsilon\varepsilon}s
-
-Let :math:`w_1 = \varepsilon` and :math:`w_2 = s`. Then, :math:`s = {w_1}\varepsilon{w_2}`. By the :ref:`definition of Containment <palindromics-definition-1-2-5>`, 
-
-.. math::
-
-    \varepsilon \subset_s s
-
-∎
-
 .. topic:: Theorem 1.2.x
 
     If any Character :math:`\iota` is not contained in :math:`u` and :math:`iota` is not contained in :math:`v`, then :math:`\iota` is not contained in :math:`uv`.

@@ -97,7 +97,7 @@ Axioms
 1. :ref:`Axiom 0: Empty Axiom <palindromics-axiom-0>`: :math:`\exists! \varepsilon`
 2. :ref:`Axiom I: Comprehension Axiom <palindromics-axiom-i>`: :math:`\iota \in S`
 3. :ref:`Axiom II: Equality Axiom <palindromics-axiom-ii>`: :math:`s = t`
-4. :ref:`Axiom III: Decomposition Axiom <palindromics-axiom-iii>`: :math:`(s \neq \varepsilon) \equiv (s = {\iota}{t})`
+4. :ref:`Axiom III: Decomposition Axiom <palindromics-axiom-iii>`: :math:`(s \neq \varepsilon) \implies (s = {\iota}{t})`
 5. :ref:`Axiom IV: Closure Axiom <palindromics-axiom-iv>`: :math:`st \in S`
 6. :ref:`Axiom V: Measure Axiom <palindromics-axiom-v>`: :math:`l(\alpha) \neq 0`
 7. :ref:`Axiom VI: Discovery Axiom <palindromics-axiom-vi>`: :math:`\alpha[i] \neq \sigma`
