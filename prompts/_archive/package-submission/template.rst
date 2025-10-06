@@ -16,6 +16,15 @@ Solicitation
 
   Need cover letter.
   
+{% if previous_response -%}
+
+Previous Responses
+==================
+
+{{ previous_response}}
+
+{%- endif %}
+
 .. _resume:
 
 ======

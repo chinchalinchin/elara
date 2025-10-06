@@ -114,7 +114,7 @@ The Pantoums of Dementia
     - Pending
   * - June 12, 2025
     - Merion West
-    - Pending  
+    - Rejected
   * - June 25, 2025
     - The Aftershock Review
     - Pending
@@ -172,3 +172,19 @@ Rejection Letters
   Overall, we did enjoy your submission and encourage you to submit again!
 
   -- The Editorial Team at Tabula Rasa Review
+
+.. epigraph::
+
+  Dear Grant,
+
+  The Pantoums of Dementia is/are my favorite. I enjoy reading the poems of artists who take on the challenge of "form."
+
+  "The formal systems that structure experience." Amazing!!!!
+
+  I apologize for the delay in responding to your submission. I am the new Arts Editor for Merion West, and we are in transition.
+
+  This set of poems is not quite right for Merion West at this point. Please submit again. I am a poet; I submit to journals and magazines regularly. Keep moving forward.
+
+  Thank you for submitting your work to Merion West. We wish you the best in your writing.
+
+  -- Kind Regards, Austin Allen James

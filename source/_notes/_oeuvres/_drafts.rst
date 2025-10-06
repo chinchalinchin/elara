@@ -406,7 +406,7 @@ City Walls
     - Rejected
   * - June 12, 2025
     - Merion West
-    - Pending
+    - Rejected
 
 ---------------
 Turkey Vultures
