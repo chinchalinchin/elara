@@ -589,12 +589,17 @@ Therefore, assume :math:`\iota \in \Sigma`. By :ref:`Containment <palindromics-d
 
 Let :math:`w = (w_1)(\iota)`.
 
-l(u) < l(w)
+.. math::
+
+    l(u) < l(w)
 
 .. math::
 
     l((w_1)(\iota)) = l(w_1) + l(\iota)
-Since :math:`uv` is a non-overlapping sequence of Characters and :math:`\iota \subset_s uv`, it follows from the laws of logic that it must be the case that either :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`. 
+
+IN PROGRESS 
+
+TODO: Since :math:`uv` is a non-overlapping sequence of Characters and :math:`\iota \subset_s uv`, it follows from the laws of logic that it must be the case that either :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`. 
 
 ∎
 

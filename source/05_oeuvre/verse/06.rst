@@ -50,3 +50,6 @@ Anniversary
   * - October 6, 2025
     - Gilded Weathervane
     - Pending
+  * - October 6, 2025
+    - Merion West
+    - Pending
