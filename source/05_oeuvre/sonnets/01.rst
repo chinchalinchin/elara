@@ -14,7 +14,7 @@ Larksong
 | they leave a lily black bouquet
 | whose petals fingers tear apart.
 | 
-| and when i stand alone in pain,
+| and when i stand, the thoughts remain,
 | the stems are bare and nothing's changed. 
 | 
 | the birds begin their last refrain
@@ -52,7 +52,7 @@ Larksong
     - Pending
   * - August 16, 2025
     - Missouri Review
-    - Pending
+    - Rejected
   * - August 22, 2025
     - Willows Wept Review
     - Pending

@@ -107,13 +107,16 @@ Ode to the Heron
     - Pending
   * - August 16, 2025
     - Missouri Review
-    - Pending
+    - Rejected
   * - August 22, 2025
     - Oxford Poetry Prize
-    - Pending
+    - Rejected
   * - August 26, 2025
     - Gavialidae
     - Pending
   * - September 3, 2025
     - Hopkins Review
+    - Pending
+  * - October 6, 2025
+    - Gilded Weathervane
     - Pending

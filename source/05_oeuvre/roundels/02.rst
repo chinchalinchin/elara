@@ -36,7 +36,7 @@ Little Sprout
     - Pending
   * - August 16, 2025
     - Missouri Review
-    - Pending
+    - Rejected
   * - August 22, 2025
     - Palette Poetry
     - Pending
@@ -51,4 +51,7 @@ Little Sprout
     - Pending
   * - September 6, 2025
     - Funicular Magazine
+    - Pending
+  * - October 6, 2025
+    - Gilded Weathervane
     - Pending

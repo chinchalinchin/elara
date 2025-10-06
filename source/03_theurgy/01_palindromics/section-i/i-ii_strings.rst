@@ -27,7 +27,7 @@ Axioms
 1. :ref:`Axiom 0: Empty Axiom <palindromics-axiom-0>`: :math:`\exists! \varepsilon`
 2. :ref:`Axiom I: Comprehension Axiom <palindromics-axiom-i>`: :math:`\iota \in S`
 3. :ref:`Axiom II: Equality Axiom <palindromics-axiom-ii>`: :math:`s = t`
-4. :ref:`Axiom III: Decomposition Axiom <palindromics-axiom-iii>`: :math:`(s \neq \varepsilon) \implies (s = {\iota}{t})`
+4. :ref:`Axiom III: Decomposition Axiom <palindromics-axiom-iii>`: :math:`(s \neq \varepsilon) \implies (s = {\iota}{t}) \lor (s = {t}{\iota})`
 5. :ref:`Axiom IV: Closure Axiom <palindromics-axiom-iv>`: :math:`st \in S`
 
 --------
@@ -259,6 +259,8 @@ The general logic of this example can be extended to Strings composed of an arbi
 .. note::
 
     By :ref:`Comprehension Axiom <palindromics-axiom-i>`, all Characters are Strings and Concatenation is closed under :math:`S` by the :ref:`Closure Axiom <palindromics-axiom-iv>`, therefore, as each nested concatenation is evaluated in the preceding example, the Induction clause in :ref:`Concatenation <palindromics-definition-1-2-1>` ensures the next level of concatenation is a String. 
+
+.. TODO: this shoud be proved or assumed, not hand-waved away.
 
 .. important::
 
@@ -552,6 +554,19 @@ Summarizing and generalizing,
 
 ∎
 
+.. THEOREM: \forall s,t: (t = su) \land (s \subset_s t)) \implies l(s) \leq l(t)
+
+.. Let s,t \in S. Assume l(s) < l(t) and s \subset_s t. Then by containment, there exists
+..
+.. t = (w_1)(s)(w_2)
+..
+.. By Theorem 1.2.1,
+..
+.. l(t) = l(w_1) + l(s) + l(w_2)
+..
+.. su = (w_1)(s)(w_2)
+..
+
 .. _palindromics-theorem-1-2-3:
 
 .. topic:: Theorem 1.2.3
@@ -562,7 +577,24 @@ Summarizing and generalizing,
 
         \forall \iota \in \Sigma_e: \forall u, v \in S: (\iota \subset_s uv) \implies ((\iota \subset_s u) \lor (\iota \subset_s v))
 
-**Proof** Let :math:`\iota \in \Sigma_e`. Let :math:`u,v \in S`. Since :math:`uv` is a non-overlapping sequence of Characters and :math:`\iota \subset_s uv`, it follows from the laws of logic that it must be the case that either :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`. 
+**Proof** Let :math:`\iota \in \Sigma_e`. Let :math:`u,v \in S` such that :math:`\iota \subset_s uv`
+
+If :math:`\iota = \varepsilon`, then the theorem is trivially true by :ref:`Theorem 1.2.2 <palindromics-theorem-1-2-2>`.
+
+Therefore, assume :math:`\iota \in \Sigma`. By :ref:`Containment <palindromics-definition-1-2-5>`, 
+
+.. math::
+
+    \exist w_1, w_2 \in S: uv = (w_1)(\iota)(w_2)
+
+Let :math:`w = (w_1)(\iota)`.
+
+l(u) < l(w)
+
+.. math::
+
+    l((w_1)(\iota)) = l(w_1) + l(\iota)
+Since :math:`uv` is a non-overlapping sequence of Characters and :math:`\iota \subset_s uv`, it follows from the laws of logic that it must be the case that either :math:`\iota` is contained in :math:`u` or :math:`\iota` is contained in :math:`v`. 
 
 ∎
 

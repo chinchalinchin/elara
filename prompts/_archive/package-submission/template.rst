@@ -56,6 +56,15 @@ Publications
 - *Photographs of Autumn*, Macrame Literary Journal, Summer 2025 Issue
 - *Absurdity*, The Genre Society, Fall 2025 Issue (Forthcoming)
 
+Contests
+--------
+
+.. image:: ../_static/img/personal/wd-94th-annual-2025-winnerseal.png
+  :alt: 94th Writer's Digest Runner Up
+  :align: center
+  :class: transparent
+  :width: 50%
+
 .. _experience:
 
 Experience

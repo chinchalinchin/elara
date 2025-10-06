@@ -40,7 +40,7 @@ Eulogy
     - Pending
   * - August 16, 2025
     - Missouri Review
-    - Pending
+    - Rejected
   * - August 22, 2025
     - Palette Poetry
     - Pending
@@ -55,7 +55,7 @@ Eulogy
     - Pending
   * - August 25, 2025
     - Oxford Poetry Prize
-    - Pending
+    - Rejected
   * - August 25, 2025
     - Plougshares
     - Pending
@@ -79,4 +79,7 @@ Eulogy
     - Rejected
   * - September 9, 2025
     - Garfield Lake Review
+    - Pending
+  * - October 6th, 2025
+    - Skummel Magazine
     - Pending
