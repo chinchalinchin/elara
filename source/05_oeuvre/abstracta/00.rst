@@ -42,3 +42,6 @@ The Unicode Ode
   * - June 12, 2025
     - TrashLight
     - Rejected
+  * - October 7th, 2025
+    - wildscape
+    - Pending

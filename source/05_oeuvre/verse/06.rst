@@ -53,3 +53,6 @@ Anniversary
   * - October 6, 2025
     - Merion West
     - Pending
+  * - October 7th, 2025
+    - wildscape
+    - Pending
