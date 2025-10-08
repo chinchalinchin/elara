@@ -2,43 +2,34 @@
 Millenia
 --------
 
-| the slow motion
-| lives of trees
-| in the forest depths.
-| empires of pine
-| wage ancient wars
-| against city-states of oak.
-| an insurgency of maple
-| hides in their midst,
-| gathering at their trunks,
-| the nascent rebellion
-| that unwinds over centuries.
+| the slow motion lives of things in the forest depths.
 |
-| morning dew soaks 
-| the soft slick bark
-| of the frozen sentinels
-| and paints with strokes
-| measured in years
-| the green of pungent
-| moldy spores.
+| empires of pine wage ancient wars against city-states of oak.
+| an insurgency of maple hides in their midst, gathering at their trunks,
+| a nascent rebellion that unwinds over centuries.
+| 
+| morning dew soaks the soft slick bark of the frozen sentinels
+| and paints with strokes measured in years the green of pungent mold spores.
 |
-| here a pile of stones,
-| older than humanity,
-| hewn from a mountain.
-| the jagged edges of
-| its primordial eruption
-| softened by quiet eons,
-| now draped with pagan cloaks
-| of forest magic,
-| the altars of secret
-| divinations,
-| pooling with the blood
-| of moss. 
+| here a pile of stones, older than humanity, hewn from a mountain.
+| the jagged edges of its primordial eruption softened by quiet eons,
+| now draped with pagan cloaks of forest magic,
+| the altars of secret divinations,
+| pooling with the blood of moss.
 |
-| the harmonic revolutions 
-| of parallel life, 
-| the millenial melodies
-| converging into a chorus
-| of now.
+| the harmonic revolutions of parallel life,
+| the millennial melodies converging into a chorus of now.
+
 
 - August 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - October 8, 2025
+    - WayWords Literary Journal
+    - Pending
