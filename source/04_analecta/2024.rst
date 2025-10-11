@@ -5,7 +5,6 @@
 
 .. _2024-april:
 
------
 April
 -----
 
@@ -49,7 +48,6 @@ If the goal is to define ":ref:`being <being>`", then one can only succeed at th
 
 .. _2024-may:
 
----
 May
 ---
 
@@ -81,7 +79,6 @@ The inverse does not follow. One cannot conclude from "*if a thing cannot be nam
 
 .. _2024-june:
 
-----
 June
 ----
 
@@ -125,7 +122,6 @@ Frege was the first to recognize the mathematical function as possessing the for
 
 .. _2024-november:
 
---------
 November 
 --------
 
@@ -149,12 +145,12 @@ Let us use this a ballast when the ontological investigations we undertake lead 
 
 .. _2024-december:
 
---------
 December
 --------
 
 .. _context-problem:
 
+-------------------
 The Context Problem
 -------------------
 

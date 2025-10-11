@@ -5,7 +5,6 @@
 
 .. _june-2016:
 
-----
 June
 ----
 
@@ -17,7 +16,6 @@ In the Lagrangian formulation, the coordinate systems for objects are ancillary 
 
 .. _august-2016:
 
-------
 August
 ------
 

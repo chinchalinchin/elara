@@ -5,7 +5,6 @@
 
 .. _2025-january:
 
--------
 January
 -------
 
@@ -40,7 +39,6 @@ In other words, palindromes, perfect and imperfect, are exactly the class of sen
 
 .. _2025-february:
 
---------
 February
 --------
 
@@ -56,7 +54,6 @@ This :ref:`poetical device <hysteron-proteron>` is unique amongst the others ins
 
 .. _2025-march:
 
------
 March
 -----
 
@@ -64,7 +61,6 @@ The world is a choice of fates.
 
 .. _2025-april:
 
------
 April
 -----
 
@@ -99,6 +95,7 @@ We imagine :ref:`language <language>` to behave like objects, because it manifes
 
 .. _linguistic-structures:
 
+---------------------
 Linguistic Structures
 ---------------------
 
@@ -196,6 +193,7 @@ In other words, this model seems to assert that when a speaker utters "*the cat 
 
 .. _creation-myths:
 
+--------------
 Creation Myths
 --------------
 
@@ -369,10 +367,10 @@ If the conjecture is granted, the question remains: what is the "*self*"? How do
 
 .. _2025-may:
 
----
 May
 ---
 
+----------------------------------------
 Contradiction: A History of Propositions
 ----------------------------------------
 
@@ -747,7 +745,6 @@ The crux of faith, the essential leap into the unknown, boils down to whether on
 
 .. _2025-june:
 
-----
 June
 ----
 
@@ -828,3 +825,37 @@ Consider selecting a random word with :math:`M` characters. If the event of each
 
 
 This shows, as the number of characters in a word increases, the probability of it being reflective drops exponentially. In other words, there is a combinatorial reason for reflective words occuring more frequently within the intersection of monosyllabic words. Monosyllabic words, by their nature, cannot be iambic. Moreover, monosyllabic words are finite, if it assumed every language has some upper bound for its syllabic lengths, e.g. the longest syllable in English is typically cited as 9 ("scrunched"). Once the monosyllabic words of a language have been assigned meanings, the possibility of randomly generating new reflective words diminishes rapidly. Therefore, as the number of words in a language increases, the probability of :math:`P(R | M_{-+})` decreases. 
+
+.. _october-2025:
+
+October
+-------
+
+To what have we attached the names of the seasons? Let the materialist decompose the real into impinging vectors of electric sunlight and rotation about a tilted axis. Let the rationalist describe the arbitrary divisions of time humans have erected across the year. Let the pragmatist declare convention and posit the abstraction as purely psychological. There is no *spring* or *summer*, they will say, only the perception of such.
+
+Each will attempt to describe what the seasons are by reduction to simple phenomenon. Only rarely, however, is it actually demonstrated how these simple phenomenon are arranged to construct the more complex one; actual reductions of a phenomenon are exceedingly rare in the epistemological history of humanity. Maxwell's derivation of the speed of the light from electromagnetics, Frege's formal proof of the square of opposition from pure logic, Newton demonstrating the motion of the planets through differential equations. 
+
+Every tool creates an expectation.
+
+---
+
+The names we have bestowed on these things say all one needs to know. 
+
+Spring and Fall are movements. Summer and Winter are terminals. 
+
+Life *springs* towards it *summer* and then *falls* to its *winter*. 
+
+---
+
+Every movement is contained in every other. Motion is the inheritance of being, where every decimal of velocity is a record. Tracjectories are sentences and collisions are paragraphs. Momentum is an accounting. A star is the burning engine of history, the delirium of existence, the headstruck daze of wonder, from which all things are born. A molten pit of plasma, the turmoil of souls.
+
+The beginning of time is embedded in the beat of every heart. Each second contains the eternity of the universe. Every body is a corpse. 
+
+---
+
+There is no motion. Only potential. 
+
+Potential only means: that which would be observed, if only it were the case. 
+
+---
+

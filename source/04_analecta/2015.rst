@@ -5,7 +5,6 @@
 
 .. _may-2015:
 
----
 May
 ---
 
@@ -29,7 +28,6 @@ A street sign indicates an abstract instruction, but this is an artifice deploye
 
 .. _july-2015:
 
-----
 July
 ----
 

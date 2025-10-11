@@ -44,7 +44,7 @@ The Lives of Kites
   * - August 29, 2025
     - Arcturus
     - Pending
-  * - August 29, 2025
+  * - August 2a, 2025
     - AC DC: Journal for the Bent
     - Rejected
   * - August 29, 2025
@@ -59,3 +59,9 @@ The Lives of Kites
   * - October 6, 2025
     - Gilded Weathervane
     - Pending
+  * - October 10th, 2025
+    - Macrame Literary Journal
+    - Pending
+  * - October 10th, 2025
+    - January House Literary Journal
+    - Rejected

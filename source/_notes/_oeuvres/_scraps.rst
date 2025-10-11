@@ -559,3 +559,13 @@
 | as intersecting aimless arcs,
 | reverbing curves, diverge in dirt
 | and lead me further out away.
+
+----
+
+despite the years i've lived nothing remains.
+
+---
+
+stained glass rivers ripples underbridge.
+
+graffitied engines coal black plunge through forests. 
