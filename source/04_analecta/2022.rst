@@ -5,7 +5,6 @@
 
 .. _may-2022:
 
----
 May
 ---
 
@@ -23,7 +22,6 @@ Except when we say "*universe*" in the preceding, we should be careful, for what
 
 .. _june-2022:
 
-----
 June
 ----
 
@@ -54,7 +52,6 @@ It seems likely that we will, in the near future, have an algorithm capable of p
 
 .. _2022-july:
 
-----
 July
 ----
 
@@ -122,7 +119,6 @@ To ask questions about a subject that perpetually recedes from all attempts to k
 
 .. _2022-november:
 
---------
 November
 --------
 
@@ -148,7 +144,6 @@ Then, there are two types of uncertainty: An *ontological* uncertainty, which ad
 
 .. _2022-december:
 
---------
 December
 --------
 

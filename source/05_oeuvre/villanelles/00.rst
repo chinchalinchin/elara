@@ -43,6 +43,9 @@ Cathedral
   * - June 25, 2025
     - Apus Journal
     - Rejected
-  * - October 6th, 2025
+  * - October 6, 2025
     - Skummel Magazine
     - Pending
+  * - October 7, 2025
+    - Salvation South
+    - Rejected

@@ -140,3 +140,6 @@ Vinyl Seats
   * - August 26, 2025
     - Gavialidae (V)
     - Pending
+  * - October 7, 2025
+    - Salvation South (V)
+    - Rejected

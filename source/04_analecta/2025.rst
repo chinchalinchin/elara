@@ -752,7 +752,7 @@ Let :math:`c(α)` be the character length of a word :math:`α`.
 
 .. topic:: Reflective Words
 
-    The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if :math:`α[i]` stands for the i:sup:`th` character in word :math:`α`, then a reflective word is defined as the words which satisfy the relation :math:`α[i] = α[c(α)-i-1]`. For example, ``nun`` is a reflective word.
+    The symbol ``R`` refers to the set of all reflective words, i.e. words that are spelled the same forwards as backwards. Mathematically, if :math:`α[i]` stands for the i :sup:`th` character in word :math:`α`, then a reflective word is defined as the words which satisfy the relation :math:`α[i] = α[c(α)-i-1]`. For example, ``nun`` is a reflective word.
 
 .. topic:: Metric Words
 
@@ -839,7 +839,7 @@ Every tool creates an expectation.
 
 ---
 
-The names we have bestowed on these things say all one needs to know. 
+The names we have bestowed on these things says all one needs to know. 
 
 Spring and Fall are movements. Summer and Winter are terminals. 
 
