@@ -10,10 +10,11 @@
    01_epistemia/index
    02_pedagogy/index
    03_theurgy/index
-   04_analecta/index
-   05_oeuvre/index
-   06_machina/index
-
+   04_machina/index
+   05_analecta/index
+   06_oeuvre/index
+   07_fabula/index
+   
 .. raw:: html
 
    <div class="text-container">
