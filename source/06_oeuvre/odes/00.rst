@@ -70,7 +70,7 @@ Ode to Death
     - Pending
   * - August 29, 2025
     - Marrow Magazine
-    - Pending
+    - Accepted
   * - August 29, 2025
     - Raleigh Review
     - Pending
@@ -116,3 +116,18 @@ Ode to Death
   * - October 12, 2025
     - Cosmic Daffodil
     - Pending
+
+.. epigraph::
+
+  Dear Grant, 
+
+  We write to you with the exciting news that your piece "Ode to Death" has received an Honorable Mention in the Marrow Magazine Forgotten contest! We're proud to have this piece included for publication in a dedicated "Forgotten" issue, if it is still available.
+
+  Please let us know ASAP whether the work is still available and has not already been published. If so, we plan to make the announcement this Friday! We ask that you keep it to yourself until then. :)
+
+  Additionally, if you confirm and accept the terms, would you please send us the following:
+  Awesome! 
+
+  Many thanks and congratulations again,
+
+  -- The Marrow Editors

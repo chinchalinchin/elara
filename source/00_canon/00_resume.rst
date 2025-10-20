@@ -51,6 +51,9 @@ Contests
   :class: transparent
   :width: 50%
   
+- *Father's Lullaby*, 94th Writer's Digest Contest, Runner Up, 2025
+- *Ode to Death*, Forgotten: A Marroween Contest, Honorable Mention, October 2025
+
 .. _experience:
 
 Experience
