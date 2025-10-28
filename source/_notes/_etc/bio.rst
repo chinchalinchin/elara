@@ -1,0 +1,1 @@
+Grant Moore is a Senior DevOps Engineer with a background in mathematics and physics. His poetry has appeared in Macrame Literary Journal, is forthcoming in The Genre Society, was recognized as a runner-up in the 94th Annual Writer's Digest Writing Competition and had an honorable mention in the Marroween Contest for Marrow Magazine. He lives in Cumberland, Maryland.

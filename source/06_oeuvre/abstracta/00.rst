@@ -44,4 +44,4 @@ The Unicode Ode
     - Rejected
   * - October 7th, 2025
     - wildscape
-    - Pending
+    - Rejected

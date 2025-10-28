@@ -55,7 +55,7 @@ Anniversary
     - Rejected
   * - October 7th, 2025
     - wildscape
-    - Pending
+    - Rejected
   * - October 10th, 2025
     - Macrame Literary Journal
     - Pending
@@ -67,7 +67,7 @@ Anniversary
     - Pending
   * - October 12, 2025
     - Cosmic Daffodil
-    - Pending
+    - Rejected
 
 .. epigraph::
 

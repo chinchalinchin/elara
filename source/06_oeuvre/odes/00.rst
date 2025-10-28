@@ -109,13 +109,13 @@ Ode to Death
     - Pending
   * - October 7th, 2025
     - wildscape
-    - Pending
+    - Rejected
   * - October 12, 2025
     - New Feathers
     - Pending
   * - October 12, 2025
     - Cosmic Daffodil
-    - Pending
+    - Rejected
 
 .. epigraph::
 

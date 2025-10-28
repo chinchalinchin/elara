@@ -46,7 +46,7 @@ Your Hand
     - Pending
   * - October 7th, 2025
     - wildscape
-    - Pending
+    - Rejected
   * - October 7th, 2025
     - DASH Literay Journal
     - Pending
@@ -58,4 +58,4 @@ Your Hand
     - Pending
   * - October 12, 2025
     - Cosmic Daffodil
-    - Pending
+    - Rejected
