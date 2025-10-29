@@ -30,4 +30,4 @@ Dinner Wine
     - Pending
   * - September 14, 2025
     - Passionfruit Review
-    - Pending
+    - Rejected
