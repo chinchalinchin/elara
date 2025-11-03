@@ -39,8 +39,11 @@ Education
 Publications
 ============
 
-- *Photographs of Autumn*, Macrame Literary Journal, `Summer 2025 Issue, <https://macramelit.com/articles/photographs-of-autumn/>`_
-- *Absurdity*, The Genre Society, Fall 2025 Issue (Forthcoming)
+- *Photographs of Autumn*, Macrame Literary Journal, `Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
+- *Absurdity*, The Genre Society, `Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
+- *Father's Lullaby*, Sublimation, Volume 2 Issue 5 (Forthcoming)
+
+.. _contests:
 
 Contests
 --------
@@ -52,7 +55,7 @@ Contests
   :width: 50%
   
 - *Father's Lullaby*, 94th Writer's Digest Contest, Runner Up, `2025 <https://www.writersdigest.com/announcing-the-winners-of-the-94th-annual-writers-digest-writing-competition>`_
-- *Ode to Death*, Forgotten: A Marroween Contest, Honorable Mention, October 2025
+- *Ode to Death*, Forgotten: A Marroween Contest, Honorable Mention, `October 2025 <https://marrowmagazine.com/ode-to-death/>`_
 
 .. _experience:
 

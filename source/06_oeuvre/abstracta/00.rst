@@ -45,3 +45,6 @@ The Unicode Ode
   * - October 7th, 2025
     - wildscape
     - Rejected
+  * - November 2, 2025
+    - Infocalypse Arts & Literary Magazine
+    - Pending

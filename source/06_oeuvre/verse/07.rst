@@ -23,3 +23,14 @@ Billboards
 | towards ends i pray that meet again. 
 
 - 0ctober 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - November 2, 2025
+    - Merion West
+    - Pending
