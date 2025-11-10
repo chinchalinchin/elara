@@ -76,4 +76,16 @@ The Invocation of Metric Code
       - Rejected
     * - November 2, 2025
       - Infocalypse Arts & Literary Magazine
-      - Pending
+      - Accepted
+
+.. epigraph::
+
+  Dear Grant,
+
+  Thank you for submitting The Unicode Ode and The Invocation of Metric Code to Infocalypse Press. After review, we’re delighted to accept both pieces for publication in Issue 1: Recursion (January 2026).
+
+  These poems form a striking diptych on language and consciousness. The Unicode Ode renders human emotion in the syntax of code — an elegy written in symbols — while The Invocation of Metric Code reimagines programming itself as a devotional act, a hymn to recursion and renewal. Together they embody the magazine’s fascination with the spaces where machine logic becomes lyric, and where poetry begins to think for itself.
+
+  We’ll follow up closer to publication with proofs and formatting notes, and a bio request, but for now — welcome aboard, and thank you for helping us define what a recursive future sounds like.
+
+  -- Kat Autiö, Editor-in-Chief, Infocalypse Press

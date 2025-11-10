@@ -42,6 +42,8 @@ Publications
 - *Photographs of Autumn*, Macrame Literary Journal, `Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
 - *Absurdity*, The Genre Society, `Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
 - *Father's Lullaby*, Sublimation, Volume 2 Issue 5 (Forthcoming)
+- *The Unicode Ode*, Infocalypse Press, Volume 1 Issue 1 (Forthcoming)
+- *The Invocation of Metric Code*, Infocalypse Press, Volume 1 Issue I (Forthcoming)
 
 .. _contests:
 
