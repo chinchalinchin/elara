@@ -569,3 +569,21 @@ despite the years i've lived nothing remains.
 stained glass rivers ripples underbridge.
 
 graffitied engines coal black plunge through forests. 
+
+---
+
+| beginnings end and endings start
+
+---
+
+| the setting world ignores the sun
+
+---
+
+| the silent dance of leaves through black, 
+| the lacks you left through wide expanse,
+| that day you laughed and said to me:
+|
+| embrace the fading spans of grace,
+| this place that wanes within the shade.
+| as fallen leaves arrayed your face.
