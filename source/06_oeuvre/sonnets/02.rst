@@ -86,6 +86,9 @@ Eulogy
   * - October 7th, 2025
     - DASH Literay Journal
     - Pending
+  * - November 24, 2025
+    - Artists from Maryland
+    - Pending
 
 .. epigraph::
 

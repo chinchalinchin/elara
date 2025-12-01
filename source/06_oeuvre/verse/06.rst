@@ -58,7 +58,7 @@ Anniversary
     - Rejected
   * - October 10th, 2025
     - Macrame Literary Journal
-    - Pending
+    - Rejected
   * - October 10th, 2025
     - January House Literary Journal
     - Rejected
@@ -68,6 +68,9 @@ Anniversary
   * - October 12, 2025
     - Cosmic Daffodil
     - Rejected
+  * - November 24, 2025
+    - Artists from Maryland
+    - Pending
 
 .. epigraph::
 

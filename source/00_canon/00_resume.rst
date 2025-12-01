@@ -44,6 +44,7 @@ Publications
 - *Father's Lullaby*, Sublimation, Volume 2 Issue 5 (Forthcoming)
 - *The Unicode Ode*, Infocalypse Press, Volume 1 Issue 1 (Forthcoming)
 - *The Invocation of Metric Code*, Infocalypse Press, Volume 1 Issue I (Forthcoming)
+- *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
 
 .. _contests:
 

@@ -64,7 +64,19 @@ The Lives of Kites
     - Rejected
   * - October 10th, 2025
     - Macrame Literary Journal
-    - Pending
+    - Accepted
   * - October 10th, 2025
     - January House Literary Journal
     - Rejected
+
+.. epigraph::
+
+  Dear Grant,
+
+  We are delighted to inform you that we have accepted your submission "The Lives of Kites" for publication in the upcoming issue of the Macrame Literary Journal.
+
+  We loved reading your work, and we hope you will continue to submit to us in the future.
+
+  Congratulations!
+
+  -- Macrame Literary Journal

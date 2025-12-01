@@ -46,7 +46,7 @@ Larksong
     - Pending
   * - August 15, 2025
     - Smartish Pace
-    - Pending
+    - Rejected
   * - August 16, 2025
     - American Poetry Review
     - Pending
@@ -91,4 +91,7 @@ Larksong
     - Pending
   * - October 7th, 2025
     - DASH Literay Journal
+    - Pending
+  * - November 24, 2025
+    - Artists from Maryland
     - Pending

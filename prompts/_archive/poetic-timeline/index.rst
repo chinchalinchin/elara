@@ -1,9 +1,3 @@
-.. note:: 
-
-    This prompt is formatted in RestructuredText (RST).
-    
-{% include '_mode_advice.rst' %}
-
 Feburary
 ========
 
@@ -3681,7 +3675,7 @@ The Myth of Geese
 A Series of Reflections
 -----------------------
 
-
+-----------
 First Draft
 -----------
 
@@ -3735,6 +3729,7 @@ First Draft
 | not a peep, 
 | oh pupil, 
 
+------------
 Second Draft
 ------------
 
@@ -4141,8 +4136,8 @@ Eulogy
 | pound for the taking, body of ash,
 | weight of the flame, transmuted to wind. 
 | 
-| thundering blacks, the cymbals that crash,
-| scavenging clouds, vultures descend.
+| thundering void, in symbols that flash,
+| scavenging clouds, futures descend.
 | 
 | weep with the water, falling to feet,
 | honor your father, drink of his heat.
@@ -4511,7 +4506,6 @@ Your Hand
 | Bewitched, your straining wrist displays a charm, 
 | another's secret heart ordains your hand. 
 
------------
 Anniversary
 -----------
 
@@ -4547,3 +4541,56 @@ Anniversary
 | you'd always be, but all remains
 | decayed, reclaimed, reversed, undone, 
 | embedded in the layered lime.
+
+October
+=======
+
+Billboards
+----------
+
+| the world is tinged with sweet regret
+| as billboards flash their pixel paint. 
+|
+| what time remains sustained is froze
+| in photographs above the roads.
+|
+| these faces once acquainted race
+| by windows, smeared as though i dream. 
+|
+| from point diverged our common lines,
+| to track our ways and write our lives.
+|
+| ensuing years then ripped apart
+| the ribbons left by broken hearts.
+|
+| i find you here, in signs that pass;
+| we intersect our threads at last.
+|
+| the highway wends away in bends
+| towards ends i pray that meet again. 
+
+November
+========
+
+Falling
+-------
+
+| the autumn bleeds its fallen leaves,
+| enthralling me with awful dreams
+| of auburn weaves my fingers clasped.
+| 
+| a swirling world that gasps in gales 
+| of colored veils adorning curls
+| unfurled in lines the gusts unwind.
+| 
+| while afterglows of neon bind
+| the blaze between the blinded clouds
+| that breathe their final breath of light.
+| 
+| at dusk, we clung, embraced but stunned,
+| our traces spun through hissing dark
+| in whispered arcs the wind erased.
+|
+| the fallen leaves arrayed your face 
+| within that shaded sprawl of grace,
+| the place that fades as seasons fall.

@@ -77,7 +77,7 @@ Vinyl Seats
 
 | The vinyl seats of classic cars,
 | the plastic smell their thread secretes
-| as cherry burns through cover mars 
+| as cherry burn on cover mars 
 |   the vinyl seats.
 |
 | When Father stooped to sew the sheets,
@@ -121,7 +121,7 @@ Vinyl Seats
     - Rejected
   * - August 15, 2025
     - Smartish Pace
-    - Pending
+    - Rejected
   * - August 16, 2025
     - American Poetry Review
     - Pending
@@ -143,3 +143,6 @@ Vinyl Seats
   * - October 7, 2025
     - Salvation South (V)
     - Rejected
+  * - November 24, 2025
+    - Artists from Maryland (V)
+    - Pending

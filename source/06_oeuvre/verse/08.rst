@@ -1,17 +1,17 @@
---------------
-Falling Leaves
---------------
+------------
+Autumn Blood
+------------
 
 | the autumn bleeds its fallen leaves,
 | enthralling me with awful dreams
 | of auburn weaves my fingers clasped.
 | 
 | a swirling world that gasps in gales 
-| of colored veils adorning curls
+| of colored veils harassing curls
 | unfurled in lines the gusts unwind.
 | 
 | while afterglows of neon bind
-| the blaze between the blinded clouds
+| the blaze between the blinding clouds
 | that breathe their final breath of light.
 | 
 | at dusk, we clung, embraced but stunned,
@@ -21,5 +21,23 @@ Falling Leaves
 | the fallen leaves arrayed your face 
 | within that shaded sprawl of grace,
 | the place that fades as seasons fall.
+|
+| i watch the leaves in seizures pulse,
+| the ether pulled by either force,
+| the fever dreams or season's course.
 
 - November 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - November 24, 2025
+    - Artists from Maryland
+    - Pending
+  * - November 24, 2025
+    - Merion West
+    - Pending

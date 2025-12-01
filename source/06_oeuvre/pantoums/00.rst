@@ -129,7 +129,7 @@ The Pantoums of Dementia
     - Pending
   * - August 15, 2025
     - Smartish Pace
-    - Pending
+    - Rejected
   * - August 16, 2025
     - American Poetry Review
     - Pending
@@ -157,7 +157,10 @@ The Pantoums of Dementia
   * - October 12, 2025
     - Cosmic Daffodil
     - Rejected
-    
+  * - November 24, 2025
+    - Artists from Maryland
+    - Pending
+
 Rejection Letters 
 -----------------
 

@@ -28,4 +28,16 @@ Photographs of Autumn
     - Macrame Literary Journal
     - Accepted
 
+.. epigraph::
+
+  Dear Grant,
+
+  We are delighted to inform you that we have accepted your submission "Photographs of Autumn" for publication in the Fall 2025 issue of the Macrame Literary Journal. The Fall 2025 issue is set for publication in early October. We will notify you by email when it is published.
+
+  Thank you for sending us your work, we loved reading it and we hope you will continue to submit to us in the future.
+
+  Congratulations!
+
+  -- Macrame Literary Journal
+  
 - `macramelit.com/articles/photographs-of-autumn <https://macramelit.com/articles/photographs-of-autumn/>`_
