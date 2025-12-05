@@ -123,7 +123,7 @@ The Pantoums of Dementia
     - Pending
   * - August 12, 2025
     - Scribeworth (Movement I)
-    - Pending
+    - Accepted
   * - August 15, 2025
     - Little Patuxent Review
     - Pending
@@ -161,8 +161,18 @@ The Pantoums of Dementia
     - Artists from Maryland
     - Pending
 
+.. epigraph::
+
+  Grant,
+
+  We're excited to let you know that your poem, "Dementia: Movement I," has been selected for publication in the Winter 2025 issue of Scribeworth Magazine. Thank you for sharing your work with us—it's an honor to showcase your voice.
+
+  To accompany your piece, we’d love to include a photo of you (a headshot is preferred) alongside your author bio. When you get a moment, please email it to submissions@scribeworth.com.
+
+  -- The Scribeworth Editorial Team
+  
 Rejection Letters 
------------------
+~~~~~~~~~~~~~~~~~
 
 .. epigraph::
 
