@@ -41,10 +41,11 @@ Publications
 
 - *Photographs of Autumn*, Macrame Literary Journal, `Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
 - *Absurdity*, The Genre Society, `Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
-- *Father's Lullaby*, Sublimation, Volume 2 Issue 5 (Forthcoming)
+- *Father's Lullaby*, Sublimation, `Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`
 - *The Unicode Ode*, Infocalypse Press, Volume 1 Issue 1 (Forthcoming)
 - *The Invocation of Metric Code*, Infocalypse Press, Volume 1 Issue I (Forthcoming)
 - *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
+- *Holly Tree*, The Celestial Glossary, Volume 1 Issue 1 (Forthcoming)
 
 .. _contests:
 
