@@ -105,7 +105,7 @@ Holly Tree
     - Rejected
   * - August 16, 2025
     - American Poetry Review
-    - Pending
+    - Rejected
   * - August 16, 2025
     - Missouri Review
     - Rejected
@@ -123,7 +123,7 @@ Holly Tree
     - Rejected
   * - August 25, 2025
     - The Celestial Glossary
-    - Pending
+    - Accepted
   * - August 26, 2025
     - Gavialidae
     - Pending
@@ -160,3 +160,19 @@ Holly Tree
   We’re grateful for the chance to read your work and encourage you to submit to us again in the future.
 
   -- Warm regards, Neon and Smoke
+
+.. epigraph::
+
+  Dear Grant A Moore
+  
+  We have reviewed Holly Tree and we are very excited to offer a place for your work in The Celestial Glossary.
+  
+  We found the imagery for Holly Tree very compelling. Your coloring of the scene was sharp and really created a vibrant tableau. We would be very excited to include Holly Tree in Issue One.
+  
+  We are pleased to offer an initial payment of $5 USD. If this is acceptable, we will send over a contract that details the process for royalties and expected standards.
+  
+  Our publication schedule will place this issue in late January.
+  
+  If all of this sounds good, please respond to this email letting us know that the piece is still available and that you would like to continue with the process.
+  
+  -- Ailiyah, EIC
