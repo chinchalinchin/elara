@@ -88,10 +88,35 @@ Larksong
     - Pending
   * - September 9, 2025
     - Garfield Lake Review
-    - Pending
+    - Accepted
   * - October 7th, 2025
     - DASH Literay Journal
     - Pending
   * - November 24, 2025
     - Artists from Maryland
     - Pending
+
+Acceptance
+~~~~~~~~~~
+
+.. epigraph::
+
+  Dear Grant,
+
+  Thank you for taking the time to submit to Artists from Maryland. We would love to feature you as February's Maryland Artist of the Month, with "Eulogy" and "Larksong"!
+
+  We're grateful for being able to enjoy your work. Please respond as soon as possible to confirm that this selection is still available, so we can start preparing for your feature!
+
+  -- Aldrin Badiola, Editor-in-chief of Artists from Maryland
+
+.. epigraph::
+
+  Dear Grant Moore,
+
+  On behalf of the editorial board of the Garfield Lake Review, I am happy to write that we have accepted Eulogy/Larksong/The Pantoums of Dementia/Ode to Death/The Origin of Lies for publication in our 2026 edition!
+
+  Thank you for your contribution to our growing journal. We are pleased to publish your work in this years edition.
+
+  If you require any further edits to your piece, please reach out directly to our Editor in Chief, Logan Schreiber, at lschreiber@uolivet.edu. If we should need any edits to your piece, a team member will be in touch with you after acceptance. In the meantime, if you have any questions, please let me know.
+
+  -- Logan Schreiber, Editor in Chief

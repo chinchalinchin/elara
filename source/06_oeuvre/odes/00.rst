@@ -103,7 +103,7 @@ Ode to Death
     - Rejected
   * - September 9, 2025
     - Garfield Lake Review
-    - Pending
+    - Accepted
   * - October 6th, 2025
     - Skummel Magazine
     - Rejected
@@ -118,10 +118,25 @@ Ode to Death
     - Rejected
   * - November 24, 2025
     - Artists from Maryland
-    - Pending
+    - Rejected
   * - November 24, 2025
     - Merion West
     - Pending
+
+Acceptance
+~~~~~~~~~~
+
+.. epigraph::
+
+  Dear Grant Moore,
+
+  On behalf of the editorial board of the Garfield Lake Review, I am happy to write that we have accepted Eulogy/Larksong/The Pantoums of Dementia/Ode to Death/The Origin of Lies for publication in our 2026 edition!
+
+  Thank you for your contribution to our growing journal. We are pleased to publish your work in this years edition.
+
+  If you require any further edits to your piece, please reach out directly to our Editor in Chief, Logan Schreiber, at lschreiber@uolivet.edu. If we should need any edits to your piece, a team member will be in touch with you after acceptance. In the meantime, if you have any questions, please let me know.
+
+  -- Logan Schreiber, Editor in Chief
 
 .. epigraph::
 
@@ -137,6 +152,9 @@ Ode to Death
   Many thanks and congratulations again,
 
   -- The Marrow Editors
+
+Rejection
+~~~~~~~~~
 
 .. epigraph::
 

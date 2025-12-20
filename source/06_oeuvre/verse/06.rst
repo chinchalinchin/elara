@@ -70,7 +70,10 @@ Anniversary
     - Rejected
   * - November 24, 2025
     - Artists from Maryland
-    - Pending
+    - Rejected
+
+Rejection
+~~~~~~~~~
 
 .. epigraph::
 

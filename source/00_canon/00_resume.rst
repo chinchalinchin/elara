@@ -46,6 +46,14 @@ Publications
 - *The Invocation of Metric Code*, Infocalypse Press, Volume 1 Issue I (Forthcoming)
 - *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
 - *Holly Tree*, The Celestial Glossary, Volume 1 Issue 1 (Forthcoming)
+- *Larksong*, Artists From Maryland, February 2026 (Forthcoming)
+- *Eulogy*, Artists From Maryland, February 2026 (Forthcoming)
+- *Pantoums of Dementia, Movement I: Undulation*, Scribeworth Magazine, Winter 2025 (Forthcoming)
+- *Larksong*, Garfield Lake Review, 2026 Edition (Forthcoming)
+- *Eulogy*, Garfield Lake Review, 2026 Edition (Forthcoming)
+- *Pantoums of Dementia*, Garfield Lake Review, 2026 Edition (Forthcoming)
+- *Ode to Death*, Garfield Lake Review, 2026 Edition (Forthcoming)
+- *The Origin of Lies*, Garfield Lake Review, 2026 Edition (Forthcoming)  
 
 .. _contests:
 

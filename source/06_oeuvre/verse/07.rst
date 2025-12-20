@@ -37,7 +37,10 @@ Billboards
     - Pending
   * - November 24, 2025
     - Artists from Maryland
-    - Pending
+    - Rejected
+
+Rejected
+~~~~~~~~
 
 .. epigraph::
 
