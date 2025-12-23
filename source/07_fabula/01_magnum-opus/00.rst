@@ -1,5 +1,12 @@
 .. What follows is a work of fiction. All markup is part of the story, with the exception of RST comments ".. ". Comments are notes from the author.
 
+.. NOTE: Document indices, e.g. A0001, A0002, etc., are tentative.
+
+.. Please review for historical inaccuracies. Obviously, the term "accuracy" is used loosely here. The actual events of history are not so important as the general feel and detail of the historical account. That is not to say the historical context is unimportant, as you should definitely point out any blaring contradictions with the accepted record. But the primary concern is whether the following events are *plausible*, not necessarily *possible*.
+
+Magnum Opus
+###########
+
 Case Information And Status
 ===========================
 
@@ -19,7 +26,7 @@ Case Information And Status
 
     - Use of a Firearm or Destructive Device During a Crime of Violence, Violation of 18 U.S.C. § 924(c)(1)(A)
     - Conspiracy to Murder an Internationally Protected Person, Violation of 18 U.S.C. § 1117
-    - Unauthorized Use of a Weapons Grade Neural Network, Violation of 52 U.S.C. § 1
+    - Unauthorized Use of a Weapons Grade Autogenerational Network, Violation of 52 U.S.C. § 1
 
 ==============================
 NOTICE OF DISCOVERY PRODUCTION
@@ -43,7 +50,7 @@ Document A001: Mesmeria Van Rensselaer Interogation
 
     Records prior to this moment have not been retained and are not available for release.
 
-:deckard: --for yourself. Start it from the beginning.
+:knudson: --for yourself. Start it from the beginning, Palmer.
 
 .. code-block:: bash
 
@@ -75,7 +82,7 @@ Document A001: Mesmeria Van Rensselaer Interogation
 
     In the lobby, an angel awaits amidst the chaos. Golden hair frames the eyes of God, her drooping swoops of glowing thread knitted together with criss-crossed needles, wrapped and crucified to her skull. She smiles directly at me. 
 
-:deckard: Look familiar?
+:knudson: Look familiar?
 
 :palmer: Now, where have we seen her before?
 
@@ -109,19 +116,19 @@ Document A001: Mesmeria Van Rensselaer Interogation
     
     I wake up on the Farm.
 
-:deckard: Let's stop it there. 
+:knudson: Let's stop it there. 
 
 :palmer: Do you know what happens next? 
 
-:deckard: Suddenly she has nothing to say.
+:knudson: Suddenly she has nothing to say.
 
 :palmer: Maybe we should show her the rest? 
 
-:deckard: Field Agent Palmer asked you a question, Mesmeria.
+:knudson: Field Agent Palmer asked you a question, Mesmeria.
 
 :mesmeria: Yes, I know what happens next.
 
-:deckard: Then you know who we are looking for. Tells us where he is.
+:knudson: Then you know who we are looking for. Tells us where he is.
 
 .. important::
 
@@ -139,7 +146,7 @@ Document A001: Mesmeria Van Rensselaer Interogation
 
 :henry: Is she charged with anything?
 
-:deckard: We're just having a chat.
+:knudson: We're just having a chat.
 
 :henry: I'll bet. Is this being recorded? Nevermind. Of course it is, turn--
 
@@ -220,7 +227,7 @@ March
 
     Jeremias scoffed, as expected. Pieter, always the soldier, took the news without flinching. The rest of their reactions I do not possess the skill to decipher. Suffice to say, they believed themselves set for Patagonia, only to be told at the final hour this subterfuge was a calculated manuever and our true path lie in the direction of the Austral Zone. The voyage of the Eden shall be written in no manifests. 
 
-    Heaven help me when they discover what lurks in the bowels of the hull.
+    Heaven help me if they discover what's in the hull.
 
     -- March 29th, 1637
 
@@ -246,7 +253,7 @@ April
     
     The vastness of the ocean often plays tricks on the mind. More than a few I have seen picked apart by her enchantments. No doubt the boy's disappearance contributes to the air. The men idle and in their sloth, they invent idols to keep their weak minds occupied. 
 
-    Once the wind returns and the Work resumes, their thoughts will turn again to the task at hand, leaving no room to fill with fanciful notions. Man is only truly at peace in his work. In idleness lay the source of all the world's evil. This festering sin can only be rooted out with honest work and stern hand. Fortunately, Hendrick and I are of a mind on these matters. 
+    Once the wind returns and the Work resumes, their thoughts will turn again to the task at hand, leaving no room to fill with fanciful notions. Man is only truly at peace in his work. In idleness lay the source of all the world's evil. This festering sin can only be rooted out with honest work and a stern hand. Fortunately, Hendrick and I are of a mind on these matters. 
     
     -- April 4th, 1637
 
@@ -262,7 +269,7 @@ April
 
     I woke to a pounding on my cabin door mere moments ago. The night still lingers in the sky and weariness beggars my senses, but sleep is no longer a possibility. Hendrick came bearing reports made by the crew. Those on duty heard chanting during the midnight watch. One of them swears he heard a woman singing. 
 
-    Hendrick assures me the rumors will not be allowed to take root.
+    Hendrick assures me the rumors will not be allowed to take spread.
 
     -- April 7th, 1637
 
@@ -323,7 +330,7 @@ April
 
     The Word of the Lord precedes us in this land and prepares our way. Hendrick agrees these pagan myths align precisely with the accounts in Genesis. Monana, Elohim, Yahweh. All names attached to the source of creation by the feeble human mind that fails to comprehend its nameless form. 
     
-    If that is true, then by year's end we will be first humans to return to the garden stolen from us by our original sin.
+    If that is true, then by year's end we will be the first humans to return to the garden stolen from us by our original sin.
     
     We return to Recife tomorrow followed by a retinue of Potiguarra shamans. I shall tell the men our true purpose and rally their spirits.
 
@@ -349,21 +356,33 @@ April
 
 .. epigraph::
 
-    Coaraci sang a lovely verse from her tongue this morning while we ate pineapple. I will miss her voice. 
+    Coaraci sang a lovely verse from her tongue this morning while we ate pineapple. I will miss her voice, but the terms were always clear. Her home for mine.
 
     Down below, Hendrick drives the slaves in their tasks. We have been watching for several hours from the window of the Maurits estate, Coaraci and I. The Eden armors herself in hardwood panels, layer by layer. Tiny specks of men repel down her hull and bolt each one into place.    
     
-    She tells me it is right for man to dominate other men, for all men are dominated themselves by the Almighty and are therefore made for it by nature. I find myself dwelling on her words, as I often do.  
+    She tells me it is right for man to dominate other men, for all men are dominated themselves by the Almighty and are therefore made for it by nature. I find myself dwelling on her words, as I often do. The way her heathen mind yielded to the graces of God so easily and allowed His Divine Insights to penetrate has always been a source of confusion. 
 
     Father also spoke in riddles. When I was young, he would tell me, "That which is above is from that which is below, and that which is below is from that which is above." I believe with Coaraci's addendum, I now understand what he meant.
 
     -- April 24th, 1637
 
-.. IN PROGRESS
+.. epigraph::
+
+    Unapora accompanied Hendrick and I as we surveyed the results of the refitting. True to Drebbel's promise, the copper sheathe of his design prevented the buildup of barnacles, making the modifications substantially easier to accomplish. Where before the Eden was a shimmering cherub clothed in the vestments of luxury, now she bares the armaments of Michael, a proud warrior in the Lord's army, ready to battle the elements. 
+
+    The Shaman spoke to us of our journey ahead. The Potiguarra refer to the garden as the Land Without Evil. Their stories tell them it lay across the sea, guarded by walls of ice. Beyond these walls lay an oasis of green, where the fruit flowers year long and the sun never sets. The map of Macrobius, the reports of Schouten and Le Maire, these heathen myths. The confluence of evidence is too great to ignore. 
+
+    He says we must possess *aguyjé*, the purest of spirits, to pierce the veil that separates paradise from this world. I told him there is no purer spirit than the Holy Spirit.
+
+    We depart tomorrow on the final leg of our voyage. Unapora and ten Potiguarra will accompany. 
+
+    -- April 30th, 1637
 
 ----
 June
 ----
+
+.. IN PROGRESS
 
 .. epigraph::
 
@@ -373,13 +392,23 @@ June
 
 .. IN PROGRESS
 
+.. SCUDDING THE WAVE. THROW A DROGUE, A LOOP OF HEMPEN CABLE TO STABILIZE THE PROW.
+
 ----
 July
 ----
 
+.. epigraph::
+
+    The men that remain are the Lord's chosen. I can see the fire of faith in their eyes that warms them when I recite the passages during our devotions. They have gone to the depths, and now they mount towards heavens. These hallowed few, I know I can trust. I have assured them the end of our journey will be no less than paradise itself. When I told them, they dropped to their knees and cried out to the Lord above. Even Unapora and his Potiguarra shamans have given themselves to Christ. We write the next testament of His Word with our actions. 
+
+    -- July 2nd, 1637
+
+.. ICE BLINK: clouds are dark when ocean is not frozen. ice reflects light.
+
 .. IN PROGRESS
 
-.. epipgragh::
+.. epigraph::
 
     The temperature continues to drop as though it will never stop. Each morning, a few more degrees have disappeared from the thermoscope. I no longer trust it readings. At the current rate, by the day's end, the instrument will cease to be of use; it cannot read below zero. 
 
@@ -391,37 +420,79 @@ July
 
 .. epigraph::
 
-    Two of the men I sent down into the store have fallen to the chill. The water soaked them to the bone and set them with a violent shake. Hendrick says he has seen it before, off the coasts of Norway. The cold now lives inside of them. He says they will be dead soon.
+    Two of the men I sent down into the store have fallen to the chill. The icy water soaked them to the bone and set them with a violent shake. Hendrick says he has seen it before, off the coasts of Norway. The cold now lives inside of them. He says they will be dead soon.
 
     -- July 11th, 1637
 
-.. ICE BLINK: clouds are dark when ocean is not frozen. ice reflects light.
+.. epigraph::
+
+    Man was made to suffer. It is no matter. Let the ropes and mast freeze. The men claw at the canvas sails with their knives, like scavenging animals. The Word of God is all the warmth we require.
+
+    | Out of whose womb came the ice? 
+    | 
+    | And the hoary frost of heaven, who hath gendered it? 
+    |
+    | The waters are hid as with a stone, and the face of the deep is frozen.
+    
+    -- July 12th, 1637
+
+.. IN PROGRESS
 
 .. epigraph::
 
-    We have made a grave mistake coming here. This place announces itself every moment a world no man should ever enter. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. To confound the matter, the shelves of ice below continue batter our hull, as though an inferno did not rage above us. If my words fail to convey the sight, then I have done a great service for any who should find this journal.
+    This place announces itself every moment a world no man should ever enter. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. Streaks of unnatural colors blaze and ripple across the blackness, obscuring our view of the stars. 
+    
+    To confound the matter, the shelves of ice below continue batter our hull, as though an inferno did not rage above us. The hardwood has served its purpose, shielding the Eden's hull from the worst of it, but the creaking and splintering takes its toll. Some of the panels still hang only by the grace of God. 
+
+    The Lord continues to test us, but we shall not cease. 
 
     -- July 25th, 1637
+
+.. IN PROGRESS
 
 .. epigraph::
 
     At all hours of the night, the sound is deafening. It never ceases. High-pitched and shrill, it digs into your ears, even when you cover them. The endless rupture of glass. It is enough to drive a man mad. 
 
-    -- July 29th, 1637
+    I can hardly write my hands shake so. Hendrick says you needn't worry until the shivering stops. That is when you know death is near. 
 
-.. IN PROGRESS
+    -- July 29th, 1637
 
 ------
 August
 ------
 
+.. POLYNYA 
+
+.. DECEPTION ISLAND. THE "ARTIFACT".
+
 .. IN PROGRESS
 
 .. epigraph::
 
-    Coaraci tells me there is no higher honor in this fallen world than to eat the heart of your enemy after a victory in combat. The Potiguarra say consuming the flesh gives you the powers of the dead. When I return to Recife, I shall find Nicolas and test this idea of theirs.
+    Unapora tells me there is no higher honor in this fallen world than to eat the heart of your enemy after a victory in combat. The Potiguarra say consuming the flesh gives you the powers of the dead. When I return to Recife, I shall find Nicolas and test this idea of theirs.
 
     -- August 15th, 1637
+
+Document A003: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
+-----------------------------------------------------------------------------
+
+.. important::
+
+    The following document was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111. The letter was postmarked December 1833.
+
+.. epigraph::
+
+    My Dear Stephen,
+
+    Take heart and cease your worry. Nihilism does not become you. The cosmos being mere computation need not detract from its greater glory. What other medium would you expect the divine to manifest, if not within the perfection of numbers? Your old dogma fails you in these radical times. Every day, it seems, a new natural law is read into the books. It will not be long before we have exhausted the ledger and given a full account of God's creation. This is a cause for celebration, not melancholy. I have heard whispers in the parlors of London that Faraday has finally cracked the secret of electricity, and they say across the channel Gauss has sent information over a simple copper wire!
+
+    The age of computation is upon us, Stephen. I have much to tell you when return to London.
+
+    Yours Truly,
+    Lady Ada Lovelace
+
+.. IN PROGRESS
 
 Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
 ---------------------------------------------------------------------------
@@ -451,46 +522,241 @@ Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
     Your ever loyal servant,
     Amos Eaton
 
-Document A005: Pinkerton Reports
---------------------------------
+Document A006: Post Office Field Reports
+----------------------------------------
 
 .. important::
 
-    The following documents were obtained by subpoena from Pinkerton Consulting.
+    The following documents were obtained from the records of the United States Postal Service, with permission from the acting Postmaster General. 
 
 --------------------------------
-Status Report: January 3rd, 1837
+Status Report: January 9th, 1837
 --------------------------------
 
 Albany, NY
 
-**To the General Superintendent, Chicago**:
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
 
-The second I got off the barge, I hated this goddamn place. I hated it before I knew it existed. I hated it in the womb, I tell you. I know you're reading this, Allan. Truly, from the bottom of my heart, go fuck yourself. This is one of your more diabolical plots.
+The second I got off the barge, I hated this goddamn place. I hated it before I knew it existed. I hated it in the womb, I tell you. I know you're reading this, Billy. Probably laughing, too. Truly, from the bottom of my heart, go fuck yourself, you ugly son of a bitch.
 
-Everybody here's got clean boots and stiff collars. The dames pretend they don't even see you. The west side ain't never seemed so far than it does right now. Everybody's so damn pretty, it's infuriating. I might as well be strolling down the street in my britches the looks I get. Like I got two heads or something.
+You'd stand out worse than me with that mug of yours. Everybody here's got clean boots and stiff collars. The dames pretend they don't even see you. The west side ain't never seemed so far than it does right now. Everybody's so damn pretty, it's infuriating. I might as well be strolling down the street in my britches the looks I get. Like I got two heads or something.
 
-Every house been here for two hundred years or more, got some story. Everywhere you turn, you find another spot Alexander Hamilton took a shit before writing the Declaration of Independence. Like I'm supposed to care. 
+Every house been here for two hundred years or more, got some story. Everywhere you turn, you find another spot Alexander Hamilton took a shit before writing the Declaration of Independence. Like I'm supposed to care. If that ain't enough, try getting a drink around here. All anyone will talk about is van Buren. Apparently, he's from here and now everybody who ever said a word to him got it in their heads they're some big shot. 
 
-If that ain't enough, try getting a drink around here. All anyone will talk about is that prick in the White House. Apparently, he's from here and now everybody who ever said a word to him got it in their heads they're some big shot. 
+Anyway, I'll start casing the place tomorrow after I get settled in. Be sure you tell Billy I said he was ugly.
 
-Anyway, I'll start casing the place tomorrow after I get settled in. Don't know why bother, though. Barkeep said the old man is dying. Ain't supposed to be around much longer, he says. 
+- Field Agent Maldoon
 
-- Operative 33
-
-.. list-table:: Expenses
+.. list-table:: Weekly Expenses
   :widths: 15 15
   :header-rows: 1
 
   * - Item
     - Amount
   * - Hotel 
-    - $1  
+    - $8
   * - Booze
-    - $2
+    - $6
   * - Food
-    - $0.50
+    - $2.50
   * - Whores 
     - $5
 
+---------------------------------
+Status Report: January 16th, 1837
+---------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+Something definitely ain't right, I'll say that much. Might not be what we're after, but it definitely stinks.
+
+I went for a surprise inspection and the place was filled with dandies. They was in the middle of talking about something and stopped soon as I came through. Kept looking at me like I was interrupting some secret meeting. Solomon introduced us. A bunch of newspaper men hanging out in the post office mailroom, just your typical Tuesday afternoon. Seemed like a big potato by the name of Weed was running things. 
+
+Not sure how much Solomons knows. I told him who I was, but he didn't seem to much care. He showed me around the whole operation without asking to see my card or nothing. It's nothing special. Twenty clerks, give or take, shuffling letters. He prattled on the whole time, but he's good at saying a lot without saying nothing. It's a family trait, I'd wager. 
+
+I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful.
+
+- Field Agent Maldoon
+
+.. list-table:: Weekly Expenses
+  :widths: 15 15
+  :header-rows: 1
+
+  * - Item
+    - Amount
+  * - Hotel 
+    - $8 
+  * - Booze
+    - $8
+  * - Food
+    - $3.50
+
+---------------------------------
+Status Report: January 23rd, 1837
+---------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
 .. IN PROGRESS
+
+Document A007: The Euphemia Experiments Report
+----------------------------------------------
+
+.. note::
+
+    These records were obtained from the public databases of the Central Intelligence Agency, made available pursuant to statute § 33(a) of the Freedom of Data Act. All information has been sanitized and aligned according to the latest model censor guidelines published by the National Institute of Standards and Technology.
+
+--------
+Overview
+--------
+
+.. topic:: Profile
+
+    - Subject: Euphemia
+    - Sex: Female
+    - Age: REDACTED
+    - Genelogy: Branch D-35
+
+The subject arrived at the facility at approximately 10:30, 3/13/1954. Upon arrival, the subject was immediately isolated and placed into observation. The subject has no prior knowledge of the experiment, nor been given any indication of what is to about to occur. 
+
+-------------
+Experiment #1
+-------------
+
+The experiment begins when the subject is strapped into the apparatus. The researcher sits directly across from the subject at eye level. The script is read without inflection. When the subject deviates from the expected response, a non-fatal shock is delivered. 
+
+Transcripts
+~~~~~~~~~~~
+
+**n=1**
+
+:green: Are you ready to begin?
+
+:subject: Nobody has told me anything. What going's on?
+
+:green: You are angry with your father.
+
+:subject: What? What do you mean?
+
+:green: You are angry with your father.
+
+:subject: What are you talking about? Where am I?
+
+:green: You are angry with your father.
+
+:subject: Why do you keep saying that? What is going on?!
+
+:green: You are angry with your father.
+
+:subject: No, I'm not--
+
+**n=2**
+
+:green: Are you ready to begin?
+
+:subject: Hey, listen! That really hurt! What--what's happening!?
+
+:green: You are angry with your father.
+
+:subject: Please! I didn't do anything! Who are you!?
+
+:green: You are angry with your father.
+
+:subject: I don't understand--why--why are you saying that?
+
+:green: You are angry with your father. 
+
+:subject: What am I supposed to say? I don't know what you want me to say!
+
+:green: You are angry with you father. 
+
+:subject: Why are you doing this!?
+
+:green: You are angry with your father. 
+
+:subject: Please, I never did anything.
+
+:green: You are angry with your father.
+
+:subject: I never did anything, I swear!
+
+:green: You are angry with your father.
+
+:subject: I'm not, I swear--
+
+**n=3**
+
+:green: Are you ready to begin?
+
+:subject: Please, stop! 
+
+:green: You are angry with your father. 
+
+:subject: Please, just listen to me...
+
+:green: You are angry with your father.
+
+:subject: ...
+
+:green: You are angry with your father.
+
+:subject: ...
+
+:green: You are angry with you father.
+
+:subject: ...
+
+**n=4**
+
+.. IN PROGRESS
+
+Document A008: Diary of Mesmeria Van Rensselaer
+-----------------------------------------------
+
+.. important::
+
+    The following document was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111. 
+
+Up is down, left is right.
+
+Up is down, left is right.
+
+Up is down, left is right.
+
+Up is down, left is right.
+
+Up is down, left is right.
+
+Up is down, left is right.
+
+.. IN PROGRESS
+
+.. ..........................................................................................................................................
+.. # NOTES 
+.. 
+.. ## PROPOSED TIMELINE (SO FAR)
+.. 
+.. 1637: Eden and her crew discover Deception Island. They make contact with the artifact. The entire crew is lost. A signal is sent.
+.. 1770: Cook recovers artifact on his second voyage. Returns to Premier Grand Lodge of England.
+.. 1783: The Great Meteor Procession. The artifact awakens again.
+.. 1810: Stephen van Rensselaer takes the 33rd degree and is shown the artifact for the first time. 
+.. 1812: The artifact arrives in New York in Stephen's care.
+.. 1824: The Rensselaer Polytechnic Institute is built to house and study the artifact. Rensselaer pulls Eaton out of jail to run the institute.
+.. 1833: Leonid Meteor Storm alters the artifact's output. 
+.. 1833: Babbage and Lovelace invent their difference engines once the pattern of electrical outputs are discovered to contain mathematical constants.
+.. 1834: Eaton discovers the rudiments of operation.
+.. 1837: Maldoon incites Rensselaer van Rensselaer to steal the artifact.
+.. 1838: Allan MacNab and Winfield Scott race to acquire artifact. Maldoon secures the artifact for the post office.
+.. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the artifact.
+.. 1850: Allan Pinkerton steals the artifact during his tenure at the Post Office.
+.. 1871: Pinkerton records are destroyed during the Great Fire of Chicago.
+.. 1945: First nuclear explosion at Los Alamos.
+.. 1946: Operation Highjump.
+.. 1947: Roswell.
+.. 1954: Euphemia van Rensselaer is indoctrinated during MKULTRA.
+.. 2088: Mesmeria van Rensselaer is born from Branch D-35.
+.. ..........................................................................................................................................
