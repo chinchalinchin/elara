@@ -41,7 +41,6 @@ Shabaka Stone
 
     -- `Shabaka Stone, Lesko Translation`_
 
-
 .. _eridu-genesis-creation:
 
 Eridu Genesis
