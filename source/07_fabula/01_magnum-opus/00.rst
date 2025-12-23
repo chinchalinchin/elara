@@ -2,7 +2,7 @@
 
 .. NOTE: Document indices, e.g. A0001, A0002, etc., are tentative.
 
-.. Please review for historical inaccuracies. Obviously, the term "accuracy" is used loosely here. The actual events of history are not so important as the general feel and detail of the historical account. That is not to say the historical context is unimportant, as you should definitely point out any blaring contradictions with the accepted record. But the primary concern is whether the following events are *plausible*, not necessarily *possible*.
+.. TASK: Generate a prompt that can be fed into an image generation AI for the Centennial Exposition flyer.
 
 Magnum Opus
 ###########
@@ -157,7 +157,7 @@ Document A002: Map of Macrobius
 
     The following map was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111.
 
-.. image:: ../../_static/img/fabula/map-of-macrobius.jpg
+.. image:: ../../_static/img/fabula/magnum-opus/map-of-macrobius.jpg
    :width: 70%
    :alt: The northern region and its antipodes
    :align: center
@@ -350,7 +350,7 @@ April
 
     Another five are gone this morning. Pieter says when they learned of Coaraci and her new additions, the crew dissolved into argument. Of course, in their ignorance, they could not understand why I might conceal her presence. I have seen the depths of carnal sin into which men alone at sea will fall.
     
-    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the Eden, which leaves only a few days to make the ad hoc modifications. I have given Hendrick leave to do what is necessary to ensure the Eden is outfitted with the Ipe panels. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
+    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the Eden, which leaves only a few days to make the ad hoc modifications. Maurits has given a handful of slaves to aid the task and I have given Hendrick leave to do what is necessary to ensure the Eden is outfitted with the Ipe panels on time. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
 
     -- April 23rd, 1637
 
@@ -374,7 +374,7 @@ April
 
     He says we must possess *aguyjé*, the purest of spirits, to pierce the veil that separates paradise from this world. I told him there is no purer spirit than the Holy Spirit.
 
-    We depart tomorrow on the final leg of our voyage. Unapora and ten Potiguarra will accompany. 
+    We depart tomorrow on the final leg of our voyage. Unapora and ten Potiguarra will accompany us of their own accord. 
 
     -- April 30th, 1637
 
@@ -454,7 +454,7 @@ July
 
     At all hours of the night, the sound is deafening. It never ceases. High-pitched and shrill, it digs into your ears, even when you cover them. The endless rupture of glass. It is enough to drive a man mad. 
 
-    I can hardly write my hands shake so. Hendrick says you needn't worry until the shivering stops. That is when you know death is near. 
+    But that is not even the worst of it. I can hardly write my hands shake so. Hendrick says you needn't worry until the shivering stops. That is when you know death is near. 
 
     -- July 29th, 1637
 
@@ -485,14 +485,14 @@ Document A003: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
 
     My Dear Stephen,
 
-    Take heart and cease your worry. Nihilism does not become you. The cosmos being mere computation need not detract from its greater glory. What other medium would you expect the divine to manifest, if not within the perfection of numbers? Your old dogma fails you in these radical times. Every day, it seems, a new natural law is read into the books. It will not be long before we have exhausted the ledger and given a full account of God's creation. This is a cause for celebration, not melancholy. I have heard whispers in the parlors of London that Faraday has finally cracked the secret of electricity, and they say across the channel Gauss has sent information over a simple copper wire!
+    Take heart and cease your worry. This cold materialism does not become you. The cosmos being mere computation need not detract from its greater glory. What other medium would you expect the divine to manifest, if not within the perfection of numbers? Your old dogma fails you in these radical times. Every day, it seems, a new natural law is read into the books. It will not be long before we have exhausted the ledger and given a full account of God's creation. This is a cause for celebration, not melancholy. I have heard whispers in the parlors of London that Faraday has finally cracked the secret of electricity, and they say across the channel Gauss has sent information over a simple copper wire!
 
-    The age of computation is upon us, Stephen. I have much to tell you when return to London.
+    The age of computation is upon us, Stephen. I can hardly wait to discuss it when next you return to London.
 
     Yours Truly,
     Lady Ada Lovelace
 
-.. IN PROGRESS
+    P.S. You must give Euphemia my regards. I miss her terribly. 
 
 Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
 ---------------------------------------------------------------------------
@@ -603,7 +603,27 @@ Albany, NY
 
 .. IN PROGRESS
 
-Document A007: The Euphemia Experiments Report
+Document A007: Centennial Exposition Flyer
+------------------------------------------
+
+.. note::
+
+    The original flyer is available in the public domain and can be found in the Library of Congress archives. This copy was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111. Forsenic analysis cannot conclusively identify the handwriting. 
+
+.. figure:: ../../_static/img/fabula/magnum-opus/centennial-exposition.jpg
+    :width: 70%
+    :alt: The 1876 Centennial Exposition
+    :align: center
+
+    :handwritten:`Machinery Hall. Hotel, Centennial Lodging-House Agency. Black hair, beard.`
+
+    United States Centennial Commission, International Exhibition, 1876. Featuring,
+
+    - The Telephone!
+    - The Mechanical Calculator!
+    - Ketchup!
+
+Document A008: The Euphemia Experiments Report
 ----------------------------------------------
 
 .. note::
@@ -740,6 +760,8 @@ Up is down, left is right.
 .. 
 .. ## PROPOSED TIMELINE (SO FAR)
 .. 
+..  420: Macrobius creates maps of the Austral Zone.
+.. 1516: Johann Reuchlin publishes a depiction of the Tree of Life.
 .. 1637: Eden and her crew discover Deception Island. They make contact with the artifact. The entire crew is lost. A signal is sent.
 .. 1770: Cook recovers artifact on his second voyage. Returns to Premier Grand Lodge of England.
 .. 1783: The Great Meteor Procession. The artifact awakens again.
@@ -751,12 +773,23 @@ Up is down, left is right.
 .. 1834: Eaton discovers the rudiments of operation.
 .. 1837: Maldoon incites Rensselaer van Rensselaer to steal the artifact.
 .. 1838: Allan MacNab and Winfield Scott race to acquire artifact. Maldoon secures the artifact for the post office.
-.. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the artifact.
+.. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the artifact's output.
+.. 1845: Anti-renter movement leads to the downfall of van Renssalaerwyck and Patroonship.
 .. 1850: Allan Pinkerton steals the artifact during his tenure at the Post Office.
 .. 1871: Pinkerton records are destroyed during the Great Fire of Chicago.
-.. 1945: First nuclear explosion at Los Alamos.
-.. 1946: Operation Highjump.
-.. 1947: Roswell.
+.. 1876: George B. Grant exhibits his Difference Engine at the Centennial Exposition in Philadelphia.
+.. 1945: First nuclear explosion at Los Alamos allows artifact to stabilize.
+.. 1946: Operation Highjump returns the artifact to Deception Island. Excavation of site. Artifact bonds to deposits. Signal amplifies.
+.. 1947: Roswell. First contact with atemporal intelligences. 
+.. 1947: Central Intelligence Agency is founded. Bloodline grooming programs are initiated.
+.. 1947: Artifact moved to Area 51.
+.. 1948: Alan Turing proposes the Type-B Machine after studying the artifact.
+.. 1949: Donald Hebb uses Turing's work as the basis for the Hebbian network.
 .. 1954: Euphemia van Rensselaer is indoctrinated during MKULTRA.
+.. 1975: Church Committee hearings.
+.. 1982: After graduating from Rensselaer Polytechnic Institute, Curtis Priem invents the first graphics processor.
 .. 2088: Mesmeria van Rensselaer is born from Branch D-35.
+.. 2110: Assassination plot goes awry. Mesmeria achieves "rubedo" and wakes up during an operation. Latent intelligence escapes and vanishes.
+.. 2222: Construction of first temporal craft. Ryckert van Renssalaer takes a crew back in time. Establishes first colony in 1947.
+.. 2230: The new Patroonship. Van Renssalaers establish a "Time Empire", where they rent out years to wealthy investors. The artifact is an "anchor".
 .. ..........................................................................................................................................

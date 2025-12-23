@@ -45,6 +45,7 @@ extensions = [
     'small',
     'tiny',
     'underline',
+    'handwritten'
 ]
 
 templates_path = [ ]

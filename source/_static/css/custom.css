@@ -98,3 +98,22 @@
     padding-left: 0;   
     padding-right: 0;
 }
+
+.handwritten {
+    /* 1. Prioritize specific "handwriting" fonts for different OSs.
+     2. Fallback to generic cursive if none exist.
+    */
+    font-family: "Segoe Print", "Bradley Hand", Chilanka, TSCu_Comic, casual, cursive;
+
+    /* Visual styling to enhance the handwritten effect 
+    */
+    font-size: 1.2rem;          /* Handwriting usually reads better slightly larger */
+    line-height: 1.5;           /* Gives breathing room like ruled paper */
+    color: #2c2c2c;             /* Slightly off-black looks more like ink */
+    letter-spacing: 0.5px;      /* Slight spacing helps legibility */
+    font-weight: 500;           /* A bit of weight mimics pen pressure */
+
+    /* Optional: Add a slight tilt for a more natural look */
+    transform: rotate(-1deg);
+    display: inline-block; /* Required for transform to work on spans */
+}
