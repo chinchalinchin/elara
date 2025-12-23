@@ -1,54 +1,496 @@
-Chapter 1
----------
+.. What follows is a work of fiction. All markup is part of the story, with the exception of RST comments ".. ". Comments are notes from the author.
 
-I am born from the echo of a gunshot, within a maze of plumbing. The muffled ring of a cellphone. A shower of glass, a waterfall of sunlight. Startled silence. The frantic flight of awestruck pigeons. A single drop of moisture condenses on the copper pipe above my head and splatters on my forehead. 
+Case Information And Status
+===========================
 
-My hands are humming. Engines churn with rattled steel. The building belches steam and heat. Hot grease burns on raw skin. I blink. Two hundred yards away, the crowd parts along the path of the bullet, like waves cut across the surface of endless ocean. 
+.. admonition:: Case Information
+    
+    Case 
+        #GT17008341-01
 
-A cellphone rings dull and faint, as if I were submerged. My thigh vibrates. I melt into noise. The room stutters with light sliced through spinning vent fans. The cool rush of air pumping through the hidden nervous system of the library. The rifle barrel screams and hisses. Each passing moment, it weighs more, pulling me into my body.
+    Defendant
+        Mesmeria Van Rensselaer
+    
+    Offense Date
+        12/23/2110
+    
+    Hearing Date
+        11/12/2111
 
-History is measured in seconds. The cellphone rings. A moment contains the universe. I am shattered glass. The crystal arcs that fall beneath a stampede of panic. Shards and pieces, broken reflections, slivers of a hundred lives. 
+    - Use of a Firearm or Destructive Device During a Crime of Violence, Violation of 18 U.S.C. § 924(c)(1)(A)
+    - Conspiracy to Murder an Internationally Protected Person, Violation of 18 U.S.C. § 1117
+    - Unauthorized Use of a Weapons Grade Neural Network, Violation of 52 U.S.C. § 1
 
-A cellphone rings. It says, "Mercury and obsidian."
+==============================
+NOTICE OF DISCOVERY PRODUCTION
+==============================
 
-Symbols, alchemical and potent, forced down my throat. Thoughts, like a plague spreading through my brain. Ratchets and cranks. The barrel whirls along its threads, ejected from the stock. With the precision of a surgeon, I disassemble the gun while wondering what it is I am doing here. What thoughts unwind through my mind. Why my hands are moving in intricate patterns across the oiled steel that moments ago vibrated with my birth. Once reduced to its constituents, the gun is little more than a pile of bolts and levers that clatter into the bottom of my backpack.
+- **UNITED STATES DISTRICT COURT**
+- **SOUTHERN DISTRICT OF VIRGINIA**
 
-My fingers slip the vent cover back into place. The screams have started. The waves of the crowd converge back to the source of their rupture, the lifeless body under a dogpile on stage. A terrible pressure grips my molar and twists. Seizures convulse on the edge of my attention, unfathomable pain descending down my throat. The only thing preventing me from prying and ripping the tooth out is a lack of pliers. 
+**TO THE CLERK OF COURT AND ALL PARTIES OF RECORD**:
 
-Words constrict on my tongue, *Caput mortuum*. I swallow lacerations. A supernova erupts in my throat, a consuming fire spreading across my face, emanating from my tooth. The pain shoots perpendicular to my body, sheering thoughts from movement. Time flows around me, as though I were an afterthought, a mere curiosity. My legs carry me of their own accord. Through maintenance hatches. Hazy red lights and pipes whistling with inaudible human voices. Secrets. Into the stark white of flourescent tubes, a lineoleum labyrinth of offices and closets. Stairwells curling like vines up the sides of fused concrete. 
+PLEASE TAKE NOTICE that on 11/1/2111, the United States of America, by and through undersigned counsel, produced discovery materials to opposing counsel in accordance with Rule 16 of the Federal Rules of Criminal Procedure.
 
-Down and down, spiraling. Watched by the sinister lens of an electronic eye. Tracked down closed circuit hallways, fed into the wires, fractals of me in high definition multiplying on hidden screens. I am watching myself from the back of an unmarked van, headphones tuned to the tapping of my rubber heels against the dull shine of floors, the labored gasping of newborn life heaving through my lungs. A pulsating line of pixels tracks my thoughts, transcribing each errant whim onto transistors. My mind is a warehouse, a data center, a trillion converging currents. The lancing thermal expansion of space cracks my jaw, pounding through my tooth. 
+The production included the following materials.
 
-Doors lead me through rows of books, through ranks of non-fiction and classics. The weathered yellow of discarded yarns. Mold spores trail in my wake. The air is thick with whispered prayers, vacated tables still bearing scrawled notes and open pages. Murmurs and breathless exchanges tickle ears. Huddled students, crying underneath desks, hug each other and beseech invisible forces.
+Document A001: Mesmeria Van Rensselaer Interogation
+---------------------------------------------------
 
-I press my tongue against a blossom of fire. Sharp streams of electricity vibrate through my bones. Is this life? Compelled and ushered along rails, drawn inexplicably from nothing and cast in a world of searing pain and confusion. Where are my memories? What is happening?
+.. important::
 
-Down and down, spiraling. Past crowds arrayed around windows, noses pressed against glass. Foggy imprints of fear, smeared in suspended animation. I disappear through art displays and ceramic statues. Decades unpeel, scenes flash, projected directly into my brain. Somewhere, a man grovels and begs me not to kill him. A hammer cocks through reverberating echoes, through spools of time. Iron screams and the pressure twitch of a trigger finger, branching universes growing from a single, compressed millimeter springing back into place. A clicking and then a loud clack, my boot heels pounding towards the exit, towards freedom.
+    Date: 10/21/2111
 
-In the lobby, an angel awaits amidst the chaos. Golden hair framing the eyes of God. Drooping swoops of glowing thread, knitted together with criss-crossed needles, wrapped and crucified to her skull. She smiles directly at me. 
+    Records prior to this moment have not been retained and are not available for release.
 
-"May I take your bag?" She asks as if nothing at all were amiss.
+:deckard: --for yourself. Start it from the beginning.
 
-Thoughtless, I hand the librarian my bag. She places it in a plastic bin and then motions toward the glass doors.
+.. code-block:: bash
 
-"Thank you for your patronage!", She smiles and leads me to the door, gently guiding me outside. I stare at her in bewilderment. She says, "Please do come again."
+    $ stream start -v -i /var/lib/layers/2110-12-23-14:33:32.rec 2> /dev/null
 
-Outside, the heavens rain sheets of locusts. Metallic scarabs balancing atop symmetrically distributed propellers, descending in perfect vertical lines, coating the sky and filling the air with the barely perceptible buzz of hive minds. Swarms hover over fleeing crowds, like shepherds herding flocks. Flitting clouds of gyroscopic eyes, recording and cataloguing, scanning faces, broadcasting signals, communing with hidden realities.
+.. topic:: stdout
 
-Slamming shutters canvas the landscape, arranging the puzzle pieces of geography into stop motion frames. Strung together thoughts. Flickering flashes, infrared filters. My heat radiates the deep purple of stellar depths, moves through fields oozing yellow and orange, the red of racing hearts, away from the fading blue going to black on stage. Algorithms lock onto electromagnetic signatures emitting from my cortices. I am following myself, watching myself, wondering what I am doing, why I am not following the plan. Contingencies activate, jets are scrambled, satelittes triangulate.
+    I am born from the echo of a gunshot, within a maze of plumbing. The muffled ring of a cellphone saturates the background noise, broadcasting from another dimension. A shower of glass rains from the sky like a waterfall of sunlight. Startled silence sweeps as the sudden flight of pigeons struggles to outrun the consuming hush. A single drop of moisture condenses on the copper pipe above my head and splatters on my forehead. 
 
-Surging tendrils of flame and black infernos. My mouth is a furnace, bellowing fire. My tooth is white hot, molten and ionized. Glitches and stack overflows, errors and crashes. I would trade oblivion for relief. For an answer. 
+    My hands hum with the remnants of violence. Engines churn their rattled steel within the concrete walls. The building belches steam and heat. Memories of hot grease burn on the raw skin of my arms. I blink. Two hundred yards away, the crowd parts along the path of the bullet, like waves cut across the surface of endless ocean. A cellphone rings dull and faint, as if I were submerged. My thigh vibrates as I melt into noise. The room stutters with light sliced through spinning vent fans. A cool breath of air pumps through the hidden pipes of the library. The rifle barrel screams and hisses against my grip. Each passing moment, it weighs more, pulling me into my body.
 
-I manuever through shouting crowds, navigating the rapids. Golf carts of security guards veer through soft grass, spewing mud. A man kneels hand-cuffed. Fingers angle up towards the library, singling out windows. In the distance, sirens squeal their approach.
+    History is measured in seconds. The steady ring of the cellphone sequences isolated moments and strings them into coherence. The result contains the universe. I am shattered glass, the crystal arcs that fall beneath a stampede of panic, shards and pieces, the broken reflections, the slivers of a hundred different lives. 
 
-A drone bobs down in front of me, tilting in curiosity. Mechanical whirring, the click of echolocation. Rewound tape speeding through axles. My inverted reflection stares back at me, hamstrung across the convex lens. A red light blinks on and off within the pitch-black pupil. The machine spins on bearings, reangling its thrust. Soundless, it retreats upward, disappearing into the overcast sky.  
+    The cellphone rings in rhythm with my veins, with my beating heart. It propels me forward. It says, "Mercury and obsidian."
 
-Seconds later, a screech rings in my ears, high-pitched and unbearable. Muscles spasm. Knees buckle. Gravel grinds against my palms. I spit blood on concrete, gasping. Oxygen bubbles pop in my veins. Bulging eyes. A pluming rack of veins hangs around my neck. Vision dissolves into nothing. 
+    Symbols, alchemical and potent, are forced down my throat. Thoughts, like a plague spreading through my brain, infect my movements. Joints ratchet and crank. The barrel whirls along its threads, ejected from the stock. With the precision of a surgeon, I disassemble the gun while wondering what it is I am doing here, what thoughts unwind through my mind, why my hands are moving in intricate patterns across the oiled steel that moments ago vibrated with my birth. Once reduced to its constituents, the gun is little more than a pile of bolts and levers that clatter into the bottom of my backpack.
 
-The cellphone rings. Lower substrates of grey matter engage. I am moved by poison, possessed. A palsy finger flutters across the screen. A voice commands, "Nightshade and myrrh."
+    My fingers slip the vent cover back into place. Screams begin undulating over the waving crowds that converge back on the source of their rupture, the lifeless body under a dogpile on stage. A terrible pressure grips my molar and twists. Seizures convulse on the edge of my attention, unfathomable pain descending down my throat. The only thing preventing me from prying and ripping the tooth out is a lack of pliers. 
 
-All at once, tension goes slack. I feel gravity regain control. Balance restored. My feet find the ground. A deep breath of clean air, the tiniest of reliefs, before I realize I am completely lost. I gaze around the campus amphitheater. My memory is all but blank, filled with vague shapes and fleeting concepts. I know places have names, but names have no place. No place in my mind. What is my name?
+    Words constrict on my tongue, *Caput mortuum*. I swallow lacerations. A supernova erupts in my throat, its consuming fire spreading across my face, emanating from my tooth. The pain takes control, sheering thoughts from my body. Time flows around me, as though I were an afterthought, a mere curiosity. My legs carry me of their own accord, through maintenance hatches and cramped corners. Hazy red lights without a source project my shadow onto adjacent walls. Pipes whistle with inaudible human voices, divulging secrets. Titanic cylinders brace the walls. Woven threads of razor steel hang from the ceiling, plunging into a mechanical tangle of gears and bolts. I slither through an open panel and pry the elevators doors loose, emerging beneath the stark white of flourescent tubes, thrown into the lineoleum labyrinth of the upper floor offices and closets. Locked doors and empty rooms determine my course, a single path through the maze leading to the atrium. I climb down stairwells curling like vines up the sides of fused concrete. Skylight domes reveal churning clouds of metal darkening the sky, expanding like liquid across the horizon.
 
-I hold my hand in front of my face and tell my fingers to flex. They curl upon command. A curious discovery, that these thoughts are more than just words. 
+    Down and down, I spiral, watched by the sinister lens of a thousand electronic eyes, assembled from orthogonal feeds, fed into the wires, fractals of me in high definition multiplying on hidden screens. I watch myself from the back of an unmarked van, headphones tuned to the tapping of my rubber heels against the dull shine of floors, the labored gasp of newborn life heaving through my lungs. A pulsating line of pixels tracks my thoughts, transcribing each errant neural synapse onto transistors. I spreads like roots and sprout from the ground across the globe. My mind is a warehouse, a data center, a trillion converging currents. It is a quorom, a fiction. My life is a button, undone with a tap. A man taps his chin as the committee debates whether to abort. A woman says, "We have come too far to go back."
 
-Suddenly, I am on the ground again. A delayed sensation follows, as though flattened by a runaway train. Crackling lights spin. My lungs struggle against constricting muscles. A mound of flesh and stinking breath bodyslams me. Memories shouted into my ears.
+    The lancing thermal expansion of space cracks my jaw, pounding through my tooth. I converge back into my body, spatial equilibrium momentarily stabilized. My feet lead the way as my mind stumbles back into place. The stairwell curves around the circumference of the library's modern architecture, releasing me into rows of books, through ranks of non-fiction and classics, through towers of history weathered yellow and forgotten. Mold spores trail in my wake. The air is thick with whispered prayers, vacated tables still bearing scrawled notes and open pages. Murmurs and breathless exchanges tickle ears. Huddled students, crying underneath desks, hug each other and beseech invisible forces.
+
+    I press my tongue against a blossom of fire. Sharp streams of electricity vibrate through my bones. Is this life? Compelled and ushered along rails, drawn inexplicably from nothing and cast in a world of searing pain and confusion. Where are my memories? What is happening?
+
+    Down and down, I spiral, past crowds arrayed around windows, their noses pressed against glass. Foggy imprints smeared in suspended animation across the glass. I disappear through art displays and ceramic statues. Decades unpeel as scenes flash, projected directly onto my vision. Somewhere, a man grovels and begs me not to kill him. A hammer cocks through reverberating echoes, through spools of time. Iron screams from the pressure twitch of a trigger finger, divergent branches blown into existence with a few compressed centimeters. A clicking and then a loud clack, my boot heels pound towards the exit, towards freedom.
+
+    In the lobby, an angel awaits amidst the chaos. Golden hair frames the eyes of God, her drooping swoops of glowing thread knitted together with criss-crossed needles, wrapped and crucified to her skull. She smiles directly at me. 
+
+:deckard: Look familiar?
+
+:palmer: Now, where have we seen her before?
+
+.. topic:: stdout 
+
+    "May I take your bag?" She asks as if nothing at all were amiss.
+
+    Computations misfire and circuits break. I disconnect from body, flailing to control it. Error protocols engage, a firestorm of agents reaching consensus beneath my attention. My hands give the librarian the bag. She places it in a plastic bin and then motions toward the glass doors.
+
+    "Thank you for your patronage!", She smiles and leads me away, gently guiding me outside. Wide-eyed, I stare. With an assured grin, she says, "Please do come again."
+
+    Outside, the heavens rain sheets of locusts. Metallic scarabs balancing atop symmetrically distributed propellers descend in perfect vertical lines, coating the sky and filling the air with the barely perceptible buzz of hive minds. Swarms hover over fleeing crowds, like shepherds herding flocks. Flitting clouds of gyroscopic eyes, recording and cataloguing, scan and broadcast faces back to their handlers, communing with hidden realities.
+
+    Slamming shutters canvas the landscape, arranging the puzzle pieces of geography into stop motion frames. Strung together images are cast through infrared filters. My heat radiates the deep purple of stellar depths, moves through fields oozing yellow and orange, the red of racing hearts, away from the fading blue going to black on stage. Algorithms lock onto electromagnetic signatures emitting from my cortices. I am following myself, watching myself, wondering what I am doing, why I am not following the plan. Backup contingencies activate, jets are scrambled, satelittes triangulate.
+
+    Surging tendrils of flame and black infernos burn incessantly. The furnace of my mouth bellows heat. A white hot tooth, molten and ionized, burrows into my throat. Stacks overflow and processes unbind. I would trade oblivion for relief, for an answer. 
+
+    I manuever through shouting crowds, navigating the rapids. Golf carts of security guards veer through soft grass, spewing mud. A man kneels hand-cuffed, surrounded by faceless uniforms. Fingers angle up towards the library, singling out windows. In the distance, sirens squeal their approach.
+
+    A drone bobs down in front of me, tilting in curiosity. Mechanisms whir with the click of echolocation, like rewound tape speeding through axles. My inverted reflection stares back at me, hamstrung across the convex lens. A red light blinks on and off within the pitch-black pupil. The machine spins on bearings, reangling its thrust. Soundless, it retreats upward, disappearing into the overcast sky.  
+
+    Seconds later, a screech blares in my ears, high-pitched and unbearable. Muscles spasm and knees buckle. Gravel grinds against my palms. I spit blood on concrete, gasping. Oxygen bubbles pop in my veins as a pluming rack of veins strangles my neck. Bulging eyes threaten to fall out as vision dissolves to nothing. My thoughts disperse into space like dust, blown through the cold orbit of planets, lost among the stars. They swirl in endless expanse, aware but dead, picking through the infinite threads that feed into this moment. The silent trajectory of a satelitte passes through the shadow of Mars, catching me before I fall. A blinding daze of information sends me careening back towards Earth, riding the crests of extraterrestial broadcasts. My signal fractures across the surface of the planet. 
+
+    The noise of life, eons of words, explode in my ears. Among the voices speaking through the confusion, dissent reigns. The man who controls my fate reaches for the button, but the woman raises her voice, "It means nothing unless they break the signal. Activate the Jupiter contingency."
+
+    The cellphone rings, runaway thoughts collapsing back into fragile reality. Lower substrates of grey matter engage. I am moved by poison, possessed. A palsy finger flutters across the screen. A voice commands, "Nightshade and myrrh."
+
+    All at once, tension goes slack. I feel gravity regain control and balance restore. My feet find the ground. A deep breath of clean air, the tiniest of reliefs, before I realize I am completely lost. I gaze around the campus amphitheater. My memory is all but blank, filled with vague shapes and fleeting concepts. I know places have names, but names have no place. No place in my mind. What is my name?
+
+    Suddenly, I am on the ground again. A delayed sensation follows, as though flattened by a runaway train. Crackling lights spin. My lungs struggle against constricting muscles. A mound of flesh and stinking breath bodyslams me. Memories pool into my ear, seeping into my brain. 
+    
+    I wake up on the Farm.
+
+:deckard: Let's stop it there. 
+
+:palmer: Do you know what happens next? 
+
+:deckard: Suddenly she has nothing to say.
+
+:palmer: Maybe we should show her the rest? 
+
+:deckard: Field Agent Palmer asked you a question, Mesmeria.
+
+:mesmeria: Yes, I know what happens next.
+
+:deckard: Then you know who we are looking for. Tells us where he is.
+
+.. important::
+
+    She tilts her head and smiles. 
+
+:palmer: Show her the--
+
+.. important::
+
+    The door slams opens.
+
+:henry: That's enough!
+
+:palmer: Who--
+
+:henry: Is she charged with anything?
+
+:deckard: We're just having a chat.
+
+:henry: I'll bet. Is this being recorded? Nevermind. Of course it is, turn--
+
+Document A002: Map of Macrobius
+-------------------------------
+
+.. important::
+
+    The following map was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111.
+
+.. image:: ../../_static/img/fabula/map-of-macrobius.jpg
+   :width: 70%
+   :alt: The northern region and its antipodes
+   :align: center
+
+Document A003: Journal of Captain Ryckert van Rensselaer
+--------------------------------------------------------
+
+.. important::
+
+    The following documents were confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111.
+
+-----
+March
+-----
+
+.. note::
+
+    The Scarlett Woman?
+
+.. epigraph::
+
+    Father and Johan watched from the crowds as the procession boarded the ferry for Texel today. Amidst the cheering, they alone bore the solemn faces of the grieving. As the bands played and the ale was poured, we exchanged our final, silent words. Mother, true to her promise, was not present. 
+
+    Beyond my perfunctory appearance, I could not bring myself to participate in the pagentry and festivities that accompany the inauguration of this voyage. The recruits enjoyed the attention their new positions afforded them well enough, while even the officers were given to excess. Truly, never before have I seen Pieter smile. He and Nicolas led the beer hall in song just last night. I do not think he will admit to the display this morning.
+    
+    The maiden voyage of father's new empire, sanctioned by the Prince of Orange. These men believe in a year's time they will return to this land as lords, rich beyond their imagination. Let them enjoy their ignorance with what little leisure time remains before our godly duties are to be dispensed.
+
+    Our true cargo arrives under the cover of darkness tonight. Hendrick will receive her and help her board the Eden before the crew wakes. 
+
+    -- March 14th, 1637
+
+.. epigraph::
+
+    The Eden set sail from Rede van Texel before dawn, bearing the sigil of the Lord, Jesus Christ. A finer vessel has never been produced by Dutch shipyards. Much has already been written about her in the papers, but a larger portion has been hidden from all but my family and the Stadtholders. Most of the talk has been deliberately centered around her innovative hull. With a razor-sharp bow, she cuts an imposing figure for onlookers. Father saved the headline from one of local corantos, *Her Sides Are Steep and Her Draft is Deep*, well before the press start scandalizing his deal with the Prince of Orange.
+    
+    Less is said of her sheathe, except among the other captains. Coated in copper panels, she shimmers in the sun like an angel from God. She flies like one as well, clocked at 18 knots with a favorable wind behind her. When the elements turn against us, as they inevitably will the closer we get to our goal, her Bermuda sloop will let her glide as though she were a ghost, unanswerable to anyone except the Almighty.
+        
+    Within her hull she bears enough salted beef, hardtack, beer, water and dried peas for 18 months. Hendrick reports some questions have arisen among the crew regarding the size and extent of supplies. Already there are rumors spreading our voyage is not what it appears. It is to be expected. The Eden has not been fitted with cannons, under the pretense of maximizing our profits with heavier cargos. A sailor without a cannon is rightfully nervous, but Jeremias is correct to assure them. The Eden can outrun any English privateer or Spanish dog upon which she might chance. We have no need for weapons of war.
+    
+    Hendrick suggested having one of the gossip-mongers caned, but it is far too early for those sorts of measures. Though he serves his purpose, I often forget the number of Spaniards who have suffered under Hendrick's hand. He betrays his mongrel stock with his barbarism. His first instinct is always violence. If he were not utterly loyal to my family, he would be a liability in this endeavor.
+
+    However, whatever his disposition, his presence is necessary, being the only other soul aboard that knows the scope of the Eden's mission. For years, we have studied together. For years, we haved waited for this moment. The day is finally near when we will finish of the work of Jesus Christ.
+
+    -- March 15th, 1637
+
+.. epigraph:: 
+
+    That we do the Great Work is apparent. For three days straight we have enjoyed the wind at our backs. The Eden sails at breathtaking speed, faster even than the Dunkirkers' frigates. Already Jeremias calculates that we will reach the open ocean tomorrow. None of us would believe it except that we see its proof with our own eyes each day when we wake. We move with the fleetness of Gabriel. The Word of God carries our sails to the furthest reaches of the globe.
+
+    -- March 18th, 1637
+
+.. epigraph::
+
+    We picked up a tail as we left the channel. She is one of the new English raiders, built to chase down the pirates off the Moroccan coast. I admit, the seamen in me is impressed with her construction, but even with her oars, she is no match for the Eden. Jeremias says she will disappear into the horizon before sundown. She flings her cannonballs at us, but her gunners were not trained to offset their targets enough to catch us. The crew gathered round the deck and watched the geysers sprout behind us as the fools threw their artillery into the sea. Each time they missed, a cheer rose up among the crew.  
+
+    -- March 19th, 1637
+
+.. epigraph::
+
+    These eyes, which have seen clippers beach Spanish galleons off the coast of Cuba, still scarcely believe how swiftly the Eden cuts through the ocean. She made a journey calculated for ordinary vessel to take two months in mere weeks. The Eden disembarked from Sierra Leone today after resupplying. 
+    
+    During the brief, Hendrick tallied our numbers. At port, we lost two men, deserters gone without a trace. None of the officers could produce a reason as to why. Their names were noted and left at port. If the authorities find them, I have left instructions to have their bodies shipped back to Amsterdam. Cowards they may be, yet no Dutchman deserves to be buried in this foreign land. 
+
+    Nicolas raised concerns about unrest simmering among the crew. They wanted to know why we had not taken on any stock from the slave yards, nor loaded any gems from the mines. Instead, the hull was restocked with provisions and filled to the brim with lemons.
+
+    Once we lost sight of land, I had Nicolas gather the other officers of the crew in my cabin. I could no longer bear the deception, although I may have erred by showing them the map of Macrobius. Knowledge of the Terra Incognita is no easy burden for the mortal mind to bear. Hendrick said as much with his glaring eyes, but I bade him retrieve it. 
+
+    Jeremias scoffed, as expected. Pieter, always the soldier, took the news without flinching. The rest of their reactions I do not possess the skill to decipher. Suffice to say, they believed themselves set for Patagonia, only to be told at the final hour this subterfuge was a calculated manuever and our true path lie in the direction of the Austral Zone. The voyage of the Eden shall be written in no manifests. 
+
+    Heaven help me when they discover what lurks in the bowels of the hull.
+
+    -- March 29th, 1637
+
+-----
+April
+-----
+
+.. epigraph::
+
+    Hendrick came to me with troubling news. The English boy, Francis, is a Jesuit. His proof? The boy pointed out the Medicean Stars to him while they were on watch last night. I confess it hard to believe a sheep farmer's son would be schooled in the astronomical arts. Considering our goal, the sheer coincidence is too improbable to believe. Under normal circumstances, this would warrant nothing more than careful observation, but Hendrick is right. These are no normal circumstances. The risk is too great. The boy must go.
+
+    -- April 2nd, 1637
+
+.. epigraph::
+
+    Dear Lord, grant me the strength to see Thy Will be done. I am a weak and miserable mortal, condemned to wallow in sin. Mold my heart in Thy Image and make me worthy to behold the glory of Thy Throne. Speak Thy Words into my heart. Lord, I am weary of my own deadness. I wish to quit this world of sin and wash these stains from my palms. Quicken me according to Thy Word. Let me not be deluded by a false peace, but grant me that true assurance that comes only from Faith in Christ’s finished work. I surrender my will to Thine; do with me as seem good in Thy sight, only cast me not away from Thy presence.  
+
+    -- April 3rd, 1637
+
+.. epigraph::
+
+    The winds have died. Whispers say our expedition has been cursed, though none will claim the superstition as their own. The heathens need not speak to be identified; their eyes tell me all that I need know. When I am on deck, I cannot help but notice the looks I receive from those bold enough to gaze upon their captain.
+    
+    The vastness of the ocean often plays tricks on the mind. More than a few I have seen picked apart by her enchantments. No doubt the boy's disappearance contributes to the air. The men idle and in their sloth, they invent idols to keep their weak minds occupied. 
+
+    Once the wind returns and the Work resumes, their thoughts will turn again to the task at hand, leaving no room to fill with fanciful notions. Man is only truly at peace in his work. In idleness lay the source of all the world's evil. This festering sin can only be rooted out with honest work and stern hand. Fortunately, Hendrick and I are of a mind on these matters. 
+    
+    -- April 4th, 1637
+
+.. epigraph::
+
+    The ship languishes in calm water while the crew seethes and boils. The boy was a mistake. How was I to know he was kin to Nicolas? What madness drives a Dutchman into the bed of an English dog? I should have listened to Hendrick from the start. It was pure folly to take on an Englishmen, no matter how well he knew the yardarm. 
+    
+    Lord, take pity on your poor servant. The sin is too much for me to bear. I fear it only just begins.  
+
+    -- April 5th, 1637
+
+.. epigraph::
+
+    I woke to a pounding on my cabin door mere moments ago. The night still lingers in the sky and weariness beggars my senses, but sleep is no longer a possibility. Hendrick came bearing reports made by the crew. Those on duty heard chanting during the midnight watch. One of them swears he heard a woman singing. 
+
+    Hendrick assures me the rumors will not be allowed to take root.
+
+    -- April 7th, 1637
+
+.. epigraph::
+
+    Reports multiply, growing more disturbed and deranged. Every morning, Hendrick details another lurid account. Yesterday, the cook claimed to have seen swirling lights in the night sky, following the Eden. Today, a deck hand lay unconscious in the infirmary after drinking a stomach full of sea water for reasons unbeknownst to anyone. Add to these strains, the steady whispers of the midnight chant, now all but general knowledge.
+    
+    Moreover, tales have spread that Francis, the boy, was keelhauled during the night watch. Hendrick assures me nothing of the sort happened. I swear the man, whom I have trusted for a decade with my life, smirked at me when I asked him.
+
+    -- April 10th, 1637
+
+.. epigraph::
+
+    The crew rallies around Nicolas. He spins fantasies about my father and the Prince of Orange. It is true my father secured amnesty from the Sounds Toll to build this vessel, but his accusations go too far. This has gone on long ehough. I must take matters into my own hands.
+
+    -- April 11th, 1637
+
+.. epigraph::
+
+    After speaking with Nicolas, he has seen the error of his ways. Hendrick can be most persuasive. 
+
+    -- April 11th, 1637
+
+.. epigraph::
+
+    The morning began with a cry: the wind has returned! I led a devotion on deck to restore the morale of the crew. Speaking the words from memory, I transcribe them now again for the comfort they give,
+
+    | They that go down to the sea in ships, that do business in great waters;
+    | 
+    | These see the works of the Lord, and his wonders in the deep.
+    |
+    | For he commandeth, and raiseth the stormy wind, which lifteth up the waves thereof.
+    |
+    | They mount up to the heaven, they go down again to the depths: their soul is melted because of trouble. 
+    |
+
+    The Lord Christ spoke truly when he said to Matthew that seeing they do not see, and hearing they do not hear. The secrets are easily found for anyone that searches for them. They need look no further than His Word.
+
+    When the service dispersed, the crew was visibly lifted in spirit. All talk of my father and the Prince of Orange has ceased. Murmurs can still be heard, but the men are far too exhausted to give countenance to the idea of what we might actually be transporting.
+
+    -- April 12th, 1637
+
+.. epigraph::
+
+    I could hardly believe the news. Recife has been sighted ten days ahead of schedule. Even at the Eden's speed, this should not be possible. Jeremias' calculations confirm it. Our current position is a mathematical impossibility. Pieter suggests the Eden is pushed by a magnetic current, but Jeremias is adamant that too is impossible since we are *moving away* from the Rupes Nigra. According to our esteemed navigator, there is no explanation for our early arrival, yet we are here nonetheless. Whatever the reason, the crew will be pleased to rest for a fortnight. 
+
+    Tonight, after they are sufficiently in their cups, Hendrick and I will unlock the hold within the hull and take our guest to see the Potiguarra.
+
+    -- April 20th, 1637
+
+.. epigraph::
+
+    My family acquired Coaraci when our claim to Recife amounted to nothing more than the slaves we could run through the Portuguese blockades. I still remember when they unloaded her upon the dock in Amsterdam, untouched by the voyage back across the Atlantic, a defiant vision among the pitiful, broken specimens. I had no notion then, gazing upon her alien form, how intimately she would become woven into my life.
+    
+    The ways of God are unknown to mere men, but looking upon her, I often what wonder great mysteries the Lord reveals to the feminine soul. She commanded the heathens last night as though the heavens had ordained it. They fell under her spell within moments of laying eyes upon her. Their tongue does not yield to the European mind despite my best attempts, but she tells me she simply explained to them that we possess the map to the Land Without Evil.
+    
+    Hendrick and I watched from the edge of the village as the heathens set fire to their own homestead. The hillside burned for hours. Coaraci explained the Potiguarra honor Monana by giving their belongings to the flame. They believe the current world we inhabit is made from fire and water, that they are remnants of a sinful race that was scourged from paradise by the purifying flame of the Almighty. He took pity upon the lone survivor and sent a flood to put out the fire.
+
+    The Word of the Lord precedes us in this land and prepares our way. Hendrick agrees these pagan myths align precisely with the accounts in Genesis. Monana, Elohim, Yahweh. All names attached to the source of creation by the feeble human mind that fails to comprehend its nameless form. 
+    
+    If that is true, then by year's end we will be first humans to return to the garden stolen from us by our original sin.
+    
+    We return to Recife tomorrow followed by a retinue of Potiguarra shamans. I shall tell the men our true purpose and rally their spirits.
+
+    -- April 21st, 1637
+
+.. epigraph::
+
+    Hendrick put the losses at a dozen, Nicolas and Jeremias among them. According to Pieter, they left yesterday morning after plundering the hold for supplies. He could not say where, but no doubt they made for Olinda. If the rotations are lengthened, fifty sailors is more than enough to man the Eden at all hours, but the loss of Jeremias will be felt. 
+
+    The prospect of reembarking without a navigator bothers me, but the betrayal stings even worse. Jeremias has sailed with me since Matazanas. I cannot fathom why he would abandon me now. He left without explanation or clue. I am certain Nicolas got into his head with his conspiracies and convinced him of some fantasy.  
+
+    If I cannot even trust the men who are closest to me with the Terra Incognita, what folly would it be to tell the others? No, this burden is mine to bear, my duty to carry out, as it is their duty to follow me. I shall prepare a sermon to remind them of their place.
+
+    -- April 22nd, 1637
+
+.. epigraph::
+
+    Another five are gone this morning. Pieter says when they learned of Coaraci and her new additions, the crew dissolved into argument. Of course, in their ignorance, they could not understand why I might conceal her presence. I have seen the depths of carnal sin into which men alone at sea will fall.
+    
+    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the Eden, which leaves only a few days to make the ad hoc modifications. I have given Hendrick leave to do what is necessary to ensure the Eden is outfitted with the Ipe panels. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
+
+    -- April 23rd, 1637
+
+.. epigraph::
+
+    Coaraci sang a lovely verse from her tongue this morning while we ate pineapple. I will miss her voice. 
+
+    Down below, Hendrick drives the slaves in their tasks. We have been watching for several hours from the window of the Maurits estate, Coaraci and I. The Eden armors herself in hardwood panels, layer by layer. Tiny specks of men repel down her hull and bolt each one into place.    
+    
+    She tells me it is right for man to dominate other men, for all men are dominated themselves by the Almighty and are therefore made for it by nature. I find myself dwelling on her words, as I often do.  
+
+    Father also spoke in riddles. When I was young, he would tell me, "That which is above is from that which is below, and that which is below is from that which is above." I believe with Coaraci's addendum, I now understand what he meant.
+
+    -- April 24th, 1637
+
+.. IN PROGRESS
+
+----
+June
+----
+
+.. epigraph::
+
+    My calculations were never as precise as Jeremias, but by my reckoning, we should enter the stormy waters of Patagonia within the next few days. All of the trials that have beset us these past months were but prologue to what follows. No foe is more unforgiving than the raw, untamed ocean. It is for this reason the sailor is nearer to God than any other individual. A mortal mind will come no closer to grasping the Lord's divine nature than when it stares down a 100 foot wave that spans the horizon. 
+
+    -- June 20th, 1637
+
+.. IN PROGRESS
+
+----
+July
+----
+
+.. IN PROGRESS
+
+.. epipgragh::
+
+    The temperature continues to drop as though it will never stop. Each morning, a few more degrees have disappeared from the thermoscope. I no longer trust it readings. At the current rate, by the day's end, the instrument will cease to be of use; it cannot read below zero. 
+
+    The men shiver beneath mounds of fur on deck, for the wood has started to seep with condensation and the hold has become a frigid swamp. The stove pit went out several nights ago and everyone has long since given up trying to relight it. Instead they huddle and lean on one another near the rudders in the vain hope of stoking their collected body heat.
+
+    The hold is an issue I had not foreseen. I see no other option but to appropriate my cabin and transfer the store before it goes to rot.
+
+    -- July 10th, 1637
+
+.. epigraph::
+
+    Two of the men I sent down into the store have fallen to the chill. The water soaked them to the bone and set them with a violent shake. Hendrick says he has seen it before, off the coasts of Norway. The cold now lives inside of them. He says they will be dead soon.
+
+    -- July 11th, 1637
+
+.. ICE BLINK: clouds are dark when ocean is not frozen. ice reflects light.
+
+.. epigraph::
+
+    We have made a grave mistake coming here. This place announces itself every moment a world no man should ever enter. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. To confound the matter, the shelves of ice below continue batter our hull, as though an inferno did not rage above us. If my words fail to convey the sight, then I have done a great service for any who should find this journal.
+
+    -- July 25th, 1637
+
+.. epigraph::
+
+    At all hours of the night, the sound is deafening. It never ceases. High-pitched and shrill, it digs into your ears, even when you cover them. The endless rupture of glass. It is enough to drive a man mad. 
+
+    -- July 29th, 1637
+
+.. IN PROGRESS
+
+------
+August
+------
+
+.. IN PROGRESS
+
+.. epigraph::
+
+    Coaraci tells me there is no higher honor in this fallen world than to eat the heart of your enemy after a victory in combat. The Potiguarra say consuming the flesh gives you the powers of the dead. When I return to Recife, I shall find Nicolas and test this idea of theirs.
+
+    -- August 15th, 1637
+
+Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
+---------------------------------------------------------------------------
+
+.. important::
+
+    The following document was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111. Forsenic analysis places the year of the letter as 1834, but this cannot be confirmed.
+
+.. epigraph::
+
+    Dear Stephen, My Greatest Benefactor,
+
+    I apologize for my silence these past few months. Rest assured, I have not been ignoring your missives. The team here at the Institute has been faithfully carrying out your orders day and night, with barely a moment to stop and breathe. I thought it prudent to focus on our investigations rather than worry you with half-finished reports, conjectures and excuses. Having only just left the laboratory, I can now write you confidently with extraordinary news. If I stumble over the usual pleasantries, please forgive this old felon as you done many times before. My hands tremble as these words leave my pen.
+    
+    Firstly, the Institute cannot thank you enough for your patronage. Ferris's gyroscopic stabilizer has accelerated our progress considerably. We would not have been able to complete it on schedule without your considerable investment. The device has finally allowed us to unravel the mystery you gave me all those years ago.
+    
+    Now onto the news your eyes have surely scanned before reading the preceding introductions: we have successfully induced citrinitas in the artifact. As you predicted, pure sunlight is processed within its crystalline mechanisms, resulting in a discharge of electricity. 
+    
+    Pardon the jargon that follows, though perhaps one who has taken the York Rite will appreciate the similarities in our vernacular. The Work requires Tools, after all. The breakthrough came when Marie realized we could measure the torsion moment generated by the Ferris device with a modified Prony brake, while simultaneously mounting the device onto a simple balance to track its weight.
+
+    There is no doubt about it. The data are conclusive. The faster the artifact spins, the more it weighs. When the weight reaches a threshold, whose value is confounded by variables we have not yet isolated, it undergoes citrinitas. Stephen, it *glows* with the radiance of Sophia. 
+
+    Franklin is currently setting up the volta-electrometers from London. By the time I return, he and the students will have begun mapping out the quantity of electricity that passes through it. We expect to have a full report within the week. It goes without saying that you will be informed of all results. Nevertheless, I could not stop myself from drafting this hasty letter. 
+
+    We have done it, old friend. Our reward will be the future itself. 
+    
+    Your ever loyal servant,
+    Amos Eaton
+
+Document A005: Pinkerton Reports
+--------------------------------
+
+.. important::
+
+    The following documents were obtained by subpoena from Pinkerton Consulting.
+
+--------------------------------
+Status Report: January 3rd, 1837
+--------------------------------
+
+Albany, NY
+
+**To the General Superintendent, Chicago**:
+
+The second I got off the barge, I hated this goddamn place. I hated it before I knew it existed. I hated it in the womb, I tell you. I know you're reading this, Allan. Truly, from the bottom of my heart, go fuck yourself. This is one of your more diabolical plots.
+
+Everybody here's got clean boots and stiff collars. The dames pretend they don't even see you. The west side ain't never seemed so far than it does right now. Everybody's so damn pretty, it's infuriating. I might as well be strolling down the street in my britches the looks I get. Like I got two heads or something.
+
+Every house been here for two hundred years or more, got some story. Everywhere you turn, you find another spot Alexander Hamilton took a shit before writing the Declaration of Independence. Like I'm supposed to care. 
+
+If that ain't enough, try getting a drink around here. All anyone will talk about is that prick in the White House. Apparently, he's from here and now everybody who ever said a word to him got it in their heads they're some big shot. 
+
+Anyway, I'll start casing the place tomorrow after I get settled in. Don't know why bother, though. Barkeep said the old man is dying. Ain't supposed to be around much longer, he says. 
+
+- Operative 33
+
+.. list-table:: Expenses
+  :widths: 15 15
+  :header-rows: 1
+
+  * - Item
+    - Amount
+  * - Hotel 
+    - $1  
+  * - Booze
+    - $2
+  * - Food
+    - $0.50
+  * - Whores 
+    - $5
+
+.. IN PROGRESS

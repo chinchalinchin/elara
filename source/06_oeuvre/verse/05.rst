@@ -77,7 +77,7 @@ The Origin of Lies
     - Pending
   * - August 26, 2025
     - Gavialidae
-    - Pending
+    - Rejected
   * - August 27, 2025
     - La Piccioletta Barca
     - Rejected
@@ -123,3 +123,15 @@ The Origin of Lies
   * - October 10th, 2025
     - January House Literary Journal
     - Rejected
+
+.. epigraph::
+
+  Dear Grant Moore,
+
+  On behalf of the editorial board of the Garfield Lake Review, I am happy to write that we have accepted Eulogy/Larksong/The Pantoums of Dementia/Ode to Death/The Origin of Lies for publication in our 2026 edition!
+
+  Thank you for your contribution to our growing journal. We are pleased to publish your work in this years edition.
+
+  If you require any further edits to your piece, please reach out directly to our Editor in Chief, Logan Schreiber, at lschreiber@uolivet.edu. If we should need any edits to your piece, a team member will be in touch with you after acceptance. In the meantime, if you have any questions, please let me know.
+
+  -- Logan Schreiber, Editor in Chief

@@ -780,7 +780,7 @@ As an example of the preceding, consider the sentence,
 
     deduce the theorem now.
 
-In terms of purely transcriptional dimensions, this sentence has a character length of 22 (including delimiters) and a word length of 4. Given the :ref:`correct axiomatization <palindromics-section-i-ii>` of :ref:`language <language>`, it can be shown the character length of a string is bounded from below by the string's word length, i.e. since every word must contain atleast one character, there must always be more characters in a sentence than words. This is an example of the sort of relative cardinalities that can be established when two concepts are categorically related.
+In terms of purely transcriptional dimensions, this sentence has a character length of 22 (including delimiters) and a word length of 4. Given the :ref:`correct axiomatization <palindromics-section-i-ii>` of :ref:`language <language>`, it can be shown the character length of a string is bounded from below by the string's word length, i.e. since every word must contain atleast one character, there must be atleast as many characters in a sentence as words. This is an example of the sort of relative cardinalities that can be established when two concepts are categorically related.
 
 However, the sentence may also be parsed along a phonetic dimension,
 
@@ -806,13 +806,13 @@ Which has a character length of 29, a word length of 5 and a syllable length of 
 
     w(x) \leq s(x) \leq c(x)
 
-It is important to realize both :math:`M_{-+}` and :math:`R` are formally well-defined. Given a word, the conditions for its membership into either set can be precisely specified and determined. However, the sets exist in different domains of discourse. The properties which determine inclusion in one set do not (directly) affect the properties which determine inclusion in other set. To say the same thing a different way, the predicates of "*words*" have different modes. 
+It is important to realize both :math:`M_{-+}` and :math:`R` are formally well-defined. Given a word, the conditions for its membership into either set can be precisely specified and determined. However, the sets exist in different domains of discourse. The properties which determine inclusion in one set do not (directly) affect the properties which determine inclusion in the other set. To say the same thing a different way, the predicates of "*words*" are mutually exclusive. 
 
 One wants to say here: To know a word is iambic gives you no information whatsoever about whether or not it is reflective. Or to put it in conditional probabilistic terms: if one selects a random word from a corpus, the probability of it being iambic given no information about its syntactic structure is equal to the probability of it being iambic given the fact it is reflective.
 
 However, this is not true. Indeed, while there is no *formal* argument that leads to the conclusion there are more iambic words than reflective, there is a *statistically* :ref:`a priori <a-priori>` argument that does not require direct observation of a corpus to demonstrate there is a compelling reason to believe that any language that contains enough words will almost assuredly contain more iambic words than reflective words. 
 
-The motivation for this argument can be seen by noting that an overwhelming amount of reflective word are monosyllabic, e.g. *eye*, *aha*, *nun*, *bob*, *pip*, *tot*, *sis*, *wow*, *sees*, *noon*, *stats*, etc. As the number of syllables in a word increases, the frequency of reflectivity decreases. A heuristic argument can be formulate along the following lines:
+The motivation for this argument can be seen by noting that an overwhelming amount of reflective word are monosyllabic, e.g. *eye*, *nun*, *bob*, *pip*, *tot*, *sis*, *wow*, *sees*, *noon*, *stats*, etc. As the number of syllables in a word increases, the frequency of reflectivity decreases. A heuristic argument can be formulate along the following lines:
 
 - For an alphabet with N characters (including delimiters) and a word with :math:`M` characters, there are potentially :math:`M^N` possible word-forms to use. 
 - Out of these :math:`M^N` word-forms, (using combinatorial arguments), there are :math:`M^{\lceil N/2 \rceil}` possible reflective word-forms. 
