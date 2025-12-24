@@ -1,1 +1,3 @@
+.. MODE: HISTORICAL ACCURACY
+.. 
 .. Please review for historical inaccuracies. The term "accuracy" is used loosely here. The actual events of history are not so important as the general feel and detail of the historical account. That is not to say the historical context is unimportant, as you should definitely point out any blaring contradictions with the accepted record. But the primary concern is whether the following events are *plausible*, not necessarily *possible*.

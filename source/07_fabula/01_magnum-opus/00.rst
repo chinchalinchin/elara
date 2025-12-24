@@ -40,8 +40,8 @@ PLEASE TAKE NOTICE that on 11/1/2111, the United States of America, by and throu
 
 The production included the following materials.
 
-Document A001: Mesmeria Van Rensselaer Interogation
----------------------------------------------------
+Document A001: Mesmeria Van Rensselaer Interrogation
+----------------------------------------------------
 
 .. important::
 
@@ -171,10 +171,6 @@ Document A003: Journal of Captain Ryckert van Rensselaer
 -----
 March
 -----
-
-.. note::
-
-    The Scarlett Woman?
 
 .. epigraph::
 
@@ -377,35 +373,41 @@ April
 
     -- April 30th, 1637
 
-----
-June
-----
+---
+May
+---
 
-.. IN PROGRESS
+.. IN PROGRESS: How men react to Potiguarra. Integration of Potiguarra beliefs in Calvinist dogma.
 
 .. epigraph::
 
-    My calculations were never as precise as Jeremias, but by my reckoning, we should enter the stormy waters of Patagonia within the next few days. All of the trials that have beset us these past months were but prologue to what follows. No foe is more unforgiving than the raw, untamed ocean. It is for this reason the sailor is nearer to God than any other individual. A mortal mind will come no closer to grasping the Lord's divine nature than when it stares down a 100 foot wave that spans the horizon. 
+    Unapora and his Potiguarra have been training on hempen cables, tossing them behind the ship and pulling them back aboard a hundred times an hour. While I would surely prefer the full complement of Dutchmen with which the I left Amsterdam, these heathens will serve the Eden just as well. A body is a body. The rest of the crew scrambles to secure every opening and bar every port in preparation. Pieter is the only one, besides Hendrick and myself, who has seen the waters of Costa Patagonum, but he has sufficiently instilled the fear in the rest of the crew.
 
-    -- June 20th, 1637
+    My calculations were never as precise as Jeremias, but by my reckoning, we should enter the stormy abode of Patagonia within the next few days. All of the trials that have beset us these past months were but prologue to what follows. No foe is more unforgiving than the raw, untamed ocean. It is for this reason the sailor is nearer to God than any other individual. A mortal mind will come no closer to grasping the Lord's Divine  Nature than when it stares down a 100 foot wave that spans the horizon. 
 
-.. IN PROGRESS
+    The Eden sets closer to sea level with her new armor. If our luck holds out, her new center of gravity should keep us from capsizing when the worst of it comes. If not, I have given Hendrick explicit orders to keep the masts at all costs. Strike the tops and shake off the bonnets, but anyone that tries to take an axe to the mast itself will no longer have hands to swing an axe. We will heave-to what we can, but the men must be ready at moment's notice to deploy the drogues and begin scudding. The masts *must* remain. 
 
-.. SCUDDING THE WAVE. THROW A DROGUE, A LOOP OF HEMPEN CABLE TO STABILIZE THE PROW.
+    -- May 10th, 1637
+
+.. epigraph::
+
+    As expected, the world goes gray and the water choppy. 
+
+    -- May 12th, 1637
+
+.. IN PROGRESS: Scudding the wave, throw drogues to balance speed and stabilize the prow.
 
 ----
-July
+June 
 ----
 
 .. epigraph::
 
     The men that remain are the Lord's chosen. I can see the fire of faith in their eyes that warms them when I recite the passages during our devotions. They have gone to the depths, and now they mount towards heavens. These hallowed few, I know I can trust. I have assured them the end of our journey will be no less than paradise itself. When I told them, they dropped to their knees and cried out to the Lord above. Even Unapora and his Potiguarra shamans have given themselves to Christ. We write the next testament of His Word with our actions. 
 
-    -- July 2nd, 1637
+    -- June 2nd, 1637
 
-.. ICE BLINK: clouds are dark when ocean is not frozen. ice reflects light.
-
-.. IN PROGRESS
+.. IN PROGRESS: Ice blink. Clouds are dark when ocean is unfrozen. Ice reflects light. How to navigate the Wall.
 
 .. epigraph::
 
@@ -413,15 +415,15 @@ July
 
     The men shiver beneath mounds of fur on deck, for the wood has started to seep with condensation and the hold has become a frigid swamp. The stove pit went out several nights ago and everyone has long since given up trying to relight it. Instead they huddle and lean on one another near the rudders in the vain hope of stoking their collected body heat.
 
-    The hold is an issue I had not foreseen. I see no other option but to appropriate my cabin and transfer the store before it goes to rot.
+    The hold is an issue I had not foreseen. Even with the men running the bilge pump day and night, the provisions fester. I see no other option but to appropriate my cabin and transfer the store before it goes to rot.
 
-    -- July 10th, 1637
+    -- June 10th, 1637
 
 .. epigraph::
 
     Two of the men I sent down into the store have fallen to the chill. The icy water soaked them to the bone and set them with a violent shake. Hendrick says he has seen it before, off the coasts of Norway. The cold now lives inside of them. He says they will be dead soon.
 
-    -- July 11th, 1637
+    -- June 11th, 1637
 
 .. epigraph::
 
@@ -433,21 +435,25 @@ July
     |
     | The waters are hid as with a stone, and the face of the deep is frozen.
     
-    -- July 12th, 1637
+    -- June 12th, 1637
 
-.. IN PROGRESS
+.. epigraph::
+
+    On deck, we heard a scream and then an awful smack. Thomas slipped from the Crow's Nest. His body lay on the ice as the crew gathered to call out. 
+
+.. IN PROGRESS: The descent.
 
 .. epigraph::
 
     This place announces itself every moment a world no man should ever enter. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. Streaks of unnatural colors blaze and ripple across the blackness, obscuring our view of the stars. 
     
-    To confound the matter, the shelves of ice below continue batter our hull, as though an inferno did not rage above us. The hardwood has served its purpose, shielding the Eden's hull from the worst of it, but the creaking and splintering takes its toll. Some of the panels still hang only by the grace of God. 
+    To confound the matter, the shelves of ice below continue to batter our hull, as though an inferno did not rage above us. The hardwood has served its purpose, shielding the Eden's hull from the ceaseless assault, but the creaking and splintering takes its toll. Some of the panels still hang only by the grace of God. 
 
     The Lord continues to test us, but we shall not cease. 
 
-    -- July 25th, 1637
+    -- June 25th, 1637
 
-.. IN PROGRESS
+.. IN PROGRESS: The descent.
 
 .. epigraph::
 
@@ -455,23 +461,25 @@ July
 
     But that is not even the worst of it. I can hardly write my hands shake so. Hendrick says you needn't worry until the shivering stops. That is when you know death is near. 
 
-    -- July 29th, 1637
+    -- June 29th, 1637
 
-------
-August
-------
+.. IN PROGRESS: The descent.
 
-.. POLYNYA 
-
-.. DECEPTION ISLAND. THE "ARTIFACT".
-
-.. IN PROGRESS
+----
+July
+----
 
 .. epigraph::
 
-    Unapora tells me there is no higher honor in this fallen world than to eat the heart of your enemy after a victory in combat. The Potiguarra say consuming the flesh gives you the powers of the dead. When I return to Recife, I shall find Nicolas and test this idea of theirs.
+    The wind spews ice as sharp as daggers. We trade the fetid tomb of the hold for the maelstrom above deck. It is simply a matter of which death one prefers. There is no place left to hide from the Lord's Wrath. The men pile into my cabin for what little relief it provides, but even my walls weep and freeze. The Eden's helm has been abandoned as the cold's dominion becomes total. The rudders freeze and the sails are as slabs that hang in solid sheets. She drifts and lists with the whims of God, battered on all sides by the wages of her sin.
 
-    -- August 15th, 1637
+    -- July 15th, 1637
+
+.. IN PROGRESS: Polynya starts.
+
+.. IN PROGRESS: Deception Island. Warm waters of the Caldera. A literal Paradise, for a moment. Whales surfacing, algae blooms. The "artifact".
+
+.. IN PROGRESS: Polynya stops. Crew is frozen in place, literally mid-word. 
 
 Document A003: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
 -----------------------------------------------------------------------------
@@ -714,7 +722,7 @@ Overview
 
     - Subject: Euphemia
     - Sex: Female
-    - Age: REDACTED
+    - Age: :redacted:`REDACTED`
     - Genealogy: Branch D-35
 
 The subject arrived at the facility at approximately 10:30, 3/13/1954. Upon arrival, the subject was immediately isolated and placed into observation. The subject has no prior knowledge of the experiment, nor been given any indication of what is to about to occur. 
@@ -943,6 +951,55 @@ I don't understand the world you have made, Father. Surrounded by ice. Heartless
 -------------
 Experiment #3
 -------------
+
+The subject is administered secobarbital intravenously over the course of 7 days until entering a prolonged state of somnambulance. The subject is blindfolded and strapped to a table. Two researchers sit on either side of the subject and speak directly into the subject's ear. The researched are instructed to speak in unison.
+
+Transcripts
+~~~~~~~~~~~
+
+.. note::
+
+    Dr. White is on the left side of the subject while Dr. Green is on the right side.
+
+:white: Are you ready to begin?
+
+:green: Are you ready to begin? 
+
+:subject: Yes.
+
+:white: What is your name? 
+
+:green: What is your name? 
+
+:subject: :redacted:`REDACTED`
+
+:white: That's a good name.
+
+:green: That's not your name.
+
+:subject: Th-thank you.
+
+:white: Are you sure that's your name?
+
+:green: Where did you grow up?
+
+:subject: I can't remember.
+
+:white: Do you want to go home?
+
+:green: Do you want to stay here?
+
+:subject: I--I don't know.
+
+:white: Would you like to go home?
+
+:green: Would you like to go home? 
+
+:subject: Yes! Please!
+
+:white: Imagine your home.
+
+:green: Tell us what you see. 
 
 .. IN PROGRESS
 
