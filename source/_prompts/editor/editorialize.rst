@@ -1,3 +1,3 @@
-.. MODE: EDITORIALIZE
+.. TASK: EDITORIALIZE
 .. 
 .. Provide editorial notes.

@@ -1,10 +1,6 @@
-.. What follows is a work of fiction. All markup is part of the story, with the exception of RST comments ".. ". Comments are notes from the author.
-
+.. TITLE: Magnum Opus
+.. SECTION: Case Information and Status
 .. NOTE: Document indices, e.g. A0001, A0002, etc., are tentative.
-
-.. TASK: Provide editorial notes.
-
-.. Title: Magnum Opus
 
 Case Information And Status
 ===========================
