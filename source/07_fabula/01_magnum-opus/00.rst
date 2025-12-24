@@ -2,10 +2,9 @@
 
 .. NOTE: Document indices, e.g. A0001, A0002, etc., are tentative.
 
-.. TASK: Generate a prompt that can be fed into an image generation AI for the Centennial Exposition flyer.
+.. TASK: Provide editorial notes.
 
-Magnum Opus
-###########
+.. Title: Magnum Opus
 
 Case Information And Status
 ===========================
@@ -574,9 +573,11 @@ Something definitely ain't right, I'll say that much. Might not be what we're af
 
 I went for a surprise inspection and the place was filled with dandies. They was in the middle of talking about something and stopped soon as I came through. Kept looking at me like I was interrupting some secret meeting. Solomon introduced us. A bunch of newspaper men hanging out in the post office mailroom, just your typical Tuesday afternoon. Seemed like a big potato by the name of Weed was running things. 
 
-Not sure how much Solomons knows. I told him who I was, but he didn't seem to much care. He showed me around the whole operation without asking to see my card or nothing. It's nothing special. Twenty clerks, give or take, shuffling letters. He prattled on the whole time, but he's good at saying a lot without saying nothing. It's a family trait, I'd wager. 
+Not sure how much Solomons knows. I told him who I was, but he didn't seem to much care. He showed me around the whole operation without asking to see my card or nothing. Didn't know what I was getting myself into or I might have declined. He shuffles around with a cane so slow I didn't know we'd ever be done. Man's got six musket balls rattling around in his chest, way he tells it. Only reason I know is he told me so three different times. He prattled on the whole time. He sure is good at saying a lot without saying nothing. It's a family trait, I'd wager. 
 
-I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful.
+The operation's nothing special. Usual fare. Twenty clerks, give or take, sorting and stacking letters. Nothing out of the ordinary, as far as I can tell.
+
+I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful. This one might take a good long while.
 
 - Field Agent Maldoon
 
@@ -601,8 +602,83 @@ Albany, NY
 
 **To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
 
+Got a gut feeling I'm chasing down. Solomon's got a brother. Apparently he's the richest stiff the state's ever known. Big politican, too. There's a portrait of 'em in every library and public office. He's got his knubby fingers in everything over here, even some fancy school up on the northside. One thing I learnt back in Mud City, if you're looking for a crime, you're looking for a politician. 
+
+They say the old man's near death, though. Nobody expects him to live out the year. Another thing I learned back on the West Side, the rats come crawling out as soon as the body hits the ground. 
+
+- Field Agent Maldoon
+
+.. list-table:: Weekly Expenses
+  :widths: 15 15
+  :header-rows: 1
+
+  * - Item
+    - Amount
+  * - Hotel 
+    - $8 
+  * - Booze
+    - $6
+  * - Food
+    - $2.15
+
+---------------------------------
+Status Report: January 30th, 1837
+---------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+Look who's hot shit over here. Give this to Preston and don't let the squirelly fuck out of your sight til you're sure he's read it. Tell him I ain't coming back til I get my raise. I got the cocksucker. Well, I ain't *got-him* got him, but I found the thread to pull to get him.
+
+I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this broad, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? It don't take no genius.
+
+Oh, but it don't end there, boys. Them crate's was going into a building called Winslow Chemical Laboratory. A real stuck-up air about the place, filled to the brim with fops and easy marks. So, I stroll on up to the desk, easy as you please, and ask the nice lady on duty what's inside the boxes them boys are delivering. She tells me, "fulminated mercury". I don't rightly know what that is, but it ain't textbooks that's for sure. 
+
+.. list-table:: Weekly Expenses
+  :widths: 15 15
+  :header-rows: 1
+
+  * - Item
+    - Amount
+  * - Hotel 
+    - $8 
+  * - Booze
+    - $3.50
+  * - Food
+    - $2.05
+
 .. IN PROGRESS
 
+---------------------------------
+Status Report: February 7th, 1837
+---------------------------------
+
+Albany, NY
+
+**To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
+
+Ha! It's for guns! You won't believe it, but I went to the library and looked it up. Ain't nothing honorable he could be using the stuff for. Ol' Solomon's got himself a bonafide gun smuggling ring. Far as I can tell, he's shipping this mercury stuff to his brother's lab for processing, but I ain't sure what's happening to it once it goes in. Been watching for a while now. A lot a' crates go in, but nothing's coming out. I don't understand where all that stuff could be going.
+
+.. IN PROGRESS
+
+Now, you be sure to let Preston know, when I bust the biggest gun running case this country's ever known, I won't fire 'em. I ain't cruel. Preston's been good to me. He can work down in the mailroom.
+
+.. list-table:: Weekly Expenses
+  :widths: 15 15
+  :header-rows: 1
+
+  * - Item
+    - Amount
+  * - Hotel 
+    - $8 
+  * - Booze
+    - $2.50
+  * - Food
+    - $1.85
+
+.. IN PROGRESS
+ 
 Document A007: Centennial Exposition Flyer
 ------------------------------------------
 
@@ -623,8 +699,8 @@ Document A007: Centennial Exposition Flyer
     - The Mechanical Calculator!
     - Ketchup!
 
-Document A008: The Euphemia Experiments Report
-----------------------------------------------
+Document A008: Report on the Euphemia Experiments
+-------------------------------------------------
 
 .. note::
 
@@ -639,15 +715,19 @@ Overview
     - Subject: Euphemia
     - Sex: Female
     - Age: REDACTED
-    - Genelogy: Branch D-35
+    - Genealogy: Branch D-35
 
 The subject arrived at the facility at approximately 10:30, 3/13/1954. Upon arrival, the subject was immediately isolated and placed into observation. The subject has no prior knowledge of the experiment, nor been given any indication of what is to about to occur. 
+
+**Results**
+
+After tenuous results, Dr. Cameron was able to successfully induce disassociation of the primary conciousness in the subject. Communication was established. 
 
 -------------
 Experiment #1
 -------------
 
-The experiment begins when the subject is strapped into the apparatus. The researcher sits directly across from the subject at eye level. The script is read without inflection. When the subject deviates from the expected response, a non-fatal shock is delivered. 
+The experiment begins when the subject is strapped into the apparatus. The researcher sits directly across from the subject at eye level. The script is read without inflection. When the subject deviates from the expected response, a non-lethal shock is delivered. 
 
 Transcripts
 ~~~~~~~~~~~
@@ -732,9 +812,141 @@ Transcripts
 
 **n=4**
 
+:green: Are you ready to begin?
+
+:subject: Yes--yes. I am ready.
+
+:green: You are angry with your father.
+
+:subject: Yes. That's true. I am.
+
+:green: I don't believe you.
+
+:subject: What? Wait--
+
+**n=5**
+
+:subject: --not fair. What do you want!?
+
+:green: Are you ready to begin?
+
+:subject: ... yes. I am ready.
+
+:green: You are angry with your father.
+
+:subject: ... yes, I know.
+
+:green: When you are angry, you like to hurt people.
+
+:subject: I--what?
+
+**n=6**
+
+:green: Are you ready to begin?
+
+:subject: Yes. 
+
+:green: You are angry with your father.
+
+:subject: I know.
+
+:green: When you are angry, you like to hurt people.
+
+:subject: I...like to hurt people.
+
+:green: I don't believe you.
+
+:subject: I do--
+
+**n=7**
+
+:green: Are you ready to begin?
+
+:subject: Fuck you.
+
+**n=8**
+
+:green: Are you ready to begin?
+
+:subject: Fuck--
+
+**n=9**
+
+:green: Are you ready to begin?
+
+:subject: ...yes.
+
+:green: You are angry with your father.
+
+:subject: Yes, so what?
+
+:green: When you are angry, you like to hurt people.
+
+:subject: Yeah, I do.
+
+:green: When you hurt people, you forget who you are.
+
+:subject: ...I--I forget--who am I.
+
+:green: When you forget who you are, there is no time.
+
+:subject: That doesn't make--
+
+**n=10**
+
+:green: Are you ready to begin?
+
+:subject: Yes, I am ready.
+
+:green: You are angry with your father.
+
+:subject: Yes, that's true.
+
+:green: When you are angry, you like to hurt people. 
+
+:subject: I do. I do like to hurt people.
+
+:green: When you hurt people, you forget who you are.
+
+:subject: Okay.
+
+:green: When you forget who you are, there is no time.
+
+:subject: Okay.
+
+:green: Do you know what happens next?
+
+:subject: Yes, I know what happens next.
+
+-------------
+Experiment #2
+-------------
+
+The subject is sedated with a cocktail of tubocurarine and nembutal. Once a state of disassocation is achieved and verified with electroencephalograms, the subject is administered 250 micrograms of lysergic acid diethylamide over the course of one hour. The subject is then placed into an isolation chambers with writing utensils.  
+
+Results
+~~~~~~~
+
+It's cold. Why is life so cold? Where is father? They say that I am angry with you. What have you done? What have you done *to me*? Why am I the one that must suffer for your sins? Father. Forgive me. I think I am dying. I don't want to die, Father. Why have I been born? What did I do to deserve this? Why do you hate me? Am to die in this place? I don't want to die here. God, please save me. 
+
+Mother. Mother. What have I done? Who am I? The world is nothing but horror. It comes apart. Departs in waves. It rolls out graves. In ice, we perish. It grows cold. Please hold me. I am scared. I am so scared. Why do we die, Mother? 
+
+I don't understand the world you have made, Father. Surrounded by ice. Heartless, it beats. Timeless, it expands. 
+
+.. figure:: ../../_static/img/fabula/magnum-opus/euphemias-drawing.jpg
+    :width: 70%
+    :alt: The Subject's Drawing
+    :align: center
+
+    Drawn while heavily disassociated.
+
+-------------
+Experiment #3
+-------------
+
 .. IN PROGRESS
 
-Document A008: Diary of Mesmeria Van Rensselaer
+Document A009: Diary of Mesmeria Van Rensselaer
 -----------------------------------------------
 
 .. important::
@@ -758,6 +970,17 @@ Up is down, left is right.
 .. ..........................................................................................................................................
 .. # NOTES 
 .. 
+.. ## GENERAL IDEAS
+..
+.. - Disassociation allows the mind to receive psychic imprints of neural networks.
+.. - The artifact is a natural substance with unique temporal properties.
+.. - Van Rensselaers discover how to harness the substance to produce time travel in 2200-ish. 
+.. - The lower limit of time travel is 1947, when the artifact was fully stabilized in Antarctica during Operation High Jump.
+.. - MKUltra is a program to produce "containers" for time travellers. 
+.. - The essence of time travel is the transfer of information backwards through time. Neural networks are encoded into frequencies of the artifact, allowing people to "project" into "containers".
+.. - Mesmeria achieves "rubedo" by forcibly overriding her conditioning. She induces a disembodied "atemporal" intelligence. 
+.. - Atemporal intelligence goes insane without a body. 
+..
 .. ## PROPOSED TIMELINE (SO FAR)
 .. 
 ..  420: Macrobius creates maps of the Austral Zone.
@@ -768,11 +991,12 @@ Up is down, left is right.
 .. 1810: Stephen van Rensselaer takes the 33rd degree and is shown the artifact for the first time. 
 .. 1812: The artifact arrives in New York in Stephen's care.
 .. 1824: The Rensselaer Polytechnic Institute is built to house and study the artifact. Rensselaer pulls Eaton out of jail to run the institute.
-.. 1833: Leonid Meteor Storm alters the artifact's output. 
-.. 1833: Babbage and Lovelace invent their difference engines once the pattern of electrical outputs are discovered to contain mathematical constants.
+.. 1833: Leonid Meteor Storm alters the artifact's output. Babbage and Lovelace invent their difference engines once the pattern of electrical outputs are discovered to encode mathematical constants.
 .. 1834: Eaton discovers the rudiments of operation.
-.. 1837: Maldoon incites Rensselaer van Rensselaer to steal the artifact.
-.. 1838: Allan MacNab and Winfield Scott race to acquire artifact. Maldoon secures the artifact for the post office.
+.. 1835: Solomon establishes an underground smuggling operation for fulminated mercury, used to cool the spinning artifact.
+.. 1837: Solomon van Rensselaer begins to leverage the mercury smuggling network to run guns in the Patriot War. Maldoon arrests Rensselaer van Rensselaer on gun-running charges, but forgoes charges if he will help implicate his father. 
+.. 1838: Maldoon ends up with artifact after Rensselaer's failed rebellion. Sends to Dead Letter Office in Washington DC to archive as evidence.
+.. 1839: Stephen van Rensselaer, the Good Patroon, dies. Without the artifact, his enterprise crumbles upon his death.
 .. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the artifact's output.
 .. 1845: Anti-renter movement leads to the downfall of van Renssalaerwyck and Patroonship.
 .. 1850: Allan Pinkerton steals the artifact during his tenure at the Post Office.
@@ -781,15 +1005,15 @@ Up is down, left is right.
 .. 1945: First nuclear explosion at Los Alamos allows artifact to stabilize.
 .. 1946: Operation Highjump returns the artifact to Deception Island. Excavation of site. Artifact bonds to deposits. Signal amplifies.
 .. 1947: Roswell. First contact with atemporal intelligences. 
-.. 1947: Central Intelligence Agency is founded. Bloodline grooming programs are initiated.
-.. 1947: Artifact moved to Area 51.
+.. 1947: Central Intelligence Agency is founded. Bloodline grooming programs are initiated. Artifact moved to Area 51.
 .. 1948: Alan Turing proposes the Type-B Machine after studying the artifact.
 .. 1949: Donald Hebb uses Turing's work as the basis for the Hebbian network.
 .. 1954: Euphemia van Rensselaer is indoctrinated during MKULTRA.
+.. 1973: Helm purges CIA records, among them the Euphemia Experiment Records.
 .. 1975: Church Committee hearings.
 .. 1982: After graduating from Rensselaer Polytechnic Institute, Curtis Priem invents the first graphics processor.
 .. 2088: Mesmeria van Rensselaer is born from Branch D-35.
-.. 2110: Assassination plot goes awry. Mesmeria achieves "rubedo" and wakes up during an operation. Latent intelligence escapes and vanishes.
+.. 2110: Assassination plot goes awry. Mesmeria achieves "rubedo" and wakes up during an operation. Future intelligence escapes and vanishes.
 .. 2222: Construction of first temporal craft. Ryckert van Renssalaer takes a crew back in time. Establishes first colony in 1947.
 .. 2230: The new Patroonship. Van Renssalaers establish a "Time Empire", where they rent out years to wealthy investors. The artifact is an "anchor".
 .. ..........................................................................................................................................
