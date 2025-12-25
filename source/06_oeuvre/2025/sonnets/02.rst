@@ -1,27 +1,27 @@
---------
-Larksong 
---------
+------
+Eulogy
+------
 
-| at least the larks remember songs
-| each morning rise you're gone again.
-| 
-| the mourning veils of scattered throngs 
-| depart your wake without amen.
-| 
-| the men who take your parts away
-| forget to take my silent heart.
+| mound of the earth, the funeral pyre,
+| sermons of fire, infernos of oak.
 |
-| they leave a lily black bouquet
-| whose petals fingers tear apart.
+| burning of briars, spiraling higher,
+| chorus expired and softly I spoke:
+|
+| nothing is left, but cinders remain,
+| warm to the touch, as memories fade. 
 | 
-| and when i stand, the thoughts remain,
-| the stems are bare and nothing's changed. 
+| look to the thrashing showers of rain,
+| mourn with the hissing coils arrayed.
 | 
-| the birds begin their last refrain
-| as though they knew and prearranged.
+| pound for the taking, body of ash,
+| weight of the flame, transmuted to wind. 
 | 
-| if nothing else, their voice belongs;
-| at least the larks remember songs.
+| thundering void, in symbols that flash,
+| scavenging clouds, futures descend.
+| 
+| weep with the water, falling to feet,
+| honor your father, drink of his heat.
 
 - August 2025
 
@@ -32,20 +32,8 @@ Larksong
   * - Date
     - Publication
     - Status
-  * - August 13, 2025
-    - Tabula Rasa
-    - Rejected
-  * - August 13, 2025
-    - Loch Raven Review
-    - Rejected
   * - August 15, 2025
     - Baltimore Review
-    - Rejected
-  * - August 15, 2025
-    - Little Patuxent Review
-    - Pending
-  * - August 15, 2025
-    - Smartish Pace
     - Rejected
   * - August 16, 2025
     - American Poetry Review
@@ -54,16 +42,25 @@ Larksong
     - Missouri Review
     - Rejected
   * - August 22, 2025
+    - Palette Poetry
+    - Pending
+  * - August 22, 2025
     - Willows Wept Review
     - Pending
-  * - August 25, 2025
-    - Midsummer Dream House Context
+  * - August 22, 2025
+    - Macrame Literary Journal
+    - Rejected
+  * - August 22, 2025
+    - Glass
     - Pending
   * - August 25, 2025
-    - The Celestial Glossary
+    - Oxford Poetry Prize
     - Rejected
-  * - August 26, 2025
-    - The Plentitudes
+  * - August 25, 2025
+    - Plougshares
+    - Rejected
+  * - August 25, 2025
+    - Midsummer Dream House Context
     - Pending
   * - August 26, 2025
     - Gavialidae
@@ -75,29 +72,27 @@ Larksong
     - Raleigh Review
     - Pending
   * - August 29, 2025
-    - Arcturus
-    - Pending
-  * - August 29, 2025
-    - AC DC: Journal for the Bent
-    - Rejected
-  * - August 29, 2025
     - Banyan Review Poetry Contest
     - Rejected
-  * - September 3, 2025
-    - Hopkins Review
-    - Pending
+  * - September 5, 2025
+    - Amethyst Review
+    - Rejected
   * - September 9, 2025
     - Garfield Lake Review
     - Accepted
+  * - October 6th, 2025
+    - Skummel Magazine
+    - Rejected
   * - October 7th, 2025
     - DASH Literay Journal
     - Pending
   * - November 24, 2025
     - Artists from Maryland
-    - Pending
+    - Acceptance
 
-Acceptance
-~~~~~~~~~~
+
+Responses
+~~~~~~~~~
 
 .. epigraph::
 
@@ -120,3 +115,15 @@ Acceptance
   If you require any further edits to your piece, please reach out directly to our Editor in Chief, Logan Schreiber, at lschreiber@uolivet.edu. If we should need any edits to your piece, a team member will be in touch with you after acceptance. In the meantime, if you have any questions, please let me know.
 
   -- Logan Schreiber, Editor in Chief
+
+.. epigraph::
+
+  Hi Grant,
+
+  Thank you for sending Landscapes/Cathedral/Ode to Death/Eulogy to SKUMMEL. Your piece stayed with us, haunting the room in the best way. While we decided not to accept it this time, it came close. We kept returning to it during our final reads. If you know what a personal rejection is, this is that.
+
+  We’d love to see more from you in the future. Consider this an open invitation to send us your next work.
+
+  Our pages are shaped by the voices that linger. Yours is one we hope will return.
+
+  -- The Editors, SKUMMEL

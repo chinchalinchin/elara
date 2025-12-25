@@ -161,8 +161,8 @@ The Pantoums of Dementia
     - Artists from Maryland
     - Rejected
 
-Acceptance
-~~~~~~~~~~
+Responses
+~~~~~~~~~
 
 .. epigraph::
 
@@ -185,9 +185,6 @@ Acceptance
   To accompany your piece, we’d love to include a photo of you (a headshot is preferred) alongside your author bio. When you get a moment, please email it to submissions@scribeworth.com.
 
   -- The Scribeworth Editorial Team
-  
-Rejection
-~~~~~~~~~
 
 .. epigraph::
 

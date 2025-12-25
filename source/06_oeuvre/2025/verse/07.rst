@@ -39,8 +39,9 @@ Billboards
     - Artists from Maryland
     - Rejected
 
-Rejected
-~~~~~~~~
+
+Responses
+~~~~~~~~~
 
 .. epigraph::
 

@@ -52,6 +52,9 @@ Landscapes
     - Skummel Magazine
     - Rejected
 
+Responses
+~~~~~~~~~
+
 .. epigraph::
 
   Hi Grant,

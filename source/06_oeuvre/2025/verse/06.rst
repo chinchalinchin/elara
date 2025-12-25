@@ -72,7 +72,7 @@ Anniversary
     - Artists from Maryland
     - Rejected
 
-Rejection
+Responses
 ~~~~~~~~~
 
 .. epigraph::

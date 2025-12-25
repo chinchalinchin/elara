@@ -124,6 +124,9 @@ The Origin of Lies
     - January House Literary Journal
     - Rejected
 
+Responses
+~~~~~~~~~
+
 .. epigraph::
 
   Dear Grant Moore,

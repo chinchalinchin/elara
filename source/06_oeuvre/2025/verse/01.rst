@@ -28,6 +28,9 @@ Photographs of Autumn
     - Macrame Literary Journal
     - Accepted
 
+Responses
+~~~~~~~~~
+
 .. epigraph::
 
   Dear Grant,

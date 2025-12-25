@@ -1,3 +1,7 @@
+.. TASK: EDITORIALIZE
+.. 
+.. Provide editorial notes on the following document. Focus on the years between 1820 - 1837.
+
 .. TITLE: Magnum Opus
 .. SECTION: Case Information and Status
 .. NOTE: Document indices, e.g. A0001, A0002, etc., are tentative.
@@ -11,7 +15,7 @@ Case Information And Status
         #GT17008341-01
 
     Defendant
-        Mesmeria Van Rensselaer
+        Mesmeria van Rensselaer
     
     Offense Date
         12/23/2110
@@ -75,19 +79,7 @@ Document A001: Mesmeria Van Rensselaer Interrogation
 
     Down and down, I spiral, past crowds arrayed around windows, their noses pressed against glass. Foggy imprints smeared in suspended animation across the glass. I disappear through art displays and ceramic statues. Decades unpeel as scenes flash, projected directly onto my vision. Somewhere, a man grovels and begs me not to kill him. A hammer cocks through reverberating echoes, through spools of time. Iron screams from the pressure twitch of a trigger finger, divergent branches blown into existence with a few compressed centimeters. A clicking and then a loud clack, my boot heels pound towards the exit, towards freedom.
 
-    In the lobby, an angel awaits amidst the chaos. Golden hair frames the eyes of God, her drooping swoops of glowing thread knitted together with criss-crossed needles, wrapped and crucified to her skull. She smiles directly at me. 
-
-:knudson: Look familiar?
-
-:palmer: Now, where have we seen her before?
-
-.. topic:: stdout 
-
-    "May I take your bag?" She asks as if nothing at all were amiss.
-
-    Computations misfire and circuits break. I disconnect from body, flailing to control it. Error protocols engage, a firestorm of agents reaching consensus beneath my attention. My hands give the librarian the bag. She places it in a plastic bin and then motions toward the glass doors.
-
-    "Thank you for your patronage!", She smiles and leads me away, gently guiding me outside. Wide-eyed, I stare. With an assured grin, she says, "Please do come again."
+    Computations misfire and circuits break. I disconnect from my body, flailing to control it. Error protocols engage, a firestorm of agents reaching consensus beneath my attention. I stumble through moments, falling back to now.
 
     Outside, the heavens rain sheets of locusts. Metallic scarabs balancing atop symmetrically distributed propellers descend in perfect vertical lines, coating the sky and filling the air with the barely perceptible buzz of hive minds. Swarms hover over fleeing crowds, like shepherds herding flocks. Flitting clouds of gyroscopic eyes, recording and cataloguing, scan and broadcast faces back to their handlers, communing with hidden realities.
 
@@ -123,7 +115,7 @@ Document A001: Mesmeria Van Rensselaer Interrogation
 
 :mesmeria: Yes, I know what happens next.
 
-:knudson: Then you know who we are looking for. Tells us where he is.
+:knudson: Then you know what we're looking for.
 
 .. important::
 
@@ -176,39 +168,39 @@ March
     
     The maiden voyage of father's new empire, sanctioned by the Prince of Orange. These men believe in a year's time they will return to this land as lords, rich beyond their imagination. Let them enjoy their ignorance with what little leisure time remains before our godly duties are to be dispensed.
 
-    Our true cargo arrives under the cover of darkness tonight. Hendrick will receive her and help her board the Eden before the crew wakes. 
+    Our true cargo arrives under the cover of darkness tonight. Hendrick will receive her and help her board the *Eden* before the crew wakes. 
 
     -- March 14th, 1637
 
 .. epigraph::
 
-    The Eden set sail from Rede van Texel before dawn, bearing the sigil of the Lord, Jesus Christ. A finer vessel has never been produced by Dutch shipyards. Much has already been written about her in the papers, but a larger portion has been hidden from all but my family and the Stadtholders. Most of the talk has been deliberately centered around her innovative hull. With a razor-sharp bow, she cuts an imposing figure for onlookers. Father saved the headline from one of local corantos, *Her Sides Are Steep and Her Draft is Deep*, well before the press start scandalizing his deal with the Prince of Orange.
+    The *Eden* set sail from Rede van Texel before dawn, bearing the sigil of the Lord, Jesus Christ. A finer vessel has never been produced by Dutch shipyards. Much has already been written about her in the papers, but a larger portion has been hidden from all but my family and the Stadtholders. Most of the talk has been deliberately centered around her innovative hull. With a razor-sharp bow, she cuts an imposing figure for onlookers. Father saved the headline from one of local corantos, *Her Sides Are Steep and Her Draft is Deep*, well before the press start scandalizing his deal with the Prince of Orange.
     
     Less is said of her sheathe, except among the other captains. Coated in copper panels, she shimmers in the sun like an angel from God. She flies like one as well, clocked at 18 knots with a favorable wind behind her. When the elements turn against us, as they inevitably will the closer we get to our goal, her Bermuda sloop will let her glide as though she were a ghost, unanswerable to anyone except the Almighty.
         
-    Within her hull she bears enough salted beef, hardtack, beer, water and dried peas for 18 months. Hendrick reports some questions have arisen among the crew regarding the size and extent of supplies. Already there are rumors spreading our voyage is not what it appears. It is to be expected. The Eden has not been fitted with cannons, under the pretense of maximizing our profits with heavier cargos. A sailor without a cannon is rightfully nervous, but Jeremias is correct to assure them. The Eden can outrun any English privateer or Spanish dog upon which she might chance. We have no need for weapons of war.
+    Within her hull she bears enough salted beef, hardtack, beer, water and dried peas for 18 months. Hendrick reports some questions have arisen among the crew regarding the size and extent of supplies. Already there are rumors spreading our voyage is not what it appears. It is to be expected. The *Eden* has not been fitted with cannons, under the pretense of maximizing our profits with heavier cargos. A sailor without a cannon is rightfully nervous, but Jeremias is correct to assure them. The *Eden* can outrun any English privateer or Spanish dog upon which she might chance. We have no need for weapons of war.
     
     Hendrick suggested having one of the gossip-mongers caned, but it is far too early for those sorts of measures. Though he serves his purpose, I often forget the number of Spaniards who have suffered under Hendrick's hand. He betrays his mongrel stock with his barbarism. His first instinct is always violence. If he were not utterly loyal to my family, he would be a liability in this endeavor.
 
-    However, whatever his disposition, his presence is necessary, being the only other soul aboard that knows the scope of the Eden's mission. For years, we have studied together. For years, we haved waited for this moment. The day is finally near when we will finish of the work of Jesus Christ.
+    However, whatever his disposition, his presence is necessary, being the only other soul aboard that knows the scope of the *Eden*'s mission. For years, we have studied together. For years, we haved waited for this moment. The day is finally near when we will finish of the work of Jesus Christ.
 
     -- March 15th, 1637
 
 .. epigraph:: 
 
-    That we do the Great Work is apparent. For three days straight we have enjoyed the wind at our backs. The Eden sails at breathtaking speed, faster even than the Dunkirkers' frigates. Already Jeremias calculates that we will reach the open ocean tomorrow. None of us would believe it except that we see its proof with our own eyes each day when we wake. We move with the fleetness of Gabriel. The Word of God carries our sails to the furthest reaches of the globe.
+    That we do the Great Work is apparent. For three days straight we have enjoyed the wind at our backs. The *Eden* sails at breathtaking speed, faster even than the Dunkirkers' frigates. Already Jeremias calculates that we will reach the open ocean tomorrow. None of us would believe it except that we see its proof with our own eyes each day when we wake. We move with the fleetness of Gabriel. The Word of God carries our sails to the furthest reaches of the globe.
 
     -- March 18th, 1637
 
 .. epigraph::
 
-    We picked up a tail as we left the channel. She is one of the new English raiders, built to chase down the pirates off the Moroccan coast. I admit, the seamen in me is impressed with her construction, but even with her oars, she is no match for the Eden. Jeremias says she will disappear into the horizon before sundown. She flings her cannonballs at us, but her gunners were not trained to offset their targets enough to catch us. The crew gathered round the deck and watched the geysers sprout behind us as the fools threw their artillery into the sea. Each time they missed, a cheer rose up among the crew.  
+    We picked up a tail as we left the channel. She is one of the new English raiders, built to chase down the pirates off the Moroccan coast. I admit, the seamen in me is impressed with her construction, but even with her oars, she is no match for the *Eden*. Jeremias says she will disappear into the horizon before sundown. She flings her cannonballs at us, but her gunners were not trained to offset their targets enough to catch us. The crew gathered round the deck and watched the geysers sprout behind us as the fools threw their artillery into the sea. Each time they missed, a cheer rose up among the crew.  
 
     -- March 19th, 1637
 
 .. epigraph::
 
-    These eyes, which have seen clippers beach Spanish galleons off the coast of Cuba, still scarcely believe how swiftly the Eden cuts through the ocean. She made a journey calculated for ordinary vessel to take two months in mere weeks. The Eden disembarked from Sierra Leone today after resupplying. 
+    These eyes, which have seen clippers beach Spanish galleons off the coast of Cuba, still scarcely believe how swiftly the *Eden* cuts through the ocean. She made a journey calculated for ordinary vessel to take two months in mere weeks. The *Eden* disembarked from Sierra Leone today after resupplying. 
     
     During the brief, Hendrick tallied our numbers. At port, we lost two men, deserters gone without a trace. None of the officers could produce a reason as to why. Their names were noted and left at port. If the authorities find them, I have left instructions to have their bodies shipped back to Amsterdam. Cowards they may be, yet no Dutchman deserves to be buried in this foreign land. 
 
@@ -216,7 +208,7 @@ March
 
     Once we lost sight of land, I had Nicolas gather the other officers of the crew in my cabin. I could no longer bear the deception, although I may have erred by showing them the map of Macrobius. Knowledge of the Terra Incognita is no easy burden for the mortal mind to bear. Hendrick said as much with his glaring eyes, but I bade him retrieve it. 
 
-    Jeremias scoffed, as expected. Pieter, always the soldier, took the news without flinching. The rest of their reactions I do not possess the skill to decipher. Suffice to say, they believed themselves set for Patagonia, only to be told at the final hour this subterfuge was a calculated manuever and our true path lie in the direction of the Austral Zone. The voyage of the Eden shall be written in no manifests. 
+    Jeremias scoffed, as expected. Pieter, always the soldier, took the news without flinching. The rest of their reactions I do not possess the skill to decipher. Suffice to say, they believed themselves set for Patagonia, only to be told at the final hour this subterfuge was a calculated manuever and our true path lie in the direction of the Austral Zone. The voyage of the *Eden* shall be written in no manifests. 
 
     Heaven help me if they discover what's in the hull.
 
@@ -266,7 +258,7 @@ April
 
 .. epigraph::
 
-    Reports multiply, growing more disturbed and deranged. Every morning, Hendrick details another lurid account. Yesterday, the cook claimed to have seen swirling lights in the night sky, following the Eden. Today, a deck hand lay unconscious in the infirmary after drinking a stomach full of sea water for reasons unbeknownst to anyone. Add to these strains, the steady whispers of the midnight chant, now all but general knowledge.
+    Reports multiply, growing more disturbed and deranged. Every morning, Hendrick details another lurid account. Yesterday, the cook claimed to have seen swirling lights in the night sky, following the *Eden*. Today, a deck hand lay unconscious in the infirmary after drinking a stomach full of sea water for reasons unbeknownst to anyone. Add to these strains, the steady whispers of the midnight chant, now all but general knowledge.
     
     Moreover, tales have spread that Francis, the boy, was keelhauled during the night watch. Hendrick assures me nothing of the sort happened. I swear the man, whom I have trusted for a decade with my life, smirked at me when I asked him.
 
@@ -305,7 +297,7 @@ April
 
 .. epigraph::
 
-    I could hardly believe the news. Recife has been sighted ten days ahead of schedule. Even at the Eden's speed, this should not be possible. Jeremias' calculations confirm it. Our current position is a mathematical impossibility. Pieter suggests the Eden is pushed by a magnetic current, but Jeremias is adamant that too is impossible since we are *moving away* from the Rupes Nigra. According to our esteemed navigator, there is no explanation for our early arrival, yet we are here nonetheless. Whatever the reason, the crew will be pleased to rest for a fortnight. 
+    I could hardly believe the news. Recife has been sighted ten days ahead of schedule. Even at the *Eden*'s speed, this should not be possible. Jeremias' calculations confirm it. Our current position is a mathematical impossibility. Pieter suggests the *Eden* is pushed by a magnetic current, but Jeremias is adamant that too is impossible since we are *moving away* from the Rupes Nigra. According to our esteemed navigator, there is no explanation for our early arrival, yet we are here nonetheless. Whatever the reason, the crew will be pleased to rest for a fortnight. 
 
     Tonight, after they are sufficiently in their cups, Hendrick and I will unlock the hold within the hull and take our guest to see the Potiguarra.
 
@@ -329,7 +321,7 @@ April
 
 .. epigraph::
 
-    Hendrick put the losses at a dozen, Nicolas and Jeremias among them. According to Pieter, they left yesterday morning after plundering the hold for supplies. He could not say where, but no doubt they made for Olinda. If the rotations are lengthened, fifty sailors is more than enough to man the Eden at all hours, but the loss of Jeremias will be felt. 
+    Hendrick put the losses at a dozen, Nicolas and Jeremias among them. According to Pieter, they left yesterday morning after plundering the hold for supplies. He could not say where, but no doubt they made for Olinda. If the rotations are lengthened, fifty sailors is more than enough to man the *Eden* at all hours, but the loss of Jeremias will be felt. 
 
     The prospect of reembarking without a navigator bothers me, but the betrayal stings even worse. Jeremias has sailed with me since Matazanas. I cannot fathom why he would abandon me now. He left without explanation or clue. I am certain Nicolas got into his head with his conspiracies and convinced him of some fantasy.  
 
@@ -341,7 +333,7 @@ April
 
     Another five are gone this morning. Pieter says when they learned of Coaraci and her new additions, the crew dissolved into argument. Of course, in their ignorance, they could not understand why I might conceal her presence. I have seen the depths of carnal sin into which men alone at sea will fall.
     
-    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the Eden, which leaves only a few days to make the ad hoc modifications. Maurits has given a handful of slaves to aid the task and I have given Hendrick leave to do what is necessary to ensure the Eden is outfitted with the Ipe panels on time. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
+    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the *Eden*, which leaves only a few days to make the ad hoc modifications. Maurits has given a handful of slaves to aid the task and I have given Hendrick leave to do what is necessary to ensure the *Eden* is outfitted with the Ipe panels on time. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
 
     -- April 23rd, 1637
 
@@ -349,7 +341,7 @@ April
 
     Coaraci sang a lovely verse from her tongue this morning while we ate pineapple. I will miss her voice, but the terms were always clear. Her home for mine.
 
-    Down below, Hendrick drives the slaves in their tasks. We have been watching for several hours from the window of the Maurits estate, Coaraci and I. The Eden armors herself in hardwood panels, layer by layer. Tiny specks of men repel down her hull and bolt each one into place.    
+    Down below, Hendrick drives the slaves in their tasks. We have been watching for several hours from the window of the Maurits estate, Coaraci and I. The *Eden* armors herself in hardwood panels, layer by layer. Tiny specks of men repel down her hull and bolt each one into place.    
     
     She tells me it is right for man to dominate other men, for all men are dominated themselves by the Almighty and are therefore made for it by nature. I find myself dwelling on her words, as I often do. The way her heathen mind yielded to the graces of God so easily and allowed His Divine Insights to penetrate has always been a source of confusion. 
 
@@ -359,7 +351,7 @@ April
 
 .. epigraph::
 
-    Unapora accompanied Hendrick and I as we surveyed the results of the refitting. True to Drebbel's promise, the copper sheathe of his design prevented the buildup of barnacles, making the modifications substantially easier to accomplish. Where before the Eden was a shimmering cherub clothed in the vestments of luxury, now she bares the armaments of Michael, a proud warrior in the Lord's army, ready to battle the elements. 
+    Unapora accompanied Hendrick and I as we surveyed the results of the refitting. True to Drebbel's promise, the copper sheathe of his design prevented the buildup of barnacles, making the modifications substantially easier to accomplish. Where before the *Eden* was a shimmering cherub clothed in the vestments of luxury, now she bares the armaments of Michael, a proud warrior in the Lord's army, ready to battle the elements. 
 
     The Shaman spoke to us of our journey ahead. The Potiguarra refer to the garden as the Land Without Evil. Their stories tell them it lay across the sea, guarded by walls of ice. Beyond these walls lay an oasis of green, where the fruit flowers year long and the sun never sets. The map of Macrobius, the reports of Schouten and Le Maire, these heathen myths. The confluence of evidence is too great to ignore. 
 
@@ -373,25 +365,60 @@ April
 May
 ---
 
-.. IN PROGRESS: How men react to Potiguarra. Integration of Potiguarra beliefs in Calvinist dogma.
+.. epigraph::
+
+    With the addition of Unapora and his Potiguarra, the *Eden* is almost back to fighting strength. They are green and heathen, but the sea makes men of us all or in failing, casts us to its depths. They shall be sailors by the week's end or they shall be food for fish. 
+
+    The *Eden* hugs the coast until Puerto Deseado and then from that point on, the angles of Macrobius will be our bearing. 
+
+    -- May 2nd, 1637
 
 .. epigraph::
 
-    Unapora and his Potiguarra have been training on hempen cables, tossing them behind the ship and pulling them back aboard a hundred times an hour. While I would surely prefer the full complement of Dutchmen with which the I left Amsterdam, these heathens will serve the Eden just as well. A body is a body. The rest of the crew scrambles to secure every opening and bar every port in preparation. Pieter is the only one, besides Hendrick and myself, who has seen the waters of Costa Patagonum, but he has sufficiently instilled the fear in the rest of the crew.
+    The Potiguarra have been training on hempen cables, tossing them behind the ship and pulling them back aboard a hundred times an hour. While I would surely prefer the full complement of Dutchmen with which I left Amsterdam, these heathens will serve the *Eden* just as well. A body is a body. The rest of the crew scrambles to secure every opening and bar every port in preparation. Pieter is the only one, besides Hendrick and myself, who has seen the waters of Costa Patagonum, but he has sufficiently instilled the fear into the rest of the crew.
 
     My calculations were never as precise as Jeremias, but by my reckoning, we should enter the stormy abode of Patagonia within the next few days. All of the trials that have beset us these past months were but prologue to what follows. No foe is more unforgiving than the raw, untamed ocean. It is for this reason the sailor is nearer to God than any other individual. A mortal mind will come no closer to grasping the Lord's Divine  Nature than when it stares down a 100 foot wave that spans the horizon. 
 
-    The Eden sets closer to sea level with her new armor. If our luck holds out, her new center of gravity should keep us from capsizing when the worst of it comes. If not, I have given Hendrick explicit orders to keep the masts at all costs. Strike the tops and shake off the bonnets, but anyone that tries to take an axe to the mast itself will no longer have hands to swing an axe. We will heave-to what we can, but the men must be ready at moment's notice to deploy the drogues and begin scudding. The masts *must* remain. 
+    The *Eden* sets closer to sea level with her new armor. If our luck holds out, her new center of gravity should keep us from capsizing when the worst of it comes. If not, I have given Hendrick explicit orders to keep the masts at all costs. Strike the tops and shake off the bonnets, but anyone that tries to take an axe to the mast itself will no longer have hands to swing an axe. We will heave-to what we can, but the men must be ready at moment's notice to deploy the drogues and begin scudding. The masts *must* remain. 
 
     -- May 10th, 1637
 
 .. epigraph::
 
-    As expected, the world goes gray and the water choppy. 
+    As expected, the world goes gray and the water to chop. A somber air from the pink sky above descends upon the crew this evening. We all see the clouds gathering over the course the *Eden* charts, drawn up from the sea in sprays of fog. A curtain of roiling storm cloaks the ocean from us. Unapora spoke to us of the *pampero*, the storms which bellow from the south and west. I have given the men leave to open the winter provisions. Wrapped in fur and their beards full of tallow, they look as their forebearers looked when our Batavian blood spilled from the Rhine and flooded the upper reaches of the North Sea.
+
+    I spoke the final Psalm many of them shall ever hear as the howling gales rose in chorus,
+
+    | He causeth the vapours to ascend from the ends of the earth; 
+    |
+    | he maketh lightnings for the rain; 
+    |
+    | he bringeth the wind out of his treasuries.
+    |
+
+    May these word commend their soul to heaven. 
 
     -- May 12th, 1637
 
-.. IN PROGRESS: Scudding the wave, throw drogues to balance speed and stabilize the prow.
+.. epigraph::
+
+    The *Eden* is crippled. The Mizzen Yard was lost the instant the squall hit us. It exploded in a spray of splinters as if vaporized by cannonfire. Pieter caught a face of debris and now lay below deck, his chest rising slower each time I check. They have replaced his bandages three times already. I said a prayer over his unconscious body, but I fear the Lord has already taken him. 
+
+    With the loss of the rear mast, we no longer steer the ship, but fight with all of our strength to keep it on course. I've ordered the remaining crew to man the whipstaff in rotations of three. Everyone is a helmsman now, even the Potiguarra. The exhaustion of the work will quickly take its toll, but if we lose control, we risk spinning out and being left to the mercy of the unforgiving wind. We make for Port Desire for repairs.
+
+    -- May 13th, 1637
+
+.. IN PROGRESS: Added hardwood causes the pampero to sweep a large number of crew from the deck.
+
+.. epigraph::
+
+    It is as the Potiguarra say. There are but two ends in this life: fire or ice. 
+
+    As the men performed makeshift repairs on the *Eden*, I walked along the untouched coast of this land, so different from my own. I see now that we grow complacement in our stone houses and forget the flames of the forge that shaped the Batavian soul in its cradle. Here, in desolate wilderness, where I thought no mortal had glimpsed since the Lord conjured it from the deep, I stumbled in my path upon the charred remains of those who preceded me. Here, where Schouten gave the *Hoorn* to the flame before devoting himself to the completion of his voyage, the very man whose journey foretold mine, whose reports informed my plan, whose essence lives now in this hallowed ground. I take no shame in the tears I shed.
+
+    -- May 14th, 1637
+
+.. IN PROGRESS: The final mass.
 
 ----
 June 
@@ -402,6 +429,8 @@ June
     The men that remain are the Lord's chosen. I can see the fire of faith in their eyes that warms them when I recite the passages during our devotions. They have gone to the depths, and now they mount towards heavens. These hallowed few, I know I can trust. I have assured them the end of our journey will be no less than paradise itself. When I told them, they dropped to their knees and cried out to the Lord above. Even Unapora and his Potiguarra shamans have given themselves to Christ. We write the next testament of His Word with our actions. 
 
     -- June 2nd, 1637
+
+.. IN PROGRESS: Latitude 63°S
 
 .. IN PROGRESS: Ice blink. Clouds are dark when ocean is unfrozen. Ice reflects light. How to navigate the Wall.
 
@@ -430,7 +459,10 @@ June
     | And the hoary frost of heaven, who hath gendered it? 
     |
     | The waters are hid as with a stone, and the face of the deep is frozen.
-    
+    |
+
+    All obstacles are conquered by his Word.
+
     -- June 12th, 1637
 
 .. epigraph::
@@ -441,9 +473,9 @@ June
 
 .. epigraph::
 
-    This place announces itself every moment a world no man should ever enter. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. Streaks of unnatural colors blaze and ripple across the blackness, obscuring our view of the stars. 
+    This place announces itself every moment a world no man should enter of his own God-given will. We tread through profane waters, where the rational mind can find no purchase. I have seen its profanity with my own eyes. This world has no night. The very sky dissolves into the flames of Hell. Streaks of unnatural colors blaze and ripple across the blackness, obscuring our view of the stars. 
     
-    To confound the matter, the shelves of ice below continue to batter our hull, as though an inferno did not rage above us. The hardwood has served its purpose, shielding the Eden's hull from the ceaseless assault, but the creaking and splintering takes its toll. Some of the panels still hang only by the grace of God. 
+    To confound the matter, the shelves of ice below continue to batter our hull, as though an inferno did not rage above us. The hardwood has served its purpose, shielding the *Eden*'s hull from the ceaseless assault, but the creaking and splintering takes its toll. Some of the panels still hang only by the grace of God. 
 
     The Lord continues to test us, but we shall not cease. 
 
@@ -477,7 +509,59 @@ July
 
 .. IN PROGRESS: Polynya stops. Crew is frozen in place, literally mid-word. 
 
-Document A003: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
+Document A003: Excerpt from Illustrations of Masonry
+----------------------------------------------------
+
+.. Maybe just write a whole book within a book instead of excerpts?
+
+.. important::
+
+    This manuscript was published in 1826 and had a circulation of less than two hundred copies. The last remaining copy was obtained from the Batavia Public Library and scanned into the Library of Congress on October 13th, 2111.
+
+------------
+pgs. 15 - 16
+------------
+
+As an apprentice of the Grand Lodge of New York, I was often invited to attend various social functions in my capacity as a representative of the Order. The expected invitation arrived in late autumn of 1825. I was to attend the ceremonial procession of the *Seneca Chief* flotilla into Rochester. It was there and then I first encountered the Grand Master, Stephen Van Renssalaer III. 
+
+The crowds had gathered upon the cobblestone paths of the Genesee Aqueduct, a marvel of modern masonry. The investiture of two years of hard labor had born spectacular results. The aqueduct arched over the Genesee River with the grace of a dancer, carrying perpendicular to the course of the river an entirely new waterway, which was to be inaugurated with the economic lifeblood of the country this very day. Few had gathered who could appreciate the master craftsmanship, the perfection embodied in its angles and struts. Not since the days of the caeasars and pharaohs had the world seen such construction.
+
+When the sun began its downward descent, we saw the horses round the corner, drawing behind them the *Seneca Chief*. Upon the deck of the barge stood Governor Clinton, upright and chest pushed out in victory. Beside him stood the man I would come to know as Stephen Van Renssalaer, an enigma in a frock coat. The pagentry commenced when the boat docked at the entrance to the aqueduct fired a performative musket shot into the air, silencing the commotion. A lone voice called to challenge the approaching vessel, "Who comes there?"
+
+The Governor, revelling in the pomp, called back, "Your brothers from the West, on the waters of the Great Lakes!"
+
+The reply came, "By what means have they been diverted so from their natural course?"
+
+To which the Governor in turn replied, "By the channel of the Grand Erie Canal!"
+
+Not a soul beyond the initiated realized the meaning of this ritual, nearly identical to challenge a Brother of the Order must meet to enter the Temple. It was only later that I myself realized the significance of Stephen's presence. With this performance, Stephen had ensured the symbolic victory of the Masonic Order, its utter dominion over the natural elements. Nature had not just been tamed, it had been willfully organized contrary to its wishes. The mark of its maker was now imbued into the very foundations of the current itself. 
+
+The *Seneca Chief* docked as the commotion re-ignited and crescendoed into a flurry of bands and confetti. Speeches were given, but none of consequence. The dignitaries retired to the Mansion House hotel on State Street for the banquet and ball. As the parade moved through the city streets and the evening rose in the sky, candles were placed into the windows. An ethergeal glow hung just above our heads, casting out the encroaching dark. As we passed under this angelic light, an esctatic delirium descended upon us. Rochester seemed as though it flowed through a dream, a vision of music and dance. 
+
+.. IN PROGRESS: Mansion House, hotel on State Street. Formal dinner.
+
+After his bloviating, the Governor introduced the man I had silently been waiting to hear. Of course, I knew of the Grand Master, his name being commonplace among the brothers at the Lodge, but never before had I seen him or heard him talk. His exploits need no further explanation; Any student of history will find them writ large within the annals of America. That night, still awash with the spirits of celebration, I transcribed his speech to best of my recollection, which I now reproduce below, 
+    
+    Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea within my head.
+
+    At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statutes may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
+
+.. IN PROGRESS: The 47th Problem.
+
+.. IN PROGRESS: Morgan impresses Stephen with the Legendre Proof. 
+
+--------------
+pgs. 150 - 151
+--------------
+
+.. image:: ../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
+   :width: 70%
+   :alt: Schematic of unknown device.
+   :align: center
+
+.. IN PROGRESS
+
+Document A005: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
 -----------------------------------------------------------------------------
 
 .. important::
@@ -493,6 +577,7 @@ Document A003: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
     The age of computation is upon us, Stephen. I can hardly wait to discuss it when next you return to London.
 
     Yours Truly,
+
     Lady Ada Lovelace
 
     P.S. You must give Euphemia my regards. I miss her terribly. 
@@ -523,6 +608,7 @@ Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
     We have done it, old friend. Our reward will be the future itself. 
     
     Your ever loyal servant,
+
     Amos Eaton
 
 Document A006: Post Office Field Reports
@@ -581,7 +667,7 @@ Not sure how much Solomons knows. I told him who I was, but he didn't seem to mu
 
 The operation's nothing special. Usual fare. Twenty clerks, give or take, sorting and stacking letters. Nothing out of the ordinary, as far as I can tell.
 
-I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful. This one might take a good long while.
+I've been watching the place day and night for a week, but I don't see no evidence of any smuggling operation. The guy's crooked, that's for sure, but he's careful. This one might take a while.
 
 - Field Agent Maldoon
 
@@ -635,7 +721,7 @@ Albany, NY
 
 Look who's hot shit over here. Give this to Preston and don't let the squirelly fuck out of your sight til you're sure he's read it. Tell him I ain't coming back til I get my raise. I got the cocksucker. Well, I ain't *got-him* got him, but I found the thread to pull to get him.
 
-I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this broad, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? It don't take no genius.
+I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this skirt, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? It don't take no genius.
 
 Oh, but it don't end there, boys. Them crate's was going into a building called Winslow Chemical Laboratory. A real stuck-up air about the place, filled to the brim with fops and easy marks. So, I stroll on up to the desk, easy as you please, and ask the nice lady on duty what's inside the boxes them boys are delivering. She tells me, "fulminated mercury". I don't rightly know what that is, but it ain't textbooks that's for sure. 
 
@@ -703,7 +789,28 @@ Document A007: Centennial Exposition Flyer
     - The Mechanical Calculator!
     - Ketchup!
 
-Document A008: Report on the Euphemia Experiments
+Document A008: Correspondence Between Elizabeth van Rensselaer and Kiliaen Maunsell Van Rensselaer
+--------------------------------------------------------------------------------------------------
+
+.. note::
+
+    This letter was confiscated during the execution of a search warrant on the van Rensselaer estate in Albany, New York on October 12th, 2111. Forsenic and circumstantial analysis place the date of its creation somewhere after 1945.
+
+.. epigraph::
+
+    Kiliaen,
+
+    I am leaving. There is nothing more to be said, but I will say it regardless, because I truly believe the man I love is still in there, deep down. I don't know what's going through your head anymore. I don't know why you do the things you do. I have done my best to ignore the things the other wives say about you. The horrible things they say about you. It's none of my business, I know. I can't fathom the pressure, or begin to understand the sacrifies you make for the country. I have no right to judge the decisions forced upon you. But the deal was always you keep that stuff at the office, and that hasn't been true for a while, Killiaen. Whoever wakes up every morning wearing your skin is someone I don't even recognize. 
+
+    The constant talk of legacy, of some forgotten past that no longer matters, as if Euphemia's childhood wasn't passing unnoticed right before your very eyes, that I could handle, because at least I would be there for her when you were not. I could tolerate the long months of absence, the sudden and unexplained trips to some village halfway around the world, even the blatant affairs that happened right in front of me, these were all burdens I beared without issue. 
+
+    But then you started to drink again. You started to talk about your work at home. Do you even remember? Euphemia, your own daughter, is scared. She is scared of her own father. I don't know if you were telling truth, or if you were just drunk, but it's too much. I would rather she grow up fatherless, never knowing you existed, than suffer through another night like that. She doesn't need to know about the things you've done. 
+
+    I do love you, Killiaen. I swear I do. But I no longer trust you. I am taking Euphemia. Please do no try to find us. 
+
+    -- Elizabeth
+
+Document A009: Report on the Euphemia Experiments
 -------------------------------------------------
 
 .. note::
@@ -719,7 +826,7 @@ Overview
     - Subject: Euphemia
     - Sex: Female
     - Age: :redacted:`REDACTED`
-    - Genealogy: Branch D-35
+    - Genealogy: Branch D-33
 
 The subject arrived at the facility at approximately 10:30, 3/13/1954. Upon arrival, the subject was immediately isolated and placed into observation. The subject has no prior knowledge of the experiment, nor been given any indication of what is to about to occur. 
 
@@ -728,7 +835,7 @@ The subject arrived at the facility at approximately 10:30, 3/13/1954. Upon arri
 After tenuous results, Dr. Cameron was able to successfully induce disassociation of the primary conciousness in the subject. Communication was established. 
 
 -------------
-Experiment #1
+Experiment #3
 -------------
 
 The experiment begins when the subject is strapped into the apparatus. The researcher sits directly across from the subject at eye level. The script is read without inflection. When the subject deviates from the expected response, a non-lethal shock is delivered. 
@@ -922,9 +1029,13 @@ Transcripts
 
 :subject: Yes, I know what happens next.
 
--------------
-Experiment #2
--------------
+:green: Tell me what happens next.
+
+:subject: :redacted:`REDACTED`
+
+--------------
+Experiment #15
+--------------
 
 The subject is sedated with a cocktail of tubocurarine and nembutal. Once a state of disassocation is achieved and verified with electroencephalograms, the subject is administered 250 micrograms of lysergic acid diethylamide over the course of one hour. The subject is then placed into an isolation chambers with writing utensils.  
 
@@ -933,9 +1044,9 @@ Results
 
 It's cold. Why is life so cold? Where is father? They say that I am angry with you. What have you done? What have you done *to me*? Why am I the one that must suffer for your sins? Father. Forgive me. I think I am dying. I don't want to die, Father. Why have I been born? What did I do to deserve this? Why do you hate me? Am to die in this place? I don't want to die here. God, please save me. 
 
-Mother. Mother. What have I done? Who am I? The world is nothing but horror. It comes apart. Departs in waves. It rolls out graves. In ice, we perish. It grows cold. Please hold me. I am scared. I am so scared. Why do we die, Mother? 
+Mother. Mother. What have I done? Who am I? The world is nothing but horror. It comes apart. Departs in waves. The violent storms. They roll out graves. In ice, we perish. It grows cold. Please hold me. I am scared. I am so scared. Why do we die, Mother? 
 
-I don't understand the world you have made, Father. Surrounded by ice. Heartless, it beats. Timeless, it expands. 
+I don't understand the world you have made for us, Father. Surrounded by ice. Heartless, it beats. Timeless, it expands. 
 
 .. figure:: ../../_static/img/fabula/magnum-opus/euphemias-drawing.jpg
     :width: 70%
@@ -944,11 +1055,11 @@ I don't understand the world you have made, Father. Surrounded by ice. Heartless
 
     Drawn while heavily disassociated.
 
--------------
-Experiment #3
--------------
+--------------
+Experiment #33
+--------------
 
-The subject is administered secobarbital intravenously over the course of 7 days until entering a prolonged state of somnambulance. The subject is blindfolded and strapped to a table. Two researchers sit on either side of the subject and speak directly into the subject's ear. The researched are instructed to speak in unison.
+The subject is administered secobarbital intravenously over the course of 7 days until entering a prolonged state of somnambulance. The subject is blindfolded and strapped to a table. Two researchers sit on either side of the subject and speak directly into the subject's ears. The researched are instructed to speak in unison.
 
 Transcripts
 ~~~~~~~~~~~
@@ -1034,6 +1145,10 @@ Up is down, left is right.
 .. - Mesmeria achieves "rubedo" by forcibly overriding her conditioning. She induces a disembodied "atemporal" intelligence. 
 .. - Atemporal intelligence goes insane without a body. 
 ..
+.. ## CHARACTERS
+..
+.. - Stephen's motivations are meant to be highly ambiguous and open to interpretation. His own point of view and thoughts are never shared.
+.. 
 .. ## PROPOSED TIMELINE (SO FAR)
 .. 
 ..  420: Macrobius creates maps of the Austral Zone.
@@ -1044,10 +1159,12 @@ Up is down, left is right.
 .. 1810: Stephen van Rensselaer takes the 33rd degree and is shown the artifact for the first time. 
 .. 1812: The artifact arrives in New York in Stephen's care.
 .. 1824: The Rensselaer Polytechnic Institute is built to house and study the artifact. Rensselaer pulls Eaton out of jail to run the institute.
+.. 1825: Stephen meets William Morgan at the Erie Canal opening. Enlists him to help engineer the gyroscope.
+.. 1826: William Morgan attempts to publish Illustrations of Masonry, but is kidnapped and murdered.
 .. 1833: Leonid Meteor Storm alters the artifact's output. Babbage and Lovelace invent their difference engines once the pattern of electrical outputs are discovered to encode mathematical constants.
-.. 1834: Eaton discovers the rudiments of operation.
+.. 1834: Eaton discovers the rudiments of operation at the Institute.
 .. 1835: Solomon establishes an underground smuggling operation for fulminated mercury, used to cool the spinning artifact.
-.. 1837: Solomon van Rensselaer begins to leverage the mercury smuggling network to run guns in the Patriot War. Maldoon arrests Rensselaer van Rensselaer on gun-running charges, but forgoes charges if he will help implicate his father. 
+.. 1837: Solomon van Rensselaer begins to leverage the mercury smuggling network to run guns in the Patriot War. Maldoon arrests Rensselaer van Rensselaer on gun-running charges, but forgoes charges if he will help implicate his father. Renssalaer goes rogue, steals artifacts and absconds with MacKenzie.
 .. 1838: Maldoon ends up with artifact after Rensselaer's failed rebellion. Sends to Dead Letter Office in Washington DC to archive as evidence.
 .. 1839: Stephen van Rensselaer, the Good Patroon, dies. Without the artifact, his enterprise crumbles upon his death.
 .. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the artifact's output.
@@ -1061,11 +1178,14 @@ Up is down, left is right.
 .. 1947: Central Intelligence Agency is founded. Bloodline grooming programs are initiated. Artifact moved to Area 51.
 .. 1948: Alan Turing proposes the Type-B Machine after studying the artifact.
 .. 1949: Donald Hebb uses Turing's work as the basis for the Hebbian network.
+.. 1953: Kiliaen Maunsell Van Rensselaer gives his daughter to MKULTRA.
 .. 1954: Euphemia van Rensselaer is indoctrinated during MKULTRA.
+.. 1969: Buzz Aldrin takes the Masonic flag to the Moon.
 .. 1973: Helm purges CIA records, among them the Euphemia Experiment Records.
 .. 1975: Church Committee hearings.
 .. 1982: After graduating from Rensselaer Polytechnic Institute, Curtis Priem invents the first graphics processor.
-.. 2088: Mesmeria van Rensselaer is born from Branch D-35.
+.. 2010: The Tree of Life is used to model a Transformer-like network. 
+.. 2088: Mesmeria van Rensselaer is born from Branch D-33.
 .. 2110: Assassination plot goes awry. Mesmeria achieves "rubedo" and wakes up during an operation. Future intelligence escapes and vanishes.
 .. 2222: Construction of first temporal craft. Ryckert van Renssalaer takes a crew back in time. Establishes first colony in 1947.
 .. 2230: The new Patroonship. Van Renssalaers establish a "Time Empire", where they rent out years to wealthy investors. The artifact is an "anchor".

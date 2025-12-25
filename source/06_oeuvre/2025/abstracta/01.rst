@@ -78,6 +78,9 @@ The Invocation of Metric Code
       - Infocalypse Arts & Literary Magazine
       - Accepted
 
+Responses
+~~~~~~~~~
+
 .. epigraph::
 
   Dear Grant,
