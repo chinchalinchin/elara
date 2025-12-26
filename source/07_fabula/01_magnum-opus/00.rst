@@ -1,6 +1,6 @@
-.. TASK: EDITORIALIZE
+.. TASK: CRITIQUE
 .. 
-.. Provide editorial notes on the following document. Focus on the years between 1820 - 1837.
+.. Provide editorial notes on the following document.
 
 .. TITLE: Magnum Opus
 .. SECTION: Case Information and Status
@@ -176,7 +176,7 @@ March
 
     The *Eden* set sail from Rede van Texel before dawn, bearing the sigil of the Lord, Jesus Christ. A finer vessel has never been produced by Dutch shipyards. Much has already been written about her in the papers, but a larger portion has been hidden from all but my family and the Stadtholders. Most of the talk has been deliberately centered around her innovative hull. With a razor-sharp bow, she cuts an imposing figure for onlookers. Father saved the headline from one of local corantos, *Her Sides Are Steep and Her Draft is Deep*, well before the press start scandalizing his deal with the Prince of Orange.
     
-    Less is said of her sheathe, except among the other captains. Coated in copper panels, she shimmers in the sun like an angel from God. She flies like one as well, clocked at 18 knots with a favorable wind behind her. When the elements turn against us, as they inevitably will the closer we get to our goal, her Bermuda sloop will let her glide as though she were a ghost, unanswerable to anyone except the Almighty.
+    Less is said of her sheathe, except among the other captains. Coated in copper panels, she shimmers in the sun like an angel from God. She flies like one as well, clocked at 15 knots with a favorable wind behind her. When the elements turn against us, as they inevitably will the closer we get to our goal, her Bermuda sloop will let her glide as though she were a ghost, unanswerable to anyone except the Almighty.
         
     Within her hull she bears enough salted beef, hardtack, beer, water and dried peas for 18 months. Hendrick reports some questions have arisen among the crew regarding the size and extent of supplies. Already there are rumors spreading our voyage is not what it appears. It is to be expected. The *Eden* has not been fitted with cannons, under the pretense of maximizing our profits with heavier cargos. A sailor without a cannon is rightfully nervous, but Jeremias is correct to assure them. The *Eden* can outrun any English privateer or Spanish dog upon which she might chance. We have no need for weapons of war.
     
@@ -333,9 +333,21 @@ April
 
     Another five are gone this morning. Pieter says when they learned of Coaraci and her new additions, the crew dissolved into argument. Of course, in their ignorance, they could not understand why I might conceal her presence. I have seen the depths of carnal sin into which men alone at sea will fall.
     
-    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the *Eden*, which leaves only a few days to make the ad hoc modifications. Maurits has given a handful of slaves to aid the task and I have given Hendrick leave to do what is necessary to ensure the *Eden* is outfitted with the Ipe panels on time. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
+    Hendrick and I both agree that we disembark by the week's end before we lack the crew to man the *Eden*, which leaves only a few days to make the adhoc modifications. Maurits has given us a handful of slaves to aid the task and I have given Hendrick leave to do what is necessary to ensure the *Eden* is outfitted with the Ipe panels on time. If what the Potiguarra say is true, then we cannot leave Recife without reinforcing her hull.
 
     -- April 23rd, 1637
+
+.. epigraph::
+
+    Another deserter, Frederick, made an attempt last night. Hendrick currently exacts the penalty of his transgression for all to see. The screams are awful, but the Work must be done. He will forget the momentary pain and fall to his knees in gratitude when the *Eden* runs ashore of her namesake. 
+    
+    The heresy started when Frederick learned what we mean to do with the Ipe panels. The Potiguarra left before sunrise and began to file into Recife this morning, bearing on their backs the hardwood from the forest interior. The slaves were set to work melding this raw material into panels for the *Eden*'. Frederick called it madness. Without Jeremias to assure him with his indisputable calculations, I could not convince Frederick the weight was insufficient to endanger our voyage. He persisted in his folly and now bears the consequences.
+
+    To tell the truth, I myself am uncertain of the calculations, though I would never tell the crew, not even Hendrick. I have gone through them several times, unable to find a mistake, but I cannot say with confidence I have accounted for every eventuality. The ways of the Lord are infinite and I would be arrogant to presume I possessed the ability to enumerate them. The only assurance I have is the knowledge the Lord wrote the *Eden*'s fate before the wind ever touched her sail.
+
+    -- April 24th, 1637
+
+.. IN PROGRESS: unapora's introduction.
 
 .. epigraph::
 
@@ -347,7 +359,7 @@ April
 
     Father also spoke in riddles. When I was young, he would tell me, "That which is above is from that which is below, and that which is below is from that which is above." I believe with Coaraci's addendum, I now understand what he meant.
 
-    -- April 24th, 1637
+    -- April 28th, 1637
 
 .. epigraph::
 
@@ -499,17 +511,33 @@ July
 
 .. epigraph::
 
-    The wind spews ice as sharp as daggers. We trade the fetid tomb of the hold for the maelstrom above deck. It is simply a matter of which death one prefers. There is no place left to hide from the Lord's Wrath. The men pile into my cabin for what little relief it provides, but even my walls weep and freeze. The Eden's helm has been abandoned as the cold's dominion becomes total. The rudders freeze and the sails are as slabs that hang in solid sheets. She drifts and lists with the whims of God, battered on all sides by the wages of her sin.
+    The wind spews ice as sharp as daggers. We trade the fetid tomb of the hold for the maelstrom above deck. It is simply a matter of which death one prefers. There is no place left to hide from the Lord's Wrath. The men pile into my cabin for what little relief it provides, but even my walls weep and freeze. The Eden's helm has been abandoned as the cold's dominion becomes total. The rudders are stone and the sails are as slabs that hang in solid sheets. She drifts and lists with the whims of God, battered on all sides by the wages of her sin.
 
     -- July 15th, 1637
 
-.. IN PROGRESS: Polynya starts.
+.. IN PROGRESS: Polynya starts. Violent storm. They have no control. Wind up on Deception by accident (or perhaps, divine providence?).
 
-.. IN PROGRESS: Deception Island. Warm waters of the Caldera. A literal Paradise, for a moment. Whales surfacing, algae blooms. The "artifact".
+.. epigraph::
+
+    In the ice, the heart beats. God's essence mingles in the elements and rises to the surface. His breath is vital warmth that turns the sea to emerald green, that fogs the glassy sheen with blooms of algae. Here, where creatures from the deep peek their alien eyes from the liquid womb and release their cries of life to the heavens, they receive in exchange for their faith a respite from the cold, a baptism of holy heat that coils in steam as incense burned in sacred ritual. Here, beneath the Eden's ruined hull, the men shed their rags and dive headfirst into an oasis that has materialized in this wasteland.
+
+    The ground we walk is blessed by the divine, radiating with the source of creation. I took Pieter's body to its resting place and pondered whether tomorrow he would rise as Lazarus. As I dug his grave, I found within the proof of His Providence. 
+
+    -- July 25th, 1637
 
 .. IN PROGRESS: Polynya stops. Crew is frozen in place, literally mid-word. 
 
-Document A003: Excerpt from Illustrations of Masonry
+Document A003: 
+--------------
+
+.. Dutch India Company ledgers from its Svalbard "trade" between 1641 - 1642, before the general public was allowed access. Incongruous amounts of shipments.
+
+Document A004: 
+--------------
+
+.. Nicolaes van Rensselaer's prophecy to King Charles II
+
+Document A005: Excerpt from Illustrations of Masonry
 ----------------------------------------------------
 
 .. Maybe just write a whole book within a book instead of excerpts?
@@ -544,11 +572,25 @@ After his bloviating, the Governor introduced the man I had silently been waitin
     
     Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea within my head.
 
-    At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statutes may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
+    At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statues may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
 
 .. IN PROGRESS: The 47th Problem.
 
+The discussion among the brothers entered the realm of geometry.
+
 .. IN PROGRESS: Morgan impresses Stephen with the Legendre Proof. 
+
+"My cousin went to France and returned with a remarkable proof of the 47th problem they have discovered."
+
+..
+
+"You see, if one drops a perpendicular from the highest angle, then by necessity the angles formed on the hypotenuse are right. Furthermore, since the opposing angles untouched by the perpendicular are complementary, the remaining angles must also be opposed. Therefore, by the grace of divine logic, the triangles formed by the perpendicular are similar. From this, it is deduced their sides must exist in equal ratio. Two smaller right triangles are thus cut from the larger, and their perfection forms the parts of the larger's perfection. It follows simply from algebra the theorem of Pythagoras."
+
+Several nodded their heads, pretending to grasp the elegance of the proof. Fewer mulled my words, tracing its deductions in silent mental steps. After a brief pause, Stephen raised his eyes to me and said, "If I follow your logic, then the perfection is infinite. One could continue in this fashion until the ends of time, devising ever smaller triangles, each manifesting the same ratio."
+
+"Indeed, Brother", I replied with a grin, awed by his ability to instantly absorb the mechanics of the proof, "As above, so below."
+
+.. IN PROGRESS: Secret meeting of the Masons after banquet to consecrate the aqueduct.
 
 --------------
 pgs. 150 - 151
@@ -561,7 +603,12 @@ pgs. 150 - 151
 
 .. IN PROGRESS
 
-Document A005: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
+Document A008: Police Report Concerning the Death of William Morgan
+-------------------------------------------------------------------
+
+.. IN PROGRESS
+
+Document A007: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
 -----------------------------------------------------------------------------
 
 .. important::
@@ -582,7 +629,7 @@ Document A005: Correspondence Between Ada Lovelace and Stephen Van Renssalaer
 
     P.S. You must give Euphemia my regards. I miss her terribly. 
 
-Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
+Document A007: Correspondence Between Amos Eaton and Stephen Van Renssalaer
 ---------------------------------------------------------------------------
 
 .. important::
@@ -611,7 +658,7 @@ Document A004: Correspondence Between Amos Eaton and Stephen Van Renssalaer
 
     Amos Eaton
 
-Document A006: Post Office Field Reports
+Document A008: Post Office Field Reports
 ----------------------------------------
 
 .. important::
@@ -719,11 +766,11 @@ Albany, NY
 
 **To: Preston S. Loughborough, Chief Clerk, Office of Instructions and Mail Depredations**:
 
-Look who's hot shit over here. Give this to Preston and don't let the squirelly fuck out of your sight til you're sure he's read it. Tell him I ain't coming back til I get my raise. I got the cocksucker. Well, I ain't *got-him* got him, but I found the thread to pull to get him.
+Give this to Preston and don't let the squirelly fuck out of your sight til you're sure he's read it. Tell him I ain't coming back til I get my raise. I got the cocksucker. Well, I ain't *got-him* got him, but I found the thread to pull to get him.
 
 I went to check out that school I told you about. It's called the Renssalaer Institute, wouldn't you believe it. Never would have guessed. Anyway, there I am, getting the campus tour from this skirt, when who should pull up in their stagecoach? That's right, the United States Postal Service. They must've unloaded twenty crates right in front of me. I asked the boys what they were up to. Of course, they said they's delivering the mail. Yeah, but whose? It don't take no genius.
 
-Oh, but it don't end there, boys. Them crate's was going into a building called Winslow Chemical Laboratory. A real stuck-up air about the place, filled to the brim with fops and easy marks. So, I stroll on up to the desk, easy as you please, and ask the nice lady on duty what's inside the boxes them boys are delivering. She tells me, "fulminated mercury". I don't rightly know what that is, but it ain't textbooks that's for sure. 
+Oh, but it don't end there, boys. Them crate's was going into a building called Winslow Chemical Laboratory. A real stuck-up air about the place, filled to the brim with fops and easy marks. So, I stroll on up to the desk, easy as you please, and ask the nice man on duty what's inside the boxes them boys are delivering. He tells me, "fulminated mercury". I don't rightly know what that is, but it ain't textbooks that's for damn sure. 
 
 .. list-table:: Weekly Expenses
   :widths: 15 15
@@ -769,7 +816,7 @@ Now, you be sure to let Preston know, when I bust the biggest gun running case t
 
 .. IN PROGRESS
  
-Document A007: Centennial Exposition Flyer
+Document A009: Centennial Exposition Flyer
 ------------------------------------------
 
 .. note::
@@ -789,7 +836,7 @@ Document A007: Centennial Exposition Flyer
     - The Mechanical Calculator!
     - Ketchup!
 
-Document A008: Correspondence Between Elizabeth van Rensselaer and Kiliaen Maunsell Van Rensselaer
+Document A010: Correspondence Between Elizabeth van Rensselaer and Kiliaen Maunsell Van Rensselaer
 --------------------------------------------------------------------------------------------------
 
 .. note::
@@ -810,7 +857,7 @@ Document A008: Correspondence Between Elizabeth van Rensselaer and Kiliaen Mauns
 
     -- Elizabeth
 
-Document A009: Report on the Euphemia Experiments
+Document A011: Report on the Euphemia Experiments
 -------------------------------------------------
 
 .. note::
@@ -1110,7 +1157,7 @@ Transcripts
 
 .. IN PROGRESS
 
-Document A009: Diary of Mesmeria Van Rensselaer
+Document A012: Diary of Mesmeria Van Rensselaer
 -----------------------------------------------
 
 .. important::
@@ -1134,49 +1181,68 @@ Up is down, left is right.
 .. ..........................................................................................................................................
 .. # NOTES 
 .. 
-.. ## GENERAL IDEAS
+.. ## THEMATIC VISION
+.. 
+.. - The impulse to understand and the impulse to control are different sides of the same coin. 
+.. - The story explores how beliefs about the unknown fail in their approach, producing incredible technological progress and unimaginable horror at the same time.
+.. - Each vignette is an exploration of how a particular belief or point of view incorporates the material (the essential unknown; the incompleteness of human knowledge) into their dogma. 
+.. - The material is basically a metaphor for God. 
+..
+.. ## THE MATERIAL
+..
+.. The material is a natural substance with unique temporal properties. It is created as a byproduct evaporating blackholes. When a planet forms from coagulating space dust, the material tends to align along the magnetic axis of the planet, hence why it can be found at the north and south poles. 
+..
+.. All particles of the material are entangled at a quantum level. The material conducts electricity. 
+..
+.. ## PLOT POINTS
 ..
 .. - Disassociation allows the mind to receive psychic imprints of neural networks.
-.. - The artifact is a natural substance with unique temporal properties.
 .. - Van Rensselaers discover how to harness the substance to produce time travel in 2200-ish. 
-.. - The lower limit of time travel is 1947, when the artifact was fully stabilized in Antarctica during Operation High Jump.
+.. - The lower limit of time travel is 1947, when the material was fully stabilized in Antarctica during Operation High Jump.
 .. - MKUltra is a program to produce "containers" for time travellers. 
-.. - The essence of time travel is the transfer of information backwards through time. Neural networks are encoded into frequencies of the artifact, allowing people to "project" into "containers".
+.. - The essence of time travel is the transfer of information backwards through time. Neural networks are encoded into frequencies of the material, allowing people to "project" into "containers".
 .. - Mesmeria achieves "rubedo" by forcibly overriding her conditioning. She induces a disembodied "atemporal" intelligence. 
-.. - Atemporal intelligence goes insane without a body. 
 ..
 .. ## CHARACTERS
 ..
 .. - Stephen's motivations are meant to be highly ambiguous and open to interpretation. His own point of view and thoughts are never shared.
-.. 
+..
 .. ## PROPOSED TIMELINE (SO FAR)
 .. 
+.. NOTE: this is fluid and not finalized.
+..
 ..  420: Macrobius creates maps of the Austral Zone.
 .. 1516: Johann Reuchlin publishes a depiction of the Tree of Life.
-.. 1637: Eden and her crew discover Deception Island. They make contact with the artifact. The entire crew is lost. A signal is sent.
-.. 1770: Cook recovers artifact on his second voyage. Returns to Premier Grand Lodge of England.
-.. 1783: The Great Meteor Procession. The artifact awakens again.
-.. 1810: Stephen van Rensselaer takes the 33rd degree and is shown the artifact for the first time. 
-.. 1812: The artifact arrives in New York in Stephen's care.
-.. 1824: The Rensselaer Polytechnic Institute is built to house and study the artifact. Rensselaer pulls Eaton out of jail to run the institute.
+.. 1635: Construction of the Eden begins in secret.
+.. 1637: Eden and her crew discover Deception Island. They make contact with the material. The entire crew is lost.
+.. 1640: Killaen van Rensselaer lobbies against the Noordsche Compagnie. Sea lanes to Spitsbergen are opened. 
+.. 1641: Dutch India Company voyage to Septentrional Zone. Deposits of the material are found in Svalbard.
+.. 1645: The Maunder Minimum begins. Nicoaels Van Rensselaer gains second sight. The "black" sun. Nigredo.
+.. 1656: Christiaan Huygens invents the pendulum clock.
+.. 1656: Nicolaes van Rensselaer prophesizes King Charles II return to throne while in exile. He tells Charles of Ryckert and the material.
+.. 1770: Cook recovers material on his second voyage. Returns to Premier Grand Lodge of England.
+.. 1783: The Great Meteor Procession. The material awakens and glows during the duration.
+.. 1810: Stephen van Rensselaer is annointed as a Knight Templar of the Grand Lodge of All England. He is shown the material during initiation. 
+.. 1812: The material arrives in New York in Stephen's care.
+.. 1824: The Rensselaer Polytechnic Institute is built to house and study the material. Rensselaer pulls Eaton out of jail to run the institute.
 .. 1825: Stephen meets William Morgan at the Erie Canal opening. Enlists him to help engineer the gyroscope.
 .. 1826: William Morgan attempts to publish Illustrations of Masonry, but is kidnapped and murdered.
-.. 1833: Leonid Meteor Storm alters the artifact's output. Babbage and Lovelace invent their difference engines once the pattern of electrical outputs are discovered to encode mathematical constants.
+.. 1833: Leonid Meteor Storm alters the material's output. Babbage and Lovelace invent their difference engines once the pattern of electrical outputs are discovered to encode mathematical constants.
 .. 1834: Eaton discovers the rudiments of operation at the Institute.
-.. 1835: Solomon establishes an underground smuggling operation for fulminated mercury, used to cool the spinning artifact.
-.. 1837: Solomon van Rensselaer begins to leverage the mercury smuggling network to run guns in the Patriot War. Maldoon arrests Rensselaer van Rensselaer on gun-running charges, but forgoes charges if he will help implicate his father. Renssalaer goes rogue, steals artifacts and absconds with MacKenzie.
-.. 1838: Maldoon ends up with artifact after Rensselaer's failed rebellion. Sends to Dead Letter Office in Washington DC to archive as evidence.
-.. 1839: Stephen van Rensselaer, the Good Patroon, dies. Without the artifact, his enterprise crumbles upon his death.
-.. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the artifact's output.
+.. 1835: Solomon establishes an underground smuggling operation for fulminated mercury, used to cool the spinning material.
+.. 1837: Solomon van Rensselaer begins to leverage the mercury smuggling network to run guns in the Patriot War. Maldoon arrests Rensselaer van Rensselaer on gun-running charges, but forgoes charges if he will help implicate his father. Renssalaer goes rogue, steals materials and absconds with MacKenzie.
+.. 1838: Maldoon ends up with material after Rensselaer's failed rebellion. Sends to Dead Letter Office in Washington DC to archive as evidence.
+.. 1839: Stephen van Rensselaer, the Good Patroon, dies. Without the material, his enterprise crumbles upon his death.
+.. 1840: Ada Lovelace writes Note G to produce the Bernoulli numbers. These numbers are used in the decryption of the material's output.
 .. 1845: Anti-renter movement leads to the downfall of van Renssalaerwyck and Patroonship.
-.. 1850: Allan Pinkerton steals the artifact during his tenure at the Post Office.
+.. 1850: Allan Pinkerton steals the material during his tenure at the Post Office.
 .. 1871: Pinkerton records are destroyed during the Great Fire of Chicago.
 .. 1876: George B. Grant exhibits his Difference Engine at the Centennial Exposition in Philadelphia.
-.. 1945: First nuclear explosion at Los Alamos allows artifact to stabilize.
-.. 1946: Operation Highjump returns the artifact to Deception Island. Excavation of site. Artifact bonds to deposits. Signal amplifies.
+.. 1945: First nuclear explosion at Los Alamos allows material to stabilize.
+.. 1946: Operation Highjump returns the material to Deception Island. Excavation of site. material bonds to deposits. Signal amplifies.
 .. 1947: Roswell. First contact with atemporal intelligences. 
-.. 1947: Central Intelligence Agency is founded. Bloodline grooming programs are initiated. Artifact moved to Area 51.
-.. 1948: Alan Turing proposes the Type-B Machine after studying the artifact.
+.. 1947: Central Intelligence Agency is founded. Bloodline grooming programs are initiated. material moved to Area 51.
+.. 1948: Alan Turing proposes the Type-B Machine after studying the material.
 .. 1949: Donald Hebb uses Turing's work as the basis for the Hebbian network.
 .. 1953: Kiliaen Maunsell Van Rensselaer gives his daughter to MKULTRA.
 .. 1954: Euphemia van Rensselaer is indoctrinated during MKULTRA.
@@ -1187,6 +1253,5 @@ Up is down, left is right.
 .. 2010: The Tree of Life is used to model a Transformer-like network. 
 .. 2088: Mesmeria van Rensselaer is born from Branch D-33.
 .. 2110: Assassination plot goes awry. Mesmeria achieves "rubedo" and wakes up during an operation. Future intelligence escapes and vanishes.
-.. 2222: Construction of first temporal craft. Ryckert van Renssalaer takes a crew back in time. Establishes first colony in 1947.
-.. 2230: The new Patroonship. Van Renssalaers establish a "Time Empire", where they rent out years to wealthy investors. The artifact is an "anchor".
+.. 2230: The new Patroonship. Van Renssalaers establish a "Time Empire", where they rent out years to wealthy investors. The material is an "anchor".
 .. ..........................................................................................................................................
