@@ -1,29 +1,48 @@
-----------
-Billboards
-----------
+------------------
+The Origin of Lies
+------------------
 
-| the world is tinged with sweet regret
-| as billboards flash their pixel paint. 
+| Oh, Ila, don't be weeping,
+|    my dear, you misconstrue;
+| The sun is only sleeping
+|    before it rises new.
 |
-| what time remains sustained is froze
-| in photographs above the roads.
+| I'll wait with you til morning,
+|    and tell you of the stars,
+| the memories adorning
+|    the empty night with scars. 
 |
-| these faces once acquainted race
-| by windows, smeared as though i dream. 
+| This love that's learned by lacking,
+|    whose vastness has no chart,
+| in silent orbits tracking
+|    the shaping of your heart. 
 |
-| from point diverged our common lines,
-| to track our ways and write our lives.
+| Please trust that nothing passes,
+|    we only change our form.
+| The morning dew trespasses
+|    on leaves the sun can't warm.
 |
-| ensuing years then ripped apart
-| the ribbons left by broken hearts.
+| Child, listen, though you're growing,
+|    some things cannot be known
+| until you've grown up knowing
+|    out here you're all alone.
 |
-| i find you here, in signs that pass;
-| we intersect our threads at last.
+| I'll be with you forever,
+|    these words will be a lie.
+| If I could but this deliver:
+|    To live until you die.
 |
-| the highway wends away in bends
-| towards ends i pray that meet again. 
+| So while you're small, keep holding
+|    my hand as though it soothes;
+| The world will keep unfolding
+|   each wrinkle that it smooths.
+|
+| Believe me when I'm saying:
+|    Oh, Ila, darling dear,
+| no matter what I'm staying,
+|    I'll always be right here. 
 
-- 0ctober 2025
+- August 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -32,27 +51,90 @@ Billboards
   * - Date
     - Publication
     - Status
-  * - November 2, 2025
-    - Rejected
+  * - August 19, 2025
+    - Still Point Arts Quarterly
     - Pending
-  * - November 24, 2025
-    - Artists from Maryland
+  * - August 19, 2025
+    - Sublimation
     - Rejected
-
+  * - August 22, 2025
+    - Palette Poetry
+    - Pending
+  * - August 22, 2025
+    - Macrame Literary Journal
+    - Rejected
+  * - August 25, 2025
+    - Plougshares
+    - Rejected
+  * - August 25, 2025
+    - The Celestial Glossry
+    - Rejected
+  * - August 25, 2025
+    - Midsummer Dream House Context
+    - Pending
+  * - August 26, 2025
+    - The Plentitudes
+    - Pending
+  * - August 26, 2025
+    - Gavialidae
+    - Rejected
+  * - August 27, 2025
+    - La Piccioletta Barca
+    - Rejected
+  * - August 29, 2025
+    - The Aftershock Review
+    - Pending
+  * - August 29, 2025
+    - Raleigh Review
+    - Pending
+  * - August 29, 2025
+    - Arcturus
+    - Pending
+  * - August 29, 2025
+    - Banyan Review Poetry Contest
+    - Rejected
+  * - August 29, 2025
+    - Hare's Paw Literary Journal
+    - Rejected
+  * - August 29, 2025
+    - Thirteen Bridges Review
+    - Rejected
+  * - September 3, 2025
+    - Hopkins Review
+    - Pending
+  * - September 5, 2025
+    - Global City Review
+    - Pending
+  * - September 6, 2025
+    - Funicular Magazine
+    - Rejected
+  * - September 9, 2025
+    - Garfield Lake Review
+    - Accepted
+  * - September 14, 2025
+    - Princemere Poetry Prize
+    - Pending
+  * - October 6, 2025
+    - Merion West
+    - Rejected
+  * - October 7, 2025
+    - Salvation South
+    - Rejected
+  * - October 10th, 2025
+    - January House Literary Journal
+    - Rejected
 
 Responses
 ~~~~~~~~~
 
 .. epigraph::
 
-  Dear Grant,
+  Dear Grant Moore,
 
-  I like couplets and stanzas. I love enjambment. Each couplet was a complete sentence, so the enjambment was in the pulse forward. Nice work.
+  On behalf of the editorial board of the Garfield Lake Review, I am happy to write that we have accepted Eulogy/Larksong/The Pantoums of Dementia/Ode to Death/The Origin of Lies for publication in our 2026 edition!
 
-  I am the new Arts Editor for Merion West; we are in transition. You stay present in your writing. Words do float off the page with consistent effort.
+  Thank you for your contribution to our growing journal. We are pleased to publish your work in this years edition.
 
-  Grant, this poem is not quite right for Merion West at this point. I know that the "no's" add up in this business of submitting poetry. Continue to revel in the craft of writing. I am a poet as well. The process of publishing poems is subjective and challenging. I'd enjoy reading more poems from you. You can send MW four submissions per year. Send us your Most Brilliant Poems!
+  If you require any further edits to your piece, please reach out directly to our Editor in Chief, Logan Schreiber, at lschreiber@uolivet.edu. If we should need any edits to your piece, a team member will be in touch with you after acceptance. In the meantime, if you have any questions, please let me know.
 
-  Thank you for sharing your work with Merion West. We wish you the best in your writing.
-
-  -- Austin Allen James, Merion West
+  -- Logan Schreiber, Editor in Chief

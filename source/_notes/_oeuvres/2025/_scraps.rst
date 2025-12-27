@@ -587,3 +587,18 @@ graffitied engines coal black plunge through forests.
 | embrace the fading spans of grace,
 | this place that wanes within the shade.
 | as fallen leaves arrayed your face.
+
+---
+
+down draft enrapt with shaking spine,
+the whining wind of winter's breath
+refines the shapely thoughts exchanged,
+estranged by time, this rhyming wisp
+that thaws between my open lips
+a rush of steam, unlocking depths
+that hide beneath the frozen ground.
+
+engraved within the larkless wood,
+from darker caves we circled round,
+a carcass melts in shallow dirt,
+inverting what we left behind,

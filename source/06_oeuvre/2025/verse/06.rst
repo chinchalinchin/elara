@@ -1,41 +1,41 @@
------------
-Anniversary
------------
+------
+Floods
+------
 
-| the city edge, its concrete knife
-| divides the Earth, creates a cliff
-| the shifting gears engage to dive,
-| a morning drive becomes a trek
-| along the etching mountainside,
-| the tips of which all signals die;
-| ascending poles of cable lines,
-| the crooked rubber vines that test
-| the forest depth infested heights  
-| with swarming trails of valleyed years
-| much older than the minutes here,
-| forgotten since and gone to ground,
-| to gravel found upon the paths 
-| unravelled round the bend today,
-| today a day the years return,
-| it turns around to me again,
-| repeated now, but far removed
-| by twisted roads that have no end,
-| where maps pretend to know the way
-| through swaying wilds of ancient pine
-| inclined on slants of slated shelves,
-| that delve the dark of cratered holes
-| around reverbing curves that skirt 
-| the skids my spinning makes in dirt;
-| the thinning miles, the barren miles,
-| as humans fade, the tree empires
-| expanding spans of secret green,
-| and losing me, i find the top,
-| the spot we used, the place you said
-| you'd always be, but all remains
-| decayed, reclaimed, reversed, undone, 
-| embedded in the layered lime.
+| the lifting waves
+| of driftwood floods
+|
+| the flooding drifts
+| of floral wastes
+|
+| a flowered wage
+| that rivers claim
+|
+| on plains that drive
+| the veins to sea 
+|
+| a ceaseless purge
+| through slurried nights 
+|
+| the slightest sprout
+| is rooted out
+|
+| through shooting streams
+| that water loots 
+|
+| the slaughter lurks
+| below riptides
+|
+| but tides recede
+| with grating speed
+| 
+| and petal graves 
+| in gravel pits
+|
+| unravel green
+| with dreams of Spring
 
-- September 2025
+- June 2025 
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -44,51 +44,15 @@ Anniversary
   * - Date
     - Publication
     - Status
-  * - September 14, 2025
-    - Princemere Poetry Prize
-    - Pending
-  * - October 6, 2025
-    - Gilded Weathervane
-    - Pending
-  * - October 6, 2025
-    - Merion West
-    - Rejected
-  * - October 7th, 2025
-    - wildscape
-    - Rejected
-  * - October 10th, 2025
-    - Macrame Literary Journal
-    - Rejected
-  * - October 10th, 2025
-    - January House Literary Journal
-    - Rejected
-  * - October 12, 2025
+  * - July 01, 2025
     - New Feathers Anthology
     - Rejected
-  * - October 12, 2025
-    - Cosmic Daffodil
+  * - July 22, 2025
+    - Earth Amulet Poetry Competition
+    - Pending
+  * - August 16, 2025
+    - Missouri Review
     - Rejected
-  * - November 24, 2025
-    - Artists from Maryland
-    - Rejected
-
-Responses
-~~~~~~~~~
-
-.. epigraph::
-
-  Dear Grant,
-
-  Grant, I like the movement at the start of the poem "Anniversary"
-
-  "the city edge, its concrete knife
-  divides the Earth, creates a cliff
-  the shifting gears engage to dive"
-
-  I enjoyed reading your poems. You stay present in your writing. Words do float off the page with consistent effort.
-
-  I am the new Arts Editor for Merion West; we are in transition. This set of poems is not quite right for Merion West at this point. Continue to revel in the craft of writing.
-
-  Thank you for sharing your work with Merion West. We wish you the best in your writing.
-
-  -- Austin Allen James
+  * - August 20, 2025
+    - Four Tulips
+    - Pending

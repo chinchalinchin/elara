@@ -1,41 +1,33 @@
-------
-Floods
-------
+----------
+Landscapes
+----------
 
-| the lifting waves
-| of driftwood floods
+| Oh, hapless world, the butcher's block,
+|   The sickle, scythe, harpoon,
+| The barren fields, the culled livestock,
+|   The blood red harvest moon.
 |
-| the flooding drifts
-| of floral wastes
+| The ocean deep, a darkened heart,
+|   A sore that festers cold,
+| A slumbered age, a violent art,
+|   Into all things behold:
 |
-| a flowered wage
-| that rivers claim
+| The forests wild, the stalking hunt,
+|   The arrow cut from stone,
+| The bloody rib, the final grunt,
+|   A death in whimpered groan.
 |
-| on plains that drive
-| the veins to sea 
+| The mountain peaks, a falling height,
+|   The air in sky dissolved,
+| A winter wind, a bitter blight,
+|   Let no sin be absolved.
 |
-| a ceaseless purge
-| through slurried nights 
-|
-| the slightest sprout
-| is rooted out
-|
-| through shooting streams
-| that water loots 
-|
-| the slaughter lurks
-| below riptides
-|
-| but tides recede
-| with grating speed
-| 
-| and petal graves 
-| in gravel pits
-|
-| unravel green
-| with dreams of Spring
+| The city streets, the graveyard paths,
+|   The linen beds of wards,
+| The gowns of white, the final baths,
+|   The oak in coffin boards.
 
-- June 2025 
+- April 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -44,15 +36,33 @@ Floods
   * - Date
     - Publication
     - Status
-  * - July 01, 2025
-    - New Feathers Anthology
+  * - April 7, 2025
+    - Paris Review
     - Rejected
-  * - July 22, 2025
-    - Earth Amulet Poetry Competition
+  * - April 7, 2025
+    - The New Yorker
     - Pending
-  * - August 16, 2025
-    - Missouri Review
+  * - May 10, 2025
+    - North Appalachia Review
+    - Pending
+  * - June 4, 2025
+    - Swan Scythe Press
     - Rejected
-  * - August 20, 2025
-    - Four Tulips
-    - Pending
+  * - October 6th, 2025
+    - Skummel Magazine
+    - Rejected
+
+Responses
+~~~~~~~~~
+
+.. epigraph::
+
+  Hi Grant,
+
+  Thank you for sending Landscapes/Cathedral/Ode to Death/Eulogy to SKUMMEL. Your piece stayed with us, haunting the room in the best way. While we decided not to accept it this time, it came close. We kept returning to it during our final reads. If you know what a personal rejection is, this is that.
+
+  We’d love to see more from you in the future. Consider this an open invitation to send us your next work.
+
+  Our pages are shaped by the voices that linger. Yours is one we hope will return.
+
+  -- The Editors, SKUMMEL

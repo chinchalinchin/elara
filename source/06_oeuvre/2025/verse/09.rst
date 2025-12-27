@@ -1,24 +1,58 @@
----------
-Christmas
----------
+----------
+Billboards
+----------
 
-| the town is dead, in dying dreams 
-| december trees with vying lights,
-| the timbered scenes that blink unseen
-| in eerie angles down the street.
-| on holidays, the graves of men 
-| are warmer than the fallen world,
-| the sheets that form a shawl and tomb,
-| the keepers of the doomed and spring.
-| in dark the corpses grow and rot
-| in pockets kept beneath the snow. 
-| although i wander to and fro,
-| the freeze that slows the world to stop,
-| it wraps around in glowing rings 
-| the steeples pointing up to show 
-| my heart is aimed like arrowed bow,
-| but lowered level to the ground
-| where pounding feet, in treks alone,
-| remember trees that grew back home.
+| the world is tinged with sweet regret
+| as billboards flash their pixel paint. 
+|
+| what time remains sustained is froze
+| in photographs above the roads.
+|
+| these faces once acquainted race
+| by windows, smeared as though i dream. 
+|
+| from point diverged our common lines,
+| to track our ways and write our lives.
+|
+| ensuing years then ripped apart
+| the ribbons left by broken hearts.
+|
+| i find you here, in signs that pass;
+| we intersect our threads at last.
+|
+| the highway wends away in bends
+| towards ends i pray that meet again. 
 
-- December 2025
+- 0ctober 2025
+
+.. list-table:: Submission History
+  :widths: 15 15 15
+  :header-rows: 1
+
+  * - Date
+    - Publication
+    - Status
+  * - November 2, 2025
+    - Rejected
+    - Pending
+  * - November 24, 2025
+    - Artists from Maryland
+    - Rejected
+
+
+Responses
+~~~~~~~~~
+
+.. epigraph::
+
+  Dear Grant,
+
+  I like couplets and stanzas. I love enjambment. Each couplet was a complete sentence, so the enjambment was in the pulse forward. Nice work.
+
+  I am the new Arts Editor for Merion West; we are in transition. You stay present in your writing. Words do float off the page with consistent effort.
+
+  Grant, this poem is not quite right for Merion West at this point. I know that the "no's" add up in this business of submitting poetry. Continue to revel in the craft of writing. I am a poet as well. The process of publishing poems is subjective and challenging. I'd enjoy reading more poems from you. You can send MW four submissions per year. Send us your Most Brilliant Poems!
+
+  Thank you for sharing your work with Merion West. We wish you the best in your writing.
+
+  -- Austin Allen James, Merion West
