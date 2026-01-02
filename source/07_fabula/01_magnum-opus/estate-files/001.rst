@@ -1,7 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Estate Files
 
-.. _estate-001:
+.. _estate-files-001:
 
 Being An Account of Nicolaes van Rensselaer's Prophecy to the exiled King, Charles II
 -------------------------------------------------------------------------------------

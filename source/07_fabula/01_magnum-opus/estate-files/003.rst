@@ -1,7 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Estate Files
 
-.. _estate-003:
+.. _estate-files-003:
 
 Notes from Joseph Henry's Lectures 
 ----------------------------------

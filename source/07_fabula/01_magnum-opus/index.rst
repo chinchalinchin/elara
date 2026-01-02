@@ -3,15 +3,7 @@
 Magnum Opus
 ===========
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   archives/index
-   case-files/index
-   estate-files/index
-
-Nearly a half century has passed since Mesmeria van Rensselaer was shot four times while being escorted into a courthouse in Richmond. Few events in world history have left so large a mark on our collective psyche while shifting the political landscape so rapidly. One must go back to the violence of the twentieth century, to the deeds of Gavriello Princep or Lee Harvey Oswald, to find a comparable event. 
+Nearly a half century has passed since Mesmeria van Rensselaer was shot four times while being escorted into a courthouse in Richmond. Few events in world history have left so large a scar on our collective psyche while simultaneously shifting the political landscape nearly overnight. One must go back to the violence of the twentieth century, to the deeds of Gavriello Princep or Lee Harvey Oswald, to find a comparable event. 
 
 We will never know what Mesmeria might have said, had she had the opportunity to take the stand in her defense. At the time, she had already been tried in the court of public opinion and found guilty. Over three hundred million people worldwide saw the stream within minutes; by the time Bishop Augustine was declared dead, most of the world had seen the fatal shot from three different angles. Across the globe, we logged in to watch the last Bishop of Rome die in the arms of a stranger on a crowded stage in Virginia. There was no question in the public mind she was guilty. Indeed, even the most ardent conspiracy theorist will concede that Mesmeria's finger pulled the trigger, but they will argue Mesmeria was not the one in control of her fingers. 
 
@@ -28,3 +20,11 @@ By the time the court documents were quietly unsealed two decades later and the 
 But there are those of us who have not forgotten. We have continued to compile information in the background while the world around us reeled. 
 
 - The Editor, 2160
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   archives/index
+   case-files/index
+   estate-files/index

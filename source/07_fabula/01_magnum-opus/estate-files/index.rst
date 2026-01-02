@@ -8,10 +8,10 @@
 .. 004: Centennial Exposition Flyer
 .. 005: The Correspondences of Kiliaen Maunsell van Rensselaer
 
-.. _estate:
+.. _estate-files:
 
-The Estate Files
-================
+Estate Files
+============
 
 .. toctree::
    :maxdepth: 2

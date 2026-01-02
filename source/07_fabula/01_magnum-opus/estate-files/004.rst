@@ -1,7 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Estate Files
 
-.. _estate-004:
+.. _estate-files-004:
 
 Centennial Exposition Flyer
 ---------------------------

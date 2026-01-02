@@ -3,8 +3,8 @@
 
 .. _case-files:
 
-Case Information And Status
-===========================
+Case Files
+==========
 
 .. admonition:: Case Information
     

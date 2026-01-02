@@ -1,7 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Estate Files
 
-.. _estate-000:
+.. _estate-files-000:
 
 Journal of Captain Ryckert van Renssalaer
 -----------------------------------------

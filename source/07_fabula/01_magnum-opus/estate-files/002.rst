@@ -1,7 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Estate Files
 
-.. _estate-002:
+.. _estate-files-002:
 
 The Correspondences of Stephen van Rensselaer
 ---------------------------------------------

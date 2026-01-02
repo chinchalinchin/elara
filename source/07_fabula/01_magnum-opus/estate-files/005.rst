@@ -1,7 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Estate Files
 
-.. _estate-005:
+.. _estate-files-005:
 
 The Correspondences of Kiliaen Maunsell Van Rensselaer
 ------------------------------------------------------
