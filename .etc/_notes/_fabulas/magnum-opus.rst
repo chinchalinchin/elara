@@ -24,3 +24,11 @@ My hands give the librarian the bag. She places it in a plastic bin and then mot
 ---
 
     I have been given a vision of the future by the Lord Almighty and only now do I understand the terrible burden of Elijah. I know that I shall die, along with the remainder of the crew. This I have known since departing Amsterdam, though I have lacked precise knowledge of its particulars. Yet I did not possess the capacity to understand the ripples which would spread for centuries hence. I can only pray that the Lord have mercy and change the fate He has woven for the terrible sinners who defy Him. Please, my Lord, take pity and have mercy.
+
+
+
+.. epigraph::
+
+    The men that remain are the Lord's chosen. I can see the fire of faith in their eyes that warms them when I recite the passages during our devotions. They have gone to the depths, and now they mount towards heavens. These hallowed few, I know I can trust. I have assured them the end of our journey will be no less than paradise itself. When I told them, they dropped to their knees and cried out to the Lord above. Even Ubiuna and his Potiguarra shamans have given themselves to Christ. We write the next testament of His Word with our actions. 
+
+    -- June 2nd, 1637

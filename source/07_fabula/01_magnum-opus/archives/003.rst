@@ -1,0 +1,70 @@
+.. TITLE: Magnum Opus
+.. SECTION: Archives
+
+.. _archives-003:
+
+Illustrations of Masonry
+------------------------
+
+.. Maybe just write a whole book within a book instead of excerpts?
+
+.. important::
+
+    This manuscript was published in 1826 and had a circulation of less than two hundred copies. The last remaining copy was obtained from the Batavia Public Library and scanned into the Library of Congress on October 13th, 2111.
+
+------------
+pgs. 15 - 16
+------------
+
+As an apprentice of the Grand Lodge of New York, I was often invited to attend various social functions in my capacity as a representative of the Order. The expected invitation arrived in late autumn of 1825. I was to attend the ceremonial procession of the *Seneca Chief* flotilla into Rochester. It was there and then I first encountered the Grand Master, Stephen Van Renssalaer III. 
+
+The crowds had gathered upon the cobblestone paths of the Genesee Aqueduct, a marvel of modern masonry. The investiture of two years of hard labor had born spectacular results. The aqueduct arched over the Genesee River with the grace of a dancer, carrying perpendicular to the course of the river an entirely new waterway, which was to be inaugurated with the economic lifeblood of the country this very day. Few had gathered who could appreciate the master craftsmanship, the perfection embodied in its angles and struts. Not since the days of the caeasars and pharaohs had the world seen such construction.
+
+When the sun began its downward descent, we saw the horses round the corner, drawing behind them the *Seneca Chief*. Upon the deck of the barge stood Governor Clinton, upright and chest pushed out in victory. Beside him stood the man I would come to know as Stephen Van Renssalaer, an enigma in a frock coat. The pagentry commenced when the boat docked at the entrance to the aqueduct fired a performative musket shot into the air, silencing the commotion. A lone voice called to challenge the approaching vessel, "Who comes there?"
+
+The Governor, revelling in the pomp, called back, "Your brothers from the West, on the waters of the Great Lakes!"
+
+The reply came, "By what means have they been diverted so from their natural course?"
+
+To which the Governor in turn replied, "By the channel of the Grand Erie Canal!"
+
+Not a soul beyond the initiated realized the meaning of this ritual, nearly identical to challenge a Brother of the Order must meet to enter the Temple. It was only later that I myself realized the significance of Stephen's presence. With this performance, Stephen had ensured the symbolic victory of the Masonic Order, its utter dominion over the natural elements. Nature had not just been tamed, it had been willfully organized contrary to its wishes. The mark of its maker was now imbued into the very foundations of the current itself. 
+
+The *Seneca Chief* docked as the commotion re-ignited and crescendoed into a flurry of bands and confetti. Speeches were given, but none of consequence. The dignitaries retired to the Mansion House hotel on State Street for the banquet and ball. As the parade moved through the city streets and the evening rose in the sky, candles were placed into the windows. An ethergeal glow hung just above our heads, casting out the encroaching dark. As we passed under this angelic light, an esctatic delirium descended upon us. Rochester seemed as though it flowed through a dream, a vision of music and dance. 
+
+.. IN PROGRESS: Mansion House, hotel on State Street. Formal dinner.
+
+After his bloviating, the Governor introduced the man I had silently been waiting to hear. Of course, I knew of the Grand Master, his name being commonplace among the brothers at the Lodge, but never before had I seen him or heard him talk. His exploits need no further explanation; Any student of history will find them writ large within the annals of America. That night, still awash with the spirits of celebration, I transcribed his speech to best of my recollection, which I now reproduce below, 
+    
+    Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea within my head.
+
+    At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statues may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
+
+.. IN PROGRESS: The 47th Problem.
+
+The discussion among the brothers entered the realm of geometry.
+
+.. IN PROGRESS: Morgan impresses Stephen with the Legendre Proof. 
+
+"My cousin went to France and returned with a remarkable proof of the 47th problem they have discovered."
+
+..
+
+"You see, if one drops a perpendicular from the highest angle, then by necessity the angles formed on the hypotenuse are right. Furthermore, since the opposing angles untouched by the perpendicular are complementary, the remaining angles must also be opposed. Therefore, by the grace of divine logic, the triangles formed by the perpendicular are similar. From this, it is deduced their sides must exist in equal ratio. Two smaller right triangles are thus cut from the larger, and their perfection forms the parts of the larger's perfection. It follows simply from algebra the theorem of Pythagoras."
+
+Several nodded their heads, pretending to grasp the elegance of the proof. Fewer mulled my words, tracing its deductions in silent mental steps. After a brief pause, Stephen raised his eyes to me and said, "If I follow your logic, then the perfection is infinite. One could continue in this fashion until the ends of time, devising ever smaller triangles, each manifesting the same ratio."
+
+"Indeed, Brother", I replied with a grin, awed by his ability to instantly absorb the mechanics of the proof, "As above, so below."
+
+.. IN PROGRESS: Secret meeting of the Masons after banquet to consecrate the aqueduct.
+
+--------------
+pgs. 150 - 151
+--------------
+
+.. image:: ../../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
+   :width: 70%
+   :alt: Schematic of unknown device.
+   :align: center
+
+.. IN PROGRESS

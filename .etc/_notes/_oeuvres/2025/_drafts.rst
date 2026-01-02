@@ -2156,7 +2156,7 @@ The Myth of Geese
     - Status
   * - July 22, 2025
     - Earth Amulet Poetry Competition
-    - Pending
+    - Rejected
 
 ----------
 River Rats

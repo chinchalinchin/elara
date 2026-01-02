@@ -45,7 +45,8 @@ extensions = [
     'small',
     'tiny',
     'underline',
-    'handwritten'
+    'handwritten',
+    'strike'
 ]
 
 templates_path = [ ]
@@ -55,6 +56,7 @@ exclude_patterns = [
     '_drafts/**',
     '_prompts/**',
     '**/exc_*',
+    '**/_*.rst'
 ]
 
 plot_html_show_source_link = True

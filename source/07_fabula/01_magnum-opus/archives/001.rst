@@ -1,0 +1,12 @@
+.. TITLE: Magnum Opus
+.. SECTION: Archives
+
+.. _archives-001:
+
+Map of Macrobius
+----------------
+
+.. image:: ../../../_static/img/fabula/magnum-opus/map-of-macrobius.jpg
+   :width: 70%
+   :alt: The northern region and its antipodes
+   :align: center

@@ -1,0 +1,13 @@
+.. TITLE: Magnum Opus
+.. SECTION: Estate Files
+
+.. _estate-001:
+
+Being An Account of Nicolaes van Rensselaer's Prophecy to the exiled King, Charles II
+-------------------------------------------------------------------------------------
+
+.. important::
+
+    The following document was made available to the general public by the van Renssalaer Estate in the year 2163.
+
+.. Nicolaes van Rensselaer's prophecy to King Charles II

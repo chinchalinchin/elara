@@ -117,3 +117,13 @@
     transform: rotate(-1deg);
     display: inline-block; /* Required for transform to work on spans */
 }
+
+.redacted {
+    color: black;
+    background-color: black;
+    user-select: all;
+}
+
+.strike{
+    text-decoration: line-through;
+}
