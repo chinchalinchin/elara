@@ -6,7 +6,7 @@ Gospel of Matthew
 -----------------
 
 .. list-table:: Chapter 16, Verse 18
-    :widths: 15 15
+    :widths: 15 15 70
     :header-rows: 1
 
     * - Source
@@ -28,7 +28,7 @@ Gospel of Matthew
       - "And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."
       - 1611
   
-Like the majority of the synoptics, much of the information it contained in its original form has been lost as the verse was shifted through different host languages. 
+Like the majority of the synoptics, much of the information contained in its original form has been lost as the verse was shifted through different host languages. By the time English was the primary language of consumption, the original meaning was all but lost except to those who made it a point to study the original texts.
 
 Typological analysis over the centuries has focused on the wordplay of the *Πέτρος-πέτρᾳ* pairing in the Codex Vaticanus, which was preserved in the Vulgate, but subsequently broken in the English translations. Indeed, reading this verse allegorically in Greek or Latin, it is impossible to ignore this obvious paronomasia; One would be forgiven for reading no further than the identification of Peter as the bedrock of the church he would later go on to found.
 
