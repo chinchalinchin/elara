@@ -1,0 +1,42 @@
+The New Testament
+-----------------
+
+-----------------
+Gospel of Matthew
+-----------------
+
+.. list-table:: Chapter 16, Verse 18
+    :widths: 15 15
+    :header-rows: 1
+
+    * - Source
+      - Verse
+      - Year
+    * - Codex Vaticanus
+      - κἀγὼ δέ σοι λέγω ὅτι σὺ εἶ Πέτρος, καὶ ἐπὶ ταύτῃ τῇ πέτρᾳ οἰκοδομήσω μου τὴν ἐκκλησίαν, καὶ πύλαι ᾅδου οὐ κατισχύσουσιν αὐτῆς.
+      - 325 AD
+    * - Vulgate 
+      - Et ego dico tibi, quia tu es Petrus, et super hanc petram aedificabo ecclesiam meam, et portae inferi non praevalebunt adversus eam.
+      - 405 AD
+    * - Wycliffe
+      - And I seye to thee, that thou art Peter, and on this stoon I schaliel bilde my chirche, and the gatis of helle schulen not han miȝt aȝens it.
+      - 1382
+    * - Tyndale
+      - And I saye also vnto the, yt thou arte Peter: and apon this rocke I wyll bylde my congregacion. And the gates of hell shall not prevayle ageynst it.
+      - 1526
+    * - King James
+      - "And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."
+      - 1611
+  
+Like the majority of the synoptics, much of the information it contained in its original form has been lost as the verse was shifted through different host languages. 
+
+Typological analysis over the centuries has focused on the wordplay of the *Πέτρος-πέτρᾳ* pairing in the Codex Vaticanus, which was preserved in the Vulgate, but subsequently broken in the English translations. Indeed, reading this verse allegorically in Greek or Latin, it is impossible to ignore this obvious paronomasia; One would be forgiven for reading no further than the identification of Peter as the bedrock of the church he would later go on to found.
+
+Yet the symbolism within this verse is not contained merely to the semantic realm. A true understanding only comes from *contextualizing* this semantic wordplay within the world it was spoken.
+
+In the Gospel of Matthew prior to Verse 16, Jesus has taken the disciples to Caesarea Phillipi. He speaks these words in front of the Cave of Pan.
+
+.. image:: ../../../_static/img/fabula/magnum-opus/cave-of-pan.jpg
+   :width: 70%
+   :alt: The Cave of Pan
+   :align: center

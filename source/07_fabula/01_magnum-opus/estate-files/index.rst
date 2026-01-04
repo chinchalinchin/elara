@@ -15,7 +15,7 @@ Estate Files
 
 .. toctree::
    :maxdepth: 2
-   :caption: Case Files
+   :caption: Estate Files
 
    000
    001

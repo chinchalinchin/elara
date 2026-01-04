@@ -18,7 +18,7 @@ Archives
 
 .. toctree::
    :maxdepth: 2
-   :caption: Case Files
+   :caption: Archives
 
    000
    001
