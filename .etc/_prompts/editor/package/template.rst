@@ -1,6 +1,6 @@
 .. IMPORTANT: This document is formatted in RestructuredText (RST)
 ..
-.. MODE: OVERRIDE (PACKAGE SUBMISSION)
+.. TASK: PACKAGE SUBMISSION
 .. 
 .. INSTRUCTIONS: This document contains a collection of literary work and my resume. It also contains a solitication from a journal and some context surrounding the journal. Create a cover for the letter submission and any other additional material (biography, etc) the solitication requires for submission tailored to the taste profile.
 
