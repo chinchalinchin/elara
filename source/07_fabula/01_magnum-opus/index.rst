@@ -3,6 +3,10 @@
 Magnum Opus
 ===========
 
+Time has a natural denomination. Some moments are fulcrums, some events are meridians. The spline of history is fitted to tectonic eruptions of humanity, to the outpouring of a vital energy that accumulates over long distances of time like waves building momentum until they break in a terrifying surge that sweeps aside everything in its wake. Down to the molecular level, this cycle repeats. Each human life is demarcated by trauma and tragedy; time strings these moments into unity.
+
+---
+
 Nearly a half century has passed since Mesmeria van Rensselaer was shot four times while being escorted into a courthouse in Richmond. Few events in world history have left so large a mark on our collective psyche nor shifted the political landscape so radically One must go back to the violence of the twentieth century, to the deeds of Gavriello Princep or Lee Harvey Oswald, to find a comparable event. 
 
 We will never know what Mesmeria might have said, had she had the opportunity to take the stand in her defense. At the time, she had already been tried in the court of public opinion and found guilty. Over three hundred million people worldwide saw the stream within minutes of it happening; by the time Bishop Augustine was declared dead, most of the world had seen the fatal shot from a dozen different angles. Across the globe, we logged in to watch the last Bishop of Rome die in the arms of a stranger on a crowded stage in Virginia. There was no question in the public mind she was guilty. Indeed, even the most ardent conspiracy theorist will concede that Mesmeria's finger pulled the trigger, but they will argue Mesmeria was not the one in control of her fingers. 
