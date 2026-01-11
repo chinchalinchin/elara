@@ -63,7 +63,7 @@ Several nodded their heads, pretending to grasp the elegance of the proof. Fewer
 pgs. 150 - 151
 --------------
 
-.. image:: ../../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
+.. image:: ../../../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
    :width: 70%
    :alt: Schematic of unknown device.
    :align: center

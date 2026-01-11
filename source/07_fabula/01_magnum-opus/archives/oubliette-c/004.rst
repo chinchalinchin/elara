@@ -7,7 +7,7 @@
 Centennial Exposition Flyer
 ---------------------------
 
-.. figure:: ../../../_static/img/fabula/magnum-opus/centennial-exposition.jpg
+.. figure:: ../../../../_static/img/fabula/magnum-opus/centennial-exposition.jpg
     :width: 70%
     :alt: The 1876 Centennial Exposition
     :align: center

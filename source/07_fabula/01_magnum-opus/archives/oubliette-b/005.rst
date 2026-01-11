@@ -242,7 +242,7 @@ Mother. Mother. What have I done? Who am I? The world is nothing but horror. It 
 
 I don't understand the world you have made for us, Father. Surrounded by ice. Heartless, it beats. Timeless, it expands. 
 
-.. figure:: ../../../_static/img/fabula/magnum-opus/euphemias-drawing.jpg
+.. figure:: ../../../../_static/img/fabula/magnum-opus/euphemias-drawing.jpg
     :width: 70%
     :alt: The Subject's Drawing
     :align: center

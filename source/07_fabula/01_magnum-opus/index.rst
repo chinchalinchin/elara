@@ -4,10 +4,10 @@
 ..
 .. This document uses RST formatting. RST comments indicate insertions and asides from the author.
 ..
-.. The /.etc/ directory contains two important files that should act as starting points:
+.. The /_etc/ directory contains two important files that should act as starting points:
 ..
-.. 1. /.etc/_notes: An outline of the world's mythology, characters and themes.
-.. 2. /.etc/_timeline: An outline of the world' timeline.
+.. 1. /_etc/_notes: An outline of the world's mythology, characters and themes.
+.. 2. /_etc/_timeline: An outline of the world' timeline.
 ..
 .. These two files should be treated as the "ground truth." They cannot be altered, except by submitting a proposal and getting explicit approval. 
 ..
@@ -35,6 +35,8 @@
 .. ------------------------------------------------------------------------------------------------------------------
 ..
 .. TASK 
+..
+.. Provide editorial notes on the entirety of the work, included in all sub-documents.
 ..
 .. ------------------------------------------------------------------------------------------------------------------
 ..
@@ -74,7 +76,5 @@ The world itself has been taken from us. We have lost our place, condemned to wa
    :caption: Contents:
 
    archives/index
-   case-files/index
-   estate-files/index
    exegesis/index
    000

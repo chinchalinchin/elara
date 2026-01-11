@@ -123,7 +123,8 @@ The Third Schism
 The Reclamation
 ---------------
 
-- 2140 AD: Humanity begins to migrate back to surface slowly. The majority of people still live underground. Living and working on the surface is considered extremely hazardous.
+- 2140 AD: Humanity begins to migrate back to surface slowly. The majority of people still live underground. Living and working on the surface is considered extremely hazardous and requires authorization from the Authority.
+- 2143 AD: The Brazilian Pentential Order discovers the Leviathan within the South Atlantic Trans-Oceanic (SATO) Maglev line connecting Natal (Brazil) to Dakar (Senegal).
 - 2157 AD: Ricardo van Rensselaer goes to Rome to recover artifacts and falls into the The Scavi of St. Peter's Necropolis. His equipment breaks in the fall and he inhales vapors from the Mithraeum. Has a vision of Mesmeria.
 - 2160 AD: The Editor (Ricardo van Rensselaer) begins to compile the Opus.
 

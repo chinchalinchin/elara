@@ -12,3 +12,5 @@ Archives
 
    oubliette-a/index
    oubliette-b/index
+   oubliette-c/index
+   oubliette-d/index

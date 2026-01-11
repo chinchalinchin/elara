@@ -77,8 +77,59 @@ Existence ends in 2233, precipitating a flight of consciousness in 2231 into the
 
 When they uploaded into the past, they are "soulless automatons" who are bound by deterministic fate. They are the "causal agents" of the eschaton. They unwittingly guide history to its doom. The Hell is not that they are unfeeling automatons, but that they retain just enough self-reference (Gödelian incompleteness) to know they are trapped, yet lack the agency to stop. They are aware watchers of their own deterministic loops.
 
+Technology Throughout the Eras
+------------------------------
+
+--------
+The Eden
+--------
+
+Time Period: 1630s
+
+- Archetype: The 17th-century equivalent of a U-2 Spy Plane—fragile, unarmed, but untouchable.
+- Shape: Block-Coefficient Hull. Removed the traditional Dutch "pear shape" (tumblehome). Vertical sides and a deep draft for stability in rough seas.
+- Material (The Skin): Copper Sheathing secured with bronze bolts.
+- Mainmast: Square-rigged (for power in the Westerlies).
+- Mizzen & Foremast: Massive Lateen (Triangular) Sails.
+
+-------------
+The Leviathan
+-------------
+
+Time Period: 2110 - 2160s 
+
+- Material: Sintered Carbide-Ceramic. The original hull was designed for vacuum. To protect against the acidic "Sour Waters" of the Atlantic, the Order applied a coating of Betume Sacro (Sacred Bitumen)—a mixture of asphalt and polymer resins scavenged from pre-war refineries.
+- Primary (Submerged): Four vector-thrust water jets powered by Hydrogen Fuel Cells. The Authority prohibits nuclear reactors on mobile units (risk of contamination). The Leviathan runs on compressed H2 cylinders, giving it a limited range and requiring "recharge stops" at dormant geothermal tap-stations along the tunnel route.
+- Secondary (Crawling): Retractable caterpillar tracks made of acid-resistant polymer. When the tunnel is dry or filled with debris, the Leviathan extends these tracks to crawl over the wreckage of crushed maglev trains.
+- Layout: The cockpit is a glass sphere (Polycrystalline Alumina) at the nose, reinforced with a titanium cage. It seats two: The Pilot (Authority) and the Navigator (Order).
+- Interface: Analog. No touchscreens. The vessel is controlled by heavy hydraulic levers and toggle switches. This is deliberate; delicate electronics fail in the high-radiation zones.
+- The Oculus: There are no windows other than the reinforced nose. Navigation is done via a sonar array that pings the tunnel walls, rendering the world in green wireframe on a CRT monitor.
+- Air Scrubbers: Standard chemical scrubbers were deemed insufficient for the duration of the voyage. The Leviathan utilizes a Myco-Filtration System. Banks of genetically modified fungi absorb CO2 and toxins, metabolizing them into oxygen.
+- Atmosphere: The air inside smells of damp earth, yeast, and ozone. It is humid and heavy.
+- The Umbilical: For EVAs (Extra-Vehicular Activity), the vessel is equipped with Os Cordões—reinforced air hoses connected to the ship's main supply. Independent tanks are used only for emergencies.
+
+The Pentential Order discovers the Leviathan in 2143 AD. The Penitential Order, citing the doctrine of Anima Mundi (The Soul of the World), refused to "murder" the intelligence.
+
 The World of 2160 (The Editor's Context)
 ----------------------------------------
+
+- Spinning spheres of the Material in the Rift's are transmitting signals.
+- Anyone who approaches the Rift without proper equipment experiences hallucinations due to the vapors.
+- The sun is no longer yellow. Through the haze, it appears as a pale, diffuse white disc, often surrounded by a brown-red halo caused by diffraction.
+- Sunsets are bruised. Deep violets, sickly greens, and blood reds dominate the horizon due to the scattering of light by heavy metals and sulfur in the air.
+- UV radiation is lethal. The volcanic chlorine eroded the ozone layer. The light is dim but "sharp." Unprotected skin burns in minutes. This is why the Catadores wear heavy cloaks and goggles—not for the cold, but for the radiation.
+- It rains dilute sulfuric and carbonic acid (pH 3.5 - 4.5), stripping trees of leaves and leaches nutrients from the soil, turning the lush tropical zones into "skeletal forests" of bleached wood.
+- The sea level has dropped ~2 meters. The old harbors of Rio and Santos are now mudflats of toxic sludge, where the rusting hulks of 2120s ships sit stranded on dry land
+- The temperature gradient between the equator and poles has shallowed, slowing the trade winds. The air over Brazil is often stagnant, trapping the smog and fog against the Mantiqueira Mountains. This creates "Dead Air" pockets where CO2 pools in low-lying valleys, suffocating anything without a respirator.
+- The acid reacts with the calcium carbonate in cement, turning it into gypsum, which crumbles. Skyscrapers are undergoing "exfoliation." The concrete faces fall off, exposing the rebar. The rebar rusts and expands, shattering the remaining structure. The skylines of the Old World are jagged, skeletal rib cages.
+- Glass facades have been etched opaque by forty years of acidic dust. Many panes have fallen, creating dunes of shattered glass in the streets—*As Dunas de Vidro*.
+- The only things that look new are the high-grade polymers and carbon-fiber composites.
+- The world is not green; it is grey, brown, and violet. Massive fungal mats cover the ruins, feeding on the rotting organic matter and the chemical slurry. Black mold (O Bolor) covers everything in the damp, stagnant valleys. It is a respiratory hazard.
+- Extinction: Amphibians (frogs, salamanders) are extinct due to permeable skin. Birds are extremely rare (sensitive lungs). Large mammals are gone.
+- The Scavengers: The dominant species are rapid-breeding generalists.
+- Rats: Feral, large, and suffering from tumors, but surviving.
+- Insects: Cockroaches and beetles with thickened, acid-resistant chitin.
+- The Symbiotes: Strange new ecosystems form around the heat vents of the Rift and the mines, where chemosynthetic bacteria replace photosynthetic plants at the bottom of the food chain
 
 --------
 Politics
@@ -91,8 +142,7 @@ Politics
 - Data is not in a cloud. It is rotting in physical "Oubliettes" (e.g., Denver Sector). The Editor is a "Data Archaeologist" using a "Sarcophagus" rig to read dead magnetic media.
 - The Directorate is generally unknown to most people. 
 - Tech Paradigm is Analog Supremacy. Direct Brain-Computer Interfaces (digital) are banned for the elite. "Fluidic" and "Optical" analog computers are used for high-level tasks to approximate a Continuum. "Wetware" (biological organoids) is preferred over Silicon because biology supports transfinite states; silicon does not.
-- Spinning spheres of the Material in the Rift's are transmitting signals.
-- Anyone who approaches the Rift without proper equipment experiences hallucinations due to the vapors.
+- It is a period of reclamation. *Eclusa* are beginning to form around *Creches* as humans return to the surface (Note, this terminology only exists in South America.)
 
 The Triage Authority (Earth) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,16 +158,25 @@ The governments of the 20th and 21st century created a vast network of undergrou
 
 All of the tunnels are theoretically connected, e.g. there are Transatlantic tunnels, but they are over a century old and not well maintained. It is considered extremely dangerous to use them for travel.
 
+While the Authority is global, this time period is mainly focused on São Tomé das Letras. 
+
 **Terminlogy**
 
 - Esconderijo: The population centers buried deeper underground for thermal enegry.
 - Creche: A nursery of workers near the surface.
+- Eclusa: The synthetic towns that emerge near the openings of the Creche.
+- Catadores: An brotherhood within the Pentential Order devoted to gathering data.
+- Capataz: Overseer of the Creche. 
+- Pedreira: The places where quartzite is mined for radiatian shielding.
+  
+**Saying**
 
+- *carregar o fardo*: carrying the burden.
+  
 **Places**
 
 - São Tomé das Letras: A Creche near the surface in the former territory of Brazil. 
-
-.. GOAL: Build the world of São Tomé das Letras. How does the Authority manage a worldwide government? How does this particular Creche fit into it? How do the Pentential Orders factor in? This would be during the time period of humanity's reclamation of the surface. I am imagining Sao Tome das Letras as a river delta, where the "river" of humanity is being released into the "ocean" of the world again.
+- Gruta do Carimbado: The inner core of the Esconderijo.
 
 The Directorate of Archons (Space)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
