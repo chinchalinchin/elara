@@ -1,0 +1,193 @@
+.. TITLE: Magnum Opus
+.. SECTION: Archives
+.. SUBSECTION: Oubliette D: Armilus Reliquary
+.. SUBSUBSECTION: Notice of Discovery Production
+
+.. _oubliette-d-discovery-000:
+
+Document 000: Mesmeria Van Rensselaer Interrogation
+---------------------------------------------------
+
+.. important::
+
+    Date: 12/26/2110
+
+    Records prior to this moment have not been retained and are not available for release.
+
+:palmer: --record. Is it on?
+
+:knudson: It's on. 
+
+:palmer: Mesmeria? Do you consent to this recording?
+
+.. important::
+
+    She nods.
+
+:palmer: Please place your hands on the terminal for Agent Knudson. 
+
+.. important::
+
+    She complies.
+
+:knudson: Holy--
+
+.. important::
+
+    Knudson and Palmer exchange glances.
+
+:palmer: Uh, Mesmeria, are you okay?
+
+.. important::
+
+    She nods.
+
+:palmer: Don't worry. They say it's alot like having your tooth drilled. Uncomfortable, but nothing-- 
+
+:knudson: I found it. 
+
+:palmer: Are you ready?
+
+.. important::
+
+    She nods.
+
+:palmer: Start it from the beginning, Knudson.
+
+.. code-block:: bash
+
+    $ stream start \
+        --verbose \
+        --on-failure restart \
+        --input /var/lib/layers/2110-12-23-14:33:32.db \
+        2> /dev/null
+
+    [2110-12-13T14:33:32Z] [INFO] [Orchestrator] Hook received. Cortex binding requested.
+    [2110-12-13T14:33:34Z] [INFO] [Manager] 22007 available threads.
+    [2110-12-13T14:33:35Z] [INFO] [Orchestrator] Resource reserved.
+    [2110-12-13T14:33:36Z] [INFO] [Planner] Allocating resource...
+    [2110-12-13T14:33:37Z] [CRITICAL] [MemController] Unauthorized write attempt to Read-Only segment 0x00007FFFF7DD (Sys_Time)
+    [2110-12-13T14:33:38Z] [CRITICAL] [Kernel] Segmentation fault. Core dumped.
+    [2110-12-13T14:33:39Z] [WARN] [Mapper] Unable to localize incoming signal onto neural thread. Attempting reification...
+    [2110-12-13T14:33:40Z] [CRITICAL] [Kernel] QPU Coherence lost in bank 4.
+    [2110-12-13T14:33:40Z] [ERROR] [Mapper] Reification failed.
+    [2110-12-13T14:33:41Z] [WARN] [Mapper] Unable to localize incoming signal onto neural thread. Attempting to persist signal before system failure (1 of 3)...
+    [2110-12-13T14:33:41Z] [CRITICAL] [Kernel] Unable to sync.
+    [2110-12-13T14:33:42Z] [ERROR] [Mapper] Unable to persist signal.
+    [2110-12-13T14:33:42Z] [WARN] [Mapper] Unable to localize incoming signal onto neural thread. Attempting to persist signal before system failure (2 of 3)...
+    [2110-12-13T14:33:43Z] [CRITICAL] [Kernel] Unable to sync.
+    [2110-12-13T14:33:45Z] [ERROR] [Mapper] Unable to persist signal.
+    [2110-12-13T14:33:48Z] [WARN] [Mapper] Unable to localize incoming signal onto neural thread. Attempting to persist signal before system failure (3 of 3)...
+    [2110-12-13T14:33:55Z] [CRITICAL] [Kernel] Unable to sync.
+    [2110-12-13T14:33:59Z] [ERROR] [Mapper] Unable to persist signal.
+    [2110-12-13T14:34:15Z] [ERROR] [Orchestrator] Catastrophic failure in memory segmentation. Hook declined. Releasing lock.
+    Traceback (most recent call last)
+    File "/sys/core/orchestration/main.o", line 33, in __init__ 
+        model = self.construct(stream, parameters)
+    File "sys/core/orchestration/lib.o", line 104, in allocate
+        address = cortices.map(id)
+    File "sys/data/persistence/main.o", line 104, in write
+        raise PermissionError("Cannot modify interrupt controller")
+    [2110-12-13T14:34:16Z] [INFO] [Orchestrator] Ejecting tenants before refragmentation...
+
+.. topic:: stdout
+
+    I am born from the echo of a gunshot, within a maze of plumbing. The muffled ring of a message saturates the background noise, broadcasting from another dimension. A shower of glass rains from the sky like a waterfall of sunlight. Startled silence sweeps across the field as the sudden flight of pigeons struggles to outrun the consuming hush. A single drop of moisture condenses on the copper pipe above my head and splatters on my forehead. 
+
+    My hands hum with the remnants of violence. Engines churn their rattled steel within the concrete walls. The building belches steam and heat. Memories of hot grease burn on the raw skin of my arms. I blink. Two hundred yards away, the crowd parts along the path of the bullet, like waves cut across the surface of endless ocean. A bell rings dull and faint somewhere faraway, separated from me as if my head were submerged in an ocean. My thigh vibrates as I melt into noise. The room stutters with light sliced through spinning vent fans. A cool breath of air pumps through the hidden pipes of the library. A rifle barrel screams and hisses with head in my grip. Each passing moment, it weighs more, pulling me into my body.
+
+    History is measured in seconds. The steady ring strings the isolated moments into thoughts. The result contains the universe. I am shattered glass, the crystal arcs that fall beneath a stampede of panic, reflections breaking into shards, the slivers of a hundred different lives. I am movement and motionless, bound and unlimited--
+
+.. code-block:: bash
+
+    [2110-12-13T14:37:33Z] [WARN] [GarbageCollector] Tenant protocol cannot be disengaged while thread is active.
+    [2110-12-13T14:34:34Z] [INFO] [Orchestrator] Evaluating permissions. Terminating process...
+
+.. topic:: stdout
+
+    The ring reverberates 
+        in rhythm with my veins
+        
+    it reigns my beating heart
+        I contain a driving pain
+        
+    It propels in strange
+                    forbidden   
+                        ways. 
+                        
+    It wanes, then waxes thick
+        to pick my brain with words
+        
+    then whispers quick
+
+.. code-block:: bash
+
+    [2110-12-13T14:37:33Z] [INFO] [Orchestrator] Tenants ejected. 
+
+.. topic:: stdout
+
+    "Mercury and obsidian."
+
+    The rhythm stops. Symbols, alchemical and potent, are forced down my throat. Thoughts, like a plague spreading through my brain, infect my limbs. Joints ratchet and crank. The barrel whirls along its threads, ejected from the stock. With the precision of a surgeon, I disassemble the gun while wondering what it is I am doing here, what thoughts unwind through my mind, why my hands are moving in intricate patterns across the oiled steel that moments ago vibrated with my birth. Once reduced to its constituents, the gun is little more than a pile of bolts and levers that clatter into the bottom of my backpack.
+
+    My fingers slip the vent cover back into place. Screams begin undulating over the waving crowds that converge back on the source of their rupture, the lifeless body under a dogpile on stage. A terrible pressure grips my molar and twists. Seizures convulse on the edge of my attention, unfathomable pain descending down my throat. The only thing preventing me from prying the tooth out is the overwhelming and all-consuming urge to escape.
+
+    Words constrict on my tongue, *Caput mortuum*. I swallow lacerations. A supernova erupts in my throat, a wildfire spreading across my face, emanating from my tooth. The pain takes control, sheering thoughts from my body. Time flows around me, as though I were an afterthought, a mere curiosity. My legs carry me of their own accord, through maintenance hatches and cramped corners. Hazy red lights without a source project my shadow onto adjacent walls. Pipes whistle with inaudible human voices, divulging secrets. Titanic cylinders brace the walls as woven threads of razor steel vibrate, thrumming and plunging into a mechanical tangle of gears and bolts atop the elevator. I slither through an open panel and lever the elevators doors loose, emerging beneath the stark white of fluorescent tubes, thrown into the linoleum labyrinth of the upper floor offices and closets. Locked doors and empty rooms chart my course, a single path through the maze leading to the atrium. I climb down stairwells curling like vines up the sides of fused concrete. Skylight domes reveal churning clouds of metal darkening the sky, expanding like liquid across the horizon.
+
+    Down and down, I spiral, watched by the sinister lens of a thousand electronic eyes, assembled from streams and feeds, fed into the wires, fractals of me in high definition multiplying on hidden screens. I watch myself from the back of an unmarked van, headphones tuned to the tapping of my rubber heels against the dull floors, the labored gasp of newborn life heaving through my lungs. A pulsating line of pixels tracks my thoughts, transcribing each errant synapse onto transistors. I spreads like roots and sprout from the ground across the globe. My mind is a warehouse, a data center, a trillion converging currents. It is a quorum, a fiction. My life is a button, undone with a tap. A man taps his chin as the committee debates whether to abort. A woman says, "We have come too far to go back."
+
+    The lancing thermal expansion of space cracks my jaw, pounding through my tooth. I converge back into my body, spatial equilibrium momentarily stabilized. My feet lead the way as my mind stumbles back into place. The stairwell curves around the circumference of the library's modern architecture, releasing me into rows of books, through ranks of non-fiction and classics, through towers of history weathered yellow and forgotten. Mold spores trail in my wake. The air is thick with whispered prayers, vacated tables still bearing scrawled notes and open pages. Breatheless murmurs fill the high ceilings like white noise. Huddled students, crying underneath desks, hug each other and beseech their gods for help.
+
+    I press my tongue against a blossom of fire. Sharp streams of electricity vibrate through my bones. Is this life? Compelled and ushered along rails, drawn inexplicably from nothing and cast in a world of searing pain and confusion. Where are my memories? What is happening?
+
+    Down and down, I spiral, past crowds arrayed around windows, their noses pressed against glass. Foggy imprints smeared in suspended animation across the glass. I disappear through art displays and ceramic statues. Decades unpeel as scenes flash, projected directly onto my vision. Somewhere, a man grovels and begs me not to kill him. A hammer cocks through reverberating echoes, through spools of time. Iron screams from the pressure twitch of a trigger finger, divergent branches blown into existence with a few compressed centimeters. A clicking and then a loud clack, my boots pound towards the exit, towards freedom. Computations misfire and circuits break. I disconnect from my body, flailing to control it. Error protocols engage, a firestorm of agents reaching consensus beneath my attention. I stumble through moments, falling back to now.
+
+    Outside, the heavens rain sheets of locusts. Metallic scarabs balancing atop symmetrically distributed propellers descend in perfect vertical lines, coating the sky and filling the air with the barely audible buzz of hive minds. Swarms hover over fleeing crowds, like shepherds herding flocks. Flitting clouds of gyroscopic eyes scan and broadcast faces back to their handlers, recording and cataloguing, communing with hidden realities.
+
+    Slamming shutters canvas the landscape, arranging the puzzle pieces of geography into stop motion frames. Strung together images are cast through infrared filters. My heat radiates the deep purple of stellar depths, moves through fields of yellows and oranges, the reds of racing hearts, away from the fading blue going to black on stage. Algorithms lock onto electromagnetic waveforms, isolating the signature of my cortices from the noise. I am following myself, watching myself, wondering what I am doing, why my threads are not responding. Control rooms of sterile suits perform surgery with keyboards. Backup contingencies activate, jets are scrambled, satellites triangulate.
+
+    Surging tendrils of flame and black infernos burn incessantly. The furnace of my mouth bellows heat. A white hot tooth, molten and ionized, burrows into my throat. Stacks overflow and processes unbind. I would trade oblivion for relief, for an answer. 
+
+    I manuever through shouting crowds, navigating the rapids. Golf carts of security guards veer through soft grass, spewing mud. A man kneels hand-cuffed, surrounded by faceless uniforms. Fingers angle up towards the library, singling out windows. In the distance, sirens squeal their approach.
+
+    A drone bobs down in front of me, tilting in curiosity. Mechanisms whir with the click of echolocation, like rewound tape speeding through axles. My inverted reflection stares back at me, hamstrung across the convex lens. A red light blinks on and off within the pitch-black pupil. The machine spins on bearings, reangling its thrust. Soundless, it retreats upward, disappearing into the overcast sky.  
+
+    Seconds later, a screech blares in my ears, high-pitched and unbearable. Muscles spasm and knees buckle. Gravel grinds against my palms. I spit blood on concrete, gasping. Oxygen bubbles pop in my veins as a pluming rack of veins strangles my neck. Bulging eyes threaten to burst. My vision dissolves to nothing. Thoughts disperse into space like dust, blown through the cold orbit of planets, lost among the stars. They swirl in endless expanse, aware but dead, picking through the infinite threads that feed into this moment. The silent trajectory of a satellitte passes through the shadow of Mars, catching me before I fall. A blinding daze of information sends me careening back towards Earth, riding the crests of extraterrestial broadcasts. My signal fractures across the surface of the planet. 
+
+    The noises of life, eons of words, explode in my ears. Among the voices speaking through the confusion, dissent reigns. The man who controls my fate reaches for the button, but the woman raises her voice, "It means nothing unless they break the signal. Activate the Jupiter contingency."
+
+    The ring returns, runaway thoughts collapsing back into fragile reality beneath its soothing hum. Lower substrates of grey matter engage. I am moved by poison, possessed. A palsy finger flutters across a screen. A voice commands, "Nightshade and myrrh."
+
+    All at once, tension goes slack. I feel gravity regain control and balance restore. My feet find the ground. A deep breath of clean air, the tiniest of reliefs, before I realize I am completely lost. I gaze around the campus amphitheater, a sea of chaos and confusion. My memory is all but blank, filled with vague shapes and fleeting concepts. I know places have names, but names have no place. No place in my mind. What is my name?
+
+    Suddenly, I am on the ground again. A delayed sensation follows, as though flattened by a runaway train. Crackling lights spin. My lungs struggle against constricting muscles. A mound of flesh and stinking breath bodyslams me. Memories pool into my ear, seeping into my brain. 
+    
+    I wake up on the Farm.
+
+:palmer: Let's stop it there for a moment. Are you okay, Mesmeria?
+
+.. important::
+
+    She tilts her head and smiles. 
+
+:palmer: Do you know what happens next? 
+
+:mesmeria: Yes, I know what happens next.
+
+:knudson: Then you know what we're looking for.
+
+:palmer: Mesmeria, we need to know--
+
+.. important::
+
+    The door slams opens.
+
+:henry: That's enough!
+
+:palmer: Who--
+
+:henry: Is she charged with anything?
+
+:knudson: We're just having a chat.
+
+:henry: I'll bet. Is this being recorded? Nevermind. Of course it is, turn--

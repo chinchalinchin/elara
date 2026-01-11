@@ -1,0 +1,66 @@
+.. TITLE: Magnum Opus
+.. SECTION: Archives
+.. SUBSECTION: Oubliette B: The Capital Reliquary
+
+.. _oubielette-b-003:
+
+The Coriolis File
+-----------------
+
+.. note::
+
+    These records were obtained from the public databases of the Office of Naval Intelligence, made available pursuant to statute § 33(a) of the Freedom of Data Act. All information has been sanitized and aligned according to the latest model censor guidelines published by the National Institute of Standards and Technology.
+
+**TOP SECRET EYES ONLY, COPY 1 OF 3**
+
+**DEPARTMENT OF THE NAVY OFFICE OF THE CHIEF OF NAVAL OPERATIONS WASHINGTON 25, D.C.**
+
+**DATE**: 24 February 1947 
+
+**FROM**: Rear Admiral R.H. Cruzen, Commander, Task Force 68 
+
+**TO**: Fleet Admiral C.W. Nimitz, Chief of Naval Operations 
+
+**VIA**: The Secretary of the Navy
+
+**SUBJECT**: AFTER-ACTION REPORT: LOSS OF SPECIAL TASK GROUP 68.9 (PROJECT "CORIOLIS")
+
+**SUMMARY OF INCIDENT** 
+
+At 0800 hours ZULU on 19 February 1947, Special Task Group 68.9, consisting of USS Sennet (SS-408), USS Threadfin (SS-410), and the auxiliary tender USS YW-125, initiated the scheduled field test of the CORIOLIS device within the anchorage of Port Foster, Deception Island. Activation occurred at 0801. Telemetry indicates the device achieved target RPM immediately. At T-plus-5 seconds, the localized geological structure of the caldera floor underwent catastrophic thixotropic failure (liquefaction). The seabed lost structural integrity. All three vessels lost buoyancy due to extreme water aeration and the collapse of the bay floor. Vessels were observed to submerge vertically. Total submersion was complete by T-plus-15 seconds.
+
+**CASUALTY REPORT**
+
+- Vessels Lost: 3
+- Personnel MIA/Presumed KIA: 194 Officers and Enlisted men.
+- Survivors: 0 (from surface vessels).
+
+**WITNESS STATUS AND CONTAINMENT** 
+
+Visual confirmation was provided by a Sikorsky HO3S-1 rotorcraft (BuNo 12256), launched from USS Burton Island prior to the event for perimeter ice-spotting. The craft was piloted by Lt. Cmdr. :redacted:`REDACTED`
+
+The aircraft effected an emergency landing at the Hektor Whaling Station ruins (Whalers Bay) following the incident. The pilot was intercepted by British personnel attached to FIDS "Base B." The pilot was in a state of severe shock and reportedly vocalized the nature of the sinking to foreign nationals. 
+
+A recovery team from USS Philippine Sea has secured the pilot. He is currently under sedation in the brig. Recommendation is immediate transfer to Bethesda Naval Hospital for psychiatric evaluation followed by medical retirement. 
+
+Diplomatic cables have been dispatched to London. The narrative provided to Base B personnel is that the pilot was suffering from hypoxia and hallucinations. They have been strongly advised that the area is chemically hazardous due to "volcanic venting."
+
+**THE COVER STORY (OPERATION "WHITEOUT")** 
+
+To preserve the secrecy of the CORIOLIS technology and prevent Soviet inquiry, the following official narrative is effective immediately:
+
+The vessels were lost during a severe katabatic storm while attempting to navigate Neptune’s Bellows. High seas and low visibility resulted in a collision with Ravn Rock, followed by a boiler explosion on the tender. The depth of the water and the "dangerous volcanic currents" make salvage impossible. The site is designated a War Grave. Families will be notified via standard telegram. Casualty assistance officers are instructed to emphasize the "heroic nature of polar exploration."
+
+**GEOLOGICAL AFTERMATH**
+
+The device appears to have fused with the caldera floor. Soundings taken 12 hours post-event indicate the harbor depth has increased by 40 fathoms in the central sector. The seabed has re-solidified. There is no wreckage visible.
+
+**RECOMMENDATIONS**
+
+Port Foster is to be removed from all standard navigational charts as a safe anchorage. Mark as "Magnetic Anomaly / Unsurveyed." Release rumors through channels that the Sennet and Threadfin were transferred to the Turkish Navy under secret lend-lease, to explain their disappearance from registries.
+
+Despite the incident and coverup, Project CORIOLIS is to be considered a resounding success.
+
+- R.H. Cruzen Rear Admiral, USN Commander, Task Force 68
+
+**TOP SECRET EYES ONLY, DESTROY AFTER READING**

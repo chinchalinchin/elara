@@ -1,0 +1,5 @@
+.. _lament:
+
+The Lament of the Leviathan
+---------------------------
+

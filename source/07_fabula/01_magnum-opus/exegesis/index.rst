@@ -1,8 +1,7 @@
 .. TITLE: Magnum Opus
 .. SECTION: Exegesis
-
-.. 000: Old Testament
-.. 001: New Testament
+.. TABLE OF CONTENTS:
+.. - 001: New Testament
 
 .. _exegesis:
 

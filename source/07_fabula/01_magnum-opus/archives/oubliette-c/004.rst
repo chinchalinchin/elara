@@ -1,0 +1,21 @@
+.. TITLE: Magnum Opus
+.. SECTION: Archive
+.. SUBSECTION: Oubliette C: van Renselaer Reliquary
+
+.. _oubliette-c-004:
+
+Centennial Exposition Flyer
+---------------------------
+
+.. figure:: ../../../_static/img/fabula/magnum-opus/centennial-exposition.jpg
+    :width: 70%
+    :alt: The 1876 Centennial Exposition
+    :align: center
+
+    :handwritten:`Machinery Hall. Hotel, Centennial Lodging-House Agency. Black hair, beard.`
+
+    United States Centennial Commission, International Exhibition, 1876. Featuring,
+
+    - The Telephone!
+    - The Mechanical Calculator!
+    - Ketchup!
