@@ -1,0 +1,50 @@
+.. _exegesis-000:
+
+Sibylline Prophecy
+------------------
+
+.. list-table:: Sibylline Oracles, Book II
+  :widths: 50 50
+  :header-rows: 1
+
+  * - Greek
+    - English
+  * - καὶ τότε δὴ ποταμός τε μέγας πυρὸς αἰθομένοιο
+    - And then shall a great river of blazing fire
+  * - ῥεύσει ἀπ' οὐρανόθεν καὶ πάντα τόπον δαπανήσει,
+    - Flow from heaven and consume all places,
+  * - γαῖάν τ' ὠκεανόν τε μέγαν γλαυκήν τε θάλασσαν,
+    - The earth, the vast ocean, and the livid sea,
+  * - λίμνας καὶ ποταμοὺς πηγὰς καὶ ἀμείλιχον Ἅιδην.
+    - Lakes and rivers and fountains, and merciless Hades.
+  * - καὶ πόλον οὐράνιον· ἀτὰρ οὐράνιοι φωστῆρες
+    - And the heavenly vault. But the lights of heaven
+  * - εἰς ἓν συρρήξουσι καὶ εἰς μορφὴν πανέρημον.
+    - Shall clash together into one and into a desolate form.
+  * - ἄστρα γὰρ οὐρανόθεν τε θαλάσσῃ πάντα πεσεῖται.
+    - For all the stars shall fall from heaven into the sea.
+  * - ψυχαὶ δ' ἀνθρώπων πᾶσαι βρύξουσιν ὀδοῦσιν,
+    - And all the souls of men shall gnash their teeth,
+  * - καιομέναι ποταμῷ καὶ θείῳ καὶ πυρὸς ὁρμῇ,
+    - Burning in the river and the brimstone and the rush of fire
+  * - ἐν δαπέδῳ μαλερῷ, τέφρα δέ τε πάντα καλύψει.
+    - On the jagged floor, and ashes shall cover all things.
+  * - καὶ τότε χηρεύσει στοιχεῖα πρόπαντα τὰ κόσμου·
+    - And then all the elements of the world shall be widowed:
+  * - ἀὴρ γαῖα θάλασσα φάος πόλος ἤματα νύκτες.
+    - Air, earth, sea, light, the vault of heaven, days and nights.
+  * - ἀὴρ γαῖα θάλασσα φάος πόλος ἤματα νύκτες.
+    - Air, earth, sea, light, the vault of heaven, days and nights.
+  * - κοὐκέτι πωτήσονται ἐν ἠέρι ἄπλετοι ὄρνεις,
+    - No longer shall birds fly in the air without number,
+  * - οὐ ζῷα νηκτὰ θάλασσαν ὅλως ἔτι νηχήσονται,
+    - Nor shall swimming creatures swim any longer in the sea,
+  * - οὐ ναῦς ἔμφορτος ἐπὶ κύμασι ποντοπορήσει
+    - No ship shall sail with its cargo over the waves,
+  * - οὐ βόες ἰθυντῆρες ἀροτρεύσουσιν ἄρουραν,
+    - No guiding oxen shall plough the field,
+  * - οὐκ ἦχος δένδρων ἀνέμων ὕπο· ἀλλ' ἅμα πάντα
+    - No sound of trees under the wind; but all things at once
+  * - εἰς ἓν χωνεύσει καὶ εἰς καθαρὸν διαλέξει.
+    - Shall it melt together, and purify into one.
+

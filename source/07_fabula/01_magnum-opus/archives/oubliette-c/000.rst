@@ -256,7 +256,7 @@ May
 
 .. epigraph::
 
-    The sky has begun to redden each evening, and the crew grows nervous. Despite my efforts, this is the one superstition I have been unable to cull their heads. However, today these false omens speak truly. We are entering the most treacherous water in all of creation.
+    The sky has begun to redden each evening, and the crew grows nervous. Despite my efforts, this is the one superstition I have been unable to cull from their heads. However, today these false omens speak truly. We are entering the most treacherous water in all of creation.
 
     The Potiguarra have been training on hempen cables, tossing them behind the ship and pulling them back aboard a hundred times an hour. While I would surely prefer the full complement of Dutchmen with which I left Amsterdam, these heathens will serve the *Eden* just as well. A body is a body. The rest of the crew scrambles to secure every opening and bar every port in preparation. Pieter is the only one, besides Hendrick and myself, who has seen the waters of Costa Patagonum, but he has sufficiently instilled the fear into the rest of the crew.
 
@@ -375,7 +375,7 @@ June
 
 .. epigraph::
 
-    Two of the Potiguarra, whose names I never learned, froze in their sleep. They could not be roused and upon investigation, it was discovered their furs had fused to their skin. The wool was soaked by a leak overnight and then turned to ice upon their sleeping bodies. Hendrick believes they died in their dream, never knowing the cold had claimed them.  
+    Two of the Potiguarra, whose names I never learned, froze in their sleep. They could not be roused and upon investigation, it was discovered their furs had fused to their skin. The wool was soaked by a leak overnight and then turned to ice upon their sleeping bodies. Hendrick believes they died in their dreams, never knowing the cold had claimed them.  
 
     -- June 9th, 1637
 

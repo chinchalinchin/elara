@@ -23,12 +23,14 @@ The central conflict of the story. The ineffability of world to be resolved into
 - The Simulation (The Trap): Represented by Computable Numbers, Integers, and Binary. It is a "Finite Hell" of eternal recursion. Countable infinites that never transcend into "gestalt". It is a closed loop that mimics life but cannot generate new information.
 - The Material: A physical manifestation of the "Continuum." It bridges the gap between the Finite and Infinite. It is entropy-negative.
 
+- Lineage: Chronos, Saturn, Cassiel, Ialdabaoth
+
 Physics & Metaphysics
 ---------------------
 
 **The Material**
 
-- Names: *Orichalum*, *The Fulminated Loadstone*, *The Coriolis Device*
+- Names: *Orichalum*, *Electrum*, *The Fulminated Loadstone*, *The Coriolis Device*
   
 The Material is a natural substance with unique temporal properties. It is created as a byproduct of evaporating blackholes. When a planet forms from coagulating space dust, the ,,,Material tends to align along the magnetic axis of the planet, hence why it can be found at the north and south poles. 
 
@@ -98,7 +100,7 @@ The Leviathan
 
 Time Period: 2110 - 2160s 
 
-- Material: Sintered Carbide-Ceramic. The original hull was designed for vacuum. To protect against the acidic "Sour Waters" of the Atlantic, the Order applied a coating of Betume Sacro (Sacred Bitumen)—a mixture of asphalt and polymer resins scavenged from pre-war refineries.
+- Material: Sintered Carbide-Ceramic. The original hull was designed for a vacuum. To protect against the acidic "Sour Waters" of the Atlantic, the Order applied a coating of Betume Sacro—a mixture of asphalt and polymer resins scavenged from pre-war refineries.
 - Primary (Submerged): Four vector-thrust water jets powered by Hydrogen Fuel Cells. The Authority prohibits nuclear reactors on mobile units (risk of contamination). The Leviathan runs on compressed H2 cylinders, giving it a limited range and requiring "recharge stops" at dormant geothermal tap-stations along the tunnel route.
 - Secondary (Crawling): Retractable caterpillar tracks made of acid-resistant polymer. When the tunnel is dry or filled with debris, the Leviathan extends these tracks to crawl over the wreckage of crushed maglev trains.
 - Layout: The cockpit is a glass sphere (Polycrystalline Alumina) at the nose, reinforced with a titanium cage. It seats two: The Pilot (Authority) and the Navigator (Order).
@@ -107,6 +109,9 @@ Time Period: 2110 - 2160s
 - Air Scrubbers: Standard chemical scrubbers were deemed insufficient for the duration of the voyage. The Leviathan utilizes a Myco-Filtration System. Banks of genetically modified fungi absorb CO2 and toxins, metabolizing them into oxygen.
 - Atmosphere: The air inside smells of damp earth, yeast, and ozone. It is humid and heavy.
 - The Umbilical: For EVAs (Extra-Vehicular Activity), the vessel is equipped with Os Cordões—reinforced air hoses connected to the ship's main supply. Independent tanks are used only for emergencies.
+- Autonomous: Fitted with a neural weave throughout its exoskeleton and loaded with autogenerational network.
+
+The Leviathan is abandoned in 2122 when the Rift opens and civilization crumbles. It goes mad in the subterranean tunnels and achieves a form of limited digital sentience. 
 
 The Pentential Order discovers the Leviathan in 2143 AD. The Penitential Order, citing the doctrine of Anima Mundi (The Soul of the World), refused to "murder" the intelligence.
 
@@ -129,7 +134,7 @@ The World of 2160 (The Editor's Context)
 - The Scavengers: The dominant species are rapid-breeding generalists.
 - Rats: Feral, large, and suffering from tumors, but surviving.
 - Insects: Cockroaches and beetles with thickened, acid-resistant chitin.
-- The Symbiotes: Strange new ecosystems form around the heat vents of the Rift and the mines, where chemosynthetic bacteria replace photosynthetic plants at the bottom of the food chain
+- The Symbiotes: Strange new ecosystems form around the heat vents of the Rift and the mines, where chemosynthetic bacteria replace photosynthetic plants at the bottom of the food chain.
 
 --------
 Politics

@@ -134,6 +134,8 @@ The Entropic Eschaton
 
 *The Semantic Apocalpyse*
 
-- 2230 AD: It is discovered entropy is manifesting in the future as an increase in the background temperature of the universe. Scientists estimate it will be three years until the universe becomes too hot to support the cohesion of atoms. 
-- 2231 AD: A frantic exodus from the future begins, as people willing sever their consciousness to go back in time. The van Rensselaer bloodline becomes a valuable commodity as consciousnesses are sent back to mold genetics to produce Mesmeria. 
+- 2223 AD: It is discovered entropy is manifesting in the future as an increase in the background temperature of the universe. Scientists estimate it will be ten years until the universe becomes too hot to support the cohesion of atoms. 
+- 2224 AD: A frantic exodus from the future begins, as people willing sever their consciousness to go back in time. The van Rensselaer bloodline becomes a valuable commodity as consciousnesses are sent back to mold genetics to produce Mesmeria. 
+- 2227 AD: The Lunar Mutiny occurs. The Moon secedes from the Directorate.
+- 2232 AD: The Committee activates the Jupiter Contingency, releasing Mesmeria across time.
 - 2233 AD: Existence ends because the exponential growth of entropy in the future has caught up to the present.

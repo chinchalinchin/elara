@@ -9,7 +9,7 @@ Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
 
 .. important::
 
-    The following document was retrieved from the Archivio Apostolico Vaticano. Forsenic analysis places the date of its creation in the year 1641 AD.
+    The following document was retrieved from the Archivio Apostolico Vaticano.
 
 **A Private and Faithful Relation touching the Strange Nature of the Luminous Nitre of the North**
 
@@ -23,7 +23,7 @@ So I shall attempt to start at the beginning, though that is no easy task; There
 
 I have therefore dedicated the entirety of my life to uprooting this blasphemous weed from the soils of England. Many years I have labored and many hardships I have suffered, but always I have drawn strength from my father's memory and his unwavering faith. Though I admit the deception has taken its toll, turning every friend into a potential enemy, never once have I strayed from the path set before me. Even when the Lord took from me my dear Venetia and left me as broken as shattered glass, even then, fallen into the depths of my grief, I still faithfully executed every order received by Your Holiness. You will understand, then, the astonishment with which I received your previous letter.
 
-It is only now the seeds we carefully planted over these long decades have begun to sprout and bear fruit; The fool on the throne has cut off his right hand with the execution of Wentworthl; Meanwhile, Henrietta is confident the Lords of the Pale will soon raise an army beneath the banner of Rome. When I left for France in the summer, the hysteria in London had only just begun. The kingdoms teeter on the edge of chaos. The moment we have been crafting in secret has finally arrived.
+It is only now the seeds we carefully planted over these long decades have begun to sprout and bear fruit; The fool on the throne has cut off his right hand with the execution of Wentworthl; Meanwhile, Henrietta is confident the Lords of the Pale will soon raise an army beneath the banner of Rome. When I left for France in the summer, the hysteria in London had only just begun. The kingdoms teeter on the edge of chaos. The moment we have been crafting in secret, for which we have sacrified everything, has finally arrived.
 
 Yet your letter informed me I was to go to Saint-Jean-de-Luz to meet a Basque whaler and gather information on Dutch activity in the Arctic Sea. Even in my wildest imaginings, I could not have conceived a stranger request at so pivotal a moment. I confess that I doubted Your Holiness and thought perhaps you had gone mad. To abandon our plans at such a critical juncture and chase the rumors of sailors seemed nothing short of lunacy. With the benefit of hindsight, it is now clear Your Holiness was acting as a vessel for the Lord, and I am shameful for ever having nurtured such thoughts.
 
@@ -60,6 +60,8 @@ Upon arrival, I met our contact along the cobbled streets of the harbor. Father 
     TODO 
 
     **Fr. Pere**: Ego te absolvo a peccatis tuis in nomine Patris et Filii et Spiritus Sancti.
+
+.. IN PROGRESS: The murder happens three days later. Digby finds Esteban before his execution and takes his final confession.
 
 .. IN PROGRESS: While in exile in 1641, he is dispatched to investigate a pentient report from a Basque whaler who confessed he had witnessed unnatural phenomenon in the Dutch Spitsbergen whaling colony. Septentrional Zone.
 

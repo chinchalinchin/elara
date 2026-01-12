@@ -7,15 +7,13 @@
 Illustrations of Masonry
 ------------------------
 
-.. Maybe just write a whole book within a book instead of excerpts?
-
 .. important::
 
     This manuscript was published in 1826 and had a circulation of less than two hundred copies. The last remaining copy was obtained from the Batavia Public Library and scanned into the Library of Congress.
 
-------------
-pgs. 15 - 16
-------------
+---------
+Chapter 3
+---------
 
 As an apprentice of the Grand Lodge of New York, I was often invited to attend various social functions in my capacity as a representative of the Order. The expected invitation arrived in late autumn of 1825. I was to attend the ceremonial procession of the *Seneca Chief* flotilla into Rochester. It was there and then I first encountered the Grand Master, Stephen Van Renssalaer III. 
 
@@ -33,17 +31,23 @@ Not a soul beyond the initiated realized the meaning of this ritual, nearly iden
 
 The *Seneca Chief* docked as the commotion re-ignited and crescendoed into a flurry of bands and confetti. Speeches were given, but none of consequence. The dignitaries retired to the Mansion House hotel on State Street for the banquet and ball. As the parade moved through the city streets and the evening rose in the sky, candles were placed into the windows. An ethergeal glow hung just above our heads, casting out the encroaching dark. As we passed under this angelic light, an esctatic delirium descended upon us. Rochester seemed as though it flowed through a dream, a vision of music and dance. 
 
+...
+
 .. IN PROGRESS: Mansion House, hotel on State Street. Formal dinner.
 
 After his bloviating, the Governor introduced the man I had silently been waiting to hear. Of course, I knew of the Grand Master, his name being commonplace among the brothers at the Lodge, but never before had I seen him or heard him talk. His exploits need no further explanation; Any student of history will find them writ large within the annals of America. That night, still awash with the spirits of celebration, I transcribed his speech to best of my recollection, which I now reproduce below, 
     
-    Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea within my head.
+    Thank you all for coming. I would especially like to extend my gratitude to the people of Rochester for putting together the feast we are about to sit down and enjoy. But more than anyone else on the dais, there is one indvidual who deserves recognition for making this night possible. And no, it is not Governor Clinton, though he might tell you otherwise. (*Laughter*) I am talking, of course, of Mr. Jesse Hawley. Indeed, it was Mr. Hawley who conceived this grand endeavor many years ago. Or should I say "Hercules"? (*Laughter*) At any rate, Mr. Hawley or Hercules, it was the man you see sitting here whose brilliant prose deposited this idea into my head.
 
     At the time, few believed the words of Mr. Hawley. His vision was too large to be contained in the minds of simple men. Yet, with the utter precision of numbers and an unyielding faith in the Architect's designs, he hewed from the rough ashlar of what is the perfection of what could be. Perhaps people will say this Canal belongs to me, and while it is true my family's coffers were the engine of this enterprise, this Canal is not my accomplishment to claim. Others will say it belongs to the administration, and even I, the loyal opposition, must concede without Governor Clinton's steady hand, this project would have unravelled long before its completion. Statues may be erected and crumble; Histories may be written and revised; But forever unto the ends of the Earth, from this moment on, this world will bear the mark of Mr. Hawley. 
+
+...
 
 .. IN PROGRESS: The 47th Problem.
 
 The discussion among the brothers entered the realm of geometry.
+
+...
 
 .. IN PROGRESS: Morgan impresses Stephen with the Legendre Proof. 
 
@@ -57,15 +61,161 @@ Several nodded their heads, pretending to grasp the elegance of the proof. Fewer
 
 "Indeed, Brother", I replied with a grin, awed by his ability to instantly absorb the mechanics of the proof, "As above, so below."
 
+...
+
 .. IN PROGRESS: Secret meeting of the Masons after banquet to consecrate the aqueduct.
 
---------------
-pgs. 150 - 151
---------------
+.. IN PROGRESS
+
+"The world is made of secrets," Stephen explained, "When you are young, you believe them finite. You convince yourself they can be catalogued and put to paper, and the world will yield to you its mysteries once you have encompassed them. Every boy whoever came of age since the dawn of man was born from this fatal curiosity: to understand and tame the world of adults. Our nature is contained in the fruit of knowledge, in our arrogance to become the gods we imagine our parents to be. This is the promise of the pyramid, to ascend from the morass of mud to a etched point of the purest stone and behold the scope of creation condensed down into a singularity."
+
+He tapped the leatherbound cover of the *La Maçonnerie Égyptienne* [#oubliette_b_000]_, "But to grow old is to realize the folly of this. Each secret begets another and another and another, endlessly. The stairs do not narrow as you ascend, but grow steeper and more treacherous, until the ground you walk is inverted and the very laws of gravity give way."
+
+Stephen often spoke in this manner, as if the world were the audience to his monologue. He did not speak to me in that moments, not directly. I was merely a spectator to his thoughts, a witness to his despair. If I had said a word, it would have fallen on deaf ears, for Stephen was somewhere else, lost in his mind. 
+
+...
+
+.. IN PROGRESS
+
+"I have need of men like you, William," He said grimly, "But I must be absolutely certain of your loyalty."
+
+---------
+Chapter 4
+---------
+
+That night, as agreed, I sat blindfolded in my parlor chair, with a single candle burning in my window. I waited in stillness for what seemed a lifetime before the knock on my door came well past the hour of the owl. I felt the sudden rush of panic. Here was I, a man of no notoriety but to be a simple brick layer and stone cutter, cavorting with the gentry of Albany in some mad ritual, whose dubious origins even then weighed heavily on my mind. I had a choice in that moment. I could simply remain silent and let them leave, living out the rest of my life as if nothing had ever occurred. Nonetheless, within the turmoil heaving around my guts, spinning fast in the overwhelming fear, I felt a glimmer of excitement, as though I were on the precipice of a secret world, whose laws and customs were alien to my own. 
+
+"Who comes there?" The words were spoken as though I dreamed. 
+
+"Your brothers, from the South and North," came the reply.
+
+"By what means have you arrived?" I cried on cue.
+
+And then the response whose significance and meaning to this day I have not unravelled, "From the ice within the fire, the above which came below, the after now before."
+
+With that, I cannot say with any certainty what happened next. My front door creaked with their entrance and their footsteps approached. Their number I cannot estimate, but I had the sense my room was filled with their presence. I know that I was made to walk forty paces from my front door and then placed into a carriage. The ride lasted no longer than an hour, though I admit my nerves may have disturbed the count as I bounced haplessly against ever rut and gutter in the road. Not a word was said the entire time. 
+
+When we came to a stop and they brought me out, the ever present grinding and hum of the city was gone, replaced by the unmistakable chirp of crickets in the dead night air of the countryside. Confirming my suspicions, they led me through field after field. Blinded as I was, I stumbled over rocks and fell to my hands at least three times. On the last fall, beneath my fingertips, before they carried to me my feet, I felt the momentary impression of engravings upon the stone, deliberate etchings carved deep and angular. 
+
+Through the midnight grass I was herded until our footsteps began to echo against earthen walls and the air I breathed grew heavy with moisture. Each step was made on faith alone as my brothers pushed me relentlessly forward in front of them. We descended atleast a mile, or so I believe, through a series of caves into a subterranean cavern. It was there my blindfold was removed and I observed the spectacle arrayed before me.
+
+My brothers, robed and hooded, their faces obscured by shadow, lined the walls of the cavern. In the center of the enclosed area, hewn from the natural stone in perfect lines, an altar was raised, upon which stood an enormous statue. The figure radiated obscurely in the darkness before my eyes resolved its shape: a bull, with its head reared up towards heavens, pointing directly to an occulus in the ceiling through which the moon peered it pale white face upon the proceedings.
+
+From a pit of darkness beyond the edge of illumination, a man stepped into view and the room fell into total silence, or perhaps it was then I noticed the lack of sound. The surprise which I felt makes the exact recollection difficult. 
+
+The man who had been Stephen now stood before me a different person altogether. This man, I would learn in my studies, though he looked and sounded like Stephen, was the *Grand Cophta*, the master of the ceremony. He wore a flowing robe of white, crossed with a sash of crimson. His face had been powdered and dark circles drawn around his eyes. Over his shoulders, he bore vestments the color of the sky and on his hip, he carried an ornamental sword, grasping its ivory hilt with straining knuckles. 
+
+"Brother Morgan", The Grand Cophta intoned from the center of the room, standing in a pool of moonlight, "You have been chosen to bear witness to the Ancient and Primitive Right of the Mishraim. Do you accept?"
+
+Meekly, I nodded, choking out my barely audible consent, "Yes."
+
+At once, the cavern filled with the ruddy light of fire. The altar, I realized, was a furnace, and now its grating shown with the flicker of angry flames.
+
+"You have been taught a myriad of lies," The Grand Cophta boomed, as the brothers behind him rushed into place to pump the bellows built into the altar, "Tonight the fog is lifted and you shall see the tip of truth that lies submerged."
+
+Serpentine flames lept in plumes from the vents and spilled along the sides of the giant brass bull. The metal began to glow like molten gold and steam hissed from its nostrils. As the fire poured into its stomach, churning the substance with its vital heat, the statue came to life. Its cries and snorts filled the chamber, as though a human screamed inside of its contours. The brother surrounding me began to chant an ancient verse,
+
+    | Noctes atque dies
+    | patet atri ianua Ditis
+    | sed revocare gradum
+    | superasque evadere ad auras
+    | hoc opus, hic labor est
+
+The Grand Cophta placed a plain ceramic bowl upon the glowing hearth at the foot of the bull. He turned and spoke, "You have been told what is heated becomes hot."
+
+From the solitary line of brothers, one stepped forward bearing an ornate chest wrought in gold and silver. The Grand Cophta flung it open and produced high above his head a tiny stone, no bigger than a coin, but darker even than the shadows from which it was produced. Stepping back to the altar, he placed the stone into the ceramic bowl. It rattled violently against the heat as though it spun against its prison.
+
+He then turned to me again and spoke softer, "You have been told what ages becomes old."
+
+At that, my heart stopped, for a small child stepped into the chamber. Barefoot in a gown of pure silken white, she approached the altar and knelt. The Grand Cophta placed before the child a crystal carafe of water. 
+
+Finally, he spoke to the blackness of the cavern, "You have been told what falls becomes fallen."
+
+With those words, he dipped a crucible into the glowing potion within the ceramic bowl and brought over to the child an illumined residue. With a splash that pierced the ears like cracking glass, he poured the molten substance into the water. The liquid boiled with a fierceness approaching the fear that once again wracked my stomach, as the carafe overflowed and belched a mist of murky yellow into the cavern air.
+
+Wordless and obedient to a script I can only surmise, the girl dipped her head into the cloud and breathed deep the vapours that pooled around her huddled form. While I stood in stunned silence, the mist spread thin throughout the cavern and dissolved into the darkness. As my eyes watered and my head grew light, I watched the poor child convulse on the stone floor, arching her back against some phantom pain and kicking her toes bloody against the jagged ground.
+
+The Grand Cophta knelt before the flailing child and spoke in a voice that would stop armies in their tracks, "I command you, Euphemia, to see the Angel Cassiel!"
+
+"Father!" She screamed in a guttural voice no child should produce, "The fire!"
+
+"Bring him forth, child," The Grand Cophta disappeared, for now I saw clearly that a father knelt to hold a shaking daughter in his arms as she wept uncontrollably into his chest. He spoke softer, addressing her directly, "Tell us what you see."
+
+"The sky burns with...*logos*...," She struggled to whisper. The child lifted her head and gazed around the chamber. Her eyes were of obsidian. I shall never forget her visage as long as I draw breath. Her skin had gone grey and the hollows of her cheeks pooled with the ink of shadows, but a deeper darkness claimed her eyes, pits where no light could find purchase. Her hair, now brittle and white, fell to the floor in clumps as she scanned the row of brothers clinging to the stone. She moved to speak, but the words became gasps as her strength failed and she fell back into her father's arms, "*Hoi ouranoi...rheousin...pyri*" [#oubliette_b_001]_
+
+And then she went limp and spoke no more. 
+
+---------
+Chapter 5
+---------
+
+A fortnight I was left to ponder what I had witnessed. My study became obsessive. I poured through the shelves of the Lodge, in search of the cipher that would help me decode the mysteries of the ritual. The librarian, Brother Eliphalet, became my Virgil, guiding me through the arcana the Lodge had accumulated over the years. I delved into their stockpile of magical tomes, some written in languages I could not begin to understand, but Brother Eliphalet lent me the endless repository of esoteric knowledge that made its home in his brain, versed as it was in the dead tongues of the ancients, though the Lodge posssessed texts even he could not read. 
+
+I came to understand in those days before Stephen re-entered my life the nature of what had been revealed. Initially, I believed the ritual to be an act of pagentry, some sort of liturgical play, but the more I dwelt on the child, Euphemia, the more this notion became senseless. I had seen her transfigurement with my own eyes. I had heard her speak in tongues. Her words were seared into my brain, though at that moment I did not yet understand them.
+
+The key, of course, was the alchymical mixture around which the ritual was centered. Of this, I was certain. The child had inhaled the vapors produced through distillation, and had unlocked a sight which penetrated the fog of which Stephen spoke.
+
+Brother Eliphalet delievered to me the first irrefutable link in the chain I now unwound. I followed the sickly man up the spiraled iron stairs, ascending past the histories and archives, into the attic of the Lodge, where my esteemed guide lit for me a candle. He placed before me a book as large as my chest and as thick as forearm. Emblazoned in overwrought jewels, the title read *Thesaurus Thesaurorum*. He flipped the oversized pages to a marked section towards the end that began with the heading *Magus, the 9th Degree*. As I understood its rudiments from of brick laying in the rowdy streets of Rochester, I let the harsh German purse my lips as I read the words aloud,
+
+    Habe bey der Hand eine Kugel, so aus der Electrum gegossen ist. [#oubliette_b_002]_
+
+I tested the word on my tongue. *Electrum*. At that moment, I was aware that I had begun a dark journey, as though the word had conjured the thought in my mind without my knowledge of its meaning. Despite the impulse to flee, to abandon this mad venture, overcome with curiosity, I continued reading, 
+
+    Dieser Stein offenbaret ihm die verborgenen Dinge. [#oubliette_b_003]_
+
+There it was, the connection I sought, buried in a book written by a Renaissance brotherhood of Alchymical Knights, the Order of the Golden and Rosy Cross. 
+
+Would that I had the will to stop my investigation there, and rest in the knowledge that what I had seen had been a mere scrying, that the child had seen a vision induced by this *Electrum*, but fool that I was, I bade Eliphalet help me trace this yarn back to its source. Dutifully, my brother produced the books in which I was to make my education of the dark arts.
+
+As I pulled the loose threads, they unwound down through the ages. Each loop I unravelled and found the circumference returned to an earlier era, deeper into the mystery that twisted around the shapes of history and shot it through with its circuitous rungs. The next shelf to hold my weight as I climbed the towering helix was the *Picatrix*, an artifact from the 10th century. Its edges frayed and torn with untold years, I delicately turned the pages until I found the passage I knew I would find as soon as I hefted the book from its dusty hermitage in the corners of the Lodge's attic. Under Brother Eliphalet's tutelage, I began to pry from the dry parchment some semblance of meaning, acclimating to the general principles of Latin after several intense days of indoctrination,
+
+    Accipe puerum immaculatum, et pone speculum in manu eius et praecipe ut inspiciat in eum, et dic in aure eius videsne aliquid? [#oubliette_b_004]_
+
+The correspondence was near exact. Here was a medieval book, detailing in excruiating detail the methods in which the innocence of a child was to be yoked as host for a conjured spirit. The ritualistic details continued in their chilling analogy to the mechanics Stephen had worked,
+
+    Et si dixerit: 'Video', dic ei aperiatur tibi, et angeli Dei intrent in te. In nomine Uriel, Anael, Cassiel... descendite! [#oubliette_b_005]_
+
+This was no mere pagent Stephen had enacted, but an inheritance from a distant past, though I had not yet found its origin. If such a point even exists within the recorded history of man, I have not yet produced any positive evidence, but as I pulled, the thread did not cease to uncoil, binding me ever tighter in its tangled convolutions. 
+
+*Anael*, *Uriel* and *Cassiel*, three of the archangels bound to the divine light. Though I could not claim an encyclopedic knowledge of the alchymical symbolism and its gematrical significance, I knew the basic correspondences. *Anael*, *Venus*, the purity of spiritual love, its soft magnetic power. *Uriel*, the Fire of God, the rays of *Apollo*, the illuminator of the Mind, bearing a flaming sword. And then the one selected for Stephen's invocation, *Cassiel*, the keeper of Decay, the guardian of the Void, the enigmatic *Saturn*. What puzzle had I found myself assembling, that I now write their hallowed names upon this paper? 
+
+By the time Stephen summoned me, I had discovered the earliest mention of the ritual I would find, within the *Papyri Graecae Magicae*, an inscrutable text of recipes and spells from before the time of Christ. Eliphalet provided the full translation, 
+
+    Ἐπικαλοῦμαί σε, τὸν κτίσαντα γῆν καὶ οὐρανόν κατάβα, καὶ ἔμπλησόν μοι τὸν παῖδα τοῦτον τῆς σῆς μαντείας. Mὴ μωράνῃς μου τὴν ψυχήν, ἀλλὰ ὑπάκουσόν μοι. Εἴσελθε, καὶ πνεῦσον εἰς αὐτοῦ τὴν διάνοιαν καὶ δεῖξον αὐτῷ τὴν ἀλήθειαν. [#oubliette_b_006]_
+
+The unifying theme of this ritual throughout the ages, beyond the vessel of a child and the medium of water, was the *πνεῦμα*, the breath in which lingered the *ψυχή*, the soul. I thought back onto the mist Stephen had drawn from the water and again, my mind returned to the material, the *Electrum*. Though the reader will not believe me, I swear in that moment, I heard the echo of the child through time, gasping with the last vestiges of air her lungs could hold,
+
+    Οἱ οὐρανοὶ ῥέουσιν πυρί.
+
+And without assistance or Eliphalet's translation, the meaning came to mind without aid, in utter certainty: *the heavens flow with fire*.
+
+---------
+Chapter 6
+---------
+
+...
+
+.. IN PROGRESS: Meet Stephen again. Euphemia is fine (hair regrown, still a child), but mute.
 
 .. image:: ../../../../_static/img/fabula/magnum-opus/illustrations-of-masonry-excerpt.jpg
    :width: 70%
    :alt: Schematic of unknown device.
    :align: center
 
+...
+
 .. IN PROGRESS
+
+.. [#oubliette_b_000] On the topic of *Egyptian Masonry*, the Capital Reliquary is often contradictory. Here Morgan presents Stephen as possessing the text *La Maçonnerie Égyptienne* in 1825, but the official histories in the Library decrypted from the Reliquary place the establisment of the *Ancient and Primitive Rite of Memphis-Misraïm* within Freemasonry squarely in the latter half of the century, with most sources citing a date between 1840 through 1880. These minor inconsistencies cast doubt on the accuracy of Morgan's account. As will be seen, the claims he makes become more sensational and lurid as the narrative progresses.
+
+.. [#oubliette_b_001] The reader is here referred to the :ref:`exegis of the Sibylline Prophecies <exegesis-000>`.
+
+.. [#oubliette_b_002] German: "Have at hand a Sphere, which is cast from Electrum."
+
+.. [#oubliette_b_003] German: "This Stone reveals to him the hidden things."
+
+.. [#oubliette_b_004] Latin: "Take a spotless virgin, and put the mirror in his hand and command him to look into it, and say into his ear, Do you see anything?"
+
+.. [#oubliette_b_005] Latin: "And if he says: 'I see', tell him, 'Let it be opened to you, and let the Angels of God enter into you. In the name of Uriel, Anael and Cassiel, come down!'" 
+
+.. [#oubliette_b_006] Greek: "I call upon You, the one who created earth and heaven, come down, and fill this boy for me with your prophecy. Do not dull my soul, but obey me. Enter, and breathe into his mind and show him the truth."
