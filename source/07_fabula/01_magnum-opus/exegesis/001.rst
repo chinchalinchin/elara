@@ -8,7 +8,7 @@ Gospel of Matthew
 -----------------
 
 .. list-table:: Chapter 16, Verse 18
-    :widths: 15 15 70
+    :widths: 15 75 10
     :header-rows: 1
 
     * - Source
@@ -22,13 +22,13 @@ Gospel of Matthew
       - 405 AD
     * - Wycliffe
       - And I seye to thee, that thou art Peter, and on this stoon I schaliel bilde my chirche, and the gatis of helle schulen not han miȝt aȝens it.
-      - 1382
+      - 1382 AD
     * - Tyndale
       - And I saye also vnto the, yt thou arte Peter: and apon this rocke I wyll bylde my congregacion. And the gates of hell shall not prevayle ageynst it.
-      - 1526
+      - 1526 AD
     * - King James
       - "And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it."
-      - 1611
+      - 1611 AD
   
 Like the majority of the synoptics, much of the information contained in its original form has been lost as the verse was shifted through different host languages. By the time English was the primary language of consumption, the original meaning was all but lost except to those who made it a point to study the original texts.
 

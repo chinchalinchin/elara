@@ -33,8 +33,6 @@ Sibylline Prophecy
     - And then all the elements of the world shall be widowed:
   * - ἀὴρ γαῖα θάλασσα φάος πόλος ἤματα νύκτες.
     - Air, earth, sea, light, the vault of heaven, days and nights.
-  * - ἀὴρ γαῖα θάλασσα φάος πόλος ἤματα νύκτες.
-    - Air, earth, sea, light, the vault of heaven, days and nights.
   * - κοὐκέτι πωτήσονται ἐν ἠέρι ἄπλετοι ὄρνεις,
     - No longer shall birds fly in the air without number,
   * - οὐ ζῷα νηκτὰ θάλασσαν ὅλως ἔτι νηχήσονται,
