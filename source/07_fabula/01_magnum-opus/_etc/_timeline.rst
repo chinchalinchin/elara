@@ -54,6 +54,7 @@ Industrial Era
 - 1773 AD: Pope Clement XIV issues Dominus ac Redemptor, suppressing the Jesuits.
 - 1780 AD: Jesuits in America begin infiltrating the Masonic Order.
 - 1783 AD: The Great Meteor Procession. The Material awakens and glows during the duration.
+- 1797 AD: Brother Eliphalet of the Rosicrucians flees Prussia via Ostfrieland into the Netherlands on the death of Frederick William II. *Thesaurus Thesaurorum* enters Stephen's possession.
 - 1810 AD: Stephen van Rensselaer is annointed as a Knight Templar of the Grand Lodge of All England. He is shown the Material during initiation. 
 - 1812 AD: The Material arrives in New York in Stephen's care.
 - 1824 AD: The Rensselaer Polytechnic Institute is built to house and study the Material. Stephen van Rensselaer pulls Eaton Amos out of jail to run the institute. Easy to blackmail.

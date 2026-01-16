@@ -41,9 +41,9 @@ Publications
 
 - *Photographs of Autumn*, Macrame Literary Journal, `Summer 2025 Issue <https://macramelit.com/articles/photographs-of-autumn/>`_
 - *Absurdity*, The Genre Society, `Fall 2025 Issue <https://www.thegenresociety.com/readhere>`_
-- *Father's Lullaby*, Sublimation, `Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`
-- *The Unicode Ode*, Infocalypse Press, Volume 1 Issue 1 (Forthcoming)
-- *The Invocation of Metric Code*, Infocalypse Press, Volume 1 Issue I (Forthcoming)
+- *Father's Lullaby*, Sublimation, `Volume 2 Issue 5 <https://islandofwakwak.com/sublimation-volume-2-2025.html>`_
+- *The Unicode Ode*, Infocalypse Press, `Volume 1 Issue 1 <https://www.infocalypse.press/issue-one/>`_
+- *The Invocation of Metric Code*, Infocalypse Press, `Volume 1 Issue I <https://www.infocalypse.press/issue-one/>`_
 - *The Lives of Kites*, Macrame Literary Journal (Forthcoming)
 - *Holly Tree*, The Celestial Glossary, Volume 1 Issue 1 (Forthcoming)
 - *Larksong*, Artists From Maryland, February 2026 (Forthcoming)
@@ -54,6 +54,8 @@ Publications
 - *Pantoums of Dementia*, Garfield Lake Review, 2026 Edition (Forthcoming)
 - *Ode to Death*, Garfield Lake Review, 2026 Edition (Forthcoming)
 - *The Origin of Lies*, Garfield Lake Review, 2026 Edition (Forthcoming)  
+- *Little Sprout*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
+- *Millenial Lives*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
 
 .. _contests:
 

@@ -13,7 +13,7 @@
 ..
 .. # TASK 
 ..
-.. Read all doucments in the folder. Provide editorial notes to the Author. Determine a rough page count of the work so far. Anaylze the influences of the work.
+.. Read all documents in the folder. Provide editorial notes. Consider that it is only 10 - 15% done. Answer this: Is it too much?
 ..
 .. ## CONSTRAINTS
 ..
@@ -49,11 +49,11 @@
 .. 2. /etc/timeline: An outline of the world' timeline.
 ..
 .. These two files should be treated as the "ground truth." They cannot be altered, except by submitting a proposal and getting explicit approval. These files were written by the Author and are not part of the story context, except by way of metalogical considerations.
-..
 .. ------------------------------------------------------------------------------------------------------------------
 ..
 .. SOURCES
 ..
+.. Cave of Pan: Spring of Banias river, one of the main tributory of the Jordan River. In the background Pan's cave, in which the river originated in ancient times until an earthquake blocked it, Own work, copyleft: Multi-license with GFDL and Creative Commons CC-BY-SA-2.5 and older versions (2.0 and 1.0), https://en.wikipedia.org/wiki/Banias#/media/File:Banias_Spring_Cliff_Pan's_Cave.JPG
 .. Fort Orange: ”Fort Orange, 1635,” by Len F. Tantillo (courtesy NYS Museum); and West Indisch Huis, the West India House in Amsterdam, headquarters of the Dutch West India Company from 1623 to 1647, Public Domain, https://www.newyorkalmanack.com/2021/11/early-settlers-at-albany-the-founding-of-rensselaerswyck/
 .. Map of New Netherlands: New Netherland map published by Nicolaes Visscher II (1649–1702), Public Domain, https://www.newyorkalmanack.com/2021/11/early-settlers-at-albany-the-founding-of-rensselaerswyck/
 .. Map of Macrobius: Macrobius, Commentarii in Somnium Scipionis. Folio 38 verso. Diagram: World map (Barker-Benfield no. 5), "Sketch map showing the inhabited northern region separated from the antipodes by an imagined ocean at the equator.", Public Domain, https://commons.wikimedia.org/w/index.php?curid=1078216
