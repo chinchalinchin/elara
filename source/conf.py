@@ -6,7 +6,6 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-from docutils import nodes, utils
 from sphinx.application import Sphinx
 import argparse
 import os
@@ -14,7 +13,7 @@ import sys
 
 project = "elara"
 toc_title = "elara"
-copyright = '2023 - 2025, chinchalinchin industries'
+copyright = '2023 - 2026, chinchalinchin industries'
 author = 'Grant Moore'
 
 # -- Path setup --------------------------------------------------------------
@@ -65,29 +64,23 @@ plot_html_show_source_link = True
 rst_prolog = """
 .. include:: /_static/rst/_links.rst
 """
-# -- Options for HTML output -------------------------------------------------
+
+# -- HTML Configuration -------------------------------------------------
 
 html_baseurl = 'https://elara.chinchalinchin.com'
-
 html_favicon = '_static/favicon.ico'
-
 html_extra_path = ['robots.txt']
-
 html_theme = 'sphinx_book_theme'
-
 html_static_path = [ 
     '_static',
     '_scripts'
 ]
-
 html_css_files = [
     'css/custom.css'
-] 
-
+]
 html_js_files = [
    'js/custom-icons.js'
 ]
-
 html_theme_options = {
     "analytics": {
         "google_analytics_id": "G-BRG311ZM0P"
@@ -121,9 +114,7 @@ html_theme_options = {
         }
    ]
 }
-
 html_title = "elara"
-
 html_context = {
    "default_mode": "dark"
 }
@@ -131,7 +122,6 @@ html_context = {
 # -- Latex configuration -----------------------------------------------------
 
 latex_engine = 'xelatex'
-
 latex_preamble = r"""
 \usepackage{babel}
 \babelprovide[import, main]{coptic} 
@@ -146,11 +136,18 @@ latex_preamble = r"""
 \usepackage[american]{babel}
 \usepackage{csquotes}
 """
-
 latex_elements = {
     'preamble': latex_preamble,
     'inputenc': '\\usepackage[utf][inputenc]'
 }
+# -- matplotlib configuration ------------------------------------------------------------
+
+plot_html_show_source_link = True
+
+# -- Mermaid configuration ---------------------------------------------------------------
+
+mermaid_d3_zoom = True
+mermaid_fullscreen = True
 
 # -- Sphinx Application configuration -----------------------------------------------------
 
