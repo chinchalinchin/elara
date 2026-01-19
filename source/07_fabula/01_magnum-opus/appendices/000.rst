@@ -12,18 +12,18 @@
 .. 
 .. CONSTRAINTS
 ..
-..      - Patroons are identified by the color scheme and a hexagonal shape.
+..      - Patroons are identified by the color scheme and a hexagonal shape. Their nodes should include which Patroon ("n-th Patroon") they are, and the official years of their Patroonship.
 ..      - Color gradient is used to visualize the descent of the title from the earlier generations (Darker) to the later generations (Lighter).
 ..      - Color gradient only applies to Primary and Secondary schemes. Tertiary only has a single shade.
 ..      - Never remove a node from the tree.
 ..      - Generations should always be aligned to descending rows.
-..      - Nodes should only contain: name, birth - death dates, and possibly "n-th Patroon"
+..      - Nodes should only contain: name, birth - death dates, and possibly: "n-th Patroon", along with the dates of Patroonship.
 ..      - If birth and death years are unknown, include approximationes with a "?" to denote uncertainty.
 ..      - The relations between husbands and wives should include the year they were married (if they were married). If the date is unknown, use a "?" to denote uncertainty.
 ..
 .. TASK
 ..
-..      - Apply the husband-wife constraint to the graph.
+..      - Apply the Patroonship constraint to the graph.
 ..
 .. OUTPUT
 .. 
@@ -52,7 +52,6 @@ van Rensselaer Family Tree
     %% =========================================
     
     %% Primary Gradient (Deep Purple): Patroon Lineage
-    %% Gen 1 (Darkest) -> Gen 8 (Lightest)
     classDef main1 fill:#311B92,stroke:#000,stroke-width:2px,color:#fff
     classDef main2 fill:#4527A0,stroke:#000,stroke-width:2px,color:#fff
     classDef main3 fill:#512DA8,stroke:#000,stroke-width:2px,color:#fff
@@ -63,7 +62,6 @@ van Rensselaer Family Tree
     classDef main8 fill:#B39DDB,stroke:#000,stroke-width:2px,color:#000
 
     %% Secondary Gradient (Amber): Siblings, Wives, Younger Branches
-    %% Gen 1 (Darkest) -> Gen 8 (Lightest)
     classDef sec1 fill:#E65100,stroke:#000,stroke-width:1px,color:#fff
     classDef sec2 fill:#EF6C00,stroke:#000,stroke-width:1px,color:#fff
     classDef sec3 fill:#F57C00,stroke:#000,stroke-width:1px,color:#000
@@ -79,7 +77,7 @@ van Rensselaer Family Tree
     %% =========================================
     %% GENERATION 1 (1580s - 1640s)
     %% =========================================
-    K1{{Kiliaen van Rensselaer<br>1586–1643<br>1st Patroon}}:::main1
+    K1{{Kiliaen van Rensselaer<br>1586–1643<br>1st Patroon 1629–1643}}:::main1
     W1_1(Hillegond van Bijler<br>1598–1626):::sec1
     W1_2(Anna van Wely<br>1601–1670):::sec1
 
@@ -88,10 +86,10 @@ van Rensselaer Family Tree
 
     %% Children
     W1_1 --> S1_1[Hendrick van Rensselaer<br>c. 1620–?]:::sec2
-    W1_2 --> S1_2{{Johannes van Rensselaer<br>1625–1662<br>2nd Patroon}}:::main2
-    W1_2 --> S1_3{{Jan Baptist van Rensselaer<br>1629–1678<br>3rd Patroon}}:::main2
-    W1_2 --> S1_4{{Jeremias van Rensselaer<br>1632–1674<br>Acting Patroon}}:::main2
-    W1_2 --> S1_5[Nicolaes van Rensselaer<br>1636–1678]:::sec2
+    W1_2 --> S1_2{{Johannes van Rensselaer<br>1625–1662<br>2nd Patroon 1643–1662}}:::main2
+    W1_2 --> S1_3[Jan Baptist van Rensselaer<br>1629–1678<br>Director 1652–1658]:::sec2
+    W1_2 --> S1_4{{Jeremias van Rensselaer<br>1632–1674<br>Director / 3rd Patroon 1658–1674}}:::main2
+    W1_2 --> S1_5[Nicolaes van Rensselaer<br>1636–1678<br>Director 1674–1678]:::sec2
     W1_2 --> S1_6[Ryckert van Rensselaer<br>1639–c. 1690]:::sec2
 
     %% =========================================
@@ -102,7 +100,10 @@ van Rensselaer Family Tree
     W2_1(Maria van Cortlandt<br>1645–1689):::sec2
     S1_4 ---|m. 1662| W2_1
     
-    W2_1 --> S2_1{{Kiliaen van Rensselaer<br>1663–1719<br>4th Patroon}}:::main3
+    %% Note on the Gap
+    W2_1 -.->|Regent 1678–1685| S2_1
+
+    W2_1 --> S2_1{{Kiliaen van Rensselaer<br>1663–1719<br>4th Patroon 1685–1719}}:::main3
     W2_1 --> S2_2[Johannes van Rensselaer<br>c. 1665–?]:::sec3
     W2_1 --> S2_3[Hendrick van Rensselaer<br>1667–1740]:::sec3
 
@@ -114,8 +115,8 @@ van Rensselaer Family Tree
     W3_1(Maria van Cortlandt<br>1674–1752):::sec3
     S2_1 ---|m. 1701| W3_1
     
-    W3_1 --> S3_1{{Jeremias van Rensselaer<br>1705–1730<br>5th Patroon}}:::main4
-    W3_1 --> S3_2{{Stephen van Rensselaer I<br>1707–1747<br>6th Patroon}}:::main4
+    W3_1 --> S3_1{{Jeremias van Rensselaer<br>1705–1730<br>5th Patroon 1719–1730}}:::main4
+    W3_1 --> S3_2{{Stephen van Rensselaer I<br>1707–1747<br>6th Patroon 1730–1747}}:::main4
     W3_1 --> S3_3[Johannes van Rensselaer<br>1708–1783]:::sec4
 
     %% Extension of Johannes (S3_3)
@@ -134,7 +135,7 @@ van Rensselaer Family Tree
     W4_1(Elizabeth Groesbeck<br>1707–1756):::sec4
     S3_2 ---|m. 1729| W4_1
 
-    W4_1 --> S4_1{{Stephen van Rensselaer II<br>1742–1769<br>7th Patroon}}:::main5
+    W4_1 --> S4_1{{Stephen van Rensselaer II<br>1742–1769<br>7th Patroon 1747–1769}}:::main5
     W4_1 --> S4_2[William van Rensselaer<br>1745–1746]:::sec5
 
     %% -- Younger Branch --
@@ -150,7 +151,7 @@ van Rensselaer Family Tree
     W5_1(Catherine Livingston<br>1745–1810):::sec5
     S4_1 ---|m. 1764| W5_1
 
-    W5_1 --> S5_1{{Stephen van Rensselaer III<br>1764–1839<br>8th Patroon}}:::main6
+    W5_1 --> S5_1{{Stephen van Rensselaer III<br>1764–1839<br>8th Patroon 1769–1839}}:::main6
     W5_1 --> S5_2[Philip S. van Rensselaer<br>1767–1824]:::sec6
 
     %% -- Younger Branch --
@@ -166,7 +167,7 @@ van Rensselaer Family Tree
     W6_1(Margarita Schuyler<br>1758–1801):::sec6
     S5_1 ---|m. 1783| W6_1
     
-    W6_1 --> S6_1{{Stephen van Rensselaer IV<br>1789–1868<br>9th Patroon}}:::main7
+    W6_1 --> S6_1{{Stephen van Rensselaer IV<br>1789–1868<br>9th Patroon 1839–1868}}:::main7
     W6_1 --> S6_1B[Jeremias van Rensselaer<br>1793–1871]:::sec7
 
     %% -- Stephen III Wife 2: Cornelia Paterson --
