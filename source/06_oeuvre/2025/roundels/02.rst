@@ -45,7 +45,7 @@ Little Sprout
     - Pending
   * - August 25, 2025
     - 32 Poems
-    - Pending
+    - Rejected
   * - August 26, 2025
     - Gavialidae
     - Rejected
@@ -56,7 +56,7 @@ Little Sprout
     - Gilded Weathervane
     - Pending
   * - October 7th, 2025
-    - DASH Literay Journal
+    - DASH Literary Journal
     - Pending
   * - October 8, 2025
     - WayWords Literary Journal

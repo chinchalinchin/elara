@@ -6,7 +6,9 @@ sphinx_design
 sphinx-sitemap
 sphinx-carousel
 sphinx-autobuild
+sphinxcontrib-mermaid
 
+# Pedagogy Dependencies
 matplotlib-venn
 
 # Palindromes dependencies
@@ -20,8 +22,8 @@ nltk
 google-generativeai==0.8.3
 Jinja2==3.1.5
 requests==2.25.1
-rst2pdf
 
 # Build Packages
+rst2pdf
 build
 twine

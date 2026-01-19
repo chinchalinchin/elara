@@ -10,12 +10,12 @@ Timeline
 Prehistory
 ----------
 
-- 1683 BC: The Minoans discover Svalbard in the Septentrional Zone. Bring material back to Santorini.
+- 1683 BC: The Minoans discover Svalbard in the Septentrional Zone and bring material back to Santorini.
 - 1660 BC: A mill is devised to spin the material. Bulls are used to tow the levers of the mill around in a circle.
 - 1640 BC: Minoan civilization greatly advances using the energy provided by the material.
 - 1631 BC: In an effort to extract more energy, the Minoans devise ever more efficient ways of spinning the material. They develop a rudimentary theory of magnetics.
 - 1628 BC: The Minoans inadvertently triggers the Santorini Caldera explosion, ending their civilization.
-- 1600 BC: The bull becomes associated with the release of cosmic energy in mythology, interwined with the fall of Atlantis. Becomes central to Mithraism.
+- 1600 BC: The bull becomes associated with the release of cosmic energy in mythology, interwined with the fall of Atlantis. Its symbology becomes central to Mithraism.
 
 ---------
 Antiquity
@@ -31,9 +31,13 @@ Antiquity
 Middle Ages & Renaissance
 -------------------------
 
+- 1506 AD: Demolition and Reconstruction of St. Peter's Basilica initiated by Julius II.
 - 1516 AD: Johann Reuchlin publishes a depiction of the Tree of Life.
+- 1599 AD: Juan de Mariana writes on the topic of justified regicide.
+- 1610 AD: Francois Ravaillac assassinates Henry IV for the Society of Jesus.
 - 1618 AD: Kenelm Digby takes the Mithraic Rite and enters the Society of Jesus.
 - 1622 AD: Athansius Kircher deciphers the Mithraic Liturgy and discovers the secret of the Minoans. He becomes fascinated with volcanoes, magnetism and automatons. The Jesuits become a "rationalist" sect within the Catholic Church.
+- 1626 AD: St. Peter's Basilica dedicated by Urban VIII
 - 1627 AD: The Jesuit Order begins searching for rare earths, trying to find the Material.
 - 1631 AD: Kircher has a vision of the attack of Wurzburg.
 - 1635 AD: Construction of the Eden begins in secret.

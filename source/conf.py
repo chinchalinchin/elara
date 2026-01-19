@@ -34,6 +34,7 @@ extensions = [
     'matplotlib.sphinxext.plot_directive',
     'sphinx_design',
     'sphinx_sitemap',
+    'sphinxcontrib.mermaid',
     "sphinx_carousel.carousel",
       # Custom Directives Extensions
     'share',

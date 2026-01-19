@@ -13,7 +13,6 @@
 ..
 .. # TASK 
 ..
-.. Read all documents in the folder. Provide editorial notes. Consider that it is only 10 - 15% done. Answer this: Is it too much?
 ..
 .. ## CONSTRAINTS
 ..
@@ -23,6 +22,7 @@
 ..
 .. The following story files are mandatory. You must ingest them into the context. If a file is not included in this list, it is optional, likely due to being empty or in the initial stages of development. The following list is the chronological order of documents.
 .. 
+.. - appendices/000: van Rensselaer Family tREE
 .. - exegesis/000: Sibylline Prophecy
 .. - archive/oubliette-a/000: The Lost Dialogue of Critias
 .. - exegesis/001: New Testament
@@ -101,6 +101,7 @@ The world itself has been taken from us. We have lost our place, condemned to wa
    :maxdepth: 1
    :caption: Contents:
 
+   appendices/index
    archives/index
    exegesis/index
    000

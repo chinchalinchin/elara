@@ -1,3 +1,5 @@
+.. NOTE: This document is formatted in RestructuredText (RST).
+
 .. _resume:
 
 ======
@@ -56,6 +58,8 @@ Publications
 - *The Origin of Lies*, Garfield Lake Review, 2026 Edition (Forthcoming)  
 - *Little Sprout*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
 - *Millenial Lives*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
+- *Pantoums of Dementia*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
+- *Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
 
 .. _contests:
 
