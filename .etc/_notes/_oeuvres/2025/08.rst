@@ -1,37 +1,42 @@
 
-----------------
-LeAnna's Pantoum
-----------------
+-----
+Plots
+-----
 
-| These spun beginnings make our end,
-| Oh, LeAnna, of Anna's Leigh,
-| you come with grin and play pretend
-| the past is what we both agree.
+| In time their plot was touched by dark.
+| Began the page this meadow scene
+| where blades of grass were tall and stark.
 |
-| Oh, LeAnna, of Anna's Leigh,
-| despite the many faults of mine,
-| the past is what we both agree
-| once marks are made on dotted line.
+| A tired arc, they met in park
+| To kiss beneath the twilight queen;
+| In time their plot was touched by dark.
 |
-| Despite the many faults of mine,
-| I'll try to love you just the same;
-| Once marks are made on dotted line
-| There's no one left but you to blame.
+| They stole away on sudden lark,
+| Exchanged the words from whispered lean
+| Where blades of grass were tall and stark.
 |
-| I'll try to love you just the same;
-| These spun beginnings make our end.
-| There's no one left but you to blame,
-| You come with grin and play pretend.
+| So happy now, neighbors remark,
+| Yet seem is such to lose its sheen,
+| In time their plot was touched by dark.
+|
+| Yet faded years ignored their spark
+| In life they lived forever seen
+| Where blades of grass were tall and stark.
+|
+| In ground, their bodies disembark
+| And leave behind a hole dug clean.
+| In time their plot was touched by dark,
+| Where blades of grass were tall and stark.
 
-- February 2025
+- March 2025
 
 .. list-table:: Submission History
-  :widths: 15 15 15
-  :header-rows: 1
+   :widths: 15 15 15
+   :header-rows: 1
 
-  * - Date
-    - Publication
-    - Status
-  * - March 27, 2025
-    - Poetry Magazine
-    - Pending
+   * - Date
+     - Publication
+     - Status
+   * - March 27, 2025
+     - Poetry Magazine
+     - Pending

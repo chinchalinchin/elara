@@ -1,41 +1,34 @@
-------
-Floods
-------
+----------------
+Father's Lullaby
+----------------
 
-| the lifting waves
-| of driftwood floods
+| Dear child, the monsters under bed
+|   are not just make believe.
+| They lurk in shadows overhead
+|   and offer no reprieve.
 |
-| the flooding drifts
-| of floral wastes
+| Dear sweetling, sleep with open eye
+|   and guard your dreams at night.
+| Ignore your mother's lullaby,
+|   keep candles burning bright.
 |
-| a flowered wage
-| that rivers claim
+| Beware the lair that closets hide,
+|   the racks of their disguise,
+| the suits and ties, the cuffs that slide
+|   and cloak them from your eyes.
 |
-| on plains that drive
-| the veins to sea 
+| Fear not the slash of sharpened claws,
+|   the flashing terror brief,
+| but stamps that mark the written clause
+|   with laws of fierce belief.
 |
-| a ceaseless purge
-| through slurried nights 
-|
-| the slightest sprout
-| is rooted out
-|
-| through shooting streams
-| that water loots 
-|
-| the slaughter lurks
-| below riptides
-|
-| but tides recede
-| with grating speed
-| 
-| and petal graves 
-| in gravel pits
-|
-| unravel green
-| with dreams of Spring
+| What evil deeds those stories tell
+|   prepare your heart to meet
+| the formal world where heroes fell
+|   to wander incomplete.
 
-- June 2025 
+- April 2025
+
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -44,15 +37,66 @@ Floods
   * - Date
     - Publication
     - Status
-  * - July 01, 2025
-    - New Feathers Anthology
+  * - April 27, 2025
+    - Writer's Digest Competition
+    - Accepted (Runner-up)
+  * - June 4, 2025
+    - Swan Scythe Press
     - Rejected
-  * - July 22, 2025
-    - Earth Amulet Poetry Competition
+  * - June 13, 2025
+    - New Verse Review
+    - Rejected
+  * - June 22, 2025
+    - Backbone Mountain Review
+    - Rejected
+  * - July 02, 2025
+    - January House Literary Journal
+    - Rejected
+  * - July 02, 2025
+    - Mangrove Review
+    - Rejected
+  * - August 12, 2025
+    - Poet's Choice
+    - Pending
+  * - August 16, 2025
+    - American Poetry Review
     - Rejected
   * - August 16, 2025
     - Missouri Review
     - Rejected
-  * - August 20, 2025
-    - Four Tulips
+  * - August 19, 2025
+    - Sublimation
+    - Accepted
+  * - August 26, 2025
+    - Gavialidae
+    - Rejected
+  * - October 7th, 2025
+    - DASH Literay Journal
     - Pending
+
+Responses
+~~~~~~~~~
+
+.. epigraph::
+
+  Dear Grant,
+
+  Congratulations! Your entry, Father's Lullaby, was awarded Honorable Mention in the Rhyming Poetry category of the 94th Annual Writer’s Digest Writing Competition.
+
+  There were nearly 3,800 submissions in this year’s competition, spanning 45 countries! Your accomplishment is something to be proud of.
+
+  Your name and the title of your winning piece will be listed on WritersDigest.com, and you will receive 20% discount off purchases made at Writer’s Digest University. Prize packages will be distributed by November 10, 2025.
+
+  Again, many congratulations from all of us on the Writer’s Digest team!
+
+  -- Moriah Richard, Managing editor, Writer’s Digest
+
+.. epigraph::
+
+  Dear Grant Moore:
+
+  Thank you for submitting to Sublimation. I would love to publish Father's Lullaby in the magazine.
+
+  I look forward to seeing future submissions from you.
+
+  -- TS S. Fulk, Editor of Sublimation

@@ -1,19 +1,28 @@
----------------------
-Photographs of Autumn
----------------------
 
-| These photographs are brittle leaves
-|    that fell from trees, that we once caught.
-| I press them tender into sleeves
-|    of glass to halt the course of rot.
-| Though kept well fed with water shed,
-|    they wilt to brown as colors fade.
-| No leaf can live beside the bed,
-|    without sunlight that makes the shade.
-| Yet even still, though claimed by dust,
-|    I keep them hung upon my wall,
-| for memory you did entrust
-|    of walk with you through golden Fall.
+
+---------------
+Turkey Vultures
+---------------
+
+| the wakes of Turkey Vultures soar
+| then perch across the steepled sky.
+| they rest on totems tall and pure,
+| in silence feathers multiply.
+|
+| their talons clutch where crosses meet
+| the stolen spear of destined make.
+| no heaven sent their wings of fleet,
+| no stomach filled will hunger slake.
+|
+| the shapes of black in swarming plunged
+| upon the carcass freshly brought.
+| they feast on sins from gods expunged,
+| but left for them as afterthought.
+|
+| bewitched to death, returned to Earth,
+| from cage released, the specters hunt
+| the ones who wear the curse of birth,
+| they all must bear the brutal brunt.
 
 - April 2025
 
@@ -24,23 +33,12 @@ Photographs of Autumn
   * - Date
     - Publication
     - Status
-  * - June 12, 2025
-    - Macrame Literary Journal
+  * - April 27, 2025
+    - Frontier Poetry
+    - Rejected
+  * - June 22, 2025
+    - Backbone Mountain Review
     - Accepted
-
-Responses
-~~~~~~~~~
-
-.. epigraph::
-
-  Dear Grant,
-
-  We are delighted to inform you that we have accepted your submission "Photographs of Autumn" for publication in the Fall 2025 issue of the Macrame Literary Journal. The Fall 2025 issue is set for publication in early October. We will notify you by email when it is published.
-
-  Thank you for sending us your work, we loved reading it and we hope you will continue to submit to us in the future.
-
-  Congratulations!
-
-  -- Macrame Literary Journal
-  
-- `macramelit.com/articles/photographs-of-autumn <https://macramelit.com/articles/photographs-of-autumn/>`_
+  * - June 25, 2025
+    - Apus Journal
+    - Rejected

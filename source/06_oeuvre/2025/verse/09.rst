@@ -1,29 +1,41 @@
-----------
-Billboards
-----------
+-----------
+Anniversary
+-----------
 
-| the world is tinged with sweet regret
-| as billboards flash their pixel paint. 
-|
-| what time remains sustained is froze
-| in photographs above the roads.
-|
-| these faces once acquainted race
-| by windows, smeared as though i dream. 
-|
-| from point diverged our common lines,
-| to track our ways and write our lives.
-|
-| ensuing years then ripped apart
-| the ribbons left by broken hearts.
-|
-| i find you here, in signs that pass;
-| we intersect our threads at last.
-|
-| the highway wends away in bends
-| towards ends i pray that meet again. 
+| the city edge, its concrete knife
+| divides the Earth, creates a cliff
+| the shifting gears engage to dive,
+| a morning drive becomes a trek
+| along the etching mountainside,
+| the tips of which all signals die;
+| ascending poles of cable lines,
+| the crooked rubber vines that test
+| the forest depth infested heights  
+| with swarming trails of valleyed years
+| much older than the minutes here,
+| forgotten since and gone to ground,
+| to gravel found upon the paths 
+| unravelled round the bend today,
+| today a day the years return,
+| it turns around to me again,
+| repeated now, but far removed
+| by twisted roads that have no end,
+| where maps pretend to know the way
+| through swaying wilds of ancient pine
+| inclined on slants of slated shelves,
+| that delve the dark of cratered holes
+| around reverbing curves that skirt 
+| the skids my spinning makes in dirt;
+| the thinning miles, the barren miles,
+| as humans fade, the tree empires
+| expanding spans of secret green,
+| and losing me, i find the top,
+| the spot we used, the place you said
+| you'd always be, but all remains
+| decayed, reclaimed, reversed, undone, 
+| embedded in the layered lime.
 
-- 0ctober 2025
+- September 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -32,13 +44,33 @@ Billboards
   * - Date
     - Publication
     - Status
-  * - November 2, 2025
-    - Rejected
+  * - September 14, 2025
+    - Princemere Poetry Prize
     - Pending
+  * - October 6, 2025
+    - Gilded Weathervane
+    - Pending
+  * - October 6, 2025
+    - Merion West
+    - Rejected
+  * - October 7th, 2025
+    - wildscape
+    - Rejected
+  * - October 10th, 2025
+    - Macrame Literary Journal
+    - Rejected
+  * - October 10th, 2025
+    - January House Literary Journal
+    - Rejected
+  * - October 12, 2025
+    - New Feathers Anthology
+    - Rejected
+  * - October 12, 2025
+    - Cosmic Daffodil
+    - Rejected
   * - November 24, 2025
     - Artists from Maryland
     - Rejected
-
 
 Responses
 ~~~~~~~~~
@@ -47,12 +79,16 @@ Responses
 
   Dear Grant,
 
-  I like couplets and stanzas. I love enjambment. Each couplet was a complete sentence, so the enjambment was in the pulse forward. Nice work.
+  Grant, I like the movement at the start of the poem "Anniversary"
 
-  I am the new Arts Editor for Merion West; we are in transition. You stay present in your writing. Words do float off the page with consistent effort.
+  "the city edge, its concrete knife
+  divides the Earth, creates a cliff
+  the shifting gears engage to dive"
 
-  Grant, this poem is not quite right for Merion West at this point. I know that the "no's" add up in this business of submitting poetry. Continue to revel in the craft of writing. I am a poet as well. The process of publishing poems is subjective and challenging. I'd enjoy reading more poems from you. You can send MW four submissions per year. Send us your Most Brilliant Poems!
+  I enjoyed reading your poems. You stay present in your writing. Words do float off the page with consistent effort.
+
+  I am the new Arts Editor for Merion West; we are in transition. This set of poems is not quite right for Merion West at this point. Continue to revel in the craft of writing.
 
   Thank you for sharing your work with Merion West. We wish you the best in your writing.
 
-  -- Austin Allen James, Merion West
+  -- Austin Allen James

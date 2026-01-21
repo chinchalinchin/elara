@@ -1,31 +1,19 @@
-----------
-Landscapes
-----------
+---------------------
+Photographs of Autumn
+---------------------
 
-| Oh, hapless world, the butcher's block,
-|   The sickle, scythe, harpoon,
-| The barren fields, the culled livestock,
-|   The blood red harvest moon.
-|
-| The ocean deep, a darkened heart,
-|   A sore that festers cold,
-| A slumbered age, a violent art,
-|   Into all things behold:
-|
-| The forests wild, the stalking hunt,
-|   The arrow cut from stone,
-| The bloody rib, the final grunt,
-|   A death in whimpered groan.
-|
-| The mountain peaks, a falling height,
-|   The air in sky dissolved,
-| A winter wind, a bitter blight,
-|   Let no sin be absolved.
-|
-| The city streets, the graveyard paths,
-|   The linen beds of wards,
-| The gowns of white, the final baths,
-|   The oak in coffin boards.
+| These photographs are brittle leaves
+|    that fell from trees, that we once caught.
+| I press them tender into sleeves
+|    of glass to halt the course of rot.
+| Though kept well fed with water shed,
+|    they wilt to brown as colors fade.
+| No leaf can live beside the bed,
+|    without sunlight that makes the shade.
+| Yet even still, though claimed by dust,
+|    I keep them hung upon my wall,
+| for memory you did entrust
+|    of walk with you through golden Fall.
 
 - April 2025
 
@@ -36,33 +24,23 @@ Landscapes
   * - Date
     - Publication
     - Status
-  * - April 7, 2025
-    - Paris Review
-    - Rejected
-  * - April 7, 2025
-    - The New Yorker
-    - Pending
-  * - May 10, 2025
-    - North Appalachia Review
-    - Pending
-  * - June 4, 2025
-    - Swan Scythe Press
-    - Rejected
-  * - October 6th, 2025
-    - Skummel Magazine
-    - Rejected
+  * - June 12, 2025
+    - Macrame Literary Journal
+    - Accepted
 
 Responses
 ~~~~~~~~~
 
 .. epigraph::
 
-  Hi Grant,
+  Dear Grant,
 
-  Thank you for sending Landscapes/Cathedral/Ode to Death/Eulogy to SKUMMEL. Your piece stayed with us, haunting the room in the best way. While we decided not to accept it this time, it came close. We kept returning to it during our final reads. If you know what a personal rejection is, this is that.
+  We are delighted to inform you that we have accepted your submission "Photographs of Autumn" for publication in the Fall 2025 issue of the Macrame Literary Journal. The Fall 2025 issue is set for publication in early October. We will notify you by email when it is published.
 
-  We’d love to see more from you in the future. Consider this an open invitation to send us your next work.
+  Thank you for sending us your work, we loved reading it and we hope you will continue to submit to us in the future.
 
-  Our pages are shaped by the voices that linger. Yours is one we hope will return.
+  Congratulations!
 
-  -- The Editors, SKUMMEL
+  -- Macrame Literary Journal
+  
+- `macramelit.com/articles/photographs-of-autumn <https://macramelit.com/articles/photographs-of-autumn/>`_

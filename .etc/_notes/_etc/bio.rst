@@ -1,7 +1,7 @@
 Short
 -----
 
-Grant Moore is a Senior DevOps Engineer with a background in mathematics and physics. His poetry has appeared in Macrame Literary Journal, The Genre Society, Sublimation Magazine and Infocalypse Press. He was recognized as a runner-up in the 94th Annual Writer's Digest Writing Competition and had an honorable mention in the Marroween 2025 Contest for Marrow Magazine. He lives in Cumberland, Maryland.
+Grant Moore is a Senior DevOps Engineer with a background in mathematics and physics. His poetry has appeared or is forthcoming in Macrame Literary Journal, The Genre Society, Sublimation Magazine, Infocalypse Press, The Celestial Glossary, WayWords Literary Journal, Scribeworth Magazine, Artists From Maryland, Garfield Lake Review, and the Bearing Witness anthology from Sligo Creek Publishing. He was recognized as a runner-up in the 94th Annual Writer's Digest Writing Competition and received an honorable mention in the Marroween 2025 Contest by Marrow Magazine. He lives in Cumberland, Maryland.
 
 Long
 ----

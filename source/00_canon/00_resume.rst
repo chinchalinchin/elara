@@ -60,6 +60,7 @@ Publications
 - *Millenial Lives*, WayWords Literary Journal, Issue 21: Theme of Wonder, (Forthcoming)
 - *Pantoums of Dementia*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
 - *Eulogy*, Sligo Creek Publishing, Bearing Witness: Poems for Troubled Times, (Forthcoming)
+- *Turkey Vultures*, Backbone Mountain Review, (Forthcoming)
 
 .. _contests:
 

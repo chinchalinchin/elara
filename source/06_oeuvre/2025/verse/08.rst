@@ -1,41 +1,48 @@
------------
-Anniversary
------------
+------------------
+The Origin of Lies
+------------------
 
-| the city edge, its concrete knife
-| divides the Earth, creates a cliff
-| the shifting gears engage to dive,
-| a morning drive becomes a trek
-| along the etching mountainside,
-| the tips of which all signals die;
-| ascending poles of cable lines,
-| the crooked rubber vines that test
-| the forest depth infested heights  
-| with swarming trails of valleyed years
-| much older than the minutes here,
-| forgotten since and gone to ground,
-| to gravel found upon the paths 
-| unravelled round the bend today,
-| today a day the years return,
-| it turns around to me again,
-| repeated now, but far removed
-| by twisted roads that have no end,
-| where maps pretend to know the way
-| through swaying wilds of ancient pine
-| inclined on slants of slated shelves,
-| that delve the dark of cratered holes
-| around reverbing curves that skirt 
-| the skids my spinning makes in dirt;
-| the thinning miles, the barren miles,
-| as humans fade, the tree empires
-| expanding spans of secret green,
-| and losing me, i find the top,
-| the spot we used, the place you said
-| you'd always be, but all remains
-| decayed, reclaimed, reversed, undone, 
-| embedded in the layered lime.
+| Oh, Ila, don't be weeping,
+|    my dear, you misconstrue;
+| The sun is only sleeping
+|    before it rises new.
+|
+| I'll wait with you til morning,
+|    and tell you of the stars,
+| the memories adorning
+|    the empty night with scars. 
+|
+| This love that's learned by lacking,
+|    whose vastness has no chart,
+| in silent orbits tracking
+|    the shaping of your heart. 
+|
+| Please trust that nothing passes,
+|    we only change our form.
+| The morning dew trespasses
+|    on leaves the sun can't warm.
+|
+| Child, listen, though you're growing,
+|    some things cannot be known
+| until you've grown up knowing
+|    out here you're all alone.
+|
+| I'll be with you forever,
+|    these words will be a lie.
+| If I could but this deliver:
+|    To live until you die.
+|
+| So while you're small, keep holding
+|    my hand as though it soothes;
+| The world will keep unfolding
+|   each wrinkle that it smooths.
+|
+| Believe me when I'm saying:
+|    Oh, Ila, darling dear,
+| no matter what I'm staying,
+|    I'll always be right here. 
 
-- September 2025
+- August 2025
 
 .. list-table:: Submission History
   :widths: 15 15 15
@@ -44,32 +51,77 @@ Anniversary
   * - Date
     - Publication
     - Status
+  * - August 19, 2025
+    - Still Point Arts Quarterly
+    - Pending
+  * - August 19, 2025
+    - Sublimation
+    - Rejected
+  * - August 22, 2025
+    - Palette Poetry
+    - Pending
+  * - August 22, 2025
+    - Macrame Literary Journal
+    - Rejected
+  * - August 25, 2025
+    - Plougshares
+    - Rejected
+  * - August 25, 2025
+    - The Celestial Glossry
+    - Rejected
+  * - August 25, 2025
+    - Midsummer Dream House Context
+    - Pending
+  * - August 26, 2025
+    - The Plentitudes
+    - Pending
+  * - August 26, 2025
+    - Gavialidae
+    - Rejected
+  * - August 27, 2025
+    - La Piccioletta Barca
+    - Rejected
+  * - August 29, 2025
+    - The Aftershock Review
+    - Pending
+  * - August 29, 2025
+    - Raleigh Review
+    - Rejected
+  * - August 29, 2025
+    - Arcturus
+    - Rejected
+  * - August 29, 2025
+    - Banyan Review Poetry Contest
+    - Rejected
+  * - August 29, 2025
+    - Hare's Paw Literary Journal
+    - Rejected
+  * - August 29, 2025
+    - Thirteen Bridges Review
+    - Rejected
+  * - September 3, 2025
+    - Hopkins Review
+    - Pending
+  * - September 5, 2025
+    - Global City Review
+    - Pending
+  * - September 6, 2025
+    - Funicular Magazine
+    - Rejected
+  * - September 9, 2025
+    - Garfield Lake Review
+    - Accepted
   * - September 14, 2025
     - Princemere Poetry Prize
     - Pending
   * - October 6, 2025
-    - Gilded Weathervane
-    - Pending
-  * - October 6, 2025
     - Merion West
     - Rejected
-  * - October 7th, 2025
-    - wildscape
-    - Rejected
-  * - October 10th, 2025
-    - Macrame Literary Journal
+  * - October 7, 2025
+    - Salvation South
     - Rejected
   * - October 10th, 2025
     - January House Literary Journal
-    - Rejected
-  * - October 12, 2025
-    - New Feathers Anthology
-    - Rejected
-  * - October 12, 2025
-    - Cosmic Daffodil
-    - Rejected
-  * - November 24, 2025
-    - Artists from Maryland
     - Rejected
 
 Responses
@@ -77,18 +129,12 @@ Responses
 
 .. epigraph::
 
-  Dear Grant,
+  Dear Grant Moore,
 
-  Grant, I like the movement at the start of the poem "Anniversary"
+  On behalf of the editorial board of the Garfield Lake Review, I am happy to write that we have accepted Eulogy/Larksong/The Pantoums of Dementia/Ode to Death/The Origin of Lies for publication in our 2026 edition!
 
-  "the city edge, its concrete knife
-  divides the Earth, creates a cliff
-  the shifting gears engage to dive"
+  Thank you for your contribution to our growing journal. We are pleased to publish your work in this years edition.
 
-  I enjoyed reading your poems. You stay present in your writing. Words do float off the page with consistent effort.
+  If you require any further edits to your piece, please reach out directly to our Editor in Chief, Logan Schreiber, at lschreiber@uolivet.edu. If we should need any edits to your piece, a team member will be in touch with you after acceptance. In the meantime, if you have any questions, please let me know.
 
-  I am the new Arts Editor for Merion West; we are in transition. This set of poems is not quite right for Merion West at this point. Continue to revel in the craft of writing.
-
-  Thank you for sharing your work with Merion West. We wish you the best in your writing.
-
-  -- Austin Allen James
+  -- Logan Schreiber, Editor in Chief
