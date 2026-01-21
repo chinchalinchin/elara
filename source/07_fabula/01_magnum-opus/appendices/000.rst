@@ -1,38 +1,44 @@
-.. VAN RENSSELAER FAMILY TREE DEVELOPMENT
+.. NOTE: This document is formatted with RestructuredText (RST)
 ..
-.. GOAL: Using mermaid, develop and complete the exhaustive family tree of the van Rensselaer dynasty, given below, from the first patroon up to the present day.
+.. # VAN RENSSELAER FAMILY TREE DEVELOPMENT
 ..
-.. COLOR & STYLE
+..      - COMMENTS: All comments in this documents are denoted with "..". Comments are meant to provide context. They should be regarded as iron-clad instructions. If it has not been explicitly stated in a comment, then assume it does not apply.
+..      - GOAL: Using mermaid, develop and complete the exhaustive family tree of the van Rensselaer dynasty, given below, from the first patroon up to the present day.
+..      - TASK: The TASK section contains the current directives.
+..
+.. ## COLOR & STYLE
 ..
 ..      **GUIDELINES**
 ..
 ..      - Use the principles of Material UI when making updates to the styles.
 ..      - Use the principles of Color Theory and Color Wheels when selecting new colors.
+..      - Make sure the mermaid graphs are well-commented, but on the flip side, don't be too verbose.
 ..
 ..      **GRADIENT**
 ..
-..      - Color gradient is used to visualize the descent of the title from the earlier generations (Darker) to the later generations (Lighter).
-..      - Color gradient applies to all shades except Special and External, which has a only single shade.
+..      - Color gradient is used to visualize the descent from the earlier generations (Darker) to the later generations (Lighter).
+..      - Color gradient applies to all shades except Special and External, which have a only single shade.
 ..
 ..      **PALETTE**
 ..
-..      - Elder: Represents the Elder branch (Lords of the Manor). 
-..          - Starting Shade (Hex Code): #311B92
-..      - Dutch: Represents the Dutch branch (Lord of Cralo).
-..          - Starting Shade (Hex Code): #283593
-..      - Patrician: Represents the Patrician Branch (Lords of the Manor).
-..          - Starting Shade (Hex Code): #7E57C2
-..      - Equestrian: Represents the Equestrian Branch.
-..          - Starting Shade (Hex Code): #880E4F
-..      - Delphic: Represents the Delphic Branch
-..          - Starting Shade (Hex Code): #01579B
-..      - Prodigal: Represents the Prodigal Branch (Lords of Claverack). 
-..          - Starting Shade (Hex Code): #BF360C
-..      - Special: Represents Special Individuals. 
-..          - Shade (Hex Code): #00897B
-..      - External (White): Connections of female descendants of male lines to their spouses.
-..          - Shade (Hex Code): #FFFFFF
-.. NODES
+..      - Elder Branch (Lords of the Manor), Starting Shade (Hex Code): #311B92
+..      - Dutch Branch, Starting Shade (Hex Code): #283593
+..      - Patrician Branch (Lords of the Manor), Starting Shade (Hex Code): #7E57C2
+..      - Equestrian Branch, Starting Shade (Hex Code): #880E4F
+..      - Plebian Branch (Lords of Claverack), Starting Shade (Hex Code): #BF360C
+..      - Delphic Branch, Starting Shade (Hex Code): #01579B
+..      - Sibylline Branch, Starting Shade (Hex Code): #1565C0
+..      - Chthonic Branch, Starting Shade (Hex Code): #00695C
+..      - Trophonian Branch, Starting Shade (Hex Code): #0288D1
+..      - Dodonic Branch, Starting Shade (Hex Code): #0D47A1
+..      - Cumaean Branch, Starting Shade (Hex Code): #1B5E20
+..      - Clarian Branch, Starting Shade (Hex Code): #33691E
+..      - Special: Represents Special Individuals, Shade (Hex Code): #00897B
+..      - External: Connections of female descendants of male lines to their spouses, Shade (Hex Code): #FFFFFF
+..
+..      The Special node color is reserved for user selection. Do not exercise your own discretion in assigning it.
+..
+.. ## NODES
 ..
 ..      **Shapes**
 ..
@@ -57,43 +63,80 @@
 ..  
 ..      Other acceptable labels:
 ..
-..      - Directorship
-..      - Regency
+..      - Patroonship Regency
+..      - Renowned Scientist
 ..      - Jesuit Affiliation
 ..      - High Masonic Rank
 ..      - High Military Rank
+..      - Secret Society Affiliations
 ..      - High Political Office
 ..      - Known Aliases
 .. 
-.. RELATIONS
+..      Add labels freely, but be conservative. Don't dilute of a label with an overabundance frivolous labels.
+..
+.. ## RELATIONS
 .. 
 ..      **Marriage**
 ..
 ..      - The relations between husbands and wives should include the year they were married (if they were married), prefixed with "m. <year>". 
 ..      - Dotted lines indicate the marriage of cousins.
-..      - Thick lines with a dot indicates the marriage of a daughter to an external family. Only the last name of the external connection should be listed.
+..      - Thick lines indicates the marriage of a daughter to an external family. Only the last name of the external connection should be listed.
 ..      
-.. GUIDELINES
+..      **End of Lineage**
 ..
-..      - If a date is unknown, approximate it and use a "?" to denote uncertainty.
-..      - Generations should always be aligned to descending rows.
-..      - Do not remove nodes from the tree.
-..      - DO NOT REMOVE NODES FROM THE TREE!
-..      - **DO**. **NOT**. **REMOVE**. **NODES**. **FROM. **THE*. **TREE*.
+..      - The relation between an ancestor and their descendant who had no issue should be included. Lines that end with a "x" denote this relationship.
+..      - The "x" should terminate on the final descendant of this branch. Do not add an extra node for the exit.
+..      - Once a branch reaches this point, it does not need to factor into further searches.
+..      - Once a branch is terminated, this should retroactively turn the prior connections from (-->) into dots (--o), so the lines that end can be tracked down the diagram. The rule should apply up to the node where the ancestor rejoins the (-->) flow.
+..      
+..      Do not terminate a line (--x) unless you have conclusive proof if it is terminated. **YOU MUST PROVIDE THE EVIDENCE BEFORE TERMINATING A NODE**. Any terminations that are not accompanied by documentation will be rejected, so do not waste your time.
 ..
-.. TASK
+.. ## GUIDELINES
 ..
-..      - Examine the Prodigal branch nodes for accuracy. There appears to be a discrepancy in the lineage. Jeremiah van Rensselaer (1793 - 1871) is listed as the son of Jacob van Rensselaer and Catharina Glen, **AND** the son Gen. John Jeremias van Rensselaer and Catharine Glen. It seems like some individuals are being confused.
+..      1. Do not try to complete the graph in a single turn. This is meant to be an iterative (Agile) process. It is fine to leave open nodes if you don't have enough information to complete that node.
+..      2. This project has been meticulously assembled. Please respect that by only contributing quality entries.
+..      3. This project requires empirical verification. Do not infer details.
+..      4. Be on the look out for any discrepancies. Advise, but do not change, if you discover any information that contradicts the existing diagram.
+..      5. If a date is unknown, approximate it and use a "?" to denote uncertainty.
+..      6. Generations should always be aligned to descending rows.
+..      7. Do not remove nodes from the tree.
+..      8. DO NOT REMOVE NODES FROM THE TREE!
+..      9. **DO**. **NOT**. **REMOVE**. **NODES**. **FROM**. **THE*. **TREE*.
 ..
-.. OUTPUT
+.. ## TASK
+..
+..      - Search pairs of branches for common surnames and relations that might indicate the marriage of cousins across branches and webs of relations that are not yet captured in the graphs. Verify and validate with evidence between concluding kinship.
+..      - If any relations across branches are found, divide them into three categories:
+..          - A. relations that can be fixed with an ENTER/EXIT relation.
+..          - B. relations that require elaborate lineages of unexplored nodes in the family tree.
+..          - C. relations that require elaborated lineages of external families before they can be visualized.
+..      - Address and update relations of Type A directly on the graphs.
+..      - Add relations of Type B to the *Further Review* list. These will be addressed in future prompts.
+..      - Add relations of Type C to the *Ignore* list.
+..
+..      **TYPE B FURTHER REVIEW LIST**
+..
+..      None yet found.
+..
+..      **TYPE C IGNORE LIST**
+..
+..      - Node: "W6_2C_W (Equestrian) Catherine Ledyard Cogswell" to "FAM_COG (Patrician) is Ledyard Cogswell Jr."
+..
+.. ## OUTPUT
 .. 
 ..      - Your output does not need to be RST. Output the mermaid diagram in whatever native format is easiest, and include a list of changes that were applied.
 ..      - Only include the graph you are updating, but include *THE FULL GRAPH*. **DO NOT DELETE ANY NODES**.
+..
+.. ## GROOMING
+..
+.. NOTE: Ignore this section until moved to the TASK,
+..
+.. - Refactor Cthonic gradient to align with blue theme of female divergence from the Elder branch.
 
 .. _appendix-i:
 
 Appendix I
-----------
+==========
 
 .. note::
 
@@ -103,12 +146,19 @@ Appendix I
 
     - Dutch Branch (Lords of Cralo): Male branch that remained in Holland.
     - Elder Branch (Lords of the Manor): Male branch that relocated to America.
-        - Patrician Branch (Lords of the Manor): Male branch of the family.
-        - Equestrian Branch (Non-inheriting): Male branch of the family.
-        - Delphic Branch (Non-inheriting): Female branch of the family.
-    - Prodigal Branch (Lords of Claverack): Male branch that started in America.
+        - Patrician Branch (Lords of the Manor): Male branch of the Elder Branch.
+        - Equestrian Branch (Non-inheriting): Male branch of the Elder Branch.
+        - Trophonian Branch (Non-inheriting): Female branch of the Elder Branch.
+        - Dodonic Branch (Non-inheriting): Female branch of the Elder Branch.
+        - Sibylline Branch (Non-inherting): Female branch of the Elder Branch.
+        - Chthonic Branch (Non-inheriting): Female branch of the Elder Branch.
+        - Delphic Branch (Non-inheriting): Female branch of the Elder Branch.
+        - Cumaean Branch (Non-inheriting): Female branch of the Patrician Branch.
+        - Clarian Branch (Non-inheriting): Female branch of the Patrician Branch.
+    - Plebian Branch (Lords of Claverack): Male branch that started in America.
 
-**Timeline**
+Timeline
+--------
 
 .. mermaid::
 
@@ -142,7 +192,17 @@ Appendix I
         section The Diaspora
             1925 : Death of Eugene : Last direct heir of the Manor line
 
----------
+------
+Events
+------
+
+**The Schuyler Alliance (1783-1787)**
+
+In a masterful dynastic maneuver, the Van Rensselaer and Schuyler families secured their dominance in post-Revolutionary New York through a "double exchange" of siblings. Stephen van Rensselaer III (the 8th Patroon) and his sister Elizabeth married the children of General Philip Schuyler, Margarita and John Bradstreet Schuyler. Because General Schuyler’s wife was herself a Van Rensselaer (from the Plebian branch), this alliance achieved two critical goals:
+
+- Grafted the divergent Elder and Plebian branches back together. The resulting children were "double first cousins," sharing all four grandparents.
+- Fused the feudal land wealth of the Manor with the impeccable Patriot political credentials of the Schuylers, insulating the family's vast holdings from anti-aristocratic sentiment in the new Republic.
+
 Genealogy
 ---------
 
@@ -154,32 +214,50 @@ Genealogy
         %% =========================================
         %% LEGEND STYLES
         %% =========================================
-        classDef delphicLegend fill:#01579B,stroke:#000,stroke-width:2px,color:#fff
-        classDef dutchLegend fill:#283593,stroke:#000,stroke-width:2px,color:#fff
         classDef elderLegend fill:#311B92,stroke:#000,stroke-width:2px,color:#fff
-        classDef equestrianLegend fill:#880E4F,stroke:#000,stroke-width:2px,color:#fff
-        classDef externalLegend fill:#FFF8E1,stroke:#F57C00,stroke-width:1px,color:#000
+        classDef dutchLegend fill:#283593,stroke:#000,stroke-width:2px,color:#fff
         classDef patricianLegend fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
-        classDef prodigalLegend fill:#BF360C,stroke:#000,stroke-width:1px,color:#fff
-        classDef specialLegend fill:#00897B,stroke:#004D40,stroke-width:3px,color:#fff
+        classDef equestrianLegend fill:#880E4F,stroke:#000,stroke-width:2px,color:#fff
+        classDef plebianLegend fill:#BF360C,stroke:#000,stroke-width:1px,color:#fff
+        classDef delphicLegend fill:#01579B,stroke:#000,stroke-width:2px,color:#fff
+        classDef dodonicLegend fill:#0D47A1,stroke:#000,stroke-width:2px,color:#fff
+        classDef sibyllineLegend fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff
+        classDef chthonicLegend fill:#00695C,stroke:#000,stroke-width:2px,color:#fff
+        classDef trophonianLegend fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff
+        classDef cumaeanLegend fill:#1B5E20,stroke:#000,stroke-width:2px,color:#fff
+        classDef clarianLegend fill:#33691E,stroke:#000,stroke-width:2px,color:#fff
+        classDef externalLegend fill:#FFF8E1,stroke:#F57C00,stroke-width:1px,color:#000
 
         %% =========================================
-        %% COLOR CODING (GRADIENTS)
+        %% COLOR CODING
         %% =========================================
-        subgraph Colors [Colors]
-            direction LR
-            C1[Dutch Branch]:::dutchLegend
-            C2[Elder Branch]:::elderLegend
-            C3[Patrician Branch]:::patricianLegend
-            C4[Equestrian Branch]:::equestrianLegend
-            C5[Delphic Branch]:::delphicLegend
-            C6[Prodigal Branch]:::prodigalLegend
+        subgraph Colors [Branch Colors]
+            direction TB
+            subgraph MaleLines [Male Lines]
+                direction LR
+                X1[Elder Branch]:::elderLegend
+                X2[Dutch Branch]:::dutchLegend
+                X3[Patrician Branch]:::patricianLegend
+                X4[Equestrian Branch]:::equestrianLegend
+                X5[Plebian Branch]:::plebianLegend
+            end
+            
+            subgraph FemaleLines [Female Lines]
+                direction LR
+                X6[Delphic Branch]:::delphicLegend
+                X7[Dodonic Branch]:::dodonicLegend
+                X8[Sibylline Branch]:::sibyllineLegend
+                X9[Chthonic Branch]:::chthonicLegend
+                X10[Trophonian Branch]:::trophonianLegend
+                X11[Cumaean Branch]:::cumaeanLegend
+                X12[Clarian Branch]:::clarianLegend
+            end
         end
 
         %% =========================================
         %% NODES
         %% =========================================
-        subgraph Nodes [Nodes]
+        subgraph Nodes [Node Shapes]
             direction LR
             S1((1st Patroon))
             S2{{American Patroon}}
@@ -192,19 +270,26 @@ Genealogy
         end
 
         %% =========================================
-        %% CONNECTIONS
+        %% RELATION CONNECTIONS
         %% =========================================
-        subgraph Connections [Connections]
+        subgraph Connections [Relations]
             direction LR
-            A1[Husband] ---|m. Year| A2{Wife}
-            B1[Cousin A] -.-|m. Year| B2{Cousin B}
-            D1{Daughter} --o D2[External Family]
-            E1[[Branch Exit]]
-            E2(((Branch Enter)))
+            A1{Mother} --> A2[Son] 
+            B1[Husband] ---|m. Year| B2{Wife}
+            C1[Cousin A] -.-|m. Year| C2{Cousin B}
+            D1{Daughter} --- D2[External Family]
+            E1[Person] --x E2[End of Line]
+            F1[Extinct Ancestor] --o F2[Extinct Descendant]
+            G1[[Branch Exit]]
+            H1(((Branch Enter)))
         end
 
+--------
 Branches
-~~~~~~~~
+--------
+
+Males Branches
+~~~~~~~~~~~~~~
 
 **Elder Branch**
 
@@ -216,26 +301,31 @@ Branches
         %% =========================================
         %% PALETTES & STYLES
         %% =========================================
+        %% ======================== ELDER BRANCH
         classDef elder1 fill:#311B92,stroke:#000,stroke-width:2px,color:#fff
         classDef elder2 fill:#4527A0,stroke:#000,stroke-width:2px,color:#fff
         classDef elder3 fill:#512DA8,stroke:#000,stroke-width:2px,color:#fff
         classDef elder4 fill:#5E35B1,stroke:#000,stroke-width:2px,color:#fff
         classDef elder5 fill:#673AB7,stroke:#000,stroke-width:2px,color:#fff
         classDef elder6 fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
-
-        classDef dutch1 fill:#283593,stroke:#000,stroke-width:2px,color:#fff
-        classDef dutch2 fill:#303F9F,stroke:#000,stroke-width:2px,color:#fff
-        classDef dutch3 fill:#3949AB,stroke:#000,stroke-width:2px,color:#fff
-        classDef dutch4 fill:#3F51B5,stroke:#000,stroke-width:2px,color:#fff
-        classDef dutch5 fill:#5C6BC0,stroke:#000,stroke-width:2px,color:#fff
-
-        classDef prodigalEnter fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff
-
+        %% ======================== DUTCH BRANCH (TERMINATED)
+        classDef dutch1 fill:#283593,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef dutch2 fill:#303F9F,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef dutch3 fill:#3949AB,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef dutch4 fill:#3F51B5,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef dutch5 fill:#5C6BC0,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        %% ======================== BRANCH ENTRANCES
+        classDef plebianEnter fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff
         classDef external fill:#FFF8E1,stroke:#F57C00,stroke-width:1px,color:#000
+        %% ======================== BRANCH EXITS
         classDef equestrianExit fill:#880E4F,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
         classDef patricianExit fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-        classDef prodigalExit fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef plebianExit fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
         classDef delphicExit fill:#01579B,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef sibyllineExit fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef chthonicExit fill:#00695C,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef trophonianExit fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef dodonicExit fill:#0D47A1,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
 
         %% =========================================
         %% GEN 1: The First Patroon
@@ -247,109 +337,96 @@ Branches
         K1 ---|m. 1616| W1_1
         K1 ---|m. 1627| W1_2
 
-        W1_1 --> S1_1[Johannes van Rensselaer<br>1625-1663]:::elder2
-        W1_2 --> S1_2([Johannes van Rensselaer<br>1625-1663]):::dutch1
-        W1_2 --> S1_3[Jan Baptist van Rensselaer<br>1629-1678]:::elder2
-        W1_2 --> S1_4{{Jeremias van Rensselaer<br>1632-1674<br>Acting Patroon}}:::elder2
-        W1_2 --> S1_5[Rev. Nicolaas van Rensselaer<br>1636-1678]:::elder2
-        W1_2 --> S1_6[Ryckert van Rensselaer<br>1639-1692]:::elder2
+        W1_1 --x S1_1[Johannes van Rensselaer<br>1625-1663<br>2nd Patroon]:::elder2
+
+        W1_2 --o S1_2([Johannes van Rensselaer<br>1625-1663]):::dutch1
+
+        W1_2 --x S1_3[Jan Baptist van Rensselaer<br>1629-1678<br>Director of Rensselaerswyck]:::elder2
+        W1_2 --> S1_4{{Jeremias van Rensselaer<br>1632-1674<br>Acting Patroon<br>3rd Director}}:::elder2
+        W1_2 --x S1_5[Rev. Nicolaas van Rensselaer<br>1636-1678<br>Heresy Trial Defendant]:::elder2
+        W1_2 --x S1_6[Ryckert van Rensselaer<br>1639-1692<br>Magistrate of Albany]:::elder2
 
         %% =========================================
         %% GEN 2: The American Transition
         %% =========================================
         W1_2B{Elizabeth van Twiller}:::dutch1
-        S1_2 ---|m. 1655| W1_2B
-        W1_2B --> S2_D1([Kiliaen van Rensselaer<br>1655-1687]):::dutch2
+        S1_2 -.-|m. 1655| W1_2B
+        W1_2B --o S2_D1([Kiliaen van Rensselaer<br>1655-1687]):::dutch2
 
         W2_1{Maria van Cortlandt<br>1645-1689}:::elder2
         S1_4 ---|m. 1662| W2_1
 
-        W2_1 --> S2_1{{Kiliaen van Rensselaer<br>1663-1719<br>4th Patroon}}:::elder3
+        W2_1 --> S2_1{{Kiliaen van Rensselaer<br>1663-1719<br>4th Patroon<br>1st Lord of the Manor}}:::elder3
         W2_1 --> S2_4{Anna van Rensselaer<br>1665-1723}:::elder3
-        W2_1 --> S2_5{Maria van Rensselaer<br>1673-1713}:::elder3
-        W2_1 --> S2_3[[Hendrick van Rensselaer<br>1667-1740<br>SEE PRODIGAL BRANCH]]:::prodigalExit
         
-        FAM_SCH[Peter Schuyler]:::external
-        S2_5 --o FAM_SCH
+        W2_1 --> S2_5{Maria van Rensselaer<br>1673-1713}:::elder3
+        S2_5 --> LINK_DOD[[Descendants of Maria<br>SEE DODONIC BRANCH]]:::dodonicExit
+        
+        W2_1 --> S2_3[[Hendrick van Rensselaer<br>1667-1740<br>SEE PLEBIAN BRANCH]]:::plebianExit
 
         %% =========================================
         %% GEN 3: The Consolidation
         %% =========================================
         S2_4 -.-|m. 1686| S2_D1
-        S2_D1 --> S3_D1([Kiliaen van Rensselaer<br>1686-?]):::dutch3
+        S2_D1 --o S3_D1([Kiliaen van Rensselaer<br>1686-1762]):::dutch3
 
         W3_1{Maria van Cortlandt<br>1674-1752}:::elder3
         S2_1 -.-|m. 1701| W3_1
 
-        W3_1 --> S3_1{{Jeremias van Rensselaer<br>1705-1730<br>5th Patroon}}:::elder4
+        W3_1 --x S3_1{{Jeremias van Rensselaer<br>1705-1745<br>5th Patroon}}:::elder4
         W3_1 --> S3_2{{Stephen van Rensselaer I<br>1707-1747<br>6th Patroon}}:::elder4
-        
-        W3_1 --> S3_3{Maria van Rensselaer<br>1702-?}:::elder4
-        FAM_FVC[Frederick Van Cortlandt]:::external
-        S3_3 --o FAM_FVC
-        
-        W3_1 --> S3_4{Gertruy van Rensselaer<br>1703-?}:::elder4
-        FAM_AS[Adoniah Schuyler]:::external
-        S3_4 --o FAM_AS
+
+        W3_1 --> S3_3{Maria van Rensselaer<br>1702-c. 1723}:::elder4
+        S3_3 --> LINK_SIB[[Descendants of Maria<br>SEE SIBYLLINE BRANCH]]:::sibyllineExit
+
+        W3_1 --> S3_4{Gertruy van Rensselaer<br>1714-?}:::elder4
+        S3_4 --> LINK_CHT[[Descendants of Gertruy<br>SEE CHTHONIC BRANCH]]:::chthonicExit
 
         %% =========================================
         %% GEN 4: The Manor Established
         %% =========================================
         W3_DB{Maria Pasques<br>de Chavonnes}:::dutch3
-        S3_D1 ---|m. 1718| W3_DB
-        W3_DB --> S4_D1([Jan Baptist van Rensselaer<br>1718-1790]):::dutch4
+        S3_D1 -.-|m. 1718| W3_DB
+        W3_DB --o S4_D1([Jan Baptist van Rensselaer<br>1718-1790]):::dutch4
 
         W4_1{Elizabeth Groesbeck<br>1707-1756}:::elder4
         S3_2 ---|m. 1729| W4_1
 
         W4_1 --> S4_1{{Stephen van Rensselaer II<br>1742-1769<br>7th Patroon}}:::elder5
-        
-        %% ELIZABETH (1734) LINE
+
         W4_1 --> S4_3{Elizabeth van Rensselaer<br>1734-1813}:::elder5
-        FAM_TB[Abraham Ten Broeck]:::external
-        S4_3 --o FAM_TB
-        S4_3 --> S5_TB1[\Dirck Ten Broeck<br>1765-1833/]:::elder5
-        S4_3 --> S5_TB2[/Elizabeth Ten Broeck<br>1772-1848\]:::elder5
-        S4_3 --> S5_TB3[\Abraham Ten Broeck<br>1775-1841/]:::elder5
+        S4_3 --> LINK_TRO[[Descendants of Elizabeth<br>SEE TROPHONIAN BRANCH]]:::trophonianExit
 
         %% =========================================
         %% GEN 5: The Last Patroon & The Mayor
         %% =========================================
         W4_DB2{Jacoba Elisabeth Brijnen}:::dutch4
-        S4_D1 --- W4_DB2
-        W4_DB2 --> S5_D1([Jeremias van Rensselaer<br>1761-1819]):::dutch5
+        S4_D1 -.- W4_DB2
+        W4_DB2 --x S5_D1([Jeremias van Rensselaer<br>1761-1819<br>Last Dutch Patroon]):::dutch5
 
         W5_1{Catherine Livingston<br>1745-1810}:::elder5
         S4_1 ---|m. 1764| W5_1
-        W5_1 --> S5_1{{Stephen van Rensselaer III<br>1764-1839<br>8th Patroon}}:::elder6
-        
-        W5_2(((Ann van Rensselaer<br>SEE PRODIGAL BRANCH))):::prodigalEnter
-        S4_1 --> S5_2[Philip S. van Rensselaer<br>1767-1824<br>Mayor of Albany]:::elder5
+
+        W5_1 --> S5_1{{Stephen van Rensselaer III<br>1764-1839<br>8th Patroon<br>Lt. Governor of NY<br>Founder of RPI}}:::elder6
+        W5_1 --x S5_2[Philip S. van Rensselaer<br>1767-1824<br>Mayor of Albany<br>Pres. Bank of Albany]:::elder5
+        W5_1 --> S5_3{Elizabeth van Rensselaer<br>1768-1841}:::elder5
+
+        W5_2(((Ann van Rensselaer<br>SEE PLEBIAN BRANCH))):::plebianEnter
         S5_2 -.-|m. 1787| W5_2
 
-        %% ELIZABETH (1768)
-        S4_1 --> S5_3{Elizabeth van Rensselaer<br>1768-1841}:::elder5
         FAM_JBS[John Bradstreet<br>Schuyler]:::external
-        S5_3 --o FAM_JBS
+        FAM_SCH[Peter Schuyler<br>1657-1724<br>Acting Governor of NY]:::external
+        
+        S2_5 ---|m. 1691| FAM_SCH
+
+        S5_3 --- FAM_JBS
         S5_3 --> LINK_DEL[[Descendants of Elizabeth<br>SEE DELPHIC BRANCH]]:::delphicExit
-
-        %% =========================================
-        %% GEN 6 & 7: Expansions
-        %% =========================================
-
-        %% Ten Broeck Expansion
-        W6_TB1{Cornelia Stuyvesant}:::external
-        S5_TB1 --- W6_TB1
-
-        FAM_RS[[Rensselaer Schuyler<br>SEE PRODIGAL BRANCH]]:::prodigalEnter
-        S5_TB2 --o FAM_RS
-        S5_TB2 --> S6_TB2_1[\Philip Rensselaer Schuyler/]:::elder6
 
         %% =========================================
         %% EXITS TO SUB-BRANCHES
         %% =========================================
         S5_1 --> LINK_PAT[[Descendants of Margarita Schuyler<br>SEE PATRICIAN BRANCH]]:::patricianExit
-        S5_1 --> LINK_DIA[[Descendants of Cornelia Paterson<br>SEE EQUESTRIAN BRANCH]]:::equestrianExit
+        S5_1 --> LINK_EQU[[Descendants of Cornelia Paterson<br>SEE EQUESTRIAN BRANCH]]:::equestrianExit
 
         linkStyle default interpolate basis
 
@@ -362,8 +439,9 @@ Branches
 
     graph TD
         %% =========================================
-        %% PATRICIAN PALETTE (Purple Gradient)
+        %% PALETTES & STYLES 
         %% =========================================
+        %% ===================== PATRICIAN BRANCH
         %% Gen 6
         classDef pat1 fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff
         %% Gen 7
@@ -372,15 +450,28 @@ Branches
         classDef pat3 fill:#B39DDB,stroke:#000,stroke-width:2px,color:#000
         %% Gen 9
         classDef pat4 fill:#D1C4E9,stroke:#000,stroke-width:2px,color:#000
-        
-        %% External Connections
+        %% Gen 10
+        classDef pat5 fill:#EDE7F6,stroke:#000,stroke-width:2px,color:#000
+        %% ===================== SPECIAL
+        classDef special fill:#00897B,stroke:#000,stroke-width:2px,color:#fff
+        %% ===================== BRANCH ENTRANCES
         classDef external fill:#FFFFFF,stroke:#000,stroke-width:1px,color:#000
+        classDef delphicEnter fill:#01579B,stroke:#000,stroke-width:2px,color:#fff
+        classDef plebianEnter fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff
+        %% ===================== BRANCH EXITS
+        classDef cumaeanExit fill:#1B5E20,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef clarianExit fill:#33691E,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
 
         %% =========================================
         %% ROOT
         %% =========================================
         ROOT_S3[Stephen van Rensselaer III<br>Reference Only]:::pat1
+        
+        %% NEW ENTRY FROM PLEBIAN
+        ENT_PLEB(((Gen. Philip Schuyler<br>SEE PLEBIAN BRANCH))):::plebianEnter
         W6_1{Margarita Schuyler<br>1758-1801}:::pat1
+        
+        ENT_PLEB --> W6_1
         ROOT_S3 ---|m. 1783| W6_1
 
         %% =========================================
@@ -389,105 +480,85 @@ Branches
         W6_1 --> S6_1{{Stephen van Rensselaer IV<br>1789-1868<br>9th Patroon}}:::pat1
 
         %% =========================================
-        %% GEN 7 (Children of Stephen IV) - Gradient: #9575CD
+        %% GEN 7 (Children of Stephen IV)
         %% =========================================
         W7_1{Harriet Bayard<br>1799-1875}:::pat1
         S6_1 ---|m. 1817| W7_1
         
-        %% -- 1. Margaret (Johnson) --
-        W7_1 --> S7_1A{Margaret van Rensselaer<br>1819–1897}:::pat2
+        W7_1 --> S7_1A{Margaret van Rensselaer<br>1819-1897}:::pat2
         FAM_JOH[Wilmot Johnson<br>1820-1899]:::external
-        S7_1A --o FAM_JOH
+        S7_1A --- FAM_JOH
         S7_1A --> S8_JOH1[\Valerio Johnson<br>1850?-? /]:::pat3
         
-        %% -- 2. Cornelia (Thayer) --
-        W7_1 --> S7_1B{Cornelia van Rensselaer<br>1823–1897}:::pat2
-        FAM_TH[Nathaniel Thayer<br>1808–1883]:::external
-        S7_1B --o FAM_TH
+        %% CUMAEAN EXIT
+        W7_1 --> S7_1B{Cornelia van Rensselaer<br>1823-1897}:::pat2
+        S7_1B --> LINK_CUM[[Descendants of Cornelia<br>SEE CUMAEAN BRANCH]]:::cumaeanExit
         
-        %% Thayer Children (Gen 8)
-        S7_1B --> S8_TH1[\Stephen V.R. Thayer<br>1847-1871/]:::pat3
-        
-        S7_1B --> S8_TH4[/Cornelia Thayer<br>1849-1903\]:::pat3
-        FAM_ROBB[J. Hampden Robb<br>1846-1911]:::external
-        S8_TH4 --o FAM_ROBB
-        S8_TH4 --> S9_ROBB1[\Thayer Robb<br>1877-1938/]:::pat4
-        S8_TH4 --> S9_ROBB2[/Cornelia Robb<br>1875?-?\]:::pat4
-        
-        S7_1B --> S8_TH2[\Nathaniel Thayer<br>1851-1911/]:::pat3
-        W8_TH2{Pauline Revere}:::pat3
-        S8_TH2 ---|m. 1881| W8_TH2
-        W8_TH2 --> S9_TH2_1[/Cornelia Van R. Thayer<br>1881-1925\]:::pat4
-        
-        S7_1B --> S8_TH5[/Harriet Thayer<br>1853-1891\]:::pat3
-        
-        S7_1B --> S8_TH6[\Eugene Van R. Thayer<br>1855-1907/]:::pat3
-        
-        S7_1B --> S8_TH7[\Bayard Thayer<br>1862-1916/]:::pat3
-        
-        S7_1B --> S8_TH8[\John Eliot Thayer<br>1862-1933/]:::pat3
-
-        %% -- 3. Stephen V --
-        W7_1 --> S7_1S[Stephen van Rensselaer V<br>1824-1861]:::pat2
+        %% STEPHEN V LINE
+        W7_1 --o S7_1S[Stephen van Rensselaer V<br>1824-1861]:::pat2
         W7_S{Annie Louise Wild<br>1828-1904}:::pat2
         S7_1S ---|m. 1858| W7_S
-        W7_S --> S8_1S{Estelle van Rensselaer<br>1859-1942}:::pat3
+        W7_S --x S8_1S{Estelle van Rensselaer<br>1859-1942}:::pat3
 
-        %% -- 4. Catherine (Berry) --
         W7_1 --> S7_1C{Catherine van Rensselaer<br>1827-1909}:::pat2
         FAM_BE[Nathaniel Berry<br>1811-1865]:::external
-        S7_1C --o FAM_BE
+        S7_1C --- FAM_BE
         S7_1C --> S8_BE1[/Nathalie Berry<br>1854-1927\]:::pat3
         S7_1C --> S8_BE2[/Catherine Berry<br>1856?-?\]:::pat3
 
-        %% -- 5. Justine (Townsend) --
+        %% CLARIAN EXIT
         W7_1 --> S7_1D{Justine van Rensselaer<br>1828-1912}:::pat2
-        FAM_TW[Dr. Howard Townsend<br>1823-1867]:::external
-        S7_1D --o FAM_TW
-        S7_1D --> S8_TW1[\Howard Townsend<br>1858-1935/]:::pat3
-        S7_1D --> S8_TW2[\Stephen V.R. Townsend<br>1860-1901/]:::pat3
-        S7_1D --> S8_TW3[/Justine Townsend<br>1853-1881\]:::pat3
-        S7_1D --> S8_TW4[/Harriet Townsend<br>1853?-?\]:::pat3
+        S7_1D --> LINK_CLA[[Descendants of Justine<br>SEE CLARIAN BRANCH]]:::clarianExit
 
-        %% -- 6. Bayard --
-        W7_1 --> S7_1E[Bayard van Rensselaer<br>1833-1859]:::pat2
+        %% BAYARD LINE
+        W7_1 --o S7_1E[Bayard van Rensselaer<br>1833-1859]:::pat2
         W8_B1{Laura Reynolds<br>1830-1912}:::pat2
         S7_1E ---|m. 1854| W8_B1
-        W8_B1 --> S8_B1[William Bayard van Rensselaer<br>1856-1909]:::pat3
+        W8_B1 --x S8_B1[William Bayard van Rensselaer<br>1856-1909]:::pat3
         W8_B1_W{Louisa Greenough Lane<br>1860-1926}:::pat3
         S8_B1 ---|m. 1880| W8_B1_W
 
-        %% -- 7. Harriet (Crosby) --
         W7_1 --> S7_1F{Harriet van Rensselaer<br>1838-1911}:::pat2
-        FAM_CRO[John Schuyler Crosby<br>1839-1914]:::external
-        S7_1F --o FAM_CRO
+        FAM_CRO(((John Schuyler Crosby<br>1839-1914<br>Gov. of Montana<br>SEE DELPHIC BRANCH))):::delphicEnter
+        S7_1F --- FAM_CRO
         S7_1F --> S8_CRO1[\Stephen V.R. Crosby<br>1868-1959/]:::pat3
         W8_CRO1{Henrietta Grew}:::pat3
         S8_CRO1 --- W8_CRO1
         
-        S7_1F --> S8_CRO2[/Angelica Harriet Crosby<br>1870?-?\]:::pat3
+        W8_CRO1 --x S9_CRO1_1[\Henry Grew 'Harry' Crosby<br>1898-1929<br>Poet & Publisher/]:::pat4
+        W8_CRO1 --> S9_CRO1_2[/Katharine Schuyler Crosby<br>b. 1901\]:::pat4
+        
+        S7_1F --> S8_CRO2[/Angelica Harriet Crosby<br>1870-1907\]:::pat3
+        FAM_HEN[John Brooks<br>Henderson Jr.<br>1870-1923]:::external
+        S8_CRO2 ---|m. 1903| FAM_HEN
+        FAM_HEN --> S9_HEN1[/Beatrice Henderson<br>1906-?\]:::pat4
 
-        %% -- 8. Eugene (Heir) --
+        %% EUGENE LINE (Manor House)
         W7_1 --> S7_1{{Eugene van Rensselaer<br>1840-1925}}:::pat2
 
         %% =========================================
-        %% GEN 8 (Children of Eugene) - Gradient: #B39DDB
+        %% GEN 8 (Children of Eugene)
         %% =========================================
         W8_1{Sarah Boyd Pendleton<br>1846-1923}:::pat2
         S7_1 ---|m. 1867| W8_1
         W8_1 --> S8_1{Elizabeth van Rensselaer<br>1868-1945}:::pat3
         
         %% =========================================
-        %% GEN 9 (Descendants of Elizabeth/Eugene) - Gradient: #D1C4E9
+        %% GEN 9 (Descendants of Elizabeth/Eugene)
         %% =========================================
         FAM_ARN[Benjamin W. Arnold<br>1865-1932]:::external
-        S8_1 --o FAM_ARN
+        S8_1 --- FAM_ARN
         
-        S8_1 --> S9_ARN1[/Katharine Van R. Arnold<br>1896-?\]:::pat4
+        S8_1 --> S9_ARN1[/Katharine Van R. Arnold<br>1896-1988\]:::pat4
+        FAM_COG[Ledyard Cogswell Jr.<br>1878-1954]:::external
+        S9_ARN1 ---|m. 1920| FAM_COG
+        FAM_COG --> S10_COG1[\Arnold Cogswell<br>1924-2006/]:::pat5
+        FAM_COG --> S10_COG2[/Dorothy A. Cogswell<br>1922-2006\]:::pat5
+
         S8_1 --> S9_ARN2[/Dorothy T. Arnold<br>1900?-?\]:::pat4
 
         linkStyle default interpolate basis
-            
+
 **Equestrian Branch**
 
 - Starting Root: Stephen van Rensselaer III (1764-1839) via Cornelia Paterson (1780-1844)
@@ -497,19 +568,24 @@ Branches
 
     graph TD
         %% =========================================
-        %% STYLING: ROSE/MAGENTA GRADIENT
+        %% PALETTES & STYLES
         %% =========================================
+        %% =================== EQUESTRIAN BRANCH
+        %% GEN 6
         classDef equest1 fill:#880E4F,stroke:#000,stroke-width:2px,color:#fff
+        %% GEN 7
         classDef equest2 fill:#AD1457,stroke:#000,stroke-width:2px,color:#fff
+        %% GEN 8
         classDef equest3 fill:#C2185B,stroke:#000,stroke-width:2px,color:#fff
+        %% GEN 9
         classDef equest4 fill:#D81B60,stroke:#000,stroke-width:2px,color:#fff
+        %% GEN 10
         classDef equest5 fill:#E91E63,stroke:#000,stroke-width:2px,color:#000
-        
-        %% EXTERNAL (WHITE) STYLE
+        %% =================== BRANCH ENTRANCES
         classDef external fill:#FFFFFF,stroke:#000,stroke-width:1px,color:#000
 
         %% =========================================
-        %% ROOT & GEN 6 (Start of Gradient: #880E4F)
+        %% ROOT & GEN 6
         %% =========================================
         ROOT_S3[Stephen van Rensselaer III<br>Reference Only]:::equest1
         W6_2{Cornelia Paterson<br>1780-1844}:::equest1
@@ -517,91 +593,87 @@ Branches
 
         W6_2 --> S6_2[William Paterson van Rensselaer<br>1805-872]:::equest1
         W6_2 --> S6_2C[Cortlandt van Rensselaer<br>1808-1860]:::equest1
-        W6_2 --> S6_3[Henry Bell van Rensselaer<br>1810-1864]:::equest1
+        
+        %% EXPANSION: Henry Bell's Line (The Bankers & Lawyers)
+        W6_2 --> S6_3[Henry Bell van Rensselaer<br>1810-1864<br>U.S. Congressman<br>Civil War General]:::equest1
+        
+        %% EXPANSION: Euphemia's Line (The Real Estate Moguls)
         W6_2 --> S6_E{Euphemia White van Rensselaer<br>1816-1888}:::equest1
+        
         W6_2 --> S6_W[Westerlo van Rensselaer<br>1820-1844]:::equest1
 
         %% =========================================
-        %% GEN 7 (Gradient Step 2: #AD1457)
+        %% GEN 7
         %% =========================================
 
-        %% -- William Paterson Line --
         W7_2{Sarah Rogers<br>1810-1887}:::equest2
         S6_2 ---|m. 1839| W7_2
         W7_2 --> S7_2[Kiliaen van Rensselaer<br>1845-1905]:::equest2
 
-        %% -- Cortlandt Line --
         W6_2C_W{Catherine Ledyard<br>Cogswell<br>1811-1882}:::equest2
         S6_2C ---|m. 1850| W6_2C_W
         W6_2C_W --> S7_2C[Rensselaer van Rensselaer<br>1859-1890?]:::equest2
 
-        %% -- Euphemia Line (Cruger) --
-        FAM_CR[Cruger]:::external
-        S6_E --o FAM_CR
-        S6_E --> S7_CR1[\Stephen V.R. Cruger<br>1844-1898/]:::equest2
-
-        %% -- Henry Bell Line --
+        %% CRUGER EXPANSION
+        FAM_CR[Nicholas Cruger<br>1813-1872]:::external
+        S6_E ---|m. 1843| FAM_CR
+        FAM_CR --> S7_CR1[\Col. Stephen V.R. Cruger<br>1844-1898<br>Real Estate Manager<br>Trinity Church Corp./]:::equest2
+        W7_CR1{Julia G. Floyd<br>1846-?}:::external
+        S7_CR1 --- W7_CR1
+        
+        %% HENRY BELL'S CHILDREN
         W7_3{Elizabeth Ray King<br>1815-1887}:::equest2
         S6_3 ---|m. 1833| W7_3
         
-        %% Screven
         W7_3 --> S7_3D{Mary van Rensselaer<br>1834-1902}:::equest2
-        FAM_SC[Screven]:::external
-        S7_3D --o FAM_SC
+        FAM_SC[John Henry Screven<br>1823-1903]:::external
+        S7_3D --- FAM_SC
         S7_3D --> S8_3D_1[/Elizabeth Screven<br>1856?-?\]:::equest2
 
-        %% Kennedy
         W7_3 --> S7_3E{Cornelia van Rensselaer<br>1836-1864}:::equest2
-        FAM_KEN[Kennedy]:::external
-        S7_3E --o FAM_KEN
-        S7_3E --> S8_3E_1[/Theodore Kennedy<br>1860?-?\]:::equest2
+        FAM_KEN[Robert Lenox Kennedy<br>1822-1887<br>Pres. Bank of Commerce]:::external
+        S7_3E --- FAM_KEN
+        S7_3E --x S8_3E_1[/Theodore Kennedy<br>1860?-?\]:::equest2
 
-        %% Stephen (1838)
         W7_3 --> S7_3B[Stephen van Rensselaer<br>1838-1904]:::equest2
         
-        %% Nun
         W7_3 --> S7_3F{Euphemia van Rensselaer<br>1842-1900?<br>Sister Marie Dolores}:::equest2
 
-        %% Waddington
         W7_3 --> S7_3G{Elizabeth van Rensselaer<br>1845-1911}:::equest2
-        FAM_WAD[Waddington]:::external
-        S7_3G --o FAM_WAD
+        FAM_WAD[George Waddington<br>1840-1915<br>Lawyer]:::external
+        S7_3G --- FAM_WAD
         S7_3G --> S8_3G_1[\Arthur Waddington<br>1872?-?/]:::equest2
 
-        %% John King
-        W7_3 --> S7_3A[John King van Rensselaer<br>1847-1909]:::equest2
+        W7_3 --> S7_3A[John King van Rensselaer<br>1847-1909<br>Pres. Stirling Fire Ins.]:::equest2
         
-        %% Delafield
+        %% DELAFIELD EXPANSION
         W7_3 --> S7_3C{Katherine van Rensselaer<br>1849-1901}:::equest2
-        FAM_DEL[Delafield]:::external
-        S7_3C --o FAM_DEL
-        S7_3C --> S8_3C_1[\John Ross Delafield<br>1874-1964/]:::equest2
-        S7_3C --> S8_3C_2[\Julia Delafield<br>1875?-?/]:::equest2
-        S7_3C --> S8_3C_3[\Cornelia Delafield<br>1876?-?/]:::equest2
-        S7_3C --> S8_3C_4[\Edward Delafield<br>1880?-?/]:::equest2
+        FAM_DEL[Dr. Francis Delafield<br>1841-1915<br>Pres. Assoc. of American Physicians]:::external
+        S7_3C ---|m. 1870| FAM_DEL
+        
+        FAM_DEL --> S8_3C_1[\Gen. John Ross Delafield<br>1874-1964<br>Lawyer & Brigadier Gen./]:::equest3
+        FAM_DEL --> S8_3C_2[\Julia Floyd Delafield<br>1875-? /]:::equest3
+        FAM_DEL --> S8_3C_3[\Cornelia Van R. Delafield<br>1876-? /]:::equest3
+        FAM_DEL --> S8_3C_4[\Edward Coleman Delafield<br>1877-1976<br>Pres. Franklin Trust Co./]:::equest3
 
-        %% Jesuit
         W7_3 --> S7_3H[Rev. Henry van Rensselaer<br>1851-1907<br>Jesuit Priest]:::equest2
 
         %% =========================================
-        %% GEN 8 (Gradient Step 3: #C2185B)
+        %% GEN 8
         %% =========================================
 
-        %% -- Kiliaen (WP Line) --
         W8_2{Olivia Phelps Atterbury<br>1848-1923}:::equest3
         S7_2 ---|m. 1870| W8_2
         W8_2 --> S8_2B{Sarah Elizabeth van Rensselaer<br>1873-1957}:::equest3
         W8_2 --> S8_2D{Katherine Boudinot van Rensselaer<br>1875-1896}:::equest3
-        W8_2 --> S8_2A[Kiliaen van Rensselaer<br>1879-1949]:::equest3
-        W8_2 --> S8_2C[William Stephen van Rensselaer<br>1886-1930]:::equest3
+        W8_2 --> S8_2A[Kiliaen van Rensselaer<br>1879-1949<br>Broker]:::equest3
+        W8_2 --> S8_2C[William Stephen van Rensselaer<br>1886-1930<br>Equitable Trust Co.]:::equest3
 
-        %% -- John King Line --
-        W8_3{May Denning King<br>1848-1925}:::equest3
+        W8_3{May Denning King<br>1848-1925<br>Author & Society Matron}:::equest3
         S7_3A ---|m. 1871| W8_3
         W8_3 --> S8_3A[John King van Rensselaer Jr.<br>1872-1919]:::equest3
-        W8_3 --> S8_3A_2[Frederick C. van Rensselaer<br>1874?-1905?]:::equest3
+        W8_3 --x S8_3A_2[Frederick C. van Rensselaer<br>1874?-1905?]:::equest3
 
-        %% -- Stephen (1838) Line --
         W8_4{Mathilda Coster<br>Heckscher<br>1838-1915}:::equest3
         S7_3B ---|m. 1863| W8_4
         W8_4 --> S8_3B[Charles A. van Rensselaer<br>1867-1935]:::equest3
@@ -610,181 +682,29 @@ Branches
         W8_4 --> S8_3B_3{Mathilde van Rensselaer<br>1877-1950?}:::equest3
 
         %% =========================================
-        %% GEN 9 (Gradient Step 4: #D81B60)
+        %% GEN 9
         %% =========================================
         
-        %% -- Kiliaen (1879) Children --
         W9_1{Dorothy G. Lyon<br>1885?-1960?}:::equest4
         S8_2A --- W9_1
         W9_1 --> S9_1{Barbara van Rensselaer<br>1909-1944}:::equest4
 
-        %% -- Charles A. (1867) Children --
         W9_2{Caroline E. Fitz-Gerald<br>1871-1932}:::equest4
         S8_3B --- W9_2
         W9_2 --> S9_2A[Charles A. van Rensselaer Jr.<br>1893-1967]:::equest4
         W9_2 --> S9_2B[Stephen van Rensselaer<br>1896-1945]:::equest4
 
         %% =========================================
-        %% GEN 10 (Gradient Step 5: #E91E63)
+        %% GEN 10
         %% =========================================
 
-        %% -- Charles A. Jr. Children --
         W10_1{Adele Brookfield}:::equest5
         S9_2A --- W10_1
         W10_1 --> S10_1[Charles A. van Rensselaer III<br>1925-?]:::equest5
-        W10_1 --> S10_2[Philip van Rensselaer<br>1928-1996<br>]:::equest5
-
+        W10_1 --> S10_2[Philip van Rensselaer<br>1928-1996<br>Author & Socialite]:::equest5
         linkStyle default interpolate basis
 
-**Delphic Branch**
-
-- Starting Root: Elizabeth van Rensselaer (1768-1841)
-
-.. mermaid::
-    :zoom:
-
-    graph TD
-        %% =========================================
-        %% STYLING: DELPHIC BLUE GRADIENT
-        %% =========================================
-        classDef del1 fill:#01579B,stroke:#000,stroke-width:2px,color:#fff
-        classDef del2 fill:#0277BD,stroke:#000,stroke-width:2px,color:#fff
-        classDef del3 fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff
-        classDef del4 fill:#039BE5,stroke:#000,stroke-width:2px,color:#fff
-        classDef del5 fill:#29B6F6,stroke:#000,stroke-width:2px,color:#000
-        classDef del6 fill:#4FC3F7,stroke:#000,stroke-width:2px,color:#000
-        classDef del7 fill:#81D4FA,stroke:#000,stroke-width:2px,color:#000
-        classDef del8 fill:#B3E5FC,stroke:#000,stroke-width:2px,color:#000
-        
-        classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
-        classDef prodigalExit fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-
-        %% =========================================
-        %% ROOT (Gen 5)
-        %% =========================================
-        ROOT_E{Elizabeth van Rensselaer<br>1768-1841}:::del1
-        
-        %% HUSBAND 1: SCHUYLER
-        FAM_JBS[John Bradstreet<br>Schuyler<br>1765-1795]:::external
-        ROOT_E ---|m. 1787| FAM_JBS
-        
-        %% HUSBAND 2: BLEECKER
-        FAM_BLE[John Bleecker<br>1763-1833]:::external
-        ROOT_E ---|m. 1799| FAM_BLE
-
-        %% =========================================
-        %% GEN 6: The Two Houses (Schuyler & Bleecker)
-        %% =========================================
-        
-        %% -- SCHUYLER LINE --
-        FAM_JBS --> S6_JBS1[\Philip Schuyler<br>1788-1865/]:::del2
-        FAM_JBS --> S6_JBS2[\Stephen V.R. Schuyler<br>1792-1859/]:::del2
-        
-        %% -- BLEECKER LINE --
-        FAM_BLE --> S6_BLE1[\Stephen V.R. Bleecker<br>1803-1827/]:::del2
-        FAM_BLE --> S6_BLE2[/Catharine Westerlo Bleecker<br>1809?-1886\]:::del2
-
-        %% =========================================
-        %% GEN 7: Philip's Line (The 9 Children)
-        %% =========================================
-        W6_PS{Grace Hunter<br>1790-1856}:::external
-        S6_JBS1 ---|m. 1811| W6_PS
-        
-        %% 1. Ruth (Ogden)
-        W6_PS --> S7_PS2[/Ruth Catherine Schuyler<br>1813-1901\]:::del3
-        FAM_OGD[Thomas W. Ogden<br>1810-1898]:::external
-        S7_PS2 --o FAM_OGD
-
-        %% 2. Elizabeth (Betty)
-        W6_PS --> S7_PS3[/Elizabeth V.R. Schuyler<br>1815-1889\]:::del3
-        
-        %% 3. Grace
-        W6_PS --> S7_PS4[/Grace Schuyler<br>1819-1895\]:::del3
-        
-        %% 4. Catherine
-        W6_PS --> S7_PS5[/Catherine Schuyler<br>1820-1887\]:::del3
-
-        %% 5. Harriet
-        W6_PS --> S7_PS6[/Harriet Schuyler<br>1823-1877\]:::del3
-
-        %% 6. Letitia (de Luze)
-        W6_PS --> S7_PS7[/Letitia Hunter Schuyler<br>1825-1904\]:::del3
-        FAM_DL[Charles Henry<br>de Luze<br>1823-1896]:::external
-        S7_PS7 --o FAM_DL
-
-        %% 7. Fanny
-        W6_PS --> S7_PS8[/Fanny Schuyler<br>1829-1917\]:::del3
-        
-        %% 8. John (Heir)
-        W6_PS --> S7_PS1[\John Schuyler<br>1829-1895/]:::del3
-        W7_PS1{Malvina Hallett}:::external
-        S7_PS1 --- W7_PS1
-
-        %% 9. Mary
-        W6_PS --> S7_PS9[/Mary Schuyler<br>1831-1897\]:::del3
-
-        %% =========================================
-        %% GEN 7: Stephen's Line
-        %% =========================================
-        W6_SVR{Catherine Morris<br>1790-1866}:::external
-        S6_JBS2 --- W6_SVR
-        
-        W6_SVR --> S7_SVR1[\John Bradstreet Schuyler<br>1822-1887/]:::del3
-
-        %% =========================================
-        %% GEN 7: Bleecker Line
-        %% =========================================
-        FAM_CVR[[Cornelius Van Rensselaer<br>1801-1871<br>SEE PRODIGAL BRANCH]]:::prodigalExit
-        S6_BLE2 --o FAM_CVR
-
-        %% =========================================
-        %% GEN 8
-        %% =========================================
-
-        %% -- Children of John Schuyler --
-        W7_PS1 --> S8_PS1_1[\Philip Van Rensselaer Schuyler<br>1857-1911/]:::del4
-        
-        %% -- Children of Ruth Schuyler (Ogden) --
-        FAM_OGD --> S8_OGD1[\Thomas Ludlow Ogden<br>1840-1894/]:::del4
-        FAM_OGD --> S8_OGD2[/Ellen Ogden<br>1854-?\]:::del4
-        FAM_OGD --> S8_OGD3[\Walter Ogden<br>1856-? /]:::del4
-        FAM_OGD --> S8_OGD4[\Louis Mansfield Ogden<br>1861-1945/]:::del4
-
-        %% -- Children of Letitia Schuyler (de Luze) --
-        FAM_DL --> S8_DL1[\Louis P. de Luze<br>1852-1921/]:::del4
-        FAM_DL --> S8_DL2[/Grace Schuyler de Luze<br>1854-1925\]:::del4
-        FAM_DL --> S8_DL3[\Philip Schuyler de Luze<br>1858-1934/]:::del4
-        FAM_DL --> S8_DL4[\Francis Ogden de Luze<br>1860-1928/]:::del4
-
-        %% =========================================
-        %% GEN 9
-        %% =========================================
-        
-        %% Philip (1883)
-        W8_P1{Jeannie F.J. Carpender<br>1887–1973}:::external
-        S8_PS1_1 ---|m. 1910| W8_P1
-        W8_P1 --> S9_P1[\Philip Van Rensselaer Schuyler<br>1883-1958/]:::del6
-
-        %% =========================================
-        %% GEN 10 (The 20th Century)
-        %% =========================================
-
-        W9_P1{Marjorie Campbell}:::external
-        S9_P1 --- W9_P1
-        W9_P1 --> S10_P1[\Philip Van Rensselaer Schuyler Jr.<br>1911-1975/]:::del7
-        W9_P1 --> S10_P2[/Marjorie Schuyler<br>1914-1990\]:::del7
-
-        %% =========================================
-        %% GEN 11
-        %% =========================================
-        
-        W10_P1{Freddie Stafford}:::external
-        S10_P1 --- W10_P1
-        W10_P1 --> S11_P1[\Phillip Newell Schuyler<br>b. 1933 /]:::del8
-
-        linkStyle default interpolate basis
-
-**Prodigal Branch**
+**Plebian Branch**
 
 - Starting Root: Hendrick van Rensselaer (1667-1740)
 
@@ -793,8 +713,9 @@ Branches
 
     graph TD
         %% =========================================
-        %% STYLING DEFINITIONS (MATERIAL ORANGE GRADIENT)
+        %% PALETTES & STYLES
         %% =========================================
+        %% =========== PLEBIAN BRANCH
         classDef clav1 fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff
         classDef clav2 fill:#D84315,stroke:#000,stroke-width:2px,color:#fff
         classDef clav3 fill:#E64A19,stroke:#000,stroke-width:1px,color:#fff
@@ -802,9 +723,14 @@ Branches
         classDef clav5 fill:#FF5722,stroke:#000,stroke-width:1px,color:#000
         classDef clav6 fill:#FF7043,stroke:#000,stroke-width:1px,color:#000
         classDef clav7 fill:#FF8A65,stroke:#000,stroke-width:1px,color:#000
-        
+        classDef clav8 fill:#FFAB91,stroke:#000,stroke-width:1px,color:#000
+        %% =========== BRANCH ENTRANCES
         classDef external fill:#FFFFFF,stroke:#E65100,stroke-width:1px,color:#000
         classDef delphicEnter fill:#0277BD,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef trophEnter fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        %% =========== BRANCH EXITS
+        classDef patricianExit fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef delphicExit fill:#01579B,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
 
         %% =========================================
         %% ROOTS (From Gen 2/3)
@@ -830,45 +756,72 @@ Branches
         %% GEN 4
         %% =========================================
         
-        %% -- Kiliaen/Greenbush Line --
         W4_2{Ariantje Schuyler<br>1720-1763}:::clav3
         S3_B1 ---|m. 1742| W4_2
         W4_2 --> S4_B1[Henry K. van Rensselaer<br>1744-1816]:::clav3
         W4_2 --> S4_B2[Philip K. van Rensselaer<br>1747-1798]:::clav3
 
-        %% -- Maria/Ten Broeck Line --
         FAM_TB2[Ten Broeck]:::external
-        S3_B3 --o FAM_TB2
+        S3_B3 --- FAM_TB2
         S3_B3 --> S4_TB_M1[\Dirck Wessels Ten Broeck/]:::clav3
         S3_B3 --> S4_TB_M2[/Catharina Ten Broeck\]:::clav3
 
-        %% -- Anna/Douw Line --
         FAM_DOUW[Douw]:::external
-        S3_B5 --o FAM_DOUW
+        S3_B5 --- FAM_DOUW
         S3_B5 --> S4_DOUW1[/Magdalena Douw\]:::clav3
-        S3_B5 --> S4_DOUW2[\Capt. Volkert Petrus Douw/]:::clav3
+        
+        %% DOUW EXPANSION (Type A)
+        S3_B5 --> S4_DOUW2[\Capt. Volkert Petrus Douw<br>1720-1801/]:::clav3
+        S4_DOUW2 --> S5_DOUW1[/Rachel Douw<br>1744-1799\]:::clav4
 
-        %% -- Helena/Wendell Line --
         FAM_WEN[Wendell]:::external
-        S3_B6 --o FAM_WEN
+        S3_B6 --- FAM_WEN
         S3_B6 --> S4_WEN2[\Hendrick Jacob 'Henry' Wendell/]:::clav3
 
-        %% -- Johannes/Claverack Line --
         W4_3{Angelica Livingston<br>1698–1747}:::clav3
         S3_B2 ---|m. 1734| W4_3
-        W4_3 --> S4_B2A{Catherine van Rensselaer Schuyler}:::clav3
-        W4_3 --> S4_B2C[Jeremiah van Rensselaer]:::clav3
-        W4_3 --> S4_B3[Robert van Rensselaer<br>1740-1802]:::clav3
-        W4_3 --> S4_B2D[Hendrick Livingston van Rensselaer]:::clav3
-        W4_3 --> S4_B4[James van Rensselaer<br>1747-1827]:::clav3
+        
+        W4_3 --> S4_B2A{Catherine van Rensselaer<br>1734-1803}:::clav3
+        FAM_PS[Gen. Philip Schuyler<br>1733-1804]:::external
+        S4_B2A ---|m. 1755| FAM_PS
+        
+        %% EXITS TO PATRICIAN AND DELPHIC
+        FAM_PS --> LINK_PAT[[Margarita Schuyler<br>SEE PATRICIAN BRANCH]]:::patricianExit
+        FAM_PS --> LINK_DEL[[John Bradstreet Schuyler<br>SEE DELPHIC BRANCH]]:::delphicExit
 
-        %% -- Hendrick (1712) Line --
+        %% RETROACTIVE RULE APPLIED: LINE ENDS
+        FAM_PS --o S5_PS_R[\Rensselaer Schuyler<br>1773-1847/]:::clav4
+        W5_PS_R(((Elizabeth Ten Broeck<br>SEE TROPHONIAN BRANCH))):::trophEnter
+        S5_PS_R ---|m. 1793| W5_PS_R
+        W5_PS_R --x S6_PS_R1[\Philip Rensselaer Schuyler<br>1801-1865/]:::clav5
+        
+        W4_3 --> S4_B2C[Jeremiah van Rensselaer<br>1738-1764]:::clav3
+        
+        W4_3 --> S4_B3[Robert van Rensselaer<br>1740-1802]:::clav3
+        W4_R{Cornelia Rutsen<br>1747-1790}:::external
+        S4_B3 ---|m. 1765| W4_R
+        W4_R --> S5_B4[Jacob Rutsen van Rensselaer<br>1767-1835]:::clav4
+        
+        %% NEW ENTRY: ANN VAN RENSSELAER (TO TROPHONIAN)
+        W4_R --> S5_B4B{Ann van Rensselaer<br>1776-1855}:::clav4
+        FAM_TB_AB[[Abraham Ten Broeck<br>SEE TROPHONIAN BRANCH]]:::trophEnter
+        S5_B4B ---|m. 1799| FAM_TB_AB
+
+        W4_3 --> S4_B2D[Hendrick Livingston<br>van Rensselaer<br>1742-1814]:::clav3
+        %% MERGED DOUW CONNECTION
+        S4_B2D ---|m. 1766| S5_DOUW1
+        S5_DOUW1 --> S5_H_1{Angelica van Rensselaer<br>1770-1800?}:::clav4
+        
+        W4_3 --> S4_B4[James van Rensselaer<br>1747-1827]:::clav3
+        W4_J{Elsie Schuyler<br>1760-1838}:::external
+        S4_B4 ---|m. 1789| W4_J
+        W4_J --> S5_J1[John van Rensselaer<br>1784-?]:::clav4
+
         W4_H1{Elizabeth Van Brugh<br>Van Rensselaer}:::clav3
         S3_B8 -.-|m. 1735| W4_H1
         W4_H1 --> S4_H1[Jeremiah van Rensselaer<br>1738-1810]:::clav3
         W4_H1 --> S4_H4[Killian van Rensselaer<br>1749-1814]:::clav3
         
-        %% -- Col. Kiliaen (1717) Line --
         W4_K1{Ariaantje Schuyler}:::clav3
         S3_B9 ---|m. 1742| W4_K1
         W4_K1 --> S4_N1[Nicholas van Rensselaer<br>1754-1848]:::clav3
@@ -877,89 +830,81 @@ Branches
         %% GEN 5
         %% =========================================
         
-        %% -- Jeremiah (1738) Expansion --
         W5_J1{Judith Bayard<br>1740-1817}:::clav4
         S4_H1 ---|m. 1760| W5_J1
         W5_J1 --> S5_JJ[Gen. John Jeremias<br>van Rensselaer<br>1762-1828]:::clav4
 
-        %% -- Nicholas (1754) Expansion (UPDATED) --
         W5_N1{Elsie Van Buren<br>1759-1844}:::clav4
         S4_N1 ---|m. 1780| W5_N1
         W5_N1 --> S5_K1[Kiliaen van Rensselaer<br>1782-1871]:::clav4
         W5_N1 --> S5_M1{Magdalena van Rensselaer<br>1784-?}:::clav4
         W5_N1 --> S5_C2[Cornelius van Rensselaer<br>1793-1868]:::clav4
 
-        %% -- Kiliaen/Solomon Line --
         W5_2{Alida Bratt}:::clav4
         S4_B1 --- W5_2
         W5_2 --> S5_B1[Solomon van Rensselaer<br>1774-1852]:::clav4
 
-        %% -- Philip K. Line --
         W5_3{Maria Sanders<br>1749–1830}:::clav4
         S4_B2 ---|m. 1768| W5_3
         W5_3 --> W6_3{Harriet van Rensselaer<br>1775-1840}:::clav5
 
-        %% -- Johannes/Robert Line --
         W5_4{Helena Lansing}:::clav4
         S4_B3 --- W5_4
-        W5_4 --> S5_B4[Jacob R. van Rensselaer<br>1767-1835]:::clav4
+        
+        W6_4{Cornelia de Peyster<br>1776-1839}:::clav4
+        S5_B4 ---|m. 1801| W6_4
+        W6_4 --> S6_B5[Jeremiah van Rensselaer<br>1812-1874]:::clav5
+        %% NEW ENTRY: RICHARD VR (COUSIN MARRIAGE LINE)
+        W6_4 --> S5_B4C[Richard van Rensselaer<br>1797-1880]:::clav5
 
         %% =========================================
         %% GEN 6
         %% =========================================
         
-        %% -- Gen. John Jeremias Children --
         W6_JJ{Catharine Glen<br>1765-1807}:::clav5
         S5_JJ ---|m. 1784| W6_JJ
         W6_JJ --> S6_J1[Dr. Jeremiah van Rensselaer<br>1793-1871]:::clav5
         W6_JJ --> S6_C1[Rev. Cornelius Glen van Rensselaer<br>1801-1871]:::clav5
 
-        %% -- Link to Delphic Branch --
         W6_BLE(((Catharine Westerlo Bleecker<br>SEE DELPHIC BRANCH))):::delphicEnter
         S6_C1 ---|m. 1826| W6_BLE
 
-        %% -- Solomon & Harriet --
         S5_B1 -.-|m. 1797| W6_3
         W6_3 --> S6_4[Adeline van Rensselaer]:::clav5
         W6_3 --> S6_5[Rensselaer van Rensselaer<br>1802-1873]:::clav5
-
-        %% -- Jacob R. Line (Corrected) --
-        W6_4{Cornelia de Peyster}:::clav5
-        S5_B4 --- W6_4
-        W6_4 --> S6_B5[Jeremiah van Rensselaer<br>1812-1874]:::clav5
+        %% NEW ENTRY: MATILDA VR
+        W6_3 --> S6_6{Matilda van Rensselaer<br>1806-1863}:::clav5
+        
+        %% LINK RICHARD AND MATILDA
+        S5_B4C -.-|m. 1836| S6_6
+        S6_6 --> S6_R1[Maria Elizabeth<br>van Rensselaer<br>1840-?]:::clav6
 
         %% =========================================
-        %% GEN 7 (Expansion of Cornelius & Catharine)
+        %% GEN 7
         %% =========================================
         
-        %% 1. Visscher (Heir of this line)
         W6_BLE --> S7_C1_V[Visscher van Rensselaer<br>1837-1912]:::clav6
-        W7_C1_V{Mary Augusta Miller}:::external
+        W7_C1_V{Mary Augusta Miller<br>1838-1912}:::external
         S7_C1_V --- W7_C1_V
         
-        %% 2. Catharine
         W6_BLE --> S7_C1_C{Catharine Westerlo<br>van Rensselaer<br>1834-1912}:::clav6
-        FAM_UPS[Rev. Anson Judd Upson]:::external
-        S7_C1_C --o FAM_UPS
+        FAM_UPS[Rev. Anson Judd Upson<br>1823-1902]:::external
+        S7_C1_C --- FAM_UPS
         
-        %% 3. Lydig
-        W6_BLE --> S7_C1_L[Lydig Montague<br>van Rensselaer<br>1838-?]:::clav6
+        W6_BLE --> S7_C1_L[Lydig Montague<br>van Rensselaer<br>1838-1904]:::clav6
         
-        %% 4. Alice
         W6_BLE --> S7_C1_A{Alice van Rensselaer<br>1840-?}:::clav6
-        FAM_SHIP[Edward Shippen]:::external
-        S7_C1_A --o FAM_SHIP
+        FAM_SHIP[Edward Shippen<br>1826-1911]:::external
+        S7_C1_A --- FAM_SHIP
 
         %% =========================================
         %% GEN 7 (Other Lines)
         %% =========================================
         
-        %% -- Rensselaer (1802) --
         W6_4B{Mary Elizabeth Bacot}:::clav6
         S6_5 --- W6_4B
         W6_4B --> S7_B1{Maria Elizabeth van Rensselaer}:::clav6
 
-        %% -- Dr. Jeremiah (1793) & Peyton Jaudon Line (Moved here) --
         W7_4{Julia Webster Jaudon<br>1826-1901}:::clav6
         S6_J1 ---|m. 1846| W7_4
         W7_4 --> S7_B6[Peyton Jaudon van Rensselaer<br>1863-1919]:::clav6
@@ -968,12 +913,574 @@ Branches
         %% GEN 8 (Expansion)
         %% =========================================
         
-        %% -- Visscher's Line --
-        W7_C1_V --> S8_V_1[Cornelius Glen<br>van Rensselaer<br>1868-?]:::clav7
+        W7_C1_V --> S8_V_1[Cornelius Glen<br>van Rensselaer<br>1869-1925]:::clav7
 
-        %% -- Peyton Jaudon Line --
-        W8_5{Mabel Mason<br>1869-1925}:::clav7
+        FAM_SHIP --> S8_SHIP1[/Augusta Shippen<br>1869-1934\]:::clav7
+        FAM_SHIP --> S8_SHIP2[/Anna Shippen<br>1871-?\]:::clav7
+
+        W8_5{Mabel Mason<br>1869-1925}:::external
         S7_B6 ---|m. 1909| W8_5
-        W8_5 --> S8_B7[Peyton J. van Rensselaer Jr.]:::clav7
+        W8_5 --> S8_B7[Peyton J. van Rensselaer Jr.<br>1905-?]:::clav7
+
+        linkStyle default interpolate basis
+
+Female Branches
+~~~~~~~~~~~~~~~
+
+**Delphic Branch**
+
+- Starting Root: Elizabeth van Rensselaer (1768-1841)
+
+.. mermaid::
+    :zoom:
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ================= DELPHIC BRANCH
+        classDef del1 fill:#01579B,stroke:#000,stroke-width:2px,color:#fff
+        classDef del2 fill:#0277BD,stroke:#000,stroke-width:2px,color:#fff
+        classDef del3 fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff
+        classDef del4 fill:#039BE5,stroke:#000,stroke-width:2px,color:#fff
+        classDef del5 fill:#29B6F6,stroke:#000,stroke-width:2px,color:#000
+        classDef del6 fill:#4FC3F7,stroke:#000,stroke-width:2px,color:#000
+        classDef del7 fill:#81D4FA,stroke:#000,stroke-width:2px,color:#000
+        classDef del8 fill:#B3E5FC,stroke:#000,stroke-width:2px,color:#000
+        %% ================= BRANCH ENTRANCES
+        classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+        classDef plebianEnter fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff
+        %% ================= BRANCH EXITS
+        classDef plebianExit fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+        classDef patricianExit fill:#7E57C2,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+        %% =========================================
+        %% ROOT (Gen 5)
+        %% =========================================
+        ROOT_E{Elizabeth van Rensselaer<br>1768-1841}:::del1
+        
+        FAM_JBS[John Bradstreet<br>Schuyler<br>1765-1795]:::external
+        
+        %% NEW ENTRY FROM PLEBIAN
+        ENT_PLEB(((Gen. Philip Schuyler<br>SEE PLEBIAN BRANCH))):::plebianEnter
+        ENT_PLEB --> FAM_JBS
+
+        ROOT_E ---|m. 1787| FAM_JBS
+        
+        FAM_BLE[John Bleecker<br>1763-1833]:::external
+        ROOT_E ---|m. 1799| FAM_BLE
+
+        %% =========================================
+        %% GEN 6: The Two Houses (Schuyler & Bleecker)
+        %% =========================================
+        
+        FAM_JBS --> S6_JBS1[\Philip Schuyler<br>1788-1865/]:::del2
+        FAM_JBS --> S6_JBS2[\Stephen V.R. Schuyler<br>1792-1859/]:::del2
+        
+        FAM_BLE --> S6_BLE1[\Stephen V.R. Bleecker<br>1803-1827/]:::del2
+        FAM_BLE --> S6_BLE2[/Catharine Westerlo Bleecker<br>1809?-1886\]:::del2
+
+        %% =========================================
+        %% GEN 7: Philip's Line (The 9 Children)
+        %% =========================================
+        W6_PS{Grace Hunter<br>1790-1856}:::external
+        S6_JBS1 ---|m. 1811| W6_PS
+        
+        W6_PS --> S7_PS2[/Ruth Catherine Schuyler<br>1813-1901\]:::del3
+        FAM_OGD[Thomas W. Ogden<br>1810-1898]:::external
+        S7_PS2 --- FAM_OGD
+
+        W6_PS --> S7_PS3[/Elizabeth V.R. Schuyler<br>1815-1889\]:::del3
+        
+        W6_PS --> S7_PS4[/Grace Schuyler<br>1819-1895\]:::del3
+        
+        W6_PS --> S7_PS5[/Catherine Schuyler<br>1820-1887\]:::del3
+
+        W6_PS --> S7_PS6[/Harriet Schuyler<br>1823-1877\]:::del3
+
+        W6_PS --> S7_PS7[/Letitia Hunter Schuyler<br>1825-1904\]:::del3
+        FAM_DL[Charles Henry<br>de Luze<br>1823-1896]:::external
+        S7_PS7 --- FAM_DL
+
+        W6_PS --> S7_PS8[/Fanny Schuyler<br>1829-1917\]:::del3
+        
+        W6_PS --> S7_PS1[\John Schuyler<br>1829-1895/]:::del3
+        W7_PS1{Malvina Hallett}:::external
+        S7_PS1 --- W7_PS1
+
+        W6_PS --> S7_PS9[/Mary Schuyler<br>1831-1897\]:::del3
+
+        %% =========================================
+        %% GEN 7: Stephen's Line
+        %% =========================================
+        W6_SVR{Catherine Morris<br>1790-1866}:::external
+        S6_JBS2 --- W6_SVR
+        
+        W6_SVR --> S7_SVR1[\John Bradstreet Schuyler<br>1822-1887/]:::del3
+        
+        %% NEW EXPANSION: CROSBY LINE
+        W6_SVR --> S7_SVR2[/Angelica Schuyler<br>1820-1896\]:::del3
+        FAM_CROS[Clarkson F. Crosby<br>1817-1858]:::external
+        S7_SVR2 ---|m. 1838| FAM_CROS
+        
+        FAM_CROS --> S8_CROS1[[John Schuyler Crosby<br>SEE PATRICIAN BRANCH]]:::patricianExit
+
+        %% =========================================
+        %% GEN 7: Bleecker Line
+        %% =========================================
+        FAM_CVR[[Cornelius Van Rensselaer<br>1801-1871<br>SEE PLEBIAN BRANCH]]:::plebianExit
+        S6_BLE2 --- FAM_CVR
+
+        %% =========================================
+        %% GEN 8
+        %% =========================================
+
+        W7_PS1 --> S8_PS1_1[\Philip Van Rensselaer Schuyler<br>1857-1911/]:::del4
+        
+        FAM_OGD --> S8_OGD1[\Thomas Ludlow Ogden<br>1840-1894/]:::del4
+        FAM_OGD --> S8_OGD2[/Ellen Ogden<br>1854-?\]:::del4
+        FAM_OGD --> S8_OGD3[\Walter Ogden<br>1856-? /]:::del4
+        FAM_OGD --> S8_OGD4[\Louis Mansfield Ogden<br>1861-1945/]:::del4
+
+        FAM_DL --> S8_DL1[\Louis P. de Luze<br>1852-1921/]:::del4
+        FAM_DL --> S8_DL2[/Grace Schuyler de Luze<br>1854-1925\]:::del4
+        FAM_DL --> S8_DL3[\Philip Schuyler de Luze<br>1858-1934/]:::del4
+        FAM_DL --> S8_DL4[\Francis Ogden de Luze<br>1860-1928/]:::del4
+
+        %% =========================================
+        %% GEN 9
+        %% =========================================
+        
+        W8_P1{Jeannie F.J. Carpender<br>1887–1973}:::external
+        S8_PS1_1 ---|m. 1910| W8_P1
+        W8_P1 --> S9_P1[\Philip Van Rensselaer Schuyler<br>1883-1958/]:::del6
+
+        %% =========================================
+        %% GEN 10 (The 20th Century)
+        %% =========================================
+
+        W9_P1{Marjorie Campbell}:::external
+        S9_P1 --- W9_P1
+        W9_P1 --> S10_P1[\Philip Van Rensselaer Schuyler Jr.<br>1911-1975/]:::del7
+        W9_P1 --> S10_P2[/Marjorie Schuyler<br>1914-1990\]:::del7
+
+        %% =========================================
+        %% GEN 11
+        %% =========================================
+        
+        W10_P1{Freddie Stafford}:::external
+        S10_P1 --- W10_P1
+        W10_P1 --> S11_P1[\Phillip Newell Schuyler<br>b. 1933 /]:::del8
+
+        linkStyle default interpolate basis
+
+**Trophonian Branch**
+
+- Starting Root: Elizabeth van Rensselaer (1734-1813)
+
+.. mermaid::
+    :zoom:
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ===================== TROPHONIAN BRANCH (Azure/Cerulean)
+        classDef troph1 fill:#0288D1,stroke:#000,stroke-width:2px,color:#fff
+        classDef troph2 fill:#039BE5,stroke:#000,stroke-width:2px,color:#fff
+        classDef troph3 fill:#29B6F6,stroke:#000,stroke-width:2px,color:#000
+        classDef troph4 fill:#4FC3F7,stroke:#000,stroke-width:2px,color:#000
+        classDef troph5 fill:#81D4FA,stroke:#000,stroke-width:2px,color:#000
+        %% ===================== EXTERNAL
+        classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+        classDef plebianEnter fill:#BF360C,stroke:#000,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+
+        %% =========================================
+        %% ROOT (Gen 4)
+        %% =========================================
+        ROOT_E{Elizabeth van Rensselaer<br>1734-1813}:::troph1
+        FAM_TB[Gen. Abraham Ten Broeck<br>1734-1810<br>Mayor of Albany]:::external
+        ROOT_E ---|m. 1763| FAM_TB
+
+        %% =========================================
+        %% GEN 5: The Ten Broeck Line
+        %% =========================================
+        
+        FAM_TB --> S5_TB1[\Dirck Ten Broeck<br>1765-1833<br>Speaker of NY Assembly/]:::troph2
+        W5_TB1{Cornelia Stuyvesant<br>1768-1825}:::external
+        S5_TB1 --- W5_TB1
+
+        %% RETROACTIVE RULE APPLIED: LINE ENDS
+        FAM_TB --o S5_TB2[/Elizabeth Ten Broeck<br>1772-1848\]:::troph2
+        FAM_RS[[Rensselaer Schuyler<br>SEE PLEBIAN BRANCH]]:::plebianEnter
+        S5_TB2 ---|m. 1793| FAM_RS
+
+        FAM_TB --> S5_TB3[\Abraham Ten Broeck<br>1775-1841/]:::troph2
+        W5_TB3(((Ann van Rensselaer<br>SEE PLEBIAN BRANCH))):::plebianEnter
+        S5_TB3 ---|m. 1799| W5_TB3
+
+        %% =========================================
+        %% GEN 6
+        %% =========================================
+
+        W5_TB1 --x S6_TB1_1[\Abraham S. Ten Broeck<br>1788-1810/]:::troph3
+        W5_TB1 --> S6_TB1_2[/Margaret S. Ten Broeck<br>1790-1873\]:::troph3
+        W5_TB1 --> S6_TB1_3[\Rev. Petrus S. Ten Broeck<br>1792-1849/]:::troph3
+        
+        W6_TB1_3{Lucretia Loring<br>Cutter<br>1799-?}:::external
+        S6_TB1_3 ---|m. 1819| W6_TB1_3
+
+        FAM_RS --x S6_TB2_1[\Philip Rensselaer Schuyler<br>1801-1865/]:::troph3
+
+        %% =========================================
+        %% GEN 7
+        %% =========================================
+
+        W6_TB1_3 --> S7_TB1_3A[\Peter Stuyvesant<br>Ten Broeck<br>1822-1867/]:::troph4
+
+        linkStyle default interpolate basis
+
+**Sibylline Branch**
+
+- Starting Root: Maria van Rensselaer (1702-1723)
+
+.. mermaid::
+    :zoom:
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ===================== SIBYLLINE BRANCH (Lapis/Blue)
+        classDef sib1 fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff
+        classDef sib2 fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff
+        classDef sib3 fill:#1E88E5,stroke:#000,stroke-width:2px,color:#fff
+        classDef sib4 fill:#2196F3,stroke:#000,stroke-width:2px,color:#000
+        %% ===================== EXTERNAL
+        classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+
+        %% =========================================
+        %% ROOT (Gen 3)
+        %% =========================================
+        ROOT_M{Maria van Rensselaer<br>1702-c. 1723}:::sib1
+        FAM_FVC[Frederick Van Cortlandt<br>1699-1749]:::external
+        ROOT_M ---|m. 1722| FAM_FVC
+
+        %% =========================================
+        %% GEN 4: Van Cortlandt of Yonkers
+        %% =========================================
+        FAM_FVC --x S4_FVC1[\James Van Cortlandt<br>1727-1781/]:::sib2
+        FAM_FVC --> S4_FVC2[\Augustus Van Cortlandt<br>1728-1823<br>City Clerk of NYC/]:::sib2
+        FAM_FVC --x S4_FVC3[\Frederick Van Cortlandt II<br>1730-1794/]:::sib2
+        
+        FAM_FVC --> S4_FVC4[/Anne Van Cortlandt<br>1736-1790\]:::sib2
+        FAM_NMAR[Nathaniel Marston]:::external
+        S4_FVC4 --- FAM_NMAR
+
+        FAM_FVC --> S4_FVC5[/Eve Van Cortlandt<br>1737-1836\]:::sib2
+        FAM_HWH[Henry White<br>1732-1786]:::external
+        S4_FVC5 --- FAM_HWH
+
+        %% =========================================
+        %% GEN 5
+        %% =========================================
+        
+        W4_FVC2{Elsie Cuyler<br>1737-1761}:::external
+        S4_FVC2 ---|m. 1760| W4_FVC2
+        
+        W4_FVC2 --> S5_FVC2_1[/Anne Van Cortlandt<br>1766-1814\]:::sib3
+        FAM_HWH2[Henry White Jr.]:::external
+        S5_FVC2_1 ---|m. 1785| FAM_HWH2
+        
+        W4_FVC2 --> S5_FVC2_2[/Helen Van Cortlandt<br>1768-1812\]:::sib3
+        FAM_JMO[James Morris<br>1764-1827]:::external
+        S5_FVC2_2 ---|m. 1796| FAM_JMO
+
+        %% =========================================
+        %% GEN 6: The White & Morris Lines
+        %% =========================================
+
+        FAM_HWH2 --> S6_HW1[\Augustus White<br>1786-? /]:::sib4
+        FAM_HWH2 --> S6_HW2[\Augusta White<br>1788-? /]:::sib4
+
+        FAM_JMO --> S6_MO1[\James Van Cortlandt<br>Morris<br>1796-1843/]:::sib4
+        FAM_JMO --> S6_MO2[\Augustus Frederick<br>Morris<br>1797-1859/]:::sib4
+        FAM_JMO --> S6_MO3[\Robert Hunter<br>Morris<br>1802-1855<br>Mayor of NYC/]:::sib4
+
+        linkStyle default interpolate basis
+
+**Chthonic Branch**
+
+- Starting Root: Gertruy van Rensselaer (1714-?)
+
+.. mermaid::
+    :zoom:
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ===================== CHTHONIC BRANCH (Sapphire/Teal)
+        classDef cht1 fill:#00695C,stroke:#000,stroke-width:2px,color:#fff
+        classDef cht2 fill:#00796B,stroke:#000,stroke-width:2px,color:#fff
+        classDef cht3 fill:#00897B,stroke:#000,stroke-width:2px,color:#fff
+        classDef cht4 fill:#009688,stroke:#000,stroke-width:2px,color:#000
+        %% ===================== EXTERNAL
+        classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+
+        %% =========================================
+        %% ROOT (Gen 3)
+        %% =========================================
+        ROOT_G{Gertruy van Rensselaer<br>1714-?}:::cht1
+        FAM_AS[Adoniah Schuyler<br>1717-1763]:::external
+        ROOT_G ---|m. 1742| FAM_AS
+
+        %% =========================================
+        %% GEN 4: Schuyler of New Jersey
+        %% =========================================
+        
+        FAM_AS --> S4_AS1[\John Schuyler<br>1745-1806/]:::cht2
+        W4_AS1{Cornelia Van Cortlandt<br>1753-1847}:::external
+        S4_AS1 --- W4_AS1
+
+        FAM_AS --> S4_AS2[\Rensselaer Schuyler/]:::cht2
+        FAM_AS --> S4_AS3[\Peter Schuyler/]:::cht2
+        FAM_AS --> S4_AS4[\Adonijah Schuyler<br>1753-1839/]:::cht2
+        FAM_AS --> S4_AS5[\Philip Schuyler/]:::cht2
+
+        %% =========================================
+        %% GEN 5
+        %% =========================================
+        
+        W4_AS1 --> S5_AS1_1[\Philip J. Schuyler<br>1768-1835/]:::cht3
+        W5_AS1_1{Mary Anna Sawyer}:::external
+        S5_AS1_1 ---|m. 1807| W5_AS1_1
+
+        %% =========================================
+        %% GEN 6
+        %% =========================================
+        
+        W5_AS1_1 --> S6_PJS1[\George Washington<br>Schuyler<br>1810-1888/]:::cht4
+        W5_AS1_1 --> S6_PJS2[/Mary Anna Schuyler<br>1816-?\]:::cht4
+
+        linkStyle default interpolate basis
+  
+**Dodonic Branch**
+
+- Starting Root: Maria van Rensselaer (1673-1713)
+
+.. mermaid::
+    :zoom: 
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ===================== DODONIC BRANCH (Deep Blue -> Azure)
+        classDef dod1 fill:#0D47A1,stroke:#000,stroke-width:2px,color:#fff
+        classDef dod2 fill:#1565C0,stroke:#000,stroke-width:2px,color:#fff
+        classDef dod3 fill:#1976D2,stroke:#000,stroke-width:2px,color:#fff
+        classDef dod4 fill:#1E88E5,stroke:#000,stroke-width:2px,color:#fff
+        %% ===================== EXTERNAL
+        classDef external fill:#FFFFFF,stroke:#F57C00,stroke-width:1px,color:#000
+
+        %% =========================================
+        %% ROOT (Gen 2)
+        %% =========================================
+        ROOT_M{Maria van Rensselaer<br>1673-1713}:::dod1
+        FAM_SCH[Peter Schuyler<br>1657-1724<br>First Mayor of Albany]:::external
+        ROOT_M ---|m. 1691| FAM_SCH
+
+        %% =========================================
+        %% GEN 3: The Schuyler Children
+        %% =========================================
+        
+        FAM_SCH --> S3_MS1[/Gertrude Schuyler<br>b. 1694\]:::dod2
+        FAM_LAN[Johannes Lansing<br>1687-?]:::external
+        S3_MS1 ---|m. 1714| FAM_LAN
+
+        FAM_SCH --x S3_MS2[\Philip Schuyler<br>1696-1758/]:::dod2
+        FAM_SCH --x S3_MS3[\Pieter Schuyler Jr.<br>b. 1698/]:::dod2
+        FAM_SCH --x S3_MS4[\Jeremiah Schuyler<br>1698-1753/]:::dod2
+
+        %% =========================================
+        %% GEN 4: The Lansing Line
+        %% =========================================
+        
+        FAM_LAN --> S4_LAN1[\Johannes Lansing Jr.<br>1715-1790/]:::dod3
+        W4_LAN1{Ariaantje Wendell<br>1713-1780}:::external
+        S4_LAN1 ---|m. c. 1745| W4_LAN1
+
+        %% =========================================
+        %% GEN 5
+        %% =========================================
+        
+        W4_LAN1 --> S5_LAN1[\Sanders Lansing<br>1766-1850/]:::dod4
+        W5_LAN1{Catherine Ten Eyck<br>1769-1850}:::external
+        S5_LAN1 ---|m. 1789| W5_LAN1
+
+        linkStyle default interpolate basis
+
+**Cumaean Branch**
+
+- Starting Root: Cornelia van Rensselaer (1823-1897)
+
+.. mermaid::
+    :zoom:
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ===================== CUMAEAN BRANCH (Green/Forest)
+        classDef cum1 fill:#1B5E20,stroke:#000,stroke-width:2px,color:#fff
+        classDef cum2 fill:#2E7D32,stroke:#000,stroke-width:2px,color:#fff
+        classDef cum3 fill:#388E3C,stroke:#000,stroke-width:2px,color:#fff
+        classDef cum4 fill:#43A047,stroke:#000,stroke-width:2px,color:#000
+        classDef cum5 fill:#4CAF50,stroke:#000,stroke-width:2px,color:#000
+        %% ===================== EXTERNAL
+        classDef external fill:#FFFFFF,stroke:#388E3C,stroke-width:1px,color:#000
+
+        %% =========================================
+        %% ROOT (Gen 7)
+        %% =========================================
+        ROOT_C{Cornelia van Rensselaer<br>1823-1897}:::cum1
+        FAM_TH[Nathaniel Thayer<br>1808-1883<br>Banker & Philanthropist]:::external
+        ROOT_C ---|m. 1846| FAM_TH
+
+        %% =========================================
+        %% GEN 8 (The Thayer Siblings)
+        %% =========================================
+        
+        FAM_TH --x S8_TH1[\Stephen V.R. Thayer<br>1847-1871/]:::cum2
+        
+        FAM_TH --> S8_TH4[/Cornelia Thayer<br>1849-1903\]:::cum2
+        FAM_ROBB[J. Hampden Robb<br>1846-1911<br>NY State Senator]:::external
+        S8_TH4 --- FAM_ROBB
+        
+        FAM_TH --> S8_TH2[\Nathaniel Thayer III<br>1851-1911/]:::cum2
+        W8_TH2{Pauline Revere}:::external
+        S8_TH2 ---|m. 1881| W8_TH2
+
+        FAM_TH --> S8_TH5[/Harriet Thayer<br>1853-1891\]:::cum2
+        
+        FAM_TH --> S8_TH6[\Eugene Van R. Thayer<br>1855-1907/]:::cum2
+        W8_TH6{Susan Spring<br>1859-1929}:::external
+        S8_TH6 ---|m. 1880| W8_TH6
+        
+        FAM_TH --> S8_TH7[\Bayard Thayer<br>1862-1916/]:::cum2
+        W8_TH7{Ruth Simpkins<br>1864-1941}:::external
+        S8_TH7 ---|m. 1896| W8_TH7
+        
+        FAM_TH --> S8_TH8[\John Eliot Thayer<br>1862-1933<br>Ornithologist/]:::cum2
+        W8_TH8{Evelyn D. Forbes<br>1862-1943}:::external
+        S8_TH8 ---|m. 1886| W8_TH8
+
+        %% =========================================
+        %% GEN 9
+        %% =========================================
+        
+        %% ROBB LINE
+        FAM_ROBB --> S9_ROBB1[\Thayer Robb<br>1877-1938/]:::cum3
+        FAM_ROBB --> S9_ROBB2[/Cornelia Robb<br>1875?-?\]:::cum3
+        
+        %% NATHANIEL LINE
+        W8_TH2 --> S9_TH2_1[/Cornelia Van R. Thayer<br>1881-1925\]:::cum3
+        
+        %% EUGENE LINE
+        W8_TH6 --> S9_TH6_1[\Eugene V.R. Thayer Jr.<br>1881-1937<br>Pres. Chase National Bank/]:::cum3
+        W9_TH6_1{Gladys Brooks<br>1882-1955}:::external
+        S9_TH6_1 ---|m. 1903| W9_TH6_1
+        W8_TH6 --> S9_TH6_2[/Susan Thayer<br>1885-1971\]:::cum3
+        W8_TH6 --> S9_TH6_3[/Katherine Thayer<br>1892-1981\]:::cum3
+        
+        %% BAYARD LINE
+        W8_TH7 --> S9_TH7_1[/Ruth Thayer<br>1897-1984\]:::cum3
+        W8_TH7 --> S9_TH7_2[\Nathaniel Thayer<br>1898-1971/]:::cum3
+        W8_TH7 --> S9_TH7_3[/Constance Van R. Thayer<br>1900-1976\]:::cum3
+        
+        %% JOHN ELIOT LINE
+        W8_TH8 --> S9_TH8_1[\John Eliot Thayer Jr.<br>1887-1966/]:::cum3
+        W9_TH8_1{Katherine Lee<br>Bayard Warren<br>1891-1976}:::external
+        S9_TH8_1 ---|m. 1911| W9_TH8_1
+        
+        W8_TH8 --> S9_TH8_2[/Evelyn Thayer<br>1888-1980\]:::cum3
+        FAM_BURR[Isaac Tucker Burr<br>1885-1972<br>Banker]:::external
+        S9_TH8_2 ---|m. 1913| FAM_BURR
+        
+        W8_TH8 --> S9_TH8_3[/Nora Forbes Thayer<br>1889-1959\]:::cum3
+        FAM_GOOD[Francis Abbot Goodhue<br>1883-1967<br>Pres. Bank of Manhattan]:::external
+        S9_TH8_3 ---|m. 1913| FAM_GOOD
+        
+        W8_TH8 --> S9_TH8_4[/Natalie Thayer<br>1894-1975\]:::cum3
+        FAM_HEM[Lawrence Hemenway<br>1891-1966]:::external
+        S9_TH8_4 ---|m. 1915| FAM_HEM
+        
+        W8_TH8 --> S9_TH8_5[\Duncan Forbes Thayer<br>1900-1956/]:::cum3
+        W9_TH8_5{Priscilla P.<br>McHenry<br>1906-1975}:::external
+        S9_TH8_5 ---|m. 1928| W9_TH8_5
+
+        %% =========================================
+        %% GEN 10 (Eugene Jr Line)
+        %% =========================================
+        W9_TH6_1 --> S10_TH6_1B[\Robert Helyer Thayer<br>1901-1984<br>Diplomat/]:::cum4
+
+        linkStyle default interpolate basis
+        
+**Clarian Branch**
+
+- Starting Root: Justine van Rensselaer (1828-1912)
+
+.. mermaid::
+    :zoom:
+
+    graph TD
+        %% =========================================
+        %% PALETTES & STYLES
+        %% =========================================
+        %% ===================== CLARIAN BRANCH (Olive/Lime)
+        classDef clar1 fill:#33691E,stroke:#000,stroke-width:2px,color:#fff
+        classDef clar2 fill:#558B2F,stroke:#000,stroke-width:2px,color:#fff
+        classDef clar3 fill:#689F38,stroke:#000,stroke-width:2px,color:#fff
+        classDef clar4 fill:#7CB342,stroke:#000,stroke-width:2px,color:#000
+        classDef clar5 fill:#8BC34A,stroke:#000,stroke-width:2px,color:#000
+        %% ===================== EXTERNAL
+        classDef external fill:#FFFFFF,stroke:#558B2F,stroke-width:1px,color:#000
+
+        %% =========================================
+        %% ROOT (Gen 7)
+        %% =========================================
+        ROOT_J{Justine van Rensselaer<br>1828-1912}:::clar1
+        FAM_TW[Dr. Howard Townsend<br>1823-1867]:::external
+        ROOT_J ---|m. 1851| FAM_TW
+
+        %% =========================================
+        %% GEN 8 (The Townsend Siblings)
+        %% =========================================
+        
+        FAM_TW --> S8_TW1[\Howard Townsend Jr.<br>1858-1935/]:::clar2
+        W8_TW1{Anne Lowndes Langdon<br>1864-1928}:::external
+        S8_TW1 ---|m. 1888| W8_TW1
+
+        FAM_TW --> S8_TW2[\Stephen V.R. Townsend<br>1860-1901/]:::clar2
+        W8_TW2{Janet Eckford King<br>1865-1899}:::external
+        S8_TW2 ---|m. 1888| W8_TW2
+
+        FAM_TW --> S8_TW3[/Justine Townsend<br>1853-1881\]:::clar2
+        FAM_TW --> S8_TW4[/Harriet Townsend<br>1853?-?\]:::clar2
+
+        %% =========================================
+        %% GEN 9
+        %% =========================================
+        
+        %% HOWARD JR LINE
+        W8_TW1 --> S9_TW1_1[\Eugene Langdon Townsend<br>1892-1951/]:::clar3
+        W8_TW1 --> S9_TW1_2[/Anne Langdon Townsend<br>1898-1965\]:::clar3
+
+        %% STEPHEN V.R. TOWNSEND LINE
+        W8_TW2 --> S9_TW2_1[/Justine V.R. Townsend<br>1889-1966\]:::clar3
+        W8_TW2 --> S9_TW2_2[\Stephen V.R. Townsend<br>1891-1919/]:::clar3
+        W8_TW2 --> S9_TW2_3[/Janet King Townsend<br>1894-1943\]:::clar3
+        W8_TW2 --> S9_TW2_4[\Philip Schuyler Townsend<br>1896-1933/]:::clar3
 
         linkStyle default interpolate basis
