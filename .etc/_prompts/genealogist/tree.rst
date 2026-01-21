@@ -3,7 +3,7 @@
 .. # FAMILY TREE DEVELOPMENT
 ..
 ..      - COMMENTS: All comments in this documents are denoted with "..". Comments are meant to provide context. They should be regarded as iron-clad instructions. If it has not been explicitly stated in a comment, then assume it does not apply.
-..      - GOAL: Using mermaid, develop and complete the exhaustive family tree of the van Rensselaer dynasty, given below, from the first patroon up to the present day.
+..      - GOAL: Using mermaid, develop and complete the exhaustive family tree of the {{ family }}, given below, from the first ancestor, {{ first_ancestor }} up to the present day.
 ..      - TASK: The TASK section contains the current directives.
 ..
 .. ## COLOR & STYLE
