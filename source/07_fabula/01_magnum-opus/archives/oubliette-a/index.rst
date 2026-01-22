@@ -6,9 +6,9 @@
 .. - 001: Map of Macrobius
 .. - 002: Mysterium Hyperboreum: Sive, De Spiritu Mundi in Materia Spitsbergensi Captivo
 
-.. _oubielette-a:
+.. _oubliette-a:
 
-Oubielette A: The Vatican Reliquary
+Oubliette  A: The Vatican Reliquary
 ===================================
 
 .. toctree::

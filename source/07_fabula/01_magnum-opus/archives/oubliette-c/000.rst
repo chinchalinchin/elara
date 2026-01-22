@@ -13,7 +13,7 @@ March
 
 .. epigraph::
 
-    Father and Johannes watched from the crowds as the procession boarded the ferry for Texel today. Amidst the cheering, they alone bore the solemn faces of the grieving. As the bands played and the ale was poured, we exchanged our final, silent words. Mother, true to her promise, was not present. 
+    Father and Johannes [#oubliette_c_000]_ watched from the crowds as the procession boarded the ferry for Texel today. Amidst the cheering, they alone bore the solemn faces of the grieving. As the bands played and the ale was poured, we exchanged our final, silent words. Mother, true to her promise, was not present. 
 
     Beyond my perfunctory appearance, I could not bring myself to participate in the pagentry and festivities that accompany the inauguration of this voyage. The recruits enjoyed the attention their new positions afforded them well enough, while even the officers were given to excess. Truly, never before have I seen Pieter smile. He and Nicolas led the beer hall in song just last night, though I do not think he will admit to the display this morning.
     
@@ -477,3 +477,11 @@ June
 .. note::
 
     All entries past this point have been torn from the book's spine.
+
+.. [#oubliette_c_000]   
+    
+    This journal immediately presents itself as an anomaly. The reader is referred to :ref:`genealogy` of the van Rensselaer dynasty, specifically the first generation of the :ref:`elder-branch`, to discover for themselves the discrepancies. 
+
+    From the date signed on each page of the journal and the name "*Johannes*", it is reasonable to infer "*Father*" refers to Killiaen van Rensselaer According to the historical record recovered through the :ref:`Capital Reliquary <oubliette-b>`, Killiaen had five sons: Johannes, Jan Baptist, Jeremias, Nicolaes and Ryckert.
+
+    However, the reader must be careful to examine the birth year of Ryckert in the :ref:`genealogy`

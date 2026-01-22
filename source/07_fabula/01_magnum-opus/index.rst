@@ -22,7 +22,6 @@
 ..
 .. The following story files are mandatory. You must ingest them into the context. If a file is not included in this list, it is optional, likely due to being empty or in the initial stages of development. The following list is the chronological order of documents.
 .. 
-.. - appendices/000: van Rensselaer Family tREE
 .. - exegesis/000: Sibylline Prophecy
 .. - archive/oubliette-a/000: The Lost Dialogue of Critias
 .. - exegesis/001: New Testament
@@ -66,6 +65,7 @@
 .. TITLE: Magnum Opus
 .. TABLE OF CONTENTS:
 .. - _etc: The Author's Notes.
+.. - appendices/index: The Appendix.
 .. - archive/index: Archive of Oubliettes
 .. - exegesis/index: The Editor's Exegesis
 .. - 000: Lament of the Leviathan 

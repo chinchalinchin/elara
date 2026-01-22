@@ -9,10 +9,10 @@
 .. - 007: Falkland Islands Dispatch
 .. - 008: The Euphemia Experiments
 
-.. _oubielette-b:
+.. _oubliette-b:
 
-Oubielette B: The Capital Reliquary
-===================================
+Oubliette B: The Capital Reliquary
+==================================
 
 .. toctree::
    :maxdepth: 2
