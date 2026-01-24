@@ -11,9 +11,9 @@ The Lost Dialogue of Critias
 
     This document was translated from a palimpest discovered in year 2083 at the Villa of the Papyri in Herculaneum. It was made available to the general public in 2095 by the Renssalaer Polytechnic Institute, and has since been archived in libraries and institutes across the world. According to the current academic consensus, it was written in the year 366 BCE.
 
-:socrates: You have spoken at length about the Kings of the Atlantic and their works, Critias, but you have not told us the source of their power. How were these men able to harness the power to produce such wonders? Was their power born of the elements, of fire or water? 
+:socrates: You have spoken at length about the Kings of the Atlantic and their works, Critias, but you have not told us the source of their power. How were these men able to harness the power to produce such wonders? Was their power born of the elements? Was it of fire or water? 
 
-:critias: It was of neither, Socrates. They drew upon the firmament itself. Their first and greatest king, Asterion, as a boy, sailed to the edge of the world and found the veil that separates the mortal sphere from the higher spheres. There he found where Cronos had been imprisoned in ice and forced by the upstart gods to measure the seconds of man. Asterion lit for this fallen Titan a torch to free him. As thanks, the Titan drew from his stomach a metallic stone of immense power and bestowed it upon Asterion, as proof to show his people he had been to realms forbidden to man.
+:critias: It was of neither, Socrates. They drew upon the firmament itself. Their first and greatest king, Asterion, as a boy, sailed to the edge of the world and found the veil that separates the mortal sphere from the higher spheres. There he found where Cronos had been imprisoned in ice and forced by the upstart gods to measure the seconds of man. Asterion lit for this fallen Titan a torch to melt his prison and free him. As thanks, the Titan drew from his stomach a metallic stone of immense power and bestowed it upon Asterion, as proof to show his people he had been to realms forbidden to man.
 
 :socrates: This stone, what was its nature? 
 
@@ -25,4 +25,4 @@ The Lost Dialogue of Critias
 
 :socrates: But, Critias, this Spindle would, by Necessity, be immense. Something so large could not disappear so easily. Where has it gone? 
 
-:critias: The kings grew greedy, Socrates. Long after the time of Asterion, they sought to exploit the power of the Titans for the purposes of petty empire. They spun the stone ever faster, using it to build ever larger armies. Their war-making awoke Cronos and angered him, for he saw the Atlanteans had twisted his gift to their own ends. It is said by the priestesses Cronos then yanked the threads of Time and Fate, and caused the city to decay and crumble into the sea.
+:critias: The kings grew greedy, Socrates. Long after the time of Asterion, they sought to exploit the power of the Titans for the purposes of petty empire. They spun the stone ever faster, using it to build ever larger armies. Their war-making awoke Cronos and angered him, for he saw the Atlanteans had twisted his gift to their depraved ends. It is said by the priestesses Cronos then yanked the threads of Time and Fate, and caused the city to decay and crumble into the sea.

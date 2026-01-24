@@ -82,6 +82,15 @@ When they uploaded into the past, they are "soulless automatons" who are bound b
 Technology Throughout the Eras
 ------------------------------
 
+-----------
+Reliquaries
+-----------
+
+Time Period: 2100 - 2170s
+
+- Solid-state crystalline harddrives designed by the Jesuits to last forever. 
+- Stored in the vaults beneaths basilicas across the world.
+
 --------
 The Eden
 --------
@@ -109,7 +118,7 @@ Time Period: 2110 - 2160s
 - Air Scrubbers: Standard chemical scrubbers were deemed insufficient for the duration of the voyage. The Leviathan utilizes a Myco-Filtration System. Banks of genetically modified fungi absorb CO2 and toxins, metabolizing them into oxygen.
 - Atmosphere: The air inside smells of damp earth, yeast, and ozone. It is humid and heavy.
 - The Umbilical: For EVAs (Extra-Vehicular Activity), the vessel is equipped with Os Cordões—reinforced air hoses connected to the ship's main supply. Independent tanks are used only for emergencies.
-- Autonomous: Fitted with a neural weave throughout its exoskeleton and loaded with autogenerational network.
+- Autonomous: Fitted with a neural weave throughout its exoskeleton and loaded with autogenerational network. Has a human conciousness that got uploaded during the 2030s.
 
 The Leviathan is abandoned in 2122 when the Rift opens and civilization crumbles. It goes mad in the subterranean tunnels and achieves a form of limited digital sentience. 
 
@@ -146,7 +155,7 @@ Politics
 - Ceramic and crystal cities to resist acid rain. Subterranean fungal agriculture. A culture of "Shift Work" and guilt (The Breaker Complex: the burden of billions dead).
 - Data is not in a cloud. It is rotting in physical "Oubliettes" (e.g., Denver Sector). The Editor is a "Data Archaeologist" using a "Sarcophagus" rig to read dead magnetic media.
 - The Directorate is generally unknown to most people. 
-- Tech Paradigm is Analog Supremacy. Direct Brain-Computer Interfaces (digital) are banned for the elite. "Fluidic" and "Optical" analog computers are used for high-level tasks to approximate a Continuum. "Wetware" (biological organoids) is preferred over Silicon because biology supports transfinite states; silicon does not.
+- Tech Paradigm is Analog Supremacy. Direct Brain-Computer Interfaces (digital) are banned for the elite. "Fluidic" and "Optical" analog computers are used for high-level tasks. "Wetware" (biological organoids) is preferred over Silicon.
 - It is a period of reclamation. *Eclusa* are beginning to form around *Creches* as humans return to the surface (Note, this terminology only exists in South America.)
 
 The Triage Authority (Earth) 

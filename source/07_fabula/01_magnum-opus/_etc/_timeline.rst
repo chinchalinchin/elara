@@ -98,7 +98,7 @@ Modernity
 - 1982 AD: After graduating from Rensselaer Polytechnic Institute, Curtis Priem invents the first graphics processor.
 - 2010 AD: The Tree of Life is used with a Hebbian network to model a Transformer-like network. The first digital "consciousness" comes online.
 - 2025 AD: Transhumanism and simulation theory become dominant ideologies in Silicon Valley.
-- 2035 AD: First human uploaded. Mass suicides of the "Digital Class." No one yet knows digitization destroyes consciousness.
+- 2035 AD: First human uploaded. Mass suicides of the "Digital Class." No one yet knows digitization destroys consciousness.
 - 2040 AD: The "Analog Counter-Reformation" begins.
 - 2088 AD: Mesmeria van Rensselaer is born from Branch D-33.
 - 2110 AD: Pope Augustine prepares to issue an Anathema against the Material and burn the Secret Archives. 
@@ -115,8 +115,8 @@ The Third Schism
 - 2122 AD: Continuity of Government protocols are engaged. Elite demographics split between subterranean and orbital civilizations, e.g. underground cities and space stations. Sects of the Elite, already living in a space station at LaGrange Point 4, lock the doors. The original Fulminated Loadstone is brought to LaGrange Point 4 in a final space flight before all travel collapses.
 - 2122 AD: Most people flee below the surface. Civilization becomes to crumble.
 - 2123 AD: Declaration of Triage. All autonomous AI is banned. All world governments are dissolved. All laws are suspended. The "Triage Authority" takes power to manage the biosphere collapse. Subterranean farming and cities become havens for the survivors. Mountain ranges where bunkers are buried miles deep become population centers.
-- 2124 AD: The Space Station at LaGrange Points 4 the base of Operations for the "Directorate of Archons". The Directorate controls the Fulminated Loadstone to power the station. They seek the remnants of the Coriolis Device embedded in the Rift. They are largely unconcerned with the politics of Earth otherwise.
-- 2124 AD: Massive famines that follow the removal of the European breadbasket and the alteration of weather patterns wipe out a majority of the population. World population stabilizes around 1 billion.
+- 2124 AD: The Space Station at LaGrange Points 4 became the base of Operations for the "Directorate of Archons". The Directorate controls the Fulminated Loadstone to power the station. They seek the remnants of the Coriolis Device embedded in the Rift. They are largely unconcerned with the politics of Earth otherwise.
+- 2124 AD: Massive famines that follow the removal of the European breadbasket and the alteration of weather patterns wipe out a majority of the population. World population stabilizes around 500 million.
 - 2126 AD: Waldos are used by the Directorate to explore the Rift. People see their drones and mistake them for the remains of the autonomous swarm that still wander across the European landmass. 
 - 2130 AD: The Golems (from 2230) are communicating directly to the Directorate through the Fulminated Loadstone. They require someone from Branch D-33 to embody, as Mesmeria is known in the future as the only human able to transcend the Discretum.
 - 2131 AD: The Directorate makes contact with the Triage Authority. A search for the van Rensselaer bloodline is initiated.
@@ -129,9 +129,19 @@ The Reclamation
 ---------------
 
 - 2140 AD: Humanity begins to migrate back to surface slowly. The majority of people still live underground. Living and working on the surface is considered extremely hazardous and requires authorization from the Authority.
-- 2143 AD: The Brazilian Pentential Order discovers the Leviathan within the South Atlantic Trans-Oceanic (SATO) Maglev line connecting Natal (Brazil) to Dakar (Senegal).
-- 2157 AD: Ricardo van Rensselaer goes to Rome to recover artifacts and falls into the The Scavi of St. Peter's Necropolis. His equipment breaks in the fall and he inhales vapors from the Mithraeum. Has a vision of Mesmeria.
+- 2153 AD: Ricardo leaves Gruta do Carimbado on a mission to Igreja de Nossa Senhora do Carmo. He discovers the Ouro Reliquary.
+- 2156 AD: Ricardo's father dies of black mold inhalation.
+- 2157 AD: The Brazilian Pentential Order discovers the Leviathan within the South Atlantic Trans-Oceanic (SATO) Maglev line connecting Natal (Brazil) to Dakar (Senegal).
+- 2159 AD: Ricardo van Rensselaer goes to Rome to recover the Vatican Reliquary and falls into the The Scavi of St. Peter's Necropolis. His equipment breaks in the fall and he inhales vapors from the Mithraeum. Has a vision of Mesmeria.
 - 2160 AD: The Editor (Ricardo van Rensselaer) begins to compile the Opus.
+
+.. topic:: Order of Discovery
+
+    - Ouro Reliquary: History of the Coaraci-Ryckert Lineage
+    - Vatican Reliquary: Origins of Historical Conspiracy
+    - Renselaerwyck Reliquary: Origins of van Rensselaer Lineage
+    - The Capital Reliquary: Industrial & Modern Conspiracy
+    - Armilus Reliquary: History of Mesmeria
 
 ---------------------
 The Entropic Eschaton

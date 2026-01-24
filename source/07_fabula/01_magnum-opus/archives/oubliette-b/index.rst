@@ -11,12 +11,12 @@
 
 .. _oubliette-b:
 
-Oubliette B: The Capital Reliquary
-==================================
+Oubliette B: Capital Reliquary
+==============================
 
 .. toctree::
    :maxdepth: 2
-   :caption: The Capital Reliquary
+   :caption: Capital Reliquary
 
    000
    001

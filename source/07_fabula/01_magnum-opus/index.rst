@@ -4,7 +4,7 @@
 ..
 .. This document and all sub-documents use RST formatting. RST comments are used in each to indicate insertions and asides from the author.
 ..
-.. ## Terminology
+.. ## TERMINOLOGY
 ..
 .. The Author: The actual author of the document.
 .. The Editor: The fictitious author of the document.
@@ -12,7 +12,6 @@
 .. ------------------------------------------------------------------------------------------------------------------
 ..
 .. # TASK 
-..
 ..
 .. ## CONSTRAINTS
 ..
@@ -75,27 +74,97 @@
 Magnum Opus
 ===========
 
-Time is not the steady pulse of a pendulum, denominated in degrees and angles; it is the continuity of disparate points, the topology that binds its peaks to its valleys. The spline of history is fitted to tectonic eruptions, to the outpouring of our essence, accumulated over long distances like waves building until broken in a terrifying surge, sweeping aside everything in a slurried wake. 
-
-From the galactic to the molecular, this cycle repeats. Every empire is forged in the furnace of war; Every human life is demarcated by trauma and tragedy; Every atom dissolves into entropy. 
-
-Like many others, I was born in the darkness of the underground. Conjured from the dirt, we came to be in the silence that followed the Contraction, when God finally departed from this coil and left mortals to perish under their own devices, as we went to ground and hid in caves to await our fate. The words we speak would echo were they not spoken into the emptiness of now. 
-
-The first time I saw the surface as a boy, I realized what had been taken from us. Anyone who has ventured out of the Creche and dared to ascend the tunnels has been met with the same realization. I made the climb with the others in my cadre and when we breached the seals, a light unlike any other flooded the world. Those who have only known the dull sodium glow of the underground will not understand. Shadows do more than conceal, they isolate and contain. The dark is the deep once conquered by the light of God, into which we have returned, to forgot our design and degrade back into nothing. Each one of us that pushed open the shutters was given a revelation that our forms were not just vessels in which thoughts decay, but creations to behold, creatures to inhabit. Each one of us had the same thought: 
+The first time I saw the surface as a boy left an indeliable mark upon me. Anyone who has ventured out of the Creche and dared to ascend the tunnels has been met with the same revelation. I made the climb with the others in my cadre. When we breached the seals, a light unlike any other flooded our eyes. Those who have only known the dull sodium glow of the underground will not, and cannot, understand. Shadows do more than conceal; they isolate and contain. The dark is an endless depth, from which we were drawn long ago and into which we have returned, to forgot our design and degrade back into nothing. Each one of us that pushed open the shutters was stunned into revelation, that our forms were not just vessels in which thoughts decay, but creations to behold and creatures to inhabit. Each one of us had the same thought: 
 
 *I am of the darkness, but this world is made of light.*
 
-In the delirium of insight that followed, we then raised our eyes and peered through the fog of our respirators to see the source of our damnation and came to know in an instant why, through sudden epiphany, we languish in the underground, cut off from the divine light. Across the barren land lay the dessicated corpse of a world in which we no longer belong, in which we walk as an outsiders, forgotten and unnoticed.
+In the delirium of insight that followed, we then raised our eyes and peered through the fog of our respirators to see the source of our damnation and came to know in an instant why, through sudden epiphany, we languish in the underground, cut off from the source. Across the barren land lay the dessicated corpse of a world in which we no longer belong, in which we walk as an outsiders, forgotten and unnoticed.
+
+The Creche released us atop a mountain. We gazed across the horizon from the vantage of its tip. Below us, mixed with the jagged edges of the Earth, toppled towers dissolved to ruins under a blood red sky, pulled to the ground by vast, overlapping webs of mold. The city, whose profile we only knew from low resolution pictures, had been liquified into a sludge of concrete and fungus, its last remaining vestiges sinking into the muck.
+
+The training we had undergone, the long days of childhood spent in classrooms, memorizing maps and coordinates, calculating trajectories, learning to read the weather through a palette of sickly green and violet hues, none of it prepared us for the reality of the surface.
+
+There is no way to explain the sensation of the outside to those who have not felt it firsthand. As we trekked down the mountainside to the crumbling remains of the town once known as São Thomé das Letras, I was struck by vertigo, as if I might lose my footing and fall *up* into the sky. 
+
+A boy on the cusp of manhood, my first expedition beyond the Creche was scavenging. In those days, the crystalis process was still unknown and Pedreira was not yet fortified. The quartzite mines did not even appear on the maps. Before the synthetic fortress began to germinate around the opening to the surface, venturing outside required careful planning and survival was not guaranteed. 
+
+It was my father, the Capataz, who first taught me the language spoken by the world, a verse metered in calories, measured in the miles that radiate from the center of the Creche. Each footstep in this world is a choice, bought with precious seconds of exposure. 
 
 .. IN PROGRESS
 
-Within the infinite heavens lay the constellations, the eternal nails upon which hang the threads of the firmament, those ancient lights which bore witness to all the calamities and madness the absence of our Lord has heaped upon the world. Dumbstruck I gazed upon the stars and realized I had no concepts to comprehend them.
-
-The world itself has been taken from us. We have lost our place, condemned to wander in a godless purgatory.
+As the cadre dispersed into the labyrinth of cracked streets to chart their zones, my father led me through the rubble, navigating the ruins with a deliberateness absent in the others. Unlike the cadre, he did not consult his map nor check our position on his transceiver. He moved through the wreckage as if he knew where he was going. I had known my father lived in the world before the Contraction, but it was at that moment that I realized he still lived there, and always would.
 
 .. IN PROGRESS
 
-- The Editor, 2160
+"These are books," He explained, running his hand across the pockmarked lump of material, "When I was when in school, we used these instead of screens."
+
+I opened the disfigured cover of one to discover its pages had withered to nothing. A cloud of dust seeped from inside, trailing off into the dimness of the room.
+
+Through the respirator, my father's eyes drooped under the force of an unseen frown, "They don't last long up here anymore."
+
+He turned and hurried away, calling after me, "This way!"
+
+I followed after him, through the rotting shelves collapsing into heaps of debris, ducking underneath the long drapes of fungus hanging from cracks in the ceiling. We creeped down the edges of a caved-in stairwell, waiting for one another as we took turns braving the groaning structure, testing each step before descending with our full weight.
+
+.. IN PROGRESS
+
+"History is the only thing makes us who are," He explained, "To know what came before, that is the only way to understand what comes after."
+
+He removed his gloves, peeling the weighted cloth from his pale body. With the delicate touch of his bare skin, he turned a page, continuing to speak, "And history lives in language. The ancients had a name for this life-force that resides in words and works to make history. *Logos*."
+
+"Logos?" I asked, testing the word on my tongue.
+
+He nodded as he flipped through the pages of the book, "The Pentient Order call it the *Holy Spirit* now, but it's the same thing."
+
+After a moment, he added, "Words are the names of memories. They are where we reside after we die."
+
+I wanted to ask him what he meant, but at that moment, he found what he sought in the middle of the book. His face light up as he read the words. His fingers trailed down the smooth paper, finding their target on a photograph he caressed with a forgotten tenderness. The gloss bent rays of light across the surface of the page as his eyes framed the page. He spoke a single word, "Sofia."
+
+It was the first and last time my father ever spoke of my mother in my presence. He slid the book across the table.
+
+.. IN PROGRESS:
+
+"Your mother was a great poet," He said.
+
+.. IN PROGRESS:
+
+.. epigraph::
+
+   | Where winter breaks across the bow of ships,
+   | the cold ascends like empires drawn from ice,
+   | the mist dissolved to steam escaping lips
+   | with thoughts that doom, but even still entice.
+   | 
+   | The cold ascends like empires drawn from ice
+   | as wind returns my feet a harbour street
+   | with thoughts that doom, but even still entice
+   | the withered bloom in cycles to repeat.
+   |
+   | As wind returns my feet a harbour street
+   | I think upon the sailor lost at sea,
+   | the withered bloom in cycles to repeat 
+   | the words he said in promises to me.
+   | 
+   | I think upon the sailor lost at sea
+   | where winter breaks across the bow of ships,
+   | the words he said in promises to me,
+   | the mist dissolved to steam escaping lips.
+
+.. IN PROGRESS:
+
+The title of the book was written in a language I could not understand. The characters, *ό ποιητα, ἢ πῖθι ἢ ἄπιθι*, were alien to me. I asked, "What's that mean?"
+
+He laughed, "I once asked her the same thing. She said it was basically untranslatable. The closest she could get was: shit or get off the pot."
+
+.. IN PROGRESS
+
+Within the infinite heavens lay the constellations, the eternal nails upon which hang the threads of the firmament, those ancient lights which bore witness to all the calamities and madness of the the world. Dumbstruck I gazed upon the stars and realized I had no concepts to comprehend them.
+
+The world has been taken from us. So we must take it back.
+
+.. IN PROGRESS
+
+- Gruta do Carimbado, 2152
 
 .. toctree::
    :maxdepth: 1

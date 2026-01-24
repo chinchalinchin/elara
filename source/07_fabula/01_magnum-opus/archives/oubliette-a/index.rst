@@ -8,12 +8,12 @@
 
 .. _oubliette-a:
 
-Oubliette  A: The Vatican Reliquary
-===================================
+Oubliette A: Vatican Reliquary
+==============================
 
 .. toctree::
    :maxdepth: 2
-   :caption: The Vatican Reliquary
+   :caption: Vatican Reliquary
 
    000
    001

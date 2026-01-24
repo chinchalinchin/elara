@@ -2,7 +2,7 @@
 ..
 ..          - Break out the {{ new_branch }} into a new diagram.
 ..          - Starting Node: {{ starting_node }}
-..          - Select a starting shade. The process for selecting a shade for a new branch is as follows: Find the other branches that exit from the same source branch, and using distance in the color space as a measure of time, find the next shade of the color group in the gradient. In other words, if a branch already has a green exit, then the next exit should be a lighter shade of green.
+..          - Select a starting shade. The process for selecting a shade for a new branch is as follows: Find the other branches that exit from the same source branch, and using distance in the color space as a measure of time, find the next shade of the color group in the gradient. In other words, if a branch already has a green exit, then the next exit should be a lighter shade of green. If there are no exit points in the branch yet, then the color should be selected by adjacency in the (R,G,B) space so that the branch color flows naturally from the current shade in the gradient.
 ..          - Leave an exit node in the {{ source_branch}} diagram the same shade as the starting shade of the new branch.
 ..
 .. ----------------------------------------------------------------------------------------------
@@ -35,3 +35,18 @@
 ..      - Apply the retroactive rule to any branch **you modify** that has reached its endpoint (--x), i.e. convert their ancestors relation into a dot (--o)
 ..      - Ensure you follow all restrictions and guidelines. In particular, DO NOT TERMINATE A LINE WITHOUT EVIDENCE or REMOVE ANY NODES (unless justified by evidence).
 ..
+.. ----------------------------------------------------------------------------------------------
+..
+.. TASK: GRADIENT REFACTOR
+..
+..      The current female branches of the Patrician branch have a jarring color transition. Currently:
+..
+..      - Cumaean Branch, Starting Shade (Hex Code): #1B5E20
+..      - Clarian Branch, Starting Shade (Hex Code): #33691E
+..      - Tiresian Branch, Starting Shade (Hex Code): #4B741C
+..
+..      All of these branches come from a node with the shade: #9575CD
+..
+..      I would like to refactor these three exits and their subsequent gradients in their branches to flow more naturally in the (R,G,B) space from their source branch. Instead of becoming green, let's have them move towards pink.
+..      
+..      To be clear, there are several factors at play here. The Cumaen, Clarian and Tiresian branches exit at different points in the Patrician branch. Their exit colors should form a gradient themselves, i.e. Cumaen should be the darkest and Tiresian should be the lighest. Remember that movement through color space should be thought of as duration. Then, these colors should go on to form a gradient in their respective branches.

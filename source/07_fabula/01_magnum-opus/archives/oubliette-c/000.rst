@@ -55,7 +55,7 @@ March
 
     Nicolas raised concerns about unrest simmering among the crew. They wanted to know why we had not taken on any stock from the slave yards, nor loaded any gems from the mines. Instead, the hull was restocked with provisions and filled to the brim with lemons.
 
-    Once we lost sight of land, I had Nicolas gather the other officers of the crew in my cabin. I could no longer bear the deception, although I may have erred by showing them the map of Macrobius. Knowledge of the Terra Incognita is no easy burden for the mortal mind to bear. Hendrick said as much with his glaring eyes, but I bade him retrieve it. 
+    Once we lost sight of land, I had Nicolas gather the other officers of the crew in my cabin. I could no longer bear the deception, although I may have erred by showing them the map of Macrobius. [#oubliette_c_001]_ Knowledge of the Terra Incognita is no easy burden for the mortal mind to bear. Hendrick said as much with his glaring eyes, but I bade him retrieve it. 
 
     Jeremias scoffed, as expected. Pieter, always the soldier, took the news without flinching. The rest of their reactions I do not possess the skill to decipher. Suffice to say, they believed themselves set for Patagonia, only to be told at the final hour this subterfuge was a calculated manuever and our true path lie in the direction of the Austral Zone. The voyage of the *Eden* shall be written in no manifests. 
 
@@ -482,6 +482,10 @@ June
     
     This journal immediately presents itself as an anomaly. The reader is referred to :ref:`genealogy` of the van Rensselaer dynasty, specifically the first generation of the :ref:`elder-branch`, to discover for themselves the discrepancies. 
 
-    From the date signed on each page of the journal and the name "*Johannes*", it is reasonable to infer "*Father*" refers to Killiaen van Rensselaer According to the historical record recovered through the :ref:`Capital Reliquary <oubliette-b>`, Killiaen had five sons: Johannes, Jan Baptist, Jeremias, Nicolaes and Ryckert.
+    From the date signed on each page of the journal and the name "*Johannes*", it is reasonable to infer "*Father*" refers to Killiaen van Rensselaer, the first Patroon. According to the :ref:`Capital Reliquary <oubliette-b>`, Killiaen had five sons: Johannes, Jan Baptist, Jeremias, Nicolaes and Ryckert.
 
-    However, the reader must be careful to examine the birth year of Ryckert in the :ref:`genealogy`
+    However, the reader must be careful to examine the birth year of Ryckert in the :ref:`genealogy`. The year of Ryckert's birth in the official record is 1639, two years after the dates in the journal.
+
+.. [#oubliette_c_001]
+
+    One of the Maps of Macrobius can be found in :ref:`oubliette-a-001` of the :ref:`Vatican Reliquary <oubliette-a>`, however sources indicate Macrobius produced a substantial body of work. It is unlikely the recovered map is the one Ryckert references, especially considering its fate, although from the description given in the journal, or lack thereof, there is no reason to reject it as a possibile candidate. Until further evidence is uncovered, this aspect of the Ryckert van Rensselear mystery, like many others, cannot be resolved.

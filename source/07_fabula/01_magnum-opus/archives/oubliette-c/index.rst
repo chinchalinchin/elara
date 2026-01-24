@@ -1,6 +1,6 @@
 .. TITLE: Magnum Opus
 .. SECTION: Archive
-.. SUBSECTION: Oubliette C: van Renselaer Reliquary
+.. SUBSECTION: Oubliette C: Renselaerwyck Reliquary
 .. TABLE OF CONTENTS:
 .. - 000: Journal of Captain Ryckert van Rensselaer
 .. - 001: Being An Account of Nicolaes van Rensselaer's Prophecy to the exiled King, Charles II
@@ -11,12 +11,12 @@
 
 .. _oubliette-c:
 
-Oubliette C: van Renselaer Reliquary
+Oubliette C: Renselaerwyck Reliquary
 ====================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: van Renselaer Reliquary
+   :caption: Renselaerwyck  eliquary
    
    000
    001

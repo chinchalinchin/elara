@@ -17,9 +17,9 @@ Four Stanzas
 | H 
 | 
 | G
-| I
-| C 
 | A
+| H
+| C
 
 
 Six Stanzas
